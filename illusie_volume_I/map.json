@@ -1,6 +1,6 @@
 {
   "schema": "illusie-volume-I-source-map/v1",
-  "scope": "I.1.1, printed pp.1-6, ending before I.1.2",
+  "scope": "I.1.1-I.1.2, printed pp.1-8, ending before I.1.3",
   "anchor_prefix": "illusie:I:ch1:s1:1:",
   "structural_anchors": ["illusie:I:ch1", "illusie:I:ch1:s1", "illusie:I:ch1:s1:1"],
   "decisions": [
@@ -99,7 +99,46 @@
       "labels": ["simplicial-lemma-compare-homotopies"],
       "local_labels": ["remark-illusie-I-relative-homotopy-base-functor"],
       "reason": "019X identifies cosimplicial homotopies with simplicial homotopies in the opposite category, reversing arrows. Apply the cocartesian or cartesian result over B^op and take opposites back; the remark tracks the interchange of fibred/cofibred hypotheses and base-change directions."
+    },
+    {
+      "id": "I-1.2-001", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["d12c1", "d13"],
+      "claim": "Additive complexes and the signed simple-complex functor in Illusie's degree convention.",
+      "disposition": "existing_coverage_with_convention_map", "tags": ["010V"],
+      "labels": ["homology-section-complexes"],
+      "reason": "010V supplies the complex convention; the source's cochain notation and its chain convention X^n=X_{-n} are recorded explicitly in the source witness."
+    },
+    {
+      "id": "I-1.2-002", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p6", "d14", "d15", "d16", "p7", "d17"],
+      "claim": "Commuting n-fold complexes, signed totalization, and alternating-face complexes of multisimplicial and multicosimplicial objects.",
+      "disposition": "new_explicit_extension", "tags": ["012Y", "012Z", "0194", "0195", "018Z", "019H"],
+      "labels": ["homology-definition-double-complex", "homology-definition-associated-simple-complex", "simplicial-section-complexes", "simplicial-lemma-s-exact", "simplicial-lemma-abelian", "simplicial-section-dold-kan-cosimplicial"],
+      "local_labels": ["definition-illusie-I-signed-total", "lemma-illusie-I-signed-total-differential", "lemma-illusie-I-multisimplicial-chains"],
+      "reason": "The repository covers n=2 commuting double complexes, n=2/3 signs, and one simplicial direction. The new definitions prove the prefix-sign formula, finite-degree existence for multisimplicial objects, and the stated additive/abelian extensions. The unrestricted arbitrary-additive total is qualified by an existence condition rather than silently assuming infinite coproducts."
+    },
+    {
+      "id": "I-1.2-003", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p8", "p9", "d18", "p10"],
+      "claim": "Functorial Eilenberg-Zilber comparison between the total chain complex and the diagonal chain complex.",
+      "disposition": "new_explicit_chain_homotopy_theorem", "tags": ["08QC"],
+      "labels": ["sites-cohomology-lemma-eilenberg-zilber"],
+      "local_labels": ["theorem-illusie-I-eilenberg-zilber"],
+      "reason": "08QC is only a derived-category tensor/diagonal comparison under cosimplicial-resolution hypotheses. It does not provide Illusie's natural chain maps or chain homotopies. The new theorem supplies that stronger statement in additive categories."
+    },
+    {
+      "id": "I-1.2-004", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p11", "eq9", "eq10", "p12", "d19", "p12c1", "d20"],
+      "claim": "Explicit shuffle and Alexander-Whitney formulas with the source's indexing and signs.",
+      "disposition": "new_explicit_formula", "tags": ["08QC", "08QD"],
+      "labels": ["sites-cohomology-lemma-eilenberg-zilber", "sites-cohomology-remark-simplicial-modules"],
+      "local_labels": ["definition-illusie-I-shuffle-aw", "theorem-illusie-I-eilenberg-zilber"],
+      "reason": "No audited repository text gives these maps or their chain-level formulas. The definition fixes one-based shuffle lists, inversion parity, and the front/back face strings, while the theorem proves chain-map and homotopy properties."
+    },
+    {
+      "id": "I-1.2-005", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p13", "p14", "eq11", "p15"],
+      "claim": "Associativity of shuffle and coassociativity of Alexander-Whitney maps for trisimplicial objects.",
+      "disposition": "new_explicit_coherence", "tags": ["08BI"],
+      "labels": ["homology-remark-triple-complex"],
+      "local_labels": ["theorem-illusie-I-eilenberg-zilber"],
+      "reason": "08BI proves associativity of iterated totalization, not the strict shuffle/Alexander-Whitney squares. The new proof identifies both composites with ordered three-way partitions (respectively front/back face strings)."
     }
   ],
-  "next_source_unit": "I.1.2, printed p.6"
+  "next_source_unit": "I.1.3, printed p.8"
 }

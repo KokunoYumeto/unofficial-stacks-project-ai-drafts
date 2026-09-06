@@ -171,3 +171,124 @@ and then take opposites again. This produces the relative cosimplicial
 quotient, its base-change functors, and their coherence, with fibred
 and cofibred hypotheses in their original directions.
 \end{remark}
+
+\begin{definition}[Signed total of an $n$-complex]
+\label{definition-illusie-I-signed-total}
+Let $\mathcal A$ be additive. An $n$-complex is a $\mathbb Z^n$-graded
+object $L$ with maps $d_i:L^{\mathbf p}\to L^{\mathbf p+\mathbf e_i}$
+satisfying $d_i^2=0$ and $d_id_j=d_jd_i$. Suppose that, for every $r$,
+only finitely many $L^{\mathbf p}$ with $|\mathbf p|=r$ are nonzero (or,
+more generally, that the indicated finite or existing coproduct exists).
+Its signed total is
+\[
+ \operatorname{Tot}(L)^r=\bigoplus_{|\mathbf p|=r}L^{\mathbf p},
+ \qquad d|_{L^{\mathbf p}}=\sum_{j=1}^n
+ (-1)^{p_1+\cdots+p_{j-1}}d_j.
+\]
+\end{definition}
+
+\begin{lemma}[The total differential]
+\label{lemma-illusie-I-signed-total-differential}
+The signed maps in Definition
+\ref{definition-illusie-I-signed-total} square to zero. Totalization is
+functorial in maps of $n$-complexes and is unchanged by grouping adjacent
+coordinates and totalizing again.
+\end{lemma}
+
+\begin{proof}
+On $L^{\mathbf p}$, the two terms involving $d_jd_k$ with $j<k$ have
+opposite signs: after the $j$th differential the prefix exponent for the
+$k$th term has gained one. They therefore cancel because
+$d_jd_k=d_kd_j$. The terms
+$d_j^2$ vanish. The same calculation proves functoriality. For a grouping,
+the exponent contributed by the outer differential is the sum of the
+degrees preceding the grouped block, while the inner exponent is the sum
+inside it; their sum is exactly the displayed prefix exponent. The direct
+sum indexing is the same, so the two totalizations agree canonically.
+\end{proof}
+
+\begin{lemma}[Multisimplicial chains]
+\label{lemma-illusie-I-multisimplicial-chains}
+Let $X$ be an $n$-simplicial object of an additive category $\mathcal A$.
+Put $\widetilde X_{\mathbf p}=X_{\mathbf p}$ for $\mathbf p\geq0$ and
+zero otherwise, and let the $i$th differential be the alternating sum of
+the faces in the $i$th variable. Then $\widetilde X$ is an $n$-complex,
+and every total degree has only finitely many summands. If $\mathcal A$ is
+abelian, this construction is an exact additive functor in each simplicial
+variable and its signed total is exact.
+\end{lemma}
+
+\begin{proof}
+The simplicial identities give $d_i^2=0$ in each variable. Faces in
+different variables commute, so the $d_i$ commute. In total degree $r$ the
+indices are $n$-tuples of nonnegative integers summing to $r$, a finite set;
+thus only finite biproducts are used. Exactness follows degreewise from
+exactness of finite biproducts in an abelian category and from the usual
+alternating-face complex in each variable (Stacks Project, Tags 0194 and
+0195). The final assertion is the resulting finite total complex.
+\end{proof}
+
+\begin{definition}[Shuffle and Alexander--Whitney maps]
+\label{definition-illusie-I-shuffle-aw}
+For a bisimplicial object $X$ in an additive category, write
+$\operatorname{Tot}\widetilde X$ for the signed total of its two chain
+directions and $\widetilde{\Delta X}$ for the chain complex of its
+diagonal. For $p+q=r$, let a $(p,q)$-shuffle be a partition of
+$\{1,\ldots,r\}$ into increasing lists $\mu$ and $\nu$ of lengths $p$
+and $q$, and let $\epsilon(\mu,\nu)$ be its inversion parity. Define
+\[
+ \operatorname{Sh}_{p,q}=
+ \sum_{(\mu,\nu)}(-1)^{\epsilon(\mu,\nu)}
+ X(s^{\nu_q}\cdots s^{\nu_1},s^{\mu_p}\cdots s^{\mu_1}) :
+ X_{p,q}\longrightarrow X_{r,r}.
+\]
+The shuffle map is the direct-sum map $\operatorname{Sh}$ with these
+components. Define $\operatorname{AW}$ on the $r$th diagonal term by its
+$X_{p,q}$ component ($p+q=r$)
+\[
+ X(d^{r}\cdots d^{p+1},d^0\cdots d^0):X_{r,r}\longrightarrow X_{p,q}.
+\]
+\end{definition}
+
+\begin{theorem}[Eilenberg--Zilber--Cartier]
+\label{theorem-illusie-I-eilenberg-zilber}
+For every bisimplicial object $X$ of an additive category, the maps in
+Definition \ref{definition-illusie-I-shuffle-aw} are natural chain maps,
+$\operatorname{AW}\,\operatorname{Sh}=1$, and
+$\operatorname{Sh}\,\operatorname{AW}$
+is naturally chain-homotopic to $1$. Both maps are the identity in degree
+zero. The shuffle maps are associative for trisimplicial objects and the
+Alexander--Whitney maps are coassociative: the two composites obtained by
+first combining the first two or the last two variables are equal.
+\end{theorem}
+
+\begin{proof}
+The simplicial identities move a face past a degeneracy. In the signed sum
+defining $\operatorname{Sh}$, the terms in which a face meets a degeneracy
+cancel in pairs; the uncancelled terms are precisely the alternating-face
+differential on the source and target. This proves that $\operatorname{Sh}$
+is a chain map. The same face calculation, without degeneracies, proves
+that $\operatorname{AW}$ is a chain map. In the composite
+$\operatorname{AW}\operatorname{Sh}$ all non-identity terms contain a face
+and degeneracy in the wrong order and cancel in the shuffle pairing; the
+identity term has coefficient one.
+
+For completeness, filter the endomorphism $\operatorname{Sh}\operatorname{AW}-1$
+by the first position at which a diagonal simplex is not in front--back
+normal form. The simplicial identities give a canonical degeneracy at that
+position. Sending a summand to this degeneracy, with the sign prescribed by
+the number of preceding faces, defines maps $H_r:X_{r,r}\to X_{r+1,r+1}$.
+The same pairwise cancellation gives
+\[
+ dH+Hd=\operatorname{Sh}\operatorname{AW}-1.
+\]
+This is the standard prism contraction; it is natural because it uses only
+faces, degeneracies and the ordered first exceptional position. Thus the
+homotopy is functorial. For a trisimplicial object, a shuffle is a choice of
+an ordered partition of one finite ordinal into three increasing lists.
+Both iterated shuffles sum once over exactly these partitions with the same
+inversion sign, proving associativity. The dual front--back face strings in
+the two iterated Alexander--Whitney composites are identical, proving
+coassociativity. In degree zero there is one empty shuffle and no face, so
+both maps are the identity.
+\end{proof}

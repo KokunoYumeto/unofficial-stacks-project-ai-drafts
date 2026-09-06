@@ -31,7 +31,7 @@ in the targeted build: Lemmas 28.1-28.2 and Remark 28.3, rendered on pp.48-50.
 The proof received an independent mathematical check, and the affected pages
 were directly inspected after the chapter build reached a fixed point.
 `map.json` records existing coverage separately from the new construction;
-`source-lock.json` binds the 18 source witness files used for this section.
+`source-lock.json` binds the 24 source witness files used for I.1.1-I.1.2.
 
 The original and changed chapter were built with identical inputs under one
 machine-wide TeX mutex. Both reached a fixed point in four passes, with no
@@ -49,7 +49,24 @@ Volume II receipt remains immutable and replayable. Two negative regression
 checks reject unrelated root edits and a changed proof not reflected in the root.
 Automated checks and AI review do not certify mathematical correctness.
 
-Next source unit: I.1.2, beginning on printed p.6.
+The I.1.2 targeted candidate build is 77 pages and 889,443 bytes, SHA-256
+`409F12D9076D36E05CB8610B137E7E0EE3FE47E5571DA1AF81CDDC289435065C`.
+Its dedicated receipt is `build-receipt-i1-2.json` and its bounded QA is
+`qa-i1-2.json`; the six rendered review pages passed visual inspection.
+
+I.1.2, printed pp.6-8, is now mapped and integrated as the signed
+multisimplicial totalization and explicit Eilenberg-Zilber--Cartier theorem.
+The repository's derived Tag 08QC is recorded as related coverage only; it
+does not supply these chain-level maps or homotopies. The source map records
+the exact gap and the new local labels.
+
+The bounded canon-keeper rule for this edition is additive and scan-based:
+when a transcription or translation defect is found, compare the witness with
+the primary scan, make the smallest evidenced correction or erratum, and
+record old/new text, locus, evidence and hashes. Mathematical uncertainty is
+kept reversible rather than silently normalized.
+
+Next source unit: I.1.3, beginning on printed p.8.
 
 ## Source and repository identities
 

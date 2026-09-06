@@ -21,6 +21,8 @@ def identity(path: Path) -> dict:
 def source_section(text: str, page: int) -> str:
     if page == 6:
         text = text.split(r"\hypertarget{illusie:I:ch1:s1:2}", 1)[0]
+    elif page == 8:
+        text = text.split(r"\hypertarget{illusie:I:ch1:s1:3}", 1)[0]
     return text
 
 def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
@@ -29,7 +31,7 @@ def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
     files, anchors_by_lane = [], {}
     for lane in ("fr_diplomatic", "fr_corrected", "en"):
         anchors = []
-        for page in range(1, 7):
+        for page in range(1, 9):
             relative = f"tex/volume_I/{lane}/ch1/{page:03d}_p{page:03d}.tex"
             path = edition / relative
             text = source_section(path.read_text(encoding="utf-8"), page)
@@ -66,7 +68,8 @@ def validate(root: Path) -> dict:
     lock = json.loads((dossier / "source-lock.json").read_text(encoding="utf-8"))
     mapped = list(mapping["structural_anchors"])
     for row in mapping["decisions"]:
-        mapped.extend(mapping["anchor_prefix"] + suffix for suffix in row["anchors"])
+        prefix = row.get("anchor_prefix", mapping["anchor_prefix"])
+        mapped.extend(prefix + suffix for suffix in row["anchors"])
     assert len(mapped) == len(set(mapped)), "duplicate source disposition"
     assert set(mapped) == set(lock["section_anchors"]), "source coverage gap or surplus"
     assert lock["authority"]["sha256"] == AUTHORITY_SHA256
@@ -74,13 +77,21 @@ def validate(root: Path) -> dict:
                 (root / "tags/tags").read_text(encoding="utf-8").splitlines()
                 if line and not line.startswith("#") and "," in line)
     local_labels = re.findall(rb"\\label\{([^}]+)\}", snippet)
-    assert len(local_labels) == len(set(local_labels)) == 4
+    assert len(local_labels) == len(set(local_labels)) == 9
     for row in mapping["decisions"]:
         assert len(row["tags"]) == len(row["labels"]), row["id"]
         for tag, label in zip(row["tags"], row["labels"]):
             assert tags.get(tag) == label, f"unverified tag mapping {tag}: {label}"
-            stem, raw_label = label.split("-", 1)
-            target = (root / (stem + ".tex")).read_bytes()
+            parts = label.split("-")
+            target = None
+            raw_label = ""
+            for cut in range(len(parts), 0, -1):
+                candidate = root / ("-".join(parts[:cut]) + ".tex")
+                if candidate.exists():
+                    target = candidate.read_bytes()
+                    raw_label = "-".join(parts[cut:])
+                    break
+            assert target is not None and raw_label, label
             assert target.count((r"\label{" + raw_label + "}").encode()) == 1, label
         for label in row.get("local_labels", []):
             assert label.encode() in local_labels, label

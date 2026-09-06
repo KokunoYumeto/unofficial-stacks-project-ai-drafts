@@ -28,3 +28,20 @@ the simplicial base, not only arrows in one fibre. The draft explicitly uses
 strongly cartesian morphisms in the terminology of Stacks Tag 02XK.
 Base change is a pseudofunctor with canonical comparison isomorphisms; strict
 equality of successive pullbacks is not assumed.
+
+## I.1.2 source and coverage notes
+
+The primary scan at printed pp.6-8 was checked against the diplomatic,
+corrected-French and English witnesses. The source uses commuting differentials
+in an $n$-complex, the prefix-sign total differential, and finite-degree sums
+for the multisimplicial chain construction. The signed total definition in the
+new dossier therefore qualifies existence of the required coproducts; it does
+not silently assume infinite coproducts in an arbitrary additive category.
+
+The maintained repository's Tags 012Y, 012Z, 08BI, 0194, 0195, 018Z, 019H,
+019I, 08QC and 08QD were checked. Tag 08QC gives a derived-category
+Eilenberg-Zilber comparison under cosimplicial-resolution hypotheses, not the
+chain-level shuffle and Alexander--Whitney maps, their natural homotopy, or
+the strict trisimplicial coherence asserted by Illusie. Those items are the
+new local theorem and definition in `relative-homotopy.tex`. The proof keeps
+the source's one-based shuffle convention and front/back face order.
