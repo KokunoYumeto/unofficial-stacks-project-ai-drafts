@@ -1,0 +1,290 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-manifest-closure-correction/v1",
+  "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+  "status": "PASS",
+  "passed": true,
+  "audited_at_utc": "2026-09-06T20:47:05.897Z",
+  "audit_scope": {
+    "repair_commit": "85500f2243acb39e24ff16505e3f9f520543c8e1",
+    "candidate_path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1",
+    "purpose": "Verify that the manifest-closure repair commits exactly the five previously ignored, already-declared candidate files without changing any pre-existing candidate, manifest, replay, registry, or derived.tex byte.",
+    "repository_wide_status_or_untracked_scan_performed": false,
+    "tex_invoked": false,
+    "candidate_or_registry_file_written": false,
+    "commit_created": false,
+    "only_write": "validation/stacks-verdier-a04446e-1-3-6-r1-manifest-closure-correction-2026-09-06.json"
+  },
+  "commit_topology": {
+    "linear_chain_verified": true,
+    "head_is_repair_commit": true,
+    "commits": [
+      {
+        "role": "frozen_candidate",
+        "commit": "52eccb5772831e4bd17f9d4306b1ad0f60dec43f",
+        "parent": "ec0a80d418d8fa44c1b9fa077fcec8fe9f88c9df",
+        "tree": "745bdaf88721effe0839ef8888c1fda967d716c5",
+        "subject": "Add Verdier II.1.3.6 candidate packet"
+      },
+      {
+        "role": "independent_replay_seal",
+        "commit": "8f95214f9275cdc698f0c9bf5e7e8e5784772977",
+        "parent": "52eccb5772831e4bd17f9d4306b1ad0f60dec43f",
+        "tree": "eee7fe6df32e5d375b3d49bb98d9fb9d91e48f8b",
+        "subject": "Seal Verdier II.1.3.6 independent replay"
+      },
+      {
+        "role": "admission",
+        "commit": "d78483415a984eb7b46ad57b6056d8f718e3f395",
+        "parent": "8f95214f9275cdc698f0c9bf5e7e8e5784772977",
+        "tree": "15c4126b285fb4cd31469c7ec8bc6c7b7563a0f6",
+        "subject": "Admit Verdier II.1.3.6 overlay"
+      },
+      {
+        "role": "manifest_closure_repair",
+        "commit": "85500f2243acb39e24ff16505e3f9f520543c8e1",
+        "parent": "d78483415a984eb7b46ad57b6056d8f718e3f395",
+        "tree": "e51b3f18e424c97df9915b81e95ecb2dd1efdfd5",
+        "subject": "Complete Verdier II.1.3.6 manifest closure"
+      }
+    ],
+    "frozen_is_ancestor_of_admission": true,
+    "admission_is_direct_parent_of_repair": true
+  },
+  "historical_declared_minus_committed": {
+    "status": "PASS",
+    "passed": true,
+    "complete_missing_set": [
+      ".gitattributes",
+      ".gitignore",
+      "builds/baseline-derived.log",
+      "builds/derived.log",
+      "builds/derived.pdf"
+    ],
+    "snapshots": [
+      {
+        "role": "frozen_candidate",
+        "commit": "52eccb5772831e4bd17f9d4306b1ad0f60dec43f",
+        "manifest_bytes": 5221,
+        "manifest_sha256": "CDAD13962B90D5ACF574586BBE052B65EDA83F15B2B336C007887DAF23198B4C",
+        "manifest_reference_count": 29,
+        "committed_candidate_file_count_including_manifest": 25,
+        "declared_minus_committed_count": 5,
+        "declared_minus_committed": [
+          ".gitattributes",
+          ".gitignore",
+          "builds/baseline-derived.log",
+          "builds/derived.log",
+          "builds/derived.pdf"
+        ]
+      },
+      {
+        "role": "immediate_pre_repair_admission",
+        "commit": "d78483415a984eb7b46ad57b6056d8f718e3f395",
+        "manifest_bytes": 5287,
+        "manifest_sha256": "C007BBFB1AB068843B7759FF69ED338BE0071349975EDCE20472876B89F01F2F",
+        "manifest_reference_count": 30,
+        "committed_candidate_file_count_including_manifest": 26,
+        "declared_minus_committed_count": 5,
+        "declared_minus_committed": [
+          ".gitattributes",
+          ".gitignore",
+          "builds/baseline-derived.log",
+          "builds/derived.log",
+          "builds/derived.pdf"
+        ]
+      },
+      {
+        "role": "post_repair",
+        "commit": "85500f2243acb39e24ff16505e3f9f520543c8e1",
+        "manifest_bytes": 5287,
+        "manifest_sha256": "C007BBFB1AB068843B7759FF69ED338BE0071349975EDCE20472876B89F01F2F",
+        "manifest_reference_count": 30,
+        "committed_candidate_file_count_including_manifest": 31,
+        "declared_minus_committed_count": 0,
+        "declared_minus_committed": []
+      }
+    ],
+    "same_complete_five_path_set_at_frozen_and_immediate_parent": true,
+    "no_additional_declared_path_was_missing": true
+  },
+  "repair_diff": {
+    "status": "PASS",
+    "passed": true,
+    "whole_commit_changed_path_count": 5,
+    "all_changes_are_additions": true,
+    "added_paths": [
+      "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/.gitattributes",
+      "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/.gitignore",
+      "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/baseline-derived.log",
+      "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/derived.log",
+      "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/derived.pdf"
+    ],
+    "modified_paths": [],
+    "deleted_paths": [],
+    "parent_candidate_entry_count": 26,
+    "repair_candidate_entry_count": 31,
+    "modified_preexisting_candidate_entries": [],
+    "removed_preexisting_candidate_entries": [],
+    "all_preexisting_candidate_entries_byte_and_mode_identical": true,
+    "no_path_outside_the_five_file_repair_changed": true
+  },
+  "repaired_blobs": {
+    "status": "PASS",
+    "passed": true,
+    "count": 5,
+    "all_absent_at_frozen_commit": true,
+    "all_absent_at_admission_parent": true,
+    "all_present_at_repair_commit": true,
+    "all_mode_100644": true,
+    "all_match_unchanged_final_manifest_hashes": true,
+    "all_worktree_bytes_match_repair_commit": true,
+    "files": [
+      {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "git_blob": "24133845b0f4cf6ce10d832ef8fa6b4e458a920a",
+        "bytes": 117,
+        "sha256": "19A1DCCFFFD90CC9A3FCE89B2D147B1844EE285291736D1245CE061DF6864549",
+        "manifest_hash_matches": true,
+        "ignore_rule": ".gitignore:12:.*"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "git_blob": "eba87b7b2b47f90b03762169a2bd5e61cc60051d",
+        "bytes": 26,
+        "sha256": "5B561AA9AE36CA5FF408C3A22CE239167F80F4D3B6EF53FF095A6136FB824AA8",
+        "manifest_hash_matches": true,
+        "ignore_rule": ".gitignore:12:.*"
+      },
+      {
+        "path": "builds/baseline-derived.log",
+        "mode": "100644",
+        "git_blob": "9568bc4fd6698f6f2f39e382d5d25a78435ea368",
+        "bytes": 51611,
+        "sha256": "285307FCB784CBB447DA375958465A8127BF19E69AD587117C649CFC13B47BB8",
+        "manifest_hash_matches": true,
+        "ignore_rule": ".gitignore:5:*.log"
+      },
+      {
+        "path": "builds/derived.log",
+        "mode": "100644",
+        "git_blob": "2f79caf6f29a81cfeee1e4ab40f525d2785af236",
+        "bytes": 51617,
+        "sha256": "3907949D2C8BE01837677A4A9726563FB5EB5AB54252F55361D3E76B6662DCE6",
+        "manifest_hash_matches": true,
+        "ignore_rule": ".gitignore:5:*.log"
+      },
+      {
+        "path": "builds/derived.pdf",
+        "mode": "100644",
+        "git_blob": "b7eb3e8b5befc4ba5c407959860d1c83aba1f14c",
+        "bytes": 1251089,
+        "sha256": "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331",
+        "manifest_hash_matches": true,
+        "ignore_rule": ".gitignore:6:*.pdf"
+      }
+    ]
+  },
+  "protected_bytes_unchanged": {
+    "status": "PASS",
+    "passed": true,
+    "comparison": "d78483415a984eb7b46ad57b6056d8f718e3f395..85500f2243acb39e24ff16505e3f9f520543c8e1",
+    "preexisting_candidate_bytes": {
+      "parent_entry_count": 26,
+      "modified_count": 0,
+      "deleted_count": 0,
+      "all_identical": true
+    },
+    "candidate_manifest": {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/candidate.manifest.json",
+      "parent_blob": "f05fbac8ebe368648dfeb69c053872dc23e3a7ea",
+      "repair_blob": "f05fbac8ebe368648dfeb69c053872dc23e3a7ea",
+      "bytes": 5287,
+      "sha256": "C007BBFB1AB068843B7759FF69ED338BE0071349975EDCE20472876B89F01F2F",
+      "byte_identical": true
+    },
+    "independent_replay_receipt": {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/replay/independent-review.json",
+      "parent_blob": "b93bccf9f21d4bfa2e863710dabc4a835ca553b9",
+      "repair_blob": "b93bccf9f21d4bfa2e863710dabc4a835ca553b9",
+      "bytes": 20258,
+      "sha256": "91E61E177A6EFE130A60CF78AF3F6E9D4C27A376229B88022018CC87C519235D",
+      "byte_identical": true
+    },
+    "registries": [
+      {"path":"ai-integrated/registry/leases.json","parent_blob":"f334e121aeb64d8431d67c55aa065c11bb1e88b4","repair_blob":"f334e121aeb64d8431d67c55aa065c11bb1e88b4","bytes":52052,"sha256":"8C12B7B63FD439913DC89F32ABB801BED0FCFD39CD53F14BDB4216A286D698E4","byte_identical":true},
+      {"path":"ai-integrated/registry/locales.json","parent_blob":"4b431ec401dd269d96716346974d7ab4cda21470","repair_blob":"4b431ec401dd269d96716346974d7ab4cda21470","bytes":218,"sha256":"3DE3751A87585190431282CC63CB5154FE7A8591387296DF49BDF91E1FAE5DDC","byte_identical":true},
+      {"path":"ai-integrated/registry/overlays.json","parent_blob":"2f980d613a0a49c7cd9ad4dccfc62f09b1773758","repair_blob":"2f980d613a0a49c7cd9ad4dccfc62f09b1773758","bytes":66940,"sha256":"FC5149A28734CBB2FB9AFDA624780194FAA4622A1336D238A94F0BDFEBDA5664","byte_identical":true},
+      {"path":"ai-integrated/registry/releases.json","parent_blob":"dd1bdf9c9444e686e6962f77ac8b324d82415c25","repair_blob":"dd1bdf9c9444e686e6962f77ac8b324d82415c25","bytes":184,"sha256":"7B617733DF24317C755F67EB51461DE695289A22D6953C456082A48E8C9D3BB5","byte_identical":true}
+    ],
+    "all_registry_bytes_identical": true,
+    "derived_tex": {
+      "path": "derived.tex",
+      "parent_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+      "repair_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+      "bytes": 452054,
+      "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "byte_identical": true
+    }
+  },
+  "current_manifest_closure": {
+    "status": "PASS",
+    "passed": true,
+    "commit": "85500f2243acb39e24ff16505e3f9f520543c8e1",
+    "manifest_path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/candidate.manifest.json",
+    "manifest_git_blob": "f05fbac8ebe368648dfeb69c053872dc23e3a7ea",
+    "manifest_bytes": 5287,
+    "manifest_sha256": "C007BBFB1AB068843B7759FF69ED338BE0071349975EDCE20472876B89F01F2F",
+    "reference_count": 30,
+    "all_references_committed": true,
+    "all_committed_bytes_hash_correct": true,
+    "declared_minus_committed": [],
+    "checker_passed": true,
+    "candidate_verifier_passed": true,
+    "references": [
+      {"path":"authority/authority.lock.json","bytes":2602,"sha256":"BE5854692B1470F74ABA10B84DD057B0F7D209C23863D40B426904EA2FFABE03","git_blob":"36ce2caed7a7513a6956d67c4f74cd1488bbe0ca","committed":true,"hash_matches":true},
+      {"path":"stable-units.json","bytes":5738,"sha256":"34534F919352FE699219904EBB60D83CAC8375CA262C642CFA7EF17292074CA9","git_blob":"c31b7f6810f66efbf7691fe744efbdcd01d3ccb6","committed":true,"hash_matches":true},
+      {"path":"source-map.jsonl","bytes":7340,"sha256":"742383E24BB69BBC775401313E8AC49A154F325FF3117CD10E6A27718FA8AF70","git_blob":"542ca0df9b52d8c8e27868108591f230a4fd8b56","committed":true,"hash_matches":true},
+      {"path":"decisions.jsonl","bytes":5418,"sha256":"FDF2031C477C6CF5B0C1581FC8D0DD3131440A6E24014091FB2B7A00E21C3EBA","git_blob":"cd9d747cabe174f5e9bd5a50e8a2867d8ab1937e","committed":true,"hash_matches":true},
+      {"path":"rejections.jsonl","bytes":4297,"sha256":"789BECB596A67C2B7CF15F9CA2F16AFC36DFBB7A85D2871D37864CB0221E6B6D","git_blob":"acd19ec5130ecefca3b56b1d2cd86a88c09fe681","committed":true,"hash_matches":true},
+      {"path":"formula-diagram-inventory.json","bytes":2754,"sha256":"8C7CF9B1686B65F58BD470E0865DF3B29FE0549E8A360970633776A9174EB4E8","git_blob":"f47c094545f38489ca47abfa5d7d5d7bbb8b16b3","committed":true,"hash_matches":true},
+      {"path":".gitattributes","bytes":117,"sha256":"19A1DCCFFFD90CC9A3FCE89B2D147B1844EE285291736D1245CE061DF6864549","git_blob":"24133845b0f4cf6ce10d832ef8fa6b4e458a920a","committed":true,"hash_matches":true},
+      {"path":".gitignore","bytes":26,"sha256":"5B561AA9AE36CA5FF408C3A22CE239167F80F4D3B6EF53FF095A6136FB824AA8","git_blob":"eba87b7b2b47f90b03762169a2bd5e61cc60051d","committed":true,"hash_matches":true},
+      {"path":"LEASE.json","bytes":476,"sha256":"E0D88FDDA7356E88B9A7A8D5941ABFA50B678CDB047649202B56812CF5798E18","git_blob":"cf118f68081797514de1921612ad185841d84151","committed":true,"hash_matches":true},
+      {"path":"README.md","bytes":2277,"sha256":"8935A01E95FA8EC12B32A09720B6E70141C7A40C82D36144923452018476BE59","git_blob":"73fb16d3737ac635040054de0c389c3bc94b66fd","committed":true,"hash_matches":true},
+      {"path":"_build_impl.py","bytes":18272,"sha256":"8B4A4151408745EA8DC6C325B623DA1E9017AE922C8A12363206E95E57E53610","git_blob":"9d40113b952590e918e1cb5bb4c8b6591f835cc3","committed":true,"hash_matches":true},
+      {"path":"build-manifest.py","bytes":10862,"sha256":"22F99D0268A2967A45C19B01D5D0CEE94F4FC101A206203DAD423E4EFD71945B","git_blob":"d94a5dae8761508527234ea71a4060c38d4f007a","committed":true,"hash_matches":true},
+      {"path":"build.py","bytes":5402,"sha256":"744443361AF8C2BF173A584A11D84AD493BE8B9AF72FEE340C6CB5DEC7F1AFFE","git_blob":"21b8e2fc2040fd39607c116ea3a42486171a510b","committed":true,"hash_matches":true},
+      {"path":"builds/baseline-derived.log","bytes":51611,"sha256":"285307FCB784CBB447DA375958465A8127BF19E69AD587117C649CFC13B47BB8","git_blob":"9568bc4fd6698f6f2f39e382d5d25a78435ea368","committed":true,"hash_matches":true},
+      {"path":"builds/build-receipt.json","bytes":2472,"sha256":"5CD5F1A6B2A8B0A1DAA9E04F705AF5F334C21108CF242EC432FE090750C3F42D","git_blob":"edf3d050134aebf4700621095724d5a36ff1f263","committed":true,"hash_matches":true},
+      {"path":"builds/derived.log","bytes":51617,"sha256":"3907949D2C8BE01837677A4A9726563FB5EB5AB54252F55361D3E76B6662DCE6","git_blob":"2f79caf6f29a81cfeee1e4ab40f525d2785af236","committed":true,"hash_matches":true},
+      {"path":"builds/derived.pdf","bytes":1251089,"sha256":"1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331","git_blob":"b7eb3e8b5befc4ba5c407959860d1c83aba1f14c","committed":true,"hash_matches":true},
+      {"path":"builds/tex-mutex.json","bytes":378,"sha256":"570D3A97C0D10F8BBC7A0B7D70F9DFCBCEB09BFFFB9C633831315E1AFAAA53C9","git_blob":"69092f4f9576422af7fc55489ba05c7c68aa0592","committed":true,"hash_matches":true},
+      {"path":"builds/validation.json","bytes":1468,"sha256":"D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB","git_blob":"4949498e548f7e6a3150595c9a31cb1376ee91c9","committed":true,"hash_matches":true},
+      {"path":"builds/visual-qa.json","bytes":1758,"sha256":"EA4A81FA009E323BE18F25D23AE2A0DEF2AA450354A66CC087EFF3C8FDF6D4D2","git_blob":"c89b8ed566213e922dda8169011149a7ac309ec9","committed":true,"hash_matches":true},
+      {"path":"builds/visual/derived-036.png","bytes":361399,"sha256":"1E23A83D3F8B184431A42CECC8C1A6D8B7C189D3CA7EC0818E18DE0C91B15285","git_blob":"a67232ee8e0b86286ba52244d44c04f6ee3dcaea","committed":true,"hash_matches":true},
+      {"path":"builds/visual/derived-037.png","bytes":320218,"sha256":"368B0CF805CD601FBEB02CFABE8CEE5F67401BEBAC970BB6F5796A27622127CC","git_blob":"8f740c66ff5a9a87fec62e1d601d82445ab0d6e3","committed":true,"hash_matches":true},
+      {"path":"builds/visual/derived-038.png","bytes":395858,"sha256":"1A1776CCB10E078BCBE13097CBAB46B35AD329082AE8391F307ED767F1839740","git_blob":"b9099b2daa2f65e1cc5f2613adfd05ad9eb43518","committed":true,"hash_matches":true},
+      {"path":"builds/visual/derived-039.png","bytes":311982,"sha256":"EE36F139634BFB5527592CA1FDEF401649E3DFDF2E1E4C6047BD7CDED63E5F71","git_blob":"c1229adfdbeb599d5771b3008d2459b5a78dffae","committed":true,"hash_matches":true},
+      {"path":"candidate.config.json","bytes":4291,"sha256":"029D664B59FF96315B5F93A39FFE529B255BF27FA392A2238C00E73BCA8C917A","git_blob":"7cbf1452d18e4fb80fc893c41ef941e87b57a93c","committed":true,"hash_matches":true},
+      {"path":"check-manifest.py","bytes":12842,"sha256":"870EB89C753F9DF0A73E42DE1436369763149640BD86C3EFA05A425F6E656013","git_blob":"55cc10781b220e263363e2ddb271d456e42b2f99","committed":true,"hash_matches":true},
+      {"path":"composition.jsonl","bytes":1885,"sha256":"C3DD45A0CAF2263EF7FF645F0573AE775112012A681706420DB9A86C47F242D7","git_blob":"37194587a44312a44f027ba31f000bd71a2d03ac","committed":true,"hash_matches":true},
+      {"path":"payload/fragments/derived-homotopy-category-abelian-split.tex","bytes":3673,"sha256":"C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E","git_blob":"21303a3a85b27b0fda2790a61de49f44d76076e1","committed":true,"hash_matches":true},
+      {"path":"replay/independent-review.json","bytes":20258,"sha256":"91E61E177A6EFE130A60CF78AF3F6E9D4C27A376229B88022018CC87C519235D","git_blob":"b93bccf9f21d4bfa2e863710dabc4a835ca553b9","committed":true,"hash_matches":true},
+      {"path":"verify.py","bytes":20091,"sha256":"E69588D4794725525EC9028E66D7C1ADC7C1968608E7BA1735417515F57072CD","git_blob":"33b751d4ee1527782ad912dfa1b1ad54ab3b8652","committed":true,"hash_matches":true}
+    ]
+  },
+  "commands_and_results": [
+    {"name":"commit_topology","command":"git rev-list --parents -n 1 and git show -s on the four bounded commits","exit_code":0,"passed":true,"result":"Verified the exact frozen -> replay -> admission -> repair chain and tree identities."},
+    {"name":"historical_declared_minus_committed","command":"Parse each committed candidate manifest and compare its declared paths with bounded candidate git ls-tree output","exit_code":0,"passed":true,"result":"The five named paths were the complete missing set at both the frozen commit and the immediate pre-repair admission commit; none is missing after repair."},
+    {"name":"whole_repair_diff","command":"git diff-tree --no-commit-id --name-status --raw -r 85500f2243acb39e24ff16505e3f9f520543c8e1","exit_code":0,"passed":true,"result":"Exactly five mode-100644 additions and no modification, deletion, or out-of-scope path."},
+    {"name":"preexisting_candidate_tree_comparison","command":"Compare bounded candidate ls-tree mode/blob maps for d784834 and 85500f2","exit_code":0,"passed":true,"result":"All 26 pre-existing candidate entries retained identical modes and blob IDs."},
+    {"name":"committed_blob_hash_audit","command":"Read each repair-commit manifest reference with git cat-file and recompute byte count and SHA-256 in memory","exit_code":0,"passed":true,"result":{"references":30,"all_committed":true,"all_hash_correct":true}},
+    {"name":"protected_byte_comparison","command":"Compare parent and repair Git blobs for candidate manifest, replay receipt, every registry file, and derived.tex","exit_code":0,"passed":true,"result":"Every protected blob ID and byte stream is identical."},
+    {"name":"ignored_path_provenance","command":"git check-ignore -v --no-index on the five repaired paths","exit_code":0,"passed":true,"result":"All five paths resolve to the recorded root ignore rules."},
+    {"name":"manifest_checker","command":"python candidate/check-manifest.py","exit_code":0,"passed":true,"result":{"references":30,"stable_units":7,"manifest_sha256":"C007BBFB1AB068843B7759FF69ED338BE0071349975EDCE20472876B89F01F2F"}},
+    {"name":"candidate_verifier","command":"python candidate/verify.py","exit_code":0,"passed":true,"result":{"source_units":7,"reference_count":6,"operation_id":"VDR-STK-COMP-0002","payload_sha256":"C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E"}}
+  ],
+  "unresolved_defects": []
+}
