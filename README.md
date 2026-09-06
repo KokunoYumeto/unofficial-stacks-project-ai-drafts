@@ -52,6 +52,7 @@ human-maintained Stacks corpus.
 [Browse the source](chapters.tex) ·
 [Compare with Stacks](CHANGES_FROM_UPSTREAM.md) ·
 [Detailed status](STATUS.md) ·
+[Development program](ROADMAP.md) ·
 [Sources and history](PROVENANCE.md) ·
 [Validation](VALIDATION.md)
 
@@ -133,9 +134,13 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
-EGA is **not fully integrated**. Source-by-source review is public through
-EGA I §6.6.3 and continues at §6.6.4. Concrete additions already in the draft
-include:
+EGA is **not fully integrated**. The last verified public checkpoint covers
+EGA I §6.6.4, including a completion of the base-change proof for
+quasi-compact morphisms at Stacks tag 01K5. The local §6.6.5 comparison is
+validated but not yet published: its criterion for dominance and generic
+points is covered by existing Stacks results in combination, so it adds no
+duplicate theorem to the source. See the [current checkpoint states](STATUS.md).
+Other concrete additions already in the draft include:
 
 - **The Jacobson-radical neighbourhood lemma** — EGA I, Proposition 1.1.15:
   an open subset of an affine spectrum containing the closed set of an ideal
@@ -224,8 +229,8 @@ that a reader accept a result because an AI or an automated check produced it.
 - GitHub is the incremental working record. Zenodo is reserved for substantial,
   coherent milestones—such as a large integrated source tranche or a major
   cumulative errata release—not individual theorems or routine weekly updates.
-- [Latest EGA review checkpoint: I §6.6.3](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
-  · [archived version](https://doi.org/10.5281/zenodo.22177421).
+- [Public EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
+  · [local §6.6.5 semantic checkpoint](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json).
 - [Build and validation instructions](VALIDATION.md)
   · [exact current build evidence](validation/README.md).
 - [Complete project status](STATUS.md) · [roadmap](ROADMAP.md)

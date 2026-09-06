@@ -3,15 +3,41 @@
 Validation is layered so that repository integrity, mathematical-source
 composition, TeX compilation, and visual evidence are not conflated.
 
-## Current local R38 evidence
+## Current local R47 and EGA §6.6.5 checkpoint
+
+Source commit `b3c4a28c053dbbd45670dd19cf0dcc45063190dc` contains
+177 manifest-bound R40–R47 corrections across five cumulative chapters.
+The [independent replay](validation/stacks-errata-a04446e-r47-independent-composition-2026-09-06.json)
+matches all five postimages, preserves all other parent bytes, and verifies
+the exact 26-commit registry import. It records unchanged inherited findings
+separately; it is not a claim that the entire chapters have no defects.
+
+The [EGA I §6.6.5 semantic receipt](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
+and `python ega/check.py` pass locally. Section 6.6.5 is covered by existing
+results in combination; it changes no root TeX or PDF.
+
+**Fresh cumulative builds, reproducibility, affected-page visual QA, public
+push and anonymous readback remain unfinished.** Before building, the
+checkpoint consumer must validate the historical §6.6.4 receipt at its own
+commit and separately bind the new cumulative head. Assuming every later
+head is still the immediate child of that old receipt is not a valid check.
+The repair must preserve the historical receipt and all source-byte and
+ancestry requirements. No build is launched by skipping that gate.
+
+The new profile has 35 chapters. Historical 28- and 30-chapter receipts remain
+evidence for their own profiles; they do not certify the new one. A successful
+source replay alone is neither a build PASS nor proof of publication.
+
+## Historical R38 evidence
 
 R34–R38 are composed locally on top of the published R33 source. Independent
 source replay, two complete fixed-point builds, and affected-page visual
 review pass with the two disclosed observations below. **R38 is not yet a
-public release:** no R38 DOI, successful publication workflow, or anonymous
-public-byte readback is claimed here.
+public release at the time of these receipts:** their statements below are
+historical, not the current public-source status. Public R39 and EGA §6.6.4
+were subsequently verified at `f73b18165c7162b8386de06cc3c50bd4ced745b6`.
 
-The [composition receipt](validation/composition-current.json) binds registry
+The historical R38 composition bound registry
 cutoff `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, its linear import
 `e4978987d5bf67f09a1b7649bda6fd90fe0fb2d8`, and cumulative source commit
 `1242d514b71e60b4fe11b4c867f7de660f9a3b77`. The registry contains 39
@@ -80,7 +106,11 @@ the complete gate.
 The gate is intended to verify the complete local validation package,
 including the completed visual receipt and its explicit qualifications.
 Passing local source, build, and visual checks is not proof of publication.
-Its scope includes:
+The inherited R38 profile documented below is historical. The current R47
+extension must additionally validate its eight later admissions, exact
+177-operation replay, 35-chapter build evidence and successor checkpoint.
+Those pending checks must not be inferred from the older results. The
+historical scope includes:
 
 - the R38 registry chain at cutoff
   `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, comprising 39 overlays,
@@ -119,11 +149,10 @@ Its scope includes:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-## Historical R33 validation and latest public errata release
+## Historical R33 validation and public errata release
 
-R33 remains the latest publicly preserved errata checkpoint while the R38
-publication workflow is unfinished. Its evidence below
-applies to the historical R33 source, not the current local R38 tree.
+The evidence below applies to the historical R33 source, not the later
+public R39 source or the current local R47 tree.
 
 The R33 build result is recorded at
 [`validation/stacks-errata-a04446e-r33-build-2026-08-30.json`](validation/stacks-errata-a04446e-r33-build-2026-08-30.json).
@@ -156,15 +185,15 @@ operations and the seven-operation `spaces-morphisms.tex` replay. The
 validated build source is `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
 `3c292f9a4b94162ede69d2633b1272b057a498c3`.
 The live [composition receipt](validation/composition-current.json) now binds
-R38. Historical R33, R24, R22/R23, Verdier, and R21 receipts remain preserved
+R47. Historical R33, R24, R22/R23, Verdier, and R21 receipts remain preserved
 and authoritative for their immutable source snapshots; they are not rebound
-to the R38 tree.
+to the later tree.
 
 R33's manifest SHA-256 is
 `1D2EA4F6463FB775CFF3F0E3616BE125F6D20709BB32DB84D1D1889582BFAC75`.
 
 The [R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
-binds the current public errata preservation checkpoint at content head
+binds that historical public errata preservation checkpoint at content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
