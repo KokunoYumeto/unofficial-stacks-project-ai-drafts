@@ -169,6 +169,20 @@ def verify_semantic(build, source: Path, head: str, composition: dict) -> tuple[
                 f"semantic checkpoint content drifted after review: {path}")
     baseline = build.require_commit_object(source, semantic.get("starting_content_commit"),
                                            "semantic starting content")
+    # A linear successor may replay the cumulative source commits after a
+    # concurrently published root-source change.  In that case the sealed
+    # semantic receipt still names the historical R47 base (396d60f...), while
+    # the replayed composition base has an equivalent tree at a new commit.
+    # Rebind only when the two base trees are byte-identical; never weaken the
+    # original receipt or accept an arbitrary ancestry substitution.
+    if build.git_optional(source, "merge-base", "--is-ancestor", baseline, parents[0]) is None:
+        rebound = composition.get("composition_base_commit")
+        require(isinstance(rebound, str),
+                "semantic baseline is not ancestral and has no exact replay base")
+        require(build.git(source, "rev-parse", f"{baseline}^{{tree}}")
+                == build.git(source, "rev-parse", f"{rebound}^{{tree}}"),
+                "semantic baseline replay base tree differs")
+        baseline = rebound
     build.require_ancestor(source, baseline, "semantic baseline", parents[0])
     ledgers = semantic.get("ledgers")
     require(isinstance(ledgers, list)
