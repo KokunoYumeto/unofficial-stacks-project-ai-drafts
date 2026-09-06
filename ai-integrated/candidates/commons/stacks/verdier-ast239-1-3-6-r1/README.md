@@ -27,10 +27,11 @@ Stacks Project review, approval, affiliation, endorsement, or tag assignment.
 
 The active lease is stacks-lease-000044-verdier-ast239-1-3-6-r1. The payload
 has passed a mutex-protected baseline-versus-candidate fixed-point build with
-zero new diagnostics and affected-page visual QA. Its initial seven-unit
-manifest closes over every public candidate file and records independent replay
-truthfully as not yet performed. Independent replay,
-admission, composition, publication, and public-byte readback remain separate
+zero new diagnostics and affected-page visual QA. A separate reviewer replayed
+the frozen initial seven-unit manifest, all authority and source locators, the
+proof, all six Stacks references, the insertion-only reconstruction, and the
+four rendered pages with no unresolved defect. The final manifest binds that
+passing receipt. Admission, composition, publication, and public-byte readback remain separate
 hash-bound transitions. Candidate-local admission state remains not_admitted
 even after any later registry transition.
 
