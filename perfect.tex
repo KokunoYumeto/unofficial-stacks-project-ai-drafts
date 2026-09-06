@@ -9223,7 +9223,7 @@ is the quotient of a finite locally free $\mathcal{O}_X$-module.
 
 \noindent
 If $X$ is a quasi-compact and quasi-separated scheme, then it suffices to check
-every $\mathcal{O}_X$-module module of finite presentation (automatically
+every $\mathcal{O}_X$-module of finite presentation (automatically
 quasi-coherent) is the quotient of a finite locally free
 $\mathcal{O}_X$-module, see Properties, Lemma
 \ref{properties-lemma-finite-directed-colimit-surjective-maps}.
@@ -9274,16 +9274,16 @@ $s_{j, i}$ is in the image. Then the corresponding maps
 $$
 f^*\mathcal{E}_{i, j}
 \otimes_{\mathcal{O}_X}
-\mathcal{L}^{\otimes n_{i, j}} \longrightarrow \mathcal{F}
+\mathcal{L}^{\otimes n_{j, i}} \longrightarrow \mathcal{F}
 $$
 are going to be jointly surjective and the lemma is proved. By
 Properties, Lemma \ref{properties-lemma-quasi-coherent-colimit-finite-type}
 for each $i, j$ we can find a finite
 type quasi-coherent submodule
 $\mathcal{H}'_{i, j} \subset  \mathcal{H}_{-n_{j, i}}$
-which contains the section $s_{i, j}$ over $V_j$.
+which contains the section $s_{j, i}$ over $V_j$.
 Thus the resolution property of $Y$ produces surjections
-$\mathcal{E}_{i, j} \to \mathcal{H}'_{j, i}$ and we conclude.
+$\mathcal{E}_{i, j} \to \mathcal{H}'_{i, j}$ and we conclude.
 \end{proof}
 
 \begin{lemma}
@@ -9368,7 +9368,7 @@ reduce to the Noetherian case; we suggest the reader skip it.
 \medskip\noindent
 The first observation is that $U_j \cap U_{j'}$ is quasi-compact
 as the complement of the zero scheme of the quasi-coherent finite type ideal
-$\mathcal{I}_{j'}|{U_j}$ on the affine scheme $U_j$, see
+$\mathcal{I}_{j'}|_{U_j}$ on the affine scheme $U_j$, see
 Properties, Lemma \ref{properties-lemma-quasi-coherent-finite-type-ideals}.
 Hence $X$ is quasi-compact and quasi-separated, see
 Schemes, Lemma \ref{schemes-lemma-characterize-quasi-separated}.
@@ -9400,7 +9400,7 @@ we can choose a finite list of sections $s_{jk} \in \mathcal{F}(U_j)$,
 $k = 1, \ldots, e_j$ which generate the restriction of $\mathcal{F}$ to $U_j$.
 By Cohomology of Schemes, Lemma \ref{coherent-lemma-homs-over-open}
 we can extend $s_{jk}$ to a map
-$s'_{jk} : \mathcal{I}_i^{n_{jk}} \to \mathcal{F}$ for some $n_{jk} \geq 1$.
+$s'_{jk} : \mathcal{I}_j^{n_{jk}} \to \mathcal{F}$ for some $n_{jk} \geq 1$.
 Then we can consider the compositions
 $$
 \mathcal{E}_j^{\otimes n_{jk}} \to \mathcal{I}_j^{n_{jk}} \to \mathcal{F}
@@ -9445,7 +9445,7 @@ Lemma \ref{lemma-resolution-property-ample-family}.
 Let $X = \lim X_i$ be a limit of a direct system of quasi-compact
 and quasi-separated schemes with affine transition morphisms.
 Then $X$ has the resolution property if and only if $X_i$ has
-the resolution properties for some $i$.
+the resolution property for some $i$.
 \end{lemma}
 
 \begin{proof}
@@ -9787,7 +9787,7 @@ With this notation the obvious functor
 $$
 K^b(\mathcal{A}) \longrightarrow D_{perf}(\mathcal{O}_X)
 $$
-is an exact functor of trianglated categories which factors through an
+is an exact functor of triangulated categories which factors through an
 equivalence $S^{-1}K^b(\mathcal{A}) \to D_{perf}(\mathcal{O}_X)$
 of triangulated categories
 where $S$ is the saturated multiplicative system of quasi-isomorphisms
@@ -9866,7 +9866,7 @@ and the second will use finite locally free $\mathcal{O}_X$-modules.
 Let $X$ be a Noetherian scheme. Then
 $$
 K_0(\textit{Coh}(\mathcal{O}_X)) =
-K_0(D^b(\textit{Coh}(\mathcal{O}_X)) =
+K_0(D^b(\textit{Coh}(\mathcal{O}_X))) =
 K_0(D^b_{\textit{Coh}}(\mathcal{O}_X))
 $$
 \end{lemma}
@@ -9900,7 +9900,7 @@ K_0(X) = K_0(D_{perf}(\mathcal{O}_X))
 $$
 \item If $X$ is locally Noetherian, then we denote $K'_0(X)$ the
 {\it Grothendieck group of coherent sheaves on $X$}. It is the
-is the zeroth $K$-group of the abelian category
+zeroth $K$-group of the abelian category
 of coherent $\mathcal{O}_X$-modules. In a formula
 $$
 K'_0(X) = K_0(\textit{Coh}(\mathcal{O}_X))
@@ -10059,7 +10059,7 @@ $$
 \begin{matrix}
 0 \to \mathcal{E}^a \to \mathcal{E}^{a + 1} \to \mathcal{F}^{a + 1} \to 0,\\
 0 \to \mathcal{F}^{a + 1} \to \mathcal{E}^{a + 2} \to
-\mathcal{F}^{a + 3} \to 0, \\
+\mathcal{F}^{a + 2} \to 0, \\
 \ldots \\
 0 \to \mathcal{F}^{b - 3} \to \mathcal{E}^{b - 2} \to
 \mathcal{F}^{b - 2} \to 0, \\
@@ -10070,7 +10070,7 @@ Arguing by descending induction we see that
 $\mathcal{F}^{b - 2}, \ldots, \mathcal{F}^{a + 1}$
 are finite locally free $\mathcal{O}_X$-modules, and
 $$
-c(\mathcal{E}^\bullet) = \sum (-1)[\mathcal{E}^n] =
+c(\mathcal{E}^\bullet) = \sum (-1)^n[\mathcal{E}^n] =
 \sum (-1)^n([\mathcal{F}^{n - 1}] + [\mathcal{F}^n]) = 0
 $$
 Thus our construction gives zero on acyclic complexes.
@@ -10095,7 +10095,7 @@ acyclic (this follows for example from the discussion in
 Derived Categories, Section \ref{derived-section-canonical-delta-functor}).
 Hence
 $$
-0 = c(C(f)^\bullet) = c(\mathcal{E}^\bullet) + c(\mathcal{G}^\bullet[1]) =
+0 = c(C(a)^\bullet) = c(\mathcal{E}^\bullet) + c(\mathcal{G}^\bullet[1]) =
 c(\mathcal{E}^\bullet) - c(\mathcal{G}^\bullet)
 $$
 as desired. The same argument using $b$ shows that
@@ -10117,7 +10117,7 @@ It is clear that the composition
 $K_0(\textit{Vect}(X)) \to K_0(X) \to K_0(\textit{Vect}(X))$
 is the identity. On the other hand, let $\mathcal{E}^\bullet$
 be a bounded complex of finite locally free $\mathcal{O}_X$-modules.
-Then the the existence of the distinguished triangles
+Then the existence of the distinguished triangles
 of ``stupid truncations''
 (see Homology, Section \ref{homology-section-truncations})
 $$
@@ -10202,7 +10202,7 @@ are coherent (Cohomology of Schemes, Proposition
 \ref{coherent-proposition-proper-pushforward-coherent}), because locally
 only a finite number are nonzero, and because
 a short exact sequence of coherent sheaves on $X$ produces a long
-exact sequence of $R^if_*$ on $Y$. If $Y$ is quasi-compact (the only
+exact sequence of $R^if_*$ on $Y$. If $Y$ is quasi-compact (the
 case most often used in practice), then we can rewrite the above as
 $$
 f_*[\mathcal{F}] = \sum (-1)^i[R^if_*\mathcal{F}] = [Rf_*\mathcal{F}]
@@ -10339,7 +10339,7 @@ The construction of Lemma \ref{lemma-determinant-two-term-complexes}
 is compatible with pullbacks. More precisely, given a morphism
 $f : X \to Y$ of schemes and a perfect object $K$ of $D(\mathcal{O}_Y)$
 of tor-amplitude in $[-1, 0]$ then $Lf^*K$ is a
-perfect object $K$ of $D(\mathcal{O}_X)$
+perfect object of $D(\mathcal{O}_X)$
 of tor-amplitude in $[-1, 0]$ and we have a canonical identification
 $$
 f^*\det(K) \longrightarrow \det(Lf^*K)
@@ -10384,7 +10384,7 @@ Then (1) implies $\tau_{\geq a + 1} N = 0$ and (1) is implied by
 $\tau_{\geq a}N = 0$. Observe that
 $$
 \Hom_{D(\mathcal{O}_X)}(K[-n], Rj_*(E|_U)) =
-\Hom_{D(\mathcal{O}_U)}(K|_U[-n], E) = 0
+\Hom_{D(\mathcal{O}_U)}(K|_U[-n], E|_U) = 0
 $$
 for all $n$ as $K|_U = 0$. Thus (2) is equivalent to
 $\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \geq a$. 
@@ -10420,7 +10420,7 @@ the following conditions
 is an isomorphism, and
 \item $\Hom_{D(\mathcal{O}_X)}(K[-n], E) = 0$ for all $n \leq a$.
 \end{enumerate}
-Then (2) implies (1) and (1) implies (2) with $a$ replaced by $a - 1$.
+Then (1) implies (2) and (2) implies (1) with $a$ replaced by $a - 1$.
 \end{lemma}
 
 \begin{proof}
@@ -10429,10 +10429,10 @@ implies $\tau_{\leq a - 1}N = 0$ and (1) is implied by $\tau_{\leq a}N = 0$.
 Observe that
 $$
 \Hom_{D(\mathcal{O}_X)}(K[-n], Rj_*(E|_U)) =
-\Hom_{D(\mathcal{O}_U)}(K|_U[-n], E) = 0
+\Hom_{D(\mathcal{O}_U)}(K|_U[-n], E|_U) = 0
 $$
 for all $n$ as $K|_U = 0$. Thus (2) is equivalent to
-$\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \leq a$. 
+$\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \leq a - 1$. 
 Observe that there are distinguished triangles
 $$
 K^\bullet(f_1^{e_1}, \ldots, f_i^{e'_i}, \ldots, f_r^{e_r}) \to
@@ -10441,13 +10441,13 @@ K^\bullet(f_1^{e_1}, \ldots, f_i^{e''_i}, \ldots, f_r^{e_r}) \to \ldots
 $$
 of Koszul complexes, see
 More on Algebra, Lemma \ref{more-algebra-lemma-koszul-mult}. Hence
-$\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \leq a$
+$\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \leq a - 1$
 is equivalent to
-$\Hom_{D(\mathcal{O}_X)}(K_e[-n], N) = 0$ for all $n \leq a$ and all $e \geq 1$
+$\Hom_{D(\mathcal{O}_X)}(K_e[-n], N) = 0$ for all $n \leq a - 1$ and all $e \geq 1$
 with $K_e$ as in Lemma \ref{lemma-represent-cohomology-class-on-closed}.
 Since $N|_U = 0$, that lemma implies that this in turn is equivalent to
-$H^n(X, N) = 0$ for $n \leq a$. We conclude that (2) is equivalent to
-$\tau_{\leq a}N = 0$ since $N$ is determined by the complex of
+$H^n(X, N) = 0$ for $n \leq a - 1$. We conclude that (2) is equivalent to
+$\tau_{\leq a - 1}N = 0$ since $N$ is determined by the complex of
 $A$-modules $R\Gamma(X, N)$, see Lemma \ref{lemma-affine-compare-bounded}.
 Thus we find that our lemma is true.
 \end{proof}
@@ -10531,7 +10531,7 @@ that (1) implies (2).
 \medskip\noindent
 Parts (2), (3), (4) are equivalent by the discussion in
 Cohomology, Section \ref{cohomology-section-global-RHom}.
-Part (5) and (6) are equivalent as $H^i(X, -) = H^i(R\Gamma(X, -))$
+Parts (5) and (6) are equivalent as $H^i(X, -) = H^i(R\Gamma(X, -))$
 by definition. The equivalent conditions (2), (3), (4) are
 equivalent to the equivalent conditions (5), (6) by
 Cohomology, Lemma \ref{cohomology-lemma-dual-perfect-complex}
@@ -10549,7 +10549,7 @@ satisfies the 2-out-of-three property for distinguished
 triangles, is inherited by direct summands, and is preserved by shifts.
 Hence by Derived Categories, Remark \ref{derived-remark-check-on-generator}
 we see that (4) implies $T$ holds on all of $D_{perf}(\mathcal{O}_X)$.
-The same argument works for all other properties, except that for property
+The same argument works for all other properties, except that for properties
 (7)(b) and (7)(c) we also use that $P \mapsto P^\vee$ is a self
 equivalence of $D_{perf}(\mathcal{O}_X)$. Small detail omitted.
 
@@ -10649,7 +10649,7 @@ that (1) implies (2).
 \medskip\noindent
 Parts (2), (3), (4) are equivalent by the discussion in
 Cohomology, Section \ref{cohomology-section-global-RHom}.
-Part (5) and (6) are equivalent as $H^i(X, -) = H^i(R\Gamma(X, -))$
+Parts (5) and (6) are equivalent as $H^i(X, -) = H^i(R\Gamma(X, -))$
 by definition. The equivalent conditions (2), (3), (4) are
 equivalent to the equivalent conditions (5), (6) by
 Cohomology, Lemma \ref{cohomology-lemma-dual-perfect-complex}
@@ -10667,7 +10667,7 @@ satisfies the 2-out-of-three property for distinguished
 triangles, is inherited by direct summands, and is preserved by shifts.
 Hence by Derived Categories, Remark \ref{derived-remark-check-on-generator}
 we see that (4) implies $T$ holds on all of $D_{perf}(\mathcal{O}_X)$.
-The same argument works for all other properties, except that for property
+The same argument works for all other properties, except that for properties
 (7)(b) and (7)(c) we also use that $P \mapsto P^\vee$ is a self
 equivalence of $D_{perf}(\mathcal{O}_X)$. Small detail omitted.
 
@@ -10769,7 +10769,7 @@ In this section we denote $X_{affine}$ the underlying category of
 $X_{affine, Zar}$ endowed with the chaotic topology, i.e., such that sheaves
 agree with presheaves. In particular, the structure sheaf $\mathcal{O}$
 becomes a sheaf on $X_{affine}$ as well.
-We obtain a morphisms of ringed sites
+We obtain a morphism of ringed sites
 $$
 \epsilon :
 (X_{affine, Zar}, \mathcal{O})
@@ -10789,7 +10789,7 @@ the following triangulated categories
 \item $D_\QCoh(\mathcal{O}_X)$,
 \item $D_\QCoh(X_{Zar}, \mathcal{O})$,
 \item $D_\QCoh(X_{affine, Zar}, \mathcal{O})$,
-\item $D_\QCoh(X_{affine}, \mathcal{O}_X)$, and
+\item $D_\QCoh(X_{affine}, \mathcal{O})$, and
 \item $\mathit{QC}(X_{affine}, \mathcal{O})$.
 \end{enumerate}
 \end{lemma}
@@ -10819,7 +10819,7 @@ and hence an equivalence between abelian categories of modules.
 Since the notion of quasi-coherent modules is intrinsic
 (Modules on Sites, Lemma \ref{sites-modules-lemma-special-locally-free})
 we see that this equivalence preserves the subcategories
-of quasi-coherent modules. Thus  we get a canonical exact equivalence
+of quasi-coherent modules. Thus we get a canonical exact equivalence
 between the triangulated categories in (2) and (3).
 
 \medskip\noindent
@@ -10856,7 +10856,7 @@ seen that $\mathcal{A} = \QCoh(X_{affine, Zar}, \mathcal{O})$ and
 we have seen above that these,
 via the equivalence $\textit{Mod}(X_{affine, Zar}, \mathcal{O}) =
 \textit{Mod}(X, \mathcal{O}_X)$, correspond to the quasi-coherent modules
-on $X$. Thus the result by the discussion in
+on $X$. Thus the result follows from the discussion in
 Schemes, Section \ref{schemes-section-quasi-coherent}.
 \item Every object of $X_{affine}$ has a covering in the chaotic
 topology whose members are elements of $\mathcal{B}$. This holds

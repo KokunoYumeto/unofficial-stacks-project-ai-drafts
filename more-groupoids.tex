@@ -225,7 +225,7 @@ $R \to R \times_{s, U, t} R$ given by
 $r \mapsto (r, e(s(r)))$ and $r \mapsto (e(t(r)), r)$.
 These maps define maps $J/J^2 \to I/I^2$ which jointly
 give an inverse to the map $I/I^2 \oplus I/I^2 \to J/J^2$
-of the lemma. Thus to prove statement we only have to show
+of the lemma. Thus to prove the statement we only have to show
 that $e_1 \circ c : B \to B$ and $e_2 \circ c : B \to B$
 are the identity maps. This follows from the fact that both
 compositions $R \to R \times_{s, U, t} R \to R$ are identities.
@@ -247,7 +247,7 @@ fact that $c \circ (1, i) = e \circ t$. Some details omitted.
 Let $(U, R, s, t, c)$ be a groupoid scheme.
 The idea behind the results in this section is that $s: R \to U$
 is a base change of the morphism $U \to [U/R]$ (see
-Diagram (\ref{equation-quotient-stack}).
+Diagram (\ref{equation-quotient-stack})).
 Hence the local properties of $s : R \to U$ should reflect local
 properties of the morphism $U \to [U/R]$.
 This doesn't work, because $[U/R]$ is not always an algebraic stack, and
@@ -266,7 +266,7 @@ $U' \to [U/R]$ has property $\mathcal{P}$.
 Let $S$ be a scheme.
 Let $(U, R, s, t, c, e, i)$ be a groupoid over $S$.
 Let $g : U' \to U$ be a morphism of schemes.
-Denote $h$ the composition
+Denote by $h$ the composition
 $$
 \xymatrix{
 h : U' \times_{g, U, t} R \ar[r]_-{\text{pr}_1} & R \ar[r]_s & U.
@@ -342,7 +342,7 @@ to $U' \times_{g, U, t} R$ agree with the morphisms $\text{pr}_{01}$
 and $\text{pr}_{02}$ on the right hand side. Since
 $\text{pr}_{01}^{-1}(W(\mathcal{P}, h)) =
 \text{pr}_{02}^{-1}(W(\mathcal{P}, h))$
-we conclude that $W(\mathcal{P}, h)$ is the inverse image of a subset of $U$,
+we conclude that $W(\mathcal{P}, h)$ is the inverse image of a subset of $U'$,
 which is necessarily the open set
 $W = \sigma^{-1}(W(\mathcal{P}, h))$.
 \end{proof}
@@ -496,7 +496,7 @@ Descent, Lemma \ref{descent-lemma-largest-open-of-the-base}.
 Let $(U, R, s, t, c, e, i)$ be a groupoid scheme over $S$.
 Diagram (\ref{equation-diagram})
 gives us a way to compare the fibres of the map $s : R \to U$ in a groupoid.
-For a point $u \in U$ we will denote $F_u = s^{-1}(u)$ the scheme
+For a point $u \in U$ we will denote by $F_u = s^{-1}(u)$ the scheme
 theoretic fibre of $s : R \to U$ over $u$. For example the diagram
 implies that if $u, u' \in U$ are points such
 that $s(r) = u$ and $t(r) = u'$, then
@@ -521,7 +521,7 @@ if there exists a pointed scheme $(S'', s'')$ and morphisms of germs
 $g : (S'', s'') \to (S, s)$, and $g' : (S'', s'') \to (S', s')$
 such that
 \begin{enumerate}
-\item $g$ and $g'$ are an open immersion (resp.\ \'etale, smooth, syntomic,
+\item $g$ and $g'$ are open immersions (resp.\ \'etale, smooth, syntomic,
 flat and locally of finite presentation) at $s''$,
 \item there exists an isomorphism
 $$
@@ -546,7 +546,7 @@ Let $S$ be a scheme.
 Let $(U, R, s, t, c)$ be a groupoid over $S$.
 Let $r, r' \in R$ with $t(r) = t(r')$ in $U$.
 Set $u = s(r)$, $u' = s(r')$.
-Denote $F_u = s^{-1}(u)$ and $F_{u'} = s^{-1}(u')$ the scheme
+Denote by $F_u = s^{-1}(u)$ and $F_{u'} = s^{-1}(u')$ the scheme
 theoretic fibres.
 \begin{enumerate}
 \item There exists a common field extension
@@ -596,7 +596,7 @@ Hence the image of some affine open neighbourhood $V''$ of $\tilde r$ will
 cover an open neighbourhood $V$ of $u$, resp.\ $V'$ of $u'$.
 These can be used to show that properties (1) and (2) of the
 definition of ``locally on the base isomorphic in the
-$\tau$-topology''.
+$\tau$-topology'' hold.
 \end{proof}
 
 
@@ -652,7 +652,7 @@ $\mathcal{R} =$``flat and locally of finite presentation'', and
 $\mathcal{P}=$``Cohen-Macaulay'', see
 Remark \ref{remark-local-source-apply}.
 This gives us an open $U' \subset U$ such that
-Let $t^{-1}(U') \subset R$ is the largest open subscheme of $R$
+$t^{-1}(U') \subset R$ is the largest open subscheme of $R$
 on which the morphism $s$ is Cohen-Macaulay.
 This proves (1).
 Let $i : R \to R$ be the inverse of the groupoid.
@@ -766,7 +766,7 @@ Let $g : U' \to U$ and $g' : U'' \to U'$ be morphisms of schemes.
 Set $g'' = g \circ g'$.
 Let $(U', R', s', t', c')$ be the restriction of $R$ to $U'$.
 Let $h = s \circ \text{pr}_1 : U' \times_{g, U, t} R \to U$,
-let $h' = s' \circ \text{pr}_1 : U'' \times_{g', U', t} R \to U'$, and
+let $h' = s' \circ \text{pr}_1 : U'' \times_{g', U', t} R' \to U'$, and
 let $h'' = s \circ \text{pr}_1 : U'' \times_{g'', U, t} R \to U$.
 The following diagram is commutative
 $$
@@ -851,7 +851,7 @@ $v' = u'$, $p = r_0$, $v'' = u''$ and $p' = (c(r_1, i(r_0)), (g'(u''), u'))$.
 Comparing the two diagrams above it is clear that we have no choice
 but to take
 $$
-((u', r_0), (u'', r_1)) = ((v', p), (v'', c(r, p))
+((u', r_0), (u'', r_1)) = ((v', p), (v'', c(r, p)))
 $$
 Some details omitted.
 \end{proof}
@@ -864,7 +864,7 @@ Let $g : U' \to U$ and $g' : U'' \to U'$ be morphisms of schemes.
 Set $g'' = g \circ g'$.
 Let $(U', R', s', t', c')$ be the restriction of $R$ to $U'$.
 Let $h = s \circ \text{pr}_1 : U' \times_{g, U, t} R \to U$,
-let $h' = s' \circ \text{pr}_1 : U'' \times_{g', U', t} R \to U'$, and
+let $h' = s' \circ \text{pr}_1 : U'' \times_{g', U', t} R' \to U'$, and
 let $h'' = s \circ \text{pr}_1 : U'' \times_{g'', U, t} R \to U$.
 Let $\tau \in \{Zariski, \linebreak[0] \etale, \linebreak[0]
 smooth, \linebreak[0] syntomic, \linebreak[0] fppf, \linebreak[0] fpqc\}$. Let
@@ -893,7 +893,7 @@ Hence we may replace the $U$ in the lower right corner of the
 diagram by $h(U' \times_U R)$. This explains the significance of
 conditions (1) and (2) in the lemma. In the second case, note that
 $\{\text{pr}_0 : U' \times_{g, U, t} R \to U'\}$ is a $\tau$-covering
-as a base change of $\tau$ and condition (a).
+as a base change of $t$ using condition (a).
 \end{proof}
 
 
@@ -1079,7 +1079,7 @@ over $k$ and find $y_\alpha \in k'$, $\alpha \in A$ which are algebraically
 independent over $i(k)$, and map $s(k)(\{x_\alpha\})$ into $k'$ by
 the rules $s(\lambda) \mapsto i(\lambda)$ for $\lambda \in k$
 and $x_\alpha \mapsto y_\alpha$ for $\alpha \in A$.
-Then extend to $\tau : \kappa(\alpha) \to k'$ using that $k'$ is
+Then extend to $\sigma : \kappa(r) \to k'$ using that $k'$ is
 algebraically closed.
 \item Pick an automorphism $\tau : k' \to k'$ such that
 $\tau \circ i = \sigma \circ t$. To do this pick a transcendence
@@ -1733,7 +1733,7 @@ We first explain why the statement makes sense. Since $U$ is the spectrum
 of a perfect field $k$, the scheme $Z$ is geometrically reduced
 over $k$ (via either projection), see
 Varieties, Lemma \ref{varieties-lemma-perfect-reduced}.
-Hence the scheme $Z \times_{\text{pr}_1, U, \text{pr}_0} Z \subset Z$
+Hence the scheme $Z \times_{\text{pr}_1, U, \text{pr}_0} Z$
 is reduced, see
 Varieties, Lemma \ref{varieties-lemma-geometrically-reduced-any-base-change}.
 Hence by
@@ -1941,12 +1941,12 @@ Hence an affine open neighbourhood of $e''$ is the spectrum of the ring
 $$
 B \otimes_{(A \otimes A)} (\kappa(\mathfrak m) \otimes \kappa(\mathfrak m))
 =
-B/s(\mathfrak m)B + t(\mathfrak m)B
+B/(s(\mathfrak m)B + t(\mathfrak m)B)
 $$
 We conclude that
 $$
 \mathcal{O}_{R'', e''} =
-B_{\mathfrak q}/s(\mathfrak m)B_{\mathfrak q} + t(\mathfrak m)B_{\mathfrak q}
+B_{\mathfrak q}/(s(\mathfrak m)B_{\mathfrak q} + t(\mathfrak m)B_{\mathfrak q})
 $$
 and so now we know that this ring has dimension $d_1$.
 
@@ -1954,7 +1954,7 @@ and so now we know that this ring has dimension $d_1$.
 We claim this implies we can find
 an element $f \in \mathfrak m$ such that
 $$
-\dim(B_{\mathfrak q}/(s(\mathfrak m)B_{\mathfrak q} + fB_{\mathfrak q}) < d_2
+\dim(B_{\mathfrak q}/(s(\mathfrak m)B_{\mathfrak q} + t(f)B_{\mathfrak q})) < d_2
 $$
 Namely, suppose $\mathfrak n_j \supset s(\mathfrak m)B_{\mathfrak q}$,
 $j = 1, \ldots, m$ correspond to the minimal primes of the local ring
@@ -1969,9 +1969,9 @@ $\dim(B_{\mathfrak q}/(\mathfrak n_j + t(\mathfrak m)B_{\mathfrak q}))
 \leq d_1$
 as it is a quotient of the ring
 $\mathcal{O}_{R'', e''} =
-B_{\mathfrak q}/s(\mathfrak m)B_{\mathfrak q} + t(\mathfrak m)B_{\mathfrak q}$
+B_{\mathfrak q}/(s(\mathfrak m)B_{\mathfrak q} + t(\mathfrak m)B_{\mathfrak q})$
 which has dimension $d_1$. As $d_1 < d_2$ this implies that
-$\mathfrak m \not \subset t^{-1}(\mathfrak n_i)$.
+$\mathfrak m \not \subset t^{-1}(\mathfrak n_j)$.
 By prime avoidance, see
 Algebra, Lemma \ref{algebra-lemma-silly},
 we can find $f \in \mathfrak m$ with $t(f) \not \in \mathfrak n_j$ for
@@ -1995,7 +1995,7 @@ B/t(f)B \ar@{=}[r] & A/(f) \otimes_{A, t} B & A \ar[l]_-s
 $$
 Now, we see $t(f)$ is not a zerodivisor on
 $B_{\mathfrak q}/s(\mathfrak m)B_{\mathfrak q}$ as this is a
-Cohen-Macaulay ring of positive dimension and $f$ is not contained
+Cohen-Macaulay ring of positive dimension and $t(f)$ is not contained
 in any minimal prime, see for example
 Algebra, Lemma \ref{algebra-lemma-reformulate-CM}.
 Hence by
@@ -2044,7 +2044,7 @@ there exist an affine scheme $U'$ and a morphism $g : U' \to U$ such that
 is Cohen-Macaulay and locally of finite presentation,
 \item the morphisms $s', t' : R' \to U'$ are Cohen-Macaulay and
 locally of finite presentation, and
-\item $\dim_{e(u)}(F'_u) = \dim(G'_u)$.
+\item $\dim_{e'(u)}(F'_u) = \dim(G'_u)$.
 \end{enumerate}
 \end{lemma}
 
@@ -2434,7 +2434,7 @@ Let $\{Z_r\}$ be the stratification of $U$ given by the Fitting ideals
 of the finite type quasi-coherent modules $s_*\mathcal{O}_R$. See
 Divisors, Lemma \ref{divisors-lemma-locally-free-rank-r-pullback}.
 Since the identity $e : U \to R$ is a section to $s$ we see that
-$s_*\mathcal{O}_R$ contains $\mathcal{O}_S$ as a direct summand.
+$s_*\mathcal{O}_R$ contains $\mathcal{O}_U$ as a direct summand.
 Hence $U = Z_{-1} = Z_0$ (details omitted).
 Since formation of Fitting ideals commutes with base change
 (More on Algebra, Lemma \ref{more-algebra-lemma-fitting-ideal-basics})
@@ -2476,7 +2476,7 @@ of $R$-invariant subschemes of $U$ such that the morphisms
 $s_r', t_r'$ of the restrictions $(W_r', R_r', s_r', t_r', c_r')$
 are finite locally free of rank $r$. To begin we set
 $W_1 = W'_1 = U \setminus Z_1$. This is an $R$-invariant open
-subscheme of $U$, it is true that $W_0$ is a thickening of $W'_0$,
+subscheme of $U$, it is true that $W_1$ is a thickening of $W'_1$,
 and the maps $s_1'$, $t_1'$ of the
 restriction $(W_1', R_1', s_1', t_1', c_1')$ are isomorphisms, i.e.,
 finite locally free of rank $1$.
@@ -2658,7 +2658,7 @@ by the restriction $(W', R', s', t', c')$ to $W'$.
 In other words, we may assume we have a groupoid scheme $(U, R, s, t, c)$
 whose morphisms $s$ and $t$ are finite locally free.
 By Properties, Lemma \ref{properties-lemma-maximal-points-affine}
-we can find an affine open containing $\{u_{ij}\}$
+we can find an affine open containing $\{u_{ji}\}$
 (a locally Noetherian scheme is quasi-separated by
 Properties, Lemma \ref{properties-lemma-locally-Noetherian-quasi-separated}).
 Finally, we can apply
@@ -2747,7 +2747,7 @@ $V(g) \supset V(j^\sharp(f))$ and hence $j^{-1}D(h) = D(g)$.
 \begin{lemma}
 \label{lemma-no-specializations-map-to-same-point}
 Let $(U, R, s, t, c)$ be a groupoid scheme. If $s, t$ are finite,
-and $u, u' \in R$ are distinct points in the same orbit,
+and $u, u' \in U$ are distinct points in the same orbit,
 then $u'$ is not a specialization of $u$.
 \end{lemma}
 
@@ -2941,7 +2941,7 @@ $$
 Let $f' \in A_h$ be the image of $f$. Then $(j')^{-1}D(f')$
 is the principal open determined by $g$ in the affine
 open $j^{-1}D(f)$ of $U$.
-Hence $(j')^{-1}D(f)$ is affine. Finally,
+Hence $(j')^{-1}D(f')$ is affine. Finally,
 $j'(V) \cap V(f') = j'(j^{-1}D(h) \cap Z)$
 is closed in $\Spec(A_h/(f')) = \Spec((A/f)_h) = D(h) \cap V(f)$
 by our choice of $h \in I$ and the ideal $I$. Hence we can apply

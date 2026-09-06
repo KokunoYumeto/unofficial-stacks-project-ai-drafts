@@ -661,7 +661,7 @@ in Sites, Remark \ref{sites-remark-variant-glue-sheaves-absolute}.
 We also give a direct proof in this case.
 
 \medskip\noindent
-Given a sheaf $\mathcal{F}$ on $\Sh((\Sch/S)_{Zar})$
+Given a sheaf $\mathcal{F}$ on $(\Sch/S)_{Zar}$
 we set $\mathcal{F}_T = i_p^{-1}\mathcal{F}$ where $p : T \to S$
 is the structure morphism. Note that
 $\mathcal{F}_T(U) = \mathcal{F}(U'/S)$ for any open $U \subset T$,
@@ -681,7 +681,7 @@ gives restriction maps.
 
 \medskip\noindent
 Conversely, given a system $(\mathcal{F}_T, c_f)$ as in the lemma
-we may define a presheaf $\mathcal{F}$ on $\Sh((\Sch/S)_{Zar})$
+we may define a presheaf $\mathcal{F}$ on $(\Sch/S)_{Zar}$
 by simply setting $\mathcal{F}(T/S) = \mathcal{F}_T(T)$. As restriction
 mapping, given $f : T' \to T$ we set for $s \in \mathcal{F}(T)$
 the pullback $f^*(s)$ equal to $c_f(s)$ (where we think of $c_f$ as
@@ -860,7 +860,7 @@ The covering $\{V_i \to T\}_{i \in I}$ refines $\{T_i \to T\}_{i \in I}$
 Moreover, $\{V_i \to T\}_{i \in I}$ is combinatorially equivalent to a
 covering $\{U_j \to T\}_{j \in J}$ of $T$ in the site
 $\Sch_\etale$ by
-Sets, Lemma \ref{sets-lemma-what-is-in-it}.
+Sets, Lemma \ref{sets-lemma-coverings-site}.
 The covering $\{U_j \to T\}_{j \in J}$ is a refinement as in (1).
 In the situation of (2), (3) each of the
 schemes $T_i$ is isomorphic to an object of $\Sch_\etale$ by
@@ -939,7 +939,7 @@ $\{T_{ij} \to T\}_{i \in I, j\in J_i}$ is a standard \'etale covering
 because $\bigcup_{i\in I} J_i$ is finite and each $T_{ij}$ is affine.
 
 \medskip\noindent
-We omit the proof that $S_{affine, \'etale}$ is a site.
+We omit the proof that $S_{affine, \etale}$ is a site.
 \end{proof}
 
 \begin{lemma}
@@ -1248,7 +1248,7 @@ formula involving pullbacks and restrictions is false.
 
 \begin{lemma}
 \label{lemma-composition-etale}
-Given schemes $X$, $Y$, $Y$ in $\Sch_\etale$
+Given schemes $X$, $Y$, $Z$ in $\Sch_\etale$
 and morphisms $f : X \to Y$, $g : Y \to Z$ we have
 $g_{big} \circ f_{big} = (g \circ f)_{big}$ and
 $g_{small} \circ f_{small} = (g \circ f)_{small}$.
@@ -1321,7 +1321,7 @@ in Sites, Remark \ref{sites-remark-variant-glue-sheaves-absolute}.
 We also give a direct proof in this case.
 
 \medskip\noindent
-Given a sheaf $\mathcal{F}$ on $\Sh((\Sch/S)_\etale)$
+Given a sheaf $\mathcal{F}$ on $(\Sch/S)_\etale$
 we set $\mathcal{F}_T = i_p^{-1}\mathcal{F}$ where $p : T \to S$
 is the structure morphism. Note that
 $\mathcal{F}_T(U) = \mathcal{F}(U/S)$ for any $U \to T$
@@ -1346,7 +1346,7 @@ relationship among $c_f$, $c_g$ and $c_{f \circ g}$.
 \medskip\noindent
 Conversely, given a system $(\mathcal{F}_T, c_f)$ as in the lemma
 we may define a presheaf $\mathcal{F}$ on
-$\Sh((\Sch/S)_\etale)$
+$(\Sch/S)_\etale$
 by simply setting $\mathcal{F}(T/S) = \mathcal{F}_T(T)$. As restriction
 mapping, given $f : T' \to T$ we set for $s \in \mathcal{F}(T)$
 the pullback $f^*(s)$ equal to $c_f(s)$ where we think of $c_f$ as
@@ -1522,7 +1522,7 @@ The covering $\{V_i \to T\}_{i \in I}$ refines $\{T_i \to T\}_{i \in I}$
 Moreover, $\{V_i \to T\}_{i \in I}$ is combinatorially equivalent to a
 covering $\{U_j \to T\}_{j \in J}$ of $T$ in the site
 $\Sch_{smooth}$ by
-Sets, Lemma \ref{sets-lemma-what-is-in-it}.
+Sets, Lemma \ref{sets-lemma-coverings-site}.
 The covering $\{U_j \to T\}_{j \in J}$ is a refinement as in (1).
 In the situation of (2), (3) each of the
 schemes $T_i$ is isomorphic to an object of $\Sch_{smooth}$ by
@@ -1582,9 +1582,6 @@ fully faithful. And finally condition (5) follows from the
 fact that every scheme has an affine open covering.
 \end{proof}
 
-\noindent
-To be continued...
-
 \begin{lemma}
 \label{lemma-morphism-big-smooth}
 Let $\Sch_{smooth}$ be a big smooth site.
@@ -1628,6 +1625,9 @@ Sites, Lemmas \ref{sites-lemma-have-functor-other-way} and
 \ref{sites-lemma-have-functor-other-way-morphism} to get the
 formula for $f_{big, *}$.
 \end{proof}
+
+\noindent
+To be continued...
 
 
 
@@ -1779,7 +1779,7 @@ The covering $\{V_i \to T\}_{i \in I}$ refines $\{T_i \to T\}_{i \in I}$
 Moreover, $\{V_i \to T\}_{i \in I}$ is combinatorially equivalent to a
 covering $\{U_j \to T\}_{j \in J}$ of $T$ in the site
 $\Sch_{syntomic}$ by
-Sets, Lemma \ref{sets-lemma-what-is-in-it}.
+Sets, Lemma \ref{sets-lemma-coverings-site}.
 The covering $\{U_j \to T\}_{j \in J}$ is a covering as in (1).
 In the situation of (2), (3) each of the
 schemes $T_i$ is isomorphic to an object of $\Sch_{syntomic}$ by
@@ -1839,9 +1839,6 @@ fully faithful. And finally condition (5) follows from the
 fact that every scheme has an affine open covering.
 \end{proof}
 
-\noindent
-To be continued...
-
 \begin{lemma}
 \label{lemma-morphism-big-syntomic}
 Let $\Sch_{syntomic}$ be a big syntomic site.
@@ -1885,6 +1882,9 @@ Sites, Lemmas \ref{sites-lemma-have-functor-other-way} and
 \ref{sites-lemma-have-functor-other-way-morphism} to get the
 formula for $f_{big, *}$.
 \end{proof}
+
+\noindent
+To be continued...
 
 
 
@@ -1954,13 +1954,13 @@ $\{T' \times_T T_i \to T'\}_{i\in I}$ is an fppf covering.
 The first assertion is clear.
 The second follows as the composition of flat morphisms is flat
 (see Morphisms, Lemma \ref{morphisms-lemma-composition-flat})
-and the composition of morphisms of finite presentation is
-of finite presentation
+and the composition of morphisms which are locally of finite presentation is
+locally of finite presentation
 (see Morphisms, Lemma \ref{morphisms-lemma-composition-finite-presentation}).
 The third follows as the base change of a flat morphism is flat
 (see Morphisms, Lemma \ref{morphisms-lemma-base-change-flat})
-and the base change of a morphism of finite presentation is
-of finite presentation
+and the base change of a morphism which is locally of finite presentation is
+locally of finite presentation
 (see Morphisms, Lemma \ref{morphisms-lemma-base-change-finite-presentation}).
 Moreover, the base change of a surjective family of morphisms is surjective
 (proof omitted).
@@ -2055,7 +2055,7 @@ The covering $\{V_i \to T\}_{i \in I}$ refines $\{T_i \to T\}_{i \in I}$
 Moreover, $\{V_i \to T\}_{i \in I}$ is combinatorially equivalent to a
 covering $\{U_j \to T\}_{j \in J}$ of $T$ in the site
 $\Sch_{fppf}$ by
-Sets, Lemma \ref{sets-lemma-what-is-in-it}.
+Sets, Lemma \ref{sets-lemma-coverings-site}.
 The covering $\{U_j \to T\}_{j \in J}$ is a refinement as in (1).
 In the situation of (2), (3) each of the
 schemes $T_i$ is isomorphic to an object of $\Sch_{fppf}$ by
@@ -2350,7 +2350,7 @@ Part (1) follows from the fact that any Zariski open covering of $T$
 can be refined by a finite affine open covering.
 
 \medskip\noindent
-Proof of (3). Choose $U \to T$ proper surjective and
+Proof of (2). Choose $U \to T$ proper surjective and
 $U = \bigcup_{j = 1, \ldots, m} U_j$ as in
 Definition \ref{definition-standard-ph-covering}.
 Choose $W_j \to U_j$ proper surjective and $W_j = \bigcup W_{ji}$
@@ -2514,7 +2514,7 @@ Morphisms, Lemma \ref{morphisms-lemma-base-change-finite-type}.
 hence we only need to check the condition on affine opens.
 Let $U' \subset T'$ be an affine open subscheme.
 Since $U'$ is quasi-compact we can find a finite affine open
-covering $U' = U'_1 \cup \ldots \cup U'$ such that
+covering $U' = U'_1 \cup \ldots \cup U'_m$ such that
 $U'_j \to T$ maps into an affine open $U_j \subset T$.
 Choose a standard ph covering $\{U_{jl} \to U_j\}_{l = 1, \ldots, n_j}$
 refining $\{T_i \times_T U_j \to U_j\}$.
@@ -2610,7 +2610,7 @@ The covering $\{V_i \to T\}_{i \in I}$ refines $\{T_i \to T\}_{i \in I}$
 Moreover, $\{V_i \to T\}_{i \in I}$ is combinatorially equivalent to a
 covering $\{U_j \to T\}_{j \in J}$ of $T$ in the site
 $\Sch_{ph}$ by
-Sets, Lemma \ref{sets-lemma-what-is-in-it}.
+Sets, Lemma \ref{sets-lemma-coverings-site}.
 The covering $\{U_j \to T\}_{j \in J}$ is a refinement as in (1).
 In the situation of (2), (3) each of the
 schemes $T_i$ is isomorphic to an object of $\Sch_{ph}$ by
@@ -2836,7 +2836,7 @@ formula for $f_{big, *}$.
 
 \begin{lemma}
 \label{lemma-composition-ph}
-Given schemes $X$, $Y$, $Y$ in $(\Sch/S)_{ph}$
+Given schemes $X$, $Y$, $Z$ in $(\Sch/S)_{ph}$
 and morphisms $f : X \to Y$, $g : Y \to Z$ we have
 $g_{big} \circ f_{big} = (g \circ f)_{big}$.
 \end{lemma}
@@ -2961,7 +2961,7 @@ for some quasi-compact open $U$ of $X_1 \setminus \{0\} = X_2 \setminus \{0\}$.
 But then we may write $U = D(f_1) \cup \ldots \cup D(f_n)$ for
 some $f_i \in k[t_1, t_2, \ldots]$ vanishing at $0$.
 Suppose that $f_1, \ldots, f_n$ use only the variables
-$x_1, \ldots, x_m$. Then $p = (0, \ldots, 0, 1, 0, \ldots)$ with $1$
+$t_1, \ldots, t_m$. Then $p = (0, \ldots, 0, 1, 0, \ldots)$ with $1$
 in the $(m + 1)$st spot is a closed point of $X_2$ not in the image
 of $W$.
 \end{example}
@@ -3467,7 +3467,7 @@ diagram
 $$
 \xymatrix{
 \Spec(L) \ar[r] \ar[d] & \Spec(W) \ar[r]_h \ar[d] & U \ar[d] \\
-\Spec(K) \ar[r] & \Spec(V) \ar[r]^g & X
+\Spec(K) \ar[r] & \Spec(V) \ar[r]^g & T
 }
 $$
 Since $\Spec(W)$ has a unique closed point, we see that $\Im(h)$
@@ -3592,7 +3592,7 @@ Assertion (1) is clear.
 Proof of (3).
 Let $U' \subset T'$ be an affine open subscheme.
 Since $U'$ is quasi-compact we can find a finite affine open
-covering $U' = U'_1 \cup \ldots \cup U'$ such that
+covering $U' = U'_1 \cup \ldots \cup U'_m$ such that
 $U'_j \to T$ maps into an affine open $U_j \subset T$.
 Choose a standard V covering $\{U_{jl} \to U_j\}_{l = 1, \ldots, n_j}$
 refining $\{T_i \times_T U_j \to U_j\}$.
@@ -3796,7 +3796,7 @@ and let $g : \Spec(V) \to U$ be a morphism.
 By (3) we find a specialization $w' \leadsto w$ of
 points of
 $$
-T = \Spec(V) \times_X Y = \Spec(V) \times_U (U \times_X Y)
+T = \Spec(V) \times_Y X = \Spec(V) \times_U (U \times_Y X)
 $$
 such that $w'$ maps to the generic point of $\Spec(V)$
 and $w$ maps to the closed point of $\Spec(V)$.
@@ -3997,7 +3997,7 @@ we say that
 $\Ob(\Sch_\tau) \subset \Ob(\Sch'_{\tau'})$
 and
 $\text{Cov}(\Sch_\tau) \subset \text{Cov}(\Sch'_{\tau'})$.
-In this case $\tau$ is stronger than $\tau'$, for example, no fppf
+In this case $\tau'$ is stronger than $\tau$, for example, no fppf
 site can be contained in an \'etale site.
 
 \begin{lemma}
@@ -4069,7 +4069,7 @@ to a sheaf $\mathcal{G}$ on $\Sch'_\tau$ the restriction
 $\mathcal{G}|_{\Sch_\tau}$. Hence this lemma simply says that given
 any sheaf of sets $\mathcal{F}$ on $\Sch_\tau$ there exists a
 canonical sheaf $\mathcal{F}'$ on $\Sch'_\tau$ such that
-$\mathcal{F}|_{\Sch'_\tau} = \mathcal{F}'$. In fact the sheaf
+$\mathcal{F}'|_{\Sch_\tau} = \mathcal{F}$. In fact the sheaf
 $\mathcal{F}'$ has the following description: it is the sheafification
 of the presheaf
 $$
@@ -4198,7 +4198,7 @@ Strictly speaking in these formulas we need to replace $V_{i, k}$ and
 $V_{i, k} \cap V_{i, l}$ by isomorphic affine objects of $\mathcal{C}$
 before applying the functor $F$.
 Since $I$ is directed the colimits pass through equalizers.
-Hence the sheaf condition (b) for $F$ and the Zariski coverings
+Hence the sheaf condition (a) for $F$ and the Zariski coverings
 $\{V_{i, k} \to V_i\}$ implies the sheaf
 condition for $F'$ and this covering.
 
@@ -4268,19 +4268,19 @@ F'(X)  \\
 \colim_{i' \in I} F'_{X_{i'}}(X_{i'})
 \end{align*}
 as desired. Finally, in general we pick any $i \in I$ and we choose
-a finite affine open covering $V_i = V_{i, 1} \cup \ldots \cup V_{i, n}$
-such that $V_{i, k} \to S$ factors through an affine open of $S$.
-Let $V_k \subset V$ and $V_{i', k}$ for $i' \geq i$
-be the inverse images of $V_{i, k}$.
+a finite affine open covering $X_i = X_{i, 1} \cup \ldots \cup X_{i, n}$
+such that $X_{i, k} \to S$ factors through an affine open of $S$.
+Let $X_k \subset X$ and $X_{i', k}$ for $i' \geq i$
+be the inverse images of $X_{i, k}$.
 By the previous case we see that
 $$
-F'_{V_k}(V_k) = \colim_{i' \geq i} F'_{V_{i', k}}(V_{i', k})
+F'_{X_k}(X_k) = \colim_{i' \geq i} F'_{X_{i', k}}(X_{i', k})
 $$
 and
 $$
-F'_{V_k \cap V_l}(V_k \cap V_l) =
+F'_{X_k \cap X_l}(X_k \cap X_l) =
 \colim_{i' \geq i}
-F'_{V_{i', k} \cap V_{i', l}}(V_{i', k} \cap V_{i', l})
+F'_{X_{i', k} \cap X_{i', l}}(X_{i', k} \cap X_{i', l})
 $$
 By the sheaf property and exactness of filtered colimits
 we find that $F'_X(X) = \colim_{i \in I} F'_{X_i}(X_i)$
@@ -4310,11 +4310,11 @@ $\tau$-coverings of $T_i$. If
 $f : T \times_{T_i} \mathcal{V}_i \to T \times_{T_i} \mathcal{V}'_i$ is
 a morphism of coverings of $T$, then there exists an index
 $i' \geq i$ and a morphism
-$f_{i'} : T_{i'} \times_{T_i} \mathcal{V} \to
+$f_{i'} : T_{i'} \times_{T_i} \mathcal{V}_i \to
 T_{i'} \times_{T_i} \mathcal{V}'_i$
 whose base change to $T$ is $f$.
 \item If
-$f, g : \mathcal{V} \to \mathcal{V}'_i$
+$f, g : \mathcal{V}_i \to \mathcal{V}'_i$
 are morphisms of standard $\tau$-coverings of $T_i$ whose
 base changes $f_T, g_T$ to $T$ are equal then there exists an
 index $i' \geq i$ such that $f_{T_{i'}} = g_{T_{i'}}$.
@@ -4405,7 +4405,7 @@ of our covering. Then we see that
 \begin{align*}
 F'(X)
 & =
-\colim_{k' \geq k} F(V_k) \\
+\colim_{k' \geq k} F(V_{k'}) \\
 & =
 \colim_{k' \geq k}
 \text{Equalizer}(
@@ -4413,7 +4413,7 @@ F'(X)
 \prod F(V_{k', i})
 \ar@<1ex>[r] \ar@<-1ex>[r] &
 \prod F(V_{k', i} \times_{V_{k'}} V_{k', j})
-}
+})
 \\
 & =
 \text{Equalizer}(
@@ -4423,7 +4423,7 @@ F'(X)
 \ar@<1ex>[r] \ar@<-1ex>[r] &
 \colim_{k' \geq k}
 \prod F(V_{k', i} \times_{V_{k'}} V_{k', j})
-}
+})
 \\
 & =
 \text{Equalizer}(
@@ -4431,7 +4431,7 @@ F'(X)
 \prod F'(X_i)
 \ar@<1ex>[r] \ar@<-1ex>[r] &
 \prod F'(X_i \times_X X_j)
-}
+})
 \end{align*}
 The first equality holds by construction of $F'$. The second holds by
 assumption (c). The third holds because filtered colimits are exact.

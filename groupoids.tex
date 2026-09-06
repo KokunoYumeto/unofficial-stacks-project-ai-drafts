@@ -69,7 +69,7 @@ $\text{pr}_1 : X \times_S Y \to Y$.
 
 \noindent
 Recall that a {\it relation} $R$ on a set $A$ is just a subset
-of $R \subset A \times A$. We usually write $a R b$ to indicate
+$R \subset A \times A$. We usually write $a R b$ to indicate
 $(a, b) \in R$. We say the relation is {\it transitive} if
 $a R b, b R c \Rightarrow a R c$. We say the relation is
 {\it reflexive} if $a R a$ for all $a \in A$. We say the relation is
@@ -169,7 +169,7 @@ $$
 \kappa(y) \ar[u] \ar[r] & \kappa(r') \ar[u]
 }
 $$
-Denote $x_K, y_K, z_K : \Spec(K) \to U$
+Denote by $x_K, y_K, z_K : \Spec(K) \to U$
 the morphisms
 $$
 \begin{matrix}
@@ -226,7 +226,7 @@ Then $j$ is an equivalence relation.
 \begin{proof}
 By condition (1) and
 Morphisms, Lemma \ref{morphisms-lemma-unramified-permanence}
-we see that $j$ is a unramified. Then
+we see that $j$ is unramified. Then
 $\Delta_j : R \to R \times_{U \times_S U} R$ is an open immersion by
 Morphisms, Lemma \ref{morphisms-lemma-diagonal-unramified-morphism}.
 However, then condition (2) says $\Delta_j$ is bijective on
@@ -261,7 +261,7 @@ for all $g, g', g'' \in G$,
 \item (identity) there exists a unique element $e \in G$
 (called the {\it identity}, {\it unit}, or $1$ of $G$) such that
 $m(g, e) = m(e, g) = g$ for all $g \in G$, and
-\item (inverse) for all $g \in G$ there exists a $i(g) \in G$
+\item (inverse) for all $g \in G$ there exists an $i(g) \in G$
 such that $m(g, i(g)) = m(i(g), g) = e$, where $e$ is the
 identity.
 \end{enumerate}
@@ -372,7 +372,6 @@ morphism $G \to S$ is flat.
 \item We say $G$ is a {\it separated group scheme} if the structure
 morphism $G \to S$ is separated.
 \end{enumerate}
-Add more as needed.
 \end{definition}
 
 
@@ -507,7 +506,7 @@ The morphism giving the group structure is the morphism
 \mathbf{Z}[x_{ij}, 1/d] \otimes_{\mathbf{Z}} \mathbf{Z}[x_{ij}, 1/d]
 & \leftarrow &
 \mathbf{Z}[x_{ij}, 1/d] \\
-\sum x_{ik} \otimes x_{kj} & \leftarrow & x_{ij}
+\sum_k x_{ik} \otimes x_{kj} & \leftarrow & x_{ij}
 \end{eqnarray*}
 Hence we see that $\text{GL}_n$ is a group scheme over $\mathbf{Z}$.
 For any scheme $S$ the base change $\text{GL}_{n, S}$ is a
@@ -851,7 +850,7 @@ Morphisms, Lemma \ref{morphisms-lemma-scheme-over-field-universally-open}.
 
 \begin{lemma}
 \label{lemma-group-scheme-over-field-translate-open}
-If $(G, m)$ is a group scheme over a field $k$. Let $U \subset G$
+Let $(G, m)$ be a group scheme over a field $k$. Let $U \subset G$
 open and $T \to G$ a morphism of schemes. Then the image of the
 composition $T \times_k U \to G \times_k G \to G$ is open.
 \end{lemma}
@@ -1093,7 +1092,7 @@ quasi-compact space. We claim that $W$ is closed.
 \medskip\noindent
 Proof of the claim. Since $W$ is quasi-compact and $G$ is separated
 (Lemma \ref{lemma-group-scheme-over-field-separated}), the inclusion
-$W \to G$ is quasi-compect by Schemes, Lemma
+$W \to G$ is quasi-compact by Schemes, Lemma
 \ref{schemes-lemma-quasi-compact-permanence}. We conclude that
 points in the closure of $W$ are specializations of points of $W$
 (Morphisms, Lemma \ref{morphisms-lemma-reach-points-scheme-theoretic-image}).
@@ -1130,7 +1129,7 @@ subgroup scheme $G^0 \subset G$ with the following properties
 Let $G^0$ be the connected component of the identity with its canonical
 scheme structure (Morphisms, Definition
 \ref{morphisms-definition-scheme-structure-connected-component}).
-To show that $G^0$ is a closed subsgroup scheme we will use the
+To show that $G^0$ is a closed subgroup scheme we will use the
 criterion of Lemma \ref{lemma-closed-subgroup-scheme}.
 The morphism $e : \Spec(k) \to G$ factors through $G^0$ as we chose
 $G^0$ to be the connected component of $G$ containing $e$.
@@ -1315,7 +1314,7 @@ After translation by a rational point we may assume that $Z = G^0$
 (details omitted). Observe that the scheme theoretic inverse image
 $T' = f^{-1}(G^0) \subset T$ is a closed subscheme, which has the same type.
 After replacing $T$ by $T'$ we may assume that $f(T) \subset G^0$.
-Choose an affine open neighbourhood $U \subset G$
+Choose an affine open neighbourhood $U \subset W$
 of $e \in G$, so that in particular $U \cap G^0$ is nonempty. We will show
 there exists a $g \in G^0(k)$ such that $f(T) \subset g^{-1}U$.
 This will finish the proof as $g^{-1}U \subset W$ by the left
@@ -1329,7 +1328,7 @@ open neighbourhood of $e$. Show that $f(T) \subset g^{-1}U$
 for some $g \in G(k)$. Consider the morphism
 $$
 U \times_k T \longrightarrow G \times_k T,\quad
-(t, u) \longrightarrow (uf(t)^{-1}, t)
+(u, t) \longrightarrow (uf(t)^{-1}, t)
 $$
 which is an open immersion (because the extension of this morphism to
 $G \times_k T \to G \times_k T$ is an isomorphism).
@@ -1699,8 +1698,8 @@ which contains the center $C$.
 \medskip\noindent
 Let $h$ be an $S$-valued point of $H$ with $S$ locally Noetherian.
 Then the automorphism $\text{inn}_h$ induces the identity on all
-the closed subschemes $G_{n, S}$. Consider the kernel
-$K = \Ker(\text{inn}_h : G_S \to G_S)$.
+the closed subschemes $G_{n, S}$. Consider the equalizer
+$K \subset G_S$ of $\text{inn}_h$ and $\text{id}_{G_S}$.
 This is a closed subgroup scheme of $G_S$ over $S$ containing the
 closed subschemes $G_{n, S}$ for $n \geq 1$.
 This implies that $K$ contains an open neighbourhood of
@@ -1720,9 +1719,9 @@ $gh = hg$ in $G(S)$.
 Assume that $k$ is algebraically closed. Then we can pick a $k$-valued
 point $g_i$ in each irreducible component $G_i$ of $G$. Observe that in
 this case the connected components of $G$ are the irreducible components
-of $G$ are the translates of $G^0$ by our $g_i$. We claim that
+of $G$ and are the translates of $G^0$ by our $g_i$. We claim that
 $$
-C = H \cap \bigcap\nolimits_i \Ker(\text{inn}_{g_i} : G \to G)
+C = H \cap \bigcap\nolimits_i \operatorname{Eq}(\text{inn}_{g_i}, \text{id}_G)
 \quad (\text{scheme theoretic intersection})
 $$
 Namely, $C$ is contained in the right hand side. On the other hand, every
@@ -1732,7 +1731,7 @@ and with $g_i$ hence with everything in $G = \bigcup G^0g_i$.
 \medskip\noindent
 The case of a general base field $k$ follows from the result for the
 algebraic closure $\overline{k}$ by descent. Namely, let
-$A \subset G_{\overline{k}}$ the closed subgroup scheme representing
+$A \subset G_{\overline{k}}$ be the closed subgroup scheme representing
 the center of $G_{\overline{k}}$. Then we have
 $$
 A \times_{\Spec(k)} \Spec(\overline{k}) =
@@ -1936,7 +1935,8 @@ and the result follows by elementary arithmetic.
 \begin{lemma}
 \label{lemma-degree-multiplication-by-d}
 Let $k$ be a field. Let $A$ be an abelian variety over $k$.
-Let $[d] : A \to A$ be the multiplication by $d$.
+Let $d \in \mathbf{Z}$ be nonzero, and let
+$[d] : A \to A$ be multiplication by $d$.
 Then $[d]$ is finite locally free of degree $d^{2\dim(A)}$.
 \end{lemma}
 
@@ -2297,7 +2297,7 @@ $a : G \times_S X \to X$ be an action of $G$ on $X$.
 morphism of schemes $G \times_S X \to X \times_S X$,
 $(g, x) \mapsto (a(g, x), x)$ is an isomorphism of schemes over $S$.
 \item A pseudo $G$-torsor $X$ is called {\it trivial} if there exists
-an $G$-equivariant isomorphism $G \to X$ over $S$ where $G$ acts on
+a $G$-equivariant isomorphism $G \to X$ over $S$ where $G$ acts on
 $G$ by left multiplication.
 \end{enumerate}
 \end{definition}
@@ -2385,7 +2385,7 @@ come from a fppf $G$-torsor?
 \item Is every $G$-torsor an
 fppf (resp.\ smooth, resp.\ \'etale, resp.\ Zariski) torsor?
 \end{enumerate}
-In general the answers to these questions is no. To get a positive answer
+In general the answers to these questions are no. To get a positive answer
 we need to impose additional conditions on $G \to S$.
 For example:
 If $S$ is the spectrum of a field, then the answer to (1) is yes
@@ -2602,7 +2602,7 @@ a : \mathbf{G}_m \times X \longrightarrow X
 $$
 by the ring map $\mu : A \to A \otimes \mathbf{Z}[x, x^{-1}]$,
 $f \mapsto f \otimes x^{\deg(f)}$.
-Namely, to check this we have to verify that
+Namely, to check this we have to verify commutativity of the diagram
 $$
 \xymatrix{
 A \ar[r]_\mu \ar[d]_\mu &
@@ -2648,7 +2648,7 @@ Since $a$ is an action, if we evaluate at $x = 1$,
 we see $f = \sum f_n$. Since $a$ is an action
 we find that
 $$
-\sum (f_n)_m \otimes x^m \otimes x^n = \sum f_n x^n \otimes x^n
+\sum (f_n)_m \otimes x^m \otimes x^n = \sum f_n \otimes x^n \otimes x^n
 $$
 (compare with computation in Example \ref{example-Gm-on-affine}).
 Thus $(f_n)_m = 0$ if $n \not = m$ and $(f_n)_n = f_n$.
@@ -2931,7 +2931,7 @@ $$
 c^*t^*\mathcal{F} \ar[ru]_{c^*\alpha}
 }
 $$
-is a commutative in the category of
+is a commutative diagram in the category of
 $\mathcal{O}_{R \times_{s, U, t} R}$-modules, and
 \item the pullback
 $$
@@ -3137,9 +3137,9 @@ t^*s_*t^*\mathcal{G} =
 \text{pr}_{1, *}c^*t^*\mathcal{G} =
 s^*s_*t^*\mathcal{G}
 $$
-The middle equality because $t \circ c = t \circ \text{pr}_0$ as
-morphisms $R \times_{s, U, t} R \to U$, and the first and the last
-equality because we know that base change and pushforward commute in
+The middle equality holds because $t \circ c = t \circ \text{pr}_0$ as
+morphisms $R \times_{s, U, t} R \to U$, and the first and last
+equalities hold because we know that base change and pushforward commute in
 these steps by Cohomology of Schemes, Lemma
 \ref{coherent-lemma-flat-base-change-cohomology}.
 
@@ -3148,7 +3148,7 @@ To verify the cocycle condition of Definition \ref{definition-groupoid-module}
 for $\alpha$ and the adjointness property we describe the construction
 $\mathcal{G} \mapsto (s_*t^*\mathcal{G}, \alpha)$ in another way.
 Consider the groupoid scheme
-$(R, R \times_{t, U, t} R, \text{pr}_0, \text{pr}_1, \text{pr}_{02})$
+$(R, R \times_{t, U, t} R, \text{pr}_1, \text{pr}_0, \text{pr}_{02})$
 associated to the equivalence relation $R \times_{t, U, t} R$
 on $R$, see Lemma \ref{lemma-equivalence-groupoid}.
 There is a morphism
@@ -3279,7 +3279,7 @@ If $f$ has a section $\sigma$, then we see that
 $\mathcal{F} \cap f_*\mathcal{G}$ is contained in the image of
 $\sigma^*\mathcal{G} \to \sigma^*f^*\mathcal{F} = \mathcal{F}$,
 hence coherent. In general, to show that $\mathcal{F} \cap f_*\mathcal{G}$
-is coherent, it suffices the show that
+is coherent, it suffices to show that
 $f^*(\mathcal{F} \cap f_*\mathcal{G})$ is coherent (see
 Descent, Lemma \ref{descent-lemma-finite-type-descends}).
 Since $f$ is flat this is equal to $f^*\mathcal{F} \cap f^*f_*\mathcal{G}$.
@@ -3433,7 +3433,7 @@ $(U, R, s, t, c)$ is isomorphic to one of the $(\mathcal{F}_t, \alpha_t)$.
 \begin{proof}
 For each quasi-coherent module $\mathcal{F}$ on $U$ there is a
 (possibly empty) set of maps $\alpha : t^*\mathcal{F} \to s^*\mathcal{F}$
-such that $(\mathcal{F}, \alpha)$ is a quasi-coherent modules on
+such that $(\mathcal{F}, \alpha)$ is a quasi-coherent module on
 $(U, R, s, t, c)$. By
 Properties, Lemma \ref{properties-lemma-set-of-iso-classes}
 there exists a set of isomorphism classes of $\kappa$-generated
@@ -3471,7 +3471,7 @@ s^{-1}(U_i) \cap t^{-1}(U_j) = \bigcup\nolimits_{k \in J_{ij}} W_{ijk}.
 $$
 Write $U_i = \Spec(A_i)$, $U_{ijk} = \Spec(A_{ijk})$,
 $W_{ijk} = \Spec(B_{ijk})$.
-Let $\kappa$ be any infinite cardinal $\geq$ than the cardinality
+Let $\kappa$ be any infinite cardinal $\geq$ the cardinality
 of any of the sets $I$, $I_{ij}$, $J_{ij}$.
 
 \medskip\noindent
@@ -3504,7 +3504,7 @@ m \otimes 1 = \sum\nolimits_{m' \in S(i, j, k, m)} m' \otimes a_{m'}
 $$
 in $M_{ijk}$ for some $a_{m'} \in A_{ijk}$ or $b_{m'} \in B_{ijk}$.
 Moreover, let's agree that $S(i, i, k, m) = \{m\}$ for all
-$i, j = i, k, m$ when $k \in I_{ij}$. Fix such a collection $S(i, j, k, m)$
+$i \in I$, $k \in I_{ii}$, and $m \in M_i$. Fix such a collection $S(i, j, k, m)$
 
 \medskip\noindent
 Given a family $\mathcal{S} = (S_i)_{i \in I}$ of subsets
@@ -3720,7 +3720,7 @@ G_{0, \kappa(p)} \times_{\kappa(p)} R_p \longrightarrow R_p
 $$
 (see
 Lemma \ref{lemma-groupoid-action-stabilizer-pseudo-torsor})
-which turns $R_p$ into a $G_{\kappa(p)}$-torsor over $\kappa(p)$.
+turns $R_p$ into a $G_{\kappa(p)}$-torsor over $\kappa(p)$.
 \end{lemma}
 
 \begin{proof}
@@ -3806,7 +3806,7 @@ The morphism of groupoids
 $(U', R', s', t', c') \to (U, R, s, t, c)$
 constructed in Lemma \ref{lemma-restrict-groupoid} is called
 the {\it restriction of $(U, R, s, t, c)$ to $U'$}.
-We sometime use the notation $R' = R|_{U'}$ in this case.
+We sometimes use the notation $R' = R|_{U'}$ in this case.
 \end{definition}
 
 \begin{lemma}
@@ -3902,7 +3902,7 @@ Lemmas \ref{lemma-pre-equivalence-equivalence-relation-points} and
 \ref{lemma-groupoid-pre-equivalence}, namely, $t(s^{-1}(W))$
 is the set of points of $U$ equivalent to a point of $W$.
 Next, assume $s$ and $t$ open and $W \subset U$ open.
-Since $s$ is open the set $W' = t(s^{-1}(W))$ is an open subset of $U$.
+Since $t$ is open the set $W' = t(s^{-1}(W))$ is an open subset of $U$.
 Finally, assume that $s$, $t$ are both open and quasi-compact.
 Then, if $W \subset U$ is a quasi-compact open, then also
 $W' = t(s^{-1}(W))$ is a quasi-compact open, and invariant by the
@@ -4153,7 +4153,7 @@ Hence $U'/R' \to U/R$ is surjective also in this case.
 Let $\tau \in \{Zariski, \etale, fppf, smooth, syntomic\}$.
 Let $S$ be a scheme.
 Let $(U, R, s, t, c)$ be a groupoid scheme over $S$.
-Let $g : U' \to U$ a morphism of schemes over $S$.
+Let $g : U' \to U$ be a morphism of schemes over $S$.
 Let $(U', R', s', t', c')$ be the restriction of $(U, R, s, t, c)$ to $U'$.
 Assume  $U, U', R, S$ are objects of a $\tau$-site $\Sch_\tau$.
 The map of quotient sheaves
@@ -4338,7 +4338,7 @@ V \times_{U, t} (R \times_{s, U, t} R) \\
 & \xrightarrow{1, c}
 V \times_{U, t} R = R'
 \end{align*}
-A computation, which we omit shows that we obtain a groupoid scheme
+A computation, which we omit, shows that we obtain a groupoid scheme
 over $(U, R, s, t, c)$. It is clear that this groupoid scheme is
 cartesian over $(U, R, s, t, c)$.
 
@@ -4460,7 +4460,7 @@ If $G \to U$ is separated (resp.\ quasi-separated), then the morphism
 $U \to G$, as a section of the structure morphism $G \to U$ is a closed
 immersion (resp.\ quasi-compact), see
 Schemes, Lemma \ref{schemes-lemma-section-immersion}.
-Thus (b) $\Rightarrow$ (a) in both (1) and (2).
+Thus (b) $\Rightarrow$ (c) in both (1) and (2).
 
 \medskip\noindent
 By the result of
@@ -4512,7 +4512,7 @@ In other words, $U \to M$ is a coequalizer in the category of affine schemes.
 \medskip\noindent
 We would like to find conditions that guarantee the morphism $U \to M$ is
 really a ``quotient'' in the category of schemes. We will discuss this at
-length elsewhere (insert future reference here); here we just discuss some
+length elsewhere; here we just discuss some
 special cases. Namely, we will focus on the case where $s, t$ are finite
 locally free.
 
@@ -4564,7 +4564,7 @@ of Lemma \ref{lemma-diagram}.
 Think of $f \in \Gamma(U, \mathcal{O}_U)$. The commutativity of the
 top part of the diagram shows that
 $\text{pr}_0^\sharp(t^\sharp(f)) = c^\sharp(t^\sharp(f))$ as elements of
-$\Gamma(R \times_{S, U, t} R, \mathcal{O})$.
+$\Gamma(R \times_{s, U, t} R, \mathcal{O})$.
 Looking at the right lower cartesian square
 the compatibility of the norm construction with base change shows that
 $s^\sharp(\text{Norm}_{s^\sharp}(t^\sharp(f))) =
@@ -4597,7 +4597,7 @@ there exists a decomposition
 $U = \coprod\nolimits_{r \geq 0} U_r$
 such that $s : s^{-1}(U_r) \to U_r$ is finite locally free of rank $r$.
 As $s$ is surjective we see that $U_0 = \emptyset$.
-Note that $u \in U_r \Leftrightarrow$ if and only if the scheme theoretic fibre
+Note that $u \in U_r \Leftrightarrow$ the scheme theoretic fibre
 $s^{-1}(u)$ has degree $r$ over $\kappa(u)$. Now, if $z \in R$ with $s(z) = u$
 and $t(z) = u'$ then using notation as in Lemma \ref{lemma-diagram}
 $$
@@ -4712,7 +4712,7 @@ Algebra, Lemma \ref{algebra-lemma-image-dense-generic-points}.
 Proof of part (2)(a). By Lemma \ref{lemma-finite-locally-free-disjoint-free}
 our groupoid scheme $(U, R, s, t, c)$ decomposes as a finite disjoint union
 of groupoid schemes $(U_r, R_r, s, t, c)$ such that $s, t : R_r \to U_r$
-are finite locally free of rank $r$. Pulling back by $U' = \Spec(C') \to U$
+are finite locally free of rank $r$. Pulling back by $U' = \Spec(A') \to U$
 we obtain a similar decomposition of $U'$ and $U^1 = \Spec(C^1)$.
 We will show in the next paragraph that (2)(a) holds for the corresponding
 system of rings $A_r, B_r, C_r, C'_r, C^1_r$ with $n = r$.
@@ -4837,12 +4837,11 @@ groupoid (base change via the map $c : C \to k$). On the one hand,
 $a_1(g) \in k^*$ since
 the value of $t^\sharp(f)$ at all the points (which correspond to
 $b_1, \ldots, b_n$) lying over $a_1$ is
-invertible (insert future reference on property determinant here).
+invertible.
 On the other hand, since $f \in \mathfrak m$, we see that
 $f$ is not a unit, hence $t^\sharp(f)$ is not a unit
 (as $t^\sharp \otimes 1$ is faithfully flat),
-hence its norm is not a unit (insert future reference
-on property determinant here). We conclude that $C^1$ contains
+hence its norm is not a unit. We conclude that $C^1$ contains
 an element which is not nilpotent
 and not a unit. We will now show that this leads to a contradiction.
 Namely, apply Lemma \ref{lemma-invariants-base-change}
@@ -4877,7 +4876,7 @@ Consequently $z$ is in the image of $(t, s)$, which proves (3).
 
 \begin{lemma}
 \label{lemma-etale}
-Let $S$ be a scheme. Let $f : (U', R', s', t') \to (U, R, s, t, c)$ be a
+Let $S$ be a scheme. Let $f : (U', R', s', t', c') \to (U, R, s, t, c)$ be a
 morphism of groupoid schemes over $S$.
 \begin{enumerate}
 \item $U$, $R$, $U'$, $R'$ are affine,
@@ -4948,7 +4947,7 @@ $$
 and correspondingly $M'_1 = M_1 \amalg M''_1$ as a scheme over $M_1$.
 Write $M_1 = \Spec(C_1)$ and write $C_1 = \colim C_i$ as a filtered
 colimit of \'etale $C$-algebras. Set $M_i = \Spec(C_i)$.
-The $M_1 = \lim M_i$ and similarly for the other schemes.
+Then $M_1 = \lim M_i$ and similarly for the other schemes.
 By Limits, Lemmas \ref{limits-lemma-descend-opens} and
 \ref{limits-lemma-descend-isomorphism}
 we can find an $i$ such that
@@ -5084,7 +5083,7 @@ A \ar@<-1ex>[l]_s \ar@<1ex>[l]^t \ar[u]_s &
 C \ar[u] \ar[l]
 }
 $$
-Moreover the tow left squares are cocartesian in the category of rings, and
+Moreover the two left squares are cocartesian in the category of rings, and
 the top row is isomorphic to the diagram
 $$
 \xymatrix{
@@ -5095,7 +5094,7 @@ A \ar[l]^t
 $$
 which is an equalizer diagram according to
 Descent, Lemma \ref{descent-lemma-ff-exact} because condition (2) implies
-in particular that $s$ (and hence also then isomorphic arrow $t$)
+in particular that $s$ (and hence also the isomorphic arrow $t$)
 is faithfully flat.
 The lower row is an equalizer diagram by definition of $C$.
 We can use the $x_i$ and get a commutative diagram
@@ -5254,7 +5253,7 @@ $t(s^{-1}(\{u\})) = \{u_1, \ldots, u_n\}$ is a finite set.
 Note that $u \in \{u_1, \ldots, u_n\}$.
 Let $W \subset U$ be an affine open containing $\{u_1, \ldots, u_n\}$,
 in particular $u \in W$. Consider
-$Z = R \setminus s^{-1}(W) \cap t^{-1}(W)$. This is a closed subset
+$Z = R \setminus (s^{-1}(W) \cap t^{-1}(W))$. This is a closed subset
 of $R$. The image $t(Z)$ is a closed subset of $U$ which can be loosely
 described as the set of points of $U$ which are $R$-equivalent to a point
 of $U \setminus W$. Hence $W' = U \setminus t(Z)$ is an $R$-invariant, open
@@ -5362,7 +5361,7 @@ provides an $R$-invariant affine open containing $v$.
 \begin{lemma}
 \label{lemma-descend-along-finite}
 Let $X \to Y$ be a surjective finite locally free morphism. 
-Let $V$ be a scheme over $X$ such that for all 
+Let $V$ be a scheme over $X$ such that for every positive integer $d$ and all
 $(y, v_1, \ldots, v_d)$ where $y \in Y$ and
 $v_1, \ldots, v_d \in V_y$ there exists an affine open
 $U \subset V$ with $v_1, \ldots, v_d \in U$.
