@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           python tools/generate_changes_from_upstream.py --check
-          python -m unittest tests.test_changes_from_upstream tests.test_semantic_composition tests.test_build_fixed_point_mutex
+          python -m unittest tests.test_changes_from_upstream tests.test_semantic_composition tests.test_build_fixed_point_mutex tests.test_compare_fixed_point_builds tests.test_r47_composition tests.test_r47_release_consumer
 
   ega-checkpoint-tooling:
     runs-on: ubuntu-latest
@@ -61,4 +61,5 @@ jobs:
           python -m unittest \
             tests.test_ega_source_checkpoint \
             tests.test_ega_source_build_binding \
-            tests.test_ega_source_package
+            tests.test_ega_source_package \
+            tests.test_ega_checkpoint_successor

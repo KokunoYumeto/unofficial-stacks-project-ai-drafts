@@ -30,19 +30,19 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/ega-i-6.6.4-fixed-point-build-2026-08-31.json"
+    "validation/stacks-errata-a04446e-r47-build-2026-09-06.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-visual-qa-2026-09-05.json"
+    "validation/stacks-errata-a04446e-r47-visual-qa-2026-09-06.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-reproducibility-2026-09-05.json"
+    "validation/stacks-errata-a04446e-r47-reproducibility-2026-09-06.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-reproducibility-second-2026-09-05.json"
+    "validation/stacks-errata-a04446e-r47-reproducibility-second-2026-09-06.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-release-2026-08-31.json"
+    "validation/stacks-errata-a04446e-r47-release-2026-09-06.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
@@ -280,6 +280,18 @@ def normalize_build_for_reproducibility(value: object) -> object:
             if key not in TEX_MUTEX_VOLATILE_KEYS
         }
     return normalized
+
+
+def validate_reproducible_pair(first: dict, second: dict, errors: list[str]) -> None:
+    """Use the same strict checkpoint and mutex contract as the producer."""
+    if __package__:
+        from .compare_fixed_point_builds import compare_receipts
+    else:
+        from compare_fixed_point_builds import compare_receipts
+    try:
+        compare_receipts(first, second)
+    except (TypeError, ValueError, KeyError) as exc:
+        errors.append(f"fixed-point reproduction binding failed: {exc}")
 
 
 def require_commit(commit: object, label: str, errors: list[str]) -> str | None:
@@ -2965,26 +2977,7 @@ def main(argv: list[str] | None = None) -> int:
     }
     if second_run != expected_second_run:
         errors.append("reproducibility second-run binding mismatch")
-    for key in (
-        "schema",
-        "status",
-        "source",
-        "builder",
-        "composition",
-        "environment",
-        "build",
-        "artifacts",
-        "pdfs_committed",
-    ):
-        second_value = second_build.get(key)
-        first_value = build_receipt.get(key)
-        if key == "build":
-            second_value = normalize_build_for_reproducibility(second_value)
-            first_value = normalize_build_for_reproducibility(first_value)
-        if second_value != first_value:
-            errors.append(f"second fixed-point receipt mismatch for {key}")
-    if second_build.get("created_utc") == build_receipt.get("created_utc"):
-        errors.append("second fixed-point receipt does not identify a later invocation")
+    validate_reproducible_pair(build_receipt, second_build, errors)
     reproduction_artifacts = reproducibility.get("artifacts")
     if reproduction_artifacts != artifact_identities:
         errors.append("reproducibility artifact inventory differs from the build receipt")
@@ -3023,6 +3016,7 @@ def main(argv: list[str] | None = None) -> int:
         "builder_identity_equal": True,
         "environment_identity_equal": True,
         "fixed_point_sweep_equal": True,
+        "source_checkpoint_identity_equal": True,
     }
     for key, expected in expected_comparison_scalars.items():
         if reproduction_comparison.get(key) != expected:

@@ -6,8 +6,20 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
+
+if __package__:
+    from .validate_unified_repository import (
+        normalize_build_for_reproducibility,
+        validate_machine_wide_tex_mutex,
+    )
+else:
+    from validate_unified_repository import (
+        normalize_build_for_reproducibility,
+        validate_machine_wide_tex_mutex,
+    )
 
 
 IDENTICAL_KEYS = (
@@ -20,7 +32,94 @@ IDENTICAL_KEYS = (
     "build",
     "artifacts",
     "pdfs_committed",
+    "source_checkpoint",
 )
+
+SOURCE_CHECKPOINT_CONTRACTS = {
+    "unofficial-stacks-project-ai-drafts-ega-source-checkpoint/v1": "PASS_SOURCE_CHECKPOINT",
+    "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-successor/v1": "PASS_SOURCE_CHECKPOINT_SUCCESSOR",
+}
+
+
+def canonical_json(value: object) -> str:
+    """Compare JSON types exactly; True, 1, and 1.0 are not interchangeable."""
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False)
+
+
+def validate_source_checkpoint(receipt: dict, label: str) -> None:
+    checkpoint = receipt.get("source_checkpoint")
+    if not isinstance(checkpoint, dict) or not checkpoint:
+        raise ValueError(f"{label} lacks the required source_checkpoint binding")
+    expected_status = SOURCE_CHECKPOINT_CONTRACTS.get(checkpoint.get("schema"))
+    if expected_status is None or checkpoint.get("status") != expected_status:
+        raise ValueError(f"{label} has an unsupported or nonpassing source_checkpoint")
+    source, post = receipt.get("source"), checkpoint.get("post_content")
+    if not isinstance(source, dict) or not isinstance(post, dict) or (
+        post.get("head_commit") != source.get("commit")
+        or post.get("head_tree") != source.get("tree")
+        or not all(isinstance(source.get(key), str)
+                   and re.fullmatch(r"[0-9a-f]{40}", source[key])
+                   for key in ("commit", "tree"))
+    ):
+        raise ValueError(f"{label} source_checkpoint does not bind its build source")
+    count = checkpoint.get("protected_input_count")
+    roles = checkpoint.get("protected_input_roles")
+    digest = checkpoint.get("protected_input_tuple_sha256")
+    if (type(count) is not int or count < 1 or not isinstance(roles, dict)
+            or not roles or any(not isinstance(key, str) or not key
+                                or type(value) is not int or value < 1
+                                for key, value in roles.items())
+            or sum(roles.values()) != count or not isinstance(digest, str)
+            or re.fullmatch(r"[0-9A-Fa-f]{64}", digest) is None):
+        raise ValueError(f"{label} source_checkpoint lacks an exact protected-input inventory")
+    composition = receipt.get("composition")
+    bound = checkpoint.get("canonical_composition")
+    if not isinstance(composition, dict) or not isinstance(bound, dict) or any(
+        not isinstance(composition.get(right), str)
+        or not composition[right]
+        or bound.get(left) != composition[right]
+        for left, right in (("path", "receipt"), ("git_blob", "receipt_git_blob"),
+                            ("sha256", "receipt_sha256"),
+                            ("composition_source_commit", "composition_source_commit"))
+    ):
+        raise ValueError(f"{label} source_checkpoint composition binding mismatch")
+
+
+def compare_receipts(first: dict, second: dict) -> None:
+    """Validate each mutex before discarding only its per-invocation fields.
+
+    Source-checkpoint bindings, including all protected-input hashes and EGA
+    semantic evidence, remain exact. No process, profile, policy, or environment
+    fields outside the mutex's explicitly validated observation set are removed.
+    """
+    for label, receipt in (("first", first), ("second", second)):
+        if any(key not in receipt for key in IDENTICAL_KEYS):
+            missing = [key for key in IDENTICAL_KEYS if key not in receipt]
+            raise ValueError(f"{label} receipt lacks bound state: {', '.join(missing)}")
+        if (receipt.get("schema") != "unofficial-ai-integrated-stacks-fixed-point-build/v1"
+                or receipt.get("status") != "PASS"):
+            raise ValueError(f"{label} receipt is not a passing fixed-point build")
+        build = receipt.get("build")
+        if not isinstance(build, dict):
+            raise ValueError(f"{label} receipt lacks build state")
+        errors: list[str] = []
+        validate_machine_wide_tex_mutex(build.get("machine_wide_tex_mutex"), label, errors)
+        if errors:
+            raise ValueError("; ".join(errors))
+        validate_source_checkpoint(receipt, label)
+    mismatched = []
+    for key in IDENTICAL_KEYS:
+        values = first[key], second[key]
+        if key == "build":
+            values = tuple(normalize_build_for_reproducibility(value) for value in values)
+        if canonical_json(values[0]) != canonical_json(values[1]):
+            mismatched.append(key)
+    if mismatched:
+        raise ValueError("fixed-point receipts differ in bound state: " + ", ".join(mismatched))
+    if not isinstance(first.get("created_utc"), str) or not isinstance(second.get("created_utc"), str):
+        raise ValueError("receipts lack invocation timestamps")
+    if first["created_utc"] == second["created_utc"]:
+        raise ValueError("receipts do not identify distinct invocations")
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -29,7 +128,19 @@ def sha256_bytes(data: bytes) -> str:
 
 def load_receipt(path: Path) -> tuple[bytes, dict[str, object]]:
     data = path.read_bytes()
-    parsed = json.loads(data.decode("utf-8"))
+    def unique_keys(pairs: list[tuple[str, object]]) -> dict[str, object]:
+        value = {}
+        for key, item in pairs:
+            if key in value:
+                raise ValueError(f"duplicate JSON key in build receipt: {key}")
+            value[key] = item
+        return value
+
+    def reject_constant(value: str) -> None:
+        raise ValueError(f"non-finite JSON constant in build receipt: {value}")
+
+    parsed = json.loads(data.decode("utf-8"), object_pairs_hook=unique_keys,
+                        parse_constant=reject_constant)
     if not isinstance(parsed, dict):
         raise ValueError(f"receipt is not a JSON object: {path}")
     if (
@@ -75,13 +186,7 @@ def main() -> int:
     first_bytes, first = load_receipt(first_path)
     second_bytes, second = load_receipt(second_path)
 
-    mismatched_keys = [key for key in IDENTICAL_KEYS if first.get(key) != second.get(key)]
-    if mismatched_keys:
-        raise ValueError(
-            "fixed-point receipts differ in bound state: " + ", ".join(mismatched_keys)
-        )
-    if first.get("created_utc") == second.get("created_utc"):
-        raise ValueError("receipts do not identify distinct invocations")
+    compare_receipts(first, second)
 
     artifacts = first.get("artifacts")
     if not isinstance(artifacts, list) or not artifacts:
@@ -182,10 +287,12 @@ def main() -> int:
             "builder_identity_equal": True,
             "environment_identity_equal": True,
             "fixed_point_sweep_equal": True,
+            "source_checkpoint_identity_equal": True,
         },
     }
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
+    output.write_text(json.dumps(receipt, indent=2, allow_nan=False) + "\n",
+                      encoding="utf-8", newline="\n")
     print(
         json.dumps(
             {
