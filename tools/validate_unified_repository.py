@@ -1701,6 +1701,23 @@ def main(argv: list[str] | None = None) -> int:
         if line not in tag_lines:
             errors.append(f"missing composed R1 tag record: {line}")
 
+    # A bounded Volume I insertion may extend the chapter containing the
+    # historical r1 example. Verify the exact insertion and its postimage,
+    # then replay the immutable older receipt against the recovered preimage.
+    # No older receipt is rewritten and no unrelated source edit is allowed.
+    illusie_preimages: dict[str, bytes] = {}
+    if (ROOT / "illusie_volume_I/check.json").is_file():
+        try:
+            sys.path.insert(0, str(ROOT))
+            from illusie_volume_I.verify import validate as validate_illusie_volume_I
+
+            volume_i = validate_illusie_volume_I(ROOT)
+            proposed_local_labels.update(volume_i["local_labels"])
+            illusie_local_labels.update(volume_i["local_labels"])
+            illusie_preimages["simplicial.tex"] = volume_i["source_preimage"]
+        except (AssertionError, ImportError, OSError, ValueError, KeyError) as exc:
+            errors.append(f"Illusie Volume I composition failed: {exc}")
+
     for illusie_round in ("r1", "r2"):
         illusie_name = f"Illusie {illusie_round}"
         illusie_check_path = ROOT / f"illusie_{illusie_round}/check.json"
@@ -1733,6 +1750,8 @@ def main(argv: list[str] | None = None) -> int:
             source_bytes = committed_bytes(
                 "HEAD", source_name, errors, f"{illusie_name} source"
             )
+            if source_name in illusie_preimages:
+                source_bytes = illusie_preimages[source_name]
             postimage = integration.get("source_postimage")
             if not isinstance(postimage, dict):
                 errors.append(f"{illusie_name} check lacks a source postimage")

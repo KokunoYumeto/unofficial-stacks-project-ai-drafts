@@ -1,0 +1,105 @@
+{
+  "schema": "illusie-volume-I-source-map/v1",
+  "scope": "I.1.1, printed pp.1-6, ending before I.1.2",
+  "anchor_prefix": "illusie:I:ch1:s1:1:",
+  "structural_anchors": ["illusie:I:ch1", "illusie:I:ch1:s1", "illusie:I:ch1:s1:1"],
+  "decisions": [
+    {
+      "id": "I-1.1-001", "anchors": ["p1", "d1", "d2"],
+      "claim": "The simplex category and its face/degeneracy generators.",
+      "disposition": "existing_coverage", "tags": ["0164", "0165"],
+      "labels": ["simplicial-section-Delta", "simplicial-definition-face-degeneracy"],
+      "reason": "Stacks explicitly identifies its skeletal simplex category with the category of all nonempty finite ordered sets. Faces and degeneracies agree. The face domain is meaningful only for n>=1, as Stacks states explicitly."
+    },
+    {
+      "id": "I-1.1-002", "anchors": ["p2", "eq1", "n1", "p2c1"],
+      "claim": "Simplicial, cosimplicial, multi-index and mixed objects; restriction to the diagonal.",
+      "disposition": "definition_extension", "tags": ["016A", "016J"],
+      "labels": ["simplicial-definition-simplicial-object", "simplicial-definition-cosimplicial-object"],
+      "reason": "Single-index definitions are identical. Multi-index objects are functors from the specified product category, and the diagonal is precomposition with the diagonal indexing functor. No universal or monomorphism property is intended by the historical phrase diagonal subobject."
+    },
+    {
+      "id": "I-1.1-003", "anchors": ["p3", "eq2", "d3"],
+      "claim": "The constant simplicial functor is fully faithful and left adjoint to evaluation in degree zero; its image consists of objects with invertible structure maps.",
+      "disposition": "elementary_consequence", "tags": ["0164", "016D"],
+      "labels": ["simplicial-section-Delta", "simplicial-example-constant-simplicial-object"],
+      "reason": "For e:A->Y_0, the unique map q_n:[n]->[0] gives Y(q_n)e:A->Y_n. These components are natural, and every map from the constant object has these components. Evaluation recovers e, proving the adjunction with no colimit assumptions and full faithfulness. If structure maps are invertible these same degeneracies give a natural isomorphism from the constant object on Y_0; the converse is immediate."
+    },
+    {
+      "id": "I-1.1-004", "anchors": ["p4", "eq3", "p5", "p5c1"],
+      "claim": "Augmentation maps and their degree-zero equalizer description; slice and augmented-indexing descriptions.",
+      "disposition": "existing_coverage_and_definitional_consequence", "tags": ["018G", "018H"],
+      "labels": ["simplicial-definition-augmentation", "simplicial-lemma-augmentation-howto"],
+      "reason": "018H gives exactly the condition epsilon_0 d_0=epsilon_0 d_1 and reconstructs every degree. Recording these maps as structure maps to the fixed object gives the slice-category formulation; adjoining the empty ordered set gives the augmented indexing formulation. No existence of coequalizers is used here."
+    },
+    {
+      "id": "I-1.1-005", "anchors": ["p6", "eq4", "d4"],
+      "claim": "When the coequalizer exists, pi_0 is left adjoint to the constant functor.",
+      "disposition": "universal_property_consequence", "tags": ["018H"],
+      "labels": ["simplicial-lemma-augmentation-howto"],
+      "reason": "By 018H, maps Z->constant(A) are precisely maps Z_0->A equalizing the two faces from Z_1. The coequalizer universal property identifies these with maps pi_0(Z)->A, naturally in both variables. The global left adjoint is asserted only when the indicated coequalizers exist for all Z."
+    },
+    {
+      "id": "I-1.1-006", "anchors": ["p7", "d5", "d6", "p8"],
+      "claim": "Componentwise simplicial homotopy without coproduct assumptions.",
+      "disposition": "existing_coverage", "tags": ["019M"],
+      "labels": ["simplicial-remark-homotopy-better"],
+      "reason": "Order maps alpha:[n]->[1] are in bijection with the n+2 cut positions. Illusie's naturality in all simplex maps is equivalent to Stacks' face and degeneracy relations. Constant alpha maps give the endpoints."
+    },
+    {
+      "id": "I-1.1-007", "anchors": ["p9", "p9c1", "eq5", "p10", "d7"],
+      "claim": "Compatibility of the generated homotopy relation with composition and the resulting quotient category.",
+      "disposition": "existing_coverage", "tags": ["08RJ", "019M"],
+      "labels": ["simplicial-remark-homotopy-pre-post-compose", "simplicial-remark-homotopy-better"],
+      "reason": "08RJ explicitly constructs hSimp(C) and its quotient functor; 019M proves preservation by any functor. A single elementary homotopy is not assumed symmetric or transitive in an arbitrary category."
+    },
+    {
+      "id": "I-1.1-008", "anchors": ["p11", "p12"],
+      "claim": "Homotopy equivalences, functoriality, and the absolute cosimplicial variant.",
+      "disposition": "existing_coverage", "tags": ["019N", "019X", "019Y"],
+      "labels": ["simplicial-definition-homotopy-equivalent", "simplicial-lemma-compare-homotopies", "simplicial-lemma-functorial-homotopy"],
+      "reason": "An inverse in the quotient is represented by a morphism whose two composites are homotopic to identities, precisely 019N. 019X identifies the opposite-category formulation of cosimplicial homotopy; 019Y supplies functoriality."
+    },
+    {
+      "id": "I-1.1-009", "anchors": ["p13", "p14", "p14c1", "eq6"],
+      "claim": "Relative homotopies over a fixed simplicial base map and fibrewise quotient categories.",
+      "disposition": "new_explicit_relative_construction", "tags": ["019M", "08RJ"],
+      "labels": ["simplicial-remark-homotopy-better", "simplicial-remark-homotopy-pre-post-compose"],
+      "local_labels": ["lemma-illusie-I-relative-homotopy-quotient"],
+      "reason": "The absolute results supply the component relations. The new proof requires the entire homotopy to project to the fixed map, and constructs the quotient over Simp(B). Its postcomposition base map is hf; see the recorded printed hg carrier error."
+    },
+    {
+      "id": "I-1.1-010", "anchors": ["p15", "p16"],
+      "claim": "Fibred simplicial category and factorization of relative homotopies through a common cartesian lift.",
+      "disposition": "new_explicit_relative_construction", "tags": ["02XK", "02XM"],
+      "labels": ["categories-definition-cartesian-over-C", "categories-definition-fibred-category"],
+      "local_labels": ["lemma-illusie-I-relative-homotopy-base-change"],
+      "reason": "The proof constructs pointwise strongly cartesian lifts and proves their naturality and universal property for arbitrary base maps. Both endpoints and every homotopy component factor through one chosen f^*Y."
+    },
+    {
+      "id": "I-1.1-011", "anchors": ["p17", "d8", "eq7", "p18"],
+      "claim": "Base change on homotopy quotient fibres and the fibred/cofibred quotient category.",
+      "disposition": "new_explicit_relative_construction", "tags": ["02XK", "02XM"],
+      "labels": ["categories-definition-cartesian-over-C", "categories-definition-fibred-category"],
+      "local_labels": ["lemma-illusie-I-relative-homotopy-base-change", "remark-illusie-I-relative-homotopy-base-functor"],
+      "reason": "The proof gives the lifting equations, verifies homotopy-chain compatibility and strong cartesianness in the quotient, and proves comparison coherence without assuming a split cleavage. The remark gives the cocartesian lifting equation and correct covariant direction."
+    },
+    {
+      "id": "I-1.1-012", "anchors": ["p19", "p19c1", "eq8", "p20", "d9"],
+      "claim": "Functors over the base descend to the relative homotopy quotient.",
+      "disposition": "new_explicit_relative_construction", "tags": ["019Y"],
+      "labels": ["simplicial-lemma-functorial-homotopy"],
+      "local_labels": ["lemma-illusie-I-relative-homotopy-quotient", "remark-illusie-I-relative-homotopy-base-functor"],
+      "reason": "Applying the base functor to components preserves the fixed base map. An arbitrary base functor yields a functor over Simp(B); preservation of cartesian arrows is claimed only with the additional cartesian-preservation hypothesis."
+    },
+    {
+      "id": "I-1.1-013", "anchors": ["p21"],
+      "claim": "The relative cosimplicial variants suggested at the end of I.1.1.6.",
+      "disposition": "explicit_dual_consequence", "tags": ["019X"],
+      "labels": ["simplicial-lemma-compare-homotopies"],
+      "local_labels": ["remark-illusie-I-relative-homotopy-base-functor"],
+      "reason": "019X identifies cosimplicial homotopies with simplicial homotopies in the opposite category, reversing arrows. Apply the cocartesian or cartesian result over B^op and take opposites back; the remark tracks the interchange of fibred/cofibred hypotheses and base-change directions."
+    }
+  ],
+  "next_source_unit": "I.1.2, printed p.6"
+}
