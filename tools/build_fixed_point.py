@@ -176,7 +176,8 @@ EGA_PRECONTENT_TOOL_ROLES = (
     (EGA_SOURCE_PACKAGE_TEST, "package_checkpoint_consumer_test"),
 )
 EGA_NON_WORKTREE_PROTECTED_ROLES = frozenset(
-    {"official_stacks_source_authority", "official_stacks_tag_authority"}
+    {"official_stacks_source_authority", "official_stacks_tag_authority",
+     "historical_checkpoint_input"}
 )
 EGA_SHARED_BUILD_SUFFIXES = frozenset({".bst", ".cfg", ".cls", ".def", ".sty"})
 EGA_CHECKPOINT_KEYS = frozenset(
@@ -1345,6 +1346,14 @@ def load_source_checkpoint(
     require_single_parent(source, content_commit, "EGA content", base_commit)
     head_commit = git(source, "rev-parse", "HEAD")
     head_tree = git(source, "rev-parse", "HEAD^{tree}")
+    if commit_parents(source, head_commit) != (content_commit,):
+        if __package__:
+            from . import verify_ega_checkpoint_successor as successor
+        else:
+            import verify_ega_checkpoint_successor as successor
+        return successor.load_successor(
+            sys.modules[__name__], source, logical_path, checkpoint, composition_binding
+        )
     require_single_parent(source, head_commit, "EGA checkpoint receipt", content_commit)
     post_changes = committed_path_changes(source, content_commit, head_commit)
     if list(post_changes) != [logical_path] or post_changes[logical_path][4] != "A":
@@ -4267,6 +4276,8 @@ def main() -> int:
     )
     parser.add_argument("--source-date-epoch", default="1785270512")
     parser.add_argument("--max-sweeps", type=int, default=6)
+    parser.add_argument("--verify-inputs-only", action="store_true",
+                        help="verify all source/checkpoint gates without launching TeX or writing a receipt")
     parser.add_argument(
         "stems",
         nargs="*",
@@ -4335,6 +4346,18 @@ def main() -> int:
     full_profile = stems == required_stems
     if args.max_sweeps < 2:
         parser.error("--max-sweeps must be at least 2")
+
+    if args.verify_inputs_only:
+        require_source_revision_unchanged(source, initial_source_commit, initial_source_tree)
+        if source_checkpoint_binding is not None:
+            require_source_checkpoint_unchanged(
+                source, source_checkpoint_binding, source_checkpoint_protected_inputs
+            )
+        print(json.dumps({"status": "PASS_INPUTS_ONLY", "source_commit": initial_source_commit,
+                          "source_tree": initial_source_tree, "required_stems": list(stems),
+                          "source_checkpoint": source_checkpoint_binding,
+                          "tex_launched": False, "build_receipt_written": False}, indent=2))
+        return 0
 
     for executable in ("pdflatex", "bibtex", "pdfinfo"):
         if shutil.which(executable) is None:
