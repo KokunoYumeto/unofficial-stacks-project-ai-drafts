@@ -29,6 +29,9 @@ UPSTREAM = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
+V4_COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-composition/v4"
+HISTORICAL_VERDIER_OVERLAY_ID = "stacks-verdier-a04446e-1-2-13-r1"
+CURRENT_VERDIER_OVERLAY_ID = "stacks-verdier-a04446e-1-3-6-r1"
 DEFAULT_BUILD_RECEIPT = Path(
     "validation/ega-i-6.6.4-fixed-point-build-2026-08-31.json"
 )
@@ -637,6 +640,43 @@ def validate_semantic_replacement_dispositions(
     composer.verify_semantic_disposition_consumption(set(reported_ids), consumed)
 
 
+def single_v4_overlay_id(composition: dict) -> str:
+    """Return the sole v4 overlay ID, rejecting ambiguous dispatch state."""
+    overlays = composition.get("new_overlays")
+    if not isinstance(overlays, list) or len(overlays) != 1:
+        raise ValueError("v4 composition must declare exactly one new overlay")
+    overlay = overlays[0]
+    if not isinstance(overlay, dict):
+        raise ValueError("v4 composition new overlay is not an object")
+    overlay_id = overlay.get("id")
+    if not isinstance(overlay_id, str) or not overlay_id:
+        raise ValueError("v4 composition new overlay has no valid ID")
+    return overlay_id
+
+
+def validate_current_verdier_v4(root: Path) -> int:
+    """Adapt the dedicated II.1.3.6 validator's validate(root) interface."""
+    try:
+        from validate_verdier_1_3_6_release import validate
+
+        report = validate(root)
+    except Exception as exc:
+        print("Unified Verdier II.1.3.6 validation: FAIL", file=sys.stderr)
+        print(f"- {exc}", file=sys.stderr)
+        return 1
+    if not (
+        isinstance(report, dict)
+        and report.get("status") == "PASS"
+        and report.get("passed") is True
+        and report.get("candidate_id") == CURRENT_VERDIER_OVERLAY_ID
+    ):
+        print("Unified Verdier II.1.3.6 validation: FAIL", file=sys.stderr)
+        print("- dedicated validator returned an invalid PASS report", file=sys.stderr)
+        return 1
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -666,12 +706,25 @@ def main(argv: list[str] | None = None) -> int:
         )
     except (OSError, json.JSONDecodeError):
         current_composition = None
-    if isinstance(current_composition, dict) and current_composition.get("schema") == (
-        "unofficial-ai-integrated-stacks-composition/v4"
+    if (
+        isinstance(current_composition, dict)
+        and current_composition.get("schema") == V4_COMPOSITION_SCHEMA
     ):
-        from validate_registered_insertion_release import validate_v4
+        try:
+            overlay_id = single_v4_overlay_id(current_composition)
+        except ValueError as exc:
+            print("Unified v4 validation dispatch: FAIL", file=sys.stderr)
+            print(f"- {exc}", file=sys.stderr)
+            return 1
+        if overlay_id == HISTORICAL_VERDIER_OVERLAY_ID:
+            from validate_registered_insertion_release import validate_v4
 
-        return validate_v4(ROOT, args.build_receipt, args.pre_publication)
+            return validate_v4(ROOT, args.build_receipt, args.pre_publication)
+        if overlay_id == CURRENT_VERDIER_OVERLAY_ID:
+            return validate_current_verdier_v4(ROOT)
+        print("Unified v4 validation dispatch: FAIL", file=sys.stderr)
+        print(f"- unsupported v4 overlay ID: {overlay_id!r}", file=sys.stderr)
+        return 1
 
     errors: list[str] = []
     composition_path = ROOT / COMPOSITION_RECEIPT
