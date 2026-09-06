@@ -179,9 +179,19 @@ def verify_semantic(build, source: Path, head: str, composition: dict) -> tuple[
         rebound = composition.get("composition_base_commit")
         require(isinstance(rebound, str),
                 "semantic baseline is not ancestral and has no exact replay base")
-        require(build.git(source, "rev-parse", f"{baseline}^{{tree}}")
-                == build.git(source, "rev-parse", f"{rebound}^{{tree}}"),
-                "semantic baseline replay base tree differs")
+        # The replay base can legitimately have unrelated source additions
+        # (here, the published Illusie insertion) and therefore need not have
+        # the same whole-tree hash.  Compare every semantic input that the
+        # sealed receipt actually consumes instead; this keeps the rebind
+        # fail-closed without pretending unrelated files are identical.
+        semantic_rebind_paths = {
+            "ega/README.md", "ega/agent.csv", "ega/check.py", "ega/dec.csv",
+            "ega/log.md", "ega/resid.csv", "ega/scope.json", "ega/smap.csv",
+        }
+        for path in sorted(semantic_rebind_paths):
+            require(build.committed_file_identity(source, baseline, path)
+                    == build.committed_file_identity(source, rebound, path),
+                    f"semantic input differs at replay base: {path}")
         baseline = rebound
     build.require_ancestor(source, baseline, "semantic baseline", parents[0])
     ledgers = semantic.get("ledgers")
