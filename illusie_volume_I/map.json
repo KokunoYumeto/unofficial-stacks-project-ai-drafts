@@ -2,7 +2,7 @@
   "schema": "illusie-volume-I-source-map/v1",
   "scope": "I.1.1-I.1.2, printed pp.1-8, ending before I.1.3",
   "anchor_prefix": "illusie:I:ch1:s1:1:",
-  "structural_anchors": ["illusie:I:ch1", "illusie:I:ch1:s1", "illusie:I:ch1:s1:1"],
+  "structural_anchors": ["illusie:I:ch1", "illusie:I:ch1:s1", "illusie:I:ch1:s1:1", "illusie:I:ch1:s1:3"],
   "decisions": [
     {
       "id": "I-1.1-001", "anchors": ["p1", "d1", "d2"],
@@ -138,6 +138,42 @@
       "labels": ["homology-remark-triple-complex"],
       "local_labels": ["theorem-illusie-I-eilenberg-zilber"],
       "reason": "08BI proves associativity of iterated totalization, not the strict shuffle/Alexander-Whitney squares. The new proof identifies both composites with ordered three-way partitions (respectively front/back face strings)."
+    },
+    {
+      "id": "I-1.3-001", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p1", "p2", "d21", "p3", "p4", "d22"],
+      "claim": "The normal complex and the Dold-Puppe construction for one simplicial direction.",
+      "disposition": "existing_coverage_with_convention_map", "tags": ["0194", "019C"],
+      "labels": ["simplicial-section-complexes", "simplicial-lemma-quasi-isomorphism"],
+      "reason": "Stacks supplies the normal and associated complexes and their comparison. Illusie's intersection over i>0 with differential d_0 is naturally identified with the alternate i<n convention and (-1)^n d_n; the convention change is recorded rather than conflated."
+    },
+    {
+      "id": "I-1.3-002", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["d22c1", "p5", "eq12", "p6", "p7", "p8", "p9", "t1", "p10", "p11", "eq13", "p12", "p13", "d23"],
+      "claim": "Dold-Puppe K, its adjunction data, and the one-direction Dold-Kan equivalence.",
+      "disposition": "existing_coverage", "tags": ["019G"],
+      "labels": ["simplicial-theorem-dold-kan"],
+      "reason": "The theorem and the surjection-indexed direct-sum construction are covered by the maintained Dold-Kan theorem, with the source's differential convention tracked explicitly."
+    },
+    {
+      "id": "I-1.3-003", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p14", "d24", "p15", "p15c1", "p16", "p17", "p18", "p19", "d25"],
+      "claim": "Exactness, normal/degenerate splitting, and acyclicity of the degenerate complex.",
+      "disposition": "existing_coverage", "tags": ["0195", "019C"],
+      "labels": ["simplicial-lemma-s-exact", "simplicial-lemma-quasi-isomorphism"],
+      "reason": "Stacks proves exactness of the associated complex, functorial splitting into normal and degenerate parts, and the quasi-isomorphism. Its image-over-surjections description agrees with the source's degenerate summands in the abelian case."
+    },
+    {
+      "id": "I-1.3-004", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p20", "d26", "d27", "p21", "p22", "d28", "p23", "fn1"],
+      "claim": "Homotopy compatibility for associated and normal complexes.",
+      "disposition": "existing_coverage", "tags": ["019S", "01A4"],
+      "labels": ["simplicial-lemma-homotopy-s-N", "simplicial-lemma-backwards-homotopy"],
+      "reason": "The forward and backward homotopy results are distributed across these exact tagged lemmas; together they provide the stated equivalence in the abelian setting, including control of the induced chain homotopy."
+    },
+    {
+      "id": "I-1.3-005", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p23c1", "d29", "p24", "d30"],
+      "claim": "Iterated n-simplicial and n-fold Dold-Puppe normalizations and their compatibility with totalization.",
+      "disposition": "new_explicit_iterated_dold_kan", "tags": ["019G", "019H"],
+      "labels": ["simplicial-theorem-dold-kan", "simplicial-section-dold-kan-cosimplicial"],
+      "local_labels": ["theorem-illusie-I-iterated-dold-kan"],
+      "reason": "The maintained repository proves only the one-direction equivalence. No exact theorem for the iterated n-fold normal/K constructions or their signed-total compatibility was found; this is the next new theorem to write."
     }
   ],
   "next_source_unit": "I.1.3, printed p.8"

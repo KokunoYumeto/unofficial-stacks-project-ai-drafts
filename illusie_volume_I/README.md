@@ -6,8 +6,9 @@ Mathematics 239, in the existing unofficial Stacks-derived repository.
 It is not an official Stacks contribution or proof-assistant formalization.
 
 The scope is the complete substantive mathematical corpus of Volume I.
-Production proceeds by source section. I.1.1 is now mapped in 13 decisions
-covering all 47 section anchors; the whole volume is not yet mapped or integrated.
+Production proceeds by source section. I.1.1-I.1.3 are now mapped in 23
+decisions covering 112 source anchors; the whole volume is not yet mapped or
+integrated.
 
 ## Current mathematical work
 
@@ -60,13 +61,19 @@ The repository's derived Tag 08QC is recorded as related coverage only; it
 does not supply these chain-level maps or homotopies. The source map records
 the exact gap and the new local labels.
 
+I.1.3, printed pp.8-11, is now mapped and integrated. Existing Stacks results
+cover the one-variable normal-complex, Dold-Kan, exactness, and homotopy
+pieces; the new local theorem states the iterated n-simplicial normalization,
+canonical independence of normalization order, and compatibility with signed
+totalization. Its source lock contains 33 witness files for I.1.1-I.1.3.
+
 The bounded canon-keeper rule for this edition is additive and scan-based:
 when a transcription or translation defect is found, compare the witness with
 the primary scan, make the smallest evidenced correction or erratum, and
 record old/new text, locus, evidence and hashes. Mathematical uncertainty is
 kept reversible rather than silently normalized.
 
-Next source unit: I.1.3, beginning on printed p.8.
+Next source unit: I.1.4, beginning on printed p.11.
 
 ## Source and repository identities
 

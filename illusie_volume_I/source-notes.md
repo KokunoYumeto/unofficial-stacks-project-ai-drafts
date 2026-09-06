@@ -45,3 +45,15 @@ chain-level shuffle and Alexander--Whitney maps, their natural homotopy, or
 the strict trisimplicial coherence asserted by Illusie. Those items are the
 new local theorem and definition in `relative-homotopy.tex`. The proof keeps
 the source's one-based shuffle convention and front/back face order.
+
+## I.1.3 source and coverage notes
+
+The primary scan and corrected French/English witnesses for printed pp.8-11
+(physical pp.26-29) were checked before integration. The normal-complex and
+homotopy statements are already represented by Tags 0194, 0195, 019C, 019S,
+and 01A4, while Tag 019G supplies the one-variable Dold-Kan equivalence.
+The source's genuinely n-variable assertion is not supplied by those tags:
+the new local theorem records iterated normalization in each simplicial
+variable, canonical comparison of successive orders, and signed-total
+compatibility. This is a constructive Stacks-style gap fill, not a silent
+repair of the source. No transcription witness was altered.

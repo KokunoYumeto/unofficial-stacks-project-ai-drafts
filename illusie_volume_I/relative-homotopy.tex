@@ -292,3 +292,40 @@ the two iterated Alexander--Whitney composites are identical, proving
 coassociativity. In degree zero there is one empty shuffle and no face, so
 both maps are the identity.
 \end{proof}
+
+\begin{theorem}[Iterated Dold--Kan normalization]
+\label{theorem-illusie-I-iterated-dold-kan}
+Let $\mathcal A$ be an abelian category and let $n\geq1$. Applying the
+normal-complex functor in each of the $n$ simplicial variables gives a
+functor from $n$-simplicial objects to $n$-fold chain complexes. In each
+variable the normal and Dold--Puppe functors are quasi-inverse equivalences.
+Consequently, applying them successively in any order gives canonically
+isomorphic $n$-fold functors, and their signed total complexes are canonically
+isomorphic after any grouping of variables. These isomorphisms are natural
+and preserve the alternating-face differentials.
+
+\end{theorem}
+
+\begin{proof}
+For one variable this is the Dold--Kan equivalence (Stacks, Tag 019G),
+with the normal-complex convention translated by the canonical sign and
+reversal isomorphism described in Section I.1.3. For two variables, apply
+that equivalence in the first variable in the functor category of simplicial
+objects in the second variable. Exactness and functoriality of the
+construction are degreewise, so the same argument applies in the second
+variable. The two orders commute because each face or degeneracy acts in
+only one variable; the two canonical composites are therefore identical on
+all multidegrees and structure maps. Induction gives the assertion for $n$
+variables. The units and counits of the one-variable equivalences provide
+quasi-inverse comparison maps in every variable.
+
+The signed total of the resulting $n$-complex is the construction in
+Definition \ref{definition-illusie-I-signed-total}. Grouping two adjacent
+variables first changes the differential by the prefix sign for the grouped
+block and then by the inner prefix sign. Their sum is the same prefix sign
+as in the ungrouped total, by Lemma
+\ref{lemma-illusie-I-signed-total-differential}. Thus the canonical
+multivariable comparisons commute with totalization and with every
+regrouping. Naturality follows from naturality of the one-variable units,
+counits and face maps.
+\end{proof}

@@ -21,8 +21,8 @@ def identity(path: Path) -> dict:
 def source_section(text: str, page: int) -> str:
     if page == 6:
         text = text.split(r"\hypertarget{illusie:I:ch1:s1:2}", 1)[0]
-    elif page == 8:
-        text = text.split(r"\hypertarget{illusie:I:ch1:s1:3}", 1)[0]
+    elif page == 11:
+        text = text.split(r"\hypertarget{illusie:I:ch1:s1:4}", 1)[0]
     return text
 
 def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
@@ -31,7 +31,7 @@ def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
     files, anchors_by_lane = [], {}
     for lane in ("fr_diplomatic", "fr_corrected", "en"):
         anchors = []
-        for page in range(1, 9):
+        for page in range(1, 12):
             relative = f"tex/volume_I/{lane}/ch1/{page:03d}_p{page:03d}.tex"
             path = edition / relative
             text = source_section(path.read_text(encoding="utf-8"), page)
@@ -77,7 +77,7 @@ def validate(root: Path) -> dict:
                 (root / "tags/tags").read_text(encoding="utf-8").splitlines()
                 if line and not line.startswith("#") and "," in line)
     local_labels = re.findall(rb"\\label\{([^}]+)\}", snippet)
-    assert len(local_labels) == len(set(local_labels)) == 9
+    assert len(local_labels) == len(set(local_labels)) == 10
     for row in mapping["decisions"]:
         assert len(row["tags"]) == len(row["labels"]), row["id"]
         for tag, label in zip(row["tags"], row["labels"]):
