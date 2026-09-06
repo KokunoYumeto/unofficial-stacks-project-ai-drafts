@@ -403,12 +403,59 @@ def load_committed_json_object(
     return value, data
 
 
+def candidate_dir_from_registry(overlay_id: str, registry: object) -> Path:
+    """Resolve one candidate directory from its unique registered namespace."""
+    if not isinstance(overlay_id, str) or not overlay_id:
+        raise ValueError(f"invalid overlay ID for candidate lookup: {overlay_id!r}")
+    if not isinstance(registry, dict):
+        raise ValueError("overlay registry is not a JSON object")
+    entries = registry.get("registered_entries")
+    if not isinstance(entries, list):
+        raise ValueError("overlay registry lacks registered_entries")
+    matches = [
+        entry
+        for entry in entries
+        if isinstance(entry, dict) and entry.get("id") == overlay_id
+    ]
+    if len(matches) != 1:
+        raise ValueError(
+            f"overlay ID has {len(matches)} registry entries: {overlay_id!r}"
+        )
+    namespace = matches[0].get("namespace")
+    if (
+        not isinstance(namespace, str)
+        or not namespace
+        or "\\" in namespace
+        or any(part in {"", ".", ".."} for part in namespace.split("/"))
+        or any(
+            re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", part) is None
+            for part in namespace.split("/")
+        )
+    ):
+        raise ValueError(
+            f"invalid candidate namespace for {overlay_id!r}: {namespace!r}"
+        )
+    candidate_root = (ROOT / "ai-integrated/candidates").resolve()
+    directory = (candidate_root / Path(*namespace.split("/"))).resolve()
+    try:
+        directory.relative_to(candidate_root)
+    except ValueError as exc:
+        raise ValueError(
+            f"candidate namespace escapes candidate root for {overlay_id!r}: "
+            f"{namespace!r}"
+        ) from exc
+    return directory
+
+
 def candidate_dir(overlay_id: str) -> Path:
-    if overlay_id.startswith("stacks-verdier-"):
-        return ROOT / "ai-integrated/candidates/commons/stacks/verdier"
-    suffix = overlay_id.rsplit("-r", 1)[1]
-    base = ROOT / "ai-integrated/candidates/commons/stacks/errata"
-    return base if suffix == "1" else base / f"r{suffix}"
+    registry_path = ROOT / "ai-integrated/registry/overlays.json"
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(
+            f"cannot read overlay registry for candidate lookup: {exc}"
+        ) from exc
+    return candidate_dir_from_registry(overlay_id, registry)
 
 
 def read_jsonl(path: Path) -> list[dict]:
