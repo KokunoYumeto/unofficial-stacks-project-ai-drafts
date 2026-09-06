@@ -2427,3 +2427,43 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   page 337. Each crop is complete, nonblank, and independently inspected.
   A000245--A000249 record the topology, mapping, hypothesis, defect, and visual
   audits. The next semantic cursor is EGA I 6.5.2.
+
+## 2026-09-06 — EGA I 6.6.5 bounded semantic checkpoint
+
+- Starting content identity:
+  `396d60f0e4aef8c11c105a24e26c5519386a9f98`. This increment appends
+  D000330, S001260--S001266, R000830--R000833, and A000258--A000259;
+  all earlier CSV bytes remain an exact prefix. The separate production
+  composition may advance HEAD without changing these bounded EGA paths.
+- Direct French source is the fixed `ega-fr` commit
+  `6b38875842e3723b619d4aeeda9ed260a4f94f7c`, file
+  `source/ega1/ega1-6-fr.tex`, 57,781 bytes at SHA-256
+  `F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE`.
+  LF1123--LF1146 is the half-open UTF-8 byte interval `[53144,54603)`:
+  1,459 bytes at SHA-256
+  `0BCE3737307C8081A439C7BBB9A5666600C8DE0EC99E4481E3AABC2167714067`.
+  LF1123--LF1129 is the proposition; LF1131--LF1146 is unwrapped proof
+  prose, not a French proof environment. The independently fetched English
+  LF787--LF800 is discovery-only, 1,368 bytes at SHA-256
+  `69857876099DE81A03B68C323C4ED8210AE9E1833298948E1F74C5349B81A1E8`.
+- Mathematical disposition: 01RL promises target-component generic points
+  in the image. For each preimage, 004W supplies a source component and
+  01IS its generic point. Continuity, maximality of the target component,
+  and uniqueness of generic points show that this source generic point maps
+  to the required target generic point. The main edge therefore records
+  composed coverage, not literal full-statement equivalence. This upgrade
+  and the sufficient direction 01RK need no quasi-compactness. Necessity
+  retains the source's quasi-compact hypothesis. No integrality, reducedness,
+  affine, finite-type, Noetherian, or separation assumption is introduced.
+- The historical proof's finite-cover reduction and minimal-prime endpoint
+  are covered by 01K4, 00FL, and 0CAN. The French single-chart reduced-closure
+  route and the existing 01RL finite-coproduct proof are distinguished;
+  supplemental derivation edges are not represented as explicit upstream
+  citations. No root theorem or omitted proof is justified by this slice.
+- Exact source, target, ledger-prefix, append-block, count, and checker
+  validation identities are in
+  `validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json`.
+  No authority, issue, tag, root-TeX, visual-QA, build, publication, or remote
+  mutation belongs to this increment. The next executable semantic action is
+  to admit and map EGA I §6.6.6 from its exact French source slice; external
+  production composition and release remain separate from this local receipt.

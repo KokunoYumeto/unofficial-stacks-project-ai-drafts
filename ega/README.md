@@ -55,6 +55,21 @@ EGA integration manifest enter the repository's root TeX tree.
   distinguishes source and checker validation from TeX/PDF build, visual QA,
   and publication, which are not claimed complete. It creates no theorem,
   official tag, canon correction, or new visual-evidence item.
+- The next local semantic checkpoint covers EGA I §6.6.5 and advances the
+  semantic cursor to §6.6.6. D000330, S001260--S001266, R000830--R000833,
+  and A000258--A000259 record seven existing-target edges and four residual
+  dispositions. Tag 01RL detects dominance by hitting target-component
+  generic points; 004W and 01IS supply the additional source-component
+  generic-preimage argument. Thus the whole proposition is covered by
+  composition, not recorded as a literal single-tag equivalence. Tags 01RK,
+  01K4, 00FL, and 0CAN account for sufficiency and the finite-affine-cover
+  and minimal-prime proof components. The
+  [semantic checkpoint](../validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
+  binds French LF1123--LF1146 to its exact 1,459-byte SHA-256
+  `0BCE3737307C8081A439C7BBB9A5666600C8DE0EC99E4481E3AABC2167714067`.
+  This increment changes no root TeX, authority, issue, visual-QA, or tag
+  registry bytes and claims no build or publication. There is no new gap,
+  canon correction, or justified duplicate theorem.
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 - English discovery manifest: R184, 92,445 bytes, SHA-256
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
