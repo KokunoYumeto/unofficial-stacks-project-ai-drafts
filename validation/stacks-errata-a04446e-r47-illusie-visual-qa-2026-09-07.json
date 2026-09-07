@@ -1,0 +1,32 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-09-07T00:19:23Z",
+  "scope": "Combined R40-R47 successor plus Illusie I.1.1 linear successor",
+  "source_commit": "4d62d13fad147acc5f8ed70d80a63994d7c4bd7f",
+  "source_tree": "a62b9e8d340ff9a1844e65ec0080fdf11295cd9b",
+  "build_receipts": [
+    "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json",
+    "validation/stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json"
+  ],
+  "visual_method": "Poppler pdftoppm PNG render at 120 dpi; direct visual inspection",
+  "inspected": [
+    {"pdf": "simplicial.pdf", "pages": [46,47,48,49,50,51,52], "result": "PASS", "notes": "Illusie insertion and surrounding section transitions render cleanly; no clipping, overlap, blank-page anomaly, or malformed mathematics."},
+    {"pdf": "crystalline.pdf", "pages": [1,2], "result": "PASS"},
+    {"pdf": "cohomology.pdf", "pages": [1,2], "result": "PASS"},
+    {"pdf": "sites-cohomology.pdf", "pages": [1,2], "result": "PASS"},
+    {"pdf": "descent.pdf", "pages": [1,2], "result": "PASS"}
+  ],
+  "rendered_pngs": 15,
+  "text_diff_review": {
+    "changed_chapters": {
+      "crystalline": [30,31,38,39],
+      "cohomology": [68,69],
+      "sites-cohomology": [93,95,101],
+      "descent": [7,9]
+    },
+    "result": "PASS",
+    "notes": "Independent extraction review found only expected Simplicial cross-reference renumbering from the Illusie insertion; digit-normalized text is equal otherwise."
+  },
+  "qa_conclusion": "All sampled affected and boundary pages are visually legible and structurally intact; combined build/reproducibility receipts report exact 35-artifact equality."
+}

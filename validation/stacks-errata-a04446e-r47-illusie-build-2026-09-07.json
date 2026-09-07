@@ -1,0 +1,2324 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-fixed-point-build/v1",
+  "status": "PASS",
+  "created_utc": "2026-09-06T23:40:17Z",
+  "source": {
+    "commit": "4d62d13fad147acc5f8ed70d80a63994d7c4bd7f",
+    "tree": "a62b9e8d340ff9a1844e65ec0080fdf11295cd9b"
+  },
+  "builder": {
+    "path": "tools/build_fixed_point.py",
+    "git_blob": "e68e08e75255dbde76b8f10c05f70d24267510fc",
+    "sha256": "B5558AA04F5B3CB31FE8C129953954318617C4C92BAE498D8D4F49461578713D"
+  },
+  "composition": {
+    "schema": "unofficial-ai-integrated-stacks-composition/v3",
+    "receipt": "validation/composition-current.json",
+    "receipt_sha256": "5618FED4032CBF838781F585529DCCDB8B9621EA015CE6741CD745E09D4106B1",
+    "receipt_git_blob": "aa8a41ae5fed5fbd4bcdd29f86ef5e7abd66f3c5",
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "previous_public_main_head": "915dfb22cbbd98cb0741b76fd645c62bffb217d8",
+    "previous_public_main_tree": "62c89f74079d52674b098d81dc08e0719bc8ee4e",
+    "previous_registry_commit": "bf472632906dcfbc032620f8ce203fa687e929e5",
+    "previous_last_admitted_overlay": "stacks-errata-a04446e-r39",
+    "previous_source_blobs": {
+      "descent.tex": {
+        "bytes": 395223,
+        "sha256": "EF34F287456E31EB5A359279D24DC089B70191223DE396A0F1F50C52FC83577C",
+        "git_blob": "6f2d119aff45ed24419c9d3782dfee572da974bf"
+      },
+      "perfect.tex": {
+        "bytes": 417503,
+        "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+        "git_blob": "8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73"
+      },
+      "topologies.tex": {
+        "bytes": 166188,
+        "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+        "git_blob": "7f3b1718eba1743e2089f9bc16d2615e267b0ccb"
+      },
+      "groupoids.tex": {
+        "bytes": 205809,
+        "sha256": "906061343B5F46807A99FB3843BA9EF60B6FBE3D9DADDC1AA964AEAFAA9A59B7",
+        "git_blob": "de53855d011502707455bab47f13745f17028105"
+      },
+      "more-groupoids.tex": {
+        "bytes": 121107,
+        "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199",
+        "git_blob": "61e68ef2abd475f6fa098ab741ce128622dadae0"
+      }
+    },
+    "composition_mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
+    "composition_base_commit": "284c5acef853029f603f5326ecaa0d6d52bbf5fe",
+    "composition_base_tree": "82838d0f49409bcf99f90e7e4bb9998bcc83019f",
+    "composition_source_commit": "bb34cd90ea3da510cb21a01b14c7362f0a520872",
+    "composition_source_tree": "debe3621682dca2bb2540d5ce37ee3908179bb4d",
+    "registry_cutoff_commit": "e4a7b1cb0b0e7fa4c499ab26cf85275f4f9fed12",
+    "registry_cutoff_tree": "f1f7178c5d061300f1da4e1309d0b2d92a04ed9f",
+    "registry_import_commit": "284c5acef853029f603f5326ecaa0d6d52bbf5fe",
+    "registry_import_tree": "82838d0f49409bcf99f90e7e4bb9998bcc83019f",
+    "registry_overlays_path": "ai-integrated/registry/overlays.json",
+    "registry_overlays_git_blob": "c2869b04472de311be4b6dc998a797542a453437",
+    "registry_overlays_sha256": "180D91A7C2FFD034B469EFF40339AB3C312E77CE6745968CB172289CA934223A",
+    "registered_overlays": 48,
+    "registered_stable_ids": 1292,
+    "last_admitted_overlay": "stacks-errata-a04446e-r47",
+    "new_overlays": [
+      {
+        "id": "stacks-errata-a04446e-r40",
+        "stable_ids": 11,
+        "operations": 11,
+        "manifest_sha256": "A3A3FFF0F01B84F73F9D426B14E6F2E6F95E93F79735795CD8D5741C45E22F5E",
+        "payload_sha256": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA",
+        "payloads": [
+          {
+            "path": "payload/descent.tex",
+            "sha256": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+          }
+        ],
+        "review_receipt_sha256": "2F04DDEF08FD15A08EC1D247FE106BC98797C073DA15A83F8E1E63A9FAF9FA9D",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "ee575013e24fbfec7d29df79c72c3259b363c355",
+        "intake_parent": "bf472632906dcfbc032620f8ce203fa687e929e5",
+        "intake_tree": "c9e70edeb8e331fff36e2d06ce39aa2699403da7",
+        "intake_successor_commits": [],
+        "candidate_commit": "a85e10f90950cce3890fc03fb5f158d51fc29036",
+        "candidate_commits": [
+          "a85e10f90950cce3890fc03fb5f158d51fc29036"
+        ],
+        "candidate_tree": "8c0095af095cee30ee4ab4953d5cc66d6c7814c5",
+        "candidate_subtree": "67fad9b450b06bcf1d55a7dc2590c8756b4124fc",
+        "admission_commit": "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+        "admission_parent": "a85e10f90950cce3890fc03fb5f158d51fc29036",
+        "admission_tree": "e6501edf88bfa28c9e97d7bfc50eb420f9b5f81f",
+        "lease_issue_event": "lease-event-000084",
+        "lease_release_event": "lease-event-000085"
+      },
+      {
+        "id": "stacks-errata-a04446e-r41",
+        "stable_ids": 6,
+        "operations": 6,
+        "manifest_sha256": "62CC4D62ACB89337D8280CAF04448B636549CBB8984C42C304D2B0349809EB9E",
+        "payload_sha256": "834AD705629446C8914FA71EB178735C19A2A3C02AD50205FAF07BC8BA40F3CD",
+        "payloads": [
+          {
+            "path": "payload/descent.tex",
+            "sha256": "834AD705629446C8914FA71EB178735C19A2A3C02AD50205FAF07BC8BA40F3CD"
+          }
+        ],
+        "review_receipt_sha256": "AC2D55939AEC439FCEED967E2AAAB41F20B0496989BF80C0867D6E59F99BBC2E",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "1ad928db1b46ca96cd418e1904023d469b32bfc6",
+        "intake_parent": "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+        "intake_tree": "a725cfdb1ddc7e6b481fbbfb14a350a1b14875d9",
+        "intake_successor_commits": [
+          {
+            "commit": "2911b4cdf5141e1f3a275aeb83ed5cbc9e980bd4",
+            "parent": "1ad928db1b46ca96cd418e1904023d469b32bfc6",
+            "tree": "c8db3622094fd3f95bc57a385bbeed21f4686f35",
+            "paths": [
+              {
+                "path": "registry/admission-receipts/r40-clarification-0001.json",
+                "bytes": 4004,
+                "sha256": "5989F74E9AB96F99571A3B4C5FC9B8A8F83018915729E83118A772DE7E96A5AA",
+                "git_blob": "f81550538000170cfd5638519ed323ec24958547"
+              }
+            ]
+          }
+        ],
+        "candidate_commit": "c4fccd058f8a0fafe8bd9f5083623395d8325194",
+        "candidate_commits": [
+          "c4fccd058f8a0fafe8bd9f5083623395d8325194"
+        ],
+        "candidate_tree": "5a95cdce7ed753e25628a8726c7ae7b8b7429624",
+        "candidate_subtree": "434e66dfefaa82c6f7c24d34dfbf7bc9e060fc4d",
+        "admission_commit": "3056e01f8a2dd26f52066434d80ff2c59901dea8",
+        "admission_parent": "c4fccd058f8a0fafe8bd9f5083623395d8325194",
+        "admission_tree": "0e11002e4e14e8d9d725ea4331630ab2edd4137f",
+        "lease_issue_event": "lease-event-000086",
+        "lease_release_event": "lease-event-000087"
+      },
+      {
+        "id": "stacks-errata-a04446e-r42",
+        "stable_ids": 11,
+        "operations": 12,
+        "manifest_sha256": "E29AEA96FBE883A7C7BA535994EDD2FA1AE399083348AD84A2191A18CB0B537B",
+        "payload_sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7",
+        "payloads": [
+          {
+            "path": "payload/descent.tex",
+            "sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7"
+          }
+        ],
+        "review_receipt_sha256": "82CA1DF4DCDF5F5FD77D9C90AECE2C279E65653EE14F9F62D88A2886598FFCC2",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "7991a0565ba6bd2b5f6e5539fb3bff7e49bdfa98",
+        "intake_parent": "3056e01f8a2dd26f52066434d80ff2c59901dea8",
+        "intake_tree": "62036c1e7c16dbc0184491dcbaefb5512102c679",
+        "intake_successor_commits": [],
+        "candidate_commit": "9cf902bdd891ac2bd96e5f01b25c26bc7c602c07",
+        "candidate_commits": [
+          "9cf902bdd891ac2bd96e5f01b25c26bc7c602c07"
+        ],
+        "candidate_tree": "da1ff505283a51cd6e9992f0e206905fa262a2ee",
+        "candidate_subtree": "db3176f823cf0da1fa42637a77d19647b69904bf",
+        "admission_commit": "c2107a9d5f6f0644abc7af42d739ff741c9dc675",
+        "admission_parent": "9cf902bdd891ac2bd96e5f01b25c26bc7c602c07",
+        "admission_tree": "b11b5898062105e0ed9fe8389cf1fb032cbd8e20",
+        "lease_issue_event": "lease-event-000088",
+        "lease_release_event": "lease-event-000089"
+      },
+      {
+        "id": "stacks-errata-a04446e-r43",
+        "stable_ids": 7,
+        "operations": 7,
+        "manifest_sha256": "92E9492AD1A0D9434405207473B17815BF025DD3F78BE90F6FDDAC76E1C0DB47",
+        "payload_sha256": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907",
+        "payloads": [
+          {
+            "path": "payload/descent.tex",
+            "sha256": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907"
+          }
+        ],
+        "review_receipt_sha256": "0A7DB21B4B23ED38DAB85378DB4FA41F23BDEA5172DEFEC1A846E6C8CCD8A605",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "29fb30690857f94daca1efacdf7d6f55b9811967",
+        "intake_parent": "c2107a9d5f6f0644abc7af42d739ff741c9dc675",
+        "intake_tree": "b1e3b489281172c251d08b3c928eaf5c43f73847",
+        "intake_successor_commits": [],
+        "candidate_commit": "3002c87029ec8dd8405acc56787659b44bb42c19",
+        "candidate_commits": [
+          "3002c87029ec8dd8405acc56787659b44bb42c19"
+        ],
+        "candidate_tree": "fb4e74d3e1b89c35eb4e4b402b3ae14ef288b029",
+        "candidate_subtree": "34d6023bac1cdfef1eeb3abc8b08e46701752333",
+        "admission_commit": "c69900fe75119d39025084ed520abc8bb24d507b",
+        "admission_parent": "3002c87029ec8dd8405acc56787659b44bb42c19",
+        "admission_tree": "ca072c0a2e6da327ddf965fe74793767bbf88974",
+        "lease_issue_event": "lease-event-000090",
+        "lease_release_event": "lease-event-000091"
+      },
+      {
+        "id": "stacks-errata-a04446e-r44",
+        "stable_ids": 24,
+        "operations": 32,
+        "manifest_sha256": "7D1123B09465CBE31256E05AEF49B76F7ED4DD7B28AB667C53F23A7A76575521",
+        "payload_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+        "payloads": [
+          {
+            "path": "payload/perfect.tex",
+            "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+          }
+        ],
+        "review_receipt_sha256": "4CEDF7E10D74235839F712774C0F7FD9D3234E6A5D2FAAEBF63A0AAB77381603",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "60fa1439d8a03adb586b35a1bb4a1b83d2587ee2",
+        "intake_parent": "c69900fe75119d39025084ed520abc8bb24d507b",
+        "intake_tree": "09301715177e76f646c815740d1cb151c7a855ed",
+        "intake_successor_commits": [],
+        "candidate_commit": "9f9d196fc7771edf5c4b6a50eeafc7a6a48c33cd",
+        "candidate_commits": [
+          "9f9d196fc7771edf5c4b6a50eeafc7a6a48c33cd"
+        ],
+        "candidate_tree": "ac7a72da4fe2bba0809651641372b3163a7fc28b",
+        "candidate_subtree": "93e5b3c198805cbfba48398883919acbd5d3377a",
+        "admission_commit": "05d14edf76f2d54e8d6867b09359cbbc4e5ddd00",
+        "admission_parent": "9f9d196fc7771edf5c4b6a50eeafc7a6a48c33cd",
+        "admission_tree": "683d003de2e8da66dff316b17342a5bf13b843b1",
+        "lease_issue_event": "lease-event-000092",
+        "lease_release_event": "lease-event-000093"
+      },
+      {
+        "id": "stacks-errata-a04446e-r45",
+        "stable_ids": 19,
+        "operations": 36,
+        "manifest_sha256": "FAFF8C70CC572134056CFAE2659E58815FB94078547DB2926B6FF4134666A0DD",
+        "payload_sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9",
+        "payloads": [
+          {
+            "path": "payload/topologies.tex",
+            "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+          }
+        ],
+        "review_receipt_sha256": "A8947663FAE060ADAC2357E748D2BDBE8DD35A759676074EEF86DED9982043F9",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "f33db208c8798a4aad9acaa5f8ac68d094680f94",
+        "intake_parent": "05d14edf76f2d54e8d6867b09359cbbc4e5ddd00",
+        "intake_tree": "40e71f12b6ec7503ccb7d2a5a42f63f245d53dc5",
+        "intake_successor_commits": [],
+        "candidate_commit": "7e36f931fd0bb762c436a0af9478243357c53f63",
+        "candidate_commits": [
+          "7e36f931fd0bb762c436a0af9478243357c53f63"
+        ],
+        "candidate_tree": "b5d22aa19293641380808fb2191399e7e2accaa9",
+        "candidate_subtree": "75efd68aec50fc4f353ab309240345d337beec36",
+        "admission_commit": "34d2d62ca3d99f3a99ea5b59ad2e2a75bd813aee",
+        "admission_parent": "7e36f931fd0bb762c436a0af9478243357c53f63",
+        "admission_tree": "1aed4459066230d82b39fa73e2b7bae55dcc19ff",
+        "lease_issue_event": "lease-event-000094",
+        "lease_release_event": "lease-event-000095"
+      },
+      {
+        "id": "stacks-errata-a04446e-r46",
+        "stable_ids": 43,
+        "operations": 46,
+        "manifest_sha256": "98709C03301EECAABD23D9694D521CB543DEB3E91173D57A31A6EC4D6B83856E",
+        "payload_sha256": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04",
+        "payloads": [
+          {
+            "path": "payload/groupoids.tex",
+            "sha256": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04"
+          }
+        ],
+        "review_receipt_sha256": "05CFBAF8B0D73DC6D69865955507EBF0B0B7B28BB45AB7C030651B8A14C77D9C",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "14a4499c8b844d02ce3b251b4fe67d3ef0bc9c4f",
+        "intake_parent": "34d2d62ca3d99f3a99ea5b59ad2e2a75bd813aee",
+        "intake_tree": "6d58416bd7c8a077836e94dbb8dccd6d84bb8179",
+        "intake_successor_commits": [],
+        "candidate_commit": "d480f8e06111f3180e404c5c462301f037826806",
+        "candidate_commits": [
+          "d480f8e06111f3180e404c5c462301f037826806"
+        ],
+        "candidate_tree": "239546eb2baaa59b54672fac5cf95730884a1935",
+        "candidate_subtree": "2b00847c80735d56da02f67d2653f84ce3102eed",
+        "admission_commit": "aa390419688f71a3f8ddfb881b6c62f9acd528a5",
+        "admission_parent": "d480f8e06111f3180e404c5c462301f037826806",
+        "admission_tree": "917e6d846412292545d72ef83bbaab864e15d39d",
+        "lease_issue_event": "lease-event-000096",
+        "lease_release_event": "lease-event-000097"
+      },
+      {
+        "id": "stacks-errata-a04446e-r47",
+        "stable_ids": 22,
+        "operations": 27,
+        "manifest_sha256": "B39114EBACAD2A74050AC9A2DF77C2C5FE11B20DE22249870B203ACEDAAD05D4",
+        "payload_sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF",
+        "payloads": [
+          {
+            "path": "payload/more-groupoids.tex",
+            "sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+          }
+        ],
+        "review_receipt_sha256": "D0F85701E5CB3AF8DA764E4FC9FA7DCF2EB8D528579B44DEE99C09F26E44A919",
+        "topology": "leased_candidate_then_admission",
+        "lease_binding_schema": "unofficial-ai-integrated-stacks-leased-candidate/v1",
+        "intake_commit": "fad67a6af1c0e957cba18af0676f6ea5540109ed",
+        "intake_parent": "aa390419688f71a3f8ddfb881b6c62f9acd528a5",
+        "intake_tree": "876b7c8bf724a1a73fa0f452903fd56eac9ec395",
+        "intake_successor_commits": [],
+        "candidate_commit": "14ac670b72acfd91b4acd78c763616d602d1a76b",
+        "candidate_commits": [
+          "14ac670b72acfd91b4acd78c763616d602d1a76b"
+        ],
+        "candidate_tree": "64e6df20b333a9845ba3bbeb3d749274b9f38372",
+        "candidate_subtree": "5d713eb75edbaf995c48c6308edd7faab3681399",
+        "admission_commit": "26f564b5f99993bee3ca6716b0ead218ca354fe3",
+        "admission_parent": "14ac670b72acfd91b4acd78c763616d602d1a76b",
+        "admission_tree": "1a15fabadebe5eb9820bc480afa974d86ca6905a",
+        "lease_issue_event": "lease-event-000098",
+        "lease_release_event": "lease-event-000099"
+      }
+    ],
+    "new_overlay_ids": [
+      "stacks-errata-a04446e-r40",
+      "stacks-errata-a04446e-r41",
+      "stacks-errata-a04446e-r42",
+      "stacks-errata-a04446e-r43",
+      "stacks-errata-a04446e-r44",
+      "stacks-errata-a04446e-r45",
+      "stacks-errata-a04446e-r46",
+      "stacks-errata-a04446e-r47"
+    ],
+    "new_overlay_candidate_commits": [
+      "a85e10f90950cce3890fc03fb5f158d51fc29036",
+      "c4fccd058f8a0fafe8bd9f5083623395d8325194",
+      "9cf902bdd891ac2bd96e5f01b25c26bc7c602c07",
+      "3002c87029ec8dd8405acc56787659b44bb42c19",
+      "9f9d196fc7771edf5c4b6a50eeafc7a6a48c33cd",
+      "7e36f931fd0bb762c436a0af9478243357c53f63",
+      "d480f8e06111f3180e404c5c462301f037826806",
+      "14ac670b72acfd91b4acd78c763616d602d1a76b"
+    ],
+    "new_overlay_intake_commits": [
+      "ee575013e24fbfec7d29df79c72c3259b363c355",
+      "1ad928db1b46ca96cd418e1904023d469b32bfc6",
+      "7991a0565ba6bd2b5f6e5539fb3bff7e49bdfa98",
+      "29fb30690857f94daca1efacdf7d6f55b9811967",
+      "60fa1439d8a03adb586b35a1bb4a1b83d2587ee2",
+      "f33db208c8798a4aad9acaa5f8ac68d094680f94",
+      "14a4499c8b844d02ce3b251b4fe67d3ef0bc9c4f",
+      "fad67a6af1c0e957cba18af0676f6ea5540109ed"
+    ],
+    "new_overlay_admission_commits": [
+      "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+      "3056e01f8a2dd26f52066434d80ff2c59901dea8",
+      "c2107a9d5f6f0644abc7af42d739ff741c9dc675",
+      "c69900fe75119d39025084ed520abc8bb24d507b",
+      "05d14edf76f2d54e8d6867b09359cbbc4e5ddd00",
+      "34d2d62ca3d99f3a99ea5b59ad2e2a75bd813aee",
+      "aa390419688f71a3f8ddfb881b6c62f9acd528a5",
+      "26f564b5f99993bee3ca6716b0ead218ca354fe3"
+    ],
+    "required_build_stems": [
+      "sets",
+      "categories",
+      "topology",
+      "sheaves",
+      "sites",
+      "algebra",
+      "fields",
+      "artin",
+      "brauer",
+      "derived",
+      "simplicial",
+      "homology",
+      "more-algebra",
+      "smoothing",
+      "modules",
+      "sites-modules",
+      "schemes",
+      "properties",
+      "morphisms",
+      "more-morphisms",
+      "spaces-morphisms",
+      "crystalline",
+      "spaces-cohomology",
+      "spaces-duality",
+      "stacks-limits",
+      "injectives",
+      "cohomology",
+      "sites-cohomology",
+      "gaga",
+      "moduli",
+      "descent",
+      "perfect",
+      "topologies",
+      "groupoids",
+      "more-groupoids"
+    ],
+    "affected_source_stems": [
+      "descent",
+      "perfect",
+      "topologies",
+      "groupoids",
+      "more-groupoids"
+    ],
+    "affected_source_identities": {
+      "descent.tex": {
+        "authority_bytes": 353760,
+        "authority_projection_bytes": 353834,
+        "authority_projection_git_blob": "405e9d46b4ec7f20747db0b527af0b78e920ea64",
+        "authority_projection_sha256": "C6F418ED29867DBDDB1C14F98D9417EE3732D15F51FD22324589BC61AC13DBF1",
+        "authority_sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D",
+        "before_bytes": 395223,
+        "before_git_blob": "6f2d119aff45ed24419c9d3782dfee572da974bf",
+        "before_sha256": "EF34F287456E31EB5A359279D24DC089B70191223DE396A0F1F50C52FC83577C",
+        "before_state": "verified_committed_cumulative_source",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 395297,
+        "composed_git_blob": "acdc323c5c2a79e4e444f148b0399ff892569c7b",
+        "composed_sha256": "91434AA205AA34ED3AD0E4B74590D30C90FA4BB8945105E6E99CCA6805508B69",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 36,
+        "preapplied_operation_ids": [],
+        "semantic_disposition_operation_ids": [],
+        "superseded_operations": 0,
+        "target_operations": 36,
+        "written": false,
+        "composition_mode": "Exact manifest-bound operations on cumulative source; no preapplied operation or semantic disposition consumed",
+        "committed_matches_composition": true,
+        "authority_git_blob": "62e280bfed2f350176745b8f71a36a8de0c0bf62"
+      },
+      "perfect.tex": {
+        "authority_bytes": 417503,
+        "authority_projection_bytes": 417517,
+        "authority_projection_git_blob": "5e281a83ee21c46274386f83ba1f0b12fc8e8d5c",
+        "authority_projection_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+        "authority_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+        "before_bytes": 417503,
+        "before_git_blob": "8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73",
+        "before_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+        "before_state": "exact_existing_overlay_projection",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 417517,
+        "composed_git_blob": "5e281a83ee21c46274386f83ba1f0b12fc8e8d5c",
+        "composed_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 32,
+        "preapplied_operation_ids": [],
+        "semantic_disposition_operation_ids": [],
+        "superseded_operations": 0,
+        "target_operations": 32,
+        "written": false,
+        "composition_mode": "Exact manifest-bound operations on cumulative source; no preapplied operation or semantic disposition consumed",
+        "committed_matches_composition": true,
+        "authority_git_blob": "8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73"
+      },
+      "topologies.tex": {
+        "authority_bytes": 166188,
+        "authority_projection_bytes": 166236,
+        "authority_projection_git_blob": "3dd9f636ff436f401b9db3544756617a66b33b3c",
+        "authority_projection_sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9",
+        "authority_sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+        "before_bytes": 166188,
+        "before_git_blob": "7f3b1718eba1743e2089f9bc16d2615e267b0ccb",
+        "before_sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+        "before_state": "exact_existing_overlay_projection",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 166236,
+        "composed_git_blob": "3dd9f636ff436f401b9db3544756617a66b33b3c",
+        "composed_sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 36,
+        "preapplied_operation_ids": [],
+        "semantic_disposition_operation_ids": [],
+        "superseded_operations": 0,
+        "target_operations": 36,
+        "written": false,
+        "composition_mode": "Exact manifest-bound operations on cumulative source; no preapplied operation or semantic disposition consumed",
+        "committed_matches_composition": true,
+        "authority_git_blob": "7f3b1718eba1743e2089f9bc16d2615e267b0ccb"
+      },
+      "groupoids.tex": {
+        "authority_bytes": 189166,
+        "authority_projection_bytes": 189152,
+        "authority_projection_git_blob": "07d2b127a7235ff8715772401b2896a7afc3d344",
+        "authority_projection_sha256": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04",
+        "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+        "before_bytes": 205809,
+        "before_git_blob": "de53855d011502707455bab47f13745f17028105",
+        "before_sha256": "906061343B5F46807A99FB3843BA9EF60B6FBE3D9DADDC1AA964AEAFAA9A59B7",
+        "before_state": "verified_committed_cumulative_source",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 205795,
+        "composed_git_blob": "8d55ee2a0ace1cd924a87836d96e90f8fdc95b4b",
+        "composed_sha256": "C6CF7E55C1C4F87EC475F514AED7219AF824EC3AC7734319367E54D5F6DFE7A5",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 46,
+        "preapplied_operation_ids": [],
+        "semantic_disposition_operation_ids": [],
+        "superseded_operations": 0,
+        "target_operations": 46,
+        "written": false,
+        "composition_mode": "Exact manifest-bound operations on cumulative source; no preapplied operation or semantic disposition consumed",
+        "committed_matches_composition": true,
+        "authority_git_blob": "58275d8ac118829123e2dc8757bf27614741ba9e"
+      },
+      "more-groupoids.tex": {
+        "authority_bytes": 121107,
+        "authority_projection_bytes": 121125,
+        "authority_projection_git_blob": "02bc05962624909e6c1944076922799ee1e12028",
+        "authority_projection_sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF",
+        "authority_sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199",
+        "before_bytes": 121107,
+        "before_git_blob": "61e68ef2abd475f6fa098ab741ce128622dadae0",
+        "before_sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199",
+        "before_state": "exact_existing_overlay_projection",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 121125,
+        "composed_git_blob": "02bc05962624909e6c1944076922799ee1e12028",
+        "composed_sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 27,
+        "preapplied_operation_ids": [],
+        "semantic_disposition_operation_ids": [],
+        "superseded_operations": 0,
+        "target_operations": 27,
+        "written": false,
+        "composition_mode": "Exact manifest-bound operations on cumulative source; no preapplied operation or semantic disposition consumed",
+        "committed_matches_composition": true,
+        "authority_git_blob": "61e68ef2abd475f6fa098ab741ce128622dadae0"
+      }
+    },
+    "verifier_reports": {},
+    "import_preparation_topology": {
+      "schema": "unofficial-ai-integrated-stacks-import-preparation-topology/v1",
+      "status": "PASS",
+      "registry_import_chain": [
+        {
+          "registry_commit": "ee575013e24fbfec7d29df79c72c3259b363c355",
+          "import_commit": "972d7e59525bf70d655694a54648a7f1777238a3",
+          "import_tree": "8073f15e6805596e069837fcc0e7f1b66ddbb6ea",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r40/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r40/LEASE.json",
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "a85e10f90950cce3890fc03fb5f158d51fc29036",
+          "import_commit": "688c602d7b6ea26de89e896792184e44302e031f",
+          "import_tree": "9d84ebd732dddad5c571760232c4737bd83cd02d",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r40/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r40/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r40/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r40/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r40/authority/producer/DESCENT_SOURCE_DEFECTS.md",
+            "ai-integrated/candidates/commons/stacks/errata/r40/authority/producer/SOURCE_DEFECT_LEDGER.csv",
+            "ai-integrated/candidates/commons/stacks/errata/r40/authority/registrar/DESCENT_R40_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/authority/source/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r40/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.log",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/descent.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r40/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r40/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/finalize_r40.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/payload/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r40/pipeline_r40.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/record-visual-r40.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r40/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r40/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r40/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/replay/VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/replay/VISUAL_PAGES_001_093.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r40/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r40/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r40/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r40/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+          "import_commit": "77d0b941c5fe0dc2d81f902480addef607717eee",
+          "import_tree": "42ad64db520ae24f6e09c0afe3ff5136f7e615a7",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r40.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "1ad928db1b46ca96cd418e1904023d469b32bfc6",
+          "import_commit": "428c11f746048132bee0d8409f87c69fd50d90b1",
+          "import_tree": "160c895e693fbaec75faf8e4ab2293ab2e56777e",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r41/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r41/LEASE.json",
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "2911b4cdf5141e1f3a275aeb83ed5cbc9e980bd4",
+          "import_commit": "37395547f7aedd0c4e92ffc7797fc44a13a64c06",
+          "import_tree": "f6c21d576835554e7565847f3d17daabf76bfeee",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r40-clarification-0001.json"
+          ]
+        },
+        {
+          "registry_commit": "c4fccd058f8a0fafe8bd9f5083623395d8325194",
+          "import_commit": "169c673cc32f4bfa06bd5696236130d1f6312424",
+          "import_tree": "603aa7a86fa254b033d9c7cbfd7ea4b3157957ce",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r41/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r41/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r41/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r41/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r41/authority/producer/DESCENT_SOURCE_DEFECTS.md",
+            "ai-integrated/candidates/commons/stacks/errata/r41/authority/producer/SOURCE_DEFECT_LEDGER.csv",
+            "ai-integrated/candidates/commons/stacks/errata/r41/authority/registrar/DESCENT_R41_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/authority/source/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r41/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.log",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/descent.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r41/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r41/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/finalize_r41.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/payload/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r41/pipeline_r41.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/record-visual-r41.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r41/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r41/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r41/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/replay/VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/replay/VISUAL_PAGES_001_093.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r41/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r41/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r41/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r41/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "3056e01f8a2dd26f52066434d80ff2c59901dea8",
+          "import_commit": "78b3731be37dde78f02940da9ce10d14dc1d18d9",
+          "import_tree": "209884a6396442e81bc72133a792c76efe7d008c",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r41.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "7991a0565ba6bd2b5f6e5539fb3bff7e49bdfa98",
+          "import_commit": "9ad5030aa5f302a072ee009f4665ca2440cbadba",
+          "import_tree": "fe959e86d399c21f8ce01307b313926e2e1382e9",
+          "changed_paths": [
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "9cf902bdd891ac2bd96e5f01b25c26bc7c602c07",
+          "import_commit": "a0d97e3bb6764b2459446359c80f50f0224eb90c",
+          "import_tree": "a4af97333054232cf660cd07c30fe6c7a28c6271",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r42/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r42/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r42/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r42/LEASE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r42/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r42/authority/producer/DESCENT_SOURCE_DEFECTS.md",
+            "ai-integrated/candidates/commons/stacks/errata/r42/authority/producer/SOURCE_DEFECT_LEDGER.csv",
+            "ai-integrated/candidates/commons/stacks/errata/r42/authority/registrar/DESCENT_R42_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/authority/source/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r42/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/TEX_MUTEX_RECEIPT_ATTEMPT1_PATH_REJECTED.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.log",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/descent.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r42/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r42/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/finalize_r42.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/payload/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r42/pipeline_r42.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/record-visual-r42.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r42/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r42/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r42/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/replay/VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/replay/VISUAL_PAGES_001_093.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r42/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r42/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r42/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r42/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "c2107a9d5f6f0644abc7af42d739ff741c9dc675",
+          "import_commit": "5e8e1af56599130cb99d36f70ecbbf8097ca36bc",
+          "import_tree": "5cd34d6e8b3cd77fa8cd201f70b3a2192a50cf52",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r42.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "29fb30690857f94daca1efacdf7d6f55b9811967",
+          "import_commit": "be2922e4c40a9d81d2e34cdd4dc204bc7627b82a",
+          "import_tree": "d568db0c4a76e333cd351d9f170ddf38825231b6",
+          "changed_paths": [
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "3002c87029ec8dd8405acc56787659b44bb42c19",
+          "import_commit": "2c59184113d5ab42ff3c1017c9a006b71f08cd49",
+          "import_tree": "a4bcd0ddabdb3dc05ad2ddfa56f29b28dcea991e",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r43/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r43/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r43/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r43/LEASE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r43/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r43/authority/producer/DESCENT_SOURCE_DEFECTS.md",
+            "ai-integrated/candidates/commons/stacks/errata/r43/authority/producer/SOURCE_DEFECT_LEDGER.csv",
+            "ai-integrated/candidates/commons/stacks/errata/r43/authority/registrar/DESCENT_R43_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/authority/source/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r43/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.log",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/descent.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r43/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r43/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/finalize_r43.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/payload/descent.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r43/pipeline_r43.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/record-visual-r43.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r43/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r43/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r43/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/replay/VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/replay/VISUAL_PAGES_001_093.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r43/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r43/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r43/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r43/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "c69900fe75119d39025084ed520abc8bb24d507b",
+          "import_commit": "559309d3f86335328578df6b75943bffbc15a144",
+          "import_tree": "2bb54c14fdfec7187d50f63143545b6ad2a3212a",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r43.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "60fa1439d8a03adb586b35a1bb4a1b83d2587ee2",
+          "import_commit": "803e9bf91b2d734f24fbaa6a4fa3dea6056816ee",
+          "import_tree": "2ac0055494ecd2a11595e0a08c0a3c590b18c0bd",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r44/LEASE.json",
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "9f9d196fc7771edf5c4b6a50eeafc7a6a48c33cd",
+          "import_commit": "676217d1413c1200387fb3e650a2250c12510b68",
+          "import_tree": "a06514fd59d5b23403f9fcdbe214df8670fa1f65",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r44/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r44/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r44/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r44/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r44/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/intake/STACKS_PERFECT_FROZEN_HARVEST_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R1.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R2.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R3.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/registrar/PERFECT_R44_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/source/perfect.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r44/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.authority.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.authority.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.log",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/perfect.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r44/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r44/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r44/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/finalize_r44.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/finalize_r44_successor.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/payload/perfect.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r44/pipeline_r44.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/record-visual-r44.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r44/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r44/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/FINAL_STAGE_SUCCESSOR_001.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/PAGE_COMPLETE_VISUAL_001_028.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/PAGE_COMPLETE_VISUAL_029_056.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/PAGE_COMPLETE_VISUAL_057_084.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/PAGE_COMPLETE_VISUAL_085_109.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/replay/VISUAL_PAGES_001_109.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r44/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r44/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r44/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r44/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "05d14edf76f2d54e8d6867b09359cbbc4e5ddd00",
+          "import_commit": "89f9f9fc9a4080f1285fa35c5e54ef593c81fc0b",
+          "import_tree": "8c5174ed1eade93d473b614519690b4457a9a7c1",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r44.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "f33db208c8798a4aad9acaa5f8ac68d094680f94",
+          "import_commit": "3732fadbcd153e8c306a432222c0f781b686ab3c",
+          "import_tree": "7ce2b4c640e90fd010406c1d0b6bdcbb8187472e",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r45/LEASE.json",
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "7e36f931fd0bb762c436a0af9478243357c53f63",
+          "import_commit": "33b4957c2172e0c7a03883eb0fa80c48e5761b1b",
+          "import_tree": "7250b6bb36217878c14baf9045960f8e9315f0a5",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r45/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r45/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r45/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r45/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r45/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/REGENERATION_RECEIPT_SUCCESSOR_001.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r45/authority/intake/STACKS_TOPOLOGIES_INDEPENDENT_INTAKE_20260905_R1.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/authority/intake/TOPOLOGIES_NATIVE_QA_STATE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/authority/registrar/TOPOLOGIES_R45_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/authority/source/topologies.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r45/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.authority.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.authority.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.log",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r45/builds/topologies.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r45/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r45/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r45/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/finalize_r45.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/independent-final-review-r45.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/payload/topologies.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r45/pipeline_r45.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/record-visual-r45.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r45/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r45/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r45/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/replay/RENDER_MANIFEST.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r45/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r45/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r45/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r45/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "34d2d62ca3d99f3a99ea5b59ad2e2a75bd813aee",
+          "import_commit": "1d5c1be3a5aed4809e677dd250f3207ca5747c20",
+          "import_tree": "28862fcfb13c16c1f4400f36200adc2671270810",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r45.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "14a4499c8b844d02ce3b251b4fe67d3ef0bc9c4f",
+          "import_commit": "b9c964bb8076781e68261be69fefba481e71c4c4",
+          "import_tree": "98ac0730501c94625c51aeca995b525fb9194368",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r46/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r46/LEASE.json",
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "d480f8e06111f3180e404c5c462301f037826806",
+          "import_commit": "aec3f765e2f1ae51841576b59ecbebeace0373fb",
+          "import_tree": "0aeee6dfc45db3bdff9c6f27fc1acb8fbd305873",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r46/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r46/FINALIZATION.md",
+            "ai-integrated/candidates/commons/stacks/errata/r46/README.md",
+            "ai-integrated/candidates/commons/stacks/errata/r46/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r46/authority/intake/GROUPOIDS_SOURCE_DEFECT_PACKET.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/authority/intake/STACKS_GROUPOIDS_INDEPENDENT_INTAKE_20260905_R1.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/authority/registrar/GROUPOIDS_R46_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/authority/source/groupoids.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r46/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.authority.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.authority.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.log",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/groupoids.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r46/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r46/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r46/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/finalize_r46.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/independent-final-review-r46.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/payload/groupoids.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r46/pipeline_r46.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/record-visual-r46.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r46/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r46/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay/FINAL_REVIEW_PREFLIGHT_ATTEMPT_001.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay/RENDER_MANIFEST.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r46/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r46/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r46/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r46/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "aa390419688f71a3f8ddfb881b6c62f9acd528a5",
+          "import_commit": "7fbab07badba2869c2d869ecedf63891abe477f8",
+          "import_tree": "6cee15bdd3a835817d21e7c79bf3e042ec5278b2",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r46.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "fad67a6af1c0e957cba18af0676f6ea5540109ed",
+          "import_commit": "2cb6c2dd08cd008ec4f1c1ef59dfdfe3ef08abe7",
+          "import_tree": "26604e623e184a286e66f51fcbc767705492a917",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r47/.gitattributes",
+            "ai-integrated/candidates/commons/stacks/errata/r47/LEASE.json",
+            "ai-integrated/registry/leases.json"
+          ]
+        },
+        {
+          "registry_commit": "14ac670b72acfd91b4acd78c763616d602d1a76b",
+          "import_commit": "6bbc994f40469b12fb6f8a37b9c48c6c427c041b",
+          "import_tree": "2ffc3113cac4a6d3e8a6e16450e14c730fdc20e9",
+          "changed_paths": [
+            "ai-integrated/candidates/commons/stacks/errata/r47/BUILD.md",
+            "ai-integrated/candidates/commons/stacks/errata/r47/REGENERATION_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/authority/COPYING",
+            "ai-integrated/candidates/commons/stacks/errata/r47/authority/intake/MORE_GROUPOIDS_SOURCE_DEFECT_PACKET.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/authority/intake/STACKS_MORE_GROUPOIDS_INDEPENDENT_INTAKE_20260905_R1.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/authority/registrar/MORE_GROUPOIDS_R47_INDEPENDENT_ADJUDICATION_20260905.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/authority/source/more-groupoids.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r47/authority/upstream.lock.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/build-receipt.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/BUILD_RENDER_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/FINAL_MECHANICAL_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/PENDING.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/TEX_MUTEX_RECEIPT.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/build-execution.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/build-receipt.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/deterministic-replay.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.authority.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.authority.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.authority.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.authority.log",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.authority.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.authority.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.bibtex.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.fls",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.fls-dependencies.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.log",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.pass3.txt",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/more-groupoids.pdf",
+            "ai-integrated/candidates/commons/stacks/errata/r47/builds/source-page-map.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/candidate.config.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/candidate.config.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/candidate.manifest.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/check-manifest.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/decisions.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r47/decisions.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r47/derive-visual-pages.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/deterministic-replay.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/finalize_r47.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/formula-diagram-inventory.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/independent-final-review-r47.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/independent-source-review.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/operation-spec.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/operation-spec.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/payload/more-groupoids.tex",
+            "ai-integrated/candidates/commons/stacks/errata/r47/pipeline_r47.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/record-visual-r47.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/rejections.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r47/rejections.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r47/render-qa.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/replay-build.py",
+            "ai-integrated/candidates/commons/stacks/errata/r47/replay/FINAL_INDEPENDENT_REVIEW.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/replay/FINAL_STAGE.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/replay/RENDER_MANIFEST.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/replay/SOURCE_INDEPENDENT_VALIDATION.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/run-builds-with-mutex.ps1",
+            "ai-integrated/candidates/commons/stacks/errata/r47/source-map.input.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r47/source-map.jsonl",
+            "ai-integrated/candidates/commons/stacks/errata/r47/source-validation.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/stable-units.input.json",
+            "ai-integrated/candidates/commons/stacks/errata/r47/stable-units.json"
+          ]
+        },
+        {
+          "registry_commit": "26f564b5f99993bee3ca6716b0ead218ca354fe3",
+          "import_commit": "761af083f1f67b7c616db88d5b5d77adce8eaad7",
+          "import_tree": "30bf1ae446127498de02993ed6e9bf6854b1b8d0",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r47.json",
+            "ai-integrated/registry/leases.json",
+            "ai-integrated/registry/overlays.json"
+          ]
+        },
+        {
+          "registry_commit": "e4a7b1cb0b0e7fa4c499ab26cf85275f4f9fed12",
+          "import_commit": "284c5acef853029f603f5326ecaa0d6d52bbf5fe",
+          "import_tree": "82838d0f49409bcf99f90e7e4bb9998bcc83019f",
+          "changed_paths": [
+            "ai-integrated/registry/admission-receipts/r47-fresh-checkout.json"
+          ]
+        }
+      ],
+      "registry_preimage_alignments": [],
+      "preparation_commits": [],
+      "root_source_inputs_unchanged_before_composition": true,
+      "imported_subtree_unchanged_by_preparation": true
+    },
+    "registry_leases_path": "ai-integrated/registry/leases.json",
+    "registry_leases_git_blob": "2ed011c6f937dbd2c883c5c6aa790e4bcc46e398",
+    "registry_leases_sha256": "D29883FB7C8A64752FFE131A74AAAB4D577CB88248E50608F57997E2EB556F49"
+  },
+  "environment": {
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.9",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdfinfo": "pdfinfo version 26.07.0",
+    "source_date_epoch": "1785270512"
+  },
+  "build": {
+    "strategy": "sequential-prime-bibtex-global-state-sweeps",
+    "fixed_point_suffixes": [
+      ".aux",
+      ".bbl",
+      ".idx",
+      ".ind",
+      ".lof",
+      ".lot",
+      ".out",
+      ".toc",
+      ".pdf"
+    ],
+    "stem_selection": "composition_receipt",
+    "stems": [
+      "sets",
+      "categories",
+      "topology",
+      "sheaves",
+      "sites",
+      "algebra",
+      "fields",
+      "artin",
+      "brauer",
+      "derived",
+      "simplicial",
+      "homology",
+      "more-algebra",
+      "smoothing",
+      "modules",
+      "sites-modules",
+      "schemes",
+      "properties",
+      "morphisms",
+      "more-morphisms",
+      "spaces-morphisms",
+      "crystalline",
+      "spaces-cohomology",
+      "spaces-duality",
+      "stacks-limits",
+      "injectives",
+      "cohomology",
+      "sites-cohomology",
+      "gaga",
+      "moduli",
+      "descent",
+      "perfect",
+      "topologies",
+      "groupoids",
+      "more-groupoids"
+    ],
+    "chapter_count": 35,
+    "global_fixed_point_sweep": 4,
+    "pdfinfo_readable": 35,
+    "diagnostics": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "undefined_reference_markers": 0,
+      "external_reference_markers": 4576,
+      "undefined_citation_markers": 0,
+      "multiply_defined_markers": 0,
+      "rerun_required_markers": 0,
+      "destination_warning_markers": 0
+    },
+    "artifact_tuple_set_sha256": "9D77499FAA00348DA52F5EAB83D03715601429F41812F8D553EAF952A4A3D7E2",
+    "worktree_kind": "linked",
+    "primary_worktree_override": false,
+    "machine_wide_tex_mutex": {
+      "schema": "unofficial-ai-integrated-stacks-tex-mutex/v1",
+      "status": "PASS",
+      "name": "Global\\InterlanguageTeXSlotV1",
+      "namespace": "Windows Global",
+      "acquisition_timeout_ms": 300000,
+      "wait_started_utc": "2026-09-06T23:25:48Z",
+      "acquired_utc": "2026-09-06T23:27:04Z",
+      "wait_duration_ms": 76659.752,
+      "wait_result_code": "0x00000000",
+      "wait_result": "acquired",
+      "abandoned_mutex_recovered": false,
+      "ownership_acquired": true,
+      "held_scope": "all TeX/BibTeX passes, TeX/BibTeX version probes, and immediate final log checks",
+      "released_utc": "2026-09-06T23:40:17Z",
+      "held_duration_ms": 792540.085,
+      "release_result": "released_in_finally"
+    }
+  },
+  "artifacts": [
+    {
+      "stem": "sets",
+      "pages": 14,
+      "bytes": 459270,
+      "sha256": "57D8E7A7A68D626F5E946626661499E890D07A6BAC1B8C067BD5601CC7F67381",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 83,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 83,
+        "sha256": "A5908E2B3C2F03557E8D9D3E5CAFEFA94B614259F525977D08F2FB46033594E8"
+      }
+    },
+    {
+      "stem": "categories",
+      "pages": 105,
+      "bytes": 1067823,
+      "sha256": "97B06338023B8BD3F9F36A0F5D6B37EE55B7A419297422427E36A7A1138298EC",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 86,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 86,
+        "sha256": "73A9FFDB27384F8821043107B21681076F92BBF7DBAE2F8A645B267F783C35A9"
+      }
+    },
+    {
+      "stem": "topology",
+      "pages": 66,
+      "bytes": 799722,
+      "sha256": "3D08E9D69CC97A715D2E0CE1C89FFE51656E36A924F7A5729E3CCBF33BFF4541",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 85,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 85,
+        "sha256": "18FC61D2B12CF0097E737852DAC300157137802E607D27BEBA1DE48C8B75F612"
+      }
+    },
+    {
+      "stem": "sheaves",
+      "pages": 54,
+      "bytes": 660032,
+      "sha256": "7717B2BFA186E4BDF2CD07D30E8C8170C9D62791C9569769327EAFF700082DFA",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 83,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 83,
+        "sha256": "4C8D2712FE1B616849A6103330A292FA9D976F2A595531933EBD4633431928B9"
+      }
+    },
+    {
+      "stem": "sites",
+      "pages": 113,
+      "bytes": 1168784,
+      "sha256": "4858DCB7A9E93CB1C14406CBFB3C9E4B3051886AE7C75A087B529440F0852A3B",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 84,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 84,
+        "sha256": "2232FC2F800B563BB4230017CFF7E78C45A5C63069BC836BE527954A3B56A3D2"
+      }
+    },
+    {
+      "stem": "algebra",
+      "pages": 473,
+      "bytes": 3778894,
+      "sha256": "B375DC769C767DFC9974F82C0158AAA76AB3C091A9F62B3A5A1EC71CEDCA5547",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 95,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 95,
+        "sha256": "6F0BD899A1C3D25C267B0D5DFEE4497B157DABB2334FAD932A2CE4C2790C7792"
+      }
+    },
+    {
+      "stem": "fields",
+      "pages": 42,
+      "bytes": 571338,
+      "sha256": "CAF513C142508A614349D44B1D9A39B32E8BD0B8627383B430643D72ECA349DB",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 86,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 86,
+        "sha256": "74AF3B68FB91438CDB3A41AC7FA9D8D84E35BDC43312950859AC6D3E744E6063"
+      }
+    },
+    {
+      "stem": "artin",
+      "pages": 69,
+      "bytes": 912242,
+      "sha256": "76C97B41D2EB085EA9C9664F6359F63CCB36861DDF42359FD458EC1A3932FEF6",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 259,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 259,
+        "sha256": "F72F07255E79706E62D4BE51488B4C85934172910EE4C6FDD52C05F6B8358967"
+      }
+    },
+    {
+      "stem": "brauer",
+      "pages": 10,
+      "bytes": 350619,
+      "sha256": "B642C45B939353B53AC6EB59651B106D7AFA8C5297CBE267B200617690DE0A3F",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 83,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 83,
+        "sha256": "41128FDF67403741D72D67DA83536DD5C18C26CF24BC07507F99D8884073570B"
+      }
+    },
+    {
+      "stem": "derived",
+      "pages": 130,
+      "bytes": 1249300,
+      "sha256": "E4C8FBCB65234A27695263D53B0CF01A22CED086399B36FCCD3B74FC2001F543",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 85,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 85,
+        "sha256": "5D5D8C0A44BA0CC3EED8D9C23248E0EF14762CFCE7853100D0E0A433AF3E28A6"
+      }
+    },
+    {
+      "stem": "simplicial",
+      "pages": 75,
+      "bytes": 849608,
+      "sha256": "C88D3FA53E1F7530A84EB4B98CAAD43A5C8103B712BFA79A34BE070764DACCFE",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 83,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 83,
+        "sha256": "08B84F08AA73065D11256588FDC8BE05F7A8E01B1D9E9FD51CADE0105DFC111A"
+      }
+    },
+    {
+      "stem": "homology",
+      "pages": 82,
+      "bytes": 888421,
+      "sha256": "93FF737A2F5766E0CD11E149762312488A9EC39AC5947D61377B4243A09D1B32",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 84,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 84,
+        "sha256": "7D531AB411882C51D41F4FE21C667A942376541E2DEF512CB003537AD598EF69"
+      }
+    },
+    {
+      "stem": "more-algebra",
+      "pages": 406,
+      "bytes": 3388251,
+      "sha256": "AB901FF42DFD4C6A3B730426BC04D44B7D751C8E8957B316386EE018E281BED5",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 108,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 108,
+        "sha256": "893BE396162640B94324731A5F3E705EA15633332179E89BBDDBE90B51EC8F9A"
+      }
+    },
+    {
+      "stem": "smoothing",
+      "pages": 37,
+      "bytes": 651762,
+      "sha256": "6AF8C8FF366A49AC47BBB13D67333C6D4F0E8A697E861A4343B92444CC647503",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 83,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 83,
+        "sha256": "6ADC38D3292183E179266AC3DB64DA159B244E8D33CAA11A2D8BAA11C96B4319"
+      }
+    },
+    {
+      "stem": "modules",
+      "pages": 55,
+      "bytes": 723167,
+      "sha256": "7A38966114718B9D407682B8EB0878D7293BCF9B90779B95B42CE3CA0D5CFCAB",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 84,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 84,
+        "sha256": "FDD193A8C9F0EF3D70D2E31CF38FEF71A332A915FC1514806900105C2D806B9F"
+      }
+    },
+    {
+      "stem": "sites-modules",
+      "pages": 80,
+      "bytes": 912391,
+      "sha256": "AF73CFA4CD6F461276400B45142E207DBB3FEE90E848F55A21F1534C337F0B83",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 83,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 83,
+        "sha256": "60C9A075795EF363ABCB9F25FF0063FF8EE365A1066C946CCB3DCCF24FB448A9"
+      }
+    },
+    {
+      "stem": "schemes",
+      "pages": 51,
+      "bytes": 725037,
+      "sha256": "69C3B14EF34B3765AC5760D589414C98A245F7A18F84AA7F61CBC85E5AE1FBBA",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 84,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 84,
+        "sha256": "DC6BC6530CE50A6BB5E9D7862D3A2F34057E2AB28FAC599AA77F5453C004FFD0"
+      }
+    },
+    {
+      "stem": "properties",
+      "pages": 54,
+      "bytes": 766888,
+      "sha256": "2CAC3D53B051445493744F9AAC56EA65FAA4B87A7603E906FEC97847E78B1772",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 109,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 109,
+        "sha256": "CFEA64331139630B60EB8AE07EA5AB83A2244EE3B59CAF68C1F31C1881928688"
+      }
+    },
+    {
+      "stem": "morphisms",
+      "pages": 157,
+      "bytes": 1576986,
+      "sha256": "5837139017A81A410058332EE4A2EA0844438B66ADC6A849514324A84574F103",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 148,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 148,
+        "sha256": "C4C815D4119A02BFE044A8C075D992EE7F56A5C539692DE960922A5ECA68188B"
+      }
+    },
+    {
+      "stem": "more-morphisms",
+      "pages": 260,
+      "bytes": 2343573,
+      "sha256": "07C7A4032CF4D4A8CE637CF47225AD7E0FA8939F9B2AC6861B9A6EC0F8E0A353",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 392,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 392,
+        "sha256": "A4ACF086E2915FEACE4644FD54E3599A6541ADFF46555796B85D971407608109"
+      }
+    },
+    {
+      "stem": "spaces-morphisms",
+      "pages": 116,
+      "bytes": 1141293,
+      "sha256": "FD59135235A7A8EF6B47802D03BC7C080D7FEE1AF64A481F6A4984373288B652",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 337,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 337,
+        "sha256": "18DA824C46DA73CF59EB31130C900DEF6A56BC990C2DE707FFBDC370D64285A6"
+      }
+    },
+    {
+      "stem": "crystalline",
+      "pages": 61,
+      "bytes": 874000,
+      "sha256": "616C30AE1EADED596FFB8E9DC1F659B0A19F2B8E2341444C5BE47806672831C8",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 130,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 130,
+        "sha256": "02378B667C6454D7119C601BED5EAC210EE426B9A70011854B33EF194F4992C6"
+      }
+    },
+    {
+      "stem": "spaces-cohomology",
+      "pages": 47,
+      "bytes": 651919,
+      "sha256": "4766CF9401F1C1D2BA256E6BEEEF969016C7A81C2F659EFA541CECFDDAD3A8E2",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 202,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 202,
+        "sha256": "C8098527885C6569C28AA5EE000E50FBABFB056539A0208023C0F9485726ED52"
+      }
+    },
+    {
+      "stem": "spaces-duality",
+      "pages": 25,
+      "bytes": 564226,
+      "sha256": "97853AB48A61BFBFB32BFCC4C06B306EEEE3A743E6767FD3700EB5F1839C7A75",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 164,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 164,
+        "sha256": "A541BEF26E626970295DAB8E26A6966A1F2EC1CEDCCFAAD4C00C6EFF4F95C2EF"
+      }
+    },
+    {
+      "stem": "stacks-limits",
+      "pages": 13,
+      "bytes": 350688,
+      "sha256": "B551C0BAD41D838F884354805B3442184488CB4D59FCB95A36B1FBD48B25D118",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 146,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 146,
+        "sha256": "1BC5622C62DBDC3484BFD7637383E52B47040047D422D9C430F07A52F29ED5D6"
+      }
+    },
+    {
+      "stem": "injectives",
+      "pages": 31,
+      "bytes": 573165,
+      "sha256": "A45A4723C8D65038014C445A11E4639565EDDA361668EDE7477EA523377CB776",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 86,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 86,
+        "sha256": "46A1C80E876BAF2B74B13785A84382F48349F2BCB67B3B88D4B1E82099BBF5DB"
+      }
+    },
+    {
+      "stem": "cohomology",
+      "pages": 140,
+      "bytes": 1374359,
+      "sha256": "2B0D7602C8A7476B4D8A916FC941289FCB3F6258E80220C0861FB4CFFB61AD1E",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 84,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 84,
+        "sha256": "301644A4B7B37F829EDE06B19FE73B7AB0770200E4C0CC5C8BE6C07BDD2ED80C"
+      }
+    },
+    {
+      "stem": "sites-cohomology",
+      "pages": 135,
+      "bytes": 1364956,
+      "sha256": "EBBB5E945CA3BDA57A1A32603EEDACEE513B820612BCD866C25A59B78D59A69D",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 96,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 96,
+        "sha256": "880AA0327D711DD9436F26E16D647DF59D4B0C138D883676924B3B626826445C"
+      }
+    },
+    {
+      "stem": "gaga",
+      "pages": 23,
+      "bytes": 491618,
+      "sha256": "7F89632807AA445828C0357B83270F8D123A8618E50FD1008F91F655EA0AB5E2",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 100,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 100,
+        "sha256": "E62999BE5C70ACDCFAC168C185AA9A1537613836C1B9402F699362C1859F203E"
+      }
+    },
+    {
+      "stem": "moduli",
+      "pages": 83,
+      "bytes": 906965,
+      "sha256": "8E570AE85F0C752FCC9497756F462A60F1E0C3BAAFD3614CFDECC4C70780CEA0",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 289,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 289,
+        "sha256": "9FD60DCC62865EA9F16B5BBFE3CABD98CC87924331119992D0D26EAC8CBFEFE6"
+      }
+    },
+    {
+      "stem": "descent",
+      "pages": 105,
+      "bytes": 1194733,
+      "sha256": "8AD19CB346122549590291CBA47C27E390EEB7BA6F3904ED363508EAAEB81130",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 116,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 116,
+        "sha256": "47887449DA1494A73281CD21EFB89305A18AF8AA44111E0770BE29C33A634247"
+      }
+    },
+    {
+      "stem": "perfect",
+      "pages": 109,
+      "bytes": 1234489,
+      "sha256": "10FB8C93290A871C8AF358D8001CAA4B6F7723441DF5823CFD78AC21216B8518",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 194,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 194,
+        "sha256": "43626D85158157CDDB4A0B9B21D8F3F6EADD14DF16B7EDB8B37D7F84BA0A0449"
+      }
+    },
+    {
+      "stem": "topologies",
+      "pages": 46,
+      "bytes": 692801,
+      "sha256": "2B84EC529E9861058D66E3D26FA3ECA30FC585E61CA7DBD82037DC972772F9DD",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 97,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 97,
+        "sha256": "03F976FCEE17F17D57AFB49E9FB056DA3CE26C1B9086B95DE8B4FC393689AA2E"
+      }
+    },
+    {
+      "stem": "groupoids",
+      "pages": 60,
+      "bytes": 791646,
+      "sha256": "3F074F4399F5E4AA1612BAA96424F795F5A1584EFA49912CAF3AFCBE5EB80638",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 137,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 137,
+        "sha256": "CC2CE866E0CAA9B7804006A446D3A04617822A8B93AC941E9A7B9317219EB352"
+      }
+    },
+    {
+      "stem": "more-groupoids",
+      "pages": 36,
+      "bytes": 629005,
+      "sha256": "64F08207F8424EB8638F804BAA34BD3E807BEB3AC8C9979BF70E323991B99E0D",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 111,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 111,
+        "sha256": "68A27AC3B54451571161CA43373BDED82DA6852DBA938531CFC4DA2B67CF54EE"
+      }
+    }
+  ],
+  "pdfs_committed": false,
+  "source_checkpoint": {
+    "schema": "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-successor/v1",
+    "status": "PASS_SOURCE_CHECKPOINT_SUCCESSOR",
+    "receipt": {
+      "path": "validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json",
+      "bytes": 44426,
+      "sha256": "95B8D2B14D7C1CB7E9F826F6EBF0A6723DBDB05DC5D06F06F186E21465CC3352",
+      "git_blob": "715024558f8480811dc3d27521d65cdaa893ca45"
+    },
+    "historical_anchor": {
+      "commit": "91cc89df5804b8c1949d8267602fc076649ee49b",
+      "tree": "060538ea3323b366e8f445fd79725a63c4241d2f",
+      "verification": {
+        "schema": "unofficial-stacks-project-ai-drafts-ega-source-checkpoint/v1",
+        "status": "PASS_SOURCE_CHECKPOINT",
+        "receipt": {
+          "path": "validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json",
+          "bytes": 44426,
+          "sha256": "95B8D2B14D7C1CB7E9F826F6EBF0A6723DBDB05DC5D06F06F186E21465CC3352",
+          "git_blob": "715024558f8480811dc3d27521d65cdaa893ca45"
+        },
+        "base": {
+          "commit": "57efc9c91e7e52cdb70deb56c0e92f4c93037ac9",
+          "tree": "f77e75e1e89508b648611890c90e2238a5cdf25e"
+        },
+        "content": {
+          "commit": "571648f5c43c36617629c8ae57b28606d966625f",
+          "tree": "12faacf779ad018c4c2729167d1afa1ef6b9d0e5",
+          "parent": "57efc9c91e7e52cdb70deb56c0e92f4c93037ac9"
+        },
+        "source_unit": {
+          "name": "EGA I 6.6.4",
+          "next_source_unit": "EGA I 6.6.5",
+          "label": "lemma-quasi-compact-preserved-base-change",
+          "official_tag": "01K5",
+          "dependencies": [
+            "01K4",
+            "01JS"
+          ]
+        },
+        "root_source_stem": "schemes",
+        "implementation_receipt": {
+          "path": "validation/ega-i-6.6.4-semantic-checkpoint-2026-08-31.json",
+          "bytes": 28005,
+          "sha256": "C55A2320FBF3C6B0D0655CFEA2943119F239085C56AC0D891652B81777AF0C6D",
+          "git_blob": "ccb24674574b69ab3dd05f6ecb64f0d17d7a1796"
+        },
+        "independent_review": {
+          "path": "validation/ega-i-6.6.4-independent-review-2026-08-31.json",
+          "bytes": 2135,
+          "sha256": "D1C84D5B7EEFE1FF4BEDC72A7BB02CCD6A70D3B07BAC889578D4200035EC365C",
+          "git_blob": "f21be6f5ff9a76b8d1ae22e2ac8d4b1e857cfd2a"
+        },
+        "changed_path_count": 10,
+        "changed_paths_tuple_sha256": "0EA5C2310412F53002D5795329ECC000EB7B2E903F40F9D1D28F6A648FEFD6D4",
+        "protected_content_path_count": 129,
+        "protected_content_paths_tuple_sha256": "767D6732172CF8EB892C060E6A41B4AA7A28D339B9B6AE712C901382E8BD6FA7",
+        "protected_input_count": 157,
+        "protected_input_roles": {
+          "agent_ledger": 1,
+          "build_bibliography": 1,
+          "build_checkpoint_consumer": 1,
+          "build_checkpoint_consumer_test": 1,
+          "build_shared_style": 3,
+          "canonical_composition_receipt": 1,
+          "canonical_registry": 13,
+          "canonical_tags": 1,
+          "checkpoint_receipt": 1,
+          "checkpoint_writer": 1,
+          "checkpoint_writer_test": 1,
+          "decision_ledger": 1,
+          "dossier_readme": 1,
+          "dossier_validator": 1,
+          "implementation_receipt": 1,
+          "independent_review": 1,
+          "official_stacks_source_authority": 1,
+          "official_stacks_tag_authority": 1,
+          "package_checkpoint_consumer": 1,
+          "package_checkpoint_consumer_test": 1,
+          "residual_ledger": 1,
+          "root_source": 1,
+          "scope_manifest": 1,
+          "statement_map_ledger": 1,
+          "unchanged_root_tex": 119
+        },
+        "protected_input_tuple_sha256": "40DEC7516C0A2D369111BF7B852180A5DAD2458E72934E35901B01DD69AE9F23",
+        "external_authority_inputs": [
+          {
+            "role": "canonical_french_authority",
+            "path": "source/ega1/ega1-6-fr.tex",
+            "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+            "bytes": 57781,
+            "sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+            "lf_lines": "1067-1121",
+            "slice_bytes": 3114,
+            "slice_sha256": "95A70DD85C4C0D7EE4C64052082F2DF176C163014762D721144CECEB458316BB",
+            "external_recheck": "unavailable_with_receipt_binding"
+          },
+          {
+            "role": "english_discovery_reference",
+            "path": "source/ega1/ega1-6.tex",
+            "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+            "bytes": 55021,
+            "sha256": "990DF9E209D804AAC103CE3B23C5F5F2307CD57B87C3A6F4F6E699AA9227C9FD",
+            "lf_lines": "753-785",
+            "slice_bytes": 3017,
+            "slice_sha256": "F36B6FCC7D2B40F6F174C1A3750B7E9EF13C0B556F0DD31A7BCE2AB24EA0784A",
+            "external_recheck": "unavailable_with_receipt_binding"
+          }
+        ],
+        "canonical_composition": {
+          "path": "validation/composition-current.json",
+          "git_blob": "f2ed2e2b6371943072a248dc192f948973cbe60d",
+          "sha256": "5DFAA8FC81EB0F5CFE94AAC6E3DAFC3BFDDB7516EA4B5FC7DE8AE38906DFC207",
+          "composition_source_commit": "0cf35b6ffdb46a63355f0d9ee3f2fa47a529ffe0",
+          "ancestor_of_tool_base": true
+        },
+        "post_content": {
+          "head_commit": "91cc89df5804b8c1949d8267602fc076649ee49b",
+          "head_tree": "060538ea3323b366e8f445fd79725a63c4241d2f",
+          "changed_paths": [
+            "validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json"
+          ],
+          "source_paths_unchanged": true
+        },
+        "checks": [
+          "authoritative_producer_check_only_recomputed_exact_receipt",
+          "dynamic_tools_content_receipt_topology_exact",
+          "canonical_composition_path_blob_and_lineage_exact",
+          "root_ledger_count_and_authority_claims_recomputed",
+          "all_build_critical_inputs_protected_through_final_recheck"
+        ]
+      }
+    },
+    "semantic_successor": {
+      "receipt": {
+        "path": "validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json",
+        "bytes": 32339,
+        "sha256": "068AA162882CBAC1B27937B32F9540A5D7A46F6C415679A3177B23ECBAC0E708",
+        "git_blob": "77260956013808714ea0a791aac62cda07e09285"
+      },
+      "commit": "3d394efb90ab4657221cf8108b7258a1d88ee0fe",
+      "tree": "cc9e3836b553e9bfc61cedbe693341122fd39b88",
+      "source_unit": "ega:I.6.6.5",
+      "next_source_unit": "ega:I.6.6.6",
+      "checker": {
+        "counts": {
+          "agent.csv": 259,
+          "cand.csv": 2749,
+          "dec.csv": 330,
+          "fb.csv": 0,
+          "files.csv": 127,
+          "findings.jsonl": 26,
+          "issues.csv": 102,
+          "operational_statement_edges": 1259,
+          "operational_vqa_rows": 26,
+          "pages.csv": 29,
+          "pending_visual_referral_crops": 0,
+          "qsrc.csv": 16,
+          "quarantined_residual_rows": 0,
+          "quarantined_statement_edges": 0,
+          "quarantined_vqa_rows": 0,
+          "resid.csv": 833,
+          "smap.csv": 1266,
+          "source_error_qa_bytes": 6022269,
+          "source_error_qa_crops": 16,
+          "src.csv": 1,
+          "tmap.csv": 24,
+          "topics.csv": 36,
+          "units.csv": 9585,
+          "vqa.csv": 45
+        },
+        "errors": [],
+        "existing_official_tags_referenced": 13,
+        "official_tags_assigned_by_scaffold": 0,
+        "schema": "ega-stacks-scaffold-check-v1",
+        "status": "PASS"
+      },
+      "no_root_source_change": true
+    },
+    "root_source_stem": "schemes",
+    "canonical_composition": {
+      "path": "validation/composition-current.json",
+      "git_blob": "aa8a41ae5fed5fbd4bcdd29f86ef5e7abd66f3c5",
+      "sha256": "5618FED4032CBF838781F585529DCCDB8B9621EA015CE6741CD745E09D4106B1",
+      "composition_source_commit": "bb34cd90ea3da510cb21a01b14c7362f0a520872",
+      "composition_source_tree": "debe3621682dca2bb2540d5ce37ee3908179bb4d"
+    },
+    "post_content": {
+      "head_commit": "4d62d13fad147acc5f8ed70d80a63994d7c4bd7f",
+      "head_tree": "a62b9e8d340ff9a1844e65ec0080fdf11295cd9b",
+      "source_paths_unchanged_since_composition": true
+    },
+    "protected_input_count": 515,
+    "protected_input_roles": {
+      "historical_checkpoint_input": 157,
+      "successor_current_input": 358
+    },
+    "protected_input_tuple_sha256": "E7CB30389CCC7AF1A0038CFA5A2BCCF20126EEC4E0650F76F8A0D62152B177F0",
+    "external_authority_inputs": [
+      {
+        "role": "canonical_french_authority",
+        "path": "source/ega1/ega1-6-fr.tex",
+        "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+        "bytes": 57781,
+        "sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+        "lf_lines": "1067-1121",
+        "slice_bytes": 3114,
+        "slice_sha256": "95A70DD85C4C0D7EE4C64052082F2DF176C163014762D721144CECEB458316BB",
+        "external_recheck": "unavailable_with_receipt_binding"
+      },
+      {
+        "role": "english_discovery_reference",
+        "path": "source/ega1/ega1-6.tex",
+        "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+        "bytes": 55021,
+        "sha256": "990DF9E209D804AAC103CE3B23C5F5F2307CD57B87C3A6F4F6E699AA9227C9FD",
+        "lf_lines": "753-785",
+        "slice_bytes": 3017,
+        "slice_sha256": "F36B6FCC7D2B40F6F174C1A3750B7E9EF13C0B556F0DD31A7BCE2AB24EA0784A",
+        "external_recheck": "unavailable_with_receipt_binding"
+      }
+    ],
+    "checks": [
+      "original_producer_and_consumer_run_at_actual_historical_receipt_head",
+      "historical_tools_content_receipt_topology_preserved",
+      "historical_schemes_proof_and_tags_unchanged",
+      "all_current_root_tex_exact_at_validated_composition_source",
+      "semantic_increment_exact_append_prefixes_scope_and_checker",
+      "historical_and_current_inputs_frozen_through_final_build_recheck"
+    ]
+  }
+}
