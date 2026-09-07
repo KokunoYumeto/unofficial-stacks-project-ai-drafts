@@ -24,7 +24,7 @@ rational functions with existing Stacks definitions. It introduces no
 duplicate theorem, root TeX edit, reducedness assumption, or finiteness
 assumption on the irreducible components.
 
-The [bounded semantic checkpoint](../validation/ega-i-7.1.1-7.1.3-semantic-checkpoint-2026-09-07.json)
+The [corrected semantic checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
 records exact source slices, pinned targets, independent derivations, and
 append-only ledger identities. Production validation and publication are
 separate from this local semantic checkpoint.
@@ -966,8 +966,11 @@ after restricting to a common dense domain.
 
 The comparison uses tags 01RS, 01RT, 01RU, 01JP, 01JH and 01M0, with the
 restriction-compatible derivations recorded explicitly. It adds no duplicate
-root theorem. The exact ledger references are D000334–D000336,
-S001291–S001302, R000844–R000851 and A000262–A000263.
+root theorem. The corrected ledger references are D000337–D000339,
+S001303–S001314, R000852–R000859 and A000264. The preceding candidate
+rows and frozen receipt remain byte-identical adverse history: their French
+slices used web-normalized rather than physical line numbers. Correct raw
+LF ranges are 7–16, 18–57 and 59–70, including the final ring assertion.
 
 Both EGA and pinned 01RS use topologically dense open domains. The schematic
 variant 01RX is retained only as a negative comparison. For
@@ -978,7 +981,7 @@ from morphisms to rational classes need not be injective.
 Restriction must retain a dense equality witness: if representatives on
 `V` and `W` agree on `T`, their restrictions to an open `U` agree on
 `U intersect T`, not necessarily on the entire overlap. The fixed French
-transcription at line 36 and English discovery at line 22 overclaim the latter.
+transcription at raw line 40 and English discovery at raw line 22 overclaim the latter.
 Independent visual comparison with original EGA I printed p.155 (physical
 PDF page 154) confirms an **original-printing proof overstatement**. The
 source-edition correction remains **PROPOSED**: no authority text, issue

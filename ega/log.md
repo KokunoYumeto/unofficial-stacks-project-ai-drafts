@@ -2558,3 +2558,44 @@ PASS, 34 tests. The bounded whitespace check passes, and the explicitly
 checked protected root/authority/visual/discovery paths have no diff. These
 are structural and semantic-contract tests, not a formal mathematical proof.
 No TeX, PDF build, upstream contact, push, or publication was performed.
+
+## 2026-09-07 — adverse v1 source-boundary finding and correction successor
+
+Before publication, the production owner independently found that the frozen
+v1 candidate used normalized web-renderer line numbers as raw-LF source
+boundaries. Its arbitrary byte intervals had valid hashes but incomplete
+source content. In particular, LF53–64 omitted the final ring assertion.
+The implementation owner independently fetched the exact raw French bytes
+and confirmed all four defects: correct environments are LF7–16, LF18–57,
+LF59–70; the restriction overstatement is raw LF40, while LF36 is blank.
+English LF7–11, LF13–29, LF31–35 and its overstatement line22 were already
+correct and were independently replayed again.
+
+Retain candidate `2304f9f081e34fc6b4d5a16a62fecf6f724fdecb` and its frozen
+40,646-byte receipt at SHA-256
+`A2B341ADAC93BC8229B6FEB66D82731EED0B4F3181367AA84F92E36AE63BA59C`
+as explicitly adverse history, not currently valid source-boundary evidence.
+All ledger prefixes, including those unpublished candidate rows, remain
+byte-identical. D000337–D000339, S001303–S001314, and R000852–R000859
+supersede only their source bindings; no mathematical assertion or target
+changes. A000264 records the repair. Current active counts are unchanged;
+physical and superseded-row counts increase transparently.
+
+Corrected combined French LF7–70 is `[155,3319)`, 3,164 bytes at SHA-256
+`F1343B16025024B470C644C3A2CB9E5F6495B88F77F54CCFE7586925F3D2DBE9`.
+The correction receipt seals each complete environment and the exact raw
+restriction-line hash. The bounded live-byte replay independently derives
+begin/label/end markers before comparing scopes and requires both the final
+graph correspondence and the ring conclusion. Matching an arbitrary slice
+hash is no longer sufficient. It accepts optional cached source paths and
+never copies or modifies an edition tree.
+
+The valid mathematical and original-printing findings are preserved; the
+source-edition correction remains proposed. Next source-order unit stays
+EGA I7.1.4. No publication, root TeX, tag, authority, or issue change is made.
+
+Correction validation: semantic checker PASS with zero errors; live French
+and English raw-byte boundary replay PASS; 62 semantic/history/source-boundary
+tests PASS. The verifier splits only physical LF bytes and passes the
+form-feed regression. Scoped whitespace and protected-path checks PASS.
+The original 40,646-byte adverse receipt remains at its exact A2B341... hash.

@@ -824,9 +824,9 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # so an accidental edit cannot silently widen the reviewed surface.  The
 # current seal closes the EGA I 7.1.1-7.1.3 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 33551 or
+if (len(scope_raw) != 33552 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "FCF8BC338727B9CD83DE24D46EACE80BB759852E6D46EE6BC2A71E76145484ED"):
+        "7E726D18938B7AC87AA99606FB6DFA0A8CF1557970BABED1F236D124F301C3CE"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -2127,9 +2127,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 91453 or
+if (len(decision_raw) != 92965 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "CBF3CFB6D0BB70D32A9ADFA098157AB5A81FBB71352EC257A150212AC0BF67B4"):
+    "BEFFC4103E09AD17FF0593A2BF85F3F988ECB0FA29BB1C80B8C91987B6BE5F3E"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5423,9 +5423,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 576224 or
+    if (len(smap_raw) != 583362 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "DBCC5C8CDCC921E82880F76EF4085948D19FCC255244FC45E0E2055D0B1C8C80"):
+        "8B2858C4D54D133E65A044E30945584EBD8019A6FD290645D4E06021958C8832"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6801,9 +6801,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 248082 or
+    if (len(residual_raw) != 251656 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "136745C831566E54D01D69A340E35A1700D457C2C2E3A8B0258F474609718B67"):
+        "DECB1A797FBBBDDDDBEC16E5BFDA89D9F3CB28C47743921399553C1CB3880A0A"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8085,9 +8085,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 139912 or
+    if (len(agent_raw) != 140966 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "0AF94CE78B386D684ABCBDBB6D277439A571CFCC20ED677C26E38C032A284D80"):
+        "2FE32D7B673F9CC7B7D2627585704327BB5D52563F3355DAF9BDFB35DDA10FA7"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -8821,7 +8821,10 @@ def i713_semantic_contract_errors(checkpoint, scope_state, tables,
     """Close the three dense-open definitions without altering source authority."""
     problems = []
     expected_units = ["ega:I.7.1.1", "ega:I.7.1.2", "ega:I.7.1.3"]
-    if (checkpoint.get("schema") != "ega-i-7.1.1-7.1.3-semantic-checkpoint/v1"
+    corrected = checkpoint.get("schema") == "ega-i-7.1.1-7.1.3-semantic-checkpoint/v2"
+    if (checkpoint.get("schema") not in {
+                "ega-i-7.1.1-7.1.3-semantic-checkpoint/v1",
+                "ega-i-7.1.1-7.1.3-semantic-checkpoint/v2"}
             or checkpoint.get("source_units") != expected_units
             or checkpoint.get("next_semantic_cursor") != "ega:I.7.1.4"
             or checkpoint.get("stacks_upstream") != PINNED_STACKS_COMMIT):
@@ -8843,7 +8846,7 @@ def i713_semantic_contract_errors(checkpoint, scope_state, tables,
             or proposed.get("printed_authority_comparison") != "VERIFIED"
             or proposed.get("established_printed_error") is not True
             or proposed.get("authority_mutation") is not False
-            or proposed.get("french_line") != 36
+            or proposed.get("french_line") != (40 if corrected else 36)
             or proposed.get("english_discovery_line") != 22):
         problems.append("EGA I 7.1.2 original-printing evidence or correction boundary changed")
     for unit in expected_units:
@@ -8854,6 +8857,11 @@ def i713_semantic_contract_errors(checkpoint, scope_state, tables,
         if scope_state.get(key) != checkpoint[key]:
             problems.append("EGA I 7.1.1-7.1.3 current snapshot changed: " + key)
     unit_ids = set(expected_units)
+    if corrected:
+        for unit, boundaries in zip(expected_units, [(7, 16), (18, 57), (59, 70)]):
+            source_slice = checkpoint["french_authority"]["source_scopes"][unit]
+            if (source_slice.get("lf_line_start"), source_slice.get("lf_line_end")) != boundaries:
+                problems.append("EGA I 7.1 corrected raw environment boundary changed")
     binding = checkpoint.get("french_authority", {}).get("manifest_file_binding", {})
     if binding.get("status") != "VERIFIED":
         problems.append("EGA I 7.1.1-7.1.3 French manifest-file binding is unverified")
@@ -8922,7 +8930,17 @@ if (len(i713_checkpoint_raw) != 40646 or
     ERRORS.append("EGA I 7.1.1-7.1.3 checkpoint identity mismatch")
 i713_checkpoint = json.loads(i713_checkpoint_raw.decode("utf-8"))
 ERRORS.extend(i713_semantic_contract_errors(
-    i713_checkpoint, scope, i665_tables, units_by_id, git_blob, pinned_tag_map))
+    i713_checkpoint, {**scope,
+        "statement_review_snapshot": i713_checkpoint["statement_review_snapshot"],
+        "residual_snapshot": i713_checkpoint["residual_snapshot"],
+        "reviewed_source_slices": {**scope["reviewed_source_slices"],
+            **i713_checkpoint["french_authority"]["source_scopes"]}},
+    {manifest["path"]: {
+        "ega/dec.csv": decision_rows, "ega/smap.csv": all_statement_edges,
+        "ega/resid.csv": all_residuals, "ega/agent.csv": agent_rows,
+    }[manifest["path"]][:manifest["final_rows"]]
+        for manifest in i713_checkpoint["ledgers"]},
+    units_by_id, git_blob, pinned_tag_map))
 for manifest in i713_checkpoint["ledgers"]:
     raw = (ROOT.parent / manifest["path"]).read_bytes()
     require_strict_lf(raw, manifest["path"])
@@ -8933,14 +8951,37 @@ for manifest in i713_checkpoint["ledgers"]:
                       manifest["prefix_rows"] + 1, manifest["final_rows"],
                       manifest["append_bytes"], manifest["append_sha256"],
                       manifest["path"] + " EGA I 7.1.1-7.1.3")
-    if (len(raw) != manifest["bytes"] or
-            hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]):
-        ERRORS.append("EGA I 7.1.1-7.1.3 final ledger changed")
+    historical_raw = b"".join(raw.splitlines(keepends=True)[:manifest["final_rows"] + 1])
+    if (len(historical_raw) != manifest["bytes"] or
+            hashlib.sha256(historical_raw).hexdigest().upper() != manifest["sha256"]):
+        ERRORS.append("EGA I 7.1.1-7.1.3 adverse historical ledger changed")
 for item in i713_checkpoint["preserved_inputs"] + [i713_checkpoint["historical_checkpoint"]]:
     raw = (ROOT.parent / item["path"]).read_bytes()
     if (len(raw) != item["bytes"] or
             hashlib.sha256(raw).hexdigest().upper() != item["sha256"]):
         ERRORS.append("EGA I 7.1.1-7.1.3 protected input changed: " + item["path"])
+
+i713_corrected_raw = (ROOT.parent / "validation" /
+    "ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json").read_bytes()
+if (len(i713_corrected_raw) != 46840 or
+        hashlib.sha256(i713_corrected_raw).hexdigest().upper() != "95ACE3E7E89842164AAAD38FE623FCEFB6EC9CC3AFB45B38FA2560C95DEA378F"):
+    ERRORS.append("EGA I 7.1 corrected checkpoint identity mismatch")
+i713_corrected = json.loads(i713_corrected_raw.decode("utf-8"))
+ERRORS.extend(i713_semantic_contract_errors(
+    i713_corrected, scope, i665_tables, units_by_id, git_blob, pinned_tag_map))
+for manifest in i713_corrected["ledgers"]:
+    raw = (ROOT.parent / manifest["path"]).read_bytes()
+    require_strict_lf(raw, manifest["path"])
+    require_lf_prefix(raw, manifest["prefix_rows"] + 1,
+        manifest["prefix_bytes"], manifest["prefix_sha256"],
+        manifest["path"] + " adverse I7.1 v1 prefix")
+    require_raw_block(raw.splitlines(keepends=True),
+        manifest["prefix_rows"] + 1, manifest["final_rows"],
+        manifest["append_bytes"], manifest["append_sha256"],
+        manifest["path"] + " raw source-binding correction")
+    if (len(raw) != manifest["bytes"] or
+            hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]):
+        ERRORS.append("EGA I 7.1 corrected ledger changed")
 
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",

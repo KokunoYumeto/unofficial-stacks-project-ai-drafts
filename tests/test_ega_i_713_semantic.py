@@ -1,8 +1,9 @@
-"""Adverse contracts for the bounded EGA I 7.1.1-7.1.3 comparison."""
+"""Adverse contracts for the immutable EGA I 7.1.1-7.1.3 v1 checkpoint."""
 import ast
 import copy
 import csv
 import hashlib
+import io
 import json
 from pathlib import Path
 import subprocess
@@ -25,10 +26,17 @@ class Semantic713Tests(unittest.TestCase):
         cls.verify = staticmethod(env["i713_semantic_contract_errors"])
         cls.frozen = json.loads(CHECKPOINT.read_text(encoding="utf-8"))
         cls.frozen_scope = json.loads((ROOT / "ega/scope.json").read_text(encoding="utf-8"))
+        # Replay v1 metadata without replacing its historical French ranges.
+        for key in ("statement_review_snapshot", "residual_snapshot"):
+            cls.frozen_scope[key] = copy.deepcopy(cls.frozen[key])
+        cls.frozen_scope["reviewed_source_slices"].update(
+            copy.deepcopy(cls.frozen["french_authority"]["source_scopes"]))
         cls.frozen_tables = {}
         for ledger in cls.frozen["ledgers"]:
-            with (ROOT / ledger["path"]).open(encoding="utf-8", newline="") as f:
-                cls.frozen_tables[ledger["path"]] = list(csv.DictReader(f))
+            raw = (ROOT / ledger["path"]).read_bytes()
+            historical = b"".join(raw.splitlines(keepends=True)[:ledger["final_rows"] + 1])
+            cls.frozen_tables[ledger["path"]] = list(csv.DictReader(
+                io.StringIO(historical.decode("utf-8"), newline="")))
         with (ROOT / "ega/units.csv").open(encoding="utf-8", newline="") as f:
             cls.frozen_units = {r["unit_id"]: r for r in csv.DictReader(f)}
         targets = cls.frozen["pinned_targets"] + cls.frozen["negative_comparison_targets"]
@@ -50,20 +58,21 @@ class Semantic713Tests(unittest.TestCase):
         return self.verify(self.receipt, self.scope, self.tables, self.units,
                            loader or (lambda commit, path: self.blobs[path]), self.tags)
 
-    def test_current_contract(self):
+    def test_historical_v1_contract(self):
         self.assertEqual(self.errors(), [])
 
-    def test_exact_base_prefixes_append_blocks_and_postimages(self):
+    def test_exact_base_prefixes_append_blocks_and_historical_postimages(self):
         for entry in self.receipt["ledgers"]:
             with self.subTest(path=entry["path"]):
                 raw = (ROOT / entry["path"]).read_bytes()
                 base = subprocess.check_output(["git", "show",
                     self.receipt["starting_content_commit"] + ":" + entry["path"]], cwd=ROOT)
                 self.assertTrue(raw.startswith(base))
+                historical = b"".join(raw.splitlines(keepends=True)[:entry["final_rows"] + 1])
                 for data, count, digest in (
                         (base, entry["prefix_bytes"], entry["prefix_sha256"]),
-                        (raw[len(base):], entry["append_bytes"], entry["append_sha256"]),
-                        (raw, entry["bytes"], entry["sha256"])):
+                        (historical[len(base):], entry["append_bytes"], entry["append_sha256"]),
+                        (historical, entry["bytes"], entry["sha256"])):
                     self.assertEqual((len(data), hashlib.sha256(data).hexdigest().upper()),
                                      (count, digest))
 
