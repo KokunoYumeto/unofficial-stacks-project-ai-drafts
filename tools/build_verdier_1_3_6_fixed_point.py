@@ -69,6 +69,134 @@ DERIVED_PATH = "derived.tex"
 DRIVER_PATH = "tools/build_verdier_1_3_6_fixed_point.py"
 CORE_PATH = "tools/build_fixed_point.py"
 RELEASE_VALIDATOR_PATH = "tools/validate_verdier_1_3_6_release.py"
+FINALIZER_PATH = "tools/finalize_verdier_1_3_6_release.py"
+COMPOSITION_RECEIPT_PATH = "validation/composition-current.json"
+EGA_SOURCE_CHECKPOINT_PATH = core.EGA_SOURCE_CHECKPOINT_PATH
+
+# The EGA source checkpoint was generated and independently checked on its own
+# source branch before this direct Verdier lineage was assembled.  The direct
+# build is a descendant of that sealed receipt, not a second EGA checkpoint
+# generation.  Keep the exact prior identity here so a build cannot silently
+# consume a substituted or regenerated checkpoint.
+EGA_SOURCE_CHECKPOINT_CONTENT_COMMIT = (
+    "571648f5c43c36617629c8ae57b28606d966625f"
+)
+EGA_SOURCE_CHECKPOINT_CONTENT_TREE = (
+    "12faacf779ad018c4c2729167d1afa1ef6b9d0e5"
+)
+EGA_SOURCE_CHECKPOINT_RECEIPT_COMMIT = (
+    "91cc89df5804b8c1949d8267602fc076649ee49b"
+)
+EGA_SOURCE_CHECKPOINT_RECEIPT_TREE = (
+    "060538ea3323b366e8f445fd79725a63c4241d2f"
+)
+EGA_SOURCE_CHECKPOINT_BYTES = 44_426
+EGA_SOURCE_CHECKPOINT_SHA256 = (
+    "95B8D2B14D7C1CB7E9F826F6EBF0A6723DBDB05DC5D06F06F186E21465CC3352"
+)
+EGA_SOURCE_CHECKPOINT_BLOB = "715024558f8480811dc3d27521d65cdaa893ca45"
+
+# The integration branch is expected to be merged once with the exact current
+# main parent below.  A merge against any other commit (or with an unexpected
+# tree) is rejected; this is a binding, not a general-purpose merge escape
+# hatch.  The parent is the current-main tip at the time this Verdier lane was
+# scoped and its tree is retained as an immutable identity witness.
+CURRENT_MAIN_PARENT_COMMIT = "4eb2eaec67479813553a6c98b32a232d4f7936dd"
+CURRENT_MAIN_PARENT_TREE = "3744a047ee7b6391547b36a546c5decf1dd1b4d0"
+CURRENT_MAIN_MERGE_BASE = PUBLIC_R39_COMMIT
+CURRENT_MAIN_ALLOWED_PATHS = frozenset(
+    {
+        "illusie_volume_I/.gitignore",
+        "illusie_volume_I/README.md",
+        "illusie_volume_I/build-receipt-i1-2.json",
+        "illusie_volume_I/build-receipt.json",
+        "illusie_volume_I/build.py",
+        "illusie_volume_I/check.json",
+        "illusie_volume_I/map.json",
+        "illusie_volume_I/qa-i1-2.json",
+        "illusie_volume_I/qa.json",
+        "illusie_volume_I/relative-homotopy.tex",
+        "illusie_volume_I/source-lock.json",
+        "illusie_volume_I/source-notes.md",
+        "illusie_volume_I/test_composition.py",
+        "illusie_volume_I/verify.py",
+        "simplicial.tex",
+        "tools/validate_unified_repository.py",
+    }
+)
+# The current-main integration changes one root build input that is part of
+# the 30-stem profile.  Its exact parent-side blob is bound below; no other
+# R39/EGA build input receives an override.
+CURRENT_MAIN_BUILD_INPUT_PATHS = ("simplicial.tex",)
+CURRENT_MAIN_R39_BUILD_INPUT_BLOBS = {
+    "simplicial.tex": "bcec4895b138415bea4febc348ad4e3e9f519b44",
+}
+CURRENT_MAIN_BUILD_INPUT_BLOBS = {
+    "simplicial.tex": "0fd4cb51cb486d90b3301a1f85caebbe72dffc0d",
+}
+
+# Exact non-candidate paths that may arrive from the known Verdier side of the
+# integration merge.  Candidate paths are resolved against the committed
+# manifest-closed inventory at the bound composition commit; every other path
+# is rejected.  This intentionally does not include source chapters, ledgers,
+# PDFs, or arbitrary validation files.
+VERDIER_MERGE_EXACT_PATHS = frozenset(
+    {
+        OVERLAYS_PATH,
+        LEASES_PATH,
+        DERIVED_PATH,
+        DRIVER_PATH,
+        CORE_PATH,
+        RELEASE_VALIDATOR_PATH,
+        FINALIZER_PATH,
+        COMPOSITION_RECEIPT_PATH,
+        "tools/validate_unified_repository.py",
+        "tools/verify_github_commit_readback.py",
+        "validation/stacks-verdier-a04446e-1-3-6-r1-manifest-closure-correction-2026-09-06.json",
+    }
+)
+
+# d18363d9 records the v4 composition receipt after the source composition.
+# Any later descendant used for this build may contain only that receipt and
+# the explicitly scoped release-tool repairs.  Source, candidate, registry,
+# and generated-artifact paths are intentionally absent from this set.
+POSTCOMPOSITION_ALLOWED_PATHS = frozenset(
+    {
+        COMPOSITION_RECEIPT_PATH,
+        DRIVER_PATH,
+        CORE_PATH,
+        RELEASE_VALIDATOR_PATH,
+        FINALIZER_PATH,
+        "tools/validate_unified_repository.py",
+        "tools/verify_github_commit_readback.py",
+    }
+)
+
+EGA_SOURCE_CHECKPOINT_CHECKS = (
+    "schema_status",
+    "base_content_topology",
+    "exact_changed_path_diff",
+    "tooling_identities_bound",
+    "actual_base_and_content_commits_and_trees_exact",
+    "content_is_single_parent_child_of_actual_base",
+    "historical_implementation_base_is_ancestor_and_all_eight_preimages_rebind_exactly",
+    "exact_ten_path_base_to_content_delta",
+    "immutable_implementation_and_independent_review_receipts_bound",
+    "unique_01K5_omitted_proof_replaced_230_to_1195_with_1000_byte_proof",
+    "01K5_statement_label_and_official_tag_unchanged",
+    "schemes_full_preimage_postimage_and_outside_block_bytes_exact",
+    "all_other_119_root_tex_blobs_unchanged",
+    "tags_registry_and_composition_receipt_unchanged",
+    "four_ledger_prefixes_and_reserved_append_ranges_exact",
+    "live_counts_recomputed_from_committed_ledgers",
+    "prior_scope_slices_preserved_and_6_6_4_slice_exact",
+    "continuation_is_EGA_I_6_6_5",
+    "source_authority_hashes_bound",
+    "canonical_authority_source_receipt_and_slice_cross_bound_exactly",
+    "README_6_6_4_insertion_unique_anchored_and_outside_branch_unchanged",
+    "four_ledger_headers_rows_IDs_cross_references_and_counts_exact",
+    "no_post_content_source_drift_at_generation",
+)
 
 BASE_BLOB = "f62f8645b22d39a3dd5998256f3a296bcb677d37"
 BASE_BYTES = 452_054
@@ -355,10 +483,700 @@ def validate_direct_chain(
         source, composition_commit, "Verdier composition", precomposition_commit
     )
     core.require_ancestor(source, composition_commit, "composition-to-build-head")
-    core.require_linear_suffix(
-        source, composition_commit, "HEAD", "post-composition build-tool suffix"
-    )
     return chain, suffix
+
+
+def validate_postcomposition_suffix(
+    source: Path, composition_commit: str
+) -> list[dict[str, object]]:
+    """Validate the bounded descendant between source composition and build.
+
+    The v4 composition receipt is intentionally recorded in a child commit,
+    and release-tool repairs may follow it.  Keep that normal descendant
+    shape, but reject every path/status outside the explicit release-tool
+    allowlist.  Candidate paths are accepted only when already present in the
+    manifest-closed candidate subtree at the bound composition commit.  In
+    particular, no source, registry, or generated artifact can be smuggled into
+    the build head.
+    """
+    head = core.git(source, "rev-parse", "HEAD")
+    core.require_ancestor(
+        source, composition_commit, "composition-to-build-head", head
+    )
+
+    def check_changes(
+        changes: dict[str, tuple[str, str, str, str, str]],
+        label: str,
+        path_allowed: object,
+    ) -> dict[str, str]:
+        require(bool(changes), f"empty {label}")
+        disallowed = sorted(
+            path for path in changes if not bool(path_allowed(path))
+        )
+        require(
+            not disallowed,
+            f"{label} changes non-allowlisted paths: " + ", ".join(disallowed),
+        )
+        statuses = {path: row[4] for path, row in changes.items()}
+        invalid_statuses = sorted(
+            path for path, status in statuses.items() if status not in {"A", "M"}
+        )
+        require(
+            not invalid_statuses,
+            f"{label} contains deletion/type change: " + ", ".join(invalid_statuses),
+        )
+        return statuses
+
+    candidate_paths = frozenset(
+        core.git(
+            source,
+            "ls-tree",
+            "-r",
+            "--name-only",
+            composition_commit,
+            "--",
+            CANDIDATE_PATH,
+        ).splitlines()
+    )
+    require(bool(candidate_paths), "bound Verdier candidate subtree is empty")
+
+    def verdier_path_allowed(path: str) -> bool:
+        # Resolve the namespace to the exact committed candidate inventory;
+        # a prefix-only rule would let an arbitrary new candidate artifact
+        # pass the merge-path gate before the later manifest check runs.
+        return path in VERDIER_MERGE_EXACT_PATHS or path in candidate_paths
+
+    # Walk the Verdier ancestry itself rather than asking ``rev-list`` for a
+    # linear suffix.  The planned integration commit is current-main-first:
+    # parent 1 is the one exact current-main tip above and parent 2 is the
+    # Verdier line.  Following parent 2 keeps all current-main history outside
+    # the suffix while still binding its immutable parent/tree.
+    reverse_rows: list[dict[str, object]] = []
+    cursor = head
+    visited: set[str] = set()
+    merge_row: dict[str, object] | None = None
+    while cursor != composition_commit:
+        require(cursor not in visited, "post-composition ancestry contains a cycle")
+        visited.add(cursor)
+        require(len(visited) <= 512, "post-composition ancestry is unreasonably long")
+        parents = core.commit_parents(source, cursor)
+
+        if len(parents) == 1:
+            expected_parent = parents[0]
+            changes = core.committed_path_changes(source, expected_parent, cursor)
+            statuses = check_changes(
+                changes,
+                f"post-composition suffix commit {cursor}",
+                lambda path: path in POSTCOMPOSITION_ALLOWED_PATHS,
+            )
+            reverse_rows.append(
+                {
+                    "commit": cursor,
+                    "parent": expected_parent,
+                    "parents": list(parents),
+                    "topology": "single_parent",
+                    "tree": commit_tree(source, cursor),
+                    "changed_paths": sorted(changes),
+                    "statuses": statuses,
+                }
+            )
+            cursor = expected_parent
+            continue
+
+        require(
+            len(parents) == 2,
+            "post-composition suffix contains an unsupported merge topology: "
+            + cursor,
+        )
+        require(
+            merge_row is None,
+            "post-composition suffix contains more than one merge commit",
+        )
+        require(
+            parents[0] == CURRENT_MAIN_PARENT_COMMIT,
+            "post-composition merge parent 1 is not the exact current-main tip",
+        )
+        verdier_parent = parents[1]
+        core.require_commit_object(
+            source, CURRENT_MAIN_PARENT_COMMIT, "known current-main merge parent"
+        )
+        require(
+            commit_tree(source, CURRENT_MAIN_PARENT_COMMIT)
+            == CURRENT_MAIN_PARENT_TREE,
+            "known current-main merge parent tree identity drifted",
+        )
+        core.require_ancestor(
+            source,
+            CURRENT_MAIN_MERGE_BASE,
+            "current-main merge-base",
+            CURRENT_MAIN_PARENT_COMMIT,
+        )
+        require(
+            core.git(
+                source, "merge-base", CURRENT_MAIN_PARENT_COMMIT, verdier_parent
+            )
+            == CURRENT_MAIN_MERGE_BASE,
+            "post-composition merge does not have the bound R39 merge base",
+        )
+
+        # Compare the merge tree to both parents.  The second-parent projection
+        # may include the exact current-main delta; the first-parent projection
+        # must contain only the direct Verdier namespace/receipt/tool paths.
+        # Checking both directions prevents an arbitrary path from being hidden
+        # by a conflict resolution or parent ordering.
+        verdier_changes = core.committed_path_changes(source, verdier_parent, cursor)
+        verdier_statuses = check_changes(
+            verdier_changes,
+            f"post-composition merge {cursor} against Verdier parent",
+            lambda path: verdier_path_allowed(path)
+            or path in CURRENT_MAIN_ALLOWED_PATHS,
+        )
+        current_main_changes = core.committed_path_changes(
+            source, CURRENT_MAIN_PARENT_COMMIT, cursor
+        )
+        current_main_statuses = check_changes(
+            current_main_changes,
+            f"post-composition merge {cursor} against current-main parent",
+            lambda path: verdier_path_allowed(path),
+        )
+        merge_row = {
+            "commit": cursor,
+            "parent": verdier_parent,
+            "parents": list(parents),
+            "parent_order": ["current_main", "verdier"],
+            "topology": "known_current_main_merge",
+            "tree": commit_tree(source, cursor),
+            "changed_paths": sorted(verdier_changes),
+            "statuses": verdier_statuses,
+            "current_main_changed_paths": sorted(current_main_changes),
+            "current_main_statuses": current_main_statuses,
+            "current_main_parent": {
+                "commit": CURRENT_MAIN_PARENT_COMMIT,
+                "tree": CURRENT_MAIN_PARENT_TREE,
+            },
+        }
+        reverse_rows.append(merge_row)
+        cursor = verdier_parent
+
+    require(
+        cursor == composition_commit,
+        "post-composition Verdier ancestry does not end at the composition commit",
+    )
+    suffix = list(reversed(reverse_rows))
+    return suffix
+
+
+def summarize_current_main_parent(
+    suffix: list[dict[str, object]],
+) -> dict[str, object]:
+    """Return the receipt binding for the optional exact integration parent."""
+    merges = [
+        row
+        for row in suffix
+        if row.get("topology") == "known_current_main_merge"
+    ]
+    require(len(merges) <= 1, "current-main parent appears in multiple merge rows")
+    for row in merges:
+        binding = row.get("current_main_parent")
+        require(
+            binding
+            == {"commit": CURRENT_MAIN_PARENT_COMMIT, "tree": CURRENT_MAIN_PARENT_TREE},
+            "post-composition current-main parent binding is not exact",
+        )
+        require(
+            row.get("parent_order") == ["current_main", "verdier"]
+            and row.get("parents", [None])[0] == CURRENT_MAIN_PARENT_COMMIT,
+            "post-composition merge parent order is not current-main-first",
+        )
+    return {
+        "optional": True,
+        "observed": bool(merges),
+        "commit": CURRENT_MAIN_PARENT_COMMIT,
+        "tree": CURRENT_MAIN_PARENT_TREE,
+        "merge_commits": [row["commit"] for row in merges],
+    }
+
+
+def validate_current_v4_composition_receipt(
+    source: Path, composition_commit: str
+) -> dict[str, object]:
+    """Bind the current v4 composition receipt without trusting its prose."""
+    identity = commit_file_identity(source, "HEAD", COMPOSITION_RECEIPT_PATH)
+    receipt = strict_json_bytes(
+        commit_bytes(source, "HEAD", COMPOSITION_RECEIPT_PATH),
+        "current v4 composition receipt",
+    )
+    require(
+        receipt.get("schema") == core.COMPOSITION_SCHEMA_V4
+        and receipt.get("status") == "PASS",
+        "current composition receipt is not a passing v4 receipt",
+    )
+    require(
+        receipt.get("required_build_stems") == list(REQUIRED_STEMS),
+        "current v4 composition receipt does not bind the exact 30-stem profile",
+    )
+    composition = receipt.get("composition")
+    require(isinstance(composition, dict), "current v4 composition state is malformed")
+    assert isinstance(composition, dict)
+    require(
+        composition.get("source_commit") == composition_commit
+        and composition.get("new_operations") == 1
+        and composition.get("changed_paths") == [DERIVED_PATH],
+        "current v4 composition receipt source binding is invalid",
+    )
+    affected = composition.get("affected_sources")
+    require(
+        isinstance(affected, dict) and set(affected) == {DERIVED_PATH},
+        "current v4 composition receipt affected-source scope is invalid",
+    )
+    row = affected[DERIVED_PATH]
+    require(
+        isinstance(row, dict)
+        and row.get("composed_bytes") == POSTIMAGE_BYTES
+        and str(row.get("composed_sha256", "")).upper() == POSTIMAGE_SHA256,
+        "current v4 composition receipt postimage binding is invalid",
+    )
+    return {
+        "path": COMPOSITION_RECEIPT_PATH,
+        "bytes": identity["bytes"],
+        "sha256": identity["sha256"],
+        "git_blob": identity["git_blob"],
+        "schema": receipt["schema"],
+        "status": receipt["status"],
+        "composition_source_commit": composition_commit,
+    }
+
+
+def validate_source_checkpoint(
+    source: Path,
+    requested: Path,
+    current_main_parent: dict[str, object] | None = None,
+) -> dict[str, object]:
+    """Bind the sealed EGA checkpoint while building its later descendant.
+
+    ``core.load_source_checkpoint`` deliberately targets the original EGA
+    source worktree, where the receipt is the single child of the content
+    commit.  This Verdier branch is later than that child (and intentionally
+    has a different v4 composition receipt), so invoking that loader against
+    the live branch would conflate two topologies.  Recheck the immutable
+    historical receipt and its producer identities here, then bind the exact
+    receipt child as an ancestor of the current direct Verdier head.  When the
+    planned current-main-first integration merge is present, retain the EGA
+    protected-input contract and record the one exact ``simplicial.tex``
+    parent-side override rather than weakening protection globally.
+    """
+    core.require_canonical_source_checkpoint_argument(source, requested)
+    candidate = requested if requested.is_absolute() else source / requested
+    candidate = candidate.resolve()
+    try:
+        logical = candidate.relative_to(source).as_posix()
+    except ValueError as exc:
+        raise RuntimeError("source checkpoint must be inside the source worktree") from exc
+    require(logical == EGA_SOURCE_CHECKPOINT_PATH, "source checkpoint path is not canonical")
+    original = requested if requested.is_absolute() else source / requested
+    require(not original.is_symlink(), "source checkpoint must be a regular file")
+    require(candidate.is_file(), f"source checkpoint is missing: {logical}")
+    require(
+        core.git_optional(source, "ls-files", "--error-unmatch", "--", logical)
+        == logical,
+        f"source checkpoint is not tracked: {logical}",
+    )
+    core.require_clean_path(source, logical)
+
+    raw = candidate.read_bytes()
+    identity = commit_file_identity(source, "HEAD", logical)
+    require(
+        identity["bytes"] == EGA_SOURCE_CHECKPOINT_BYTES
+        and identity["sha256"] == EGA_SOURCE_CHECKPOINT_SHA256
+        and identity["git_blob"] == EGA_SOURCE_CHECKPOINT_BLOB,
+        "tracked EGA source checkpoint identity is not the sealed receipt",
+    )
+    require(
+        len(raw) == identity["bytes"]
+        and sha256_bytes(raw) == identity["sha256"],
+        "working EGA source checkpoint bytes differ from the sealed receipt",
+    )
+    checkpoint = strict_json_bytes(raw, "EGA source checkpoint")
+    require(
+        set(checkpoint) == set(core.EGA_CHECKPOINT_KEYS),
+        "EGA source checkpoint does not match the exact producer schema",
+    )
+    require(
+        checkpoint.get("schema") == core.EGA_SOURCE_CHECKPOINT_SCHEMA
+        and checkpoint.get("status") == core.EGA_SOURCE_CHECKPOINT_STATUS,
+        "EGA source checkpoint schema or status is invalid",
+    )
+    require(
+        checkpoint.get("checks") == list(EGA_SOURCE_CHECKPOINT_CHECKS),
+        "EGA source checkpoint producer check inventory is not exact",
+    )
+    require(
+        checkpoint.get("validation_scope")
+        == {
+            "source_and_review_checkpoint": "PASS",
+            "tex_pdf_build": "NOT_CLAIMED_HERE",
+            "visual_qa": "NOT_CLAIMED_HERE",
+            "publication": "NOT_CLAIMED_HERE",
+            "anonymous_public_readback": "NOT_CLAIMED_HERE",
+        },
+        "EGA source checkpoint validation scope is untruthful",
+    )
+
+    base = checkpoint.get("base")
+    content = checkpoint.get("content")
+    require(
+        isinstance(base, dict)
+        and set(base) == {"commit", "tree"}
+        and isinstance(content, dict)
+        and set(content) == {"commit", "tree", "parent"},
+        "EGA source checkpoint base/content binding is malformed",
+    )
+    assert isinstance(base, dict)
+    assert isinstance(content, dict)
+    base_commit = core.require_commit_object(source, base.get("commit"), "EGA checkpoint base")
+    base_tree = core.require_tree_identity(
+        source, base_commit, base.get("tree"), "EGA checkpoint base"
+    )
+    content_commit = core.require_commit_object(
+        source, content.get("commit"), "EGA checkpoint content"
+    )
+    content_tree = core.require_tree_identity(
+        source, content_commit, content.get("tree"), "EGA checkpoint content"
+    )
+    require(
+        base_commit == "57efc9c91e7e52cdb70deb56c0e92f4c93037ac9"
+        and base_tree == "f77e75e1e89508b648611890c90e2238a5cdf25e"
+        and content_commit == EGA_SOURCE_CHECKPOINT_CONTENT_COMMIT
+        and content_tree == EGA_SOURCE_CHECKPOINT_CONTENT_TREE
+        and content.get("parent") == base_commit,
+        "EGA source checkpoint historical base/content identity drifted",
+    )
+    core.require_single_parent(source, content_commit, "EGA checkpoint content", base_commit)
+
+    generated = checkpoint.get("generated_from_content_commit_utc")
+    expected_generated = core.git(source, "show", "-s", "--format=%cI", content_commit)
+    require(
+        generated == expected_generated,
+        "EGA source checkpoint generation timestamp is not content-bound",
+    )
+
+    source_unit = checkpoint.get("source_unit")
+    require(
+        source_unit
+        == {
+            "name": "EGA I 6.6.4",
+            "next_source_unit": "EGA I 6.6.5",
+            "label": "lemma-quasi-compact-preserved-base-change",
+            "official_tag": "01K5",
+            "dependencies": ["01K4", "01JS"],
+        },
+        "EGA source checkpoint source-unit identity is not exact",
+    )
+    root_change = checkpoint.get("root_change")
+    require(
+        isinstance(root_change, dict)
+        and root_change.get("path") == "schemes.tex"
+        and root_change.get("label") == source_unit["label"]
+        and root_change.get("official_tag") == source_unit["official_tag"],
+        "EGA source checkpoint root-change binding is invalid",
+    )
+
+    # The source checkpoint JSON deliberately does not self-embed a receipt
+    # identity; its repository-state contract only describes the required
+    # relation.  Bind that relation to the known checked-in receipt child and
+    # verify the child directly from Git objects.
+    receipt_commit = core.require_commit_object(
+        source, EGA_SOURCE_CHECKPOINT_RECEIPT_COMMIT, "EGA checkpoint receipt child"
+    )
+    receipt_tree = core.require_tree_identity(
+        source,
+        receipt_commit,
+        EGA_SOURCE_CHECKPOINT_RECEIPT_TREE,
+        "EGA checkpoint receipt child",
+    )
+    require(
+        receipt_commit == EGA_SOURCE_CHECKPOINT_RECEIPT_COMMIT
+        and receipt_tree == EGA_SOURCE_CHECKPOINT_RECEIPT_TREE,
+        "EGA source checkpoint receipt-child identity drifted",
+    )
+    core.require_single_parent(source, receipt_commit, "EGA checkpoint receipt child", content_commit)
+    receipt_changes = core.committed_path_changes(source, content_commit, receipt_commit)
+    require(
+        list(receipt_changes) == [logical]
+        and receipt_changes[logical][4] == "A",
+        "EGA source checkpoint receipt child is not the exact receipt-only addition",
+    )
+    current_head = core.git(source, "rev-parse", "HEAD")
+    core.require_ancestor(
+        source, receipt_commit, "historical EGA checkpoint receipt", current_head
+    )
+    receipt_at_anchor = commit_file_identity(source, receipt_commit, logical)
+    require(
+        receipt_at_anchor["bytes"] == identity["bytes"]
+        and receipt_at_anchor["sha256"] == identity["sha256"]
+        and receipt_at_anchor["git_blob"] == identity["git_blob"],
+        "current branch does not preserve the sealed EGA checkpoint bytes",
+    )
+
+    repository_contract = checkpoint.get("repository_state_contract")
+    expected_allowed = [{"path": logical, "change": "added"}]
+    require(
+        repository_contract
+        == {
+            "content_commit": content_commit,
+            "content_tree": content_tree,
+            "required_head_relation": core.EGA_HEAD_RELATION,
+            "allowed_changes": expected_allowed,
+            "validated": True,
+        },
+        "EGA source checkpoint repository-state contract drifted",
+    )
+    require(
+        checkpoint.get("post_content_metadata_contract")
+        == {"allowed_changes": expected_allowed, "source_drift": False},
+        "EGA source checkpoint metadata contract drifted",
+    )
+
+    # The declared producer and its tests must still identify the exact blobs
+    # at the historical base/content commits.  We intentionally do not demand
+    # that later Verdier tool repairs retain those old bytes at current HEAD.
+    tooling = checkpoint.get("tooling")
+    require(
+        isinstance(tooling, dict)
+        and set(tooling) == {"writer", "tests"}
+        and isinstance(tooling.get("writer"), dict)
+        and isinstance(tooling.get("tests"), list)
+        and len(tooling["tests"]) == 1,
+        "EGA source checkpoint tooling inventory is malformed",
+    )
+    assert isinstance(tooling, dict)
+    declared_tools = [tooling["writer"], *tooling["tests"]]
+    for declared, expected_path in zip(
+        declared_tools,
+        (core.EGA_SOURCE_CHECKPOINT_WRITER, core.EGA_SOURCE_CHECKPOINT_WRITER_TEST),
+    ):
+        require(
+            isinstance(declared, dict)
+            and set(declared)
+            == {
+                "path", "bytes", "sha256", "git_blob", "committed_at_base",
+                "committed_at_content", "unchanged",
+            }
+            and declared.get("path") == expected_path
+            and declared.get("committed_at_base") is True
+            and declared.get("committed_at_content") is True
+            and declared.get("unchanged") is True,
+            f"EGA source checkpoint producer identity is malformed: {expected_path}",
+        )
+        base_identity = commit_file_identity(source, base_commit, expected_path)
+        content_identity = commit_file_identity(source, content_commit, expected_path)
+        require(
+            all(
+                declared.get(key) == base_identity[key]
+                for key in ("bytes", "sha256", "git_blob")
+            )
+            and content_identity == base_identity,
+            f"EGA source checkpoint producer bytes drifted: {expected_path}",
+        )
+
+    changed = checkpoint.get("changed_paths")
+    require(
+        isinstance(changed, list)
+        and [row.get("path") for row in changed if isinstance(row, dict)]
+        == sorted(core.EGA_CHANGED_PATH_ROLES),
+        "EGA source checkpoint changed-path inventory is not exact",
+    )
+    for row in changed:
+        require(isinstance(row, dict) and set(row) == {"path", "change", "base", "content"},
+                "EGA source checkpoint changed-path row is malformed")
+        assert isinstance(row, dict)
+        path = str(row["path"])
+        require(path in core.EGA_CHANGED_PATH_ROLES, f"unexpected EGA changed path: {path}")
+        actual = core.committed_file_identity(source, content_commit, path)
+        require(actual is not None, f"EGA changed path is absent at content: {path}")
+        require(row["content"] == {key: actual[key] for key in ("bytes", "sha256", "git_blob")},
+                f"EGA content identity mismatch: {path}")
+        if row["change"] == "modified":
+            before = core.committed_file_identity(source, base_commit, path)
+            require(before is not None and row["base"] == {
+                key: before[key] for key in ("bytes", "sha256", "git_blob")
+            }, f"EGA base identity mismatch: {path}")
+        else:
+            require(row["change"] == "added" and row["base"] is None,
+                    f"EGA changed-path class mismatch: {path}")
+
+    unchanged = checkpoint.get("unchanged_surfaces")
+    require(
+        isinstance(unchanged, dict)
+        and set(unchanged)
+        == {"other_root_tex", "tags_tree", "tags_file", "registry_tree", "composition_receipt"},
+        "EGA unchanged-surface inventory is malformed",
+    )
+    assert isinstance(unchanged, dict)
+    composition_record = unchanged["composition_receipt"]
+    require(
+        isinstance(composition_record, dict)
+        and composition_record.get("path") == COMPOSITION_RECEIPT_PATH
+        and composition_record.get("unchanged") is True,
+        "EGA checkpoint composition-reference binding is invalid",
+    )
+    assert isinstance(composition_record, dict)
+    for commit, field in ((base_commit, "base"), (content_commit, "content")):
+        comp_identity = commit_file_identity(source, commit, COMPOSITION_RECEIPT_PATH)
+        declared = composition_record.get(field)
+        require(
+            isinstance(declared, dict)
+            and declared == {key: comp_identity[key] for key in ("bytes", "sha256", "git_blob")},
+            f"EGA checkpoint composition-reference identity mismatch at {field}",
+        )
+    registry_record = unchanged["registry_tree"]
+    require(
+        isinstance(registry_record, dict)
+        and registry_record.get("path") == "ai-integrated/registry"
+        and registry_record.get("unchanged") is True,
+        "EGA checkpoint registry preservation binding is invalid",
+    )
+    assert isinstance(registry_record, dict)
+    for commit, field in ((base_commit, "base_git_tree"), (content_commit, "content_git_tree")):
+        tree = core.git(source, "rev-parse", f"{commit}:ai-integrated/registry")
+        require(registry_record.get(field) == tree, f"EGA checkpoint registry tree mismatch: {field}")
+    require(
+        registry_record.get("base_git_tree") == registry_record.get("content_git_tree"),
+        "EGA checkpoint registry changed across its content step",
+    )
+
+    current_main_inputs = validate_current_main_build_input_overrides(
+        source, current_main_parent
+    )
+    override_rows = current_main_inputs.get("paths")
+    require(isinstance(override_rows, list), "current-main input override inventory is malformed")
+    assert isinstance(override_rows, list)
+    applied_current_main_paths = {
+        str(row["path"])
+        for row in override_rows
+        if isinstance(row, dict)
+        and set(row)
+        == {"path", "from", "r39", "to", "direction", "exact", "applied"}
+        and row.get("direction") == "checkpoint_content_to_current_main"
+        and row.get("exact") is True
+        and row.get("applied") is True
+    }
+    # Keep a compact, deterministic inventory of every root input protected by
+    # the EGA checkpoint.  ``derived.tex`` is intentionally omitted because
+    # the bound Verdier composition is its explicit post-content change; the
+    # only other permitted deviation is the exact current-main simplicial
+    # override above.
+    protected_paths = tuple(
+        dict.fromkeys(
+            [
+                "preamble.tex",
+                "chapters.tex",
+                "my.bib",
+                *(f"{stem}.tex" for stem in REQUIRED_STEMS if stem != "derived"),
+                *(path for path in root_shared_inputs(source) if path != DERIVED_PATH),
+            ]
+        )
+    )
+    protected_lines: list[str] = []
+    for path in protected_paths:
+        historical = core.committed_file_identity(source, content_commit, path)
+        current = core.committed_file_identity(source, "HEAD", path)
+        require(
+            historical is not None and current is not None,
+            f"EGA protected build input is absent: {path}",
+        )
+        assert isinstance(historical, dict)
+        assert isinstance(current, dict)
+        if path in applied_current_main_paths:
+            expected = next(
+                row["to"]
+                for row in override_rows
+                if isinstance(row, dict)
+                and row.get("path") == path
+                and row.get("applied") is True
+            )
+            require(
+                isinstance(expected, dict)
+                and set(expected) == {"commit", "path", "bytes", "sha256", "git_blob"},
+                f"current-main override identity is malformed: {path}",
+            )
+            assert isinstance(expected, dict)
+            require(
+                current
+                == {key: expected[key] for key in ("path", "bytes", "sha256", "git_blob")},
+                f"current-main protected-input override is not exact: {path}",
+            )
+            source_role = "current_main_override"
+        else:
+            require(
+                current == historical,
+                f"EGA protected build input drifted after the checkpoint: {path}",
+            )
+            source_role = "ega_content"
+        core.require_clean_path(source, path)
+        working = core.working_file_identity(source, path)
+        require(
+            all(working[key] == current[key] for key in ("bytes", "sha256")),
+            f"working protected build input differs: {path}",
+        )
+        protected_lines.append(
+            "|".join(
+                (
+                    path,
+                    source_role,
+                    str(current["bytes"]),
+                    str(current["sha256"]),
+                    str(current["git_blob"]),
+                )
+            )
+        )
+
+    writer = tooling["writer"]
+    assert isinstance(writer, dict)
+    return {
+        "schema": checkpoint["schema"],
+        "status": checkpoint["status"],
+        "path": logical,
+        "bytes": identity["bytes"],
+        "sha256": identity["sha256"],
+        "git_blob": identity["git_blob"],
+        "historical_base": {"commit": base_commit, "tree": base_tree},
+        "historical_content": {
+            "commit": content_commit,
+            "tree": content_tree,
+            "parent": base_commit,
+        },
+        "historical_receipt_child": {
+            "commit": receipt_commit,
+            "tree": receipt_tree,
+            "changed_paths": [logical],
+        },
+        "producer": {
+            "path": writer["path"],
+            "bytes": writer["bytes"],
+            "sha256": writer["sha256"],
+            "git_blob": writer["git_blob"],
+        },
+        "descends_from_historical_receipt": True,
+        "current_head": current_head,
+        "protected_build_inputs": {
+            "count": len(protected_lines),
+            "tuple_set_sha256": sha256_bytes(
+                (("\n".join(sorted(protected_lines))) + "\n").encode("utf-8")
+            ),
+        },
+        "current_main_build_input_overrides": current_main_inputs,
+        "checks": [
+            "exact_tracked_checkpoint_bytes_and_git_identity",
+            "sealed_producer_schema_status_and_check_inventory",
+            "historical_base_content_receipt_topology",
+            "historical_producer_and_changed_path_identities",
+            "historical_composition_and_registry_preservation",
+            "known_current_main_input_override_bound_if_present",
+            "all_current_build_inputs_rebound_or_exactly_preserved",
+            "historical_receipt_is_ancestor_of_current_direct_head",
+        ],
+    }
 
 
 def validate_candidate(
@@ -589,8 +1407,72 @@ def validate_registries(
     }
 
 
+def validate_current_main_build_input_overrides(
+    source: Path,
+    current_main_parent: dict[str, object] | None,
+) -> dict[str, object]:
+    """Bind the narrow root-input delta carried by the known main parent."""
+    observed = bool(current_main_parent and current_main_parent.get("observed"))
+    expected_parent = {
+        "optional": True,
+        "observed": observed,
+        "commit": CURRENT_MAIN_PARENT_COMMIT,
+        "tree": CURRENT_MAIN_PARENT_TREE,
+    }
+    if current_main_parent is not None:
+        require(
+            all(current_main_parent.get(key) == value for key, value in expected_parent.items()),
+            "current-main build-input parent binding is not exact",
+        )
+    overrides: list[dict[str, object]] = []
+    for path in CURRENT_MAIN_BUILD_INPUT_PATHS:
+        r39 = commit_file_identity(source, PUBLIC_R39_COMMIT, path)
+        checkpoint_content = commit_file_identity(
+            source, EGA_SOURCE_CHECKPOINT_CONTENT_COMMIT, path
+        )
+        main = commit_file_identity(source, CURRENT_MAIN_PARENT_COMMIT, path)
+        require(
+            checkpoint_content == r39
+            and r39["git_blob"] == CURRENT_MAIN_R39_BUILD_INPUT_BLOBS[path]
+            and main["git_blob"] == CURRENT_MAIN_BUILD_INPUT_BLOBS[path]
+            and r39["git_blob"] != main["git_blob"],
+            f"known current-main build-input identity drifted: {path}",
+        )
+        if observed:
+            head = commit_file_identity(source, "HEAD", path)
+            require(
+                head == main,
+                f"merged HEAD does not preserve the known current-main input: {path}",
+            )
+        overrides.append(
+            {
+                "path": path,
+                "from": {
+                    "commit": EGA_SOURCE_CHECKPOINT_CONTENT_COMMIT,
+                    **checkpoint_content,
+                },
+                "r39": r39,
+                "to": {
+                    "commit": CURRENT_MAIN_PARENT_COMMIT,
+                    **main,
+                },
+                "direction": "checkpoint_content_to_current_main",
+                "exact": True,
+                "applied": observed,
+            }
+        )
+    return {
+        "schema": "unofficial-ai-integrated-stacks-current-main-input-override/v1",
+        "parent": expected_parent,
+        "paths": overrides,
+    }
+
+
 def validate_composition(
-    source: Path, precomposition_commit: str, composition_commit: str
+    source: Path,
+    precomposition_commit: str,
+    composition_commit: str,
+    current_main_parent: dict[str, object] | None = None,
 ) -> dict[str, object]:
     changed_paths = core.git(
         source,
@@ -724,8 +1606,20 @@ def validate_composition(
 
     # Candidate lifecycle and tool commits must not smuggle source changes into
     # the build.  Every selected source and every shared root TeX input remains
-    # byte-identical to public R39 except for the one derived.tex insertion;
+    # byte-identical to public R39 except for the one explicitly bound
+    # current-main simplicial.tex override and the derived.tex insertion;
     # post-composition tool commits must preserve that entire input set.
+    current_main_inputs = validate_current_main_build_input_overrides(
+        source, current_main_parent
+    )
+    override_rows = current_main_inputs.get("paths")
+    require(isinstance(override_rows, list), "current-main input override inventory is malformed")
+    assert isinstance(override_rows, list)
+    applied_current_main_paths = {
+        str(row["path"])
+        for row in override_rows
+        if isinstance(row, dict) and row.get("applied") is True
+    }
     shared_inputs = root_shared_inputs(source)
     unchanged_inputs = tuple(
         dict.fromkeys(
@@ -747,12 +1641,24 @@ def validate_composition(
             (composition_commit, "composition"),
             ("HEAD", "build HEAD"),
         ):
+            # The historical Verdier commits intentionally retain the R39
+            # preimage.  The exact current-main override is introduced only
+            # by the integration merge at HEAD; do not retroactively claim it
+            # was present in precomposition or composition.
+            expected_blob = (
+                CURRENT_MAIN_BUILD_INPUT_BLOBS[relative]
+                if revision == "HEAD" and relative in applied_current_main_paths
+                else baseline_blob
+            )
             observed = core.git(source, "rev-parse", f"{revision}:{relative}")
             require(
-                observed == baseline_blob,
-                f"non-Verdier build input changed after public R39: {label}:{relative}",
+                observed == expected_blob,
+                (
+                    "non-Verdier build input changed after its bound baseline: "
+                    f"{label}:{relative}"
+                ),
             )
-        unchanged_lines.append(f"{relative}|{baseline_blob}")
+        unchanged_lines.append(f"{relative}|{expected_blob}")
 
     composed_identity = commit_file_identity(source, composition_commit, DERIVED_PATH)
     operation_identity = commit_file_identity(source, precomposition_commit, COMPOSITION_PATH)
@@ -780,6 +1686,7 @@ def validate_composition(
                 (("\n".join(unchanged_lines)) + "\n").encode("utf-8")
             ),
         },
+        "current_main_build_input_overrides": current_main_inputs,
     }
 
 
@@ -794,6 +1701,8 @@ def require_clean_inputs(source: Path) -> None:
         OVERLAYS_PATH,
         LEASES_PATH,
         DERIVED_PATH,
+        EGA_SOURCE_CHECKPOINT_PATH,
+        FINALIZER_PATH,
         "preamble.tex",
         "chapters.tex",
         "my.bib",
@@ -1048,6 +1957,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--precomposition-commit", required=True)
     parser.add_argument("--composition-commit", required=True)
+    parser.add_argument(
+        "--source-checkpoint",
+        type=Path,
+        default=Path(EGA_SOURCE_CHECKPOINT_PATH),
+        help=(
+            "canonical tracked EGA source checkpoint (default: %(default)s); "
+            "the sealed historical receipt is validated before the descendant build"
+        ),
+    )
     parser.add_argument("--source-date-epoch", default="1785270512")
     parser.add_argument("--max-sweeps", type=int, default=6)
     parser.add_argument(
@@ -1069,12 +1987,25 @@ def main(argv: list[str] | None = None) -> int:
     chain, precomposition_suffix = validate_direct_chain(
         source, args.precomposition_commit, args.composition_commit
     )
+    postcomposition_suffix = validate_postcomposition_suffix(
+        source, args.composition_commit
+    )
+    current_main_parent = summarize_current_main_parent(postcomposition_suffix)
+    v4_composition_receipt = validate_current_v4_composition_receipt(
+        source, args.composition_commit
+    )
     candidate = validate_candidate(source, args.precomposition_commit, args.composition_commit)
     registries = validate_registries(
         source, args.precomposition_commit, args.composition_commit, candidate
     )
     composition = validate_composition(
-        source, args.precomposition_commit, args.composition_commit
+        source,
+        args.precomposition_commit,
+        args.composition_commit,
+        current_main_parent,
+    )
+    source_checkpoint = validate_source_checkpoint(
+        source, args.source_checkpoint, current_main_parent
     )
     require_clean_inputs(source)
     release_validation = run_release_validator(source)
@@ -1085,6 +2016,21 @@ def main(argv: list[str] | None = None) -> int:
     build["worktree_kind"] = kind
     build["primary_worktree_override"] = args.allow_primary_worktree
     core.require_source_revision_unchanged(source, initial_commit, initial_tree)
+    source_checkpoint_after = validate_source_checkpoint(
+        source, args.source_checkpoint, current_main_parent
+    )
+    require(
+        source_checkpoint_after == source_checkpoint,
+        "EGA source checkpoint identity changed during the build",
+    )
+    source_checkpoint = {
+        **source_checkpoint,
+        "build_recheck": {
+            "before_current_head": source_checkpoint["current_head"],
+            "after_current_head": source_checkpoint_after["current_head"],
+            "exact_binding_equal": True,
+        },
+    }
     require_clean_inputs(source)
 
     driver_identity = commit_file_identity(source, "HEAD", DRIVER_PATH)
@@ -1114,6 +2060,9 @@ def main(argv: list[str] | None = None) -> int:
         "historical_unprefixed_v4_topology_used": False,
         "direct_chain": chain,
         "precomposition_suffix": precomposition_suffix,
+        "postcomposition_suffix": postcomposition_suffix,
+        "known_current_main_parent": current_main_parent,
+        "v4_composition_receipt": v4_composition_receipt,
         "precomposition_commit": args.precomposition_commit,
         "precomposition_tree": commit_tree(source, args.precomposition_commit),
         "composition_commit": args.composition_commit,
@@ -1142,6 +2091,7 @@ def main(argv: list[str] | None = None) -> int:
         },
         "build": build,
         "artifacts": artifacts,
+        "source_checkpoint": source_checkpoint,
         "pdfs_committed": False,
         "sanitization": {
             "absolute_paths_recorded": False,
@@ -1157,7 +2107,7 @@ def main(argv: list[str] | None = None) -> int:
         receipt,
         initial_commit,
         initial_tree,
-        None,
+        args.source_checkpoint,
         None,
         (),
     )
