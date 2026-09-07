@@ -23,15 +23,24 @@ verifies all 15 changed files at public content commit
 `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
 
-## Current EGA I §7.1.1–§7.1.3 comparison
+## Current EGA I §7.1.4–§7.1.9.1 comparison
 
-The current [EGA I §7.1.1–§7.1.3 integration validation](ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+The [integration validation](ega-i-7.1.4-7.1.9.1-integration-validation-2026-09-07.json),
+[source-bound checkpoint](ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json)
+and [written derivations](../ega/i719.md) compare generic morphism germs and
+rational-function rings, including all separately owned proof passages.
+Existing Stacks results supply the mathematics; no duplicate root theorem
+or new PDF is introduced. The next source unit is §7.1.10.
+
+## Preceding EGA I §7.1.1–§7.1.3 comparison
+
+The preceding [EGA I §7.1.1–§7.1.3 integration validation](ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
 records the rational-map and rational-function comparison. Its
 [source-boundary correction](ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
 supersedes incomplete raw-source intervals while preserving the first
 candidate and its ledger rows as adverse history. Live French/English replay,
 73 test executions and complete repository validation pass. The next source
-unit is §7.1.4; neither this checkpoint nor those tests prove EGA complete.
+unit at that checkpoint was §7.1.4; those tests did not prove EGA complete.
 
 The [public content readback](ega-i-7.1.1-7.1.3-public-readback-2026-09-07.json)
 verifies all 22 changed paths at `51e93aef77d61a0b1ba766534ac46e563961c93c`,

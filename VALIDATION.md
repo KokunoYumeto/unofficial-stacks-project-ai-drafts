@@ -5,6 +5,15 @@ composition, TeX compilation, and visual evidence are not conflated.
 
 ## Current combined R47/Illusie and EGA comparison checkpoint
 
+The [EGA I §7.1.4–§7.1.9.1 dossier](ega/i719.md) is checked against complete
+raw French LF72–191 and English LF37–99, including the unwrapped §7.1.5
+proof and integral tail, and the §7.1.9 deduction after its supporting lemma.
+The [source-bound checkpoint](validation/ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json)
+preserves exact earlier ledger prefixes. Its 115 combined regression tests
+and live source replay pass; these test evidence integrity and stated
+hypotheses, not formal mathematical proof. Root TeX, official tags, the
+registry and PDFs are unchanged.
+
 The [EGA I §7.1.1–§7.1.3 comparison](validation/ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
 passes the complete repository validator and 73 test executions, including
 adverse source-boundary checks. A separate replay reads both pinned source
