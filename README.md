@@ -134,12 +134,14 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
-EGA is **not fully integrated**. The last verified public checkpoint covers
-EGA I §6.6.4, including a completion of the base-change proof for
-quasi-compact morphisms at Stacks tag 01K5. The local §6.6.5 comparison is
-validated but not yet published: its criterion for dominance and generic
-points is covered by existing Stacks results in combination, so it adds no
-duplicate theorem to the source. See the [current checkpoint states](STATUS.md).
+EGA is **not fully integrated**. This tree's reviewed comparison reaches
+EGA I §6.6.8; the next source unit is §7.1.1. The earlier §6.6.4 contribution
+completes the base-change proof for quasi-compact morphisms at Stacks tag
+01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
+permanence of locally finite-type morphisms, locally Noetherian fibre products,
+and geometric-point tests to existing Stacks results, with their precise
+hypotheses retained. These comparisons add no duplicate root theorem.
+See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 
 - **The Jacobson-radical neighbourhood lemma** — EGA I, Proposition 1.1.15:
@@ -230,7 +232,7 @@ that a reader accept a result because an AI or an automated check produced it.
   coherent milestones—such as a large integrated source tranche or a major
   cumulative errata release—not individual theorems or routine weekly updates.
 - [Public EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
-  · [local §6.6.5 semantic checkpoint](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json).
+  · [§6.6.6–6.6.8 comparison and validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json).
 - [Build and validation instructions](VALIDATION.md)
   · [exact current build evidence](validation/README.md).
 - [Complete project status](STATUS.md) · [roadmap](ROADMAP.md)

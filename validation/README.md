@@ -1,6 +1,26 @@
 # Unified-build receipts
 
-## Current local R38 composition and build evidence
+## Current combined R47/Illusie evidence
+
+The combined source and these receipts are public at
+`5817f4c1af8724b147401c785f57ca315b52e31c`. The
+[build](stacks-errata-a04446e-r47-illusie-build-2026-09-07.json) and
+[independent second build](stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json)
+are compared by the [reproducibility receipt](stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json):
+35 matching PDF identities, 3,363 pages and 36,679,971 bytes per run.
+The [visual receipt](stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json)
+retains its actual five-chapter R47 scope and historical observations. It is
+not an assertion that every page in the combined corpus was visually reviewed.
+
+The newer [EGA I §6.6.6–§6.6.8 validation](ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+checks existing mathematical coverage and hypothesis boundaries. It changes no
+root TeX or PDF input; all 35 retained PDF hashes were reread successfully.
+The immutable candidate receipt's old pending state is distinguished from
+the later validation and publication records.
+
+## Historical R38 composition and build checkpoint
+
+The following describes its original pre-publication state, not current main.
 
 The local source includes admitted R34–R38 corrections on top of the public
 R33 source. Independent composition replay, two byte-identical builds, and

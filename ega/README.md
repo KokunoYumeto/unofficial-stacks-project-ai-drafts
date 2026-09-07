@@ -17,6 +17,23 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
+This tree records source-order review through **EGA I §6.6.8**. The next
+unit is **§7.1.1**; EGA as a whole is not complete. Sections 6.6.6–6.6.8
+cover permanence of locally finite-type morphisms, locally Noetherian fibre
+products, and three geometric-point/residue-field arguments. They are derived
+from existing Stacks results with the original hypotheses retained, so no
+duplicate theorem or root TeX edit is added.
+
+The [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records the passing semantic tests and full repository check. It supersedes
+the *state* of the immutable candidate receipt, not its evidence bytes.
+Public GitHub already includes §6.6.4's proof completion and §6.6.5's
+generic-point comparison at commit `5817f4c1af8724b147401c785f57ca315b52e31c`.
+The newer §6.6.6–6.6.8 slice is validated locally pending public readback.
+The older release snapshots below retain their historical dates and counts.
+
+### Historical publication and source snapshots
+
 - Current standalone publications are split by language and anonymously
   cross-checked against their GitHub releases. The French edition is
   [Zenodo 22134750](https://doi.org/10.5281/zenodo.22134750) / concept
@@ -30,7 +47,7 @@ EGA integration manifest enter the repository's root TeX tree.
   [Zenodo 21861666](https://doi.org/10.5281/zenodo.21861666) is retained as a
   historical checkpoint, not presented as the current edition or as a release
   of this integrated Stacks repository.
-- The integrated repository's latest published EGA semantic checkpoint covers EGA I
+- The 2026-08-30 separately packaged EGA semantic checkpoint covers EGA I
   through §6.6.3 and advances the next semantic cursor to §6.6.4. The sealed
   checkpoint receipt is [PASS](../validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
   (SHA-256
@@ -48,14 +65,14 @@ EGA integration manifest enter the repository's root TeX tree.
   statement-map rows, 825 residual rows, 102 issue rows, and zero quarantined
   rows. I000104 remains routed pending successor adjudication; no root theorem
   is justified by this slice.
-- The separate local implementation now covers EGA I §6.6.4 componentwise
+- The subsequent implementation covers EGA I §6.6.4 componentwise
   and completes the omitted proof of existing tag 01K5 in `schemes.tex`.
   D000329, S001250--S001259, R000826--R000829, and A000257 record this
   source-bound slice. Its [local implementation receipt](../validation/ega-i-6.6.4-semantic-checkpoint-2026-08-31.json)
-  distinguishes source and checker validation from TeX/PDF build, visual QA,
-  and publication, which are not claimed complete. It creates no theorem,
+  distinguishes its original local checks from later build and publication
+  evidence. It is now included in public main. It creates no theorem,
   official tag, canon correction, or new visual-evidence item.
-- The next local semantic checkpoint covers EGA I §6.6.5 and advances the
+- The next semantic checkpoint covers EGA I §6.6.5 and advances the
   semantic cursor to §6.6.6. D000330, S001260--S001266, R000830--R000833,
   and A000258--A000259 record seven existing-target edges and four residual
   dispositions. Tag 01RL detects dominance by hitting target-component
@@ -68,7 +85,8 @@ EGA integration manifest enter the repository's root TeX tree.
   binds French LF1123--LF1146 to its exact 1,459-byte SHA-256
   `0BCE3737307C8081A439C7BBB9A5666600C8DE0EC99E4481E3AABC2167714067`.
   This increment changes no root TeX, authority, issue, visual-QA, or tag
-  registry bytes and claims no build or publication. There is no new gap,
+  registry bytes; its original receipt claims no build or publication, and
+  the increment is now included in public main. There is no new gap,
   canon correction, or justified duplicate theorem.
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 - English discovery manifest: R184, 92,445 bytes, SHA-256
@@ -887,9 +905,8 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The current local semantic slice is EGA I §6.6.4, with source-order
-continuation at §6.6.5 after its deterministic production checks. The latest
-published semantic frontier remains §6.6.3. Every reviewed claim remains
+The earlier §6.6.3–§6.6.4 checkpoint history is retained below the current
+snapshot. It does not define the live continuation cursor. Every reviewed claim remains
 bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
 than a mutable producer frontier. The §6.6.3 fixed point is sealed by
@@ -905,9 +922,9 @@ only; chapter edits still require direct French evidence, explicit residuals,
 bounded mathematical review, visual evidence when applicable, and owner
 verification.
 
-## 2026-09-06 — local candidate through EGA I 6.6.8
+## EGA I 6.6.6–6.6.8: locally finite type and geometric points
 
-The next semantic candidate covers the six local-finite-type permanence
+The semantic comparison covers the six local-finite-type permanence
 assertions of 6.6.6, the locally Noetherian fibre product of 6.6.7, and the
 three distinct extensions in 6.6.8. It adds 24 existing-target edges and ten
 explicit residual dispositions, not a new theorem. All earlier ledger bytes
@@ -923,8 +940,9 @@ The last derivation uses a finite transcendence basis and extension of field
 embeddings; it does not invoke the defective converse proof of 0487.
 
 D000331--D000333, S001267--S001290, R000834--R000843 and A000260--A000261
-record the candidate. Its exact source, target and append-only bindings are
-in [the local semantic receipt](../validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json).
-No root TeX, tag, authority, registry, visual evidence or public artifact is
-changed. This is not a claim of build, publication, machine proof or complete
+record the comparison. Its exact source, target and append-only bindings are
+in [the immutable candidate receipt](../validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json).
+The later [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records the successful checks separately. No root TeX, tag, authority,
+registry or PDF input changes. This is not a machine-checked proof or complete
 EGA coverage. The next source-order unit is EGA I 7.1.1, not 6.6.9.

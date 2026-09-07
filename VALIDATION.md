@@ -3,7 +3,7 @@
 Validation is layered so that repository integrity, mathematical-source
 composition, TeX compilation, and visual evidence are not conflated.
 
-## Current local R47 and EGA §6.6.5 checkpoint
+## Current combined R47/Illusie and EGA comparison checkpoint
 
 Source commit `b3c4a28c053dbbd45670dd19cf0dcc45063190dc` contains
 177 manifest-bound R40–R47 corrections across five cumulative chapters.
@@ -16,13 +16,20 @@ The [EGA I §6.6.5 semantic receipt](validation/ega-i-6.6.5-semantic-checkpoint-
 and `python ega/check.py` pass locally. Section 6.6.5 is covered by existing
 results in combination; it changes no root TeX or PDF.
 
-**Fresh cumulative builds, reproducibility, affected-page visual QA, public
-push and anonymous readback remain unfinished.** Before building, the
-checkpoint consumer must validate the historical §6.6.4 receipt at its own
-commit and separately bind the new cumulative head. Assuming every later
-head is still the immediate child of that old receipt is not a valid check.
-The repair must preserve the historical receipt and all source-byte and
-ancestry requirements. No build is launched by skipping that gate.
+The combined R47/Illusie successor is public at
+`5817f4c1af8724b147401c785f57ca315b52e31c`. Its
+[build and comparison receipts](validation/README.md) bind 35 byte-identical
+PDFs across two runs (3,363 pages, 36,679,971 bytes). The visual receipt
+preserves its actual bounded scope and observations. Historical §6.6.4
+evidence is validated at its own anchor; it is not rewritten to pretend a
+later head is its immediate child.
+
+The newer [EGA I §6.6.6–§6.6.8 integration validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records 16 passing semantic tests and a passing full repository check at
+`53e97d65a7efb5e4f79df83cea987ae2ea08a171`. It changes no root TeX,
+style, bibliography or PDF input; all 35 retained PDF hashes were verified.
+No new build or visual inspection is asserted for this semantic-only slice.
+Its public readback is recorded separately from validation.
 
 The new profile has 35 chapters. Historical 28- and 30-chapter receipts remain
 evidence for their own profiles; they do not certify the new one. A successful
@@ -109,7 +116,8 @@ Passing local source, build, and visual checks is not proof of publication.
 The inherited R38 profile documented below is historical. The current R47
 extension must additionally validate its eight later admissions, exact
 177-operation replay, 35-chapter build evidence and successor checkpoint.
-Those pending checks must not be inferred from the older results. The
+Those checks are now supported by the combined successor receipts above,
+not inferred from the older results. The
 historical scope includes:
 
 - the R38 registry chain at cutoff

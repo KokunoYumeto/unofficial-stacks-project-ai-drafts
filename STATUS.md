@@ -1,18 +1,27 @@
 # Integration status
 
-Status date: **2026-09-06**
+Status date: **2026-09-07**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
 This dashboard summarizes the live integrated tree. Detailed evidence remains
 in each corpus dossier and in the machine-readable registry.
 
-**The last verified public source is R39 plus EGA I §6.6.4; local source is
-composed through R47, and EGA I §6.6.5 is locally validated.** These are distinct
-states. R40–R47 has passed independent source replay, but its fresh cumulative
-builds, visual review and public push are still pending. The §6.6.5 semantic
-checkpoint is also not yet published. The verified public main is
-`f73b18165c7162b8386de06cc3c50bd4ced745b6`.
+**R47, the combined Illusie source and EGA I §6.6.5 are public** at
+`5817f4c1af8724b147401c785f57ca315b52e31c` (anonymous main-ref verification).
+The combined build receipts record two matching sets of 35 PDFs, comprising
+3,363 pages and 36,679,971 bytes. Visual evidence is bounded to the scopes
+actually recorded in those receipts; these totals do not claim all-page
+visual certification of the entire corpus.
+
+This tree also contains the validated EGA I §6.6.6–§6.6.8 comparison at
+`53e97d65a7efb5e4f79df83cea987ae2ea08a171`: permanence of locally finite-type
+morphisms, locally Noetherian fibre products, and geometric-point arguments.
+It changes no root TeX or PDF input. The separate
+[integration validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records the passing 16-test semantic suite and full repository check;
+publication/readback is a separate successor transaction. The next source
+unit is EGA I §7.1.1, not completion of EGA.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -26,11 +35,11 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | Review is public through EGA I §6.6.4. Section 6.6.5 has locally validated existing coverage through several Stacks results; it introduces no new root TeX. Next source unit: §6.6.6 after publishing that checkpoint. The source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | Public main includes review through §6.6.5. This tree's validated comparison extends through §6.6.8, using existing Stacks results without duplicate root theorems. Next: §7.1.1. Source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
-binds the public proof completion. The [local §6.6.5 receipt](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
+binds the public proof completion. The [§6.6.5 candidate receipt](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
 records the generic-point criterion using 01RL together with 004W and 01IS;
 it does not equate the stronger EGA formulation with the statement of 01RL
 alone. Its independent audit and semantic checker pass.
@@ -50,7 +59,7 @@ direct evidence links and no annotations in the mathematical TeX. The
 generated index is refreshed as part of each source-publication checkpoint;
 its embedded source identity determines its coverage.
 
-### R40–R47: exact cumulative source replay complete; release validation pending
+### R40–R47: cumulative source and combined build published
 
 The new corrections repair descent-map domains and indices, source/target
 conventions for groupoids, the centre's conjugation-equalizer formulation,
@@ -67,12 +76,12 @@ Groupoids findings separately rather than silently repairing them.
 The [composition receipt](validation/composition-current.json) binds 48
 overlays and 1,292 stable IDs: errata R1–R47 plus the 12-unit Verdier
 contribution. These bookkeeping totals are not counts of new theorems.
-The intended cumulative build profile covers 35 chapters; **no fresh R47
-PDF, reproducibility result or visual PASS is claimed yet**. The build
-consumer is being updated to validate later cumulative checkpoints without
-altering the historical EGA §6.6.4 receipt. GitHub publication and anonymous
-readback follow those checks. This routine checkpoint does not create a new
-Zenodo version.
+The successor [build](validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json),
+[reproducibility comparison](validation/stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json)
+and [bounded visual evidence](validation/stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json)
+are public at the head above. The comparator matches all 35 PDF identities.
+The historical EGA §6.6.4 receipt and earlier R47-only results remain intact.
+This incremental GitHub checkpoint does not create a new Zenodo version.
 
 ### Historical R34–R38 source and build evidence
 
@@ -248,11 +257,11 @@ proposals remain under
 
 ## Validation state
 
-Current R40–R47 source replay and the local EGA §6.6.5 semantic checks pass.
-Fresh cumulative build, reproducibility, visual and publication checks remain
-open. Historical R38/R39 results apply only to their exact source identities,
-not automatically to R47. See [VALIDATION.md](VALIDATION.md) for the current
-gate and the retained historical evidence.
+R40–R47 is included in the published combined checkpoint, with the current
+build, reproducibility and bounded visual receipts linked above. EGA
+§6.6.6–§6.6.8 passes its separate semantic and full repository checks without
+changing root source. Historical R38/R39 results remain evidence only for
+their own source identities. See [VALIDATION.md](VALIDATION.md).
 
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
