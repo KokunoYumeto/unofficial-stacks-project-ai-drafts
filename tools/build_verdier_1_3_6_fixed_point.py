@@ -101,19 +101,21 @@ EGA_SOURCE_CHECKPOINT_BLOB = "715024558f8480811dc3d27521d65cdaa893ca45"
 # tree) is rejected; this is a binding, not a general-purpose merge escape
 # hatch.  The parent is the current-main tip at the time this Verdier lane was
 # scoped and its tree is retained as an immutable identity witness.
-CURRENT_MAIN_PARENT_COMMIT = "4eb2eaec67479813553a6c98b32a232d4f7936dd"
-CURRENT_MAIN_PARENT_TREE = "3744a047ee7b6391547b36a546c5decf1dd1b4d0"
+CURRENT_MAIN_PARENT_COMMIT = "e083b71ac21e0ecb7508aa6a1067a1b0016d89a7"
+CURRENT_MAIN_PARENT_TREE = "ea6837e424feda8f9e020b5b3083a503ca7247fb"
 CURRENT_MAIN_MERGE_BASE = PUBLIC_R39_COMMIT
 CURRENT_MAIN_ALLOWED_PATHS = frozenset(
     {
         "illusie_volume_I/.gitignore",
         "illusie_volume_I/README.md",
         "illusie_volume_I/build-receipt-i1-2.json",
+        "illusie_volume_I/build-receipt-i1-3.json",
         "illusie_volume_I/build-receipt.json",
         "illusie_volume_I/build.py",
         "illusie_volume_I/check.json",
         "illusie_volume_I/map.json",
         "illusie_volume_I/qa-i1-2.json",
+        "illusie_volume_I/qa-i1-3.json",
         "illusie_volume_I/qa.json",
         "illusie_volume_I/relative-homotopy.tex",
         "illusie_volume_I/source-lock.json",
@@ -132,7 +134,7 @@ CURRENT_MAIN_R39_BUILD_INPUT_BLOBS = {
     "simplicial.tex": "bcec4895b138415bea4febc348ad4e3e9f519b44",
 }
 CURRENT_MAIN_BUILD_INPUT_BLOBS = {
-    "simplicial.tex": "0fd4cb51cb486d90b3301a1f85caebbe72dffc0d",
+    "simplicial.tex": "3f222b229e864887dc3a64a199dc11dc2a96ed0d",
 }
 
 # Exact non-candidate paths that may arrive from the known Verdier side of the

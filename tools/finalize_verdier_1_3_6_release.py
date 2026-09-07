@@ -39,8 +39,8 @@ REPOSITORY = "KokunoYumeto/unofficial-stacks-project-ai-drafts"
 # separate so a newer main-side delta cannot rewrite the historical contract.
 HISTORICAL_PUBLIC_BASE = "f73b18165c7162b8386de06cc3c50bd4ced745b6"
 HISTORICAL_PUBLIC_BASE_TREE = "5bc25c775349eddf5fa90a7f37f5b11044d89ec1"
-PUBLIC_BASE = "4eb2eaec67479813553a6c98b32a232d4f7936dd"
-PUBLIC_BASE_TREE = "3744a047ee7b6391547b36a546c5decf1dd1b4d0"
+PUBLIC_BASE = "e083b71ac21e0ecb7508aa6a1067a1b0016d89a7"
+PUBLIC_BASE_TREE = "ea6837e424feda8f9e020b5b3083a503ca7247fb"
 CURRENT_MAIN_PARENT = PUBLIC_BASE
 CURRENT_MAIN_PARENT_TREE = PUBLIC_BASE_TREE
 PRECOMPOSITION = "f5de2fe95ccdf2210379f3eca9edc89673adaa71"
@@ -105,6 +105,38 @@ EGA_SOURCE_CHECKPOINT_CHECKS = (
     "known_current_main_input_override_bound_if_present",
     "all_current_build_inputs_rebound_or_exactly_preserved",
     "historical_receipt_is_ancestor_of_current_direct_head",
+)
+EGA_SOURCE_CHECKPOINT_KEYS = frozenset({
+    "authority", "authority_binding", "base", "changed_paths", "checks", "claim",
+    "content", "counts", "generated_from_content_commit_utc", "historical_rebind",
+    "inputs", "ledger_appends", "ledger_semantics", "post_content_metadata_contract",
+    "readme_change", "repository_state_contract", "root_change", "schema", "scope",
+    "source_unit", "status", "tooling", "unchanged_surfaces", "validation_scope",
+})
+EGA_RAW_CHECKS = (
+    "schema_status",
+    "base_content_topology",
+    "exact_changed_path_diff",
+    "tooling_identities_bound",
+    "actual_base_and_content_commits_and_trees_exact",
+    "content_is_single_parent_child_of_actual_base",
+    "historical_implementation_base_is_ancestor_and_all_eight_preimages_rebind_exactly",
+    "exact_ten_path_base_to_content_delta",
+    "immutable_implementation_and_independent_review_receipts_bound",
+    "unique_01K5_omitted_proof_replaced_230_to_1195_with_1000_byte_proof",
+    "01K5_statement_label_and_official_tag_unchanged",
+    "schemes_full_preimage_postimage_and_outside_block_bytes_exact",
+    "all_other_119_root_tex_blobs_unchanged",
+    "tags_registry_and_composition_receipt_unchanged",
+    "four_ledger_prefixes_and_reserved_append_ranges_exact",
+    "live_counts_recomputed_from_committed_ledgers",
+    "prior_scope_slices_preserved_and_6_6_4_slice_exact",
+    "continuation_is_EGA_I_6_6_5",
+    "source_authority_hashes_bound",
+    "canonical_authority_source_receipt_and_slice_cross_bound_exactly",
+    "README_6_6_4_insertion_unique_anchored_and_outside_branch_unchanged",
+    "four_ledger_headers_rows_IDs_cross_references_and_counts_exact",
+    "no_post_content_source_drift_at_generation",
 )
 
 MANIFEST_SHA256 = "C007BBFB1AB068843B7759FF69ED338BE0071349975EDCE20472876B89F01F2F"
@@ -656,6 +688,59 @@ def changed_leaf_identities(root: Path, base: str, head: str) -> tuple[list[dict
     return rows, summary
 
 
+def validate_evidence_suffix(root: Path, older: str, newer: str,
+                             evidence_paths: set[str]) -> list[dict[str, Any]]:
+    """Prove every commit after a build source is an evidence-only child.
+
+    A net ``older..newer`` diff is not enough: an intermediate critical-file
+    edit could be reverted before the final head.  Walk each parent edge and
+    derive its raw leaf identities independently.  Only direct validation
+    evidence files are admitted; source, registry, candidate, composition,
+    and tool paths can never be authorized by a caller-supplied argument.
+    """
+    immutable = {
+        DERIVED_PATH, OVERLAYS_PATH, LEASES_PATH, COMPOSITION_PATH,
+        EGA_SOURCE_CHECKPOINT_PATH,
+        MANIFEST_PATH, PAYLOAD_PATH, OPERATION_PATH, AUTHORITY_LOCK_PATH,
+        "tools/build_verdier_1_3_6_fixed_point.py", "tools/build_fixed_point.py",
+        "tools/validate_verdier_1_3_6_release.py",
+        "tools/finalize_verdier_1_3_6_release.py",
+        "tools/validate_unified_repository.py",
+        "tools/verify_github_commit_readback.py",
+    }
+    require(evidence_paths and all(
+        isinstance(path, str) and path.startswith("validation/")
+        and path not in immutable and safe_relative(path, "evidence path")
+        for path in evidence_paths
+    ), "evidence suffix paths are not a bounded validation-only set")
+    ancestor(root, older, newer)
+    if older == newer:
+        return []
+    rows: list[dict[str, Any]] = []
+    cursor = newer
+    visited: set[str] = set()
+    while cursor != older:
+        require(cursor not in visited, "source-to-content ancestry contains a cycle")
+        visited.add(cursor)
+        require(len(visited) <= 128, "source-to-content evidence suffix is too long")
+        parents = commit_parents(root, cursor)
+        require(len(parents) == 1,
+                "source-to-content evidence suffix contains a merge commit")
+        parent = parents[0]
+        changes, summary = changed_leaf_identities(root, parent, cursor)
+        disallowed = sorted(row["path"] for row in changes
+                            if row["path"] not in evidence_paths)
+        require(not disallowed,
+                "source-to-content evidence commit changed unbound paths: "
+                + ", ".join(disallowed))
+        rows.append({"commit": cursor, "parent": parent,
+                     "tree": resolve_commit(root, cursor)["tree"],
+                     "changed_paths": [row["path"] for row in changes],
+                     "changed_leaf_summary": summary})
+        cursor = parent
+    return list(reversed(rows))
+
+
 def committed_json(root: Path, revision: str, relative: str,
                    label: str) -> tuple[dict[str, Any], dict[str, Any]]:
     raw = committed_raw(root, revision, relative)
@@ -1163,7 +1248,7 @@ def _expected_current_main_override(root: Path) -> dict[str, Any]:
     checkpoint = commit_identity(root, EGA_CONTENT_COMMIT, path)
     current = commit_identity(root, CURRENT_MAIN_PARENT, path)
     require(checkpoint == r39, "EGA checkpoint/current R39 simplicial identity drifted")
-    require(current["git_blob"] == "0fd4cb51cb486d90b3301a1f85caebbe72dffc0d",
+    require(current["git_blob"] == "3f222b229e864887dc3a64a199dc11dc2a96ed0d",
             "current-main simplicial identity drifted")
     return {
         "schema": "unofficial-ai-integrated-stacks-current-main-input-override/v1",
@@ -1195,9 +1280,13 @@ def _expected_protected_input_binding(root: Path, source_commit: str) -> dict[st
         "crystalline", "spaces-cohomology", "spaces-duality", "stacks-limits",
         "injectives", "cohomology", "sites-cohomology", "gaga", "moduli",
     )
+    ega_shared = _root_shared_inputs(root, (EGA_CONTENT_COMMIT,))
+    source_shared = _root_shared_inputs(root, (source_commit,))
+    require(source_shared == ega_shared,
+            "source commit introduced an unbound root shared build input")
     paths = list(("preamble.tex", "chapters.tex", "my.bib"))
     paths.extend(f"{stem}.tex" for stem in stems if stem != "derived")
-    paths.extend(path for path in _root_shared_inputs(root, (EGA_CONTENT_COMMIT, source_commit))
+    paths.extend(path for path in _root_shared_inputs(root, (EGA_CONTENT_COMMIT,))
                  if path != "derived.tex")
     paths = list(dict.fromkeys(paths))
     override_path = "simplicial.tex"
@@ -1213,6 +1302,12 @@ def _expected_protected_input_binding(root: Path, source_commit: str) -> dict[st
             require(current == historical,
                     f"protected EGA input drifted before finalization: {path}")
             role = "ega_content"
+        local = root / PurePosixPath(path)
+        reject_symlink_components(local, f"protected input {path}")
+        require(local.is_file(), f"protected input is not a regular file: {path}")
+        local_raw = local.read_bytes()
+        require(len(local_raw) == current["bytes"] and sha256(local_raw) == current["sha256"],
+                f"working protected input bytes differ: {path}")
         lines.append("|".join((path, role, str(current["bytes"]),
                               str(current["sha256"]), str(current["git_blob"]))))
     return {
@@ -1234,9 +1329,14 @@ def validate_source_checkpoint_binding(value: Mapping[str, Any], label: str,
     }
     require(raw_identity == expected_identity,
             f"{label} does not preserve the sealed EGA checkpoint identity")
+    require(commit_identity(root, content_head, EGA_SOURCE_CHECKPOINT_PATH)
+            == expected_identity,
+            f"{label} content head does not preserve the sealed EGA checkpoint identity")
     checkpoint = strict_object(committed_raw(root, source_commit, EGA_SOURCE_CHECKPOINT_PATH),
                                f"{label} EGA source checkpoint")
     sanitized(checkpoint)
+    require(set(checkpoint) == EGA_SOURCE_CHECKPOINT_KEYS,
+            f"{label} EGA source checkpoint field inventory is not exact")
     require(checkpoint.get("schema") == EGA_SOURCE_CHECKPOINT_SCHEMA
             and checkpoint.get("status") == EGA_SOURCE_CHECKPOINT_STATUS,
             f"{label} EGA source checkpoint schema/status mismatch")
@@ -1245,6 +1345,10 @@ def validate_source_checkpoint_binding(value: Mapping[str, Any], label: str,
     require(checkpoint.get("content") == {
         "commit": EGA_CONTENT_COMMIT, "tree": EGA_CONTENT_TREE, "parent": EGA_BASE_COMMIT,
     }, f"{label} EGA content identity mismatch")
+    resolve_commit(root, EGA_BASE_COMMIT, EGA_BASE_TREE)
+    resolve_commit(root, EGA_CONTENT_COMMIT, EGA_CONTENT_TREE)
+    require(commit_parents(root, EGA_CONTENT_COMMIT) == [EGA_BASE_COMMIT],
+            f"{label} EGA content parent topology mismatch")
     repository_contract = checkpoint.get("repository_state_contract")
     require(isinstance(repository_contract, Mapping)
             and repository_contract.get("content_commit") == EGA_CONTENT_COMMIT,
@@ -1253,11 +1357,20 @@ def validate_source_checkpoint_binding(value: Mapping[str, Any], label: str,
         "allowed_changes": [{"path": EGA_SOURCE_CHECKPOINT_PATH, "change": "added"}],
         "source_drift": False,
     }, f"{label} EGA post-content contract mismatch")
-    require(checkpoint.get("checks") and isinstance(checkpoint.get("checks"), list),
-            f"{label} EGA checkpoint check inventory is missing")
+    require(checkpoint.get("checks") == list(EGA_RAW_CHECKS),
+            f"{label} EGA checkpoint check inventory is not exact")
     resolve_commit(root, EGA_RECEIPT_COMMIT, EGA_RECEIPT_TREE)
     require(commit_parents(root, EGA_RECEIPT_COMMIT) == [EGA_CONTENT_COMMIT],
             f"{label} EGA receipt-child topology mismatch")
+    require(commit_identity(root, EGA_RECEIPT_COMMIT, EGA_SOURCE_CHECKPOINT_PATH)
+            == expected_identity,
+            f"{label} EGA receipt-child file identity mismatch")
+    receipt_changes, _ = changed_leaf_identities(root, EGA_CONTENT_COMMIT, EGA_RECEIPT_COMMIT)
+    require(len(receipt_changes) == 1
+            and receipt_changes[0]["path"] == EGA_SOURCE_CHECKPOINT_PATH
+            and receipt_changes[0]["status"] == "added"
+            and receipt_changes[0]["mode"] == "100644",
+            f"{label} EGA receipt child changed-path inventory is not exact")
     ancestor(root, EGA_RECEIPT_COMMIT, source_commit)
     tooling = checkpoint.get("tooling")
     require(isinstance(tooling, Mapping), f"{label} EGA tooling binding is malformed")
@@ -1322,14 +1435,7 @@ def validate_build(value: Mapping[str, Any], label: str, root: Path,
     resolve_commit(root, source_commit, source_tree)
     require(source.get("commit") == source_commit and source.get("tree") == source_tree,
             f"{label} source commit/tree must be canonical lowercase IDs")
-    ancestor(root, source_commit, content_head)
-    if source_commit != content_head:
-        changed_rows, _ = changed_leaf_identities(root, source_commit, content_head)
-        disallowed = sorted(row["path"] for row in changed_rows
-                            if row["path"] not in bound_evidence_paths)
-        require(not disallowed,
-                f"{label} source-to-content delta contains unbound paths: "
-                + ", ".join(disallowed))
+    validate_evidence_suffix(root, source_commit, content_head, bound_evidence_paths)
     validate_source_checkpoint_binding(value, label, root, content_head, source_commit)
     for field, relative in (("builder", "tools/build_verdier_1_3_6_fixed_point.py"),
                             ("build_core", "tools/build_fixed_point.py"),
@@ -1584,16 +1690,12 @@ def make_receipt(args: argparse.Namespace) -> dict[str, Any]:
     content_head = args.content_head.lower()
     bound_evidence_paths = {
         logical for logical in (
-            args.composition_logical, args.first_build_logical,
+            args.first_build_logical,
             args.second_build_logical, args.reproducibility_logical,
             args.visual_qa_logical, args.public_readback_logical,
             args.metadata_readback_logical,
         ) if logical is not None
     }
-    if args.output is not None:
-        bound_evidence_paths.add(logical_default(args.output))
-    if args.check_receipt is not None:
-        bound_evidence_paths.add(logical_default(args.check_receipt))
     topology = validate_topology(root, content_head, bound_evidence_paths)
     candidate_binding = validate_authority_and_candidate(root)
     operation_binding = validate_operation_contract(root)
