@@ -135,7 +135,7 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.1.9.1; the next source unit is §7.1.10. The earlier §6.6.4 contribution
+EGA I §7.1.14; the next source unit is §7.1.15. The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
 permanence of locally finite-type morphisms, locally Noetherian fibre products,
@@ -155,6 +155,11 @@ many components, they identify rational functions with localization away from
 the minimal primes—not automatically the total quotient ring. The
 [written comparison](ega/i719.md) gives the derivations, their precise
 hypotheses, and counterexamples; these results reuse existing Stacks content.
+Sections 7.1.10–7.1.14 explain when a rational map is determined by its
+generic local scheme, distinguish finite-type uniqueness from
+finite-presentation existence, and show why localization at a point preserves
+the rational-map set under the stated hypotheses. The [comparison](ega/i714.md)
+keeps the base-scheme structure and possible nilpotents explicit.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 

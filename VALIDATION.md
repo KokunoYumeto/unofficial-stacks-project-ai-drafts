@@ -5,6 +5,13 @@ composition, TeX compilation, and visual evidence are not conflated.
 
 ## Current combined R47/Illusie and EGA comparison checkpoint
 
+The [EGA I §7.1.10–§7.1.14 comparison](ega/i714.md) binds complete French
+LF192–258 and English LF100–149, including the page marker, introductions
+and all proof tails. The [integration validation](validation/ega-i-7.1.10-7.1.14-integration-validation-2026-09-07.json)
+records 168 passing tests, exact source replay and independent mathematical
+review. These are evidence/contract checks, not a machine-checked proof.
+Root TeX, official tags, registry and PDF identities remain unchanged.
+
 The [EGA I §7.1.4–§7.1.9.1 dossier](ega/i719.md) is checked against complete
 raw French LF72–191 and English LF37–99, including the unwrapped §7.1.5
 proof and integral tail, and the §7.1.9 deduction after its supporting lemma.

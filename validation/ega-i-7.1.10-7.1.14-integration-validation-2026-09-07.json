@@ -1,0 +1,106 @@
+{
+  "schema": "ega-i-7.1.10-7.1.14-integration-validation/v1",
+  "date": "2026-09-07",
+  "status": "PASS_LOCAL_CHECKPOINT",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "b9bdf6bdbd84b479e480118de4d58ad812056545",
+  "validated_semantic_commit": "0a5b707d0be72b497cd7d748ddfead10483bca67",
+  "validated_semantic_tree": "3efc98cbf9dcf63170cc76fe3617afc3eef0daa5",
+  "reviewed_candidate_commit": "68bd9148d443a2ed5744b90ad6d6c4e5337f2f18",
+  "reviewed_candidate_tree": "20de92aa12a12d4fde941550d30630ecae8bbafe",
+  "scope": "EGA I7.1.10–7.1.14: rational maps through the generic local scheme, uniqueness versus realization, valued-point/local-map descriptions and localization invariance",
+  "next_source_unit": "EGA I7.1.15 including introductory paragraph",
+  "complete_ega_program": false,
+  "machine_checked_mathematical_proof": false,
+  "mathematical_result": "Existing Stacks components cover all five numbered units, internal construction and four proof tails. The written comparison separates locally finite-type injectivity from locally finite-presentation bijectivity, preserves the generic local ring rather than its residue field, and proves base-compatible localization invariance. Counterexamples test all essential distinctions. No duplicate root theorem is added.",
+  "candidate_receipt": {
+    "path": "validation/ega-i-7.1.10-7.1.14-semantic-checkpoint-2026-09-07.json",
+    "bytes": 68899,
+    "sha256": "61E82663F9B8277A3D67CFF037216C2583F6D946989F61577051EB13BBA7B2E0",
+    "preservation": "The frozen candidate remains unchanged; this separate receipt records subsequent integration validation."
+  },
+  "dossier": {
+    "path": "ega/i714.md",
+    "bytes": 10265,
+    "sha256": "B4187420FDF14965A1174793D9637AADE6342810B88BB9D39D1F008822D21C67"
+  },
+  "source_boundary_replay": {
+    "command": "python -B tools/check_ega_i711014_source_boundaries.py",
+    "status": "PASS",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "complete_raw_lf_scope": [
+          192,
+          258
+        ]
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "complete_raw_lf_scope": [
+          100,
+          149
+        ]
+      }
+    },
+    "proof_ownership": "Complete internal7.1.10 construction,7.1.11 page marker, all four unwrapped French proofs and English proof wrappers,7.1.14 introduction, and separately bound excluded7.1.15 introduction.",
+    "errors": []
+  },
+  "independent_review": {
+    "status": "PASS",
+    "scope": "Independently verified mathematical correspondences/hypotheses and counterexamples, complete exact raw-source statements/proof ownership, all12 pinned target blocks/joins, append-only ledger prefixes/postimages and stronger-coverage residuals. Root separately read full French slice and dossier and inspected new source verifier, semantic tests and21 mapping clauses.",
+    "limitations": "Mathematical/evidence review and deterministic tests, not a formal proof, TeX or new PDF inspection.",
+    "unresolved_defects": []
+  },
+  "checks": {
+    "unit_test_command": "python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic tests.test_ega_i_713_source_boundaries tests.test_ega_raw_source_boundaries tests.test_ega_i_719_semantic tests.test_ega_i_719_source_boundaries tests.test_ega_i_711014_semantic tests.test_ega_i_711014_source_boundaries",
+    "unit_tests_run": 168,
+    "unit_tests_status": "PASS",
+    "unit_tests_elapsed_seconds": 45.429,
+    "full_repository_validator": "PASS",
+    "registered_overlays": 48,
+    "stable_errata_ids": 1292,
+    "exact_v2_operations": 1481,
+    "legacy_replacements": 69,
+    "permanent_tags": 21819,
+    "reproducible_pdf_identities": 35,
+    "recorded_visual_chapters": 5,
+    "ci_integration": "The workflow runs the new boundary tests and live verifier; its existing semantic-test discovery includes the new semantic suite."
+  },
+  "snapshots": {
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1347,
+      "file_rows": 1366,
+      "superseded_rows": 19,
+      "source_units": 446,
+      "existing_official_tag_rows": 1334,
+      "distinct_existing_official_tags": 364,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 849,
+      "file_rows": 882,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "preservation": {
+    "root_tex_changed": false,
+    "root_build_inputs_changed": false,
+    "official_tags_changed": false,
+    "overlay_registry_changed": false,
+    "new_tex_build": false,
+    "existing_35_pdf_receipts_preserved": true,
+    "original_or_translation_source_mutation": false
+  },
+  "publication_policy": {
+    "github": "Incremental validated checkpoint; public-byte readback and exact-head CI are recorded separately after push.",
+    "zenodo": "No new version for this routine slice; substantial coherent milestones only."
+  }
+}

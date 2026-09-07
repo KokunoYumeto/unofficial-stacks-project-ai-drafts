@@ -38,17 +38,25 @@ theorem is added. That checkpoint is publicly byte-verified at
 `056fd2bb05c6a5f82dcad9f193ad63d35790b56b` with
 [exact-head CI PASS](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34157334212).
 
-The new **EGA I §7.1.4–§7.1.9.1 comparison** explains generic morphism germs,
+The preceding **EGA I §7.1.4–§7.1.9.1 comparison** explains generic morphism germs,
 finite-component products of rational-function rings, the Noetherian
 Artinian conclusion, and localization away from minimal primes. The
 [dossier](ega/i719.md) supplies independent derivations and the hypothesis
 counterexamples. All statements and separately owned proof passages are bound
 to exact French and English source slices. Existing Stacks covers this
 mathematics, so no duplicate root theorem or new PDF build is introduced.
-The next source unit is **§7.1.10**; EGA remains incomplete.
+The next source unit at that checkpoint was §7.1.10.
 The [public readback](validation/ega-i-7.1.4-7.1.9.1-public-readback-2026-09-07.json)
 verifies every changed file at `e9a6a302f753d7a0564c1ca0cf323ffb9f07fb77`;
 its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34161450235).
+
+The current **EGA I §7.1.10–§7.1.14 comparison** describes rational maps
+through their generic local schemes. It separates uniqueness for locally
+finite-type targets from existence for locally finitely presented targets,
+retains the relative base structure, and derives invariance under localization
+at any point. The [written proofs and counterexamples](ega/i714.md) explain
+these distinctions using existing Stacks results. No duplicate root theorem
+or new PDF build is introduced. Next: **§7.1.15, including its introduction**.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -62,7 +70,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.1.9.1: generic morphism germs, rational-function rings, finite-component products, Artinianness and minimal-prime localization. Next: §7.1.10. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.1.14: generic-local descriptions of rational maps, finite-type uniqueness versus finite-presentation existence, and localization with the base structure retained. Next: §7.1.15. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
