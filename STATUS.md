@@ -57,6 +57,9 @@ retains the relative base structure, and derives invariance under localization
 at any point. The [written proofs and counterexamples](ega/i714.md) explain
 these distinctions using existing Stacks results. No duplicate root theorem
 or new PDF build is introduced. Next: **§7.1.15, including its introduction**.
+The [public readback](validation/ega-i-7.1.10-7.1.14-public-readback-2026-09-07.json)
+verifies every changed file at `bb84677f035925acfdc9a11c4ab880b16e3af732`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34162899426).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is

@@ -30,6 +30,9 @@ and [written comparison](../ega/i714.md) cover generic-local descriptions of
 rational maps, the distinct uniqueness/existence hypotheses, and localization
 with base compatibility. Complete source/proof ownership and prior ledger
 prefixes are preserved. Next: §7.1.15 with its preceding introduction.
+The [public byte readback](ega-i-7.1.10-7.1.14-public-readback-2026-09-07.json)
+verifies all 19 changed files at
+`bb84677f035925acfdc9a11c4ab880b16e3af732`, totaling 2,101,459 bytes.
 
 ## Preceding EGA I §7.1.4–§7.1.9.1 comparison
 
