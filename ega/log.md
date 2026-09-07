@@ -2493,3 +2493,68 @@ changed. This is not a claim of build, publication, machine proof or complete
 EGA coverage. The next source-order unit is EGA I 7.1.1, not 6.6.9.
 
 Candidate base: 01ec075c16e336eda3ab7ee8ff7a5de932a54ecf.
+
+## 2026-09-07 — bounded EGA I 7.1.1–7.1.3 semantic comparison
+
+Candidate base: exact public `16e9dec2e51a2e4f110b3bcddd9d2b62bbc21a5e`.
+Work is confined to the three named source units and the checkpoint's explicit
+write list. No root TeX, official tag, source authority, registry, issue,
+visual-evidence, reader, build, or remote operation belongs to this increment.
+
+The fixed French chapter is 38,226 UTF-8/LF bytes at SHA-256
+`73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522`.
+Lines 6–64 are the half-open byte interval `[154,2992)`, 2,838 bytes at
+`5A88FDB63A89E7F1023C1B7C6EF36288AE94DC601C0381AFB960531B185A7BE2`.
+The exact per-unit slices and historical authority-manifest join are recorded
+in `validation/ega-i-7.1.1-7.1.3-semantic-checkpoint-2026-09-07.json`.
+Frozen English discovery independently matches `ega/files.csv` at 35,788
+bytes and SHA-256
+`B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC`;
+its three `units.csv` identities and unreviewed discovery states are retained.
+
+Mathematical decision: use topological density in 01RS. The 01RX
+schematic-density variant is only a negative comparison. Restriction retains
+the equality witness `T` and uses `U intersect T`. The natural graph and
+affine-line correspondences descend to classes before defining the ring
+operations. There is no finite-component, reducedness, or separation gate.
+The `k[t,e]/(e^2,t*e)` example distinguishes schematic density and disproves
+injectivity of the canonical map from morphisms to rational classes.
+
+French line 36 and English line 22 initially supplied PROPOSED transcription
+evidence for the overlap overclaim. The production owner then independently
+compared the original printed authority and instructed preservation of that
+new primary finding. The implementation owner also visually inspected the
+complete relevant rendered original pp.155–156 (physical pages 154–155).
+Printed p.155 confirms the full-overlap overstatement. Its mathematical
+failure is independently witnessed by the explicit nonreduced affine example.
+This is an original-printing proof overstatement; the source-edition
+correction remains PROPOSED and no authority mutation is claimed. The exact
+NUMDAM PDF and independent visual-review identities are in the checkpoint.
+
+Append decisions D000334–D000336, edges S001291–S001302, residuals
+R000844–R000851, and audits A000262–A000263. Preserve all prior ledger bytes
+and the immutable 6.6.8 receipt. Workflow repair: evaluate the older receipt
+at its sealed postimage prefix and historical snapshot counters, retain exact
+sealed-ID adverse fixtures, and use public base
+`5817f4c1af8724b147401c785f57ca315b52e31c` in the historical test. Current
+scope counters are independently recomputed and sealed for the new frontier.
+
+Next executable semantic action after this bounded checkpoint: inspect and
+map EGA I 7.1.4 from exact source evidence. This is not complete EGA coverage.
+
+Final provenance replay: the archived original F37ZW manifest was recovered
+from the public French r1 evidence asset using the exact 3,866-byte HTTP range
+recorded in the checkpoint. Its raw-DEFLATE output is exactly 13,345 bytes at
+the admitted manifest hash; the original chapter-seven inventory row matches
+the independently fetched whole-file bytes. The complete 18-row canonical
+manifest serialization also recomputes to the admitted tree hash. Thus no
+new authority receipt or mutable-source inference is needed. The first
+checker failure additionally required an explicit stronger-target residual
+for the graph correspondence; R000851 supplies it without weakening coverage.
+
+Local validation: `python -B ega/check.py` PASS with zero errors;
+`python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic`
+PASS, 34 tests. The bounded whitespace check passes, and the explicitly
+checked protected root/authority/visual/discovery paths have no diff. These
+are structural and semantic-contract tests, not a formal mathematical proof.
+No TeX, PDF build, upstream contact, push, or publication was performed.

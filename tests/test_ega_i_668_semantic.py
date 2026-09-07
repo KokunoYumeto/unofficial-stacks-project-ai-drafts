@@ -1,4 +1,4 @@
-"""Bounded adverse tests for the three-unit EGA I 6.6.6-6.6.8 candidate."""
+"""Bounded adverse tests for the sealed EGA I 6.6.6-6.6.8 checkpoint."""
 import ast
 import copy
 import csv
@@ -32,6 +32,9 @@ class Semantic668Tests(unittest.TestCase):
         cls.verify = staticmethod(load_function("i668_semantic_contract_errors"))
         cls.frozen = json.loads(CHECKPOINT.read_text(encoding="utf-8"))
         cls.frozen_scope = json.loads((ROOT / "ega/scope.json").read_text(encoding="utf-8"))
+        # Only counters are historical: source slices still come from live scope.
+        for key in ("statement_review_snapshot", "residual_snapshot"):
+            cls.frozen_scope[key] = copy.deepcopy(cls.frozen[key])
         cls.frozen_tables = {}
         for entry in cls.frozen["ledgers"]:
             with (ROOT / entry["path"]).open(encoding="utf-8", newline="") as f:
@@ -55,6 +58,10 @@ class Semantic668Tests(unittest.TestCase):
         return self.verify(self.receipt, self.scope, self.tables, self.units,
                            loader or (lambda commit, path: self.blobs[path]), self.tags)
 
+    def sealed_rows(self, path):
+        return next(entry["rows"] for entry in self.receipt["ledgers"]
+                    if entry["path"] == path)
+
     def test_current_candidate_contract(self):
         self.assertEqual(self.errors(), [])
 
@@ -65,21 +72,22 @@ class Semantic668Tests(unittest.TestCase):
         self.assertEqual(self.receipt["starting_content_commit"],
                          "01ec075c16e336eda3ab7ee8ff7a5de932a54ecf")
 
-    def test_exact_base_prefixes_and_full_postimages(self):
+    def test_exact_base_prefixes_and_historical_postimages(self):
         for entry in self.receipt["ledgers"]:
             with self.subTest(path=entry["path"]):
                 raw = (ROOT / entry["path"]).read_bytes()
                 base = subprocess.check_output(["git", "show", PUBLIC_BASE + ":" + entry["path"]], cwd=ROOT)
                 self.assertTrue(raw.startswith(base))
                 self.assertEqual((len(base), hashlib.sha256(base).hexdigest().upper()), (entry["prefix_bytes"], entry["prefix_sha256"]))
-                self.assertEqual((len(raw), hashlib.sha256(raw).hexdigest().upper()), (entry["bytes"], entry["sha256"]))
+                historical = b"".join(raw.splitlines(keepends=True)[:entry["final_rows"] + 1])
+                self.assertEqual((len(historical), hashlib.sha256(historical).hexdigest().upper()), (entry["bytes"], entry["sha256"]))
 
     def test_wrong_next_cursor_is_rejected(self):
         self.receipt["next_semantic_cursor"] = "ega:I.6.6.9"
         self.assertTrue(self.errors())
 
     def test_every_new_edge_is_exactly_bound(self):
-        for row in self.frozen_tables["ega/smap.csv"][-24:]:
+        for row in self.sealed_rows("ega/smap.csv"):
             with self.subTest(edge=row["edge_id"]):
                 self.setUp()
                 target = next(r for r in self.tables["ega/smap.csv"] if r["edge_id"] == row["edge_id"])
@@ -94,11 +102,14 @@ class Semantic668Tests(unittest.TestCase):
                 self.assertTrue(self.errors())
 
     def test_duplicate_new_source_edge_rejected(self):
-        self.tables["ega/smap.csv"].append(copy.deepcopy(self.tables["ega/smap.csv"][-1]))
+        sealed_id = self.sealed_rows("ega/smap.csv")[0]["edge_id"]
+        target = next(r for r in self.tables["ega/smap.csv"]
+                      if r["edge_id"] == sealed_id)
+        self.tables["ega/smap.csv"].append(copy.deepcopy(target))
         self.assertTrue(self.errors())
 
     def test_each_residual_disposition_is_bound(self):
-        for row in self.frozen_tables["ega/resid.csv"][-10:]:
+        for row in self.sealed_rows("ega/resid.csv"):
             with self.subTest(residual=row["residual_id"]):
                 self.setUp()
                 target = next(r for r in self.tables["ega/resid.csv"] if r["residual_id"] == row["residual_id"])
@@ -131,12 +142,22 @@ class Semantic668Tests(unittest.TestCase):
         self.assertTrue(self.errors())
 
     def test_inactive_new_decision_rejected(self):
-        self.tables["ega/dec.csv"][-1]["state"] = "inactive"
-        self.assertTrue(self.errors())
+        for row in self.sealed_rows("ega/dec.csv"):
+            with self.subTest(decision=row["decision_id"]):
+                self.setUp()
+                target = next(r for r in self.tables["ega/dec.csv"]
+                              if r["decision_id"] == row["decision_id"])
+                target["state"] = "inactive"
+                self.assertTrue(self.errors())
 
     def test_audit_cannot_claim_build_or_publication(self):
-        self.tables["ega/agent.csv"][-1]["writes"] = "schemes.tex"
-        self.assertTrue(self.errors())
+        for row in self.sealed_rows("ega/agent.csv"):
+            with self.subTest(run=row["run_id"]):
+                self.setUp()
+                target = next(r for r in self.tables["ega/agent.csv"]
+                              if r["run_id"] == row["run_id"])
+                target["writes"] = "schemes.tex"
+                self.assertTrue(self.errors())
 
     def test_historical_665_receipt_is_immutable(self):
         history = self.receipt["historical_checkpoint"]

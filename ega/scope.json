@@ -388,6 +388,48 @@
       "slice_bytes": 475,
       "slice_sha256": "9A4CDA31A9FE669C6F5B75B93C7456083E15F0FDB19A528FCF94F907205AA5E0",
       "root_change": "none; componentwise coverage by pinned existing results"
+    },
+    "ega:I.7.1.1": {
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "ega1/ega1-7-fr.tex",
+      "full_bytes": 38226,
+      "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+      "lf_line_start": 6,
+      "lf_line_end": 15,
+      "byte_offset_end_exclusive": 591,
+      "slice_sha256": "D2AB4ABE6D0EFC8E2244615133A31600D5B27F544085D9F52850D7145744023B",
+      "byte_offset_start": 154,
+      "slice_bytes": 437,
+      "root_change": "none; existing dense-open definitions and natural restriction-compatible correspondences"
+    },
+    "ega:I.7.1.2": {
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "ega1/ega1-7-fr.tex",
+      "full_bytes": 38226,
+      "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+      "lf_line_start": 16,
+      "lf_line_end": 52,
+      "byte_offset_end_exclusive": 2508,
+      "slice_sha256": "92D3DD8A6E7C5E24957AABC57819CD4C6C1DEC2CA3F016A15A888D09010F8DCC",
+      "byte_offset_start": 591,
+      "slice_bytes": 1917,
+      "root_change": "none; existing dense-open definitions and natural restriction-compatible correspondences"
+    },
+    "ega:I.7.1.3": {
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "ega1/ega1-7-fr.tex",
+      "full_bytes": 38226,
+      "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+      "lf_line_start": 53,
+      "lf_line_end": 64,
+      "byte_offset_end_exclusive": 2992,
+      "slice_sha256": "863BDFD81315F4F5D37CCEF4CD5CFB7B3FD8D809E384C58A0847A73E2565FA7E",
+      "byte_offset_start": 2508,
+      "slice_bytes": 484,
+      "root_change": "none; existing dense-open definitions and natural restriction-compatible correspondences"
     }
   },
   "reviewed_errata_slices": {
@@ -455,8 +497,16 @@
       "superseded_malformed_post_cleanup_receipt_bytes": 1683,
       "superseded_malformed_post_cleanup_receipt_sha256": "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55",
       "retained_original_adverse_receipts": [
-        {"name": "Q37CU.json", "bytes": 2607, "sha256": "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"},
-        {"name": "Q37CV.json", "bytes": 599, "sha256": "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"}
+        {
+          "name": "Q37CU.json",
+          "bytes": 2607,
+          "sha256": "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"
+        },
+        {
+          "name": "Q37CV.json",
+          "bytes": 599,
+          "sha256": "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"
+        }
       ],
       "temporary_workspace": "C:/tmp/EGA-d48x",
       "temporary_workspace_state": "absent",
@@ -490,13 +540,41 @@
     "publication": false,
     "superseded_by": "DIA48T and Q37DB",
     "controls": [
-      {"name": "DIA48.json", "bytes": 187882, "sha256": "81ED020FDAACEE69DF64908301752EAED2E09F30477B604DF57176FEE102FD70"},
-      {"name": "DIA48R.json", "bytes": 188541, "sha256": "9D3CF29B1C6A2D641DC5C979B1EB663D82990459468CE7EA79A394CE2551B0F5"},
-      {"name": "DIA48S.json", "bytes": 189345, "sha256": "8AB46CA573E66C5049E775172B304FCFFE9AA14292D58E79F0DB2EF846C2F08D"},
-      {"name": "Q37CU.json", "bytes": 2607, "sha256": "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"},
-      {"name": "Q37CV.json", "bytes": 599, "sha256": "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"},
-      {"name": "Q37CW.json", "bytes": 4071, "sha256": "4EA9C9D8F856920EE1923DD377780666E45A57808CB6AF7B8EFC35C4A7A38AB6"},
-      {"name": "Q37CX.json", "bytes": 1683, "sha256": "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55"}
+      {
+        "name": "DIA48.json",
+        "bytes": 187882,
+        "sha256": "81ED020FDAACEE69DF64908301752EAED2E09F30477B604DF57176FEE102FD70"
+      },
+      {
+        "name": "DIA48R.json",
+        "bytes": 188541,
+        "sha256": "9D3CF29B1C6A2D641DC5C979B1EB663D82990459468CE7EA79A394CE2551B0F5"
+      },
+      {
+        "name": "DIA48S.json",
+        "bytes": 189345,
+        "sha256": "8AB46CA573E66C5049E775172B304FCFFE9AA14292D58E79F0DB2EF846C2F08D"
+      },
+      {
+        "name": "Q37CU.json",
+        "bytes": 2607,
+        "sha256": "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"
+      },
+      {
+        "name": "Q37CV.json",
+        "bytes": 599,
+        "sha256": "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"
+      },
+      {
+        "name": "Q37CW.json",
+        "bytes": 4071,
+        "sha256": "4EA9C9D8F856920EE1923DD377780666E45A57808CB6AF7B8EFC35C4A7A38AB6"
+      },
+      {
+        "name": "Q37CX.json",
+        "bytes": 1683,
+        "sha256": "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55"
+      }
     ],
     "defects": [
       "stale inventory source reader cursor and publication-gate fields",
@@ -513,11 +591,31 @@
     "reader_admitted": false,
     "publication": false,
     "controls": {
-      "reader": {"name": "B235.json", "bytes": 43066, "sha256": "BDCBF4BDB3ED548A194ABA75AF684348799610D04B00541FA31517031EFCF052"},
-      "referral_receipt": {"name": "RF14.json", "bytes": 45381, "sha256": "5041AB3E49171EFC993B5B059988F3B556D5B668DD58A373A47262F45434D255"},
-      "diagram_inventory": {"name": "DIA42R.json", "bytes": 144781, "sha256": "9AED25D5A883A75892568B7F17D754C26FA89F0EC82659E16D4BE63313FE0798"},
-      "closure": {"name": "REF14.json", "bytes": 9198, "sha256": "A455567EB62F0A560364E4FDA92167C8983ED6E19E3523C09EB9E94980EC6615"},
-      "cleanup_generator": {"name": "q37ckgen.ps1", "bytes": 14642, "sha256": "42E9FD3802AA6E538466B3B99733FF2431DB077324F34673A7AD049B35F00F83"}
+      "reader": {
+        "name": "B235.json",
+        "bytes": 43066,
+        "sha256": "BDCBF4BDB3ED548A194ABA75AF684348799610D04B00541FA31517031EFCF052"
+      },
+      "referral_receipt": {
+        "name": "RF14.json",
+        "bytes": 45381,
+        "sha256": "5041AB3E49171EFC993B5B059988F3B556D5B668DD58A373A47262F45434D255"
+      },
+      "diagram_inventory": {
+        "name": "DIA42R.json",
+        "bytes": 144781,
+        "sha256": "9AED25D5A883A75892568B7F17D754C26FA89F0EC82659E16D4BE63313FE0798"
+      },
+      "closure": {
+        "name": "REF14.json",
+        "bytes": 9198,
+        "sha256": "A455567EB62F0A560364E4FDA92167C8983ED6E19E3523C09EB9E94980EC6615"
+      },
+      "cleanup_generator": {
+        "name": "q37ckgen.ps1",
+        "bytes": 14642,
+        "sha256": "42E9FD3802AA6E538466B3B99733FF2431DB077324F34673A7AD049B35F00F83"
+      }
     },
     "candidate_reader": {
       "files": 7,
@@ -528,15 +626,51 @@
       "pdf_pages": 1347
     },
     "b235_rejected_replay_total_contradictions": [
-      {"record": "literal_output_argument_build_moved_to_b235_r0", "recorded_total_bytes": 0, "listed_file_total_bytes": 13522363},
-      {"record": "failed_wrapper_attempt_b235_r1", "recorded_total_bytes": 0, "listed_file_total_bytes": 1039408},
-      {"record": "one_pass_replay_b235_r2", "recorded_total_bytes": 0, "listed_file_total_bytes": 15953997}
+      {
+        "record": "literal_output_argument_build_moved_to_b235_r0",
+        "recorded_total_bytes": 0,
+        "listed_file_total_bytes": 13522363
+      },
+      {
+        "record": "failed_wrapper_attempt_b235_r1",
+        "recorded_total_bytes": 0,
+        "listed_file_total_bytes": 1039408
+      },
+      {
+        "record": "one_pass_replay_b235_r2",
+        "recorded_total_bytes": 0,
+        "listed_file_total_bytes": 15953997
+      }
     ],
     "q37ckgen_stale_identity_pins": [
-      {"record": "Q37CJ.json", "recorded_bytes": 7830, "recorded_sha256": "81620C1C70A8608EC395A062A05C13BFDC6CE9702E9A525E2BE8C877851F5B81", "actual_bytes": 7830, "actual_sha256": "2E5E25FEB421E4D9987EDB55FBFCA2AFB40C60F9AE67A9B77C5C6DB9D820FEF1"},
-      {"record": "ref14gen.ps1", "recorded_bytes": 13425, "recorded_sha256": "E3E28E18961D2F3B37B822C34698EC6CF101B95FA678ECBC583307385C43E0D0", "actual_bytes": 13425, "actual_sha256": "D39B5FE81B13B56817381F630B3515110F0F5472E96F24DFC52E3129FE5E7260"},
-      {"record": "ref14seal.ps1", "recorded_bytes": 39736, "recorded_sha256": "EBC6D9D6672C0651C168FB90126C2B3D5B12C2BA1BD931FE30535F6E9A4A3772", "actual_bytes": 34143, "actual_sha256": "455671605E4444095AD66B1FC6A0A3F3B31FB26D178C9B604AEBADB03561E808"},
-      {"record": "ref14final.ps1", "recorded_bytes": 14033, "recorded_sha256": "23AE7F853CBA890C6BF0959BC29F2D30814F08A7AEBC1B3F555608E3B0339FF6", "actual_bytes": 11837, "actual_sha256": "32312BC1A585996E419697A816002F3167DDC4F45F56BE1FC56DA84DFC3A568C"}
+      {
+        "record": "Q37CJ.json",
+        "recorded_bytes": 7830,
+        "recorded_sha256": "81620C1C70A8608EC395A062A05C13BFDC6CE9702E9A525E2BE8C877851F5B81",
+        "actual_bytes": 7830,
+        "actual_sha256": "2E5E25FEB421E4D9987EDB55FBFCA2AFB40C60F9AE67A9B77C5C6DB9D820FEF1"
+      },
+      {
+        "record": "ref14gen.ps1",
+        "recorded_bytes": 13425,
+        "recorded_sha256": "E3E28E18961D2F3B37B822C34698EC6CF101B95FA678ECBC583307385C43E0D0",
+        "actual_bytes": 13425,
+        "actual_sha256": "D39B5FE81B13B56817381F630B3515110F0F5472E96F24DFC52E3129FE5E7260"
+      },
+      {
+        "record": "ref14seal.ps1",
+        "recorded_bytes": 39736,
+        "recorded_sha256": "EBC6D9D6672C0651C168FB90126C2B3D5B12C2BA1BD931FE30535F6E9A4A3772",
+        "actual_bytes": 34143,
+        "actual_sha256": "455671605E4444095AD66B1FC6A0A3F3B31FB26D178C9B604AEBADB03561E808"
+      },
+      {
+        "record": "ref14final.ps1",
+        "recorded_bytes": 14033,
+        "recorded_sha256": "23AE7F853CBA890C6BF0959BC29F2D30814F08A7AEBC1B3F555608E3B0339FF6",
+        "actual_bytes": 11837,
+        "actual_sha256": "32312BC1A585996E419697A816002F3167DDC4F45F56BE1FC56DA84DFC3A568C"
+      }
     ],
     "semantic_scaffold": {
       "postimage_bytes": 556040,
@@ -544,7 +678,10 @@
       "last_admitted_prefix_bytes": 550780,
       "last_admitted_prefix_sha256": "4CFF390349293917941915848B04F31092B5921ED2127750F73FC3D94D62E3C9"
     },
-    "missing_cleanup_receipts": ["Q37CK.json", "Q37CL.json"],
+    "missing_cleanup_receipts": [
+      "Q37CK.json",
+      "Q37CL.json"
+    ],
     "temporary_workspace": "C:/tmp/EGA-ref14",
     "temporary_workspace_state": "present",
     "disposition": "retain as exact adverse history; corrected REF14R and Q37CL followed by the admitted D44 DIA44 Q37CM Q37CN successor without rewriting this failed snapshot"
@@ -567,19 +704,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 1283,
-    "file_rows": 1290,
+    "statement_edge_rows": 1295,
+    "file_rows": 1302,
     "superseded_rows": 7,
-    "source_units": 425,
-    "existing_official_tag_rows": 1270,
-    "distinct_existing_official_tags": 354,
+    "source_units": 428,
+    "existing_official_tag_rows": 1282,
+    "distinct_existing_official_tags": 356,
     "local_untagged_rows": 13,
-    "full_statement_equivalences": 61
+    "full_statement_equivalences": 62
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 818,
-    "file_rows": 843,
+    "rows": 826,
+    "file_rows": 851,
     "superseded_rows": 25,
     "open_gaps": 12,
     "integrated_local_mirror": 13
@@ -613,13 +750,41 @@
     "crop_bytes": 6022269
   },
   "governance_prefixes": {
-    "vqa": {"rows": 20, "bytes": 19650, "sha256": "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF"},
-    "rejected_visual_qa": {"rows": 9, "bytes": 2964, "sha256": "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0"},
-    "pages": {"rows": 29, "bytes": 9362, "sha256": "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08"},
-    "source_error_qa": {"rows": 6, "bytes": 1985, "sha256": "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E"},
-    "decisions": {"rows": 203, "bytes": 49604, "sha256": "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30"},
-    "issues": {"rows": 61, "bytes": 24019, "sha256": "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34"},
-    "findings": {"rows": 16, "bytes": 19629, "sha256": "53C3654734C7902496888FD10707B523EDB554D331FE9598590010C62B359720"}
+    "vqa": {
+      "rows": 20,
+      "bytes": 19650,
+      "sha256": "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF"
+    },
+    "rejected_visual_qa": {
+      "rows": 9,
+      "bytes": 2964,
+      "sha256": "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0"
+    },
+    "pages": {
+      "rows": 29,
+      "bytes": 9362,
+      "sha256": "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08"
+    },
+    "source_error_qa": {
+      "rows": 6,
+      "bytes": 1985,
+      "sha256": "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E"
+    },
+    "decisions": {
+      "rows": 203,
+      "bytes": 49604,
+      "sha256": "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30"
+    },
+    "issues": {
+      "rows": 61,
+      "bytes": 24019,
+      "sha256": "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34"
+    },
+    "findings": {
+      "rows": 16,
+      "bytes": 19629,
+      "sha256": "53C3654734C7902496888FD10707B523EDB554D331FE9598590010C62B359720"
+    }
   },
   "edition_interface": "interface.json",
   "correction_channel": "reports/findings.jsonl",

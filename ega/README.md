@@ -17,14 +17,19 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order review through **EGA I §6.6.8**. The next
-unit is **§7.1.1**; EGA as a whole is not complete. Sections 6.6.6–6.6.8
-cover permanence of locally finite-type morphisms, locally Noetherian fibre
-products, and three geometric-point/residue-field arguments. They are derived
-from existing Stacks results with the original hypotheses retained, so no
-duplicate theorem or root TeX edit is added.
+This tree records source-order semantic comparison through **EGA I §7.1.3**.
+The next unit is **§7.1.4**; EGA as a whole is not complete. The new slice
+compares rational maps, rational sections, restriction, and the ring of
+rational functions with existing Stacks definitions. It introduces no
+duplicate theorem, root TeX edit, reducedness assumption, or finiteness
+assumption on the irreducible components.
 
-The [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+The [bounded semantic checkpoint](../validation/ega-i-7.1.1-7.1.3-semantic-checkpoint-2026-09-07.json)
+records exact source slices, pinned targets, independent derivations, and
+append-only ledger identities. Production validation and publication are
+separate from this local semantic checkpoint.
+
+The preceding [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
 records the passing semantic tests and full repository check. It supersedes
 the *state* of the immutable candidate receipt, not its evidence bytes.
 Public GitHub already includes §6.6.4's proof completion and §6.6.5's
@@ -925,7 +930,7 @@ only; chapter edits still require direct French evidence, explicit residuals,
 bounded mathematical review, visual evidence when applicable, and owner
 verification.
 
-## EGA I 6.6.6–6.6.8: locally finite type and geometric points
+## Historical EGA I 6.6.6–6.6.8: locally finite type and geometric points
 
 The semantic comparison covers the six local-finite-type permanence
 assertions of 6.6.6, the locally Noetherian fibre product of 6.6.7, and the
@@ -948,4 +953,34 @@ in [the immutable candidate receipt](../validation/ega-i-6.6.6-6.6.8-semantic-ch
 The later [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
 records the successful checks separately. No root TeX, tag, authority,
 registry or PDF input changes. This is not a machine-checked proof or complete
-EGA coverage. The next source-order unit is EGA I 7.1.1, not 6.6.9.
+EGA coverage. At that checkpoint the next unit was EGA I 7.1.1, not 6.6.9.
+
+## EGA I 7.1.1–7.1.3: rational maps and rational functions
+
+D000334–D000336, S001291–S001302, R000844–R000851, and A000262–A000263
+record twelve existing-target edges and eight residual dispositions. Tags
+01RS, 01RT, 01RU, 01JP, 01JH, and 01M0 provide the definitions and natural
+correspondences. The independent arguments explain restriction, the quotient
+map from morphisms, the graph/section correspondence, and the ring operations.
+
+Both EGA and pinned 01RS use topologically dense open domains. The schematic
+variant 01RX is retained only as a negative comparison. For
+`A = k[t,e]/(e^2,t*e)`, the distinct functions `0` and `e` agree on dense
+`D(t)` but not on any schematically dense witness. Thus the canonical map
+from morphisms to rational classes need not be injective.
+
+Restriction must retain a dense equality witness: if representatives on
+`V` and `W` agree on `T`, their restrictions to an open `U` agree on
+`U intersect T`, not necessarily on the entire overlap. The fixed French
+transcription at line 36 and English discovery at line 22 overclaim the latter.
+Independent visual comparison with original EGA I printed p.155 (physical
+PDF page 154) confirms an **original-printing proof overstatement**. The
+source-edition correction remains **PROPOSED**: no authority text, issue
+ledger, or source-error receipt is changed. The valid
+restriction statement is proved independently, without delaying the semantic
+comparison or importing the later maximal-domain hypotheses.
+
+The ring identification uses all dense open domains; no finite-component
+computation is needed. Existing visual and source-edition residuals remain
+unchanged. The preceding 6.6.8 receipt and ledger postimages are immutable
+historical prefixes, and the new full-ledger counters are checked separately.
