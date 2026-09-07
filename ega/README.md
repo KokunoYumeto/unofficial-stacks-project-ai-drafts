@@ -957,11 +957,17 @@ EGA coverage. At that checkpoint the next unit was EGA I 7.1.1, not 6.6.9.
 
 ## EGA I 7.1.1–7.1.3: rational maps and rational functions
 
-D000334–D000336, S001291–S001302, R000844–R000851, and A000262–A000263
-record twelve existing-target edges and eight residual dispositions. Tags
-01RS, 01RT, 01RU, 01JP, 01JH, and 01M0 provide the definitions and natural
-correspondences. The independent arguments explain restriction, the quotient
-map from morphisms, the graph/section correspondence, and the ring operations.
+EGA's rational maps are represented by morphisms defined on dense open
+subsets, identified when they agree on a smaller dense open. Existing Stacks
+definitions and universal properties give rational sections, their graph
+correspondence, and the interpretation of rational functions as sections of
+the structure sheaf on dense opens. Addition and multiplication are computed
+after restricting to a common dense domain.
+
+The comparison uses tags 01RS, 01RT, 01RU, 01JP, 01JH and 01M0, with the
+restriction-compatible derivations recorded explicitly. It adds no duplicate
+root theorem. The exact ledger references are D000334–D000336,
+S001291–S001302, R000844–R000851 and A000262–A000263.
 
 Both EGA and pinned 01RS use topologically dense open domains. The schematic
 variant 01RX is retained only as a negative comparison. For

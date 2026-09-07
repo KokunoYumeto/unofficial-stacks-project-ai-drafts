@@ -22,8 +22,18 @@ It changes no root TeX or PDF input. The separate
 records the passing 16-test semantic suite and full repository check.
 The checkpoint is public at `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`;
 [anonymous readback](validation/ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
-matched all 15 changed files (1,888,511 bytes). The next source unit is
-EGA I §7.1.1, not completion of EGA.
+matched all 15 changed files (1,888,511 bytes). The later test-fixture repair
+passed [exact-head CI](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34154661350)
+at `bc2db1e2b9829bff6c1d98091f40bbc6a312e9b0`, preserving the historical
+receipts and their source hashes.
+
+The next comparison covers **EGA I §7.1.1–§7.1.3: rational maps and rational
+functions**. Existing Stacks results supply the definitions, restriction,
+graph/section correspondence and ring operations. A direct check of the
+original printed page confirms a proof overstatement about agreement on an
+entire overlap; the comparison supplies the correct dense-witness argument.
+No duplicate root theorem is added. The next source unit is §7.1.4; EGA
+remains incomplete.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -37,7 +47,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The public comparison reaches §6.6.8, using existing Stacks results without duplicate root theorems in this slice. Next: §7.1.1. Source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.1.3: rational maps, rational sections and rational functions, with the corrected dense-witness restriction argument. Next: §7.1.4. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

@@ -240,8 +240,8 @@ receipt also binds archive-member replay and the 25-PDF, 2,492-page,
 for their exact immutable versions; this historical R27 release is not evidence
 that the active EGA I--IV integration program is complete.
 
-The current public EGA semantic checkpoint covers EGA I through §6.6.3 and
-advances the next cursor to §6.6.4. The exact checkpoint is
+The historical EGA semantic checkpoint described in this subsection covered
+EGA I through §6.6.3 and advanced its cursor to §6.6.4. Its exact checkpoint is
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
 (SHA-256 `58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E`),
 bound to content commit `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`, GitHub tag

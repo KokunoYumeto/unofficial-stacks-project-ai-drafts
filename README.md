@@ -135,12 +135,19 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §6.6.8; the next source unit is §7.1.1. The earlier §6.6.4 contribution
+EGA I §7.1.3; the next source unit is §7.1.4. The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
 permanence of locally finite-type morphisms, locally Noetherian fibre products,
 and geometric-point tests to existing Stacks results, with their precise
 hypotheses retained. These comparisons add no duplicate root theorem.
+Sections 7.1.1–7.1.3 explain rational maps, rational sections, and the ring
+of rational functions using the existing Stacks definitions. The comparison
+also corrects an overstatement in EGA's printed restriction argument:
+representatives agree on a dense open witness, not necessarily on their
+entire overlap. The original remains available for comparison; the draft
+gives the corrected argument and an explicit counterexample to the stronger
+claim. See the [rational-map comparison](ega/README.md#ega-i-711713-rational-maps-and-rational-functions).
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 

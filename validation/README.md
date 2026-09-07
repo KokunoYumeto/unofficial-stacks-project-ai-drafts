@@ -501,10 +501,10 @@ concept DOI `10.5281/zenodo.22135180`. The [R33 release
 receipt](stacks-errata-a04446e-r33-release-2026-08-30.json) binds content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b` and its exact public readback.
 
-## Current EGA I §6.6.3 semantic checkpoint
+## Historical EGA I §6.6.3 semantic checkpoint
 
-The current public EGA semantic checkpoint covers EGA I through §6.6.3 and
-sets §6.6.4 as the next cursor. The
+That historical public EGA semantic checkpoint covered EGA I through §6.6.3
+and set §6.6.4 as its next cursor. The
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
 receipt records a PASS semantic-only checkpoint at content commit
 `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`, tree
