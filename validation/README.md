@@ -23,13 +23,23 @@ verifies all 15 changed files at public content commit
 `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
 
-## Current EGA I §7.1.10–§7.1.14 comparison
+## Current EGA I §7.1.15–§7.1.16 comparison
+
+The [integration validation](ega-i-7.1.15-7.1.16-integration-validation-2026-09-07.json)
+and [written comparison](../ega/i716.md) explain rational maps from integral
+schemes as function-field-valued points, with the fibre, embedding and base-field
+compatibility kept explicit. The 226 passing checks bind complete introductions,
+proof ownership, historical ledger prefixes and the excluded §7.2 heading.
+Modern versus historical geometric-point terminology is a distinction, not an
+admitted erratum. Next: §7.2.1 with its section heading.
+
+## Preceding EGA I §7.1.10–§7.1.14 comparison
 
 The [integration validation](ega-i-7.1.10-7.1.14-integration-validation-2026-09-07.json)
 and [written comparison](../ega/i714.md) cover generic-local descriptions of
 rational maps, the distinct uniqueness/existence hypotheses, and localization
 with base compatibility. Complete source/proof ownership and prior ledger
-prefixes are preserved. Next: §7.1.15 with its preceding introduction.
+prefixes are preserved.
 The [public byte readback](ega-i-7.1.10-7.1.14-public-readback-2026-09-07.json)
 verifies all 19 changed files at
 `bb84677f035925acfdc9a11c4ab880b16e3af732`, totaling 2,101,459 bytes.

@@ -17,27 +17,27 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.1.14**.
-The next unit is **§7.1.15, including its introduction**; EGA as a whole is
-not complete. The new [comparison](i714.md) describes rational maps through
-their generic local schemes, separates finite-type uniqueness from
-finite-presentation existence, and proves localization invariance with the
-base structure retained. Counterexamples show why nilpotents, locality and
-base compatibility cannot be discarded. No duplicate root theorem is added.
+This tree records source-order semantic comparison through **EGA I §7.1.16**,
+completing §7.1. The next unit is **§7.2.1, including the section heading**;
+EGA as a whole is not complete. The new [comparison](i716.md) identifies
+rational maps from integral schemes with points valued in their function fields.
+It retains the fibre over the generic image, the chosen residue-field embedding
+and base-field compatibility. Historical “geometric point” terminology is
+distinguished from the modern algebraically closed convention.
 
-The [checkpoint](../validation/ega-i-7.1.10-7.1.14-semantic-checkpoint-2026-09-07.json)
-binds complete French LF192–258 and English LF100–149, including the page
-marker, introductions and all four proof tails. The excluded next introduction
-is separately bound. The preceding [generic-germ/rational-ring dossier](i719.md)
-and its proof-ownership boundaries remain unchanged.
-There are 1,347 active statement edges across 446 source units and 849 active
+The [checkpoint](../validation/ega-i-7.1.15-7.1.16-semantic-checkpoint-2026-09-07.json)
+binds complete French LF259–289 and English LF150–168, including both
+introductions and the entire unwrapped French proof. The excluded next section
+heading is separately bound. The preceding [generic-local comparison](i714.md)
+and [generic-germ/rational-ring dossier](i719.md) remain unchanged.
+There are 1,362 active statement edges across 449 source units and 858 active
 residuals; the 12 open gaps are unchanged. These are bounded semantic records,
 not formal proof checking or a new authority edition.
 
 The [corrected preceding checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
 and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
-[integration validation](../validation/ega-i-7.1.10-7.1.14-integration-validation-2026-09-07.json)
+[integration validation](../validation/ega-i-7.1.15-7.1.16-integration-validation-2026-09-07.json)
 and public readback; candidate state is not silently rewritten as publication.
 
 The preceding [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)

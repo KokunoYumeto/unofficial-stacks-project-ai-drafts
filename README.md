@@ -135,7 +135,8 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.1.14; the next source unit is §7.1.15. The earlier §6.6.4 contribution
+EGA I §7.1.16, completing the comparison of §7.1; the next source unit is
+§7.2.1. The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
 permanence of locally finite-type morphisms, locally Noetherian fibre products,
@@ -160,6 +161,12 @@ generic local scheme, distinguish finite-type uniqueness from
 finite-presentation existence, and show why localization at a point preserves
 the rational-map set under the stated hypotheses. The [comparison](ega/i714.md)
 keeps the base-scheme structure and possible nilpotents explicit.
+The concluding corollaries 7.1.15–7.1.16 identify rational maps from an integral
+scheme with points valued in its function field. The [comparison](ega/i716.md)
+retains the chosen residue-field embedding and its compatibility with the base.
+It also explains why EGA's historical “geometric point” here is not the modern
+algebraically-closed-field convention. Existing Stacks results apply under weaker
+hypotheses; no duplicate theorem or formal-proof claim is introduced.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 

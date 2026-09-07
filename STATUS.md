@@ -50,16 +50,23 @@ The [public readback](validation/ega-i-7.1.4-7.1.9.1-public-readback-2026-09-07.
 verifies every changed file at `e9a6a302f753d7a0564c1ca0cf323ffb9f07fb77`;
 its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34161450235).
 
-The current **EGA I §7.1.10–§7.1.14 comparison** describes rational maps
+The preceding **EGA I §7.1.10–§7.1.14 comparison** describes rational maps
 through their generic local schemes. It separates uniqueness for locally
 finite-type targets from existence for locally finitely presented targets,
 retains the relative base structure, and derives invariance under localization
 at any point. The [written proofs and counterexamples](ega/i714.md) explain
 these distinctions using existing Stacks results. No duplicate root theorem
-or new PDF build is introduced. Next: **§7.1.15, including its introduction**.
+or new PDF build is introduced.
 The [public readback](validation/ega-i-7.1.10-7.1.14-public-readback-2026-09-07.json)
 verifies every changed file at `bb84677f035925acfdc9a11c4ab880b16e3af732`;
 its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34162899426).
+
+The current **EGA I §7.1.15–§7.1.16 comparison** completes §7.1 with
+rational maps as function-field-valued points. The [written argument](ega/i716.md)
+retains the chosen embedding and base compatibility, and distinguishes EGA's
+historical “geometric point” from its modern meaning. Both corollaries follow
+from existing, stronger Stacks results. No new root theorem or PDF is added.
+Next: **§7.2.1, including its section heading**.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -73,7 +80,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.1.14: generic-local descriptions of rational maps, finite-type uniqueness versus finite-presentation existence, and localization with the base structure retained. Next: §7.1.15. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison completes §7.1 through §7.1.16: rational maps from integral schemes as function-field-valued points, with the fibre, embedding and base compatibility retained. Next: §7.2.1. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
