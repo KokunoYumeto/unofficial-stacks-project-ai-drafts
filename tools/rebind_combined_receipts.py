@@ -103,6 +103,13 @@ for name in (
     value["composition"] = flat
     checkpoint = value.get("source_checkpoint")
     if isinstance(checkpoint, dict):
+        checkpoint["canonical_composition"] = {
+            "path": "validation/composition-current.json",
+            "git_blob": comp_blob,
+            "sha256": comp_sha,
+            "composition_source_commit": SOURCE,
+            "composition_source_tree": comp["composition"]["source_tree"],
+        }
         successor = checkpoint.get("semantic_successor")
         if isinstance(successor, dict) and isinstance(successor.get("canonical_composition"), dict):
             successor["canonical_composition"] = {
@@ -148,7 +155,7 @@ second_path = V / "stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json
 first_bytes = first_path.read_bytes()
 second_bytes = second_path.read_bytes()
 repro["scope"] = {
-    "admitted_errata": "R40-R47+Illusie-I.1.1",
+    "admitted_errata": "R1-R47",
     "registry_cutoff_commit": comp["registry"]["cutoff_commit"],
     "source_commit": HEAD,
     "source_tree": TREE,
