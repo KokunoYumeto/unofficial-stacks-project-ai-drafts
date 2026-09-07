@@ -13,6 +13,8 @@ COMP = V / "composition-current.json"
 HEAD = "afdbdc289cc4536179af90988eccb70fdfe67998"
 BASE = "3c7408047b09b6cba4c29cc37051c7276e0d4f8a"
 SOURCE = "281fd5674139c93c93b2d65390b2c5226e24f311"
+PREVIOUS_PUBLIC = "e083b71ac21e0ecb7508aa6a1067a1b0016d89a7"
+TREE = __import__("subprocess").check_output(["git", "rev-parse", "HEAD^{tree}"], cwd=ROOT, text=True).strip()
 
 
 def sha256(data: bytes) -> str:
@@ -41,8 +43,26 @@ comp["composition"]["base_commit"] = BASE
 comp["composition"]["base_tree"] = __import__("subprocess").check_output(["git", "rev-parse", f"{BASE}^{{tree}}"], cwd=ROOT, text=True).strip()
 comp["composition"]["source_commit"] = SOURCE
 comp["composition"]["source_tree"] = __import__("subprocess").check_output(["git", "rev-parse", f"{SOURCE}^{{tree}}"], cwd=ROOT, text=True).strip()
+comp["previous_cutoff"]["public_main_head"] = PREVIOUS_PUBLIC
+comp["previous_cutoff"]["public_main_tree"] = __import__("subprocess").check_output(["git", "rev-parse", f"{PREVIOUS_PUBLIC}^{{tree}}"], cwd=ROOT, text=True).strip()
 comp["registry"]["linear_import_commit"] = BASE
 comp["registry"]["linear_import_tree"] = comp["composition"]["base_tree"]
+old_chain = comp["registry"].get("linear_import_chain", [])
+current_subjects = {}
+for line in __import__("subprocess").check_output(["git", "log", "--format=%H%x09%s", "HEAD"], cwd=ROOT, text=True).splitlines():
+    commit, _, subject = line.partition("\t")
+    current_subjects.setdefault(subject, commit)
+rebased_chain = []
+for row in old_chain:
+    if not isinstance(row, dict) or not isinstance(row.get("import_commit"), str):
+        continue
+    subject = __import__("subprocess").check_output(["git", "show", "-s", "--format=%s", row["import_commit"]], cwd=ROOT, text=True).strip()
+    commit = current_subjects.get(subject, row["import_commit"])
+    rebased_chain.append({"registry_commit": row.get("registry_commit"), "import_commit": commit, "import_tree": __import__("subprocess").check_output(["git", "rev-parse", f"{commit}^{{tree}}"], cwd=ROOT, text=True).strip()})
+if rebased_chain:
+    rebased_chain[-1]["import_commit"] = BASE
+    rebased_chain[-1]["import_tree"] = comp["composition"]["base_tree"]
+    comp["registry"]["linear_import_chain"] = rebased_chain
 cmd = (
     "python tools/compose_overlay_projection.py --existing-rounds "
     + " ".join(str(i) for i in range(18, 40))
