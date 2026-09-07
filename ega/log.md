@@ -2669,3 +2669,85 @@ These are structural evidence and semantic-contract tests plus independent
 mathematical review, not formal proof checking. No source defect or new
 source theorem is claimed. Next executable semantic action is EGA I 7.1.10.
 Root production validation, exact-head CI, and publication are separate.
+
+## 2026-09-07 — EGA I 7.1.10–7.1.14 generic-local comparison
+
+Bounded production request: continue in source order from the validated
+I7.1.9.1 semantic base 434dd2a972b5f9ac87d8ca8e4ee57dd86cb89212,
+independently checking the saved preflight, complete French and English
+source ownership, mathematical mappings, and exact append-only history.
+Work is limited to the EGA evidence/checker, readable comparison, and new
+tests and raw-source verifier. Root TeX, authority, translations, tags,
+registry, public front-page documents, build artifacts, and publication
+remain outside this candidate's write scope. Root separately integrates,
+validates, and publishes the frozen candidate.
+
+The implementation owner independently fetched both immutable Chapter 7
+files and read every statement, construction, introduction and unwrapped
+proof. All twelve official target blocks were read at a04446e. An
+independent mathematical reviewer reproduced the source and target hashes,
+checked each comparison and the square-zero adverse examples, and found
+no source defect or nonduplicative new root theorem.
+
+D000347–D000351, S001346–S001366, R000872–R000882, and A000269–A000271
+cover five numbered items and four existing discovery proof units.
+Source-order spans include separating blank lines: French LF192–258 is
+2,946 bytes at SHA-256
+823B46AD17134D70DDA97FA336E70C1BC363074732A020148AA782101AE5F8DD;
+English LF100–149 is 2,604 bytes at SHA-256
+720843AF5DFEA50D0040E96E5EB03A2AAB2AB00BE0754ACE1265E32981A77C24.
+The page marker before 7.1.11 and introduction before 7.1.14 are bound
+outside their numbered environments. All four French unwrapped proofs
+and complete English proof wrappers are separately checked. Next is
+7.1.15 starting with its introduction, French LF259–261 / English LF150;
+that context is bound for continuation but excluded from current coverage.
+
+The readable derivations in ega/i714.md distinguish the unrestricted
+construction from local finite-type injection and local finite-presentation
+realization. The 01TX hypothesis conversion preserves EGA's locally
+Noetherian base. Valued points retain the generic local S-scheme,
+nilpotents, locality, and base-algebra compatibility. The canonical
+localization argument proves the generic stalk identity without claiming
+that the localization map is an open immersion. Stronger existing coverage
+is explicitly marked; no new root mathematics or formal proof checking
+is claimed. The earlier I6.5.1, I2.4.4 and I3.4.1 dependencies are reused.
+
+Current snapshot: 1,347 active statement edges, 1,366 physical rows,
+19 superseded rows, 446 source units, 1,334 official-tag edges, 364 distinct
+official tags, 13 local untagged edges, and 62 full-statement equivalences.
+Residuals: 849 active, 882 physical, 33 superseded; the 12 open gaps and
+13 integrated-local-mirror entries are unchanged. The I7.1.9.1 receipt,
+ledger postimages and source snapshots remain replayable as exact history.
+
+Before receipt freeze, the producer normalized the new stronger-coverage
+rows to the existing ledger vocabulary (entailed_by_stronger/component)
+and the read-only agent write list to "none". No prior row changed.
+The first checker run also found current frontier seals still bound to
+I7.1.9.1 and missing stronger-component dispositions for 7.1.12 and
+7.1.13. The producer updated only the current seals and added R000881–882
+while preserving those units' separate derived residuals. All 94 bounded
+historical/new tests already passed at that stage; the complete checker
+was not yet passing. No historical byte or source decision changed.
+The final candidate receipt is 68,899 bytes, SHA-256
+61E82663F9B8277A3D67CFF037216C2583F6D946989F61577051EB13BBA7B2E0.
+Postfreeze test outcomes are recorded below rather than rewriting it.
+
+Final validation:
+
+- `python -B ega/check.py`: PASS, zero errors.
+- Eight current and historical semantic/source-boundary modules covering
+  I6.6.8, I7.1.1–3, I7.1.4–9.1 and I7.1.10–14: 168 tests PASS in
+  35.443 seconds. The public-base ancestry and preserved-input checks pass.
+- `python -B tools/check_ega_i711014_source_boundaries.py`: PASS for both
+  exact raw sources, including all statement/proof/prefix witnesses and
+  the excluded next introduction; zero errors.
+- Independent final artifact review reproduced the final receipt,
+  all four exact ledger postimages and appends, historical prefixes,
+  and the R000881–882 stronger dispositions: PASS.
+- Scoped whitespace check: PASS. The fresh no-checkout index was
+  initialized to the entire immutable HEAD before staging candidate
+  paths; absent working files are not deletion instructions. Cached
+  attributes preserve the hash-bound LF serialization.
+
+No TeX, release, root-source composition, or authority/translation mutation
+was performed. Next semantic action remains I7.1.15 with its introduction.
