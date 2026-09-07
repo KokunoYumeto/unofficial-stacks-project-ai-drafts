@@ -822,11 +822,11 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # The scope manifest is resealed whenever the append-only ledger frontier
 # advances.  Keep the byte/hash pin here (rather than deriving it at runtime)
 # so an accidental edit cannot silently widen the reviewed surface.  The
-# current seal closes the EGA I 6.6.5 semantic-only checkpoint and preserves
+# current seal closes the EGA I 6.6.6-6.6.8 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 28754 or
+if (len(scope_raw) != 30645 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "A18405B8434295237C370E6B844984CE7057BB954FD7E3404FAD5320D88FB574"):
+        "A5334ECF303E5A6F7FA5125FF862ED5CA0D7DE350935C53BF122C48159BED1A1"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -904,7 +904,8 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
             "ega:I.6.5.1", "ega:I.6.5.2", "ega:I.6.5.3",
             "ega:I.6.5.4", "ega:I.6.5.5", "ega:I.6.6.1",
             "ega:I.6.6.2", "ega:I.6.6.3", "ega:I.6.6.4",
-            "ega:I.6.6.5"}):
+            "ega:I.6.6.5", "ega:I.6.6.6", "ega:I.6.6.7",
+            "ega:I.6.6.8"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -2125,9 +2126,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 89221 or
+if (len(decision_raw) != 90264 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "A9142AD44141F1EB80CB97D9BAA72FC16252DF796EBDABEA5D13160F26BE30A4"):
+    "A462E093609861F90AB0558F18C3AD4A6A58371E2CB9FDA762944199B36B7DBD"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5421,9 +5422,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 557436 or
+    if (len(smap_raw) != 570098 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "361ED24AAFB93DF37AD3ED2916D45C0549C2BC331597EC43A25B97CAEDA7DEC8"):
+        "91BBB557B983FE102C488241468E446AC5D8EAB46A22D95F7E2882078C2B9402"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6799,9 +6800,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 241649 or
+    if (len(residual_raw) != 245176 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "43F8FDED54FF108A33AEF0DC1E1A972EB553B96BF705CEBB28F3CADF49BF1146"):
+        "4D3794A21E47E294198150646C47FB4002CA2762B584F7FA65D16EDAAA0E621A"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8083,9 +8084,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 137321 or
+    if (len(agent_raw) != 138581 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "6ED42603CD1511AD02BDFD64D78FC05B1ACA6D59E842BC5DB2A95C54FA0432B7"):
+        "CE6C956D43469B5A127717D96FB5187C03ADFD2E859AE051EB96A006C45D26F2"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -8705,7 +8706,10 @@ i665_tables = {
     "ega/agent.csv": agent_rows,
 }
 ERRORS.extend(i665_semantic_contract_errors(
-    i665_checkpoint, scope, i665_tables, units_by_id,
+    i665_checkpoint, {**scope,
+        'statement_review_snapshot': i665_checkpoint['statement_review_snapshot'],
+        'residual_snapshot': i665_checkpoint['residual_snapshot']},
+    i665_tables, units_by_id,
     git_blob, pinned_tag_map))
 for i665_manifest in i665_checkpoint["ledgers"]:
     i665_ledger_raw = (ROOT.parent / i665_manifest["path"]).read_bytes()
@@ -8719,11 +8723,92 @@ for i665_manifest in i665_checkpoint["ledgers"]:
         i665_manifest["prefix_rows"] + 1, i665_manifest["final_rows"],
         i665_manifest["append_bytes"], i665_manifest["append_sha256"],
         i665_manifest["path"] + " EGA I 6.6.5 append block")
-    if (len(i665_ledger_raw) != i665_manifest["bytes"] or
-            hashlib.sha256(i665_ledger_raw).hexdigest().upper() !=
+    # Recheck the immutable historical postimage, now a strict ledger prefix.
+    i665_historical_raw = b"".join(i665_ledger_raw.splitlines(keepends=True)[
+        :i665_manifest["final_rows"] + 1])
+    if (len(i665_historical_raw) != i665_manifest["bytes"] or
+            hashlib.sha256(i665_historical_raw).hexdigest().upper() !=
             i665_manifest["sha256"]):
         ERRORS.append(
             "EGA I 6.6.5 ledger postimage changed: " + i665_manifest["path"])
+
+
+def i668_semantic_contract_errors(checkpoint, scope_state, tables,
+                                  discovery_units, target_loader, tag_map):
+    """Closed successor contract; historical rows are checked separately."""
+    problems = []
+    expected_units = ["ega:I.6.6.6", "ega:I.6.6.7", "ega:I.6.6.8"]
+    if (checkpoint.get("schema") != "ega-i-6.6.6-6.6.8-semantic-checkpoint/v1"
+            or checkpoint.get("source_units") != expected_units
+            or checkpoint.get("next_semantic_cursor") != "ega:I.7.1.1"
+            or checkpoint.get("stacks_upstream") != PINNED_STACKS_COMMIT):
+        problems.append("EGA I 6.6.6-6.6.8 identity or source-order cursor changed")
+    for unit in expected_units:
+        if scope_state.get("reviewed_source_slices", {}).get(unit) != (
+                checkpoint["french_authority"]["source_scopes"][unit]):
+            problems.append("EGA I 6.6.6-6.6.8 French slice changed: " + unit)
+    for key in ("statement_review_snapshot", "residual_snapshot"):
+        if scope_state.get(key) != checkpoint[key]:
+            problems.append("EGA I 6.6.6-6.6.8 current snapshot changed: " + key)
+    unit_ids = set(expected_units) | {"ega:I.6.6.6:proof", "ega:I.6.6.7:proof"}
+    for ledger in checkpoint["ledgers"]:
+        actual = tables[ledger["path"]]
+        key = ledger["id_field"]
+        by_id = {r[key]: r for r in actual}
+        for expected in ledger["rows"]:
+            if by_id.get(expected[key]) != expected:
+                problems.append("EGA I 6.6.6-6.6.8 exact row changed: " + expected[key])
+        if ledger["path"] in {"ega/smap.csv", "ega/resid.csv"}:
+            selected = [r for r in actual if r["source_unit"] in unit_ids]
+            if selected != ledger["rows"]:
+                problems.append("EGA I 6.6.6-6.6.8 source-unit closure changed")
+    for expected in checkpoint["english_discovery"]["stable_units"]:
+        if discovery_units.get(expected["unit_id"]) != expected:
+            problems.append("EGA I 6.6.6-6.6.8 discovery anchor changed")
+        if expected["authority_state"] != "english_discovery" or expected["review_state"] != "unreviewed":
+            problems.append("EGA I 6.6.6-6.6.8 discovery promotion forbidden")
+    joins = set()
+    for target in checkpoint["pinned_targets"]:
+        raw = target_loader(PINNED_STACKS_COMMIT, target["path"])
+        lines = raw.splitlines(keepends=True) if raw else []
+        block = b"".join(lines[target["lf_line_start"]-1:target["lf_line_end"]])
+        if (len(block) != target["bytes"]
+                or hashlib.sha256(block).hexdigest().upper() != target["sha256"]):
+            problems.append("EGA I 6.6.6-6.6.8 pinned target changed: " + target["tag"])
+        if tag_map.get(target["label"]) != target["tag"]:
+            problems.append("EGA I 6.6.6-6.6.8 pinned tag join changed")
+        joins.add((target["tag"], target["label"], target["path"]))
+    edge_joins = {(r["official_tag"], r["stacks_label"], r["stacks_file"])
+                  for r in tables["ega/smap.csv"] if r["source_unit"] in unit_ids}
+    if joins != edge_joins or any(t[0] == "0HCT" for t in joins):
+        problems.append("EGA I 6.6.6-6.6.8 target/edge closure changed")
+    return problems
+
+
+i668_checkpoint_raw = (ROOT.parent / "validation" /
+    "ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json").read_bytes()
+if (len(i668_checkpoint_raw) != 55413 or
+        hashlib.sha256(i668_checkpoint_raw).hexdigest().upper() != "AD6D4B6F3990B347C9CE9370ECABFA18FFB52D5329B2FC0612F1D7C2241B9C3A"):
+    ERRORS.append("EGA I 6.6.6-6.6.8 checkpoint identity mismatch")
+i668_checkpoint = json.loads(i668_checkpoint_raw.decode("utf-8"))
+ERRORS.extend(i668_semantic_contract_errors(
+    i668_checkpoint, scope, i665_tables, units_by_id, git_blob, pinned_tag_map))
+for manifest in i668_checkpoint["ledgers"]:
+    raw = (ROOT.parent / manifest["path"]).read_bytes()
+    require_strict_lf(raw, manifest["path"])
+    require_lf_prefix(raw, manifest["prefix_rows"] + 1,
+                      manifest["prefix_bytes"], manifest["prefix_sha256"],
+                      manifest["path"] + " through EGA I 6.6.5")
+    require_raw_block(raw.splitlines(keepends=True),
+                      manifest["prefix_rows"] + 1, manifest["final_rows"],
+                      manifest["append_bytes"], manifest["append_sha256"],
+                      manifest["path"] + " EGA I 6.6.6-6.6.8")
+    if len(raw) != manifest["bytes"] or hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]:
+        ERRORS.append("EGA I 6.6.6-6.6.8 final ledger changed")
+for item in i668_checkpoint["preserved_inputs"]:
+    raw = (ROOT.parent / item["path"]).read_bytes()
+    if len(raw) != item["bytes"] or hashlib.sha256(raw).hexdigest().upper() != item["sha256"]:
+        ERRORS.append("EGA I 6.6.6-6.6.8 protected input changed: " + item["path"])
 
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",

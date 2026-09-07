@@ -904,3 +904,27 @@ erratum witness. The complete English surface drives provisional candidates
 only; chapter edits still require direct French evidence, explicit residuals,
 bounded mathematical review, visual evidence when applicable, and owner
 verification.
+
+## 2026-09-06 — local candidate through EGA I 6.6.8
+
+The next semantic candidate covers the six local-finite-type permanence
+assertions of 6.6.6, the locally Noetherian fibre product of 6.6.7, and the
+three distinct extensions in 6.6.8. It adds 24 existing-target edges and ten
+explicit residual dispositions, not a new theorem. All earlier ledger bytes
+and source-edition visual residuals are retained unchanged.
+
+Local immersions are treated pointwise, not confused with globally injective
+immersions. The reduction argument uses pinned 0356; 0HCT is not an official
+tag at the pinned a044 baseline and is not used as one. The final remark
+separates surjectivity tested over every algebraically closed field, the
+closed-point/finite-residue-extension criterion, and surjectivity tested over
+one fixed algebraically closed extension of infinite transcendence degree.
+The last derivation uses a finite transcendence basis and extension of field
+embeddings; it does not invoke the defective converse proof of 0487.
+
+D000331--D000333, S001267--S001290, R000834--R000843 and A000260--A000261
+record the candidate. Its exact source, target and append-only bindings are
+in [the local semantic receipt](../validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json).
+No root TeX, tag, authority, registry, visual evidence or public artifact is
+changed. This is not a claim of build, publication, machine proof or complete
+EGA coverage. The next source-order unit is EGA I 7.1.1, not 6.6.9.
