@@ -2,9 +2,12 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from build_fixed_point import validate_import_preparation_topology
 V = ROOT / "validation"
 COMP = V / "composition-current.json"
 HEAD = "4d62d13fad147acc5f8ed70d80a63994d7c4bd7f"
@@ -81,12 +84,13 @@ flat.update({
     "new_overlay_intake_commits": [row["intake_commit"] for row in comp["new_overlays"]],
     "new_overlay_admission_commits": [row["admission_commit"] for row in comp["new_overlays"]],
     "required_build_stems": comp["required_build_stems"],
-    "affected_source_stems": list(comp["composition"]["affected_sources"]),
+    "affected_source_stems": [Path(p).stem for p in comp["composition"]["affected_sources"]],
     "affected_source_identities": comp["composition"]["affected_sources"],
     "registry_leases_path": comp["registry"]["leases_path"],
     "registry_leases_git_blob": comp["registry"]["leases_git_blob"],
     "registry_leases_sha256": comp["registry"]["leases_sha256"],
 })
+flat["import_preparation_topology"] = validate_import_preparation_topology(ROOT, comp)
 
 for name in (
     "stacks-errata-a04446e-r47-illusie-build-2026-09-07.json",
