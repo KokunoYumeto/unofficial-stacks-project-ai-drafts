@@ -14,7 +14,7 @@ HEAD = "afdbdc289cc4536179af90988eccb70fdfe67998"
 BASE = "3c7408047b09b6cba4c29cc37051c7276e0d4f8a"
 SOURCE = "281fd5674139c93c93b2d65390b2c5226e24f311"
 PREVIOUS_PUBLIC = "e083b71ac21e0ecb7508aa6a1067a1b0016d89a7"
-TREE = __import__("subprocess").check_output(["git", "rev-parse", "HEAD^{tree}"], cwd=ROOT, text=True).strip()
+TREE = __import__("subprocess").check_output(["git", "rev-parse", f"{HEAD}^{{tree}}"], cwd=ROOT, text=True).strip()
 
 
 def sha256(data: bytes) -> str:
@@ -135,6 +135,9 @@ for name in (
             "composition_source_commit": SOURCE,
             "composition_source_tree": comp["composition"]["source_tree"],
         }
+        if isinstance(checkpoint.get("post_content"), dict):
+            checkpoint["post_content"]["head_commit"] = HEAD
+            checkpoint["post_content"]["head_tree"] = TREE
         successor = checkpoint.get("semantic_successor")
         if isinstance(successor, dict) and isinstance(successor.get("canonical_composition"), dict):
             successor["canonical_composition"] = {
