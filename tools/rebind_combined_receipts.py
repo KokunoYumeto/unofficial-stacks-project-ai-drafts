@@ -47,6 +47,47 @@ comp_bytes = dump(COMP, comp)
 comp_sha = sha256(comp_bytes)
 comp_blob = blob_sha(comp_bytes)
 
+template_build = load(V / "stacks-errata-a04446e-r47-build-2026-09-06.json")
+flat = dict(template_build["composition"])
+flat.update({
+    "receipt": "validation/composition-current.json",
+    "receipt_sha256": comp_sha,
+    "receipt_git_blob": comp_blob,
+    "authority_commit": comp["authority"]["commit"],
+    "authority_tree": comp["authority"]["tree"],
+    "previous_public_main_head": comp["previous_cutoff"]["public_main_head"],
+    "previous_public_main_tree": comp["previous_cutoff"]["public_main_tree"],
+    "previous_registry_commit": comp["previous_cutoff"]["registry_commit"],
+    "previous_last_admitted_overlay": comp["previous_cutoff"]["last_admitted_overlay"],
+    "previous_source_blobs": comp["previous_cutoff"]["source_blobs"],
+    "composition_mode": comp["composition"]["mode"],
+    "composition_base_commit": comp["composition"]["base_commit"],
+    "composition_base_tree": comp["composition"]["base_tree"],
+    "composition_source_commit": comp["composition"]["source_commit"],
+    "composition_source_tree": comp["composition"]["source_tree"],
+    "registry_cutoff_commit": comp["registry"]["cutoff_commit"],
+    "registry_cutoff_tree": comp["registry"]["cutoff_tree"],
+    "registry_import_commit": comp["registry"]["linear_import_commit"],
+    "registry_import_tree": comp["registry"]["linear_import_tree"],
+    "registry_overlays_path": comp["registry"]["overlays_path"],
+    "registry_overlays_git_blob": comp["registry"]["overlays_git_blob"],
+    "registry_overlays_sha256": comp["registry"]["overlays_sha256"],
+    "registered_overlays": comp["registry"]["registered_overlays"],
+    "registered_stable_ids": comp["registry"]["registered_stable_ids"],
+    "last_admitted_overlay": comp["registry"]["last_admitted_overlay"],
+    "new_overlays": comp["new_overlays"],
+    "new_overlay_ids": [row["id"] for row in comp["new_overlays"]],
+    "new_overlay_candidate_commits": [row["candidate_commit"] for row in comp["new_overlays"]],
+    "new_overlay_intake_commits": [row["intake_commit"] for row in comp["new_overlays"]],
+    "new_overlay_admission_commits": [row["admission_commit"] for row in comp["new_overlays"]],
+    "required_build_stems": comp["required_build_stems"],
+    "affected_source_stems": list(comp["composition"]["affected_sources"]),
+    "affected_source_identities": comp["composition"]["affected_sources"],
+    "registry_leases_path": comp["registry"]["leases_path"],
+    "registry_leases_git_blob": comp["registry"]["leases_git_blob"],
+    "registry_leases_sha256": comp["registry"]["leases_sha256"],
+})
+
 for name in (
     "stacks-errata-a04446e-r47-illusie-build-2026-09-07.json",
     "stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json",
@@ -55,9 +96,7 @@ for name in (
     path = V / name
     value = load(path)
     value["source"] = {"commit": HEAD, "tree": TREE}
-    value["composition"] = dict(comp)
-    value["composition"]["receipt_sha256"] = comp_sha
-    value["composition"]["receipt_git_blob"] = comp_blob
+    value["composition"] = flat
     dump(path, value)
 
 # Rebind the full-schema visual receipt while retaining its bounded R40-R47
