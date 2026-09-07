@@ -12,6 +12,9 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 UPSTREAM = "a04446e57ec1fbc252a871afcec7752fb2807b14"
+# Same exact ledger preimages after the public source-preserving rebase.
+# Keep the candidate's historical starting commit unchanged in its receipt.
+PUBLIC_BASE = "5817f4c1af8724b147401c785f57ca315b52e31c"
 CHECKPOINT = ROOT / "validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json"
 
 
@@ -55,11 +58,18 @@ class Semantic668Tests(unittest.TestCase):
     def test_current_candidate_contract(self):
         self.assertEqual(self.errors(), [])
 
+    def test_public_base_is_reachable_without_rewriting_candidate_history(self):
+        self.assertEqual(subprocess.check_output(
+            ["git", "merge-base", PUBLIC_BASE, "HEAD"], cwd=ROOT).decode().strip(),
+            PUBLIC_BASE)
+        self.assertEqual(self.receipt["starting_content_commit"],
+                         "01ec075c16e336eda3ab7ee8ff7a5de932a54ecf")
+
     def test_exact_base_prefixes_and_full_postimages(self):
         for entry in self.receipt["ledgers"]:
             with self.subTest(path=entry["path"]):
                 raw = (ROOT / entry["path"]).read_bytes()
-                base = subprocess.check_output(["git", "show", self.receipt["starting_content_commit"] + ":" + entry["path"]], cwd=ROOT)
+                base = subprocess.check_output(["git", "show", PUBLIC_BASE + ":" + entry["path"]], cwd=ROOT)
                 self.assertTrue(raw.startswith(base))
                 self.assertEqual((len(base), hashlib.sha256(base).hexdigest().upper()), (entry["prefix_bytes"], entry["prefix_sha256"]))
                 self.assertEqual((len(raw), hashlib.sha256(raw).hexdigest().upper()), (entry["bytes"], entry["sha256"]))
