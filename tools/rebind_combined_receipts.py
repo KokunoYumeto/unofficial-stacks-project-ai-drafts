@@ -101,6 +101,17 @@ for name in (
     value = load(path)
     value["source"] = {"commit": HEAD, "tree": TREE}
     value["composition"] = flat
+    checkpoint = value.get("source_checkpoint")
+    if isinstance(checkpoint, dict):
+        successor = checkpoint.get("semantic_successor")
+        if isinstance(successor, dict) and isinstance(successor.get("canonical_composition"), dict):
+            successor["canonical_composition"] = {
+                "path": "validation/composition-current.json",
+                "git_blob": comp_blob,
+                "sha256": comp_sha,
+                "composition_source_commit": SOURCE,
+                "composition_source_tree": comp["composition"]["source_tree"],
+            }
     dump(path, value)
 
 # Rebind the full-schema visual receipt while retaining its bounded R40-R47
@@ -127,5 +138,28 @@ for stem, row in visual.get("artifacts", {}).items():
         row["pages"] = fresh["pages"]
 visual["created_utc"] = "2026-09-07T00:19:23Z"
 dump(visual_new, visual)
+
+# Refresh the reproducibility envelope after the two build receipts have their
+# final bytes and the successor checkpoint has been rebound.
+repro_path = V / "stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json"
+repro = load(repro_path)
+first_path = V / "stacks-errata-a04446e-r47-illusie-build-2026-09-07.json"
+second_path = V / "stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json"
+first_bytes = first_path.read_bytes()
+second_bytes = second_path.read_bytes()
+repro["scope"] = {
+    "admitted_errata": "R40-R47+Illusie-I.1.1",
+    "registry_cutoff_commit": comp["registry"]["cutoff_commit"],
+    "source_commit": HEAD,
+    "source_tree": TREE,
+    "composition_receipt": "validation/composition-current.json",
+    "composition_receipt_sha256": comp_sha,
+}
+repro["runs"] = {
+    "first": {"receipt": "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json", "created_utc": load(first_path)["created_utc"], "bytes": len(first_bytes), "sha256": sha256(first_bytes), "status": "PASS", "global_fixed_point_sweep": 4},
+    "second": {"receipt": "validation/stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json", "created_utc": load(second_path)["created_utc"], "bytes": len(second_bytes), "sha256": sha256(second_bytes), "status": "PASS", "global_fixed_point_sweep": 4},
+}
+repro["composition"] = flat
+dump(repro_path, repro)
 
 print(json.dumps({"composition_sha256": comp_sha, "composition_git_blob": comp_blob}))
