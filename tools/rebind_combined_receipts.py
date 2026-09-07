@@ -10,10 +10,9 @@ sys.path.insert(0, str(ROOT / "tools"))
 from build_fixed_point import validate_import_preparation_topology
 V = ROOT / "validation"
 COMP = V / "composition-current.json"
-HEAD = "4d62d13fad147acc5f8ed70d80a63994d7c4bd7f"
-TREE = "a62b9e8d340ff9a1844e65ec0080fdf11295cd9b"
-BASE = "284c5acef853029f603f5326ecaa0d6d52bbf5fe"
-SOURCE = "bb34cd90ea3da510cb21a01b14c7362f0a520872"
+HEAD = "afdbdc289cc4536179af90988eccb70fdfe67998"
+BASE = "3c7408047b09b6cba4c29cc37051c7276e0d4f8a"
+SOURCE = "281fd5674139c93c93b2d65390b2c5226e24f311"
 
 
 def sha256(data: bytes) -> str:
@@ -38,6 +37,12 @@ def dump(path: Path, value) -> bytes:
 
 
 comp = load(COMP)
+comp["composition"]["base_commit"] = BASE
+comp["composition"]["base_tree"] = __import__("subprocess").check_output(["git", "rev-parse", f"{BASE}^{{tree}}"], cwd=ROOT, text=True).strip()
+comp["composition"]["source_commit"] = SOURCE
+comp["composition"]["source_tree"] = __import__("subprocess").check_output(["git", "rev-parse", f"{SOURCE}^{{tree}}"], cwd=ROOT, text=True).strip()
+comp["registry"]["linear_import_commit"] = BASE
+comp["registry"]["linear_import_tree"] = comp["composition"]["base_tree"]
 cmd = (
     "python tools/compose_overlay_projection.py --existing-rounds "
     + " ".join(str(i) for i in range(18, 40))
