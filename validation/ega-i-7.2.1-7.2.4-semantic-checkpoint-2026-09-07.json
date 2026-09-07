@@ -1,0 +1,1535 @@
+{
+  "schema": "ega-i-7.2.1-7.2.4-semantic-checkpoint/v1",
+  "date": "2026-09-08",
+  "status": "SEMANTIC_CANDIDATE",
+  "starting_content_commit": "66b1df8ec9457cffbfae82ae398a983a43606438",
+  "stacks_upstream": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "source_units": [
+    "ega:I.7.2.1",
+    "ega:I.7.2.2",
+    "ega:I.7.2.2.1",
+    "ega:I.7.2.3",
+    "ega:I.7.2.4"
+  ],
+  "source_proof_units": [
+    "ega:I.7.2.2.1:proof",
+    "ega:I.7.2.3:proof",
+    "ega:I.7.2.4:proof"
+  ],
+  "next_semantic_cursor": "ega:I.7.2.5",
+  "next_cursor_starts_with_numbered_environment": true,
+  "scope": "Complete FR290-377 / EN169-226 including nested 7.2.2.1; existing-derived relative theorem and separately recorded absolute-domain ambiguity",
+  "workflow": [
+    "Preserve the existing partial candidate and its public-lineage base",
+    "Read pinned source and official target blocks; derive valid relative theorem and adverse cases",
+    "Append exact ledger rows and source scopes without altering historical prefixes or discovery units",
+    "Run EGA checker and current/historical semantic and raw-source boundary tests plus bounded live replay",
+    "Freeze only intended candidate files; root owns integration publication and public-byte readback"
+  ],
+  "durable_records": [
+    "ega/log.md",
+    "ega/i724.md",
+    "validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json"
+  ],
+  "preflight": {
+    "name": "EGA_I_7_2_1_4_PREFLIGHT_20260907.md",
+    "bytes": 26418,
+    "sha256": "604DD79A25907AA54872DD09E7BFCCD3DF4CA7EAF006C0659AB385498A0FA8B5",
+    "role": "comparison evidence independently checked; not source authority"
+  },
+  "french_authority": {
+    "manifest_file_binding": {
+      "status": "VERIFIED",
+      "manifest": "F37ZW.json",
+      "manifest_bytes": 13345,
+      "manifest_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "release_asset_url": "https://github.com/KokunoYumeto/ega-fr/releases/download/ega-fr-2026-08-22-r1/02_EGA_FR_EVIDENCE_AND_PROVENANCE.zip",
+      "nested_members": [
+        "predecessor/PREDECESSOR_EVIDENCE.zip",
+        "evidence/french-canon/controls/F37ZW.json"
+      ],
+      "replication": {
+        "http_status": 206,
+        "compressed_byte_range_inclusive": [
+          118283786,
+          118287651
+        ],
+        "compressed_bytes": 3866,
+        "compression": "raw DEFLATE",
+        "independent_manifest_hash_recomputation": "PASS"
+      },
+      "manifest_file_row": {
+        "relative_path": "ega1/ega1-7-fr.tex",
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522"
+      },
+      "canonical_tree": {
+        "file_count": 18,
+        "total_bytes": 1014921,
+        "serialization_bytes": 1625,
+        "sha256": "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
+        "independent_recomputation": "PASS"
+      }
+    },
+    "source_scopes": {
+      "ega:I.7.2.1": {
+        "receipt": "F37ZW.json",
+        "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+        "path": "ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "lf_line_start": 290,
+        "lf_line_end": 302,
+        "byte_offset_start": 13948,
+        "byte_offset_end_exclusive": 14529,
+        "slice_bytes": 581,
+        "slice_sha256": "18F785FF5F555A8DFB9270E0BF1D3A9B2313EE628127F536B7B2DB93FAFB301B",
+        "root_change": "none; existing-derived with explicit domain-convention ambiguity",
+        "ownership": "Contiguous storage scope; semantic owners are separately bound including parent consequence after the nested lemma"
+      },
+      "ega:I.7.2.2": {
+        "receipt": "F37ZW.json",
+        "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+        "path": "ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "lf_line_start": 303,
+        "lf_line_end": 315,
+        "byte_offset_start": 14529,
+        "byte_offset_end_exclusive": 15034,
+        "slice_bytes": 505,
+        "slice_sha256": "F673B701A06F1EA24D93E33D0665EACE45370AE54764FBE19BFF2594953A7FEB",
+        "root_change": "none; existing-derived with explicit domain-convention ambiguity",
+        "ownership": "Contiguous storage scope; semantic owners are separately bound including parent consequence after the nested lemma"
+      },
+      "ega:I.7.2.2.1": {
+        "receipt": "F37ZW.json",
+        "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+        "path": "ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "lf_line_start": 316,
+        "lf_line_end": 349,
+        "byte_offset_start": 15034,
+        "byte_offset_end_exclusive": 16940,
+        "slice_bytes": 1906,
+        "slice_sha256": "A5AA31E1A84CC29F275D389FA2496C62CD57828CB7039A5C5DAA62658CF99B21",
+        "root_change": "none; existing-derived with explicit domain-convention ambiguity",
+        "ownership": "Contiguous storage scope; semantic owners are separately bound including parent consequence after the nested lemma"
+      },
+      "ega:I.7.2.3": {
+        "receipt": "F37ZW.json",
+        "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+        "path": "ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "lf_line_start": 350,
+        "lf_line_end": 362,
+        "byte_offset_start": 16940,
+        "byte_offset_end_exclusive": 17505,
+        "slice_bytes": 565,
+        "slice_sha256": "743C6D591DC1DAB9C258D1F4A8B004ACEF9FA2EBF82516AF46AD5B34719C2215",
+        "root_change": "none; existing-derived with explicit domain-convention ambiguity",
+        "ownership": "Contiguous storage scope; semantic owners are separately bound including parent consequence after the nested lemma"
+      },
+      "ega:I.7.2.4": {
+        "receipt": "F37ZW.json",
+        "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+        "path": "ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "lf_line_start": 363,
+        "lf_line_end": 377,
+        "byte_offset_start": 17505,
+        "byte_offset_end_exclusive": 18241,
+        "slice_bytes": 736,
+        "slice_sha256": "94409AF302BB2123976F5C1FF5D99E4E059C8FB65E1B4047B20F6D77A80A59E8",
+        "root_change": "none; existing-derived with explicit domain-convention ambiguity",
+        "ownership": "Contiguous storage scope; semantic owners are separately bound including parent consequence after the nested lemma"
+      }
+    },
+    "manifest_binding_provenance": "Inherited immutable F37ZW binding; current raw source bytes independently rehashed. No new archive retrieval claimed."
+  },
+  "english_discovery": {
+    "stable_units": [
+      {
+        "unit_id": "ega:I.7.2.1",
+        "volume": "I",
+        "kind": "statement",
+        "source_number": "7.2.1",
+        "source_label": "I.7.2.1",
+        "parent_id": "ega:subsection:I.7.2",
+        "printed_page": "I:158",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "174",
+        "anchor_sha256": "B7DC05628AA365CC618AD70C6D62071A833A7090E3C4F347FCF00314BD4827C6",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.2",
+        "volume": "I",
+        "kind": "proposition",
+        "source_number": "7.2.2",
+        "source_label": "I.7.2.2",
+        "parent_id": "ega:subsection:I.7.2",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "182",
+        "anchor_sha256": "9AA786CCFB0F2683D27C08C454F927BE333EB4E5C7B464B656975EA47A80691D",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.2.1",
+        "volume": "I",
+        "kind": "lemma",
+        "source_number": "7.2.2.1",
+        "source_label": "I.7.2.2.1",
+        "parent_id": "ega:subsection:I.7.2",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "191",
+        "anchor_sha256": "BF5123836F683E19845099EB559748A2C6CEDF0BC5D4AFC958C1B4EE3857D33E",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.2.1:proof",
+        "volume": "I",
+        "kind": "proof",
+        "source_number": "proof",
+        "source_label": "",
+        "parent_id": "ega:I.7.2.2.1",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "196",
+        "anchor_sha256": "82254B80D75A93E42D5A0698010614566C6A1DC34F33F625898E6FD258B9C778",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.3",
+        "volume": "I",
+        "kind": "corollary",
+        "source_number": "7.2.3",
+        "source_label": "I.7.2.3",
+        "parent_id": "ega:subsection:I.7.2",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "208",
+        "anchor_sha256": "C698C9482874E381278514EA61747554807B8D93375E842D5DE2A89E884D0D7E",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.3:proof",
+        "volume": "I",
+        "kind": "proof",
+        "source_number": "proof",
+        "source_label": "",
+        "parent_id": "ega:I.7.2.3",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "213",
+        "anchor_sha256": "82254B80D75A93E42D5A0698010614566C6A1DC34F33F625898E6FD258B9C778",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.4",
+        "volume": "I",
+        "kind": "corollary",
+        "source_number": "7.2.4",
+        "source_label": "I.7.2.4",
+        "parent_id": "ega:subsection:I.7.2",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "218",
+        "anchor_sha256": "EBC56E20237BA0A15EC4F715C0723C2C37F9C3CA680DBAAD3B4AA1D89FD5D65A",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      },
+      {
+        "unit_id": "ega:I.7.2.4:proof",
+        "volume": "I",
+        "kind": "proof",
+        "source_number": "proof",
+        "source_label": "",
+        "parent_id": "ega:I.7.2.4",
+        "printed_page": "I:159",
+        "source_file": "ega1/ega1-7.tex",
+        "line": "223",
+        "anchor_sha256": "82254B80D75A93E42D5A0698010614566C6A1DC34F33F625898E6FD258B9C778",
+        "authority_state": "english_discovery",
+        "review_state": "unreviewed"
+      }
+    ],
+    "role": "discovery only; unchanged and unreviewed"
+  },
+  "languages": {
+    "fr": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-7-fr.tex",
+      "full_bytes": 38226,
+      "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+      "slices": {
+        "ega:I.7.2.1": {
+          "lf_line_start": 290,
+          "lf_line_end": 302,
+          "bytes": 581,
+          "sha256": "18F785FF5F555A8DFB9270E0BF1D3A9B2313EE628127F536B7B2DB93FAFB301B",
+          "byte_offset_start": 13948,
+          "byte_offset_end_exclusive": 14529
+        },
+        "ega:I.7.2.2": {
+          "lf_line_start": 303,
+          "lf_line_end": 315,
+          "bytes": 505,
+          "sha256": "F673B701A06F1EA24D93E33D0665EACE45370AE54764FBE19BFF2594953A7FEB",
+          "byte_offset_start": 14529,
+          "byte_offset_end_exclusive": 15034
+        },
+        "ega:I.7.2.2.1": {
+          "lf_line_start": 316,
+          "lf_line_end": 349,
+          "bytes": 1906,
+          "sha256": "A5AA31E1A84CC29F275D389FA2496C62CD57828CB7039A5C5DAA62658CF99B21",
+          "byte_offset_start": 15034,
+          "byte_offset_end_exclusive": 16940
+        },
+        "ega:I.7.2.3": {
+          "lf_line_start": 350,
+          "lf_line_end": 362,
+          "bytes": 565,
+          "sha256": "743C6D591DC1DAB9C258D1F4A8B004ACEF9FA2EBF82516AF46AD5B34719C2215",
+          "byte_offset_start": 16940,
+          "byte_offset_end_exclusive": 17505
+        },
+        "ega:I.7.2.4": {
+          "lf_line_start": 363,
+          "lf_line_end": 377,
+          "bytes": 736,
+          "sha256": "94409AF302BB2123976F5C1FF5D99E4E059C8FB65E1B4047B20F6D77A80A59E8",
+          "byte_offset_start": 17505,
+          "byte_offset_end_exclusive": 18241
+        }
+      },
+      "numbered_environments": {
+        "ega:I.7.2.1": {
+          "label": "I.7.2.1-fr",
+          "environment": "env",
+          "begin_line": 293,
+          "label_line": 294,
+          "closing_line": 301,
+          "lf_line_start": 293,
+          "lf_line_end": 301,
+          "bytes": 484,
+          "sha256": "961E32B4C587461879B6793BCF80086DF2B0F9196983E631860E95B894BB801D",
+          "byte_offset_start": 14044,
+          "byte_offset_end_exclusive": 14528
+        },
+        "ega:I.7.2.2": {
+          "label": "I.7.2.2-fr",
+          "environment": "proposition",
+          "begin_line": 304,
+          "label_line": 305,
+          "closing_line": 310,
+          "lf_line_start": 304,
+          "lf_line_end": 310,
+          "bytes": 331,
+          "sha256": "E6574B6A876AD301502BF932E1614D95F7D98F2DFB1892F6FCC13D72748AEDAA",
+          "byte_offset_start": 14546,
+          "byte_offset_end_exclusive": 14877
+        },
+        "ega:I.7.2.2.1": {
+          "label": "I.7.2.2.1-fr",
+          "environment": "lemma",
+          "begin_line": 316,
+          "label_line": 317,
+          "closing_line": 323,
+          "lf_line_start": 316,
+          "lf_line_end": 323,
+          "bytes": 376,
+          "sha256": "D5DF8DEFD1C9719A52BCC8AFD7F667D42543AEAA3A40D04D3856B2D5B0D6DA4A",
+          "byte_offset_start": 15034,
+          "byte_offset_end_exclusive": 15410
+        },
+        "ega:I.7.2.3": {
+          "label": "I.7.2.3-fr",
+          "environment": "corollary",
+          "begin_line": 350,
+          "label_line": 351,
+          "closing_line": 357,
+          "lf_line_start": 350,
+          "lf_line_end": 357,
+          "bytes": 362,
+          "sha256": "B17BD24C20D53E02DE7D34F284D555D9729FD40F0C86D953A32918C875447B70",
+          "byte_offset_start": 16940,
+          "byte_offset_end_exclusive": 17302
+        },
+        "ega:I.7.2.4": {
+          "label": "I.7.2.4-fr",
+          "environment": "corollary",
+          "begin_line": 363,
+          "label_line": 364,
+          "closing_line": 370,
+          "lf_line_start": 363,
+          "lf_line_end": 370,
+          "bytes": 415,
+          "sha256": "4AC21CC3D0FD241C9F672E61F38AC2690AFCF2BF10332FAD5DB4877DE7E354D5",
+          "byte_offset_start": 17505,
+          "byte_offset_end_exclusive": 17920
+        }
+      },
+      "combined": {
+        "lf_line_start": 290,
+        "lf_line_end": 377,
+        "bytes": 4293,
+        "sha256": "F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4",
+        "byte_offset_start": 13948,
+        "byte_offset_end_exclusive": 18241
+      },
+      "parent_proposition_package": {
+        "lf_line_start": 303,
+        "lf_line_end": 349,
+        "bytes": 2411,
+        "sha256": "AE6AC808FF3B0089D756E93E3CA74ECCD7541EA6A11A94D3231937A0C555D03F",
+        "byte_offset_start": 14529,
+        "byte_offset_end_exclusive": 16940
+      },
+      "owned_parts": {
+        "ega:I.7.2:heading": {
+          "lf_line_start": 290,
+          "lf_line_end": 290,
+          "bytes": 67,
+          "sha256": "7C6919CDBC4392C5BF47A413645BA518DF17A86A5C772646DE2CAD1E53112D85",
+          "byte_offset_start": 13948,
+          "byte_offset_end_exclusive": 14015
+        },
+        "ega:I.7.2:labels": {
+          "lf_line_start": 291,
+          "lf_line_end": 291,
+          "bytes": 28,
+          "sha256": "75834A8273208602DCF491C622EBF271F85C86D6C5D62787521BF89210B5D8A9",
+          "byte_offset_start": 14015,
+          "byte_offset_end_exclusive": 14043
+        },
+        "ega:I.7.2.2:page_marker": {
+          "lf_line_start": 303,
+          "lf_line_end": 303,
+          "bytes": 17,
+          "sha256": "2CABB3F4DD2E4C1B1768951BAD557F614E39DF1B914EF5019C6FBAC165BFC261",
+          "byte_offset_start": 14529,
+          "byte_offset_end_exclusive": 14546
+        },
+        "ega:I.7.2.2:proof_introduction": {
+          "lf_line_start": 312,
+          "lf_line_end": 314,
+          "bytes": 155,
+          "sha256": "5ED63D11773B3CA00A23B25F9D844B19E17D2C03F3892DA95AE390E448ED805A",
+          "byte_offset_start": 14878,
+          "byte_offset_end_exclusive": 15033
+        },
+        "ega:I.7.2.2.1:proof": {
+          "lf_line_start": 325,
+          "lf_line_end": 338,
+          "bytes": 950,
+          "sha256": "DFDCC8B02A460C87A359B614FA1C310FDDD5BCEA54CD1F28DFFA820C72A77A58",
+          "byte_offset_start": 15411,
+          "byte_offset_end_exclusive": 16361
+        },
+        "ega:I.7.2.2:consequence_and_transition": {
+          "lf_line_start": 340,
+          "lf_line_end": 348,
+          "bytes": 577,
+          "sha256": "C1B02827D40C3F6FF8AD4683AC4BCB46864CBF426FB84A148FFCAA1775715DFB",
+          "byte_offset_start": 16362,
+          "byte_offset_end_exclusive": 16939
+        },
+        "ega:I.7.2.3:proof": {
+          "lf_line_start": 359,
+          "lf_line_end": 361,
+          "bytes": 201,
+          "sha256": "1AC7D53706281E948696EB329A85E455EFC3394AF6CF05CFA8DAA623BAC31121",
+          "byte_offset_start": 17303,
+          "byte_offset_end_exclusive": 17504
+        },
+        "ega:I.7.2.4:proof": {
+          "lf_line_start": 372,
+          "lf_line_end": 376,
+          "bytes": 319,
+          "sha256": "DF407E43429667D73D8A56A6A049F9CAD990BC115E632627C9C0DAACF328DF4A",
+          "byte_offset_start": 17921,
+          "byte_offset_end_exclusive": 18240
+        }
+      },
+      "next_excluded_context": {
+        "source_unit": "ega:I.7.2.5",
+        "lf_line_start": 378,
+        "lf_line_end": 379,
+        "bytes": 44,
+        "sha256": "050A22D5C2148ED8391AA812BE51FA36E3C5A7CCB5528B737F2027E587D71DAA",
+        "byte_offset_start": 18241,
+        "byte_offset_end_exclusive": 18285
+      }
+    },
+    "en": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-en/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-7.tex",
+      "full_bytes": 35788,
+      "full_sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+      "slices": {
+        "ega:I.7.2.1": {
+          "lf_line_start": 169,
+          "lf_line_end": 179,
+          "bytes": 546,
+          "sha256": "26E03313483030D4632F91822A5FB53E075F88EDD17318CF18F455DBB7615514",
+          "byte_offset_start": 12881,
+          "byte_offset_end_exclusive": 13427
+        },
+        "ega:I.7.2.2": {
+          "lf_line_start": 180,
+          "lf_line_end": 189,
+          "bytes": 510,
+          "sha256": "67261A2B9AEBF6A81EE9F0A18809C8FF684003E48B84E68534A6CE52C6AE3CC0",
+          "byte_offset_start": 13427,
+          "byte_offset_end_exclusive": 13937
+        },
+        "ega:I.7.2.2.1": {
+          "lf_line_start": 190,
+          "lf_line_end": 206,
+          "bytes": 1764,
+          "sha256": "39AF654A864A3D4736CCEB67D6B2A8C7A874F6660D7EC6437E33AAB6EE62BFE9",
+          "byte_offset_start": 13937,
+          "byte_offset_end_exclusive": 15701
+        },
+        "ega:I.7.2.3": {
+          "lf_line_start": 207,
+          "lf_line_end": 216,
+          "bytes": 505,
+          "sha256": "B2578F9F5B35F0205E101B07E7B3CD81997E0F2B15A857E5DB217119FAB95E6D",
+          "byte_offset_start": 15701,
+          "byte_offset_end_exclusive": 16206
+        },
+        "ega:I.7.2.4": {
+          "lf_line_start": 217,
+          "lf_line_end": 226,
+          "bytes": 710,
+          "sha256": "0AD132C013720E6235685BCF0B2DC7366DEAF92E29D42E1384D5E0491B8ECADA",
+          "byte_offset_start": 16206,
+          "byte_offset_end_exclusive": 16916
+        }
+      },
+      "numbered_environments": {
+        "ega:I.7.2.1": {
+          "label": "I.7.2.1",
+          "environment": "env",
+          "begin_line": 173,
+          "label_line": 174,
+          "closing_line": 178,
+          "lf_line_start": 173,
+          "lf_line_end": 178,
+          "bytes": 453,
+          "sha256": "011064243670A6B38452C393F0583E06419FC4FFB4C02E2A02CCA833FDE9F78F",
+          "byte_offset_start": 12973,
+          "byte_offset_end_exclusive": 13426
+        },
+        "ega:I.7.2.2": {
+          "label": "I.7.2.2",
+          "environment": "proposition",
+          "begin_line": 181,
+          "label_line": 182,
+          "closing_line": 186,
+          "lf_line_start": 181,
+          "lf_line_end": 186,
+          "bytes": 316,
+          "sha256": "B014D6B636934E724EB4319BD21B95525CAFD8858C6927F16F8AA60F3F9FFB42",
+          "byte_offset_start": 13444,
+          "byte_offset_end_exclusive": 13760
+        },
+        "ega:I.7.2.2.1": {
+          "label": "I.7.2.2.1",
+          "environment": "lemma",
+          "begin_line": 190,
+          "label_line": 191,
+          "closing_line": 194,
+          "lf_line_start": 190,
+          "lf_line_end": 194,
+          "bytes": 351,
+          "sha256": "9B457D3ACDFA66F42AD965B741D9E9744A53E8273CE7000002B6CC90A92A8FC8",
+          "byte_offset_start": 13937,
+          "byte_offset_end_exclusive": 14288
+        },
+        "ega:I.7.2.3": {
+          "label": "I.7.2.3",
+          "environment": "corollary",
+          "begin_line": 207,
+          "label_line": 208,
+          "closing_line": 211,
+          "lf_line_start": 207,
+          "lf_line_end": 211,
+          "bytes": 322,
+          "sha256": "0C036C0CD0266997E30C44B64B6A3443AA4E18379037B5A9E53B863C95709E7B",
+          "byte_offset_start": 15701,
+          "byte_offset_end_exclusive": 16023
+        },
+        "ega:I.7.2.4": {
+          "label": "I.7.2.4",
+          "environment": "corollary",
+          "begin_line": 217,
+          "label_line": 218,
+          "closing_line": 221,
+          "lf_line_start": 217,
+          "lf_line_end": 221,
+          "bytes": 387,
+          "sha256": "40F74139D91987EB809F5993B05D39EB0BD5CB96FC20926C43900B44B96640A9",
+          "byte_offset_start": 16206,
+          "byte_offset_end_exclusive": 16593
+        }
+      },
+      "combined": {
+        "lf_line_start": 169,
+        "lf_line_end": 226,
+        "bytes": 4035,
+        "sha256": "F03846C37F46BD0E0EDC2623F128893A446A444462D72F04A911AA1D588EE416",
+        "byte_offset_start": 12881,
+        "byte_offset_end_exclusive": 16916
+      },
+      "parent_proposition_package": {
+        "lf_line_start": 180,
+        "lf_line_end": 206,
+        "bytes": 2274,
+        "sha256": "EF5E82164E9C05E72860CC7FA76B6CC2A541F8BDD01E2E06CC1EAA15828439F6",
+        "byte_offset_start": 13427,
+        "byte_offset_end_exclusive": 15701
+      },
+      "owned_parts": {
+        "ega:I.7.2:heading": {
+          "lf_line_start": 169,
+          "lf_line_end": 169,
+          "bytes": 52,
+          "sha256": "455BE8F8168EA9E3CE1A32093EEC107B4DCF4A65473301F6A432061D4B99AC8E",
+          "byte_offset_start": 12881,
+          "byte_offset_end_exclusive": 12933
+        },
+        "ega:I.7.2:labels": {
+          "lf_line_start": 170,
+          "lf_line_end": 171,
+          "bytes": 39,
+          "sha256": "DF9A6F775BA41197CE1DC6C4984684610CE52D3099BF4A44597F1B0E6CBF4A90",
+          "byte_offset_start": 12933,
+          "byte_offset_end_exclusive": 12972
+        },
+        "ega:I.7.2.2:page_marker": {
+          "lf_line_start": 180,
+          "lf_line_end": 180,
+          "bytes": 17,
+          "sha256": "2CABB3F4DD2E4C1B1768951BAD557F614E39DF1B914EF5019C6FBAC165BFC261",
+          "byte_offset_start": 13427,
+          "byte_offset_end_exclusive": 13444
+        },
+        "ega:I.7.2.2:proof_introduction": {
+          "lf_line_start": 188,
+          "lf_line_end": 188,
+          "bytes": 175,
+          "sha256": "A3B2E7322E479020446F6A6E388174BA01AB0316515E364CDD71ED220D95A67D",
+          "byte_offset_start": 13761,
+          "byte_offset_end_exclusive": 13936
+        },
+        "ega:I.7.2.2.1:proof": {
+          "lf_line_start": 196,
+          "lf_line_end": 202,
+          "bytes": 917,
+          "sha256": "66207366F4F208D058A011046C27D5B8BCC5A2156C0BF1319E68C199625222ED",
+          "byte_offset_start": 14289,
+          "byte_offset_end_exclusive": 15206
+        },
+        "ega:I.7.2.2:consequence_and_transition": {
+          "lf_line_start": 204,
+          "lf_line_end": 206,
+          "bytes": 494,
+          "sha256": "98B987CD2C0517BFE411AF8BDE7905907AB8856337F5FFB97988C6478C230C11",
+          "byte_offset_start": 15207,
+          "byte_offset_end_exclusive": 15701
+        },
+        "ega:I.7.2.3:proof": {
+          "lf_line_start": 213,
+          "lf_line_end": 215,
+          "bytes": 181,
+          "sha256": "1457BBDF9083FF2768F51181288098B6EFB5FC8CBD1C3CE8A09988A7DAB89EDB",
+          "byte_offset_start": 16024,
+          "byte_offset_end_exclusive": 16205
+        },
+        "ega:I.7.2.4:proof": {
+          "lf_line_start": 223,
+          "lf_line_end": 225,
+          "bytes": 321,
+          "sha256": "2662075C6AB84915BB819ADC0236EA9D08338FD8142EF52C9D458A0D9F2B2005",
+          "byte_offset_start": 16594,
+          "byte_offset_end_exclusive": 16915
+        }
+      },
+      "next_excluded_context": {
+        "source_unit": "ega:I.7.2.5",
+        "lf_line_start": 227,
+        "lf_line_end": 228,
+        "bytes": 41,
+        "sha256": "4D1DB4F89A2309166F8A5F2649B82D6D6ABE6C8D163925420C1C7A112671F109",
+        "byte_offset_start": 16916,
+        "byte_offset_end_exclusive": 16957
+      }
+    }
+  },
+  "semantic_contract": {
+    "absolute_domain": "union of ordinary representative domains",
+    "relative_domain": "union of S-morphism representative domains",
+    "relative_domain_is_comparison_notation": true,
+    "relative_domain_subset_absolute": true,
+    "arbitrary_base_domain_equality": false,
+    "domain_open_dense_without_reducedness_or_separatedness": true,
+    "domain_definition_asserts_maximal_representative": false,
+    "dense_agreement_source_reduced": true,
+    "dense_agreement_target_separated_over_S": true,
+    "dense_agreement_both_maps_over_S": true,
+    "dense_agreement_base_separated_required": false,
+    "source_irreducible_required": false,
+    "source_separated_required": false,
+    "target_reduced_required": false,
+    "Noetherian_required": false,
+    "finite_type_required": false,
+    "equalizer_closed_and_scheme_theoretic": true,
+    "glue_only_S_representatives": true,
+    "maximal_relative_nonextendibility": "as an S-morphism",
+    "parent_consequence_owner": "ega:I.7.2.2",
+    "restriction_injective_by_dense_equalizer": true,
+    "restriction_surjective_by_maximal_relative_map": true,
+    "literal_absolute_domain_strengthening": "false over arbitrary nonseparated base",
+    "source_disposition": "domain-convention ambiguity",
+    "counterexample_base": "affine line with doubled origin",
+    "counterexample_X_Y": "opposite affine charts over S",
+    "counterexample_absolute_domain": "X",
+    "counterexample_relative_domain": "G_m",
+    "counterexample_Hom_S_X_Y": "empty",
+    "historical_scheme_means_separated": true,
+    "historical_S_scheme_means_separated_over_S": true,
+    "I724_base_absolutely_separated": true,
+    "I724_target_absolutely_separated_by_composition": true,
+    "I724_structure_maps_agree_by_dense_equalizer": true,
+    "I724_domains_equal": true,
+    "maximal_domain_equals_X_required": false,
+    "target_0A1Y_is_literal_arbitrary_base_equivalent": false,
+    "target_01JD_role": "adverse construction only",
+    "new_root_theorem": false,
+    "source_edition_mutated": false,
+    "printed_erratum_claimed": false,
+    "formal_proof_checking": false
+  },
+  "pinned_targets": [
+    {
+      "tag": "0A1X",
+      "path": "morphisms.tex",
+      "label": "morphisms-definition-domain-of-definition",
+      "lf_line_start": 12806,
+      "lf_line_end": 12813,
+      "bytes": 364,
+      "sha256": "C34D0A721250DB649B0B19266D2667C0E5FE4451E4BB12F5B234B72D01FD6873"
+    },
+    {
+      "tag": "0A1Y",
+      "path": "morphisms.tex",
+      "label": "morphisms-lemma-rational-map-from-reduced-to-separated",
+      "lf_line_start": 12819,
+      "lf_line_end": 12841,
+      "bytes": 1143,
+      "sha256": "CA8541FCA4AEB8477A88F96F3620FB2E0CFCCF934A758D181AE083B83283A459"
+    },
+    {
+      "tag": "056D",
+      "path": "morphisms.tex",
+      "label": "morphisms-lemma-reduced-scheme-theoretically-dense",
+      "lf_line_start": 1172,
+      "lf_line_end": 1189,
+      "bytes": 580,
+      "sha256": "2D1CB0105B0C9883834C27B8EB0D09F356135006158B1EA6167957BFB5BD01CF"
+    },
+    {
+      "tag": "01KM",
+      "path": "schemes.tex",
+      "label": "schemes-lemma-where-are-they-equal",
+      "lf_line_start": 4099,
+      "lf_line_end": 4122,
+      "bytes": 752,
+      "sha256": "77A9133E611D94F28950A4F73C0F9027F626045EB7F81A767D559CE7380C5400"
+    },
+    {
+      "tag": "01JB",
+      "path": "schemes.tex",
+      "label": "schemes-lemma-glue",
+      "lf_line_start": 2544,
+      "lf_line_end": 2648,
+      "bytes": 3804,
+      "sha256": "7A9E57901A3F24D82A1C3F8E6D11407B7F96F1440450F42E5DDD442638BB2EBB"
+    },
+    {
+      "tag": "01KK",
+      "path": "schemes.tex",
+      "label": "schemes-definition-separated",
+      "lf_line_start": 4061,
+      "lf_line_end": 4074,
+      "bytes": 567,
+      "sha256": "52623337324F7DBD2998C271447BC98769B2316981732BA1A52B97CDF4776CD8"
+    },
+    {
+      "tag": "01KU",
+      "path": "schemes.tex",
+      "label": "schemes-lemma-separated-permanence",
+      "lf_line_start": 4288,
+      "lf_line_end": 4334,
+      "bytes": 1794,
+      "sha256": "66D30B35C2D91095E3B6589A7841CD5C6E09147DF75B2B9EAC138ED77FCD9837"
+    },
+    {
+      "tag": "01KV",
+      "path": "schemes.tex",
+      "label": "schemes-lemma-compose-after-separated",
+      "lf_line_start": 4336,
+      "lf_line_end": 4364,
+      "bytes": 1198,
+      "sha256": "73E825C23DA9BE9109412ED13D9196340F3476B19471B222990D770A694E6000"
+    }
+  ],
+  "negative_comparison_targets": [
+    {
+      "tag": "01JD",
+      "path": "schemes.tex",
+      "label": "schemes-example-affine-space-zero-doubled",
+      "lf_line_start": 2670,
+      "lf_line_end": 2713,
+      "bytes": 2061,
+      "sha256": "59C9CB67D47D0BF31D64DEAFCDF896763681D61E24A28B6F724FC4146A9EE545"
+    }
+  ],
+  "ledgers": [
+    {
+      "path": "ega/dec.csv",
+      "id_field": "decision_id",
+      "prefix_rows": 353,
+      "prefix_bytes": 98279,
+      "prefix_sha256": "4BE5E7C7A2AFD8468A58C41578A35CDEC6D02438B972FC80E5EBE7D995409B59",
+      "final_rows": 358,
+      "bytes": 100089,
+      "sha256": "BDD4C251FC6933086FD041D9EAE452B5D57E39B271E5BACD8A1265CA695FEEF5",
+      "append_bytes": 1810,
+      "append_sha256": "32A868EE1F719039056776A91E12F6BAFE5BFF6DC371C1D709A85C1D83CDEF4B",
+      "rows": [
+        {
+          "decision_id": "D000354",
+          "subject_id": "ega:I.7.2.1",
+          "action": "define_absolute_and_relative_domains_separately",
+          "state": "active",
+          "evidence": "F37ZW.json FR290-377 F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4; separate exact ownership in semantic checkpoint",
+          "supersedes": "",
+          "rationale": "Union of ordinary representative domains is dense open without reducedness or separatedness; relative domain is separate comparison notation"
+        },
+        {
+          "decision_id": "D000355",
+          "subject_id": "ega:I.7.2.2",
+          "action": "derive_relative_maximal_representative_and_preserve_domain_ambiguity",
+          "state": "active",
+          "evidence": "F37ZW.json FR290-377 F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4; separate exact ownership in semantic checkpoint",
+          "supersedes": "",
+          "rationale": "For reduced X and Y separated over S glue S-representatives on D_S; literal absolute-domain strengthening is disproved by opposite charts of doubled-origin base"
+        },
+        {
+          "decision_id": "D000356",
+          "subject_id": "ega:I.7.2.2.1",
+          "action": "derive_dense_relative_equalizer_equality",
+          "state": "active",
+          "evidence": "F37ZW.json FR290-377 F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4; separate exact ownership in semantic checkpoint",
+          "supersedes": "",
+          "rationale": "Both maps must be over S; reducedness kills the defining ideal after dense support; retain every diagonal and factorization step"
+        },
+        {
+          "decision_id": "D000357",
+          "subject_id": "ega:I.7.2.3",
+          "action": "derive_relative_restriction_bijection_with_absolute_domain_caveat",
+          "state": "active",
+          "evidence": "F37ZW.json FR290-377 F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4; separate exact ownership in semantic checkpoint",
+          "supersedes": "",
+          "rationale": "Prove injectivity by dense equality and surjectivity by maximal relative restriction; ordinary-domain reading fails over doubled-origin base"
+        },
+        {
+          "decision_id": "D000358",
+          "subject_id": "ega:I.7.2.4",
+          "action": "derive_separated_base_compatibility_and_domain_equality",
+          "state": "active",
+          "evidence": "F37ZW.json FR290-377 F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4; separate exact ownership in semantic checkpoint",
+          "supersedes": "",
+          "rationale": "Normalize historical separated terminology; composition makes Y separated absolutely and dense equality of structure maps gives D equals D_S"
+        }
+      ]
+    },
+    {
+      "path": "ega/smap.csv",
+      "id_field": "edge_id",
+      "prefix_rows": 1381,
+      "prefix_bytes": 616095,
+      "prefix_sha256": "46648B14061E5961086381912E738C25D63EAF2DA83C9BA703BE2761A8811A94",
+      "final_rows": 1401,
+      "bytes": 626340,
+      "sha256": "AE3C3C5E2F719327C4C9E6FE53EEEF1F632E7E6619692EE434F2C82EAFAAC28A",
+      "append_bytes": 10245,
+      "append_sha256": "9661E706FF17D1643CCF69ADDCEE37F9124FCF639B56DB421785271BF43CD950",
+      "rows": [
+        {
+          "edge_id": "S001382",
+          "source_unit": "ega:I.7.2.1",
+          "source_part": "ordinary domain definition",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-definition-domain-of-definition",
+          "official_tag": "0A1X",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "Union of all ordinary representative domains; no implicit S-qualifier",
+          "decision_id": "D000354",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001383",
+          "source_unit": "ega:I.7.2.1",
+          "source_part": "domain is dense open without extra hypotheses",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-definition-domain-of-definition",
+          "official_tag": "0A1X",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Union of opens contains a dense representative domain; no maximal map is asserted yet",
+          "decision_id": "D000354",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001384",
+          "source_unit": "ega:I.7.2.2",
+          "source_part": "relative maximal representative by gluing",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-glue",
+          "official_tag": "01JB",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "For reduced X and Y separated over S glue all S-representatives on D_S; base compatibility is local",
+          "decision_id": "D000355",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001385",
+          "source_unit": "ega:I.7.2.2",
+          "source_part": "agreement of relative representatives on overlaps",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-where-are-they-equal",
+          "official_tag": "01KM",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Closed relative equalizer and reducedness give equality on each overlap",
+          "decision_id": "D000355",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001386",
+          "source_unit": "ega:I.7.2.2",
+          "source_part": "absolute maximal theorem is only a conditional comparison",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-lemma-rational-map-from-reduced-to-separated",
+          "official_tag": "0A1Y",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "This target assumes Y absolutely separated; its over-S clause also assumes S separated; not full coverage of literal arbitrary-base absolute-domain wording",
+          "decision_id": "D000355",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001387",
+          "source_unit": "ega:I.7.2.2",
+          "source_part": "parent nonextendible-map consequence",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-glue",
+          "official_tag": "01JB",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Nonextendible means as an S-morphism; every smaller S-representative extends from D_S; FR340-348 EN204-206 belongs to parent not lemma proof",
+          "decision_id": "D000355",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001388",
+          "source_unit": "ega:I.7.2.2.1",
+          "source_part": "relative equalizer is inverse image of diagonal",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-where-are-they-equal",
+          "official_tag": "01KM",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "Both compared maps are S-morphisms and Y separated over S makes the equalizer closed",
+          "decision_id": "D000356",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001389",
+          "source_unit": "ega:I.7.2.2.1",
+          "source_part": "reducedness turns dense agreement into equality",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-lemma-reduced-scheme-theoretically-dense",
+          "official_tag": "056D",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Dense open is schematically dense in the reduced overlap",
+          "decision_id": "D000356",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001390",
+          "source_unit": "ega:I.7.2.2.1:proof",
+          "source_part": "factorization through diagonal and final equality",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-where-are-they-equal",
+          "official_tag": "01KM",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Common restriction factors through diagonal; equalizer is whole overlap as a scheme and gives f_1=f_2=f",
+          "decision_id": "D000356",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001391",
+          "source_unit": "ega:I.7.2.2.1:proof",
+          "source_part": "minimal closed subscheme is the reduced overlap",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-lemma-reduced-scheme-theoretically-dense",
+          "official_tag": "056D",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Locally V(I)=Spec(A) implies I lies in the nilradical; reducedness gives I=0",
+          "decision_id": "D000356",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001392",
+          "source_unit": "ega:I.7.2.3",
+          "source_part": "surjectivity by restriction of the relative maximal map",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-glue",
+          "official_tag": "01JB",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "For D_S containing U restrict the maximal S-representative; do not replace D_S by D",
+          "decision_id": "D000357",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001393",
+          "source_unit": "ega:I.7.2.3",
+          "source_part": "injectivity by dense agreement on fixed open",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-where-are-they-equal",
+          "official_tag": "01KM",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Same rational class gives dense equality witness and hence equality on reduced U",
+          "decision_id": "D000357",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001394",
+          "source_unit": "ega:I.7.2.3:proof",
+          "source_part": "first inverse construction uses dense equality",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-where-are-they-equal",
+          "official_tag": "01KM",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "The map from Hom_S(U,Y) to rational classes is injective by the relative closed equalizer",
+          "decision_id": "D000357",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001395",
+          "source_unit": "ega:I.7.2.3:proof",
+          "source_part": "second inverse construction restricts the glued map",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-glue",
+          "official_tag": "01JB",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "Restriction from D_S is inverse; source absolute-domain reading remains qualified",
+          "decision_id": "D000357",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001396",
+          "source_unit": "ega:I.7.2.4",
+          "source_part": "historical scheme and S-scheme separatedness",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-definition-separated",
+          "official_tag": "01KK",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "S is absolutely separated and Y to S is separated; X is a reduced modern S-scheme without absolute separatedness required",
+          "decision_id": "D000358",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001397",
+          "source_unit": "ega:I.7.2.4",
+          "source_part": "composition gives absolute separatedness of Y",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-separated-permanence",
+          "official_tag": "01KU",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "Compose Y to S with S to Spec Z; no finiteness hypothesis",
+          "decision_id": "D000358",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001398",
+          "source_unit": "ega:I.7.2.4",
+          "source_part": "ordinary maximal representative and separated-base clause",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-lemma-rational-map-from-reduced-to-separated",
+          "official_tag": "0A1Y",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "Reduced X and absolutely separated Y give g on D; S separated ensures g is over S",
+          "decision_id": "D000358",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001399",
+          "source_unit": "ega:I.7.2.4",
+          "source_part": "cancellation normalizes the converse hypotheses",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-compose-after-separated",
+          "official_tag": "01KV",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "component",
+          "evidence": "Absolutely separated Y implies Y to S separated",
+          "decision_id": "D000358",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001400",
+          "source_unit": "ega:I.7.2.4:proof",
+          "source_part": "structure maps agree on the maximal domain",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "schemes.tex",
+          "stacks_label": "schemes-lemma-where-are-they-equal",
+          "official_tag": "01KM",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "psi composed with g and phi restricted to D agree on initial dense U; separated S and reduced D give equality",
+          "decision_id": "D000358",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        },
+        {
+          "edge_id": "S001401",
+          "source_unit": "ega:I.7.2.4:proof",
+          "source_part": "ordinary and relative domains coincide",
+          "authority_state": "french_admitted",
+          "source_receipt": "F37ZW.json",
+          "source_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+          "stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+          "stacks_file": "morphisms.tex",
+          "stacks_label": "morphisms-lemma-rational-map-from-reduced-to-separated",
+          "official_tag": "0A1Y",
+          "relation": "split",
+          "review_state": "reviewed_existing",
+          "coverage_claim": "covered_derived",
+          "evidence": "The maximal ordinary representative is an S-morphism so D is contained in D_S; reverse inclusion is automatic; D need not equal X",
+          "decision_id": "D000358",
+          "notes": "Existing-component derivation with explicit domain convention in ega/i724.md; not literal full-statement equivalence",
+          "supersedes": ""
+        }
+      ]
+    },
+    {
+      "path": "ega/resid.csv",
+      "id_field": "residual_id",
+      "prefix_rows": 891,
+      "prefix_bytes": 261018,
+      "prefix_sha256": "86DE080ACFC3490A6A4E61B6FF3C92E7FBCAD4545C8003584F0DBB2332A07FA3",
+      "final_rows": 905,
+      "bytes": 264558,
+      "sha256": "36805ECE267361BA84D8A1BACB8CA374BB355C5C856528611614B85108150F7C",
+      "append_bytes": 3540,
+      "append_sha256": "A5E5FB8F731DE428043D43226D56F21786C7BCA48B2964BDEF02A6ACE594A69B",
+      "rows": [
+        {
+          "residual_id": "R000892",
+          "source_unit": "ega:I.7.2.1",
+          "kind": "dense_open_domain_does_not_assert_maximal_representative",
+          "status": "covered_derived",
+          "evidence": "0A1X defines the ordinary domain",
+          "disposition": "No reducedness or separatedness is required for the dense-open union; keep D_S separately defined",
+          "decision_id": "D000354",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000893",
+          "source_unit": "ega:I.7.2.2",
+          "kind": "relative_versus_absolute_domain_convention_ambiguity",
+          "status": "known_semantic_difference",
+          "evidence": "Opposite charts over doubled-origin S give D=X and D_S=G_m with X reduced and Y to S separated",
+          "disposition": "Literal absolute-domain statement is false; valid relative theorem is existing-derived; no source mutation or printed erratum claim",
+          "decision_id": "D000355",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000894",
+          "source_unit": "ega:I.7.2.2",
+          "kind": "maximal_relative_representative_exists_uniquely",
+          "status": "covered_derived",
+          "evidence": "01KM 056D and 01JB give overlap equality and gluing",
+          "disposition": "Use only S-representatives; preserve arbitrary base without silently adding separatedness",
+          "decision_id": "D000355",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000895",
+          "source_unit": "ega:I.7.2.2",
+          "kind": "parent_nonextendible_consequence_requires_relative_qualifier",
+          "status": "known_semantic_difference",
+          "evidence": "Opposite-chart map G_m to Y has no S-extension but extends ordinarily to X",
+          "disposition": "FR340-348 EN204-206 is parent consequence and transition not nested lemma proof; nonextendible is over S",
+          "decision_id": "D000355",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000896",
+          "source_unit": "ega:I.7.2.2.1",
+          "kind": "relative_dense_agreement_under_exact_hypotheses",
+          "status": "covered_derived",
+          "evidence": "01KM and 056D prove the relative lemma",
+          "disposition": "Require reduced X and separated Y over S and both maps over S; no Noetherian finite-type or irreducibility assumption",
+          "decision_id": "D000356",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000897",
+          "source_unit": "ega:I.7.2.2.1:proof",
+          "kind": "complete_minimal_closed_and_diagonal_factorization_steps",
+          "status": "covered_derived",
+          "evidence": "Closed equalizer containing dense V has nilradical ideal and equals reduced overlap",
+          "disposition": "Retain final f_1=f_2=f and exclude subsequent parent consequence from lemma proof",
+          "decision_id": "D000356",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000898",
+          "source_unit": "ega:I.7.2.3",
+          "kind": "relative_restriction_correspondence",
+          "status": "covered_derived",
+          "evidence": "01KM gives injection and 01JB maximal gluing gives surjection",
+          "disposition": "Use classes whose D_S contains the fixed dense open U",
+          "decision_id": "D000357",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000899",
+          "source_unit": "ega:I.7.2.3",
+          "kind": "absolute_defined_everywhere_reading_fails",
+          "status": "known_semantic_difference",
+          "evidence": "Opposite-chart example has Hom_S(X,Y) empty but an S-rational class with D=X",
+          "disposition": "Do not classify the false absolute strengthening as missing mathematics or existing full-statement coverage",
+          "decision_id": "D000357",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000900",
+          "source_unit": "ega:I.7.2.3:proof",
+          "kind": "both_inverse_constructions_are_explicit",
+          "status": "covered_derived",
+          "evidence": "Dense equalizer proves injection; restricting maximal relative representative proves surjection",
+          "disposition": "Do not treat the short source proof as a substitute for checking both directions",
+          "decision_id": "D000357",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000901",
+          "source_unit": "ega:I.7.2.4",
+          "kind": "historical_separatedness_normalization",
+          "status": "covered_derived",
+          "evidence": "01KK 01KU and 01KV normalize S scheme and Y S-scheme",
+          "disposition": "Preserve source assumptions and no separatedness requirement on X",
+          "decision_id": "D000358",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000902",
+          "source_unit": "ega:I.7.2.4:proof",
+          "kind": "maximal_map_respects_structure_maps",
+          "status": "covered_derived",
+          "evidence": "01KM proves psi g equals phi j on reduced D because S is separated",
+          "disposition": "This independently written proof supplies the omitted proof of 0A1Y final clause; no new root theorem",
+          "decision_id": "D000358",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000903",
+          "source_unit": "ega:I.7.2.4",
+          "kind": "separated_base_identifies_absolute_and_relative_domains",
+          "status": "covered_derived",
+          "evidence": "0A1Y gives an S-representative on D and hence D=D_S",
+          "disposition": "Conclusion is on maximal domain not automatic extension to all X",
+          "decision_id": "D000358",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000904",
+          "source_unit": "ega:I.7.2.2.1",
+          "kind": "reducedness_adverse_example",
+          "status": "covered_derived",
+          "evidence": "Maps to A1 with images 0 and e on k[t,e]/(e^2,t e) agree on dense D(t) but differ globally",
+          "disposition": "Reducedness cannot simply be removed; not claimed necessary for every individual example",
+          "decision_id": "D000356",
+          "supersedes": ""
+        },
+        {
+          "residual_id": "R000905",
+          "source_unit": "ega:I.7.2.2.1",
+          "kind": "target_separatedness_adverse_example",
+          "status": "covered_derived",
+          "evidence": "01JD doubled-origin target has distinct chart maps A1 to Y agreeing on G_m",
+          "disposition": "01JD is adverse construction only and is not positive theorem coverage",
+          "decision_id": "D000356",
+          "supersedes": ""
+        }
+      ]
+    },
+    {
+      "path": "ega/agent.csv",
+      "id_field": "run_id",
+      "prefix_rows": 274,
+      "prefix_bytes": 147200,
+      "prefix_sha256": "B41ACF2704997A96BA50DD3E178FC7E888F03F4AE5DCA2D4BABFBACB7D8CBD06",
+      "final_rows": 276,
+      "bytes": 148403,
+      "sha256": "9DC4E3FC0BF8FE2F46B7762EDB32ECC85E0F4A70E5A1390CC1FE59DCD9EEBD44",
+      "append_bytes": 1203,
+      "append_sha256": "CD0AAA9F84361D5A24C8EAB5FDC3729C9B1D38D773A2E22409EF60357811ADBD",
+      "rows": [
+        {
+          "run_id": "A000275",
+          "task_id": "/root/ega724_finish",
+          "model": "inherited-parent",
+          "thinking": "inherited",
+          "scope": "I7.2.1-4 existing-component semantic candidate",
+          "status": "completed",
+          "duration_ms": "not_exposed",
+          "returned": "Preserved partial append state and finished exact receipt checker and source-semantic tests",
+          "owner_check": "Owner read full preflight live pinned sources and official target blocks and checked relative derivations and counterexamples",
+          "disposition": "Domain convention ambiguity retained; no root theorem source correction build or publication",
+          "writes": "ega/agent.csv|ega/check.py|ega/dec.csv|ega/i724.md|ega/log.md|ega/resid.csv|ega/scope.json|ega/smap.csv|tests/test_ega_i_724_semantic.py|tests/test_ega_i_724_source_boundaries.py|tools/check_ega_i724_source_boundaries.py|validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json"
+        },
+        {
+          "run_id": "A000276",
+          "task_id": "/root/ega724_finish/bounded_review",
+          "model": "inherited-parent",
+          "thinking": "inherited",
+          "scope": "Independent I7.2.1-4 mathematics and source ownership review",
+          "status": "completed",
+          "duration_ms": "not_exposed",
+          "returned": "PASS exact bilingual whole-file tranche proof consequence and next-boundary hashes; doubled-origin example and coverage categories verified",
+          "owner_check": "Owner separately fetched the two raw sources and official targets and addressed spacing-only review comments",
+          "disposition": "Read-only review; not formal proof checking or source erratum confirmation",
+          "writes": "none"
+        }
+      ]
+    }
+  ],
+  "preserved_inputs": [
+    {
+      "path": "ega/units.csv",
+      "bytes": 1864094,
+      "sha256": "5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C"
+    },
+    {
+      "path": "ega/issues.csv",
+      "bytes": 40840,
+      "sha256": "26D9CE8557DE8A11E142AF7303410D0D43E07BFBA7FCDBE4C3A2F30F0FFD4267"
+    },
+    {
+      "path": "ega/vqa.csv",
+      "bytes": 46201,
+      "sha256": "9623D533ACA4B12758F74A86CA8F8DF70530F443C20C16C22C1D201F0AA162E8"
+    },
+    {
+      "path": "ega/rej.csv",
+      "bytes": 11940,
+      "sha256": "4DA0E5332A997A9E9E09609E1BAA7C40A43CC494C7C04A356B89BAA4295A1B39"
+    },
+    {
+      "path": "ega/pages.csv",
+      "bytes": 9362,
+      "sha256": "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08"
+    },
+    {
+      "path": "ega/interface.json",
+      "bytes": 19234,
+      "sha256": "4D1D65D09A633DA28F22E0FD0148F566529CF73F094E21036D56143F1B162DA6"
+    },
+    {
+      "path": "validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json",
+      "bytes": 46840,
+      "sha256": "95ACE3E7E89842164AAAD38FE623FCEFB6EC9CC3AFB45B38FA2560C95DEA378F"
+    },
+    {
+      "path": "validation/ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json",
+      "bytes": 83816,
+      "sha256": "04651D2F10B078C8AD1ACF4E3A429449F0017E3454136E7A9BD1DCB5264E7704"
+    },
+    {
+      "path": "validation/ega-i-7.1.10-7.1.14-semantic-checkpoint-2026-09-07.json",
+      "bytes": 68899,
+      "sha256": "61E82663F9B8277A3D67CFF037216C2583F6D946989F61577051EB13BBA7B2E0"
+    }
+  ],
+  "statement_review_snapshot": {
+    "file": "smap.csv",
+    "statement_edge_rows": 1382,
+    "file_rows": 1401,
+    "superseded_rows": 19,
+    "source_units": 457,
+    "existing_official_tag_rows": 1369,
+    "distinct_existing_official_tags": 369,
+    "local_untagged_rows": 13,
+    "full_statement_equivalences": 62
+  },
+  "residual_snapshot": {
+    "file": "resid.csv",
+    "rows": 872,
+    "file_rows": 905,
+    "superseded_rows": 33,
+    "open_gaps": 12,
+    "integrated_local_mirror": 13
+  },
+  "independent_review": {
+    "task": "/root/ega724_finish/bounded_review",
+    "result": "PASS",
+    "checks": "Independent mathematics and full raw bilingual source identity and semantic ownership audit; spacing-only feedback addressed",
+    "formal_proof_checking": false
+  },
+  "validation_contract": "Receipt enforces exact evidence and semantic dispositions; prose derivations and independent review are not formal proof checking.",
+  "publication": "Not performed by this candidate lane; root owns existing-lineage integration and release.",
+  "derivation_dossier": {"path":"ega/i724.md","bytes":9809,"sha256":"BC17A0E2E12740C650DF1044EB0AE4AD865E10395091D14E5919E9FCA8EFE91E"}
+}

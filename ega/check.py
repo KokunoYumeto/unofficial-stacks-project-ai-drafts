@@ -822,11 +822,11 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # The scope manifest is resealed whenever the append-only ledger frontier
 # advances.  Keep the byte/hash pin here (rather than deriving it at runtime)
 # so an accidental edit cannot silently widen the reviewed surface.  The
-# current seal closes the EGA I 7.1.15-7.1.16 semantic-only candidate and preserves
+# current seal closes the EGA I 7.2.1-7.2.4 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 43923 or
+if (len(scope_raw) != 47796 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "CD7987F8BCFF54730E49E538BB613F694192CD9C2CC94D46D37C8DDECF3E31FD"):
+        "CC04AA147337A23F3668150D648ED27685C2E3057CA0EE5E1D5659BE7BAAD66B"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -910,7 +910,8 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
             "ega:I.7.1.6", "ega:I.7.1.7", "ega:I.7.1.8",
             "ega:I.7.1.9", "ega:I.7.1.9.1", "ega:I.7.1.10",
             "ega:I.7.1.11", "ega:I.7.1.12", "ega:I.7.1.13", "ega:I.7.1.14",
-            "ega:I.7.1.15", "ega:I.7.1.16"}):
+            "ega:I.7.1.15", "ega:I.7.1.16", "ega:I.7.2.1", "ega:I.7.2.2",
+            "ega:I.7.2.2.1", "ega:I.7.2.3", "ega:I.7.2.4"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -2131,9 +2132,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 98279 or
+if (len(decision_raw) != 100089 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "4BE5E7C7A2AFD8468A58C41578A35CDEC6D02438B972FC80E5EBE7D995409B59"):
+    "BDD4C251FC6933086FD041D9EAE452B5D57E39B271E5BACD8A1265CA695FEEF5"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5427,9 +5428,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 616095 or
+    if (len(smap_raw) != 626340 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "46648B14061E5961086381912E738C25D63EAF2DA83C9BA703BE2761A8811A94"):
+        "AE3C3C5E2F719327C4C9E6FE53EEEF1F632E7E6619692EE434F2C82EAFAAC28A"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6805,9 +6806,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 261018 or
+    if (len(residual_raw) != 264558 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "86DE080ACFC3490A6A4E61B6FF3C92E7FBCAD4545C8003584F0DBB2332A07FA3"):
+        "36805ECE267361BA84D8A1BACB8CA374BB355C5C856528611614B85108150F7C"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8089,9 +8090,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 147200 or
+    if (len(agent_raw) != 148403 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "B41ACF2704997A96BA50DD3E178FC7E888F03F4AE5DCA2D4BABFBACB7D8CBD06"):
+        "9DC4E3FC0BF8FE2F46B7762EDB32ECC85E0F4A70E5A1390CC1FE59DCD9EEBD44"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -9514,7 +9515,10 @@ if (len(i711516_raw) != 49125 or
     ERRORS.append("I7.1.16 immutable semantic receipt identity changed")
 i711516_checkpoint = json.loads(i711516_raw.decode("utf-8"))
 ERRORS.extend(i711516_semantic_contract_errors(
-    i711516_checkpoint, scope, i665_tables, units_by_id, git_blob, pinned_tag_map))
+    i711516_checkpoint, {**scope,
+        "statement_review_snapshot": i711516_checkpoint["statement_review_snapshot"],
+        "residual_snapshot": i711516_checkpoint["residual_snapshot"]},
+    i665_tables, units_by_id, git_blob, pinned_tag_map))
 for manifest in i711516_checkpoint["ledgers"]:
     raw = (ROOT.parent / manifest["path"]).read_bytes()
     require_strict_lf(raw, manifest["path"])
@@ -9523,12 +9527,699 @@ for manifest in i711516_checkpoint["ledgers"]:
     require_raw_block([line + b"\n" for line in raw.split(b"\n")[:-1]],
         manifest["prefix_rows"] + 1, manifest["final_rows"],
         manifest["append_bytes"], manifest["append_sha256"], manifest["path"] + " I7.1.15-16 append")
-    if len(raw) != manifest["bytes"] or hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]:
-        ERRORS.append("I7.1.16 current ledger postimage changed")
+    require_lf_prefix(raw, manifest["final_rows"] + 1,
+        manifest["bytes"], manifest["sha256"], manifest["path"] + " historical I7.1.16 postimage")
 for item in i711516_checkpoint["preserved_inputs"]:
     raw = (ROOT.parent / item["path"]).read_bytes()
     if len(raw) != item["bytes"] or hashlib.sha256(raw).hexdigest().upper() != item["sha256"]:
         ERRORS.append("I7.1.16 preserved input changed: " + item["path"])
+
+def i724_dossier_contract_errors(raw, expected):
+    """Seal the reviewed human-readable derivation; not a prose proof checker."""
+    identity = {"path": "ega/i724.md", "bytes": 9809,
+                "sha256": "BC17A0E2E12740C650DF1044EB0AE4AD865E10395091D14E5919E9FCA8EFE91E"}
+    if (expected != identity or not isinstance(raw, bytes) or len(raw) != identity["bytes"]
+            or hashlib.sha256(raw).hexdigest().upper() != identity["sha256"]):
+        return ["I7.2.4 reviewed derivation dossier identity changed"]
+    return []
+
+
+def i724_semantic_contract_errors(checkpoint, scope_state, tables,
+                                 discovery_units, target_loader, tag_map):
+    """Exact evidence/disposition contracts; never a mathematical proof checker."""
+    errors = []
+    expected_units = ["ega:I.7.2.1", "ega:I.7.2.2", "ega:I.7.2.2.1", "ega:I.7.2.3", "ega:I.7.2.4"]
+    proofs = ["ega:I.7.2.2.1:proof", "ega:I.7.2.3:proof", "ega:I.7.2.4:proof"]
+    if (checkpoint.get("schema") != "ega-i-7.2.1-7.2.4-semantic-checkpoint/v1"
+            or checkpoint.get("starting_content_commit") != "66b1df8ec9457cffbfae82ae398a983a43606438"
+            or checkpoint.get("stacks_upstream") != PINNED_STACKS_COMMIT
+            or checkpoint.get("source_units") != expected_units
+            or checkpoint.get("source_proof_units") != proofs
+            or checkpoint.get("next_semantic_cursor") != "ega:I.7.2.5"
+            or checkpoint.get("next_cursor_starts_with_numbered_environment") is not True):
+        errors.append("I7.2.4 exact source-order identity or public-lineage base changed")
+    semantics = {
+      "absolute_domain": "union of ordinary representative domains",
+      "relative_domain": "union of S-morphism representative domains",
+      "relative_domain_is_comparison_notation": True,
+      "relative_domain_subset_absolute": True,
+      "arbitrary_base_domain_equality": False,
+      "domain_open_dense_without_reducedness_or_separatedness": True,
+      "domain_definition_asserts_maximal_representative": False,
+      "dense_agreement_source_reduced": True,
+      "dense_agreement_target_separated_over_S": True,
+      "dense_agreement_both_maps_over_S": True,
+      "dense_agreement_base_separated_required": False,
+      "source_irreducible_required": False,
+      "source_separated_required": False,
+      "target_reduced_required": False,
+      "Noetherian_required": False,
+      "finite_type_required": False,
+      "equalizer_closed_and_scheme_theoretic": True,
+      "glue_only_S_representatives": True,
+      "maximal_relative_nonextendibility": "as an S-morphism",
+      "parent_consequence_owner": "ega:I.7.2.2",
+      "restriction_injective_by_dense_equalizer": True,
+      "restriction_surjective_by_maximal_relative_map": True,
+      "literal_absolute_domain_strengthening": "false over arbitrary nonseparated base",
+      "source_disposition": "domain-convention ambiguity",
+      "counterexample_base": "affine line with doubled origin",
+      "counterexample_X_Y": "opposite affine charts over S",
+      "counterexample_absolute_domain": "X",
+      "counterexample_relative_domain": "G_m",
+      "counterexample_Hom_S_X_Y": "empty",
+      "historical_scheme_means_separated": True,
+      "historical_S_scheme_means_separated_over_S": True,
+      "I724_base_absolutely_separated": True,
+      "I724_target_absolutely_separated_by_composition": True,
+      "I724_structure_maps_agree_by_dense_equalizer": True,
+      "I724_domains_equal": True,
+      "maximal_domain_equals_X_required": False,
+      "target_0A1Y_is_literal_arbitrary_base_equivalent": False,
+      "target_01JD_role": "adverse construction only",
+      "new_root_theorem": False,
+      "source_edition_mutated": False,
+      "printed_erratum_claimed": False,
+      "formal_proof_checking": False
+    }
+    if checkpoint.get("semantic_contract") != semantics:
+        errors.append("I7.2.4 domain convention hypothesis ownership or nonclaim contract changed")
+    expected_sources = {
+      "fr": {
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "slices": {
+          "ega:I.7.2.1": {
+            "lf_line_start": 290,
+            "lf_line_end": 302,
+            "bytes": 581,
+            "sha256": "18F785FF5F555A8DFB9270E0BF1D3A9B2313EE628127F536B7B2DB93FAFB301B",
+            "byte_offset_start": 13948,
+            "byte_offset_end_exclusive": 14529
+          },
+          "ega:I.7.2.2": {
+            "lf_line_start": 303,
+            "lf_line_end": 315,
+            "bytes": 505,
+            "sha256": "F673B701A06F1EA24D93E33D0665EACE45370AE54764FBE19BFF2594953A7FEB",
+            "byte_offset_start": 14529,
+            "byte_offset_end_exclusive": 15034
+          },
+          "ega:I.7.2.2.1": {
+            "lf_line_start": 316,
+            "lf_line_end": 349,
+            "bytes": 1906,
+            "sha256": "A5AA31E1A84CC29F275D389FA2496C62CD57828CB7039A5C5DAA62658CF99B21",
+            "byte_offset_start": 15034,
+            "byte_offset_end_exclusive": 16940
+          },
+          "ega:I.7.2.3": {
+            "lf_line_start": 350,
+            "lf_line_end": 362,
+            "bytes": 565,
+            "sha256": "743C6D591DC1DAB9C258D1F4A8B004ACEF9FA2EBF82516AF46AD5B34719C2215",
+            "byte_offset_start": 16940,
+            "byte_offset_end_exclusive": 17505
+          },
+          "ega:I.7.2.4": {
+            "lf_line_start": 363,
+            "lf_line_end": 377,
+            "bytes": 736,
+            "sha256": "94409AF302BB2123976F5C1FF5D99E4E059C8FB65E1B4047B20F6D77A80A59E8",
+            "byte_offset_start": 17505,
+            "byte_offset_end_exclusive": 18241
+          }
+        },
+        "numbered_environments": {
+          "ega:I.7.2.1": {
+            "label": "I.7.2.1-fr",
+            "environment": "env",
+            "begin_line": 293,
+            "label_line": 294,
+            "closing_line": 301,
+            "lf_line_start": 293,
+            "lf_line_end": 301,
+            "bytes": 484,
+            "sha256": "961E32B4C587461879B6793BCF80086DF2B0F9196983E631860E95B894BB801D",
+            "byte_offset_start": 14044,
+            "byte_offset_end_exclusive": 14528
+          },
+          "ega:I.7.2.2": {
+            "label": "I.7.2.2-fr",
+            "environment": "proposition",
+            "begin_line": 304,
+            "label_line": 305,
+            "closing_line": 310,
+            "lf_line_start": 304,
+            "lf_line_end": 310,
+            "bytes": 331,
+            "sha256": "E6574B6A876AD301502BF932E1614D95F7D98F2DFB1892F6FCC13D72748AEDAA",
+            "byte_offset_start": 14546,
+            "byte_offset_end_exclusive": 14877
+          },
+          "ega:I.7.2.2.1": {
+            "label": "I.7.2.2.1-fr",
+            "environment": "lemma",
+            "begin_line": 316,
+            "label_line": 317,
+            "closing_line": 323,
+            "lf_line_start": 316,
+            "lf_line_end": 323,
+            "bytes": 376,
+            "sha256": "D5DF8DEFD1C9719A52BCC8AFD7F667D42543AEAA3A40D04D3856B2D5B0D6DA4A",
+            "byte_offset_start": 15034,
+            "byte_offset_end_exclusive": 15410
+          },
+          "ega:I.7.2.3": {
+            "label": "I.7.2.3-fr",
+            "environment": "corollary",
+            "begin_line": 350,
+            "label_line": 351,
+            "closing_line": 357,
+            "lf_line_start": 350,
+            "lf_line_end": 357,
+            "bytes": 362,
+            "sha256": "B17BD24C20D53E02DE7D34F284D555D9729FD40F0C86D953A32918C875447B70",
+            "byte_offset_start": 16940,
+            "byte_offset_end_exclusive": 17302
+          },
+          "ega:I.7.2.4": {
+            "label": "I.7.2.4-fr",
+            "environment": "corollary",
+            "begin_line": 363,
+            "label_line": 364,
+            "closing_line": 370,
+            "lf_line_start": 363,
+            "lf_line_end": 370,
+            "bytes": 415,
+            "sha256": "4AC21CC3D0FD241C9F672E61F38AC2690AFCF2BF10332FAD5DB4877DE7E354D5",
+            "byte_offset_start": 17505,
+            "byte_offset_end_exclusive": 17920
+          }
+        },
+        "combined": {
+          "lf_line_start": 290,
+          "lf_line_end": 377,
+          "bytes": 4293,
+          "sha256": "F9E952A69C1BEECFEADE0EA11C19400F5702D6CB473E976C596CF1BDF9C8BEE4",
+          "byte_offset_start": 13948,
+          "byte_offset_end_exclusive": 18241
+        },
+        "parent_proposition_package": {
+          "lf_line_start": 303,
+          "lf_line_end": 349,
+          "bytes": 2411,
+          "sha256": "AE6AC808FF3B0089D756E93E3CA74ECCD7541EA6A11A94D3231937A0C555D03F",
+          "byte_offset_start": 14529,
+          "byte_offset_end_exclusive": 16940
+        },
+        "owned_parts": {
+          "ega:I.7.2:heading": {
+            "lf_line_start": 290,
+            "lf_line_end": 290,
+            "bytes": 67,
+            "sha256": "7C6919CDBC4392C5BF47A413645BA518DF17A86A5C772646DE2CAD1E53112D85",
+            "byte_offset_start": 13948,
+            "byte_offset_end_exclusive": 14015
+          },
+          "ega:I.7.2:labels": {
+            "lf_line_start": 291,
+            "lf_line_end": 291,
+            "bytes": 28,
+            "sha256": "75834A8273208602DCF491C622EBF271F85C86D6C5D62787521BF89210B5D8A9",
+            "byte_offset_start": 14015,
+            "byte_offset_end_exclusive": 14043
+          },
+          "ega:I.7.2.2:page_marker": {
+            "lf_line_start": 303,
+            "lf_line_end": 303,
+            "bytes": 17,
+            "sha256": "2CABB3F4DD2E4C1B1768951BAD557F614E39DF1B914EF5019C6FBAC165BFC261",
+            "byte_offset_start": 14529,
+            "byte_offset_end_exclusive": 14546
+          },
+          "ega:I.7.2.2:proof_introduction": {
+            "lf_line_start": 312,
+            "lf_line_end": 314,
+            "bytes": 155,
+            "sha256": "5ED63D11773B3CA00A23B25F9D844B19E17D2C03F3892DA95AE390E448ED805A",
+            "byte_offset_start": 14878,
+            "byte_offset_end_exclusive": 15033
+          },
+          "ega:I.7.2.2.1:proof": {
+            "lf_line_start": 325,
+            "lf_line_end": 338,
+            "bytes": 950,
+            "sha256": "DFDCC8B02A460C87A359B614FA1C310FDDD5BCEA54CD1F28DFFA820C72A77A58",
+            "byte_offset_start": 15411,
+            "byte_offset_end_exclusive": 16361
+          },
+          "ega:I.7.2.2:consequence_and_transition": {
+            "lf_line_start": 340,
+            "lf_line_end": 348,
+            "bytes": 577,
+            "sha256": "C1B02827D40C3F6FF8AD4683AC4BCB46864CBF426FB84A148FFCAA1775715DFB",
+            "byte_offset_start": 16362,
+            "byte_offset_end_exclusive": 16939
+          },
+          "ega:I.7.2.3:proof": {
+            "lf_line_start": 359,
+            "lf_line_end": 361,
+            "bytes": 201,
+            "sha256": "1AC7D53706281E948696EB329A85E455EFC3394AF6CF05CFA8DAA623BAC31121",
+            "byte_offset_start": 17303,
+            "byte_offset_end_exclusive": 17504
+          },
+          "ega:I.7.2.4:proof": {
+            "lf_line_start": 372,
+            "lf_line_end": 376,
+            "bytes": 319,
+            "sha256": "DF407E43429667D73D8A56A6A049F9CAD990BC115E632627C9C0DAACF328DF4A",
+            "byte_offset_start": 17921,
+            "byte_offset_end_exclusive": 18240
+          }
+        },
+        "next_excluded_context": {
+          "source_unit": "ega:I.7.2.5",
+          "lf_line_start": 378,
+          "lf_line_end": 379,
+          "bytes": 44,
+          "sha256": "050A22D5C2148ED8391AA812BE51FA36E3C5A7CCB5528B737F2027E587D71DAA",
+          "byte_offset_start": 18241,
+          "byte_offset_end_exclusive": 18285
+        }
+      },
+      "en": {
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-en/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-7.tex",
+        "full_bytes": 35788,
+        "full_sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "slices": {
+          "ega:I.7.2.1": {
+            "lf_line_start": 169,
+            "lf_line_end": 179,
+            "bytes": 546,
+            "sha256": "26E03313483030D4632F91822A5FB53E075F88EDD17318CF18F455DBB7615514",
+            "byte_offset_start": 12881,
+            "byte_offset_end_exclusive": 13427
+          },
+          "ega:I.7.2.2": {
+            "lf_line_start": 180,
+            "lf_line_end": 189,
+            "bytes": 510,
+            "sha256": "67261A2B9AEBF6A81EE9F0A18809C8FF684003E48B84E68534A6CE52C6AE3CC0",
+            "byte_offset_start": 13427,
+            "byte_offset_end_exclusive": 13937
+          },
+          "ega:I.7.2.2.1": {
+            "lf_line_start": 190,
+            "lf_line_end": 206,
+            "bytes": 1764,
+            "sha256": "39AF654A864A3D4736CCEB67D6B2A8C7A874F6660D7EC6437E33AAB6EE62BFE9",
+            "byte_offset_start": 13937,
+            "byte_offset_end_exclusive": 15701
+          },
+          "ega:I.7.2.3": {
+            "lf_line_start": 207,
+            "lf_line_end": 216,
+            "bytes": 505,
+            "sha256": "B2578F9F5B35F0205E101B07E7B3CD81997E0F2B15A857E5DB217119FAB95E6D",
+            "byte_offset_start": 15701,
+            "byte_offset_end_exclusive": 16206
+          },
+          "ega:I.7.2.4": {
+            "lf_line_start": 217,
+            "lf_line_end": 226,
+            "bytes": 710,
+            "sha256": "0AD132C013720E6235685BCF0B2DC7366DEAF92E29D42E1384D5E0491B8ECADA",
+            "byte_offset_start": 16206,
+            "byte_offset_end_exclusive": 16916
+          }
+        },
+        "numbered_environments": {
+          "ega:I.7.2.1": {
+            "label": "I.7.2.1",
+            "environment": "env",
+            "begin_line": 173,
+            "label_line": 174,
+            "closing_line": 178,
+            "lf_line_start": 173,
+            "lf_line_end": 178,
+            "bytes": 453,
+            "sha256": "011064243670A6B38452C393F0583E06419FC4FFB4C02E2A02CCA833FDE9F78F",
+            "byte_offset_start": 12973,
+            "byte_offset_end_exclusive": 13426
+          },
+          "ega:I.7.2.2": {
+            "label": "I.7.2.2",
+            "environment": "proposition",
+            "begin_line": 181,
+            "label_line": 182,
+            "closing_line": 186,
+            "lf_line_start": 181,
+            "lf_line_end": 186,
+            "bytes": 316,
+            "sha256": "B014D6B636934E724EB4319BD21B95525CAFD8858C6927F16F8AA60F3F9FFB42",
+            "byte_offset_start": 13444,
+            "byte_offset_end_exclusive": 13760
+          },
+          "ega:I.7.2.2.1": {
+            "label": "I.7.2.2.1",
+            "environment": "lemma",
+            "begin_line": 190,
+            "label_line": 191,
+            "closing_line": 194,
+            "lf_line_start": 190,
+            "lf_line_end": 194,
+            "bytes": 351,
+            "sha256": "9B457D3ACDFA66F42AD965B741D9E9744A53E8273CE7000002B6CC90A92A8FC8",
+            "byte_offset_start": 13937,
+            "byte_offset_end_exclusive": 14288
+          },
+          "ega:I.7.2.3": {
+            "label": "I.7.2.3",
+            "environment": "corollary",
+            "begin_line": 207,
+            "label_line": 208,
+            "closing_line": 211,
+            "lf_line_start": 207,
+            "lf_line_end": 211,
+            "bytes": 322,
+            "sha256": "0C036C0CD0266997E30C44B64B6A3443AA4E18379037B5A9E53B863C95709E7B",
+            "byte_offset_start": 15701,
+            "byte_offset_end_exclusive": 16023
+          },
+          "ega:I.7.2.4": {
+            "label": "I.7.2.4",
+            "environment": "corollary",
+            "begin_line": 217,
+            "label_line": 218,
+            "closing_line": 221,
+            "lf_line_start": 217,
+            "lf_line_end": 221,
+            "bytes": 387,
+            "sha256": "40F74139D91987EB809F5993B05D39EB0BD5CB96FC20926C43900B44B96640A9",
+            "byte_offset_start": 16206,
+            "byte_offset_end_exclusive": 16593
+          }
+        },
+        "combined": {
+          "lf_line_start": 169,
+          "lf_line_end": 226,
+          "bytes": 4035,
+          "sha256": "F03846C37F46BD0E0EDC2623F128893A446A444462D72F04A911AA1D588EE416",
+          "byte_offset_start": 12881,
+          "byte_offset_end_exclusive": 16916
+        },
+        "parent_proposition_package": {
+          "lf_line_start": 180,
+          "lf_line_end": 206,
+          "bytes": 2274,
+          "sha256": "EF5E82164E9C05E72860CC7FA76B6CC2A541F8BDD01E2E06CC1EAA15828439F6",
+          "byte_offset_start": 13427,
+          "byte_offset_end_exclusive": 15701
+        },
+        "owned_parts": {
+          "ega:I.7.2:heading": {
+            "lf_line_start": 169,
+            "lf_line_end": 169,
+            "bytes": 52,
+            "sha256": "455BE8F8168EA9E3CE1A32093EEC107B4DCF4A65473301F6A432061D4B99AC8E",
+            "byte_offset_start": 12881,
+            "byte_offset_end_exclusive": 12933
+          },
+          "ega:I.7.2:labels": {
+            "lf_line_start": 170,
+            "lf_line_end": 171,
+            "bytes": 39,
+            "sha256": "DF9A6F775BA41197CE1DC6C4984684610CE52D3099BF4A44597F1B0E6CBF4A90",
+            "byte_offset_start": 12933,
+            "byte_offset_end_exclusive": 12972
+          },
+          "ega:I.7.2.2:page_marker": {
+            "lf_line_start": 180,
+            "lf_line_end": 180,
+            "bytes": 17,
+            "sha256": "2CABB3F4DD2E4C1B1768951BAD557F614E39DF1B914EF5019C6FBAC165BFC261",
+            "byte_offset_start": 13427,
+            "byte_offset_end_exclusive": 13444
+          },
+          "ega:I.7.2.2:proof_introduction": {
+            "lf_line_start": 188,
+            "lf_line_end": 188,
+            "bytes": 175,
+            "sha256": "A3B2E7322E479020446F6A6E388174BA01AB0316515E364CDD71ED220D95A67D",
+            "byte_offset_start": 13761,
+            "byte_offset_end_exclusive": 13936
+          },
+          "ega:I.7.2.2.1:proof": {
+            "lf_line_start": 196,
+            "lf_line_end": 202,
+            "bytes": 917,
+            "sha256": "66207366F4F208D058A011046C27D5B8BCC5A2156C0BF1319E68C199625222ED",
+            "byte_offset_start": 14289,
+            "byte_offset_end_exclusive": 15206
+          },
+          "ega:I.7.2.2:consequence_and_transition": {
+            "lf_line_start": 204,
+            "lf_line_end": 206,
+            "bytes": 494,
+            "sha256": "98B987CD2C0517BFE411AF8BDE7905907AB8856337F5FFB97988C6478C230C11",
+            "byte_offset_start": 15207,
+            "byte_offset_end_exclusive": 15701
+          },
+          "ega:I.7.2.3:proof": {
+            "lf_line_start": 213,
+            "lf_line_end": 215,
+            "bytes": 181,
+            "sha256": "1457BBDF9083FF2768F51181288098B6EFB5FC8CBD1C3CE8A09988A7DAB89EDB",
+            "byte_offset_start": 16024,
+            "byte_offset_end_exclusive": 16205
+          },
+          "ega:I.7.2.4:proof": {
+            "lf_line_start": 223,
+            "lf_line_end": 225,
+            "bytes": 321,
+            "sha256": "2662075C6AB84915BB819ADC0236EA9D08338FD8142EF52C9D458A0D9F2B2005",
+            "byte_offset_start": 16594,
+            "byte_offset_end_exclusive": 16915
+          }
+        },
+        "next_excluded_context": {
+          "source_unit": "ega:I.7.2.5",
+          "lf_line_start": 227,
+          "lf_line_end": 228,
+          "bytes": 41,
+          "sha256": "4D1DB4F89A2309166F8A5F2649B82D6D6ABE6C8D163925420C1C7A112671F109",
+          "byte_offset_start": 16916,
+          "byte_offset_end_exclusive": 16957
+        }
+      }
+    }
+    if checkpoint.get("languages") != expected_sources:
+        errors.append("I7.2.4 exact bilingual source ownership or next boundary identity changed")
+    binding = checkpoint["french_authority"]["manifest_file_binding"]
+    if (binding.get("manifest") != "F37ZW.json" or binding.get("manifest_bytes") != 13345
+            or binding.get("manifest_sha256") != "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0"
+            or binding.get("manifest_file_row") != {
+                "relative_path": "ega1/ega1-7-fr.tex", "bytes": 38226,
+                "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522"}):
+        errors.append("I7.2.4 exact French manifest row binding changed")
+    for unit in expected_units:
+        expected = checkpoint["french_authority"]["source_scopes"][unit]
+        source = expected_sources["fr"]["slices"][unit]
+        if (scope_state.get("reviewed_source_slices", {}).get(unit) != expected
+                or any(expected.get(a) != source.get(b) for a, b in (
+                    ("lf_line_start", "lf_line_start"), ("lf_line_end", "lf_line_end"),
+                    ("slice_bytes", "bytes"), ("slice_sha256", "sha256"),
+                    ("byte_offset_start", "byte_offset_start"),
+                    ("byte_offset_end_exclusive", "byte_offset_end_exclusive")))
+                or expected.get("receipt") != "F37ZW.json"
+                or expected.get("receipt_sha256") != binding["manifest_sha256"]
+                or expected.get("full_bytes") != 38226
+                or expected.get("full_sha256") != expected_sources["fr"]["full_sha256"]):
+            errors.append("I7.2.4 French source scope changed: " + unit)
+    for key in ("statement_review_snapshot", "residual_snapshot"):
+        if scope_state.get(key) != checkpoint[key]:
+            errors.append("I7.2.4 current snapshot changed: " + key)
+    all_units = set(expected_units + proofs)
+    inventory = {"ega/dec.csv": ("decision_id", 354, 359),
+                 "ega/smap.csv": ("edge_id", 1382, 1402),
+                 "ega/resid.csv": ("residual_id", 892, 906),
+                 "ega/agent.csv": ("run_id", 275, 277)}
+    if {r["path"] for r in checkpoint["ledgers"]} != set(inventory) or len(checkpoint["ledgers"]) != 4:
+        errors.append("I7.2.4 exact ledger inventory changed")
+    for ledger in checkpoint["ledgers"]:
+        path = ledger["path"]
+        if path not in inventory:
+            continue
+        key, start, end = inventory[path]
+        rows = ledger["rows"]
+        prefix = {"decision_id": "D", "edge_id": "S", "residual_id": "R", "run_id": "A"}[key]
+        if ledger["id_field"] != key or [r.get(key) for r in rows] != [prefix + str(n).zfill(6) for n in range(start, end)]:
+            errors.append("I7.2.4 append ID inventory changed: " + path)
+        actual = {row[key]: row for row in tables[path]}
+        for row in rows:
+            if actual.get(row[key]) != row:
+                errors.append("I7.2.4 exact reviewed row changed: " + row[key])
+        if path in {"ega/dec.csv", "ega/smap.csv", "ega/resid.csv"}:
+            source_key = "subject_id" if path == "ega/dec.csv" else "source_unit"
+            if [r for r in tables[path] if r[source_key] in all_units] != rows:
+                errors.append("I7.2.4 source-level ledger closure changed: " + path)
+    discovery = checkpoint["english_discovery"]["stable_units"]
+    if {r["unit_id"] for r in discovery} != all_units or len(discovery) != 8:
+        errors.append("I7.2.4 immutable discovery inventory changed; no invented parent proof unit")
+    for row in discovery:
+        if (discovery_units.get(row["unit_id"]) != row or row["authority_state"] != "english_discovery"
+                or row["review_state"] != "unreviewed"):
+            errors.append("I7.2.4 discovery row promoted or changed")
+    expected_targets = [
+      {
+        "tag": "0A1X",
+        "path": "morphisms.tex",
+        "label": "morphisms-definition-domain-of-definition",
+        "lf_line_start": 12806,
+        "lf_line_end": 12813,
+        "bytes": 364,
+        "sha256": "C34D0A721250DB649B0B19266D2667C0E5FE4451E4BB12F5B234B72D01FD6873"
+      },
+      {
+        "tag": "0A1Y",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-rational-map-from-reduced-to-separated",
+        "lf_line_start": 12819,
+        "lf_line_end": 12841,
+        "bytes": 1143,
+        "sha256": "CA8541FCA4AEB8477A88F96F3620FB2E0CFCCF934A758D181AE083B83283A459"
+      },
+      {
+        "tag": "056D",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-reduced-scheme-theoretically-dense",
+        "lf_line_start": 1172,
+        "lf_line_end": 1189,
+        "bytes": 580,
+        "sha256": "2D1CB0105B0C9883834C27B8EB0D09F356135006158B1EA6167957BFB5BD01CF"
+      },
+      {
+        "tag": "01KM",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-where-are-they-equal",
+        "lf_line_start": 4099,
+        "lf_line_end": 4122,
+        "bytes": 752,
+        "sha256": "77A9133E611D94F28950A4F73C0F9027F626045EB7F81A767D559CE7380C5400"
+      },
+      {
+        "tag": "01JB",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-glue",
+        "lf_line_start": 2544,
+        "lf_line_end": 2648,
+        "bytes": 3804,
+        "sha256": "7A9E57901A3F24D82A1C3F8E6D11407B7F96F1440450F42E5DDD442638BB2EBB"
+      },
+      {
+        "tag": "01KK",
+        "path": "schemes.tex",
+        "label": "schemes-definition-separated",
+        "lf_line_start": 4061,
+        "lf_line_end": 4074,
+        "bytes": 567,
+        "sha256": "52623337324F7DBD2998C271447BC98769B2316981732BA1A52B97CDF4776CD8"
+      },
+      {
+        "tag": "01KU",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-separated-permanence",
+        "lf_line_start": 4288,
+        "lf_line_end": 4334,
+        "bytes": 1794,
+        "sha256": "66D30B35C2D91095E3B6589A7841CD5C6E09147DF75B2B9EAC138ED77FCD9837"
+      },
+      {
+        "tag": "01KV",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-compose-after-separated",
+        "lf_line_start": 4336,
+        "lf_line_end": 4364,
+        "bytes": 1198,
+        "sha256": "73E825C23DA9BE9109412ED13D9196340F3476B19471B222990D770A694E6000"
+      },
+      {
+        "tag": "01JD",
+        "path": "schemes.tex",
+        "label": "schemes-example-affine-space-zero-doubled",
+        "lf_line_start": 2670,
+        "lf_line_end": 2713,
+        "bytes": 2061,
+        "sha256": "59C9CB67D47D0BF31D64DEAFCDF896763681D61E24A28B6F724FC4146A9EE545"
+      }
+    ]
+    positive = checkpoint["pinned_targets"]
+    negative = checkpoint["negative_comparison_targets"]
+    if positive != [t for t in expected_targets if t["tag"] != "01JD"]:
+        errors.append("I7.2.4 exact positive target inventory changed")
+    if negative != [t for t in expected_targets if t["tag"] == "01JD"]:
+        errors.append("I7.2.4 doubled-origin target is adverse construction only")
+    joins = set()
+    for target in positive + negative:
+        raw = target_loader(PINNED_STACKS_COMMIT, target["path"])
+        lines = [line + b"\n" for line in raw.split(b"\n")[:-1]] if raw else []
+        block = b"".join(lines[target["lf_line_start"] - 1:target["lf_line_end"]])
+        prefix = target["path"][:-4] + "-"
+        short = target["label"][len(prefix):]
+        if (not target["label"].startswith(prefix) or len(block) != target["bytes"]
+                or hashlib.sha256(block).hexdigest().upper() != target["sha256"]
+                or ("\\label{" + short + "}").encode() not in block):
+            errors.append("I7.2.4 pinned target block changed: " + target["tag"])
+        if tag_map.get(target["label"]) != target["tag"]:
+            errors.append("I7.2.4 exact tag-label-file join changed")
+        if target in positive:
+            joins.add((target["tag"], target["label"], target["path"]))
+    edges = [r for r in tables["ega/smap.csv"] if r["source_unit"] in all_units]
+    if (len(edges) != 20 or {r["source_unit"] for r in edges} != all_units
+            or joins != {(r["official_tag"], r["stacks_label"], r["stacks_file"]) for r in edges}):
+        errors.append("I7.2.4 exact positive component coverage closure changed")
+    for row in edges:
+        if row["relation"] != "split" or row["coverage_claim"] not in {"component", "covered_derived"}:
+            errors.append("I7.2.4 relative derivation overstated as literal full-statement equivalence")
+        if row["edge_id"] == "S001386" and row["coverage_claim"] != "component":
+            errors.append("I7.2.2 absolute target 0A1Y is only conditional comparison")
+        if row["edge_id"] == "S001387" and row["source_unit"] != "ega:I.7.2.2":
+            errors.append("I7.2.2 parent consequence reassigned to lemma proof")
+    residuals = {r["residual_id"]: r for r in tables["ega/resid.csv"] if r["source_unit"] in all_units}
+    ambiguous = {"R000893", "R000895", "R000899"}
+    for n in range(892, 906):
+        key = "R" + str(n).zfill(6)
+        if residuals.get(key, {}).get("status") != ("known_semantic_difference" if key in ambiguous else "covered_derived"):
+            errors.append("I7.2.4 relative derivation or absolute-domain ambiguity disposition changed: " + key)
+    return errors
+
+
+i724_raw = (ROOT.parent / "validation" /
+    "ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json").read_bytes()
+if len(i724_raw) != 67065 or hashlib.sha256(i724_raw).hexdigest().upper() != "F78D3E44617A76DDEACFB4D3D2152C1CCB2A08850E12F3D97F7DCCCE10B7F3DA":
+    ERRORS.append("I7.2.4 immutable semantic receipt identity changed")
+i724_checkpoint = json.loads(i724_raw.decode("utf-8"))
+ERRORS.extend(i724_dossier_contract_errors((ROOT / "i724.md").read_bytes(),
+    i724_checkpoint.get("derivation_dossier")))
+ERRORS.extend(i724_semantic_contract_errors(i724_checkpoint, scope, i665_tables,
+    units_by_id, git_blob, pinned_tag_map))
+for manifest in i724_checkpoint["ledgers"]:
+    raw = (ROOT.parent / manifest["path"]).read_bytes()
+    require_strict_lf(raw, manifest["path"])
+    require_lf_prefix(raw, manifest["prefix_rows"] + 1,
+        manifest["prefix_bytes"], manifest["prefix_sha256"], manifest["path"] + " through I7.1.16")
+    require_raw_block([line + b"\n" for line in raw.split(b"\n")[:-1]],
+        manifest["prefix_rows"] + 1, manifest["final_rows"],
+        manifest["append_bytes"], manifest["append_sha256"], manifest["path"] + " I7.2.1-4 append")
+    if len(raw) != manifest["bytes"] or hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]:
+        ERRORS.append("I7.2.4 current ledger postimage changed")
+for item in i724_checkpoint["preserved_inputs"]:
+    raw = (ROOT.parent / item["path"]).read_bytes()
+    if len(raw) != item["bytes"] or hashlib.sha256(raw).hexdigest().upper() != item["sha256"]:
+        ERRORS.append("I7.2.4 preserved input changed: " + item["path"])
 
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",
