@@ -67,6 +67,9 @@ retains the chosen embedding and base compatibility, and distinguishes EGA's
 historical “geometric point” from its modern meaning. Both corollaries follow
 from existing, stronger Stacks results. No new root theorem or PDF is added.
 Next: **§7.2.1, including its section heading**.
+The [public byte readback](validation/ega-i-7.1.15-7.1.16-public-readback-2026-09-07.json)
+verifies all 19 changed files at `66b1df8ec9457cffbfae82ae398a983a43606438`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34164548632).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is

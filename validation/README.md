@@ -32,6 +32,9 @@ compatibility kept explicit. The 226 passing checks bind complete introductions,
 proof ownership, historical ledger prefixes and the excluded §7.2 heading.
 Modern versus historical geometric-point terminology is a distinction, not an
 admitted erratum. Next: §7.2.1 with its section heading.
+The [public readback](ega-i-7.1.15-7.1.16-public-readback-2026-09-07.json)
+verifies all 19 content files, 2,111,321 bytes, at
+`66b1df8ec9457cffbfae82ae398a983a43606438`; its exact-head CI passed.
 
 ## Preceding EGA I §7.1.10–§7.1.14 comparison
 
