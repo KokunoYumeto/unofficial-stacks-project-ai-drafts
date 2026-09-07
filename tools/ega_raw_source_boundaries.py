@@ -28,7 +28,7 @@ def verify_numbered_span(raw, start, end, label):
     """
     if b"\r" in raw or not raw.endswith(b"\n"):
         raise ValueError("source must be the pinned raw LF serialization")
-    lines = raw.splitlines(keepends=True)
+    lines = [line + b"\n" for line in raw.split(b"\n")[:-1]]
     if (not isinstance(start, int) or not isinstance(end, int)
             or isinstance(start, bool) or isinstance(end, bool)
             or not 1 <= start <= end <= len(lines)):

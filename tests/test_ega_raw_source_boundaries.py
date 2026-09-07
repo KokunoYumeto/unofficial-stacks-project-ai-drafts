@@ -59,6 +59,10 @@ class RawSourceBoundaryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify_numbered_span(SOURCE.replace(b"\\end{env}", b""), 3, 9, "I.7.1.3-fr")
 
+    def test_only_lf_delimits_physical_lines(self):
+        raw = SOURCE.replace(b"The equivalence", b"The\x0c equivalence")
+        self.assertEqual(verify_numbered_span(raw, 3, 7, "I.7.1.3-fr")["closing_line"], 7)
+
 
 if __name__ == "__main__":
     unittest.main()
