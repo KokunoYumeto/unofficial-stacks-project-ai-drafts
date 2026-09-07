@@ -17,17 +17,26 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.1.3**.
-The next unit is **§7.1.4**; EGA as a whole is not complete. The new slice
-compares rational maps, rational sections, restriction, and the ring of
-rational functions with existing Stacks definitions. It introduces no
-duplicate theorem, root TeX edit, reducedness assumption, or finiteness
-assumption on the irreducible components.
+This tree records source-order semantic comparison through **EGA I §7.1.9.1**.
+The next unit is **§7.1.10**; EGA as a whole is not complete. The new slice
+identifies rational maps with generic morphism germs, computes generic
+rational-function rings, and derives finite-component products, Artinianness,
+and localization away from minimal primes. It adds no duplicate theorem or
+root TeX. Finiteness, integrality, Noetherianity, and affine qualifications
+are retained exactly where needed.
 
-The [corrected semantic checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
-records exact source slices, pinned targets, independent derivations, and
-append-only ledger identities. Production validation and publication are
-separate from this local semantic checkpoint.
+The [semantic dossier](i719.md) gives complete independent derivations and
+hypothesis counterexamples. The [checkpoint](../validation/ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json)
+binds French raw LF72–191, English discovery LF37–99, all numbered
+environments, and separately owned unwrapped proofs and tails. In particular,
+the deduction following the nested 7.1.9.1 statement belongs to 7.1.9.
+There are 1,326 active statement edges across 437 source units and 838 active
+residuals; the 12 open gaps are unchanged. These are bounded semantic records,
+not formal proof checking or a new authority edition.
+
+The [corrected preceding checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
+and all earlier ledger prefixes remain immutable historical evidence.
+Production validation and publication are separate from this local candidate.
 
 The preceding [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
 records the passing semantic tests and full repository check. It supersedes

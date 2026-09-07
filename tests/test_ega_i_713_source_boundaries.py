@@ -2,6 +2,7 @@
 import copy
 import csv
 import hashlib
+import io
 import json
 from pathlib import Path
 import subprocess
@@ -24,9 +25,16 @@ class Corrected713Tests(historical713.Semantic713Tests):
         super().setUpClass()
         cls.frozen = json.loads(RECEIPT.read_text(encoding="utf-8"))
         cls.frozen_scope = json.loads((ROOT / "ega/scope.json").read_text(encoding="utf-8"))
+        # Replay corrected v2 independently of the later live ledger frontier.
+        for key in ("statement_review_snapshot", "residual_snapshot"):
+            cls.frozen_scope[key] = copy.deepcopy(cls.frozen[key])
+        cls.frozen_scope["reviewed_source_slices"].update(
+            copy.deepcopy(cls.frozen["french_authority"]["source_scopes"]))
+        cls.frozen_tables = {}
         for entry in cls.frozen["ledgers"]:
-            with (ROOT / entry["path"]).open(encoding="utf-8", newline="") as f:
-                values = list(csv.DictReader(f))
+            raw = (ROOT / entry["path"]).read_bytes()
+            historical = b"".join(raw.splitlines(keepends=True)[:entry["final_rows"] + 1])
+            values = list(csv.DictReader(io.StringIO(historical.decode("utf-8"), newline="")))
             superseded = {r["supersedes"] for r in values if r.get("supersedes")}
             key = entry["id_field"]
             cls.frozen_tables[entry["path"]] = [r for r in values if r[key] not in superseded]

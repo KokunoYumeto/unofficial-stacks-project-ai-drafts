@@ -2599,3 +2599,73 @@ and English raw-byte boundary replay PASS; 62 semantic/history/source-boundary
 tests PASS. The verifier splits only physical LF bytes and passes the
 form-feed regression. Scoped whitespace and protected-path checks PASS.
 The original 40,646-byte adverse receipt remains at its exact A2B341... hash.
+
+## 2026-09-07 — EGA I 7.1.4–7.1.9.1 existing-coverage integration
+
+Current bounded request: implement this source-order tranche from public
+51e93aef77d61a0b1ba766534ac46e563961c93c in a fresh dedicated codex branch,
+preserving all historical ledger prefixes and receipts. Independently verify
+the exact French and English raw source, pinned targets, complete proofs,
+and unwrapped proof ownership; add semantic coverage and adverse tests,
+without root TeX, authority, tag, build, or publication mutation. The
+preflight input is identified by basename and exact hash in the new receipt.
+The reconstruction of this request was checked against the exact preflight,
+live ledger frontier, source bytes, and protected paths before appending.
+
+D000340–D000346, S001315–S001345, R000860–R000871, and A000265–A000268
+cover seven numbered units and both frozen discovery proof units.
+French raw LF72–191 is 6,378 bytes at SHA-256
+9F949891EAFDF7EC0D1BACF906CD03EB05EC0A1535BD1A4338050FB1B18BB9A1.
+English discovery LF37–99 is 6,111 bytes at SHA-256
+1789D497D077B78264564B360C4A0E178C9667E3A990D00D609258D1B39B5FAE.
+All seven numbered environments and the next-unit sentinel were derived
+from physical LF lines, not normalized web positions. French 7.1.5 proof
+95–103 and tail 105–113 are separately bound. The parent 7.1.9 deduction
+167–175 follows the nested lemma statement; the lemma proof is 177–190.
+English counterparts are 51–55, 57, 93, and 95–98 respectively.
+
+The implementation owner independently read the exact target blocks and
+wrote the derivations in ega/i719.md. Two independent mathematical audits
+agreed: all source assertions and proof-owned assertions are existing
+coverage. The first proof paragraph of 0BX8 is unlabelled component-removal
+coverage, not its distinct generic-local-ring-map conclusion. The
+finite-component formula 01RV is stronger only for the generic-stalk
+component of 7.1.5; its field clause is direct coverage and other assertions
+are derived separately. The nilradical finite-generator exponent accounts
+for French LF102. The Artinian product, canonical local factors, cofinal
+principal opens, and Sigma-localization are proved with their hypotheses.
+Empty schemes and the zero ring are treated directly. The additional
+hypotheses of 02LX and 0EMF remain negative comparisons.
+
+The current snapshot is 1,326 active statement edges (1,345 physical;
+19 superseded), 437 source units, 1,313 official-tag edges referencing
+364 distinct tags, 13 local untagged edges, and 62 full-statement
+equivalences. Residuals are 838 active (871 physical; 33 superseded);
+12 open gaps and 13 integrated-local-mirror entries are unchanged.
+The corrected preceding 7.1.1–7.1.3 receipt is now replayed at its sealed
+historical source scopes, counters, active prefixes, and postimages.
+The verified public predecessor test repair is preserved.
+
+The first checker invocation failed only because two new agent write lists
+were not lexically sorted. The candidate rows and receipt were corrected
+before freezing; no mathematical or source-boundary decision changed.
+Final immutable semantic-candidate receipt: 83,816 bytes, SHA-256
+04651D2F10B078C8AD1ACF4E3A429449F0017E3454136E7A9BD1DCB5264E7704.
+Postfreeze validation is reported here rather than rewriting that receipt.
+
+Validation completed:
+
+- python -B ega/check.py: PASS, zero errors.
+- Combined historical 6.6.8, 7.1.1–3, raw-boundary-helper, new 7.1.4–9.1
+  semantic and source-boundary modules: 115 tests PASS in 30.281 seconds.
+- python -B tools/check_ega_i719_source_boundaries.py: PASS for both exact
+  complete sources; no errors. Cached-input and single bounded-fetch paths
+  also have offline adverse tests.
+- Scoped protected-path comparison against the exact base: no root TeX,
+  official tag, discovery, authority, visual, issue, integration-registry,
+  or prior immutable-receipt change.
+
+These are structural evidence and semantic-contract tests plus independent
+mathematical review, not formal proof checking. No source defect or new
+source theorem is claimed. Next executable semantic action is EGA I 7.1.10.
+Root production validation, exact-head CI, and publication are separate.
