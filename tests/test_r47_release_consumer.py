@@ -7,15 +7,15 @@ from tools import validate_unified_repository as validator
 
 class CurrentReleaseTests(unittest.TestCase):
     def test_current_receipts_select_r47_without_rewriting_historical_files(self):
-        for name, suffix in (
-            ("DEFAULT_BUILD_RECEIPT", "build"),
-            ("VISUAL_QA_RECEIPT", "visual-qa"),
-            ("REPRODUCIBILITY_RECEIPT", "reproducibility"),
-            ("SECOND_REPRODUCIBILITY_RECEIPT", "reproducibility-second"),
-            ("CURRENT_RELEASE_RECEIPT", "release"),
+        for name, filename in (
+            ("DEFAULT_BUILD_RECEIPT", "stacks-errata-a04446e-r47-illusie-build-2026-09-07.json"),
+            ("VISUAL_QA_RECEIPT", "stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json"),
+            ("REPRODUCIBILITY_RECEIPT", "stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json"),
+            ("SECOND_REPRODUCIBILITY_RECEIPT", "stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json"),
+            ("CURRENT_RELEASE_RECEIPT", "stacks-errata-a04446e-r47-release-2026-09-06.json"),
         ):
             self.assertEqual(str(getattr(validator, name)).replace("\\", "/"),
-                             f"validation/stacks-errata-a04446e-r47-{suffix}-2026-09-06.json")
+                             f"validation/{filename}")
 
     def test_valid_mutex_observation_changes_pass(self):
         errors = []

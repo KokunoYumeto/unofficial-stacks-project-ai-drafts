@@ -13,6 +13,23 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_fixed_point as builder
 import write_r47_composition_receipt as writer
 
+# Frozen public combined-successor import. The writer's old import constant
+# remains part of its historical recipe, but is not on the published lineage
+# after the source-preserving rebase. Tests must not depend on local-only refs.
+REGISTRY_IMPORT_FIXTURE = "3c7408047b09b6cba4c29cc37051c7276e0d4f8a"
+
+
+class PublicFixtureTests(unittest.TestCase):
+    def test_import_fixture_is_in_public_lineage_and_has_exact_registry(self):
+        self.assertEqual(builder.git(
+            ROOT, "merge-base", REGISTRY_IMPORT_FIXTURE, "HEAD"),
+            REGISTRY_IMPORT_FIXTURE)
+        self.assertEqual(builder.git(
+            ROOT, "rev-parse", f"{REGISTRY_IMPORT_FIXTURE}:ai-integrated/registry/overlays.json"),
+            "c2869b04472de311be4b6dc998a797542a453437")
+        self.assertEqual(writer.REGISTRY_IMPORT,
+                         "396d60f0e4aef8c11c105a24e26c5519386a9f98")
+
 
 class SavedReceiptTests(unittest.TestCase):
     def setUp(self):
@@ -82,7 +99,7 @@ class RegistryMetadataTests(unittest.TestCase):
 
     def verify(self, rows):
         return builder.validate_registry_metadata_chain(
-            ROOT, rows, self.parent, writer.REGISTRY_IMPORT, writer.REGISTRY_CUTOFF)
+            ROOT, rows, self.parent, REGISTRY_IMPORT_FIXTURE, writer.REGISTRY_CUTOFF)
 
     def test_exact_immutable_clarification(self):
         self.assertEqual(self.verify([self.row]), writer.R40_CLARIFICATION)
@@ -136,7 +153,7 @@ class RegistryMetadataTests(unittest.TestCase):
     def test_final_successor_is_exact_and_additive(self):
         row = writer.metadata_row(writer.REGISTRY_CUTOFF)
         self.assertEqual(builder.validate_registry_metadata_chain(
-            ROOT, [row], row["parent"], writer.REGISTRY_IMPORT, writer.REGISTRY_CUTOFF),
+            ROOT, [row], row["parent"], REGISTRY_IMPORT_FIXTURE, writer.REGISTRY_CUTOFF),
             writer.REGISTRY_CUTOFF)
 
     def test_rejects_metadata_changed_at_head(self):
@@ -160,7 +177,7 @@ class RegistryMetadataTests(unittest.TestCase):
         with mock.patch.object(builder, "registry_json", side_effect=incomplete):
             with self.assertRaisesRegex(RuntimeError, "mandatory candidate_manifest"):
                 builder.validate_registry_metadata_chain(
-                    ROOT, [row], row["parent"], writer.REGISTRY_IMPORT, writer.REGISTRY_CUTOFF)
+                    ROOT, [row], row["parent"], REGISTRY_IMPORT_FIXTURE, writer.REGISTRY_CUTOFF)
 
 
 class LeasedCandidateTests(unittest.TestCase):
@@ -189,7 +206,7 @@ class LeasedCandidateTests(unittest.TestCase):
 
     def verify(self, overlay):
         return builder.validate_bound_leased_candidate(
-            ROOT, overlay, self.entry, self.parent, writer.REGISTRY_IMPORT, writer.REGISTRY_CUTOFF,
+            ROOT, overlay, self.entry, self.parent, REGISTRY_IMPORT_FIXTURE, writer.REGISTRY_CUTOFF,
             self.entry["source_commit"], self.entry["source_tree"])
 
     def test_lease_only_intake_and_full_manifest_closure(self):
@@ -222,7 +239,7 @@ class LeasedCandidateTests(unittest.TestCase):
             with self.subTest(key=key), mock.patch.object(builder, "verify_registry_references"):
                 with self.assertRaisesRegex(RuntimeError, "writer/authority"):
                     builder.validate_bound_leased_candidate(
-                        ROOT, self.overlay, entry, self.parent, writer.REGISTRY_IMPORT, writer.REGISTRY_CUTOFF,
+                        ROOT, self.overlay, entry, self.parent, REGISTRY_IMPORT_FIXTURE, writer.REGISTRY_CUTOFF,
                         self.entry["source_commit"], self.entry["source_tree"])
 
     def test_rejects_incomplete_manifest_build_reference(self):

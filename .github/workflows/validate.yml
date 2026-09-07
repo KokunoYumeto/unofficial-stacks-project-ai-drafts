@@ -58,6 +58,8 @@ jobs:
       - name: Verify EGA checkpoint, build binding, and preservation tooling
         shell: bash
         run: |
+          python ega/check.py
+          python -m unittest discover -s tests -p 'test_ega_i_*_semantic.py'
           python -m unittest \
             tests.test_ega_source_checkpoint \
             tests.test_ega_source_build_binding \
