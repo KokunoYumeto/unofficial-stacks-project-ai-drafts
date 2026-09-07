@@ -49,6 +49,7 @@ comp_blob = blob_sha(comp_bytes)
 
 for name in (
     "stacks-errata-a04446e-r47-illusie-build-2026-09-07.json",
+    "stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json",
     "stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json",
 ):
     path = V / name

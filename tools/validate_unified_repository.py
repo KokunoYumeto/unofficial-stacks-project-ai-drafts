@@ -30,16 +30,16 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r47-build-2026-09-06.json"
+    "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r47-visual-qa-2026-09-06.json"
+    "validation/stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r47-reproducibility-2026-09-06.json"
+    "validation/stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r47-reproducibility-second-2026-09-06.json"
+    "validation/stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
     "validation/stacks-errata-a04446e-r47-release-2026-09-06.json"
