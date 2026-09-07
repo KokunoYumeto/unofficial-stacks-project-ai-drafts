@@ -18,6 +18,11 @@ root TeX or PDF input; all 35 retained PDF hashes were reread successfully.
 The immutable candidate receipt's old pending state is distinguished from
 the later validation and publication records.
 
+The [anonymous GitHub readback](ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
+verifies all 15 changed files at public content commit
+`27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
+This is an incremental GitHub checkpoint, not a new Zenodo version.
+
 ## Historical R38 composition and build checkpoint
 
 The following describes its original pre-publication state, not current main.

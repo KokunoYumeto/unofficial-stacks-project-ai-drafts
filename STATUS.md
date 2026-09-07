@@ -19,9 +19,11 @@ This tree also contains the validated EGA I §6.6.6–§6.6.8 comparison at
 morphisms, locally Noetherian fibre products, and geometric-point arguments.
 It changes no root TeX or PDF input. The separate
 [integration validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
-records the passing 16-test semantic suite and full repository check;
-publication/readback is a separate successor transaction. The next source
-unit is EGA I §7.1.1, not completion of EGA.
+records the passing 16-test semantic suite and full repository check.
+The checkpoint is public at `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`;
+[anonymous readback](validation/ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
+matched all 15 changed files (1,888,511 bytes). The next source unit is
+EGA I §7.1.1, not completion of EGA.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -35,7 +37,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | Public main includes review through §6.6.5. This tree's validated comparison extends through §6.6.8, using existing Stacks results without duplicate root theorems. Next: §7.1.1. Source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The public comparison reaches §6.6.8, using existing Stacks results without duplicate root theorems in this slice. Next: §7.1.1. Source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

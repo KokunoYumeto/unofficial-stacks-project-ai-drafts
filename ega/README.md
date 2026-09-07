@@ -29,7 +29,10 @@ records the passing semantic tests and full repository check. It supersedes
 the *state* of the immutable candidate receipt, not its evidence bytes.
 Public GitHub already includes §6.6.4's proof completion and §6.6.5's
 generic-point comparison at commit `5817f4c1af8724b147401c785f57ca315b52e31c`.
-The newer §6.6.6–6.6.8 slice is validated locally pending public readback.
+The newer §6.6.6–6.6.8 slice is public at
+`27947f240bbe0fed5cf7e91239a1ebe238a85bb2`; its
+[anonymous public readback](../validation/ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
+matched all 15 changed files (1,888,511 bytes).
 The older release snapshots below retain their historical dates and counts.
 
 ### Historical publication and source snapshots
