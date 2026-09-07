@@ -46,6 +46,9 @@ counterexamples. All statements and separately owned proof passages are bound
 to exact French and English source slices. Existing Stacks covers this
 mathematics, so no duplicate root theorem or new PDF build is introduced.
 The next source unit is **§7.1.10**; EGA remains incomplete.
+The [public readback](validation/ega-i-7.1.4-7.1.9.1-public-readback-2026-09-07.json)
+verifies every changed file at `e9a6a302f753d7a0564c1ca0cf323ffb9f07fb77`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34161450235).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is

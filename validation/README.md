@@ -31,6 +31,9 @@ and [written derivations](../ega/i719.md) compare generic morphism germs and
 rational-function rings, including all separately owned proof passages.
 Existing Stacks results supply the mathematics; no duplicate root theorem
 or new PDF is introduced. The next source unit is §7.1.10.
+The [public byte readback](ega-i-7.1.4-7.1.9.1-public-readback-2026-09-07.json)
+verifies all 20 changed files at
+`e9a6a302f753d7a0564c1ca0cf323ffb9f07fb77`, totaling 2,068,710 bytes.
 
 ## Preceding EGA I §7.1.1–§7.1.3 comparison
 
