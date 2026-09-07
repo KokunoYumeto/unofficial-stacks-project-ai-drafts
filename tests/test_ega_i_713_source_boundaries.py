@@ -4,6 +4,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import unittest
 
 from tools.check_ega_i713_source_boundaries import verify_source
@@ -12,6 +13,9 @@ import tests.test_ega_i_713_semantic as historical713
 
 ROOT = Path(__file__).resolve().parents[1]
 RECEIPT = ROOT / "validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json"
+# Public cherry-pick of the immutable pre-correction ledger state. The original
+# local candidate hash remains in its receipt, but is not public-clone history.
+PUBLIC_PREDECESSOR = "886acaf2fa71dd14b2b4e3850610819260f16959"
 
 
 class Corrected713Tests(historical713.Semantic713Tests):
@@ -27,19 +31,26 @@ class Corrected713Tests(historical713.Semantic713Tests):
             key = entry["id_field"]
             cls.frozen_tables[entry["path"]] = [r for r in values if r[key] not in superseded]
 
-    def test_exact_base_prefixes_append_blocks_and_postimages(self):
-        # The predecessor is deliberately preserved locally and as embedded
-        # immutable evidence; do not require an unpublished candidate commit
-        # object to exist in a clean public clone.
+    def test_exact_base_prefixes_append_blocks_and_historical_postimages(self):
+        # Override the inherited method by its exact name. Bind public history
+        # and all immutable receipt hashes without requiring a local-only ref.
         for entry in self.receipt["ledgers"]:
             raw = (ROOT / entry["path"]).read_bytes()
-            prefix = b"".join(raw.splitlines(keepends=True)[:entry["prefix_rows"] + 1])
+            prefix = subprocess.check_output(
+                ["git", "show", PUBLIC_PREDECESSOR + ":" + entry["path"]], cwd=ROOT)
+            self.assertTrue(raw.startswith(prefix))
+            historical = b"".join(raw.splitlines(keepends=True)[:entry["final_rows"] + 1])
             for data, count, digest in (
                     (prefix, entry["prefix_bytes"], entry["prefix_sha256"]),
-                    (raw[len(prefix):], entry["append_bytes"], entry["append_sha256"]),
-                    (raw, entry["bytes"], entry["sha256"])):
+                    (historical[len(prefix):], entry["append_bytes"], entry["append_sha256"]),
+                    (historical, entry["bytes"], entry["sha256"])):
                 self.assertEqual((len(data), hashlib.sha256(data).hexdigest().upper()),
                                  (count, digest))
+
+    def test_preserved_predecessor_is_in_public_lineage(self):
+        result = subprocess.run(
+            ["git", "merge-base", "--is-ancestor", PUBLIC_PREDECESSOR, "HEAD"], cwd=ROOT)
+        self.assertEqual(result.returncode, 0)
 
     def test_v1_ranges_rejected_even_with_matching_scope_overlay(self):
         for unit, pair in zip(self.receipt["source_units"], [(6, 15), (16, 52), (53, 64)]):

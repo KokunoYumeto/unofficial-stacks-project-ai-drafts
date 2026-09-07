@@ -23,7 +23,7 @@ verifies all 15 changed files at public content commit
 `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
 
-## Historical R38 composition and build checkpoint
+## Current EGA I §7.1.1–§7.1.3 comparison
 
 The current [EGA I §7.1.1–§7.1.3 integration validation](ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
 records the rational-map and rational-function comparison. Its
@@ -33,7 +33,13 @@ candidate and its ledger rows as adverse history. Live French/English replay,
 73 test executions and complete repository validation pass. The next source
 unit is §7.1.4; neither this checkpoint nor those tests prove EGA complete.
 
-The R38 discussion below is historical.
+The [public content readback](ega-i-7.1.1-7.1.3-public-readback-2026-09-07.json)
+verifies all 22 changed paths at `51e93aef77d61a0b1ba766534ac46e563961c93c`,
+totaling 2,003,438 bytes. A test-history repair binds the preserved public
+predecessor rather than requiring an unpublished local candidate commit;
+the mathematical comparison and immutable source receipts are unchanged.
+
+## Historical R38 composition and build checkpoint
 
 The following describes its original pre-publication state, not current main.
 
