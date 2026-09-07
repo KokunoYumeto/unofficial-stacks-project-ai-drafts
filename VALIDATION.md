@@ -5,6 +5,15 @@ composition, TeX compilation, and visual evidence are not conflated.
 
 ## Current combined R47/Illusie and EGA comparison checkpoint
 
+The [EGA I §7.1.1–§7.1.3 comparison](validation/ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+passes the complete repository validator and 73 test executions, including
+adverse source-boundary checks. A separate replay reads both pinned source
+files and derives their actual numbered environment boundaries. It confirms
+the complete statements, the final rational-section correspondence and ring
+conclusion, and the raw French correction locus at line 40. The initial
+candidate's incomplete intervals are retained as adverse history, not current
+coverage evidence. No root TeX or PDF input changed; no new build is claimed.
+
 Source commit `b3c4a28c053dbbd45670dd19cf0dcc45063190dc` contains
 177 manifest-bound R40–R47 corrections across five cumulative chapters.
 The [independent replay](validation/stacks-errata-a04446e-r47-independent-composition-2026-09-06.json)

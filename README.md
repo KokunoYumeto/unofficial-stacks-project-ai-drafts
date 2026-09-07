@@ -147,7 +147,7 @@ also corrects an overstatement in EGA's printed restriction argument:
 representatives agree on a dense open witness, not necessarily on their
 entire overlap. The original remains available for comparison; the draft
 gives the corrected argument and an explicit counterexample to the stronger
-claim. See the [rational-map comparison](ega/README.md#ega-i-711713-rational-maps-and-rational-functions).
+claim. See the [rational-map comparison](ega/README.md#rational-maps-and-functions).
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 

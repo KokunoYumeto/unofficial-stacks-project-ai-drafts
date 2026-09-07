@@ -32,7 +32,9 @@ functions**. Existing Stacks results supply the definitions, restriction,
 graph/section correspondence and ring operations. A direct check of the
 original printed page confirms a proof overstatement about agreement on an
 entire overlap; the comparison supplies the correct dense-witness argument.
-No duplicate root theorem is added. The next source unit is §7.1.4; EGA
+The [integration checks](validation/ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+pass, including complete raw-source boundary replay. No duplicate root
+theorem is added. The next source unit is §7.1.4; EGA
 remains incomplete.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,

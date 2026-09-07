@@ -955,6 +955,8 @@ records the successful checks separately. No root TeX, tag, authority,
 registry or PDF input changes. This is not a machine-checked proof or complete
 EGA coverage. At that checkpoint the next unit was EGA I 7.1.1, not 6.6.9.
 
+<a id="rational-maps-and-functions"></a>
+
 ## EGA I 7.1.1–7.1.3: rational maps and rational functions
 
 EGA's rational maps are represented by morphisms defined on dense open

@@ -1,0 +1,99 @@
+{
+  "schema": "ega-i-7.1.1-7.1.3-integration-validation/v1",
+  "date": "2026-09-07",
+  "status": "PASS_LOCAL_CHECKPOINT",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "bc2db1e2b9829bff6c1d98091f40bbc6a312e9b0",
+  "validated_semantic_commit": "2e76bce714401cf120534f35bf7a5de2cd847ff7",
+  "validated_semantic_tree": "0e943e396b3a9b5f5ba1dba4cc4273fa69ecc569",
+  "scope": "EGA I 7.1.1–7.1.3: rational maps, rational sections, and rational functions",
+  "next_source_unit": "EGA I 7.1.4",
+  "complete_ega_program": false,
+  "machine_checked_mathematical_proof": false,
+  "mathematical_result": "Existing Stacks definitions and universal properties cover this slice. The independent comparison retains dense equality witnesses for restriction and quotient correspondences and explains the rational-function ring without finite-component or reducedness assumptions. No duplicate root theorem is added.",
+  "corrected_source_receipt": {
+    "path": "validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json",
+    "bytes": 46840,
+    "sha256": "95ACE3E7E89842164AAAD38FE623FCEFB6EC9CC3AFB45B38FA2560C95DEA378F"
+  },
+  "adverse_predecessor": {
+    "path": "validation/ega-i-7.1.1-7.1.3-semantic-checkpoint-2026-09-07.json",
+    "bytes": 40646,
+    "sha256": "A2B341ADAC93BC8229B6FEB66D82731EED0B4F3181367AA84F92E36AE63BA59C",
+    "disposition": "Preserved exactly, not accepted as current source-boundary evidence. Correct hashes of incomplete intervals did not prove coverage. The successor preserves old rows while superseding their source bindings."
+  },
+  "source_boundary_replay": {
+    "schema": "ega-i713-raw-source-boundary-replay/v1",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "status": "PASS"
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "status": "PASS"
+      }
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  "checks": {
+    "unit_test_command": "python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic tests.test_ega_i_713_source_boundaries tests.test_ega_raw_source_boundaries",
+    "unit_tests_run": 73,
+    "unit_tests_status": "PASS",
+    "unit_tests_elapsed_seconds": 15.118,
+    "full_repository_validator": "PASS",
+    "registered_overlays": 48,
+    "stable_errata_ids": 1292,
+    "exact_v2_operations": 1481,
+    "legacy_replacements": 69,
+    "permanent_tags": 21819,
+    "reproducible_pdf_identities": 35,
+    "recorded_visual_chapters": 5,
+    "earlier_668_raw_source_regression": "Independent raw-French/English audit PASS, including all statement/proof intervals and four context scopes; no earlier-public source-range repair required."
+  },
+  "snapshots": {
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1295,
+      "file_rows": 1314,
+      "superseded_rows": 19,
+      "source_units": 428,
+      "existing_official_tag_rows": 1282,
+      "distinct_existing_official_tags": 356,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 826,
+      "file_rows": 859,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "preservation": {
+    "root_tex_changed": false,
+    "root_build_inputs_changed": false,
+    "official_tags_changed": false,
+    "overlay_registry_changed": false,
+    "new_tex_build": false,
+    "existing_35_pdf_receipts_preserved": true,
+    "original_or_translation_source_mutation": false
+  },
+  "original_printing_observation": {
+    "source": "https://www.numdam.org/article/PMIHES_1960__4__5_0.pdf",
+    "printed_page": 155,
+    "physical_page": 154,
+    "french_raw_line": 40,
+    "classification": "Original-printing proof overstatement confirmed by independent visual inspection; source-edition annotation remains a separate proposed correction.",
+    "public_original_page_reproductions": false
+  },
+  "publication_policy": {
+    "github": "Incremental validated checkpoint",
+    "zenodo": "No new version for this routine slice; substantial coherent milestones only."
+  }
+}

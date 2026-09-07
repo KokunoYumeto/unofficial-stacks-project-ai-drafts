@@ -25,6 +25,16 @@ This is an incremental GitHub checkpoint, not a new Zenodo version.
 
 ## Historical R38 composition and build checkpoint
 
+The current [EGA I §7.1.1–§7.1.3 integration validation](ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+records the rational-map and rational-function comparison. Its
+[source-boundary correction](ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
+supersedes incomplete raw-source intervals while preserving the first
+candidate and its ledger rows as adverse history. Live French/English replay,
+73 test executions and complete repository validation pass. The next source
+unit is §7.1.4; neither this checkpoint nor those tests prove EGA complete.
+
+The R38 discussion below is historical.
+
 The following describes its original pre-publication state, not current main.
 
 The local source includes admitted R34–R38 corrections on top of the public
