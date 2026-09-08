@@ -128,6 +128,12 @@ counterexamples to unjustified stronger claims. The
 binds all three source proofs. No duplicate root theorem, official tag or
 PDF is added. The twelve earlier gaps remain open. Next: **§7.3.8**;
 full EGA I–IV remains unfinished.
+The [integration validation](validation/ega-i-7.3.5-7.3.7-integration-validation-2026-09-08.json)
+records 93 passing regression tests, exact source replay and repository checks.
+The [public byte receipt](validation/ega-i-7.3.5-7.3.7-public-readback-2026-09-08.json)
+matches all 19 changed files (2,298,390 bytes) at
+`027e32195209a05d1b28a854e030d71600c9c76b`; the
+[exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34228051094).
 
 The preceding **EGA I §7.3.1–§7.3.4 comparison** constructs the dense-open
 rational-function sheaf and proves restriction, generic-local-ring formulas,

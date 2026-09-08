@@ -37,6 +37,13 @@ expanded arguments supplied here. This is a comparison using existing
 Stacks ingredients, not a duplicate root theorem or a proof-assistant result.
 All twelve earlier open gaps remain open.
 
+The [integration validation](../validation/ega-i-7.3.5-7.3.7-integration-validation-2026-09-08.json)
+records 93 passing regression tests, exact source replay and cumulative
+repository checks. The [public byte receipt](../validation/ega-i-7.3.5-7.3.7-public-readback-2026-09-08.json)
+verifies all 19 changed files (2,298,390 bytes) at
+`027e32195209a05d1b28a854e030d71600c9c76b`; its
+[exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34228051094).
+
 The preceding [comparison](i734.md)
 constructs EGA's dense-open rational-function sheaf, proves its restriction
 property, and gives the generic-local-ring description and quasi-coherence
