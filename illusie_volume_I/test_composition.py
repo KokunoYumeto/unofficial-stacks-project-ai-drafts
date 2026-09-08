@@ -10,7 +10,7 @@ class CompositionIsolation(unittest.TestCase):
     def make_copy(self, folder):
         root = Path(folder)
         (root / "illusie_volume_I").mkdir()
-        for name in ("simplicial.tex", "illusie_volume_I/relative-homotopy.tex"):
+        for name in ("simplicial.tex", "illusie_volume_I/relative-homotopy.tex", "illusie_volume_I/localization.tex"):
             (root / name).write_bytes((ROOT / name).read_bytes())
         return root
 

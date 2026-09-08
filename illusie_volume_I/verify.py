@@ -19,10 +19,8 @@ def identity(path: Path) -> dict:
     return {"bytes": len(data), "sha256": sha(data)}
 
 def source_section(text: str, page: int) -> str:
-    if page == 6:
-        text = text.split(r"\hypertarget{illusie:I:ch1:s1:2}", 1)[0]
-    elif page == 11:
-        text = text.split(r"\hypertarget{illusie:I:ch1:s1:4}", 1)[0]
+    # The current source span ends at the end of printed page 16.
+    # Do not retain obsolete mid-page cuts from earlier section checkpoints.
     return text
 
 def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
@@ -31,7 +29,7 @@ def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
     files, anchors_by_lane = [], {}
     for lane in ("fr_diplomatic", "fr_corrected", "en"):
         anchors = []
-        for page in range(1, 12):
+        for page in range(1, 17):
             relative = f"tex/volume_I/{lane}/ch1/{page:03d}_p{page:03d}.tex"
             path = edition / relative
             text = source_section(path.read_text(encoding="utf-8"), page)
@@ -48,11 +46,12 @@ def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
               "authority": {"doi": "10.1007/BFb0059052", **authority_id},
               "files": files, "section_anchors": anchors_by_lane["en"]}
     (root / "illusie_volume_I/source-lock.json").write_text(
-        json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 def composition(root: Path) -> tuple[bytes, bytes, bytes]:
     source = (root / "simplicial.tex").read_bytes()
-    snippet = (root / "illusie_volume_I/relative-homotopy.tex").read_bytes().rstrip() + b"\n"
+    snippet = b"\n\n".join((root / "illusie_volume_I" / name).read_bytes().rstrip()
+                           for name in ("relative-homotopy.tex", "localization.tex")) + b"\n"
     assert source.count(START) == source.count(END) == 1, "composition markers not unique"
     before, rest = source.split(START)
     inserted, after = rest.split(END)
@@ -77,7 +76,7 @@ def validate(root: Path) -> dict:
                 (root / "tags/tags").read_text(encoding="utf-8").splitlines()
                 if line and not line.startswith("#") and "," in line)
     local_labels = re.findall(rb"\\label\{([^}]+)\}", snippet)
-    assert len(local_labels) == len(set(local_labels)) == 10
+    assert len(local_labels) == len(set(local_labels)) == 14
     for row in mapping["decisions"]:
         assert len(row["tags"]) == len(row["labels"]), row["id"]
         for tag, label in zip(row["tags"], row["labels"]):
@@ -106,7 +105,11 @@ def validate(root: Path) -> dict:
     for key, data in (("source_postimage", source), ("snippet", snippet),
                       ("source_preimage", preimage)):
         assert check[key] == {"bytes": len(data), "sha256": sha(data)}, key
-    return {"status": "PASS", "source_anchors": len(mapped),
+    pending = mapping["completion"]["pending_decisions"]
+    assert all(item in {row["id"] for row in mapping["decisions"]} for item in pending)
+    return {"status": "PASS", "scope": "inventory, labels, and composition only",
+            "mathematical_dispositions_complete": not pending,
+            "pending_decisions": pending, "source_anchors": len(mapped),
             "decisions": len(mapping["decisions"]), "local_labels": effective,
             "source_preimage": preimage,
             "current_source_sha256": sha(source)}
@@ -120,7 +123,7 @@ def write_check(root: Path) -> None:
              "snippet": {"bytes": len(snippet), "sha256": sha(snippet)},
              "source_preimage": {"bytes": len(preimage), "sha256": sha(preimage)}}
     (root / "illusie_volume_I/check.json").write_text(
-        json.dumps(check, indent=2) + "\n", encoding="utf-8")
+        json.dumps(check, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)

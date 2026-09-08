@@ -1,180 +1,781 @@
 {
   "schema": "illusie-volume-I-source-map/v1",
-  "scope": "I.1.1-I.1.2, printed pp.1-8, ending before I.1.3",
+  "scope": "I.1.1-I.1.4, printed pp.1-16",
   "anchor_prefix": "illusie:I:ch1:s1:1:",
-  "structural_anchors": ["illusie:I:ch1", "illusie:I:ch1:s1", "illusie:I:ch1:s1:1", "illusie:I:ch1:s1:3"],
+  "structural_anchors": [
+    "illusie:I:ch1",
+    "illusie:I:ch1:s1",
+    "illusie:I:ch1:s1:1",
+    "illusie:I:ch1:s1:3",
+    "illusie:I:ch1:s1:4",
+    "illusie:I:ch1:s1:2"
+  ],
   "decisions": [
     {
-      "id": "I-1.1-001", "anchors": ["p1", "d1", "d2"],
+      "id": "I-1.1-001",
+      "anchors": [
+        "p1",
+        "d1",
+        "d2"
+      ],
       "claim": "The simplex category and its face/degeneracy generators.",
-      "disposition": "existing_coverage", "tags": ["0164", "0165"],
-      "labels": ["simplicial-section-Delta", "simplicial-definition-face-degeneracy"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "0164",
+        "0165"
+      ],
+      "labels": [
+        "simplicial-section-Delta",
+        "simplicial-definition-face-degeneracy"
+      ],
       "reason": "Stacks explicitly identifies its skeletal simplex category with the category of all nonempty finite ordered sets. Faces and degeneracies agree. The face domain is meaningful only for n>=1, as Stacks states explicitly."
     },
     {
-      "id": "I-1.1-002", "anchors": ["p2", "eq1", "n1", "p2c1"],
+      "id": "I-1.1-002",
+      "anchors": [
+        "p2",
+        "eq1",
+        "n1",
+        "p2c1"
+      ],
       "claim": "Simplicial, cosimplicial, multi-index and mixed objects; restriction to the diagonal.",
-      "disposition": "definition_extension", "tags": ["016A", "016J"],
-      "labels": ["simplicial-definition-simplicial-object", "simplicial-definition-cosimplicial-object"],
+      "disposition": "definition_extension",
+      "tags": [
+        "016A",
+        "016J"
+      ],
+      "labels": [
+        "simplicial-definition-simplicial-object",
+        "simplicial-definition-cosimplicial-object"
+      ],
       "reason": "Single-index definitions are identical. Multi-index objects are functors from the specified product category, and the diagonal is precomposition with the diagonal indexing functor. No universal or monomorphism property is intended by the historical phrase diagonal subobject."
     },
     {
-      "id": "I-1.1-003", "anchors": ["p3", "eq2", "d3"],
+      "id": "I-1.1-003",
+      "anchors": [
+        "p3",
+        "eq2",
+        "d3"
+      ],
       "claim": "The constant simplicial functor is fully faithful and left adjoint to evaluation in degree zero; its image consists of objects with invertible structure maps.",
-      "disposition": "elementary_consequence", "tags": ["0164", "016D"],
-      "labels": ["simplicial-section-Delta", "simplicial-example-constant-simplicial-object"],
+      "disposition": "elementary_consequence",
+      "tags": [
+        "0164",
+        "016D"
+      ],
+      "labels": [
+        "simplicial-section-Delta",
+        "simplicial-example-constant-simplicial-object"
+      ],
       "reason": "For e:A->Y_0, the unique map q_n:[n]->[0] gives Y(q_n)e:A->Y_n. These components are natural, and every map from the constant object has these components. Evaluation recovers e, proving the adjunction with no colimit assumptions and full faithfulness. If structure maps are invertible these same degeneracies give a natural isomorphism from the constant object on Y_0; the converse is immediate."
     },
     {
-      "id": "I-1.1-004", "anchors": ["p4", "eq3", "p5", "p5c1"],
+      "id": "I-1.1-004",
+      "anchors": [
+        "p4",
+        "eq3",
+        "p5",
+        "p5c1"
+      ],
       "claim": "Augmentation maps and their degree-zero equalizer description; slice and augmented-indexing descriptions.",
-      "disposition": "existing_coverage_and_definitional_consequence", "tags": ["018G", "018H"],
-      "labels": ["simplicial-definition-augmentation", "simplicial-lemma-augmentation-howto"],
+      "disposition": "existing_coverage_and_definitional_consequence",
+      "tags": [
+        "018G",
+        "018H"
+      ],
+      "labels": [
+        "simplicial-definition-augmentation",
+        "simplicial-lemma-augmentation-howto"
+      ],
       "reason": "018H gives exactly the condition epsilon_0 d_0=epsilon_0 d_1 and reconstructs every degree. Recording these maps as structure maps to the fixed object gives the slice-category formulation; adjoining the empty ordered set gives the augmented indexing formulation. No existence of coequalizers is used here."
     },
     {
-      "id": "I-1.1-005", "anchors": ["p6", "eq4", "d4"],
+      "id": "I-1.1-005",
+      "anchors": [
+        "p6",
+        "eq4",
+        "d4"
+      ],
       "claim": "When the coequalizer exists, pi_0 is left adjoint to the constant functor.",
-      "disposition": "universal_property_consequence", "tags": ["018H"],
-      "labels": ["simplicial-lemma-augmentation-howto"],
+      "disposition": "universal_property_consequence",
+      "tags": [
+        "018H"
+      ],
+      "labels": [
+        "simplicial-lemma-augmentation-howto"
+      ],
       "reason": "By 018H, maps Z->constant(A) are precisely maps Z_0->A equalizing the two faces from Z_1. The coequalizer universal property identifies these with maps pi_0(Z)->A, naturally in both variables. The global left adjoint is asserted only when the indicated coequalizers exist for all Z."
     },
     {
-      "id": "I-1.1-006", "anchors": ["p7", "d5", "d6", "p8"],
+      "id": "I-1.1-006",
+      "anchors": [
+        "p7",
+        "d5",
+        "d6",
+        "p8"
+      ],
       "claim": "Componentwise simplicial homotopy without coproduct assumptions.",
-      "disposition": "existing_coverage", "tags": ["019M"],
-      "labels": ["simplicial-remark-homotopy-better"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "019M"
+      ],
+      "labels": [
+        "simplicial-remark-homotopy-better"
+      ],
       "reason": "Order maps alpha:[n]->[1] are in bijection with the n+2 cut positions. Illusie's naturality in all simplex maps is equivalent to Stacks' face and degeneracy relations. Constant alpha maps give the endpoints."
     },
     {
-      "id": "I-1.1-007", "anchors": ["p9", "p9c1", "eq5", "p10", "d7"],
+      "id": "I-1.1-007",
+      "anchors": [
+        "p9",
+        "p9c1",
+        "eq5",
+        "p10",
+        "d7"
+      ],
       "claim": "Compatibility of the generated homotopy relation with composition and the resulting quotient category.",
-      "disposition": "existing_coverage", "tags": ["08RJ", "019M"],
-      "labels": ["simplicial-remark-homotopy-pre-post-compose", "simplicial-remark-homotopy-better"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "08RJ",
+        "019M"
+      ],
+      "labels": [
+        "simplicial-remark-homotopy-pre-post-compose",
+        "simplicial-remark-homotopy-better"
+      ],
       "reason": "08RJ explicitly constructs hSimp(C) and its quotient functor; 019M proves preservation by any functor. A single elementary homotopy is not assumed symmetric or transitive in an arbitrary category."
     },
     {
-      "id": "I-1.1-008", "anchors": ["p11", "p12"],
+      "id": "I-1.1-008",
+      "anchors": [
+        "p11",
+        "p12"
+      ],
       "claim": "Homotopy equivalences, functoriality, and the absolute cosimplicial variant.",
-      "disposition": "existing_coverage", "tags": ["019N", "019X", "019Y"],
-      "labels": ["simplicial-definition-homotopy-equivalent", "simplicial-lemma-compare-homotopies", "simplicial-lemma-functorial-homotopy"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "019N",
+        "019X",
+        "019Y"
+      ],
+      "labels": [
+        "simplicial-definition-homotopy-equivalent",
+        "simplicial-lemma-compare-homotopies",
+        "simplicial-lemma-functorial-homotopy"
+      ],
       "reason": "An inverse in the quotient is represented by a morphism whose two composites are homotopic to identities, precisely 019N. 019X identifies the opposite-category formulation of cosimplicial homotopy; 019Y supplies functoriality."
     },
     {
-      "id": "I-1.1-009", "anchors": ["p13", "p14", "p14c1", "eq6"],
+      "id": "I-1.1-009",
+      "anchors": [
+        "p13",
+        "p14",
+        "p14c1",
+        "eq6"
+      ],
       "claim": "Relative homotopies over a fixed simplicial base map and fibrewise quotient categories.",
-      "disposition": "new_explicit_relative_construction", "tags": ["019M", "08RJ"],
-      "labels": ["simplicial-remark-homotopy-better", "simplicial-remark-homotopy-pre-post-compose"],
-      "local_labels": ["lemma-illusie-I-relative-homotopy-quotient"],
+      "disposition": "new_explicit_relative_construction",
+      "tags": [
+        "019M",
+        "08RJ"
+      ],
+      "labels": [
+        "simplicial-remark-homotopy-better",
+        "simplicial-remark-homotopy-pre-post-compose"
+      ],
+      "local_labels": [
+        "lemma-illusie-I-relative-homotopy-quotient"
+      ],
       "reason": "The absolute results supply the component relations. The new proof requires the entire homotopy to project to the fixed map, and constructs the quotient over Simp(B). Its postcomposition base map is hf; see the recorded printed hg carrier error."
     },
     {
-      "id": "I-1.1-010", "anchors": ["p15", "p16"],
+      "id": "I-1.1-010",
+      "anchors": [
+        "p15",
+        "p16"
+      ],
       "claim": "Fibred simplicial category and factorization of relative homotopies through a common cartesian lift.",
-      "disposition": "new_explicit_relative_construction", "tags": ["02XK", "02XM"],
-      "labels": ["categories-definition-cartesian-over-C", "categories-definition-fibred-category"],
-      "local_labels": ["lemma-illusie-I-relative-homotopy-base-change"],
+      "disposition": "new_explicit_relative_construction",
+      "tags": [
+        "02XK",
+        "02XM"
+      ],
+      "labels": [
+        "categories-definition-cartesian-over-C",
+        "categories-definition-fibred-category"
+      ],
+      "local_labels": [
+        "lemma-illusie-I-relative-homotopy-base-change"
+      ],
       "reason": "The proof constructs pointwise strongly cartesian lifts and proves their naturality and universal property for arbitrary base maps. Both endpoints and every homotopy component factor through one chosen f^*Y."
     },
     {
-      "id": "I-1.1-011", "anchors": ["p17", "d8", "eq7", "p18"],
+      "id": "I-1.1-011",
+      "anchors": [
+        "p17",
+        "d8",
+        "eq7",
+        "p18"
+      ],
       "claim": "Base change on homotopy quotient fibres and the fibred/cofibred quotient category.",
-      "disposition": "new_explicit_relative_construction", "tags": ["02XK", "02XM"],
-      "labels": ["categories-definition-cartesian-over-C", "categories-definition-fibred-category"],
-      "local_labels": ["lemma-illusie-I-relative-homotopy-base-change", "remark-illusie-I-relative-homotopy-base-functor"],
+      "disposition": "new_explicit_relative_construction",
+      "tags": [
+        "02XK",
+        "02XM"
+      ],
+      "labels": [
+        "categories-definition-cartesian-over-C",
+        "categories-definition-fibred-category"
+      ],
+      "local_labels": [
+        "lemma-illusie-I-relative-homotopy-base-change",
+        "remark-illusie-I-relative-homotopy-base-functor"
+      ],
       "reason": "The proof gives the lifting equations, verifies homotopy-chain compatibility and strong cartesianness in the quotient, and proves comparison coherence without assuming a split cleavage. The remark gives the cocartesian lifting equation and correct covariant direction."
     },
     {
-      "id": "I-1.1-012", "anchors": ["p19", "p19c1", "eq8", "p20", "d9"],
+      "id": "I-1.1-012",
+      "anchors": [
+        "p19",
+        "p19c1",
+        "eq8",
+        "p20",
+        "d9"
+      ],
       "claim": "Functors over the base descend to the relative homotopy quotient.",
-      "disposition": "new_explicit_relative_construction", "tags": ["019Y"],
-      "labels": ["simplicial-lemma-functorial-homotopy"],
-      "local_labels": ["lemma-illusie-I-relative-homotopy-quotient", "remark-illusie-I-relative-homotopy-base-functor"],
+      "disposition": "new_explicit_relative_construction",
+      "tags": [
+        "019Y"
+      ],
+      "labels": [
+        "simplicial-lemma-functorial-homotopy"
+      ],
+      "local_labels": [
+        "lemma-illusie-I-relative-homotopy-quotient",
+        "remark-illusie-I-relative-homotopy-base-functor"
+      ],
       "reason": "Applying the base functor to components preserves the fixed base map. An arbitrary base functor yields a functor over Simp(B); preservation of cartesian arrows is claimed only with the additional cartesian-preservation hypothesis."
     },
     {
-      "id": "I-1.1-013", "anchors": ["p21"],
+      "id": "I-1.1-013",
+      "anchors": [
+        "p21"
+      ],
       "claim": "The relative cosimplicial variants suggested at the end of I.1.1.6.",
-      "disposition": "explicit_dual_consequence", "tags": ["019X"],
-      "labels": ["simplicial-lemma-compare-homotopies"],
-      "local_labels": ["remark-illusie-I-relative-homotopy-base-functor"],
+      "disposition": "explicit_dual_consequence",
+      "tags": [
+        "019X"
+      ],
+      "labels": [
+        "simplicial-lemma-compare-homotopies"
+      ],
+      "local_labels": [
+        "remark-illusie-I-relative-homotopy-base-functor"
+      ],
       "reason": "019X identifies cosimplicial homotopies with simplicial homotopies in the opposite category, reversing arrows. Apply the cocartesian or cartesian result over B^op and take opposites back; the remark tracks the interchange of fibred/cofibred hypotheses and base-change directions."
     },
     {
-      "id": "I-1.2-001", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["d12c1", "d13"],
+      "id": "I-1.2-001",
+      "anchor_prefix": "illusie:I:ch1:s1:2:",
+      "anchors": [
+        "p1",
+        "p2",
+        "p3",
+        "d10",
+        "p4",
+        "p5",
+        "d11",
+        "d12",
+        "n1",
+        "n2",
+        "d12c1",
+        "d13"
+      ],
       "claim": "Additive complexes and the signed simple-complex functor in Illusie's degree convention.",
-      "disposition": "existing_coverage_with_convention_map", "tags": ["010V"],
-      "labels": ["homology-section-complexes"],
-      "reason": "010V supplies the complex convention; the source's cochain notation and its chain convention X^n=X_{-n} are recorded explicitly in the source witness."
+      "disposition": "existing_conventions_and_explicit_total",
+      "tags": [
+        "010V"
+      ],
+      "labels": [
+        "homology-section-complexes"
+      ],
+      "reason": "Co/homological grading, nonnegative chain support and commuting differentials are explicit. Required coproducts and all intermediate grouped totals must exist. This also covers the previously omitted beginning of I.1.2 on printed p.6.",
+      "local_labels": [
+        "definition-illusie-I-signed-total",
+        "lemma-illusie-I-signed-total-differential"
+      ]
     },
     {
-      "id": "I-1.2-002", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p6", "d14", "d15", "d16", "p7", "d17"],
+      "id": "I-1.2-002",
+      "anchor_prefix": "illusie:I:ch1:s1:2:",
+      "anchors": [
+        "p6",
+        "d14",
+        "d15",
+        "d16",
+        "p7",
+        "d17"
+      ],
       "claim": "Commuting n-fold complexes, signed totalization, and alternating-face complexes of multisimplicial and multicosimplicial objects.",
-      "disposition": "new_explicit_extension", "tags": ["012Y", "012Z", "0194", "0195", "018Z", "019H"],
-      "labels": ["homology-definition-double-complex", "homology-definition-associated-simple-complex", "simplicial-section-complexes", "simplicial-lemma-s-exact", "simplicial-lemma-abelian", "simplicial-section-dold-kan-cosimplicial"],
-      "local_labels": ["definition-illusie-I-signed-total", "lemma-illusie-I-signed-total-differential", "lemma-illusie-I-multisimplicial-chains"],
+      "disposition": "new_explicit_extension",
+      "tags": [
+        "012Y",
+        "012Z",
+        "0194",
+        "0195",
+        "018Z",
+        "019H"
+      ],
+      "labels": [
+        "homology-definition-double-complex",
+        "homology-definition-associated-simple-complex",
+        "simplicial-section-complexes",
+        "simplicial-lemma-s-exact",
+        "simplicial-lemma-abelian",
+        "simplicial-section-dold-kan-cosimplicial"
+      ],
+      "local_labels": [
+        "definition-illusie-I-signed-total",
+        "lemma-illusie-I-signed-total-differential",
+        "lemma-illusie-I-multisimplicial-chains"
+      ],
       "reason": "The repository covers n=2 commuting double complexes, n=2/3 signs, and one simplicial direction. The new definitions prove the prefix-sign formula, finite-degree existence for multisimplicial objects, and the stated additive/abelian extensions. The unrestricted arbitrary-additive total is qualified by an existence condition rather than silently assuming infinite coproducts."
     },
     {
-      "id": "I-1.2-003", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p8", "p9", "d18", "p10"],
+      "id": "I-1.2-003",
+      "anchor_prefix": "illusie:I:ch1:s1:2:",
+      "anchors": [
+        "p8",
+        "p9",
+        "d18",
+        "p10"
+      ],
       "claim": "Functorial Eilenberg-Zilber comparison between the total chain complex and the diagonal chain complex.",
-      "disposition": "new_explicit_chain_homotopy_theorem", "tags": ["08QC"],
-      "labels": ["sites-cohomology-lemma-eilenberg-zilber"],
-      "local_labels": ["theorem-illusie-I-eilenberg-zilber"],
+      "disposition": "new_explicit_chain_homotopy_theorem",
+      "tags": [
+        "08QC"
+      ],
+      "labels": [
+        "sites-cohomology-lemma-eilenberg-zilber"
+      ],
+      "local_labels": [
+        "theorem-illusie-I-eilenberg-zilber"
+      ],
       "reason": "08QC is only a derived-category tensor/diagonal comparison under cosimplicial-resolution hypotheses. It does not provide Illusie's natural chain maps or chain homotopies. The new theorem supplies that stronger statement in additive categories."
     },
     {
-      "id": "I-1.2-004", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p11", "eq9", "eq10", "p12", "d19", "p12c1", "d20"],
+      "id": "I-1.2-004",
+      "anchor_prefix": "illusie:I:ch1:s1:2:",
+      "anchors": [
+        "p11",
+        "eq9",
+        "eq10",
+        "p12",
+        "d19",
+        "p12c1",
+        "d20"
+      ],
       "claim": "Explicit shuffle and Alexander-Whitney formulas with the source's indexing and signs.",
-      "disposition": "new_explicit_formula", "tags": ["08QC", "08QD"],
-      "labels": ["sites-cohomology-lemma-eilenberg-zilber", "sites-cohomology-remark-simplicial-modules"],
-      "local_labels": ["definition-illusie-I-shuffle-aw", "theorem-illusie-I-eilenberg-zilber"],
-      "reason": "No audited repository text gives these maps or their chain-level formulas. The definition fixes one-based shuffle lists, inversion parity, and the front/back face strings, while the theorem proves chain-map and homotopy properties."
+      "disposition": "new_explicit_formula",
+      "tags": [
+        "08QC",
+        "08QD"
+      ],
+      "labels": [
+        "sites-cohomology-lemma-eilenberg-zilber",
+        "sites-cohomology-remark-simplicial-modules"
+      ],
+      "local_labels": [
+        "definition-illusie-I-shuffle-aw",
+        "theorem-illusie-I-eilenberg-zilber"
+      ],
+      "reason": "Lattice-path ordinal maps fix the source's shuffle and front/back Alexander-Whitney conventions without ambiguous degeneracy strings. Both unnormalized composites are homotopic to identity, not strictly equal to identity. A constant-object counterexample and recursive natural homotopies are included."
     },
     {
-      "id": "I-1.2-005", "anchor_prefix": "illusie:I:ch1:s1:2:", "anchors": ["p13", "p14", "eq11", "p15"],
+      "id": "I-1.2-005",
+      "anchor_prefix": "illusie:I:ch1:s1:2:",
+      "anchors": [
+        "p13",
+        "p14",
+        "eq11",
+        "p15"
+      ],
       "claim": "Associativity of shuffle and coassociativity of Alexander-Whitney maps for trisimplicial objects.",
-      "disposition": "new_explicit_coherence", "tags": ["08BI"],
-      "labels": ["homology-remark-triple-complex"],
-      "local_labels": ["theorem-illusie-I-eilenberg-zilber"],
+      "disposition": "new_explicit_coherence",
+      "tags": [
+        "08BI"
+      ],
+      "labels": [
+        "homology-remark-triple-complex"
+      ],
+      "local_labels": [
+        "theorem-illusie-I-eilenberg-zilber"
+      ],
       "reason": "08BI proves associativity of iterated totalization, not the strict shuffle/Alexander-Whitney squares. The new proof identifies both composites with ordered three-way partitions (respectively front/back face strings)."
     },
     {
-      "id": "I-1.3-001", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p1", "p2", "d21", "p3", "p4", "d22"],
+      "id": "I-1.3-001",
+      "anchor_prefix": "illusie:I:ch1:s1:3:",
+      "anchors": [
+        "p1",
+        "p2",
+        "d21",
+        "p3",
+        "p4",
+        "d22"
+      ],
       "claim": "The normal complex and the Dold-Puppe construction for one simplicial direction.",
-      "disposition": "existing_coverage_with_convention_map", "tags": ["0194", "019C"],
-      "labels": ["simplicial-section-complexes", "simplicial-lemma-quasi-isomorphism"],
-      "reason": "Stacks supplies the normal and associated complexes and their comparison. Illusie's intersection over i>0 with differential d_0 is naturally identified with the alternate i<n convention and (-1)^n d_n; the convention change is recorded rather than conflated."
+      "disposition": "existing_coverage_with_convention_map",
+      "tags": [
+        "0194",
+        "019C"
+      ],
+      "labels": [
+        "simplicial-section-complexes",
+        "simplicial-lemma-quasi-isomorphism"
+      ],
+      "reason": "The two Moore conventions compare through the same quotient by degeneracies. The explicit projection and common-quotient comparison are proved in theorem-illusie-I-iterated-dold-kan; no raw ordinal reversal is used.",
+      "local_labels": [
+        "theorem-illusie-I-iterated-dold-kan"
+      ]
     },
     {
-      "id": "I-1.3-002", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["d22c1", "p5", "eq12", "p6", "p7", "p8", "p9", "t1", "p10", "p11", "eq13", "p12", "p13", "d23"],
+      "id": "I-1.3-002",
+      "anchor_prefix": "illusie:I:ch1:s1:3:",
+      "anchors": [
+        "d22c1",
+        "p5",
+        "eq12",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "t1",
+        "p10",
+        "p11",
+        "eq13",
+        "p12",
+        "p13",
+        "d23"
+      ],
       "claim": "Dold-Puppe K, its adjunction data, and the one-direction Dold-Kan equivalence.",
-      "disposition": "existing_coverage", "tags": ["019G"],
-      "labels": ["simplicial-theorem-dold-kan"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "019G"
+      ],
+      "labels": [
+        "simplicial-theorem-dold-kan"
+      ],
       "reason": "The theorem and the surjection-indexed direct-sum construction are covered by the maintained Dold-Kan theorem, with the source's differential convention tracked explicitly."
     },
     {
-      "id": "I-1.3-003", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p14", "d24", "p15", "p15c1", "p16", "p17", "p18", "p19", "d25"],
+      "id": "I-1.3-003",
+      "anchor_prefix": "illusie:I:ch1:s1:3:",
+      "anchors": [
+        "p14",
+        "d24",
+        "p15",
+        "p15c1",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "d25"
+      ],
       "claim": "Exactness, normal/degenerate splitting, and acyclicity of the degenerate complex.",
-      "disposition": "existing_coverage", "tags": ["0195", "019C"],
-      "labels": ["simplicial-lemma-s-exact", "simplicial-lemma-quasi-isomorphism"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "0195",
+        "019C"
+      ],
+      "labels": [
+        "simplicial-lemma-s-exact",
+        "simplicial-lemma-quasi-isomorphism"
+      ],
       "reason": "Stacks proves exactness of the associated complex, functorial splitting into normal and degenerate parts, and the quasi-isomorphism. Its image-over-surjections description agrees with the source's degenerate summands in the abelian case."
     },
     {
-      "id": "I-1.3-004", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p20", "d26", "d27", "p21", "p22", "d28", "p23", "fn1"],
+      "id": "I-1.3-004",
+      "anchor_prefix": "illusie:I:ch1:s1:3:",
+      "anchors": [
+        "p20",
+        "d26",
+        "d27",
+        "p21",
+        "p22",
+        "d28",
+        "p23",
+        "fn1"
+      ],
       "claim": "Homotopy compatibility for associated and normal complexes.",
-      "disposition": "existing_coverage", "tags": ["019S", "01A4"],
-      "labels": ["simplicial-lemma-homotopy-s-N", "simplicial-lemma-backwards-homotopy"],
+      "disposition": "existing_coverage",
+      "tags": [
+        "019S",
+        "01A4"
+      ],
+      "labels": [
+        "simplicial-lemma-homotopy-s-N",
+        "simplicial-lemma-backwards-homotopy"
+      ],
       "reason": "The forward and backward homotopy results are distributed across these exact tagged lemmas; together they provide the stated equivalence in the abelian setting, including control of the induced chain homotopy."
     },
     {
-      "id": "I-1.3-005", "anchor_prefix": "illusie:I:ch1:s1:3:", "anchors": ["p23c1", "d29", "p24", "d30"],
-      "claim": "Iterated n-simplicial and n-fold Dold-Puppe normalizations and their compatibility with totalization.",
-      "disposition": "new_explicit_iterated_dold_kan", "tags": ["019G", "019H"],
-      "labels": ["simplicial-theorem-dold-kan", "simplicial-section-dold-kan-cosimplicial"],
-      "local_labels": ["theorem-illusie-I-iterated-dold-kan"],
-      "reason": "The maintained repository proves only the one-direction equivalence. No exact theorem for the iterated n-fold normal/K constructions or their signed-total compatibility was found; this is the next new theorem to write."
+      "id": "I-1.3-005",
+      "anchor_prefix": "illusie:I:ch1:s1:3:",
+      "anchors": [
+        "p23c1",
+        "d29"
+      ],
+      "claim": "Iterated normalization, nonnegative n-fold Dold-Kan equivalence, normal/degenerate formulas and splitting.",
+      "disposition": "new_explicit_iterated_dold_kan",
+      "tags": [
+        "019G",
+        "019H"
+      ],
+      "labels": [
+        "simplicial-theorem-dold-kan",
+        "simplicial-section-dold-kan-cosimplicial"
+      ],
+      "local_labels": [
+        "theorem-illusie-I-iterated-dold-kan"
+      ],
+      "reason": "The iterated theorem explicitly gives the nonnegative codomain, intersection and degeneracy formulas, commuting projections, and canonical adjacent chain-total comparisons. This does not identify a normalized simplicial diagonal with its total."
+    },
+    {
+      "id": "I-1.3-006",
+      "anchor_prefix": "illusie:I:ch1:s1:3:",
+      "anchors": [
+        "p24",
+        "d30"
+      ],
+      "claim": "The printed normal/degenerate comparison squares for shuffle and Alexander-Whitney.",
+      "disposition": "pending_exact_operator_and_diagram_comparison",
+      "tags": [
+        "019G"
+      ],
+      "labels": [
+        "simplicial-theorem-dold-kan"
+      ],
+      "reason": "The earlier row incorrectly treated these squares as proved by iterated Dold-Kan. Raw Moore-subcomplex restrictions must be checked against the exact diagram and distinguished from quotient-normalized induced maps. No completed-coverage claim is made for these two anchors."
+    },
+    {
+      "id": "I-1.4-001",
+      "anchor_prefix": "illusie:I:ch1:s1:4:",
+      "anchors": [
+        "p1",
+        "d31",
+        "p2"
+      ],
+      "claim": "Localization of a category by a universal functor inverting a prescribed class of arrows.",
+      "disposition": "new_explicit_general_localization",
+      "tags": [
+        "04VB",
+        "04VC"
+      ],
+      "labels": [
+        "categories-section-localization",
+        "categories-definition-multiplicative-system"
+      ],
+      "reason": "The path-and-inverse-edge construction proves localization for arbitrary S; the existing fraction lemmas impose multiplicative-system hypotheses and alone would not cover this generality.",
+      "local_labels": [
+        "lemma-illusie-I-localization-derived"
+      ]
+    },
+    {
+      "id": "I-1.4-002",
+      "anchor_prefix": "illusie:I:ch1:s1:4:",
+      "anchors": [
+        "p3",
+        "fr1",
+        "fr2",
+        "fr3",
+        "fr3c1",
+        "d32",
+        "p4",
+        "d33",
+        "p5",
+        "fr4",
+        "d34",
+        "p6",
+        "d35",
+        "p7",
+        "p8",
+        "fr3prime",
+        "d36",
+        "p9",
+        "fr3primec1",
+        "d37",
+        "p10",
+        "fr4prime",
+        "d38",
+        "p11",
+        "d39",
+        "p12",
+        "p13"
+      ],
+      "claim": "Right, left, and bilateral calculi of fractions and their fraction-category constructions.",
+      "disposition": "existing_coverage",
+      "tags": [
+        "04VD",
+        "04VH",
+        "04VL"
+      ],
+      "labels": [
+        "categories-lemma-left-localization",
+        "categories-lemma-right-localization",
+        "categories-lemma-multiplicative-system"
+      ],
+      "reason": "The left/right localization lemmas and multiplicative-system comparison establish the axioms, fraction composition, and bilateral identification."
+    },
+    {
+      "id": "I-1.4-003",
+      "anchor_prefix": "illusie:I:ch1:s1:4:",
+      "anchors": [
+        "prop1",
+        "eq1",
+        "eq2",
+        "p14",
+        "eq3",
+        "p15"
+      ],
+      "claim": "Filtered-colimit descriptions of localized Hom sets and preservation of finite limits/colimits under a calculus of fractions.",
+      "disposition": "existing_coverage",
+      "tags": [
+        "05Q0",
+        "05Q1",
+        "05Q2",
+        "05Q3",
+        "05Q4",
+        "05Q5",
+        "05Q6",
+        "05Q7"
+      ],
+      "labels": [
+        "categories-remark-left-localization-morphisms-colimit",
+        "categories-equation-left-localization-morphisms-colimit",
+        "categories-lemma-left-localization-limits",
+        "categories-lemma-left-localization-diagram",
+        "categories-remark-right-localization-morphisms-colimit",
+        "categories-equation-right-localization-morphisms-colimit",
+        "categories-lemma-right-localization-limits",
+        "categories-lemma-right-localization-diagram"
+      ],
+      "reason": "The maintained localization chapter gives both left/right filtered Hom formulas and the finite-limit/finite-colimit comparison lemmas."
+    },
+    {
+      "id": "I-1.4-004",
+      "anchor_prefix": "illusie:I:ch1:s1:4:",
+      "anchors": [
+        "p16",
+        "eq4",
+        "p17",
+        "d40",
+        "p18",
+        "d41",
+        "p19",
+        "d42",
+        "p20",
+        "p21"
+      ],
+      "claim": "Essentially constant pro-objects define a left derived functor for an arbitrary functor under right fractions, with its universal natural transformation; the dual assertion.",
+      "disposition": "new_explicit_general_derived_functor",
+      "tags": [
+        "05S9",
+        "05Q4",
+        "04VJ"
+      ],
+      "labels": [
+        "derived-definition-right-derived-functor-defined",
+        "categories-remark-right-localization-morphisms-colimit",
+        "categories-lemma-equality-morphisms-right-localization"
+      ],
+      "reason": "05S9 works under an exact functor of triangulated categories and saturated-system assumptions; Illusie assumes arbitrary categories and only right fractions. The new initial-roof-category/right-Kan proof establishes precisely the broader statement.",
+      "local_labels": [
+        "lemma-illusie-I-localization-derived"
+      ]
+    },
+    {
+      "id": "I-1.4-006",
+      "anchor_prefix": "illusie:I:ch1:s1:4:",
+      "anchors": [
+        "p22",
+        "p23",
+        "p24",
+        "p24c1",
+        "p25",
+        "p26",
+        "d43",
+        "p27",
+        "prop2",
+        "prop2:a",
+        "prop2:b",
+        "d44"
+      ],
+      "claim": "Dold-Kan on quasi-isomorphism localizations and homotopy quotients, bilateral fractions at a fixed bound, and essential image D^{<=0}.",
+      "disposition": "new_explicit_localized_dold_kan",
+      "tags": [
+        "019G",
+        "019C",
+        "019S",
+        "01A4",
+        "05RT",
+        "05RW"
+      ],
+      "labels": [
+        "simplicial-theorem-dold-kan",
+        "simplicial-lemma-quasi-isomorphism",
+        "simplicial-lemma-homotopy-s-N",
+        "simplicial-lemma-backwards-homotopy",
+        "derived-lemma-acyclic",
+        "derived-lemma-bounded-derived"
+      ],
+      "local_labels": [
+        "lemma-illusie-I-localized-dold-kan"
+      ],
+      "reason": "Existing tags give the one-direction equivalence and variable bounded-derived results. The new proof includes localization of the equivalence, a bounded cylinder proving homotopy factorization, and truncation of Ore/cancellation/equality diagrams at degree zero."
+    },
+    {
+      "id": "I-1.4-005",
+      "anchor_prefix": "illusie:I:ch1:s1:4:",
+      "anchors": [
+        "p28",
+        "eq5",
+        "eq6",
+        "p29",
+        "d45",
+        "p30",
+        "d46",
+        "p31",
+        "d47",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "d48",
+        "p36"
+      ],
+      "claim": "Canonical truncations, adjunctions and cohomology ranges, and the truncation proof of the fixed-bound localization.",
+      "disposition": "existing_truncations_with_explicit_localization_consequence",
+      "tags": [
+        "0118",
+        "010Z"
+      ],
+      "labels": [
+        "homology-section-truncations",
+        "homology-definition-quasi-isomorphism"
+      ],
+      "reason": "0118 defines canonical (not stupid) kernel/cokernel truncations and their cohomology ranges. Maps to complexes vanishing below n factor uniquely through the cokernel term; maps from complexes vanishing above n factor uniquely through the kernel term, giving the stated adjunctions. The new localized-Dold-Kan proof supplies the fixed-bound fraction argument.",
+      "local_labels": [
+        "lemma-illusie-I-localized-dold-kan"
+      ]
     }
   ],
-  "next_source_unit": "I.1.3, printed p.8"
+  "next_source_unit": "Resolve I.1.3 p24/d30 (printed p.11) exact normalized comparison; then I.1.5 (printed p.17).",
+  "completion": {
+    "covered_anchor_inventory": true,
+    "mathematical_dispositions_complete": false,
+    "pending_decisions": [
+      "I-1.3-006"
+    ]
+  }
 }
