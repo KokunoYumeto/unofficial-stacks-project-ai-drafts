@@ -94,6 +94,10 @@ criterion. The [integration validation](validation/ega-i-7.2.5-7.2.7-integration
 records the exact source, review and deterministic checks separately from
 publication. No root theorem, official tag or PDF changes; the twelve earlier
 open gaps remain open. Next: **§7.2.8**. EGA integration is not complete.
+The [anonymous readback](validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
+verifies all 18 changed paths (2,289,177 bytes) at
+`f76a3ffe17211237484d944a85b173e04eb536d7`;
+the [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34175771628).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is

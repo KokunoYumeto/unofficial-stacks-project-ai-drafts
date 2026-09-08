@@ -35,6 +35,10 @@ records source and proof ownership, independent review, and deterministic checks
 It does not rewrite the immutable candidate as a publication receipt.
 No new root theorem, official tag, source edition or PDF is produced; all twelve
 earlier open gaps remain. Next: §7.2.8. Full EGA integration remains unfinished.
+The [public readback](ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
+binds all 18 changed paths (2,289,177 bytes) at `f76a3ffe17211237484d944a85b173e04eb536d7`
+and the passing exact-head CI, including the single retry for a source-download
+connection reset. No source or mathematical change was made for that retry.
 
 ## Preceding EGA I §7.2.1–§7.2.4 comparison
 
