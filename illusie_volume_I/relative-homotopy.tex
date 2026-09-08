@@ -177,22 +177,28 @@ and cofibred hypotheses in their original directions.
 Let $\mathcal A$ be additive. An $n$-complex is a $\mathbb Z^n$-graded
 object $L$ with maps $d_i:L^{\mathbf p}\to L^{\mathbf p+\mathbf e_i}$
 satisfying $d_i^2=0$ and $d_id_j=d_jd_i$. Suppose that, for every $r$,
-only finitely many $L^{\mathbf p}$ with $|\mathbf p|=r$ are nonzero (or,
-more generally, that the indicated finite or existing coproduct exists).
+only finitely many $L^{\mathbf p}$ with $|\mathbf p|=r$ are nonzero, or,
+more generally, that each indicated coproduct exists.
 Its signed total is
 \[
  \operatorname{Tot}(L)^r=\bigoplus_{|\mathbf p|=r}L^{\mathbf p},
  \qquad d|_{L^{\mathbf p}}=\sum_{j=1}^n
  (-1)^{p_1+\cdots+p_{j-1}}d_j.
 \]
+For a chain $n$-complex $L_{\mathbf p}$, the differentials lower the
+corresponding index. Use $\operatorname{Tot}(L)_r=\bigoplus_{|\mathbf p|=r}
+L_{\mathbf p}$ with the same prefix signs. Equivalently, apply the cochain
+convention to $L^{\mathbf p}=L_{-\mathbf p}$. Regrouping statements below
+assume the intermediate coproducts exist; this is automatic for first-quadrant
+chain multicomplexes.
 \end{definition}
 
 \begin{lemma}[The total differential]
 \label{lemma-illusie-I-signed-total-differential}
 The signed maps in Definition
 \ref{definition-illusie-I-signed-total} square to zero. Totalization is
-functorial in maps of $n$-complexes and is unchanged by grouping adjacent
-coordinates and totalizing again.
+functorial in maps of $n$-complexes and is canonically unchanged by grouping
+adjacent coordinates and totalizing again, whenever these totals exist.
 \end{lemma}
 
 \begin{proof}
@@ -230,102 +236,200 @@ alternating-face complex in each variable (Stacks Project, Tags 0194 and
 
 \begin{definition}[Shuffle and Alexander--Whitney maps]
 \label{definition-illusie-I-shuffle-aw}
-For a bisimplicial object $X$ in an additive category, write
-$\operatorname{Tot}\widetilde X$ for the signed total of its two chain
-directions and $\widetilde{\Delta X}$ for the chain complex of its
-diagonal. For $p+q=r$, let a $(p,q)$-shuffle be a partition of
-$\{1,\ldots,r\}$ into increasing lists $\mu$ and $\nu$ of lengths $p$
-and $q$, and let $\epsilon(\mu,\nu)$ be its inversion parity. Define
+For a bisimplicial object $X$ in an additive category, put
+$T_n(X)=\bigoplus_{p+q=n}X_{p,q}$, with differential
+$\partial_h+(-1)^p\partial_v$ on $X_{p,q}$, and put
+$C_n(X)=X_{n,n}$ with its diagonal alternating-face differential.
+For a lattice path $w$ from $(0,0)$ to $(p,q)$, let
+$\alpha_w(k)$ and $\beta_w(k)$ count its horizontal and vertical steps
+among the first $k$ steps. These give ordinal maps
+$[p+q]\to[p]$ and $[p+q]\to[q]$. Let $I(w)$ count pairs consisting of a
+vertical step preceding a horizontal step. Define
 \[
- \operatorname{Sh}_{p,q}=
- \sum_{(\mu,\nu)}(-1)^{\epsilon(\mu,\nu)}
- X(s^{\nu_q}\cdots s^{\nu_1},s^{\mu_p}\cdots s^{\mu_1}) :
- X_{p,q}\longrightarrow X_{r,r}.
+ \operatorname{Sh}_{p,q}=\sum_w(-1)^{I(w)}X(\alpha_w,\beta_w):
+ X_{p,q}\longrightarrow X_{p+q,p+q}.
 \]
-The shuffle map is the direct-sum map $\operatorname{Sh}$ with these
-components. Define $\operatorname{AW}$ on the $r$th diagonal term by its
-$X_{p,q}$ component ($p+q=r$)
+For $p+q=n$ define $j_p:[p]\to[n]$ by $i\mapsto i$ and
+$k_q:[q]\to[n]$ by $i\mapsto p+i$. The $(p,q)$ component of the other map is
 \[
- X(d^{r}\cdots d^{p+1},d^0\cdots d^0):X_{r,r}\longrightarrow X_{p,q}.
+ \operatorname{AW}_{p,q}=X(j_p,k_q):X_{n,n}\longrightarrow X_{p,q}.
 \]
+Thus $\operatorname{Sh}:T(X)\to C(X)$ and
+$\operatorname{AW}:C(X)\to T(X)$. The ordinal-map notation fixes both
+the degeneracy indexing and the contravariant order of composition.
 \end{definition}
 
 \begin{theorem}[Eilenberg--Zilber--Cartier]
 \label{theorem-illusie-I-eilenberg-zilber}
-For every bisimplicial object $X$ of an additive category, the maps in
-Definition \ref{definition-illusie-I-shuffle-aw} are natural chain maps,
-$\operatorname{AW}\,\operatorname{Sh}=1$, and
-$\operatorname{Sh}\,\operatorname{AW}$
-is naturally chain-homotopic to $1$. Both maps are the identity in degree
-zero. The shuffle maps are associative for trisimplicial objects and the
-Alexander--Whitney maps are coassociative: the two composites obtained by
-first combining the first two or the last two variables are equal.
+The maps in Definition \ref{definition-illusie-I-shuffle-aw} are natural
+chain maps and are the identity in degree zero. Both composites are naturally
+chain-homotopic to the appropriate identity. The shuffle maps are associative
+and the Alexander--Whitney maps are coassociative for three simplicial
+variables in a fixed order, under the canonical identifications of adjacent
+chain totalizations.
 \end{theorem}
 
 \begin{proof}
-The simplicial identities move a face past a degeneracy. In the signed sum
-defining $\operatorname{Sh}$, the terms in which a face meets a degeneracy
-cancel in pairs; the uncancelled terms are precisely the alternating-face
-differential on the source and target. This proves that $\operatorname{Sh}$
-is a chain map. The same face calculation, without degeneracies, proves
-that $\operatorname{AW}$ is a chain map. In the composite
-$\operatorname{AW}\operatorname{Sh}$ all non-identity terms contain a face
-and degeneracy in the wrong order and cancel in the shuffle pairing; the
-identity term has coefficient one.
-
-For completeness, filter the endomorphism $\operatorname{Sh}\operatorname{AW}-1$
-by the first position at which a diagonal simplex is not in front--back
-normal form. The simplicial identities give a canonical degeneracy at that
-position. Sending a summand to this degeneracy, with the sign prescribed by
-the number of preceding faces, defines maps $H_r:X_{r,r}\to X_{r+1,r+1}$.
-The same pairwise cancellation gives
+We first check chain-map identities as identities between finite integral
+sums of simplex operators. On a pair of strings of vertices the
+Alexander--Whitney formula reads
 \[
- dH+Hd=\operatorname{Sh}\operatorname{AW}-1.
+ \sum_{p=0}^n[a_0,\ldots,a_p]\otimes[b_p,\ldots,b_n].
 \]
-This is the standard prism contraction; it is natural because it uses only
-faces, degeneracies and the ordered first exceptional position. Thus the
-homotopy is functorial. For a trisimplicial object, a shuffle is a choice of
-an ordered partition of one finite ordinal into three increasing lists.
-Both iterated shuffles sum once over exactly these partitions with the same
-inversion sign, proving associativity. The dual front--back face strings in
-the two iterated Alexander--Whitney composites are identical, proving
-coassociativity. In degree zero there is one empty shuffle and no face, so
-both maps are the identity.
+Deleting a horizontal vertex strictly before the cut or a vertical vertex
+strictly after it gives exactly the terms of $\operatorname{AW}\partial$.
+The remaining terms at consecutive cuts are
+$[a_0,\ldots,a_{p-1}]\otimes[b_p,\ldots,b_n]$ with coefficients
+$(-1)^p$ and $(-1)^{p-1}$, so cancel.
+
+For shuffle, deleting an interior vertex between unlike steps yields the
+same shortcut from the two paths interchanging those steps. Their inversion
+parities differ by one, so these terms cancel. At a vertex $(a,b)$ between
+two horizontal steps, the deletion has boundary sign $(-1)^{a+b}$ and
+removes $b$ inversions. Its total sign is therefore
+$(-1)^{I(w')+a}$, the horizontal source-boundary sign. Between two vertical
+steps it removes $p-a$ inversions, giving
+$(-1)^{I(w')+p+b}$, the signed vertical source-boundary sign.
+Endpoint deletions obey the same formulas. These account for every boundary
+term, proving both chain-map identities.
+
+We give recursive, finite formulas for the homotopies. Use the free
+bisimplicial abelian-group models
+\[
+ M^{p,q}_{a,b}=\mathbb Z[
+ \operatorname{Hom}_\Delta([a],[p])\times
+ \operatorname{Hom}_\Delta([b],[q])].
+\]
+A basis of $C(M^{p,q})_n$ consists of weakly increasing vertex strings
+in $[p]\times[q]$. Prepending $(0,0)$ defines $K^\Delta$ of degree $1$.
+If $e^\Delta$ sends every vertex to $(0,0)$ in degree zero and is zero
+in positive degrees, cancellation of alternating faces gives
+$\partial K^\Delta+K^\Delta\partial=1-e^\Delta$.
+
+For $T(M^{p,q})$, write $P(t)$ for the unnormalized chains on
+$\mathbb Z[\Delta[t]]$. Then $T(M^{p,q})=P(p)\otimes P(q)$.
+Prepending $0$ gives $h_t$ on $P(t)$ with
+$\partial h_t+h_t\partial=1-e_t$, where $e_t$ sends all degree-zero
+vertices to $0$ and vanishes in higher degrees. For $x$ of degree $a$ put
+\[
+ K^T(x\otimes y)=h_p(x)\otimes y+(-1)^a e_p(x)\otimes h_q(y).
+\]
+The second summand is zero unless $a=0$. The tensor differential gives
+$\partial K^T+K^T\partial=1-e_p\otimes e_q$.
+In particular each positive-degree cycle in either model has the specified
+primitive $K$ of that cycle.
+
+Apply the following recursion separately to
+\[
+ L^C=\operatorname{Sh}\operatorname{AW}-1,
+ \qquad L^T=\operatorname{AW}\operatorname{Sh}-1.
+\]
+Set $H_{-1}=H_0=0$; both $L$ vanish in degree zero. Inductively, use
+the universal generator $z=(1,1)$ of $C_n(M^{n,n})$ in the first case,
+and that of the $(p,q)$ summand of $T_n(M^{p,q})$, $p+q=n$, in the second.
+For $n>0$ put
+\[
+ r=L_n(z)-H_{n-1}(\partial z),\qquad H_n(z)=K(r).
+\]
+Since $L$ is a chain map and the homotopy equation holds one degree lower,
+$\partial r=L_{n-1}(\partial z)-\partial H_{n-1}(\partial z)=0$.
+Thus $\partial H_n(z)+H_{n-1}(\partial z)=L_n(z)$.
+
+The universal value just constructed is a finite integral combination of
+pairs of ordinal maps. Evaluate those maps through $X$ to define $H_n(X)$.
+This makes $H_n$ natural in $X$. Equality on the free universal generators
+proves the homotopy equation for these formal operators, and hence in any
+additive category. Free abelian groups and tensor products were used only
+to compute the universal formulas, not as hypotheses on that category.
+The contractions need not be natural in the model indices.
+
+Finally both iterated shuffles enumerate exactly the words having the
+prescribed numbers of steps of each of three types. In both orders their
+sign is the inversion sign of that word. Both iterated Alexander--Whitney
+maps restrict to $[0,p]$, $[p,p+q]$, and $[p+q,p+q+r]$ in the respective
+coordinates. This proves associativity and coassociativity. Iteration
+also supplies the natural total-to-diagonal homotopy equivalence for any
+finite number of simplicial variables.
 \end{proof}
+
+\begin{remark}
+\label{remark-illusie-I-unnormalized-composites}
+The composites above need not equal the identity before normalization.
+For the constant bisimplicial abelian group $\mathbb Z$, degree one gives
+$T_1=\mathbb Z^2$, $C_1=\mathbb Z$,
+$\operatorname{Sh}_1=(1\ \ 1)$ and
+$\operatorname{AW}_1=(1\ \ 1)^{\mathsf t}$.
+Thus $\operatorname{AW}_1\operatorname{Sh}_1$ is the all-ones matrix.
+This distinction is already respected by Illusie's statement on printed
+p.7, which asserts inverseness up to functorial homotopy.
+\end{remark}
 
 \begin{theorem}[Iterated Dold--Kan normalization]
 \label{theorem-illusie-I-iterated-dold-kan}
-Let $\mathcal A$ be an abelian category and let $n\geq1$. Applying the
-normal-complex functor in each of the $n$ simplicial variables gives a
-functor from $n$-simplicial objects to $n$-fold chain complexes. In each
-variable the normal and Dold--Puppe functors are quasi-inverse equivalences.
-Consequently, applying them successively in any order gives canonically
-isomorphic $n$-fold functors, and their signed total complexes are canonically
-isomorphic after any grouping of variables. These isomorphisms are natural
-and preserve the alternating-face differentials.
+Let $\mathcal A$ be abelian. For every $n\geq1$, normalization in the
+$n$ directions gives an equivalence from $n$-simplicial objects to
+commuting $n$-fold chain complexes concentrated in nonnegative degrees in
+each direction. Iterated Dold--Kan inverse functors give a quasi-inverse.
+The successive orders are canonically isomorphic after the corresponding
+reindexing of coordinates. For the fixed coordinate order, grouping adjacent
+directions of the resulting chain complex commutes with signed totalization.
 
+In Illusie's Moore convention this normal object has multidegree
+\[
+ (NX)_{\mathbf p}
+ =\bigcap_{j=1}^n\ \bigcap_{i=1}^{p_j}\ker(d_i^{(j)}),
+ \qquad \partial_j=d_0^{(j)}.
+\]
+Let $DX$ be the sum of images of all degeneracies in any direction.
+There is a natural splitting of multicomplexes
+$\widetilde X=NX\oplus DX$. For one direction the two Moore conventions
+used here and earlier in this chapter are compared through the same
+quotient $\widetilde X/DX$, not by a reversal morphism in $\Delta$.
 \end{theorem}
 
 \begin{proof}
-For one variable this is the Dold--Kan equivalence (Stacks, Tag 019G),
-with the normal-complex convention translated by the canonical sign and
-reversal isomorphism described in Section I.1.3. For two variables, apply
-that equivalence in the first variable in the functor category of simplicial
-objects in the second variable. Exactness and functoriality of the
-construction are degreewise, so the same argument applies in the second
-variable. The two orders commute because each face or degeneracy acts in
-only one variable; the two canonical composites are therefore identical on
-all multidegrees and structure maps. Induction gives the assertion for $n$
-variables. The units and counits of the one-variable equivalences provide
-quasi-inverse comparison maps in every variable.
+For one direction put
+$D_m=\sum_{i=0}^{m-1}\operatorname{Im}s_i$ and
+$N^+_m=\bigcap_{i=1}^m\ker d_i$. On $X_m$ use the projection
+\[
+ P_m=(1-s_0d_1)(1-s_1d_2)\cdots(1-s_{m-1}d_m),
+\]
+with the rightmost factor applied first and $P_0=1$.
+Successive factors kill the faces in descending index order without
+restoring those already killed. Use the face identity
+\[
+ d_i d_j=d_{j-1}d_i\quad(i<j)
+\]
+and the face-degeneracy identities. The same identities give $P_ms_i=0$
+for every $i<m$. Moreover $x-P_mx$ is a sum of degeneracies and $P_m$
+is the identity on $N^+_m$. These identities, interpreted as morphism
+identities in $\mathcal A$, show
+$X_m=N^+_m\oplus D_m$ and identify $N^+_m$ with $X_m/D_m$.
+Both summands are subcomplexes: on $N^+$ the alternating boundary is $d_0$,
+and on degeneracies the two identity face terms cancel. Hence the quotient
+identification is one of chain complexes.
 
-The signed total of the resulting $n$-complex is the construction in
-Definition \ref{definition-illusie-I-signed-total}. Grouping two adjacent
-variables first changes the differential by the prefix sign for the grouped
-block and then by the inner prefix sign. Their sum is the same prefix sign
-as in the ungrouped total, by Lemma
-\ref{lemma-illusie-I-signed-total-differential}. Thus the canonical
-multivariable comparisons commute with totalization and with every
-regrouping. Naturality follows from naturality of the one-variable units,
-counits and face maps.
+The earlier normal functor $N^-_m=\bigcap_{i<m}\ker d_i$, with differential
+$(-1)^m d_m$, is also canonically isomorphic to this quotient by
+Lemma \ref{lemma-decompose-associated-complexes}. Thus the one-variable
+Dold--Kan equivalence of Theorem \ref{theorem-dold-kan} supplies the
+equivalence for the stated convention.
+
+Apply that equivalence first in the abelian functor category on the
+remaining simplicial directions, and subsequently in the abelian categories
+of chain complexes already obtained. This proves the iterated equivalence.
+The projection operators in distinct directions commute, since every
+face and degeneracy in one direction commutes with every operator in the
+others. Their product has image the displayed intersection and kernel
+the sum of their kernels, namely $DX$. This proves the splitting and
+canonical order-independence for normalization. The inverse functors have
+degreewise finite sums indexed by tuples of ordinal surjections; exchanging
+the order of these finite sums gives their canonical comparisons and the
+one-variable units and counits give the iterated units and counits.
+
+Finally the prefix sign of a grouped block plus the prefix sign within
+that block equals the original prefix sign. The biproduct summands agree
+as well, proving the assertion about adjacent chain totals by
+Lemma \ref{lemma-illusie-I-signed-total-differential}. This statement does
+not identify normalization of a simplicial diagonal with a chain total.
 \end{proof}

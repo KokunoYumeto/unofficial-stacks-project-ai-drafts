@@ -1,0 +1,55 @@
+{
+  "schema": "illusie-volume-I-erratum/v1",
+  "id": "ILLUSIE-I-ERR-001",
+  "date": "2026-09-08",
+  "classification": "printed mathematical carrier error, not transcription error",
+  "authority_sha256": "1855B49FE461B13B1CBAEE1341C8FC3E3E0CDDC034C54ABEC1165AF061B90A56",
+  "printed_page": 5,
+  "physical_page": 23,
+  "source_anchor": "illusie:I:ch1:s1:1:p14c1",
+  "pixel_receipt": {
+    "path": "evidence/normalization-20260908/source-023.png",
+    "bytes": 265240,
+    "sha256": "5DD982D5E92B96B073D4507B468FD04266E2332767EF16F6AF54C19BA1489EF9"
+  },
+  "proof": "The homotopy u lies over f:S->T and w lies over h:T->T'. Thus p(wu)=hf:S->T'. The printed hg is not composable in the stated types because g:S'->S.",
+  "adverse_evidence": "Primary pixels and both prior corrected-French/English witnesses read hg. These establish a printed error, not evidence for the typed composition.",
+  "changes": [
+    {
+      "path": "tex/volume_I/fr_corrected/ch1/005_p005.tex",
+      "before": {
+        "bytes": 3672,
+        "sha256": "878900C380B54FA30043E633AC26C4FE6F16C8A487F6BDFD1E234C975CD2DB94"
+      },
+      "after": {
+        "bytes": 3757,
+        "sha256": "7BC1BD6DC95EFD96652CDAC77B978B1D009F9C89906425BF74663778AD76DA3E"
+      },
+      "old": "$hg$-homotop",
+      "new": "$hf$-homotop"
+    },
+    {
+      "path": "tex/volume_I/en/ch1/005_p005.tex",
+      "before": {
+        "bytes": 3620,
+        "sha256": "2DB9AD582AAB2D796EF6442F085F3F7C03487FC04CB7B980CA4A0BD2A3DA168B"
+      },
+      "after": {
+        "bytes": 3705,
+        "sha256": "F8BA2EFF9E575E59B36AFA9417F49DA3FEB08580F9FDA3F0416BE6CB14E793B4"
+      },
+      "old": "$hg$-homotop",
+      "new": "$hf$-homotop"
+    }
+  ],
+  "diplomatic_retained": {
+    "path": "tex/volume_I/fr_diplomatic/ch1/005_p005.tex",
+    "bytes": 3706,
+    "sha256": "43685C0F6330166AC3369F627677C4457CAD0055EE36B3B64A84CC5D656BAB03"
+  },
+  "review": {
+    "confidence": "high: follows directly from functoriality and displayed domains",
+    "human_review_required": false
+  },
+  "publication": "LaTeX corrected; previously released PDF bytes retained. Include this erratum in the next cumulative edition version."
+}
