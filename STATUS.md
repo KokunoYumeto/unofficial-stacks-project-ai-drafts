@@ -129,6 +129,10 @@ preserve all three source versions and full proofs. The
 records 130 passing tests, exact source replay and cumulative checks.
 No duplicate root theorem, official tag or PDF is added. Next: **§7.4.1**;
 the twelve earlier gaps and the rest of EGA I–IV remain unfinished.
+The [public byte receipt](validation/ega-i-7.3.8-public-readback-2026-09-08.json)
+matches all 20 changed files (2,262,568 bytes) at
+`c9c1b046e2d8f353edaaf51a4311cb8827f03cfb`, with
+[exact-head CI PASS](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34269554136).
 
 The preceding **EGA I §7.3.5–§7.3.7 comparison** proves constancy of
 quasi-coherent rational modules on an irreducible scheme, identifies

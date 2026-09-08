@@ -39,6 +39,11 @@ The [integration checks](../validation/ega-i-7.3.8-integration-validation-2026-0
 record 130 passing tests, all three exact source replays and cumulative
 repository validation. All twelve earlier open gaps remain open.
 
+The [public byte receipt](../validation/ega-i-7.3.8-public-readback-2026-09-08.json)
+verifies all 20 changed files (2,262,568 bytes) at
+`c9c1b046e2d8f353edaaf51a4311cb8827f03cfb`;
+its [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34269554136).
+
 The preceding
 [comparison](i737.md) proves that quasi-coherent modules over the dense-open
 rational-function sheaf on an irreducible scheme are constant. It explains
