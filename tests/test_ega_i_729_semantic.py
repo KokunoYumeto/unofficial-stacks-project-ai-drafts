@@ -22,6 +22,10 @@ class Semantic729Tests(unittest.TestCase):
         paths = {x['path'] for x in cls.frozen['preserved_inputs']}
         paths |= {x['path'] for x in cls.frozen['ledgers']} | {'ega/i729.md'}
         cls.frozen_raw = {p: (ROOT / p).read_bytes() for p in paths}
+        cls.live_raw = dict(cls.frozen_raw)
+        cls.frozen_scope, projected, historical_loader = contract.historical_inputs(
+            cls.frozen, cls.frozen_scope, lambda p: cls.live_raw[p])
+        cls.frozen_raw = {p: historical_loader(p) for p in paths}
         cls.frozen_tables = {}
         for ledger in cls.frozen['ledgers']:
             rows = list(csv.DictReader(io.StringIO(cls.frozen_raw[ledger['path']].decode(), newline='')))
@@ -53,6 +57,11 @@ class Semantic729Tests(unittest.TestCase):
         self.assertEqual(contract.receipt_errors(self.receipt_raw), [])
 
     def test_exact_five_units_not_six_and_parent_ownership(self):
+        historical_scope, historical_tables, loader = contract.historical_inputs(
+            self.receipt, self.scope, lambda p: self.live_raw[p])
+        self.assertEqual(historical_tables, self.frozen_tables)
+        for ledger in self.receipt["ledgers"]:
+            self.assertEqual(loader(ledger["path"]), self.frozen_raw[ledger["path"]])
         self.assertEqual([r['unit_id'] for r in self.receipt['english_discovery']['stable_units']],
                          ['ega:I.7.2.8', 'ega:I.7.2.8.1', 'ega:I.7.2.8.1:proof', 'ega:I.7.2.9', 'ega:I.7.2.9:proof'])
         self.assertEqual(self.receipt['owned_unnumbered_parts'], {'ega:I.7.2.8:induced-map': 'ega:I.7.2.8'})
@@ -224,6 +233,11 @@ class Semantic729Tests(unittest.TestCase):
             self.assertTrue(self.errors(), item['path'])
 
     def test_malformed_top_level_inputs_fail_closed(self):
+        for ledger in self.receipt["ledgers"]:
+            damaged = dict(self.live_raw)
+            damaged[ledger["path"]] = b"X" + damaged[ledger["path"]][1:]
+            with self.assertRaises(ValueError):
+                contract.historical_inputs(self.receipt, self.scope, lambda p: damaged[p])
         original = [self.receipt, self.scope, self.tables, self.units,
                     lambda c, p: self.blobs[c, p], self.tags, lambda p: self.raw[p]]
         for index in range(len(original)):
