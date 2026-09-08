@@ -45,6 +45,36 @@ def receipt_errors(raw):
     return []
 
 
+def historical_inputs(checkpoint, scope, raw_loader):
+    """Project sealed 737 prefixes without suppressing successor ledger rows.
+
+    The immutable receipt is checked before accepting its projection bounds.
+    The old full postimage remains exact; current snapshots/cursor belong to
+    the successor contract and are not mistaken for 737's original frontier.
+    """
+    if digest(canonical(checkpoint)) != CONTRACT_SHA256:
+        raise ValueError("I7.3.7 historical projection requires the sealed receipt")
+    historical_raw, tables = {}, {}
+    for ledger in checkpoint["ledgers"]:
+        path = ledger["path"]
+        raw = raw_loader(path)
+        if not isinstance(raw, bytes) or b"\r" in raw or not raw.endswith(b"\n"):
+            raise ValueError("I7.3.7 invalid live ledger serialization: " + path)
+        lines = [line + b"\n" for line in raw.split(b"\n")[:-1]]
+        frozen = b"".join(lines[:ledger["final_rows"] + 1])
+        if len(frozen) != ledger["bytes"] or digest(frozen) != ledger["sha256"]:
+            raise ValueError("I7.3.7 historical ledger prefix changed: " + path)
+        historical_raw[path] = frozen
+        rows = list(csv.DictReader(io.StringIO(frozen.decode("utf-8"), newline="")))
+        superseded = {r.get("supersedes") for r in rows if r.get("supersedes")}
+        tables[path] = [r for r in rows if r[ledger["id_field"]] not in superseded]
+    historical_scope = dict(scope,
+        statement_review_snapshot=checkpoint["statement_review_snapshot"],
+        residual_snapshot=checkpoint["residual_snapshot"],
+        next_semantic_cursor=checkpoint["next_semantic_cursor"])
+    return historical_scope, tables, lambda path: historical_raw[path] if path in historical_raw else raw_loader(path)
+
+
 def verify(checkpoint, scope, tables, discovery, target_loader, tag_map, raw_loader):
     """Fail closed on metadata damage, then independently verify actual objects.
 

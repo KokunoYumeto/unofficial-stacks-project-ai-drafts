@@ -18,15 +18,13 @@ class Semantic737Tests(unittest.TestCase):
     def setUpClass(cls):
         cls.receipt_raw = (ROOT / contract.RECEIPT_PATH).read_bytes()
         cls.frozen = json.loads(cls.receipt_raw)
-        cls.frozen_scope = json.loads((ROOT / 'ega/scope.json').read_bytes())
+        cls.live_scope = json.loads((ROOT / 'ega/scope.json').read_bytes())
         paths = {x['path'] for x in cls.frozen['preserved_inputs'] + cls.frozen['reviewed_artifacts'] + cls.frozen['ledgers']}
         paths.add('ega/i737.md')
-        cls.frozen_raw = {p: (ROOT / p).read_bytes() for p in paths}
-        cls.frozen_tables = {}
-        for ledger in cls.frozen['ledgers']:
-            rows = list(csv.DictReader(io.StringIO(cls.frozen_raw[ledger['path']].decode(), newline='')))
-            superseded = {r.get('supersedes') for r in rows if r.get('supersedes')}
-            cls.frozen_tables[ledger['path']] = [r for r in rows if r[ledger['id_field']] not in superseded]
+        cls.live_raw = {p: (ROOT / p).read_bytes() for p in paths}
+        cls.frozen_scope, cls.frozen_tables, loader = contract.historical_inputs(
+            cls.frozen, cls.live_scope, lambda p: cls.live_raw[p])
+        cls.frozen_raw = {p: loader(p) for p in paths}
         cls.frozen_units = {r['unit_id']: r for r in csv.DictReader(io.StringIO(cls.frozen_raw['ega/units.csv'].decode(), newline=''))}
         target_paths = {t['path'] for t in cls.frozen['targets']} | {'tags/tags'}
         cls.frozen_blobs = {(c,p): subprocess.check_output(['git','show',c+':'+p], cwd=ROOT)
@@ -51,6 +49,33 @@ class Semantic737Tests(unittest.TestCase):
     def test_live_candidate_and_sealed_receipt(self):
         self.assertEqual(self.errors(), [])
         self.assertEqual(contract.receipt_errors(self.receipt_raw), [])
+
+    def test_historical_projection_accepts_successor_append_without_changing737(self):
+        live = dict(self.live_raw)
+        for ledger in self.frozen["ledgers"]:
+            live[ledger["path"]] += b"successor append belongs to its own validator\n"
+        scope, tables, loader = contract.historical_inputs(self.frozen,
+            dict(self.live_scope, next_semantic_cursor="ega:I.7.4.1"), lambda p: live[p])
+        self.assertEqual(scope["next_semantic_cursor"], "ega:I.7.3.8")
+        self.assertEqual(scope["statement_review_snapshot"], self.frozen["statement_review_snapshot"])
+        self.assertEqual(tables, self.frozen_tables)
+        for ledger in self.frozen["ledgers"]:
+            self.assertEqual(loader(ledger["path"]), self.frozen_raw[ledger["path"]])
+
+    def test_historical_projection_rejects_prefix_damage_and_rewritten_receipt(self):
+        for ledger in self.frozen["ledgers"]:
+            for mode in ("prefix", "truncate", "crlf", "nonbytes"):
+                live = dict(self.live_raw)
+                raw = live[ledger["path"]]
+                live[ledger["path"]] = {"prefix": b"X" + raw[1:],
+                    "truncate": raw[:ledger["bytes"]-1],
+                    "crlf": raw.replace(b"\n", b"\r\n"), "nonbytes": None}[mode]
+                with self.assertRaises(ValueError):
+                    contract.historical_inputs(self.frozen, self.live_scope, lambda p: live[p])
+        changed = copy.deepcopy(self.frozen)
+        changed["ledgers"][0]["final_rows"] += 1
+        with self.assertRaises(ValueError):
+            contract.historical_inputs(changed, self.live_scope, lambda p: self.live_raw[p])
 
     def test_complete_unit_proof_and_excluded_frontier_inventory(self):
         expected = ['ega:I.7.3.5','ega:I.7.3.5:proof','ega:I.7.3.6','ega:I.7.3.6:proof','ega:I.7.3.7','ega:I.7.3.7:proof']
