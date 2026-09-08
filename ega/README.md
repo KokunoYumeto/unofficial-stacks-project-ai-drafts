@@ -65,6 +65,10 @@ and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
 [integration validation](../validation/ega-i-7.3.1-7.3.4-integration-validation-2026-09-08.json)
 and public readback; candidate state is not silently rewritten as publication.
+The current [public byte receipt](../validation/ega-i-7.3.1-7.3.4-public-readback-2026-09-08.json)
+verifies all 20 changed files (2,241,412 bytes) at
+`ed2bdab71812f10d5bc8d2f9c14572a697c169f6`; its
+[exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34182845773).
 The preceding [public byte receipt](../validation/ega-i-7.2.8-7.2.9-public-readback-2026-09-08.json)
 verifies all 19 changed files (2,141,295 bytes) at
 `9958436fa9214b796192d1993449c6ed401597bc` and its passing exact-head workflow.

@@ -129,6 +129,10 @@ The [mathematical review](ega/i734-review.md) and
 keep source ownership and the supplied proof of §7.3.4 explicit. No duplicate
 root theorem, official tag, source-edition change or PDF is added. The twelve
 earlier open gaps remain open. Next: **§7.3.5**; full EGA I–IV is unfinished.
+The [anonymous public readback](validation/ega-i-7.3.1-7.3.4-public-readback-2026-09-08.json)
+matches all 20 changed files (2,241,412 bytes) at
+`ed2bdab71812f10d5bc8d2f9c14572a697c169f6`;
+the [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34182845773).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
