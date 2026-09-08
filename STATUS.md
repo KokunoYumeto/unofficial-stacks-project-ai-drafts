@@ -79,6 +79,10 @@ a separated base restores compatibility. Complete source and proof ownership
 is bound by the [integration validation](validation/ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json).
 No root theorem, official tag or PDF is changed. Next: **§7.2.5**.
 This comparison does not claim a printed-source erratum or completion of EGA.
+The [public byte readback](validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+matches all 18 changed files (2,167,497 bytes) at
+`4d2a2af212585522dc2dbc91e4ab33c902fbbcd2`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34174298636).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is

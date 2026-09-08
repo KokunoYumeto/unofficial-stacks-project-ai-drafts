@@ -41,6 +41,8 @@ and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
 [integration validation](../validation/ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json)
 and public readback; candidate state is not silently rewritten as publication.
+The [public byte receipt](../validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+verifies the complete 18-file checkpoint and its passing exact-head CI.
 
 The preceding [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
 records the passing semantic tests and full repository check. It supersedes

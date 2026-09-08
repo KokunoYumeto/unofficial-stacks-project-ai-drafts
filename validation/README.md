@@ -34,6 +34,9 @@ is separate from the immutable candidate receipt. Source ownership includes
 the section heading, nested lemma, all proofs and the parent proposition's
 nonextendible-map consequence. No root TeX, official tag or PDF is changed.
 Next: §7.2.5. This is not completion of EGA or a printed-source erratum admission.
+The [anonymous readback](ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+verifies all 18 changed paths (2,167,497 bytes) at the published content commit;
+the exact-head GitHub workflow passed both jobs.
 
 ## Preceding EGA I §7.1.15–§7.1.16 comparison
 
