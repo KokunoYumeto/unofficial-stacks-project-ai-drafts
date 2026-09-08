@@ -23,7 +23,20 @@ verifies all 15 changed files at public content commit
 `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
 
-## Current EGA I §7.2.1–§7.2.4 comparison
+## Current EGA I §7.2.5–§7.2.7 comparison
+
+The [written comparison](../ega/i727.md) proves preservation of rational
+sections on their relative domains, the correspondence for regular functions
+on a dense open, and the reduced-closure criterion for a section to extend.
+It explains why graph/scalar domains coincide, why ordinary section extensions
+can fail to preserve the base, and why the closure proof needs no retrocompactness.
+The [integration validation](ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
+records source and proof ownership, independent review, and deterministic checks.
+It does not rewrite the immutable candidate as a publication receipt.
+No new root theorem, official tag, source edition or PDF is produced; all twelve
+earlier open gaps remain. Next: §7.2.8. Full EGA integration remains unfinished.
+
+## Preceding EGA I §7.2.1–§7.2.4 comparison
 
 The [written comparison](../ega/i724.md) distinguishes the largest ordinary
 domain of a rational map from the largest domain for representatives over a

@@ -17,21 +17,24 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.2.4**.
-The next unit is **§7.2.5**; EGA as a whole is not complete.
-The new [comparison](i724.md) explains domains of definition, equality on
-dense opens, and gluing rational-map representatives. It separates the ordinary
-domain from the domain for maps over a fixed base, proves the valid relative
-statements, and gives a doubled-origin counterexample to silently equating
-the domains. A separated base restores the compatibility claimed in §7.2.4.
+This tree records source-order semantic comparison through **EGA I §7.2.7**.
+The next unit is **§7.2.8**; EGA as a whole is not complete.
+The new [comparison](i727.md) proves preservation of rational sections on
+their base-preserving domains, identifies regular functions on a dense open
+with rational functions defined there, and proves the reduced-closure criterion
+for extending a section. Both directions and uniqueness are explicit; no
+retrocompactness hypothesis is added. Graphs of scalar functions have the same
+ordinary and section domains even without reducedness, but arbitrary rational
+sections need not. The doubled-origin examples make this distinction concrete.
 
-The [checkpoint](../validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json)
-binds complete French LF290–377 and English LF169–226, including the section
-heading, nested Lemma 7.2.2.1, all proofs and the parent proposition's
-nonextendible-map consequence. The latter is not misassigned to the lemma.
-Existing Stacks results supply the mathematics; the source's domain-convention
-ambiguity remains an explicit distinction, not a claimed printed erratum or
-a new root theorem. The 12 earlier open gaps are unchanged.
+The [checkpoint](../validation/ega-i-7.2.5-7.2.7-semantic-checkpoint-2026-09-08.json)
+binds complete French LF378–430 and English LF227–259, including all three
+proofs, the old-page marker, and the excluded start of §7.2.8.
+Existing Stacks results supply the mathematics. The historical wording is
+compared under precise domain conventions, not declared an admitted printed
+erratum or a new root theorem. The 12 earlier open gaps are unchanged.
+The preceding [domain and gluing comparison](i724.md) remains available with
+its [immutable source checkpoint](../validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json).
 The preceding [field-valued-point comparison](i716.md),
 [generic-local comparison](i714.md), and [generic-germ dossier](i719.md)
 remain available with their exact historical evidence.
@@ -39,10 +42,10 @@ remain available with their exact historical evidence.
 The [corrected preceding checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
 and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
-[integration validation](../validation/ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json)
+[integration validation](../validation/ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
 and public readback; candidate state is not silently rewritten as publication.
-The [public byte receipt](../validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
-verifies the complete 18-file checkpoint and its passing exact-head CI.
+The preceding [public byte receipt](../validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+verifies the complete 18-file §7.2.1–§7.2.4 checkpoint and its passing exact-head CI.
 
 The preceding [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
 records the passing semantic tests and full repository check. It supersedes

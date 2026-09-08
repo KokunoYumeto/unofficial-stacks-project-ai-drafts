@@ -135,8 +135,9 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.2.4, including the dense-agreement lemma in §7.2.2; the next
-source unit is §7.2.5. The earlier §6.6.4 contribution
+EGA I §7.2.7, including rational sections, regular functions, and the reduced
+closure criterion for extending a section; the next source unit is §7.2.8.
+The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
 permanence of locally finite-type morphisms, locally Noetherian fibre products,
@@ -174,6 +175,14 @@ for affine charts of a scheme with two origins. It gives the complete
 dense-agreement and gluing arguments, and explains why a separated base
 restores compatibility. This is a careful comparison of existing results,
 not an assertion that the source's unqualified wording is always equivalent.
+Sections 7.2.5–7.2.7 show that a rational section remains a section on its
+base-preserving domain, identify regular functions on a dense open with
+rational functions defined there, and characterize extension of a section
+by whether its reduced closure maps isomorphically to the base. The
+[complete comparison](ega/i727.md) proves both directions of that criterion
+without adding a retrocompactness assumption, and gives examples showing why
+ordinary extensions need not be extensions as sections. These are explicit
+derivations from existing Stacks results, not new root theorems.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 
