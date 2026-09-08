@@ -30,19 +30,19 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/ega-i-6.6.4-fixed-point-build-2026-08-31.json"
+    "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-visual-qa-2026-09-05.json"
+    "validation/stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-reproducibility-2026-09-05.json"
+    "validation/stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-reproducibility-second-2026-09-05.json"
+    "validation/stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r39-release-2026-08-31.json"
+    "validation/stacks-errata-a04446e-r47-release-2026-09-06.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
@@ -280,6 +280,18 @@ def normalize_build_for_reproducibility(value: object) -> object:
             if key not in TEX_MUTEX_VOLATILE_KEYS
         }
     return normalized
+
+
+def validate_reproducible_pair(first: dict, second: dict, errors: list[str]) -> None:
+    """Use the same strict checkpoint and mutex contract as the producer."""
+    if __package__:
+        from .compare_fixed_point_builds import compare_receipts
+    else:
+        from compare_fixed_point_builds import compare_receipts
+    try:
+        compare_receipts(first, second)
+    except (TypeError, ValueError, KeyError) as exc:
+        errors.append(f"fixed-point reproduction binding failed: {exc}")
 
 
 def require_commit(commit: object, label: str, errors: list[str]) -> str | None:
@@ -895,7 +907,11 @@ def main(argv: list[str] | None = None) -> int:
     require_ancestor(
         previous_public_main, "HEAD", "previous-public-main-to-HEAD", errors
     )
-    from build_fixed_point import validate_import_preparation_topology
+    from build_fixed_point import (
+        validate_import_preparation_topology, validate_bound_leased_candidate,
+        validate_registry_metadata_chain, required_build_profile,
+        load_bound_registry_json,
+    )
 
     topology_binding = None
     try:
@@ -958,6 +974,22 @@ def main(argv: list[str] | None = None) -> int:
     if len(registry_suffix) != len(new_overlays):
         errors.append("new-overlay transition length does not match registry suffix")
     admission_cursor = previous_registry
+    bound_lease_binding = {}
+    if any(isinstance(overlay, dict) and overlay.get("lease_binding_schema")
+           for overlay in new_overlays):
+        try:
+            lease_path, lease_blob, lease_sha, lease_registry = load_bound_registry_json(
+                ROOT, composition_registry, registry_import_commit, cutoff_commit, "leases")
+            events = lease_registry.get("events", [])
+            if [event.get("event_id") for event in events] != [
+                f"lease-event-{number:06d}" for number in range(1, len(events) + 1)
+            ]:
+                errors.append("bound lease event IDs are not exact and sequential")
+            bound_lease_binding = {"registry_leases_path": lease_path,
+                                   "registry_leases_git_blob": lease_blob,
+                                   "registry_leases_sha256": lease_sha}
+        except (RuntimeError, ValueError, TypeError, KeyError, UnicodeError) as exc:
+            errors.append(f"bound lease registry failed: {exc}")
     for overlay, entry in zip(new_overlays, registry_suffix):
         if not isinstance(overlay, dict) or not isinstance(entry, dict):
             errors.append("new-overlay transition contains an invalid entry")
@@ -1270,7 +1302,17 @@ def main(argv: list[str] | None = None) -> int:
                     errors,
                     admission_cursor if cursor_exists else None,
                 )
+                round_match = re.fullmatch(r"stacks-errata-a04446e-r([1-9][0-9]*)", str(overlay.get("id")))
                 candidate_parent = intake_commit
+                if (overlay.get("lease_binding_schema") is not None
+                        or (round_match is not None and int(round_match.group(1)) >= 40)):
+                    try:
+                        candidate_parent = validate_bound_leased_candidate(
+                            ROOT, overlay, entry, admission_cursor,
+                            registry_import_commit, cutoff_commit,
+                            UPSTREAM, composition_authority.get("tree"))
+                    except (RuntimeError, ValueError, TypeError, KeyError, UnicodeError) as exc:
+                        errors.append(f"bound leased candidate failed: {exc}")
                 for index, candidate_chain_commit in enumerate(candidate_chain, start=1):
                     require_single_parent(
                         candidate_chain_commit,
@@ -1384,6 +1426,16 @@ def main(argv: list[str] | None = None) -> int:
                 errors,
                 admission_cursor,
             )
+            if any(isinstance(overlay, dict) and overlay.get("lease_binding_schema")
+                   for overlay in new_overlays):
+                try:
+                    if validate_registry_metadata_chain(
+                        ROOT, composition_registry.get("post_admission_metadata_commits"),
+                        admission_cursor, registry_import_commit, cutoff_commit
+                    ) != cutoff_commit:
+                        errors.append("post-admission metadata chain does not reach cutoff")
+                except (RuntimeError, ValueError, TypeError, KeyError, UnicodeError) as exc:
+                    errors.append(f"post-admission metadata failed: {exc}")
     if previous_registry is not None and cutoff_commit is not None:
         if (
             git_optional("cat-file", "-e", f"{previous_registry}^{{commit}}") is not None
@@ -1528,12 +1580,15 @@ def main(argv: list[str] | None = None) -> int:
                     errors.append(f"invalid independent replay receipt for {overlay_id}: {exc}")
                 else:
                     review_source = review_data.get("source")
+                    legacy_round = re.fullmatch(r"stacks-errata-a04446e-r(39|40|41|42|43)", overlay_id)
+                    legacy_payload = ("payload/sites-cohomology.tex" if overlay_id.endswith("-r39")
+                                      else "payload/descent.tex")
                     legacy_r39_identity = (
-                        overlay_id == "stacks-errata-a04446e-r39"
+                        legacy_round is not None
                         and review_candidate_relative
                         == "replay/FINAL_INDEPENDENT_REVIEW.json"
                         and review_data.get("schema")
-                        == "stacks-r39-final-independent-review/v1"
+                        == f"stacks-r{legacy_round.group(1)}-final-independent-review/v1"
                         and review_data.get("status")
                         == "PASS_FINAL_CANDIDATE_REVIEW"
                         and review_data.get("passed") is True
@@ -1544,7 +1599,7 @@ def main(argv: list[str] | None = None) -> int:
                         == f"{ids[0]}..{ids[-1]}"
                         and review_source.get("payload_sha256")
                         == manifest_build_hashes.get(
-                            "payload/sites-cohomology.tex"
+                            legacy_payload
                         )
                         and review_source.get(
                             "source_stage_independent_receipt_sha256"
@@ -1987,6 +2042,8 @@ def main(argv: list[str] | None = None) -> int:
     ):
         errors.append("composition receipt has an invalid required-build-stem inventory")
         required_build_stems = []
+    if tuple(required_build_stems) != required_build_profile(composition, topology_binding is not None):
+        errors.append("composition receipt does not match its admitted-cutoff full build profile")
 
     affected_sources = composition_state.get("affected_sources")
     if not isinstance(affected_sources, dict) or not affected_sources:
@@ -2566,6 +2623,7 @@ def main(argv: list[str] | None = None) -> int:
     }
     if topology_binding is not None:
         expected_build_binding["import_preparation_topology"] = topology_binding
+    expected_build_binding.update(bound_lease_binding)
     for key, expected in expected_build_binding.items():
         if receipt_composition.get(key) != expected:
             errors.append(
@@ -2919,26 +2977,7 @@ def main(argv: list[str] | None = None) -> int:
     }
     if second_run != expected_second_run:
         errors.append("reproducibility second-run binding mismatch")
-    for key in (
-        "schema",
-        "status",
-        "source",
-        "builder",
-        "composition",
-        "environment",
-        "build",
-        "artifacts",
-        "pdfs_committed",
-    ):
-        second_value = second_build.get(key)
-        first_value = build_receipt.get(key)
-        if key == "build":
-            second_value = normalize_build_for_reproducibility(second_value)
-            first_value = normalize_build_for_reproducibility(first_value)
-        if second_value != first_value:
-            errors.append(f"second fixed-point receipt mismatch for {key}")
-    if second_build.get("created_utc") == build_receipt.get("created_utc"):
-        errors.append("second fixed-point receipt does not identify a later invocation")
+    validate_reproducible_pair(build_receipt, second_build, errors)
     reproduction_artifacts = reproducibility.get("artifacts")
     if reproduction_artifacts != artifact_identities:
         errors.append("reproducibility artifact inventory differs from the build receipt")
@@ -2977,6 +3016,7 @@ def main(argv: list[str] | None = None) -> int:
         "builder_identity_equal": True,
         "environment_identity_equal": True,
         "fixed_point_sweep_equal": True,
+        "source_checkpoint_identity_equal": True,
     }
     for key, expected in expected_comparison_scalars.items():
         if reproduction_comparison.get(key) != expected:

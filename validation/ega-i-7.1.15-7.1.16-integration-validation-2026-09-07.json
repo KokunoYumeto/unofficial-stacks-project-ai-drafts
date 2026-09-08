@@ -1,0 +1,113 @@
+{
+  "schema": "ega-i-7.1.15-7.1.16-integration-validation/v1",
+  "date": "2026-09-07",
+  "status": "PASS_LOCAL_CHECKPOINT",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "9c8bf402d5f1bbc3f59c0cc864c5f939caccb19d",
+  "validated_semantic_commit": "05cf9c327fd7b0848a6d16d829dca3880e9e5bcc",
+  "validated_semantic_tree": "48122f8868ce67171d57576cc735190ba52d70ec",
+  "reviewed_candidate_commit": "36ba8cff99461775970108eb0d96f446b5b1d4a3",
+  "reviewed_candidate_tree": "c5b1eff63677188b98d030857733b8bb20dae878",
+  "scope": "EGA I7.1.15–7.1.16: rational maps as function-field-valued points, with full fibre/embedding/base compatibility; end of section7.1",
+  "next_source_unit": "EGA I7.2.1 including section heading",
+  "complete_ega_program": false,
+  "machine_checked_mathematical_proof": false,
+  "mathematical_result": "Both corollaries and their introductions/proof have existing Stacks coverage. Tag0BX8(3) gives stronger realization for integral sources and locally finite-type targets over arbitrary bases. The written proof retains the fixed function field, chosen residue-field embedding and base compatibility, distinguishes historical geometric-point terminology, and treats all rational maps rather than only dominant ones. No duplicate root theorem added.",
+  "candidate_receipt": {
+    "path": "validation/ega-i-7.1.15-7.1.16-semantic-checkpoint-2026-09-07.json",
+    "bytes": 49125,
+    "sha256": "59C1723C3A80E2940269EB1682B180A0813F2F3BB4AD548838310F6AF57E8170",
+    "preservation": "Immutable reviewed candidate; integration/publication state is recorded separately."
+  },
+  "dossier": {
+    "path": "ega/i716.md",
+    "bytes": 7668,
+    "sha256": "C6F24983CF5705315C467A6237A17E6C4D035D0AD26EF22F126A8DC2775596E0"
+  },
+  "source_boundary_replay": {
+    "command": "python -B tools/check_ega_i711516_source_boundaries.py",
+    "status": "PASS",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "complete_raw_lf_scope": [
+          259,
+          289
+        ]
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "complete_raw_lf_scope": [
+          150,
+          168
+        ]
+      }
+    },
+    "proof_ownership": "Both introductions, full unwrapped French/wrapped English7.1.15 proof, complete7.1.16 ending, excluded7.2 heading/labels/next environment start.",
+    "errors": []
+  },
+  "independent_review": {
+    "status": "PASS",
+    "scope": "Independent mathematical/artifact review and separate checker/test review; root read full bilingual source passage and dossier, rehashed/read all13 pinned positive/negative target blocks plus unlabelled support, and reviewed new semantic tests/source verifier. All15 mapping components and historical prefixes independently checked.",
+    "limitations": "Mathematical/evidence review, not a formal proof, TeX build or new PDF visual check.",
+    "unresolved_defects": []
+  },
+  "checks": {
+    "unit_test_command": "python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic tests.test_ega_i_719_semantic tests.test_ega_i_711014_semantic tests.test_ega_i_711516_semantic tests.test_ega_raw_source_boundaries tests.test_ega_i_713_source_boundaries tests.test_ega_i_719_source_boundaries tests.test_ega_i_711014_source_boundaries tests.test_ega_i_711516_source_boundaries",
+    "unit_tests_run": 226,
+    "unit_tests_status": "PASS",
+    "unit_tests_elapsed_seconds": 33.499,
+    "full_repository_validator": "PASS_PREPUBLICATION_MODE",
+    "ega_scaffold_checker": "PASS_ZERO_ERRORS_ZERO_QUARANTINES",
+    "registered_overlays": 48,
+    "stable_errata_ids": 1292,
+    "exact_v2_operations": 1481,
+    "legacy_replacements": 69,
+    "permanent_tags": 21819,
+    "reproducible_pdf_identities": 35,
+    "recorded_visual_chapters": 5,
+    "repository_validator_command": "python -B tools/validate_unified_repository.py --pre-publication",
+    "initial_mode_failure": {
+      "command": "python -B tools/validate_unified_repository.py",
+      "exit_code": 1,
+      "cause": "Non-prepublication mode requires absent R47-release-2026-09-06.json and cascades missing release-state errors. The checked-in CI explicitly selects --pre-publication when this release receipt is absent. This routine EGA slice does not create a Zenodo/release milestone; no release evidence was fabricated."
+    },
+    "ci_integration": "New boundary-test/live-verifier commands added; existing semantic discovery includes new suite."
+  },
+  "snapshots": {
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1362,
+      "file_rows": 1381,
+      "superseded_rows": 19,
+      "source_units": 449,
+      "existing_official_tag_rows": 1349,
+      "distinct_existing_official_tags": 366,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 858,
+      "file_rows": 891,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "preservation": {
+    "root_tex_changed": false,
+    "root_build_inputs_changed": false,
+    "official_tags_changed": false,
+    "overlay_registry_changed": false,
+    "new_tex_build": false,
+    "existing_35_pdf_receipts_preserved": true,
+    "original_or_translation_source_mutation": false
+  },
+  "publication_policy": {
+    "github": "Incremental validated checkpoint; public-byte readback and exact-head CI follow push.",
+    "zenodo": "No routine slice release; sparse substantial coherent milestones only."
+  }
+}

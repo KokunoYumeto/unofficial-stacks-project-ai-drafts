@@ -7754,7 +7754,7 @@ Let $\mathcal{P}$ be a property of morphisms which is $\tau$ local
 on the source. Let $f : X \to Y$ have property $\mathcal{P}$.
 For any morphism $a : X' \to X$ which is
 flat, resp.\ flat and locally of finite presentation, resp.\ syntomic,
-resp.\ \'etale, resp.\ an open immersion, the composition
+resp.\ smooth, resp.\ \'etale, resp.\ an open immersion, the composition
 $f \circ a : X' \to Y$ has property $\mathcal{P}$.
 \end{lemma}
 
@@ -7881,7 +7881,7 @@ for a direct proof.)
 
 \begin{lemma}
 \label{lemma-injective-local-rings-fpqc-local-source}
-Then property
+The property
 $\mathcal{P}(f : X \to Y)=$``for every $x \in X$ the map of local
 rings $\mathcal{O}_{Y, f(x)} \to \mathcal{O}_{X, x}$ is injective''
 is fpqc local on the source.
@@ -7967,7 +7967,7 @@ is fppf local on the source.
 \begin{proof}
 Let $f : X \to Y$ be a morphism of schemes.
 Let $\{X_i \to X\}_{i \in I}$ be an fppf covering.
-Denote $f_i : X_i \to X$ the compositions.
+Denote by $f_i : X_i \to Y$ the compositions.
 We have to show that $f$ is universally open if and only if
 each $f_i$ is universally open. If $f$ is universally open,
 then also each $f_i$ is universally open since the maps
@@ -8172,7 +8172,7 @@ Schemes, Lemma \ref{schemes-lemma-specialize-points}.
 Local on the target:
 Let $\{g_i : Y_i \to Y\}$ be an \'etale covering. Let $f_i : X_i \to Y_i$
 be the base change of $f$, and denote $h_i : X_i \to X$ the projection.
-Assume $\mathcal{P}(f)$. Let $f(x_i) \leadsto y_i$
+Assume $\mathcal{P}(f)$. Let $f_i(x_i) \leadsto y_i$
 be a specialization. Then $f(h_i(x_i)) \leadsto g_i(y_i)$ so
 $\mathcal{P}(f)$ implies $\mathcal{O}_{Y, g_i(y_i)}$ is Noetherian.
 Also $\mathcal{O}_{Y, g_i(y_i)} \to \mathcal{O}_{Y_i, y_i}$ is a
@@ -8196,7 +8196,7 @@ Algebra, Lemma \ref{algebra-lemma-descent-Noetherian}.
 Local on the source:
 Let $\{h_i : X_i \to X\}$ be an \'etale covering. Let $f_i : X_i \to Y$
 be the composition $f \circ h_i$. Assume $\mathcal{P}(f)$. Let
-$f(x_i) \leadsto y$ be a specialization. Then $f(h_i(x_i)) \leadsto y$ so
+$f_i(x_i) \leadsto y$ be a specialization. Then $f(h_i(x_i)) \leadsto y$ so
 $\mathcal{P}(f)$ implies $\mathcal{O}_{Y, y}$ is Noetherian. Thus
 $\mathcal{P}(f_i)$ holds.
 Conversely, assume $\mathcal{P}(f_i)$ for all $i$. Let $f(x) \leadsto y$
@@ -8223,7 +8223,7 @@ Y =
 $$
 and let $X \subset Y$ be the open subscheme which is the complement of
 the point all of whose coordinates $x_n = 0$. Let $U = X$, let
-$V = X \amalg Y$, let $a, b$ the obvious map, and let $h : U \to V$
+$V = X \amalg Y$, let $a, b$ be the obvious maps, and let $h : U \to V$
 be the inclusion of $U = X$ into the first summand of $V$. The claim above
 holds because $U$ is locally Noetherian, but $Y$ is not.
 \end{example}
@@ -8383,7 +8383,7 @@ Lemma \ref{lemma-local-source-target-implies} part (2).
 The equivalence of (a) and (f) is
 Lemma \ref{lemma-local-source-target-implies} part (1).
 As (a) is now equivalent to (e) and (f) it follows that
-(a) equivalent to (g).
+(a) is equivalent to (g).
 
 \medskip\noindent
 It is clear that (c) implies (a). If (a) holds, then for any
@@ -8572,7 +8572,7 @@ Hence, as $\mathcal{P}$ is \'etale local on the source,
 $f' = f_Y|_{X'}$ has $\mathcal{P}$. By induction hypothesis
 we see that $X' \to Y$ has $\mathcal{P}$.
 As $\mathcal{P}$ is local on the source, and
-$\{X \to X \times_Z Y, X' \to X \times_Y Z\}$ is an \'etale covering,
+$\{X \to X \times_Z Y, X' \to X \times_Z Y\}$ is an \'etale covering,
 we conclude that $\text{pr} \circ f_Y$ has $\mathcal{P}$.
 Note that $g \circ f$ can be viewed as a morphism
 $g \circ f : X \to g(Y)$. As $\text{pr} \circ f_Y$ is the pullback of
@@ -8602,7 +8602,7 @@ Lemmas \ref{lemma-flat-fpqc-local-source} and
 \item locally of finite presentation, see
 Lemmas \ref{lemma-locally-finite-presentation-fppf-local-source} and
 \ref{lemma-descending-property-locally-finite-presentation},
-\item locally finite type, see
+\item locally of finite type, see
 Lemmas \ref{lemma-locally-finite-type-fppf-local-source} and
 \ref{lemma-descending-property-locally-finite-type},
 \item universally open, see
@@ -8700,7 +8700,7 @@ Definition \ref{definition-local-source-target}.
 Then $f'|_{U'} : U' \to V'$ has property $\mathcal{P}$
 by (4) of Lemma \ref{lemma-local-source-target-implies}.
 Then by (3) of Lemma \ref{lemma-local-source-target-implies}
-we conclude that $f'_{U'} : U' \to Y'$ has $\mathcal{P}$.
+we conclude that $f'|_{U'} : U' \to Y'$ has $\mathcal{P}$.
 Hence $U' \subset W(f')$ by definition. Hence $x' \in W(f')$.
 
 \medskip\noindent
@@ -8713,7 +8713,7 @@ Lemma \ref{lemma-local-source-target-implies}.
 Then $U' \to Y$ has $\mathcal{P}$ by (3) of
 Lemma \ref{lemma-local-source-target-implies}.
 Let $U \subset X$ be the image of the \'etale (hence open)
-morphism $g'|_U' : U' \to X$. Then $\{U' \to U\}$
+morphism $g'|_{U'} : U' \to X$. Then $\{U' \to U\}$
 is an \'etale covering and we conclude that
 $U \to Y$ has $\mathcal{P}$ by (1) of
 Lemma \ref{lemma-local-source-target-implies}.
@@ -8723,7 +8723,7 @@ Thus $U \subset W(f)$ by definition. Hence $x \in W(f)$.
 \begin{lemma}
 \label{lemma-orbits}
 Let $k$ be a field. Let $n \geq 2$. For $1 \leq i, j \leq n$ with
-$i \not = j$ and $d \geq 0$ denote $T_{i, j, d}$ the automorphism
+$i \not = j$ and $d \geq 0$ denote by $T_{i, j, d}$ the automorphism
 of $\mathbf{A}^n_k$ given in coordinates by
 $$
 (x_1, \ldots, x_n) \longmapsto
@@ -8743,7 +8743,7 @@ Assume $\dim(Z) \geq 1$, to get a contradiction.
 Then there exists an extension field $k'/k$ and a $k'$-valued
 point $\xi = (\xi_1, \ldots, \xi_n) \in (k')^n$ of
 $Z_{k'} \subset \mathbf{A}^n_{k'}$
-such that at least one of $x_1, \ldots, x_n$ is transcendental over the
+such that at least one of $\xi_1, \ldots, \xi_n$ is transcendental over the
 prime field. Claim: the orbit of $\xi$ under the group generated by
 the transformations $T_{i, j, d}$ is Zariski
 dense in $\mathbf{A}^n_{k'}$. The claim will give the desired contradiction.
@@ -8803,14 +8803,14 @@ x \ar[r] & y
 }
 }
 $$
-such that $g$ is smooth $y'$ and $X' \to X \times_Y Y'$ is \'etale
+such that $g$ is smooth at $y'$ and $X' \to X \times_Y Y'$ is \'etale
 at $x'$, then $x \in W(f) \Leftrightarrow x' \in W(f')$
 where $W(-)$ is as in Lemma \ref{lemma-largest-open-of-the-source}.
 \end{lemma}
 
 \begin{proof}
 Since $\mathcal{P}$ is \'etale local on the source we see
-that $x \in W(f)$ if and only if the image of $x$ in
+that $x' \in W(f')$ if and only if the image of $x'$ in
 $X \times_Y Y'$ is in $W(X \times_Y Y' \to Y')$. Hence we
 may assume the diagram in the lemma is cartesian.
 
@@ -8870,7 +8870,7 @@ and we may work with $f_2$. Assume $n \geq 2$.
 
 \medskip\noindent
 For any $1 \leq i, j \leq n$ with $i \not = j$ and $d \geq 0$
-denote $T_{i, j, d}$ the automorphism of $\mathbf{A}^n$ defined
+denote by $T_{i, j, d}$ the automorphism of $\mathbf{A}^n$ defined
 in Lemma \ref{lemma-orbits}. Then we get a commutative diagram
 $$
 \xymatrix{
@@ -8905,7 +8905,7 @@ is \'etale at every point lying over the image of $x$ in $Y$.
 (Details omitted; hint: compute the derivatives.)
 We conclude that
 $$
-T_p^{-1}(W) \cap \mathbf{A}^n_x = W \cap \mathbf{A}^n_x
+T_p^{-1}(W(f_n)) \cap \mathbf{A}^n_x = W(f_n) \cap \mathbf{A}^n_x
 $$
 by Lemma \ref{lemma-etale-etale-local-source-target}
 (we've already seen $\mathcal{P}$ is
@@ -8987,7 +8987,7 @@ Thus the lemma follows from Lemma \ref{lemma-etale-etale-local-source-target}.
 \begin{lemma}
 \label{lemma-local-source-target-local-implies-global}
 Let $\mathcal{P}$ be a property of morphisms of schemes which is
-\'etale local on source-and-target. Let $Q$ be the associated property
+\'etale local on source-and-target. Let $\mathcal{Q}$ be the associated property
 of morphisms of germs, see
 Lemma \ref{lemma-local-source-target-global-implies-local}.
 Let $f : X \to Y$ be a morphism
@@ -9142,7 +9142,7 @@ Algebra, Section \ref{algebra-section-etale}).
 Hence $\kappa(u')/\kappa(u)$ and $\kappa(v')/\kappa(v)$
 are finite separable field extensions.
 Thus we have
-$\text{trdeg}_{\kappa(v)} \kappa(u) = \text{trdeg}_{\kappa(v')} \kappa(u)$
+$\text{trdeg}_{\kappa(v)} \kappa(u) = \text{trdeg}_{\kappa(v')} \kappa(u')$
 which proves the lemma.
 \end{proof}
 
@@ -9232,7 +9232,7 @@ There are all kinds of ``miraculous'' identities which arise out of the
 definition above. For example the pullback of $\varphi$ via the diagonal
 morphism $\Delta : X \to X \times_S X$ can be seen as a morphism
 $\Delta^*\varphi : V \to V$.
-This because $X \times_{\Delta, X \times_S X} (V \times_S X) = V$
+This is because $X \times_{\Delta, X \times_S X} (V \times_S X) = V$
 and also $X \times_{\Delta, X \times_S X} (X \times_S V) = V$.
 In fact, $\Delta^*\varphi$ is equal to the identity.
 This is a good exercise if you are unfamiliar with this material.
@@ -9453,7 +9453,7 @@ of maps with fixed target, see
 Sites, Definition \ref{sites-definition-morphism-coverings}.
 \begin{enumerate}
 \item Let $(Y_j, \varphi_{jj'})$ be a descent datum relative to the
-family $\{V_j \to S'\}$. The system
+family $\{V_j \to S\}$. The system
 $$
 \left(
 g_i^*Y_{\alpha(i)},
@@ -9461,7 +9461,7 @@ g_i^*Y_{\alpha(i)},
 \right)
 $$
 (with notation as in Remark \ref{remark-easier-family})
-is a descent datum relative to $\mathcal{V}$.
+is a descent datum relative to $\mathcal{U}$.
 \item This construction defines a functor between descent data relative
 to $\mathcal{U}$ and descent data relative to $\mathcal{V}$.
 \item Given a second $\alpha' : I \to J$, $h' : S' \to S$ and
@@ -9514,7 +9514,7 @@ $\text{id} : S \to S$, namely the identity morphism on $U$.
 {\it canonical descent datum} on $X \times_S U$
 relative to $X \to S$ by pulling back the trivial
 descent datum via $f$. We often
-denote $(X \times_S U, can)$ this descent datum.
+denote by $(X \times_S U, can)$ this descent datum.
 \item A descent datum $(V, \varphi)$ relative to $X/S$ is
 called {\it effective} if $(V, \varphi)$
 is isomorphic to the canonical descent datum
@@ -9544,7 +9544,7 @@ with target $S$.
 we have a {\it canonical descent datum} on the family of
 schemes $X_i \times_S U$ by pulling back the trivial
 descent datum for $U$ relative to $\{\text{id} : S \to S\}$.
-We denote this descent datum $(X_i \times_S U, can)$.
+We denote this descent datum by $(X_i \times_S U, can)$.
 \item A descent datum $(V_i, \varphi_{ij})$
 relative to $\{X_i \to S\}$ is called {\it effective}
 if there exists a scheme $U$ over $S$ such that
@@ -9563,7 +9563,7 @@ $(V_i, \varphi_{ij})$ is isomorphic to $(X_i \times_S U, can)$.
 
 
 
-\section{Fully faithfulness of the pullback functors}
+\section{Full faithfulness of the pullback functors}
 \label{section-fully-faithful}
 
 \noindent
@@ -9799,7 +9799,7 @@ category of descent data relative to $X/S$.
 
 \begin{proof}
 We may factor $X \to X'$ as $X \to X \times_S X' \to X'$.
-The first morphism has a section, hence induces an equivalence of
+The first morphism has a retraction, hence induces an equivalence of
 categories of descent data by
 Lemma \ref{lemma-morphism-with-section-equivalence}.
 The second morphism is surjective and flat, hence induces a
@@ -9809,7 +9809,7 @@ faithful functor by Lemma \ref{lemma-faithful}.
 \begin{lemma}
 \label{lemma-morphism-source-fpqc-covering}
 Let $f : X \to X'$ be a morphism of schemes over a base scheme $S$.
-Assume $\{X \to S\}$ is an fpqc covering (for example if $f$ is
+Assume $\{X \to S\}$ is an fpqc covering (for example if $X \to S$ is
 surjective, flat and quasi-compact).
 Then the pullback functor of Lemma \ref{lemma-pullback} is a
 fully faithful functor from the category of descent data relative
@@ -9818,7 +9818,7 @@ to $X'/S$ to the category of descent data relative to $X/S$.
 
 \begin{proof}
 We may factor $X \to X'$ as $X \to X \times_S X' \to X'$.
-The first morphism has a section, hence induces an equivalence of
+The first morphism has a retraction, hence induces an equivalence of
 categories of descent data by
 Lemma \ref{lemma-morphism-with-section-equivalence}.
 The second morphism is an fpqc covering
@@ -9857,7 +9857,7 @@ X = \coprod\nolimits_{i \in I} U_i
 Y = \coprod\nolimits_{j \in J} V_j
 $$
 over $S$ which on the $i$th component maps into the $\alpha(i)$th component
-via the morphism $g_{\alpha(i)}$. We claim that $\{g : X \to Y\}$
+via the morphism $g_i$. We claim that $\{g : X \to Y\}$
 is an fpqc covering of schemes. Namely, by
 Topologies, Lemma \ref{topologies-lemma-disjoint-union-is-fpqc-covering}
 for each $j$ the morphism $\{\coprod_{\alpha(i) = j} U_i \to V_j\}$ is an
@@ -9921,7 +9921,7 @@ of descent data relative to any Zariski covering of $S$.
 \end{lemma}
 
 \begin{proof}
-The functor is faithful and fully faithful by
+The functor is fully faithful by
 Lemma \ref{lemma-fpqc-refinement-coverings-fully-faithful}.
 Let us indicate how to prove that it is essentially surjective.
 Let $(X_i, \varphi_{ii'})$ be a descent datum relative to $\mathcal{U}$.
@@ -10047,7 +10047,7 @@ compatible with descent data, hence comes from a
 unique morphism $\varphi_{ij} : U_{ij} \to U_{ji}$ over $S$
 (see Remark \ref{remark-morphisms-of-schemes-satisfy-fpqc-descent}).
 Then $(U_i, U_{ij}, \varphi_{ij})$ is a glueing
-data as in Schemes, Section \ref{schemes-section-glueing-schemes}
+datum as in Schemes, Section \ref{schemes-section-glueing-schemes}
 (proof omitted). Thus we may assume there is a scheme $U$ over $S$
 such that $U_i \subset U$ is open, $U_{ij} = U_i \cap U_j$ and
 $\varphi_{ij} = \text{id}_{U_i \cap U_j}$, see
@@ -10067,7 +10067,7 @@ get the desired isomorphism $\alpha : X \times_S U \to V$.
 
 \noindent
 In the following we study the question as to whether
-descent data for schemes relative to a fpqc-covering
+descent data for schemes relative to an fpqc-covering
 are effective. The first remark to make is that this
 is not always the case. We will see this in Algebraic
 Spaces, Example \ref{spaces-example-non-representable-descent}.
@@ -10077,7 +10077,7 @@ Lemma \ref{examples-lemma-non-effective-descent-projective}.
 
 \medskip\noindent
 On the other hand, if the schemes we are trying to
-descend are particularly simple, then it is sometime the
+descend are particularly simple, then it is sometimes the
 case that for whole classes of schemes descent data
 are effective. We will introduce terminology here that
 describes this phenomenon abstractly, even though it
@@ -10151,7 +10151,7 @@ $(X_i, \varphi_{ii'}) \cong (U_i \times_S X, can)$.
 \medskip\noindent
 Before we start the proof proper we remark that for any
 family of morphisms $\mathcal{V} : \{V_j \to S\}$ and any
-morphism of families $\mathcal{V} \to \mathcal{U}$, if we pullback
+morphism of families $\mathcal{V} \to \mathcal{U}$, if we pull back
 the descent datum $(X_i, \varphi_{ii'})$ to a descent datum
 $(Y_j, \varphi_{jj'})$ over $\mathcal{V}$, then each of the
 morphisms $Y_j \to V_j$ has property $\mathcal{P}$ also.
@@ -10216,7 +10216,7 @@ V \times_S U_i \times_S X
 V \times_S X_i
 $$
 compatible with the maps $\varphi_{ii'}$ and compatible with
-restricting to smaller affine opens in $X$. This implies that
+restricting to smaller affine opens in $S$. This implies that
 the canonical descent datum on $U_i \times_S X$ is isomorphic
 to the given descent datum and we win.
 \end{proof}
@@ -10486,7 +10486,7 @@ by this construction $F \mapsto (X_i, \varphi_{ii'})$.
 
 \medskip\noindent
 Let us construct a functor from left to right.
-For each $i$ denote $F_i$ the sheaf $h_{X_i}$.
+For each $i$ denote by $F_i$ the sheaf $h_{X_i}$.
 The isomorphisms $\varphi_{ii'}$ give isomorphisms
 $$
 \varphi_{ii'} :

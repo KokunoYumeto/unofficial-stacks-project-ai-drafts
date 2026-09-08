@@ -1,6 +1,115 @@
 # Unified-build receipts
 
-## Current local R38 composition and build evidence
+## Current combined R47/Illusie evidence
+
+The combined source and these receipts are public at
+`5817f4c1af8724b147401c785f57ca315b52e31c`. The
+[build](stacks-errata-a04446e-r47-illusie-build-2026-09-07.json) and
+[independent second build](stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json)
+are compared by the [reproducibility receipt](stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json):
+35 matching PDF identities, 3,363 pages and 36,679,971 bytes per run.
+The [visual receipt](stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json)
+retains its actual five-chapter R47 scope and historical observations. It is
+not an assertion that every page in the combined corpus was visually reviewed.
+
+The newer [EGA I §6.6.6–§6.6.8 validation](ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+checks existing mathematical coverage and hypothesis boundaries. It changes no
+root TeX or PDF input; all 35 retained PDF hashes were reread successfully.
+The immutable candidate receipt's old pending state is distinguished from
+the later validation and publication records.
+
+The [anonymous GitHub readback](ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
+verifies all 15 changed files at public content commit
+`27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
+This is an incremental GitHub checkpoint, not a new Zenodo version.
+
+## Current EGA I §7.2.5–§7.2.7 comparison
+
+The [written comparison](../ega/i727.md) proves preservation of rational
+sections on their relative domains, the correspondence for regular functions
+on a dense open, and the reduced-closure criterion for a section to extend.
+It explains why graph/scalar domains coincide, why ordinary section extensions
+can fail to preserve the base, and why the closure proof needs no retrocompactness.
+The [integration validation](ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
+records source and proof ownership, independent review, and deterministic checks.
+It does not rewrite the immutable candidate as a publication receipt.
+No new root theorem, official tag, source edition or PDF is produced; all twelve
+earlier open gaps remain. Next: §7.2.8. Full EGA integration remains unfinished.
+The [public readback](ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
+binds all 18 changed paths (2,289,177 bytes) at `f76a3ffe17211237484d944a85b173e04eb536d7`
+and the passing exact-head CI, including the single retry for a source-download
+connection reset. No source or mathematical change was made for that retry.
+
+## Preceding EGA I §7.2.1–§7.2.4 comparison
+
+The [written comparison](../ega/i724.md) distinguishes the largest ordinary
+domain of a rational map from the largest domain for representatives over a
+fixed base. It proves dense agreement, relative gluing and the separated-base
+case, and retains a counterexample to the unqualified absolute-domain reading.
+The [integration validation](ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json)
+is separate from the immutable candidate receipt. Source ownership includes
+the section heading, nested lemma, all proofs and the parent proposition's
+nonextendible-map consequence. No root TeX, official tag or PDF is changed.
+Next: §7.2.5. This is not completion of EGA or a printed-source erratum admission.
+The [anonymous readback](ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+verifies all 18 changed paths (2,167,497 bytes) at the published content commit;
+the exact-head GitHub workflow passed both jobs.
+
+## Preceding EGA I §7.1.15–§7.1.16 comparison
+
+The [integration validation](ega-i-7.1.15-7.1.16-integration-validation-2026-09-07.json)
+and [written comparison](../ega/i716.md) explain rational maps from integral
+schemes as function-field-valued points, with the fibre, embedding and base-field
+compatibility kept explicit. The 226 passing checks bind complete introductions,
+proof ownership, historical ledger prefixes and the excluded §7.2 heading.
+Modern versus historical geometric-point terminology is a distinction, not an
+admitted erratum. Next: §7.2.1 with its section heading.
+The [public readback](ega-i-7.1.15-7.1.16-public-readback-2026-09-07.json)
+verifies all 19 content files, 2,111,321 bytes, at
+`66b1df8ec9457cffbfae82ae398a983a43606438`; its exact-head CI passed.
+
+## Preceding EGA I §7.1.10–§7.1.14 comparison
+
+The [integration validation](ega-i-7.1.10-7.1.14-integration-validation-2026-09-07.json)
+and [written comparison](../ega/i714.md) cover generic-local descriptions of
+rational maps, the distinct uniqueness/existence hypotheses, and localization
+with base compatibility. Complete source/proof ownership and prior ledger
+prefixes are preserved.
+The [public byte readback](ega-i-7.1.10-7.1.14-public-readback-2026-09-07.json)
+verifies all 19 changed files at
+`bb84677f035925acfdc9a11c4ab880b16e3af732`, totaling 2,101,459 bytes.
+
+## Preceding EGA I §7.1.4–§7.1.9.1 comparison
+
+The [integration validation](ega-i-7.1.4-7.1.9.1-integration-validation-2026-09-07.json),
+[source-bound checkpoint](ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json)
+and [written derivations](../ega/i719.md) compare generic morphism germs and
+rational-function rings, including all separately owned proof passages.
+Existing Stacks results supply the mathematics; no duplicate root theorem
+or new PDF is introduced. The next source unit is §7.1.10.
+The [public byte readback](ega-i-7.1.4-7.1.9.1-public-readback-2026-09-07.json)
+verifies all 20 changed files at
+`e9a6a302f753d7a0564c1ca0cf323ffb9f07fb77`, totaling 2,068,710 bytes.
+
+## Preceding EGA I §7.1.1–§7.1.3 comparison
+
+The preceding [EGA I §7.1.1–§7.1.3 integration validation](ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+records the rational-map and rational-function comparison. Its
+[source-boundary correction](ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
+supersedes incomplete raw-source intervals while preserving the first
+candidate and its ledger rows as adverse history. Live French/English replay,
+73 test executions and complete repository validation pass. The next source
+unit at that checkpoint was §7.1.4; those tests did not prove EGA complete.
+
+The [public content readback](ega-i-7.1.1-7.1.3-public-readback-2026-09-07.json)
+verifies all 22 changed paths at `51e93aef77d61a0b1ba766534ac46e563961c93c`,
+totaling 2,003,438 bytes. A test-history repair binds the preserved public
+predecessor rather than requiring an unpublished local candidate commit;
+the mathematical comparison and immutable source receipts are unchanged.
+
+## Historical R38 composition and build checkpoint
+
+The following describes its original pre-publication state, not current main.
 
 The local source includes admitted R34–R38 corrections on top of the public
 R33 source. Independent composition replay, two byte-identical builds, and
@@ -476,10 +585,10 @@ concept DOI `10.5281/zenodo.22135180`. The [R33 release
 receipt](stacks-errata-a04446e-r33-release-2026-08-30.json) binds content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b` and its exact public readback.
 
-## Current EGA I §6.6.3 semantic checkpoint
+## Historical EGA I §6.6.3 semantic checkpoint
 
-The current public EGA semantic checkpoint covers EGA I through §6.6.3 and
-sets §6.6.4 as the next cursor. The
+That historical public EGA semantic checkpoint covered EGA I through §6.6.3
+and set §6.6.4 as its next cursor. The
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
 receipt records a PASS semantic-only checkpoint at content commit
 `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`, tree

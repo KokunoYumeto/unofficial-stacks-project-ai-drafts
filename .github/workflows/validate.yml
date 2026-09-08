@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           python tools/generate_changes_from_upstream.py --check
-          python -m unittest tests.test_changes_from_upstream tests.test_semantic_composition tests.test_build_fixed_point_mutex
+          python -m unittest tests.test_changes_from_upstream tests.test_semantic_composition tests.test_build_fixed_point_mutex tests.test_compare_fixed_point_builds tests.test_r47_composition tests.test_r47_release_consumer
 
   ega-checkpoint-tooling:
     runs-on: ubuntu-latest
@@ -58,7 +58,22 @@ jobs:
       - name: Verify EGA checkpoint, build binding, and preservation tooling
         shell: bash
         run: |
+          python ega/check.py
+          python -m unittest discover -s tests -p 'test_ega_i_*_semantic.py'
+          python -m unittest tests.test_ega_raw_source_boundaries tests.test_ega_i_713_source_boundaries
+          python tools/check_ega_i713_source_boundaries.py
+          python -m unittest tests.test_ega_i_719_source_boundaries
+          python tools/check_ega_i719_source_boundaries.py
+          python -m unittest tests.test_ega_i_711014_source_boundaries
+          python tools/check_ega_i711014_source_boundaries.py
+          python -m unittest tests.test_ega_i_711516_source_boundaries
+          python tools/check_ega_i711516_source_boundaries.py
+          python -m unittest tests.test_ega_i_724_source_boundaries
+          python tools/check_ega_i724_source_boundaries.py
+          python -m unittest tests.test_ega_i_727_source_boundaries
+          python tools/check_ega_i727_source_boundaries.py
           python -m unittest \
             tests.test_ega_source_checkpoint \
             tests.test_ega_source_build_binding \
-            tests.test_ega_source_package
+            tests.test_ega_source_package \
+            tests.test_ega_checkpoint_successor

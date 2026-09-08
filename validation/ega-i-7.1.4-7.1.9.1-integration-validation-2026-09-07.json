@@ -1,0 +1,106 @@
+{
+  "schema": "ega-i-7.1.4-7.1.9.1-integration-validation/v1",
+  "date": "2026-09-07",
+  "status": "PASS_LOCAL_CHECKPOINT",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "056fd2bb05c6a5f82dcad9f193ad63d35790b56b",
+  "validated_semantic_commit": "434dd2a972b5f9ac87d8ca8e4ee57dd86cb89212",
+  "validated_semantic_tree": "e22f96292c81b22700968e22317387b397b2edb5",
+  "reviewed_candidate_commit": "c0f924340eb0ac28a7193ffbbb749ea89394bf95",
+  "reviewed_candidate_tree": "a3ada258e5418e7dd777ab28e17cd535ad1b068d",
+  "scope": "EGA I 7.1.4–7.1.9.1: generic morphism germs, finite-component products of rational-function rings, Artinianness and minimal-prime localization",
+  "next_source_unit": "EGA I 7.1.10",
+  "complete_ega_program": false,
+  "machine_checked_mathematical_proof": false,
+  "mathematical_result": "Existing Stacks content entails this bounded slice. Independently written derivations retain arbitrary-target and relative morphism germs, all unwrapped proof passages, Noetherian and finite-component hypotheses, empty cases, and the distinction between minimal-prime localization and the total quotient ring. No duplicate root theorem is added.",
+  "candidate_receipt": {
+    "path": "validation/ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json",
+    "bytes": 83816,
+    "sha256": "04651D2F10B078C8AD1ACF4E3A429449F0017E3454136E7A9BD1DCB5264E7704",
+    "preservation": "The frozen candidate remains SEMANTIC_CANDIDATE; this separate receipt records its subsequent integration validation."
+  },
+  "dossier": {
+    "path": "ega/i719.md",
+    "bytes": 10540,
+    "sha256": "3D22BBE2186B943B4929F8F1D57710C7D0AC0951C7EB9FA389C865D137938479"
+  },
+  "source_boundary_replay": {
+    "command": "python -B tools/check_ega_i719_source_boundaries.py",
+    "status": "PASS",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "complete_raw_lf_scope": [
+          72,
+          191
+        ]
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "complete_raw_lf_scope": [
+          37,
+          99
+        ]
+      }
+    },
+    "proof_ownership": "Separate complete 7.1.5 proof and integral-stalk tail, parent-owned 7.1.9 deduction after the 7.1.9.1 statement, and complete 7.1.9.1 proof.",
+    "errors": []
+  },
+  "independent_review": {
+    "status": "PASS",
+    "scope": "Recomputed both immutable sources, all complete numbered and proof-owned spans, 22 pinned target blocks and tag joins, mathematical derivations/hypotheses, ledger prefixes/postimages, seven preserved inputs and public-clone dependency reachability.",
+    "limitations": "Read-only mathematical/evidence review, not formal proof checking, a fresh-clone run, TeX, or new PDF inspection. Root separately executed the repository and regression checks.",
+    "unresolved_defects": []
+  },
+  "checks": {
+    "unit_test_command": "python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic tests.test_ega_i_713_source_boundaries tests.test_ega_raw_source_boundaries tests.test_ega_i_719_semantic tests.test_ega_i_719_source_boundaries",
+    "unit_tests_run": 115,
+    "unit_tests_status": "PASS",
+    "unit_tests_elapsed_seconds": 23.842,
+    "full_repository_validator": "PASS",
+    "registered_overlays": 48,
+    "stable_errata_ids": 1292,
+    "exact_v2_operations": 1481,
+    "legacy_replacements": 69,
+    "permanent_tags": 21819,
+    "reproducible_pdf_identities": 35,
+    "recorded_visual_chapters": 5,
+    "ci_integration": "The workflow runs the new boundary tests and live verifier; its existing semantic-test discovery includes the new semantic suite."
+  },
+  "snapshots": {
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1326,
+      "file_rows": 1345,
+      "superseded_rows": 19,
+      "source_units": 437,
+      "existing_official_tag_rows": 1313,
+      "distinct_existing_official_tags": 364,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 838,
+      "file_rows": 871,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "preservation": {
+    "root_tex_changed": false,
+    "root_build_inputs_changed": false,
+    "official_tags_changed": false,
+    "overlay_registry_changed": false,
+    "new_tex_build": false,
+    "existing_35_pdf_receipts_preserved": true,
+    "original_or_translation_source_mutation": false
+  },
+  "publication_policy": {
+    "github": "Incremental validated checkpoint; public-byte readback and exact-head CI are recorded separately after push.",
+    "zenodo": "No new version for this routine slice; substantial coherent milestones only."
+  }
+}

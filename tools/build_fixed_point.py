@@ -56,12 +56,30 @@ LEGACY_DEFAULT_STEMS = (
 
 # R34-R38 extend the existing complete profile by the two newly affected
 # chapters. Historical receipts keep their original ordered profile.
-DEFAULT_STEMS = (
+R39_DEFAULT_STEMS = (
     *LEGACY_DEFAULT_STEMS[:26],
     "cohomology",
     "sites-cohomology",
     *LEGACY_DEFAULT_STEMS[26:],
 )
+
+R47_ADDITIONAL_STEMS = (
+    (40, "descent"), (44, "perfect"), (45, "topologies"),
+    (46, "groupoids"), (47, "more-groupoids"),
+)
+DEFAULT_STEMS = (*R39_DEFAULT_STEMS, *(stem for _, stem in R47_ADDITIONAL_STEMS))
+
+
+def required_build_profile(receipt: dict[str, object], explicit_imports: bool) -> tuple[str, ...]:
+    """Keep historical profiles immutable; extend only at admitted cutoffs."""
+    if not explicit_imports:
+        return LEGACY_DEFAULT_STEMS
+    registry = receipt.get("registry", {})
+    last = registry.get("last_admitted_overlay", "") if isinstance(registry, dict) else ""
+    match = re.fullmatch(r"stacks-errata-a04446e-r([1-9][0-9]*)", str(last))
+    round_number = int(match.group(1)) if match else 0
+    return (*R39_DEFAULT_STEMS, *(stem for first, stem in R47_ADDITIONAL_STEMS
+                                 if round_number >= first))
 
 # Preparation is code/evidence maintenance, never a source or registry import.
 # Each actual commit must additionally declare its exact changed-path inventory.
@@ -74,6 +92,8 @@ COMPOSITION_PREPARATION_PATHS = frozenset(
         "tools/compose_overlay_projection.py",
         "tools/write_r38_composition_receipt.py",
         "tools/write_r39_composition_receipt.py",
+        "tools/write_r47_composition_receipt.py",
+        "tests/test_r47_composition.py",
         "tests/test_build_fixed_point_mutex.py",
         "tests/test_semantic_composition.py",
         "validation/overlay-composition-semantic-dispositions-v1.json",
@@ -156,7 +176,8 @@ EGA_PRECONTENT_TOOL_ROLES = (
     (EGA_SOURCE_PACKAGE_TEST, "package_checkpoint_consumer_test"),
 )
 EGA_NON_WORKTREE_PROTECTED_ROLES = frozenset(
-    {"official_stacks_source_authority", "official_stacks_tag_authority"}
+    {"official_stacks_source_authority", "official_stacks_tag_authority",
+     "historical_checkpoint_input"}
 )
 EGA_SHARED_BUILD_SUFFIXES = frozenset({".bst", ".cfg", ".cls", ".def", ".sty"})
 EGA_CHECKPOINT_KEYS = frozenset(
@@ -1325,6 +1346,14 @@ def load_source_checkpoint(
     require_single_parent(source, content_commit, "EGA content", base_commit)
     head_commit = git(source, "rev-parse", "HEAD")
     head_tree = git(source, "rev-parse", "HEAD^{tree}")
+    if commit_parents(source, head_commit) != (content_commit,):
+        if __package__:
+            from . import verify_ega_checkpoint_successor as successor
+        else:
+            import verify_ega_checkpoint_successor as successor
+        return successor.load_successor(
+            sys.modules[__name__], source, logical_path, checkpoint, composition_binding
+        )
     require_single_parent(source, head_commit, "EGA checkpoint receipt", content_commit)
     post_changes = committed_path_changes(source, content_commit, head_commit)
     if list(post_changes) != [logical_path] or post_changes[logical_path][4] != "A":
@@ -2082,6 +2111,257 @@ def validate_import_preparation_topology(
     }
 
 
+def registry_json(source: Path, commit: str, path: str) -> dict[str, object]:
+    value = strict_json_loads(git(source, "show", f"{commit}:{path}"), path)
+    if not isinstance(value, dict):
+        raise RuntimeError(f"registry evidence is not an object: {path}")
+    return value
+
+
+def verify_registry_reference(source: Path, commit: str, row: object) -> None:
+    """Check one byte-preserving reference without trusting filesystem paths."""
+    if not isinstance(row, dict):
+        raise RuntimeError("invalid registry reference")
+    path = row.get("path")
+    if (not isinstance(path, str) or not RELATIVE_PAYLOAD_PATTERN.fullmatch(path)
+            or any(part in {".", ".."} for part in path.split("/"))
+            or type(row.get("bytes")) is not int or row["bytes"] < 0
+            or not isinstance(row.get("sha256"), str)
+            or not SHA256_PATTERN.fullmatch(row["sha256"])):
+        raise RuntimeError("invalid registry reference path or identity")
+    blob = git(source, "rev-parse", f"{commit}:{path}")
+    data = git_blob_bytes(source, blob)
+    if (len(data) != row["bytes"]
+            or hashlib.sha256(data).hexdigest().upper() != row["sha256"].upper()
+            or ("git_blob" in row and row["git_blob"] != blob)):
+        raise RuntimeError(f"registry evidence identity mismatch: {path}")
+
+
+def verify_registry_references(source: Path, commit: str, node: object,
+                               prefix: str = "") -> None:
+    """Verify declared file identities, not free-text historical assertions."""
+    if isinstance(node, dict):
+        if "path" in node and not {"path", "bytes", "sha256"}.issubset(node):
+            raise RuntimeError("incomplete registry file reference")
+        if {"path", "bytes", "sha256"}.issubset(node):
+            verify_registry_reference(source, commit, {**node, "path": prefix + node["path"]})
+        for value in node.values():
+            verify_registry_references(source, commit, value, prefix)
+    elif isinstance(node, list):
+        for value in node:
+            verify_registry_references(source, commit, value, prefix)
+
+
+def validate_registry_metadata_chain(source: Path, rows: object, parent: str,
+                                     imported: str, cutoff: str) -> str:
+    """Accept only additive, byte-bound admission evidence; never candidate edits."""
+    if not isinstance(rows, list):
+        raise RuntimeError("invalid registry metadata commit inventory")
+    for row in rows:
+        if not isinstance(row, dict) or set(row) != {"commit", "parent", "tree", "paths"}:
+            raise RuntimeError("invalid registry metadata commit row")
+        commit = require_commit_object(source, row["commit"], "registry metadata")
+        require_single_parent(source, commit, "registry metadata", parent)
+        require_tree_identity(source, commit, row["tree"], "registry metadata")
+        if row["parent"] != parent:
+            raise RuntimeError("registry metadata parent binding mismatch")
+        paths = row["paths"]
+        if (not isinstance(paths, list) or not paths
+                or any(not isinstance(item, dict) for item in paths)):
+            raise RuntimeError("invalid registry metadata paths")
+        names = [item.get("path") for item in paths]
+        if (any(not isinstance(name, str) or not re.fullmatch(
+                r"registry/admission-receipts/[A-Za-z0-9._-]+\.json", name) for name in names)
+                or names != sorted(set(names))):
+            raise RuntimeError("registry metadata path scope mismatch")
+        changes = committed_path_changes(source, parent, commit)
+        if sorted(changes) != names or any(raw[4] != "A" or raw[1] != "100644"
+                                           for raw in changes.values()):
+            raise RuntimeError("registry metadata is not an exact additive receipt commit")
+        for item in paths:
+            name = item["path"]
+            verify_registry_reference(source, commit, item)
+            for revision, prefix in ((cutoff, ""), (imported, "ai-integrated/"),
+                                      ("HEAD", "ai-integrated/")):
+                verify_registry_reference(source, revision, {**item, "path": prefix + name})
+            require_clean_path(source, "ai-integrated/" + name)
+            document = registry_json(source, commit, name)
+            admission = require_commit_object(source, document.get("admission_commit"), name)
+            require_ancestor(source, admission, "metadata admission ancestor", parent)
+            require_tree_identity(source, admission, document.get("admission_tree"), name)
+            schema = document.get("schema")
+            if schema not in {
+                "mathematics-commons-stacks-admission-clarification/v1",
+                "mathematics-commons-stacks-registry-fresh-checkout-receipt/v1",
+            }:
+                raise RuntimeError("unsupported registry metadata evidence schema")
+            candidate_id = document.get("candidate_id")
+            match = re.fullmatch(r"stacks-errata-a04446e-r([1-9][0-9]*)", str(candidate_id))
+            if match is None:
+                raise RuntimeError("registry metadata lacks an exact candidate identity")
+            namespace = f"candidates/commons/stacks/errata/r{match.group(1)}"
+            required_references = (
+                {"admitted_manifest": f"{namespace}/candidate.manifest.json",
+                 "original_admission_receipt": f"registry/admission-receipts/r{match.group(1)}.json"}
+                if schema == "mathematics-commons-stacks-admission-clarification/v1" else
+                {"candidate_manifest": f"{namespace}/candidate.manifest.json",
+                 "admission_receipt": f"registry/admission-receipts/r{match.group(1)}.json",
+                 "registry": "registry/overlays.json", "leases": "registry/leases.json",
+                 "workflow_validator": ".github/workflows/validate.yml"}
+            )
+            for key, expected_path in required_references.items():
+                reference = document.get(key)
+                if not isinstance(reference, dict) or reference.get("path") != expected_path:
+                    raise RuntimeError(f"registry metadata lacks mandatory {key} reference")
+                verify_registry_reference(source, admission, reference)
+            metadata_manifest = registry_json(source, admission, f"{namespace}/candidate.manifest.json")
+            if metadata_manifest.get("candidate_id") != candidate_id:
+                raise RuntimeError("registry metadata candidate differs from its admitted manifest")
+            verify_registry_references(source, admission, document)
+            if schema == "mathematics-commons-stacks-admission-clarification/v1":
+                clarification = document.get("review_hash_clarification", {})
+                if clarification.get("malformed_assertion_json_pointer") != "/source/stable_units_sha256":
+                    raise RuntimeError("unsupported clarification pointer")
+                review = registry_json(source, admission, clarification["controlling_final_review"]["path"])
+                manifest = registry_json(source, admission, document["admitted_manifest"]["path"])
+                effective = clarification.get("effective_value")
+                if (review.get("source", {}).get("stable_units_sha256")
+                        != clarification.get("historical_malformed_value")
+                        or not isinstance(effective, str) or not SHA256_PATTERN.fullmatch(effective)
+                        or clarification.get("historical_malformed_value") != effective + "C"
+                        or clarification.get("effective_binding", {}).get("path") != f"{namespace}/stable-units.json"
+                        or manifest.get("stable_unit_manifest", {}).get("sha256") != effective
+                        or clarification.get("effective_binding", {}).get("sha256") != effective):
+                    raise RuntimeError("clarification does not preserve and correct its exact historical assertion")
+            else:
+                if document.get("status") != "PASS":
+                    raise RuntimeError("registry fresh-checkout evidence is not PASS")
+                frozen_candidate = require_commit_object(source, document.get("candidate_commit"), name)
+                require_single_parent(source, admission, "fresh-checkout admission", frozen_candidate)
+                if git(source, "rev-parse", f"{frozen_candidate}:{namespace}") != git(
+                    source, "rev-parse", f"{admission}:{namespace}"
+                ):
+                    raise RuntimeError("fresh-checkout candidate changed at admission")
+        parent = commit
+    return parent
+
+
+def validate_bound_leased_candidate(source: Path, overlay: dict[str, object],
+                                    entry: dict[str, object], parent: str,
+                                    imported: str, cutoff: str,
+                                    authority_commit: str, authority_tree: str) -> str:
+    """Verify the R40+ leased lifecycle, immutable closure and metadata interlude."""
+    if overlay.get("lease_binding_schema") != "unofficial-ai-integrated-stacks-leased-candidate/v1":
+        raise RuntimeError("R40+ leased candidate requires explicit lifecycle evidence")
+    intake, candidate, admission = (str(overlay.get(key)) for key in
+                                     ("intake_commit", "candidate_commit", "admission_commit"))
+    namespace = entry.get("namespace")
+    if (not isinstance(namespace, str) or not NAMESPACE_PATTERN.fullmatch(namespace)
+            or any(part in {".", ".."} for part in namespace.split("/"))):
+        raise RuntimeError("invalid leased candidate namespace")
+    candidate_path = f"candidates/{namespace}"
+    require_single_parent(source, intake, "leased intake", parent)
+    candidate_parent = validate_registry_metadata_chain(
+        source, overlay.get("intake_successor_commits", []), intake, imported, cutoff)
+    if overlay.get("candidate_commits") != [candidate]:
+        raise RuntimeError("bound leased candidate must name its one immutable candidate commit")
+    require_single_parent(source, candidate, "leased candidate", candidate_parent)
+    require_single_parent(source, admission, "leased admission", candidate)
+    for key, commit in (("intake", intake), ("candidate", candidate), ("admission", admission)):
+        require_tree_identity(source, commit, overlay.get(f"{key}_tree"), f"leased {key}")
+    if overlay.get("intake_parent") != parent or overlay.get("admission_parent") != candidate:
+        raise RuntimeError("leased parent identity mismatch")
+    intake_changes = committed_path_changes(source, parent, intake)
+    expected_intake = {"registry/leases.json", f"{candidate_path}/LEASE.json", f"{candidate_path}/.gitattributes"}
+    if ("registry/leases.json" not in intake_changes or not set(intake_changes).issubset(expected_intake)
+            or any(raw[1] != "100644" or raw[4] != ("M" if path == "registry/leases.json" else "A")
+                   for path, raw in intake_changes.items())):
+        raise RuntimeError("leased intake changed paths outside its lease scope")
+    candidate_changes = committed_path_changes(source, candidate_parent, candidate)
+    if not candidate_changes or any(not path.startswith(candidate_path + "/")
+            or raw[4] not in {"A", "M"} or raw[1] != "100644"
+            for path, raw in candidate_changes.items()):
+        raise RuntimeError("leased candidate changed paths outside its immutable namespace")
+    expected_subtree = overlay.get("candidate_subtree")
+    for revision, path in ((candidate, candidate_path), (admission, candidate_path),
+                           (cutoff, candidate_path), (imported, "ai-integrated/" + candidate_path),
+                           ("HEAD", "ai-integrated/" + candidate_path)):
+        if git(source, "rev-parse", f"{revision}:{path}") != expected_subtree:
+            raise RuntimeError("leased candidate subtree changed after freeze")
+    manifest = registry_json(source, candidate, f"{candidate_path}/candidate.manifest.json")
+    for key in ("builds", "source_authorities"):
+        if not isinstance(manifest.get(key), list) or not manifest[key]:
+            raise RuntimeError(f"leased manifest lacks {key} references")
+        for reference in manifest[key]:
+            if not isinstance(reference, dict) or not {"path", "bytes", "sha256"}.issubset(reference):
+                raise RuntimeError(f"leased manifest has an incomplete {key} reference")
+    for key in ("decision_ledger", "rejection_ledger", "source_map", "stable_unit_manifest", "formula_diagram_inventory"):
+        if not isinstance(manifest.get(key), dict) or not {"path", "bytes", "sha256"}.issubset(manifest[key]):
+            raise RuntimeError(f"leased manifest lacks its complete {key} reference")
+    verify_registry_references(source, candidate, manifest, candidate_path + "/")
+    if manifest.get("candidate_id") != overlay.get("id") or manifest.get("namespace") != namespace:
+        raise RuntimeError("leased manifest namespace/overlay binding mismatch")
+    if (not isinstance(entry.get("writer"), str) or not entry["writer"]
+            or entry["writer"] != manifest.get("writer_task")
+            or not isinstance(manifest.get("lease_id"), str) or not manifest["lease_id"]
+            or not isinstance(manifest.get("upstream"), dict)
+            or entry.get("source_commit") != authority_commit
+            or entry.get("source_tree") != authority_tree
+            or manifest["upstream"].get("commit") != authority_commit
+            or manifest["upstream"].get("tree") != authority_tree):
+        raise RuntimeError("leased writer/authority does not match the sealed manifest and pinned authority")
+    manifest_sha = git_blob_sha256(source, git(source, "rev-parse", f"{candidate}:{candidate_path}/candidate.manifest.json"))
+    if manifest_sha != overlay.get("manifest_sha256") or manifest_sha != entry.get("manifest_sha256"):
+        raise RuntimeError("leased manifest registry hash mismatch")
+    payloads = [{"path": row["path"], "sha256": row["sha256"]}
+                for row in manifest.get("builds", []) if row.get("path", "").startswith("payload/")]
+    if (overlay.get("payloads") != sorted(payloads, key=lambda row: row["path"])
+            or not payloads or overlay.get("payload_sha256") != payloads[0]["sha256"]):
+        raise RuntimeError("leased payload bindings mismatch")
+    review_path = entry.get("review_receipt")
+    if not isinstance(review_path, str) or not review_path.startswith(candidate_path + "/"):
+        raise RuntimeError("leased review path escapes its candidate")
+    review_sha = git_blob_sha256(source, git(source, "rev-parse", f"{candidate}:{review_path}"))
+    if review_sha != overlay.get("review_receipt_sha256"):
+        raise RuntimeError("leased final-review binding mismatch")
+    before = registry_json(source, parent, "registry/leases.json")
+    issued = registry_json(source, intake, "registry/leases.json")
+    frozen = registry_json(source, candidate, "registry/leases.json")
+    released = registry_json(source, admission, "registry/leases.json")
+    if (issued != frozen or set(before) != set(issued) or set(issued) != set(released)
+            or any(before[key] != issued[key] or issued[key] != released[key]
+                   for key in before if key != "events")
+            or issued.get("events", [])[:-1] != before.get("events")
+            or released.get("events", [])[:-1] != issued.get("events")):
+        raise RuntimeError("leased lifecycle is not exactly one issue then one release append")
+    issue, release = issued["events"][-1], released["events"][-1]
+    expected_fields = {"lease_id": manifest.get("lease_id"), "namespace": namespace,
+                       "candidate_path": candidate_path, "writer_task": entry.get("writer"),
+                       "upstream_commit": entry.get("source_commit"), "upstream_tree": entry.get("source_tree"),
+                       "writer_contract": "candidates/CONTRACT.md"}
+    if (any(issue.get(key) != value or release.get(key) != value for key, value in expected_fields.items())
+            or issue.get("event") != "issued" or issue.get("state") != "active"
+            or release.get("event") != "released" or release.get("state") != "released"
+            or release.get("supersedes_event_id") != issue.get("event_id")
+            or overlay.get("lease_issue_event") != issue.get("event_id")
+            or overlay.get("lease_release_event") != release.get("event_id")):
+        raise RuntimeError("leased issue/release identities mismatch")
+    admission_changes = committed_path_changes(source, candidate, admission)
+    round_name = namespace.rsplit("/", 1)[1]
+    if (set(admission_changes) != {"registry/leases.json", "registry/overlays.json",
+                                   f"registry/admission-receipts/{round_name}.json"}
+            or any(raw[1] != "100644" or raw[4] != ("A" if path.startswith("registry/admission-receipts/") else "M")
+                   for path, raw in admission_changes.items())):
+        raise RuntimeError("leased admission changed paths outside its registry append")
+    before_entries = registry_json(source, candidate, "registry/overlays.json")
+    admitted_entries = registry_json(source, admission, "registry/overlays.json")
+    if (admitted_entries.get("registered_entries") != before_entries.get("registered_entries", []) + [entry]
+            or any(before_entries.get(key) != admitted_entries.get(key)
+                   for key in set(before_entries) | set(admitted_entries) if key != "registered_entries")):
+        raise RuntimeError("leased admission is not an exact one-entry registry append")
+    return candidate_parent
+
+
 def load_bound_registry_json(
     source: Path,
     registry: dict[str, object],
@@ -2187,7 +2467,12 @@ def load_composition_receipt(
         raise RuntimeError("v4 registered insertions cannot use embedded candidates")
     # A v3 transition may append multiple direct-admission candidates.  Each
     # overlay is validated independently in registry order below.
-    uses_bound_leases = is_v4 or has_embedded_candidate or has_repaired_candidate
+    has_bound_leased_candidate = isinstance(raw_new_overlays, list) and any(
+        isinstance(overlay, dict) and overlay.get("lease_binding_schema") is not None
+        for overlay in raw_new_overlays
+    )
+    uses_bound_leases = (is_v4 or has_embedded_candidate or has_repaired_candidate
+                         or has_bound_leased_candidate)
 
     authority = receipt.get("authority")
     previous = receipt.get("previous_cutoff")
@@ -2824,7 +3109,14 @@ def load_composition_receipt(
                 f"intake {overlay.get('id')}",
                 expected_registry_parent,
             )
-            candidate_parent = intake
+            round_match = re.fullmatch(r"stacks-errata-a04446e-r([1-9][0-9]*)", str(overlay.get("id")))
+            needs_bound_lease = (overlay.get("lease_binding_schema") is not None
+                                 or (round_match is not None and int(round_match.group(1)) >= 40))
+            candidate_parent = (
+                validate_bound_leased_candidate(source, overlay, entry, expected_registry_parent,
+                                                registry_import_commit, cutoff, authority_commit, authority_tree)
+                if needs_bound_lease else intake
+            )
             for index, candidate_chain_commit in enumerate(candidate_chain, start=1):
                 require_single_parent(
                     source,
@@ -3569,6 +3861,12 @@ def load_composition_receipt(
             "post-admission registry successor",
             expected_registry_parent,
         )
+        if has_bound_leased_candidate:
+            if validate_registry_metadata_chain(
+                source, registry.get("post_admission_metadata_commits"),
+                expected_registry_parent, registry_import_commit, cutoff
+            ) != cutoff:
+                raise RuntimeError("post-admission metadata chain does not end at cutoff")
 
     projection_verifier = receipt.get("projection_verifier")
     if (
@@ -3663,7 +3961,7 @@ def load_composition_receipt(
     required_stems = validate_stems(
         receipt.get("required_build_stems"), "required_build_stems"
     )
-    expected_profile = DEFAULT_STEMS if topology_binding is not None else LEGACY_DEFAULT_STEMS
+    expected_profile = required_build_profile(receipt, topology_binding is not None)
     if required_stems != expected_profile:
         raise RuntimeError(
             "composition receipt does not exactly match the ordered full build profile"
@@ -3978,6 +4276,8 @@ def main() -> int:
     )
     parser.add_argument("--source-date-epoch", default="1785270512")
     parser.add_argument("--max-sweeps", type=int, default=6)
+    parser.add_argument("--verify-inputs-only", action="store_true",
+                        help="verify all source/checkpoint gates without launching TeX or writing a receipt")
     parser.add_argument(
         "stems",
         nargs="*",
@@ -4046,6 +4346,18 @@ def main() -> int:
     full_profile = stems == required_stems
     if args.max_sweeps < 2:
         parser.error("--max-sweeps must be at least 2")
+
+    if args.verify_inputs_only:
+        require_source_revision_unchanged(source, initial_source_commit, initial_source_tree)
+        if source_checkpoint_binding is not None:
+            require_source_checkpoint_unchanged(
+                source, source_checkpoint_binding, source_checkpoint_protected_inputs
+            )
+        print(json.dumps({"status": "PASS_INPUTS_ONLY", "source_commit": initial_source_commit,
+                          "source_tree": initial_source_tree, "required_stems": list(stems),
+                          "source_checkpoint": source_checkpoint_binding,
+                          "tex_launched": False, "build_receipt_written": False}, indent=2))
+        return 0
 
     for executable in ("pdflatex", "bibtex", "pdfinfo"):
         if shutil.which(executable) is None:

@@ -1,17 +1,107 @@
 # Integration status
 
-Status date: **2026-08-31**
+Status date: **2026-09-08**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
 This dashboard summarizes the live integrated tree. Detailed evidence remains
 in each corpus dossier and in the machine-readable registry.
 
-**Local source is composed through R38; the latest public errata release is
-still R33.** The R34–R38 corrections have passed independent source replay,
-two byte-identical builds, and visual review of the three affected chapters
-with the two nonblocking observations below. R38 has not yet been published
-or publicly read back.
+**R47, the combined Illusie source and EGA I §6.6.5 are public** at
+`5817f4c1af8724b147401c785f57ca315b52e31c` (anonymous main-ref verification).
+The combined build receipts record two matching sets of 35 PDFs, comprising
+3,363 pages and 36,679,971 bytes. Visual evidence is bounded to the scopes
+actually recorded in those receipts; these totals do not claim all-page
+visual certification of the entire corpus.
+
+This tree also contains the validated EGA I §6.6.6–§6.6.8 comparison at
+`53e97d65a7efb5e4f79df83cea987ae2ea08a171`: permanence of locally finite-type
+morphisms, locally Noetherian fibre products, and geometric-point arguments.
+It changes no root TeX or PDF input. The separate
+[integration validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records the passing 16-test semantic suite and full repository check.
+The checkpoint is public at `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`;
+[anonymous readback](validation/ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
+matched all 15 changed files (1,888,511 bytes). The later test-fixture repair
+passed [exact-head CI](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34154661350)
+at `bc2db1e2b9829bff6c1d98091f40bbc6a312e9b0`, preserving the historical
+receipts and their source hashes.
+
+The preceding comparison covers **EGA I §7.1.1–§7.1.3: rational maps and rational
+functions**. Existing Stacks results supply the definitions, restriction,
+graph/section correspondence and ring operations. A direct check of the
+original printed page confirms a proof overstatement about agreement on an
+entire overlap; the comparison supplies the correct dense-witness argument.
+The [integration checks](validation/ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+pass, including complete raw-source boundary replay. No duplicate root
+theorem is added. That checkpoint is publicly byte-verified at
+`056fd2bb05c6a5f82dcad9f193ad63d35790b56b` with
+[exact-head CI PASS](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34157334212).
+
+The preceding **EGA I §7.1.4–§7.1.9.1 comparison** explains generic morphism germs,
+finite-component products of rational-function rings, the Noetherian
+Artinian conclusion, and localization away from minimal primes. The
+[dossier](ega/i719.md) supplies independent derivations and the hypothesis
+counterexamples. All statements and separately owned proof passages are bound
+to exact French and English source slices. Existing Stacks covers this
+mathematics, so no duplicate root theorem or new PDF build is introduced.
+The next source unit at that checkpoint was §7.1.10.
+The [public readback](validation/ega-i-7.1.4-7.1.9.1-public-readback-2026-09-07.json)
+verifies every changed file at `e9a6a302f753d7a0564c1ca0cf323ffb9f07fb77`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34161450235).
+
+The preceding **EGA I §7.1.10–§7.1.14 comparison** describes rational maps
+through their generic local schemes. It separates uniqueness for locally
+finite-type targets from existence for locally finitely presented targets,
+retains the relative base structure, and derives invariance under localization
+at any point. The [written proofs and counterexamples](ega/i714.md) explain
+these distinctions using existing Stacks results. No duplicate root theorem
+or new PDF build is introduced.
+The [public readback](validation/ega-i-7.1.10-7.1.14-public-readback-2026-09-07.json)
+verifies every changed file at `bb84677f035925acfdc9a11c4ab880b16e3af732`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34162899426).
+
+The preceding **EGA I §7.1.15–§7.1.16 comparison** completes §7.1 with
+rational maps as function-field-valued points. The [written argument](ega/i716.md)
+retains the chosen embedding and base compatibility, and distinguishes EGA's
+historical “geometric point” from its modern meaning. Both corollaries follow
+from existing, stronger Stacks results. No new root theorem or PDF is added.
+Its next source unit was §7.2.1, including the section heading.
+The [public byte readback](validation/ega-i-7.1.15-7.1.16-public-readback-2026-09-07.json)
+verifies all 19 changed files at `66b1df8ec9457cffbfae82ae398a983a43606438`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34164548632).
+
+The preceding **EGA I §7.2.1–§7.2.4 comparison** explains domains of definition,
+equality on dense opens, and gluing representatives. The [written argument](ega/i724.md)
+distinguishes the largest ordinary domain from the largest domain for maps
+over a fixed base. A doubled-origin example shows why these need not agree;
+a separated base restores compatibility. Complete source and proof ownership
+is bound by the [integration validation](validation/ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json).
+No root theorem, official tag or PDF is changed. Its next unit was **§7.2.5**.
+This comparison does not claim a printed-source erratum or completion of EGA.
+The [public byte readback](validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+matches all 18 changed files (2,167,497 bytes) at
+`4d2a2af212585522dc2dbc91e4ab33c902fbbcd2`;
+its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34174298636).
+
+The current **EGA I §7.2.5–§7.2.7 comparison** derives three results from
+existing Stacks arguments: preservation of a rational section's identity on
+its base-preserving domain, the regular-function correspondence on a dense
+open, and the reduced-closure criterion for extending a section. The
+[written proofs](ega/i727.md) retain the ordinary-versus-relative domain
+distinction and require no extra retrocompactness assumption for the closure
+criterion. The [integration validation](validation/ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
+records the exact source, review and deterministic checks separately from
+publication. No root theorem, official tag or PDF changes; the twelve earlier
+open gaps remain open. Next: **§7.2.8**. EGA integration is not complete.
+The [anonymous readback](validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
+verifies all 18 changed paths (2,289,177 bytes) at
+`f76a3ffe17211237484d944a85b173e04eb536d7`;
+the [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34175771628).
+
+The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
+DAG, prismatic, modular-theory and reader work. Inclusion in that program is
+not a claim of completed source integration.
 
 ## Source integrations
 
@@ -21,24 +111,55 @@ or publicly read back.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review is public through EGA I §6.6.3 and continues at §6.6.4. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.2.7: rational sections, regular functions on dense opens, and extension by the reduced closure of a section. Ordinary and base-preserving domains remain distinct. Next: §7.2.8. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
-The current EGA semantic checkpoint is public through §6.6.3 and is
-source-bound without changing root TeX or any PDF. GitHub tag
+The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
+binds the public proof completion. The [§6.6.5 candidate receipt](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
+records the generic-point criterion using 01RL together with 004W and 01IS;
+it does not equate the stronger EGA formulation with the statement of 01RL
+alone. Its independent audit and semantic checker pass.
+
+The earlier §6.6.3 semantic-only release remains preserved at GitHub tag
 [`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
 and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421)
-preserve six byte-matched assets totaling 182,415,449 bytes per host. R33 is
-the latest errata release; the next EGA cursor is §6.6.4.
+with six byte-matched assets totaling 182,415,449 bytes per host. Historical
+release inventories are not a substitute for the current source checkpoint.
 
 ## Errata state
 
 The generated [`Changes from Upstream`](CHANGES_FROM_UPSTREAM.md) index and
 self-contained [`offline change browser`](ai-integrated/changes/index.html)
-place the pinned original and integrated replacement side by side for all
-1,094 admitted errata IDs, with direct evidence links and no annotations in
-the mathematical TeX.
+place the pinned original and integrated replacement side by side, with
+direct evidence links and no annotations in the mathematical TeX. The
+generated index is refreshed as part of each source-publication checkpoint;
+its embedded source identity determines its coverage.
 
-### R34–R38: composed locally, publication not yet complete
+### R40–R47: cumulative source and combined build published
+
+The new corrections repair descent-map domains and indices, source/target
+conventions for groupoids, the centre's conjugation-equalizer formulation,
+truncation shifts for perfect complexes, and site/topos and base-change
+notation. They also include separately identifiable prose repairs.
+
+Exactly **177 new operations** were applied to `descent.tex`, `groupoids.tex`,
+`more-groupoids.tex`, `perfect.tex` and `topologies.tex`, preserving every
+non-operation byte of the parent. The [independent receipt](validation/stacks-errata-a04446e-r47-independent-composition-2026-09-06.json)
+reproduces source commit `b3c4a28c053dbbd45670dd19cf0dcc45063190dc`,
+checks 26 registry imports and eight manifests, and records three unchanged
+Groupoids findings separately rather than silently repairing them.
+
+The [composition receipt](validation/composition-current.json) binds 48
+overlays and 1,292 stable IDs: errata R1–R47 plus the 12-unit Verdier
+contribution. These bookkeeping totals are not counts of new theorems.
+The successor [build](validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json),
+[reproducibility comparison](validation/stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json)
+and [bounded visual evidence](validation/stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json)
+are public at the head above. The comparator matches all 35 PDF identities.
+The historical EGA §6.6.4 receipt and earlier R47-only results remain intact.
+This incremental GitHub checkpoint does not create a new Zenodo version.
+
+### Historical R34–R38 source and build evidence
 
 The new work corrects the directions of two cohomological comparison maps,
 repairs indices and functor types in cohomology on sites, and fixes
@@ -47,14 +168,14 @@ direct summands. Only the accepted edits were applied to `cohomology.tex`,
 `sites-cohomology.tex`, and `more-algebra.tex`; earlier additions were
 preserved, not replaced by isolated chapter payloads.
 
-The cumulative registry contains **39 overlays and 1,106 stable IDs**:
+At that checkpoint the cumulative registry contained **39 overlays and 1,106 stable IDs**:
 1,094 errata IDs through R38 plus the 12-unit Verdier contribution. R34–R38
 add 77 accepted operations, of which 76 change source bytes. The remaining
 operation, `MC-STK-ERR-1296-OP1`, is already satisfied by an earlier
 structural rewrite and is not applied a second time. The cumulative exact
 operation ledger contains 1,243 entries; these are not 1,243 new edits.
 
-The [composition receipt](validation/composition-current.json) and
+The historical composition recorded in Git and the
 [independent replay](validation/stacks-errata-a04446e-r38-independent-composition-2026-08-31.json)
 bind source commit `1242d514b71e60b4fe11b4c867f7de660f9a3b77` to the admitted
 registry cutoff `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`. Two builds
@@ -168,7 +289,7 @@ the immutable candidate and admission history remain unchanged.
   `d786a8604e7c0be79fab77c380247bd971555520`, followed by the validated build
   source `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
   `3c292f9a4b94162ede69d2633b1272b057a498c3`.
-- R33 is the current public errata preservation checkpoint at content head
+- R33 is a historical public errata preservation checkpoint at content head
   `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
   `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
   [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
@@ -212,19 +333,16 @@ proposals remain under
 
 ## Validation state
 
-The current source replay, reproducibility, and visual receipts pass for R38
-with the disclosed layout and external-reference observations. The
-repository integrity gate covers the pinned authority, preserved history,
-39 registry entries, 1,106 stable IDs, 1,243 cumulative exact operations,
-candidate hashes, and source preservation. Publication completion remains a
-separate claim and is not inferred from successful local validation.
-See [VALIDATION.md](VALIDATION.md) for the local R38 evidence and outstanding
-publication steps.
+R40–R47 is included in the published combined checkpoint, with the current
+build, reproducibility and bounded visual receipts linked above. EGA
+§6.6.6–§6.6.8 passes its separate semantic and full repository checks without
+changing root source. Historical R38/R39 results remain evidence only for
+their own source identities. See [VALIDATION.md](VALIDATION.md).
 
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
 
-### Historical R33 validation and latest public release
+### Historical R33 validation and public release
 
 The R33 gate built all 28 required chapters (2,730 pages and
 29,277,302 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
@@ -242,7 +360,7 @@ fixed-point sweep; all 28 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved
 as historical evidence for their exact source identities and scopes.
 
-The [latest public R33 publication receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
+The [historical R33 publication receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
 binds the public commit and tree, successful exact-head workflow, identical
 six-file current package across GitHub and Zenodo, the three inherited Zenodo
 R30 ZIPs, anonymous SHA-256 readback, and archive-member replay. The R30, R28,

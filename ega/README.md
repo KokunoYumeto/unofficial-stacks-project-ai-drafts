@@ -17,6 +17,51 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
+This tree records source-order semantic comparison through **EGA I §7.2.7**.
+The next unit is **§7.2.8**; EGA as a whole is not complete.
+The new [comparison](i727.md) proves preservation of rational sections on
+their base-preserving domains, identifies regular functions on a dense open
+with rational functions defined there, and proves the reduced-closure criterion
+for extending a section. Both directions and uniqueness are explicit; no
+retrocompactness hypothesis is added. Graphs of scalar functions have the same
+ordinary and section domains even without reducedness, but arbitrary rational
+sections need not. The doubled-origin examples make this distinction concrete.
+
+The [checkpoint](../validation/ega-i-7.2.5-7.2.7-semantic-checkpoint-2026-09-08.json)
+binds complete French LF378–430 and English LF227–259, including all three
+proofs, the old-page marker, and the excluded start of §7.2.8.
+Existing Stacks results supply the mathematics. The historical wording is
+compared under precise domain conventions, not declared an admitted printed
+erratum or a new root theorem. The 12 earlier open gaps are unchanged.
+The preceding [domain and gluing comparison](i724.md) remains available with
+its [immutable source checkpoint](../validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json).
+The preceding [field-valued-point comparison](i716.md),
+[generic-local comparison](i714.md), and [generic-germ dossier](i719.md)
+remain available with their exact historical evidence.
+
+The [corrected preceding checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
+and all earlier ledger prefixes remain immutable historical evidence.
+The immutable candidate receipt is distinct from subsequent
+[integration validation](../validation/ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
+and public readback; candidate state is not silently rewritten as publication.
+The current [public byte receipt](../validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
+verifies all 18 changed files and the passing exact-head GitHub workflow.
+The preceding [public byte receipt](../validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
+verifies the complete 18-file §7.2.1–§7.2.4 checkpoint and its passing exact-head CI.
+
+The preceding [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records the passing semantic tests and full repository check. It supersedes
+the *state* of the immutable candidate receipt, not its evidence bytes.
+Public GitHub already includes §6.6.4's proof completion and §6.6.5's
+generic-point comparison at commit `5817f4c1af8724b147401c785f57ca315b52e31c`.
+The newer §6.6.6–6.6.8 slice is public at
+`27947f240bbe0fed5cf7e91239a1ebe238a85bb2`; its
+[anonymous public readback](../validation/ega-i-6.6.6-6.6.8-public-readback-2026-09-07.json)
+matched all 15 changed files (1,888,511 bytes).
+The older release snapshots below retain their historical dates and counts.
+
+### Historical publication and source snapshots
+
 - Current standalone publications are split by language and anonymously
   cross-checked against their GitHub releases. The French edition is
   [Zenodo 22134750](https://doi.org/10.5281/zenodo.22134750) / concept
@@ -30,7 +75,7 @@ EGA integration manifest enter the repository's root TeX tree.
   [Zenodo 21861666](https://doi.org/10.5281/zenodo.21861666) is retained as a
   historical checkpoint, not presented as the current edition or as a release
   of this integrated Stacks repository.
-- The integrated repository's latest published EGA semantic checkpoint covers EGA I
+- The 2026-08-30 separately packaged EGA semantic checkpoint covers EGA I
   through §6.6.3 and advances the next semantic cursor to §6.6.4. The sealed
   checkpoint receipt is [PASS](../validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
   (SHA-256
@@ -48,13 +93,29 @@ EGA integration manifest enter the repository's root TeX tree.
   statement-map rows, 825 residual rows, 102 issue rows, and zero quarantined
   rows. I000104 remains routed pending successor adjudication; no root theorem
   is justified by this slice.
-- The separate local implementation now covers EGA I §6.6.4 componentwise
+- The subsequent implementation covers EGA I §6.6.4 componentwise
   and completes the omitted proof of existing tag 01K5 in `schemes.tex`.
   D000329, S001250--S001259, R000826--R000829, and A000257 record this
   source-bound slice. Its [local implementation receipt](../validation/ega-i-6.6.4-semantic-checkpoint-2026-08-31.json)
-  distinguishes source and checker validation from TeX/PDF build, visual QA,
-  and publication, which are not claimed complete. It creates no theorem,
+  distinguishes its original local checks from later build and publication
+  evidence. It is now included in public main. It creates no theorem,
   official tag, canon correction, or new visual-evidence item.
+- The next semantic checkpoint covers EGA I §6.6.5 and advances the
+  semantic cursor to §6.6.6. D000330, S001260--S001266, R000830--R000833,
+  and A000258--A000259 record seven existing-target edges and four residual
+  dispositions. Tag 01RL detects dominance by hitting target-component
+  generic points; 004W and 01IS supply the additional source-component
+  generic-preimage argument. Thus the whole proposition is covered by
+  composition, not recorded as a literal single-tag equivalence. Tags 01RK,
+  01K4, 00FL, and 0CAN account for sufficiency and the finite-affine-cover
+  and minimal-prime proof components. The
+  [semantic checkpoint](../validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
+  binds French LF1123--LF1146 to its exact 1,459-byte SHA-256
+  `0BCE3737307C8081A439C7BBB9A5666600C8DE0EC99E4481E3AABC2167714067`.
+  This increment changes no root TeX, authority, issue, visual-QA, or tag
+  registry bytes; its original receipt claims no build or publication, and
+  the increment is now included in public main. There is no new gap,
+  canon correction, or justified duplicate theorem.
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 - English discovery manifest: R184, 92,445 bytes, SHA-256
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
@@ -872,9 +933,8 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The current local semantic slice is EGA I §6.6.4, with source-order
-continuation at §6.6.5 after its deterministic production checks. The latest
-published semantic frontier remains §6.6.3. Every reviewed claim remains
+The earlier §6.6.3–§6.6.4 checkpoint history is retained below the current
+snapshot. It does not define the live continuation cursor. Every reviewed claim remains
 bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
 than a mutable producer frontier. The §6.6.3 fixed point is sealed by
@@ -889,3 +949,69 @@ erratum witness. The complete English surface drives provisional candidates
 only; chapter edits still require direct French evidence, explicit residuals,
 bounded mathematical review, visual evidence when applicable, and owner
 verification.
+
+## Historical EGA I 6.6.6–6.6.8: locally finite type and geometric points
+
+The semantic comparison covers the six local-finite-type permanence
+assertions of 6.6.6, the locally Noetherian fibre product of 6.6.7, and the
+three distinct extensions in 6.6.8. It adds 24 existing-target edges and ten
+explicit residual dispositions, not a new theorem. All earlier ledger bytes
+and source-edition visual residuals are retained unchanged.
+
+Local immersions are treated pointwise, not confused with globally injective
+immersions. The reduction argument uses pinned 0356; 0HCT is not an official
+tag at the pinned a044 baseline and is not used as one. The final remark
+separates surjectivity tested over every algebraically closed field, the
+closed-point/finite-residue-extension criterion, and surjectivity tested over
+one fixed algebraically closed extension of infinite transcendence degree.
+The last derivation uses a finite transcendence basis and extension of field
+embeddings; it does not invoke the defective converse proof of 0487.
+
+D000331--D000333, S001267--S001290, R000834--R000843 and A000260--A000261
+record the comparison. Its exact source, target and append-only bindings are
+in [the immutable candidate receipt](../validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json).
+The later [integration validation](../validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records the successful checks separately. No root TeX, tag, authority,
+registry or PDF input changes. This is not a machine-checked proof or complete
+EGA coverage. At that checkpoint the next unit was EGA I 7.1.1, not 6.6.9.
+
+<a id="rational-maps-and-functions"></a>
+
+## EGA I 7.1.1–7.1.3: rational maps and rational functions
+
+EGA's rational maps are represented by morphisms defined on dense open
+subsets, identified when they agree on a smaller dense open. Existing Stacks
+definitions and universal properties give rational sections, their graph
+correspondence, and the interpretation of rational functions as sections of
+the structure sheaf on dense opens. Addition and multiplication are computed
+after restricting to a common dense domain.
+
+The comparison uses tags 01RS, 01RT, 01RU, 01JP, 01JH and 01M0, with the
+restriction-compatible derivations recorded explicitly. It adds no duplicate
+root theorem. The corrected ledger references are D000337–D000339,
+S001303–S001314, R000852–R000859 and A000264. The preceding candidate
+rows and frozen receipt remain byte-identical adverse history: their French
+slices used web-normalized rather than physical line numbers. Correct raw
+LF ranges are 7–16, 18–57 and 59–70, including the final ring assertion.
+
+Both EGA and pinned 01RS use topologically dense open domains. The schematic
+variant 01RX is retained only as a negative comparison. For
+`A = k[t,e]/(e^2,t*e)`, the distinct functions `0` and `e` agree on dense
+`D(t)` but not on any schematically dense witness. Thus the canonical map
+from morphisms to rational classes need not be injective.
+
+Restriction must retain a dense equality witness: if representatives on
+`V` and `W` agree on `T`, their restrictions to an open `U` agree on
+`U intersect T`, not necessarily on the entire overlap. The fixed French
+transcription at raw line 40 and English discovery at raw line 22 overclaim the latter.
+Independent visual comparison with original EGA I printed p.155 (physical
+PDF page 154) confirms an **original-printing proof overstatement**. The
+source-edition correction remains **PROPOSED**: no authority text, issue
+ledger, or source-error receipt is changed. The valid
+restriction statement is proved independently, without delaying the semantic
+comparison or importing the later maximal-domain hypotheses.
+
+The ring identification uses all dense open domains; no finite-component
+computation is needed. Existing visual and source-edition residuals remain
+unchanged. The preceding 6.6.8 receipt and ledger postimages are immutable
+historical prefixes, and the new full-ledger counters are checked separately.

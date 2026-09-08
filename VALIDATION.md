@@ -3,15 +3,80 @@
 Validation is layered so that repository integrity, mathematical-source
 composition, TeX compilation, and visual evidence are not conflated.
 
-## Current local R38 evidence
+## Current combined R47/Illusie and EGA comparison checkpoint
+
+The [EGA I §7.1.15–§7.1.16 comparison](ega/i716.md) binds complete French
+LF259–289 and English LF150–168, including both introductions and the entire
+proof. Its [integration validation](validation/ega-i-7.1.15-7.1.16-integration-validation-2026-09-07.json)
+records 226 passing semantic/source-boundary checks and exact bilingual replay.
+These checks protect evidence contracts and historical prefixes; they are not
+machine-checked mathematical proofs. No root TeX, tag, registry or PDF changes.
+
+The [EGA I §7.1.10–§7.1.14 comparison](ega/i714.md) binds complete French
+LF192–258 and English LF100–149, including the page marker, introductions
+and all proof tails. The [integration validation](validation/ega-i-7.1.10-7.1.14-integration-validation-2026-09-07.json)
+records 168 passing tests, exact source replay and independent mathematical
+review. These are evidence/contract checks, not a machine-checked proof.
+Root TeX, official tags, registry and PDF identities remain unchanged.
+
+The [EGA I §7.1.4–§7.1.9.1 dossier](ega/i719.md) is checked against complete
+raw French LF72–191 and English LF37–99, including the unwrapped §7.1.5
+proof and integral tail, and the §7.1.9 deduction after its supporting lemma.
+The [source-bound checkpoint](validation/ega-i-7.1.4-7.1.9.1-semantic-checkpoint-2026-09-07.json)
+preserves exact earlier ledger prefixes. Its 115 combined regression tests
+and live source replay pass; these test evidence integrity and stated
+hypotheses, not formal mathematical proof. Root TeX, official tags, the
+registry and PDFs are unchanged.
+
+The [EGA I §7.1.1–§7.1.3 comparison](validation/ega-i-7.1.1-7.1.3-integration-validation-2026-09-07.json)
+passes the complete repository validator and 73 test executions, including
+adverse source-boundary checks. A separate replay reads both pinned source
+files and derives their actual numbered environment boundaries. It confirms
+the complete statements, the final rational-section correspondence and ring
+conclusion, and the raw French correction locus at line 40. The initial
+candidate's incomplete intervals are retained as adverse history, not current
+coverage evidence. No root TeX or PDF input changed; no new build is claimed.
+
+Source commit `b3c4a28c053dbbd45670dd19cf0dcc45063190dc` contains
+177 manifest-bound R40–R47 corrections across five cumulative chapters.
+The [independent replay](validation/stacks-errata-a04446e-r47-independent-composition-2026-09-06.json)
+matches all five postimages, preserves all other parent bytes, and verifies
+the exact 26-commit registry import. It records unchanged inherited findings
+separately; it is not a claim that the entire chapters have no defects.
+
+The [EGA I §6.6.5 semantic receipt](validation/ega-i-6.6.5-semantic-checkpoint-2026-09-06.json)
+and `python ega/check.py` pass locally. Section 6.6.5 is covered by existing
+results in combination; it changes no root TeX or PDF.
+
+The combined R47/Illusie successor is public at
+`5817f4c1af8724b147401c785f57ca315b52e31c`. Its
+[build and comparison receipts](validation/README.md) bind 35 byte-identical
+PDFs across two runs (3,363 pages, 36,679,971 bytes). The visual receipt
+preserves its actual bounded scope and observations. Historical §6.6.4
+evidence is validated at its own anchor; it is not rewritten to pretend a
+later head is its immediate child.
+
+The newer [EGA I §6.6.6–§6.6.8 integration validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)
+records 16 passing semantic tests and a passing full repository check at
+`53e97d65a7efb5e4f79df83cea987ae2ea08a171`. It changes no root TeX,
+style, bibliography or PDF input; all 35 retained PDF hashes were verified.
+No new build or visual inspection is asserted for this semantic-only slice.
+Its public readback is recorded separately from validation.
+
+The new profile has 35 chapters. Historical 28- and 30-chapter receipts remain
+evidence for their own profiles; they do not certify the new one. A successful
+source replay alone is neither a build PASS nor proof of publication.
+
+## Historical R38 evidence
 
 R34–R38 are composed locally on top of the published R33 source. Independent
 source replay, two complete fixed-point builds, and affected-page visual
 review pass with the two disclosed observations below. **R38 is not yet a
-public release:** no R38 DOI, successful publication workflow, or anonymous
-public-byte readback is claimed here.
+public release at the time of these receipts:** their statements below are
+historical, not the current public-source status. Public R39 and EGA §6.6.4
+were subsequently verified at `f73b18165c7162b8386de06cc3c50bd4ced745b6`.
 
-The [composition receipt](validation/composition-current.json) binds registry
+The historical R38 composition bound registry
 cutoff `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, its linear import
 `e4978987d5bf67f09a1b7649bda6fd90fe0fb2d8`, and cumulative source commit
 `1242d514b71e60b4fe11b4c867f7de660f9a3b77`. The registry contains 39
@@ -80,7 +145,12 @@ the complete gate.
 The gate is intended to verify the complete local validation package,
 including the completed visual receipt and its explicit qualifications.
 Passing local source, build, and visual checks is not proof of publication.
-Its scope includes:
+The inherited R38 profile documented below is historical. The current R47
+extension must additionally validate its eight later admissions, exact
+177-operation replay, 35-chapter build evidence and successor checkpoint.
+Those checks are now supported by the combined successor receipts above,
+not inferred from the older results. The
+historical scope includes:
 
 - the R38 registry chain at cutoff
   `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, comprising 39 overlays,
@@ -119,11 +189,10 @@ Its scope includes:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-## Historical R33 validation and latest public errata release
+## Historical R33 validation and public errata release
 
-R33 remains the latest publicly preserved errata checkpoint while the R38
-publication workflow is unfinished. Its evidence below
-applies to the historical R33 source, not the current local R38 tree.
+The evidence below applies to the historical R33 source, not the later
+public R39 source or the current local R47 tree.
 
 The R33 build result is recorded at
 [`validation/stacks-errata-a04446e-r33-build-2026-08-30.json`](validation/stacks-errata-a04446e-r33-build-2026-08-30.json).
@@ -156,15 +225,15 @@ operations and the seven-operation `spaces-morphisms.tex` replay. The
 validated build source is `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
 `3c292f9a4b94162ede69d2633b1272b057a498c3`.
 The live [composition receipt](validation/composition-current.json) now binds
-R38. Historical R33, R24, R22/R23, Verdier, and R21 receipts remain preserved
+R47. Historical R33, R24, R22/R23, Verdier, and R21 receipts remain preserved
 and authoritative for their immutable source snapshots; they are not rebound
-to the R38 tree.
+to the later tree.
 
 R33's manifest SHA-256 is
 `1D2EA4F6463FB775CFF3F0E3616BE125F6D20709BB32DB84D1D1889582BFAC75`.
 
 The [R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
-binds the current public errata preservation checkpoint at content head
+binds that historical public errata preservation checkpoint at content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
@@ -203,8 +272,8 @@ receipt also binds archive-member replay and the 25-PDF, 2,492-page,
 for their exact immutable versions; this historical R27 release is not evidence
 that the active EGA I--IV integration program is complete.
 
-The current public EGA semantic checkpoint covers EGA I through §6.6.3 and
-advances the next cursor to §6.6.4. The exact checkpoint is
+The historical EGA semantic checkpoint described in this subsection covered
+EGA I through §6.6.3 and advanced its cursor to §6.6.4. Its exact checkpoint is
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
 (SHA-256 `58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E`),
 bound to content commit `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`, GitHub tag

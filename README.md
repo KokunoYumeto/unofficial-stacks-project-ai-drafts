@@ -52,6 +52,7 @@ human-maintained Stacks corpus.
 [Browse the source](chapters.tex) ·
 [Compare with Stacks](CHANGES_FROM_UPSTREAM.md) ·
 [Detailed status](STATUS.md) ·
+[Development program](ROADMAP.md) ·
 [Sources and history](PROVENANCE.md) ·
 [Validation](VALIDATION.md)
 
@@ -133,9 +134,57 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
-EGA is **not fully integrated**. Source-by-source review is public through
-EGA I §6.6.3 and continues at §6.6.4. Concrete additions already in the draft
-include:
+EGA is **not fully integrated**. This tree's reviewed comparison reaches
+EGA I §7.2.7, including rational sections, regular functions, and the reduced
+closure criterion for extending a section; the next source unit is §7.2.8.
+The earlier §6.6.4 contribution
+completes the base-change proof for quasi-compact morphisms at Stacks tag
+01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
+permanence of locally finite-type morphisms, locally Noetherian fibre products,
+and geometric-point tests to existing Stacks results, with their precise
+hypotheses retained. These comparisons add no duplicate root theorem.
+Sections 7.1.1–7.1.3 explain rational maps, rational sections, and the ring
+of rational functions using the existing Stacks definitions. The comparison
+also corrects an overstatement in EGA's printed restriction argument:
+representatives agree on a dense open witness, not necessarily on their
+entire overlap. The original remains available for comparison; the draft
+gives the corrected argument and an explicit counterexample to the stronger
+claim. See the [rational-map comparison](ega/README.md#rational-maps-and-functions).
+Sections 7.1.4–7.1.9.1 identify rational maps with germs at generic points,
+express rational functions as a finite product of generic local rings, and
+deduce Artinianness for Noetherian schemes. For an affine scheme with finitely
+many components, they identify rational functions with localization away from
+the minimal primes—not automatically the total quotient ring. The
+[written comparison](ega/i719.md) gives the derivations, their precise
+hypotheses, and counterexamples; these results reuse existing Stacks content.
+Sections 7.1.10–7.1.14 explain when a rational map is determined by its
+generic local scheme, distinguish finite-type uniqueness from
+finite-presentation existence, and show why localization at a point preserves
+the rational-map set under the stated hypotheses. The [comparison](ega/i714.md)
+keeps the base-scheme structure and possible nilpotents explicit.
+The concluding corollaries 7.1.15–7.1.16 identify rational maps from an integral
+scheme with points valued in its function field. The [comparison](ega/i716.md)
+retains the chosen residue-field embedding and its compatibility with the base.
+It also explains why EGA's historical “geometric point” here is not the modern
+algebraically-closed-field convention. Existing Stacks results apply under weaker
+hypotheses; no duplicate theorem or formal-proof claim is introduced.
+Sections 7.2.1–7.2.4 explain the largest domain on which a rational map
+can be represented. The [comparison](ega/i724.md) distinguishes ordinary
+maps from maps over a fixed base: their largest domains can differ, even
+for affine charts of a scheme with two origins. It gives the complete
+dense-agreement and gluing arguments, and explains why a separated base
+restores compatibility. This is a careful comparison of existing results,
+not an assertion that the source's unqualified wording is always equivalent.
+Sections 7.2.5–7.2.7 show that a rational section remains a section on its
+base-preserving domain, identify regular functions on a dense open with
+rational functions defined there, and characterize extension of a section
+by whether its reduced closure maps isomorphically to the base. The
+[complete comparison](ega/i727.md) proves both directions of that criterion
+without adding a retrocompactness assumption, and gives examples showing why
+ordinary extensions need not be extensions as sections. These are explicit
+derivations from existing Stacks results, not new root theorems.
+See the [validation and publication states](STATUS.md).
+Other concrete additions already in the draft include:
 
 - **The Jacobson-radical neighbourhood lemma** — EGA I, Proposition 1.1.15:
   an open subset of an affine spectrum containing the closed set of an ideal
@@ -224,8 +273,8 @@ that a reader accept a result because an AI or an automated check produced it.
 - GitHub is the incremental working record. Zenodo is reserved for substantial,
   coherent milestones—such as a large integrated source tranche or a major
   cumulative errata release—not individual theorems or routine weekly updates.
-- [Latest EGA review checkpoint: I §6.6.3](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
-  · [archived version](https://doi.org/10.5281/zenodo.22177421).
+- [Public EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
+  · [§6.6.6–6.6.8 comparison and validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json).
 - [Build and validation instructions](VALIDATION.md)
   · [exact current build evidence](validation/README.md).
 - [Complete project status](STATUS.md) · [roadmap](ROADMAP.md)

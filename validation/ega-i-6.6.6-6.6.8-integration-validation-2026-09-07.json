@@ -1,0 +1,101 @@
+{
+  "schema": "ega-i-6.6.6-6.6.8-integration-validation/v1",
+  "recorded_at_utc": "2026-09-07T18:30:00Z",
+  "status": "PASS_VALIDATED_NOT_YET_PUBLISHED",
+  "scope": "EGA I 6.6.6, 6.6.7, 6.6.8: existing Stacks coverage with exact hypothesis and derivation records; no new root theorem.",
+  "content": {
+    "commit": "53e97d65a7efb5e4f79df83cea987ae2ea08a171",
+    "tree": "3976ecdf3dd1a0ac0b4b7acdd0fa271e5e9a0088",
+    "parent": "5817f4c1af8724b147401c785f57ca315b52e31c",
+    "official_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+  },
+  "immutable_candidate": {
+    "path": "validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json",
+    "bytes": 55413,
+    "sha256": "AD6D4B6F3990B347C9CE9370ECABFA18FFB52D5329B2FC0612F1D7C2241B9C3A",
+    "note": "Its initial candidate state is historical, not the current validation/publication state. This successor preserves all candidate bytes."
+  },
+  "mathematics": [
+    {
+      "unit": "EGA I 6.6.6",
+      "claim": "Six permanence assertions for locally finite-type morphisms, including composition, base change, products and reduction.",
+      "boundary": "Local immersions are pointwise; locally finite type is not upgraded to finite type without quasi-compactness."
+    },
+    {
+      "unit": "EGA I 6.6.7",
+      "claim": "The locally Noetherian fibre-product consequence is covered by finite-type base change and local Noetherianity.",
+      "boundary": "Do not conclude global Noetherianity from local hypotheses."
+    },
+    {
+      "unit": "EGA I 6.6.8",
+      "claim": "Separate extensions of geometric-point surjectivity, the residue-field criterion, and the fixed algebraically closed field test.",
+      "boundary": "The fixed-field argument retains infinite transcendence degree; independent derivation avoids the defective pinned 0487 converse proof."
+    }
+  ],
+  "validation": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_ega_i_668_semantic.py -v",
+      "result": "PASS",
+      "tests": 16,
+      "failures": 0
+    },
+    {
+      "command": "python -B ega/check.py",
+      "result": "PASS",
+      "errors": 0,
+      "official_target_joins": 13,
+      "operational_edges": 1283,
+      "physical_residual_rows": 843
+    },
+    {
+      "command": "python -u -B tools/validate_unified_repository.py --pre-publication",
+      "result": "PASS",
+      "exit_code": 0,
+      "registered_overlays": 48,
+      "registered_stable_ids": 1292,
+      "exact_v2_operations": 1481,
+      "exact_legacy_replacements": 69,
+      "permanent_tags": 21819,
+      "validated_pdf_identities": 35
+    }
+  ],
+  "root_source_preservation": {
+    "comparison": "5817f4c1af8724b147401c785f57ca315b52e31c..53e97d65a7efb5e4f79df83cea987ae2ea08a171",
+    "changed_paths": [
+      "ega/README.md",
+      "ega/agent.csv",
+      "ega/check.py",
+      "ega/dec.csv",
+      "ega/log.md",
+      "ega/resid.csv",
+      "ega/scope.json",
+      "ega/smap.csv",
+      "tests/test_ega_i_668_semantic.py",
+      "validation/ega-i-6.6.6-6.6.8-semantic-checkpoint-2026-09-06.json"
+    ],
+    "root_tex_changed": false,
+    "root_tags_changed": false,
+    "registry_changed": false,
+    "source_authority_changed": false
+  },
+  "retained_build": {
+    "receipt": "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json",
+    "bytes": 119366,
+    "sha256": "6DB5AA6B8C2D8B8A2CEA9A01BCED0172C1675EF716B8663620E4BF6DDE563CCB",
+    "source_commit": "afdbdc289cc4536179af90988eccb70fdfe67998",
+    "pdfs": 35,
+    "pages": 3363,
+    "pdf_bytes": 36679971,
+    "local_pdf_hash_mismatches": 0,
+    "new_tex_build": "NOT_REQUIRED_FOR_UNCHANGED_SOURCE",
+    "new_visual_qa": "NOT_PERFORMED_NO_RENDER_INPUT_CHANGE",
+    "note": "The build/source comparison has no root TeX/style/bibliography changes; all 35 existing PDF sizes and SHA-256 hashes were reread locally. Existing visual receipts retain their actual bounded scopes, not all-page certification of the entire corpus."
+  },
+  "publication": {
+    "github": "PENDING_PUSH_AND_ANONYMOUS_READBACK",
+    "zenodo": "NO_NEW_VERSION_INCREMENTAL_SEMANTIC_CHECKPOINT",
+    "concept_doi": "10.5281/zenodo.22135180"
+  },
+  "next_semantic_cursor": "ega:I.7.1.1",
+  "program_complete": false
+}

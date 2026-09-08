@@ -9,6 +9,41 @@ cursor live in the [EGA integration dossier](ega/README.md). EGA is only
 partially composed into the root source; its complete English discovery and
 French diplomatic editions remain separate read-only inputs.
 
+## Stacks-on-Stacks development program
+
+The aim is a readable, reusable mathematical scaffold extending from classical
+algebraic geometry toward derived geometry, with a clearly marked unofficial
+draft layer. The work below is a program of deliverables, not a claim that it
+already exists in the current source. Each substantial source is pinned before
+its theorem inventory is processed; covered results are mapped, not rewritten.
+
+| Workstream | Intended deliverable |
+| --- | --- |
+| Continuous errata | Independently adjudicated, precisely attributed corrections applied to cumulative source, with immediate original/diff comparisons. |
+| EGA and foundational SGA | Finish the EGA source-order comparison and integrate worthwhile missing proofs or formulations, interleaving SGA prerequisites where needed. |
+| Tôhoku | Close the five source-integration gaps listed below; do not equate the completed historical dossier with complete source integration. |
+| Verdier | Audit and integrate the full thesis beyond the already composed Proposition II.1.2.13, distinguishing covered, new, and historically unfinished material. |
+| FAC/FGA/GAGA/SGA | Preserve and normalize existing contributions, and complete remaining source scope without duplicating what Stacks already proves. |
+| DAG and Kerodon | Build the required higher-categorical and derived-algebraic-geometric bridge through a pinned Kerodon endpoint, with independently written exposition. |
+| Illusie and prismatic geometry | Develop the cotangent-complex, deformation and crystalline prerequisites and the subsequent prismatic bridge. |
+| Pursuing Stacks | Harvest nonduplicative results and useful categorical architecture from the source edition. |
+| Modular theory and NCG | Later develop the operator-algebraic foundations and Tomita–Takesaki exposition, including unbounded conjugate-linear operators, adjoints, closure and polar decomposition. |
+| Reader and study program | Deliver searchable rendered mathematics with unmistakably separate official and AI-draft layers, original/diff/provenance views, and multilingual self-study interfaces. |
+
+The order is dependency-led. Modular theory has substantial independent
+functional-analytic prerequisites; it is not expected to follow automatically
+from DAG or prismatic cohomology. Existing official Stacks web-reader features
+should be examined before duplicating them. The new reader's distinctive work
+is the integrated draft comparison and learning interface.
+
+A contribution progresses through source review, duplicate checking,
+independent mathematical reconstruction, notation normalization, cumulative
+composition, deterministic build/reference checks, visual review and public
+readback. These remain AI-written mathematical drafts, not proof-assistant
+certificates. A recorded unresolved gap does not satisfy a completion gate.
+GitHub records incremental validated work; Zenodo preserves substantial coherent
+milestones rather than every theorem or routine errata round.
+
 ## Tohoku source-integration gap
 
 The historical Tôhoku dossier is not evidence that all of its draft proofs
@@ -38,7 +73,18 @@ it does not change the separately recorded EGA source-order cursor.
 
 ## Current maintenance baseline
 
-The current validated composition contains **34 overlays / 1,042 stable IDs** at
+The last verified public main is
+`f73b18165c7162b8386de06cc3c50bd4ced745b6`, containing errata R39 and
+EGA I §6.6.4. Local R40–R47 composition is committed at
+`b3c4a28c053dbbd45670dd19cf0dcc45063190dc`: 177 exact corrections across five
+chapters, with independent source replay complete. Fresh cumulative build,
+visual and publication gates remain open. EGA I §6.6.5 has locally validated
+existing coverage; its next source unit is §6.6.6. See [status](STATUS.md) and
+[validation](VALIDATION.md) for the separate local/public states.
+
+### Preserved R33 baseline
+
+The historical R33 composition contains **34 overlays / 1,042 stable IDs** at
 the R33 successor `acb48c7edaf9595b542b003ed360399870188b7f`, tree
 `8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`. Its Stacks errata component is
 R1–R33: 33 batches, 1,030 correction IDs, and 1,166 exact v2 operations. The 22nd
@@ -64,9 +110,9 @@ The R33 registry import is
 `d786a8604e7c0be79fab77c380247bd971555520`, followed by the validated build
 binding at `1c90a67eb42de28884be05abd8fb58f781aed7db`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
-[current composition receipt](validation/composition-current.json).
+[historical R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json).
 
-The current R33 source passed two linked-worktree fixed-point builds at source
+The historical R33 source passed two linked-worktree fixed-point builds at source
 `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
 `3c292f9a4b94162ede69d2633b1272b057a498c3`: 28 readable PDFs, 2,730 pages,
 29,277,302 PDF bytes, global fixed point on sweep four, and zero fatal or listed
@@ -75,7 +121,7 @@ correction-locus pages at 180 DPI. All 28 PDF identities
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-R33 is the current public errata preservation checkpoint at content head
+R33 is a preserved historical public errata checkpoint at content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
