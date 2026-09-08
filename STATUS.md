@@ -84,7 +84,7 @@ matches all 18 changed files (2,167,497 bytes) at
 `4d2a2af212585522dc2dbc91e4ab33c902fbbcd2`;
 its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34174298636).
 
-The current **EGA I §7.2.5–§7.2.7 comparison** derives three results from
+The preceding **EGA I §7.2.5–§7.2.7 comparison** derives three results from
 existing Stacks arguments: preservation of a rational section's identity on
 its base-preserving domain, the regular-function correspondence on a dense
 open, and the reduced-closure criterion for extending a section. The
@@ -93,11 +93,23 @@ distinction and require no extra retrocompactness assumption for the closure
 criterion. The [integration validation](validation/ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
 records the exact source, review and deterministic checks separately from
 publication. No root theorem, official tag or PDF changes; the twelve earlier
-open gaps remain open. Next: **§7.2.8**. EGA integration is not complete.
+open gaps remain open. Its next source unit was **§7.2.8**.
 The [anonymous readback](validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
 verifies all 18 changed paths (2,289,177 bytes) at
 `f76a3ffe17211237484d944a85b173e04eb536d7`;
 the [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34175771628).
+
+The current **EGA I §7.2.8–§7.2.9 comparison** proves the local extension
+criterion for rational maps over a fixed base. The [written argument](ega/i729.md)
+includes the component/density lemma, both integral and locally Noetherian
+cases, and the final dense-domain gluing step. Its explicit nonfinite-normalization
+example shows why a local morphism that does not preserve the base is insufficient.
+The [review](ega/i729-review.md) and
+[integration validation](validation/ega-i-7.2.8-7.2.9-integration-validation-2026-09-08.json)
+separate mathematical review from deterministic evidence checks.
+No root theorem, official tag, source edition or PDF changes; the twelve
+earlier gaps remain open. Next: **§7.3**, the sheaf of rational functions.
+The full EGA I–IV integration remains unfinished.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -111,7 +123,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.2.7: rational sections, regular functions on dense opens, and extension by the reduced closure of a section. Ordinary and base-preserving domains remain distinct. Next: §7.2.8. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.2.9: extending a rational map near a point is equivalent to extending its induced local map over the same base. The proof and a counterexample to omitting base compatibility are explicit. Next: §7.3, the sheaf of rational functions. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

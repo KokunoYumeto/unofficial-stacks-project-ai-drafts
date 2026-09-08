@@ -23,7 +23,21 @@ verifies all 15 changed files at public content commit
 `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
 
-## Current EGA I §7.2.5–§7.2.7 comparison
+## Current EGA I §7.2.8–§7.2.9 comparison
+
+The [written comparison](../ega/i729.md) proves the relative local extension
+criterion, including the nested component/density lemma and the final gluing
+step. Its explicit nonfinite-normalization counterexample shows why an ordinary
+local morphism is insufficient. The [review record](../ega/i729-review.md)
+distinguishes the mathematical arguments from byte and contract checks.
+The [integration validation](ega-i-7.2.8-7.2.9-integration-validation-2026-09-08.json)
+binds the frozen candidate, unchanged official/current target text, append-only
+ledgers and deterministic checks. The candidate receipt remains immutable.
+No root theorem, official tag, source edition or PDF is changed. All twelve
+earlier gaps remain. Next: §7.3, the sheaf of rational functions.
+This is an incremental GitHub checkpoint, not a new Zenodo version.
+
+## Preceding EGA I §7.2.5–§7.2.7 comparison
 
 The [written comparison](../ega/i727.md) proves preservation of rational
 sections on their relative domains, the correspondence for regular functions

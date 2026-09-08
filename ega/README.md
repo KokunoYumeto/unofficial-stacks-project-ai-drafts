@@ -17,23 +17,27 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.2.7**.
-The next unit is **§7.2.8**; EGA as a whole is not complete.
-The new [comparison](i727.md) proves preservation of rational sections on
-their base-preserving domains, identifies regular functions on a dense open
-with rational functions defined there, and proves the reduced-closure criterion
-for extending a section. Both directions and uniqueness are explicit; no
-retrocompactness hypothesis is added. Graphs of scalar functions have the same
-ordinary and section domains even without reducedness, but arbitrary rational
-sections need not. The doubled-origin examples make this distinction concrete.
+This tree records source-order semantic comparison through **EGA I §7.2.9**.
+The next section is **§7.3**, the sheaf of rational functions; EGA as a whole
+is not complete. The new [comparison](i729.md) proves the local criterion
+for extending a rational map over a fixed base. It includes the component
+and density lemma for the local scheme, the integral and locally Noetherian
+spreading arguments, and the final dense-domain gluing step.
+An explicit DVR/nonfinite-normalization example shows why an arbitrary local
+morphism cannot replace one over the specified base. The stronger Stacks route
+without a locally Noetherian base assumption is stated separately from the
+source's original hypotheses.
 
-The [checkpoint](../validation/ega-i-7.2.5-7.2.7-semantic-checkpoint-2026-09-08.json)
-binds complete French LF378–430 and English LF227–259, including all three
-proofs, the old-page marker, and the excluded start of §7.2.8.
+The [checkpoint](../validation/ega-i-7.2.8-7.2.9-semantic-checkpoint-2026-09-08.json)
+binds complete French LF431–527 and English LF260–309, including the nested
+lemma's proof and page marker, the separate parent induced-map construction,
+the whole proposition proof, and the excluded start of §7.3.
 Existing Stacks results supply the mathematics. The historical wording is
 compared under precise domain conventions, not declared an admitted printed
 erratum or a new root theorem. The 12 earlier open gaps are unchanged.
-The preceding [domain and gluing comparison](i724.md) remains available with
+The preceding [rational-section and closure comparison](i727.md) remains
+available with its [immutable checkpoint](../validation/ega-i-7.2.5-7.2.7-semantic-checkpoint-2026-09-08.json).
+The earlier [domain and gluing comparison](i724.md) remains available with
 its [immutable source checkpoint](../validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json).
 The preceding [field-valued-point comparison](i716.md),
 [generic-local comparison](i714.md), and [generic-germ dossier](i719.md)
@@ -42,9 +46,9 @@ remain available with their exact historical evidence.
 The [corrected preceding checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
 and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
-[integration validation](../validation/ega-i-7.2.5-7.2.7-integration-validation-2026-09-08.json)
+[integration validation](../validation/ega-i-7.2.8-7.2.9-integration-validation-2026-09-08.json)
 and public readback; candidate state is not silently rewritten as publication.
-The current [public byte receipt](../validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
+The preceding [public byte receipt](../validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)
 verifies all 18 changed files and the passing exact-head GitHub workflow.
 The preceding [public byte receipt](../validation/ega-i-7.2.1-7.2.4-public-readback-2026-09-08.json)
 verifies the complete 18-file §7.2.1–§7.2.4 checkpoint and its passing exact-head CI.

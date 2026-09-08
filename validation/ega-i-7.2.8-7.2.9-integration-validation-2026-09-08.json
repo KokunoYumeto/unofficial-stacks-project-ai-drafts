@@ -1,0 +1,207 @@
+{
+  "schema": "ega-i729-integration-validation/v1",
+  "date": "2026-09-08",
+  "status": "PASS",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "1bed4dc0cb48717c476c7292b91b018743e9a530",
+  "candidate": {
+    "commit": "a2d47eb262eb71605ec8eb73cbf1273afedcb2cc",
+    "tree": "266ff3d2ea4ebe0f9658b210fc4b6ec3e406e7b9"
+  },
+  "integrated": {
+    "commit": "dd42eef7f1542d3f2d5ff28299014c39ebe7f7d1",
+    "tree": "c85156a1fec5b8045bfd6424e5c6ab822633f38e"
+  },
+  "candidate_byte_replay": {
+    "status": "PASS",
+    "files": [
+      {
+        "path": "ega/i729.md",
+        "bytes": 15631,
+        "sha256": "CF028E092E8AE86FD52B43125771819F8F8FD4011E97109D44FBDF9C0FB9AAC7"
+      },
+      {
+        "path": "ega/i729-review.md",
+        "bytes": 4607,
+        "sha256": "A56BD44C2422D7B6210BA9B3CBEE49CCCE973CFC4138DA4CC69A5C28D06D9F96"
+      },
+      {
+        "path": "ega/dec.csv",
+        "bytes": 102396,
+        "sha256": "40C790BC42CA8A2F4FA41ECA1819D1DB9FAA813DC8DA0FF4DA0A2F51216EE153"
+      },
+      {
+        "path": "ega/smap.csv",
+        "bytes": 648972,
+        "sha256": "9C23E499636C6C1013074D59E1C641365FED8EB7B83D1BE0F99F3C2C7CDFF4FC"
+      },
+      {
+        "path": "ega/resid.csv",
+        "bytes": 271866,
+        "sha256": "2341B23E17899C1F5134095ED8998FE40F34BA81D83DCF84636F625E387E448A"
+      },
+      {
+        "path": "ega/agent.csv",
+        "bytes": 150682,
+        "sha256": "A7446A8A78488BE9411678B9668EF98DEA62B0D1CE8FC2FE43D0933A8489F530"
+      },
+      {
+        "path": "ega/scope.json",
+        "bytes": 52572,
+        "sha256": "9E09DEFD77B60739AA994152E1BF5279EC7599BC43AFD4CE21EF4FCBB7DA31E3"
+      },
+      {
+        "path": "ega/check.py",
+        "bytes": 560394,
+        "sha256": "BC05B91AF1B857D8F67FE21D60F9B9D1E5929C293AAE1D85EF267CBE8A0F737D"
+      },
+      {
+        "path": "tools/ega_i729_semantic_contract.py",
+        "bytes": 13407,
+        "sha256": "B074B1A7ECB6113A056EFF0C236369E40BCA1AEB89753A1A3D8E4E7E3689E2E7"
+      },
+      {
+        "path": "tools/check_ega_i729_source_boundaries.py",
+        "bytes": 26967,
+        "sha256": "6E4201D31C2F8F48C07F3CD0EF1ADECE7AC4DED56EC7466F28D2EE68BBAE2EFB"
+      },
+      {
+        "path": "tests/test_ega_i_729_semantic.py",
+        "bytes": 13711,
+        "sha256": "25076AC6DE527ECF68E3D391F68B59B31317F253AF30B65DD0E47E0041F94A47"
+      },
+      {
+        "path": "tests/test_ega_i_729_source_boundaries.py",
+        "bytes": 39619,
+        "sha256": "DD41B94D9465652395AE61BEE91BF94E4698AC5CE52B0A8686D443BB1E7F11CE"
+      },
+      {
+        "path": "validation/ega-i-7.2.8-7.2.9-semantic-checkpoint-2026-09-08.json",
+        "bytes": 78280,
+        "sha256": "FF484AB63BFCD5E67780C8A395309EAF0FB2A3F8C620D3123DA44D59F5243FE8"
+      }
+    ],
+    "total_bytes": 1979104,
+    "comparison": "Every frozen Git blob equals the integrated Git blob and working bytes; exact candidate changed-path inventory; all four earlier ledger byte prefixes retained."
+  },
+  "scope": "Complete EGA I7.2.8–7.2.9, nested7.2.8.1 and separate parent induced-map construction. French physical LF431–527; English LF260–309; next7.3 heading.",
+  "mathematics": "Existing-derived relative local extension criterion, component/density lemma and full dense-domain globalization. A separately derived DVR/nonfinite-normalization counterexample disproves the ordinary-morphism replacement. The locally Noetherian base route and stronger existing Stacks alternatives remain distinct.",
+  "independent_review": {
+    "status": "PASS",
+    "evidence": "ega/i729-review.md",
+    "scope": "Complete source-bound mathematics and 18 official target blocks; separate semantic/helper implementation review with discovery-view and five literal-clause repairs. No formal proof-assistant claim."
+  },
+  "root_review": {
+    "status": "PASS",
+    "scope": "Reread final complete dossier and review; inspected exact source/target evidence and whole proof in bounded preflight. Replayed frozen/integrated/working equality and append-only ledger prefixes. Finite-presentation attribution distinguishes01TT from quasi-compact/quasi-separated global conclusion.",
+    "formal_proof_checking": false
+  },
+  "regression": {
+    "status": "PASS",
+    "tests": 72,
+    "seconds": 22.422,
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_ega_i_729_semantic",
+      "tests.test_ega_i_729_source_boundaries"
+    ],
+    "result": "........................................................................\r\n----------------------------------------------------------------------\r\nRan 72 tests in 22.422s\r\n\r\nOK\r\n",
+    "candidate_prior_regression": "Candidate owner reports394broader7.x tests PASS before the final discovery test addition; root ran the final72current tests on integrated bytes."
+  },
+  "ega_checker": {
+    "counts": {
+      "agent.csv": 280,
+      "cand.csv": 2749,
+      "dec.csv": 364,
+      "fb.csv": 0,
+      "files.csv": 127,
+      "findings.jsonl": 26,
+      "issues.csv": 102,
+      "operational_statement_edges": 1425,
+      "operational_vqa_rows": 26,
+      "pages.csv": 29,
+      "pending_visual_referral_crops": 0,
+      "qsrc.csv": 16,
+      "quarantined_residual_rows": 0,
+      "quarantined_statement_edges": 0,
+      "quarantined_vqa_rows": 0,
+      "resid.csv": 933,
+      "smap.csv": 1444,
+      "source_error_qa_bytes": 6022269,
+      "source_error_qa_crops": 16,
+      "src.csv": 1,
+      "tmap.csv": 24,
+      "topics.csv": 36,
+      "units.csv": 9585,
+      "vqa.csv": 45
+    },
+    "errors": [],
+    "existing_official_tags_referenced": 13,
+    "official_tags_assigned_by_scaffold": 0,
+    "schema": "ega-stacks-scaffold-check-v1",
+    "status": "PASS"
+  },
+  "source_replay": {
+    "schema": "ega-i729-raw-source-boundary-replay/v1",
+    "scope": "mechanical source ownership; not semantic admission",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "status": "PASS"
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "status": "PASS"
+      }
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  "repository_validation": {
+    "status": "PASS",
+    "mode": "pre-publication",
+    "command": "python -B tools/validate_unified_repository.py --pre-publication",
+    "output": "Unified repository validation: PASS\r\n- registered overlays: 48\r\n- registered stable IDs: 1292\r\n- exact v2 operations checked: 1481\r\n- exact R1-R3 replacements checked: 69\r\n- R1 tag additions checked: 9\r\n- active permanent Stacks tags checked: 21819\r\n- fixed-point build receipt: validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json\r\n- required build stems covered: 35\r\n- visual-QA affected chapters checked: 5\r\n- reproducible PDF identities checked: 35\r\n- public Markdown documents checked: 7\r\n"
+  },
+  "scope_changes": {
+    "new_root_theorems": 0,
+    "official_tags_assigned": 0,
+    "root_TeX_changed": false,
+    "source_editions_changed": false,
+    "PDF_changed": false,
+    "prior_open_gaps": 12,
+    "prior_open_gaps_closed": 0,
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1425,
+      "file_rows": 1444,
+      "superseded_rows": 19,
+      "source_units": 468,
+      "existing_official_tag_rows": 1412,
+      "distinct_existing_official_tags": 371,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 900,
+      "file_rows": 933,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "publication": {
+    "github": "Separate public-byte receipt records content push and exact-head CI; not claimed by immutable candidate.",
+    "zenodo": "No routine version. Sparse substantial milestones only."
+  },
+  "final_independent_audit": {
+    "status": "PASS",
+    "scope": "All13frozen Git blobs and production copies; four exact ledger prefixes and all12open gaps; actual checker joins, current public docs and CI. Read-only review, no tests repeated."
+  }
+}

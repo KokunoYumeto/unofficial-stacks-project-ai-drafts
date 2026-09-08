@@ -135,8 +135,8 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.2.7, including rational sections, regular functions, and the reduced
-closure criterion for extending a section; the next source unit is §7.2.8.
+EGA I §7.2.9, including the local criterion for extending rational maps
+over a fixed base; the next source section is §7.3, the sheaf of rational functions.
 The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
@@ -183,6 +183,13 @@ by whether its reduced closure maps isomorphically to the base. The
 without adding a retrocompactness assumption, and gives examples showing why
 ordinary extensions need not be extensions as sections. These are explicit
 derivations from existing Stacks results, not new root theorems.
+Sections 7.2.8–7.2.9 establish when a rational map extends near a point:
+the induced rational map on the local scheme must extend as a morphism
+over the same base. The [complete comparison](ega/i729.md) proves the
+component and density lemma, the local spreading step, and the final gluing
+argument. An explicit nonfinite-normalization example shows why an ordinary
+local morphism is not enough. These are derivations from existing Stacks
+results, with the source's hypotheses and stronger available results kept distinct.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 
