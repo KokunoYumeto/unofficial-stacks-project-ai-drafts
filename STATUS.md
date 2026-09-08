@@ -99,7 +99,7 @@ verifies all 18 changed paths (2,289,177 bytes) at
 `f76a3ffe17211237484d944a85b173e04eb536d7`;
 the [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34175771628).
 
-The current **EGA I §7.2.8–§7.2.9 comparison** proves the local extension
+The preceding **EGA I §7.2.8–§7.2.9 comparison** proves the local extension
 criterion for rational maps over a fixed base. The [written argument](ega/i729.md)
 includes the component/density lemma, both integral and locally Noetherian
 cases, and the final dense-domain gluing step. Its explicit nonfinite-normalization
@@ -108,12 +108,27 @@ The [review](ega/i729-review.md) and
 [integration validation](validation/ega-i-7.2.8-7.2.9-integration-validation-2026-09-08.json)
 separate mathematical review from deterministic evidence checks.
 No root theorem, official tag, source edition or PDF changes; the twelve
-earlier gaps remain open. Next: **§7.3**, the sheaf of rational functions.
+earlier gaps remain open. Its next section was **§7.3**, the sheaf of rational functions.
 The full EGA I–IV integration remains unfinished.
 The [anonymous readback](validation/ega-i-7.2.8-7.2.9-public-readback-2026-09-08.json)
 verifies all 19 changed files (2,141,295 bytes) at
 `9958436fa9214b796192d1993449c6ed401597bc`;
 its [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34179789986).
+
+The current **EGA I §7.3.1–§7.3.4 comparison** constructs the dense-open
+rational-function sheaf and proves restriction, generic-local-ring formulas,
+quasi-coherence under locally finite irreducible components, and the
+reduced-component decomposition. The [written derivation](ega/i734.md)
+includes the complete gluing and finite-localization arguments. Nonreduced
+examples show why this sheaf must not automatically be identified with
+regular-denominator meromorphic functions, or generic local rings with fields.
+The [integration validation](validation/ega-i-7.3.1-7.3.4-integration-validation-2026-09-08.json)
+records the passing final 71 tests, exact source replay and repository checks.
+The [mathematical review](ega/i734-review.md) and
+[immutable source checkpoint](validation/ega-i-7.3.1-7.3.4-semantic-checkpoint-2026-09-08.json)
+keep source ownership and the supplied proof of §7.3.4 explicit. No duplicate
+root theorem, official tag, source-edition change or PDF is added. The twelve
+earlier open gaps remain open. Next: **§7.3.5**; full EGA I–IV is unfinished.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -127,7 +142,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.2.9: extending a rational map near a point is equivalent to extending its induced local map over the same base. The proof and a counterexample to omitting base compatibility are explicit. Next: §7.3, the sheaf of rational functions. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.3.4: construction, restriction and quasi-coherence of the dense-open rational-function sheaf, with its generic-local-ring description and reduced-component decomposition. Nonreduced examples distinguish this from regular-denominator meromorphic functions. Next: §7.3.5. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

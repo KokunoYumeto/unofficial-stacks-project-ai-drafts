@@ -17,9 +17,26 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.2.9**.
-The next section is **§7.3**, the sheaf of rational functions; EGA as a whole
-is not complete. The new [comparison](i729.md) proves the local criterion
+This tree records source-order semantic comparison through **EGA I §7.3.4**.
+The next unit is **§7.3.5**, concerning modules over the rational-function
+sheaf; EGA as a whole is not complete. The new [comparison](i734.md)
+constructs EGA's dense-open rational-function sheaf, proves its restriction
+property, and gives the generic-local-ring description and quasi-coherence
+under locally finite irreducible components. It supplies the complete
+arbitrary-cover gluing and finite-localization arguments, then identifies
+the component function fields in the reduced, finite-component case.
+
+The [source checkpoint](../validation/ega-i-7.3.1-7.3.4-semantic-checkpoint-2026-09-08.json)
+keeps the section heading, the restriction passage after §7.3.2, and the
+entire unwrapped French proof of §7.3.3. There is no printed proof of §7.3.4;
+the dossier supplies its own. It does not equate this sheaf with Stacks'
+regular-denominator meromorphic functions on arbitrary schemes. Concrete
+nonreduced examples explain the difference and why the reducedness hypothesis
+cannot be omitted. Existing Stacks arguments supply the mathematics; no
+duplicate root theorem, official tag, source-edition change or PDF is added.
+The twelve earlier open gaps remain open.
+
+The preceding [comparison](i729.md) proves the local criterion
 for extending a rational map over a fixed base. It includes the component
 and density lemma for the local scheme, the integral and locally Noetherian
 spreading arguments, and the final dense-domain gluing step.
@@ -46,9 +63,9 @@ remain available with their exact historical evidence.
 The [corrected preceding checkpoint](../validation/ega-i-7.1.1-7.1.3-source-boundary-correction-2026-09-07.json)
 and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
-[integration validation](../validation/ega-i-7.2.8-7.2.9-integration-validation-2026-09-08.json)
+[integration validation](../validation/ega-i-7.3.1-7.3.4-integration-validation-2026-09-08.json)
 and public readback; candidate state is not silently rewritten as publication.
-The current [public byte receipt](../validation/ega-i-7.2.8-7.2.9-public-readback-2026-09-08.json)
+The preceding [public byte receipt](../validation/ega-i-7.2.8-7.2.9-public-readback-2026-09-08.json)
 verifies all 19 changed files (2,141,295 bytes) at
 `9958436fa9214b796192d1993449c6ed401597bc` and its passing exact-head workflow.
 The preceding [public byte receipt](../validation/ega-i-7.2.5-7.2.7-public-readback-2026-09-08.json)

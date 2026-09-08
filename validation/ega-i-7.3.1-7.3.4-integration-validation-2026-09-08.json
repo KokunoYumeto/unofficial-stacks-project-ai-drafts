@@ -1,0 +1,219 @@
+{
+  "schema": "ega-i734-integration-validation/v1",
+  "date": "2026-09-08",
+  "status": "PASS",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "6f2d98858adc644668f27565715a0e3f010a8c3c",
+  "candidate": {
+    "commit": "1e4ae54c4650aecb3d5f212a73f5fab84a363baa",
+    "tree": "f5c82982dc552ca757e4ae74e23e44709155755f"
+  },
+  "integrated": {
+    "commit": "20307123eefacd21760bdf6f306774c09d4bab18",
+    "tree": "e8825d88bce5c65403322367cad8369847eee118"
+  },
+  "candidate_byte_replay": {
+    "status": "PASS",
+    "files": [
+      {
+        "path": "ega/i734.md",
+        "bytes": 16660,
+        "sha256": "D4F939E921750A907E0B335DB9D9DA9242EC407B90AD7561EA63C9682C5C3163"
+      },
+      {
+        "path": "ega/i734-review.md",
+        "bytes": 5654,
+        "sha256": "952EAF542E7FB7883A4CA275A5B9646FE1890E5784EB39233DAB5083F1BF7216"
+      },
+      {
+        "path": "ega/dec.csv",
+        "bytes": 103985,
+        "sha256": "F322E334AF244CC61E9587965DF35BF0C073EA8A2E1E9298DE42228F7EFB7C7D"
+      },
+      {
+        "path": "ega/smap.csv",
+        "bytes": 661086,
+        "sha256": "09E1960AECEB9E73A052A78AECB6CF1985C9E4F72ECD6AFB2827F6571F404A40"
+      },
+      {
+        "path": "ega/resid.csv",
+        "bytes": 274629,
+        "sha256": "FAFD548A37057332D4EFDF65498CAB439D8B8325E82A07C2B2BA90BE874F2E5E"
+      },
+      {
+        "path": "ega/agent.csv",
+        "bytes": 152209,
+        "sha256": "1789177528403DCE9F80721E82B47C660BB2B24B2CE6CAA7CB2BD24CDE0BB596"
+      },
+      {
+        "path": "ega/scope.json",
+        "bytes": 55596,
+        "sha256": "07217A2248D9EFA5AE278F2469180E1464D57F70F7F268E366EED5DB6DBA2CDA"
+      },
+      {
+        "path": "ega/check.py",
+        "bytes": 561216,
+        "sha256": "01113054DDBB6FEE052D0D6325F38EE4B58D2256A6331C8DA4E6B4682EA8EEB5"
+      },
+      {
+        "path": "tools/ega_i734_semantic_contract.py",
+        "bytes": 14103,
+        "sha256": "8B602BBF378AFCCB9D3EE58ECE239BBFB0F65CB3FDDEE6A29D59138109D4E915"
+      },
+      {
+        "path": "tools/ega_i729_semantic_contract.py",
+        "bytes": 14889,
+        "sha256": "6BECC0C8292689627752C37E7DBCDC779744BEE8F2CDA2AF5D0A9F8668403BD8"
+      },
+      {
+        "path": "tools/check_ega_i734_source_boundaries.py",
+        "bytes": 21590,
+        "sha256": "BA5F5CD2FD56DD35EB12B84400424904991BD65C21F180916D50A1672B1501B0"
+      },
+      {
+        "path": "tests/test_ega_i_734_semantic.py",
+        "bytes": 13603,
+        "sha256": "6187EE7F96AF238263B2E428FC179A6D911C6F5F281A36F5EB85BFDB43633E2C"
+      },
+      {
+        "path": "tests/test_ega_i_734_source_boundaries.py",
+        "bytes": 40405,
+        "sha256": "AC140F4724867C03DD8D2DEB0D57DD1D2B8FF833855E4C3BEADA23C867826CB8"
+      },
+      {
+        "path": "tests/test_ega_i_729_semantic.py",
+        "bytes": 14621,
+        "sha256": "B2531A91F214B9A13131C21DAFC5380F4A51B8F30EA86525B3903FA9E85CD50A"
+      },
+      {
+        "path": "validation/ega-i-7.3.1-7.3.4-semantic-checkpoint-2026-09-08.json",
+        "bytes": 162185,
+        "sha256": "B9C0C421F58F12064B8F6B37FE5E45F111631510F396C24E0CEA26E88DE591A4"
+      }
+    ],
+    "total_bytes": 2112431,
+    "comparison": "Every frozen Git blob equals the integrated Git blob and working bytes; exact15-file changed-path inventory; all four earlier ledger byte prefixes retained."
+  },
+  "scope": "Complete EGA I7.3.1–7.3.4, section heading,7.3.2 restriction tail and complete7.3.3proof. French physical LF528–605 and English LF310–349;7.3.5begin/label excluded.",
+  "mathematics": "Construction and algebra-compatible restriction of the dense-open rational-function sheaf, finite-component generic-local-ring formula, arbitrary-cover gluing and full finite-localization proof of quasi-coherence; reduced finite-component algebra decomposition. Existing Stacks supplies the ingredients; nonreduced examples distinguish dense-open rational functions from regular-denominator meromorphic functions.",
+  "independent_review": {
+    "status": "PASS",
+    "evidence": "ega/i734-review.md",
+    "scope": "Complete manuscript,16pairedtargets,3pairedcontexts,decisions/mappings/residuals,semantic contract/tests and historical729prefix migration. Exact32targetblocks6contexts23preservedinputs and4ledgerprefixes replayed; no actionable defect."
+  },
+  "root_review": {
+    "status": "PASS",
+    "scope": "Reviewed complete mathematical manuscript in source-bound preflight; read complete new semantic and source-boundary implementations, semantic and boundary test bodies,729historical-prefix migration, checker wiring and final metadata-only reseal. Exact candidate/integrated/working replay and fresh final71tests on integrated lineage.",
+    "formal_proof_checking": false
+  },
+  "regression": {
+    "status": "PASS",
+    "tests": 71,
+    "seconds": 52.313,
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_ega_i_734_semantic",
+      "tests.test_ega_i_729_semantic",
+      "tests.test_ega_i_734_source_boundaries"
+    ],
+    "result": ".......................................................................\r\n----------------------------------------------------------------------\r\nRan 71 tests in 52.313s\r\n\r\nOK\r\n",
+    "candidate_prior_regression": "Candidate owner and independent reviewer report71current/predecessor/source tests and372earlier7.x regressions PASS; root separately ran the final71test suite on exact integrated bytes."
+  },
+  "ega_checker": {
+    "counts": {
+      "agent.csv": 282,
+      "cand.csv": 2749,
+      "dec.csv": 368,
+      "fb.csv": 0,
+      "files.csv": 127,
+      "findings.jsonl": 26,
+      "issues.csv": 102,
+      "operational_statement_edges": 1447,
+      "operational_vqa_rows": 26,
+      "pages.csv": 29,
+      "pending_visual_referral_crops": 0,
+      "qsrc.csv": 16,
+      "quarantined_residual_rows": 0,
+      "quarantined_statement_edges": 0,
+      "quarantined_vqa_rows": 0,
+      "resid.csv": 945,
+      "smap.csv": 1466,
+      "source_error_qa_bytes": 6022269,
+      "source_error_qa_crops": 16,
+      "src.csv": 1,
+      "tmap.csv": 24,
+      "topics.csv": 36,
+      "units.csv": 9585,
+      "vqa.csv": 45
+    },
+    "errors": [],
+    "existing_official_tags_referenced": 13,
+    "official_tags_assigned_by_scaffold": 0,
+    "schema": "ega-stacks-scaffold-check-v1",
+    "status": "PASS"
+  },
+  "source_replay": {
+    "schema": "ega-i734-raw-source-boundary-replay/v1",
+    "scope": "mechanical source ownership and literal identity; not semantic admission",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "status": "PASS"
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "status": "PASS"
+      }
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  "repository_validation": {
+    "status": "PASS",
+    "mode": "pre-publication",
+    "command": [
+      "python",
+      "-B",
+      "tools/validate_unified_repository.py",
+      "--pre-publication"
+    ],
+    "output": "Unified repository validation: PASS\r\n- registered overlays: 48\r\n- registered stable IDs: 1292\r\n- exact v2 operations checked: 1481\r\n- exact R1-R3 replacements checked: 69\r\n- R1 tag additions checked: 9\r\n- active permanent Stacks tags checked: 21819\r\n- fixed-point build receipt: validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json\r\n- required build stems covered: 35\r\n- visual-QA affected chapters checked: 5\r\n- reproducible PDF identities checked: 35\r\n- public Markdown documents checked: 7\r\n"
+  },
+  "scope_changes": {
+    "new_root_theorems": 0,
+    "official_tags_assigned": 0,
+    "root_TeX_changed": false,
+    "source_editions_changed": false,
+    "PDF_changed": false,
+    "prior_open_gaps": 12,
+    "prior_open_gaps_closed": 0,
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1447,
+      "file_rows": 1466,
+      "superseded_rows": 19,
+      "source_units": 473,
+      "existing_official_tag_rows": 1434,
+      "distinct_existing_official_tags": 376,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 912,
+      "file_rows": 945,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "publication": {
+    "github": "Content push and exact-head CI will be recorded by a separate public-byte receipt; this validation does not claim those actions already occurred.",
+    "zenodo": "No routine version. Sparse substantial milestones only."
+  }
+}

@@ -135,8 +135,9 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.2.9, including the local criterion for extending rational maps
-over a fixed base; the next source section is §7.3, the sheaf of rational functions.
+EGA I §7.3.4, including the construction of the rational-function sheaf
+and its quasi-coherence when the irreducible components are locally finite.
+The next source unit is §7.3.5, concerning modules over that sheaf.
 The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
@@ -190,6 +191,18 @@ component and density lemma, the local spreading step, and the final gluing
 argument. An explicit nonfinite-normalization example shows why an ordinary
 local morphism is not enough. These are derivations from existing Stacks
 results, with the source's hypotheses and stronger available results kept distinct.
+Sections 7.3.1–7.3.4 construct the sheaf of rational functions from regular
+functions on dense open sets, prove its compatibility with restriction, and
+describe it using the local rings at generic points. The
+[complete comparison](ega/i734.md) supplies the gluing and localization
+arguments needed for quasi-coherence and the decomposition into component
+function fields for reduced schemes with finitely many components. It also
+explains a genuine distinction:
+on a nonreduced scheme, EGA's dense-open rational functions need not be the
+meromorphic functions formed by inverting nonzerodivisors. An explicit example
+shows how a nonzero nilpotent can disappear in the former but not the latter.
+These are written derivations from existing Stacks results, not new official
+theorems or machine-checked proofs.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 
