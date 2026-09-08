@@ -1,0 +1,123 @@
+{
+  "schema": "ega-i-7.2.1-7.2.4-integration-validation/v1",
+  "date": "2026-09-08",
+  "status": "PASS_LOCAL_CHECKPOINT",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "public_base": "f298365b27c89a67d2cb326116ecac89aea473e1",
+  "validated_semantic_commit": "5d00ecc6c78e55f0a9118ffe7198a53242ac41b5",
+  "validated_semantic_tree": "d18e65e7040c3d2c76e0a234d376035df1c9f5c8",
+  "reviewed_candidate_commit": "274991d69523cf1ab450d967601282bec1f46c36",
+  "reviewed_candidate_tree": "8849f33dbc560ca89c7350ce7452927949d21ea6",
+  "scope": "EGA I7.2.1–7.2.4 including nested7.2.2.1: ordinary and relative domains of definition, dense agreement, gluing, and separated-base compatibility",
+  "next_source_unit": "EGA I7.2.5",
+  "complete_ega_program": false,
+  "machine_checked_mathematical_proof": false,
+  "mathematical_result": "Existing Stacks components supply dense agreement, relative maximal gluing, fixed-open correspondences and separated-base compatibility. The ordinary domain D can differ from the relative domain D_S, proved by opposite affine charts of the doubled-origin line. The unqualified source wording is not claimed literally equivalent over an arbitrary base; no printed-source erratum or new root theorem is asserted.",
+  "candidate_receipt": {
+    "path": "validation/ega-i-7.2.1-7.2.4-semantic-checkpoint-2026-09-07.json",
+    "bytes": 67065,
+    "sha256": "F78D3E44617A76DDEACFB4D3D2152C1CCB2A08850E12F3D97F7DCCCE10B7F3DA",
+    "preservation": "Immutable reviewed candidate; integration and public readback recorded separately."
+  },
+  "dossier": {
+    "path": "ega/i724.md",
+    "bytes": 9809,
+    "sha256": "BC17A0E2E12740C650DF1044EB0AE4AD865E10395091D14E5919E9FCA8EFE91E"
+  },
+  "source_boundary_replay": {
+    "command": "python -B tools/check_ega_i724_source_boundaries.py",
+    "status": "PASS",
+    "sources": {
+      "fr": {
+        "bytes": 38226,
+        "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "complete_raw_lf_scope": [
+          290,
+          377
+        ]
+      },
+      "en": {
+        "bytes": 35788,
+        "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "complete_raw_lf_scope": [
+          169,
+          226
+        ]
+      }
+    },
+    "proof_ownership": "Section heading and page marker, all statements and proofs, nested7.2.2.1, and separate parent nonextendible-map consequence FR340–348/EN204–206; excludes7.2.5.",
+    "errors": []
+  },
+  "independent_review": {
+    "status": "PASS",
+    "scope": "Independent mathematical/source/code candidate reviews, root full dossier and raw-source/target scrutiny, and separate final review of complete bilingualsource, nine pinned targetblocks, all20mappings/14residuals/five decisions/twoagentrows/four historicalledgerprefixes and five docs/CI changes; no defects.",
+    "limitations": "Mathematical/evidence review, not a formal proof, TeX build or new PDF visual check.",
+    "unresolved_defects": []
+  },
+  "checks": {
+    "unit_test_command": "python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic tests.test_ega_i_719_semantic tests.test_ega_i_711014_semantic tests.test_ega_i_711516_semantic tests.test_ega_i_724_semantic tests.test_ega_raw_source_boundaries tests.test_ega_i_713_source_boundaries tests.test_ega_i_719_source_boundaries tests.test_ega_i_711014_source_boundaries tests.test_ega_i_711516_source_boundaries tests.test_ega_i_724_source_boundaries tests.test_ega_checkpoint_successor tests.test_ega_source_checkpoint tests.test_ega_source_build_binding tests.test_ega_source_package",
+    "unit_tests_run": 389,
+    "unit_tests_status": "PASS",
+    "unit_tests_elapsed_seconds": 1398.189,
+    "full_repository_validator": "PASS_PREPUBLICATION_MODE",
+    "ega_scaffold_checker": "PASS_ZERO_ERRORS_ZERO_QUARANTINES",
+    "registered_overlays": 48,
+    "stable_errata_ids": 1292,
+    "exact_v2_operations": 1481,
+    "legacy_replacements": 69,
+    "permanent_tags": 21819,
+    "reproducible_pdf_identities": 35,
+    "recorded_visual_chapters": 5,
+    "repository_validator_command": "python -B tools/validate_unified_repository.py --pre-publication",
+    "ci_integration": "Added724boundary tests/live verifier; existing semantic discovery includes new semantic suite and general EGA checkpoint/build/package tests remain enabled.",
+    "mode_selection": "Checked-in CI selects --pre-publication while no new R47 release receipt exists; this semantic-only slice does not fabricate a release receipt or create a routine Zenodo version.",
+    "observation_recovery": "Original full regression session21567 became unavailable with no matching process and no persisted final result. One bounded re-execution saves its complete output; no earlier PASS inferred.",
+    "regression_recovery": {
+      "status": "PASS",
+      "tests": 389,
+      "elapsed_seconds": 1398.189,
+      "finished_at_utc": "2026-09-08T00:41:52.278691+00:00",
+      "note": "Complete combined regression rerun after verified missing originalhandle. Saved terminal result includes all16modules."
+    },
+    "documentation_sync": "README, EGA README, STATUS and validationREADME align on current7.2.4 and next7.2.5; historical publication records retained."
+  },
+  "snapshots": {
+    "statement_review_snapshot": {
+      "file": "smap.csv",
+      "statement_edge_rows": 1382,
+      "file_rows": 1401,
+      "superseded_rows": 19,
+      "source_units": 457,
+      "existing_official_tag_rows": 1369,
+      "distinct_existing_official_tags": 369,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 62
+    },
+    "residual_snapshot": {
+      "file": "resid.csv",
+      "rows": 872,
+      "file_rows": 905,
+      "superseded_rows": 33,
+      "open_gaps": 12,
+      "integrated_local_mirror": 13
+    }
+  },
+  "preservation": {
+    "root_tex_changed": false,
+    "root_build_inputs_changed": false,
+    "official_tags_changed": false,
+    "overlay_registry_changed": false,
+    "new_tex_build": false,
+    "existing_35_pdf_receipts_preserved": true,
+    "original_or_translation_source_mutation": false
+  },
+  "publication_policy": {
+    "github": "Incremental validated checkpoint; public-byte readback and exact-head CI follow push.",
+    "zenodo": "No routine slice release; sparse substantial coherent milestones only."
+  },
+  "exact_candidate_blob_replay": {
+    "status": "PASS",
+    "files": 12,
+    "bytes": 2013942
+  }
+}

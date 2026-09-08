@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-09-07**
+Status date: **2026-09-08**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -61,15 +61,24 @@ The [public readback](validation/ega-i-7.1.10-7.1.14-public-readback-2026-09-07.
 verifies every changed file at `bb84677f035925acfdc9a11c4ab880b16e3af732`;
 its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34162899426).
 
-The current **EGA I §7.1.15–§7.1.16 comparison** completes §7.1 with
+The preceding **EGA I §7.1.15–§7.1.16 comparison** completes §7.1 with
 rational maps as function-field-valued points. The [written argument](ega/i716.md)
 retains the chosen embedding and base compatibility, and distinguishes EGA's
 historical “geometric point” from its modern meaning. Both corollaries follow
 from existing, stronger Stacks results. No new root theorem or PDF is added.
-Next: **§7.2.1, including its section heading**.
+Its next source unit was §7.2.1, including the section heading.
 The [public byte readback](validation/ega-i-7.1.15-7.1.16-public-readback-2026-09-07.json)
 verifies all 19 changed files at `66b1df8ec9457cffbfae82ae398a983a43606438`;
 its [exact-head CI passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34164548632).
+
+The current **EGA I §7.2.1–§7.2.4 comparison** explains domains of definition,
+equality on dense opens, and gluing representatives. The [written argument](ega/i724.md)
+distinguishes the largest ordinary domain from the largest domain for maps
+over a fixed base. A doubled-origin example shows why these need not agree;
+a separated base restores compatibility. Complete source and proof ownership
+is bound by the [integration validation](validation/ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json).
+No root theorem, official tag or PDF is changed. Next: **§7.2.5**.
+This comparison does not claim a printed-source erratum or completion of EGA.
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is
@@ -83,7 +92,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison completes §7.1 through §7.1.16: rational maps from integral schemes as function-field-valued points, with the fibre, embedding and base compatibility retained. Next: §7.2.1. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.2.4: domains of definition, dense agreement, relative gluing and separated-base compatibility. It distinguishes ordinary and relative domains explicitly. Next: §7.2.5. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

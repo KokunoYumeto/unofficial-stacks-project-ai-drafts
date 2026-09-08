@@ -23,7 +23,19 @@ verifies all 15 changed files at public content commit
 `27947f240bbe0fed5cf7e91239a1ebe238a85bb2`, totaling 1,888,511 bytes.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
 
-## Current EGA I §7.1.15–§7.1.16 comparison
+## Current EGA I §7.2.1–§7.2.4 comparison
+
+The [written comparison](../ega/i724.md) distinguishes the largest ordinary
+domain of a rational map from the largest domain for representatives over a
+fixed base. It proves dense agreement, relative gluing and the separated-base
+case, and retains a counterexample to the unqualified absolute-domain reading.
+The [integration validation](ega-i-7.2.1-7.2.4-integration-validation-2026-09-08.json)
+is separate from the immutable candidate receipt. Source ownership includes
+the section heading, nested lemma, all proofs and the parent proposition's
+nonextendible-map consequence. No root TeX, official tag or PDF is changed.
+Next: §7.2.5. This is not completion of EGA or a printed-source erratum admission.
+
+## Preceding EGA I §7.1.15–§7.1.16 comparison
 
 The [integration validation](ega-i-7.1.15-7.1.16-integration-validation-2026-09-07.json)
 and [written comparison](../ega/i716.md) explain rational maps from integral

@@ -135,8 +135,8 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.1.16, completing the comparison of §7.1; the next source unit is
-§7.2.1. The earlier §6.6.4 contribution
+EGA I §7.2.4, including the dense-agreement lemma in §7.2.2; the next
+source unit is §7.2.5. The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
 permanence of locally finite-type morphisms, locally Noetherian fibre products,
@@ -167,6 +167,13 @@ retains the chosen residue-field embedding and its compatibility with the base.
 It also explains why EGA's historical “geometric point” here is not the modern
 algebraically-closed-field convention. Existing Stacks results apply under weaker
 hypotheses; no duplicate theorem or formal-proof claim is introduced.
+Sections 7.2.1–7.2.4 explain the largest domain on which a rational map
+can be represented. The [comparison](ega/i724.md) distinguishes ordinary
+maps from maps over a fixed base: their largest domains can differ, even
+for affine charts of a scheme with two origins. It gives the complete
+dense-agreement and gluing arguments, and explains why a separated base
+restores compatibility. This is a careful comparison of existing results,
+not an assertion that the source's unqualified wording is always equivalent.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 
