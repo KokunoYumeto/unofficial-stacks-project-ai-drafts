@@ -110,6 +110,10 @@ separate mathematical review from deterministic evidence checks.
 No root theorem, official tag, source edition or PDF changes; the twelve
 earlier gaps remain open. Next: **§7.3**, the sheaf of rational functions.
 The full EGA I–IV integration remains unfinished.
+The [anonymous readback](validation/ega-i-7.2.8-7.2.9-public-readback-2026-09-08.json)
+verifies all 19 changed files (2,141,295 bytes) at
+`9958436fa9214b796192d1993449c6ed401597bc`;
+its [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34179789986).
 
 The [development program](ROADMAP.md) records the wider EGA, Tôhoku, Verdier,
 DAG, prismatic, modular-theory and reader work. Inclusion in that program is

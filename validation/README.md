@@ -36,6 +36,9 @@ ledgers and deterministic checks. The candidate receipt remains immutable.
 No root theorem, official tag, source edition or PDF is changed. All twelve
 earlier gaps remain. Next: §7.3, the sheaf of rational functions.
 This is an incremental GitHub checkpoint, not a new Zenodo version.
+The [anonymous readback](ega-i-7.2.8-7.2.9-public-readback-2026-09-08.json)
+verifies all 19 changed files (2,141,295 bytes) at
+`9958436fa9214b796192d1993449c6ed401597bc` and the passing exact-head CI.
 
 ## Preceding EGA I §7.2.5–§7.2.7 comparison
 
