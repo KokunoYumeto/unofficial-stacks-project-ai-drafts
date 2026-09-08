@@ -823,11 +823,11 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # The scope manifest is resealed whenever the append-only ledger frontier
 # advances.  Keep the byte/hash pin here (rather than deriving it at runtime)
 # so an accidental edit cannot silently widen the reviewed surface.  The
-# current seal closes the EGA I 7.3.1-7.3.4 semantic-only candidate and preserves
+# current seal closes the EGA I 7.3.5-7.3.7 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 55596 or
+if (len(scope_raw) != 57903 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "07217A2248D9EFA5AE278F2469180E1464D57F70F7F268E366EED5DB6DBA2CDA"):
+        "D723D088DC738B19810B72898EBA4118E4E32F67C3528D083B62D8DD24A86728"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -915,7 +915,8 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
             "ega:I.7.2.2.1", "ega:I.7.2.3", "ega:I.7.2.4",
             "ega:I.7.2.5", "ega:I.7.2.6", "ega:I.7.2.7",
             "ega:I.7.2.8", "ega:I.7.2.8.1", "ega:I.7.2.9",
-            "ega:I.7.3.1", "ega:I.7.3.2", "ega:I.7.3.3", "ega:I.7.3.4"}):
+            "ega:I.7.3.1", "ega:I.7.3.2", "ega:I.7.3.3", "ega:I.7.3.4",
+            "ega:I.7.3.5", "ega:I.7.3.6", "ega:I.7.3.7"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -2136,9 +2137,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 103985 or
+if (len(decision_raw) != 105155 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "F322E334AF244CC61E9587965DF35BF0C073EA8A2E1E9298DE42228F7EFB7C7D"):
+    "4F51CCA69FC49934C9AB227781E8FDD23E16411222D92F9A949D9A59FD777203"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5432,9 +5433,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 661086 or
+    if (len(smap_raw) != 673120 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "09E1960AECEB9E73A052A78AECB6CF1985C9E4F72ECD6AFB2827F6571F404A40"):
+        "BB7F61D1B6899E1EB8CD201E32C3E197A1E3D405E2A3EE73DC51661C7918564E"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6810,9 +6811,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 274629 or
+    if (len(residual_raw) != 277187 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "FAFD548A37057332D4EFDF65498CAB439D8B8325E82A07C2B2BA90BE874F2E5E"):
+        "C720043A2E7787699CE135797B2755E5B5659458721DF8ED2C818440ABFBE88F"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8094,9 +8095,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 152209 or
+    if (len(agent_raw) != 153485 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "1789177528403DCE9F80721E82B47C660BB2B24B2CE6CAA7CB2BD24CDE0BB596"):
+        "3C509559F825DC87437FA2DE0BC12F7E50A29002ED77DAC57C8B0CC1A2ECEB08"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -11220,11 +11221,27 @@ except (ValueError, OSError, UnicodeError) as error:
 from tools.ega_i734_semantic_contract import (
     RECEIPT_PATH as I734_RECEIPT_PATH, receipt_errors as i734_receipt_errors,
     verify as i734_semantic_contract_errors,
+    historical_inputs as i734_historical_inputs,
 )
 i734_raw = (ROOT.parent / I734_RECEIPT_PATH).read_bytes()
 ERRORS.extend(i734_receipt_errors(i734_raw))
 i734_checkpoint = json.loads(i734_raw)
-ERRORS.extend(i734_semantic_contract_errors(i734_checkpoint, scope, i665_tables,
+try:
+    i734_scope, i734_tables, i734_loader = i734_historical_inputs(
+        i734_checkpoint, scope, lambda path: (ROOT.parent / path).read_bytes())
+    ERRORS.extend(i734_semantic_contract_errors(i734_checkpoint, i734_scope, i734_tables,
+        units_by_id, git_blob, pinned_tag_map, i734_loader))
+except (ValueError, OSError, UnicodeError) as error:
+    ERRORS.append(str(error))
+
+from tools.ega_i737_semantic_contract import (
+    RECEIPT_PATH as I737_RECEIPT_PATH, receipt_errors as i737_receipt_errors,
+    verify as i737_semantic_contract_errors,
+)
+i737_raw = (ROOT.parent / I737_RECEIPT_PATH).read_bytes()
+ERRORS.extend(i737_receipt_errors(i737_raw))
+i737_checkpoint = json.loads(i737_raw)
+ERRORS.extend(i737_semantic_contract_errors(i737_checkpoint, scope, i665_tables,
     units_by_id, git_blob, pinned_tag_map,
     lambda path: (ROOT.parent / path).read_bytes()))
 
