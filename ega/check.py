@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import csv
 import hashlib
+import io
 import json
 import math
 import re
@@ -822,11 +823,11 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # The scope manifest is resealed whenever the append-only ledger frontier
 # advances.  Keep the byte/hash pin here (rather than deriving it at runtime)
 # so an accidental edit cannot silently widen the reviewed surface.  The
-# current seal closes the EGA I 7.2.1-7.2.4 semantic-only candidate and preserves
+# current seal closes the EGA I 7.2.8-7.2.9 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 50119 or
+if (len(scope_raw) != 52572 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "0B9FF197837542EAAB2BD276F7E2A9E2B3C564D41E752BF42F4C03AFEE207BF4"):
+        "9E09DEFD77B60739AA994152E1BF5279EC7599BC43AFD4CE21EF4FCBB7DA31E3"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -912,7 +913,8 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
             "ega:I.7.1.11", "ega:I.7.1.12", "ega:I.7.1.13", "ega:I.7.1.14",
             "ega:I.7.1.15", "ega:I.7.1.16", "ega:I.7.2.1", "ega:I.7.2.2",
             "ega:I.7.2.2.1", "ega:I.7.2.3", "ega:I.7.2.4",
-            "ega:I.7.2.5", "ega:I.7.2.6", "ega:I.7.2.7"}):
+            "ega:I.7.2.5", "ega:I.7.2.6", "ega:I.7.2.7",
+            "ega:I.7.2.8", "ega:I.7.2.8.1", "ega:I.7.2.9"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -2133,9 +2135,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 101196 or
+if (len(decision_raw) != 102396 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "D11EF939B22DCFCC5DCEBCA6AD601AD871253230034ACEA876B096A123748BBC"):
+    "40C790BC42CA8A2F4FA41ECA1819D1DB9FAA813DC8DA0FF4DA0A2F51216EE153"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5429,9 +5431,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 637334 or
+    if (len(smap_raw) != 648972 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "5A410CE77000A4FF3031937AF0B73AF64FE760071F24352E2E8788F0BDE550B7"):
+        "9C23E499636C6C1013074D59E1C641365FED8EB7B83D1BE0F99F3C2C7CDFF4FC"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6807,9 +6809,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 268309 or
+    if (len(residual_raw) != 271866 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "865011925AC56679D724B5812EAC8379401FE45C730F733DF1C488E5B1710103"):
+        "2341B23E17899C1F5134095ED8998FE40F34BA81D83DCF84636F625E387E448A"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8091,9 +8093,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 149567 or
+    if (len(agent_raw) != 150682 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "D0A9FF3A1A4DD746654582B08AF1379D93CD45EAC4630951601B8B0D66AFDD65"):
+        "A7446A8A78488BE9411678B9668EF98DEA62B0D1CE8FC2FE43D0933A8489F530"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -11172,8 +11174,7 @@ if len(i727_raw) != 73459 or hashlib.sha256(i727_raw).hexdigest().upper() != "6E
 i727_checkpoint = json.loads(i727_raw.decode("utf-8"))
 ERRORS.extend(i727_dossier_contract_errors((ROOT / "i727.md").read_bytes(),
     i727_checkpoint.get("derivation_dossier")))
-ERRORS.extend(i727_semantic_contract_errors(i727_checkpoint, scope, i665_tables,
-    units_by_id, git_blob, pinned_tag_map))
+i727_historical_tables = {}
 for manifest in i727_checkpoint["ledgers"]:
     raw = (ROOT.parent / manifest["path"]).read_bytes()
     require_strict_lf(raw, manifest["path"])
@@ -11182,12 +11183,33 @@ for manifest in i727_checkpoint["ledgers"]:
     require_raw_block([line + b"\n" for line in raw.split(b"\n")[:-1]],
         manifest["prefix_rows"] + 1, manifest["final_rows"],
         manifest["append_bytes"], manifest["append_sha256"], manifest["path"] + " I7.2.5-7 append")
-    if len(raw) != manifest["bytes"] or hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]:
-        ERRORS.append("I7.2.7 current ledger postimage changed")
+    require_lf_prefix(raw, manifest["final_rows"] + 1,
+        manifest["bytes"], manifest["sha256"], manifest["path"] + " through I7.2.7")
+    historical_raw = b"".join([line + b"\n" for line in raw.split(b"\n")[:-1]][:manifest["final_rows"] + 1])
+    historical_rows = list(csv.DictReader(io.StringIO(historical_raw.decode("utf-8"), newline="")))
+    historical_superseded = {r.get("supersedes") for r in historical_rows if r.get("supersedes")}
+    i727_historical_tables[manifest["path"]] = [r for r in historical_rows
+        if r[manifest["id_field"]] not in historical_superseded]
+ERRORS.extend(i727_semantic_contract_errors(i727_checkpoint, {**scope,
+    "statement_review_snapshot": i727_checkpoint["statement_review_snapshot"],
+    "residual_snapshot": i727_checkpoint["residual_snapshot"]}, i727_historical_tables,
+    units_by_id, git_blob, pinned_tag_map))
 for item in i727_checkpoint["preserved_inputs"]:
     raw = (ROOT.parent / item["path"]).read_bytes()
     if len(raw) != item["bytes"] or hashlib.sha256(raw).hexdigest().upper() != item["sha256"]:
         ERRORS.append("I7.2.7 preserved input changed: " + item["path"])
+
+sys.path.insert(0, str(ROOT.parent))
+from tools.ega_i729_semantic_contract import (
+    RECEIPT_PATH as I729_RECEIPT_PATH, receipt_errors as i729_receipt_errors,
+    verify as i729_semantic_contract_errors,
+)
+i729_raw = (ROOT.parent / I729_RECEIPT_PATH).read_bytes()
+ERRORS.extend(i729_receipt_errors(i729_raw))
+i729_checkpoint = json.loads(i729_raw.decode("utf-8"))
+ERRORS.extend(i729_semantic_contract_errors(i729_checkpoint, scope, i665_tables,
+    units_by_id, git_blob, pinned_tag_map,
+    lambda path: (ROOT.parent / path).read_bytes()))
 
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",
