@@ -2963,3 +2963,155 @@ candidate. The root's next executable action is to integrate that commit
 onto the then-current public lineage, run full-checkout release gates,
 publish under its existing authority and perform anonymous byte readback.
 This log does not claim that those root-owned operations already happened.
+
+## 2026-09-08: EGA I 7.2.5–7.2.7 candidate preparation
+
+The next sequential candidate starts from integrated source commit
+`5d00ecc6c78e55f0a9118ffe7198a53242ac41b5`. This is a local preparation
+base, not a claim that the preceding checkpoint has completed publication.
+The scope is all three numbered statements and their complete proofs:
+French Chapter 7 lines 378–430 and English comparison lines 227–259.
+The old-page marker remains within the 7.2.5 proof. Section 7.2.8 is
+excluded apart from its exact begin/label boundary.
+
+The independently written explanation is [Rational sections, regular
+functions, and reduced closures](i727.md). It derives section preservation
+on the base-preserving domain, the regular-function correspondence on a
+dense open, and the reduced-closure criterion for extending a section.
+The graph/scalar domain comparison is proved without reducedness; the
+correspondence uses reducedness for uniqueness. The closure proof supplies
+both density and closedness inclusions and adds no retrocompactness.
+Ordinary-domain strengthenings of 7.2.5 and the parenthetical in 7.2.7
+remain qualified with the doubled-origin example. They are not converted
+into missing theorems or adjudicated printed errata.
+
+Exactly three decisions, 21 component mappings, 14 residual dispositions,
+and two completed source/dossier review records are appended. Earlier
+ledger bytes, discovery rows, immutable source receipts and the twelve
+earlier open-gap rows are unchanged. All new positive mappings reference
+existing official tags. No root TeX, new label, official tag, PDF, source
+edition or release is changed. Candidate code validation and complete
+independent candidate review are recorded separately when they finish.
+
+### Completed candidate validation and independent review
+
+Validation completed on 2026-09-08. The complete bounded candidate, including
+the independently written proofs, source boundaries, target statements,
+append-only ledgers and checker code, received an independent PASS.
+This is mathematical and evidence-contract review, not proof-assistant
+verification.
+
+The review found one robustness issue: malformed nested inputs could raise
+an exception instead of returning the checker's error list. The repair
+adds early shape guards and five regression methods. The final semantic
+suite has 44 test methods; the source-boundary suite has 35. All 375 tests
+in the bounded current-and-predecessor suite pass. The exact command was:
+
+```text
+python -B -m unittest tests.test_ega_i_668_semantic tests.test_ega_i_713_semantic tests.test_ega_i_719_semantic tests.test_ega_i_711014_semantic tests.test_ega_i_711516_semantic tests.test_ega_i_724_semantic tests.test_ega_i_727_semantic tests.test_ega_raw_source_boundaries tests.test_ega_i_713_source_boundaries tests.test_ega_i_719_source_boundaries tests.test_ega_i_711014_source_boundaries tests.test_ega_i_711516_source_boundaries tests.test_ega_i_724_source_boundaries tests.test_ega_i_727_source_boundaries tests.test_ega_checkpoint_successor
+```
+
+Terminal summary (progress dots omitted; exit code 0):
+
+```text
+----------------------------------------------------------------------
+Ran 375 tests in 86.520s
+
+OK
+```
+
+The first complete checkpoint check then found only a stale global
+scope-file seal inherited from the preceding checkpoint. Its expected
+length and hash were updated to the already independently reviewed scope:
+50,119 bytes, SHA-256
+`0B9FF197837542EAAB2BD276F7E2A9E2B3C564D41E752BF42F4C03AFEE207BF4`.
+No scope data, semantic function, ledger, receipt or test was changed by
+that repair. An independent comparison confirmed that reversing these
+two constants reproduces the previously reviewed checker exactly.
+
+Final checker identity: 559,176 bytes, SHA-256
+`F9D6054DD3FF7F09866D114ACCF76F0BC978081C94BA9399988956FEA57A7DE1`.
+New semantic tests: 24,348 bytes, SHA-256
+`5C4B9CD68CF29DD2AAB57DC737423296E333582F77EEC6A9837CE10812E2529B`.
+Final complete checkpoint output from `python -B ega/check.py`
+(exit code 0; line endings normalized here):
+
+```json
+{
+  "counts": {
+    "agent.csv": 278,
+    "cand.csv": 2749,
+    "dec.csv": 361,
+    "fb.csv": 0,
+    "files.csv": 127,
+    "findings.jsonl": 26,
+    "issues.csv": 102,
+    "operational_statement_edges": 1403,
+    "operational_vqa_rows": 26,
+    "pages.csv": 29,
+    "pending_visual_referral_crops": 0,
+    "qsrc.csv": 16,
+    "quarantined_residual_rows": 0,
+    "quarantined_statement_edges": 0,
+    "quarantined_vqa_rows": 0,
+    "resid.csv": 919,
+    "smap.csv": 1422,
+    "source_error_qa_bytes": 6022269,
+    "source_error_qa_crops": 16,
+    "src.csv": 1,
+    "tmap.csv": 24,
+    "topics.csv": 36,
+    "units.csv": 9585,
+    "vqa.csv": 45
+  },
+  "errors": [],
+  "existing_official_tags_referenced": 13,
+  "official_tags_assigned_by_scaffold": 0,
+  "schema": "ega-stacks-scaffold-check-v1",
+  "status": "PASS"
+}
+```
+
+The live source replay was run with
+`python -B tools/check_ega_i727_source_boundaries.py`. It fetched both
+pinned raw sources and checked whole-file identities, complete numbered
+statements and proofs, context, page-marker ownership and the next
+excluded numbered boundary. Actual output (exit code 0; line endings
+normalized here):
+
+```json
+{
+  "schema": "ega-i727-raw-source-boundary-replay/v1",
+  "sources": {
+    "fr": {
+      "bytes": 38226,
+      "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+      "status": "PASS"
+    },
+    "en": {
+      "bytes": 35788,
+      "sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+      "status": "PASS"
+    }
+  },
+  "errors": [],
+  "status": "PASS"
+}
+```
+
+Independent final review also confirmed the fifteen separately pinned
+official/current target blocks, the exact four ledger prefixes and
+appends, fourteen unchanged inputs, all twelve unchanged earlier gap
+rows, and the distinction between the absolute and base-preserving
+domains. It found no remaining concrete defect. The immutable semantic
+receipt remains 73,459 bytes, SHA-256
+`6E3397BA0D432A61890F6908AB407B29AB31D94A8EAEAEC64A94CC12D683BBC2`;
+the readable dossier remains 16,186 bytes, SHA-256
+`8208934F1221BF5DB907B0FA39DBC48918584D7EA21E76F091052C47B72A8131`.
+
+Exact-path whitespace checks pass. The bounded candidate changes twelve
+files only. No TeX or Lean process, source-edition alteration, root theorem,
+official tag, build, release, push or release-asset readback was performed here.
+The next source-order unit is EGA I 7.2.8. Full EGA integration remains
+unfinished. Integration onto the current public lineage and publication
+belong to the separate release workflow, not this candidate receipt.

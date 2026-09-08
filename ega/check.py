@@ -824,9 +824,9 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # so an accidental edit cannot silently widen the reviewed surface.  The
 # current seal closes the EGA I 7.2.1-7.2.4 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 47796 or
+if (len(scope_raw) != 50119 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "CC04AA147337A23F3668150D648ED27685C2E3057CA0EE5E1D5659BE7BAAD66B"):
+        "0B9FF197837542EAAB2BD276F7E2A9E2B3C564D41E752BF42F4C03AFEE207BF4"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -911,7 +911,8 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
             "ega:I.7.1.9", "ega:I.7.1.9.1", "ega:I.7.1.10",
             "ega:I.7.1.11", "ega:I.7.1.12", "ega:I.7.1.13", "ega:I.7.1.14",
             "ega:I.7.1.15", "ega:I.7.1.16", "ega:I.7.2.1", "ega:I.7.2.2",
-            "ega:I.7.2.2.1", "ega:I.7.2.3", "ega:I.7.2.4"}):
+            "ega:I.7.2.2.1", "ega:I.7.2.3", "ega:I.7.2.4",
+            "ega:I.7.2.5", "ega:I.7.2.6", "ega:I.7.2.7"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -2132,9 +2133,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 100089 or
+if (len(decision_raw) != 101196 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "BDD4C251FC6933086FD041D9EAE452B5D57E39B271E5BACD8A1265CA695FEEF5"):
+    "D11EF939B22DCFCC5DCEBCA6AD601AD871253230034ACEA876B096A123748BBC"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5428,9 +5429,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 626340 or
+    if (len(smap_raw) != 637334 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "AE3C3C5E2F719327C4C9E6FE53EEEF1F632E7E6619692EE434F2C82EAFAAC28A"):
+        "5A410CE77000A4FF3031937AF0B73AF64FE760071F24352E2E8788F0BDE550B7"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6806,9 +6807,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 264558 or
+    if (len(residual_raw) != 268309 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "36805ECE267361BA84D8A1BACB8CA374BB355C5C856528611614B85108150F7C"):
+        "865011925AC56679D724B5812EAC8379401FE45C730F733DF1C488E5B1710103"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8090,9 +8091,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 148403 or
+    if (len(agent_raw) != 149567 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "9DC4E3FC0BF8FE2F46B7762EDB32ECC85E0F4A70E5A1390CC1FE59DCD9EEBD44"):
+        "D0A9FF3A1A4DD746654582B08AF1379D93CD45EAC4630951601B8B0D66AFDD65"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -10204,7 +10205,9 @@ if len(i724_raw) != 67065 or hashlib.sha256(i724_raw).hexdigest().upper() != "F7
 i724_checkpoint = json.loads(i724_raw.decode("utf-8"))
 ERRORS.extend(i724_dossier_contract_errors((ROOT / "i724.md").read_bytes(),
     i724_checkpoint.get("derivation_dossier")))
-ERRORS.extend(i724_semantic_contract_errors(i724_checkpoint, scope, i665_tables,
+ERRORS.extend(i724_semantic_contract_errors(i724_checkpoint, {**scope,
+    "statement_review_snapshot": i724_checkpoint["statement_review_snapshot"],
+    "residual_snapshot": i724_checkpoint["residual_snapshot"]}, i665_tables,
     units_by_id, git_blob, pinned_tag_map))
 for manifest in i724_checkpoint["ledgers"]:
     raw = (ROOT.parent / manifest["path"]).read_bytes()
@@ -10214,12 +10217,977 @@ for manifest in i724_checkpoint["ledgers"]:
     require_raw_block([line + b"\n" for line in raw.split(b"\n")[:-1]],
         manifest["prefix_rows"] + 1, manifest["final_rows"],
         manifest["append_bytes"], manifest["append_sha256"], manifest["path"] + " I7.2.1-4 append")
-    if len(raw) != manifest["bytes"] or hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]:
-        ERRORS.append("I7.2.4 current ledger postimage changed")
+    require_lf_prefix(raw, manifest["final_rows"] + 1,
+        manifest["bytes"], manifest["sha256"], manifest["path"] + " historical I7.2.4 postimage")
 for item in i724_checkpoint["preserved_inputs"]:
     raw = (ROOT.parent / item["path"]).read_bytes()
     if len(raw) != item["bytes"] or hashlib.sha256(raw).hexdigest().upper() != item["sha256"]:
         ERRORS.append("I7.2.4 preserved input changed: " + item["path"])
+
+def i727_contract_shape_errors(checkpoint, scope_state, tables=None):
+    """Reject malformed nested JSON/CSV containers before inspecting content."""
+    errors = []
+    if not isinstance(checkpoint, dict) or not isinstance(scope_state, dict):
+        return ["I7.2.7 checkpoint and scope must be objects"]
+
+    def object_at(container, key, context):
+        value = container.get(key)
+        if not isinstance(value, dict):
+            errors.append("I7.2.7 " + context + " must be an object")
+            return {}
+        return value
+
+    def object_rows(container, key, context):
+        value = container.get(key)
+        if not isinstance(value, list) or any(not isinstance(row, dict) for row in value):
+            errors.append("I7.2.7 " + context + " must be an array of objects")
+            return []
+        return value
+
+    def csv_rows(value, context):
+        if (not isinstance(value, list) or any(
+                not isinstance(row, dict) or any(
+                    not isinstance(key, str) or (cell is not None and not isinstance(cell, str))
+                    for key, cell in row.items())
+                for row in value)):
+            errors.append("I7.2.7 " + context + " must contain CSV object rows with text or null cells")
+
+    for key in ("semantic_contract", "statement_review_snapshot", "residual_snapshot", "derivation_dossier"):
+        object_at(checkpoint, key, key)
+    for key in ("source_units", "source_proof_units"):
+        value = checkpoint.get(key)
+        if not isinstance(value, list) or any(not isinstance(unit, str) for unit in value):
+            errors.append("I7.2.7 " + key + " must be an array of strings")
+    authority = object_at(checkpoint, "french_authority", "French authority")
+    binding = object_at(authority, "manifest_file_binding", "French manifest binding")
+    object_at(binding, "manifest_file_row", "French manifest file row")
+    scopes = object_at(authority, "source_scopes", "French source scopes")
+    if any(not isinstance(value, dict) for value in scopes.values()):
+        errors.append("I7.2.7 French source scope rows must be objects")
+    languages = object_at(checkpoint, "languages", "languages")
+    for language in ("fr", "en"):
+        source = object_at(languages, language, language + " source")
+        for key in ("slices", "owned_parts", "numbered_environments", "page_markers"):
+            parts = object_at(source, key, language + " " + key)
+            if any(not isinstance(value, dict) for value in parts.values()):
+                errors.append("I7.2.7 source interval rows must be objects")
+        for key in ("combined", "next_excluded_boundary"):
+            object_at(source, key, language + " " + key)
+    for key in ("pinned_targets", "negative_comparison_targets", "supporting_targets", "integrated_targets"):
+        targets = object_rows(checkpoint, key, key)
+        if any(not isinstance(row.get(field), str) for row in targets for field in ("tag", "path", "label")):
+            errors.append("I7.2.7 target identities must contain text tag/path/label fields")
+    for ledger in object_rows(checkpoint, "ledgers", "ledgers"):
+        if not isinstance(ledger.get("path"), str) or not isinstance(ledger.get("id_field"), str):
+            errors.append("I7.2.7 ledger path and ID field must be strings")
+        csv_rows(ledger.get("rows"), "proposed ledger")
+    discovery = object_at(checkpoint, "english_discovery", "English discovery")
+    csv_rows(discovery.get("stable_units"), "English discovery")
+    object_rows(checkpoint, "preserved_inputs", "preserved inputs")
+    csv_rows(checkpoint.get("preserved_open_gap_rows"), "preserved open gaps")
+    reviewed = object_at(scope_state, "reviewed_source_slices", "reviewed source slices")
+    if any(not isinstance(value, dict) for value in reviewed.values()):
+        errors.append("I7.2.7 reviewed source slice rows must be objects")
+    for key in ("statement_review_snapshot", "residual_snapshot"):
+        object_at(scope_state, key, "scope " + key)
+    if tables is not None:
+        if not isinstance(tables, dict):
+            errors.append("I7.2.7 ledger tables must be an object")
+        else:
+            for path in ("ega/dec.csv", "ega/smap.csv", "ega/resid.csv", "ega/agent.csv"):
+                csv_rows(tables.get(path), path)
+    return errors
+
+def i727_dossier_contract_errors(raw, expected):
+    """Seal the reviewed exposition independently of a mutable receipt hash."""
+    identity = {"path": "ega/i727.md", "bytes": 16186,
+                "sha256": "8208934F1221BF5DB907B0FA39DBC48918584D7EA21E76F091052C47B72A8131"}
+    if (expected != identity or not isinstance(raw, bytes) or len(raw) != identity["bytes"]
+            or hashlib.sha256(raw).hexdigest().upper() != identity["sha256"]):
+        return ["I7.2.7 reviewed derivation dossier identity changed"]
+    return []
+
+
+def i727_source_target_contract_errors(checkpoint, scope_state, target_loader, tag_map):
+    """Bind independently replayed bilingual scopes and official/current blocks."""
+    errors = i727_contract_shape_errors(checkpoint, scope_state)
+    if not isinstance(tag_map, dict) or not callable(target_loader):
+        errors.append("I7.2.7 target loader must be callable and tag map an object")
+    if errors:
+        return errors
+    expected_sources = {
+      "fr": {
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-7-fr.tex",
+        "full_bytes": 38226,
+        "full_sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522",
+        "slices": {
+          "ega:I.7.2.5": {
+            "lf_line_start": 378,
+            "lf_line_end": 391,
+            "bytes": 628,
+            "sha256": "5B9B52ABB934EFB79513848921C6D66244D80BFABD1D0B14206DBD227C113A56",
+            "byte_offset_start": 18241,
+            "byte_offset_end_exclusive": 18869
+          },
+          "ega:I.7.2.6": {
+            "lf_line_start": 392,
+            "lf_line_end": 403,
+            "bytes": 567,
+            "sha256": "97718D1F6FA94E6E0C3412FE1DFCDC37CF19A3E9CEA46D0BFBF2DED1F18C3B13",
+            "byte_offset_start": 18869,
+            "byte_offset_end_exclusive": 19436
+          },
+          "ega:I.7.2.7": {
+            "lf_line_start": 404,
+            "lf_line_end": 430,
+            "bytes": 1571,
+            "sha256": "8AD22ABE950DF78CC67130A4FA89CBE886D307903605C19978CD0087DD149364",
+            "byte_offset_start": 19436,
+            "byte_offset_end_exclusive": 21007
+          }
+        },
+        "numbered_environments": {
+          "ega:I.7.2.5": {
+            "label": "I.7.2.5-fr",
+            "environment": "corollary",
+            "begin_line": 378,
+            "label_line": 379,
+            "closing_line": 385,
+            "lf_line_start": 378,
+            "lf_line_end": 385,
+            "bytes": 409,
+            "sha256": "2C0BCEAF3D521D835A4DD54B8B82FF472A08DA2FE32E3C825CECBE29165F2B2E",
+            "byte_offset_start": 18241,
+            "byte_offset_end_exclusive": 18650
+          },
+          "ega:I.7.2.6": {
+            "label": "I.7.2.6-fr",
+            "environment": "corollary",
+            "begin_line": 392,
+            "label_line": 393,
+            "closing_line": 397,
+            "lf_line_start": 392,
+            "lf_line_end": 397,
+            "bytes": 303,
+            "sha256": "7E094754E40F87434B5DD3921F459F354C84FBF8E122AC046A962A4501E70BB0",
+            "byte_offset_start": 18869,
+            "byte_offset_end_exclusive": 19172
+          },
+          "ega:I.7.2.7": {
+            "label": "I.7.2.7-fr",
+            "environment": "corollary",
+            "begin_line": 404,
+            "label_line": 405,
+            "closing_line": 414,
+            "lf_line_start": 404,
+            "lf_line_end": 414,
+            "bytes": 618,
+            "sha256": "3678FA6416C5F2BA5CA7D4B1C2AE445C2E6FB210D6C66359053D72D0EC9DD610",
+            "byte_offset_start": 19436,
+            "byte_offset_end_exclusive": 20054
+          }
+        },
+        "owned_parts": {
+          "ega:I.7.2.5:proof": {
+            "lf_line_start": 387,
+            "lf_line_end": 390,
+            "bytes": 217,
+            "sha256": "E7713A5991CC2E005A6F2B563A67545102276C429E1E6BE8F969ED4B4C1E4BDF",
+            "byte_offset_start": 18651,
+            "byte_offset_end_exclusive": 18868
+          },
+          "ega:I.7.2.6:proof": {
+            "lf_line_start": 399,
+            "lf_line_end": 402,
+            "bytes": 262,
+            "sha256": "C8D6147E4340121218B11DB6434A3832373FDEA6297128149A56F88B09A13848",
+            "byte_offset_start": 19173,
+            "byte_offset_end_exclusive": 19435
+          },
+          "ega:I.7.2.7:proof": {
+            "lf_line_start": 416,
+            "lf_line_end": 429,
+            "bytes": 951,
+            "sha256": "83D5E754B42BECB1E5FEE7510ED8B410464CD64E6B059C32A5B413D89A5C30B2",
+            "byte_offset_start": 20055,
+            "byte_offset_end_exclusive": 21006
+          }
+        },
+        "page_markers": {
+          "ega:I.7.2.5:page-marker": {
+            "lf_line_start": 387,
+            "lf_line_end": 387,
+            "bytes": 17,
+            "sha256": "2842CEF158E87C6AB8CAE08B140AA7D3008F3C7888CE04D04EF62C4C19B4B460",
+            "byte_offset_start": 18651,
+            "byte_offset_end_exclusive": 18668
+          }
+        },
+        "combined": {
+          "lf_line_start": 378,
+          "lf_line_end": 430,
+          "bytes": 2766,
+          "sha256": "8C477D4098B74E71A7931A7582E3CBF2643BAE26F7407C1A89E133B249CF2D11",
+          "byte_offset_start": 18241,
+          "byte_offset_end_exclusive": 21007
+        },
+        "next_excluded_boundary": {
+          "source_unit": "ega:I.7.2.8",
+          "lf_line_start": 431,
+          "lf_line_end": 432,
+          "bytes": 38,
+          "sha256": "A037B5EBFCAC3467B97C4E5D395F4E63D97C91EA6DC332984B40C3F3997196AC",
+          "byte_offset_start": 21007,
+          "byte_offset_end_exclusive": 21045
+        }
+      },
+      "en": {
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-en/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-7.tex",
+        "full_bytes": 35788,
+        "full_sha256": "B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC",
+        "slices": {
+          "ega:I.7.2.5": {
+            "lf_line_start": 227,
+            "lf_line_end": 237,
+            "bytes": 623,
+            "sha256": "DA9B3E9B937D2DBF3029F1E8265B95472532FFE0EAA904D96DD9F97CF21BB656",
+            "byte_offset_start": 16916,
+            "byte_offset_end_exclusive": 17539
+          },
+          "ega:I.7.2.6": {
+            "lf_line_start": 238,
+            "lf_line_end": 247,
+            "bytes": 491,
+            "sha256": "2D2DDB23708907DDBD13D5A2B0882D71EAD6CDD3A6742DEA02DECC6D9A4797A4",
+            "byte_offset_start": 17539,
+            "byte_offset_end_exclusive": 18030
+          },
+          "ega:I.7.2.7": {
+            "lf_line_start": 248,
+            "lf_line_end": 259,
+            "bytes": 1469,
+            "sha256": "9652F06F6CBC787C6440193A4D679F1588593E20D89723B0A605DB6BED215249",
+            "byte_offset_start": 18030,
+            "byte_offset_end_exclusive": 19499
+          }
+        },
+        "numbered_environments": {
+          "ega:I.7.2.5": {
+            "label": "I.7.2.5",
+            "environment": "corollary",
+            "begin_line": 227,
+            "label_line": 228,
+            "closing_line": 231,
+            "lf_line_start": 227,
+            "lf_line_end": 231,
+            "bytes": 398,
+            "sha256": "F831586EDBEB650069A6389D588A8D18CAA16CACBA70915284B0AA0F31F833A2",
+            "byte_offset_start": 16916,
+            "byte_offset_end_exclusive": 17314
+          },
+          "ega:I.7.2.6": {
+            "label": "I.7.2.6",
+            "environment": "corollary",
+            "begin_line": 238,
+            "label_line": 239,
+            "closing_line": 242,
+            "lf_line_start": 238,
+            "lf_line_end": 242,
+            "bytes": 277,
+            "sha256": "5759F7D6B2B45C6C4CB25DDC555199E04923AA31DBD2ED4F35C86C519EF578AD",
+            "byte_offset_start": 17539,
+            "byte_offset_end_exclusive": 17816
+          },
+          "ega:I.7.2.7": {
+            "label": "I.7.2.7",
+            "environment": "corollary",
+            "begin_line": 248,
+            "label_line": 249,
+            "closing_line": 252,
+            "lf_line_start": 248,
+            "lf_line_end": 252,
+            "bytes": 584,
+            "sha256": "900E34E450383B1796CD03A29C8316D09211B3CFA0C94B2CFF61B23FD606EC68",
+            "byte_offset_start": 18030,
+            "byte_offset_end_exclusive": 18614
+          }
+        },
+        "owned_parts": {
+          "ega:I.7.2.5:proof": {
+            "lf_line_start": 233,
+            "lf_line_end": 236,
+            "bytes": 223,
+            "sha256": "1F19F560F4FB27A299606C6B263726C166E453943BB317243AEFBF09BC8A51CF",
+            "byte_offset_start": 17315,
+            "byte_offset_end_exclusive": 17538
+          },
+          "ega:I.7.2.6:proof": {
+            "lf_line_start": 244,
+            "lf_line_end": 246,
+            "bytes": 212,
+            "sha256": "70BD81159AD1B472DF32A8E4FC67BD3261C2E80807B90BAFB1C902ABC5ED1B65",
+            "byte_offset_start": 17817,
+            "byte_offset_end_exclusive": 18029
+          },
+          "ega:I.7.2.7:proof": {
+            "lf_line_start": 254,
+            "lf_line_end": 258,
+            "bytes": 883,
+            "sha256": "1D1339242A2C9170E942E1B20EF589016FA1C585B5C00B2A1849EFA51493A8D8",
+            "byte_offset_start": 18615,
+            "byte_offset_end_exclusive": 19498
+          }
+        },
+        "page_markers": {
+          "ega:I.7.2.5:page-marker": {
+            "lf_line_start": 233,
+            "lf_line_end": 233,
+            "bytes": 17,
+            "sha256": "2842CEF158E87C6AB8CAE08B140AA7D3008F3C7888CE04D04EF62C4C19B4B460",
+            "byte_offset_start": 17315,
+            "byte_offset_end_exclusive": 17332
+          }
+        },
+        "combined": {
+          "lf_line_start": 227,
+          "lf_line_end": 259,
+          "bytes": 2583,
+          "sha256": "92B4535D0DE0D7DEEEB13ADEA075A50F16C40B583BFD96AF3F87091AAF751545",
+          "byte_offset_start": 16916,
+          "byte_offset_end_exclusive": 19499
+        },
+        "next_excluded_boundary": {
+          "source_unit": "ega:I.7.2.8",
+          "lf_line_start": 260,
+          "lf_line_end": 261,
+          "bytes": 35,
+          "sha256": "F6509B0EE23C99FF34618E5C3D380CEB3C81A950107E57C7BB78B6701A7DA5CF",
+          "byte_offset_start": 19499,
+          "byte_offset_end_exclusive": 19534
+        }
+      }
+    }
+    if checkpoint.get("languages") != expected_sources:
+        errors.append("I7.2.7 exact bilingual source owners proof page marker or boundary changed")
+    binding = checkpoint.get("french_authority", {}).get("manifest_file_binding", {})
+    if (binding.get("manifest") != "F37ZW.json" or binding.get("manifest_bytes") != 13345
+            or binding.get("manifest_sha256") != "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0"
+            or binding.get("manifest_file_row") != {
+                "relative_path": "ega1/ega1-7-fr.tex", "bytes": 38226,
+                "sha256": "73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522"}):
+        errors.append("I7.2.7 exact French manifest file row changed")
+    scopes = checkpoint.get("french_authority", {}).get("source_scopes", {})
+    if set(scopes) != set(expected_sources["fr"]["slices"]):
+        errors.append("I7.2.7 French source scope inventory changed")
+    for unit, source in expected_sources["fr"]["slices"].items():
+        expected = scopes.get(unit, {})
+        if (scope_state.get("reviewed_source_slices", {}).get(unit) != expected
+                or any(expected.get(a) != source.get(b) for a, b in (
+                    ("lf_line_start", "lf_line_start"), ("lf_line_end", "lf_line_end"),
+                    ("slice_bytes", "bytes"), ("slice_sha256", "sha256"),
+                    ("byte_offset_start", "byte_offset_start"),
+                    ("byte_offset_end_exclusive", "byte_offset_end_exclusive")))
+                or expected.get("receipt") != "F37ZW.json"
+                or expected.get("receipt_sha256") != "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0"
+                or expected.get("path") != "ega1/ega1-7-fr.tex"
+                or expected.get("full_bytes") != 38226
+                or expected.get("full_sha256") != expected_sources["fr"]["full_sha256"]):
+            errors.append("I7.2.7 exact French source binding changed: " + unit)
+    # These target blocks were read and hashed from both immutable Git trees,
+    # independently of the proposed checkpoint. Only 01JB has different bytes:
+    # the integrated block contains the pre-existing FAC reference environment.
+    expected_targets = [
+      {
+        "tag": "01J3",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-reduced-closed-subscheme",
+        "official": {
+          "lf_line_start": 2185,
+          "lf_line_end": 2236,
+          "bytes": 2286,
+          "sha256": "E4C94445551D2A8FBF7838EBA28ECC2319A9492E389A75A3A1C3700168D5BF90"
+        },
+        "integrated": {
+          "lf_line_start": 2318,
+          "lf_line_end": 2369,
+          "bytes": 2286,
+          "sha256": "E4C94445551D2A8FBF7838EBA28ECC2319A9492E389A75A3A1C3700168D5BF90"
+        }
+      },
+      {
+        "tag": "0356",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-map-into-reduction",
+        "official": {
+          "lf_line_start": 2268,
+          "lf_line_end": 2290,
+          "bytes": 963,
+          "sha256": "FD08EB7FC20085193F2C038A8C73EC1427ABDD4009308E1B260E40B57B65EEDE"
+        },
+        "integrated": {
+          "lf_line_start": 2449,
+          "lf_line_end": 2471,
+          "bytes": 963,
+          "sha256": "FD08EB7FC20085193F2C038A8C73EC1427ABDD4009308E1B260E40B57B65EEDE"
+        }
+      },
+      {
+        "tag": "01JH",
+        "path": "schemes.tex",
+        "label": "schemes-example-global-sections",
+        "official": {
+          "lf_line_start": 2830,
+          "lf_line_end": 2853,
+          "bytes": 1004,
+          "sha256": "38C0E9531AA4763B461739F324079843769E4C7A9D16B827A04D2AF268E63C12"
+        },
+        "integrated": {
+          "lf_line_start": 3046,
+          "lf_line_end": 3069,
+          "bytes": 1004,
+          "sha256": "38C0E9531AA4763B461739F324079843769E4C7A9D16B827A04D2AF268E63C12"
+        }
+      },
+      {
+        "tag": "01KT",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-section-immersion",
+        "official": {
+          "lf_line_start": 4274,
+          "lf_line_end": 4286,
+          "bytes": 463,
+          "sha256": "E75A1AD75F3B5B958093C8EFA0A1F8A00DD97DB7EF3AC1C37C350FD5752302D6"
+        },
+        "integrated": {
+          "lf_line_start": 4620,
+          "lf_line_end": 4632,
+          "bytes": 463,
+          "sha256": "E75A1AD75F3B5B958093C8EFA0A1F8A00DD97DB7EF3AC1C37C350FD5752302D6"
+        }
+      },
+      {
+        "tag": "01RH",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-equality-of-morphisms",
+        "official": {
+          "lf_line_start": 1211,
+          "lf_line_end": 1223,
+          "bytes": 448,
+          "sha256": "396485C8CB468CE09BF78140A7A78C3FFACECF05C159D916FF094CD546EA56ED"
+        },
+        "integrated": {
+          "lf_line_start": 1211,
+          "lf_line_end": 1223,
+          "bytes": 448,
+          "sha256": "396485C8CB468CE09BF78140A7A78C3FFACECF05C159D916FF094CD546EA56ED"
+        }
+      },
+      {
+        "tag": "01RT",
+        "path": "morphisms.tex",
+        "label": "morphisms-definition-rational-function",
+        "official": {
+          "lf_line_start": 12660,
+          "lf_line_end": 12664,
+          "bytes": 186,
+          "sha256": "F7B9D8A67F07D8A076D9A839C88D4AFC29EE1D72F87E633B2C5CF3B538B2ED87"
+        },
+        "integrated": {
+          "lf_line_start": 12763,
+          "lf_line_end": 12767,
+          "bytes": 186,
+          "sha256": "F7B9D8A67F07D8A076D9A839C88D4AFC29EE1D72F87E633B2C5CF3B538B2ED87"
+        }
+      },
+      {
+        "tag": "0A1X",
+        "path": "morphisms.tex",
+        "label": "morphisms-definition-domain-of-definition",
+        "official": {
+          "lf_line_start": 12806,
+          "lf_line_end": 12813,
+          "bytes": 364,
+          "sha256": "C34D0A721250DB649B0B19266D2667C0E5FE4451E4BB12F5B234B72D01FD6873"
+        },
+        "integrated": {
+          "lf_line_start": 12953,
+          "lf_line_end": 12960,
+          "bytes": 364,
+          "sha256": "C34D0A721250DB649B0B19266D2667C0E5FE4451E4BB12F5B234B72D01FD6873"
+        }
+      },
+      {
+        "tag": "0A1Y",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-rational-map-from-reduced-to-separated",
+        "official": {
+          "lf_line_start": 12819,
+          "lf_line_end": 12841,
+          "bytes": 1143,
+          "sha256": "CA8541FCA4AEB8477A88F96F3620FB2E0CFCCF934A758D181AE083B83283A459"
+        },
+        "integrated": {
+          "lf_line_start": 12966,
+          "lf_line_end": 12988,
+          "bytes": 1143,
+          "sha256": "CA8541FCA4AEB8477A88F96F3620FB2E0CFCCF934A758D181AE083B83283A459"
+        }
+      },
+      {
+        "tag": "056D",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-reduced-scheme-theoretically-dense",
+        "official": {
+          "lf_line_start": 1172,
+          "lf_line_end": 1189,
+          "bytes": 580,
+          "sha256": "2D1CB0105B0C9883834C27B8EB0D09F356135006158B1EA6167957BFB5BD01CF"
+        },
+        "integrated": {
+          "lf_line_start": 1172,
+          "lf_line_end": 1189,
+          "bytes": 580,
+          "sha256": "2D1CB0105B0C9883834C27B8EB0D09F356135006158B1EA6167957BFB5BD01CF"
+        }
+      },
+      {
+        "tag": "056B",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-scheme-theoretic-image-reduced",
+        "official": {
+          "lf_line_start": 976,
+          "lf_line_end": 988,
+          "bytes": 475,
+          "sha256": "40179F608CF896C3F98C28BFF653F25AA3FF29F5BC667A51D9BC8FF91915E0C7"
+        },
+        "integrated": {
+          "lf_line_start": 976,
+          "lf_line_end": 988,
+          "bytes": 475,
+          "sha256": "40179F608CF896C3F98C28BFF653F25AA3FF29F5BC667A51D9BC8FF91915E0C7"
+        }
+      },
+      {
+        "tag": "0CNG",
+        "path": "morphisms.tex",
+        "label": "morphisms-lemma-scheme-theoretic-image-of-partial-section",
+        "official": {
+          "lf_line_start": 990,
+          "lf_line_end": 1015,
+          "bytes": 1118,
+          "sha256": "C2E6CBCFF2861EE668E169A739C8C47909FCC7961A8B2F1CFE4EDAB62A627A10"
+        },
+        "integrated": {
+          "lf_line_start": 990,
+          "lf_line_end": 1015,
+          "bytes": 1118,
+          "sha256": "C2E6CBCFF2861EE668E169A739C8C47909FCC7961A8B2F1CFE4EDAB62A627A10"
+        }
+      },
+      {
+        "tag": "01KN",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-affine-separated",
+        "official": {
+          "lf_line_start": 4386,
+          "lf_line_end": 4400,
+          "bytes": 570,
+          "sha256": "971D02DA677AF3805300FB79A408A237CE25DBDBF41F36FC30837FA00CE208C5"
+        },
+        "integrated": {
+          "lf_line_start": 4735,
+          "lf_line_end": 4749,
+          "bytes": 570,
+          "sha256": "971D02DA677AF3805300FB79A408A237CE25DBDBF41F36FC30837FA00CE208C5"
+        }
+      },
+      {
+        "tag": "01JB",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-glue",
+        "official": {
+          "lf_line_start": 2544,
+          "lf_line_end": 2648,
+          "bytes": 3804,
+          "sha256": "7A9E57901A3F24D82A1C3F8E6D11407B7F96F1440450F42E5DDD442638BB2EBB"
+        },
+        "integrated": {
+          "lf_line_start": 2754,
+          "lf_line_end": 2861,
+          "bytes": 3898,
+          "sha256": "F08C966E64142722D7415CCD3CDFC6E6B0C7A0F6C426787E954F00305B6C5486"
+        }
+      },
+      {
+        "tag": "01KM",
+        "path": "schemes.tex",
+        "label": "schemes-lemma-where-are-they-equal",
+        "official": {
+          "lf_line_start": 4099,
+          "lf_line_end": 4122,
+          "bytes": 752,
+          "sha256": "77A9133E611D94F28950A4F73C0F9027F626045EB7F81A767D559CE7380C5400"
+        },
+        "integrated": {
+          "lf_line_start": 4432,
+          "lf_line_end": 4455,
+          "bytes": 752,
+          "sha256": "77A9133E611D94F28950A4F73C0F9027F626045EB7F81A767D559CE7380C5400"
+        }
+      },
+      {
+        "tag": "01JD",
+        "path": "schemes.tex",
+        "label": "schemes-example-affine-space-zero-doubled",
+        "official": {
+          "lf_line_start": 2670,
+          "lf_line_end": 2713,
+          "bytes": 2061,
+          "sha256": "59C9CB67D47D0BF31D64DEAFCDF896763681D61E24A28B6F724FC4146A9EE545"
+        },
+        "integrated": {
+          "lf_line_start": 2886,
+          "lf_line_end": 2929,
+          "bytes": 2061,
+          "sha256": "59C9CB67D47D0BF31D64DEAFCDF896763681D61E24A28B6F724FC4146A9EE545"
+        }
+      }
+    ]
+    base = "5d00ecc6c78e55f0a9118ffe7198a53242ac41b5"
+    if checkpoint.get("integrated_target_commit") != base:
+        errors.append("I7.2.7 integrated target comparison base changed")
+    official = [{**{k: t[k] for k in ("tag", "path", "label")}, **t["official"]}
+                for t in expected_targets]
+    integrated = [{**{k: t[k] for k in ("tag", "path", "label")}, **t["integrated"]}
+                  for t in expected_targets]
+    positive = checkpoint.get("pinned_targets", [])
+    negative = checkpoint.get("negative_comparison_targets", [])
+    supporting = checkpoint.get("supporting_targets", [])
+    current = checkpoint.get("integrated_targets", [])
+    def same_inventory(actual, expected):
+        return (len(actual) == len(expected)
+                and sorted(actual, key=lambda t: t.get("tag", "")) ==
+                sorted(expected, key=lambda t: t["tag"]))
+    if not same_inventory(positive, [t for t in official if t["tag"] not in {"01JD", "0CNG", "0356"}]):
+        errors.append("I7.2.7 exact positive target inventory changed")
+    if not same_inventory(negative, [t for t in official if t["tag"] in {"01JD", "0CNG"}]):
+        errors.append("I7.2.7 adverse and retrocompact comparison targets changed")
+    if not same_inventory(supporting, [t for t in official if t["tag"] == "0356"]):
+        errors.append("I7.2.7 reduced-source factorization support changed")
+    if not same_inventory(current, integrated):
+        errors.append("I7.2.7 exact integrated target inventory changed")
+    split_cache = {}
+    for commit, targets in ((PINNED_STACKS_COMMIT, official), (base, integrated)):
+        for target in targets:
+            cache_key = (commit, target["path"])
+            if cache_key not in split_cache:
+                raw = target_loader(*cache_key)
+                if not isinstance(raw, bytes):
+                    errors.append("I7.2.7 target loader did not return raw bytes: " + target["path"])
+                    split_cache[cache_key] = []
+                else:
+                    split_cache[cache_key] = [line + b"\n" for line in raw.split(b"\n")[:-1]]
+            raw_lines = split_cache[cache_key]
+            block = b"".join(raw_lines[target["lf_line_start"] - 1:target["lf_line_end"]])
+            prefix = target["path"][:-4] + "-"
+            short = target["label"][len(prefix):]
+            if (len(block) != target["bytes"]
+                    or hashlib.sha256(block).hexdigest().upper() != target["sha256"]
+                    or ("\\label{" + short + "}").encode() not in block):
+                errors.append("I7.2.7 exact " + commit[:8] + " target block changed: " + target["tag"])
+            if tag_map.get(target["label"]) != target["tag"]:
+                errors.append("I7.2.7 exact tag-label-file join changed: " + target["tag"])
+    return errors
+
+def i727_ledger_contract_errors(checkpoint, scope_state, tables, discovery_units):
+    """Seal independently reviewed rows, unchanged gaps and honest coverage counts."""
+    errors = i727_contract_shape_errors(checkpoint, scope_state, tables)
+    if not isinstance(tables, dict) or not isinstance(discovery_units, dict):
+        errors.append("I7.2.7 ledger tables and discovery units must be objects")
+    if errors:
+        return errors
+    def digest(value):
+        return hashlib.sha256(json.dumps(value, sort_keys=True,
+            separators=(",", ":"), ensure_ascii=False).encode()).hexdigest().upper()
+    inventory = {
+        "ega/dec.csv": ("decision_id", "D", 359, 362,
+            "09233D913A0C32F9DCAA7A09F5264E8C0BEF4B6566912CAAB7E51E9B6E6ED38A"),
+        "ega/smap.csv": ("edge_id", "S", 1402, 1423,
+            "368D3A1E4C6E017780856FEB83E59F6084600501480ACA587D6FE49A876AA049"),
+        "ega/resid.csv": ("residual_id", "R", 906, 920,
+            "B6E2C0DB2314AAC1AD7F774A54F2F45125A46E74F213B89917BBC1293FE34304"),
+        "ega/agent.csv": ("run_id", "A", 277, 279,
+            "B29740119019A2C5CDD15B391A1CA8C3DF0130B0C46F6CD5B17A156A0A48787B"),
+    }
+    units = ["ega:I.7.2." + str(n) for n in (5, 6, 7)]
+    all_units = set(units + [u + ":proof" for u in units])
+    ledgers = checkpoint.get("ledgers", [])
+    if len(ledgers) != 4 or {l.get("path") for l in ledgers} != set(inventory):
+        errors.append("I7.2.7 exact ledger inventory changed")
+    for ledger in ledgers:
+        path = ledger.get("path")
+        if path not in inventory:
+            continue
+        key, prefix, start, end, seal = inventory[path]
+        proposed = ledger.get("rows", [])
+        ids = [prefix + str(n).zfill(6) for n in range(start, end)]
+        if (ledger.get("id_field") != key or [r.get(key) for r in proposed] != ids
+                or ledger.get("prefix_rows") != start - 1
+                or ledger.get("final_rows") != end - 1 or digest(proposed) != seal):
+            errors.append("I7.2.7 immutable reviewed append or ID inventory changed: " + path)
+        actual = [r for r in tables.get(path, []) if r.get(key) in ids]
+        if actual != proposed or digest(actual) != seal:
+            errors.append("I7.2.7 reviewed ledger rows changed: " + path)
+        if path != "ega/agent.csv":
+            source_key = "subject_id" if path == "ega/dec.csv" else "source_unit"
+            if [r for r in tables.get(path, []) if r.get(source_key) in all_units] != proposed:
+                errors.append("I7.2.7 source-unit ledger closure changed: " + path)
+    snapshots = {
+        "statement_review_snapshot": {
+            "file": "smap.csv", "statement_edge_rows": 1403, "file_rows": 1422,
+            "superseded_rows": 19, "source_units": 463,
+            "existing_official_tag_rows": 1390, "distinct_existing_official_tags": 371,
+            "local_untagged_rows": 13, "full_statement_equivalences": 62},
+        "residual_snapshot": {
+            "file": "resid.csv", "rows": 886, "file_rows": 919,
+            "superseded_rows": 33, "open_gaps": 12, "integrated_local_mirror": 13},
+    }
+    for key, expected in snapshots.items():
+        if checkpoint.get(key) != expected or scope_state.get(key) != expected:
+            errors.append("I7.2.7 immutable coverage snapshot changed: " + key)
+    gaps = [r for r in tables.get("ega/resid.csv", []) if r.get("status") == "open_gap"]
+    if (len(gaps) != 12 or digest(gaps) !=
+            "F6FB2792D7BF41A4EB2A7569FC27CC4DE5B75B8C3E96DF04295F8BF668E16191"):
+        errors.append("I7.2.7 prior twelve open gap rows changed or were falsely closed")
+    expected_discovery = {
+        "ega:I.7.2.5": ("corollary", "7.2.5", "I.7.2.5", "ega:subsection:I.7.2",
+            "I:159", "228", "67D193CDFB1D950F21029D99CCBCE85C228766395F383AD3DEBC5274D3DA9E55"),
+        "ega:I.7.2.5:proof": ("proof", "proof", "", "ega:I.7.2.5",
+            "I:160", "234", "82254B80D75A93E42D5A0698010614566C6A1DC34F33F625898E6FD258B9C778"),
+        "ega:I.7.2.6": ("corollary", "7.2.6", "I.7.2.6", "ega:subsection:I.7.2",
+            "I:160", "239", "51027FADCF9A23D329F6F8847ECBFA87B3F584681E0ADEE978D0F14BA066F809"),
+        "ega:I.7.2.6:proof": ("proof", "proof", "", "ega:I.7.2.6",
+            "I:160", "244", "82254B80D75A93E42D5A0698010614566C6A1DC34F33F625898E6FD258B9C778"),
+        "ega:I.7.2.7": ("corollary", "7.2.7", "I.7.2.7", "ega:subsection:I.7.2",
+            "I:160", "249", "6E06303DE3DA8E65D7AE1DA83CA810DE5CC125743718FBBAB24F4090073913B4"),
+        "ega:I.7.2.7:proof": ("proof", "proof", "", "ega:I.7.2.7",
+            "I:160", "254", "82254B80D75A93E42D5A0698010614566C6A1DC34F33F625898E6FD258B9C778"),
+    }
+    fields = ("kind", "source_number", "source_label", "parent_id", "printed_page", "line", "anchor_sha256")
+    expected_rows = [{"unit_id": unit, "volume": "I", **dict(zip(fields, values)),
+                     "source_file": "ega1/ega1-7.tex", "authority_state": "english_discovery",
+                     "review_state": "unreviewed"} for unit, values in expected_discovery.items()]
+    proposed_discovery = checkpoint.get("english_discovery", {}).get("stable_units", [])
+    if proposed_discovery != expected_rows:
+        errors.append("I7.2.7 immutable English discovery inventory changed")
+    for row in expected_rows:
+        if discovery_units.get(row["unit_id"]) != row:
+            errors.append("I7.2.7 discovery promoted or changed: " + row["unit_id"])
+    positive = checkpoint.get("pinned_targets", [])
+    joins = {(t.get("tag"), t.get("label"), t.get("path")) for t in positive}
+    edges = [r for r in tables.get("ega/smap.csv", []) if r.get("source_unit") in all_units]
+    if (len(edges) != 21 or {r.get("source_unit") for r in edges} != all_units
+            or joins != {(r.get("official_tag"), r.get("stacks_label"), r.get("stacks_file")) for r in edges}):
+        errors.append("I7.2.7 positive component target coverage closure changed")
+    for row in edges:
+        if (row.get("relation") != "split" or row.get("coverage_claim") not in {"component", "covered_derived"}
+                or row.get("authority_state") != "french_admitted"
+                or row.get("review_state") != "reviewed_existing"
+                or row.get("stacks_commit") != PINNED_STACKS_COMMIT):
+            errors.append("I7.2.7 component overstated or authority changed: " + row.get("edge_id", ""))
+    residuals = {r.get("residual_id"): r for r in tables.get("ega/resid.csv", [])
+                 if r.get("source_unit") in all_units}
+    for n in range(906, 920):
+        identity = "R" + str(n).zfill(6)
+        expected = "known_semantic_difference" if n in {907, 913} else "covered_derived"
+        if residuals.get(identity, {}).get("status") != expected:
+            errors.append("I7.2.7 domain distinction or existing derivation changed: " + identity)
+    return errors
+
+def i727_semantic_contract_errors(checkpoint, scope_state, tables,
+                                 discovery_units, target_loader, tag_map):
+    """Check exact evidence and dispositions, not proof-assistant correctness."""
+    errors = i727_contract_shape_errors(checkpoint, scope_state, tables)
+    if (not isinstance(tables, dict) or not isinstance(discovery_units, dict)
+            or not isinstance(tag_map, dict) or not callable(target_loader)):
+        errors.append("I7.2.7 runtime tables/discovery/tag map must be objects with a callable loader")
+    if errors:
+        return errors
+    units = ["ega:I.7.2.5", "ega:I.7.2.6", "ega:I.7.2.7"]
+    if (checkpoint.get("schema") != "ega-i-7.2.5-7.2.7-semantic-checkpoint/v1"
+            or checkpoint.get("starting_content_commit") != "5d00ecc6c78e55f0a9118ffe7198a53242ac41b5"
+            or checkpoint.get("stacks_upstream") != PINNED_STACKS_COMMIT
+            or checkpoint.get("source_units") != units
+            or checkpoint.get("source_proof_units") != [u + ":proof" for u in units]
+            or checkpoint.get("next_semantic_cursor") != "ega:I.7.2.8"
+            or checkpoint.get("next_cursor_starts_with_numbered_environment") is not True):
+        errors.append("I7.2.7 exact source-order or immutable base identity changed")
+    # Reviewed against the full source passages and the independently worded
+    # dossier. These are fixed expectations, not values trusted from the receipt.
+    semantics = {
+      "absolute_domain": "union of ordinary representative domains",
+      "relative_domain": "union of S-morphism representative domains",
+      "section_domain": "union of section-representative domains",
+      "relative_domain_is_comparison_notation": True,
+      "I725_X_reduced": True,
+      "I725_X_and_Y_separated_over_S": True,
+      "I725_p_is_S_morphism": True,
+      "I725_initial_section_on_dense_U": True,
+      "I725_compare_p_h_with_open_inclusion_over_S": True,
+      "I725_S_representatives_are_X_sections": True,
+      "I725_D_S_equals_D_X": True,
+      "I725_glue_only_base_preserving_representatives": True,
+      "I725_ordinary_D_equals_D_S_in_general": False,
+      "counterexample_scheme": "affine line B with doubled origin and chart B1",
+      "I725_counterexample_S_equals_X": "B",
+      "I725_counterexample_Y": "B1",
+      "I725_counterexample_ordinary_domain": "B",
+      "I725_counterexample_D_S_and_D_X": "B1",
+      "I726_X_reduced_for_bijection": True,
+      "I726_U_dense": True,
+      "I726_target_scalar": "A1_Z",
+      "I726_scalar_graph_correspondence": True,
+      "I726_regraft_same_domain_with_open_inclusion": True,
+      "I726_ordinary_graph_D_equals_D_X_equals_scalar_D": True,
+      "I726_domain_equality_requires_reducedness": False,
+      "I726_bijection_requires_reducedness_in_stated_general_result": True,
+      "I726_X_separated_required": False,
+      "I726_integral_required": False,
+      "I726_injectivity_by_dense_equality": True,
+      "I726_surjectivity_by_maximal_scalar_restriction": True,
+      "I727_Y_reduced": True,
+      "I727_f_separated": True,
+      "I727_U_dense": True,
+      "I727_g_section_over_U": True,
+      "I727_Z_reduced_closed_structure_on_closure": True,
+      "I727_section_closed_over_U": True,
+      "I727_restriction_equality_scheme_theoretic": True,
+      "I727_isomorphism_implies_section": True,
+      "I727_section_implies_isomorphism": True,
+      "I727_necessity_uses_both_density_and_closedness": True,
+      "I727_global_section_unique": True,
+      "I727_U_retrocompact_required": False,
+      "I727_scheme_theoretic_image_identified_by_056B": True,
+      "I727_everywhere_defined_relative_domain": "D_Y=Y",
+      "I727_ordinary_everywhere_defined_equivalent_to_global_section": False,
+      "I727_counterexample_Y": "B",
+      "I727_counterexample_X": "B1",
+      "I727_counterexample_ordinary_domain": "B",
+      "I727_counterexample_reduced_closure": "B1 not isomorphic to B",
+      "I727_nonreduced_adverse_example": "identity on Spec(k[e]/e^2) has reduced closure Y_red",
+      "I727_nonseparated_adverse_example": "chart section of B to A1 has reduced closure B",
+      "Noetherian_required": False,
+      "finite_type_required": False,
+      "target_0CNG_role": "comparison only; retrocompact hypothesis and restricted conclusion",
+      "target_01JD_role": "adverse construction only",
+      "source_disposition": "existing-derived main results with qualified ordinary-domain readings for I725 and I727",
+      "new_root_theorem": False,
+      "official_tags_assigned": 0,
+      "source_edition_mutated": False,
+      "printed_erratum_claimed": False,
+      "formal_proof_checking": False,
+      "complete_EGA_claimed": False
+    }
+    if json.dumps(checkpoint.get("semantic_contract"), sort_keys=True) != json.dumps(semantics, sort_keys=True):
+        errors.append("I7.2.7 hypotheses graph domains closure proofs or nonclaims changed")
+    errors.extend(i727_source_target_contract_errors(checkpoint, scope_state, target_loader, tag_map))
+    errors.extend(i727_ledger_contract_errors(checkpoint, scope_state, tables, discovery_units))
+    expected_ledger_metadata = {
+      "ega/dec.csv": {
+        "path": "ega/dec.csv",
+        "id_field": "decision_id",
+        "prefix_rows": 358,
+        "prefix_bytes": 100089,
+        "prefix_sha256": "BDD4C251FC6933086FD041D9EAE452B5D57E39B271E5BACD8A1265CA695FEEF5",
+        "append_rows": 3,
+        "append_bytes": 1107,
+        "append_sha256": "FB0806133563E45BCE6A8DFA99D256C9B5430AFBF4FBA1DF89A89936708785BC",
+        "final_rows": 361,
+        "bytes": 101196,
+        "sha256": "D11EF939B22DCFCC5DCEBCA6AD601AD871253230034ACEA876B096A123748BBC"
+      },
+      "ega/smap.csv": {
+        "path": "ega/smap.csv",
+        "id_field": "edge_id",
+        "prefix_rows": 1401,
+        "prefix_bytes": 626340,
+        "prefix_sha256": "AE3C3C5E2F719327C4C9E6FE53EEEF1F632E7E6619692EE434F2C82EAFAAC28A",
+        "append_rows": 21,
+        "append_bytes": 10994,
+        "append_sha256": "D9E896DBC7AB7147AA9B93A0B3E359BE2A7947F289F6C95226BC82CFA1B480C1",
+        "final_rows": 1422,
+        "bytes": 637334,
+        "sha256": "5A410CE77000A4FF3031937AF0B73AF64FE760071F24352E2E8788F0BDE550B7"
+      },
+      "ega/resid.csv": {
+        "path": "ega/resid.csv",
+        "id_field": "residual_id",
+        "prefix_rows": 905,
+        "prefix_bytes": 264558,
+        "prefix_sha256": "36805ECE267361BA84D8A1BACB8CA374BB355C5C856528611614B85108150F7C",
+        "append_rows": 14,
+        "append_bytes": 3751,
+        "append_sha256": "B89905690776BEDF513E05F35EE04BAE36C4351E12E544EDCABF6A7859AC9459",
+        "final_rows": 919,
+        "bytes": 268309,
+        "sha256": "865011925AC56679D724B5812EAC8379401FE45C730F733DF1C488E5B1710103"
+      },
+      "ega/agent.csv": {
+        "path": "ega/agent.csv",
+        "id_field": "run_id",
+        "prefix_rows": 276,
+        "prefix_bytes": 148403,
+        "prefix_sha256": "9DC4E3FC0BF8FE2F46B7762EDB32ECC85E0F4A70E5A1390CC1FE59DCD9EEBD44",
+        "append_rows": 2,
+        "append_bytes": 1164,
+        "append_sha256": "3BF5B0E6B501B04B69EB3E7535B307F0D785568B8EB1658B48E630B251AE76E9",
+        "final_rows": 278,
+        "bytes": 149567,
+        "sha256": "D0A9FF3A1A4DD746654582B08AF1379D93CD45EAC4630951601B8B0D66AFDD65"
+      }
+    }
+    for ledger in checkpoint.get("ledgers", []):
+        actual = {k: v for k, v in ledger.items() if k != "rows"}
+        if actual != expected_ledger_metadata.get(ledger.get("path")):
+            errors.append("I7.2.7 exact ledger byte/prefix/append metadata changed")
+    preserved = json.dumps(checkpoint.get("preserved_inputs"), sort_keys=True,
+                           separators=(",", ":"), ensure_ascii=False).encode()
+    if hashlib.sha256(preserved).hexdigest().upper() != "26EF352E63049A58E4B6608B9AA2ED6393B485A5838079B7941750CB0C2B0B28":
+        errors.append("I7.2.7 preserved source discovery and historical input inventory changed")
+    gaps = json.dumps(checkpoint.get("preserved_open_gap_rows"), sort_keys=True,
+                     separators=(",", ":"), ensure_ascii=False).encode()
+    if hashlib.sha256(gaps).hexdigest().upper() != "F6FB2792D7BF41A4EB2A7569FC27CC4DE5B75B8C3E96DF04295F8BF668E16191":
+        errors.append("I7.2.7 preserved open-gap evidence changed")
+    if checkpoint.get("derivation_dossier") != {
+            "path": "ega/i727.md", "bytes": 16186,
+            "sha256": "8208934F1221BF5DB907B0FA39DBC48918584D7EA21E76F091052C47B72A8131"}:
+        errors.append("I7.2.7 independently reviewed dossier binding changed")
+    return errors
+
+
+i727_raw = (ROOT.parent / "validation" /
+    "ega-i-7.2.5-7.2.7-semantic-checkpoint-2026-09-08.json").read_bytes()
+if len(i727_raw) != 73459 or hashlib.sha256(i727_raw).hexdigest().upper() != "6E3397BA0D432A61890F6908AB407B29AB31D94A8EAEAEC64A94CC12D683BBC2":
+    ERRORS.append("I7.2.7 immutable semantic receipt identity changed")
+i727_checkpoint = json.loads(i727_raw.decode("utf-8"))
+ERRORS.extend(i727_dossier_contract_errors((ROOT / "i727.md").read_bytes(),
+    i727_checkpoint.get("derivation_dossier")))
+ERRORS.extend(i727_semantic_contract_errors(i727_checkpoint, scope, i665_tables,
+    units_by_id, git_blob, pinned_tag_map))
+for manifest in i727_checkpoint["ledgers"]:
+    raw = (ROOT.parent / manifest["path"]).read_bytes()
+    require_strict_lf(raw, manifest["path"])
+    require_lf_prefix(raw, manifest["prefix_rows"] + 1,
+        manifest["prefix_bytes"], manifest["prefix_sha256"], manifest["path"] + " through I7.2.4")
+    require_raw_block([line + b"\n" for line in raw.split(b"\n")[:-1]],
+        manifest["prefix_rows"] + 1, manifest["final_rows"],
+        manifest["append_bytes"], manifest["append_sha256"], manifest["path"] + " I7.2.5-7 append")
+    if len(raw) != manifest["bytes"] or hashlib.sha256(raw).hexdigest().upper() != manifest["sha256"]:
+        ERRORS.append("I7.2.7 current ledger postimage changed")
+for item in i727_checkpoint["preserved_inputs"]:
+    raw = (ROOT.parent / item["path"]).read_bytes()
+    if len(raw) != item["bytes"] or hashlib.sha256(raw).hexdigest().upper() != item["sha256"]:
+        ERRORS.append("I7.2.7 preserved input changed: " + item["path"])
 
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",
