@@ -115,7 +115,22 @@ verifies all 19 changed files (2,141,295 bytes) at
 `9958436fa9214b796192d1993449c6ed401597bc`;
 its [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34179789986).
 
-The current **EGA I §7.3.5–§7.3.7 comparison** proves constancy of
+The current **EGA I §7.3.8 comparison** explains the replacement of the
+original rational-pullback claim in EGA II. The [complete argument](ega/i738.md)
+constructs the corrected map under integral dominance and proves its
+generic-stalk isomorphism. It separately derives global injectivity and the
+precise isomorphism condition: the entire generic fiber must be the source's
+generic point. Affine-line and nonreduced counterexamples show why the older
+claim and an unconditional identification with meromorphic pullback fail.
+The [review](ega/i738-review.md) and
+[versioned source checkpoint](validation/ega-i-7.3.8-semantic-checkpoint-2026-09-08.json)
+preserve all three source versions and full proofs. The
+[integration validation](validation/ega-i-7.3.8-integration-validation-2026-09-08.json)
+records 130 passing tests, exact source replay and cumulative checks.
+No duplicate root theorem, official tag or PDF is added. Next: **§7.4.1**;
+the twelve earlier gaps and the rest of EGA I–IV remain unfinished.
+
+The preceding **EGA I §7.3.5–§7.3.7 comparison** proves constancy of
 quasi-coherent rational modules on an irreducible scheme, identifies
 tensorization with the constant generic fiber, and explains the possibly
 infinite, noncanonical basis choice in the integral case. It also proves
@@ -126,8 +141,7 @@ from simple modules and generic local rings from fields, with explicit
 counterexamples to unjustified stronger claims. The
 [immutable checkpoint](validation/ega-i-7.3.5-7.3.7-semantic-checkpoint-2026-09-08.json)
 binds all three source proofs. No duplicate root theorem, official tag or
-PDF is added. The twelve earlier gaps remain open. Next: **§7.3.8**;
-full EGA I–IV remains unfinished.
+PDF is added. The twelve earlier gaps remained open; its next unit was §7.3.8.
 The [integration validation](validation/ega-i-7.3.5-7.3.7-integration-validation-2026-09-08.json)
 records 93 passing regression tests, exact source replay and repository checks.
 The [public byte receipt](validation/ega-i-7.3.5-7.3.7-public-readback-2026-09-08.json)
@@ -166,7 +180,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.3.7: constant quasi-coherent rational modules, tensorization to the generic fiber, arbitrary-rank freeness in the integral case, local quasi-coherence and reduced structure-map injection. Complete proofs and counterexamples clarify the hypotheses. Next: §7.3.8. Existing Stacks coverage is reused; source editions remain read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.3.8: the corrected rational-pullback construction, its exact generic-fiber isomorphism criterion, and counterexamples separating rational from meromorphic pullback. Original and corrected source versions are distinguished. Next: §7.4.1. Existing Stacks coverage is reused; source editions remain read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

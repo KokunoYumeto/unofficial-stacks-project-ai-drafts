@@ -17,8 +17,29 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.3.7**.
-The next unit is **§7.3.8**; EGA as a whole is not complete. The new
+This tree records source-order semantic comparison through **EGA I §7.3.8**.
+The next unit is **§7.4.1**; EGA as a whole is not complete.
+
+The new [rational-pullback comparison](i738.md) explains why the original
+§7.3.8 assertion was replaced in EGA II. For a dominant morphism of integral
+schemes, it constructs the canonical map of rational-function sheaves and
+proves the corrected generic-stalk assertion. It then proves the stronger,
+separately identified result: this map is injective everywhere, and is an
+isomorphism exactly when the entire generic fiber consists of the source's
+generic point. The affine line over a field refutes the original claim;
+nonreduced examples distinguish rational from meromorphic pullback.
+
+The [independent review](i738-review.md),
+[three-version source checkpoint](../validation/ega-i-7.3.8-semantic-checkpoint-2026-09-08.json)
+and [printed replacement](../validation/ega-i-7.3.8-printed-replacement-authority-2026-09-08.json)
+keep the original French assertion, its later authoritative correction and
+the corrected English discovery text distinct. This does not duplicate a
+root theorem, modify an EGA edition or claim proof-assistant verification.
+The [integration checks](../validation/ega-i-7.3.8-integration-validation-2026-09-08.json)
+record 130 passing tests, all three exact source replays and cumulative
+repository validation. All twelve earlier open gaps remain open.
+
+The preceding
 [comparison](i737.md) proves that quasi-coherent modules over the dense-open
 rational-function sheaf on an irreducible scheme are constant. It explains
 the historical word “simple,” proves the arbitrary-direct-sum and gluing
