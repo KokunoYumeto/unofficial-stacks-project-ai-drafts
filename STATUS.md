@@ -115,7 +115,21 @@ verifies all 19 changed files (2,141,295 bytes) at
 `9958436fa9214b796192d1993449c6ed401597bc`;
 its [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34179789986).
 
-The current **EGA I §7.3.1–§7.3.4 comparison** constructs the dense-open
+The current **EGA I §7.3.5–§7.3.7 comparison** proves constancy of
+quasi-coherent rational modules on an irreducible scheme, identifies
+tensorization with the constant generic fiber, and explains the possibly
+infinite, noncanonical basis choice in the integral case. It also proves
+the source's local quasi-coherence assertion and the structure-map
+injection on every reduced scheme. The [full derivation](ega/i737.md)
+and [independent review](ega/i737-review.md) distinguish constant sheaves
+from simple modules and generic local rings from fields, with explicit
+counterexamples to unjustified stronger claims. The
+[immutable checkpoint](validation/ega-i-7.3.5-7.3.7-semantic-checkpoint-2026-09-08.json)
+binds all three source proofs. No duplicate root theorem, official tag or
+PDF is added. The twelve earlier gaps remain open. Next: **§7.3.8**;
+full EGA I–IV remains unfinished.
+
+The preceding **EGA I §7.3.1–§7.3.4 comparison** constructs the dense-open
 rational-function sheaf and proves restriction, generic-local-ring formulas,
 quasi-coherence under locally finite irreducible components, and the
 reduced-component decomposition. The [written derivation](ega/i734.md)
@@ -128,7 +142,7 @@ The [mathematical review](ega/i734-review.md) and
 [immutable source checkpoint](validation/ega-i-7.3.1-7.3.4-semantic-checkpoint-2026-09-08.json)
 keep source ownership and the supplied proof of §7.3.4 explicit. No duplicate
 root theorem, official tag, source-edition change or PDF is added. The twelve
-earlier open gaps remain open. Next: **§7.3.5**; full EGA I–IV is unfinished.
+earlier open gaps remained open at that checkpoint.
 The [anonymous public readback](validation/ega-i-7.3.1-7.3.4-public-readback-2026-09-08.json)
 matches all 20 changed files (2,241,412 bytes) at
 `ed2bdab71812f10d5bc8d2f9c14572a697c169f6`;
@@ -146,7 +160,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.3.4: construction, restriction and quasi-coherence of the dense-open rational-function sheaf, with its generic-local-ring description and reduced-component decomposition. Nonreduced examples distinguish this from regular-denominator meromorphic functions. Next: §7.3.5. Existing Stacks coverage is reused; source editions remain separate read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.3.7: constant quasi-coherent rational modules, tensorization to the generic fiber, arbitrary-rank freeness in the integral case, local quasi-coherence and reduced structure-map injection. Complete proofs and counterexamples clarify the hypotheses. Next: §7.3.8. Existing Stacks coverage is reused; source editions remain read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)

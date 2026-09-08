@@ -17,9 +17,27 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.3.4**.
-The next unit is **§7.3.5**, concerning modules over the rational-function
-sheaf; EGA as a whole is not complete. The new [comparison](i734.md)
+This tree records source-order semantic comparison through **EGA I §7.3.7**.
+The next unit is **§7.3.8**; EGA as a whole is not complete. The new
+[comparison](i737.md) proves that quasi-coherent modules over the dense-open
+rational-function sheaf on an irreducible scheme are constant. It explains
+the historical word “simple,” proves the arbitrary-direct-sum and gluing
+steps, and identifies tensorization with the constant generic fiber.
+For an integral scheme a possibly infinite basis gives a free rational
+module; that basis-dependent isomorphism is not canonical.
+
+The same dossier proves quasi-coherence of the rational-function sheaf
+under the source's local hypotheses and injectivity of the structure map
+on every reduced scheme. Counterexamples explain the roles of
+quasi-coherence, irreducibility and reducedness. The
+[independent review](i737-review.md) and
+[source checkpoint](../validation/ega-i-7.3.5-7.3.7-semantic-checkpoint-2026-09-08.json)
+preserve all three complete source proofs and distinguish them from the
+expanded arguments supplied here. This is a comparison using existing
+Stacks ingredients, not a duplicate root theorem or a proof-assistant result.
+All twelve earlier open gaps remain open.
+
+The preceding [comparison](i734.md)
 constructs EGA's dense-open rational-function sheaf, proves its restriction
 property, and gives the generic-local-ring description and quasi-coherence
 under locally finite irreducible components. It supplies the complete
@@ -65,7 +83,7 @@ and all earlier ledger prefixes remain immutable historical evidence.
 The immutable candidate receipt is distinct from subsequent
 [integration validation](../validation/ega-i-7.3.1-7.3.4-integration-validation-2026-09-08.json)
 and public readback; candidate state is not silently rewritten as publication.
-The current [public byte receipt](../validation/ega-i-7.3.1-7.3.4-public-readback-2026-09-08.json)
+The preceding [public byte receipt](../validation/ega-i-7.3.1-7.3.4-public-readback-2026-09-08.json)
 verifies all 20 changed files (2,241,412 bytes) at
 `ed2bdab71812f10d5bc8d2f9c14572a697c169f6`; its
 [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34182845773).
