@@ -18,7 +18,15 @@ EGA integration manifest enter the repository's root TeX tree.
 ## Current snapshot
 
 This tree records source-order semantic comparison through **EGA I §7.4.7**.
-The next unit is **§8.1.1**; EGA as a whole is not complete.
+The sequential semantic ledger still stops there; EGA as a whole is not complete.
+
+We are now checking coverage across EGA before choosing further additions.
+The [§8.1 coverage comparison](coverage/ega-i-8-1.md) identifies three results
+already supplied by Stacks: the domination criteria, the prime-localization
+correspondence, and the unique center of a local overring. It records two
+further combined statements as candidates, not as proved omissions or newly
+integrated root theorems. Existing coverage receives a checked correspondence,
+not a duplicate theorem.
 
 The new [torsion and support comparison](i74.md) supplies proofs for the
 seven results in §7.4, including arbitrary-rank generic embeddings and
