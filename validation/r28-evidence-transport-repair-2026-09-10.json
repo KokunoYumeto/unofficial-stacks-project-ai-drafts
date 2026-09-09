@@ -1,0 +1,33 @@
+{
+  "schema": "stacks-evidence-transport-repair/v1",
+  "date": "2026-09-10",
+  "purpose": "Restore the original supporting files needed to verify the R28 Smoothing correction. No mathematical text or historical evidence has been rewritten.",
+  "base_commit": "7f676209d9c2136265996bc7451d3c6a9bff3d00",
+  "overlay": "stacks-errata-a04446e-r28",
+  "manifest": {
+    "path": "ai-integrated/candidates/commons/stacks/errata/r28/candidate.manifest.json",
+    "sha256": "FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA",
+    "changed": false
+  },
+  "finding": "Five files named and hashed by the admitted manifest were absent from the integrated repository. The Smoothing source correction itself was already present. This repair restores the evidence files only.",
+  "recovery_method": "The four historical build artifacts were recovered from the preserved R28 registry worktree after their bytes were independently matched in three existing worktrees. The eight-byte attributes file was reconstructed from two identical neighboring candidate copies. Every restored file exactly matches the immutable R28 manifest hash.",
+  "restored_files": [
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r28/.gitattributes", "bytes": 8, "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"},
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r28/builds/smoothing.authority.log", "bytes": 62145, "sha256": "5BAA8737CFC66A04A5E7006CA30E5988CD45911368B7EAF4D173E0E8DAD60846"},
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r28/builds/smoothing.authority.pdf", "bytes": 620774, "sha256": "6B480159BF5BFA27E793F18F76A158D204EE1FD93E9270B8D667F1C7048B98B6"},
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r28/builds/smoothing.log", "bytes": 62145, "sha256": "C8B90FB8022ED2C82CF1791EDE3AC74061B029C622063B491E7E1A6D0DE8170F"},
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r28/builds/smoothing.pdf", "bytes": 620772, "sha256": "E35425F1699CCCB50A165F1A008F8B658103E7D5C847DBC4AD9CE0CE5C3EAF80"}
+  ],
+  "validation": {
+    "candidate_checker": "ai-integrated/candidates/commons/stacks/errata/r28/check-manifest.py",
+    "passed": true,
+    "references_checked": 52,
+    "unified_repository_prepublication": "PASS: 48 overlays, 1292 stable IDs, 1481 exact v2 operations, 69 exact R1-R3 replacements, 9 R1 tag additions, 21819 active permanent tags; existing fixed-point and visual receipts validated",
+    "historical_builds_replayed": false,
+    "reason_no_rebuild": "The recovered PDFs and logs are byte-identical to the artifacts already bound by the reviewed manifest. A new build would not repair the missing historical bytes."
+  },
+  "source_changes": 0,
+  "new_theorems": 0,
+  "historical_receipts_changed": false,
+  "publication_boundary": "This commit supplies the files. Exact public readback is recorded separately after the push; no new Zenodo version is required for this evidence-only repair."
+}
