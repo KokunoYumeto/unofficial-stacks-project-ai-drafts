@@ -2,7 +2,7 @@
 
 This directory contains machine-readable provenance, correction overlays,
 candidate contracts, replay evidence, schemas, and release records for the
-[Unofficial AI-Integrated Stacks Project](../README.md). It is part of the
+[Unofficial Stacks Project AI Drafts](../README.md). It is part of the
 unified repository, not a separate edition.
 
 > [!IMPORTANT]
@@ -21,8 +21,26 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **34**, containing **1,042 stable IDs**.
-- Current cutoff: R33 append-only successor
+The cumulative source includes **R1–R47 and the Verdier insertion**: 48
+admitted overlays with 1,292 stable units. Admission and source composition
+are separate checks; the [current composition receipt](../validation/composition-current.json)
+binds the registry cutoff and the applied operations. The
+[chapter-by-chapter comparison](changes/index.html) shows original and
+replacement text, rather than asking readers to infer changes from counts.
+
+The [R47 and Illusie fixed-point build](../validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json)
+records the cumulative build, and the [validation guide](../validation/README.md)
+distinguishes source, build and release evidence. Five missing historical
+R28 supporting files have been [restored byte-for-byte](../validation/r28-evidence-transport-repair-2026-09-10.json);
+neither its admitted manifest nor the Smoothing correction was rewritten.
+
+## Historical R33 checkpoint
+
+The following records describe the preserved R33 checkpoint, not the current
+source cutoff. Later admissions and compositions are linked above.
+
+- Integrated overlays at R33: **34**, containing **1,042 stable IDs**.
+- R33 cutoff: append-only successor
   `acb48c7edaf9595b542b003ed360399870188b7f`, tree
   `8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`.
 - The Stacks errata subset is **R1–R33**: 33 batches, 1,030 correction IDs, and
@@ -83,16 +101,16 @@ candidate `77fcc9fc2341e72b077224399743f1062e73b228`, and admission
 imported at `f3bfc1b987ac9defc1b7811650bac0ec84a01373`. The exact R27 manifest
 SHA-256 is `A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C`.
 
-The current R33 fixed-point receipts cover 28 PDFs, 2,730 pages, and 29,277,302
+The R33 fixed-point receipts cover 28 PDFs, 2,730 pages, and 29,277,302
 PDF bytes at source `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
 `3c292f9a4b94162ede69d2633b1272b057a498c3`. Both linked-worktree builds are
 byte-for-byte reproducible. All 116 pages of `spaces-morphisms.pdf` passed
 review, including all five correction-locus pages inspected individually at high
-resolution. R33 is the latest public errata preservation checkpoint at content
+resolution. The R33 public errata preservation checkpoint is at content
 head `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
-The six current assets total 184,010,318 bytes on each host; all six GitHub
+The six R33 assets total 184,010,318 bytes on each host; all six GitHub
 assets and all nine Zenodo files passed anonymous byte/hash readback. Zenodo
 version DOI [`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) is
 under concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).

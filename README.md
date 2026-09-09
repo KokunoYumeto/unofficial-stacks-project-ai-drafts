@@ -135,9 +135,12 @@ identified explicitly. [Scope and source comparison](gaga_r3/STATUS.md).
 ### EGA: selected scheme-theoretic additions — partial, ongoing
 
 EGA is **not fully integrated**. This tree's reviewed comparison reaches
-EGA I §7.3.4, including the construction of the rational-function sheaf
-and its quasi-coherence when the irreducible components are locally finite.
-The next source unit is §7.3.5, concerning modules over that sheaf.
+EGA I §7.4.7, including rational-function sheaves, torsion-free modules,
+generic embeddings, and support criteria. We are now comparing coverage
+across EGA before choosing further additions. The separate
+[§8.1 comparison](ega/coverage/ega-i-8-1.md) identifies three results already
+supplied by Stacks and two candidate combined statements; it does not claim
+five new theorems or complete coverage of EGA.
 The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
@@ -203,6 +206,14 @@ meromorphic functions formed by inverting nonzerodivisors. An explicit example
 shows how a nonzero nilpotent can disappear in the former but not the latter.
 These are written derivations from existing Stacks results, not new official
 theorems or machine-checked proofs.
+The later [§7.3.5–7.3.7 comparison](ega/i737.md) treats modules over the
+rational-function sheaf. The [§7.3.8 comparison](ega/i738.md) uses EGA II's
+published replacement of the original pullback assertion. Finally, the
+[§7.4 comparison](ega/i74.md) supplies the torsion and support arguments,
+repairs an overbroad tensor assertion under explicit quasi-coherence
+hypotheses, and adopts the already-published EGA III erratum for the
+proper-support claim. These source corrections, existing Stacks results,
+and independently written draft proofs are kept distinct.
 See the [validation and publication states](STATUS.md).
 Other concrete additions already in the draft include:
 
