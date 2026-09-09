@@ -1,0 +1,218 @@
+{
+  "schema": "ega-i74-root-integration-validation/v1",
+  "status": "PASS",
+  "date": "2026-09-09",
+  "description": "Source-bound draft proofs for EGA I §7.4: torsion, arbitrary-rank generic embeddings, dominant direct images, and the known support correction.",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "base_commit": "91c81b3b6373536555019f301a0009f4f7355274",
+  "integrated_source_commit": "acceb6e3b953d5b1475806027825853054d15189",
+  "candidate_commit": "3ce0052c32b8c5515d2e27e36ea0d6ad15f61434",
+  "candidate_tree": "1a7db0a6642ead6b76e006914382f1a4c9ffe2eb",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "scope": {
+    "units": [
+      "I.7.4.1",
+      "I.7.4.2",
+      "I.7.4.3",
+      "I.7.4.4",
+      "I.7.4.5",
+      "I.7.4.6",
+      "I.7.4.7"
+    ],
+    "source_proofs": 3,
+    "next_source_unit": "I.8.1.1",
+    "prior_open_gaps": 12,
+    "full_EGA_complete": false
+  },
+  "review": {
+    "mathematics": "Independent complete seven-unit review and root complete dossier review PASS; exact hypotheses challenged with counterexamples. This is AI review, not formal proof checking.",
+    "code": "Independent focused review PASS after one corrected UTF-8 structured-error bug.",
+    "dossier": {
+      "path": "ega/i74.md",
+      "bytes": 19207,
+      "sha256": "828336F9F505DAFCBD9C5DF17739D4917F9FBB078E3CA937D964986D82F9368E"
+    },
+    "receipt": {
+      "reviewer": "/root/ega74_finish_candidate/code_review",
+      "status": "PASS_AFTER_ONE_RESOLVED_MINOR_FINDING",
+      "path": "ega/i74-review.md",
+      "bytes": 22158,
+      "sha256": "E34297B8637ABAB0B1E95918E96CCFCABBA26FD4B7F6832BDC78CB892FA60720",
+      "reseal": "Existing builder emitted only changed reviewed-artifact identities in new74checkpoint and two literal SHA constants in74semantichelper; no CSV manuscript old738receipt or original math-review prefix edits.",
+      "checkpoint": {
+        "path": "validation/ega-i-7.4.1-7.4.7-semantic-checkpoint-2026-09-08.json",
+        "bytes": 231315,
+        "sha256": "82D960315E0E6E806E1B1AB34A37257846F32F152660B6A4D256CA19A9163F43"
+      }
+    }
+  },
+  "preservation": {
+    "root_tex_changed": false,
+    "pdf_bytes_changed": false,
+    "official_tags_allocated": 0,
+    "source_editions_changed": false,
+    "unadmitted_errata_composed": false,
+    "historical_ledgers": "Exact prior raw prefixes retained",
+    "historical_738_receipt": "Unchanged; exact predecessor code checked through a separately sealed historical projection."
+  },
+  "mathematical_outcome": [
+    "Original torsion and generic-embedding claims receive full independently written proofs.",
+    "The literal arbitrary-sheaf tensor assertion is refuted; a sufficient quasi-coherent correction is proved.",
+    "The known EGA III Erratum III, 12 governs the corrected support assertion; no novelty claim is made.",
+    "Independent weakenings for direct image and support are clearly distinguished from original hypotheses."
+  ],
+  "gates": [
+    {
+      "stage": "byte_replay",
+      "status": "PASS",
+      "files": 16,
+      "bytes": 2292535
+    },
+    {
+      "stage": "regression",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_ega_i_74_semantic",
+        "tests.test_ega_i_74_source_boundaries",
+        "tests.test_ega_i_738_semantic",
+        "tests.test_ega_i_738_source_boundaries",
+        "tests.test_ega_i_737_semantic",
+        "tests.test_ega_i_737_source_boundaries"
+      ],
+      "exit_code": 0,
+      "seconds": 54.117,
+      "output": ".....................................................................................................................\r\n----------------------------------------------------------------------\r\nRan 117 tests in 53.865s\r\n\r\nOK\r\n"
+    },
+    {
+      "stage": "ega_checker",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "ega/check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 21.628,
+      "output": "{\r\n  \"counts\": {\r\n    \"agent.csv\": 289,\r\n    \"cand.csv\": 2749,\r\n    \"dec.csv\": 381,\r\n    \"fb.csv\": 0,\r\n    \"files.csv\": 127,\r\n    \"findings.jsonl\": 26,\r\n    \"issues.csv\": 102,\r\n    \"operational_statement_edges\": 1515,\r\n    \"operational_vqa_rows\": 26,\r\n    \"pages.csv\": 29,\r\n    \"pending_visual_referral_crops\": 0,\r\n    \"qsrc.csv\": 16,\r\n    \"quarantined_residual_rows\": 0,\r\n    \"quarantined_statement_edges\": 0,\r\n    \"quarantined_vqa_rows\": 0,\r\n    \"resid.csv\": 975,\r\n    \"smap.csv\": 1534,\r\n    \"source_error_qa_bytes\": 6022269,\r\n    \"source_error_qa_crops\": 16,\r\n    \"src.csv\": 1,\r\n    \"tmap.csv\": 24,\r\n    \"topics.csv\": 36,\r\n    \"units.csv\": 9585,\r\n    \"vqa.csv\": 45\r\n  },\r\n  \"errors\": [],\r\n  \"existing_official_tags_referenced\": 13,\r\n  \"official_tags_assigned_by_scaffold\": 0,\r\n  \"schema\": \"ega-stacks-scaffold-check-v1\",\r\n  \"status\": \"PASS\"\r\n}\r\n"
+    },
+    {
+      "stage": "source_replay",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools/check_ega_i74_source_boundaries.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.365,
+      "output": "{\r\n  \"schema\": \"ega-i74-raw-source-boundary-replay/v1\",\r\n  \"scope\": \"three-source mechanical ownership and literal identity; not semantic admission\",\r\n  \"sources\": {\r\n    \"fr\": {\r\n      \"bytes\": 38226,\r\n      \"sha256\": \"73581030E142AD91D51F07A6DE7648101ECA92C7542EA52A2575F098F171F522\",\r\n      \"status\": \"PASS\"\r\n    },\r\n    \"en\": {\r\n      \"bytes\": 35788,\r\n      \"sha256\": \"B36636DA91ADA9B74A7F2B4BF1C18E4576D35B363947D06EA475BCBA2918ADBC\",\r\n      \"status\": \"PASS\"\r\n    },\r\n    \"errata_fr\": {\r\n      \"bytes\": 172424,\r\n      \"sha256\": \"20A61BA348909E4309A3CDA89FD6DDAF8C0FC5BA346FD44232458CDFEA2A2972\",\r\n      \"status\": \"PASS\"\r\n    }\r\n  },\r\n  \"errors\": [],\r\n  \"status\": \"PASS\"\r\n}\r\n"
+    },
+    {
+      "stage": "repository",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools/validate_unified_repository.py",
+        "--pre-publication"
+      ],
+      "exit_code": 0,
+      "seconds": 101.2,
+      "output": "Unified repository validation: PASS\r\n- registered overlays: 48\r\n- registered stable IDs: 1292\r\n- exact v2 operations checked: 1481\r\n- exact R1-R3 replacements checked: 69\r\n- R1 tag additions checked: 9\r\n- active permanent Stacks tags checked: 21819\r\n- fixed-point build receipt: validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json\r\n- required build stems covered: 35\r\n- visual-QA affected chapters checked: 5\r\n- reproducible PDF identities checked: 35\r\n- public Markdown documents checked: 7\r\n"
+    }
+  ],
+  "candidate_files": [
+    {
+      "path": "ega/agent.csv",
+      "bytes": 156930,
+      "sha256": "61F982FA2034FD663348D9E0B7EA19154B718E247C791760E3A962FBCF4EE276"
+    },
+    {
+      "path": "ega/check.py",
+      "bytes": 565636,
+      "sha256": "CAB90EF596DD820C5E35D13985985064AC6C0A191C717C860348E7A12FE767A4"
+    },
+    {
+      "path": "ega/dec.csv",
+      "bytes": 109554,
+      "sha256": "3D2ED4C99BD359AF984AB559A6B6AB2B309C684C4CF1191C53EFDC765A87F68B"
+    },
+    {
+      "path": "ega/i74.md",
+      "bytes": 19207,
+      "sha256": "828336F9F505DAFCBD9C5DF17739D4917F9FBB078E3CA937D964986D82F9368E"
+    },
+    {
+      "path": "ega/i74-review.md",
+      "bytes": 22158,
+      "sha256": "E34297B8637ABAB0B1E95918E96CCFCABBA26FD4B7F6832BDC78CB892FA60720"
+    },
+    {
+      "path": "ega/resid.csv",
+      "bytes": 283337,
+      "sha256": "EB46054E371C3E28BE71B97FF896E3E56390AF77B6D534496D7C3154F4EDD54B"
+    },
+    {
+      "path": "ega/scope.json",
+      "bytes": 66271,
+      "sha256": "B9F21529DBA61EC65BD20080393BDDAEDE2E97D13113366A61D7BE1CC92EC8C1"
+    },
+    {
+      "path": "ega/smap.csv",
+      "bytes": 702144,
+      "sha256": "BB3C48079B104C082C3DC773A827F47DA3389053306994B23D2F296D85D5DAC4"
+    },
+    {
+      "path": "tools/ega_i738_semantic_contract.py",
+      "bytes": 16955,
+      "sha256": "EDC66DD7AAB17CA011D0F1BC494510765AA20D35485C457D2F397D2B77EB5DC8"
+    },
+    {
+      "path": "tools/ega_i74_semantic_contract.py",
+      "bytes": 14559,
+      "sha256": "CFDF2048EE34C2EB80FDAAE1E4872E4A83D18062B35F411B1D1013DCC738CE24"
+    },
+    {
+      "path": "tools/check_ega_i74_source_boundaries.py",
+      "bytes": 19095,
+      "sha256": "E43B206A35465C7686293078E6C54522EE61A2283F8A6A271285B00F0F5FA189"
+    },
+    {
+      "path": "tests/test_ega_i_738_semantic.py",
+      "bytes": 16316,
+      "sha256": "DE8ACF98EC83A734CEFE82DCA20BC013E08160FBC6939414E0AA8B3047CFCE0C"
+    },
+    {
+      "path": "tests/test_ega_i_74_semantic.py",
+      "bytes": 14851,
+      "sha256": "BCC719D87CF2D13641B28452AA15BF9F5A58AD9EB6AF63A3E49C5D7BAE0395F7"
+    },
+    {
+      "path": "tests/test_ega_i_74_source_boundaries.py",
+      "bytes": 36672,
+      "sha256": "EC70FAB556C27DB38A4FF9A68C2DE9FFA8307633742E611EC77866C7EC136E41"
+    },
+    {
+      "path": "validation/ega-i-7.4.1-7.4.7-semantic-checkpoint-2026-09-08.json",
+      "bytes": 231315,
+      "sha256": "82D960315E0E6E806E1B1AB34A37257846F32F152660B6A4D256CA19A9163F43"
+    },
+    {
+      "path": "validation/ega-i-7.4.1-7.4.7-printed-authority-2026-09-08.json",
+      "bytes": 17535,
+      "sha256": "0A88EE3EE0093F0EEA0D79EFD599E54E7FD906E06BBCA182BD016125DA31D74A"
+    }
+  ],
+  "publication": {
+    "status": "LOCAL_GATES_PASS_READY_FOR_PUBLICATION",
+    "note": "This receipt certifies the integrated local content. Public commit identity, anonymous file readback and CI are recorded separately after publication."
+  }
+}

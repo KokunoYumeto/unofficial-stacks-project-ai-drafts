@@ -17,10 +17,38 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
-This tree records source-order semantic comparison through **EGA I §7.3.8**.
-The next unit is **§7.4.1**; EGA as a whole is not complete.
+This tree records source-order semantic comparison through **EGA I §7.4.7**.
+The next unit is **§8.1.1**; EGA as a whole is not complete.
 
-The new [rational-pullback comparison](i738.md) explains why the original
+The new [torsion and support comparison](i74.md) supplies proofs for the
+seven results in §7.4, including arbitrary-rank generic embeddings and
+torsion-free direct images under dominant maps of integral schemes.
+It separates the original hypotheses from independently proved stronger
+statements and explains which arguments already occur in Stacks.
+
+Two qualifications are particularly important. The tensor statement in
+§7.4.4 fails for arbitrary torsion-free sheaves: explicit skyscraper
+examples show that even finite type alone does not repair it. The draft
+proves a sufficient quasi-coherent version. For reducible schemes, the
+original proper-support assertion in §7.4.7 was already corrected by
+EGA III's **Erratum III, 12**. We use that published correction and prove
+the local component-generic criterion, without presenting it as a new
+discovery. Dense-support examples explain why some stronger support
+conclusions need finite type.
+
+The [independent review](i74-review.md),
+[source checkpoint](../validation/ega-i-7.4.1-7.4.7-semantic-checkpoint-2026-09-08.json)
+and [printed-source evidence](../validation/ega-i-7.4.1-7.4.7-printed-authority-2026-09-08.json)
+keep the original text, its known replacement, and our derivations distinct.
+These are independently written, source-bound draft proofs and comparisons,
+not proof-assistant verification or new official Stacks tags. All twelve
+earlier open gaps remain open.
+
+The [integration checks](../validation/ega-i-7.4.1-7.4.7-integration-validation-2026-09-09.json)
+record 117 passing regressions, exact French/English/erratum replay,
+and cumulative repository validation without rebuilding unchanged PDFs.
+
+The preceding [rational-pullback comparison](i738.md) explains why the original
 §7.3.8 assertion was replaced in EGA II. For a dominant morphism of integral
 schemes, it constructs the canonical map of rational-function sheaves and
 proves the corrected generic-stalk assertion. It then proves the stronger,

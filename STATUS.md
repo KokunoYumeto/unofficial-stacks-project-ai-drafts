@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-09-08**
+Status date: **2026-09-09**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -115,7 +115,22 @@ verifies all 19 changed files (2,141,295 bytes) at
 `9958436fa9214b796192d1993449c6ed401597bc`;
 its [exact-head workflow passed](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34179789986).
 
-The current **EGA I §7.3.8 comparison** explains the replacement of the
+The current **EGA I §7.4.1–§7.4.7 comparison** supplies proofs for torsion,
+arbitrary-rank generic embeddings, dominant direct images, and support
+criteria. The [dossier](ega/i74.md) gives explicit counterexamples to the
+overbroad tensor assertion in §7.4.4 and proves its quasi-coherent repair.
+It adopts the already-published **Erratum III, 12** for §7.4.7 and proves
+the correct local component-generic criterion. Stronger conclusions obtained
+here are identified separately from the historical statements.
+The [independent review](ega/i74-review.md) and
+[source checkpoint](validation/ega-i-7.4.1-7.4.7-semantic-checkpoint-2026-09-08.json)
+record the exact scope. Root TeX and PDFs are unchanged. Next: **§8.1.1**;
+all twelve earlier gaps and the rest of EGA remain unfinished.
+The [integration checks](validation/ega-i-7.4.1-7.4.7-integration-validation-2026-09-09.json)
+record 117 passing regressions, three exact source replays and cumulative
+repository validation.
+
+The preceding **EGA I §7.3.8 comparison** explains the replacement of the
 original rational-pullback claim in EGA II. The [complete argument](ega/i738.md)
 constructs the corrected map under integral dominance and proves its
 generic-stalk isomorphism. It separately derives global injectivity and the
@@ -127,7 +142,7 @@ The [review](ega/i738-review.md) and
 preserve all three source versions and full proofs. The
 [integration validation](validation/ega-i-7.3.8-integration-validation-2026-09-08.json)
 records 130 passing tests, exact source replay and cumulative checks.
-No duplicate root theorem, official tag or PDF is added. Next: **§7.4.1**;
+No duplicate root theorem, official tag or PDF was added. Its next unit was **§7.4.1**;
 the twelve earlier gaps and the rest of EGA I–IV remain unfinished.
 The [public byte receipt](validation/ega-i-7.3.8-public-readback-2026-09-08.json)
 matches all 20 changed files (2,262,568 bytes) at
@@ -184,7 +199,7 @@ not a claim of completed source integration.
 | Tôhoku | Historical comparison/draft-proof dossier; source integration incomplete | The dossier covers satellites under effacement hypotheses, cohomology with families of supports, and equivariant cohomology and Ext spectral sequences. Several corresponding proof labels are absent from the current readable source, and the proposed weaker-hypothesis composite-functor spectral sequence is not composed. See the [concrete integration gap](ROADMAP.md#tohoku-source-integration-gap). |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.3.8: the corrected rational-pullback construction, its exact generic-fiber isomorphism criterion, and counterexamples separating rational from meromorphic pullback. Original and corrected source versions are distinguished. Next: §7.4.1. Existing Stacks coverage is reused; source editions remain read-only inputs. |
+| EGA | Partial root-source composition; direct-source review active | The comparison reaches §7.4.7: torsion and generic embeddings, dominant direct images, the corrected tensor statement, and the published support erratum. Full draft proofs distinguish original claims, known corrections and independent strengthenings. Next: §8.1.1. Existing Stacks coverage is reused; source editions remain read-only inputs. |
 | Verdier | One proposition composed; remaining thesis open | Chapter II, Proposition 1.2.13 supplies the obstruction to functorial cone choices. This is not full-thesis integration. |
 
 The [EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
