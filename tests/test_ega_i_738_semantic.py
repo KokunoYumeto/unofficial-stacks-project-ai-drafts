@@ -23,6 +23,14 @@ class Semantic738Tests(unittest.TestCase):
                  cls.frozen['reviewed_artifacts'] + cls.frozen['ledgers']}
         paths |= {'ega/i738.md', contract.AUTHORITY['path']}
         cls.frozen_raw = {p: (ROOT / p).read_bytes() for p in paths}
+        cls.live_raw = dict(cls.frozen_raw)
+        cls.historical_blobs = {p: subprocess.check_output(
+            ['git', 'show', contract.HISTORICAL_COMMIT + ':' + p], cwd=ROOT)
+            for p in contract.HISTORICAL_ARTIFACTS}
+        cls.frozen_scope, _, projected = contract.historical_inputs(
+            cls.frozen, cls.frozen_scope, lambda p: cls.live_raw[p],
+            lambda c, p: cls.historical_blobs[p])
+        cls.frozen_raw = {p: projected(p) for p in paths}
         cls.frozen_tables = {}
         for ledger in cls.frozen['ledgers']:
             rows = list(csv.DictReader(io.StringIO(cls.frozen_raw[ledger['path']].decode(), newline='')))
@@ -53,6 +61,21 @@ class Semantic738Tests(unittest.TestCase):
         self.assertEqual(self.errors(), [])
         self.assertEqual(contract.receipt_errors(self.receipt_raw), [])
         self.assertEqual(contract.authority_errors(self.raw[contract.AUTHORITY['path']]), [])
+
+    def test_historical_projection_does_not_rewrite_738_or_hide_prefix_damage(self):
+        for ledger in self.frozen['ledgers']:
+            damaged = dict(self.live_raw); path = ledger['path']
+            damaged[path] = b'X' + damaged[path][1:]
+            with self.assertRaises(ValueError):
+                contract.historical_inputs(self.frozen, self.scope, lambda p: damaged[p],
+                    lambda c, p: self.historical_blobs[p])
+        with self.assertRaises(ValueError):
+            contract.historical_inputs(self.frozen, self.scope, lambda p: self.live_raw[p],
+                lambda c, p: self.historical_blobs[p] + b'changed')
+        damaged = copy.deepcopy(self.frozen); damaged['next_semantic_cursor'] = 'ega:I.8.1.1'
+        with self.assertRaises(ValueError):
+            contract.historical_inputs(damaged, self.scope, lambda p: self.live_raw[p],
+                lambda c, p: self.historical_blobs[p])
 
     def test_exact_unit_subitem_proof_and_excluded_heading_inventory(self):
         self.assertEqual(self.frozen['source_units'], ['ega:I.7.3.8','ega:I.7.3.8.1'])

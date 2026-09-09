@@ -52,6 +52,46 @@ def receipt_errors(raw):
     return []
 
 
+HISTORICAL_COMMIT = 'c9c1b046e2d8f353edaaf51a4311cb8827f03cfb'
+HISTORICAL_ARTIFACTS = ('ega/check.py', 'tests/test_ega_i_738_semantic.py')
+
+
+def historical_inputs(checkpoint, scope, raw_loader, artifact_loader):
+    """Replay sealed 738 ledger prefixes and its two successor-modified files.
+
+    The immutable receipt is never rewritten. The named checker and test file
+    are loaded from the actual published 738 commit and verified against their
+    historical seals. All other artifacts still come from live bytes; the74
+    contract separately binds the current checker/test and complete ledgers.
+    """
+    if digest(canonical(checkpoint)) != CONTRACT_SHA256:
+        raise ValueError('I7.3.8 historical projection requires the sealed receipt')
+    historical_raw, tables = {}, {}
+    for ledger in checkpoint['ledgers']:
+        path = ledger['path']; raw = raw_loader(path)
+        if not isinstance(raw, bytes) or b'\r' in raw or not raw.endswith(b'\n'):
+            raise ValueError('I7.3.8 invalid live ledger serialization: ' + path)
+        lines = [line + b'\n' for line in raw.split(b'\n')[:-1]]
+        frozen = b''.join(lines[:ledger['final_rows'] + 1])
+        if len(frozen) != ledger['bytes'] or digest(frozen) != ledger['sha256']:
+            raise ValueError('I7.3.8 historical ledger prefix changed: ' + path)
+        historical_raw[path] = frozen
+        rows = list(csv.DictReader(io.StringIO(frozen.decode('utf-8'), newline='')))
+        superseded = {r.get('supersedes') for r in rows if r.get('supersedes')}
+        tables[path] = [r for r in rows if r[ledger['id_field']] not in superseded]
+    items = {x['path']: x for x in checkpoint['reviewed_artifacts']}
+    for path in HISTORICAL_ARTIFACTS:
+        raw = artifact_loader(HISTORICAL_COMMIT, path); item = items[path]
+        if not isinstance(raw, bytes) or len(raw) != item['bytes'] or digest(raw) != item['sha256']:
+            raise ValueError('I7.3.8 historical reviewed artifact changed: ' + path)
+        historical_raw[path] = raw
+    historical_scope = dict(scope,
+        statement_review_snapshot=checkpoint['statement_review_snapshot'],
+        residual_snapshot=checkpoint['residual_snapshot'],
+        next_semantic_cursor=checkpoint['next_semantic_cursor'])
+    return historical_scope, tables, lambda path: historical_raw[path] if path in historical_raw else raw_loader(path)
+
+
 def verify(checkpoint, scope, tables, discovery, target_loader, tag_map, raw_loader):
     """Fail closed on metadata damage, then independently verify actual objects.
 

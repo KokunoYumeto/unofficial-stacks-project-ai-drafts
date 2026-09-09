@@ -823,11 +823,11 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # The scope manifest is resealed whenever the append-only ledger frontier
 # advances.  Keep the byte/hash pin here (rather than deriving it at runtime)
 # so an accidental edit cannot silently widen the reviewed surface.  The
-# current seal closes the EGA I 7.3.8 semantic-only candidate and preserves
+# current seal closes the EGA I 7.4.1-7.4.7 semantic-only candidate and preserves
 # the separately recorded 6.6.4 proof completion without a build/release claim.
-if (len(scope_raw) != 59772 or
+if (len(scope_raw) != 66271 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "DF9AF31A51DF02567B96FB751ECF7DE9568CFDC70EFD55B4683DF0C706C62F0E"):
+        "B9F21529DBA61EC65BD20080393BDDAEDE2E97D13113366A61D7BE1CC92EC8C1"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -916,7 +916,9 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
             "ega:I.7.2.5", "ega:I.7.2.6", "ega:I.7.2.7",
             "ega:I.7.2.8", "ega:I.7.2.8.1", "ega:I.7.2.9",
             "ega:I.7.3.1", "ega:I.7.3.2", "ega:I.7.3.3", "ega:I.7.3.4",
-            "ega:I.7.3.5", "ega:I.7.3.6", "ega:I.7.3.7", "ega:I.7.3.8"}):
+            "ega:I.7.3.5", "ega:I.7.3.6", "ega:I.7.3.7", "ega:I.7.3.8",
+            "ega:I.7.4.1", "ega:I.7.4.2", "ega:I.7.4.3", "ega:I.7.4.4",
+            "ega:I.7.4.5", "ega:I.7.4.6", "ega:I.7.4.7"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -1328,7 +1330,8 @@ expected_i6321_erratum_slice = {
         "8B76F577F0B4A5720377739BE82CB482FCD3DD9249F91EE66B9EECDC53318FBE",
     "corrected_reading": "D(g_i)\\subset W",
 }
-if (scope.get("reviewed_errata_slices") != {
+if ({k: v for k, v in scope.get("reviewed_errata_slices", {}).items()
+        if k != "ega:I.7.4.7:Err_III12"} != {
         "ega:I.6.3.2.1": expected_i6321_erratum_slice,
         "ega:I.7.3.8": {'receipt': 'validation/ega-i-7.3.8-printed-replacement-authority-2026-09-08.json', 'receipt_sha256': '59EE5247301B33877F46FAFF8CCD92382FF4CCDC74C8F825EA1361CF6DBB3487', 'path': 'ega2/ega2-errata-addenda-fr.tex', 'full_bytes': 19746, 'full_sha256': 'EC20D329248B99CF0533CB868DBDF8135D5BDAFA233133814DB67F8CD4F09643', 'lf_line_start': 470, 'lf_line_end': 507, 'byte_offset_start': 17633, 'byte_offset_end_exclusive': 19135, 'slice_bytes': 1502, 'slice_sha256': 'E4B20875687FB851816337D513AC2CA29EB75F763D9CA9AD9C494584F23D488A', 'root_change': 'none; version-aware independent derivation of printed replacement', 'ownership': 'Full later replacement instruction statement unwrapped proof and internal222page marker; superseded ChapterI648-671 retained separately', 'status': 'direct_printed_replacement', 'historical_admission': 'new direct binding, not old F37ZW interface admission'}}):
     ERRORS.append("EGA I 6.3.2.1 direct published erratum receipt mismatch")
@@ -1964,6 +1967,12 @@ i738_authority_failures = i738_authority_errors(i738_authority_raw)
 ERRORS.extend(i738_authority_failures)
 if not i738_authority_failures:
     admitted_receipts.add((I738_AUTHORITY["path"], I738_AUTHORITY["sha256"]))
+from tools.ega_i74_semantic_contract import AUTHORITY as I74_AUTHORITY, authority_errors as i74_authority_errors
+i74_authority_raw = (ROOT.parent / I74_AUTHORITY["path"]).read_bytes()
+i74_authority_failures = i74_authority_errors(i74_authority_raw)
+ERRORS.extend(i74_authority_failures)
+if not i74_authority_failures:
+    admitted_receipts.add((I74_AUTHORITY["path"], I74_AUTHORITY["sha256"]))
 current_receipt = (
     interface.get("french_cursor", {}).get("manifest"),
     interface.get("french_cursor", {}).get("manifest_sha256"),
@@ -2147,9 +2156,9 @@ require_raw_block(
     decision_physical_lines, 329, 329, 562,
     "3DD0AAC098383448A7EEDA2F413D2B7F2D75C6BDCF4DD635BA09810619E2FD30",
     "D000329")
-if (len(decision_raw) != 106486 or
+if (len(decision_raw) != 109554 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "A20E515900C172761E407DF4D4057F7182BBDBB20A1C4EEE371313458795937E"):
+    "3D2ED4C99BD359AF984AB559A6B6AB2B309C684C4CF1191C53EFDC765A87F68B"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -5443,9 +5452,9 @@ if smap_path.exists():
         smap_physical_lines, 1250, 1259, 5749,
         "0261D7FC8D1419B8E379E57FCE78031E92BAAB815D0F795D2F4B9A26147D2B26",
         "S001250-S001259")
-    if (len(smap_raw) != 682912 or
+    if (len(smap_raw) != 702144 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "CF2FFAE3B2CC7C480FEBB0558E8AB079167409EDF750933281FBF5A927DC3D28"):
+        "BB3C48079B104C082C3DC773A827F47DA3389053306994B23D2F296D85D5DAC4"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -6821,9 +6830,9 @@ if residual_path.exists():
         residual_physical_lines, 826, 829, 1498,
         "6E8DADEE3EDC5C3A06536994C9B0307B69FF79BEF24E1A6B218301B0E84942EC",
         "R000826-R000829")
-    if (len(residual_raw) != 279503 or
+    if (len(residual_raw) != 283337 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "7B406676CDF6819D82B055F4DEF58543EDD0DD3B72F03A315C499C1B6D6E445A"):
+        "EB46054E371C3E28BE71B97FF896E3E56390AF77B6D534496D7C3154F4EDD54B"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -8105,9 +8114,9 @@ if agent_path.exists():
         agent_physical_lines, 257, 257, 916,
         "79C5C30E290AF22201EB3E0B2E761767AD8D37DC0A91E01B72CF796934C49B42",
         "A000257")
-    if (len(agent_raw) != 154815 or
+    if (len(agent_raw) != 156930 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "E238FB019233750154C41A18DBECCB96FFD64B399E59FFCF0B106BED3259F918"):
+        "61F982FA2034FD663348D9E0B7EA19154B718E247C791760E3A962FBCF4EE276"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -11263,11 +11272,27 @@ except (ValueError, OSError, UnicodeError) as error:
 from tools.ega_i738_semantic_contract import (
     RECEIPT_PATH as I738_RECEIPT_PATH, receipt_errors as i738_receipt_errors,
     verify as i738_semantic_contract_errors,
+    historical_inputs as i738_historical_inputs,
 )
 i738_raw = (ROOT.parent / I738_RECEIPT_PATH).read_bytes()
 ERRORS.extend(i738_receipt_errors(i738_raw))
 i738_checkpoint = json.loads(i738_raw)
-ERRORS.extend(i738_semantic_contract_errors(i738_checkpoint, scope, i665_tables,
+try:
+    i738_scope, i738_tables, i738_loader = i738_historical_inputs(
+        i738_checkpoint, scope, lambda path: (ROOT.parent / path).read_bytes(), git_blob)
+    ERRORS.extend(i738_semantic_contract_errors(i738_checkpoint, i738_scope, i738_tables,
+        units_by_id, git_blob, pinned_tag_map, i738_loader))
+except (ValueError, OSError, UnicodeError) as error:
+    ERRORS.append(str(error))
+
+from tools.ega_i74_semantic_contract import (
+    RECEIPT_PATH as I74_RECEIPT_PATH, receipt_errors as i74_receipt_errors,
+    verify as i74_semantic_contract_errors,
+)
+i74_raw = (ROOT.parent / I74_RECEIPT_PATH).read_bytes()
+ERRORS.extend(i74_receipt_errors(i74_raw))
+i74_checkpoint = json.loads(i74_raw)
+ERRORS.extend(i74_semantic_contract_errors(i74_checkpoint, scope, i665_tables,
     units_by_id, git_blob, pinned_tag_map,
     lambda path: (ROOT.parent / path).read_bytes()))
 
