@@ -46,7 +46,12 @@ earlier open gaps remain open.
 
 The [integration checks](../validation/ega-i-7.4.1-7.4.7-integration-validation-2026-09-09.json)
 record 117 passing regressions, exact French/English/erratum replay,
-and cumulative repository validation without rebuilding unchanged PDFs.
+and cumulative repository validation without rebuilding unchanged PDFs. The
+content is public at commit `92950209efd32cce5575ddfdde4335e51ed24d99`; the
+[anonymous public readback](../validation/ega-i-7.4.1-7.4.7-public-readback-2026-09-09.json)
+matches all 20 changed files (2,410,041 bytes), and its
+[exact-head CI run](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34385371625)
+passed.
 
 The preceding [rational-pullback comparison](i738.md) explains why the original
 §7.3.8 assertion was replaced in EGA II. For a dominant morphism of integral

@@ -7,6 +7,13 @@ Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 This dashboard summarizes the live integrated tree. Detailed evidence remains
 in each corpus dossier and in the machine-readable registry.
 
+The current EGA I §7.4.1–§7.4.7 content is public at
+`92950209efd32cce5575ddfdde4335e51ed24d99`; the
+[anonymous readback](validation/ega-i-7.4.1-7.4.7-public-readback-2026-09-09.json)
+matches all 20 changed files (2,410,041 bytes), and
+[exact-head CI](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/runs/34385371625)
+passed. This is a draft comparison, not a claim that EGA is complete.
+
 **R47, the combined Illusie source and EGA I §6.6.5 are public** at
 `5817f4c1af8724b147401c785f57ca315b52e31c` (anonymous main-ref verification).
 The combined build receipts record two matching sets of 35 PDFs, comprising
