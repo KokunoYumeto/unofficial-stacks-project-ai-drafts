@@ -7,8 +7,12 @@ validated against its own original cumulative source commit.
 from __future__ import annotations
 
 from collections import Counter
+from contextlib import contextmanager
+import os
 from pathlib import Path
+import subprocess
 import sys
+import tempfile
 
 if __package__:
     from . import direct_successor_composition
@@ -29,6 +33,172 @@ THIS_TOOL, THIS_TEST = historical.THIS_TOOL, historical.THIS_TEST
 receipt_anchor = historical.receipt_anchor
 verify_historical = historical.verify_historical
 verify_semantic = historical.verify_semantic
+CURRENT_EGA_VALIDATION_PATH = "validation/ega-i-7.4.1-7.4.7-integration-validation-2026-09-09.json"
+SEMANTIC_JOIN_SCHEMA = "unofficial-stacks-project-ai-drafts-historical-current-ega-join/v1"
+
+
+@contextmanager
+def isolated_checker_import_cache():
+    """Avoid stale imported pyc bytes without deleting any existing cache."""
+    keys = ("PYTHONPYCACHEPREFIX", "PYTHONDONTWRITEBYTECODE")
+    previous = {key: os.environ.get(key) for key in keys}
+    with tempfile.TemporaryDirectory(prefix="stacks-ega-checker-cache-") as empty:
+        os.environ["PYTHONPYCACHEPREFIX"] = empty
+        os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
+        try:
+            yield
+        finally:
+            for key, value in previous.items():
+                if value is None:
+                    os.environ.pop(key, None)
+                else:
+                    os.environ[key] = value
+
+
+def ega_dependency_paths(build, source, revision):
+    """Closed bounded committed scope consumed by the EGA checkers.
+
+    Includes nested review crops, source slices and helper tests/receipts read by
+    the current EGA contracts. It does not inspect untracked workspace files.
+    """
+    paths = set()
+    for directory in ("ega", "reports"):
+        paths.update(build.git(source, "ls-tree", "-r", "--name-only", revision, "--", directory).splitlines())
+    for directory in ("validation", "tools", "tests"):
+        for path in build.git(source, "ls-tree", "-r", "--name-only", revision, "--", directory).splitlines():
+            name = Path(path).name
+            if (directory == "validation" and name.startswith("ega-") and name.endswith(".json")
+                or directory == "tools" and name.endswith(".py") and
+                    (name.startswith("ega_") or name.startswith("check_ega_"))
+                or directory == "tests" and name.startswith("test_ega_") and name.endswith(".py")):
+                paths.add(path)
+    require({"ega/check.py", "ega/intake.py", "ega/map.py", SEMANTIC_PATH,
+             "reports/findings.jsonl", "reports/qsrc.csv"}.issubset(paths),
+            "EGA checker dependency inventory is incomplete")
+    return sorted(paths)
+
+
+def require_exact_inputs(build, source, revision, paths):
+    rows = []
+    for path in paths:
+        expected = build.committed_file_identity(source, revision, path)
+        require(expected is not None, f"committed EGA checker input missing: {path}")
+        build.require_clean_path(source, path)
+        actual = build.working_file_identity(source, path)
+        require(all(actual[k] == expected[k] for k in ("bytes", "sha256")),
+                f"EGA checker working input differs: {path}")
+        rows.append(expected)
+    return rows
+
+
+def semantic_input_paths(build, source, anchor):
+    paths = set(ega_dependency_paths(build, source, anchor))
+    paths.update(p for p in build.git(source, "ls-tree", "--name-only", anchor).splitlines()
+                 if "/" not in p and (p.endswith(".tex") or Path(p).suffix.lower() in build.EGA_SHARED_BUILD_SUFFIXES))
+    paths.update(("tags/tags", "my.bib"))
+    return sorted(paths)
+
+
+def semantic_worktree(build, source, anchor, paths):
+    """Materialize a separate exact semantic head; never reset any existing tree."""
+    target = source.parent / f"{source.name}-ega665-semantic-{anchor[:12]}"
+    require(target.parent.resolve() == source.parent.resolve() and not target.is_symlink()
+            and not (hasattr(target, "is_junction") and target.is_junction()),
+            "semantic validation worktree escapes its bounded target")
+    if target.exists():
+        require((target / ".git").is_file()
+                and Path(build.git(target, "rev-parse", "--show-toplevel")).resolve() == target.resolve(),
+                "existing semantic target is not its own linked worktree")
+        require(build.git(target, "rev-parse", "HEAD") == anchor,
+                "semantic validation worktree moved; refusing to reset")
+        require(build.resolved_git_path(target, build.git(target, "rev-parse", "--git-common-dir"))
+                == build.resolved_git_path(source, build.git(source, "rev-parse", "--git-common-dir")),
+                "semantic worktree belongs to another repository")
+        return target
+    historical.raw_git(source, "worktree", "add", "--detach", "--no-checkout", str(target), anchor)
+    root_inputs = [p for p in build.git(source, "ls-tree", "--name-only", anchor).splitlines()
+                   if "/" not in p and (p.endswith(".tex") or Path(p).suffix.lower() in build.EGA_SHARED_BUILD_SUFFIXES)]
+    selected = sorted(set(paths) | set(root_inputs) | {"tags/tags", "my.bib"})
+    require(all(build.require_safe_posix_path(p, "semantic materialization path") == p for p in selected),
+            "unsafe semantic materialization path")
+    patterns = ("\n".join("/" + p for p in selected) + "\n").encode()
+    historical.raw_git(target, "-c", "core.autocrlf=false", "sparse-checkout", "set", "--no-cone", "--stdin",
+                       input_bytes=patterns)
+    historical.raw_git(target, "-c", "core.autocrlf=false", "read-tree", "-mu", anchor)
+    require(build.git(target, "rev-parse", "HEAD") == anchor, "semantic materialization changed HEAD")
+    return target
+
+
+def verify_historical_semantic(build, source, prior, head, composition):
+    anchor = build.git(source, "log", "-1", "--first-parent", "--format=%H", prior, "--", SEMANTIC_PATH)
+    anchor = build.require_commit_object(source, anchor, "actual EGA semantic receipt head")
+    build.require_ancestor(source, anchor, "historical semantic to previous public", prior)
+    receipt = build.committed_file_identity(source, anchor, SEMANTIC_PATH)
+    require(receipt is not None and receipt == build.committed_file_identity(source, prior, SEMANTIC_PATH)
+            == build.committed_file_identity(source, head, SEMANTIC_PATH),
+            "historical semantic receipt was rewritten after its own head")
+    paths = semantic_input_paths(build, source, anchor)
+    target = semantic_worktree(build, source, anchor, paths)
+    before = require_exact_inputs(build, target, anchor, paths)
+    with isolated_checker_import_cache():
+        semantic, semantic_paths = verify_semantic(build, target, anchor, composition)
+    require(semantic.get("commit") == anchor and semantic.get("receipt") == receipt,
+            "historical semantic verifier did not validate its actual own head")
+    require(before == require_exact_inputs(build, target, anchor, paths)
+            and build.git(target, "rev-parse", "HEAD") == anchor,
+            "historical semantic inputs changed during validation")
+    protected = [build.protected_input("historical_checkpoint_input", anchor, row) for row in before]
+    return {**semantic, "validated_at_own_head": True, "fresh_import_cache": True,
+            "checker_input_count": len(before),
+            "checker_input_tuple_sha256": build.canonical_tuple_sha256(protected)}, semantic_paths, protected
+
+
+def verify_current_ega(build, source, prior, head):
+    paths = ega_dependency_paths(build, source, prior)
+    require(paths == ega_dependency_paths(build, source, head), "inherited current EGA input inventory changed")
+    for path in paths:
+        require(build.committed_file_identity(source, prior, path)
+                == build.committed_file_identity(source, head, path),
+                f"inherited current EGA input drifted: {path}")
+    before = require_exact_inputs(build, source, head, paths)
+    validation_id = build.committed_file_identity(source, prior, CURRENT_EGA_VALIDATION_PATH)
+    require(validation_id is not None, "current EGA integration evidence is absent")
+    validation = build.parse_json_blob(source, validation_id, "already-public EGA integration")
+    require(validation.get("schema") == "ega-i74-root-integration-validation/v1"
+            and validation.get("status") == "PASS", "unsupported current EGA validation contract")
+    integrated = build.require_commit_object(source, validation.get("integrated_source_commit"), "current EGA integration")
+    build.require_ancestor(source, integrated, "current EGA integration to previous public", prior)
+    candidate_files = validation.get("candidate_files")
+    require(isinstance(candidate_files, list) and candidate_files
+            and len({row.get("path") for row in candidate_files}) == len(candidate_files),
+            "current EGA integration candidate inventory is empty or duplicated")
+    for row in candidate_files:
+        path = build.require_safe_posix_path(row.get("path"), "EGA integration candidate path")
+        require(path in paths, "current EGA validation candidate lies outside dependency closure")
+        actual = build.committed_file_identity(source, prior, path)
+        require(actual is not None and all(actual[k] == row.get(k) for k in ("bytes", "sha256")),
+                f"current EGA integration candidate binding mismatch: {path}")
+    gates = [row for row in validation.get("gates", []) if row.get("stage") == "ega_checker"]
+    require(len(gates) == 1 and gates[0].get("exit_code") == 0 and isinstance(gates[0].get("output"), str),
+            "current EGA validation lacks one passing checker gate")
+    expected = build.strict_json_loads(gates[0]["output"], "already-public EGA checker result")
+    require(isinstance(expected, dict) and expected.get("schema") == "ega-stacks-scaffold-check-v1"
+            and expected.get("status") == "PASS" and expected.get("errors") == [],
+            "current EGA sealed checker result is invalid")
+    with isolated_checker_import_cache():
+        check = subprocess.run([sys.executable, "-X", "utf8", "-B", "ega/check.py"], cwd=source,
+                               capture_output=True, text=True, encoding="utf-8", timeout=600)
+    require(check.returncode == 0, "current inherited EGA checker failed: " + (check.stderr or check.stdout))
+    observed = build.strict_json_loads(check.stdout, "current inherited EGA checker")
+    require(observed == expected, "current EGA checker differs from already-public integration result")
+    require(before == require_exact_inputs(build, source, head, paths), "current EGA inputs changed during checker")
+    return {"schema": SEMANTIC_JOIN_SCHEMA, "status": "PASS_CURRENT_PUBLIC_EGA_PRESERVED",
+            "previous_public_commit": prior, "current_commit": head,
+            "integration_receipt": validation_id, "integration_source_commit": integrated,
+            "checker": observed, "fresh_import_cache": True, "input_count": len(before),
+            "input_tuple_sha256": build.canonical_tuple_sha256([
+                build.protected_input("successor_current_input", head, row) for row in before]),
+            "historical_semantic_receipt_not_relabelled": True}, paths
 
 
 def _recheck_at(build, source, binding, protected):
@@ -121,18 +291,22 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
         require(build.committed_file_identity(source, prior, path)
                 == build.committed_file_identity(source, head, path),
                 f"inherited EGA semantic input drifted: {path}")
-    semantic, semantic_paths = verify_semantic(build, source, head, inherited_binding)
+    semantic, semantic_paths, semantic_protected = verify_historical_semantic(
+        build, source, prior, head, inherited_binding)
+    current_ega, current_ega_paths = verify_current_ega(build, source, prior, head)
     # Current inputs are frozen independently of the historical byte inventory.
     paths = set(root_tex + semantic_paths + [logical, "my.bib", "tags/tags",
                 "validation/composition-current.json", THIS_TOOL, THIS_TEST])
     paths.update(path for path, _ in build.EGA_PRECONTENT_TOOL_ROLES)
     paths.update(DIRECT_TOOLS)
+    paths.update(current_ega_paths)
     paths.update(p for p in root_names if "/" not in p and Path(p).suffix.lower() in build.EGA_SHARED_BUILD_SUFFIXES)
     for directory in ("ega", "ai-integrated/registry"):
         paths.update(str(row["path"]) for row in build.committed_regular_files(source, head, directory))
     protected = []
     for row in old_protected:
         protected.append({**row, "role": "historical_checkpoint_input"})
+    protected.extend(semantic_protected)
     for path in sorted(paths):
         identity = build.committed_file_identity(source, head, path)
         require(identity is not None, f"successor protected input is absent: {path}")
@@ -150,7 +324,8 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
         "receipt": build.committed_file_identity(source, head, logical),
         "historical_anchor": {"commit": anchor, "tree": historical["post_content"]["head_tree"],
                               "verification": historical},
-        "semantic_successor": semantic, "inherited_composition": {"commit": prior, **inherited_id},
+        "semantic_successor": semantic, "current_ega_successor": current_ega,
+        "inherited_composition": {"commit": prior, **inherited_id},
         "root_source_stem": "schemes",
         "canonical_composition": {
             "path": composition["receipt"], "git_blob": composition["receipt_git_blob"],
@@ -168,6 +343,8 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                    "historical_schemes_proof_and_tags_unchanged",
                    "all_current_root_tex_exact_at_validated_composition_source",
                    "semantic_increment_exact_append_prefixes_scope_and_checker",
+                   "semantic_increment_checker_executed_at_its_actual_own_receipt_head",
+                   "later_public_ega_inputs_preserved_and_current_checker_separately_replayed",
                    "historical_and_current_inputs_frozen_through_final_build_recheck"],
     }
     if live:
