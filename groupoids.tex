@@ -2001,6 +2001,9 @@ Then $[d] : A \to A$ is \'etale if and only if $d$ is invertible in $k$.
 \end{lemma}
 
 \begin{proof}
+If $d = 0$, then the fibre of $[d]$ over the unit is the
+positive-dimensional variety $A$, so $[d]$ is not \'etale.
+Thus we may assume $d \not= 0$.
 Observe that $[d](x + y) = [d](x) + [d](y)$. Since translation by a
 point is an automorphism of $A$, we see that the set of points where
 $[d] : A \to A$ is \'etale is either empty or equal to $A$ (some details
@@ -2959,9 +2962,9 @@ then $\alpha$ is an isomorphism.
 Pull back the commutative diagram of
 Definition \ref{definition-groupoid-module}
 by the morphism $(i, 1) : R \to R \times_{s, U, t} R$.
-Then we see that $i^*\alpha \circ \alpha = s^*e^*\alpha$.
+Then we see that $\alpha \circ i^*\alpha = s^*e^*\alpha$.
 Pulling back by the morphism $(1, i)$ we obtain the relation
-$\alpha \circ i^*\alpha = t^*e^*\alpha$. By the second assumption 
+$i^*\alpha \circ \alpha = t^*e^*\alpha$. By the second assumption 
 these morphisms are the identity. Hence $i^*\alpha$ is an inverse of
 $\alpha$.
 \end{proof}
@@ -3467,7 +3470,7 @@ For each pair $i, j$ choose affine open coverings
 $$
 U_i \cap U_j = \bigcup\nolimits_{k \in I_{ij}} U_{ijk}
 \quad\text{and}\quad
-s^{-1}(U_i) \cap t^{-1}(U_j) = \bigcup\nolimits_{k \in J_{ij}} W_{ijk}.
+t^{-1}(U_i) \cap s^{-1}(U_j) = \bigcup\nolimits_{k \in J_{ij}} W_{ijk}.
 $$
 Write $U_i = \Spec(A_i)$, $U_{ijk} = \Spec(A_{ijk})$,
 $W_{ijk} = \Spec(B_{ijk})$.
@@ -3502,7 +3505,8 @@ m \otimes 1 = \sum\nolimits_{m' \in S(i, j, k, m)} m' \otimes a_{m'}
 \quad\text{or}\quad
 \alpha(m \otimes 1) = \sum\nolimits_{m' \in S(i, j, k, m)} m' \otimes b_{m'}
 $$
-in $M_{ijk}$ for some $a_{m'} \in A_{ijk}$ or $b_{m'} \in B_{ijk}$.
+in $M_{ijk}$ or $M_j \otimes_{A_j, s} B_{ijk}$, respectively,
+for some $a_{m'} \in A_{ijk}$ or $b_{m'} \in B_{ijk}$.
 Moreover, let's agree that $S(i, i, k, m) = \{m\}$ for all
 $i \in I$, $k \in I_{ii}$, and $m \in M_i$. Fix such a collection $S(i, j, k, m)$
 
@@ -4716,7 +4720,7 @@ are finite locally free of rank $r$. Pulling back by $U' = \Spec(A') \to U$
 we obtain a similar decomposition of $U'$ and $U^1 = \Spec(C^1)$.
 We will show in the next paragraph that (2)(a) holds for the corresponding
 system of rings $A_r, B_r, C_r, C'_r, C^1_r$ with $n = r$.
-Then given $f \in C^1$ let $P_r \in C_r[x]$ be the polynomial
+Then given $f \in C^1$ let $P_r \in C'_r[x]$ be the polynomial
 whose image in $C^1_r[x]$ is the image of $(x - f)^r$.
 Choosing a sufficiently divisible integer $n$ we see that
 there is a polynomial $P \in C'[x]$ whose image in $C^1[x]$ is

@@ -489,7 +489,7 @@ quasi-coherent.
 \end{enumerate}
 Then for $E \in D_\QCoh(\mathcal{O}_X)$
 \begin{enumerate}
-\item $H^i(RF(\tau_{\leq a}E) \to H^i(RF(E))$ is an isomorphism
+\item $H^i(RF(\tau_{\leq a}E)) \to H^i(RF(E))$ is an isomorphism
 for $i \leq a$,
 \item $H^i(RF(E)) \to H^i(RF(\tau_{\geq b - N + 1}E))$ is an isomorphism
 for $i \geq b$,
@@ -549,7 +549,7 @@ Proof of (3). Under the assumption on $E$ we have
 $\tau_{\leq a - 1}E = 0$ and we get the vanishing
 of $H^i(RF(E))$ for $i \leq a - 1$ from (1).
 Similarly, we have $\tau_{\geq b + 1}E = 0$ and hence
-we get the vanishing of $H^i(RF(E))$ for $i \geq b + n$ from
+we get the vanishing of $H^i(RF(E))$ for $i \geq b + N$ from
 part (2).
 \end{proof}
 
@@ -1415,7 +1415,7 @@ $$
 $$
 are elementary distinguished squares by
 Lemma \ref{lemma-make-more-elementary-distinguished-squares}.
-Note that $P$ holds for each $V_{p, 1}$ (as affine schemes) and for
+Note that $P$ holds for each $V_{p, i}$ (as affine schemes) and for
 $W_{p, i} \times_{W_{p, i + 1}} V_{p, i + 1}$ as this is a quasi-compact
 open of $V_{p, i + 1}$ and hence $P$ holds for it by the first paragraph
 of this proof. Thus (2) applies to each of these and we inductively
@@ -1495,7 +1495,7 @@ Assume that
 \begin{enumerate}
 \item $P$ holds for $W$, and
 \item for every elementary distinguished square
-$(W_1 \subset W_2, f : V \to W_2)$ where 
+$(W_1 \subset W_2, f : V \to W_2)$
 such that
 \begin{enumerate}
 \item $W_1$, $W_2$ are quasi-compact open subspaces of $X$,
@@ -1521,7 +1521,7 @@ Decent Spaces, Lemma
 \ref{decent-spaces-lemma-filter-quasi-compact-quasi-separated}.
 We will prove that $P$ holds for $W_p = W \cup U_p$ by descending
 induction on $p$. This will finish the proof as $W_1 = X$.
-Note that $P$ holds for $W_{n + 1} = W \cap U_{n + 1} = W$
+Note that $P$ holds for $W_{n + 1} = W \cup U_{n + 1} = W$
 by (1). Assume $P$ holds for $W_{p + 1}$. Observe that
 $W_p \setminus W_{p + 1}$ (with reduced induced subspace structure)
 is a closed subspace of $U_p \setminus U_{p + 1}$.
@@ -1560,7 +1560,7 @@ conclude $P$ holds for $W_{p, 1}, \ldots, W_{p, m} = W_p$.
 \label{section-mayer-vietoris}
 
 \noindent
-In this section we prove that an elementary distinguished triangle
+In this section we prove that an elementary distinguished square
 gives rise to various Mayer-Vietoris sequences.
 
 \medskip\noindent
@@ -1721,7 +1721,7 @@ j_{V!}\mathcal{O}_V \to
 $$
 is a exact sequence of $\mathcal{O}_X$-modules in
 Lemma \ref{lemma-exact-sequence-lower-shriek} and applying
-the right exact functor $\Hom_{\mathcal{O}_X}(- , \mathcal{F})$
+the left exact functor $\Hom_{\mathcal{O}_X}(- , \mathcal{F})$
 gives the sequence above. This also means that the obstruction
 to lifting $s \in \mathcal{F}(U \times_X V)$ to
 an element of $\mathcal{F}(U) \oplus \mathcal{F}(V)$ lies in
@@ -1782,7 +1782,7 @@ object of $\textit{Mod}(\mathcal{O}_X)$ for all $n$, see
 Injectives, Theorem
 \ref{injectives-theorem-K-injective-embedding-grothendieck}.
 Then $Rf_*E$ is computed by $f_*\mathcal{I}^\bullet$.
-Similarly for $U$, $V$, and $U \cap V$ by
+Similarly for $U$, $V$, and $U \times_X V$ by
 Cohomology on Sites,
 Lemma \ref{sites-cohomology-lemma-restrict-K-injective-to-open}.
 Hence the distinguished triangle of the lemma is the distinguished
@@ -1901,7 +1901,7 @@ Lemma \ref{derived-lemma-derived-canonical-delta-functor}.
 \begin{lemma}
 \label{lemma-restrict-lower-shriek}
 Let $S$ be a scheme. Let $j : U \to X$ be a \'etale morphism of algebraic
-spaces over $S$. Given an \'etale morphism $V \to Y$, set $W = V \times_X U$
+spaces over $S$. Given an \'etale morphism $V \to X$, set $W = V \times_X U$
 and denote $j_W : W \to V$ the projection morphism. Then
 $(j_!E)|_V = j_{W!}(E|_W)$ for $E$ in $D(\mathcal{O}_U)$.
 \end{lemma}
@@ -2276,7 +2276,7 @@ algebraic space over $S$. Suppose that for every \'etale morphism
 $j : V \to W$ with $W \subset X$ quasi-compact open and $V$ affine
 the right derived functor
 $$
-\Phi : D(\QCoh(\mathcal{O}_U)) \to D(\QCoh(\mathcal{O}_W))
+\Phi : D(\QCoh(\mathcal{O}_V)) \to D(\QCoh(\mathcal{O}_W))
 $$
 of the left exact functor
 $j_* : \QCoh(\mathcal{O}_V) \to \QCoh(\mathcal{O}_W)$
@@ -2583,9 +2583,9 @@ Let $\mathcal{I}^\bullet$ be a K-injective complex in $\QCoh(\mathcal{O}_U)$
 representing $K$.
 From $P(U)$ applied to $j$ we see that
 $j_*\mathcal{I}^\bullet$ represents $Rj_*K$.
-Since $j_* : \QCoh(\mathcal{O}_U) \to \QCoh(\mathcal{O}_X)$
+Since $j_* : \QCoh(\mathcal{O}_U) \to \QCoh(\mathcal{O}_W)$
 has an exact left adjoint
-$j^* : \QCoh(\mathcal{O}_X) \to \QCoh(\mathcal{O}_U)$
+$j^* : \QCoh(\mathcal{O}_W) \to \QCoh(\mathcal{O}_U)$
 we see that $j_*\mathcal{I}^\bullet$ is a K-injective complex
 in $\QCoh(\mathcal{O}_W)$, see
 Derived Categories, Lemma \ref{derived-lemma-adjoint-preserve-K-injectives}.
@@ -2630,19 +2630,19 @@ is equal to $\widetilde{J}$ for some injective $A$-module $J$.
 By Dualizing Complexes, Proposition
 \ref{dualizing-proposition-structure-injectives-noetherian}
 we can write $J = \bigoplus E_\alpha$ with $E_\alpha$ indecomposable
-and therefore isomorphic to the injective hull of a reside field
+and therefore isomorphic to the injective hull of a residue field
 at a point. Thus (because finite disjoint unions of Artinian schemes
 are Artinian) we may assume that $J$ is the injective hull
 of $\kappa(\mathfrak p)$ for some prime $\mathfrak p$ of $A$.
 Then $J = \bigcup J[\mathfrak p^n]$ where $J[\mathfrak p^n]$ is
 the injective hull of $\kappa(\mathfrak p)$ over
-$A_\mathfrak/\mathfrak p^nA_\mathfrak p$, see
+$A_\mathfrak p/\mathfrak p^nA_\mathfrak p$, see
 Dualizing Complexes, Lemma \ref{dualizing-lemma-union-artinian}.
 Thus $\widetilde{J}$ is the colimit of the sheaves
-$(Z_n \to X)_*\mathcal{G}_n$ where
+$(Z_n \to S)_*\mathcal{G}_n$ where
 $Z_n = \Spec(A_\mathfrak p/\mathfrak p^nA_\mathfrak p)$ and
-$\mathfrak G_n$ the coherent sheaf associated to the
-finite $A_\mathfrak/\mathfrak p^nA_\mathfrak p$-module $J[\mathfrak p^n]$.
+$\mathcal G_n$ the coherent sheaf associated to the
+finite $A_\mathfrak p/\mathfrak p^nA_\mathfrak p$-module $J[\mathfrak p^n]$.
 Finiteness follows from
 Dualizing Complexes, Lemma \ref{dualizing-lemma-finite}.
 \end{proof}
@@ -2888,7 +2888,7 @@ $\epsilon^*\mathcal{F} =
 \epsilon^{-1}\mathcal{F} \otimes_{\epsilon^{-1}\mathcal{O}_X}
 \mathcal{O}_\etale$
 we can find an \'etale morphism $X'' \to X'$ such that $x$ is
-in the image of $X' \to X$ and such that
+in the image of $X'' \to X$ and such that
 $s_i|_{X''} = \sum s_{ij} \otimes a_{ij}$ for some sections
 $s_{ij} \in \epsilon^{-1}\mathcal{F}(X'')$ and
 $a_{ij} \in \mathcal{O}_\etale(X'')$. Denote $U \subset X$ the image
@@ -3037,7 +3037,7 @@ $$
 is the strict henselization
 (by \'Etale Cohomology, Lemmas \ref{etale-cohomology-lemma-stalk-pullback}
 and \ref{etale-cohomology-lemma-describe-etale-local-ring}).
-Since the stalk of $\mathcal{O}_{X_\etale}$ at $X$ is
+Since the stalk of $\mathcal{O}_{X_\etale}$ at $\overline{x}$ is
 $\mathcal{O}_{X, x}^{sh}$ we obtain
 $$
 (\epsilon^*E)_{\overline{x}} =
@@ -3630,7 +3630,7 @@ Derived Categories of Schemes, Lemma \ref{perfect-lemma-lift-map}
 we can replace $Q$ by $Q \otimes^\mathbf{L} I$ (still supported on $f^{-1}T$)
 and assume that the map
 $$
-Q|_{W \times_X V} \to (P \oplus P[1])|_{W \times V}
+Q|_{W \times_X V} \to (P \oplus P[1])|_{W \times_X V}
 \longrightarrow P|_{W \times_X V}
 \longrightarrow
 E|_{W \times_X V}
@@ -3809,7 +3809,7 @@ is quasi-separated, it follows that
 $f^{-1}Z \cap f^{-1}T = f^{-1}(Z \cap T)$ is a closed
 subset of $V$ such that $W = V \setminus f^{-1}(Z \cap T)$ is quasi-compact.
 Thus we can choose $g_1, \ldots, g_s \in B$ such that
-$f^{-1}(Z \cap T) = V(g_1, \ldots, g_r)$.
+$f^{-1}(Z \cap T) = V(g_1, \ldots, g_s)$.
 Let $K \in D(\mathcal{O}_V)$ be the perfect object corresponding to the
 Koszul complex on $g_1, \ldots, g_s$ over $B$. Note that since $K$ is
 supported on $f^{-1}(Z \cap T) \subset V$ closed, the pushforward
