@@ -1,0 +1,1088 @@
+{
+  "schema": "independent-groupoids-recovered-adjudication/v1",
+  "status": "PASS_FIVE_VALID_SIX_OPERATIONS_NOT_ADMITTED",
+  "review_date_local": "2026-09-10",
+  "packet": {
+    "path": "<WORKSPACE>\\03_projects\\language_management\\stacks_on_stacks_hub\\00_control\\session_fixes_20260910\\GROUPOIDS_RECOVERED_FIX_REVIEW.json",
+    "bytes": 25610,
+    "sha256": "03BC386D88EDF536A0A90664676DA2FD34007FC12D49A436BC3C9A23F984C47D"
+  },
+  "counts": {
+    "reviewed_findings": 5,
+    "valid": 5,
+    "rejected_findings": 0,
+    "duplicates": 0,
+    "conflicts": 0,
+    "disagreements_with_packet": 0,
+    "operations": 6
+  },
+  "scope": {
+    "sources_mutated": false,
+    "registry_mutated": false,
+    "ids_allocated": false,
+    "builds_run": false,
+    "peer_task_messages_sent": false,
+    "publication_performed": false,
+    "whole_chapter_audit": false,
+    "historical_receipt_or_web_claim_revalidated": false
+  },
+  "sources": {
+    "current": {
+      "path": "<WORKSPACE>\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\groupoids.tex",
+      "bytes": 205795,
+      "sha256": "C6CF7E55C1C4F87EC475F514AED7219AF824EC3AC7734319367E54D5F6DFE7A5",
+      "line_count": 5513
+    },
+    "pinned_original": {
+      "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\groupoids.tex",
+      "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "bytes": 189166,
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "line_count": 5124
+    }
+  },
+  "supplementary_sources": [
+    {
+      "file": "properties.tex",
+      "path_root": "same pinned source directory",
+      "bytes": 206060,
+      "sha256": "52F3785B3EF80828FE135A8CE92ADE6F68EBFF0E13310ED91C88F95C03FDC2F0",
+      "consulted_lines": [
+        [
+          3554,
+          3631
+        ]
+      ],
+      "purpose": "Full referenced sheaf-generation and gluing proof."
+    },
+    {
+      "file": "morphisms.tex",
+      "path_root": "same pinned source directory",
+      "bytes": 587157,
+      "sha256": "3350FD2C4E3ABC78A4AE3BCDB32694C70A5765E500C308C7EA7D239F5A3E3B69",
+      "consulted_lines": [
+        [
+          8161,
+          8172
+        ]
+      ],
+      "purpose": "Etale implies locally quasi-finite."
+    },
+    {
+      "file": "varieties.tex",
+      "path_root": "same pinned source directory",
+      "bytes": 447377,
+      "sha256": "53D0AF48818D22AE85675EFF76B79FCAD4335FDA0B4574EC09F5C9E73CC93995",
+      "consulted_lines": [
+        [
+          3148,
+          3171
+        ]
+      ],
+      "purpose": "Tangent injectivity and unramifiedness at equal residue fields."
+    }
+  ],
+  "findings": [
+    {
+      "local_name": "zero-multiplication-etale-proof",
+      "verdict": "VALID_NOT_DUPLICATE",
+      "source_label": "lemma-abelian-variety-multiplication-by-d-etale",
+      "current_contexts": [
+        [
+          1762,
+          1815
+        ],
+        [
+          1935,
+          2016
+        ]
+      ],
+      "pinned_contexts": [
+        [
+          1768,
+          1848
+        ]
+      ],
+      "independent_reason": "The current degree lemma supplies finite local freeness only for a nonzero integer, but the etaleness lemma allows d=0. A nonzero abelian variety has positive dimension: a zero-dimensional integral variety with a k-valued unit would be Spec(k). For d=0 the fibre over the unit is all of A, so local quasi-finiteness and hence etaleness fail. The added case split is valid without invoking the degree lemma in the zero case. For d nonzero the existing finite-flat and tangent argument applies, including when d is divisible by the field characteristic.",
+      "nearby_registered_unit": "MC-STK-ERR-1494 repairs the hypothesis of the separate degree lemma at pinned line 1771. This new operation at pinned 1836 repairs its application in the etaleness proof and preserves the admitted degree-lemma repair.",
+      "alternatives": "Do not add d!=0 to the etaleness statement: its current statement correctly includes and answers the zero case.",
+      "confidence": "high",
+      "confidence_reason": "The zero-case fibre gives a direct noncircular argument and the remaining degree-lemma hypothesis then matches."
+    },
+    {
+      "local_name": "colimit-cover-orientation",
+      "verdict": "VALID_NOT_DUPLICATE",
+      "source_label": "lemma-colimit-kappa",
+      "current_contexts": [
+        [
+          2912,
+          2967
+        ],
+        [
+          3443,
+          3557
+        ]
+      ],
+      "pinned_contexts": [
+        [
+          2622,
+          2676
+        ],
+        [
+          3152,
+          3266
+        ]
+      ],
+      "independent_reason": "The map alpha has source t*F and target s*F. Therefore alpha on W_ijk has source M_i tensor_(A_i,t) B_ijk and target M_j tensor_(A_j,s) B_ijk, which requires t(W_ijk) inside U_i and s(W_ijk) inside U_j. Swapping s and t in the cover provides exactly these structure maps while preserving every later index. The finite-support closure yields alpha(t*G) contained in s*G. Pullback by inversion, followed by alpha and the inverse identity, yields the reverse containment. Thus the later equality remains justified.",
+      "nearby_registered_units": [
+        "MC-STK-ERR-1504 removes duplicated wording in the cardinal comparison at pinned 3183.",
+        "MC-STK-ERR-1505 corrects the identity support-choice indices at pinned 3215-3216."
+      ],
+      "alternatives": "Reversing alpha globally or swapping all downstream i,j indices would alter the fixed convention. No compatibility of particular inverse cover members is needed for the global inclusion/inversion argument.",
+      "confidence": "high",
+      "confidence_reason": "The two required tensor-product structure maps determine the cover orientation uniquely."
+    },
+    {
+      "local_name": "invariants-base-change-coefficient-ring",
+      "verdict": "VALID_NOT_DUPLICATE",
+      "source_label": "lemma-invariants-base-change",
+      "current_contexts": [
+        [
+          4487,
+          4510
+        ],
+        [
+          4542,
+          4659
+        ],
+        [
+          4661,
+          4744
+        ]
+      ],
+      "pinned_contexts": [
+        [
+          4367,
+          4450
+        ]
+      ],
+      "independent_reason": "The componentwise assertion is part (2)(a) for A_r,B_r,C_r,C'_r,C^1_r, so its polynomial belongs to C'_r[x]. The constant-rank norm proof explicitly maps D[x] into C'[x]. Invariant rank strata yield a finite product decomposition; raising each component polynomial to n/r and gluing over C' preserves the claim. Independently, the identity groupoid over a field k, base changed to k[z], has rank one and f=z. The needed polynomial is x-z, which lies in k[z][x] and cannot come from k[x].",
+      "nearby_registered_unit": "MC-STK-ERR-1515 changes Spec(C') to Spec(A') at pinned 4421/current 4715. The polynomial-ring correction at pinned 4425/current 4719 is distinct and leaves that admitted correction intact.",
+      "alternatives": "Changing the final gluing ring to C would fail the identity-groupoid counterexample.",
+      "confidence": "high",
+      "confidence_reason": "The norm's codomain, component gluing, and rank-one counterexample independently force the prime."
+    },
+    {
+      "local_name": "colimit-two-ambient-modules",
+      "verdict": "VALID_NOT_DUPLICATE",
+      "source_label": "lemma-colimit-kappa",
+      "current_contexts": [
+        [
+          3443,
+          3557
+        ]
+      ],
+      "pinned_contexts": [
+        [
+          3152,
+          3266
+        ]
+      ],
+      "independent_reason": "The first support equation is an equality in M_ijk, while the second is an equality in the codomain M_j tensor_(A_j,s) B_ijk of alpha on W_ijk. The existing prose incorrectly assigns M_ijk to both. The proposed respectively clause restores both types in their displayed order. Current line 3536/pinned 3245 independently names the same two ambient modules.",
+      "nearby_registered_unit": "MC-STK-ERR-1505 starts at pinned 3215, immediately after the new operation at 3214, but its source interval does not overlap this operation and repairs a different statement.",
+      "coupling": "The cover-orientation correction supplies the maps used in the second ambient tensor product. The two repairs are complementary, not duplicates.",
+      "confidence": "high",
+      "confidence_reason": "Direct comparison of the displayed equation types and the later explicit two-module sentence."
+    },
+    {
+      "local_name": "groupoid-module-inverse-composition-order",
+      "verdict": "VALID_NOT_DUPLICATE",
+      "source_label": "lemma-isomorphism",
+      "current_contexts": [
+        [
+          2708,
+          2725
+        ],
+        [
+          2912,
+          2967
+        ]
+      ],
+      "pinned_contexts": [
+        [
+          2622,
+          2676
+        ]
+      ],
+      "independent_reason": "The cocycle reads pr_1*alpha composed with pr_0*alpha = c*alpha. Pullback along (i,1) gives alpha composed with i*alpha = s*e*alpha, because c(i,1)=e s. Pullback along (1,i) gives i*alpha composed with alpha = t*e*alpha. Both existing left-hand compositions are reversed. The two proposed changes preserve the named pullback maps and right-hand sides and type each identity on the proper pullback of F.",
+      "nearby_registered_units": [
+        "MC-STK-ERR-1499 restores the word diagram in the module definition at pinned 2643.",
+        "MC-STK-ERR-1501 changes the projection ordering in a different equivalence construction at pinned 2860. Neither fixes the inverse identities at pinned 2671 and 2673."
+      ],
+      "confidence": "high",
+      "confidence_reason": "The actual cocycle order and the explicitly stated groupoid inverse axioms fix both compositions."
+    }
+  ],
+  "inverse_alternative": {
+    "verdict": "REJECT_RHS_ONLY_AS_COMPLETE_TWO_LINE_REPAIR",
+    "proposed_alternative": "Keep both current left-hand compositions but swap s and t only on their right-hand sides.",
+    "reason": "The resulting identities would be type-correct and true, but the first would be obtained from (1,i), not the explicitly named (i,1); the second would have the opposite mismatch. Thus the alternative leaves the stated derivation wrong. It would require also swapping the two named pullback maps. The supplied two LHS-order changes correctly repair the whole derivation.",
+    "accepted_identities": [
+      {
+        "pullback": "(i,1)",
+        "left": "alpha composed with i*alpha",
+        "right": "s*e*alpha",
+        "endomorphism_of": "s*F"
+      },
+      {
+        "pullback": "(1,i)",
+        "left": "i*alpha composed with alpha",
+        "right": "t*e*alpha",
+        "endomorphism_of": "t*F"
+      }
+    ]
+  },
+  "registry_reconciliation": {
+    "snapshot": {
+      "observed_at_utc": "2026-09-09T23:36:21.2448020Z",
+      "head": "7c763a2c168ffec7b6fbe3917ecd953f1e584787",
+      "registry_sha256": "180D91A7C2FFD034B469EFF40339AB3C312E77CE6745968CB172289CA934223A",
+      "registered_groupoids_ids": [
+        "MC-STK-ERR-1480",
+        "MC-STK-ERR-1481",
+        "MC-STK-ERR-1482",
+        "MC-STK-ERR-1483",
+        "MC-STK-ERR-1484",
+        "MC-STK-ERR-1485",
+        "MC-STK-ERR-1486",
+        "MC-STK-ERR-1487",
+        "MC-STK-ERR-1488",
+        "MC-STK-ERR-1489",
+        "MC-STK-ERR-1490",
+        "MC-STK-ERR-1491",
+        "MC-STK-ERR-1492",
+        "MC-STK-ERR-1493",
+        "MC-STK-ERR-1494",
+        "MC-STK-ERR-1495",
+        "MC-STK-ERR-1496",
+        "MC-STK-ERR-1497",
+        "MC-STK-ERR-1498",
+        "MC-STK-ERR-1499",
+        "MC-STK-ERR-1500",
+        "MC-STK-ERR-1501",
+        "MC-STK-ERR-1502",
+        "MC-STK-ERR-1503",
+        "MC-STK-ERR-1504",
+        "MC-STK-ERR-1505",
+        "MC-STK-ERR-1506",
+        "MC-STK-ERR-1507",
+        "MC-STK-ERR-1508",
+        "MC-STK-ERR-1509",
+        "MC-STK-ERR-1510",
+        "MC-STK-ERR-1511",
+        "MC-STK-ERR-1512",
+        "MC-STK-ERR-1513",
+        "MC-STK-ERR-1514",
+        "MC-STK-ERR-1515",
+        "MC-STK-ERR-1516",
+        "MC-STK-ERR-1517",
+        "MC-STK-ERR-1518",
+        "MC-STK-ERR-1519",
+        "MC-STK-ERR-1520",
+        "MC-STK-ERR-1521",
+        "MC-STK-ERR-1522"
+      ],
+      "missing_from_registry": [],
+      "current_groupoids_sha256": "C6CF7E55C1C4F87EC475F514AED7219AF824EC3AC7734319367E54D5F6DFE7A5",
+      "head_blobs": [
+        "100644 blob 38277531f1a850bc03668d67d49284a85580cab8\tai-integrated/candidates/commons/stacks/errata/r46/source-map.jsonl",
+        "100644 blob 70edbbf7319f1538cf5d1ba059096f65ffa84995\tai-integrated/candidates/commons/stacks/errata/r46/stable-units.json",
+        "100644 blob c2869b04472de311be4b6dc998a797542a453437\tai-integrated/registry/overlays.json",
+        "100644 blob 8d55ee2a0ace1cd924a87836d96e90f8fdc95b4b\tgroupoids.tex"
+      ]
+    },
+    "registry_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/registry/overlays.json",
+    "registered_entries_checked": 48,
+    "source_map_rows_checked": 1292,
+    "relevant_source_maps": [
+      {
+        "path": "<WORKSPACE>\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r46\\source-map.jsonl",
+        "bytes": 69434,
+        "sha256": "9B2DD65725C4221A641555A09D5A765918E9C1000F21D16D5062B073B47CAE91",
+        "target_rows": 43
+      }
+    ],
+    "stable_units_path": "<WORKSPACE>\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r46\\stable-units.json",
+    "stable_units_sha256": "F3F0C645BACB2B173113CEA81D6F8C3D340C8FBA3C375FFCDDFB8BFCD9FC5505",
+    "registered_groupoids_units": 43,
+    "registered_groupoids_operations": 46,
+    "stable_units_match": true,
+    "line_overlaps": [],
+    "exact_duplicates": [],
+    "semantic_duplicates": [],
+    "semantic_duplicate_reason": "All 43 existing groupoids units were examined by locus and operation; the six new operation intervals are disjoint from all 46 existing groupoids operation intervals. Nearby corrections are distinguished individually in the findings.",
+    "registered_units": [
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1480",
+        "locus": "groupoids.tex:71",
+        "operations": [
+          {
+            "source_start_line": 71,
+            "source_end_line": 72,
+            "old_text": "is just a subset\nof $R \\subset A \\times A$",
+            "replacement_text": "is just a subset\n$R \\subset A \\times A$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1481",
+        "locus": "groupoids.tex:172",
+        "operations": [
+          {
+            "source_start_line": 172,
+            "source_end_line": 173,
+            "old_text": "Denote $x_K, y_K, z_K : \\Spec(K) \\to U$\nthe morphisms",
+            "replacement_text": "Denote by $x_K, y_K, z_K : \\Spec(K) \\to U$\nthe morphisms"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1482",
+        "locus": "groupoids.tex:229",
+        "operations": [
+          {
+            "source_start_line": 229,
+            "source_end_line": 229,
+            "old_text": "$j$ is a unramified",
+            "replacement_text": "$j$ is unramified"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1483",
+        "locus": "groupoids.tex:264",
+        "operations": [
+          {
+            "source_start_line": 264,
+            "source_end_line": 264,
+            "old_text": "there exists a $i(g) \\in G$",
+            "replacement_text": "there exists an $i(g) \\in G$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1484",
+        "locus": "groupoids.tex:375",
+        "operations": [
+          {
+            "source_start_line": 375,
+            "source_end_line": 375,
+            "old_text": "Add more as needed.\n",
+            "replacement_text": ""
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1485",
+        "locus": "groupoids.tex:510",
+        "operations": [
+          {
+            "source_start_line": 510,
+            "source_end_line": 510,
+            "old_text": "\\sum x_{ik} \\otimes x_{kj}",
+            "replacement_text": "\\sum_k x_{ik} \\otimes x_{kj}"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1486",
+        "locus": "groupoids.tex:749",
+        "operations": [
+          {
+            "source_start_line": 749,
+            "source_end_line": 749,
+            "old_text": "If $(G, m)$ is a group scheme over a field $k$.",
+            "replacement_text": "Let $(G, m)$ be a group scheme over a field $k$."
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1487",
+        "locus": "groupoids.tex:991",
+        "operations": [
+          {
+            "source_start_line": 991,
+            "source_end_line": 991,
+            "old_text": "quasi-compect",
+            "replacement_text": "quasi-compact"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1488",
+        "locus": "groupoids.tex:1028",
+        "operations": [
+          {
+            "source_start_line": 1028,
+            "source_end_line": 1028,
+            "old_text": "closed subsgroup scheme",
+            "replacement_text": "closed subgroup scheme"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1489",
+        "locus": "groupoids.tex:1150",
+        "operations": [
+          {
+            "source_start_line": 1150,
+            "source_end_line": 1150,
+            "old_text": "Choose an affine open neighbourhood $U \\subset G$",
+            "replacement_text": "Choose an affine open neighbourhood $U \\subset W$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1490",
+        "locus": "groupoids.tex:1164",
+        "operations": [
+          {
+            "source_start_line": 1164,
+            "source_end_line": 1164,
+            "old_text": "(t, u) \\longrightarrow (uf(t)^{-1}, t)",
+            "replacement_text": "(u, t) \\longrightarrow (uf(t)^{-1}, t)"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1491",
+        "locus": "groupoids.tex:1534,1557",
+        "operations": [
+          {
+            "source_start_line": 1534,
+            "source_end_line": 1535,
+            "old_text": "the closed subschemes $G_{n, S}$. Consider the kernel\n$K = \\Ker(\\text{inn}_h : G_S \\to G_S)$.",
+            "replacement_text": "the closed subschemes $G_{n, S}$. Consider the equalizer\n$K \\subset G_S$ of $\\text{inn}_h$ and $\\text{id}_{G_S}$."
+          },
+          {
+            "source_start_line": 1557,
+            "source_end_line": 1557,
+            "old_text": "C = H \\cap \\bigcap\\nolimits_i \\Ker(\\text{inn}_{g_i} : G \\to G)",
+            "replacement_text": "C = H \\cap \\bigcap\\nolimits_i \\operatorname{Eq}(\\text{inn}_{g_i}, \\text{id}_G)"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1492",
+        "locus": "groupoids.tex:1554",
+        "operations": [
+          {
+            "source_start_line": 1554,
+            "source_end_line": 1555,
+            "old_text": "the connected components of $G$ are the irreducible components\nof $G$ are the translates of $G^0$",
+            "replacement_text": "the connected components of $G$ are the irreducible components\nof $G$ and are the translates of $G^0$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1493",
+        "locus": "groupoids.tex:1567",
+        "operations": [
+          {
+            "source_start_line": 1567,
+            "source_end_line": 1567,
+            "old_text": "$A \\subset G_{\\overline{k}}$ the closed subgroup scheme",
+            "replacement_text": "$A \\subset G_{\\overline{k}}$ be the closed subgroup scheme"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1494",
+        "locus": "groupoids.tex:1771",
+        "operations": [
+          {
+            "source_start_line": 1771,
+            "source_end_line": 1771,
+            "old_text": "Let $[d] : A \\to A$ be the multiplication by $d$.",
+            "replacement_text": "Let $d \\in \\mathbf{Z}$ be nonzero, and let\n$[d] : A \\to A$ be multiplication by $d$."
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1495",
+        "locus": "groupoids.tex:2132",
+        "operations": [
+          {
+            "source_start_line": 2132,
+            "source_end_line": 2132,
+            "old_text": "an $G$-equivariant isomorphism",
+            "replacement_text": "a $G$-equivariant isomorphism"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1496",
+        "locus": "groupoids.tex:2220",
+        "operations": [
+          {
+            "source_start_line": 2220,
+            "source_end_line": 2220,
+            "old_text": "the answers to these questions is no",
+            "replacement_text": "the answers to these questions are no"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1497",
+        "locus": "groupoids.tex:2314",
+        "operations": [
+          {
+            "source_start_line": 2314,
+            "source_end_line": 2314,
+            "old_text": "Namely, to check this we have to verify that",
+            "replacement_text": "Namely, to check this we have to verify commutativity of the diagram"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1498",
+        "locus": "groupoids.tex:2360",
+        "operations": [
+          {
+            "source_start_line": 2360,
+            "source_end_line": 2360,
+            "old_text": "\\sum f_n x^n \\otimes x^n",
+            "replacement_text": "\\sum f_n \\otimes x^n \\otimes x^n"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1499",
+        "locus": "groupoids.tex:2643",
+        "operations": [
+          {
+            "source_start_line": 2643,
+            "source_end_line": 2643,
+            "old_text": "is a commutative in the category of",
+            "replacement_text": "is a commutative diagram in the category of"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1500",
+        "locus": "groupoids.tex:2849,2850",
+        "operations": [
+          {
+            "source_start_line": 2849,
+            "source_end_line": 2849,
+            "old_text": "The middle equality because",
+            "replacement_text": "The middle equality holds because"
+          },
+          {
+            "source_start_line": 2850,
+            "source_end_line": 2851,
+            "old_text": "and the first and the last\nequality because",
+            "replacement_text": "and the first and last\nequalities hold because"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1501",
+        "locus": "groupoids.tex:2860",
+        "operations": [
+          {
+            "source_start_line": 2860,
+            "source_end_line": 2860,
+            "old_text": "(R, R \\times_{t, U, t} R, \\text{pr}_0, \\text{pr}_1, \\text{pr}_{02})",
+            "replacement_text": "(R, R \\times_{t, U, t} R, \\text{pr}_1, \\text{pr}_0, \\text{pr}_{02})"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1502",
+        "locus": "groupoids.tex:2991",
+        "operations": [
+          {
+            "source_start_line": 2991,
+            "source_end_line": 2991,
+            "old_text": "it suffices the show that",
+            "replacement_text": "it suffices to show that"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1503",
+        "locus": "groupoids.tex:3145",
+        "operations": [
+          {
+            "source_start_line": 3145,
+            "source_end_line": 3145,
+            "old_text": "is a quasi-coherent modules on",
+            "replacement_text": "is a quasi-coherent module on"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1504",
+        "locus": "groupoids.tex:3183",
+        "operations": [
+          {
+            "source_start_line": 3183,
+            "source_end_line": 3183,
+            "old_text": "cardinal $\\geq$ than the cardinality",
+            "replacement_text": "cardinal $\\geq$ the cardinality"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1505",
+        "locus": "groupoids.tex:3215",
+        "operations": [
+          {
+            "source_start_line": 3215,
+            "source_end_line": 3216,
+            "old_text": "Moreover, let's agree that $S(i, i, k, m) = \\{m\\}$ for all\n$i, j = i, k, m$ when $k \\in I_{ij}$.",
+            "replacement_text": "Moreover, let's agree that $S(i, i, k, m) = \\{m\\}$ for all\n$i \\in I$, $k \\in I_{ii}$, and $m \\in M_i$."
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1506",
+        "locus": "groupoids.tex:3432",
+        "operations": [
+          {
+            "source_start_line": 3432,
+            "source_end_line": 3432,
+            "old_text": "which turns $R_p$ into a",
+            "replacement_text": "turns $R_p$ into a"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1507",
+        "locus": "groupoids.tex:3518",
+        "operations": [
+          {
+            "source_start_line": 3518,
+            "source_end_line": 3518,
+            "old_text": "We sometime use the notation",
+            "replacement_text": "We sometimes use the notation"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1508",
+        "locus": "groupoids.tex:3614",
+        "operations": [
+          {
+            "source_start_line": 3614,
+            "source_end_line": 3614,
+            "old_text": "Since $s$ is open the set $W' = t(s^{-1}(W))$",
+            "replacement_text": "Since $t$ is open the set $W' = t(s^{-1}(W))$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1509",
+        "locus": "groupoids.tex:3865",
+        "operations": [
+          {
+            "source_start_line": 3865,
+            "source_end_line": 3865,
+            "old_text": "Let $g : U' \\to U$ a morphism",
+            "replacement_text": "Let $g : U' \\to U$ be a morphism"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1510",
+        "locus": "groupoids.tex:4050",
+        "operations": [
+          {
+            "source_start_line": 4050,
+            "source_end_line": 4050,
+            "old_text": "A computation, which we omit shows",
+            "replacement_text": "A computation, which we omit, shows"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1511",
+        "locus": "groupoids.tex:4172",
+        "operations": [
+          {
+            "source_start_line": 4172,
+            "source_end_line": 4172,
+            "old_text": "Thus (b) $\\Rightarrow$ (a) in both (1) and (2).",
+            "replacement_text": "Thus (b) $\\Rightarrow$ (c) in both (1) and (2)."
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1512",
+        "locus": "groupoids.tex:4224",
+        "operations": [
+          {
+            "source_start_line": 4224,
+            "source_end_line": 4224,
+            "old_text": " (insert future reference here)",
+            "replacement_text": ""
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1513",
+        "locus": "groupoids.tex:4276",
+        "operations": [
+          {
+            "source_start_line": 4276,
+            "source_end_line": 4276,
+            "old_text": "R \\times_{S, U, t} R",
+            "replacement_text": "R \\times_{s, U, t} R"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1514",
+        "locus": "groupoids.tex:4309",
+        "operations": [
+          {
+            "source_start_line": 4309,
+            "source_end_line": 4309,
+            "old_text": "$u \\in U_r \\Leftrightarrow$ if and only if",
+            "replacement_text": "$u \\in U_r \\Leftrightarrow$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1515",
+        "locus": "groupoids.tex:4421",
+        "operations": [
+          {
+            "source_start_line": 4421,
+            "source_end_line": 4421,
+            "old_text": "$U' = \\Spec(C') \\to U$",
+            "replacement_text": "$U' = \\Spec(A') \\to U$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1516",
+        "locus": "groupoids.tex:4537,4541",
+        "operations": [
+          {
+            "source_start_line": 4537,
+            "source_end_line": 4537,
+            "old_text": " (insert future reference on property determinant here)",
+            "replacement_text": ""
+          },
+          {
+            "source_start_line": 4541,
+            "source_end_line": 4542,
+            "old_text": " (insert future reference\non property determinant here)",
+            "replacement_text": ""
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1517",
+        "locus": "groupoids.tex:4570",
+        "operations": [
+          {
+            "source_start_line": 4570,
+            "source_end_line": 4570,
+            "old_text": "(U', R', s', t') \\to (U, R, s, t, c)",
+            "replacement_text": "(U', R', s', t', c') \\to (U, R, s, t, c)"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1518",
+        "locus": "groupoids.tex:4641",
+        "operations": [
+          {
+            "source_start_line": 4641,
+            "source_end_line": 4641,
+            "old_text": "The $M_1 = \\lim M_i$",
+            "replacement_text": "Then $M_1 = \\lim M_i$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1519",
+        "locus": "groupoids.tex:4777",
+        "operations": [
+          {
+            "source_start_line": 4777,
+            "source_end_line": 4777,
+            "old_text": "the tow left squares",
+            "replacement_text": "the two left squares"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1520",
+        "locus": "groupoids.tex:4788",
+        "operations": [
+          {
+            "source_start_line": 4788,
+            "source_end_line": 4788,
+            "old_text": "and hence also then isomorphic arrow $t$",
+            "replacement_text": "and hence also the isomorphic arrow $t$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1521",
+        "locus": "groupoids.tex:4941",
+        "operations": [
+          {
+            "source_start_line": 4941,
+            "source_end_line": 4941,
+            "old_text": "$Z = R \\setminus s^{-1}(W) \\cap t^{-1}(W)$",
+            "replacement_text": "$Z = R \\setminus (s^{-1}(W) \\cap t^{-1}(W))$"
+          }
+        ]
+      },
+      {
+        "entry": "stacks-errata-a04446e-r46",
+        "unit_id": "MC-STK-ERR-1522",
+        "locus": "groupoids.tex:5049",
+        "operations": [
+          {
+            "source_start_line": 5049,
+            "source_end_line": 5050,
+            "old_text": "Let $V$ be a scheme over $X$ such that for all \n$(y, v_1, \\ldots, v_d)$",
+            "replacement_text": "Let $V$ be a scheme over $X$ such that for every positive integer $d$ and all\n$(y, v_1, \\ldots, v_d)$"
+          }
+        ]
+      }
+    ],
+    "remote_freshness_claim": false,
+    "unregistered_candidates_or_other_history_examined": false
+  },
+  "operations": [
+    {
+      "local_name": "zero-multiplication-etale-proof",
+      "operation_ordinal": 1,
+      "old_text": "Observe that $[d](x + y) = [d](x) + [d](y)$. Since translation by a\n",
+      "replacement_text": "If $d = 0$, then the fibre of $[d]$ over the unit is the\npositive-dimensional variety $A$, so $[d]$ is not \\'etale.\nThus we may assume $d \\not= 0$.\nObserve that $[d](x + y) = [d](x) + [d](y)$. Since translation by a\n",
+      "old_bytes": 68,
+      "replacement_bytes": 216,
+      "old_sha256": "4619AA5241B07FC0EB61065E3BA615EBA278AEFD956BA43270E1D4F4682E5267",
+      "replacement_sha256": "9D8496CF79597B23F5CE3DBE3B517ED19D6A93BEDB2E0FE65046320EAB34EEF4",
+      "occurrences_in_each_source": 1,
+      "current": {
+        "line_start": 2004,
+        "line_end": 2004,
+        "start_byte": 74899,
+        "end_byte_exclusive": 74967
+      },
+      "pinned_original": {
+        "line_start": 1836,
+        "line_end": 1836,
+        "start_byte": 67383,
+        "end_byte_exclusive": 67451
+      },
+      "canonical_id": null
+    },
+    {
+      "local_name": "groupoid-module-inverse-composition-order",
+      "operation_ordinal": 1,
+      "old_text": "Then we see that $i^*\\alpha \\circ \\alpha = s^*e^*\\alpha$.\n",
+      "replacement_text": "Then we see that $\\alpha \\circ i^*\\alpha = s^*e^*\\alpha$.\n",
+      "old_bytes": 58,
+      "replacement_bytes": 58,
+      "old_sha256": "72B8101883294966F16B713D167F796FD3C6077B20CA6D2B86455BC7D34A4699",
+      "replacement_sha256": "729534BC1DB13F6A2E05B2BC09BA4B5EDFCB615DB3039B6E2F4A77A4D7FBB504",
+      "occurrences_in_each_source": 1,
+      "current": {
+        "line_start": 2962,
+        "line_end": 2962,
+        "start_byte": 110525,
+        "end_byte_exclusive": 110583
+      },
+      "pinned_original": {
+        "line_start": 2671,
+        "line_end": 2671,
+        "start_byte": 97731,
+        "end_byte_exclusive": 97789
+      },
+      "canonical_id": null
+    },
+    {
+      "local_name": "groupoid-module-inverse-composition-order",
+      "operation_ordinal": 2,
+      "old_text": "$\\alpha \\circ i^*\\alpha = t^*e^*\\alpha$. By the second assumption \n",
+      "replacement_text": "$i^*\\alpha \\circ \\alpha = t^*e^*\\alpha$. By the second assumption \n",
+      "old_bytes": 67,
+      "replacement_bytes": 67,
+      "old_sha256": "1F5D9D61158DFE1D581B2F7D151B016FDA47828B4B5256691A35946B95E5CDB4",
+      "replacement_sha256": "9F00BC266E1066B96602B3D6AEF52A551DE159D6C46FDD439B384B73175B4D0C",
+      "occurrences_in_each_source": 1,
+      "current": {
+        "line_start": 2964,
+        "line_end": 2964,
+        "start_byte": 110644,
+        "end_byte_exclusive": 110711
+      },
+      "pinned_original": {
+        "line_start": 2673,
+        "line_end": 2673,
+        "start_byte": 97850,
+        "end_byte_exclusive": 97917
+      },
+      "canonical_id": null
+    },
+    {
+      "local_name": "colimit-cover-orientation",
+      "operation_ordinal": 1,
+      "old_text": "s^{-1}(U_i) \\cap t^{-1}(U_j) = \\bigcup\\nolimits_{k \\in J_{ij}} W_{ijk}.\n",
+      "replacement_text": "t^{-1}(U_i) \\cap s^{-1}(U_j) = \\bigcup\\nolimits_{k \\in J_{ij}} W_{ijk}.\n",
+      "old_bytes": 72,
+      "replacement_bytes": 72,
+      "old_sha256": "20D82904A23E57F0DDEDC420666510BDD66CC277854820BA4BC4E6E6D1AB9802",
+      "replacement_sha256": "42B5DC2FABB6575BCEA7345846B9B015C7C4E0E6A5185D82BB1E94DB815C4FF8",
+      "occurrences_in_each_source": 1,
+      "current": {
+        "line_start": 3470,
+        "line_end": 3470,
+        "start_byte": 129575,
+        "end_byte_exclusive": 129647
+      },
+      "pinned_original": {
+        "line_start": 3179,
+        "line_end": 3179,
+        "start_byte": 116774,
+        "end_byte_exclusive": 116846
+      },
+      "canonical_id": null
+    },
+    {
+      "local_name": "colimit-two-ambient-modules",
+      "operation_ordinal": 1,
+      "old_text": "in $M_{ijk}$ for some $a_{m'} \\in A_{ijk}$ or $b_{m'} \\in B_{ijk}$.\n",
+      "replacement_text": "in $M_{ijk}$ or $M_j \\otimes_{A_j, s} B_{ijk}$, respectively,\nfor some $a_{m'} \\in A_{ijk}$ or $b_{m'} \\in B_{ijk}$.\n",
+      "old_bytes": 68,
+      "replacement_bytes": 117,
+      "old_sha256": "6DB10C0DADDC0E8B8A166B981A4A6223A0B37C9D622F2AF3BABDF8F01B454396",
+      "replacement_sha256": "B072A225AB160C0C54C95F212BC0B07891E975DB2BDEF727D3C61DECE36F9DD8",
+      "occurrences_in_each_source": 1,
+      "current": {
+        "line_start": 3505,
+        "line_end": 3505,
+        "start_byte": 130679,
+        "end_byte_exclusive": 130747
+      },
+      "pinned_original": {
+        "line_start": 3214,
+        "line_end": 3214,
+        "start_byte": 117883,
+        "end_byte_exclusive": 117951
+      },
+      "canonical_id": null
+    },
+    {
+      "local_name": "invariants-base-change-coefficient-ring",
+      "operation_ordinal": 1,
+      "old_text": "Then given $f \\in C^1$ let $P_r \\in C_r[x]$ be the polynomial\n",
+      "replacement_text": "Then given $f \\in C^1$ let $P_r \\in C'_r[x]$ be the polynomial\n",
+      "old_bytes": 62,
+      "replacement_bytes": 63,
+      "old_sha256": "832EDDAFCA740342F68FE6C9C20ADE6A3FB054653744D18D5EE29060F7293A0C",
+      "replacement_sha256": "B13D817DD40C2B99DEEC76C9101BB5DFB28443CCE2507E0959F641C77971508D",
+      "occurrences_in_each_source": 1,
+      "current": {
+        "line_start": 4719,
+        "line_end": 4719,
+        "start_byte": 174233,
+        "end_byte_exclusive": 174295
+      },
+      "pinned_original": {
+        "line_start": 4425,
+        "line_end": 4425,
+        "start_byte": 161388,
+        "end_byte_exclusive": 161450
+      },
+      "canonical_id": null
+    }
+  ],
+  "replay": {
+    "method": "Exact UTF-8 byte splices in ascending original-coordinate order, including LF preimages. Each old fragment hash, size, unique occurrence, byte offset, and one-based line was independently verified. Seven unchanged byte spans per source were compared byte-for-byte.",
+    "current": {
+      "source_key": "current",
+      "path": "<WORKSPACE>\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\groupoids.tex",
+      "input_bytes": 205795,
+      "input_sha256": "C6CF7E55C1C4F87EC475F514AED7219AF824EC3AC7734319367E54D5F6DFE7A5",
+      "input_line_count": 5513,
+      "output_bytes": 205993,
+      "output_sha256": "91E6BC02125516C95ED04DE98FAA097C884D3E9F94DD228FAD77CB31231DE444",
+      "output_line_count": 5517,
+      "operation_count": 6,
+      "untouched_spans_verified": 7,
+      "all_nonoperation_bytes_preserved": true,
+      "source_sha256_after": "C6CF7E55C1C4F87EC475F514AED7219AF824EC3AC7734319367E54D5F6DFE7A5"
+    },
+    "pinned_original": {
+      "source_key": "pinned_original",
+      "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\groupoids.tex",
+      "input_bytes": 189166,
+      "input_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "input_line_count": 5124,
+      "output_bytes": 189364,
+      "output_sha256": "8BDE7E962B3C3D3A3094BA9F73536F17452A3204861372496D4EEC23ACF13F2C",
+      "output_line_count": 5128,
+      "operation_count": 6,
+      "untouched_spans_verified": 7,
+      "all_nonoperation_bytes_preserved": true,
+      "source_sha256_after": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    "current_output_matches_packet": true,
+    "pinned_replay_role": "Diagnostic original-coordinate check only. It does not contain all already admitted cumulative repairs and must not replace the current source.",
+    "outputs_written": false
+  },
+  "next_action": "The single writer can consume these six current-source byte operations after checking the source and registry identities at its transaction boundary. Preserve the existing degree-lemma hypothesis, base-change object correction, other admitted edits, and all bytes outside the operation spans.",
+  "verbatim_task_input": "New bounded read-only subtask: independently adjudicate the five recovered groupoids.tex findings in <USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/GROUPOIDS_RECOVERED_FIX_REVIEW.json (25610 B / 03BC386D88EDF536A0A90664676DA2FD34007FC12D49A436BC3C9A23F984C47D). Read actual full relevant proof contexts in its exact pinned/current source paths. Check all six operations and the rejected RHS-only inverse-order alternative. Deduplicate only against relevant current registry/source-map units in the already located R47 worktree; no full-workspace scans. Write a human-readable independent adjudication and exact replay JSON ONLY under canon_audit_20260906/manager_verification/stacks_intake/groupoids_recovered_20260910/independent_review/. No registry/source edits, no IDs, no builds, no peer-task messages. Explicitly distinguish valid corrections, duplicates, and any disagreement. Root is examining the registrar transaction contract alongside you."
+}

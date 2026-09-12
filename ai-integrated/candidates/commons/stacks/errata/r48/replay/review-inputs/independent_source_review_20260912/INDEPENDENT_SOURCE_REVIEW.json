@@ -1,0 +1,1023 @@
+{
+  "schema": "r48-independent-source-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r48",
+  "review_date": "2026-09-12",
+  "status": "PASS_SOURCE_STAGE_ONLY",
+  "passed": true,
+  "adverse_findings": [],
+  "selected_units": 24,
+  "exact_operations": 27,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "scope": {
+    "source_stage": true,
+    "complete_candidate_admission_review": false,
+    "build_review": false,
+    "visual_review": false,
+    "deterministic_build_replay": false,
+    "candidate_source_mutated": false,
+    "registry_mutated": false,
+    "git_operations": false,
+    "tex_operations": false,
+    "publication_operations": false,
+    "candidate_validator_reused": false
+  },
+  "method": "Independent ascending unchanged-span reconstruction and coordinate-based inverse reconstruction; direct mathematical reading of actual authority passages; a separate bounded reader checked CH075-SD-010..019; fresh reads of all 48 manifest-bound registry source maps.",
+  "mechanical": {
+    "path": "MECHANICAL_CHECKS.json",
+    "sha256": "A22E2B820EA1D68DF87EC58DE55080B696387B98D9D34007082A4BEC27E6B42E",
+    "passed": true,
+    "checks": 263,
+    "failures": 0
+  },
+  "checker": {
+    "path": "independent_checks.py",
+    "sha256": "AFC0806FEC7AA6589BF71142D8DAA838CE15DBEA56FA82E23ADE6A20BCCFD5AC",
+    "imports_candidate_code": false,
+    "writes_files": false
+  },
+  "registry": {
+    "sha256": "180D91A7C2FFD034B469EFF40339AB3C312E77CE6745968CB172289CA934223A",
+    "entries": 48,
+    "description": "R1 through R47 plus the Verdier overlay",
+    "source_map_rows": 1292,
+    "related_groupoids_units": 43,
+    "related_groupoids_operations": 46,
+    "related_spaces_perfect_units": 0,
+    "stable_id_collisions": [],
+    "operation_duplicates": [],
+    "operation_overlaps": [],
+    "semantic_conflicts": [],
+    "remote_freshness_independently_claimed": false
+  },
+  "source_results": [
+    {
+      "source": "groupoids.tex",
+      "authority_bytes": 189166,
+      "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "payload_bytes": 189364,
+      "payload_sha256": "8BDE7E962B3C3D3A3094BA9F73536F17452A3204861372496D4EEC23ACF13F2C",
+      "operations": 6,
+      "unchanged_intervals": 7,
+      "forward_exact": true,
+      "reverse_exact": true,
+      "structure": {
+        "labels": {
+          "before": 158,
+          "after": 158,
+          "ordered_equal": true
+        },
+        "references": {
+          "before": 349,
+          "after": 349,
+          "ordered_equal": true
+        },
+        "citations": {
+          "before": 8,
+          "after": 8,
+          "ordered_equal": true
+        },
+        "environments": {
+          "before": 562,
+          "after": 562,
+          "ordered_equal": true
+        },
+        "inputs": {
+          "before": 2,
+          "after": 2,
+          "ordered_equal": true
+        },
+        "items": {
+          "before": 123,
+          "after": 123,
+          "ordered_equal": true
+        }
+      }
+    },
+    {
+      "source": "spaces-perfect.tex",
+      "authority_bytes": 283799,
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "payload_bytes": 283812,
+      "payload_sha256": "9A9F4320504EFA95F0FEB76E31CA87EE34B0E2FF5BA975ED690A65611C899037",
+      "operations": 21,
+      "unchanged_intervals": 22,
+      "forward_exact": true,
+      "reverse_exact": true,
+      "structure": {
+        "labels": {
+          "before": 187,
+          "after": 187,
+          "ordered_equal": true
+        },
+        "references": {
+          "before": 752,
+          "after": 752,
+          "ordered_equal": true
+        },
+        "citations": {
+          "before": 5,
+          "after": 5,
+          "ordered_equal": true
+        },
+        "environments": {
+          "before": 730,
+          "after": 730,
+          "ordered_equal": true
+        },
+        "inputs": {
+          "before": 2,
+          "after": 2,
+          "ordered_equal": true
+        },
+        "items": {
+          "before": 206,
+          "after": 206,
+          "ordered_equal": true
+        }
+      }
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/candidate.config.json",
+      "bytes": 3817,
+      "sha256": "6B00A5D3B118D31C508EDF3C28DE0F43C976D838636D6489436FD26FA38FB0BA"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/operation-spec.json",
+      "bytes": 30858,
+      "sha256": "14C03664126894B674CDB01ABA0CC71179657EB593F11CE786034C1CFB2D4BDB"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/stable-units.json",
+      "bytes": 9389,
+      "sha256": "D876CE3408D0A25E953AD6537BBC1FB0C4C792F9E7EECF78BDE5FB5398EF5313"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/source-map.jsonl",
+      "bytes": 39426,
+      "sha256": "832303E802099D5661D8FA14E7E3950199833C84769753D92B5A16CEA802D0AF"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/decisions.jsonl",
+      "bytes": 10647,
+      "sha256": "018CBC92703FD10309980F0E95CCB342F7E8D717B51C41D97B48D2214FDD8B79"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/rejections.jsonl",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/formula-diagram-inventory.json",
+      "bytes": 11616,
+      "sha256": "6302CE301EE568CA7CB47A4FF6AF1F4C612DDDE46521A7FE499C089197D2303E"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/LEASE.json",
+      "bytes": 1366,
+      "sha256": "ADBCD3B93A924980623229CFB2BADBC2BC29BB0A2CAD85F47DD441FAB5CA8A9F"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/upstream.lock.json",
+      "bytes": 1170,
+      "sha256": "0A92EA8FB801645BEC92ABD36C8AE51E31E87DB481429E75E3A1C5522B842209"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/candidate.config.input.json",
+      "bytes": 3817,
+      "sha256": "6B00A5D3B118D31C508EDF3C28DE0F43C976D838636D6489436FD26FA38FB0BA"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/operation-spec.input.json",
+      "bytes": 30858,
+      "sha256": "14C03664126894B674CDB01ABA0CC71179657EB593F11CE786034C1CFB2D4BDB"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/stable-units.input.json",
+      "bytes": 9389,
+      "sha256": "D876CE3408D0A25E953AD6537BBC1FB0C4C792F9E7EECF78BDE5FB5398EF5313"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/source-map.input.jsonl",
+      "bytes": 39426,
+      "sha256": "832303E802099D5661D8FA14E7E3950199833C84769753D92B5A16CEA802D0AF"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/decisions.input.jsonl",
+      "bytes": 10647,
+      "sha256": "018CBC92703FD10309980F0E95CCB342F7E8D717B51C41D97B48D2214FDD8B79"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/rejections.input.jsonl",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/review/ADJUDICATION_SPEC.json",
+      "bytes": 4731,
+      "sha256": "072F852E061E120ABB00D0E6AFE9ED8B1F62F350351313759A17F47F04319494"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/review/HUMAN_REVIEW.md",
+      "bytes": 5262,
+      "sha256": "A557432D3005A4079E4A34F19037DFEF54C7B085D3F05204CA290968A887A06F"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/review/EXACT_OPERATIONS.json",
+      "bytes": 14062,
+      "sha256": "E5E4322BEB1B1175A54081492895648CA8BCE49929FA3BB5D4598B91AE319223"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/review/RECONCILIATION.json",
+      "bytes": 57555,
+      "sha256": "681142FE6380F4FB556E73374D6CA1A24924077E4E6E23F4926A7C68D75F7A92"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/review/HUMAN_ADJUDICATION.md",
+      "bytes": 12001,
+      "sha256": "6743116A301B10E43083D0294EB4C17AA89AE6DA5A83814A468ACB2861253F60"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/review/EXACT_REPLAY.json",
+      "bytes": 42223,
+      "sha256": "E9F9B956758CB7624BE4AAA190F7253DBA52DA973FFC70B62E5A859C8BE1CE92"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/source/groupoids.tex",
+      "bytes": 189166,
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/payload/groupoids.tex",
+      "bytes": 189364,
+      "sha256": "8BDE7E962B3C3D3A3094BA9F73536F17452A3204861372496D4EEC23ACF13F2C"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/authority/source/spaces-perfect.tex",
+      "bytes": 283799,
+      "sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34"
+    },
+    {
+      "path": "<WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/payload/spaces-perfect.tex",
+      "bytes": 283812,
+      "sha256": "9A9F4320504EFA95F0FEB76E31CA87EE34B0E2FF5BA975ED690A65611C899037"
+    }
+  ],
+  "root_selection": {
+    "path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/canon_audit_20260906/manager_verification/stacks_intake/r48_preparation_20260910/ROOT_SELECTION.json",
+    "bytes": 11442,
+    "sha256": "B47E678155CB53195F35BE37F852ABC874E7A32B6EBBD310050B975D88479147"
+  },
+  "mathematical_adjudication": [
+    {
+      "unit_id": "MC-STK-ERR-1545",
+      "producer_id": "CH075-SD-001",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1545-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The displayed source group must close H^i(RF(tau_{<=a}E)) before the arrow; the replacement balances the actual nesting without moving the arrow into that argument.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 479,
+          "end_line": 500,
+          "text": "\\begin{lemma}\n\\label{lemma-application-nice-K-injective}\nLet $S$ be a scheme. Let $X$ be an algebraic space over $S$.\nLet $F : \\textit{Mod}(\\mathcal{O}_X) \\to \\textit{Ab}$\nbe a functor and $N \\geq 0$ an integer. Assume that\n\\begin{enumerate}\n\\item $F$ is left exact,\n\\item $F$ commutes with countable direct products,\n\\item $R^pF(\\mathcal{F}) = 0$ for all $p \\geq N$ and $\\mathcal{F}$\nquasi-coherent.\n\\end{enumerate}\nThen for $E \\in D_\\QCoh(\\mathcal{O}_X)$\n\\begin{enumerate}\n\\item $H^i(RF(\\tau_{\\leq a}E) \\to H^i(RF(E))$ is an isomorphism\nfor $i \\leq a$,\n\\item $H^i(RF(E)) \\to H^i(RF(\\tau_{\\geq b - N + 1}E))$ is an isomorphism\nfor $i \\geq b$,\n\\item if $H^i(E) = 0$ for $i \\not \\in [a, b]$ for some\n$-\\infty \\leq a \\leq b \\leq \\infty$, then $H^i(RF(E)) = 0$\nfor $i \\not \\in [a, b + N - 1]$.\n\\end{enumerate}\n\\end{lemma}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1546",
+      "producer_id": "CH075-SD-002",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1546-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "Apply part (2) with its lower bound replaced by b+N. The truncation then begins at b+1 and vanishes, giving i >= b+N. The proof index n is unrelated to this uniform bound.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 479,
+          "end_line": 500,
+          "text": "\\begin{lemma}\n\\label{lemma-application-nice-K-injective}\nLet $S$ be a scheme. Let $X$ be an algebraic space over $S$.\nLet $F : \\textit{Mod}(\\mathcal{O}_X) \\to \\textit{Ab}$\nbe a functor and $N \\geq 0$ an integer. Assume that\n\\begin{enumerate}\n\\item $F$ is left exact,\n\\item $F$ commutes with countable direct products,\n\\item $R^pF(\\mathcal{F}) = 0$ for all $p \\geq N$ and $\\mathcal{F}$\nquasi-coherent.\n\\end{enumerate}\nThen for $E \\in D_\\QCoh(\\mathcal{O}_X)$\n\\begin{enumerate}\n\\item $H^i(RF(\\tau_{\\leq a}E) \\to H^i(RF(E))$ is an isomorphism\nfor $i \\leq a$,\n\\item $H^i(RF(E)) \\to H^i(RF(\\tau_{\\geq b - N + 1}E))$ is an isomorphism\nfor $i \\geq b$,\n\\item if $H^i(E) = 0$ for $i \\not \\in [a, b]$ for some\n$-\\infty \\leq a \\leq b \\leq \\infty$, then $H^i(RF(E)) = 0$\nfor $i \\not \\in [a, b + N - 1]$.\n\\end{enumerate}\n\\end{lemma}\n"
+        },
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 547,
+          "end_line": 554,
+          "text": "\\medskip\\noindent\nProof of (3). Under the assumption on $E$ we have\n$\\tau_{\\leq a - 1}E = 0$ and we get the vanishing\nof $H^i(RF(E))$ for $i \\leq a - 1$ from (1).\nSimilarly, we have $\\tau_{\\geq b + 1}E = 0$ and hence\nwe get the vanishing of $H^i(RF(E))$ for $i \\geq b + n$ from\npart (2).\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1547",
+      "producer_id": "CH075-SD-003",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1547-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "Assumption (1) applies to every affine V_{p,i}; all of these are needed for the consecutive distinguished squares. A statement about V_{p,1} alone may be true but is insufficient to discharge those hypotheses.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1345,
+          "end_line": 1423,
+          "text": "\\begin{lemma}\n\\label{lemma-induction-principle}\nLet $S$ be a scheme. Let $X$ be a quasi-compact and quasi-separated\nalgebraic space over $S$. Let $P$ be a property of the quasi-compact\nand quasi-separated objects of $X_{spaces, \\etale}$. Assume that\n\\begin{enumerate}\n\\item $P$ holds for every affine object of $X_{spaces, \\etale}$,\n\\item for every elementary distinguished square $(U \\subset W, f : V \\to W)$\nsuch that\n\\begin{enumerate}\n\\item $W$ is a quasi-compact and quasi-separated object of\n$X_{spaces, \\etale}$,\n\\item $U$ is quasi-compact,\n\\item $V$ is affine, and\n\\item $P$ holds for $U$, $V$, and $U \\times_W V$,\n\\end{enumerate}\nthen $P$ holds for $W$.\n\\end{enumerate}\nThen $P$ holds for every quasi-compact and quasi-separated object\nof $X_{spaces, \\etale}$ and in particular for $X$.\n\\end{lemma}\n\n\\begin{proof}\nWe first claim that $P$ holds for every representable\nquasi-compact and quasi-separated object of $X_{spaces, \\etale}$.\nNamely, suppose that $U \\to X$ is \\'etale and $U$ is a\nquasi-compact and quasi-separated scheme. By assumption (1)\nproperty $P$ holds for every affine open of $U$. Moreover, if\n$W, V \\subset U$ are quasi-compact open with $V$ affine and $P$ holds for \n$W$, $V$, and $W \\cap V$, then $P$ holds for $W \\cup V$ by (2)\n(as the pair $(W \\subset W \\cup V, V \\to W \\cup V)$ is an elementary\ndistinguished square). Thus $P$ holds for $U$ by the induction\nprinciple for schemes, see\nCohomology of Schemes, Lemma \\ref{coherent-lemma-induction-principle}.\n\n\\medskip\\noindent\nTo finish the proof it suffices to prove $P$ holds for $X$\n(because we can simply replace $X$ by any quasi-compact and quasi-separated\nobject of $X_{spaces, \\etale}$ we want to prove the result for).\nWe will use the filtration\n$$\n\\emptyset = U_{n + 1} \\subset\nU_n \\subset U_{n - 1} \\subset \\ldots \\subset U_1 = X\n$$\nand the morphisms $f_p : V_p \\to U_p$ of\nDecent Spaces, Lemma\n\\ref{decent-spaces-lemma-filter-quasi-compact-quasi-separated}.\nWe will prove that $P$ holds for $U_p$ by descending induction on $p$.\nNote that $P$ holds for $U_{n + 1}$ by (1)\nas an empty algebraic space is affine. Assume $P$ holds for $U_{p + 1}$.\nNote that $(U_{p + 1} \\subset U_p, f_p : V_p \\to U_p)$ is an elementary\ndistinguished square, but (2) may not apply as $V_p$ may not be affine.\nHowever, as $V_p$ is a quasi-compact scheme we may choose a finite affine open\ncovering $V_p = V_{p, 1} \\cup \\ldots \\cup V_{p, m}$.\nSet $W_{p, 0} = U_{p + 1}$ and\n$$\nW_{p, i} = U_{p + 1} \\cup f_p(V_{p, 1} \\cup \\ldots \\cup V_{p, i})\n$$\nfor $i = 1, \\ldots, m$. These are quasi-compact open subspaces of $X$.\nThen we have\n$$\nU_{p + 1} = W_{p, 0} \\subset\nW_{p, 1} \\subset \\ldots \\subset\nW_{p, m} = U_p\n$$\nand the pairs\n$$\n(W_{p, 0} \\subset W_{p, 1}, f_p|_{V_{p, 1}}),\n(W_{p, 1} \\subset W_{p, 2}, f_p|_{V_{p, 2}}),\\ldots,\n(W_{p, m - 1} \\subset W_{p, m}, f_p|_{V_{p, m}})\n$$\nare elementary distinguished squares by\nLemma \\ref{lemma-make-more-elementary-distinguished-squares}.\nNote that $P$ holds for each $V_{p, 1}$ (as affine schemes) and for\n$W_{p, i} \\times_{W_{p, i + 1}} V_{p, i + 1}$ as this is a quasi-compact\nopen of $V_{p, i + 1}$ and hence $P$ holds for it by the first paragraph\nof this proof. Thus (2) applies to each of these and we inductively\nconclude $P$ holds for $W_{p, 1}, \\ldots, W_{p, m} = U_p$.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1548",
+      "producer_id": "CH075-SD-004",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1548-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The next line already introduces the complete unchanged hypothesis list by 'such that'. Removing the adjacent redundant 'where' restores the sentence without deleting a condition.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1489,
+          "end_line": 1509,
+          "text": "\\begin{lemma}\n\\label{lemma-induction-principle-enlarge}\nLet $S$ be a scheme. Let $X$ be a quasi-compact and quasi-separated\nalgebraic space over $S$. Let $W \\subset X$ be a quasi-compact open\nsubspace. Let $P$ be a property of quasi-compact open subspaces of $X$.\nAssume that\n\\begin{enumerate}\n\\item $P$ holds for $W$, and\n\\item for every elementary distinguished square\n$(W_1 \\subset W_2, f : V \\to W_2)$ where \nsuch that\n\\begin{enumerate}\n\\item $W_1$, $W_2$ are quasi-compact open subspaces of $X$,\n\\item $W \\subset W_1$,\n\\item $V$ is affine, and\n\\item $P$ holds for $W_1$,\n\\end{enumerate}\nthen $P$ holds for $W_2$.\n\\end{enumerate}\nThen $P$ holds for $X$.\n\\end{lemma}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1549",
+      "producer_id": "CH075-SD-005",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1549-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "W_p is explicitly defined as W union U_p, while U_{n+1} is empty. Only union makes W_{n+1}=W and lets hypothesis (1) supply the induction base.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1511,
+          "end_line": 1555,
+          "text": "\\begin{proof}\nWe can deduce this from Lemma \\ref{lemma-induction-principle-separated},\nbut instead we will give a direct argument by explicitly redoing the proof of\nLemma \\ref{lemma-induction-principle}. We will use the filtration\n$$\n\\emptyset = U_{n + 1} \\subset\nU_n \\subset U_{n - 1} \\subset \\ldots \\subset U_1 = X\n$$\nand the morphisms $f_p : V_p \\to U_p$ of\nDecent Spaces, Lemma\n\\ref{decent-spaces-lemma-filter-quasi-compact-quasi-separated}.\nWe will prove that $P$ holds for $W_p = W \\cup U_p$ by descending\ninduction on $p$. This will finish the proof as $W_1 = X$.\nNote that $P$ holds for $W_{n + 1} = W \\cap U_{n + 1} = W$\nby (1). Assume $P$ holds for $W_{p + 1}$. Observe that\n$W_p \\setminus W_{p + 1}$ (with reduced induced subspace structure)\nis a closed subspace of $U_p \\setminus U_{p + 1}$.\nSince $(U_{p + 1} \\subset U_p, f_p : V_p \\to U_p)$ is an elementary\ndistinguished square, the same is true for\n$(W_{p + 1} \\subset W_p, f_p : V_p \\to W_p)$.\nHowever (2) may not apply as $V_p$ may not be affine.\nHowever, as $V_p$ is a quasi-compact scheme we may choose\na finite affine open covering $V_p = V_{p, 1} \\cup \\ldots \\cup V_{p, m}$.\nSet $W_{p, 0} = W_{p + 1}$ and\n$$\nW_{p, i} = W_{p + 1} \\cup f_p(V_{p, 1} \\cup \\ldots \\cup V_{p, i})\n$$\nfor $i = 1, \\ldots, m$. These are quasi-compact open subspaces of $X$\ncontaining $W$. Then we have\n$$\nW_{p + 1} = W_{p, 0} \\subset\nW_{p, 1} \\subset \\ldots \\subset\nW_{p, m} = W_p\n$$\nand the pairs\n$$\n(W_{p, 0} \\subset W_{p, 1}, f_p|_{V_{p, 1}}),\n(W_{p, 1} \\subset W_{p, 2}, f_p|_{V_{p, 2}}),\\ldots,\n(W_{p, m - 1} \\subset W_{p, m}, f_p|_{V_{p, m}})\n$$\nare elementary distinguished squares by\nLemma \\ref{lemma-make-more-elementary-distinguished-squares}.\nNow (2) applies to each of these and we inductively\nconclude $P$ holds for $W_{p, 1}, \\ldots, W_{p, m} = W_p$.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1550",
+      "producer_id": "CH075-SD-006",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1550-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The defined geometric input is an elementary distinguished square. Its Mayer–Vietoris constructions produce triangles; the introductory input therefore must be called a square.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1295,
+          "end_line": 1314,
+          "text": "\\begin{definition}\n\\label{definition-elementary-distinguished-square}\nLet $S$ be a scheme. A commutative diagram\n$$\n\\xymatrix{\nU \\times_W V \\ar[r] \\ar[d] & V \\ar[d]^f \\\\\nU \\ar[r]^j & W\n}\n$$\nof algebraic spaces over $S$ is called an {\\it elementary distinguished square}\nif\n\\begin{enumerate}\n\\item $U$ is an open subspace of $W$ and $j$ is the inclusion morphism,\n\\item $f$ is \\'etale, and\n\\item setting $T = W \\setminus U$ (with reduced induced\nsubspace structure) the morphism $f^{-1}(T) \\to T$ is an isomorphism.\n\\end{enumerate}\nWe will indicate this by saying: ``Let $(U \\subset W, f : V \\to W)$\nbe an elementary distinguished square.''\n\\end{definition}\n"
+        },
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1559,
+          "end_line": 1564,
+          "text": "\\section{Mayer-Vietoris}\n\\label{section-mayer-vietoris}\n\n\\noindent\nIn this section we prove that an elementary distinguished triangle\ngives rise to various Mayer-Vietoris sequences.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1551",
+      "producer_id": "CH075-SD-007",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1551-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "Applying Hom(-,F) to 0 -> A -> B -> C -> 0 yields 0 -> Hom(C,F) -> Hom(B,F) -> Hom(A,F). It is left exact as a functor on the opposite category. The following Ext^1 obstruction confirms that no terminal surjectivity was claimed.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1671,
+          "end_line": 1759,
+          "text": "\\begin{lemma}\n\\label{lemma-exact-sequence-j-star}\nLet $S$ be a scheme. Let $(U \\subset X, V \\to X)$ be an elementary\ndistinguished square of algebraic spaces over $S$.\n\\begin{enumerate}\n\\item For every sheaf of $\\mathcal{O}_X$-modules $\\mathcal{F}$\nwe have a short exact sequence\n$$\n0 \\to \\mathcal{F} \\to\nj_{U, *}\\mathcal{F}|_U \\oplus j_{V, *}\\mathcal{F}|_V \\to\nj_{U \\times_X V, *}\\mathcal{F}|_{U \\times_X V} \\to 0\n$$\n\\item For any object $E$ of $D(\\mathcal{O}_X)$ we have a distinguished\ntriangle\n$$\nE \\to \nRj_{U, *}E|_U \\oplus Rj_{V, *}E|_V \\to\nRj_{U \\times_X V, *}E|_{U \\times_X V} \\to\nE[1]\n$$\nin $D(\\mathcal{O}_X)$.\n\\end{enumerate}\n\\end{lemma}\n\n\\begin{proof}\nLet $W$ be an object of $X_\\etale$. We claim the sequence\n$$\n0 \\to\n\\mathcal{F}(W) \\to\n\\mathcal{F}(W \\times_X U) \\oplus \\mathcal{F}(W \\times_X V) \\to\n\\mathcal{F}(W \\times_X U \\times_X V)\n$$\nis exact and that an element of the last group can locally on $W$\nbe lifted to the middle one.\nBy Lemma \\ref{lemma-make-more-elementary-distinguished-squares}\nthe pair $(W \\times_X U \\subset W, V \\times_X W \\to W)$ is an elementary\ndistinguished square. Thus we may assume $W = X$ and it suffices\nto prove the same thing for\n$$\n0 \\to\n\\mathcal{F}(X) \\to\n\\mathcal{F}(U) \\oplus \\mathcal{F}(V) \\to\n\\mathcal{F}(U \\times_X V)\n$$\nWe have seen that\n$$\n0 \\to j_{U \\times_X V!}\\mathcal{O}_{U \\times_X V}\n\\to j_{U!}\\mathcal{O}_U \\oplus\nj_{V!}\\mathcal{O}_V \\to\n\\mathcal{O}_X \\to 0\n$$\nis a exact sequence of $\\mathcal{O}_X$-modules in\nLemma \\ref{lemma-exact-sequence-lower-shriek} and applying\nthe right exact functor $\\Hom_{\\mathcal{O}_X}(- , \\mathcal{F})$\ngives the sequence above. This also means that the obstruction\nto lifting $s \\in \\mathcal{F}(U \\times_X V)$ to\nan element of $\\mathcal{F}(U) \\oplus \\mathcal{F}(V)$ lies in\n$\\Ext^1_{\\mathcal{O}_X}(\\mathcal{O}_X, \\mathcal{F}) =\nH^1(X, \\mathcal{F})$. By locality of cohomology\n(Cohomology on Sites, Lemma\n\\ref{sites-cohomology-lemma-kill-cohomology-class-on-covering})\nthis obstruction vanishes \\'etale locally on $X$ and the proof\nof (1) is complete.\n\n\\medskip\\noindent\nProof of (2).\nChoose a K-injective complex $\\mathcal{I}^\\bullet$ representing $E$\nwhose terms $\\mathcal{I}^n$ are injective objects of\n$\\textit{Mod}(\\mathcal{O}_X)$, see Injectives, Theorem\n\\ref{injectives-theorem-K-injective-embedding-grothendieck}.\nThen $\\mathcal{I}^\\bullet|U$ is a K-injective complex\n(Cohomology on Sites, Lemma\n\\ref{sites-cohomology-lemma-restrict-K-injective-to-open}).\nHence $Rj_{U, *}E|_U$ is represented by $j_{U, *}\\mathcal{I}^\\bullet|_U$.\nSimilarly for $V$ and $U \\times_X V$. Hence the distinguished triangle\nof the lemma is the distinguished triangle associated (by\nDerived Categories, Section\n\\ref{derived-section-canonical-delta-functor} and especially\nLemma \\ref{derived-lemma-derived-canonical-delta-functor})\nto the short exact sequence of complexes\n$$\n0 \\to\n\\mathcal{I}^\\bullet \\to\nj_{U, *}\\mathcal{I}^\\bullet|_U \\oplus j_{V, *}\\mathcal{I}^\\bullet|_V \\to\nj_{U \\times_X V, *}\\mathcal{I}^\\bullet|_{U \\times_X V} \\to\n0.\n$$\nThis sequence is exact by (1).\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1552",
+      "producer_id": "CH075-SD-008",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1552-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "V -> X is etale and need not be an inclusion. The statement defines c on U times_X V, and the short exact sequence uses that same fibre product. U intersect V cannot represent this overlap in general.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1295,
+          "end_line": 1314,
+          "text": "\\begin{definition}\n\\label{definition-elementary-distinguished-square}\nLet $S$ be a scheme. A commutative diagram\n$$\n\\xymatrix{\nU \\times_W V \\ar[r] \\ar[d] & V \\ar[d]^f \\\\\nU \\ar[r]^j & W\n}\n$$\nof algebraic spaces over $S$ is called an {\\it elementary distinguished square}\nif\n\\begin{enumerate}\n\\item $U$ is an open subspace of $W$ and $j$ is the inclusion morphism,\n\\item $f$ is \\'etale, and\n\\item setting $T = W \\setminus U$ (with reduced induced\nsubspace structure) the morphism $f^{-1}(T) \\to T$ is an isomorphism.\n\\end{enumerate}\nWe will indicate this by saying: ``Let $(U \\subset W, f : V \\to W)$\nbe an elementary distinguished square.''\n\\end{definition}\n"
+        },
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1761,
+          "end_line": 1818,
+          "text": "\\begin{lemma}\n\\label{lemma-unbounded-relative-mayer-vietoris}\nLet $S$ be a scheme. Let $f : X \\to Y$ be a morphism of algebraic spaces\nover $S$. Let $(U \\subset X, V \\to X)$ be an elementary distinguished square.\nDenote $a = f|_U : U \\to Y$, $b = f|_V : V \\to Y$, and\n$c = f|_{U \\times_X V} : U \\times_X V \\to Y$ the restrictions.\nFor every object $E$ of $D(\\mathcal{O}_X)$ there exists a\ndistinguished triangle\n$$\nRf_*E \\to\nRa_*(E|_U) \\oplus Rb_*(E|_V) \\to\nRc_*(E|_{U \\times_X V}) \\to\nRf_*E[1]\n$$\nin $D(\\mathcal{O}_Y)$. This triangle is functorial in $E$.\n\\end{lemma}\n\n\\begin{proof}\nChoose a K-injective complex $\\mathcal{I}^\\bullet$\nrepresenting $E$. We may assume $\\mathcal{I}^n$ is an injective\nobject of $\\textit{Mod}(\\mathcal{O}_X)$ for all $n$, see\nInjectives, Theorem\n\\ref{injectives-theorem-K-injective-embedding-grothendieck}.\nThen $Rf_*E$ is computed by $f_*\\mathcal{I}^\\bullet$.\nSimilarly for $U$, $V$, and $U \\cap V$ by\nCohomology on Sites,\nLemma \\ref{sites-cohomology-lemma-restrict-K-injective-to-open}.\nHence the distinguished triangle of the lemma is the distinguished\ntriangle associated (by\nDerived Categories, Section\n\\ref{derived-section-canonical-delta-functor} and especially\nLemma \\ref{derived-lemma-derived-canonical-delta-functor})\nto the short exact sequence of complexes\n$$\n0 \\to\nf_*\\mathcal{I}^\\bullet \\to\na_*\\mathcal{I}^\\bullet|_U \\oplus b_*\\mathcal{I}^\\bullet|_V \\to\nc_*\\mathcal{I}^\\bullet|_{U \\times_X V} \\to\n0.\n$$\nTo see this is a short exact sequence of complexes we argue as\nfollows. Pick an injective object $\\mathcal{I}$ of\n$\\textit{Mod}(\\mathcal{O}_X)$. Apply $f_*$ to the short exact sequence\n$$\n0 \\to \\mathcal{I} \\to\nj_{U, *}\\mathcal{I}|_U \\oplus j_{V, *}\\mathcal{I}|_V \\to\nj_{U \\times_X V, *}\\mathcal{I}|_{U \\times_X V} \\to 0\n$$\nof Lemma \\ref{lemma-exact-sequence-j-star}\nand use that $R^1f_*\\mathcal{I} = 0$ to get a short exact sequence\n$$\n0 \\to f_*\\mathcal{I} \\to\nf_*j_{U, *}\\mathcal{I}|_U \\oplus f_*j_{V, *}\\mathcal{I}|_V \\to\nf_*j_{U \\times_X V, *}\\mathcal{I}|_{U \\times_X V} \\to 0\n$$\nThe proof is finished by observing that $a_* = f_*j_{U, *}$ and similarly\nfor $b_*$ and $c_*$.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1553",
+      "producer_id": "CH075-SD-009",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1553-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The data include U -> X and restrict j_!E to V. Forming V times_X U requires the missing map V -> X. No Y is introduced, so replacing Y by X is forced by the displayed base-change square.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 1901,
+          "end_line": 1915,
+          "text": "\\begin{lemma}\n\\label{lemma-restrict-lower-shriek}\nLet $S$ be a scheme. Let $j : U \\to X$ be a \\'etale morphism of algebraic\nspaces over $S$. Given an \\'etale morphism $V \\to Y$, set $W = V \\times_X U$\nand denote $j_W : W \\to V$ the projection morphism. Then\n$(j_!E)|_V = j_{W!}(E|_W)$ for $E$ in $D(\\mathcal{O}_U)$.\n\\end{lemma}\n\n\\begin{proof}\nThis is true because\n$(j_!\\mathcal{F})|_V = j_{W!}(\\mathcal{F}|_W)$\nfor an $\\mathcal{O}_X$-module $\\mathcal{F}$ as follows immediately \nfrom the construction of the functors $j_!$ and $j_{W!}$, see\nModules on Sites, Lemma \\ref{sites-modules-lemma-extension-by-zero}.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1554",
+      "producer_id": "CH075-SD-010",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1554-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "j:V -> W, its pushforward, and the commutative diagram require Phi to start in D(QCoh(O_V)).",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2274,
+          "end_line": 2289,
+          "text": "Let $S$ be a scheme. Let $X$ be a quasi-compact and quasi-separated\nalgebraic space over $S$. Suppose that for every \\'etale morphism\n$j : V \\to W$ with $W \\subset X$ quasi-compact open and $V$ affine\nthe right derived functor\n$$\n\\Phi : D(\\QCoh(\\mathcal{O}_U)) \\to D(\\QCoh(\\mathcal{O}_W))\n$$\nof the left exact functor\n$j_* : \\QCoh(\\mathcal{O}_V) \\to \\QCoh(\\mathcal{O}_W)$\nfits into a commutative diagram\n$$\n\\xymatrix{\nD(\\QCoh(\\mathcal{O}_V)) \\ar[d]_\\Phi \\ar[r]_{i_V} &\nD_\\QCoh(\\mathcal{O}_V) \\ar[d]^{Rj_*} \\\\\nD(\\QCoh(\\mathcal{O}_W)) \\ar[r]^{i_W} &\nD_\\QCoh(\\mathcal{O}_W)\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1555",
+      "producer_id": "CH075-SD-011",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1555-OP1",
+        "MC-STK-ERR-1555-OP2"
+      ],
+      "verdict": "PASS",
+      "rationale": "j:U -> W types j_* as QCoh(O_U) -> QCoh(O_W) and j^* in the reverse direction. The exact left adjoint and its right adjoint therefore give the required K-injective preservation on W. Both replacements are necessary.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2576,
+          "end_line": 2595,
+          "text": "Let $j : U \\to W$ be a morphism $X_{spaces, \\etale}$ with\n$U, W$ in $\\mathcal{B}$ and $P$ holds for $U$. Let $g : W \\to Z$\nbe a morphism to a quasi-compact algebraic space with affine diagonal.\nTo finish the proof we have to show that\n$\\Phi_g(Rj_*K) \\to Rg_*(Rj_*K)$\nis an isomorphism for any $K$ in $D(\\QCoh(\\mathcal{O}_U))$.\nLet $\\mathcal{I}^\\bullet$ be a K-injective complex in $\\QCoh(\\mathcal{O}_U)$\nrepresenting $K$.\nFrom $P(U)$ applied to $j$ we see that\n$j_*\\mathcal{I}^\\bullet$ represents $Rj_*K$.\nSince $j_* : \\QCoh(\\mathcal{O}_U) \\to \\QCoh(\\mathcal{O}_X)$\nhas an exact left adjoint\n$j^* : \\QCoh(\\mathcal{O}_X) \\to \\QCoh(\\mathcal{O}_U)$\nwe see that $j_*\\mathcal{I}^\\bullet$ is a K-injective complex\nin $\\QCoh(\\mathcal{O}_W)$, see\nDerived Categories, Lemma \\ref{derived-lemma-adjoint-preserve-K-injectives}.\nHence $\\Phi_g(Rj_*K)$ is represented by\n$g_*j_*\\mathcal{I}^\\bullet = (g \\circ j)_*\\mathcal{I}^\\bullet$.\nBy $P(U)$ applied to $g \\circ j$ we see that this represents\n$R_{g \\circ j, *}(K) = Rg_*(Rj_*K)$. This finishes the proof.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1556",
+      "producer_id": "CH075-SD-012",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1556-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The following kappa(p) explicitly identifies a residue field; 'reside field' is a typographical defect.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2626,
+          "end_line": 2636,
+          "text": "Let $S = \\Spec(A)$. Let $\\mathcal{J}$ be an injective object of\n$\\QCoh(\\mathcal{O}_S)$. Since $\\QCoh(\\mathcal{O}_S)$ is\nequivalent to the category of $A$-modules we see that $\\mathcal{J}$\nis equal to $\\widetilde{J}$ for some injective $A$-module $J$.\nBy Dualizing Complexes, Proposition\n\\ref{dualizing-proposition-structure-injectives-noetherian}\nwe can write $J = \\bigoplus E_\\alpha$ with $E_\\alpha$ indecomposable\nand therefore isomorphic to the injective hull of a reside field\nat a point. Thus (because finite disjoint unions of Artinian schemes\nare Artinian) we may assume that $J$ is the injective hull\nof $\\kappa(\\mathfrak p)$ for some prime $\\mathfrak p$ of $A$.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1557",
+      "producer_id": "CH075-SD-013",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1557-OP1",
+        "MC-STK-ERR-1557-OP2"
+      ],
+      "verdict": "PASS",
+      "rationale": "Both numerator localizations must be A_p. The resulting A_p / p^n A_p is simultaneously Z_n's coordinate ring and the ring acting on J[p^n].",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2637,
+          "end_line": 2647,
+          "text": "Then $J = \\bigcup J[\\mathfrak p^n]$ where $J[\\mathfrak p^n]$ is\nthe injective hull of $\\kappa(\\mathfrak p)$ over\n$A_\\mathfrak/\\mathfrak p^nA_\\mathfrak p$, see\nDualizing Complexes, Lemma \\ref{dualizing-lemma-union-artinian}.\nThus $\\widetilde{J}$ is the colimit of the sheaves\n$(Z_n \\to X)_*\\mathcal{G}_n$ where\n$Z_n = \\Spec(A_\\mathfrak p/\\mathfrak p^nA_\\mathfrak p)$ and\n$\\mathfrak G_n$ the coherent sheaf associated to the\nfinite $A_\\mathfrak/\\mathfrak p^nA_\\mathfrak p$-module $J[\\mathfrak p^n]$.\nFiniteness follows from\nDualizing Complexes, Lemma \\ref{dualizing-lemma-finite}.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1558",
+      "producer_id": "CH075-SD-014",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1558-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The lemma works in QCoh(O_S) with S=Spec(A). The sheaf on Z_n must be pushed forward along Z_n -> S; X is not the base named by the statement.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2615,
+          "end_line": 2622,
+          "text": "Let $S$ be a Noetherian affine scheme. Every injective object of\n$\\QCoh(\\mathcal{O}_S)$ is a filtered colimit $\\colim_i \\mathcal{F}_i$\nof quasi-coherent sheaves of the form\n$$\n\\mathcal{F}_i = (Z_i \\to S)_*\\mathcal{G}_i\n$$\nwhere $Z_i$ is the spectrum of an Artinian ring and $\\mathcal{G}_i$\nis a coherent module on $Z_i$.\n"
+        },
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2626,
+          "end_line": 2645,
+          "text": "Let $S = \\Spec(A)$. Let $\\mathcal{J}$ be an injective object of\n$\\QCoh(\\mathcal{O}_S)$. Since $\\QCoh(\\mathcal{O}_S)$ is\nequivalent to the category of $A$-modules we see that $\\mathcal{J}$\nis equal to $\\widetilde{J}$ for some injective $A$-module $J$.\nBy Dualizing Complexes, Proposition\n\\ref{dualizing-proposition-structure-injectives-noetherian}\nwe can write $J = \\bigoplus E_\\alpha$ with $E_\\alpha$ indecomposable\nand therefore isomorphic to the injective hull of a reside field\nat a point. Thus (because finite disjoint unions of Artinian schemes\nare Artinian) we may assume that $J$ is the injective hull\nof $\\kappa(\\mathfrak p)$ for some prime $\\mathfrak p$ of $A$.\nThen $J = \\bigcup J[\\mathfrak p^n]$ where $J[\\mathfrak p^n]$ is\nthe injective hull of $\\kappa(\\mathfrak p)$ over\n$A_\\mathfrak/\\mathfrak p^nA_\\mathfrak p$, see\nDualizing Complexes, Lemma \\ref{dualizing-lemma-union-artinian}.\nThus $\\widetilde{J}$ is the colimit of the sheaves\n$(Z_n \\to X)_*\\mathcal{G}_n$ where\n$Z_n = \\Spec(A_\\mathfrak p/\\mathfrak p^nA_\\mathfrak p)$ and\n$\\mathfrak G_n$ the coherent sheaf associated to the\nfinite $A_\\mathfrak/\\mathfrak p^nA_\\mathfrak p$-module $J[\\mathfrak p^n]$.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1559",
+      "producer_id": "CH075-SD-015",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1559-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The defining phrase must continue to name the same coherent sheaf mathcal G_n already used in the pushforward.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2641,
+          "end_line": 2645,
+          "text": "Thus $\\widetilde{J}$ is the colimit of the sheaves\n$(Z_n \\to X)_*\\mathcal{G}_n$ where\n$Z_n = \\Spec(A_\\mathfrak p/\\mathfrak p^nA_\\mathfrak p)$ and\n$\\mathfrak G_n$ the coherent sheaf associated to the\nfinite $A_\\mathfrak/\\mathfrak p^nA_\\mathfrak p$-module $J[\\mathfrak p^n]$.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1560",
+      "producer_id": "CH075-SD-016",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1560-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The later open image U is the image of X'' -> X. Requiring x in that image ensures it remains a neighborhood of the chosen point; the existing condition only on X' does not ensure this.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 2881,
+          "end_line": 2908,
+          "text": "finitely many sections. Let $x \\in X$. We will show that $\\mathcal{F}$\nis generated by finitely many sections in a neighbourhood of $x$.\nSay $x$ is in the image of $X_i \\to X$ and denote $X' = X_i$. Let\n$s_1, \\ldots, s_n \\in\n\\Gamma(X', \\epsilon^*\\mathcal{F}|_{X'_\\etale})$\nbe generating sections. As\n$\\epsilon^*\\mathcal{F} =\n\\epsilon^{-1}\\mathcal{F} \\otimes_{\\epsilon^{-1}\\mathcal{O}_X}\n\\mathcal{O}_\\etale$\nwe can find an \\'etale morphism $X'' \\to X'$ such that $x$ is\nin the image of $X' \\to X$ and such that\n$s_i|_{X''} = \\sum s_{ij} \\otimes a_{ij}$ for some sections\n$s_{ij} \\in \\epsilon^{-1}\\mathcal{F}(X'')$ and\n$a_{ij} \\in \\mathcal{O}_\\etale(X'')$. Denote $U \\subset X$ the image\nof $X'' \\to X$. This is an open subscheme as $f'' : X'' \\to X$ is \\'etale\n(Morphisms, Lemma \\ref{morphisms-lemma-etale-open}). After possibly\nshrinking $X''$ more we may assume $s_{ij}$ come from elements\n$t_{ij} \\in \\mathcal{F}(U)$ as follows from the construction of\nthe inverse image functor $\\epsilon^{-1}$. Now we claim that\n$t_{ij}$ generate $\\mathcal{F}|_U$ which finishes the proof\nof the lemma. Namely, the corresponding map\n$\\mathcal{O}_U^{\\oplus N} \\to \\mathcal{F}|_U$ has the property\nthat its pullback by $f''$ to $X''$ is surjective. Since $f'' : X'' \\to U$\nis a surjective flat morphism of schemes, this implies that\n$\\mathcal{O}_U^{\\oplus N} \\to \\mathcal{F}|_U$ is surjective by\nlooking at stalks and using that\n$\\mathcal{O}_{U, f''(z)} \\to \\mathcal{O}_{X'', z}$\nis faithfully flat for all $z \\in X''$.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1561",
+      "producer_id": "CH075-SD-017",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1561-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The etale stalk is taken at the chosen geometric point overline{x}; it gives the strict henselization used in the following derived pullback formula. X is the space, not this point.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 3026,
+          "end_line": 3046,
+          "text": "Let $x \\in X$ be a point and let $\\overline{x}$ be a geometric\npoint lying over $x$. Let $y = f(x)$ and denote $\\overline{y}$\nthe geometric point of $Y$ coming from $\\overline{x}$.\nThen $(f^{-1}\\mathcal{O}_Y)_x = \\mathcal{O}_{Y, y}$\n(Sheaves, Lemma \\ref{sheaves-lemma-stalk-pullback})\nand\n$$\n(f_{small}^{-1}\\mathcal{O}_{Y_\\etale})_{\\overline{x}} =\n\\mathcal{O}_{Y_\\etale, \\overline{y}} =\n\\mathcal{O}_{Y, y}^{sh}\n$$\nis the strict henselization\n(by \\'Etale Cohomology, Lemmas \\ref{etale-cohomology-lemma-stalk-pullback}\nand \\ref{etale-cohomology-lemma-describe-etale-local-ring}).\nSince the stalk of $\\mathcal{O}_{X_\\etale}$ at $X$ is\n$\\mathcal{O}_{X, x}^{sh}$ we obtain\n$$\n(\\epsilon^*E)_{\\overline{x}} =\nE_x \\otimes_{\\mathcal{O}_{X, x}}^\\mathbf{L} \\mathcal{O}_{X, x}^{sh}\n$$\nby transitivity of pullbacks. If $\\epsilon^*E$ has tor amplitude\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1562",
+      "producer_id": "CH075-SD-018",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1562-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "Both sides of the composed morphism must be restricted to W times_X V, the overlap on which the preceding isomorphism and subsequent gluing operate.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 3614,
+          "end_line": 3642,
+          "text": "elementary distinguished square $(W \\subset X, f : V \\to X)$\nwith $V$ affine and $P \\to E|_W$ as in the statement of the lemma.\nIn the rest of the proof we will use\nLemma \\ref{lemma-derived-quasi-coherent-small-etale-site}\n(and the compatibilities of Remark \\ref{remark-match-total-direct-images})\nfor the representable algebraic spaces $V$ and $W \\times_X V$.\nWe will also use the fact that perfectness on the Zariski site\nand \\'etale site agree, see Lemma \\ref{lemma-descend-perfect}.\n\n\\medskip\\noindent\nBy Derived Categories of Schemes,\nLemma \\ref{perfect-lemma-lift-perfect-complex-plus-shift-support}\nwe can choose a perfect object $Q$ in $D(\\mathcal{O}_V)$\nsupported on $f^{-1}T$ and an isomorphism\n$Q|_{W \\times_X V} \\to (P \\oplus P[1])|_{W \\times_X V}$. By\nDerived Categories of Schemes, Lemma \\ref{perfect-lemma-lift-map}\nwe can replace $Q$ by $Q \\otimes^\\mathbf{L} I$ (still supported on $f^{-1}T$)\nand assume that the map\n$$\nQ|_{W \\times_X V} \\to (P \\oplus P[1])|_{W \\times V}\n\\longrightarrow P|_{W \\times_X V}\n\\longrightarrow\nE|_{W \\times_X V}\n$$\nlifts to $Q \\to E|_V$. By Lemma \\ref{lemma-glue}\nwe find an morphism $a : R \\to E$ of $D(\\mathcal{O}_X)$\nsuch that $a|_W$ is isomorphic to $P \\oplus P[1] \\to E|_W$\nand $a|_V$ isomorphic to $Q \\to E|_V$.\nThus $R$ is perfect and supported on $T$ as desired.\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1563",
+      "producer_id": "CH075-SD-019",
+      "source": "spaces-perfect.tex",
+      "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "operation_ids": [
+        "MC-STK-ERR-1563-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The selected functions and their Koszul complex use g_1,...,g_s. Their common zero locus therefore uses that same list and endpoint s.",
+      "method": "delegated_independent_context_check",
+      "consulted_passages": [
+        {
+          "source": "spaces-perfect.tex",
+          "start_line": 3806,
+          "end_line": 3818,
+          "text": "Write $V = \\Spec(B)$. Let $Z = X \\setminus U$. Then $f^{-1}Z$ is a closed\nsubset of $V$ such that $V \\setminus f^{-1}Z$ is quasi-compact. As $X$\nis quasi-separated, it follows that\n$f^{-1}Z \\cap f^{-1}T = f^{-1}(Z \\cap T)$ is a closed\nsubset of $V$ such that $W = V \\setminus f^{-1}(Z \\cap T)$ is quasi-compact.\nThus we can choose $g_1, \\ldots, g_s \\in B$ such that\n$f^{-1}(Z \\cap T) = V(g_1, \\ldots, g_r)$.\nLet $K \\in D(\\mathcal{O}_V)$ be the perfect object corresponding to the\nKoszul complex on $g_1, \\ldots, g_s$ over $B$. Note that since $K$ is\nsupported on $f^{-1}(Z \\cap T) \\subset V$ closed, the pushforward\n$K' = R(V \\to X)_*K$ is a perfect object of $D(\\mathcal{O}_X)$ whose\nrestriction to $V$ is $K$ (see Lemmas \\ref{lemma-pushforward-perfect}\nand \\ref{lemma-pushforward-with-support-in-open}).\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1564",
+      "producer_id": "zero-multiplication-etale-proof",
+      "source": "groupoids.tex",
+      "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "operation_ids": [
+        "MC-STK-ERR-1564-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The statement assumes a nonzero abelian variety. A zero-dimensional integral variety with a k-rational identity would be Spec(k), so nonzero implies positive dimension. For d=0 the fibre over the identity is all of A and cannot be an etale fibre. Splitting off this case permits the existing finite locally free degree argument for nonzero d without narrowing the theorem.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "groupoids.tex",
+          "start_line": 1595,
+          "end_line": 1600,
+          "text": "\\begin{definition}\n\\label{definition-abelian-variety}\nLet $k$ be a field. An {\\it abelian variety} is a group scheme over\n$k$ which is also a proper, geometrically integral variety over\n$k$\\footnote{For equivalent definitions see Remark \\ref{remark-16-equivalent}.}.\n\\end{definition}\n"
+        },
+        {
+          "source": "groupoids.tex",
+          "start_line": 1632,
+          "end_line": 1648,
+          "text": "\\begin{lemma}\n\\label{lemma-abelian-variety-smooth}\nLet $k$ be a field. Let $A$ be an abelian variety over $k$.\nThen $A$ is smooth over $k$.\n\\end{lemma}\n\n\\begin{proof}\nIf $k$ is perfect then this follows from\nLemma \\ref{lemma-group-scheme-characteristic-zero-smooth}\n(characteristic zero) and\nLemma \\ref{lemma-reduced-group-scheme-prefect-field-characteristic-p-smooth}\n(positive characteristic).\nWe can reduce the general case to this case by descent for smoothness\n(Descent, Lemma \\ref{descent-lemma-descending-property-smooth})\nand going to the perfect closure using\nLemma \\ref{lemma-abelian-variety-change-field}.\n\\end{proof}\n"
+        },
+        {
+          "source": "groupoids.tex",
+          "start_line": 1768,
+          "end_line": 1848,
+          "text": "\\begin{lemma}\n\\label{lemma-degree-multiplication-by-d}\nLet $k$ be a field. Let $A$ be an abelian variety over $k$.\nLet $[d] : A \\to A$ be the multiplication by $d$.\nThen $[d]$ is finite locally free of degree $d^{2\\dim(A)}$.\n\\end{lemma}\n\n\\begin{proof}\nBy Lemma \\ref{lemma-abelian-variety-projective}\n(and More on Morphisms, Lemma \\ref{more-morphisms-lemma-projective})\nwe see that $A$ has an ample invertible module $\\mathcal{L}$.\nSince $[-1] : A \\to A$ is an automorphism, we see that\n$[-1]^*\\mathcal{L}$ is an ample invertible $\\mathcal{O}_A$-module\nas well. Thus $\\mathcal{N} = \\mathcal{L} \\otimes [-1]^*\\mathcal{L}$\nis ample, see\nProperties, Lemma \\ref{properties-lemma-ample-tensor-globally-generated}.\nSince $\\mathcal{N} \\cong [-1]^*\\mathcal{N}$ we see that\n$[d]^*\\mathcal{N} \\cong \\mathcal{N}^{\\otimes d^2}$ by\nLemma \\ref{lemma-pullbacks-by-n}.\n\n\\medskip\\noindent\nTo get a contradiction, let $C$ be a proper curve contained in a\nfibre of $[d]$. Then $\\mathcal{N}^{\\otimes d^2}|_C \\cong \\mathcal{O}_C$\nis an ample invertible $\\mathcal{O}_C$-module of degree $0$ which\ncontradicts Varieties, Lemma \\ref{varieties-lemma-ample-curve} for example.\n(You can also use Varieties, Lemma \\ref{varieties-lemma-ample-positive}.)\nThus every fibre of $[d]$ has dimension $0$ and hence $[d]$ is finite\nfor example by Cohomology of Schemes, Lemma\n\\ref{coherent-lemma-characterize-finite}.\nMoreover, since $A$ is smooth over $k$ by\nLemma \\ref{lemma-abelian-variety-smooth}\nwe see that $[d] : A \\to A$ is flat by\nAlgebra, Lemma \\ref{algebra-lemma-CM-over-regular-flat}\n(we also use that schemes smooth over fields are regular and that\nregular rings are Cohen-Macaulay, see\nVarieties, Lemma \\ref{varieties-lemma-smooth-regular} and\nAlgebra, Lemma \\ref{algebra-lemma-regular-ring-CM}).\nThus $[d]$ is finite flat hence finite locally free by\nMorphisms, Lemma \\ref{morphisms-lemma-finite-flat}.\n\n\\medskip\\noindent\nFinally, we come to the formula for the degree. By\nVarieties, Lemma \\ref{varieties-lemma-degree-finite-morphism-in-terms-degrees}\nwe see that\n$$\n\\deg_{\\mathcal{N}^{\\otimes d^2}}(A) = \\deg([d]) \\deg_\\mathcal{N}(A)\n$$\nSince the degree of $A$ with respect to\n$\\mathcal{N}^{\\otimes d^2}$, respectively $\\mathcal{N}$\nis the coefficient of $n^{\\dim(A)}$ in the polynomial\n$$\nn \\longmapsto \\chi(A, \\mathcal{N}^{\\otimes nd^2}),\\quad\n\\text{respectively}\\quad n \\longmapsto \\chi(A, \\mathcal{N}^{\\otimes n})\n$$\nwe see that $\\deg([d]) = d^{2 \\dim(A)}$.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-abelian-variety-multiplication-by-d-etale}\n\\begin{slogan}\nMultiplication by an integer on an abelian variety is an etale morphism\nif and only if the integer is invertible in the base field.\n\\end{slogan}\nLet $k$ be a field. Let $A$ be a nonzero abelian variety over $k$.\nThen $[d] : A \\to A$ is \\'etale if and only if $d$ is invertible in $k$.\n\\end{lemma}\n\n\\begin{proof}\nObserve that $[d](x + y) = [d](x) + [d](y)$. Since translation by a\npoint is an automorphism of $A$, we see that the set of points where\n$[d] : A \\to A$ is \\'etale is either empty or equal to $A$ (some details\nomitted). Thus it suffices to check whether $[d]$ is \\'etale at\nthe unit $e \\in A(k)$. Since we know that $[d]$ is finite locally free\n(Lemma \\ref{lemma-degree-multiplication-by-d})\nto see that it is \\'etale at $e$ is equivalent to\nproving that $\\text{d}[d] : T_{A/k, e} \\to T_{A/k, e}$ is injective. See\nVarieties, Lemma \\ref{varieties-lemma-injective-tangent-spaces-unramified} and\nMorphisms, Lemma \\ref{morphisms-lemma-flat-unramified-etale}.\nBy Lemma \\ref{lemma-group-scheme-addition-tangent-vectors} we see that\n$\\text{d}[d]$ is given by multiplication by $d$ on $T_{A/k, e}$.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1565",
+      "producer_id": "colimit-cover-orientation",
+      "source": "groupoids.tex",
+      "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "operation_ids": [
+        "MC-STK-ERR-1565-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "alpha:t*F -> s*F restricts with source M_i tensor_(A_i,t) B_ijk and target M_j tensor_(A_j,s) B_ijk. These expressions require t(W_ijk) in U_i and s(W_ijk) in U_j. The swapped cover labels supply exactly those maps. Inversion turns the constructed inclusion into the reverse inclusion needed for equality.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "groupoids.tex",
+          "start_line": 2621,
+          "end_line": 2676,
+          "text": "\\begin{definition}\n\\label{definition-groupoid-module}\nLet $S$ be a scheme, let $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nA {\\it quasi-coherent module on $(U, R, s, t, c)$}\nis a pair $(\\mathcal{F}, \\alpha)$, where $\\mathcal{F}$ is a quasi-coherent\n$\\mathcal{O}_U$-module, and $\\alpha$ is a $\\mathcal{O}_R$-module\nmap\n$$\n\\alpha : t^*\\mathcal{F} \\longrightarrow s^*\\mathcal{F}\n$$\nsuch that\n\\begin{enumerate}\n\\item the diagram\n$$\n\\xymatrix{\n& \\text{pr}_1^*t^*\\mathcal{F} \\ar[r]_-{\\text{pr}_1^*\\alpha} &\n\\text{pr}_1^*s^*\\mathcal{F} \\ar@{=}[rd] & \\\\\n\\text{pr}_0^*s^*\\mathcal{F} \\ar@{=}[ru] & & & c^*s^*\\mathcal{F} \\\\\n& \\text{pr}_0^*t^*\\mathcal{F} \\ar[lu]^{\\text{pr}_0^*\\alpha} \\ar@{=}[r] &\nc^*t^*\\mathcal{F} \\ar[ru]_{c^*\\alpha}\n}\n$$\nis a commutative in the category of\n$\\mathcal{O}_{R \\times_{s, U, t} R}$-modules, and\n\\item the pullback\n$$\ne^*\\alpha : \\mathcal{F} \\longrightarrow \\mathcal{F}\n$$\nis the identity map.\n\\end{enumerate}\nCompare with the commutative diagrams of Lemma \\ref{lemma-diagram}.\n\\end{definition}\n\n\\noindent\nThe commutativity of the first diagram forces the operator $e^*\\alpha$\nto be idempotent. Hence the second condition can be reformulated as saying\nthat $e^*\\alpha$ is an isomorphism. In fact, the condition implies that\n$\\alpha$ is an isomorphism.\n\n\\begin{lemma}\n\\label{lemma-isomorphism}\nLet $S$ be a scheme, let $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nIf $(\\mathcal{F}, \\alpha)$ is a quasi-coherent module on $(U, R, s, t, c)$\nthen $\\alpha$ is an isomorphism.\n\\end{lemma}\n\n\\begin{proof}\nPull back the commutative diagram of\nDefinition \\ref{definition-groupoid-module}\nby the morphism $(i, 1) : R \\to R \\times_{s, U, t} R$.\nThen we see that $i^*\\alpha \\circ \\alpha = s^*e^*\\alpha$.\nPulling back by the morphism $(1, i)$ we obtain the relation\n$\\alpha \\circ i^*\\alpha = t^*e^*\\alpha$. By the second assumption \nthese morphisms are the identity. Hence $i^*\\alpha$ is an inverse of\n$\\alpha$.\n\\end{proof}\n"
+        },
+        {
+          "source": "groupoids.tex",
+          "start_line": 3152,
+          "end_line": 3266,
+          "text": "\\begin{lemma}\n\\label{lemma-colimit-kappa}\nLet $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nAssume that $s, t$ are flat. There exists a\ncardinal $\\kappa$ such that every quasi-coherent module\n$(\\mathcal{F}, \\alpha)$ on $(U, R, s, t, c)$\nis the directed colimit of its $\\kappa$-generated\nquasi-coherent submodules.\n\\end{lemma}\n\n\\begin{proof}\nIn the statement of the lemma and in this proof\na {\\it submodule} of a quasi-coherent module $(\\mathcal{F}, \\alpha)$\nis a quasi-coherent submodule $\\mathcal{G} \\subset \\mathcal{F}$\nsuch that $\\alpha(t^*\\mathcal{G}) = s^*\\mathcal{G}$ as subsheaves of\n$s^*\\mathcal{F}$. This makes sense because since $s, t$ are flat the\npullbacks $s^*$ and $t^*$ are exact, i.e., preserve subsheaves.\nThe proof will be a repeat of the proof of\nProperties, Lemma \\ref{properties-lemma-colimit-kappa}.\nWe urge the reader to read that proof first.\n\n\\medskip\\noindent\nChoose an affine open covering $U = \\bigcup_{i \\in I} U_i$.\nFor each pair $i, j$ choose affine open coverings\n$$\nU_i \\cap U_j = \\bigcup\\nolimits_{k \\in I_{ij}} U_{ijk}\n\\quad\\text{and}\\quad\ns^{-1}(U_i) \\cap t^{-1}(U_j) = \\bigcup\\nolimits_{k \\in J_{ij}} W_{ijk}.\n$$\nWrite $U_i = \\Spec(A_i)$, $U_{ijk} = \\Spec(A_{ijk})$,\n$W_{ijk} = \\Spec(B_{ijk})$.\nLet $\\kappa$ be any infinite cardinal $\\geq$ than the cardinality\nof any of the sets $I$, $I_{ij}$, $J_{ij}$.\n\n\\medskip\\noindent\nLet $(\\mathcal{F}, \\alpha)$ be a quasi-coherent module on $(U, R, s, t, c)$.\nSet $M_i = \\mathcal{F}(U_i)$, $M_{ijk} = \\mathcal{F}(U_{ijk})$.\nNote that\n$$\nM_i \\otimes_{A_i} A_{ijk} = M_{ijk} = M_j \\otimes_{A_j} A_{ijk}\n$$\nand that $\\alpha$ gives isomorphisms\n$$\n\\alpha|_{W_{ijk}} :\nM_i \\otimes_{A_i, t} B_{ijk}\n\\longrightarrow\nM_j \\otimes_{A_j, s} B_{ijk}\n$$\nsee\nSchemes, Lemma \\ref{schemes-lemma-widetilde-pullback}.\nUsing the axiom of choice we choose a map\n$$\n(i, j, k, m) \\mapsto S(i, j, k, m)\n$$\nwhich associates to every $i, j \\in I$, $k \\in I_{ij}$ or $k \\in J_{ij}$\nand $m \\in M_i$ a finite subset $S(i, j, k, m) \\subset M_j$\nsuch that we have\n$$\nm \\otimes 1 = \\sum\\nolimits_{m' \\in S(i, j, k, m)} m' \\otimes a_{m'}\n\\quad\\text{or}\\quad\n\\alpha(m \\otimes 1) = \\sum\\nolimits_{m' \\in S(i, j, k, m)} m' \\otimes b_{m'}\n$$\nin $M_{ijk}$ for some $a_{m'} \\in A_{ijk}$ or $b_{m'} \\in B_{ijk}$.\nMoreover, let's agree that $S(i, i, k, m) = \\{m\\}$ for all\n$i, j = i, k, m$ when $k \\in I_{ij}$. Fix such a collection $S(i, j, k, m)$\n\n\\medskip\\noindent\nGiven a family $\\mathcal{S} = (S_i)_{i \\in I}$ of subsets\n$S_i \\subset M_i$ of cardinality at most $\\kappa$ we set\n$\\mathcal{S}' = (S'_i)$ where\n$$\nS'_j = \\bigcup\\nolimits_{(i, j, k, m)\\text{ such that }m \\in S_i}\nS(i, j, k, m)\n$$\nNote that $S_i \\subset S'_i$. Note that $S'_i$ has cardinality at most\n$\\kappa$ because it is a union over a set of cardinality at most $\\kappa$\nof finite sets. Set $\\mathcal{S}^{(0)} = \\mathcal{S}$,\n$\\mathcal{S}^{(1)} = \\mathcal{S}'$ and by induction\n$\\mathcal{S}^{(n + 1)} = (\\mathcal{S}^{(n)})'$. Then set\n$\\mathcal{S}^{(\\infty)} = \\bigcup_{n \\geq 0} \\mathcal{S}^{(n)}$.\nWriting $\\mathcal{S}^{(\\infty)} = (S^{(\\infty)}_i)$ we see that\nfor any element $m \\in S^{(\\infty)}_i$ the image of $m$ in\n$M_{ijk}$ can be written as a finite sum $\\sum m' \\otimes a_{m'}$\nwith $m' \\in S_j^{(\\infty)}$. In this way we see that setting\n$$\nN_i = A_i\\text{-submodule of }M_i\\text{ generated by }S^{(\\infty)}_i\n$$\nwe have\n$$\nN_i \\otimes_{A_i} A_{ijk} = N_j \\otimes_{A_j} A_{ijk}\n\\quad\\text{and}\\quad\n\\alpha(N_i \\otimes_{A_i, t} B_{ijk}) = N_j \\otimes_{A_j, s} B_{ijk}\n$$\nas submodules of $M_{ijk}$ or $M_j \\otimes_{A_j, s} B_{ijk}$.\nThus there exists a quasi-coherent submodule\n$\\mathcal{G} \\subset \\mathcal{F}$ with $\\mathcal{G}(U_i) = N_i$\nsuch that $\\alpha(t^*\\mathcal{G}) = s^*\\mathcal{G}$ as submodules\nof $s^*\\mathcal{F}$. In other words,\n$(\\mathcal{G}, \\alpha|_{t^*\\mathcal{G}})$ is a submodule of\n$(\\mathcal{F}, \\alpha)$.\nMoreover, by construction $\\mathcal{G}$ is $\\kappa$-generated.\n\n\\medskip\\noindent\nLet $\\{(\\mathcal{G}_t, \\alpha_t)\\}_{t \\in T}$ be the set of\n$\\kappa$-generated quasi-coherent submodules of $(\\mathcal{F}, \\alpha)$.\nIf $t, t' \\in T$ then $\\mathcal{G}_t + \\mathcal{G}_{t'}$ is also a\n$\\kappa$-generated quasi-coherent submodule as it is the image of the map\n$\\mathcal{G}_t \\oplus \\mathcal{G}_{t'} \\to \\mathcal{F}$.\nHence the system (ordered by inclusion) is directed.\nThe arguments above show that every section of $\\mathcal{F}$ over $U_i$\nis in one of the $\\mathcal{G}_t$ (because we can start with $\\mathcal{S}$\nsuch that the given section is an element of $S_i$). Hence\n$\\colim_t \\mathcal{G}_t \\to \\mathcal{F}$ is both injective and surjective\nas desired.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1566",
+      "producer_id": "invariants-base-change-coefficient-ring",
+      "source": "groupoids.tex",
+      "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "operation_ids": [
+        "MC-STK-ERR-1566-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The rank-component statement is a base-change statement over C'_r. The norm paragraph maps D[x] into C'[x], and the assembly paragraph specifies the C'_r components. For the identity groupoid over k base-changed to k[z], f=z gives x-z, which is not in k[x] but is in k[z][x]. C'_r is forced.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "groupoids.tex",
+          "start_line": 4367,
+          "end_line": 4450,
+          "text": "\\begin{lemma}\n\\label{lemma-invariants-base-change}\nLet $S$ be a scheme. Let $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nAssume $U = \\Spec(A)$ and $R = \\Spec(B)$ are affine and\n$s, t : R \\to U$ finite locally free. Let $C \\subset A$ be as in\n(\\ref{equation-invariants}). Let $C \\to C'$ be a ring map, and set\n$U' = \\Spec(A \\otimes_C C')$,\n$R' = \\Spec(B \\otimes_C C')$.\nThen\n\\begin{enumerate}\n\\item The maps $s, t, c$ induce maps $s', t', c'$ such that\n$(U', R', s', t', c')$ is a groupoid scheme. Let $C^1 \\subset A'$\nbe the $R'$-invariant functions on $U'$.\n\\item The canonical map $\\varphi : C' \\to C^1$ satisfies\n\\begin{enumerate}\n\\item for every $f \\in C^1$ there exists an $n > 0$ and a\npolynomial $P \\in C'[x]$ whose image in $C^1[x]$ is\n$(x - f)^n$, and\n\\item for every $f \\in \\Ker(\\varphi)$ there exists\nan $n > 0$ such that $f^n = 0$.\n\\end{enumerate}\n\\item If $C \\to C'$ is flat then $\\varphi$ is an isomorphism.\n\\end{enumerate}\n\\end{lemma}\n\n\\begin{proof}\nThe proof of part (1) is omitted. Let us denote $A' = A \\otimes_C C'$ and\n$B' = B \\otimes_C C'$. Then we have\n$$\nC^1\n= \\{a \\in A' \\mid (t')^\\sharp(a) = (s')^\\sharp(a) \\}\n= \\{a \\in A \\otimes_C C' \\mid t^\\sharp \\otimes 1(a) = s^\\sharp \\otimes 1(a) \\}.\n$$\nIn other words, $C^1$ is the kernel of the difference map\n$(t^\\sharp - s^\\sharp) \\otimes 1$ which is just the base change\nof the $C$-linear map $t^\\sharp - s^\\sharp : A \\to B$ by $C \\to C'$.\nHence (3) follows.\n\n\\medskip\\noindent\nProof of part (2)(b). Since $C \\to A$ is integral\n(Lemma \\ref{lemma-integral-over-invariants}) and injective we see that\n$\\Spec(A) \\to \\Spec(C)$ is surjective, see\nAlgebra, Lemma \\ref{algebra-lemma-integral-overring-surjective}.\nThus also $\\Spec(A') \\to \\Spec(C')$ is surjective\nas a base change of a surjective morphism\n(Morphisms, Lemma \\ref{morphisms-lemma-base-change-surjective}).\nHence $\\Spec(C^1) \\to \\Spec(C')$ is surjective also.\nThis implies (2)(b) holds for example by\nAlgebra, Lemma \\ref{algebra-lemma-image-dense-generic-points}.\n\n\\medskip\\noindent\nProof of part (2)(a). By Lemma \\ref{lemma-finite-locally-free-disjoint-free}\nour groupoid scheme $(U, R, s, t, c)$ decomposes as a finite disjoint union\nof groupoid schemes $(U_r, R_r, s, t, c)$ such that $s, t : R_r \\to U_r$\nare finite locally free of rank $r$. Pulling back by $U' = \\Spec(C') \\to U$\nwe obtain a similar decomposition of $U'$ and $U^1 = \\Spec(C^1)$.\nWe will show in the next paragraph that (2)(a) holds for the corresponding\nsystem of rings $A_r, B_r, C_r, C'_r, C^1_r$ with $n = r$.\nThen given $f \\in C^1$ let $P_r \\in C_r[x]$ be the polynomial\nwhose image in $C^1_r[x]$ is the image of $(x - f)^r$.\nChoosing a sufficiently divisible integer $n$ we see that\nthere is a polynomial $P \\in C'[x]$ whose image in $C^1[x]$ is\n$(x - f)^n$; namely, we take $P$ to be the unique element of\n$C'[x]$ whose image in $C'_r[x]$ is $P_r^{n/r}$.\n\n\\medskip\\noindent\nIn this paragraph we prove (2)(a) in case the ring maps\n$s^\\sharp, t^\\sharp : A \\to B$ are finite locally free of a fixed rank $r$.\nLet $f \\in C^1 \\subset A' = A \\otimes_C C'$. Choose a flat\n$C$-algebra $D$ and a surjection $D \\to C'$. Choose a lift\n$g \\in A \\otimes_C D$ of $f$.\nConsider the polynomial\n$$\nP = \\text{Norm}_{s^\\sharp \\otimes 1}(t^\\sharp \\otimes 1(x - g))\n$$\nin $(A \\otimes_C D)[x]$. By Lemma \\ref{lemma-determinant-trick}\nand part (3) of the current lemma the coefficients of $P$ are in $D$\n(compare with the proof of Lemma \\ref{lemma-integral-over-invariants}).\nOn the other hand, the image of $P$ in $(A \\otimes_C C')[x]$ is\n$(x - f)^r$ because $t^\\sharp \\otimes 1(x - f) = s^\\sharp(x - f)$\nand $s^\\sharp$ is finite locally free of rank $r$.\nThis proves what we want with $P$ as in the statement (2)(a)\ngiven by the image of our $P$ under the map $D[x] \\to C'[x]$.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1567",
+      "producer_id": "colimit-two-ambient-modules",
+      "source": "groupoids.tex",
+      "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "operation_ids": [
+        "MC-STK-ERR-1567-OP1"
+      ],
+      "verdict": "PASS",
+      "rationale": "The first support equality is in M_ijk and the second is in alpha's codomain M_j tensor_(A_j,s) B_ijk. Naming both modules in this order, with respectively, matches the later equality paragraph exactly.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "groupoids.tex",
+          "start_line": 3152,
+          "end_line": 3266,
+          "text": "\\begin{lemma}\n\\label{lemma-colimit-kappa}\nLet $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nAssume that $s, t$ are flat. There exists a\ncardinal $\\kappa$ such that every quasi-coherent module\n$(\\mathcal{F}, \\alpha)$ on $(U, R, s, t, c)$\nis the directed colimit of its $\\kappa$-generated\nquasi-coherent submodules.\n\\end{lemma}\n\n\\begin{proof}\nIn the statement of the lemma and in this proof\na {\\it submodule} of a quasi-coherent module $(\\mathcal{F}, \\alpha)$\nis a quasi-coherent submodule $\\mathcal{G} \\subset \\mathcal{F}$\nsuch that $\\alpha(t^*\\mathcal{G}) = s^*\\mathcal{G}$ as subsheaves of\n$s^*\\mathcal{F}$. This makes sense because since $s, t$ are flat the\npullbacks $s^*$ and $t^*$ are exact, i.e., preserve subsheaves.\nThe proof will be a repeat of the proof of\nProperties, Lemma \\ref{properties-lemma-colimit-kappa}.\nWe urge the reader to read that proof first.\n\n\\medskip\\noindent\nChoose an affine open covering $U = \\bigcup_{i \\in I} U_i$.\nFor each pair $i, j$ choose affine open coverings\n$$\nU_i \\cap U_j = \\bigcup\\nolimits_{k \\in I_{ij}} U_{ijk}\n\\quad\\text{and}\\quad\ns^{-1}(U_i) \\cap t^{-1}(U_j) = \\bigcup\\nolimits_{k \\in J_{ij}} W_{ijk}.\n$$\nWrite $U_i = \\Spec(A_i)$, $U_{ijk} = \\Spec(A_{ijk})$,\n$W_{ijk} = \\Spec(B_{ijk})$.\nLet $\\kappa$ be any infinite cardinal $\\geq$ than the cardinality\nof any of the sets $I$, $I_{ij}$, $J_{ij}$.\n\n\\medskip\\noindent\nLet $(\\mathcal{F}, \\alpha)$ be a quasi-coherent module on $(U, R, s, t, c)$.\nSet $M_i = \\mathcal{F}(U_i)$, $M_{ijk} = \\mathcal{F}(U_{ijk})$.\nNote that\n$$\nM_i \\otimes_{A_i} A_{ijk} = M_{ijk} = M_j \\otimes_{A_j} A_{ijk}\n$$\nand that $\\alpha$ gives isomorphisms\n$$\n\\alpha|_{W_{ijk}} :\nM_i \\otimes_{A_i, t} B_{ijk}\n\\longrightarrow\nM_j \\otimes_{A_j, s} B_{ijk}\n$$\nsee\nSchemes, Lemma \\ref{schemes-lemma-widetilde-pullback}.\nUsing the axiom of choice we choose a map\n$$\n(i, j, k, m) \\mapsto S(i, j, k, m)\n$$\nwhich associates to every $i, j \\in I$, $k \\in I_{ij}$ or $k \\in J_{ij}$\nand $m \\in M_i$ a finite subset $S(i, j, k, m) \\subset M_j$\nsuch that we have\n$$\nm \\otimes 1 = \\sum\\nolimits_{m' \\in S(i, j, k, m)} m' \\otimes a_{m'}\n\\quad\\text{or}\\quad\n\\alpha(m \\otimes 1) = \\sum\\nolimits_{m' \\in S(i, j, k, m)} m' \\otimes b_{m'}\n$$\nin $M_{ijk}$ for some $a_{m'} \\in A_{ijk}$ or $b_{m'} \\in B_{ijk}$.\nMoreover, let's agree that $S(i, i, k, m) = \\{m\\}$ for all\n$i, j = i, k, m$ when $k \\in I_{ij}$. Fix such a collection $S(i, j, k, m)$\n\n\\medskip\\noindent\nGiven a family $\\mathcal{S} = (S_i)_{i \\in I}$ of subsets\n$S_i \\subset M_i$ of cardinality at most $\\kappa$ we set\n$\\mathcal{S}' = (S'_i)$ where\n$$\nS'_j = \\bigcup\\nolimits_{(i, j, k, m)\\text{ such that }m \\in S_i}\nS(i, j, k, m)\n$$\nNote that $S_i \\subset S'_i$. Note that $S'_i$ has cardinality at most\n$\\kappa$ because it is a union over a set of cardinality at most $\\kappa$\nof finite sets. Set $\\mathcal{S}^{(0)} = \\mathcal{S}$,\n$\\mathcal{S}^{(1)} = \\mathcal{S}'$ and by induction\n$\\mathcal{S}^{(n + 1)} = (\\mathcal{S}^{(n)})'$. Then set\n$\\mathcal{S}^{(\\infty)} = \\bigcup_{n \\geq 0} \\mathcal{S}^{(n)}$.\nWriting $\\mathcal{S}^{(\\infty)} = (S^{(\\infty)}_i)$ we see that\nfor any element $m \\in S^{(\\infty)}_i$ the image of $m$ in\n$M_{ijk}$ can be written as a finite sum $\\sum m' \\otimes a_{m'}$\nwith $m' \\in S_j^{(\\infty)}$. In this way we see that setting\n$$\nN_i = A_i\\text{-submodule of }M_i\\text{ generated by }S^{(\\infty)}_i\n$$\nwe have\n$$\nN_i \\otimes_{A_i} A_{ijk} = N_j \\otimes_{A_j} A_{ijk}\n\\quad\\text{and}\\quad\n\\alpha(N_i \\otimes_{A_i, t} B_{ijk}) = N_j \\otimes_{A_j, s} B_{ijk}\n$$\nas submodules of $M_{ijk}$ or $M_j \\otimes_{A_j, s} B_{ijk}$.\nThus there exists a quasi-coherent submodule\n$\\mathcal{G} \\subset \\mathcal{F}$ with $\\mathcal{G}(U_i) = N_i$\nsuch that $\\alpha(t^*\\mathcal{G}) = s^*\\mathcal{G}$ as submodules\nof $s^*\\mathcal{F}$. In other words,\n$(\\mathcal{G}, \\alpha|_{t^*\\mathcal{G}})$ is a submodule of\n$(\\mathcal{F}, \\alpha)$.\nMoreover, by construction $\\mathcal{G}$ is $\\kappa$-generated.\n\n\\medskip\\noindent\nLet $\\{(\\mathcal{G}_t, \\alpha_t)\\}_{t \\in T}$ be the set of\n$\\kappa$-generated quasi-coherent submodules of $(\\mathcal{F}, \\alpha)$.\nIf $t, t' \\in T$ then $\\mathcal{G}_t + \\mathcal{G}_{t'}$ is also a\n$\\kappa$-generated quasi-coherent submodule as it is the image of the map\n$\\mathcal{G}_t \\oplus \\mathcal{G}_{t'} \\to \\mathcal{F}$.\nHence the system (ordered by inclusion) is directed.\nThe arguments above show that every section of $\\mathcal{F}$ over $U_i$\nis in one of the $\\mathcal{G}_t$ (because we can start with $\\mathcal{S}$\nsuch that the given section is an element of $S_i$). Hence\n$\\colim_t \\mathcal{G}_t \\to \\mathcal{F}$ is both injective and surjective\nas desired.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    },
+    {
+      "unit_id": "MC-STK-ERR-1568",
+      "producer_id": "groupoid-module-inverse-composition-order",
+      "source": "groupoids.tex",
+      "authority_sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "operation_ids": [
+        "MC-STK-ERR-1568-OP1",
+        "MC-STK-ERR-1568-OP2"
+      ],
+      "verdict": "PASS",
+      "rationale": "The cocycle reads pr_1*alpha composed with pr_0*alpha = c*alpha. Pullback by (i,1) gives alpha composed with i*alpha = s*e*alpha; (1,i) gives i*alpha composed with alpha = t*e*alpha. The corrected left sides have the right types and match the actual named pullbacks.",
+      "method": "directly_checked",
+      "consulted_passages": [
+        {
+          "source": "groupoids.tex",
+          "start_line": 2421,
+          "end_line": 2435,
+          "text": "\\item (identity) there exists a map $e : \\text{Ob} \\to \\text{Arrows}$\nsuch that\n\\begin{enumerate}\n\\item $s \\circ e = t \\circ e = \\text{id}$ as maps $\\text{Ob} \\to \\text{Ob}$,\n\\item $c \\circ (1, e \\circ s) = c \\circ (e \\circ t, 1) = 1$\nas maps $\\text{Arrows} \\to \\text{Arrows}$,\n\\end{enumerate}\n\\item (inverse) there exists a map $i : \\text{Arrows} \\to \\text{Arrows}$\nsuch that\n\\begin{enumerate}\n\\item $s \\circ i = t$, $t \\circ i = s$ as maps $\\text{Arrows} \\to \\text{Ob}$,\nand\n\\item $c \\circ (1, i) = e \\circ t$ and $c \\circ (i, 1) = e \\circ s$\nas maps $\\text{Arrows} \\to \\text{Arrows}$.\n\\end{enumerate}\n"
+        },
+        {
+          "source": "groupoids.tex",
+          "start_line": 2621,
+          "end_line": 2676,
+          "text": "\\begin{definition}\n\\label{definition-groupoid-module}\nLet $S$ be a scheme, let $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nA {\\it quasi-coherent module on $(U, R, s, t, c)$}\nis a pair $(\\mathcal{F}, \\alpha)$, where $\\mathcal{F}$ is a quasi-coherent\n$\\mathcal{O}_U$-module, and $\\alpha$ is a $\\mathcal{O}_R$-module\nmap\n$$\n\\alpha : t^*\\mathcal{F} \\longrightarrow s^*\\mathcal{F}\n$$\nsuch that\n\\begin{enumerate}\n\\item the diagram\n$$\n\\xymatrix{\n& \\text{pr}_1^*t^*\\mathcal{F} \\ar[r]_-{\\text{pr}_1^*\\alpha} &\n\\text{pr}_1^*s^*\\mathcal{F} \\ar@{=}[rd] & \\\\\n\\text{pr}_0^*s^*\\mathcal{F} \\ar@{=}[ru] & & & c^*s^*\\mathcal{F} \\\\\n& \\text{pr}_0^*t^*\\mathcal{F} \\ar[lu]^{\\text{pr}_0^*\\alpha} \\ar@{=}[r] &\nc^*t^*\\mathcal{F} \\ar[ru]_{c^*\\alpha}\n}\n$$\nis a commutative in the category of\n$\\mathcal{O}_{R \\times_{s, U, t} R}$-modules, and\n\\item the pullback\n$$\ne^*\\alpha : \\mathcal{F} \\longrightarrow \\mathcal{F}\n$$\nis the identity map.\n\\end{enumerate}\nCompare with the commutative diagrams of Lemma \\ref{lemma-diagram}.\n\\end{definition}\n\n\\noindent\nThe commutativity of the first diagram forces the operator $e^*\\alpha$\nto be idempotent. Hence the second condition can be reformulated as saying\nthat $e^*\\alpha$ is an isomorphism. In fact, the condition implies that\n$\\alpha$ is an isomorphism.\n\n\\begin{lemma}\n\\label{lemma-isomorphism}\nLet $S$ be a scheme, let $(U, R, s, t, c)$ be a groupoid scheme over $S$.\nIf $(\\mathcal{F}, \\alpha)$ is a quasi-coherent module on $(U, R, s, t, c)$\nthen $\\alpha$ is an isomorphism.\n\\end{lemma}\n\n\\begin{proof}\nPull back the commutative diagram of\nDefinition \\ref{definition-groupoid-module}\nby the morphism $(i, 1) : R \\to R \\times_{s, U, t} R$.\nThen we see that $i^*\\alpha \\circ \\alpha = s^*e^*\\alpha$.\nPulling back by the morphism $(1, i)$ we obtain the relation\n$\\alpha \\circ i^*\\alpha = t^*e^*\\alpha$. By the second assumption \nthese morphisms are the identity. Hence $i^*\\alpha$ is an inverse of\n$\\alpha$.\n\\end{proof}\n"
+        }
+      ],
+      "adverse_findings": [],
+      "confidence": {
+        "level": "high",
+        "reason": "The retained local statement, object types, definitions or explicit adjacent construction determines the correction.",
+        "calibrated_probability": false
+      }
+    }
+  ],
+  "rejected_alternatives": [
+    {
+      "unit_id": "MC-STK-ERR-1547",
+      "alternative": "Retain V_{p,1} and call the original assertion false.",
+      "disposition": "Rejected rationale: the assertion about the first affine member can be true; the failure is its insufficient scope for the indexed induction."
+    },
+    {
+      "unit_id": "MC-STK-ERR-1551",
+      "alternative": "Delete the exactness adjective altogether.",
+      "disposition": "Unnecessary weakening: the displayed sequence directly supports the precise term left exact."
+    },
+    {
+      "unit_id": "MC-STK-ERR-1564",
+      "alternative": "Remove d=0 from the theorem statement.",
+      "disposition": "Rejected: the stated iff theorem correctly includes d=0. The proof needs the case split, preserving the theorem's full scope."
+    },
+    {
+      "unit_id": "MC-STK-ERR-1568",
+      "alternative": "Swap only s and t on the right-hand sides.",
+      "disposition": "Those two standalone identities would be true, but each would be assigned to the wrong explicitly named pullback. The selected left-hand order changes are the complete two-line repair."
+    }
+  ],
+  "dedup_reasoning": [
+    {
+      "new_unit": "MC-STK-ERR-1564",
+      "nearby_existing": [
+        "MC-STK-ERR-1494"
+      ],
+      "distinction": "Existing unit adds the nonzero hypothesis to the earlier multiplication-degree lemma at pinned line 1771. R48 handles zero in the following etaleness proof at pinned line 1836."
+    },
+    {
+      "new_unit": "MC-STK-ERR-1565",
+      "nearby_existing": [
+        "MC-STK-ERR-1504",
+        "MC-STK-ERR-1505"
+      ],
+      "distinction": "Existing units alter the cardinal-comparison wording and identity support-choice indices; neither supplies the missing t-to-U_i and s-to-U_j structure maps."
+    },
+    {
+      "new_unit": "MC-STK-ERR-1566",
+      "nearby_existing": [
+        "MC-STK-ERR-1515"
+      ],
+      "distinction": "Existing unit repairs Spec(A') at pinned line 4421. R48 repairs the coefficient ring at pinned line 4425."
+    },
+    {
+      "new_unit": "MC-STK-ERR-1567",
+      "nearby_existing": [
+        "MC-STK-ERR-1505"
+      ],
+      "distinction": "R48 names the second equality's ambient module at pinned line 3214. The prior operation begins on line 3215 and repairs support-choice indices."
+    },
+    {
+      "new_unit": "MC-STK-ERR-1568",
+      "nearby_existing": [
+        "MC-STK-ERR-1499",
+        "MC-STK-ERR-1501"
+      ],
+      "distinction": "Existing units insert diagram in the module definition and reorder projections in a different construction. They do not repair the named inverse pullbacks at pinned lines 2671 and 2673."
+    }
+  ],
+  "operational_notes": [
+    "The replacement string for MC-STK-ERR-1562-OP1 occurs twice in the payload. This is not a defect: the declared byte coordinate identifies the correct occurrence, and the independent coordinate-based reversal reproduces the authority exactly.",
+    "R48 payloads encode only R48 differences against the pinned authority. They are not cumulative chapters and must not replace a chapter that already includes R1–R47 operations. This review detects no conflict with the admitted groupoids operations.",
+    "The authority review evidence differs from some ROOT_SELECTION original hashes only through the stage script's documented path sanitization. All six original hashes and all six candidate bindings were checked; the independently reapplied sanitization exactly reproduces each candidate evidence file.",
+    "This result covers the exact source-stage snapshot listed here. It is not a candidate seal, build receipt, rendered-page verdict, admission or publication decision."
+  ],
+  "terminal_condition": "Complete source-stage report and executable independent checker delivered to root. Continue the root's already authorized build, replay, visual QA and candidate workflow without a human-dependent gate."
+}

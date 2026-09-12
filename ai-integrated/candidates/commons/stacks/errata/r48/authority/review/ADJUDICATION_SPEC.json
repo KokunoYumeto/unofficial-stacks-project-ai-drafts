@@ -1,0 +1,29 @@
+{
+  "schema": "bounded-stacks-source-review/v1",
+  "status": "MATHEMATICALLY_VALID_PENDING_ADMISSION",
+  "source": "spaces-perfect.tex",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+  "reviewers": ["root", "ja_build_provenance_review"],
+  "review_method": "Independent reading of each local statement and proof; category and Hom exactness definitions additionally read for candidate 007. Producer labels are evidence, not admission.",
+  "operations": [
+    {"producer_id":"CH075-SD-001","line":492,"old":"H^i(RF(\\tau_{\\leq a}E) \\to","new":"H^i(RF(\\tau_{\\leq a}E)) \\to","verdict":"VALID","rationale":"Lines 490-495 specify a morphism between cohomology groups. Close the outer H^i argument; no object or arrow changes.","confidence_reason":"Direct unmatched-parenthesis repair, with both adjacent items fixing the intended notation."},
+    {"producer_id":"CH075-SD-002","line":552,"old":"i \\geq b + n","new":"i \\geq b + N","verdict":"VALID","rationale":"N is the bound fixed at 483-488. Conclusion (3) at 496-498 and the vanishing truncation at 551 force threshold b+N; lowercase n is not the bound.","confidence_reason":"The substitution into item (2) reproduces the stated interval exactly."},
+    {"producer_id":"CH075-SD-003","line":1418,"old":"V_{p, 1}","new":"V_{p, i}","verdict":"VALID","rationale":"The cover 1397-1398 and squares 1412-1414 require the property for every affine member. The first-member claim is insufficient, not necessarily false.","confidence_reason":"The induction indices and explicitly indexed affine cover agree."},
+    {"producer_id":"CH075-SD-004","line":1498,"old":" where ","new":"","verdict":"VALID","rationale":"Keep the connector 'such that' on 1499, introducing the conditions 1500-1505. Delete the duplicated connector on 1498.","confidence_reason":"Grammatical duplication only; the entire mathematical list is retained."},
+    {"producer_id":"CH075-SD-005","line":1524,"old":"W \\cap U_{n + 1}","new":"W \\cup U_{n + 1}","verdict":"VALID","rationale":"W_p was defined as W union U_p at 1522. U_{n+1} is empty at 1516; the base case is W, not an intersection with the empty set.","confidence_reason":"The explicit definition and evaluated base case independently force union."},
+    {"producer_id":"CH075-SD-006","line":1563,"old":"elementary distinguished triangle","new":"elementary distinguished square","verdict":"VALID","rationale":"Definition 1296-1313 defines elementary distinguished squares. This section starts from those squares and constructs distinguished triangles.","confidence_reason":"Exact match to the defined input object; no change to the resulting triangles."},
+    {"producer_id":"CH075-SD-007","line":1724,"old":"the right exact functor","new":"the left exact functor","verdict":"VALID","rationale":"Applying Hom(-,F) to 1717-1720 yields the left-exact sequence 1710-1713. The Ext^1 obstruction at 1725-1732 explicitly permits failure of rightmost surjectivity. Frozen categories.tex 459-463 and 3278-3287 and homology.tex 750-760 establish the convention.","confidence_reason":"Checked against the source's own variance and exactness definitions, not a terminology preference.","rejected_alternative":"Deleting the exactness adjective, as the French target does, is sufficient prose but less precise than the minimally corrected English assertion."},
+    {"producer_id":"CH075-SD-008","line":1785,"old":"U \\cap V","new":"U \\times_X V","verdict":"VALID","rationale":"V is merely etale over X under 1307-1310. The third object is explicitly U times_X V at 1766,1772,1798. An intersection of subobjects cannot be assumed.","confidence_reason":"Both the definition and the actual formulas identify the fibre product.","rejected_alternative":"Treating intersection as harmless shorthand loses the distinction when V is not embedded in X."},
+    {"producer_id":"CH075-SD-009","line":1904,"old":"V \\to Y","new":"V \\to X","verdict":"VALID","rationale":"The lemma introduces U to X, restricts to V, and forms V times_X U. Y is absent; the required structure map is V to X.","confidence_reason":"The domain of base change and the following projection force the codomain."}
+  ],
+  "consulted_support": [
+    {"path":"categories.tex","sha256":"62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25","lines":[[459,463],[3278,3287]]},
+    {"path":"homology.tex","sha256":"483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0","lines":[[750,760]]}
+  ],
+  "unrequested_suffix_ids": ["CH075-SD-010","CH075-SD-011"],
+  "authority_mutated": false,
+  "translation_mutated": false,
+  "canonical_ids_allocated": false,
+  "admitted": false
+}

@@ -1,0 +1,1306 @@
+{
+  "actual_distinct_files_read_and_hashed": 402,
+  "audit_corrections": [
+    {
+      "evidence": {
+        "chapters_sha256": "8FFE9D9C3273B29D07E3998F4CD8F363E84B95C9E00B85CC89E56EFF4259DC66",
+        "index_phantom": "Pinned chapters.tex line 153 explicitly names index-section-phantom as Auto Generated Index.",
+        "recorded_source": "worktree/groupoids-quotients.tex",
+        "sha256": "A3B368824EA83B283C008C8D7DF4501534145B9D043C3D0A77D36AD1F1F23E9E"
+      },
+      "original_findings": [
+        {
+          "check": "local_undefined_references_absent",
+          "detail": "groupoids/candidate"
+        },
+        {
+          "check": "local_undefined_references_absent",
+          "detail": "groupoids/authority"
+        }
+      ],
+      "reason": "Initial local-reference heuristic used a short stem prefix. groupoids-quotients-section-phantom belongs to the distinct recorded chapter groupoids-quotients, not groupoids. Reclassified using the longest actual chapter prefix; no build bytes changed."
+    }
+  ],
+  "builds_not_rerun": true,
+  "candidate_id": "stacks-errata-a04446e-r48",
+  "check_counts": {
+    "all_command_outputs_present": 32,
+    "all_pdflatex_output_pdf_record": 24,
+    "artifact_hash_bindings": 109,
+    "authority_identity": 2,
+    "both_private_final_log_signatures": 8,
+    "candidate_identity": 4,
+    "captured_command_exit_cleanup": 4,
+    "configured_source_hash": 4,
+    "final_log_errors_and_glyphs_absent": 4,
+    "final_log_pdf_bytes": 4,
+    "fls_available_input_rehash": 2172,
+    "fls_closure_recomputed": 8,
+    "fls_counts": 8,
+    "fls_output_confinement": 8,
+    "fls_raw_inventory_order": 16,
+    "fls_retained_output_rehash": 16,
+    "fresh_fls_input_closure_equal": 4,
+    "fresh_fls_output_paths_equal": 4,
+    "fresh_pdf_identity": 4,
+    "guard_binding": 1,
+    "guard_raw_log_binding": 8,
+    "guard_stderr_empty": 4,
+    "local_undefined_references_absent": 4,
+    "mutex_completion": 1,
+    "mutex_name_and_wait": 1,
+    "mutex_roles": 1,
+    "mutex_sequential_interval": 4,
+    "no_box_count_or_dimension_regression": 2,
+    "no_build_command_failure_text": 32,
+    "no_citation_target_regression": 2,
+    "no_page_count_regression": 2,
+    "no_reference_target_multiset_regression": 2,
+    "post_binder_after_release": 1,
+    "post_binder_exit_cleanup": 1,
+    "post_binder_final_receipt_hash": 1,
+    "post_binder_log_binding": 2,
+    "private_candidate_source_copy": 4,
+    "private_identity": 2,
+    "private_work_removed": 2,
+    "public_inventory_second_identity": 4,
+    "public_sanitized_private_binding": 16,
+    "raw_fls_hash_binding": 8,
+    "receipt_citation_summary_independent_parse": 4,
+    "receipt_reference_summary_independent_parse": 4,
+    "replay_pdf_binding": 4,
+    "second_command_return_and_stdout": 16,
+    "second_command_role_order": 4,
+    "second_private_execution_binding": 1,
+    "separate_private_workroots": 1,
+    "shell_escape_disabled_argv": 12
+  },
+  "command_outputs": [
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "pdflatex_pass_1",
+      "run": "first",
+      "stdout": {
+        "bytes": 74324,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.candidate.pdflatex_pass_1.stdout.txt",
+        "sha256": "CA11E6AA086FC947E3CECD22DC16B56C52503541735F26FECFB043B3D55BB0B1"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "pdflatex_pass_1",
+      "run": "second",
+      "stdout": {
+        "bytes": 74324,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.candidate.pdflatex_pass_1.stdout.txt",
+        "sha256": "CA11E6AA086FC947E3CECD22DC16B56C52503541735F26FECFB043B3D55BB0B1"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "bibtex",
+      "run": "first",
+      "stdout": {
+        "bytes": 146,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.candidate.bibtex.stdout.txt",
+        "sha256": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "bibtex",
+      "run": "second",
+      "stdout": {
+        "bytes": 146,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.candidate.bibtex.stdout.txt",
+        "sha256": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "pdflatex_pass_2",
+      "run": "first",
+      "stdout": {
+        "bytes": 55791,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.candidate.pdflatex_pass_2.stdout.txt",
+        "sha256": "6ED21469DFE6A3FF6E0E725B21E683BECA735BA956AD249D2F8CC7C9EC926B0C"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "pdflatex_pass_2",
+      "run": "second",
+      "stdout": {
+        "bytes": 55791,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.candidate.pdflatex_pass_2.stdout.txt",
+        "sha256": "6ED21469DFE6A3FF6E0E725B21E683BECA735BA956AD249D2F8CC7C9EC926B0C"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "pdflatex_pass_3",
+      "run": "first",
+      "stdout": {
+        "bytes": 55129,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.candidate.pdflatex_pass_3.stdout.txt",
+        "sha256": "3AB46700517956924438ECA038DAAFC352C8FB5B78E414040DDA00020E3BC546"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "pdflatex_pass_3",
+      "run": "second",
+      "stdout": {
+        "bytes": 55129,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.candidate.pdflatex_pass_3.stdout.txt",
+        "sha256": "3AB46700517956924438ECA038DAAFC352C8FB5B78E414040DDA00020E3BC546"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "pdflatex_pass_1",
+      "run": "first",
+      "stdout": {
+        "bytes": 74324,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.authority.pdflatex_pass_1.stdout.txt",
+        "sha256": "5C6B9CD5028B9BF673328FB37EE5413612BEE3636D4983E52E61A29E6C48056A"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "pdflatex_pass_1",
+      "run": "second",
+      "stdout": {
+        "bytes": 74324,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.authority.pdflatex_pass_1.stdout.txt",
+        "sha256": "5C6B9CD5028B9BF673328FB37EE5413612BEE3636D4983E52E61A29E6C48056A"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "bibtex",
+      "run": "first",
+      "stdout": {
+        "bytes": 146,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.authority.bibtex.stdout.txt",
+        "sha256": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "bibtex",
+      "run": "second",
+      "stdout": {
+        "bytes": 146,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.authority.bibtex.stdout.txt",
+        "sha256": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "pdflatex_pass_2",
+      "run": "first",
+      "stdout": {
+        "bytes": 55791,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.authority.pdflatex_pass_2.stdout.txt",
+        "sha256": "73FE7C1D157B7BA5509F3A5E6B976198CFBDBDA4ADCA354EFEB6FADA690F61FF"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "pdflatex_pass_2",
+      "run": "second",
+      "stdout": {
+        "bytes": 55791,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.authority.pdflatex_pass_2.stdout.txt",
+        "sha256": "73FE7C1D157B7BA5509F3A5E6B976198CFBDBDA4ADCA354EFEB6FADA690F61FF"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "pdflatex_pass_3",
+      "run": "first",
+      "stdout": {
+        "bytes": 55129,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.authority.pdflatex_pass_3.stdout.txt",
+        "sha256": "4EF88021158F439A386D9D290C863B934A5DCF2251BB1432F74E31F9942B3515"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "pdflatex_pass_3",
+      "run": "second",
+      "stdout": {
+        "bytes": 55129,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.authority.pdflatex_pass_3.stdout.txt",
+        "sha256": "4EF88021158F439A386D9D290C863B934A5DCF2251BB1432F74E31F9942B3515"
+      },
+      "stem": "groupoids"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "pdflatex_pass_1",
+      "run": "first",
+      "stdout": {
+        "bytes": 123413,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.candidate.pdflatex_pass_1.stdout.txt",
+        "sha256": "17609E29777CDCE439E1400FA4BAB3B42D378139D038EE2F9D774CA4EA5B7143"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "pdflatex_pass_1",
+      "run": "second",
+      "stdout": {
+        "bytes": 123413,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.candidate.pdflatex_pass_1.stdout.txt",
+        "sha256": "17609E29777CDCE439E1400FA4BAB3B42D378139D038EE2F9D774CA4EA5B7143"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "bibtex",
+      "run": "first",
+      "stdout": {
+        "bytes": 222,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.candidate.bibtex.stdout.txt",
+        "sha256": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "bibtex",
+      "run": "second",
+      "stdout": {
+        "bytes": 222,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.candidate.bibtex.stdout.txt",
+        "sha256": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "pdflatex_pass_2",
+      "run": "first",
+      "stdout": {
+        "bytes": 84209,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.candidate.pdflatex_pass_2.stdout.txt",
+        "sha256": "2A346FFC4D5C6B4F3AD21F8DC89A5A91C7EDC56E394C45BF77A0770EDA8BF005"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "pdflatex_pass_2",
+      "run": "second",
+      "stdout": {
+        "bytes": 84209,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.candidate.pdflatex_pass_2.stdout.txt",
+        "sha256": "2A346FFC4D5C6B4F3AD21F8DC89A5A91C7EDC56E394C45BF77A0770EDA8BF005"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "candidate",
+      "role": "pdflatex_pass_3",
+      "run": "first",
+      "stdout": {
+        "bytes": 83518,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.candidate.pdflatex_pass_3.stdout.txt",
+        "sha256": "F00FDBAD210DF0ACE0FFC7F42AA009A4ACEE58E6E0D9E7C85340861C4AEE50FC"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "candidate",
+      "role": "pdflatex_pass_3",
+      "run": "second",
+      "stdout": {
+        "bytes": 83518,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.candidate.pdflatex_pass_3.stdout.txt",
+        "sha256": "F00FDBAD210DF0ACE0FFC7F42AA009A4ACEE58E6E0D9E7C85340861C4AEE50FC"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "pdflatex_pass_1",
+      "run": "first",
+      "stdout": {
+        "bytes": 123413,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.authority.pdflatex_pass_1.stdout.txt",
+        "sha256": "744A10BFB924180A174EBC09ABA422759B6199024083C5C1485F26D03DEC0B84"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "pdflatex_pass_1",
+      "run": "second",
+      "stdout": {
+        "bytes": 123413,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.authority.pdflatex_pass_1.stdout.txt",
+        "sha256": "744A10BFB924180A174EBC09ABA422759B6199024083C5C1485F26D03DEC0B84"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "bibtex",
+      "run": "first",
+      "stdout": {
+        "bytes": 222,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.authority.bibtex.stdout.txt",
+        "sha256": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "bibtex",
+      "run": "second",
+      "stdout": {
+        "bytes": 222,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.authority.bibtex.stdout.txt",
+        "sha256": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "pdflatex_pass_2",
+      "run": "first",
+      "stdout": {
+        "bytes": 84210,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.authority.pdflatex_pass_2.stdout.txt",
+        "sha256": "F7E696D385E2A286D20FCEB9DD194638E5E64893972B19894CC482C2D09D0EED"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "pdflatex_pass_2",
+      "run": "second",
+      "stdout": {
+        "bytes": 84210,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.authority.pdflatex_pass_2.stdout.txt",
+        "sha256": "F7E696D385E2A286D20FCEB9DD194638E5E64893972B19894CC482C2D09D0EED"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": null,
+      "phase": "authority",
+      "role": "pdflatex_pass_3",
+      "run": "first",
+      "stdout": {
+        "bytes": 83519,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.authority.pdflatex_pass_3.stdout.txt",
+        "sha256": "679801D074C05F25F5C70F1848E569AC781020B184E096C8A20A5A65C27FD2CB"
+      },
+      "stem": "spaces-perfect"
+    },
+    {
+      "exit_code_recorded": 0,
+      "phase": "authority",
+      "role": "pdflatex_pass_3",
+      "run": "second",
+      "stdout": {
+        "bytes": 83519,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.authority.pdflatex_pass_3.stdout.txt",
+        "sha256": "679801D074C05F25F5C70F1848E569AC781020B184E096C8A20A5A65C27FD2CB"
+      },
+      "stem": "spaces-perfect"
+    }
+  ],
+  "coverage": [
+    {
+      "area": "Command exits",
+      "limit": "The first run's public build-execution.json was overwritten by the second execution. Its first private receipt retains a hash (3D8535456F2D9E03CF9547CD56EC6F71314A38ED4721DB2DA2D9B43A29652A0D), but not those original JSON bytes. Therefore first per-command exit codes are control-flow-supported, not individually re-read from a preserved first execution manifest.",
+      "verified": "All four wrapper roles and post-release binder have exit 0, hash-verified stdout/stderr, capture-before-resume, and completed cleanup. The second public build execution records all 16 TeX/BibTeX command exits as 0; raw stdout byte counts and hashes agree. First run retains all 16 raw outputs with expected TeX PDF-completion records and no fatal/error markers. The reviewed unchanged runner raises on any nonzero command before its successful root exit."
+    },
+    {
+      "area": "FLS evidence",
+      "limit": "36 generated input occurrences were not retained: each groupoids phase has its .aux/.out/.toc/.bbl; each spaces-perfect phase also reads groupoids.aux. Historical hashes remain in inventories and agree across builds, but those deleted generated bytes cannot be independently rehashed now. Recorded TeX FLS is not a complete separate BibTeX .bib/.bst dependency manifest. This review does not claim a self-contained archived toolchain or full build input bundle.",
+      "verified": "All 8 raw FLS files bind to their private inventories. Input/output order and deduplication were independently reconstructed from raw FLS paths. All 8 canonical input-closure digests were recomputed from entries. Repeated input entries and closures agree; current retained sources/packages/formats were rehashed for 2172 input occurrences, all matching."
+    },
+    {
+      "area": "Mutex and process ownership",
+      "limit": "Chronology is from the actual wrapper receipt plus reviewed process-creation/control flow and Job Object accounting. There is no per-engine PID/timestamp OS trace, and no new hard-kill, contention, or abandoned-owner fault test was run. Build execution JSON times are rounded to whole seconds; precise wrapper timestamps govern ordering.",
+      "verified": "The unchanged reviewed wrapper and guard hashes match the installed files. The same mutex is acquired before either captured worker, remains held through both build trees, comparison and immediate log preflight, and is released after all four cleanup completions. Each build records 20 captured processes; comparison and preflight record two each. The C# source assigns the suspended root before resume and waits for job active-count zero; cleanup targets only its captured job."
+    },
+    {
+      "area": "Warnings and layout",
+      "limit": "Standalone cross-chapter references remain unresolved. Groupoids retains the authority's label-rerun warning, so fixed-point AUX convergence is not established by the fixed three-pass recipe. Spaces-perfect retains one identical BibTeX missing-pages warning. Visual pages and mathematical correctness are reviewed separately by root/current source reviewer.",
+      "verified": "Independent parsing matched reference target multisets, citation targets, page counts, full ordered box warning dimensions (normalizing only source line offsets), xr warning multisets and generic LaTeX warning lists against authority. No local undefined references, fatal/error markers or missing glyph messages were found."
+    },
+    {
+      "area": "Validator coverage",
+      "limit": "build-receipt.py records box counts but does not fail on their regression; it also does not classify local versus external targets or test generic label-rerun warnings. Its validate_fls checks advertised structure and source hash but does not recompute the closure digest or require all generated dependencies to be retained. deterministic-replay.py compares advertised closure hashes; this audit recomputed them.",
+      "verified": "This audit independently rehashed artifacts and recomputed recorder closure digests rather than accepting pass flags. It added direct box-dimension comparisons and longest-prefix local/external reference classification."
+    }
+  ],
+  "date": "2026-09-12",
+  "existing_artifacts_changed": false,
+  "failures": [],
+  "fls": [
+    {
+      "closure_sha256": "6F4D073847A78C7753A6135D2FE69DCC5AB154A2DACEFF00007089BCE50C9392",
+      "generated_input_bytes_not_retained": 4,
+      "input_count": 276,
+      "inputs_rehashed_now": 272,
+      "inventory": {
+        "bytes": 62714,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.candidate.fls-dependencies.json",
+        "sha256": "2BD7CC939CD5025F16B4C46471B1910BDE12133379DB57F389409475A6EA733A"
+      },
+      "output_count": 5,
+      "phase": "candidate",
+      "raw_fls": {
+        "bytes": 28898,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.candidate.fls",
+        "sha256": "D447FFEFF9026F44700D90EA5F665C79880FD8A500334CDAB82427E6427EDA2A"
+      },
+      "run": "first",
+      "stem": "groupoids"
+    },
+    {
+      "closure_sha256": "6F4D073847A78C7753A6135D2FE69DCC5AB154A2DACEFF00007089BCE50C9392",
+      "generated_input_bytes_not_retained": 4,
+      "input_count": 276,
+      "inputs_rehashed_now": 272,
+      "inventory": {
+        "bytes": 62714,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.candidate.fls-dependencies.json",
+        "sha256": "A96836F86F509E52ADE77782FFF88D1E1E1D043781B614D66DB33C5DCF866C69"
+      },
+      "output_count": 5,
+      "phase": "candidate",
+      "raw_fls": {
+        "bytes": 28898,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.candidate.fls",
+        "sha256": "10AC41300630FE434E67C16AC11BF7B1264C23EB09AF94206F750FC97AB49FED"
+      },
+      "run": "second",
+      "stem": "groupoids"
+    },
+    {
+      "closure_sha256": "9EEE050834C90371A763F8E9F4B02A30773F4EE21267176085E46C880BD1C998",
+      "generated_input_bytes_not_retained": 4,
+      "input_count": 276,
+      "inputs_rehashed_now": 272,
+      "inventory": {
+        "bytes": 62714,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.authority.fls-dependencies.json",
+        "sha256": "460C06A0BBBE78816C6EF2EE8EF1D38C0F0C4C47590ADA6EBE859D361512BEC2"
+      },
+      "output_count": 5,
+      "phase": "authority",
+      "raw_fls": {
+        "bytes": 28898,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\groupoids.authority.fls",
+        "sha256": "D447FFEFF9026F44700D90EA5F665C79880FD8A500334CDAB82427E6427EDA2A"
+      },
+      "run": "first",
+      "stem": "groupoids"
+    },
+    {
+      "closure_sha256": "9EEE050834C90371A763F8E9F4B02A30773F4EE21267176085E46C880BD1C998",
+      "generated_input_bytes_not_retained": 4,
+      "input_count": 276,
+      "inputs_rehashed_now": 272,
+      "inventory": {
+        "bytes": 62714,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.authority.fls-dependencies.json",
+        "sha256": "3B5A1820216EA5D151E7FCE67C0F7062F76C97C124232D49663AFA0B8F1639D8"
+      },
+      "output_count": 5,
+      "phase": "authority",
+      "raw_fls": {
+        "bytes": 28898,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\groupoids.authority.fls",
+        "sha256": "10AC41300630FE434E67C16AC11BF7B1264C23EB09AF94206F750FC97AB49FED"
+      },
+      "run": "second",
+      "stem": "groupoids"
+    },
+    {
+      "closure_sha256": "F591E73322DDE5A2913833409F5DB7AB5C7A9DB61DC264E5A7467F4C56453ECC",
+      "generated_input_bytes_not_retained": 5,
+      "input_count": 276,
+      "inputs_rehashed_now": 271,
+      "inventory": {
+        "bytes": 62704,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.candidate.fls-dependencies.json",
+        "sha256": "44646127BBC9339957FBCAD1C5F8A6A232F372A9CEDD2AC60961CB730EEB2F64"
+      },
+      "output_count": 5,
+      "phase": "candidate",
+      "raw_fls": {
+        "bytes": 28874,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.candidate.fls",
+        "sha256": "F3E9CEBF97FFCE49149E411602688727EEB14DFC0B9D6D4CD9945A89BAA2497E"
+      },
+      "run": "first",
+      "stem": "spaces-perfect"
+    },
+    {
+      "closure_sha256": "F591E73322DDE5A2913833409F5DB7AB5C7A9DB61DC264E5A7467F4C56453ECC",
+      "generated_input_bytes_not_retained": 5,
+      "input_count": 276,
+      "inputs_rehashed_now": 271,
+      "inventory": {
+        "bytes": 62704,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.candidate.fls-dependencies.json",
+        "sha256": "ACF13B0D940BEA63E449E274ECCEF22868EE504445F3B3B9756113EAF5B6BC89"
+      },
+      "output_count": 5,
+      "phase": "candidate",
+      "raw_fls": {
+        "bytes": 28874,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.candidate.fls",
+        "sha256": "64E9EEF0FC47ED1A6DC90F8AA087EB473EC0AD55C08DC14B8E9E49EFB7611FCF"
+      },
+      "run": "second",
+      "stem": "spaces-perfect"
+    },
+    {
+      "closure_sha256": "55DC059D2E13FB83E5E2C2A040EE6C89A13921D4928F03CA1CE01AA3E7CCE8BF",
+      "generated_input_bytes_not_retained": 5,
+      "input_count": 276,
+      "inputs_rehashed_now": 271,
+      "inventory": {
+        "bytes": 62704,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.authority.fls-dependencies.json",
+        "sha256": "3818DBFE17E5EAD401A29EBA9733CDBF62A873A6BB7CEAEA5AF524BF407C2114"
+      },
+      "output_count": 5,
+      "phase": "authority",
+      "raw_fls": {
+        "bytes": 28874,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\spaces-perfect.authority.fls",
+        "sha256": "F3E9CEBF97FFCE49149E411602688727EEB14DFC0B9D6D4CD9945A89BAA2497E"
+      },
+      "run": "first",
+      "stem": "spaces-perfect"
+    },
+    {
+      "closure_sha256": "55DC059D2E13FB83E5E2C2A040EE6C89A13921D4928F03CA1CE01AA3E7CCE8BF",
+      "generated_input_bytes_not_retained": 5,
+      "input_count": 276,
+      "inputs_rehashed_now": 271,
+      "inventory": {
+        "bytes": 62704,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.authority.fls-dependencies.json",
+        "sha256": "0E2AB15C05DA9AEAD84F4D9D7474D0D12F0C3BE865BCD7D2EB168AD50F160E46"
+      },
+      "output_count": 5,
+      "phase": "authority",
+      "raw_fls": {
+        "bytes": 28874,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\spaces-perfect.authority.fls",
+        "sha256": "64E9EEF0FC47ED1A6DC90F8AA087EB473EC0AD55C08DC14B8E9E49EFB7611FCF"
+      },
+      "run": "second",
+      "stem": "spaces-perfect"
+    }
+  ],
+  "fls_generated_inputs_not_retained": [
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 5110,
+          "logical_path": "worktree/groupoids.out",
+          "sha256": "FDD8A1AD87F6350CDEF592860C368BFED8D20A40C6EBFADF9D9EC11FD9B8465B"
+        },
+        {
+          "bytes": 2313,
+          "logical_path": "worktree/groupoids.toc",
+          "sha256": "7674FD518828306160046FA97371E737182C2529F58D15474F0DCF0AAED2A228"
+        },
+        {
+          "bytes": 1633,
+          "logical_path": "worktree/groupoids.bbl",
+          "sha256": "186CB5D0D55B432766991C263AD0076970945D101650944C78C00E42180C3BD1"
+        }
+      ],
+      "phase": "candidate",
+      "run": "first",
+      "stem": "groupoids"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 5110,
+          "logical_path": "worktree/groupoids.out",
+          "sha256": "FDD8A1AD87F6350CDEF592860C368BFED8D20A40C6EBFADF9D9EC11FD9B8465B"
+        },
+        {
+          "bytes": 2313,
+          "logical_path": "worktree/groupoids.toc",
+          "sha256": "7674FD518828306160046FA97371E737182C2529F58D15474F0DCF0AAED2A228"
+        },
+        {
+          "bytes": 1633,
+          "logical_path": "worktree/groupoids.bbl",
+          "sha256": "186CB5D0D55B432766991C263AD0076970945D101650944C78C00E42180C3BD1"
+        }
+      ],
+      "phase": "candidate",
+      "run": "second",
+      "stem": "groupoids"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 5110,
+          "logical_path": "worktree/groupoids.out",
+          "sha256": "FDD8A1AD87F6350CDEF592860C368BFED8D20A40C6EBFADF9D9EC11FD9B8465B"
+        },
+        {
+          "bytes": 2313,
+          "logical_path": "worktree/groupoids.toc",
+          "sha256": "7674FD518828306160046FA97371E737182C2529F58D15474F0DCF0AAED2A228"
+        },
+        {
+          "bytes": 1633,
+          "logical_path": "worktree/groupoids.bbl",
+          "sha256": "186CB5D0D55B432766991C263AD0076970945D101650944C78C00E42180C3BD1"
+        }
+      ],
+      "phase": "authority",
+      "run": "first",
+      "stem": "groupoids"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 5110,
+          "logical_path": "worktree/groupoids.out",
+          "sha256": "FDD8A1AD87F6350CDEF592860C368BFED8D20A40C6EBFADF9D9EC11FD9B8465B"
+        },
+        {
+          "bytes": 2313,
+          "logical_path": "worktree/groupoids.toc",
+          "sha256": "7674FD518828306160046FA97371E737182C2529F58D15474F0DCF0AAED2A228"
+        },
+        {
+          "bytes": 1633,
+          "logical_path": "worktree/groupoids.bbl",
+          "sha256": "186CB5D0D55B432766991C263AD0076970945D101650944C78C00E42180C3BD1"
+        }
+      ],
+      "phase": "authority",
+      "run": "second",
+      "stem": "groupoids"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 19398,
+          "logical_path": "worktree/spaces-perfect.aux",
+          "sha256": "56AA96CBBA95D551B0BEB100C9EC93A4EB6BCEC6C116B9B0AD1BC461F2855F01"
+        },
+        {
+          "bytes": 6616,
+          "logical_path": "worktree/spaces-perfect.out",
+          "sha256": "7290BB11DD3F9622DDA5BBE05FC70DFE8502FBCBDE54317200052AA8268FC98F"
+        },
+        {
+          "bytes": 2847,
+          "logical_path": "worktree/spaces-perfect.toc",
+          "sha256": "824B22288183D5952650CA4598A64B2F26D0099AB6A6AACF6665B825D8AE138A"
+        },
+        {
+          "bytes": 1217,
+          "logical_path": "worktree/spaces-perfect.bbl",
+          "sha256": "D74315F2D2B6D45FDAB753CABE83C715FC6B41CAD7225CE078817F49DC62D859"
+        }
+      ],
+      "phase": "candidate",
+      "run": "first",
+      "stem": "spaces-perfect"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 19398,
+          "logical_path": "worktree/spaces-perfect.aux",
+          "sha256": "56AA96CBBA95D551B0BEB100C9EC93A4EB6BCEC6C116B9B0AD1BC461F2855F01"
+        },
+        {
+          "bytes": 6616,
+          "logical_path": "worktree/spaces-perfect.out",
+          "sha256": "7290BB11DD3F9622DDA5BBE05FC70DFE8502FBCBDE54317200052AA8268FC98F"
+        },
+        {
+          "bytes": 2847,
+          "logical_path": "worktree/spaces-perfect.toc",
+          "sha256": "824B22288183D5952650CA4598A64B2F26D0099AB6A6AACF6665B825D8AE138A"
+        },
+        {
+          "bytes": 1217,
+          "logical_path": "worktree/spaces-perfect.bbl",
+          "sha256": "D74315F2D2B6D45FDAB753CABE83C715FC6B41CAD7225CE078817F49DC62D859"
+        }
+      ],
+      "phase": "candidate",
+      "run": "second",
+      "stem": "spaces-perfect"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 19398,
+          "logical_path": "worktree/spaces-perfect.aux",
+          "sha256": "0A600A677C606F61FD2CE70FB473130416553BA711CF21090A65B9171ECCB19E"
+        },
+        {
+          "bytes": 6616,
+          "logical_path": "worktree/spaces-perfect.out",
+          "sha256": "7290BB11DD3F9622DDA5BBE05FC70DFE8502FBCBDE54317200052AA8268FC98F"
+        },
+        {
+          "bytes": 2847,
+          "logical_path": "worktree/spaces-perfect.toc",
+          "sha256": "824B22288183D5952650CA4598A64B2F26D0099AB6A6AACF6665B825D8AE138A"
+        },
+        {
+          "bytes": 1217,
+          "logical_path": "worktree/spaces-perfect.bbl",
+          "sha256": "D74315F2D2B6D45FDAB753CABE83C715FC6B41CAD7225CE078817F49DC62D859"
+        }
+      ],
+      "phase": "authority",
+      "run": "first",
+      "stem": "spaces-perfect"
+    },
+    {
+      "not_retained_generated_inputs": [
+        {
+          "bytes": 16034,
+          "logical_path": "worktree/groupoids.aux",
+          "sha256": "14F5385B915134B2DBB73215BF812C312F5A5960F16821787F058BC9E82789D2"
+        },
+        {
+          "bytes": 19398,
+          "logical_path": "worktree/spaces-perfect.aux",
+          "sha256": "0A600A677C606F61FD2CE70FB473130416553BA711CF21090A65B9171ECCB19E"
+        },
+        {
+          "bytes": 6616,
+          "logical_path": "worktree/spaces-perfect.out",
+          "sha256": "7290BB11DD3F9622DDA5BBE05FC70DFE8502FBCBDE54317200052AA8268FC98F"
+        },
+        {
+          "bytes": 2847,
+          "logical_path": "worktree/spaces-perfect.toc",
+          "sha256": "824B22288183D5952650CA4598A64B2F26D0099AB6A6AACF6665B825D8AE138A"
+        },
+        {
+          "bytes": 1217,
+          "logical_path": "worktree/spaces-perfect.bbl",
+          "sha256": "D74315F2D2B6D45FDAB753CABE83C715FC6B41CAD7225CE078817F49DC62D859"
+        }
+      ],
+      "phase": "authority",
+      "run": "second",
+      "stem": "spaces-perfect"
+    }
+  ],
+  "generic_latex_warning_comparisons": [
+    {
+      "generic_latex_warnings_equal": true,
+      "retained": [
+        "There were undefined references.",
+        "Label(s) may have changed. Rerun to get cross-references right."
+      ],
+      "stem": "groupoids"
+    },
+    {
+      "generic_latex_warnings_equal": true,
+      "retained": [
+        "There were undefined references."
+      ],
+      "stem": "spaces-perfect"
+    }
+  ],
+  "independent_reviewer_task": "/root/r48_guard_preflight",
+  "inputs_rehashed_now_total_occurrences": 2172,
+  "logs": [
+    {
+      "authority_box_lines": [
+        "Overfull \\hbox (25.04082pt too wide) detected at line 220",
+        "Overfull \\hbox (1.05727pt too wide) in paragraph at lines 3985--3989",
+        "Underfull \\vbox (badness 1515) has occurred while \\output is active []"
+      ],
+      "box_counts": {
+        "Overfull \\\\hbox": 2,
+        "Overfull \\\\vbox": 0,
+        "Underfull \\\\hbox": 0,
+        "Underfull \\\\vbox": 1
+      },
+      "box_dimensions_and_order_equal_ignoring_source_line_offsets": true,
+      "candidate_authority_reference_multisets_equal": true,
+      "candidate_box_lines": [
+        "Overfull \\hbox (25.04082pt too wide) detected at line 220",
+        "Overfull \\hbox (1.05727pt too wide) in paragraph at lines 3989--3993",
+        "Underfull \\vbox (badness 1515) has occurred while \\output is active []"
+      ],
+      "generic_candidate_latex_warnings": [
+        "There were undefined references.",
+        "Label(s) may have changed. Rerun to get cross-references right."
+      ],
+      "local_undefined_targets": {},
+      "pages": 55,
+      "reference_distinct_targets": 264,
+      "reference_occurrences": 290,
+      "stem": "groupoids",
+      "undefined_citation_targets": {}
+    },
+    {
+      "authority_box_lines": [
+        "Overfull \\hbox (22.57962pt too wide) in paragraph at lines 698--712",
+        "Overfull \\hbox (13.98227pt too wide) in paragraph at lines 1841--1848",
+        "Overfull \\hbox (3.7136pt too wide) in paragraph at lines 2021--2028",
+        "Overfull \\hbox (1.93983pt too wide) in paragraph at lines 2235--2237",
+        "Overfull \\hbox (6.49377pt too wide) in paragraph at lines 4116--4119",
+        "Overfull \\vbox (1.70636pt too high) has occurred while \\output is active []",
+        "Overfull \\hbox (2.11375pt too wide) in paragraph at lines 4541--4549",
+        "Overfull \\hbox (11.18413pt too wide) detected at line 4562",
+        "Overfull \\hbox (16.56937pt too wide) in paragraph at lines 4592--4613",
+        "Overfull \\hbox (2.66139pt too wide) in paragraph at lines 5371--5375",
+        "Overfull \\hbox (5.57411pt too wide) in paragraph at lines 6881--6888",
+        "Overfull \\hbox (6.59654pt too wide) in paragraph at lines 7410--7434",
+        "Overfull \\hbox (3.97899pt too wide) in paragraph at lines 7410--7434"
+      ],
+      "box_counts": {
+        "Overfull \\\\hbox": 12,
+        "Overfull \\\\vbox": 1,
+        "Underfull \\\\hbox": 0,
+        "Underfull \\\\vbox": 0
+      },
+      "box_dimensions_and_order_equal_ignoring_source_line_offsets": true,
+      "candidate_authority_reference_multisets_equal": true,
+      "candidate_box_lines": [
+        "Overfull \\hbox (22.57962pt too wide) in paragraph at lines 698--712",
+        "Overfull \\hbox (13.98227pt too wide) in paragraph at lines 1841--1848",
+        "Overfull \\hbox (3.7136pt too wide) in paragraph at lines 2021--2028",
+        "Overfull \\hbox (1.93983pt too wide) in paragraph at lines 2235--2237",
+        "Overfull \\hbox (6.49377pt too wide) in paragraph at lines 4116--4119",
+        "Overfull \\vbox (1.70636pt too high) has occurred while \\output is active []",
+        "Overfull \\hbox (2.11375pt too wide) in paragraph at lines 4541--4549",
+        "Overfull \\hbox (11.18413pt too wide) detected at line 4562",
+        "Overfull \\hbox (16.56937pt too wide) in paragraph at lines 4592--4613",
+        "Overfull \\hbox (2.66139pt too wide) in paragraph at lines 5371--5375",
+        "Overfull \\hbox (5.57411pt too wide) in paragraph at lines 6881--6888",
+        "Overfull \\hbox (6.59654pt too wide) in paragraph at lines 7410--7434",
+        "Overfull \\hbox (3.97899pt too wide) in paragraph at lines 7410--7434"
+      ],
+      "generic_candidate_latex_warnings": [
+        "There were undefined references."
+      ],
+      "local_undefined_targets": {},
+      "pages": 75,
+      "reference_distinct_targets": 375,
+      "reference_occurrences": 496,
+      "stem": "spaces-perfect",
+      "undefined_citation_targets": {}
+    }
+  ],
+  "mutex": {
+    "abandoned_mutex_recovered": false,
+    "acquired_at_utc": "2026-09-12T16:32:34.0270950Z",
+    "commands": [
+      {
+        "assigned_before_resume": true,
+        "captured_total_processes": 20,
+        "cleanup_completed": true,
+        "completed_at_utc": "2026-09-12T16:33:01.3340159Z",
+        "exit_code": 0,
+        "role": "fresh_candidate_authority_build_1",
+        "root_pid": 45856,
+        "started_at_utc": "2026-09-12T16:32:34.0497006Z"
+      },
+      {
+        "assigned_before_resume": true,
+        "captured_total_processes": 20,
+        "cleanup_completed": true,
+        "completed_at_utc": "2026-09-12T16:33:27.4621747Z",
+        "exit_code": 0,
+        "role": "fresh_candidate_authority_build_2",
+        "root_pid": 32188,
+        "started_at_utc": "2026-09-12T16:33:01.3480002Z"
+      },
+      {
+        "assigned_before_resume": true,
+        "captured_total_processes": 2,
+        "cleanup_completed": true,
+        "completed_at_utc": "2026-09-12T16:33:27.5877272Z",
+        "exit_code": 0,
+        "role": "deterministic_pdf_comparison",
+        "root_pid": 44496,
+        "started_at_utc": "2026-09-12T16:33:27.4669746Z"
+      },
+      {
+        "assigned_before_resume": true,
+        "captured_total_processes": 2,
+        "cleanup_completed": true,
+        "completed_at_utc": "2026-09-12T16:33:27.7737981Z",
+        "exit_code": 0,
+        "role": "immediate_log_and_build_preflight",
+        "root_pid": 46396,
+        "started_at_utc": "2026-09-12T16:33:27.5920952Z"
+      }
+    ],
+    "held_seconds": 53.753283,
+    "post_release_binding": {
+      "bytes": 765,
+      "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\guard\\POST_RELEASE_BINDING.json",
+      "sha256": "E328A6403FBC4913CA0B0B758EBC2808657973288F9A8C9021A773EB01A93655"
+    },
+    "receipt": {
+      "bytes": 4329,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\builds\\TEX_MUTEX_RECEIPT.json",
+      "sha256": "2296415D44BD5DA62404F4E7269257BB526868510A3217FAD6B289282B178098"
+    },
+    "released_at_utc": "2026-09-12T16:33:27.7803785Z",
+    "wait_seconds": 0.868525,
+    "wait_timeout_seconds": 60
+  },
+  "next_action": "Root may continue the separately assigned visual/source/final admission work using these verified artifacts and recorded limitations. This audit calls for no TeX rerun or candidate mutation.",
+  "package_warning_comparison": [
+    {
+      "count": 116,
+      "full_normalized_warning_multisets_equal": true,
+      "package": "xr",
+      "stem": "groupoids"
+    },
+    {
+      "count": 115,
+      "full_normalized_warning_multisets_equal": true,
+      "package": "xr",
+      "stem": "spaces-perfect"
+    }
+  ],
+  "parent_request_verbatim": "Concrete follow-up, independent read-only verification of ACTUAL successful R48 build. Root just polled existing unified session 37173: terminal exit0 passedtrue. Actual <WORKSPACE>/worktrees/stacks-errata-r48-20260910/ai-integrated/candidates/commons/stacks/errata/r48/builds now holds build-execution.json, build-receipt.json, deterministic-replay.json, TEX_MUTEX_RECEIPT.json and four PDFs/logs/FLS. First private run: <WORKSPACE>/03_projects/language_management/cjk/00_lane_control/canon_audit_20260906/manager_verification/stacks_intake/r48_preparation_20260910/build_execution_20260912_0001/first; second same parent/second; guard logs parent/guard. Independently verify actual hashes, repeated PDF identities, command exit statuses, source and FLS bindings, mutex acquired before engines and held through whole owned tree and immediate checks, no new fatal/glyph/citation/localref/box regressions versus authority. Inspect checks' coverage, not booleans alone. Do NOT rerun any TeX or change candidate or existing receipts. Write separate actual build audit JSON + human report only to .../r48_preparation_20260910/actual_build_review_20260912. Preserve standalone external-ref caveats. No source mathematical rereview; root handles visual pages.",
+  "passed": true,
+  "passed_checks": true,
+  "pdfs": [
+    {
+      "bytes": 731715,
+      "first_second_public_identical": true,
+      "phase": "candidate",
+      "sha256": "8364B86EBD7B74CDF8400838C9C1111AD8CD57C217E29191FB76539AC1E7A1C4",
+      "stem": "groupoids"
+    },
+    {
+      "bytes": 731479,
+      "first_second_public_identical": true,
+      "phase": "authority",
+      "sha256": "5EE63331EE97854DCA8123B494C0150A6E06B0B25172BDDB6EBA9AF791EA8246",
+      "stem": "groupoids"
+    },
+    {
+      "bytes": 883674,
+      "first_second_public_identical": true,
+      "phase": "candidate",
+      "sha256": "84477331BE747CF2BAD63C77CE247D2E66421075BE452F0798EB8ADF2452B4C7",
+      "stem": "spaces-perfect"
+    },
+    {
+      "bytes": 884477,
+      "first_second_public_identical": true,
+      "phase": "authority",
+      "sha256": "018CC10F1E299920F7782661D70984CC5986B8C945617247AB5E0F6D6A8D260B",
+      "stem": "spaces-perfect"
+    }
+  ],
+  "primary_artifacts": [
+    {
+      "bytes": 15580,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\builds\\build-execution.json",
+      "sha256": "759B9C3710945B40A978DA7E7D99567A3AB2BAE55232C996E389CA8ACCEE2121"
+    },
+    {
+      "bytes": 78039,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\builds\\build-receipt.json",
+      "sha256": "93E3A559DB3A66A087E055814575E4B9580A250497D1F0A3211ADB5FB8ACF92E"
+    },
+    {
+      "bytes": 3978,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\builds\\deterministic-replay.json",
+      "sha256": "BB3FFDBB657B10AB794584E7272B94630ADF992A247F314925FE56DD26FEE1DE"
+    },
+    {
+      "bytes": 4329,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\builds\\TEX_MUTEX_RECEIPT.json",
+      "sha256": "2296415D44BD5DA62404F4E7269257BB526868510A3217FAD6B289282B178098"
+    }
+  ],
+  "private_runs": {
+    "first": {
+      "completed_at_utc": "2026-09-12T16:33:01Z",
+      "historical_public_execution": {
+        "bytes": 15580,
+        "path": "builds/build-execution.json",
+        "sha256": "3D8535456F2D9E03CF9547CD56EC6F71314A38ED4721DB2DA2D9B43A29652A0D"
+      },
+      "receipt": {
+        "bytes": 5948,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\first\\private-build-execution.json",
+        "sha256": "4714EF0C36938ADBE540F1FDFFBECA6C93E28D27A80F37466182879900D77886"
+      },
+      "work_root": "<USER_HOME>\\AppData\\Local\\Temp\\r48-20260912-guarded-001-a",
+      "work_root_absent": true
+    },
+    "second": {
+      "completed_at_utc": "2026-09-12T16:33:27Z",
+      "historical_public_execution": {
+        "bytes": 15580,
+        "path": "builds/build-execution.json",
+        "sha256": "759B9C3710945B40A978DA7E7D99567A3AB2BAE55232C996E389CA8ACCEE2121"
+      },
+      "receipt": {
+        "bytes": 5949,
+        "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\canon_audit_20260906\\manager_verification\\stacks_intake\\r48_preparation_20260910\\build_execution_20260912_0001\\second\\private-build-execution.json",
+        "sha256": "B47F6B4C8A34C02D32ADF5BBE3B6E57507309D45CBA34A9C87F95DD0ABCC4B73"
+      },
+      "work_root": "<USER_HOME>\\AppData\\Local\\Temp\\r48-20260912-guarded-001-b",
+      "work_root_absent": true
+    }
+  },
+  "reviewed_tools": [
+    {
+      "bytes": 9122,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\run-builds-with-mutex.ps1",
+      "sha256": "3C29228EB7E2655BECF92EC09FA612347ECE90FEE98B341AC64498941AB2752C"
+    },
+    {
+      "bytes": 7625,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\CapturedR48Tree20260910.cs",
+      "sha256": "B9BE434195DCAF7EAF8E31CCFCD76067561403E4EEB94D69C929093C0CDBD12A"
+    },
+    {
+      "bytes": 15389,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\replay-build.py",
+      "sha256": "E551DF1145E37B063C3A4770FADE47215EBF4FD9742AF29D31FA0A1D06A244FA"
+    },
+    {
+      "bytes": 3670,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\deterministic-replay.py",
+      "sha256": "5A9CE8F8B6FF9F43C70424CED2F1A7E4B36EE617CCFA10BD0D55A4C4680ADBF6"
+    },
+    {
+      "bytes": 12738,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\build-receipt.py",
+      "sha256": "30E9D3650A21E5D5F9418A0BE0AD8185371E27552B3B35E854EB8C2DECBFD37A"
+    }
+  ],
+  "schema": "r48-independent-actual-build-review/v1",
+  "scope": "Read-only verification of existing R48 build artifacts, source/FLS bindings, repeated outputs, command evidence, mutex/capture receipt chronology, and final log regressions. No TeX, mathematical rereview, visual-page review, candidate mutation, receipt rewrite, registry mutation or Git operation.",
+  "source_bindings": [
+    {
+      "bytes": 189364,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\payload\\groupoids.tex",
+      "phase": "candidate",
+      "sha256": "8BDE7E962B3C3D3A3094BA9F73536F17452A3204861372496D4EEC23ACF13F2C",
+      "stem": "groupoids"
+    },
+    {
+      "bytes": 189166,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\authority\\source\\groupoids.tex",
+      "phase": "authority",
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A",
+      "stem": "groupoids"
+    },
+    {
+      "bytes": 283812,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\payload\\spaces-perfect.tex",
+      "phase": "candidate",
+      "sha256": "9A9F4320504EFA95F0FEB76E31CA87EE34B0E2FF5BA975ED690A65611C899037",
+      "stem": "spaces-perfect"
+    },
+    {
+      "bytes": 283799,
+      "path": "<WORKSPACE>\\worktrees\\stacks-errata-r48-20260910\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\authority\\source\\spaces-perfect.tex",
+      "phase": "authority",
+      "sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "stem": "spaces-perfect"
+    }
+  ],
+  "status": "PASS_WITH_RECORDED_COVERAGE_LIMITS",
+  "warning_classifications": [
+    {
+      "bibtex_warnings": [],
+      "external_chapter_count": 115,
+      "external_occurrences": 290,
+      "index_phantom_classified_as_external_from_chapters_tex": true,
+      "local_undefined": [],
+      "phase": "candidate",
+      "prefix_correction_evidence": [
+        {
+          "classification": "external",
+          "matched_chapter": "groupoids-quotients",
+          "target": "groupoids-quotients-section-phantom"
+        }
+      ],
+      "stem": "groupoids",
+      "unknown_prefix_undefined": [],
+      "warning_families": {
+        "LaTeX Warning": 292,
+        "Package xr Warning": 116
+      }
+    },
+    {
+      "bibtex_warnings": [],
+      "external_chapter_count": 115,
+      "external_occurrences": 290,
+      "index_phantom_classified_as_external_from_chapters_tex": true,
+      "local_undefined": [],
+      "phase": "authority",
+      "prefix_correction_evidence": [
+        {
+          "classification": "external",
+          "matched_chapter": "groupoids-quotients",
+          "target": "groupoids-quotients-section-phantom"
+        }
+      ],
+      "stem": "groupoids",
+      "unknown_prefix_undefined": [],
+      "warning_families": {
+        "LaTeX Warning": 292,
+        "Package xr Warning": 116
+      }
+    },
+    {
+      "bibtex_warnings": [
+        "Warning--missing pages in rydh_etale_devissage"
+      ],
+      "external_chapter_count": 114,
+      "external_occurrences": 496,
+      "index_phantom_classified_as_external_from_chapters_tex": true,
+      "local_undefined": [],
+      "phase": "candidate",
+      "prefix_correction_evidence": [
+        {
+          "classification": "external",
+          "matched_chapter": "groupoids-quotients",
+          "target": "groupoids-quotients-section-phantom"
+        }
+      ],
+      "stem": "spaces-perfect",
+      "unknown_prefix_undefined": [],
+      "warning_families": {
+        "LaTeX Warning": 497,
+        "Package xr Warning": 115
+      }
+    },
+    {
+      "bibtex_warnings": [
+        "Warning--missing pages in rydh_etale_devissage"
+      ],
+      "external_chapter_count": 114,
+      "external_occurrences": 496,
+      "index_phantom_classified_as_external_from_chapters_tex": true,
+      "local_undefined": [],
+      "phase": "authority",
+      "prefix_correction_evidence": [
+        {
+          "classification": "external",
+          "matched_chapter": "groupoids-quotients",
+          "target": "groupoids-quotients-section-phantom"
+        }
+      ],
+      "stem": "spaces-perfect",
+      "unknown_prefix_undefined": [],
+      "warning_families": {
+        "LaTeX Warning": 497,
+        "Package xr Warning": 115
+      }
+    }
+  ]
+}

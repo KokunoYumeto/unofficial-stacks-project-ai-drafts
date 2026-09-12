@@ -1,0 +1,456 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "groupoids.tex": {
+      "bytes": 189166,
+      "path": "groupoids.tex",
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    "spaces-perfect.tex": {
+      "bytes": 283799,
+      "path": "spaces-perfect.tex",
+      "sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "groupoids": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 74324,
+            "stdout_sha256_raw": "5C6B9CD5028B9BF673328FB37EE5413612BEE3636D4983E52E61A29E6C48056A"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "groupoids"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 146,
+            "stdout_sha256_raw": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 55791,
+            "stdout_sha256_raw": "73FE7C1D157B7BA5509F3A5E6B976198CFBDBDA4ADCA354EFEB6FADA690F61FF"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 55129,
+            "stdout_sha256_raw": "4EF88021158F439A386D9D290C863B934A5DCF2251BB1432F74E31F9942B3515"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 146,
+            "path": "builds/groupoids.authority.bibtex.txt",
+            "sha256": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+          },
+          "fls": {
+            "bytes": 27850,
+            "path": "builds/groupoids.authority.fls",
+            "sha256": "2ADC37C1348DF860C5066AA72A73C76E9144175057508AF9816C787F3AEAE5AE"
+          },
+          "fls_dependencies": {
+            "bytes": 62714,
+            "path": "builds/groupoids.authority.fls-dependencies.json",
+            "sha256": "3B5A1820216EA5D151E7FCE67C0F7062F76C97C124232D49663AFA0B8F1639D8"
+          },
+          "log": {
+            "bytes": 68315,
+            "path": "builds/groupoids.authority.log",
+            "sha256": "C11112F375864A6C2A1CCB2019D8F399439E112D586C2AED2A91B978F2765E7D"
+          },
+          "pass3_stdout": {
+            "bytes": 54711,
+            "path": "builds/groupoids.authority.pass3.txt",
+            "sha256": "EC52EAB6BACE78B41767D80A1A1422BD261617AE5C312DB39518534F901C4817"
+          },
+          "pdf": {
+            "bytes": 731479,
+            "path": "builds/groupoids.authority.pdf",
+            "sha256": "5EE63331EE97854DCA8123B494C0150A6E06B0B25172BDDB6EBA9AF791EA8246"
+          }
+        },
+        "source": {
+          "bytes": 189166,
+          "path": "groupoids.tex",
+          "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+        }
+      },
+      "spaces-perfect": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 123413,
+            "stdout_sha256_raw": "744A10BFB924180A174EBC09ABA422759B6199024083C5C1485F26D03DEC0B84"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-perfect"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 222,
+            "stdout_sha256_raw": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 84210,
+            "stdout_sha256_raw": "F7E696D385E2A286D20FCEB9DD194638E5E64893972B19894CC482C2D09D0EED"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 83519,
+            "stdout_sha256_raw": "679801D074C05F25F5C70F1848E569AC781020B184E096C8A20A5A65C27FD2CB"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 222,
+            "path": "builds/spaces-perfect.authority.bibtex.txt",
+            "sha256": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+          },
+          "fls": {
+            "bytes": 27834,
+            "path": "builds/spaces-perfect.authority.fls",
+            "sha256": "F893C5A33455DA2F055374776F9C94C7149E644412633BF591FB199BD2B06409"
+          },
+          "fls_dependencies": {
+            "bytes": 62704,
+            "path": "builds/spaces-perfect.authority.fls-dependencies.json",
+            "sha256": "0E2AB15C05DA9AEAD84F4D9D7474D0D12F0C3BE865BCD7D2EB168AD50F160E46"
+          },
+          "log": {
+            "bytes": 95941,
+            "path": "builds/spaces-perfect.authority.log",
+            "sha256": "DFD67C9AF56B3B131F58A5ABAE37CEB7A6314D97C391CDD366E83FA457EF2540"
+          },
+          "pass3_stdout": {
+            "bytes": 83103,
+            "path": "builds/spaces-perfect.authority.pass3.txt",
+            "sha256": "FD6BA85C23673813C72DF86CE57C8F1AA8A20EC41512F5A1BD092DE3BB22894A"
+          },
+          "pdf": {
+            "bytes": 884477,
+            "path": "builds/spaces-perfect.authority.pdf",
+            "sha256": "018CC10F1E299920F7782661D70984CC5986B8C945617247AB5E0F6D6A8D260B"
+          }
+        },
+        "source": {
+          "bytes": 283799,
+          "path": "spaces-perfect.tex",
+          "sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r48",
+  "candidate_inputs": {
+    "groupoids.tex": {
+      "bytes": 189364,
+      "path": "groupoids.tex",
+      "sha256": "8BDE7E962B3C3D3A3094BA9F73536F17452A3204861372496D4EEC23ACF13F2C"
+    },
+    "spaces-perfect.tex": {
+      "bytes": 283812,
+      "path": "spaces-perfect.tex",
+      "sha256": "9A9F4320504EFA95F0FEB76E31CA87EE34B0E2FF5BA975ED690A65611C899037"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "groupoids": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 74324,
+            "stdout_sha256_raw": "CA11E6AA086FC947E3CECD22DC16B56C52503541735F26FECFB043B3D55BB0B1"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "groupoids"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 146,
+            "stdout_sha256_raw": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 55791,
+            "stdout_sha256_raw": "6ED21469DFE6A3FF6E0E725B21E683BECA735BA956AD249D2F8CC7C9EC926B0C"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 55129,
+            "stdout_sha256_raw": "3AB46700517956924438ECA038DAAFC352C8FB5B78E414040DDA00020E3BC546"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 146,
+            "path": "builds/groupoids.bibtex.txt",
+            "sha256": "F14E80C7045120DCE55A0031C05812F3E9133DCAA11435C82719AE9F77EA9872"
+          },
+          "fls": {
+            "bytes": 27850,
+            "path": "builds/groupoids.fls",
+            "sha256": "2ADC37C1348DF860C5066AA72A73C76E9144175057508AF9816C787F3AEAE5AE"
+          },
+          "fls_dependencies": {
+            "bytes": 62714,
+            "path": "builds/groupoids.fls-dependencies.json",
+            "sha256": "A96836F86F509E52ADE77782FFF88D1E1E1D043781B614D66DB33C5DCF866C69"
+          },
+          "log": {
+            "bytes": 68315,
+            "path": "builds/groupoids.log",
+            "sha256": "7529265D0927338652F5265E0F20D9AAB56D708AE4C5A70DF204DFC2408940AF"
+          },
+          "pass3_stdout": {
+            "bytes": 54711,
+            "path": "builds/groupoids.pass3.txt",
+            "sha256": "F3AFE9A7FA1CBCF6ECDD8344972D249C58A5ACC84DF13341766C0046B4660544"
+          },
+          "pdf": {
+            "bytes": 731715,
+            "path": "builds/groupoids.pdf",
+            "sha256": "8364B86EBD7B74CDF8400838C9C1111AD8CD57C217E29191FB76539AC1E7A1C4"
+          }
+        },
+        "source": {
+          "bytes": 189364,
+          "path": "groupoids.tex",
+          "sha256": "8BDE7E962B3C3D3A3094BA9F73536F17452A3204861372496D4EEC23ACF13F2C"
+        }
+      },
+      "spaces-perfect": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 123413,
+            "stdout_sha256_raw": "17609E29777CDCE439E1400FA4BAB3B42D378139D038EE2F9D774CA4EA5B7143"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-perfect"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 222,
+            "stdout_sha256_raw": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 84209,
+            "stdout_sha256_raw": "2A346FFC4D5C6B4F3AD21F8DC89A5A91C7EDC56E394C45BF77A0770EDA8BF005"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 83518,
+            "stdout_sha256_raw": "F00FDBAD210DF0ACE0FFC7F42AA009A4ACEE58E6E0D9E7C85340861C4AEE50FC"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 222,
+            "path": "builds/spaces-perfect.bibtex.txt",
+            "sha256": "1464B4E397A6BBEA1B0D47CDE5C9CF0EA9030C617FB7F9B75B2D2C3B476EA21A"
+          },
+          "fls": {
+            "bytes": 27834,
+            "path": "builds/spaces-perfect.fls",
+            "sha256": "F893C5A33455DA2F055374776F9C94C7149E644412633BF591FB199BD2B06409"
+          },
+          "fls_dependencies": {
+            "bytes": 62704,
+            "path": "builds/spaces-perfect.fls-dependencies.json",
+            "sha256": "ACF13B0D940BEA63E449E274ECCEF22868EE504445F3B3B9756113EAF5B6BC89"
+          },
+          "log": {
+            "bytes": 95941,
+            "path": "builds/spaces-perfect.log",
+            "sha256": "98D045DB40816C935FB88A2E90B271F21BD5617CA3822496BB9F21F3BD90ABC0"
+          },
+          "pass3_stdout": {
+            "bytes": 83102,
+            "path": "builds/spaces-perfect.pass3.txt",
+            "sha256": "4BB437131324B537981866BEC4008A7812852F0513A95CD8A4D4A2C8DE3F9B4F"
+          },
+          "pdf": {
+            "bytes": 883674,
+            "path": "builds/spaces-perfect.pdf",
+            "sha256": "84477331BE747CF2BAD63C77CE247D2E66421075BE452F0798EB8ADF2452B4C7"
+          }
+        },
+        "source": {
+          "bytes": 283812,
+          "path": "spaces-perfect.tex",
+          "sha256": "9A9F4320504EFA95F0FEB76E31CA87EE34B0E2FF5BA975ED690A65611C899037"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-12T16:33:27Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "groupoids.tex": {
+      "bytes": 189166,
+      "path": "groupoids.tex",
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    "spaces-perfect.tex": {
+      "bytes": 283799,
+      "path": "spaces-perfect.tex",
+      "sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1788998400",
+  "started_at_utc": "2026-09-12T16:33:01Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}
