@@ -607,7 +607,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--build-receipt",
         type=Path,
-        default=DEFAULT_BUILD_RECEIPT,
+        default=None,
         metavar="PATH",
         help=(
             "fixed-point build receipt to validate, relative to the repository root "
@@ -624,6 +624,9 @@ def main(argv: list[str] | None = None) -> int:
         ),
     )
     args = parser.parse_args(argv)
+    explicit_build_receipt = args.build_receipt is not None
+    if args.build_receipt is None:
+        args.build_receipt = DEFAULT_BUILD_RECEIPT
 
     try:
         current_composition = json.loads(
@@ -631,6 +634,20 @@ def main(argv: list[str] | None = None) -> int:
         )
     except (OSError, json.JSONDecodeError):
         current_composition = None
+    if isinstance(current_composition, dict) and current_composition.get("schema") == (
+        "unofficial-ai-integrated-stacks-direct-composition/v1"
+    ):
+        from validate_direct_successor_release import validate_direct_release, parse_json, INDEX
+
+        if not explicit_build_receipt:
+            try:
+                direct_index = parse_json((ROOT / INDEX).read_bytes())
+                args.build_receipt = Path(direct_index["references"]["build"]["path"])
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                print("Direct successor release validation: FAIL\n- invalid current build index: " + str(exc), file=sys.stderr)
+                return 1
+
+        return validate_direct_release(ROOT, args.build_receipt, args.pre_publication)
     if isinstance(current_composition, dict) and current_composition.get("schema") == (
         "unofficial-ai-integrated-stacks-composition/v4"
     ):

@@ -18,6 +18,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import uuid
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -458,17 +459,39 @@ def run(
             f"refusing to launch {protected_executable} without owning "
             f"Windows named TeX mutex {TEX_MUTEX_NAME!r}"
         )
-    completed = subprocess.run(
-        command,
-        cwd=source,
-        env=env,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-    )
+    if protected_executable is not None:
+        if __package__:
+            from .tex_process_guard import run_captured
+            from .tex_process_public_receipt import public_capture_receipt, canonical_public_capture_bytes
+        else:
+            from tex_process_guard import run_captured
+            from tex_process_public_receipt import public_capture_receipt, canonical_public_capture_bytes
+        receipt_directory = source / ".tex-process-guard"
+        receipt_directory.mkdir(exist_ok=True)
+        receipt_path = receipt_directory / (uuid.uuid4().hex + ".json")
+        completed = run_captured(command, cwd=source, env=env,
+                                 caller_holds_tex_mutex=bool(tex_mutex is not None and tex_mutex.owned),
+                                 receipt_path=receipt_path)
+        raw_receipt = receipt_path.read_bytes()
+        # The private native receipt remains local. Publish only the explicit
+        # lifecycle projection plus its original raw byte/hash identity.
+        capture = public_capture_receipt(raw_receipt)
+        public_bytes = canonical_public_capture_bytes(capture)
+        raw_text = public_bytes.decode("utf-8")
+        records = getattr(tex_mutex, "process_tree_receipts", None)
+        if records is None:
+            records = []
+            tex_mutex.process_tree_receipts = records
+        records.append({"path": f"tex-process-tree/launch-{len(records) + 1:06d}.json",
+                        "bytes": len(public_bytes),
+                        "sha256": hashlib.sha256(public_bytes).hexdigest().upper(),
+                        "raw_text": raw_text, "receipt": capture})
+    else:
+        completed = subprocess.run(
+            command, cwd=source, env=env, stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT, text=True, encoding="utf-8",
+            errors="replace", check=False,
+        )
     if completed.returncode:
         tail = "\n".join(completed.stdout.splitlines()[-80:])
         raise RuntimeError(
@@ -581,6 +604,7 @@ def require_clean_build_tree(
     stems: tuple[str, ...],
     composition_receipt: Path,
     source_checkpoint_paths: tuple[str, ...] = (),
+    composition_binding: dict[str, object] | None = None,
 ) -> None:
     """Verify only the bounded root inputs that can affect this build."""
     receipt_path = composition_receipt
@@ -594,6 +618,8 @@ def require_clean_build_tree(
 
     critical_paths = {
         "tools/build_fixed_point.py",
+        "tools/tex_process_guard.py",
+        "tools/tex_process_public_receipt.py",
         receipt_relative,
         "preamble.tex",
         "chapters.tex",
@@ -601,6 +627,9 @@ def require_clean_build_tree(
         *(f"{stem}.tex" for stem in stems),
         *source_checkpoint_paths,
     }
+    if composition_binding is not None:
+        require_direct_tools_unchanged(source, composition_binding)
+        critical_paths.update(composition_binding.get("direct_validation_tools", {}))
     root_files = tuple(path for path in source.iterdir() if path.is_file())
     critical_paths.update(
         path.name for path in root_files
@@ -634,6 +663,19 @@ def require_clean_build_tree(
             raise RuntimeError(
                 f"unselected root generated file could contaminate the build: {path.name}"
             )
+
+
+def require_direct_tools_unchanged(source: Path, binding: dict[str, object]) -> None:
+    if binding.get("schema") != "unofficial-ai-integrated-stacks-direct-composition/v1":
+        return
+    if __package__:
+        from .direct_successor_composition import recheck_direct_validation_tools
+    else:
+        from direct_successor_composition import recheck_direct_validation_tools
+    try:
+        recheck_direct_validation_tools(source, binding)
+    except ValueError as exc:
+        raise RuntimeError(str(exc)) from exc
 
 
 def require_ancestor(
@@ -1346,6 +1388,14 @@ def load_source_checkpoint(
     require_single_parent(source, content_commit, "EGA content", base_commit)
     head_commit = git(source, "rev-parse", "HEAD")
     head_tree = git(source, "rev-parse", "HEAD^{tree}")
+    if composition_binding.get("schema") == "unofficial-ai-integrated-stacks-direct-composition/v1":
+        if __package__:
+            from .direct_successor_checkpoint import load_direct_source_checkpoint
+        else:
+            from direct_successor_checkpoint import load_direct_source_checkpoint
+        return load_direct_source_checkpoint(
+            sys.modules[__name__], source, logical_path, checkpoint, composition_binding
+        )
     if commit_parents(source, head_commit) != (content_commit,):
         if __package__:
             from . import verify_ega_checkpoint_successor as successor
@@ -1889,6 +1939,7 @@ def publish_build_receipt(
             source, requested_source_checkpoint
         )
         require_source_revision_unchanged(source, initial_commit, initial_tree)
+        require_direct_tools_unchanged(source, receipt.get("composition", {}))
 
         os.replace(temporary_path, output)
         temporary_path = None
@@ -2446,6 +2497,15 @@ def load_composition_receipt(
     if not isinstance(receipt, dict):
         raise RuntimeError("composition receipt must contain a JSON object")
     composition_schema = receipt.get("schema")
+    if composition_schema == "unofficial-ai-integrated-stacks-direct-composition/v1":
+        if __package__:
+            from .direct_successor_composition import load_direct_composition
+        else:
+            from direct_successor_composition import load_direct_composition
+        try:
+            return load_direct_composition(source, requested_path)
+        except ValueError as exc:
+            raise RuntimeError(str(exc)) from exc
     if (
         composition_schema not in (COMPOSITION_SCHEMA_V3, COMPOSITION_SCHEMA_V4)
         or receipt.get("status") != "PASS"
@@ -4333,7 +4393,7 @@ def main() -> int:
         stems = required_stems
         selection_mode = "composition_receipt"
     require_clean_build_tree(
-        source, stems, args.composition_receipt, source_checkpoint_paths
+        source, stems, args.composition_receipt, source_checkpoint_paths, composition_binding
     )
     reference_labels = external_reference_labels(source)
     missing_affected = [stem for stem in affected_stems if stem not in stems]
@@ -4348,6 +4408,7 @@ def main() -> int:
         parser.error("--max-sweeps must be at least 2")
 
     if args.verify_inputs_only:
+        require_direct_tools_unchanged(source, composition_binding)
         require_source_revision_unchanged(source, initial_source_commit, initial_source_tree)
         if source_checkpoint_binding is not None:
             require_source_checkpoint_unchanged(
@@ -4479,6 +4540,7 @@ def main() -> int:
                 source_checkpoint_protected_inputs,
             )
     tex_mutex_details = tex_mutex.receipt_details()
+    require_direct_tools_unchanged(source, composition_binding)
     require_source_revision_unchanged(
         source, initial_source_commit, initial_source_tree
     )
@@ -4536,6 +4598,16 @@ def main() -> int:
         },
         "artifacts": artifacts,
         "pdfs_committed": False,
+    }
+    guard_identity = committed_file_identity(source, initial_source_commit, "tools/tex_process_guard.py")
+    if guard_identity is None:
+        raise RuntimeError("captured TeX guard must be committed before the build")
+    captures = getattr(tex_mutex, "process_tree_receipts", [])
+    if len(captures) != len(stems) * (2 + fixed_sweep) + 2:
+        raise RuntimeError("captured TeX launch inventory does not match actual build phases")
+    receipt["tex_process_tree"] = {
+        "schema": "unofficial-ai-integrated-stacks-tex-process-tree-build/v1",
+        "guard": guard_identity, "launch_count": len(captures), "launches": captures,
     }
     if source_checkpoint_binding is not None:
         receipt["source_checkpoint"] = source_checkpoint_binding

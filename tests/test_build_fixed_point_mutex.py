@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 import build_fixed_point as builder
 import validate_unified_repository as validator
+import tex_process_guard
 
 
 class FakeKernel32:
@@ -130,17 +131,17 @@ class WindowsNamedMutexTests(unittest.TestCase):
     def test_owned_mutex_spans_simulated_tex_process_and_exception(self):
         kernel32 = FakeKernel32()
         mutex, loader = self.mutex(kernel32)
-        completed = SimpleNamespace(returncode=7, stdout="simulated failure")
-
-        def simulated_subprocess(*args, **kwargs):
+        def simulated_capture(*args, **kwargs):
             self.assertTrue(mutex.owned)
-            return completed
+            self.assertIs(kwargs["caller_holds_tex_mutex"], True)
+            raise RuntimeError("simulated command failed after full captured tree drained")
 
-        with loader, mock.patch.object(
-            builder.subprocess, "run", side_effect=simulated_subprocess
-        ), self.assertRaisesRegex(RuntimeError, "command failed"):
+        with loader, mock.patch.object(Path, "mkdir"), mock.patch.object(
+            tex_process_guard, "run_captured", side_effect=simulated_capture
+        ) as capture, self.assertRaisesRegex(RuntimeError, "command failed"):
             with mutex:
                 builder.run(["pdflatex", "chapter.tex"], ROOT, {}, mutex)
+        capture.assert_called_once()
 
         self.assertFalse(mutex.owned)
         self.assertEqual(kernel32.calls[-2:], [("release", 1234), ("close", 1234)])

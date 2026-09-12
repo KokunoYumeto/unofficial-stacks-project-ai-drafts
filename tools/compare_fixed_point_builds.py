@@ -36,6 +36,7 @@ IDENTICAL_KEYS = (
 )
 
 SOURCE_CHECKPOINT_CONTRACTS = {
+    "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-direct-successor/v1": "PASS_SOURCE_CHECKPOINT_DIRECT_SUCCESSOR",
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint/v1": "PASS_SOURCE_CHECKPOINT",
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-successor/v1": "PASS_SOURCE_CHECKPOINT_SUCCESSOR",
 }
