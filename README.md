@@ -264,6 +264,17 @@ existing coverage, not AI contributions.
 The draft also corrects mathematical typing, indices, references, and prose.
 Examples include:
 
+- **Groupoid modules and abelian varieties:** restoring the order of the two
+  inverse-composition identities, and treating multiplication by zero
+  separately in the proof of the étaleness criterion.
+  [Inverse identities](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1568) ·
+  [Zero-multiplication case](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1564).
+- **Derived categories of algebraic spaces:** correcting the left-exactness
+  statement used in Mayer–Vietoris, the fibre product on which a restriction
+  is taken, and the source or target of several derived functors.
+  [Mayer–Vietoris](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1551) ·
+  [Restriction](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1562) ·
+  [Functor domains](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1554).
 - **Naive cotangent-complex functoriality:** correcting which cotangent
   complex is pulled back and which is the target of the comparison map.
   [Original and replacement](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1214).

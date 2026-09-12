@@ -3,7 +3,21 @@
 Validation is layered so that repository integrity, mathematical-source
 composition, TeX compilation, and visual evidence are not conflated.
 
-## Current combined R47/Illusie and EGA comparison checkpoint
+## R48 cumulative source validation
+
+R48 adds 27 manifest-bound edits to `groupoids.tex` and
+`spaces-perfect.tex`, preserving the earlier cumulative source. Its admission
+is a real successor in the existing public lineage; no synthetic registry
+import or rewritten historical build receipt is used.
+
+The new build profile contains 36 chapters: the preceding 35 and
+`spaces-perfect`. Conservative cross-reference propagation reaches this
+whole bounded profile, so validation requires two clean fixed-point builds.
+The earlier PDFs alone do not supply enough auxiliary-file evidence to prove
+that an unchanged source chapter can reuse its old PDF. Source replay has
+passed; new build, visual and publication results will be recorded separately.
+
+## Preceding combined R47/Illusie and EGA comparison checkpoint
 
 The [EGA I §7.1.15–§7.1.16 comparison](ega/i716.md) binds complete French
 LF259–289 and English LF150–168, including both introductions and the entire
@@ -63,7 +77,7 @@ style, bibliography or PDF input; all 35 retained PDF hashes were verified.
 No new build or visual inspection is asserted for this semantic-only slice.
 Its public readback is recorded separately from validation.
 
-The new profile has 35 chapters. Historical 28- and 30-chapter receipts remain
+That preceding profile has 35 chapters. Historical 28- and 30-chapter receipts remain
 evidence for their own profiles; they do not certify the new one. A successful
 source replay alone is neither a build PASS nor proof of publication.
 

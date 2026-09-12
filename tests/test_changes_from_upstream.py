@@ -28,12 +28,12 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         cls.model, cls.payloads = cls.generator.generated_payloads(ROOT)
 
     def test_complete_errata_registry_coverage(self) -> None:
-        self.assertEqual(self.model.overlay_count, 47)
-        self.assertEqual(self.model.unit_count, 1280)
-        self.assertEqual(self.model.exact_operation_count, 1481)
+        self.assertEqual(self.model.overlay_count, 48)
+        self.assertEqual(self.model.unit_count, 1304)
+        self.assertEqual(self.model.exact_operation_count, 1508)
         self.assertEqual(self.model.reconstructed_operation_count, 68)
-        self.assertEqual(self.model.operation_count, 1549)
-        self.assertEqual(self.model.source_count, 30)
+        self.assertEqual(self.model.operation_count, 1576)
+        self.assertEqual(self.model.source_count, 31)
         self.assertEqual(
             self.model.excluded_overlay_ids,
             ("stacks-verdier-a04446e-1-2-13-r1",),
@@ -49,7 +49,7 @@ class ChangesFromUpstreamTests(unittest.TestCase):
             entry for entry in registry["registered_entries"]
             if entry["id"].startswith("stacks-errata-")
         ]
-        self.assertEqual(len(errata), 47)
+        self.assertEqual(len(errata), 48)
         self.assertEqual(
             set(stable_ids),
             {stable_id for entry in errata for stable_id in entry["stable_ids"]},
@@ -80,6 +80,21 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         self.assertEqual(self.model, second_model)
         self.assertEqual(self.payloads, second_payloads)
 
+    def test_r48_exact_delta_preserves_historical_candidate_status(self) -> None:
+        units = [unit for unit in self.model.units
+                 if unit.overlay_id == "stacks-errata-a04446e-r48"]
+        self.assertEqual({unit.stable_id for unit in units},
+                         {f"MC-STK-ERR-{number}" for number in range(1545, 1569)})
+        self.assertEqual(sum(len(unit.operations) for unit in units), 27)
+        self.assertEqual(sum(len(unit.operations) for unit in units
+                             if unit.source == "groupoids.tex"), 6)
+        self.assertEqual(sum(len(unit.operations) for unit in units
+                             if unit.source == "spaces-perfect.tex"), 21)
+        self.assertTrue(all(unit.status == "accepted_source_proposal_not_admitted"
+                            for unit in units))
+        self.assertTrue(all(operation.fidelity == "manifest-bound exact operation"
+                            for unit in units for operation in unit.operations))
+
     def test_markdown_has_no_invisible_trailing_whitespace(self) -> None:
         markdown = self.payloads[self.generator.MARKDOWN_REL].decode("utf-8")
         offending = [
@@ -105,7 +120,7 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         self.assertIn("Unofficial Stacks Project AI Drafts", page)
         self.assertIn("Registry admission", page)
         self.assertIn("Historical candidate status", page)
-        self.assertEqual(page.count('class="change-card"'), 1280)
+        self.assertEqual(page.count('class="change-card"'), 1304)
         self.assertIn('id="search"', page)
         self.assertIn('id="overlay"', page)
         self.assertIn('id="source"', page)

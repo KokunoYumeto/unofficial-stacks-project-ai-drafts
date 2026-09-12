@@ -1,11 +1,30 @@
 # Integration status
 
-Status date: **2026-09-09**
+Status date: **2026-09-12**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
 This dashboard summarizes the live integrated tree. Detailed evidence remains
 in each corpus dossier and in the machine-readable registry.
+
+## R48: recovered corrections in the cumulative source
+
+The [R48 comparison](CHANGES_FROM_UPSTREAM.md#stacks-errata-a04446e-r48)
+records 24 corrections implemented by 27 exact edits: six in groupoid
+arguments and 21 in derived categories of algebraic spaces. The changes
+include the multiplication-by-zero case of the étaleness criterion, correctly
+typed inverse identities and coefficient rings, and repairs to Mayer–Vietoris,
+derived-functor domains and fibre products. Earlier corrections and draft
+additions are preserved.
+
+The source-only commit is
+`0fee11e74c467744052f62e90a4454f9c20719a3`, directly following the separate
+[registry admission](ai-integrated/registry/admission-receipts/r48.json).
+At this checkpoint source replay passes; cumulative build, visual validation
+and public-source readback are not yet complete. The inherited R47 results
+below remain historical evidence, not validation of the new source.
+
+## Earlier published checkpoints
 
 The current EGA I §7.4.1–§7.4.7 content is public at
 `92950209efd32cce5575ddfdde4335e51ed24d99`; the

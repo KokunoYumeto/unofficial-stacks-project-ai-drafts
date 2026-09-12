@@ -1,6 +1,15 @@
 # Unified-build receipts
 
-## Current combined R47/Illusie evidence
+## R48 source successor
+
+R48 corrects groupoid arguments and derived categories of algebraic spaces in
+the cumulative source at `0fee11e74c467744052f62e90a4454f9c20719a3`.
+Its 27 edits follow the independently admitted candidate without overwriting
+the whole isolated chapter payloads. The 36-chapter build and affected-page
+visual evidence are still being produced; the earlier receipts below do not
+certify this new source.
+
+## Preceding combined R47/Illusie evidence
 
 The combined source and these receipts are public at
 `5817f4c1af8724b147401c785f57ca315b52e31c`. The

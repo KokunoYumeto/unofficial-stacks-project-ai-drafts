@@ -40,6 +40,8 @@ jobs:
         run: |
           python tools/generate_changes_from_upstream.py --check
           python -m unittest tests.test_changes_from_upstream tests.test_semantic_composition tests.test_build_fixed_point_mutex tests.test_compare_fixed_point_builds tests.test_r47_composition tests.test_r47_release_consumer
+          python -m unittest discover -s tools -p 'test_*direct_successor*.py'
+          python -m unittest tests.test_tex_process_guard tests.test_r48_visual_loci tests.test_r48_synctex_instrumentation
 
   ega-checkpoint-tooling:
     runs-on: ubuntu-latest
