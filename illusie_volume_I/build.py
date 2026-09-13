@@ -31,7 +31,7 @@ def diagnostics(log: str) -> dict:
 
 def main() -> None:
     source, _, preimage = composition(ROOT)
-    output = ROOT / "illusie_volume_I/build_i1_3"
+    output = ROOT / "illusie_volume_I/build_i1_4_20260908_final"
     output.mkdir(exist_ok=True)
     dependencies = ("preamble.tex", "stacks-project.cls", "my.bib", "chapters.tex")
     dep_ids = {name: file_id(ROOT / name) for name in dependencies}
@@ -96,8 +96,8 @@ def main() -> None:
     receipt["status"] = "PASS_TARGETED_WITH_UNCHANGED_EXTERNAL_AUX_LIMITATION"
     receipt["new_unresolved_references"] = sorted(new-old)
     receipt["note"] = "The sparse targeted build lacks other-chapter AUX files; baseline and candidate use the same inputs. The new section has no unresolved reference. This is not a full-book build."
-    (ROOT / "illusie_volume_I/build-receipt-i1-3.json").write_text(
-        json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "illusie_volume_I/build-receipt-i1-4-20260908-final.json").write_text(
+        json.dumps(receipt, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"status": receipt["status"],
                       "candidate_pdf": receipt["lanes"]["candidate"]["pdf"],
                       "unchanged_external_labels": len(new)}), flush=True)

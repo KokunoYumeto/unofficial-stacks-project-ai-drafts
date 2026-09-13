@@ -11,7 +11,10 @@ This reading was checked directly on physical PDF p.23, against the authority
 SHA-256 recorded in `README.md`. The corrected French and English witnesses
 also retain `hg`; they do not provide independent support for that carrier.
 The draft uses `hf` and explains the composition in its proof. No source
-witness was changed and no external source-correction report was submitted.
+witness was changed at that historical checkpoint and no external
+source-correction report was submitted. On 2026-09-08, the maintained
+corrected-French and English LaTeX were corrected to `hf`; the diplomatic
+witness remains unchanged. See `erratum-p005.json` for exact old/new hashes.
 
 ## I.1.1.6: a common pullback object
 
@@ -43,8 +46,10 @@ The maintained repository's Tags 012Y, 012Z, 08BI, 0194, 0195, 018Z, 019H,
 Eilenberg-Zilber comparison under cosimplicial-resolution hypotheses, not the
 chain-level shuffle and Alexander--Whitney maps, their natural homotopy, or
 the strict trisimplicial coherence asserted by Illusie. Those items are the
-new local theorem and definition in `relative-homotopy.tex`. The proof keeps
-the source's one-based shuffle convention and front/back face order.
+new local theorem and definition in `relative-homotopy.tex`. The revised proof
+specifies ordinal maps explicitly to avoid indexing ambiguity and preserves
+front/back face order. Both unnormalized composites are homotopic to identity,
+not strictly equal; see `corrections-20260908.md`.
 
 ## I.1.3 source and coverage notes
 

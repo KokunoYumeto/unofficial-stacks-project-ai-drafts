@@ -1,96 +1,70 @@
 # Illusie Volume I: Stacks-style integration
 
-This dossier develops independently written mathematical statements and proofs
-from Luc Illusie, *Complexe cotangent et deformations I*, Lecture Notes in
-Mathematics 239, in the existing unofficial Stacks-derived repository.
-It is not an official Stacks contribution or proof-assistant formalization.
+Independently written statements and proofs from Luc Illusie,
+*Complexe cotangent et deformations I*, Lecture Notes in Mathematics 239,
+integrated into this maintained, unofficial Stacks-derived repository.
+This is written mathematics, not proof-assistant formalization or an official
+Stacks Project contribution.
 
-The scope is the complete substantive mathematical corpus of Volume I.
-Production proceeds by source section. I.1.1-I.1.3 are now mapped in 23
-decisions covering 112 source anchors; the whole volume is not yet mapped or
-integrated.
+The intended scope is all substantive mathematics of Volume I. The current
+inventory covers printed pp.1-16, I.1.1-I.1.4: 197 source anchors, 30 decisions,
+and 48 French/English witness files. Inventory coverage is not mathematical
+completion. The normal/degenerate comparison diagram on p.11 remains explicitly
+pending as `I-1.3-006`; the rest of Volume I remains to be processed.
 
-## Current mathematical work
+## Mathematics
 
-[`relative-homotopy.tex`](relative-homotopy.tex) gives a complete draft proof of
-the relative homotopy construction in I.1.1.6, printed pp.4-6. It constructs
-pointwise strongly cartesian lifts of simplicial objects, transports relative
-homotopies through a fixed lift, and proves that base change descends to the
-homotopy quotient categories. It also separates functoriality over the base
-from the stronger property of preserving cartesian morphisms.
+[`relative-homotopy.tex`](relative-homotopy.tex) develops relative simplicial
+homotopies and strongly cartesian base change, signed multicomplex totals,
+explicit shuffle and Alexander--Whitney maps with natural homotopies, and
+iterated Dold--Kan normalization. The two unnormalized composites are homotopic
+to identity, not generally equal to identity. The homotopies have recursive
+finite simplex-operator formulas and an acyclic-model proof.
 
-Absolute simplicial homotopies and their functoriality are already covered by
-Stacks Tags [019M](https://stacks.math.columbia.edu/tag/019M),
-[08RJ](https://stacks.math.columbia.edu/tag/08RJ), and
-[019Y](https://stacks.math.columbia.edu/tag/019Y). Those results are dependencies,
-not new contributions. The relative construction uses the strongly cartesian
-universal property of [02XK](https://stacks.math.columbia.edu/tag/02XK) and
-fibred categories as in [02XM](https://stacks.math.columbia.edu/tag/02XM).
+[`localization.tex`](localization.tex) proves general categorical localization
+and the essentially constant pro-object derived-functor construction without
+triangulated assumptions. It also proves localized Dold--Kan with the fixed
+nonpositive degree bound, including both calculi of fractions on the bounded
+homotopy category. Neither result assumes enough injectives or projectives.
 
-The addition is composed into [`simplicial.tex`](../simplicial.tex), Section 28
-in the targeted build: Lemmas 28.1-28.2 and Remark 28.3, rendered on pp.48-50.
-The proof received an independent mathematical check, and the affected pages
-were directly inspected after the chapter build reached a fixed point.
-`map.json` records existing coverage separately from the new construction;
-`source-lock.json` binds the 24 source witness files used for I.1.1-I.1.2.
+Both fragments are composed into [`simplicial.tex`](../simplicial.tex).
+[`map.json`](map.json) distinguishes exact existing coverage, new proofs, and
+unresolved comparisons. No permanent Stacks tags are assigned to new labels.
 
-The original and changed chapter were built with identical inputs under one
-machine-wide TeX mutex. Both reached a fixed point in four passes, with no
-fatal errors, missing glyphs, unresolved citations, or final rerun requests.
-The 75-page changed chapter has SHA-256
-`550D8C5A18F9BDB0AFA3224D265AB6F56B84F3E9C2D4E1B6E6BC8332424A6CF9`.
-This sparse targeted build has 67 unchanged unresolved external labels because
-other-chapter AUX files are absent; none occurs in the new section. It is not
-a full-book build. `build-receipt.json` records this limitation explicitly.
+## Corrections and evidence
 
-`verify.py` checks complete source-anchor disposition, exact existing tag/label
-identities, local-label uniqueness, and exact additive root composition. Removing
-the marked addition recovers the original chapter byte-for-byte, so the older
-Volume II receipt remains immutable and replayable. Two negative regression
-checks reject unrelated root edits and a changed proof not reflected in the root.
-Automated checks and AI review do not certify mathematical correctness.
+[`corrections-20260908.md`](corrections-20260908.md) documents corrections to
+earlier versions of this integration and an omitted source-inventory span.
+Historical receipts remain unchanged; successful compilation did not establish
+those earlier mathematical claims.
 
-The I.1.2 targeted candidate build is 77 pages and 889,443 bytes, SHA-256
-`409F12D9076D36E05CB8610B137E7E0EE3FE47E5571DA1AF81CDDC289435065C`.
-Its dedicated receipt is `build-receipt-i1-2.json` and its bounded QA is
-`qa-i1-2.json`; the six rendered review pages passed visual inspection.
+The printed p.5 postcomposition carrier `hg` is corrected to `hf` in the
+maintained corrected-French and English LaTeX. The diplomatic transcription and
+primary PDF remain unchanged. [`erratum-p005.json`](erratum-p005.json) records
+the exact locus, proof, and before/after witness identities.
 
-I.1.2, printed pp.6-8, is now mapped and integrated as the signed
-multisimplicial totalization and explicit Eilenberg-Zilber--Cartier theorem.
-The repository's derived Tag 08QC is recorded as related coverage only; it
-does not supply these chain-level maps or homotopies. The source map records
-the exact gap and the new local labels.
+Primary authority: DOI `10.1007/BFb0059052`, 14,349,904 bytes, SHA-256
+`1855B49FE461B13B1CBAEE1341C8FC3E3E0CDDC034C54ABEC1165AF061B90A56`.
+Printed page N corresponds to physical PDF page N+18 in this authority.
+The maintained edition has its own
+[GitHub lineage](https://github.com/KokunoYumeto/illusie-cotangent-complex-editions).
+The existing `illusie_r1` and `illusie_r2` additions concern Volume II and do
+not count toward Volume I completion.
 
-I.1.3, printed pp.8-11, is now mapped and integrated. Existing Stacks results
-cover the one-variable normal-complex, Dold-Kan, exactness, and homotopy
-pieces; the new local theorem states the iterated n-simplicial normalization,
-canonical independence of normalization order, and compatibility with signed
-totalization. Its source lock contains 33 witness files for I.1.1-I.1.3.
+## Validation and continuation
 
-The bounded canon-keeper rule for this edition is additive and scan-based:
-when a transcription or translation defect is found, compare the witness with
-the primary scan, make the smallest evidenced correction or erratum, and
-record old/new text, locus, evidence and hashes. Mathematical uncertainty is
-kept reversible rather than silently normalized.
+The source verifier checks identities, complete anchor inventory, exact tag
+labels, and composition isolation. It reports pending mathematical decisions
+separately. The regression tests check composition isolation and the free-model
+shuffle/AW identities and homotopies through degree four; the written proofs,
+not finite tests, establish the general assertions.
 
-Next source unit: I.1.4, beginning on printed p.11.
+The targeted chapter build uses a single machine-wide TeX mutex and fixed-point
+passes. This sparse build has 67 unchanged external AUX references outside the
+addition, and is not a full-book build. New strict diagnostics must be zero.
+The current build and visual-inspection receipt records its precise scope.
 
-## Source and repository identities
-
-- Primary authority: Volume I, DOI `10.1007/BFb0059052`, 14,349,904 bytes,
-  SHA-256 `1855B49FE461B13B1CBAEE1341C8FC3E3E0CDDC034C54ABEC1165AF061B90A56`.
-- For the current section, physical PDF pp.19-24 correspond to printed pp.1-6.
-  The authority hash was recomputed and those six pages were directly inspected.
-- Repository baseline: `f73b18165c7162b8386de06cc3c50bd4ced745b6`.
-- Branch: `codex/illusie-volume-i-20260906`.
-- Existing `illusie_r1` and `illusie_r2` dossiers concern Volume II and do not
-  count toward Volume I completion.
-- Independent edition sources are retained in the existing
-  [Illusie edition lineage](https://github.com/KokunoYumeto/illusie-cotangent-complex-editions).
-
-The primary scan and editable witnesses remain unchanged. A printed carrier
-error on p.5 is documented in `source-notes.md`; the new proof uses the typed
-composition. Local source images are evidence only and are not included here.
-
-GitHub records coherent incremental work. Zenodo is used for substantial
-cumulative milestones in the established lineage. Public access is preserved.
+Next: resolve the p.11 normal/degenerate comparison diagram, then continue at
+I.1.5, printed p.17. GitHub preserves coherent increments; the established
+Zenodo lineage receives substantial cumulative milestones. Public access is
+preserved throughout.
