@@ -1,0 +1,72 @@
+{
+  "schema": "mathematics-commons-formula-diagram-inventory/v1",
+  "candidate_id": "stacks-errata-a04446e-r49",
+  "ordered_tex_controls_unchanged": true,
+  "formulas_changed_only_by_three_delimiter_deletions": true,
+  "source_indices_unchanged": true,
+  "diagram_arrow_controls_unchanged": true,
+  "math_units": [
+    {
+      "stable_id": "MC-STK-ERR-1571",
+      "source_lines": [
+        592,
+        594,
+        596
+      ],
+      "class": "unmatched_closing_parenthesis",
+      "operation_ids": [
+        "MC-STK-ERR-1571-OP1",
+        "MC-STK-ERR-1571-OP2",
+        "MC-STK-ERR-1571-OP3"
+      ],
+      "type_check": {
+        "notation": "K_r = sigma_{>= r} Omega^bullet_{X/S}",
+        "truncation_type": "Cochain stupid truncation subcomplex of complexes of p^{-1} O_S-modules on X, zero in degrees below r; not canonical truncation.",
+        "coefficient_ring": "H^0(S, O_S)",
+        "terms": [
+          {
+            "pinned_line": 592,
+            "current_line": 604,
+            "after": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S})",
+            "type": "Degree-n hypercohomology of K_i; an H^0(S,O_S)-module."
+          },
+          {
+            "pinned_line": 594,
+            "current_line": 606,
+            "after": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S})",
+            "type": "Degree-m hypercohomology of K_j; an H^0(S,O_S)-module."
+          },
+          {
+            "pinned_line": 596,
+            "current_line": 608,
+            "after": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})",
+            "type": "Degree-(n+m) hypercohomology of K_{i+j}; an H^0(S,O_S)-module."
+          }
+        ],
+        "upper_arrow": "H^n(X,K_i) x H^m(X,K_j) -> H^{n+m}(X,K_{i+j}); bilinear cup product induced by the displayed wedge map Tot(K_i tensor_{p^{-1}O_S} K_j) -> K_{i+j}.",
+        "downward_arrows": "Maps on hypercohomology induced by the inclusions K_r -> Omega^bullet_{X/S}.",
+        "lower_arrow": "The existing de Rham cup product.",
+        "invariants_preserved": [
+          "complexes",
+          "cohomological degrees n, m, n+m",
+          "truncation bounds i, j, i+j",
+          "variables X and S",
+          "coefficient ring",
+          "times symbol",
+          "all arrow commands and their endpoints",
+          "filtration inclusion F^i H^n cup F^j H^m subset F^{i+j} H^{n+m}",
+          "hypotheses",
+          "all labels and reference identifiers"
+        ],
+        "verdict": "Each deletion removes one unmatched printed delimiter and changes no mathematical type, assertion, or map."
+      }
+    }
+  ],
+  "prose_unit_ids": [
+    "MC-STK-ERR-1569",
+    "MC-STK-ERR-1570",
+    "MC-STK-ERR-1572",
+    "MC-STK-ERR-1573"
+  ],
+  "raw_delimiter_counts_are_not_a_tex_balance_proof": true
+}

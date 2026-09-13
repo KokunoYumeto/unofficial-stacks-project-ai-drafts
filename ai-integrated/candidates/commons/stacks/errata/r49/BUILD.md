@@ -1,0 +1,3 @@
+# R49 de Rham validation build
+
+Run run-builds-with-mutex.ps1 under PowerShell 7 with the exact pinned upstream root, two new work roots immediately under the resolved temporary directory, two distinct private evidence roots, and a new guard-log root. The wrapper holds Global\InterlanguageTeXSlotV1 throughout both candidate/authority builds, recorder comparison and immediate log validation. No foreign process may be killed. Then derive correction-sensitive pages from SyncTeX, render with Poppler and inspect every page. Exact source replay, independent evidence review, immutable candidate commit and fresh-checkout verification precede separate registry admission. This standalone validation PDF is not a cumulative edition.

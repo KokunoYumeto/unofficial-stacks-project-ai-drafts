@@ -1,0 +1,243 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "derham.tex": {
+      "bytes": 230539,
+      "path": "derham.tex",
+      "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "derham": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "derham.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 94517,
+            "stdout_sha256_raw": "C7229A3D252AA7E2915CD37BDBADB93BECBFCBBF9E07CF6AB8AEACEBF2E0EBBC"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "derham"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 143,
+            "stdout_sha256_raw": "55B7CE0257325E0C01E46CA15EFD5AA5B9FE34CF8C08D4F59B62CFD34020BB6F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "derham.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 68117,
+            "stdout_sha256_raw": "8DA6A9681575D0C99D5984D5102F54166E123B84E3E6DF9599DDD5767E961ACC"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "derham.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 67595,
+            "stdout_sha256_raw": "D95DF709CA588804FFA09C49135FC5D2FC27C0BE9C8BD5CD8B604FBC64FFC79A"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 143,
+            "path": "builds/derham.authority.bibtex.txt",
+            "sha256": "55B7CE0257325E0C01E46CA15EFD5AA5B9FE34CF8C08D4F59B62CFD34020BB6F"
+          },
+          "fls": {
+            "bytes": 28212,
+            "path": "builds/derham.authority.fls",
+            "sha256": "8DFA4AF39ADF1C04BE2E0262F0A8B463FB92C2319FE444E2A775BA54F3EF1250"
+          },
+          "fls_dependencies": {
+            "bytes": 63441,
+            "path": "builds/derham.authority.fls-dependencies.json",
+            "sha256": "EF45693E330AFF9E2062EFDA257BC002DE2FBF4F14BB65218434496AC20BC058"
+          },
+          "log": {
+            "bytes": 80378,
+            "path": "builds/derham.authority.log",
+            "sha256": "C9CA5201FE4BCB744925B7377712D83C944A2DBD2884C363A66E9F634C3A07C3"
+          },
+          "pass3_stdout": {
+            "bytes": 67173,
+            "path": "builds/derham.authority.pass3.txt",
+            "sha256": "D93B20AFF7C267B88D3DE21AD1C4B973AF4C12FC97B0ABE0399C824E0ACAE055"
+          },
+          "pdf": {
+            "bytes": 843504,
+            "path": "builds/derham.authority.pdf",
+            "sha256": "C8756EE3AB85C9B40B0AAE34DD07774A312D9C99ED39BB107B0DB263F8E1616C"
+          }
+        },
+        "source": {
+          "bytes": 230539,
+          "path": "derham.tex",
+          "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r49",
+  "candidate_inputs": {
+    "derham.tex": {
+      "bytes": 230541,
+      "path": "derham.tex",
+      "sha256": "852B0FCC7F277D304C771F2E46A0A2EB54D6FEEBDB678A9B6CDEC3DA776C29C9"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "derham": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "derham.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 94517,
+            "stdout_sha256_raw": "E15F7F20A392ADED73D3B52218C581C5155CE84D4E01CF276FAE093138EF3666"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "derham"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 143,
+            "stdout_sha256_raw": "55B7CE0257325E0C01E46CA15EFD5AA5B9FE34CF8C08D4F59B62CFD34020BB6F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "derham.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 68117,
+            "stdout_sha256_raw": "03D72B51CAC54FFDA528E6CB736E0D334826F646F7402DC94AEC51E8CDEBB834"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "derham.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 67595,
+            "stdout_sha256_raw": "E4195CB8F9527886279E230BA0451FED61CAC86CA6003EF0C70B703D59EE04B2"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 143,
+            "path": "builds/derham.bibtex.txt",
+            "sha256": "55B7CE0257325E0C01E46CA15EFD5AA5B9FE34CF8C08D4F59B62CFD34020BB6F"
+          },
+          "fls": {
+            "bytes": 28212,
+            "path": "builds/derham.fls",
+            "sha256": "8DFA4AF39ADF1C04BE2E0262F0A8B463FB92C2319FE444E2A775BA54F3EF1250"
+          },
+          "fls_dependencies": {
+            "bytes": 63441,
+            "path": "builds/derham.fls-dependencies.json",
+            "sha256": "BC27C08FE3E65891F31371D722E08BB915C9CB1F55815991AA54674B143F8DCD"
+          },
+          "log": {
+            "bytes": 80378,
+            "path": "builds/derham.log",
+            "sha256": "C586A8ACFFAB10B447A9B9C1610A7BC996F47E8C2FA12C36310F29F32A3127C0"
+          },
+          "pass3_stdout": {
+            "bytes": 67173,
+            "path": "builds/derham.pass3.txt",
+            "sha256": "B131116406E2448D9A930DB1357A622EF3A4D688DE83A3B9617A10C1B42C045F"
+          },
+          "pdf": {
+            "bytes": 843489,
+            "path": "builds/derham.pdf",
+            "sha256": "9AF52297946B9BF16231BE5F75D0D1F76B43829D0C8BCF5C9AD801219924B11E"
+          }
+        },
+        "source": {
+          "bytes": 230541,
+          "path": "derham.tex",
+          "sha256": "852B0FCC7F277D304C771F2E46A0A2EB54D6FEEBDB678A9B6CDEC3DA776C29C9"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-13T20:27:16Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "derham.tex": {
+      "bytes": 230539,
+      "path": "derham.tex",
+      "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1789257600",
+  "started_at_utc": "2026-09-13T20:27:01Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}

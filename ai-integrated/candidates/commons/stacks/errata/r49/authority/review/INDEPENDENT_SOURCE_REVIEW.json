@@ -1,0 +1,321 @@
+{
+  "schema": "p07-independent-source-review/v1",
+  "date": "2026-09-13",
+  "reviewer": "/root/p07_derham_source_review",
+  "scope": [
+    "P07-ERR-0001",
+    "P07-ERR-0002",
+    "P07-ERR-0003",
+    "P07-ERR-0004",
+    "P07-ERR-0005",
+    "P07-ERR-0006"
+  ],
+  "status": "SOURCE_REVIEW_COMPLETE_EVIDENCE_ONLY",
+  "admission": false,
+  "implementation": false,
+  "source_writes": 0,
+  "registry_writes": 0,
+  "new_canonical_ids": 0,
+  "tex_builds": 0,
+  "publication_actions": 0,
+  "input_reports": [
+    {
+      "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/P07_DERHAM_FIRST6_CURRENT_RECONCILIATION_20260913.json",
+      "bytes": 126600,
+      "sha256": "A89865A61B7C90731AA007167B6D87DA05276B2D9654CFF0DDA658715436134A"
+    },
+    {
+      "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/P07_DERHAM_FIRST6_PARENT_REPLAY_20260913.json",
+      "bytes": 11056,
+      "sha256": "E2A08008E474630869C922B209F493F7FF868C96CAF15B569A2DE797BD5E3384"
+    }
+  ],
+  "source_identities": [
+    {
+      "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+      "bytes": 230539,
+      "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+    },
+    {
+      "path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/derham.tex",
+      "bytes": 237942,
+      "sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3"
+    }
+  ],
+  "source_context_equality": [
+    {
+      "pinned_lines": [
+        453,
+        606
+      ],
+      "current_lines": [
+        465,
+        618
+      ],
+      "line_text_identical": true
+    },
+    {
+      "pinned_lines": [
+        621,
+        732
+      ],
+      "current_lines": [
+        633,
+        744
+      ],
+      "line_text_identical": true
+    }
+  ],
+  "decisions": [
+    {
+      "producer_id": "P07-ERR-0001",
+      "verdict": "SUPPORTED_GRAMMAR_REPAIR",
+      "operation_indices": [
+        1
+      ],
+      "evidence": [
+        "pinned-derham-existence-conjugate-filtration",
+        "current-derham-existence-conjugate-filtration",
+        "pinned-cartan-eilenberg-statement",
+        "pinned-derham-complex"
+      ],
+      "reason": "The singular noun phrase 'a Cartan-Eilenberg resolution' requires the finite verb 'exists'. The cited lemma itself asserts existence of such a resolution for a bounded below complex in an abelian category with enough injectives; the de Rham complex starts in degree zero. Adding s preserves that assertion and its citation.",
+      "rejected_alternatives": [
+        "Pluralizing 'resolution' is unnecessary and less faithful to the existing singular assertion."
+      ]
+    },
+    {
+      "producer_id": "P07-ERR-0002",
+      "verdict": "SUPPORTED_GRAMMAR_REPAIR",
+      "operation_indices": [
+        2
+      ],
+      "evidence": [
+        "pinned-derham-existence-conjugate-filtration",
+        "current-derham-existence-conjugate-filtration"
+      ],
+      "reason": "The article a cannot govern the plural noun sheaves across the line break. Removing a preserves the printed plural and the preceding indexed family of cohomology sheaves.",
+      "rejected_alternatives": [
+        "Changing 'sheaves' to singular 'sheaf' is a larger interpretive choice unsupported by this batch."
+      ],
+      "limitation": "No particular Cartier isomorphism, formula for the sheaves, or exact supporting reference is established here."
+    },
+    {
+      "producer_id": "P07-ERR-0003",
+      "verdict": "CONFIRMED_REFERENCE_PLACEHOLDER_NO_SUPPORTED_REPLACEMENT",
+      "operation_indices": [],
+      "evidence": [
+        "pinned-derham-existence-conjugate-filtration",
+        "current-derham-existence-conjugate-filtration"
+      ],
+      "reason": "The source literally prints '(insert future reference here)' after the smooth characteristic-p computability and usefulness claims. This is an unresolved editorial instruction, not an actual citation.",
+      "replacement": null,
+      "batch_action": "LEAVE_SOURCE_OCCURRENCE_UNCHANGED_AND_EXCLUDE_FROM_SEVEN_OPERATIONS",
+      "rejected_alternatives": [
+        "Removing the placeholder would conceal the unresolved reference.",
+        "Supplying an unconsulted or unpinpointed reference is unsupported."
+      ],
+      "next_action_outside_this_batch": "A separate bounded source-based investigation would need an exact reference whose hypotheses and conclusion support the assertion. No human review prerequisite is introduced."
+    },
+    {
+      "producer_id": "P07-ERR-0004",
+      "verdict": "SUPPORTED_THREE_DELIMITER_REPAIRS",
+      "operation_indices": [
+        3,
+        4,
+        5
+      ],
+      "evidence": [
+        "pinned-derham-existence-conjugate-filtration",
+        "current-derham-existence-conjugate-filtration",
+        "pinned-cochain-truncation",
+        "pinned-derham-cohomology",
+        "pinned-derham-wedge"
+      ],
+      "reason": "Each upper-row term has exactly one literal opening parenthesis and two closing parentheses; the sigma subscript is delimited by braces. Deleting the second closing parenthesis is sufficient and leaves all mathematical tokens and diagram arrows intact.",
+      "adverse_evidence": "The original producer explanation about an inner sigma argument opening another parenthesis is false as a literal delimiter analysis. The five-fix reconciliation already corrects this rationale; this independent review confirms the correction from the source itself.",
+      "rejected_alternatives": [
+        "Do not add an opening parenthesis to manufacture another grouping.",
+        "Do not replace sigma by canonical truncation tau, alter n/m/i/j, or replace the direct product by a tensor product."
+      ]
+    },
+    {
+      "producer_id": "P07-ERR-0005",
+      "verdict": "SUPPORTED_GRAMMAR_REPAIR",
+      "operation_indices": [
+        6
+      ],
+      "evidence": [
+        "pinned-derham-kunneth",
+        "current-derham-kunneth",
+        "pinned-smooth-differentials",
+        "pinned-derham-complex",
+        "pinned-kunneth-special-statement"
+      ],
+      "reason": "Locally bounded is a predicative adjective phrase for the already specified complex. Deleting the article completes the sentence without adding mathematical content.",
+      "contextual_inference": "Smoothness makes Omega^1 finite locally free, and exterior powers vanish above its finite rank on a suitable neighborhood. This supplies local boundedness; quasi-compactness supplies a global finite bound for the cited Kunneth statement. The de Rham complex on Y is bounded below by degree zero.",
+      "rejected_alternatives": [
+        "Adding 'complex' after 'bounded' is grammatical but unnecessary.",
+        "Changing locally bounded to a different boundedness assertion would enlarge this repair."
+      ]
+    },
+    {
+      "producer_id": "P07-ERR-0006",
+      "verdict": "SUPPORTED_GRAMMAR_REPAIR",
+      "operation_indices": [
+        7
+      ],
+      "evidence": [
+        "pinned-derham-kunneth",
+        "current-derham-kunneth",
+        "pinned-kunneth-special-statement"
+      ],
+      "reason": "The sentence 'Thus the result by Lemma ... and ...' lacks a finite verb. Inserting follows before the existing by states the already intended inference and preserves both references.",
+      "rejected_alternatives": [
+        "The producer's 'follows from' is grammatical, but replacing by is unnecessary."
+      ]
+    }
+  ],
+  "mathematical_type_check": {
+    "notation": "K_r = sigma_{>= r} Omega^bullet_{X/S}",
+    "truncation_type": "Cochain stupid truncation subcomplex of complexes of p^{-1} O_S-modules on X, zero in degrees below r; not canonical truncation.",
+    "coefficient_ring": "H^0(S, O_S)",
+    "terms": [
+      {
+        "pinned_line": 592,
+        "current_line": 604,
+        "after": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S})",
+        "type": "Degree-n hypercohomology of K_i; an H^0(S,O_S)-module."
+      },
+      {
+        "pinned_line": 594,
+        "current_line": 606,
+        "after": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S})",
+        "type": "Degree-m hypercohomology of K_j; an H^0(S,O_S)-module."
+      },
+      {
+        "pinned_line": 596,
+        "current_line": 608,
+        "after": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})",
+        "type": "Degree-(n+m) hypercohomology of K_{i+j}; an H^0(S,O_S)-module."
+      }
+    ],
+    "upper_arrow": "H^n(X,K_i) x H^m(X,K_j) -> H^{n+m}(X,K_{i+j}); bilinear cup product induced by the displayed wedge map Tot(K_i tensor_{p^{-1}O_S} K_j) -> K_{i+j}.",
+    "downward_arrows": "Maps on hypercohomology induced by the inclusions K_r -> Omega^bullet_{X/S}.",
+    "lower_arrow": "The existing de Rham cup product.",
+    "invariants_preserved": [
+      "complexes",
+      "cohomological degrees n, m, n+m",
+      "truncation bounds i, j, i+j",
+      "variables X and S",
+      "coefficient ring",
+      "times symbol",
+      "all arrow commands and their endpoints",
+      "filtration inclusion F^i H^n cup F^j H^m subset F^{i+j} H^{n+m}",
+      "hypotheses",
+      "all labels and reference identifiers"
+    ],
+    "verdict": "Each deletion removes one unmatched printed delimiter and changes no mathematical type, assertion, or map."
+  },
+  "confidence": {
+    "label": "high",
+    "reason": "All six source defects and the seven proposed local repairs are directly visible in the exact complete contexts; the three formulas are independently typed from the source definitions and wedge map.",
+    "calibrated_probability": false
+  },
+  "counts": {
+    "supported_finding_units": 5,
+    "supported_text_operations": 7,
+    "unresolved_reference_units": 1
+  },
+  "caveats": [
+    "This review does not independently certify registry deduplication, registrar admission, past publication, or current implementation.",
+    "Root owns byte replay and any later registry transaction; this record supplies semantic/editorial evidence only.",
+    "No source or registry was edited and no TeX engine was launched.",
+    "A full audit of every cited proof is outside this bounded scope.",
+    "Evidence was consulted for this review on 2026-09-13; no claim of earlier producer consultation is made."
+  ],
+  "next_action": "Root may use this completed independent evidence together with its own byte replay and registry checks. P07-ERR-0003 stays outside the seven-operation batch.",
+  "proposed_text_operations": [
+    {
+      "operation_index": 1,
+      "producer_id": "P07-ERR-0001",
+      "pinned_line": 459,
+      "current_line": 471,
+      "line_before": "there exist a Cartan-Eilenberg resolution for $\\Omega^\\bullet_{X/S}$.",
+      "line_after": "there exists a Cartan-Eilenberg resolution for $\\Omega^\\bullet_{X/S}$.",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review."
+    },
+    {
+      "operation_index": 2,
+      "producer_id": "P07-ERR-0002",
+      "pinned_line": 540,
+      "current_line": 552,
+      "line_before": "then the sheaves $\\mathcal{H}^q$ are computable (in terms of a certain",
+      "line_after": "then the sheaves $\\mathcal{H}^q$ are computable (in terms of certain",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review."
+    },
+    {
+      "operation_index": 3,
+      "producer_id": "P07-ERR-0004",
+      "pinned_line": 592,
+      "current_line": 604,
+      "line_before": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S}))",
+      "line_after": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S})",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review.",
+      "parenthesis_counts": {
+        "before_open": 1,
+        "before_close": 2,
+        "after_open": 1,
+        "after_close": 1
+      }
+    },
+    {
+      "operation_index": 4,
+      "producer_id": "P07-ERR-0004",
+      "pinned_line": 594,
+      "current_line": 606,
+      "line_before": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S}))",
+      "line_after": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S})",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review.",
+      "parenthesis_counts": {
+        "before_open": 1,
+        "before_close": 2,
+        "after_open": 1,
+        "after_close": 1
+      }
+    },
+    {
+      "operation_index": 5,
+      "producer_id": "P07-ERR-0004",
+      "pinned_line": 596,
+      "current_line": 608,
+      "line_before": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})) \\ar[d] \\\\",
+      "line_after": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S}) \\ar[d] \\\\",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review.",
+      "parenthesis_counts": {
+        "before_open": 1,
+        "before_close": 2,
+        "after_open": 1,
+        "after_close": 1
+      }
+    },
+    {
+      "operation_index": 6,
+      "producer_id": "P07-ERR-0005",
+      "pinned_line": 729,
+      "current_line": 741,
+      "line_before": "Also, observe that $\\Omega^\\bullet_{X/S}$ is a locally bounded. Thus",
+      "line_after": "Also, observe that $\\Omega^\\bullet_{X/S}$ is locally bounded. Thus",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review."
+    },
+    {
+      "operation_index": 7,
+      "producer_id": "P07-ERR-0006",
+      "pinned_line": 730,
+      "current_line": 742,
+      "line_before": "the result by Lemma \\ref{lemma-de-rham-complex-product} and",
+      "line_after": "the result follows by Lemma \\ref{lemma-de-rham-complex-product} and",
+      "scope": "Only the shown bound line; byte offsets and replay are not reissued by this review."
+    }
+  ]
+}
