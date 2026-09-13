@@ -1,0 +1,337 @@
+{
+  "schema": "stacks-ai-independent-mathematical-review-public/v1",
+  "status": "PASS_BOUNDED_MATHEMATICAL_REVIEW",
+  "date": "2026-09-13",
+  "public_record_is_sanitized_projection": true,
+  "original_private_receipt": {
+    "bytes": 18074,
+    "sha256": "078DE54FE4D72CE6D84B27FA35D6E2DEC34126D99CA5F517016F9754D0DAC32C"
+  },
+  "candidate_commit": "4c3647f926f32a0edade647ebb52adce05d24a8e",
+  "candidate_tree": "11b2ce25b326f2c90a91e10623003e0f89eb627b",
+  "reviewed_source": {
+    "path": "illusie_volume_I/localization.tex",
+    "bytes": 8463,
+    "sha256": "8A9D6F4C7F309941E9D2AAF2D5B51514BE3AC449F4993407B9B35A84AF5A6ADC",
+    "git_blob": "06681a846af6d35254f5ccb058af01db04cbfd95",
+    "lines": 160
+  },
+  "scope": {
+    "reviewed_file": {
+      "path": "illusie_volume_I/localization.tex",
+      "bytes": 8463,
+      "sha256": "8A9D6F4C7F309941E9D2AAF2D5B51514BE3AC449F4993407B9B35A84AF5A6ADC",
+      "git_blob": "06681a846af6d35254f5ccb058af01db04cbfd95",
+      "lines": 160
+    },
+    "reviewed_source_lines": [
+      1,
+      160
+    ],
+    "reviewed_local_labels": [
+      "lemma-illusie-I-localization-derived",
+      "lemma-illusie-I-localized-dold-kan"
+    ],
+    "excluded": [
+      "Eilenberg-Zilber and normalization additions in relative-homotopy.tex",
+      "Whole candidate composition and current-main rebind",
+      "Build or visual QA",
+      "Admission or publication",
+      "The pending source-map normal/degenerate comparison I-1.3-006"
+    ]
+  },
+  "authority": {
+    "doi": "10.1007/BFb0059052",
+    "bytes": 14349904,
+    "sha256": "1855B49FE461B13B1CBAEE1341C8FC3E3E0CDDC034C54ABEC1165AF061B90A56",
+    "printed_pages": [
+      14,
+      15,
+      16
+    ],
+    "consultation_method": "Read the existing primary PDF text layer using pdftotext to stdout; no new render or PDF edit. Its prose corroborates the generality and source proposition. Some OCR formulas are malformed; exact formula/proof judgments below use the locked diplomatic LaTeX and direct mathematical derivation, not an assertion of fresh scan-image inspection."
+  },
+  "mapping_review": {
+    "source_map_path": "illusie_volume_I/map.json",
+    "decisions_bound_to_reviewed_additions": [
+      "I-1.4-001",
+      "I-1.4-004",
+      "I-1.4-006",
+      "I-1.4-005"
+    ],
+    "source_correspondence": [
+      {
+        "source": "I.1.4.1, printed p.11",
+        "candidate_lines": [
+          17,
+          20
+        ],
+        "judgment": "Matches arbitrary-category localization by an explicitly imposed smallness/universe convention."
+      },
+      {
+        "source": "I.1.4.4, printed p.14",
+        "candidate_lines": [
+          22,
+          34
+        ],
+        "judgment": "Matches right fractions, arbitrary F, essentially constant pro-object LF, and counit LF Q -> F with the stated universal direction; the left-fraction ind-object assertion is its dual."
+      },
+      {
+        "source": "I.1.4.5-I.1.4.6, printed pp.14-15",
+        "candidate_lines": [
+          91,
+          105
+        ],
+        "judgment": "Matches quasi-isomorphism localization and the Dold-Kan comparison. The fixed nonpositive essential image is stated explicitly, not confused with D-minus."
+      },
+      {
+        "source": "I.1.4.7, printed p.16",
+        "candidate_lines": [
+          137,
+          159
+        ],
+        "judgment": "Uses canonical kernel truncation, as in the source, to transport the fraction argument at a fixed degree bound."
+      }
+    ],
+    "coverage_limit": "The separate existing-coverage assertions I-1.4-002 and I-1.4-003 were not comprehensively re-adjudicated; only their dependencies needed by these two proofs were checked."
+  },
+  "dependency_passages_read": [
+    {
+      "file": "categories.tex",
+      "lines": [
+        4056,
+        4103
+      ],
+      "labels": [
+        "definition-multiplicative-system"
+      ],
+      "use": "Right Ore RMS2 and right cancellation RMS3, with the correct source/target orientation."
+    },
+    {
+      "file": "categories.tex",
+      "lines": [
+        4732,
+        4841
+      ],
+      "labels": [
+        "lemma-right-localization",
+        "lemma-equality-morphisms-right-localization",
+        "remark-right-localization-morphisms-colimit"
+      ],
+      "use": "Right roofs, equality after refinement, and S/X with arbitrary commuting arrows."
+    },
+    {
+      "file": "derived.tex",
+      "lines": [
+        3726,
+        3757
+      ],
+      "labels": [
+        "lemma-acyclic",
+        "definition-unbounded-derived-category"
+      ],
+      "use": "Quasi-isomorphisms form a bilateral multiplicative system in the ambient homotopy category; D(A) is its localization."
+    },
+    {
+      "file": "simplicial.tex",
+      "lines": [
+        4009,
+        4017
+      ],
+      "labels": [
+        "lemma-quasi-isomorphism"
+      ],
+      "use": "Natural N(V) -> s(V) is a quasi-isomorphism."
+    },
+    {
+      "file": "simplicial.tex",
+      "lines": [
+        4126,
+        4137
+      ],
+      "labels": [
+        "theorem-dold-kan"
+      ],
+      "use": "Maintained one-variable Dold-Kan theorem as dependency only; no review of the candidate's iterated-normalization theorem."
+    },
+    {
+      "file": "simplicial.tex",
+      "lines": [
+        5507,
+        5514
+      ],
+      "labels": [
+        "lemma-homotopy-s-N"
+      ],
+      "use": "Simplicial homotopies give normalized chain homotopies."
+    },
+    {
+      "file": "simplicial.tex",
+      "lines": [
+        5980,
+        5993
+      ],
+      "labels": [
+        "lemma-backwards-homotopy"
+      ],
+      "use": "Normalized chain homotopies lift to simplicial homotopies."
+    }
+  ],
+  "checks": [
+    {
+      "id": "I14-LOC-01",
+      "judgment": "VALID",
+      "candidate_lines": [
+        8,
+        20
+      ],
+      "topic": "Size and universal localization",
+      "reason": "For a small category, finite paths in the graph enlarged by inverse edges form a set. The generated congruence imposes precisely identities, old compositions, and inverse equations. A functor inverting S has a forced extension; naturality across s implies naturality across s-inverse. No Ore assumptions are needed for this first assertion."
+    },
+    {
+      "id": "I14-LOC-02",
+      "judgment": "VALID",
+      "candidate_lines": [
+        47,
+        50
+      ],
+      "topic": "Cofilteredness of S/X",
+      "reason": "The identity is an object. Given s1:X1->X and s2:X2->X in S, RMS2 gives a common predecessor whose composite denominator is in S by closure. Given a,b:X1->X2 over X, s2 a=s2 b; RMS3 provides t in S with a t=b t, and s1 t is again a denominator. Arbitrary commuting arrows, not only arrows in S, are correctly permitted."
+    },
+    {
+      "id": "I14-LOC-03",
+      "judgment": "VALID",
+      "candidate_lines": [
+        51,
+        66
+      ],
+      "topic": "Initial roof category and orientation",
+      "reason": "For h:X'->X'' in S/X with s''h=s', Q(h)Q(s')^-1=Q(s'')^-1, so the displayed assignment is covariant. Objects of (I_X -> J_X) over (Y,a) are roofs with numerator b and Q(b)Q(s)^-1=a. Existence is right fractions. Use Ore to place two roofs over one denominator, then 04VJ to equalize numerators after further S-refinement. This yields a common predecessor in the comma category, hence connectedness and initiality."
+    },
+    {
+      "id": "I14-LOC-04",
+      "judgment": "VALID",
+      "candidate_lines": [
+        68,
+        75
+      ],
+      "topic": "Essentially constant pro-object gives the required limit",
+      "reason": "For the constant embedding c, Hom_Pro(cB,(F(X')))=lim_{I_X} Hom_B(B,F(X')). A chosen pro-isomorphism cL_X ~= (F(X')) therefore represents this cone functor. This proves existence of the actual limit without assuming arbitrary limits in B or using a reversed pro-Hom formula."
+    },
+    {
+      "id": "I14-LOC-05",
+      "judgment": "VALID",
+      "candidate_lines": [
+        75,
+        85
+      ],
+      "topic": "Derived-functor variance and universal map",
+      "reason": "An arrow r:QX->QY sends (Z,a:QY->QZ) in J_Y to (Z,a r) in J_X. Restricting the universal J_X-cone produces a map L_X->L_Y, so LF is covariant. Evaluation at (X,id) gives u_X:L_X->F(X). For eta:GQ->F, components eta_Y G(a) are a J_X-cone; universal factorization gives G(QX)->L_X. Naturality and uniqueness establish Nat(G,LF) ~= Nat(GQ,F), with the stated counit direction."
+    },
+    {
+      "id": "I14-LOC-06",
+      "judgment": "VALID",
+      "candidate_lines": [
+        32,
+        34,
+        85,
+        86
+      ],
+      "topic": "Dual assertion and hypotheses",
+      "reason": "Taking opposite categories interchanges right/left multiplicative systems, pro/ind objects and limit/colimit constructions. It reverses the counit to F->RF Q. The proof uses only category-theoretic assumptions plus the size convention and essential constancy; no additive, exact, triangulated, injective, or projective hypothesis is silently introduced."
+    },
+    {
+      "id": "I14-DK-01",
+      "judgment": "VALID",
+      "candidate_lines": [
+        91,
+        114
+      ],
+      "topic": "Quasi-isomorphism classes and localized equivalence",
+      "reason": "The natural quasi-isomorphism N(X)->s(X) and the commuting naturality square show W_s is exactly detected by N. The existing one-variable Dold-Kan equivalence carries W and W_s both ways; its natural unit and counit descend through localization. Reindexing C^i=C_{-i} converts nonnegative chains to complexes zero in positive cochain degree."
+    },
+    {
+      "id": "I14-DK-02",
+      "judgment": "VALID",
+      "candidate_lines": [
+        117,
+        126
+      ],
+      "topic": "Cylinder, degree bound, and contraction signs",
+      "reason": "For d_E(a,b)=(da+b,-db), d_E^2=0. With t(a,b)=(0,a), d_E t(a,b)=(a,-da) and t d_E(a,b)=(0,da+b), so d_E t+t d_E=id. j(a)=(a,0) is a chain map. E^n=0 for n>0 when C is nonpositive, although E may extend one degree farther downward, which is allowed. Thus the cylinder stays within the fixed nonpositive bound and p:C+E->C is a homotopy equivalence."
+    },
+    {
+      "id": "I14-DK-03",
+      "judgment": "VALID",
+      "candidate_lines": [
+        127,
+        135
+      ],
+      "topic": "Homotopy extension signs and quotient factorization",
+      "reason": "Put k=f-g=dh+hd and phi(a,b)=k(a)+h(b). Then d_D phi=k da+d_D h b, while phi d_E=k da+k b-h db=k da+d_D h b. Thus phi is a chain map. Combined with g on the C summand, its restrictions along i0 and i1 are g and g+k=f. Since p i0=p i1=id, inverting homotopy equivalences forces i0=i1 and hence f=g. Conversely quotienting homotopies inverts homotopy equivalences. The two maintained Dold-Kan homotopy lemmas transfer this to simplicial objects."
+    },
+    {
+      "id": "I14-DK-04",
+      "judgment": "VALID",
+      "candidate_lines": [
+        137,
+        147
+      ],
+      "topic": "Canonical truncation on homotopy categories",
+      "reason": "For cochain homotopy h^n:C^n->D^{n-1}, restrict h^0 to ker d_C^0 and keep lower components. In degree zero, h^1 d_C^0 vanishes on that kernel; in degree -1, d_C^-1 factors through ker d_C^0, so the homotopy equation is preserved at the boundary as well as below it. Hence smart truncation induces a functor K(A)->K^{<=0}(A), fixes nonpositive complexes, and preserves quasi-isomorphisms by its cohomology description."
+    },
+    {
+      "id": "I14-DK-05",
+      "judgment": "VALID",
+      "candidate_lines": [
+        138,
+        147
+      ],
+      "topic": "Both Ore and cancellation calculi at the fixed bound",
+      "reason": "Start with each ambient Ore or cancellation diagram in K(A), whose existence follows from 05RT. Apply canonical truncation to every object and arrow. Boundary objects already in K^{<=0} are fixed; equalities remain equalities because truncation is functorial on K; required denominators remain quasi-isomorphisms. This supplies both calculi without the false claim that K^{<=0} is triangulated."
+    },
+    {
+      "id": "I14-DK-06",
+      "judgment": "VALID",
+      "candidate_lines": [
+        149,
+        159
+      ],
+      "topic": "Fullness, faithfulness and essential image",
+      "reason": "For a roof C<-Z->D with C,D nonpositive and left map a quasi-isomorphism, H^{>0}(Z)=0. Consequently tau<=0 Z->Z is a quasi-isomorphism and truncation produces a roof within the fixed-bound homotopy category. An equality between two ambient roofs is witnessed by a common refinement with its total denominator in W; its middle complex likewise has vanishing positive cohomology, so truncation preserves the equality witness. Every derived object with H^{>0}=0 is represented by its canonical nonpositive truncation. This proves exactly the full subcategory D^{<=0}, not all bounded-above objects."
+    }
+  ],
+  "lemma_judgments": [
+    {
+      "label": "lemma-illusie-I-localization-derived",
+      "judgment": "VALID_AS_WRITTEN",
+      "required_repair": null
+    },
+    {
+      "label": "lemma-illusie-I-localized-dold-kan",
+      "judgment": "VALID_AS_WRITTEN",
+      "required_repair": null
+    }
+  ],
+  "defects": [],
+  "unresolved_within_the_two_proofs": [],
+  "optional_editorial_clarifications": [
+    {
+      "candidate_lines": [
+        68,
+        74
+      ],
+      "suggestion": "One could write Hom_Pro(cB,(F(X'))) explicitly before the displayed limit formula, making the constant-embedding calculation easier to audit.",
+      "required": false
+    },
+    {
+      "candidate_lines": [
+        141,
+        143
+      ],
+      "suggestion": "One could add the boundary-degree homotopy check recorded in I14-DK-04. The present sentence is mathematically sufficient, so this is exposition only.",
+      "required": false
+    }
+  ],
+  "integration_conclusion": "The I.1.4 localization fragment supplies no mathematical reason to split or reject these two additions. It is suitable for the root's separately validated import/rebase. This verdict does not approve the whole saved candidate, its other additions, live composition, build, or publication, and does not close the unrelated I-1.3-006 source-map gap."
+}

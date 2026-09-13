@@ -1,0 +1,244 @@
+{
+  "schema": "stacks-ai-independent-mathematical-review-public/v1",
+  "status": "PASS_BOUNDED_REVIEW",
+  "date": "2026-09-13",
+  "public_record_is_sanitized_projection": true,
+  "original_private_receipt": {
+    "bytes": 42471,
+    "sha256": "919B1D20B2FCBC63B68DFE1862B3DB41294F32E78FF812F8C5126ADA2F2A80CA"
+  },
+  "candidate_commit": "4c3647f926f32a0edade647ebb52adce05d24a8e",
+  "candidate_tree": "11b2ce25b326f2c90a91e10623003e0f89eb627b",
+  "reviewed_source": {
+    "path": "illusie_volume_I/relative-homotopy.tex",
+    "bytes": 21190,
+    "sha256": "E3C11CCA1C424CB7D38F9EFFA7CF44680A0EB884945CE05F9CCE38A8F7DC97DF",
+    "git_blob": "a4a2fe142131d2d0cf83c9668193605e0f06e32a"
+  },
+  "classification": "AI-draft source regression; not an official Stacks erratum and not an Illusie printed erratum",
+  "scope": [
+    "signed total grading",
+    "multisimplicial chains",
+    "shuffle and Alexander–Whitney formulas",
+    "unnormalized Eilenberg–Zilber theorem and proof",
+    "immediately dependent iterated Dold–Kan normalization"
+  ],
+  "authority": {
+    "work": "Illusie, Complexe cotangent et déformations I",
+    "doi": "10.1007/BFb0059052",
+    "sha256": "1855B49FE461B13B1CBAEE1341C8FC3E3E0CDDC034C54ABEC1165AF061B90A56",
+    "passages": [
+      {
+        "printed_pages": [
+          6,
+          7
+        ],
+        "anchors": [
+          "illusie:I:ch1:s1:2:n1",
+          "illusie:I:ch1:s1:2:d12",
+          "illusie:I:ch1:s1:2:d12c1",
+          "illusie:I:ch1:s1:2:d14",
+          "illusie:I:ch1:s1:2:d15"
+        ],
+        "use": "Cochain +1 convention; X^n=X_{-n} chain reindexing; prefix total sign."
+      },
+      {
+        "printed_page": 7,
+        "anchors": [
+          "illusie:I:ch1:s1:2:p9",
+          "illusie:I:ch1:s1:2:p10"
+        ],
+        "use": "Source asserts functorial homotopy inverses on unnormalized chains, not a strict retraction."
+      },
+      {
+        "printed_pages": [
+          7,
+          8
+        ],
+        "anchors": [
+          "illusie:I:ch1:s1:2:d19",
+          "illusie:I:ch1:s1:2:d20",
+          "illusie:I:ch1:s1:2:p13"
+        ],
+        "use": "Source shuffle/AW and strict associativity/coassociativity, rewritten with typed ordinal maps."
+      },
+      {
+        "printed_pages": [
+          8,
+          9,
+          10
+        ],
+        "anchors": [
+          "illusie:I:ch1:s1:3:d21",
+          "illusie:I:ch1:s1:3:t1",
+          "illusie:I:ch1:s1:3:d23",
+          "illusie:I:ch1:s1:3:d28"
+        ],
+        "use": "One-variable and iterated normalization, degenerate splitting, and Illusie Moore convention."
+      },
+      {
+        "printed_page": 11,
+        "anchors": [
+          "illusie:I:ch1:s1:3:p24",
+          "illusie:I:ch1:s1:3:d30"
+        ],
+        "use": "Normal/degenerate shuffle/AW compatibility is separate from iterated Dold–Kan. Saved recovery does not pretend this diagram follows merely from iteration."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "review-local-EZ-01",
+      "verdict": "ACCEPT",
+      "severity": "mathematically_false_statement",
+      "lines": [
+        5082,
+        5091
+      ],
+      "claim": "AW Sh=1 on unnormalized chains",
+      "counterexample": {
+        "object": "Constant bisimplicial abelian group Z",
+        "degree": 1,
+        "total": "Z ⊕ Z",
+        "diagonal": "Z",
+        "shuffle": [
+          [
+            1,
+            1
+          ]
+        ],
+        "aw": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "aw_shuffle": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "shuffle_aw": [
+          [
+            2
+          ]
+        ]
+      },
+      "rationale": "The total identity cannot factor through a rank-one group. Both composites are homotopic to identity, not strictly equal. Illusie p7 already states the correct homotopy version.",
+      "repair": "Recover both explicitly constructed natural chain homotopies from saved correction."
+    },
+    {
+      "id": "review-local-EZ-02",
+      "verdict": "ACCEPT",
+      "severity": "ill_typed_grading",
+      "lines": [
+        5006,
+        5008,
+        5042,
+        5044
+      ],
+      "claim": "Cohomological +e_i n-complex definition followed by positive simplicial indices with face differentials lowering degree.",
+      "repair": "Saved correction explicitly defines homological total and identifies it with L^p=L_{-p}. Prefix sign unchanged modulo 2.",
+      "adverse": "Cochain total itself is correct; do not remove it or alter historical Illusie convention."
+    },
+    {
+      "id": "review-local-EZ-03",
+      "verdict": "ACCEPT",
+      "severity": "undefined_operator_convention",
+      "lines": [
+        5064,
+        5080
+      ],
+      "claim": "One-based shuffle positions used as degeneracy indices and ambiguous X(face-string,face-string) order.",
+      "rationale": "Native Stacks degeneracies in degree m have indices 0 through m. At p=1,q=0 the old formula requests index1 at degree0. Superscript symbols were never reconciled with native operators; contravariance also prevents treating an untyped ordinal-map string as the induced operator composition.",
+      "repair": "Saved lattice paths give ordinal surjections alpha:[p+q]→[p], beta:[p+q]→[q]; AW uses front/back inclusions. Alternatively zero-based actual degeneracies and rightmost-first face products are valid.",
+      "adverse": "This is an integration/convention defect; the source formula is not thereby declared a printed erratum."
+    },
+    {
+      "id": "review-local-EZ-04",
+      "verdict": "ACCEPT",
+      "severity": "missing_proof",
+      "lines": [
+        5094,
+        5122
+      ],
+      "claim": "First exceptional position or front–back normal form is not defined and does not produce a specified universal H in an arbitrary additive category.",
+      "repair": "Saved correction constructs both homotopies recursively on free bisimplicial models with explicit contractions, extending finite integral ordinal operators universally."
+    },
+    {
+      "id": "review-local-EZ-05",
+      "verdict": "ACCEPT",
+      "severity": "hypothesis_and_comparison_clarification",
+      "lines": [
+        5125,
+        5160
+      ],
+      "claim": "Iterated Dold–Kan target and normalization convention comparison lack explicit nonnegative-per-direction hypotheses; reversal/sign comparison is not constructed and grouping wording risks conflating simplicial diagonal with chain total.",
+      "repair": "Saved theorem states nonnegative chain degrees, proves Moore normalization via explicit projection and degenerate quotient, iterates in abelian functor categories, and restricts regrouping to chain directions.",
+      "adverse": "The true iterated Dold–Kan equivalence does not depend on the false strict unnormalized identity and should be preserved."
+    },
+    {
+      "id": "review-local-EZ-06",
+      "verdict": "PRESERVE",
+      "severity": "valid_statement",
+      "claim": "Strict associativity of shuffle and coassociativity of AW.",
+      "rationale": "Both shuffle orders enumerate the same three-type words with the same inversion parity; both AW orders use identical consecutive front/middle/back cuts. This does not establish coherence of chosen homotopies."
+    }
+  ],
+  "proof_audit": {
+    "chain_maps": "Finite integral operator identities checked by cut-boundary cancellation for AW and adjacent-path cancellation for shuffle. Same-axis vertex deletion produces the horizontal sign (-1)^a or signed vertical sign (-1)^(p+b), including endpoints.",
+    "models": "M^{p,q}_{a,b}=Z[Hom([a],[p])×Hom([b],[q])]. Diagonal model contracts by prepending (0,0). Total model is CΔ[p]⊗CΔ[q], contracting by h_p⊗1+e_p⊗h_q (graded tensor convention; second term supported in horizontal degree0).",
+    "homotopy_recursion": "For L=Sh AW−1 and L=AW Sh−1 separately, H_{−1}=H_0=0. At a universal generator z of degree n>0 set r=L_n(z)−H_{n−1}(dz), H_n(z)=K(r). The previous-degree equation and d²=0 give dr=0; model positive-degree acyclicity gives dK(r)=r. Extend the finite operator expression universally, giving dH+Hd=L in every additive category.",
+    "no_target_tensor_hypothesis": "Free abelian groups and tensor products are used only to calculate universal integral formulas, not assumed to exist in the target additive category.",
+    "normalization": "Saved P_m=(1−s_0d_1)...(1−s_{m−1}d_m), rightmost first, removes faces in descending order, is identity on ∩_{i>0}ker d_i, kills degeneracies, and differs from identity by degeneracies. Thus the Moore subcomplex identifies with the degenerate quotient and hence with native Stacks normalization. Distinct-direction projectors commute; their product gives intersection image and sum-of-degenerate-kernels kernel.",
+    "proof_status": "The existing saved correction provides an all-degree mathematical proof, independently checked here. Finite regression is supplementary; no theorem is certified merely by compilation.",
+    "second_independent_check": {
+      "exact_fragment_sha256": "E3C11CCA1C424CB7D38F9EFFA7CF44680A0EB884945CE05F9CCE38A8F7DC97DF",
+      "reviewed_lines": [
+        175,
+        435
+      ],
+      "verdict": "No residual mathematical flaw found in saved repair",
+      "checked": [
+        "Lattice-path variance/index/signs",
+        "Both universal recursive homotopies",
+        "Rightmost-first Moore projector",
+        "Multicomplex normalized/degenerate splitting",
+        "Comparison of Moore conventions by quotient",
+        "Chain grouping versus simplicial diagonal distinction"
+      ],
+      "optional_clarity_only": [
+        "State negative C_n and T_n vanish",
+        "Call the distinguished vertex [0] a basis vector to avoid reading it as the zero element"
+      ]
+    }
+  },
+  "normalized_distinction": {
+    "scope": "Explanation only; not an extra theorem silently added to the recovered patch.",
+    "quotient_setting": "In an abelian category normalize by quotienting degenerate chains, in both directions for the total and diagonally for the diagonal complex.",
+    "strict_identity": "AWbar Shbar=1 on the normalized total.",
+    "strict_identity_reason": "For input bidegree(p,q) and output(a,b) with a+b=p+q, if a>p or b>q the corresponding composite factors through a degeneracy. When(a,b)=(p,q), only the block path of p horizontal then q vertical steps is nondegenerate, and it contributes identity with sign+1.",
+    "descent_reason": "Shuffle sends an input degeneracy to a diagonal degeneracy at the path step crossing the repeated coordinate. AW sends a diagonal degeneracy into a horizontal or vertical degeneracy depending on the cut.",
+    "caveat": "This vanishing occurs modulo degeneracies, not by unnormalized cancellation. Do not claim unprojected AW automatically lands in the native kernel-normalization model or that the newly chosen unnormalized H automatically descends. Normalized homotopy compatibility is a separate result."
+  },
+  "validation": {
+    "executed_test": "3927900890AC040DF85C5798900609033F26F8F0B75EE321BE356B75D201B9AA",
+    "test_count": 3,
+    "result": "PASS",
+    "checked": [
+      "Constant degree-one obstruction rejects strict identity",
+      "AW and Sh chain-map equations on universal generators through degree4",
+      "Both recursive homotopy equations on universal generators through degree4"
+    ],
+    "limit": "Finite degree4 regression, not an all-degree proof; no TeX was invoked.",
+    "primary_witness_lock_matches": "6/6"
+  },
+  "limitation": "No current cumulative build or visual/readback claim. The separate normalized comparison I-1.3-006 remains unresolved; it is outside the accepted block."
+}
