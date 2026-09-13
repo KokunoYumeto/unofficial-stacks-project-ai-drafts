@@ -32,9 +32,10 @@ now produce **36 byte-identical chapter PDFs, totalling 3,444 pages**.
 Their [exact comparison](validation/direct-successor-r48-illusie-correction-reproducibility-2026-09-13.json)
 and [visual checks](validation/direct-successor-r48-illusie-correction-visual-qa-2026-09-13.json)
 cover all 216 pages of the three changed chapters, including detailed
-inspection of all 24 correction pages. Public-release readback is the
-remaining publication step; these are not whole-EGA or whole-Illusie
-completion claims. The
+inspection of all 24 correction pages. The
+[current release index](validation/direct-successor-current.json) records
+publication status and links the public-readback evidence when complete.
+These are not whole-EGA or whole-Illusie completion claims. The
 [correction and build-history note](validation/illusie-build-history-correction-2026-09-13.md)
 explains the mathematical change and the older PDF/source mismatch.
 Neither the inherited R47 receipts nor the earlier R48 PDFs validate this
