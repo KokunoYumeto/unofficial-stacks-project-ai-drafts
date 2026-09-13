@@ -5,15 +5,20 @@
 R48 corrects groupoid arguments and derived categories of algebraic spaces in
 the cumulative source at `0fee11e74c467744052f62e90a4454f9c20719a3`.
 Its 27 edits follow the independently admitted candidate without overwriting
-the whole isolated chapter payloads. Two independent builds now produce
-**36 byte-identical PDFs, 3,441 pages**: [first build](direct-successor-r48-build-a.json),
-[second build](direct-successor-r48-build-b.json), and
-[exact comparison](direct-successor-r48-reproducibility.json). Both converge
-on the fourth sweep. The remaining correction-location and changed-page
-visual checks are in progress; this is not yet a completed R48 release.
-The builds exposed an inherited AI-written chain-comparison error, now
-corrected in source commit `ea606e202707d215f38e050be2621d0c83cadef0`.
-Fresh builds of that corrected source are required. Read the
+the whole isolated chapter payloads. The first two builds exposed an inherited
+AI-written chain-comparison error, corrected in source commit
+`ea606e202707d215f38e050be2621d0c83cadef0`.
+
+Fresh independent builds of the repaired source now produce
+**36 byte-identical PDFs, 3,444 pages**:
+[first build](direct-successor-r48-illusie-correction-build-a-2026-09-13.json),
+[second build](direct-successor-r48-illusie-correction-build-b-2026-09-13.json), and
+[exact comparison](direct-successor-r48-illusie-correction-reproducibility-2026-09-13.json).
+Both converge on the fourth sweep. The
+[visual receipt](direct-successor-r48-illusie-correction-visual-qa-2026-09-13.json)
+records an overview of all 216 changed-chapter pages and detailed inspection
+of all 24 correction pages. Public readback remains a separate release gate.
+Read the
 [mathematical correction and build-history clarification](illusie-build-history-correction-2026-09-13.md)
 before using the earlier receipts; none is being relabelled to certify the
 newly repaired source.

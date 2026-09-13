@@ -14,8 +14,14 @@ The new build profile contains 36 chapters: the preceding 35 and
 `spaces-perfect`. Conservative cross-reference propagation reaches this
 whole bounded profile, so validation requires two clean fixed-point builds.
 The earlier PDFs alone do not supply enough auxiliary-file evidence to prove
-that an unchanged source chapter can reuse its old PDF. Source replay has
-passed; new build, visual and publication results will be recorded separately.
+that an unchanged source chapter can reuse its old PDF. Source replay and two
+fresh builds of the independently repaired Illusie source have passed:
+[36 matching PDFs, 3,444 pages](validation/direct-successor-r48-illusie-correction-reproducibility-2026-09-13.json).
+[Visual inspection](validation/direct-successor-r48-illusie-correction-visual-qa-2026-09-13.json)
+covers all 216 pages in the three changed chapters and all 24 correction
+pages in detail. Publication/readback is recorded separately. Existing
+references to chapters outside this bounded profile remain unresolved;
+these checks neither hide those limitations nor certify mathematical truth.
 
 ## Preceding combined R47/Illusie and EGA comparison checkpoint
 

@@ -20,13 +20,21 @@ additions are preserved.
 The source-only commit is
 `0fee11e74c467744052f62e90a4454f9c20719a3`, directly following the separate
 [registry admission](ai-integrated/registry/admission-receipts/r48.json).
-Source replay and two independent cumulative builds pass. Their
-[exact comparison](validation/direct-successor-r48-reproducibility.json)
-records 36 byte-identical PDFs and 3,441 pages. Correction-location and
-changed-page visual checks and public-source readback are not yet complete.
-Those builds exposed an inherited AI-written Illusie error. The independently
-reviewed repair is now composed at `ea606e202707d215f38e050be2621d0c83cadef0`;
-fresh builds of that corrected source remain pending. The
+The first R48 builds exposed an inherited AI-written Illusie error. Its
+independently reviewed repair is composed at
+`ea606e202707d215f38e050be2621d0c83cadef0`: on unnormalized chains, the
+Alexander-Whitney and shuffle composites are naturally homotopic to the
+identity, not strict inverses. The repaired draft also makes the grading,
+normalization and localization arguments explicit.
+
+Two fresh independent builds of `00856c315dabb2516cad6d956a25030909419947`
+now produce **36 byte-identical chapter PDFs, totalling 3,444 pages**.
+Their [exact comparison](validation/direct-successor-r48-illusie-correction-reproducibility-2026-09-13.json)
+and [visual checks](validation/direct-successor-r48-illusie-correction-visual-qa-2026-09-13.json)
+cover all 216 pages of the three changed chapters, including detailed
+inspection of all 24 correction pages. Public-release readback is the
+remaining publication step; these are not whole-EGA or whole-Illusie
+completion claims. The
 [correction and build-history note](validation/illusie-build-history-correction-2026-09-13.md)
 explains the mathematical change and the older PDF/source mismatch.
 Neither the inherited R47 receipts nor the earlier R48 PDFs validate this
