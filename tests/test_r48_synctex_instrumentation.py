@@ -1,6 +1,7 @@
 """Instrumenter lifecycle tests use only harmless synthetic test files."""
 from contextlib import ExitStack
 import gzip
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -45,15 +46,25 @@ class InstrumentationTests(unittest.TestCase):
             artifacts[stem] = {**m.identity(root / (stem + ".pdf")), "diagnostics": {}, "external_references": {}}
         return {"build": {"stems": stems}, "environment": {"source_date_epoch": "1"}}, artifacts
 
-    def run_fixture(self, root, build, artifacts, mutation=None):
+    def run_fixture(self, root, build, artifacts, mutation=None,
+                    timestamp_offset_ns=1_000_000_000):
         calls = []
+        # Synthetic launches must not depend on filesystem timestamp rounding
+        # or on how quickly the runner executes this harmless file fixture.
+        clock = {"now": 1_700_000_000_000_000_000}
+        def time_ns():
+            clock["now"] += 2_000_000_000
+            return clock["now"]
         def run(command, source, env, mutex):
             self.assertTrue(mutex.owned)
             self.assertEqual(source, root)
             self.assertEqual(env["SOURCE_DATE_EPOCH"], "1")
             stem = Path(command[-1]).stem
             calls.append(stem)
-            sidecar(root / (stem + ".synctex.gz"), stem)
+            sidecar_path = root / (stem + ".synctex.gz")
+            sidecar(sidecar_path, stem)
+            modified_ns = clock["now"] + timestamp_offset_ns
+            os.utime(sidecar_path, ns=(modified_ns, modified_ns))
             capture = root / (stem + "-capture.json")
             capture.write_text("test", encoding="utf-8")
             mutex.process_tree_receipts.append({"path": capture.name, **m.identity(capture)})
@@ -63,6 +74,7 @@ class InstrumentationTests(unittest.TestCase):
             self.assertTrue(FakeMutex.last.owned)
             return {}, {}
         with ExitStack() as stack:
+            stack.enter_context(patch.object(tool.time, "time_ns", side_effect=time_ns))
             stack.enter_context(patch.object(m, "recheck_inputs"))
             stack.enter_context(patch.object(m, "check_captures"))
             stack.enter_context(patch.object(tool.builder, "external_reference_labels", return_value={}))
@@ -83,6 +95,24 @@ class InstrumentationTests(unittest.TestCase):
             self.assertIn("unchanged", before)
             self.assertTrue(mutex["released"])
             self.assertTrue(all(row["tex_mutex_owned_through_immediate_checks"] for row in rows))
+            self.assertTrue(all(row["started_ns"] < row["synctex_mtime_ns"]
+                                < row["completed_ns"] for row in rows))
+
+    def test_stale_sidecar_timestamp_fails_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            build, artifacts = self.fixture(root)
+            with self.assertRaisesRegex(ValueError, "sidecar freshness not proved"):
+                self.run_fixture(root, build, artifacts, timestamp_offset_ns=-1_000_000_000)
+            self.assertFalse(FakeMutex.last.owned)
+
+    def test_future_sidecar_timestamp_fails_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            build, artifacts = self.fixture(root)
+            with self.assertRaisesRegex(ValueError, "sidecar freshness not proved"):
+                self.run_fixture(root, build, artifacts, timestamp_offset_ns=3_000_000_000)
+            self.assertFalse(FakeMutex.last.owned)
 
     def test_changed_other_profile_aux_fails_closed(self):
         with tempfile.TemporaryDirectory() as temp:
