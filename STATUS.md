@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-09-12**
+Status date: **2026-09-13**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -20,9 +20,17 @@ additions are preserved.
 The source-only commit is
 `0fee11e74c467744052f62e90a4454f9c20719a3`, directly following the separate
 [registry admission](ai-integrated/registry/admission-receipts/r48.json).
-At this checkpoint source replay passes; cumulative build, visual validation
-and public-source readback are not yet complete. The inherited R47 results
-below remain historical evidence, not validation of the new source.
+Source replay and two independent cumulative builds pass. Their
+[exact comparison](validation/direct-successor-r48-reproducibility.json)
+records 36 byte-identical PDFs and 3,441 pages. Correction-location and
+changed-page visual checks and public-source readback are not yet complete.
+Those builds exposed an inherited AI-written Illusie error. The independently
+reviewed repair is now composed at `ea606e202707d215f38e050be2621d0c83cadef0`;
+fresh builds of that corrected source remain pending. The
+[correction and build-history note](validation/illusie-build-history-correction-2026-09-13.md)
+explains the mathematical change and the older PDF/source mismatch.
+Neither the inherited R47 receipts nor the earlier R48 PDFs validate this
+latest corrected source.
 
 ## Earlier published checkpoints
 
@@ -35,10 +43,12 @@ passed. This is a draft comparison, not a claim that EGA is complete.
 
 **R47, the combined Illusie source and EGA I §6.6.5 are public** at
 `5817f4c1af8724b147401c785f57ca315b52e31c` (anonymous main-ref verification).
-The combined build receipts record two matching sets of 35 PDFs, comprising
+The historical combined build receipts record two matching sets of 35 PDFs, comprising
 3,363 pages and 36,679,971 bytes. Visual evidence is bounded to the scopes
 actually recorded in those receipts; these totals do not claim all-page
-visual certification of the entire corpus.
+visual certification of the entire corpus. In particular, the Simplicial
+artifact cannot substantiate its later amended source binding; see the
+correction note above.
 
 This tree also contains the validated EGA I §6.6.6–§6.6.8 comparison at
 `53e97d65a7efb5e4f79df83cea987ae2ea08a171`: permanence of locally finite-type

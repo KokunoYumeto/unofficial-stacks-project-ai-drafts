@@ -242,6 +242,27 @@ existing Stacks results on splitting idempotents and decomposability.
 [Statement and proof](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6c5f549dcdec6051dfeaf0e5300faf3b80576830/derived.tex#L825).
 This is one bounded contribution, not an integration of the whole thesis.
 
+### Illusie I: chain comparison and localization — partial integration
+
+The [Simplicial Methods source](simplicial.tex) contains independently written
+drafts from the opening of *Complexe cotangent et déformations I*:
+
+- **Eilenberg–Zilber comparison:** Alexander–Whitney and shuffle maps compare
+  diagonal and total complexes, with the signs, grading and two natural chain
+  homotopies written out. The corrected draft removes our earlier false claim
+  of a strict inverse on unnormalized chains.
+  [Formulas and proof](illusie_volume_I/relative-homotopy.tex).
+- **Localization and derived functors:** the §I.1.4 draft develops the
+  essentially constant pro-object construction and explains how Dold–Kan
+  passes to the derived category with a fixed nonpositive degree bound.
+  [Statements and proofs](illusie_volume_I/localization.tex).
+
+This is not the whole volume. The comparison inventory reaches printed pages
+1–16; the normal/degenerate comparison on page 11 remains explicitly pending.
+The [correction and build-history note](validation/illusie-build-history-correction-2026-09-13.md)
+distinguishes the repaired source from older PDFs; [current validation and
+publication status](STATUS.md) is recorded separately.
+
 ### Tôhoku: substantial comparison and draft-proof work — not fully integrated
 
 The preserved research dossier records work on difficult parts of

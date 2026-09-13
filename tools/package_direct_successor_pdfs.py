@@ -39,6 +39,8 @@ R48_STEMS = (
     "more-groupoids", "spaces-perfect",
 )
 DIRECT_PDFS = ("groupoids", "spaces-perfect")
+AI_CORRECTION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+CORRECTION_PDFS = ("groupoids", "simplicial", "spaces-perfect")
 ZIP_NAME = "stacks-ai-drafts-r48-pdfs.zip"
 MANIFEST_NAME = "source-build-manifest.json"
 INVENTORY_NAME = "package-inventory.json"
@@ -49,6 +51,45 @@ ZIP_MODE = 0o100644 << 16
 def canonical_json(document):
     return (json.dumps(document, sort_keys=True, indent=2, ensure_ascii=True,
                        allow_nan=False) + "\n").encode("utf-8")
+
+
+def package_correction_scope(binding):
+    """Explicit additive variant; old direct packages retain their old shape."""
+    require(isinstance(binding, dict), "package lacks composition binding")
+    if binding.get("schema") == DIRECT_SCHEMA:
+        require("ai_source_correction_scope" not in binding and "correction_protected_inputs" not in binding,
+                "old direct package cannot carry untyped AI correction evidence")
+        return None
+    require(binding.get("schema") == AI_CORRECTION_SCHEMA, "unsupported package composition variant")
+    from ai_source_correction_composition import validate_ai_source_correction_scope
+    scope = binding.get("ai_source_correction_scope")
+    for key in ("composition_source_commit", "composition_source_tree"):
+        require(isinstance(binding.get(key), str) and re.fullmatch(r"[0-9a-f]{40}", binding[key]),
+                "package lacks exact corrected composition endpoint")
+    validate_ai_source_correction_scope(scope, source_commit=binding["composition_source_commit"],
+                                       source_tree=binding["composition_source_tree"])
+    return scope
+
+
+def direct_pdfs(binding):
+    return CORRECTION_PDFS if package_correction_scope(binding) is not None else DIRECT_PDFS
+
+
+def load_package_correction(repository_root, binding):
+    """Recompute a correction from committed evidence before packaging bytes.
+
+    Historical direct v1 retains its existing separate release-validation gate.
+    The new variant must not rely on receipt fields alone for the added source.
+    """
+    if package_correction_scope(binding) is None:
+        return None
+    from ai_source_correction_composition import load_ai_source_correction, recheck_ai_source_correction_tools
+    live, stems, affected = load_ai_source_correction(repository_root, Path(binding["receipt"]))
+    require(canonical_json(live) == canonical_json(binding), "packaging correction differs from actual composition")
+    require(tuple(stems) == R48_STEMS and tuple(affected) == CORRECTION_PDFS,
+            "live correction package profile mismatch")
+    recheck_ai_source_correction_tools(repository_root, binding)
+    return recheck_ai_source_correction_tools
 
 
 def check_pdf(raw, expected, label):
@@ -70,17 +111,19 @@ def build_inputs(receipt_raw, public_receipt_path):
             and public_receipt_path != "validation/direct-successor-current.json",
             "build receipt must have an explicit public validation path")
     binding = receipt.get("composition")
-    require(isinstance(binding, dict) and binding.get("schema") == DIRECT_SCHEMA,
-            "R48 package requires the direct successor composition")
+    correction = package_correction_scope(binding)
     require(binding.get("authority_commit") == AUTHORITY
             and binding.get("authority_tree") == AUTHORITY_TREE, "wrong pinned authority")
     require(binding.get("new_overlay_ids") == [R48]
             and binding.get("last_admitted_overlay") == R48,
             "package scope must be exactly the R48 incremental successor")
     require(binding.get("required_build_stems") == list(R48_STEMS)
-            and binding.get("affected_source_stems") == sorted(DIRECT_PDFS),
+            and binding.get("affected_source_stems") == sorted(direct_pdfs(binding)),
             "wrong R48 chapter profile")
     artifacts = check_build_shape(receipt, binding, R48_STEMS, validate_machine_wide_tex_mutex)
+    if correction is not None:
+        from compare_fixed_point_builds import validate_source_checkpoint
+        validate_source_checkpoint(receipt, "package build")
     source = receipt.get("source")
     require(isinstance(source, dict) and set(source) == {"commit", "tree"}
             and all(isinstance(value, str) and re.fullmatch(r"[0-9a-f]{40}", value)
@@ -97,17 +140,18 @@ def public_manifest(receipt_raw, receipt, binding, artifacts, public_receipt_pat
     receipt_identity = {"path": public_receipt_path, **identity(receipt_raw),
                         "commit": content_commit,
                         "url": f"https://github.com/{REPOSITORY}/blob/{content_commit}/{public_receipt_path}"}
-    return {
+    correction = package_correction_scope(binding)
+    manifest = {
         "schema": PACKAGE_SCHEMA,
         "status": "VERIFIED_PACKAGE_INPUTS",
         "title": "Unofficial Stacks Project AI Drafts - R48 chapter PDFs",
         "repository": REPOSITORY,
         "source": source,
         "build_receipt": receipt_identity,
-        "composition": {"schema": DIRECT_SCHEMA, "new_overlay_ids": [R48],
+        "composition": {"schema": binding["schema"], "new_overlay_ids": [R48],
                         "composition_source_commit": binding["composition_source_commit"],
                         "registry_cutoff_commit": binding["registry_cutoff_commit"]},
-        "scope": {"chapter_count": 36, "affected_chapters": list(DIRECT_PDFS),
+        "scope": {"chapter_count": 36, "affected_chapters": list(direct_pdfs(binding)),
                   "total_pages": sum(row["pages"] for row in artifacts),
                   "total_pdf_bytes": sum(row["bytes"] for row in artifacts),
                   "artifact_tuple_set_sha256": receipt["build"]["artifact_tuple_set_sha256"]},
@@ -121,18 +165,37 @@ def public_manifest(receipt_raw, receipt, binding, artifacts, public_receipt_pat
                         "Package integrity does not establish mathematical correctness or proof-assistant verification.",
                         "Cross-chapter links may require other PDFs in this collection.",
                         "A/B build, visual QA, CI, and public readback are validated separately before release."]}
+    if correction is not None:
+        manifest["title"] = "Unofficial Stacks Project AI Drafts - R48 and corrected Illusie chapter PDFs"
+        manifest["scope"]["ai_source_correction"] = correction
+    return manifest
 
 
 def readme(manifest):
+    corrected = "ai_source_correction" in manifest["scope"]
+    increment = (
+        "R48 carries corrections in **Groupoid Schemes** and **Derived Categories of Spaces**. "
+        "This combined collection also includes the independently reviewed AI-draft correction "
+        "and localization addition in **Simplicial Methods**, based on Illusie Volume I. "
+        "The Illusie work is separate from the official-source errata overlay. "
+        if corrected else
+        "R48 carries corrections in **Groupoid Schemes** and **Derived Categories of Spaces**. "
+    )
+    immediate = (
+        "For immediate reading, `groupoids.pdf` (Groupoid Schemes), `simplicial.pdf` "
+        "(Simplicial Methods), and `spaces-perfect.pdf` (Derived Categories of Spaces) "
+        "are supplied as individual release downloads.\n" if corrected else
+        "For immediate reading, `groupoids.pdf` (Groupoid Schemes) and `spaces-perfect.pdf` "
+        "(Derived Categories of Spaces) are supplied as individual release downloads.\n"
+    )
     rows = ["# Unofficial Stacks Project AI Drafts - R48\n",
             "This collection makes the current draft chapters easy to read and compare with their source. "
             "It is an unofficial AI draft, not an official Stacks Project release or endorsement.\n",
-            "R48 carries corrections in **Groupoid Schemes** and **Derived Categories of Spaces**. "
+            increment +
             "The complete 36-chapter build is included so that this increment can be read together "
             "with the previously integrated material. It is not a PDF of the entire Stacks Project.\n",
             "## Start reading\n",
-            "For immediate reading, `groupoids.pdf` (Groupoid Schemes) and `spaces-perfect.pdf` "
-            "(Derived Categories of Spaces) are supplied as individual release downloads.\n",
+            immediate,
             f"Download `{ZIP_NAME}` for all 36 PDFs. After extraction, start with "
             "[Groupoid Schemes](pdf/groupoids.pdf) or [Derived Categories of Spaces](pdf/spaces-perfect.pdf). "
             "The chapter links below refer to the extracted archive. No PDF bytes were changed during packaging.\n",
@@ -194,6 +257,7 @@ def package(repository_root, build_root, build_receipt, output_dir, content_comm
     require(root.is_dir(), "build root is not a directory")
     raw = Path(build_receipt).read_bytes()
     receipt, binding, artifacts = build_inputs(raw, public_receipt_path)
+    correction_recheck = load_package_correction(repository_root, binding)
     objects = Objects(repository_root)
     content_commit = objects.commit(content_commit)
     source_commit = objects.commit(receipt["source"]["commit"])
@@ -219,7 +283,8 @@ def package(repository_root, build_root, build_receipt, output_dir, content_comm
     zip_path = output / ZIP_NAME
     write_zip(zip_path, members)
     verify_zip(zip_path, members, pdf_members, by_stem)
-    for stem in DIRECT_PDFS:
+    selected_pdfs = direct_pdfs(binding)
+    for stem in selected_pdfs:
         with (output / f"{stem}.pdf").open("xb") as stream:
             stream.write(pdfs[stem])
         check_pdf((output / f"{stem}.pdf").read_bytes(), by_stem[stem], stem)
@@ -228,7 +293,7 @@ def package(repository_root, build_root, build_receipt, output_dir, content_comm
             stream.write(data)
         require((output / name).read_bytes() == data, "metadata readback mismatch")
     assets = []
-    for name in sorted([ZIP_NAME, "groupoids.pdf", "spaces-perfect.pdf", *public_metadata]):
+    for name in sorted([ZIP_NAME, *(stem + ".pdf" for stem in selected_pdfs), *public_metadata]):
         data = (output / name).read_bytes()
         asset = {"name": name, "bytes": len(data),
                  "sha256": hashlib.sha256(data).hexdigest().upper()}
@@ -246,6 +311,9 @@ def package(repository_root, build_root, build_receipt, output_dir, content_comm
                  "zip_members_checked": len(members), "pdfs_checked": len(pdfs),
                  "note": "This inventory is a local transfer control file, not an upload asset. "
                          "Publish only upload_assets after the separate release gates pass."}
+    if correction_recheck is not None:
+        correction_recheck(repository_root, binding)
+        inventory["ai_source_correction"] = package_correction_scope(binding)
     with (output / INVENTORY_NAME).open("xb") as stream:
         stream.write(canonical_json(inventory))
     require(parse_json((output / INVENTORY_NAME).read_bytes()) == inventory,

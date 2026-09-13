@@ -47,13 +47,23 @@ PREPARATION_TOOLS = frozenset((*DIRECT_TOOLS,
     "tests/test_r48_synctex_instrumentation.py", "tests/test_changes_from_upstream.py",
     "tests/test_build_fixed_point_mutex.py", "tools/test_tex_process_public_receipt.py",
     "tools/package_direct_successor_pdfs.py", "tests/test_direct_successor_pdf_package.py"))
+AI_PREPARATION_TOOLS = frozenset({
+    "tools/ai_source_correction_composition.py", "tools/test_ai_source_correction_composition.py",
+    "tools/test_ai_source_correction_checkpoint.py", "tools/test_ai_source_correction_consumers.py",
+    "tools/test_ai_source_correction_repro.py", "tools/cumulative_source.py", "tools/cumulative_reader.py",
+    "tools/tests/test_compare_ai_source_correction.py",
+    "tools/tests/test_package_ai_source_correction.py",
+    "tools/reconstruct_cumulative.py", "tools/cumulative-master.json", "tools/CUMULATIVE-RECONSTRUCTION.md",
+    "tools/package_cumulative_successor.py", "tools/test_cumulative_packaging.py",
+})
+AI_ADDITIVE_METADATA = frozenset({"validation/illusie-build-history-correction-2026-09-13.md"})
 MUTABLE_METADATA = frozenset({RECEIPT, "validation/direct-successor-current.json",
     "README.md", "ai-integrated/README.md", "STATUS.md", "VALIDATION.md",
     "validation/README.md", ".github/workflows/validate.yml", "CHANGES_FROM_UPSTREAM.md",
     "ai-integrated/changes/index.html", "validation/changes-from-upstream-2026-08-30.json"})
 
 
-def validate_metadata_suffix(git, source, head):
+def validate_metadata_suffix(git, source, head, *, additional_tools=frozenset(), additional_receipts=frozenset()):
     """Allow only explicit tooling/metadata after the source endpoint.
 
     Existing historical receipts and every source/registry path are protected.
@@ -66,8 +76,8 @@ def validate_metadata_suffix(git, source, head):
         regular_changes(changes)
         for path, row in changes.items():
             additive_receipt = re.fullmatch(r"validation/direct-successor-[A-Za-z0-9._-]+\.json", path)
-            require(path in PREPARATION_TOOLS or path in MUTABLE_METADATA or
-                    (additive_receipt is not None and row[4] == "A"),
+            require(path in PREPARATION_TOOLS or path in additional_tools or path in MUTABLE_METADATA or
+                    ((additive_receipt is not None or path in additional_receipts) and row[4] == "A"),
                     f"protected metadata suffix changed unsupported path: {path}")
         result.append(step_row(git, parent, commit, "protected_metadata"))
         parent = commit
@@ -357,11 +367,33 @@ def derive_direct_lifecycle(git, previous_public, cutoff, suffix, inventory, aut
             "root_sources_unchanged_before_composition": True}, overlays
 
 
-def derive(repo, previous_public, cutoff, source):
-    git = Git(repo)
+class HistoricalEndpointGit(Git):
+    """Only root-source cleanliness is read at an explicit immutable endpoint.
+
+    Composer-consumed registry/candidate/tool files still require exact live
+    bytes. The composer uses Git objects for root source in --check-revision
+    mode; no historical working tree or source substitution is manufactured.
+    """
+    def __init__(self, root, endpoint):
+        super().__init__(root)
+        self.endpoint = self.commit(endpoint)
+
+    def clean_file(self, commit, path, exact=False):
+        if _helper.ROOT_TEX.fullmatch(path):
+            require(self.ident(commit, path) == self.ident(self.endpoint, path),
+                    f"historical endpoint root differs: {path}")
+            return
+        super().clean_file(commit, path, exact=exact)
+
+
+def derive(repo, previous_public, cutoff, source, *, validation_endpoint=None):
+    git = Git(repo) if validation_endpoint is None else HistoricalEndpointGit(repo, validation_endpoint)
     previous_public, cutoff, source = [git.commit(value) for value in (previous_public, cutoff, source)]
     observed_head = git.commit(git.text("rev-parse", "HEAD"))
-    validate_metadata_suffix(git, source, observed_head)
+    endpoint = observed_head if validation_endpoint is None else git.commit(validation_endpoint)
+    if validation_endpoint is not None:
+        git.raw("merge-base", "--is-ancestor", endpoint, observed_head)
+    validate_metadata_suffix(git, source, endpoint)
     require(git.parents(source) == [cutoff], "direct composition must immediately follow the registry cutoff")
     previous = git.document(previous_public, RECEIPT)
     require(previous.get("schema") in {_helper.SCHEMA, SCHEMA} and previous.get("status") == "PASS",
@@ -482,6 +514,21 @@ def derive(repo, previous_public, cutoff, source):
                                 "No source preparation gap, preapplied edits, new supersessions, or semantic dispositions",
                                 "Admission receipt shape must match the explicit current registrar contract"]}
     return receipt, evidence
+
+
+def load_direct_composition_at(source, endpoint, receipt_path=RECEIPT):
+    """Validate sealed v1 evidence at its own endpoint, not current source."""
+    git = Git(source)
+    endpoint = git.commit(endpoint)
+    receipt_path = safe_path(receipt_path)
+    saved = git.document(endpoint, receipt_path)
+    require(saved.get("schema") == SCHEMA and saved.get("status") == "PASS",
+            "historical endpoint receipt is not direct v1 PASS")
+    expected, evidence = derive(source, saved["previous_cutoff"]["public_main_head"],
+                               saved["registry"]["cutoff_commit"], saved["composition"]["source_commit"],
+                               validation_endpoint=endpoint)
+    require(saved == expected, "historical endpoint direct receipt derivation mismatch")
+    return saved, evidence
 
 
 def protected_tools(git, revision):

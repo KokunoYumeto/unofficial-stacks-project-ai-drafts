@@ -630,6 +630,11 @@ def require_clean_build_tree(
     if composition_binding is not None:
         require_direct_tools_unchanged(source, composition_binding)
         critical_paths.update(composition_binding.get("direct_validation_tools", {}))
+        if composition_binding.get("schema") == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+            correction_inputs = composition_binding.get("correction_protected_inputs")
+            if not isinstance(correction_inputs, dict) or not correction_inputs:
+                raise RuntimeError("AI correction protected-input inventory is missing")
+            critical_paths.update(correction_inputs)
     root_files = tuple(path for path in source.iterdir() if path.is_file())
     critical_paths.update(
         path.name for path in root_files
@@ -666,6 +671,16 @@ def require_clean_build_tree(
 
 
 def require_direct_tools_unchanged(source: Path, binding: dict[str, object]) -> None:
+    if binding.get("schema") == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+        if __package__:
+            from .ai_source_correction_composition import recheck_ai_source_correction_tools
+        else:
+            from ai_source_correction_composition import recheck_ai_source_correction_tools
+        try:
+            recheck_ai_source_correction_tools(source, binding)
+        except ValueError as exc:
+            raise RuntimeError(str(exc)) from exc
+        return
     if binding.get("schema") != "unofficial-ai-integrated-stacks-direct-composition/v1":
         return
     if __package__:
@@ -1388,7 +1403,10 @@ def load_source_checkpoint(
     require_single_parent(source, content_commit, "EGA content", base_commit)
     head_commit = git(source, "rev-parse", "HEAD")
     head_tree = git(source, "rev-parse", "HEAD^{tree}")
-    if composition_binding.get("schema") == "unofficial-ai-integrated-stacks-direct-composition/v1":
+    if composition_binding.get("schema") in {
+        "unofficial-ai-integrated-stacks-direct-composition/v1",
+        "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1",
+    }:
         if __package__:
             from .direct_successor_checkpoint import load_direct_source_checkpoint
         else:
@@ -2497,6 +2515,15 @@ def load_composition_receipt(
     if not isinstance(receipt, dict):
         raise RuntimeError("composition receipt must contain a JSON object")
     composition_schema = receipt.get("schema")
+    if composition_schema == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+        if __package__:
+            from .ai_source_correction_composition import load_ai_source_correction
+        else:
+            from ai_source_correction_composition import load_ai_source_correction
+        try:
+            return load_ai_source_correction(source, requested_path)
+        except ValueError as exc:
+            raise RuntimeError(str(exc)) from exc
     if composition_schema == "unofficial-ai-integrated-stacks-direct-composition/v1":
         if __package__:
             from .direct_successor_composition import load_direct_composition
@@ -4404,6 +4431,11 @@ def main() -> int:
         )
     require_source_checkpoint_build_stem(source_checkpoint_binding, stems)
     full_profile = stems == required_stems
+    if composition_binding.get("schema") == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+        if not full_profile or len(stems) != 36 or not {"schemes", "groupoids", "spaces-perfect", "simplicial"} <= set(stems):
+            raise RuntimeError("AI correction requires the complete 36-chapter cumulative build")
+        if args.source_checkpoint is None or source_checkpoint_binding is None:
+            raise RuntimeError("AI correction requires the current EGA/Illusie source checkpoint")
     if args.max_sweeps < 2:
         parser.error("--max-sweeps must be at least 2")
 

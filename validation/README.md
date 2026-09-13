@@ -5,9 +5,18 @@
 R48 corrects groupoid arguments and derived categories of algebraic spaces in
 the cumulative source at `0fee11e74c467744052f62e90a4454f9c20719a3`.
 Its 27 edits follow the independently admitted candidate without overwriting
-the whole isolated chapter payloads. The 36-chapter build and affected-page
-visual evidence are still being produced; the earlier receipts below do not
-certify this new source.
+the whole isolated chapter payloads. Two independent builds now produce
+**36 byte-identical PDFs, 3,441 pages**: [first build](direct-successor-r48-build-a.json),
+[second build](direct-successor-r48-build-b.json), and
+[exact comparison](direct-successor-r48-reproducibility.json). Both converge
+on the fourth sweep. The remaining correction-location and changed-page
+visual checks are in progress; this is not yet a completed R48 release.
+The builds exposed an inherited AI-written chain-comparison error, now
+corrected in source commit `ea606e202707d215f38e050be2621d0c83cadef0`.
+Fresh builds of that corrected source are required. Read the
+[mathematical correction and build-history clarification](illusie-build-history-correction-2026-09-13.md)
+before using the earlier receipts; none is being relabelled to certify the
+newly repaired source.
 
 ## Preceding combined R47/Illusie evidence
 
@@ -17,6 +26,9 @@ The combined source and these receipts are public at
 [independent second build](stacks-errata-a04446e-r47-illusie-repro-build-2026-09-07.json)
 are compared by the [reproducibility receipt](stacks-errata-a04446e-r47-illusie-reproducibility-2026-09-07.json):
 35 matching PDF identities, 3,363 pages and 36,679,971 bytes per run.
+These are historical artifact identities. The Simplicial receipt's later
+source-field amendment did not rebuild its PDF; the correction note above
+documents that limitation without rewriting the historical evidence.
 The [visual receipt](stacks-errata-a04446e-r47-illusie-visual-qa-2026-09-07.json)
 retains its actual five-chapter R47 scope and historical observations. It is
 not an assertion that every page in the combined corpus was visually reviewed.

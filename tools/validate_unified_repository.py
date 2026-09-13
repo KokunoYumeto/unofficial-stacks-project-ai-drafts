@@ -634,9 +634,10 @@ def main(argv: list[str] | None = None) -> int:
         )
     except (OSError, json.JSONDecodeError):
         current_composition = None
-    if isinstance(current_composition, dict) and current_composition.get("schema") == (
-        "unofficial-ai-integrated-stacks-direct-composition/v1"
-    ):
+    if isinstance(current_composition, dict) and current_composition.get("schema") in {
+        "unofficial-ai-integrated-stacks-direct-composition/v1",
+        "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1",
+    }:
         from validate_direct_successor_release import validate_direct_release, parse_json, INDEX
 
         if not explicit_build_receipt:

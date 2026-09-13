@@ -35,16 +35,137 @@ IDENTICAL_KEYS = (
     "source_checkpoint",
 )
 
+AI_CORRECTION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+AI_CORRECTION_CHECKPOINT_SCHEMA = (
+    "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-ai-source-correction-successor/v1"
+)
+AI_CORRECTION_CHECKPOINT_STATUS = "PASS_SOURCE_CHECKPOINT_AI_SOURCE_CORRECTION_SUCCESSOR"
+
 SOURCE_CHECKPOINT_CONTRACTS = {
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-direct-successor/v1": "PASS_SOURCE_CHECKPOINT_DIRECT_SUCCESSOR",
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint/v1": "PASS_SOURCE_CHECKPOINT",
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-successor/v1": "PASS_SOURCE_CHECKPOINT_SUCCESSOR",
+    AI_CORRECTION_CHECKPOINT_SCHEMA: AI_CORRECTION_CHECKPOINT_STATUS,
 }
 
 
 def canonical_json(value: object) -> str:
     """Compare JSON types exactly; True, 1, and 1.0 are not interchangeable."""
     return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False)
+
+
+def exact_file_identity(value: object) -> bool:
+    if not isinstance(value, dict) or set(value) != {"path", "bytes", "sha256", "git_blob"}:
+        return False
+    path = value["path"]
+    return (
+        isinstance(path, str) and bool(path) and "\\" not in path and ":" not in path
+        and all(part not in {"", ".", ".."} for part in path.split("/"))
+        and type(value["bytes"]) is int and value["bytes"] >= 0
+        and isinstance(value["sha256"], str) and re.fullmatch(r"[0-9A-F]{64}", value["sha256"]) is not None
+        and isinstance(value["git_blob"], str) and re.fullmatch(r"[0-9a-f]{40}", value["git_blob"]) is not None
+    )
+
+
+def validate_correction_semantics(receipt: dict, scope: dict, label: str) -> None:
+    """Check typed semantic bindings; actual checker replay belongs to the loader.
+
+    Presence is checked for each run, not merely equality of two equally
+    incomplete objects. No EGA counts or mathematical completeness are inferred.
+    """
+    checkpoint = receipt["source_checkpoint"]
+    historical = checkpoint.get("historical_anchor")
+    semantic = checkpoint.get("semantic_successor")
+    ega = checkpoint.get("current_ega_successor")
+    if (not isinstance(historical, dict) or not historical
+            or not isinstance(semantic, dict) or not semantic
+            or semantic.get("validated_at_own_head") is not True
+            or semantic.get("fresh_import_cache") is not True
+            or not isinstance(ega, dict)
+            or ega.get("schema") != "unofficial-stacks-project-ai-drafts-historical-current-ega-join/v1"
+            or ega.get("status") != "PASS_CURRENT_PUBLIC_EGA_PRESERVED"
+            or ega.get("current_commit") != receipt["source"]["commit"]):
+        raise ValueError(f"{label} correction checkpoint lacks preserved historical/current EGA semantics")
+    current = checkpoint.get("current_illusie_successor")
+    keys = {"schema", "status", "current_commit", "composition_source_commit",
+            "composition_source_tree", "scope", "review", "checker", "checker_result", "regression_tests"}
+    if (not isinstance(current, dict) or set(current) != keys
+            or current.get("schema") != "unofficial-stacks-project-ai-drafts-current-illusie-correction-binding/v1"
+            or current.get("status") != "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND"
+            or current.get("current_commit") != receipt["source"]["commit"]
+            or current.get("composition_source_commit") != scope["corrected_source_commit"]
+            or current.get("composition_source_tree") != scope["corrected_source_tree"]
+            or canonical_json(current.get("scope")) != canonical_json(scope)
+            or not exact_file_identity(current.get("review"))
+            or not exact_file_identity(current.get("checker"))):
+        raise ValueError(f"{label} correction checkpoint lacks an exact current Illusie binding")
+    result = current["checker_result"]
+    if (not isinstance(result, dict) or result.get("status") != "PASS"
+            or not isinstance(result.get("current_source_sha256"), str)
+            or re.fullmatch(r"[0-9A-Fa-f]{64}", result["current_source_sha256"]) is None):
+        raise ValueError(f"{label} current Illusie checker result is absent or nonpassing")
+    expected_tests = {"status": "PASS", "tests_run": 5,
+                      "modules": ["illusie_volume_I.test_composition", "illusie_volume_I.test_ez"]}
+    if canonical_json(current["regression_tests"]) != canonical_json(expected_tests):
+        raise ValueError(f"{label} current Illusie regression evidence is incomplete")
+    protected = receipt["composition"].get("correction_protected_inputs")
+    if (not isinstance(protected, dict) or not protected
+            or any(not isinstance(row, dict) or set(row) != {"bytes", "sha256", "git_blob"}
+                   or not exact_file_identity({"path": path, **row})
+                   for path, row in protected.items())):
+        raise ValueError(f"{label} correction protected-input identities are incomplete")
+    for reference in (scope["manifest"], current["review"], current["checker"]):
+        identity = {key: reference[key] for key in ("bytes", "sha256", "git_blob")}
+        if canonical_json(protected.get(reference["path"])) != canonical_json(identity):
+            raise ValueError(f"{label} current Illusie evidence is not correction-input bound")
+    predecessor = protected.get("validation/direct-successor-r48-composition.json", {})
+    if (predecessor.get("sha256") != scope["sealed_predecessor_receipt_sha256"]
+            or protected.get("simplicial.tex", {}).get("sha256") != result["current_source_sha256"]):
+        raise ValueError(f"{label} current Illusie source or sealed predecessor digest mismatch")
+
+
+def ai_source_correction_scope(receipt: dict, label: str) -> dict | None:
+    """Bind the additive correction type without relabelling historical pairs.
+
+    This comparator has no live repository input. It preserves old receipts as
+    historical evidence; the release consumer separately binds both new builds
+    to its current composition. A correction cannot use an old EGA checkpoint,
+    omit its exact correction identity, or smuggle that identity into old v1.
+    """
+    composition = receipt.get("composition")
+    checkpoint = receipt.get("source_checkpoint")
+    if not isinstance(composition, dict) or not isinstance(checkpoint, dict):
+        raise ValueError(f"{label} lacks composition or source_checkpoint state")
+    if composition.get("schema") != AI_CORRECTION_SCHEMA:
+        if ("ai_source_correction_scope" in composition
+                or "ai_source_correction" in checkpoint
+                or checkpoint.get("schema") == AI_CORRECTION_CHECKPOINT_SCHEMA):
+            raise ValueError(f"{label} correction identity requires typed correction composition")
+        return None
+    if (checkpoint.get("schema") != AI_CORRECTION_CHECKPOINT_SCHEMA
+            or checkpoint.get("status") != AI_CORRECTION_CHECKPOINT_STATUS):
+        raise ValueError(f"{label} correction composition requires a corrected source_checkpoint")
+    if __package__:
+        from .ai_source_correction_composition import validate_ai_source_correction_scope
+    else:
+        from ai_source_correction_composition import validate_ai_source_correction_scope
+    # These are the corrected composition endpoint, not the later build's
+    # metadata head. Both identifiers must be present even if a helper treats
+    # omitted optional expected-source arguments as an unbound validation.
+    endpoint = {key: composition.get(key)
+                for key in ("composition_source_commit", "composition_source_tree")}
+    if any(not isinstance(value, str) or re.fullmatch(r"[0-9a-f]{40}", value) is None
+           for value in endpoint.values()):
+        raise ValueError(f"{label} lacks an exact corrected composition source")
+    scope = composition.get("ai_source_correction_scope")
+    validate_ai_source_correction_scope(
+        scope, source_commit=endpoint["composition_source_commit"],
+        source_tree=endpoint["composition_source_tree"],
+    )
+    if canonical_json(checkpoint.get("ai_source_correction")) != canonical_json(scope):
+        raise ValueError(f"{label} source_checkpoint correction identity mismatch")
+    validate_correction_semantics(receipt, scope, label)
+    return scope
 
 
 def validate_source_checkpoint(receipt: dict, label: str) -> None:
@@ -84,6 +205,7 @@ def validate_source_checkpoint(receipt: dict, label: str) -> None:
                             ("composition_source_commit", "composition_source_commit"))
     ):
         raise ValueError(f"{label} source_checkpoint composition binding mismatch")
+    ai_source_correction_scope(receipt, label)
 
 
 def compare_receipts(first: dict, second: dict) -> None:
@@ -234,6 +356,18 @@ def main() -> int:
     ):
         raise ValueError("first receipt lacks bound source, builder, or environment state")
 
+    scope = {
+        "admitted_errata": args.admitted_errata,
+        "registry_cutoff_commit": composition.get("registry_cutoff_commit"),
+        "source_commit": source.get("commit"),
+        "source_tree": source.get("tree"),
+        "composition_receipt": composition.get("receipt"),
+        "composition_receipt_sha256": composition.get("receipt_sha256"),
+    }
+    correction = ai_source_correction_scope(first, "first")
+    if correction is not None:
+        scope["ai_source_correction"] = correction
+
     receipt = {
         "schema": "unofficial-ai-integrated-stacks-clean-build-reproducibility/v1",
         "status": "PASS",
@@ -246,14 +380,7 @@ def main() -> int:
         "source": source,
         "builder": builder,
         "environment": environment,
-        "scope": {
-            "admitted_errata": args.admitted_errata,
-            "registry_cutoff_commit": composition.get("registry_cutoff_commit"),
-            "source_commit": source.get("commit"),
-            "source_tree": source.get("tree"),
-            "composition_receipt": composition.get("receipt"),
-            "composition_receipt_sha256": composition.get("receipt_sha256"),
-        },
+        "scope": scope,
         "method": {
             "execution_model": "independent_linked_worktrees",
             "first_worktree_kind": build.get("worktree_kind"),

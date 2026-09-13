@@ -25,6 +25,9 @@ DIRECT_SCHEMA = direct_successor_composition.SCHEMA
 DIRECT_TOOLS = direct_successor_composition.DIRECT_TOOLS
 SCHEMA = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-direct-successor/v1"
 STATUS = "PASS_SOURCE_CHECKPOINT_DIRECT_SUCCESSOR"
+AI_COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+SCHEMA_AI = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-ai-source-correction-successor/v1"
+STATUS_AI = "PASS_SOURCE_CHECKPOINT_AI_SOURCE_CORRECTION_SUCCESSOR"
 require = historical.require
 SEMANTIC_PATH = historical.SEMANTIC_PATH
 SEMANTIC_PATHS = historical.SEMANTIC_PATHS
@@ -249,10 +252,60 @@ def validate_direct_source_checkpoint_at(root, checkpoint_path, composition_bind
     return binding
 
 
+def verify_current_illusie(build, source, composition, head):
+    """Bind actual reviewed proof evidence plus current finite/mechanical checks."""
+    if __package__:
+        from . import ai_source_correction_composition as correction
+    else:
+        import ai_source_correction_composition as correction
+    scope = composition.get("ai_source_correction_scope")
+    correction.validate_ai_source_correction_scope(scope,
+        source_commit=composition["composition_source_commit"], source_tree=composition["composition_source_tree"])
+    protected = composition.get("correction_protected_inputs")
+    require(isinstance(protected, dict) and {correction.MANIFEST, "simplicial.tex", "illusie_volume_I/verify.py",
+            "illusie_volume_I/test_composition.py", "illusie_volume_I/test_ez.py"} <= set(protected),
+            "current Illusie protected dossier is incomplete")
+    require(protected[correction.MANIFEST] == {k: scope["manifest"][k] for k in correction.ID_KEYS},
+            "current Illusie scope/manifest identity mismatch")
+    for path, expected in protected.items():
+        actual = build.committed_file_identity(source, head, path)
+        require(actual is not None and {key: actual[key] for key in correction.ID_KEYS} == expected,
+                f"current Illusie dossier identity mismatch: {path}")
+    before = require_exact_inputs(build, source, head, sorted(protected))
+    git = correction.Git(source)
+    manifest = git.document(head, correction.MANIFEST)
+    # Recompute exact candidate/source replay and review closure at this build head.
+    correction.validate_manifest(git, manifest, head)
+    checker = build.committed_file_identity(source, head, "illusie_volume_I/verify.py")
+    with isolated_checker_import_cache():
+        run = subprocess.run([sys.executable, "-X", "utf8", "-B", "illusie_volume_I/verify.py"], cwd=source,
+                             capture_output=True, text=True, encoding="utf-8", timeout=120)
+        require(run.returncode == 0, "current Illusie mechanical check failed: " + (run.stderr or run.stdout))
+        result = build.strict_json_loads(run.stdout, "current Illusie mechanical check")
+        require(isinstance(result, dict) and result.get("status") == "PASS"
+                and result.get("current_source_sha256") == protected["simplicial.tex"]["sha256"],
+                "current Illusie checker source binding mismatch")
+        modules = ["illusie_volume_I.test_composition", "illusie_volume_I.test_ez"]
+        tests = subprocess.run([sys.executable, "-X", "utf8", "-B", "-m", "unittest", *modules], cwd=source,
+                               capture_output=True, text=True, encoding="utf-8", timeout=120)
+        import re
+        require(tests.returncode == 0 and re.search(r"Ran 5 tests? in ", tests.stderr)
+                and re.search(r"\nOK\s*$", tests.stderr), "current Illusie five finite regression tests failed")
+    require(before == require_exact_inputs(build, source, head, sorted(protected)), "Illusie inputs changed during validation")
+    return {"schema": "unofficial-stacks-project-ai-drafts-current-illusie-correction-binding/v1",
+            "status": "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND", "current_commit": head,
+            "composition_source_commit": composition["composition_source_commit"],
+            "composition_source_tree": composition["composition_source_tree"], "scope": scope,
+            "review": manifest["independent_review"], "checker": checker, "checker_result": result,
+            "regression_tests": {"status": "PASS", "tests_run": 5, "modules": modules}}
+
+
 def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: dict, head: str, *, live: bool):
     head = build.require_commit_object(source, head, "direct checkpoint actual revision")
     tree = build.git(source, "rev-parse", f"{head}^{{tree}}")
-    require(composition.get("schema") == DIRECT_SCHEMA, "direct checkpoint requires typed direct composition")
+    is_ai = composition.get("schema") == AI_COMPOSITION_SCHEMA
+    require(composition.get("schema") in {DIRECT_SCHEMA, AI_COMPOSITION_SCHEMA},
+            "direct checkpoint requires typed direct composition")
     require(build.committed_file_identity(source, head, SEMANTIC_PATH) is not None,
             "post-content receipt topology requires a supported committed semantic successor")
     content = build.require_commit_object(source, checkpoint["content"]["commit"], "EGA historical content")
@@ -294,11 +347,15 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
     semantic, semantic_paths, semantic_protected = verify_historical_semantic(
         build, source, prior, head, inherited_binding)
     current_ega, current_ega_paths = verify_current_ega(build, source, prior, head)
+    current_illusie = verify_current_illusie(build, source, composition, head) if is_ai else None
     # Current inputs are frozen independently of the historical byte inventory.
     paths = set(root_tex + semantic_paths + [logical, "my.bib", "tags/tags",
                 "validation/composition-current.json", THIS_TOOL, THIS_TEST])
     paths.update(path for path, _ in build.EGA_PRECONTENT_TOOL_ROLES)
     paths.update(DIRECT_TOOLS)
+    if is_ai:
+        paths.update(composition["correction_protected_inputs"])
+        paths.update(composition["direct_validation_tools"])
     paths.update(current_ega_paths)
     paths.update(p for p in root_names if "/" not in p and Path(p).suffix.lower() in build.EGA_SHARED_BUILD_SUFFIXES)
     for directory in ("ega", "ai-integrated/registry"):
@@ -319,8 +376,8 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
     require(len({(r["commit"], r["path"]) for r in protected}) == len(protected),
             "duplicate successor protected input")
     binding = {
-        "schema": SCHEMA,
-        "status": STATUS,
+        "schema": SCHEMA_AI if is_ai else SCHEMA,
+        "status": STATUS_AI if is_ai else STATUS,
         "receipt": build.committed_file_identity(source, head, logical),
         "historical_anchor": {"commit": anchor, "tree": historical["post_content"]["head_tree"],
                               "verification": historical},
@@ -347,6 +404,11 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                    "later_public_ega_inputs_preserved_and_current_checker_separately_replayed",
                    "historical_and_current_inputs_frozen_through_final_build_recheck"],
     }
+    if is_ai:
+        binding["ai_source_correction"] = composition["ai_source_correction_scope"]
+        binding["current_illusie_successor"] = current_illusie
+        binding["checks"].extend(["separate_AI_correction_exact_candidate_replay_and_review_closure",
+                                  "current_Illusie_mechanical_checks_and_five_finite_regressions"])
     if live:
         build.require_source_checkpoint_unchanged(source, binding, tuple(protected))
     else:

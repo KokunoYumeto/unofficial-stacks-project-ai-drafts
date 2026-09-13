@@ -32,6 +32,16 @@ from urllib.request import Request, urlopen
 import zipfile
 
 SCHEMA = "unofficial-ai-integrated-stacks-direct-composition/v1"
+AI_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+AI_CHECKPOINT_SCHEMA = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-ai-source-correction-successor/v1"
+AI_CHECKPOINT_STATUS = "PASS_SOURCE_CHECKPOINT_AI_SOURCE_CORRECTION_SUCCESSOR"
+AI_TOOLS = ("tools/ai_source_correction_composition.py", "tools/cumulative_source.py",
+            "tools/cumulative_reader.py", "tools/reconstruct_cumulative.py",
+            "tools/cumulative-master.json", "tools/CUMULATIVE-RECONSTRUCTION.md",
+            "tools/package_cumulative_successor.py", "tools/test_cumulative_packaging.py",
+            "tools/test_ai_source_correction_consumers.py", "tools/test_ai_source_correction_composition.py",
+            "tools/test_ai_source_correction_checkpoint.py", "tools/tests/test_compare_ai_source_correction.py",
+            "tools/package_direct_successor_pdfs.py", "tools/tests/test_package_ai_source_correction.py")
 INDEX_SCHEMA = "unofficial-ai-integrated-stacks-direct-release-index/v1"
 RELEASE_SCHEMA = "unofficial-ai-integrated-stacks-direct-release/v1"
 INDEX = "validation/direct-successor-current.json"
@@ -204,10 +214,84 @@ def tuple_hash(artifacts):
     return hashlib.sha256(("\n".join(lines) + "\n").encode()).hexdigest().upper()
 
 
+def correction_scope(binding):
+    """New scope is explicit; old v1 never silently acquires AI-correction fields."""
+    if binding.get("schema") == SCHEMA:
+        require("ai_source_correction_scope" not in binding and "correction_protected_inputs" not in binding,
+                "old direct composition cannot carry an untyped AI correction")
+        return None
+    require(binding.get("schema") == AI_SCHEMA, "unsupported composition variant")
+    from ai_source_correction_composition import validate_ai_source_correction_scope
+    scope = binding.get("ai_source_correction_scope")
+    validate_ai_source_correction_scope(scope, source_commit=binding["composition_source_commit"],
+                                       source_tree=binding["composition_source_tree"])
+    return scope
+
+
+def correction_inputs(binding):
+    if correction_scope(binding) is None:
+        return {}
+    rows = binding.get("correction_protected_inputs")
+    require(isinstance(rows, dict) and rows, "missing correction protected-input closure")
+    for path, row in rows.items():
+        safe_path(path)
+        require(isinstance(row, dict) and set(row) in ({"bytes", "sha256", "git_blob"}, REFERENCE_KEYS),
+                "untyped correction protected-input identity")
+        if "path" in row:
+            require(row["path"] == path, "correction protected-input path mismatch")
+        number(row["bytes"]); digest(row["sha256"])
+        require(isinstance(row["git_blob"], str) and re.fullmatch(r"[0-9a-f]{40}", row["git_blob"]),
+                "invalid correction protected Git blob")
+    return rows
+
+
+def scoped_tools(binding):
+    return TOOLS + (AI_TOOLS if correction_scope(binding) is not None else ())
+
+
+def index_composition_scope(binding):
+    scope = {"source_commit": binding["composition_source_commit"],
+             "registry_cutoff_commit": binding["registry_cutoff_commit"], "new_overlay_ids": binding["new_overlay_ids"]}
+    correction = correction_scope(binding)
+    if correction is not None:
+        scope["ai_source_correction"] = correction
+    return scope
+
+
+def release_core_readback_paths(binding, refs):
+    return ({row["path"] for row in refs.values()} | set(scoped_tools(binding))
+            | set(SURFACE) | set(correction_inputs(binding)))
+
+
+def validate_public_readback_inventory(readback, required, content_head):
+    require(readback.get("status") == "PASS" and readback.get("anonymous") is True
+            and readback.get("commit") == content_head, "public source readback not complete")
+    rows = readback.get("checked_paths")
+    require(isinstance(rows, list) and all(isinstance(row, dict) and set(row) == REFERENCE_KEYS for row in rows),
+            "invalid public path inventory")
+    names = [safe_path(row["path"]) for row in rows]
+    require(len(names) == len(set(names)) and required <= set(names), "public readback omits required or repeats paths")
+    return rows
+
+
+def validate_correction_build_binding(receipt, binding, stems):
+    correction = correction_scope(binding)
+    if correction is None:
+        return
+    require(len(stems) == 36 and {"schemes", "groupoids", "spaces-perfect", "simplicial"} <= set(stems),
+            "AI correction requires all 36 cumulative chapters")
+    source = receipt.get("source", {})
+    require(source.get("commit") != correction["sealed_predecessor_commit"], "old R48 A/B cannot certify the AI correction")
+    checkpoint = receipt.get("source_checkpoint", {})
+    require(checkpoint.get("schema") == AI_CHECKPOINT_SCHEMA and checkpoint.get("status") == AI_CHECKPOINT_STATUS
+            and exact(checkpoint.get("ai_source_correction"), correction), "missing current AI-correction checkpoint")
+
+
 def check_build_shape(receipt, binding, stems, mutex_validator):
     require(receipt.get("schema") == "unofficial-ai-integrated-stacks-fixed-point-build/v1"
             and receipt.get("status") == "PASS", "build is not a passing full fixed-point run")
     require(exact(receipt.get("composition"), binding), "build direct-composition binding mismatch")
+    validate_correction_build_binding(receipt, binding, stems)
     require(receipt.get("pdfs_committed") is False, "build PDFs must be release assets")
     require(isinstance(receipt.get("environment"), dict) and receipt["environment"], "missing build environment")
     build = receipt.get("build")
@@ -309,10 +393,12 @@ def validate_build(objects, receipt, binding, stems, mutex_validator, checkpoint
     for path in objects.build_inputs(commit, stems):
         protected[path] = objects.ident("HEAD", path)
     tools = binding.get("direct_validation_tools")
-    require(isinstance(tools, dict) and DIRECT_PROTECTED_TOOLS <= set(tools),
+    required_tools = DIRECT_PROTECTED_TOOLS | (set(AI_TOOLS) if correction_scope(binding) is not None else set())
+    require(isinstance(tools, dict) and required_tools <= set(tools),
             "direct validation-tool inventory incomplete")
     protected.update(tools)
-    protected.update({path: objects.ident("HEAD", path) for path in TOOLS})
+    protected.update(correction_inputs(binding))
+    protected.update({path: objects.ident("HEAD", path) for path in scoped_tools(binding)})
     for path, expected in protected.items():
         observed = objects.ident(commit, path)
         require(all(exact(observed.get(k), value) for k, value in expected.items() if k != "path"),
@@ -348,6 +434,11 @@ def validate_visual(visual, build_ref, build, artifacts, affected):
     require(exact(visual.get("build_receipt"), expected_build), "visual build reference mismatch")
     by_stem = {row["stem"]: row for row in artifacts}
     scope = visual.get("scope", {})
+    correction = correction_scope(build["composition"])
+    if correction is not None:
+        require(len(affected) == 3 and set(affected) == {"groupoids", "spaces-perfect", "simplicial"},
+                "AI-correction visual union mismatch")
+        require(exact(scope.get("ai_source_correction"), correction), "visual correction scope mismatch")
     require(scope.get("affected_chapters") == list(affected), "visual affected scope mismatch")
     pages = sum(by_stem[stem]["pages"] for stem in affected)
     require(type(scope.get("full_page_render_count")) is int and scope["full_page_render_count"] == pages
@@ -358,6 +449,8 @@ def validate_visual(visual, build_ref, build, artifacts, affected):
     for stem, values in locus.items():
         require(isinstance(values, list) and values and all(type(p) is int and 1 <= p <= by_stem[stem]["pages"] for p in values)
                 and values == sorted(set(values)), "invalid visual locus pages")
+    if correction is not None:
+        validate_correction_visual_loci(visual, build, by_stem, locus)
     require(number(scope.get("high_resolution_locus_page_count"), 1) == sum(map(len, locus.values())),
             "visual locus count mismatch")
     output = visual.get("artifacts")
@@ -375,6 +468,35 @@ def validate_visual(visual, build_ref, build, artifacts, affected):
     require("Poppler" in str(protocol.get("renderer", "")) and number(protocol.get("full_page_dpi"), 72) >= 72
             and number(protocol.get("high_resolution_dpi"), 144) >= 144
             and protocol.get("render_intermediates_published") is False, "invalid visual render protocol")
+
+
+def validate_correction_visual_loci(visual, build, artifact_by_stem, locus_pages):
+    expected = build["composition"].get("correction_visual_units")
+    required_units = {"eilenberg-zilber-and-grading", "i1.4-localization"}
+    require(isinstance(expected, list) and len(expected) == 2
+            and {row.get("unit_id") for row in expected} == required_units, "correction visual-unit inventory missing")
+    record = visual.get("ai_correction_loci")
+    require(isinstance(record, dict)
+            and record.get("schema") == "unofficial-ai-integrated-stacks-ai-correction-visual-loci/v1"
+            and exact(record.get("source"), build["source"])
+            and record.get("mapping_method") == "exact-current-source-interval-to-final-pdf"
+            and record.get("inspection_performed") is True, "actual correction-locus visual mapping missing")
+    require(exact(record.get("pdf"), {"path": "simplicial.pdf", **{
+        key: artifact_by_stem["simplicial"][key] for key in ("bytes", "sha256", "pages")}}),
+        "correction-locus PDF differs from current Simplicial build")
+    rows = record.get("units")
+    require(isinstance(rows, list) and len(rows) == 2 and {row.get("unit_id") for row in rows} == required_units,
+            "correction-locus unit coverage mismatch")
+    by_id = {row["unit_id"]: row for row in expected}
+    keys = {"unit_id", "source", "start_byte", "end_byte_exclusive", "sha256"}
+    for row in rows:
+        require(set(row) == keys | {"pages"} and exact({key: row[key] for key in keys}, by_id[row["unit_id"]]),
+                "correction-locus source interval differs from reviewed manifest")
+        require(row["source"] == "simplicial.tex", "wrong correction locus source")
+        pages = row.get("pages")
+        require(isinstance(pages, list) and pages and pages == sorted(set(pages))
+                and all(type(page) is int and page in locus_pages["simplicial"] for page in pages),
+                "corrected unit pages are absent from high-resolution inspection")
 
 
 def validate_repro(repro, first_ref, second_ref, first, second, artifacts, binding, comparator):
@@ -400,6 +522,9 @@ def validate_repro(repro, first_ref, second_ref, first, second, artifacts, bindi
     expected_scope = {"admitted_errata": "R1-R" + match.group(1), "registry_cutoff_commit": binding["registry_cutoff_commit"],
                       "source_commit": first["source"]["commit"], "source_tree": first["source"]["tree"],
                       "composition_receipt": COMPOSITION, "composition_receipt_sha256": binding["receipt_sha256"]}
+    correction = correction_scope(binding)
+    if correction is not None:
+        expected_scope["ai_source_correction"] = correction
     require(exact(repro.get("scope"), expected_scope), "reproducibility scope mismatch")
     method = {"execution_model": "independent_linked_worktrees", "first_worktree_kind": "linked", "second_worktree_kind": "linked",
               "builder_path": first["builder"]["path"], "builder_git_blob": first["builder"]["git_blob"],
@@ -468,6 +593,124 @@ def check_zip_pdfs(handle, members, artifact_by_stem):
             require(count == expected["bytes"] and hasher.hexdigest().upper() == expected["sha256"], "ZIP PDF identity mismatch")
 
 
+def validate_cumulative_reader_descriptor(row, artifacts):
+    require(row.get("name") == "01-cumulative-reader.pdf" and row.get("role") == "cumulative_reader",
+            "first release asset must be the cumulative reader PDF")
+    info = row.get("cumulative_reader")
+    require(isinstance(info, dict) and info.get("scope") == "36-chapter cumulative release, not the full Stacks Project"
+            and info.get("chapter_count") == len(artifacts) == 36, "cumulative reader scope mismatch")
+    chapters = info.get("chapters")
+    require(isinstance(chapters, list) and len(chapters) == len(artifacts), "cumulative chapter inventory incomplete")
+    next_page = 1
+    for chapter, artifact in zip(chapters, artifacts):
+        require(chapter.get("stem") == artifact["stem"] and isinstance(chapter.get("title"), str)
+                and chapter["title"].strip(), "cumulative chapter identity/order mismatch")
+        require(chapter.get("start_page") == next_page and chapter.get("pages") == artifact["pages"]
+                and chapter.get("end_page") == next_page + artifact["pages"] - 1,
+                "cumulative chapter range incomplete or overlapping")
+        require(exact(chapter.get("source_pdf"), {k: artifact[k] for k in ("bytes", "sha256")}),
+                "cumulative chapter differs from verified build PDF")
+        next_page += artifact["pages"]
+    require(type(info.get("total_pages")) is int and info["total_pages"] == next_page - 1,
+            "cumulative reader total mismatch")
+    return info
+
+
+def check_cumulative_reader(handle, info):
+    from pypdf import PdfReader
+    reader = PdfReader(handle)
+    require(not reader.is_encrypted and len(reader.pages) == info["total_pages"],
+            "public cumulative reader is encrypted or has the wrong page count")
+    require(all(float(page.mediabox.width) > 0 and float(page.mediabox.height) > 0 for page in reader.pages),
+            "cumulative reader has invalid page geometry")
+
+
+def validate_source_archive_descriptor(objects, row, content_head, stems, build_source_commit):
+    require(row.get("name") == "02-full-cumulative-editable-source.zip"
+            and row.get("role") == "full_cumulative_editable_source",
+            "second release asset must be the full cumulative editable-source ZIP")
+    descriptor = row.get("source_archive")
+    require(isinstance(descriptor, dict) and set(descriptor) == {"source_inventory", "metadata_member"}
+            and descriptor["metadata_member"] == "SOURCE-INVENTORY.json", "invalid native-source archive descriptor")
+    reference = descriptor["source_inventory"]
+    require(isinstance(reference, dict) and set(reference) == REFERENCE_KEYS | {"commit"},
+            "native-source inventory lacks exact committed identity")
+    path = safe_path(reference["path"])
+    inventory_commit = objects.commit(reference["commit"])
+    objects.linear(inventory_commit, content_head)
+    expected = {key: reference[key] for key in REFERENCE_KEYS - {"path"}}
+    require(exact(objects.ident(inventory_commit, path), expected)
+            and exact(objects.ident(content_head, path), expected),
+            "native-source inventory commit/content identity drift")
+    raw = objects.blob(content_head, path)
+    inventory = parse_json(raw)
+    require(inventory.get("schema") == "native-cumulative-source-inventory/v1"
+            and inventory.get("authority_commit") == AUTHORITY
+            and inventory.get("chapter_stems") == list(stems), "native-source inventory scope mismatch")
+    source_commit = objects.commit(inventory.get("source_commit"))
+    require(source_commit == build_source_commit, "native source does not match exact fresh build source")
+    objects.linear(source_commit, content_head)
+    # The package module owns the deterministic source-closure policy; its pure
+    # verifier must derive required Git paths, not trust a checked=true flag.
+    from cumulative_source import expected_source_members
+    require(exact(inventory.get("closure"), {"policy": "all-committed-native-inputs-plus-build-support", "checked": True}),
+            "native-source inventory closure policy mismatch")
+    members = inventory.get("members")
+    require(isinstance(members, list) and members, "empty cumulative native-source archive")
+    names = []
+    for member in members:
+        require(isinstance(member, dict) and set(member) == {"archive_path", "git_commit", "git_path", "git_blob", "bytes", "sha256"},
+                "untyped native-source member")
+        name, git_path = safe_path(member["archive_path"]), safe_path(member["git_path"])
+        names.append(name)
+        revision = objects.commit(member["git_commit"])
+        require(revision in {source_commit, AUTHORITY}, "native-source member outside declared source/authority revisions")
+        require(name == ("baseline/" if revision == AUTHORITY else "current/") + git_path,
+                "native source and printed witness are not separated by exact paths")
+        require(exact(objects.ident(revision, git_path), {key: member[key] for key in ("bytes", "sha256", "git_blob")}),
+                "native-source member Git identity mismatch")
+        if revision == source_commit:
+            require(objects.ident(content_head, git_path) == objects.ident(source_commit, git_path),
+                    "native source changed before publication")
+    require(len(names) == len(set(names)) and descriptor["metadata_member"] not in names,
+            "duplicate native-source members")
+    expected_members = expected_source_members(objects.root, source_commit, AUTHORITY, list(stems))
+    require(isinstance(expected_members, dict)
+            and exact({row["archive_path"]: row for row in members}, expected_members),
+            "native-source inventory does not equal recomputed cumulative source closure")
+    require(inventory.get("master_path") == "current/tools/cumulative-master.json"
+            and inventory["master_path"] in expected_members,
+            "cumulative editable master is absent")
+    return inventory, raw, path
+
+
+def check_native_source_zip(handle, inventory, inventory_raw):
+    with zipfile.ZipFile(handle) as archive:
+        names = archive.namelist()
+        by_name = {member["archive_path"]: member for member in inventory["members"]}
+        require(len(names) == len(set(names)) and set(names) == set(by_name) | {"SOURCE-INVENTORY.json"},
+                "native-source ZIP member inventory incomplete or unexpected")
+        metadata = archive.getinfo("SOURCE-INVENTORY.json")
+        require(not metadata.flag_bits & 1 and metadata.file_size == len(inventory_raw),
+                "native-source ZIP inventory member size/encryption mismatch")
+        require(archive.read(metadata) == inventory_raw, "native-source ZIP embedded inventory differs")
+        for name, expected in by_name.items():
+            info = archive.getinfo(name)
+            require(not info.is_dir() and not info.flag_bits & 1 and info.file_size == expected["bytes"],
+                    "native-source ZIP member type/size/encryption mismatch")
+            count, hasher = 0, hashlib.sha256()
+            with archive.open(info) as stream:
+                while True:
+                    data = stream.read(min(1024 * 1024, expected["bytes"] - count + 1))
+                    if not data:
+                        break
+                    count += len(data)
+                    require(count <= expected["bytes"], "native-source member exceeds declared bound")
+                    hasher.update(data)
+            require(count == expected["bytes"] and hasher.hexdigest().upper() == expected["sha256"],
+                    "native-source ZIP member byte identity mismatch")
+
+
 def validate_release(objects, release, index, documents, binding, artifacts):
     require(release.get("schema") == RELEASE_SCHEMA and release.get("status") == "PUBLICATION_COMPLETE", "direct release is not complete")
     require(release.get("repository") == REPOSITORY and release.get("default_branch") == "main", "wrong public destination")
@@ -476,13 +719,27 @@ def validate_release(objects, release, index, documents, binding, artifacts):
     scope = {"new_overlay_ids": binding["new_overlay_ids"], "registry_cutoff_commit": binding["registry_cutoff_commit"],
              "registered_overlays": binding["registered_overlays"], "registered_stable_ids": binding["registered_stable_ids"],
              "composition_source_commit": binding["composition_source_commit"]}
+    correction = correction_scope(binding)
+    if correction is not None:
+        scope["ai_source_correction"] = correction
     require(exact(release.get("scope"), scope), "release scope mismatch")
     content, validation = release.get("content", {}), release.get("validation_head", {})
     content_head, validation_head = objects.commit(content.get("commit")), objects.commit(validation.get("commit"))
     objects.tree(content_head, content.get("tree")); objects.tree(validation_head, validation.get("tree"))
     objects.linear(binding["composition_source_commit"], content_head); objects.linear(content_head, validation_head)
     head = objects.text("rev-parse", "HEAD"); objects.linear(validation_head, head)
-    required = {row["path"] for row in refs.values()} | set(TOOLS) | set(SURFACE)
+    required = release_core_readback_paths(binding, refs)
+    packaging = None
+    if correction is not None:
+        packaged_assets = release.get("github_release", {}).get("assets")
+        require(isinstance(packaged_assets, list) and len(packaged_assets) >= 2,
+                "cumulative PDF/source release assets missing")
+        reader_descriptor = validate_cumulative_reader_descriptor(packaged_assets[0], artifacts)
+        source_inventory, source_inventory_raw, source_inventory_path = validate_source_archive_descriptor(
+            objects, packaged_assets[1], content_head, binding["required_build_stems"],
+            documents["build"][0]["source"]["commit"])
+        required.add(source_inventory_path)
+        packaging = (reader_descriptor, source_inventory, source_inventory_raw)
     required.update(objects.build_inputs(content_head, binding["required_build_stems"]))
     required.add("validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json")
     required.update(binding[f"registry_{name}_path"] for name in ("overlays", "leases"))
@@ -504,12 +761,7 @@ def validate_release(objects, release, index, documents, binding, artifacts):
                     walk(value)
         walk(manifest)
     readback = release.get("public_readback", {})
-    require(readback.get("status") == "PASS" and readback.get("anonymous") is True and readback.get("commit") == content_head,
-            "public source readback not complete")
-    rows = readback.get("checked_paths")
-    require(isinstance(rows, list) and all(isinstance(row, dict) and set(row) == REFERENCE_KEYS for row in rows), "invalid public path inventory")
-    names = [safe_path(row["path"]) for row in rows]
-    require(len(names) == len(set(names)) and required <= set(names), "public readback omits required or repeats paths")
+    rows = validate_public_readback_inventory(readback, required, content_head)
     for row in rows:
         path = row["path"]
         require(exact(objects.ident(content_head, path), {k: row[k] for k in REFERENCE_KEYS - {"path"}}), "readback local identity mismatch")
@@ -555,6 +807,17 @@ def validate_release(objects, release, index, documents, binding, artifacts):
     assets, remote_assets = github.get("assets"), remote_release.get("assets")
     require(isinstance(assets, list) and assets and isinstance(remote_assets, list), "missing public release assets")
     require(len(assets) == len(remote_assets), "release asset inventory count mismatch")
+    if correction is not None:
+        required_order = ["01-cumulative-reader.pdf", "02-full-cumulative-editable-source.zip"]
+        require([row.get("name") for row in assets[:2]] == required_order
+                and [row.get("name") for row in remote_assets[:2]] == required_order,
+                "public release file list does not put cumulative reader first and full source second")
+        body = remote_release.get("body")
+        require(isinstance(body, str), "public release lacks human-readable ordered downloads")
+        links = [f"https://github.com/{REPOSITORY}/releases/download/{quote(tag, safe='')}/{name}"
+                 for name in required_order]
+        require(all(link in body for link in links) and body.index(links[0]) < body.index(links[1]),
+                "public release download links omit/reverse cumulative PDF and full source")
     seen, pdf_stems = set(), []
     by_stem = {row["stem"]: row for row in artifacts}
     for row in assets:
@@ -577,7 +840,14 @@ def validate_release(objects, release, index, documents, binding, artifacts):
         if members:
             require(name.endswith(".zip"), "PDF members require ZIP asset")
             pdf_stems.extend(members.values())
-        public_object(url, row, (lambda handle, m=members: check_zip_pdfs(handle, m, by_stem)) if members else None)
+        inspect = (lambda handle, m=members: check_zip_pdfs(handle, m, by_stem)) if members else None
+        if correction is not None and name == "01-cumulative-reader.pdf":
+            require(not members and row.get("pdf_stem") is None, "cumulative reader confused with individual PDF")
+            inspect = lambda handle: check_cumulative_reader(handle, packaging[0])
+        if correction is not None and name == "02-full-cumulative-editable-source.zip":
+            require(not members and row.get("pdf_stem") is None, "editable-source ZIP confused with PDF ZIP")
+            inspect = lambda handle: check_native_source_zip(handle, packaging[1], packaging[2])
+        public_object(url, row, inspect)
     require(set(pdf_stems) == set(by_stem), "published PDF coverage is incomplete")
     repository = public_json(f"https://api.github.com/repos/{REPOSITORY}")
     require(repository.get("id") == REPOSITORY_ID and repository.get("private") is False
@@ -604,13 +874,20 @@ def validate_direct_release(root, build_path, pre_publication=False):
         requested = requested.resolve().relative_to(root).as_posix() if requested.is_absolute() else requested.as_posix()
         initial = objects.text("rev-parse", "HEAD")
         index, index_raw, documents = validate_index(objects, safe_path(requested), pre_publication)
-        binding, stems, affected = load_direct_composition(root, Path(COMPOSITION))
-        require(binding.get("schema") == SCHEMA and binding.get("authority_commit") == AUTHORITY
+        composition_schema = documents["composition"][0].get("schema")
+        if composition_schema == AI_SCHEMA:
+            from ai_source_correction_composition import load_ai_source_correction, recheck_ai_source_correction_tools
+            binding, stems, affected = load_ai_source_correction(root, Path(COMPOSITION))
+            recheck_composition = recheck_ai_source_correction_tools
+        else:
+            require(composition_schema == SCHEMA, "unsupported direct composition variant")
+            binding, stems, affected = load_direct_composition(root, Path(COMPOSITION))
+            recheck_composition = recheck_direct_validation_tools
+        require(binding.get("schema") == composition_schema and binding.get("authority_commit") == AUTHORITY
                 and binding.get("authority_tree") == AUTHORITY_TREE, "unsupported direct composition authority/schema")
-        require(exact(index.get("composition_scope"), {"source_commit": binding["composition_source_commit"],
-                "registry_cutoff_commit": binding["registry_cutoff_commit"], "new_overlay_ids": binding["new_overlay_ids"]}),
+        require(exact(index.get("composition_scope"), index_composition_scope(binding)),
                 "direct index composition scope mismatch")
-        require(documents["composition"][0].get("schema") == SCHEMA, "index references nondirect composition")
+        require(documents["composition"][0].get("schema") == binding["schema"], "index references different composition variant")
         first, second = documents["build"][0], documents["second_build"][0]
         artifacts = validate_build(objects, first, binding, stems, validate_machine_wide_tex_mutex,
                                    validate_source_checkpoint, validate_direct_source_checkpoint_at, validate_public_capture_receipt)
@@ -619,14 +896,14 @@ def validate_direct_release(root, build_path, pre_publication=False):
         validate_visual(documents["visual_qa"][0], index["references"]["build"], first, artifacts, affected)
         validate_repro(documents["reproducibility"][0], index["references"]["build"], index["references"]["second_build"],
                        first, second, artifacts, binding, compare_receipts)
-        for path in (*TOOLS, *SURFACE):
+        for path in (*scoped_tools(binding), *SURFACE, *correction_inputs(binding)):
             objects.clean(path)
         if not pre_publication:
             validate_release(objects, documents["release"][0], index, documents, binding, artifacts)
         require(objects.text("rev-parse", "HEAD") == initial and objects.clean(INDEX) == index_raw, "validation inputs moved")
         for role, ref in index["references"].items():
             reference(objects, ref, role)
-        recheck_direct_validation_tools(root, binding)
+        recheck_composition(root, binding)
     except (OSError, ValueError, KeyError, TypeError, AttributeError, ImportError, RuntimeError,
             subprocess.SubprocessError, zipfile.BadZipFile) as exc:
         print("Direct successor release validation: FAIL\n- " + str(exc), file=sys.stderr)

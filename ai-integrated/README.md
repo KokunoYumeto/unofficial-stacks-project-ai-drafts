@@ -21,16 +21,19 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R47 and the Verdier insertion**: 48
-admitted overlays with 1,292 stable units. Admission and source composition
+The cumulative source includes **R1–R48 and the Verdier insertion**: 49
+admitted overlays with 1,316 stable units. Admission and source composition
 are separate checks; the [current composition receipt](../validation/composition-current.json)
 binds the registry cutoff and the applied operations. The
 [chapter-by-chapter comparison](changes/index.html) shows original and
 replacement text, rather than asking readers to infer changes from counts.
 
 The [R47 and Illusie fixed-point build](../validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json)
-records the cumulative build, and the [validation guide](../validation/README.md)
-distinguishes source, build and release evidence. Five missing historical
+records historical artifact identities, not R48; its later amended
+Simplicial source binding is qualified by the
+[build-history correction](../validation/illusie-build-history-correction-2026-09-13.md). The
+[validation guide](../validation/README.md) distinguishes the current source,
+build and release evidence. Five missing historical
 R28 supporting files have been [restored byte-for-byte](../validation/r28-evidence-transport-repair-2026-09-10.json);
 neither its admitted manifest nor the Smoothing correction was rewritten.
 
