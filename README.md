@@ -50,11 +50,24 @@ human-maintained Stacks corpus.
 
 [Read the draft PDFs](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest) ·
 [Browse the source](chapters.tex) ·
+[Read proposed corrections](PROPOSED_CORRECTIONS.md) ·
 [Compare with Stacks](CHANGES_FROM_UPSTREAM.md) ·
 [Detailed status](STATUS.md) ·
 [Development program](ROADMAP.md) ·
 [Sources and history](PROVENANCE.md) ·
 [Validation](VALIDATION.md)
+
+## Proposed corrections — separate from additions
+
+The [proposed-corrections log](PROPOSED_CORRECTIONS.md) gives the original
+passage, the smallest proposed replacement, and a short argument that a reader
+can check. It distinguishes mathematical errors from typos, pending proposals
+from changes already in this draft, and duplicate or withdrawn suggestions.
+These are **AI-reviewed proposals, not expert-approved or officially adopted
+Stacks errata**. The readable log is being expanded; its stated coverage is
+not a claim to cover every finding from the translations or historical work.
+The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
+alongside it. Neither list treats an added theorem as an upstream correction.
 
 ## What is actually in the draft?
 
