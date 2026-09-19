@@ -73,14 +73,15 @@ it does not change the separately recorded EGA source-order cursor.
 
 ## Current maintenance baseline
 
-The last verified public main is
-`f73b18165c7162b8386de06cc3c50bd4ced745b6`, containing errata R39 and
-EGA I §6.6.4. Local R40–R47 composition is committed at
-`b3c4a28c053dbbd45670dd19cf0dcc45063190dc`: 177 exact corrections across five
-chapters, with independent source replay complete. Fresh cumulative build,
-visual and publication gates remain open. EGA I §6.6.5 has locally validated
-existing coverage; its next source unit is §6.6.6. See [status](STATUS.md) and
-[validation](VALIDATION.md) for the separate local/public states.
+Current composition and release identities are recorded in
+[status](STATUS.md), [validation](VALIDATION.md), and the
+[composition receipt](validation/composition-current.json). The R33 and other
+earlier release identities below are historical, not the current public head.
+The EGA comparison has progressed through I §7.4.7 in its sequential work,
+with coverage-first notes for [§8.1](ega/coverage/ega-i-8-1.md) and
+[§9](ega/coverage/ega-i-9.md). Those coverage notes do not claim that every
+intervening source object has been integrated. Further additions are chosen
+from verified gaps, rather than by rewriting already-covered results.
 
 ### Preserved R33 baseline
 

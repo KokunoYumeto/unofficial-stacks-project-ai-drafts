@@ -69,6 +69,25 @@ not a claim to cover every finding from the translations or historical work.
 The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
 alongside it. Neither list treats an added theorem as an upstream correction.
 
+## Reading Stacks in other languages
+
+Separately maintained AI-produced translations offer another route into the
+Stacks Project for readers across research communities:
+
+- [Chinese](https://github.com/KokunoYumeto/stacks-zh-hans-cn) · [translation-choice log](https://github.com/KokunoYumeto/stacks-zh-hans-cn/blob/9b1fec35dbf684e7c388eafb31c70a82986d23f2/review/translation-choices/README.md).
+- [Japanese](https://github.com/KokunoYumeto/stacks-ja-jp) · [translation-choice log](https://github.com/KokunoYumeto/stacks-ja-jp/blob/72d82226a88909698e7902614e9c2d1f428c9714/review/translation-choices/README.md).
+- [Korean](https://github.com/KokunoYumeto/stacks-ko-kr) · [translation-choice log](https://github.com/KokunoYumeto/stacks-ko-kr/blob/d0d0958de85104bb97c08895c4bd78ee14bbee04/review/translation-choices/README.md).
+
+These translations have not received comprehensive expert human review.
+Corrections to terminology, meaning, and exposition from knowledgeable readers
+are warmly welcome. The linked logs distinguish consulted evidence from
+provisional choices and historical records; their present scope is selected
+Chapter 11 choices, not every choice throughout Stacks.
+
+These are separate translation editions, not translated versions of every
+addition in this AI-draft repository. Translation choices, proposed corrections
+to the English source, and new mathematical exposition have separate records.
+
 ## What is actually in the draft?
 
 The examples below name classical results and explain what was added here.
@@ -154,6 +173,10 @@ across EGA before choosing further additions. The separate
 [§8.1 comparison](ega/coverage/ega-i-8-1.md) identifies three results already
 supplied by Stacks and two candidate combined statements; it does not claim
 five new theorems or complete coverage of EGA.
+The [§9 comparison](ega/coverage/ega-i-9.md) now records 42 correspondences
+for quasi-coherent sheaves, extension, and scheme-theoretic images, with two
+explicit wording qualifications. It reuses existing Stacks results instead
+of presenting 44 comparison objects as 44 new theorems.
 The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,

@@ -1,0 +1,2696 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA I section 9: quasi-coherent sheaves and scheme-theoretic images",
+  "date": "2026-09-19",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "6402f0425425fb5d3bd1c2f206e3b4bab1e28e47",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "Reviewed coverage comparison; no new root theorem or official erratum admitted",
+  "authority_boundary": "English is the discovery witness. French statement binding is to the independently fetched repository transcription at its exact pinned commit, not to a scanned original; no facsimile collation, translation-fidelity certification, or printed erratum admission is claimed.",
+  "review_boundary": "Adoption of a preserved independent AI body review, with exact-byte source/target replay at publication. No new independent reviewer, expert approval, formal proof or whole-EGA completion is claimed.",
+  "counts": {
+    "reviewed": 44,
+    "existing_exact": 3,
+    "existing_stronger": 5,
+    "existing_derived": 34,
+    "partial": 2,
+    "unmatched_in_bounded_search": 0,
+    "unassessed": 0,
+    "matched_total": 42,
+    "matched_proposition_theorem_lemma_corollary_environments": 38,
+    "matched_definitions": 2,
+    "matched_substantive_remarks": 2
+  },
+  "sources": {
+    "fr": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex",
+      "bytes": 53127,
+      "sha256": "976E4873EA52E77E74E942B2FC75AD986A3D5EDFF4F6188B4F5776C4A0464091",
+      "role": "Separately pinned French transcription; all 44 numbered statement bodies read and compared; not a facsimile collation"
+    },
+    "en": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-en/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex",
+      "bytes": 48445,
+      "sha256": "C17DE68331422B09D8FA6B3E4E7FAC639F73A36F22AFD224DF0ED1EB7407C6E8",
+      "role": "English discovery witness; complete numbered bodies and proofs read"
+    }
+  },
+  "target_files": {
+    "modules.tex": {
+      "bytes": 211777,
+      "sha256": "BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex"
+    },
+    "schemes.tex": {
+      "bytes": 189721,
+      "sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex"
+    },
+    "properties.tex": {
+      "bytes": 213401,
+      "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex"
+    },
+    "morphisms.tex": {
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex"
+    },
+    "coherent.tex": {
+      "bytes": 357482,
+      "sha256": "D219CBA93EA84084A35BE94B3454E316C54037AF0BFBF795A1824543D9440BBC",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/coherent.tex"
+    },
+    "sheaves.tex": {
+      "bytes": 188321,
+      "sha256": "48CCCB70E6BC5E4040B4F8D0DFAD6788182370EDA9C0CE8FC37705774B8C1FB3",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/sheaves.tex"
+    },
+    "algebra.tex": {
+      "bytes": 1808110,
+      "sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/algebra.tex"
+    },
+    "topology.tex": {
+      "bytes": 245067,
+      "sha256": "38D2E107901BE84FA1EAD3587DB2FBFC50589914D49DB0ED5937C14D9B934F34",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/topology.tex"
+    },
+    "tags/tags": {
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/tags/tags"
+    },
+    "constructions.tex": {
+      "bytes": 209942,
+      "sha256": "CFEBD4FE907082611F346447285454E473FC35F68ED3F10494C412547CF80FAD",
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/constructions.tex"
+    }
+  },
+  "target_registry": {
+    "tensor": {
+      "file": "modules.tex",
+      "label": "lemma-tensor-product-permanence",
+      "tag": "01CE",
+      "read_lines": [
+        2577,
+        2662
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CE",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L2577-L2662"
+    },
+    "hom": {
+      "file": "modules.tex",
+      "label": "lemma-internal-hom-locally-kernel-direct-sum",
+      "tag": "01CQ",
+      "read_lines": [
+        3896,
+        3917
+      ],
+      "proof_detail_read_lines": [
+        3778,
+        3866
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CQ",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L3896-L3917",
+      "proof_detail_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L3778-L3866"
+    },
+    "qc": {
+      "file": "schemes.tex",
+      "label": "section-quasi-coherent",
+      "tag": "01LA",
+      "read_lines": [
+        5065,
+        5113
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01LA",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L5065-L5113"
+    },
+    "pullqc": {
+      "file": "modules.tex",
+      "label": "lemma-pullback-quasi-coherent",
+      "tag": "01BG",
+      "read_lines": [
+        1111,
+        1150
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01BG",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L1111-L1150"
+    },
+    "pullft": {
+      "file": "modules.tex",
+      "label": "lemma-pullback-finite-type",
+      "tag": "01B6",
+      "read_lines": [
+        833,
+        866
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01B6",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L833-L866"
+    },
+    "affine": {
+      "file": "schemes.tex",
+      "label": "lemma-equivalence-quasi-coherent",
+      "tag": "01IB",
+      "read_lines": [
+        1471,
+        1517
+      ],
+      "proof_detail_read_lines": [
+        1523,
+        1560
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01IB",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1471-L1517",
+      "proof_detail_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1523-L1560"
+    },
+    "afftensor": {
+      "file": "schemes.tex",
+      "label": "lemma-widetilde-constructions",
+      "tag": "01I8",
+      "read_lines": [
+        1183,
+        1310
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01I8",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1183-L1310"
+    },
+    "affpull": {
+      "file": "schemes.tex",
+      "label": "lemma-widetilde-pullback",
+      "tag": "01I9",
+      "read_lines": [
+        1312,
+        1340
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01I9",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1312-L1340"
+    },
+    "compose": {
+      "file": "sheaves.tex",
+      "label": "lemma-push-pull-composition-modules",
+      "tag": "0097",
+      "read_lines": [
+        3258,
+        3271
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/0097",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/sheaves.tex#L3258-L3271"
+    },
+    "pulltensor": {
+      "file": "modules.tex",
+      "label": "lemma-tensor-product-pullback",
+      "tag": "01CD",
+      "read_lines": [
+        2530,
+        2542
+      ],
+      "proof_note": "Target explicitly omits proof; section definition and affine/stalk computations supply the comparison.",
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CD",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L2530-L2542"
+    },
+    "tensorformal": {
+      "file": "modules.tex",
+      "label": "section-tensor-product",
+      "tag": "01CA",
+      "read_lines": [
+        2403,
+        2462
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CA",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L2403-L2462"
+    },
+    "stalktensor": {
+      "file": "modules.tex",
+      "label": "lemma-stalk-tensor-product",
+      "tag": "01CB",
+      "read_lines": [
+        2464,
+        2483
+      ],
+      "proof_note": "Target explicitly omits proof.",
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CB",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L2464-L2483"
+    },
+    "stalkpull": {
+      "file": "sheaves.tex",
+      "label": "lemma-stalk-pullback-modules",
+      "tag": "0098",
+      "read_lines": [
+        3312,
+        3334
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/0098",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/sheaves.tex#L3312-L3334"
+    },
+    "support": {
+      "file": "algebra.tex",
+      "label": "lemma-support-base-change",
+      "tag": "0BUR",
+      "read_lines": [
+        9470,
+        9502
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/0BUR",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/algebra.tex#L9470-L9502"
+    },
+    "nak": {
+      "file": "algebra.tex",
+      "label": "lemma-NAK",
+      "tag": "00DV",
+      "read_lines": [
+        3674,
+        3755
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/00DV",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/algebra.tex#L3674-L3755"
+    },
+    "qsep": {
+      "file": "schemes.tex",
+      "label": "lemma-characterize-quasi-separated",
+      "tag": "01KO",
+      "read_lines": [
+        4457,
+        4487
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01KO",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L4457-L4487"
+    },
+    "push": {
+      "file": "schemes.tex",
+      "label": "lemma-push-forward-quasi-coherent",
+      "tag": "01LC",
+      "read_lines": [
+        5118,
+        5169
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01LC",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L5118-L5169"
+    },
+    "noethqc": {
+      "file": "topology.tex",
+      "label": "lemma-Noetherian-quasi-compact",
+      "tag": "04ZA",
+      "read_lines": [
+        1989,
+        2013
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/04ZA",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/topology.tex#L1989-L2013"
+    },
+    "localnoeth": {
+      "file": "topology.tex",
+      "label": "lemma-quasi-compact-locally-Noetherian-Noetherian",
+      "tag": "04ZB",
+      "read_lines": [
+        2015,
+        2024
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/04ZB",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/topology.tex#L2015-L2024"
+    },
+    "ssections": {
+      "file": "properties.tex",
+      "label": "lemma-invert-s-sections",
+      "tag": "01PW",
+      "read_lines": [
+        2265,
+        2354
+      ],
+      "context_read_lines": [
+        2240,
+        2263
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01PW",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L2265-L2354",
+      "context_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L2240-L2263"
+    },
+    "fsections": {
+      "file": "properties.tex",
+      "label": "lemma-invert-f-sections",
+      "tag": "01P7",
+      "read_lines": [
+        2170,
+        2238
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01P7",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L2170-L2238"
+    },
+    "power": {
+      "file": "coherent.tex",
+      "label": "lemma-power-ideal-kills-sheaf",
+      "tag": "01Y9",
+      "read_lines": [
+        2732,
+        2749
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01Y9",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/coherent.tex#L2732-L2749"
+    },
+    "closedmodule": {
+      "file": "morphisms.tex",
+      "label": "lemma-i-star-equivalence",
+      "tag": "01QY",
+      "read_lines": [
+        385,
+        435
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01QY",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L385-L435"
+    },
+    "extendtriv": {
+      "file": "properties.tex",
+      "label": "lemma-extend-trivial",
+      "tag": "01PE",
+      "read_lines": [
+        2905,
+        2956
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01PE",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L2905-L2956"
+    },
+    "extend": {
+      "file": "properties.tex",
+      "label": "lemma-extend",
+      "tag": "01PF",
+      "read_lines": [
+        2958,
+        3007
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01PF",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L2958-L3007"
+    },
+    "colimit": {
+      "file": "properties.tex",
+      "label": "lemma-quasi-coherent-colimit-finite-type",
+      "tag": "01PG",
+      "read_lines": [
+        3009,
+        3033
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01PG",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L3009-L3033"
+    },
+    "glue": {
+      "file": "sheaves.tex",
+      "label": "lemma-glue-sheaves-structures",
+      "tag": "00AM",
+      "read_lines": [
+        5325,
+        5357
+      ],
+      "proof_detail_read_lines": [
+        5264,
+        5323
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/00AM",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/sheaves.tex#L5325-L5357",
+      "proof_detail_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/sheaves.tex#L5264-L5323"
+    },
+    "ftdef": {
+      "file": "modules.tex",
+      "label": "definition-finite-type",
+      "tag": "01B5",
+      "read_lines": [
+        820,
+        831
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01B5",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L820-L831"
+    },
+    "globalgen": {
+      "file": "modules.tex",
+      "label": "lemma-globally-generated",
+      "tag": "01AN",
+      "read_lines": [
+        367,
+        381
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01AN",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L367-L381"
+    },
+    "image": {
+      "file": "morphisms.tex",
+      "label": "lemma-scheme-theoretic-image",
+      "tag": "01R6",
+      "read_lines": [
+        803,
+        821
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01R6",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L803-L821"
+    },
+    "imagedef": {
+      "file": "morphisms.tex",
+      "label": "definition-scheme-theoretic-image",
+      "tag": "01R7",
+      "read_lines": [
+        823,
+        828
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01R7",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L823-L828"
+    },
+    "imageqc": {
+      "file": "morphisms.tex",
+      "label": "lemma-quasi-compact-scheme-theoretic-image",
+      "tag": "01R8",
+      "read_lines": [
+        848,
+        884
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01R8",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L848-L884"
+    },
+    "equalizer": {
+      "file": "schemes.tex",
+      "label": "lemma-where-are-they-equal",
+      "tag": "01KM",
+      "read_lines": [
+        4432,
+        4455
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01KM",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L4432-L4455"
+    },
+    "imagereduced": {
+      "file": "morphisms.tex",
+      "label": "lemma-scheme-theoretic-image-reduced",
+      "tag": "056B",
+      "read_lines": [
+        976,
+        988
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/056B",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L976-L988"
+    },
+    "immclosure": {
+      "file": "morphisms.tex",
+      "label": "lemma-quasi-compact-immersion",
+      "tag": "01RG",
+      "read_lines": [
+        1138,
+        1170
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01RG",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L1138-L1170"
+    },
+    "density": {
+      "file": "morphisms.tex",
+      "label": "lemma-characterize-scheme-theoretically-dense",
+      "tag": "01RE",
+      "read_lines": [
+        1099,
+        1119
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01RE",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L1099-L1119"
+    },
+    "qcdef": {
+      "file": "modules.tex",
+      "label": "definition-quasi-coherent",
+      "tag": "01BE",
+      "read_lines": [
+        1046,
+        1064
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01BE",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L1046-L1064"
+    },
+    "cohdef": {
+      "file": "modules.tex",
+      "label": "definition-coherent",
+      "tag": "01BV",
+      "read_lines": [
+        1617,
+        1638
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01BV",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L1617-L1638"
+    },
+    "cohfp": {
+      "file": "modules.tex",
+      "label": "lemma-coherent-finite-presentation",
+      "tag": "01BW",
+      "read_lines": [
+        1640,
+        1673
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01BW",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L1640-L1673"
+    },
+    "cohring": {
+      "file": "modules.tex",
+      "label": "lemma-coherent-structure-sheaf",
+      "tag": "01BZ",
+      "read_lines": [
+        1822,
+        1836
+      ],
+      "proof_note": "Target explicitly omits proof; finite presentation and coherent-kernel criterion read separately.",
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01BZ",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L1822-L1836"
+    },
+    "noethalg": {
+      "file": "algebra.tex",
+      "label": "lemma-Noetherian-permanence",
+      "tag": "00FN",
+      "read_lines": [
+        6048,
+        6083
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/00FN",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/algebra.tex#L6048-L6083"
+    },
+    "noethmodule": {
+      "file": "algebra.tex",
+      "label": "lemma-Noetherian-basic",
+      "tag": "00IK",
+      "read_lines": [
+        12211,
+        12242
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/00IK",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/algebra.tex#L12211-L12242"
+    },
+    "algcolimit": {
+      "file": "properties.tex",
+      "label": "lemma-algebra-directed-colimit-finite-type",
+      "tag": "05JT",
+      "read_lines": [
+        3460,
+        3482
+      ],
+      "proof_detail_read_lines": [
+        3400,
+        3458
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/05JT",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L3460-L3482",
+      "proof_detail_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L3400-L3458"
+    },
+    "baseclosed": {
+      "file": "schemes.tex",
+      "label": "lemma-base-change-immersion",
+      "tag": "01JY",
+      "read_lines": [
+        3693,
+        3714
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01JY",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L3693-L3714"
+    },
+    "retro": {
+      "file": "properties.tex",
+      "label": "lemma-quasi-separated-quasi-compact-open-retrocompact",
+      "tag": "054D",
+      "read_lines": [
+        82,
+        99
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/054D",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L82-L99"
+    },
+    "affproduct": {
+      "file": "schemes.tex",
+      "label": "lemma-fibre-product-affine-schemes",
+      "tag": "01I4",
+      "read_lines": [
+        1050,
+        1097
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01I4",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1050-L1097"
+    },
+    "pullexact": {
+      "file": "modules.tex",
+      "label": "lemma-exactness-pushforward-pullback",
+      "tag": "01AJ",
+      "read_lines": [
+        255,
+        281
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01AJ",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L255-L281"
+    },
+    "tensorexact": {
+      "file": "modules.tex",
+      "label": "lemma-tensor-product-exact",
+      "tag": "01CC",
+      "read_lines": [
+        2499,
+        2528
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CC",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L2499-L2528"
+    },
+    "sym": {
+      "file": "modules.tex",
+      "label": "section-symmetric-exterior",
+      "tag": "01CF",
+      "read_lines": [
+        3404,
+        3441
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01CF",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L3404-L3441"
+    },
+    "relspec": {
+      "file": "constructions.tex",
+      "label": "section-spec",
+      "tag": "01LQ",
+      "read_lines": [
+        428,
+        465
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01LQ",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/constructions.tex#L428-L465"
+    },
+    "specexists": {
+      "file": "constructions.tex",
+      "label": "lemma-spec",
+      "tag": "01LU",
+      "read_lines": [
+        547,
+        600
+      ],
+      "proof_detail_read_lines": [
+        491,
+        545
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01LU",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/constructions.tex#L547-L600",
+      "proof_detail_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/constructions.tex#L491-L545"
+    },
+    "specprops": {
+      "file": "constructions.tex",
+      "label": "lemma-spec-properties",
+      "tag": "01LX",
+      "read_lines": [
+        662,
+        691
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01LX",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/constructions.tex#L662-L691"
+    },
+    "affsep": {
+      "file": "morphisms.tex",
+      "label": "lemma-affine-separated",
+      "tag": "01S7",
+      "read_lines": [
+        1720,
+        1733
+      ],
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01S7",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/morphisms.tex#L1720-L1733"
+    },
+    "sepcompose": {
+      "file": "schemes.tex",
+      "label": "lemma-separated-permanence",
+      "tag": "01KU",
+      "read_lines": [
+        4634,
+        4658
+      ],
+      "proof_note": "The source comparison uses only part (1); this span includes the complete proof of that part.",
+      "official_tag_url": "https://stacks.math.columbia.edu/tag/01KU",
+      "reviewed_source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L4634-L4658"
+    }
+  },
+  "rows": [
+    {
+      "id": "I.9.1.1",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.1-fr",
+          "lines": [
+            7,
+            18
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L7-L18"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.1",
+          "lines": [
+            7,
+            16
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L7-L16"
+        }
+      },
+      "scope": "On a scheme, tensor of two QC modules is QC and tensor of two finite-type modules is finite type; coherent inputs on locally Noetherian X give a coherent tensor. For finitely presented F, internal Hom(F,G) is QC for QC G and coherent for coherent G.",
+      "classification": "existing_stronger",
+      "target_keys": [
+        "tensor",
+        "hom",
+        "qc"
+      ],
+      "target_tags": [
+        "01CE",
+        "01CQ",
+        "01LA"
+      ],
+      "dependencies": [],
+      "argument": "Tensor target states all tensor clauses even on ringed spaces. Hom target represents internal Hom locally as a kernel of finite sums of G; QC kernel closure in qc gives the QC clause and hom itself gives the coherent clause without the source's Noetherian restriction.",
+      "independent_ai_review": "The tensor proof explicitly works with arbitrary free presentations for quasi-coherence; its finite-type and coherent clauses are separate. The Hom proof uses a finite presentation of the first argument, exactly as the source requires, and expresses Hom as a kernel of finite sums. No finiteness condition has leaked into the tensor clause."
+    },
+    {
+      "id": "I.9.1.2",
+      "source_environment": "definition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.2-fr",
+          "lines": [
+            32,
+            43
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L32-L43"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.2",
+          "lines": [
+            28,
+            37
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L28-L37"
+        }
+      },
+      "scope": "Definition of external tensor F tensor_S G on X times_S Y as p^*F tensor q^*G, with QC inputs.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "tensorformal",
+        "pullqc",
+        "tensor",
+        "pullexact",
+        "tensorexact"
+      ],
+      "target_tags": [
+        "01CA",
+        "01BG",
+        "01CE",
+        "01AJ",
+        "01CC"
+      ],
+      "dependencies": [],
+      "argument": "Compose existing pullback with existing tensor definition. Both pullbacks are QC and tensor remains QC. The context's right-exact additive bifunctor follows from right exactness of pullback and tensor. This records construction-level identity, not a claim that Stacks uses EGA's notation.",
+      "independent_ai_review": "Expanding the source definition gives projection pullbacks followed by the existing tensor construction. Right exactness follows separately from pullback and tensor right exactness. This is a matched definition/construction, not a newly matched theorem or a claim that the external-tensor notation occurs in Stacks."
+    },
+    {
+      "id": "I.9.1.3",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.3-fr",
+          "lines": [
+            78,
+            86
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L78-L86"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.3",
+          "lines": [
+            61,
+            70
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L61-L70"
+        }
+      },
+      "scope": "For A-algebras B,C and modules M over B,N over C, external tensor on Spec(B tensor_A C) is the associated sheaf of M tensor_A N.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "affproduct",
+        "affpull",
+        "afftensor"
+      ],
+      "target_tags": [
+        "01I4",
+        "01I9",
+        "01I8"
+      ],
+      "dependencies": [],
+      "argument": "Set D=B tensor_A C. Affine pullback gives D tensor_B M and D tensor_C N. Affine tensor gives their tensor over D. The balanced maps (d tensor m) tensor (e tensor n) -> de(m tensor n) and m tensor n -> (1 tensor m) tensor (1 tensor n) identify it with M tensor_A N, D-linearly and naturally. No flatness is used.",
+      "independent_ai_review": "For D=B tensor_A C, the two affine pullbacks are D tensor_B M and D tensor_C N. Their tensor over D identifies with M tensor_A N by the mutually inverse balanced maps on pure tensors. These maps work for arbitrary modules and arbitrary A-algebras; flatness is unnecessary."
+    },
+    {
+      "id": "I.9.1.4",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.4-fr",
+          "lines": [
+            106,
+            115
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L106-L115"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.4",
+          "lines": [
+            85,
+            92
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L85-L92"
+        }
+      },
+      "scope": "Pulling external tensor back along (f,g):T -> X times_S Y gives f^*F tensor g^*G for S-morphisms f,g.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "pulltensor",
+        "compose"
+      ],
+      "target_tags": [
+        "01CD",
+        "0097"
+      ],
+      "dependencies": [],
+      "argument": "Expand external tensor, apply pulltensor, then compose with projections: p composed (f,g)=f and q composed (f,g)=g. Thus both factors and their canonical isomorphisms coincide; no extra hypotheses.",
+      "independent_ai_review": "Pullback distributes over tensor; composition with the two product projections gives f and g. The resulting two factors are exactly the source factors, with canonical natural isomorphisms rather than literal equality of differently constructed objects."
+    },
+    {
+      "id": "I.9.1.5",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.5-fr",
+          "lines": [
+            126,
+            135
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L126-L135"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.5",
+          "lines": [
+            102,
+            110
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L102-L110"
+        }
+      },
+      "scope": "External tensor commutes with simultaneous pullbacks along f:X->X' and g:Y->Y' over S.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "pulltensor",
+        "compose"
+      ],
+      "target_tags": [
+        "01CD",
+        "0097"
+      ],
+      "dependencies": [
+        "I.9.1.4"
+      ],
+      "argument": "Apply the preceding derived identity on T=X times_S Y to f composed p and g composed q. Compositionality identifies the two factors with p^*f^*F' and q^*g^*G'.",
+      "independent_ai_review": "Apply I.9.1.4 to f composed with the first projection and g composed with the second projection. Pullback composition identifies each factor. Neither source module is assumed finitely presented."
+    },
+    {
+      "id": "I.9.1.6",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.6-fr",
+          "lines": [
+            143,
+            153
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L143-L153"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.6",
+          "lines": [
+            117,
+            124
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L117-L124"
+        }
+      },
+      "scope": "Associativity of external tensor under the canonical triple-product reassociation; the proof context also records symmetry under exchanging two factors.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "tensorformal",
+        "pulltensor",
+        "compose"
+      ],
+      "target_tags": [
+        "01CA",
+        "01CD",
+        "0097"
+      ],
+      "dependencies": [
+        "I.9.1.4"
+      ],
+      "argument": "Pull every expression to the same triple product. Both sides become p1^*F tensor p2^*G tensor p3^*H; tensorformal supplies associativity. The identical two-factor argument with tensor symmetry gives the contextual exchange formula.",
+      "independent_ai_review": "After pulling to the common triple product, both sides are the three projected sheaves tensored together. The read tensor construction states functorial associativity and symmetry; the contextual exchange of two factors is covered by the same argument."
+    },
+    {
+      "id": "I.9.1.7",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.7-fr",
+          "lines": [
+            164,
+            170
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L164-L170"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.7",
+          "lines": [
+            134,
+            139
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L134-L139"
+        }
+      },
+      "scope": "F is the pullback of F tensor_S O_S along X -> X times_S S.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "tensorformal",
+        "pulltensor",
+        "compose"
+      ],
+      "target_tags": [
+        "01CA",
+        "01CD",
+        "0097"
+      ],
+      "dependencies": [
+        "I.9.1.4"
+      ],
+      "argument": "Apply I.9.1.4 to (id_X,structure_X). Pullback of the structure sheaf is O_X, and F tensor O_X -> F, m tensor a -> am, is the unit isomorphism from the tensor definition.",
+      "independent_ai_review": "The pair consisting of the identity of X and its structural map pulls the external product back to F tensor O_X. Multiplication supplies the unit isomorphism. This works without any finiteness assumption."
+    },
+    {
+      "id": "I.9.1.9",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.9-fr",
+          "lines": [
+            190,
+            198
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L190-L198"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.9",
+          "lines": [
+            156,
+            164
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L156-L164"
+        }
+      },
+      "scope": "Base changing a QC sheaf successively along S''->S'->S agrees with direct base change under the canonical scheme isomorphism.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "compose"
+      ],
+      "target_tags": [
+        "0097"
+      ],
+      "dependencies": [],
+      "argument": "English I.9.1.8 defines base change as pullback along the projection. The composite of the two projections equals the direct projection after the canonical fiber-product reassociation. compose yields the claimed canonical equality of sheaves.",
+      "independent_ai_review": "The contextual definition I.9.1.8 is projection pullback. The two successive projections compose to the direct projection after product reassociation, so the read pullback-composition lemma supplies exactly the base-change transitivity isomorphism."
+    },
+    {
+      "id": "I.9.1.10",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.10-fr",
+          "lines": [
+            211,
+            220
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L211-L220"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.10",
+          "lines": [
+            176,
+            182
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L176-L182"
+        }
+      },
+      "scope": "For f:X->Y over S, pulling G back after base change equals base changing f^*G, for arbitrary S'->S.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "compose"
+      ],
+      "target_tags": [
+        "0097"
+      ],
+      "dependencies": [],
+      "argument": "In the base-change square p_Y composed f_S'=f composed p_X. Apply the composition isomorphism to these equal morphisms. No flatness or finiteness is necessary.",
+      "independent_ai_review": "The two composites in the cartesian square coincide. Applying pullback composition gives the comparison, for arbitrary base change. This is pullback compatibility, not a pushforward/base-change assertion requiring flatness."
+    },
+    {
+      "id": "I.9.1.11",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.11-fr",
+          "lines": [
+            235,
+            246
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L235-L246"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.11",
+          "lines": [
+            197,
+            205
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L197-L205"
+        }
+      },
+      "scope": "Base change commutes with external tensor after the canonical identification of the base-changed product with the product of the base changes.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "pulltensor",
+        "compose"
+      ],
+      "target_tags": [
+        "01CD",
+        "0097"
+      ],
+      "dependencies": [
+        "I.9.1.4",
+        "I.9.1.10"
+      ],
+      "argument": "Apply pulltensor to p_X^*F tensor p_Y^*G and compose along the base-change projections. The two projections to X and Y are exactly those of the identified product. Both sides therefore coincide factor by factor.",
+      "independent_ai_review": "Expand the two external tensors, use pullback-tensor compatibility, and identify both projection composites in the base-changed product. This proves the full canonical isomorphism; no flatness or finite-presentation restriction is introduced."
+    },
+    {
+      "id": "I.9.1.12",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.12-fr",
+          "lines": [
+            255,
+            265
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L255-L265"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.12",
+          "lines": [
+            213,
+            220
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L213-L220"
+        }
+      },
+      "scope": "The stalk at z of external tensor is F_x tensor_{O_x} O_z tensor_{O_y} G_y, with x=p(z),y=q(z).",
+      "classification": "existing_derived",
+      "target_keys": [
+        "stalktensor",
+        "stalkpull",
+        "tensorformal"
+      ],
+      "target_tags": [
+        "01CB",
+        "0098",
+        "01CA"
+      ],
+      "dependencies": [],
+      "argument": "First take the stalk of p^*F tensor q^*G using stalktensor; substitute each stalkpull formula, then associate the balanced tensor products over O_z. The French word fibre here denotes stalk, as witnessed by the displayed local-ring formula.",
+      "independent_ai_review": "The pullback stalk formula followed by the tensor stalk formula yields the displayed three-ring balanced tensor. The French fibre is a stalk here, as its local-ring formula itself shows; it is not silently changed to a residue-field fibre."
+    },
+    {
+      "id": "I.9.1.13",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.1.13-fr",
+          "lines": [
+            272,
+            280
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L272-L280"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.1.13",
+          "lines": [
+            227,
+            233
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L227-L233"
+        }
+      },
+      "scope": "For finite-type F,G, support of external tensor equals inverse support of F intersect inverse support of G.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "stalkpull",
+        "stalktensor",
+        "pullft",
+        "support",
+        "nak"
+      ],
+      "target_tags": [
+        "0098",
+        "01CB",
+        "01B6",
+        "0BUR",
+        "00DV"
+      ],
+      "dependencies": [],
+      "argument": "Finite-type pullbacks remain finite type. support applied affine locally identifies each pulled-back support. Over the local ring at z two nonzero finite modules have nonzero residue vector spaces by nak; their tensor has nonzero residue vector-space tensor, hence is nonzero. Conversely a zero factor makes the tensor zero. Finite generation and locality are retained; no flatness is asserted.",
+      "independent_ai_review": "Finite type is essential and is retained. At a product point, the two nonzero finite pulled-back modules have nonzero residue vector spaces by Nakayama, whose tensor over the residue field is nonzero. The zero-factor implication gives the reverse inclusion of supports."
+    },
+    {
+      "id": "I.9.2.1",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.2.1-fr",
+          "lines": [
+            308,
+            319
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L308-L319"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.2.1",
+          "lines": [
+            262,
+            272
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L262-L272"
+        }
+      },
+      "scope": "Pushforward preserves QC when a target affine cover has finite affine inverse-image covers with pairwise overlaps finite unions of affines.",
+      "classification": "existing_exact",
+      "target_keys": [
+        "qsep",
+        "push"
+      ],
+      "target_tags": [
+        "01KO",
+        "01LC"
+      ],
+      "dependencies": [],
+      "argument": "The target qsep criterion (3) is precisely the overlap hypothesis. The finite affine inverse-image covers give quasi-compactness. push then proves QC by the same finite kernel diagram, using the refined affine intersections; its proof was read in full.",
+      "independent_ai_review": "The source finite affine covers give quasi-compactness of the morphism, while the pairwise finite affine refinements are precisely condition (3) of the read quasi-separatedness criterion. The pushforward proof uses the finite kernel diagram for arbitrary quasi-coherent modules; it does not require finite presentation."
+    },
+    {
+      "id": "I.9.2.2",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.2.2-fr",
+          "lines": [
+            376,
+            385
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L376-L385"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.2.2",
+          "lines": [
+            309,
+            317
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L309-L317"
+        }
+      },
+      "scope": "QC pushforward in three cases: separated qc; separated finite type; qc with source underlying space locally Noetherian.",
+      "classification": "existing_stronger",
+      "target_keys": [
+        "push",
+        "qsep",
+        "noethqc",
+        "localnoeth"
+      ],
+      "target_tags": [
+        "01LC",
+        "01KO",
+        "04ZA",
+        "04ZB"
+      ],
+      "dependencies": [],
+      "argument": "push only requires qcqs. Separated implies qs; finite type includes qc. In the third case each affine source chart is qc and topologically locally Noetherian, hence Noetherian by localnoeth; every overlap open is then qc by noethqc. qsep applies. The argument uses topology only, not Noetherian coordinate rings.",
+      "independent_ai_review": "Each source branch implies qcqs: separated gives quasi-separated, finite type gives quasi-compact, and a topologically locally Noetherian source has quasi-compact intersections on affine charts. The last step uses topology only, not Noetherian coordinate rings."
+    },
+    {
+      "id": "I.9.3.1",
+      "source_environment": "theorem",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.3.1-fr",
+          "lines": [
+            400,
+            416
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L400-L416"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.3.1",
+          "lines": [
+            327,
+            337
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L327-L337"
+        }
+      },
+      "scope": "For QC F and invertible L with section f on topologically Noetherian X or separated qc X: a global section zero on X_f is killed by f^n, and every section on X_f extends after multiplying by f^n, with n>0.",
+      "classification": "existing_stronger",
+      "target_keys": [
+        "ssections",
+        "qsep",
+        "noethqc"
+      ],
+      "target_tags": [
+        "01PW",
+        "01KO",
+        "04ZA"
+      ],
+      "dependencies": [],
+      "argument": "Both source alternatives imply qcqs. ssections proves injectivity already for qc X and surjectivity for qcqs X via finite-chart denominator clearing and overlap-killing. Its localization equality translates respectively to the two source clauses. An exponent 0 can be increased to 1 by multiplying once more.",
+      "independent_ai_review": "Both source alternatives imply qcqs. Injectivity of the section-localization map gives annihilation by a power; surjectivity gives extension after twisting. If the target supplies exponent zero, increase it to a positive exponent. Arbitrary quasi-coherent F is preserved."
+    },
+    {
+      "id": "I.9.3.2",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.3.2-fr",
+          "lines": [
+            455,
+            467
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L455-L467"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.3.2",
+          "lines": [
+            371,
+            378
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L371-L378"
+        }
+      },
+      "scope": "With the preceding hypotheses, for homogeneous f of any integer degree n, sections of F on X_f equal the degree-zero part of the localization of the full graded module of twisted sections.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "ssections",
+        "fsections"
+      ],
+      "target_tags": [
+        "01PW",
+        "01P7"
+      ],
+      "dependencies": [],
+      "argument": "For n nonzero apply ssections to H=L^{tensor n}, which is invertible also for n<0, and f as a degree-one section of H. Its fractions have numerator in Gamma(F tensor L^{tensor mn}), exactly degree-zero fractions t/f^m in the original graded module. For n=0 the degree-zero localization is Gamma(F)_f and fsections applies. This explicitly handles the grading-range difference; no nonnegative-degree restriction is added.",
+      "independent_ai_review": "The integer grading causes no gap. For n nonzero use the invertible sheaf L to the tensor power n and regard f as degree one for that sheaf; degree-zero fractions have numerators in Gamma(F tensor L to the tensor power mn). For n=0 use ordinary function localization."
+    },
+    {
+      "id": "I.9.3.3",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.3.3-fr",
+          "lines": [
+            469,
+            475
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L469-L475"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.3.3",
+          "lines": [
+            380,
+            385
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L380-L385"
+        }
+      },
+      "scope": "For L=O_X, Gamma(X_f,F)=Gamma(X,F)_f as a localized global-function module under either hypothesis of I.9.3.1.",
+      "classification": "existing_stronger",
+      "target_keys": [
+        "fsections",
+        "qsep",
+        "noethqc"
+      ],
+      "target_tags": [
+        "01P7",
+        "01KO",
+        "04ZA"
+      ],
+      "dependencies": [],
+      "argument": "fsections states the module isomorphism for any qcqs scheme. Both source alternatives are qcqs; its proof also identifies the module action via the canonical morphism to Spec Gamma(O_X).",
+      "independent_ai_review": "The read function-localization lemma gives the required module isomorphism, including its localized global-function action. The two source hypotheses are sufficient for qcqs, so the stronger modern statement applies."
+    },
+    {
+      "id": "I.9.3.4",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.3.4-fr",
+          "lines": [
+            477,
+            484
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L477-L484"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.3.4",
+          "lines": [
+            387,
+            392
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L387-L392"
+        }
+      },
+      "scope": "On Noetherian X, coherent F supported in V(J), with coherent ideal J, is annihilated by a positive power of J.",
+      "classification": "existing_stronger",
+      "target_keys": [
+        "power"
+      ],
+      "target_tags": [
+        "01Y9"
+      ],
+      "dependencies": [],
+      "argument": "power gives an iff for any QC ideal on a Noetherian scheme. The source coherent ideal is QC. Its n>=0 can be made positive by taking max(1,n). The finite affine-cover proof supplies one global exponent.",
+      "independent_ai_review": "The coherent support/annihilation lemma and its underlying Noetherian-module proof give one exponent after a finite affine cover. Replace a possible zero exponent by a positive one. The target even allows a quasi-coherent, rather than separately coherent, ideal."
+    },
+    {
+      "id": "I.9.3.5",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.3.5-fr",
+          "lines": [
+            505,
+            511
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L505-L511"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.3.5",
+          "lines": [
+            408,
+            413
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L408-L413"
+        }
+      },
+      "scope": "Under I.9.3.4 there is a closed Y with underlying space V(J) and F canonically equal to j_*j^*F.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "power",
+        "closedmodule"
+      ],
+      "target_tags": [
+        "01Y9",
+        "01QY"
+      ],
+      "dependencies": [],
+      "argument": "Choose positive n from power and let Y be cut out by J^n. Radical equality gives |Y|=V(J). Since J^nF=0, the explicitly verified unit map F->j_*j^*F in closedmodule is an isomorphism.",
+      "independent_ai_review": "Cut out Y by a positive power J^n annihilating F. Its underlying set is V(J). The closed-immersion equivalence identifies the canonical unit F -> j_*j^*F with an isomorphism, so the source's canonical sheaf identity, not merely existence of some sheaf on Y, is supplied."
+    },
+    {
+      "id": "I.9.4.2",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.2-fr",
+          "lines": [
+            554,
+            571
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L554-L571"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.2",
+          "lines": [
+            445,
+            459
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L445-L459"
+        }
+      },
+      "scope": "For a qc open immersion j:U->X, j_*G is a QC extension of QC G; the maximal subsheaf of a QC F restricting to a QC G subset F|U is QC.",
+      "classification": "existing_exact",
+      "target_keys": [
+        "push",
+        "extendtriv"
+      ],
+      "target_tags": [
+        "01LC",
+        "01PE"
+      ],
+      "dependencies": [],
+      "argument": "An open immersion is separated; push supplies QC. The proof of extendtriv explicitly constructs the first extension as j_*G and the second as Ker(F direct_sum j_*G -> j_*j^*F). Projection to F identifies this kernel with the inverse image of j_*G, i.e. the canonical maximal extension, not merely some extension.",
+      "independent_ai_review": "The quasi-compact open immersion is separated, hence its pushforward is quasi-coherent. The read extension proof constructs the inverse image of j_*G inside F. This is the canonical maximal extension from I.9.4.1, not just an unspecified extension. The locally Noetherian topological parenthetical also checks."
+    },
+    {
+      "id": "I.9.4.3",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.3-fr",
+          "lines": [
+            593,
+            605
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L593-L605"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.3",
+          "lines": [
+            477,
+            485
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L477-L485"
+        }
+      },
+      "scope": "Assume U qc, j:U->X qc, and every QC module on X is the union of its QC finite-type submodules. A finite-type QC G subset F|U extends as a finite-type QC submodule of F.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "extendtriv",
+        "ftdef",
+        "qc"
+      ],
+      "target_tags": [
+        "01PE",
+        "01B5",
+        "01LA"
+      ],
+      "dependencies": [],
+      "argument": "Take the canonical QC extension H subset F from extendtriv and apply the source's union hypothesis to H. Each finite set of local generators of H|U=G belongs locally to one finite sum of the finite-type submodules. Quasi-compactness of U selects finitely many such neighborhoods; their finite sum H' is QC and finite type and has H'|U=G. No global qc assumption on X is used. The affine parenthetical case follows from finite generation of individual module elements via affine equivalence.",
+      "independent_ai_review": "Apply the assumed directed-union property to the canonical extension. Finite local generators on quasi-compact U lie in finitely many members locally; a finite subcover and finite sum produce one finite-type extension. Finite generation suffices for a union of submodules: no finite-presentation compactness argument is being substituted."
+    },
+    {
+      "id": "I.9.4.4",
+      "source_environment": "remark",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.4-fr",
+          "lines": [
+            616,
+            637
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L616-L637"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.4",
+          "lines": [
+            495,
+            511
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L495-L511"
+        }
+      },
+      "scope": "If every affine inclusion is qc and each finite-type QC submodule on an affine chart extends inside F, then F is the directed union of its finite-type QC submodules.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "affine",
+        "qc",
+        "colimit"
+      ],
+      "target_tags": [
+        "01IB",
+        "01LA",
+        "01PG"
+      ],
+      "dependencies": [],
+      "argument": "The proof of colimit uses global qcqs only to invoke extend. Replace that invocation by the explicit source assumption. Every affine-chart section generates a QC finite-type cyclic subsheaf and hence lies in a global finite-type QC subsheaf. Finite sums give a directed set. Stalkwise exhaustion makes its colimit F. Thus the same finite dependency argument proves this conditional statement without extra hypotheses.",
+      "independent_ai_review": "For each affine-chart section, the cyclic quasi-coherent submodule extends by the source assumption. Their finite sums are directed and exhaust every stalk. This reproduces the read colimit proof with its extension invocation replaced by the explicit source hypothesis; global qcqs is not imported."
+    },
+    {
+      "id": "I.9.4.5",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.5-fr",
+          "lines": [
+            639,
+            645
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L639-L645"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.5",
+          "lines": [
+            513,
+            518
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L513-L518"
+        }
+      },
+      "scope": "Under I.9.4.3, any finite-type QC module on U has a finite-type QC extension to X.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "extendtriv",
+        "ftdef",
+        "qc"
+      ],
+      "target_tags": [
+        "01PE",
+        "01B5",
+        "01LA"
+      ],
+      "dependencies": [
+        "I.9.4.3"
+      ],
+      "argument": "Put F=j_*G, which extendtriv proves QC and equal to G on U. Apply I.9.4.3 to G=F|U. This preserves the arbitrary-X source hypotheses.",
+      "independent_ai_review": "Use F=j_*G, whose quasi-coherence and restriction identity follow from the quasi-compact open-immersion extension lemma, then apply I.9.4.3. The conditional arbitrary-X hypotheses remain intact."
+    },
+    {
+      "id": "I.9.4.6",
+      "source_environment": "lemma",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.6-fr",
+          "lines": [
+            652,
+            669
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L652-L669"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.6",
+          "lines": [
+            525,
+            535
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L525-L535"
+        }
+      },
+      "scope": "Given a well-ordered affine cover V_a with V_a intersect union_{b<a}V_b qc, and qc j:U->X, any finite-type QC G subset F|U extends inside F with finite type and QC.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "extend",
+        "glue",
+        "ftdef",
+        "qc"
+      ],
+      "target_tags": [
+        "01PF",
+        "00AM",
+        "01B5",
+        "01LA"
+      ],
+      "dependencies": [],
+      "argument": "Represent the given well order by an ordinal kappa and define U_a=U union union_{b<a}V_b for every a<=kappa. Start H_0=G. At a successor, U_a intersect V_a is the union of U intersect V_a (qc since j is qc) and V_a intersect union_{b<a}V_b (qc by hypothesis). Apply extend only on the affine V_a to H_a restricted to this qc open, obtaining a finite-type QC submodule K_a subset F|V_a. Glue H_a and K_a as submodules of F using glue. At a limit stage glue the compatible H_b on their increasing open domains. QC and finite type are local by qc and ftdef, so remain true at limits. Finally H_kappa is defined on all X, includes the final chart even if the well order has a maximum, and restricts to G on U. This is a finite dependency chain with transfinite induction on the source's given well order, not an application of extend to non-qc X.",
+      "independent_ai_review": "The ordinal recursion is valid with H_0=G and indices alpha <= kappa, where kappa is the order type of the affine cover. At a successor, U_alpha intersect V_alpha is a union of two quasi-compact opens by the two source assumptions. Apply finite-type extension only on the affine V_alpha, then glue compatible subobjects. At limits, sheaf gluing on the increasing opens preserves quasi-coherence and local finite type. H_kappa includes the final chart even when the well order has a largest member. No quasi-compactness of X or uniform global generator bound is needed."
+    },
+    {
+      "id": "I.9.4.7",
+      "source_environment": "theorem",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.7-fr",
+          "lines": [
+            706,
+            719
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L706-L719"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.7",
+          "lines": [
+            561,
+            572
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L561-L572"
+        }
+      },
+      "scope": "Finite-type QC submodule extension from U holds if |X| is locally Noetherian, or if X is separated qc and U is qc.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "extend",
+        "glue",
+        "noethqc",
+        "localnoeth",
+        "retro",
+        "qsep"
+      ],
+      "target_tags": [
+        "01PF",
+        "00AM",
+        "04ZA",
+        "04ZB",
+        "054D",
+        "01KO"
+      ],
+      "dependencies": [
+        "I.9.4.6"
+      ],
+      "argument": "For topologically locally Noetherian X, every affine V is topologically Noetherian by localnoeth; all its open subsets are qc by noethqc. Thus every open inclusion U->X is qc and every preceding union intersects V in a qc open; apply the full derived I.9.4.6. For separated qc X and qc U, retro and qsep give the hypotheses of extend directly. The first branch does not assume X qc or its rings Noetherian.",
+      "independent_ai_review": "If the underlying space is locally Noetherian, each affine chart is Noetherian as a topological space; every open in it is quasi-compact. Thus both transfinite hypotheses in I.9.4.6 hold for any U. The separated quasi-compact branch uses the finite extension lemma directly. The first branch may be globally non-quasi-compact and its rings need not be Noetherian."
+    },
+    {
+      "id": "I.9.4.8",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.8-fr",
+          "lines": [
+            734,
+            740
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L734-L740"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.8",
+          "lines": [
+            584,
+            589
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L584-L589"
+        }
+      },
+      "scope": "Under either alternative of I.9.4.7, finite-type QC G on U extends to a finite-type QC module on X.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "extendtriv",
+        "extend",
+        "glue",
+        "noethqc",
+        "localnoeth",
+        "retro"
+      ],
+      "target_tags": [
+        "01PE",
+        "01PF",
+        "00AM",
+        "04ZA",
+        "04ZB",
+        "054D"
+      ],
+      "dependencies": [
+        "I.9.4.7"
+      ],
+      "argument": "In the first branch j is qc by the topology argument in I.9.4.7; in the second it is qc by retro. Hence j_*G is QC by extendtriv. Apply I.9.4.7 inside j_*G, obtaining the required finite-type extension.",
+      "independent_ai_review": "In either branch the open immersion U -> X is quasi-compact, so j_*G is a quasi-coherent ambient extension. Applying I.9.4.7 inside it gives a finite-type extension. The possibly non-quasi-compact first branch is not reduced to the qcqs theorem."
+    },
+    {
+      "id": "I.9.4.9",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.9-fr",
+          "lines": [
+            747,
+            753
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L747-L753"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.9",
+          "lines": [
+            596,
+            601
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L596-L601"
+        }
+      },
+      "scope": "If |X| is locally Noetherian or X is separated qc, every QC module is a directed union of its finite-type QC submodules.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "colimit",
+        "extend",
+        "glue",
+        "noethqc",
+        "localnoeth"
+      ],
+      "target_tags": [
+        "01PG",
+        "01PF",
+        "00AM",
+        "04ZA",
+        "04ZB"
+      ],
+      "dependencies": [
+        "I.9.4.4",
+        "I.9.4.7"
+      ],
+      "argument": "For the qc separated branch colimit applies directly. In the topologically locally Noetherian branch, every affine inclusion is qc and I.9.4.7 extends every cyclic finite-type submodule from an affine chart. I.9.4.4's finite-sum/stalkwise proof then gives the directed union without global qc.",
+      "independent_ai_review": "The separated quasi-compact branch is the existing directed-colimit lemma. In the topologically locally Noetherian branch, I.9.4.7 extends cyclic modules from all affine charts and I.9.4.4 then gives stalkwise exhaustion by finite sums. The transfinite branch supplies the required full generality."
+    },
+    {
+      "id": "I.9.4.10",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.4.10-fr",
+          "lines": [
+            759,
+            765
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L759-L765"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.4.10",
+          "lines": [
+            607,
+            612
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L607-L612"
+        }
+      },
+      "scope": "Under I.9.4.9, if each finite-type QC submodule of F is globally generated then F is globally generated.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "colimit",
+        "globalgen",
+        "glue"
+      ],
+      "target_tags": [
+        "01PG",
+        "01AN",
+        "00AM"
+      ],
+      "dependencies": [
+        "I.9.4.9"
+      ],
+      "argument": "Every germ of F belongs to a finite-type QC submodule by I.9.4.9. By the source assumption that germ is a finite local linear combination of global sections of that submodule, hence of F. globalgen identifies this stalkwise condition with global generation.",
+      "independent_ai_review": "Every germ of F lies in a finite-type quasi-coherent submodule. Its assumed global generators become global sections of F and generate that germ. The read stalkwise global-generation criterion proves the entire statement."
+    },
+    {
+      "id": "I.9.5.1",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.1-fr",
+          "lines": [
+            783,
+            792
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L783-L792"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.1",
+          "lines": [
+            627,
+            634
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L627-L634"
+        }
+      },
+      "scope": "For f with QC f_*O_X the literal French and English statement asks for a smallest subprescheme through which f factors; its surrounding context subsequently specifies closed images.",
+      "classification": "partial",
+      "target_keys": [
+        "image",
+        "imagedef",
+        "qc"
+      ],
+      "target_tags": [
+        "01R6",
+        "01R7",
+        "01LA"
+      ],
+      "dependencies": [],
+      "argument": "image proves the existence of a smallest CLOSED subscheme for every morphism, and its QC-kernel case applies here. This fully supplies the closed-subscheme reading used by the proof and I.9.5.3. It does not establish the unqualified all-subprescheme literal wording or its identification in I.9.5.2.",
+      "independent_ai_review": "Retain partial for the literal unqualified statement. The kernel construction proves minimality among closed subschemes. More strongly than the writer's D(2) example, Spec Q -> Spec Z has quasi-coherent pushforward but no smallest locally closed factorization target: every nonempty open contains the generic point and admits factorization, while each can be shrunk by removing another prime. A locally closed subset containing the generic point is open; no nonempty open is contained in all such opens. This is a bounded source-scope finding, not an admitted printed-source erratum.",
+      "residual": {
+        "id": "I.9.5.1",
+        "unproved_literal_clause": "Existence of a least factorization target among all locally closed subpreschemes.",
+        "counterexample": "Spec Q -> Spec Z has quasi-coherent pushforward. It factors through every nonempty open of Spec Z. A locally closed subset containing the generic point must be open, and no nonempty open is contained in every nonempty open; hence no least locally closed factorization target exists.",
+        "closed_reading": "Fully proved by Stacks 01R6 and its quasi-coherent-kernel construction."
+      },
+      "next_source_check": "Independently collate the printed French page and the subsection's subprescheme order convention; compare only the closed-subscheme reading until that scope issue is resolved. This is a bounded source-scope finding, not an admitted erratum or a Stacks absence claim."
+    },
+    {
+      "id": "I.9.5.2",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.2-fr",
+          "lines": [
+            796,
+            802
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L796-L802"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.2",
+          "lines": [
+            637,
+            642
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L637-L642"
+        }
+      },
+      "scope": "Under I.9.5.1, the closed subscheme cut out by Ker(O_Y->f_*O_X) is asserted to satisfy the preceding minimality property.",
+      "classification": "partial",
+      "target_keys": [
+        "image",
+        "qc"
+      ],
+      "target_tags": [
+        "01R6",
+        "01LA"
+      ],
+      "dependencies": [],
+      "argument": "The first case of image's proof gives precisely the kernel construction once qc supplies that the kernel is QC. Factorization and minimality among CLOSED subschemes are proved. The literal reference to the unrestricted property in I.9.5.1 inherits its scope problem.",
+      "independent_ai_review": "Retain partial because its reference to I.9.5.1 imports the unrestricted minimum. For D(2) -> Spec Z the quasi-coherent kernel is zero, so the constructed closed image is all Spec Z, whereas the morphism factors through the proper open D(2). Factorization and least CLOSED image are fully established by the read target proof.",
+      "residual": {
+        "id": "I.9.5.2",
+        "unproved_literal_clause": "The kernel-defined closed image realizes the unqualified minimum from I.9.5.1.",
+        "counterexample": "D(2) -> Spec Z has zero kernel, so its closed image is Spec Z, yet it factors through the smaller open D(2).",
+        "closed_reading": "The kernel construction, factorization, and minimality among closed subschemes are fully proved."
+      },
+      "next_source_check": "Same source-scope collation as I.9.5.1; no source mutation in this batch."
+    },
+    {
+      "id": "I.9.5.3",
+      "source_environment": "definition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.3-fr",
+          "lines": [
+            834,
+            839
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L834-L839"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.3",
+          "lines": [
+            665,
+            670
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L665-L670"
+        }
+      },
+      "scope": "Definition of closed image as the smallest closed subscheme through which a morphism factors, when it exists.",
+      "classification": "existing_exact",
+      "target_keys": [
+        "imagedef",
+        "image"
+      ],
+      "target_tags": [
+        "01R7",
+        "01R6"
+      ],
+      "dependencies": [],
+      "argument": "imagedef is identical after terminology alignment. image also proves unrestricted existence, so the source's existence proviso is unnecessary in the modern treatment. This row is independent of the literal wording problem in I.9.5.1.",
+      "independent_ai_review": "The source definition explicitly says closed, matching the modern definition exactly. The modern existence lemma removes the source existence proviso. Count this as a definition, independently of the literal wording problem in the preceding two rows."
+    },
+    {
+      "id": "I.9.5.4",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.4-fr",
+          "lines": [
+            841,
+            846
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L841-L846"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.4",
+          "lines": [
+            672,
+            676
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L672-L676"
+        }
+      },
+      "scope": "If f_*O_X is QC, the underlying closed image is the topological closure of f(X), without assuming f itself qc.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "image",
+        "qc",
+        "imageqc"
+      ],
+      "target_tags": [
+        "01R6",
+        "01LA",
+        "01R8"
+      ],
+      "dependencies": [],
+      "argument": "The QC-kernel case of image identifies the closed image Z with V(I). On any open disjoint from closure(f(X)), f_*O_X is zero, hence I=O and Z has no points. Since f factors through Z, its closed underlying subset contains closure(f(X)); equality follows. imageqc's proof gives the same restriction-and-density mechanism, but its extra qc hypothesis on f is NOT used to substitute for the source hypothesis.",
+      "independent_ai_review": "The source assumes quasi-coherence of f_*O_X, not quasi-compactness of f. That suffices: the kernel is quasi-coherent; outside the closure of f(X) its quotient is zero; and the resulting closed subscheme contains f(X). Both inclusions prove equality of underlying sets without using the stronger hypothesis in the separate qc-image lemma."
+    },
+    {
+      "id": "I.9.5.5",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.5-fr",
+          "lines": [
+            865,
+            872
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L865-L872"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.5",
+          "lines": [
+            693,
+            699
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L693-L699"
+        }
+      },
+      "scope": "For X->Y->Z, the closed image of the composite is the closed image of the first closed image under the restricted second map, assuming the indicated images exist.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "image",
+        "baseclosed"
+      ],
+      "target_tags": [
+        "01R6",
+        "01JY"
+      ],
+      "dependencies": [],
+      "argument": "Let Y' be the first image and T any closed subscheme of Z. If gf factors through T then f factors through the closed pullback g^{-1}T, so minimality puts Y' inside g^{-1}T. Hence g|Y' factors through T. The converse follows by composition. Thus gf and g|Y' have exactly the same closed factorization targets; image gives their identical minimal member. No QC hypotheses are added.",
+      "independent_ai_review": "For a closed T in the final target, gf factors through T exactly when g restricted to the first closed image does: pull T back as a closed subscheme and use the first image's minimality. Thus the two morphisms have identical closed factorization targets, proving the transitivity assertion without extra quasi-compactness."
+    },
+    {
+      "id": "I.9.5.6",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.6-fr",
+          "lines": [
+            889,
+            894
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L889-L894"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.6",
+          "lines": [
+            713,
+            717
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L713-L717"
+        }
+      },
+      "scope": "If Y is the closed image of f:X->Y over S, then agreement after f forces equality of two S-maps Y->Z where Z is an EGA S-scheme (separated over S).",
+      "classification": "existing_derived",
+      "target_keys": [
+        "equalizer",
+        "image"
+      ],
+      "target_tags": [
+        "01KM",
+        "01R6"
+      ],
+      "dependencies": [],
+      "argument": "equalizer constructs the equality locus E as a closed subscheme of Y because Z is separated over S. Agreement after f means f factors through E. Closed-image minimality forces E=Y, hence the two maps agree. Do not replace EGA S-scheme by an arbitrary nonseparated target.",
+      "independent_ai_review": "For a separated test target, the equality locus of the two maps is closed. Agreement after f forces the closed image inside this locus, hence the locus is all Y. The separated-target convention is essential; the review does not replace it by arbitrary nonseparated test schemes."
+    },
+    {
+      "id": "I.9.5.7",
+      "source_environment": "remark",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.7-fr",
+          "lines": [
+            910,
+            920
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L910-L920"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.7",
+          "lines": [
+            725,
+            731
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L725-L731"
+        }
+      },
+      "scope": "For EGA S-schemes, having whole target as closed image implies categorical epimorphism; conversely an epimorphism in that category has whole-target closed image.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "equalizer",
+        "image",
+        "qc",
+        "sym",
+        "relspec",
+        "specexists",
+        "specprops",
+        "affsep",
+        "sepcompose"
+      ],
+      "target_tags": [
+        "01KM",
+        "01R6",
+        "01LA",
+        "01CF",
+        "01LQ",
+        "01LU",
+        "01LX",
+        "01S7",
+        "01KU"
+      ],
+      "dependencies": [
+        "I.9.5.6"
+      ],
+      "argument": "The forward assertion is I.9.5.6 against every separated S-scheme. Conversely let Y' be the closed image with QC ideal I. By qc, A=Sym(I) is a QC O_Y-algebra. The symmetric-algebra definition sym extends the zero map and inclusion I->O_Y to O_Y-algebra maps A->O_Y, agreeing on degree zero but distinct whenever I is nonzero. relspec and specexists turn them into two Y-sections g0,g1:Y->T=Spec_Y A. specprops shows T->Y affine, so affsep and sepcompose show T->S separated because Y->S is separated. The two sections agree after f:X->Y: f factors through Y', so the inclusion I->O_Y becomes zero after mapping to f_*O_X; hence their algebra maps agree after pullback, by the relspec functor formula. If f is an S-epimorphism, then g0=g1. Representability now makes the two algebra maps equal, so their degree-one restrictions give I->O_Y equal to zero, forcing I=0 and Y'=Y. Neither finite type of I nor quasi-compactness of f is used.",
+      "independent_ai_review": "Accept the writer's revised derived match. For the closed-image ideal I, Sym(I) is quasi-coherent with no finite-type hypothesis. Zero and inclusion I -> O_Y extend to algebra maps Sym(I) -> O_Y. Relative Spec represents them as two sections of T -> Y. They agree after f because f kills I. Since T -> Y is affine, it inherits from Y the separatedness needed for the source category. Epimorphic cancellation makes the sections equal, and their degree-one algebra maps then force I=0. The forward implication is I.9.5.6. Both directions are now closed."
+    },
+    {
+      "id": "I.9.5.8",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.8-fr",
+          "lines": [
+            922,
+            930
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L922-L930"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.8",
+          "lines": [
+            733,
+            737
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L733-L737"
+        }
+      },
+      "scope": "Under QC f_*O_X, formation of the closed image commutes with restriction to every target open V.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "image",
+        "qc",
+        "imageqc"
+      ],
+      "target_tags": [
+        "01R6",
+        "01LA",
+        "01R8"
+      ],
+      "dependencies": [],
+      "argument": "On V, (f_V)_*O equals (f_*O)|V and is QC; kernels restrict exactly. The QC-kernel case of image on V therefore defines V intersect Y'. The restriction step in imageqc's proof is explicitly independent of its qc condition once I is QC. Thus no extra qc condition on f is imposed.",
+      "independent_ai_review": "Restriction to a target open commutes with pushforward in this situation and with the kernel. The restricted pushforward remains quasi-coherent, so the kernel-defined closed image restricts exactly. The source's weaker pushforward hypothesis is preserved; no quasi-compactness of f is inserted."
+    },
+    {
+      "id": "I.9.5.9",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.9-fr",
+          "lines": [
+            946,
+            956
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L946-L956"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.9",
+          "lines": [
+            746,
+            753
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L746-L753"
+        }
+      },
+      "scope": "A reduced source has reduced closed image; with QC f_*O_X, an irreducible or integral source has irreducible or integral closed image, respectively.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "imagereduced",
+        "image",
+        "qc"
+      ],
+      "target_tags": [
+        "056B",
+        "01R6",
+        "01LA"
+      ],
+      "dependencies": [
+        "I.9.5.4"
+      ],
+      "argument": "imagereduced proves the reduced clause even without QC pushforward. For irreducibility, I.9.5.4 identifies the underlying image with the closure of the continuous image of an irreducible space, which is irreducible. Combine this with the reduced clause for integrality. The empty-space convention is inherited from the source's irreducible/integral assumption.",
+      "independent_ai_review": "The reduced-image lemma supplies the first clause without the source's extra pushforward condition. Under that condition, I.9.5.4 identifies the underlying image with the closure of a continuous irreducible image. Combining irreducibility with reducedness gives the integral clause."
+    },
+    {
+      "id": "I.9.5.10",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.10-fr",
+          "lines": [
+            972,
+            979
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L972-L979"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.10",
+          "lines": [
+            762,
+            766
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L762-L766"
+        }
+      },
+      "scope": "A qc immersion Y->X has a smallest closed subscheme containing Y, with underlying closure; Y is its induced open subscheme.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "image",
+        "immclosure"
+      ],
+      "target_tags": [
+        "01R6",
+        "01RG"
+      ],
+      "dependencies": [],
+      "argument": "image supplies the minimal closed image. immclosure proves all topological and open-immersion clauses for qc immersions, and even allows the alternative that Y is reduced. The image's universal property is exactly minimal containment of the immersion.",
+      "independent_ai_review": "The existing scheme-theoretic image gives minimal closed containment. The read quasi-compact-immersion proof shows that the original subscheme is the induced open in that image and is topologically dense. This supplies every topological and scheme-structure clause."
+    },
+    {
+      "id": "I.9.5.11",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.5.11-fr",
+          "lines": [
+            1001,
+            1006
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L1001-L1006"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.5.11",
+          "lines": [
+            775,
+            778
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L775-L778"
+        }
+      },
+      "scope": "On the closure of a qc immersed subscheme Y, a structure-sheaf section zero on its intersection with Y is zero, on every open.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "immclosure",
+        "density"
+      ],
+      "target_tags": [
+        "01RG",
+        "01RE"
+      ],
+      "dependencies": [],
+      "argument": "immclosure proves Y is a scheme-theoretically dense open in its closure. density identifies this with injectivity O_closure->j_*O_Y. Taking sections on any open V gives exactly the requested vanishing implication, not merely injectivity on global sections.",
+      "independent_ai_review": "The immersed subscheme is a scheme-theoretically dense open in its closure. Injectivity of O_closure -> j_*O_Y gives injectivity on every open's sections, exactly the source statement; this is not only a claim about global functions."
+    },
+    {
+      "id": "I.9.6.1",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.6.1-fr",
+          "lines": [
+            1028,
+            1035
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L1028-L1035"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.6.1",
+          "lines": [
+            791,
+            795
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L791-L795"
+        }
+      },
+      "scope": "For a QC O_X-algebra B, a B-module F is QC on the ringed space (X,B) iff its underlying O_X-module is QC.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "qcdef",
+        "affine",
+        "afftensor",
+        "qc"
+      ],
+      "target_tags": [
+        "01BE",
+        "01IB",
+        "01I8",
+        "01LA"
+      ],
+      "dependencies": [],
+      "argument": "A local presentation by sums of B gives O_X-quasi-coherence through qc's sums and cokernels. Conversely work on affine Spec A: B=tilde B0 and F=tilde M. The B-action corresponds under affine equivalence and afftensor to a B0-module action on M. Choose a free B0-module presentation and sheafify; exactness of tilde and qc sums produce a B-presentation of F. This does not confuse (X,B) with Spec_X B.",
+      "independent_ai_review": "The B-quasi-coherent presentation may use arbitrary index sets. Its underlying O_X sheaves remain quasi-coherent because sums of the single quasi-coherent algebra B and their cokernels do. Conversely affine equivalence and tensor compatibility turn the action into a B_0-module action; an arbitrary free presentation sheafifies back. No finite presentation is assumed, and the ringed space (X,B) is not confused with relative Spec B."
+    },
+    {
+      "id": "I.9.6.3",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.6.3-fr",
+          "lines": [
+            1085,
+            1091
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L1085-L1091"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.6.3",
+          "lines": [
+            813,
+            817
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L813-L817"
+        }
+      },
+      "scope": "On locally Noetherian X, every QC finite-type O_X-algebra B is a coherent sheaf of rings, not necessarily coherent as an O_X-module.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "affine",
+        "qc",
+        "cohdef",
+        "noethalg",
+        "noethmodule"
+      ],
+      "target_tags": [
+        "01IB",
+        "01LA",
+        "01BV",
+        "00FN",
+        "00IK"
+      ],
+      "dependencies": [],
+      "argument": "On affine Spec A with A Noetherian, B=tilde B0 and B0 is finite type over A, hence Noetherian by noethalg. A map B^m->B is given by finitely many sections, and on an affine neighborhood its kernel is tilde of the B0-kernel. noethmodule makes that kernel finite over B0. Sheafifying its finite generators makes the kernel finite type over B. cohdef proves B coherent on (X,B). No finiteness of B over A is claimed.",
+      "independent_ai_review": "On a Noetherian affine chart, the finite-type algebra B_0 is Noetherian, even when it is not finite as an A-module. Kernels B_0^m -> B_0 are finite B_0-modules and their sheafified finite generators verify ring-sheaf coherence on (X,B). The conclusion is not O_X-module coherence of B."
+    },
+    {
+      "id": "I.9.6.4",
+      "source_environment": "corollary",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.6.4-fr",
+          "lines": [
+            1114,
+            1124
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L1114-L1124"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.6.4",
+          "lines": [
+            827,
+            831
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L827-L831"
+        }
+      },
+      "scope": "Under I.9.6.3, B-coherence is equivalent to O_X-quasi-coherence plus B-finite type; a B-submodule or quotient of a coherent B-module is coherent iff underlying O_X-module is QC.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "cohfp",
+        "cohring",
+        "affine",
+        "noethmodule",
+        "qc"
+      ],
+      "target_tags": [
+        "01BW",
+        "01BZ",
+        "01IB",
+        "00IK",
+        "01LA"
+      ],
+      "dependencies": [
+        "I.9.6.1",
+        "I.9.6.3"
+      ],
+      "argument": "Necessity follows from cohfp and I.9.6.1. For sufficiency shrink to an affine where a surjection B^m->F exists. Exact affine QC correspondence makes Gamma(F) a finite B0-module; noethmodule makes its relation module finite, yielding a finite B-presentation. cohring and I.9.6.3 give coherence. For QC submodules or quotients, the affine underlying module is a B0-submodule or quotient of a finite module over the Noetherian B0, hence finite; the first criterion applies. Coherent subquotients are automatically underlying-QC by necessity.",
+      "independent_ai_review": "For the converse, shrink to a B-finite-type presentation on an affine chart. Exact affine equivalence makes the module finite over the Noetherian B_0, so the relation module is finite and gives a finite B-presentation. Coherence of the ring sheaf then applies. The same argument handles every underlying-quasi-coherent B-submodule and quotient; necessity follows from coherent implies finitely presented and I.9.6.1."
+    },
+    {
+      "id": "I.9.6.5",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.6.5-fr",
+          "lines": [
+            1146,
+            1154
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L1146-L1154"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.6.5",
+          "lines": [
+            841,
+            845
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L841-L845"
+        }
+      },
+      "scope": "On separated qc X or topologically Noetherian X, a finite-type QC algebra B is generated as an algebra by a finite-type QC O_X-submodule E.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "extend",
+        "qc",
+        "qsep",
+        "noethqc"
+      ],
+      "target_tags": [
+        "01PF",
+        "01LA",
+        "01KO",
+        "04ZA"
+      ],
+      "dependencies": [],
+      "argument": "Both alternatives imply qcqs. Choose a finite affine cover on which B has finitely many algebra generators. On each chart their O-module span is finite-type QC. Each chart is qc, so extend supplies a global finite-type QC submodule of B with that restriction. Their finite sum E remains finite-type QC and contains the chosen generating spans on every chart; hence E generates B as an algebra.",
+      "independent_ai_review": "Both source alternatives are qcqs. On a finite affine cover, span finitely many algebra generators as finite-type O_X-submodules and extend these inside B. The finite sum of the extensions is finite type and generates B on every chart. Finite algebra generation is not replaced by finite module generation of B."
+    },
+    {
+      "id": "I.9.6.6",
+      "source_environment": "proposition",
+      "source": {
+        "fr": {
+          "registry": "fr",
+          "label": "I.9.6.6-fr",
+          "lines": [
+            1168,
+            1174
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex#L1168-L1174"
+        },
+        "en": {
+          "registry": "en",
+          "label": "I.9.6.6",
+          "lines": [
+            852,
+            856
+          ],
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex#L852-L856"
+        }
+      },
+      "scope": "If |X| is locally Noetherian or X is separated qc, any QC O_X-algebra is a directed union of finite-type QC subalgebras.",
+      "classification": "existing_derived",
+      "target_keys": [
+        "algcolimit",
+        "qc",
+        "afftensor",
+        "colimit",
+        "glue"
+      ],
+      "target_tags": [
+        "05JT",
+        "01LA",
+        "01I8",
+        "01PG",
+        "00AM"
+      ],
+      "dependencies": [
+        "I.9.4.9"
+      ],
+      "argument": "For qc separated X, algcolimit applies directly. In the other branch I.9.4.9 expresses the underlying module as a directed union of finite-type QC submodules E. Each E generates the image of Sym(E)->B, a QC subalgebra by afftensor and qc kernel/cokernel closure; its local finite generators make it finite type as an algebra. Finite sums of E make the resulting algebra family directed, and underlying-module exhaustion gives union B. This retains the non-qc topologically locally Noetherian branch.",
+      "independent_ai_review": "The separated quasi-compact branch is the existing algebra-colimit lemma. For a possibly non-quasi-compact topologically locally Noetherian source, use I.9.4.9 on the underlying module; each finite-type submodule E generates the quasi-coherent image of Sym(E) in B. Finite sums make these finite-type subalgebras directed, and module exhaustion proves their union is B."
+    }
+  ],
+  "context_only_not_counted": [
+    {
+      "id": "I.9.1.8",
+      "en_lines": [
+        147,
+        154
+      ],
+      "status": "read_context_not_a_numbered_statement_environment",
+      "content": "Base-changed sheaf is defined as projection pullback; used explicitly in I.9.1.9-11."
+    },
+    {
+      "id": "I.9.4.1",
+      "en_lines": [
+        428,
+        443
+      ],
+      "status": "read_context_not_a_numbered_statement_environment",
+      "content": "Canonical extension is the inverse image of j_*G in F; its maximality and section criterion are checked in I.9.4.2."
+    },
+    {
+      "id": "I.9.6.2",
+      "en_lines": [
+        806,
+        811
+      ],
+      "status": "read_context_not_a_numbered_statement_environment",
+      "content": "Finite-type QC algebra is defined locally affinely, with restriction stability; used in I.9.6.3-6."
+    }
+  ],
+  "additional_review_spans": [
+    {
+      "file": "schemes.tex",
+      "span_sha256": "413D03304329BBA297544223F5F0B86D9B7943139E3DD840C70A9CDD630DB021",
+      "raw_file_sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233",
+      "lines": [
+        1148,
+        1181
+      ],
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1148-L1181"
+    },
+    {
+      "file": "schemes.tex",
+      "span_sha256": "DDB87565DE81DED8C5DF0538F34DEB1D01114E7DCE5A05F7EE904743E33426B2",
+      "raw_file_sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233",
+      "lines": [
+        1348,
+        1469
+      ],
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L1348-L1469"
+    },
+    {
+      "file": "properties.tex",
+      "span_sha256": "A8299F0B18FA9CFBC9E8E715754709ACA59354335CDEC4509E5E413A828DB42B",
+      "raw_file_sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+      "lines": [
+        2092,
+        2168
+      ],
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/properties.tex#L2092-L2168"
+    },
+    {
+      "file": "modules.tex",
+      "span_sha256": "E4B24DBE46652D256D233BD8C19ACD4B79AFF723368D1ED7A5DCC626401C1E7C",
+      "raw_file_sha256": "BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300",
+      "lines": [
+        3601,
+        3638
+      ],
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/modules.tex#L3601-L3638"
+    },
+    {
+      "file": "algebra.tex",
+      "span_sha256": "FF1F8B39003CA381BF65F38C93185AF39B7CD011577987A19DEF91099ACE054B",
+      "raw_file_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+      "lines": [
+        15468,
+        15510
+      ],
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/algebra.tex#L15468-L15510"
+    },
+    {
+      "file": "schemes.tex",
+      "span_sha256": "5E21AE188460B28C4EEE6441BCEE7FEE320AB1200B3E069C90369CC9C6CE83C9",
+      "raw_file_sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233",
+      "lines": [
+        4634,
+        4686
+      ],
+      "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/6402f0425425fb5d3bd1c2f206e3b4bab1e28e47/schemes.tex#L4634-L4686"
+    }
+  ],
+  "qualifications": [
+    {
+      "id": "I.9.5.1",
+      "unproved_literal_clause": "Existence of a least factorization target among all locally closed subpreschemes.",
+      "counterexample": "Spec Q -> Spec Z has quasi-coherent pushforward. It factors through every nonempty open of Spec Z. A locally closed subset containing the generic point must be open, and no nonempty open is contained in every nonempty open; hence no least locally closed factorization target exists.",
+      "closed_reading": "Fully proved by Stacks 01R6 and its quasi-coherent-kernel construction."
+    },
+    {
+      "id": "I.9.5.2",
+      "unproved_literal_clause": "The kernel-defined closed image realizes the unqualified minimum from I.9.5.1.",
+      "counterexample": "D(2) -> Spec Z has zero kernel, so its closed image is Spec Z, yet it factors through the smaller open D(2).",
+      "closed_reading": "The kernel construction, factorization, and minimality among closed subschemes are fully proved."
+    }
+  ],
+  "reproducibility": {
+    "writer_artifact": {
+      "name": "i9_comparisons.json",
+      "bytes": 41964,
+      "sha256": "14D4CF2E18488C030259FAB175BA2D38CFE99F16CB3CB32717CEEE7EC414C537"
+    },
+    "independent_review_artifact": {
+      "name": "i9_independent_review.json",
+      "bytes": 83645,
+      "sha256": "163009BC7BE78F3C7B4728EA55F359D8984EE635865BBCC99FEFD2631690D4AC"
+    },
+    "validator_artifact": {
+      "name": "i9_validate.ps1",
+      "bytes": 7511,
+      "sha256": "F65DBEF01F020159832D624F6C6F219BA21DC3197639876C248B8EA7A55576F7"
+    },
+    "mechanical_validation": {
+      "status": "passed_structural_and_byte_validation_not_independent_mathematical_review",
+      "mapping_sha256": "14D4CF2E18488C030259FAB175BA2D38CFE99F16CB3CB32717CEEE7EC414C537",
+      "source_receipts": {
+        "en": {
+          "bytes": 48445,
+          "sha256": "C17DE68331422B09D8FA6B3E4E7FAC639F73A36F22AFD224DF0ED1EB7407C6E8",
+          "numbered_statement_environments": 44,
+          "checked_statement_spans": 44
+        },
+        "fr": {
+          "bytes": 53127,
+          "sha256": "976E4873EA52E77E74E942B2FC75AD986A3D5EDFF4F6188B4F5776C4A0464091",
+          "numbered_statement_environments": 44,
+          "checked_statement_spans": 44
+        }
+      },
+      "counts": {
+        "existing_exact": 3,
+        "existing_stronger": 5,
+        "existing_derived": 34,
+        "partial": 2,
+        "unmatched_in_bounded_search": 0,
+        "matched_total": 42
+      },
+      "checked_target_files": {
+        "modules.tex": {
+          "bytes": 211777,
+          "sha256": "BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300"
+        },
+        "schemes.tex": {
+          "bytes": 189721,
+          "sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233"
+        },
+        "properties.tex": {
+          "bytes": 213401,
+          "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA"
+        },
+        "morphisms.tex": {
+          "bytes": 593209,
+          "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242"
+        },
+        "coherent.tex": {
+          "bytes": 357482,
+          "sha256": "D219CBA93EA84084A35BE94B3454E316C54037AF0BFBF795A1824543D9440BBC"
+        },
+        "sheaves.tex": {
+          "bytes": 188321,
+          "sha256": "48CCCB70E6BC5E4040B4F8D0DFAD6788182370EDA9C0CE8FC37705774B8C1FB3"
+        },
+        "algebra.tex": {
+          "bytes": 1808110,
+          "sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD"
+        },
+        "topology.tex": {
+          "bytes": 245067,
+          "sha256": "38D2E107901BE84FA1EAD3587DB2FBFC50589914D49DB0ED5937C14D9B934F34"
+        },
+        "tags/tags": {
+          "bytes": 989923,
+          "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D"
+        },
+        "constructions.tex": {
+          "bytes": 209942,
+          "sha256": "CFEBD4FE907082611F346447285454E473FC35F68ED3F10494C412547CF80FAD"
+        }
+      },
+      "checked_target_labels_and_tags": 54,
+      "checked_source_ids_unique": 44,
+      "checked_spans": 148,
+      "span_hash_convention": "SHA256 of UTF-8 encoded inclusive line-span text joined by LF; existing CR bytes on individual lines retained; no terminal newline appended",
+      "ordered_span_receipts_sha256": "076776FC2B7CF189BF377818511920A702D24BEAE12D8C0DA2D8FA9A15C5373C",
+      "writes_performed": 0
+    }
+  },
+  "next_action": "Resolve the two original-source wording/convention questions by printed-source collation; continue the preserved EGA coverage batches and integrate only genuinely missing, worthwhile mathematics."
+}
