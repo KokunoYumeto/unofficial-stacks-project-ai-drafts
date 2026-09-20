@@ -28,12 +28,11 @@ Stacks Project review, approval, affiliation, endorsement, or tag assignment.
 The active lease is stacks-lease-000053-verdier-ast239-1-3-6-r1. The payload
 has passed a mutex-protected baseline-versus-candidate fixed-point build with
 zero new diagnostics and affected-page visual QA. The earlier mathematical and
-layout review is preserved in the merged candidate history, while this freshly
-leased current-main import requires a new independent replay before admission.
-The initial manifest therefore records review as partial and replay as not yet
-performed. Admission, composition, publication, and public-byte readback remain separate
-hash-bound transitions. Candidate-local admission state remains not_admitted
-even after any later registry transition.
+layout review is preserved in the merged candidate history. A new independent
+replay of the freshly leased current-main import passed and is bound into the
+final manifest. Admission, composition, publication, and public-byte readback
+remain separate hash-bound transitions. Candidate-local admission state remains
+not_admitted even after any later registry transition.
 
 Composition operation VDR-STK-COMP-0002 inserts the single payload after the
 complete proof of proposition-homotopy-category-triangulated and before

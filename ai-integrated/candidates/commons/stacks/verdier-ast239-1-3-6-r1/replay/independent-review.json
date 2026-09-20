@@ -1,0 +1,476 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "review_id": "stacks-verdier-a04446e-1-3-6-r1-independent-review-20260920",
+  "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+  "status": "PASS",
+  "passed": true,
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "reviewed_at_utc": "2026-09-20T22:38:17Z",
+  "reviewer_role": "independent_replay",
+  "reviewer_separation": {
+    "candidate_owner": false,
+    "admitter": false,
+    "reviewed_inputs_mutated": false,
+    "durable_writes": [
+      "replay/independent-review.json"
+    ],
+    "tex_or_bibliography_process_started": false
+  },
+  "frozen_candidate": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts",
+    "candidate_git_path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1",
+    "commit": "eb3a4cfd81b3d2eeaa7630fb34e924d4d716d466",
+    "repository_tree": "45ac504ed04dbb13c611816e721875c204cb22d7",
+    "candidate_subtree": "9a963e80228074aa4de2a5ce60e65ac3191927fb",
+    "manifest": {
+      "git_path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/candidate.manifest.json",
+      "git_blob": "8c95bcf3d92eaaa6cd9fcea7170e837260d9a23f",
+      "bytes": 5221,
+      "sha256": "5CA7686A2786D0C85D2FA010C73A6048662A9F605C8A168E9C62949D9C0C9F23"
+    },
+    "manifest_references": {
+      "declared": 29,
+      "unique": 29,
+      "candidate_files_excluding_manifest": 29,
+      "missing_bindings": [],
+      "extra_bindings": [],
+      "hash_mismatches": [],
+      "verified_from_frozen_git_object_bytes": {
+        "authority/authority.lock.json": "BE5854692B1470F74ABA10B84DD057B0F7D209C23863D40B426904EA2FFABE03",
+        "stable-units.json": "4E8042DBEE76B9C44117F72911C88C566B26E395E570D5784C427F749E4CC51E",
+        "source-map.jsonl": "742383E24BB69BBC775401313E8AC49A154F325FF3117CD10E6A27718FA8AF70",
+        "decisions.jsonl": "FD65AD042211B423CC8BEA62144F69B3153EBDFDD0D12C046CCADB4AFCEF0A42",
+        "rejections.jsonl": "137866FF532F1EC23364F62470CA001D030080B2F54C5839EB9ABE1F7CF60882",
+        "formula-diagram-inventory.json": "5EE80802B4CE2776214458BC383302986BC8F935B9EAB237A38521D0C6B90A8F",
+        ".gitattributes": "19A1DCCFFFD90CC9A3FCE89B2D147B1844EE285291736D1245CE061DF6864549",
+        ".gitignore": "5B561AA9AE36CA5FF408C3A22CE239167F80F4D3B6EF53FF095A6136FB824AA8",
+        "LEASE.json": "C4EAC2ADED6357E31839DDEAA62CD37CC50981810D3079FB46B8EE18F0FC82E0",
+        "README.md": "4447E99B855ACDB1A3C8625D03EE62A62F080955AA7BF47CBC01BA55D25DEFD1",
+        "_build_impl.py": "8B4A4151408745EA8DC6C325B623DA1E9017AE922C8A12363206E95E57E53610",
+        "build-manifest.py": "22F99D0268A2967A45C19B01D5D0CEE94F4FC101A206203DAD423E4EFD71945B",
+        "build.py": "744443361AF8C2BF173A584A11D84AD493BE8B9AF72FEE340C6CB5DEC7F1AFFE",
+        "builds/baseline-derived.log": "285307FCB784CBB447DA375958465A8127BF19E69AD587117C649CFC13B47BB8",
+        "builds/build-receipt.json": "5CD5F1A6B2A8B0A1DAA9E04F705AF5F334C21108CF242EC432FE090750C3F42D",
+        "builds/derived.log": "3907949D2C8BE01837677A4A9726563FB5EB5AB54252F55361D3E76B6662DCE6",
+        "builds/derived.pdf": "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331",
+        "builds/tex-mutex.json": "570D3A97C0D10F8BBC7A0B7D70F9DFCBCEB09BFFFB9C633831315E1AFAAA53C9",
+        "builds/validation.json": "D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB",
+        "builds/visual-qa.json": "EA4A81FA009E323BE18F25D23AE2A0DEF2AA450354A66CC087EFF3C8FDF6D4D2",
+        "builds/visual/derived-036.png": "1E23A83D3F8B184431A42CECC8C1A6D8B7C189D3CA7EC0818E18DE0C91B15285",
+        "builds/visual/derived-037.png": "368B0CF805CD601FBEB02CFABE8CEE5F67401BEBAC970BB6F5796A27622127CC",
+        "builds/visual/derived-038.png": "1A1776CCB10E078BCBE13097CBAB46B35AD329082AE8391F307ED767F1839740",
+        "builds/visual/derived-039.png": "EE36F139634BFB5527592CA1FDEF401649E3DFDF2E1E4C6047BD7CDED63E5F71",
+        "candidate.config.json": "2F25500E3FC3A5BEDA3FDC928FE8E0B94C49643FE488D225CEAE4131261B02F0",
+        "check-manifest.py": "870EB89C753F9DF0A73E42DE1436369763149640BD86C3EFA05A425F6E656013",
+        "composition.jsonl": "C3DD45A0CAF2263EF7FF645F0573AE775112012A681706420DB9A86C47F242D7",
+        "payload/fragments/derived-homotopy-category-abelian-split.tex": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E",
+        "verify.py": "E69588D4794725525EC9028E66D7C1ADC7C1968608E7BA1735417515F57072CD"
+      }
+    }
+  },
+  "checkout_context": {
+    "current_head_at_review": "46409932f27aa922a62f2e357115c4ba1fd4bb69",
+    "current_head_tree": "3a1cd72ea71f6c414c98c9b5dfae5c2233112d6d",
+    "current_candidate_subtree": "9a963e80228074aa4de2a5ce60e65ac3191927fb",
+    "matches_frozen_candidate_subtree": true,
+    "all_30_pre_receipt_worktree_files_match_frozen_git_object_bytes": true
+  },
+  "public_base": {
+    "commit": "eccbe97b5ee5da240eb49a7ff1b80c200aa27434",
+    "tree": "70ac24edb051f20678f7c7db20d4a61652f15340",
+    "is_ancestor_of_frozen_candidate": true,
+    "derived_tex": {
+      "git_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+      "bytes": 452054,
+      "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860"
+    }
+  },
+  "lease_registry": {
+    "path": "ai-integrated/registry/leases.json",
+    "current_commit": "46409932f27aa922a62f2e357115c4ba1fd4bb69",
+    "current_blob": "7717ad1835423effe811b4f111d494c2f5caa971",
+    "current_bytes": 62561,
+    "current_sha256": "E5735AD21BCB0AAEA45D601AC887F49A8135A96A07E22A8F593924BB63F6DFB4",
+    "event_count": 102,
+    "event_ids_unique_and_sequential_000001_through_000102": true,
+    "lease_event": {
+      "event_id": "lease-event-000102",
+      "event": "issued",
+      "lease_id": "stacks-lease-000053-verdier-ast239-1-3-6-r1",
+      "namespace": "commons/stacks/verdier-ast239-1-3-6-r1",
+      "candidate_path": "candidates/commons/stacks/verdier-ast239-1-3-6-r1",
+      "writer_task": "019fca5a-c80e-7890-a46b-4948ff443e6d",
+      "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "state": "active",
+      "supersedes_event_id_present": false
+    },
+    "public_base_precondition": {
+      "event_count": 101,
+      "maximum_event": 101,
+      "maximum_lease_stem": 52,
+      "lease_000053_absent": true
+    },
+    "identity_matches_lease_pointer_config_and_upstream_lock": true
+  },
+  "authority": {
+    "work": "Verdier, Des categories derivees des categories abeliennes, Asterisque 239",
+    "statement": "Chapter II, Proposition 1.3.6",
+    "printed_page": 108,
+    "physical_pdf_page": 125,
+    "authority_lock_sha256": "BE5854692B1470F74ABA10B84DD057B0F7D209C23863D40B426904EA2FFABE03",
+    "pdf": {
+      "file_name": "AST_1996__239__R1_0.pdf",
+      "bytes": 19188423,
+      "pages": 270,
+      "sha256": "6214C252BACEBA5584E3C4AEB564C129851941C1A9250BABAB45B79A3939B0AE",
+      "physical_page_125_contains_printed_page_108_and_proposition_1_3_6": true
+    },
+    "anchor_map": {
+      "logical_path": "sem/final_four_edition_anchor_map.csv",
+      "bytes": 873203,
+      "sha256": "A9AB660EF7E86ADFD5B517F06D9E50AF1E5C6B785F531E2D20746AF0A42D2927"
+    },
+    "english_source_page": {
+      "logical_path": "content/en/p125.tex",
+      "bytes": 2671,
+      "sha256": "01D96DD78685171DB3897E129FC3085A4343AC7297169D60C3FA3C6A9E52C532"
+    },
+    "source_units": [
+      {
+        "sequence": 1,
+        "unit_id": "verdier:ast239:1.3.6",
+        "anchor_map_sequence": 1184,
+        "anchor_id": "ch2-1-3-6",
+        "english_lines": [49, 54],
+        "segment_bytes": 166,
+        "segment_sha256": "F0904C692A3D164E0ED885A35F52E27DB8E2692F199BA492838D1702AB8586B0",
+        "target_kind": "proposed_new_lemma",
+        "passed": true
+      },
+      {
+        "sequence": 2,
+        "unit_id": "verdier:ast239:1.3.6:equivalent-conditions",
+        "anchor_map_sequence": 1185,
+        "anchor_id": "ch2-1-3-6-equivalent-conditions",
+        "english_lines": [55, 61],
+        "segment_bytes": 283,
+        "segment_sha256": "B09413151F1DDECF41E376B7BA4F2062D8DB19775131180B7DE911BA498D2008",
+        "target_kind": "proposed_new_lemma",
+        "passed": true
+      },
+      {
+        "sequence": 3,
+        "unit_id": "verdier:ast239:1.3.6:proof:i-iff-ii",
+        "anchor_map_sequence": 1186,
+        "anchor_id": "ch2-1-3-6-i-iff-ii",
+        "english_lines": [63, 65],
+        "segment_bytes": 126,
+        "segment_sha256": "9C18A27A2B2B8E8D253A3287E18096810F7CA506537806E24F14CAFCAD7EACC3",
+        "target_kind": "existing_stacks_composite",
+        "passed": true
+      },
+      {
+        "sequence": 4,
+        "unit_id": "verdier:ast239:1.3.6:proof:ii-implies-iii",
+        "anchor_map_sequence": 1187,
+        "anchor_id": "ch2-1-3-6-ii-implies-iii",
+        "english_lines": [67, 69],
+        "segment_bytes": 162,
+        "segment_sha256": "61306A00AC9D36C38F90BCBADB0A082C155A00223179A4A8359B94A1ACC6F126",
+        "target_kind": "proposed_new_lemma",
+        "passed": true
+      },
+      {
+        "sequence": 5,
+        "unit_id": "verdier:ast239:1.3.6:construction:hstar-complex",
+        "anchor_map_sequence": 1188,
+        "anchor_id": "ch2-1-3-6-hstar-complex",
+        "english_lines": [71, 78],
+        "segment_bytes": 200,
+        "segment_sha256": "F55A8EFAAE93EDE8E78B2F4758BE24A696103AAEFF02B6DE40BE08B8FA50B345",
+        "target_kind": "proposed_new_lemma",
+        "passed": true
+      },
+      {
+        "sequence": 6,
+        "unit_id": "verdier:ast239:1.3.6:claim:hstar-equivalence",
+        "anchor_map_sequence": 1189,
+        "anchor_id": "ch2-1-3-6-hstar-equivalence",
+        "english_lines": [80, 83],
+        "segment_bytes": 175,
+        "segment_sha256": "66DE6AE2034A1C675982788F2C6DB29639D460F8EE3C5F74C73A9DEDEFC83107",
+        "target_kind": "proposed_new_lemma",
+        "passed": true
+      },
+      {
+        "sequence": 7,
+        "unit_id": "verdier:ast239:1.3.6:conclusion:iii-implies-ii",
+        "anchor_map_sequence": 1190,
+        "anchor_id": "ch2-1-3-6-proof-complete",
+        "english_lines": [85, 87],
+        "segment_bytes": 109,
+        "segment_sha256": "B893EDB3A94954A8728ABFBECF1B9CB810A1B3A1C62894BF2E5FE64CA061828E",
+        "target_kind": "proposed_new_lemma",
+        "passed": true
+      }
+    ],
+    "source_closure": {
+      "unit_count": 7,
+      "unique_unit_count": 7,
+      "unique_anchor_count": 7,
+      "authored_payload_units": 6,
+      "existing_composite_dispositions": 1,
+      "unresolved_source_units": 0,
+      "passed": true
+    }
+  },
+  "payload": {
+    "path": "payload/fragments/derived-homotopy-category-abelian-split.tex",
+    "bytes": 3673,
+    "sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E",
+    "encoding": "UTF-8",
+    "line_endings": "LF",
+    "bom_free": true,
+    "proposed_label": "lemma-homotopy-category-abelian-split",
+    "label_occurrences_in_payload": 1
+  },
+  "stacks_references": [
+    {
+      "payload_reference": "proposition-homotopy-category-triangulated",
+      "global_label": "derived-proposition-homotopy-category-triangulated",
+      "tag": "014S",
+      "provider": "derived.tex",
+      "unique_in_official_and_public_base": true
+    },
+    {
+      "payload_reference": "lemma-when-split",
+      "global_label": "derived-lemma-when-split",
+      "tag": "05QU",
+      "provider": "derived.tex",
+      "unique_in_official_and_public_base": true
+    },
+    {
+      "payload_reference": "homology-definition-abelian-category",
+      "global_label": "homology-definition-abelian-category",
+      "tag": "0109",
+      "provider": "homology.tex",
+      "unique_in_official_and_public_base": true
+    },
+    {
+      "payload_reference": "homology-lemma-map-cohomology-homotopy-cochain",
+      "global_label": "homology-lemma-map-cohomology-homotopy-cochain",
+      "tag": "0116",
+      "provider": "homology.tex",
+      "unique_in_official_and_public_base": true
+    },
+    {
+      "payload_reference": "homology-definition-graded",
+      "global_label": "homology-definition-graded",
+      "tag": "0125",
+      "provider": "homology.tex",
+      "unique_in_official_and_public_base": true
+    },
+    {
+      "payload_reference": "homology-lemma-graded",
+      "global_label": "homology-lemma-graded",
+      "tag": "0126",
+      "provider": "homology.tex",
+      "unique_in_official_and_public_base": true
+    }
+  ],
+  "mathematical_review": {
+    "passed": true,
+    "checks": [
+      {
+        "id": "abelianity_iff_normal_form",
+        "passed": true,
+        "evidence": "Tag 014S makes K(A) triangulated, hence pre-triangulated. Tag 05QU identifies kernels, cokernels, and the projection-coprojection normal form. With Tag 0109, the normal form gives kernels and cokernels and makes the canonical coimage-to-image map the identity on the middle summand; conversely abelianness supplies kernels for every morphism."
+      },
+      {
+        "id": "normal_form_implies_split_short_exact_sequences",
+        "passed": true,
+        "evidence": "For a monomorphism a between degree-zero complexes, the normal form supplies b with aba=a. Homotopies between such maps vanish, so this equality holds in A; monicity gives ba=1, which splits the short exact sequence."
+      },
+      {
+        "id": "split_complex_decomposition_and_contracting_homotopy",
+        "passed": true,
+        "evidence": "Splitting 0->Z^n->X^n->B^(n+1)->0 and 0->B^n->Z^n->H^n->0 yields X^n=B^n+H^n+B^(n+1) with d(b,h,c)=(c,0,0). For C^n=B^n+B^(n+1), s^n(b,c)=(0,b) satisfies d^(n-1)s^n+s^(n+1)d^n=1 with the displayed degrees and signs."
+      },
+      {
+        "id": "cohomology_functor_full_faithful_essentially_surjective",
+        "passed": true,
+        "evidence": "Tag 0116 makes H* well-defined on K(A). The chosen inclusion/projection maps are inverse in K(A) and induce identity on cohomology; u maps to i_Y u p_X and every f equals i_Y H*(f) p_X. Thus H* is fully faithful, and H*H*=H* plus X isomorphic to H*(X) gives essential surjectivity."
+      },
+      {
+        "id": "graded_category_conclusion",
+        "passed": true,
+        "evidence": "For zero-differential complexes the homotopy relation is equality, so the full subcategory is Gr(A). Tags 0125 and 0126 identify it and prove it abelian. The equivalence therefore makes K(A) abelian. The payload correctly records that the splittings are noncanonical and asserts no natural isomorphism H*=>Id."
+      }
+    ]
+  },
+  "nonduplication": {
+    "public_base_root_tex_files_searched": 120,
+    "exact_payload_occurrences_in_derived_tex": 0,
+    "proposed_label_occurrences_in_public_base": 0,
+    "targeted_statement_pattern_hits": {
+      "K_A_is_abelian": 0,
+      "all_short_exact_sequences_split": 0,
+      "Hstar_equivalence": 0,
+      "zero_differential_equivalence": 0
+    },
+    "existing_composite_not_claimed_new": {
+      "source_unit": "verdier:ast239:1.3.6:proof:i-iff-ii",
+      "tags": ["014S", "05QU", "0109"]
+    },
+    "bounded_analogues_not_duplicates": [
+      {
+        "tag": "0EWX",
+        "reason": "Bounded derived category D^b(A) under Ext^2-vanishing, not arbitrary K(A) under split exactness."
+      },
+      {
+        "tag": "0GM4",
+        "reason": "Bounded derived category D^b(A) under higher-Ext vanishing, not arbitrary K(A) under split exactness."
+      }
+    ],
+    "passed": true
+  },
+  "insertion_only_composition": {
+    "operation_id": "VDR-STK-COMP-0002",
+    "operation": "insert_bytes",
+    "mode": "insertion_only",
+    "constraints": {
+      "existing_target_bytes_changed": 0,
+      "delete_bytes": 0,
+      "replace_bytes": 0,
+      "insert_payload_once": true
+    },
+    "frozen_contract": {
+      "commit": "f73b18165c7162b8386de06cc3c50bd4ced745b6",
+      "tree": "5bc25c775349eddf5fa90a7f37f5b11044d89ec1",
+      "path": "derived.tex",
+      "blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+      "bytes": 452054,
+      "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "context_start_byte": 119874,
+      "byte_offset": 120378,
+      "context_end_byte_exclusive": 120526,
+      "context_bytes": 652,
+      "context_sha256": "9DFEBC89263C5751394E2D6BF5D30DADE249134A52C6FF9A0D74365849E5187C",
+      "before_context_sha256": "04C2379026014D0C5F7820DADE9DF5060DADC3C52AC79FF21698E037C366FA7A",
+      "after_context_sha256": "86114DF60D43285A3EB986072118D953AA32189D43C255A82ABB11BCEE300928",
+      "context_occurrences": 1,
+      "postimage_bytes": 455727,
+      "postimage_sha256": "726404F52F8E9EFD8D091DA3BF0EE9A1B288E6CFCC7A24DAD20ACB92926C62CE",
+      "prefix_unchanged": true,
+      "suffix_unchanged": true
+    },
+    "generic_composer_dry_run": {
+      "tool": "tools/compose_registered_insertion.py",
+      "tool_git_blob": "5fdbf67e590690fb4eb7dd7da217bae4c15f7fcf",
+      "tool_sha256": "0D3A903844F91D49717E4240D74CC0BA241B2A45DD6EA5A54EA729D1ACEEE17D",
+      "method": "Read-only in-memory replay of the generic composer's frozen-contract validation and unique-context rebase algorithm; the admission-only registry gate was not bypassed.",
+      "base_revision": "eccbe97b5ee5da240eb49a7ff1b80c200aa27434",
+      "base_tree": "70ac24edb051f20678f7c7db20d4a61652f15340",
+      "base_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+      "base_bytes": 452054,
+      "base_sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "base_context_occurrences": 1,
+      "payload_occurrences_before": 0,
+      "label_occurrences_before": 0,
+      "rebased_context_start_byte": 119874,
+      "rebased_byte_offset": 120378,
+      "projection_blob": "224b3e76847ef0bfe86e0157a35ef3f735872033",
+      "projection_bytes": 455727,
+      "projection_sha256": "726404F52F8E9EFD8D091DA3BF0EE9A1B288E6CFCC7A24DAD20ACB92926C62CE",
+      "payload_occurrences_after": 1,
+      "label_occurrences_after": 1,
+      "prefix_unchanged": true,
+      "suffix_unchanged": true,
+      "head_and_worktree_derived_blob_match_public_base": true,
+      "write_performed": false,
+      "passed": true
+    }
+  },
+  "build_and_visual_evidence": {
+    "build_receipt_passed": true,
+    "validation_passed": true,
+    "new_candidate_diagnostic_count": 0,
+    "tex_mutex_acquired_and_released": true,
+    "captured_child_exit_code": 0,
+    "derived_pdf_pages": 131,
+    "derived_pdf_sha256": "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331",
+    "rendered_pages_inspected": [36, 37, 38, 39],
+    "target_pages": [37, 38],
+    "printed_target": "Lemma 10.4",
+    "complete_statement_and_proof_visible": true,
+    "formulas_and_references_legible": true,
+    "clipping_or_overlap": false,
+    "neighbor_layout_regression": false,
+    "reported_issues": [],
+    "passed": true
+  },
+  "pre_receipt_validators": [
+    {
+      "command": "python -B check-manifest.py",
+      "exit_code": 0,
+      "manifest_sha256": "5CA7686A2786D0C85D2FA010C73A6048662A9F605C8A168E9C62949D9C0C9F23",
+      "references": 29,
+      "stable_units": 7,
+      "passed": true
+    },
+    {
+      "command": "python -B verify.py",
+      "exit_code": 0,
+      "lease_id": "stacks-lease-000053-verdier-ast239-1-3-6-r1",
+      "source_units": 7,
+      "reference_count": 6,
+      "operation_id": "VDR-STK-COMP-0002",
+      "passed": true
+    }
+  ],
+  "post_receipt_lifecycle": {
+    "validators_run_after_receipt": false,
+    "reason": "The frozen initial config and manifest truthfully remain review_state partial and independent_replay not_performed and do not yet bind this new receipt; running either lifecycle-aware validator now would fail by design.",
+    "next_local_transition": "Set review_state to performed and independent_replay to passed in the candidate lifecycle records, bind replay/independent-review.json by resealing candidate.manifest.json, then run check-manifest.py and verify.py before admission."
+  },
+  "check_results": [
+    {
+      "id": "frozen_identity_and_manifest_closure",
+      "passed": true,
+      "evidence": "Frozen commit eb3a4cfd81b3d2eeaa7630fb34e924d4d716d466 resolves to repository tree 45ac504ed04dbb13c611816e721875c204cb22d7 and candidate subtree 9a963e80228074aa4de2a5ce60e65ac3191927fb. All 29 unique manifest references match frozen Git object bytes, with no missing or extra binding."
+    },
+    {
+      "id": "authority_and_seven_unit_closure",
+      "passed": true,
+      "evidence": "The exact 19,188,423-byte, 270-page authority PDF, the locked anchor map, and content/en/p125.tex match their hashes. Source-map rows 1-7 match anchor sequences 1184-1190, anchor IDs, page 125, printed page 108, source starts and ends, unit order, target dispositions, and seven independently hashed source segments."
+    },
+    {
+      "id": "mathematical_correctness",
+      "passed": true,
+      "evidence": "Every implication, decomposition, degree, contracting-homotopy identity, Hom-set inverse, essential-surjectivity argument, and graded-category conclusion was checked against the source statement and Tags 014S, 05QU, 0109, 0116, 0125, and 0126. No mathematical defect or overstatement remains."
+    },
+    {
+      "id": "nonduplication",
+      "passed": true,
+      "evidence": "The 3,673-byte payload and proposed label are absent from public-base derived.tex. Targeted scans across all 120 root TeX sources found no unbounded K(A) split-abelian/cohomology-equivalence theorem. Tags 0EWX and 0GM4 are bounded-derived Ext-vanishing analogues; the 014S/05QU/0109 composite is explicitly cited rather than claimed new."
+    },
+    {
+      "id": "lease_000053_event_000102",
+      "passed": true,
+      "evidence": "Current registry bytes contain exactly one active issuance for stacks-lease-000053-verdier-ast239-1-3-6-r1 at lease-event-000102, with candidate path and upstream identities matching the pointer/config/lock. Event IDs are unique and sequential through 000102; the new sibling lease root correctly has no supersedes_event_id."
+    },
+    {
+      "id": "insertion_only_and_current_base_rebase",
+      "passed": true,
+      "evidence": "The frozen f73 contract, 652-byte unique context, before/after hashes, payload, and postimage all replay exactly. The public-base, current-HEAD, and worktree derived.tex share blob f62f8645b22d39a3dd5998256f3a296bcb677d37. The generic composer algorithm dry-runs at byte 120378 to projection blob 224b3e76847ef0bfe86e0157a35ef3f735872033 with one payload and label and byte-identical prefix/suffix; derived.tex was not written."
+    },
+    {
+      "id": "build_and_render_evidence",
+      "passed": true,
+      "evidence": "All bound build hashes match; fixed-point validation reports zero new diagnostics and a released machine-wide TeX mutex. The four frozen page renders were inspected directly: Lemma 10.4 is complete and legible across pages 37-38, with intact neighbors and no clipping, overlap, or layout regression."
+    }
+  ],
+  "unresolved_defects": []
+}
