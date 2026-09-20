@@ -191,6 +191,11 @@ explains finite-free cohomology representatives and arbitrary base change,
 including the finite-projective degree bound for a single flat coherent sheaf.
 It supports seven mathematical units and retains five precise questions about
 unbounded constructions; neither comparison is a claim of complete EGA III.
+The [IV §18.12 comparison](ega/coverage/ega-iv-18-12.md) records 16 supported
+items on finiteness, Zariski's Main Theorem, normalization and ampleness. It
+separates a historical conjecture and an unchecked proof-route claim from
+actual missing-theorem candidates, and explains the local shrinking and
+full-section-ring hypotheses needed in the less immediate arguments.
 The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,

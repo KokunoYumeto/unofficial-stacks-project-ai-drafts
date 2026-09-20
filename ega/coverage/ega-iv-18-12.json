@@ -1,0 +1,2720 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA IV section 18.12: finiteness, Zariski Main, and ampleness",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "29a05ca0ba1328874b7aae53301e09c9bbbbaf7b",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "review_boundary": "The preserved independent AI review is adopted after current exact file/span/tag checks. No new independent review, fresh full-source read, printed-page collation or machine proof is claimed.",
+  "sources": {
+    "english": {
+      "role": "English discovery; exact recovered IV-B bytes, not French authority",
+      "repository": "KokunoYumeto/ega-fr",
+      "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex"
+    },
+    "french": {
+      "role": "French diplomatic transcription independently consulted for every new source unit; no fresh printed-page image replay",
+      "repository": "KokunoYumeto/ega-fr",
+      "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex"
+    },
+    "context": {
+      "role": "Exact local pinned English discovery used only to unpack the explicit II.4.5.1/.2 notation; no new II coverage/admission count",
+      "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-en/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega2/ega2-4.tex"
+    }
+  },
+  "counts": {
+    "numbered_items": 18,
+    "supported": 16,
+    "historical_conjectural_remark": 1,
+    "historical_proof_route_partial": 1,
+    "unformulated_exercise_excluded": 1,
+    "new_root_theorems": 0
+  },
+  "files": [
+    {
+      "id": "source:english",
+      "name": "iv18_12_english_discovery.tex",
+      "bytes": 339554,
+      "sha256": "FCEE2B214BE780923AD113E90E501171F43426A6986546FD9C29CF89170DEBAE",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex"
+    },
+    {
+      "id": "source:french",
+      "name": "iv18_12_french_witness.tex",
+      "bytes": 476618,
+      "sha256": "FC3C6A844C0FAF799FFD4E287C1257B4AA34FBD1C211DA29A0F9087CBC78DD4F",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex"
+    },
+    {
+      "id": "target:more-morphisms",
+      "name": "more-morphisms.tex",
+      "bytes": 976082,
+      "sha256": "6F36E5FF2C2B5C66FC2AA762421F0024C08C409AB86D1D814F70A065F416475A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex"
+    },
+    {
+      "id": "target:morphisms",
+      "name": "morphisms.tex",
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex"
+    },
+    {
+      "id": "target:algebra",
+      "name": "algebra.tex",
+      "bytes": 1808110,
+      "sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex"
+    },
+    {
+      "id": "target:descent",
+      "name": "descent.tex",
+      "bytes": 395297,
+      "sha256": "91434AA205AA34ED3AD0E4B74590D30C90FA4BB8945105E6E99CCA6805508B69",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/descent.tex"
+    },
+    {
+      "id": "target:properties",
+      "name": "properties.tex",
+      "bytes": 213401,
+      "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex"
+    },
+    {
+      "id": "target:constructions",
+      "name": "constructions.tex",
+      "bytes": 209942,
+      "sha256": "CFEBD4FE907082611F346447285454E473FC35F68ED3F10494C412547CF80FAD",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex"
+    },
+    {
+      "id": "context:ega_ii_4_notation",
+      "name": "ega2-4.tex",
+      "bytes": 92360,
+      "sha256": "70211D5A81218A79A76FE60B44C123F282F55478F15A904BBFC6A53F4B11754D",
+      "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega2/ega2-4.tex"
+    },
+    {
+      "id": "tags",
+      "name": "tags/tags",
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/tags/tags"
+    },
+    {
+      "id": "bounded-search-file:limits",
+      "name": "limits.tex",
+      "bytes": 222594,
+      "sha256": "DCCDDC3622EBAD21DD6219EA50B157FCF20C574E82B9E920B7F4D1ED127E0AA4",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/limits.tex"
+    }
+  ],
+  "spans": [
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.1",
+      "kind": "source:english",
+      "start_line": 3235,
+      "end_line": 3266,
+      "byte_start": 310499,
+      "byte_end_exclusive": 315765,
+      "bytes": 5266,
+      "sha256": "2D44B58E192B537B4F146758BA7CFA12B48B06E4D3B14E8C7F89E6488AB3518D",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3235-L3266"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.2",
+      "kind": "source:english",
+      "start_line": 3267,
+      "end_line": 3271,
+      "byte_start": 315765,
+      "byte_end_exclusive": 316001,
+      "bytes": 236,
+      "sha256": "68471750AC1BC07533570B18D8F4F52C7DC433662F5084AC7A0C7C9344A78325",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3267-L3271"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.3",
+      "kind": "source:english",
+      "start_line": 3272,
+      "end_line": 3296,
+      "byte_start": 316001,
+      "byte_end_exclusive": 318159,
+      "bytes": 2158,
+      "sha256": "404A6C21F96B32115084C4CBB1091FC04B2FAE35DED108FABD976C6EC221FB8B",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3272-L3296"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.4",
+      "kind": "source:english",
+      "start_line": 3297,
+      "end_line": 3316,
+      "byte_start": 318159,
+      "byte_end_exclusive": 319569,
+      "bytes": 1410,
+      "sha256": "E48CDB7A1DFFCAC8D5AE3AA69C51C5966EAF20FE03FA73D1D06BB4ABCA33316C",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3297-L3316"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.5",
+      "kind": "source:english",
+      "start_line": 3317,
+      "end_line": 3321,
+      "byte_start": 319569,
+      "byte_end_exclusive": 319830,
+      "bytes": 261,
+      "sha256": "AE971372EFF605D714C8BDA706706F83F023298C0FFC1EB1D67A1D4E775D3479",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3317-L3321"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.6",
+      "kind": "source:english",
+      "start_line": 3322,
+      "end_line": 3336,
+      "byte_start": 319830,
+      "byte_end_exclusive": 320463,
+      "bytes": 633,
+      "sha256": "B28EE60D57836AEFE43617231B85EE170A2BB3B3F02C41EFBEFB168F30E86625",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3322-L3336"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.7",
+      "kind": "source:english",
+      "start_line": 3337,
+      "end_line": 3344,
+      "byte_start": 320463,
+      "byte_end_exclusive": 321105,
+      "bytes": 642,
+      "sha256": "BED206007F625E4119F52C83B9D14A97E81D028498ECEE11B4FECD6D8CFB1503",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3337-L3344"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.7.1",
+      "kind": "source:english",
+      "start_line": 3345,
+      "end_line": 3360,
+      "byte_start": 321105,
+      "byte_end_exclusive": 323260,
+      "bytes": 2155,
+      "sha256": "E659036265C51C0D0AFC7CD75F4A6201419F70D51C5C8BC49F3D5AB040358F95",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3345-L3360"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.8",
+      "kind": "source:english",
+      "start_line": 3361,
+      "end_line": 3379,
+      "byte_start": 323260,
+      "byte_end_exclusive": 324765,
+      "bytes": 1505,
+      "sha256": "5B8FABE7F84B3B01F260DB1173E072F0516F9B20F171BDD61794EAA2EA565A32",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3361-L3379"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.9",
+      "kind": "source:english",
+      "start_line": 3380,
+      "end_line": 3385,
+      "byte_start": 324765,
+      "byte_end_exclusive": 325231,
+      "bytes": 466,
+      "sha256": "DE4410AC2D445F9011E32C2B494E2A3ADFA0A3BE38425F36366F22A8AA0C9365",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3380-L3385"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.10",
+      "kind": "source:english",
+      "start_line": 3386,
+      "end_line": 3394,
+      "byte_start": 325231,
+      "byte_end_exclusive": 325541,
+      "bytes": 310,
+      "sha256": "5F3A26BB05FB45EE1E02B50406F4C7098139A4C3F7517EA624B9E59450774728",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3386-L3394"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.11",
+      "kind": "source:english",
+      "start_line": 3395,
+      "end_line": 3405,
+      "byte_start": 325541,
+      "byte_end_exclusive": 326073,
+      "bytes": 532,
+      "sha256": "8896D3D3D1AA5D9BB14FD75D6214CA058CB84E043EB372238AA7DC1312026630",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3395-L3405"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.12",
+      "kind": "source:english",
+      "start_line": 3406,
+      "end_line": 3438,
+      "byte_start": 326073,
+      "byte_end_exclusive": 328674,
+      "bytes": 2601,
+      "sha256": "E5396FC3768C50D6152A3F6600AED378F2D6B091D0FA6B91AD1CACAB4B01ACDE",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3406-L3438"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.13",
+      "kind": "source:english",
+      "start_line": 3439,
+      "end_line": 3454,
+      "byte_start": 328674,
+      "byte_end_exclusive": 329592,
+      "bytes": 918,
+      "sha256": "ADB4074CFFA64CFBF68C35F54B8CBBF7F741B360EB9AF5AB3BFD0BEED9584C9E",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3439-L3454"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.14",
+      "kind": "source:english",
+      "start_line": 3455,
+      "end_line": 3470,
+      "byte_start": 329592,
+      "byte_end_exclusive": 331967,
+      "bytes": 2375,
+      "sha256": "C090B26A2BDA6324A237818FDB24882FCA6330D669F1F772F2307CABC8B1FC8A",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3455-L3470"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.15",
+      "kind": "source:english",
+      "start_line": 3471,
+      "end_line": 3506,
+      "byte_start": 331967,
+      "byte_end_exclusive": 336202,
+      "bytes": 4235,
+      "sha256": "0C843074DED9FFDEFA5AFECE7B429F835B46566B969E3E6795D13F5814C50B3A",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3471-L3506"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.16",
+      "kind": "source:english",
+      "start_line": 3507,
+      "end_line": 3525,
+      "byte_start": 336202,
+      "byte_end_exclusive": 337121,
+      "bytes": 919,
+      "sha256": "06280C8D6759AFF35A8783FBEFB25584E4CEC941039A73E39D8709AD753445BA",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3507-L3525"
+    },
+    {
+      "file_id": "source:english",
+      "identifier": "ega:IV.18.12.17",
+      "kind": "source:english",
+      "start_line": 3526,
+      "end_line": 3556,
+      "byte_start": 337121,
+      "byte_end_exclusive": 339554,
+      "bytes": 2433,
+      "sha256": "439C9C142203BF3B72CE4E2B270676BDF40FB7D8D6C4A7FCD9BD430D7A641BAC",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3526-L3556"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.1",
+      "kind": "source:french",
+      "start_line": 2207,
+      "end_line": 2223,
+      "byte_start": 288078,
+      "byte_end_exclusive": 292594,
+      "bytes": 4516,
+      "sha256": "0017C4F5E3296C0E376D19959728873AB6D9BB5985B22819DEBBAAD466308D46",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2207-L2223"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.2",
+      "kind": "source:french",
+      "start_line": 2224,
+      "end_line": 2228,
+      "byte_start": 292594,
+      "byte_end_exclusive": 292860,
+      "bytes": 266,
+      "sha256": "8C4283701F863DE51B835B4569E5F0E3CF9D87935322162A28E2043C5298E3E5",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2224-L2228"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.3",
+      "kind": "source:french",
+      "start_line": 2229,
+      "end_line": 2241,
+      "byte_start": 292860,
+      "byte_end_exclusive": 294830,
+      "bytes": 1970,
+      "sha256": "8D861BF693989A56D2BD3A73DD339656D1BE384541701966F3165B944FDEADF4",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2229-L2241"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.4",
+      "kind": "source:french",
+      "start_line": 2242,
+      "end_line": 2248,
+      "byte_start": 294830,
+      "byte_end_exclusive": 296013,
+      "bytes": 1183,
+      "sha256": "2101E4B989ACD057CC23CF8727AABCEB4F3D871C4F89C36CD49563119BF495F3",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2242-L2248"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.5",
+      "kind": "source:french",
+      "start_line": 2249,
+      "end_line": 2253,
+      "byte_start": 296013,
+      "byte_end_exclusive": 296306,
+      "bytes": 293,
+      "sha256": "044DD5F55AE07153232F4E89C41F589EC9286F40B506C54688AD5366AEC6A12E",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2249-L2253"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.6",
+      "kind": "source:french",
+      "start_line": 2254,
+      "end_line": 2265,
+      "byte_start": 296306,
+      "byte_end_exclusive": 296858,
+      "bytes": 552,
+      "sha256": "163B800B9986516AFB5D9D9E00B9E2EE6F8CD4C04400A29CB47518F5F2FE315C",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2254-L2265"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.7",
+      "kind": "source:french",
+      "start_line": 2266,
+      "end_line": 2272,
+      "byte_start": 296858,
+      "byte_end_exclusive": 297746,
+      "bytes": 888,
+      "sha256": "D30E680EE3D27C71211118149CC61CEC282049B8C08D73AFECB67BD248D55968",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2266-L2272"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.7.1",
+      "kind": "source:french",
+      "start_line": 2273,
+      "end_line": 2281,
+      "byte_start": 297746,
+      "byte_end_exclusive": 299187,
+      "bytes": 1441,
+      "sha256": "9465155261CCB2A9DDBAE73D6911ECD4485695465B47B9C54105145C1591084E",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2273-L2281"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.8",
+      "kind": "source:french",
+      "start_line": 2282,
+      "end_line": 2296,
+      "byte_start": 299187,
+      "byte_end_exclusive": 300547,
+      "bytes": 1360,
+      "sha256": "3639A8A0B2C0384C455D896B07B39B6868724FDBC90285DD72ABC50A513FE1DE",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2282-L2296"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.9",
+      "kind": "source:french",
+      "start_line": 2297,
+      "end_line": 2301,
+      "byte_start": 300547,
+      "byte_end_exclusive": 300974,
+      "bytes": 427,
+      "sha256": "83336FFBA2CD063A32CBD6AF349DCB2D9219EC02E9CD1780F9457112A0A62475",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2297-L2301"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.10",
+      "kind": "source:french",
+      "start_line": 2302,
+      "end_line": 2308,
+      "byte_start": 300974,
+      "byte_end_exclusive": 301233,
+      "bytes": 259,
+      "sha256": "380569F76C621147EC5B771A6FFF6CD79778493D4A9A191F641B710F42D6080C",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2302-L2308"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.11",
+      "kind": "source:french",
+      "start_line": 2309,
+      "end_line": 2317,
+      "byte_start": 301233,
+      "byte_end_exclusive": 301683,
+      "bytes": 450,
+      "sha256": "28531CDDF435E245330FA92DFF1459F4414FB4CBCF80D2AC4C7649EF48C4CEC8",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2309-L2317"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.12",
+      "kind": "source:french",
+      "start_line": 2318,
+      "end_line": 2342,
+      "byte_start": 301683,
+      "byte_end_exclusive": 304250,
+      "bytes": 2567,
+      "sha256": "7749F421D69501072E1CED71ECE9B32ED1BF9F6552A05599AA5363E70BFBCE26",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2318-L2342"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.13",
+      "kind": "source:french",
+      "start_line": 2343,
+      "end_line": 2353,
+      "byte_start": 304250,
+      "byte_end_exclusive": 305099,
+      "bytes": 849,
+      "sha256": "DA8A9717F0D2474D337235E3D7851B54E3C1E6E6008FC7CA79061FF948299F83",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2343-L2353"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.14",
+      "kind": "source:french",
+      "start_line": 2354,
+      "end_line": 2364,
+      "byte_start": 305099,
+      "byte_end_exclusive": 306958,
+      "bytes": 1859,
+      "sha256": "DA62489358CC94F8EEE5E9EF5573197FDB2CB27A27F108A23D23563273496825",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2354-L2364"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.15",
+      "kind": "source:french",
+      "start_line": 2365,
+      "end_line": 2383,
+      "byte_start": 306958,
+      "byte_end_exclusive": 310382,
+      "bytes": 3424,
+      "sha256": "9365942CFBD90C7428FAB288F97A092EE32E338637D1CE907568B4C576FBE21E",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2365-L2383"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.16",
+      "kind": "source:french",
+      "start_line": 2384,
+      "end_line": 2394,
+      "byte_start": 310382,
+      "byte_end_exclusive": 311185,
+      "bytes": 803,
+      "sha256": "8FA80BAD001CBF865264C66D9DA1F091B6AD2B6B7800BA0FCF9B9C6011361A31",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2384-L2394"
+    },
+    {
+      "file_id": "source:french",
+      "identifier": "ega:IV.18.12.17",
+      "kind": "source:french",
+      "start_line": 2395,
+      "end_line": 2419,
+      "byte_start": 311185,
+      "byte_end_exclusive": 313528,
+      "bytes": 2343,
+      "sha256": "CD20934480DB3F2EED2FE37CC2F712140A28C511246B18572429E17764126BD4",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2395-L2419"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-etale-makes-quasi-finite-finite-at-point",
+      "kind": "target-statement",
+      "start_line": 12884,
+      "end_line": 12914,
+      "byte_start": 494819,
+      "byte_end_exclusive": 495983,
+      "bytes": 1164,
+      "sha256": "75D599E4496F8854AEC910D6BCFDDE52070B53B79FB385F0947C34728669E840",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L12884-L12914"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-etale-makes-quasi-finite-finite-at-point",
+      "kind": "target-statement-and-proof",
+      "start_line": 12884,
+      "end_line": 12924,
+      "byte_start": 494819,
+      "byte_end_exclusive": 496444,
+      "bytes": 1625,
+      "sha256": "9B2804C61A2BA8B2AA6FEEF9A78BD8D9CCB4005ED24E310934F96EA8663446DF",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L12884-L12924"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-etale-splits-off-quasi-finite-part",
+      "kind": "target-statement",
+      "start_line": 13132,
+      "end_line": 13150,
+      "byte_start": 504770,
+      "byte_end_exclusive": 505417,
+      "bytes": 647,
+      "sha256": "7E73B60073D9EA6EC0C4F7D2D82ABD19D6E4BCBA8A42888BA5234081CAAACB08",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13132-L13150"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-etale-splits-off-quasi-finite-part",
+      "kind": "target-statement-and-proof",
+      "start_line": 13132,
+      "end_line": 13157,
+      "byte_start": 504770,
+      "byte_end_exclusive": 505633,
+      "bytes": 863,
+      "sha256": "B5314541403A8341F0CE4E64D76C874B15A7758AD7DC09C26931DB9EBB17E066",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13132-L13157"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-etale-splits-off-quasi-finite-part-technical",
+      "kind": "target-statement",
+      "start_line": 13054,
+      "end_line": 13073,
+      "byte_start": 501841,
+      "byte_end_exclusive": 502637,
+      "bytes": 796,
+      "sha256": "76249DDD5336055D1ABE35766280E87E7C984F8F4CBF45632FED9CF3763D95B0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13054-L13073"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-etale-splits-off-quasi-finite-part-technical",
+      "kind": "target-statement-and-proof",
+      "start_line": 13054,
+      "end_line": 13090,
+      "byte_start": 501841,
+      "byte_end_exclusive": 503402,
+      "bytes": 1561,
+      "sha256": "4DDC7EEF1F4A387E80BDBE75C33BB7A03CE4669C0B93C22ACE22FB803351D364",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13054-L13090"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-characterize-finite",
+      "kind": "target-statement",
+      "start_line": 13504,
+      "end_line": 13515,
+      "byte_start": 518823,
+      "byte_end_exclusive": 519187,
+      "bytes": 364,
+      "sha256": "C745306ED97C5FEBBB37CA9836D47243D8C974383AE64A763A0DDEC9D77B4A40",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13504-L13515"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-characterize-finite",
+      "kind": "target-statement-and-proof",
+      "start_line": 13504,
+      "end_line": 13550,
+      "byte_start": 518823,
+      "byte_end_exclusive": 520777,
+      "bytes": 1954,
+      "sha256": "A59FD675E1B44F695D0F41C394F6610F89999E27F557E541DC40678B51001787",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13504-L13550"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+      "kind": "target-statement",
+      "start_line": 13386,
+      "end_line": 13404,
+      "byte_start": 514731,
+      "byte_end_exclusive": 515274,
+      "bytes": 543,
+      "sha256": "1754AE44A2DBFEAA7940FB61678D198E490469AC7D9AD7B2CB661BF92DF516D8",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13386-L13404"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+      "kind": "target-statement-and-proof",
+      "start_line": 13386,
+      "end_line": 13415,
+      "byte_start": 514731,
+      "byte_end_exclusive": 515794,
+      "bytes": 1063,
+      "sha256": "C931F69EB0282990E88AE1C8C71C290085DFFF09B651C96AC096312F7928E95A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13386-L13415"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-quasi-finite-separated-pass-through-finite",
+      "kind": "target-statement",
+      "start_line": 13417,
+      "end_line": 13433,
+      "byte_start": 515796,
+      "byte_end_exclusive": 516280,
+      "bytes": 484,
+      "sha256": "C0AC2D02A0A039B0E4A00410F16550735905E2570A82F9AA9C0561787E20A3A7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13417-L13433"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-quasi-finite-separated-pass-through-finite",
+      "kind": "target-statement-and-proof",
+      "start_line": 13417,
+      "end_line": 13464,
+      "byte_start": 515796,
+      "byte_end_exclusive": 517699,
+      "bytes": 1903,
+      "sha256": "B9C716677D858C8F3863C1945A17DC0792D29831EE8B84E5066D9AAFCC7BEC33",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13417-L13464"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-finite-type-separated",
+      "kind": "target-statement",
+      "start_line": 13288,
+      "end_line": 13307,
+      "byte_start": 510852,
+      "byte_end_exclusive": 511433,
+      "bytes": 581,
+      "sha256": "309FA0C89A233300ACDE6587D995A77B66C795FD5535B732EEC490486E9CE428",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13288-L13307"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-finite-type-separated",
+      "kind": "target-statement-and-proof",
+      "start_line": 13288,
+      "end_line": 13384,
+      "byte_start": 510852,
+      "byte_end_exclusive": 514729,
+      "bytes": 3877,
+      "sha256": "8CCE94F3F509A3B0E7770478A4D7742F3098E15509F5E522E74782BC756EA6A8",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L13288-L13384"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-normalization-smooth-localization",
+      "kind": "target-statement",
+      "start_line": 5525,
+      "end_line": 5538,
+      "byte_start": 202021,
+      "byte_end_exclusive": 202466,
+      "bytes": 445,
+      "sha256": "010BFC116B2C5C74D80EBF85328081B5F41FE933DA7308B30EB22E495FD0D01F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L5525-L5538"
+    },
+    {
+      "file_id": "target:more-morphisms",
+      "identifier": "more-morphisms-lemma-normalization-smooth-localization",
+      "kind": "target-statement-and-proof",
+      "start_line": 5525,
+      "end_line": 5559,
+      "byte_start": 202021,
+      "byte_end_exclusive": 203508,
+      "bytes": 1487,
+      "sha256": "ADF80AE418BB5E69758B18A0EB6E2A8CA04EFF47B474EA29E19B3D8E6AA4FDA9",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/more-morphisms.tex#L5525-L5559"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-integral-universally-closed",
+      "kind": "target-statement",
+      "start_line": 11074,
+      "end_line": 11085,
+      "byte_start": 405132,
+      "byte_end_exclusive": 405448,
+      "bytes": 316,
+      "sha256": "F19AB5F0E283EB88132461EABF7C14A959086954EAD31FFAD7041878149745F6",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11074-L11085"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-integral-universally-closed",
+      "kind": "target-statement-and-proof",
+      "start_line": 11074,
+      "end_line": 11139,
+      "byte_start": 405132,
+      "byte_end_exclusive": 407651,
+      "bytes": 2519,
+      "sha256": "441C2F45ECD91DDC2D7665283858B97822CB959EDBB9B566B905749C4F67F77E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11074-L11139"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-integral",
+      "kind": "target-statement",
+      "start_line": 11042,
+      "end_line": 11046,
+      "byte_start": 404320,
+      "byte_end_exclusive": 404470,
+      "bytes": 150,
+      "sha256": "474DBF76809D4C791E4B15D52599E081178BBF2E9130C096FC73F704B0E18549",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11042-L11046"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-integral",
+      "kind": "target-statement-and-proof",
+      "start_line": 11042,
+      "end_line": 11051,
+      "byte_start": 404320,
+      "byte_end_exclusive": 404627,
+      "bytes": 307,
+      "sha256": "FDBDA5FF569DD3D759781AA65BDC525AE8D378F399B78D970420E9F85C13F19B",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11042-L11051"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-homeomorphism-affine",
+      "kind": "target-statement",
+      "start_line": 11358,
+      "end_line": 11362,
+      "byte_start": 414731,
+      "byte_end_exclusive": 414909,
+      "bytes": 178,
+      "sha256": "B6F3A5B4B8474BB32F9242D7E39B4DA87AB78E20501B5C420FF356A5FAC56BF3",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11358-L11362"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-homeomorphism-affine",
+      "kind": "target-statement-and-proof",
+      "start_line": 11358,
+      "end_line": 11379,
+      "byte_start": 414731,
+      "byte_end_exclusive": 415760,
+      "bytes": 1029,
+      "sha256": "FBC460CC9CC963DCE7B674DA3338A5136D756B2A4E296F533DB6FCDF168A3927",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11358-L11379"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-universal-homeomorphism",
+      "kind": "target-statement",
+      "start_line": 11381,
+      "end_line": 11389,
+      "byte_start": 415762,
+      "byte_end_exclusive": 416038,
+      "bytes": 276,
+      "sha256": "5DA8D80AD7555B51A4EA7E29788DBE3613E4B8DC82F5E9E929D448D04B5906DC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11381-L11389"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-universal-homeomorphism",
+      "kind": "target-statement-and-proof",
+      "start_line": 11381,
+      "end_line": 11405,
+      "byte_start": 415762,
+      "byte_end_exclusive": 416648,
+      "bytes": 886,
+      "sha256": "E82A51AE324E6E9D8FDE499B9141535DF802E72C2DBE6988C74705EDDB85F614",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11381-L11405"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-monomorphism-closed",
+      "kind": "target-statement",
+      "start_line": 11246,
+      "end_line": 11250,
+      "byte_start": 411059,
+      "byte_end_exclusive": 411238,
+      "bytes": 179,
+      "sha256": "8A31D3100193D7E1DEC158EDFDECFD7C432F1715079F1CE5974E7E06462C5ADA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11246-L11250"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-monomorphism-closed",
+      "kind": "target-statement-and-proof",
+      "start_line": 11246,
+      "end_line": 11255,
+      "byte_start": 411059,
+      "byte_end_exclusive": 411347,
+      "bytes": 288,
+      "sha256": "F13D74FEB3ACA2B1AEE919CC6564D4774167B00622298E9FE4385DE945073C3D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11246-L11255"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-monomorphism-loc-finite-type-loc-quasi-finite",
+      "kind": "target-statement",
+      "start_line": 3985,
+      "end_line": 3990,
+      "byte_start": 146638,
+      "byte_end_exclusive": 146868,
+      "bytes": 230,
+      "sha256": "70E4329FF7FEA449970EE1D902188404F525386C427D35C1ECCC059C53C61B2D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L3985-L3990"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-monomorphism-loc-finite-type-loc-quasi-finite",
+      "kind": "target-statement-and-proof",
+      "start_line": 3985,
+      "end_line": 3998,
+      "byte_start": 146638,
+      "byte_end_exclusive": 147135,
+      "bytes": 497,
+      "sha256": "B2F9AF066A4E4B9F6FDBDC141E1D9C869AE96C2269B5266456711BB870A1B179",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L3985-L3998"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-characterize-affine",
+      "kind": "target-statement",
+      "start_line": 1735,
+      "end_line": 1753,
+      "byte_start": 62888,
+      "byte_end_exclusive": 63564,
+      "bytes": 676,
+      "sha256": "0AA1ED002C00669BDD0BE12CA8B997DF0336591A106B76BEB598010615FF7323",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1735-L1753"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-characterize-affine",
+      "kind": "target-statement-and-proof",
+      "start_line": 1735,
+      "end_line": 1783,
+      "byte_start": 62888,
+      "byte_end_exclusive": 64849,
+      "bytes": 1961,
+      "sha256": "FEF9FB2A1E35B094BC63E9BFE453A347F509F3D71FD80429DA3F4423C26C4D16",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1735-L1783"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-affine-permanence",
+      "kind": "target-statement",
+      "start_line": 2033,
+      "end_line": 2045,
+      "byte_start": 73988,
+      "byte_end_exclusive": 74471,
+      "bytes": 483,
+      "sha256": "F952D372BE98C04BD7B68F01793F3CD2B8942D7768CD4C5F947C305F4267A497",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L2033-L2045"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-affine-permanence",
+      "kind": "target-statement-and-proof",
+      "start_line": 2033,
+      "end_line": 2060,
+      "byte_start": 73988,
+      "byte_end_exclusive": 75117,
+      "bytes": 1129,
+      "sha256": "3B967BB28797A28B22924959B63342B02E23DAA62267B60C10C5007D844F173A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L2033-L2060"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-pullback-ample-tensor-relatively-ample",
+      "kind": "target-statement",
+      "start_line": 8837,
+      "end_line": 8849,
+      "byte_start": 319048,
+      "byte_end_exclusive": 319540,
+      "bytes": 492,
+      "sha256": "7AA371B7491F47D4F8AC619E8D6336DCADC042EBE98795B3FC4CE5F6282B4A5E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L8837-L8849"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-pullback-ample-tensor-relatively-ample",
+      "kind": "target-statement-and-proof",
+      "start_line": 8837,
+      "end_line": 8894,
+      "byte_start": 319048,
+      "byte_end_exclusive": 321936,
+      "bytes": 2888,
+      "sha256": "D208F8FEC86D60B81595B152D41C7DC8A21B56DF535BB8D58FEC7F8DDFF277AE",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L8837-L8894"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-definition-relatively-ample",
+      "kind": "target-statement",
+      "start_line": 8635,
+      "end_line": 8647,
+      "byte_start": 311455,
+      "byte_end_exclusive": 311980,
+      "bytes": 525,
+      "sha256": "AC3C83D85EDCBDCCFE92AD5B570EFF8B7507F55A912E2EE11FB2CB8A040EBD36",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L8635-L8647"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-definition-relatively-ample",
+      "kind": "target-statement-and-proof",
+      "start_line": 8635,
+      "end_line": 8647,
+      "byte_start": 311455,
+      "byte_end_exclusive": 311980,
+      "bytes": 525,
+      "sha256": "AC3C83D85EDCBDCCFE92AD5B570EFF8B7507F55A912E2EE11FB2CB8A040EBD36",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L8635-L8647"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-universally-injective",
+      "kind": "target-statement",
+      "start_line": 1577,
+      "end_line": 1593,
+      "byte_start": 57554,
+      "byte_end_exclusive": 58069,
+      "bytes": 515,
+      "sha256": "3BECD422BE08C7B7511599ACC11AA4C51DA2FD5F8E40A6F99D68671A654F60AA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1577-L1593"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-universally-injective",
+      "kind": "target-statement-and-proof",
+      "start_line": 1577,
+      "end_line": 1667,
+      "byte_start": 57554,
+      "byte_end_exclusive": 61222,
+      "bytes": 3668,
+      "sha256": "4F350D35AB6AB49ADB4ADF4DAFB964874FF0798A3F04C55548F45F13063F2FD3",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1577-L1667"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-universally-injective-separated",
+      "kind": "target-statement",
+      "start_line": 1669,
+      "end_line": 1672,
+      "byte_start": 61224,
+      "byte_end_exclusive": 61342,
+      "bytes": 118,
+      "sha256": "3D3FD283F7EB3074F640A85FAD1F6C254A74AEC904D64A4A5C5677DC35BDE6D1",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1669-L1672"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-universally-injective-separated",
+      "kind": "target-statement-and-proof",
+      "start_line": 1669,
+      "end_line": 1681,
+      "byte_start": 61224,
+      "byte_end_exclusive": 61625,
+      "bytes": 401,
+      "sha256": "9860E9F96ACFAF2024972902CFCD73AF1E39F19DBA9EC36877B917333572C778",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1669-L1681"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-permanence-finite-type",
+      "kind": "target-statement",
+      "start_line": 2802,
+      "end_line": 2807,
+      "byte_start": 102800,
+      "byte_end_exclusive": 103010,
+      "bytes": 210,
+      "sha256": "F70892C1B7AA17665670499C6D24D8A141C91793A13CF2F65EB614CB05B6D0C1",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L2802-L2807"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-permanence-finite-type",
+      "kind": "target-statement-and-proof",
+      "start_line": 2802,
+      "end_line": 2816,
+      "byte_start": 102800,
+      "byte_end_exclusive": 103308,
+      "bytes": 508,
+      "sha256": "ADAD285013B31DD078BFA753C9CC83BC72035ED2CB8A7A17ECC9EFC42AA9AB18",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L2802-L2816"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-permanence",
+      "kind": "target-statement",
+      "start_line": 11223,
+      "end_line": 11230,
+      "byte_start": 410201,
+      "byte_end_exclusive": 410484,
+      "bytes": 283,
+      "sha256": "EDC5BBA685CDB319A7DFEEA6CED6A3E8BB212B827E9480320CDB6F1674D44B39",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11223-L11230"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-permanence",
+      "kind": "target-statement-and-proof",
+      "start_line": 11223,
+      "end_line": 11244,
+      "byte_start": 410201,
+      "byte_end_exclusive": 411057,
+      "bytes": 856,
+      "sha256": "33DF404CB4BF369B7CFCF6805B86F851BA7B94C63FBF77E8B95B82DD2E64213B",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L11223-L11244"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-normalization-in-disjoint-union",
+      "kind": "target-statement",
+      "start_line": 14242,
+      "end_line": 14248,
+      "byte_start": 529763,
+      "byte_end_exclusive": 530115,
+      "bytes": 352,
+      "sha256": "542E1C67909EFC201D8CF8E26C94C6E6B2FDF04CCF6D10773D936FFD890F9BC7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L14242-L14248"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-normalization-in-disjoint-union",
+      "kind": "target-statement-and-proof",
+      "start_line": 14242,
+      "end_line": 14260,
+      "byte_start": 529763,
+      "byte_end_exclusive": 530685,
+      "bytes": 922,
+      "sha256": "19D2CB7257848A19BC4CEE4B02AA2138D98D108AD24F94D8E4797C6A136CCDB2",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L14242-L14260"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-normalization-in-integral",
+      "kind": "target-statement",
+      "start_line": 14305,
+      "end_line": 14309,
+      "byte_start": 532431,
+      "byte_end_exclusive": 532593,
+      "bytes": 162,
+      "sha256": "24F59F076D67D90CD45DDD0EB6A3E0B3FDDF8186DBD08B68143C44B9CE47934D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L14305-L14309"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-normalization-in-integral",
+      "kind": "target-statement-and-proof",
+      "start_line": 14305,
+      "end_line": 14314,
+      "byte_start": 532431,
+      "byte_end_exclusive": 532750,
+      "bytes": 319,
+      "sha256": "A085A86D0DFC6BF69457328EFA29A00CF1CE06BDDE3804531528A1BFF119E84C",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L14305-L14314"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-definition-normalization-X-in-Y",
+      "kind": "target-statement",
+      "start_line": 14056,
+      "end_line": 14071,
+      "byte_start": 522726,
+      "byte_end_exclusive": 523314,
+      "bytes": 588,
+      "sha256": "1BE782C22134F6C64E362D91A519A78F7C03FC27062B080FAC7A4A432DAD1541",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L14056-L14071"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-definition-normalization-X-in-Y",
+      "kind": "target-statement-and-proof",
+      "start_line": 14056,
+      "end_line": 14071,
+      "byte_start": 522726,
+      "byte_end_exclusive": 523314,
+      "bytes": 588,
+      "sha256": "1BE782C22134F6C64E362D91A519A78F7C03FC27062B080FAC7A4A432DAD1541",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L14056-L14071"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-NAK",
+      "kind": "target-statement",
+      "start_line": 3674,
+      "end_line": 3717,
+      "byte_start": 126053,
+      "byte_end_exclusive": 128039,
+      "bytes": 1986,
+      "sha256": "3564718ECC063C023098116871348B6F810E0B5740156791B7000351BFD22907",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L3674-L3717"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-NAK",
+      "kind": "target-statement-and-proof",
+      "start_line": 3674,
+      "end_line": 3755,
+      "byte_start": 126053,
+      "byte_end_exclusive": 129874,
+      "bytes": 3821,
+      "sha256": "8D207F762E2C8D0BA91CE7AD99D37BC4FEBE3071B354B160404E87437ACFB062",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L3674-L3755"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-NAK-localization",
+      "kind": "target-statement",
+      "start_line": 3757,
+      "end_line": 3771,
+      "byte_start": 129876,
+      "byte_end_exclusive": 130637,
+      "bytes": 761,
+      "sha256": "3073FD06A3E51618D97113CB176B7B99BA733703F61A33C4B22043E23EB304EA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L3757-L3771"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-NAK-localization",
+      "kind": "target-statement-and-proof",
+      "start_line": 3757,
+      "end_line": 3792,
+      "byte_start": 129876,
+      "byte_end_exclusive": 131658,
+      "bytes": 1782,
+      "sha256": "487EE6613D333E90058750C4FF4697CB97D84386DC1B657BDAFADDE5FC17A110",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L3757-L3792"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-integral-closure-commutes-etale",
+      "kind": "target-statement",
+      "start_line": 41385,
+      "end_line": 41393,
+      "byte_start": 1525510,
+      "byte_end_exclusive": 1525854,
+      "bytes": 344,
+      "sha256": "4D05806264F811BB6A947CFE928AC146FACE3977C2E012638A015DDCF9E7A817",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L41385-L41393"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-integral-closure-commutes-etale",
+      "kind": "target-statement-and-proof",
+      "start_line": 41385,
+      "end_line": 41412,
+      "byte_start": 1525510,
+      "byte_end_exclusive": 1526800,
+      "bytes": 1290,
+      "sha256": "34B23DD5CFDB8FB1442A1501CA723D498B1E65380E10A64267567F5E7C2F1FAC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L41385-L41412"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-trick",
+      "kind": "target-statement",
+      "start_line": 41344,
+      "end_line": 41352,
+      "byte_start": 1523975,
+      "byte_end_exclusive": 1524251,
+      "bytes": 276,
+      "sha256": "7729B5327F70AACF29B5A3399FDF460D94548B71A02334B35741A5024A55032A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L41344-L41352"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-trick",
+      "kind": "target-statement-and-proof",
+      "start_line": 41344,
+      "end_line": 41383,
+      "byte_start": 1523975,
+      "byte_end_exclusive": 1525508,
+      "bytes": 1533,
+      "sha256": "D068CEAACA8DB5D5D9C84FD36C29FD419791B6503F95184CBA822D5C7DC1EBE8",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L41344-L41383"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-integral-transitive",
+      "kind": "target-statement",
+      "start_line": 7575,
+      "end_line": 7582,
+      "byte_start": 270833,
+      "byte_end_exclusive": 271057,
+      "bytes": 224,
+      "sha256": "799FDFECCDD53357CAA736828CABA44E19C8041B4955E3AFC30275A8F2058ADA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L7575-L7582"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-integral-transitive",
+      "kind": "target-statement-and-proof",
+      "start_line": 7575,
+      "end_line": 7597,
+      "byte_start": 270833,
+      "byte_end_exclusive": 271639,
+      "bytes": 806,
+      "sha256": "60DB8E3AA9C66DA328E3075B9FEF0AF5231E1162EEF265C2B0BB9CEBE73E6879",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L7575-L7597"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-finite-epimorphism-surjective",
+      "kind": "target-statement",
+      "start_line": 26506,
+      "end_line": 26516,
+      "byte_start": 966688,
+      "byte_end_exclusive": 967026,
+      "bytes": 338,
+      "sha256": "1D9EECA798DC9255FB841BB09FDE5892AB0C7F27CD2928C492C22C71C1A8B280",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L26506-L26516"
+    },
+    {
+      "file_id": "target:algebra",
+      "identifier": "algebra-lemma-finite-epimorphism-surjective",
+      "kind": "target-statement-and-proof",
+      "start_line": 26506,
+      "end_line": 26537,
+      "byte_start": 966688,
+      "byte_end_exclusive": 967911,
+      "bytes": 1223,
+      "sha256": "D84D0B9C549E1EC6A2E6713408AA99BD2D7C2EFE05F9AA320C4B46FD44076C4E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/algebra.tex#L26506-L26537"
+    },
+    {
+      "file_id": "target:descent",
+      "identifier": "descent-lemma-descending-property-finite",
+      "kind": "target-statement",
+      "start_line": 7195,
+      "end_line": 7199,
+      "byte_start": 270917,
+      "byte_end_exclusive": 271059,
+      "bytes": 142,
+      "sha256": "2B2E24992A2C3FF77654E8EA25F2F95A9E8DAD8F0752B3E33DFA3E5014A0260E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/descent.tex#L7195-L7199"
+    },
+    {
+      "file_id": "target:descent",
+      "identifier": "descent-lemma-descending-property-finite",
+      "kind": "target-statement-and-proof",
+      "start_line": 7195,
+      "end_line": 7208,
+      "byte_start": 270917,
+      "byte_end_exclusive": 271382,
+      "bytes": 465,
+      "sha256": "88BB5A124E08F7C1AA480B897D6F18AA684D0F806D64607FD323C11E037CFE58",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/descent.tex#L7195-L7208"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-map-into-proj",
+      "kind": "target-statement",
+      "start_line": 4549,
+      "end_line": 4577,
+      "byte_start": 171558,
+      "byte_end_exclusive": 172729,
+      "bytes": 1171,
+      "sha256": "D162847832DF74C5BE699F037EC7CA6252DDD528E6BAC5C71AF3E1CAB3B86D67",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4549-L4577"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-map-into-proj",
+      "kind": "target-statement-and-proof",
+      "start_line": 4549,
+      "end_line": 4593,
+      "byte_start": 171558,
+      "byte_end_exclusive": 173506,
+      "bytes": 1948,
+      "sha256": "8DC3612D81C90A4E7C8299C0805C515C1CA52C2E958BDB484411189A72CB9A03",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4549-L4593"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-map-into-proj-quasi-compact",
+      "kind": "target-statement",
+      "start_line": 4595,
+      "end_line": 4604,
+      "byte_start": 173508,
+      "byte_end_exclusive": 173991,
+      "bytes": 483,
+      "sha256": "7D522164847EC0D035302CC85821C010E7C148B34045AF5B24DDF96495FBCAA0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4595-L4604"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-map-into-proj-quasi-compact",
+      "kind": "target-statement-and-proof",
+      "start_line": 4595,
+      "end_line": 4622,
+      "byte_start": 173508,
+      "byte_end_exclusive": 174917,
+      "bytes": 1409,
+      "sha256": "EF5D277131A0B69EF60EF4AA664177F79BF67A1F337396C8FFD96AC17705EF32",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4595-L4622"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-ample-immersion-into-proj",
+      "kind": "target-statement",
+      "start_line": 4624,
+      "end_line": 4631,
+      "byte_start": 174919,
+      "byte_end_exclusive": 175283,
+      "bytes": 364,
+      "sha256": "75070CD7CD2CB9ED9409E2EC5907066083EAAC3A09B1CB9862A5D834FE0C9533",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4624-L4631"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-ample-immersion-into-proj",
+      "kind": "target-statement-and-proof",
+      "start_line": 4624,
+      "end_line": 4650,
+      "byte_start": 174919,
+      "byte_end_exclusive": 176090,
+      "bytes": 1171,
+      "sha256": "8B50E541942920356DB8010794212391986AA1A5A62DD8E01FC4E170309FCB28",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4624-L4650"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-ample-power-ample",
+      "kind": "target-statement",
+      "start_line": 4371,
+      "end_line": 4379,
+      "byte_start": 164491,
+      "byte_end_exclusive": 164793,
+      "bytes": 302,
+      "sha256": "030CC29ABA96C615E42F2AEF7A043EFAF430DBF50FC9EDA64BA92719D34C2770",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4371-L4379"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-ample-power-ample",
+      "kind": "target-statement-and-proof",
+      "start_line": 4371,
+      "end_line": 4383,
+      "byte_start": 164491,
+      "byte_end_exclusive": 164869,
+      "bytes": 378,
+      "sha256": "7CFF483043591317DE97D514AA957A62F3106B0193F11FD054E3F80E872CE93F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L4371-L4383"
+    },
+    {
+      "file_id": "target:constructions",
+      "identifier": "constructions-lemma-ample-on-proj",
+      "kind": "target-statement",
+      "start_line": 2196,
+      "end_line": 2227,
+      "byte_start": 82118,
+      "byte_end_exclusive": 83438,
+      "bytes": 1320,
+      "sha256": "A761B7752F4129902B1CA432EC644AFF6844B083ECFBE360A94ECBCFDC094CD5",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex#L2196-L2227"
+    },
+    {
+      "file_id": "target:constructions",
+      "identifier": "constructions-lemma-ample-on-proj",
+      "kind": "target-statement-and-proof",
+      "start_line": 2196,
+      "end_line": 2242,
+      "byte_start": 82118,
+      "byte_end_exclusive": 84198,
+      "bytes": 2080,
+      "sha256": "B9EECBE185E0B157DF603B9436BD2B8BBF9C123E57AB4FD212637D7E8638E054",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex#L2196-L2242"
+    },
+    {
+      "file_id": "target:constructions",
+      "identifier": "constructions-lemma-invertible-map-into-proj",
+      "kind": "target-statement",
+      "start_line": 3684,
+      "end_line": 3734,
+      "byte_start": 138046,
+      "byte_end_exclusive": 139813,
+      "bytes": 1767,
+      "sha256": "B47DFE56C99EDA16503D14AC27EA33ADE01D1261947E6343F0262863B5554FD8",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex#L3684-L3734"
+    },
+    {
+      "file_id": "target:constructions",
+      "identifier": "constructions-lemma-invertible-map-into-proj",
+      "kind": "target-statement-and-proof",
+      "start_line": 3684,
+      "end_line": 3790,
+      "byte_start": 138046,
+      "byte_end_exclusive": 142226,
+      "bytes": 4180,
+      "sha256": "E6C3FD8F18E967CB21A4A8564EA30666390716E54680DB8D37B85BB95BCD1A77",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex#L3684-L3790"
+    },
+    {
+      "file_id": "target:constructions",
+      "identifier": "constructions-lemma-proj-separated",
+      "kind": "target-statement",
+      "start_line": 1490,
+      "end_line": 1494,
+      "byte_start": 55103,
+      "byte_end_exclusive": 55225,
+      "bytes": 122,
+      "sha256": "7C071C68E305022A8C51295AB5CAC77FA7FF6A577122B65EA2BF376F6B8ECD11",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex#L1490-L1494"
+    },
+    {
+      "file_id": "target:constructions",
+      "identifier": "constructions-lemma-proj-separated",
+      "kind": "target-statement-and-proof",
+      "start_line": 1490,
+      "end_line": 1514,
+      "byte_start": 55103,
+      "byte_end_exclusive": 56044,
+      "bytes": 941,
+      "sha256": "EFB89E2426D20A146FC84B73A97ADD7B6F031C97C9B5D349C3E0F91BAD678B2E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/constructions.tex#L1490-L1514"
+    },
+    {
+      "file_id": "context:ega_ii_4_notation",
+      "identifier": "II.4.5.1",
+      "kind": "context-statement",
+      "start_line": 693,
+      "end_line": 700,
+      "byte_start": 48065,
+      "byte_end_exclusive": 49134,
+      "bytes": 1069,
+      "sha256": "DE237DC186C09CDCB8E56537C737910EA80912E9A81B16A4F7BA4078B9CDB183",
+      "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega2/ega2-4.tex#L693-L700"
+    },
+    {
+      "file_id": "context:ega_ii_4_notation",
+      "identifier": "II.4.5.1",
+      "kind": "context-statement-and-proof",
+      "start_line": 693,
+      "end_line": 700,
+      "byte_start": 48065,
+      "byte_end_exclusive": 49134,
+      "bytes": 1069,
+      "sha256": "DE237DC186C09CDCB8E56537C737910EA80912E9A81B16A4F7BA4078B9CDB183",
+      "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega2/ega2-4.tex#L693-L700"
+    },
+    {
+      "file_id": "context:ega_ii_4_notation",
+      "identifier": "II.4.5.2",
+      "kind": "context-statement",
+      "start_line": 702,
+      "end_line": 717,
+      "byte_start": 49136,
+      "byte_end_exclusive": 50750,
+      "bytes": 1614,
+      "sha256": "F52FFF2FEB4F002901C06537695243F66787A48E069BFED88308AFAA062CC8EB",
+      "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega2/ega2-4.tex#L702-L717"
+    },
+    {
+      "file_id": "context:ega_ii_4_notation",
+      "identifier": "II.4.5.2",
+      "kind": "context-statement-and-proof",
+      "start_line": 702,
+      "end_line": 735,
+      "byte_start": 49136,
+      "byte_end_exclusive": 52724,
+      "bytes": 3588,
+      "sha256": "DA542EE96B703108423600702BAE6B4667B6B4C940976C7E64E245892ACD0AA6",
+      "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega2/ega2-4.tex#L702-L735"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-base-change-affine",
+      "kind": "reviewer-supplement-statement-and-proof",
+      "start_line": 1981,
+      "end_line": 1997,
+      "byte_start": 72208,
+      "byte_end_exclusive": 72972,
+      "bytes": 764,
+      "sha256": "570288FBFEBF4719631A6D3EEC405BB1BA762CC2F17FFF6C59A6F02FF3F59FA5",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L1981-L1997"
+    },
+    {
+      "file_id": "target:morphisms",
+      "identifier": "morphisms-lemma-finite-fibre",
+      "kind": "reviewer-supplement-statement-and-proof",
+      "start_line": 3738,
+      "end_line": 3759,
+      "byte_start": 136831,
+      "byte_end_exclusive": 137704,
+      "bytes": 873,
+      "sha256": "2DFA19A869BB91FF91910FF90865CD3B6732E26F73B60F1006A1C1E27F897E82",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/morphisms.tex#L3738-L3759"
+    },
+    {
+      "file_id": "target:properties",
+      "identifier": "properties-lemma-integral-algebra-directed-colimit-finite",
+      "kind": "reviewer-supplement-statement-and-proof",
+      "start_line": 3535,
+      "end_line": 3606,
+      "byte_start": 132231,
+      "byte_end_exclusive": 135125,
+      "bytes": 2894,
+      "sha256": "6A19053FAE3AA232153B4BFA3EE57179234348F9868DEC291D650D3743A7C21E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/properties.tex#L3535-L3606"
+    },
+    {
+      "file_id": "bounded-search-file:limits",
+      "identifier": "limits-situation-descent",
+      "kind": "reviewer-supplement-statement-and-proof",
+      "start_line": 387,
+      "end_line": 395,
+      "byte_start": 13965,
+      "byte_end_exclusive": 14372,
+      "bytes": 407,
+      "sha256": "8EC5629C5D75D4A3619F925B9ECF8463CD2C847F48E994113EC5AD02262019C7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/limits.tex#L387-L395"
+    },
+    {
+      "file_id": "bounded-search-file:limits",
+      "identifier": "limits-lemma-descend-opens",
+      "kind": "reviewer-supplement-statement-and-proof",
+      "start_line": 553,
+      "end_line": 623,
+      "byte_start": 20158,
+      "byte_end_exclusive": 23414,
+      "bytes": 3256,
+      "sha256": "06C30352F37F87B9189882C74B18D197BA3BD4648DEC0853C0233C0113D770F0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/limits.tex#L553-L623"
+    },
+    {
+      "file_id": "bounded-search-file:limits",
+      "identifier": "limits-lemma-finite-type-eventually-closed",
+      "kind": "reviewer-supplement-statement-and-proof",
+      "start_line": 808,
+      "end_line": 860,
+      "byte_start": 31191,
+      "byte_end_exclusive": 33856,
+      "bytes": 2665,
+      "sha256": "876F68B59775E6F5E54C443232DAAF1BF2BFD19854BB78F4FB2558EE87FD8555",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/29a05ca0ba1328874b7aae53301e09c9bbbbaf7b/limits.tex#L808-L860"
+    }
+  ],
+  "tag_bindings": [
+    {
+      "tag": "02LK",
+      "label": "more-morphisms-lemma-etale-makes-quasi-finite-finite-at-point",
+      "url": "https://stacks.math.columbia.edu/tag/02LK"
+    },
+    {
+      "tag": "02LP",
+      "label": "more-morphisms-lemma-etale-splits-off-quasi-finite-part",
+      "url": "https://stacks.math.columbia.edu/tag/02LP"
+    },
+    {
+      "tag": "02LN",
+      "label": "more-morphisms-lemma-etale-splits-off-quasi-finite-part-technical",
+      "url": "https://stacks.math.columbia.edu/tag/02LN"
+    },
+    {
+      "tag": "02LS",
+      "label": "more-morphisms-lemma-characterize-finite",
+      "url": "https://stacks.math.columbia.edu/tag/02LS"
+    },
+    {
+      "tag": "02LR",
+      "label": "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+      "url": "https://stacks.math.columbia.edu/tag/02LR"
+    },
+    {
+      "tag": "05K0",
+      "label": "more-morphisms-lemma-quasi-finite-separated-pass-through-finite",
+      "url": "https://stacks.math.columbia.edu/tag/05K0"
+    },
+    {
+      "tag": "03GW",
+      "label": "more-morphisms-lemma-finite-type-separated",
+      "url": "https://stacks.math.columbia.edu/tag/03GW"
+    },
+    {
+      "tag": "03GV",
+      "label": "more-morphisms-lemma-normalization-smooth-localization",
+      "url": "https://stacks.math.columbia.edu/tag/03GV"
+    },
+    {
+      "tag": "01WM",
+      "label": "morphisms-lemma-integral-universally-closed",
+      "url": "https://stacks.math.columbia.edu/tag/01WM"
+    },
+    {
+      "tag": "01WJ",
+      "label": "morphisms-lemma-finite-integral",
+      "url": "https://stacks.math.columbia.edu/tag/01WJ"
+    },
+    {
+      "tag": "04DE",
+      "label": "morphisms-lemma-homeomorphism-affine",
+      "url": "https://stacks.math.columbia.edu/tag/04DE"
+    },
+    {
+      "tag": "04DF",
+      "label": "morphisms-lemma-universal-homeomorphism",
+      "url": "https://stacks.math.columbia.edu/tag/04DF"
+    },
+    {
+      "tag": "03BB",
+      "label": "morphisms-lemma-finite-monomorphism-closed",
+      "url": "https://stacks.math.columbia.edu/tag/03BB"
+    },
+    {
+      "tag": "0CT8",
+      "label": "morphisms-lemma-monomorphism-loc-finite-type-loc-quasi-finite",
+      "url": "https://stacks.math.columbia.edu/tag/0CT8"
+    },
+    {
+      "tag": "01S8",
+      "label": "morphisms-lemma-characterize-affine",
+      "url": "https://stacks.math.columbia.edu/tag/01S8"
+    },
+    {
+      "tag": "01SG",
+      "label": "morphisms-lemma-affine-permanence",
+      "url": "https://stacks.math.columbia.edu/tag/01SG"
+    },
+    {
+      "tag": "0892",
+      "label": "morphisms-lemma-pullback-ample-tensor-relatively-ample",
+      "url": "https://stacks.math.columbia.edu/tag/0892"
+    },
+    {
+      "tag": "01VH",
+      "label": "morphisms-definition-relatively-ample",
+      "url": "https://stacks.math.columbia.edu/tag/01VH"
+    },
+    {
+      "tag": "01S4",
+      "label": "morphisms-lemma-universally-injective",
+      "url": "https://stacks.math.columbia.edu/tag/01S4"
+    },
+    {
+      "tag": "05VE",
+      "label": "morphisms-lemma-universally-injective-separated",
+      "url": "https://stacks.math.columbia.edu/tag/05VE"
+    },
+    {
+      "tag": "01T8",
+      "label": "morphisms-lemma-permanence-finite-type",
+      "url": "https://stacks.math.columbia.edu/tag/01T8"
+    },
+    {
+      "tag": "035D",
+      "label": "morphisms-lemma-finite-permanence",
+      "url": "https://stacks.math.columbia.edu/tag/035D"
+    },
+    {
+      "tag": "03GO",
+      "label": "morphisms-lemma-normalization-in-disjoint-union",
+      "url": "https://stacks.math.columbia.edu/tag/03GO"
+    },
+    {
+      "tag": "03GP",
+      "label": "morphisms-lemma-normalization-in-integral",
+      "url": "https://stacks.math.columbia.edu/tag/03GP"
+    },
+    {
+      "tag": "035H",
+      "label": "morphisms-definition-normalization-X-in-Y",
+      "url": "https://stacks.math.columbia.edu/tag/035H"
+    },
+    {
+      "tag": "00DV",
+      "label": "algebra-lemma-NAK",
+      "url": "https://stacks.math.columbia.edu/tag/00DV"
+    },
+    {
+      "tag": "0GLX",
+      "label": "algebra-lemma-NAK-localization",
+      "url": "https://stacks.math.columbia.edu/tag/0GLX"
+    },
+    {
+      "tag": "03GE",
+      "label": "algebra-lemma-integral-closure-commutes-etale",
+      "url": "https://stacks.math.columbia.edu/tag/03GE"
+    },
+    {
+      "tag": "03GD",
+      "label": "algebra-lemma-trick",
+      "url": "https://stacks.math.columbia.edu/tag/03GD"
+    },
+    {
+      "tag": "00GN",
+      "label": "algebra-lemma-integral-transitive",
+      "url": "https://stacks.math.columbia.edu/tag/00GN"
+    },
+    {
+      "tag": "04VT",
+      "label": "algebra-lemma-finite-epimorphism-surjective",
+      "url": "https://stacks.math.columbia.edu/tag/04VT"
+    },
+    {
+      "tag": "02LA",
+      "label": "descent-lemma-descending-property-finite",
+      "url": "https://stacks.math.columbia.edu/tag/02LA"
+    },
+    {
+      "tag": "01PZ",
+      "label": "properties-lemma-map-into-proj",
+      "url": "https://stacks.math.columbia.edu/tag/01PZ"
+    },
+    {
+      "tag": "01Q0",
+      "label": "properties-lemma-map-into-proj-quasi-compact",
+      "url": "https://stacks.math.columbia.edu/tag/01Q0"
+    },
+    {
+      "tag": "01Q1",
+      "label": "properties-lemma-ample-immersion-into-proj",
+      "url": "https://stacks.math.columbia.edu/tag/01Q1"
+    },
+    {
+      "tag": "01PT",
+      "label": "properties-lemma-ample-power-ample",
+      "url": "https://stacks.math.columbia.edu/tag/01PT"
+    },
+    {
+      "tag": "01MW",
+      "label": "constructions-lemma-ample-on-proj",
+      "url": "https://stacks.math.columbia.edu/tag/01MW"
+    },
+    {
+      "tag": "01NK",
+      "label": "constructions-lemma-invertible-map-into-proj",
+      "url": "https://stacks.math.columbia.edu/tag/01NK"
+    },
+    {
+      "tag": "01MC",
+      "label": "constructions-lemma-proj-separated",
+      "url": "https://stacks.math.columbia.edu/tag/01MC"
+    }
+  ],
+  "rows": [
+    {
+      "source_unit_id": "ega:IV.18.12.1",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.1",
+          "start_line": 3235,
+          "end_line": 3266,
+          "byte_start": 310499,
+          "byte_end_exclusive": 315765,
+          "bytes": 5266,
+          "sha256": "2D44B58E192B537B4F146758BA7CFA12B48B06E4D3B14E8C7F89E6488AB3518D",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3235-L3266"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.1",
+          "start_line": 2207,
+          "end_line": 2223,
+          "byte_start": 288078,
+          "byte_end_exclusive": 292594,
+          "bytes": 4516,
+          "sha256": "0017C4F5E3296C0E376D19959728873AB6D9BB5985B22819DEBBAAD466308D46",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2207-L2223"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "f is locally of finite type; x is isolated in the fibre over y.",
+        "After an etale base change there is a point over x in an open subscheme finite over the new base.",
+        "If f is separated, the chosen finite open can be taken closed."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-etale-makes-quasi-finite-finite-at-point",
+        "morphisms-lemma-finite-permanence",
+        "morphisms-lemma-integral-universally-closed"
+      ],
+      "derivation": [
+        "02LK needs only local finite type and isolation of the selected point in its fibre. It supplies an elementary etale neighbourhood and a finite open with the selected point; its proof reduces to an affine algebra result, without introducing separatedness.",
+        "For the separated addendum, apply 035D to V -> X_U -> U. The composite is finite and X_U -> U is separated, so the open immersion V -> X_U is finite, hence closed. Thus both clauses are covered."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.2",
+      "classification": "existing_stronger",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.2",
+          "start_line": 3267,
+          "end_line": 3271,
+          "byte_start": 315765,
+          "byte_end_exclusive": 316001,
+          "bytes": 236,
+          "sha256": "68471750AC1BC07533570B18D8F4F52C7DC433662F5084AC7A0C7C9344A78325",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3267-L3271"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.2",
+          "start_line": 2224,
+          "end_line": 2228,
+          "byte_start": 292594,
+          "byte_end_exclusive": 292860,
+          "bytes": 266,
+          "sha256": "8C4283701F863DE51B835B4569E5F0E3CF9D87935322162A28E2043C5298E3E5",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2224-L2228"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "The etale neighbourhood in .1 can be chosen with k(y)->k(y') an isomorphism."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-etale-makes-quasi-finite-finite-at-point"
+      ],
+      "derivation": [
+        "The word elementary in 02LK supplies k(u)=k(y), with no requirement that the original residue extension k(x)/k(y) be separable. This directly supplies the remark's strengthening, independently of the historical henselization proof."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.3",
+      "classification": "existing_stronger",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.3",
+          "start_line": 3272,
+          "end_line": 3296,
+          "byte_start": 316001,
+          "byte_end_exclusive": 318159,
+          "bytes": 2158,
+          "sha256": "404A6C21F96B32115084C4CBB1091FC04B2FAE35DED108FABD976C6EC221FB8B",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3272-L3296"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.3",
+          "start_line": 2229,
+          "end_line": 2241,
+          "byte_start": 292860,
+          "byte_end_exclusive": 294830,
+          "bytes": 1970,
+          "sha256": "8D861BF693989A56D2BD3A73DD339656D1BE384541701966F3165B944FDEADF4",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2229-L2241"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "f is separated and locally of finite type; the fibre at y is finite and discrete.",
+        "There is an elementary etale Y'->Y through y' with k(y')=k(y).",
+        "X_Y' splits into a finite clopen component and a complementary clopen subscheme with empty fibre at y'."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-etale-splits-off-quasi-finite-part",
+        "more-morphisms-lemma-etale-splits-off-quasi-finite-part-technical",
+        "more-morphisms-lemma-etale-makes-quasi-finite-finite-at-point"
+      ],
+      "derivation": [
+        "The finite discrete fibre consists of finitely many isolated points. 02LN splits them into finitely many finite clopen components after an elementary etale neighbourhood; 02LP takes their union and states that the residual fibre is empty.",
+        "The proof makes each finite open closed using separatedness, then shrinks the etale base to eliminate pairwise intersections. This checks disjointness as well as finiteness; neither f nor the original base needs a global quasi-compactness assumption here."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.4",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.4",
+          "start_line": 3297,
+          "end_line": 3316,
+          "byte_start": 318159,
+          "byte_end_exclusive": 319569,
+          "bytes": 1410,
+          "sha256": "E48CDB7A1DFFCAC8D5AE3AA69C51C5966EAF20FE03FA73D1D06BB4ABCA33316C",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3297-L3316"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.4",
+          "start_line": 2242,
+          "end_line": 2248,
+          "byte_start": 294830,
+          "byte_end_exclusive": 296013,
+          "bytes": 1183,
+          "sha256": "2101E4B989ACD057CC23CF8727AABCEB4F3D871C4F89C36CD49563119BF495F3",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2242-L2248"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "Finite iff separated, universally closed, locally of finite type, and every fibre is finite discrete.",
+        "In particular proper and quasi-finite implies finite."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-characterize-finite",
+        "more-morphisms-lemma-etale-splits-off-quasi-finite-part",
+        "descent-lemma-descending-property-finite"
+      ],
+      "derivation": [
+        "02LS explicitly states the separated, universally closed, locally finite type, finite-fibre criterion and the proper locally quasi-finite criterion. 02NG confirms that finite fibres of a locally finite type map are discrete.",
+        "Its converse applies 02LP, deletes the closed image of the residual clopen component, and invokes finite-morphism fpqc descent 02LA. Quasi-compactness is obtained by descent, not inserted as an extra source hypothesis."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.5",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.5",
+          "start_line": 3317,
+          "end_line": 3321,
+          "byte_start": 319569,
+          "byte_end_exclusive": 319830,
+          "bytes": 261,
+          "sha256": "AE971372EFF605D714C8BDA706706F83F023298C0FFC1EB1D67A1D4E775D3479",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3317-L3321"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.5",
+          "start_line": 2249,
+          "end_line": 2253,
+          "byte_start": 296013,
+          "byte_end_exclusive": 296306,
+          "bytes": 293,
+          "sha256": "044DD5F55AE07153232F4E89C41F589EC9286F40B506C54688AD5366AEC6A12E",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2249-L2253"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "In the finiteness criterion .4, universal closedness can be replaced by closedness after every etale base change; the other hypotheses remain."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-characterize-finite",
+        "more-morphisms-lemma-etale-splits-off-quasi-finite-part",
+        "descent-lemma-descending-property-finite"
+      ],
+      "derivation": [
+        "In the actual 02LS converse, universal closedness is used only for the image of W under X_U -> U, where U -> Y is etale. The weaker source assumption therefore supplies precisely the required closedness.",
+        "After shrinking U, this base change is finite; these etale neighbourhoods cover Y and 02LA descends finiteness. The reverse implication follows from universal closedness of finite morphisms. Other .4 hypotheses are retained."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.6",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.6",
+          "start_line": 3322,
+          "end_line": 3336,
+          "byte_start": 319830,
+          "byte_end_exclusive": 320463,
+          "bytes": 633,
+          "sha256": "B28EE60D57836AEFE43617231B85EE170A2BB3B3F02C41EFBEFB168F30E86625",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3322-L3336"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.6",
+          "start_line": 2254,
+          "end_line": 2265,
+          "byte_start": 296306,
+          "byte_end_exclusive": 296858,
+          "bytes": 552,
+          "sha256": "163B800B9986516AFB5D9D9E00B9E2EE6F8CD4C04400A29CB47518F5F2FE315C",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2254-L2265"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "For arbitrary schemes, closed immersion iff proper monomorphism.",
+        "These are also equivalent to properness and every residue-field fibre being empty or Spec(k(y)); the source states this as radicial and geometrically reduced."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-characterize-finite",
+        "morphisms-lemma-monomorphism-loc-finite-type-loc-quasi-finite",
+        "morphisms-lemma-finite-monomorphism-closed",
+        "algebra-lemma-finite-epimorphism-surjective",
+        "algebra-lemma-NAK"
+      ],
+      "derivation": [
+        "A proper monomorphism is locally finite type, hence locally quasi-finite by 0CT8; 02LS gives finite and 03BB gives a closed immersion. The 03BB proof reduces to the fully general finite-ring-epimorphism criterion 04VT.",
+        "For the fibre condition, 02LS first gives a finite A-algebra B. The finite A-module coker(A -> B) has zero tensor product with every residue field, including empty fibres. Local Nakayama 00DV kills each localization, hence the cokernel; the map is surjective. Closed immersions give both reverse directions."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.7",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.7",
+          "start_line": 3337,
+          "end_line": 3344,
+          "byte_start": 320463,
+          "byte_end_exclusive": 321105,
+          "bytes": 642,
+          "sha256": "BED206007F625E4119F52C83B9D14A97E81D028498ECEE11B4FECD6D8CFB1503",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3337-L3344"
+        },
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.7.1",
+          "start_line": 3345,
+          "end_line": 3360,
+          "byte_start": 321105,
+          "byte_end_exclusive": 323260,
+          "bytes": 2155,
+          "sha256": "E659036265C51C0D0AFC7CD75F4A6201419F70D51C5C8BC49F3D5AB040358F95",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3345-L3360"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.7",
+          "start_line": 2266,
+          "end_line": 2272,
+          "byte_start": 296858,
+          "byte_end_exclusive": 297746,
+          "bytes": 888,
+          "sha256": "D30E680EE3D27C71211118149CC61CEC282049B8C08D73AFECB67BD248D55968",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2266-L2272"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.7.1",
+          "start_line": 2273,
+          "end_line": 2281,
+          "byte_start": 297746,
+          "byte_end_exclusive": 299187,
+          "bytes": 1441,
+          "sha256": "9465155261CCB2A9DDBAE73D6911ECD4485695465B47B9C54105145C1591084E",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2273-L2281"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "f is locally of finite type and y is fixed.",
+        "f is a closed immersion after restriction over some open neighbourhood of y iff its fibre at y is empty or Spec(k(y)) and f is universally closed over some neighbourhood of y."
+      ],
+      "target_labels": [
+        "morphisms-lemma-characterize-affine",
+        "morphisms-lemma-affine-permanence",
+        "morphisms-lemma-integral-universally-closed",
+        "morphisms-lemma-finite-integral",
+        "algebra-lemma-NAK-localization"
+      ],
+      "derivation": [
+        "If the fibre is empty, delete the closed image near y. Otherwise use .7.1 to make the map affine over an affine base neighbourhood; universal closedness gives integral by 01WM and local finite type gives finite by 01WJ.",
+        "For the resulting finite A-algebra B and prime p, B tensor k(p)=k(p). Apply the explicit prime-ideal case of 0GLX to the element 1 of the finite A-module B: for t not in p, 1 generates B_t over A_t. Thus A_t -> B_t is surjective, yielding the required closed immersion.",
+        "This additional shrink is indispensable. The writer supplies it correctly instead of inferring all nearby fibre conditions from the one distinguished fibre. Both .7 and .7.1 source windows are bound because the .7 proof resumes after the lemma."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.7.1",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.7.1",
+          "start_line": 3345,
+          "end_line": 3360,
+          "byte_start": 321105,
+          "byte_end_exclusive": 323260,
+          "bytes": 2155,
+          "sha256": "E659036265C51C0D0AFC7CD75F4A6201419F70D51C5C8BC49F3D5AB040358F95",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3345-L3360"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.7.1",
+          "start_line": 2273,
+          "end_line": 2281,
+          "byte_start": 297746,
+          "byte_end_exclusive": 299187,
+          "bytes": 1441,
+          "sha256": "9465155261CCB2A9DDBAE73D6911ECD4485695465B47B9C54105145C1591084E",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2273-L2281"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "f is closed and every neighbourhood of the fibre at y contains an affine neighbourhood of that fibre.",
+        "There is an affine open neighbourhood U of y such that f^{-1}(U)->U is affine.",
+        "The affine-neighbourhood hypothesis holds if the fibre is empty or a singleton."
+      ],
+      "target_labels": [
+        "morphisms-lemma-characterize-affine",
+        "morphisms-lemma-affine-permanence"
+      ],
+      "derivation": [
+        "Choose affine U0 around y and an affine V containing the entire fibre inside f^{-1}(U0). Closedness makes f(X minus V) closed and disjoint from y. Choose a principal affine neighbourhood U within its complement.",
+        "Then f^{-1}(U)=V times_{U0} U is affine and its map to U is affine. 01S8 applies to V -> U0, and the explicit base-change lemma 01SD supplies the last step; 01SD is also invoked in the recorded 01SG proof. The stronger French conclusion that U is affine is retained. No finite-type or separatedness assumption is needed."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.8",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.8",
+          "start_line": 3361,
+          "end_line": 3379,
+          "byte_start": 323260,
+          "byte_end_exclusive": 324765,
+          "bytes": 1505,
+          "sha256": "5B8FABE7F84B3B01F260DB1173E072F0516F9B20F171BDD61794EAA2EA565A32",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3361-L3379"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.8",
+          "start_line": 2282,
+          "end_line": 2296,
+          "byte_start": 299187,
+          "byte_end_exclusive": 300547,
+          "bytes": 1360,
+          "sha256": "3639A8A0B2C0384C455D896B07B39B6868724FDBC90285DD72ABC50A513FE1DE",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2282-L2296"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "An arbitrary morphism is integral iff affine and universally closed."
+      ],
+      "target_labels": [
+        "morphisms-lemma-integral-universally-closed"
+      ],
+      "derivation": [
+        "01WM states the exact equivalence for arbitrary morphisms. Its converse proof uses the polynomial-variable base change and a reciprocal-polynomial calculation to make each element integral; it is not merely a finite-type special case. The easy direction checks closedness after arbitrary base change."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.9",
+      "classification": "partial",
+      "counted_supported": false,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.9",
+          "start_line": 3380,
+          "end_line": 3385,
+          "byte_start": 324765,
+          "byte_end_exclusive": 325231,
+          "bytes": 466,
+          "sha256": "DE4410AC2D445F9011E32C2B494E2A3ADFA0A3BE38425F36366F22A8AA0C9365",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3380-L3385"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.9",
+          "start_line": 2297,
+          "end_line": 2301,
+          "byte_start": 300547,
+          "byte_end_exclusive": 300974,
+          "bytes": 427,
+          "sha256": "83336FFBA2CD063A32CBD6AF349DCB2D9219EC02E9CD1780F9457112A0A62475",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2297-L2301"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "The remark conjectures that separated and universally closed f, with every residue-field fibre integral over k(y), must be integral.",
+        "It reduces the desired assertion to affineness, equivalently to finding an affine open neighbourhood containing each whole fibre."
+      ],
+      "target_labels": [
+        "morphisms-lemma-integral-universally-closed",
+        "morphisms-lemma-characterize-affine",
+        "morphisms-lemma-affine-permanence"
+      ],
+      "derivation": [
+        "Both source witnesses present a possible extension, not an established theorem. 01WM reduces it to affineness, and .7.1 explains why suitable affine fibre neighbourhoods would suffice; neither supplies existence of those neighbourhoods.",
+        "Accept the partial disposition and zero closed count. This review does not turn the writer's bounded search into a global absence claim or certify that the conjecture remains open."
+      ],
+      "residual": [
+        "The non-finite-type implication from separated + universally closed + integral fibres to global affineness/integrality remains unproved in this bounded comparison."
+      ],
+      "unit_kind": "historical_conjectural_remark",
+      "current_open_status_claimed": false
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.10",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.10",
+          "start_line": 3386,
+          "end_line": 3394,
+          "byte_start": 325231,
+          "byte_end_exclusive": 325541,
+          "bytes": 310,
+          "sha256": "5F3A26BB05FB45EE1E02B50406F4C7098139A4C3F7517EA624B9E59450774728",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3386-L3394"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.10",
+          "start_line": 2302,
+          "end_line": 2308,
+          "byte_start": 300974,
+          "byte_end_exclusive": 301233,
+          "bytes": 259,
+          "sha256": "380569F76C621147EC5B771A6FFF6CD79778493D4A9A191F641B710F42D6080C",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2302-L2308"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "Every injective universally closed morphism is integral, without assuming universal injectivity."
+      ],
+      "target_labels": [
+        "morphisms-lemma-homeomorphism-affine",
+        "morphisms-lemma-integral-universally-closed"
+      ],
+      "derivation": [
+        "A closed injective continuous map is a homeomorphism onto a closed image. Universal closedness supplies closedness, 04DE then gives affineness, and 01WM gives integrality.",
+        "04DE's proof uses affine neighbourhoods and closed-image topology. It does not require universal injectivity, so the source's weaker injectivity hypothesis is preserved."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.11",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.11",
+          "start_line": 3395,
+          "end_line": 3405,
+          "byte_start": 325541,
+          "byte_end_exclusive": 326073,
+          "bytes": 532,
+          "sha256": "8896D3D3D1AA5D9BB14FD75D6214CA058CB84E043EB372238AA7DC1312026630",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3395-L3405"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.11",
+          "start_line": 2309,
+          "end_line": 2317,
+          "byte_start": 301233,
+          "byte_end_exclusive": 301683,
+          "bytes": 450,
+          "sha256": "28531CDDF435E245330FA92DFF1459F4414FB4CBCF80D2AC4C7649EF48C4CEC8",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2309-L2317"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "Universal homeomorphism iff integral, radicial and surjective.",
+        "If f is locally of finite type, integral can equivalently be replaced by finite."
+      ],
+      "target_labels": [
+        "morphisms-lemma-universal-homeomorphism",
+        "morphisms-lemma-universally-injective",
+        "morphisms-lemma-finite-integral"
+      ],
+      "derivation": [
+        "04DF gives universal homeomorphism exactly as integral, universally injective and surjective. The proof of 01S4 identifies universally injective and radicial without finite-type assumptions.",
+        "01WJ converts integral plus local finite type to finite and finite to integral, supplying the parenthetical variant. No finite-presentation assumption has been added."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.12",
+      "classification": "existing_stronger",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.12",
+          "start_line": 3406,
+          "end_line": 3438,
+          "byte_start": 326073,
+          "byte_end_exclusive": 328674,
+          "bytes": 2601,
+          "sha256": "E5396FC3768C50D6152A3F6600AED378F2D6B091D0FA6B91AD1CACAB4B01ACDE",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3406-L3438"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.12",
+          "start_line": 2318,
+          "end_line": 2342,
+          "byte_start": 301683,
+          "byte_end_exclusive": 304250,
+          "bytes": 2567,
+          "sha256": "7749F421D69501072E1CED71ECE9B32ED1BF9F6552A05599AA5363E70BFBCE26",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2318-L2342"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "Every separated quasi-finite morphism is quasi-affine."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+        "more-morphisms-lemma-finite-type-separated"
+      ],
+      "derivation": [
+        "02LR gives the stronger factorization by a quasi-compact open immersion into the relative normalization, followed by an integral morphism. Its proof applies 03GW because quasi-finite implies finite type and every source point lies in the quasi-finite locus.",
+        "03GW's proof uses the actual etale splitting, normalization base change, and the integral finite component, then descends an isomorphism over an etale covering. The base need not be quasi-compact or quasi-separated."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.13",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.13",
+          "start_line": 3439,
+          "end_line": 3454,
+          "byte_start": 328674,
+          "byte_end_exclusive": 329592,
+          "bytes": 918,
+          "sha256": "ADB4074CFFA64CFBF68C35F54B8CBBF7F741B360EB9AF5AB3BFD0BEED9584C9E",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3439-L3454"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.13",
+          "start_line": 2343,
+          "end_line": 2353,
+          "byte_start": 304250,
+          "byte_end_exclusive": 305099,
+          "bytes": 849,
+          "sha256": "DA8A9717F0D2474D337235E3D7851B54E3C1E6E6008FC7CA79061FF948299F83",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2343-L2353"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "f is quasi-finite and separated and Y is quasi-compact and quasi-separated.",
+        "f factors as a quasi-compact open immersion followed by a finite morphism."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-quasi-finite-separated-pass-through-finite"
+      ],
+      "derivation": [
+        "05K0 has exactly quasi-finite and separated f over quasi-compact quasi-separated Y, and the conclusion is a quasi-compact open immersion followed by a finite morphism. This reused row was rechecked on current bodies, not accepted solely from its prior comparison.",
+        "The proof passes through integral normalization, finite quasi-coherent subalgebras (0817), descent of the quasi-compact open (01Z4), and an eventual closed immersion (081B(1)). The last step requires finite type, not finite presentation; the base and approximants supply the required quasi-compact/quasi-separated conditions."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.14",
+      "classification": "partial",
+      "counted_supported": false,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.14",
+          "start_line": 3455,
+          "end_line": 3470,
+          "byte_start": 329592,
+          "byte_end_exclusive": 331967,
+          "bytes": 2375,
+          "sha256": "C090B26A2BDA6324A237818FDB24882FCA6330D669F1F772F2307CABC8B1FC8A",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3455-L3470"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.14",
+          "start_line": 2354,
+          "end_line": 2364,
+          "byte_start": 305099,
+          "byte_end_exclusive": 306958,
+          "bytes": 1859,
+          "sha256": "DA62489358CC94F8EEE5E9EF5573197FDB2CB27A27F108A23D23563273496825",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2354-L2364"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "The normalization construction gives an alternative proof of the Zariski Main factorization.",
+        "For B the integral closure of O_Y in f_*O_X, the map X->Spec_Y(B) is an immersion (indeed an open immersion).",
+        "Under the etale splitting A'=A1' x A2' with A1' finite over C', B tensor_C C' contains the full A1' factor; the associated normalized base splits and is identical to X1' on that component.",
+        "The remark states that this route avoids EGA IV.8.12.8 but uses .18.12.3, hence .18.5.11 and the local Main Theorem .8.12.9."
+      ],
+      "target_labels": [
+        "morphisms-definition-normalization-X-in-Y",
+        "more-morphisms-lemma-finite-type-separated",
+        "more-morphisms-lemma-normalization-smooth-localization",
+        "more-morphisms-lemma-etale-splits-off-quasi-finite-part-technical",
+        "morphisms-lemma-normalization-in-disjoint-union",
+        "morphisms-lemma-normalization-in-integral",
+        "algebra-lemma-integral-closure-commutes-etale",
+        "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+        "more-morphisms-lemma-quasi-finite-separated-pass-through-finite"
+      ],
+      "derivation": [
+        "The construction is mathematically covered: qcqs f has relative integral closure 035H; 03GV commutes it with etale base change. The clopen splitting in 02LN gives a product of direct-image algebras.",
+        "03GE identifies the actual base-changed closure. In a product, idempotents are integral, so 03GO splits the closure; the finite factor is entirely integral and is unchanged by normalization (03GP). Thus the map is an isomorphism on the finite component. 03GW/02LR give the open immersion and 05K0 the final finite factorization.",
+        "Retain partial only for the historical assertion about avoiding IV.8.12.8 while using IV.18.5.11 and IV.8.12.9. No replay of that complete EGA proof graph was performed, and the supported construction is not a mathematical gap."
+      ],
+      "residual": [
+        "Historical proof-route assertion: avoidance of EGA IV.8.12.8 and exact transitive dependence through IV.18.5.11 and IV.8.12.9 has not been independently replayed."
+      ],
+      "unit_kind": "construction_and_historical_proof_route",
+      "construction_supported": true,
+      "residual_is_missing_theorem": false
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.15",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.15",
+          "start_line": 3471,
+          "end_line": 3506,
+          "byte_start": 331967,
+          "byte_end_exclusive": 336202,
+          "bytes": 4235,
+          "sha256": "0C843074DED9FFDEFA5AFECE7B429F835B46566B969E3E6795D13F5814C50B3A",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3471-L3506"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.15",
+          "start_line": 2365,
+          "end_line": 2383,
+          "byte_start": 306958,
+          "byte_end_exclusive": 310382,
+          "bytes": 3424,
+          "sha256": "9365942CFBD90C7428FAB288F97A092EE32E338637D1CE907568B4C576FBE21E",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2365-L2383"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "C is arbitrary, C' is an etale C-algebra, A is any C-algebra, and B is the integral closure of C in A.",
+        "B'=B tensor_C C', embedded in A'=A tensor_C C' by flatness, is exactly the integral closure of C' in A'."
+      ],
+      "target_labels": [
+        "algebra-lemma-integral-closure-commutes-etale",
+        "algebra-lemma-trick",
+        "algebra-lemma-integral-transitive"
+      ],
+      "derivation": [
+        "03GE states the exact unrestricted ring assertion after relabelling (R,S,B,A) as source (C,C',A,B). Flatness of C' over C preserves the inclusion B into A under tensor product.",
+        "The proof localizes to a standard etale algebra. Transitivity 00GN makes the element integral over the original base; 03GD gives integral coefficients after multiplication by the derivative, which is invertible in the standard etale algebra. Neither injectivity C -> A, Noetherianity, reducedness nor finite type of A is required."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.16",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.16",
+          "start_line": 3507,
+          "end_line": 3525,
+          "byte_start": 336202,
+          "byte_end_exclusive": 337121,
+          "bytes": 919,
+          "sha256": "06280C8D6759AFF35A8783FBEFB25584E4CEC941039A73E39D8709AD753445BA",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3507-L3525"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.16",
+          "start_line": 2384,
+          "end_line": 2394,
+          "byte_start": 310382,
+          "byte_end_exclusive": 311185,
+          "bytes": 803,
+          "sha256": "8FA80BAD001CBF865264C66D9DA1F091B6AD2B6B7800BA0FCF9B9C6011361A31",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2384-L2394"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "g:Y->S is quasi-compact, f:X->Y is separated and quasi-finite, and L is g-ample.",
+        "Then f*L is ample for g composed with f."
+      ],
+      "target_labels": [
+        "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+        "morphisms-lemma-pullback-ample-tensor-relatively-ample",
+        "morphisms-definition-relatively-ample"
+      ],
+      "derivation": [
+        "02LR makes f quasi-affine, also after restriction over an affine open V of S. Definition 01VH gives ampleness of L on Y_V. Pullback theorem 0892(2) gives ampleness on X_V.",
+        "Quasi-finite f and the stipulated g are quasi-compact, hence so is their composite; 01VH yields relative ampleness. There is no finite-type assumption on g or extra hypothesis on S. The independent ampleness subreview agrees."
+      ],
+      "residual": []
+    },
+    {
+      "source_unit_id": "ega:IV.18.12.17",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "source": [
+        {
+          "language": "english",
+          "file_id": "source:english",
+          "source_unit_id": "ega:IV.18.12.17",
+          "start_line": 3526,
+          "end_line": 3556,
+          "byte_start": 337121,
+          "byte_end_exclusive": 339554,
+          "bytes": 2433,
+          "sha256": "439C9C142203BF3B72CE4E2B270676BDF40FB7D8D6C4A7FCD9BD430D7A641BAC",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/source_aligned/ega4-18.tex#L3526-L3556"
+        },
+        {
+          "language": "french",
+          "file_id": "source:french",
+          "source_unit_id": "ega:IV.18.12.17",
+          "start_line": 2395,
+          "end_line": 2419,
+          "byte_start": 311185,
+          "byte_end_exclusive": 313528,
+          "bytes": 2343,
+          "sha256": "CD20934480DB3F2EED2FE37CC2F712140A28C511246B18572429E17764126BD4",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega4/ega4-18-fr.tex#L2395-L2419"
+        }
+      ],
+      "hypotheses_and_clauses": [
+        "h:X->Z is finite type, Z=Spec(A) affine, L invertible, and S is the full section ring direct sum of Gamma(X,L^n), n>=0.",
+        "L ample iff G(epsilon)=X, h separated, and the canonical u:X->Proj(S) has finite discrete fibres (b'').",
+        "L ample iff G(epsilon)=X and the canonical u is radicial (b''')."
+      ],
+      "target_labels": [
+        "properties-lemma-map-into-proj",
+        "properties-lemma-map-into-proj-quasi-compact",
+        "properties-lemma-ample-immersion-into-proj",
+        "morphisms-lemma-permanence-finite-type",
+        "morphisms-lemma-universally-injective",
+        "morphisms-lemma-universally-injective-separated",
+        "constructions-lemma-proj-separated",
+        "more-morphisms-lemma-quasi-finite-separated-quasi-affine",
+        "constructions-lemma-ample-on-proj",
+        "constructions-lemma-invertible-map-into-proj",
+        "morphisms-lemma-pullback-ample-tensor-relatively-ample",
+        "properties-lemma-ample-power-ample"
+      ],
+      "derivation": [
+        "II.4.5.1/.2 identify S as the full section ring and u as the canonical identity-evaluation map; the assertion is not about an arbitrary linear subsystem. Finite type over affine Z gives quasi-compact X. 01Q0 proves the canonical u is quasi-compact under exactly the nonvanishing-section cover; 01T8 supplies local finite type.",
+        "Under b'', separated h gives separated u and the finite discrete fibres give quasi-finiteness. 02LR makes u quasi-affine. Choose finitely many covering positive-degree sections and raise powers to common degree n. Their standard opens form a quasi-compact Y' containing u(X).",
+        "The construction in 01MW gives a positive multiple d of n for which O(d) on Y' is invertible and ample; no assertion that the whole arbitrary Proj is quasi-compact or standard graded is used. On each selected chart, 01NK's localization/evaluation map identifies the trivializing power of the section with its section of L^d, so u*O(d)=L^d. 0892(2) and 01PT give ampleness of L.",
+        "Conversely 01Q1 gives an open immersion, hence radicial u. By 01S4/05VE a radicial map is universally injective and separated; Proj is separated over Z by 01MC, giving b''' -> b''. Both stated criteria are covered. The final unformulated relative exercise is excluded."
+      ],
+      "residual": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "IV1812-REVIEW-NAK-SHRINK",
+      "kind": "affirmed_essential_argument",
+      "source_unit_id": "ega:IV.18.12.7",
+      "conclusion": "The finite-module generation-by-1 shrinking is valid over arbitrary rings and completes the distinguished-fibre argument; the recorded row contains it and binds both interleaved source windows.",
+      "closure_impact": "none"
+    },
+    {
+      "id": "IV1812-REVIEW-AFFINE-BASE",
+      "kind": "affirmed_source_strength",
+      "source_unit_id": "ega:IV.18.12.7.1",
+      "conclusion": "The French affine-neighbourhood conclusion is proved, despite the weaker English statement. 01SD is the explicit base-change lemma referenced inside the recorded 01SG proof; this review adds its own exact proof span for citation precision.",
+      "closure_impact": "none"
+    },
+    {
+      "id": "IV1812-REVIEW-PROJ",
+      "kind": "affirmed_essential_scope",
+      "source_unit_id": "ega:IV.18.12.17",
+      "conclusion": "Canonical-map quasi-compactness, the full section ring, and restriction to a finite union of standard Proj opens are indispensable and all accounted for. A suitable higher multiple d, not any unverified global twist on arbitrary Proj, is used.",
+      "closure_impact": "none"
+    },
+    {
+      "id": "IV1812-REVIEW-PROOF-WITNESS",
+      "kind": "bounded_witness_caveat",
+      "source_unit_ids": [
+        "ega:IV.18.12.1",
+        "ega:IV.18.12.2"
+      ],
+      "conclusion": "English line 3256 says strict henselisation while French line 2220 says anneau local henselise. The direct target 02LK proves the assertions and residue-field strengthening without identifying those proof phrases. Exact translation/proof-provenance adjudication would require the definitions at IV.18.6.2/.5, which were not audited here.",
+      "closure_impact": "none; not an admitted source erratum"
+    }
+  ],
+  "limitations": [
+    "IV.18.12.9 is conjectural in the pinned witness; neither proof nor present-day openness is established here.",
+    "IV.18.12.14 normalization construction is supported; its assertion about avoiding one historical EGA proof dependency was not replayed.",
+    "English strict henselisation and French henselisation wording were not equated; 02LK supplies the actual assertions independently.",
+    "The unformulated relative-ampleness exercise is excluded, not silently counted."
+  ],
+  "reproducibility": {
+    "mapping": {
+      "name": "iv18_12_coverage.json",
+      "bytes": 99120,
+      "sha256": "4EFBA408B8A2FD57FC5187AAD51A6E59D6533228CEA36F280A30345B06E2F484"
+    },
+    "review": {
+      "name": "iv18_12_independent_review.json",
+      "bytes": 184588,
+      "sha256": "BE9D6A04A6E4D91A1CB3715FC4C297433927CA4784E0CCAFFB47A2DC197996C7"
+    },
+    "fresh_validation": {
+      "evidence_files": 15,
+      "committed_target_files": 8,
+      "spans": 124,
+      "tag_bindings": 39,
+      "source_ids": 18,
+      "status": "PASS"
+    }
+  },
+  "whole_ega_complete": false
+}
