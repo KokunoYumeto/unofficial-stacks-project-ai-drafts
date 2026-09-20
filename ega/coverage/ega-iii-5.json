@@ -1,0 +1,2348 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "e2e77e68122456982c855331460139ae77e317fa",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "review_boundary": "Existing independent AI reviews adopted after exact file/span/tag replay against the current committed tree. No new independent review, human approval, machine-checked proof, or fresh full-source review is claimed.",
+  "new_root_theorems": 0,
+  "whole_ega_complete": false,
+  "title": "EGA III section 5: Grothendieck existence and algebraization",
+  "counts": {
+    "numbered_objects": 28,
+    "mathematical_units": 24,
+    "supported": 23,
+    "literal_scope_partial": 1,
+    "setup_rows_not_counted": 2,
+    "historical_remarks_not_counted": 2
+  },
+  "files": [
+    {
+      "id": "english",
+      "name": "ega3-5.tex",
+      "bytes": 43721,
+      "sha256": "AD3B7830CD406C5746B3F2D5474AFC0C0009BB4650EC1D8A2E8351E69B1D0F35",
+      "role": "separate English discovery witness"
+    },
+    {
+      "id": "french",
+      "name": "french3_ega3-1-fr_6b388758.tex",
+      "bytes": 627913,
+      "sha256": "B052E2ABC77C786FCEA730D61F8E4588CAC486F460A4037A769E15E501FDA0F4",
+      "role": "pinned French transcription; no fresh printed-scan collation",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex"
+    },
+    {
+      "id": "coherent",
+      "name": "coherent.tex",
+      "bytes": 357482,
+      "sha256": "D219CBA93EA84084A35BE94B3454E316C54037AF0BFBF795A1824543D9440BBC",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex"
+    },
+    {
+      "id": "algebraization",
+      "name": "algebraization.tex",
+      "bytes": 370888,
+      "sha256": "541C8A4D9E840AF087E9AEC965745B0EFF8888EC4A7F6CE1DF5D2669BB3EC028",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/algebraization.tex"
+    },
+    {
+      "id": "formal",
+      "name": "formal-spaces.tex",
+      "bytes": 322568,
+      "sha256": "12155988C9ECFD84C14AA507EB55E25360EBD87124BFE239EFCC9EE4187BD2C5",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/formal-spaces.tex"
+    },
+    {
+      "id": "cohomology",
+      "name": "cohomology.tex",
+      "bytes": 539704,
+      "sha256": "591F19389EF437DDFE05B00214064DDA31AA225D44B019A779F9F98F6EC0B4DE",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/cohomology.tex"
+    },
+    {
+      "id": "algebra",
+      "name": "algebra.tex",
+      "bytes": 1808110,
+      "sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/algebra.tex"
+    },
+    {
+      "id": "more_algebra",
+      "name": "more-algebra.tex",
+      "bytes": 1518081,
+      "sha256": "0490028F82EFFCF08C0D790D0C8145EEB8D55DB66BFB8CF7BA29CCD27FC3FABE",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/more-algebra.tex"
+    },
+    {
+      "id": "more_morphisms",
+      "name": "more-morphisms.tex",
+      "bytes": 976082,
+      "sha256": "6F36E5FF2C2B5C66FC2AA762421F0024C08C409AB86D1D814F70A065F416475A",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/more-morphisms.tex"
+    },
+    {
+      "id": "morphisms",
+      "name": "morphisms.tex",
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/morphisms.tex"
+    },
+    {
+      "id": "properties",
+      "name": "properties.tex",
+      "bytes": 213401,
+      "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/properties.tex"
+    },
+    {
+      "id": "tags",
+      "name": "tags/tags",
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D",
+      "role": "current committed Stacks draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/tags/tags"
+    }
+  ],
+  "target_evidence": [
+    {
+      "id": "formal_dictionary",
+      "file_id": "formal",
+      "label": "section-formal-schemes-EGA",
+      "tag": "0AHY",
+      "first_line": 48,
+      "last_line": 294,
+      "byte_start": 1087,
+      "byte_end_exclusive": 12311,
+      "bytes": 11224,
+      "sha256": "646131CF881EEA21B68736FAF2F68BF6D2B08FC884017B29F91CE17417AF1721",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/formal-spaces.tex#L48-L294"
+    },
+    {
+      "id": "formal_completion",
+      "file_id": "formal",
+      "label": "section-completion",
+      "tag": "0AIX",
+      "first_line": 2924,
+      "last_line": 3011,
+      "byte_start": 121333,
+      "byte_end_exclusive": 124886,
+      "bytes": 3553,
+      "sha256": "7E7F375919199DB2C74637E30121EB0CAFA0C86DB9CA3450C8DE5E90C1D11DA6",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/formal-spaces.tex#L2924-L3011"
+    },
+    {
+      "id": "systems",
+      "file_id": "coherent",
+      "label": "section-coherent-formal",
+      "tag": "0EHN",
+      "first_line": 7160,
+      "last_line": 7333,
+      "byte_start": 277152,
+      "byte_end_exclusive": 284693,
+      "bytes": 7541,
+      "sha256": "AEF2B62299EA0EB7921CAF2321B8EE4833289CB88FD0A90D002EDF027DFBD3BC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7160-L7333"
+    },
+    {
+      "id": "exact",
+      "file_id": "coherent",
+      "label": "lemma-exact",
+      "tag": "0881",
+      "first_line": 7335,
+      "last_line": 7348,
+      "byte_start": 284694,
+      "byte_end_exclusive": 285206,
+      "bytes": 512,
+      "sha256": "FE1589D0C52AE24F97B367399A92971889BEE93A93C40C9990366F570843C33F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7335-L7348"
+    },
+    {
+      "id": "hom",
+      "file_id": "coherent",
+      "label": "lemma-completion-internal-hom",
+      "tag": "0882",
+      "first_line": 7350,
+      "last_line": 7385,
+      "byte_start": 285207,
+      "byte_end_exclusive": 286495,
+      "bytes": 1288,
+      "sha256": "21F00AEE40DD3629945E327552D22247786628992431AE9D3DA0957C91BA7558",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7350-L7385"
+    },
+    {
+      "id": "pullback",
+      "file_id": "coherent",
+      "label": "lemma-inverse-systems-pullback",
+      "tag": "0887",
+      "first_line": 7543,
+      "last_line": 7576,
+      "byte_start": 293317,
+      "byte_end_exclusive": 294704,
+      "bytes": 1387,
+      "sha256": "F219A50F5422B175289BE5B52F3703D243BFFA63556006EEE94C008A218F2CFA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7543-L7576"
+    },
+    {
+      "id": "fully_faithful",
+      "file_id": "coherent",
+      "label": "lemma-fully-faithful",
+      "tag": "0883",
+      "first_line": 7672,
+      "last_line": 7696,
+      "byte_start": 298553,
+      "byte_end_exclusive": 299524,
+      "bytes": 971,
+      "sha256": "C72CEB63A180C3CCD3877CB8D4E3EA0E05711AA9788102A4EBABE08F1E395B1F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7672-L7696"
+    },
+    {
+      "id": "uniform_h1",
+      "file_id": "coherent",
+      "label": "lemma-vanishing-projective",
+      "tag": "0884",
+      "first_line": 7698,
+      "last_line": 7722,
+      "byte_start": 299525,
+      "byte_end_exclusive": 300432,
+      "bytes": 907,
+      "sha256": "7D3BD804DB20818C9653B1E45EA2CED3BBCBFF6265EB4A86E9EA706EF1695214",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7698-L7722"
+    },
+    {
+      "id": "projective",
+      "file_id": "coherent",
+      "label": "lemma-existence-projective",
+      "tag": "0885",
+      "first_line": 7724,
+      "last_line": 7780,
+      "byte_start": 300433,
+      "byte_end_exclusive": 302555,
+      "bytes": 2122,
+      "sha256": "1EAEE479722FC91659BA1C7BF9C4114F83D6A12BDA06F7906AC7F579579351C9",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7724-L7780"
+    },
+    {
+      "id": "push_pull",
+      "file_id": "coherent",
+      "label": "lemma-inverse-systems-push-pull",
+      "tag": "088B",
+      "first_line": 7937,
+      "last_line": 8053,
+      "byte_start": 309349,
+      "byte_end_exclusive": 314430,
+      "bytes": 5081,
+      "sha256": "2B045E0315FE440924F44D79FFB6F45437A0DC5A31A8D189242D2A9625A389CB",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7937-L8053"
+    },
+    {
+      "id": "proper",
+      "file_id": "coherent",
+      "label": "proposition-existence-proper",
+      "tag": "088C",
+      "first_line": 8059,
+      "last_line": 8111,
+      "byte_start": 314554,
+      "byte_end_exclusive": 317157,
+      "bytes": 2603,
+      "sha256": "CB4A5E30C5491EF55BB95F71B1D455CD884769C1A69D7B27C07A856748753017",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8059-L8111"
+    },
+    {
+      "id": "proper_support",
+      "file_id": "coherent",
+      "label": "lemma-module-support-proper-over-base",
+      "tag": "0CYS",
+      "first_line": 8320,
+      "last_line": 8352,
+      "byte_start": 325603,
+      "byte_end_exclusive": 327029,
+      "bytes": 1426,
+      "sha256": "11AE474699DF02231CDE9B7E13DD472EA1DB6D822BBDC41647D83F30EB7171BB",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8320-L8352"
+    },
+    {
+      "id": "proper_serre",
+      "file_id": "coherent",
+      "label": "lemma-cat-module-support-proper-over-base",
+      "tag": "0CYU",
+      "first_line": 8379,
+      "last_line": 8418,
+      "byte_start": 327850,
+      "byte_end_exclusive": 329661,
+      "bytes": 1811,
+      "sha256": "517344F25D345C32E089C34AC971DF9CD035B722A996F60D0941953F22C4DA3A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8379-L8418"
+    },
+    {
+      "id": "proper_pushforward",
+      "file_id": "coherent",
+      "label": "lemma-support-proper-over-base-pushforward",
+      "tag": "08DS",
+      "first_line": 8420,
+      "last_line": 8441,
+      "byte_start": 329662,
+      "byte_end_exclusive": 330660,
+      "bytes": 998,
+      "sha256": "AD11AF6DCFF198694428873184551B354A8078136AC8303CAB7801FE8E164D92",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8420-L8441"
+    },
+    {
+      "id": "formal_serre",
+      "file_id": "coherent",
+      "label": "lemma-systems-with-proper-support",
+      "tag": "0CYV",
+      "first_line": 8443,
+      "last_line": 8506,
+      "byte_start": 330661,
+      "byte_end_exclusive": 333652,
+      "bytes": 2991,
+      "sha256": "321ADAD554C8B77E4B3A3A0535BC36E8FE14207DF71F7195E46DF3BCB87B1159",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8443-L8506"
+    },
+    {
+      "id": "existence",
+      "file_id": "coherent",
+      "label": "theorem-grothendieck-existence",
+      "tag": "088E",
+      "first_line": 8515,
+      "last_line": 8690,
+      "byte_start": 333660,
+      "byte_end_exclusive": 341568,
+      "bytes": 7908,
+      "sha256": "DFC0686AD17EA3D8C198A5E1778BA892B8CE6964069484B2E7FEEE806E699621",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8515-L8690"
+    },
+    {
+      "id": "existence_reformulation",
+      "file_id": "coherent",
+      "label": "remark-reformulate-existence-theorem",
+      "tag": "088F",
+      "first_line": 8692,
+      "last_line": 8731,
+      "byte_start": 341569,
+      "byte_end_exclusive": 342823,
+      "bytes": 1254,
+      "sha256": "CF79FEDB9A79F8E6D4E4707CA5ACAAC5C7F9407EA16ACA281818C47762CBE725",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8692-L8731"
+    },
+    {
+      "id": "closed",
+      "file_id": "coherent",
+      "label": "lemma-algebraize-formal-closed-subscheme",
+      "tag": "0899",
+      "first_line": 8742,
+      "last_line": 8791,
+      "byte_start": 343039,
+      "byte_end_exclusive": 345245,
+      "bytes": 2206,
+      "sha256": "A089B4AA6F1F7BE76E777BF43418B55C9C32256D609F9B3B5E5A737FFB551FA1",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8742-L8791"
+    },
+    {
+      "id": "finite",
+      "file_id": "coherent",
+      "label": "lemma-algebraize-formal-scheme-finite-over-proper",
+      "tag": "09ZT",
+      "first_line": 8793,
+      "last_line": 8839,
+      "byte_start": 345246,
+      "byte_end_exclusive": 347240,
+      "bytes": 1994,
+      "sha256": "CC8FBE23772003BAA08A22798C2EE2229377ED076D47CCACBDC20386825CF362",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8793-L8839"
+    },
+    {
+      "id": "morphism",
+      "file_id": "coherent",
+      "label": "lemma-algebraize-morphism",
+      "tag": "0A42",
+      "first_line": 8841,
+      "last_line": 8885,
+      "byte_start": 347241,
+      "byte_end_exclusive": 349148,
+      "bytes": 1907,
+      "sha256": "CA8F38EDF94C936330121003F6AB19BCAD44A320571B68D67DF1E18C4A30C605",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8841-L8885"
+    },
+    {
+      "id": "ample_algebraization",
+      "file_id": "coherent",
+      "label": "theorem-algebraization",
+      "tag": "089A",
+      "first_line": 8887,
+      "last_line": 9028,
+      "byte_start": 349149,
+      "byte_end_exclusive": 354735,
+      "bytes": 5586,
+      "sha256": "1DA1D284F80C9F564A7CC987DC4FF4CDE9C3D3A962BB962309D8B1756D09D8E1",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8887-L9028"
+    },
+    {
+      "id": "graded",
+      "file_id": "coherent",
+      "label": "lemma-graded-finiteness",
+      "tag": "0897",
+      "first_line": 6159,
+      "last_line": 6223,
+      "byte_start": 240424,
+      "byte_end_exclusive": 242995,
+      "bytes": 2571,
+      "sha256": "54EB3F82CDB605DF8D6E93A02FCAEF9860ED387C08EA10E38B789ABCAFEF299E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L6159-L6223"
+    },
+    {
+      "id": "formal_ml",
+      "file_id": "coherent",
+      "label": "lemma-ML-cohomology-powers-ideal",
+      "tag": "02OB",
+      "first_line": 6465,
+      "last_line": 6558,
+      "byte_start": 251147,
+      "byte_end_exclusive": 253841,
+      "bytes": 2694,
+      "sha256": "7A00F831BA48566D1E14E8A1D821F7883ECBE0BA044CA658A973CAB821BB6DF7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L6465-L6558"
+    },
+    {
+      "id": "formal_functions",
+      "file_id": "coherent",
+      "label": "theorem-formal-functions",
+      "tag": "02OC",
+      "first_line": 6560,
+      "last_line": 6608,
+      "byte_start": 253842,
+      "byte_end_exclusive": 255952,
+      "bytes": 2110,
+      "sha256": "34EF6912CC890BCF9FA8AB106DBBA838A97E193EC7C37812494B047ACCEAFBE4",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L6560-L6608"
+    },
+    {
+      "id": "complete_cohomology",
+      "file_id": "coherent",
+      "label": "lemma-spell-out-theorem-formal-functions",
+      "tag": "087U",
+      "first_line": 6610,
+      "last_line": 6631,
+      "byte_start": 255953,
+      "byte_end_exclusive": 256775,
+      "bytes": 822,
+      "sha256": "EFDE482A1FB28DA5FBC531BA80FA9662462EDC97E6F5BA76A0D47DBC2EDF3C81",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L6610-L6631"
+    },
+    {
+      "id": "derived_limit",
+      "file_id": "cohomology",
+      "label": "lemma-inverse-limit-is-derived-limit",
+      "tag": "0BKS",
+      "first_line": 9999,
+      "last_line": 10028,
+      "byte_start": 355302,
+      "byte_end_exclusive": 356726,
+      "bytes": 1424,
+      "sha256": "2E56915CEDD653678494463805A0E12650D855200F79EF1A6F816952761A7599",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/cohomology.tex#L9999-L10028"
+    },
+    {
+      "id": "cohomology_limit",
+      "file_id": "cohomology",
+      "label": "lemma-RGamma-commutes-with-Rlim",
+      "tag": "0D60",
+      "first_line": 9902,
+      "last_line": 9922,
+      "byte_start": 352021,
+      "byte_end_exclusive": 352715,
+      "bytes": 694,
+      "sha256": "A5F8483D8F699911EC8442BB9473273BE997626F9FD75CA6E49A8F7B7D194B41",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/cohomology.tex#L9902-L9922"
+    },
+    {
+      "id": "jacobson",
+      "file_id": "algebra",
+      "label": "lemma-radical-completion",
+      "tag": "05GI",
+      "first_line": 23279,
+      "last_line": 23299,
+      "byte_start": 850741,
+      "byte_end_exclusive": 851611,
+      "bytes": 870,
+      "sha256": "265BD6DB6C13C055D9D901C4DBBB2640A150E55D5EB7FC13062458B7C4D4C87E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/algebra.tex#L23279-L23299"
+    },
+    {
+      "id": "henselian",
+      "file_id": "more_algebra",
+      "label": "lemma-complete-henselian",
+      "tag": "0ALJ",
+      "first_line": 2485,
+      "last_line": 2503,
+      "byte_start": 95153,
+      "byte_end_exclusive": 95853,
+      "bytes": 700,
+      "sha256": "6C0AE6442A770A337CF68F3E29D60DB255B3210FA024F7DC66110DC80CFD41A0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/more-algebra.tex#L2485-L2503"
+    },
+    {
+      "id": "split_proper",
+      "file_id": "more_morphisms",
+      "label": "lemma-split-off-proper-part-henselian",
+      "tag": "0CT9",
+      "first_line": 16423,
+      "last_line": 16508,
+      "byte_start": 637236,
+      "byte_end_exclusive": 641388,
+      "bytes": 4152,
+      "sha256": "505BC7B234B97AA392488FE1A88F8F72AD9F81F80D12F55AECF5C4D8D811C34A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/more-morphisms.tex#L16423-L16508"
+    },
+    {
+      "id": "proper_image",
+      "file_id": "morphisms",
+      "label": "lemma-image-proper-scheme-closed",
+      "tag": "01W6",
+      "first_line": 9969,
+      "last_line": 10000,
+      "byte_start": 362258,
+      "byte_end_exclusive": 363394,
+      "bytes": 1136,
+      "sha256": "FB9466E12C7D3D63A8A57A012AB9DD5EC8DC853D4D4A9A092A0C95F099DC3E86",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/morphisms.tex#L9969-L10000"
+    },
+    {
+      "id": "proper_ample",
+      "file_id": "morphisms",
+      "label": "lemma-proper-ample-locally-projective",
+      "tag": "0B5N",
+      "first_line": 10637,
+      "last_line": 10649,
+      "byte_start": 388837,
+      "byte_end_exclusive": 389373,
+      "bytes": 536,
+      "sha256": "C71BD5386764C37A470282A3399BB771EA146C84C5DD7269E47F56E4CD4DD346",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/morphisms.tex#L10637-L10649"
+    },
+    {
+      "id": "global_generation",
+      "file_id": "properties",
+      "label": "proposition-characterize-ample",
+      "tag": "01Q3",
+      "first_line": 4668,
+      "last_line": 4890,
+      "byte_start": 176489,
+      "byte_end_exclusive": 186244,
+      "bytes": 9755,
+      "sha256": "20C5A14B68B3EF211A74F662F60B78AA54CEE44EECC675268B242D51146CD065",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/properties.tex#L4668-L4890"
+    },
+    {
+      "id": "unrelated_locator",
+      "file_id": "algebraization",
+      "label": "theorem-algebraization-formal-sections",
+      "tag": "0DXQ",
+      "first_line": 3551,
+      "last_line": 3629,
+      "byte_start": 138898,
+      "byte_end_exclusive": 141832,
+      "bytes": 2934,
+      "sha256": "E088D80230118DF5842D86EC07C3F4B79D9E46FF1AD439D474C6AB424DA9852D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/algebraization.tex#L3551-L3629"
+    },
+    {
+      "id": "power_annihilation",
+      "file_id": "coherent",
+      "label": "lemma-power-ideal-kills-sheaf",
+      "tag": "01Y9",
+      "first_line": 2732,
+      "last_line": 2749,
+      "byte_start": 102454,
+      "byte_end_exclusive": 103148,
+      "bytes": 694,
+      "sha256": "AAD1F974BBDCDB62A52EB8483CA6B0ED40EFA8C4B90ADD9613116197401AE633",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L2732-L2749"
+    },
+    {
+      "id": "proper_existence_final_step",
+      "file_id": "coherent",
+      "label": "lemma-existence-tricky",
+      "tag": "088A",
+      "first_line": 7852,
+      "last_line": 7935,
+      "byte_start": 305406,
+      "byte_end_exclusive": 309348,
+      "bytes": 3942,
+      "sha256": "1EC3C812AA859A7C95DB6C49D5ABEEDA3FB1A60415E6FCF6D9529E02DEF68BDB",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L7852-L7935"
+    },
+    {
+      "id": "proper_closed_subset_dictionary",
+      "file_id": "coherent",
+      "label": "lemma-closed-proper-over-base",
+      "tag": "0CYL",
+      "first_line": 8125,
+      "last_line": 8180,
+      "byte_start": 317415,
+      "byte_end_exclusive": 319999,
+      "bytes": 2584,
+      "sha256": "A445D9F454AA0ED1AA4E878433EAD63FC5B52E3615D32D3CB7FCEEBB4FEA69EB",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8125-L8180"
+    },
+    {
+      "id": "proper_image_nonseparated",
+      "file_id": "coherent",
+      "label": "lemma-functoriality-closed-proper-over-base",
+      "tag": "0CYQ",
+      "first_line": 8224,
+      "last_line": 8284,
+      "byte_start": 321403,
+      "byte_end_exclusive": 324312,
+      "bytes": 2909,
+      "sha256": "FC2BC2F0C492F8AE68CA38508CDA579ACB2362190B576AB9C381C173510326CD",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8224-L8284"
+    },
+    {
+      "id": "proper_union_nonseparated",
+      "file_id": "coherent",
+      "label": "lemma-union-closed-proper-over-base",
+      "tag": "0CYR",
+      "first_line": 8286,
+      "last_line": 8309,
+      "byte_start": 324313,
+      "byte_end_exclusive": 325207,
+      "bytes": 894,
+      "sha256": "EAC25848F85BA42B516F4596375A78D45BD145DEB76E8372178BBEDD3AF5BE26",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/coherent.tex#L8286-L8309"
+    },
+    {
+      "id": "ample_affine_global_embedding",
+      "file_id": "morphisms",
+      "label": "lemma-finite-type-over-affine-ample-very-ample",
+      "tag": "01VT",
+      "first_line": 9538,
+      "last_line": 9571,
+      "byte_start": 347857,
+      "byte_end_exclusive": 349322,
+      "bytes": 1465,
+      "sha256": "3438F6F8DF93880ADFCE13375EFEE2A246CA2CC5A66EBB3B2E2280A81E3D0A92",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/morphisms.tex#L9538-L9571"
+    },
+    {
+      "id": "universally_closed_surjective_image",
+      "file_id": "morphisms",
+      "label": "lemma-image-proper-is-proper",
+      "tag": "03GN",
+      "first_line": 10074,
+      "last_line": 10096,
+      "byte_start": 366768,
+      "byte_end_exclusive": 367816,
+      "bytes": 1048,
+      "sha256": "110F12A19086E0AC160E01D59E1811042B24A40FF2B0AF341C10032A08FA07B6",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/e2e77e68122456982c855331460139ae77e317fa/morphisms.tex#L10074-L10096"
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "ega:III.5.1.1",
+      "scope": "Setup, not a stand-alone theorem: A is Noetherian and complete separated for J; Y=Spec(A), formal base Spf(A), X finite type over Y, completion along X'=V(J O_X), and completion of coherent F.",
+      "classification": "existing_derived",
+      "counted_supported": false,
+      "role": "definitional_context",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 8,
+            "last_line": 25,
+            "byte_start": 152,
+            "byte_end_exclusive": 1062,
+            "bytes": 910,
+            "sha256": "61136A89197B11E05E7D51BACF20A94E80FCDCECFEC58208F497C648EC5D5975"
+          },
+          "context": {
+            "first_line": 8,
+            "last_line": 26,
+            "byte_start": 152,
+            "byte_end_exclusive": 1063,
+            "bytes": 911,
+            "sha256": "E43038D21CF3EC815C0AD8A19056222E0B89868FF8485BD477E1A54F3980973F"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13174,
+            "last_line": 13188,
+            "byte_start": 566014,
+            "byte_end_exclusive": 566963,
+            "bytes": 949,
+            "sha256": "06D744A0DA34D3F5678684C7AFB6B3FC976E5F9D106CB6CB3577B587BA498FB5",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13174-L13188"
+          },
+          "context": {
+            "first_line": 13174,
+            "last_line": 13189,
+            "byte_start": 566014,
+            "byte_end_exclusive": 566964,
+            "bytes": 950,
+            "sha256": "EFEBDC5930A55A33288D22AA8538D5BB396692FDA11371DCE3089FDC783B4777",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13174-L13189"
+          }
+        }
+      },
+      "evidence": [
+        "formal_dictionary",
+        "formal_completion",
+        "systems"
+      ],
+      "derivation": [
+        "Formal-spaces constructs Spf from the rings A/J^n and the inverse-limit structure sheaf; coherent uses the same quotients for its completion functor.",
+        "On an affine Spec(B) of X, coherent lemma-inverse-systems-affine identifies a compatible coherent system with a finite J-adically completed B-module. These identifications commute with restriction and glue, providing the dictionary to the source's coherent formal modules."
+      ],
+      "preserved_review": "The completion dictionary is correct on each affine chart: compatible finite quotients give a finite module over the completed ring, and the restriction identifications glue. This row is setup, not an additional mathematical theorem.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.2",
+      "scope": "For finite-type X over J-complete Noetherian A and coherent F with proper support, all canonical H^i(X,F) -> H^i(Xhat,Fhat) are isomorphisms, naturally in F and compatible with connecting maps.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 27,
+            "last_line": 40,
+            "byte_start": 1063,
+            "byte_end_exclusive": 1434,
+            "bytes": 371,
+            "sha256": "80FE0EBCEF6291C5739F84E8FC65C99C5B3BFB942C10F0E2DF899EAA61932D2D"
+          },
+          "context": {
+            "first_line": 27,
+            "last_line": 60,
+            "byte_start": 1063,
+            "byte_end_exclusive": 2016,
+            "bytes": 953,
+            "sha256": "141B69F4E2D7DAA8A59A7F52178ED69A3E56E16BBB2C103D964D826CB77B11FA"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13190,
+            "last_line": 13201,
+            "byte_start": 566964,
+            "byte_end_exclusive": 567379,
+            "bytes": 415,
+            "sha256": "036B61729C2462B9BF5BD0473F88F54E10E045B25263BC820A27C44D203B1C6B",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13190-L13201"
+          },
+          "context": {
+            "first_line": 13190,
+            "last_line": 13213,
+            "byte_start": 566964,
+            "byte_end_exclusive": 567866,
+            "bytes": 902,
+            "sha256": "0C946B300E64C32BA898F6D35D3846E1CCC8C0FFD9A6A3545E274FD3382AC03A",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13190-L13213"
+          }
+        }
+      },
+      "evidence": [
+        "proper_support",
+        "proper_pushforward",
+        "formal_ml",
+        "formal_functions",
+        "complete_cohomology",
+        "derived_limit",
+        "cohomology_limit",
+        "proper_closed_subset_dictionary"
+      ],
+      "derivation": [
+        "proper_support writes F as a closed pushforward from its proper scheme-theoretic support Z; the proper_pushforward proof identifies all cohomology with that on Z by exact closed pushforward.",
+        "complete_cohomology gives H^i(Z,F)=lim H^i(Z,F/J^n F), because the groups are finite over complete A. formal_ml proves the systems in every degree are Mittag-Leffler.",
+        "On the common formal topological space, affine formal opens are acyclic for every quotient and quotient sections are surjective. derived_limit and cohomology_limit identify cohomology of the inverse-limit sheaf with this limit (R^1 lim vanishes).",
+        "All maps are the canonical quotient maps and derived-functor maps, hence the identification respects connecting homomorphisms. No separatedness of ambient X is added."
+      ],
+      "preserved_review": "Passage to the proper scheme-theoretic support removes any need for a separated ambient X. Exact closed pushforward preserves the cohomology; 087U and 02OB give the complete-module limit and Mittag-Leffler property. On formal affine opens the quotient sheaves are acyclic with surjective sections, so 0BKS and 0D60 recover formal cohomology. The canonical construction preserves connecting maps.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.3",
+      "scope": "For coherent F,G whose intersection of supports is proper over A, completion induces a Hom bijection; if X->Spec(A) is closed, a morphism is injective or surjective exactly when its completion is.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 61,
+            "last_line": 79,
+            "byte_start": 2016,
+            "byte_end_exclusive": 2671,
+            "bytes": 655,
+            "sha256": "62100C6D77EE86AE9441985B50C1AE7E813EC1727EA17C3545AD95A42CF682D5"
+          },
+          "context": {
+            "first_line": 61,
+            "last_line": 93,
+            "byte_start": 2016,
+            "byte_end_exclusive": 3221,
+            "bytes": 1205,
+            "sha256": "82EC7BF8376B9EE87E44229693DFCEBF233DD5E2E3FA05D5AB2A5A8016DCE437"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13214,
+            "last_line": 13230,
+            "byte_start": 567866,
+            "byte_end_exclusive": 568637,
+            "bytes": 771,
+            "sha256": "50ACF16DC0B1992D632B375FF482D9D3295EA72BBAEF12D092B50B0F58FFC080",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13214-L13230"
+          },
+          "context": {
+            "first_line": 13214,
+            "last_line": 13242,
+            "byte_start": 567866,
+            "byte_end_exclusive": 569141,
+            "bytes": 1275,
+            "sha256": "BCFBD0405620D55CE1E7583A34B88DD6C39B4A81F1938C063F4472A67C0227ED",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13214-L13242"
+          }
+        }
+      },
+      "evidence": [
+        "hom",
+        "proper_support",
+        "complete_cohomology",
+        "exact",
+        "systems",
+        "jacobson"
+      ],
+      "derivation": [
+        "H=SheafHom(F,G) is coherent with support contained in Supp(F) intersection Supp(G), hence proper. Apply the proper-support cohomology reduction of III.5.1.2 in degree zero and hom to obtain the Hom bijection without requiring F or G individually to have proper support.",
+        "exact gives completions of kernel and cokernel. A coherent module with zero completion has zero reduction along X'; Nakayama on local rings shows its support is disjoint from X'.",
+        "If f is closed, the image of either such closed support is a closed subset disjoint from V(J). jacobson says J is in Jac(A), so no nonempty closed subset can be disjoint; both supports vanish. Conversely exactness preserves monomorphisms and epimorphisms."
+      ],
+      "preserved_review": "The sheaf Hom is supported on the intersection, so the argument does not incorrectly require each input support to be proper. Apply the preceding cohomology comparison in degree zero and 0882. For reflection of injections and surjections, exact completion and Nakayama remove the kernel/cokernel near the closed fibre; the separately assumed closedness of f and 05GI remove them globally.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.3.1",
+      "scope": "Under III.5.1.1 with the additional hypothesis that f is a closed map, any open neighbourhood of f^{-1}V(J) equals X.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 94,
+            "last_line": 99,
+            "byte_start": 3221,
+            "byte_end_exclusive": 3416,
+            "bytes": 195,
+            "sha256": "BB70E9BB71926DA628A6F63451AB6825F8E29CA8ED4ABC209679047F4798D4BA"
+          },
+          "context": {
+            "first_line": 94,
+            "last_line": 130,
+            "byte_start": 3221,
+            "byte_end_exclusive": 4756,
+            "bytes": 1535,
+            "sha256": "569F8F1EE06C0E8965D82452D11997A791CE02DA56AB885DDB19F2E290D6A3DD"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13243,
+            "last_line": 13247,
+            "byte_start": 569141,
+            "byte_end_exclusive": 569359,
+            "bytes": 218,
+            "sha256": "5D7A596D3BE687CD77988D3E1FD69B41A3D43D3B58554627238401CE6A2458A6",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13243-L13247"
+          },
+          "context": {
+            "first_line": 13243,
+            "last_line": 13272,
+            "byte_start": 569141,
+            "byte_end_exclusive": 570893,
+            "bytes": 1752,
+            "sha256": "508B5167AB5444E611A34145CF5DD434C4F758667C1A65575A206CC5F45D69DC",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13243-L13272"
+          }
+        }
+      },
+      "evidence": [
+        "jacobson",
+        "existence"
+      ],
+      "derivation": [
+        "jacobson gives J subset Jac(A), so every nonempty closed subset of Spec(A) meets V(J).",
+        "For an open neighbourhood U, f(X\\U) is closed by the explicit closed-map hypothesis, and is disjoint from V(J). It must therefore be empty; X\\U is empty. This is the same closed-image argument used in existence proof lines 8646–8653; neither properness nor separatedness of f is needed."
+      ],
+      "preserved_review": "For a closed complement C of the proposed neighbourhood, f(C) is closed and misses V(J). Because J lies in the Jacobson radical, every nonempty closed subset of Spec(A) meets V(J), so C is empty. No properness or surjectivity hypothesis was silently added.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.4",
+      "scope": "For separated finite-type X over J-complete Noetherian A, completion is an equivalence between coherent modules with proper algebraic support and coherent modules on Xhat with proper formal support.",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 131,
+            "last_line": 151,
+            "byte_start": 4756,
+            "byte_end_exclusive": 5533,
+            "bytes": 777,
+            "sha256": "E802C4AB43563F4800224A245B072C3B9FA4FE86FD1C5BB2C624083610D69DEE"
+          },
+          "context": {
+            "first_line": 131,
+            "last_line": 154,
+            "byte_start": 4756,
+            "byte_end_exclusive": 5580,
+            "bytes": 824,
+            "sha256": "9E428847B37C45FFF319CDF6056AF53433DB0741F269FF7082F53A3AEAF33340"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13273,
+            "last_line": 13285,
+            "byte_start": 570893,
+            "byte_end_exclusive": 571680,
+            "bytes": 787,
+            "sha256": "5B7B995A6B683ADC9D9A28D2D1FC42F7741461BC41E584EA27F5EF098850FB24",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13273-L13285"
+          },
+          "context": {
+            "first_line": 13273,
+            "last_line": 13288,
+            "byte_start": 570893,
+            "byte_end_exclusive": 571752,
+            "bytes": 859,
+            "sha256": "899DA7428A70B9B4BA8D47ED0519B5913443C98D93C36398B2C6C4C3E3A85ACC",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13273-L13288"
+          }
+        }
+      },
+      "evidence": [
+        "existence",
+        "existence_reformulation",
+        "systems",
+        "formal_dictionary",
+        "proper_closed_subset_dictionary"
+      ],
+      "derivation": [
+        "The target assumes exactly Noetherian complete A and separated finite-type X; its source category is the coherent proper-support subcategory.",
+        "Its target category consists of compatible coherent quotient systems with proper support at level one. The source calls this proper support over Spf(A); III.5.2.6 explicitly defines that condition by the closed special-fibre support being proper.",
+        "Replace target index n>=1 by source k+1. The affine finite-complete-module dictionary identifies objects, morphisms, and completion, with compatible restriction and gluing.",
+        "The target proof establishes essential surjectivity by projective existence, extension by zero, Chow reduction, and the proper-support Serre subcategory, not merely by a citation."
+      ],
+      "preserved_review": "088E has exactly the separated finite-type ambient and proper-support conditions needed. The formal support condition is properness of the common special-fibre support, not properness of the whole ambient X. The quotient-system indexing changes EGA k to Stacks n=k+1. The entire 088E proof, including its proper-support reduction, was checked.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.5",
+      "scope": "A formal module is the completion of a coherent algebraic module with proper support iff it is coherent and its formal support is proper, under the preceding separated finite-type setup.",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 155,
+            "last_line": 161,
+            "byte_start": 5580,
+            "byte_end_exclusive": 5848,
+            "bytes": 268,
+            "sha256": "BDD69A093E191F37511E4AA0C47CD6018D124ABE6C3AB50D2F3080EC08E627A3"
+          },
+          "context": {
+            "first_line": 155,
+            "last_line": 164,
+            "byte_start": 5580,
+            "byte_end_exclusive": 5892,
+            "bytes": 312,
+            "sha256": "C7B73EA137A0DE7C83DC684078B77BF14A5459D42D9DCAAD3354DF159ACE34AB"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13289,
+            "last_line": 13295,
+            "byte_start": 571752,
+            "byte_end_exclusive": 572067,
+            "bytes": 315,
+            "sha256": "642D1BAE01E7C73507BCBB49250B48C766C67864F840BDD82F017667D5A12492",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13289-L13295"
+          },
+          "context": {
+            "first_line": 13289,
+            "last_line": 13298,
+            "byte_start": 571752,
+            "byte_end_exclusive": 572101,
+            "bytes": 349,
+            "sha256": "3ED342750529262D3B28823D75919B25778CAFE12425133BE8BDA0C773ED7678",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13289-L13298"
+          }
+        }
+      },
+      "evidence": [
+        "existence",
+        "existence_reformulation"
+      ],
+      "derivation": [
+        "Essential surjectivity of existence gives sufficiency; the defined completion functor preserves coherence and proper support, giving necessity.",
+        "The proof's reduction to a proper closed subscheme supplies an algebraization with proper algebraic support, not just an arbitrary coherent algebraization."
+      ],
+      "preserved_review": "The if-and-only-if is the essential-image assertion of the equivalence in 088E, with coherence and proper support included on both sides. It is not being inferred from full faithfulness alone.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.6",
+      "scope": "For proper X over the complete Noetherian affine base, completion is an equivalence on all coherent modules.",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 165,
+            "last_line": 171,
+            "byte_start": 5892,
+            "byte_end_exclusive": 6178,
+            "bytes": 286,
+            "sha256": "01482827B66C45C41CDAC1905E6D61FA9D74A98826159440F68C1BE4960C0F6F"
+          },
+          "context": {
+            "first_line": 165,
+            "last_line": 172,
+            "byte_start": 5892,
+            "byte_end_exclusive": 6179,
+            "bytes": 287,
+            "sha256": "C1DFB5CE3B79C5D152105D726BF9A217D9DADBA69C955B0E1F73F3C0A4B8305F"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13299,
+            "last_line": 13305,
+            "byte_start": 572101,
+            "byte_end_exclusive": 572420,
+            "bytes": 319,
+            "sha256": "A09D1F96801598A8CF4DB53DD4AEC5FAB01483F7A533E96C439E644D268F1EE1",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13299-L13305"
+          },
+          "context": {
+            "first_line": 13299,
+            "last_line": 13306,
+            "byte_start": 572101,
+            "byte_end_exclusive": 572421,
+            "bytes": 320,
+            "sha256": "9D80493DEFC42F6B504C7A4DBF4D96F9D7867C9BB03155B9450D860ECC992E98",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13299-L13306"
+          }
+        }
+      },
+      "evidence": [
+        "proper",
+        "fully_faithful",
+        "systems",
+        "proper_existence_final_step"
+      ],
+      "derivation": [
+        "The target proper proposition states the same equivalence for Coh(X,I); all source hypotheses coincide after I=J and the index shift.",
+        "Its proof explicitly establishes full faithfulness, then uses Chow's lemma, projective existence and the push-pull annihilation lemma for essential surjectivity."
+      ],
+      "preserved_review": "088C is the proper-scheme equivalence, not merely the projective case. Its proof reduces by ideal induction and Chow to 0885, then uses the adjunction-error lemma and 088A to finish. Every coherent sheaf has proper support here.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.1.7",
+      "scope": "Scholium identifies proper-support coherent algebraic modules and their morphisms with compatible coherent modules on X_n, requiring only the conditions of III.5.1.1 literally; it also gives a historical local-Artinian-application discussion.",
+      "classification": "partial",
+      "counted_supported": false,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 173,
+            "last_line": 209,
+            "byte_start": 6179,
+            "byte_end_exclusive": 7413,
+            "bytes": 1234,
+            "sha256": "D2926BC999ACD1D1959EB355B2DD3B6945D4B340EABC9062A257778F9CF3F9BA"
+          },
+          "context": {
+            "first_line": 173,
+            "last_line": 210,
+            "byte_start": 6179,
+            "byte_end_exclusive": 7414,
+            "bytes": 1235,
+            "sha256": "A610B066DA04109FF2F5024CEC6229B65F9962CF2E8B31D44993B63D8DD4492A"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13307,
+            "last_line": 13333,
+            "byte_start": 572421,
+            "byte_end_exclusive": 573809,
+            "bytes": 1388,
+            "sha256": "E57913B1AFD4EAE48DCEFF85BD828339638668F09B5C7171FF7A05031189C97D",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13307-L13333"
+          },
+          "context": {
+            "first_line": 13307,
+            "last_line": 13334,
+            "byte_start": 572421,
+            "byte_end_exclusive": 573810,
+            "bytes": 1389,
+            "sha256": "5E084FAE55936A51497A5261EC93C7B40CC6FD29E4B5ABBA4DA15FAE14ECFF68",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13307-L13334"
+          }
+        }
+      },
+      "evidence": [
+        "existence_reformulation",
+        "systems",
+        "existence"
+      ],
+      "derivation": [
+        "The systems, transition quotients, Hom systems, indexing shift, and special-fibre proper-support condition match existence_reformulation exactly when X is separated finite type.",
+        "Both the English and pinned French transcription refer here to III.5.1.1, which explicitly specifies finite type but does not explicitly add separatedness. Target existence_reformulation explicitly does add separatedness."
+      ],
+      "preserved_review": "Retain partial. Both source witnesses explicitly refer to III.5.1.1, which only assumes finite type; 088F explicitly assumes separatedness. The coherent-system dictionary and the separated/proper specialization are verified, but essential surjectivity in the literal non-separated generality is not established by this batch. No assertion of global absence or source error follows.",
+      "residual": "The literal non-separated finite-type generality has not been derived in this bounded pass. This is a source-scope reconciliation question, not an asserted Stacks gap. The historical claim about known applications is not a mathematical coverage count."
+    },
+    {
+      "source_id": "ega:III.5.1.8",
+      "scope": "Completion bijects proper closed subschemes of separated finite-type X with proper closed formal subschemes of Xhat.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 211,
+            "last_line": 221,
+            "byte_start": 7414,
+            "byte_end_exclusive": 7758,
+            "bytes": 344,
+            "sha256": "72E88806E3F5AA2D632A040FE29BFA0DF4500A00CD3ACA30CFFC8C4B10213950"
+          },
+          "context": {
+            "first_line": 211,
+            "last_line": 254,
+            "byte_start": 7414,
+            "byte_end_exclusive": 8801,
+            "bytes": 1387,
+            "sha256": "BB6FFE2D13B5F4B319E484B41E87DE9E107051CFEDAC32AC5E772DB7D0AD717D"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13335,
+            "last_line": 13341,
+            "byte_start": 573810,
+            "byte_end_exclusive": 574167,
+            "bytes": 357,
+            "sha256": "34D6FEA6D8F0AA2661972D3E4AC5605C3DE283C6F59E68ADAC31235BBBF98A55",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13335-L13341"
+          },
+          "context": {
+            "first_line": 13335,
+            "last_line": 13362,
+            "byte_start": 573810,
+            "byte_end_exclusive": 575298,
+            "bytes": 1488,
+            "sha256": "5C2D4C2B72B8A7857799B5A73465E0C38969E8224DAFCD4479DB21F8554970D3",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13335-L13362"
+          }
+        }
+      },
+      "evidence": [
+        "closed",
+        "hom",
+        "existence",
+        "exact"
+      ],
+      "derivation": [
+        "closed algebraizes every cartesian system of closed subschemes with proper special fibre, proving existence with proper algebraic support. Formal closed subschemes give exactly these systems.",
+        "For uniqueness, represent each closed subscheme by its quotient O_X->F. The Hom comparison from III.5.1.3 applies even though O_X need not have proper support, since F does.",
+        "The formal identification of quotient maps lifts uniquely, so their kernel ideal sheaves agree. exact identifies completions of the ideals and quotients; thus the result is a bijection, not merely essential surjectivity."
+      ],
+      "preserved_review": "0899 supplies existence and properness. Its use of O_X -> F is justified by the Hom comparison with proper intersection of supports, even when O_X is not in the proper-support subcategory. The cokernel has proper support and zero completion, hence vanishes. Uniqueness follows from the unique algebraized quotient map and its kernel, so this is a bijection of embedded closed subschemes, not just existence up to an unrelated isomorphism.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.2.1",
+      "scope": "Terminological convention: a coherent formal module is algebraizable when it is the completion of a coherent module with proper support.",
+      "classification": "existing_exact",
+      "counted_supported": false,
+      "role": "definition",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 255,
+            "last_line": 262,
+            "byte_start": 8801,
+            "byte_end_exclusive": 9119,
+            "bytes": 318,
+            "sha256": "4883F6D77BFA0FE08930D214870C9CFD79734C767DFE152ED6699C52D7FCDAD7"
+          },
+          "context": {
+            "first_line": 255,
+            "last_line": 263,
+            "byte_start": 8801,
+            "byte_end_exclusive": 9120,
+            "bytes": 319,
+            "sha256": "90C45DAF53122C82EE0BB805ED695BB998BD13A23E66344F2FF5C53BC0350AF4"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13363,
+            "last_line": 13369,
+            "byte_start": 575298,
+            "byte_end_exclusive": 575635,
+            "bytes": 337,
+            "sha256": "2F15C680D26E35C7221F913FBBA962B94F209CECF96682C74FA612BAC407EE02",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13363-L13369"
+          },
+          "context": {
+            "first_line": 13363,
+            "last_line": 13370,
+            "byte_start": 575298,
+            "byte_end_exclusive": 575636,
+            "bytes": 338,
+            "sha256": "59B51EBE7110EC79DDEE0F11F05855E4F8E33939C1E0F1A46FBDAFA9B9CF340C",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13363-L13370"
+          }
+        }
+      },
+      "evidence": [
+        "existence",
+        "existence_reformulation"
+      ],
+      "derivation": [
+        "This is precisely the essential image of the proper-support completion functor, whose source and target are explicitly defined immediately before existence. It is vocabulary, not an extra theorem."
+      ],
+      "preserved_review": "The source's provisional word algebraizable includes an algebraic coherent sheaf with proper support. The comparison preserves that convention; this definitional row is not counted as a theorem.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.2.2",
+      "scope": "The kernel, image and cokernel of any morphism between algebraizable coherent formal modules are algebraizable.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 264,
+            "last_line": 270,
+            "byte_start": 9120,
+            "byte_end_exclusive": 9363,
+            "bytes": 243,
+            "sha256": "43E32114847FA9C23DA4C1304A65D936DAC682051C43352550FE832D19C6ADF9"
+          },
+          "context": {
+            "first_line": 264,
+            "last_line": 287,
+            "byte_start": 9120,
+            "byte_end_exclusive": 9884,
+            "bytes": 764,
+            "sha256": "B1790B08469FEA29BAACDAB52B1F3FFECA77B692B3FE277573472B6069AB3F50"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13371,
+            "last_line": 13377,
+            "byte_start": 575636,
+            "byte_end_exclusive": 575934,
+            "bytes": 298,
+            "sha256": "F9A8DE25C08F758F0804B2A1CF57E7E8B2D2433DB3B9A487DA2204FA0A47B72F",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13371-L13377"
+          },
+          "context": {
+            "first_line": 13371,
+            "last_line": 13392,
+            "byte_start": 575636,
+            "byte_end_exclusive": 576647,
+            "bytes": 1011,
+            "sha256": "05FF548B4FF4BB1C3CC07B0BF306E455DFFC58E5A0BB3DE5B66C37824D6A544B",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13371-L13392"
+          }
+        }
+      },
+      "evidence": [
+        "hom",
+        "exact",
+        "proper_serre",
+        "projective",
+        "existence"
+      ],
+      "derivation": [
+        "Lift the formal morphism by the full Hom comparison (III.5.1.3); the algebraic endpoints have proper support.",
+        "proper_serre makes the algebraic kernel, image and cokernel coherent with proper support. exact takes these to the formal kernel, image and cokernel.",
+        "The final paragraph of projective explicitly uses this same full-faithful-plus-exact argument to algebraize cokernels. No new algebraization lemma is needed."
+      ],
+      "preserved_review": "Lift the formal map through the Hom comparison, take algebraic kernel/image/cokernel, and use exact completion. The proper-support Serre property ensures every result remains in the required category. This covers all three operations.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.2.3",
+      "scope": "For a proper Noetherian formal scheme over Spf(A), invertible L with ample L_0, and coherent F, a single twist bound works for every k>=0: H^0(F(n))->H^0(F_k(n)) is surjective and all H^q(F(n)), q>0, vanish.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 288,
+            "last_line": 327,
+            "byte_start": 9884,
+            "byte_end_exclusive": 11104,
+            "bytes": 1220,
+            "sha256": "AF72FDD186C5BB09E7FA880F766EABA7E2CD2A38FA30D435C5F845B415C3ECB6"
+          },
+          "context": {
+            "first_line": 288,
+            "last_line": 484,
+            "byte_start": 9884,
+            "byte_end_exclusive": 15070,
+            "bytes": 5186,
+            "sha256": "EC7B6BA7C008662409B7488C807096D1B11E89DD71F6F78CB434DAC6919BB27B"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13393,
+            "last_line": 13418,
+            "byte_start": 576647,
+            "byte_end_exclusive": 577948,
+            "bytes": 1301,
+            "sha256": "C1A9275BF68521CB7083F4628DACAA425B0430BF5C38C3393E79EA8AC6CD81EC",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13393-L13418"
+          },
+          "context": {
+            "first_line": 13393,
+            "last_line": 13531,
+            "byte_start": 576647,
+            "byte_end_exclusive": 582269,
+            "bytes": 5622,
+            "sha256": "30D65AA448B76BBD9034953F3832BE6296AB1DEF6E3D90D5078266726D397A65",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13393-L13531"
+          }
+        }
+      },
+      "evidence": [
+        "graded",
+        "systems",
+        "derived_limit",
+        "cohomology_limit",
+        "ample_algebraization"
+      ],
+      "derivation": [
+        "On X_0 put B=gr_J(A) and G=direct_sum J^k F/J^{k+1} F. B is finitely generated since J is finitely generated; G is a finite-type graded pullback-B-module, generated by the coherent F_0, checked on formal affine charts.",
+        "Apply graded part (2) to proper X_0 over A/J with ample L_0. It gives one n_0 annihilating every positive cohomology group of the entire graded module, hence of each graded piece, for every n>=n_0.",
+        "The exact sequences of adjacent J-power quotients then inductively give H^q(F_k(n))=0 for every positive q and every k, and surjective H^0 transition maps.",
+        "Use affine acyclicity/surjective quotient sections and derived_limit; cohomology_limit and the just-proved Mittag-Leffler condition give H^q(F(n))=lim H^q(F_k(n)), and the limit projects onto every H^0(F_k(n)).",
+        "The argument works for an abstract formal scheme, not only an already algebraized X. ample_algebraization's proof independently uses the same graded-module argument on its abstract infinitesimal system."
+      ],
+      "preserved_review": "The graded argument applies on the actual special fibre of an abstract formal scheme; no algebraization is presupposed. gr_J(A) is a finite-type A/J-algebra and the graded module is locally generated by F/JF. 0897(2) gives one bound for all positive degrees and all graded pieces. Adjacent-quotient exact sequences give vanishing on every thickening and surjective H0 transition maps. Formal-affine acyclicity plus 0BKS and 0D60 then gives both formal vanishing and surjection to every quotient.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.2.4",
+      "scope": "With the same abstract proper formal scheme and L_0 ample, every coherent F(n) is globally generated for every sufficiently large n; equivalently F is a quotient of a finite sum of L^{-n}.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 485,
+            "last_line": 495,
+            "byte_start": 15070,
+            "byte_end_exclusive": 15495,
+            "bytes": 425,
+            "sha256": "7C8F0626DD2FBDBBF91EB3283DADF156C1A3EEBF890E6B434A88868C40F41433"
+          },
+          "context": {
+            "first_line": 485,
+            "last_line": 516,
+            "byte_start": 15070,
+            "byte_end_exclusive": 16250,
+            "bytes": 1180,
+            "sha256": "7361E368A83E434B0CB2E9CE38D1E1314EFAE67D2B26A106A3C6D32EE0AF6E15"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13532,
+            "last_line": 13543,
+            "byte_start": 582269,
+            "byte_end_exclusive": 582758,
+            "bytes": 489,
+            "sha256": "C81A15926D34C37103F4197527AFBF87B798500522FED84CBD4BBAAE25B0B236",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13532-L13543"
+          },
+          "context": {
+            "first_line": 13532,
+            "last_line": 13562,
+            "byte_start": 582269,
+            "byte_end_exclusive": 583677,
+            "bytes": 1408,
+            "sha256": "E1EDF7A1869086C018A0D191DAE378BFBBFBB3DE37F4CA58C5EF8E37FB81D8E3",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13532-L13562"
+          }
+        }
+      },
+      "evidence": [
+        "global_generation",
+        "graded",
+        "derived_limit",
+        "cohomology_limit",
+        "systems",
+        "projective"
+      ],
+      "derivation": [
+        "global_generation (01Q3, item-c-gg and item-c-q) applies to the Noetherian quasi-compact special fibre X_0 and F_0.",
+        "For n above its bound and the bound proved in III.5.2.3, finitely many generating sections of F_0(n) lift to formal global sections of F(n).",
+        "Local Nakayama over the complete affine charts makes these sections generate F(n); equivalently the formal cokernel has zero first quotient and is zero (systems includes lemma-inverse-systems-surjective).",
+        "Twist down to obtain a surjection (L^{-n})^k->F. Projective existence proof uses precisely this lifting-and-presentation step."
+      ],
+      "preserved_review": "01Q3 gives global generation of all sufficiently large special-fibre twists; quasi-compactness makes the chosen generating family finite. III.5.2.3 lifts those generators. On each complete affine chart, Nakayama makes the resulting map onto the formal coherent module surjective. Thus the bound works for every sufficiently large twist, not merely a single chosen one.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.2.5",
+      "scope": "Projective case of existence: any coherent formal module on the completion of projective X algebraizes.",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 517,
+            "last_line": 554,
+            "byte_start": 16250,
+            "byte_end_exclusive": 17645,
+            "bytes": 1395,
+            "sha256": "3738B298409C16C812D19AEDC688D2A54DFE352E349B2F0A00A777DF3D99C2F1"
+          },
+          "context": {
+            "first_line": 517,
+            "last_line": 555,
+            "byte_start": 16250,
+            "byte_end_exclusive": 17646,
+            "bytes": 1396,
+            "sha256": "9B720175AC0E38031C1309AA2E2023DB1F7D52AFAAB78D80654B4A740A1ACC87"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13563,
+            "last_line": 13591,
+            "byte_start": 583677,
+            "byte_end_exclusive": 585316,
+            "bytes": 1639,
+            "sha256": "830633738EEA57CC3F1F2B1568C7CAAE2D610C30CEA14C6FDA2E35DAA3C0AC23",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13563-L13591"
+          },
+          "context": {
+            "first_line": 13563,
+            "last_line": 13592,
+            "byte_start": 583677,
+            "byte_end_exclusive": 585317,
+            "bytes": 1640,
+            "sha256": "AFB9F9F51D5D5FA66574364D9921DD76B5872C40E5A3E9B9557CAEB9A38FFB72",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13563-L13592"
+          }
+        }
+      },
+      "evidence": [
+        "projective",
+        "uniform_h1",
+        "fully_faithful",
+        "exact",
+        "systems"
+      ],
+      "derivation": [
+        "projective is a full equivalence with exactly complete Noetherian A and projective X.",
+        "Its proof lifts finite generators of a sufficiently positive twist, obtains a surjection from a completed finite sum of negative powers of an ample line bundle, repeats for the kernel, then algebraizes the resulting map by full faithfulness and its cokernel by exactness.",
+        "This matches the substantive source proof decomposition, not just the final statement."
+      ],
+      "preserved_review": "The actual proof of 0885 reproduces the required projective proof unit: uniform H1 vanishing lifts special-fibre generators, a finite sum of negative ample powers surjects, the same construction presents the kernel, and full faithfulness plus exactness algebraizes the cokernel. This is proof-level coverage, not just a citation of the existence theorem.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.2.6",
+      "scope": "Quasi-projective case of existence for formal modules whose support is proper.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 556,
+            "last_line": 598,
+            "byte_start": 17646,
+            "byte_end_exclusive": 19685,
+            "bytes": 2039,
+            "sha256": "C8F310E19CBD73D3E570887BCCCCC9520E46A9D25F898CD89B1E49B60EF4BF3E"
+          },
+          "context": {
+            "first_line": 556,
+            "last_line": 603,
+            "byte_start": 17646,
+            "byte_end_exclusive": 19777,
+            "bytes": 2131,
+            "sha256": "E880C4719EB01C808DCB4A48C4B6D906A32CFE2E46E23687113B03F7B3B31789"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13593,
+            "last_line": 13627,
+            "byte_start": 585317,
+            "byte_end_exclusive": 587610,
+            "bytes": 2293,
+            "sha256": "97565105838DA27692C9EB2755EF564A4B0C9EBE2C301B50E199E22A1CFB0BF7",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13593-L13627"
+          },
+          "context": {
+            "first_line": 13593,
+            "last_line": 13631,
+            "byte_start": 585317,
+            "byte_end_exclusive": 587712,
+            "bytes": 2395,
+            "sha256": "E5FBC854035E396298B5354C15F6E03AFEDA33B272C4F2AED7F5862B4DEF2E65",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13593-L13631"
+          }
+        }
+      },
+      "evidence": [
+        "projective",
+        "existence",
+        "proper_image",
+        "jacobson"
+      ],
+      "derivation": [
+        "In existence proof 8615–8656 set the Chow morphism to identity on the quasi-projective X: embed X openly into projective Xbar, and extend the coherent quotient systems by zero.",
+        "The special-fibre support is proper and therefore closed in Xbar; extension by zero is coherent. projective produces G on Xbar.",
+        "The closed subset Supp(G)\\X has closed image in Spec(A), disjoint from V(J); jacobson forces it empty. Hence G is supported on X and its restriction has proper support and the required completion."
+      ],
+      "preserved_review": "The quasi-projective reduction is explicitly present inside the proof of 088E, lines 8615-8656, independently of its final induction. Proper special-fibre support is closed in the projective compactification, so extension by zero is coherent and compatible with quotient transitions. Apply 0885, then remove any support outside the open by the closed-image/Jacobson argument. Restriction gives the algebraization with proper support.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.3.1",
+      "scope": "In an exact sequence of coherent formal modules, algebraizability of the two ends implies algebraizability of the middle.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 604,
+            "last_line": 614,
+            "byte_start": 19777,
+            "byte_end_exclusive": 20108,
+            "bytes": 331,
+            "sha256": "BF6C36B406FF543E34A37B0017A67EAAA5562EA09455A114C29B103B0CFED37C"
+          },
+          "context": {
+            "first_line": 604,
+            "last_line": 647,
+            "byte_start": 19777,
+            "byte_end_exclusive": 21099,
+            "bytes": 1322,
+            "sha256": "7A035379EDCC5AEB9803E52B9BF610D851415E32FAFEC3668290AEA0F4989F38"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13632,
+            "last_line": 13641,
+            "byte_start": 587712,
+            "byte_end_exclusive": 588046,
+            "bytes": 334,
+            "sha256": "C51C04A86A2EE5C7AD7F789171B7B6546BA4967FF15CFB44C18B8740C9369E5A",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13632-L13641"
+          },
+          "context": {
+            "first_line": 13632,
+            "last_line": 13670,
+            "byte_start": 587712,
+            "byte_end_exclusive": 589338,
+            "bytes": 1626,
+            "sha256": "8C75C76EC35D26D171EA9845ECFCD0E1358F2631C9CD70BE5A7B5CE9269F90AC",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13632-L13670"
+          }
+        }
+      },
+      "evidence": [
+        "formal_serre",
+        "proper",
+        "proper_support",
+        "exact",
+        "proper_closed_subset_dictionary",
+        "proper_union_nonseparated"
+      ],
+      "derivation": [
+        "Each algebraizable endpoint is annihilated by the ideal of some algebraic closed subscheme proper over A (its scheme-theoretic support).",
+        "formal_serre part (2) proves that objects with such algebraic proper support form a Serre subcategory. In particular the middle is annihilated by a suitable product of the endpoint support ideals, whose closed subscheme is proper.",
+        "Apply proper existence to that closed subscheme and push the algebraization into X; this proves the statement independently of the source's Ext^1 proof.",
+        "This is a finite alternative proof, not a claim that the entire separate Ext-comparison theorem was audited."
+      ],
+      "preserved_review": "An alternative finite proof is legitimate here: the two ends are supported scheme-theoretically on proper closed subschemes. 0CYV(2) gives the middle a single proper closed supporting subscheme, using the product of annihilating ideals for extensions. Apply 088C on that proper scheme and push forward. This does not circularly assume the separated proper-support theorem 088E.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.3.2",
+      "scope": "For a map F->G of coherent formal modules, algebraizability of G, kernel and cokernel implies algebraizability of F; the source refers literally to the finite-type setup III.5.1.1.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 648,
+            "last_line": 654,
+            "byte_start": 21099,
+            "byte_end_exclusive": 21378,
+            "bytes": 279,
+            "sha256": "5C9302E3CAAB2F0D27C547D917BF60D098BADCF499A1775048869142E9F28F5D"
+          },
+          "context": {
+            "first_line": 648,
+            "last_line": 665,
+            "byte_start": 21099,
+            "byte_end_exclusive": 21667,
+            "bytes": 568,
+            "sha256": "D72F8637995A7B14A63445413E8F8759F422E96C2462C7A192F33331B52A768A"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13671,
+            "last_line": 13678,
+            "byte_start": 589338,
+            "byte_end_exclusive": 589684,
+            "bytes": 346,
+            "sha256": "FE5500DE9C7E18EAACDB707A83D38A49B3B58A8A8DFA9644BE6532E1C008ABD2",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13671-L13678"
+          },
+          "context": {
+            "first_line": 13671,
+            "last_line": 13689,
+            "byte_start": 589338,
+            "byte_end_exclusive": 590051,
+            "bytes": 713,
+            "sha256": "01FBB91D0695E8F79B41D7ADB11EA635EC7CECF6E02431E0942F1BAF0A42C7CD",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13671-L13689"
+          }
+        }
+      },
+      "evidence": [
+        "formal_serre",
+        "proper",
+        "exact",
+        "proper_closed_subset_dictionary",
+        "proper_union_nonseparated"
+      ],
+      "derivation": [
+        "Objects supported on an algebraic proper closed subscheme form a Serre subcategory by formal_serre part (2), with no separatedness assumed for the ambient finite-type X.",
+        "The image is a subobject of G and the middle F is an extension of that image by the algebraizable kernel, so F lies in this subcategory.",
+        "Apply proper existence on its proper supporting closed subscheme. Thus the ambient non-separated wording here is handled, unlike the unrestricted essential-surjectivity scholium III.5.1.7."
+      ],
+      "preserved_review": "The literal non-separated scope is supported, not accidentally reduced to the separated theorem. 0CYV(2) assumes only finite type over a Noetherian base and is closed under subobjects and extensions. The image is a subobject of the algebraizable target; combine it with the algebraizable kernel, obtain one proper closed support for F, then use 088C on that support. The product-ideal proof of extension closure and properness of unions were checked.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.3.3",
+      "scope": "A proper map g:Z->X over the complete Noetherian base sends an algebraizable coherent formal module to an algebraizable module under formal direct image.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 666,
+            "last_line": 676,
+            "byte_start": 21667,
+            "byte_end_exclusive": 22150,
+            "bytes": 483,
+            "sha256": "3D88217D0A1FAA7F38EE7ED21C80A666F8C64BE19676587C0BB2CDEDE4D8049B"
+          },
+          "context": {
+            "first_line": 666,
+            "last_line": 685,
+            "byte_start": 21667,
+            "byte_end_exclusive": 22389,
+            "bytes": 722,
+            "sha256": "454E301349317DB8199726F385AE4C04D62261CB4CE9A766AAF9C9F389F9BAC3"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13690,
+            "last_line": 13698,
+            "byte_start": 590051,
+            "byte_end_exclusive": 590531,
+            "bytes": 480,
+            "sha256": "F8797A65CA9678BF152AF8DD160A378B0C68A70C0504FEFB876BF107FD4C9AFC",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13690-L13698"
+          },
+          "context": {
+            "first_line": 13690,
+            "last_line": 13706,
+            "byte_start": 590051,
+            "byte_end_exclusive": 590809,
+            "bytes": 758,
+            "sha256": "80226D5380A99AEBDB0CCC7A75CD382D0C9A2CAC2D08CD56B76F346510BC9710",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13690-L13706"
+          }
+        }
+      },
+      "evidence": [
+        "formal_functions",
+        "proper_pushforward",
+        "proper_support",
+        "push_pull",
+        "proper_image_nonseparated",
+        "universally_closed_surjective_image"
+      ],
+      "derivation": [
+        "Write F'=Fhat with F coherent of proper support on Z. Proper pushforward is coherent.",
+        "Over every affine open of X, formal_functions in degree zero identifies the completion of g_*F with lim g_*(F/J^n F), which is the formal direct image of Fhat. The canonical maps glue; this construction is written out in push_pull 7960–8000.",
+        "The support of g_*F is contained in the proper image of the proper supporting closed subscheme of F. Because g is proper, its restriction to that closed subscheme is proper, so its closed image is proper over the base. Thus the algebraization has the required support."
+      ],
+      "preserved_review": "Formal functions in degree zero identifies the formal direct image with the completion of g_*F on every affine of X, and canonical maps glue. Properness of g ensures coherence. Properness of its supporting image does not use separatedness of X: 0CYQ(2), for a universally closed map, proves exactly that assertion. Thus the required proper-support algebraization survives the pushforward.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.3.4",
+      "scope": "For a proper f:Z->X of Noetherian schemes which is an isomorphism away from V(M), the kernel and cokernel of any formal adjunction F->fhat_* fhat^*F are killed by one power of completed M; X' is any closed completion locus.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 686,
+            "last_line": 712,
+            "byte_start": 22389,
+            "byte_end_exclusive": 23208,
+            "bytes": 819,
+            "sha256": "D6C231485FA3C15F67B8E3961A9B42CFCC64BBC329E81055D43BB910980CBACA"
+          },
+          "context": {
+            "first_line": 686,
+            "last_line": 803,
+            "byte_start": 22389,
+            "byte_end_exclusive": 26255,
+            "bytes": 3866,
+            "sha256": "325A0660A767A58D3B954F2C415EC8BFBCCA4B70D5D854CC9AA820339E494AE9"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13707,
+            "last_line": 13723,
+            "byte_start": 590809,
+            "byte_end_exclusive": 591625,
+            "bytes": 816,
+            "sha256": "B900D5BED4A7786863525C3F46CD7095873A321651C32F0A78675ACA1E38B6E4",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13707-L13723"
+          },
+          "context": {
+            "first_line": 13707,
+            "last_line": 13788,
+            "byte_start": 590809,
+            "byte_end_exclusive": 594993,
+            "bytes": 4184,
+            "sha256": "C73E81C9D3B835A3CEE44CAFF99095B9913144EC90B346D579318A0EA816BE04",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13707-L13788"
+          }
+        }
+      },
+      "evidence": [
+        "push_pull",
+        "systems",
+        "pullback",
+        "formal_functions",
+        "exact",
+        "power_annihilation"
+      ],
+      "derivation": [
+        "The target push_pull states the same annihilation conclusion when the pulled-back system has an algebraization; its proof gives the needed completed-affine reduction.",
+        "Cover Noetherian X by finitely many affines Spec(B), then pass to its J-adic completion Bhat for the completion ideal J. On Spf(Bhat), systems identifies arbitrary coherent F with the completion of a finite Bhat-module G.",
+        "Pullback of this G algebraizes the formal pullback, so the target hypotheses are met locally. Its proof identifies the canonical adjunction with the completed algebraic adjunction.",
+        "The algebraic kernel and cokernel vanish off V(M), hence a power of M annihilates them; exact completion preserves that fact. Take the maximum of the finitely many local exponents. The additional algebraization hypothesis in the target statement is therefore discharged, not ignored."
+      ],
+      "preserved_review": "088B alone would leave an algebraization hypothesis, but the row discharges it. On Spec(B), complete in the ideal defining X'; the formal module is a finite Bhat-module N. On the proper base-changed Z, the pullback of N is a coherent algebraization of the formal pullback. B/K^m = Bhat/K^m identifies all completed diagrams. The canonical adjunction is the completion of N -> f_*f^*N; its coherent errors vanish off V(M), hence are annihilated by a power by 01Y9. Exact completion and a finite affine cover give one global exponent.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.3.5",
+      "scope": "Conclusion of the general separated finite-type proper-support existence proof by Noetherian induction and Chow modification.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 804,
+            "last_line": 867,
+            "byte_start": 26255,
+            "byte_end_exclusive": 28846,
+            "bytes": 2591,
+            "sha256": "A38DAB9689E846C7655E4F3588CADC09CBBE4E364A5EC2F155C3C2F576E13392"
+          },
+          "context": {
+            "first_line": 804,
+            "last_line": 872,
+            "byte_start": 26255,
+            "byte_end_exclusive": 29022,
+            "bytes": 2767,
+            "sha256": "9D553D199F38F55B06F63FFD60724DC92F18C243F245FC5F3F939DBE6BF051B4"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13789,
+            "last_line": 13837,
+            "byte_start": 594993,
+            "byte_end_exclusive": 597989,
+            "bytes": 2996,
+            "sha256": "05CEB18410E5D1D43021DF40F8E6A5DBD6D55C7CDD0DAC4774992B9525A21A9B",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13789-L13837"
+          },
+          "context": {
+            "first_line": 13789,
+            "last_line": 13841,
+            "byte_start": 594993,
+            "byte_end_exclusive": 598163,
+            "bytes": 3170,
+            "sha256": "A48C686C0F679673F9CD2C01DE86FBF82769718915C86953D36B914E1D94DF3E",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13789-L13841"
+          }
+        }
+      },
+      "evidence": [
+        "existence",
+        "projective",
+        "push_pull",
+        "formal_serre",
+        "proper_image_nonseparated",
+        "proper_union_nonseparated"
+      ],
+      "derivation": [
+        "existence proof uses maximal coherent ideals for Noetherian induction, chooses a proper surjective Chow modification isomorphic over a dense open, and makes its source quasi-projective.",
+        "It carries out the extension-by-zero/projective algebraization of the pullback, pushes down, then uses push_pull to kill the kernel and cokernel by a power of the complement ideal.",
+        "Induction places those error objects on proper closed supports and formal_serre closes the exact sequence. This yields the same final existence assertion with the same support and separatedness hypotheses."
+      ],
+      "preserved_review": "The end of the 088E proof supplies the actual induction: Chow gives a quasi-projective modification, lines 8615-8656 algebraize the pulled-back system, 088B controls the adjunction errors on a proper closed locus, the induction hypothesis handles these errors, and the proper-support Serre subcategory recovers the original system. Proper images and support conditions are tracked through every step. The induction is not being replaced by the theorem's statement.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.4.1",
+      "scope": "For proper X and separated finite-type Y over complete Noetherian A, the completion map Hom_A(X,Y)->Hom_Spf(A)(Xhat,Yhat) is bijective.",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 873,
+            "last_line": 892,
+            "byte_start": 29022,
+            "byte_end_exclusive": 29735,
+            "bytes": 713,
+            "sha256": "AF683054C7636D66CE6C33A7BBAEB798DE1F8859130918ABD14E78C6E1D5BA5D"
+          },
+          "context": {
+            "first_line": 873,
+            "last_line": 981,
+            "byte_start": 29022,
+            "byte_end_exclusive": 32857,
+            "bytes": 3835,
+            "sha256": "59D066D3477F9CFB7C917E55FC82E19847BE5C32AF4F24472ECD574206999D12"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13842,
+            "last_line": 13856,
+            "byte_start": 598163,
+            "byte_end_exclusive": 598880,
+            "bytes": 717,
+            "sha256": "0A82B218271EED40C3DEB3CF838BBE78BA895162174B690F9C6E0CBAE6803B42",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13842-L13856"
+          },
+          "context": {
+            "first_line": 13842,
+            "last_line": 13915,
+            "byte_start": 598163,
+            "byte_end_exclusive": 602186,
+            "bytes": 4023,
+            "sha256": "B3021CEA7AD376031DF3CF744E0E86FDA3B1D65DFBFCAEC7ED48B17F20954834",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13842-L13915"
+          }
+        }
+      },
+      "evidence": [
+        "morphism",
+        "formal_dictionary",
+        "closed",
+        "proper"
+      ],
+      "derivation": [
+        "A formal morphism over Spf(A) is a compatible sequence of morphisms modulo J^n: on formal affines it is a continuous ring map, equivalently its compatible quotient maps, and these glue.",
+        "morphism states unique algebraization of exactly these systems under exactly proper source and separated finite-type target.",
+        "Its proof algebraizes the graphs as proper closed subschemes, then proves their projection to X is finite and has pushforward O_X by proper existence; hence the projection is an isomorphism. Uniqueness is explicitly in the target statement."
+      ],
+      "preserved_review": "0A42 has the exact source/target assumptions. Its proof algebraizes the formal graph, proves the first projection finite using properness and the closed-fibre neighbourhood argument, then applies 088C to identify its finite algebra with O_X. Uniqueness can also be seen by lifting the two quotient maps to the proper graph structure sheaf via III.5.1.3: equal completed graphs have equal defining ideals. Hence both surjectivity and injectivity follow.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.4.2",
+      "scope": "A morphism X->Y under III.5.4.1 is equivalently a compatible adic inductive system of morphisms X_n->Y_n.",
+      "classification": "existing_exact",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 982,
+            "last_line": 995,
+            "byte_start": 32857,
+            "byte_end_exclusive": 33269,
+            "bytes": 412,
+            "sha256": "A073ABAEFAB43B2B2422B4BF500108C0EADB9656BDDBB2D6650C0234A5C3752C"
+          },
+          "context": {
+            "first_line": 982,
+            "last_line": 996,
+            "byte_start": 32857,
+            "byte_end_exclusive": 33270,
+            "bytes": 413,
+            "sha256": "395A4122AC89A26A98E3994AC1FA3436723857F85F250EB01540E6CF47B6B737"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13916,
+            "last_line": 13925,
+            "byte_start": 602186,
+            "byte_end_exclusive": 602624,
+            "bytes": 438,
+            "sha256": "BE7514F18F1C462A36900A74011ED4B7EBF456A97B9C0AB6A2105C7F3260D68E",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13916-L13925"
+          },
+          "context": {
+            "first_line": 13916,
+            "last_line": 13926,
+            "byte_start": 602186,
+            "byte_end_exclusive": 602625,
+            "bytes": 439,
+            "sha256": "020C66E16518A28DA8EF89F51CF00F3DFD61BA7F2C8F8C611081D429255C7567",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13916-L13926"
+          }
+        }
+      },
+      "evidence": [
+        "morphism",
+        "formal_dictionary"
+      ],
+      "derivation": [
+        "morphism directly formulates and proves the unique algebraization of the cartesian infinitesimal systems.",
+        "Its indexing starts at n=1 with A/J^n, while the source starts k=0 with A/J^{k+1}. Compatibility with all transitions is identical."
+      ],
+      "preserved_review": "Compatible quotient-level morphisms are exactly the input of 0A42 after shifting n=k+1. The Noetherian adic formal-scheme dictionary supplies the other side. The source's proper and separated hypotheses are inherited from III.5.4.1, unlike the separate qualification in III.5.1.7.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.4.4",
+      "scope": "A finite formal morphism Xformal->Yformal between proper formal schemes has algebraizable source if its target is algebraizable.",
+      "classification": "existing_stronger",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 1010,
+            "last_line": 1024,
+            "byte_start": 33894,
+            "byte_end_exclusive": 34316,
+            "bytes": 422,
+            "sha256": "D575F9C0666888AD57B830736B3F5EF1ABADB4A627ABFA1F33A5979E9E3450A4"
+          },
+          "context": {
+            "first_line": 1010,
+            "last_line": 1052,
+            "byte_start": 33894,
+            "byte_end_exclusive": 35277,
+            "bytes": 1383,
+            "sha256": "EA3AD1771BBA1CE1AAD62978E0465753368E4DFB476EFC464383314F8A7731DD"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13940,
+            "last_line": 13947,
+            "byte_start": 603357,
+            "byte_end_exclusive": 603759,
+            "bytes": 402,
+            "sha256": "5BD1FCC3B28F91523C70AB9F1612B0CC924C1A4474140B14B8ECC28F80838E1B",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13940-L13947"
+          },
+          "context": {
+            "first_line": 13940,
+            "last_line": 13969,
+            "byte_start": 603357,
+            "byte_end_exclusive": 604933,
+            "bytes": 1576,
+            "sha256": "E59D1F957E18ACE65BD90C8BA0AA467272E153FE05D749276CF4A33C2D08B296",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13940-L13969"
+          }
+        }
+      },
+      "evidence": [
+        "finite",
+        "existence",
+        "morphism"
+      ],
+      "derivation": [
+        "Choose the algebraization Y and take the finite morphisms on all its infinitesimal neighbourhoods. finite algebraizes this system and states that the resulting source is proper.",
+        "The target is stronger: the ambient algebraic Y need only be separated finite type, with the given formal source proper on the special fibre; it need not itself be proper.",
+        "The proof algebraizes the coherent finite algebra, using full faithfulness to recover its multiplication, and takes its relative Spec. No mere sheaf algebraization is substituted for algebraization of the algebra structure."
+      ],
+      "preserved_review": "09ZT allows an ambient separated finite-type algebraization, with only proper special-fibre support for the finite source, and is therefore stronger than the stated proper-target case. Its proof algebraizes the coherent finite algebra. Multiplication, unit and identities lift uniquely by full faithfulness; the relative spectrum is finite, has the prescribed quotients, and is proper on the proper supporting scheme.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.4.5",
+      "scope": "An abstract proper Noetherian formal scheme with an invertible L whose special-fibre restriction is ample algebraizes; on every proper algebraization L is the completion of an ample line bundle, and that algebraization is projective.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 1053,
+            "last_line": 1085,
+            "byte_start": 35277,
+            "byte_end_exclusive": 36264,
+            "bytes": 987,
+            "sha256": "585DDD3D94F3058A801E74219D31DE28FD8AEDA403DDB67A2D3D75C14BCB6459"
+          },
+          "context": {
+            "first_line": 1053,
+            "last_line": 1216,
+            "byte_start": 35277,
+            "byte_end_exclusive": 40177,
+            "bytes": 4900,
+            "sha256": "D91382FB3648F6E59450798ECF07B6ACC6E61F83B2F8979989B7AC41B06FAD72"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 13970,
+            "last_line": 13991,
+            "byte_start": 604933,
+            "byte_end_exclusive": 605991,
+            "bytes": 1058,
+            "sha256": "EDFB78E043FDB3C1FECC6D4912E406DA1BBDFA17861DF240DDDA141DEEBE17AD",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13970-L13991"
+          },
+          "context": {
+            "first_line": 13970,
+            "last_line": 14068,
+            "byte_start": 604933,
+            "byte_end_exclusive": 609852,
+            "bytes": 4919,
+            "sha256": "8F30995AC952BA139481C5A3A4CF960987C1858446F1D31122CEBB3B82D244F4",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L13970-L14068"
+          }
+        }
+      },
+      "evidence": [
+        "ample_algebraization",
+        "morphism",
+        "proper",
+        "proper_ample",
+        "systems",
+        "ample_affine_global_embedding"
+      ],
+      "derivation": [
+        "ample_algebraization assumes the cartesian system of proper special fibre and compatible invertible L_n, and produces a proper scheme with an ample invertible L restricting to all L_n. This is exactly the formal input under the source's quotient-system dictionary.",
+        "The proof constructs compatible projective embeddings from uniformly lifted sections and algebraizes their closed images.",
+        "For any other proper algebraization X, morphism algebraizes the formal isomorphism and its inverse; uniqueness gives an actual isomorphism. Pulling back the produced ample line bundle proves the source's 'every proper algebraization' clause.",
+        "proper_ample, applied over the affine base using the immersion constructed by the ample-sheaf criterion, gives a closed projective embedding. Thus the last projectivity clause is also accounted for."
+      ],
+      "preserved_review": "089A treats an abstract compatible proper infinitesimal system with an ample special-fibre invertible sheaf. Its proof lifts sections to compatible projective embeddings and algebraizes the closed images. The resulting ample invertible sheaf is transported to any other proper algebraization using 0A42 for the formal isomorphism and its inverse. For the last clause, 01VT produces an immersion into one projective space over the affine base; properness makes it closed. Thus locally projective has not been silently substituted for projective.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.5.1",
+      "scope": "For separated finite-type X over complete Noetherian A, an open subset Z_0 of the special fibre proper over A/J extends to an open-and-closed subset Z of X proper over A with that special fibre.",
+      "classification": "existing_stronger",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 1253,
+            "last_line": 1268,
+            "byte_start": 41555,
+            "byte_end_exclusive": 42034,
+            "bytes": 479,
+            "sha256": "87E0D524695F37F9926F7F1442D2907AF6D9377B6C0FA028CC0E7324DA485046"
+          },
+          "context": {
+            "first_line": 1253,
+            "last_line": 1293,
+            "byte_start": 41555,
+            "byte_end_exclusive": 43056,
+            "bytes": 1501,
+            "sha256": "1176141AC54668955F3CA3D787A87DB2CBCA64765270114D73625680FC99653B"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 14098,
+            "last_line": 14106,
+            "byte_start": 611279,
+            "byte_end_exclusive": 611761,
+            "bytes": 482,
+            "sha256": "86F502B5F5D85516628179DAED265CC1308FA0E3E673F8C65FEC4CC0FB7C827A",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L14098-L14106"
+          },
+          "context": {
+            "first_line": 14098,
+            "last_line": 14123,
+            "byte_start": 611279,
+            "byte_end_exclusive": 612704,
+            "bytes": 1425,
+            "sha256": "BAD3253BEA6672A6DAE1166FCC5B93FF607F7EF21ACDBE85D9D27683B9DC0702",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L14098-L14123"
+          }
+        }
+      },
+      "evidence": [
+        "split_proper",
+        "henselian",
+        "proper_image"
+      ],
+      "derivation": [
+        "proper_image shows the proper Z_0->X_0 has closed image because X_0 is separated over A/J. Thus the source's open Z_0 is automatically open and closed, matching the apparently stronger target input.",
+        "henselian shows the complete pair (A,J) is henselian. split_proper applies to produce the required proper open-and-closed Z.",
+        "The target only requires a henselian pair, not completeness or Noetherianity; its proof uses Chow reduction, proper compactification and Stein factorization/idempotent lifting. It is genuinely stronger."
+      ],
+      "preserved_review": "The source only says open Z0, while 0CT9 requires open and closed. The missing closedness follows because Z0 is proper and X0 is separated over A/J, by 01W6. The complete pair is henselian by 0ALJ. The proof of 0CT9 was checked through Chow reduction, compactification and idempotent lifting; its henselian-pair formulation is stronger than the Noetherian complete case.",
+      "residual": null
+    },
+    {
+      "source_id": "ega:III.5.5.2",
+      "scope": "If the full special fibre X_0 is proper, X splits into disjoint opens Z and Z', with Z proper and containing X_0; every closed proper-over-A subset P of X is contained in Z.",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "role": "mathematical_claim_or_proof",
+      "source": {
+        "english": {
+          "statement": {
+            "first_line": 1294,
+            "last_line": 1300,
+            "byte_start": 43056,
+            "byte_end_exclusive": 43351,
+            "bytes": 295,
+            "sha256": "54F4FD5E1603BE49C9514667F1D483344B33EFC82311023B68D4CCA347C9C1BA"
+          },
+          "context": {
+            "first_line": 1294,
+            "last_line": 1309,
+            "byte_start": 43056,
+            "byte_end_exclusive": 43721,
+            "bytes": 665,
+            "sha256": "AB87E8AF6FDEF35C7306CADA2F028439FC72C1518024323D73D22446DF443EBD"
+          }
+        },
+        "french": {
+          "statement": {
+            "first_line": 14124,
+            "last_line": 14130,
+            "byte_start": 612704,
+            "byte_end_exclusive": 613000,
+            "bytes": 296,
+            "sha256": "B3AAF7E5511E99079CF07BC2E4A4DB270910D91422CC26EED40BC0FDEE2A5674",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L14124-L14130"
+          },
+          "context": {
+            "first_line": 14124,
+            "last_line": 14137,
+            "byte_start": 612704,
+            "byte_end_exclusive": 613280,
+            "bytes": 576,
+            "sha256": "BE7771959287E5AE2876F09A28B6EFE02E88482ED51247CF926D297CA569AB68",
+            "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-1-fr.tex#L14124-L14137"
+          }
+        }
+      },
+      "evidence": [
+        "split_proper",
+        "henselian",
+        "jacobson"
+      ],
+      "derivation": [
+        "Apply split_proper to Y=X_0, using henselian. Set Z'=X\\Z; both parts are open and closed.",
+        "For any such P, the closed subset P intersection Z' is proper over A. A nonempty proper set has nonempty closed image in Spec(A), and jacobson forces that image to meet V(J).",
+        "This contradicts Z' intersection X_0 being empty. Hence P subset Z, accounting for the maximality clause, not just the decomposition."
+      ],
+      "preserved_review": "Use III.5.5.1 with the entire proper special fibre and take the open-and-closed complement. For a closed proper subset P, the intersection with the complementary open-and-closed part is proper; a nonempty image is closed and must meet V(J), contradicting the empty special fibre. This proves the additional maximality clause for every P.",
+      "residual": null
+    }
+  ],
+  "contextual_remarks": [
+    {
+      "source_id": "ega:III.5.4.3",
+      "english": {
+        "source_id": "ega:III.5.4.3",
+        "kind": "remark",
+        "label": "III.5.4.3",
+        "statement": {
+          "file_id": "english",
+          "start_line": 997,
+          "end_line": 1008,
+          "byte_offset": 33270,
+          "byte_length": 623,
+          "sha256": "c895c33f44f66ef582660c5877b254c79ccc77e541ee95bc5b2b6a62e6e3ed63"
+        },
+        "context": {
+          "file_id": "english",
+          "start_line": 997,
+          "end_line": 1009,
+          "byte_offset": 33270,
+          "byte_length": 624,
+          "sha256": "13a494f27be0eb067b793fd54d2f7a88e113e7de2a76c8ca5711181e865b43ad"
+        }
+      },
+      "french": {
+        "source_id": "ega:III.5.4.3",
+        "kind": "remark",
+        "label": "III.5.4.3-fr",
+        "statement": {
+          "file_id": "french",
+          "start_line": 13927,
+          "end_line": 13938,
+          "byte_offset": 602625,
+          "byte_length": 731,
+          "sha256": "8726c4f1cbe0d448ce4a98179eecb954a5de00b21fc087f51d7e16f718a8b644"
+        },
+        "context": {
+          "file_id": "french",
+          "start_line": 13927,
+          "end_line": 13939,
+          "byte_offset": 602625,
+          "byte_length": 732,
+          "sha256": "2d87b432dd26fcbc1055efc04b4fea570f6f29e137631c19b311707c79bbc8e5"
+        }
+      },
+      "classification": "unmatched_in_bounded_search",
+      "counted_closed": false,
+      "read_status": "read in full in English and pinned French transcription",
+      "reason": "Historical remark asserts the existence of proper nonalgebraizable formal schemes and gives analytic/moduli context. Target coherent.tex 8887–8890 repeats that abstract algebraization is false without an ample hypothesis, but this bounded pass did not verify an actual proper counterexample. An unrelated nonalgebraizable module example in algebraization.tex was not substituted for it."
+    },
+    {
+      "source_id": "ega:III.5.4.6",
+      "english": {
+        "source_id": "ega:III.5.4.6",
+        "kind": "remark",
+        "label": "III.5.4.6",
+        "statement": {
+          "file_id": "english",
+          "start_line": 1217,
+          "end_line": 1247,
+          "byte_offset": 40177,
+          "byte_length": 1297,
+          "sha256": "a7e9bf78841fe343cc8f8931564bff5ee93e27ada687dfce10d6ec47f9caf9d6"
+        },
+        "context": {
+          "file_id": "english",
+          "start_line": 1217,
+          "end_line": 1252,
+          "byte_offset": 40177,
+          "byte_length": 1378,
+          "sha256": "5c6f209611ea5f59ceba048492d0cfc1a54f59bb400a67de73a94eae83ad1cba"
+        }
+      },
+      "french": {
+        "source_id": "ega:III.5.4.6",
+        "kind": "remark",
+        "label": "III.5.4.6-fr",
+        "statement": {
+          "file_id": "french",
+          "start_line": 14069,
+          "end_line": 14093,
+          "byte_offset": 609852,
+          "byte_length": 1342,
+          "sha256": "8d8748042d205219340915adb968c5e3c8702e143d77341e25f777dcc059834e"
+        },
+        "context": {
+          "file_id": "french",
+          "start_line": 14069,
+          "end_line": 14097,
+          "byte_offset": 609852,
+          "byte_length": 1427,
+          "sha256": "14564b7d775ef6349b8e2e9888a279842d91ab6cb92dc78b1f9c913d7447e88d"
+        }
+      },
+      "classification": "unmatched_in_bounded_search",
+      "counted_closed": false,
+      "read_status": "read in full in English and pinned French transcription",
+      "reason": "Historical open question concerning algebraizability after removal of formal nilpotents and the classification of square-zero extensions. Not a theorem asserting a solution. No modern answer or full deformation-theoretic classification was assessed in this existence-chain pass."
+    }
+  ],
+  "primary_only_supplement": {
+    "source_id": "ega:III.5.1.7",
+    "status": "Literal non-separated reading disproved; separated formulation already supported. Historical review partial count preserved.",
+    "note": "ega-iii-5.md#why-separatedness-cannot-be-dropped",
+    "argument": "For A=k[[t]], glue two copies of Spec(A) along Spec(k((t))). Each infinitesimal fibre is the disjoint union of two copies of Spec(A/t^(n+1)). Take the compatible system (A/t^(n+1),0). Its special-fibre support is a single proper point. An algebraization would give finite A-modules M1,M2. Completeness of finite A-modules forces M1=A; Nakayama forces M2=0. Their restrictions to the common generic point would be k((t)) and zero, contradicting the gluing isomorphism.",
+    "qualification": "This is a primary-session supplementary argument, not part of the preserved independent review or an admitted historical-source erratum. It concerns the literal pinned transcription; no printed-source novelty claim."
+  },
+  "reproducibility": {
+    "mapping": {
+      "name": "iii5_coverage.json",
+      "bytes": 96108,
+      "sha256": "F458503B1C165084DD47CAAAF61E974C47B3E33880FCB177B13ABA98C047FCD5"
+    },
+    "review": {
+      "name": "iii5_independent_review.json",
+      "bytes": 87894,
+      "sha256": "5E807D6E4812A5ADD02C99AE9B740D5E22D8BDF9C8F6DD61B44A53B9AA98FC84"
+    },
+    "fresh_replay": {
+      "whole_files": 12,
+      "checked_span_uses": 145,
+      "target_tags": 41,
+      "status": "PASS"
+    }
+  }
+}

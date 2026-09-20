@@ -182,6 +182,15 @@ The [§9 comparison](ega/coverage/ega-i-9.md) now records 42 correspondences
 for quasi-coherent sheaves, extension, and scheme-theoretic images, with two
 explicit wording qualifications. It reuses existing Stacks results instead
 of presenting 44 comparison objects as 44 new theorems.
+The [EGA III §5 comparison](ega/coverage/ega-iii-5.md) finds Grothendieck
+existence, formal-morphism algebraization, and ample-line-bundle algebraization
+already in Stacks: 23 supported mathematical units, with an explicit
+counterexample explaining the separatedness qualification in one further
+passage. The [III §§6.2 and 6.10 comparison](ega/coverage/ega-iii-6-2-10.md)
+explains finite-free cohomology representatives and arbitrary base change,
+including the finite-projective degree bound for a single flat coherent sheaf.
+It supports seven mathematical units and retains five precise questions about
+unbounded constructions; neither comparison is a claim of complete EGA III.
 The earlier §6.6.4 contribution
 completes the base-change proof for quasi-compact morphisms at Stacks tag
 01K5. Sections 6.6.5–6.6.8 connect the generic-point criterion for dominance,
