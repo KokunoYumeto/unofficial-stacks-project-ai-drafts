@@ -1,0 +1,1247 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA I sections 8.2 and 8.3: embedded local rings and Chevalley reconstruction",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "eccbe97b5ee5da240eb49a7ff1b80c200aa27434",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "Eight supported derived correspondences and two literal convention qualifications; no new root theorem.",
+  "review_boundary": "Preserved independent AI body review reused with current byte/span/tag replay. The primary task read both language witnesses and the review before preparing this public comparison. No new independent review, expert approval or machine-checked proof is claimed.",
+  "conventions": [
+    "EGA's integral scheme in this section means an integral separated scheme in modern Stacks terminology; integral prescheme means modern integral scheme.",
+    "Local rings are their embedded subrings of the fixed function field, not abstract isomorphism classes.",
+    "Allied means admitting a common local overring that dominates both embedded local rings, not constructibility of a morphism.",
+    "No bounded negative search proves mathematical absence. Partial means exact unresolved clause, not a confirmed gap."
+  ],
+  "counts": {
+    "compared": 10,
+    "existing_derived": 8,
+    "partial": 2,
+    "unassessed_in_assigned_scope": 0,
+    "convention_normalized_additional_derivations": 2
+  },
+  "sources": {
+    "english": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-en/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex",
+      "bytes": 19495,
+      "sha256": "04EFBB7194C7DF213B4E4A4299D0A5B5413BD425E037D25CE446EC2FDFF5FDDC",
+      "role": "Separate English discovery edition."
+    },
+    "french": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex",
+      "bytes": 20600,
+      "sha256": "188DD6999E42BE024ADCFFE011F94AF14FA2FC15303B3668E04BB67B1509B825",
+      "role": "Pinned French transcription; no fresh facsimile collation of this section."
+    }
+  },
+  "target_files": {
+    "morphisms.tex": {
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242"
+    },
+    "schemes.tex": {
+      "bytes": 189721,
+      "sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233"
+    },
+    "topology.tex": {
+      "bytes": 245067,
+      "sha256": "38D2E107901BE84FA1EAD3587DB2FBFC50589914D49DB0ED5937C14D9B934F34"
+    },
+    "properties.tex": {
+      "bytes": 213401,
+      "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA"
+    },
+    "algebra.tex": {
+      "bytes": 1808110,
+      "sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD"
+    },
+    "sheaves.tex": {
+      "bytes": 188321,
+      "sha256": "48CCCB70E6BC5E4040B4F8D0DFAD6788182370EDA9C0CE8FC37705774B8C1FB3"
+    }
+  },
+  "rows": [
+    {
+      "id": "I.8.2.1",
+      "status": "partial",
+      "topic": "Regular functions as intersections of embedded local rings",
+      "hypotheses": "X integral; rational field K is the generic-point stalk; U is open.",
+      "residual": "Only the explicit empty-open source convention, not missing mathematics.",
+      "next": "Use the precise nonempty-open formulation and handle the empty open separately when producing the crosswalk.",
+      "source_spans": {
+        "english": {
+          "byte_start": 5919,
+          "byte_end_exclusive": 6543,
+          "line_start": 98,
+          "line_end_inclusive": 111,
+          "bytes": 624,
+          "sha256": "02FCBD07CAB2F142C97532400B33B87351735D0D335597C60FFAC977B9AAF62E",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L98-L111"
+        },
+        "french": {
+          "byte_start": 6066,
+          "byte_end_exclusive": 6776,
+          "line_start": 138,
+          "line_end_inclusive": 153,
+          "bytes": 710,
+          "sha256": "1EA632C894A72EAE094DE62324864E2F944AEF87C2CAEA67ED63B6052298E9D6",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L138-L153"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-integral-scheme-rational-functions",
+          "tag": "01RV",
+          "byte_start": 472666,
+          "byte_end_exclusive": 474055,
+          "line_start": 12807,
+          "line_end_inclusive": 12845,
+          "bytes": 1389,
+          "sha256": "DD236C08B81C31573BBF7554883AB0B9D7DA0D85F0C900409F2B202326A99D17",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12807-L12845",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01RV"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-sections-intersection-local-rings",
+          "tag": "0HD5",
+          "byte_start": 475111,
+          "byte_end_exclusive": 476232,
+          "line_start": 12873,
+          "line_end_inclusive": 12901,
+          "bytes": 1121,
+          "sha256": "D7CCA65E2F55B03B828840BBA74FA7F7731E76731147E3D7CF640F97A115A0FA",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12873-L12901",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0HD5"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "untagged-embedded-local-rings",
+          "tag": null,
+          "byte_start": 474759,
+          "bytes": 352,
+          "sha256": "4D726659B75EF6BBC6232E428DCDB075DA84A96E218AFF390ECC314D3053E84D",
+          "line_start": 12865,
+          "line_end_inclusive": 12872,
+          "byte_end_exclusive": 475111,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12865-L12872"
+        }
+      ],
+      "checked_derivation": [
+        "01RV identifies the function field; morphisms.tex 12865–12872 explicitly supplies the embedded stalks. The complete proof of 0HD5 gives exactly the intersection formula for every nonempty open without separatedness or Noetherian hypotheses.",
+        "A rational function belongs to a stalk precisely when a local section represents it, so its regularity locus is open.",
+        "For U=empty, the sheaf axiom gives the zero ring, while the empty intersection of subrings of K is K. Retain that literal source edge. The convention-normalized complete statement is existing-derived; the unqualified display for all opens cannot be marked existing-exact."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS partial classification; precise normalization remains",
+        "proof": [
+          "01RV identifies the function field; morphisms.tex 12865–12872 explicitly supplies the embedded stalks. The complete proof of 0HD5 gives exactly the intersection formula for every nonempty open without separatedness or Noetherian hypotheses.",
+          "A rational function belongs to a stalk precisely when a local section represents it, so its regularity locus is open.",
+          "For U=empty, the sheaf axiom gives the zero ring, while the empty intersection of subrings of K is K. Retain that literal source edge. The convention-normalized complete statement is existing-derived; the unqualified display for all opens cannot be marked existing-exact."
+        ]
+      },
+      "convention_normalized_status": "existing_derived"
+    },
+    {
+      "id": "I.8.2.2",
+      "status": "existing_derived",
+      "topic": "Separatedness as uniqueness of centres for embedded local rings",
+      "hypotheses": "X integral, with all stalks embedded in its function field K; no quasi-separatedness assumption in the source.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 6543,
+          "byte_end_exclusive": 10284,
+          "line_start": 112,
+          "line_end_inclusive": 143,
+          "bytes": 3741,
+          "sha256": "9D3F5E11CD402A8EF7D47FC3305FC45E222B2EB51444385A5010B917EE6966CD",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L112-L143"
+        },
+        "french": {
+          "byte_start": 6776,
+          "byte_end_exclusive": 10403,
+          "line_start": 154,
+          "line_end_inclusive": 215,
+          "bytes": 3627,
+          "sha256": "33A81EAF8C1D65266EFC05DEB71D20F4791915B23F18921A8E0E7F08D013603F",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L154-L215"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "schemes.tex",
+          "label": "lemma-where-are-they-equal",
+          "tag": "01KM",
+          "byte_start": 160126,
+          "byte_end_exclusive": 160877,
+          "line_start": 4432,
+          "line_end_inclusive": 4455,
+          "bytes": 751,
+          "sha256": "E02F6504DF0709E7EC146D5852B1583F541B790D89EFBF1B6179575C847AC678",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4432-L4455",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KM"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-characterize-separated",
+          "tag": "01KP",
+          "byte_start": 162167,
+          "byte_end_exclusive": 164963,
+          "line_start": 4489,
+          "line_end_inclusive": 4555,
+          "bytes": 2796,
+          "sha256": "E6E00FD4FF0AE4E02AFC20F113F286279157597EB94211B39278ABDF3D79F71A",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4489-L4555",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KP"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-valuative-criterion-separatedness",
+          "tag": "01L0",
+          "byte_start": 175697,
+          "byte_end_exclusive": 176730,
+          "line_start": 4847,
+          "line_end_inclusive": 4880,
+          "bytes": 1033,
+          "sha256": "D737D0B8F2C7ED9F5CD923900E6F8298FAAD501811D74021D4029A29A143C84F",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4847-L4880",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01L0"
+        },
+        {
+          "path": "algebra.tex",
+          "label": "lemma-normality-is-local",
+          "byte_start": 293842,
+          "bytes": 887,
+          "sha256": "A81735E73171837248DDEDDB195B9AB0DC7DB934539CF3FEE2BB8240ED8864E3",
+          "line_start": 8234,
+          "line_end_inclusive": 8256,
+          "tag": "030B",
+          "byte_end_exclusive": 294729,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/algebra.tex#L8234-L8256",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/030B"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-morphism-into-affine",
+          "byte_start": 30911,
+          "bytes": 4149,
+          "sha256": "B72032C0E468E3035F71D988B8C3132821DB2C7B95E59A4AC507614CB0BAAD82",
+          "line_start": 884,
+          "line_end_inclusive": 997,
+          "tag": "01I1",
+          "byte_end_exclusive": 35060,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L884-L997",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01I1"
+        },
+        {
+          "path": "sheaves.tex",
+          "label": "lemma-points-exactness",
+          "tag": "007T",
+          "byte_start": 48279,
+          "bytes": 754,
+          "sha256": "60DD6F85F4242A8BD59C6F35C682F6C7C683EEA7ACF621EDA26E537675B0772A",
+          "line_start": 1404,
+          "line_end_inclusive": 1426,
+          "byte_end_exclusive": 49033,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/sheaves.tex#L1404-L1426",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/007T"
+        }
+      ],
+      "checked_derivation": [
+        "Interpret EGA integral prescheme as modern integral scheme, without separation or quasi-separatedness. Its scheme conclusion is modern separatedness, as the French proof explicitly says.",
+        "Forward direction: a common dominating local subring Q of K gives two morphisms Spec(Q) to X through the two stalks, agreeing on Spec(K). By 01KM their equalizer is closed. Its ideal is zero because Q is a domain and it contains the generic point. Thus the two centres coincide.",
+        "Converse: first equality of two embedded stalks makes them allied, so the hypothesis makes the map from points to embedded stalks injective. Let nonempty affine opens U,V have rings A,B in K and let C be their generated ring. For r in Spec(C), C_r dominates A_(r intersect A) and B_(r intersect B). The source hypothesis identifies their points and hence these two rings. The elementary I.8.1.5 argument gives their common ring C_r: it contains C and sits locally inside C_r, and every element of C minus r is consequently a unit in it. Conversely a point of W=U intersect V gives such an r and stalk C_r. Thus W is bijective with Spec(C).",
+        "The nonempty opens U,V meet since X is integral. By 0HD5, Gamma(W) is the intersection of its stalks, hence the intersection of all C_r. The proof of 030B gives C=intersection_m C_m for every domain C, without any normality hypothesis; consequently intersection_r C_r=C too.",
+        "01I1 constructs Phi:W to Spec(C) from that ring identity. Its point map is r=m_x intersect C and each stalk map C_r to O_x is the identity under the embeddings. For every closed F in W, write F=W intersect V_U(a). The bijection gives Phi(F)=V_C(aC). Thus Phi is a closed continuous bijection and a homeomorphism. Bijective stalk maps give a sheaf isomorphism by 007T, hence Phi is a scheme isomorphism.",
+        "The map A tensor_Z B to C is surjective since C is the generated subring. Apply 01KP to the affine cover (over Spec Z) to conclude separatedness. No valuative criterion and no quasi-separatedness assumption is used."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS; converse now closed by a finite derivation",
+        "proof": [
+          "Interpret EGA integral prescheme as modern integral scheme, without separation or quasi-separatedness. Its scheme conclusion is modern separatedness, as the French proof explicitly says.",
+          "Forward direction: a common dominating local subring Q of K gives two morphisms Spec(Q) to X through the two stalks, agreeing on Spec(K). By 01KM their equalizer is closed. Its ideal is zero because Q is a domain and it contains the generic point. Thus the two centres coincide.",
+          "Converse: first equality of two embedded stalks makes them allied, so the hypothesis makes the map from points to embedded stalks injective. Let nonempty affine opens U,V have rings A,B in K and let C be their generated ring. For r in Spec(C), C_r dominates A_(r intersect A) and B_(r intersect B). The source hypothesis identifies their points and hence these two rings. The elementary I.8.1.5 argument gives their common ring C_r: it contains C and sits locally inside C_r, and every element of C minus r is consequently a unit in it. Conversely a point of W=U intersect V gives such an r and stalk C_r. Thus W is bijective with Spec(C).",
+          "The nonempty opens U,V meet since X is integral. By 0HD5, Gamma(W) is the intersection of its stalks, hence the intersection of all C_r. The proof of 030B gives C=intersection_m C_m for every domain C, without any normality hypothesis; consequently intersection_r C_r=C too.",
+          "01I1 constructs Phi:W to Spec(C) from that ring identity. Its point map is r=m_x intersect C and each stalk map C_r to O_x is the identity under the embeddings. For every closed F in W, write F=W intersect V_U(a). The bijection gives Phi(F)=V_C(aC). Thus Phi is a closed continuous bijection and a homeomorphism. Bijective stalk maps give a sheaf isomorphism by 007T, hence Phi is a scheme isomorphism.",
+          "The map A tensor_Z B to C is surjective since C is the generated subring. Apply 01KP to the affine cover (over Spec Z) to conclude separatedness. No valuative criterion and no quasi-separatedness assumption is used."
+        ]
+      }
+    },
+    {
+      "id": "I.8.2.3",
+      "status": "existing_derived",
+      "topic": "Specialization recovered from containment of local rings",
+      "hypotheses": "X integral and separated; x and y arbitrary points; stalk inclusions inside K.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 10284,
+          "byte_end_exclusive": 11166,
+          "line_start": 144,
+          "line_end_inclusive": 159,
+          "bytes": 882,
+          "sha256": "D3F61CBDB0ABD420FE2E4D8BDFF6A387002DB686143C7D25C10A4B86E641D742",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L144-L159"
+        },
+        "french": {
+          "byte_start": 10403,
+          "byte_end_exclusive": 11332,
+          "line_start": 216,
+          "line_end_inclusive": 234,
+          "bytes": 929,
+          "sha256": "FF44D07756F193592C853D05C3B6D75E3DC879DF520B93DDD29AD77F5F88072A",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L216-L234"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-distinct-local-rings",
+          "tag": "02NF",
+          "byte_start": 476234,
+          "byte_end_exclusive": 478134,
+          "line_start": 12903,
+          "line_end_inclusive": 12951,
+          "bytes": 1900,
+          "sha256": "F9DD204E2346C040A1D22311B0CD1787649B866970F277AA86844203444967E4",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12903-L12951",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/02NF"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-specialize-points",
+          "tag": "01J7",
+          "byte_start": 94979,
+          "byte_end_exclusive": 95998,
+          "line_start": 2604,
+          "line_end_inclusive": 2627,
+          "bytes": 1019,
+          "sha256": "37A0C14C916850AEE4D7E0EE97839CCFBACDD0322CF586A33F664A13564B50A9",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2604-L2627",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01J7"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-scheme-sober",
+          "tag": "01IS",
+          "byte_start": 74103,
+          "byte_end_exclusive": 74961,
+          "line_start": 2051,
+          "line_end_inclusive": 2071,
+          "bytes": 858,
+          "sha256": "B7059B9B7612FC52931564E989E33CF725EB7A515EE7633778E7C978F8E43A63",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2051-L2071",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01IS"
+        }
+      ],
+      "checked_derivation": [
+        "With Zx=closure{x}, Zy=closure{y}, 02NF contrapositively gives Ox subset Oy implies Zx subset Zy. The equal-closure case is harmless. Thus x is a specialization of y.",
+        "Conversely x in closure{y} implies that every affine neighbourhood of x contains y and that py subset px. Localization gives A_px subset A_py, namely Ox subset Oy. This is the correct direction; the generic stalk is the largest ring K.",
+        "Membership in Ox is exactly regularity at x. Integral separatedness is required for the reverse implication and is present under EGA's scheme convention."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS",
+        "proof": [
+          "With Zx=closure{x}, Zy=closure{y}, 02NF contrapositively gives Ox subset Oy implies Zx subset Zy. The equal-closure case is harmless. Thus x is a specialization of y.",
+          "Conversely x in closure{y} implies that every affine neighbourhood of x contains y and that py subset px. Localization gives A_px subset A_py, namely Ox subset Oy. This is the correct direction; the generic stalk is the largest ring K.",
+          "Membership in Ox is exactly regularity at x. Integral separatedness is required for the reverse implication and is present under EGA's scheme convention."
+        ]
+      }
+    },
+    {
+      "id": "I.8.2.4",
+      "status": "existing_derived",
+      "topic": "Distinct points have distinct embedded stalks",
+      "hypotheses": "X integral and separated; equality means equality as subrings of K.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 11166,
+          "byte_end_exclusive": 11559,
+          "line_start": 160,
+          "line_end_inclusive": 169,
+          "bytes": 393,
+          "sha256": "A5188D200CABB962192AF6FE0F85BB5E0293E5E464BC880A050E5D0BF442A463",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L160-L169"
+        },
+        "french": {
+          "byte_start": 11332,
+          "byte_end_exclusive": 11747,
+          "line_start": 235,
+          "line_end_inclusive": 246,
+          "bytes": 415,
+          "sha256": "142648F242E870BC94B7F16DA358AA1A65F49BCA24BF1AB15E5BC83507022D16",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L235-L246"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-distinct-local-rings",
+          "tag": "02NF",
+          "byte_start": 476234,
+          "byte_end_exclusive": 478134,
+          "line_start": 12903,
+          "line_end_inclusive": 12951,
+          "bytes": 1900,
+          "sha256": "F9DD204E2346C040A1D22311B0CD1787649B866970F277AA86844203444967E4",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12903-L12951",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/02NF"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-scheme-sober",
+          "tag": "01IS",
+          "byte_start": 74103,
+          "byte_end_exclusive": 74961,
+          "line_start": 2051,
+          "line_end_inclusive": 2071,
+          "bytes": 858,
+          "sha256": "B7059B9B7612FC52931564E989E33CF725EB7A515EE7633778E7C978F8E43A63",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2051-L2071",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01IS"
+        }
+      ],
+      "checked_derivation": [
+        "Equal embedded stalks give both containments and hence equal point closures by I.8.2.3. Sobriety (01IS), or its T0 consequence, gives x=y.",
+        "For distinct points the embedded subrings differ; an element of their symmetric difference is a rational function regular at one point but not the other. No assertion that a preselected one of the two points admits the function is made."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS",
+        "proof": [
+          "Equal embedded stalks give both containments and hence equal point closures by I.8.2.3. Sobriety (01IS), or its T0 consequence, gives x=y.",
+          "For distinct points the embedded subrings differ; an element of their symmetric difference is a rational function regular at one point but not the other. No assertion that a preselected one of the two points admits the function is made."
+        ]
+      }
+    },
+    {
+      "id": "I.8.2.5",
+      "status": "existing_derived",
+      "topic": "Topology generated by regularity domains of rational functions",
+      "hypotheses": "X integral and separated with Noetherian underlying topological space; ring-Noetherianity is not required.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 11559,
+          "byte_end_exclusive": 12412,
+          "line_start": 170,
+          "line_end_inclusive": 179,
+          "bytes": 853,
+          "sha256": "406D5CAF4E3B6A5F2BA0CB7AD1F8BD2DC4FAB2B59D90133B7328E825A0A06C75",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L170-L179"
+        },
+        "french": {
+          "byte_start": 11747,
+          "byte_end_exclusive": 12638,
+          "line_start": 247,
+          "line_end_inclusive": 263,
+          "bytes": 891,
+          "sha256": "B4A50EEE9C26BC9DCE59548F40537EDD7985A5FB60529C9109E065B2A5287821",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L247-L263"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-distinct-local-rings",
+          "tag": "02NF",
+          "byte_start": 476234,
+          "byte_end_exclusive": 478134,
+          "line_start": 12903,
+          "line_end_inclusive": 12951,
+          "bytes": 1900,
+          "sha256": "F9DD204E2346C040A1D22311B0CD1787649B866970F277AA86844203444967E4",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12903-L12951",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/02NF"
+        },
+        {
+          "path": "topology.tex",
+          "label": "lemma-Noetherian",
+          "tag": "0052",
+          "byte_start": 49430,
+          "byte_end_exclusive": 51732,
+          "line_start": 1302,
+          "line_end_inclusive": 1355,
+          "bytes": 2302,
+          "sha256": "E0C811F5E134D2DCFF84AED8E76F240748BA9F4A6524D00821B117117F2EB6A6",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/topology.tex#L1302-L1355",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0052"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-scheme-sober",
+          "tag": "01IS",
+          "byte_start": 74103,
+          "byte_end_exclusive": 74961,
+          "line_start": 2051,
+          "line_end_inclusive": 2071,
+          "bytes": 858,
+          "sha256": "B7059B9B7612FC52931564E989E33CF725EB7A515EE7633778E7C978F8E43A63",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2051-L2071",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01IS"
+        }
+      ],
+      "checked_derivation": [
+        "0052 applied to a closed subset gives a finite decomposition into irreducible closed sets, and 01IS gives each a generic point.",
+        "For x outside closure{y}, contraposition in I.8.2.3 gives f in Ox but not Oy. Its open regularity domain cannot contain a specialization of y, since any open containing that specialization contains y.",
+        "The complement of each irreducible closed set is a union of regularity domains; the complement of a finite union is a union of finite intersections of them. This proves a subbasis, not necessarily a basis. Only topological Noetherianity is used."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS",
+        "proof": [
+          "0052 applied to a closed subset gives a finite decomposition into irreducible closed sets, and 01IS gives each a generic point.",
+          "For x outside closure{y}, contraposition in I.8.2.3 gives f in Ox but not Oy. Its open regularity domain cannot contain a specialization of y, since any open containing that specialization contains y.",
+          "The complement of each irreducible closed set is a union of regularity domains; the complement of a finite union is a union of finite intersections of them. This proves a subbasis, not necessarily a basis. Only topological Noetherianity is used."
+        ]
+      }
+    },
+    {
+      "id": "I.8.2.6",
+      "status": "existing_derived",
+      "topic": "Recovering a separated integral scheme from its embedded stalk family",
+      "hypotheses": "Same topologically Noetherian integral separated X as I.8.2.5; the ambient field and embedded local rings are part of the data.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 12412,
+          "byte_end_exclusive": 13313,
+          "line_start": 180,
+          "line_end_inclusive": 187,
+          "bytes": 901,
+          "sha256": "4DCEC77D35B824BB0668C04F4F58D0285E80618609F004CA93FD604EFAB47C4D",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L180-L187"
+        },
+        "french": {
+          "byte_start": 12638,
+          "byte_end_exclusive": 13698,
+          "line_start": 264,
+          "line_end_inclusive": 282,
+          "bytes": 1060,
+          "sha256": "BDCAFE8C081596F5B3A2A9624C681EF1DB3AA4009BF90088CD75584DF49A803F",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L264-L282"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-distinct-local-rings",
+          "tag": "02NF",
+          "byte_start": 476234,
+          "byte_end_exclusive": 478134,
+          "line_start": 12903,
+          "line_end_inclusive": 12951,
+          "bytes": 1900,
+          "sha256": "F9DD204E2346C040A1D22311B0CD1787649B866970F277AA86844203444967E4",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12903-L12951",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/02NF"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-sections-intersection-local-rings",
+          "tag": "0HD5",
+          "byte_start": 475111,
+          "byte_end_exclusive": 476232,
+          "line_start": 12873,
+          "line_end_inclusive": 12901,
+          "bytes": 1121,
+          "sha256": "D7CCA65E2F55B03B828840BBA74FA7F7731E76731147E3D7CF640F97A115A0FA",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12873-L12901",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0HD5"
+        },
+        {
+          "path": "topology.tex",
+          "label": "lemma-Noetherian",
+          "tag": "0052",
+          "byte_start": 49430,
+          "byte_end_exclusive": 51732,
+          "line_start": 1302,
+          "line_end_inclusive": 1355,
+          "bytes": 2302,
+          "sha256": "E0C811F5E134D2DCFF84AED8E76F240748BA9F4A6524D00821B117117F2EB6A6",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/topology.tex#L1302-L1355",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0052"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-scheme-sober",
+          "tag": "01IS",
+          "byte_start": 74103,
+          "byte_end_exclusive": 74961,
+          "line_start": 2051,
+          "line_end_inclusive": 2071,
+          "bytes": 858,
+          "sha256": "B7059B9B7612FC52931564E989E33CF725EB7A515EE7633778E7C978F8E43A63",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2051-L2071",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01IS"
+        }
+      ],
+      "checked_derivation": [
+        "I.8.2.3 makes closure{x_i} exactly {y: Oy subset Ox_i}; 0052 and 01IS recover every closed set as a finite union of these, including the empty union.",
+        "I.8.2.4 makes the stalk-family data distinguish points. 0HD5 recovers all nonempty-open section rings as intersections in the fixed K, and restriction maps between nonempty opens are inclusions.",
+        "Assign Gamma(empty)=0 and the unique restrictions to it. This recovers the entire sheaf and ringed space, not just its specialization order. Embedded rings and their common field are essential data."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS",
+        "proof": [
+          "I.8.2.3 makes closure{x_i} exactly {y: Oy subset Ox_i}; 0052 and 01IS recover every closed set as a finite union of these, including the empty union.",
+          "I.8.2.4 makes the stalk-family data distinguish points. 0HD5 recovers all nonempty-open section rings as intersections in the fixed K, and restriction maps between nonempty opens are inclusions.",
+          "Assign Gamma(empty)=0 and the unique restrictions to it. This recovers the entire sheaf and ringed space, not just its specialization order. Embedded rings and their common field are essential data."
+        ]
+      }
+    },
+    {
+      "id": "I.8.2.7",
+      "status": "existing_derived",
+      "topic": "A dominant morphism determines and is compatible with centres of local rings",
+      "hypotheses": "f:X to Y dominant between integral separated schemes; embed L=K(Y) into K=K(X) via f.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 13313,
+          "byte_end_exclusive": 14645,
+          "line_start": 188,
+          "line_end_inclusive": 202,
+          "bytes": 1332,
+          "sha256": "201918B11508E4081C36314269442D4648F3A1D8971E70F451BF9DD0C488FD15",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L188-L202"
+        },
+        "french": {
+          "byte_start": 13698,
+          "byte_end_exclusive": 15203,
+          "line_start": 283,
+          "line_end_inclusive": 309,
+          "bytes": 1505,
+          "sha256": "086532A9B7EE114F8FE2D32A3BC3654011CE7E4F90826C5B2E354C3DEBD510AE",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L283-L309"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-dominant-between-integral",
+          "tag": "0CC1",
+          "byte_start": 51609,
+          "byte_end_exclusive": 53648,
+          "line_start": 1407,
+          "line_end_inclusive": 1449,
+          "bytes": 2039,
+          "sha256": "90C636DC519C75A2CD3E8C474515B7CB753875F7C32202FF9F0E37076586B2AC",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L1407-L1449",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0CC1"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-integral-scheme-rational-functions",
+          "tag": "01RV",
+          "byte_start": 472666,
+          "byte_end_exclusive": 474055,
+          "line_start": 12807,
+          "line_end_inclusive": 12845,
+          "bytes": 1389,
+          "sha256": "DD236C08B81C31573BBF7554883AB0B9D7DA0D85F0C900409F2B202326A99D17",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12807-L12845",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01RV"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-where-are-they-equal",
+          "tag": "01KM",
+          "byte_start": 160126,
+          "byte_end_exclusive": 160877,
+          "line_start": 4432,
+          "line_end_inclusive": 4455,
+          "bytes": 751,
+          "sha256": "E02F6504DF0709E7EC146D5852B1583F541B790D89EFBF1B6179575C847AC678",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4432-L4455",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KM"
+        }
+      ],
+      "checked_derivation": [
+        "0CC1 gives the generic-point map and injectivity of every stalk map for the dominant morphism between integral schemes. With 01RV, the map at the generic point embeds L into K; naturality identifies each stalk map with its restriction.",
+        "Stalk maps are local, so Ox dominates O_f(x). If it also dominates O_z, the two induced maps Spec(Ox) to Y agree on Spec(K), with the same specified embedding L into K.",
+        "By 01KM the equalizer is closed. Its defining ideal vanishes in the fraction field of the domain Ox and hence is zero. The closed points have the same image, so z=f(x). Only Y needs separatedness for this uniqueness step; no unproved allied comparison across different ambient fields is used."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS",
+        "proof": [
+          "0CC1 gives the generic-point map and injectivity of every stalk map for the dominant morphism between integral schemes. With 01RV, the map at the generic point embeds L into K; naturality identifies each stalk map with its restriction.",
+          "Stalk maps are local, so Ox dominates O_f(x). If it also dominates O_z, the two induced maps Spec(Ox) to Y agree on Spec(K), with the same specified embedding L into K.",
+          "By 01KM the equalizer is closed. Its defining ideal vanishes in the fraction field of the domain Ox and hence is zero. The closed points have the same image, so z=f(x). Only Y needs separatedness for this uniqueness step; no unproved allied comparison across different ambient fields is used."
+        ]
+      }
+    },
+    {
+      "id": "I.8.2.8",
+      "status": "existing_derived",
+      "topic": "Separated local immersions from an irreducible scheme",
+      "hypotheses": "X irreducible, not necessarily reduced; f separated and locally an immersion (respectively a local isomorphism).",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 14645,
+          "byte_end_exclusive": 17214,
+          "line_start": 203,
+          "line_end_inclusive": 230,
+          "bytes": 2569,
+          "sha256": "177C4E996162298D886A7D72F29EF96C0FE51FED535ED51742AFFEAB3F4DE70A",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L203-L230"
+        },
+        "french": {
+          "byte_start": 15203,
+          "byte_end_exclusive": 18062,
+          "line_start": 310,
+          "line_end_inclusive": 361,
+          "bytes": 2859,
+          "sha256": "F75C18C7EA8BBE58D7DB826109BCA79F261C98B12143FAF28B0E6E03FCF0BA3C",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L310-L361"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "schemes.tex",
+          "label": "lemma-where-are-they-equal",
+          "tag": "01KM",
+          "byte_start": 160126,
+          "byte_end_exclusive": 160877,
+          "line_start": 4432,
+          "line_end_inclusive": 4455,
+          "bytes": 751,
+          "sha256": "E02F6504DF0709E7EC146D5852B1583F541B790D89EFBF1B6179575C847AC678",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4432-L4455",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KM"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-dominant-between-integral",
+          "tag": "0CC1",
+          "byte_start": 51609,
+          "byte_end_exclusive": 53648,
+          "line_start": 1407,
+          "line_end_inclusive": 1449,
+          "bytes": 2039,
+          "sha256": "90C636DC519C75A2CD3E8C474515B7CB753875F7C32202FF9F0E37076586B2AC",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L1407-L1449",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0CC1"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-distinct-local-rings",
+          "tag": "02NF",
+          "byte_start": 476234,
+          "byte_end_exclusive": 478134,
+          "line_start": 12903,
+          "line_end_inclusive": 12951,
+          "bytes": 1900,
+          "sha256": "F9DD204E2346C040A1D22311B0CD1787649B866970F277AA86844203444967E4",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12903-L12951",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/02NF"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-reduction-functorial",
+          "byte_start": 90971,
+          "bytes": 807,
+          "sha256": "1C65E7BFB02B933CF46D5A006DDC2EBDE6AF4798B0358F06F3767E466F0697ED",
+          "line_start": 2473,
+          "line_end_inclusive": 2500,
+          "tag": "0HCT",
+          "byte_end_exclusive": 91778,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2473-L2500",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0HCT"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-reduced-closed-subscheme",
+          "byte_start": 83722,
+          "bytes": 2285,
+          "sha256": "BE63A01BFDE715BD20A6F9C80C0814E02717845C2AA116A4314446F15678F3DC",
+          "line_start": 2318,
+          "line_end_inclusive": 2369,
+          "tag": "01J3",
+          "byte_end_exclusive": 86007,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2318-L2369",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01J3"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-map-into-reduction",
+          "byte_start": 90007,
+          "bytes": 962,
+          "sha256": "022FC03A7030573ADDAB31DCF47A8419F62E4FDED5D08F79354AEA9FFFB8E353",
+          "line_start": 2449,
+          "line_end_inclusive": 2471,
+          "tag": "0356",
+          "byte_end_exclusive": 90969,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2449-L2471",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/0356"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-immersions-monomorphisms",
+          "byte_start": 179702,
+          "bytes": 547,
+          "sha256": "D37A0A3E24A08FEB135330E576E41FB90D9B2969ED21E26FC4359EF18D17862C",
+          "line_start": 4987,
+          "line_end_inclusive": 5002,
+          "tag": "01L7",
+          "byte_end_exclusive": 180249,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4987-L5002",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01L7"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-separated-permanence",
+          "byte_start": 167748,
+          "bytes": 1872,
+          "sha256": "4351BB871E964112CD198BCF9FB0615F1BB8B964FFB415B7D13D1D8C8EDB9DE4",
+          "line_start": 4634,
+          "line_end_inclusive": 4683,
+          "tag": "01KU",
+          "byte_end_exclusive": 169620,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4634-L4683",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KU"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-compose-after-separated",
+          "byte_start": 169622,
+          "bytes": 1197,
+          "sha256": "DBABE5CCD464C855B12ECC2B996771BC61D67010BB849B83EDEF77351FC87268",
+          "line_start": 4685,
+          "line_end_inclusive": 4713,
+          "tag": "01KV",
+          "byte_end_exclusive": 170819,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4685-L4713",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KV"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-affine-separated",
+          "byte_start": 171605,
+          "bytes": 569,
+          "sha256": "0FBF0EC26CE19882C16D9798088B146CE8263D79CBB392C5B99DF68C8AE16653",
+          "line_start": 4735,
+          "line_end_inclusive": 4749,
+          "tag": "01KN",
+          "byte_end_exclusive": 172174,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4735-L4749",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KN"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-characterize-closed-immersions",
+          "byte_start": 186617,
+          "bytes": 1251,
+          "sha256": "D841DD89416853E585FB4932CC25EC2727CEDE42D90C4D10BA326722A2E8A735",
+          "line_start": 5175,
+          "line_end_inclusive": 5204,
+          "tag": "01LD",
+          "byte_end_exclusive": 187868,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L5175-L5204",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01LD"
+        },
+        {
+          "path": "sheaves.tex",
+          "label": "lemma-stalks-closed-pushforward",
+          "byte_start": 175266,
+          "bytes": 1456,
+          "sha256": "AF324A34B2F5CB0F5DFF5108EFE4792ABA172CE52A6F3707521E205FD7E096FB",
+          "line_start": 5005,
+          "line_end_inclusive": 5044,
+          "tag": null,
+          "byte_end_exclusive": 176722,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/sheaves.tex#L5005-L5044"
+        },
+        {
+          "path": "sheaves.tex",
+          "label": "lemma-points-exactness",
+          "tag": "007T",
+          "byte_start": 48279,
+          "bytes": 754,
+          "sha256": "60DD6F85F4242A8BD59C6F35C682F6C7C683EEA7ACF621EDA26E537675B0772A",
+          "line_start": 1404,
+          "line_end_inclusive": 1426,
+          "byte_end_exclusive": 49033,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/sheaves.tex#L1404-L1426",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/007T"
+        }
+      ],
+      "checked_derivation": [
+        "Let local immersion mean that every x has source and target open neighbourhoods on which the restriction is an immersion; refine so it is closed into the target neighbourhood. The source X is irreducible but may be nonreduced. Reduction changes no underlying topological space.",
+        "Use 0HCT to reduce and 01J3/0356 to factor X_red through Z, the reduced closed subscheme supported on closure(f(X)). This Z is integral. Reductions of the local closed-immersion pieces remain closed immersions, directly by the corresponding quotients by radical ideals. Separatedness persists: X_red to X is a closed immersion (01L7), compose with f (01KU), and cancel the subsequent target maps (01KV).",
+        "Every nonempty source open contains the generic point of X, whose image is generic in Z. Thus each local closed-immersion piece U_red to an open V of Z has dense image in V as well as closed image. It has image all of V; since both pieces are reduced, 01J3 makes it an isomorphism. Consequently X_red to Z is a separated local isomorphism.",
+        "Over an affine open of Z, the inverse-image open in X_red is integral and separated over Spec Z by 01KN and 01KU. This dominant local isomorphism identifies the function fields and every source stalk with its target stalk. If two source points have the same image, their embedded stalks are equal, so 02NF plus sobriety makes the points equal. Hence the reduced map is injective, and its local isomorphisms make it an open immersion.",
+        "The original underlying map therefore is a homeomorphism onto a subset T open in the closed subset closure(T) of Y. Choose an open Y0 of Y such that T is closed in Y0. For the original nonreduced f:X to Y0, the local-immersion hypothesis still gives surjective stalk maps. The closed-pushforward stalk formula makes O_Y0 to f_*O_X surjective on all stalks (outside T the target stalk is the zero ring). It is therefore a surjective sheaf map, and 01LD proves that X to Y0 is a closed immersion. Thus the original f is an immersion, with no reducedness or Noetherian restriction added.",
+        "If the original f was locally an isomorphism, its image is open in Y directly. The already proved point injectivity and local isomorphisms then make f an open immersion."
+      ],
+      "wording_correction": "Replace reduced scheme-theoretic closure with reduced closed subscheme supported on the topological closure of the image. No scheme-theoretic-image existence or quasi-compactness argument is needed.",
+      "independent_ai_review": {
+        "verdict": "PASS partial assessment; complete same-generality derivation now supplied",
+        "proof": [
+          "Let local immersion mean that every x has source and target open neighbourhoods on which the restriction is an immersion; refine so it is closed into the target neighbourhood. The source X is irreducible but may be nonreduced. Reduction changes no underlying topological space.",
+          "Use 0HCT to reduce and 01J3/0356 to factor X_red through Z, the reduced closed subscheme supported on closure(f(X)). This Z is integral. Reductions of the local closed-immersion pieces remain closed immersions, directly by the corresponding quotients by radical ideals. Separatedness persists: X_red to X is a closed immersion (01L7), compose with f (01KU), and cancel the subsequent target maps (01KV).",
+          "Every nonempty source open contains the generic point of X, whose image is generic in Z. Thus each local closed-immersion piece U_red to an open V of Z has dense image in V as well as closed image. It has image all of V; since both pieces are reduced, 01J3 makes it an isomorphism. Consequently X_red to Z is a separated local isomorphism.",
+          "Over an affine open of Z, the inverse-image open in X_red is integral and separated over Spec Z by 01KN and 01KU. This dominant local isomorphism identifies the function fields and every source stalk with its target stalk. If two source points have the same image, their embedded stalks are equal, so 02NF plus sobriety makes the points equal. Hence the reduced map is injective, and its local isomorphisms make it an open immersion.",
+          "The original underlying map therefore is a homeomorphism onto a subset T open in the closed subset closure(T) of Y. Choose an open Y0 of Y such that T is closed in Y0. For the original nonreduced f:X to Y0, the local-immersion hypothesis still gives surjective stalk maps. The closed-pushforward stalk formula makes O_Y0 to f_*O_X surjective on all stalks (outside T the target stalk is the zero ring). It is therefore a surjective sheaf map, and 01LD proves that X to Y0 is a closed immersion. Thus the original f is an immersion, with no reducedness or Noetherian restriction added.",
+          "If the original f was locally an isomorphism, its image is open in Y directly. The already proved point injectivity and local isomorphisms then make f an open immersion."
+        ]
+      }
+    },
+    {
+      "id": "I.8.3.1",
+      "status": "existing_derived",
+      "topic": "The local-ring family of a Noetherian integral separated scheme satisfies Chevalley's axioms",
+      "hypotheses": "X Noetherian, integral, separated; Ai are rings of a finite affine cover and Aij is their generated subring of K.",
+      "residual": null,
+      "source_spans": {
+        "english": {
+          "byte_start": 17214,
+          "byte_end_exclusive": 18535,
+          "line_start": 231,
+          "line_end_inclusive": 247,
+          "bytes": 1321,
+          "sha256": "489B775871436F5C5507900726CF2C40E57469C194EE21C10BBFCCC7F7DB4937",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L231-L247"
+        },
+        "french": {
+          "byte_start": 18062,
+          "byte_end_exclusive": 19550,
+          "line_start": 362,
+          "line_end_inclusive": 391,
+          "bytes": 1488,
+          "sha256": "DA4781D7C9E2B4F3ED71C97BBDE5AF25702EA51345015305E34934B9DB3FB066",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L362-L391"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-integral-scheme-rational-functions",
+          "tag": "01RV",
+          "byte_start": 472666,
+          "byte_end_exclusive": 474055,
+          "line_start": 12807,
+          "line_end_inclusive": 12845,
+          "bytes": 1389,
+          "sha256": "DD236C08B81C31573BBF7554883AB0B9D7DA0D85F0C900409F2B202326A99D17",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L12807-L12845",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01RV"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-characterize-separated",
+          "tag": "01KP",
+          "byte_start": 162167,
+          "byte_end_exclusive": 164963,
+          "line_start": 4489,
+          "line_end_inclusive": 4555,
+          "bytes": 2796,
+          "sha256": "E6E00FD4FF0AE4E02AFC20F113F286279157597EB94211B39278ABDF3D79F71A",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4489-L4555",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KP"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-where-are-they-equal",
+          "tag": "01KM",
+          "byte_start": 160126,
+          "byte_end_exclusive": 160877,
+          "line_start": 4432,
+          "line_end_inclusive": 4455,
+          "bytes": 751,
+          "sha256": "E02F6504DF0709E7EC146D5852B1583F541B790D89EFBF1B6179575C847AC678",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4432-L4455",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KM"
+        },
+        {
+          "path": "properties.tex",
+          "label": "definition-noetherian",
+          "tag": "01OV",
+          "byte_start": 13823,
+          "byte_end_exclusive": 14188,
+          "line_start": 420,
+          "line_end_inclusive": 430,
+          "bytes": 365,
+          "sha256": "77879C3D9EEEC1FB521BC528C07648EE36CB463EA6AE8F3E504BA7803128514F",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/properties.tex#L420-L430",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01OV"
+        },
+        {
+          "path": "properties.tex",
+          "label": "lemma-locally-Noetherian",
+          "tag": "01OW",
+          "byte_start": 14272,
+          "byte_end_exclusive": 15235,
+          "line_start": 435,
+          "line_end_inclusive": 458,
+          "bytes": 963,
+          "sha256": "E9213F43E3DB4BED2C20F32C994EB47CED28A63C5A03B73C9071D22673E324B3",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/properties.tex#L435-L458",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01OW"
+        },
+        {
+          "path": "properties.tex",
+          "label": "lemma-immersion-into-noetherian",
+          "tag": "01OX",
+          "byte_start": 15237,
+          "byte_end_exclusive": 16027,
+          "line_start": 460,
+          "line_end_inclusive": 478,
+          "bytes": 790,
+          "sha256": "A84106E95B5B131269BB1F822A71D5FE25757A3AB4D5EBBB043C4C87067D1C8E",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/properties.tex#L460-L478",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01OX"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-immersion-locally-finite-type",
+          "tag": "01T5",
+          "byte_start": 101511,
+          "byte_end_exclusive": 101800,
+          "line_start": 2762,
+          "line_end_inclusive": 2771,
+          "bytes": 289,
+          "sha256": "B998ACFC4F08BE8378F40EECDEE27E3D4F05947532D5D442A567821256CDCC1F",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L2762-L2771",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01T5"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "lemma-locally-finite-type-characterize",
+          "tag": "01T2",
+          "byte_start": 98080,
+          "byte_end_exclusive": 99777,
+          "line_start": 2681,
+          "line_end_inclusive": 2717,
+          "bytes": 1697,
+          "sha256": "7E4C62F308ECB1A305D5593DF35D584718E2EDBD23CD3DE8BFD2748206095F1B",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L2681-L2717",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01T2"
+        },
+        {
+          "path": "morphisms.tex",
+          "label": "definition-finite-type",
+          "tag": "01T1",
+          "byte_start": 97474,
+          "byte_end_exclusive": 98078,
+          "line_start": 2665,
+          "line_end_inclusive": 2679,
+          "bytes": 604,
+          "sha256": "433F9341E369B4A20589E7250620007F8B11A8BBEDE4D8A5D8526AC90365270D",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/morphisms.tex#L2665-L2679",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01T1"
+        }
+      ],
+      "checked_derivation": [
+        "An integral affine chart has fraction field K; localizing it at any prime does not change that fraction field. This proves Sch.1.",
+        "01OV and 01OW supply a finite affine cover by Noetherian subrings Ai. All chosen affines are nonempty. By 01KP their overlaps are affine and the tensor-product map onto the overlap ring is surjective. Because these rings embed in K, the overlap ring is exactly the subring Aij generated by Ai and Aj.",
+        "The open overlap immersion is locally of finite type by 01T5 and quasi-compact by 01OX, hence of finite type by 01T1; 01T2 identifies this with Aij being a finite-type Ai-algebra. In fact the affine-to-affine locally-finite-type clause of 01T2 already suffices here. Sch.3 is the established closed-equalizer uniqueness argument.",
+        "These are Chevalley's three written local-ring-family axioms, not the constructible-image theorem."
+      ],
+      "independent_ai_review": {
+        "verdict": "PASS",
+        "proof": [
+          "An integral affine chart has fraction field K; localizing it at any prime does not change that fraction field. This proves Sch.1.",
+          "01OV and 01OW supply a finite affine cover by Noetherian subrings Ai. All chosen affines are nonempty. By 01KP their overlaps are affine and the tensor-product map onto the overlap ring is surjective. Because these rings embed in K, the overlap ring is exactly the subring Aij generated by Ai and Aj.",
+          "The open overlap immersion is locally of finite type by 01T5 and quasi-compact by 01OX, hence of finite type by 01T1; 01T2 identifies this with Aij being a finite-type Ai-algebra. In fact the affine-to-affine locally-finite-type clause of 01T2 already suffices here. Sch.3 is the established closed-equalizer uniqueness argument.",
+          "These are Chevalley's three written local-ring-family axioms, not the constructible-image theorem."
+        ]
+      }
+    },
+    {
+      "id": "I.8.3.2",
+      "status": "partial",
+      "topic": "Reconstructing a scheme from a Chevalley family of local subrings",
+      "hypotheses": "A fixed field and family of its local subrings satisfying Sch.1, Sch.2, Sch.3; no scheme structure is assumed beforehand.",
+      "residual": "Only explicit nonempty-family and empty-open source conventions remain if the original literal row is preserved; the substantive overlap, gluing, topology, sheaf, and historical finite-type comparison are now accounted for.",
+      "next": "Retain explicit nonempty-family and empty-open conventions; the substantive affine-overlap/gluing reconstruction is now derived. Do not repeat the old constructibility search.",
+      "source_spans": {
+        "english": {
+          "byte_start": 18535,
+          "byte_end_exclusive": 19495,
+          "line_start": 248,
+          "line_end_inclusive": 256,
+          "bytes": 960,
+          "sha256": "71A81F6267EC30443725C5F09C3BB495E4C7EC4920C2B92365F2810D501AD112",
+          "url": "https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-8.tex#L248-L256"
+        },
+        "french": {
+          "byte_start": 19550,
+          "byte_end_exclusive": 20600,
+          "line_start": 392,
+          "line_end_inclusive": 410,
+          "bytes": 1050,
+          "sha256": "8191CA6CC4DF580E7DF7509437B681D1127BEA9A8143A3B145A006FAB9E1F228",
+          "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-8-fr.tex#L392-L410"
+        }
+      },
+      "target_spans": [
+        {
+          "path": "schemes.tex",
+          "label": "lemma-glue-schemes",
+          "tag": "01JC",
+          "byte_start": 103449,
+          "byte_end_exclusive": 103922,
+          "line_start": 2863,
+          "line_end_inclusive": 2879,
+          "bytes": 473,
+          "sha256": "4E7ADA504487BF945C4756948A2061546A94007E962E54EBD8DCEE6C3C4674FF",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2863-L2879",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01JC"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-characterize-separated",
+          "tag": "01KP",
+          "byte_start": 162167,
+          "byte_end_exclusive": 164963,
+          "line_start": 4489,
+          "line_end_inclusive": 4555,
+          "bytes": 2796,
+          "sha256": "E6E00FD4FF0AE4E02AFC20F113F286279157597EB94211B39278ABDF3D79F71A",
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L4489-L4555",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01KP"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-standard-open-affine",
+          "tag": "01I3",
+          "byte_start": 36008,
+          "bytes": 1047,
+          "sha256": "92322CE5BD2FEC1124D2C05D98CC1CBF5FCE80D6972C8063641B3751A98B7E2E",
+          "line_start": 1023,
+          "line_end_inclusive": 1048,
+          "byte_end_exclusive": 37055,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L1023-L1048",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01I3"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "untagged-gluing-data",
+          "tag": null,
+          "byte_start": 98575,
+          "bytes": 974,
+          "sha256": "6BA3460A79746FFBF7ADDDE90000F9630F94F37B7F983CC97233AA2D0A0A66A6",
+          "line_start": 2722,
+          "line_end_inclusive": 2752,
+          "byte_end_exclusive": 99549,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2722-L2752"
+        },
+        {
+          "path": "schemes.tex",
+          "label": "lemma-glue",
+          "byte_start": 99550,
+          "bytes": 3897,
+          "sha256": "4B7FD4DD3C1577ACBC3F968F18FCEC8A3E787F3CBC56F316ECB66F2FFDABFD14",
+          "line_start": 2754,
+          "line_end_inclusive": 2861,
+          "tag": "01JB",
+          "byte_end_exclusive": 103447,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/schemes.tex#L2754-L2861",
+          "official_tag_url": "https://stacks.math.columbia.edu/tag/01JB"
+        },
+        {
+          "path": "algebra.tex",
+          "label": "lemma-Noetherian-permanence",
+          "byte_start": 217614,
+          "bytes": 1554,
+          "sha256": "2C8E229EF19E06170D09E01FBD3E73AA1C82731A8D908843A5723CA0D663F1AF",
+          "line_start": 6048,
+          "line_end_inclusive": 6083,
+          "tag": null,
+          "byte_end_exclusive": 219168,
+          "source_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/eccbe97b5ee5da240eb49a7ff1b80c200aa27434/algebra.tex#L6048-L6083"
+        }
+      ],
+      "checked_derivation": [
+        "Make X' nonempty explicit, equivalently require at least one chart in Sch.2. Without it, X'=empty and the empty finite family satisfy all three written axioms vacuously, but cannot yield an integral scheme. Also stipulate Gamma(empty)=0 rather than an empty intersection in K.",
+        "Let Xi=Spec(Ai), identifying its points with L(Ai). Sch.1 implies Frac(Ai)=K: the localization at (0) is a member of X'. For C=Aij and r in Spec(C), C_r dominates Ai_p and Aj_q at the contracted primes. These lie in X', so Sch.3 identifies them. The elementary I.8.1.5 calculation gives C_r=Ai_p=Aj_q and L(C)=L(Ai) intersect L(Aj).",
+        "Write C=Ai[c1,...,cn]. For each r and p=r intersect Ai, every generator belongs to Ai_p; choose s in Ai minus p clearing all the finitely many denominators. Then C_s=(Ai)_s. By 01I3 this identifies D_C(s) with D_Ai(s), compatibly with the inclusion map. Such opens cover Spec(C). If two primes r1,r2 contract to the same p, C_r1=Ai_p=C_r2 and contraction of their unique maximal ideals to C gives r1=r2. Therefore Spec(C) to Spec(Ai) is injective and a local isomorphism, hence an open immersion. The same argument works for Aj. Neither finite presentation nor flat-monomorphism machinery is needed.",
+        "Use these open immersions to identify the overlaps with the common set L(Ai) intersect L(Aj). Transition maps induce the identity on the corresponding local subrings of K. Triple intersections are the same set of rings, and all ring maps there are identities in K, so both gluing conditions from schemes.tex 2722–2752 hold. Apply 01JB and 01JC to obtain a scheme with underlying set X' and precisely the specified stalks.",
+        "The finite Noetherian affine cover makes the glued scheme Noetherian. Every chart is reduced and integral, and their generic points are all the same member K of X'; thus the glued scheme is integral. Its overlaps are Spec(Aij), and Ai tensor_Z Aj onto Aij is surjective; 01KP gives separatedness.",
+        "Now the independently checked I.8.2.6 applies and identifies the glued topology with the finite-union-of-stalk-containment-sets topology prescribed by EGA. Its nonempty-open sections are the specified intersections by 0HD5, with the usual inclusions as restrictions; the empty open has the zero ring.",
+        "The introductory finite-type comparison is algebraically consistent: if every Ai is finite type over a field k, 00FN makes it Noetherian, and generators of Aj over k also generate Aij over Ai. Thus the indicated finite-type portion of Sch.2 is automatic in that special case. The historical attribution is reported by EGA; no independent historical attribution audit was performed."
+      ],
+      "convention_normalized_status": "existing_derived",
+      "independent_ai_review": {
+        "verdict": "PASS partial classification; reconstruction and topology now derived after explicit convention normalization",
+        "proof": [
+          "Make X' nonempty explicit, equivalently require at least one chart in Sch.2. Without it, X'=empty and the empty finite family satisfy all three written axioms vacuously, but cannot yield an integral scheme. Also stipulate Gamma(empty)=0 rather than an empty intersection in K.",
+          "Let Xi=Spec(Ai), identifying its points with L(Ai). Sch.1 implies Frac(Ai)=K: the localization at (0) is a member of X'. For C=Aij and r in Spec(C), C_r dominates Ai_p and Aj_q at the contracted primes. These lie in X', so Sch.3 identifies them. The elementary I.8.1.5 calculation gives C_r=Ai_p=Aj_q and L(C)=L(Ai) intersect L(Aj).",
+          "Write C=Ai[c1,...,cn]. For each r and p=r intersect Ai, every generator belongs to Ai_p; choose s in Ai minus p clearing all the finitely many denominators. Then C_s=(Ai)_s. By 01I3 this identifies D_C(s) with D_Ai(s), compatibly with the inclusion map. Such opens cover Spec(C). If two primes r1,r2 contract to the same p, C_r1=Ai_p=C_r2 and contraction of their unique maximal ideals to C gives r1=r2. Therefore Spec(C) to Spec(Ai) is injective and a local isomorphism, hence an open immersion. The same argument works for Aj. Neither finite presentation nor flat-monomorphism machinery is needed.",
+          "Use these open immersions to identify the overlaps with the common set L(Ai) intersect L(Aj). Transition maps induce the identity on the corresponding local subrings of K. Triple intersections are the same set of rings, and all ring maps there are identities in K, so both gluing conditions from schemes.tex 2722–2752 hold. Apply 01JB and 01JC to obtain a scheme with underlying set X' and precisely the specified stalks.",
+          "The finite Noetherian affine cover makes the glued scheme Noetherian. Every chart is reduced and integral, and their generic points are all the same member K of X'; thus the glued scheme is integral. Its overlaps are Spec(Aij), and Ai tensor_Z Aj onto Aij is surjective; 01KP gives separatedness.",
+          "Now the independently checked I.8.2.6 applies and identifies the glued topology with the finite-union-of-stalk-containment-sets topology prescribed by EGA. Its nonempty-open sections are the specified intersections by 0HD5, with the usual inclusions as restrictions; the empty open has the zero ring.",
+          "The introductory finite-type comparison is algebraically consistent: if every Ai is finite type over a field k, 00FN makes it Noetherian, and generators of Aj over k also generate Aij over Ai. Thus the indicated finite-type portion of Sch.2 is automatic in that special case. The historical attribution is reported by EGA; no independent historical attribution audit was performed."
+        ]
+      }
+    }
+  ],
+  "review_amendments": [
+    {
+      "id": "EMPTY-OPEN",
+      "applies_to": [
+        "I.8.2.1",
+        "I.8.2.6",
+        "I.8.3.2"
+      ],
+      "correction": "Use stalk intersection only for nonempty opens, and Gamma(empty)=0 with the unique restrictions to it. I.8.2.6 already handles this correctly."
+    },
+    {
+      "id": "NONEMPTY-CHEVALLEY-FAMILY",
+      "applies_to": [
+        "I.8.3.2"
+      ],
+      "correction": "State X' nonempty (or the finite chart index set nonempty) before claiming the reconstruction is integral. Otherwise the literal axioms permit the empty-family counterexample."
+    },
+    {
+      "id": "FRENCH-CLOSED-TRACE",
+      "applies_to": [
+        "I.8.2.2"
+      ],
+      "correction": "For F closed in W write F=W intersect V_U(a); test membership at x in W. Retain the diplomatic French expression and the English corrective footnote as source evidence, without a new errata-admission claim."
+    },
+    {
+      "id": "REDUCED-CLOSURE-WORDING",
+      "applies_to": [
+        "I.8.2.8"
+      ],
+      "correction": "Use the reduced closed subscheme supported on the topological closure of f(X), not an undefined reduced scheme-theoretic closure. The full derivation does not assume quasi-compactness or existence of a scheme-theoretic image."
+    },
+    {
+      "id": "NO-CONSTRUCTIBILITY-SUBSTITUTION",
+      "applies_to": [
+        "I.8.3.2"
+      ],
+      "correction": "Bind the denominator/open-immersion and gluing dependencies above. A Chevalley constructibility theorem is unrelated and supplies no reconstruction evidence."
+    }
+  ],
+  "reproducibility": {
+    "reviewed_mapping": {
+      "name": "i8_reviewed_body_coverage.json",
+      "bytes": 46654,
+      "sha256": "7703BF0F5720DAC7FB7C06A2FD0FB3C95F0AD0A0F2A0D50CEEB02B576FB4D98C"
+    },
+    "independent_review": {
+      "name": "i8_independent_review.json",
+      "bytes": 37427,
+      "sha256": "50EF92D89326387BE0E60EACF2BBFEA80790FCCEF53CF35C406C057CF4D70832"
+    },
+    "current_validation": {
+      "status": "PASS",
+      "source_files": 2,
+      "source_spans": 20,
+      "target_files": 6,
+      "target_span_uses": 52,
+      "unique_target_spans": 34,
+      "source_ids": 10,
+      "working_tree_matches_committed_target_bytes": true
+    },
+    "note": "Byte matches validate evidence identities and mechanical bindings, not mathematical correctness."
+  },
+  "new_root_theorems": 0,
+  "source_editions_changed": false,
+  "next_action": "Keep the empty-open and nonempty-family qualifications visible; continue remaining EGA coverage batches and pursue genuine missing results rather than duplicate these derivations."
+}

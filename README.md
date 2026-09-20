@@ -173,6 +173,11 @@ across EGA before choosing further additions. The separate
 [§8.1 comparison](ega/coverage/ega-i-8-1.md) identifies three results already
 supplied by Stacks and two candidate combined statements; it does not claim
 five new theorems or complete coverage of EGA.
+The [§§8.2–8.3 comparison](ega/coverage/ega-i-8-2-3.md) explains how embedded
+local rings recover an integral separated scheme, including the affine
+overlap/gluing argument left to the reader in EGA. Eight numbered objects have
+complete derivations from existing Stacks results; two further comparisons
+record necessary empty-set conventions.
 The [§9 comparison](ega/coverage/ega-i-9.md) now records 42 correspondences
 for quasi-coherent sheaves, extension, and scheme-theoretic images, with two
 explicit wording qualifications. It reuses existing Stacks results instead

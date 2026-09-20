@@ -1,0 +1,108 @@
+{
+  "schema": "ega-original-source-collation/v1",
+  "date": "2026-09-21",
+  "scope": [
+    "I.9.5.1",
+    "I.9.5.2",
+    "I.4.1.3",
+    "I.4.1.8",
+    "I.4.1.10",
+    "I.9.5.3"
+  ],
+  "status": "Original wording and subscheme-order convention checked; corrected closed-image reading is covered, unqualified claims are false.",
+  "source": {
+    "title": "EGA I: Le langage des schémas",
+    "doi": "10.1007/BF02684778",
+    "url": "https://www.numdam.org/item/PMIHES_1960__4__5_0.pdf",
+    "bytes": 31680717,
+    "sha256": "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6",
+    "pages": [
+      {
+        "printed_page": 120,
+        "physical_page_1based": 119,
+        "scope": "I.4.1.3 and I.4.1.5: subschemes are locally closed; open restrictions are subschemes.",
+        "render_identity": {
+          "bytes": 245686,
+          "sha256": "5C22E27A3542B07B8AE0BA5F76238D791A054A046A1DB9A1C68366B04FA53F90"
+        },
+        "visual_inspection": "performed by the primary task; full page, not OCR-only"
+      },
+      {
+        "printed_page": 121,
+        "physical_page_1based": 120,
+        "scope": "I.4.1.8: majorization means factorization through the subscheme inclusion.",
+        "render_identity": {
+          "bytes": 247894,
+          "sha256": "9AE807FC7CB595F3B8639596CB213E550BC72FA771F387A1F9CF1D645133AAF7"
+        },
+        "visual_inspection": "performed by the primary task; full page, not OCR-only"
+      },
+      {
+        "printed_page": 122,
+        "physical_page_1based": 121,
+        "scope": "I.4.1.10: the order on subschemes is induced by inclusion/factorization.",
+        "render_identity": {
+          "bytes": 224480,
+          "sha256": "2096A495CE4D4016168A20954D64F6CC6525C7CFAEF478FF05C46C634C707488"
+        },
+        "visual_inspection": "performed by the primary task; full page, not OCR-only"
+      },
+      {
+        "printed_page": 176,
+        "physical_page_1based": 175,
+        "scope": "I.9.5.1 lacks the closed qualification; I.9.5.2 constructs the kernel-defined closed subscheme.",
+        "render_identity": {
+          "bytes": 332784,
+          "sha256": "31AA3ECCD8A4CC5B625FF296A0738FC058ACB1E46E8D193510A4DB70277CA4F5"
+        },
+        "visual_inspection": "performed by the primary task; full page, not OCR-only"
+      },
+      {
+        "printed_page": 177,
+        "physical_page_1based": 176,
+        "scope": "Continuation of I.9.5.2 proves minimality only among closed subschemes; I.9.5.3 explicitly defines closed image.",
+        "render_identity": {
+          "bytes": 334199,
+          "sha256": "DEC6C98BECE5B73A00448CA9C961E527B9E87FECAB9B03C68D207BC0FC148F54"
+        },
+        "visual_inspection": "performed by the primary task; full page, not OCR-only"
+      }
+    ]
+  },
+  "already_published_erratum": {
+    "source": "Éléments de géométrie algébrique II, Errata et addenda, Liste1",
+    "doi": "10.1007/BF02699291",
+    "url": "https://numdam.org/item/10.1007/BF02699291.pdf",
+    "pdf_bytes": 27414108,
+    "pdf_sha256": "111834EFFFE9E90D068389D418F08925A82B4A54AE2957F080712D4180E032EB",
+    "printed_page": 222,
+    "physical_page_1based": 219,
+    "page_render": {
+      "bytes": 110435,
+      "sha256": "BA0BEC1A44542147C1C429D588ADC0DEF87E45A938FD68DA6AC63F82FF7190E5"
+    },
+    "visual_inspection": "Preserved full-page render re-opened and visually checked against the recorded hash.",
+    "content": "In the specified lines of the I.9.5.2 proof, rename X-prime/X-double-prime as Y-prime/Y-double-prime.",
+    "boundary": "This is a variable-name correction, not a correction of the missing closedness qualifier. No exhaustive later-errata search is claimed."
+  },
+  "findings": [
+    {
+      "id": "I.9.5.1",
+      "printed_status": "The original statement omits closed, as do the pinned transcriptions.",
+      "convention": "I.4.1.3 includes locally closed subschemes; I.4.1.8 and I.4.1.10 define majorization and order by factorization.",
+      "counterexample": "Spec(Q) -> Spec(Z) has quasi-coherent pushforward and factors through every nonempty open. Any locally closed factorization target containing the generic point is open. Every nonempty open of Spec(Z) contains a closed prime that can be removed, so there is no least such target.",
+      "minimal_repair": "Restrict the minimum to closed subschemes.",
+      "stacks_disposition": "The corrected reading is already covered by the quasi-coherent-kernel construction in tag 01R6; no new root theorem."
+    },
+    {
+      "id": "I.9.5.2",
+      "printed_status": "The constructed subscheme is closed, and the continuation of its proof compares only closed subschemes. Its reference to the preceding unrestricted property inherits the scope defect.",
+      "counterexample": "D(2) -> Spec(Z) has zero structure-sheaf kernel and closed image Spec(Z), while it factors through the proper open D(2).",
+      "minimal_repair": "Read the referenced minimum with the closed-subscheme qualifier supplied in I.9.5.1.",
+      "stacks_disposition": "The corrected construction, factorization and minimum are already covered; preserve the separate historical variable-name erratum."
+    }
+  ],
+  "unresolved": false,
+  "closure_boundary": "The bounded original-source wording/convention question is resolved. Literal false statements remain classified partial in the original-claim crosswalk. No source-edition mutation, registrar admission, novel theorem, official endorsement or claim that the proposed qualification is historically new.",
+  "next_action": "Continue preserved EGA coverage comparisons; send this bounded source finding once to the EGA/FGA/SGA canon keeper for deduplication against its existing records."
+}

@@ -14,8 +14,10 @@ of all EGA** and not a claim that the overall integration is complete.
 
 The French witness is the [pinned repository transcription of §9](https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-9-fr.tex).
 The [separately pinned English discovery witness](https://github.com/KokunoYumeto/ega-en/blob/94d5c73ac9263b26043ad0551646b824b1030c9b/source/ega1/ega1-9.tex)
-was used for comparison, not as a replacement for the French. This pass does not
-claim a new collation against printed page images.
+was used for comparison, not as a replacement for the French. The initial
+44-row comparison used those transcriptions. The subsequent printed-source
+check below is limited to the two image qualifications and the definitions
+that determine their scope; it is not a facsimile collation of all of §9.
 
 A preserved independent AI review compared all 44 statement bodies, their
 hypotheses, and the required Stacks proof passages. On 19 September 2026 the
@@ -192,10 +194,34 @@ kernel-defined closed image cannot be minimal among *all* locally closed
 subschemes.
 
 Both passages have fully covered **closed-subscheme readings**. Their
-unqualified transcription readings remain recorded as partial matches,
-not newly admitted source errata. Resolving what the printed original and
-its historical conventions intended is separate source-collation work.
-Neither issue justifies writing a duplicate image theorem into Stacks.
+unqualified readings remain recorded as partial matches, not newly admitted
+source errata. Neither issue justifies writing a duplicate image theorem
+into Stacks.
+
+### What the printed French source confirms
+
+The [original EGA I scan](https://www.numdam.org/item/PMIHES_1960__4__5_0.pdf#page=175),
+printed pp. 176–177, was checked visually together with printed pp. 120–122
+(definitions I.4.1.3, I.4.1.8 and I.4.1.10). Proposition I.9.5.1 really does
+omit “closed”: this is not an omission introduced by either transcription.
+The earlier definition allows locally closed subschemes, and the order is
+factorization through their inclusions. Thus the counterexamples above apply
+under the book's own definitions, not just a modern change in terminology.
+In contrast, the proof of I.9.5.2 compares **closed** subschemes, and definition
+I.9.5.3 explicitly defines the **closed** image.
+
+The minimal repair is consequently to restrict the minimum in I.9.5.1 to
+closed subschemes; I.9.5.2 then has precisely that corrected property.
+The [published EGA II erratum](https://www.numdam.org/item/10.1007/BF02699291.pdf#page=219),
+printed p. 222, separately corrects the names $X',X''$ to $Y',Y''$ in this
+proof. That correction must not be confused with the missing closedness
+qualification. No claim is made here to have searched every later errata list.
+
+The [source-collation record](ega-i-9-original-source.json) records the exact
+scan identities, printed/physical page correspondence and bounded findings.
+This settles the original-wording/convention question. It does not silently
+turn the two unqualified statements into exact matches or modify either
+historical source edition.
 
 ## Next work
 
@@ -203,5 +229,7 @@ This comparison removes these 42 objects from the unassessed coverage queue
 and preserves the two exact qualifications. It adds no root-source theorem,
 assigns no new official tag, changes no French or English source witness,
 and makes no claim to have completed EGA I–IV or the other integration strands.
-The remaining preserved coverage batches and genuine candidate gaps are the
-next work; the completed source inventory need not be restarted.
+The two source qualifications have a documented corrected reading and
+counterexamples to the literal one. The next work is the remaining preserved
+coverage batches and genuine candidate gaps; the completed source inventory
+need not be restarted.
