@@ -50,14 +50,23 @@ human-maintained Stacks corpus.
 
 [Read the draft PDFs](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest) ·
 [Browse the source](chapters.tex) ·
-[Read proposed corrections](PROPOSED_CORRECTIONS.md) ·
+[Possible fixes](PROPOSED_CORRECTIONS.md) ·
+[Possible new additions](POSSIBLE_ADDITIONS.md) ·
 [Compare with Stacks](CHANGES_FROM_UPSTREAM.md) ·
 [Detailed status](STATUS.md) ·
 [Development program](ROADMAP.md) ·
 [Sources and history](PROVENANCE.md) ·
 [Validation](VALIDATION.md)
 
-## Proposed corrections — separate from additions
+## Two separate lists: possible fixes and possible new additions
+
+- **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
+  original location, smallest replacement, and a short reason. The readable
+  selection also has [standalone patches](possible-fixes/README.md), checked
+  against the pinned official source; none requires adopting our additions.
+- **[Possible new additions](POSSIBLE_ADDITIONS.md):** source work, named
+  theorem or construction, proof location, and actual integration status.
+  These may be inspected independently, or ignored entirely when reviewing fixes.
 
 The [proposed-corrections log](PROPOSED_CORRECTIONS.md) gives the original
 passage, the smallest proposed replacement, and a short argument that a reader

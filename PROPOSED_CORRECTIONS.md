@@ -1,4 +1,4 @@
-# Proposed corrections to the inherited Stacks text
+# Possible fixes to the inherited Stacks text
 
 These are AI-reviewed suggestions, not expert-approved corrections or officially
 adopted Stacks errata. Each argument below is intended to be checked directly.
@@ -8,8 +8,15 @@ a prerequisite for making these drafts available.
 
 This page is **separate from additions and expository expansions**. Translation
 choices are a third category and are not, by themselves, defects in the English
-source. [Return to the additions](README.md#what-is-actually-in-the-draft) or
+source. [Possible new additions](POSSIBLE_ADDITIONS.md) are listed separately, or
 [browse all recorded integrated differences](CHANGES_FROM_UPSTREAM.md).
+
+**Use a correction without adopting this project:**
+[download one small patch](possible-fixes/README.md), read its explanation below,
+and run `git apply --check` against your checkout. Each patch touches only
+inherited official source. The three related Ext proposals also have a combined
+patch so they can be considered together. The patch index states its exact
+coverage and pinned baseline; clean application is not a mathematical endorsement.
 
 ## Coverage and status
 

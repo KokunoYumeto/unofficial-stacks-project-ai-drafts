@@ -1,0 +1,44 @@
+diff --git a/algebra.tex b/algebra.tex
+--- a/algebra.tex
++++ b/algebra.tex
+@@ -17584,22 +17584,22 @@
+ Then the induced maps
+ $$
+ H^i(\alpha) :
++H^i(\Hom_R(G_{\bullet}, N))
++\longrightarrow
+ H^i(\Hom_R(F_{\bullet}, N))
+-\longrightarrow
+-H^i(\Hom_R(G_{\bullet}, N))
+ $$
+ are independent of the choice of $\alpha$.
+ If $\varphi$ is an isomorphism, so are all the maps
+ $H^i(\alpha)$. If $M_1 = M_2$, $F_\bullet = G_\bullet$, and
+-$\varphi$ is the identity, so are all the maps $H_i(\alpha)$.
++$\varphi$ is the identity, so are all the maps $H^i(\alpha)$.
+ \end{lemma}
+ 
+ \begin{proof}
+ Another map $\beta : F_{\bullet} \to G_{\bullet}$
+ inducing $\varphi$ is homotopic to $\alpha$ by
+ Lemma \ref{lemma-compare-resolutions}. Hence the
+-maps $\Hom_R(F_\bullet, N) \to
+-\Hom_R(G_\bullet, N)$ are homotopic.
++maps $\Hom_R(G_\bullet, N) \to
++\Hom_R(F_\bullet, N)$ are homotopic.
+ Hence the independence result follows from
+ Lemma \ref{lemma-homotopic-equal-homology}.
+ 
+@@ -17612,9 +17612,9 @@
+ see Lemma \ref{lemma-compare-resolutions}.
+ OK, and now consider the map
+ $H^i(\alpha) \circ H^i(\beta) =
+-H^i(\alpha \circ \beta)$. By the above the
+-map $H^i(\alpha \circ \beta)$ is the {\it same}
+-as the map $H^i(\text{id}_{G_{\bullet}}) = \text{id}$.
++H^i(\beta \circ \alpha)$. By the above the
++map $H^i(\beta \circ \alpha)$ is the {\it same}
++as the map $H^i(\text{id}_{F_{\bullet}}) = \text{id}$.
+ Similarly for the composition $H^i(\beta) \circ H^i(\alpha)$.
+ Hence $H^i(\alpha)$ and $H^i(\beta)$ are inverses of each other.
+ \end{proof}
