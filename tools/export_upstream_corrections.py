@@ -208,7 +208,7 @@ def generate():
         "|---|---:|---|---|"]
     for row in chapter_records:
         path = row["source"]
-        rows.append(f"| `{path}` | {row['units']} | [patch]({RAW}{row['file']}) | [entries](REVIEW.md#{path[:-4]}) |")
+        rows.append(f"| `{path}` | {row['units']} | [patch]({RAW}{row['file']}) | [entries](reviews/{path[:-4]}.md) |")
     rows += ["", "## What is and is not included", "",
         f"The {model.unit_count:,} historical IDs in R1–R{model.overlay_count} remain accounted for:",
         f"{included_count:,} effective textual units are exported; one earlier correction was",
@@ -225,10 +225,14 @@ def generate():
         "Modified Stacks text retains its existing GNU Free Documentation License; see",
         "[COPYING](COPYING). Reproduce or check the export with",
         "`python tools/export_upstream_corrections.py` (or append `--check`) in this repository.", ""]
-    review = ["# Textual corrections: exact changes and review evidence", "",
+    review_header = ["# Textual corrections: exact changes and review evidence", "",
               "These entries are separate from new theorem additions. The chapter patches",
               "and combined patch contain exactly this effective textual set.", "", ATTRIBUTION, ""]
+    review = []
+    chapter_reviews = {}
+    review_index = review_header + ["Review one chapter at a time; there is no need to open a megabyte-sized diff.", ""]
     for path in sorted(chapter_units):
+        start = len(review)
         review += ["## " + path[:-4], "", f"[Chapter patch]({RAW}chapters/{path[:-4]}.patch)", ""]
         for unit in chapter_units[path]:
             effective = [o for o in unit.operations if o.operation_id not in removed]
@@ -247,9 +251,13 @@ def generate():
             for op in effective:
                 review += ["````diff", *difflib.unified_diff(op.old_text.splitlines(), op.replacement_text.splitlines(),
                                                           "original", "replacement", lineterm=""), "````", ""]
+        review_name = "reviews/" + path[:-4] + ".md"
+        chapter_reviews[review_name] = "\n".join(review_header + review[start:]).encode("utf-8")
+        review_index.append(f"- [{path}]({review_name}) — {len(chapter_units[path])} correction units.")
     files = {row["file"]: patches[row["source"]] for row in chapter_records}
+    files.update(chapter_reviews)
     files.update({"ALL-TEXTUAL-CORRECTIONS.patch": combined, "manifest.json": json_bytes(manifest),
-                  "README.md": "\n".join(rows).encode(), "REVIEW.md": "\n".join(review).encode(),
+                  "README.md": "\n".join(rows).encode(), "REVIEW.md": ("\n".join(review_index) + "\n").encode(),
                   "COPYING": git("show", model.official_commit + ":COPYING")})
     package = archive_bytes(files)
     files["corrections-only.zip"] = package

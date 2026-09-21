@@ -146,7 +146,8 @@ def check_head():
         for row in downloads["files"]:
             name = safe(row["path"])
             require(name in {"README.md", "REVIEW.md", "COPYING", "manifest.json", "ALL-TEXTUAL-CORRECTIONS.patch", "corrections-only.zip"}
-                    or re.fullmatch(r"chapters/[a-z0-9-]+\.patch", name), "unexpected correction export path")
+                    or re.fullmatch(r"chapters/[a-z0-9-]+\.patch", name)
+                    or re.fullmatch(r"reviews/[a-z0-9-]+\.md", name), "unexpected correction export path")
             name = "upstream-corrections/" + name
             require(name not in export_paths, "duplicate correction download")
             bound(read(name), row)
