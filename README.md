@@ -191,6 +191,14 @@ explains finite-free cohomology representatives and arbitrary base change,
 including the finite-projective degree bound for a single flat coherent sheaf.
 It supports seven mathematical units and retains five precise questions about
 unbounded constructions; neither comparison is a claim of complete EGA III.
+The [III §§7.7–7.9 comparison](ega/coverage/ega-iii-7-7-9.md) explains 30
+supported items on exactness and base change, coherent representing modules,
+and Euler characteristics and Hilbert polynomials. It includes the
+infinitesimal length criterion and the weaker separable-global-sections
+hypothesis for degree-zero cohomological flatness. Two items remain partial:
+the historical nonflat global-hypertor comparison, and the smooth-projective
+example/Picard-cotangent interpretation. These are correspondences with
+existing Stacks mathematics, not 30 new theorems.
 The [IV §18.12 comparison](ega/coverage/ega-iv-18-12.md) records 16 supported
 items on finiteness, Zariski's Main Theorem, normalization and ampleness. It
 separates a historical conjecture and an unchecked proof-route claim from

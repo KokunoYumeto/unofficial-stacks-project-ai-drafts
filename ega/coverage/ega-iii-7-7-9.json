@@ -1,0 +1,2479 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA III sections 7.7-7.9: exactness, cohomology and base change, Euler characteristics",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "75aec3348656b93fc75fae9759472ff0fa8615d3",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "SELECTED_COMPARISONS_PRIMARY_REVIEWED_WITH_EXPLICIT_PARTIALS",
+  "review_boundary": "primary-session AI mathematical challenge; no subagents and no separate independent reviewer",
+  "source_read_boundary": "All 32 French statement/context spans were read in this checkpoint, together with the relevant Stacks statements and proof bodies. The preserved English spans were byte-checked, not all freshly reread; the III.7.9.14 hypothesis discrepancy was reread directly. French authority is a pinned diplomatic transcription, not a freshly collated printed facsimile.",
+  "conventions": {
+    "degree": "EGA T_p corresponds to cohomological H^(-p); parity is unchanged.",
+    "scheme": "EGA prescheme corresponds to modern Stacks scheme. No separatedness of Y is added. Proper f is relatively separated and finitely presented over a locally Noetherian base.",
+    "flat_complex": "Ordinary termwise tensor/pullback is used only where base-flatness justifies it. The nonflat hypertor extension remains partial.",
+    "derivation": "Each existing_derived row contains a finite mathematical bridge from actual target statements/proofs. Earlier rows used by number are individually supported; no topic-only counts.",
+    "uniqueness": "Unique isomorphism preserving the representing natural isomorphism, not absence of automorphisms of the underlying module.",
+    "confidence": "Reasoned primary-session judgments, not calibrated probabilities or proof-assistant certification."
+  },
+  "counts": {
+    "selected_rows": 32,
+    "supported": 30,
+    "partial": 2,
+    "new_root_theorems": 0
+  },
+  "files": [
+    {
+      "id": "discovery:ega3-7-7-rest.tex",
+      "name": "ega3-7-7-rest.tex",
+      "kind": "english_discovery",
+      "bytes": 12662,
+      "sha256": "D145C936868CC83E7ED796811131104B10A2C586283A112C842250A56FF2681A"
+    },
+    {
+      "id": "discovery:ega3-7-7.tex",
+      "name": "ega3-7-7.tex",
+      "kind": "english_discovery",
+      "bytes": 12992,
+      "sha256": "4F6ED8B56FD44BF420DCAF4D5FB3BC5C3205B6FF647F973C2B59ABF1271AC483"
+    },
+    {
+      "id": "discovery:ega3-7-8.tex",
+      "name": "ega3-7-8.tex",
+      "kind": "english_discovery",
+      "bytes": 13874,
+      "sha256": "B4A41084CFA96BF10E658D0508925F739525AFE061611745E1A6D22F235383DC"
+    },
+    {
+      "id": "discovery:ega3-7-9.tex",
+      "name": "ega3-7-9.tex",
+      "kind": "english_discovery",
+      "bytes": 16699,
+      "sha256": "4A0EFABF3BC7382A8F77871BB82E5DACBF7F59F76251DA964B18E384494C95F1"
+    },
+    {
+      "id": "french:III.7",
+      "name": "french3_ega3-7-fr_6b388758.tex",
+      "kind": "pinned_french_transcription",
+      "bytes": 172424,
+      "sha256": "20A61BA348909E4309A3CDA89FD6DDAF8C0FC5BA346FD44232458CDFEA2A2972",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex"
+    },
+    {
+      "id": "stacks:algebra.tex",
+      "name": "algebra.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 1808110,
+      "sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/algebra.tex"
+    },
+    {
+      "id": "stacks:coherent.tex",
+      "name": "coherent.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 357482,
+      "sha256": "D219CBA93EA84084A35BE94B3454E316C54037AF0BFBF795A1824543D9440BBC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/coherent.tex"
+    },
+    {
+      "id": "stacks:derived.tex",
+      "name": "derived.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 452054,
+      "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/derived.tex"
+    },
+    {
+      "id": "stacks:modules.tex",
+      "name": "modules.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 211777,
+      "sha256": "BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/modules.tex"
+    },
+    {
+      "id": "stacks:more-algebra.tex",
+      "name": "more-algebra.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 1518081,
+      "sha256": "0490028F82EFFCF08C0D790D0C8145EEB8D55DB66BFB8CF7BA29CCD27FC3FABE",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex"
+    },
+    {
+      "id": "stacks:morphisms.tex",
+      "name": "morphisms.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/morphisms.tex"
+    },
+    {
+      "id": "stacks:perfect.tex",
+      "name": "perfect.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 417517,
+      "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex"
+    },
+    {
+      "id": "stacks:properties.tex",
+      "name": "properties.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 213401,
+      "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/properties.tex"
+    },
+    {
+      "id": "stacks:varieties.tex",
+      "name": "varieties.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 463806,
+      "sha256": "BB075FDE0A9A393F3A15A5006ED9B755EFC06050E746FD6113629BEC0D92511A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/varieties.tex"
+    }
+  ],
+  "spans": [
+    {
+      "id": "target:PCAFF",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        16656,
+        16751
+      ],
+      "byte_start": 629345,
+      "byte_end_exclusive": 633669,
+      "bytes": 4324,
+      "sha256": "F280E7830E95E9E2864D0597F72D4986262F78D48A04ACDEC49E5B4C97BA1D99",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex#L16656-L16751"
+    },
+    {
+      "id": "target:PC",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        7457,
+        7522
+      ],
+      "byte_start": 281522,
+      "byte_end_exclusive": 284150,
+      "bytes": 2628,
+      "sha256": "5AE82C755F30C571A4AF8CBDD2B6737DD6C72DA1665A91CB2D5E115AA1C34FFF",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L7457-L7522"
+    },
+    {
+      "id": "target:PF",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        7396,
+        7441
+      ],
+      "byte_start": 278842,
+      "byte_end_exclusive": 281023,
+      "bytes": 2181,
+      "sha256": "1B616C875703E8D8253067C51DA35C37C8B9D2D38367E9A188C3CA66C3B7D56A",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L7396-L7441"
+    },
+    {
+      "id": "target:BC",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        6662,
+        6708
+      ],
+      "byte_start": 251677,
+      "byte_end_exclusive": 253310,
+      "bytes": 1633,
+      "sha256": "CEE758E00E9E7C11548CBFC008B163FC8830A50627F071EA2FD46EF9EDD138FC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L6662-L6708"
+    },
+    {
+      "id": "target:PROJ",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        5051,
+        5094
+      ],
+      "byte_start": 191335,
+      "byte_end_exclusive": 193120,
+      "bytes": 1785,
+      "sha256": "06845DB67402C3006458D191B5E9E97457474992431F3691745EB024FDB93216",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L5051-L5094"
+    },
+    {
+      "id": "target:JUMP",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        7689,
+        7775
+      ],
+      "byte_start": 290291,
+      "byte_end_exclusive": 293723,
+      "bytes": 3432,
+      "sha256": "44E5DBC6442F7A4A8717E0AFB3A46A07E9BF5419170F7B71173CFEE95AD8478E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L7689-L7775"
+    },
+    {
+      "id": "target:CUT",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        20366,
+        20442
+      ],
+      "byte_start": 767386,
+      "byte_end_exclusive": 770339,
+      "bytes": 2953,
+      "sha256": "FBF897B604B96C9DC17CC3AF3675624BEFAEE1C10178CB1B4F85A7981E10D608",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex#L20366-L20442"
+    },
+    {
+      "id": "target:ISO",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        20444,
+        20487
+      ],
+      "byte_start": 770340,
+      "byte_end_exclusive": 771986,
+      "bytes": 1646,
+      "sha256": "A91AD91B5358AF0B224038AD238CD888040FDEAF88503B51A93E24F23B897088",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex#L20444-L20487"
+    },
+    {
+      "id": "target:MIN",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        20170,
+        20214
+      ],
+      "byte_start": 759436,
+      "byte_end_exclusive": 761249,
+      "bytes": 1813,
+      "sha256": "5C64B6BA8D3D6FB06E97CCC70A8B92488D44322C33022AC5DA7B8B6CDA33353F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex#L20170-L20214"
+    },
+    {
+      "id": "target:MINP",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        20216,
+        20248
+      ],
+      "byte_start": 761250,
+      "byte_end_exclusive": 762453,
+      "bytes": 1203,
+      "sha256": "357232DDB391B620F2A164A5A484DFF322C122D8015FD89D8CEC13921E29F62B",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex#L20216-L20248"
+    },
+    {
+      "id": "target:KRULL",
+      "file_id": "stacks:algebra.tex",
+      "lines": [
+        12314,
+        12338
+      ],
+      "byte_start": 442607,
+      "byte_end_exclusive": 443591,
+      "bytes": 984,
+      "sha256": "B3DF04782CFF643315676178E8EFE63FD0209ECCD8E03E12D3B3C48F318674D3",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/algebra.tex#L12314-L12338"
+    },
+    {
+      "id": "target:FP",
+      "file_id": "stacks:algebra.tex",
+      "lines": [
+        19557,
+        19713
+      ],
+      "byte_start": 702415,
+      "byte_end_exclusive": 708764,
+      "bytes": 6349,
+      "sha256": "5138FD56D36FBE556F70356DFC948C16348078423AFA22F73D15A9A5B1A11743",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/algebra.tex#L19557-L19713"
+    },
+    {
+      "id": "target:EXTEND",
+      "file_id": "stacks:properties.tex",
+      "lines": [
+        2905,
+        2956
+      ],
+      "byte_start": 105018,
+      "byte_end_exclusive": 107129,
+      "bytes": 2111,
+      "sha256": "56155146C2D785B38DC80CA69B411B4767012C2AAFE313710AF3436EC8202AE4",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/properties.tex#L2905-L2956"
+    },
+    {
+      "id": "target:LES",
+      "file_id": "stacks:derived.tex",
+      "lines": [
+        3659,
+        3705
+      ],
+      "byte_start": 128560,
+      "byte_end_exclusive": 130160,
+      "bytes": 1600,
+      "sha256": "F9D789A6DC0BF0B02E1BD47DA6E30474E5C10B49E5330E103AFD92859366D12B",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/derived.tex#L3659-L3705"
+    },
+    {
+      "id": "target:CHI",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        7777,
+        7796
+      ],
+      "byte_start": 293724,
+      "byte_end_exclusive": 294365,
+      "bytes": 641,
+      "sha256": "2F264DCCABD06567EBA9F98FC8426A841757265401178706D38FCA657167635E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L7777-L7796"
+    },
+    {
+      "id": "target:ONE",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        7798,
+        7829
+      ],
+      "byte_start": 294366,
+      "byte_end_exclusive": 295714,
+      "bytes": 1348,
+      "sha256": "B7067811BB4FED591E5C370626CA4644FBFA160603A1BB4B89C2E41F1D4C6366",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L7798-L7829"
+    },
+    {
+      "id": "target:VAN",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        8007,
+        8044
+      ],
+      "byte_start": 302447,
+      "byte_end_exclusive": 303870,
+      "bytes": 1423,
+      "sha256": "92BF7DDBEAA458EC85F2D156796847258F0891911234D752AF19B4D847D18921",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L8007-L8044"
+    },
+    {
+      "id": "target:H0",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        8046,
+        8094
+      ],
+      "byte_start": 303871,
+      "byte_end_exclusive": 305948,
+      "bytes": 2077,
+      "sha256": "F200063ED7B8944E7E049E42BF550D0057DFFA5F4A4F9E02A9836F02B290E7D3",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L8046-L8094"
+    },
+    {
+      "id": "target:IDEM",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        8116,
+        8180
+      ],
+      "byte_start": 306633,
+      "byte_end_exclusive": 309706,
+      "bytes": 3073,
+      "sha256": "D74FD530E73D6BC446F8228DC711DA674008DD27CBA9CA3DE619D703930FC182",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L8116-L8180"
+    },
+    {
+      "id": "target:REDPROOF",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        8182,
+        8263
+      ],
+      "byte_start": 309707,
+      "byte_end_exclusive": 313367,
+      "bytes": 3660,
+      "sha256": "0948624D418BC6641498184496D2347DACE89EECE6D4AB1297E082E445D55CAF",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/perfect.tex#L8182-L8263"
+    },
+    {
+      "id": "target:FLATBC",
+      "file_id": "stacks:coherent.tex",
+      "lines": [
+        1014,
+        1117
+      ],
+      "byte_start": 38307,
+      "byte_end_exclusive": 42534,
+      "bytes": 4227,
+      "sha256": "586643A7A4F6786665B87B2A35A92CA74BA2BC6AD22A55C621130796D9092F1E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/coherent.tex#L1014-L1117"
+    },
+    {
+      "id": "target:RESFIELD",
+      "file_id": "stacks:algebra.tex",
+      "lines": [
+        45338,
+        45410
+      ],
+      "byte_start": 1677936,
+      "byte_end_exclusive": 1681247,
+      "bytes": 3311,
+      "sha256": "BC7407B1EC1B8A1C79D567DBE7D72486015A4AE0F897750D35E665B196745D35",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/algebra.tex#L45338-L45410"
+    },
+    {
+      "id": "target:ETALE",
+      "file_id": "stacks:morphisms.tex",
+      "lines": [
+        8425,
+        8465
+      ],
+      "byte_start": 305279,
+      "byte_end_exclusive": 306634,
+      "bytes": 1355,
+      "sha256": "FDFDBD2EC770151765E063468F27A8E500BC7AC9EEBF73E12C74FFB46426DCDC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/morphisms.tex#L8425-L8465"
+    },
+    {
+      "id": "target:SOPEN",
+      "file_id": "stacks:modules.tex",
+      "lines": [
+        4543,
+        4585
+      ],
+      "byte_start": 155728,
+      "byte_end_exclusive": 157413,
+      "bytes": 1685,
+      "sha256": "881FD6500F357DE2183B20F7815B34EA55F20C0E7C0F6EEE1D1366B984743C40",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/modules.tex#L4543-L4585"
+    },
+    {
+      "id": "target:ADD",
+      "file_id": "stacks:varieties.tex",
+      "lines": [
+        6226,
+        6260
+      ],
+      "byte_start": 243267,
+      "byte_end_exclusive": 244640,
+      "bytes": 1373,
+      "sha256": "DCC681EC8E568FD8920AEC2353C0221CB9D7B40CBA83E136DB89E50801954C29",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/varieties.tex#L6226-L6260"
+    },
+    {
+      "id": "target:HILB",
+      "file_id": "stacks:varieties.tex",
+      "lines": [
+        6898,
+        6988
+      ],
+      "byte_start": 269782,
+      "byte_end_exclusive": 273746,
+      "bytes": 3964,
+      "sha256": "A0BBE4A6A54FDD3746C3EC09388B6787A0FBCC597F4E2EDBBC0CB104F764B762",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/varieties.tex#L6898-L6988"
+    },
+    {
+      "id": "target:TWIST",
+      "file_id": "stacks:coherent.tex",
+      "lines": [
+        5326,
+        5363
+      ],
+      "byte_start": 208161,
+      "byte_end_exclusive": 209486,
+      "bytes": 1325,
+      "sha256": "C8DA5DE28E2C3FA86A8236DE8900A16C56BFD9CDA0C5A867396494546214954F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/coherent.tex#L5326-L5363"
+    },
+    {
+      "id": "target:LOCSEC",
+      "file_id": "stacks:properties.tex",
+      "lines": [
+        2240,
+        2354
+      ],
+      "byte_start": 80055,
+      "byte_end_exclusive": 84958,
+      "bytes": 4903,
+      "sha256": "D782A1561165F4FADB472741432696AD0FAC73039C3B24E0A6699516B761DEC0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/properties.tex#L2240-L2354"
+    },
+    {
+      "id": "target:AMPLE",
+      "file_id": "stacks:properties.tex",
+      "lines": [
+        4355,
+        4369
+      ],
+      "byte_start": 164035,
+      "byte_end_exclusive": 164490,
+      "bytes": 455,
+      "sha256": "BFF578290D7F07DA6CA4A221A7E999379D84AF8C400E036EC2410CAE0742ED1F",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/properties.tex#L4355-L4369"
+    },
+    {
+      "id": "target:COHREP",
+      "file_id": "stacks:coherent.tex",
+      "lines": [
+        7084,
+        7152
+      ],
+      "byte_start": 274200,
+      "byte_end_exclusive": 277145,
+      "bytes": 2945,
+      "sha256": "EB336A824734FB4D0665C1A74E04B37E5DE1C3208BE986E38662E4D0A134968C",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/coherent.tex#L7084-L7152"
+    },
+    {
+      "id": "ega:III.7.7.4:discovery",
+      "file_id": "discovery:ega3-7-7.tex",
+      "lines": [
+        438,
+        459
+      ],
+      "byte_start": 12260,
+      "byte_end_exclusive": 12928,
+      "bytes": 668,
+      "sha256": "21AFB5E0659FC4096A2D445708B6FE3A8D0858213D631FAEF186C2F12717DC78"
+    },
+    {
+      "id": "ega:III.7.7.4:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2435,
+        2451
+      ],
+      "byte_start": 87832,
+      "byte_end_exclusive": 88571,
+      "bytes": 739,
+      "sha256": "CEA72E2B1B13EEE617B525491B0BC25A6C974463649C7EC822258E0B21380C19",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2435-L2451"
+    },
+    {
+      "id": "ega:III.7.7.5:discovery",
+      "file_id": "discovery:ega3-7-7.tex",
+      "lines": [
+        41,
+        222
+      ],
+      "byte_start": 1318,
+      "byte_end_exclusive": 6812,
+      "bytes": 5494,
+      "sha256": "DD1FB5DBD576D01EFD40A38014C0EA208A25E12D25D9DA6F4C0DD39246BD7763"
+    },
+    {
+      "id": "ega:III.7.7.5:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2453,
+        2526
+      ],
+      "byte_start": 88572,
+      "byte_end_exclusive": 91295,
+      "bytes": 2723,
+      "sha256": "4CFF4CBB2573CD15D805CAC0944F19DA36511272A555A773D35253E791126F16",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2453-L2526"
+    },
+    {
+      "id": "ega:III.7.7.6:discovery",
+      "file_id": "discovery:ega3-7-7.tex",
+      "lines": [
+        224,
+        262
+      ],
+      "byte_start": 6813,
+      "byte_end_exclusive": 7801,
+      "bytes": 988,
+      "sha256": "70AC1207614C9F10058E49188B7F0F768D6666306D486B0FF3B16F997095488A"
+    },
+    {
+      "id": "ega:III.7.7.6:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2620,
+        2647
+      ],
+      "byte_start": 94800,
+      "byte_end_exclusive": 95924,
+      "bytes": 1124,
+      "sha256": "F5AC7D21B8D143DDB10E19FCC8CBB5A6DB8DAA7D0232AED2639CEB15A919771F",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2620-L2647"
+    },
+    {
+      "id": "ega:III.7.7.7:discovery",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        1,
+        91
+      ],
+      "byte_start": 0,
+      "byte_end_exclusive": 2366,
+      "bytes": 2366,
+      "sha256": "E80A915EC68714A6E74674195C4F87C7A7B8A31B828B13133C3CC3C765CF0E2C"
+    },
+    {
+      "id": "ega:III.7.7.7:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2649,
+        2688
+      ],
+      "byte_start": 95925,
+      "byte_end_exclusive": 97158,
+      "bytes": 1233,
+      "sha256": "1F497152254C315975B3581FEA3005647FE856A0316E7036D44ACFC56586D56D",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2649-L2688"
+    },
+    {
+      "id": "ega:III.7.7.8:discovery",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        93,
+        216
+      ],
+      "byte_start": 2367,
+      "byte_end_exclusive": 5160,
+      "bytes": 2793,
+      "sha256": "9D88552F72F02F7B3E8D531FC9B4BBFB3E4FB1E007193BF95190A77395DD04A8"
+    },
+    {
+      "id": "ega:III.7.7.8:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2738,
+        2774
+      ],
+      "byte_start": 98970,
+      "byte_end_exclusive": 100224,
+      "bytes": 1254,
+      "sha256": "484EE79D007436BD19C8B4B07EE82739AFA056F6EB9ECF5E40B8E4DDEA48B9B7",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2738-L2774"
+    },
+    {
+      "id": "ega:III.7.7.10:discovery",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        313,
+        353
+      ],
+      "byte_start": 7685,
+      "byte_end_exclusive": 8941,
+      "bytes": 1256,
+      "sha256": "D3484D341C5CE15BC46E20AFE6F5F167DEE7836EBB2EB8C2DDC0C4C3073FFCA0"
+    },
+    {
+      "id": "ega:III.7.7.10:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2906,
+        2941
+      ],
+      "byte_start": 105243,
+      "byte_end_exclusive": 106521,
+      "bytes": 1278,
+      "sha256": "15DE08C833134E28718E4B8AE848D81F760D8D43DE51E5B198BC4B3B3738CE74",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2906-L2941"
+    },
+    {
+      "id": "ega:III.7.7.11:discovery",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        355,
+        375
+      ],
+      "byte_start": 8942,
+      "byte_end_exclusive": 9753,
+      "bytes": 811,
+      "sha256": "A84799C953683984AF1A545C646615F1F5F3084CC50353F1762E20990F0C4D41"
+    },
+    {
+      "id": "ega:III.7.7.11:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2943,
+        2958
+      ],
+      "byte_start": 106522,
+      "byte_end_exclusive": 107335,
+      "bytes": 813,
+      "sha256": "948A438784C4D5B04EFBAC2B0DCFFA40470587EDF685E2849DF6EF146D4DB974",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2943-L2958"
+    },
+    {
+      "id": "ega:III.7.7.12:discovery",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        377,
+        490
+      ],
+      "byte_start": 9754,
+      "byte_end_exclusive": 12662,
+      "bytes": 2908,
+      "sha256": "1BD47E36871A7FE94F8689DB4EE1D074BCF3C629DF04E77944F8D2F49737CE58"
+    },
+    {
+      "id": "ega:III.7.7.12:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2960,
+        3029
+      ],
+      "byte_start": 107336,
+      "byte_end_exclusive": 110745,
+      "bytes": 3409,
+      "sha256": "71319092CEAEB813A92DD74FB6443857D810905B5AC364655D81009991CA63D9",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2960-L3029"
+    },
+    {
+      "id": "ega:III.7.8.3:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        53,
+        76
+      ],
+      "byte_start": 1893,
+      "byte_end_exclusive": 2716,
+      "bytes": 823,
+      "sha256": "93D40B6034375FE0816B7B263B480CE3C09DD80FA4036F83B4EB6AE49EDAD4FF"
+    },
+    {
+      "id": "ega:III.7.8.3:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3069,
+        3088
+      ],
+      "byte_start": 112653,
+      "byte_end_exclusive": 113531,
+      "bytes": 878,
+      "sha256": "5799214169F3C96D0F50BD05FDB1528CECC5F1A7D8011CF79A69827AECAD733C",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3069-L3088"
+    },
+    {
+      "id": "ega:III.7.8.4:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        78,
+        174
+      ],
+      "byte_start": 2717,
+      "byte_end_exclusive": 5957,
+      "bytes": 3240,
+      "sha256": "B3ACE0D34DBB39F7828A389795AE2313D02BD79B50C4DD3AD656777E2B94A930"
+    },
+    {
+      "id": "ega:III.7.8.4:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3090,
+        3157
+      ],
+      "byte_start": 113532,
+      "byte_end_exclusive": 116741,
+      "bytes": 3209,
+      "sha256": "D146BD4064F196D023942D419EAD7C70F2E13AC20C8257105391AD9B3D9098DD",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3090-L3157"
+    },
+    {
+      "id": "ega:III.7.8.5:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        176,
+        202
+      ],
+      "byte_start": 5958,
+      "byte_end_exclusive": 6893,
+      "bytes": 935,
+      "sha256": "4F11024BBAEBA6B1F37F077AC3BA6B62A00711B198ACE833A77AFCB9B5EF67F0"
+    },
+    {
+      "id": "ega:III.7.8.5:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3159,
+        3178
+      ],
+      "byte_start": 116742,
+      "byte_end_exclusive": 117691,
+      "bytes": 949,
+      "sha256": "288E959DCA4F60F9F56E2AAF734BABBF73AD7E9D073FDAB2EF0DE87713FC30D1",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3159-L3178"
+    },
+    {
+      "id": "ega:III.7.8.6:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        215,
+        308
+      ],
+      "byte_start": 7225,
+      "byte_end_exclusive": 10438,
+      "bytes": 3213,
+      "sha256": "F4240E5C22867E479D6FAE8FB09C8F3A3BAFD44D7B824F4F7700AB261FC7775F"
+    },
+    {
+      "id": "ega:III.7.8.6:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3187,
+        3256
+      ],
+      "byte_start": 118053,
+      "byte_end_exclusive": 121436,
+      "bytes": 3383,
+      "sha256": "0C60C89B0CFC496FE74626DBDD976C7D78C3069521F1B7DE8170CC97402A3F42",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3187-L3256"
+    },
+    {
+      "id": "ega:III.7.8.6.1:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        256,
+        280
+      ],
+      "byte_start": 8684,
+      "byte_end_exclusive": 9650,
+      "bytes": 966,
+      "sha256": "F955982C4E63AFC2E07ADB33CAF9C3EC2EBF4FD296717C65EE59971526503CC0"
+    },
+    {
+      "id": "ega:III.7.8.6.1:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3214,
+        3233
+      ],
+      "byte_start": 119642,
+      "byte_end_exclusive": 120631,
+      "bytes": 989,
+      "sha256": "166F95B287E9AFC4B41BEFE562D48138A988AC491844E6483C42F3DB4C872E3C",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3214-L3233"
+    },
+    {
+      "id": "ega:III.7.8.7:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        310,
+        334
+      ],
+      "byte_start": 10439,
+      "byte_end_exclusive": 11148,
+      "bytes": 709,
+      "sha256": "063B571CD83274A2C2B0A8417FC50F4208FF138E07DA360725C2690D818B801A"
+    },
+    {
+      "id": "ega:III.7.8.7:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3258,
+        3280
+      ],
+      "byte_start": 121437,
+      "byte_end_exclusive": 122097,
+      "bytes": 660,
+      "sha256": "391EFA30662BC1CDDC865949B0E657BCF92321E4A002788DAF977D1CB09EE0E2",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3258-L3280"
+    },
+    {
+      "id": "ega:III.7.8.8:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        336,
+        356
+      ],
+      "byte_start": 11149,
+      "byte_end_exclusive": 11656,
+      "bytes": 507,
+      "sha256": "01247909EFF2CDD6EF3DD77CF36EE4D99C07D82DE9DD2F4AA3ADC458A5DEE19F"
+    },
+    {
+      "id": "ega:III.7.8.8:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3282,
+        3292
+      ],
+      "byte_start": 122098,
+      "byte_end_exclusive": 122523,
+      "bytes": 425,
+      "sha256": "8238A26245AC6CDD5EC996A924417BD5399C8DB5FF4D24DE8DEF9AB7F72E4CC9",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3282-L3292"
+    },
+    {
+      "id": "ega:III.7.8.9:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        358,
+        380
+      ],
+      "byte_start": 11657,
+      "byte_end_exclusive": 12367,
+      "bytes": 710,
+      "sha256": "385F955990EFF3A7F5D17362E699A1C3F79DA7AE293094BF3A5BC362177F0642"
+    },
+    {
+      "id": "ega:III.7.8.9:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3294,
+        3312
+      ],
+      "byte_start": 122524,
+      "byte_end_exclusive": 123292,
+      "bytes": 768,
+      "sha256": "E8D876339389FBC8F3D7F26A8BA3CDD8893879DA99A39524FC123F2F11334D40",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3294-L3312"
+    },
+    {
+      "id": "ega:III.7.8.10:discovery",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        382,
+        425
+      ],
+      "byte_start": 12368,
+      "byte_end_exclusive": 13874,
+      "bytes": 1506,
+      "sha256": "A4A14BFD18479403C2A51E25E987329454F9813A812B444F86EB3D35D99444B9"
+    },
+    {
+      "id": "ega:III.7.8.10:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3314,
+        3343
+      ],
+      "byte_start": 123293,
+      "byte_end_exclusive": 124827,
+      "bytes": 1534,
+      "sha256": "474622AFA915961393DFF0EFCB0BC57C0B1506DB4617086277BD527CBD763824",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3314-L3343"
+    },
+    {
+      "id": "ega:III.7.9.1:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        7,
+        29
+      ],
+      "byte_start": 192,
+      "byte_end_exclusive": 1043,
+      "bytes": 851,
+      "sha256": "A62C22A0F244204E1EF3F74DEEC6DC6DD2DB101B3F547E170A4866E434EB40C5"
+    },
+    {
+      "id": "ega:III.7.9.1:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3350,
+        3368
+      ],
+      "byte_start": 125012,
+      "byte_end_exclusive": 125900,
+      "bytes": 888,
+      "sha256": "35D58924C4806EC5800B5111A931A67C53E67F7B68D54E39FEF9613ED3718AE2",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3350-L3368"
+    },
+    {
+      "id": "ega:III.7.9.2:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        31,
+        58
+      ],
+      "byte_start": 1044,
+      "byte_end_exclusive": 1862,
+      "bytes": 818,
+      "sha256": "5D24A7A41EFA0CE7CD9FBC9DEA7260991A067C181FAADE3D6A3FE0BB5E4DDAE7"
+    },
+    {
+      "id": "ega:III.7.9.2:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3370,
+        3390
+      ],
+      "byte_start": 125901,
+      "byte_end_exclusive": 126740,
+      "bytes": 839,
+      "sha256": "F3C01294F0CD30C4FD7AFCB3E97E5D2A82CE3B4A116DF40034F9DE139355C36D",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3370-L3390"
+    },
+    {
+      "id": "ega:III.7.9.3:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        60,
+        70
+      ],
+      "byte_start": 1863,
+      "byte_end_exclusive": 2101,
+      "bytes": 238,
+      "sha256": "2E0433C8695FD4B5FE3F736A10C35753AA7A4DD744E22E7B1FF79280C7A45748"
+    },
+    {
+      "id": "ega:III.7.9.3:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3392,
+        3401
+      ],
+      "byte_start": 126741,
+      "byte_end_exclusive": 126995,
+      "bytes": 254,
+      "sha256": "03A2721CB228F0D52E586BE0CCC2369FA8BE96E7AEE252C8795F6F8C417ED828",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3392-L3401"
+    },
+    {
+      "id": "ega:III.7.9.4:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        72,
+        111
+      ],
+      "byte_start": 2102,
+      "byte_end_exclusive": 3139,
+      "bytes": 1037,
+      "sha256": "3CC4C172D318CEEB09D3576BFDB3FEE6488DCCFE81826DAC27D74913A4D80DD0"
+    },
+    {
+      "id": "ega:III.7.9.4:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3403,
+        3437
+      ],
+      "byte_start": 126996,
+      "byte_end_exclusive": 128084,
+      "bytes": 1088,
+      "sha256": "B1089F94C8572D520DAFC3B76F854BA9BD3A094DE4B152C71EBEEE3139831FC4",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3403-L3437"
+    },
+    {
+      "id": "ega:III.7.9.5:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        113,
+        135
+      ],
+      "byte_start": 3140,
+      "byte_end_exclusive": 3908,
+      "bytes": 768,
+      "sha256": "CE5B81B885AB244DB408D3A7488AB3027C7E4EB0E2C6CF67973A5F30E767CCDA"
+    },
+    {
+      "id": "ega:III.7.9.5:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3439,
+        3462
+      ],
+      "byte_start": 128085,
+      "byte_end_exclusive": 128945,
+      "bytes": 860,
+      "sha256": "F9B8B5B1E6D0F577A4FC7F365138124373026D1BC406871CB4255BCF1BB554F4",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3439-L3462"
+    },
+    {
+      "id": "ega:III.7.9.6:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        137,
+        217
+      ],
+      "byte_start": 3909,
+      "byte_end_exclusive": 6519,
+      "bytes": 2610,
+      "sha256": "A925E5FFDB635798D603F9D1285D4110FD36A99B97473BB6720AA39B0E969E40"
+    },
+    {
+      "id": "ega:III.7.9.6:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3464,
+        3530
+      ],
+      "byte_start": 128946,
+      "byte_end_exclusive": 131681,
+      "bytes": 2735,
+      "sha256": "319B44E17469DA82271E401AC8EB6AFC14BE914001099449147EC87094AECBC6",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3464-L3530"
+    },
+    {
+      "id": "ega:III.7.9.7:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        219,
+        258
+      ],
+      "byte_start": 6520,
+      "byte_end_exclusive": 7702,
+      "bytes": 1182,
+      "sha256": "83972B0B1F32EDA738D6742CA446C6B70F421871827E2B4261ABDA52F2F91E86"
+    },
+    {
+      "id": "ega:III.7.9.7:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3532,
+        3561
+      ],
+      "byte_start": 131682,
+      "byte_end_exclusive": 132863,
+      "bytes": 1181,
+      "sha256": "3704DEFC8D3581D310B75355D4D14AFF3AF64C403016CB7C10ED6D8443CFA849",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3532-L3561"
+    },
+    {
+      "id": "ega:III.7.9.8:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        260,
+        302
+      ],
+      "byte_start": 7703,
+      "byte_end_exclusive": 8954,
+      "bytes": 1251,
+      "sha256": "EFA5CFE255167D57651FD4ECBCA191F91221EB50F795206DE23F0A9942ED8ADC"
+    },
+    {
+      "id": "ega:III.7.9.8:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3563,
+        3593
+      ],
+      "byte_start": 132864,
+      "byte_end_exclusive": 133989,
+      "bytes": 1125,
+      "sha256": "D8546B3AF72D8645752396F7F63233DA80BF819BED88315D6ED90014050D05DB",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3563-L3593"
+    },
+    {
+      "id": "ega:III.7.9.9:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        304,
+        318
+      ],
+      "byte_start": 8955,
+      "byte_end_exclusive": 9449,
+      "bytes": 494,
+      "sha256": "8F3FDFEA84A9C4B28F8F2BCEF9EFE46E408C54ADD9354124483195BEE5BFF10E"
+    },
+    {
+      "id": "ega:III.7.9.9:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3595,
+        3608
+      ],
+      "byte_start": 133990,
+      "byte_end_exclusive": 134544,
+      "bytes": 554,
+      "sha256": "F29BE2973648F32802056551D59AA0CBC40C998A6C47448550370BE12DE63140",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3595-L3608"
+    },
+    {
+      "id": "ega:III.7.9.10:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        322,
+        334
+      ],
+      "byte_start": 9466,
+      "byte_end_exclusive": 9876,
+      "bytes": 410,
+      "sha256": "5F90B531A18230A3CEA635444BEA2F84E4329ED23F892DFB047D6D3B9541CDD0"
+    },
+    {
+      "id": "ega:III.7.9.10:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3612,
+        3622
+      ],
+      "byte_start": 134563,
+      "byte_end_exclusive": 135005,
+      "bytes": 442,
+      "sha256": "25CCBEBA01BF658A141E047429E7123955ECA4320D35B175F0D7DB58527B2A2F",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3612-L3622"
+    },
+    {
+      "id": "ega:III.7.9.10.1:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        336,
+        355
+      ],
+      "byte_start": 9877,
+      "byte_end_exclusive": 10522,
+      "bytes": 645,
+      "sha256": "490A2611B2E216821C95AF57B30F3D920D650BD40BC50BBE7C1D2FC5E5A03517"
+    },
+    {
+      "id": "ega:III.7.9.10.1:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3624,
+        3641
+      ],
+      "byte_start": 135006,
+      "byte_end_exclusive": 135656,
+      "bytes": 650,
+      "sha256": "36B5C9545BC4DB74E62A9E879D8918F705E8803495D1DF514AC3BC7896FA3BF5",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3624-L3641"
+    },
+    {
+      "id": "ega:III.7.9.11:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        358,
+        411
+      ],
+      "byte_start": 10542,
+      "byte_end_exclusive": 12227,
+      "bytes": 1685,
+      "sha256": "D10DE88A8478E71DE6A347B416C89FB1B708391474FCD0AE91DAB69D6CB42B5C"
+    },
+    {
+      "id": "ega:III.7.9.11:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3644,
+        3680
+      ],
+      "byte_start": 135676,
+      "byte_end_exclusive": 137444,
+      "bytes": 1768,
+      "sha256": "4BC7BB95A2EA9BF8EB38607ABEDCBBFD0A03327E6D39C7D3D22FC4864BA9E2A3",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3644-L3680"
+    },
+    {
+      "id": "ega:III.7.9.12:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        413,
+        458
+      ],
+      "byte_start": 12228,
+      "byte_end_exclusive": 13595,
+      "bytes": 1367,
+      "sha256": "522203C29C5CE5C4E0FD8DC7AA2D3FD7E0F7F30EC708EE187264263CE44868C8"
+    },
+    {
+      "id": "ega:III.7.9.12:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3682,
+        3714
+      ],
+      "byte_start": 137445,
+      "byte_end_exclusive": 138807,
+      "bytes": 1362,
+      "sha256": "E8B048405E3EB7B74FA524281F15FF2BE9978B62C7DDE60C31D7AE1E23927716",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3682-L3714"
+    },
+    {
+      "id": "ega:III.7.9.13:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        466,
+        490
+      ],
+      "byte_start": 13865,
+      "byte_end_exclusive": 14584,
+      "bytes": 719,
+      "sha256": "E887E2B51E5860655FA0A240EE1F3137166CB87F6345C12CDD25BF3697C40803"
+    },
+    {
+      "id": "ega:III.7.9.13:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3721,
+        3738
+      ],
+      "byte_start": 139068,
+      "byte_end_exclusive": 139771,
+      "bytes": 703,
+      "sha256": "2EDF6836756616251D753DCE45F6D15096CBC153407C156F94595D8B8EA1750E",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3721-L3738"
+    },
+    {
+      "id": "ega:III.7.9.14:discovery",
+      "file_id": "discovery:ega3-7-9.tex",
+      "lines": [
+        496,
+        551
+      ],
+      "byte_start": 14700,
+      "byte_end_exclusive": 16654,
+      "bytes": 1954,
+      "sha256": "E5A3A27A45DB4E114EF20505DCC0EECC4EB5126B09ACF093A7F217A3339FB109"
+    },
+    {
+      "id": "ega:III.7.9.14:french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        3743,
+        3780
+      ],
+      "byte_start": 139894,
+      "byte_end_exclusive": 141935,
+      "bytes": 2041,
+      "sha256": "4E08D944B91036FD1634D4A0FBDE03B9133AC6BE53DD733F3BD8CABFAC976BC3",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3743-L3780"
+    },
+    {
+      "id": "remainder:ega:III.7.7.1",
+      "file_id": "discovery:ega3-7-7.tex",
+      "lines": [
+        9,
+        38
+      ],
+      "byte_start": 268,
+      "byte_end_exclusive": 1270,
+      "bytes": 1002,
+      "sha256": "4ED8BA8901D806643E68D65954D12F1898A9F6542A91BC1ADCACED39220F7124"
+    },
+    {
+      "id": "remainder:ega:III.7.7.2",
+      "file_id": "discovery:ega3-7-7.tex",
+      "lines": [
+        265,
+        355
+      ],
+      "byte_start": 7804,
+      "byte_end_exclusive": 10274,
+      "bytes": 2470,
+      "sha256": "A888ED044B87C82847DB418346AFA594CF4986B55E85EACE2590C8CF8D863507"
+    },
+    {
+      "id": "remainder:ega:III.7.7.3",
+      "file_id": "discovery:ega3-7-7.tex",
+      "lines": [
+        357,
+        436
+      ],
+      "byte_start": 10275,
+      "byte_end_exclusive": 12259,
+      "bytes": 1984,
+      "sha256": "1F050474DB3078E599ED0B5D4BF09FB90BE3ECD6A5F976A0CF209A82EA28C5E0"
+    },
+    {
+      "id": "remainder:ega:III.7.7.9",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        219,
+        311
+      ],
+      "byte_start": 5180,
+      "byte_end_exclusive": 7684,
+      "bytes": 2504,
+      "sha256": "F58135307EC575599589619C77E9CACD479BAEB4CABA8195FF781BCB70C19130"
+    },
+    {
+      "id": "remainder:ega:III.7.7.12",
+      "file_id": "discovery:ega3-7-7-rest.tex",
+      "lines": [
+        377,
+        490
+      ],
+      "byte_start": 9754,
+      "byte_end_exclusive": 12662,
+      "bytes": 2908,
+      "sha256": "1BD47E36871A7FE94F8689DB4EE1D074BCF3C629DF04E77944F8D2F49737CE58"
+    },
+    {
+      "id": "remainder:ega:III.7.8.1",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        6,
+        36
+      ],
+      "byte_start": 145,
+      "byte_end_exclusive": 1330,
+      "bytes": 1185,
+      "sha256": "2E8A8CADC2DC543CE4E5B287DC72B41B4E2C3ED2CF6BE222B7621CFDEEAAC460"
+    },
+    {
+      "id": "remainder:ega:III.7.8.2",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        38,
+        51
+      ],
+      "byte_start": 1331,
+      "byte_end_exclusive": 1892,
+      "bytes": 561,
+      "sha256": "F1F7D342672291CB01F29879E40EBC9BA6F0250B91D07481485A822EDF892965"
+    },
+    {
+      "id": "remainder:ega:III.7.8.10",
+      "file_id": "discovery:ega3-7-8.tex",
+      "lines": [
+        382,
+        425
+      ],
+      "byte_start": 12368,
+      "byte_end_exclusive": 13874,
+      "bytes": 1506,
+      "sha256": "A4A14BFD18479403C2A51E25E987329454F9813A812B444F86EB3D35D99444B9"
+    },
+    {
+      "id": "target:PERF",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        19511,
+        19537
+      ],
+      "byte_start": 734151,
+      "byte_end_exclusive": 735304,
+      "bytes": 1153,
+      "sha256": "5CD41201EF6EDBABDB6A23C9ADDF7421EECC52990850962263ED27E56E02ECA0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/75aec3348656b93fc75fae9759472ff0fa8615d3/more-algebra.tex#L19511-L19537"
+    }
+  ],
+  "tag_bindings": [
+    {
+      "id": "PCAFF",
+      "label": "more-algebra-lemma-pseudo-coherent",
+      "tag": "064U",
+      "url": "https://stacks.math.columbia.edu/tag/064U"
+    },
+    {
+      "id": "PC",
+      "label": "perfect-lemma-base-change-tensor-pseudo-coherent",
+      "tag": "0CSC",
+      "url": "https://stacks.math.columbia.edu/tag/0CSC"
+    },
+    {
+      "id": "PF",
+      "label": "perfect-lemma-base-change-tensor-perfect",
+      "tag": "0A1H",
+      "url": "https://stacks.math.columbia.edu/tag/0A1H"
+    },
+    {
+      "id": "BC",
+      "label": "perfect-lemma-base-change-tensor",
+      "tag": "0A1D",
+      "url": "https://stacks.math.columbia.edu/tag/0A1D"
+    },
+    {
+      "id": "PROJ",
+      "label": "perfect-lemma-cohomology-base-change",
+      "tag": "08EU",
+      "url": "https://stacks.math.columbia.edu/tag/08EU"
+    },
+    {
+      "id": "JUMP",
+      "label": "perfect-lemma-jump-loci",
+      "tag": "0BDI",
+      "url": "https://stacks.math.columbia.edu/tag/0BDI"
+    },
+    {
+      "id": "CUT",
+      "label": "more-algebra-lemma-better-cut-complex-in-two",
+      "tag": "0A1U",
+      "url": "https://stacks.math.columbia.edu/tag/0A1U"
+    },
+    {
+      "id": "ISO",
+      "label": "more-algebra-lemma-isolate-a-cohomology-group",
+      "tag": "0A1V",
+      "url": "https://stacks.math.columbia.edu/tag/0A1V"
+    },
+    {
+      "id": "MIN",
+      "label": "more-algebra-lemma-lift-pseudo-coherent-from-residue-field",
+      "tag": "0BCC",
+      "url": "https://stacks.math.columbia.edu/tag/0BCC"
+    },
+    {
+      "id": "MINP",
+      "label": "more-algebra-lemma-lift-perfect-from-residue-field",
+      "tag": "0BCD",
+      "url": "https://stacks.math.columbia.edu/tag/0BCD"
+    },
+    {
+      "id": "KRULL",
+      "label": "algebra-lemma-intersection-powers-ideal-module",
+      "tag": "00IQ",
+      "url": "https://stacks.math.columbia.edu/tag/00IQ"
+    },
+    {
+      "id": "FP",
+      "label": "algebra-lemma-finite-projective",
+      "tag": "00NX",
+      "url": "https://stacks.math.columbia.edu/tag/00NX"
+    },
+    {
+      "id": "EXTEND",
+      "label": "properties-lemma-extend-trivial",
+      "tag": "01PE",
+      "url": "https://stacks.math.columbia.edu/tag/01PE"
+    },
+    {
+      "id": "LES",
+      "label": "derived-lemma-cohomology-homological",
+      "tag": "05RS",
+      "url": "https://stacks.math.columbia.edu/tag/05RS"
+    },
+    {
+      "id": "CHI",
+      "label": "perfect-lemma-chi-locally-constant",
+      "tag": "0BDJ",
+      "url": "https://stacks.math.columbia.edu/tag/0BDJ"
+    },
+    {
+      "id": "ONE",
+      "label": "perfect-lemma-open-where-cohomology-in-degree-i-rank-r",
+      "tag": "0BDK",
+      "url": "https://stacks.math.columbia.edu/tag/0BDK"
+    },
+    {
+      "id": "VAN",
+      "label": "perfect-lemma-vanishing-implies-locally-free",
+      "tag": "0D4E",
+      "url": "https://stacks.math.columbia.edu/tag/0D4E"
+    },
+    {
+      "id": "H0",
+      "label": "perfect-lemma-proper-flat-h0",
+      "tag": "0E62",
+      "url": "https://stacks.math.columbia.edu/tag/0E62"
+    },
+    {
+      "id": "IDEM",
+      "label": "perfect-lemma-proper-idempotent-on-fibre",
+      "tag": "0G7X",
+      "url": "https://stacks.math.columbia.edu/tag/0G7X"
+    },
+    {
+      "id": "REDPROOF",
+      "label": "perfect-lemma-proper-flat-geom-red",
+      "tag": "0G7Y",
+      "url": "https://stacks.math.columbia.edu/tag/0G7Y"
+    },
+    {
+      "id": "FLATBC",
+      "label": "coherent-lemma-flat-base-change-cohomology",
+      "tag": "02KH",
+      "url": "https://stacks.math.columbia.edu/tag/02KH"
+    },
+    {
+      "id": "RESFIELD",
+      "label": "algebra-lemma-flat-local-given-residue-field",
+      "tag": "03C3",
+      "url": "https://stacks.math.columbia.edu/tag/03C3"
+    },
+    {
+      "id": "ETALE",
+      "label": "morphisms-lemma-set-points-where-fibres-etale",
+      "tag": "0476",
+      "url": "https://stacks.math.columbia.edu/tag/0476"
+    },
+    {
+      "id": "SOPEN",
+      "label": "modules-lemma-s-open",
+      "tag": "01CY",
+      "url": "https://stacks.math.columbia.edu/tag/01CY"
+    },
+    {
+      "id": "ADD",
+      "label": "varieties-lemma-euler-characteristic-additive",
+      "tag": "08AA",
+      "url": "https://stacks.math.columbia.edu/tag/08AA"
+    },
+    {
+      "id": "HILB",
+      "label": "varieties-lemma-hilbert-polynomial",
+      "tag": "08AC",
+      "url": "https://stacks.math.columbia.edu/tag/08AC"
+    },
+    {
+      "id": "TWIST",
+      "label": "coherent-lemma-kill-by-twisting",
+      "tag": "02O1",
+      "url": "https://stacks.math.columbia.edu/tag/02O1"
+    },
+    {
+      "id": "LOCSEC",
+      "label": "properties-lemma-invert-s-sections",
+      "tag": "01PW",
+      "url": "https://stacks.math.columbia.edu/tag/01PW"
+    },
+    {
+      "id": "AMPLE",
+      "label": "properties-definition-ample",
+      "tag": "01PS",
+      "url": "https://stacks.math.columbia.edu/tag/01PS"
+    },
+    {
+      "id": "COHREP",
+      "label": "coherent-lemma-perfect-direct-image",
+      "tag": "07VK",
+      "url": "https://stacks.math.columbia.edu/tag/07VK"
+    },
+    {
+      "id": "PERF",
+      "label": "more-algebra-lemma-perfect",
+      "tag": "0658",
+      "url": "https://stacks.math.columbia.edu/tag/0658"
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "ega:III.7.7.4",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Proper f over affine Noetherian A; bounded-below coherent base-flat homological complex. Represent all T_p(M) by one bounded-below finite-free A-complex.",
+      "source_spans": [
+        "ega:III.7.7.4:french_authority",
+        "ega:III.7.7.4:discovery"
+      ],
+      "target_evidence": [
+        "PC",
+        "PCAFF",
+        "PROJ",
+        "MIN",
+        "BC"
+      ],
+      "derivation": [
+        "Put K=Rf_*P^bullet, with cohomological degree i=-p. PC applies with E=O_X and G=P^bullet; locally Noetherian plus proper implies finite presentation.",
+        "Pseudo-coherence on an affine gives a bounded-above finite-free representative. PROJ and base-flatness identify K tensor^L M with Rf_*(P^bullet tensor M) for every module M.",
+        "Reverse indices. This treats the entire bounded-below homological complex, not just a sheaf in degree zero."
+      ],
+      "primary_challenge": "0CSC with E=O_X and the bounded-above base-flat input gives a pseudo-coherent direct image; 064U gives one affine finite-free model. The projection formula computes all coefficient modules, with i=-p.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.5",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Proper f, locally Noetherian Y, bounded-below coherent Y-flat complex: upper semicontinuity and equivalence of right exactness, tensor representation, canonical exchange for modules, left exactness and coherent Hom representation of T_(p-1), affine-local exactness, and exchange under every base change.",
+      "source_spans": [
+        "ega:III.7.7.5:french_authority",
+        "ega:III.7.7.5:discovery"
+      ],
+      "target_evidence": [
+        "PC",
+        "PROJ",
+        "BC",
+        "JUMP",
+        "CUT",
+        "EXTEND",
+        "LES"
+      ],
+      "derivation": [
+        "For i=-p set K=Rf_*P^bullet. PC and PROJ give T_p(M)=H^i(K tensor^L M). JUMP proves semicontinuity for this full bounded-above-complex generality.",
+        "On affines the finite-free complex model shows H^i commutes with arbitrary direct sums. If this functor is right exact, applying it to a free presentation identifies it canonically with H^i(K) tensor -. Conversely tensor is right exact. This proves a,a',a'' including canonicity.",
+        "The adjacent connecting map in LES proves H^i right exact iff H^(i+1) left exact, which is a iff b.",
+        "Right exactness implies the residue surjection. CUT splits K locally into a lower part through degree i and a finite-projective upper part beginning in degree i+1. After tensoring M the lower part contributes no H^(i+1); the upper part contributes ker(E^(i+1) tensor M -> E^(i+2) tensor M). This equals Hom(coker((E^(i+2))^vee -> (E^(i+1))^vee),M). The cokernel is coherent. These local representing objects glue uniquely with their representations, proving b'. Hom functors are left exact, giving the reverse implication.",
+        "EXTEND extends the middle object and subobject of a quasi-coherent short exact sequence from an affine open, then one takes the quotient. Such open immersions are quasi-compact in a locally Noetherian scheme. Thus exactness is affine-local, proving c and justifying sheaf gluing.",
+        "BC gives arbitrary base-change exchange from the module formula. Conversely test on A'=A direct-sum M with M a square-zero ideal and take the M summand. This yields canonical exchange for every A-module M, proving d implies a''. No field-only test replaces arbitrary base changes."
+      ],
+      "primary_challenge": "0BDI applies to pseudo-coherent, not only perfect objects. On affines, finite-free terms make the cohomology functor commute with direct sums; a free presentation proves the canonical tensor formula from right exactness. The connecting map in the coefficient long exact sequence gives the adjacent left-exact equivalence. 0A1U splits off an upper finite-projective complex; dualizing its first differential gives the coherent Hom-representing cokernel. These representations restrict and glue by Yoneda. For a locally Noetherian base, every affine-open inclusion is quasi-compact: its intersection with any affine open is an open subset of a Noetherian space. 01PE extends the middle term and kernel of a short exact sequence, so locality uses no separatedness of the base. Arbitrary exchange implies the module formula by the square-zero extension A plus M; testing only residue fields would not prove this implication.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.6",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Proper f over locally Noetherian Y and coherent Y-flat F: coherent Q represents f_*(F tensor M) as sheaf Hom and its global sections as Hom, uniquely with representation.",
+      "source_spans": [
+        "ega:III.7.7.6:french_authority",
+        "ega:III.7.7.6:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "PROJ",
+        "MINP"
+      ],
+      "derivation": [
+        "PF gives perfect K=Rf_*F with Tor amplitude locally in [0,b], since F tensor M has no negative cohomology for every M.",
+        "MINP gives locally a finite-projective representative E0 -> E1 -> ... with no negative terms. Set Q=coker((E1)^vee -> (E0)^vee). Then Hom(Q,M)=ker(E0 tensor M -> E1 tensor M)=H0(K tensor^L M).",
+        "PROJ identifies this with f_*(F tensor M). Coherent local representatives glue by the unique isomorphisms preserving representation. Taking global sections gives the second formula."
+      ],
+      "primary_challenge": "For a single coherent base-flat sheaf, the perfect direct image has nonnegative Tor amplitude. A local nonnegative finite-projective model gives Q=coker((E^1)^vee -> (E^0)^vee). Its Hom functor is precisely H^0 after arbitrary coefficient tensor. Local representations glue compatibly and their global sections give the stated global Hom formula.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.7",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Two coherent Y-flat sheaves under proper f and a map between them: coherent representation of the kernel of their two section functors, in sheaf and global forms.",
+      "source_spans": [
+        "ega:III.7.7.7:french_authority",
+        "ega:III.7.7.7:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "PROJ",
+        "MINP"
+      ],
+      "derivation": [
+        "Apply the individually justified 7.7.6 row to F and F'. The induced natural transformation is represented contravariantly by Q' -> Q.",
+        "R=coker(Q' -> Q) is coherent. Left exactness of Hom(-,M) identifies Hom(R,M) with the prescribed kernel.",
+        "The construction restricts to opens, so it provides the sheaf identity as well as its global-section identity."
+      ],
+      "primary_challenge": "The natural map between the two represented functors corresponds contravariantly to Q' -> Q. Taking its coherent cokernel represents the required kernel, both as a sheaf and on global sections.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.8",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "F coherent and base-flat, G with a global two-term finite-vector-bundle presentation under proper f: coherent representation of f_*Hom(G,F tensor M) and global Hom.",
+      "source_spans": [
+        "ega:III.7.7.8:french_authority",
+        "ega:III.7.7.8:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "PROJ",
+        "MINP"
+      ],
+      "derivation": [
+        "Retain the specified global presentation E1 -> E0 -> G -> 0. Set Fi=Ei^vee tensor F; these remain coherent and base-flat.",
+        "Finite-vector-bundle duality gives Hom(Ei,F tensor M)=Fi tensor M. Left exactness of sheaf Hom and f_* reduces the desired functor to the kernel of the Fi section functors.",
+        "Apply the individually justified 7.7.7 row. No claim here removes the presentation hypothesis on G."
+      ],
+      "primary_challenge": "Retain the stated global presentation E_1 -> E_0 -> G -> 0. Each E_j dual tensor F remains coherent and base-flat. Left exactness of sheaf Hom and f_* reduces the assertion to III.7.7.7. No resolution-property hypothesis is silently removed.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.10",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "At y, right exactness iff residue surjectivity iff surjectivity from every infinitesimal thickening; the locus is the largest open of right exactness.",
+      "source_spans": [
+        "ega:III.7.7.10:french_authority",
+        "ega:III.7.7.10:discovery"
+      ],
+      "target_evidence": [
+        "PC",
+        "PROJ",
+        "CUT",
+        "MIN",
+        "KRULL"
+      ],
+      "derivation": [
+        "Set A=O_(Y,y), i=-p. MIN gives a minimal finite-free complex F with all differentials zero modulo m and rank F^i=dim H^i(F tensor k). Right exactness immediately implies both surjectivity conditions.",
+        "The residue surjection implies the CUT splitting on a neighborhood. Its upper part has Tor amplitude >=i+1; the lower part has no cohomology >i. Consequently H^i(K tensor^L -)=H^i(K) tensor -, proving neighborhood right exactness.",
+        "For the infinitesimal implication, surjectivity H^i(F tensor A/m^(n+1)) -> F^i tensor k supplies cycle columns generating F^i tensor A/m^(n+1) by Nakayama. Hence d^i is zero modulo m^(n+1). All such powers force every entry of d^i to vanish by KRULL. Thus H^i(F tensor -)=coker(d^(i-1) tensor -), a right-exact functor.",
+        "CUT supplies an open neighborhood at every satisfying point; restriction gives maximality. The powers condition uses nonnegative n, the meaningful infinitesimal-thickening indices."
+      ],
+      "primary_challenge": "In a minimal bounded-above finite-free local model F, H^i(F tensor k)=F^i tensor k. Surjectivity from A/m^(n+1) supplies cycle vectors generating F^i tensor A/m^(n+1) by Nakayama, so the outgoing differential is zero modulo that power. Krull intersection for the Noetherian local ring makes every matrix coefficient zero. The resulting cokernel functor is right exact. Conversely right exactness gives both surjections. 0A1U spreads the residue condition to an open neighborhood and yields the claimed largest open locus.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.11",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Right or left exactness persists under arbitrary base change and is detected by faithfully flat base change.",
+      "source_spans": [
+        "ega:III.7.7.11:french_authority",
+        "ega:III.7.7.11:discovery"
+      ],
+      "target_evidence": [
+        "BC",
+        "PROJ",
+        "CUT",
+        "LES",
+        "FLATBC"
+      ],
+      "derivation": [
+        "On affines use the finite-free model. After A -> B its functor on B-modules is the original functor evaluated on underlying A-modules; either exactness property persists.",
+        "For faithfully flat A -> B, tensor the kernels or cokernels testing exactness with B. Flat tensor commutes with cohomology of the complex and is faithful, so their vanishing descends.",
+        "For schemes use faithfully flat local maps at points over y and the open-local criterion 7.7.10. The adjacent right/left equivalence in LES also transfers the left-exact case."
+      ],
+      "primary_challenge": "After A -> B the finite-free model tensored with a B-module is the original model on its underlying A-module, preserving either one-sided exactness. Faithfully flat tensor commutes with cohomology and detects exactness; local faithful-flat maps at points give descent on schemes.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.12",
+      "classification": "partial",
+      "counted_supported": false,
+      "hypotheses_and_scope": "(i) Finite base-flat complexes have finite-projective models for all M; for a single sheaf there are no positive homological terms. (ii) Nonflat extension using EGA global hypertor.",
+      "source_spans": [
+        "ega:III.7.7.12:french_authority",
+        "ega:III.7.7.12:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "PROJ",
+        "MINP",
+        "PC",
+        "PERF"
+      ],
+      "derivation": [
+        "Part (i): PF and PROJ give one perfect model computing every M. On an affine, PERF (0658) provides a global finite-projective representative in the uniform Tor interval. Reverse indices for the homological model; a single sheaf has nonnegative cohomological Tor amplitude.",
+        "A finite affine covering and finite input complex also give the coefficient-independent finite Cech degree range. This supports the existence conclusion, without silently identifying the English cycle notation with EGA's primed cycle/cokernel notation."
+      ],
+      "primary_challenge": "Part (i) is supported: 0A1H gives perfectness; 0658 gives a global affine finite-projective representative in the coefficient-uniform Tor interval. For a sheaf this interval starts in cohomological degree zero. A finite alternating Cech complex bounds the interval independently of coefficients. Part (ii) remains partial because the exact historical global-hypertor convention and nonflat exchange map have not been identified with the modern derived functor.",
+      "unresolved_clauses": [
+        "Part (ii): the exact identification of EGA global hypertor Tor^Y_p(f,1_Y;P,M) with the derived projection-formula functor has not been bound to III.6 in this batch. Ordinary versus derived nonflat pullback must remain distinguished."
+      ]
+    },
+    {
+      "source_id": "ega:III.7.8.3",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "For the quasi-compact separated, not necessarily proper/Noetherian setting of 7.8.1, exactness of T_p near y is equivalent to each stated pair of neighboring one-sided exactness conditions.",
+      "source_spans": [
+        "ega:III.7.8.3:french_authority",
+        "ega:III.7.8.3:discovery"
+      ],
+      "target_evidence": [
+        "LES"
+      ],
+      "derivation": [
+        "This is a statement about the homological functor already specified by the source, not a substitution by coherent-sheaf cohomology.",
+        "For every short exact input sequence, the connecting map T_(p+1)(C) -> T_p(A) vanishes iff T_(p+1) is right exact iff T_p is left exact. The next connecting map vanishes iff T_p is right exact iff T_(p-1) is left exact.",
+        "Thus each of b,c,d is precisely left and right exactness of T_p together. The calculation works on every neighborhood and uses no finiteness assumption."
+      ],
+      "primary_challenge": "For every short exact coefficient sequence, the two adjacent connecting maps vanish exactly when the indicated neighboring right/left exactness properties hold. Each listed pair is equivalent to exactness of T_p. This only uses the source homological functor and does not impose properness or coherence on its more general setting.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.4",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Proper bounded-below coherent base-flat complex: neighborhood exactness, stalk exactness, eventual Artinian length equality, and locally free canonical exchange are equivalent. They imply constant nearby fiber dimension, with converse at a reduced point.",
+      "source_spans": [
+        "ega:III.7.8.4:french_authority",
+        "ega:III.7.8.4:discovery"
+      ],
+      "target_evidence": [
+        "PC",
+        "PROJ",
+        "MIN",
+        "MINP",
+        "KRULL",
+        "CUT",
+        "ISO",
+        "FP",
+        "JUMP"
+      ],
+      "derivation": [
+        "Let i=-p and use a minimal finite-free local model F, with r=rank F^i=dim H^i(F tensor k). For B=A/m^(n+1), length H^i(F tensor B)=r length B - length im(d^(i-1)_B) - length im(d^i_B). The source equality for all sufficiently large n makes both adjacent matrices zero modulo those powers. KRULL then makes them zero over A.",
+        "Conversely exactness implies a tensor functor by a finite free module (7.7.5 and FP); hence all the length equalities hold. This proves the complete length criterion for the bounded-above complex, not just degree-zero sheaf cohomology.",
+        "Neighboring residue surjections and ISO spread the isolated finite-free cohomology summand to a neighborhood. PROJ gives canonical exchange there for every M. Such a tensor formula is exact, proving a,b,d and connecting them to c.",
+        "The isolated summand gives constant nearby fiber dimension. For the reduced-point converse, take the stupid (termwise) truncation of a finite-free representative below degree i-1; degree-i cohomology after tensoring any M is unchanged. Apply MINP to this perfect finite complex near y. Its degree-i term has rank r. Constancy of fiber H^i dimension at r forces both adjacent matrix ranks to be zero at every nearby residue field. Their finitely many entries are nilpotent; their germs at the reduced local ring O_(Y,y) vanish, so they all vanish after shrinking. The middle functor is then free tensor and exact."
+      ],
+      "primary_challenge": "For B=A/m^(n+1), the two short exact sequences defining cycles and boundaries give length H^i(F tensor B)=rank(F^i) length(B)-length im(d^(i-1)_B)-length im(d^i_B). Eventual equality makes both images zero for every sufficiently large n, hence both matrices zero by Krull intersection. Conversely exactness gives a finite-free tensor functor and all these equalities. Adjacent right exactness and 0A1V spread the isolated free summand. For the reduced-point converse, stupidly truncate below i-1 before applying 0BCD. This preserves H^i for all coefficient modules. The resulting middle term has rank r=d_i(y); constant residue cohomology dimension r forces both neighboring matrix ranks to vanish at every nearby prime. Their finitely many entries are nilpotent, their germs vanish in the reduced local ring, and a further shrinking kills them. No reduced-neighborhood assumption is added.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.5",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Under the proper bounded-complex hypotheses: exactness for homological i<=p iff right exactness for i<=p+1 iff locally free direct-image cohomology in cohomological degrees >=-p.",
+      "source_spans": [
+        "ega:III.7.8.5:french_authority",
+        "ega:III.7.8.5:discovery"
+      ],
+      "target_evidence": [
+        "PC",
+        "PROJ",
+        "CUT",
+        "ISO",
+        "LES",
+        "FP"
+      ],
+      "derivation": [
+        "Put r=-p. Neighboring one-sided exactness is controlled by LES as in 7.8.3. Exactness implies locally free cohomology by 7.8.4.",
+        "Conversely, bounded-above K has only finitely many relevant cohomology degrees >=r on an affine neighborhood. Shrink so those locally free sheaves correspond to finite projective modules.",
+        "Starting at the highest degree, split off the projective cohomology modules from a bounded-above projective representative. Finite descending induction decomposes K into the H^j(K)[-j] for j>=r and a lower complex with cohomology <r.",
+        "After tensoring any M the lower complex has no cohomology >=r. Therefore H^j(K tensor^L M)=H^j(K) tensor M is exact in M for all j>=r."
+      ],
+      "primary_challenge": "Only finitely many cohomological degrees at or above -p occur locally. If their cohomology modules are projective, split them off successively from the highest degree downward. The remaining lower complex cannot contribute in these degrees after derived tensor. This proves exactness there; the converse follows from III.7.8.4 and adjacent exactness from the long exact sequence.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.6",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Proper flat f over locally Noetherian Y; only H0(X_y,O) is assumed finite separable over k(y), not that X_y is geometrically reduced. Conclude cohomological flatness in degree zero near y.",
+      "source_spans": [
+        "ega:III.7.8.6:french_authority",
+        "ega:III.7.8.6:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "PROJ",
+        "IDEM",
+        "REDPROOF",
+        "FLATBC",
+        "RESFIELD",
+        "CUT",
+        "FP"
+      ],
+      "derivation": [
+        "PF gives perfect K=Rf_*O_X of Tor amplitude >=0. RESFIELD supplies a flat local extension whose residue field splits the assumed finite separable algebra; the local flat extension is faithfully flat.",
+        "FLATBC identifies the new fiber H0 with k'^m. IDEM lifts each standard idempotent from that proper fiber to the direct-image stalk. Multiplication by constants from the new local base shows the entire k'^m is in the image of the stalk-to-fiber H0 map.",
+        "Faithful flatness descends surjectivity. CUT gives locally K=H0(K) direct-sum tau>=1 K with the upper summand of Tor amplitude >=1. H0(K) is therefore flat and perfect, hence finite locally free by FP.",
+        "PROJ now gives H0(K tensor^L M)=H0(K) tensor M for every quasi-coherent M, so the functor is exact.",
+        "In REDPROOF geometric reducedness is used only to obtain the split finite-product global-section algebra and its finite-etaleness. Those properties follow directly from EGA's separability assumption. This is a proof-level weakening; the stronger printed Stacks hypothesis is not asserted equivalent to EGA's."
+      ],
+      "primary_challenge": "03C3 supplies a flat local extension with the chosen splitting residue field and maximal ideal mA'. Flat base change identifies the new fibre algebra with k'^r. 0G7X puts each coordinate idempotent in the image of the proper direct-image stalk; lifting its scalar coefficients from A' proves surjectivity onto k'^r. Faithfulness of the field extension descends the original residue surjection. 0A1U splits off H^0 and an upper summand of Tor amplitude at least one. Since the whole perfect complex has nonnegative Tor amplitude, H^0 is flat and perfect, hence finite locally free. The projection formula proves exactness for all coefficients. Geometric reducedness of the fibre is never required.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.6.1",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Any locally ringed space is connected iff its global-section ring is not a product of two nonzero rings.",
+      "source_spans": [
+        "ega:III.7.8.6.1:french_authority",
+        "ega:III.7.8.6.1:discovery"
+      ],
+      "target_evidence": [
+        "SOPEN"
+      ],
+      "derivation": [
+        "A nontrivial product of the global-section ring gives an idempotent e distinct from 0 and 1. In every local stalk its germ is 0 or 1.",
+        "SOPEN for O_Z and sections e and 1-e makes their nonvanishing loci disjoint opens covering Z. Both are nonempty by the germ test for equality of sheaf sections, otherwise e=0 or e=1.",
+        "Conversely, the sheaf axiom identifies sections on a disjoint-open decomposition with the product of sections on its parts. Nonempty locally ringed spaces have nonzero section rings because the unit has a nonzero germ. This proves the arbitrary locally ringed-space generality."
+      ],
+      "primary_challenge": "A nontrivial global idempotent has germs zero or one in every local stalk. The nonvanishing loci of e and 1-e are disjoint nonempty opens covering the space. Conversely the sheaf axiom gives a product of two nonzero section rings for a nontrivial disjoint-open decomposition. The empty space creates no counterexample to the stated connectedness convention.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.7",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Under the separable-H0 assumption, f_*O is free of finite rank on one neighborhood and all its residue base-change maps there are bijective.",
+      "source_spans": [
+        "ega:III.7.8.7:french_authority",
+        "ega:III.7.8.7:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "PROJ",
+        "CUT",
+        "FP",
+        "BC",
+        "REDPROOF"
+      ],
+      "derivation": [
+        "The individually justified 7.8.6 argument gives finite locally free H0(K) and H0(K tensor^L -)=H0(K) tensor -. Shrink once more to trivialize as O_U^m.",
+        "Apply the canonical formula at each residue field k(z), z in U. BC identifies the result with H0(X_z,O). Both source clauses hold on the same neighborhood."
+      ],
+      "primary_challenge": "Shrink the finite locally free H^0 from III.7.8.6 to a free module. Its canonical coefficient formula holds on that whole neighborhood and at every residue field, proving both clauses on the same open.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.8",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "If H0(X_y,O)=k(y), the canonical O_Y -> f_*O is an isomorphism on a neighborhood of y.",
+      "source_spans": [
+        "ega:III.7.8.8:french_authority",
+        "ega:III.7.8.8:discovery"
+      ],
+      "target_evidence": [
+        "H0",
+        "CUT",
+        "FP"
+      ],
+      "derivation": [
+        "Use the point-local argument in H0's proof: the unit map is an isomorphism on fiber H0, so CUT and FP give finite locally free H0 of rank one near y.",
+        "The unit map between rank-one locally free modules is invertible at y, hence after shrinking. H0's printed all-fibers hypothesis is not assumed on the initial neighborhood."
+      ],
+      "primary_challenge": "At the distinguished point H^0 of the fibre equals the residue field. The finite locally free H^0 module has rank one nearby; the unit map is invertible at that point and hence after shrinking. The stronger all-fibres hypothesis in the statement of 0E62 is not assumed prematurely.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.9",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Under separable H0, near y the functor R1 f_*(f^*M) is Hom(Q,M) for coherent Q, uniquely with representation.",
+      "source_spans": [
+        "ega:III.7.8.9:french_authority",
+        "ega:III.7.8.9:discovery"
+      ],
+      "target_evidence": [
+        "CUT",
+        "PF",
+        "PROJ"
+      ],
+      "derivation": [
+        "Use 7.8.6 to split K=H0(K) direct-sum P, with P perfect of Tor amplitude >=1.",
+        "Represent P locally by E1 -> E2 -> ... in degrees >=1. Then H1(P tensor M)=ker(E1 tensor M -> E2 tensor M)=Hom(coker((E2)^vee -> (E1)^vee),M).",
+        "PROJ identifies this with R1 f_*(f^*M). The coherent local cokernels glue uniquely with their representing isomorphisms."
+      ],
+      "primary_challenge": "The upper perfect summand supplied by III.7.8.6 starts in degree one. Dualizing its first differential represents its H^1 coefficient functor by a coherent cokernel; these representations glue. Flatness of f identifies the ordinary pullback f^*M in the source formula with the derived coefficient operation.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.8.10",
+      "classification": "partial",
+      "counted_supported": false,
+      "hypotheses_and_scope": "(i) The finite Stein factor is etale near the separable-H0 point, and that fiber-algebra property persists. (ii) Q may fail local freeness even for projective smooth families and is interpreted as Picard differentials at the identity.",
+      "source_spans": [
+        "ega:III.7.8.10:french_authority",
+        "ega:III.7.8.10:discovery"
+      ],
+      "target_evidence": [
+        "REDPROOF",
+        "ETALE"
+      ],
+      "derivation": [
+        "Part (i): 7.8.6 gives a finite locally free H0 algebra whose fiber at y is finite separable. ETALE identifies the etale locus on that fiber. Remove the closed image of the nonetale locus of the finite map Spec_Y(f_*O) -> Y; this gives a neighborhood where the map is finite etale.",
+        "7.8.7 identifies every nearby H0 algebra with that finite-etale fiber algebra, proving persistence. The geometric-reducedness assumption of the printed REDPROOF statement is not added."
+      ],
+      "primary_challenge": "Part (i) follows from the finite locally free H^0 algebra and its finite etale fibre at y. The etale locus contains that fibre; the finite map sends its closed complement to a closed set avoiding y. Remove that image. Part (ii) remains unverified here: neither a concrete smooth projective example with non-locally-free Q nor the Picard cotangent identification has been compared.",
+      "unresolved_clauses": [
+        "Part (ii): no actual projective smooth example with non-locally-free Q was compared in this batch.",
+        "Part (ii): the identification of Q with the cotangent sheaf of the relative Picard scheme along the unit was not compared."
+      ]
+    },
+    {
+      "source_id": "ega:III.7.9.1",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Finite projective module is equivalent to a finite locally free associated sheaf; rank at a prime equals residue-field dimension.",
+      "source_spans": [
+        "ega:III.7.9.1:french_authority",
+        "ega:III.7.9.1:discovery"
+      ],
+      "target_evidence": [
+        "FP"
+      ],
+      "derivation": [
+        "FP gives finite projective iff finite locally free over the arbitrary source ring A.",
+        "On a local trivialization M_p=A_p^r, tensoring gives k(p)^r. Thus module rank, sheaf rank and residue dimension coincide."
+      ],
+      "primary_challenge": "00NX is the finite-projective/finite-locally-free equivalence over an arbitrary ring. Local trivialization identifies rank with the residue-field dimension.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.2",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "For a finite-projective complex, alternating residue-homology dimensions equal alternating ranks of the terms.",
+      "source_spans": [
+        "ega:III.7.9.2:french_authority",
+        "ega:III.7.9.2:discovery"
+      ],
+      "target_evidence": [
+        "CHI",
+        "FP"
+      ],
+      "derivation": [
+        "Use CHI's explicit proof calculation on the associated perfect complex on Spec A. In the finite vector-space fiber complex, the dimensions of successive boundaries cancel, so alternating term dimension equals alternating homology dimension.",
+        "FP identifies the term dimensions with the source ranks. Reverse homological/cohomological indices; (-1)^i=(-1)^(-i)."
+      ],
+      "primary_challenge": "In each finite-dimensional fibre complex, boundary dimensions cancel between consecutive terms. Its alternating homology dimension equals the alternating ranks of the projective terms; index reversal preserves parity.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.3",
+      "classification": "existing_stronger",
+      "counted_supported": true,
+      "hypotheses_and_scope": "The alternating residue-homology dimension function of a finite-projective A-complex is locally constant.",
+      "source_spans": [
+        "ega:III.7.9.3:french_authority",
+        "ega:III.7.9.3:discovery"
+      ],
+      "target_evidence": [
+        "CHI"
+      ],
+      "derivation": [
+        "The given complex defines a perfect object on Spec A. CHI applies directly; it also allows arbitrary schemes and arbitrary perfect objects, beyond a globally specified projective complex on an affine.",
+        "Reversing indices leaves parity unchanged."
+      ],
+      "primary_challenge": "0BDJ directly supplies local constancy for a perfect object on any scheme, and hence for the given finite-projective complex on an affine.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.4",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Proper f over locally Noetherian Y and a finite coherent Y-flat complex: fiber-hypercohomology Euler characteristic is locally constant.",
+      "source_spans": [
+        "ega:III.7.9.4:french_authority",
+        "ega:III.7.9.4:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "BC",
+        "CHI"
+      ],
+      "derivation": [
+        "Apply PF with E=O_X and G=P^bullet. Properness over locally Noetherian Y gives finite presentation; coherent terms are finitely presented and have proper supports. Thus K=Rf_*P^bullet is perfect.",
+        "BC identifies K tensor^L k(y) with hypercohomology of the ordinary termwise pulled-back fiber complex. CHI gives local constancy of the alternating finite dimensions.",
+        "This is the entire finite complex. The sheaf-only geometric Euler lemma is not substituted for that scope."
+      ],
+      "primary_challenge": "0A1H applies to the complete finite coherent base-flat complex, not just a degree-zero sheaf. 0A1D identifies all derived fibres with the ordinary pulled-back input complex; 0BDJ gives the Euler function.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.5",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "On a connected nonempty base the Euler function has a single integer value; otherwise it is a point-indexed integer function.",
+      "source_spans": [
+        "ega:III.7.9.5:french_authority",
+        "ega:III.7.9.5:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "CHI"
+      ],
+      "derivation": [
+        "7.9.4 makes the function well-defined and locally constant. Its level sets are disjoint opens with open complements, so connectedness forces one level.",
+        "The EP notation names this invariant and introduces no extra mathematical hypothesis."
+      ],
+      "primary_challenge": "A locally constant integer function is constant on a connected component. Nonemptiness is retained when assigning its unique numerical value.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.6",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Relative Euler is additive for short exact sequences of finite coherent base-flat complexes with even-degree arrows, and equals the alternating sum for individual terms.",
+      "source_spans": [
+        "ega:III.7.9.6:french_authority",
+        "ega:III.7.9.6:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "LES",
+        "ADD"
+      ],
+      "derivation": [
+        "Termwise base-flatness makes the short exact sequence stay exact on every fiber. Shift the stated even-degree arrows to degree zero; even shifts do not change Euler signs.",
+        "LES gives a finite long exact hypercohomology sequence, with finite dimensions by PF. Rank-nullity cancellation as in ADD yields EP(P)=EP(P')+EP(P'').",
+        "Apply this to the finite stupid filtration: its graded pieces are the P_i in their indicated degrees. This gives the alternating-term formula without dropping any term."
+      ],
+      "primary_challenge": "Termwise base-flatness preserves the short exact sequence on fibres. Even shifts leave Euler signs unchanged. The finite long exact sequence proves additivity; the finite stupid filtration gives the alternating formula for the terms.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.7",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "After any morphism from locally Noetherian Y', the pulled-back finite complex remains coherent and base-flat, and the Euler function pulls back pointwise.",
+      "source_spans": [
+        "ega:III.7.9.7:french_authority",
+        "ega:III.7.9.7:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "BC",
+        "JUMP"
+      ],
+      "derivation": [
+        "Pullback preserves finite presentation, hence coherence on the locally Noetherian X'. Flatness and properness are preserved by base change, so the new Euler invariant is defined.",
+        "BC identifies the new derived pushforward with Lg^*K. At y' over y, its derived fiber is (K tensor^L k(y)) tensor_k(y) k(y').",
+        "Field extension is flat and preserves finite vector-space dimensions; JUMP(1) states the same Betti invariance. Sum with unchanged signs."
+      ],
+      "primary_challenge": "Finite presentation, flatness and properness survive the stated base change. The derived fibre at y' is the original fibre complex tensored with k(y'); extension of fields preserves finite cohomology dimensions and the Euler sum.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.8",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "If fiber hypercohomology vanishes outside homological i0, the corresponding direct-image sheaf is locally free of rank (-1)^i0 EP.",
+      "source_spans": [
+        "ega:III.7.9.8:french_authority",
+        "ega:III.7.9.8:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "BC",
+        "ONE",
+        "MINP"
+      ],
+      "derivation": [
+        "PF and BC turn the source hypothesis into derived-fiber vanishing for K outside cohomological degree -i0.",
+        "The actual proof of ONE, using MINP, identifies K locally with its single cohomology sheaf in degree -i0 and makes that sheaf finite locally free. These neighborhoods cover Y.",
+        "Its rank is the sole nonzero Betti number, namely (-1)^i0 EP. The French statement has this sign; its proof display at line 3590 omits it. This comparison follows the statement and defining alternating sum, not the inconsistent proof display."
+      ],
+      "primary_challenge": "The proof of 0BDK and the minimal local perfect model show that fibrewise concentration in degree -i_0 makes the complex a locally free sheaf in that degree. The rank is (-1)^i_0 times the Euler invariant. Retain the sign in the French statement; its proof display omits that sign.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.9",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "For coherent flat F with fiber cohomology only in cohomological i0, R^i0 f_*F is locally free with signed Euler rank.",
+      "source_spans": [
+        "ega:III.7.9.9:french_authority",
+        "ega:III.7.9.9:discovery"
+      ],
+      "target_evidence": [
+        "PF",
+        "BC",
+        "ONE"
+      ],
+      "derivation": [
+        "Specialize 7.9.8's independently justified complex argument to F[0]. Now i0 is cohomological and H^i0(K)=R^i0 f_*F.",
+        "ONE makes this sheaf locally free; its only fiber Betti number has dimension (-1)^i0 EP."
+      ],
+      "primary_challenge": "Specialize the preceding full-complex argument to F[0]. The surviving cohomological degree i_0 has rank (-1)^i_0 times the Euler invariant.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.10",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "For proper f and coherent base-flat F, vanishing of all positive direct images implies locally free f_*F of fiber rank EP.",
+      "source_spans": [
+        "ega:III.7.9.10:french_authority",
+        "ega:III.7.9.10:discovery"
+      ],
+      "target_evidence": [
+        "VAN",
+        "BC"
+      ],
+      "derivation": [
+        "VAN applies and even allows an arbitrary finite-presentation base/morphism with only the support of F proper.",
+        "Its proof identifies Rf_*F with a finite locally free sheaf in degree zero and proves arbitrary base change. Thus every fiber has only H0, and its Euler characteristic equals the residue rank."
+      ],
+      "primary_challenge": "0D4E has the required proper-support, finite-presentation and base-flat hypotheses. Its proof gives Tor amplitude [0,0], so the rank equals the fibre Euler invariant, not merely a generic value.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.10.1",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Under 7.9.10, every fiber has vanishing positive cohomology.",
+      "source_spans": [
+        "ega:III.7.9.10.1:french_authority",
+        "ega:III.7.9.10.1:discovery"
+      ],
+      "target_evidence": [
+        "VAN",
+        "BC"
+      ],
+      "derivation": [
+        "VAN's proof proves Tor amplitude [0,0], not merely freeness of H0. Thus K is a degree-zero vector bundle.",
+        "BC computes fiber cohomology from its derived residue tensor, which is still in degree zero. Hence H^i(X_y,F_y)=0 for all i>0."
+      ],
+      "primary_challenge": "The [0,0] Tor-amplitude conclusion and base change force every fibre's positive cohomology to vanish. Freeness of H^0 alone would not suffice.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.11",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "For finite coherent base-flat P and relatively very ample L, n -> EP(P tensor L^n;y) is a rational polynomial for all integers n, identical on each connected component of Y.",
+      "source_spans": [
+        "ega:III.7.9.11:french_authority",
+        "ega:III.7.9.11:discovery"
+      ],
+      "target_evidence": [
+        "HILB",
+        "PF",
+        "CHI",
+        "ADD"
+      ],
+      "derivation": [
+        "7.9.6 reduces to the finite alternating sum for the individual coherent terms. On each fiber very ampleness gives a closed immersion into projective space with L_y pulled back from O(1).",
+        "Closed-immersion pushforward preserves cohomology and twists. HILB therefore gives a rational polynomial for each term for every integer n, not only asymptotically. Their signed sum is a polynomial.",
+        "For each fixed n the twisted complex remains coherent and base-flat. 7.9.4 gives constancy on each connected component. Thus polynomials at any two points of a component agree at every integer, hence are equal."
+      ],
+      "primary_challenge": "For each fibre, very ampleness gives a closed immersion into projective space; pushforward preserves twists and cohomology. 08AC gives the polynomial at every integer, and Euler additivity handles the finite complex. For each integer twist the value is constant on a connected component, hence the polynomials themselves agree there.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.12",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Hilbert polynomial notation, additivity, alternating-term formula, and base-change compatibility with the polarization pulled back.",
+      "source_spans": [
+        "ega:III.7.9.12:french_authority",
+        "ega:III.7.9.12:discovery"
+      ],
+      "target_evidence": [
+        "HILB",
+        "ADD",
+        "BC",
+        "PF"
+      ],
+      "derivation": [
+        "Define PH as in 7.9.11. Invertible twisting preserves exactness and base-flatness; apply 7.9.6 for every n to obtain both polynomial additivity and the alternating-term formula.",
+        "Apply 7.9.7 to every twist, pulling back L as well. Equality for all integer n gives polynomial base-change equality.",
+        "The Chapter V motivation is not counted as another theorem."
+      ],
+      "primary_challenge": "Apply Euler additivity and base-change invariance to every integer twist, pulling back the polarization as well. Equality on every integer yields the polynomial identities. The announced Chapter V application is not another completed theorem.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.13",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Noetherian Y, proper f, relatively very ample L and coherent flat F: one n0 makes every f_*F(n), n>=n0, locally free with rank the Hilbert polynomial value.",
+      "source_spans": [
+        "ega:III.7.9.13:french_authority",
+        "ega:III.7.9.13:discovery"
+      ],
+      "target_evidence": [
+        "TWIST",
+        "VAN",
+        "BC",
+        "HILB"
+      ],
+      "derivation": [
+        "Very ample implies relatively ample. TWIST gives one uniform n0 for simultaneous vanishing of all positive direct images of all twists n>=n0. Its finite-affine-cover proof uses the source Noetherian hypothesis.",
+        "Every F(n) remains coherent and flat, so VAN gives locally free direct image and arbitrary base change.",
+        "The fiber has only degree-zero cohomology. Its residue rank equals its Euler characteristic, identified with the Hilbert polynomial value by 7.9.11."
+      ],
+      "primary_challenge": "02O1 uses a finite affine cover of the Noetherian base to obtain a single cutoff for all positive cohomological degrees and all high twists. 0D4E and fibre exchange identify the locally free rank with the Hilbert polynomial value.",
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.9.14",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "FRENCH: Y Noetherian, f projective, L relatively ample. Coherent F is Y-flat iff all sufficiently high f_*F(n) are locally free, for one uniform n0.",
+      "source_spans": [
+        "ega:III.7.9.14:french_authority",
+        "ega:III.7.9.14:discovery"
+      ],
+      "target_evidence": [
+        "TWIST",
+        "VAN",
+        "LOCSEC",
+        "AMPLE",
+        "FP"
+      ],
+      "derivation": [
+        "Forward: Noetherian Y gives the uniform TWIST cutoff. Twists of flat F remain flat, so VAN makes each high direct image locally free.",
+        "Reverse: work on an affine base Spec A. AMPLE supplies affine opens X_s for positive-degree sections s of L^d. LOCSEC identifies Gamma(X_s,F) with the direct limit of Gamma(X,F tensor L^(dn)) under multiplication by s.",
+        "Discarding finitely many terms of that direct limit is cofinal. By the hypothesis and FP, every sufficiently high term is a finite projective A-module.",
+        "Filtered colimits of flat modules are flat: tensor commutes with filtered colimits and those colimits preserve exact sequences. Thus Gamma(X_s,F) is A-flat. The affine X_s cover X, so F is Y-flat.",
+        "The global forward cutoff is certified only for the French Noetherian hypothesis. No uniform assertion over an arbitrary merely locally Noetherian base is certified."
+      ],
+      "primary_challenge": "The forward implication uses the French Noetherian hypothesis and 02O1's uniform cutoff, then 0D4E. Conversely, over an affine base, the affine nonvanishing opens of positive-degree ample sections cover X. On each such open, 01PW identifies sections of F with the filtered colimit of its twists by L^(dn). Removing finitely many initial terms is cofinal; all remaining modules are finite projective by the hypothesis. Filtered colimits preserve flatness, proving relative flatness on that cover. This does not certify the stronger merely locally Noetherian English formulation.",
+      "unresolved_clauses": [],
+      "authority_discrepancy": {
+        "english_lines": [
+          498,
+          499
+        ],
+        "french_lines": [
+          3745,
+          3746
+        ],
+        "description": "English discovery changes Noetherian to locally Noetherian. This row closes only the French statement. The stronger English version is unverified, not a Stacks coverage gap.",
+        "next_action": "Parent source-authority lane should check the original facsimile and correct the discovery hypothesis if confirmed. No source mutation or errata admission here."
+      }
+    }
+  ],
+  "excluded_or_incomplete_contexts": [
+    {
+      "source_id": "ega:III.7.7.1",
+      "english_file": "ega3-7-7.tex",
+      "lines": [
+        9,
+        38
+      ],
+      "reason": "Construction read as context; unrestricted unbounded hypercohomology conventions not separately compared."
+    },
+    {
+      "source_id": "ega:III.7.7.2",
+      "english_file": "ega3-7-7.tex",
+      "lines": [
+        265,
+        355
+      ],
+      "reason": "Base-change context read; unrestricted unbounded setup not separately counted."
+    },
+    {
+      "source_id": "ega:III.7.7.3",
+      "english_file": "ega3-7-7.tex",
+      "lines": [
+        357,
+        436
+      ],
+      "reason": "Canonical exchange maps compared under 7.7.5 bounded hypotheses; unrestricted construction not counted."
+    },
+    {
+      "source_id": "ega:III.7.7.9",
+      "english_file": "ega3-7-7-rest.tex",
+      "lines": [
+        219,
+        311
+      ],
+      "reason": "Not completed: representing-object base change, global relative-ample resolution claim and announced removal of that resolution hypothesis need separate rows."
+    },
+    {
+      "source_id": "ega:III.7.7.12",
+      "english_file": "ega3-7-7-rest.tex",
+      "lines": [
+        377,
+        490
+      ],
+      "reason": "Part (i) supported; global hypertor part (ii) unresolved, as in partial row."
+    },
+    {
+      "source_id": "ega:III.7.8.1",
+      "english_file": "ega3-7-8.tex",
+      "lines": [
+        6,
+        36
+      ],
+      "reason": "Definition read and used, not separately counted."
+    },
+    {
+      "source_id": "ega:III.7.8.2",
+      "english_file": "ega3-7-8.tex",
+      "lines": [
+        38,
+        51
+      ],
+      "reason": "Locality context read; unrestricted general-base formulation not separately counted."
+    },
+    {
+      "source_id": "ega:III.7.8.10",
+      "english_file": "ega3-7-8.tex",
+      "lines": [
+        382,
+        425
+      ],
+      "reason": "Part (i) supported; Picard/example clauses in part (ii) unresolved."
+    }
+  ],
+  "clarifications": [
+    "Use cohomological i=-p throughout; a bounded-below homological complex becomes bounded-above, not bounded on both sides.",
+    "In III.7.8.4 use stupid (termwise) truncation sigma_{>=i-1}, not a good truncation. It keeps exactly the two differentials calculating H^i after every coefficient tensor.",
+    "In III.7.8.6 lifting means that each fibre idempotent lies in the image of the stalk-to-fibre map. It does not claim an idempotent lift in the original local section algebra or a Zariski splitting of a finite etale cover.",
+    "For the global affine finite-projective model in III.7.7.12(i), add Stacks 0658. The local model 0BCD alone would not justify that global assertion.",
+    "Unique representation means unique isomorphism compatible with the specified natural isomorphism, not a module with no automorphisms."
+  ],
+  "limitations": [
+    "Only the selected 32 rows are compared. III.7.1-III.7.6 and the explicitly enumerated context/remainder clauses are not certified by this checkpoint.",
+    "III.7.7.12(ii) retains the unresolved historical global-hypertor/nonflat-pullback identification.",
+    "III.7.8.10(ii) retains the missing smooth projective example and Picard cotangent comparison.",
+    "The French transcription was read; original printed-page collation was not performed.",
+    "The English locally-Noetherian formulation of III.7.9.14 is not certified; the French Noetherian hypothesis governs."
+  ],
+  "reproducibility": {
+    "preserved_comparison": {
+      "name": "iii7_body_coverage.json",
+      "bytes": 129634,
+      "sha256": "EAC94258A2D91B2DB59817CEC69D96884FBB9B09DAA3A50A145DEE48318CECCA"
+    },
+    "primary_challenge": {
+      "name": "EGA_III7_PRIMARY_CHALLENGE_NOTES_20260921.json",
+      "bytes": 14943,
+      "sha256": "FE9AF7252078E2E5FC372597D137A97B8D53D1D5C3C796D93D8DE5C4A6DFFA60"
+    },
+    "mechanical_checks": {
+      "files": 14,
+      "spans": 103,
+      "tag_bindings": 31,
+      "target_files_unchanged": 9,
+      "status": "PASS"
+    },
+    "mathematical_check": "Primary-session source/proof challenge performed; mechanical checks do not themselves establish the mathematics."
+  },
+  "agents_used": 0,
+  "whole_ega_complete": false,
+  "next_action": "Compare the omitted III.7.7.9 representability/base-change clauses against their exact French hypotheses, then resolve the two retained III.7 partials where a finite proof is available; continue the remaining EGA-wide coverage queue without repeating the completed comparisons."
+}
