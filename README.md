@@ -195,10 +195,14 @@ The [III §§7.7–7.9 comparison](ega/coverage/ega-iii-7-7-9.md) explains 30
 supported items on exactness and base change, coherent representing modules,
 and Euler characteristics and Hilbert polynomials. It includes the
 infinitesimal length criterion and the weaker separable-global-sections
-hypothesis for degree-zero cohomological flatness. Two items remain partial:
-the historical nonflat global-hypertor comparison, and the smooth-projective
-example/Picard-cotangent interpretation. These are correspondences with
-existing Stacks mathematics, not 30 new theorems.
+hypothesis for degree-zero cohomological flatness. A subsequent
+[global-hypertor comparison](ega/coverage/ega-iii-7-7-12-hypertor.md) identifies
+the historical nonflat coefficient functor and its exchange map; it explains
+why ordinary geometric pullback is a different operation and supplies a
+counterexample to that replacement. The selected tally is now 30 supported,
+one qualified and one partial: the smooth-projective example/Picard-cotangent
+interpretation remains unresolved. These are correspondences with existing
+Stacks mathematics, not 31 new theorems.
 A [supplement on III.7.7.9](ega/coverage/ega-iii-7-7-9-representability.md)
 explains base change of the representing modules and removes the global
 two-term presentation hypothesis using Stacks' Ext-functor construction.

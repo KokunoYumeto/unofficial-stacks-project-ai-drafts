@@ -3,10 +3,15 @@
 These comparisons explain how existing Stacks arguments supply EGA's
 cohomology-and-base-change criteria, coherent representing modules, and
 constancy of Euler characteristics and Hilbert polynomials. **Thirty selected
-numbered items are supported; two remain partial. No new theorem is claimed.**
+numbered items are supported without an additional convention qualification;
+one is qualified and one remains partial. No new theorem is claimed.**
 This is not a claim that all of EGA III §7 has been integrated.
 
-The [row-by-row comparison](ega-iii-7-7-9.json) contains the hypotheses,
+The [original row-by-row comparison](ega-iii-7-7-9.json) preserves the earlier
+30-supported/two-partial snapshot. The [global-hypertor supplement](ega-iii-7-7-12-hypertor.md)
+subsequently identifies III.7.7.12(ii)'s construction and exchange map, with
+the necessary coefficient-extension convention stated explicitly.
+The original comparison contains the hypotheses,
 derivations, exact source spans, target labels and hashes. A fresh
 primary-session AI review checked the mathematical arguments against the
 [pinned French transcription](https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex)
@@ -213,12 +218,14 @@ Index reversal leaves parity unchanged. The factor $(-1)^{i_0}$ in
 III.7.9.8's French statement is retained; its proof display omits it.
 This is a source-comparison note, not a new errata admission.
 
-## What remains unproved here
+## Resolved qualification and remaining questions
 
-- **III.7.7.12(ii):** identify the historical global-hypertor functor and
-  exchange maps with the modern derived construction, including nonflat
-  pullback. The [preceding comparison](ega-iii-6-2-10.md) keeps the relevant
-  historical-convention questions explicit.
+- **III.7.7.12(ii), subsequently resolved with a qualification:** the
+  [global-hypertor supplement](ega-iii-7-7-12-hypertor.md) identifies the
+  historical coefficient functor and its canonical exchange maps. The
+  extension changes coefficients while keeping the original base for hypertor;
+  ordinary geometric pullback followed by recomputation is a different,
+  refuted reading. The broader [III.6 partials](ega-iii-6-2-10.md) remain open.
 - **III.7.8.10(ii):** compare an actual smooth projective example whose
   representing module is not locally free, and the identification with
   the relative Picard scheme's cotangent sheaf along the unit.

@@ -149,7 +149,8 @@ are supported by existing Stacks arguments, and one has a valid local
 form with its unrestricted global reading refuted. No root theorem,
 translation source or errata registry was changed.
 
-The separate questions in III.7.7.12(ii) about historical global hypertor,
-and III.7.8.10(ii) about a smooth-projective example and Picard cotangent
-interpretation, remain open in this comparison program. Resolving this
-remark does not resolve those questions or complete EGA III.
+The subsequent [III.7.7.12(ii) comparison](ega-iii-7-7-12-hypertor.md)
+identifies historical global hypertor and its coefficient exchange map,
+with an explicit qualification against ordinary geometric pullback.
+III.7.8.10(ii)'s smooth-projective example and Picard cotangent interpretation
+remain open. These bounded comparisons do not complete EGA III.

@@ -1,0 +1,480 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA III.7.7.12(ii): global hypertor and the meaning of coefficient extension",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "f7cb0ce02e8b63e7c11e898936afb87bed7241df",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "HISTORICAL_COEFFICIENT_FUNCTOR_IDENTIFIED_WITH_EXPLICIT_BASE_CHANGE_QUALIFICATION",
+  "review_boundary": "Fresh primary-session comparison of the exact historical definitions, their bounded totalizations and coefficient maps with existing Stacks proofs. No subagents, original-print collation, independent reviewer or proof-assistant verification.",
+  "counts": {
+    "newly_compared_residual_units": 1,
+    "qualified_existing_derived": 1,
+    "new_root_theorems": 0
+  },
+  "updated_selected_iii7_dispositions": {
+    "selected_rows": 32,
+    "supported_unqualified": 30,
+    "qualified": 1,
+    "partial": 1,
+    "note": "The former partial III.7.7.12 is now qualified: its mathematical coefficient version is covered and its ordinary-pullback misreading refuted. III.7.8.10(ii) remains partial. The separate three-clause III.7.7.9 comparison is not added to this denominator."
+  },
+  "files": [
+    {
+      "id": "french:III.6",
+      "name": "french3_ega3-6-fr_6b388758.tex",
+      "kind": "pinned_french_transcription",
+      "bytes": 168782,
+      "sha256": "D16C4CCCAA12525A35FE71DD915AF9A5360B27A847E1571503473F8A294E6FC8",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex"
+    },
+    {
+      "id": "french:III.7",
+      "name": "french3_ega3-7-fr_6b388758.tex",
+      "kind": "pinned_french_transcription",
+      "bytes": 172424,
+      "sha256": "20A61BA348909E4309A3CDA89FD6DDAF8C0FC5BA346FD44232458CDFEA2A2972",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex"
+    },
+    {
+      "id": "stacks:cohomology.tex",
+      "name": "cohomology.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 539704,
+      "sha256": "591F19389EF437DDFE05B00214064DDA31AA225D44B019A779F9F98F6EC0B4DE",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/cohomology.tex"
+    },
+    {
+      "id": "stacks:derived.tex",
+      "name": "derived.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 452054,
+      "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/derived.tex"
+    },
+    {
+      "id": "stacks:more-algebra.tex",
+      "name": "more-algebra.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 1518081,
+      "sha256": "0490028F82EFFCF08C0D790D0C8145EEB8D55DB66BFB8CF7BA29CCD27FC3FABE",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/more-algebra.tex"
+    },
+    {
+      "id": "stacks:perfect.tex",
+      "name": "perfect.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 417517,
+      "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/perfect.tex"
+    }
+  ],
+  "spans": [
+    {
+      "id": "fr:scalar-extension",
+      "file_id": "french:III.7",
+      "lines": [
+        79,
+        113
+      ],
+      "byte_start": 2484,
+      "byte_end_exclusive": 3870,
+      "bytes": 1386,
+      "sha256": "28501A275231058623894D5D3885C6A340C3857B21AD3F8E734832AC9CBC8079",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L79-L113"
+    },
+    {
+      "id": "fr:flat-geometric-extension",
+      "file_id": "french:III.7",
+      "lines": [
+        2268,
+        2376
+      ],
+      "byte_start": 81752,
+      "byte_end_exclusive": 86036,
+      "bytes": 4284,
+      "sha256": "48F713A756CBFFED95BC84F0E22A9DFFBEAA08708D2434F33FFE999975B32343",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2268-L2376"
+    },
+    {
+      "id": "fr:exchange-theorem",
+      "file_id": "french:III.7",
+      "lines": [
+        2453,
+        2526
+      ],
+      "byte_start": 88572,
+      "byte_end_exclusive": 91295,
+      "bytes": 2723,
+      "sha256": "4CFF4CBB2573CD15D805CAC0944F19DA36511272A555A773D35253E791126F16",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2453-L2526"
+    },
+    {
+      "id": "fr:nonflat-remark",
+      "file_id": "french:III.7",
+      "lines": [
+        3005,
+        3029
+      ],
+      "byte_start": 109839,
+      "byte_end_exclusive": 110745,
+      "bytes": 906,
+      "sha256": "3D46C8662791965775E9EEDE2A99C1541284599081668742AD5933A66924371B",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3005-L3029"
+    },
+    {
+      "id": "fr:cech-hypertor",
+      "file_id": "french:III.6",
+      "lines": [
+        1573,
+        1679
+      ],
+      "byte_start": 69917,
+      "byte_end_exclusive": 74252,
+      "bytes": 4335,
+      "sha256": "B9918148C9DA2783FD2EEDA14180C17C3397C382E6546A5D25EBB82404E62160",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L1573-L1679"
+    },
+    {
+      "id": "fr:flat-ce-resolution",
+      "file_id": "french:III.6",
+      "lines": [
+        1947,
+        1969
+      ],
+      "byte_start": 84859,
+      "byte_end_exclusive": 85750,
+      "bytes": 891,
+      "sha256": "19D1057A71E69EA09E3910D2E06D117665124305D1A8151571D1D4C69C56B63D",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L1947-L1969"
+    },
+    {
+      "id": "fr:sheafification-localization",
+      "file_id": "french:III.6",
+      "lines": [
+        2061,
+        2191
+      ],
+      "byte_start": 89452,
+      "byte_end_exclusive": 95263,
+      "bytes": 5811,
+      "sha256": "831587E1A20C19D39ACE0EC55D5D137A36E9681AFCC488B4A888543652162B58",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L2061-L2191"
+    },
+    {
+      "id": "fr:coherent-hypertor",
+      "file_id": "french:III.6",
+      "lines": [
+        2587,
+        2612
+      ],
+      "byte_start": 111739,
+      "byte_end_exclusive": 113046,
+      "bytes": 1307,
+      "sha256": "B2880FBE1D0C3BA19815678D7BB03724E8E12E6E95CFD8A738C6D9B6FF4A51B4",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L2587-L2612"
+    },
+    {
+      "id": "fr:coefficient-map",
+      "file_id": "french:III.6",
+      "lines": [
+        2614,
+        2743
+      ],
+      "byte_start": 113047,
+      "byte_end_exclusive": 118256,
+      "bytes": 5209,
+      "sha256": "55EE6C86069D900514ACC4789BBAB46A66DCA1CE76FFE14E190F63EDE250E13E",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L2614-L2743"
+    },
+    {
+      "id": "fr:fixed-flat-model",
+      "file_id": "french:III.6",
+      "lines": [
+        3657,
+        3746
+      ],
+      "byte_start": 152952,
+      "byte_end_exclusive": 156379,
+      "bytes": 3427,
+      "sha256": "E5E7DF4CC36744639E57DCBD56EB5D205AE2ECC0D6F1A893A891A20780B53185",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L3657-L3746"
+    },
+    {
+      "id": "fr:finite-free-replacement",
+      "file_id": "french:III.6",
+      "lines": [
+        3986,
+        4028
+      ],
+      "byte_start": 164876,
+      "byte_end_exclusive": 166918,
+      "bytes": 2042,
+      "sha256": "4DD166702E28010013E8F745A93B9E16F297656F2C04929591C8321767CDE722",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-6-fr.tex#L3986-L4028"
+    },
+    {
+      "id": "target:CECH",
+      "file_id": "stacks:cohomology.tex",
+      "lines": [
+        10649,
+        10730
+      ],
+      "byte_start": 377809,
+      "byte_end_exclusive": 381028,
+      "bytes": 3219,
+      "sha256": "7C9F3C3984CA06E6A0FF3630B6EED480B3D270DA4E94B1C8A8C744FF18B154BE",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/cohomology.tex#L10649-L10730"
+    },
+    {
+      "id": "target:RESOLVE",
+      "file_id": "stacks:derived.tex",
+      "lines": [
+        6784,
+        6802
+      ],
+      "byte_start": 243008,
+      "byte_end_exclusive": 243658,
+      "bytes": 650,
+      "sha256": "B234C586D05C1C5027CD9E8C54208AF231C9DC89DC6C9AC7C76A45CF9D5B6B10",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/derived.tex#L6784-L6802"
+    },
+    {
+      "id": "target:LIFT",
+      "file_id": "stacks:derived.tex",
+      "lines": [
+        6877,
+        6892
+      ],
+      "byte_start": 245621,
+      "byte_end_exclusive": 246037,
+      "bytes": 416,
+      "sha256": "41CD1D657800E62910ADAA20FF780F3CAEAB37CC335DC9A126E431FA57FFF085",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/derived.tex#L6877-L6892"
+    },
+    {
+      "id": "target:KFLAT",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        14893,
+        14917
+      ],
+      "byte_start": 565707,
+      "byte_end_exclusive": 566718,
+      "bytes": 1011,
+      "sha256": "3ED3F1455007748A91A5A62920B8863DEEB4F12989DD943811199273CAEFB821",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/more-algebra.tex#L14893-L14917"
+    },
+    {
+      "id": "target:FREE",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        16656,
+        16751
+      ],
+      "byte_start": 629345,
+      "byte_end_exclusive": 633669,
+      "bytes": 4324,
+      "sha256": "F280E7830E95E9E2864D0597F72D4986262F78D48A04ACDEC49E5B4C97BA1D99",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/more-algebra.tex#L16656-L16751"
+    },
+    {
+      "id": "target:NOETHERIAN",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        17125,
+        17155
+      ],
+      "byte_start": 648574,
+      "byte_end_exclusive": 649884,
+      "bytes": 1310,
+      "sha256": "04BF67DAA1EE6082ADBE89C8B717277D011BAFC85520BC93807247E11144FF6D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/more-algebra.tex#L17125-L17155"
+    },
+    {
+      "id": "target:BOUND",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        443,
+        511
+      ],
+      "byte_start": 14540,
+      "byte_end_exclusive": 17383,
+      "bytes": 2843,
+      "sha256": "C1A5D2A409978C2383A1D6464F06AD14CD8307BE1E2614583C93BBE13303B4A8",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/perfect.tex#L443-L511"
+    },
+    {
+      "id": "target:COHERENT",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        2634,
+        2660
+      ],
+      "byte_start": 97174,
+      "byte_end_exclusive": 98159,
+      "bytes": 985,
+      "sha256": "50F3B2F71B4C7A1AD12CE86DC4291D94F337AF3AE3FE5BC3DC67C442F644782B",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/perfect.tex#L2634-L2660"
+    },
+    {
+      "id": "target:PROJECTION",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        5051,
+        5094
+      ],
+      "byte_start": 191335,
+      "byte_end_exclusive": 193120,
+      "bytes": 1785,
+      "sha256": "06845DB67402C3006458D191B5E9E97457474992431F3691745EB024FDB93216",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/perfect.tex#L5051-L5094"
+    }
+  ],
+  "tag_bindings": [
+    {
+      "id": "CECH",
+      "label": "cohomology-lemma-alternating-cech-complex-complex-ss",
+      "tag": "08C2",
+      "url": "https://stacks.math.columbia.edu/tag/08C2"
+    },
+    {
+      "id": "RESOLVE",
+      "label": "derived-lemma-projective-resolutions-exist",
+      "tag": "0646",
+      "url": "https://stacks.math.columbia.edu/tag/0646"
+    },
+    {
+      "id": "LIFT",
+      "label": "derived-lemma-morphisms-from-projective-complex",
+      "tag": "064B",
+      "url": "https://stacks.math.columbia.edu/tag/064B"
+    },
+    {
+      "id": "KFLAT",
+      "label": "more-algebra-lemma-derived-tor-quasi-isomorphism",
+      "tag": "064K",
+      "url": "https://stacks.math.columbia.edu/tag/064K"
+    },
+    {
+      "id": "FREE",
+      "label": "more-algebra-lemma-pseudo-coherent",
+      "tag": "064U",
+      "url": "https://stacks.math.columbia.edu/tag/064U"
+    },
+    {
+      "id": "NOETHERIAN",
+      "label": "more-algebra-lemma-Noetherian-pseudo-coherent",
+      "tag": "066E",
+      "url": "https://stacks.math.columbia.edu/tag/066E"
+    },
+    {
+      "id": "BOUND",
+      "label": "perfect-lemma-quasi-coherence-direct-image",
+      "tag": "08D5",
+      "url": "https://stacks.math.columbia.edu/tag/08D5"
+    },
+    {
+      "id": "COHERENT",
+      "label": "perfect-lemma-direct-image-coherent",
+      "tag": "08E2",
+      "url": "https://stacks.math.columbia.edu/tag/08E2"
+    },
+    {
+      "id": "PROJECTION",
+      "label": "perfect-lemma-cohomology-base-change",
+      "tag": "08EU",
+      "url": "https://stacks.math.columbia.edu/tag/08EU"
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "ega:III.7.7.12(ii)",
+      "classification": "qualified_existing_derived",
+      "counted_supported_unqualified": false,
+      "hypotheses_and_scope": "Proper f:X->Y, locally Noetherian Y, homologically bounded-below complex P of coherent sheaves; no flatness over Y. Global hypertor is the fixed-base coefficient functor. The exchange conclusion uses scalar extension of this functor, not ordinary geometric pullback followed by recomputation over a new base ring.",
+      "source_spans": [
+        "fr:scalar-extension",
+        "fr:flat-geometric-extension",
+        "fr:exchange-theorem",
+        "fr:nonflat-remark",
+        "fr:cech-hypertor",
+        "fr:flat-ce-resolution",
+        "fr:sheafification-localization",
+        "fr:coherent-hypertor",
+        "fr:coefficient-map",
+        "fr:fixed-flat-model",
+        "fr:finite-free-replacement"
+      ],
+      "target_evidence": [
+        "CECH",
+        "RESOLVE",
+        "LIFT",
+        "KFLAT",
+        "FREE",
+        "NOETHERIAN",
+        "BOUND",
+        "COHERENT",
+        "PROJECTION"
+      ],
+      "derivation": [
+        "Work over Spec A in Y and set P^j=P_{-j}. Properness gives a finite affine cover with affine intersections. The alternating Cech direction has finite width, while P^j vanishes for j sufficiently large. The total C is therefore bounded above. CECH identifies it with RΓ(X,P). Its acyclicity hypotheses hold because the terms, cokernels and cohomology sheaves are quasi-coherent on affine opens.",
+        "The historical III.6.6.2 construction takes tensor hyperhomology of Cech bicomplexes. For the second factor (id_S,M), its Cech complex is just M[0]. By III.6.6.6 one can use a projective Cartan-Eilenberg resolution of the first bicomplex only. Its total E is bounded above projective: after homological reindexing all three indices have lower bounds, so every total degree has finitely many summands. E represents C and is K-flat. RESOLVE and LIFT compare it, up to homotopy, with a modern bounded-above projective resolution. Tensoring the comparison with arbitrary M preserves it. Thus global hypertor is H^{-p}(C tensor_A^L M), naturally including coefficient connecting maps.",
+        "Localization is the same in both constructions: finite Cech totals and projective resolutions commute with flat localization. This is exactly the localization used to glue the source in III.6.7.1-6.7.2. Consequently the sheaf identity is T_p(M)=H^{-p}(Rf_*P tensor_Y^L M). PROJECTION also identifies it with H^{-p} Rf_*(P tensor_X^L Lf^*M). No ordinary nonflat tensor is substituted.",
+        "C is bounded above and has finite cohomology. For a fixed degree q choose a sufficiently low cutoff a. BOUND makes RΓ(tau_{<a}P) vanish in degrees q and q+1. Hence H^q(C)=H^q RΓ(tau_{>=a}P). The latter truncation is bounded coherent, so COHERENT applies. NOETHERIAN and FREE now give a single bounded-above finite-free complex L representing C. L tensor M computes all T_p(M), and its finite rank terms, not perfection of C, are sufficient.",
+        "For A->B and a B-module M', keep the original base A and define the extension by III.7.1.3: T_p^(B)(M')=H^{-p}(L tensor_A M')=H^{-p}((L tensor_A B) tensor_B M'). This is also the n=1 case of III.6.10.1 with an additional identity factor over Spec B. Its canonical exchange is H^{-p}(L) tensor_A B -> H^{-p}(L tensor_A B). With the first Cech factor fixed, the source map in III.6.7.10 is induced by the same coefficient map; III.6.10.1.2 records precisely this compatibility.",
+        "The previously checked III.7.7.5 argument now applies to L: upper semicontinuity of residue dimensions, right-exactness/tensor exchange, adjacent left-exactness/Hom representation, and affine locality. The equivalence with exchange for every A-algebra follows in reverse by taking the square-zero algebra A direct-sum M and its M summand. Local identifications glue. This uses the coefficient-extension convention, which must be stated explicitly after removing flatness.",
+        "The competing ordinary-geometric reading is false. Take A=k[t], Y=X=Spec A, f=id, and P=A/(t) in degree zero. The finite-free model is A --t--> A in cohomological degrees -1,0. T_1(A)=0 and T_1(k)=k, so T_1 is not right exact (test A->k). Correct coefficient extension to B=k gives exchange 0->k. If instead one pulls P back ordinarily and recomputes over each B, the identity morphism gives Tor_1^B(P tensor_A B,B)=0 for every B; the naive exchange maps are all 0->0. That would incorrectly satisfy condition (d) while right exactness fails. This is a test of an interpretation, not a new Stacks or historical-source erratum."
+      ],
+      "resolved_residuals": [
+        "Historical global-hypertor totalization identified with the modern derived coefficient functor in the actual bounded-below homological domain.",
+        "Canonical fixed-base coefficient exchange map identified, including nonflat A->B.",
+        "Single bounded-above finite-free representative and the derived coefficient version of the III.7.7.5 conclusions established."
+      ],
+      "remaining_qualification": "Do not read the extension as ordinary geometric pullback of P followed by recomputation of hypertor over Y'. That reading is refuted. Original printed-page collation is not claimed; no source correction or registry admission is made.",
+      "not_a_missing_stacks_theorem": true
+    }
+  ],
+  "prior_comparison": {
+    "path": "ega/coverage/ega-iii-7-7-9.json",
+    "sha256": "20FC51DE1EC6B29CC3EC181F524E82F0A4A734ACDA4AD3522B5F177896068C3B",
+    "used_rows": [
+      "ega:III.7.7.5",
+      "ega:III.7.7.12"
+    ],
+    "role": "Reuse the previously checked finite-free coefficient-functor argument for semicontinuity, exactness, representation, localization and the square-zero-ring test. Supply the missing historical-functor identification here. Preserve the earlier JSON as a dated snapshot.",
+    "bytes": 106340,
+    "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/f7cb0ce02e8b63e7c11e898936afb87bed7241df/ega/coverage/ega-iii-7-7-9.json"
+  },
+  "limitations": [
+    "Only the fixed-base global-hypertor coefficient functor and its conclusions are compared, not all six historical spectral sequences.",
+    "The five broader III.6 partials in the preceding checkpoint are not closed by this argument.",
+    "Finite-free terms do not imply that L has finite length; a coherent nonflat sheaf can have infinite projective dimension.",
+    "No official Stacks source, French authority, translation source or registry entry is edited."
+  ],
+  "reproducibility": {
+    "primary_comparison": {
+      "name": "EGA_III7712_PRIMARY_COMPARISON_20260921.json",
+      "bytes": 10244,
+      "sha256": "FE6A83792639BB4C16B08FDA64B985C761DB8FCD3F127CB280166BE5A127C93D"
+    },
+    "tags_file": {
+      "name": "tags/tags",
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D"
+    },
+    "mechanical_checks": {
+      "files": 6,
+      "spans": 20,
+      "tag_bindings": 9,
+      "target_files_unchanged": 4,
+      "prior_rows": 2,
+      "status": "PASS"
+    },
+    "mathematical_check": "Primary-session source and proof comparison. Mechanical identity checks are not a proof-assistant or independent-review certificate."
+  },
+  "agents_used": 0,
+  "new_root_theorems": 0,
+  "whole_ega_complete": false,
+  "next_action": "Compare III.7.8.10(ii)'s exact smooth-projective example and relative-Picard cotangent identification against existing Stacks statements, recording any genuinely missing hypotheses or results. Then continue the remaining EGA-wide coverage queue; preserve the broader III.6 partials and do not repeat completed comparisons."
+}
