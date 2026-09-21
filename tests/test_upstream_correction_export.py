@@ -1,5 +1,7 @@
 """Small exporter regression checks without building or touching source files."""
 import dataclasses
+import io
+import zipfile
 from types import SimpleNamespace
 import unittest
 from tools import export_upstream_corrections as e
@@ -48,6 +50,13 @@ class ExportTests(unittest.TestCase):
 
     def test_zip_deterministic(self):
         self.assertEqual(e.archive_bytes({"a.patch": b"one"}), e.archive_bytes({"a.patch": b"one"}))
+
+    def test_zip_platform_and_compressor_independent(self):
+        with zipfile.ZipFile(io.BytesIO(e.archive_bytes({"a.patch": b"one"}))) as archive:
+            entry = archive.getinfo("a.patch")
+            self.assertEqual(entry.create_system, 3)
+            self.assertEqual(entry.compress_type, zipfile.ZIP_STORED)
+            self.assertEqual(entry.date_time, (2026, 9, 22, 0, 0, 0))
 
     def test_zip_escape_fails(self):
         with self.assertRaises(ValueError):

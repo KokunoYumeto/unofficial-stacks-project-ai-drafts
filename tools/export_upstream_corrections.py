@@ -114,11 +114,14 @@ def replay_all(patches, before, after, baseline):
 
 def archive_bytes(files):
     stream = io.BytesIO()
-    with zipfile.ZipFile(stream, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    # Store entries to avoid zlib-version-dependent compressed bytes; fix the
+    # creator platform too. The complete bundle is only a few megabytes.
+    with zipfile.ZipFile(stream, "w", compression=zipfile.ZIP_STORED) as archive:
         for path, raw in sorted(files.items()):
             require(not path.startswith("/") and ".." not in Path(path).parts, "unsafe archive path")
             info = zipfile.ZipInfo(path, date_time=(2026, 9, 22, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
+            info.create_system = 3
+            info.compress_type = zipfile.ZIP_STORED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, raw)
     raw = stream.getvalue()
