@@ -1,0 +1,431 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA III.7.7.9: representing modules, relative ampleness and removing presentations",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "CLAUSES_PRIMARY_REVIEWED_WITH_EXPLICIT_LOCAL_GLOBAL_QUALIFICATION",
+  "review_boundary": "Primary-only mathematical comparison of the French clauses and the actual Stacks statements/proofs. No subagents, printed-page collation, proof-assistant validation or independent-review claim.",
+  "source_read_boundary": "Pinned diplomatic transcription; the conclusion below concerns its explicit wording, not a claim of collated original-print errata.",
+  "counts": {
+    "numbered_remarks": 1,
+    "clauses": 3,
+    "supported_clauses": 2,
+    "qualified_clauses": 1,
+    "new_root_theorems": 0
+  },
+  "files": [
+    {
+      "id": "french:III.7",
+      "name": "french3_ega3-7-fr_6b388758.tex",
+      "kind": "pinned_french_transcription",
+      "bytes": 172424,
+      "sha256": "20A61BA348909E4309A3CDA89FD6DDAF8C0FC5BA346FD44232458CDFEA2A2972",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex"
+    },
+    {
+      "id": "stacks:perfect.tex",
+      "name": "perfect.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 417517,
+      "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/perfect.tex"
+    },
+    {
+      "id": "stacks:more-algebra.tex",
+      "name": "more-algebra.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 1518081,
+      "sha256": "0490028F82EFFCF08C0D790D0C8145EEB8D55DB66BFB8CF7BA29CCD27FC3FABE",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/more-algebra.tex"
+    },
+    {
+      "id": "stacks:quot.tex",
+      "name": "quot.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 237556,
+      "sha256": "4949679B9A1B178CE7DF1F3295CC3DEDC5E8E141B9E1838DB9766A5237690395",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/quot.tex"
+    },
+    {
+      "id": "stacks:properties.tex",
+      "name": "properties.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 213401,
+      "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/properties.tex"
+    },
+    {
+      "id": "stacks:morphisms.tex",
+      "name": "morphisms.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/morphisms.tex"
+    },
+    {
+      "id": "stacks:schemes.tex",
+      "name": "schemes.tex",
+      "kind": "committed_stacks_source",
+      "bytes": 189721,
+      "sha256": "028A8204A03E736E9F22FF0D7C6444A17D04BFD5CDBBD31F4CDF322BEC55F233",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/schemes.tex"
+    }
+  ],
+  "spans": [
+    {
+      "id": "target:EXCHANGE",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        6662,
+        6708
+      ],
+      "byte_start": 251677,
+      "byte_end_exclusive": 253310,
+      "bytes": 1633,
+      "sha256": "CEE758E00E9E7C11548CBFC008B163FC8830A50627F071EA2FD46EF9EDD138FC",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/perfect.tex#L6662-L6708"
+    },
+    {
+      "id": "target:COEFFICIENT",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        5051,
+        5094
+      ],
+      "byte_start": 191335,
+      "byte_end_exclusive": 193120,
+      "bytes": 1785,
+      "sha256": "06845DB67402C3006458D191B5E9E97457474992431F3691745EB024FDB93216",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/perfect.tex#L5051-L5094"
+    },
+    {
+      "id": "target:PERFECT",
+      "file_id": "stacks:more-algebra.tex",
+      "lines": [
+        19511,
+        19537
+      ],
+      "byte_start": 734151,
+      "byte_end_exclusive": 735304,
+      "bytes": 1153,
+      "sha256": "5CD41201EF6EDBABDB6A23C9ADDF7421EECC52990850962263ED27E56E02ECA0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/more-algebra.tex#L19511-L19537"
+    },
+    {
+      "id": "target:EXTMODEL",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        7057,
+        7127
+      ],
+      "byte_start": 266426,
+      "byte_end_exclusive": 269127,
+      "bytes": 2701,
+      "sha256": "A65669F971DCA93DB3A9AC1244A7A04BBAD0F3C5AFFE68680F26EA9CCBAE81F9",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/perfect.tex#L7057-L7127"
+    },
+    {
+      "id": "target:HOMPROOF",
+      "file_id": "stacks:quot.tex",
+      "lines": [
+        583,
+        664
+      ],
+      "byte_start": 22484,
+      "byte_end_exclusive": 25785,
+      "bytes": 3301,
+      "sha256": "54E200A8B524D9D7D61EC19FCC19FC235CEDF68E696433E1015FCD720DA2040C",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/quot.tex#L583-L664"
+    },
+    {
+      "id": "target:AMPLEQUOT",
+      "file_id": "stacks:properties.tex",
+      "lines": [
+        4668,
+        4890
+      ],
+      "byte_start": 176489,
+      "byte_end_exclusive": 186244,
+      "bytes": 9755,
+      "sha256": "20C5A14B68B3EF211A74F662F60B78AA54CEE44EECC675268B242D51146CD065",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/properties.tex#L4668-L4890"
+    },
+    {
+      "id": "target:RELATIVE",
+      "file_id": "stacks:morphisms.tex",
+      "lines": [
+        8635,
+        8647
+      ],
+      "byte_start": 311455,
+      "byte_end_exclusive": 311981,
+      "bytes": 526,
+      "sha256": "6F1ED234F32223B1775EA75CC79E2551D0DB9396D5EA99F95DE969C629AB05DA",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/morphisms.tex#L8635-L8647"
+    },
+    {
+      "id": "target:AFFINEBASE",
+      "file_id": "stacks:morphisms.tex",
+      "lines": [
+        9538,
+        9571
+      ],
+      "byte_start": 347857,
+      "byte_end_exclusive": 349322,
+      "bytes": 1465,
+      "sha256": "3438F6F8DF93880ADFCE13375EFEE2A246CA2CC5A66EBB3B2E2280A81E3D0A92",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/morphisms.tex#L9538-L9571"
+    },
+    {
+      "id": "target:RESOLUTION",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        9217,
+        9232
+      ],
+      "byte_start": 350147,
+      "byte_end_exclusive": 350936,
+      "bytes": 789,
+      "sha256": "C0459FD3D8056990FD4B443EAD43FB5A48E32DDD13F7C3EE14EAFDBE7DC22847",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/perfect.tex#L9217-L9232"
+    },
+    {
+      "id": "target:DIAGONAL",
+      "file_id": "stacks:perfect.tex",
+      "lines": [
+        9487,
+        9558
+      ],
+      "byte_start": 361399,
+      "byte_end_exclusive": 364514,
+      "bytes": 3115,
+      "sha256": "DFB7949896C53EF1E68B1DE26129B7F0C11420EEF9EE59562110CED42E59C4E5",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/perfect.tex#L9487-L9558"
+    },
+    {
+      "id": "target:DOUBLED",
+      "file_id": "stacks:schemes.tex",
+      "lines": [
+        2886,
+        2929
+      ],
+      "byte_start": 104072,
+      "byte_end_exclusive": 106133,
+      "bytes": 2061,
+      "sha256": "59C9CB67D47D0BF31D64DEAFCDF896763681D61E24A28B6F724FC4146A9EE545",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/2b144b6e16b426e2ee37f1106fd6e9cb8ff0cc9b/schemes.tex#L2886-L2929"
+    },
+    {
+      "id": "ega:III.7.7.9(i):french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2841,
+        2885
+      ],
+      "byte_start": 102377,
+      "byte_end_exclusive": 104214,
+      "bytes": 1837,
+      "sha256": "A9B7BA2B4665AE8899589E762F73329A6186FD8FC367E619D7B609EA0962C8AF",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2841-L2885"
+    },
+    {
+      "id": "ega:III.7.7.9(ii):french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2887,
+        2899
+      ],
+      "byte_start": 104215,
+      "byte_end_exclusive": 105098,
+      "bytes": 883,
+      "sha256": "CBD6627FEE13EDAFBEDB5FD5836DFE66189A4163167F681093A4EC442A3B687B",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2887-L2899"
+    },
+    {
+      "id": "ega:III.7.7.9(iii):french_authority",
+      "file_id": "french:III.7",
+      "lines": [
+        2901,
+        2904
+      ],
+      "byte_start": 105099,
+      "byte_end_exclusive": 105242,
+      "bytes": 143,
+      "sha256": "450F09F54CF0423F582A3C00B978971D862EEEB9E4C31589CCC775EFEF779DD7",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L2901-L2904"
+    }
+  ],
+  "tag_bindings": [
+    {
+      "id": "EXCHANGE",
+      "label": "perfect-lemma-base-change-tensor",
+      "tag": "0A1D",
+      "url": "https://stacks.math.columbia.edu/tag/0A1D"
+    },
+    {
+      "id": "COEFFICIENT",
+      "label": "perfect-lemma-cohomology-base-change",
+      "tag": "08EU",
+      "url": "https://stacks.math.columbia.edu/tag/08EU"
+    },
+    {
+      "id": "PERFECT",
+      "label": "more-algebra-lemma-perfect",
+      "tag": "0658",
+      "url": "https://stacks.math.columbia.edu/tag/0658"
+    },
+    {
+      "id": "EXTMODEL",
+      "label": "perfect-lemma-compute-ext",
+      "tag": "08IF",
+      "url": "https://stacks.math.columbia.edu/tag/08IF"
+    },
+    {
+      "id": "HOMPROOF",
+      "label": "quot-lemma-noetherian-hom",
+      "tag": "08JY",
+      "url": "https://stacks.math.columbia.edu/tag/08JY"
+    },
+    {
+      "id": "AMPLEQUOT",
+      "label": "properties-proposition-characterize-ample",
+      "tag": "01Q3",
+      "url": "https://stacks.math.columbia.edu/tag/01Q3"
+    },
+    {
+      "id": "RELATIVE",
+      "label": "morphisms-definition-relatively-ample",
+      "tag": "01VH",
+      "url": "https://stacks.math.columbia.edu/tag/01VH"
+    },
+    {
+      "id": "AFFINEBASE",
+      "label": "morphisms-lemma-finite-type-over-affine-ample-very-ample",
+      "tag": "01VT",
+      "url": "https://stacks.math.columbia.edu/tag/01VT"
+    },
+    {
+      "id": "RESOLUTION",
+      "label": "perfect-definition-resolution-property",
+      "tag": "0F86",
+      "url": "https://stacks.math.columbia.edu/tag/0F86"
+    },
+    {
+      "id": "DIAGONAL",
+      "label": "perfect-lemma-resolution-property-affine-diagonal",
+      "tag": "0F8C",
+      "url": "https://stacks.math.columbia.edu/tag/0F8C"
+    },
+    {
+      "id": "DOUBLED",
+      "label": "schemes-example-affine-space-zero-doubled",
+      "tag": "01JD",
+      "url": "https://stacks.math.columbia.edu/tag/01JD"
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "ega:III.7.7.9(i)",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "Formation of the coherent representing modules Q, R and N in III.7.7.6-7.7.8 commutes with arbitrary base change, with the original two-term presentation retained in the N case.",
+      "source_spans": [
+        "ega:III.7.7.9(i):french_authority"
+      ],
+      "target_evidence": [
+        "EXCHANGE",
+        "COEFFICIENT",
+        "PERFECT"
+      ],
+      "derivation": [
+        "Work on an affine open of Y, then an affine open of Y' mapping into it. For the coherent base-flat sheaf F, the perfect direct image has a finite-projective model E^0 -> E^1 -> ... in nonnegative degrees. Q=coker((E^1)^vee -> (E^0)^vee) represents H^0 with arbitrary module coefficients.",
+        "After A -> B, EXCHANGE identifies the new direct image with E tensor_A B. Finite-projective duals commute with base change and tensor preserves cokernels, so the new representing module is Q tensor_A B. This argument concerns the representing cokernel; it does not assume arbitrary pullback commutes with sheaf Hom of nonprojective modules.",
+        "For the kernel of two section functors, R=coker(Q' -> Q). The induced map is preserved by the natural base-change identifications; right exactness of tensor gives R_B.",
+        "For N, the right-exact presentation E_1 -> E_0 -> G -> 0 remains right exact after any pullback. The pulled-back E_j remain finite locally free, and their duals commute with pullback. Reduce to the preceding R case. Gluing uses unique isomorphisms compatible with the representing natural transformations."
+      ],
+      "unresolved_clauses": []
+    },
+    {
+      "source_id": "ega:III.7.7.9(ii)",
+      "classification": "qualified_local_statement_global_reading_refuted",
+      "counted_supported": false,
+      "hypotheses_and_scope": "A coherent G has a two-term finite-vector-bundle presentation over the inverse image of every affine base open when an f-ample line bundle exists. The transcription's literal unrestricted global-presentation claim does not follow and is false in general.",
+      "source_spans": [
+        "ega:III.7.7.9(ii):french_authority"
+      ],
+      "target_evidence": [
+        "RELATIVE",
+        "AFFINEBASE",
+        "AMPLEQUOT",
+        "RESOLUTION",
+        "DIAGONAL",
+        "DOUBLED"
+      ],
+      "derivation": [
+        "Over an affine base open V, X_V is Noetherian and quasi-compact, and the relative ample line bundle is ample in the absolute sense. AMPLEQUOT gives a finite direct sum of negative powers surjecting onto G|X_V. Its kernel is coherent, so repeat the same argument to obtain E_1 -> E_0 -> G|X_V -> 0.",
+        "This is global on X_V, and is global on X when Y itself is affine. It also follows globally if X has the resolution property, for example if X carries an absolute ample line bundle. It does not justify gluing these vector bundles to one presentation on all of X.",
+        "For the unrestricted global reading, use Y formed by gluing two affine planes along the complement of their origins, as in DOUBLED with n=2. It is Noetherian and quasi-separated. Its two affine chart intersection is not affine, so the diagonal is not affine. DIAGONAL implies Y has no resolution property; on a Noetherian scheme this means some coherent sheaf is not a quotient of any finite locally free sheaf.",
+        "Set X=Y and f=id_Y, which is proper. O_Y is f-ample because its restriction to each affine base open is ample there. The literal global statement would give every coherent sheaf a finite-vector-bundle quotient, contradicting the preceding result. The useful relative/local assertion remains valid."
+      ],
+      "unresolved_clauses": [
+        "Original-print collation has not been performed; this is a proved qualification of the pinned transcription's global reading, not an admitted historical-source or official Stacks erratum."
+      ],
+      "not_a_missing_stacks_theorem": true
+    },
+    {
+      "source_id": "ega:III.7.7.9(iii)",
+      "classification": "existing_derived",
+      "counted_supported": true,
+      "hypotheses_and_scope": "For proper f over locally Noetherian Y, coherent base-flat F and arbitrary coherent G, the functor M -> f_*Hom_X(G,F tensor f^*M) is represented by Hom_Y(N,M) for a coherent N, without a global two-term vector-bundle presentation of G.",
+      "source_spans": [
+        "ega:III.7.7.9(iii):french_authority"
+      ],
+      "target_evidence": [
+        "EXTMODEL",
+        "PERFECT",
+        "HOMPROOF"
+      ],
+      "derivation": [
+        "Over an affine base Spec A, apply EXTMODEL(A) with E=G[0], the target complex F[0], and m=0. It gives one perfect K with H^i(K tensor_A^L M)=Ext_X^i(G,F tensor_A M) for every A-module M and every i<=0. The negative Ext groups vanish, so K has nonnegative Tor amplitude; its upper Tor bound is finite because K is perfect.",
+        "PERFECT gives a finite-projective representative E^0 -> E^1 -> ... with no negative terms. Put N=coker((E^1)^vee -> (E^0)^vee). Then Hom_A(N,M)=ker(E^0 tensor M -> E^1 tensor M)=Hom_X(G,F tensor_A M) naturally for every M.",
+        "The proof of EXTMODEL constructs K using a perfect approximation P -> G that is an isomorphism on H^0 and has no positive cohomology. This is not a claim of a global vector-bundle resolution of G. The same distinction is explicit in HOMPROOF.",
+        "For a principal open of the affine base, apply the natural formula to localized coefficient modules M_s. On X, finite presentation of G makes sheaf Hom commute with this scalar localization. On the quasi-compact quasi-separated X, global sections of quasi-coherent modules commute with this filtered localization. Thus the natural module formula restricts to the sheaf formula.",
+        "On overlaps, both locally constructed coherent modules represent the same localized functor. Yoneda gives unique compatible isomorphisms satisfying the cocycle condition; the modules glue on Y, including when Y is nonseparated. Taking global sections gives the global Hom formulation. No extra resolution-property or projectivity hypothesis is imposed."
+      ],
+      "unresolved_clauses": []
+    }
+  ],
+  "limitations": [
+    "Only the three clauses of III.7.7.9 are covered; the preceding 32-row comparison is a separate checkpoint.",
+    "The global reading of the relative-ampleness clause is refuted using existing Stacks results. The affine-local form is valid. No original-print collation or historical-source errata admission is claimed.",
+    "III.7.7.12(ii) and III.7.8.10(ii) retain the unresolved questions stated in the preceding comparison.",
+    "This is a primary AI mathematical comparison, not independent expert review or proof-assistant certification."
+  ],
+  "reproducibility": {
+    "primary_comparison": {
+      "name": "EGA_III779_PRIMARY_COMPARISON_20260921.json",
+      "bytes": 8997,
+      "sha256": "F0AF95C7948B760D8F6020CD5B7F892176854E3CB1B3C024F09B0A2DFE8D5883"
+    },
+    "tags_file": {
+      "name": "tags/tags",
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D"
+    },
+    "mechanical_checks": {
+      "files": 7,
+      "spans": 14,
+      "tag_bindings": 11,
+      "target_files_unchanged": 6,
+      "status": "PASS"
+    },
+    "mathematical_check": "The recorded derivations were checked against the source statements and proofs. Hash, label and count checks alone do not prove mathematics."
+  },
+  "source_write_boundary": "No French/English authority, official upstream source, or registry entries are edited. No new canon IDs or errata admissions are allocated.",
+  "agents_used": 0,
+  "new_root_theorems": 0,
+  "whole_ega_complete": false,
+  "next_action": "Resolve the historical global-hypertor comparison in III.7.7.12(ii) using the exact III.6 source definitions and previously published residuals. Keep III.7.8.10(ii)'s concrete example/Picard identification open. Continue remaining EGA-wide coverage after these bounded residual checks; do not repeat completed comparisons."
+}

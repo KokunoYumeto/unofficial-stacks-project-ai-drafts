@@ -224,8 +224,9 @@ This is a source-comparison note, not a new errata admission.
   the relative Picard scheme's cotangent sheaf along the unit.
 - **Other context:** III.7.7.1–7.7.3 are used only under the bounded
   hypotheses above, not certified in unrestricted unbounded generality.
-  III.7.7.9's representing-object base change and resolution remarks need
-  their own comparison. III.7.8.1 is a definition; III.7.8.2's unrestricted
+  III.7.7.9 is now treated in a [separate representability comparison](ega-iii-7-7-9-representability.md),
+  including the local/global qualification on presentations; it is not
+  included in this checkpoint's 32-row count. III.7.8.1 is a definition; III.7.8.2's unrestricted
   locality claim is not separately counted. III.7.1–7.6 are outside this
   selected batch.
 

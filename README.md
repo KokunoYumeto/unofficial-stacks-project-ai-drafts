@@ -199,6 +199,11 @@ hypothesis for degree-zero cohomological flatness. Two items remain partial:
 the historical nonflat global-hypertor comparison, and the smooth-projective
 example/Picard-cotangent interpretation. These are correspondences with
 existing Stacks mathematics, not 30 new theorems.
+A [supplement on III.7.7.9](ega/coverage/ega-iii-7-7-9-representability.md)
+explains base change of the representing modules and removes the global
+two-term presentation hypothesis using Stacks' Ext-functor construction.
+It also gives an existing Stacks counterexample to the unrestricted global
+reading of the relative-ampleness remark, while retaining its valid local form.
 The [IV §18.12 comparison](ega/coverage/ega-iv-18-12.md) records 16 supported
 items on finiteness, Zariski's Main Theorem, normalization and ampleness. It
 separates a historical conjecture and an unchecked proof-route claim from
