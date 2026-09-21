@@ -1,4 +1,8 @@
-# Pursuing Stacks: categories of elements and localization
+# Pursuing Stacks: categories of elements and homotopy intervals
+
+AI mathematical drafting, source/proof review and packaging for these modules:
+OpenAI Codex — GPT-6 Astra, Ultra effort. No human review or proof-assistant
+verification is claimed.
 
 This first normalized module supplies explicit proofs of the
 category-of-elements adjunction, its counit's comma-category formula, and a
@@ -9,6 +13,8 @@ in those proofs. The source is Grothendieck's *Pursuing Stacks*, sections 19,
 
 ## Read or reuse the module
 
+### Categories of elements, relative nerves, and a counit criterion
+
 1. [Reader PDF](01-category-models.pdf).
 2. [Complete editable LaTeX](02-category-models.tex).
 3. [Complete reproducible source ZIP](03-category-models-source.zip).
@@ -18,6 +24,22 @@ archive includes the same LaTeX, builder, Windows process guard, source map,
 review, and licensing material. [Artifact identities](release.json) identify
 the exact PDF and source archive. No new Zenodo version is created for this
 small module.
+
+### Homotopy intervals and an asphericity criterion
+
+1. [Reader PDF](04-homotopy-intervals.pdf).
+2. [Complete editable LaTeX](05-homotopy-intervals.tex).
+3. [Complete reproducible source ZIP](06-homotopy-intervals-source.zip).
+
+The second six-page module proves the sieve-cutoff contraction, the
+product-asphericity calculation making cylinder projections weak, and the
+sufficient counit-test criterion. It then proves universal contraction,
+comparison of intervals, and the subobject-classifier criterion. Two
+elementary weak-equivalence lemmas make the additional closure assumption
+explicit. There are eight statements with proofs, mapped to fourteen source
+IDs from sections 31 and 37. [The review](INTERVALS_REVIEW.md) records a
+historical repeated-endpoint typo separately from official Stacks fixes;
+[artifact identities](intervals-release.json) bind this module's files.
 
 ## What the seven statements establish
 
@@ -49,9 +71,10 @@ human-reviewed, or proof-assistant-verified.
 
 This is a **standalone extension module in the unified repository**, not yet
 an insertion into `categories.tex` or the existing cumulative Stacks PDFs.
-It contains seven proof-bearing statements linked to eleven received source
-IDs. The received draft has 151 local definitions, results, and examples;
-this module is not completion of that draft, nor of the whole historical work.
+Together the two modules contain fifteen proof-bearing statements linked to
+twenty-five received source IDs. The received draft has 151 local definitions,
+results, and examples; these modules are not completion of that draft, nor of
+the whole historical work.
 [The intake record](INTAKE.md) and [frozen-input inventory](received-inventory.json)
 retain those boundaries. The next comparison concerns the remaining
 asphericity and interval arguments, not EGA.
@@ -67,6 +90,9 @@ or missing body file is required. From the extracted archive root run:
 python pursuing-stacks/check.py
 python pursuing-stacks/build.py --output fresh-module-build
 ```
+
+For the interval module, use `check.py --record intervals-integration.json`
+and `build.py --source 05-homotopy-intervals.tex --output fresh-interval-build`.
 
 The builder creates two fresh builds, requires a fixed point and matching
 PDF/auxiliary bytes, and rejects unresolved references and overfull boxes.

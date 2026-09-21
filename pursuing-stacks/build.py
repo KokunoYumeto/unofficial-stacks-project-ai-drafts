@@ -16,7 +16,6 @@ import sys
 from datetime import datetime, timezone
 
 MODULE = Path(__file__).resolve().parent
-NAME = "02-category-models"
 EPOCH = "1790010000"
 
 
@@ -69,18 +68,21 @@ class TexSlot:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source", default="02-category-models.tex",
+                        choices=("02-category-models.tex", "05-homotopy-intervals.tex"))
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--resume-empty", action="store_true",
                         help="Reuse only an empty directory left by an unavailable TeX slot")
     parser.add_argument("--slot-wait-ms", type=int, default=15000)
     args = parser.parse_args()
+    name = Path(args.source).stem
     out = args.output.resolve()
     if out.exists() and not (args.resume_empty and out.is_dir() and not any(out.iterdir())):
         raise RuntimeError("Choose a fresh output directory; existing builds are preserved.")
     latex = shutil.which("pdflatex")
     if not latex:
         raise RuntimeError("pdflatex is not available")
-    source = (MODULE / (NAME + ".tex")).read_bytes()
+    source = (MODULE / args.source).read_bytes()
     assert source.count(b"\\begin{document}") == source.count(b"\\end{document}") == 1
     out.mkdir(parents=True, exist_ok=args.resume_empty)
     env = dict(os.environ, SOURCE_DATE_EPOCH=EPOCH, FORCE_SOURCE_DATE="1", TZ="UTC")
@@ -93,11 +95,11 @@ def main():
         for run in ("a", "b"):
             folder = out / run
             folder.mkdir()
-            (folder / (NAME + ".tex")).write_bytes(source)
+            (folder / (name + ".tex")).write_bytes(source)
             previous = None
             for sweep in range(1, 6):
                 command = [latex, "-interaction=nonstopmode", "-halt-on-error", "-file-line-error",
-                           "-recorder", NAME + ".tex"]
+                           "-recorder", name + ".tex"]
                 capture = out / f"capture-{run}-{sweep}.json"
                 if os.name == "nt":
                     done = run_captured(command, cwd=folder, env=env, timeout=180,
@@ -112,13 +114,13 @@ def main():
                 if done.returncode:
                     raise RuntimeError(f"Build {run}/{sweep} failed; inspect the preserved log")
                 names = ("pdf", "aux", "out", "toc")
-                vector = {ext: sha((folder / (NAME + "." + ext)).read_bytes()) for ext in names}
+                vector = {ext: sha((folder / (name + "." + ext)).read_bytes()) for ext in names}
                 if vector == previous:
                     break
                 previous = vector
             else:
                 raise RuntimeError("No fixed point within five sweeps")
-            log = (folder / (NAME + ".log")).read_text(encoding="utf-8", errors="replace")
+            log = (folder / (name + ".log")).read_text(encoding="utf-8", errors="replace")
             errors = re.findall(r"^!.*|.*(?:undefined|multiply defined|Missing character|Overfull \\hbox|Rerun to get).*", log, re.M)
             if errors:
                 raise RuntimeError("Unresolved build diagnostics: " + repr(errors))
@@ -126,12 +128,12 @@ def main():
                            "fatal_undefined_duplicate_glyph_overfull_rerun": 0})
             print(f"Build {run}: fixed point in {sweep} sweeps", flush=True)
         assert builds[0]["identities"] == builds[1]["identities"], "Fresh builds differ"
-    pdf = (out / "a" / (NAME + ".pdf")).read_bytes()
+    pdf = (out / "a" / (name + ".pdf")).read_bytes()
     receipt = {"schema": "pursuing-stacks-module-build/v1", "status": "PASS_BUILD_VISUAL_PENDING",
-               "source": {"file": NAME + ".tex", "bytes": len(source), "sha256": sha(source)},
+               "source": {"file": name + ".tex", "bytes": len(source), "sha256": sha(source)},
                "pdf": {"bytes": len(pdf), "sha256": sha(pdf)}, "source_date_epoch": EPOCH,
                "fresh_builds": builds, "mutex": slot.receipt, "captures": captures,
-               "scope": "Standalone normalized category-models module; not a cumulative Stacks rebuild.",
+               "scope": f"Standalone normalized module {name}; not a cumulative Stacks rebuild.",
                "independent_mathematical_review_claimed": False}
     (out / "BUILD_RECEIPT.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(receipt["pdf"]))

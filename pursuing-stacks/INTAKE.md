@@ -1,4 +1,4 @@
-# Pursuing Stacks: received draft and first normalized module
+# Pursuing Stacks: received draft and normalized modules
 
 A separate English Stacks-style draft covers source sections 1–48 and 16bis
 of Grothendieck's *Pursuing Stacks*. The rest of the 140-section work is not
@@ -60,8 +60,16 @@ readable addition within this repository; it is not yet stitched into the old
 cumulative Stacks PDFs or `categories.tex`. Its direct LaTeX and complete source
 ZIP accompany the PDF. Two fresh fixed-point builds agree byte-for-byte, and
 all six pages were inspected. Full mathematical review or publication of the
-received 68-page reader is not claimed. The remaining asphericity and interval
-material still needs comparison and proof review.
+received 68-page reader is not claimed.
+
+The second six-page module now adds eight proved statements on the sieve
+cutoff, sufficient asphericity criterion, abstract contractions, and the
+subobject-classifier interval criterion. Its fourteen source IDs are disjoint
+from the first module's eleven. Thus twenty-five of the 151 received local
+IDs support published normalized modules, including reused foundations; this
+is not a percentage of newly discovered mathematics. The remaining material,
+including concrete test-category examples and further comparison theorems,
+still needs comparison and proof review.
 
 This material belongs to [Possible new additions](../POSSIBLE_ADDITIONS.md).
 Neither it nor repairs to it belongs in the list of possible upstream fixes.

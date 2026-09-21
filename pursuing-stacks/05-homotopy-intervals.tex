@@ -1,0 +1,314 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[all]{xy}
+\usepackage[hidelinks]{hyperref}
+\emergencystretch=2em
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\PSh}{\operatorname{PSh}}
+\newcommand{\El}{\operatorname{El}}
+\newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\PSM}[1]{\par\smallskip{\small\raggedright\noindent Source-map identifiers: \texttt{#1}.\par}\smallskip}
+\title{Homotopy Intervals and an Asphericity Criterion}
+\author{Unofficial Stacks Project AI Drafts}
+\date{September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the sieve-cutoff contraction used in the sufficient test-category
+criterion of Grothendieck, including the two comma-category calculations
+that make its cylinder projections weak equivalences. We then prove an
+abstract interval-comparison lemma and the subobject-classifier criterion.
+All weak-equivalence and closure hypotheses are explicit. These are
+AI-written expository drafts from \emph{Pursuing Stacks}, sections 31 and
+37, not official Stacks text or proof-assistant-checked mathematics.
+\end{abstract}
+\tableofcontents
+
+\section{Two elementary weak-equivalence arguments}
+
+All products and hom sets are taken in fixed suitable universes. An
+interval datum is an object $I$ with two maps $e_0,e_1:\one\to I$.
+An $I$-homotopy from $f_0:F\to G$ to $f_1:F\to G$ is a map
+$H:F\times I\to G$ with $Hi_k=f_k$, where
+$i_k=(\id_F,e_k):F\to F\times I$. It is called disjoint when
+$\one\times_I\one$ is initial, using the two different endpoints.
+Disjointness is not needed in the first two lemmas.
+\PSM{PSM-DEF-0035; PSM-DEF-0036}
+
+\begin{lemma}\label{psi-transport}
+Let $V$ contain identities and satisfy two out of three. If $i_0,i_1$
+are in $V$ and $H$ is an $I$-homotopy with $f_0\in V$, then
+$H,f_1\in V$.
+\end{lemma}
+\PSM{PSM-LEM-0019}
+\begin{proof}
+The equality $Hi_0=f_0$ gives $H\in V$ by two out of three.
+The equality $f_1=Hi_1$ then gives $f_1\in V$ by the same property.
+In particular, the endpoints lie in $V$ whenever the projection
+$p:F\times I\to F$ lies in $V$, since $pi_k=\id_F$.
+\end{proof}
+
+\begin{lemma}\label{psi-split-projector}
+Suppose $V=Q^{-1}(\operatorname{Iso})$ for a functor $Q$.
+If $E\xrightarrow{i}F\xrightarrow{r}E$ satisfies $ri=\id_E$ and
+$ir\in V$, then $i,r\in V$.
+\end{lemma}
+\PSM{PSM-LEM-0020}
+\begin{proof}
+The endomorphism $p=Q(i)Q(r)$ satisfies $p^2=p$ and is invertible.
+Multiplying by $p^{-1}$ gives $p=\id_{Q(F)}$. Together with
+$Q(r)Q(i)=\id_{Q(E)}$, this says that $Q(i)$ and $Q(r)$ are inverse
+isomorphisms. The definition of $V$ finishes the proof.
+\end{proof}
+
+We call the conclusion of Lemma~\ref{psi-split-projector}
+\emph{split-projector closure}. It is an additional assumption when
+$V$ is not known to be an inverse image of isomorphisms. Two out of
+three alone is not being used as a substitute for it.
+
+\section{A cutoff homotopy defined by a sieve}
+
+Let $A$ be small. Write $\PSh(A)=\Fun(A^{\mathrm{op}},\mathbf{Sets})$
+and let $\El_A(F)$ be its category of elements: an arrow
+$(a,x)\to(b,y)$ is $u:a\to b$ with $F(u)(y)=x$.
+For a small category $B$ define
+\[
+ J_A(B)(a)=\Fun(A/a,B),
+\]
+where the right side is the \emph{set} of functors. Restrictions are
+precomposition with the postcomposition functors between slices.
+The adjunction $\El_A\dashv J_A$, including its action on arrows,
+is proved in the companion category-models module.
+
+\begin{proposition}\label{psi-cutoff}
+Let $(I,e_0,e_1)$ be a disjoint interval datum in $\PSh(A)$.
+If $B$ has a chosen final object $b_*$, there is an $I$-homotopy
+from $\id_{J_A(B)}$ to the constant endomorphism selecting the
+constant functor with value $b_*$.
+\end{proposition}
+\PSM{PSM-PROP-0014}
+\begin{proof}
+For $T:A/a\to B$ and $u\in I(a)$, define a full subcategory $S_u$
+of $A/a$ by the condition
+\[
+ (g:x\to a)\in S_u \quad\Longleftrightarrow\quad I(g)(u)=e_0(x).
+\]
+If $g$ belongs to $S_u$ and $k:y\to x$, naturality of $e_0$ gives
+$I(gk)(u)=e_0(y)$. Thus $S_u$ is a sieve.
+
+Define $T_u$ to agree with $T$ on $S_u$ and to be constantly $b_*$
+on its complement. For an arrow with target in $S_u$, its source is
+also in $S_u$, and use $T$ on that arrow. For an arrow with target
+outside $S_u$, use the unique map to $b_*$. These rules respect
+composition: a composite ending in $S_u$ lies entirely in $S_u$;
+one ending outside it has its prescribed unique image in $b_*$.
+They also respect identities, including $\id_{b_*}$ outside the sieve.
+
+For $v:a'\to a$, the inverse image of $S_u$ under $v_*:A/a'\to A/a$
+is exactly $S_{I(v)(u)}$. Hence $(T,u)\mapsto T_u$ commutes with
+restrictions and defines a map $H:J_A(B)\times I\to J_A(B)$.
+At $u=e_0(a)$ the sieve is all of $A/a$; at $u=e_1(a)$ it is empty,
+because disjointness is evaluated objectwise in a presheaf category.
+Thus the two endpoints are exactly the asserted maps.
+\end{proof}
+
+For an arrow $x\to y$ in the slice, the construction has three cases:
+\[
+\begin{array}{c|c}
+\text{positions of its endpoints}&\text{image arrow}\\ \hline
+x,y\in S_u&T(x)\xrightarrow{T(x\to y)}T(y)\\
+x\in S_u,\ y\notin S_u&T(x)\longrightarrow b_*\quad\text{(unique)}\\
+x,y\notin S_u&b_*\xrightarrow{\id}b_*
+\end{array}
+\]
+There is no fourth case crossing back into the sieve.
+
+\section{Products and a sufficient counit criterion}
+
+Fix a class $W$ of functors between small categories. Assume that it
+contains isomorphisms, satisfies two out of three, and contains every
+right $W$-aspheric functor. Here $C$ is $W$-aspheric when
+$C\to\one$ lies in $W$, and $f:C\to D$ is right $W$-aspheric when
+$(f\downarrow d)$ is $W$-aspheric for every $d\in D$.
+A presheaf is $W$-aspheric when its category of elements is.
+We call $A$ product-aspheric if $\El_A(h_a\times h_b)$ is
+$W$-aspheric for every $a,b\in A$, with $h_a=A(-,a)$.
+Products here are products of presheaves; $A$ need not have products.
+\PSM{PSM-DEF-0037; PSM-DEF-0038}
+
+\begin{proposition}\label{psi-product}
+If $A$ is product-aspheric and $I$ is a $W$-aspheric presheaf, then
+for every $F\in\PSh(A)$ the projection
+$\El_A(F\times I)\to\El_A(F)$ is right $W$-aspheric and belongs to $W$.
+\end{proposition}
+\PSM{PSM-PROP-0015}
+\begin{proof}
+First consider $q_a:\El_A(h_a\times I)\to\El_A(I)$.
+Over $(b,u)$ its comma category is canonically
+\[
+ (q_a\downarrow(b,u))\cong\El_A(h_a\times h_b).
+\]
+An object on the left is an object $c$, a map $c\to a$, an element
+$t\in I(c)$, and an arrow $v:c\to b$ with $t=I(v)(u)$.
+The last equality determines $t$, leaving exactly the two arrows
+defining an object on the right. Morphisms on both sides are maps
+between their domains commuting with those two arrows, so the
+identification is an isomorphism, not just a bijection on objects.
+Consequently $q_a\in W$. Composing with $\El_A(I)\to\one$ shows
+that $\El_A(h_a\times I)$ is $W$-aspheric.
+
+For the original projection, the comma category over $(a,x)\in\El_A(F)$
+is canonically $\El_A(h_a\times I)$: the arrow to $(a,x)$ forces
+the $F$-coordinate to be $F(v)(x)$, leaving $v:c\to a$ and
+$t\in I(c)$. The same arrow calculation verifies the isomorphism.
+Every such comma category is aspheric. The assumed right-asphericity
+implication now gives membership in $W$.
+\end{proof}
+
+\begin{proposition}\label{psi-sufficient}
+In addition, assume that categories with final objects are $W$-aspheric
+and that $W$ has split-projector closure. Suppose that $A$ is
+$W$-aspheric and product-aspheric, and that it admits a disjoint
+interval datum whose presheaf is $W$-aspheric. Then every evaluation
+counit $\epsilon_C:\El_A(J_A(C))\to C$ belongs to $W$.
+\end{proposition}
+\PSM{PSM-PROP-0016}
+\begin{proof}
+Call a presheaf map weak when its image under $\El_A$ lies in $W$.
+For a category $B$ with final object set $F=J_A(B)$.
+Proposition~\ref{psi-product} makes $F\times I\to F$ weak, so both
+endpoint sections are weak. The cutoff homotopy and
+Lemma~\ref{psi-transport} make the constant endomorphism of $F$ weak.
+It factors as $F\xrightarrow{q}\one\xrightarrow{c}F$ with
+$qc=\id_{\one}$. Apply split-projector closure after $\El_A$ to get
+$\El_A(q)\in W$. Since $\El_A(\one)=A$ is aspheric,
+$\El_A(F)\to\one$ lies in $W$.
+
+For arbitrary $C$ and $c\in C$, the counit's comma category is
+canonically $\El_A(J_A(C/c))$. Explicitly, a functor $T:A/a\to C$
+and an arrow $T(\id_a)\to c$ give the functor to $C/c$ whose
+structural arrow at $v:b\to a$ is
+$T(v)\to T(\id_a)\to c$. This also identifies morphisms.
+Since $C/c$ has final object $\id_c$, the preceding paragraph makes
+this comma category aspheric. Thus $\epsilon_C$ is right aspheric
+and therefore lies in $W$.
+\end{proof}
+
+\begin{remark}
+The received statement assumes that $W$ is an inverse image of
+isomorphisms. The proof only needs split-projector closure; the stronger
+assumption implies it by Lemma~\ref{psi-split-projector}. No necessity
+claim or example of a test category is deduced here. In particular,
+the simplex and cube examples still require separate arguments.
+\end{remark}
+
+\section{Abstract homotopy intervals}
+
+Let $\mathcal E$ have finite products and let $V$ contain isomorphisms,
+satisfy two out of three, and have split-projector closure. Say that
+$K$ is universally $V$-aspheric if $X\times K\to X$ lies in $V$
+for every $X$. If there is a strict initial object and the endpoint
+pullback exists, a homotopy interval is a universally aspheric
+interval datum with disjoint endpoints.
+\PSM{PSM-DEF-0044; PSM-DEF-0045}
+
+\begin{lemma}\label{psi-contraction}
+Suppose $I$ is universally $V$-aspheric with two global points. If
+$F$ has a point $i:\one\to F$ and an $I$-homotopy from $\id_F$
+to $ir$, where $r:F\to\one$, then $F$ is universally $V$-aspheric.
+The endpoints of $I$ need not be disjoint for this conclusion.
+\end{lemma}
+\PSM{PSM-LEM-0022}
+\begin{proof}
+Fix $X$ and multiply the homotopy by $X$, using the canonical
+associativity isomorphism of products. The projection from its cylinder
+$(X\times F)\times I$ is weak, so its endpoint sections are weak.
+Lemma~\ref{psi-transport}, starting with $\id_{X\times F}$, shows
+that $\id_X\times(ir)$ is weak. This is the split projector of
+$X\times F\to X$ and its section $\id_X\times i$.
+Split-projector closure makes that projection weak. This holds for every $X$.
+\end{proof}
+
+\begin{lemma}\label{psi-comparison}
+Let $I$ be universally $V$-aspheric with endpoints $e_0,e_1$.
+Suppose $L$ has points $\lambda_0,\lambda_1$ and a map
+$m:L\times L\to L$ satisfying
+\[
+ m(\lambda_0,x)=x,\qquad m(\lambda_1,x)=\lambda_1
+\]
+as identities of morphisms. If $\phi:I\to L$ preserves endpoints,
+then $L$ is universally $V$-aspheric. If its endpoints are disjoint,
+it is a homotopy interval. No associativity or commutativity of $m$
+is required.
+\end{lemma}
+\PSM{PSM-LEM-0023}
+\begin{proof}
+The map $H:L\times I\to L$ given by
+$H(x,u)=m(\phi(u),x)$ has endpoints $\id_L$ and the constant map
+with value $\lambda_1$. This is a morphism formula, using the product
+symmetry, not an assumption that objects are sets. Apply
+Lemma~\ref{psi-contraction}; the final assertion is then the definition.
+\end{proof}
+
+\begin{proposition}\label{psi-classifier}
+Suppose $\mathcal E$ has finite limits, a strict initial object $0$,
+and a subobject classifier $\Omega$. It admits a homotopy interval
+relative to $V$ if and only if $\Omega$ is universally $V$-aspheric.
+In that case its truth and falsehood points give a homotopy interval.
+\end{proposition}
+\PSM{PSM-PROP-0028}
+\begin{proof}
+The classifier represents subobjects. Intersecting subobjects therefore
+defines a morphism $\wedge:\Omega\times\Omega\to\Omega$.
+The point $\top$ classifying the full subobject is a left unit;
+the point $\bot$ classifying the empty subobject is absorbing.
+Here strictness ensures that empty subobjects remain empty under pullback.
+By the defining classifier square for $0\hookrightarrow\one$,
+the pullback of $\top$ and $\bot$ is $0$. Thus if $\Omega$ is
+universally aspheric it is a homotopy interval.
+
+Conversely, let $(I,e_0,e_1)$ be a homotopy interval. Every map
+from the terminal object is a monomorphism. The characteristic map
+$\chi:I\to\Omega$ of $e_0:\one\hookrightarrow I$ consequently
+satisfies $\chi e_0=\top$ and $\chi e_1=\bot$: these equations
+classify respectively its full and empty pullbacks along the endpoints.
+The diagram records those two different pullbacks:
+\[
+\xymatrix@C=25pt{
+ \one\ar[r]^{\id}\ar[d]_{\id}&\one\ar[d]^{e_0}\\
+ \one\ar[r]_{e_0}&I
+}
+\qquad
+\xymatrix@C=25pt{
+ 0\ar[r]\ar[d]&\one\ar[d]^{e_0}\\
+ \one\ar[r]_{e_1}&I.
+}
+\]
+Apply Lemma~\ref{psi-comparison} with $m=\wedge$, $\lambda_0=\top$,
+and $\lambda_1=\bot$. It makes $\Omega$ universally aspheric.
+\end{proof}
+
+\section*{Source and dependency notes}
+The historical source is Grothendieck, \emph{Pursuing Stacks}.
+We use the edition \href{https://arxiv.org/abs/2111.01000}{arXiv:2111.01000v2},
+at section 31 (manuscript pages 39--41) and section 37 (pages 59--61).
+The local source IDs are not official Stacks tags. Exact source spans
+are recorded in \nolinkurl{intervals-source-map.json}.
+The companion \emph{Categories of Elements, Relative Nerves, and a Counit
+Criterion} supplies the adjunction and the prior counit criterion.
+This module proves a sufficient condition for that criterion, not a
+model structure or a comparison with spaces for arbitrary $A$.
+The historical classifier paragraph accidentally prints the first endpoint
+twice in its empty-intersection formula; the proof above uses the two
+distinct endpoints. This is a historical-source correction, not an
+erratum in official Stacks. The complete editable text is this file;
+the source archive includes build instructions and licensing notices.
+\end{document}

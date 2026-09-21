@@ -1,0 +1,40 @@
+diff --git a/cohomology.tex b/cohomology.tex
+index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..f55cd9bb8e566dfd2c4ff26e775ff6e24c953d80 100644
+--- a/cohomology.tex
++++ b/cohomology.tex
+@@ -2579,7 +2579,7 @@
+ injective resolution
+ $f_*\mathcal{I} \to (\mathcal{J}')^\bullet$ on $Y$ and a morphism
+ of complexes $\beta : \mathcal{J} \to (\mathcal{J}')^\bullet$
+-making (\ref{equation-choice}) commutes. We introduce some more
++making (\ref{equation-choice}) commute. We introduce some more
+ double complexes, namely $(B')^{\bullet, \bullet}$ and
+ $(B'')^{\bullet, \bullet}$ with
+ $$
+@@ -2715,7 +2715,7 @@
+ such that $h_{i_0 \ldots i_n}|_{W_{i_0 \ldots i_n, k}}$
+ lifts to a section of $\mathcal{G}$ over $W_{i_0 \ldots i_n, k}$.
+ By Topology, Lemma \ref{topology-lemma-refine-covering}
+-(this is where we use the assumption that $X$ is hausdorff and quasi-compact)
++(this is where we use the assumption that $X$ is Hausdorff and quasi-compact)
+ we can choose an open covering $\mathcal{V} : X = \bigcup_{j \in J} V_j$
+ and $\alpha : J \to I$ such that $V_j \subset U_{\alpha(j)}$
+ (it is a refinement) and such that for all $j_0, \ldots, j_n \in J$
+@@ -11921,7 +11921,7 @@
+ the double complex with terms
+ $\SheafHom_{\mathcal{O}_X}(\mathcal{E}^{-q}, \mathcal{F}^p)$
+ and similarly for $(\mathcal{H}')^\bullet$.
+-The natural map $(\mathcal{H}')^\bullet \to \mathcal{H}^\bullet$
++The natural map $\mathcal{H}^\bullet \to (\mathcal{H}')^\bullet$
+ comes from a map of double complexes.
+ Thus to show this map is a quasi-isomorphism, we may use the spectral
+ sequence of a double complex
+@@ -12904,7 +12904,7 @@
+ and
+ $$
+ R\SheafHom(R\SheafHom(K_1, L), M) \to
+-R\SheafHom(R\SheafHom(K_2, L), M)
++R\SheafHom(R\SheafHom(K_2, L), M) \to
+ R\SheafHom(R\SheafHom(K_3, L), M)
+ $$
+ See Section \ref{section-flat} and

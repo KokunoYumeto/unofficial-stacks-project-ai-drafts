@@ -26,6 +26,12 @@ review of Stacks or of the translation findings. Eleven proposals were recovered
 while reviewing this project's history; two came from French translation work.
 The fuller recorded comparison linked above covers earlier integrated batches.
 
+For the much larger already-integrated collection, use the separate
+[corrections-only combined and chapter patches](upstream-corrections/README.md).
+That export accounts for all 1,304 historical IDs: 1,302 effective textual units,
+one superseded correction and one excluded fork-specific tag allocation. These
+13 additional proposals are not silently mixed into that export.
+
 All original passages below refer to the fixed official Stacks revision
 [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14),
 not necessarily today's upstream text. The cumulative draft checked here was

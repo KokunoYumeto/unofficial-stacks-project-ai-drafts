@@ -60,6 +60,12 @@ human-maintained Stacks corpus.
 
 ## Two separate lists: possible fixes and possible new additions
 
+- **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
+  one combined patch or separate chapter patches, with exact changes and review
+  evidence. These do not import our theorem additions or repository history.
+  The 1,304 historical correction IDs are accounted for; 1,302 effective textual
+  units are exported, with one superseded correction and one fork tag allocation
+  explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
   original location, smallest replacement, and a short reason. The readable
   selection also has [standalone patches](possible-fixes/README.md), checked
@@ -78,10 +84,21 @@ not a claim to cover every finding from the translations or historical work.
 The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
 alongside it. Neither list treats an added theorem as an upstream correction.
 
-The first [Pursuing Stacks module](pursuing-stacks/README.md) is separately
-readable: six pages on categories of elements, relative nerves, and a
-conditional localization criterion, with seven statements and proofs. It has
-its own PDF, complete direct LaTeX, and reproducible source ZIP. This is not a
+The 13 separately packaged proposals are **additional to**, not the total of,
+the larger integrated correction collection. Both sets target the stated pinned
+official revision; compatibility with today's upstream is not claimed.
+
+Current correction-export tooling and packaging were produced by OpenAI Codex —
+GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
+mathematical or human review of every historical correction; historical evidence
+retains its original provenance.
+
+[Two Pursuing Stacks modules](pursuing-stacks/README.md) are separately
+readable: categories of elements and a conditional localization criterion;
+then the sieve-cutoff contraction, sufficient asphericity criterion, and
+abstract homotopy intervals. They contain fifteen statements with proofs
+across two six-page readers, each with complete direct LaTeX and a reproducible
+source ZIP. This is not a
 claim that the whole historical work, or even the received 68-page draft, has
 been integrated; it is not yet part of the older cumulative PDFs.
 

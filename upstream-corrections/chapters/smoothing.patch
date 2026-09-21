@@ -1,0 +1,316 @@
+diff --git a/smoothing.tex b/smoothing.tex
+index 15555086443374f866c585b176e0511622717bec..8c1d7b7080ae6bd7e0f211d1dc33b39f9811ccfb 100644
+--- a/smoothing.tex
++++ b/smoothing.tex
+@@ -261,7 +261,7 @@
+ \begin{proof}
+ Assume $a$ is strictly standard in $A$ over $R$. We claim that
+ $A_a$ is smooth over $R$, which proves that $a \in H_{A/R}$. Namely,
+-let $A = R[x_1, \ldots, x_n]/(f_1, \ldots, f_m)$, $c$, and $a' \in A$
++let $A = R[x_1, \ldots, x_n]/(f_1, \ldots, f_m)$ and $c$
+ be as in Definition \ref{definition-strictly-standard}.
+ Write $I = (f_1, \ldots, f_m)$ so that the naive cotangent
+ complex of $A$ over $R$ is given by $I/I^2 \to \bigoplus A\text{d}x_i$.
+@@ -341,7 +341,7 @@
+ \begin{lemma}
+ \label{lemma-improve-presentation}
+ Let $R$ be a ring and let $A$ be a finitely presented $R$-algebra.
+-There exists finite type $R$-algebra map $A \to C$ which has a
++There exists a finite type $R$-algebra map $A \to C$ which has a
+ retraction with the following two properties
+ \begin{enumerate}
+ \item for each $a \in A$ such that $R \to A_a$ is a local complete
+@@ -375,7 +375,7 @@
+ applied to $R \to A \to C$ and the presentations above and
+ More on Algebra, Lemma
+ \ref{more-algebra-lemma-cotangent-complex-symmetric-algebra}
+-there is a short exact sequence
++there is an exact sequence
+ \begin{equation}
+ \label{equation-sequence}
+ I/I^2 \otimes_A C \to J/J^2 \to K \otimes_A C \to 0
+@@ -472,7 +472,7 @@
+ $C_0 = R_0[y_1, \ldots, y_m]/(\overline{f}_1, \ldots, \overline{f}_c)$
+ where $\overline{f}_1, \ldots, \overline{f}_c$ maps to a basis of
+ $K_0/K_0^2$ over $C_0$. Choose
+-$f_1, \ldots, f_c \in R[y_1, \ldots, y_c]$ lifting
++$f_1, \ldots, f_c \in R[y_1, \ldots, y_m]$ lifting
+ $\overline{f}_1, \ldots, \overline{f}_c$ and set
+ $$
+ C = R[y_1, \ldots, y_m]/(f_1, \ldots, f_c)
+@@ -705,7 +705,7 @@
+ Choose a presentation $A = R[y_1, \ldots, y_m]/(g_1, \ldots, g_d)$
+ such that the image of
+ $\det(\partial g_j/\partial y_i)_{i, j = 1, \ldots, d}$
+-is invertible in $A$. Choose an enumerations $E = \{a_1, \ldots, a_n\}$
++is invertible in $A$. Choose an enumeration $E = \{a_1, \ldots, a_n\}$
+ and choose $h_i \in R[y_1, \ldots, y_m]$ whose image in $A$ is $a_i$.
+ Consider the presentation
+ $$
+@@ -827,7 +827,7 @@
+ $\det(\partial f_j/\partial x_i)_{i, j = 1, \ldots, c}$
+ is invertible in $A_a$. We may assume that for some
+ $m < n$ the classes of the elements $x_1, \ldots, x_m$
+-correspond $a_i/1$ where $a_1, \ldots, a_m \in A$ are generators of $A$
++correspond to $a_i/1$ where $a_1, \ldots, a_m \in A$ are generators of $A$
+ over $R$, see Lemma \ref{lemma-standard-smooth-include-generators}.
+ After replacing $x_i$ by $a^Nx_i$ for $m < i \leq n$
+ we may assume the class of $x_i$ is $a_i/1 \in A_a$ for some
+@@ -988,10 +988,10 @@
+ module with basis $\text{d}y_i$. To finish the proof it
+ suffices to show that $\text{d}g_1, \ldots, \text{d}g_c$
+ forms part of a basis for the finite free module $\Omega_{A/R, \mathfrak p}$.
+-Namely, this will show $(I/I^2)_\mathfrak p$ is free on $\pi y_i - g_i$,
+-the localization at $\mathfrak p$ of the middle map in the sequence is
+-injective, so $H_1(\NL_{A'/R})_\mathfrak p = 0$, and
+-that the cokernel $\Omega_{A'/R, \mathfrak p}$ is finite free.
++Namely, this will show $(I/I^2)_{\mathfrak p'}$ is free on $\pi y_i - g_i$,
++the localization at $\mathfrak p'$ of the middle map in the sequence is
++injective, so $H_1(\NL_{A'/R})_{\mathfrak p'} = 0$, and
++that the cokernel $\Omega_{A'/R, \mathfrak p'}$ is finite free.
+ To do this it suffices to show
+ that the images of $\text{d}g_i$ are $\kappa(\mathfrak p)$-linearly
+ independent in
+@@ -1160,14 +1160,14 @@
+ is bigger than $d$. On the other hand
+ the first arrow factors through the injective map
+ $$
+-\mathfrak p B_\mathfrak p/\mathfrak p^2 B_\mathfrak p
++\mathfrak p_B B_{\mathfrak p_B}/\mathfrak p_B^2 B_{\mathfrak p_B}
+ \to \Omega_{B/R} \otimes_B \kappa(\mathfrak p_B)
+ $$
+ of Algebra, Lemma \ref{algebra-lemma-computation-differential};
+-note that $\kappa(\mathfrak p)$ is separable over $k$
++note that $\kappa(\mathfrak p)$ is separable over $R/\pi R$
+ by our assumption on $R/\pi R \subset \Lambda/\pi \Lambda$.
+ Hence we conclude that we can find generators
+-$g_1, \ldots, g_t \in I$ such that $g_j \in \mathfrak p^2$
++$g_1, \ldots, g_t \in I$ such that $g_j \in \mathfrak p_B^2$
+ for $j > r - s$. Then the images of $g_j$ in $A'$ are in $\pi^2 I'$
+ for $j > r - s$. Since $r - s < r - d$
+ we find that at least one of the minimal generators
+@@ -1203,7 +1203,7 @@
+ smooth $R$-algebra. After replacing $A$ by its image in $\Lambda$
+ we may assume that $A$ is a domain whose fraction field $K$
+ is a subfield of the fraction field of $\Lambda$.
+-In particular, $A$ is separable over the fraction field of $R$
++In particular, $K$ is separable over the fraction field of $R$
+ by our assumptions. Then $R \to A$ is smooth at $\mathfrak q = (0)$ by
+ Algebra, Lemma \ref{algebra-lemma-smooth-at-generic-point}.
+ After a finite number of N\'eron blowups, we may assume $R \to A$
+@@ -1330,7 +1330,7 @@
+ that $J$ can be generated by $n$ elements $h_1, \ldots, h_n$ and the
+ lemma holds for all cases where $J$ is generated by $n - 1$ elements.
+ Then we apply the case $n = 1$ to produce $B \to B' \to \Lambda$
+-where the first map kills of $h_n$. Then we let $J'$ be the
++where the first map kills $h_n$. Then we let $J'$ be the
+ ideal of $B'$ generated by the images of $h_1, \ldots, h_{n - 1}$
+ and we apply the case for $n - 1$ to produce $B' \to B'' \to \Lambda$.
+ It is easy to verify that $B \to B'' \to \Lambda$ does the job.
+@@ -1478,7 +1478,7 @@
+ By (2) and Nakayama's lemma we see that $(\bar I/\bar I_k)_{a_k}$
+ is annihilated by $1 + b'_k$ for some $b'_k \in \bar I_{a_k}$.
+ Suppose $b'_k$ is the image of $b_k/(a_k)^N$ for some $b_k \in I$
+-and some integer $N$. After replacing $a_k$ by $a_kb_k$ we get
++and some integer $N$. After replacing $a_k$ by $a_k((a_k)^N + b_k)$ we get
+ \begin{enumerate}
+ \item[(3)] $(\bar I_k)_{a_k} = (\bar I)_{a_k}$.
+ \end{enumerate}
+@@ -1488,7 +1488,7 @@
+ $a_k f_\ell = \sum\nolimits_{j \in E_k} h_{k, \ell}^jf_j + \pi^2 g_{k, \ell}$
+ \end{enumerate}
+ for any $\ell \in \{1, \ldots, m\}$ and some
+-$h_{i, \ell}^j, g_{i, \ell} \in R[x_1, \ldots, x_n]$.
++$h_{k, \ell}^j, g_{k, \ell} \in R[x_1, \ldots, x_n]$.
+ If $\ell \in E_k$ we choose $h_{k, \ell}^j = a_k\delta_{\ell, j}$
+ (Kronecker delta) and $g_{k, \ell} = 0$. Set
+ $$
+@@ -1973,7 +1973,7 @@
+ \sum\nolimits_{j = 1, \ldots, c} a_jf_j
+ $$
+ for some $s_0 \in S$. Since $g_j$ maps to zero in
+-$S^{-1}R[x_1, \ldots, x_{n + m}]/(f_1, \ldots, x_c)$
++$S^{-1}R[x_1, \ldots, x_{n + m}]/(f_1, \ldots, f_c)$
+ we can find elements $s_j \in S$ such that $s_j g_j = 0$ in
+ $R[x_1, \ldots, x_{n + m}]/(f_1, \ldots, f_c)$.
+ Since $f_j$ maps to zero in $S^{-1}\Lambda$ we can find $s'_j \in S$
+@@ -2265,10 +2265,10 @@
+ 
+ \medskip\noindent
+ We claim that $B$ is a solution for $R \to A \to \Lambda \supset \mathfrak q$.
+-First note that $B_z$ is isomorphic to $C[y_1, \ldots, y_r, z, z^{-1}]$
+-and hence is smooth. On the other hand,
++First note that $B_z$ is isomorphic to $C[z, z^{-1}, t_{ij}]$
++as a C-algebra. Choose $c \in H_{C/R}$ whose image in $\Lambda$ is not in $\mathfrak q$. Then $B_{zc}$ is smooth over $R$. On the other hand,
+ $B_{y_\ell} \cong A[x_i, y_i, y_\ell^{-1}, t_{ij}, i \not = \ell]$
+-which is smooth over $A$. Thus we see that $z$ and $a_\ell y_\ell$
++which is smooth over $A$. Thus we see that $zc$ and $a_\ell y_\ell$
+ (compositions of smooth maps are smooth) are all
+ elements of $H_{B/R}$. This proves the lemma.
+ \end{proof}
+@@ -2305,10 +2305,10 @@
+ \begin{lemma}
+ \label{lemma-find-sequence}
+ Let $\Lambda$ be a Noetherian ring. Let $I \subset \Lambda$ be an ideal.
+-Let $I \subset \mathfrak q$ be a prime. Let $n, e$ be positive integers
++Let $I \subset \mathfrak q$ be a prime. Let $n, e$ be positive integers.
+ Assume that $\mathfrak q^n\Lambda_\mathfrak q \subset I\Lambda_\mathfrak q$
+ and that $\Lambda_\mathfrak q$ is a regular local ring of dimension $d$.
+-Then there exists an $n > 0$ and
++Then there exist
+ $\pi_1, \ldots, \pi_d \in \Lambda$ such that
+ \begin{enumerate}
+ \item $(\pi_1, \ldots, \pi_d)\Lambda_\mathfrak q =
+@@ -2367,16 +2367,16 @@
+ Choose $n > 0$ such that
+ $\mathfrak q^n\Lambda_\mathfrak q \subset \mathfrak h_A\Lambda_\mathfrak q$
+ which is possible as $\mathfrak q$ is minimal over $\mathfrak h_A$.
+-Choose generators $a_1, \ldots, a_r$ of $H_{A/R}$. Set
++Choose generators $a_1, \ldots, a_r$ of $H_{A/k}$. Set
+ $$
+ B = A[x_1, \ldots, x_d, z_{ij}]/(x_i^n - \sum z_{ij}a_j)
+ $$
+-Each $B_{a_j}$ is smooth over $R$ it is a polynomial
++Each $B_{a_j}$ is smooth over $R$ because it is a polynomial
+ algebra over $A_{a_j}[x_1, \ldots, x_d]$ and $A_{a_j}$ is smooth over $k$.
+ Hence $B_{x_i}$ is smooth over $R$. Let $B \to C$ be the $R$-algebra
+ map constructed in Lemma \ref{lemma-improve-presentation}
+ which comes with a $R$-algebra retraction $C \to B$. In particular
+-a map $C \to \Lambda$ fitting into the diagram above.
++a map $C \to \Lambda$ fitting into the diagram below.
+ By construction $C_{x_i}$ is a smooth $R$-algebra with
+ $\Omega_{C_{x_i}/R}$ free. Hence we can find $c > 0$
+ such that $x_i^c$ is strictly standard in $C/R$, see
+@@ -2384,7 +2384,7 @@
+ Now choose $\pi_1, \ldots, \pi_d \in \Lambda$ as in
+ Lemma \ref{lemma-find-sequence}
+ where $n = n$, $e = 8c$, $\mathfrak q = \mathfrak q$ and $I = \mathfrak h_A$.
+-Write $\pi_i^n = \sum \lambda_{ij} a_j$ for some $\pi_{ij} \in \Lambda$.
++Write $\pi_i^n = \sum \lambda_{ij} a_j$ for some $\lambda_{ij} \in \Lambda$.
+ There is a map $B \to \Lambda$ given by $x_i \mapsto \pi_i$
+ and $z_{ij} \mapsto \lambda_{ij}$. Set $R = k[x_1, \ldots, x_d]$.
+ Diagram
+@@ -2489,7 +2489,7 @@
+ by the formal smoothness of $K/\mathbf{F}_p$ we mentioned above).
+ For later reference we note that we can change $\sigma$ to
+ $\sigma + D$ for some derivation $D : K \to I$.
+-Set $A = F[x_1, \ldots, x_d]/(x_1, \ldots, x_d)^n$.
++Set $A = F'[x_1, \ldots, x_d]/(x_1, \ldots, x_d)^n$.
+ Then $\Psi_\sigma$ induces a ring map
+ $\Psi_\sigma : A \to \Lambda$. The composition with the
+ quotient map $\Lambda \to \Lambda'$ induces a surjective
+@@ -2690,7 +2690,7 @@
+ $\mathfrak q^N\Lambda_\mathfrak q \subset H_{A/k}\Lambda_\mathfrak q$.
+ \item
+ \label{item-generators}
+-Pick generators $a_1, \ldots, a_t \in A$ of the ideal $H_{A/R}$.
++Pick generators $a_1, \ldots, a_t \in A$ of the ideal $H_{A/k}$.
+ \item
+ \label{item-dimension}
+ Set $d = \dim(\Lambda_\mathfrak q)$.
+@@ -2734,7 +2734,7 @@
+ regular system of parameters of $k[y_1, \ldots, y_m]_\mathfrak p$.
+ \item
+ \label{item-set-R}
+-Let $R = k[y_1, \ldots, y_m, t_1, \ldots, t_m]$ and $\gamma_i = \pi_i t_i$.
++Let $R = k[y_1, \ldots, y_m, t_1, \ldots, t_d]$ and $\gamma_i = \pi_i t_i$.
+ \item
+ \label{item-modify-pii}
+ If necessary modify the choice of $\pi_i$ such that
+@@ -2870,14 +2870,14 @@
+ over $\mathfrak h_A = \sqrt{H_{A/k}\Lambda}$.
+ 
+ \medskip\noindent
+-Ad (\ref{item-strictly-standard}). Note that $A_{a_i}$ is smooth
++Ad (\ref{item-strictly-standard}). Note that $A_{a_j}$ is smooth
+ over $k$. Hence $B_{a_j}$, which is isomorphic to a polynomial
+ algebra over $A_{a_j}[x_1, \ldots, x_d]$, is smooth over
+ $k[x_1, \ldots, x_d]$. Thus $B_{x_i}$ is smooth over $k[x_1, \ldots, x_d]$.
+ By Lemma \ref{lemma-improve-presentation}
+ we see that $C_{x_i}$ is smooth over $k[x_1, \ldots, x_d]$
+ with finite free module of differentials. Hence some power of
+-$x_i$ is strictly standard in $C$ over $k[x_1, \ldots, x_n]$
++$x_i$ is strictly standard in $C$ over $k[x_1, \ldots, x_d]$
+ by Lemma \ref{lemma-compare-standard}.
+ 
+ \medskip\noindent
+@@ -2890,8 +2890,8 @@
+ by construction
+ we see that $\dim(k[y_1, \ldots, y_m]_\mathfrak p) = d$ by
+ Algebra, Lemma \ref{algebra-lemma-dimension-base-fibre-equals-total}.
+-Thus we can find $\pi_1, \ldots, \pi_d \in \Lambda$ which map to
+-a regular system of parameters in $\Lambda_\mathfrak q$.
++Thus we can find $\pi_1, \ldots, \pi_d \in \mathfrak p$ which map to
++a regular system of parameters in $k[y_1, \ldots, y_m]_\mathfrak p$.
+ 
+ \medskip\noindent
+ Ad (\ref{item-modify-pii}). By
+@@ -2987,7 +2987,7 @@
+ $$
+ for any $q > 0$. By Lemma \ref{lemma-enlarge-solution-modulo}
+ we can choose $q$ and enlarge $D'$ such that $(s')^q$ maps to an element
+-of $D'$. Setting $\delta_{t + 1} = (s')^qs$ and we conclude that
++of $D'$. Setting $\delta_{t + 1} = (s')^qs$ we conclude that
+ (a), (b), (c) hold for $i = 1, \ldots, t + 1$. For (a) note that
+ $\lambda_{t + 1j} = (s')^{2Nq}\mu_{t + 1j}$ works.
+ By induction on $t$ we win.
+@@ -2996,10 +2996,10 @@
+ Ad (\ref{item-first-solve}). By construction the radical of
+ $H_{(C \otimes_{k[x_1, \ldots, x_d]} R)/R} \Lambda$ contains
+ $\mathfrak h_A$. Namely, the elements $a_j \in H_{A/k}$
+-map to elements of $H_{B/k[x_1, \ldots, x_n]}$, hence map to elements
+-of $H_{C/k[x_1, \ldots, x_n]}$, hence $a_j \otimes 1$ map to elements of
++map to elements of $H_{B/k[x_1, \ldots, x_d]}$, hence map to elements
++of $H_{C/k[x_1, \ldots, x_d]}$, hence $a_j \otimes 1$ map to elements of
+ $H_{C \otimes_{k[x_1, \ldots, x_d]} R/R}$. Moreover, if we have a solution
+-$C \otimes_{k[x_1, \ldots, x_n]} R \to T \to \Lambda$ of
++$C \otimes_{k[x_1, \ldots, x_d]} R \to T \to \Lambda$ of
+ $$
+ R
+ \to
+@@ -3051,7 +3051,7 @@
+ Hence if we have a solution
+ $C \otimes_{k[x_1, \ldots, x_d]} (R/\mathfrak p^nR)_\mathfrak p \to
+ T \to \Lambda_\mathfrak q/\mathfrak q^n\Lambda_\mathfrak q$
+-of (\ref{item-fifth-resolve}
++of (\ref{item-fifth-resolve})
+ then we can take $T/JT$ as the solution for
+ (\ref{item-sixth-resolve}).
+ 
+@@ -3184,11 +3184,11 @@
+ Write $a_i = c_i + \sum a_{i, l} d_l$.
+ Consider the polynomial ring $R[x_{i, l}]$ and the elements
+ $$
+-g_j = f_j(c_1 + \sum x_{1, l} d_l , \ldots, c_n + \sum x_{n, l} d_{n, l})
++g_j = f_j(c_1 + \sum x_{1, l} d_l , \ldots, c_n + \sum x_{n, l} d_l)
+ \in R[x_{i, l}]
+ $$
+ The system of equations $g_j = 0$ has the solution $(a_{i, l})$.
+-Suppose that we can show that $g_j$ as a solution $(b_{i, l})$ in $R$.
++Suppose that we can show that the system of equations $g_j = 0$ has a solution $(b_{i, l})$ in $R$.
+ Then it follows that $b_i = c_i + \sum b_{i, l}d_l$ is a solution
+ of $f_j = 0$ which is congruent to $a_i$ modulo $\mathfrak m^N$.
+ Thus it suffices to show that solvability over $R^\wedge$ implies
+@@ -3263,11 +3263,11 @@
+ Write $a_i = c_i + \sum a_{i, l} d_l$.
+ Consider the polynomial ring $R[x_{i, l}]$ and the elements
+ $$
+-g_j = f_j(c_1 + \sum x_{1, l} d_l , \ldots, c_n + \sum x_{n, l} d_{n, l})
++g_j = f_j(c_1 + \sum x_{1, l} d_l , \ldots, c_n + \sum x_{n, l} d_l)
+ \in R[x_{i, l}]
+ $$
+ The system of equations $g_j = 0$ has the solution $(a_{i, l})$.
+-Suppose that we can show that $g_j$ as a solution $(b_{i, l})$ in $R'$
++Suppose that we can show that the system of equations $g_j = 0$ has a solution $(b_{i, l})$ in $R'$
+ for some \'etale ring map $R \to R'$ endowed with a maximal ideal
+ $\mathfrak m'$ such that $\kappa(\mathfrak m) = \kappa(\mathfrak m')$.
+ Then it follows that $b_i = c_i + \sum b_{i, l}d_l$ is a solution
+@@ -3422,7 +3422,7 @@
+ \medskip\noindent
+ Let $\hat{a}_1, \ldots, \hat{a}_n$ be as in the statement of the lemma.
+ By Theorem \ref{theorem-popescu} we can find a factorization
+-$A \to B \to A^\wedge$ with $A \to P$ smooth and
++$A \to B \to A^\wedge$ with $A \to B$ smooth and
+ $b_1, \ldots, b_n \in B$ with $f_j(b_1, \ldots, b_n) = 0$ in $B$.
+ Denote $\sigma : B \to A^\wedge \to A/I^N$ the composition.
+ By More on Algebra, Lemma \ref{more-algebra-lemma-lift-section-smooth-morphism}
