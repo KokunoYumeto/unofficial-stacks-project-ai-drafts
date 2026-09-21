@@ -11,6 +11,10 @@ The [original row-by-row comparison](ega-iii-7-7-9.json) preserves the earlier
 30-supported/two-partial snapshot. The [global-hypertor supplement](ega-iii-7-7-12-hypertor.md)
 subsequently identifies III.7.7.12(ii)'s construction and exchange map, with
 the necessary coefficient-extension convention stated explicitly.
+The [Picard cotangent and jumping-family supplement](ega-iii-7-8-10-picard.md)
+now supplies a proof draft for III.7.8.10(ii), including an explicit smooth
+projective family. Its cumulative LaTeX integration remains pending, so the
+root-integration count above has not been increased.
 The original comparison contains the hypotheses,
 derivations, exact source spans, target labels and hashes. A fresh
 primary-session AI review checked the mathematical arguments against the
@@ -194,7 +198,7 @@ not an additional root theorem. The JSON records each derivation separately.
 | 7.8.7 | A common neighborhood with free direct image and residue exchange | Supported |
 | 7.8.8 | The unit isomorphism when fibrewise global sections equal the residue field | Supported |
 | 7.8.9 | Coherent Hom representation of the degree-one coefficient functor | Supported |
-| 7.8.10 | Étaleness of the Stein factor; nonfree representing examples and Picard interpretation | Partial: first part supported |
+| 7.8.10 | Étaleness of the Stein factor; nonfree representing examples and Picard interpretation | First part supported; explicit second-part proof draft available, root integration pending |
 | 7.9.1 | Finite-projective modules, locally free sheaves and residue rank | Supported |
 | 7.9.2 | Equality of alternating homology dimensions and term ranks | Supported |
 | 7.9.3 | Local constancy for a finite-projective complex | Supported |
@@ -226,9 +230,12 @@ This is a source-comparison note, not a new errata admission.
   extension changes coefficients while keeping the original base for hypertor;
   ordinary geometric pullback followed by recomputation is a different,
   refuted reading. The broader [III.6 partials](ega-iii-6-2-10.md) remain open.
-- **III.7.8.10(ii):** compare an actual smooth projective example whose
-  representing module is not locally free, and the identification with
-  the relative Picard scheme's cotangent sheaf along the unit.
+- **III.7.8.10(ii):** the [new supplement](ega-iii-7-8-10-picard.md) proves
+  the all-coefficient cotangent identification and gives a smooth projective
+  family over $\mathbb Z_{(2)}$ whose representing module has fibre dimensions
+  1 and 2. Promote that explicit candidate into the cumulative LaTeX source
+  with the full dependency and build checks; do not count this proof note as
+  an already integrated root theorem.
 - **Other context:** III.7.7.1–7.7.3 are used only under the bounded
   hypotheses above, not certified in unrestricted unbounded generality.
   III.7.7.9 is now treated in a [separate representability comparison](ega-iii-7-7-9-representability.md),

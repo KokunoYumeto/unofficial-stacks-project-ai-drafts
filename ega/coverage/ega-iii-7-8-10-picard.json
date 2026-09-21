@@ -1,0 +1,606 @@
+{
+  "schema": "ega-stacks-public-coverage/v1",
+  "title": "EGA III.7.8.10(ii): Picard cotangent identification and explicit jumping family",
+  "date": "2026-09-21",
+  "repository": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+  "reviewed_target_commit": "72e34cc9683e58d582e5d35f7adaac9533a4cfed",
+  "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "EXPLICIT_PROOF_DRAFT_ROOT_INTEGRATION_PENDING",
+  "review_boundary": "Fresh primary-session derivation and adverse checks; no workers, independent reviewer, original-print collation or proof-assistant certification.",
+  "counts": {
+    "source_remark": 1,
+    "resolved_proof_components": 2,
+    "new_example_candidates": 1,
+    "new_root_theorems": 0,
+    "side_proof_findings": 1
+  },
+  "updated_selected_iii7_dispositions": {
+    "supported_unqualified": 30,
+    "qualified": 1,
+    "partial_root_integration_pending": 1,
+    "total": 32
+  },
+  "files": [
+    {
+      "id": "french",
+      "name": "french3_ega3-7-fr_6b388758.tex",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex",
+      "bytes": 172424,
+      "sha256": "20A61BA348909E4309A3CDA89FD6DDAF8C0FC5BA346FD44232458CDFEA2A2972"
+    },
+    {
+      "id": "more-morphisms.tex",
+      "name": "more-morphisms.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/more-morphisms.tex",
+      "bytes": 976082,
+      "sha256": "6F36E5FF2C2B5C66FC2AA762421F0024C08C409AB86D1D814F70A065F416475A"
+    },
+    {
+      "id": "spaces-more-morphisms.tex",
+      "name": "spaces-more-morphisms.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/spaces-more-morphisms.tex",
+      "bytes": 516999,
+      "sha256": "D739B3B42CE8590331C4DCF81C45D17A5F2430E46D03C004FEF64034816C5081"
+    },
+    {
+      "id": "quot.tex",
+      "name": "quot.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/quot.tex",
+      "bytes": 237556,
+      "sha256": "4949679B9A1B178CE7DF1F3295CC3DEDC5E8E141B9E1838DB9766A5237690395"
+    },
+    {
+      "id": "coherent.tex",
+      "name": "coherent.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/coherent.tex",
+      "bytes": 357482,
+      "sha256": "D219CBA93EA84084A35BE94B3454E316C54037AF0BFBF795A1824543D9440BBC"
+    },
+    {
+      "id": "spaces-properties.tex",
+      "name": "spaces-properties.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/spaces-properties.tex",
+      "bytes": 222658,
+      "sha256": "C18055BC62C389BB0A75F285A2A3038A1645C428B172A021C1B325FA1744133F"
+    },
+    {
+      "id": "morphisms.tex",
+      "name": "morphisms.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/morphisms.tex",
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242"
+    },
+    {
+      "id": "divisors.tex",
+      "name": "divisors.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/divisors.tex",
+      "bytes": 379689,
+      "sha256": "4C022EF77F817B5A8F8F1A2368CDA9C711A65E68209B58AAF14E2703418DED4F"
+    },
+    {
+      "id": "curves.tex",
+      "name": "curves.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/curves.tex",
+      "bytes": 271533,
+      "sha256": "8881792E2C8E0977E778827B852B010AF11F054F98866C61BEB5DFFE70515EBE"
+    },
+    {
+      "id": "moduli.tex",
+      "name": "moduli.tex",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex",
+      "bytes": 311624,
+      "sha256": "441202816BE26FFE287FFC6367364497D082C37A55FA51FE94BD6E637DC82210"
+    }
+  ],
+  "spans": [
+    {
+      "id": "degree-zero-hypothesis",
+      "file_id": "french",
+      "lines": [
+        3188,
+        3196
+      ],
+      "byte_start": 118080,
+      "byte_end_exclusive": 118609,
+      "bytes": 529,
+      "sha256": "74B00A57E22C6341B28A827789F51FB5D1E8D8B8255CB51A47893362FA56EDFA",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3188-L3196"
+    },
+    {
+      "id": "representing-Q",
+      "file_id": "french",
+      "lines": [
+        3294,
+        3312
+      ],
+      "byte_start": 122524,
+      "byte_end_exclusive": 123292,
+      "bytes": 768,
+      "sha256": "E8D876339389FBC8F3D7F26A8BA3CDD8893879DA99A39524FC123F2F11334D40",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3294-L3312"
+    },
+    {
+      "id": "remark-7810",
+      "file_id": "french",
+      "lines": [
+        3314,
+        3344
+      ],
+      "byte_start": 123293,
+      "byte_end_exclusive": 124828,
+      "bytes": 1535,
+      "sha256": "459FF643111C42E587E1B353F1D7C6C99429ED47ED22DFF6BF4E454899EF7F56",
+      "url": "https://github.com/KokunoYumeto/ega-fr/blob/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega3/ega3-7-fr.tex#L3314-L3344"
+    },
+    {
+      "id": "target:units",
+      "file_id": "more-morphisms.tex",
+      "lines": [
+        598,
+        631
+      ],
+      "byte_start": 22943,
+      "byte_end_exclusive": 24004,
+      "bytes": 1061,
+      "sha256": "4B9FDCE2D1D479CAC0899D9959D5622BE90F7D336B013387556B7AA514B6B3D4",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/more-morphisms.tex#L598-L631"
+    },
+    {
+      "id": "target:derivations",
+      "file_id": "more-morphisms.tex",
+      "lines": [
+        1972,
+        2001
+      ],
+      "byte_start": 71690,
+      "byte_end_exclusive": 72679,
+      "bytes": 989,
+      "sha256": "C24FB74AF2AA98BD71912BA647FEBEE4E562E08483C10D518887D166AF80F5A4",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/more-morphisms.tex#L1972-L2001"
+    },
+    {
+      "id": "target:space-derivations",
+      "file_id": "spaces-more-morphisms.tex",
+      "lines": [
+        3747,
+        3779
+      ],
+      "byte_start": 134737,
+      "byte_end_exclusive": 135938,
+      "bytes": 1201,
+      "sha256": "40373CABD42B9018EABCB7C5E5FF792F0642040F270E14682D8D4C2754B9B21C",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/spaces-more-morphisms.tex#L3747-L3779"
+    },
+    {
+      "id": "target:rigidification",
+      "file_id": "quot.tex",
+      "lines": [
+        3060,
+        3131
+      ],
+      "byte_start": 120408,
+      "byte_end_exclusive": 123279,
+      "bytes": 2871,
+      "sha256": "BA550462B0728232A57D09E2363C1C58D4F769FD1FE5DCF15DA4A9E6F72FED85",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/quot.tex#L3060-L3131"
+    },
+    {
+      "id": "target:picard-representability",
+      "file_id": "quot.tex",
+      "lines": [
+        3300,
+        3313
+      ],
+      "byte_start": 130472,
+      "byte_end_exclusive": 130895,
+      "bytes": 423,
+      "sha256": "A5C2417CE463CE5CB06AB4359F61C7C81BECE9C53775E27EB0F210764CEE8027",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/quot.tex#L3300-L3313"
+    },
+    {
+      "id": "target:flat-base-change",
+      "file_id": "coherent.tex",
+      "lines": [
+        1014,
+        1037
+      ],
+      "byte_start": 38307,
+      "byte_end_exclusive": 39037,
+      "bytes": 730,
+      "sha256": "11DC27F77A130FF0C0E8401EDDA80EAAD8FAA1DCBEEBE419BA55D8B21CAE3290",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/coherent.tex#L1014-L1037"
+    },
+    {
+      "id": "target:free-quotient",
+      "file_id": "spaces-properties.tex",
+      "lines": [
+        1785,
+        1833
+      ],
+      "byte_start": 65595,
+      "byte_end_exclusive": 68024,
+      "bytes": 2429,
+      "sha256": "B77AA01864F0B8270A05192073D2260B31E449FF6EC8EC866F2C6E9B315CCB60",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/spaces-properties.tex#L1785-L1833"
+    },
+    {
+      "id": "target:separated-quotient",
+      "file_id": "spaces-properties.tex",
+      "lines": [
+        1835,
+        1846
+      ],
+      "byte_start": 68038,
+      "byte_end_exclusive": 68570,
+      "bytes": 532,
+      "sha256": "5610843B5BB67743797C2F61F4631902829D63016726B42BE2FE64C4AE3745E0",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/spaces-properties.tex#L1835-L1846"
+    },
+    {
+      "id": "target:proper-image",
+      "file_id": "morphisms.tex",
+      "lines": [
+        10074,
+        10099
+      ],
+      "byte_start": 366768,
+      "byte_end_exclusive": 367878,
+      "bytes": 1110,
+      "sha256": "5B4F10943B9F6C39E0C971DF8AC92CD74E1BFC469E43757B0552E9CCA9C2D0AF",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/morphisms.tex#L10074-L10099"
+    },
+    {
+      "id": "target:norm-ample",
+      "file_id": "divisors.tex",
+      "lines": [
+        3737,
+        3770
+      ],
+      "byte_start": 139765,
+      "byte_end_exclusive": 141129,
+      "bytes": 1364,
+      "sha256": "8B7FCAC3F03AB14376E801D450458B280FC892030A57CB69B8A0840F9793B02E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/divisors.tex#L3737-L3770"
+    },
+    {
+      "id": "target:norm-exists",
+      "file_id": "divisors.tex",
+      "lines": [
+        3788,
+        3793
+      ],
+      "byte_start": 141750,
+      "byte_end_exclusive": 141997,
+      "bytes": 247,
+      "sha256": "1F11EBF4D161C680C8EACE7554D157CB345518A29FC7D0A2C7E5B09ECAC6126C",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/divisors.tex#L3788-L3793"
+    },
+    {
+      "id": "target:proper-ample-projective",
+      "file_id": "more-morphisms.tex",
+      "lines": [
+        14988,
+        15010
+      ],
+      "byte_start": 579170,
+      "byte_end_exclusive": 580143,
+      "bytes": 973,
+      "sha256": "4161E9F7DF9AF8EA9FA0FCD1073956C20A2C496EF7694ADF9ECEA9155206A39E",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/more-morphisms.tex#L14988-L15010"
+    },
+    {
+      "id": "target:plane-genus",
+      "file_id": "curves.tex",
+      "lines": [
+        1686,
+        1726
+      ],
+      "byte_start": 66384,
+      "byte_end_exclusive": 67854,
+      "bytes": 1470,
+      "sha256": "DF38558F9C473A918DD4307DDCC3C02B0506BEE1A282C9E80ADDCA89616F97A1",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/curves.tex#L1686-L1726"
+    },
+    {
+      "id": "target:riemann-hurwitz",
+      "file_id": "curves.tex",
+      "lines": [
+        2220,
+        2266
+      ],
+      "byte_start": 87756,
+      "byte_end_exclusive": 89661,
+      "bytes": 1905,
+      "sha256": "282B541A94F20A501F2876674A42B121E1E48DCFDB51A2ED713187207B30ABF5",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/curves.tex#L2220-L2266"
+    },
+    {
+      "id": "target:curve-duality",
+      "file_id": "curves.tex",
+      "lines": [
+        578,
+        644
+      ],
+      "byte_start": 22382,
+      "byte_end_exclusive": 25282,
+      "bytes": 2900,
+      "sha256": "04D27548A61D0BD2C4CF8C30C6EDC5A7DF923F4FBB1450C74291EC114CECB4B4",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/curves.tex#L578-L644"
+    },
+    {
+      "id": "target:historical-igusa-boundary",
+      "file_id": "moduli.tex",
+      "lines": [
+        4374,
+        4398
+      ],
+      "byte_start": 177924,
+      "byte_end_exclusive": 179281,
+      "bytes": 1357,
+      "sha256": "50D867681E972EED76714B266509B2CE58859DDE88EC7E8FB1B6F95DAE12307D",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex#L4374-L4398"
+    },
+    {
+      "id": "target:smooth-picard-tangent",
+      "file_id": "moduli.tex",
+      "lines": [
+        5223,
+        5281
+      ],
+      "byte_start": 216270,
+      "byte_end_exclusive": 218435,
+      "bytes": 2165,
+      "sha256": "1C89DD93AA4B459E264270C26FA2E9248DD55D241E1121022C130D381DC78662",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex#L5223-L5281"
+    },
+    {
+      "id": "target:draft-abelian-proof-caution",
+      "file_id": "moduli.tex",
+      "lines": [
+        5355,
+        5418
+      ],
+      "byte_start": 221619,
+      "byte_end_exclusive": 224650,
+      "bytes": 3031,
+      "sha256": "A9A66C10EB9FE539352E0C277B6A62476FFA5DB778CB0976DF01C28C5114A95B",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex#L5355-L5418"
+    }
+  ],
+  "tag_bindings": [
+    {
+      "id": "units",
+      "label": "more-morphisms-lemma-picard-group-first-order-thickening",
+      "tag": "0C6R",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0C6R",
+      "use": "Split square-zero Picard kernel; statement and proof consulted."
+    },
+    {
+      "id": "derivations",
+      "label": "more-morphisms-lemma-action-by-derivations",
+      "tag": "02H5",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/02H5",
+      "use": "Scheme lifts by derivations; surrounding difference-of-lifts proof consulted."
+    },
+    {
+      "id": "space-derivations",
+      "label": "spaces-more-morphisms-lemma-action-by-derivations",
+      "tag": "04D0",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/04D0",
+      "use": "Algebraic-space lifts by derivations; statement and proof consulted."
+    },
+    {
+      "id": "rigidification",
+      "label": "quot-lemma-flat-geometrically-connected-fibres-with-section",
+      "tag": "0D28",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0D28",
+      "use": "Split relative Picard quotient, including descent proof."
+    },
+    {
+      "id": "picard-representability",
+      "label": "quot-proposition-pic-functor",
+      "tag": "0D2C",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0D2C",
+      "use": "Representability statement; not a fresh review of its entire proof."
+    },
+    {
+      "id": "flat-base-change",
+      "label": "coherent-lemma-flat-base-change-cohomology",
+      "tag": "02KH",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/02KH",
+      "use": "Flat base change statement."
+    },
+    {
+      "id": "free-quotient",
+      "label": "spaces-properties-lemma-quotient-scheme",
+      "tag": "07S7",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/07S7",
+      "use": "Free finite locally free action gives scheme quotient and torsor; proof consulted."
+    },
+    {
+      "id": "separated-quotient",
+      "label": "spaces-properties-lemma-quotient-separated",
+      "tag": "0BBM",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0BBM",
+      "use": "Separated quotient statement."
+    },
+    {
+      "id": "proper-image",
+      "label": "morphisms-lemma-image-proper-is-proper",
+      "tag": "03GN",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/03GN",
+      "use": "Universal closedness through a surjective cover; proof consulted."
+    },
+    {
+      "id": "norm-ample",
+      "label": "divisors-lemma-norm-ample",
+      "tag": "0BD0",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0BD0",
+      "use": "Norm ampleness proof."
+    },
+    {
+      "id": "norm-exists",
+      "label": "divisors-lemma-finite-locally-free-has-norm",
+      "tag": "0BD2",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0BD2",
+      "use": "Canonical finite locally free norm statement."
+    },
+    {
+      "id": "proper-ample-projective",
+      "label": "more-morphisms-lemma-projective",
+      "tag": "0B45",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0B45",
+      "use": "Proper plus ample gives projective over affine base; statement consulted."
+    },
+    {
+      "id": "plane-genus",
+      "label": "curves-lemma-genus-plane-curve",
+      "tag": "0BYD",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0BYD",
+      "use": "Cubic genus and global functions; proof consulted."
+    },
+    {
+      "id": "riemann-hurwitz",
+      "label": "curves-section-riemann-hurewitz",
+      "tag": "0C1B",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0C1B",
+      "use": "Unramified degree-two cover genus formula."
+    },
+    {
+      "id": "curve-duality",
+      "label": "curves-lemma-duality-dim-1",
+      "tag": "0BS2",
+      "origin": "official_baseline",
+      "url": "https://stacks.math.columbia.edu/tag/0BS2",
+      "use": "Duality of H1(O) with regular differentials; statement and proof consulted."
+    },
+    {
+      "id": "historical-igusa-boundary",
+      "label": "moduli-remark-picard-torsion-flatness-boundary",
+      "tag": "0HJS",
+      "origin": "unofficial_draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex#L4374-L4398",
+      "use": "Historical reference is explicitly not a constructed example."
+    },
+    {
+      "id": "smooth-picard-tangent",
+      "label": "moduli-corollary-picard-R1-locally-free-base-change",
+      "tag": "0HKH",
+      "origin": "unofficial_draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex#L5223-L5281",
+      "use": "Smooth-case statement does not establish unrestricted cotangent identification by itself."
+    },
+    {
+      "id": "draft-abelian-proof-caution",
+      "label": "moduli-lemma-abelian-scheme-cohomology-exterior",
+      "tag": "0HKL",
+      "origin": "unofficial_draft",
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/72e34cc9683e58d582e5d35f7adaac9533a4cfed/moduli.tex#L5355-L5418",
+      "use": "Not used: geometric-fibre vanishing inference needs a nilpotent-safe replacement."
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "III.7.8.10(ii):cotangent",
+      "status": "derived_from_existing_results_with_full_coefficient_proof",
+      "proof": "Split square-zero thickenings T[M] for every quasi-coherent M, units exact sequence, rigidification and affine-base Picard invariance identify the relative Picard kernel with H1(X,f*M). Derivations identify that kernel with Hom(e*Omega,M). Yoneda and flat descent identify Q with e*Omega. Split the finite-etale Stein factor for EGA's separable degree-zero algebra and descend componentwise.",
+      "rejected_shortcuts": [
+        "Tangent dimensions over fields alone",
+        "Evaluation only at M=O",
+        "Dualizing R1(O) without local freeness",
+        "Ignoring relative Picard sheafification"
+      ]
+    },
+    {
+      "source_id": "III.7.8.10(ii):example",
+      "status": "explicit_proof_draft_candidate_root_integration_pending",
+      "base_ring": "Z_(2)",
+      "curve": "Y^2 Z + X Y Z = X^3 + X Z^2",
+      "discriminant": -63,
+      "first_involution": "tau(x,y)=(1/x,-(y+x)/x^2), with explicit regular extensions at P and O",
+      "second_involution": "iota(x,y)=(x,-y-x)",
+      "quotient_family": "X=(E x E)/<tau x iota>; B=E/<tau>; g:X->B",
+      "proof": "Tau extends to a global involution and its fixed locus would force 63=0. Free constant-Z/2 actions give finite-etale scheme quotients. Smoothness, separatedness, proper-image descent and norm ampleness give smooth projective quotients. Riemann-Hurwitz makes B genus one. R1g_*O descends H1(E,O) under the sign character: zero sections in characteristic zero, a trivial line in characteristic two. Leray gives h1(X,O)=1 and 2 respectively. Evaluating the represented functor at the two residue fields proves Q is not locally free.",
+      "rejected_shortcuts": [
+        "Invariants of total cohomology in characteristic two",
+        "Confusing constant Z/2 with mu_2",
+        "Inferring projectivity from properness alone",
+        "Claiming a specific elementary-divisor decomposition of Q",
+        "Inferring nonflatness of the whole Picard scheme"
+      ]
+    }
+  ],
+  "external_reference": {
+    "author": "Yuan Yang",
+    "title": "p-Primary Torsion of the Brauer Group in Characteristic p",
+    "version": "arXiv:2410.09969v3",
+    "url": "https://arxiv.org/html/2410.09969v3#S2.SS3",
+    "consulted_scope": "Example following Corollary 2.3.4: translation/inversion quotient pattern only. That example uses a different second elliptic curve. The explicit mixed-characteristic construction is separately proved here.",
+    "evidence_kind": "Primary-author HTML consulted live; no whole-paper byte snapshot or PDF collation claimed."
+  },
+  "side_finding": {
+    "id": "FGA-ABELIAN-EXTERIOR-NILPOTENT-PROOF-GAP-20260921",
+    "status": "open_proof_repair_not_a_counterexample_to_the_theorem",
+    "source_evidence": "draft-abelian-proof-caution",
+    "finding": "The inference that exterior relations holding on all geometric fibres therefore hold over arbitrary S is invalid without additional argument.",
+    "counterexample_to_inference": "Multiplication by epsilon on a free rank-one module over k[epsilon]/(epsilon^2) is nonzero but vanishes after every geometric residue-field base change.",
+    "next_action": "Supply a nilpotent-safe cup-product factorization through the exterior algebra, or a correctly scoped source theorem proving it. Do not infer that the abelian-scheme theorem is false."
+  },
+  "arithmetic_checks": [
+    {
+      "name": "tau preserves cubic after multiplication by x^4",
+      "status": "PASS"
+    },
+    {
+      "name": "fixed equations give -(8x+1)",
+      "status": "PASS"
+    },
+    {
+      "name": "63 lies in the fixed-locus ideal",
+      "status": "PASS"
+    },
+    {
+      "name": "tau squared returns y",
+      "status": "PASS"
+    },
+    {
+      "name": "regular differential at infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "discriminant -63 is a unit in Z_(2)",
+      "status": "PASS"
+    }
+  ],
+  "reproducibility": {
+    "primary_comparison": {
+      "name": "EGA_III7810_PRIMARY_COMPARISON_20260921.json",
+      "bytes": 8242,
+      "sha256": "3AB56793E48E42CBF48854A34C1CA4475D9D75CFB5AC113EF21A9B25734F6109"
+    },
+    "tags_file": {
+      "name": "tags/tags",
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D"
+    },
+    "scope": "Exact source/span/tag identities and six polynomial/arithmetic checks; not proof-assistant verification of geometry or cohomology."
+  },
+  "agents_used": 0,
+  "new_root_theorems": 0,
+  "whole_ega_complete": false,
+  "next_action": "Promote the III.7.8.10 cotangent identification and explicit jumping family into cumulative LaTeX with complete dependency, reference, build and visual checks. Preserve and repair the separately recorded nilpotent inference gap in the existing abelian-scheme exterior-algebra proof. Then continue the EGA-wide coverage queue without repeating completed comparisons."
+}

@@ -200,9 +200,13 @@ hypothesis for degree-zero cohomological flatness. A subsequent
 the historical nonflat coefficient functor and its exchange map; it explains
 why ordinary geometric pullback is a different operation and supplies a
 counterexample to that replacement. The selected tally is now 30 supported,
-one qualified and one partial: the smooth-projective example/Picard-cotangent
-interpretation remains unresolved. These are correspondences with existing
-Stacks mathematics, not 31 new theorems.
+one qualified and one awaiting root-source integration. A new
+[Picard cotangent and jumping-family proof draft](ega/coverage/ega-iii-7-8-10-picard.md)
+identifies the representing module for all coefficients and constructs a
+smooth projective family whose $h^1(\mathcal O)$ jumps from 1 to 2 in
+characteristic two. The example is an explicit candidate addition, not yet
+a theorem in the cumulative LaTeX chapters. The earlier coverage matches
+are correspondences with existing Stacks mathematics, not new theorems.
 A [supplement on III.7.7.9](ega/coverage/ega-iii-7-7-9-representability.md)
 explains base change of the representing modules and removes the global
 two-term presentation hypothesis using Stacks' Ext-functor construction.
