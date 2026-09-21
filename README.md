@@ -78,6 +78,13 @@ not a claim to cover every finding from the translations or historical work.
 The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
 alongside it. Neither list treats an added theorem as an upstream correction.
 
+The first [Pursuing Stacks module](pursuing-stacks/README.md) is separately
+readable: six pages on categories of elements, relative nerves, and a
+conditional localization criterion, with seven statements and proofs. It has
+its own PDF, complete direct LaTeX, and reproducible source ZIP. This is not a
+claim that the whole historical work, or even the received 68-page draft, has
+been integrated; it is not yet part of the older cumulative PDFs.
+
 ## Reading Stacks in other languages
 
 Separately maintained AI-produced translations offer another route into the

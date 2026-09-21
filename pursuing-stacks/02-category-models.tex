@@ -1,0 +1,365 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm}
+\usepackage[all]{xy}
+\usepackage[hidelinks]{hyperref}
+\emergencystretch=2em
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{definition}[proposition]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\PSh}{\operatorname{PSh}}
+\newcommand{\El}{\operatorname{El}}
+\newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Cat}{\mathbf{Cat}}
+\newcommand{\Sets}{\mathbf{Sets}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\PSM}[1]{\par\smallskip{\small\raggedright\noindent Source-map identifiers: \texttt{#1}.\par}\smallskip}
+\title{Categories of Elements, Relative Nerves, and a Counit Criterion}
+\author{Unofficial Stacks Project AI Drafts}
+\date{September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An independently readable module adapted from a source-mapped draft of
+Grothendieck's \emph{Pursuing Stacks}, sections 19, 26, 28--30, and 38.
+We give explicit functors and proofs for a realization--nerve adjunction,
+the category-of-elements adjunction, its comma-category description, and
+a conditional criterion for an equivalence after localization.
+This is AI-written draft mathematics, not official Stacks text or
+proof-assistant-verified mathematics. Existing results are identified as
+dependencies, not claimed as new theorems.
+\end{abstract}
+\tableofcontents
+
+\section{Conventions and existing foundations}
+\label{psm-conventions}
+
+Fix a universe. Small categories and sets below belong to it; functor
+categories may be formed in a larger universe. The notation $\Fun(C,D)$
+denotes the category of functors and natural transformations when used as
+a category, and its set of objects when it occurs in a set-valued
+presheaf. Thus morphisms in the ordinary category $\Cat$ are functors,
+not natural-isomorphism classes of functors.
+
+For a small category $A$, write $\PSh(A)=\Fun(A^{\mathrm{op}},\Sets)$.
+For $F\in\PSh(A)$ the category $\El_A(F)$ has objects $(a,x)$,
+where $x\in F(a)$, and arrows
+\[
+ (a,x)\xrightarrow{u}(b,y)\quad\text{with}\quad
+ u:a\longrightarrow b,\qquad F(u)(y)=x.
+\]
+It is the category fibred in sets already constructed in Stacks,
+\nolinkurl{categories.tex}, \nolinkurl{example-presheaf}.
+We use it rather than introduce a competing definition.
+For a representable $h_a=\Hom_A(-,a)$, it is canonically $A/a$.
+
+We also use the existing Yoneda lemma and the presentation
+\begin{equation}\label{psm-density}
+ F\simeq\mathop{\mathrm{colim}}_{(a,x)\in\El_A(F)}h_a.
+\end{equation}
+The proof is the presheaf calculation in the following Stacks source:
+\begin{center}\small
+\nolinkurl{sites.tex}: \nolinkurl{lemma-colimit-representable}.
+\end{center}
+At $b$, the class of $(a,x,u:b\to a)$ maps to $F(u)(x)$,
+and $y\in F(b)$ is represented by $(b,y,\id_b)$.
+Taking the indiscrete topology gives the presheaf version directly.
+These foundations are existing coverage, not contributions of this module.
+
+\section{Presheaves over a presheaf}
+\label{psm-slice-section}
+
+\begin{proposition}\label{psm-slice-equivalence}
+For $F\in\PSh(A)$ there is a natural equivalence
+\[
+ \PSh(A)/F\simeq\PSh(\El_A(F)).
+\]
+It sends $p:E\to F$ to the presheaf with value $p_a^{-1}(x)$ at $(a,x)$.
+\end{proposition}
+\PSM{PSM-PROP-0008}
+\begin{proof}
+If $u:(a,x)\to(b,y)$, naturality of $p$ says that $E(u)$ carries
+$p_b^{-1}(y)$ into $p_a^{-1}(x)$. This defines the asserted presheaf.
+Conversely, for $G\in\PSh(\El_A(F))$, set
+\[
+ E_G(a)=\coprod_{x\in F(a)}G(a,x).
+\]
+For $u:a\to b$ send $(y,s)$ to
+$(F(u)(y),G(\widetilde u)(s))$, where
+$\widetilde u:(a,F(u)(y))\to(b,y)$ is the arrow over $u$.
+Functoriality follows from that of $F$ and $G$.
+Projection onto $x$ defines $E_G\to F$.
+Maps over $F$ induce maps on fibres, and a natural transformation between
+two such $G$ induces a map on the displayed disjoint unions. These rules
+are functorial. The fibre of $E_G(a)\to F(a)$ at $x$ is canonically
+$G(a,x)$, while the disjoint union of the fibres of $p_a$ is $E(a)$.
+The resulting two isomorphisms commute with all restriction maps and
+with maps between presheaves. They give the equivalence.
+\end{proof}
+
+\begin{remark}
+This is an explicit presheaf formulation of localization of a topos,
+not a claim of a new localization theorem. Compare Stacks,
+\nolinkurl{sites.tex}, \nolinkurl{lemma-localize-topos} and
+\nolinkurl{remark-localize-presheaves}. The additional value here is the
+fixed category-of-elements model and the two inverse formulas used below.
+\end{remark}
+
+\section{Relative nerves and free cocompletion}
+\label{psm-realization-section}
+
+Let $D:A\to M$ be a functor, where $M$ is locally small and has all
+small colimits. Define
+\[
+ N_D(X)(a)=\Hom_M(D(a),X),\qquad
+ D_!(F)=\mathop{\mathrm{colim}}_{(a,x)\in\El_A(F)}D(a).
+\]
+The restriction in $N_D(X)$ is precomposition with $D(u)$.
+A map of presheaves induces a map of the indexing categories over $A$,
+and hence makes $D_!$ a functor.
+
+\begin{proposition}\label{psm-realization-adjunction}
+There is a natural adjunction $D_!\dashv N_D$. The functor $D_!$
+preserves small colimits and has a canonical isomorphism $D_!h_a\simeq D(a)$.
+Restriction along Yoneda induces an equivalence of categories
+\[
+ \Fun_{\mathrm{colim}}(\PSh(A),M)\ \simeq\ \Fun(A,M),
+\]
+where the left-hand category has small-colimit-preserving functors as
+objects and all natural transformations as morphisms.
+In particular, an extension of a specified $D$, together with its specified
+identification on representables, is unique up to a unique compatible
+natural isomorphism.
+\end{proposition}
+\PSM{PSM-PROP-0004; PSM-PROP-0031}
+\begin{proof}
+A map $D_!(F)\to X$ is a family of maps $D(a)\to X$, indexed by
+$x\in F(a)$, such that for $u:a\to b$ and $y\in F(b)$ the map
+indexed by $F(u)(y)$ is the map indexed by $y$ composed with $D(u)$.
+That is exactly a natural transformation $F\to N_D(X)$. The
+construction is inverse in both directions and natural in both variables.
+Thus $D_!$ is a left adjoint and preserves small colimits.
+Since $\El_A(h_a)=A/a$ has terminal object $\id_a$, its defining colimit
+is canonically $D(a)$.
+
+For the last assertion, a natural transformation $D\to D'$ induces,
+by taking the displayed colimits, a transformation $D_!\to D'_!$.
+For any colimit-preserving $L$, equation~\eqref{psm-density} gives a
+natural isomorphism
+\[
+ L(F)\simeq\mathop{\mathrm{colim}}_{(a,x)\in\El_A(F)}L(h_a).
+\]
+Consequently every transformation on the representables extends uniquely
+to all presheaves. This proves full faithfulness of restriction. The
+construction $D\mapsto D_!$ proves essential surjectivity. Fixing the
+identification on representables then gives the stated uniqueness.
+\end{proof}
+
+\begin{remark}
+The compatibility clause in the uniqueness assertion is essential. An
+unspecified isomorphism $L\circ y\simeq D$ does not eliminate natural
+automorphisms of $D$. The functor-category equivalence states the precise
+universal property. Specializing to $M=\Cat$ supplies the generalized
+realization--nerve adjunction of source section 38; no weak-equivalence
+property follows merely from this adjunction.
+\end{remark}
+
+\section{The right adjoint to categories of elements}
+\label{psm-elements-section}
+
+For a small category $C$ put
+\[
+ J_A(C)(a)=\Fun(A/a,C).
+\]
+For $u:a\to b$, restriction is precomposition with
+$u_*:A/a\to A/b$, which sends $v$ to $uv$.
+
+\begin{proposition}\label{psm-elements-adjunction}
+The functors $\El_A:\PSh(A)\to\Cat$ and $J_A:\Cat\to\PSh(A)$
+form an adjoint pair $\El_A\dashv J_A$.
+\end{proposition}
+\PSM{PSM-DEF-0030; PSM-PROP-0011}
+\begin{proof}
+Given $H:\El_A(F)\to C$ and $x\in F(a)$, associate the functor
+\[
+ H_x:A/a\longrightarrow C,\qquad
+ (v:b\to a)\longmapsto H(b,F(v)(x)).
+\]
+On a triangle in $A/a$ use the induced arrow in $\El_A(F)$.
+The identity $H_{F(u)(y)}=H_y\circ u_*$ makes $x\mapsto H_x$
+a natural transformation $F\to J_A(C)$.
+
+Conversely, given $\theta:F\to J_A(C)$, set
+$H(a,x)=\theta_a(x)(\id_a)$. An arrow
+$u:(a,x)\to(b,y)$ satisfies $x=F(u)(y)$. Thus
+$\theta_a(x)=\theta_b(y)\circ u_*$, and the arrow
+$u\to\id_b$ in $A/b$ gives
+\[
+ H(a,x)=\theta_b(y)(u)\longrightarrow\theta_b(y)(\id_b)=H(b,y).
+\]
+Identities and compositions follow by evaluating the corresponding
+triangles in a slice. The first construction followed by the second
+recovers $H$ on objects and arrows. In the other order, at an object
+$v:b\to a$ naturality identifies the recovered value with
+$\theta_a(x)(v)$, and does the same for slice arrows. Hence it recovers
+$\theta$ exactly. This is a natural bijection of hom sets.
+\end{proof}
+
+Write $E_A(C)=\El_A(J_A(C))$. The counit is the evaluation functor
+\begin{equation}\label{psm-counit}
+ \epsilon_C:E_A(C)\longrightarrow C,\qquad
+ (a,T:A/a\to C)\longmapsto T(\id_a).
+\end{equation}
+An arrow over $u:a\to b$ satisfies $T=S\circ u_*$; its image is
+$S(u\to\id_b)$. This makes evaluation natural in $C$.
+
+\begin{lemma}\label{psm-counit-comma}
+For $c\in C$ there is a canonical isomorphism of categories
+\[
+ (\epsilon_C\mathbin\downarrow c)\ \cong\ E_A(C/c).
+\]
+\end{lemma}
+\PSM{PSM-LEM-0018}
+\begin{proof}
+An object on the left is $(a,T,q)$ with $T:A/a\to C$ and
+$q:T(\id_a)\to c$. It defines $\widetilde T:A/a\to C/c$ by
+\[
+ v:b\to a\ \longmapsto\
+ \bigl(T(v)\xrightarrow{T(v\to\id_a)}T(\id_a)\xrightarrow{q}c\bigr).
+\]
+Conversely, compose a functor $A/a\to C/c$ with the forgetful functor
+and retain its structural arrow at $\id_a$. Naturality of structural
+arrows in the slice shows these operations are inverse on objects.
+An arrow on the left lies over $u:a\to b$, satisfies $T=S u_*$, and
+satisfies $q=r\,S(u\to\id_b)$. These equalities are precisely
+$\widetilde T=\widetilde S u_*$, the condition for an arrow on the right.
+Thus the operations are inverse on morphisms too and preserve composition.
+\end{proof}
+
+\section{A conditional counit-test criterion}
+\label{psm-counit-criterion-section}
+
+Let $W$ be a class of functors between small categories. Say that $C$ is
+$W$-aspheric if $C\to\mathbf 1$ belongs to $W$. Say that $f:C\to D$
+is right $W$-aspheric if $(f\downarrow d)$ is $W$-aspheric for every $d$.
+We assume explicitly that:
+\begin{enumerate}
+\item $W$ contains all isomorphisms and satisfies two out of three;
+\item a category with a final object is $W$-aspheric;
+\item every right $W$-aspheric functor belongs to $W$.
+\end{enumerate}
+These are hypotheses on $W$, not claims about an arbitrary proposed
+notion of weak equivalence. The last condition is the relevant
+Theorem-A-type input; it is not proved by the criterion below.
+
+\begin{proposition}\label{psm-counit-test}
+For a small category $A$, the following conditions are equivalent:
+\begin{enumerate}
+\item $\epsilon_C\in W$ for every small $C$;
+\item $\epsilon_C$ is right $W$-aspheric for every small $C$;
+\item $E_A(B)$ is $W$-aspheric whenever $B$ has a final object.
+\end{enumerate}
+\end{proposition}
+\PSM{PSM-DEF-0032; PSM-DEF-0033; PSM-DEF-0034; PSM-PROP-0013}
+\begin{proof}
+If (1) holds and $B$ has a final object, both $\epsilon_B$ and
+$B\to\mathbf 1$ belong to $W$, so their composite does. This is (3).
+Assume (3). For $c\in C$, the category $C/c$ has final object
+$\id_c$. Lemma~\ref{psm-counit-comma} identifies
+$(\epsilon_C\downarrow c)$ with $E_A(C/c)$, which is $W$-aspheric
+by (3). The isomorphism does not change membership of the terminal
+functor in $W$, by (1) of the hypotheses and two out of three.
+Thus (2) holds. The final hypothesis on $W$ gives (2)$\Rightarrow$(1).
+\end{proof}
+
+\noindent The proof mechanism, with its hypotheses visible, is
+\[
+ \xymatrix@C=30pt{
+ E_A(C/c)\ar[r]^-{\sim}\ar[dr] &
+ (\epsilon_C\downarrow c)\ar[d]\\
+ &\mathbf 1.
+ }
+\]
+The top arrow is the explicit isomorphism of
+Lemma~\ref{psm-counit-comma}. A final object in $C/c$ and
+condition (3) make the diagonal terminal map weak, hence also the vertical map;
+the Theorem-A-type hypothesis then makes $\epsilon_C$ weak.
+
+\section{Passage through localization}
+\label{psm-localization-section}
+
+\begin{lemma}\label{psm-localization-counit}
+Let $L:M\rightleftarrows N:R$ be an adjunction and let $W_N$ contain
+identities and satisfy two out of three. Put $W_M=L^{-1}(W_N)$.
+If every component of the counit $\epsilon:LR\to\id_N$ belongs to
+$W_N$, then $R(W_N)\subset W_M$, and every component of the unit
+$\eta:\id_M\to RL$ belongs to $W_M$. If the ordinary categorical
+localizations at these classes exist, $L$ and $R$ induce mutually
+quasi-inverse equivalences between them.
+\end{lemma}
+\PSM{PSM-LEM-0016}
+\begin{proof}
+For $f:Y\to Y'$ in $W_N$, the square
+\[
+ \xymatrix{
+ LRY\ar[r]^{LR(f)}\ar[d]_{\epsilon_Y}&LRY'\ar[d]^{\epsilon_{Y'}}\\
+ Y\ar[r]_f&Y'
+ }
+\]
+commutes. Its bottom and vertical arrows belong to $W_N$; applying two
+out of three twice gives $LR(f)\in W_N$, hence $R(f)\in W_M$.
+The triangle identity
+$\epsilon_{LX}\circ L(\eta_X)=\id_{LX}$ gives $L(\eta_X)\in W_N$,
+so $\eta_X\in W_M$. The universal properties of localization now
+give induced functors. The unit and counit descend to natural
+transformations: naturality for an inverted arrow follows from naturality
+for that arrow by multiplying by its inverse. All their components become
+isomorphisms. The triangle identities remain identities after localization,
+so the induced functors are quasi-inverse adjoint equivalences.
+\end{proof}
+
+\begin{proposition}\label{psm-test-localization}
+Assume the hypotheses and equivalent conditions of
+Proposition~\ref{psm-counit-test}. On $\PSh(A)$ set
+$W_A=\{u:\El_A(u)\in W\}$. If the two localizations exist, then
+\[
+ \PSh(A)[W_A^{-1}]\ \simeq\ \Cat[W^{-1}],
+\]
+with functors induced by $\El_A$ and $J_A$.
+\end{proposition}
+\begin{proof}
+Apply Lemma~\ref{psm-localization-counit} to the adjunction of
+Proposition~\ref{psm-elements-adjunction}. Its counit is precisely
+\eqref{psm-counit}, which lies in $W$ by the assumed criterion.
+\end{proof}
+
+\begin{remark}
+This last conclusion is conditional. It neither constructs the
+localizations nor asserts that any particular $A$ satisfies the criterion.
+No model structure, comparison with spaces, or arbitrary-topos theorem is
+silently imported. The term \emph{counit-test} specifies this criterion;
+it does not identify all provisional meanings of ``test category'' in
+the historical source.
+\end{remark}
+
+\section*{Source and reuse notes}
+The historical source is Alexander Grothendieck, \emph{Pursuing Stacks},
+\emph{First Episode: The Modelizing Story}, source edition
+\href{https://arxiv.org/abs/2111.01000}{arXiv:2111.01000v2}.
+The source-map identifiers printed here are local to the received draft,
+not official Stacks tags. Exact source spans, received-file hashes,
+comparison decisions, and the scope of the checks accompany this module
+in \texttt{integration.json} and \texttt{REVIEW.md}.
+
+The Stacks comparison baseline is
+\href{https://github.com/stacks/stacks-project/tree/a04446e57ec1fbc252a871afcec7752fb2807b14}{\texttt{a04446e57ec1}};
+existing FGA nerve coverage is recorded separately. This is additional
+exposition, not a claim of novelty or upstream errata. This complete
+LaTeX file uses only standard packages. Its source archive supplies the
+build tools and retained licensing and attribution notices.
+\end{document}

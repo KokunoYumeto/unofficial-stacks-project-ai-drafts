@@ -1,4 +1,4 @@
-# Pursuing Stacks: received draft, not an integrated chapter
+# Pursuing Stacks: received draft and first normalized module
 
 A separate English Stacks-style draft covers source sections 1–48 and 16bis
 of Grothendieck's *Pursuing Stacks*. The rest of the 140-section work is not
@@ -30,10 +30,13 @@ pages; no whole-reader visual approval is claimed here.
    These are already in this draft's [Simplicial Methods](../simplicial.tex),
    at `definition-nerve-category` and `lemma-characterize-nerves-categories`,
    from the earlier FGA work. Reuse those results and preserve the source map.
-2. **Review the category-of-elements/test-category module next.** Its explicit
-   equivalence between presheaves over a presheaf and presheaves on its category
-   of elements is a useful candidate component. Novelty relative to the full
-   official and extended trees has not yet been established.
+2. **The first category-models module is now available.** The
+   [six-page module](README.md) gives seven statements with proofs: the
+   presheaf-slice equivalence, realization--nerve universal property,
+   category-of-elements adjunction, counit comma-category formula, counit-test
+   criterion, adjoint localization lemma, and its test-category consequence.
+   [The review](REVIEW.md) identifies existing coverage and explicit
+   hypotheses. Seven statements are not seven novel theorems absent from Stacks.
 3. **Correct the draft before import.** In `test_categories.tex`, the displayed
    target in `definition-relative-test-functor` spells `operatorname{PSh}`
    without the leading backslash. This is a defect in the received AI draft,
@@ -52,8 +55,13 @@ Keep the producer's frozen files intact. Work from a hash-bound candidate copy;
 deduplicate against both official Stacks and this draft, normalize notation,
 retain only justified statements and dependencies, then run source/reference,
 build, and visual checks before cumulative-source admission. Do not turn local
-`PSM-` identifiers into official Stacks tags. No source admission, full mathematical
-review, or GitHub publication of the 68-page reader is claimed by this intake note.
+`PSM-` identifiers into official Stacks tags. The first module is a separately
+readable addition within this repository; it is not yet stitched into the old
+cumulative Stacks PDFs or `categories.tex`. Its direct LaTeX and complete source
+ZIP accompany the PDF. Two fresh fixed-point builds agree byte-for-byte, and
+all six pages were inspected. Full mathematical review or publication of the
+received 68-page reader is not claimed. The remaining asphericity and interval
+material still needs comparison and proof review.
 
 This material belongs to [Possible new additions](../POSSIBLE_ADDITIONS.md).
 Neither it nor repairs to it belongs in the list of possible upstream fixes.
