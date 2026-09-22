@@ -1,0 +1,28 @@
+{
+  "schema": "bounded-page-complete-visual-adjudication/v1",
+  "candidate_id": "stacks-errata-a04446e-r49",
+  "reviewer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "review_method": "Direct inspection of five rendered contact sheets covering every PDF page, followed by individual 180-dpi correction-sensitive page images. The image viewer scaled the latter from 1530x1980 to 1376x1780 pixels.",
+  "passed": true,
+  "pdf": {"path":"builds/derham.pdf","bytes":843489,"sha256":"9AF52297946B9BF16231BE5F75D0D1F76B43829D0C8BCF5C9AD801219924B11E"},
+  "render_manifest": {"path":"replay/rendered/derham/render-manifest.json","bytes":14690,"sha256":"61DFF96A30F77FFD5661E2AE3358BBD4500EC2090AA886974759C7B9FC40E1B5"},
+  "scope": {
+    "covered_pages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],
+    "unreviewed_pages": [],
+    "high_resolution_pages": [6,7,9],
+    "contact_sheets": ["derham_01.png","derham_02.png","derham_03.png","derham_04.png","derham_05.png"]
+  },
+  "observations": [
+    "All 68 actual pages have visible content and consistent chapter furniture. No gross clipping, overlapping blocks, or unexpected blank actual page was seen in the overview. Blank contact-sheet slots after page 68 are not document pages.",
+    "Page 6 visibly reads 'there exists a Cartan-Eilenberg resolution'; the neighboring spectral-sequence diagrams remain readable.",
+    "Page 7 visibly reads 'certain sheaves'. The three extra closing parentheses are absent from the Hodge-filtration product diagram; all three cohomology expressions, arrows and the final product inclusion remain present.",
+    "Page 9 visibly reads 'is locally bounded. Thus the result follows by Lemma 8.1'. The relative cup-product diagram fits, with readable arrows and labels."
+  ],
+  "blocking_findings": [],
+  "limitations": [
+    "Overview inspection of all pages is not a word-by-word semantic audit of the whole chapter. The seven edited loci have source review and individual-page inspection.",
+    "This isolated proof reader retains 374 unresolved cross-reference occurrences across 288 targets and ten overfull hbox warnings, matching the authority build. No zero-warning or complete cumulative-reader claim is made.",
+    "The P07-ERR-0003 future-reference placeholder remains visible on page 7 because it is outside this seven-operation batch. Later citation evidence is a separate successor intake, not an edit silently added here.",
+    "No human expert review or official Stacks Project approval is claimed."
+  ]
+}

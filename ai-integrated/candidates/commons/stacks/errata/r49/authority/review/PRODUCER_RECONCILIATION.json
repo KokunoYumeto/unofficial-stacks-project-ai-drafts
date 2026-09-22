@@ -1,0 +1,2507 @@
+{
+  "schema": "stacks-producer-source-current-reconciliation/v1",
+  "date": "2026-09-13",
+  "scope": "P07-ERR-0001..0006 only, derham.tex",
+  "task_instruction": "Independently reconcile the first six existing producer candidates against pinned and current source, exact current registry and saved review/ledger pointers; do not confuse frozen-ledger presence with implementation. Supply valid smallest current-byte operations, preserve adverse evidence. No source, translation, registry or public writes.",
+  "status": "FIVE_IMPLEMENTATION_READY_FIXES_SEVEN_OPERATIONS_ONE_REFERENCE_GAP",
+  "source_authority": {
+    "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "pinned": {
+      "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+      "bytes": 230539,
+      "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+    }
+  },
+  "current_source": {
+    "path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/derham.tex",
+    "bytes": 237942,
+    "sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+    "git_blob": "e78e81e589b825ebdc5ab3a68c8fb2f86bfba319",
+    "observed_repository_head": "00856c315dabb2516cad6d956a25030909419947",
+    "last_path_commit": "ce91f6b81be60024a7b40f65e48dd60106abfa12",
+    "last_path_commit_subject": "FAC no. 41: vector bundles and Hodge bridge",
+    "worktree_blob_matches_HEAD": true,
+    "note": "The hub advanced tools/metadata HEAD during this review; derham.tex byte identity stayed exact. Bind composition to the source hash/blob and recheck at transaction time, not to a stale repository HEAD."
+  },
+  "saved_ledger": {
+    "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/cjk/ledgers_p05_p08.json",
+    "bytes": 6893787,
+    "sha256": "01E949D8847B9FB4E124213183C66F3F2B16AC6264D428DBFBEB28BC049F5F35"
+  },
+  "original_six_records": [
+    {
+      "record_key": "p07:L1",
+      "producer": "p07",
+      "candidate_id": "P07-ERR-0001",
+      "ledger_line": 1,
+      "byte_start": 0,
+      "byte_end_exclusive": 883,
+      "json_utf8_sha256": "28C5C7C8DBBCD8D29E1D48C0097AD566EFFA6CD65B4D484A51751755E4EEE0D7",
+      "category": "source-defect",
+      "lifecycle": "active_producer_candidate",
+      "source_record": {
+        "utc": "2026-08-21T20:09:52.2902457Z",
+        "id": "P07-ERR-0001",
+        "source_path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "locus": {
+          "lines": [
+            457,
+            460
+          ],
+          "label": "section-hodge-to-de-rham"
+        },
+        "defect": "Subject-verb agreement: “there exist a Cartan-Eilenberg resolution” combines a singular subject with “exist”.",
+        "evidence": "The complement is the singular noun phrase “a Cartan-Eilenberg resolution”.",
+        "smallest_proposed_correction": "Change “there exist a” to “there exists a”.",
+        "confidence": "certain",
+        "translation_impact": "The zh-Hans-CN target renders the unambiguous intended mathematical meaning; no correction note is rendered."
+      },
+      "admission": {
+        "status": "no_matching_admission_identified",
+        "stable_ids": [],
+        "operation_ids": [],
+        "crosswalk_indices": []
+      },
+      "implementation": "not_checked_in_cumulative_source",
+      "publication": "not_checked",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+    },
+    {
+      "record_key": "p07:L2",
+      "producer": "p07",
+      "candidate_id": "P07-ERR-0002",
+      "ledger_line": 2,
+      "byte_start": 883,
+      "byte_end_exclusive": 1855,
+      "json_utf8_sha256": "3F514A85614CE2054AE2EB7B0457F0CA556963A3DF3E4E3B1B88D81A646F409D",
+      "category": "source-defect",
+      "lifecycle": "active_producer_candidate",
+      "source_record": {
+        "utc": "2026-08-21T20:09:52.2902457Z",
+        "id": "P07-ERR-0002",
+        "source_path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "locus": {
+          "lines": [
+            539,
+            542
+          ],
+          "label": "section-hodge-to-de-rham"
+        },
+        "defect": "Number/determiner disagreement in “in terms of a certain sheaves of differentials”.",
+        "evidence": "The singular determiner “a” cannot modify plural “sheaves”.",
+        "smallest_proposed_correction": "Remove “a”: “in terms of certain sheaves of differentials”; choosing singular “a certain sheaf” instead requires editorial confirmation of intended scope.",
+        "confidence": "certain-grammar_editorial-number",
+        "translation_impact": "The target preserves the intended computability claim without exposing the English agreement error."
+      },
+      "admission": {
+        "status": "no_matching_admission_identified",
+        "stable_ids": [],
+        "operation_ids": [],
+        "crosswalk_indices": []
+      },
+      "implementation": "not_checked_in_cumulative_source",
+      "publication": "not_checked",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+    },
+    {
+      "record_key": "p07:L3",
+      "producer": "p07",
+      "candidate_id": "P07-ERR-0003",
+      "ledger_line": 3,
+      "byte_start": 1855,
+      "byte_end_exclusive": 2826,
+      "json_utf8_sha256": "1DD9A3E068A773A0DB0084FB1B1EC99EF2023777020A744184F53BD5EEBECF11",
+      "category": "source-defect",
+      "lifecycle": "active_producer_candidate",
+      "source_record": {
+        "utc": "2026-08-21T20:09:52.2902457Z",
+        "id": "P07-ERR-0003",
+        "source_path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "locus": {
+          "line": 542,
+          "label": "section-hodge-to-de-rham"
+        },
+        "defect": "The published source contains the unresolved editorial placeholder “(insert future reference here)”.",
+        "evidence": "The parenthetical explicitly requests a future reference and is not a bibliographic citation.",
+        "smallest_proposed_correction": "Replace the placeholder with a verified exact Stacks/internal or bibliographic reference; no reference is proposed without canon verification.",
+        "confidence": "certain-placeholder",
+        "translation_impact": "The canonical target translates the placeholder faithfully; it is not silently supplied or removed."
+      },
+      "admission": {
+        "status": "no_matching_admission_identified",
+        "stable_ids": [],
+        "operation_ids": [],
+        "crosswalk_indices": []
+      },
+      "implementation": "not_checked_in_cumulative_source",
+      "publication": "not_checked",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+    },
+    {
+      "record_key": "p07:L4",
+      "producer": "p07",
+      "candidate_id": "P07-ERR-0004",
+      "ledger_line": 4,
+      "byte_start": 2826,
+      "byte_end_exclusive": 3827,
+      "json_utf8_sha256": "09E92E929635612B746BD40C89143D15D9A3DFA2627CCA0D429C9C046F9908F7",
+      "category": "source-defect",
+      "lifecycle": "active_producer_candidate",
+      "source_record": {
+        "utc": "2026-08-21T20:09:52.2902457Z",
+        "id": "P07-ERR-0004",
+        "source_path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "locus": {
+          "lines": [
+            592,
+            594,
+            596
+          ],
+          "label": "section-hodge-filtration"
+        },
+        "defect": "Three entries in the cup-product diagram end with an unmatched extra right parenthesis: each has “...Omega^bullet_{X/S}))”.",
+        "evidence": "Each corresponding H^n/H^m expression opens one H^( and one inner sigma argument but closes with one parenthesis too many; the bottom-row analogues have balanced delimiters.",
+        "smallest_proposed_correction": "Remove the final extra “)” at each of lines 592, 594, and 596.",
+        "confidence": "certain",
+        "translation_impact": "The extra characters are preserved in the canonical translated formula; no rendered correction is made."
+      },
+      "admission": {
+        "status": "no_matching_admission_identified",
+        "stable_ids": [],
+        "operation_ids": [],
+        "crosswalk_indices": []
+      },
+      "implementation": "not_checked_in_cumulative_source",
+      "publication": "not_checked",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+    },
+    {
+      "record_key": "p07:L5",
+      "producer": "p07",
+      "candidate_id": "P07-ERR-0005",
+      "ledger_line": 5,
+      "byte_start": 3827,
+      "byte_end_exclusive": 4653,
+      "json_utf8_sha256": "7DA48DED5FDA5BE0A6C42D2794F10785F8F97FFB940B04BAB2B7BAF99D02BD6C",
+      "category": "source-defect",
+      "lifecycle": "active_producer_candidate",
+      "source_record": {
+        "utc": "2026-08-21T20:17:24.4346256Z",
+        "id": "P07-ERR-0005",
+        "source_path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "locus": {
+          "line": 729,
+          "label": "lemma-kunneth-de-rham"
+        },
+        "defect": "The sentence says “Omega^bullet_{X/S} is a locally bounded”; the article makes the predicate ungrammatical.",
+        "evidence": "“Locally bounded” is an adjectival predicate and takes no article here.",
+        "smallest_proposed_correction": "Delete “a”: “is locally bounded.”",
+        "confidence": "certain",
+        "translation_impact": "The target expresses the intended local boundedness; formal content is unchanged."
+      },
+      "admission": {
+        "status": "no_matching_admission_identified",
+        "stable_ids": [],
+        "operation_ids": [],
+        "crosswalk_indices": []
+      },
+      "implementation": "not_checked_in_cumulative_source",
+      "publication": "not_checked",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+    },
+    {
+      "record_key": "p07:L6",
+      "producer": "p07",
+      "candidate_id": "P07-ERR-0006",
+      "ledger_line": 6,
+      "byte_start": 4653,
+      "byte_end_exclusive": 5545,
+      "json_utf8_sha256": "D30A67C34701176BB4511483A724145E069CE1CFF7201DDC42B481CBD636C7FF",
+      "category": "source-defect",
+      "lifecycle": "active_producer_candidate",
+      "source_record": {
+        "utc": "2026-08-21T20:17:24.4346256Z",
+        "id": "P07-ERR-0006",
+        "source_path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "locus": {
+          "lines": [
+            729,
+            731
+          ],
+          "label": "lemma-kunneth-de-rham"
+        },
+        "defect": "“Thus the result by Lemma ... and ...” lacks the verb that relates the result to the cited lemmas.",
+        "evidence": "The clause has subject “the result” followed directly by the prepositional phrase “by Lemma”.",
+        "smallest_proposed_correction": "Replace “the result by” with “the result follows from”.",
+        "confidence": "certain",
+        "translation_impact": "The target supplies the unambiguous intended inferential relation without changing the cited sources."
+      },
+      "admission": {
+        "status": "no_matching_admission_identified",
+        "stable_ids": [],
+        "operation_ids": [],
+        "crosswalk_indices": []
+      },
+      "implementation": "not_checked_in_cumulative_source",
+      "publication": "not_checked",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+    }
+  ],
+  "previous_work_reconciliation": {
+    "hub_fix_ledger": {
+      "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/FIX_LEDGER.json",
+      "bytes": 447829,
+      "sha256": "78C4A403318F5224219575F1965EEF25E5B483CEF70F41787FA2FE48BA10426C",
+      "matches": []
+    },
+    "prior_review_search": {
+      "scope": "Only top-level JSON review/prefight/FIX_LEDGER/CJK_SEMANTIC artifacts in this task's session_fixes_20260910 directory, plus the exact saved P05-P08 history review, manifest crosswalk and registrar-identifier review.",
+      "queries": [
+        "P07-ERR-000[1-6] with numeric right boundary",
+        "there exist a Cartan-Eilenberg resolution",
+        "in terms of a certain",
+        "is a locally bounded"
+      ],
+      "matching_top_level_report": "P07_SAVED_VISIBLE100_REVIEW_20260913.json",
+      "interpretation": "That matching report is visible-history mining and frozen-ledger linkage, explicitly not source implementation or independent mathematical adjudication. No earlier independent source decision for these six was identified in the checked artifacts."
+    },
+    "current_registry": {
+      "path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/registry/overlays.json",
+      "bytes": 77858,
+      "sha256": "F985166CC6622118F6D4F6827330156CCBB833DA41230569A75FE949CF79DD83"
+    },
+    "registered_overlays_checked": 49,
+    "manifest_and_bound_source_map_and_stable_unit_hashes_verified": true,
+    "matching_derham_source_paths_or_first_six_ids": 0,
+    "registry_entry_inventory": [
+      {
+        "id": "stacks-errata-a04446e-r1",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/candidate.manifest.json",
+        "manifest_bytes": 9635,
+        "manifest_sha256": "0715131E7A35EDC65A18183B3A6422A45D4A0AD3319DA20F9D761C58DE0F086D",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\source-map.jsonl",
+          "bytes": 4564,
+          "sha256": "2C37CF2793840E224303BED8DEFC11C7D86407B153278F4924AC558F239E8A10",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\stable-units.json",
+          "bytes": 2548,
+          "sha256": "F4694DF73A9676EB6B07971EBCA8C96A141DA40B6E7ED8790D8478AA97DA4591",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r2",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r2/candidate.manifest.json",
+        "manifest_bytes": 7949,
+        "manifest_sha256": "449C8515B1DA6F1334DB524F75D819926996DA4FCFE2C50B362EB25C5CA8473B",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r2\\source-map.jsonl",
+          "bytes": 4481,
+          "sha256": "EDF1151985BD1ECD17B088A156C49B6240B4B7C59226A091B7FA13ABD7E1AF03",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r2\\stable-units.json",
+          "bytes": 2310,
+          "sha256": "0D850931A684786F58D8AAFB4B1A84DBE3799B090D17B35234CA090D6B99D893",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r3",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r3/candidate.manifest.json",
+        "manifest_bytes": 9865,
+        "manifest_sha256": "8C5E9C380E2FDEE90F4A41C809E0DF88D65F4934B83AD2162748C13747B96EAB",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r3\\source-map.jsonl",
+          "bytes": 11574,
+          "sha256": "65F1CE7CD5C39DF836C059EEB48279A2686A7AE36777914323504B8CA6186F1C",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r3\\stable-units.json",
+          "bytes": 5903,
+          "sha256": "F29F90BD0D372120E5037926E6C7D554E39E2DF65488768EA710C6C6974F644F",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r4",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r4/candidate.manifest.json",
+        "manifest_bytes": 15448,
+        "manifest_sha256": "23689FD1C97501468D8E137BB89D149187241F65382A838958CF8DB855FF2465",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r4\\source-map.jsonl",
+          "bytes": 202417,
+          "sha256": "059EF47079B1E798A9C85DE69E093CDFDC9A792E1F56B0A6C285311A3B5DE3ED",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r4\\stable-units.json",
+          "bytes": 49427,
+          "sha256": "6A6DDB05377864E2DCA0AB274D94F911ADF511CA3BACD242D66735B0F11E7B0A",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r5",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r5/candidate.manifest.json",
+        "manifest_bytes": 9173,
+        "manifest_sha256": "8130F186D839507DF1868D469892517E38E0A3D4C92126670A8CD53FAE777A0A",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r5\\source-map.jsonl",
+          "bytes": 40267,
+          "sha256": "DA0CCE36BA49B14F95715BEC1BB29EAB831EB096F0088E0AFEB7921479971F5E",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r5\\stable-units.json",
+          "bytes": 12272,
+          "sha256": "7658414F1CA208223675BCFE9BF291EE169BC7691A7A0B862DEFC8C21E718B54",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r6",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r6/candidate.manifest.json",
+        "manifest_bytes": 10166,
+        "manifest_sha256": "0573E0230065780BE1AA7E73114735428C290A45E1E1CD14401E7358764DE050",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r6\\source-map.jsonl",
+          "bytes": 51156,
+          "sha256": "9E911476669D7220C0DDF96F8E0A02E2CFC58948AE30397EEEE5E0545C36FEF9",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r6\\stable-units.json",
+          "bytes": 13258,
+          "sha256": "A9CD3A593F31EC1879FA0C111F55A738FD35150B016481E494F947AB5FE81560",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r7",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r7/candidate.manifest.json",
+        "manifest_bytes": 9133,
+        "manifest_sha256": "FBE74AB2CD8EA5838C6554E85B6CCAFCFFA82B38A178B3E2B43AE0D510E6EA9B",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r7\\source-map.jsonl",
+          "bytes": 21839,
+          "sha256": "EC6B1AFC32DD8FDFAFEE741BB19918E018F8C1C86AA572973072A5FFF1CB79E1",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r7\\stable-units.json",
+          "bytes": 5396,
+          "sha256": "B1E9C82C10D9803B7FB3BE4C533B2833340670309BAC2E10B5EFDCB3CB5F4C04",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r8",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r8/candidate.manifest.json",
+        "manifest_bytes": 9174,
+        "manifest_sha256": "C8D0E21D4D4773196D25C32F30B606EFCAC79F932CFCD251E1B96F02C02EEC68",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r8\\source-map.jsonl",
+          "bytes": 17379,
+          "sha256": "6CF46A64569961D983805AD20672F66BC2245A71E46CC05E1908FBF5A25C65D6",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r8\\stable-units.json",
+          "bytes": 3935,
+          "sha256": "492F163FC980059BA7E475A6FAC503FFF9ABAE4C677BB70E297798300C0AE760",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r9",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r9/candidate.manifest.json",
+        "manifest_bytes": 9108,
+        "manifest_sha256": "6FD34E3A6451440B7F8C5802A760B795F31EF8605AD5C5C2FD2DF14D25AC3F68",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r9\\source-map.jsonl",
+          "bytes": 43046,
+          "sha256": "48575EFB3F0308AA3CFB2CE89BF907A4D1D7861AA8A6E5EFCD5FC7139B60C630",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r9\\stable-units.json",
+          "bytes": 9881,
+          "sha256": "79ECEF1DA66C799E4D47B5E25F15784927D9662BF71CDB50E80B12FFDA8C7F8D",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r10",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r10/candidate.manifest.json",
+        "manifest_bytes": 9046,
+        "manifest_sha256": "87262D85EF338C7B8C5993C15837B0B9F6CEE037205AA712B3D6FB437AA578CF",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r10\\source-map.jsonl",
+          "bytes": 13949,
+          "sha256": "BAE906322BE42AA312B8B16A2BCA3733C86AF94465F12780A76F83E43D4A04F6",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r10\\stable-units.json",
+          "bytes": 3444,
+          "sha256": "7702A5706DBBCDE49DB04420ED9385BFB57C96594554EFB9A259B031849C85B3",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r11",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r11/candidate.manifest.json",
+        "manifest_bytes": 9342,
+        "manifest_sha256": "469A40B39D2A7ABADC53538F06EEDB02F8B25FFFC6437F0717D1993CB67D3208",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r11\\source-map.jsonl",
+          "bytes": 5436,
+          "sha256": "3BEE46C9DF156DC57C4C890A4183C1E8123B1562B7DC63EFC6A153F2E3204472",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r11\\stable-units.json",
+          "bytes": 1505,
+          "sha256": "13A56D3F6B7E627D7A4D8E949675E2DC5A827DF18CADFFFFDBE2B4567FB98F08",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r12",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r12/candidate.manifest.json",
+        "manifest_bytes": 9342,
+        "manifest_sha256": "C6A69DBE1C60AE6C2BC457C954CB472DA838F5F663EEEC7411B4E5FCF5B95C0B",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r12\\source-map.jsonl",
+          "bytes": 7240,
+          "sha256": "F8D99C9CD6A4FD275F9D3B4495A2B9E03898B6038B6CFB0C36B6333F1ADDDA96",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r12\\stable-units.json",
+          "bytes": 2093,
+          "sha256": "C3DC5CB033E46344CD377B6C74655F799C015F10CDB4677D96E1FFCA68FB7D1B",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r13",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r13/candidate.manifest.json",
+        "manifest_bytes": 9342,
+        "manifest_sha256": "50B4BBF95FC66F85C96AC300DC2C699BE8AA86F8C3154CDA19E45F151C353F58",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r13\\source-map.jsonl",
+          "bytes": 4708,
+          "sha256": "7B902BE604EE288032F5625046175211C06C157CF302A0895D94828D203CC81F",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r13\\stable-units.json",
+          "bytes": 1238,
+          "sha256": "6FB041E132A0052C7B6BEBFFFBFB89E2E3E688582DC7FE700E14D06D613B2361",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r14",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r14/candidate.manifest.json",
+        "manifest_bytes": 9360,
+        "manifest_sha256": "D0A347A9396108A8C08BB827EE1024A6BAFAA7CAC90E7B629221CC5C9B32DFBC",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r14\\source-map.jsonl",
+          "bytes": 8538,
+          "sha256": "969649F7B3ACC4B991B8E8C8B0FB9B4303E1B655EF41974AA2EDCCC64B4ABB1F",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r14\\stable-units.json",
+          "bytes": 2428,
+          "sha256": "DC11FBC6E4FFBF1C107335E24362D7DCD270927E76B8CEAF50E1CEE7C29930F3",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r15",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r15/candidate.manifest.json",
+        "manifest_bytes": 9046,
+        "manifest_sha256": "B11DC8B2C5645AF3C6D02B89B9A7E27410041237EB0E64B5EC65EA59465CB08F",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r15\\source-map.jsonl",
+          "bytes": 11026,
+          "sha256": "35DC1E62898EC5DCEDEF88D6D6538B0BA496B9C937482922DFF85BEA08481957",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r15\\stable-units.json",
+          "bytes": 3026,
+          "sha256": "25CC1BEE18C64A021611F60013B25C309C1A562AC6A045234B009B35B32D8D21",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r16",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r16/candidate.manifest.json",
+        "manifest_bytes": 9081,
+        "manifest_sha256": "74E1C1198739E89C2EC8B3AAAE8A51999ED9F0A6844DDB8A24C3B5A89D82D873",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r16\\source-map.jsonl",
+          "bytes": 37953,
+          "sha256": "7554A2DAFBF451AB024BD94DBD84B1CE43EAE0831B81D6F30FD56A7B3002197E",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r16\\stable-units.json",
+          "bytes": 10338,
+          "sha256": "194F27113E7C742E2052D3F1DC5AA5A72423179315D58A4473A4479220264F6E",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r17",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r17/candidate.manifest.json",
+        "manifest_bytes": 9081,
+        "manifest_sha256": "4A4394AE302F519F68110E5FBF01B13ECC03943051E88E3B7EC2B0F2F290261F",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r17\\source-map.jsonl",
+          "bytes": 42369,
+          "sha256": "C15F3261AB716721364C8CB359213B6C14137EF090F25ABCDC3EDDEC82CAB2EA",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r17\\stable-units.json",
+          "bytes": 9836,
+          "sha256": "A48A7DB097B1F660DD7FE1DFCF7953665DB51BE8409460751A4AFC09B2206F03",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r18",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r18/candidate.manifest.json",
+        "manifest_bytes": 9067,
+        "manifest_sha256": "AE6E1177D1AF9954A38502ECA788354DE2091142C736AD49E04ECA2672DEF89D",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r18\\source-map.jsonl",
+          "bytes": 23111,
+          "sha256": "C3FCA50ECF9A6859B20E3754E6DDFD12E38EB658E263959BED625672D3A77928",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r18\\stable-units.json",
+          "bytes": 6563,
+          "sha256": "64902AE0D59AC53F7D07D6773798AE4CD855ED730FD7A73C968EF043FE870ABF",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r19",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r19/candidate.manifest.json",
+        "manifest_bytes": 9070,
+        "manifest_sha256": "750D76226657AB9BF0E34729992BE91DF58E2268B1D3D7D35B29B8893D6A3A52",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r19\\source-map.jsonl",
+          "bytes": 58662,
+          "sha256": "889242FB816EB167AE0C7EC1B06ABEEC0E0E6B7510B866C96ABDF66677D4C861",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r19\\stable-units.json",
+          "bytes": 14394,
+          "sha256": "1B808564726DA1FBD8DAC62409CE46822173C4CAC275B5F66E03B2C866A2CF0D",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r20",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r20/candidate.manifest.json",
+        "manifest_bytes": 9070,
+        "manifest_sha256": "989E169C8BC648525665FF80623246EA0723B8B44E6749151770F602A6647EE0",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r20\\source-map.jsonl",
+          "bytes": 38559,
+          "sha256": "2BDA7679D04A1591FC2AA9FD5C05851052E8DC455E6A991EDC6B9547B50EF8EF",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r20\\stable-units.json",
+          "bytes": 9573,
+          "sha256": "65A18B84A984640509778389BBBDA9667B1B80366E82D8BAFC48600A42693945",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r21",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r21/candidate.manifest.json",
+        "manifest_bytes": 9404,
+        "manifest_sha256": "3D9E649E2EBFB7DDD12E84A98F8E16098462E43199FDA5146E2DAB4B8BEB0233",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r21\\source-map.jsonl",
+          "bytes": 13478,
+          "sha256": "F730CFFE36D96AB75222302B16C99FDF182A39CCA2EEFFB12BD4E91818D7082B",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r21\\stable-units.json",
+          "bytes": 3855,
+          "sha256": "F6935760E681C1FF544C84ACB5FE6CCAA75D27169D390C893120CDAF326AD115",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-verdier-a04446e-1-2-13-r1",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/verdier/candidate.manifest.json",
+        "manifest_bytes": 5491,
+        "manifest_sha256": "1FDC18620B255DDFD59CB967C82AF9F1FA3E75D6ACE748808BF3F18A91913CB7",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\verdier\\source-map.jsonl",
+          "bytes": 16405,
+          "sha256": "8518A282A89846ED95CC73B1C439960CDEF8979859EAC1344BC0CC9727792F1D",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\verdier\\stable-units.json",
+          "bytes": 9601,
+          "sha256": "3A3EABF273D31568FA90A1396F396FF27473E86CF93266D1136C2DCA30835103",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r22",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r22/candidate.manifest.json",
+        "manifest_bytes": 10991,
+        "manifest_sha256": "8C519D72AFB3496DD3EB0116EB64FBF3ACF2946A809FED070E4F5D7554A52F8B",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r22\\source-map.jsonl",
+          "bytes": 101455,
+          "sha256": "3BF2CE58A57262729F8BC35182FC59224F778A354D8B751BF7595DDF2464D2FC",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r22\\stable-units.json",
+          "bytes": 41554,
+          "sha256": "0FC62E9D452704FEFA449F714F2770140F69AF73A4E91085E19C769C3A86BCA3",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r23",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r23/candidate.manifest.json",
+        "manifest_bytes": 10901,
+        "manifest_sha256": "4E8E588698926FD7A47D9CFFB1496CB7305D8EB698C571AD9660FC4C81F80A5C",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r23\\source-map.jsonl",
+          "bytes": 12537,
+          "sha256": "39CD61D37155AEFF3BD0F0CA86A54F2A655576A47357CE461B80D1668B776898",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r23\\stable-units.json",
+          "bytes": 3884,
+          "sha256": "56D40FDF8EAAE073698263285920808AAB0C17F817902FC4C8C657A82B03392B",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r24",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r24/candidate.manifest.json",
+        "manifest_bytes": 11209,
+        "manifest_sha256": "8FD22BEE46246A02658726C264E6E442BFA8E14534F501F74218FBC00615332A",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r24\\source-map.jsonl",
+          "bytes": 53471,
+          "sha256": "9EB1B60529ACD1027C976932D7BA455473BD6E50A68D169788AC5FBC20531CD0",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r24\\stable-units.json",
+          "bytes": 16970,
+          "sha256": "630BD3AFA594727B2B97B1103959D51BD6EB8E91FFD5B52BB639C798359DB4CC",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r25",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r25/candidate.manifest.json",
+        "manifest_bytes": 11403,
+        "manifest_sha256": "61B60F23DBD27C4E0FE42F68AB0C3E1F6E0950C232E6E241A48FCBD91CA25FC1",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r25\\source-map.jsonl",
+          "bytes": 160807,
+          "sha256": "732B029137E6A921FA23AF21A81A0BCD99E42E040E700FCAD41AA1AD76132686",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r25\\stable-units.json",
+          "bytes": 52255,
+          "sha256": "F189B5AE2AA33E3E424C758B86984E0301B5383810C9DC2041B2D4ED7115C1B8",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r26",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r26/candidate.manifest.json",
+        "manifest_bytes": 11893,
+        "manifest_sha256": "1A045F9452501725CAF45996FD19C633D594E0C3D57AA745780C3C06FB031085",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r26\\source-map.jsonl",
+          "bytes": 36769,
+          "sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r26\\stable-units.json",
+          "bytes": 11040,
+          "sha256": "9653F6E3DE8FA4A3E745B00250CFEAAB9D63D9884A0FBA296C8AF1A8C96F1DF5",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r27",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r27/candidate.manifest.json",
+        "manifest_bytes": 11850,
+        "manifest_sha256": "A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r27\\source-map.jsonl",
+          "bytes": 16739,
+          "sha256": "63FEA7A31C3A687A66847FE2AA2A675B3E4B6099390FEF01975B07C4B36C0F2A",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r27\\stable-units.json",
+          "bytes": 5769,
+          "sha256": "E8A76D39648A05C7A07B4842D45A9A272213FB328492931D22D258CFE60ABDEE",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r28",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r28/candidate.manifest.json",
+        "manifest_bytes": 10251,
+        "manifest_sha256": "FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r28\\source-map.jsonl",
+          "bytes": 1770,
+          "sha256": "7D878BB15EEBB6BAC417026613B719A5BCDBBDC9FE299654A9E7FAA7DF74198B",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r28\\stable-units.json",
+          "bytes": 903,
+          "sha256": "9B4B5F7EF3FCE786D365FB0E19A576054D5E5523EA43CDDB2B3FFE457C8703D6",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r29",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r29/candidate.manifest.json",
+        "manifest_bytes": 10972,
+        "manifest_sha256": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r29\\source-map.jsonl",
+          "bytes": 59096,
+          "sha256": "5BCB5BB05EDA04ED69EEE939FD23EC0678928248E31AE018670287C008733799",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r29\\stable-units.json",
+          "bytes": 15281,
+          "sha256": "A14EFA336AC20023FC7C078BAD15798AB658C063C06573E48319623E94EE584D",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r30",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r30/candidate.manifest.json",
+        "manifest_bytes": 10598,
+        "manifest_sha256": "C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r30\\source-map.jsonl",
+          "bytes": 54631,
+          "sha256": "C74B4FF40E3D51A9030782F598DF04FDCAD5AEBED2CE21EE9BA751FEA6675854",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r30\\stable-units.json",
+          "bytes": 14711,
+          "sha256": "138D72ECC148DA18FF8F5F2248B0EA82944108DFBDE67CD8E81E888B87F31EFE",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r31",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r31/candidate.manifest.json",
+        "manifest_bytes": 11680,
+        "manifest_sha256": "0A8ADFB87FDC9BB87EF98B4AF1A34ECE965D68991DF0006B9F5326BD1EFC3657",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r31\\source-map.jsonl",
+          "bytes": 2345,
+          "sha256": "97FA0D3600B9BE9A1EE54E0A5956FE70266FD27A1D891C0DF3CF69CDEED8B018",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r31\\stable-units.json",
+          "bytes": 695,
+          "sha256": "8E458B0AAAA51421ECEAD66815BF3E125CEAA80594BA7F9121D9030BF976363C",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r32",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r32/candidate.manifest.json",
+        "manifest_bytes": 5845,
+        "manifest_sha256": "9B38EAF1B99E9DAF5E7553E6B0278961A2FD0E63FBFDB7AE81FBA6163E827D7F",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r32\\source-map.jsonl",
+          "bytes": 176790,
+          "sha256": "C3F08D65103C47ACFD503933114321611D8C1A2A9993F966AA5F03B155AA6F22",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r32\\stable-units.json",
+          "bytes": 37373,
+          "sha256": "2402F62A6BDB520549F0A3F129D46BF2B66F815948E35499DB885346F3094EA3",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r33",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json",
+        "manifest_bytes": 5423,
+        "manifest_sha256": "1D2EA4F6463FB775CFF3F0E3616BE125F6D20709BB32DB84D1D1889582BFAC75",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r33\\source-map.jsonl",
+          "bytes": 12417,
+          "sha256": "4AEF705A3EA0A84037B25D46E2B47FE0CE6F40EE9919A262D4F43AEAA9093ED2",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r33\\stable-units.json",
+          "bytes": 3115,
+          "sha256": "1B09B2694ADBD7DC4FE278A513486B0EE1B7F9897FC9D3BA50DFBE7E5DD63D1A",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r34",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json",
+        "manifest_bytes": 5636,
+        "manifest_sha256": "89D253B19D00C0A9D3203E65A43974C765C42760D83B5E4E7D5040E4F6227196",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r34\\source-map.jsonl",
+          "bytes": 28398,
+          "sha256": "8AEC77764C4979F115C6EAD631D98072079D2E0ED7316118E2A874DF15E1AA96",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r34\\stable-units.json",
+          "bytes": 6082,
+          "sha256": "46599957B8E764B7BE2E0AE8C8F9B3E4685737E3920F54503050582D6CE63E98",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r35",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r35/candidate.manifest.json",
+        "manifest_bytes": 5229,
+        "manifest_sha256": "FCE804F72A9FAA21A4AFFD15C0A7FF0C685120EE44F7D63252E80B696C1E30C8",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r35\\source-map.jsonl",
+          "bytes": 6467,
+          "sha256": "F0CEC493580D2DEB5F13EE77A77CD4C0DE6CDBBCDD68842DA02EC6699D833CEA",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r35\\stable-units.json",
+          "bytes": 1438,
+          "sha256": "C86B8406E232FBBBDFAA42E4CD749A1AEDC54D8D8785898FB74A63688D4F96FA",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r36",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r36/candidate.manifest.json",
+        "manifest_bytes": 4672,
+        "manifest_sha256": "64509286722A1AAF114FC4F2165C429778003AA9B8240A304364B071E6CBBC3D",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r36\\source-map.jsonl",
+          "bytes": 2047,
+          "sha256": "8F8C2428963BF2494520EB815DA44390CEA2565491BDB6F7BE89B96BDAD90A55",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r36\\stable-units.json",
+          "bytes": 570,
+          "sha256": "334CFB47D8EA8FE4D95A968F332BF62A8CF3A16140FD251037F9C0FA93D2B535",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r37",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json",
+        "manifest_bytes": 5358,
+        "manifest_sha256": "0E32DA3122577F6A7614AFF606045FF3DFE89B6EF3993903CDD045E2F232DDC9",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r37\\source-map.jsonl",
+          "bytes": 62653,
+          "sha256": "8FDC1EEDED6B093367155A8878390BC204D2A197405074A9762F70648642F1BB",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r37\\stable-units.json",
+          "bytes": 10181,
+          "sha256": "E2B5B9009CD58F705DE197B35B3B40D1838BB8CA9716C9D575AA33B257639B19",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r38",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json",
+        "manifest_bytes": 11329,
+        "manifest_sha256": "9636737033D82B50569C81C697EDB8ACC5A0A9EB65F04D25FBF32E3D5C5F1A52",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r38\\source-map.jsonl",
+          "bytes": 35560,
+          "sha256": "826082CECC2819B4BE595DC842F9240D91836BE6073E6AFBE1A4580AD8932E20",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r38\\stable-units.json",
+          "bytes": 11514,
+          "sha256": "6E4C3C6A7387A96638A006A4B07E17C940DB217D67652B7719304E1A9ADB339A",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r39",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r39/candidate.manifest.json",
+        "manifest_bytes": 11133,
+        "manifest_sha256": "879FB3790D808707B343CD583E7E257F3DBB3035166636598992F7886E6223E0",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r39\\source-map.jsonl",
+          "bytes": 77280,
+          "sha256": "F52F9962519FCFA47C5E10FBCDC44B7A6F9227D23CE6D55BE77FA3F11E7EE453",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r39\\stable-units.json",
+          "bytes": 21146,
+          "sha256": "9BFCB556DD0A9ACD68090386A7AA04730409BF236D5EE448C070DE696C34937F",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r40",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r40/candidate.manifest.json",
+        "manifest_bytes": 10704,
+        "manifest_sha256": "A3A3FFF0F01B84F73F9D426B14E6F2E6F95E93F79735795CD8D5741C45E22F5E",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r40\\source-map.jsonl",
+          "bytes": 16298,
+          "sha256": "09DD323316FE40FDDACA12C62FFE61EA29B8CF147517979D03406B04162660CA",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r40\\stable-units.json",
+          "bytes": 4961,
+          "sha256": "107DC714C68B8781A18D2EAD094505DDB4E7EBA3FA4D8A2F2A03AFB87C333910",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r41",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r41/candidate.manifest.json",
+        "manifest_bytes": 10700,
+        "manifest_sha256": "62CC4D62ACB89337D8280CAF04448B636549CBB8984C42C304D2B0349809EB9E",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r41\\source-map.jsonl",
+          "bytes": 9778,
+          "sha256": "F06C93C135D2799FE81EDEFFE4640B509F2B43252F345B26A251E05F85FC9A21",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r41\\stable-units.json",
+          "bytes": 2821,
+          "sha256": "F135E1EBCAA841944EBF8E93764CBB7E131BB339E0003423975B0818DE2C291E",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r42",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r42/candidate.manifest.json",
+        "manifest_bytes": 10894,
+        "manifest_sha256": "E29AEA96FBE883A7C7BA535994EDD2FA1AE399083348AD84A2191A18CB0B537B",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r42\\source-map.jsonl",
+          "bytes": 17570,
+          "sha256": "6F3551F77F369B356DED348022B7B675135E9111F8F23F88577B8CB864665D29",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r42\\stable-units.json",
+          "bytes": 4973,
+          "sha256": "C074BE6B9BF4A091FA47D01F894074191C02F76DF43C2202088BFB69F126A6C7",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r43",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r43/candidate.manifest.json",
+        "manifest_bytes": 10703,
+        "manifest_sha256": "92E9492AD1A0D9434405207473B17815BF025DD3F78BE90F6FDDAC76E1C0DB47",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r43\\source-map.jsonl",
+          "bytes": 10344,
+          "sha256": "9CC3EEFB080EAF9BBE95963F32D6C4770BDC162C2695A1FB9B2934C3A85FDAA6",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r43\\stable-units.json",
+          "bytes": 3268,
+          "sha256": "1E313FB23E0AF9923E49B5D176A81B08293C3387C3E5C9B7422F729E66F48EBF",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r44",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r44/candidate.manifest.json",
+        "manifest_bytes": 13049,
+        "manifest_sha256": "7D1123B09465CBE31256E05AEF49B76F7ED4DD7B28AB667C53F23A7A76575521",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r44\\source-map.jsonl",
+          "bytes": 45134,
+          "sha256": "251F2EC01B2379FE1679C33EF462E787408D2B11701B3593C49457A2F3581AC1",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r44\\stable-units.json",
+          "bytes": 12271,
+          "sha256": "B4F1ECF990AD3C7AEDD822FE5ADAE3ABBD51A21F2E71A391368E5EDC2721A88D",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r45",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r45/candidate.manifest.json",
+        "manifest_bytes": 12142,
+        "manifest_sha256": "FAFF8C70CC572134056CFAE2659E58815FB94078547DB2926B6FF4134666A0DD",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r45\\source-map.jsonl",
+          "bytes": 51431,
+          "sha256": "CDF5D7D3D4DDF58F9388F7697AC971CC7189F015DCF637C74B50CFF42F8FD86E",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r45\\stable-units.json",
+          "bytes": 12120,
+          "sha256": "F7753F07BA24F1C0D4FEA6CDA2239E21A9460980833F8F04613BB98C149F778B",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r46",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r46/candidate.manifest.json",
+        "manifest_bytes": 12149,
+        "manifest_sha256": "98709C03301EECAABD23D9694D521CB543DEB3E91173D57A31A6EC4D6B83856E",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r46\\source-map.jsonl",
+          "bytes": 69434,
+          "sha256": "9B2DD65725C4221A641555A09D5A765918E9C1000F21D16D5062B073B47CAE91",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r46\\stable-units.json",
+          "bytes": 25250,
+          "sha256": "F3F0C645BACB2B173113CEA81D6F8C3D340C8FBA3C375FFCDDFB8BFCD9FC5505",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r47",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r47/candidate.manifest.json",
+        "manifest_bytes": 11782,
+        "manifest_sha256": "B39114EBACAD2A74050AC9A2DF77C2C5FE11B20DE22249870B203ACEDAAD05D4",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r47\\source-map.jsonl",
+          "bytes": 42086,
+          "sha256": "059DD9DD051E528E73FE26004D21A60BB25635427CE6B2601303082E7C189433",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r47\\stable-units.json",
+          "bytes": 14192,
+          "sha256": "1543BAA98283821F3168DC4B04A7957C294640D406CA9F65E7115A7296CC2F47",
+          "hits": []
+        }
+      },
+      {
+        "id": "stacks-errata-a04446e-r48",
+        "manifest_path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json",
+        "manifest_bytes": 49718,
+        "manifest_sha256": "C48ACC7D4DC69A634FDE0D3BA3B3FC55D597DC720A88875B5EFE4038C2D92997",
+        "source_map": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\source-map.jsonl",
+          "bytes": 39426,
+          "sha256": "832303E802099D5661D8FA14E7E3950199833C84769753D92B5A16CEA802D0AF",
+          "hits": []
+        },
+        "stable_unit_manifest": {
+          "path": "<USER_ROOT>\\Documents\\interlanguage\\worktrees\\unofficial-ai-stacks-r47-illusie-linear-successor-20260907\\ai-integrated\\candidates\\commons\\stacks\\errata\\r48\\stable-units.json",
+          "bytes": 9389,
+          "sha256": "D876CE3408D0A25E953AD6537BBC1FB0C4C792F9E7EECF78BDE5FB5398EF5313",
+          "hits": []
+        }
+      }
+    ],
+    "no_remote_claim": "Only the current local 49-overlay registry was checked. No live registrar branch or public remote state is claimed."
+  },
+  "reviewers": [
+    {
+      "agent": "/root/p07_bounded_mining",
+      "scope": "Primary parent review, candidates0001/0002/0005/0006, all current/pinned replay and prior-work/registry reconciliation."
+    },
+    {
+      "agent": "/root/p07_bounded_mining/derham_0003_0004",
+      "scope": "Independent bounded source review of placeholder0003 and formula parentheses0004; no registry conclusion inferred from child."
+    }
+  ],
+  "decisions": [
+    {
+      "producer_id": "P07-ERR-0001",
+      "decision": "ACCEPT_UNIMPLEMENTED",
+      "class": "prose_subject_verb_agreement",
+      "reason": "The existential clause has singular subject 'a Cartan-Eilenberg resolution'; 'there exists a' is required. The change adds only the missing final s to the finite verb and leaves the mathematical assertion and reference unchanged.",
+      "operations": [
+        1
+      ],
+      "adverse_evidence": "No change to existence, resolution type, category or cited lemma is justified or made."
+    },
+    {
+      "producer_id": "P07-ERR-0002",
+      "decision": "ACCEPT_UNIMPLEMENTED",
+      "class": "prose_determiner_number_agreement",
+      "reason": "The adjacent plural 'sheaves' and indexed family H^q support retaining the plural noun. Removing the singular article a repairs the malformed noun phrase with no change to the mathematical scope.",
+      "operations": [
+        2
+      ],
+      "adverse_evidence": "Do not rewrite to singular 'a certain sheaf': that is a larger interpretive change and was not established by this evidence."
+    },
+    {
+      "producer_id": "P07-ERR-0003",
+      "decision": "CONFIRMED_PLACEHOLDER_REPLACEMENT_NOT_ESTABLISHED",
+      "class": "missing_exact_reference",
+      "reason": "The literal '(insert future reference here)' is still present at current line554, pinned line542. It follows claims about smooth characteristic-p de Rham cohomology sheaves and usefulness of the conjugate spectral sequence. The bounded primary evidence does not identify a verified citation supporting the complete assertion.",
+      "operations": [],
+      "adverse_evidence": "Do not remove the placeholder merely to hide the gap, and do not reuse the chapter's Deligne-Illusie citation for characteristic-zero Hodge-to-de Rham degeneration without consulting and pinpointing the relevant result.",
+      "next_executable_action": "Perform bounded source-based reference research for the characteristic-p Cartier description/conjugate spectral sequence, match hypotheses, then propose an exact supporting internal or bibliographic reference. This is missing evidence, not a human-review or approval gate."
+    },
+    {
+      "producer_id": "P07-ERR-0004",
+      "decision": "ACCEPT_UNIMPLEMENTED",
+      "class": "formula_delimiter_typography",
+      "reason": "Each of the three upper-row cohomology expressions has one literal opening parenthesis and two literal closing parentheses. The truncation sigma subscript uses braces, not a second opening parenthesis. Deleting only each final extra ')' restores balance, preserving degrees, truncations, arrows and cup product.",
+      "operations": [
+        3,
+        4,
+        5
+      ],
+      "adverse_evidence": "The producer's explanation referring to an 'inner sigma argument' is inaccurate if understood as an opening parenthesis. That rationale is corrected here while preserving the original ledger record; the proposed three deletions themselves are valid."
+    },
+    {
+      "producer_id": "P07-ERR-0005",
+      "decision": "ACCEPT_UNIMPLEMENTED",
+      "class": "prose_spurious_article",
+      "reason": "'Locally bounded' is a predicative adjective phrase describing the de Rham complex; the article a has no following noun. Deleting that article repairs the sentence without adding a new mathematical claim.",
+      "operations": [
+        6
+      ],
+      "adverse_evidence": "No rewrite of local boundedness, flatness, or the Kunneth hypotheses is required."
+    },
+    {
+      "producer_id": "P07-ERR-0006",
+      "decision": "ACCEPT_UNIMPLEMENTED",
+      "class": "prose_missing_finite_verb",
+      "reason": "'The result by Lemma ...' lacks a finite verb. Insert 'follows' before the existing 'by', retaining both citations and their grammatical attachment.",
+      "operations": [
+        7
+      ],
+      "adverse_evidence": "The producer proposed 'follows from'. That is also grammatical, but replacing 'by' with 'from' is unnecessary. The supplied smaller edit changes 'by' to 'follows by' and preserves the original preposition."
+    }
+  ],
+  "operation_contract": "Offsets are zero-based half-open UTF-8 byte intervals in the exact current source hash. Require the full source hash, exact bound original line and line SHA-256, and exact preimage bytes before descending-offset replay. Never replace the entire chapter with an isolated payload. No new canonical IDs allocated.",
+  "operations": [
+    {
+      "producer_id": "P07-ERR-0001",
+      "operation_index": 1,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 471,
+        "byte_start": 14386,
+        "byte_end_exclusive": 14455,
+        "text": "there exist a Cartan-Eilenberg resolution for $\\Omega^\\bullet_{X/S}$.",
+        "sha256": "AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532",
+        "byte_start_operation": 14392,
+        "byte_end_exclusive_operation": 14397
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 459,
+        "byte_start": 13826,
+        "byte_end_exclusive": 13895,
+        "text": "there exist a Cartan-Eilenberg resolution for $\\Omega^\\bullet_{X/S}$.",
+        "sha256": "AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532",
+        "byte_start_operation": 13832,
+        "byte_end_exclusive_operation": 13837
+      },
+      "preimage": "exist",
+      "replacement": "exists",
+      "preimage_sha256": "7D68838BDDC6082B8D3DB730D0CC4B18FE6B52FF201AF0A64C489128BACE6A45",
+      "replacement_sha256": "AD5AABC97D88F6E56DEAFFC34C7A6E292E9E12DB04A56799D773CFB64CA9898D",
+      "line_guard_required": true
+    },
+    {
+      "producer_id": "P07-ERR-0002",
+      "operation_index": 2,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 552,
+        "byte_start": 17232,
+        "byte_end_exclusive": 17302,
+        "text": "then the sheaves $\\mathcal{H}^q$ are computable (in terms of a certain",
+        "sha256": "68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4",
+        "byte_start_operation": 17293,
+        "byte_end_exclusive_operation": 17295
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 540,
+        "byte_start": 16672,
+        "byte_end_exclusive": 16742,
+        "text": "then the sheaves $\\mathcal{H}^q$ are computable (in terms of a certain",
+        "sha256": "68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4",
+        "byte_start_operation": 16733,
+        "byte_end_exclusive_operation": 16735
+      },
+      "preimage": "a ",
+      "replacement": "",
+      "preimage_sha256": "6583DCD6056FD32AADD0D2D0BE920DE99F6FF08B80065E4B9142AAA4169391CB",
+      "replacement_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "line_guard_required": true
+    },
+    {
+      "producer_id": "P07-ERR-0004",
+      "operation_index": 3,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 604,
+        "byte_start": 19270,
+        "byte_end_exclusive": 19314,
+        "text": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S}))",
+        "sha256": "89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35",
+        "byte_start_operation": 19313,
+        "byte_end_exclusive_operation": 19314
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 592,
+        "byte_start": 18710,
+        "byte_end_exclusive": 18754,
+        "text": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S}))",
+        "sha256": "89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35",
+        "byte_start_operation": 18753,
+        "byte_end_exclusive_operation": 18754
+      },
+      "preimage": ")",
+      "replacement": "",
+      "preimage_sha256": "BA5EC51D07A4AC0E951608704431D59A02B21A4E951ACC10505A8DC407C501EE",
+      "replacement_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "line_guard_required": true
+    },
+    {
+      "producer_id": "P07-ERR-0004",
+      "operation_index": 4,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 606,
+        "byte_start": 19323,
+        "byte_end_exclusive": 19367,
+        "text": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S}))",
+        "sha256": "0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5",
+        "byte_start_operation": 19366,
+        "byte_end_exclusive_operation": 19367
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 594,
+        "byte_start": 18763,
+        "byte_end_exclusive": 18807,
+        "text": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S}))",
+        "sha256": "0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5",
+        "byte_start_operation": 18806,
+        "byte_end_exclusive_operation": 18807
+      },
+      "preimage": ")",
+      "replacement": "",
+      "preimage_sha256": "BA5EC51D07A4AC0E951608704431D59A02B21A4E951ACC10505A8DC407C501EE",
+      "replacement_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "line_guard_required": true
+    },
+    {
+      "producer_id": "P07-ERR-0004",
+      "operation_index": 5,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 608,
+        "byte_start": 19384,
+        "byte_end_exclusive": 19448,
+        "text": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})) \\ar[d] \\\\",
+        "sha256": "5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0",
+        "byte_start_operation": 19437,
+        "byte_end_exclusive_operation": 19438
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 596,
+        "byte_start": 18824,
+        "byte_end_exclusive": 18888,
+        "text": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})) \\ar[d] \\\\",
+        "sha256": "5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0",
+        "byte_start_operation": 18877,
+        "byte_end_exclusive_operation": 18878
+      },
+      "preimage": ")",
+      "replacement": "",
+      "preimage_sha256": "BA5EC51D07A4AC0E951608704431D59A02B21A4E951ACC10505A8DC407C501EE",
+      "replacement_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "line_guard_required": true
+    },
+    {
+      "producer_id": "P07-ERR-0005",
+      "operation_index": 6,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 741,
+        "byte_start": 23582,
+        "byte_end_exclusive": 23650,
+        "text": "Also, observe that $\\Omega^\\bullet_{X/S}$ is a locally bounded. Thus",
+        "sha256": "8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825",
+        "byte_start_operation": 23627,
+        "byte_end_exclusive_operation": 23629
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 729,
+        "byte_start": 23022,
+        "byte_end_exclusive": 23090,
+        "text": "Also, observe that $\\Omega^\\bullet_{X/S}$ is a locally bounded. Thus",
+        "sha256": "8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825",
+        "byte_start_operation": 23067,
+        "byte_end_exclusive_operation": 23069
+      },
+      "preimage": "a ",
+      "replacement": "",
+      "preimage_sha256": "6583DCD6056FD32AADD0D2D0BE920DE99F6FF08B80065E4B9142AAA4169391CB",
+      "replacement_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "line_guard_required": true
+    },
+    {
+      "producer_id": "P07-ERR-0006",
+      "operation_index": 7,
+      "source_file": "derham.tex",
+      "current": {
+        "source_sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "line": 742,
+        "byte_start": 23651,
+        "byte_end_exclusive": 23710,
+        "text": "the result by Lemma \\ref{lemma-de-rham-complex-product} and",
+        "sha256": "3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09",
+        "byte_start_operation": 23662,
+        "byte_end_exclusive_operation": 23664
+      },
+      "pinned": {
+        "source_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+        "line": 730,
+        "byte_start": 23091,
+        "byte_end_exclusive": 23150,
+        "text": "the result by Lemma \\ref{lemma-de-rham-complex-product} and",
+        "sha256": "3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09",
+        "byte_start_operation": 23102,
+        "byte_end_exclusive_operation": 23104
+      },
+      "preimage": "by",
+      "replacement": "follows by",
+      "preimage_sha256": "A7E2D26E8D15814DD9C6A1BDC90585C8D0A3170DFFFEB21FC42986683113041B",
+      "replacement_sha256": "C5FBBF3895B89363F8F4473D8F5921AD10C907D610E7908361603943FCA36004",
+      "line_guard_required": true
+    }
+  ],
+  "primary_passages": {
+    "pinned": [
+      [
+        {
+          "line": 453,
+          "byte_start": 13624,
+          "byte_end_exclusive": 13656,
+          "text": "\\section{Two spectral sequences}",
+          "sha256": "A4E1A0170626D68AC879B9258CED2C91C1C5BAC24E78E789F92022F1E1C5291E"
+        },
+        {
+          "line": 454,
+          "byte_start": 13657,
+          "byte_end_exclusive": 13689,
+          "text": "\\label{section-hodge-to-de-rham}",
+          "sha256": "95CA2B9CD6DA57DA005C85A9EE69BE6ECFCB91F9E7920D73F63D23C0CD542264"
+        },
+        {
+          "line": 455,
+          "byte_start": 13690,
+          "byte_end_exclusive": 13690,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        },
+        {
+          "line": 456,
+          "byte_start": 13691,
+          "byte_end_exclusive": 13700,
+          "text": "\\noindent",
+          "sha256": "0DE19E109B32B2456276934ABA358E8A140BD722431F5EBCC8026540C267640B"
+        },
+        {
+          "line": 457,
+          "byte_start": 13701,
+          "byte_end_exclusive": 13763,
+          "text": "Let $p : X \\to S$ be a morphism of schemes. Since the category",
+          "sha256": "806A2268789CEC1B1EC32AB96CAD49340847A452CE1439A87CCC6F11910FFEEB"
+        },
+        {
+          "line": 458,
+          "byte_start": 13764,
+          "byte_end_exclusive": 13825,
+          "text": "of $p^{-1}\\mathcal{O}_S$-modules on $X$ has enough injectives",
+          "sha256": "CC473248A6AD41252680843CCF5F2D4856E762F5840E55BD2CAD099A41D880FB"
+        },
+        {
+          "line": 459,
+          "byte_start": 13826,
+          "byte_end_exclusive": 13895,
+          "text": "there exist a Cartan-Eilenberg resolution for $\\Omega^\\bullet_{X/S}$.",
+          "sha256": "AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532"
+        },
+        {
+          "line": 460,
+          "byte_start": 13896,
+          "byte_end_exclusive": 13963,
+          "text": "See Derived Categories, Lemma \\ref{derived-lemma-cartan-eilenberg}.",
+          "sha256": "D0E9C1AA749418634661DDA57B161B79E9068829CFBC6EC1D13293B3F21B2FB3"
+        },
+        {
+          "line": 461,
+          "byte_start": 13964,
+          "byte_end_exclusive": 14008,
+          "text": "Hence we can apply Derived Categories, Lemma",
+          "sha256": "A3CE98BA454154D405AFF2964FCA60B84FE53E9A96793E89253E4791147F1644"
+        },
+        {
+          "line": 462,
+          "byte_start": 14009,
+          "byte_end_exclusive": 14081,
+          "text": "\\ref{derived-lemma-two-ss-complex-functor} to get two spectral sequences",
+          "sha256": "2E5E16E24EA965E3A0F3291DA364A5598FBA4D3030E30D79839D152843C33738"
+        },
+        {
+          "line": 463,
+          "byte_start": 14082,
+          "byte_end_exclusive": 14140,
+          "text": "both converging to the de Rham cohomology of $X$ over $S$.",
+          "sha256": "808348F26D389B4E9AF5FB88F084A519C527208E811D47885C7F1E378E38E984"
+        },
+        {
+          "line": 464,
+          "byte_start": 14141,
+          "byte_end_exclusive": 14141,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        }
+      ],
+      [
+        {
+          "line": 534,
+          "byte_start": 16393,
+          "byte_end_exclusive": 16471,
+          "text": "which is obvious if you think about it. In degree $1$ we get an exact sequence",
+          "sha256": "AD60191923732C1501765391DAD130CCE9D245683DDEB4E67AA1764D103ACE38"
+        },
+        {
+          "line": 535,
+          "byte_start": 16472,
+          "byte_end_exclusive": 16474,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 536,
+          "byte_start": 16475,
+          "byte_end_exclusive": 16524,
+          "text": "0 \\to H^1(X, \\mathcal{H}^0) \\to H^1_{dR}(X/S) \\to",
+          "sha256": "4CBC24F6444F9E56373067920A902BA4F94AF4E7CFF52CFFD049F12940615186"
+        },
+        {
+          "line": 537,
+          "byte_start": 16525,
+          "byte_end_exclusive": 16590,
+          "text": "H^0(X, \\mathcal{H}^1) \\to H^2(X, \\mathcal{H}^0) \\to H^2_{dR}(X/S)",
+          "sha256": "AF2CAC7588C6D5251F677863CC5951DE8E8A54E56845FCECEB10486C65967F58"
+        },
+        {
+          "line": 538,
+          "byte_start": 16591,
+          "byte_end_exclusive": 16593,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 539,
+          "byte_start": 16594,
+          "byte_end_exclusive": 16671,
+          "text": "It turns out that if $X \\to S$ is smooth and $S$ lives in characteristic $p$,",
+          "sha256": "87C8ED8B1D7042776F90BCF0E56F0A1DF770B4B308A9F02708D32853751DE5D2"
+        },
+        {
+          "line": 540,
+          "byte_start": 16672,
+          "byte_end_exclusive": 16742,
+          "text": "then the sheaves $\\mathcal{H}^q$ are computable (in terms of a certain",
+          "sha256": "68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4"
+        },
+        {
+          "line": 541,
+          "byte_start": 16743,
+          "byte_end_exclusive": 16818,
+          "text": "sheaves of differentials) and the conjugate spectral sequence is a valuable",
+          "sha256": "30B33397FE119C56962F03A11AD4C835C23F340C23E916F7FFDD8B49284BE55C"
+        },
+        {
+          "line": 542,
+          "byte_start": 16819,
+          "byte_end_exclusive": 16855,
+          "text": "tool (insert future reference here).",
+          "sha256": "A6173F08BBF30976102028E7B0EFFC65B35939870805D05AAB7BD8B61E7BA055"
+        },
+        {
+          "line": 543,
+          "byte_start": 16856,
+          "byte_end_exclusive": 16856,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        }
+      ],
+      [
+        {
+          "line": 582,
+          "byte_start": 18264,
+          "byte_end_exclusive": 18332,
+          "text": "is the same as the Hodge-to-de Rham spectral sequence constructed in",
+          "sha256": "A1B52F290F6FCD9E27321E2B23FD9A507B7938C27C891B8B81612D5348BE6937"
+        },
+        {
+          "line": 583,
+          "byte_start": 18333,
+          "byte_end_exclusive": 18374,
+          "text": "Section \\ref{section-hodge-to-de-rham} by",
+          "sha256": "B1D1B211C872F413F315E782D595FA236B24A80A72D14C39653C795A2D1D0F9D"
+        },
+        {
+          "line": 584,
+          "byte_start": 18375,
+          "byte_end_exclusive": 18454,
+          "text": "Cohomology, Example \\ref{cohomology-example-spectral-sequence-bis}. Further the",
+          "sha256": "004CEB4B8EEAF9296DCD5126B904601C715DCFEF96A0CFBAF20BB1017950D5AC"
+        },
+        {
+          "line": 585,
+          "byte_start": 18455,
+          "byte_end_exclusive": 18497,
+          "text": "wedge product (\\ref{equation-wedge}) sends",
+          "sha256": "77D2099891EE3AC2B461AD5E11196883E80D455B6121FBE30A58BEDAB9B0F43C"
+        },
+        {
+          "line": 586,
+          "byte_start": 18498,
+          "byte_end_exclusive": 18575,
+          "text": "$\\text{Tot}(\\sigma_{\\geq i}\\Omega^\\bullet_{X/S} \\otimes_{p^{-1}\\mathcal{O}_S}",
+          "sha256": "999DF7398F436DED6603BBF742B1ED65E8E295C8358DF51AD06CEF10E8ED6F67"
+        },
+        {
+          "line": 587,
+          "byte_start": 18576,
+          "byte_end_exclusive": 18618,
+          "text": "\\sigma_{\\geq j}\\Omega^\\bullet_{X/S})$ into",
+          "sha256": "82DC8847FCB17C4CD62E81849BFD22D808178AC5A400398A084A128F0B45F909"
+        },
+        {
+          "line": 588,
+          "byte_start": 18619,
+          "byte_end_exclusive": 18674,
+          "text": "$\\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S}$. Hence we get",
+          "sha256": "D8A356D5B760B6FDCE626B35F2D2A615418CB21F611D252DFBBBA6E2A1BD554D"
+        },
+        {
+          "line": 589,
+          "byte_start": 18675,
+          "byte_end_exclusive": 18695,
+          "text": "commutative diagrams",
+          "sha256": "C4FACADF83E76A319CFA52CCBA19A6521CD6241EC7CF7155EDB21BCA2A2D42DA"
+        },
+        {
+          "line": 590,
+          "byte_start": 18696,
+          "byte_end_exclusive": 18698,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 591,
+          "byte_start": 18699,
+          "byte_end_exclusive": 18709,
+          "text": "\\xymatrix{",
+          "sha256": "0DBF4093AF36807239A4E011A03BE53FB44DCABCCCF695C919682CE4B3575F25"
+        },
+        {
+          "line": 592,
+          "byte_start": 18710,
+          "byte_end_exclusive": 18754,
+          "text": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S}))",
+          "sha256": "89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35"
+        },
+        {
+          "line": 593,
+          "byte_start": 18755,
+          "byte_end_exclusive": 18762,
+          "text": "\\times ",
+          "sha256": "1A866F8175AAD5E1215FAEA4FBD34EE6462A9168E4FC965A735BD3CBD3BC7669"
+        },
+        {
+          "line": 594,
+          "byte_start": 18763,
+          "byte_end_exclusive": 18807,
+          "text": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S}))",
+          "sha256": "0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5"
+        },
+        {
+          "line": 595,
+          "byte_start": 18808,
+          "byte_end_exclusive": 18823,
+          "text": "\\ar[r] \\ar[d] &",
+          "sha256": "E57782BD2679C0A623CCD929C8DB2284819D64048DC05968D475C1F345B6F946"
+        },
+        {
+          "line": 596,
+          "byte_start": 18824,
+          "byte_end_exclusive": 18888,
+          "text": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})) \\ar[d] \\\\",
+          "sha256": "5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0"
+        },
+        {
+          "line": 597,
+          "byte_start": 18889,
+          "byte_end_exclusive": 18909,
+          "text": "H^n_{dR}(X/S) \\times",
+          "sha256": "6DFC1F5F049C7127BC68802F08162B7FA317351E6C6F76D45E56038EC2E1CDC0"
+        },
+        {
+          "line": 598,
+          "byte_start": 18910,
+          "byte_end_exclusive": 18923,
+          "text": "H^m_{dR}(X/S)",
+          "sha256": "DA4AD22FD769D115ABF9AEE5B8D7262A94EF36472A5B5838CE4EA2A8196701D1"
+        },
+        {
+          "line": 599,
+          "byte_start": 18924,
+          "byte_end_exclusive": 18937,
+          "text": "\\ar[r]^\\cup &",
+          "sha256": "D585D1AEE0084D05641AE4B951CA1D53C9B0B1F1182862C6D57A07BDB19FE3A7"
+        },
+        {
+          "line": 600,
+          "byte_start": 18938,
+          "byte_end_exclusive": 18957,
+          "text": "H^{n + m}_{dR}(X/S)",
+          "sha256": "33A0DB49BE941629C7473E7EDAF0406FD28787D4DA7B5D773583F7D5A1ED36B0"
+        },
+        {
+          "line": 601,
+          "byte_start": 18958,
+          "byte_end_exclusive": 18959,
+          "text": "}",
+          "sha256": "D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2"
+        },
+        {
+          "line": 602,
+          "byte_start": 18960,
+          "byte_end_exclusive": 18962,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 603,
+          "byte_start": 18963,
+          "byte_end_exclusive": 18989,
+          "text": "In particular we find that",
+          "sha256": "82349990AA9B900F9DCFB69E22118963C6D4580CCD1CF6DB77E489689D79E8CF"
+        },
+        {
+          "line": 604,
+          "byte_start": 18990,
+          "byte_end_exclusive": 18992,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 605,
+          "byte_start": 18993,
+          "byte_end_exclusive": 19068,
+          "text": "F^iH^n_{dR}(X/S) \\cup F^jH^m_{dR}(X/S) \\subset F^{i + j}H^{n + m}_{dR}(X/S)",
+          "sha256": "A67CE8DB4954A6954CED56CF95616AA0E6F8B19B5E9BCF475D6A040DA33B8D9E"
+        },
+        {
+          "line": 606,
+          "byte_start": 19069,
+          "byte_end_exclusive": 19071,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        }
+      ],
+      [
+        {
+          "line": 709,
+          "byte_start": 22281,
+          "byte_end_exclusive": 22294,
+          "text": "\\begin{lemma}",
+          "sha256": "14D3E0A857A75259413BEC4C887EA9241A0783AD433AC0C4AAC565049A3E9BEC"
+        },
+        {
+          "line": 710,
+          "byte_start": 22295,
+          "byte_end_exclusive": 22324,
+          "text": "\\label{lemma-kunneth-de-rham}",
+          "sha256": "96EC36EF584D2B69AD0B340042D61543208D5D010A8342D373B82191FE10EA50"
+        },
+        {
+          "line": 711,
+          "byte_start": 22325,
+          "byte_end_exclusive": 22396,
+          "text": "Assume $X$ and $Y$ are smooth, quasi-compact, with affine diagonal over",
+          "sha256": "97E4800D8BD2E510D0ED203A10B376A783130FC3DC5FD99B5F3AA4A7D427CD92"
+        },
+        {
+          "line": 712,
+          "byte_start": 22397,
+          "byte_end_exclusive": 22425,
+          "text": "$S = \\Spec(A)$. Then the map",
+          "sha256": "3463A0363104E5549A0E853CDE7F9FF5BCE89E37EE330CFAC8611969C2B0BA08"
+        },
+        {
+          "line": 713,
+          "byte_start": 22426,
+          "byte_end_exclusive": 22428,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 714,
+          "byte_start": 22429,
+          "byte_end_exclusive": 22461,
+          "text": "R\\Gamma(X, \\Omega^\\bullet_{X/S})",
+          "sha256": "7A06CE3B90D59569C618992E6C26563201ED70A02D5632A23CF741242E736128"
+        },
+        {
+          "line": 715,
+          "byte_start": 22462,
+          "byte_end_exclusive": 22482,
+          "text": "\\otimes_A^\\mathbf{L}",
+          "sha256": "C094A08EFF7AFFAF5804EAE04C051447B45D94693ECF4775154FEDF3D201A0A3"
+        },
+        {
+          "line": 716,
+          "byte_start": 22483,
+          "byte_end_exclusive": 22515,
+          "text": "R\\Gamma(Y, \\Omega^\\bullet_{Y/S})",
+          "sha256": "50713D6C4B93CD1188593789468860266D05F720A8A80F51839F91E49606F79F"
+        },
+        {
+          "line": 717,
+          "byte_start": 22516,
+          "byte_end_exclusive": 22531,
+          "text": "\\longrightarrow",
+          "sha256": "942FAAC63E3CE23F03BF59DDA0EBDB9F374A04F642C7EDE320241DA32F608D98"
+        },
+        {
+          "line": 718,
+          "byte_start": 22532,
+          "byte_end_exclusive": 22586,
+          "text": "R\\Gamma(X \\times_S Y, \\Omega^\\bullet_{X \\times_S Y/S})",
+          "sha256": "BC246CBEB8C97588578B54A97818ED064FADFA51794D8F1DACFEA31F89D93BB3"
+        },
+        {
+          "line": 719,
+          "byte_start": 22587,
+          "byte_end_exclusive": 22589,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 720,
+          "byte_start": 22590,
+          "byte_end_exclusive": 22618,
+          "text": "is an isomorphism in $D(A)$.",
+          "sha256": "8E33BF8D630FE3CEEC43B45E42938A6BD21FDD36CC172241DCAD46C0C0C7E17B"
+        },
+        {
+          "line": 721,
+          "byte_start": 22619,
+          "byte_end_exclusive": 22630,
+          "text": "\\end{lemma}",
+          "sha256": "0A25ECAF35D05A2A3AF49931DEBD1C0E45307BBFCE713A21430D49767D3DB05D"
+        },
+        {
+          "line": 722,
+          "byte_start": 22631,
+          "byte_end_exclusive": 22631,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        },
+        {
+          "line": 723,
+          "byte_start": 22632,
+          "byte_end_exclusive": 22645,
+          "text": "\\begin{proof}",
+          "sha256": "876233B8A03F24D0857A26D052957E71A7978DBE28514F9DE6CD46217EF0121B"
+        },
+        {
+          "line": 724,
+          "byte_start": 22646,
+          "byte_end_exclusive": 22720,
+          "text": "By Morphisms, Lemma \\ref{morphisms-lemma-smooth-omega-finite-locally-free}",
+          "sha256": "74B4A526A9A3FBAB4502CE894732A52B7D685C37BB7108CA50B9A7A3864AEEEE"
+        },
+        {
+          "line": 725,
+          "byte_start": 22721,
+          "byte_end_exclusive": 22794,
+          "text": "the sheaves $\\Omega^n_{X/S}$ and $\\Omega^m_{Y/S}$ are finite locally free",
+          "sha256": "7D7B9DD272E925A762B5F097167A19B09E02F928E3B72D551BB6F13D5F8E76E6"
+        },
+        {
+          "line": 726,
+          "byte_start": 22795,
+          "byte_end_exclusive": 22870,
+          "text": "$\\mathcal{O}_X$ and $\\mathcal{O}_Y$-modules. On the other hand, $X$ and $Y$",
+          "sha256": "33D29452F3D404EE909FE1A65CA7194C8EA2DC9DACC58AE728D6870004584DB9"
+        },
+        {
+          "line": 727,
+          "byte_start": 22871,
+          "byte_end_exclusive": 22941,
+          "text": "are flat over $S$ (Morphisms, Lemma \\ref{morphisms-lemma-smooth-flat})",
+          "sha256": "D96EF33C1335E657200D276AF2AB62D0DF4768D56114F4B5535E97CD1DD2FD2D"
+        },
+        {
+          "line": 728,
+          "byte_start": 22942,
+          "byte_end_exclusive": 23021,
+          "text": "and hence we find that $\\Omega^n_{X/S}$ and $\\Omega^m_{Y/S}$ are flat over $S$.",
+          "sha256": "999CA003CAE217A7AB054BC6DE8C3A48BB984BEDCCA1C9A51F59EDDD69C922DB"
+        },
+        {
+          "line": 729,
+          "byte_start": 23022,
+          "byte_end_exclusive": 23090,
+          "text": "Also, observe that $\\Omega^\\bullet_{X/S}$ is a locally bounded. Thus",
+          "sha256": "8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825"
+        },
+        {
+          "line": 730,
+          "byte_start": 23091,
+          "byte_end_exclusive": 23150,
+          "text": "the result by Lemma \\ref{lemma-de-rham-complex-product} and",
+          "sha256": "3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09"
+        },
+        {
+          "line": 731,
+          "byte_start": 23151,
+          "byte_end_exclusive": 23224,
+          "text": "Derived Categories of Schemes, Lemma \\ref{perfect-lemma-kunneth-special}.",
+          "sha256": "485329D777342675B220D40424EEFD5EBD196374CF2A9AF20503FA63F81145B9"
+        },
+        {
+          "line": 732,
+          "byte_start": 23225,
+          "byte_end_exclusive": 23236,
+          "text": "\\end{proof}",
+          "sha256": "923E6F2CEEE70DAB30FB38391D0660B7E80B6C7E8D2669B45BBC7FD4CB93AAA4"
+        }
+      ]
+    ],
+    "current": [
+      [
+        {
+          "line": 465,
+          "byte_start": 14184,
+          "byte_end_exclusive": 14216,
+          "text": "\\section{Two spectral sequences}",
+          "sha256": "A4E1A0170626D68AC879B9258CED2C91C1C5BAC24E78E789F92022F1E1C5291E"
+        },
+        {
+          "line": 466,
+          "byte_start": 14217,
+          "byte_end_exclusive": 14249,
+          "text": "\\label{section-hodge-to-de-rham}",
+          "sha256": "95CA2B9CD6DA57DA005C85A9EE69BE6ECFCB91F9E7920D73F63D23C0CD542264"
+        },
+        {
+          "line": 467,
+          "byte_start": 14250,
+          "byte_end_exclusive": 14250,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        },
+        {
+          "line": 468,
+          "byte_start": 14251,
+          "byte_end_exclusive": 14260,
+          "text": "\\noindent",
+          "sha256": "0DE19E109B32B2456276934ABA358E8A140BD722431F5EBCC8026540C267640B"
+        },
+        {
+          "line": 469,
+          "byte_start": 14261,
+          "byte_end_exclusive": 14323,
+          "text": "Let $p : X \\to S$ be a morphism of schemes. Since the category",
+          "sha256": "806A2268789CEC1B1EC32AB96CAD49340847A452CE1439A87CCC6F11910FFEEB"
+        },
+        {
+          "line": 470,
+          "byte_start": 14324,
+          "byte_end_exclusive": 14385,
+          "text": "of $p^{-1}\\mathcal{O}_S$-modules on $X$ has enough injectives",
+          "sha256": "CC473248A6AD41252680843CCF5F2D4856E762F5840E55BD2CAD099A41D880FB"
+        },
+        {
+          "line": 471,
+          "byte_start": 14386,
+          "byte_end_exclusive": 14455,
+          "text": "there exist a Cartan-Eilenberg resolution for $\\Omega^\\bullet_{X/S}$.",
+          "sha256": "AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532"
+        },
+        {
+          "line": 472,
+          "byte_start": 14456,
+          "byte_end_exclusive": 14523,
+          "text": "See Derived Categories, Lemma \\ref{derived-lemma-cartan-eilenberg}.",
+          "sha256": "D0E9C1AA749418634661DDA57B161B79E9068829CFBC6EC1D13293B3F21B2FB3"
+        },
+        {
+          "line": 473,
+          "byte_start": 14524,
+          "byte_end_exclusive": 14568,
+          "text": "Hence we can apply Derived Categories, Lemma",
+          "sha256": "A3CE98BA454154D405AFF2964FCA60B84FE53E9A96793E89253E4791147F1644"
+        },
+        {
+          "line": 474,
+          "byte_start": 14569,
+          "byte_end_exclusive": 14641,
+          "text": "\\ref{derived-lemma-two-ss-complex-functor} to get two spectral sequences",
+          "sha256": "2E5E16E24EA965E3A0F3291DA364A5598FBA4D3030E30D79839D152843C33738"
+        },
+        {
+          "line": 475,
+          "byte_start": 14642,
+          "byte_end_exclusive": 14700,
+          "text": "both converging to the de Rham cohomology of $X$ over $S$.",
+          "sha256": "808348F26D389B4E9AF5FB88F084A519C527208E811D47885C7F1E378E38E984"
+        },
+        {
+          "line": 476,
+          "byte_start": 14701,
+          "byte_end_exclusive": 14701,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        }
+      ],
+      [
+        {
+          "line": 546,
+          "byte_start": 16953,
+          "byte_end_exclusive": 17031,
+          "text": "which is obvious if you think about it. In degree $1$ we get an exact sequence",
+          "sha256": "AD60191923732C1501765391DAD130CCE9D245683DDEB4E67AA1764D103ACE38"
+        },
+        {
+          "line": 547,
+          "byte_start": 17032,
+          "byte_end_exclusive": 17034,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 548,
+          "byte_start": 17035,
+          "byte_end_exclusive": 17084,
+          "text": "0 \\to H^1(X, \\mathcal{H}^0) \\to H^1_{dR}(X/S) \\to",
+          "sha256": "4CBC24F6444F9E56373067920A902BA4F94AF4E7CFF52CFFD049F12940615186"
+        },
+        {
+          "line": 549,
+          "byte_start": 17085,
+          "byte_end_exclusive": 17150,
+          "text": "H^0(X, \\mathcal{H}^1) \\to H^2(X, \\mathcal{H}^0) \\to H^2_{dR}(X/S)",
+          "sha256": "AF2CAC7588C6D5251F677863CC5951DE8E8A54E56845FCECEB10486C65967F58"
+        },
+        {
+          "line": 550,
+          "byte_start": 17151,
+          "byte_end_exclusive": 17153,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 551,
+          "byte_start": 17154,
+          "byte_end_exclusive": 17231,
+          "text": "It turns out that if $X \\to S$ is smooth and $S$ lives in characteristic $p$,",
+          "sha256": "87C8ED8B1D7042776F90BCF0E56F0A1DF770B4B308A9F02708D32853751DE5D2"
+        },
+        {
+          "line": 552,
+          "byte_start": 17232,
+          "byte_end_exclusive": 17302,
+          "text": "then the sheaves $\\mathcal{H}^q$ are computable (in terms of a certain",
+          "sha256": "68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4"
+        },
+        {
+          "line": 553,
+          "byte_start": 17303,
+          "byte_end_exclusive": 17378,
+          "text": "sheaves of differentials) and the conjugate spectral sequence is a valuable",
+          "sha256": "30B33397FE119C56962F03A11AD4C835C23F340C23E916F7FFDD8B49284BE55C"
+        },
+        {
+          "line": 554,
+          "byte_start": 17379,
+          "byte_end_exclusive": 17415,
+          "text": "tool (insert future reference here).",
+          "sha256": "A6173F08BBF30976102028E7B0EFFC65B35939870805D05AAB7BD8B61E7BA055"
+        },
+        {
+          "line": 555,
+          "byte_start": 17416,
+          "byte_end_exclusive": 17416,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        }
+      ],
+      [
+        {
+          "line": 594,
+          "byte_start": 18824,
+          "byte_end_exclusive": 18892,
+          "text": "is the same as the Hodge-to-de Rham spectral sequence constructed in",
+          "sha256": "A1B52F290F6FCD9E27321E2B23FD9A507B7938C27C891B8B81612D5348BE6937"
+        },
+        {
+          "line": 595,
+          "byte_start": 18893,
+          "byte_end_exclusive": 18934,
+          "text": "Section \\ref{section-hodge-to-de-rham} by",
+          "sha256": "B1D1B211C872F413F315E782D595FA236B24A80A72D14C39653C795A2D1D0F9D"
+        },
+        {
+          "line": 596,
+          "byte_start": 18935,
+          "byte_end_exclusive": 19014,
+          "text": "Cohomology, Example \\ref{cohomology-example-spectral-sequence-bis}. Further the",
+          "sha256": "004CEB4B8EEAF9296DCD5126B904601C715DCFEF96A0CFBAF20BB1017950D5AC"
+        },
+        {
+          "line": 597,
+          "byte_start": 19015,
+          "byte_end_exclusive": 19057,
+          "text": "wedge product (\\ref{equation-wedge}) sends",
+          "sha256": "77D2099891EE3AC2B461AD5E11196883E80D455B6121FBE30A58BEDAB9B0F43C"
+        },
+        {
+          "line": 598,
+          "byte_start": 19058,
+          "byte_end_exclusive": 19135,
+          "text": "$\\text{Tot}(\\sigma_{\\geq i}\\Omega^\\bullet_{X/S} \\otimes_{p^{-1}\\mathcal{O}_S}",
+          "sha256": "999DF7398F436DED6603BBF742B1ED65E8E295C8358DF51AD06CEF10E8ED6F67"
+        },
+        {
+          "line": 599,
+          "byte_start": 19136,
+          "byte_end_exclusive": 19178,
+          "text": "\\sigma_{\\geq j}\\Omega^\\bullet_{X/S})$ into",
+          "sha256": "82DC8847FCB17C4CD62E81849BFD22D808178AC5A400398A084A128F0B45F909"
+        },
+        {
+          "line": 600,
+          "byte_start": 19179,
+          "byte_end_exclusive": 19234,
+          "text": "$\\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S}$. Hence we get",
+          "sha256": "D8A356D5B760B6FDCE626B35F2D2A615418CB21F611D252DFBBBA6E2A1BD554D"
+        },
+        {
+          "line": 601,
+          "byte_start": 19235,
+          "byte_end_exclusive": 19255,
+          "text": "commutative diagrams",
+          "sha256": "C4FACADF83E76A319CFA52CCBA19A6521CD6241EC7CF7155EDB21BCA2A2D42DA"
+        },
+        {
+          "line": 602,
+          "byte_start": 19256,
+          "byte_end_exclusive": 19258,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 603,
+          "byte_start": 19259,
+          "byte_end_exclusive": 19269,
+          "text": "\\xymatrix{",
+          "sha256": "0DBF4093AF36807239A4E011A03BE53FB44DCABCCCF695C919682CE4B3575F25"
+        },
+        {
+          "line": 604,
+          "byte_start": 19270,
+          "byte_end_exclusive": 19314,
+          "text": "H^n(X, \\sigma_{\\geq i}\\Omega^\\bullet_{X/S}))",
+          "sha256": "89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35"
+        },
+        {
+          "line": 605,
+          "byte_start": 19315,
+          "byte_end_exclusive": 19322,
+          "text": "\\times ",
+          "sha256": "1A866F8175AAD5E1215FAEA4FBD34EE6462A9168E4FC965A735BD3CBD3BC7669"
+        },
+        {
+          "line": 606,
+          "byte_start": 19323,
+          "byte_end_exclusive": 19367,
+          "text": "H^m(X, \\sigma_{\\geq j}\\Omega^\\bullet_{X/S}))",
+          "sha256": "0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5"
+        },
+        {
+          "line": 607,
+          "byte_start": 19368,
+          "byte_end_exclusive": 19383,
+          "text": "\\ar[r] \\ar[d] &",
+          "sha256": "E57782BD2679C0A623CCD929C8DB2284819D64048DC05968D475C1F345B6F946"
+        },
+        {
+          "line": 608,
+          "byte_start": 19384,
+          "byte_end_exclusive": 19448,
+          "text": "H^{n + m}(X, \\sigma_{\\geq i + j}\\Omega^\\bullet_{X/S})) \\ar[d] \\\\",
+          "sha256": "5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0"
+        },
+        {
+          "line": 609,
+          "byte_start": 19449,
+          "byte_end_exclusive": 19469,
+          "text": "H^n_{dR}(X/S) \\times",
+          "sha256": "6DFC1F5F049C7127BC68802F08162B7FA317351E6C6F76D45E56038EC2E1CDC0"
+        },
+        {
+          "line": 610,
+          "byte_start": 19470,
+          "byte_end_exclusive": 19483,
+          "text": "H^m_{dR}(X/S)",
+          "sha256": "DA4AD22FD769D115ABF9AEE5B8D7262A94EF36472A5B5838CE4EA2A8196701D1"
+        },
+        {
+          "line": 611,
+          "byte_start": 19484,
+          "byte_end_exclusive": 19497,
+          "text": "\\ar[r]^\\cup &",
+          "sha256": "D585D1AEE0084D05641AE4B951CA1D53C9B0B1F1182862C6D57A07BDB19FE3A7"
+        },
+        {
+          "line": 612,
+          "byte_start": 19498,
+          "byte_end_exclusive": 19517,
+          "text": "H^{n + m}_{dR}(X/S)",
+          "sha256": "33A0DB49BE941629C7473E7EDAF0406FD28787D4DA7B5D773583F7D5A1ED36B0"
+        },
+        {
+          "line": 613,
+          "byte_start": 19518,
+          "byte_end_exclusive": 19519,
+          "text": "}",
+          "sha256": "D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2"
+        },
+        {
+          "line": 614,
+          "byte_start": 19520,
+          "byte_end_exclusive": 19522,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 615,
+          "byte_start": 19523,
+          "byte_end_exclusive": 19549,
+          "text": "In particular we find that",
+          "sha256": "82349990AA9B900F9DCFB69E22118963C6D4580CCD1CF6DB77E489689D79E8CF"
+        },
+        {
+          "line": 616,
+          "byte_start": 19550,
+          "byte_end_exclusive": 19552,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 617,
+          "byte_start": 19553,
+          "byte_end_exclusive": 19628,
+          "text": "F^iH^n_{dR}(X/S) \\cup F^jH^m_{dR}(X/S) \\subset F^{i + j}H^{n + m}_{dR}(X/S)",
+          "sha256": "A67CE8DB4954A6954CED56CF95616AA0E6F8B19B5E9BCF475D6A040DA33B8D9E"
+        },
+        {
+          "line": 618,
+          "byte_start": 19629,
+          "byte_end_exclusive": 19631,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        }
+      ],
+      [
+        {
+          "line": 721,
+          "byte_start": 22841,
+          "byte_end_exclusive": 22854,
+          "text": "\\begin{lemma}",
+          "sha256": "14D3E0A857A75259413BEC4C887EA9241A0783AD433AC0C4AAC565049A3E9BEC"
+        },
+        {
+          "line": 722,
+          "byte_start": 22855,
+          "byte_end_exclusive": 22884,
+          "text": "\\label{lemma-kunneth-de-rham}",
+          "sha256": "96EC36EF584D2B69AD0B340042D61543208D5D010A8342D373B82191FE10EA50"
+        },
+        {
+          "line": 723,
+          "byte_start": 22885,
+          "byte_end_exclusive": 22956,
+          "text": "Assume $X$ and $Y$ are smooth, quasi-compact, with affine diagonal over",
+          "sha256": "97E4800D8BD2E510D0ED203A10B376A783130FC3DC5FD99B5F3AA4A7D427CD92"
+        },
+        {
+          "line": 724,
+          "byte_start": 22957,
+          "byte_end_exclusive": 22985,
+          "text": "$S = \\Spec(A)$. Then the map",
+          "sha256": "3463A0363104E5549A0E853CDE7F9FF5BCE89E37EE330CFAC8611969C2B0BA08"
+        },
+        {
+          "line": 725,
+          "byte_start": 22986,
+          "byte_end_exclusive": 22988,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 726,
+          "byte_start": 22989,
+          "byte_end_exclusive": 23021,
+          "text": "R\\Gamma(X, \\Omega^\\bullet_{X/S})",
+          "sha256": "7A06CE3B90D59569C618992E6C26563201ED70A02D5632A23CF741242E736128"
+        },
+        {
+          "line": 727,
+          "byte_start": 23022,
+          "byte_end_exclusive": 23042,
+          "text": "\\otimes_A^\\mathbf{L}",
+          "sha256": "C094A08EFF7AFFAF5804EAE04C051447B45D94693ECF4775154FEDF3D201A0A3"
+        },
+        {
+          "line": 728,
+          "byte_start": 23043,
+          "byte_end_exclusive": 23075,
+          "text": "R\\Gamma(Y, \\Omega^\\bullet_{Y/S})",
+          "sha256": "50713D6C4B93CD1188593789468860266D05F720A8A80F51839F91E49606F79F"
+        },
+        {
+          "line": 729,
+          "byte_start": 23076,
+          "byte_end_exclusive": 23091,
+          "text": "\\longrightarrow",
+          "sha256": "942FAAC63E3CE23F03BF59DDA0EBDB9F374A04F642C7EDE320241DA32F608D98"
+        },
+        {
+          "line": 730,
+          "byte_start": 23092,
+          "byte_end_exclusive": 23146,
+          "text": "R\\Gamma(X \\times_S Y, \\Omega^\\bullet_{X \\times_S Y/S})",
+          "sha256": "BC246CBEB8C97588578B54A97818ED064FADFA51794D8F1DACFEA31F89D93BB3"
+        },
+        {
+          "line": 731,
+          "byte_start": 23147,
+          "byte_end_exclusive": 23149,
+          "text": "$$",
+          "sha256": "523FF5B67FD322021659211B7D2AC1DEC73E61168C15D4B3A6EF1102F95F2206"
+        },
+        {
+          "line": 732,
+          "byte_start": 23150,
+          "byte_end_exclusive": 23178,
+          "text": "is an isomorphism in $D(A)$.",
+          "sha256": "8E33BF8D630FE3CEEC43B45E42938A6BD21FDD36CC172241DCAD46C0C0C7E17B"
+        },
+        {
+          "line": 733,
+          "byte_start": 23179,
+          "byte_end_exclusive": 23190,
+          "text": "\\end{lemma}",
+          "sha256": "0A25ECAF35D05A2A3AF49931DEBD1C0E45307BBFCE713A21430D49767D3DB05D"
+        },
+        {
+          "line": 734,
+          "byte_start": 23191,
+          "byte_end_exclusive": 23191,
+          "text": "",
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+        },
+        {
+          "line": 735,
+          "byte_start": 23192,
+          "byte_end_exclusive": 23205,
+          "text": "\\begin{proof}",
+          "sha256": "876233B8A03F24D0857A26D052957E71A7978DBE28514F9DE6CD46217EF0121B"
+        },
+        {
+          "line": 736,
+          "byte_start": 23206,
+          "byte_end_exclusive": 23280,
+          "text": "By Morphisms, Lemma \\ref{morphisms-lemma-smooth-omega-finite-locally-free}",
+          "sha256": "74B4A526A9A3FBAB4502CE894732A52B7D685C37BB7108CA50B9A7A3864AEEEE"
+        },
+        {
+          "line": 737,
+          "byte_start": 23281,
+          "byte_end_exclusive": 23354,
+          "text": "the sheaves $\\Omega^n_{X/S}$ and $\\Omega^m_{Y/S}$ are finite locally free",
+          "sha256": "7D7B9DD272E925A762B5F097167A19B09E02F928E3B72D551BB6F13D5F8E76E6"
+        },
+        {
+          "line": 738,
+          "byte_start": 23355,
+          "byte_end_exclusive": 23430,
+          "text": "$\\mathcal{O}_X$ and $\\mathcal{O}_Y$-modules. On the other hand, $X$ and $Y$",
+          "sha256": "33D29452F3D404EE909FE1A65CA7194C8EA2DC9DACC58AE728D6870004584DB9"
+        },
+        {
+          "line": 739,
+          "byte_start": 23431,
+          "byte_end_exclusive": 23501,
+          "text": "are flat over $S$ (Morphisms, Lemma \\ref{morphisms-lemma-smooth-flat})",
+          "sha256": "D96EF33C1335E657200D276AF2AB62D0DF4768D56114F4B5535E97CD1DD2FD2D"
+        },
+        {
+          "line": 740,
+          "byte_start": 23502,
+          "byte_end_exclusive": 23581,
+          "text": "and hence we find that $\\Omega^n_{X/S}$ and $\\Omega^m_{Y/S}$ are flat over $S$.",
+          "sha256": "999CA003CAE217A7AB054BC6DE8C3A48BB984BEDCCA1C9A51F59EDDD69C922DB"
+        },
+        {
+          "line": 741,
+          "byte_start": 23582,
+          "byte_end_exclusive": 23650,
+          "text": "Also, observe that $\\Omega^\\bullet_{X/S}$ is a locally bounded. Thus",
+          "sha256": "8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825"
+        },
+        {
+          "line": 742,
+          "byte_start": 23651,
+          "byte_end_exclusive": 23710,
+          "text": "the result by Lemma \\ref{lemma-de-rham-complex-product} and",
+          "sha256": "3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09"
+        },
+        {
+          "line": 743,
+          "byte_start": 23711,
+          "byte_end_exclusive": 23784,
+          "text": "Derived Categories of Schemes, Lemma \\ref{perfect-lemma-kunneth-special}.",
+          "sha256": "485329D777342675B220D40424EEFD5EBD196374CF2A9AF20503FA63F81145B9"
+        },
+        {
+          "line": 744,
+          "byte_start": 23785,
+          "byte_end_exclusive": 23796,
+          "text": "\\end{proof}",
+          "sha256": "923E6F2CEEE70DAB30FB38391D0660B7E80B6C7E8D2669B45BBC7FD4CB93AAA4"
+        }
+      ]
+    ]
+  },
+  "prospective_in_memory_replay": {
+    "bytes": 237944,
+    "sha256": "27108C367245F8F1E44CAC8BC3F92A0D66C040AC5D75FD2CCD59B8AAD9F2F010",
+    "pinned_bytes": 230541,
+    "pinned_sha256": "852B0FCC7F277D304C771F2E46A0A2EB54D6FEEBDB678A9B6CDEC3DA776C29C9",
+    "unmodified_intervals_identical": true,
+    "newline_count_unchanged": true,
+    "operations": 7,
+    "accepted_producer_units": 5,
+    "source_files_written": 0,
+    "source_file_count": 1,
+    "preserved_prior_additions": true,
+    "all_non_operation_byte_intervals_unchanged": true,
+    "pinned_context_equals_current_at_each_operation": true,
+    "current_line_offset_from_pinned": 12,
+    "no_build_or_visual_QA_claim": true,
+    "formal_anchor_sequence_replayed_exact": true,
+    "formal_anchors_checked": 1055,
+    "formal_anchor_kinds": "label, ref, eqref, cite, begin, end",
+    "validation": "PASS_7_EXACT_PREIMAGES_REPLAY_POSTIMAGE_ANCHORS"
+  },
+  "remaining_work": [
+    "Sole registrar independently admits/deduplicates the five validated producer units under canonical IDs as appropriate; then composer rechecks exact current byte preimages and applies only the seven operations to the current cumulative source.",
+    "Run the affected-chapter build and visual/mechanical gates required by the canonical composition lane; this read-only reconciliation does not claim those gates ran.",
+    "Resolve P07-ERR-0003 by actual bounded primary-source citation research; preserve the current placeholder until an evidence-backed replacement is available."
+  ],
+  "forbidden_inferences": [
+    "Existing frozen-ledger capture does not mean source correction is implemented.",
+    "No matching current-local-registry entry does not prove absence on an independently advanced remote registrar branch.",
+    "A genuine placeholder does not license fabricating a citation or silently deleting the knowledge gap.",
+    "This bounded six-candidate report does not imply the remaining P07 or CJK history/source backlog is complete."
+  ],
+  "source_or_translation_or_registry_mutation": false,
+  "publication": false,
+  "new_canonical_ids": [],
+  "output_path": "P07_DERHAM_FIRST6_CURRENT_RECONCILIATION_20260913.json",
+  "public_path_redaction": "Private account path prefixes replaced; original private report hash retained separately. No mathematical evidence changed."
+}

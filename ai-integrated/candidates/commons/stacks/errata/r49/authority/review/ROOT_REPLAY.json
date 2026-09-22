@@ -1,0 +1,232 @@
+{
+  "schema": "stacks-independent-p07-derham-replay/v1",
+  "created_at_utc": "2026-09-13T17:31:34.058Z",
+  "status": "PASS_EXACT_SOURCE_OPERATIONS_NOT_ADMISSION",
+  "input_report": {
+    "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/P07_DERHAM_FIRST6_CURRENT_RECONCILIATION_20260913.json",
+    "bytes": 126600,
+    "sha256": "A89865A61B7C90731AA007167B6D87DA05276B2D9654CFF0DDA658715436134A"
+  },
+  "input_parent": {
+    "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/stacks_on_stacks_hub/00_control/session_fixes_20260910/P07_DERHAM_FIRST6_PARENT_REPLAY_20260913.json",
+    "bytes": 11056,
+    "sha256": "E2A08008E474630869C922B209F493F7FF868C96CAF15B569A2DE797BD5E3384"
+  },
+  "accepted_units": 5,
+  "operation_count": 7,
+  "unresolved_producer_id": "P07-ERR-0003",
+  "source_writes": 0,
+  "registry_writes": 0,
+  "canonical_ids_allocated": 0,
+  "builds": 0,
+  "results": {
+    "pinned": {
+      "source": {
+        "path": "<USER_ROOT>/Documents/interlanguage/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex",
+        "bytes": 230539,
+        "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+      },
+      "postimage": {
+        "bytes": 230541,
+        "sha256": "852B0FCC7F277D304C771F2E46A0A2EB54D6FEEBDB678A9B6CDEC3DA776C29C9"
+      },
+      "guards": [
+        {
+          "producer_id": "P07-ERR-0001",
+          "operation_index": 1,
+          "line": 459,
+          "start": 13832,
+          "end": 13837,
+          "preimage": "exist",
+          "replacement": "exists",
+          "line_sha256": "AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0002",
+          "operation_index": 2,
+          "line": 540,
+          "start": 16733,
+          "end": 16735,
+          "preimage": "a ",
+          "replacement": "",
+          "line_sha256": "68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0004",
+          "operation_index": 3,
+          "line": 592,
+          "start": 18753,
+          "end": 18754,
+          "preimage": ")",
+          "replacement": "",
+          "line_sha256": "89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0004",
+          "operation_index": 4,
+          "line": 594,
+          "start": 18806,
+          "end": 18807,
+          "preimage": ")",
+          "replacement": "",
+          "line_sha256": "0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0004",
+          "operation_index": 5,
+          "line": 596,
+          "start": 18877,
+          "end": 18878,
+          "preimage": ")",
+          "replacement": "",
+          "line_sha256": "5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0005",
+          "operation_index": 6,
+          "line": 729,
+          "start": 23067,
+          "end": 23069,
+          "preimage": "a ",
+          "replacement": "",
+          "line_sha256": "8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0006",
+          "operation_index": 7,
+          "line": 730,
+          "start": 23102,
+          "end": 23104,
+          "preimage": "by",
+          "replacement": "follows by",
+          "line_sha256": "3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09",
+          "passed": true
+        }
+      ],
+      "exact_reverse_roundtrip": true,
+      "ordered_tex_controls_equal": true,
+      "tex_control_count": 8401,
+      "delimiter_counts": {
+        "{": 4981,
+        "}": 4980,
+        "$": 6380,
+        "\n": 6342
+      },
+      "placeholder_occurrences_unchanged": 3,
+      "unmodified_bytes_preserved_by_splice_and_roundtrip": true
+    },
+    "current": {
+      "source": {
+        "path": "<USER_ROOT>/Documents/interlanguage/worktrees/unofficial-ai-stacks-r47-illusie-linear-successor-20260907/derham.tex",
+        "bytes": 237942,
+        "sha256": "0AA0F22D9765CCBB167D3C63D47143ACD35B241972B6B71FC772D8F0B327CDF3",
+        "git_blob": "e78e81e589b825ebdc5ab3a68c8fb2f86bfba319",
+        "observed_repository_head": "00856c315dabb2516cad6d956a25030909419947",
+        "last_path_commit": "ce91f6b81be60024a7b40f65e48dd60106abfa12",
+        "last_path_commit_subject": "FAC no. 41: vector bundles and Hodge bridge",
+        "worktree_blob_matches_HEAD": true,
+        "note": "The hub advanced tools/metadata HEAD during this review; derham.tex byte identity stayed exact. Bind composition to the source hash/blob and recheck at transaction time, not to a stale repository HEAD."
+      },
+      "postimage": {
+        "bytes": 237944,
+        "sha256": "27108C367245F8F1E44CAC8BC3F92A0D66C040AC5D75FD2CCD59B8AAD9F2F010"
+      },
+      "guards": [
+        {
+          "producer_id": "P07-ERR-0001",
+          "operation_index": 1,
+          "line": 471,
+          "start": 14392,
+          "end": 14397,
+          "preimage": "exist",
+          "replacement": "exists",
+          "line_sha256": "AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0002",
+          "operation_index": 2,
+          "line": 552,
+          "start": 17293,
+          "end": 17295,
+          "preimage": "a ",
+          "replacement": "",
+          "line_sha256": "68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0004",
+          "operation_index": 3,
+          "line": 604,
+          "start": 19313,
+          "end": 19314,
+          "preimage": ")",
+          "replacement": "",
+          "line_sha256": "89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0004",
+          "operation_index": 4,
+          "line": 606,
+          "start": 19366,
+          "end": 19367,
+          "preimage": ")",
+          "replacement": "",
+          "line_sha256": "0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0004",
+          "operation_index": 5,
+          "line": 608,
+          "start": 19437,
+          "end": 19438,
+          "preimage": ")",
+          "replacement": "",
+          "line_sha256": "5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0005",
+          "operation_index": 6,
+          "line": 741,
+          "start": 23627,
+          "end": 23629,
+          "preimage": "a ",
+          "replacement": "",
+          "line_sha256": "8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825",
+          "passed": true
+        },
+        {
+          "producer_id": "P07-ERR-0006",
+          "operation_index": 7,
+          "line": 742,
+          "start": 23662,
+          "end": 23664,
+          "preimage": "by",
+          "replacement": "follows by",
+          "line_sha256": "3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09",
+          "passed": true
+        }
+      ],
+      "exact_reverse_roundtrip": true,
+      "ordered_tex_controls_equal": true,
+      "tex_control_count": 8638,
+      "delimiter_counts": {
+        "{": 5085,
+        "}": 5084,
+        "$": 6594,
+        "\n": 6547
+      },
+      "placeholder_occurrences_unchanged": 3,
+      "unmodified_bytes_preserved_by_splice_and_roundtrip": true
+    }
+  }
+}
