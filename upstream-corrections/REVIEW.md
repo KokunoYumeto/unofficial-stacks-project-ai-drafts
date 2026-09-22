@@ -13,6 +13,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [categories.tex](reviews/categories.md) — 8 correction units.
 - [cohomology.tex](reviews/cohomology.md) — 4 correction units.
 - [crystalline.tex](reviews/crystalline.md) — 1 correction units.
+- [derham.tex](reviews/derham.md) — 5 correction units.
 - [derived.tex](reviews/derived.md) — 92 correction units.
 - [descent.tex](reviews/descent.md) — 35 correction units.
 - [fields.tex](reviews/fields.md) — 8 correction units.

@@ -1,11 +1,11 @@
 {
   "schema": "stacks-upstream-corrections-only/v1",
   "official_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
-  "registry_sha256": "F985166CC6622118F6D4F6827330156CCBB833DA41230569A75FE949CF79DD83",
-  "admitted_rounds": 48,
-  "historical_registry_ids": 1304,
-  "included_effective_textual_units": 1302,
-  "included_operations": 1574,
+  "registry_sha256": "AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0",
+  "admitted_rounds": 49,
+  "historical_registry_ids": 1309,
+  "included_effective_textual_units": 1307,
+  "included_operations": 1581,
   "chapters": [
     {
       "source": "algebra.tex",
@@ -462,6 +462,25 @@
       "preimage_sha256": "466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054",
       "postimage_bytes": 211808,
       "postimage_sha256": "EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7"
+    },
+    {
+      "source": "derham.tex",
+      "file": "chapters/derham.patch",
+      "units": 5,
+      "operations": 7,
+      "unit_ids": [
+        "MC-STK-ERR-1569",
+        "MC-STK-ERR-1570",
+        "MC-STK-ERR-1571",
+        "MC-STK-ERR-1572",
+        "MC-STK-ERR-1573"
+      ],
+      "bytes": 2145,
+      "sha256": "6E258D893565CC8F9B1234811212E4112CDCDEB46ECF5893558269E09B556FC7",
+      "preimage_bytes": 230539,
+      "preimage_sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8",
+      "postimage_bytes": 230541,
+      "postimage_sha256": "852B0FCC7F277D304C771F2E46A0A2EB54D6FEEBDB678A9B6CDEC3DA776C29C9"
     },
     {
       "source": "derived.tex",
@@ -12431,12 +12450,54 @@
         "MC-STK-ERR-1568-OP1",
         "MC-STK-ERR-1568-OP2"
       ]
+    },
+    {
+      "id": "MC-STK-ERR-1569",
+      "status": "included",
+      "chapter": "derham.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1569-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1570",
+      "status": "included",
+      "chapter": "derham.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1570-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1571",
+      "status": "included",
+      "chapter": "derham.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1571-OP1",
+        "MC-STK-ERR-1571-OP2",
+        "MC-STK-ERR-1571-OP3"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1572",
+      "status": "included",
+      "chapter": "derham.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1572-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1573",
+      "status": "included",
+      "chapter": "derham.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1573-OP1"
+      ]
     }
   ],
   "combined": {
     "file": "ALL-TEXTUAL-CORRECTIONS.patch",
-    "bytes": 576491,
-    "sha256": "128CBF2CF40873334D4B2331C52E84278C57E73FF5E86BEB91686C25A59540FC"
+    "bytes": 578636,
+    "sha256": "C656C3C614AE87CD2DFFC3ABC2AB44C718F67996AB13D31BB9821945F0A25008"
   },
   "replay": {
     "independent_chapter_patches": "PASS",
@@ -12710,6 +12771,11 @@
       "sha256": "C48ACC7D4DC69A634FDE0D3BA3B3FC55D597DC720A88875B5EFE4038C2D92997"
     },
     {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r49/candidate.manifest.json",
+      "bytes": 25527,
+      "sha256": "8B00DC8D9F6E400F4CD05F9473EFDA71A167E4F272BB509FA7108B9203E673E0"
+    },
+    {
       "path": "ai-integrated/candidates/commons/stacks/errata/r5/candidate.manifest.json",
       "bytes": 9173,
       "sha256": "8130F186D839507DF1868D469892517E38E0A3D4C92126670A8CD53FAE777A0A"
@@ -12751,8 +12817,8 @@
     },
     {
       "path": "ai-integrated/registry/overlays.json",
-      "bytes": 77858,
-      "sha256": "F985166CC6622118F6D4F6827330156CCBB833DA41230569A75FE949CF79DD83"
+      "bytes": 78722,
+      "sha256": "AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0"
     },
     {
       "path": "candidates/commons/stacks/errata/r10/authority/source/algebra.tex",
@@ -14298,6 +14364,41 @@
       "path": "candidates/commons/stacks/errata/r48/stable-units.json",
       "bytes": 9389,
       "sha256": "D876CE3408D0A25E953AD6537BBC1FB0C4C792F9E7EECF78BDE5FB5398EF5313"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/authority/source/derham.tex",
+      "bytes": 230539,
+      "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/decisions.jsonl",
+      "bytes": 2798,
+      "sha256": "2770F538E6D6DD75C279EE23D572C89B6AAADFE8312B1F7E02DB66A22BB36E43"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/operation-spec.json",
+      "bytes": 18309,
+      "sha256": "2734C735955DE92D29A5D89FEC93112C424A7CD392857FFD095B5C70FEC672F7"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/payload/derham.tex",
+      "bytes": 230541,
+      "sha256": "852B0FCC7F277D304C771F2E46A0A2EB54D6FEEBDB678A9B6CDEC3DA776C29C9"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/replay/FINAL_INDEPENDENT_REVIEW.json",
+      "bytes": 41738,
+      "sha256": "BE179873B12539B5E4678D80B0BDA57E5E2E58F3259C588BAADBC4AB5BF3E355"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/source-map.jsonl",
+      "bytes": 17091,
+      "sha256": "26311CBFBDECAFE00910A64312E6CD5F88F771E8F329F2C97D105BBB2FD1F4A2"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r49/stable-units.json",
+      "bytes": 2015,
+      "sha256": "896C148689CBEDC8A67EF14E0683738BDE6AB7C8E73AD4E8F681757DB469F6E1"
     },
     {
       "path": "candidates/commons/stacks/errata/r5/authority/source/sites.tex",

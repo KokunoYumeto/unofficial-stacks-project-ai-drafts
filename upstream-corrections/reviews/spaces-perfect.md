@@ -11,7 +11,7 @@ Patch export and packaging: OpenAI Codex — GPT-6 Astra, Ultra effort. This is 
 
 ### MC-STK-ERR-1545
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 492; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L492) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -27,7 +27,7 @@ Close the outer argument of H^i(RF(tau_{<=a}E)); the displayed source cohomology
 
 ### MC-STK-ERR-1546
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 552; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L552) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -43,7 +43,7 @@ The bound fixed by the lemma is N, and the stated truncation interval gives b+N;
 
 ### MC-STK-ERR-1547
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1418; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1418) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -59,7 +59,7 @@ Use the indexed affine member V_{p,i} throughout the induction. A statement only
 
 ### MC-STK-ERR-1548
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1498; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1498) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -75,7 +75,7 @@ Delete the redundant connector 'where' while retaining 'such that' and the full 
 
 ### MC-STK-ERR-1549
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1524; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1524) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -91,7 +91,7 @@ The proof defines W_p by union and U_{n+1} is empty; W union U_{n+1} equals W, w
 
 ### MC-STK-ERR-1550
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1563; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1563) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -107,7 +107,7 @@ The defined input is an elementary distinguished square; its derived constructio
 
 ### MC-STK-ERR-1551
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1724; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1724) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -123,7 +123,7 @@ Contravariant Hom gives the displayed left-exact sequence. The subsequent Ext^1 
 
 ### MC-STK-ERR-1552
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1785; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1785) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -139,7 +139,7 @@ V to X is etale, not necessarily an inclusion. The overlap is U times_X V as alr
 
 ### MC-STK-ERR-1553
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 1904; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L1904) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -155,7 +155,7 @@ Replace the unbound Y by X in V to X: the lemma restricts sheaves from X and for
 
 ### MC-STK-ERR-1554
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2279; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2279) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -171,7 +171,7 @@ The stipulated morphism is j:V to W. Both its underived functor and the diagram 
 
 ### MC-STK-ERR-1555
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2586, 2588; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2586-L2588) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -195,7 +195,7 @@ Correct both intermediate categories to QCoh(O_W), since j:U to W and g:W to Z; 
 
 ### MC-STK-ERR-1556
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2633; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2633) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -211,7 +211,7 @@ Repair 'reside field' to 'residue field', matching the following kappa(p) and th
 
 ### MC-STK-ERR-1557
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2639, 2645; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2639-L2645) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -235,7 +235,7 @@ Restore the missing p in both numerator localizations A_mathfrak p; the interven
 
 ### MC-STK-ERR-1558
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2642; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2642) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -251,7 +251,7 @@ The sheaves (Z_n to S)_*G_n live on S=Spec(A), as specified by the lemma. X is u
 
 ### MC-STK-ERR-1559
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2644; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2644) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -267,7 +267,7 @@ Restore mathcal G_n in its defining phrase, matching the preceding pushforward a
 
 ### MC-STK-ERR-1560
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 2891; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L2891) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -283,7 +283,7 @@ The refined etale neighbourhood X'' must still contain a point above x; repeatin
 
 ### MC-STK-ERR-1561
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 3040; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L3040) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -299,7 +299,7 @@ The stalk is at the chosen geometric point overline{x}, not the whole space X; t
 
 ### MC-STK-ERR-1562
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 3633; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L3633) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -315,7 +315,7 @@ Supply the base X in W times_X V, the overlap used by every adjacent restriction
 
 ### MC-STK-ERR-1563
 
-`spaces-perfect.tex` — ; source defect.
+`spaces-perfect.tex` — 3812; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L3812) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 

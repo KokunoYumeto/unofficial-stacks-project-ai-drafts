@@ -118,17 +118,17 @@ def check_module(read, prefix):
     return {"module": record["source"]["path"], "pages": pages, "statements": record["proof_bearing_statements"]}
 
 
-def check_head():
+def check_head(ref="HEAD"):
     require(git("rev-parse", CORE + "^{tree}").decode().strip() == CORE_TREE, "wrong frozen core tree")
     git("merge-base", "--is-ancestor", CORE, NOTES)
-    git("merge-base", "--is-ancestor", NOTES, "HEAD")
+    git("merge-base", "--is-ancestor", NOTES, ref)
     # These older EGA comparison notes are merely preserved, not revised or
     # accepted as new source. Their content remains bound to the old commit.
     notes_paths = git("diff-tree", "-r", "--no-commit-id", "--name-only", CORE, NOTES).decode().splitlines()
     frozen_notes = set(notes_paths) - DOCS
     require(all(p.startswith("ega/coverage/") and p.endswith((".md", ".json"))
                 or p == "ai-integrated/review-notes/2026-09-19-proposed-corrections.json" for p in frozen_notes), "unexpected historical note scope")
-    read = lambda name: git("show", "HEAD:" + safe(name))
+    read = lambda name: git("show", ref + ":" + safe(name))
     for name in frozen_notes:
         require(read(name) == git("show", NOTES + ":" + name), "older comparison evidence changed: " + name)
     fixes = json.loads(read("possible-fixes/manifest.json"))
@@ -140,7 +140,7 @@ def check_head():
         patch_paths.add(name)
     require(sha(read(fixes["evidence"])) == fixes["evidence_sha256"], "fix evidence changed")
     export_paths = set()
-    export_exists = subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", "HEAD:upstream-corrections/downloads.json"], capture_output=True)
+    export_exists = subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", ref + ":upstream-corrections/downloads.json"], capture_output=True)
     if export_exists.returncode == 0:
         downloads = json.loads(read("upstream-corrections/downloads.json"))
         for row in downloads["files"]:
@@ -155,13 +155,13 @@ def check_head():
         export_paths.add("upstream-corrections/downloads.json")
     allowed = DOCS | NEW_TOOLS | frozen_notes | patch_paths | export_paths | {
         "possible-fixes/README.md", "possible-fixes/manifest.json"} | {"pursuing-stacks/" + p for p in MODULE_FILES}
-    changes = [line.split("\t", 1) for line in git("diff-tree", "-r", "--no-commit-id", "--name-status", CORE, "HEAD").decode().splitlines()]
+    changes = [line.split("\t", 1) for line in git("diff-tree", "-r", "--no-commit-id", "--name-status", CORE, ref).decode().splitlines()]
     check_changes(changes, allowed)
     for _, name in changes:
-        mode = git("ls-tree", "HEAD", "--", name).decode().split()[0]
+        mode = git("ls-tree", ref, "--", name).decode().split()[0]
         require(mode == "100644", "non-regular supplement file")
     modules = [check_module(read, "")]
-    exists = subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", "HEAD:pursuing-stacks/intervals-release.json"], capture_output=True)
+    exists = subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", ref + ":pursuing-stacks/intervals-release.json"], capture_output=True)
     if exists.returncode == 0:
         modules.append(check_module(read, "intervals-"))
     return modules

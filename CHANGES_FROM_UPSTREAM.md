@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **48**
-- Stable correction IDs: **1,304**
-- Displayed exact change hunks: **1,576**
-- Manifest/source-map exact operations: **1,508**
+- Admitted errata batches: **49**
+- Stable correction IDs: **1,309**
+- Displayed exact change hunks: **1,583**
+- Manifest/source-map exact operations: **1,515**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **31**
-- Registry SHA-256: `F985166CC6622118F6D4F6827330156CCBB833DA41230569A75FE949CF79DD83`
+- Affected source paths: **32**
+- Registry SHA-256: `AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -37696,5 +37696,156 @@ Pinned-official lines `2673-2673`; bytes `97850:97917`.
 ````
 
 Original SHA-256 `1F5D9D61158DFE1D581B2F7D151B016FDA47828B4B5256691A35946B95E5CDB4`; replacement SHA-256 `9F00BC266E1066B96602B3D6AEF52A551DE159D6C46FDD439B384B73175B4D0C`.
+
+</details>
+
+## stacks-errata-a04446e-r49
+
+5 stable IDs · 7 displayed change hunks · admitted 2026-09-13T22:11:28Z.
+
+<details id="mc-stk-err-1569">
+<summary><code>MC-STK-ERR-1569 — derham.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r49`
+- Stable ID: `MC-STK-ERR-1569`; producer ID: `P07-ERR-0001`
+- Bound source locator: `derham.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex#L459) · [Integrated source](derham.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r49/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r49/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r49/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r49/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: The singular noun phrase 'a Cartan-Eilenberg resolution' requires the finite verb 'exists'. The cited lemma itself asserts existence of such a resolution for a bounded below complex in an abelian category with enough injectives; the de Rham complex starts in degree zero. Adding s preserves that assertion and its citation.
+
+### Change 1: `MC-STK-ERR-1569-OP1`
+
+Pinned-official lines `459-459`; bytes `13826:13895`.
+
+````diff
+- there exist a Cartan-Eilenberg resolution for $\Omega^\bullet_{X/S}$.
++ there exists a Cartan-Eilenberg resolution for $\Omega^\bullet_{X/S}$.
+````
+
+Original SHA-256 `AA8178174CA0445F704471A450278779A529F0EEBD596AF13666095A310B7532`; replacement SHA-256 `0D8DF570E670F538DBD0696E107967E667A8F76AAB8C047029F9B5488D6AB9F2`.
+
+</details>
+
+<details id="mc-stk-err-1570">
+<summary><code>MC-STK-ERR-1570 — derham.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r49`
+- Stable ID: `MC-STK-ERR-1570`; producer ID: `P07-ERR-0002`
+- Bound source locator: `derham.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex#L540) · [Integrated source](derham.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r49/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r49/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r49/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r49/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: The article a cannot govern the plural noun sheaves across the line break. Removing a preserves the printed plural and the preceding indexed family of cohomology sheaves.
+
+### Change 1: `MC-STK-ERR-1570-OP1`
+
+Pinned-official lines `540-540`; bytes `16672:16742`.
+
+````diff
+- then the sheaves $\mathcal{H}^q$ are computable (in terms of a certain
++ then the sheaves $\mathcal{H}^q$ are computable (in terms of certain
+````
+
+Original SHA-256 `68832F56CC24DF4E32F4526A87942AB1DAB081F002123A0592E1EAB0098CB0C4`; replacement SHA-256 `2E818CCDAFBF3236E42C83BDF0480487D5AF3EEBCCFCEA90C44476130A4CBA7B`.
+
+</details>
+
+<details id="mc-stk-err-1571">
+<summary><code>MC-STK-ERR-1571 — derham.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r49`
+- Stable ID: `MC-STK-ERR-1571`; producer ID: `P07-ERR-0004`
+- Bound source locator: `derham.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex#L592-L596) · [Integrated source](derham.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r49/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r49/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r49/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r49/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: Each upper-row term has exactly one literal opening parenthesis and two closing parentheses; the sigma subscript is delimited by braces. Deleting the second closing parenthesis is sufficient and leaves all mathematical tokens and diagram arrows intact.
+
+### Change 1: `MC-STK-ERR-1571-OP1`
+
+Pinned-official lines `592-592`; bytes `18710:18754`.
+
+````diff
+- H^n(X, \sigma_{\geq i}\Omega^\bullet_{X/S}))
++ H^n(X, \sigma_{\geq i}\Omega^\bullet_{X/S})
+````
+
+Original SHA-256 `89CAE69810999417BF9005E8F64D50DD3C4F51FA23E1D4904001C4CCF2A9EA35`; replacement SHA-256 `F978B5AEABEDD094F26DE29914701EAAD15B9960C6AAD74154661AEBB0A4B87A`.
+
+### Change 2: `MC-STK-ERR-1571-OP2`
+
+Pinned-official lines `594-594`; bytes `18763:18807`.
+
+````diff
+- H^m(X, \sigma_{\geq j}\Omega^\bullet_{X/S}))
++ H^m(X, \sigma_{\geq j}\Omega^\bullet_{X/S})
+````
+
+Original SHA-256 `0C535FB88B7048509744FB7C761342B25EC56945D0787773FA59E317DDA19FC5`; replacement SHA-256 `6738B6E540EC7186942BED2D2734F041F0033F604A25CE1D161E3FFB1E878B36`.
+
+### Change 3: `MC-STK-ERR-1571-OP3`
+
+Pinned-official lines `596-596`; bytes `18824:18888`.
+
+````diff
+- H^{n + m}(X, \sigma_{\geq i + j}\Omega^\bullet_{X/S})) \ar[d] \\
++ H^{n + m}(X, \sigma_{\geq i + j}\Omega^\bullet_{X/S}) \ar[d] \\
+````
+
+Original SHA-256 `5C4EC1B5D60F9E4099ABEF3435C225242D8A2395EB411018A58730F315A99AF0`; replacement SHA-256 `66C7CE3FFFD6A2EE25A852757D32642683AE599BDBF3FA6034E0438D9369491B`.
+
+</details>
+
+<details id="mc-stk-err-1572">
+<summary><code>MC-STK-ERR-1572 — derham.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r49`
+- Stable ID: `MC-STK-ERR-1572`; producer ID: `P07-ERR-0005`
+- Bound source locator: `derham.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex#L729) · [Integrated source](derham.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r49/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r49/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r49/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r49/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: Locally bounded is a predicative adjective phrase for the already specified complex. Deleting the article completes the sentence without adding mathematical content.
+
+### Change 1: `MC-STK-ERR-1572-OP1`
+
+Pinned-official lines `729-729`; bytes `23022:23090`.
+
+````diff
+- Also, observe that $\Omega^\bullet_{X/S}$ is a locally bounded. Thus
++ Also, observe that $\Omega^\bullet_{X/S}$ is locally bounded. Thus
+````
+
+Original SHA-256 `8BE336B6EEB0F271A89BD17E6B52C196EA6574D6028A16F9A5666A853F561825`; replacement SHA-256 `D5B4A4FB48F8577D39BBF8A607F784B45063DE0CE661AF2FCDB7BAA50CD150C5`.
+
+</details>
+
+<details id="mc-stk-err-1573">
+<summary><code>MC-STK-ERR-1573 — derham.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r49`
+- Stable ID: `MC-STK-ERR-1573`; producer ID: `P07-ERR-0006`
+- Bound source locator: `derham.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derham.tex#L730) · [Integrated source](derham.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r49/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r49/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r49/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r49/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: The sentence 'Thus the result by Lemma ... and ...' lacks a finite verb. Inserting follows before the existing by states the already intended inference and preserves both references.
+
+### Change 1: `MC-STK-ERR-1573-OP1`
+
+Pinned-official lines `730-730`; bytes `23091:23150`.
+
+````diff
+- the result by Lemma \ref{lemma-de-rham-complex-product} and
++ the result follows by Lemma \ref{lemma-de-rham-complex-product} and
+````
+
+Original SHA-256 `3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09`; replacement SHA-256 `EB5FF83ACBE1043E10AE8215F93A2A0C5364B003312FE491F172CE20745A3C5B`.
 
 </details>

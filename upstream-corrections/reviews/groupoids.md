@@ -736,7 +736,7 @@ The tuple length d is unbound in the statement. Quantifying over every positive 
 
 ### MC-STK-ERR-1564
 
-`groupoids.tex` — ; source defect.
+`groupoids.tex` — 1836; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/groupoids.tex#L1836) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -754,7 +754,7 @@ If d=0 the fibre over the unit is the positive-dimensional abelian variety A, so
 
 ### MC-STK-ERR-1565
 
-`groupoids.tex` — ; source defect.
+`groupoids.tex` — 3179; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/groupoids.tex#L3179) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -770,7 +770,7 @@ The convention alpha:t*F to s*F and the displayed tensors require t(W_ijk) subse
 
 ### MC-STK-ERR-1566
 
-`groupoids.tex` — ; source defect.
+`groupoids.tex` — 4425; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/groupoids.tex#L4425) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -786,7 +786,7 @@ After base change the rank component produces its polynomial over C'_r, not C_r.
 
 ### MC-STK-ERR-1567
 
-`groupoids.tex` — ; source defect.
+`groupoids.tex` — 3214; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/groupoids.tex#L3214) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 
@@ -803,7 +803,7 @@ The two displayed support equalities lie respectively in M_ijk and M_j tensor_{A
 
 ### MC-STK-ERR-1568
 
-`groupoids.tex` — ; source defect.
+`groupoids.tex` — 2671, 2673; source defect.
 
 [Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/groupoids.tex#L2671-L2673) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/replay/FINAL_INDEPENDENT_REVIEW.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r48/candidate.manifest.json)
 

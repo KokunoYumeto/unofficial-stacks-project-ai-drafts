@@ -56,6 +56,14 @@ def source_path(path):
     return path
 
 
+def review_locus(unit, operations):
+    if unit.locus:
+        return unit.locus
+    spans = sorted({(op.source_start_line, op.source_end_line) for op in operations})
+    require(spans and all(a > 0 and b >= a for a, b in spans), 'Missing review source locator')
+    return ', '.join(str(a) if a == b else f'{a}-{b}' for a, b in spans)
+
+
 def active_operations(units, supersessions):
     owners = {}
     for unit in units:
@@ -239,7 +247,7 @@ def generate():
         review += ["## " + path[:-4], "", f"[Chapter patch]({RAW}chapters/{path[:-4]}.patch)", ""]
         for unit in chapter_units[path]:
             effective = [o for o in unit.operations if o.operation_id not in removed]
-            review += ["### " + unit.stable_id, "", f"`{unit.source}` — {unit.locus}; {unit.defect_class.replace('_', ' ')}.", "",
+            review += ["### " + unit.stable_id, "", f"`{unit.source}` — {review_locus(unit, effective)}; {unit.defect_class.replace('_', ' ')}.", "",
                 f"[Original passage]({evidence.official_source_link(model.official_commit, path, tuple(effective))}) · "
                 f"[Review evidence]({PUBLIC}/blob/main/{unit.review_link}) · "
                 f"[Manifest]({PUBLIC}/blob/main/{unit.manifest_link})", ""]

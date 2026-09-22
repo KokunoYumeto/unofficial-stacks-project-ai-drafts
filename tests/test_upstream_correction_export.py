@@ -13,6 +13,14 @@ def unit(name, index=1, source="algebra.tex", start=0, end=3):
 
 
 class ExportTests(unittest.TestCase):
+    def test_missing_summary_locus_uses_exact_operation_lines(self):
+        ops = [SimpleNamespace(source_start_line=a, source_end_line=b) for a, b in [(596,596),(592,592),(594,594)]]
+        self.assertEqual(e.review_locus(SimpleNamespace(locus=''), ops), '592, 594, 596')
+
+    def test_missing_all_locators_fails(self):
+        with self.assertRaises(ValueError):
+            e.review_locus(SimpleNamespace(locus=''), [])
+
     def test_exact_successor_removes_only_predecessor(self):
         owners, removed = e.active_operations([unit("old"), unit("new", 2)], {"new": "old"})
         self.assertEqual(removed, {"old"})
