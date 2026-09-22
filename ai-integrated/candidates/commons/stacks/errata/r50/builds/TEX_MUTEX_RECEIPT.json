@@ -1,0 +1,116 @@
+{
+  "schema": "stacks-r50-tex-mutex-execution/v1",
+  "candidate_id": "stacks-errata-a04446e-r50",
+  "mutex_name": "Global\\InterlanguageTeXSlotV1",
+  "wait_timeout_seconds": 60,
+  "acquisition_started_at_utc": "2026-09-19T21:12:25.8287410Z",
+  "acquired": true,
+  "acquired_at_utc": "2026-09-19T21:12:49.6171711Z",
+  "abandoned_mutex_recovered": false,
+  "holder_pid": 41676,
+  "guarded_commands": [
+    {
+      "role": "fresh_candidate_authority_build_1",
+      "started_at_utc": "2026-09-19T21:12:49.6275497Z",
+      "exit_code": 0,
+      "root_pid": 49292,
+      "assigned_before_resume": true,
+      "captured_total_processes": 12,
+      "root_exited_before_tree": false,
+      "cleanup_completed": true,
+      "termination_requested": false,
+      "failure": null,
+      "completed_at_utc": "2026-09-19T21:13:04.8459943Z",
+      "stdout": {
+        "private_filename": "fresh_candidate_authority_build_1.stdout.txt",
+        "bytes": 243,
+        "sha256": "EF97639459BFD6912CB7DAF0D10816A46EC937706234F2F24973AB50E22F802E"
+      },
+      "stderr": {
+        "private_filename": "fresh_candidate_authority_build_1.stderr.txt",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "role": "fresh_candidate_authority_build_2",
+      "started_at_utc": "2026-09-19T21:13:04.8562057Z",
+      "exit_code": 0,
+      "root_pid": 28056,
+      "assigned_before_resume": true,
+      "captured_total_processes": 12,
+      "root_exited_before_tree": false,
+      "cleanup_completed": true,
+      "termination_requested": false,
+      "failure": null,
+      "completed_at_utc": "2026-09-19T21:13:20.1843770Z",
+      "stdout": {
+        "private_filename": "fresh_candidate_authority_build_2.stdout.txt",
+        "bytes": 243,
+        "sha256": "EF97639459BFD6912CB7DAF0D10816A46EC937706234F2F24973AB50E22F802E"
+      },
+      "stderr": {
+        "private_filename": "fresh_candidate_authority_build_2.stderr.txt",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "role": "deterministic_pdf_comparison",
+      "started_at_utc": "2026-09-19T21:13:20.1865959Z",
+      "exit_code": 0,
+      "root_pid": 42860,
+      "assigned_before_resume": true,
+      "captured_total_processes": 2,
+      "root_exited_before_tree": false,
+      "cleanup_completed": true,
+      "termination_requested": false,
+      "failure": null,
+      "completed_at_utc": "2026-09-19T21:13:20.3094493Z",
+      "stdout": {
+        "private_filename": "deterministic_pdf_comparison.stdout.txt",
+        "bytes": 221,
+        "sha256": "DA5C2C99741A290869A1FB3A37FD9EF46D62FC127C91BB9A618CD2B181DDC734"
+      },
+      "stderr": {
+        "private_filename": "deterministic_pdf_comparison.stderr.txt",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    },
+    {
+      "role": "immediate_log_and_build_preflight",
+      "started_at_utc": "2026-09-19T21:13:20.3116680Z",
+      "exit_code": 0,
+      "root_pid": 42004,
+      "assigned_before_resume": true,
+      "captured_total_processes": 2,
+      "root_exited_before_tree": false,
+      "cleanup_completed": true,
+      "termination_requested": false,
+      "failure": null,
+      "completed_at_utc": "2026-09-19T21:13:20.4329008Z",
+      "stdout": {
+        "private_filename": "immediate_log_and_build_preflight.stdout.txt",
+        "bytes": 52,
+        "sha256": "3D2FC8584D63B00255F46D00E168B66E1258BBD3F2C35A1416FE3D9F21B7297E"
+      },
+      "stderr": {
+        "private_filename": "immediate_log_and_build_preflight.stderr.txt",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      }
+    }
+  ],
+  "captured_tree_guard": {
+    "path": "CapturedR50Tree20260919.cs",
+    "sha256": "996FA37536A7E1FD6EE49D42330AF9D23F3F473D0E8B4D649108611BA4E0E56B",
+    "mechanism": "CREATE_SUSPENDED -> unnamed KILL_ON_JOB_CLOSE Job Object -> resume",
+    "breakaway_allowed": false
+  },
+  "command_timeout_seconds": 1800,
+  "released": true,
+  "released_at_utc": "2026-09-19T21:13:20.4360350Z",
+  "passed": true,
+  "failure": null
+}

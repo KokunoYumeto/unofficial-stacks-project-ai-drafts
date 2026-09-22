@@ -1,0 +1,243 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "spaces-limits.tex": {
+      "bytes": 209790,
+      "path": "spaces-limits.tex",
+      "sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "spaces-limits": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 96532,
+            "stdout_sha256_raw": "0FBFEB96D22F96482D04321485B2ADC2988386EA934A824C1433B23BE440D8EE"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-limits"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 212,
+            "stdout_sha256_raw": "4297EA70D3D86473A00B43A81CB913118370140A08F1826184C347350E24A283"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 68700,
+            "stdout_sha256_raw": "12D011170542515C65342032028672C166B9837735DE75654C285461B16CFD68"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 68114,
+            "stdout_sha256_raw": "655306FE7EE2F5DB185ABBB04207280D8EB1AC7B8A33847C2BEA90A533B63615"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 212,
+            "path": "builds/spaces-limits.authority.bibtex.txt",
+            "sha256": "4297EA70D3D86473A00B43A81CB913118370140A08F1826184C347350E24A283"
+          },
+          "fls": {
+            "bytes": 26608,
+            "path": "builds/spaces-limits.authority.fls",
+            "sha256": "53765BAE8CDE1FEF7C70537E41DCA4F0CFBC1C92DA1AD7C49CEAF99DD8C7A004"
+          },
+          "fls_dependencies": {
+            "bytes": 60753,
+            "path": "builds/spaces-limits.authority.fls-dependencies.json",
+            "sha256": "8BAD830806F47DF23D9832F356DC68FDAB5FF15CBB03D263FE3244BFC06FE2CC"
+          },
+          "log": {
+            "bytes": 80943,
+            "path": "builds/spaces-limits.authority.log",
+            "sha256": "25CC166D4FB1B140299160DF6384A04B9D8D3C72B616FE979B5BB32B867AE9D5"
+          },
+          "pass3_stdout": {
+            "bytes": 67690,
+            "path": "builds/spaces-limits.authority.pass3.txt",
+            "sha256": "5A1C9E100AB2FD54A75D3F1E1F2F8009342F6107BADC4775B5A415DB1359B115"
+          },
+          "pdf": {
+            "bytes": 729169,
+            "path": "builds/spaces-limits.authority.pdf",
+            "sha256": "78D14EF8DED95EBDB0B96BA2A5CC1F3EE2C56BF8BCB747CA34C08B2204D18278"
+          }
+        },
+        "source": {
+          "bytes": 209790,
+          "path": "spaces-limits.tex",
+          "sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r50",
+  "candidate_inputs": {
+    "spaces-limits.tex": {
+      "bytes": 209792,
+      "path": "spaces-limits.tex",
+      "sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "spaces-limits": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 96532,
+            "stdout_sha256_raw": "37A2C8D2441C6941EB8EA1517186E1B1F92DEC25B266CA9ECA93ADDC50A27C9B"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-limits"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 212,
+            "stdout_sha256_raw": "4297EA70D3D86473A00B43A81CB913118370140A08F1826184C347350E24A283"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 68700,
+            "stdout_sha256_raw": "2A738ACB2CF0E4EAB55CC575E7A2628726A7F2B7DCEFD6BA07ECD8CF744AD334"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-no-shell-escape",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 68114,
+            "stdout_sha256_raw": "DE8308050F7EC3672AFEBF740041C1E7B49AC9F72680B0A3BDA1055BF95A342B"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 212,
+            "path": "builds/spaces-limits.bibtex.txt",
+            "sha256": "4297EA70D3D86473A00B43A81CB913118370140A08F1826184C347350E24A283"
+          },
+          "fls": {
+            "bytes": 26608,
+            "path": "builds/spaces-limits.fls",
+            "sha256": "53765BAE8CDE1FEF7C70537E41DCA4F0CFBC1C92DA1AD7C49CEAF99DD8C7A004"
+          },
+          "fls_dependencies": {
+            "bytes": 60753,
+            "path": "builds/spaces-limits.fls-dependencies.json",
+            "sha256": "CDA040650F2A60C99CC552F1DE2D2C7FD6D6D547F6A8239204B7705DDFD32808"
+          },
+          "log": {
+            "bytes": 80943,
+            "path": "builds/spaces-limits.log",
+            "sha256": "D326115F0AE643A1E527341756B105BCE2C8055A69F97ABE6F961251A9E757D1"
+          },
+          "pass3_stdout": {
+            "bytes": 67690,
+            "path": "builds/spaces-limits.pass3.txt",
+            "sha256": "66C8CCEA5448241E407A9C39A9FCDC903D6768687E1C96EBFB726868B8938436"
+          },
+          "pdf": {
+            "bytes": 729183,
+            "path": "builds/spaces-limits.pdf",
+            "sha256": "281F8CA9EA2F0E6FB9D3BFAE1C6EC5BD39DEFC36D965D538D3E3A09FCBF0F915"
+          }
+        },
+        "source": {
+          "bytes": 209792,
+          "path": "spaces-limits.tex",
+          "sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-19T21:13:20Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "spaces-limits.tex": {
+      "bytes": 209790,
+      "path": "spaces-limits.tex",
+      "sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1789776000",
+  "started_at_utc": "2026-09-19T21:13:04Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}

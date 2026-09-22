@@ -1,0 +1,41 @@
+{
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "candidate_id": "stacks-errata-a04446e-r50",
+  "namespace": "commons/stacks/errata/r50",
+  "lease_id": "stacks-lease-000054-errata-r50",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "source_date_epoch": "1789776000",
+  "accepted": 2,
+  "accepted_producer_rows": 2,
+  "operation_count": 2,
+  "expected_producer_ids": [
+    "SPACES-SRC-00178-UNBOUND-Y",
+    "SPACES-SRC-00269-PRODUCTS-VS-LIMITS"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-1574",
+    "MC-STK-ERR-1575"
+  ],
+  "rejected": 0,
+  "excluded_deferred": 0,
+  "unresolved": 0,
+  "stems": {
+    "spaces-limits": {
+      "authority_bytes": 209790,
+      "authority_sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228",
+      "payload_bytes": 209792,
+      "payload_sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489",
+      "build_exceptions": {
+        "candidate_undefined_reference_target_deltas": {}
+      }
+    }
+  },
+  "independent_replay": "not_performed",
+  "documented_nonblocking_limitations": [
+    "Standalone validation retains missing external chapter references if present in the pinned authority build; no cumulative-reader claim.",
+    "The two reviewed loci do not certify every proof sentence. Nearby issues at lines 170-173 are retained and logged for a separate follow-up.",
+    "No human expert review or upstream endorsement is claimed. Independent replay refers to a separately executed verifier and clean Git materialization, not an independent human or second model."
+  ]
+}

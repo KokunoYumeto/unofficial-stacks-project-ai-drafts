@@ -1,0 +1,81 @@
+{
+  "schema": "stacks-candidate-final-independent-replay/v1",
+  "candidate_id": "stacks-errata-a04446e-r50",
+  "completed_at_utc": "2026-09-22T01:28:06.014110Z",
+  "passed": true,
+  "final_stage_sha256": "E772ED48CE9342D37C59A86A7676D7D0940BECC368F8634E2CCA5E4F357E9D7F",
+  "candidate_git_tree": "33328b7a8ae8a5cfab6a16195dbe25d8d28777c9",
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "independence": "Separate verifier and clean Git materialization; same primary AI, not a second model or human.",
+  "source_replay_passed": true,
+  "source_operations": 2,
+  "source_units": 2,
+  "registry_sha256": "AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0",
+  "source_checker_stdout": "{\"passed\": true, \"stage\": \"source\", \"source_replays\": {\"spaces-limits\": {\"operations\": 2, \"exact_replay\": true, \"payload_sha256\": \"32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489\"}}, \"units\": 2, \"operations\": 2, \"writes\": false, \"fresh_visual_review_performed\": false}",
+  "checks": [
+    {
+      "name": "clean_git_materialized_snapshot_all_hashes",
+      "passed": true
+    },
+    {
+      "name": "exact_official_authority_blobs",
+      "passed": true
+    },
+    {
+      "name": "two_disjoint_physical_preimages",
+      "passed": true
+    },
+    {
+      "name": "independent_descending_byte_replay",
+      "passed": true
+    },
+    {
+      "name": "exact_payload_no_unlisted_changes",
+      "passed": true
+    },
+    {
+      "name": "stable_ids_not_admitted_elsewhere",
+      "passed": true
+    },
+    {
+      "name": "no_earlier_spaces_limits_operations",
+      "passed": true
+    },
+    {
+      "name": "current_cumulative_preimage_equals_authority",
+      "passed": true
+    },
+    {
+      "name": "source_validator_pass",
+      "passed": true
+    },
+    {
+      "name": "complete_source_zip_reopen_exact",
+      "passed": true
+    },
+    {
+      "name": "fresh_complete_source_reproduction_equals_both_historical_pdfs",
+      "passed": true
+    },
+    {
+      "name": "57_page_scope",
+      "passed": true
+    },
+    {
+      "name": "separate_primary_source_review",
+      "passed": true
+    },
+    {
+      "name": "separate_actual_visual_adjudication",
+      "passed": true
+    }
+  ],
+  "source_zip_entries": 16,
+  "unresolved_defects_in_two_operation_scope": [],
+  "limitations": [
+    "Standalone validation retains missing external chapter references if present in the pinned authority build; no cumulative-reader claim.",
+    "The two reviewed loci do not certify every proof sentence. Nearby issues at lines 170-173 are retained and logged for a separate follow-up.",
+    "No human expert review or upstream endorsement is claimed. Independent replay refers to a separately executed verifier and clean Git materialization, not an independent human or second model.",
+    "The preserved September 19 producer build is reused only for identical source bytes; finalization and independent replay have separate September 22 receipts. The original producer checkout is untouched."
+  ]
+}

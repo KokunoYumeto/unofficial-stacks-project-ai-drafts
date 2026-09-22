@@ -1,0 +1,137 @@
+{
+  "schema": "bounded-source-packet-review/v1",
+  "source_jsonl": "producer-task-history; exact raw record hash and offsets retained below",
+  "snapshot": {
+    "start_byte": 3590029854,
+    "end_byte_exclusive": 3591367628,
+    "next_line": 220196
+  },
+  "primary_packets": [
+    {
+      "verbatim": "<codex_delegation>\n  <source_thread_id>019f7111-d8de-75f1-8068-7c04db810882</source_thread_id>\n  <input>NEW BOUNDED STACKS ERRATA INTAKE — Chapter 70 spaces-limits.tex, two French-production findings not previously routed by this lane. Please independently deduplicate/adjudicate against pinned authority; no authority mutation is implied.\n\n- SPACES-SRC-00178-UNBOUND-Y, line 178: the display has \\colim_i F_y(T'_i), but y is undefined in this proof direction; the argument has fixed y_T, so F_{y_T} is expected.\n- SPACES-SRC-00269-PRODUCTS-VS-LIMITS, line 269: the proof says filtered colimits commute with finite products to justify a fibre-product comparison. The needed fact is commutation with finite limits; this is precisely the stronger statement attested in SGA 4 II, Proposition 4.3(4), lines 869–870: \"limites inductives filtrantes ... limites projectives finies\".\n\nFrench preserved the source pending disposition. Continue only with exact bounded dispositions; no resend is needed.</input>\n</codex_delegation>",
+      "line": 220141,
+      "start_byte": 3591212274,
+      "end_byte_exclusive": 3591213735,
+      "raw_record_sha256": "03D4D40CE1282349A4D4593B7585C6BEF87B4EE1FC64A94CCE95692514C33E5B"
+    }
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "current_commit": "0e40e317e02e7b05437fcc7c7f13659e140e128f",
+  "accepted": [
+    {
+      "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "BOUND_FIBRE_IDENTIFIER"
+      ],
+      "rationale": [
+        "The reverse implication fixes y_T in G(T) at168 and explicitly sets out to prove that F_{y_T} is limit preserving at169. The subscript y from the separate forward implication is not the fixed object in this direction. Restriction to each T-prime_i must be the fibre functor based on y_T."
+      ],
+      "operations": 1
+    },
+    {
+      "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "PROOF_JUSTIFICATION"
+      ],
+      "rationale": [
+        "The comparison266–267 is a fibre product over a varying G(T_i), a finite limit rather than merely a product. For filtered systems of sets, a representative pair whose images agree in the colimit agrees at a common later stage; equalities of representatives likewise hold at a common later stage. This proves the required bijection. Replacing products by limits states the actual fact used; no theorem hypothesis or conclusion changes. The producer-supplied SGA4 locator has not independently been consulted and is not used as proof evidence here."
+      ],
+      "operations": 1
+    }
+  ],
+  "authority": [
+    {
+      "source_path": "spaces-limits.tex",
+      "preimage": {
+        "bytes": 209790,
+        "sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+      },
+      "operations": [
+        {
+          "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+          "source_path": "spaces-limits.tex",
+          "authority_line": 178,
+          "located_line": 178,
+          "start_byte": 6273,
+          "end_byte_exclusive": 6282,
+          "old_text": "F_y(T'_i)",
+          "replacement_text": "F_{y_T}(T'_i)",
+          "thirteen_line_context_guard": "$I$ is a directed set. Denote $y_i \\in F(T'_i)$ the\nimage of $y_{T'}$. Then we see that $(y_i, x_{T'})$ is an\nelement of the fibre product\n$\\colim_i G(T'_i) \\times_{G(T')} F(T')$.\nHence by (2) we get a unique element $x$ of $\\colim_i F(T'_i)$\nmapping to $(y_i, x_{T'})$. It is clear that $x$ defines an element\nof $\\colim_i F_y(T'_i)$ mapping to $x_{T'}$ and we win.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-composition-locally-finite-presentation}\nLet $S$ be a scheme contained in $\\Sch_{fppf}$.\nLet $F, G, H : (\\Sch/S)_{fppf}^{opp} \\to \\textit{Sets}$."
+        },
+        {
+          "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+          "source_path": "spaces-limits.tex",
+          "authority_line": 269,
+          "located_line": 269,
+          "start_byte": 9099,
+          "end_byte_exclusive": 9114,
+          "old_text": "finite products",
+          "replacement_text": "finite limits",
+          "thirteen_line_context_guard": "Lemma \\ref{lemma-characterize-relative-limit-preserving}.\nThen we have\n$$\n\\colim (F \\times_G H)(T_i) =\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i)\n$$\nas filtered colimits commute with finite products. Our goal is thus to\nshow that\n$$\n\\xymatrix{\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i) \\ar[r] \\ar[d] &\nF(T) \\times_{G(T)} H(T) \\ar[d] \\\\\n\\colim_i E(T_i) \\ar[r] & E(T)"
+        }
+      ],
+      "prospective_postimage": {
+        "bytes": 209792,
+        "sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+      },
+      "all_other_bytes_unchanged": true
+    }
+  ],
+  "current": [
+    {
+      "source_path": "spaces-limits.tex",
+      "preimage": {
+        "bytes": 209790,
+        "sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+      },
+      "operations": [
+        {
+          "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+          "source_path": "spaces-limits.tex",
+          "authority_line": 178,
+          "located_line": 178,
+          "start_byte": 6273,
+          "end_byte_exclusive": 6282,
+          "old_text": "F_y(T'_i)",
+          "replacement_text": "F_{y_T}(T'_i)",
+          "thirteen_line_context_guard": "$I$ is a directed set. Denote $y_i \\in F(T'_i)$ the\nimage of $y_{T'}$. Then we see that $(y_i, x_{T'})$ is an\nelement of the fibre product\n$\\colim_i G(T'_i) \\times_{G(T')} F(T')$.\nHence by (2) we get a unique element $x$ of $\\colim_i F(T'_i)$\nmapping to $(y_i, x_{T'})$. It is clear that $x$ defines an element\nof $\\colim_i F_y(T'_i)$ mapping to $x_{T'}$ and we win.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-composition-locally-finite-presentation}\nLet $S$ be a scheme contained in $\\Sch_{fppf}$.\nLet $F, G, H : (\\Sch/S)_{fppf}^{opp} \\to \\textit{Sets}$."
+        },
+        {
+          "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+          "source_path": "spaces-limits.tex",
+          "authority_line": 269,
+          "located_line": 269,
+          "start_byte": 9099,
+          "end_byte_exclusive": 9114,
+          "old_text": "finite products",
+          "replacement_text": "finite limits",
+          "thirteen_line_context_guard": "Lemma \\ref{lemma-characterize-relative-limit-preserving}.\nThen we have\n$$\n\\colim (F \\times_G H)(T_i) =\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i)\n$$\nas filtered colimits commute with finite products. Our goal is thus to\nshow that\n$$\n\\xymatrix{\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i) \\ar[r] \\ar[d] &\nF(T) \\times_{G(T)} H(T) \\ar[d] \\\\\n\\colim_i E(T_i) \\ar[r] & E(T)"
+        }
+      ],
+      "prospective_postimage": {
+        "bytes": 209792,
+        "sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+      },
+      "all_other_bytes_unchanged": true
+    }
+  ],
+  "dedup": {
+    "metadata_files_hash_checked": 327,
+    "matches": [],
+    "unpublished_registrar_intake_not_checked": true
+  },
+  "source_writes": 0,
+  "registry_writes": 0,
+  "admission": "NOT_CLAIMED",
+  "publication": "NO_NEW_PUBLICATION",
+  "counts": {
+    "candidates": 2,
+    "accepted_units": 2,
+    "operations": 2,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "scope_note": "Only the two submitted loci are adjudicated. This is not certification of every nearby proof sentence. No canonical IDs are allocated and no source is changed."
+}

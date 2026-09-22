@@ -1,0 +1,3 @@
+# R50 Spaces and Limits validation
+
+Run run-builds-with-mutex.ps1 with a verified pinned upstream export and two new temporary work roots. It holds Global\InterlanguageTeXSlotV1 continuously across the two fresh candidate/authority builds, bibliography passes, deterministic PDF/FLS comparison and immediate log checks. Then run derive-visual-pages.py, render-qa.py, visual review, separate source verification, manifest sealing and clean Git-materialization verification before a distinct registry admission. Only two guarded operations may be composed; never replace a cumulative source with the pinned-relative payload.
