@@ -1238,3 +1238,21 @@ Adverse evidence / qualification: The frozen source and admitted overlay evidenc
 -Thus an exact sequence
 +Thus we have an exact sequence
 ````
+
+### MC-STK-ERR-1598
+
+`homology.tex` — 3962; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3962) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The preposition is the ordinary single word instead; no mathematical notation changes.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-in stead of
++instead of
+````

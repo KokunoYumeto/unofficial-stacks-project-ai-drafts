@@ -7,7 +7,7 @@ Patch export and packaging: OpenAI Codex — GPT-6 Astra, Ultra effort. This is 
 
 Review one chapter at a time; there is no need to open a megabyte-sized diff.
 
-- [algebra.tex](reviews/algebra.md) — 218 correction units.
+- [algebra.tex](reviews/algebra.md) — 228 correction units.
 - [artin.tex](reviews/artin.md) — 131 correction units.
 - [brauer.tex](reviews/brauer.md) — 10 correction units.
 - [categories.tex](reviews/categories.md) — 8 correction units.
@@ -18,13 +18,14 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [descent.tex](reviews/descent.md) — 35 correction units.
 - [fields.tex](reviews/fields.md) — 8 correction units.
 - [groupoids.tex](reviews/groupoids.md) — 48 correction units.
-- [homology.tex](reviews/homology.md) — 59 correction units.
+- [homology.tex](reviews/homology.md) — 60 correction units.
 - [injectives.tex](reviews/injectives.md) — 40 correction units.
 - [modules.tex](reviews/modules.md) — 14 correction units.
 - [more-algebra.tex](reviews/more-algebra.md) — 116 correction units.
 - [more-groupoids.tex](reviews/more-groupoids.md) — 22 correction units.
 - [perfect.tex](reviews/perfect.md) — 24 correction units.
-- [sets.tex](reviews/sets.md) — 4 correction units.
+- [schemes.tex](reviews/schemes.md) — 16 correction units.
+- [sets.tex](reviews/sets.md) — 6 correction units.
 - [sheaves.tex](reviews/sheaves.md) — 71 correction units.
 - [simplicial.tex](reviews/simplicial.md) — 11 correction units.
 - [sites-cohomology.tex](reviews/sites-cohomology.md) — 80 correction units.

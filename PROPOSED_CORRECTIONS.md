@@ -25,25 +25,25 @@ This initial readable selection contains **13 correction proposals**, plus
 review of Stacks or of the translation findings. Eleven proposals were recovered
 while reviewing this project's history; two came from French translation work.
 The fuller recorded comparison linked above covers earlier integrated batches.
-**Two of this selection are now integrated in the draft as R50; eleven remain
-pending.** Upstream acceptance is not claimed. The original evidence remains
+**All thirteen are now integrated in this draft: two in R50 and eleven in R51.**
+Upstream acceptance is not claimed. The original evidence remains
 unchanged; [the separate status record](ai-integrated/review-notes/proposal-integration-status.json)
-binds the two later source compositions.
+binds the later source compositions.
 
 For the much larger already-integrated collection, use the separate
 [corrections-only combined and chapter patches](upstream-corrections/README.md).
 That index gives the current exported totals and exclusions. It now includes
-the two R50 fixes below, so they should not be applied again after the combined
-patch. The other eleven proposals remain outside that export.
+all thirteen fixes below, so they should not be applied again after the combined
+patch.
 
 All original passages below refer to the fixed official Stacks revision
 [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14),
 not necessarily today's upstream text. The cumulative draft checked here was
 [`0e40e317e02e7b05437fcc7c7f13659e140e128f`](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/commit/0e40e317e02e7b05437fcc7c7f13659e140e128f).
 
-“Proposed” means the correction has **not been composed into that checked draft**.
-The two limit-preservation items were subsequently admitted and composed in R50;
-their headings below show that later status. The history-recovery identifiers are
+The initial proposal record predates source composition. The two limit-preservation
+items were subsequently admitted and composed in R50; the remaining eleven in R51.
+Their headings below show that later status. The history-recovery identifiers are
 stable identifiers within this review, not official Stacks tags or allocated
 registry IDs. [Exact operations and source identities](ai-integrated/review-notes/2026-09-19-proposed-corrections.json)
 are supporting evidence after, not instead of, the arguments.
@@ -52,7 +52,7 @@ are supporting evidence after, not instead of, the arguments.
 
 ### 1. The map on Ext goes in the opposite direction
 
-**Proposed.** Review ID `H100B-SOURCE-006`.
+**Integrated in this unofficial draft as R51; not officially adopted upstream.** Review ID `H100B-SOURCE-006`.
 [Original display and proof](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17575-L17604),
 `lemma-ext-welldefined`, lines 17587–17589 and 17601–17602.
 
@@ -80,7 +80,7 @@ theorem; it corrects the types of its induced maps.
 
 ### 2. The identity acts on cohomology, not homology
 
-**Proposed.** Review ID `H100B-SOURCE-007`.
+**Integrated in this unofficial draft as R51; not officially adopted upstream.** Review ID `H100B-SOURCE-007`.
 [Original](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17584-L17594),
 same lemma, line 17594.
 
@@ -92,7 +92,7 @@ a different construction on the original chain complexes.
 
 ### 3. The inverse-map argument must reverse composition too
 
-**Proposed.** Review ID `H100B-SOURCE-009`.
+**Integrated in this unofficial draft as R51; not officially adopted upstream.** Review ID `H100B-SOURCE-009`.
 [Original](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17607-L17619),
 same lemma, lines 17615–17617. Read with correction 1.
 
@@ -121,7 +121,7 @@ The existing next sentence handles the other composite in the same way.
 
 ### 4. A split exact sequence has the two different endpoint modules
 
-**Proposed.** Review ID `H100B-SOURCE-011`; two occurrences of the same typo.
+**Integrated in this unofficial draft as R51; not officially adopted upstream.** Review ID `H100B-SOURCE-011`; two occurrences of the same typo.
 [PID example](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13063-L13075),
 line 13073, and
 [local-ring proof](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13146-L13154),
@@ -138,7 +138,7 @@ finding; source comparison exposed the same typo in the first locus.
 
 ### 5. The induction proves injectivity at the next index
 
-**Proposed.** Review ID `H100B-SOURCE-016`.
+**Integrated in this unofficial draft as R51; not officially adopted upstream.** Review ID `H100B-SOURCE-016`.
 [Original argument](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27688-L27704),
 line 27704.
 
@@ -152,7 +152,7 @@ The written conclusion should state the newly proved induction step.
 
 ### 6. A chain map uses the differential leaving its target degree
 
-**Proposed.** Review ID `H100B-SOURCE-017`.
+**Integrated in this unofficial draft as R51; not officially adopted upstream.** Review ID `H100B-SOURCE-017`.
 [Original definition](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17454-L17468),
 line 17466.
 
@@ -214,6 +214,8 @@ parallel; this entry's argument does not rely on an unverified quotation.
 
 These five proposals do not change mathematical claims. Their review IDs are
 listed so they cannot be confused with five new mathematical results.
+All five are now integrated in this unofficial draft as R51, with no claim of
+official upstream adoption.
 
 | Review ID | Pinned source | Original | Smallest replacement | Reason |
 |---|---|---|---|---|

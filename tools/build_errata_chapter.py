@@ -17,12 +17,13 @@ def main():
     p.add_argument('--successor', required=True)
     p.add_argument('--chapter', required=True)
     p.add_argument('--successor-source', help='Candidate-owned preview path at the successor commit; never mutates cumulative source')
+    p.add_argument('--resume', action='store_true', help='Resume this exact source-bound unfinished directory, preserving prior captures')
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--pdflatex', default=shutil.which('pdflatex'))
     p.add_argument('--bibtex', default=shutil.which('bibtex'))
     args = p.parse_args()
     out = args.output.resolve()
-    r.require(not out.exists(), 'Choose a fresh output directory')
+    r.require(not out.exists() or (args.resume and not (out / 'BUILD_RECEIPT.json').exists()), 'Choose a fresh or explicitly resumed unfinished output directory')
     r.require(args.pdflatex and args.bibtex, 'TeX executables unavailable')
     r.require(args.chapter.endswith('.tex') and Path(args.chapter).name == args.chapter, 'Expected root chapter filename')
     stem = args.chapter[:-4]
@@ -33,19 +34,27 @@ def main():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     from tex_process_guard import run_captured
-    out.mkdir(parents=True)
+    out.mkdir(parents=True, exist_ok=args.resume)
     env = dict(os.environ, SOURCE_DATE_EPOCH='1790010000', FORCE_SOURCE_DATE='1', TZ='UTC')
     builds, captures = [], []
     with module.TexSlot(15000) as slot:
-        r.write(out / 'mutex-acquisition.json', slot.receipt)
+        r.write(out / ('mutex-acquisition-resume.json' if args.resume else 'mutex-acquisition.json'), slot.receipt)
         for name, ref in [('prior', args.prior), ('a', args.successor), ('b', args.successor)]:
             folder = out / name
-            folder.mkdir()
+            resumed = folder.exists()
+            r.require(not resumed or args.resume, 'Build directory already exists')
+            folder.mkdir(exist_ok=args.resume)
             for source in inputs:
                 lookup = args.successor_source if name != 'prior' and source == args.chapter and args.successor_source else source
-                (folder / source).write_bytes(r.blob(ref, lookup))
+                expected = r.blob(ref, lookup)
+                if resumed:
+                    r.require((folder / source).read_bytes() == expected, 'Resume source drift: ' + source)
+                else:
+                    (folder / source).write_bytes(expected)
             def launch(command, suffix):
+                if resumed: suffix = 'resume-' + suffix
                 capture = out / (name + '-' + suffix + '-capture.json')
+                r.require(not capture.exists(), 'Refuse to overwrite a prior capture')
                 if os.name == 'nt':
                     done = run_captured(command, cwd=folder, env=env, timeout=180,
                         caller_holds_tex_mutex=slot.owned, receipt_path=capture)
@@ -55,11 +64,11 @@ def main():
                         stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
                 (out / (name + '-' + suffix + '.log')).write_text(done.stdout, encoding='utf-8')
                 r.require(done.returncode == 0, 'Engine failed: ' + name + '/' + suffix)
-            previous = None
+            previous = {ext: r.sha((folder / (stem + '.' + ext)).read_bytes()) for ext in ('pdf', 'aux', 'out', 'toc', 'bbl')} if resumed else None
             for sweep in range(1, 7):
                 launch([args.pdflatex, '-no-shell-escape', '-interaction=nonstopmode', '-halt-on-error',
                     '-file-line-error', '-recorder', '-synctex=1', args.chapter], 'tex-' + str(sweep))
-                if sweep == 1: launch([args.bibtex, stem], 'bibtex')
+                if sweep == 1 and not resumed: launch([args.bibtex, stem], 'bibtex')
                 vector = {ext: r.sha((folder / (stem + '.' + ext)).read_bytes()) for ext in ('pdf', 'aux', 'out', 'toc', 'bbl')}
                 if vector == previous: break
                 previous = vector
@@ -67,7 +76,7 @@ def main():
             log = (folder / (stem + '.log')).read_text(encoding='utf-8', errors='replace')
             diag = diagnostics(log)
             r.require(not diag['fatal_duplicate_glyph_rerun'], 'Fatal/duplicate/glyph/rerun diagnostics')
-            build = {'name': name, 'source_commit': ref, 'sweeps': sweep, 'identities': vector,
+            build = {'name': name, 'source_commit': ref, 'sweeps': sweep, 'resumed_exact_inputs': resumed, 'identities': vector,
                 'source': r.identity((folder / args.chapter).read_bytes()),
                 'pdf': r.identity((folder / (stem + '.pdf')).read_bytes()),
                 'pages': len(PdfReader(folder / (stem + '.pdf')).pages), 'diagnostics': diag,

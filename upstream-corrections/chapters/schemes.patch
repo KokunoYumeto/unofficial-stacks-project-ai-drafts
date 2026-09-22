@@ -1,0 +1,146 @@
+diff --git a/schemes.tex b/schemes.tex
+index 901e0ea3d2a5370515ca080d0800af674eb05121..47e56473c471a04f7833c696ee5b96dbc71d3c24 100644
+--- a/schemes.tex
++++ b/schemes.tex
+@@ -142,7 +142,7 @@
+ ringed spaces forms a category. In order to see this we have
+ to show that the composition of morphisms of locally ringed
+ spaces is a morphism of locally ringed spaces. OK, so let
+-$f : X \to Y$ and $g : Y \to Z$ be morphism of locally
++$f : X \to Y$ and $g : Y \to Z$ be morphisms of locally
+ ringed spaces. The composition of $f$ and $g$ is defined in
+ Sheaves, Definition \ref{sheaves-definition-composition-maps-ringed-spaces}.
+ Let $x \in X$. By
+@@ -264,7 +264,7 @@
+ \Gamma(U, f'^{-1}(\mathcal{O}_V)) \to \Gamma(U, \mathcal{O}_X)
+ $$
+ for each open subset $U \subset X$, and therefore an isomorphism of sheaves
+-$f^{-1}(\mathcal{O}_V) \to \mathcal{O}_X$. In other words, we have an
++$f'^{-1}(\mathcal{O}_V) \to \mathcal{O}_X$. In other words, we have an
+ isomorphism $f'^{\sharp} : f'^{-1}(\mathcal{O}_V) \to \mathcal{O}_X$ and
+ therefore an isomorphism of locally ringed spaces
+ $(f', f'^{\sharp}) : (X, \mathcal{O}_X) \to (V, \mathcal{O}_V)$
+@@ -919,7 +919,7 @@
+ with the canonical identification
+ $\Gamma(D(g), \mathcal{O}_Y) = \Gamma(Y, \mathcal{O}_Y)_g$, to
+ be $\psi_{D(g)}$. This is compatible with localization since the
+-restriction mapping on the affine schemes are defined in terms
++restriction mapping on the affine schemes is defined in terms
+ of the universal properties of localization also, see
+ Lemmas \ref{lemma-spec-sheaves} and \ref{lemma-standard-open}.
+ 
+@@ -1100,7 +1100,7 @@
+ we have a morphism $\mathcal{F}_M \to \widetilde M$ corresponding
+ to the map $M \to \Gamma(X, \widetilde M) = M$. Let $x \in X$
+ correspond to the prime $\mathfrak p \subset R$.
+-The induced map on stalks are the maps
++The induced maps on stalks are the maps
+ $\mathcal{O}_{X, x} \otimes_R M \to M_{\mathfrak p}$
+ which are isomorphisms because
+ $R_{\mathfrak p} \otimes_R M = M_{\mathfrak p}$.
+@@ -1353,7 +1353,7 @@
+ 
+ \medskip\noindent
+ Now Algebra, Lemma \ref{algebra-lemma-glue-modules}
+-shows that there exist an $R$-module $M$ such that
++shows that there exists an $R$-module $M$ such that
+ $M_i = M_{f_i}$ compatible with the morphisms $\psi_{ij}$.
+ Consider $\mathcal{F}_M = \widetilde M$. At this point it is
+ a formality to show that $\widetilde M$ is isomorphic to
+@@ -1370,7 +1370,7 @@
+ $$
+ Namely, given $m \in M$ we get $m_i = m/1 \in M_{f_i} = M_i$
+ by construction of $M$. By construction of $M_i$ this corresponds
+-to a section $s_i \in \mathcal{F}(U_i)$. (Namely, $\varphi^{-1}_i(m_i)$.)
++to a section $s_i \in \mathcal{F}(D(f_i))$. (Namely, $\varphi^{-1}_i(m_i)$.)
+ We claim that $s_i|_{D(f_if_j)} = s_j|_{D(f_if_j)}$. This is
+ true because, by construction of $M$, we have $\psi_{ij}(m_i) = m_j$,
+ and by the construction of the $\psi_{ij}$. By the sheaf condition of
+@@ -2961,7 +2961,7 @@
+ Moreover, since each of the inclusions $F_i \subset F$ are representable
+ by open immersions we may assume that each $V_i \subset T$ is maximal
+ open with this property.
+-Because, $(U_i, \xi'|_{U_i})$ represents the functor $F_i$ we
++Because $(U_i, \xi'|_{U_i})$ represents the functor $F_i$ we
+ get a unique morphism $g_i : V_i \to U_i$ such that
+ $g_i^*\xi'|_{U_i} = \xi|_{V_i}$. On the overlaps $V_i \cap V_j$
+ the morphisms $g_i$ and $g_j$ agree, for example because they both
+@@ -3751,7 +3751,7 @@
+ Please take a look at Morphisms, Section \ref{morphisms-section-proper} for a
+ more detailed discussion of the properties of universally closed morphisms.
+ In this section we restrict the discussion to the relationship between
+-universal closed morphisms and morphisms satisfying the
++universally closed morphisms and morphisms satisfying the
+ existence part of the valuative criterion.
+ 
+ \begin{lemma}
+@@ -4075,7 +4075,7 @@
+ 
+ \noindent
+ By Lemmas \ref{lemma-diagonal-immersion} and \ref{lemma-immersion-when-closed}
+-we see that $\Delta_{X/S}$ is a closed immersion if an only if
++we see that $\Delta_{X/S}$ is a closed immersion if and only if
+ $\Delta_{X/S}(X) \subset X \times_S X$ is a closed subset. Moreover,
+ by Lemma \ref{lemma-closed-immersion-quasi-compact} we see that a
+ separated morphism is quasi-separated. The reason for introducing
+@@ -4249,7 +4249,7 @@
+ $$
+ \xymatrix{
+ X \times_T Y \ar[r] \ar[d] & X \times_S Y \ar[d] \\
+-T \ar[r]^{\Delta_{T/S}} \ar[r] & T \times_S T
++T \ar[r]^{\Delta_{T/S}} & T \times_S T
+ }
+ $$
+ is a fibre product diagram. The lemma follows
+@@ -4431,7 +4431,7 @@
+ Example \ref{example-not-affine}. On the other hand, consider the
+ scheme
+ $$
+-\mathbf{GL}_{2, k} = \Spec(k[a, b, c, d, 1/ad - bc]).
++\mathbf{GL}_{2, k} = \Spec(k[a, b, c, d, 1/(ad - bc)]).
+ $$
+ There is a morphism $\mathbf{GL}_{2, k} \to U$ corresponding
+ to the ring map $x \mapsto a$, $y \mapsto b$. It is easy to see that
+@@ -4449,7 +4449,7 @@
+ Then the following are true
+ \begin{enumerate}
+ \item Any affine scheme has $P$.
+-\item Given a morphism $f : X \to Y$ of scheme where $Y$ has $P$, then
++\item Given a morphism $f : X \to Y$ of schemes where $Y$ has $P$, then
+ $f$ has $P$ if and only if $X$ has $P$.
+ \item If  $X \to Y$ and $Z \to Y$ are morphisms of schemes
+ and $X$, $Y$, $Z$ have $P$, then $X \times_Y Z$ has $P$.
+@@ -4495,7 +4495,7 @@
+ this implies $Z = \Spec(A)$. Hence $a = b$ as desired.
+ \end{proof}
+ 
+-\begin{lemma}[Valuative criterion separatedness]
++\begin{lemma}[Valuative criterion of separatedness]
+ \label{lemma-valuative-criterion-separatedness}
+ \begin{reference}
+ \cite[II Proposition 7.2.3]{EGA}
+@@ -4739,7 +4739,7 @@
+ \item
+ \label{item-kernel}
+ The kernel and cokernel of a morphism of quasi-coherent sheaves
+-is quasi-coherent.
++are quasi-coherent.
+ \item Given a short exact sequence of $\mathcal{O}_X$-modules
+ $0 \to \mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3 \to 0$
+ if two out of three are quasi-coherent so is the third.
+@@ -4808,13 +4808,13 @@
+ \to \bigoplus f_{i, *}\mathcal{F}_i
+ \to \bigoplus f_{ijk, *}\mathcal{F}_{ijk}
+ $$
+-where $\mathcal{F}_i, \mathcal{F}_{ijk}$ denotes the
++where $\mathcal{F}_i, \mathcal{F}_{ijk}$ denote the
+ restriction of $\mathcal{F}$ to the corresponding open.
+ If $\mathcal{F}$ is a quasi-coherent $\mathcal{O}_X$-module
+ then $\mathcal{F}_i$ is a quasi-coherent $\mathcal{O}_{U_i}$-module
+ and $\mathcal{F}_{ijk}$ is a quasi-coherent $\mathcal{O}_{U_{ijk}}$-module.
+ Hence by Lemma \ref{lemma-widetilde-pullback} we see that the second and
+-third term of the exact sequence are quasi-coherent
++third terms of the exact sequence are quasi-coherent
+ $\mathcal{O}_S$-modules. Thus we conclude that
+ $f_*\mathcal{F}$ is a quasi-coherent $\mathcal{O}_S$-module.
+ \end{proof}

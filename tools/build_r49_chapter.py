@@ -28,7 +28,9 @@ def diagnostics(log):
         'undefined_citations': dict(sorted(Counter(re.findall(r"LaTeX Warning: Citation `([^']+)'", log)).items())),
         'overfull_boxes': len(re.findall(r'Overfull \\[hv]box', log)),
         'underfull_boxes': len(re.findall(r'Underfull \\[hv]box', log)),
-        'fatal_duplicate_glyph_rerun': re.findall(r'^!.*|.*(?:multiply defined|Missing character|Rerun to get).*', log, re.M),
+        # TeX's overfull-box font dump may wrap with a printed exclamation glyph.
+        # That exact font-dump prefix is not an error; actual ! diagnostics remain fatal.
+        'fatal_duplicate_glyph_rerun': re.findall(r'^!(?! \[\]\[\]\\[A-Za-z0-9]+/).*|.*(?:multiply defined|Missing character|Rerun to get).*', log, re.M),
     }
 
 

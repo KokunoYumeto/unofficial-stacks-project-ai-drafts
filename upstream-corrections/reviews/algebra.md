@@ -4525,3 +4525,220 @@ Adverse evidence / qualification: The original provisional-acceptance status is 
 -radical ideas
 +radical ideals
 ````
+
+### MC-STK-ERR-1594
+
+`algebra.tex` — 17587-17589, 17601-17602; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17587-L17602) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The chosen alpha:F→G induces precomposition Hom(G,N)→Hom(F,N), hence the same direction on cohomology. The displayed induced arrow has its source and target reversed. Both chosen lifts F→G induce homotopic maps in the contravariant direction Hom(G,N)→Hom(F,N). Match the proof to the corrected display.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1,3 +1,3 @@
++H^i(\Hom_R(G_{\bullet}, N))
++\longrightarrow
+ H^i(\Hom_R(F_{\bullet}, N))
+-\longrightarrow
+-H^i(\Hom_R(G_{\bullet}, N))
+````
+
+````diff
+--- original
++++ replacement
+@@ -1,2 +1,2 @@
+-maps $\Hom_R(F_\bullet, N) \to
+-\Hom_R(G_\bullet, N)$
++maps $\Hom_R(G_\bullet, N) \to
++\Hom_R(F_\bullet, N)$
+````
+
+### MC-STK-ERR-1595
+
+`algebra.tex` — 17594; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17594) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The induced identity is on the cohomology of the Hom cochain complex, named H^i(alpha) in the displayed construction; H_i(alpha) instead denotes homology of the original chain map.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$H_i(\alpha)$
++$H^i(\alpha)$
+````
+
+### MC-STK-ERR-1596
+
+`algebra.tex` — 17615, 17616, 17617; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17615-L17617) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+Precomposition reverses order: alpha*:H(G,N)→H(F,N), beta*:H(F,N)→H(G,N); alpha* after beta* equals (beta after alpha)* on H(F,N). The composite beta after alpha is an endomorphism of F and lifts id_M1, so it is homotopic to id_F. The swapped composition is handled by the next sentence.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-H^i(\alpha \circ \beta)
++H^i(\beta \circ \alpha)
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-H^i(\alpha \circ \beta)
++H^i(\beta \circ \alpha)
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\text{id}_{G_{\bullet}}
++\text{id}_{F_{\bullet}}
+````
+
+### MC-STK-ERR-1597
+
+`algebra.tex` — 13073, 13152; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13073-L13152) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+Each immediately preceding short exact sequence has endpoints M-prime and M-double-prime. Since the quotient is finite free, the splitting is M≅M-prime⊕M-double-prime. The identical typo occurs in both the PID example and local-ring K0 proof; both loci are explicitly included.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-M' \oplus M'
++M' \oplus M''
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-M' \oplus M'
++M' \oplus M''
+````
+
+### MC-STK-ERR-1599
+
+`algebra.tex` — 26495; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26495) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The subject a commutative diagram is singular.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-there exist a commutative diagram
++there exists a commutative diagram
+````
+
+### MC-STK-ERR-1600
+
+`algebra.tex` — 27084; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27084) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The resolution maps have the specified property; to is a typographical substitution for the article.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-have to property that
++have the property that
+````
+
+### MC-STK-ERR-1601
+
+`algebra.tex` — 27704; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27704) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The proof assumes injectivity at i and shows the quotient with i+1 variables and equations is a field. Its surjective unital map is psi_(i+1), so that map is now injective.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$\psi_i$
++$\psi_{i + 1}$
+````
+
+### MC-STK-ERR-1602
+
+`algebra.tex` — 17466; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17466) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+alpha_i has target G_i. The outgoing differential there is d_(G,i):G_i→G_(i-1); d_(G,i-1) is not composable with alpha_i.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-d_{G, i-1} \circ \alpha_i
++d_{G, i} \circ \alpha_i
+````
+
+### MC-STK-ERR-1603
+
+`algebra.tex` — 17562; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17562) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+Single-word spelling in the Ext-definition footnote; the line break before of remains.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-in stead
++instead
+````
+
+### MC-STK-ERR-1604
+
+`algebra.tex` — 17610; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17610) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+Supply the infinitival to in Choose beta to be a map.
+
+Adverse evidence / qualification: The exact type/domain argument is recorded in the bound review.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-be a map inducing
++to be a map inducing
+````

@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,311 historical correction IDs are accounted for; 1,309 effective textual
+  The 1,340 historical correction IDs are accounted for; 1,338 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -85,8 +85,9 @@ The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
 alongside it. Neither list treats an added theorem as an upstream correction.
 
 The original 13-item readable selection is not the total correction collection.
-Two limit-preservation fixes have now been integrated as R50 and are also in
-the larger export; eleven remain pending. Do not apply the same fix twice.
+All thirteen are now integrated in this draft: two limit-preservation fixes
+in R50 and the remaining eleven in R51. They are also in the larger export;
+do not apply the same fix twice. Upstream adoption is not claimed.
 Both sets target the pinned official revision; compatibility with today's
 upstream is not claimed.
 
@@ -96,9 +97,19 @@ diagram and four small prose repairs. The latest full-reader release predates
 these edits; this is a source-and-patch update, not a new Zenodo edition.
 R50 adds two corrections in **Limits of Algebraic Spaces**: using the fibre
 point fixed in the proof, and citing finite limits rather than only finite
-products for a fibre-product comparison. The [32 chapter patch sets](upstream-corrections/README.md)
+products for a fibre-product comparison. The [33 chapter patch sets](upstream-corrections/README.md)
 include both, with no added theorems. The bounded chapter proof and complete
 editable source are linked in [its candidate record](ai-integrated/candidates/commons/stacks/errata/r50/README.md).
+
+R51 adds **29 corrections** in Sets, Schemes, Homology and Algebra. These include
+the reversed maps and compositions in the Ext resolution-independence proof,
+the differential index in a chain map, both split-sequence endpoint modules,
+the ordinal bound on a prescribed family of coverings, and the denominator
+defining the coordinate ring of GL(2). Smaller sheaf-domain, diagram and English
+repairs are individually explained in [the correction review](ai-integrated/candidates/commons/stacks/errata/r51/REVIEW.md).
+[Chapter proofs and complete editable sources](ai-integrated/candidates/commons/stacks/errata/r51/README.md)
+accompany the batch; the fixes-only downloads contain no theorem additions.
+This remains a source-and-patch update, not a new Zenodo edition.
 
 Current correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new

@@ -24,6 +24,8 @@ class R50Tests(unittest.TestCase):
         path = 'ai-integrated/review-notes/2026-09-19-proposed-corrections.json'
         self.assertEqual((r.ROOT/path).read_bytes(), r.blob(r.PREVIOUS, path))
         status = json.loads((r.ROOT/'ai-integrated/review-notes/proposal-integration-status.json').read_bytes())
-        self.assertEqual((status['original_selection_units'], status['pending_units'],len(status['composed'])), (13,11,2))
+        frozen = json.loads(r.blob('cf3f3a85ccf0ac433524c7a075a1e9b267f49fe7', 'ai-integrated/review-notes/proposal-integration-status.json'))
+        self.assertEqual((frozen['original_selection_units'], frozen['pending_units'],len(frozen['composed'])), (13,11,2))
+        self.assertEqual(status['composed'][:2], frozen['composed'])
 
 if __name__ == '__main__': unittest.main()

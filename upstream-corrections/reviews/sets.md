@@ -105,3 +105,39 @@ Reviewed legacy summary: W_{i,a} → W_{a,i}
 -$\text{size}(\coprod_a \coprod_{i \in I_a} W_{i, a}) \leq \text{size}(X)$
 +$\text{size}(\coprod_a \coprod_{i \in I_a} W_{a, i}) \leq \text{size}(X)$
 ````
+
+### MC-STK-ERR-1576
+
+`sets.tex` — 1049; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sets.tex#L1049) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+beta_0 is already determined at 989–993 by representative covers of each support; it was not chosen to bound the ranks of all prescribed members of Cov_0. Choosing beta_1 at 1047 cannot change the already-fixed beta_0 in the printed condition. Since Cov_0 is a set, one can choose beta_1 large enough to bound both it and the arrow set, and also beta_1 >= beta_0. This is exactly what 1051–1053 use to propagate the conditions to f(beta_1) and later stages, yielding the first property of the lemma.
+
+Adverse evidence / qualification: Taking Cov_0 from low-rank representatives would make the original condition true in that special case, but the lemma allows an arbitrary given set of coverings. No rank bound by beta_0 for that arbitrary set is supplied. The current cumulative source still has the old beta_0, and no R1–R48 operation touches this line.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$\text{Cov}_0 \subset V_{\beta_0}$,
++$\text{Cov}_0 \subset V_{\beta_1}$,
+````
+
+### MC-STK-ERR-1577
+
+`sets.tex` — 203; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sets.tex#L203) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json)
+
+The indefinite article precedes alpha, which begins with a vowel sound. Changing a to an leaves every quantifier, symbol and inference unchanged.
+
+Adverse evidence / qualification: No mathematical error is alleged. This is a minor English copyedit and must be labelled as such, not advertised as a theorem correction.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-pick a $\alpha_s < \beta$
++pick an $\alpha_s < \beta$
+````

@@ -1,7 +1,16 @@
 diff --git a/sets.tex b/sets.tex
-index 6b655ac5aeca337abef91e0e986192c5a2169800..05676a8dd249abe1d498174115d9d2f6321421cc 100644
+index 6b655ac5aeca337abef91e0e986192c5a2169800..7680c053961f3c53bb3502e1d6d256fa1474cb93 100644
 --- a/sets.tex
 +++ b/sets.tex
+@@ -200,7 +200,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-For each element $s \in S$ pick a $\alpha_s < \beta$ and an element
++For each element $s \in S$ pick an $\alpha_s < \beta$ and an element
+ $t_s \in T_{\alpha_s}$ which maps to $\varphi(s)$ in $T$.
+ By assumption $\alpha = \sup_{s \in S} \alpha_s$ is strictly smaller
+ than $\beta$. Hence the map $\varphi_\alpha : S \to T_\alpha$
 @@ -845,7 +845,7 @@
  Then $\text{size}(W_{a, i}) \leq \text{size}(X)$ by
  Lemma \ref{lemma-bound-finite-type}.
@@ -29,6 +38,15 @@ index 6b655ac5aeca337abef91e0e986192c5a2169800..05676a8dd249abe1d498174115d9d2f6
  and $W \to U$ is a morphism of $\mathcal{C}$, then
  $\{U_i \times_U W \to W \}_{i\in I}
  \in \text{Cov}(\mathcal{C})_{\kappa, \beta}$.
+@@ -1046,7 +1046,7 @@
+ \medskip\noindent
+ Pick an ordinal $\beta_1$ such that
+ $\text{Arrows}(\mathcal{C}) \subset V_{\beta_1}$,
+-$\text{Cov}_0 \subset V_{\beta_0}$,
++$\text{Cov}_0 \subset V_{\beta_1}$,
+ and $\beta_1 \geq \beta_0$.
+ By construction $f(\beta_1) \geq \beta_1$ and we see that
+ the same properties hold for $V_{f(\beta_1)}$. Moreover, as $f$ is
 @@ -1085,20 +1085,23 @@
  \in \text{Cov}(\mathcal{C})_{\kappa, \alpha}$
  we have $\beta(\mathcal{U}) < \beta_2$ and hence

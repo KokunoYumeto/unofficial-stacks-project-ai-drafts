@@ -1,17 +1,17 @@
 {
   "schema": "stacks-upstream-corrections-only/v1",
   "official_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
-  "registry_sha256": "1CEC2C9123E9CB19D4CD1BAF107C500449B713975C3C758D44CBDC5335837A86",
-  "admitted_rounds": 50,
-  "historical_registry_ids": 1311,
-  "included_effective_textual_units": 1309,
-  "included_operations": 1583,
+  "registry_sha256": "5F0ACCFB0F5F249AEA3934FD4FA02C0795978539784FDCA782FDC50DA961DFBD",
+  "admitted_rounds": 51,
+  "historical_registry_ids": 1340,
+  "included_effective_textual_units": 1338,
+  "included_operations": 1616,
   "chapters": [
     {
       "source": "algebra.tex",
       "file": "chapters/algebra.patch",
-      "units": 218,
-      "operations": 267,
+      "units": 228,
+      "operations": 281,
       "unit_ids": [
         "MC-STK-ERR-0621",
         "MC-STK-ERR-0622",
@@ -230,14 +230,24 @@
         "MC-STK-ERR-0489",
         "MC-STK-ERR-0490",
         "MC-STK-ERR-0491",
-        "MC-STK-ERR-0492"
+        "MC-STK-ERR-0492",
+        "MC-STK-ERR-1594",
+        "MC-STK-ERR-1595",
+        "MC-STK-ERR-1596",
+        "MC-STK-ERR-1597",
+        "MC-STK-ERR-1599",
+        "MC-STK-ERR-1600",
+        "MC-STK-ERR-1601",
+        "MC-STK-ERR-1602",
+        "MC-STK-ERR-1603",
+        "MC-STK-ERR-1604"
       ],
-      "bytes": 103902,
-      "sha256": "12443E36F87B0E4E193F11D4834F77D2BBC6CB35BE4B2F73550461EC93966427",
+      "bytes": 108225,
+      "sha256": "77246A5BDFA016D3718FBADE93F5DE96FC38E13FAF5133667BA686CC02B21E73",
       "preimage_bytes": 1771230,
       "preimage_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
-      "postimage_bytes": 1776423,
-      "postimage_sha256": "B17802191E06AF9D95DE6B197E22A2F7C0F6D7F2A42F10DEA596AC028ED704FB"
+      "postimage_bytes": 1776433,
+      "postimage_sha256": "F8D99601C18F4B5543256DE95CA987EF682CB252828A76EFD1D0F49B547369E9"
     },
     {
       "source": "artin.tex",
@@ -724,8 +734,8 @@
     {
       "source": "homology.tex",
       "file": "chapters/homology.patch",
-      "units": 59,
-      "operations": 80,
+      "units": 60,
+      "operations": 81,
       "unit_ids": [
         "MC-STK-ERR-0753",
         "MC-STK-ERR-0754",
@@ -785,14 +795,15 @@
         "MC-STK-ERR-0808",
         "MC-STK-ERR-0809",
         "MC-STK-ERR-0810",
-        "MC-STK-ERR-0811"
+        "MC-STK-ERR-0811",
+        "MC-STK-ERR-1598"
       ],
-      "bytes": 26575,
-      "sha256": "105BAF33BF793227EEEBC7601787D580673B7638B4C0598A2801A70814993B37",
+      "bytes": 26955,
+      "sha256": "5F6A6D1629EF289B0831AC3D9B10974BD1540B09806F5756046B6452AF5D85B6",
       "preimage_bytes": 267354,
       "preimage_sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0",
-      "postimage_bytes": 267677,
-      "postimage_sha256": "E44BB40472A75ACBADCAEE757754C3CFCB7DA781E49F2EF1151430CE7DCB84FC"
+      "postimage_bytes": 267676,
+      "postimage_sha256": "408718751D093CCD7AE070898C86A93E51F1D8FD6336F296EE5E962684BD8552"
     },
     {
       "source": "injectives.tex",
@@ -1081,22 +1092,54 @@
       "postimage_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
     },
     {
+      "source": "schemes.tex",
+      "file": "chapters/schemes.patch",
+      "units": 16,
+      "operations": 16,
+      "unit_ids": [
+        "MC-STK-ERR-1578",
+        "MC-STK-ERR-1579",
+        "MC-STK-ERR-1580",
+        "MC-STK-ERR-1581",
+        "MC-STK-ERR-1582",
+        "MC-STK-ERR-1583",
+        "MC-STK-ERR-1584",
+        "MC-STK-ERR-1585",
+        "MC-STK-ERR-1586",
+        "MC-STK-ERR-1587",
+        "MC-STK-ERR-1588",
+        "MC-STK-ERR-1589",
+        "MC-STK-ERR-1590",
+        "MC-STK-ERR-1591",
+        "MC-STK-ERR-1592",
+        "MC-STK-ERR-1593"
+      ],
+      "bytes": 6677,
+      "sha256": "B5FD90837893FE34DF124D43C859FF6560F49D34C0E360F231269579E9E711B2",
+      "preimage_bytes": 174402,
+      "preimage_sha256": "08475A01CF0DDF69734FD7EBC0D14D3831148C25A2EF82AAAFDB65666F8FCE47",
+      "postimage_bytes": 174410,
+      "postimage_sha256": "EEE0848111D89FEC94C0A70F9EFC68A8F203C3829A58058EB679BBE2C59E1FBD"
+    },
+    {
       "source": "sets.tex",
       "file": "chapters/sets.patch",
-      "units": 4,
-      "operations": 8,
+      "units": 6,
+      "operations": 10,
       "unit_ids": [
         "MC-STK-ERR-0029",
         "MC-STK-ERR-0030",
         "MC-STK-ERR-0031",
-        "MC-STK-ERR-0032"
+        "MC-STK-ERR-0032",
+        "MC-STK-ERR-1576",
+        "MC-STK-ERR-1577"
       ],
-      "bytes": 2821,
-      "sha256": "B49F77B5CC767AC0E0B57B23BC27AB5F57A1ADDC15FF116AE06BC469B32F8EB6",
+      "bytes": 3561,
+      "sha256": "DB12B16396804A5C2598A9F49D7BFC89745C9445199D069EF4D5BB0DBC2C4A6C",
       "preimage_bytes": 46628,
       "preimage_sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
-      "postimage_bytes": 46831,
-      "postimage_sha256": "A4D8072BDFFEEF9B8EF1D058499761DA1E1F31EABC11BB04B8EA37D04B866D41"
+      "postimage_bytes": 46832,
+      "postimage_sha256": "79447B7102791C085030DE5B4976330B988F1A3AF46EF9503CCC160C5FC4540A"
     },
     {
       "source": "sheaves.tex",
@@ -12524,12 +12567,248 @@
       "operation_ids": [
         "MC-STK-ERR-1575-OP1"
       ]
+    },
+    {
+      "id": "MC-STK-ERR-1576",
+      "status": "included",
+      "chapter": "sets.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1576-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1577",
+      "status": "included",
+      "chapter": "sets.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1577-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1578",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1578-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1579",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1579-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1580",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1580-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1581",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1581-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1582",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1582-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1583",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1583-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1584",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1584-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1585",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1585-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1586",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1586-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1587",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1587-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1588",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1588-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1589",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1589-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1590",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1590-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1591",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1591-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1592",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1592-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1593",
+      "status": "included",
+      "chapter": "schemes.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1593-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1594",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1594-OP1",
+        "MC-STK-ERR-1594-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1595",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1595-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1596",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1596-OP1",
+        "MC-STK-ERR-1596-OP2",
+        "MC-STK-ERR-1596-OP3"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1597",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1597-OP1",
+        "MC-STK-ERR-1597-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1598",
+      "status": "included",
+      "chapter": "homology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1598-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1599",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1599-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1600",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1600-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1601",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1601-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1602",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1602-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1603",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1603-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1604",
+      "status": "included",
+      "chapter": "algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1604-OP1"
+      ]
     }
   ],
   "combined": {
     "file": "ALL-TEXTUAL-CORRECTIONS.patch",
-    "bytes": 579449,
-    "sha256": "9B7E18C5DFF3F0F6BAA0B1B71A946A2D876D01BE7C102A2D920B7634E10DD4D1"
+    "bytes": 591569,
+    "sha256": "BD780BA34C21396C7551BC5E53EA6CACC835A1A00FC6511916AAF0C8799C84B7"
   },
   "replay": {
     "independent_chapter_patches": "PASS",
@@ -12552,9 +12831,75 @@
       "stable_id": "MC-STK-ERR-1575",
       "overlay": "stacks-errata-a04446e-r50",
       "source_commit": "eacb3cccfdf7ac98b863f80bfa0ba286f00d8e01"
+    },
+    {
+      "finding_id": "H100B-SOURCE-006",
+      "stable_id": "MC-STK-ERR-1594",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-007",
+      "stable_id": "MC-STK-ERR-1595",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-009",
+      "stable_id": "MC-STK-ERR-1596",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-011",
+      "stable_id": "MC-STK-ERR-1597",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-013",
+      "stable_id": "MC-STK-ERR-1598",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-014",
+      "stable_id": "MC-STK-ERR-1599",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-015",
+      "stable_id": "MC-STK-ERR-1600",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-016",
+      "stable_id": "MC-STK-ERR-1601",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-017",
+      "stable_id": "MC-STK-ERR-1602",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-018",
+      "stable_id": "MC-STK-ERR-1603",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
+    },
+    {
+      "finding_id": "H100B-SOURCE-019",
+      "stable_id": "MC-STK-ERR-1604",
+      "overlay": "stacks-errata-a04446e-r51",
+      "source_commit": "4187cabd56752593705726209e41026b10bb9889"
     }
   ],
-  "readable_selection_still_pending": 11,
+  "readable_selection_still_pending": 0,
   "ai_role": "Patch export and packaging: OpenAI Codex — GPT-6 Astra, Ultra effort. This is not a new mathematical or human review of the historical corrections.",
   "input_closure": [
     {
@@ -12833,6 +13178,11 @@
       "sha256": "F2B9802F08ADD61B6C63489CAFA705242C70379C087974823877834E43C9AB77"
     },
     {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r51/candidate.manifest.json",
+      "bytes": 15658,
+      "sha256": "DC9BD24ED9E52C7E56FFBF0230472B1D380D0A2FB049CEDA9B4D3F006F06BFCF"
+    },
+    {
       "path": "ai-integrated/candidates/commons/stacks/errata/r6/candidate.manifest.json",
       "bytes": 10166,
       "sha256": "0573E0230065780BE1AA7E73114735428C290A45E1E1CD14401E7358764DE050"
@@ -12869,8 +13219,8 @@
     },
     {
       "path": "ai-integrated/registry/overlays.json",
-      "bytes": 79464,
-      "sha256": "1CEC2C9123E9CB19D4CD1BAF107C500449B713975C3C758D44CBDC5335837A86"
+      "bytes": 80929,
+      "sha256": "5F0ACCFB0F5F249AEA3934FD4FA02C0795978539784FDCA782FDC50DA961DFBD"
     },
     {
       "path": "candidates/commons/stacks/errata/r10/authority/source/algebra.tex",
@@ -14518,6 +14868,71 @@
       "sha256": "32D743D1F0F4A4ACD6B030DFF54BE88D92AB37DC26231510F79C89095E633A98"
     },
     {
+      "path": "candidates/commons/stacks/errata/r51/authority/algebra.tex",
+      "bytes": 1771230,
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/authority/homology.tex",
+      "bytes": 267354,
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/authority/schemes.tex",
+      "bytes": 174402,
+      "sha256": "08475A01CF0DDF69734FD7EBC0D14D3831148C25A2EF82AAAFDB65666F8FCE47"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/authority/sets.tex",
+      "bytes": 46628,
+      "sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/decisions.jsonl",
+      "bytes": 13514,
+      "sha256": "59BC973250EDB996F6C47531B714DE1E342E393FAF654453BFB8C147C7236FC9"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/operation-spec.json",
+      "bytes": 27167,
+      "sha256": "6E765FC1D1F675D2097A17F792C91D230CBE2DEF87CEF9A05E8F286B23FEBFB1"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/payload/algebra.tex",
+      "bytes": 1771240,
+      "sha256": "3151CDE389A5116CF385895001929AAE8114361926E5DE2D3BE8B198996BE51F"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/payload/homology.tex",
+      "bytes": 267353,
+      "sha256": "819F566FAFC94F4FC09E65439EC5889185F25F5DBE822070791BA6F5B770A648"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/payload/schemes.tex",
+      "bytes": 174410,
+      "sha256": "EEE0848111D89FEC94C0A70F9EFC68A8F203C3829A58058EB679BBE2C59E1FBD"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/payload/sets.tex",
+      "bytes": 46629,
+      "sha256": "81BE27D8E4F10AF822CD56EFB04CF55CA5EF63DB5E4913430D5A26922C8623FB"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/replay/independent-review.json",
+      "bytes": 1199,
+      "sha256": "5682DADFD4648CFA28434FCB2B7F1B3DE9E259B096CCA49E3FC036AA0693A635"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/source-map.jsonl",
+      "bytes": 43831,
+      "sha256": "85F764B0E202DABB80AAF847E4DCA5C95618C95DD316846BDE9382CE1362BBFC"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r51/stable-units.json",
+      "bytes": 15955,
+      "sha256": "848043F65B142E93DC4A4805CC5243F08007FD6724E01D14C54271DB6E22686B"
+    },
+    {
       "path": "candidates/commons/stacks/errata/r6/authority/source/algebra.tex",
       "bytes": 1771230,
       "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
@@ -14659,8 +15074,8 @@
     },
     {
       "path": "ai-integrated/review-notes/proposal-integration-status.json",
-      "bytes": 838,
-      "sha256": "92ABFB4D82D4927858DCB190632EF6EB1637A56C74D1BEB640570EE88044436C"
+      "bytes": 3128,
+      "sha256": "41B5B4E863D52E4E46A05875CEF0A0F5A847E9D5A2E9BF202F7151AF914F27E1"
     }
   ]
 }

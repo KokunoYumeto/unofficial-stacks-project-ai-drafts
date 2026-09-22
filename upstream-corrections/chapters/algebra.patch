@@ -1,5 +1,5 @@
 diff --git a/algebra.tex b/algebra.tex
-index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5c8aa76ed 100644
+index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..ec4a3c0d757edd6d5290474cafb5bca690021ff7 100644
 --- a/algebra.tex
 +++ b/algebra.tex
 @@ -519,7 +519,7 @@
@@ -402,6 +402,24 @@ index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5
  Noetherian topological space if and only if we have ACC for radical ideals.
  This holds if and only if every radical ideal is the radical of a finitely
  generated ideal (details omitted). Let
+@@ -13070,7 +13069,7 @@
+ 0 \to M' \to M \to M'' \to 0
+ $$
+ we have $\text{rank}(M) = \text{rank}(M') + \text{rank}(M'')$
+-because we have $M \cong M' \oplus M'$ in this case (for example
++because we have $M \cong M' \oplus M''$ in this case (for example
+ we have a splitting by Lemma \ref{lemma-lift-map}).
+ We conclude $K_0(R) = \mathbf{Z}$.
+ 
+@@ -13149,7 +13148,7 @@
+ 0 \to M' \to M \to M'' \to 0
+ $$
+ we have $\text{rank}(M) = \text{rank}(M') + \text{rank}(M'')$
+-because we have $M \cong M' \oplus M'$ in this case (for example
++because we have $M \cong M' \oplus M''$ in this case (for example
+ we have a splitting by Lemma \ref{lemma-lift-map}).
+ We conclude $K_0(R) = \mathbf{Z}$.
+ \end{proof}
 @@ -16528,7 +16527,7 @@
  
  \medskip\noindent
@@ -411,6 +429,71 @@ index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5
  because $K_f = 0$.
  \end{proof}
  
+@@ -17463,7 +17462,7 @@
+ is the group $H_i = \Ker(d_{F, i})/\Im(d_{F, i + 1})$.
+ A {\it map of complexes $\alpha : F_{\bullet} \to G_{\bullet}$}
+ is given by maps $\alpha_i : F_i \to G_i$ such that
+-$\alpha_{i-1} \circ d_{F, i} = d_{G, i-1} \circ \alpha_i$.
++$\alpha_{i-1} \circ d_{F, i} = d_{G, i} \circ \alpha_i$.
+ Such a map induces a map on homology $H_i(\alpha) :
+ H_i(F_{\bullet}) \to H_i(G_{\bullet})$. If $\alpha, \beta
+ :  F_{\bullet} \to G_{\bullet}$ are maps of complexes, then
+@@ -17559,7 +17558,7 @@
+ $$
+ We define $\Ext^i_R(M, N)$ for $i \geq 0$ to be the $i$th
+ cohomology group of this complex\footnote{At this point
+-it would perhaps be more appropriate to say ``an'' in stead
++it would perhaps be more appropriate to say ``an'' instead
+ of ``the'' Ext-group.}. For $i < 0$ we set $\Ext^i_R(M, N) = 0$.
+ Before we continue we point out that
+ $$
+@@ -17584,22 +17583,22 @@
+ Then the induced maps
+ $$
+ H^i(\alpha) :
++H^i(\Hom_R(G_{\bullet}, N))
++\longrightarrow
+ H^i(\Hom_R(F_{\bullet}, N))
+-\longrightarrow
+-H^i(\Hom_R(G_{\bullet}, N))
+ $$
+ are independent of the choice of $\alpha$.
+ If $\varphi$ is an isomorphism, so are all the maps
+ $H^i(\alpha)$. If $M_1 = M_2$, $F_\bullet = G_\bullet$, and
+-$\varphi$ is the identity, so are all the maps $H_i(\alpha)$.
++$\varphi$ is the identity, so are all the maps $H^i(\alpha)$.
+ \end{lemma}
+ 
+ \begin{proof}
+ Another map $\beta : F_{\bullet} \to G_{\bullet}$
+ inducing $\varphi$ is homotopic to $\alpha$ by
+ Lemma \ref{lemma-compare-resolutions}. Hence the
+-maps $\Hom_R(F_\bullet, N) \to
+-\Hom_R(G_\bullet, N)$ are homotopic.
++maps $\Hom_R(G_\bullet, N) \to
++\Hom_R(F_\bullet, N)$ are homotopic.
+ Hence the independence result follows from
+ Lemma \ref{lemma-homotopic-equal-homology}.
+ 
+@@ -17607,14 +17606,14 @@
+ Suppose that $\varphi$ is an isomorphism.
+ Let $\psi : M_2 \to M_1$ be an inverse.
+ Choose $\beta : G_{\bullet} \to F_{\bullet}$
+-be a map inducing $\psi :
++to be a map inducing $\psi :
+ M_2 = \Coker(d_{G, 1}) \to M_1 = \Coker(d_{F, 1})$,
+ see Lemma \ref{lemma-compare-resolutions}.
+ OK, and now consider the map
+ $H^i(\alpha) \circ H^i(\beta) =
+-H^i(\alpha \circ \beta)$. By the above the
+-map $H^i(\alpha \circ \beta)$ is the {\it same}
+-as the map $H^i(\text{id}_{G_{\bullet}}) = \text{id}$.
++H^i(\beta \circ \alpha)$. By the above the
++map $H^i(\beta \circ \alpha)$ is the {\it same}
++as the map $H^i(\text{id}_{F_{\bullet}}) = \text{id}$.
+ Similarly for the composition $H^i(\beta) \circ H^i(\alpha)$.
+ Hence $H^i(\alpha)$ and $H^i(\beta)$ are inverses of each other.
+ \end{proof}
 @@ -18413,7 +18412,7 @@
  \end{lemma}
  
@@ -572,6 +655,33 @@ index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5
  Remark \ref{remark-Tor-ring-mod-ideal})
  and we conclude that $M$ is a flat $S$-module by
  Lemma \ref{lemma-what-does-it-mean}.
+@@ -26492,7 +26491,7 @@
+ $$
+ are two short exact sequences, with $P_i$ projective.
+ Then $K \oplus P_2 \cong L \oplus P_1$. More precisely,
+-there exist a commutative diagram
++there exists a commutative diagram
+ $$
+ \xymatrix{
+ 0 \ar[r] &
+@@ -27081,7 +27080,7 @@
+ $R$-modules (Lemma \ref{lemma-what-kind-of-resolutions-Noetherian-local}).
+ By Lemma \ref{lemma-add-trivial-complex}
+ we may assume all the maps in the complex $F_{\bullet}$
+-have to property that $\Im(F_i \to F_{i-1})
++have the property that $\Im(F_i \to F_{i-1})
+ \subset \mathfrak m F_{i-1}$, because removing a trivial
+ summand from the resolution can at worst shorten the resolution.
+ Say $F_n \not = 0$ and $F_i = 0$ for $i > n$, so that
+@@ -27701,7 +27700,7 @@
+ is generated by $1$ element over a field and one
+ irreducible equation. By elementary field theory
+ $k[x_1, \ldots, x_{i + 1}]/(f_1, \ldots, f_{i + 1})$
+-is a field, and hence $\psi_i$ is injective.
++is a field, and hence $\psi_{i + 1}$ is injective.
+ 
+ \medskip\noindent
+ This implies that $\mathfrak m = (f_1, \ldots, f_n)$.
 @@ -28902,7 +28901,7 @@
  
  \begin{proof}

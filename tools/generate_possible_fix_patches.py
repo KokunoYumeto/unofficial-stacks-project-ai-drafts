@@ -127,7 +127,7 @@ def main():
         "[Possible new additions (separate)](../POSSIBLE_ADDITIONS.md)", "",
         f"**Current status: {len(integrated)} of these 13 are now in the cumulative draft and",
         f"[combined corrections-only export](../upstream-corrections/README.md); {status['pending_units']} remain pending.**",
-        "Both limit-preservation fixes are included in R50. Do not apply them twice.", "",
+        "All thirteen are included in the larger corrections-only export through R51. Do not apply them twice.", "",
         "## Review or use one correction", "",
         f"All patches are based on official commit `{base}`.",
         "Each individual patch and both bundles have been applied in a separate index",

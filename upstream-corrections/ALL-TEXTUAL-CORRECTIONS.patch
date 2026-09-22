@@ -1,5 +1,5 @@
 diff --git a/algebra.tex b/algebra.tex
-index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5c8aa76ed 100644
+index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..ec4a3c0d757edd6d5290474cafb5bca690021ff7 100644
 --- a/algebra.tex
 +++ b/algebra.tex
 @@ -519,7 +519,7 @@
@@ -402,6 +402,24 @@ index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5
  Noetherian topological space if and only if we have ACC for radical ideals.
  This holds if and only if every radical ideal is the radical of a finitely
  generated ideal (details omitted). Let
+@@ -13070,7 +13069,7 @@
+ 0 \to M' \to M \to M'' \to 0
+ $$
+ we have $\text{rank}(M) = \text{rank}(M') + \text{rank}(M'')$
+-because we have $M \cong M' \oplus M'$ in this case (for example
++because we have $M \cong M' \oplus M''$ in this case (for example
+ we have a splitting by Lemma \ref{lemma-lift-map}).
+ We conclude $K_0(R) = \mathbf{Z}$.
+ 
+@@ -13149,7 +13148,7 @@
+ 0 \to M' \to M \to M'' \to 0
+ $$
+ we have $\text{rank}(M) = \text{rank}(M') + \text{rank}(M'')$
+-because we have $M \cong M' \oplus M'$ in this case (for example
++because we have $M \cong M' \oplus M''$ in this case (for example
+ we have a splitting by Lemma \ref{lemma-lift-map}).
+ We conclude $K_0(R) = \mathbf{Z}$.
+ \end{proof}
 @@ -16528,7 +16527,7 @@
  
  \medskip\noindent
@@ -411,6 +429,71 @@ index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5
  because $K_f = 0$.
  \end{proof}
  
+@@ -17463,7 +17462,7 @@
+ is the group $H_i = \Ker(d_{F, i})/\Im(d_{F, i + 1})$.
+ A {\it map of complexes $\alpha : F_{\bullet} \to G_{\bullet}$}
+ is given by maps $\alpha_i : F_i \to G_i$ such that
+-$\alpha_{i-1} \circ d_{F, i} = d_{G, i-1} \circ \alpha_i$.
++$\alpha_{i-1} \circ d_{F, i} = d_{G, i} \circ \alpha_i$.
+ Such a map induces a map on homology $H_i(\alpha) :
+ H_i(F_{\bullet}) \to H_i(G_{\bullet})$. If $\alpha, \beta
+ :  F_{\bullet} \to G_{\bullet}$ are maps of complexes, then
+@@ -17559,7 +17558,7 @@
+ $$
+ We define $\Ext^i_R(M, N)$ for $i \geq 0$ to be the $i$th
+ cohomology group of this complex\footnote{At this point
+-it would perhaps be more appropriate to say ``an'' in stead
++it would perhaps be more appropriate to say ``an'' instead
+ of ``the'' Ext-group.}. For $i < 0$ we set $\Ext^i_R(M, N) = 0$.
+ Before we continue we point out that
+ $$
+@@ -17584,22 +17583,22 @@
+ Then the induced maps
+ $$
+ H^i(\alpha) :
++H^i(\Hom_R(G_{\bullet}, N))
++\longrightarrow
+ H^i(\Hom_R(F_{\bullet}, N))
+-\longrightarrow
+-H^i(\Hom_R(G_{\bullet}, N))
+ $$
+ are independent of the choice of $\alpha$.
+ If $\varphi$ is an isomorphism, so are all the maps
+ $H^i(\alpha)$. If $M_1 = M_2$, $F_\bullet = G_\bullet$, and
+-$\varphi$ is the identity, so are all the maps $H_i(\alpha)$.
++$\varphi$ is the identity, so are all the maps $H^i(\alpha)$.
+ \end{lemma}
+ 
+ \begin{proof}
+ Another map $\beta : F_{\bullet} \to G_{\bullet}$
+ inducing $\varphi$ is homotopic to $\alpha$ by
+ Lemma \ref{lemma-compare-resolutions}. Hence the
+-maps $\Hom_R(F_\bullet, N) \to
+-\Hom_R(G_\bullet, N)$ are homotopic.
++maps $\Hom_R(G_\bullet, N) \to
++\Hom_R(F_\bullet, N)$ are homotopic.
+ Hence the independence result follows from
+ Lemma \ref{lemma-homotopic-equal-homology}.
+ 
+@@ -17607,14 +17606,14 @@
+ Suppose that $\varphi$ is an isomorphism.
+ Let $\psi : M_2 \to M_1$ be an inverse.
+ Choose $\beta : G_{\bullet} \to F_{\bullet}$
+-be a map inducing $\psi :
++to be a map inducing $\psi :
+ M_2 = \Coker(d_{G, 1}) \to M_1 = \Coker(d_{F, 1})$,
+ see Lemma \ref{lemma-compare-resolutions}.
+ OK, and now consider the map
+ $H^i(\alpha) \circ H^i(\beta) =
+-H^i(\alpha \circ \beta)$. By the above the
+-map $H^i(\alpha \circ \beta)$ is the {\it same}
+-as the map $H^i(\text{id}_{G_{\bullet}}) = \text{id}$.
++H^i(\beta \circ \alpha)$. By the above the
++map $H^i(\beta \circ \alpha)$ is the {\it same}
++as the map $H^i(\text{id}_{F_{\bullet}}) = \text{id}$.
+ Similarly for the composition $H^i(\beta) \circ H^i(\alpha)$.
+ Hence $H^i(\alpha)$ and $H^i(\beta)$ are inverses of each other.
+ \end{proof}
 @@ -18413,7 +18412,7 @@
  \end{lemma}
  
@@ -572,6 +655,33 @@ index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..8cdd4918c21c17b7ddc270c72ffc31f5
  Remark \ref{remark-Tor-ring-mod-ideal})
  and we conclude that $M$ is a flat $S$-module by
  Lemma \ref{lemma-what-does-it-mean}.
+@@ -26492,7 +26491,7 @@
+ $$
+ are two short exact sequences, with $P_i$ projective.
+ Then $K \oplus P_2 \cong L \oplus P_1$. More precisely,
+-there exist a commutative diagram
++there exists a commutative diagram
+ $$
+ \xymatrix{
+ 0 \ar[r] &
+@@ -27081,7 +27080,7 @@
+ $R$-modules (Lemma \ref{lemma-what-kind-of-resolutions-Noetherian-local}).
+ By Lemma \ref{lemma-add-trivial-complex}
+ we may assume all the maps in the complex $F_{\bullet}$
+-have to property that $\Im(F_i \to F_{i-1})
++have the property that $\Im(F_i \to F_{i-1})
+ \subset \mathfrak m F_{i-1}$, because removing a trivial
+ summand from the resolution can at worst shorten the resolution.
+ Say $F_n \not = 0$ and $F_i = 0$ for $i > n$, so that
+@@ -27701,7 +27700,7 @@
+ is generated by $1$ element over a field and one
+ irreducible equation. By elementary field theory
+ $k[x_1, \ldots, x_{i + 1}]/(f_1, \ldots, f_{i + 1})$
+-is a field, and hence $\psi_i$ is injective.
++is a field, and hence $\psi_{i + 1}$ is injective.
+ 
+ \medskip\noindent
+ This implies that $\mathfrak m = (f_1, \ldots, f_n)$.
 @@ -28902,7 +28901,7 @@
  
  \begin{proof}
@@ -5430,7 +5540,7 @@ index 58275d8ac118829123e2dc8757bf27614741ba9e..e67695efd8749f51c4eacae6fca59530
  $v_1, \ldots, v_d \in V_y$ there exists an affine open
  $U \subset V$ with $v_1, \ldots, v_d \in U$.
 diff --git a/homology.tex b/homology.tex
-index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..ad75ca184a0cfd932b34a67d6ace15684e58193f 100644
+index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e97b5247cc 100644
 --- a/homology.tex
 +++ b/homology.tex
 @@ -631,7 +631,7 @@
@@ -5586,6 +5696,15 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..ad75ca184a0cfd932b34a67d6ace1568
  to the short exact sequence of cochain complexes by
  Lemma \ref{lemma-long-exact-sequence-cochain}.
  \end{lemma}
+@@ -3959,7 +3959,7 @@
+ the category are called {\it bigraded} objects of $\mathcal{A}$.
+ The $(p, q)$ component of a bigraded object $A$ is usually denoted
+ $A^{p, q}$. For $(a, b) \in \mathbf{Z} \times \mathbf{Z}$ we write
+-$A[a, b]$ in stead of $A[(a, b)]$.
++$A[a, b]$ instead of $A[(a, b)]$.
+ A morphism $A \to A[a, b]$ is sometimes called a
+ {\it map of bidegree $(a, b)$}.
+ 
 @@ -4045,7 +4045,7 @@
  $$
  U^p \otimes_F (V^q \otimes_F W^r) \to (U^p \otimes_F V^q) \otimes_F W^r
@@ -8096,10 +8215,165 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Schemes, Section \ref{schemes-section-quasi-coherent}.
  \item Every object of $X_{affine}$ has a covering in the chaotic
  topology whose members are elements of $\mathcal{B}$. This holds
+diff --git a/schemes.tex b/schemes.tex
+index 901e0ea3d2a5370515ca080d0800af674eb05121..47e56473c471a04f7833c696ee5b96dbc71d3c24 100644
+--- a/schemes.tex
++++ b/schemes.tex
+@@ -142,7 +142,7 @@
+ ringed spaces forms a category. In order to see this we have
+ to show that the composition of morphisms of locally ringed
+ spaces is a morphism of locally ringed spaces. OK, so let
+-$f : X \to Y$ and $g : Y \to Z$ be morphism of locally
++$f : X \to Y$ and $g : Y \to Z$ be morphisms of locally
+ ringed spaces. The composition of $f$ and $g$ is defined in
+ Sheaves, Definition \ref{sheaves-definition-composition-maps-ringed-spaces}.
+ Let $x \in X$. By
+@@ -264,7 +264,7 @@
+ \Gamma(U, f'^{-1}(\mathcal{O}_V)) \to \Gamma(U, \mathcal{O}_X)
+ $$
+ for each open subset $U \subset X$, and therefore an isomorphism of sheaves
+-$f^{-1}(\mathcal{O}_V) \to \mathcal{O}_X$. In other words, we have an
++$f'^{-1}(\mathcal{O}_V) \to \mathcal{O}_X$. In other words, we have an
+ isomorphism $f'^{\sharp} : f'^{-1}(\mathcal{O}_V) \to \mathcal{O}_X$ and
+ therefore an isomorphism of locally ringed spaces
+ $(f', f'^{\sharp}) : (X, \mathcal{O}_X) \to (V, \mathcal{O}_V)$
+@@ -919,7 +919,7 @@
+ with the canonical identification
+ $\Gamma(D(g), \mathcal{O}_Y) = \Gamma(Y, \mathcal{O}_Y)_g$, to
+ be $\psi_{D(g)}$. This is compatible with localization since the
+-restriction mapping on the affine schemes are defined in terms
++restriction mapping on the affine schemes is defined in terms
+ of the universal properties of localization also, see
+ Lemmas \ref{lemma-spec-sheaves} and \ref{lemma-standard-open}.
+ 
+@@ -1100,7 +1100,7 @@
+ we have a morphism $\mathcal{F}_M \to \widetilde M$ corresponding
+ to the map $M \to \Gamma(X, \widetilde M) = M$. Let $x \in X$
+ correspond to the prime $\mathfrak p \subset R$.
+-The induced map on stalks are the maps
++The induced maps on stalks are the maps
+ $\mathcal{O}_{X, x} \otimes_R M \to M_{\mathfrak p}$
+ which are isomorphisms because
+ $R_{\mathfrak p} \otimes_R M = M_{\mathfrak p}$.
+@@ -1353,7 +1353,7 @@
+ 
+ \medskip\noindent
+ Now Algebra, Lemma \ref{algebra-lemma-glue-modules}
+-shows that there exist an $R$-module $M$ such that
++shows that there exists an $R$-module $M$ such that
+ $M_i = M_{f_i}$ compatible with the morphisms $\psi_{ij}$.
+ Consider $\mathcal{F}_M = \widetilde M$. At this point it is
+ a formality to show that $\widetilde M$ is isomorphic to
+@@ -1370,7 +1370,7 @@
+ $$
+ Namely, given $m \in M$ we get $m_i = m/1 \in M_{f_i} = M_i$
+ by construction of $M$. By construction of $M_i$ this corresponds
+-to a section $s_i \in \mathcal{F}(U_i)$. (Namely, $\varphi^{-1}_i(m_i)$.)
++to a section $s_i \in \mathcal{F}(D(f_i))$. (Namely, $\varphi^{-1}_i(m_i)$.)
+ We claim that $s_i|_{D(f_if_j)} = s_j|_{D(f_if_j)}$. This is
+ true because, by construction of $M$, we have $\psi_{ij}(m_i) = m_j$,
+ and by the construction of the $\psi_{ij}$. By the sheaf condition of
+@@ -2961,7 +2961,7 @@
+ Moreover, since each of the inclusions $F_i \subset F$ are representable
+ by open immersions we may assume that each $V_i \subset T$ is maximal
+ open with this property.
+-Because, $(U_i, \xi'|_{U_i})$ represents the functor $F_i$ we
++Because $(U_i, \xi'|_{U_i})$ represents the functor $F_i$ we
+ get a unique morphism $g_i : V_i \to U_i$ such that
+ $g_i^*\xi'|_{U_i} = \xi|_{V_i}$. On the overlaps $V_i \cap V_j$
+ the morphisms $g_i$ and $g_j$ agree, for example because they both
+@@ -3751,7 +3751,7 @@
+ Please take a look at Morphisms, Section \ref{morphisms-section-proper} for a
+ more detailed discussion of the properties of universally closed morphisms.
+ In this section we restrict the discussion to the relationship between
+-universal closed morphisms and morphisms satisfying the
++universally closed morphisms and morphisms satisfying the
+ existence part of the valuative criterion.
+ 
+ \begin{lemma}
+@@ -4075,7 +4075,7 @@
+ 
+ \noindent
+ By Lemmas \ref{lemma-diagonal-immersion} and \ref{lemma-immersion-when-closed}
+-we see that $\Delta_{X/S}$ is a closed immersion if an only if
++we see that $\Delta_{X/S}$ is a closed immersion if and only if
+ $\Delta_{X/S}(X) \subset X \times_S X$ is a closed subset. Moreover,
+ by Lemma \ref{lemma-closed-immersion-quasi-compact} we see that a
+ separated morphism is quasi-separated. The reason for introducing
+@@ -4249,7 +4249,7 @@
+ $$
+ \xymatrix{
+ X \times_T Y \ar[r] \ar[d] & X \times_S Y \ar[d] \\
+-T \ar[r]^{\Delta_{T/S}} \ar[r] & T \times_S T
++T \ar[r]^{\Delta_{T/S}} & T \times_S T
+ }
+ $$
+ is a fibre product diagram. The lemma follows
+@@ -4431,7 +4431,7 @@
+ Example \ref{example-not-affine}. On the other hand, consider the
+ scheme
+ $$
+-\mathbf{GL}_{2, k} = \Spec(k[a, b, c, d, 1/ad - bc]).
++\mathbf{GL}_{2, k} = \Spec(k[a, b, c, d, 1/(ad - bc)]).
+ $$
+ There is a morphism $\mathbf{GL}_{2, k} \to U$ corresponding
+ to the ring map $x \mapsto a$, $y \mapsto b$. It is easy to see that
+@@ -4449,7 +4449,7 @@
+ Then the following are true
+ \begin{enumerate}
+ \item Any affine scheme has $P$.
+-\item Given a morphism $f : X \to Y$ of scheme where $Y$ has $P$, then
++\item Given a morphism $f : X \to Y$ of schemes where $Y$ has $P$, then
+ $f$ has $P$ if and only if $X$ has $P$.
+ \item If  $X \to Y$ and $Z \to Y$ are morphisms of schemes
+ and $X$, $Y$, $Z$ have $P$, then $X \times_Y Z$ has $P$.
+@@ -4495,7 +4495,7 @@
+ this implies $Z = \Spec(A)$. Hence $a = b$ as desired.
+ \end{proof}
+ 
+-\begin{lemma}[Valuative criterion separatedness]
++\begin{lemma}[Valuative criterion of separatedness]
+ \label{lemma-valuative-criterion-separatedness}
+ \begin{reference}
+ \cite[II Proposition 7.2.3]{EGA}
+@@ -4739,7 +4739,7 @@
+ \item
+ \label{item-kernel}
+ The kernel and cokernel of a morphism of quasi-coherent sheaves
+-is quasi-coherent.
++are quasi-coherent.
+ \item Given a short exact sequence of $\mathcal{O}_X$-modules
+ $0 \to \mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3 \to 0$
+ if two out of three are quasi-coherent so is the third.
+@@ -4808,13 +4808,13 @@
+ \to \bigoplus f_{i, *}\mathcal{F}_i
+ \to \bigoplus f_{ijk, *}\mathcal{F}_{ijk}
+ $$
+-where $\mathcal{F}_i, \mathcal{F}_{ijk}$ denotes the
++where $\mathcal{F}_i, \mathcal{F}_{ijk}$ denote the
+ restriction of $\mathcal{F}$ to the corresponding open.
+ If $\mathcal{F}$ is a quasi-coherent $\mathcal{O}_X$-module
+ then $\mathcal{F}_i$ is a quasi-coherent $\mathcal{O}_{U_i}$-module
+ and $\mathcal{F}_{ijk}$ is a quasi-coherent $\mathcal{O}_{U_{ijk}}$-module.
+ Hence by Lemma \ref{lemma-widetilde-pullback} we see that the second and
+-third term of the exact sequence are quasi-coherent
++third terms of the exact sequence are quasi-coherent
+ $\mathcal{O}_S$-modules. Thus we conclude that
+ $f_*\mathcal{F}$ is a quasi-coherent $\mathcal{O}_S$-module.
+ \end{proof}
 diff --git a/sets.tex b/sets.tex
-index 6b655ac5aeca337abef91e0e986192c5a2169800..05676a8dd249abe1d498174115d9d2f6321421cc 100644
+index 6b655ac5aeca337abef91e0e986192c5a2169800..7680c053961f3c53bb3502e1d6d256fa1474cb93 100644
 --- a/sets.tex
 +++ b/sets.tex
+@@ -200,7 +200,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-For each element $s \in S$ pick a $\alpha_s < \beta$ and an element
++For each element $s \in S$ pick an $\alpha_s < \beta$ and an element
+ $t_s \in T_{\alpha_s}$ which maps to $\varphi(s)$ in $T$.
+ By assumption $\alpha = \sup_{s \in S} \alpha_s$ is strictly smaller
+ than $\beta$. Hence the map $\varphi_\alpha : S \to T_\alpha$
 @@ -845,7 +845,7 @@
  Then $\text{size}(W_{a, i}) \leq \text{size}(X)$ by
  Lemma \ref{lemma-bound-finite-type}.
@@ -8127,6 +8401,15 @@ index 6b655ac5aeca337abef91e0e986192c5a2169800..05676a8dd249abe1d498174115d9d2f6
  and $W \to U$ is a morphism of $\mathcal{C}$, then
  $\{U_i \times_U W \to W \}_{i\in I}
  \in \text{Cov}(\mathcal{C})_{\kappa, \beta}$.
+@@ -1046,7 +1046,7 @@
+ \medskip\noindent
+ Pick an ordinal $\beta_1$ such that
+ $\text{Arrows}(\mathcal{C}) \subset V_{\beta_1}$,
+-$\text{Cov}_0 \subset V_{\beta_0}$,
++$\text{Cov}_0 \subset V_{\beta_1}$,
+ and $\beta_1 \geq \beta_0$.
+ By construction $f(\beta_1) \geq \beta_1$ and we see that
+ the same properties hold for $V_{f(\beta_1)}$. Moreover, as $f$ is
 @@ -1085,20 +1085,23 @@
  \in \text{Cov}(\mathcal{C})_{\kappa, \alpha}$
  we have $\beta(\mathcal{U}) < \beta_2$ and hence

@@ -8,9 +8,9 @@ not a mathematical correctness certificate.
 [Read the arguments and original/replacement passages](../PROPOSED_CORRECTIONS.md) ·
 [Possible new additions (separate)](../POSSIBLE_ADDITIONS.md)
 
-**Current status: 2 of these 13 are now in the cumulative draft and
-[combined corrections-only export](../upstream-corrections/README.md); 11 remain pending.**
-Both limit-preservation fixes are included in R50. Do not apply them twice.
+**Current status: 13 of these 13 are now in the cumulative draft and
+[combined corrections-only export](../upstream-corrections/README.md); 0 remain pending.**
+All thirteen are included in the larger corrections-only export through R51. Do not apply them twice.
 
 ## Review or use one correction
 
