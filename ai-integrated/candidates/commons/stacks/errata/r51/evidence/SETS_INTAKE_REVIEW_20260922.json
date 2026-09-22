@@ -1,0 +1,112 @@
+{
+  "schema": "stacks-occurrence-semantic-review-v1",
+  "date": "2026-09-22",
+  "reviewer": "OpenAI Codex — GPT-6 Astra, Ultra effort",
+  "review_kind": "Primary-session source review; not a second AI or human review",
+  "source": "sets.tex",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
+  "compared_public_commit": "ad922ad1fdf496debd487a49b95bc77633363970",
+  "inventory_sha256": "53667E865189AF21A0E0132B6CB670E9E6D83B9B5996F8EF1D3D903E8E56F56B",
+  "scope": "All 22 sets.tex occurrences in the received consolidated inventory; not a complete independent review of the chapter or all later French packets.",
+  "groups": [
+    {
+      "id": "SETS-RECON-001",
+      "occurrences": ["OCC-00002", "OCC-01042", "OCC-11653"],
+      "disposition": "already_composed_semantic_match",
+      "canonical_ids": ["MC-STK-ERR-0032"],
+      "authority_lines": [841, 849],
+      "rationale": "Line 844 defines W_{a,i}, with a indexing the affine opens of X and i belonging to I_a. The final coproduct at 848 must use the same ordered indices. All three reports propose exactly this replacement, and the public cumulative source already contains it.",
+      "adverse_evidence": "Indices are dummy only when both binding positions and occurrences are renamed consistently; the printed expression changes the occurrence alone.",
+      "next_action": "Retain the three producer aliases; no new canonical ID or source operation."
+    },
+    {
+      "id": "SETS-RECON-002",
+      "occurrences": ["OCC-00003", "OCC-01045", "OCC-11650"],
+      "disposition": "already_composed_semantic_match",
+      "canonical_ids": ["MC-STK-ERR-0029"],
+      "authority_lines": [973, 996],
+      "rationale": "The defined set of supports is calligraphic S_tau at 986–988. The supremum at 993 ranges over those supports, so the missing calligraphic decoration is the exact shared defect. Public source has the corrected symbol.",
+      "adverse_evidence": "No separate bare S_tau is introduced at this locus; this is not an alternative name explicitly licensed by the proof.",
+      "next_action": "Retain aliases; do not apply the replacement again."
+    },
+    {
+      "id": "SETS-RECON-003",
+      "occurrences": ["OCC-00005", "OCC-01047", "OCC-11651"],
+      "disposition": "already_composed_semantic_match",
+      "canonical_ids": ["MC-STK-ERR-0030"],
+      "authority_lines": [1013, 1089],
+      "rationale": "The proof defines beta(U) at 1074–1076, but the printed base-change bound at 1088 uses an unbound beta. The composed operation supplies beta(U). Its linked operation at 1028 also makes the recursive base-change clause take inputs at f(alpha), which is needed for the stated application. All three received reports ask for the 1088 part and are fully covered by this existing larger correction.",
+      "adverse_evidence": "Replacing only the free beta would leave a mismatch with the original recursive clause; the accepted unit includes that coupled repair. These reports are covered, not additional independent canonical units.",
+      "next_action": "Keep both linked operations in the reusable patch and map all three reports to the existing unit."
+    },
+    {
+      "id": "SETS-RECON-004",
+      "occurrences": ["OCC-00006", "OCC-00007", "OCC-00008", "OCC-01048", "OCC-01049", "OCC-11652"],
+      "disposition": "already_composed_semantic_match",
+      "canonical_ids": ["MC-STK-ERR-0031"],
+      "authority_lines": [1018, 1104],
+      "rationale": "The composition axiom is required for covers in Cov_{kappa,alpha}, not Cov_{kappa,f(alpha)}. Cofinality yields a common bound beta below beta_2, not beta_1. The initial cover U also needs to belong to the same previous stage as the refinements. The cumulative source makes both domain replacements, corrects beta_2, and explicitly increases beta to at least beta(U). The six reports describe subsets of exactly these accepted operations.",
+      "adverse_evidence": "The original bound on only the refinement covers does not by itself establish the hypothesis on the outer cover in recursion clause (2). The existing added sentence supplies it, so no further insertion is necessary.",
+      "next_action": "Preserve individual producer scopes while mapping them to the one already-composed compound unit."
+    },
+    {
+      "id": "SETS-RECON-005",
+      "occurrences": ["OCC-00004", "OCC-01046"],
+      "disposition": "accepted_missing_source_correction",
+      "canonical_ids": [],
+      "authority_lines": [952, 1063],
+      "operations": [
+        {"line": 1049, "old_text": "$\\text{Cov}_0 \\subset V_{\\beta_0}$,", "replacement_text": "$\\text{Cov}_0 \\subset V_{\\beta_1}$,"}
+      ],
+      "rationale": "beta_0 is already determined at 989–993 by representative covers of each support; it was not chosen to bound the ranks of all prescribed members of Cov_0. Choosing beta_1 at 1047 cannot change the already-fixed beta_0 in the printed condition. Since Cov_0 is a set, one can choose beta_1 large enough to bound both it and the arrow set, and also beta_1 >= beta_0. This is exactly what 1051–1053 use to propagate the conditions to f(beta_1) and later stages, yielding the first property of the lemma.",
+      "adverse_evidence": "Taking Cov_0 from low-rank representatives would make the original condition true in that special case, but the lemma allows an arbitrary given set of coverings. No rank bound by beta_0 for that arbitrary set is supplied. The current cumulative source still has the old beta_0, and no R1–R48 operation touches this line.",
+      "next_action": "Admit one new correction with both producer aliases, then compose only this exact replacement through normal gates. Do not allocate two IDs."
+    },
+    {
+      "id": "SETS-RECON-006",
+      "occurrences": ["OCC-01039"],
+      "disposition": "accepted_missing_copyedit",
+      "canonical_ids": [],
+      "authority_lines": [192, 208],
+      "operations": [
+        {"line": 203, "old_text": "pick a $\\alpha_s < \\beta$", "replacement_text": "pick an $\\alpha_s < \\beta$"}
+      ],
+      "rationale": "The indefinite article precedes alpha, which begins with a vowel sound. Changing a to an leaves every quantifier, symbol and inference unchanged.",
+      "adverse_evidence": "No mathematical error is alleged. This is a minor English copyedit and must be labelled as such, not advertised as a theorem correction.",
+      "next_action": "Include in a small copyedit sub-batch of the next accepted-source candidate."
+    },
+    {
+      "id": "SETS-RECON-007",
+      "occurrences": ["OCC-01040", "OCC-01043"],
+      "disposition": "optional_style_not_required_erratum",
+      "canonical_ids": [],
+      "authority_lines": [357, 871],
+      "rationale": "Both passages open a lemma with the conventional elliptical phrase 'With notations ... as above.' The following sentences clearly state their hypotheses. Joining the sentences is grammatical polishing, but no premise, object or logical relation is missing. Treat the two proposals as optional style suggestions, not confirmed source defects.",
+      "adverse_evidence": "The fragments are not complete ordinary prose sentences; that observation is valid, but mathematical statements routinely use elliptical setup phrases. There is no demonstrated ambiguity here.",
+      "next_action": "Retain the two suggestions separately from the corrections patch; no mandatory source edit."
+    },
+    {
+      "id": "SETS-RECON-008",
+      "occurrences": ["OCC-01041"],
+      "disposition": "editorial_placeholder_not_mathematical_erratum",
+      "canonical_ids": [],
+      "authority_lines": [636, 648],
+      "rationale": "The third item is explicitly 'add more here as needed.' It is an editorial TODO rather than an asserted mathematical condition. Its placement can be improved, but the report does not identify a false third theorem case. Removing or relocating an acknowledged TODO is an editorial-maintenance choice, not a new proof correction.",
+      "adverse_evidence": "Putting the TODO inside the list of sufficient hypotheses is awkward. Preserve that concrete observation instead of calling the mathematical statement false or quietly deleting a deliberate upstream marker.",
+      "next_action": "Retain in editorial suggestions outside the mathematical/copyedit patch."
+    },
+    {
+      "id": "SETS-RECON-009",
+      "occurrences": ["OCC-01044"],
+      "disposition": "rejected_as_required_source_correction",
+      "canonical_ids": [],
+      "authority_lines": [985, 992],
+      "rationale": "The expression has the form {T in S | exists U in Cov(C) T = Supp(U)}. After the bounded existential, the equation is its predicate. The existing TeX spacing command separates them visually. A comma or 'such that' could be added for style, but the formula already expresses the intended quantifier scope without a missing logical connective.",
+      "adverse_evidence": "The syntax is compressed; accepting the suggested punctuation would be harmless. That does not establish the reported claim that the formula is logically malformed.",
+      "next_action": "No source operation; retain the rejected proposal and rationale."
+    }
+  ],
+  "counts": {"physical_occurrences_reviewed": 22, "already_composed_occurrences": 15, "existing_canonical_units": 4, "valid_missing_occurrences": 3, "unique_valid_missing_corrections": 2, "optional_style_occurrences": 2, "editorial_placeholder_occurrences": 1, "not_required_correction_occurrences": 1},
+  "admission_state": "The two new repairs are reviewed proposals only: no new canonical IDs, registry admission, source composition or rendered-build claim in this receipt."
+}

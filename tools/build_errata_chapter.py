@@ -16,6 +16,7 @@ def main():
     p.add_argument('--prior', required=True)
     p.add_argument('--successor', required=True)
     p.add_argument('--chapter', required=True)
+    p.add_argument('--successor-source', help='Candidate-owned preview path at the successor commit; never mutates cumulative source')
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--pdflatex', default=shutil.which('pdflatex'))
     p.add_argument('--bibtex', default=shutil.which('bibtex'))
@@ -40,7 +41,9 @@ def main():
         for name, ref in [('prior', args.prior), ('a', args.successor), ('b', args.successor)]:
             folder = out / name
             folder.mkdir()
-            for source in inputs: (folder / source).write_bytes(r.blob(ref, source))
+            for source in inputs:
+                lookup = args.successor_source if name != 'prior' and source == args.chapter and args.successor_source else source
+                (folder / source).write_bytes(r.blob(ref, lookup))
             def launch(command, suffix):
                 capture = out / (name + '-' + suffix + '-capture.json')
                 if os.name == 'nt':
@@ -78,7 +81,8 @@ def main():
     r.write(out / 'BUILD_RECEIPT.json', {'schema': 'stacks-cumulative-errata-chapter-build/v1',
         'status': 'PASS_BUILD_VISUAL_PENDING', 'prior_public': args.prior, 'source_commit': args.successor,
         'chapter': args.chapter, 'source_date_epoch': '1790010000',
-        'input_files': [{'path': name, **r.identity(r.blob(args.successor, name))} for name in inputs],
+        'input_files': [{'path': (args.successor_source if name == args.chapter and args.successor_source else name),
+            'build_filename': name, **r.identity(r.blob(args.successor, args.successor_source if name == args.chapter and args.successor_source else name))} for name in inputs],
         'builds': builds, 'captures': captures, 'mutex': slot.receipt,
         'scope': 'Isolated cumulative-chapter regression proof, not a complete cross-chapter reader or release.',
         'external_auxiliaries': 'Absent identically; diagnostic multisets must match.',

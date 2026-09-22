@@ -1,0 +1,719 @@
+{
+  "schema": "human-readable-proposed-corrections-evidence/v1",
+  "date": "2026-09-19",
+  "review_label": "AI-reviewed, not expert-approved or officially adopted",
+  "scope": "Initial bounded selection, not exhaustive; proposed corrections are separate from historical-source additions and translation choices.",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "checked_draft_commit": "0e40e317e02e7b05437fcc7c7f13659e140e128f",
+  "proposal_units": 13,
+  "exact_operations": 17,
+  "source_changes_by_this_publication": 0,
+  "proposals": [
+    {
+      "finding_id": "H100B-SOURCE-006",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "CONTRAVARIANCE"
+      ],
+      "rationale": [
+        "The chosen alpha:F→G induces precomposition Hom(G,N)→Hom(F,N), hence the same direction on cohomology. The displayed induced arrow has its source and target reversed.",
+        "Both chosen lifts F→G induce homotopic maps in the contravariant direction Hom(G,N)→Hom(F,N). Match the proof to the corrected display."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-006",
+          "source_path": "algebra.tex",
+          "authority_line": 17587,
+          "located_line": 17587,
+          "start_byte": 630567,
+          "end_byte_exclusive": 630638,
+          "old_text": "H^i(\\Hom_R(F_{\\bullet}, N))\n\\longrightarrow\nH^i(\\Hom_R(G_{\\bullet}, N))",
+          "replacement_text": "H^i(\\Hom_R(G_{\\bullet}, N))\n\\longrightarrow\nH^i(\\Hom_R(F_{\\bullet}, N))",
+          "thirteen_line_context_guard": "a map of complexes inducing $\\varphi$ on\n$M_1 = \\Coker(d_{F, 1}) \\to M_2 = \\Coker(d_{G, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nThen the induced maps\n$$\nH^i(\\alpha) :\nH^i(\\Hom_R(F_{\\bullet}, N))\n\\longrightarrow\nH^i(\\Hom_R(G_{\\bullet}, N))\n$$\nare independent of the choice of $\\alpha$.\nIf $\\varphi$ is an isomorphism, so are all the maps\n$H^i(\\alpha)$. If $M_1 = M_2$, $F_\\bullet = G_\\bullet$, and",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17587",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        },
+        {
+          "finding_id": "H100B-SOURCE-006",
+          "source_path": "algebra.tex",
+          "authority_line": 17601,
+          "located_line": 17601,
+          "start_byte": 631032,
+          "end_byte_exclusive": 631084,
+          "old_text": "maps $\\Hom_R(F_\\bullet, N) \\to\n\\Hom_R(G_\\bullet, N)$",
+          "replacement_text": "maps $\\Hom_R(G_\\bullet, N) \\to\n\\Hom_R(F_\\bullet, N)$",
+          "thirteen_line_context_guard": "\\end{lemma}\n\n\\begin{proof}\nAnother map $\\beta : F_{\\bullet} \\to G_{\\bullet}$\ninducing $\\varphi$ is homotopic to $\\alpha$ by\nLemma \\ref{lemma-compare-resolutions}. Hence the\nmaps $\\Hom_R(F_\\bullet, N) \\to\n\\Hom_R(G_\\bullet, N)$ are homotopic.\nHence the independence result follows from\nLemma \\ref{lemma-homotopic-equal-homology}.\n\n\\medskip\\noindent\nSuppose that $\\varphi$ is an isomorphism.",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17601",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-006",
+          "authority_line": 17587,
+          "located_line": 18081,
+          "start_byte": 651451,
+          "end_byte_exclusive": 651522,
+          "old_text": "H^i(\\Hom_R(F_{\\bullet}, N))\n\\longrightarrow\nH^i(\\Hom_R(G_{\\bullet}, N))",
+          "replacement_text": "H^i(\\Hom_R(G_{\\bullet}, N))\n\\longrightarrow\nH^i(\\Hom_R(F_{\\bullet}, N))",
+          "thirteen_line_context_guard": "a map of complexes inducing $\\varphi$ on\n$M_1 = \\Coker(d_{F, 1}) \\to M_2 = \\Coker(d_{G, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nThen the induced maps\n$$\nH^i(\\alpha) :\nH^i(\\Hom_R(F_{\\bullet}, N))\n\\longrightarrow\nH^i(\\Hom_R(G_{\\bullet}, N))\n$$\nare independent of the choice of $\\alpha$.\nIf $\\varphi$ is an isomorphism, so are all the maps\n$H^i(\\alpha)$. If $M_1 = M_2$, $F_\\bullet = G_\\bullet$, and",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        },
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-006",
+          "authority_line": 17601,
+          "located_line": 18095,
+          "start_byte": 651916,
+          "end_byte_exclusive": 651968,
+          "old_text": "maps $\\Hom_R(F_\\bullet, N) \\to\n\\Hom_R(G_\\bullet, N)$",
+          "replacement_text": "maps $\\Hom_R(G_\\bullet, N) \\to\n\\Hom_R(F_\\bullet, N)$",
+          "thirteen_line_context_guard": "\\end{lemma}\n\n\\begin{proof}\nAnother map $\\beta : F_{\\bullet} \\to G_{\\bullet}$\ninducing $\\varphi$ is homotopic to $\\alpha$ by\nLemma \\ref{lemma-compare-resolutions}. Hence the\nmaps $\\Hom_R(F_\\bullet, N) \\to\n\\Hom_R(G_\\bullet, N)$ are homotopic.\nHence the independence result follows from\nLemma \\ref{lemma-homotopic-equal-homology}.\n\n\\medskip\\noindent\nSuppose that $\\varphi$ is an isomorphism.",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-007",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "COHOMOLOGY_INDEX"
+      ],
+      "rationale": [
+        "The induced identity is on the cohomology of the Hom cochain complex, named H^i(alpha) in the displayed construction; H_i(alpha) instead denotes homology of the original chain map."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-007",
+          "source_path": "algebra.tex",
+          "authority_line": 17594,
+          "located_line": 17594,
+          "start_byte": 630844,
+          "end_byte_exclusive": 630857,
+          "old_text": "$H_i(\\alpha)$",
+          "replacement_text": "$H^i(\\alpha)$",
+          "thirteen_line_context_guard": "\\longrightarrow\nH^i(\\Hom_R(G_{\\bullet}, N))\n$$\nare independent of the choice of $\\alpha$.\nIf $\\varphi$ is an isomorphism, so are all the maps\n$H^i(\\alpha)$. If $M_1 = M_2$, $F_\\bullet = G_\\bullet$, and\n$\\varphi$ is the identity, so are all the maps $H_i(\\alpha)$.\n\\end{lemma}\n\n\\begin{proof}\nAnother map $\\beta : F_{\\bullet} \\to G_{\\bullet}$\ninducing $\\varphi$ is homotopic to $\\alpha$ by\nLemma \\ref{lemma-compare-resolutions}. Hence the",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17594",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-007",
+          "authority_line": 17594,
+          "located_line": 18088,
+          "start_byte": 651728,
+          "end_byte_exclusive": 651741,
+          "old_text": "$H_i(\\alpha)$",
+          "replacement_text": "$H^i(\\alpha)$",
+          "thirteen_line_context_guard": "\\longrightarrow\nH^i(\\Hom_R(G_{\\bullet}, N))\n$$\nare independent of the choice of $\\alpha$.\nIf $\\varphi$ is an isomorphism, so are all the maps\n$H^i(\\alpha)$. If $M_1 = M_2$, $F_\\bullet = G_\\bullet$, and\n$\\varphi$ is the identity, so are all the maps $H_i(\\alpha)$.\n\\end{lemma}\n\n\\begin{proof}\nAnother map $\\beta : F_{\\bullet} \\to G_{\\bullet}$\ninducing $\\varphi$ is homotopic to $\\alpha$ by\nLemma \\ref{lemma-compare-resolutions}. Hence the",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-009",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "CONTRAVARIANT_COMPOSITION"
+      ],
+      "rationale": [
+        "Precomposition reverses order: alpha*:H(G,N)→H(F,N), beta*:H(F,N)→H(G,N); alpha* after beta* equals (beta after alpha)* on H(F,N).",
+        "Precomposition reverses order: alpha*:H(G,N)→H(F,N), beta*:H(F,N)→H(G,N); alpha* after beta* equals (beta after alpha)* on H(F,N).",
+        "The composite beta after alpha is an endomorphism of F and lifts id_M1, so it is homotopic to id_F. The swapped composition is handled by the next sentence."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-009",
+          "source_path": "algebra.tex",
+          "authority_line": 17615,
+          "located_line": 17615,
+          "start_byte": 631515,
+          "end_byte_exclusive": 631538,
+          "old_text": "H^i(\\alpha \\circ \\beta)",
+          "replacement_text": "H^i(\\beta \\circ \\alpha)",
+          "thirteen_line_context_guard": "Choose $\\beta : G_{\\bullet} \\to F_{\\bullet}$\nbe a map inducing $\\psi :\nM_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}\nas the map $H^i(\\text{id}_{G_{\\bullet}}) = \\text{id}$.\nSimilarly for the composition $H^i(\\beta) \\circ H^i(\\alpha)$.\nHence $H^i(\\alpha)$ and $H^i(\\beta)$ are inverses of each other.\n\\end{proof}\n",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17615",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        },
+        {
+          "finding_id": "H100B-SOURCE-009",
+          "source_path": "algebra.tex",
+          "authority_line": 17616,
+          "located_line": 17616,
+          "start_byte": 631563,
+          "end_byte_exclusive": 631586,
+          "old_text": "H^i(\\alpha \\circ \\beta)",
+          "replacement_text": "H^i(\\beta \\circ \\alpha)",
+          "thirteen_line_context_guard": "be a map inducing $\\psi :\nM_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}\nas the map $H^i(\\text{id}_{G_{\\bullet}}) = \\text{id}$.\nSimilarly for the composition $H^i(\\beta) \\circ H^i(\\alpha)$.\nHence $H^i(\\alpha)$ and $H^i(\\beta)$ are inverses of each other.\n\\end{proof}\n\n\\begin{lemma}",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17616",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        },
+        {
+          "finding_id": "H100B-SOURCE-009",
+          "source_path": "algebra.tex",
+          "authority_line": 17617,
+          "located_line": 17617,
+          "start_byte": 631622,
+          "end_byte_exclusive": 631645,
+          "old_text": "\\text{id}_{G_{\\bullet}}",
+          "replacement_text": "\\text{id}_{F_{\\bullet}}",
+          "thirteen_line_context_guard": "M_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}\nas the map $H^i(\\text{id}_{G_{\\bullet}}) = \\text{id}$.\nSimilarly for the composition $H^i(\\beta) \\circ H^i(\\alpha)$.\nHence $H^i(\\alpha)$ and $H^i(\\beta)$ are inverses of each other.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-long-exact-seq-ext}",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17617",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-009",
+          "authority_line": 17615,
+          "located_line": 18109,
+          "start_byte": 652399,
+          "end_byte_exclusive": 652422,
+          "old_text": "H^i(\\alpha \\circ \\beta)",
+          "replacement_text": "H^i(\\beta \\circ \\alpha)",
+          "thirteen_line_context_guard": "Choose $\\beta : G_{\\bullet} \\to F_{\\bullet}$\nbe a map inducing $\\psi :\nM_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}\nas the map $H^i(\\text{id}_{G_{\\bullet}}) = \\text{id}$.\nSimilarly for the composition $H^i(\\beta) \\circ H^i(\\alpha)$.\nHence $H^i(\\alpha)$ and $H^i(\\beta)$ are inverses of each other.\n\\end{proof}\n",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        },
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-009",
+          "authority_line": 17616,
+          "located_line": 18110,
+          "start_byte": 652447,
+          "end_byte_exclusive": 652470,
+          "old_text": "H^i(\\alpha \\circ \\beta)",
+          "replacement_text": "H^i(\\beta \\circ \\alpha)",
+          "thirteen_line_context_guard": "be a map inducing $\\psi :\nM_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}\nas the map $H^i(\\text{id}_{G_{\\bullet}}) = \\text{id}$.\nSimilarly for the composition $H^i(\\beta) \\circ H^i(\\alpha)$.\nHence $H^i(\\alpha)$ and $H^i(\\beta)$ are inverses of each other.\n\\end{proof}\n\n\\begin{lemma}",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        },
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-009",
+          "authority_line": 17617,
+          "located_line": 18111,
+          "start_byte": 652506,
+          "end_byte_exclusive": 652529,
+          "old_text": "\\text{id}_{G_{\\bullet}}",
+          "replacement_text": "\\text{id}_{F_{\\bullet}}",
+          "thirteen_line_context_guard": "M_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}\nas the map $H^i(\\text{id}_{G_{\\bullet}}) = \\text{id}$.\nSimilarly for the composition $H^i(\\beta) \\circ H^i(\\alpha)$.\nHence $H^i(\\alpha)$ and $H^i(\\beta)$ are inverses of each other.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-long-exact-seq-ext}",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-011",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "SPLIT_EXACT_SEQUENCE"
+      ],
+      "rationale": [
+        "Each immediately preceding short exact sequence has endpoints M-prime and M-double-prime. Since the quotient is finite free, the splitting is M≅M-prime⊕M-double-prime. The identical typo occurs in both the PID example and local-ring K0 proof; both loci are explicitly included.",
+        "Each immediately preceding short exact sequence has endpoints M-prime and M-double-prime. Since the quotient is finite free, the splitting is M≅M-prime⊕M-double-prime. The identical typo occurs in both the PID example and local-ring K0 proof; both loci are explicitly included."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-011",
+          "source_path": "algebra.tex",
+          "authority_line": 13073,
+          "located_line": 13073,
+          "start_byte": 467993,
+          "end_byte_exclusive": 468005,
+          "old_text": "M' \\oplus M'",
+          "replacement_text": "M' \\oplus M''",
+          "thirteen_line_context_guard": "A finite free module has a well defined rank by Lemma \\ref{lemma-rank}.\nGiven a short exact sequence of finite free modules\n$$\n0 \\to M' \\to M \\to M'' \\to 0\n$$\nwe have $\\text{rank}(M) = \\text{rank}(M') + \\text{rank}(M'')$\nbecause we have $M \\cong M' \\oplus M'$ in this case (for example\nwe have a splitting by Lemma \\ref{lemma-lift-map}).\nWe conclude $K_0(R) = \\mathbf{Z}$.\n\n\\medskip\\noindent\nThe structure theorem for modules of a PID says that\nany finitely generated $R$-module is of the form",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13073",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        },
+        {
+          "finding_id": "H100B-SOURCE-011",
+          "source_path": "algebra.tex",
+          "authority_line": 13152,
+          "located_line": 13152,
+          "start_byte": 470691,
+          "end_byte_exclusive": 470703,
+          "old_text": "M' \\oplus M'",
+          "replacement_text": "M' \\oplus M''",
+          "thirteen_line_context_guard": "A finite free module has a well defined rank by Lemma \\ref{lemma-rank}.\nGiven a short exact sequence of finite free $R$-modules\n$$\n0 \\to M' \\to M \\to M'' \\to 0\n$$\nwe have $\\text{rank}(M) = \\text{rank}(M') + \\text{rank}(M'')$\nbecause we have $M \\cong M' \\oplus M'$ in this case (for example\nwe have a splitting by Lemma \\ref{lemma-lift-map}).\nWe conclude $K_0(R) = \\mathbf{Z}$.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-K0-and-K0prime-Artinian-local}",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13152",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-011",
+          "authority_line": 13073,
+          "located_line": 13131,
+          "start_byte": 470296,
+          "end_byte_exclusive": 470308,
+          "old_text": "M' \\oplus M'",
+          "replacement_text": "M' \\oplus M''",
+          "thirteen_line_context_guard": "A finite free module has a well defined rank by Lemma \\ref{lemma-rank}.\nGiven a short exact sequence of finite free modules\n$$\n0 \\to M' \\to M \\to M'' \\to 0\n$$\nwe have $\\text{rank}(M) = \\text{rank}(M') + \\text{rank}(M'')$\nbecause we have $M \\cong M' \\oplus M'$ in this case (for example\nwe have a splitting by Lemma \\ref{lemma-lift-map}).\nWe conclude $K_0(R) = \\mathbf{Z}$.\n\n\\medskip\\noindent\nThe structure theorem for modules of a PID says that\nany finitely generated $R$-module is of the form",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        },
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-011",
+          "authority_line": 13152,
+          "located_line": 13210,
+          "start_byte": 472994,
+          "end_byte_exclusive": 473006,
+          "old_text": "M' \\oplus M'",
+          "replacement_text": "M' \\oplus M''",
+          "thirteen_line_context_guard": "A finite free module has a well defined rank by Lemma \\ref{lemma-rank}.\nGiven a short exact sequence of finite free $R$-modules\n$$\n0 \\to M' \\to M \\to M'' \\to 0\n$$\nwe have $\\text{rank}(M) = \\text{rank}(M') + \\text{rank}(M'')$\nbecause we have $M \\cong M' \\oplus M'$ in this case (for example\nwe have a splitting by Lemma \\ref{lemma-lift-map}).\nWe conclude $K_0(R) = \\mathbf{Z}$.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-K0-and-K0prime-Artinian-local}",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-013",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "EDITORIAL"
+      ],
+      "rationale": [
+        "The preposition is the ordinary single word instead; no mathematical notation changes."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-013",
+          "source_path": "homology.tex",
+          "authority_line": 3962,
+          "located_line": 3962,
+          "start_byte": 127531,
+          "end_byte_exclusive": 127542,
+          "old_text": "in stead of",
+          "replacement_text": "instead of",
+          "thirteen_line_context_guard": "of $G$-graded objects by the rule $(A[g])^{g_0} = A^{g + g_0}$.\nA particular case of this type of construction is when\n$G = \\mathbf{Z} \\times \\mathbf{Z}$. In this case the objects of\nthe category are called {\\it bigraded} objects of $\\mathcal{A}$.\nThe $(p, q)$ component of a bigraded object $A$ is usually denoted\n$A^{p, q}$. For $(a, b) \\in \\mathbf{Z} \\times \\mathbf{Z}$ we write\n$A[a, b]$ in stead of $A[(a, b)]$.\nA morphism $A \\to A[a, b]$ is sometimes called a\n{\\it map of bidegree $(a, b)$}.\n\n\n\n",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3962",
+          "authority_file_sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "homology.tex",
+          "finding_id": "H100B-SOURCE-013",
+          "authority_line": 3962,
+          "located_line": 4045,
+          "start_byte": 131262,
+          "end_byte_exclusive": 131273,
+          "old_text": "in stead of",
+          "replacement_text": "instead of",
+          "thirteen_line_context_guard": "of $G$-graded objects by the rule $(A[g])^{g_0} = A^{g + g_0}$.\nA particular case of this type of construction is when\n$G = \\mathbf{Z} \\times \\mathbf{Z}$. In this case the objects of\nthe category are called {\\it bigraded} objects of $\\mathcal{A}$.\nThe $(p, q)$ component of a bigraded object $A$ is usually denoted\n$A^{p, q}$. For $(a, b) \\in \\mathbf{Z} \\times \\mathbf{Z}$ we write\n$A[a, b]$ in stead of $A[(a, b)]$.\nA morphism $A \\to A[a, b]$ is sometimes called a\n{\\it map of bidegree $(a, b)$}.\n\n\n\n",
+          "preimage_sha256": "3411933D098B5C00C8C44474ACE78D1EAD5B787C2BA4775DECFFB8BBB3F28BF9",
+          "prospective_postimage_sha256": "9CEEA86F962C06EBA69FEEC00BC91D4FA5BAA5187094C39549B62EBEA205FDAD"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-014",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "EDITORIAL"
+      ],
+      "rationale": [
+        "The subject a commutative diagram is singular."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-014",
+          "source_path": "algebra.tex",
+          "authority_line": 26495,
+          "located_line": 26495,
+          "start_byte": 963142,
+          "end_byte_exclusive": 963175,
+          "old_text": "there exist a commutative diagram",
+          "replacement_text": "there exists a commutative diagram",
+          "thirteen_line_context_guard": "0 \\to K \\xrightarrow{c_1} P_1 \\xrightarrow{p_1} M \\to 0\n\\quad\\text{and}\\quad\n0 \\to L \\xrightarrow{c_2} P_2 \\xrightarrow{p_2} M \\to 0\n$$\nare two short exact sequences, with $P_i$ projective.\nThen $K \\oplus P_2 \\cong L \\oplus P_1$. More precisely,\nthere exist a commutative diagram\n$$\n\\xymatrix{\n0 \\ar[r] &\nK \\oplus P_2 \\ar[r]_{(c_1, \\text{id})} \\ar[d] &\nP_1 \\oplus P_2 \\ar[r]_{(p_1, 0)} \\ar[d] &\nM \\ar[r] \\ar@{=}[d] &",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26495",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-014",
+          "authority_line": 26495,
+          "located_line": 27058,
+          "start_byte": 987331,
+          "end_byte_exclusive": 987364,
+          "old_text": "there exist a commutative diagram",
+          "replacement_text": "there exists a commutative diagram",
+          "thirteen_line_context_guard": "0 \\to K \\xrightarrow{c_1} P_1 \\xrightarrow{p_1} M \\to 0\n\\quad\\text{and}\\quad\n0 \\to L \\xrightarrow{c_2} P_2 \\xrightarrow{p_2} M \\to 0\n$$\nare two short exact sequences, with $P_i$ projective.\nThen $K \\oplus P_2 \\cong L \\oplus P_1$. More precisely,\nthere exist a commutative diagram\n$$\n\\xymatrix{\n0 \\ar[r] &\nK \\oplus P_2 \\ar[r]_{(c_1, \\text{id})} \\ar[d] &\nP_1 \\oplus P_2 \\ar[r]_{(p_1, 0)} \\ar[d] &\nM \\ar[r] \\ar@{=}[d] &",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-015",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "EDITORIAL"
+      ],
+      "rationale": [
+        "The resolution maps have the specified property; to is a typographical substitution for the article."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-015",
+          "source_path": "algebra.tex",
+          "authority_line": 27084,
+          "located_line": 27084,
+          "start_byte": 983858,
+          "end_byte_exclusive": 983879,
+          "old_text": "have to property that",
+          "replacement_text": "have the property that",
+          "thirteen_line_context_guard": "\n\\begin{proof}\nLet $F_{\\bullet}$ be a finite resolution of $\\kappa$ by finite free\n$R$-modules (Lemma \\ref{lemma-what-kind-of-resolutions-Noetherian-local}).\nBy Lemma \\ref{lemma-add-trivial-complex}\nwe may assume all the maps in the complex $F_{\\bullet}$\nhave to property that $\\Im(F_i \\to F_{i-1})\n\\subset \\mathfrak m F_{i-1}$, because removing a trivial\nsummand from the resolution can at worst shorten the resolution.\nSay $F_n \\not = 0$ and $F_i = 0$ for $i > n$, so that\nthe projective dimension of $\\kappa$ is $n$.\nBy Proposition \\ref{proposition-what-exact} we see that\n$\\text{depth}_{I(\\varphi_n)}(R) \\geq n$ since $I(\\varphi_n)$",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27084",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-015",
+          "authority_line": 27084,
+          "located_line": 27759,
+          "start_byte": 1013040,
+          "end_byte_exclusive": 1013061,
+          "old_text": "have to property that",
+          "replacement_text": "have the property that",
+          "thirteen_line_context_guard": "\n\\begin{proof}\nLet $F_{\\bullet}$ be a finite resolution of $\\kappa$ by finite free\n$R$-modules (Lemma \\ref{lemma-what-kind-of-resolutions-Noetherian-local}).\nBy Lemma \\ref{lemma-add-trivial-complex}\nwe may assume all the maps in the complex $F_{\\bullet}$\nhave to property that $\\Im(F_i \\to F_{i-1})\n\\subset \\mathfrak m F_{i-1}$, because removing a trivial\nsummand from the resolution can at worst shorten the resolution.\nSay $F_n \\not = 0$ and $F_i = 0$ for $i > n$, so that\nthe projective dimension of $\\kappa$ is $n$.\nBy Proposition \\ref{proposition-what-exact} we see that\n$\\text{depth}_{I(\\varphi_n)}(R) \\geq n$ since $I(\\varphi_n)$",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-016",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "INDUCTION_INDEX"
+      ],
+      "rationale": [
+        "The proof assumes injectivity at i and shows the quotient with i+1 variables and equations is a field. Its surjective unital map is psi_(i+1), so that map is now injective."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-016",
+          "source_path": "algebra.tex",
+          "authority_line": 27704,
+          "located_line": 27704,
+          "start_byte": 1005808,
+          "end_byte_exclusive": 1005816,
+          "old_text": "$\\psi_i$",
+          "replacement_text": "$\\psi_{i + 1}$",
+          "thirteen_line_context_guard": "Given the statement for $i$ we prove it for $i + 1$.\nThe ring extension $k[x_1, \\ldots, x_i]/(f_1, \\ldots, f_i) \\to\nk[x_1, \\ldots, x_{i + 1}]/(f_1, \\ldots, f_{i + 1})$\nis generated by $1$ element over a field and one\nirreducible equation. By elementary field theory\n$k[x_1, \\ldots, x_{i + 1}]/(f_1, \\ldots, f_{i + 1})$\nis a field, and hence $\\psi_i$ is injective.\n\n\\medskip\\noindent\nThis implies that $\\mathfrak m = (f_1, \\ldots, f_n)$.\nMoreover, we also conclude that\n$$\nk[x_1, \\ldots, x_n]/(f_1, \\ldots, f_i)",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27704",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-016",
+          "authority_line": 27704,
+          "located_line": 28429,
+          "start_byte": 1036921,
+          "end_byte_exclusive": 1036929,
+          "old_text": "$\\psi_i$",
+          "replacement_text": "$\\psi_{i + 1}$",
+          "thirteen_line_context_guard": "Given the statement for $i$ we prove it for $i + 1$.\nThe ring extension $k[x_1, \\ldots, x_i]/(f_1, \\ldots, f_i) \\to\nk[x_1, \\ldots, x_{i + 1}]/(f_1, \\ldots, f_{i + 1})$\nis generated by $1$ element over a field and one\nirreducible equation. By elementary field theory\n$k[x_1, \\ldots, x_{i + 1}]/(f_1, \\ldots, f_{i + 1})$\nis a field, and hence $\\psi_i$ is injective.\n\n\\medskip\\noindent\nThis implies that $\\mathfrak m = (f_1, \\ldots, f_n)$.\nMoreover, we also conclude that\n$$\nk[x_1, \\ldots, x_n]/(f_1, \\ldots, f_i)",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-017",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "CHAIN_MAP_TYPING"
+      ],
+      "rationale": [
+        "alpha_i has target G_i. The outgoing differential there is d_(G,i):G_i→G_(i-1); d_(G,i-1) is not composable with alpha_i."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-017",
+          "source_path": "algebra.tex",
+          "authority_line": 17466,
+          "located_line": 17466,
+          "start_byte": 626443,
+          "end_byte_exclusive": 626468,
+          "old_text": "d_{G, i-1} \\circ \\alpha_i",
+          "replacement_text": "d_{G, i} \\circ \\alpha_i",
+          "thirteen_line_context_guard": "$F_i \\to F_{i-1}$. In this section we are always going to\nassume that $F_0$ is the last nonzero term in the complex.\nThe {\\it $i$th homology group of the complex} $F_{\\bullet}$\nis the group $H_i = \\Ker(d_{F, i})/\\Im(d_{F, i + 1})$.\nA {\\it map of complexes $\\alpha : F_{\\bullet} \\to G_{\\bullet}$}\nis given by maps $\\alpha_i : F_i \\to G_i$ such that\n$\\alpha_{i-1} \\circ d_{F, i} = d_{G, i-1} \\circ \\alpha_i$.\nSuch a map induces a map on homology $H_i(\\alpha) :\nH_i(F_{\\bullet}) \\to H_i(G_{\\bullet})$. If $\\alpha, \\beta\n:  F_{\\bullet} \\to G_{\\bullet}$ are maps of complexes, then\na {\\it homotopy} between $\\alpha$ and $\\beta$ is given by\na collection of maps $h_i : F_i \\to G_{i + 1}$ such that\n$\\alpha_i - \\beta_i = d_{G, i + 1} \\circ h_i +",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17466",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-017",
+          "authority_line": 17466,
+          "located_line": 17948,
+          "start_byte": 646805,
+          "end_byte_exclusive": 646830,
+          "old_text": "d_{G, i-1} \\circ \\alpha_i",
+          "replacement_text": "d_{G, i} \\circ \\alpha_i",
+          "thirteen_line_context_guard": "$F_i \\to F_{i-1}$. In this section we are always going to\nassume that $F_0$ is the last nonzero term in the complex.\nThe {\\it $i$th homology group of the complex} $F_{\\bullet}$\nis the group $H_i = \\Ker(d_{F, i})/\\Im(d_{F, i + 1})$.\nA {\\it map of complexes $\\alpha : F_{\\bullet} \\to G_{\\bullet}$}\nis given by maps $\\alpha_i : F_i \\to G_i$ such that\n$\\alpha_{i-1} \\circ d_{F, i} = d_{G, i-1} \\circ \\alpha_i$.\nSuch a map induces a map on homology $H_i(\\alpha) :\nH_i(F_{\\bullet}) \\to H_i(G_{\\bullet})$. If $\\alpha, \\beta\n:  F_{\\bullet} \\to G_{\\bullet}$ are maps of complexes, then\na {\\it homotopy} between $\\alpha$ and $\\beta$ is given by\na collection of maps $h_i : F_i \\to G_{i + 1}$ such that\n$\\alpha_i - \\beta_i = d_{G, i + 1} \\circ h_i +",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-018",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "EDITORIAL"
+      ],
+      "rationale": [
+        "Single-word spelling in the Ext-definition footnote; the line break before of remains."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-018",
+          "source_path": "algebra.tex",
+          "authority_line": 17562,
+          "located_line": 17562,
+          "start_byte": 629709,
+          "end_byte_exclusive": 629717,
+          "old_text": "in stead",
+          "replacement_text": "instead",
+          "thirteen_line_context_guard": "\\Hom_R(F_0, N) \\to\n\\Hom_R(F_1, N) \\to\n\\Hom_R(F_2, N) \\to \\ldots\n$$\nWe define $\\Ext^i_R(M, N)$ for $i \\geq 0$ to be the $i$th\ncohomology group of this complex\\footnote{At this point\nit would perhaps be more appropriate to say ``an'' in stead\nof ``the'' Ext-group.}. For $i < 0$ we set $\\Ext^i_R(M, N) = 0$.\nBefore we continue we point out that\n$$\n\\Ext^0_R(M, N) = \\Ker(\\Hom_R(F_0, N) \\to \\Hom_R(F_1, N)) =\n\\Hom_R(M, N)\n$$",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17562",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-018",
+          "authority_line": 17562,
+          "located_line": 18044,
+          "start_byte": 650071,
+          "end_byte_exclusive": 650079,
+          "old_text": "in stead",
+          "replacement_text": "instead",
+          "thirteen_line_context_guard": "\\Hom_R(F_0, N) \\to\n\\Hom_R(F_1, N) \\to\n\\Hom_R(F_2, N) \\to \\ldots\n$$\nWe define $\\Ext^i_R(M, N)$ for $i \\geq 0$ to be the $i$th\ncohomology group of this complex\\footnote{At this point\nit would perhaps be more appropriate to say ``an'' in stead\nof ``the'' Ext-group.}. For $i < 0$ we set $\\Ext^i_R(M, N) = 0$.\nBefore we continue we point out that\n$$\n\\Ext^0_R(M, N) = \\Ker(\\Hom_R(F_0, N) \\to \\Hom_R(F_1, N)) =\n\\Hom_R(M, N)\n$$",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "H100B-SOURCE-019",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "EDITORIAL"
+      ],
+      "rationale": [
+        "Supply the infinitival to in Choose beta to be a map."
+      ],
+      "operations": [
+        {
+          "finding_id": "H100B-SOURCE-019",
+          "source_path": "algebra.tex",
+          "authority_line": 17610,
+          "located_line": 17610,
+          "start_byte": 631333,
+          "end_byte_exclusive": 631350,
+          "old_text": "be a map inducing",
+          "replacement_text": "to be a map inducing",
+          "thirteen_line_context_guard": "Lemma \\ref{lemma-homotopic-equal-homology}.\n\n\\medskip\\noindent\nSuppose that $\\varphi$ is an isomorphism.\nLet $\\psi : M_2 \\to M_1$ be an inverse.\nChoose $\\beta : G_{\\bullet} \\to F_{\\bullet}$\nbe a map inducing $\\psi :\nM_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17610",
+          "authority_file_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": null,
+      "registry_state": "NOT_ALLOCATED_BY_THIS_REVIEW",
+      "current_replay": [
+        {
+          "source_path": "algebra.tex",
+          "finding_id": "H100B-SOURCE-019",
+          "authority_line": 17610,
+          "located_line": 18104,
+          "start_byte": 652217,
+          "end_byte_exclusive": 652234,
+          "old_text": "be a map inducing",
+          "replacement_text": "to be a map inducing",
+          "thirteen_line_context_guard": "Lemma \\ref{lemma-homotopic-equal-homology}.\n\n\\medskip\\noindent\nSuppose that $\\varphi$ is an isomorphism.\nLet $\\psi : M_2 \\to M_1$ be an inverse.\nChoose $\\beta : G_{\\bullet} \\to F_{\\bullet}$\nbe a map inducing $\\psi :\nM_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})$,\nsee Lemma \\ref{lemma-compare-resolutions}.\nOK, and now consider the map\n$H^i(\\alpha) \\circ H^i(\\beta) =\nH^i(\\alpha \\circ \\beta)$. By the above the\nmap $H^i(\\alpha \\circ \\beta)$ is the {\\it same}",
+          "preimage_sha256": "2789BC69C75351B0840206C4BC7EC6DB0A7CC7765E1F7ECC1CFA671EA80D64CD",
+          "prospective_postimage_sha256": "63F122260988EA4385ECA7B84CD5F26BAF3D9769EE3416F4E1CE9BF9D36E697D"
+        }
+      ]
+    },
+    {
+      "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "BOUND_FIBRE_IDENTIFIER"
+      ],
+      "rationale": [
+        "The reverse implication fixes y_T in G(T) at168 and explicitly sets out to prove that F_{y_T} is limit preserving at169. The subscript y from the separate forward implication is not the fixed object in this direction. Restriction to each T-prime_i must be the fibre functor based on y_T."
+      ],
+      "operations": [
+        {
+          "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+          "source_path": "spaces-limits.tex",
+          "authority_line": 178,
+          "located_line": 178,
+          "start_byte": 6273,
+          "end_byte_exclusive": 6282,
+          "old_text": "F_y(T'_i)",
+          "replacement_text": "F_{y_T}(T'_i)",
+          "thirteen_line_context_guard": "$I$ is a directed set. Denote $y_i \\in F(T'_i)$ the\nimage of $y_{T'}$. Then we see that $(y_i, x_{T'})$ is an\nelement of the fibre product\n$\\colim_i G(T'_i) \\times_{G(T')} F(T')$.\nHence by (2) we get a unique element $x$ of $\\colim_i F(T'_i)$\nmapping to $(y_i, x_{T'})$. It is clear that $x$ defines an element\nof $\\colim_i F_y(T'_i)$ mapping to $x_{T'}$ and we win.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-composition-locally-finite-presentation}\nLet $S$ be a scheme contained in $\\Sch_{fppf}$.\nLet $F, G, H : (\\Sch/S)_{fppf}^{opp} \\to \\textit{Sets}$.",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-limits.tex#L178",
+          "authority_file_sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": "MC-STK-ERR-1574",
+      "registry_state": "RESERVED_R50_CANDIDATE_NOT_ADMITTED",
+      "current_replay": [
+        {
+          "source_path": "spaces-limits.tex",
+          "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+          "authority_line": 178,
+          "located_line": 178,
+          "start_byte": 6273,
+          "end_byte_exclusive": 6282,
+          "old_text": "F_y(T'_i)",
+          "replacement_text": "F_{y_T}(T'_i)",
+          "thirteen_line_context_guard": "$I$ is a directed set. Denote $y_i \\in F(T'_i)$ the\nimage of $y_{T'}$. Then we see that $(y_i, x_{T'})$ is an\nelement of the fibre product\n$\\colim_i G(T'_i) \\times_{G(T')} F(T')$.\nHence by (2) we get a unique element $x$ of $\\colim_i F(T'_i)$\nmapping to $(y_i, x_{T'})$. It is clear that $x$ defines an element\nof $\\colim_i F_y(T'_i)$ mapping to $x_{T'}$ and we win.\n\\end{proof}\n\n\\begin{lemma}\n\\label{lemma-composition-locally-finite-presentation}\nLet $S$ be a scheme contained in $\\Sch_{fppf}$.\nLet $F, G, H : (\\Sch/S)_{fppf}^{opp} \\to \\textit{Sets}$.",
+          "preimage_sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228",
+          "prospective_postimage_sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+        }
+      ]
+    },
+    {
+      "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+      "decision": "ACCEPT_BOUNDED_DRAFT_CORRECTION",
+      "kinds": [
+        "PROOF_JUSTIFICATION"
+      ],
+      "rationale": [
+        "The comparison266–267 is a fibre product over a varying G(T_i), a finite limit rather than merely a product. For filtered systems of sets, a representative pair whose images agree in the colimit agrees at a common later stage; equalities of representatives likewise hold at a common later stage. This proves the required bijection. Replacing products by limits states the actual fact used; no theorem hypothesis or conclusion changes. The producer-supplied SGA4 locator has not independently been consulted and is not used as proof evidence here."
+      ],
+      "operations": [
+        {
+          "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+          "source_path": "spaces-limits.tex",
+          "authority_line": 269,
+          "located_line": 269,
+          "start_byte": 9099,
+          "end_byte_exclusive": 9114,
+          "old_text": "finite products",
+          "replacement_text": "finite limits",
+          "thirteen_line_context_guard": "Lemma \\ref{lemma-characterize-relative-limit-preserving}.\nThen we have\n$$\n\\colim (F \\times_G H)(T_i) =\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i)\n$$\nas filtered colimits commute with finite products. Our goal is thus to\nshow that\n$$\n\\xymatrix{\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i) \\ar[r] \\ar[d] &\nF(T) \\times_{G(T)} H(T) \\ar[d] \\\\\n\\colim_i E(T_i) \\ar[r] & E(T)",
+          "source_link": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-limits.tex#L269",
+          "authority_file_sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+        }
+      ],
+      "status": "PROPOSED_NOT_COMPOSED_IN_CHECKED_DRAFT",
+      "registry_id": "MC-STK-ERR-1575",
+      "registry_state": "RESERVED_R50_CANDIDATE_NOT_ADMITTED",
+      "current_replay": [
+        {
+          "source_path": "spaces-limits.tex",
+          "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+          "authority_line": 269,
+          "located_line": 269,
+          "start_byte": 9099,
+          "end_byte_exclusive": 9114,
+          "old_text": "finite products",
+          "replacement_text": "finite limits",
+          "thirteen_line_context_guard": "Lemma \\ref{lemma-characterize-relative-limit-preserving}.\nThen we have\n$$\n\\colim (F \\times_G H)(T_i) =\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i)\n$$\nas filtered colimits commute with finite products. Our goal is thus to\nshow that\n$$\n\\xymatrix{\n\\colim F(T_i) \\times_{\\colim G(T_i)} \\colim H(T_i) \\ar[r] \\ar[d] &\nF(T) \\times_{G(T)} H(T) \\ar[d] \\\\\n\\colim_i E(T_i) \\ar[r] & E(T)",
+          "preimage_sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228",
+          "prospective_postimage_sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+        }
+      ]
+    }
+  ],
+  "resolved_historical_findings": [
+    {
+      "finding_id": "H100B-SOURCE-010",
+      "decision": "DUPLICATE_ALREADY_IMPLEMENTED_IN_CURRENT_CHECKED_COMMIT",
+      "overlay": "stacks-errata-a04446e-r20",
+      "stable_id": "MC-STK-ERR-0875",
+      "source": "derived.tex",
+      "current_source_sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "old_text": "$L^i = 0$ for $i < a$",
+      "replacement_text": "$L^i = 0$ for $i > a$"
+    },
+    {
+      "finding_id": "H100B-SOURCE-012",
+      "decision": "DUPLICATE_ALREADY_IMPLEMENTED_IN_CURRENT_CHECKED_COMMIT",
+      "overlay": "stacks-errata-a04446e-r16",
+      "stable_id": "MC-STK-ERR-0771",
+      "source": "homology.tex",
+      "current_source_sha256": "3411933D098B5C00C8C44474ACE78D1EAD5B787C2BA4775DECFFB8BBB3F28BF9",
+      "old_text": "As unit we take",
+      "replacement_text": "As unit we take the object $\\mathbf{1}$ described above."
+    },
+    {
+      "finding_id": "H100B-SOURCE-008",
+      "decision": "ALREADY_CORRECT_IN_PINNED_AUTHORITY_AND_CURRENT_SOURCE",
+      "exact_text": "M_2 = \\Coker(d_{G, 1}) \\to M_1 = \\Coker(d_{F, 1})",
+      "reason": "The mined older excerpt had a different cokernel, but both a04446e authority and the current cumulative source already use d_F for M1. No correction is needed; do not attribute this preexisting correction to this review."
+    }
+  ],
+  "review_receipt_hashes": [
+    {
+      "name": "HISTORY100B_SOURCE_REVIEW_20260919.json",
+      "sha256": "9CB736DDFB9DEE46D392AFC66D6746D728C78E04276DC5CE81FE018086CF8E88"
+    },
+    {
+      "name": "SPACES_LIMITS_TWO_REVIEW_20260919.json",
+      "sha256": "098EF89E7DC4BC622DF3E176C1D3AE0F293B28E2D2E54320D7D50E0054D7C533"
+    }
+  ],
+  "warning": "Byte replay is supporting evidence, not a mathematical proof; draft registry IDs are not official Stacks tags."
+}
