@@ -1,0 +1,22 @@
+diff --git a/spaces-limits.tex b/spaces-limits.tex
+index d86ad232b0978a73b70bec9b2d1df5c7a35059fc..a67a00aad88074b48a01849dbb317d3628230a4e 100644
+--- a/spaces-limits.tex
++++ b/spaces-limits.tex
+@@ -175,7 +175,7 @@
+ $\colim_i G(T'_i) \times_{G(T')} F(T')$.
+ Hence by (2) we get a unique element $x$ of $\colim_i F(T'_i)$
+ mapping to $(y_i, x_{T'})$. It is clear that $x$ defines an element
+-of $\colim_i F_y(T'_i)$ mapping to $x_{T'}$ and we win.
++of $\colim_i F_{y_T}(T'_i)$ mapping to $x_{T'}$ and we win.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -266,7 +266,7 @@
+ \colim (F \times_G H)(T_i) =
+ \colim F(T_i) \times_{\colim G(T_i)} \colim H(T_i)
+ $$
+-as filtered colimits commute with finite products. Our goal is thus to
++as filtered colimits commute with finite limits. Our goal is thus to
+ show that
+ $$
+ \xymatrix{
