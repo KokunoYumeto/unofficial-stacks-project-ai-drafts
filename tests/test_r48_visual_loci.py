@@ -185,7 +185,17 @@ class MappingTests(unittest.TestCase):
     def test_actual_frozen_r48_replay_27_operations(self):
         # Read-only committed evidence; no build or generated-receipt write.
         m.configure_source(Path(__file__).resolve().parents[1])
-        authorities, grouped, inputs = m.frozen_operations(m.COMPOSED)
+        # The cumulative registry may append later rounds. Bind the live,
+        # clean transport while proving the R48 admission itself is unchanged;
+        # replay below still uses the original exact admission/composition.
+        current = m.git('rev-parse', 'HEAD').strip()
+        registry_path = 'ai-integrated/registry/overlays.json'
+        old_registry = json.loads(m.git_blob(m.COMPOSED, registry_path))
+        new_registry = json.loads(m.git_blob(current, registry_path))
+        self.assertEqual(
+            [row for row in old_registry['registered_entries'] if row['id'] == m.OVERLAY],
+            [row for row in new_registry['registered_entries'] if row['id'] == m.OVERLAY])
+        authorities, grouped, inputs = m.frozen_operations(current)
         self.assertEqual(sum(map(len, grouped.values())), 27)
         self.assertEqual(len({row["path"] for row in inputs}), len(inputs))
         moved = 0

@@ -22,6 +22,7 @@ TOOLS = {'tools/r49_successor.py', 'tools/build_r49_chapter.py', 'tools/validate
          'tests/test_r49_successor.py', 'tools/validate_standalone_supplements.py',
          'tools/export_upstream_corrections.py', 'tests/test_upstream_correction_export.py',
          'tests/test_changes_from_upstream.py',
+         'tests/test_r48_visual_loci.py',
          '.github/workflows/validate.yml'}
 
 
