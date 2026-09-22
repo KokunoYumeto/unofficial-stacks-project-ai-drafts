@@ -1,0 +1,14 @@
+{
+  "schema": "stacks-r53-candidate-build-revision/v1",
+  "initial_candidate_commit": "4cb2513e0ee90c5f8740979e8c493490682aa9a4",
+  "initial_batch_sha256": "3465C4515AC82F09DED4D07746937922EA58DB25C58CD18A4C8815E5765AE7A7",
+  "initial_topology_review_sha256": "AE539E77B34FEC1F29F6440F3851FAE8E07D984A520B52CE44116FBF838AC618",
+  "state": "INITIAL_BUILD_REJECTED_FOR_LAYOUT_REGRESSION",
+  "build_directory": "r53-build-topology-20260922",
+  "prior_pdf": {"bytes": 789721, "sha256": "57A08D8EB180F867469CBC7B1553D35D38446CDDF89AC11D64EE5670A6586926"},
+  "rejected_successor_pdf": {"bytes": 789845, "sha256": "E880167D72C2A4E29DFBB643E544181059315FC51AEF910E30592CF9873CB318"},
+  "observation": "Two fresh successor builds were byte-identical and remained 66 pages, but the missing-verb repair at authority line 1336 introduced a 6.07964pt overfull horizontal box. Prior had four overfull boxes and one underfull box; successor had five overfull boxes and no underfull box. References, citations and fatal diagnostics were unchanged.",
+  "remedy": "Within the same copyedit operation, replace 'a decreasing sequence' with 'be a decreasing chain', rather than 'be a decreasing sequence'. The natural-number indexing and decreasing inclusion order are unchanged. The original rationale, unit, report mapping and decision remain valid; no new mathematical content or extra operation is added.",
+  "preservation": "Original candidate and review remain frozen at the cited Git commit. Original build logs and captures remain in the named local build directory. Only the unsealed, actively leased candidate is revised.",
+  "release_gate": "Recompute exact authority/cumulative replay, build the revised source, inspect affected rendering, and bind final identities before admission. Do not suppress the overfull warning or relax the failure gate merely to pass."
+}

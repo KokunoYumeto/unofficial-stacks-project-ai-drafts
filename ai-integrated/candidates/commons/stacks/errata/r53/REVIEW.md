@@ -265,13 +265,13 @@ Supply be after Let in the first construction and is for the second sequence sub
 Official topology.tex line 1336:
 
 ```tex
-\mathbf{N}}$ a decreasing
+\mathbf{N}}$ a decreasing sequence
 ```
 
 Replace with:
 
 ```tex
-\mathbf{N}}$ be a decreasing
+\mathbf{N}}$ be a decreasing chain
 ```
 
 Official topology.tex line 1341:

@@ -123,8 +123,17 @@ def verify_one(name, count, existing_count, model):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args()
-    require(git('rev-parse','HEAD').decode().strip()==CURRENT,'HEAD advanced; rebind explicitly')
+    p=argparse.ArgumentParser();p.add_argument('--check',action='store_true')
+    p.add_argument('--candidate-head',help='Explicit candidate-only descendant; reviewed source and overlay registry must be unchanged')
+    a=p.parse_args()
+    head=git('rev-parse','HEAD').decode().strip()
+    if a.candidate_head:
+        require(head==a.candidate_head,'Candidate HEAD drift')
+        git('merge-base','--is-ancestor',CURRENT,head)
+        for path in git('diff-tree','-r','--no-commit-id','--name-only',CURRENT,head).decode().splitlines():
+            require(path=='ai-integrated/registry/leases.json' or path.startswith('ai-integrated/candidates/commons/stacks/errata/r53/'),'Not a candidate-only descendant: '+path)
+    else:
+        require(head==CURRENT,'HEAD advanced; rebind explicitly')
     model=intake.import_model()
     summaries=[]
     for name,count,existing in [('introduction.tex',1,0),('topology.tex',151,37)]:

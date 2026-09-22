@@ -13,12 +13,12 @@ TREE = '3feeb703b931a6e7259782c10e7d1575adc83e5e'
 PRIOR = '34349c2d88eb9b3e6690e705c9adf7a3d4fa3638'
 WRITER = '019fca5a-c29e-7330-acdc-c93f4a3dc9fb'
 PREFIX = 'ai-integrated/candidates/commons/stacks/errata/r53'
-BATCH_HASH = '3465C4515AC82F09DED4D07746937922EA58DB25C58CD18A4C8815E5765AE7A7'
+BATCH_HASH = 'EB27A20E872115ECD027342A193F22BA51C78048926C606AE110DBFBB203BF33'
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('action', choices=['lease', 'materialize', 'replay'])
+    p.add_argument('action', choices=['lease', 'materialize', 'revise', 'replay'])
     p.add_argument('--repo', type=Path, required=True)
     a = p.parse_args(); root = a.repo.resolve(); candidate = root / PREFIX
     def git(*args): return subprocess.run(['git', '-C', str(root), *args], capture_output=True, check=True).stdout
@@ -62,8 +62,9 @@ def main():
     priors = {name: blob(PRIOR, name) for name in sources}
     for name in sources:
         require((root/name).read_bytes() == priors[name], 'Dirty cumulative source: '+name)
-    if a.action == 'materialize':
-        require(not (candidate/'operation-spec.json').exists(), 'Already materialized')
+    if a.action in ('materialize', 'revise'):
+        require(not (candidate/'candidate.manifest.json').exists(), 'Never revise a sealed candidate')
+        require((candidate/'operation-spec.json').exists() == (a.action == 'revise'), 'Wrong materialization state')
         write(candidate/'evidence/prepared-batch.json', raw)
         for row in batch['evidence']:
             data = (CONTROL/row['path']).read_bytes()
@@ -71,6 +72,8 @@ def main():
             write(candidate/'evidence'/Path(row['path']).name, data)
         for name in ('r53_candidate_20260922.py', 'r51_candidate_20260922.py'):
             write(candidate/'evidence'/name, (CONTROL/name).read_bytes())
+        if a.action == 'revise':
+            write(candidate/'evidence/initial-build-regression.json', (CONTROL/'R53_INITIAL_BUILD_REGRESSION_20260922.json').read_bytes())
         units, operations, maps, decisions, formula = [], [], [], [], []
         original_ops = {name: [o for u in batch['units'] if u['source'] == name for o in u['operations']] for name in sources}
         for i, u in enumerate(batch['units']):
@@ -102,7 +105,11 @@ def main():
         write(candidate/'operation-spec.json', {'schema': 'mathematics-commons-stacks-operation-spec/v1', 'apply_order': 'descending_start_byte_per_source', 'operation_count': len(operations), 'operations': operations})
         write(candidate/'stable-units.json', {'schema': 'mathematics-commons-stacks-stable-units/v1', 'authority_commit': BASE, 'unit_count': len(units), 'units': units})
         write(candidate/'source-map.jsonl', ''.join(json.dumps(x, ensure_ascii=False)+'\n' for x in maps))
-        write(candidate/'decisions.jsonl', ''.join(json.dumps(x, ensure_ascii=False)+'\n' for x in decisions))
+        if a.action == 'materialize':
+            write(candidate/'decisions.jsonl', ''.join(json.dumps(x, ensure_ascii=False)+'\n' for x in decisions))
+        else:
+            original_decisions = [json.loads(x) for x in (candidate/'decisions.jsonl').read_text(encoding='utf-8').splitlines()]
+            require(original_decisions == decisions, 'Decision changes need an explicit append-only supersession')
         rejected = []
         for review_file in sorted({u['review_file'] for u in batch['units']}):
             review = json.loads((CONTROL/review_file).read_bytes())
