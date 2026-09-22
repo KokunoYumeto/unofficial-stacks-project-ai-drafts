@@ -1,0 +1,88 @@
+{
+  "schema": "stacks-source-intake-review-replay/v1",
+  "source": "introduction.tex",
+  "review": {
+    "path": "C:\\Users\\Floris\\Documents\\interlanguage\\03_projects\\language_management\\stacks_on_stacks_hub\\00_control\\INTRODUCTION_INTAKE_REVIEW_20260922.json",
+    "bytes": 1611,
+    "sha256": "3522FEC6147EE516CBF5B58C56E9D2C025973E52EAA5E66D34E96E9360D41EA8"
+  },
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "bytes": 6560,
+    "sha256": "43ABD6493BF48325878D6573966E97025770D4B4E12DB1DDA31DA7FD181D4ACF"
+  },
+  "current": {
+    "commit": "34349c2d88eb9b3e6690e705c9adf7a3d4fa3638",
+    "bytes": 6560,
+    "sha256": "43ABD6493BF48325878D6573966E97025770D4B4E12DB1DDA31DA7FD181D4ACF"
+  },
+  "occurrence_coverage": {
+    "reviewed": 1,
+    "received": 1,
+    "exactly_once": true
+  },
+  "review_groups": 1,
+  "disposition_counts": {
+    "accepted_missing_copyedit": 1
+  },
+  "new_proposed_units": 1,
+  "new_operations": 1,
+  "already_composed_units": [],
+  "existing_corrected_lines_retained": 158,
+  "cumulative_extra_lines_preserved": 0,
+  "exact_inverse_replay_preserves_other_cumulative_bytes": true,
+  "labels_references_citation_keys_environments": "UNCHANGED",
+  "operations": [
+    {
+      "review_id": "INTRODUCTION-RECON-001",
+      "occurrences": [
+        "OCC-00001"
+      ],
+      "line": 41,
+      "old_text": "We expect this material to be read online as a key feature are the hyperlinks",
+      "replacement_text": "We expect this material to be read online, as a key feature is the set of hyperlinks",
+      "start_byte": 1134,
+      "end_byte_exclusive": 1211,
+      "old_sha256": "4D1CCF17AE3827550B185ED7E0E11DCC508DEBEBF04E4A0FEABFCFCF7D768250",
+      "replacement_sha256": "137235223D6D7BB73E0B4228E9F56C94106185E3372E2416683D626ED08CC048",
+      "admitted_context_envelope_overlaps": [],
+      "current_line": 41,
+      "current_start_byte": 1134
+    }
+  ],
+  "git_replays": [
+    {
+      "base": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "check": "PASS",
+      "exact_postimage": "PASS",
+      "postimage_bytes": 6567,
+      "postimage_sha256": "9C6615B83EBAFF4CF41AB6DDE49445F64871764AD2195D3EF7720D574216E3D7"
+    },
+    {
+      "base": "34349c2d88eb9b3e6690e705c9adf7a3d4fa3638",
+      "check": "PASS",
+      "exact_postimage": "PASS",
+      "postimage_bytes": 6567,
+      "postimage_sha256": "9C6615B83EBAFF4CF41AB6DDE49445F64871764AD2195D3EF7720D574216E3D7"
+    }
+  ],
+  "patches": [
+    {
+      "path": "INTRODUCTION_PENDING_SOURCE_REPAIRS_20260922.patch",
+      "bytes": 455,
+      "sha256": "99DD8E06221BB5CBE849530B04F2F88E2AD1B8ADE3B97BE0C1BFA4EA3834CC0D"
+    },
+    {
+      "path": "INTRODUCTION_PENDING_CUMULATIVE_REPAIRS_20260922.patch",
+      "bytes": 455,
+      "sha256": "99DD8E06221BB5CBE849530B04F2F88E2AD1B8ADE3B97BE0C1BFA4EA3834CC0D"
+    }
+  ],
+  "not_claimed": [
+    "new registry admission",
+    "source mutation",
+    "rendered chapter build",
+    "second-agent/human review",
+    "overall inventory completion"
+  ]
+}
