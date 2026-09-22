@@ -94,7 +94,27 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Bind historical EGA checks separately from later corrections
+        shell: bash
+        run: |
+          echo "EGA_CHECKPOINT_DIR=${GITHUB_WORKSPACE}" >> "${GITHUB_ENV}"
+          if test -f validation/r51-successor-current.json; then
+            base="cf3f3a85ccf0ac433524c7a075a1e9b267f49fe7"
+            python -c 'import json; from pathlib import Path; d=json.loads(Path("validation/r51-successor-current.json").read_bytes()); assert d["previous_public"] == "cf3f3a85ccf0ac433524c7a075a1e9b267f49fe7"'
+            git merge-base --is-ancestor "${base}" HEAD
+            # The EGA evidence, checker, boundary tools and tests must remain
+            # byte-identical. Never silently freeze a newly changed EGA lane.
+            git diff --exit-code "${base}" HEAD -- ega ':(glob)tests/test_ega*' ':(glob)tools/*ega*'
+            # Historical receipts describe their own input bytes. Current R51
+            # source bytes and all 33 admitted operations are checked separately
+            # by validate_r51_successor.py --verify-frozen-core in the other job.
+            checkpoint="${RUNNER_TEMP}/ega-historical-checkpoint-r51"
+            git worktree add --detach "${checkpoint}" "${base}"
+            echo "EGA_CHECKPOINT_DIR=${checkpoint}" >> "${GITHUB_ENV}"
+          fi
+
       - name: Verify EGA checkpoint, build binding, and preservation tooling
+        working-directory: ${{ env.EGA_CHECKPOINT_DIR }}
         shell: bash
         run: |
           python ega/check.py
