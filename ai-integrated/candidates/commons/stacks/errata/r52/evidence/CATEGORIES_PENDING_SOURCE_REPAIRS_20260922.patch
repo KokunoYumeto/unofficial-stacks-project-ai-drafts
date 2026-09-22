@@ -1,0 +1,826 @@
+--- a/categories.tex
++++ b/categories.tex
+@@ -382,7 +382,7 @@
+ \xymatrix{
+ X \ar[r]_-{i_X} \ar[d]_{\phi}
+ &
+-F(j(X)) \ar[d]^{F\circ j(\phi)}
++F(j(X)) \ar[d]^{F(j(\phi))}
+ \\
+ Y \ar[r]^-{i_Y}
+ &
+@@ -849,7 +849,7 @@
+ \beta $ and $ p'\circ \gamma' = \alpha $. Because $\gamma$ is unique, we just
+ need to prove that $ q'\circ\gamma' = \delta $ and $ p'\circ\gamma' = \alpha $
+ to conclude. We supposed the second equality. For the first one, we also need
+-to use the uniqueness of delta. Notice that $\delta$ is the only morphism
++to use the uniqueness of $\delta$. Notice that $\delta$ is the only morphism
+ verifying $ q\circ\delta = \beta $ and $ p\circ\delta = f\circ\alpha $. We
+ already supposed that $ q\circ (q'\circ\gamma') = \beta $. Furthermore, by
+ definition of the fibre product, we know that $ f\circ p' = p\circ q' $.
+@@ -1222,10 +1222,10 @@
+ Let $\mathcal{C}$ be a category, and let $f : X \to Y$ be
+ a morphism of $\mathcal{C}$. Then
+ \begin{enumerate}
+-\item $f$ is a monomorphism if and only if $X$ is the fibre
+-product $X \times_Y X$, and
+-\item $f$ is an epimorphism if and only if $Y$ is the pushout
+-$Y \amalg_X Y$.
++\item $f$ is a monomorphism if and only if $X$, with both projections
++equal to $\text{id}_X$, is a fibre product of $X$ with itself over $Y$, and
++\item $f$ is an epimorphism if and only if $Y$, with both coprojections
++equal to $\text{id}_Y$, is a pushout of $Y$ with itself over $X$.
+ \end{enumerate}
+ \end{lemma}
+ 
+@@ -1244,7 +1244,8 @@
+ Thus $X$ is indeed the fibre product $X\times_Y X$.
+ 
+ \medskip\noindent
+-Suppose that $X \times_Y X \cong X $. The diagram
++Suppose that $X$, with both projections equal to $\text{id}_X$, is
++a fibre product of $X$ with itself over $Y$. The diagram
+ $$
+ \xymatrix{
+ X \ar[r]^{\text{id}_X} \ar[d]_{\text{id}_X} & X \ar[d]^{f} \\
+@@ -1259,8 +1260,8 @@
+ which proves that $\alpha = \beta$.
+ 
+ \medskip\noindent
+-The proof is exactly the same for the second point, but with the
+-pushout $Y\amalg_X Y = Y$.
++The second assertion follows by applying the first assertion to the
++opposite category.
+ \end{proof}
+ 
+ 
+@@ -1689,7 +1690,7 @@
+ is connected we see that all $f_i$ are equal. Since $\mathcal{I}$
+ is nonempty there is at least one $f_i$.
+ Hence this common value $W \to X$ defines the structure of an
+-object of $W$ in $\mathcal{C}/X$ and $(\varphi_i)$ defines an
++object of $\mathcal{C}/X$ on $W$ and $(\varphi_i)$ defines an
+ element of $\lim_i \Mor_{\mathcal{C}/X}(W, M_i)$.
+ Thus we obtain a unique morphism $\phi : W \to L$ such that
+ $\varphi_i$ is the composition of $\phi$ with $L \to M_i$ as desired.
+@@ -1731,7 +1732,7 @@
+ \item for all $y \in \Ob(\mathcal{J})$ there exist an
+ $x \in \Ob(\mathcal{I})$ and a morphism $y \to H(x)$, and
+ \item given $y \in \Ob(\mathcal{J})$, $x, x' \in \Ob(\mathcal{I})$
+-and morphisms $y \to H(x)$ and $y \to H(x')$ there exist a sequence
++and morphisms $y \to H(x)$ and $y \to H(x')$ there exists a sequence
+ of morphisms
+ $$
+ x = x_0 \leftarrow x_1 \rightarrow x_2 \leftarrow x_3 \rightarrow \ldots
+@@ -1783,12 +1784,13 @@
+ $x \in \Ob(\mathcal{I})$ and a morphism $H(x) \to y$,
+ \item for any $y \in \Ob(\mathcal{J})$, $x , x' \in \Ob(\mathcal{I})$ and
+ morphisms $H(x) \to y$, $H(x') \to y$ in $\mathcal{J}$
+-there exist a sequence of morphisms
++there exists a sequence of morphisms
+ $$
+ x = x_0 \leftarrow x_1 \rightarrow x_2 \leftarrow x_3 \rightarrow \ldots
+ \rightarrow x_{2n} = x'
+ $$
+ in $\mathcal{I}$ and morphisms $H(x_i) \to y$ in $\mathcal{J}$
++with $H(x_0) \to y$ and $H(x_{2n}) \to y$ the given morphisms
+ such that the diagrams
+ $$
+ \xymatrix{
+@@ -1865,7 +1867,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-product-with-connected}
+-Let $\mathcal{I}$ and $\mathcal{J}$ be a categories and denote
++Let $\mathcal{I}$ and $\mathcal{J}$ be categories and denote
+ $p : \mathcal{I} \times \mathcal{J} \to \mathcal{J}$ the projection.
+ If $\mathcal{I}$ is connected, then for a diagram
+ $M : \mathcal{J} \to \mathcal{C}$ the colimit $\colim_\mathcal{J} M$ exists
+@@ -1943,16 +1945,16 @@
+ Definition \ref{definition-limit}
+ for the diagram $M \circ F$.
+ Conversely, suppose we are given maps
+-$qy_i : W \to M(F(y_i))$ and $qz_i : W \to M(F(z_i))$
++$q_{y_i} : W \to M(F(y_i))$ and $q_{z_i} : W \to M(F(z_i))$
+ as in
+ Definition \ref{definition-limit}
+ for the diagram $M \circ F$. Since
+ $$
+ M(F(h_i)) = \text{id} : M(F(y_i)) = M(x_i) \longrightarrow M(x_i) = M(F(z_i))
+ $$
+-we conclude that $qy_i = qz_i$ for all $i$. Set $q_i$ equal to this common
++we conclude that $q_{y_i} = q_{z_i}$ for all $i$. Set $q_i$ equal to this common
+ value. The compatibility of
+-$q_{s(j)} = qy_{s(j)}$ and $q_{t(j)} = qz_{t(j)}$ with the morphism
++$q_{s(j)} = q_{y_{s(j)}}$ and $q_{t(j)} = q_{z_{t(j)}}$ with the morphism
+ $M(f_j)$ guarantees that the family $q_i$ is compatible with all morphisms
+ in $\mathcal{I}$ as by assumption every such morphism is a composition
+ of the morphisms $f_j$. Thus we have found a canonical bijection
+@@ -1994,7 +1996,7 @@
+ and $b : x_{i_2} \to y_{j_0}$. Consider the category
+ $$
+ \mathcal{I}' =
+-\{x\} \amalg \{x_1, \ldots, \hat x_{i_1}, \ldots, \hat x_{i_2}, \ldots x_n\}
++\{x\} \amalg \{x_1, \ldots, \hat x_{i_1}, \ldots, \hat x_{i_2}, \ldots, x_n\}
+ \amalg \{y_1, \ldots, y_m\}
+ $$
+ with
+@@ -2009,13 +2011,13 @@
+ M'(x) = M(x_{i_1}) \times_{M(a), M(y_{j_0}), M(b)} M(x_{i_2})
+ $$
+ and for a morphism $f' : x \to y_j$ corresponding to, say,
+-$f : x_{i_1} \to y_j$ we set $M'(f) = M(f) \circ \text{pr}_1$.
++$f : x_{i_1} \to y_j$ we set $M'(f') = M(f) \circ \text{pr}_1$.
+ Then the functor $M$ has a limit if and only if the functor $M'$ has
+ a limit (proof omitted). Hence by induction we reduce to the case $n = 1$.
+ 
+ \medskip\noindent
+ If $n = 1$, then the limit of any $M : \mathcal{I} \to \mathcal{C}$ is
+-the successive equalizer of pairs of maps $x_1 \to y_j$ hence
++the successive equalizer of pairs of induced maps $M(x_1) \to M(y_j)$ hence
+ exists by assumption.
+ \end{proof}
+ 
+@@ -2243,7 +2245,7 @@
+ \end{proof}
+ 
+ \noindent
+-It turns out we sometimes need a more finegrained control over the
++It turns out we sometimes need a more fine-grained control over the
+ possible conditions one can impose on index categories. Thus we add
+ some lemmas on the possible things one can require.
+ 
+@@ -2288,7 +2290,7 @@
+ \colim_\mathcal{I} (G \times G) \cong (G \times G)/G
+ $$
+ This example indicates that you cannot just drop the additional
+-condition Lemma \ref{lemma-directed-commutes}
++condition in Lemma \ref{lemma-directed-commutes}
+ even if you only care about finite products.
+ \end{proof}
+ 
+@@ -2385,7 +2387,7 @@
+ Let $s, s' \in \colim M_i$ map to the same element of $\colim N_i$.
+ Say $s$ comes from an element $m$ of $M_i$ and $s'$ comes from an
+ element $m'$ of $M_{i'}$. Then we can find a sequence
+-$i = i_0, i_1, \ldots, i_n = i'$ of objects of $\mathcal{I}$
++$i = i_0, i_1, \ldots, i_{2n} = i'$ of objects of $\mathcal{I}$
+ and morphisms
+ $$
+ \xymatrix{
+@@ -2430,7 +2432,7 @@
+ i_{2n} = i'
+ }
+ $$
+-and the elements $n_{i_j}$ for $j \geq 3$ which has a smaller length
++together with the elements $n_{i_j}$ for $j \geq 3$. This chain has smaller length
+ than the chain we started with. This proves the induction step and the
+ proof of (1) is complete.
+ 
+@@ -2620,8 +2622,8 @@
+ = \text{id}$ and such that $f_{ii''} = f_{i'i''} \circ f_{i i'}$
+ whenever $i'' \leq i' \leq i$. (Note reversal of inequalities.)
+ \end{enumerate}
+-We will say $(M_i, f_{ii'})$ is a (inverse) system over $I$ to
+-denote this. The maps $f_{ii'}$ are sometimes
++We will use $(M_i, f_{ii'})$ to denote a system or an inverse system
++over $I$. The maps $f_{ii'}$ are sometimes
+ called the {\it transition maps}.
+ \end{definition}
+ 
+@@ -2666,8 +2668,8 @@
+ is a directed partially ordered set.
+ Given an (inverse) system $N$ over $\overline{I}$ we obtain an
+ (inverse) system $M$ over $I$ by setting $M_i = N_{\pi(i)}$.
+-This construction defines a functor between the category
+-of inverse systems over $I$ and $\overline{I}$.
++This construction defines a functor from the category of (inverse)
++systems over $\overline{I}$ to the corresponding category over $I$.
+ In fact, this is an equivalence.
+ The reason is that if $i \sim j$, then for any system
+ $M$ over $I$ the maps $M_i \to M_j$ and $M_j \to M_i$ are
+@@ -2798,7 +2800,7 @@
+ to any object of $\mathcal{F}$, the arrow set in $\mathcal{F}^+$
+ is closed under composition, so $\mathcal{F}^+$ is indeed
+ a category. By construction, it is a finitely
+-generated subcategory of $\mathcal{I}$ which has $i_\infty$ as
++generated subcategory of $\mathcal{I} \times \omega$ which has $i_\infty$ as
+ unique final object. Since, by Lemma \ref{lemma-cofinal},
+ the colimit of any diagram $M : \mathcal{I} \to \mathcal{C}$
+ coincides with the colimit of $M\circ\Pi$ , this gives the desired
+@@ -2847,13 +2849,13 @@
+ 
+ \begin{remark}
+ \label{remark-trick-needed}
+-Note that a finite directed set $(I, \geq)$ always has a greatest object
++Note that a finite directed set $(I, \leq)$ always has a greatest object
+ $i_\infty$. Hence any colimit of a system $(M_i, f_{ii'})$ over such a set
+ is trivial in the sense that the colimit equals $M_{i_\infty}$. In contrast,
+ a colimit indexed by a finite filtered category need not
+ be trivial. For instance, let $\mathcal{I}$ be the category with a single object
+ $i$ and a single non-trivial morphism $e$ satisfying $e = e \circ e$. The
+-colimit of a diagram $M : \mathcal{I} \to Sets$ is the image of the
++colimit of a diagram $M : \mathcal{I} \to \textit{Sets}$ is the image of the
+ idempotent $M(e)$. This illustrates that something like the trick of passing
+ to $\mathcal{I}\times \omega$ in the proof of
+ Lemma \ref{lemma-directed-category-system} is essential.
+@@ -2990,7 +2992,7 @@
+ 
+ \medskip\noindent
+ Here is an example of a system which is not essentially constant. Let
+-$M = \bigoplus_{n \geq 0} \mathbf{Z}$ and to let $S : M \to M$ be the
++$M = \bigoplus_{n \geq 0} \mathbf{Z}$ and let $S : M \to M$ be the
+ shift operator $(a_0, a_1, \ldots) \mapsto (a_1, a_2, \ldots)$. In this
+ case the system $M \to M \to M \to \ldots$ with transition maps $S$
+ has colimit $0$ and the composition $0 \to M \to 0$ is the identity,
+@@ -3069,11 +3071,11 @@
+ $m(n', n) \geq m(n'), m(n)$ such that the diagram
+ $$
+ \xymatrix{
+-X_{m(n, n')} \ar[rr] \ar[d] & & X_{m(n)} \ar[d]^{a_n} \\
++X_{m(n', n)} \ar[rr] \ar[d] & & X_{m(n)} \ar[d]^{a_n} \\
+ X_{m(n')} \ar[r]^{a_{n'}} & Y_{n'} \ar[r] & Y_n
+ }
+ $$
+-commutes. After replacing $m(n)$ by $\max_{k, l \leq n}\{m(n, k), m(k, l)\}$
++commutes. After replacing $m(n)$ by $\max_{l \leq k \leq n}\{m(n, k), m(k, l)\}$
+ we see that we obtain $\ldots \geq m(3) \geq m(2) \geq m(1)$ and a commutative
+ diagram
+ $$
+@@ -3091,7 +3093,7 @@
+ Given an increasing map $m' : \mathbf{N} \to \mathbf{N}$ with $m' \geq m$
+ and setting $a'_i : X_{m'(i)} \to X_{m(i)} \to Y_i$ the pair
+ $(m', a')$ defines the same morphism of pro-systems. Conversely, given
+-two pairs $(m_1, a_1)$ and $(m_1, a_2)$ as above then these define the same
++two pairs $(m_1, a_1)$ and $(m_2, a_2)$ as above then these define the same
+ morphism of pro-objects if and only if we can find $m' \geq m_1, m_2$
+ such that $a'_1 = a'_2$.
+ \end{example}
+@@ -3429,7 +3431,7 @@
+ $$
+ \Mor(v(X), v(Y)) \to \Mor(u(v(X)), u(v(Y))) \to \Mor(u(v(X)), Y)
+ $$
+-is a bijection, where the first map is natural one and
++is a bijection, where the first map is the natural one and
+ the second map comes from the counit $u(v(Y)) \to Y$ of the adjunction.
+ So this says that
+ $\Mor(v(X), v(Y)) \to \Mor(u(v(X)), u(v(Y)))$
+@@ -3487,7 +3489,7 @@
+ 
+ \begin{proof}
+ A morphism from a colimit into an object is the same as a compatible
+-system of morphisms from the constituents of the limit into the
++system of morphisms from the constituents of the colimit into the
+ object, see Remark \ref{remark-limit-colim}. So
+ $$
+ \begin{matrix}
+@@ -3525,7 +3527,7 @@
+ $v : \mathcal{D} \to \mathcal{C}$. Let $\eta_X : X \to v(u(X))$ be the unit
+ and $\epsilon_Y : u(v(Y)) \to Y$ be the counit. Then
+ $$
+-u(X) \xrightarrow{u(\eta_X)} u(v(u(X))
++u(X) \xrightarrow{u(\eta_X)} u(v(u(X)))
+ \xrightarrow{\epsilon_{u(X)}} u(X)
+ \quad\text{and}\quad
+ v(Y) \xrightarrow{\eta_{v(Y)}} v(u(v(Y))) \xrightarrow{v(\epsilon_Y)}
+@@ -3556,7 +3558,7 @@
+ 
+ \begin{proof}
+ This is true because $\beta^\vee_D : v_1D \to v_2D$ is the unique
+-morphism such that the induced maps $\Mor(C, v_1D) \to \Mor(C, v_2D)$
++morphism such that the induced map $\Mor(C, v_1D) \to \Mor(C, v_2D)$
+ is the map $\Mor(u_1C, D) \to \Mor(u_2C, D)$ induced by
+ $\beta_C : u_2C \to u_1C$. Namely, this means the map
+ $$
+@@ -3587,7 +3589,7 @@
+ \epsilon_X^v \circ u(\epsilon^{v'}_{v(X)}) = \epsilon^{v''}_X :
+ u''(v''(X)) \to X
+ \end{equation}
+-Where $\epsilon$ is the counit of the adjunctions.
++where $\epsilon$ is the counit of the adjunctions.
+ \end{enumerate}
+ \end{lemma}
+ 
+@@ -3610,7 +3612,7 @@
+ the rule that sends a morphism $\beta : Z \to v''(X)$
+ to $\alpha = \epsilon_X^{v''} \circ u''(\beta) : u''(Z) \to X$
+ is a bijection on sets of morphisms.
+-This is true because, this is the composition of the
++This is true because this is the composition of the
+ rule sending $\beta$ to $\epsilon_{v(X)}^{v'} \circ u'(\beta)$
+ which is a bijection by assumption on $(u', v')$ and then
+ sending this to
+@@ -3628,7 +3630,7 @@
+ 
+ \noindent
+ The following lemma is often useful to prove the existence of
+-universal objects in big categories, please see the discussion
++universal objects in big categories; please see the discussion
+ in Remark \ref{remark-how-to-use-it}.
+ 
+ \begin{lemma}
+@@ -3814,8 +3816,8 @@
+ 
+ \medskip\noindent
+ Suppose given a morphism $\alpha : X \to Y$ of $\mathcal{C}$
+-and $X = \colim_{i \in I} X_i$ and $Y = \colim_{j \in J} Y_i$
+-are written as filtered colimit of objects in $\mathcal{C}'$.
++and $X = \colim_{i \in I} X_i$ and $Y = \colim_{j \in J} Y_j$
++are written as filtered colimits of objects in $\mathcal{C}'$.
+ For each $i \in I$ since $X_i$ is a categorically compact object of
+ $\mathcal{C}$ we can find a $j \in J$ and a commutative diagram
+ $$
+@@ -3833,7 +3835,7 @@
+ $$
+ is equal to $\beta_i$. Thus we obtain a well defined arrow
+ $$
+-F(\alpha) : F(X) = \colim F(X_i) \to F(Y)
++F(\alpha) : F(X) = \colim F'(X_i) \to F(Y)
+ $$
+ by the universal property of the colimit. If $\alpha' : Y \to Z$ is a
+ second morphism of $\mathcal{C}$ and $Z = \colim Z_k$ is also
+@@ -3859,7 +3861,7 @@
+ we show that $F$ commutes with filtered colimits (because this
+ statement doesn't make sense otherwise). To show this, suppose that
+ $X = \colim_{\lambda \in \Lambda} X_\lambda$
+-is a filtered colimit of $\mathcal{C}$. Since $F$ is a functor
++is a filtered colimit in $\mathcal{C}$. Since $F$ is a functor
+ we certainly get a map
+ $$
+ \colim_\lambda F(X_\lambda) \longrightarrow F(X)
+@@ -4145,7 +4147,7 @@
+ (h_4 \circ f : X \to Z_4, u_4 \circ t : Z \to Z_4)$
+ and the above diagram shows that we have $r_2Er_4$ and
+ $r_3Er_4$, whence $r_2 \sim r_3$, as desired. Thus it now
+-makes sense to define $p \circ q$ as the equivalence class of
++makes sense to define $q \circ p$ as the equivalence class of
+ all possible pairs $r$ obtained as above.
+ 
+ \medskip\noindent
+@@ -4753,7 +4755,7 @@
+ \end{proof}
+ 
+ \noindent
+-{\bf Multiplicative systems and two sided calculus of fractions.}
++{\bf Multiplicative systems and two-sided calculus of fractions.}
+ If $S$ is a multiplicative system then left and right calculus of
+ fractions give canonically isomorphic categories.
+ 
+@@ -4888,7 +4890,7 @@
+ $\mathcal{A}, \mathcal{B} \in \Ob(\textit{Cat})$
+ we have the ``small'' category of functors
+ $\text{Fun}(\mathcal{A}, \mathcal{B})$.
+-Composition of transformation of functors such as
++Composition of transformations of functors such as
+ $$
+ \xymatrix{
+ \mathcal{A}
+@@ -5104,7 +5106,7 @@
+ \noindent
+ Another way of formulating condition (4) of the lemma is
+ that composition of functors and horizontal composition
+-of transformation of functors gives rise to a functor
++of transformations of functors give rise to a functor
+ $$
+ (\circ, \star) :
+ \text{Fun}(\mathcal{B}, \mathcal{C})
+@@ -5180,13 +5182,13 @@
+ \begin{definition}
+ \label{definition-sub-2-category}
+ Let $\mathcal{C}$ be a $2$-category.
+-A {\it sub $2$-category} $\mathcal{C}'$ of $\mathcal{C}$, is given by a subset
++A {\it sub $2$-category} $\mathcal{C}'$ of $\mathcal{C}$ is given by a subset
+ $\Ob(\mathcal{C}')$ of $\Ob(\mathcal{C})$
+-and sub categories $\Mor_{\mathcal{C}'}(x, y)$ of the
++and subcategories $\Mor_{\mathcal{C}'}(x, y)$ of the
+ categories $\Mor_\mathcal{C}(x, y)$ for all
+ $x, y \in \Ob(\mathcal{C}')$ such that these, together with
+-the operations $\circ$ (composition $1$-morphisms), $\circ$ (vertical
+-composition $2$-morphisms), and $\star$ (horizontal composition)
++the operations $\circ$ (composition of $1$-morphisms), $\circ$ (vertical
++composition of $2$-morphisms), and $\star$ (horizontal composition)
+ form a $2$-category.
+ \end{definition}
+ 
+@@ -5217,7 +5219,7 @@
+ \end{enumerate}
+ See Definition \ref{definition-2-1-category}.
+ Note that in each case the class of objects of the $2$-category
+-$\mathcal{C}$ is a proper class, but for all objects $x, y \in \Ob(C)$
++$\mathcal{C}$ is a proper class, but for all objects $x, y \in \Ob(\mathcal{C})$
+ the category $\Mor_\mathcal{C}(x, y)$ is ``small'' (according to
+ our conventions).
+ \end{remark}
+@@ -5246,7 +5248,7 @@
+ \item A {\it functor} from an ordinary category into a $2$-category
+ will ignore the
+ $2$-morphisms unless mentioned otherwise. In other words, it will be a
+-``usual'' functor into the category formed out of 2-category by forgetting
++``usual'' functor into the category formed out of the 2-category by forgetting
+ all the 2-morphisms.
+ \item A {\it weak functor}, or
+ a {\it pseudo functor} $\varphi$ from $\mathcal{A}$ into the 2-category
+@@ -5255,7 +5257,7 @@
+ \item a map $\varphi : \Ob(\mathcal{A}) \to \Ob(\mathcal{C})$,
+ \item for every pair $x, y\in \Ob(\mathcal{A})$, and every
+ morphism $f : x \to y$ a $1$-morphism $\varphi(f) : \varphi(x) \to \varphi(y)$,
+-\item for every $x\in \Ob(A)$ a $2$-morphism
++\item for every $x\in \Ob(\mathcal{A})$ a $2$-morphism
+ $\alpha_x : \text{id}_{\varphi(x)} \to \varphi(\text{id}_x)$, and
+ \item for every pair of composable morphisms $f : x \to y$,
+ $g : y \to z$ of $\mathcal{A}$ a $2$-morphism
+@@ -5434,7 +5436,7 @@
+ is commutative,
+ \item given a second $1$-morphism
+ $(k', \alpha', \beta') : (w'', a'', b'', \phi'') \to
+-(w', \alpha', \beta', \phi')$ the composition of $1$-morphisms
++(w', a', b', \phi')$ the composition of $1$-morphisms
+ is given by the rule
+ $$
+ (k, \alpha, \beta) \circ (k', \alpha', \beta') =
+@@ -5526,7 +5528,7 @@
+ $f\in \Mor_\mathcal{C}(x, z)$
+ and $g\in \Mor_{\mathcal C}(y, z)$. A
+ {\it 2-fibre product of $f$ and $g$} is
+-a final object in the category of 2-commutative diagrams
++a final object in the $2$-category of $2$-commutative diagrams
+ described above. If a 2-fibre product exists we
+ will denote it $x \times_z y\in \Ob(\mathcal{C})$, and denote the
+ required morphisms $p\in \Mor_{\mathcal C}(x \times_z y, x)$ and
+@@ -5627,18 +5629,18 @@
+ Consider the functor
+ $\gamma : \mathcal{W} \to \mathcal{A} \times_\mathcal{C}\mathcal{B}$
+ given by $W \mapsto (a(W), b(W), t_W)$.
+-(Check this is a functor omitted.)
++(The check that this is a functor is omitted.)
+ Moreover, consider $\alpha : a \to p \circ \gamma$ and
+ $\beta : b \to q \circ \gamma$ obtained from the identities
+ $p \circ \gamma = a$ and $q \circ \gamma = b$. Then it is
+ clear that $(\gamma, \alpha, \beta)$ is a morphism
+-from $(W, a, b, t)$ to
++from $(\mathcal{W}, a, b, t)$ to
+ $(\mathcal{A} \times_\mathcal{C} \mathcal{B}, p, q, \psi)$.
+ 
+ \medskip\noindent
+ Let
+ $(k, \alpha', \beta') :
+-(W, a, b, t) \to (\mathcal{A} \times_\mathcal{C} \mathcal{B}, p, q, \psi)$
++(\mathcal{W}, a, b, t) \to (\mathcal{A} \times_\mathcal{C} \mathcal{B}, p, q, \psi)$
+ be a second such morphism. For an object $W$ of $\mathcal{W}$ let us write
+ $k(W) = (a_k(W), b_k(W), t_{k, W})$. Hence $p(k(W)) = a_k(W)$ and so on.
+ The map $\alpha'$ corresponds to functorial maps
+@@ -5738,8 +5740,8 @@
+ Let $(X, Y, \phi)$ and $(X', Y', \phi')$ be objects of
+ $\mathcal{X} \times_\mathcal{Z} \mathcal{Y}$.
+ Set $Z = H(X)$ and identify it with $I(Y)$ via $\phi$.
+-Also, identify $M(Z)$ with $F(L(X))$ via $\alpha_X$ and
+-identify $M(Z)$ with $G(K(Y))$ via $\beta_Y$. Similarly for
++Also, identify $M(Z)$ with $F(L(X))$ via $\beta_X$ and
++identify $M(Z)$ with $G(K(Y))$ via $\alpha_Y$. Similarly for
+ $Z' = H(X')$ and $M(Z')$.
+ The map on morphisms is the map
+ $$
+@@ -5757,7 +5759,7 @@
+ are equivalences and $M$ is fully faithful, then any object
+ $(A, B, \phi)$ is in the essential image for the following reasons:
+ Pick $X$, $Y$ such that $L(X) \cong A$ and $K(Y) \cong B$.
+-Then the fully faithfulness of $M$ guarantees that we can
++Then the full faithfulness of $M$ guarantees that we can
+ find an isomorphism $H(X) \cong I(Y)$. Some details omitted.
+ \end{proof}
+ 
+@@ -5886,9 +5888,9 @@
+ $\mathcal{C}_1 \times_{G_1, \mathcal{S}, G_2} \mathcal{C}_2$,
+ then we can associate to this the triple
+ $((X_1, X_2), G_2(X_2), (\psi, \text{id}_{G_2(X_2)}))$.
+-We claim these constructions given mutually inverse functors.
++We claim these constructions give mutually quasi-inverse functors.
+ We omit describing how to deal with morphisms
+-and showing they are mutually inverse.
++and showing they are mutually quasi-inverse.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -5931,7 +5933,7 @@
+ \xymatrix{
+ \mathcal{A} \times_\mathcal{C} \mathcal{B} \ar[d] \ar[r] &
+ \mathcal{A} \times_\mathcal{D} \mathcal{B} \ar[d] \\
+-\mathcal{C} \ar[r]^-{\Delta_{\mathcal{C}/\mathcal{D}}} \ar[r] &
++\mathcal{C} \ar[r]^-{\Delta_{\mathcal{C}/\mathcal{D}}} &
+ \mathcal{C} \times_\mathcal{D} \mathcal{C}
+ }
+ $$
+@@ -5964,7 +5966,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-This is a purely $2$-category theoretic statement, valid in any
++This is a purely $2$-category-theoretic statement, valid in any
+ $(2, 1)$-category with $2$-fibre products. Explicitly, it follows
+ from the following chain of equivalences:
+ \begin{align*}
+@@ -6030,7 +6032,7 @@
+ In this $2$-category we define horizontal and vertical composition
+ exactly as is done for $\textit{Cat}$ in Section \ref{section-formal-cat-cat}.
+ The axioms of a $2$-category are satisfied for the same reason
+-that the hold in $\textit{Cat}$. To see this one can also use that
++that they hold in $\textit{Cat}$. To see this one can also use that
+ the axioms hold in $\textit{Cat}$ and verify
+ things such as ``vertical composition of $2$-morphisms over $\mathcal{C}$
+ gives another $2$-morphism over $\mathcal{C}$''. This is clear.
+@@ -6058,7 +6060,7 @@
+ $$
+ \item A {\it lift} of an object $U \in \Ob(\mathcal{C})$
+ is an object $x\in \Ob(\mathcal{S})$ such that $p(x) = U$, i.e.,
+-$x\in \Ob(\mathcal{S}_U)$. We will also sometime say
++$x\in \Ob(\mathcal{S}_U)$. We will also sometimes say
+ that {\it $x$ lies over $U$}.
+ \item Similarly, a {\it lift} of a morphism $f : V \to U$ in $\mathcal{C}$
+ is a morphism $\phi : y \to x$ in $\mathcal{S}$ such that $p(\phi) = f$.
+@@ -6141,7 +6143,7 @@
+ Taking the $2$-fibre product $\mathcal{X} \times_\mathcal{S} \mathcal{X}$
+ as categories yields the discrete category with two objects. However, if
+ we view all of these as categories over $\mathcal{S}$, the
+-$2$-fiber product $\mathcal{X} \times_\mathcal{S} \mathcal{X}$
++$2$-fibre product $\mathcal{X} \times_\mathcal{S} \mathcal{X}$
+ as categories over $\mathcal{S}$ is the discrete category with one object.
+ The difference is that (in the notation of
+ Lemma \ref{lemma-2-product-categories-over-C}), we were allowed to choose
+@@ -6160,7 +6162,7 @@
+ $$
+ \left(\mathcal{X} \times_\mathcal{S}\mathcal{Y}\right)_U
+ =
+-\mathcal{X}_U \times_{\mathcal{S}_U} \mathcal{Y}_U
++\mathcal{X}_U \times_{\mathcal{S}_U} \mathcal{Y}_U.
+ $$
+ \end{lemma}
+ 
+@@ -6545,7 +6547,7 @@
+ \Mor_{\textit{Fib}/\mathcal{C}}(\mathcal{S}, \mathcal{S}')
+ $$
+ the category of $1$-morphisms between
+-$(\mathcal{S}, p)$ and $(\mathcal{S}', p')$
++$(\mathcal{S}, p)$ and $(\mathcal{S}', p')$.
+ \end{definition}
+ 
+ \noindent
+@@ -6612,11 +6614,12 @@
+ $$
+ given by $\psi' \longmapsto (\varphi \circ \psi', p'(\psi'))$
+ is bijective. Suppose given an element $(\psi, h)$ of the
+-right hand side, then in particular $g \circ h = p(\psi)$,
++right hand side, then in particular $g \circ h = p'(\psi)$,
+ and by the condition that $\varphi$ is strongly cartesian we
+ get a unique morphism $\psi' : z \to x'$ with $\psi = \varphi \circ \psi'$
+-and $p(\psi') = h$. OK, and now $p'(\psi') : W/U \to V/U$
+-is a morphism whose corresponding map $W \to V$ is $h$, hence
++and $p(\psi')$ equal to the underlying map of $h$. Then
++$p'(\psi') : W/U \to V'/U$
++is a morphism whose underlying map $W \to V'$ is that of $h$, hence
+ equal to $h$ as a morphism in $\mathcal{C}/U$. Thus $\psi'$ is
+ a unique morphism $z \to x'$ which maps to the given pair $(\psi, h)$.
+ This proves the claim.
+@@ -6625,7 +6628,8 @@
+ Finally, suppose given $g : V'/U \to V/U$ and $x$ with $p'(x) = V/U$.
+ Since $p : \mathcal{S} \to \mathcal{C}$ is a fibred category we
+ see there exists a strongly cartesian morphism $\varphi : x' \to x$
+-with $p(\varphi) = g$. By the same argument as above it follows
++with $p(\varphi)$ equal to the underlying map of $g$.
++By the same argument as above it follows
+ that $p'(\varphi) = g : V'/U \to V/U$. And as seen above the morphism
+ $\varphi$ is strongly cartesian. Thus the conditions of
+ Definition \ref{definition-fibred-category} are satisfied and we win.
+@@ -6834,7 +6838,7 @@
+ This just means that $\iota, \kappa : x \to y$ are isomorphisms and that
+ $F(\iota) = F(\kappa)$. Consider the functor
+ $$
+-I_{\mathcal{S}/\mathcal{S}'}
++\mathcal{I}_{\mathcal{S}/\mathcal{S}'}
+ \longrightarrow
+ \mathcal{S}
+ \times_{\Delta, (\mathcal{S} \times_{\mathcal{S}'} \mathcal{S}), \Delta}
+@@ -6851,14 +6855,14 @@
+ \times_{\Delta, (\mathcal{S} \times_{\mathcal{S}'} \mathcal{S}), \Delta}
+ \mathcal{S}
+ \longrightarrow
+-I_{\mathcal{S}/\mathcal{S}'}
++\mathcal{I}_{\mathcal{S}/\mathcal{S}'}
+ $$
+ which to an object $(x, y, (\iota, \kappa))$ of the left hand side
+ assigns the object $(x, \kappa^{-1} \circ \iota)$ of the right hand side
+ and to a morphism
+ $(\phi, \phi') : (x, y, (\iota, \kappa)) \to (z, w, (\lambda, \mu))$
+ of the left hand side assigns the morphism $\phi$.
+-Indeed, the endo-functor of $I_{\mathcal{S}/\mathcal{S}'}$ induced
++Indeed, the endo-functor of $\mathcal{I}_{\mathcal{S}/\mathcal{S}'}$ induced
+ by composing the two functors above is the identity on the nose, and
+ the endo-functor induced on
+ $\mathcal{S}
+@@ -7047,7 +7051,7 @@
+ lying over $f$ for all $f: V \to U = p(x)$ the data
+ $(U \mapsto \mathcal{S}_U, f \mapsto f^*, \alpha_{f, g}, \alpha_U)$
+ constructed in Lemma \ref{lemma-fibred}
+-defines a pseudo functor from $\mathcal{C}^{opp}$ in to
++defines a pseudo functor from $\mathcal{C}^{opp}$ into
+ the $(2, 1)$-category of groupoids.
+ \end{lemma}
+ 
+@@ -7185,7 +7189,7 @@
+ $$
+ \xymatrix{
+ B' \ar[r]^{g'} & T' & & B \ar[r]^g & T & \\
+-A' \ar@{-->}[u]^{??} \ar[ru]_{h'} & & \ar@{}[u]^{above} &
++A' \ar@{-->}[u]^{??} \ar[ru]_{h'} & & \ar@{}[u]^{\text{above}} &
+ A \ar[u]^f \ar[ru]_{gf = h} & \\
+ }
+ $$
+@@ -7333,7 +7337,7 @@
+ $\Mor_{\mathcal{S}'}(G(x), G(y))$.
+ Set $U = p(x)$ and $V = p(y)$.
+ It suffices to prove that $G$
+-induces an injection (resp.\ bijection) between morphism
++induces an injection (resp.\ bijection) from morphisms
+ $x \to y$ lying over $f$ to morphisms $G(x) \to G(y)$ lying over $f$
+ for any morphism $f : U \to V$.
+ Now fix $f : U \to V$. Denote $f^*y \to y$ a pullback.
+@@ -7349,7 +7353,7 @@
+ gives the desired result.
+ 
+ \medskip\noindent
+-Finally suppose for all $G_U$ is an equivalence for all $U$, so it is
++Finally suppose $G_U$ is an equivalence for all $U$, so it is
+ fully faithful and essentially surjective. We have seen this implies $G$ is
+ fully faithful, and thus to prove it is an equivalence we have to prove that
+ it is essentially surjective. This is clear, for if $z'\in
+@@ -7513,7 +7517,7 @@
+ Lemma \ref{lemma-2-product-fibred-categories}
+ we see that $\mathcal{X}'$ is a category fibred in groupoids over
+ $\mathcal{C}$ and that $\mathcal{X}' \to \mathcal{Y}$ is a morphism of
+-categories over $\mathcal{C}$. As functor $\mathcal{X} \to \mathcal{X}'$ we take
++categories over $\mathcal{C}$. As a functor $\mathcal{X} \to \mathcal{X}'$ we take
+ $x \mapsto (p(x), x, F(x), \text{id}_{F(x)})$ on objects and
+ $(a : x \to x') \mapsto (a, F(a))$ on morphisms. It is clear that
+ the composition $\mathcal{X} \to \mathcal{X}' \to \mathcal{Y}$
+@@ -7614,7 +7618,7 @@
+ $$
+ on objects. Then we see that
+ $$
+-(\beta_x, \alpha_x) :
++(\beta_x^{-1}, \alpha_x) :
+ (p(x), x, F(x), \text{id}_{F(x)})
+ \longrightarrow
+ (p(x), b^{-1}(b(x)), g(b(x)), \alpha_x \circ F(\beta_x))
+@@ -7786,7 +7790,7 @@
+ by setting $g^\ast(x, f) = (x, f \circ g)$ on objects if
+ $g : V' \to V$ and $f : V \to U$. On morphisms
+ $(\varphi, \text{id}_V) : (x_1, f_1) \to (x_2, f_2)$
+-between morphisms in $\mathcal{S}'_V$ we set $g^\ast(\varphi, \text{id}_V) =
++in $\mathcal{S}'_V$ we set $g^\ast(\varphi, \text{id}_V) =
+ (g^\ast\varphi, \text{id}_{V'})$ where we use the unique identifications
+ $g^\ast f_i^\ast x_i = (f_i \circ g)^\ast x_i$ from Lemma
+ \ref{lemma-fibred} to think of $g^\ast\varphi$ as a morphism from
+@@ -7933,7 +7937,7 @@
+ by setting $g^\ast(x, f) = (x, f \circ g)$ on objects if
+ $g : V' \to V$ and $f : V \to U$. On morphisms
+ $(\varphi, \text{id}_V) : (x_1, f_1) \to (x_2, f_2)$
+-between morphisms in $\mathcal{S}'_V$ we set $g^\ast(\varphi, \text{id}_V) =
++in $\mathcal{S}'_V$ we set $g^\ast(\varphi, \text{id}_V) =
+ (g^\ast\varphi, \text{id}_{V'})$ where we use the unique identifications
+ $g^\ast f_i^\ast x_i = (f_i \circ g)^\ast x_i$ from Lemma
+ \ref{lemma-fibred-groupoids} to think of $g^\ast\varphi$ as a morphism from
+@@ -7965,7 +7969,7 @@
+ 
+ \noindent
+ A discrete category has only one interesting piece of information:
+-its set of objects. Thus we sometime confuse discrete categories
++its set of objects. Thus we sometimes confuse discrete categories
+ with sets.
+ 
+ \begin{definition}
+@@ -7985,7 +7989,7 @@
+ \label{definition-categories-fibred-in-sets-over-C}
+ Let $\mathcal{C}$ be a category.
+ The {\it $2$-category of categories fibred in sets over $\mathcal{C}$}
+-is the sub $2$-category of the category of categories fibred in groupoids
++is the sub $2$-category of the $2$-category of categories fibred in groupoids
+ over $\mathcal{C}$ (see
+ Definition \ref{definition-categories-fibred-in-groupoids-over-C})
+ defined as follows:
+@@ -8036,7 +8040,7 @@
+ as follows. Define
+ $$
+ \Ob(\mathcal{S}_F) =
+-\{(U, x) \mid U \in \Ob(\mathcal{C}), x \in \Ob(F(U))\}.
++\{(U, x) \mid U \in \Ob(\mathcal{C}), x \in F(U)\}.
+ $$
+ For $(U, x), (V, y) \in \Ob(\mathcal{S}_F)$ we define
+ \begin{align*}
+@@ -8050,7 +8054,7 @@
+ The functor $p_F : \mathcal{S}_F \to \mathcal{C}$
+ is given by the rule $(U, x) \mapsto U$.
+ As every fibre category $\mathcal{S}_{F, U}$ is discrete with underlying
+-set $F(U)$ and we have already see in
++set $F(U)$ and we have already seen in
+ Example \ref{example-functor-groupoids}
+ that $\mathcal{S}_F$ is a category fibred in groupoids,
+ we conclude that $\mathcal{S}_F$ is fibred in sets.
+@@ -8129,7 +8133,7 @@
+ \noindent
+ For this reason it is tempting to define a ``representable'' object in the
+ 2-category of categories fibred in groupoids to be a category fibred in
+-sets whose associated presheaf is representable. However, this is would not
++sets whose associated presheaf is representable. However, this would not
+ be a good definition for use since we prefer to have a notion which is
+ invariant under equivalences. To make this precise we study exactly
+ which categories fibred in groupoids are equivalent to categories
+@@ -8186,7 +8190,7 @@
+ \label{definition-categories-fibred-in-setoids-over-C}
+ Let $\mathcal{C}$ be a category.
+ The {\it $2$-category of categories fibred in setoids over $\mathcal{C}$}
+-is the sub $2$-category of the category of categories fibred in groupoids
++is the sub $2$-category of the $2$-category of categories fibred in groupoids
+ over $\mathcal{C}$ (see
+ Definition \ref{definition-categories-fibred-in-groupoids-over-C})
+ defined as follows:
+@@ -8446,7 +8450,8 @@
+ \begin{proof}
+ The first assertion follows immediately from
+ Lemma \ref{lemma-setoid-fibres}.
+-For the second, suppose that $j' : \mathcal{S} \to \mathcal{C}/X'$ is
++For the second, suppose that $(X', j')$, with
++$j' : \mathcal{S} \to \mathcal{C}/X'$, is
+ a second such pair. Choose a $1$-morphism
+ $t' : \mathcal{C}/X' \to \mathcal{S}$ such that
+ $j' \circ t' \cong \text{id}_{\mathcal{C}/X'}$ and
+@@ -8946,7 +8951,7 @@
+ 
+ \medskip\noindent
+ In \cite[Theorem 3.1]{associativity} it is explained how a triple
+-$(\mathcal{C}, \otimes, \phi)$ as a above is coherent. A reformulation
++$(\mathcal{C}, \otimes, \phi)$ as above is coherent. A reformulation
+ is that such a triple gives rise to a system of well defined functors
+ $$
+ \mathcal{C} \times \ldots \times \mathcal{C} \longrightarrow \mathcal{C},
+@@ -8960,7 +8965,7 @@
+ X_1 \otimes \ldots \otimes X_n \otimes Y_1 \otimes \ldots \otimes Y_m
+ $$
+ such that all possible diagrams formed from these isomorphisms
+-commute (the pentagram diagram above is an example). For $n = 5$
++commute (the pentagon diagram above is an example). For $n = 5$
+ this means that the expressions
+ $$
+ \begin{matrix}
+@@ -9021,7 +9026,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Given a unit $(\mathbf{1}, l, r)$ we get an isomorpism
++Given a unit $(\mathbf{1}, l, r)$ we get an isomorphism
+ $r : \mathbf{1} \otimes \mathbf{1} \to \mathbf{1}$ and $L$ and $R$ are
+ equivalences as they are isomorphic to the identity functor.
+ Conversely, suppose given $(\mathbf{1}, 1)$ such that
+@@ -9040,7 +9045,7 @@
+ $$
+ \text{id}_Z \otimes \text{id}_\mathbf{1} \otimes l_{\mathbf{1} \otimes W}
+ =
+-r_{Z \otimes \mathbf{1}} \otimes \text{id}_\mathbf{1} \otimes \text{id}_Y
++r_{Z \otimes \mathbf{1}} \otimes \text{id}_\mathbf{1} \otimes \text{id}_W
+ $$
+ By construction these maps are equal to
+ $\text{id}_Z \otimes 1 \otimes \text{id}_\mathbf{1} \otimes \text{id}_W$ and
+@@ -9261,7 +9266,7 @@
+ By our conventions about units, we may always assume
+ $F(\mathbf{1}) = \mathbf{1}$ if $F$ is a functor of monoidal categories.
+ As an example, if $A \to B$ is a ring homomorphism, then
+-the functor $M \mapsto M \otimes_A B$ is functor of monoidal
++the functor $M \mapsto M \otimes_A B$ is a functor of monoidal
+ categories from $\text{Mod}_A$ to $\text{Mod}_B$.
+ 
+ \begin{lemma}
+@@ -9398,7 +9403,7 @@
+ $$
+ \eta_Z : Z \to Z \otimes X \otimes Y
+ $$
+-functorial in $Z$ and the counit of the adjoint produces maps
++functorial in $Z$ and the counit of the adjunction produces maps
+ $$
+ \epsilon_{Z'} : Z' \otimes Y \otimes X \to Z'
+ $$
+@@ -9582,7 +9587,7 @@
+ be a left dual of $X$ as in Definition \ref{definition-dual}.
+ Then $\eta' = \psi \circ \eta : \mathbf{1} \to Y \otimes X$
+ and $\epsilon' = \epsilon \circ \psi : X \otimes Y \to \mathbf{1}$
+-makes $X$ into a left dual of $Y$.
++make $X$ into a left dual of $Y$.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -9658,7 +9663,7 @@
+ $$
+ hom(Y, Z) \otimes X \otimes hom(X, Y) \longrightarrow Z
+ $$
+-We do this by swapping the last two tensor products using the
++We do this by swapping the last two tensor factors using the
+ commutativity constraint and then using the maps
+ $hom(X, Y) \otimes X \to Y$ and $hom(Y, Z) \otimes Y \to Z$.
+ \end{remark}
