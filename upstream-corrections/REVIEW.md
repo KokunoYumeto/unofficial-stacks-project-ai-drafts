@@ -10,7 +10,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [algebra.tex](reviews/algebra.md) — 228 correction units.
 - [artin.tex](reviews/artin.md) — 131 correction units.
 - [brauer.tex](reviews/brauer.md) — 10 correction units.
-- [categories.tex](reviews/categories.md) — 8 correction units.
+- [categories.tex](reviews/categories.md) — 91 correction units.
 - [cohomology.tex](reviews/cohomology.md) — 4 correction units.
 - [crystalline.tex](reviews/crystalline.md) — 1 correction units.
 - [derham.tex](reviews/derham.md) — 5 correction units.

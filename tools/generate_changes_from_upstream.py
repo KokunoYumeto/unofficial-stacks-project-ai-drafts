@@ -308,8 +308,39 @@ def reconstructed_operation(
 
 
 def apply_operations(authority: bytes, operations: Iterable[Operation], label: str) -> bytes:
+    # Older records bind a complete source-locus hunk, including unchanged edge
+    # context. A later correction may legitimately touch that unchanged context.
+    # Verify the entire historical preimage first, then remove ONLY equal edge
+    # text for replay. Do not rewrite the historical record or split arbitrary
+    # interior text, and still reject overlaps between actual changed spans.
+    normalized = []
+    for operation in operations:
+        start, end = operation.start_byte, operation.end_byte_exclusive
+        require(start is not None and end is not None, f"{label}: missing byte bounds")
+        require(0 <= start <= end <= len(authority), f"{label}: invalid byte bounds")
+        require(authority[start:end] == operation.old_text.encode("utf-8"),
+                f"{label}: original exact preimage mismatch at byte {start}")
+        if operation.fidelity == "hash-bound reconstructed diff hunk":
+            old, new = operation.old_text, operation.replacement_text
+            prefix = 0
+            while prefix < min(len(old), len(new)) and old[prefix] == new[prefix]:
+                prefix += 1
+            suffix = 0
+            while suffix < min(len(old), len(new)) - prefix and old[-suffix-1] == new[-suffix-1]:
+                suffix += 1
+            old_end = len(old)-suffix if suffix else len(old)
+            new_end = len(new)-suffix if suffix else len(new)
+            old_middle, new_middle = old[prefix:old_end], new[prefix:new_end]
+            require(old_middle != new_middle, f"{label}: empty legacy change")
+            operation = dataclasses.replace(operation,
+                start_byte=start+len(old[:prefix].encode("utf-8")),
+                end_byte_exclusive=end-len(old[old_end:].encode("utf-8")),
+                old_text=old_middle, replacement_text=new_middle,
+                old_sha256=sha256_bytes(old_middle.encode("utf-8")),
+                replacement_sha256=sha256_bytes(new_middle.encode("utf-8")))
+        normalized.append(operation)
     ordered = sorted(
-        operations,
+        normalized,
         key=lambda op: (
             -1 if op.start_byte is None else op.start_byte,
             -1 if op.end_byte_exclusive is None else op.end_byte_exclusive,
@@ -318,11 +349,14 @@ def apply_operations(authority: bytes, operations: Iterable[Operation], label: s
     )
     result = authority
     previous_start = len(authority) + 1
+    used_spans = set()
     for operation in ordered:
         require(operation.start_byte is not None, f"{label}: operation has no byte start")
         require(operation.end_byte_exclusive is not None, f"{label}: operation has no byte end")
         start = operation.start_byte
         end = operation.end_byte_exclusive
+        require((start, end) not in used_spans, f"{label}: duplicate operation span")
+        used_spans.add((start, end))
         require(end <= previous_start, f"{label}: overlapping operations near byte {start}")
         old_bytes = operation.old_text.encode("utf-8")
         require(result[start:end] == old_bytes, f"{label}: exact preimage mismatch at byte {start}")

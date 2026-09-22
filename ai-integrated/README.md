@@ -21,11 +21,11 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R51 and the Verdier insertion**: 52
-admitted overlays with 1,352 stable units (1,340 correction IDs and 12 Verdier
+The cumulative source includes **R1–R52 and the Verdier insertion**: 53
+admitted overlays with 1,435 stable units (1,423 correction IDs and 12 Verdier
 units). Admission and source composition are separate checks. The
-[R51 successor receipt](../validation/r51-successor-current.json) binds its
-exact 33-edit source change and validation; its immutable R50 predecessor
+[R52 successor receipt](../validation/r52-successor-current.json) binds its
+exact 107-edit source change and validation; its immutable R51 predecessor
 preserves all earlier source and evidence. The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
@@ -40,8 +40,12 @@ theorems and can be used without cloning this repository. R51 adds 29 repairs
 to Sets, Schemes, Homology and Algebra, including Ext contravariance, chain-map
 indices, a covering-family size bound and the GL(2) determinant denominator.
 [Each correction, chapter proof and complete source](candidates/commons/stacks/errata/r51/README.md)
-is independently accessible. R49–R51 are source updates, not new full-reader
-or Zenodo editions. Final R50/R51 review, source
+is independently accessible. R52 adds 83 proposed Categories changes: 51
+copyedits, 11 clarifications and 21 source corrections, including initial-functor
+endpoints, cone indices, coherence maps and the inverse component in a fibred
+category comparison. [Review and editable proofs](candidates/commons/stacks/errata/r52/README.md).
+R49–R52 are source updates, not new full-reader
+or Zenodo editions. Final R50/R51/R52 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

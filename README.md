@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,340 historical correction IDs are accounted for; 1,338 effective textual
+  The 1,423 historical correction IDs are accounted for; 1,421 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -111,7 +111,19 @@ repairs are individually explained in [the correction review](ai-integrated/cand
 accompany the batch; the fixes-only downloads contain no theorem additions.
 This remains a source-and-patch update, not a new Zenodo edition.
 
-Current correction-export tooling and packaging were produced by OpenAI Codex —
+R52 adds **83 proposed changes in Categories**: 51 copyedits, 11 clarifications
+and 21 source corrections, not 83 new mathematical errors. Examples include the
+endpoint in the definition of an initial functor, the cone-component indices in
+the finite-limit proof, a common-refinement index for pro-objects, the coherence
+maps for a 2-fibre product, and an inverse missing from a comparison of fibred
+categories. [Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r52/REVIEW.md)
+and [proofs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r52/README.md)
+are available. The intake record also preserves rejected suggestions and
+duplicates. These changes are included in the Categories patch and combined
+fixes-only download; no theorem additions are required.
+
+R52 review, correction preparation, builds and visual checks, and current
+correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence
 retains its original provenance.
