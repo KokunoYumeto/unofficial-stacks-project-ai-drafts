@@ -49,7 +49,7 @@ class ChangesFromUpstreamTests(unittest.TestCase):
             entry for entry in registry["registered_entries"]
             if entry["id"].startswith("stacks-errata-")
         ]
-        self.assertEqual(len(errata), 50)
+        self.assertEqual(len(errata), 51)
         self.assertEqual(
             set(stable_ids),
             {stable_id for entry in errata for stable_id in entry["stable_ids"]},
