@@ -21,6 +21,7 @@ VISUAL = 'validation/r49-visual-qa-2026-09-22.json'
 TOOLS = {'tools/r49_successor.py', 'tools/build_r49_chapter.py', 'tools/validate_r49_successor.py',
          'tests/test_r49_successor.py', 'tools/validate_standalone_supplements.py',
          'tools/export_upstream_corrections.py', 'tests/test_upstream_correction_export.py',
+         'tests/test_changes_from_upstream.py',
          '.github/workflows/validate.yml'}
 
 
