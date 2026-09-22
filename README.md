@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,309 historical correction IDs are accounted for; 1,307 effective textual
+  The 1,311 historical correction IDs are accounted for; 1,309 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -84,14 +84,21 @@ not a claim to cover every finding from the translations or historical work.
 The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
 alongside it. Neither list treats an added theorem as an upstream correction.
 
-The 13 separately packaged proposals are **additional to**, not the total of,
-the larger integrated correction collection. Both sets target the stated pinned
-official revision; compatibility with today's upstream is not claimed.
+The original 13-item readable selection is not the total correction collection.
+Two limit-preservation fixes have now been integrated as R50 and are also in
+the larger export; eleven remain pending. Do not apply the same fix twice.
+Both sets target the pinned official revision; compatibility with today's
+upstream is not claimed.
 
-The source and fixes-only downloads now include R49: five de Rham corrections
+The source and fixes-only downloads include R49: five de Rham corrections
 (seven edits), including balanced parentheses in the Hodge-filtration cup-product
 diagram and four small prose repairs. The latest full-reader release predates
 these edits; this is a source-and-patch update, not a new Zenodo edition.
+R50 adds two corrections in **Limits of Algebraic Spaces**: using the fibre
+point fixed in the proof, and citing finite limits rather than only finite
+products for a fibre-product comparison. The [32 chapter patch sets](upstream-corrections/README.md)
+include both, with no added theorems. The bounded chapter proof and complete
+editable source are linked in [its candidate record](ai-integrated/candidates/commons/stacks/errata/r50/README.md).
 
 Current correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new

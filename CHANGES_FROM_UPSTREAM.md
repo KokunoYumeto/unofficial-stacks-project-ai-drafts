@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **49**
-- Stable correction IDs: **1,309**
-- Displayed exact change hunks: **1,583**
-- Manifest/source-map exact operations: **1,515**
+- Admitted errata batches: **50**
+- Stable correction IDs: **1,311**
+- Displayed exact change hunks: **1,585**
+- Manifest/source-map exact operations: **1,517**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **32**
-- Registry SHA-256: `AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0`
+- Affected source paths: **33**
+- Registry SHA-256: `1CEC2C9123E9CB19D4CD1BAF107C500449B713975C3C758D44CBDC5335837A86`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -37847,5 +37847,59 @@ Pinned-official lines `730-730`; bytes `23091:23150`.
 ````
 
 Original SHA-256 `3594BA03C93CACAFB8ED2B384B2FD50A0F092EDF1EDD8C68F1F0223314DF9C09`; replacement SHA-256 `EB5FF83ACBE1043E10AE8215F93A2A0C5364B003312FE491F172CE20745A3C5B`.
+
+</details>
+
+## stacks-errata-a04446e-r50
+
+2 stable IDs · 2 displayed change hunks · admitted 2026-09-22T01:30:28.830845Z.
+
+<details id="mc-stk-err-1574">
+<summary><code>MC-STK-ERR-1574 — spaces-limits.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r50`
+- Stable ID: `MC-STK-ERR-1574`; producer ID: `SPACES-SRC-00178-UNBOUND-Y`
+- Bound source locator: `spaces-limits.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-limits.tex#L178) · [Integrated source](spaces-limits.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r50/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r50/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r50/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r50/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: The reverse implication fixes y_T in G(T), and the fibre functor is F_{y_T}. The y in the separate forward implication is not bound in this direction. Only the subscript at line 178 changes.
+
+### Change 1: `MC-STK-ERR-1574-OP1`
+
+Pinned-official lines `178-178`; bytes `6273:6282`.
+
+````diff
+- F_y(T'_i)
++ F_{y_T}(T'_i)
+````
+
+Original SHA-256 `5C9D93FBB592B99A5266F041E35CEF8A5C361F2E700A1F920551D910EC8A739C`; replacement SHA-256 `CFC322207024B2696345F50164C9F0F5B1FF83D5A36130C0EB985EB059A0E306`.
+
+</details>
+
+<details id="mc-stk-err-1575">
+<summary><code>MC-STK-ERR-1575 — spaces-limits.tex: — source_defect</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r50`
+- Stable ID: `MC-STK-ERR-1575`; producer ID: `SPACES-SRC-00269-PRODUCTS-VS-LIMITS`
+- Bound source locator: `spaces-limits.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_source_proposal_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-limits.tex#L269) · [Integrated source](spaces-limits.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r50/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r50/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r50/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r50/replay/FINAL_INDEPENDENT_REVIEW.json)
+- Rationale: The displayed comparison is a fibre product over a varying set. In the frozen Categories lemma-directed-commutes, filtered colimits commute with finite limits, explicitly including fibre products and equalizers. At a common later index the equality of images of representatives is witnessed, giving surjectivity; eventual equality of pairs gives injectivity. Finite products alone is not the stated justification needed.
+
+### Change 1: `MC-STK-ERR-1575-OP1`
+
+Pinned-official lines `269-269`; bytes `9099:9114`.
+
+````diff
+- finite products
++ finite limits
+````
+
+Original SHA-256 `DA070099BD53481B4DA0C5B268B1FA75C177C1B8D337D683A9EF572F8CF9D78E`; replacement SHA-256 `967D73530E61F12B4D312610FA619A623FEEB56B05A7A5F29367852C2B4FD8D9`.
 
 </details>

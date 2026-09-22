@@ -33,6 +33,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [smoothing.tex](reviews/smoothing.md) — 30 correction units.
 - [spaces-cohomology.tex](reviews/spaces-cohomology.md) — 7 correction units.
 - [spaces-duality.tex](reviews/spaces-duality.md) — 38 correction units.
+- [spaces-limits.tex](reviews/spaces-limits.md) — 2 correction units.
 - [spaces-morphisms.tex](reviews/spaces-morphisms.md) — 7 correction units.
 - [spaces-perfect.tex](reviews/spaces-perfect.md) — 19 correction units.
 - [stacks-limits.tex](reviews/stacks-limits.md) — 11 correction units.

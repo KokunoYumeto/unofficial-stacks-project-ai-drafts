@@ -20,17 +20,21 @@ coverage and pinned baseline; clean application is not a mathematical endorsemen
 
 ## Coverage and status
 
-This initial readable selection contains **13 proposed correction units**, plus
+This initial readable selection contains **13 correction proposals**, plus
 **three historical findings that need no new edit**. It is not an exhaustive
 review of Stacks or of the translation findings. Eleven proposals were recovered
 while reviewing this project's history; two came from French translation work.
 The fuller recorded comparison linked above covers earlier integrated batches.
+**Two of this selection are now integrated in the draft as R50; eleven remain
+pending.** Upstream acceptance is not claimed. The original evidence remains
+unchanged; [the separate status record](ai-integrated/review-notes/proposal-integration-status.json)
+binds the two later source compositions.
 
 For the much larger already-integrated collection, use the separate
 [corrections-only combined and chapter patches](upstream-corrections/README.md).
-That export accounts for all 1,304 historical IDs: 1,302 effective textual units,
-one superseded correction and one excluded fork-specific tag allocation. These
-13 additional proposals are not silently mixed into that export.
+That index gives the current exported totals and exclusions. It now includes
+the two R50 fixes below, so they should not be applied again after the combined
+patch. The other eleven proposals remain outside that export.
 
 All original passages below refer to the fixed official Stacks revision
 [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14),
@@ -38,8 +42,8 @@ not necessarily today's upstream text. The cumulative draft checked here was
 [`0e40e317e02e7b05437fcc7c7f13659e140e128f`](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/commit/0e40e317e02e7b05437fcc7c7f13659e140e128f).
 
 “Proposed” means the correction has **not been composed into that checked draft**.
-The two limit-preservation items have reserved draft registry IDs, but their
-admission and integration are not claimed. The history-recovery identifiers are
+The two limit-preservation items were subsequently admitted and composed in R50;
+their headings below show that later status. The history-recovery identifiers are
 stable identifiers within this review, not official Stacks tags or allocated
 registry IDs. [Exact operations and source identities](ai-integrated/review-notes/2026-09-19-proposed-corrections.json)
 are supporting evidence after, not instead of, the arguments.
@@ -171,8 +175,8 @@ are maps $F_i\to G_{i-1}$.
 
 ### 7. The fibre functor must use the point fixed in this direction of the proof
 
-**Proposed; R50 candidate in progress, not yet admitted or integrated.**
-Reserved draft ID `MC-STK-ERR-1574`; producer alias
+**Integrated in this unofficial draft as R50; not officially adopted upstream.**
+Draft ID `MC-STK-ERR-1574`; producer alias
 `SPACES-SRC-00178-UNBOUND-Y`.
 [Original proof](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-limits.tex#L168-L178),
 `lemma-characterize-relative-limit-preserving`, line 178.
@@ -188,8 +192,8 @@ not certification of every nearby sentence.
 
 ### 8. The fibre-product comparison uses finite limits, not only products
 
-**Proposed; R50 candidate in progress, not yet admitted or integrated.**
-Reserved draft ID `MC-STK-ERR-1575`; producer alias
+**Integrated in this unofficial draft as R50; not officially adopted upstream.**
+Draft ID `MC-STK-ERR-1575`; producer alias
 `SPACES-SRC-00269-PRODUCTS-VS-LIMITS`.
 [Original proof](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-limits.tex#L252-L269),
 `lemma-fibre-product-locally-finite-presentation`, line 269.

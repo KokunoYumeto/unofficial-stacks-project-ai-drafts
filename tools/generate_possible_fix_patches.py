@@ -63,6 +63,10 @@ def main():
     args = parser.parse_args()
     raw = (ROOT / EVIDENCE).read_bytes()
     evidence = json.loads(raw)
+    status_path = Path('ai-integrated/review-notes/proposal-integration-status.json')
+    status_raw = (ROOT / status_path).read_bytes()
+    status = json.loads(status_raw)
+    integrated = {row['finding_id']: row for row in status['composed']}
     base = evidence["authority_commit"]
     proposals = evidence["proposals"]
     assert len(proposals) == 13
@@ -109,6 +113,8 @@ def main():
     manifest = {"schema": "upstream-only-possible-fixes/v1", "authority_commit": base,
                 "evidence": EVIDENCE.as_posix(), "evidence_sha256": digest(raw),
                 "proposal_units": 13, "exact_operations": 17, "patches": records,
+                "integration_status": {"path": status_path.as_posix(), "sha256": digest(status_raw),
+                    "composed_units": len(integrated), "pending_units": status['pending_units']},
                 "scope": "Selected proposals only; no theorem additions, translations, or AI-source repairs.",
                 "upstream_current_head_checked": False, "mathematical_approval_implied": False}
     generated["manifest.json"] = (json.dumps(manifest, indent=2) + "\n").encode()
@@ -119,6 +125,9 @@ def main():
         "not a mathematical correctness certificate.", "",
         "[Read the arguments and original/replacement passages](../PROPOSED_CORRECTIONS.md) ·",
         "[Possible new additions (separate)](../POSSIBLE_ADDITIONS.md)", "",
+        f"**Current status: {len(integrated)} of these 13 are now in the cumulative draft and",
+        f"[combined corrections-only export](../upstream-corrections/README.md); {status['pending_units']} remain pending.**",
+        "Both limit-preservation fixes are included in R50. Do not apply them twice.", "",
         "## Review or use one correction", "",
         f"All patches are based on official commit `{base}`.",
         "Each individual patch and both bundles have been applied in a separate index",
@@ -143,6 +152,8 @@ def main():
         "Their other corrections are not silently included in these downloads. Historical",
         "duplicates and withdrawn suggestions receive no patch. Regenerate or verify with",
         "`python tools/generate_possible_fix_patches.py` or the same command with `--check`.", ""]
+    lines += ['Patch export and status maintenance: OpenAI Codex - GPT-6 Astra, Ultra effort.',
+        'This is not a new mathematical or human review of the historical selection.', '']
     generated["README.md"] = "\n".join(lines).encode("utf-8")
     for filename, content in generated.items():
         target = OUT / filename

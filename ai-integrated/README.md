@@ -21,12 +21,25 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R48 and the Verdier insertion**: 49
-admitted overlays with 1,316 stable units. Admission and source composition
-are separate checks; the [current composition receipt](../validation/composition-current.json)
-binds the registry cutoff and the applied operations. The
+The cumulative source includes **R1–R50 and the Verdier insertion**: 51
+admitted overlays with 1,323 stable units (1,311 correction IDs and 12 Verdier
+units). Admission and source composition are separate checks. The
+[R50 successor receipt](../validation/r50-successor-current.json) binds its
+exact two-edit source change and validation; its immutable R49 predecessor
+preserves all earlier source and evidence. The older
+[composition receipt](../validation/composition-current.json) remains historical
+and is not a claim that it already described these later updates. The
 [chapter-by-chapter comparison](changes/index.html) shows original and
 replacement text, rather than asking readers to infer changes from counts.
+
+R50 fixes the fibre-functor subscript and the finite-limit justification in
+**Limits of Algebraic Spaces**. Its candidate source, complete reproducible
+proof package and review are [directly available](candidates/commons/stacks/errata/r50/README.md).
+The [fixes-only export](../upstream-corrections/README.md) contains no added
+theorems and can be used without cloning this repository. R49/R50 are source
+updates, not new full-reader or Zenodo editions. Final R50 review, source
+composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
+review is implied.
 
 The [R47 and Illusie fixed-point build](../validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json)
 records historical artifact identities, not R48; its later amended

@@ -24,11 +24,15 @@ jobs:
           python-version: "3.12"
 
       - name: Install PDF validation dependency
-        run: python -m pip install pypdf==6.10.0
+        run: python -m pip install pypdf==6.10.0 jsonschema==4.23.0
 
       - name: Validate unified source, registry, and documentation
         shell: bash
         run: |
+          if test -f tools/validate_r50_successor.py; then
+            python tools/validate_r50_successor.py --verify-frozen-core
+            exit $?
+          fi
           if test -f tools/validate_r49_successor.py; then
             python tools/validate_r49_successor.py --verify-frozen-core
             exit $?
@@ -58,6 +62,7 @@ jobs:
           python tools/export_upstream_corrections.py --check
           python -m unittest tests.test_upstream_correction_export
           python -m unittest tests.test_r49_successor
+          python -m unittest tests.test_r50_successor
           python pursuing-stacks/check.py
           python pursuing-stacks/check.py --record intervals-integration.json
           python -m unittest tests.test_standalone_supplements

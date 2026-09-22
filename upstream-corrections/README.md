@@ -1,6 +1,6 @@
 # Corrections only: review or reuse without adopting this fork
 
-**1,307 effective textual correction units across 31 chapters.**
+**1,309 effective textual correction units across 32 chapters.**
 Download one chapter patch or the combined patch. You do not need to clone this
 repository, import its history, or take any of its added theorems.
 
@@ -58,6 +58,7 @@ editing or interactive staging in your own checkout.
 | `smoothing.tex` | 30 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/smoothing.patch) | [entries](reviews/smoothing.md) |
 | `spaces-cohomology.tex` | 7 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-cohomology.patch) | [entries](reviews/spaces-cohomology.md) |
 | `spaces-duality.tex` | 38 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-duality.patch) | [entries](reviews/spaces-duality.md) |
+| `spaces-limits.tex` | 2 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-limits.patch) | [entries](reviews/spaces-limits.md) |
 | `spaces-morphisms.tex` | 7 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-morphisms.patch) | [entries](reviews/spaces-morphisms.md) |
 | `spaces-perfect.tex` | 19 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-perfect.patch) | [entries](reviews/spaces-perfect.md) |
 | `stacks-limits.tex` | 11 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/stacks-limits.patch) | [entries](reviews/stacks-limits.md) |
@@ -66,12 +67,13 @@ editing or interactive staging in your own checkout.
 
 ## What is and is not included
 
-The 1,309 historical IDs in R1–R49 remain accounted for:
-1,307 effective textual units are exported; one earlier correction was
+The 1,311 historical IDs in R1–R50 remain accounted for:
+1,309 effective textual units are exported; one earlier correction was
 superseded by its explicitly recorded replacement, and one fork-specific tag
 allocation is excluded. No unofficial permanent tags are proposed for upstream.
-The 13 [additional possible-fix proposals](../possible-fixes/README.md) are a
-separate, not-yet-composed set and are not silently included here. Translation
+The original [13-item readable selection](../possible-fixes/README.md) remains available.
+2 of those fixes are now included here; 11 remain pending.
+Do not apply an individual selection patch again if the combined patch already includes it. Translation
 choices, Verdier/FGA/FAC/Pursuing Stacks additions and other new exposition are
 excluded. Historical correction evidence remains unchanged.
 

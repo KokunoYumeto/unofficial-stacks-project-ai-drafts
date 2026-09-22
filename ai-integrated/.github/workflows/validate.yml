@@ -125,8 +125,8 @@ jobs:
                   assert event['lease_id'] not in issued_by_lease
                   issued_by_lease[event['lease_id']] = event
               else:
-                  assert event['event'] == 'released'
-                  assert event['state'] == 'released'
+                  assert event['event'] in ('released', 'superseded')
+                  assert event['state'] == event['event']
                   issued = issued_by_lease[event['lease_id']]
                   assert event['supersedes_event_id'] == issued['event_id']
                   for key in immutable:

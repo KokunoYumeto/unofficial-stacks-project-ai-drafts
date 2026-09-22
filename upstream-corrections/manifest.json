@@ -1,11 +1,11 @@
 {
   "schema": "stacks-upstream-corrections-only/v1",
   "official_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
-  "registry_sha256": "AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0",
-  "admitted_rounds": 49,
-  "historical_registry_ids": 1309,
-  "included_effective_textual_units": 1307,
-  "included_operations": 1581,
+  "registry_sha256": "1CEC2C9123E9CB19D4CD1BAF107C500449B713975C3C758D44CBDC5335837A86",
+  "admitted_rounds": 50,
+  "historical_registry_ids": 1311,
+  "included_effective_textual_units": 1309,
+  "included_operations": 1583,
   "chapters": [
     {
       "source": "algebra.tex",
@@ -1584,6 +1584,22 @@
       "preimage_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
       "postimage_bytes": 80995,
       "postimage_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E"
+    },
+    {
+      "source": "spaces-limits.tex",
+      "file": "chapters/spaces-limits.patch",
+      "units": 2,
+      "operations": 2,
+      "unit_ids": [
+        "MC-STK-ERR-1574",
+        "MC-STK-ERR-1575"
+      ],
+      "bytes": 813,
+      "sha256": "9436FC7FAFFF4CFA00954FB5397C95F1B69516AACD0BFF3CF59CEF8F3F456C0A",
+      "preimage_bytes": 209790,
+      "preimage_sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228",
+      "postimage_bytes": 209792,
+      "postimage_sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
     },
     {
       "source": "spaces-morphisms.tex",
@@ -12492,12 +12508,28 @@
       "operation_ids": [
         "MC-STK-ERR-1573-OP1"
       ]
+    },
+    {
+      "id": "MC-STK-ERR-1574",
+      "status": "included",
+      "chapter": "spaces-limits.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1574-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1575",
+      "status": "included",
+      "chapter": "spaces-limits.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1575-OP1"
+      ]
     }
   ],
   "combined": {
     "file": "ALL-TEXTUAL-CORRECTIONS.patch",
-    "bytes": 578636,
-    "sha256": "C656C3C614AE87CD2DFFC3ABC2AB44C718F67996AB13D31BB9821945F0A25008"
+    "bytes": 579449,
+    "sha256": "9B7E18C5DFF3F0F6BAA0B1B71A946A2D876D01BE7C102A2D920B7634E10DD4D1"
   },
   "replay": {
     "independent_chapter_patches": "PASS",
@@ -12508,6 +12540,21 @@
   "contains_fork_tag_assignments": false,
   "includes_13_additional_proposals": false,
   "current_upstream_checked": false,
+  "readable_selection_already_included": [
+    {
+      "finding_id": "SPACES-SRC-00178-UNBOUND-Y",
+      "stable_id": "MC-STK-ERR-1574",
+      "overlay": "stacks-errata-a04446e-r50",
+      "source_commit": "eacb3cccfdf7ac98b863f80bfa0ba286f00d8e01"
+    },
+    {
+      "finding_id": "SPACES-SRC-00269-PRODUCTS-VS-LIMITS",
+      "stable_id": "MC-STK-ERR-1575",
+      "overlay": "stacks-errata-a04446e-r50",
+      "source_commit": "eacb3cccfdf7ac98b863f80bfa0ba286f00d8e01"
+    }
+  ],
+  "readable_selection_still_pending": 11,
   "ai_role": "Patch export and packaging: OpenAI Codex — GPT-6 Astra, Ultra effort. This is not a new mathematical or human review of the historical corrections.",
   "input_closure": [
     {
@@ -12781,6 +12828,11 @@
       "sha256": "8130F186D839507DF1868D469892517E38E0A3D4C92126670A8CD53FAE777A0A"
     },
     {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r50/candidate.manifest.json",
+      "bytes": 15377,
+      "sha256": "F2B9802F08ADD61B6C63489CAFA705242C70379C087974823877834E43C9AB77"
+    },
+    {
       "path": "ai-integrated/candidates/commons/stacks/errata/r6/candidate.manifest.json",
       "bytes": 10166,
       "sha256": "0573E0230065780BE1AA7E73114735428C290A45E1E1CD14401E7358764DE050"
@@ -12817,8 +12869,8 @@
     },
     {
       "path": "ai-integrated/registry/overlays.json",
-      "bytes": 78722,
-      "sha256": "AA7A6C8AAC91376B368900B92C60592DE9410B45020B9C9B2E5A679016B90CF0"
+      "bytes": 79464,
+      "sha256": "1CEC2C9123E9CB19D4CD1BAF107C500449B713975C3C758D44CBDC5335837A86"
     },
     {
       "path": "candidates/commons/stacks/errata/r10/authority/source/algebra.tex",
@@ -14431,6 +14483,41 @@
       "sha256": "7658414F1CA208223675BCFE9BF291EE169BC7691A7A0B862DEFC8C21E718B54"
     },
     {
+      "path": "candidates/commons/stacks/errata/r50/authority/source/spaces-limits.tex",
+      "bytes": 209790,
+      "sha256": "63DF4873F4D309A436EE8551A480A37805344FC377F1963376219F98D07BC228"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r50/decisions.jsonl",
+      "bytes": 1309,
+      "sha256": "29913C535F89FAF11683173710E69EF0FA184BC0C6F0C161946331A8B3E7860A"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r50/operation-spec.json",
+      "bytes": 3000,
+      "sha256": "7C3A8ED7E32B29A687BE1C79AF806F08A1FA76C16D6BF7FF3EDFFA1A1B4089B1"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r50/payload/spaces-limits.tex",
+      "bytes": 209792,
+      "sha256": "32F896F8257C8691D6D0350E346036EE0FFA5DC341668B400F57A70BBE2A4489"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r50/replay/FINAL_INDEPENDENT_REVIEW.json",
+      "bytes": 3047,
+      "sha256": "C1AD47C9E70F40EA7ACA45EA375888E8E306C88D27E0A9101485164EA02CC0D3"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r50/source-map.jsonl",
+      "bytes": 3924,
+      "sha256": "AAC2329BF2E8AE669425542A7FD948CD24BDFDD85F25320399966BBB5661EFA2"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r50/stable-units.json",
+      "bytes": 981,
+      "sha256": "32D743D1F0F4A4ACD6B030DFF54BE88D92AB37DC26231510F79C89095E633A98"
+    },
+    {
       "path": "candidates/commons/stacks/errata/r6/authority/source/algebra.tex",
       "bytes": 1771230,
       "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
@@ -14569,6 +14656,11 @@
       "path": "candidates/commons/stacks/errata/r9/stable-units.json",
       "bytes": 9881,
       "sha256": "79ECEF1DA66C799E4D47B5E25F15784927D9662BF71CDB50E80B12FFDA8C7F8D"
+    },
+    {
+      "path": "ai-integrated/review-notes/proposal-integration-status.json",
+      "bytes": 838,
+      "sha256": "92ABFB4D82D4927858DCB190632EF6EB1637A56C74D1BEB640570EE88044436C"
     }
   ]
 }

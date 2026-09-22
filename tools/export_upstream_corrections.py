@@ -183,6 +183,13 @@ def generate():
     replay_all(patches, before, after, model.official_commit)
     combined = b"".join(patches.values())
     included_count = sum(len(v) for v in chapter_units.values())
+    status_path = 'ai-integrated/review-notes/proposal-integration-status.json'
+    status_raw = (ROOT / status_path).read_bytes()
+    selection = json.loads(status_raw)
+    exported_ids = {row['id'] for row in dispositions if row['status'] == 'included'}
+    require(all(row['stable_id'] in exported_ids for row in selection['composed']), 'Readable-selection status not exported')
+    require(selection['pending_units'] + len(selection['composed']) == selection['original_selection_units'] == 13,
+            'Readable-selection count mismatch')
     manifest = {"schema": "stacks-upstream-corrections-only/v1", "official_baseline": model.official_commit,
         "registry_sha256": model.registry_sha256, "admitted_rounds": model.overlay_count,
         "historical_registry_ids": model.unit_count, "included_effective_textual_units": included_count,
@@ -192,8 +199,11 @@ def generate():
         "replay": {"independent_chapter_patches": "PASS", "combined_patch": "PASS", "identical_exact_postimages": True},
         "contains_new_theorem_additions": False, "contains_fork_tag_assignments": False,
         "includes_13_additional_proposals": False, "current_upstream_checked": False,
+        "readable_selection_already_included": selection['composed'],
+        "readable_selection_still_pending": selection['pending_units'],
         "ai_role": ATTRIBUTION,
-        "input_closure": [{"path": p, "bytes": n, "sha256": h} for p, n, h in model.input_closure]}
+        "input_closure": [{"path": p, "bytes": n, "sha256": h} for p, n, h in model.input_closure]
+            + [{'path': status_path, 'bytes': len(status_raw), 'sha256': sha(status_raw)}]}
     rows = ["# Corrections only: review or reuse without adopting this fork", "",
         f"**{included_count:,} effective textual correction units across {len(chapter_records)} chapters.**",
         "Download one chapter patch or the combined patch. You do not need to clone this",
@@ -225,8 +235,9 @@ def generate():
         f"{included_count:,} effective textual units are exported; one earlier correction was",
         "superseded by its explicitly recorded replacement, and one fork-specific tag",
         "allocation is excluded. No unofficial permanent tags are proposed for upstream.",
-        "The 13 [additional possible-fix proposals](../possible-fixes/README.md) are a",
-        "separate, not-yet-composed set and are not silently included here. Translation",
+        "The original [13-item readable selection](../possible-fixes/README.md) remains available.",
+        f"{len(selection['composed'])} of those fixes are now included here; {selection['pending_units']} remain pending.",
+        "Do not apply an individual selection patch again if the combined patch already includes it. Translation",
         "choices, Verdier/FGA/FAC/Pursuing Stacks additions and other new exposition are",
         "excluded. Historical correction evidence remains unchanged.", "",
         "These are AI-reviewed suggestions already present in our draft, not officially",

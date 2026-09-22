@@ -8,6 +8,10 @@ not a mathematical correctness certificate.
 [Read the arguments and original/replacement passages](../PROPOSED_CORRECTIONS.md) ·
 [Possible new additions (separate)](../POSSIBLE_ADDITIONS.md)
 
+**Current status: 2 of these 13 are now in the cumulative draft and
+[combined corrections-only export](../upstream-corrections/README.md); 11 remain pending.**
+Both limit-preservation fixes are included in R50. Do not apply them twice.
+
 ## Review or use one correction
 
 All patches are based on official commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
@@ -55,3 +59,6 @@ and [filterable chapter browser](../ai-integrated/changes/index.html) remain sep
 Their other corrections are not silently included in these downloads. Historical
 duplicates and withdrawn suggestions receive no patch. Regenerate or verify with
 `python tools/generate_possible_fix_patches.py` or the same command with `--check`.
+
+Patch export and status maintenance: OpenAI Codex - GPT-6 Astra, Ultra effort.
+This is not a new mathematical or human review of the historical selection.
