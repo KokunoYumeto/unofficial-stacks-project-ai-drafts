@@ -1,0 +1,48 @@
+diff --git a/derham.tex b/derham.tex
+index 14889f7419eb760a8047b5d689ca9ea780eeab43..49494306e759e14c43357db4ccbf47ac18fe4b1d 100644
+--- a/derham.tex
++++ b/derham.tex
+@@ -456,7 +456,7 @@
+ \noindent
+ Let $p : X \to S$ be a morphism of schemes. Since the category
+ of $p^{-1}\mathcal{O}_S$-modules on $X$ has enough injectives
+-there exist a Cartan-Eilenberg resolution for $\Omega^\bullet_{X/S}$.
++there exists a Cartan-Eilenberg resolution for $\Omega^\bullet_{X/S}$.
+ See Derived Categories, Lemma \ref{derived-lemma-cartan-eilenberg}.
+ Hence we can apply Derived Categories, Lemma
+ \ref{derived-lemma-two-ss-complex-functor} to get two spectral sequences
+@@ -537,7 +537,7 @@
+ H^0(X, \mathcal{H}^1) \to H^2(X, \mathcal{H}^0) \to H^2_{dR}(X/S)
+ $$
+ It turns out that if $X \to S$ is smooth and $S$ lives in characteristic $p$,
+-then the sheaves $\mathcal{H}^q$ are computable (in terms of a certain
++then the sheaves $\mathcal{H}^q$ are computable (in terms of certain
+ sheaves of differentials) and the conjugate spectral sequence is a valuable
+ tool (insert future reference here).
+ 
+@@ -589,11 +589,11 @@
+ commutative diagrams
+ $$
+ \xymatrix{
+-H^n(X, \sigma_{\geq i}\Omega^\bullet_{X/S}))
++H^n(X, \sigma_{\geq i}\Omega^\bullet_{X/S})
+ \times 
+-H^m(X, \sigma_{\geq j}\Omega^\bullet_{X/S}))
++H^m(X, \sigma_{\geq j}\Omega^\bullet_{X/S})
+ \ar[r] \ar[d] &
+-H^{n + m}(X, \sigma_{\geq i + j}\Omega^\bullet_{X/S})) \ar[d] \\
++H^{n + m}(X, \sigma_{\geq i + j}\Omega^\bullet_{X/S}) \ar[d] \\
+ H^n_{dR}(X/S) \times
+ H^m_{dR}(X/S)
+ \ar[r]^\cup &
+@@ -726,8 +726,8 @@
+ $\mathcal{O}_X$ and $\mathcal{O}_Y$-modules. On the other hand, $X$ and $Y$
+ are flat over $S$ (Morphisms, Lemma \ref{morphisms-lemma-smooth-flat})
+ and hence we find that $\Omega^n_{X/S}$ and $\Omega^m_{Y/S}$ are flat over $S$.
+-Also, observe that $\Omega^\bullet_{X/S}$ is a locally bounded. Thus
+-the result by Lemma \ref{lemma-de-rham-complex-product} and
++Also, observe that $\Omega^\bullet_{X/S}$ is locally bounded. Thus
++the result follows by Lemma \ref{lemma-de-rham-complex-product} and
+ Derived Categories of Schemes, Lemma \ref{perfect-lemma-kunneth-special}.
+ \end{proof}
+ 
