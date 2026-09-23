@@ -1,0 +1,91 @@
+{
+  "schema": "stacks-r53-page-comparison/v1",
+  "chapter": "introduction.tex",
+  "page_count": 4,
+  "changed_pages": [
+    1
+  ],
+  "unchanged_page_count": 3,
+  "pages": [
+    {
+      "page": 1,
+      "prior": "AA7335839175B89CE966455FD42E8E95A2327FB177BCA993BCCFA2F1DD0F6A20",
+      "successor": "86A4F80AE4A4DF9945EDCC17275BBB5A5D199939F62F9089B7AA464020AD3C49",
+      "changed_bbox": [
+        126,
+        484,
+        486,
+        517
+      ]
+    },
+    {
+      "page": 2,
+      "prior": "1FD53EFF5BAF07AE5215124D9145526D97E8FC5D9376FB5F5B3D53AF1DFCFFCB",
+      "successor": "1FD53EFF5BAF07AE5215124D9145526D97E8FC5D9376FB5F5B3D53AF1DFCFFCB",
+      "changed_bbox": null
+    },
+    {
+      "page": 3,
+      "prior": "10935AC93C6356CBB79A4F812A132475A3EFD635ECF1420A6A340126C841DC65",
+      "successor": "10935AC93C6356CBB79A4F812A132475A3EFD635ECF1420A6A340126C841DC65",
+      "changed_bbox": null
+    },
+    {
+      "page": 4,
+      "prior": "39C50C107268F065EBC1E787D54D0E0B7EBF82922AE80EC7A3966F649D2876B7",
+      "successor": "39C50C107268F065EBC1E787D54D0E0B7EBF82922AE80EC7A3966F649D2876B7",
+      "changed_bbox": null
+    }
+  ],
+  "mapped_operations": [
+    {
+      "operation_id": "INTRODUCTION-RECON-001-OP1",
+      "cumulative_line": 41,
+      "postimage_line": 41,
+      "postimage_byte": 1134,
+      "pages": [
+        1
+      ],
+      "targets": [
+        {
+          "page": 1,
+          "line": 41,
+          "x": 140.50972,
+          "y": 491.078491,
+          "h": 126.672462,
+          "v": 493.015656,
+          "W": 358.655029,
+          "H": 8.800175
+        }
+      ]
+    }
+  ],
+  "inspection_images": [
+    {
+      "page": 1,
+      "image": "visual/introduction/page-1.png",
+      "bytes": 292741,
+      "sha256": "EE4DC99EDF0A63A6AF5ACD6052C93F6790141ACEFEE68DEB0B0ED42F5034A035"
+    }
+  ],
+  "prior_pdf": {
+    "bytes": 195815,
+    "sha256": "C625611CADF6AB967EC26D27FA3CFE8DE1E58C5F304B5B6E8159A721E23EED43"
+  },
+  "successor_pdf": {
+    "bytes": 195818,
+    "sha256": "C7F38FAB92E59089D734202556FC410F4A3A3304E52055C04C63272920CBF789"
+  },
+  "status": "PASS_CHANGED_PAGE_REGRESSION",
+  "changed_pages_visual_review": "PASS",
+  "line_mapping": "Postimage byte and source line independently recomputed after every preceding edit; both ends of multiline replacements queried.",
+  "review_notes": [
+    "Actually viewed all 1 full-page layout sheets and 1 correction-region sheets, covering 1 successor pages. Original correction-region renders are 150 dpi; ordinary image-tool scaling reduced some sheets to 2048 pixels high.",
+    "No new page-margin clipping, formula collisions, missing glyphs or damaged diagrams were visible in these views. Region crops cut off surrounding context; full-page layout sheets were inspected separately.",
+    "The corrected Introduction sentence uses the plural hyperlinks followed by the existing explanation. Text and page layout remain readable.",
+    "All 4 pages were raster-compared at 72 dpi. This is bounded regression review of changed or source-mapped pages, not new mathematical certification of unchanged chapter content.",
+    "Inherited unresolved cross-chapter references belong to these isolated proofs and remain disclosed. No human review or separate reviewer is claimed."
+  ],
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "scope": "All pages raster-compared at 72 dpi. Every changed or correction-bearing successor page inspected in complete-page layout sheets, plus corrected-region sheets from 150-dpi renders. The actual page/sheet counts and limitations are recorded in the review notes. Unchanged pages are not claimed to have new mathematical or visual certification."
+}
