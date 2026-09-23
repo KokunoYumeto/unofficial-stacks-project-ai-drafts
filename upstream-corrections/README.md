@@ -1,6 +1,6 @@
 # Corrections only: review or reuse without adopting this fork
 
-**1,475 effective textual correction units across 34 chapters.**
+**1,487 effective textual correction units across 34 chapters.**
 Download one chapter patch or the combined patch. You do not need to clone this
 repository, import its history, or take any of its added theorems.
 
@@ -52,7 +52,7 @@ editing or interactive staging in your own checkout.
 | `perfect.tex` | 24 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/perfect.patch) | [entries](reviews/perfect.md) |
 | `schemes.tex` | 16 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/schemes.patch) | [entries](reviews/schemes.md) |
 | `sets.tex` | 6 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sets.patch) | [entries](reviews/sets.md) |
-| `sheaves.tex` | 71 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sheaves.patch) | [entries](reviews/sheaves.md) |
+| `sheaves.tex` | 83 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sheaves.patch) | [entries](reviews/sheaves.md) |
 | `simplicial.tex` | 11 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/simplicial.patch) | [entries](reviews/simplicial.md) |
 | `sites-cohomology.tex` | 80 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sites-cohomology.patch) | [entries](reviews/sites-cohomology.md) |
 | `sites-modules.tex` | 31 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sites-modules.patch) | [entries](reviews/sites-modules.md) |
@@ -69,8 +69,8 @@ editing or interactive staging in your own checkout.
 
 ## What is and is not included
 
-The 1,477 historical IDs in R1–R53 remain accounted for:
-1,475 effective textual units are exported; one earlier correction was
+The 1,489 historical IDs in R1–R54 remain accounted for:
+1,487 effective textual units are exported; one earlier correction was
 superseded by its explicitly recorded replacement, and one fork-specific tag
 allocation is excluded. No unofficial permanent tags are proposed for upstream.
 The original [13-item readable selection](../possible-fixes/README.md) remains available.

@@ -29,6 +29,10 @@ jobs:
       - name: Validate unified source, registry, and documentation
         shell: bash
         run: |
+          if test -f tools/validate_r54_successor.py; then
+            python tools/validate_r54_successor.py --verify-frozen-core
+            exit $?
+          fi
           if test -f tools/validate_r53_successor.py; then
             python tools/validate_r53_successor.py --verify-frozen-core
             exit $?
@@ -76,7 +80,7 @@ jobs:
           python -m unittest tests.test_r49_successor
           python -m unittest tests.test_r50_successor
           python -m unittest tests.test_r51_successor tests.test_errata_build_diagnostics
-          python -m unittest tests.test_r52_successor tests.test_r53_successor tests.test_legacy_context_replay
+          python -m unittest tests.test_r52_successor tests.test_r53_successor tests.test_r54_successor tests.test_legacy_context_replay
           python pursuing-stacks/check.py
           python pursuing-stacks/check.py --record intervals-integration.json
           python -m unittest tests.test_standalone_supplements

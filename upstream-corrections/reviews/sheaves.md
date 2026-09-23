@@ -1481,3 +1481,251 @@ Adverse evidence / qualification: None.
 +are defined by restricting
  each of the $s_i$
 ````
+
+### MC-STK-ERR-1742
+
+`sheaves.tex` — 535, 537; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L535-L537) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+The singular noun collection takes forms. Replace the final relative construction by the category in which the sheaf takes values, preserving the empty-cover explanation.
+
+Adverse evidence / qualification: The sentence remains understandable in its original form. This is a grammatical correction, not a new assertion about final objects or elements of an arbitrary category.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-actually form
++actually forms
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-of the category the sheaf has values in.
++of the category in which the sheaf takes values.
+````
+
+### MC-STK-ERR-1743
+
+`sheaves.tex` — 841; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L841) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Close the parenthetical indexing phrase with a comma, preserving the family of discrete spaces and the counterexample.
+
+Adverse evidence / qualification: The original sentence is understandable. This punctuation repair makes no claim about changing the discrete/product-topology argument.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-for $i \in \mathbf{N}$ be
++for $i \in \mathbf{N}$, be
+````
+
+### MC-STK-ERR-1744
+
+`sheaves.tex` — 926; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L926) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Insert by before the notation s_x so the sentence correctly relates the germ symbol to its represented equivalence class.
+
+Adverse evidence / qualification: The mathematical definition and equivalence relation are already explicit. This is an English repair only.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-we sometimes denote
++we sometimes denote by
+````
+
+### MC-STK-ERR-1745
+
+`sheaves.tex` — 1025; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1025) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Use the singular verb determines with the head noun pair. The two functions represent the same germ exactly when they agree near x, as already defined.
+
+Adverse evidence / qualification: Plural agreement may be understood by focusing on the two functions; the replacement is editorial and leaves the mathematical criterion intact.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-functions $f$, $g$ determine
++functions $f$, $g$ determines
+````
+
+### MC-STK-ERR-1746
+
+`sheaves.tex` — 1277, 1278; clarification.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1277-L1278) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Let P=A times_B C with projections p_A and p_C. Since F preserves fibre products, F(p_A) identifies with the projection from pairs (a,c) satisfying F(f)(a)=F(g)(c). The image inclusion gives a c for every a, and injectivity of F(g) makes it unique. Thus F(p_A) is bijective, so reflection of isomorphisms makes p_A invertible. Setting t=p_C composed with p_A inverse gives g composed with t=f by the fibre-product identity. Name this exact isomorphism and factorization explicitly.
+
+Adverse evidence / qualification: The equality signs can already denote these canonical identifications; the report does not refute the factorization theorem. This is a clarification of the morphisms used in the proof, not a new theorem or counterexample.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Hence $A = A \times_B C$ because $F$ reflects isomorphisms.
++Hence the projection $A \times_B C \to A$ is invertible, since $F$ reflects isomorphisms.
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-The result follows.
++Follow its inverse by the projection to $C$ to obtain $t$ with $g \circ t = f$.
+````
+
+### MC-STK-ERR-1747
+
+`sheaves.tex` — 1419; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1419) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Capitalize the first word of the lemma statement.
+
+Adverse evidence / qualification: No hypothesis or assertion changes.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-let $X$ be a topological space.
++Let $X$ be a topological space.
+````
+
+### MC-STK-ERR-1748
+
+`sheaves.tex` — 1447; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1447) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+End the final proof sentence with a period after the Example reference.
+
+Adverse evidence / qualification: The proof and reference are already complete; this is punctuation only.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-see also Example \ref{example-application-lemma-image-contained-in}
++see also Example \ref{example-application-lemma-image-contained-in}.
+````
+
+### MC-STK-ERR-1749
+
+`sheaves.tex` — 1492; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1492) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+For the fixed inclusion V subset U the display is one projection map. Use the singular noun map with the existing singular verb maps.
+
+Adverse evidence / qualification: Alternatively a plural rewrite could use the verb map. The singular repair is smaller and preserves the displayed restriction morphism.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-the projection maps
++the projection map
+````
+
+### MC-STK-ERR-1750
+
+`sheaves.tex` — 1544; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1544) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Remove the redundant as why construction and write for the same reason that.
+
+Adverse evidence / qualification: The analogy and reference remain unchanged; this does not provide a new proof of sheafification.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-for the same reason as why
++for the same reason that
+````
+
+### MC-STK-ERR-1751
+
+`sheaves.tex` — 1807; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1807) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+The parenthetical adverb however needs its opening comma as well as its existing closing comma.
+
+Adverse evidence / qualification: The sheafification construction remains unchanged.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-The main idea however, is
++The main idea, however, is
+````
+
+### MC-STK-ERR-1752
+
+`sheaves.tex` — 3972, 4109, 4229; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L3972-L4229) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+All three category-naming clauses lack by after Denote. Inserting it preserves the categories, value types and restriction functors.
+
+Adverse evidence / qualification: These are wording repairs, not changes to the equivalences of categories.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $\Sh(\mathcal{B})$
++Denote by $\Sh(\mathcal{B})$
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $\Sh(\mathcal{B}, \mathcal{C})$
++Denote by $\Sh(\mathcal{B}, \mathcal{C})$
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $\textit{Mod}(\mathcal{O}|_\mathcal{B})$
++Denote by $\textit{Mod}(\mathcal{O}|_\mathcal{B})$
+````
+
+### MC-STK-ERR-1753
+
+`sheaves.tex` — 4518-4519; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L4518-L4519) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json)
+
+Item (4) already specifies the restricted module presheaf, its restricted scalar action and its name. Remove the immediately following claim that this definition is left to the reader.
+
+Adverse evidence / qualification: Do not invent an additional module case to justify the stale sentence. The next sentence begins the left-adjoint discussion and remains in place.
+
+````diff
+--- original
++++ replacement
+@@ -1,2 +0,0 @@
+-We leave a definition of the restriction of presheaves
+-of modules to the reader. 
+````

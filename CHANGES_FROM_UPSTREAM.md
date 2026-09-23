@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **53**
-- Stable correction IDs: **1,477**
-- Displayed exact change hunks: **1,789**
-- Manifest/source-map exact operations: **1,721**
+- Admitted errata batches: **54**
+- Stable correction IDs: **1,489**
+- Displayed exact change hunks: **1,805**
+- Manifest/source-map exact operations: **1,737**
 - Hash-bound reconstructed legacy hunks: **68**
 - Affected source paths: **35**
-- Registry SHA-256: `D88D13591B14BD925EE6C36B1292C6EF7DCD931D3C5162659F2200E91B92D586`
+- Registry SHA-256: `F2F3028C5C7454D07B84930AAC3899EBA227D532A152CF0600EE1FA33EEACFE4`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -42661,5 +42661,366 @@ Pinned-official lines `5985-5985`; bytes `236523:236540`.
 ````
 
 Original SHA-256 `797B4515815779640BBBFA1A2DFDA7F3407D36B259A45EE0A9E33A6E57C217F3`; replacement SHA-256 `5F41A088347D8569E052269A6275167354898DDFE1C0962853B277BB1DEEA6E1`.
+
+</details>
+
+## stacks-errata-a04446e-r54
+
+12 stable IDs · 16 displayed change hunks · admitted 2026-09-23T05:30:47.062108Z.
+
+<details id="mc-stk-err-1742">
+<summary><code>MC-STK-ERR-1742 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1742`; producer ID: `SHEAVES-RECON-008`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L535-L537) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: The singular noun collection takes forms. Replace the final relative construction by the category in which the sheaf takes values, preserving the empty-cover explanation.
+- Adverse evidence: The sentence remains understandable in its original form. This is a grammatical correction, not a new assertion about final objects or elements of an arbitrary category.
+
+### Change 1: `MC-STK-ERR-1742-OP1`
+
+Pinned-official lines `535-535`; bytes `18046:18059`.
+
+````diff
+- actually form
++ actually forms
+````
+
+Original SHA-256 `F3010B49DD406A864EC8D64AC4AD1D0EC2376F7E2CA1916716AEC38A441C496A`; replacement SHA-256 `20072BE5A67CB1B25D569CA645FDE1C044354DEA183DE18431AB550B354972BE`.
+
+### Change 2: `MC-STK-ERR-1742-OP2`
+
+Pinned-official lines `537-537`; bytes `18118:18158`.
+
+````diff
+- of the category the sheaf has values in.
++ of the category in which the sheaf takes values.
+````
+
+Original SHA-256 `68387152F552381D07718E578DF8181767F91CAA32CA64FF42B18890DC4AC44D`; replacement SHA-256 `048E809C76CF89F455CB08EA3D2014D88C96F7BF112E6347FABFAA9BDC9D5EDA`.
+
+</details>
+
+<details id="mc-stk-err-1743">
+<summary><code>MC-STK-ERR-1743 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1743`; producer ID: `SHEAVES-RECON-012`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L841) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Close the parenthetical indexing phrase with a comma, preserving the family of discrete spaces and the counterexample.
+- Adverse evidence: The original sentence is understandable. This punctuation repair makes no claim about changing the discrete/product-topology argument.
+
+### Change 1: `MC-STK-ERR-1743-OP1`
+
+Pinned-official lines `841-841`; bytes `28962:28987`.
+
+````diff
+- for $i \in \mathbf{N}$ be
++ for $i \in \mathbf{N}$, be
+````
+
+Original SHA-256 `189F2FBF8021DA5D2A726E5E285CF639E497AA44FD996461AC05B1A865A3284C`; replacement SHA-256 `30F643ED9D4E0AF2DE9AA68E40BE2EFE2E9B696347253E9D0371585D777F8D60`.
+
+</details>
+
+<details id="mc-stk-err-1744">
+<summary><code>MC-STK-ERR-1744 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1744`; producer ID: `SHEAVES-RECON-014`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L926) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Insert by before the notation s_x so the sentence correctly relates the germ symbol to its represented equivalence class.
+- Adverse evidence: The mathematical definition and equivalence relation are already explicit. This is an English repair only.
+
+### Change 1: `MC-STK-ERR-1744-OP1`
+
+Pinned-official lines `926-926`; bytes `31798:31817`.
+
+````diff
+- we sometimes denote
++ we sometimes denote by
+````
+
+Original SHA-256 `2170C66AB298C163E2282E116E670176C384AAF068BED99B04191962E69354F3`; replacement SHA-256 `8F5FB9B8BF115F7B65D0D1EB922A421CE108CE36A1CE36E7D9BF9CB9B14B8AE4`.
+
+</details>
+
+<details id="mc-stk-err-1745">
+<summary><code>MC-STK-ERR-1745 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1745`; producer ID: `SHEAVES-RECON-016`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1025) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Use the singular verb determines with the head noun pair. The two functions represent the same germ exactly when they agree near x, as already defined.
+- Adverse evidence: Plural agreement may be understood by focusing on the two functions; the replacement is editorial and leaves the mathematical criterion intact.
+
+### Change 1: `MC-STK-ERR-1745-OP1`
+
+Pinned-official lines `1025-1025`; bytes `35311:35339`.
+
+````diff
+- functions $f$, $g$ determine
++ functions $f$, $g$ determines
+````
+
+Original SHA-256 `FCF1CC6E4DACF0DA999415AE1E8EDA0A145C667C1A241B3AC504395B8F748909`; replacement SHA-256 `9E3D319B4FA2B2C6C033345A735C17CC9FE2B67F7C927B65E37CB7A50A40AB13`.
+
+</details>
+
+<details id="mc-stk-err-1746">
+<summary><code>MC-STK-ERR-1746 — sheaves.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1746`; producer ID: `SHEAVES-RECON-019`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1277-L1278) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Let P=A times_B C with projections p_A and p_C. Since F preserves fibre products, F(p_A) identifies with the projection from pairs (a,c) satisfying F(f)(a)=F(g)(c). The image inclusion gives a c for every a, and injectivity of F(g) makes it unique. Thus F(p_A) is bijective, so reflection of isomorphisms makes p_A invertible. Setting t=p_C composed with p_A inverse gives g composed with t=f by the fibre-product identity. Name this exact isomorphism and factorization explicitly.
+- Adverse evidence: The equality signs can already denote these canonical identifications; the report does not refute the factorization theorem. This is a clarification of the morphisms used in the proof, not a new theorem or counterexample.
+
+### Change 1: `MC-STK-ERR-1746-OP1`
+
+Pinned-official lines `1277-1277`; bytes `43916:43975`.
+
+````diff
+- Hence $A = A \times_B C$ because $F$ reflects isomorphisms.
++ Hence the projection $A \times_B C \to A$ is invertible, since $F$ reflects isomorphisms.
+````
+
+Original SHA-256 `69B6787F65670FFA3D5FB2B32473E5C75871DE9B68A4D754C352F72CE8354794`; replacement SHA-256 `04F8CD22E34C9002003DAC2F77B8C6962E364BE4723AB6308A1DCD3C02BE9975`.
+
+### Change 2: `MC-STK-ERR-1746-OP2`
+
+Pinned-official lines `1278-1278`; bytes `43976:43995`.
+
+````diff
+- The result follows.
++ Follow its inverse by the projection to $C$ to obtain $t$ with $g \circ t = f$.
+````
+
+Original SHA-256 `BA711694851E9F9B8C242D6AC7989E8FF32677C9F07183C2005A991501828602`; replacement SHA-256 `008C25D3005F6ABBEC61101817FB62263039F4EE9B35BC95AD9BEAA308088692`.
+
+</details>
+
+<details id="mc-stk-err-1747">
+<summary><code>MC-STK-ERR-1747 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1747`; producer ID: `SHEAVES-RECON-021`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1419) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Capitalize the first word of the lemma statement.
+- Adverse evidence: No hypothesis or assertion changes.
+
+### Change 1: `MC-STK-ERR-1747-OP1`
+
+Pinned-official lines `1419-1419`; bytes `48420:48451`.
+
+````diff
+- let $X$ be a topological space.
++ Let $X$ be a topological space.
+````
+
+Original SHA-256 `5DCDED37AE7BEC33BDC4F66B47D0F6D16C4EDF33C424B88C50DCB38276AA5A08`; replacement SHA-256 `18E1CB9D96CA9B52E8A2CC864742327C3047734C0AAAF274F2A5B5EA5404BE4F`.
+
+</details>
+
+<details id="mc-stk-err-1748">
+<summary><code>MC-STK-ERR-1748 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1748`; producer ID: `SHEAVES-RECON-022`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1447) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: End the final proof sentence with a period after the Example reference.
+- Adverse evidence: The proof and reference are already complete; this is punctuation only.
+
+### Change 1: `MC-STK-ERR-1748-OP1`
+
+Pinned-official lines `1447-1447`; bytes `49373:49440`.
+
+````diff
+- see also Example \ref{example-application-lemma-image-contained-in}
++ see also Example \ref{example-application-lemma-image-contained-in}.
+````
+
+Original SHA-256 `EB346862A6B088FE1D4290FB064C429DB63EBAACD9F6F4282017AD6BFD353F93`; replacement SHA-256 `CE2E3CC288B61FDA7A1DABBE28A4D286C1BF2302545951F33BF58D04A5157FA2`.
+
+</details>
+
+<details id="mc-stk-err-1749">
+<summary><code>MC-STK-ERR-1749 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1749`; producer ID: `SHEAVES-RECON-023`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1492) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: For the fixed inclusion V subset U the display is one projection map. Use the singular noun map with the existing singular verb maps.
+- Adverse evidence: Alternatively a plural rewrite could use the verb map. The singular repair is smaller and preserves the displayed restriction morphism.
+
+### Change 1: `MC-STK-ERR-1749-OP1`
+
+Pinned-official lines `1492-1492`; bytes `50776:50795`.
+
+````diff
+- the projection maps
++ the projection map
+````
+
+Original SHA-256 `C25251D9D569C827E0BBDEB6AE49029C219CAEBA9FAE87855BD72C3918623667`; replacement SHA-256 `100EA9D9D7EE880CA68C55A3A6553C85BBEAC0272E7E488E2BCDAE731C93AF26`.
+
+</details>
+
+<details id="mc-stk-err-1750">
+<summary><code>MC-STK-ERR-1750 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1750`; producer ID: `SHEAVES-RECON-024`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1544) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Remove the redundant as why construction and write for the same reason that.
+- Adverse evidence: The analogy and reference remain unchanged; this does not provide a new proof of sheafification.
+
+### Change 1: `MC-STK-ERR-1750-OP1`
+
+Pinned-official lines `1544-1544`; bytes `52517:52543`.
+
+````diff
+- for the same reason as why
++ for the same reason that
+````
+
+Original SHA-256 `7900D3AE3D7B828744CE76446995B787703E916594101D51AEB3F9AC7D0F0347`; replacement SHA-256 `D17E93A591FF4A9D59CE3E3C93249D09099E7FA454531CC92334537D8BF3AE1C`.
+
+</details>
+
+<details id="mc-stk-err-1751">
+<summary><code>MC-STK-ERR-1751 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1751`; producer ID: `SHEAVES-RECON-029`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L1807) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: The parenthetical adverb however needs its opening comma as well as its existing closing comma.
+- Adverse evidence: The sheafification construction remains unchanged.
+
+### Change 1: `MC-STK-ERR-1751-OP1`
+
+Pinned-official lines `1807-1807`; bytes `62207:62232`.
+
+````diff
+- The main idea however, is
++ The main idea, however, is
+````
+
+Original SHA-256 `EFFFF3CC31D73C8CC013B0EE03F1A98AB101B2776D6F3CE009F358122313A719`; replacement SHA-256 `D3DD838587B053E53932EE78E684960220C0E52FC8DC214CED5FE48F7E8A8E55`.
+
+</details>
+
+<details id="mc-stk-err-1752">
+<summary><code>MC-STK-ERR-1752 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1752`; producer ID: `SHEAVES-RECON-072`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L3972-L4229) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: All three category-naming clauses lack by after Denote. Inserting it preserves the categories, value types and restriction functors.
+- Adverse evidence: These are wording repairs, not changes to the equivalences of categories.
+
+### Change 1: `MC-STK-ERR-1752-OP1`
+
+Pinned-official lines `3972-3972`; bytes `137973:137998`.
+
+````diff
+- Denote $\Sh(\mathcal{B})$
++ Denote by $\Sh(\mathcal{B})$
+````
+
+Original SHA-256 `28BA1B95FCD5AD63E53296F0465121B359E5EF1F0ED17FCDEA182B0F11359D8D`; replacement SHA-256 `2B4BCA927DD04A52BC1E2161E4A55B851785CECA5712CA5186B4DC6BF3FC2E16`.
+
+### Change 2: `MC-STK-ERR-1752-OP2`
+
+Pinned-official lines `4109-4109`; bytes `143137:143175`.
+
+````diff
+- Denote $\Sh(\mathcal{B}, \mathcal{C})$
++ Denote by $\Sh(\mathcal{B}, \mathcal{C})$
+````
+
+Original SHA-256 `B6BFAE4A9C7258D8936FF68686D9CFC269BA75F692F283D19677073F32E75D50`; replacement SHA-256 `72CE7CABC63EA2A27EA46E8C0C25FD3AB2268470DD72198D3ED4C5A2EDF1FE73`.
+
+### Change 3: `MC-STK-ERR-1752-OP3`
+
+Pinned-official lines `4229-4229`; bytes `147512:147559`.
+
+````diff
+- Denote $\textit{Mod}(\mathcal{O}|_\mathcal{B})$
++ Denote by $\textit{Mod}(\mathcal{O}|_\mathcal{B})$
+````
+
+Original SHA-256 `70274C9DAE56159981617F8F98F6E96DA08A18F5647CBE5BDC99CD677B17C2CA`; replacement SHA-256 `4BA6DBA7B787AAF04EFC756A074727BFC0E94488E91ABC16A62A7B2838E5AAED`.
+
+</details>
+
+<details id="mc-stk-err-1753">
+<summary><code>MC-STK-ERR-1753 — sheaves.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r54`
+- Stable ID: `MC-STK-ERR-1753`; producer ID: `SHEAVES-RECON-086`
+- Bound source locator: `sheaves.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sheaves.tex#L4518-L4519) · [Integrated source](sheaves.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r54/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r54/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r54/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r54/replay/independent-review.json)
+- Rationale: Item (4) already specifies the restricted module presheaf, its restricted scalar action and its name. Remove the immediately following claim that this definition is left to the reader.
+- Adverse evidence: Do not invent an additional module case to justify the stale sentence. The next sentence begins the left-adjoint discussion and remains in place.
+
+### Change 1: `MC-STK-ERR-1753-OP1`
+
+Pinned-official lines `4518-4519`; bytes `158655:158736`.
+
+````diff
+- We leave a definition of the restriction of presheaves
+- of modules to the reader.
++
+````
+
+Original SHA-256 `44464541EE2DBF0D55E09FBA1632E7B6CC0ECF5A1C6A0F582ABC80E7A47BF755`; replacement SHA-256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`.
 
 </details>

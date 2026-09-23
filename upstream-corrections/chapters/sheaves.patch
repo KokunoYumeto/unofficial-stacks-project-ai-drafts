@@ -1,5 +1,5 @@
 diff --git a/sheaves.tex b/sheaves.tex
-index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c1083dec6ace 100644
+index 5339e00836130c808e1814476f2bac4425ea68cc..3c6e6f87f1a0389aa1bfe9e934c8082a15784f69 100644
 --- a/sheaves.tex
 +++ b/sheaves.tex
 @@ -190,7 +190,7 @@
@@ -47,6 +47,18 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \item A {\it morphism $\varphi : \mathcal{F} \to \mathcal{G}$
  of presheaves of $\mathcal{O}$-modules} is a morphism of abelian presheaves
  $\varphi : \mathcal{F} \to \mathcal{G}$ such that
+@@ -532,9 +533,9 @@
+ It is necessary, and we already did if you read the
+ definition right. Namely, note that the empty set is
+ covered by the empty open covering, and hence the ``collection
+-of sections $s_i$'' from the definition above actually form
++of sections $s_i$'' from the definition above actually forms
+ an element of the empty product which is the final object
+-of the category the sheaf has values in. In other words,
++of the category in which the sheaf takes values. In other words,
+ if you read the definition right you automatically deduce
+ that $\mathcal{F}(\emptyset) = \textit{a final object}$,
+ which in the case of a sheaf of sets is a singleton.
 @@ -598,7 +599,7 @@
  Let $X$ be a topological space. Let $(A_x)_{x \in X}$ be
  a family of sets $A_x$ indexed by points $x \in X$. We are
@@ -56,6 +68,15 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  $$
  \Pi(U) = \prod\nolimits_{x \in U} A_x.
  $$
+@@ -838,7 +839,7 @@
+ not reflect isomorphisms. And, in fact it turns out that
+ the analogue of Lemma \ref{lemma-sheaves-structure} is wrong.
+ Namely, suppose $X = \mathbf{N}$ with the discrete
+-topology. Let $A_i$, for $i \in \mathbf{N}$ be a discrete
++topology. Let $A_i$, for $i \in \mathbf{N}$, be a discrete
+ topological space. For any subset $U \subset \mathbf{N}$
+ define $\mathcal{F}(U) = \prod_{i\in U} A_i$ with the
+ discrete topology. Then this is a presheaf of topological
 @@ -871,7 +872,7 @@
  \item Given sheaves of $\mathcal{O}$-modules
  $\mathcal{F}$ and $\mathcal{G}$ we denote
@@ -65,6 +86,24 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \item The category of sheaves of $\mathcal{O}$-modules
  is denoted $\textit{Mod}(\mathcal{O})$.
  \end{enumerate}
+@@ -923,7 +924,7 @@
+ $$
+ with equivalence relation given by $(U, s) \sim (U', s')$ if and only if
+ there exists an open $U'' \subset U \cap U'$ with $x \in U''$ and
+-$s|_{U''} = s'|_{U''}$. Given a pair $(U, s)$ we sometimes denote
++$s|_{U''} = s'|_{U''}$. Given a pair $(U, s)$ we sometimes denote by
+ $s_x$ the element of $\mathcal{F}_x$ corresponding to the equivalence
+ class of $(U, s)$. We sometimes use the phrase
+ ``image of $s$ in $\mathcal{F}_x$'' to denote $s_x$.
+@@ -1022,7 +1023,7 @@
+ we think of an element in the stalk $\mathcal{C}^\infty_{\mathbf{R}^n, x}$?
+ Such an element is given by a $\mathcal{C}^\infty$-function
+ $f$ whose domain contains $x$. And a pair of such
+-functions $f$, $g$ determine
++functions $f$, $g$ determines
+ the same element of the stalk if they agree in a neighbourhood
+ of $x$. In other words, an element of $\mathcal{C}^\infty_{\mathbf{R}^n, x}$
+ is the same thing as what is sometimes called
 @@ -1124,7 +1125,7 @@
  By the very definition, all the morphisms $\mathcal{F}(U)
  \to \mathcal{F}_x$ are morphisms in the category $\mathcal{C}$
@@ -74,11 +113,51 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  As usual we will not distinguish between the morphism
  in $\mathcal{C}$ and the underlying map of sets, which
  is permitted since $F$ is faithful.
-@@ -1542,7 +1543,7 @@
+@@ -1274,8 +1275,8 @@
+ \begin{proof}
+ Consider $A \times_B C$. The assumptions imply that
+ $F(A \times_B C) = F(A) \times_{F(B)} F(C) = F(A)$.
+-Hence $A = A \times_B C$ because $F$ reflects isomorphisms.
+-The result follows.
++Hence the projection $A \times_B C \to A$ is invertible, since $F$ reflects isomorphisms.
++Follow its inverse by the projection to $C$ to obtain $t$ with $g \circ t = f$.
+ \end{proof}
+ 
+ \begin{example}
+@@ -1416,7 +1417,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-check-homomorphism-stalks}
+-let $X$ be a topological space.
++Let $X$ be a topological space.
+ Let $(\mathcal{C}, F)$ be a type of algebraic structure.
+ Suppose that $\mathcal{F}$, $\mathcal{G}$ are sheaves on $X$
+ with values in $\mathcal{C}$.
+@@ -1444,7 +1445,7 @@
+ bottom horizontal arrow is injective,
+ see Lemma \ref{lemma-sheaf-subset-stalks}.
+ Hence we conclude by Lemma \ref{lemma-image-contained-in},
+-see also Example \ref{example-application-lemma-image-contained-in}
++see also Example \ref{example-application-lemma-image-contained-in}.
+ \end{proof}
+ 
+ \noindent
+@@ -1489,7 +1490,7 @@
+ and that given $u \in U$ the truth of this condition
+ depends only on the values $s_v$ for $v$ in any open neighbourhood
+ of $u$. Thus it is clear that,
+-if $V \subset U \subset X$ are open, the projection maps
++if $V \subset U \subset X$ are open, the projection map
+ $$
+ \prod\nolimits_{u \in U} \mathcal{F}_u
+ \longrightarrow
+@@ -1541,8 +1542,8 @@
+ \begin{proof}
  It is probably better for the reader to find their own explanation
  of this than to read the proof here. In fact the lemma is true
- for the same reason as why the presheaf of continuous
+-for the same reason as why the presheaf of continuous
 -function is a sheaf, see Example \ref{example-basic-continuous-maps}
++for the same reason that the presheaf of continuous
 +functions is a sheaf, see Example \ref{example-basic-continuous-maps}
  (and this analogy can be made precise using the ``espace \'etal\'e'').
  
@@ -101,6 +180,15 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  then we obtain a morphism of sheaves
  $\psi' : \mathcal{F}^\# \to \mathcal{G}$. What we have to do is to check
  that this is a morphism of abelian sheaves. We may do this
+@@ -1804,7 +1805,7 @@
+ with repeated application of
+ Lemma \ref{lemma-image-contained-in} (see also
+ Example \ref{example-application-lemma-image-contained-in}).
+-The main idea however, is to define $\mathcal{F}^\#(U)$
++The main idea, however, is to define $\mathcal{F}^\#(U)$
+ as the fibre product in $\mathcal{C}$ of the diagram
+ $$
+ \xymatrix{
 @@ -1848,7 +1849,7 @@
  of $\mathcal{O}^\#$-modules. In addition, if $\mathcal{G}$
  is a sheaf of $\mathcal{O}^\#$-modules, then any morphism
@@ -413,6 +501,15 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  Thus the sheaf condition $(**)$ of Definition \ref{definition-sheaf-basis}
  applies to the system of $\sigma_i$ and we obtain a section
  $s \in \mathcal{F}(U)$ with the desired property.
+@@ -3969,7 +3969,7 @@
+ \label{lemma-restrict-basis-equivalence}
+ Let $X$ be a topological space.
+ Let $\mathcal{B}$ be a basis for the topology on $X$.
+-Denote $\Sh(\mathcal{B})$ the category of
++Denote by $\Sh(\mathcal{B})$ the category of
+ sheaves on $\mathcal{B}$.
+ There is an equivalence of categories
+ $$
 @@ -3980,7 +3980,7 @@
  \end{lemma}
  
@@ -440,6 +537,15 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  Details left to the reader.
  \end{proof}
  
+@@ -4106,7 +4106,7 @@
+ Let $X$ be a topological space.
+ Let $\mathcal{B}$ be a basis for the topology on $X$.
+ Let $(\mathcal{C}, F)$ be a type of algebraic structure.
+-Denote $\Sh(\mathcal{B}, \mathcal{C})$ the category of
++Denote by $\Sh(\mathcal{B}, \mathcal{C})$ the category of
+ sheaves with values in $\mathcal{C}$ on $\mathcal{B}$.
+ There is an equivalence of categories
+ $$
 @@ -4119,7 +4119,7 @@
  \end{lemma}
  
@@ -449,6 +555,15 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  Lemma \ref{lemma-extend-off-basis-structures} above.
  Checking the obvious functorialities is left to the
  reader.
+@@ -4226,7 +4226,7 @@
+ Let $X$ be a topological space.
+ Let $\mathcal{B}$ be a basis for the topology on $X$.
+ Let $\mathcal{O}$ be a sheaf of rings on $X$.
+-Denote $\textit{Mod}(\mathcal{O}|_\mathcal{B})$ the category of
++Denote by $\textit{Mod}(\mathcal{O}|_\mathcal{B})$ the category of
+ sheaves of $\mathcal{O}|_\mathcal{B}$-modules on $\mathcal{B}$.
+ There is an equivalence of categories
+ $$
 @@ -4239,7 +4239,7 @@
  \end{lemma}
  
@@ -559,7 +674,17 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  algebraic structures on $X$. The sheaf $j^{-1}\mathcal{G}$ is called
  the {\it restriction of $\mathcal{G}$ to $U$} and denoted $\mathcal{G}|_U$.
  \item If $(X, \mathcal{O})$ is a ringed space, then the pair
-@@ -4566,7 +4567,7 @@
+@@ -4515,8 +4516,7 @@
+ \end{definition}
+ 
+ \noindent
+-We leave a definition of the restriction of presheaves
+-of modules to the reader. Ok, so in this section we will
++Ok, so in this section we will
+ discuss a left adjoint to the restriction functor.
+ Here is the definition in the case of (pre)sheaves
+ of sets.
+@@ -4566,7 +4566,7 @@
  The stalks of the sheaf $j_!\mathcal{F}$ are described
  as follows
  $$
@@ -568,7 +693,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \left\{
  \begin{matrix}
  \emptyset & \text{if} & x \not \in U \\
-@@ -4574,8 +4575,8 @@
+@@ -4574,8 +4574,8 @@
  \end{matrix}
  \right.
  $$
@@ -579,7 +704,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \end{enumerate}
  \end{lemma}
  
-@@ -4592,18 +4593,18 @@
+@@ -4592,18 +4592,18 @@
  definition of the extension by the empty set
  and the definition of a stalk.
  Statements (4) and (5) follow by computing the
@@ -601,7 +726,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  in the category of sets. Thus in the case of abelian groups
  we use $0$ (and more generally for sheaves with values in
  any abelian category).
-@@ -4647,7 +4648,7 @@
+@@ -4647,7 +4647,7 @@
  \item Let $(\mathcal{C}, F)$ be a type of algebraic structure
  such that $\mathcal{C}$ has an initial object $e$.
  Let $\mathcal{F}$ be a sheaf of algebraic structures on $U$
@@ -610,7 +735,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  {\it extension $j_!\mathcal{F}$ of $\mathcal{F}$ by $e$}
  to be the sheafification of the presheaf $j_{p!}\mathcal{F}$
  defined above.
-@@ -4672,7 +4673,7 @@
+@@ -4672,7 +4672,7 @@
  of algebraic structures (see below). However, it depends on the
  type of algebraic structures involved what the resulting
  object is. For example, if $\mathcal{O}$ is a sheaf of rings
@@ -619,7 +744,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  since the initial object in the category of rings
  is $\mathbf{Z}$ and the initial object in the category
  of abelian groups is $0$. In particular the functor $j_!$
-@@ -4704,7 +4705,7 @@
+@@ -4704,7 +4704,7 @@
  The stalks of the sheaf $j_!\mathcal{F}$ are described
  as follows
  $$
@@ -628,7 +753,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \left\{
  \begin{matrix}
  0 & \text{if} & x \not \in U \\
-@@ -4712,9 +4713,9 @@
+@@ -4712,9 +4712,9 @@
  \end{matrix}
  \right.
  $$
@@ -640,7 +765,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  we have $j^{-1}j_! = \text{id}$.
  \end{enumerate}
  \end{lemma}
-@@ -4730,7 +4731,7 @@
+@@ -4730,7 +4730,7 @@
  Let $(\mathcal{C}, F)$ be a type of algebraic structure
  such that $\mathcal{C}$ has an initial object $e$.
  Consider the functors of restriction and extension
@@ -649,7 +774,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \begin{enumerate}
  \item The functor $j_{p!}$ is a left adjoint to the
  restriction functor $j_p$ (see Lemma \ref{lemma-j-pullback}).
-@@ -4748,7 +4749,7 @@
+@@ -4748,7 +4748,7 @@
  The stalks of the sheaf $j_!\mathcal{F}$ are described
  as follows
  $$
@@ -658,7 +783,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \left\{
  \begin{matrix}
  e & \text{if} & x \not \in U \\
-@@ -4791,11 +4792,11 @@
+@@ -4791,11 +4791,11 @@
  \Mor_{\textit{Mod}(\mathcal{O}|_U)}(\mathcal{F}, \mathcal{G}|_U)
  $$
  bifunctorially in $\mathcal{F}$ and $\mathcal{G}$.
@@ -672,7 +797,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \left\{
  \begin{matrix}
  0 & \text{if} & x \not \in U \\
-@@ -4834,7 +4835,7 @@
+@@ -4834,7 +4834,7 @@
  \end{lemma}
  
  \begin{proof}
@@ -681,7 +806,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  We have seen that any sheaf in the image of the functor has
  the property on the stalks mentioned in the lemma. Conversely, suppose
  that $\mathcal{G}$ has the indicated property.
-@@ -4904,7 +4905,7 @@
+@@ -4904,7 +4904,7 @@
  \label{remark-j-shriek-not-exact}
  Let $j : U \to X$ be an open immersion of topological spaces as above.
  Let $x \in X$, $x \not \in U$. Let $\mathcal{F}$ be a sheaf of sets
@@ -690,7 +815,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  Hence $j_!$ does not transform a final object of $\Sh(U)$
  into a final object of $\Sh(X)$ unless $U = X$.
  According to our conventions in
-@@ -4939,7 +4940,7 @@
+@@ -4939,7 +4939,7 @@
  Let $\mathcal{F}$ be a sheaf of sets on $Z$.
  The stalks of $i_*\mathcal{F}$ are described as follows
  $$
@@ -699,7 +824,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  \left\{
  \begin{matrix}
  \{*\} & \text{if} & x \not \in Z \\
-@@ -4988,7 +4989,7 @@
+@@ -4988,7 +4988,7 @@
  \end{lemma}
  
  \begin{proof}
@@ -708,7 +833,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  We have seen that any sheaf in the image of the functor has
  the property on the stalks mentioned in the lemma. Conversely, suppose
  that $\mathcal{G}$ has the indicated property.
-@@ -5042,7 +5043,7 @@
+@@ -5042,7 +5042,7 @@
  by Lemma \ref{lemma-stalks-closed-pushforward}.
  Hence if $\mathcal{F} = * \amalg *$, where
  $*$ is the singleton sheaf, then
@@ -717,7 +842,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  because the latter is a two point set.
  According to our conventions in
  Categories, Section \ref{categories-section-exact-functor}
-@@ -5131,11 +5132,11 @@
+@@ -5131,11 +5131,11 @@
  &= ((\varphi_U(s))|_{U \cap U_i})|_{V \cap U_i}\\
  &= ((\varphi_i)_{U \cap U_i}(s|_{U \cap U_i}))|_{V \cap U_i}\\
  &= (\varphi_i)_{V \cap U_i}(s|_{V \cap U_i})\\
@@ -731,7 +856,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  and $s \in \mathcal{F}(U \cap U_i)$ then
  \begin{align*}
  \varphi_{U \cap U_i}(s)
-@@ -5185,14 +5186,14 @@
+@@ -5185,14 +5185,14 @@
  $$
  We will call such a collection of data
  $(\mathcal{F}_i, \varphi_{ij})$
@@ -748,7 +873,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  for sheaves of sets with respect to the covering $X = \bigcup U_i$
  there exists a sheaf of sets $\mathcal{F}$ on $X$
  together with isomorphisms
-@@ -5222,7 +5223,7 @@
+@@ -5222,7 +5222,7 @@
  \varphi_{ij}(s_i|_{W \cap U_i \cap U_j}) = s_j|_{W \cap U_i \cap U_j}
  \}.
  $$
@@ -757,7 +882,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  each of the $s_i$ to $W' \cap U_i$. The sheaf condition for $\mathcal{F}$
  follows immediately from the sheaf condition for each of the
  $\mathcal{F}_i$.
-@@ -5233,7 +5234,7 @@
+@@ -5233,7 +5233,7 @@
  In this case the condition in the definition of
  $\mathcal{F}(W)$ implies that $s_j = \varphi_{ij}(s_i|_{W \cap U_j})$.
  And the commutativity of the diagrams in the definition
@@ -766,7 +891,7 @@ index 5339e00836130c808e1814476f2bac4425ea68cc..fc1631fcf27f3dd1b11436e49d46c108
  section $s \in \mathcal{F}_i(W)$ and obtain a compatible
  collection by setting $s_i = s$ and $s_j = \varphi_{ij}(s_i|_{W \cap U_j})$.
  
-@@ -5253,7 +5254,7 @@
+@@ -5253,7 +5253,7 @@
  \label{lemma-glue-sheaves-structures}
  Let $X$ be a topological space.
  Let $X = \bigcup U_i$ be an open covering.

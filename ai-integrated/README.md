@@ -21,11 +21,11 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R53 and the Verdier insertion**: 54
-admitted overlays with 1,489 stable units (1,477 correction IDs and 12 Verdier
+The cumulative source includes **R1–R54 and the Verdier insertion**: 55
+admitted overlays with 1,501 stable units (1,489 correction IDs and 12 Verdier
 units). Admission and source composition are separate checks. The
-[R53 successor receipt](../validation/r53-successor-current.json) binds its
-exact 64-edit source change and validation; its immutable R52 predecessor
+[R54 successor receipt](../validation/r54-successor-current.json) binds its
+exact 16-edit source change and validation; its immutable R53 predecessor
 preserves all earlier source and evidence. The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
@@ -48,8 +48,12 @@ R53 adds 54 proposed Topology and Introduction changes: 44 copyedits, five
 clarifications, four notation clarifications and one source correction.
 The connected-image proof now explicitly restricts its map to the connected
 subset. All 64 edits have [individual reasons and editable chapter proofs](candidates/commons/stacks/errata/r53/README.md).
-R49–R53 are source updates, not new full-reader
-or Zenodo editions. Final R50/R51/R52/R53 review, source
+R54 adds 12 proposed Sheaves on Spaces changes: eleven copyedits and one
+clarification spelling out the projection isomorphism and factorization.
+[Each change, chapter proof and complete source](candidates/commons/stacks/errata/r54/README.md)
+is available, and all sixteen edits are included in the fixes-only download.
+R49–R54 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

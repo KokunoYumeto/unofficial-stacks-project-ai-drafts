@@ -27,7 +27,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [perfect.tex](reviews/perfect.md) — 24 correction units.
 - [schemes.tex](reviews/schemes.md) — 16 correction units.
 - [sets.tex](reviews/sets.md) — 6 correction units.
-- [sheaves.tex](reviews/sheaves.md) — 71 correction units.
+- [sheaves.tex](reviews/sheaves.md) — 83 correction units.
 - [simplicial.tex](reviews/simplicial.md) — 11 correction units.
 - [sites-cohomology.tex](reviews/sites-cohomology.md) — 80 correction units.
 - [sites-modules.tex](reviews/sites-modules.md) — 31 correction units.

@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,477 historical correction IDs are accounted for; 1,475 effective textual
+  The 1,489 historical correction IDs are accounted for; 1,487 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -132,7 +132,16 @@ and [reviewed chapter PDFs with complete editable sources](ai-integrated/candida
 are available. The combined fixes-only download now covers 34 chapters.
 The older complete-reader PDFs are unchanged by this source-and-patch update.
 
-R52/R53 review, correction preparation, builds and visual checks, and current
+R54 adds **12 proposed Sheaves on Spaces changes**: eleven copyedits and
+one clarification. The fibre-product argument now identifies the invertible
+projection and constructs the required factorization using its inverse.
+The wording repairs include missing naming prepositions and a stale claim
+that a definition was left to the reader. [Each change and its reason](ai-integrated/candidates/commons/stacks/errata/r54/REVIEW.md)
+and [chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r54/README.md)
+are available. The Sheaves patch and combined fixes-only download include
+all sixteen edits and retain the earlier corrections.
+
+R52/R53/R54 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence
