@@ -93,7 +93,7 @@ Hence $A = A \times_B C$ because $F$ reflects isomorphisms.
 Replace with:
 
 ```tex
-Hence the first projection $p_A : A \times_B C \to A$ is an isomorphism because $F$ reflects isomorphisms.
+Since $F$ reflects isomorphisms, the projection $p_A : A \times_B C \to A$ is invertible.
 ```
 
 Official sheaves.tex line 1278:
@@ -105,7 +105,7 @@ The result follows.
 Replace with:
 
 ```tex
-Writing $p_C : A \times_B C \to C$ for the second projection, set $t = p_C \circ p_A^{-1}$. The fibre product identity gives $g \circ t = f$.
+For the projection $p_C : A \times_B C \to C$, take $t = p_C \circ p_A^{-1}$. Then $g \circ t = f$ by the fibre product identity.
 ```
 
 ## MC-STK-ERR-1747 — SHEAVES-RECON-021 (copyedit)

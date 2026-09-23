@@ -3,8 +3,8 @@
   "source": "sheaves.tex",
   "review": {
     "path": "C:\\Users\\Floris\\Documents\\interlanguage\\03_projects\\language_management\\stacks_on_stacks_hub\\00_control\\SHEAVES_INTAKE_REVIEW_20260923.json",
-    "bytes": 67764,
-    "sha256": "EC1973EEDA2F1BD5645BE1D7FE7D36EEFA92172DA238F8E470EB3EA00ACA4C07"
+    "bytes": 68652,
+    "sha256": "800E0BA83D4A9DA06381DB573442767065A56F4D95849DE739AA15A8C0B3884D"
   },
   "authority": {
     "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
@@ -196,11 +196,11 @@
       ],
       "line": 1277,
       "old_text": "Hence $A = A \\times_B C$ because $F$ reflects isomorphisms.",
-      "replacement_text": "Hence the first projection $p_A : A \\times_B C \\to A$ is an isomorphism because $F$ reflects isomorphisms.",
+      "replacement_text": "Since $F$ reflects isomorphisms, the projection $p_A : A \\times_B C \\to A$ is invertible.",
       "start_byte": 43916,
       "end_byte_exclusive": 43975,
       "old_sha256": "69B6787F65670FFA3D5FB2B32473E5C75871DE9B68A4D754C352F72CE8354794",
-      "replacement_sha256": "ECDCA81DF1C276E125F9014F4D2087411047B87D070CB07286E325C117F54AFF",
+      "replacement_sha256": "CA7359DB2018576B28BBD7AD44205E578B9CB70136C16858CD4EE32F34A7D752",
       "admitted_context_envelope_overlaps": [],
       "current_line": 1341,
       "current_start_byte": 46762
@@ -212,11 +212,11 @@
       ],
       "line": 1278,
       "old_text": "The result follows.",
-      "replacement_text": "Writing $p_C : A \\times_B C \\to C$ for the second projection, set $t = p_C \\circ p_A^{-1}$. The fibre product identity gives $g \\circ t = f$.",
+      "replacement_text": "For the projection $p_C : A \\times_B C \\to C$, take $t = p_C \\circ p_A^{-1}$. Then $g \\circ t = f$ by the fibre product identity.",
       "start_byte": 43976,
       "end_byte_exclusive": 43995,
       "old_sha256": "BA711694851E9F9B8C242D6AC7989E8FF32677C9F07183C2005A991501828602",
-      "replacement_sha256": "D75607B96727986BED54F6A5BD8454E431877B2A1845F5968A5C12043E5CD1D2",
+      "replacement_sha256": "81819B89D03E2A71CCBCE4AB34DF2034A61120C70228A0FF85E433A0D3CEE129",
       "admitted_context_envelope_overlaps": [],
       "current_line": 1342,
       "current_start_byte": 46822
@@ -371,27 +371,27 @@
       "base": "a04446e57ec1fbc252a871afcec7752fb2807b14",
       "check": "PASS",
       "exact_postimage": "PASS",
-      "postimage_bytes": 184951,
-      "postimage_sha256": "122B69B0EE50B564AFC3DE2C49A10AE017231275BB6C4B3685FC5D367B07A356"
+      "postimage_bytes": 184922,
+      "postimage_sha256": "6BABC8DFA405F90D0EB6B5091F0C06D262A1914B77804A8493AB88E88A7573BB"
     },
     {
       "base": "b74477a0946b25f33e4485c6948389155e136675",
       "check": "PASS",
       "exact_postimage": "PASS",
-      "postimage_bytes": 188431,
-      "postimage_sha256": "EFC5FE0EA27861B7058144D8E1645846F9031B65FAF74E8889AE9A9AD9F0218F"
+      "postimage_bytes": 188402,
+      "postimage_sha256": "6A61F1811BC385CD0591D55C62A53095B7402C072F1D2A0BF3845137003B7014"
     }
   ],
   "patches": [
     {
       "path": "SHEAVES_PENDING_SOURCE_REPAIRS_20260923.patch",
-      "bytes": 5783,
-      "sha256": "7567AB562561DE3365D0EC2C55FEB6FF9F075640C230E1450F50C0E6D6E2B5C6"
+      "bytes": 5754,
+      "sha256": "68CB5D8F13BF3273646404948B7A4B9167222419236C6280342135A2814EDB24"
     },
     {
       "path": "SHEAVES_PENDING_CUMULATIVE_REPAIRS_20260923.patch",
-      "bytes": 5784,
-      "sha256": "14C5BA352C3ED41609D7A8D1B14E7513FC524684160CB669496660EF008C8A1F"
+      "bytes": 5755,
+      "sha256": "A832C5D784C28AA759C8719E64490AC02616F701BBBF26ED41A797FFFC8968DC"
     }
   ],
   "not_claimed": [

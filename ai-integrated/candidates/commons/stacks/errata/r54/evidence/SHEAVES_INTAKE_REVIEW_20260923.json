@@ -349,12 +349,12 @@
         {
           "line": 1277,
           "old_text": "Hence $A = A \\times_B C$ because $F$ reflects isomorphisms.",
-          "replacement_text": "Hence the first projection $p_A : A \\times_B C \\to A$ is an isomorphism because $F$ reflects isomorphisms."
+          "replacement_text": "Since $F$ reflects isomorphisms, the projection $p_A : A \\times_B C \\to A$ is invertible."
         },
         {
           "line": 1278,
           "old_text": "The result follows.",
-          "replacement_text": "Writing $p_C : A \\times_B C \\to C$ for the second projection, set $t = p_C \\circ p_A^{-1}$. The fibre product identity gives $g \\circ t = f$."
+          "replacement_text": "For the projection $p_C : A \\times_B C \\to C$, take $t = p_C \\circ p_A^{-1}$. Then $g \\circ t = f$ by the fibre product identity."
         }
       ],
       "rationale": "Let P=A times_B C with projections p_A and p_C. Since F preserves fibre products, F(p_A) identifies with the projection from pairs (a,c) satisfying F(f)(a)=F(g)(c). The image inclusion gives a c for every a, and injectivity of F(g) makes it unique. Thus F(p_A) is bijective, so reflection of isomorphisms makes p_A invertible. Setting t=p_C composed with p_A inverse gives g composed with t=f by the fibre-product identity. Name this exact isomorphism and factorization explicitly.",
@@ -1792,5 +1792,22 @@
     }
   ],
   "next_source_start_line": null,
-  "coverage": "All received report texts and their relevant original-source contexts read. This is a source-locus review, not a claim to have reread every line of the chapter or proved every unrelated theorem."
+  "coverage": "All received report texts and their relevant original-source contexts read. This is a source-locus review, not a claim to have reread every line of the chapter or proved every unrelated theorem.",
+  "render_revision": {
+    "initial_candidate": "1ccba0ce9ef9261e5595625a5aa5e2c1072cbfe8",
+    "evidence": "R54_INITIAL_BUILD_REGRESSION_20260923.json",
+    "reason": "Shorten the same complete factorization argument after an additional underfull vertical box in the first cumulative build. All morphism domains, codomains, inverses and equality retained.",
+    "initial_operations": [
+      {
+        "line": 1277,
+        "old_text": "Hence $A = A \\times_B C$ because $F$ reflects isomorphisms.",
+        "replacement_text": "Hence the first projection $p_A : A \\times_B C \\to A$ is an isomorphism because $F$ reflects isomorphisms."
+      },
+      {
+        "line": 1278,
+        "old_text": "The result follows.",
+        "replacement_text": "Writing $p_C : A \\times_B C \\to C$ for the second projection, set $t = p_C \\circ p_A^{-1}$. The fibre product identity gives $g \\circ t = f$."
+      }
+    ]
+  }
 }
