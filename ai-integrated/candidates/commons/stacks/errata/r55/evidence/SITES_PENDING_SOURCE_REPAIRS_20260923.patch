@@ -1,0 +1,314 @@
+--- a/sites.tex
++++ b/sites.tex
+@@ -580,7 +580,7 @@
+ $\mathcal{F}$ be a presheaf on $\mathcal{C}$.
+ We will show that the displayed formula holds
+ by constructing maps either way. We will leave
+-it to the reader to verify they are each others inverse.
++it to the reader to verify that they are each other's inverses.
+ 
+ \medskip\noindent
+ Given a map $\alpha : u_p \mathcal{F} \to \mathcal{G}$
+@@ -778,7 +778,7 @@
+ Sets, Lemma \ref{sets-lemma-coverings-site}.
+ Presheaves and sheaves (as defined below)
+ on the site $X_{Zar}$ agree exactly with the usual notion of
+-a presheaves and sheaves on a topological space, as defined
++presheaves and sheaves on a topological space, as defined
+ in Sheaves, Section \ref{sheaves-section-introduction}.
+ \end{example}
+ 
+@@ -798,7 +798,7 @@
+ of Definition \ref{definition-site}. The result is not a
+ site since both the collection of objects of the underlying category and
+ the collection of coverings form a proper class.
+-We first replace by $G\textit{-Sets}$ by a
++We first replace $G\textit{-Sets}$ by a
+ full subcategory $G\textit{-Sets}_\alpha$ as in Sets,
+ Lemma \ref{sets-lemma-sets-with-group-action}.
+ After this the site
+@@ -1307,7 +1307,7 @@
+ \Sh(\mathcal{C}, \text{Cov}_1)$.
+ If also, every $\mathcal{U} \in \text{Cov}_2$ is tautologically
+ equivalent to some $\mathcal{V} \in \text{Cov}_1$ then
+-the category of sheaves are equal.
++the categories of sheaves are equal.
+ \item Suppose
+ that for each $\mathcal{U} \in \text{Cov}_1$ there exists a
+ $\mathcal{V} \in \text{Cov}_2$ such that $\mathcal{V}$ refines
+@@ -1330,7 +1330,7 @@
+ $(\mathcal{C}, \text{Cov}_2)$. Let $\mathcal{U} \in \text{Cov}_1$,
+ say $\mathcal{U} = \{U_i \to U\}_{i \in I}$. By assumption we may choose a
+ refinement $\mathcal{V} \in \text{Cov}_2$ of $\mathcal{U}$, say
+-$\mathcal{V} = \{V_j \to U\}_{j \in J}$ and refinement given
++$\mathcal{V} = \{V_j \to U\}_{j \in J}$, with the refinement given
+ by $\alpha : J \to I$ and $f_j : V_j \to U_{\alpha(j)}$.
+ Observe that $\mathcal{F}$ satisfies the sheaf condition for
+ $\mathcal{V}$ and for the coverings $\{V_j \times_U U_i \to U_i\}_{j \in J}$
+@@ -1632,7 +1632,7 @@
+ 
+ \noindent
+ In order to define the sheafification we study the zeroth
+-{\v C}ech cohomology group of a covering and its functoriality
++{\v C}ech cohomology set of a covering and its functoriality
+ properties.
+ 
+ \medskip\noindent
+@@ -2655,7 +2655,7 @@
+ We first remark that the morphisms $u(V_i) \to u(V)$ are representable, since
+ they are isomorphic to representable morphisms (by the first condition).
+ In particular, the family $u(\mathcal{V}) = \{u(V_i) \to u(V)\}_{i\in I}$
+-gives rise to a zeroth {\v C}ech cohomology group
++gives rise to a zeroth {\v C}ech cohomology set
+ $H^0(u(\mathcal{V}), \mathcal{F})$ for any presheaf $\mathcal{F}$ on
+ $\mathcal{D}$.
+ Let $\mathcal{U} = \{U_j \to u(V)\}_{j \in J}$ be an element
+@@ -2667,7 +2667,7 @@
+ In particular, if $\mathcal{F}$ is a sheaf, then
+ $\mathcal{F}(u(V)) = H^0(u(\mathcal{V}), \mathcal{F})$ because
+ of the sheaf property expressed in terms of zeroth {\v C}ech cohomology
+-groups. We conclude that $u^p\mathcal{F}$ is a sheaf if $\mathcal{F}$
++sets. We conclude that $u^p\mathcal{F}$ is a sheaf if $\mathcal{F}$
+ is a sheaf, since $H^0(\mathcal{V}, u^p\mathcal{F}) =
+ H^0(u(\mathcal{V}), \mathcal{F})$ which we just observed is
+ equal to $\mathcal{F}(u(V)) = u^p\mathcal{F}(V)$. Thus Lemma
+@@ -3339,7 +3339,7 @@
+ (Lemma \ref{lemma-covering-surjective-after-sheafification})
+ and factors through $\coprod_{i \in J} \mathcal{F}_i \to h_U^\#$.
+ (Here we use that the composition
+-$h_{V_c}^\# \to h_{U_{\alpha(c)}}
++$h_{V_c}^\# \to h_{U_{\alpha(c)}}^\#
+ \xrightarrow{s_{\alpha(c)}} \mathcal{F}_{\iota(\alpha(c))} \to h_U^\#$
+ is the map $h_{V_c}^\# \to h_U^\#$ coming from the morphism
+ $V_c \to U$ because $s_{\alpha(c)}$ maps to $\text{id}_U|_{U_{\alpha(c)}}$.)
+@@ -3936,7 +3936,7 @@
+ family of maps $\varphi_{a, \text{id}, V_j}$ corresponds to a map
+ of sheaves $\varphi_a : f_a^{-1}\mathcal{F} \to f_{j, *}\mathcal{H}$.
+ The compatibilities between the $\varphi_{a, \text{id}, u_a(V_i)}$
+-and the $\varphi_{\text{id}, \text{id}, V_i}$ implies that $\varphi_a$
++and the $\varphi_{\text{id}, \text{id}, V_i}$ imply that $\varphi_a$
+ is the adjoint of the map $\varphi_{id}$ via
+ $$
+ \Mor_{\Sh(\mathcal{C}_j)}(f_a^{-1}\mathcal{F}, f_{j, *}\mathcal{H}) =
+@@ -5359,7 +5359,7 @@
+ send $\mathcal{G}$ to the pair $(j_{U!}^{PSh}\mathcal{G}, \gamma)$
+ where $j_{U!}^{PSh}\mathcal{G}$ the presheaf defined by the formula
+ in Lemma \ref{lemma-describe-j-shriek} and $\gamma$ is the composition of
+-$j_{U!}^{PSh}\mathcal{G} \to j_{U!}*$ with the identification
++$j_{U!}^{PSh}\mathcal{G} \to j_{U!}^{PSh}*$ with the identification
+ $j_{U!}^{PSh}* = h_U$ (obvious from the formula).
+ Then it is immediately clear that the diagram
+ $$
+@@ -5841,7 +5841,7 @@
+ $$
+ We will call such a collection of data
+ $(\mathcal{F}_i, \varphi_{ij})$
+-a {\it glueing data for sheaves of sets with respect to
++a {\it glueing datum for sheaves of sets with respect to
+ the covering $\{U_i \to U\}_{i \in I}$}.
+ 
+ \begin{lemma}
+@@ -5939,7 +5939,7 @@
+ $f : V \to U$ and $g : W \to V$ in $\mathcal{C}$, the composition
+ $c_g \circ j_{g}^{-1} c_f$ is equal to $c_{f \circ g}$. We will call
+ such a collection of data $(\mathcal{F}_{U}, c_f)$ an
+-{\it absolute glueing data for sheaves of sets on $\mathcal{C}$}.
++{\it absolute glueing datum for sheaves of sets on $\mathcal{C}$}.
+ A morphism of absolute glueing data
+ $(\mathcal{F}_{U}, c_f) \to (\mathcal{G}_{U}, c'_f)$
+ is given by a collection $(\varphi_U)$
+@@ -5977,7 +5977,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Given an absolute glueing data $(\mathcal{F}_U, c_f)$,
++Given an absolute glueing datum $(\mathcal{F}_U, c_f)$,
+ we construct a sheaf $\mathcal{F}$ on $\mathcal{C}$ by
+ setting $\mathcal{F}(U) = \mathcal{F}_U(U)$, where restriction
+ along $f : V \to U$ given by the commutative diagram
+@@ -6044,7 +6044,7 @@
+ 
+ \noindent
+ In this section we prove a few lemmas on localization where we
+-impose some additional hypotheses on the site on or the object
++impose some additional hypotheses on the site or on the object
+ we are localizing at.
+ 
+ \begin{lemma}
+@@ -6152,7 +6152,7 @@
+ \noindent
+ A fundamental property of an open immersion is
+ that the restriction of the pushforward and the restriction
+-of the extension by the empty set produces back the original sheaf.
++of the extension by the empty set produce back the original sheaf.
+ This is not always true for the functors associated to $j_U$
+ above. It is true when $U$ is a ``subobject of the final object''.
+ 
+@@ -6258,7 +6258,7 @@
+ \label{section-localize-morphisms}
+ 
+ \noindent
+-The following lemma is important in order to understand relation
++The following lemma is important in order to understand the relation
+ between localization and morphisms of sites and topoi.
+ 
+ \begin{lemma}
+@@ -7363,7 +7363,7 @@
+ $$
+ is equal to $j_{U!}$, see
+ Lemma \ref{lemma-essential-image-j-shriek}.
+-Denote
++Denote by
+ $a : \Sh(\mathcal{C})/h_U^\# \to \Sh(\mathcal{C}/U)$
+ the inverse functor, so $j_{\mathcal{F}!} = j_{U!} \circ a$,
+ $j_\mathcal{F}^{-1} = a^{-1} \circ j_U^{-1}$, and
+@@ -8348,7 +8348,7 @@
+ $X$  and fibre products. Let $p = u: \mathcal{C} \to \textit{Sets}$ be a
+ functor such that
+ \begin{enumerate}
+-\item $u(X) = \{*\}$ a singleton, and
++\item $u(X) = \{*\}$ is a singleton, and
+ \item for every pair of morphisms $U \to W$ and $V \to W$ with
+ the same target the map
+ $u(U \times_W V) \to u(U) \times_{u(W)} u(V)$ is surjective.
+@@ -9175,7 +9175,7 @@
+ 
+ \begin{proof}
+ For each $i \in I$ let $\{p_j\}_{j \in J_i}$ be a conservative
+-family of points of $\mathcal{C}/U_i$. For $j \in J_i$ denote
++family of points of $\mathcal{C}/U_i$. For $j \in J_i$ denote by
+ $q_j : \Sh(pt) \to \Sh(\mathcal{C})$ the composition
+ of $p_j$ with the localization morphism
+ $\Sh(\mathcal{C}/U_i) \to \Sh(\mathcal{C})$.
+@@ -9213,7 +9213,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Denote $p_i$ the stalk functor (\ref{equation-stalk}) on
++Denote by $p_i$ the stalk functor (\ref{equation-stalk}) on
+ $\textit{PSh}(\mathcal{C})$ corresponding to the functor $u_i$. We have
+ $$
+ (f^{-1}\mathcal{F})_{q_i} =
+@@ -9262,12 +9262,12 @@
+ Note that $u$ commutes with all finite limits (I mean those that
+ are representable in $\mathcal{C}$) because
+ each of the functors $V \mapsto \Mor_\mathcal{C}(U_i , V)$
+-do, see Categories, Lemma \ref{categories-lemma-directed-commutes}.
++does, see Categories, Lemma \ref{categories-lemma-directed-commutes}.
+ 
+ \medskip\noindent
+ We say that a system $(I, \geq, U_i, f_{ii'})$
+ is a {\it refinement} of $(J, \geq, V_j, g_{jj'})$ if
+-$J \subset I$, the ordering on $J$ induced from that of $I$
++$J \subset I$, the ordering on $J$ is induced from that of $I$
+ and $V_j = U_j$, $g_{jj'} = f_{jj'}$ (in words, the inverse system
+ over $J$ is induced by that over $I$). Let $u$ be the functor
+ associated to $(I, \geq, U_i, f_{ii'})$ and let $u'$ be the
+@@ -9300,7 +9300,7 @@
+ 
+ \begin{proof}
+ There exists a $j_0 \in J$ such that $f$ is defined by $f' : V_{j_0} \to W$.
+-For $j \geq j_0$ we set $V_{j, k} = V_j \times_{f'\circ f_{j j_0}, W} W_k$.
++For $j \geq j_0$ we set $V_{j, k} = V_j \times_{f'\circ g_{j j_0}, W} W_k$.
+ Then $\{V_{j, k} \to V_j\}$ is a finite covering in the site
+ $\mathcal{C}$. Hence
+ $\mathcal{F}(V_j) \subset \prod_k \mathcal{F}(V_{j, k})$.
+@@ -9352,7 +9352,7 @@
+ the image of $f$ in $u(W)$ is in the image of one of the $u(W_k)$.
+ \end{enumerate}
+ We order such pairs by inclusion in the first factor and
+-by refinement in the second. Denote $\mathcal{S}$ the class
++by refinement in the second. Denote by $\mathcal{S}$ the class
+ of all pairs $(E' \subset E, (I, \geq, U_i, f_{ii'}))$ as above.
+ We claim that the hypothesis of Zorn's lemma holds for $\mathcal{S}$. Namely,
+ suppose that $(E'_a, (I_a, \geq, U_i, f_{ii'}))_{a \in A}$
+@@ -9696,7 +9696,7 @@
+ }
+ $$
+ and we see the required result. Conversely, assume (11).
+-Let $a : \mathcal{F} \to \mathcal{F}'$ be surjective map of sheaves
++Let $a : \mathcal{F} \to \mathcal{F}'$ be a surjective map of sheaves
+ on $\mathcal{C}$. Consider the fibre product diagram
+ $$
+ \xymatrix{
+@@ -9971,7 +9971,7 @@
+ the continuous functor
+ $X_{Zar} \to Z_{Zar}$, $U \mapsto Z \cap U$ is
+ not cocontinuous. But it is almost cocontinuous in the sense defined above.
+-We know that $i_*$ while not exact on sheaves of sets, is
++We know that $i_*$, while not exact on sheaves of sets, is
+ exact on sheaves of abelian groups, see
+ Sheaves, Remark \ref{sheaves-remark-i-star-not-exact}.
+ And this holds in general for continuous and almost cocontinuous functors.
+@@ -10043,7 +10043,7 @@
+ this diagram is the sheafification of the colimit in the category of
+ presheaves, see
+ Lemma \ref{lemma-colimit-sheaves}.
+-Denote $\colim^{Psh}$ the colimit in the category
++Denote by $\colim^{Psh}$ the colimit in the category
+ of presheaves. Since $\mathcal{I}$ is finite and connected
+ we see that $\colim^{Psh}_i \mathcal{G}_i$
+ is a presheaf satisfying the assumptions of
+@@ -10555,7 +10555,7 @@
+ $\lambda_r \circ 0 = 0$,
+ $\lambda_r \circ + = + \circ (\lambda_r, \lambda_r)$,
+ $\lambda_{r + r'} =
+-+ \circ \lambda_r \times \lambda_{r'} \circ (\text{id}, \text{id})$,
+++ \circ (\lambda_r \times \lambda_{r'}) \circ (\text{id}, \text{id})$,
+ $\lambda_{rr'} = \lambda_r \circ \lambda_{r'}$,
+ $\lambda_1 = \text{id}$, $\lambda_0 = 0 \circ (\mathcal{F} \to *)$.
+ \end{proof}
+@@ -11114,7 +11114,7 @@
+ \label{lemma-topology-presheaves-sheaves}
+ Let $\mathcal{C}$ be a category. Let $\{ \mathcal{F}_i \}_{i\in I}$ be a
+ collection of presheaves of sets on $\mathcal{C}$. For each
+-$U \in \Ob(\mathcal{C})$ denote
++$U \in \Ob(\mathcal{C})$ denote by
+ $J(U)$ the set of sieves $S$ on $U$ with the following property:
+ For every morphism $V \to U$, the maps
+ $$
+@@ -11481,7 +11481,7 @@
+ $\mathcal{F}(U) = \Mor_{\textit{PSh}(\mathcal{C})}(h_U, \mathcal{F})$.
+ In addition, the colimit defining $L\mathcal{F}(U)$ is directed
+ since for any pair of covering sieves $S, S'$ on $U$ the
+-sieve $S \cap S'$ is a covering sieve too, see Lemma \ref{lemma-sieves-set}.
++sieve $S \cap S'$ is a covering sieve too, see Lemma \ref{lemma-topology-basic}.
+ 
+ \medskip\noindent
+ Let $f : V \to U$ be a morphism in $\mathcal{C}$.
+@@ -11571,7 +11571,7 @@
+ that both $\varphi_i$ are represented by elements
+ $\varphi_i \in \Mor_{\textit{PSh}(\mathcal{C})}(S', \mathcal{F})$.
+ We may assume that $S' = S$ by replacing both $S$ and $S'$ by
+-$S' \cap S$ which is also a covering sieve, see Lemma \ref{lemma-sieves-set}.
++$S' \cap S$ which is also a covering sieve, see Lemma \ref{lemma-topology-basic}.
+ Suppose $V\in \Ob(\mathcal{C})$, and
+ $\alpha : V \to U$ in $S(V)$.
+ Then we have $S \times_U V = h_V$,
+@@ -11633,7 +11633,7 @@
+ agree. Namely, these restrictions both correspond to the
+ restriction of $\varphi$ to $T$ (via $f$) and the desired
+ equality follows because $\mathcal{F}$ is separated.
+-Denote the common restriction $\psi$.
++Denote the common restriction by $\psi$.
+ The independence of choice follows because
+ $\varphi_{V, \alpha}(g) = \psi(\text{id}_T) =
+ \varphi_{V', \alpha'}(g')$. OK, so now $\varphi''$
+@@ -11760,7 +11760,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-finer-topology}
+-Assumption and notation as in Theorem \ref{theorem-topology-and-topos}.
++Assumptions and notation are as in Theorem \ref{theorem-topology-and-topos}.
+ Then $J \subset J'$ if and only if every sheaf for the
+ topology $J'$ is a sheaf for the topology $J$.
+ \end{lemma}
+@@ -11837,7 +11837,7 @@
+ \item For every covering sieve $S$ on $U$ the map
+ $S_p \to (h_U)_p$ is surjective.
+ \item The stalk functor $\Sh(\mathcal{C}) \to \textit{Sets}$,
+-$\mathcal{F} \to \mathcal{F}_p$ is exact.
++$\mathcal{F} \mapsto \mathcal{F}_p$ is exact.
+ \end{enumerate}
+ \end{definition}
+ 
