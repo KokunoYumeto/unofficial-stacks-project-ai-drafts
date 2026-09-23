@@ -1,0 +1,2943 @@
+{
+  "schema": "stacks-occurrence-semantic-review-v1",
+  "date": "2026-09-23",
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "review_kind": "Primary-session source review; not a second AI or human review",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "compared_public_commit": "35a01332d8714a2012c004bb161cf38f047c0119",
+  "prepared_next_commit": "35a01332d8714a2012c004bb161cf38f047c0119",
+  "comparison_note": "Sites source bytes were identical at R53 and R54. R54 publication is now verified by anonymous exact byte readback.",
+  "inventory_sha256": "53667E865189AF21A0E0132B6CB670E9E6D83B9B5996F8EF1D3D903E8E56F56B",
+  "admission_state": "All received reports have source-reviewed dispositions; full replay and new canonical admission remain pending.",
+  "source": "sites.tex",
+  "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+  "scope": "All 246 received Sites and Sheaves reports have exactly-once dispositions in 157 semantic groups. There are 29 proposed units and 35 operations; all 107 prior admitted units must be preserved. This record does not claim new admission, build or publication.",
+  "groups": [
+    {
+      "id": "SITES-RECON-001",
+      "occurrences": [
+        "OCC-11792",
+        "OCC-00057"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0148"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        253,
+        277
+      ],
+      "operations": [],
+      "rationale": "Both reports address the same unintroduced category identifier in the objectwise image construction. The admitted operation replaces Ob(C) by Ob(mathcal C), the category fixed in the lemma, and the cumulative source contains exactly that replacement.",
+      "adverse_evidence": "The construction of the image presheaf is unchanged; this is a notation repair, not a new image-existence theorem."
+    },
+    {
+      "id": "SITES-RECON-002",
+      "occurrences": [
+        "OCC-01328"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        574,
+        590
+      ],
+      "operations": [
+        {
+          "line": 583,
+          "old_text": "verify they are each others inverse.",
+          "replacement_text": "verify that they are each other's inverses."
+        }
+      ],
+      "rationale": "Insert the missing possessive apostrophe and state that the two constructed maps are inverses. The map constructions and the adjunction statement remain unchanged.",
+      "adverse_evidence": "The defect is grammatical; the existing proof already specifies maps in both directions. No new assertion or independent proof of the adjunction is claimed."
+    },
+    {
+      "id": "SITES-RECON-003",
+      "occurrences": [
+        "OCC-00058"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        772,
+        783
+      ],
+      "operations": [
+        {
+          "line": 781,
+          "old_text": "a presheaves and sheaves",
+          "replacement_text": "presheaves and sheaves"
+        }
+      ],
+      "rationale": "Remove the singular article before the coordinated plural nouns presheaves and sheaves. Preserve the existing comparison and its reference.",
+      "adverse_evidence": "The singular word notion can refer collectively to both kinds of object; changing it to notions is unnecessary."
+    },
+    {
+      "id": "SITES-RECON-004",
+      "occurrences": [
+        "OCC-00059"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        792,
+        810
+      ],
+      "operations": [
+        {
+          "line": 801,
+          "old_text": "We first replace by",
+          "replacement_text": "We first replace"
+        }
+      ],
+      "rationale": "Delete the first by in replace by G-Sets by a full subcategory, leaving the intended category replacement and both set-theoretic references intact.",
+      "adverse_evidence": "No size convention, category, action or covering changes; the two by tokens are a grammatical duplication."
+    },
+    {
+      "id": "SITES-RECON-005",
+      "occurrences": [
+        "OCC-00060"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        818,
+        826
+      ],
+      "operations": [],
+      "rationale": "This corresponding topology has a valid demonstrative determiner followed by an attributive modifier. The corresponding topology is a possible stylistic alternative.",
+      "adverse_evidence": "The sentence already identifies the topology just described; no logical ambiguity or grammatical necessity forces a replacement."
+    },
+    {
+      "id": "SITES-RECON-006",
+      "occurrences": [
+        "OCC-11790",
+        "OCC-00061"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0149"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1245,
+        1286
+      ],
+      "operations": [],
+      "rationale": "The maps f_j composed with the first projection and f_j-prime composed with the second projection have targets U_alpha(j) and U_alpha(j-prime). Their composites to U agree because each f_j is a map over U. The universal property therefore gives the unique map to U_alpha(j) times_U U_alpha(j-prime), exactly the target restored by the earlier correction and used in the following pullback identities.",
+      "adverse_evidence": "The displayed i indices cannot be supplied by the sentence: alpha has domain J. Both reports identify the same index repair, already present in the cumulative source."
+    },
+    {
+      "id": "SITES-RECON-007",
+      "occurrences": [
+        "OCC-00062"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1298,
+        1317
+      ],
+      "operations": [
+        {
+          "line": 1310,
+          "old_text": "the category of sheaves are equal.",
+          "replacement_text": "the categories of sheaves are equal."
+        }
+      ],
+      "rationale": "Use the plural categories as the subject of are equal, referring to the two sheaf categories in the preceding inclusions.",
+      "adverse_evidence": "This agreement repair changes none of the covering conditions or inclusions."
+    },
+    {
+      "id": "SITES-RECON-008",
+      "occurrences": [
+        "OCC-01329"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1324,
+        1340
+      ],
+      "operations": [
+        {
+          "line": 1333,
+          "old_text": " and refinement given",
+          "replacement_text": ", with the refinement given"
+        }
+      ],
+      "rationale": "Attach the refinement data to the chosen family with with the refinement given by, preserving alpha and every component f_j.",
+      "adverse_evidence": "The argument is mathematically recoverable; this repairs the grammatical attachment of the already specified data."
+    },
+    {
+      "id": "SITES-RECON-009",
+      "occurrences": [
+        "OCC-01263"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        1391,
+        1407
+      ],
+      "operations": [],
+      "rationale": "An object of the category isomorphic to O is a valid noun phrase with a reduced relative clause. The existential assertion is grammatical and already states the intended isomorphism.",
+      "adverse_evidence": "Adding which is would also be grammatical but is optional; the report falsely identifies its absence as an error."
+    },
+    {
+      "id": "SITES-RECON-010",
+      "occurrences": [
+        "OCC-00063"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1634,
+        1675,
+        2632,
+        2676
+      ],
+      "operations": [
+        {
+          "line": 1635,
+          "old_text": "cohomology group",
+          "replacement_text": "cohomology set"
+        },
+        {
+          "line": 2658,
+          "old_text": "cohomology group",
+          "replacement_text": "cohomology set"
+        },
+        {
+          "line": 2670,
+          "old_text": "groups.",
+          "replacement_text": "sets."
+        }
+      ],
+      "rationale": "The definition makes H^0 an equalizer of sets for a set-valued presheaf and supplies no group operations. This cannot uniformly be a group: on the category with one object and its identity, use only the identity covering and let F take the empty set. Its restriction is the identity of the empty set; the sheaf condition for the identity covering holds, and H^0 of that covering is empty. A group must contain an identity element, so this H^0 is not a group. The identity functor of the same site gives the same counterexample at the quasi-continuous loci. Replace group/groups by set/sets in all three reported phrases.",
+      "adverse_evidence": "Group-valued presheaves can give groups, but the stated hypotheses allow every set-valued presheaf, including this example. No equalizer, map, hypothesis or sheafification construction changes."
+    },
+    {
+      "id": "SITES-RECON-011",
+      "occurrences": [
+        "OCC-11809",
+        "OCC-01264"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0150"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1679,
+        1707
+      ],
+      "operations": [],
+      "rationale": "The first index j labels a covering member and the second i labels a diagram object. The maps F(phi) carry s_(j,i) to s_(j,i-prime); since F_(i-prime) is a sheaf, the glued sections satisfy the same equality. The earlier correction restores exactly this index order and its postimage is present.",
+      "adverse_evidence": "The reversed pairs were not defined by the construction. This preserves the limit proof without adding a further operation."
+    },
+    {
+      "id": "SITES-RECON-012",
+      "occurrences": [
+        "OCC-00064",
+        "OCC-11810"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0151"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1966,
+        1972
+      ],
+      "operations": [],
+      "rationale": "The quantified family itself is a covering of U. The earlier correction removes the extra of and leaves the injectivity condition unchanged.",
+      "adverse_evidence": "The source did not define a covering of a family here. Both reports concern the same preposition and the cumulative postimage is present."
+    },
+    {
+      "id": "SITES-RECON-013",
+      "occurrences": [
+        "OCC-11811"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0152"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1933,
+        1944,
+        1995,
+        2010
+      ],
+      "operations": [],
+      "rationale": "The construction gives maps H^0(cover,F) to the colimit F-plus(U). After the common refinement the representatives s_j and s_j-prime agree on all W_jk, so the same matching family has colimit image s and also s-prime. The earlier correction states this map in its actual direction.",
+      "adverse_evidence": "There is no specified reverse map from the colimit to an individual H^0 set. Equality of the two images, not a chosen representative map, proves the needed conclusion; the cumulative corrected sentence is present."
+    },
+    {
+      "id": "SITES-RECON-014",
+      "occurrences": [
+        "OCC-00065",
+        "OCC-11812"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0153"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1654,
+        1675,
+        2034,
+        2038
+      ],
+      "operations": [],
+      "rationale": "For a covering of U the sheaf-condition map has domain the set F(U), as explicitly defined earlier. The earlier operation restores this evaluated domain in the later proof, and the cumulative postimage is present.",
+      "adverse_evidence": "A presheaf as an object is not the domain set of this particular map. The evaluation correction leaves the sheaf criterion intact."
+    },
+    {
+      "id": "SITES-RECON-015",
+      "occurrences": [
+        "OCC-11813"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0154"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2139,
+        2153
+      ],
+      "operations": [],
+      "rationale": "The assertion that finite limits are preserved concerns the assignment F maps to F-plus. The earlier operation changes the arrow at precisely that functor assignment; the canonical natural morphism F to F-plus elsewhere remains unchanged.",
+      "adverse_evidence": "Arrow notation is sometimes used informally for an assignment, but the admitted clarification names the functor without changing the construction, and is already composed."
+    },
+    {
+      "id": "SITES-RECON-016",
+      "occurrences": [
+        "OCC-11791",
+        "OCC-00066",
+        "OCC-11821"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0155"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2155,
+        2175,
+        2181,
+        2214
+      ],
+      "operations": [],
+      "rationale": "The presheaves and every covering are on the single site C fixed in the lemma. The invoked sections-of-sheafification lemma supplies a covering on C, and the refinement by objects of B stays there. The earlier operation restores C in the proof, exactly matching all three reports.",
+      "adverse_evidence": "No second site D is introduced. This is a site-identifier repair; the already composed postimage is confirmed."
+    },
+    {
+      "id": "SITES-RECON-017",
+      "occurrences": [
+        "OCC-11793",
+        "OCC-00067",
+        "OCC-11822"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0156"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2181,
+        2227
+      ],
+      "operations": [],
+      "rationale": "On each U_ijk in B, the map F(U_ijk) to G(U_ijk) is injective. Naturality sends the restrictions of t_i and t_j to the respective restrictions of s_i and s_j, which agree by the previous construction. Injectivity therefore forces equality of the t restrictions. The earlier correction supplies this known equality of the s sections instead of repeating the conclusion.",
+      "adverse_evidence": "The proof needs agreement of the images together with injectivity. All three reports specify the same already composed correction, whose postimage is confirmed."
+    },
+    {
+      "id": "SITES-RECON-018",
+      "occurrences": [
+        "OCC-11781"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0157"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2578,
+        2587
+      ],
+      "operations": [],
+      "rationale": "The earlier copyedit joins the introductory situation clause to the functor statement with a comma and lower-case the. Its exact replacement is present in the cumulative source.",
+      "adverse_evidence": "The separated introductory fragment is conventional mathematical shorthand and leaves the hypotheses recoverable; this retained edit is editorial, not a new adjunction result."
+    },
+    {
+      "id": "SITES-RECON-019",
+      "occurrences": [
+        "OCC-11782"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0158"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2593,
+        2616
+      ],
+      "operations": [],
+      "rationale": "The earlier copyedit joins the introductory situation clause to the assertion for every presheaf. The original hypothesis reference and comparison remain intact, and the exact replacement is present.",
+      "adverse_evidence": "The source fragment is understandable mathematical shorthand; retain the accepted editorial improvement without claiming a further mathematical defect."
+    },
+    {
+      "id": "SITES-RECON-020",
+      "occurrences": [
+        "OCC-11783"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2801,
+        2824
+      ],
+      "operations": [],
+      "rationale": "The clause because u_s equals sheafification composed with u_p is a complete causal clause. A mathematical equality supplies its predicate, and the preceding sentences establish preservation of finite limits by both factors.",
+      "adverse_evidence": "The equation is inline in the TeX, and even displaying it would not remove its grammatical role. Replacing because by using is optional and the claimed incomplete connective is absent."
+    },
+    {
+      "id": "SITES-RECON-021",
+      "occurrences": [
+        "OCC-11784"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0159"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2826,
+        2844
+      ],
+      "operations": [],
+      "rationale": "The earlier operation removes the space immediately before the comma, leaving the same hypothesis that u(X) is a final object. The exact replacement is present in the cumulative source.",
+      "adverse_evidence": "This is punctuation spacing, with no change to the site functor or final-object condition."
+    },
+    {
+      "id": "SITES-RECON-022",
+      "occurrences": [
+        "OCC-00068"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        3157,
+        3207
+      ],
+      "operations": [],
+      "rationale": "The section explicitly defines the G-action on every restricted H-set by g acting on h = phi(g)h. In Mor_G((H)_phi,S), the expression gh is therefore the defined action, just as ga(h) denotes the action on S. Consequently a(gh)=ga(h) is exactly a(phi(g)h)=g a(h). Writing phi explicitly is optional clarification.",
+      "adverse_evidence": "Reading gh as multiplication of elements of different groups would be ill-typed, but that is not the only available reading: the required action is explicitly defined at lines 3161-3164 and used in the Hom-set at line 3199. No homomorphism hypothesis or equivariance condition is missing."
+    },
+    {
+      "id": "SITES-RECON-023",
+      "occurrences": [
+        "OCC-00069"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3303,
+        3345
+      ],
+      "operations": [
+        {
+          "line": 3342,
+          "old_text": "h_{U_{\\alpha(c)}}",
+          "replacement_text": "h_{U_{\\alpha(c)}}^\\#"
+        }
+      ],
+      "rationale": "Write v:V_c to U_alpha(c) for the refinement map. Applying sheafification to the induced map of representable presheaves gives h_Vc-sharp to h_Ualpha(c)-sharp. Since F_iota(alpha(c)) is a sheaf, the section s_alpha(c) corresponds by Yoneda and the sheafification adjunction to a unique map from h_Ualpha(c)-sharp to that sheaf. Composing these two maps and the given map to h_U-sharp corresponds to the restriction of the image of s_alpha(c), which is id_U restricted to V_c. By the same adjunction/Yoneda bijection this is exactly the map h_Vc-sharp to h_U-sharp induced by V_c to U. The added marker makes the displayed chain this actual chain of sheaf morphisms.",
+      "adverse_evidence": "The site is arbitrary and is not assumed subcanonical, so the intermediate representable need not already be a sheaf. Its sheafification cannot be suppressed using a hypothesis absent from the lemma. The required representable-to-sheaf map extends uniquely to its sheafification; the asserted factorization remains the same."
+    },
+    {
+      "id": "SITES-RECON-024",
+      "occurrences": [
+        "OCC-00070",
+        "OCC-11785"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0160"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3347,
+        3362
+      ],
+      "operations": [],
+      "rationale": "The section is named s_c and belongs to the stated sheaf over V_c. The earlier correction removes the extra of before its name, giving a section s_c of the sheaf. Its exact replacement is present in the cumulative source.",
+      "adverse_evidence": "No lift or refinement changes; both reports specify the same naming-grammar repair."
+    },
+    {
+      "id": "SITES-RECON-025",
+      "occurrences": [
+        "OCC-00071",
+        "OCC-11786"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0161"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3402,
+        3415
+      ],
+      "operations": [],
+      "rationale": "The displayed lemma concerns finite coproducts. The earlier spelling repair from copoducts to coproducts is present at the corresponding cumulative line.",
+      "adverse_evidence": "This changes the slogan spelling only; the quantified sheaves and their coproduct remain the same."
+    },
+    {
+      "id": "SITES-RECON-026",
+      "occurrences": [
+        "OCC-11787",
+        "OCC-00072"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0162"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3422,
+        3474
+      ],
+      "operations": [],
+      "rationale": "The second transition map has source F_i-prime and therefore takes s-prime, which is the section introduced in that source. At a stage above the finitely many local comparison stages, the two transported sections agree on the covering V_b; separatedness of the target sheaf gives global equality. Both earlier operations restore s-prime and both postimages are present.",
+      "adverse_evidence": "Using s in the second map would require a domain identification not assumed. The two occurrences are one already admitted repair, not two newly discovered corrections."
+    },
+    {
+      "id": "SITES-RECON-027",
+      "occurrences": [
+        "OCC-00073",
+        "OCC-11788"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0163"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3612,
+        3638
+      ],
+      "operations": [],
+      "rationale": "The earlier operation removes done from This is done shown, preserving the stated reduction to equality of the two maps and the following proof. Its postimage is present.",
+      "adverse_evidence": "The construction and coequalizer are unaffected; both reports identify the same grammatical duplication."
+    },
+    {
+      "id": "SITES-RECON-028",
+      "occurrences": [
+        "OCC-00074"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        3703,
+        3753
+      ],
+      "operations": [],
+      "rationale": "The proof chooses representatives, whose stages may be enlarged. Since the family of alpha_i has cardinality less than cf(beta), it is bounded by an alpha<beta. Apply the transition map F_alpha_i(U_i) to F_alpha(U_i) to each chosen representative. The colimit cocone identifies its new image with the same s_i, so these representatives can indeed be chosen with every index equal to alpha. The next step explicitly enlarges alpha again to obtain all overlap equalities.",
+      "adverse_evidence": "The source says we can choose the indices equal, not that the previously selected ordinals were literally equal. Transport to a common stage is the usual meaning of this choice and follows from the given cofinality hypothesis. Writing every transition map would clarify the convention but does not repair a false assertion."
+    },
+    {
+      "id": "SITES-RECON-029",
+      "occurrences": [
+        "OCC-11789",
+        "OCC-00075"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0164"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3735,
+        3753
+      ],
+      "operations": [],
+      "rationale": "The earlier operation replaces cardinality if by cardinality of at the product-index cardinality comparison; its postimage is present.",
+      "adverse_evidence": "No cardinal bound is changed by this typographical correction. The common-stage argument is separately reviewed in SITES-RECON-028."
+    },
+    {
+      "id": "SITES-RECON-030",
+      "occurrences": [
+        "OCC-00076",
+        "OCC-11794"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0165"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3883,
+        3888
+      ],
+      "operations": [],
+      "rationale": "The earlier edit removes the indefinite article before the named arrow a, yielding pick a:j to i with a as the mathematical variable. The morphism and its endpoints remain unchanged.",
+      "adverse_evidence": "Changing the article to an is another grammatical option; applying it after deleting the article would create a second unnecessary edit."
+    },
+    {
+      "id": "SITES-RECON-031",
+      "occurrences": [
+        "OCC-00077",
+        "OCC-11795"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0166"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3773,
+        3790,
+        3883,
+        3888
+      ],
+      "operations": [],
+      "rationale": "The functor u_j has domain C_j, so its representing object V_j is taken in C_j. The earlier operation supplies this exact subscript, making V=u_j(V_j) a typed expression.",
+      "adverse_evidence": "The image V belongs to C; the representative V_j belongs to C_j. The existing morphism u_j connects them and the accepted correction preserves it."
+    },
+    {
+      "id": "SITES-RECON-032",
+      "occurrences": [
+        "OCC-00078",
+        "OCC-11796"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0167"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3883,
+        3897
+      ],
+      "operations": [],
+      "rationale": "The fixed arrow a:j to i determines the representation stage. The varying b:k to j indexes the colimit and gives u_b:C_j to C_k, hence u_b(alpha_j):u_b(V_j) to u_b(V_j-prime). The earlier three operations consistently reserve a for the fixed arrow and explicitly type b for the restrictions.",
+      "adverse_evidence": "Calling the fixed arrow b obscures its distinction from the colimit arrow and would give u_b domain C_i. The repaired statement supplies the exact maps rather than merely renaming an unexplained index."
+    },
+    {
+      "id": "SITES-RECON-033",
+      "occurrences": [
+        "OCC-00079",
+        "OCC-11797"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0168"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3776,
+        3780,
+        3888,
+        3898,
+        3913
+      ],
+      "operations": [],
+      "rationale": "For a:j to i and b:k to j, the composite a composed with b goes from k to i. Its inverse-image functor takes F on C_i to a sheaf on C_k, where the cover u_b(U_j) and object u_b(U_j) lie. The two earlier edits restore this composition in both colimit terms, agreeing with the defining formula.",
+      "adverse_evidence": "The opposite order does not compose at the stated endpoints. Both lines form one previously admitted source correction."
+    },
+    {
+      "id": "SITES-RECON-034",
+      "occurrences": [
+        "OCC-11798"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0169"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3928,
+        3949
+      ],
+      "operations": [],
+      "rationale": "The system defines its identity component using the identity morphism of i. The earlier two notation edits typeset that same identity subscript consistently in the adjunction and the determining map.",
+      "adverse_evidence": "The intended identity was already inferable; this retains the admitted notation repair without claiming a different morphism."
+    },
+    {
+      "id": "SITES-RECON-035",
+      "occurrences": [
+        "OCC-00080"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3933,
+        3947
+      ],
+      "operations": [
+        {
+          "line": 3939,
+          "old_text": "implies that",
+          "replacement_text": "imply that"
+        }
+      ],
+      "rationale": "The plural subject compatibilities takes imply, preserving the exact adjunction assertion and all of its indices.",
+      "adverse_evidence": "This corrects agreement only; the family of maps and the argument determining it by the identity component are unchanged."
+    },
+    {
+      "id": "SITES-RECON-036",
+      "occurrences": [
+        "OCC-11799"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0170"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3953,
+        3963
+      ],
+      "operations": [],
+      "rationale": "The earlier operation gives the plural functors the plural verb commute, with the same finite-limit assertion.",
+      "adverse_evidence": "No exactness property changes; this is the same already admitted agreement repair."
+    },
+    {
+      "id": "SITES-RECON-037",
+      "occurrences": [
+        "OCC-11800",
+        "OCC-00081"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0171"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3965,
+        3995
+      ],
+      "operations": [],
+      "rationale": "For a:j to i the object u_a(X_i) belongs to C_j. Thus F_j, a sheaf on C_j, is the function evaluated there, as the lemma statement already records. The earlier operation restores F_j in the proof and agrees with the inner-colimit construction.",
+      "adverse_evidence": "F_i has domain C_i and cannot be substituted at this evaluation without a connecting functor. The repair changes the sheaf subscript to the already specified one."
+    },
+    {
+      "id": "SITES-RECON-038",
+      "occurrences": [
+        "OCC-11802"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0173"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3769,
+        3781,
+        3997,
+        4047
+      ],
+      "operations": [],
+      "rationale": "The earlier three edits name the object indices Ob(I-cal) of the cofiltered category already specified in the Situation. The colimit retains the given transition maps f_j inverse(phi_a):f_i inverse(F_i) to f_j inverse(F_j); their composition is fixed by the displayed cocycle. The object-index notation therefore refers to that supplied diagram.",
+      "adverse_evidence": "No separate symbol I was introduced. Identifying its object indices does not replace or discard the morphisms of the existing diagram."
+    },
+    {
+      "id": "SITES-RECON-039",
+      "occurrences": [
+        "OCC-11803",
+        "OCC-00083"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0174"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3997,
+        4047
+      ],
+      "operations": [],
+      "rationale": "Here the available sheaf is F on C. Its direct image f_i,*F is on C_i and pulls back to f_i inverse f_i,*F on C. These are the terms in the lemma statement and the canonical adjunction map. Both earlier edits restore that term in the two evaluations, so the subsequent formula uses f_j,*F on u_a(U_i) exactly as required.",
+      "adverse_evidence": "The preceding lemma allowed separately supplied F_i, but this lemma does not supply them. The repaired terms instantiate that lemma with F_i=f_i,*F and preserve the stated canonical map."
+    },
+    {
+      "id": "SITES-RECON-040",
+      "occurrences": [
+        "OCC-11801",
+        "OCC-00082"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0172"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4011,
+        4025
+      ],
+      "operations": [],
+      "rationale": "The stated cocycle compares the counit for c with the composite of the b-counit and the pullback of the a-counit. For a:j to i, the pullback along b must start at C_j, so b:k to j and c=a composed with b:k to i. The earlier endpoint repair gives exactly these types.",
+      "adverse_evidence": "The old endpoint k to i did not make the stated composition meaningful. All functors and the cited counit-composition identity retain their original order."
+    },
+    {
+      "id": "SITES-RECON-041",
+      "occurrences": [
+        "OCC-11804",
+        "OCC-00084"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0175"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4378,
+        4399
+      ],
+      "operations": [],
+      "rationale": "The earlier edit attaches the introductory lemma hypothesis to its quantified assertion. The hypothesis, presheaf and comparison maps are unchanged.",
+      "adverse_evidence": "The standalone hypothesis was an editorial fragment, not a missing mathematical assumption; the existing comma join already resolves the reports."
+    },
+    {
+      "id": "SITES-RECON-042",
+      "occurrences": [
+        "OCC-00085"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        4410,
+        4439
+      ],
+      "operations": [],
+      "rationale": "The covering is a family indexed by an implicit set I. For every i in I, f_i and V_i denote that same family member; j in the displayed family is a bound index. Renaming the bound variable j to i is the identity reindexing I to I. For each member the represented functor T maps to Mor_C(T,U) fibre product over Mor_D(u(T),V) Mor_D(u(T),V_i), using g and f_i, is unchanged. Thus both representability and the covering family in the two clauses refer to precisely the supplied covering.",
+      "adverse_evidence": "Using j throughout would be a notation preference, but the report provides no free competing i or different index set. Its assertion that the family member is undefined does not follow from changing a dummy index."
+    },
+    {
+      "id": "SITES-RECON-043",
+      "occurrences": [
+        "OCC-00086",
+        "OCC-11805"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0176"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4459,
+        4499
+      ],
+      "operations": [],
+      "rationale": "For u:C to D and v:D to E, the displayed arrows E_i to v(u(U)) cover the object v(u(U)) of E. The earlier repair restores that target. Cocontinuity first refines this family by images v(D_j), and then refines each D_j covering through u(C_l); their composites still target v(u(U)).",
+      "adverse_evidence": "U belongs to C, so the unrepaired prose named an object in the wrong category. The displayed arrows and refinement proof already specify the correct target; no change to a functor or hypothesis is needed."
+    },
+    {
+      "id": "SITES-RECON-044",
+      "occurrences": [
+        "OCC-11806",
+        "OCC-00087"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0177"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4770,
+        4821
+      ],
+      "operations": [],
+      "rationale": "The subject of the question is any covering of U intersect Z. Deleting the second subject it yields the intended interrogative; the earlier canonical operation already does this.",
+      "adverse_evidence": "The subsequent empty-cover counterexample and necessary condition are unchanged."
+    },
+    {
+      "id": "SITES-RECON-045",
+      "occurrences": [
+        "OCC-00088"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        4795,
+        4821
+      ],
+      "operations": [],
+      "rationale": "The implication uses the customary compact predicate u cocontinuous as its antecedent. Inserting is would produce the same proposition. Its proof is explicit: if nonempty U has empty intersection with Z, the empty covering of its image has no refinement by the image of a covering of nonempty U, since refinement to an empty family requires an empty indexing set.",
+      "adverse_evidence": "This is a mathematical implication with an unambiguous predicate, rather than a prose sentence whose missing verb changes or obscures an assertion. The source further states and demonstrates that the condition is not sufficient."
+    },
+    {
+      "id": "SITES-RECON-046",
+      "occurrences": [
+        "OCC-00089",
+        "OCC-11807"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0178"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4919,
+        4948
+      ],
+      "operations": [],
+      "rationale": "The covering has declared index set J and members V_j. Its image and base change must have that same index set; the earlier operation replaces the unrelated bound subscript i in I by j in J. The maps u(W_j) to u(v(V_j)) to V_j then compare the corresponding members.",
+      "adverse_evidence": "Unlike a consistent dummy-index rename, the old expression bound i while leaving j free in the family expression, and introduced a different undeclared set I."
+    },
+    {
+      "id": "SITES-RECON-047",
+      "occurrences": [
+        "OCC-11808",
+        "OCC-00090"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0179"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4950,
+        4970
+      ],
+      "operations": [],
+      "rationale": "The missing letter in cocontinuous is already restored. The example retains its two functors, adjunction and claimed implication.",
+      "adverse_evidence": "This is spelling of the established term, not a change from continuous to cocontinuous."
+    },
+    {
+      "id": "SITES-RECON-048",
+      "occurrences": [
+        "OCC-11814",
+        "OCC-00091"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        5214,
+        5245
+      ],
+      "operations": [],
+      "rationale": "OK is an informal transition within a complete proof. The displayed Kan-extension colimit and its distinguished objects O_phi follow with or without the interjection. Removing it is optional editing.",
+      "adverse_evidence": "Neither report demonstrates that this is an abandoned editing instruction or an incomplete calculation. Register preference alone is not a source defect."
+    },
+    {
+      "id": "SITES-RECON-049",
+      "occurrences": [
+        "OCC-11815",
+        "OCC-00092"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0180"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5357,
+        5364
+      ],
+      "operations": [],
+      "rationale": "The defining relative clause where the presheaf ... the presheaf omits its linking verb. The earlier insertion of is completes this clause and leaves the formula unchanged.",
+      "adverse_evidence": "This is running prose defining a named object, not an abbreviated mathematical antecedent."
+    },
+    {
+      "id": "SITES-RECON-050",
+      "occurrences": [
+        "OCC-00093"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        5214,
+        5227,
+        5357,
+        5393
+      ],
+      "operations": [
+        {
+          "line": 5362,
+          "old_text": "\\to j_{U!}*",
+          "replacement_text": "\\to j_{U!}^{PSh}*"
+        }
+      ],
+      "rationale": "At X the presheaf extension of G is the disjoint union of G(X,a) over a:X to U. Applying that functor to G to the terminal presheaf sends (a,s) to (a,*), and its target is the disjoint union of singleton sets indexed by a, canonically h_U(X). This map is natural because restriction sends (a,s) to (a composed with b, G(b)(s)); on the target it sends a to a composed with b. Thus the named gamma factors through j_{U!}^{PSh}*, exactly as the following identification requires. Adding the PSh superscript supplies the actual intermediate object.",
+      "adverse_evidence": "The sheaf extension j_{U!}* is h_U sheafified; on an arbitrary site this need not equal h_U. The proof is constructing a presheaf over h_U before sheafification, and no subcanonical assumption identifies those targets."
+    },
+    {
+      "id": "SITES-RECON-051",
+      "occurrences": [
+        "OCC-11816",
+        "OCC-00094"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0181"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5374,
+        5393
+      ],
+      "operations": [],
+      "rationale": "The earlier deletion removes the first of two occurrences of is, leaving the value of the presheaf on X is followed by the same displayed disjoint-union formula.",
+      "adverse_evidence": "The second is is needed to introduce the value. No fibre or index changes."
+    },
+    {
+      "id": "SITES-RECON-052",
+      "occurrences": [
+        "OCC-11817",
+        "OCC-00095"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0182"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5454,
+        5479,
+        5534,
+        5575
+      ],
+      "operations": [],
+      "rationale": "For f:V to U, the functor j takes (W to V) to (W to V to U), hence equals j_{V/U}. Its inverse image is restriction from sheaves on C/U to C/V; evaluation gives the condition phi(s)=f composed with a. The earlier replacement restores that exact localization subscript.",
+      "adverse_evidence": "The opposite symbol j_{U/V} would require U as an object over V, which is not supplied. The correct maps and fibre conditions already occur on both sides of the proof."
+    },
+    {
+      "id": "SITES-RECON-053",
+      "occurrences": [
+        "OCC-11818"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0183"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5583,
+        5610
+      ],
+      "operations": [],
+      "rationale": "The earlier sentence makes the ordered assignment explicit: j_U* is right adjoint and j_U! is left adjoint to restriction. These are the same presheaf functors obtained from the chaotic topology.",
+      "adverse_evidence": "The order and the two adjunctions are preserved. This report is an already accepted editorial repair, not a newly allocated mathematical correction."
+    },
+    {
+      "id": "SITES-RECON-054",
+      "occurrences": [
+        "OCC-11819"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        5612,
+        5623
+      ],
+      "operations": [],
+      "rationale": "The two adjacent source spaces in math mode between f_i and the colon produce the same TeX token stream as one source space. The arrow, fibre product and covering family are unchanged, both as mathematics and as rendered typography.",
+      "adverse_evidence": "No explicit spacing command is doubled. Reducing this source whitespace would be optional formatting and does not repair a rendered defect."
+    },
+    {
+      "id": "SITES-RECON-055",
+      "occurrences": [
+        "OCC-01330",
+        "OCC-01331"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        5816,
+        5851,
+        5941,
+        6001
+      ],
+      "operations": [
+        {
+          "line": 5844,
+          "old_text": "glueing data",
+          "replacement_text": "glueing datum"
+        },
+        {
+          "line": 5942,
+          "old_text": "glueing data",
+          "replacement_text": "glueing datum"
+        },
+        {
+          "line": 5980,
+          "old_text": "glueing data",
+          "replacement_text": "glueing datum"
+        }
+      ],
+      "rationale": "Each singular article introduces one structured collection. Use datum for that single structure, retaining data for collections or the category of such structures. The nearby defining occurrence at 5942 has the same singular article an across the line break and is repaired in the same unit.",
+      "adverse_evidence": "The operations change only the noun at the three singular-article occurrences read in context. The constituent sheaves, isomorphisms, cocycle conditions and category of absolute glueing data retain their names and definitions."
+    },
+    {
+      "id": "SITES-RECON-056",
+      "occurrences": [
+        "OCC-11823",
+        "OCC-01332",
+        "OCC-00096"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0184"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5970,
+        6001
+      ],
+      "operations": [],
+      "rationale": "All three records concern the single missing is in the definition of restriction along f. The existing repair completes that clause. The diagram still sends F_U(U) to F_U(V) and then by c_f to F_V(V).",
+      "adverse_evidence": "The producer itself flags one duplicate; direct context and the exact operation confirm all three records describe the same edit, not three defects."
+    },
+    {
+      "id": "SITES-RECON-057",
+      "occurrences": [
+        "OCC-00097"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        6042,
+        6048
+      ],
+      "operations": [
+        {
+          "line": 6047,
+          "old_text": "on the site on or the object",
+          "replacement_text": "on the site or on the object"
+        }
+      ],
+      "rationale": "The coordinated objects of the hypotheses are the site and the object of localization. Moving the misplaced on yields on the site or on the object.",
+      "adverse_evidence": "Neither hypothesis nor the logical or changes; the correction restores the order of the two prepositions."
+    },
+    {
+      "id": "SITES-RECON-058",
+      "occurrences": [
+        "OCC-11824",
+        "OCC-00098"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0185"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6067,
+        6074
+      ],
+      "operations": [],
+      "rationale": "The earlier operation terminates the Let declaration with a period before the capitalized explanatory sentence This means. The same membership and components remain.",
+      "adverse_evidence": "The display-like membership is embedded in two prose sentences; the report is already covered by one punctuation correction."
+    },
+    {
+      "id": "SITES-RECON-059",
+      "occurrences": [
+        "OCC-11820",
+        "OCC-01333"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0186"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6050,
+        6091
+      ],
+      "operations": [],
+      "rationale": "The projection pr_1 maps V_i fibre product over V V_j to V_i, and phi_i maps V_i to U. The structure map on the restriction is therefore phi_i composed with pr_1; the other projection gives phi_j composed with pr_2. The four existing operations correct both pair descriptions and both sides of their equality. Equality then glues to phi:V to U by the assumed subcanonical topology, and the sections glue in C/U.",
+      "adverse_evidence": "The old reversed composites have mismatched domains. The source uses conventional composition in the surrounding restriction diagram; no opposite-composition convention can validate them."
+    },
+    {
+      "id": "SITES-RECON-060",
+      "occurrences": [
+        "OCC-00099"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        6152,
+        6168
+      ],
+      "operations": [
+        {
+          "line": 6155,
+          "old_text": "produces back",
+          "replacement_text": "produce back"
+        }
+      ],
+      "rationale": "The subject contains two coordinated restrictions, so its verb is produce. The statement still discusses both the pushforward and extension by the empty set before giving the precise hypothesis below.",
+      "adverse_evidence": "No claim that these two functors agree in general is introduced; the next sentence and lemma retain the required condition on U."
+    },
+    {
+      "id": "SITES-RECON-061",
+      "occurrences": [
+        "OCC-11825",
+        "OCC-00100"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0187"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6159,
+        6174
+      ],
+      "operations": [],
+      "rationale": "The earlier edit uses the noun phrase full faithfulness. For objects X to U and Y to U, at most one arrow X to U forces every arrow X to Y to respect the structure maps, which gives fullness; forgetting is faithful. Conversely fullness applied to the identity between two structure maps on X forces those maps equal.",
+      "adverse_evidence": "The adjective correction preserves the exact equivalence asserted. It does not weaken full faithfulness to faithfulness alone."
+    },
+    {
+      "id": "SITES-RECON-062",
+      "occurrences": [
+        "OCC-00101"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        6257,
+        6271
+      ],
+      "operations": [
+        {
+          "line": 6261,
+          "old_text": "understand relation",
+          "replacement_text": "understand the relation"
+        }
+      ],
+      "rationale": "The introduction refers to the specific relation treated by the following lemma, so the singular count noun relation takes the article the.",
+      "adverse_evidence": "The scope remains localization and morphisms of sites and topoi; the operation changes no definition."
+    },
+    {
+      "id": "SITES-RECON-063",
+      "occurrences": [
+        "OCC-00102"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        6294,
+        6334
+      ],
+      "operations": [],
+      "rationale": "The four short explanations use mathematical ellipsis: first equality by definitions; second and fourth by the sheafification compatibility; third because u composed with j_V equals j_U composed with u prime. Each reason is explicitly attached to the corresponding displayed step. Adding follows would expand the same reasons into full sentences.",
+      "adverse_evidence": "No step, justification or predicate with competing meaning is absent. This is optional expansion of conventional calculation commentary, rather than a correction to the formulas or cited results."
+    },
+    {
+      "id": "SITES-RECON-064",
+      "occurrences": [
+        "OCC-00103"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        6093,
+        6127,
+        6387,
+        6435
+      ],
+      "operations": [],
+      "rationale": "The statement explicitly refers to the previously defined functor X maps to X times U over U. Thus its abbreviated product value has structure map pr_2. On a morphism b:X to X prime the map b times id_U satisfies pr_2 composed with (b times id_U)=pr_2, hence is a slice morphism; identity and composition follow from the product universal property. The same applies to Y times V. Preservation of finite limits by u identifies u(Y times V) with u(Y) times u(V) compatibly with both projections, so the proof is an equality of the indicated slice functors.",
+      "adverse_evidence": "The cited lemma supplies exactly the structure map the report claims is missing. Explicitly repeating /U and /V could improve verbosity but does not repair an undefined functor."
+    },
+    {
+      "id": "SITES-RECON-065",
+      "occurrences": [
+        "OCC-11856",
+        "OCC-00104"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0217"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6444,
+        6465,
+        6466,
+        6518
+      ],
+      "operations": [],
+      "rationale": "The second iterated fibre product has base h_{u(V prime)} sheafified, with incoming map c prime from h_{U prime} sheafified. The earlier brace repair puts the map label outside the representable object index. Write q=h_{u(b)} sheafified, and use a,c,c prime also for the induced sheaf maps, so q composed with c prime equals c composed with a. At each object, the left side has elements ((x,z),w) satisfying f inverse phi(x)=c(z) and z=a(w). The right side, using preservation of fibre products by f inverse, has elements ((x,y),w) satisfying f inverse phi(x)=q(y) and y=c prime(w). The map ((x,z),w) to ((x,c prime(w)),w) and its inverse ((x,y),w) to ((x,a(w)),w) are well defined by the square, mutually inverse and commute with restrictions. Thus the edited subscript supplies exactly the base and incoming map used by this natural identification.",
+      "adverse_evidence": "An object (u(V prime),c prime) is not what the representable h denotes here. The corrected comma separates the base from its incoming map and leaves the pullback square unchanged."
+    },
+    {
+      "id": "SITES-RECON-066",
+      "occurrences": [
+        "OCC-11826",
+        "OCC-00105"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0188"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6531,
+        6576
+      ],
+      "operations": [],
+      "rationale": "Applying u to an object U prime to U of C/U gives u(U prime) to u(U)=V. This is the object used throughout the covering refinement proof and makes the square commute. The earlier edit replaces undeclared V prime by that exact functor image.",
+      "adverse_evidence": "No independent object V prime or isomorphism to one is supplied. Writing the actual image is necessary to define the slice functor."
+    },
+    {
+      "id": "SITES-RECON-067",
+      "occurrences": [
+        "OCC-11827",
+        "OCC-11857",
+        "OCC-00106"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0189"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6556,
+        6576
+      ],
+      "operations": [],
+      "rationale": "The refinement maps have source u(U_i prime) and target V_alpha(i), both equipped with arrows to u(U prime) in D. The existing base correction makes their triangle commute over that object. Composing these arrows with u(U prime) to V gives the same refinement maps in D/V.",
+      "adverse_evidence": "All three records name the same occurrence. U prime is in C and does not serve as this base in D; no identification of the two categories is assumed."
+    },
+    {
+      "id": "SITES-RECON-068",
+      "occurrences": [
+        "OCC-00107"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        6702,
+        6747
+      ],
+      "operations": [],
+      "rationale": "Both displays are followed by compact enumerated reasons for their equalities. The explanations identify definitions, the sheaf property, and the commuting functor square; the equality of left adjoints follows afterwards. Inserting follows expands ellipsis without changing any assertion.",
+      "adverse_evidence": "As in the preceding localization calculation, these are conventional abbreviated justifications with no missing mathematical operation or unsupported equality identified by the report."
+    },
+    {
+      "id": "SITES-RECON-069",
+      "occurrences": [
+        "OCC-11841"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0190"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6768,
+        6774,
+        7141,
+        7147
+      ],
+      "operations": [],
+      "rationale": "The exact earlier citation correction is already present. The authority chapter later cites the same Proposition 4.9.4 in Expose IV at the result promised by this introduction; this agrees with the retained canonical evidence identifying SGA4 Expose IV, page 356. The original bibliographic identity is preserved.",
+      "adverse_evidence": "This intake review checks the source occurrence, the later same-source citation and the immutable correction evidence; it does not claim a fresh reading of the external facsimile. The historical private review path is absent from this checkout, and was not represented as reread."
+    },
+    {
+      "id": "SITES-RECON-070",
+      "occurrences": [
+        "OCC-11858",
+        "OCC-00109"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0218"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6773,
+        6867
+      ],
+      "operations": [],
+      "rationale": "A map from (U prime,psi) to (U,id) in the comma category requires a lift alpha:U prime to U with u(alpha)=psi. Only local lifts and local equality are assumed. The existing repair states merely that (U,id) is an object; every limit cone has a projection to its component. The following sheaf argument proves this projection bijective without using finality: local lifts prescribe restrictions, local equality gives agreement on overlaps, and the sheaf condition gives unique global components.",
+      "adverse_evidence": "No global unique lift is implied by hypotheses (3) and (4). Conversely removing final does not remove the needed projection or assume the isomorphism: the source gives its local existence and uniqueness proof."
+    },
+    {
+      "id": "SITES-RECON-071",
+      "occurrences": [
+        "OCC-11837",
+        "OCC-00108"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0191"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6818,
+        6867
+      ],
+      "operations": [],
+      "rationale": "The prescribed value s lies in the component indexed by (U,id). Choosing the identity cover and identity lift gives s at that component; uniqueness makes this independent of the local choices. The earlier replacement of psi by id records the component actually fixed throughout the argument.",
+      "adverse_evidence": "One producer description still calls that component final. That rationale is superseded by MC-STK-ERR-0218: the object need not be final, and its role here is the distinguished component of the limit cone."
+    },
+    {
+      "id": "SITES-RECON-072",
+      "occurrences": [
+        "OCC-11844",
+        "OCC-00110"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0192"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        6928,
+        6968
+      ],
+      "operations": [],
+      "rationale": "The two stages of the covering are f_ik:U double prime_ik to U double prime_i and f_i:U double prime_i to U double prime. With c_ik=c_i composed with f_ik and u(c_i)=c composed with u(f_i), functoriality gives u(c_ik)=c composed with u(f_i composed with f_ik). The earlier insertion of f_i restores exactly this equation.",
+      "adverse_evidence": "The omitted f_i changes the target of the inner image arrow, so c could not be composed with u(f_ik) as printed. No new covering choice is introduced."
+    },
+    {
+      "id": "SITES-RECON-073",
+      "occurrences": [
+        "OCC-11845",
+        "OCC-00111"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0193"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7012,
+        7017
+      ],
+      "operations": [],
+      "rationale": "The earlier deletion of be repairs may look be a bit confusing. The warning about objects also being viewed as sheaves is unchanged.",
+      "adverse_evidence": "This is a duplicated verb in a complete prose clause, not conventional shorthand for an equality."
+    },
+    {
+      "id": "SITES-RECON-074",
+      "occurrences": [
+        "OCC-11864",
+        "OCC-00112"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0219"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7037,
+        7055
+      ],
+      "operations": [],
+      "rationale": "The existing insertion of by supplies the naming construction Denote by g the equivalence. Its direction is Sh(C) to Sh(C prime), as required for the cocontinuous functor v.",
+      "adverse_evidence": "The equivalence and its functor are already defined by the preceding proof; the report requires only this preposition."
+    },
+    {
+      "id": "SITES-RECON-075",
+      "occurrences": [
+        "OCC-00113"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        7057,
+        7067
+      ],
+      "operations": [],
+      "rationale": "The short explanation identifies the cited lemma as the reason for the first displayed equality. Adding follows would expand a conventional elliptical justification.",
+      "adverse_evidence": "The following equalities are Yoneda evaluation and the definition of v. No new formula, missing hypothesis or unclear reason is demonstrated."
+    },
+    {
+      "id": "SITES-RECON-076",
+      "occurrences": [
+        "OCC-11842",
+        "OCC-00114"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0194"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7111,
+        7135
+      ],
+      "operations": [],
+      "rationale": "The displayed induction should list its successive stages C_1, C_2, C_3 before the ellipsis. The earlier edit changes the repeated third entry accordingly and preserves the recursive closure under fibre products and subsheaves.",
+      "adverse_evidence": "The inclusion symbol allows equality of stages; the correction does not claim that any inclusion is strict."
+    },
+    {
+      "id": "SITES-RECON-077",
+      "occurrences": [
+        "OCC-11843"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        7111,
+        7135,
+        7175,
+        7190
+      ],
+      "operations": [],
+      "rationale": "Both TeX forms denote the same calligraphic C with a prime superscript. Moving the prime outside the mathcal argument is a source-style preference. The category is explicitly defined as the union of the C_n, and all three local functors have that same indicated codomain.",
+      "adverse_evidence": "No new category C prime is created by grouping the prime inside the alphabet command. The report identifies inconsistent source spelling, not an incorrect object, arrow or rendered mathematical meaning."
+    },
+    {
+      "id": "SITES-RECON-078",
+      "occurrences": [
+        "OCC-11846"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0195"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7192,
+        7231
+      ],
+      "operations": [],
+      "rationale": "The four existing insertions use the established sheaf-category macro in the Hom subscripts. These categories in order are Sh(C prime), Sh(C), Sh(C), Sh(D), exactly matching Yoneda evaluation, the g adjunction, the representing-object identification and the f adjunction.",
+      "adverse_evidence": "All arguments and subscripts retain their source categories; the correction restores notation without changing the adjunction chain."
+    },
+    {
+      "id": "SITES-RECON-079",
+      "occurrences": [
+        "OCC-00115"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        7208,
+        7230
+      ],
+      "operations": [],
+      "rationale": "The six explanations attach definitions, Yoneda, two adjunctions and the prior equivalence lemma to the six equalities. Shortening some by omission of follows is conventional calculation commentary; expanding them is optional.",
+      "adverse_evidence": "The report calls three explanations fragments although the sixth also uses the same ellipsis. This discrepancy changes neither the count of displayed equalities nor their supplied mathematical justifications."
+    },
+    {
+      "id": "SITES-RECON-080",
+      "occurrences": [
+        "OCC-11847",
+        "OCC-00116"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0196"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7233,
+        7250
+      ],
+      "operations": [],
+      "rationale": "The first application cites one lemma, followed by a separately introduced second lemma. The existing singular Lemma agrees with the single reference it introduces.",
+      "adverse_evidence": "The correction preserves both steps and both cited results; it does not remove the later application."
+    },
+    {
+      "id": "SITES-RECON-081",
+      "occurrences": [
+        "OCC-00117"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        7347,
+        7374
+      ],
+      "operations": [
+        {
+          "line": 7366,
+          "old_text": "Denote",
+          "replacement_text": "Denote by"
+        }
+      ],
+      "rationale": "The imperative names the inverse equivalence a; Denote by a the inverse functor requires the preposition by, as at the earlier naming occurrence for g.",
+      "adverse_evidence": "The directions of a and its inverse, and all three associated functors, remain unchanged."
+    },
+    {
+      "id": "SITES-RECON-082",
+      "occurrences": [
+        "OCC-11848",
+        "OCC-00118"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0197"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7376,
+        7394
+      ],
+      "operations": [],
+      "rationale": "The existing insertion of that makes associates the verb of the relative clause describing the functor. The sheaf of right inverses to phi on each localization remains the stated construction.",
+      "adverse_evidence": "The relative pronoun is needed in running prose; the edit does not change right inverses to left inverses."
+    },
+    {
+      "id": "SITES-RECON-083",
+      "occurrences": [
+        "OCC-11838",
+        "OCC-00119"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0198"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7629,
+        7676
+      ],
+      "operations": [],
+      "rationale": "The argument has identified F with the representable h_{u(V)} on a subcanonical site. The earlier insertion Set U=u(V) defines the object used in the slice category C/U and in j_U, yielding exactly the localization of F.",
+      "adverse_evidence": "This is a local name for the already specified object, not a new representability assumption. Its added source line must remain in cumulative replay."
+    },
+    {
+      "id": "SITES-RECON-084",
+      "occurrences": [
+        "OCC-11854"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0199"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7678,
+        7703
+      ],
+      "operations": [],
+      "rationale": "The lemma supplies one morphism of sites. The proof compares it with one possibly different chosen presentation of the same topos morphism. The existing singular noun matches that comparison.",
+      "adverse_evidence": "The two possible choices do not make the morphism supplied by the lemma plural; both inverse-image rules remain unchanged."
+    },
+    {
+      "id": "SITES-RECON-085",
+      "occurrences": [
+        "OCC-11839",
+        "OCC-00120"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0200"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7629,
+        7645,
+        7705,
+        7737
+      ],
+      "operations": [],
+      "rationale": "Localization of f at G has domain Sh(C)/f inverse G and codomain Sh(D)/G. Its inverse image takes H to G to f inverse H to f inverse G. Composing with the localization at s:F to f inverse G gives the displayed f_s. The earlier codomain replacement restores exactly this map.",
+      "adverse_evidence": "F is in Sh(C), whereas the denominator of a slice of Sh(D) must be an object there. The source square already uses G and confirms the repair."
+    },
+    {
+      "id": "SITES-RECON-086",
+      "occurrences": [
+        "OCC-11840",
+        "OCC-00121"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0201"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7788,
+        7801
+      ],
+      "operations": [],
+      "rationale": "The functorial identification is f inverse h_V sheafified = h_{u(V)} sheafified. An arbitrary c:U to u(V) gives the map s:h_U sheafified to that target, not an equality. For a concrete example take the poset 0<1 with the topology whose covers are isomorphisms, let f and u be identities, U=0, V=1, and c the unique arrow. All presheaves are sheaves; h_0(1) is empty and h_1(1) is a singleton, so the displayed equality fails. The induced natural map is postcomposition with c and is the exact map needed for the localization.",
+      "adverse_evidence": "The previous comparison lemma assumed U=u(V); this one only supplies c. The existing deletion removes that unjustified equality while retaining both sheaves and their connecting map."
+    },
+    {
+      "id": "SITES-RECON-087",
+      "occurrences": [
+        "OCC-11849",
+        "OCC-00122"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0202"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7853,
+        7871,
+        7918,
+        7941
+      ],
+      "operations": [],
+      "rationale": "The earlier object-to-element edit at 7930 names the equivalence class in the stalk. The additional request in OCC-00122 to replace same triple at 7936 is rejected: if f prime composed with phi=f and u(phi)(y)=y prime, then u(f)(y)=u(f prime)(y prime), so the displayed normalized triples with first component U and final component id_U are literally equal. The source explicitly displays that exact equality at 7937.",
+      "adverse_evidence": "The report correctly identifies the first terminology issue but incorrectly transfers it to the later canonical triple. No second operation is warranted; the bijection sends a class of (V,y,f) to u(f)(y), with inverse x to the class of (U,x,id_U)."
+    },
+    {
+      "id": "SITES-RECON-088",
+      "occurrences": [
+        "OCC-11850"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0203"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7864,
+        7871,
+        7926,
+        7941
+      ],
+      "operations": [],
+      "rationale": "The retained editorial repair calls the generating steps identifications. Each step comes from a neighbourhood morphism and a restriction, and the equivalence relation uses chains allowing both directions.",
+      "adverse_evidence": "The maps giving those steps need not be identity morphisms. The correction leaves the equivalence relation and the displayed identity of canonical triples intact."
+    },
+    {
+      "id": "SITES-RECON-089",
+      "occurrences": [
+        "OCC-00123",
+        "OCC-11851"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0204"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7944,
+        7966
+      ],
+      "operations": [],
+      "rationale": "The earlier comma join binds the universal quantifier For any functor to the assertion that u^p is right adjoint to the stalk functor on presheaves.",
+      "adverse_evidence": "The quantifier domain and the presheaf adjunction remain unchanged; no point conditions are added."
+    },
+    {
+      "id": "SITES-RECON-090",
+      "occurrences": [
+        "OCC-00124",
+        "OCC-11852"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0205"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8017,
+        8039
+      ],
+      "operations": [],
+      "rationale": "The definition now reads define p_*E=u^sE to be the sheaf described above. The existing insertion supplies the relationship between the name and its defining noun phrase.",
+      "adverse_evidence": "The equality of the two notations is retained, as is the adjunction displayed immediately afterwards."
+    },
+    {
+      "id": "SITES-RECON-091",
+      "occurrences": [
+        "OCC-11855"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0206"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8041,
+        8059
+      ],
+      "operations": [],
+      "rationale": "The subject is the singular pair of functors, so the retained correction uses defines. Its two components and direction of the topos morphism are unchanged.",
+      "adverse_evidence": "The fact that there are two functors inside the pair does not change the number of the grammatical subject."
+    },
+    {
+      "id": "SITES-RECON-092",
+      "occurrences": [
+        "OCC-11853"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0207"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8196,
+        8223,
+        8490,
+        8500
+      ],
+      "operations": [],
+      "rationale": "The removed coequalizer assertion has a concrete counterexample. Take the category with objects 0,1, exactly two arrows 0 to 1 and only identity endomorphisms, with the chaotic topology. All presheaves are sheaves. The functor u=Hom(0,-) gives a point with stalk F(0), which preserves finite limits objectwise; its pushforward is p_*E(W)=Map(Hom(0,W),E), so p_*E(1)=E squared. For the two maps from a singleton to {0,1}, their coequalizer is a singleton. Squaring the parallel maps instead identifies only (0,0) with (1,1) among four pairs, leaving three classes. Since colimits of presheaves are objectwise, the comparison at object 1 maps a three-element set to a singleton and is not an isomorphism. The two existing operations remove exactly the false claim and its asserted proof.",
+      "adverse_evidence": "Being a right adjoint guarantees limits, not these coequalizers. The counterexample satisfies the actual point assumptions; no different notion of point is substituted. The retained claims about limits and surjections are not removed."
+    },
+    {
+      "id": "SITES-RECON-093",
+      "occurrences": [
+        "OCC-11828",
+        "OCC-00125"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0208"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8267,
+        8285
+      ],
+      "operations": [],
+      "rationale": "The earlier operation removes the duplicated article from Then the the category. The two hypotheses and cofilteredness conclusion are retained.",
+      "adverse_evidence": "This is one duplicate-word occurrence, regardless of the two reports."
+    },
+    {
+      "id": "SITES-RECON-094",
+      "occurrences": [
+        "OCC-00126"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        8345,
+        8364
+      ],
+      "operations": [
+        {
+          "line": 8351,
+          "old_text": "$u(X) = \\{*\\}$ a singleton",
+          "replacement_text": "$u(X) = \\{*\\}$ is a singleton"
+        }
+      ],
+      "rationale": "The first condition names u(X)={*} and then describes it as a singleton. Inserting is completes that predicate while retaining the exact equality and all later conditions.",
+      "adverse_evidence": "The remark is a counterexample under weakened fibre-product assumptions; no condition is strengthened by this verb insertion."
+    },
+    {
+      "id": "SITES-RECON-095",
+      "occurrences": [
+        "OCC-11829"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0209"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8382,
+        8404
+      ],
+      "operations": [],
+      "rationale": "The retained plural products repairs the bare singular noun. For the finite-limit criterion here, the final open X maps to a singleton. For an intersection of finitely many opens, its value is a singleton exactly when each open contains x, giving the product formula; intersections over a common open give the fibre-product formula. A covering containing x has a member containing x, so its image is jointly surjective.",
+      "adverse_evidence": "The point criterion uses finite limits. This review does not infer preservation of arbitrary infinite products from the unqualified prose, or strengthen the theorem to that assertion."
+    },
+    {
+      "id": "SITES-RECON-096",
+      "occurrences": [
+        "OCC-11830",
+        "OCC-00127"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0210"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        7890,
+        7904,
+        8490,
+        8500
+      ],
+      "operations": [],
+      "rationale": "Exactness of evaluation F to F(U_0) is the third point condition. The first two conditions concern images of coverings and their base changes and have already been discussed. The retained numbering correction aligns the reason with its actual condition.",
+      "adverse_evidence": "The statement uses the original three conditions rather than renumbering or deleting one."
+    },
+    {
+      "id": "SITES-RECON-097",
+      "occurrences": [
+        "OCC-11831",
+        "OCC-00128"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0211"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        818,
+        826,
+        8490,
+        8500
+      ],
+      "operations": [],
+      "rationale": "The example assumes the chaotic topology, for which every presheaf is a sheaf and evaluation computes limits and colimits objectwise. The existing replacement of discrete by chaotic agrees with the chapter definition and explains the asserted exactness.",
+      "adverse_evidence": "The opposite topology would not justify this description of all sheaves. The correction preserves the given topology rather than silently changing its coverings."
+    },
+    {
+      "id": "SITES-RECON-098",
+      "occurrences": [
+        "OCC-11832"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0212"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8557,
+        8590
+      ],
+      "operations": [],
+      "rationale": "The earlier insertion of holds expands the first equality explanation into a finite clause. The two subsequent explanations are coordinated with it, and the three displayed equalities retain their original justifications.",
+      "adverse_evidence": "This is a retained editorial expansion. The current review does not recast every analogous abbreviated equality explanation as a new mathematical defect."
+    },
+    {
+      "id": "SITES-RECON-099",
+      "occurrences": [
+        "OCC-11833",
+        "OCC-00129"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0213"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8597,
+        8621
+      ],
+      "operations": [],
+      "rationale": "The argument of i_*E is the set v(u(U)); enclosing that whole argument requires a third closing parenthesis. The earlier repair restores that delimiter and preserves the Hom evaluation on the right.",
+      "adverse_evidence": "The missing parenthesis is a delimiter defect even if TeX can typeset the line without a compilation error."
+    },
+    {
+      "id": "SITES-RECON-100",
+      "occurrences": [
+        "OCC-11834",
+        "OCC-00130"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0214"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8616,
+        8627
+      ],
+      "operations": [],
+      "rationale": "The retained deletion makes the object of formula for be (v composed with u)^pE. Its value at U is exactly Map(v(u(U)),E), as shown by the preceding equation.",
+      "adverse_evidence": "The original relative phrase duplicated the transition and left formula for without its noun phrase. No functor or equality is removed."
+    },
+    {
+      "id": "SITES-RECON-101",
+      "occurrences": [
+        "OCC-11835",
+        "OCC-00131"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0215"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8557,
+        8574,
+        8597,
+        8636
+      ],
+      "operations": [],
+      "rationale": "The composite v composed with u defines p on C. Its pushforward g_*i_* has source Sets and target Sh(C), so its left adjoint is the stalk at p. The original q is on D, and its stalk applies to f inverse F. The existing subscript repair matches the final identity p inverse=q inverse composed with f inverse.",
+      "adverse_evidence": "The first producer description loosely reverses an adjoint direction; the source says g_*i_* is right adjoint to the stalk. The review retains that correct direction and repairs only its point label."
+    },
+    {
+      "id": "SITES-RECON-102",
+      "occurrences": [
+        "OCC-00132"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        8667,
+        8687
+      ],
+      "operations": [],
+      "rationale": "In the equation F_p=(j_U inverse F)_q, the phrase for any sheaf on C unambiguously quantifies the displayed F. Repeating F after sheaf would make the quantifier explicit but would not add a hypothesis or change its domain.",
+      "adverse_evidence": "There is one free sheaf variable in this assertion and no competing sheaf in the quantifier. The proposed repetition is optional exposition."
+    },
+    {
+      "id": "SITES-RECON-103",
+      "occurrences": [
+        "OCC-11836",
+        "OCC-00133"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0216"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        8749,
+        8763,
+        8774,
+        8811
+      ],
+      "operations": [],
+      "rationale": "The hypothesis is j_U composed with q=p. Contravariance of inverse images gives q inverse composed with j_U inverse=p inverse, the identity needed after applying q inverse to the sheaf pullback square. The existing insertion of the U subscript names precisely that localization.",
+      "adverse_evidence": "The preceding diagram already uses j_U inverse twice, and no separate unindexed j is introduced. The cartesian square and resulting fibre over x remain unchanged."
+    },
+    {
+      "id": "SITES-RECON-104",
+      "occurrences": [
+        "OCC-00134"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        9027,
+        9041
+      ],
+      "operations": [],
+      "rationale": "The maps in the definition are explicitly F_{p_i} to G_{p_i}. The earlier identification F_p=p inverse F describes the same set both as a stalk and as pullback to the point. Replacing fibres by stalks would align terminology with the preceding section without changing the conservative-family condition.",
+      "adverse_evidence": "There is no separately defined fibre over a section being confused with a stalk: the displayed maps fully identify the construction. Terminology preference alone does not establish an incorrect mathematical object."
+    },
+    {
+      "id": "SITES-RECON-105",
+      "occurrences": [
+        "OCC-11859",
+        "OCC-00135"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0220"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9137,
+        9149
+      ],
+      "operations": [],
+      "rationale": "The earlier capitalization starts the new hypothesis sentence with Let after a period. The family of points and its localization are unchanged.",
+      "adverse_evidence": "The two reports concern the same initial letter."
+    },
+    {
+      "id": "SITES-RECON-106",
+      "occurrences": [
+        "OCC-00136"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9165,
+        9188
+      ],
+      "operations": [
+        {
+          "line": 9178,
+          "old_text": "denote",
+          "replacement_text": "denote by"
+        }
+      ],
+      "rationale": "The naming construction denotes the composite point by q_j. Inserting by after denote supplies the required preposition.",
+      "adverse_evidence": "The composite remains the point on C obtained from p_j on C/U_i followed by localization; no index or arrow is changed."
+    },
+    {
+      "id": "SITES-RECON-107",
+      "occurrences": [
+        "OCC-00137"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        9206,
+        9232
+      ],
+      "operations": [],
+      "rationale": "The symbol f inverse in this proof is explicitly identified with the already available left adjoint u_s; the argument does not invoke its exactness before proving it. Indeed for any finite diagram D of sheaves on C, the canonical comparison u_s(lim D) to lim u_s(D) becomes at every q_i the map p_i inverse(lim D) to lim p_i inverse(D), using the proved identities (u_s F)_{q_i}=(u_p F)_{q_i}=F_{p_i}. This is an isomorphism because p_i is a point. Taking stalks at q_i commutes with finite limits, and their conservative family detects isomorphisms, so the original comparison is an isomorphism. Thus u_s is left exact. As a left adjoint it also preserves colimits; by the cited definition it gives the required morphism of sites. All uses of the stalk identities precede this conclusion and hold for the continuous functor itself.",
+      "adverse_evidence": "Introducing f only after this calculation could improve proof order, but no step assumes that it is already a morphism or uses the result being proved. The report identifies anticipatory notation, not a circular dependence or missing hypothesis."
+    },
+    {
+      "id": "SITES-RECON-108",
+      "occurrences": [
+        "OCC-11860"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0221"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9215,
+        9232
+      ],
+      "operations": [],
+      "rationale": "The existing addition of holds expands the equality explanation; its mathematical content is the named identity f inverse=u_s, followed by the sheafification and stalk comparison lemmas.",
+      "adverse_evidence": "This retained editorial expansion does not settle the separate circularity allegation; that allegation is reviewed with the exact finite-limit comparison in the preceding group."
+    },
+    {
+      "id": "SITES-RECON-109",
+      "occurrences": [
+        "OCC-00138"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9246,
+        9265
+      ],
+      "operations": [
+        {
+          "line": 9265,
+          "old_text": "do, see",
+          "replacement_text": "does, see"
+        }
+      ],
+      "rationale": "The grammatical subject each of the functors is singular, so its verb is does. The representable functors and filtered-colimit finite-limit argument are unchanged.",
+      "adverse_evidence": "The correction does not change all finite limits representable in C to a different class of limits."
+    },
+    {
+      "id": "SITES-RECON-110",
+      "occurrences": [
+        "OCC-00139"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9268,
+        9279
+      ],
+      "operations": [
+        {
+          "line": 9270,
+          "old_text": "the ordering on $J$ induced",
+          "replacement_text": "the ordering on $J$ is induced"
+        }
+      ],
+      "rationale": "The definition gives three simultaneous conditions, including the assertion that the ordering on J is induced from I. Inserting is completes that clause.",
+      "adverse_evidence": "The inclusion of directed index sets and equality of restricted objects and transition maps remain exact."
+    },
+    {
+      "id": "SITES-RECON-111",
+      "occurrences": [
+        "OCC-00140"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        9268,
+        9279,
+        9290,
+        9327
+      ],
+      "operations": [
+        {
+          "line": 9303,
+          "old_text": "f_{j j_0}",
+          "replacement_text": "g_{j j_0}"
+        }
+      ],
+      "rationale": "The supplied J-system has transition maps g_{j j_0}:V_j to V_{j_0}. With f prime:V_{j_0} to W, its pullback of W_k to V_j therefore uses f prime composed with g_{j j_0}. For j prime at least j, the transition g_{j prime j} induces the map between these pullbacks because g_{j j_0} composed with g_{j prime j}=g_{j prime j_0}; identities and compositions follow uniquely from the pullback property. This is the exact system used to take the subsequent colimits and construct the refinement.",
+      "adverse_evidence": "The maps f_{ii prime} belong to the refinement still being constructed. They have not been supplied on J at this stage, whereas g is the actual transition system in the hypotheses."
+    },
+    {
+      "id": "SITES-RECON-112",
+      "occurrences": [
+        "OCC-11861",
+        "OCC-00141"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0223"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9330,
+        9363
+      ],
+      "operations": [],
+      "rationale": "The pair under consideration includes the I-system with transitions f_{ii prime}; its restriction to J is the given g-system. The existing replacement restores f in the condition referring to that first member of the pair.",
+      "adverse_evidence": "No g_{ii prime} on all of I has been declared. The correction respects the equality g_{jj prime}=f_{jj prime} only on the original subsystem."
+    },
+    {
+      "id": "SITES-RECON-113",
+      "occurrences": [
+        "OCC-00142"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9344,
+        9363
+      ],
+      "operations": [
+        {
+          "line": 9355,
+          "old_text": "Denote $\\mathcal{S}$",
+          "replacement_text": "Denote by $\\mathcal{S}$"
+        }
+      ],
+      "rationale": "The naming imperative uses Denote by S the class of all pairs. Adding by repairs that construction without altering the ordered class or its elements.",
+      "adverse_evidence": "This editorial operation makes no new claim concerning the size of that class or the Zorn argument."
+    },
+    {
+      "id": "SITES-RECON-114",
+      "occurrences": [
+        "OCC-11862"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0222"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9315,
+        9327,
+        9403,
+        9424
+      ],
+      "operations": [],
+      "rationale": "Two sections have two images which are required to remain distinct. The existing unit repairs all three occurrences in the refinement proof and its application, including the reported occurrence at 9418.",
+      "adverse_evidence": "The two other edited loci were read directly as part of this review; the report is not used as evidence of reading them."
+    },
+    {
+      "id": "SITES-RECON-115",
+      "occurrences": [
+        "OCC-11863",
+        "OCC-00143"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0224"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9165,
+        9174,
+        9438,
+        9461
+      ],
+      "operations": [],
+      "rationale": "The hypothesis is a surjection in Sh(C); its sources are the sheafified representables h_{U_i} sharp. The existing markers make the same hypothesis as the earlier local-enough-points lemma. A section of a sheafified representable is locally represented by a map W_j to U_i, so the surjection supplies exactly the local maps used in the proof.",
+      "adverse_evidence": "No subcanonical assumption identifies each presheaf h_{U_i} with a sheaf. The correction retains the sheaf coproduct and its surjection to the terminal sheaf."
+    },
+    {
+      "id": "SITES-RECON-116",
+      "occurrences": [
+        "OCC-00144"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        9479,
+        9502
+      ],
+      "operations": [],
+      "rationale": "The phrase we get from (1) is a relative clause qualifying the map h_U sharp to the coproduct: it means the map that we get from (1). The main clause is we obtain a section. The two verbs therefore have different grammatical roles. Explicitly, compose the section of the covering map from (1) with the coproduct of the t_i. Its image in G is s because the t_i restrict s and the chosen map is right inverse to the covering map.",
+      "adverse_evidence": "Deleting we obtain would remove the main predicate. The claimed duplicate-verb defect results from overlooking an ordinary relative clause with omitted that."
+    },
+    {
+      "id": "SITES-RECON-117",
+      "occurrences": [
+        "OCC-11866"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0225"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9514,
+        9536
+      ],
+      "operations": [],
+      "rationale": "The existing insertion uses the locally defined term enough weakly contractible objects, matching the preceding definition and contrast. The two underlying assertions about the sites remain the inherited source statements.",
+      "adverse_evidence": "This intake check confirms the report and its exact earlier terminology repair; it does not claim a fresh proof of the separate pro-etale existence theorem."
+    },
+    {
+      "id": "SITES-RECON-118",
+      "occurrences": [
+        "OCC-00145"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9698,
+        9711
+      ],
+      "operations": [
+        {
+          "line": 9699,
+          "old_text": "be surjective map",
+          "replacement_text": "be a surjective map"
+        }
+      ],
+      "rationale": "The clause introduces one surjective map of sheaves and needs the article a. The specified arrow and subsequent pullback square are unchanged.",
+      "adverse_evidence": "No surjectivity assertion is added; the map was already assumed surjective."
+    },
+    {
+      "id": "SITES-RECON-119",
+      "occurrences": [
+        "OCC-11867",
+        "OCC-00146"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0226"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9836,
+        9850
+      ],
+      "operations": [],
+      "rationale": "One arrow alpha:F to G is introduced. The existing replacement uses a map of sheaves, leaving the subsequent injectivity argument unchanged.",
+      "adverse_evidence": "The two endpoint sheaves do not make alpha a plural collection of arrows."
+    },
+    {
+      "id": "SITES-RECON-120",
+      "occurrences": [
+        "OCC-11868"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0227"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9859,
+        9874
+      ],
+      "operations": [],
+      "rationale": "The existing phrase with coverings the countable families specifies the topology separately from the categories of countable G-sets and H-sets.",
+      "adverse_evidence": "The qualifiers countable and jointly surjective are both retained, and the categories and group homomorphism are unchanged."
+    },
+    {
+      "id": "SITES-RECON-121",
+      "occurrences": [
+        "OCC-11869",
+        "OCC-00147"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0228"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9932,
+        9950
+      ],
+      "operations": [],
+      "rationale": "The earlier insertion completes applied to the empty covering. It preserves the base-change axiom used for the final assertion.",
+      "adverse_evidence": "Neither the empty family nor the object U changes."
+    },
+    {
+      "id": "SITES-RECON-122",
+      "occurrences": [
+        "OCC-00148"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9967,
+        9977
+      ],
+      "operations": [
+        {
+          "line": 9974,
+          "old_text": "$i_*$ while",
+          "replacement_text": "$i_*$, while"
+        }
+      ],
+      "rationale": "The concessive phrase while not exact on sheaves of sets interrupts the subject i_* and the main predicate is exact. Its existing closing comma needs the opening comma after i_*.",
+      "adverse_evidence": "The statement continues to distinguish sheaves of sets from sheaves of abelian groups and retains the same cited example."
+    },
+    {
+      "id": "SITES-RECON-123",
+      "occurrences": [
+        "OCC-11870",
+        "OCC-00149"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0229"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        9995,
+        10022
+      ],
+      "operations": [],
+      "rationale": "Every retained family member has target u(U). The existing insertion names that target after covering of. Removing members which admit empty coverings leaves a covering of the same target by transitivity of covers.",
+      "adverse_evidence": "The operation does not replace U by its image elsewhere or change which members are removed; it fills the omitted object exactly."
+    },
+    {
+      "id": "SITES-RECON-124",
+      "occurrences": [
+        "OCC-11871",
+        "OCC-00150"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0230"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10032,
+        10045
+      ],
+      "operations": [],
+      "rationale": "The displayed functor from the finite connected index category is introduced as a diagram; be is the required verb. The earlier replacement corrects the by/be typo.",
+      "adverse_evidence": "The diagram and both finiteness and connectedness assumptions remain unchanged."
+    },
+    {
+      "id": "SITES-RECON-125",
+      "occurrences": [
+        "OCC-00151",
+        "OCC-11872"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0231"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10039,
+        10061
+      ],
+      "operations": [],
+      "rationale": "The calculation explicitly defines Psh as its marker for the presheaf colimit. The existing change restores that same marker in the third equality. It retains the objectwise colimit, application of u^p and sheafification.",
+      "adverse_evidence": "No second presheaf category or distinct colimit operation was intended. This is consistency with the local notation, not a claim that case alone makes a different mathematical category."
+    },
+    {
+      "id": "SITES-RECON-126",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        9215,
+        9217,
+        10039,
+        10061
+      ],
+      "operations": [
+        {
+          "line": 9216,
+          "old_text": "Denote $p_i$",
+          "replacement_text": "Denote by $p_i$"
+        },
+        {
+          "line": 10046,
+          "old_text": "Denote $\\colim",
+          "replacement_text": "Denote by $\\colim"
+        }
+      ],
+      "rationale": "Two additional naming clauses read while adjudicating the cited proof contexts use Denote [symbol] the [object] without by: the stalk notation at 9216 and presheaf-colimit notation at 10046. Insert the same preposition used in the other verified naming repairs. These two occurrences were found directly in primary-source reading and are not counted as received reports.",
+      "adverse_evidence": "The operations leave all symbols, adjunctions, category labels and colimit formulas unchanged. The independent-discovery status must remain visible in the final intake accounting.",
+      "discovery": "Independent primary-source naming-clause corrections at authority lines 9216 and 10046, found while reviewing the surrounding stalk and directed-colimit proofs; no received occurrence IDs are assigned."
+    },
+    {
+      "id": "SITES-RECON-127",
+      "occurrences": [
+        "OCC-11865",
+        "OCC-00152"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        10183,
+        10213
+      ],
+      "operations": [],
+      "rationale": "The two family displays use j and i as bound variables for the same unnamed index set. Under its identity reindexing the family of arrows to V is identical, as is its union with the single arrow U times_X V to V. The coproduct of representables is canonically the same coproduct with the same component maps; the subsequent two-level refinement uses i and ij consistently.",
+      "adverse_evidence": "This is a consistent dummy-index rename between displays, unlike the earlier expression whose subscript bound i in I while its members contained j in J. Using i in the first display too would be optional notation editing, not a different covering condition."
+    },
+    {
+      "id": "SITES-RECON-128",
+      "occurrences": [
+        "OCC-11890",
+        "OCC-00153"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0232"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10274,
+        10293
+      ],
+      "operations": [],
+      "rationale": "The two parallel arrows a,b are morphisms of E. The earlier plural agrees with the numeral and retains the same coequalizer argument.",
+      "adverse_evidence": "No additional arrow or change of category is introduced."
+    },
+    {
+      "id": "SITES-RECON-129",
+      "occurrences": [
+        "OCC-11891",
+        "OCC-00154"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0233"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10317,
+        10329
+      ],
+      "operations": [],
+      "rationale": "The two adjoint functors are the plural antecedent, so the existing operation uses agree. Both pushforward and pullback retain their stated compatibility with underlying sheaves of sets.",
+      "adverse_evidence": "The operation changes verb agreement only."
+    },
+    {
+      "id": "SITES-RECON-130",
+      "occurrences": [
+        "OCC-11892"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0234"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10321,
+        10329
+      ],
+      "operations": [],
+      "rationale": "The subject is the whole activity of extending a sheaf from a basis to all opens of a space. The existing deletion removes the comma separating that subject from works.",
+      "adverse_evidence": "No parenthetical phrase spans this comma; the extension assertion and its scope remain the same."
+    },
+    {
+      "id": "SITES-RECON-131",
+      "occurrences": [
+        "OCC-11893",
+        "OCC-00155"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0235"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10373,
+        10395
+      ],
+      "operations": [],
+      "rationale": "The existing correction changes trying the define to trying to define. The explanation about possibly nonfiltered Kan-extension colimits is retained.",
+      "adverse_evidence": "The source continues to state that the given axioms alone may be insufficient; the copyedit adds no existence claim."
+    },
+    {
+      "id": "SITES-RECON-132",
+      "occurrences": [
+        "OCC-11873",
+        "OCC-11874",
+        "OCC-00156"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0236",
+        "MC-STK-ERR-0237"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10451,
+        10470
+      ],
+      "operations": [],
+      "rationale": "The combined report and two separate reports cover the same pair of earlier edits in the French phrase: de introduces structure, and the adjective finies agrees with the plural limites. Both exact prior operations are retained.",
+      "adverse_evidence": "This review confirms the two local language repairs. It does not claim to have newly collated the quotation against an external SGA4 edition, and the combined report is counted once rather than once per operation."
+    },
+    {
+      "id": "SITES-RECON-133",
+      "occurrences": [
+        "OCC-11894"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0238"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10472,
+        10484
+      ],
+      "operations": [],
+      "rationale": "The displayed arrow already specifies source Sh(D) and target Sh(C). The earlier deletion of from supplies a complete naming sentence without mixing a prose from construction with a standalone arrow.",
+      "adverse_evidence": "The morphism direction and adjoint pair are unchanged."
+    },
+    {
+      "id": "SITES-RECON-134",
+      "occurrences": [
+        "OCC-11879",
+        "OCC-00157"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0239"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10528,
+        10546
+      ],
+      "operations": [],
+      "rationale": "The existing unit gives the monoid object as (F,m,1), with m:F times F to F and 1:* to F, and plural axioms. The equations are m composed with (m times id)=m composed with (id times m), and the two unit composites equal id under the product-with-terminal identifications. Finite-product-preserving functors carry these maps and equations to the corresponding monoid data; this is the method of the surrounding proof.",
+      "adverse_evidence": "A multiplication equipped only with associativity is a semigroup. Although an existing two-sided unit is unique, stating the unit as structure explicitly ensures the functors and compatible morphisms in this construction preserve it. No chosen extra unit beyond that structure is introduced."
+    },
+    {
+      "id": "SITES-RECON-135",
+      "occurrences": [
+        "OCC-00158",
+        "OCC-11876"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0240"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10548,
+        10560
+      ],
+      "operations": [],
+      "rationale": "The existing article A agrees with the consonant sound at the start of sheaf. The ring, module data and displayed identities remain unchanged.",
+      "adverse_evidence": "The two records concern the same article."
+    },
+    {
+      "id": "SITES-RECON-136",
+      "occurrences": [
+        "OCC-11875",
+        "OCC-00159"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        10548,
+        10560
+      ],
+      "operations": [
+        {
+          "line": 10558,
+          "old_text": "+ \\circ \\lambda_r \\times \\lambda_{r'} \\circ",
+          "replacement_text": "+ \\circ (\\lambda_r \\times \\lambda_{r'}) \\circ"
+        }
+      ],
+      "rationale": "Write Delta=(id,id):F to F times F. The two endomorphisms lambda_r and lambda_r prime induce their product lambda_r times lambda_r prime:F times F to F times F, and addition maps that product object to F. Hence the intended identity is lambda_{r+r prime}=addition composed with (lambda_r times lambda_r prime) composed with Delta; at each object it sends x to lambda_r(x)+lambda_r prime(x). Parenthesizing the product states this exact composition unambiguously.",
+      "adverse_evidence": "The types already identify the intended interpretation. This is classified as clarification of grouping, not a new module law or a proof that the original intended formula was false."
+    },
+    {
+      "id": "SITES-RECON-137",
+      "occurrences": [
+        "OCC-11895",
+        "OCC-00160"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0241"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10599,
+        10617
+      ],
+      "operations": [],
+      "rationale": "The retained correction uses are for the plural global sections. The defining Hom set from the terminal presheaf and its extension to sheaves are unchanged.",
+      "adverse_evidence": "The reports also offer the alternative The set of global sections is. The existing repair already resolves the agreement, so another edit is unnecessary."
+    },
+    {
+      "id": "SITES-RECON-138",
+      "occurrences": [
+        "OCC-11878",
+        "OCC-00161"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0242"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10620,
+        10634
+      ],
+      "operations": [],
+      "rationale": "The symbols a,b:V to U are parallel morphisms of C and induce the two arrows h_V sharp to h_U sharp. Applying Hom into F to their coequalizer gives the equalizer of a star,b star:F(U) to F(V), as stated. The existing noun correction restores their exact categorical role.",
+      "adverse_evidence": "V and U are the objects. One producer loosely calls the displayed diagram an equalizer, but it is explicitly a coequalizer before applying the contravariant Hom functor."
+    },
+    {
+      "id": "SITES-RECON-139",
+      "occurrences": [
+        "OCC-11877",
+        "OCC-00162"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0243"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        10724,
+        10774
+      ],
+      "operations": [],
+      "rationale": "The diagram and all displayed functors are morphisms and inverse/direct images of topoi. The existing deletion of ringed agrees with these data and with the preceding vertical-composition remark. The displayed composite preserves the order (h prime inverse) composed with h inverse and (g prime inverse) composed with g inverse.",
+      "adverse_evidence": "No structure sheaf or ring map participates in this statement. The correction does not alter any base-change arrow or its horizontal-composition order."
+    },
+    {
+      "id": "SITES-RECON-140",
+      "occurrences": [
+        "OCC-00163"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        11113,
+        11128
+      ],
+      "operations": [
+        {
+          "line": 11117,
+          "old_text": "denote",
+          "replacement_text": "denote by"
+        }
+      ],
+      "rationale": "The naming clause denotes the set of sieves by J(U). The insertion completes denote by J(U) the set while leaving its universal base-change condition unchanged.",
+      "adverse_evidence": "The set J(U), every morphism V to U and every presheaf F_i keep their original quantifiers."
+    },
+    {
+      "id": "SITES-RECON-141",
+      "occurrences": [
+        "OCC-11884",
+        "OCC-00164"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0244"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11243,
+        11281
+      ],
+      "operations": [],
+      "rationale": "The hypothesis supplies a covering f_i whose generated sieve is contained in S. That sieve consists at T of all arrows T to U factoring through some f_i, equivalently the image of the coproduct of representables. The existing replacement names exactly this sieve and removes the stray first S.",
+      "adverse_evidence": "The change does not equate S to the generated sieve; it retains only the required containment."
+    },
+    {
+      "id": "SITES-RECON-142",
+      "occurrences": [
+        "OCC-11885"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0245"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11268,
+        11281
+      ],
+      "operations": [],
+      "rationale": "Containment in a subpresheaf refers to the image of the map from each representable. The earlier unit makes this explicit both over U_i and after composition to U. A factorization through the pullback sieve S prime times_U U_i composes to a factorization through S prime; this is exactly the claimed implication.",
+      "adverse_evidence": "Both local occurrences were read. The source arrows themselves remain the same, and their image containments supply the composite covering argument."
+    },
+    {
+      "id": "SITES-RECON-143",
+      "occurrences": [
+        "OCC-11886",
+        "OCC-00165"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0246"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11283,
+        11299
+      ],
+      "operations": [],
+      "rationale": "The retained spelling Instead is the adverb introducing the equivalent task of constructing a map from the covering sieve.",
+      "adverse_evidence": "Neither the section s nor the map phi changes."
+    },
+    {
+      "id": "SITES-RECON-144",
+      "occurrences": [
+        "OCC-11887",
+        "OCC-00166"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0247"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11292,
+        11309
+      ],
+      "operations": [],
+      "rationale": "The sieve S is a presheaf on C, so its evaluation S(T) uses an object T of C. The earlier replacement restores that ambient category. The immediately stated arrow T to U is then a morphism in C.",
+      "adverse_evidence": "The existing wording some object T in C is conventional shorthand for T in Ob(C). A second replacement adding Ob is unnecessary."
+    },
+    {
+      "id": "SITES-RECON-145",
+      "occurrences": [
+        "OCC-11888",
+        "OCC-00167"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0248"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11292,
+        11309
+      ],
+      "operations": [],
+      "rationale": "The second chosen factorization has alpha prime_{i prime}:T to U_{i prime}, so its next map is f_{i prime}:U_{i prime} to U. The earlier subscript correction makes both factorizations have the same composite alpha. Their pair defines T to U_i times_U U_{i prime}; pulling back the matching condition along this map proves alpha_i star(s_i)=alpha prime_{i prime} star(s_{i prime}).",
+      "adverse_evidence": "The original f_i cannot compose with this second arrow without an absent identification of covering members. The repair preserves all section labels and the proof of independence of choice."
+    },
+    {
+      "id": "SITES-RECON-146",
+      "occurrences": [
+        "OCC-11897",
+        "OCC-00168"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0249"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11224,
+        11230,
+        11343,
+        11356
+      ],
+      "operations": [],
+      "rationale": "Each Cov_i(C) is a set of covering families defining a site structure. The existing insertion sets of identifies these collections correctly before comparing their generated topologies.",
+      "adverse_evidence": "An individual covering family does not by itself supply the whole site structure under discussion. The underlying category and both collections remain unchanged."
+    },
+    {
+      "id": "SITES-RECON-147",
+      "occurrences": [
+        "OCC-11889",
+        "OCC-00169"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0250"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11358,
+        11367
+      ],
+      "operations": [],
+      "rationale": "The enlargement adjoins tautologically equivalent families to Cov(C), not new objects or arrows to C. Such families generate the same sieves, hence the same covering sieves by the definition of the associated topology. The earlier replacement names precisely the collection being enlarged.",
+      "adverse_evidence": "This retains the original category and changes only which of its families are designated coverings."
+    },
+    {
+      "id": "SITES-RECON-148",
+      "occurrences": [
+        "OCC-00170"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        10902,
+        10926,
+        11014,
+        11042,
+        11451,
+        11484,
+        11566,
+        11583
+      ],
+      "operations": [
+        {
+          "line": 11484,
+          "old_text": "\\ref{lemma-sieves-set}",
+          "replacement_text": "\\ref{lemma-topology-basic}"
+        },
+        {
+          "line": 11574,
+          "old_text": "\\ref{lemma-sieves-set}",
+          "replacement_text": "\\ref{lemma-topology-basic}"
+        }
+      ],
+      "rationale": "Lemma sieves-set proves that an intersection is a sieve, without asserting that it is covering. Lemma topology-basic (1) proves finite intersections of covering sieves are covering: if alpha:V to U is in S(V), pulling back S intersect S prime along alpha gives the pullback of S prime, which covers V; transitivity then makes S intersect S prime cover U. This is exactly the fact needed both for the directed colimit at 11484 and the common representative sieve at 11574. Replace the two wrong references by this proved lemma; the latter matching occurrence was found directly during the source review.",
+      "adverse_evidence": "The earlier reference to sieves-set at 11459 concerns partial ordering and is correct, so it is retained. The operation changes exactly two reference targets and must be an explicit exception to reference-key invariance in the replay checks.",
+      "discovery": "The second covering-sieve reference at authority line 11574 was found in primary-source reading of the same argument; received OCC-00170 points to the first at 11484. The correct partial-order reference at 11459 remains unchanged."
+    },
+    {
+      "id": "SITES-RECON-149",
+      "occurrences": [
+        "OCC-11880",
+        "OCC-00171"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0251"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11486,
+        11507
+      ],
+      "operations": [],
+      "rationale": "The earlier insertion invokes the reference command for the functorial-colimit lemma instead of typesetting its label key. The order-preserving pullback on covering sieves and the restriction natural transformation supply the data named by that reference.",
+      "adverse_evidence": "The label key is retained exactly; this is restoration of its cross-reference syntax."
+    },
+    {
+      "id": "SITES-RECON-150",
+      "occurrences": [
+        "OCC-00172"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        11509,
+        11517
+      ],
+      "operations": [],
+      "rationale": "The short phrase In the situation above serves as the preamble to a numbered lemma whose items state complete assertions. Writing the following hold or changing the period to a colon would expand that preamble without changing its hypotheses or conclusions.",
+      "adverse_evidence": "The enumerated predicates are present immediately below it; this is not a lemma with an omitted mathematical assertion."
+    },
+    {
+      "id": "SITES-RECON-151",
+      "occurrences": [
+        "OCC-11881"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0252"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11545,
+        11599
+      ],
+      "operations": [],
+      "rationale": "The chosen representatives are maps phi_i:S to F. For an arrow f:T to U in S double prime, choose f=alpha composed with g with g in the sieve S_{V,alpha}. The local equality gives g star(s_{1,V,alpha})=g star(s_{2,V,alpha}) in F(T), which by naturality equals phi_1(f)=phi_2(f). Thus the restrictions agree as maps S double prime to F; their classes in the directed colimit are equal. The earlier codomain replacement records this actual equality of representatives.",
+      "adverse_evidence": "Equality only after a second map into L F would not by itself establish equality in the colimit from these F-valued representatives. The source construction proves the stronger, correctly typed equality retained by the repair."
+    },
+    {
+      "id": "SITES-RECON-152",
+      "occurrences": [
+        "OCC-11882",
+        "OCC-00173"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0253"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11602,
+        11622
+      ],
+      "operations": [],
+      "rationale": "The domain S is a sieve viewed as a presheaf and L F is a presheaf. The existing Hom subscript places phi in PSh(C), the category in which its evaluations and naturality are used to construct a section.",
+      "adverse_evidence": "These are not objects of the base category C in general. No representability assumption is available to reinterpret the old subscript."
+    },
+    {
+      "id": "SITES-RECON-153",
+      "occurrences": [
+        "OCC-11883",
+        "OCC-00174"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0254"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        11618,
+        11641
+      ],
+      "operations": [],
+      "rationale": "The existing edit inserts an interword space before the formula naming the second choice V prime, alpha prime,g prime, and removes the ineffective leading math-mode space.",
+      "adverse_evidence": "The comparison of the two choices and the ensuing equality are unchanged."
+    },
+    {
+      "id": "SITES-RECON-154",
+      "occurrences": [
+        "OCC-00175"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        11624,
+        11641
+      ],
+      "operations": [
+        {
+          "line": 11636,
+          "old_text": "Denote the common restriction $\\psi$.",
+          "replacement_text": "Denote the common restriction by $\\psi$."
+        }
+      ],
+      "rationale": "The naming clause denotes the common restriction by psi. Inserting by relates the named map to its symbol in the same way as the other naming repairs.",
+      "adverse_evidence": "The common restriction and evaluation at id_T remain the same; the operation changes no covering sieve or representative."
+    },
+    {
+      "id": "SITES-RECON-155",
+      "occurrences": [
+        "OCC-00176"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        11734,
+        11765
+      ],
+      "operations": [
+        {
+          "line": 11763,
+          "old_text": "Assumption and notation as in",
+          "replacement_text": "Assumptions and notation are as in"
+        }
+      ],
+      "rationale": "The lemma adopts the category and both topologies from the preceding theorem. Assumptions and notation are as in states that inherited setup as a complete clause and uses the plural for the collected hypotheses.",
+      "adverse_evidence": "The reference and the inclusion criterion for J,J prime are untouched; no new topological condition is introduced."
+    },
+    {
+      "id": "SITES-RECON-156",
+      "occurrences": [
+        "OCC-11896"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        11819,
+        11842
+      ],
+      "operations": [],
+      "rationale": "This definition fixes one topology J on C immediately before defining its points. Consequently Sh(C) in the second condition denotes sheaves for that fixed topology. The preceding discussion with two topologies was a different theorem with an explicit J prime; no second topology is in scope in this definition.",
+      "adverse_evidence": "Writing Sh(C,J) would repeat the fixed parameter and may aid reading, but the report itself allows a convention making J implicit. The local quantifier supplies that convention unambiguously."
+    },
+    {
+      "id": "SITES-RECON-157",
+      "occurrences": [
+        "OCC-00177"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        11819,
+        11842
+      ],
+      "operations": [
+        {
+          "line": 11840,
+          "old_text": "\\mathcal{F} \\to \\mathcal{F}_p",
+          "replacement_text": "\\mathcal{F} \\mapsto \\mathcal{F}_p"
+        }
+      ],
+      "rationale": "The second arrow describes the image of an object F under the stalk functor, so mapsto makes that assignment explicit. It matches the object-assignment arrow in the presheaf stalk display immediately above.",
+      "adverse_evidence": "The functor and its exactness condition remain unchanged. The old to arrow is understandable as informal assignment notation; this is classified as notation clarification rather than a new map between F and its stalk."
+    }
+  ],
+  "next_source_start_line": null,
+  "prior_admitted_units": 107,
+  "reading_note": "One display of 1627-2677 was truncated because a producer listed distant loci in one span envelope. Required contexts were subsequently read in bounded source-only ranges 1930-2055 and 2137-2237; the displayed initial and final portions cover the remaining report loci. No claim is made to have read the hidden unrelated middle. Future long-span reports can use reports-only followed by explicit primary-source ranges."
+}
