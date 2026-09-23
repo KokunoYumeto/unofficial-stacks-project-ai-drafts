@@ -1,11 +1,11 @@
 {
   "schema": "stacks-upstream-corrections-only/v1",
   "official_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
-  "registry_sha256": "BCCED45ABB011DC53D44C47029DEA5ACDC7FAC9AF7AB7DC37B8D41D13F87BF0F",
-  "admitted_rounds": 52,
-  "historical_registry_ids": 1423,
-  "included_effective_textual_units": 1421,
-  "included_operations": 1723,
+  "registry_sha256": "D88D13591B14BD925EE6C36B1292C6EF7DCD931D3C5162659F2200E91B92D586",
+  "admitted_rounds": 53,
+  "historical_registry_ids": 1477,
+  "included_effective_textual_units": 1475,
+  "included_operations": 1787,
   "chapters": [
     {
       "source": "algebra.tex",
@@ -943,6 +943,21 @@
       "postimage_sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
     },
     {
+      "source": "introduction.tex",
+      "file": "chapters/introduction.patch",
+      "units": 1,
+      "operations": 1,
+      "unit_ids": [
+        "MC-STK-ERR-1688"
+      ],
+      "bytes": 600,
+      "sha256": "2C3BCA31FDF450DF3BF3CC9F4879F0A2846BFAB2C43B3829B55398E0F2C831DC",
+      "preimage_bytes": 6560,
+      "preimage_sha256": "43ABD6493BF48325878D6573966E97025770D4B4E12DB1DDA31DA7FD181D4ACF",
+      "postimage_bytes": 6567,
+      "postimage_sha256": "9C6615B83EBAFF4CF41AB6DDE49445F64871764AD2195D3EF7720D574216E3D7"
+    },
+    {
       "source": "modules.tex",
       "file": "chapters/modules.patch",
       "units": 14,
@@ -1842,8 +1857,8 @@
     {
       "source": "topology.tex",
       "file": "chapters/topology.patch",
-      "units": 37,
-      "operations": 41,
+      "units": 90,
+      "operations": 104,
       "unit_ids": [
         "MC-STK-ERR-0033",
         "MC-STK-ERR-0034",
@@ -1881,14 +1896,67 @@
         "MC-STK-ERR-0073",
         "MC-STK-ERR-0074",
         "MC-STK-ERR-0075",
-        "MC-STK-ERR-0076"
+        "MC-STK-ERR-0076",
+        "MC-STK-ERR-1689",
+        "MC-STK-ERR-1690",
+        "MC-STK-ERR-1691",
+        "MC-STK-ERR-1692",
+        "MC-STK-ERR-1693",
+        "MC-STK-ERR-1694",
+        "MC-STK-ERR-1695",
+        "MC-STK-ERR-1696",
+        "MC-STK-ERR-1697",
+        "MC-STK-ERR-1698",
+        "MC-STK-ERR-1699",
+        "MC-STK-ERR-1700",
+        "MC-STK-ERR-1701",
+        "MC-STK-ERR-1702",
+        "MC-STK-ERR-1703",
+        "MC-STK-ERR-1704",
+        "MC-STK-ERR-1705",
+        "MC-STK-ERR-1706",
+        "MC-STK-ERR-1707",
+        "MC-STK-ERR-1708",
+        "MC-STK-ERR-1709",
+        "MC-STK-ERR-1710",
+        "MC-STK-ERR-1711",
+        "MC-STK-ERR-1712",
+        "MC-STK-ERR-1713",
+        "MC-STK-ERR-1714",
+        "MC-STK-ERR-1715",
+        "MC-STK-ERR-1716",
+        "MC-STK-ERR-1717",
+        "MC-STK-ERR-1718",
+        "MC-STK-ERR-1719",
+        "MC-STK-ERR-1720",
+        "MC-STK-ERR-1721",
+        "MC-STK-ERR-1722",
+        "MC-STK-ERR-1723",
+        "MC-STK-ERR-1724",
+        "MC-STK-ERR-1725",
+        "MC-STK-ERR-1726",
+        "MC-STK-ERR-1727",
+        "MC-STK-ERR-1728",
+        "MC-STK-ERR-1729",
+        "MC-STK-ERR-1730",
+        "MC-STK-ERR-1731",
+        "MC-STK-ERR-1732",
+        "MC-STK-ERR-1733",
+        "MC-STK-ERR-1734",
+        "MC-STK-ERR-1735",
+        "MC-STK-ERR-1736",
+        "MC-STK-ERR-1737",
+        "MC-STK-ERR-1738",
+        "MC-STK-ERR-1739",
+        "MC-STK-ERR-1740",
+        "MC-STK-ERR-1741"
       ],
-      "bytes": 19473,
-      "sha256": "5795511EDEED6628509356FCF9B543DB3755E3746BBF82BC25FB1D0213261AC0",
+      "bytes": 41940,
+      "sha256": "427AFB3D39A6B0F074A2F4E6B445F73C15A823A7BF292E58BC6D7FBDBE8470FD",
       "preimage_bytes": 237731,
       "preimage_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
-      "postimage_bytes": 238068,
-      "postimage_sha256": "4BF87195A7FE175E71A13C6883DCFFA00D22FA1E8D33B69B8EFE852E5730AD54"
+      "postimage_bytes": 238284,
+      "postimage_sha256": "219BEF385C38EDBBE1BBF20E0D99EE8F36FF46774F28F217242A70AFCF2F7955"
     }
   ],
   "dispositions": [
@@ -13574,12 +13642,454 @@
       "operation_ids": [
         "MC-STK-ERR-1687-OP1"
       ]
+    },
+    {
+      "id": "MC-STK-ERR-1688",
+      "status": "included",
+      "chapter": "introduction.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1688-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1689",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1689-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1690",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1690-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1691",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1691-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1692",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1692-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1693",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1693-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1694",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1694-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1695",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1695-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1696",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1696-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1697",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1697-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1698",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1698-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1699",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1699-OP1",
+        "MC-STK-ERR-1699-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1700",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1700-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1701",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1701-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1702",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1702-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1703",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1703-OP1",
+        "MC-STK-ERR-1703-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1704",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1704-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1705",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1705-OP1",
+        "MC-STK-ERR-1705-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1706",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1706-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1707",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1707-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1708",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1708-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1709",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1709-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1710",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1710-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1711",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1711-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1712",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1712-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1713",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1713-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1714",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1714-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1715",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1715-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1716",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1716-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1717",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1717-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1718",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1718-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1719",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1719-OP1",
+        "MC-STK-ERR-1719-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1720",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1720-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1721",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1721-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1722",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1722-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1723",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1723-OP1",
+        "MC-STK-ERR-1723-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1724",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1724-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1725",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1725-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1726",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1726-OP1",
+        "MC-STK-ERR-1726-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1727",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1727-OP1",
+        "MC-STK-ERR-1727-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1728",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1728-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1729",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1729-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1730",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1730-OP1",
+        "MC-STK-ERR-1730-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1731",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1731-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1732",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1732-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1733",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1733-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1734",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1734-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1735",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1735-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1736",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1736-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1737",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1737-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1738",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1738-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1739",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1739-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1740",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1740-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-1741",
+      "status": "included",
+      "chapter": "topology.tex",
+      "operation_ids": [
+        "MC-STK-ERR-1741-OP1",
+        "MC-STK-ERR-1741-OP2",
+        "MC-STK-ERR-1741-OP3"
+      ]
     }
   ],
   "combined": {
     "file": "ALL-TEXTUAL-CORRECTIONS.patch",
-    "bytes": 626528,
-    "sha256": "3DAACF0BFEFEC2B22275728077AAB7B24CD21206D0D5478F9696798146649979"
+    "bytes": 649595,
+    "sha256": "5D5F36BEA1F175374D9AB8AB730B7E39849D162D946B80A89BC276A18B9E6E7A"
   },
   "replay": {
     "independent_chapter_patches": "PASS",
@@ -13959,6 +14469,11 @@
       "sha256": "9436F60D78296691613806E84E3E73D730FA0865C9BDBA8EF6BC1B237631739E"
     },
     {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json",
+      "bytes": 19498,
+      "sha256": "81AFF5CD86F3483165D1C654AB0EC666E75638718CA3ECEB73942E4EB796494B"
+    },
+    {
       "path": "ai-integrated/candidates/commons/stacks/errata/r6/candidate.manifest.json",
       "bytes": 10166,
       "sha256": "0573E0230065780BE1AA7E73114735428C290A45E1E1CD14401E7358764DE050"
@@ -13995,8 +14510,8 @@
     },
     {
       "path": "ai-integrated/registry/overlays.json",
-      "bytes": 83852,
-      "sha256": "BCCED45ABB011DC53D44C47029DEA5ACDC7FAC9AF7AB7DC37B8D41D13F87BF0F"
+      "bytes": 85992,
+      "sha256": "D88D13591B14BD925EE6C36B1292C6EF7DCD931D3C5162659F2200E91B92D586"
     },
     {
       "path": "candidates/commons/stacks/errata/r10/authority/source/algebra.tex",
@@ -15742,6 +16257,51 @@
       "path": "candidates/commons/stacks/errata/r52/stable-units.json",
       "bytes": 59528,
       "sha256": "D174F7B31AD8644E9822D95CE7887060FAC0D95622BA7ECDD4F8728DFF4DD48B"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/authority/introduction.tex",
+      "bytes": 6560,
+      "sha256": "43ABD6493BF48325878D6573966E97025770D4B4E12DB1DDA31DA7FD181D4ACF"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/authority/topology.tex",
+      "bytes": 237731,
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/decisions.jsonl",
+      "bytes": 22596,
+      "sha256": "8CB867AFA37B92A039A6A7C40E5688C7B56CF71BD7C7820B43837E14339D31E5"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/operation-spec.json",
+      "bytes": 52266,
+      "sha256": "332B8B3D9790563B67E6206A8DE27CE6C8F5F57554AFB86566417433A5B12724"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/payload/introduction.tex",
+      "bytes": 6567,
+      "sha256": "9C6615B83EBAFF4CF41AB6DDE49445F64871764AD2195D3EF7720D574216E3D7"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/payload/topology.tex",
+      "bytes": 237947,
+      "sha256": "69ACCE1AD18B507E4295944ADD5637C550B258D9300A268A3096628792C62FE4"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/replay/independent-review.json",
+      "bytes": 1237,
+      "sha256": "D18F663B7B03C0DD3832A1DD4742CB229647A7FB00C79414A5C46A1C5FB72D69"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/source-map.jsonl",
+      "bytes": 81418,
+      "sha256": "37A4ABD2985474E694BE26F389CCA88E8117557FE0113221B6B4676995BA3D35"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r53/stable-units.json",
+      "bytes": 32359,
+      "sha256": "6C3103BC8040CFA4FB6C96DD94741D6732BAD146BDBE357DC3B63265C34A7A2E"
     },
     {
       "path": "candidates/commons/stacks/errata/r6/authority/source/algebra.tex",

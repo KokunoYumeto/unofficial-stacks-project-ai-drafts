@@ -20,6 +20,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [groupoids.tex](reviews/groupoids.md) — 48 correction units.
 - [homology.tex](reviews/homology.md) — 60 correction units.
 - [injectives.tex](reviews/injectives.md) — 40 correction units.
+- [introduction.tex](reviews/introduction.md) — 1 correction units.
 - [modules.tex](reviews/modules.md) — 14 correction units.
 - [more-algebra.tex](reviews/more-algebra.md) — 116 correction units.
 - [more-groupoids.tex](reviews/more-groupoids.md) — 22 correction units.
@@ -39,4 +40,4 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [spaces-perfect.tex](reviews/spaces-perfect.md) — 19 correction units.
 - [stacks-limits.tex](reviews/stacks-limits.md) — 11 correction units.
 - [topologies.tex](reviews/topologies.md) — 19 correction units.
-- [topology.tex](reviews/topology.md) — 37 correction units.
+- [topology.tex](reviews/topology.md) — 90 correction units.

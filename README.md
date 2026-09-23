@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,423 historical correction IDs are accounted for; 1,421 effective textual
+  The 1,477 historical correction IDs are accounted for; 1,475 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -88,8 +88,9 @@ The original 13-item readable selection is not the total correction collection.
 All thirteen are now integrated in this draft: two limit-preservation fixes
 in R50 and the remaining eleven in R51. They are also in the larger export;
 do not apply the same fix twice. Upstream adoption is not claimed.
-Both sets target the pinned official revision; compatibility with today's
-upstream is not claimed.
+Both sets target the pinned official revision. The official master ref was
+[checked on 23 September 2026](validation/upstream-ref-check-2026-09-23.json)
+and still matched that revision; later upstream compatibility requires a new check.
 
 The source and fixes-only downloads include R49: five de Rham corrections
 (seven edits), including balanced parentheses in the Hodge-filtration cup-product
@@ -122,7 +123,16 @@ are available. The intake record also preserves rejected suggestions and
 duplicates. These changes are included in the Categories patch and combined
 fixes-only download; no theorem additions are required.
 
-R52 review, correction preparation, builds and visual checks, and current
+R53 adds **54 proposed changes in Topology and Introduction**: 44 copyedits,
+five clarifications, four notation clarifications and one source correction.
+They explicitly restrict the map in the connected-image proof, restore a
+missing inclusion in a dimension chain, and clarify the scope of set operations.
+[Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r53/REVIEW.md)
+and [reviewed chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r53/README.md)
+are available. The combined fixes-only download now covers 34 chapters.
+The older complete-reader PDFs are unchanged by this source-and-patch update.
+
+R52/R53 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

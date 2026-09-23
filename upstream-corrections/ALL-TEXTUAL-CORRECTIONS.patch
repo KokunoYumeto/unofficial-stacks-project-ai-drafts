@@ -7302,6 +7302,19 @@ index 1b24742e19f449924ce23323bea49b0d0f029758..abe50c79d998f134cc07293aa9bd673d
  & =
  \Hom(RG(A), L) \\
  & \to
+diff --git a/introduction.tex b/introduction.tex
+index a30f90894ad3a8aa5c2de939f9e57cc1216a18ab..934aa63eb94d54f4ec15ac4f3902a3e4f8185217 100644
+--- a/introduction.tex
++++ b/introduction.tex
+@@ -38,7 +38,7 @@
+ the theory of algebraic stacks.
+ 
+ \medskip\noindent
+-We expect this material to be read online as a key feature are the hyperlinks
++We expect this material to be read online, as a key feature is the set of hyperlinks
+ giving quick access to internal references spread over many different pages.
+ If you use an embedded pdf or dvi viewer in your browser, the cross file
+ links should work.
 diff --git a/modules.tex b/modules.tex
 index a2a37c72e7495f518bf3f87783963219e56cd4f5..c2fa948ffae4be7cf3bc6108732afd3f87a3abe5 100644
 --- a/modules.tex
@@ -13662,9 +13675,36 @@ index 7f3b1718eba1743e2089f9bc16d2615e267b0ccb..3dd9f636ff436f401b9db3544756617a
  The first equality holds by construction of $F'$. The second holds by
  assumption (c). The third holds because filtered colimits are exact.
 diff --git a/topology.tex b/topology.tex
-index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518995c53f1 100644
+index 618cd08f833a3f7382a129d8eae653dd1644bb3d..069bd0f893e7ae077e3fbca54c618c51b62ad83a 100644
 --- a/topology.tex
 +++ b/topology.tex
+@@ -140,7 +140,7 @@
+ precisely of $(x, y) \in X\times X$ with $ x \neq y$. Thus, if $ \Delta(X)
+ \subset X \times X$ is closed, then, by the definition of the product topology,
+ for every such $ (x, y)$, there are opens $U, V \subset X$ with $(x, y) \in
+-U \times V$ and $(U \times V)\cap \Delta(X) = \emptyset$. In other words, with
++U \times V$ and $(U \times V)\cap \Delta(X) = \emptyset$. In other words, we have
+ $x \in U$ and $y \in V$ such that $U \cap V = \emptyset$.
+ \end{proof}
+ 
+@@ -201,7 +201,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-separated}
+-Let $f : X \to Y$ be continuous map of topological spaces.
++Let $f : X \to Y$ be a continuous map of topological spaces.
+ The following are equivalent:
+ \begin{enumerate}
+ \item $f$ is separated,
+@@ -246,7 +246,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-from-hausdorff}
+-Let $f : X \to Y$ be continuous map of topological spaces.
++Let $f : X \to Y$ be a continuous map of topological spaces.
+ If $X$ is Hausdorff, then $f$ is separated.
+ \end{lemma}
+ 
 @@ -342,10 +342,9 @@
  \end{lemma}
  
@@ -13690,7 +13730,92 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \end{proof}
  
  \noindent
-@@ -1232,7 +1231,7 @@
+@@ -552,7 +551,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-open-morphism-quotient-topology}
+-Let $f : X \to Y$ be surjective, open, continuous map of topological spaces.
++Let $f : X \to Y$ be a surjective, open, continuous map of topological spaces.
+ Let $T \subset Y$ be a subset. Then
+ \begin{enumerate}
+ \item $f^{-1}(\overline{T}) = \overline{f^{-1}(T)}$,
+@@ -582,7 +581,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-closed-morphism-quotient-topology}
+-Let $f : X \to Y$ be surjective, closed, continuous map of topological spaces.
++Let $f : X \to Y$ be a surjective, closed, continuous map of topological spaces.
+ Let $T \subset Y$ be a subset. Then
+ \begin{enumerate}
+ \item $\overline{T} = f(\overline{f^{-1}(T)})$,
+@@ -643,7 +642,9 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $A \subset f(E)$ an open and closed subset of $f(E)$. Because $f$ is
++Replacing $f$ by its continuous restriction $E \to f(E)$,
++we may assume $X = E$ and $Y = f(E)$.
++Let $A \subset f(E)$ be an open and closed subset of $f(E)$. Because $f$ is
+ continuous, $f^{-1}(A)$ is an open and closed subset of $E$. As $E$ is
+ connected, $f^{-1}(A) = \emptyset$ or $f^{-1}(A) = E$. However, $A\subset f(E)$
+ implies that $A = f(f^{-1}(A))$. Indeed, if $x\in f(f^{-1}(A))$ then there is
+@@ -738,7 +739,7 @@
+ Suppose that $f^{-1}(T) = Z_1 \amalg Z_2$
+ with $Z_1$, $Z_2$ closed. For any $t \in T$ we see that
+ $f^{-1}(\{t\}) = Z_1 \cap f^{-1}(\{t\}) \amalg Z_2 \cap f^{-1}(\{t\})$.
+-By (1) we see $f^{-1}(\{t\})$ is connected we conclude that
++By (1) we see $f^{-1}(\{t\})$ is connected, and we conclude that
+ either $f^{-1}(\{t\}) \subset Z_1$ or $f^{-1}(\{t\}) \subset Z_2$.
+ In other words $T = T_1 \amalg T_2$ with $f^{-1}(T_i) = Z_i$.
+ By (2) we conclude that $T_i$ is closed in $Y$.
+@@ -829,7 +830,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-For all $x\in X$ let write $\mathcal{N}(x)$ the fundamental system of connected
++For each $x \in X$, let $\mathcal{N}(x)$ be a fundamental system of connected
+ neighbourhoods of $x$ and let $U\subset X$ be an open subset of $X$. Then for
+ all $x\in U$, $U$ is a neighbourhood of $x$, so the set
+ $\{V \in \mathcal{N}(x) | V\subset U\}$
+@@ -842,7 +843,7 @@
+ connected neighbourhood of $x$. Therefore by the definition of a connected
+ component, we have $\mathcal{N} \subset \mathcal{C}$ and then $\mathcal{C}$ is
+ a neighbourhood of $x$. It implies that $\mathcal{C}$ is a neighbourhood of
+-each of his point, in other words $\mathcal{C}$ is open and (2) is proven.
++each of its points, in other words $\mathcal{C}$ is open and (2) is proven.
+ \end{proof}
+ 
+ 
+@@ -1128,8 +1129,8 @@
+ $U_2 = Z_2 \setminus Z_1 = X \setminus Z_1$. To get a contradiction
+ assume that $U_1$ and $U_2$ are both nonempty. By (b) we see that $f(U_i)$
+ is open. By (a) we have $Y$ irreducible and hence
+-$f(U_1) \cap f(U_2) \not = \emptyset$. By (c) there is a point $y$ which
+-corresponds to a point of this intersection such that the fibre
++$f(U_1) \cap f(U_2) \not = \emptyset$. By (c) there is a point $y$ in this intersection
++such that the fibre
+ $X_y = f^{-1}(y)$ is irreducible. Then $X_y \cap U_1$ and
+ $X_y \cap U_2$ are nonempty disjoint open subsets of $X_y$ which is
+ a contradiction.
+@@ -1196,7 +1197,7 @@
+ is nonempty. Thus $(U_1 \cap U_2)' = U'_1 \cap U'_2$.
+ The rule $U \mapsto U'$ is also compatible with arbitrary unions
+ (details omitted). Thus it is clear that the collection of
+-$U'$ form a topology on $X'$ and that we have a bijection as
++$U'$ forms a topology on $X'$ and that we have a bijection as
+ stated in the lemma.
+ 
+ \medskip\noindent
+@@ -1222,7 +1223,7 @@
+ \begin{lemma}
+ \label{lemma-remove-irreducible-connected}
+ Let $X$ be a connected topological space with a finite number of
+-irreducible components $X_1, \ldots, X_n$. If $n > 1$ there is an
++irreducible components $X_1, \ldots, X_n$. If $n > 1$ there is an index $j$ with
+ $1 \leq j \leq n$ such that $X' = \bigcup_{i \not = j} X_i$ is connected.
+ \end{lemma}
+ 
+@@ -1232,7 +1233,7 @@
  $X_i \cap X_j$ is nonempty. Connectedness of $X$ means that $\Gamma$
  is connected. Our problem is to find $1 \leq j \leq n$ such that
  $\Gamma \setminus \{j\}$ is still connected. You can do this by choosing
@@ -13699,7 +13824,16 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Details omitted.
  \end{proof}
  
-@@ -1273,10 +1272,10 @@
+@@ -1242,7 +1243,7 @@
+ 
+ \begin{definition}
+ \label{definition-noetherian}
+-A topological space is called {\it Noetherian}
++A topological space $X$ is called {\it Noetherian}
+ if the descending chain condition holds for
+ closed subsets of $X$. A topological space is called
+ {\it locally Noetherian} if every point has a neighbourhood
+@@ -1273,10 +1274,10 @@
  Let $A$ be the set of closed subsets of $X$ which do not
  have finitely many irreducible components. Assume that
  $A$ is not empty to arrive at a contradiction.
@@ -13713,7 +13847,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  union of irreducible components, it is not irreducible.
  Hence we can write $Z = Z' \cup Z''$ and both are strictly smaller
  closed subsets. By construction $Z' = \bigcup Z'_i$ and
-@@ -1294,7 +1293,7 @@
+@@ -1294,7 +1295,7 @@
  of $X$. Consider $U = Z \setminus (Z_1\cup\ldots\cup Z_n)$.
  This is not empty since otherwise the irreducible space
  $Z$ would be contained in one of the other $Z_i$.
@@ -13722,7 +13856,20 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  also $U = X \setminus (Z_1\cup\ldots\cup Z_n)$
  and hence open in $X$. Thus $Z$ contains a nonempty
  open of $X$.
-@@ -1344,7 +1343,7 @@
+@@ -1333,18 +1334,18 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $\{F_m\}_{m \in \mathbf{N}}$ a decreasing sequence of closed subsets
++Let $\{F_m\}_{m \in \mathbf{N}}$ be a decreasing chain of closed subsets
+ of $X' = \bigcup_{i = 1, \ldots, n}  X_i$ with the induced topology.
+ Then we can find a decreasing sequence $\{G_m\}_{m \in \mathbf{N}}$
+ of closed subsets of $X$ verifying $F_m = G_m \cap X'$ for all $m$
+ (small detail omitted). As $X_i$ is noetherian and
+-$\{G_m \cap X_i\}_{m \in \mathbf{N}}$ a decreasing sequence
++$\{G_m \cap X_i\}_{m \in \mathbf{N}}$ is a decreasing sequence
+ of closed subsets of $X_i$, there exists $m_i \in \mathbf{N}$
+ such that for all $m \geq m_i$ we have $G_m \cap X_i = G_{m_i} \cap X_i$.
  Let $m_0 = \max_{i = 1, \ldots, n} m_i$. Then clearly
  $$
  F_m = G_m \cap X' = G_m \cap (X_1 \cup \ldots \cup X_n) =
@@ -13731,7 +13878,52 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  $$
  stabilizes for $m \geq m_0$ and the proof is complete.
  \end{proof}
-@@ -1848,7 +1847,8 @@
+@@ -1577,7 +1578,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let suppose that $X$ is catenary. According to
++Suppose that $X$ is catenary. According to
+ Definition \ref{definition-catenary}, for every pair of
+ irreducible closed subsets $Y \subset Y'$ we have
+ $\text{codim}(Y,Y') < \infty$. Let $Y \subset Y' \subset Y''$
+@@ -1597,14 +1598,14 @@
+ Y = Y_0\subset Y_1 \subset ... \subset Y_{e_1} = Y' =
+ Y_{e_1} \subset Y_{e_1+1}\subset ... \subset Y_{e_1+e_2}=Y''
+ $$
+-is maximal too (between $Y$ and $Y''$) and its length equals to $e_1 + e_2$.
+-As $X$ is catenary, each maximal chain has the same length equals to the
++is maximal too (between $Y$ and $Y''$) and its length equals $e_1 + e_2$.
++As $X$ is catenary, each maximal chain has the same length, equal to the
+ codimension. Thus the point (2) that
+ $\text{codim}(Y,Y'') = e_1 + e_2 = \text{codim}(Y,Y') + \text{codim}(Y',Y'')$
+ is verified.
+ 
+ \medskip\noindent
+-For the reciprocal, we show by induction that : if $Y = Y_1 \subset ... \subset
++For the converse, we show by induction that if $Y = Y_1 \subset ... \subset
+ Y_n = Y'$, then $ \text{codim}(Y,Y') = \text{codim}(Y_1,Y_2) + ... +
+ \text{codim}(Y_{n-1},Y_n)$. Therefore, it forces maximal chains to have the
+ same length.
+@@ -1679,7 +1680,7 @@
+ \begin{enumerate}
+ \item If $E \subset X$ is quasi-compact, then it is closed.
+ \item If $E_1, E_2 \subset X$ are disjoint quasi-compact subsets
+-then there exists opens $E_i \subset U_i$ with $U_1 \cap U_2 = \emptyset$.
++then there exist open subsets $U_i$ with $E_i \subset U_i$ and $U_1 \cap U_2 = \emptyset$.
+ \end{enumerate}
+ \end{lemma}
+ 
+@@ -1736,7 +1737,7 @@
+ is an open covering of the quasi-compact space $X$.
+ Thus there exists a finite subset $J \subset A$ such that
+ $X = \bigcup_{\alpha \in J} (X\setminus Z_{\alpha})$.
+-The complementary is then empty, which means that
++The complement is then empty, which means that
+ $\bigcap_{\alpha \in J} Z_{\alpha} = \emptyset$. It proves there exists a
+ finite subcollection of $\{Z_{\alpha}\}_{\alpha \in J}$ verifying
+ $\bigcap_{\alpha \in J} Z_{\alpha}=\emptyset$, which concludes by
+@@ -1848,7 +1849,8 @@
  Since $X \setminus (U \cup V)$ is disjoint from $S$
  and closed in $X$ hence quasi-compact, we can use the same lemma
  to see that $Z_{\alpha''} \subset U \cup V$ for some $\alpha'' \in A$.
@@ -13741,7 +13933,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  in $U \cup V$ and disjoint from $U \cap V$.
  Hence $Z_\alpha = U \cap Z_\alpha \amalg V \cap Z_\alpha$
  is a decomposition into two open pieces,
-@@ -1879,9 +1879,9 @@
+@@ -1879,9 +1881,9 @@
  Lemma \ref{lemma-closed-in-quasi-compact}.
  By Lemma \ref{lemma-quasi-compact-in-Hausdorff}
  there exist disjoint opens $U, V \subset X$ with $B \subset U$ and
@@ -13753,7 +13945,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  for some $\alpha$ by Lemma \ref{lemma-intersection-closed-in-quasi-compact}.
  In other words, $Z_\alpha \subset U \cup V$. Thus
  $Z_\alpha = Z_\alpha \cap V \amalg Z_\alpha \cap U$
-@@ -1944,7 +1944,7 @@
+@@ -1944,7 +1946,7 @@
  in the following way: Choose $i_{n + 1}$ such that $U_{i_{n + 1}}$
  is not contained in $U_{i_1} \cup \ldots \cup U_{i_n}$. Thus we see that
  $X \supset (X \setminus U_{i_1}) \supset
@@ -13762,11 +13954,41 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  decreasing infinite sequence of closed subsets. This contradicts
  the fact that $X$ is Noetherian. This proves the first assertion.
  The second assertion is now clear since every subset of $X$ is Noetherian by
-@@ -2164,16 +2164,16 @@
+@@ -1953,7 +1955,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-quasi-compact-locally-Noetherian-Noetherian}
+-A quasi-compact locally Noetherian space is Noetherian.
++A quasi-compact locally Noetherian space $X$ is Noetherian.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -1989,7 +1991,7 @@
+ $i_{j, 1}, \ldots, i_{j, n_j} \in I$ such that
+ $X = V_j \cup U_{i_{j, 1}} \cup \ldots \cup U_{i_{j, n_j}}$.
+ Since $V_1 \cap \ldots \cap V_n \subset U_i$ we conclude that
+-$X = U_i \cup \bigcup U_{i_{j, l}}$ a contradiction.
++$X = U_i \cup \bigcup U_{i_{j, l}}$, a contradiction.
+ \end{proof}
+ 
+ 
+@@ -2099,7 +2101,7 @@
+ Thus $\overline{U_x} \subset U_{i(x)}$. Since $X$ is quasi-compact,
+ there is a finite list of points $x_1, \ldots, x_m$ such that
+ $X = U_{x_1} \cup \ldots \cup U_{x_m}$. Setting
+-$V_i = \bigcup_{i = i(x_j)} U_{x_j}$ the proof is finished.
++$V_i = \bigcup_{j : i(x_j) = i} U_{x_j}$ the proof is finished.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -2163,17 +2165,18 @@
+ \cup (\bigcup\nolimits_{k \in K} V_{j_0} \cap W_{i_0 \ldots i_p, k})
  $$
  The first open on the RHS intersects $V_{j_1} \cap \ldots \cap V_{j_p}$
- in the empty set and the other opens $V_{j_0, k}$ of the RHS
+-in the empty set and the other opens $V_{j_0, k}$ of the RHS
 -satisfy $V_{j_0, k} \cap V_{j_1} \ldots \cap V_{j_p} \subset
++in the empty set. Write $V_{j_0, k} = V_{j_0} \cap W_{i_0 \ldots i_p, k}$
++for $k \in K$. These other opens on the RHS
 +satisfy $V_{j_0, k} \cap V_{j_1} \cap \ldots \cap V_{j_p} \subset
  W_{\alpha(j_0) \ldots \alpha(j_p), k}$.
  Set $J' = J \amalg K$. For $j \in J$ set $V'_j = V_j$ if $j \not = j_0$
@@ -13783,7 +14005,16 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  
  \medskip\noindent
  To finish the proof we argue by induction on the number $M$ of $(p + 1)$-tuples
-@@ -2377,7 +2377,7 @@
+@@ -2297,7 +2300,7 @@
+ $V_z = V_{z, z'_1} \cap \ldots \cap V_{z, z'_r} \cap U_i$
+ is an open neighbourhood of $z$ contained in $U_i$
+ with the property that $\overline{V_z} \cap Z \subset U_i$.
+-Since $z$ and $i$ where arbitrary and since $Z$ is quasi-compact
++Since $z$ and $i$ were arbitrary and since $Z$ is quasi-compact
+ we can find a finite list $z_1, i_1, \ldots, z_t, i_t$
+ and opens $V_{z_j} \subset U_{i_j}$ with
+ $\overline{V_{z_j}} \cap Z \subset U_{i_j}$
+@@ -2377,7 +2380,7 @@
  with projection maps $f_i : X \to X_i$.
  \begin{enumerate}
  \item Any open of $X$ is of the form $\bigcup_{j \in J} f_j^{-1}(U_j)$
@@ -13792,7 +14023,34 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \item Any quasi-compact open of $X$ is of the form
  $f_i^{-1}(U_i)$ for some $i$ and some $U_i \subset X_i$ open.
  \end{enumerate}
-@@ -2488,11 +2488,11 @@
+@@ -2385,7 +2388,7 @@
+ 
+ \begin{proof}
+ The construction of the limit given above shows that $X \subset \prod X_i$
+-with the induced topology. A basis for the topology of $\prod X_i$ are
++with the induced topology. A basis for the topology of $\prod X_i$ is given by
+ the opens $\prod U_i$ where $U_i \subset X_i$ is open and $U_i = X_i$
+ for almost all $i$. Say $i_1, \ldots, i_n \in \Ob(\mathcal{I})$ are the
+ objects such that $U_{i_j} \not = X_{i_j}$. Then
+@@ -2414,7 +2417,7 @@
+ Then it is equal to
+ $f_{j_1}^{-1}(U_{j_1}) \cup \ldots \cup f_{j_m}^{-1}(U_{j_m})$
+ for some $j_1, \ldots, j_m \in J$. Since $\mathcal{I}$ is cofiltered,
+-we can pick a $i \in \Ob(\mathcal{I})$ and morphisms
++we can pick an $i \in \Ob(\mathcal{I})$ and morphisms
+ $i \to j_l$, $l = 1, \ldots, m$. Let
+ $$
+ U_i =
+@@ -2460,7 +2463,7 @@
+ open. If $X_i = \bigcup_{j \in J_i} U_j$, then there is a finite
+ refinement and we conclude that $X = \bigcup_{j \in J} B_j$
+ has a finite refinement. If this is not the case, then for every $i$
+-we can choose an point $x_i \in X_i$ which is not in
++we can choose a point $x_i \in X_i$ which is not in
+ $\bigcup_{j \in J_i} U_j$. But then the point $x = (x_i)_{i \in I}$
+ is an element of $X$ not contained in $\bigcup_{j \in J} B_j$, a
+ contradiction.
+@@ -2488,11 +2491,11 @@
  let $\Gamma_\varphi \subset X_j \times X_k$ denote the graph
  of the corresponding continuous map $X_j \to X_k$. By
  Lemma \ref{lemma-graph-closed} this graph is closed.
@@ -13809,7 +14067,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  $$
  Thus the result follows.
  \end{proof}
-@@ -2516,11 +2516,13 @@
+@@ -2516,11 +2519,13 @@
  we have seen that $X = \lim X_i$ is the intersection of the
  closed subsets
  $$
@@ -13828,7 +14086,16 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Lemma \ref{lemma-intersection-closed-in-quasi-compact}
  it suffices to show any finite intersection of these subsets is nonempty.
  Assume $\varphi_t : j_t \to k_t$, $t = 1, \ldots, n$ is a finite collection
-@@ -2646,7 +2648,7 @@
+@@ -2556,7 +2561,7 @@
+ \begin{enumerate}
+ \item We say $E$ is {\it constructible}\footnote{In the second edition
+ of EGA I \cite{EGA1-second} this was called a ``globally constructible''
+-set and a the terminology ``constructible'' was used for what we call a locally
++set and the terminology ``constructible'' was used for what we call a locally
+ constructible set.}
+ in $X$ if $E$ is a finite union
+ of subsets of the form $U \cap V^c$ where $U, V \subset X$ are open and
+@@ -2646,7 +2651,7 @@
  we see that $E \cap V_j$ is constructible in $V_j$ for all $j$.
  Conversely, suppose that $E \cap V_j$
  is constructible in $V_j$ for each $j = 1, \ldots, m$.
@@ -13837,7 +14104,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  constructible sets by
  Lemma \ref{lemma-quasi-compact-open-immersion-constructible-image}
  and hence constructible.
-@@ -2915,7 +2917,7 @@
+@@ -2915,7 +2920,7 @@
  \medskip\noindent
  Conversely, assume (2) holds. Consider the set $\mathcal{S}$ of closed
  subsets $Y$ of $X$ such that $E \cap Y$ is not constructible in $Y$.
@@ -13846,7 +14113,43 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  as $X$ is Noetherian.
  Let $Y = Y_1 \cup \ldots \cup Y_r$ be the decomposition of $Y$ into its
  irreducible components, see
-@@ -3121,7 +3123,7 @@
+@@ -2927,7 +2932,7 @@
+ Lemma \ref{lemma-constructible-Noetherian-space}.
+ This is a contradiction and so $r = 1$. If $r = 1$, then $Y$ is
+ irreducible, and by assumption (2) we see that $E \cap Y$ either
+-(a) contains an open $V$ of $Y$ or (b) is not dense in $Y$.
++(a) contains a nonempty open $V$ of $Y$ or (b) is not dense in $Y$.
+ In case (a) we see, by minimality of $Y$, that $E \cap (Y \setminus V)$
+ is a finite union of locally closed subsets of $Y \setminus V$. Thus
+ $E \cap Y$ is a finite union of locally closed subsets of $Y$ and is
+@@ -3044,7 +3049,7 @@
+ Let $X$ and $Y$ be topological spaces.
+ Let $A \subset X$ and $B \subset Y$ be quasi-compact subsets.
+ Let $A \times B \subset W \subset X \times Y$ with $W$
+-open in $X \times Y$. Then there exists opens $A \subset U \subset X$
++open in $X \times Y$. Then there exist opens $A \subset U \subset X$
+ and $B \subset V \subset Y$ such that $U \times V \subset W$.
+ \end{lemma}
+ 
+@@ -3060,7 +3065,7 @@
+ (U_{(a_1, b)} \cup \ldots \cup U_{(a_n, b)}) \times
+ (V_{(a_1, b)} \cap \ldots \cap V_{(a_n, b)}) \subset W.
+ $$
+-Thus for every $b \in B$ there exists opens $U_b \subset X$ and
++Thus for every $b \in B$ there exist opens $U_b \subset X$ and
+ $V_b \subset Y$ such that $A \times \{b\} \subset U_b \times V_b \subset W$.
+ As above there exist a finite number $b_1, \ldots, b_m$ such
+ that $B \subset V_{b_1} \cup \ldots \cup V_{b_m}$.
+@@ -3102,7 +3107,7 @@
+ \begin{reference}
+ Combination of
+ \cite[I, p. 75, Lemme 1]{Bourbaki} and
+-\cite[I, p. 76, Corrolaire 1]{Bourbaki}.
++\cite[I, p. 76, Corollaire 1]{Bourbaki}.
+ \end{reference}
+ A topological space $X$ is quasi-compact if and only if the
+ projection map $Z \times X \to Z$ is closed for
+@@ -3121,12 +3126,12 @@
  \begin{enumerate}
  \item All subsets of $Z\setminus\{I\}$.
  \item For every finite subset $K$ of $I$ the set
@@ -13855,7 +14158,62 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \end{enumerate}
  It is left to the reader to verify this is the basis for a topology.
  Consider the subset of $Z \times X$ defined by the formula
-@@ -3602,9 +3604,15 @@
+ $$
+-M = \{(J, x) \mid J \in Z, \ x \in \bigcap\nolimits_{i \in J} U_i^c)\}
++M = \{(J, x) \mid J \in Z, \ x \in \bigcap\nolimits_{i \in J} U_i^c\}
+ $$
+ If $(J, x) \not \in M$, then $x \in U_i$ for some $i \in J$.
+ Hence $U_{\{i\}} \times U_i \subset Z \times X$ is an open
+@@ -3174,7 +3179,7 @@
+ any single point is quasi-compact.
+ 
+ \medskip\noindent
+-Assume map $f$ satisfies (4).
++Assume the map $f$ satisfies (4).
+ We  will prove it is universally closed, i.e., (3) holds.
+ Let $g : Z \to Y$ be a continuous map of topological spaces
+ and consider the diagram
+@@ -3341,8 +3346,8 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $Z$ be closed subset of $X$
+-and $U$ be and open subset of $X$
++Let $Z$ be a closed subset of $X$
++and $U$ be an open subset of $X$
+ such that $U\cap Z$ is nonempty.
+ Then for $x\in U\cap Z$ we have that $\overline{\{x\}}\cap U$ is a nonempty
+ subset of $Z\cap U$,
+@@ -3465,7 +3470,7 @@
+ 
+ \begin{proof}
+ If $X$ is finite then the set $X_0 \subset X$ of closed points is finite.
+-Assume $X_0$ is is finite and $X$ is Jacobson.
++Assume $X_0$ is finite and $X$ is Jacobson.
+ Then $\overline{X_0} = X$ by the Jacobson property.
+ Now $X_0 =\{x_1, \ldots, x_n\} = \bigcup_{i = 1, \ldots, n} \{x_i\}$
+ is a finite union of closed sets, hence closed, so
+@@ -3487,7 +3492,7 @@
+ \{\text{finite unions loc. closed subsets of } X_0\}
+ $$
+ given by $E \mapsto E \cap X_0$. This correspondence preserves
+-the subsets of locally closed, of open and of closed subsets.
++the classes of locally closed, open, and closed subsets.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -3577,8 +3582,8 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $F$ be a closed subset of $X$, if $y\in F$ then $\{y\} \subset F$, so
+-$\overline{\{y\}} \subset \overline{F} = F$ as $F$ is closed. Thus for all
++Let $F$ be a closed subset of $X$. If $y\in F$ then $\{y\} \subset F$, so
++$\overline{\{y\}} \subset \overline{F} = F$ as $F$ is closed. Thus for every
+ specialization $x$ of $y$, we have $x\in F$.
+ 
+ \medskip\noindent
+@@ -3602,9 +3607,15 @@
  \end{lemma}
  
  \begin{proof}
@@ -13874,16 +14232,43 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \bigcup_{i\in I}F_i$ where $F_i$ are closed subsets of $X$. If $y\in T$ then
  there exists $i\in I$ such that $y\in F_i$. As $F_i$ is closed, we have
  $\overline{\{y\}} \subset F_i \subset T$, which proves that $T$ is stable under
-@@ -3773,7 +3781,7 @@
+@@ -3635,13 +3646,13 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $z'\leadsto z$ be a specialization in $Z$ and let $x' \in X$ such as
++Let $z'\leadsto z$ be a specialization in $Z$ and let $x' \in X$ such that
+ $g\circ f (x') = z'$. Then because specializations lift along $g$, there exists
+ a specialization $f(x') \leadsto y$ of $f(x')$ in $Y$ such that $g(y) = z$.
+ Likewise, because specializations lift along $f$, there exists a specialization
+ $x' \leadsto x$ of $x'$ in $X$ such that $f(x) = y$. It provides a
+ specialization $x' \leadsto x$ of $x'$ in $X$ such that $g\circ f(x) = z$. In
+-other words, specialization lift along $g\circ f$.
++other words, specializations lift along $g\circ f$.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -3659,7 +3670,7 @@
+ 
+ \begin{proof}
+ Let $y' \leadsto y$ be a specialization in $Y$ where $y'\in f(T)$ and let
+-$x'\in T$ such that $f(x') = y'$. Because specialization lift along $f$, there
++$x'\in T$ such that $f(x') = y'$. Because specializations lift along $f$, there
+ exists a specialization $x'\leadsto x$ of $x'$ in $X$ such that $f(x) = y$. But
+ $T$ is stable under specialization so $x\in T$ and then $y \in f(T)$. Therefore
+ $f(T)$ is stable under specialization.
+@@ -3772,8 +3783,8 @@
+ 
  \begin{proof}
  Assume specializations lift along $f$.
- Let $Z_0 \subset Z_1 \subset \ldots Z_e \subset Y$ be a chain
+-Let $Z_0 \subset Z_1 \subset \ldots Z_e \subset Y$ be a chain
 -of irreducible closed subsets of $X$. Let $\xi_e \in X$ be a point
++Let $Z_0 \subset Z_1 \subset \ldots \subset Z_e \subset Y$ be a chain
 +of irreducible closed subsets of $Y$. Let $\xi_e \in X$ be a point
  mapping to the generic point of $Z_e$. By assumption there
  exists a specialization
  $\xi_e \leadsto \xi_{e - 1}$ in $X$ such that $\xi_{e - 1}$ maps to
-@@ -3877,15 +3885,15 @@
+@@ -3877,15 +3888,15 @@
  Suppose $Y \subset Y' \subset X$ are irreducible closed subsets.
  Let $\xi \in Y$, $\xi' \in Y'$ be their generic points.
  Then we see immediately from the definitions that
@@ -13902,7 +14287,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  This also proves the last statement of the lemma.
  \end{proof}
  
-@@ -3908,7 +3916,7 @@
+@@ -3908,7 +3919,7 @@
  $X$ is Noetherian, see Lemma \ref{lemma-Noetherian}.)
  Let $\xi_i \in Z_i$ be the generic point.
  Note $Z_1 \cup \ldots \cup Z_r$ is a neighbourhood of $x$ in $X$
@@ -13911,7 +14296,19 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  constant on $Z_1 \cup \ldots \cup Z_r$. Namely, if $y \in Z_i$,
  then
  $$
-@@ -4103,7 +4111,7 @@
+@@ -4012,9 +4023,9 @@
+ general will follow by induction. Let $A,B \subset X$ be nowhere dense subsets.
+ We have $\overline{A \cup B} = \overline{A} \cup \overline{B}$.
+ Hence, if $U \subset \overline{A \cup B}$ is an open subset of $X$, then
+-$U \setminus U \cap \overline{B}$ is an open subset of $U$ and of $X$
++$U \setminus (U \cap \overline{B})$ is an open subset of $U$ and of $X$
+ and contained in $\overline{A}$ and hence empty. Similarly
+-$U \setminus U \cap \overline{A}$ is empty. Thus $U = \emptyset$
++$U \setminus (U \cap \overline{A})$ is empty. Thus $U = \emptyset$
+ as desired.
+ \end{proof}
+ 
+@@ -4103,7 +4114,7 @@
  After replacing $X$ by the closure of $E$ we may assume that $E$
  is dense in $X$ and we have to show that $E$ contains a dense open.
  Then the complement $T$ of $E$ is a finite union of locally closed subsets,
@@ -13920,7 +14317,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Since $T_i$ is open dense in its closure $Z_i$ we see that also
  $Z_i$ is nowhere dense in $X$. Then the closure $Z = Z_1 \cup \ldots \cup Z_n$
  of $T$ is nowhere dense in $X$ by Lemma \ref{lemma-nowhere-dense}.
-@@ -4497,7 +4505,7 @@
+@@ -4497,7 +4508,7 @@
  \begin{lemma}
  \label{lemma-two-points}
  Let $X$ be a spectral space. Let $x, y \in X$. Then either there exists
@@ -13929,7 +14326,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  open neighbourhoods containing $x$ and $y$.
  \end{lemma}
  
-@@ -4533,8 +4541,7 @@
+@@ -4533,8 +4544,7 @@
  \item every point of $X$ is closed,
  \item every point of $X$ is the generic point of an irreducible component
  of $X$,
@@ -13939,7 +14336,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \end{enumerate}
  \end{lemma}
  
-@@ -4577,8 +4584,8 @@
+@@ -4577,10 +4587,10 @@
  $q : X \times Y \to Y$ the projections. Let $Z \subset X \times Y$ be a
  closed irreducible subset. Then $p(Z) \subset X$ is irreducible
  and $q(Z) \subset Y$ is irreducible. Let $x \in X$ be the generic
@@ -13948,9 +14345,21 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
 +point of the closure of $p(Z)$ and let $y \in Y$ be the generic
 +point of the closure of $q(Z)$. If $(x, y) \not \in Z$, then
  there exist opens $x \in U \subset X$, $y \in V \subset Y$ such
- that $Z \cap U \times V = \emptyset$. Hence $Z$ is contained
+-that $Z \cap U \times V = \emptyset$. Hence $Z$ is contained
++that $Z \cap (U \times V) = \emptyset$. Hence $Z$ is contained
  in $(X \setminus U) \times Y \cup X \times (Y \setminus V)$.
-@@ -4683,7 +4690,7 @@
+ Since $Z$ is irreducible, we see that either
+ $Z \subset (X \setminus U) \times Y$ or $Z \subset X \times (Y \setminus V)$.
+@@ -4591,7 +4601,7 @@
+ $(x, y)$ is the generic point for $Z$.
+ 
+ \medskip\noindent
+-A basis of the topology of $X \times Y$ are the opens of the form
++A basis of the topology of $X \times Y$ is given by the opens of the form
+ $U \times V$ with $U \subset X$ and $V \subset Y$ quasi-compact open
+ (here we use that $X$ and $Y$ are spectral). Then $U \times V$ is
+ quasi-compact as the product of quasi-compact spaces is quasi-compact.
+@@ -4683,7 +4693,7 @@
  $$
  f = \prod f_U : X \longrightarrow \prod\nolimits_U W
  $$
@@ -13959,7 +14368,16 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Lemma \ref{lemma-fibres-spectral-map-quasi-compact}
  the image of $f$ is closed in the constructible topology.
  If $x', x \in X$ are distinct, then since $X$ is sober either $x'$
-@@ -4798,7 +4805,7 @@
+@@ -4751,7 +4761,7 @@
+ Proof of (2). It follows from the above that $X'$ has a basis of
+ quasi-compact opens. Since $c^{-1}$ also
+ commutes with intersections of pairs of opens, we see that
+-the intersection of two quasi-compact opens $X'$ is quasi-compact.
++the intersection of two quasi-compact opens of $X'$ is quasi-compact.
+ Finally, $X'$ is quasi-compact by (1) and sober by construction.
+ Hence $X'$ is spectral.
+ 
+@@ -4798,7 +4808,7 @@
  Hausdorff spaces (by
  Lemmas \ref{lemma-constructible-hausdorff-quasi-compact} and
  \ref{lemma-closed-in-quasi-compact}).
@@ -13968,7 +14386,34 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Lemma \ref{lemma-inverse-limit-quasi-compact}.
  The maps $Z'_i \to Z_i$ are continuous, hence $Z' \to Z$
  is continuous and a bijection on underlying sets. Hence $Z$
-@@ -5058,7 +5065,7 @@
+@@ -4848,7 +4858,7 @@
+ Observe that
+ $$
+ p_i^{-1}(E) \setminus p_i^{-1}(F) =
+-\lim_{a : j \to i} f_a^{-1}(E) \setminus f_a^{-1}(F)
++\lim_{a : j \to i} (f_a^{-1}(E) \setminus f_a^{-1}(F))
+ $$
+ Since $f_a$ is a spectral map, it is continuous in the constructible topology
+ hence the set $f_a^{-1}(E) \setminus f_a^{-1}(F)$ is closed in the
+@@ -4891,7 +4901,7 @@
+ and $Z_l = p_{j_l}^{-1}(Z_{l, j_l})$
+ with $U_{l, i_l} \subset X_{i_l}$ constructible open and
+ $Z_{l, j_l} \subset X_{j_l}$ constructible closed. As $\mathcal{I}$ is
+-cofiltered we may choose an object $k$ of $\mathcal{I}$ and morphism
++cofiltered we may choose an object $k$ of $\mathcal{I}$ and morphisms
+ $a_l : k \to i_l$ and $b_l : k \to j_l$. Then taking
+ $E_k = \bigcup_{l = 1, \ldots, n}
+ f_{a_l}^{-1}(U_{l, i_l}) \cap f_{b_l}^{-1}(Z_{l, j_l})$
+@@ -4919,7 +4929,7 @@
+ Lemma \ref{lemma-describe-limits}.
+ Hence a basis for the topology on $X$ is given by the opens
+ $p_i^{-1}(U_i)$ for $U_i \subset X_i$ open. Since a basis for
+-the topology of $X_i$ is given by the quasi-compact open, we conclude
++the topology of $X_i$ is given by the quasi-compact opens, we conclude
+ that a basis for the topology on $X$ is given by $p_i^{-1}(U_i)$
+ with $U_i \subset X_i$ quasi-compact open. A formal argument
+ shows that
+@@ -5058,7 +5068,7 @@
  Let $U \subset X$ be an open neighbourhood of $W$.
  Then $E_i = U_i \cap (X \setminus U)$ is a family of constructible
  subsets of the spectral space $Z = X \setminus U$
@@ -13977,7 +14422,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  is quasi-compact (Lemma \ref{lemma-constructible-hausdorff-quasi-compact})
  we conclude from
  Lemma \ref{lemma-intersection-closed-in-quasi-compact}
-@@ -5083,7 +5090,7 @@
+@@ -5083,7 +5093,7 @@
  for all $i \in I$. Hence $U_i \setminus E$
  is spectral by Lemma \ref{lemma-spectral-sub}.
  Since $W \setminus E = \bigcap (U_i \setminus E)$ we have
@@ -13986,7 +14431,16 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Then $W \setminus E$ is a spectral space by
  Lemma \ref{lemma-directed-inverse-limit-spectral-spaces}.
  \end{proof}
-@@ -5164,7 +5171,7 @@
+@@ -5136,7 +5146,7 @@
+ $$
+ \prod f_i : X \longrightarrow \prod\nolimits_{i \in I} Y_i
+ $$
+-and denote $\beta(X)$ the closure of the image. Since each $Y_i$ is
++and denote by $\beta(X)$ the closure of the image. Since each $Y_i$ is
+ Hausdorff, so is $\beta(X)$. Since each $Y_i$ is quasi-compact, so
+ is $\beta(X)$ (use Theorem \ref{theorem-tychonov} and
+ Lemma \ref{lemma-closed-in-quasi-compact}).
+@@ -5164,7 +5174,7 @@
  open if either $V \subset X$ is open in $X$, or $\infty \in V$ and
  $U = V \cap X$ is an open of $X$ such that $X \setminus U$ is quasi-compact.
  We omit the verification that this defines a topology. It is clear
@@ -13995,7 +14449,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  
  \medskip\noindent
  Since $X$ is locally quasi-compact, every point $x \in X$ has a
-@@ -5361,7 +5368,7 @@
+@@ -5361,10 +5371,10 @@
  
  \begin{proof}
  Pick $p \in X$ with $f(p) \not = p$. Choose disjoint open neighbourhoods
@@ -14003,8 +14457,21 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
 +$p \in U$, $f(p) \in V$ and set $E = X \setminus (U \cap f^{-1}(V))$.
  Then $p \not \in E$ hence $E$ is a proper closed subset.
  If $x \in X$, then either $x \in E$, or if not, then $x \in U \cap f^{-1}(V)$.
- Writing $x = f(y)$ (possible as $f$ is surjective). If $y \in U \cap f^{-1}(V)$
-@@ -5433,13 +5440,13 @@
+-Writing $x = f(y)$ (possible as $f$ is surjective). If $y \in U \cap f^{-1}(V)$
++Write $x = f(y)$ (possible as $f$ is surjective). If $y \in U \cap f^{-1}(V)$
+ then we would have $x = f(y) \in V$ which is a contradiction with
+ $x \in U$. Hence $y \in E$ and $x \in f(E)$.
+ \end{proof}
+@@ -5424,7 +5434,7 @@
+ the image would be a proper closed subset surjecting onto $X$.
+ Hence $f|_E$ has to be $\text{id}_E$ as otherwise
+ Lemma \ref{lemma-rainwater} shows that $E$ isn't minimal.
+-Thus the $\text{id}_E$ factors through the extremally disconnected
++Thus $\text{id}_E$ factors through the extremally disconnected
+ space $X'$. A formal, categorical argument (using the characterization of
+ Proposition \ref{proposition-projective-in-category-hausdorff-qc})
+ shows that $E$ is extremally disconnected.
+@@ -5433,19 +5443,19 @@
  To prove uniqueness, suppose we have a second $X'' \to X$
  minimal cover. By the lifting property proven in
  Proposition \ref{proposition-projective-in-category-hausdorff-qc}
@@ -14024,7 +14491,14 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \end{proof}
  
  \begin{remark}
-@@ -5481,7 +5488,6 @@
+ \label{remark-size-projective-cover}
+ Let $X$ be a quasi-compact Hausdorff space. Let $\kappa$ be an infinite
+-cardinal bigger or equal than the cardinality of $X$. Then the cardinality
++cardinal greater than or equal to the cardinality of $X$. Then the cardinality
+ of the minimal quasi-compact, Hausdorff, extremally disconnected cover
+ $X' \to X$ (Lemma \ref{lemma-existence-projective-cover})
+ is at most $2^{2^\kappa}$. Namely, choose a subset $S \subset X'$
+@@ -5481,7 +5491,6 @@
  \item any quasi-compact open $U \subset X$ has a cofinal system of open
  coverings $\mathcal{U} : U = \bigcup_{j\in J} U_j$ with $J$ finite
  and all $U_j$ and $U_j \cap U_{j'}$ quasi-compact,
@@ -14032,7 +14506,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \end{enumerate}
  \end{lemma}
  
-@@ -5509,8 +5515,9 @@
+@@ -5509,8 +5518,9 @@
  Let $X$ be a topological space. A {\it partition} of $X$ is a
  decomposition $X = \coprod X_i$ into locally closed subsets $X_i$.
  The $X_i$ are called the {\it parts} of the partition.
@@ -14044,7 +14518,16 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  \end{definition}
  
  \noindent
-@@ -5811,7 +5818,7 @@
+@@ -5768,7 +5778,7 @@
+ Let $G_i$, $i \in I$ be a collection of topological groups.
+ Take the usual product $G = \prod G_i$ with the product topology.
+ Since $G \times G = \prod (G_i \times G_i)$ as a topological space
+-(because products commutes with products in any category), we
++(because products commute with products in any category), we
+ see that multiplication on $G$ is continuous. Similarly for
+ the inverse map. Let $a, b : G \to H$ be two homomorphisms of
+ topological groups. Then as the equalizer we can simply take
+@@ -5811,7 +5821,7 @@
  By quasi-compactness we can find $w_1, \ldots, w_n$ such that
  $W = \bigcup U'_{w_i}$. Then
  $U_t = U_{w_1} \cap \ldots \cap U_{w_n}$ is an open neighbourhood
@@ -14053,7 +14536,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  Since $T$ is finite we see that $\bigcap_{t \in T} U_t \subset H$
  is an open neighbourhood of $e$. Since $H \subset G$ is a subgroup
  it follows that $H$ is open.
-@@ -5820,7 +5827,7 @@
+@@ -5820,7 +5830,7 @@
  Suppose that $H \subset G$ is an open subgroup. Since $G$ is quasi-compact
  we see that the index of $H$ in $G$ is finite. Say
  $G = Hg_1 \cup \ldots \cup Hg_n$. Then
@@ -14062,7 +14545,7 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  an open normal subgroup contained in $H$. Since $N$ also has finite
  index we see that $G \to G/N$ is a surjection to a finite discrete
  topological group.
-@@ -5865,7 +5872,7 @@
+@@ -5865,7 +5875,7 @@
  We will use the argument of
  Categories, Remark \ref{categories-remark-how-to-use-it} to prove
  existence of colimits. Namely, suppose
@@ -14071,3 +14554,21 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..ba380ada065ce35181dda59e34f21518
  into the category $\textit{TopGroup}$ of topological groups.
  Then we can consider
  $$
+@@ -5925,7 +5935,7 @@
+ Let $R_i$, $i \in I$ be a collection of topological rings.
+ Take the usual product $R = \prod R_i$ with the product topology.
+ Since $R \times R = \prod (R_i \times R_i)$ as a topological space
+-(because products commutes with products in any category), we
++(because products commute with products in any category), we
+ see that addition and multiplication on $R$ are continuous. Let
+ $a, b : R \to R'$ be two homomorphisms of topological rings.
+ Then as the equalizer we can simply take the equalizer of $a$ and $b$
+@@ -5982,7 +5992,7 @@
+ Let $M_i$, $i \in I$ be a collection of topological modules over $R$.
+ Take the usual product $M = \prod M_i$ with the product topology.
+ Since $M \times M = \prod (M_i \times M_i)$ as a topological space
+-(because products commutes with products in any category), we
++(because products commute with products in any category), we
+ see that addition on $M$ is continuous. Similarly for multiplication
+ $R \times M \to M$.
+ Let $a, b : M \to M'$ be two homomorphisms of topological modules over $R$.

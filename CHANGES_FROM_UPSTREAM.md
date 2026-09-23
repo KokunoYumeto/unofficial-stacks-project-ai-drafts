@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **52**
-- Stable correction IDs: **1,423**
-- Displayed exact change hunks: **1,725**
-- Manifest/source-map exact operations: **1,657**
+- Admitted errata batches: **53**
+- Stable correction IDs: **1,477**
+- Displayed exact change hunks: **1,789**
+- Manifest/source-map exact operations: **1,721**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **34**
-- Registry SHA-256: `BCCED45ABB011DC53D44C47029DEA5ACDC7FAC9AF7AB7DC37B8D41D13F87BF0F`
+- Affected source paths: **35**
+- Registry SHA-256: `D88D13591B14BD925EE6C36B1292C6EF7DCD931D3C5162659F2200E91B92D586`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -41140,5 +41140,1526 @@ Pinned-official lines `9661-9661`; bytes `344293:344317`.
 ````
 
 Original SHA-256 `6281B861AE4801A2DA791B30F3BF10D897E15D5C6C6916DA37C8918972FC090E`; replacement SHA-256 `F768BF27ED4D4E59D08F768C1BFF21379AEE8D547020BEFED28F6F5B0A5FF90D`.
+
+</details>
+
+## stacks-errata-a04446e-r53
+
+54 stable IDs · 64 displayed change hunks · admitted 2026-09-23T04:24:52.625156Z.
+
+<details id="mc-stk-err-1688">
+<summary><code>MC-STK-ERR-1688 — introduction.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1688`; producer ID: `INTRODUCTION-RECON-001`
+- Bound source locator: `introduction.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/introduction.tex#L41) · [Integrated source](introduction.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use singular agreement with a key feature while preserving the following hyperlink description.
+- Adverse evidence: The plural complement explains attraction to are. This is readability editing, not a mathematical defect.
+
+### Change 1: `MC-STK-ERR-1688-OP1`
+
+Pinned-official lines `41-41`; bytes `1134:1211`.
+
+````diff
+- We expect this material to be read online as a key feature are the hyperlinks
++ We expect this material to be read online, as a key feature is the set of hyperlinks
+````
+
+Original SHA-256 `4D1CCF17AE3827550B185ED7E0E11DCC508DEBEBF04E4A0FEABFCFCF7D768250`; replacement SHA-256 `137235223D6D7BB73E0B4228E9F56C94106185E3372E2416683D626ED08CC048`.
+
+</details>
+
+<details id="mc-stk-err-1689">
+<summary><code>MC-STK-ERR-1689 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1689`; producer ID: `TOPOLOGY-RECON-001`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L143) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Restore the finite clause introducing the equivalent neighbourhood conditions.
+- Adverse evidence: The preceding product condition is correct; this is sentence repair.
+
+### Change 1: `MC-STK-ERR-1689-OP1`
+
+Pinned-official lines `143-143`; bytes `4556:4576`.
+
+````diff
+- In other words, with
++ In other words, we have
+````
+
+Original SHA-256 `A31AA1D14A584BF87A4ABB682A72AB680118DF399C8D8BAD4545D2CA2CC1B861`; replacement SHA-256 `F2A9111B1C270FDA244FAEE17D24AC0E93AF2E920A0EA194FBB63E8FB07BA1BA`.
+
+</details>
+
+<details id="mc-stk-err-1690">
+<summary><code>MC-STK-ERR-1690 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1690`; producer ID: `TOPOLOGY-RECON-002`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L204) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply the article before the singular count noun.
+- Adverse evidence: All hypotheses and equivalences remain unchanged.
+
+### Change 1: `MC-STK-ERR-1690-OP1`
+
+Pinned-official lines `204-204`; bytes `6181:6198`.
+
+````diff
+- be continuous map
++ be a continuous map
+````
+
+Original SHA-256 `1867D828F4D5318325222B92F1BB039DC63E6CD1357FA2247A4211969F7246D1`; replacement SHA-256 `D7C7CB1D45E1815F165F1CCA62B95A51BD5613D596F26337A2933099DE21EA61`.
+
+</details>
+
+<details id="mc-stk-err-1691">
+<summary><code>MC-STK-ERR-1691 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1691`; producer ID: `TOPOLOGY-RECON-003`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L249) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Repair the independently repeated missing article.
+- Adverse evidence: This is a separate source occurrence, not a second mathematical result.
+
+### Change 1: `MC-STK-ERR-1691-OP1`
+
+Pinned-official lines `249-249`; bytes `8288:8305`.
+
+````diff
+- be continuous map
++ be a continuous map
+````
+
+Original SHA-256 `1867D828F4D5318325222B92F1BB039DC63E6CD1357FA2247A4211969F7246D1`; replacement SHA-256 `D7C7CB1D45E1815F165F1CCA62B95A51BD5613D596F26337A2933099DE21EA61`.
+
+</details>
+
+<details id="mc-stk-err-1692">
+<summary><code>MC-STK-ERR-1692 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1692`; producer ID: `TOPOLOGY-RECON-006`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L555) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply the article before the modified singular noun.
+- Adverse evidence: No map property is added or removed.
+
+### Change 1: `MC-STK-ERR-1692-OP1`
+
+Pinned-official lines `555-555`; bytes `19230:19265`.
+
+````diff
+- be surjective, open, continuous map
++ be a surjective, open, continuous map
+````
+
+Original SHA-256 `652093C3551B50AE59BDFECF2B08A647294CC6FB90F1882B3576347BFF1F25A0`; replacement SHA-256 `CCFF96C0D16099483AD54508BFEF0FED8723FB23351213441C4C5799FDA0B3C0`.
+
+</details>
+
+<details id="mc-stk-err-1693">
+<summary><code>MC-STK-ERR-1693 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1693`; producer ID: `TOPOLOGY-RECON-007`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L585) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply the article at the parallel closed-map statement.
+- Adverse evidence: The hypotheses and conclusion are unchanged.
+
+### Change 1: `MC-STK-ERR-1693-OP1`
+
+Pinned-official lines `585-585`; bytes `20540:20577`.
+
+````diff
+- be surjective, closed, continuous map
++ be a surjective, closed, continuous map
+````
+
+Original SHA-256 `5B196B7A52DA80B7C42FD25B1227135316D1A8B59D9E2E58B3ACEDA53C21FFA4`; replacement SHA-256 `B166B7AD2C6CC8171E79990708DE0C869DBC7FD7CBDC25712728FE9832BACA09`.
+
+</details>
+
+<details id="mc-stk-err-1694">
+<summary><code>MC-STK-ERR-1694 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1694`; producer ID: `TOPOLOGY-RECON-008`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L646) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: The construction Let A requires be.
+- Adverse evidence: The proof's separate inverse-image problem is recorded next.
+
+### Change 1: `MC-STK-ERR-1694-OP1`
+
+Pinned-official lines `646-646`; bytes `22443:22467`.
+
+````diff
+- $A \subset f(E)$ an open
++ $A \subset f(E)$ be an open
+````
+
+Original SHA-256 `6F13054ABF21576E141AEF444499525029E84E1BE4CBABCEF28B554AE24D4C00`; replacement SHA-256 `CB78EC337B9C0FF32B1F49257590096C2516D03D7A4EE30135B45B9BEC625051`.
+
+</details>
+
+<details id="mc-stk-err-1695">
+<summary><code>MC-STK-ERR-1695 — topology.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1695`; producer ID: `TOPOLOGY-RECON-009`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L645) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: An unrestricted f-preimage of A can include points outside E. Explicit reduction to E to f(E) makes all later preimages clopen in the connected domain and all existing image equalities correctly typed.
+- Adverse evidence: The intended theorem is true; a reader might tacitly restrict f. One reduction is smaller than editing all inverse-image expressions separately.
+
+### Change 1: `MC-STK-ERR-1695-OP1`
+
+Pinned-official lines `645-645`; bytes `22425:22438`.
+
+````diff
+- \begin{proof}
++ \begin{proof}
++ Replacing $f$ by its continuous restriction $E \to f(E)$,
++ we may assume $X = E$ and $Y = f(E)$.
+````
+
+Original SHA-256 `876233B8A03F24D0857A26D052957E71A7978DBE28514F9DE6CD46217EF0121B`; replacement SHA-256 `943B517DF1A99681673254702E0801C0779BAFEE775773455F1AC9ABC14A07F9`.
+
+</details>
+
+<details id="mc-stk-err-1696">
+<summary><code>MC-STK-ERR-1696 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1696`; producer ID: `TOPOLOGY-RECON-010`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L741) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Separate the connectedness premise from the resulting alternative.
+- Adverse evidence: Both mathematical facts were already correctly stated.
+
+### Change 1: `MC-STK-ERR-1696-OP1`
+
+Pinned-official lines `741-741`; bytes `26688:26712`.
+
+````diff
+- is connected we conclude
++ is connected, and we conclude
+````
+
+Original SHA-256 `C8148FAC35C4E60734C5E4A61F8CD3BADF62CE3E741B90BC74F00530E55C75D7`; replacement SHA-256 `DD480489C9158E66345583E2863AE9EA5C95B2B3FFB5120C1241E5EAD3A53227`.
+
+</details>
+
+<details id="mc-stk-err-1697">
+<summary><code>MC-STK-ERR-1697 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1697`; producer ID: `TOPOLOGY-RECON-011`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L832) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Give the introduced system a grammatical defining clause without asserting uniqueness.
+- Adverse evidence: Merely adding us would leave 'write N the fundamental system' awkward.
+
+### Change 1: `MC-STK-ERR-1697-OP1`
+
+Pinned-official lines `832-832`; bytes `30106:30185`.
+
+````diff
+- For all $x\in X$ let write $\mathcal{N}(x)$ the fundamental system of connected
++ For each $x \in X$, let $\mathcal{N}(x)$ be a fundamental system of connected
+````
+
+Original SHA-256 `F2A52C76E8096EBD6CC67B0E183F41EF314A8D1533F3EF5BED227584BF335E20`; replacement SHA-256 `6EC87B4C7864E83CB2D379BAFEB66ED75B2A81257E5859A6BE89753427C2E95E`.
+
+</details>
+
+<details id="mc-stk-err-1698">
+<summary><code>MC-STK-ERR-1698 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1698`; producer ID: `TOPOLOGY-RECON-012`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L845) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use the nonpersonal antecedent and plural noun.
+- Adverse evidence: The argument for openness is unchanged.
+
+### Change 1: `MC-STK-ERR-1698-OP1`
+
+Pinned-official lines `845-845`; bytes `30894:30911`.
+
+````diff
+- each of his point
++ each of its points
+````
+
+Original SHA-256 `ED565FB221D88B14A57B9B27D48D8803C1E4E2063C66FEA08F1C2F59D3613530`; replacement SHA-256 `8220EE11BD6F00A7C1D1A46368581EE9DADE3005C8965E10529B66F078B9B3B9`.
+
+</details>
+
+<details id="mc-stk-err-1699">
+<summary><code>MC-STK-ERR-1699 — topology.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1699`; producer ID: `TOPOLOGY-RECON-013`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1131-L1132) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: The nonempty open intersection meets the dense set in (c). Saying y lies in it makes both intersections with the fibre nonempty.
+- Adverse evidence: The original intention is recoverable; no separately defined correspondence or new irreducibility result is needed.
+
+### Change 1: `MC-STK-ERR-1699-OP1`
+
+Pinned-official lines `1131-1131`; bytes `42806:42832`.
+
+````diff
+- there is a point $y$ which
++ there is a point $y$ in this intersection
+````
+
+Original SHA-256 `92320DF281FEEFB7956603937418EA27FD5EDE8E932CB5E2104D38E38EBB0BE7`; replacement SHA-256 `09FE8FF72B1EC58E601DD38BC59DBA28E4D951B418231A144E33771FCCC2A539`.
+
+### Change 2: `MC-STK-ERR-1699-OP2`
+
+Pinned-official lines `1132-1132`; bytes `42833:42896`.
+
+````diff
+- corresponds to a point of this intersection such that the fibre
++ such that the fibre
+````
+
+Original SHA-256 `49428A865569353FE5533414265B61345F63F52193BE85DAC027AD687AEAAFAB`; replacement SHA-256 `C67A83056C5934708A5582154BD259E63D5BCB0F4CDAFB4C828C00A7E8526991`.
+
+</details>
+
+<details id="mc-stk-err-1700">
+<summary><code>MC-STK-ERR-1700 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1700`; producer ID: `TOPOLOGY-RECON-015`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1199) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: The subject is the singular collection of U-prime.
+- Adverse evidence: The topology construction is unchanged.
+
+### Change 1: `MC-STK-ERR-1700-OP1`
+
+Pinned-official lines `1199-1199`; bytes `45464:45484`.
+
+````diff
+- $U'$ form a topology
++ $U'$ forms a topology
+````
+
+Original SHA-256 `3DE1B2A52C0D8EFAB9BFC36833210AA947C81F9E97DC1FD07A2CE890D59816BB`; replacement SHA-256 `6E6F20C3019DD441AC29BD4C67272F81C56200780EF63648FC1C8ECF177F9FCB`.
+
+</details>
+
+<details id="mc-stk-err-1701">
+<summary><code>MC-STK-ERR-1701 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1701`; producer ID: `TOPOLOGY-RECON-016`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1225) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Explicitly bind j and avoid an article directly before the inequality.
+- Adverse evidence: The bounds already identify the intended variable.
+
+### Change 1: `MC-STK-ERR-1701-OP1`
+
+Pinned-official lines `1225-1225`; bytes `46720:46731`.
+
+````diff
+- there is an
++ there is an index $j$ with
+````
+
+Original SHA-256 `B2687011F1DB44058C0CBB408891BBDB55DB89DE9CEE7D683884971963660B99`; replacement SHA-256 `6F7F5A60598F12150D7D4F334EDF28314932CA107CF02D72C24690A2CB9F01EA`.
+
+</details>
+
+<details id="mc-stk-err-1702">
+<summary><code>MC-STK-ERR-1702 — topology.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1702`; producer ID: `TOPOLOGY-RECON-018`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1245) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Bind X before referring to its closed subsets.
+- Adverse evidence: The standard intended descending-chain definition is unchanged.
+
+### Change 1: `MC-STK-ERR-1702-OP1`
+
+Pinned-official lines `1245-1245`; bytes `47403:47432`.
+
+````diff
+- A topological space is called
++ A topological space $X$ is called
+````
+
+Original SHA-256 `ED83EA60AEFFB4B91C03268019DA44B5FA7F8CC9EBA3F833EDD644D85DC92284`; replacement SHA-256 `7FAE3C072EE32B78BCC6DF420516441F96B49C9E7C795951C05272552E3BA75E`.
+
+</details>
+
+<details id="mc-stk-err-1703">
+<summary><code>MC-STK-ERR-1703 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1703`; producer ID: `TOPOLOGY-RECON-023`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1336-L1341) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply be after Let in the first construction and is for the second sequence subject.
+- Adverse evidence: The decreasing families and stabilization argument are unchanged.
+
+### Change 1: `MC-STK-ERR-1703-OP1`
+
+Pinned-official lines `1336-1336`; bytes `51180:51214`.
+
+````diff
+- \mathbf{N}}$ a decreasing sequence
++ \mathbf{N}}$ be a decreasing chain
+````
+
+Original SHA-256 `123796779EF67E41CB4E90A589E726CBB2FBE0EF72A719751140A2A39C7511DB`; replacement SHA-256 `F86C7B7E2DCCB03F1F622F2B3547EF91D05D98D151C7EECA8513C9E3C57017F1`.
+
+### Change 2: `MC-STK-ERR-1703-OP2`
+
+Pinned-official lines `1341-1341`; bytes `51513:51538`.
+
+````diff
+- \mathbf{N}}$ a decreasing
++ \mathbf{N}}$ is a decreasing
+````
+
+Original SHA-256 `15A4A531AEFE11744C4160ACDBA4F6475C15463116F2D56FF6F9FFED61D219D6`; replacement SHA-256 `D4F9980E80381FEAF276178D4C60E39B773844E2CC701F96FEE0A278E8EFC646`.
+
+</details>
+
+<details id="mc-stk-err-1704">
+<summary><code>MC-STK-ERR-1704 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1704`; producer ID: `TOPOLOGY-RECON-026`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1580) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Remove the malformed imperative auxiliary.
+- Adverse evidence: The catenarity assumption remains identical.
+
+### Change 1: `MC-STK-ERR-1704-OP1`
+
+Pinned-official lines `1580-1580`; bytes `59656:59667`.
+
+````diff
+- Let suppose
++ Suppose
+````
+
+Original SHA-256 `9328CF3CE7F5B8C4B22C815F51B0ECE99A2BCD99D7EA4D10A72D5163D4EFF09F`; replacement SHA-256 `1EBF1EC95A6203D912ED1B770E7FDA05457BCB351AE06C2642E731D9FB2451E5`.
+
+</details>
+
+<details id="mc-stk-err-1705">
+<summary><code>MC-STK-ERR-1705 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1705`; producer ID: `TOPOLOGY-RECON-027`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1600-L1601) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use a transitive verb in the first clause and an adjectival phrase modifying length in the second.
+- Adverse evidence: Blindly deleting to twice would leave the second sentence ungrammatical; the two occurrences need different repairs.
+
+### Change 1: `MC-STK-ERR-1705-OP1`
+
+Pinned-official lines `1600-1600`; bytes `60507:60516`.
+
+````diff
+- equals to
++ equals
+````
+
+Original SHA-256 `3635B5DA6310CEBEDD82C00EFE1B3DD557F24948109B18125B2B93B3E533F604`; replacement SHA-256 `E93CB41D4A7D2395D9BDFE4D8616F9B52762523BB44E75BF7701CD9D2E0D1CB7`.
+
+### Change 2: `MC-STK-ERR-1705-OP2`
+
+Pinned-official lines `1601-1601`; bytes `60573:60602`.
+
+````diff
+- the same length equals to the
++ the same length, equal to the
+````
+
+Original SHA-256 `E4EB066286C1B2591775B4DB9528882B81B1CBACE4B1ED1E3DF1DE24AD61BD42`; replacement SHA-256 `91BF1977092E4C96880B9B3E122D4E8AD655063F21C3BA12A6CBE1FF5407EF73`.
+
+</details>
+
+<details id="mc-stk-err-1706">
+<summary><code>MC-STK-ERR-1706 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1706`; producer ID: `TOPOLOGY-RECON-028`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1607) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use the logical-direction term and remove the misplaced colon.
+- Adverse evidence: Reciprocal can be deciphered as a French-influenced term here; the proof is not claiming a numerical reciprocal.
+
+### Change 1: `MC-STK-ERR-1706-OP1`
+
+Pinned-official lines `1607-1607`; bytes `60750:60800`.
+
+````diff
+- For the reciprocal, we show by induction that : if
++ For the converse, we show by induction that if
+````
+
+Original SHA-256 `631692A7BE152CFC380A2A1070EAA1A0442079ECB5B845471FD523FC69928446`; replacement SHA-256 `67C99E35A262976067C34380304F589B3E5DED30630CE59E948217B7511AC437`.
+
+</details>
+
+<details id="mc-stk-err-1707">
+<summary><code>MC-STK-ERR-1707 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1707`; producer ID: `TOPOLOGY-RECON-029`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1682) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Repair plural agreement and identify U_i directly as the open neighbourhoods.
+- Adverse evidence: Opens is itself valid mathematical English; this report is accepted for agreement and clarity, not a ban on that noun.
+
+### Change 1: `MC-STK-ERR-1707-OP1`
+
+Pinned-official lines `1682-1682`; bytes `63282:63328`.
+
+````diff
+- then there exists opens $E_i \subset U_i$ with
++ then there exist open subsets $U_i$ with $E_i \subset U_i$ and
+````
+
+Original SHA-256 `9B82D37058F5C453F9A4A5C7916304F679E3F7F076B3796AD100B82FB2D6119B`; replacement SHA-256 `2E7213E0BAE3604F8082F289EE3EF7194320DD652BD8CD7DCA6B788CA7595ED8`.
+
+</details>
+
+<details id="mc-stk-err-1708">
+<summary><code>MC-STK-ERR-1708 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1708`; producer ID: `TOPOLOGY-RECON-031`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1739) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use the noun complement for the complement of the displayed covering.
+- Adverse evidence: The following contraposition argument is correct; do not adopt the producer's larger redundant rewrite.
+
+### Change 1: `MC-STK-ERR-1708-OP1`
+
+Pinned-official lines `1739-1739`; bytes `65475:65495`.
+
+````diff
+- The complementary is
++ The complement is
+````
+
+Original SHA-256 `BF7A484C58E4D6BAB50058022111CE2FDE65911C9FD14A32CE211859B4BE2E09`; replacement SHA-256 `DB655BF805BE6E1C9113D1916535E5F902D96BD3573C196F829490B3D7FB62A8`.
+
+</details>
+
+<details id="mc-stk-err-1709">
+<summary><code>MC-STK-ERR-1709 — topology.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1709`; producer ID: `TOPOLOGY-RECON-035`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1956) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Name X before the proof uses it.
+- Adverse evidence: The theorem's conventional intended quantification is unambiguous; this is a notation clarification.
+
+### Change 1: `MC-STK-ERR-1709-OP1`
+
+Pinned-official lines `1956-1956`; bytes `74663:74718`.
+
+````diff
+- A quasi-compact locally Noetherian space is Noetherian.
++ A quasi-compact locally Noetherian space $X$ is Noetherian.
+````
+
+Original SHA-256 `0339B2B771CC57A0A170A20A68E1B6153D6A2903809E694827E5EE308F57FEC7`; replacement SHA-256 `A88ACE4C54ADF2AC6AAA63DC223500D65D03760F53E966D6C6BD5FA8CC721EB2`.
+
+</details>
+
+<details id="mc-stk-err-1710">
+<summary><code>MC-STK-ERR-1710 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1710`; producer ID: `TOPOLOGY-RECON-037`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L1992) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Separate the contradiction apposition from the preceding assertion.
+- Adverse evidence: The finite subcover argument is unchanged.
+
+### Change 1: `MC-STK-ERR-1710-OP1`
+
+Pinned-official lines `1992-1992`; bytes `76348:76378`.
+
+````diff
+- U_{i_{j, l}}$ a contradiction.
++ U_{i_{j, l}}$, a contradiction.
+````
+
+Original SHA-256 `A557B9C77FF9331F78357B44E628BCE9FD58F5AAEAC13930358CF61F1E83A6F1`; replacement SHA-256 `9206363F5DB6C8012FE4137385A240186B548D1EDC2FF8EBA0A56830096A63B8`.
+
+</details>
+
+<details id="mc-stk-err-1711">
+<summary><code>MC-STK-ERR-1711 — topology.tex: — notation_clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1711`; producer ID: `TOPOLOGY-RECON-040`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2102) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Name j explicitly as the varying index in the finite family grouped by i.
+- Adverse evidence: The original restricted union is conventionally understood to vary j; this removes ambiguity rather than changing the constructed V_i.
+
+### Change 1: `MC-STK-ERR-1711-OP1`
+
+Pinned-official lines `2102-2102`; bytes `80704:80724`.
+
+````diff
+- \bigcup_{i = i(x_j)}
++ \bigcup_{j : i(x_j) = i}
+````
+
+Original SHA-256 `89B54C2DD0677A24B91291EE09EB7007F537B8A07E27496E051DC947F4DC11FA`; replacement SHA-256 `D2FF1C902B79656865AF749F78BD110E5FA227FDB5CBD432FCB790ACA5BCB2C9`.
+
+</details>
+
+<details id="mc-stk-err-1712">
+<summary><code>MC-STK-ERR-1712 — topology.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1712`; producer ID: `TOPOLOGY-RECON-041`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2166) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Explicitly name the displayed summands that become V-prime_k in the refinement.
+- Adverse evidence: The original phrase 'other opens ... of the RHS' implicitly identifies the same terms. Classify as an explicit definition, not an absent mathematical construction.
+
+### Change 1: `MC-STK-ERR-1712-OP1`
+
+Pinned-official lines `2166-2166`; bytes `83540:83600`.
+
+````diff
+- in the empty set and the other opens $V_{j_0, k}$ of the RHS
++ in the empty set. Write $V_{j_0, k} = V_{j_0} \cap W_{i_0 \ldots i_p, k}$
++ for $k \in K$. These other opens on the RHS
+````
+
+Original SHA-256 `7B7CE3D064F25336CC0B75513BACFA85A02A33B82A954AF5079DA33BBE858C09`; replacement SHA-256 `02BDF5247E77DD105D732516DBD8EEFB3329E50B79A48606D8FC85ED97520759`.
+
+</details>
+
+<details id="mc-stk-err-1713">
+<summary><code>MC-STK-ERR-1713 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1713`; producer ID: `TOPOLOGY-RECON-045`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2300) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Correct the past-tense verb.
+- Adverse evidence: No quantifier changes.
+
+### Change 1: `MC-STK-ERR-1713-OP1`
+
+Pinned-official lines `2300-2300`; bytes `89529:89544`.
+
+````diff
+- where arbitrary
++ were arbitrary
+````
+
+Original SHA-256 `C9E0FD740788CD62C61FCEEA57F4587AB84D534A9122C6CE6DECBCD554A00E13`; replacement SHA-256 `23F1CD37DBB08805424FA260524EFF84CF4EED91E9AD6F9C0E803202621BCD21`.
+
+</details>
+
+<details id="mc-stk-err-1714">
+<summary><code>MC-STK-ERR-1714 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1714`; producer ID: `TOPOLOGY-RECON-047`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2388) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use singular agreement with basis and the idiom is given by.
+- Adverse evidence: The noun opens in the next line is valid and is retained.
+
+### Change 1: `MC-STK-ERR-1714-OP1`
+
+Pinned-official lines `2388-2388`; bytes `92949:92992`.
+
+````diff
+- A basis for the topology of $\prod X_i$ are
++ A basis for the topology of $\prod X_i$ is given by
+````
+
+Original SHA-256 `778314C3D24E97390B752D250EC1583474E78E7048C5F846C0D046DEC8D41EFE`; replacement SHA-256 `497597D96EAE3084282E76B8384A710029D5D67A97713220D4CFB6F027BEF130`.
+
+</details>
+
+<details id="mc-stk-err-1715">
+<summary><code>MC-STK-ERR-1715 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1715`; producer ID: `TOPOLOGY-RECON-048`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2417) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use the article matching the pronunciation of i.
+- Adverse evidence: The cofilteredness selection is unchanged.
+
+### Change 1: `MC-STK-ERR-1715-OP1`
+
+Pinned-official lines `2417-2417`; bytes `94258:94267`.
+
+````diff
+- pick a $i
++ pick an $i
+````
+
+Original SHA-256 `6839F4599DB4A73FA8D429BFBD30D4D93E88BE3431AEFEFED1EB88954188A283`; replacement SHA-256 `F7CD65713D140EDD1A9D02B5BB8633D6CB52B88418112DCA9224B4DA256FD234`.
+
+</details>
+
+<details id="mc-stk-err-1716">
+<summary><code>MC-STK-ERR-1716 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1716`; producer ID: `TOPOLOGY-RECON-049`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2463) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use the correct article before point.
+- Adverse evidence: The product-cover argument is unchanged.
+
+### Change 1: `MC-STK-ERR-1716-OP1`
+
+Pinned-official lines `2463-2463`; bytes `96059:96074`.
+
+````diff
+- choose an point
++ choose a point
+````
+
+Original SHA-256 `F37A4441A10CB85A310685C09CF1E108A52BC51F4555AA460B6A5B50CC034A5D`; replacement SHA-256 `4B97C2E1F90344B1CC40A870F68C9F8D6C2A4E54795B3214654FD6F690663EB4`.
+
+</details>
+
+<details id="mc-stk-err-1717">
+<summary><code>MC-STK-ERR-1717 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1717`; producer ID: `TOPOLOGY-RECON-051`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2559) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Delete the duplicated article.
+- Adverse evidence: The historical terminology comparison and citation remain unchanged.
+
+### Change 1: `MC-STK-ERR-1717-OP1`
+
+Pinned-official lines `2559-2559`; bytes `99894:99915`.
+
+````diff
+- and a the terminology
++ and the terminology
+````
+
+Original SHA-256 `1E0C46223E6EF2132B45B052C41DE8BD214921F842BDBFDE0FC8EA4F1C1F39F0`; replacement SHA-256 `9B31AEBD22AE5AA09995F299250F04B14D7183F9EB60A66324238EC0EF6DA85E`.
+
+</details>
+
+<details id="mc-stk-err-1718">
+<summary><code>MC-STK-ERR-1718 — topology.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1718`; producer ID: `TOPOLOGY-RECON-054`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L2930) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Retain explicitly the nonemptiness supplied by assumption (2), so Y minus V is a proper closed subset when minimality is invoked.
+- Adverse evidence: The assumption already supplies a nonempty choice, so the theorem and intended proof are not new; this makes an essential choice visible.
+
+### Change 1: `MC-STK-ERR-1718-OP1`
+
+Pinned-official lines `2930-2930`; bytes `113861:113881`.
+
+````diff
+- contains an open $V$
++ contains a nonempty open $V$
+````
+
+Original SHA-256 `53E140E7AE35C40665510FE418ABB2FFF2C05AC87A57914E69242ABDA6B3DE38`; replacement SHA-256 `CA5E31B860446D92828A9487E18DD311A0FDEBF887EA9F876F032382FD0BC0F0`.
+
+</details>
+
+<details id="mc-stk-err-1719">
+<summary><code>MC-STK-ERR-1719 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1719`; producer ID: `TOPOLOGY-RECON-055`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3047-L3063) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Repair the two existential clauses with plural opens.
+- Adverse evidence: Opens is valid mathematical English. A finite number of points permits plural notional agreement; the producer's requested changes there are not required. Accept only the two exists-to-exist corrections.
+
+### Change 1: `MC-STK-ERR-1719-OP1`
+
+Pinned-official lines `3047-3047`; bytes `118989:119007`.
+
+````diff
+- there exists opens
++ there exist opens
+````
+
+Original SHA-256 `CD05559E4C7372F42EE8870BF037D30F0B302A465A287388867F547002278506`; replacement SHA-256 `DB2B395D0AE9976195F71CFB768E2CE5D091C99FFF0B0A858D7E7CFD1B215752`.
+
+### Change 2: `MC-STK-ERR-1719-OP2`
+
+Pinned-official lines `3063-3063`; bytes `119580:119598`.
+
+````diff
+- there exists opens
++ there exist opens
+````
+
+Original SHA-256 `CD05559E4C7372F42EE8870BF037D30F0B302A465A287388867F547002278506`; replacement SHA-256 `DB2B395D0AE9976195F71CFB768E2CE5D091C99FFF0B0A858D7E7CFD1B215752`.
+
+</details>
+
+<details id="mc-stk-err-1720">
+<summary><code>MC-STK-ERR-1720 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1720`; producer ID: `TOPOLOGY-RECON-056`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3105) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Correct the spelling of the French reference label.
+- Adverse evidence: No bibliographic key, item number or page changes.
+
+### Change 1: `MC-STK-ERR-1720-OP1`
+
+Pinned-official lines `3105-3105`; bytes `121130:121140`.
+
+````diff
+- Corrolaire
++ Corollaire
+````
+
+Original SHA-256 `749DD0929303F66EB22320339DBA74C7A1FC2F7E88E90988B2F9AADC9BFC204F`; replacement SHA-256 `ED6DA854B2746AE063D8BA37A3D6CF8CF0A4170827F0BEAF0A2B3A8CF5D8CC03`.
+
+</details>
+
+<details id="mc-stk-err-1721">
+<summary><code>MC-STK-ERR-1721 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1721`; producer ID: `TOPOLOGY-RECON-058`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3129) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: The M set-builder has a stray closing parenthesis after U_i^c. The coordinate pair (J,x) already closes before the separator, and no other opening parenthesis occurs.
+- Adverse evidence: This was independently noticed while reading the three reports about U_K; it is not an additional received report. The set and proof are unchanged.
+
+### Change 1: `MC-STK-ERR-1721-OP1`
+
+Pinned-official lines `3129-3129`; bytes `122061:122069`.
+
+````diff
+- U_i^c)\}
++ U_i^c\}
+````
+
+Original SHA-256 `DE188B26B574220AFEF8192E14863F5FB31144AEC124CFD164B2593464C59ED9`; replacement SHA-256 `9F2F933557B01A6B01794206586710D27C653D3E35BD8E573E8ED99E113FAEAF`.
+
+</details>
+
+<details id="mc-stk-err-1722">
+<summary><code>MC-STK-ERR-1722 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1722`; producer ID: `TOPOLOGY-RECON-060`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3177) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply the article for the fixed map.
+- Adverse evidence: The universally closed implication is unchanged.
+
+### Change 1: `MC-STK-ERR-1722-OP1`
+
+Pinned-official lines `3177-3177`; bytes `123705:123715`.
+
+````diff
+- Assume map
++ Assume the map
+````
+
+Original SHA-256 `246B0ABC1CCD2478FEE542EA8AB63E6BD9D7E2175DBBB1033A4143D2F0126B41`; replacement SHA-256 `695B01FC504BCE05F0BA68F7E016948324F76A72BC4EEC4F0483DC0E5D954127`.
+
+</details>
+
+<details id="mc-stk-err-1723">
+<summary><code>MC-STK-ERR-1723 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1723`; producer ID: `TOPOLOGY-RECON-061`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3344-L3345) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Repair the missing and mistyped articles.
+- Adverse evidence: The closed set and open set retain the same roles.
+
+### Change 1: `MC-STK-ERR-1723-OP1`
+
+Pinned-official lines `3344-3344`; bytes `129685:129701`.
+
+````diff
+- be closed subset
++ be a closed subset
+````
+
+Original SHA-256 `009BECB6CF6E8A96E0F14E3E11CDF52CB0380C281ADC8DB5AB29A63286707473`; replacement SHA-256 `F601146FDCB649E828D42C9B447E667DD5CE892B4E3D291F4CF82D18AE557660`.
+
+### Change 2: `MC-STK-ERR-1723-OP2`
+
+Pinned-official lines `3345-3345`; bytes `129717:129735`.
+
+````diff
+- be and open subset
++ be an open subset
+````
+
+Original SHA-256 `9ED22BC4A5957F9DD1C106BB8F5655C4055F9B4FDB58140245C26C3011E694C5`; replacement SHA-256 `B583DCD62313F060B01461B7767941040712094F3D0B719DFA8CAF82A05CAA3A`.
+
+</details>
+
+<details id="mc-stk-err-1724">
+<summary><code>MC-STK-ERR-1724 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1724`; producer ID: `TOPOLOGY-RECON-062`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3468) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Delete the duplicated copula.
+- Adverse evidence: No finiteness hypothesis changes.
+
+### Change 1: `MC-STK-ERR-1724-OP1`
+
+Pinned-official lines `3468-3468`; bytes `134163:134175`.
+
+````diff
+- is is finite
++ is finite
+````
+
+Original SHA-256 `68FA3DF65FDDC567D3C6D25D8AD6CFC34377FA0EF3B8E92D3DA68987DF138EBE`; replacement SHA-256 `562CF3EC90132E1CDFEDEA66C439FC8257A3F1F7C5DBE622CD2E832FAF7755CE`.
+
+</details>
+
+<details id="mc-stk-err-1725">
+<summary><code>MC-STK-ERR-1725 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1725`; producer ID: `TOPOLOGY-RECON-063`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3490) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Name the three preserved subclasses of the displayed collection directly.
+- Adverse evidence: The original phrase can be decoded as subsets of the set of finite unions; the replacement clarifies that collection-level meaning.
+
+### Change 1: `MC-STK-ERR-1725-OP1`
+
+Pinned-official lines `3490-3490`; bytes `134972:135033`.
+
+````diff
+- the subsets of locally closed, of open and of closed subsets.
++ the classes of locally closed, open, and closed subsets.
+````
+
+Original SHA-256 `75F78EB492BE116B87E7405704FE2BC2B3B4B4AAC76271FB5220033FAA0924D3`; replacement SHA-256 `359AF76DF944558B87BA72AF41422ADE2D59BA6288A69937CE5D7B4319A33EE0`.
+
+</details>
+
+<details id="mc-stk-err-1726">
+<summary><code>MC-STK-ERR-1726 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1726`; producer ID: `TOPOLOGY-RECON-065`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3580-L3581) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Separate the two clauses and give the singular specialization variable a matching quantifier phrase.
+- Adverse evidence: No quantifier scope or specialization relation changes.
+
+### Change 1: `MC-STK-ERR-1726-OP1`
+
+Pinned-official lines `3580-3580`; bytes `137662:137679`.
+
+````diff
+- subset of $X$, if
++ subset of $X$. If
+````
+
+Original SHA-256 `923DD30787F88A25AE7131BB8B583FE71DEF03CA23AFDDDB3C519D15A68396E0`; replacement SHA-256 `F08AB8FBDD7A7D7368AD558485F530F237052ABF707C74EE14716953DD790F5C`.
+
+### Change 2: `MC-STK-ERR-1726-OP2`
+
+Pinned-official lines `3581-3581`; bytes `137778:137790`.
+
+````diff
+- Thus for all
++ Thus for every
+````
+
+Original SHA-256 `32636706C0D761CF2E59884AE8AFBD4CBBB3CC1636DC212F9912B0CABAECB76E`; replacement SHA-256 `44B3F2B54101FE34014A4D82F16BA715BF819432C8B871EB7FBAF8AE9B52695B`.
+
+</details>
+
+<details id="mc-stk-err-1727">
+<summary><code>MC-STK-ERR-1727 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1727`; producer ID: `TOPOLOGY-RECON-067`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3638-L3644) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use a condition-introducing conjunction and plural agreement.
+- Adverse evidence: The two composed lifts and their directions remain unchanged.
+
+### Change 1: `MC-STK-ERR-1727-OP1`
+
+Pinned-official lines `3638-3638`; bytes `140090:140097`.
+
+````diff
+- such as
++ such that
+````
+
+Original SHA-256 `A80ED503763413388BE7A8F15667A8C8ECEAEF2BFF256E5521464768FEA0D412`; replacement SHA-256 `4F2634AAA64272A68265C521F98D4C899490A018D6A75EB036A8C51D4AA18A99`.
+
+### Change 2: `MC-STK-ERR-1727-OP2`
+
+Pinned-official lines `3644-3644`; bytes `140492:140511`.
+
+````diff
+- specialization lift
++ specializations lift
+````
+
+Original SHA-256 `D93F0562A20E7128BFEF7CDD6FB318ED3FC35FDFACE7F38AF2E5E961102E8F12`; replacement SHA-256 `9C6A5A42FBC6CCD1AE231A3AC0A21FAA714E2C4ECBDCD1AD07201916183E674A`.
+
+</details>
+
+<details id="mc-stk-err-1728">
+<summary><code>MC-STK-ERR-1728 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1728`; producer ID: `TOPOLOGY-RECON-068`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3662) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Match the lemma's plural lifting-property wording.
+- Adverse evidence: The chosen point and its lifted specialization are unchanged.
+
+### Change 1: `MC-STK-ERR-1728-OP1`
+
+Pinned-official lines `3662-3662`; bytes `141133:141152`.
+
+````diff
+- specialization lift
++ specializations lift
+````
+
+Original SHA-256 `D93F0562A20E7128BFEF7CDD6FB318ED3FC35FDFACE7F38AF2E5E961102E8F12`; replacement SHA-256 `9C6A5A42FBC6CCD1AE231A3AC0A21FAA714E2C4ECBDCD1AD07201916183E674A`.
+
+</details>
+
+<details id="mc-stk-err-1729">
+<summary><code>MC-STK-ERR-1729 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1729`; producer ID: `TOPOLOGY-RECON-070`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L3775) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Restore the inclusion sign between the ellipsis and the final member of the chain.
+- Adverse evidence: The mixed French report also repeats the already-composed ambient-space repair MC-STK-ERR-0040. Only the missing relation sign remains to be applied.
+
+### Change 1: `MC-STK-ERR-1729-OP1`
+
+Pinned-official lines `3775-3775`; bytes `146056:146074`.
+
+````diff
+- \subset \ldots Z_e
++ \subset \ldots \subset Z_e
+````
+
+Original SHA-256 `EF4E33A06D4CC2D3C58CE08E06D42BE9C8CB6EFA509D97554801B7D9A3EBD8B8`; replacement SHA-256 `A711956FBBB18EE48D0417E676320D8772B0890B7BC4D7CC56C83B4ACDCB350E`.
+
+</details>
+
+<details id="mc-stk-err-1730">
+<summary><code>MC-STK-ERR-1730 — topology.tex: — notation_clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1730`; producer ID: `TOPOLOGY-RECON-075`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4015-L4017) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Make explicit the open complements used to conclude that U lies in both closed nowhere dense sets and hence is empty.
+- Adverse evidence: Precedence conventions can differ; the surrounding proof reveals the intended grouping. These are two operations for one clarification, reported three times.
+
+### Change 1: `MC-STK-ERR-1730-OP1`
+
+Pinned-official lines `4015-4015`; bytes `154295:154326`.
+
+````diff
+- U \setminus U \cap \overline{B}
++ U \setminus (U \cap \overline{B})
+````
+
+Original SHA-256 `E7DEE7563811FF64C2E32CBA5F943C824A0739195E8084B7E63423B56AD43D6B`; replacement SHA-256 `145D82E69FC686305DB20EDA47098D4D885984BC39415EA65CF0AD8AC94BD482`.
+
+### Change 2: `MC-STK-ERR-1730-OP2`
+
+Pinned-official lines `4017-4017`; bytes `154424:154455`.
+
+````diff
+- U \setminus U \cap \overline{A}
++ U \setminus (U \cap \overline{A})
+````
+
+Original SHA-256 `F6E6F7B1D0FB4B6074069CC8D6067E0F57D672BE7B7F2A055A9B457FD62C9CCD`; replacement SHA-256 `D131C1750B88C59A8F9C46B1386FBCC9CCD360A6195FB85828D1B6D2B87D5C43`.
+
+</details>
+
+<details id="mc-stk-err-1731">
+<summary><code>MC-STK-ERR-1731 — topology.tex: — notation_clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1731`; producer ID: `TOPOLOGY-RECON-082`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4583) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Explicitly group the rectangular neighbourhood before intersecting it with Z in the product.
+- Adverse evidence: The product is naturally read as a unit in context, so the report overstates that the original necessarily has a false parse. This is disambiguation, not a new product theorem.
+
+### Change 1: `MC-STK-ERR-1731-OP1`
+
+Pinned-official lines `4583-4583`; bytes `177949:177966`.
+
+````diff
+- Z \cap U \times V
++ Z \cap (U \times V)
+````
+
+Original SHA-256 `B735C708F85AA3552C651C41D69DC6C5A5AD0F9A0AEC22164EEEAAD4F6D6D626`; replacement SHA-256 `C28292D24BB9EE59CE2D8D464EC2A2A3DDDE7AC7EA321D503D17387795922B97`.
+
+</details>
+
+<details id="mc-stk-err-1732">
+<summary><code>MC-STK-ERR-1732 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1732`; producer ID: `TOPOLOGY-RECON-083`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4594) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use singular agreement and the same basis idiom as the earlier product-topology repair.
+- Adverse evidence: Opens is a valid noun and remains unchanged.
+
+### Change 1: `MC-STK-ERR-1732-OP1`
+
+Pinned-official lines `4594-4594`; bytes `178499:178542`.
+
+````diff
+- A basis of the topology of $X \times Y$ are
++ A basis of the topology of $X \times Y$ is given by
+````
+
+Original SHA-256 `637885D4AAEF33FE7F71BB5D5FBAC573A8B30BB30BC4AF14CFA9B5A627083236`; replacement SHA-256 `CB8B925C5DEDD745A617D007956214DB6D2A64E285E444F759223E32D844D9C9`.
+
+</details>
+
+<details id="mc-stk-err-1733">
+<summary><code>MC-STK-ERR-1733 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1733`; producer ID: `TOPOLOGY-RECON-085`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4754) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply the missing ambient-space preposition.
+- Adverse evidence: The sobriety and quasi-compactness argument is unchanged.
+
+### Change 1: `MC-STK-ERR-1733-OP1`
+
+Pinned-official lines `4754-4754`; bytes `185354:185378`.
+
+````diff
+- quasi-compact opens $X'$
++ quasi-compact opens of $X'$
+````
+
+Original SHA-256 `B19DDF0D0B3582C88528174378B0E5FD9E539AFECE56CAE30AA8FF0DA5B9EA2C`; replacement SHA-256 `FB3387268A1EF4363A350AE6FC05D32BC827915CB11125FBDE8B40B4746A4A0A`.
+
+</details>
+
+<details id="mc-stk-err-1734">
+<summary><code>MC-STK-ERR-1734 — topology.tex: — notation_clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1734`; producer ID: `TOPOLOGY-RECON-087`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4851) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Show explicitly that each object of the inverse system is the set difference, closed in the constructible topology.
+- Adverse evidence: The subsequent sentence already identifies the spaces correctly; this removes the ambiguity in the displayed scope of lim.
+
+### Change 1: `MC-STK-ERR-1734-OP1`
+
+Pinned-official lines `4851-4851`; bytes `189382:189434`.
+
+````diff
+- \lim_{a : j \to i} f_a^{-1}(E) \setminus f_a^{-1}(F)
++ \lim_{a : j \to i} (f_a^{-1}(E) \setminus f_a^{-1}(F))
+````
+
+Original SHA-256 `E7803E4E61345A22763312554AC39D2B40A37B64CB6D7D24E7D71397323CC111`; replacement SHA-256 `06E16FD837AA2AB1BA9A95AD6B94CD4B06F4D19CAB0F0047E08CA19A5A655D2D`.
+
+</details>
+
+<details id="mc-stk-err-1735">
+<summary><code>MC-STK-ERR-1735 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1735`; producer ID: `TOPOLOGY-RECON-088`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4894) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Two indexed families of arrows are introduced, requiring the plural noun.
+- Adverse evidence: Neither family nor its directions change.
+
+### Change 1: `MC-STK-ERR-1735-OP1`
+
+Pinned-official lines `4894-4894`; bytes `191535:191547`.
+
+````diff
+- and morphism
++ and morphisms
+````
+
+Original SHA-256 `432D6295EF761E384D2F69BD7BCFF9F1E0F2A04634F0E969333AB215DC3BE0CE`; replacement SHA-256 `A566E16FD2392DB13DBD0D26E1CF02D10471E01B2C37D071EC1326603B701017`.
+
+</details>
+
+<details id="mc-stk-err-1736">
+<summary><code>MC-STK-ERR-1736 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1736`; producer ID: `TOPOLOGY-RECON-089`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L4922) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: A basis here consists of the indicated open subsets, not one singular open.
+- Adverse evidence: The mathematical basis assertion is otherwise correct.
+
+### Change 1: `MC-STK-ERR-1736-OP1`
+
+Pinned-official lines `4922-4922`; bytes `192646:192672`.
+
+````diff
+- by the quasi-compact open,
++ by the quasi-compact opens,
+````
+
+Original SHA-256 `66850C0C8A56A68369EDFE2B08D0F927A5C868F6EED7B9DA5CF32432390910BB`; replacement SHA-256 `77714CCD92B192F93521A0C332E30DA9183B79446C7C4EA3C744AB46152E7E74`.
+
+</details>
+
+<details id="mc-stk-err-1737">
+<summary><code>MC-STK-ERR-1737 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1737`; producer ID: `TOPOLOGY-RECON-092`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L5139) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Supply the conventional designation preposition.
+- Adverse evidence: The compactification definition and subsequent universal property are unchanged.
+
+### Change 1: `MC-STK-ERR-1737-OP1`
+
+Pinned-official lines `5139-5139`; bytes `202081:202114`.
+
+````diff
+- and denote $\beta(X)$ the closure
++ and denote by $\beta(X)$ the closure
+````
+
+Original SHA-256 `C78C2F934C56E85A8905544B4D977BF101654E9BADF89208AF480EEC4385BB87`; replacement SHA-256 `5A230CA5983E8A937BAD3AE4BB2AE1FD7567DB04F27B90E60B624FC3CE78B2DF`.
+
+</details>
+
+<details id="mc-stk-err-1738">
+<summary><code>MC-STK-ERR-1738 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1738`; producer ID: `TOPOLOGY-RECON-096`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L5367) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Use the imperative to select a preimage in the standalone sentence.
+- Adverse evidence: The surjectivity justification and contradiction remain unchanged.
+
+### Change 1: `MC-STK-ERR-1738-OP1`
+
+Pinned-official lines `5367-5367`; bytes `211433:211451`.
+
+````diff
+- Writing $x = f(y)$
++ Write $x = f(y)$
+````
+
+Original SHA-256 `70F5B6AB3E5D6C6DE9E011F2AB9BA42CC15C5CDDB3F95C02360E94D483F4F0B9`; replacement SHA-256 `079C7D8DD9797FBC0D26D5FD76BD29354A49C41AD46319E8D853E0346E159F69`.
+
+</details>
+
+<details id="mc-stk-err-1739">
+<summary><code>MC-STK-ERR-1739 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1739`; producer ID: `TOPOLOGY-RECON-098`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L5427) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Remove the stray article before the named identity map.
+- Adverse evidence: The retract and extremal-disconnectedness argument is unchanged.
+
+### Change 1: `MC-STK-ERR-1739-OP1`
+
+Pinned-official lines `5427-5427`; bytes `214170:214192`.
+
+````diff
+- Thus the $\text{id}_E$
++ Thus $\text{id}_E$
+````
+
+Original SHA-256 `FF260488F5D2F3602376B58D08D43307301CB023BADF692FF416AD497568177C`; replacement SHA-256 `F70089DD6E848A72B8AF01F4322F3C634BD822AB18316E4AE9C6904050A0E8CB`.
+
+</details>
+
+<details id="mc-stk-err-1740">
+<summary><code>MC-STK-ERR-1740 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1740`; producer ID: `TOPOLOGY-RECON-099`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L5448) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Repair the comparative idiom.
+- Adverse evidence: The same cardinal lower bound is retained.
+
+### Change 1: `MC-STK-ERR-1740-OP1`
+
+Pinned-official lines `5448-5448`; bytes `215206:215226`.
+
+````diff
+- bigger or equal than
++ greater than or equal to
+````
+
+Original SHA-256 `65F1FEE0630FF4B57A3C051D2B61C04791B8119ACF90DD6B76F0636D4712F6EE`; replacement SHA-256 `6F0044B647909F4A1EFCC1B23C8B8721127D4B78AEC2D35EEF3516BAD0ABA225`.
+
+</details>
+
+<details id="mc-stk-err-1741">
+<summary><code>MC-STK-ERR-1741 — topology.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r53`
+- Stable ID: `MC-STK-ERR-1741`; producer ID: `TOPOLOGY-RECON-103`
+- Bound source locator: `topology.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex#L5771-L5985) · [Integrated source](topology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r53/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r53/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r53/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r53/replay/independent-review.json)
+- Rationale: Repair plural agreement in all three parallel product-limit proofs.
+- Adverse evidence: One received report covers three independent textual occurrences, not three received reports.
+
+### Change 1: `MC-STK-ERR-1741-OP1`
+
+Pinned-official lines `5771-5771`; bytes `227271:227288`.
+
+````diff
+- products commutes
++ products commute
+````
+
+Original SHA-256 `797B4515815779640BBBFA1A2DFDA7F3407D36B259A45EE0A9E33A6E57C217F3`; replacement SHA-256 `5F41A088347D8569E052269A6275167354898DDFE1C0962853B277BB1DEEA6E1`.
+
+### Change 2: `MC-STK-ERR-1741-OP2`
+
+Pinned-official lines `5928-5928`; bytes `234004:234021`.
+
+````diff
+- products commutes
++ products commute
+````
+
+Original SHA-256 `797B4515815779640BBBFA1A2DFDA7F3407D36B259A45EE0A9E33A6E57C217F3`; replacement SHA-256 `5F41A088347D8569E052269A6275167354898DDFE1C0962853B277BB1DEEA6E1`.
+
+### Change 3: `MC-STK-ERR-1741-OP3`
+
+Pinned-official lines `5985-5985`; bytes `236523:236540`.
+
+````diff
+- products commutes
++ products commute
+````
+
+Original SHA-256 `797B4515815779640BBBFA1A2DFDA7F3407D36B259A45EE0A9E33A6E57C217F3`; replacement SHA-256 `5F41A088347D8569E052269A6275167354898DDFE1C0962853B277BB1DEEA6E1`.
 
 </details>
