@@ -13,7 +13,7 @@ TREE = '3feeb703b931a6e7259782c10e7d1575adc83e5e'
 PRIOR = 'b74477a0946b25f33e4485c6948389155e136675'
 WRITER = '01a0cc46-4ba8-77b1-9c55-33449e55fea7'
 PREFIX = 'ai-integrated/candidates/commons/stacks/errata/r54'
-BATCH_HASH = 'BEBE80CC3CA9638B4035BCBB70849744357C66C85DB342520C230D7CCCE26A8E'
+BATCH_HASH = '4A45CCAF3642576741E248932D2B3BE9536CE814831F9F70EB3A3AF619461C9D'
 
 
 def main():
@@ -74,6 +74,7 @@ def main():
             write(candidate/'evidence'/name, (CONTROL/name).read_bytes())
         if a.action == 'revise':
             write(candidate/'evidence/initial-build-regression.json', (CONTROL/'R54_INITIAL_BUILD_REGRESSION_20260923.json').read_bytes())
+            write(candidate/'evidence/v2-build-regression.json', (CONTROL/'R54_V2_BUILD_REGRESSION_20260923.json').read_bytes())
         units, operations, maps, decisions, formula = [], [], [], [], []
         original_ops = {name: [o for u in batch['units'] if u['source'] == name for o in u['operations']] for name in sources}
         for i, u in enumerate(batch['units']):
