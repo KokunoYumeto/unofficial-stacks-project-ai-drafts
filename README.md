@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,489 historical correction IDs are accounted for; 1,487 effective textual
+  The 1,518 historical correction IDs are accounted for; 1,516 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -141,7 +141,17 @@ and [chapter PDFs with complete editable sources](ai-integrated/candidates/commo
 are available. The Sheaves patch and combined fixes-only download include
 all sixteen edits and retain the earlier corrections.
 
-R52/R53/R54 review, correction preparation, builds and visual checks, and current
+R55 adds **29 proposed Sites and Sheaves changes**: 22 copyedits, five
+source corrections and two clarifications. The corrections restore the
+cohomology-set terminology, a sheafification sign, a presheaf target,
+a transition-map index and the covering-sieve references used in two proofs.
+The clarifications specify composition grouping and an element-to-stalk
+assignment. [Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r55/REVIEW.md)
+and [chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r55/README.md)
+are available. The Sites patch and combined fixes-only download contain
+all 35 edits and retain the 107 earlier Sites corrections.
+
+R52/R53/R54/R55 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

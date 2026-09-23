@@ -31,7 +31,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [simplicial.tex](reviews/simplicial.md) — 11 correction units.
 - [sites-cohomology.tex](reviews/sites-cohomology.md) — 80 correction units.
 - [sites-modules.tex](reviews/sites-modules.md) — 31 correction units.
-- [sites.tex](reviews/sites.md) — 107 correction units.
+- [sites.tex](reviews/sites.md) — 136 correction units.
 - [smoothing.tex](reviews/smoothing.md) — 30 correction units.
 - [spaces-cohomology.tex](reviews/spaces-cohomology.md) — 7 correction units.
 - [spaces-duality.tex](reviews/spaces-duality.md) — 38 correction units.

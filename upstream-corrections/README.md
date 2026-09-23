@@ -1,6 +1,6 @@
 # Corrections only: review or reuse without adopting this fork
 
-**1,487 effective textual correction units across 34 chapters.**
+**1,516 effective textual correction units across 34 chapters.**
 Download one chapter patch or the combined patch. You do not need to clone this
 repository, import its history, or take any of its added theorems.
 
@@ -56,7 +56,7 @@ editing or interactive staging in your own checkout.
 | `simplicial.tex` | 11 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/simplicial.patch) | [entries](reviews/simplicial.md) |
 | `sites-cohomology.tex` | 80 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sites-cohomology.patch) | [entries](reviews/sites-cohomology.md) |
 | `sites-modules.tex` | 31 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sites-modules.patch) | [entries](reviews/sites-modules.md) |
-| `sites.tex` | 107 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sites.patch) | [entries](reviews/sites.md) |
+| `sites.tex` | 136 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sites.patch) | [entries](reviews/sites.md) |
 | `smoothing.tex` | 30 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/smoothing.patch) | [entries](reviews/smoothing.md) |
 | `spaces-cohomology.tex` | 7 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-cohomology.patch) | [entries](reviews/spaces-cohomology.md) |
 | `spaces-duality.tex` | 38 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-duality.patch) | [entries](reviews/spaces-duality.md) |
@@ -69,8 +69,8 @@ editing or interactive staging in your own checkout.
 
 ## What is and is not included
 
-The 1,489 historical IDs in R1–R54 remain accounted for:
-1,487 effective textual units are exported; one earlier correction was
+The 1,518 historical IDs in R1–R55 remain accounted for:
+1,516 effective textual units are exported; one earlier correction was
 superseded by its explicitly recorded replacement, and one fork-specific tag
 allocation is excluded. No unofficial permanent tags are proposed for upstream.
 The original [13-item readable selection](../possible-fixes/README.md) remains available.

@@ -21,11 +21,11 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R54 and the Verdier insertion**: 55
-admitted overlays with 1,501 stable units (1,489 correction IDs and 12 Verdier
+The cumulative source includes **R1–R55 and the Verdier insertion**: 56
+admitted overlays with 1,530 stable units (1,518 correction IDs and 12 Verdier
 units). Admission and source composition are separate checks. The
-[R54 successor receipt](../validation/r54-successor-current.json) binds its
-exact 16-edit source change and validation; its immutable R53 predecessor
+[R55 successor receipt](../validation/r55-successor-current.json) binds its
+exact 35-edit source change and validation; its immutable R54 predecessor
 preserves all earlier source and evidence. The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
@@ -52,8 +52,14 @@ R54 adds 12 proposed Sheaves on Spaces changes: eleven copyedits and one
 clarification spelling out the projection isomorphism and factorization.
 [Each change, chapter proof and complete source](candidates/commons/stacks/errata/r54/README.md)
 is available, and all sixteen edits are included in the fixes-only download.
-R49–R54 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54 review, source
+R55 adds 29 proposed Sites and Sheaves changes: 22 copyedits, five source
+corrections and two clarifications. These repair cohomology-set terminology,
+sheafification, a presheaf target, transition notation and covering-sieve
+references, and clarify two displayed maps. [Review and complete editable
+chapter proofs](candidates/commons/stacks/errata/r55/README.md) accompany
+the 35 edits. All 107 earlier Sites corrections remain intact.
+R49–R55 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

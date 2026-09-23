@@ -2090,3 +2090,573 @@ Adverse evidence / qualification: The printed tokens concatenate in source and c
 -choice$ V'
 +choice $V'
 ````
+
+### MC-STK-ERR-1754
+
+`sites.tex` — 583; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L583) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Insert the missing possessive apostrophe and state that the two constructed maps are inverses. The map constructions and the adjunction statement remain unchanged.
+
+Adverse evidence / qualification: The defect is grammatical; the existing proof already specifies maps in both directions. No new assertion or independent proof of the adjunction is claimed.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-verify they are each others inverse.
++verify that they are each other's inverses.
+````
+
+### MC-STK-ERR-1755
+
+`sites.tex` — 781; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L781) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Remove the singular article before the coordinated plural nouns presheaves and sheaves. Preserve the existing comparison and its reference.
+
+Adverse evidence / qualification: The singular word notion can refer collectively to both kinds of object; changing it to notions is unnecessary.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-a presheaves and sheaves
++presheaves and sheaves
+````
+
+### MC-STK-ERR-1756
+
+`sites.tex` — 801; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L801) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Delete the first by in replace by G-Sets by a full subcategory, leaving the intended category replacement and both set-theoretic references intact.
+
+Adverse evidence / qualification: No size convention, category, action or covering changes; the two by tokens are a grammatical duplication.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-We first replace by
++We first replace
+````
+
+### MC-STK-ERR-1757
+
+`sites.tex` — 1310; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L1310) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Use the plural categories as the subject of are equal, referring to the two sheaf categories in the preceding inclusions.
+
+Adverse evidence / qualification: This agreement repair changes none of the covering conditions or inclusions.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-the category of sheaves are equal.
++the categories of sheaves are equal.
+````
+
+### MC-STK-ERR-1758
+
+`sites.tex` — 1333; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L1333) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Attach the refinement data to the chosen family with with the refinement given by, preserving alpha and every component f_j.
+
+Adverse evidence / qualification: The argument is mathematically recoverable; this repairs the grammatical attachment of the already specified data.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+- and refinement given
++, with the refinement given
+````
+
+### MC-STK-ERR-1759
+
+`sites.tex` — 1635, 2658, 2670; source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L1635-L2670) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The definition makes H^0 an equalizer of sets for a set-valued presheaf and supplies no group operations. This cannot uniformly be a group: on the category with one object and its identity, use only the identity covering and let F take the empty set. Its restriction is the identity of the empty set; the sheaf condition for the identity covering holds, and H^0 of that covering is empty. A group must contain an identity element, so this H^0 is not a group. The identity functor of the same site gives the same counterexample at the quasi-continuous loci. Replace group/groups by set/sets in all three reported phrases.
+
+Adverse evidence / qualification: Group-valued presheaves can give groups, but the stated hypotheses allow every set-valued presheaf, including this example. No equalizer, map, hypothesis or sheafification construction changes.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-cohomology group
++cohomology set
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-cohomology group
++cohomology set
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-groups.
++sets.
+````
+
+### MC-STK-ERR-1760
+
+`sites.tex` — 3342; source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L3342) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Write v:V_c to U_alpha(c) for the refinement map. Applying sheafification to the induced map of representable presheaves gives h_Vc-sharp to h_Ualpha(c)-sharp. Since F_iota(alpha(c)) is a sheaf, the section s_alpha(c) corresponds by Yoneda and the sheafification adjunction to a unique map from h_Ualpha(c)-sharp to that sheaf. Composing these two maps and the given map to h_U-sharp corresponds to the restriction of the image of s_alpha(c), which is id_U restricted to V_c. By the same adjunction/Yoneda bijection this is exactly the map h_Vc-sharp to h_U-sharp induced by V_c to U. The added marker makes the displayed chain this actual chain of sheaf morphisms.
+
+Adverse evidence / qualification: The site is arbitrary and is not assumed subcanonical, so the intermediate representable need not already be a sheaf. Its sheafification cannot be suppressed using a hypothesis absent from the lemma. The required representable-to-sheaf map extends uniquely to its sheafification; the asserted factorization remains the same.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-h_{U_{\alpha(c)}}
++h_{U_{\alpha(c)}}^\#
+````
+
+### MC-STK-ERR-1761
+
+`sites.tex` — 3939; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L3939) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The plural subject compatibilities takes imply, preserving the exact adjunction assertion and all of its indices.
+
+Adverse evidence / qualification: This corrects agreement only; the family of maps and the argument determining it by the identity component are unchanged.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-implies that
++imply that
+````
+
+### MC-STK-ERR-1762
+
+`sites.tex` — 5362; source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L5362) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+At X the presheaf extension of G is the disjoint union of G(X,a) over a:X to U. Applying that functor to G to the terminal presheaf sends (a,s) to (a,*), and its target is the disjoint union of singleton sets indexed by a, canonically h_U(X). This map is natural because restriction sends (a,s) to (a composed with b, G(b)(s)); on the target it sends a to a composed with b. Thus the named gamma factors through j_{U!}^{PSh}*, exactly as the following identification requires. Adding the PSh superscript supplies the actual intermediate object.
+
+Adverse evidence / qualification: The sheaf extension j_{U!}* is h_U sheafified; on an arbitrary site this need not equal h_U. The proof is constructing a presheaf over h_U before sheafification, and no subcanonical assumption identifies those targets.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\to j_{U!}*
++\to j_{U!}^{PSh}*
+````
+
+### MC-STK-ERR-1763
+
+`sites.tex` — 5844, 5942, 5980; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L5844-L5980) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Each singular article introduces one structured collection. Use datum for that single structure, retaining data for collections or the category of such structures. The nearby defining occurrence at 5942 has the same singular article an across the line break and is repaired in the same unit.
+
+Adverse evidence / qualification: The operations change only the noun at the three singular-article occurrences read in context. The constituent sheaves, isomorphisms, cocycle conditions and category of absolute glueing data retain their names and definitions.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-glueing data
++glueing datum
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-glueing data
++glueing datum
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-glueing data
++glueing datum
+````
+
+### MC-STK-ERR-1764
+
+`sites.tex` — 6047; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L6047) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The coordinated objects of the hypotheses are the site and the object of localization. Moving the misplaced on yields on the site or on the object.
+
+Adverse evidence / qualification: Neither hypothesis nor the logical or changes; the correction restores the order of the two prepositions.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-on the site on or the object
++on the site or on the object
+````
+
+### MC-STK-ERR-1765
+
+`sites.tex` — 6155; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L6155) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The subject contains two coordinated restrictions, so its verb is produce. The statement still discusses both the pushforward and extension by the empty set before giving the precise hypothesis below.
+
+Adverse evidence / qualification: No claim that these two functors agree in general is introduced; the next sentence and lemma retain the required condition on U.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-produces back
++produce back
+````
+
+### MC-STK-ERR-1766
+
+`sites.tex` — 6261; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L6261) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The introduction refers to the specific relation treated by the following lemma, so the singular count noun relation takes the article the.
+
+Adverse evidence / qualification: The scope remains localization and morphisms of sites and topoi; the operation changes no definition.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-understand relation
++understand the relation
+````
+
+### MC-STK-ERR-1767
+
+`sites.tex` — 7366; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L7366) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The imperative names the inverse equivalence a; Denote by a the inverse functor requires the preposition by, as at the earlier naming occurrence for g.
+
+Adverse evidence / qualification: The directions of a and its inverse, and all three associated functors, remain unchanged.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote
++Denote by
+````
+
+### MC-STK-ERR-1768
+
+`sites.tex` — 8351; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L8351) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The first condition names u(X)={*} and then describes it as a singleton. Inserting is completes that predicate while retaining the exact equality and all later conditions.
+
+Adverse evidence / qualification: The remark is a counterexample under weakened fibre-product assumptions; no condition is strengthened by this verb insertion.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$u(X) = \{*\}$ a singleton
++$u(X) = \{*\}$ is a singleton
+````
+
+### MC-STK-ERR-1769
+
+`sites.tex` — 9178; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9178) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The naming construction denotes the composite point by q_j. Inserting by after denote supplies the required preposition.
+
+Adverse evidence / qualification: The composite remains the point on C obtained from p_j on C/U_i followed by localization; no index or arrow is changed.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-denote
++denote by
+````
+
+### MC-STK-ERR-1770
+
+`sites.tex` — 9265; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9265) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The grammatical subject each of the functors is singular, so its verb is does. The representable functors and filtered-colimit finite-limit argument are unchanged.
+
+Adverse evidence / qualification: The correction does not change all finite limits representable in C to a different class of limits.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-do, see
++does, see
+````
+
+### MC-STK-ERR-1771
+
+`sites.tex` — 9270; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9270) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The definition gives three simultaneous conditions, including the assertion that the ordering on J is induced from I. Inserting is completes that clause.
+
+Adverse evidence / qualification: The inclusion of directed index sets and equality of restricted objects and transition maps remain exact.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-the ordering on $J$ induced
++the ordering on $J$ is induced
+````
+
+### MC-STK-ERR-1772
+
+`sites.tex` — 9303; source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9303) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The supplied J-system has transition maps g_{j j_0}:V_j to V_{j_0}. With f prime:V_{j_0} to W, its pullback of W_k to V_j therefore uses f prime composed with g_{j j_0}. For j prime at least j, the transition g_{j prime j} induces the map between these pullbacks because g_{j j_0} composed with g_{j prime j}=g_{j prime j_0}; identities and compositions follow uniquely from the pullback property. This is the exact system used to take the subsequent colimits and construct the refinement.
+
+Adverse evidence / qualification: The maps f_{ii prime} belong to the refinement still being constructed. They have not been supplied on J at this stage, whereas g is the actual transition system in the hypotheses.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-f_{j j_0}
++g_{j j_0}
+````
+
+### MC-STK-ERR-1773
+
+`sites.tex` — 9355; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9355) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The naming imperative uses Denote by S the class of all pairs. Adding by repairs that construction without altering the ordered class or its elements.
+
+Adverse evidence / qualification: This editorial operation makes no new claim concerning the size of that class or the Zorn argument.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $\mathcal{S}$
++Denote by $\mathcal{S}$
+````
+
+### MC-STK-ERR-1774
+
+`sites.tex` — 9699; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9699) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The clause introduces one surjective map of sheaves and needs the article a. The specified arrow and subsequent pullback square are unchanged.
+
+Adverse evidence / qualification: No surjectivity assertion is added; the map was already assumed surjective.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-be surjective map
++be a surjective map
+````
+
+### MC-STK-ERR-1775
+
+`sites.tex` — 9974; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9974) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The concessive phrase while not exact on sheaves of sets interrupts the subject i_* and the main predicate is exact. Its existing closing comma needs the opening comma after i_*.
+
+Adverse evidence / qualification: The statement continues to distinguish sheaves of sets from sheaves of abelian groups and retains the same cited example.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$i_*$ while
++$i_*$, while
+````
+
+### MC-STK-ERR-1776
+
+`sites.tex` — 9216, 10046; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L9216-L10046) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Two additional naming clauses read while adjudicating the cited proof contexts use Denote [symbol] the [object] without by: the stalk notation at 9216 and presheaf-colimit notation at 10046. Insert the same preposition used in the other verified naming repairs. These two occurrences were found directly in primary-source reading and are not counted as received reports.
+
+Adverse evidence / qualification: The operations leave all symbols, adjunctions, category labels and colimit formulas unchanged. The independent-discovery status must remain visible in the final intake accounting.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $p_i$
++Denote by $p_i$
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $\colim
++Denote by $\colim
+````
+
+### MC-STK-ERR-1777
+
+`sites.tex` — 10558; clarification.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L10558) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Write Delta=(id,id):F to F times F. The two endomorphisms lambda_r and lambda_r prime induce their product lambda_r times lambda_r prime:F times F to F times F, and addition maps that product object to F. Hence the intended identity is lambda_{r+r prime}=addition composed with (lambda_r times lambda_r prime) composed with Delta; at each object it sends x to lambda_r(x)+lambda_r prime(x). Parenthesizing the product states this exact composition unambiguously.
+
+Adverse evidence / qualification: The types already identify the intended interpretation. This is classified as clarification of grouping, not a new module law or a proof that the original intended formula was false.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-+ \circ \lambda_r \times \lambda_{r'} \circ
+++ \circ (\lambda_r \times \lambda_{r'}) \circ
+````
+
+### MC-STK-ERR-1778
+
+`sites.tex` — 11117; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L11117) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The naming clause denotes the set of sieves by J(U). The insertion completes denote by J(U) the set while leaving its universal base-change condition unchanged.
+
+Adverse evidence / qualification: The set J(U), every morphism V to U and every presheaf F_i keep their original quantifiers.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-denote
++denote by
+````
+
+### MC-STK-ERR-1779
+
+`sites.tex` — 11484, 11574; source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L11484-L11574) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+Lemma sieves-set proves that an intersection is a sieve, without asserting that it is covering. Lemma topology-basic (1) proves finite intersections of covering sieves are covering: if alpha:V to U is in S(V), pulling back S intersect S prime along alpha gives the pullback of S prime, which covers V; transitivity then makes S intersect S prime cover U. This is exactly the fact needed both for the directed colimit at 11484 and the common representative sieve at 11574. Replace the two wrong references by this proved lemma; the latter matching occurrence was found directly during the source review.
+
+Adverse evidence / qualification: The earlier reference to sieves-set at 11459 concerns partial ordering and is correct, so it is retained. The operation changes exactly two reference targets and must be an explicit exception to reference-key invariance in the replay checks.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\ref{lemma-sieves-set}
++\ref{lemma-topology-basic}
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\ref{lemma-sieves-set}
++\ref{lemma-topology-basic}
+````
+
+### MC-STK-ERR-1780
+
+`sites.tex` — 11636; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L11636) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The naming clause denotes the common restriction by psi. Inserting by relates the named map to its symbol in the same way as the other naming repairs.
+
+Adverse evidence / qualification: The common restriction and evaluation at id_T remain the same; the operation changes no covering sieve or representative.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote the common restriction $\psi$.
++Denote the common restriction by $\psi$.
+````
+
+### MC-STK-ERR-1781
+
+`sites.tex` — 11763; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L11763) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The lemma adopts the category and both topologies from the preceding theorem. Assumptions and notation are as in states that inherited setup as a complete clause and uses the plural for the collected hypotheses.
+
+Adverse evidence / qualification: The reference and the inclusion criterion for J,J prime are untouched; no new topological condition is introduced.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Assumption and notation as in
++Assumptions and notation are as in
+````
+
+### MC-STK-ERR-1782
+
+`sites.tex` — 11840; clarification.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex#L11840) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r55/candidate.manifest.json)
+
+The second arrow describes the image of an object F under the stalk functor, so mapsto makes that assignment explicit. It matches the object-assignment arrow in the presheaf stalk display immediately above.
+
+Adverse evidence / qualification: The functor and its exactness condition remain unchanged. The old to arrow is understandable as informal assignment notation; this is classified as notation clarification rather than a new map between F and its stalk.
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\mathcal{F} \to \mathcal{F}_p
++\mathcal{F} \mapsto \mathcal{F}_p
+````
