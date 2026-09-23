@@ -1,0 +1,134 @@
+--- a/sheaves.tex
++++ b/sheaves.tex
+@@ -532,9 +532,9 @@
+ It is necessary, and we already did if you read the
+ definition right. Namely, note that the empty set is
+ covered by the empty open covering, and hence the ``collection
+-of sections $s_i$'' from the definition above actually form
++of sections $s_i$'' from the definition above actually forms
+ an element of the empty product which is the final object
+-of the category the sheaf has values in. In other words,
++of the category in which the sheaf takes values. In other words,
+ if you read the definition right you automatically deduce
+ that $\mathcal{F}(\emptyset) = \textit{a final object}$,
+ which in the case of a sheaf of sets is a singleton.
+@@ -838,7 +838,7 @@
+ not reflect isomorphisms. And, in fact it turns out that
+ the analogue of Lemma \ref{lemma-sheaves-structure} is wrong.
+ Namely, suppose $X = \mathbf{N}$ with the discrete
+-topology. Let $A_i$, for $i \in \mathbf{N}$ be a discrete
++topology. Let $A_i$, for $i \in \mathbf{N}$, be a discrete
+ topological space. For any subset $U \subset \mathbf{N}$
+ define $\mathcal{F}(U) = \prod_{i\in U} A_i$ with the
+ discrete topology. Then this is a presheaf of topological
+@@ -923,7 +923,7 @@
+ $$
+ with equivalence relation given by $(U, s) \sim (U', s')$ if and only if
+ there exists an open $U'' \subset U \cap U'$ with $x \in U''$ and
+-$s|_{U''} = s'|_{U''}$. Given a pair $(U, s)$ we sometimes denote
++$s|_{U''} = s'|_{U''}$. Given a pair $(U, s)$ we sometimes denote by
+ $s_x$ the element of $\mathcal{F}_x$ corresponding to the equivalence
+ class of $(U, s)$. We sometimes use the phrase
+ ``image of $s$ in $\mathcal{F}_x$'' to denote $s_x$.
+@@ -1022,7 +1022,7 @@
+ we think of an element in the stalk $\mathcal{C}^\infty_{\mathbf{R}^n, x}$?
+ Such an element is given by a $\mathcal{C}^\infty$-function
+ $f$ whose domain contains $x$. And a pair of such
+-functions $f$, $g$ determine
++functions $f$, $g$ determines
+ the same element of the stalk if they agree in a neighbourhood
+ of $x$. In other words, an element of $\mathcal{C}^\infty_{\mathbf{R}^n, x}$
+ is the same thing as what is sometimes called
+@@ -1274,8 +1274,8 @@
+ \begin{proof}
+ Consider $A \times_B C$. The assumptions imply that
+ $F(A \times_B C) = F(A) \times_{F(B)} F(C) = F(A)$.
+-Hence $A = A \times_B C$ because $F$ reflects isomorphisms.
+-The result follows.
++Hence the first projection $p_A : A \times_B C \to A$ is an isomorphism because $F$ reflects isomorphisms.
++Writing $p_C : A \times_B C \to C$ for the second projection, set $t = p_C \circ p_A^{-1}$. The fibre product identity gives $g \circ t = f$.
+ \end{proof}
+ 
+ \begin{example}
+@@ -1416,7 +1416,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-check-homomorphism-stalks}
+-let $X$ be a topological space.
++Let $X$ be a topological space.
+ Let $(\mathcal{C}, F)$ be a type of algebraic structure.
+ Suppose that $\mathcal{F}$, $\mathcal{G}$ are sheaves on $X$
+ with values in $\mathcal{C}$.
+@@ -1444,7 +1444,7 @@
+ bottom horizontal arrow is injective,
+ see Lemma \ref{lemma-sheaf-subset-stalks}.
+ Hence we conclude by Lemma \ref{lemma-image-contained-in},
+-see also Example \ref{example-application-lemma-image-contained-in}
++see also Example \ref{example-application-lemma-image-contained-in}.
+ \end{proof}
+ 
+ \noindent
+@@ -1489,7 +1489,7 @@
+ and that given $u \in U$ the truth of this condition
+ depends only on the values $s_v$ for $v$ in any open neighbourhood
+ of $u$. Thus it is clear that,
+-if $V \subset U \subset X$ are open, the projection maps
++if $V \subset U \subset X$ are open, the projection map
+ $$
+ \prod\nolimits_{u \in U} \mathcal{F}_u
+ \longrightarrow
+@@ -1541,7 +1541,7 @@
+ \begin{proof}
+ It is probably better for the reader to find their own explanation
+ of this than to read the proof here. In fact the lemma is true
+-for the same reason as why the presheaf of continuous
++for the same reason that the presheaf of continuous
+ function is a sheaf, see Example \ref{example-basic-continuous-maps}
+ (and this analogy can be made precise using the ``espace \'etal\'e'').
+ 
+@@ -1804,7 +1804,7 @@
+ with repeated application of
+ Lemma \ref{lemma-image-contained-in} (see also
+ Example \ref{example-application-lemma-image-contained-in}).
+-The main idea however, is to define $\mathcal{F}^\#(U)$
++The main idea, however, is to define $\mathcal{F}^\#(U)$
+ as the fibre product in $\mathcal{C}$ of the diagram
+ $$
+ \xymatrix{
+@@ -3969,7 +3969,7 @@
+ \label{lemma-restrict-basis-equivalence}
+ Let $X$ be a topological space.
+ Let $\mathcal{B}$ be a basis for the topology on $X$.
+-Denote $\Sh(\mathcal{B})$ the category of
++Denote by $\Sh(\mathcal{B})$ the category of
+ sheaves on $\mathcal{B}$.
+ There is an equivalence of categories
+ $$
+@@ -4106,7 +4106,7 @@
+ Let $X$ be a topological space.
+ Let $\mathcal{B}$ be a basis for the topology on $X$.
+ Let $(\mathcal{C}, F)$ be a type of algebraic structure.
+-Denote $\Sh(\mathcal{B}, \mathcal{C})$ the category of
++Denote by $\Sh(\mathcal{B}, \mathcal{C})$ the category of
+ sheaves with values in $\mathcal{C}$ on $\mathcal{B}$.
+ There is an equivalence of categories
+ $$
+@@ -4226,7 +4226,7 @@
+ Let $X$ be a topological space.
+ Let $\mathcal{B}$ be a basis for the topology on $X$.
+ Let $\mathcal{O}$ be a sheaf of rings on $X$.
+-Denote $\textit{Mod}(\mathcal{O}|_\mathcal{B})$ the category of
++Denote by $\textit{Mod}(\mathcal{O}|_\mathcal{B})$ the category of
+ sheaves of $\mathcal{O}|_\mathcal{B}$-modules on $\mathcal{B}$.
+ There is an equivalence of categories
+ $$
+@@ -4515,8 +4515,7 @@
+ \end{definition}
+ 
+ \noindent
+-We leave a definition of the restriction of presheaves
+-of modules to the reader. Ok, so in this section we will
++Ok, so in this section we will
+ discuss a left adjoint to the restriction functor.
+ Here is the definition in the case of (pre)sheaves
+ of sets.

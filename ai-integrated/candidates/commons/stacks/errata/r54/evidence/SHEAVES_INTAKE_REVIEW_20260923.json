@@ -1,0 +1,1796 @@
+{
+  "schema": "stacks-occurrence-semantic-review-v1",
+  "date": "2026-09-23",
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "review_kind": "Primary-session source review; not a second AI or human review",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "compared_public_commit": "b74477a0946b25f33e4485c6948389155e136675",
+  "inventory_sha256": "53667E865189AF21A0E0132B6CB670E9E6D83B9B5996F8EF1D3D903E8E56F56B",
+  "admission_state": "All 146 received reports reviewed; new proposals await mechanical validation, candidate preparation, admission and publication.",
+  "source": "sheaves.tex",
+  "authority_sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38",
+  "scope": "All 146 received Sheaves on Spaces reports are the intended review scope. The cursor records actual completed coverage.",
+  "groups": [
+    {
+      "id": "SHEAVES-RECON-001",
+      "occurrences": [
+        "OCC-00035"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        44,
+        56
+      ],
+      "operations": [],
+      "rationale": "The etcetera item is unfinished editorial scaffolding after a complete definition of an open covering. Removing it would improve presentation but repairs no mathematical assertion.",
+      "adverse_evidence": "No missing substantive notion is specified by the source or report. Do not invent an additional definition or count this as a mathematical defect."
+    },
+    {
+      "id": "SHEAVES-RECON-002",
+      "occurrences": [
+        "OCC-11701"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        84,
+        99
+      ],
+      "operations": [],
+      "rationale": "Each vertical arrow is uniquely typed by its source and target as the restriction of the indicated presheaf. Their shared rho notation does not change the naturality equation.",
+      "adverse_evidence": "F/G subscripts could make the diagram more explicit, but the text already fixes both presheaves and their restriction maps; this is conventional overloading."
+    },
+    {
+      "id": "SHEAVES-RECON-003",
+      "occurrences": [
+        "OCC-11702"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0077"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        192,
+        195
+      ],
+      "operations": [],
+      "rationale": "The datum displays a zero element and a negation map. The earlier exact operation already changes the prose to those two types.",
+      "adverse_evidence": "Zero can be encoded as a map from the singleton, but that encoding is absent at this displayed datum. The correction changes wording, not the group operations."
+    },
+    {
+      "id": "SHEAVES-RECON-004",
+      "occurrences": [
+        "OCC-11708",
+        "OCC-01232"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0078"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        320,
+        331
+      ],
+      "operations": [],
+      "rationale": "Both reports concern the same restriction mapping for a fixed inclusion. The earlier operation replaces mappings by mapping and retains the displayed map and faithful-functor argument.",
+      "adverse_evidence": "Changing is to are is also grammatical after a collective rewrite, but it is unnecessary once the earlier singular correction is retained."
+    },
+    {
+      "id": "SHEAVES-RECON-005",
+      "occurrences": [
+        "OCC-11709",
+        "OCC-00036"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0079"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        339,
+        350
+      ],
+      "operations": [],
+      "rationale": "The earlier correction inserts rho_U^U = id for every open U. Together with the stated composition law this is exactly the identity and composition preservation required by the contravariant functor from the open-set category.",
+      "adverse_evidence": "Composition alone only forces idempotence: assign the same two-element set to every open and the constant-zero endomorphism to every inclusion. Every composite equals constant zero, including repeated identities, but the identity restrictions are not identity maps. The added axiom excludes this example and is already present in the public source."
+    },
+    {
+      "id": "SHEAVES-RECON-006",
+      "occurrences": [
+        "OCC-01233",
+        "OCC-11710"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0080"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        351,
+        354
+      ],
+      "operations": [],
+      "rationale": "Both reports specify the same missing family of components. The earlier replacement supplies phi_U for every open U and fixes values to the plural; compatibility with restrictions is retained.",
+      "adverse_evidence": "Suppressing component subscripts after a family is specified is harmless. Here the repair explicitly quantifies that family, so no additional source edit is needed."
+    },
+    {
+      "id": "SHEAVES-RECON-007",
+      "occurrences": [
+        "OCC-11711",
+        "OCC-01234"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0081"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        401,
+        410
+      ],
+      "operations": [],
+      "rationale": "Both reports address the repeated word structure in the same action-map sentence. The earlier correction retains defines the structure of an O(U)-module and removes the second structure.",
+      "adverse_evidence": "Deleting the first occurrence is an equivalent editorial alternative. Applying both alternatives would damage the sentence; retain the already-composed one."
+    },
+    {
+      "id": "SHEAVES-RECON-008",
+      "occurrences": [
+        "OCC-01235"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        527,
+        542
+      ],
+      "operations": [
+        {
+          "line": 535,
+          "old_text": "actually form",
+          "replacement_text": "actually forms"
+        },
+        {
+          "line": 537,
+          "old_text": "of the category the sheaf has values in.",
+          "replacement_text": "of the category in which the sheaf takes values."
+        }
+      ],
+      "rationale": "The singular noun collection takes forms. Replace the final relative construction by the category in which the sheaf takes values, preserving the empty-cover explanation.",
+      "adverse_evidence": "The sentence remains understandable in its original form. This is a grammatical correction, not a new assertion about final objects or elements of an arbitrary category."
+    },
+    {
+      "id": "SHEAVES-RECON-009",
+      "occurrences": [
+        "OCC-01236"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        577,
+        594
+      ],
+      "operations": [],
+      "rationale": "An open is an established noun for an open subset in this passage; the adjacent constant-sheaf definition explicitly uses an open U subset X. The rule has an unambiguous domain.",
+      "adverse_evidence": "Expanding the noun to open subset is optional. The report overstates a conventional mathematical expression as a defect."
+    },
+    {
+      "id": "SHEAVES-RECON-010",
+      "occurrences": [
+        "OCC-11712",
+        "OCC-01237"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0082"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        596,
+        611
+      ],
+      "operations": [],
+      "rationale": "Both reports refer to the same malformed phrase. The earlier exact operation replaces it by For every open U subset X, leaving the product sheaf and restrictions unchanged.",
+      "adverse_evidence": "The source uses compressed U open elsewhere, but the extra noun set makes this particular phrase defective; the admitted repair already addresses it."
+    },
+    {
+      "id": "SHEAVES-RECON-011",
+      "occurrences": [
+        "OCC-01238"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        687,
+        716
+      ],
+      "operations": [],
+      "rationale": "Here the product symbol denotes the indexed family, not multiplication. Explicitly the left arrow has i-th projection s mapped to s restricted to U_i. The first right arrow has (i_0,i_1)-projection the restriction of the i_0-th component to the intersection; the second uses i_1. These maps exist uniquely by the Cartesian-product universal property and are exactly the displayed restriction maps.",
+      "adverse_evidence": "Tuple notation would be more familiar, but no multiplication of sections is asserted or required. Each section is also a map from a singleton, whose product is a point of the Cartesian product. The report does not establish a mathematical type error."
+    },
+    {
+      "id": "SHEAVES-RECON-012",
+      "occurrences": [
+        "OCC-01239"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        833,
+        850
+      ],
+      "operations": [
+        {
+          "line": 841,
+          "old_text": "for $i \\in \\mathbf{N}$ be",
+          "replacement_text": "for $i \\in \\mathbf{N}$, be"
+        }
+      ],
+      "rationale": "Close the parenthetical indexing phrase with a comma, preserving the family of discrete spaces and the counterexample.",
+      "adverse_evidence": "The original sentence is understandable. This punctuation repair makes no claim about changing the discrete/product-topology argument."
+    },
+    {
+      "id": "SHEAVES-RECON-013",
+      "occurrences": [
+        "OCC-11713",
+        "OCC-00037",
+        "OCC-01315"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0083"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        864,
+        878
+      ],
+      "operations": [],
+      "rationale": "All three reports quote the identical Hom-set definition. The earlier exact operation changes morphism to morphisms.",
+      "adverse_evidence": "The number of actual morphisms may be zero, one or more; the plural identifies a set of objects of that type rather than claiming its cardinality."
+    },
+    {
+      "id": "SHEAVES-RECON-014",
+      "occurrences": [
+        "OCC-01240"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        924,
+        933
+      ],
+      "operations": [
+        {
+          "line": 926,
+          "old_text": "we sometimes denote",
+          "replacement_text": "we sometimes denote by"
+        }
+      ],
+      "rationale": "Insert by before the notation s_x so the sentence correctly relates the germ symbol to its represented equivalence class.",
+      "adverse_evidence": "The mathematical definition and equivalence relation are already explicit. This is an English repair only."
+    },
+    {
+      "id": "SHEAVES-RECON-015",
+      "occurrences": [
+        "OCC-01241"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        919,
+        943
+      ],
+      "operations": [],
+      "rationale": "The product in this map is the family of germs. For every x in U the component sends s to the equivalence class of (U,s) in F_x. The universal property of the Cartesian product gives a unique map with precisely these components, requiring no multiplication on stalks.",
+      "adverse_evidence": "The immediately preceding text identifies the equivalence class represented by (U,s). Writing (s_x) indexed by x is an optional notational alternative; the existing typed product-family expression does not assert a ring operation."
+    },
+    {
+      "id": "SHEAVES-RECON-016",
+      "occurrences": [
+        "OCC-01242"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1021,
+        1029
+      ],
+      "operations": [
+        {
+          "line": 1025,
+          "old_text": "functions $f$, $g$ determine",
+          "replacement_text": "functions $f$, $g$ determines"
+        }
+      ],
+      "rationale": "Use the singular verb determines with the head noun pair. The two functions represent the same germ exactly when they agree near x, as already defined.",
+      "adverse_evidence": "Plural agreement may be understood by focusing on the two functions; the replacement is editorial and leaves the mathematical criterion intact."
+    },
+    {
+      "id": "SHEAVES-RECON-017",
+      "occurrences": [
+        "OCC-11714",
+        "OCC-00038"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0084"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1099,
+        1130
+      ],
+      "operations": [],
+      "rationale": "The assumptions give a presheaf, with no sheaf condition. The earlier operation explicitly changes the underlying object to a presheaf of sets.",
+      "adverse_evidence": "The stalk construction and canonical germ maps already work for presheaves; no sheafification or stronger hypothesis should be inserted."
+    },
+    {
+      "id": "SHEAVES-RECON-018",
+      "occurrences": [
+        "OCC-01243"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        1140,
+        1151
+      ],
+      "operations": [],
+      "rationale": "The displayed domain O times F and codomain F specify scalar multiplication of the module presheaf. Calling that operation multiplication does not assert an internal product F times F to F.",
+      "adverse_evidence": "Scalar multiplication would be a more explicit name, but the module hypothesis and displayed types already determine the intended action. There is no ill-typed map to repair."
+    },
+    {
+      "id": "SHEAVES-RECON-019",
+      "occurrences": [
+        "OCC-01244"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        1184,
+        1279
+      ],
+      "operations": [
+        {
+          "line": 1277,
+          "old_text": "Hence $A = A \\times_B C$ because $F$ reflects isomorphisms.",
+          "replacement_text": "Hence the first projection $p_A : A \\times_B C \\to A$ is an isomorphism because $F$ reflects isomorphisms."
+        },
+        {
+          "line": 1278,
+          "old_text": "The result follows.",
+          "replacement_text": "Writing $p_C : A \\times_B C \\to C$ for the second projection, set $t = p_C \\circ p_A^{-1}$. The fibre product identity gives $g \\circ t = f$."
+        }
+      ],
+      "rationale": "Let P=A times_B C with projections p_A and p_C. Since F preserves fibre products, F(p_A) identifies with the projection from pairs (a,c) satisfying F(f)(a)=F(g)(c). The image inclusion gives a c for every a, and injectivity of F(g) makes it unique. Thus F(p_A) is bijective, so reflection of isomorphisms makes p_A invertible. Setting t=p_C composed with p_A inverse gives g composed with t=f by the fibre-product identity. Name this exact isomorphism and factorization explicitly.",
+      "adverse_evidence": "The equality signs can already denote these canonical identifications; the report does not refute the factorization theorem. This is a clarification of the morphisms used in the proof, not a new theorem or counterexample."
+    },
+    {
+      "id": "SHEAVES-RECON-020",
+      "occurrences": [
+        "OCC-00039"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        1184,
+        1195,
+        1304,
+        1314
+      ],
+      "operations": [],
+      "rationale": "The typed functor F:C to Sets specifies both the category C and the functor F. Calling this a type of algebraic structures is shorthand for the datum and properties of the cited definition; no part of the pair is omitted.",
+      "adverse_evidence": "Writing (C,F) would be a stylistic alternative. The producer does not identify a missing assumption or different mathematical construction."
+    },
+    {
+      "id": "SHEAVES-RECON-021",
+      "occurrences": [
+        "OCC-00040"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1417,
+        1426
+      ],
+      "operations": [
+        {
+          "line": 1419,
+          "old_text": "let $X$ be a topological space.",
+          "replacement_text": "Let $X$ be a topological space."
+        }
+      ],
+      "rationale": "Capitalize the first word of the lemma statement.",
+      "adverse_evidence": "No hypothesis or assertion changes."
+    },
+    {
+      "id": "SHEAVES-RECON-022",
+      "occurrences": [
+        "OCC-01245"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1442,
+        1448
+      ],
+      "operations": [
+        {
+          "line": 1447,
+          "old_text": "see also Example \\ref{example-application-lemma-image-contained-in}",
+          "replacement_text": "see also Example \\ref{example-application-lemma-image-contained-in}."
+        }
+      ],
+      "rationale": "End the final proof sentence with a period after the Example reference.",
+      "adverse_evidence": "The proof and reference are already complete; this is punctuation only."
+    },
+    {
+      "id": "SHEAVES-RECON-023",
+      "occurrences": [
+        "OCC-01246"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1488,
+        1500
+      ],
+      "operations": [
+        {
+          "line": 1492,
+          "old_text": "the projection maps",
+          "replacement_text": "the projection map"
+        }
+      ],
+      "rationale": "For the fixed inclusion V subset U the display is one projection map. Use the singular noun map with the existing singular verb maps.",
+      "adverse_evidence": "Alternatively a plural rewrite could use the verb map. The singular repair is smaller and preserves the displayed restriction morphism."
+    },
+    {
+      "id": "SHEAVES-RECON-024",
+      "occurrences": [
+        "OCC-01247"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1541,
+        1546
+      ],
+      "operations": [
+        {
+          "line": 1544,
+          "old_text": "for the same reason as why",
+          "replacement_text": "for the same reason that"
+        }
+      ],
+      "rationale": "Remove the redundant as why construction and write for the same reason that.",
+      "adverse_evidence": "The analogy and reference remain unchanged; this does not provide a new proof of sheafification."
+    },
+    {
+      "id": "SHEAVES-RECON-025",
+      "occurrences": [
+        "OCC-11703",
+        "OCC-01248"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0085"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1541,
+        1546
+      ],
+      "operations": [],
+      "rationale": "The two reports quote the same singular function. The earlier exact operation already makes it plural.",
+      "adverse_evidence": "The adjacent reason-as-why copyedit is a different operation in the same sentence and is recorded separately."
+    },
+    {
+      "id": "SHEAVES-RECON-026",
+      "occurrences": [
+        "OCC-01249"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        1617,
+        1627
+      ],
+      "operations": [],
+      "rationale": "The displayed natural bijection identifies sheafification as a left adjoint of the inclusion. Both a left adjoint of and a left adjoint to communicate that same typed adjunction.",
+      "adverse_evidence": "Adjoints are unique up to natural isomorphism, rather than strictly unique functors; changing the article to the is unnecessary and repairs no assertion."
+    },
+    {
+      "id": "SHEAVES-RECON-027",
+      "occurrences": [
+        "OCC-11704",
+        "OCC-00041"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0086"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1747,
+        1753
+      ],
+      "operations": [],
+      "rationale": "Both reports identify the same singular Lemma subject. The admitted exact operation changes show to shows.",
+      "adverse_evidence": "No claim about the fibre product is altered."
+    },
+    {
+      "id": "SHEAVES-RECON-028",
+      "occurrences": [
+        "OCC-01250",
+        "OCC-11705"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0087"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1765,
+        1769
+      ],
+      "operations": [],
+      "rationale": "The admitted operation already inserts the missing article before morphism of presheaves.",
+      "adverse_evidence": "No additional alteration of the adjunction or its types is needed."
+    },
+    {
+      "id": "SHEAVES-RECON-029",
+      "occurrences": [
+        "OCC-01251"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1804,
+        1810
+      ],
+      "operations": [
+        {
+          "line": 1807,
+          "old_text": "The main idea however, is",
+          "replacement_text": "The main idea, however, is"
+        }
+      ],
+      "rationale": "The parenthetical adverb however needs its opening comma as well as its existing closing comma.",
+      "adverse_evidence": "The sheafification construction remains unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-030",
+      "occurrences": [
+        "OCC-11706",
+        "OCC-01252"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0088"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1847,
+        1854
+      ],
+      "operations": [],
+      "rationale": "The prior operation already replaces the malformed article and describes G as an O-module by restriction of scalars. The scalar action is obtained by composing O to O-sharp with the given O-sharp action on G.",
+      "adverse_evidence": "The surrounding types already specify the intended action. This is the same prose defect as the two reports, not a new sheafification theorem."
+    },
+    {
+      "id": "SHEAVES-RECON-031",
+      "occurrences": [
+        "OCC-11707",
+        "OCC-00042"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0089"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1949,
+        1953
+      ],
+      "operations": [],
+      "rationale": "The prior exact operation inserts of in sheaf of O-modules.",
+      "adverse_evidence": "Changing the object or adding a second preposition would be unnecessary."
+    },
+    {
+      "id": "SHEAVES-RECON-032",
+      "occurrences": [
+        "OCC-11715"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        2053,
+        2064
+      ],
+      "operations": [],
+      "rationale": "The Yoneda statement uses uniqueness in its usual representing-object sense, with the displayed natural Hom bijection as the representing data. Two representations yield inverse arrows by sending the identity under the respective natural bijections, and naturality proves that they are inverse and compatible with the representations.",
+      "adverse_evidence": "The objects are not literally equal, and arbitrary isomorphisms need not be unique. Up to unique isomorphism compatible with the adjunction would make the existing categorical convention explicit, but the passage does not require strict equality and introduces a construction next."
+    },
+    {
+      "id": "SHEAVES-RECON-033",
+      "occurrences": [
+        "OCC-11716"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0090"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2100,
+        2105
+      ],
+      "operations": [],
+      "rationale": "The admitted operation already explicitly quantifies every open U in Y before the component of the adjunction unit. U contains f(f-inverse(U)), so its section maps to the stated colimit.",
+      "adverse_evidence": "The type could be inferred from G(U), but the earlier clarification binds it directly; no second operation is needed."
+    },
+    {
+      "id": "SHEAVES-RECON-034",
+      "occurrences": [
+        "OCC-11717"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0091"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2116,
+        2120
+      ],
+      "operations": [],
+      "rationale": "The admitted operation inserts be before open in the same let sentence.",
+      "adverse_evidence": "This changes no open set or restriction map."
+    },
+    {
+      "id": "SHEAVES-RECON-035",
+      "occurrences": [
+        "OCC-01253"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2168,
+        2180
+      ],
+      "operations": [],
+      "rationale": "A left adjoint of pushforward identifies the same adjunction as left adjoint to pushforward. Its displayed natural Hom bijection gives the types and direction explicitly.",
+      "adverse_evidence": "Changing the preposition is an optional usage preference, not a false definition or a required grammatical correction."
+    },
+    {
+      "id": "SHEAVES-RECON-036",
+      "occurrences": [
+        "OCC-11718",
+        "OCC-01254"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0092"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2264,
+        2273
+      ],
+      "operations": [],
+      "rationale": "The earlier exact operation supplies the and changes satisfy to satisfies to agree with the singular family. It addresses both reports at this sentence.",
+      "adverse_evidence": "The family contains many maps, but family remains the grammatical subject; no change to the naturality condition follows."
+    },
+    {
+      "id": "SHEAVES-RECON-037",
+      "occurrences": [
+        "OCC-11719",
+        "OCC-00043"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0093"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2298,
+        2305
+      ],
+      "operations": [],
+      "rationale": "The prior operation replaces the misspelling restruction by restriction at this exact arrow.",
+      "adverse_evidence": "The original source and target already give the correct restriction map."
+    },
+    {
+      "id": "SHEAVES-RECON-038",
+      "occurrences": [
+        "OCC-11720",
+        "OCC-00044"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0094"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2313,
+        2380
+      ],
+      "operations": [],
+      "rationale": "Both reports cover the two same article errors. The admitted unit has exact replacements of an g-map by a g-map at source lines 2320 and 2380.",
+      "adverse_evidence": "The neighbouring an f-map is correct because the letter name f starts with a vowel sound and is preserved."
+    },
+    {
+      "id": "SHEAVES-RECON-039",
+      "occurrences": [
+        "OCC-11721"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2313,
+        2334
+      ],
+      "operations": [],
+      "rationale": "The displayed triangular diagram is a family indexed by open W in Z. Its commutativity determines (phi composed with psi)_W as phi_(g-inverse W) composed with psi_W for every such W. Thus the plural diagrams is justified.",
+      "adverse_evidence": "Only one diagram template is printed. That does not make its indexed instances a single diagram or require a singular noun."
+    },
+    {
+      "id": "SHEAVES-RECON-040",
+      "occurrences": [
+        "OCC-11722"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2351,
+        2371
+      ],
+      "operations": [],
+      "rationale": "A representative (V,s) has an image [V,s] in the source stalk G_(f(x)); the stalk map sends that image to [f-inverse(V),phi_V(s)] in F_x. These are two consecutive maps, exactly as expressed by the commuting square that follows.",
+      "adverse_evidence": "A direct representative-to-representative description is possible, but image of a representative is not ill-typed or a double passive. The report overlooks the canonical map into the source stalk."
+    },
+    {
+      "id": "SHEAVES-RECON-041",
+      "occurrences": [
+        "OCC-11723"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2361,
+        2371
+      ],
+      "operations": [],
+      "rationale": "The parenthetical for f(x) in V subset Y open gives the range of the indexed diagrams: all open neighbourhoods V of f(x). It is a range annotation, not a finite let sentence.",
+      "adverse_evidence": "Adding every and containing would expand the annotation without changing its range or truth."
+    },
+    {
+      "id": "SHEAVES-RECON-042",
+      "occurrences": [
+        "OCC-00046",
+        "OCC-01255",
+        "OCC-11724"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0095"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2435,
+        2437
+      ],
+      "operations": [],
+      "rationale": "All three reports identify the second object assignment, and the prior exact operation already replaces its morphism arrow by mapsto.",
+      "adverse_evidence": "The domain categories differ, so the original arrow is not a sheaf morphism; the preceding word assignments gives the intended reading."
+    },
+    {
+      "id": "SHEAVES-RECON-043",
+      "occurrences": [
+        "OCC-11725",
+        "OCC-01256"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0096"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2455,
+        2464
+      ],
+      "operations": [],
+      "rationale": "The prior operation removes the first redundant is the map clause and retains the fully typed composite as the subject of is also a map of abelian presheaves.",
+      "adverse_evidence": "Several grammatical rewrites are possible. Applying another alternative on top of the admitted rewrite would duplicate the repair."
+    },
+    {
+      "id": "SHEAVES-RECON-044",
+      "occurrences": [
+        "OCC-11726",
+        "OCC-01257"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0097"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2455,
+        2476
+      ],
+      "operations": [],
+      "rationale": "The existing exact operation restores precomposition by the adjunction unit i_G in psi mapsto f_*psi composed with i_G. The resulting source is G and target f_*F, as in the displayed Hom set and the preceding construction.",
+      "adverse_evidence": "Bare f_*psi has source f_*f_pG. The earlier complete construction made the intended map recoverable, but the summary formula needed the correction already admitted."
+    },
+    {
+      "id": "SHEAVES-RECON-045",
+      "occurrences": [
+        "OCC-00045",
+        "OCC-11727"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0098"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2479,
+        2483
+      ],
+      "operations": [],
+      "rationale": "The admitted operation reverses both wrongly printed space labels: F is on X and f_*F is on Y. For an open V of Y its sections are F(f-inverse(V)), so the domain and codomain are forced.",
+      "adverse_evidence": "The construction itself and its stated functor elsewhere already have this variance. No change to the functor is required."
+    },
+    {
+      "id": "SHEAVES-RECON-046",
+      "occurrences": [
+        "OCC-11728"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0099"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2686,
+        2690
+      ],
+      "operations": [],
+      "rationale": "The prior operation removes the comma that separates the entire subject the natural setting for defining the pullback and pushforward functors from its predicate is the setting of ringed spaces.",
+      "adverse_evidence": "The report incorrectly identifies functors as the sentence subject. The actual head is setting, so replacing is by are would introduce an agreement error; only the comma repair is retained."
+    },
+    {
+      "id": "SHEAVES-RECON-047",
+      "occurrences": [
+        "OCC-11729",
+        "OCC-00047",
+        "OCC-01258",
+        "OCC-11730"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0100",
+        "MC-STK-ERR-0101"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2708,
+        2743
+      ],
+      "operations": [],
+      "rationale": "The two admitted operations change is open to be open after Let at source lines 2709 and 2742. Two physical reports cover both loci and the other two cover one each.",
+      "adverse_evidence": "Both opens remain arbitrary in their original spaces; do not add hypotheses."
+    },
+    {
+      "id": "SHEAVES-RECON-048",
+      "occurrences": [
+        "OCC-01259"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2709,
+        2763
+      ],
+      "operations": [],
+      "rationale": "Both displayed arrows are the given module multiplication O(W) times M(W) to M(W). On pushforward the arrow is evaluated at f-inverse(V); on pullback it induces the arrow on the indicated filtered colimit. The source and target unambiguously determine scalar multiplication.",
+      "adverse_evidence": "The report reads multiplication as internal multiplication of modules or spaces despite the explicit types. Adding scalar is optional and repairs no operation."
+    },
+    {
+      "id": "SHEAVES-RECON-049",
+      "occurrences": [
+        "OCC-11731"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0102"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2802,
+        2809
+      ],
+      "operations": [],
+      "rationale": "The prior exact operation removes the display-final full stop so that according to Section continues the same sentence.",
+      "adverse_evidence": "The Hom bijection and its citation remain unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-050",
+      "occurrences": [
+        "OCC-11732",
+        "OCC-01260"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0103"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2833,
+        2879
+      ],
+      "operations": [],
+      "rationale": "The hypotheses allow presheaves of modules, and the identity is between underlying abelian presheaves before sheafification. The prior operation already replaces sheaves by presheaves at line 2873.",
+      "adverse_evidence": "The second report points to an inaccurate hypothesis line number; the actual assumptions are at 2835-2838 and support the same correction. Restricting scalars changes the action, not the underlying abelian presheaf."
+    },
+    {
+      "id": "SHEAVES-RECON-051",
+      "occurrences": [
+        "OCC-11733",
+        "OCC-01261"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0104"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2951,
+        2963
+      ],
+      "operations": [],
+      "rationale": "The admitted operation replaces where the second is Lemmas by The second equality is Lemma. It starts a complete sentence after the display and uses the singular reference.",
+      "adverse_evidence": "Removing the preceding period is another possible repair; do not apply both alternative rewrites."
+    },
+    {
+      "id": "SHEAVES-RECON-052",
+      "occurrences": [
+        "OCC-11734"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0105"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2985,
+        2999
+      ],
+      "operations": [],
+      "rationale": "The admitted replacement These equalities are a combination of gives the following sentence a complete subject after the display-final full stop.",
+      "adverse_evidence": "No tensor or restriction adjunction is changed."
+    },
+    {
+      "id": "SHEAVES-RECON-053",
+      "occurrences": [
+        "OCC-01316"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        3058,
+        3069
+      ],
+      "operations": [],
+      "rationale": "Real valued functions and real-valued functions denote the same functions with codomain the real numbers. The example explicitly composes such a function with f.",
+      "adverse_evidence": "A hyphen is a possible editorial convention, but its absence creates neither ambiguous codomain nor false assertion and is not a required erratum."
+    },
+    {
+      "id": "SHEAVES-RECON-054",
+      "occurrences": [
+        "OCC-11735"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0106"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3116,
+        3128
+      ],
+      "operations": [],
+      "rationale": "The admitted rewrite supplies parallel whose clauses for the underlying abelian sheaf and its module structure. Restriction is explicitly along f-sharp from O_Y to f_*O_X.",
+      "adverse_evidence": "The original types already determine scalar restriction, so no additional module construction is being claimed."
+    },
+    {
+      "id": "SHEAVES-RECON-055",
+      "occurrences": [
+        "OCC-01317"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        3130,
+        3139
+      ],
+      "operations": [],
+      "rationale": "TeX collapses the doubled ordinary prose space between the and module to the same interword space as a single space. The rendered wording and mathematical data are unchanged.",
+      "adverse_evidence": "Source whitespace can be tidied, but this artifact does not produce a reader-facing error and is not counted as an erratum."
+    },
+    {
+      "id": "SHEAVES-RECON-056",
+      "occurrences": [
+        "OCC-11736"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0107"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3206,
+        3211
+      ],
+      "operations": [],
+      "rationale": "The prior operation coordinates all three given objects, placing and before the final sheaf G. It preserves both sheaves and the ringed-space morphism.",
+      "adverse_evidence": "No hypothesis was mathematically absent; this repairs their grammatical connection."
+    },
+    {
+      "id": "SHEAVES-RECON-057",
+      "occurrences": [
+        "OCC-11737"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0108"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3230,
+        3240
+      ],
+      "operations": [],
+      "rationale": "The earlier operation moves the comma to follow x in X and complete the introductory data before the main subject the induced map on stalks.",
+      "adverse_evidence": "The verb is already follows the display at line 3237. Adding is before the display, as the report suggests, would leave competing predicates unless the rest were rewritten."
+    },
+    {
+      "id": "SHEAVES-RECON-058",
+      "occurrences": [
+        "OCC-11738",
+        "OCC-01318"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0109"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3273,
+        3278
+      ],
+      "operations": [],
+      "rationale": "The prior exact replacement Let i_x be the inclusion map supplies the missing naming construction. Both reports concern this same sentence.",
+      "adverse_evidence": "Inserting by is an alternative to the existing complete rewrite; retain the admitted wording."
+    },
+    {
+      "id": "SHEAVES-RECON-059",
+      "occurrences": [
+        "OCC-11739",
+        "OCC-01319"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0110"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3331,
+        3335
+      ],
+      "operations": [],
+      "rationale": "The admitted exact operation supplies be after let x in X.",
+      "adverse_evidence": "The point remains arbitrary and the stalk adjunction is unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-060",
+      "occurrences": [
+        "OCC-01320",
+        "OCC-11740"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0111"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3341,
+        3347
+      ],
+      "operations": [],
+      "rationale": "Both reports identify the same unjoined pair of cases. The prior operation inserts and between abelian groups and algebraic structures.",
+      "adverse_evidence": "Abelian groups are themselves an example of the general structure class; the conjunction does not assert that the classes are disjoint."
+    },
+    {
+      "id": "SHEAVES-RECON-061",
+      "occurrences": [
+        "OCC-11741"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0112"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3508,
+        3524
+      ],
+      "operations": [],
+      "rationale": "The chosen finite cover is indexed by 1 through m. The prior operation replaces the later J range by 1 <= j,j-prime <= m, retaining the finite common-upper-bound and gluing argument.",
+      "adverse_evidence": "This is a notation mismatch in the proof, not a change in the quasi-compact intersection hypothesis."
+    },
+    {
+      "id": "SHEAVES-RECON-062",
+      "occurrences": [
+        "OCC-00048",
+        "OCC-11742"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0114"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3576,
+        3594
+      ],
+      "operations": [],
+      "rationale": "For a:j to i and b:k to j the composite is a after b:k to i. The earlier exact operation already corrects f_(b after a) to f_(a after b) in the final stalk identification.",
+      "adverse_evidence": "The preceding closed-set definition and the rest of the proof already use the correctly typed composite."
+    },
+    {
+      "id": "SHEAVES-RECON-063",
+      "occurrences": [
+        "OCC-11743"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0113"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3579,
+        3592
+      ],
+      "operations": [],
+      "rationale": "The admitted unit changes image to images both in the closed-set definition at lines 3582-3583 and in the repeated stalk comparison at line 3589, where the report points.",
+      "adverse_evidence": "The two images are compared for inequality; replacing are by is would preserve a misleading singular subject."
+    },
+    {
+      "id": "SHEAVES-RECON-064",
+      "occurrences": [
+        "OCC-11744"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0115"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3601,
+        3614
+      ],
+      "operations": [],
+      "rationale": "The earlier operation supplies are and plural opens for the two families W_l and V_(l,i).",
+      "adverse_evidence": "The finite-cover refinement and both spaces remain unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-065",
+      "occurrences": [
+        "OCC-11745"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0116"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3615,
+        3621
+      ],
+      "operations": [],
+      "rationale": "The prior exact operation adds for after the new section name, introducing the restriction of the pullback section.",
+      "adverse_evidence": "The section and its restriction domain are already explicit; no new choice is made."
+    },
+    {
+      "id": "SHEAVES-RECON-066",
+      "occurrences": [
+        "OCC-11752"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0117"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3700,
+        3707
+      ],
+      "operations": [],
+      "rationale": "The prior operation inserts and between the identity and composition axioms on the basis.",
+      "adverse_evidence": "Both axioms were displayed already. The conjunction clarifies their syntax without adding an axiom."
+    },
+    {
+      "id": "SHEAVES-RECON-067",
+      "occurrences": [
+        "OCC-11753",
+        "OCC-00049"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        3708,
+        4016
+      ],
+      "operations": [],
+      "rationale": "Both definitions explicitly assign a map for each basis open U and require compatibility with restrictions. Writing phi for each typed component is conventional suppression of its U subscript; the quantification already defines the family.",
+      "adverse_evidence": "Writing phi_U is more explicit but is not necessary to repair the definition. This differs from an unquantified single-map definition; no identity or naturality condition is missing here."
+    },
+    {
+      "id": "SHEAVES-RECON-068",
+      "occurrences": [
+        "OCC-11754"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0118"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3718,
+        3725
+      ],
+      "operations": [],
+      "rationale": "The admitted wording names the displayed object a directed colimit and identifies the neighbourhood system as directed. Given two basis neighbourhoods of x, the basis property supplies a third inside their intersection, which is a common upper bound for reverse inclusion.",
+      "adverse_evidence": "Directed limit is sometimes used for direct limit, but the retained clarification removes the possible conflict with categorical limit without changing the construction."
+    },
+    {
+      "id": "SHEAVES-RECON-069",
+      "occurrences": [
+        "OCC-11755"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0119"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3914,
+        3922
+      ],
+      "operations": [],
+      "rationale": "The admitted operation includes V_(i,j,y) in U_i intersect U_j. Equality of the germs supplies a neighbourhood on which the two restrictions agree; a basis neighbourhood inside it provides the stated choice.",
+      "adverse_evidence": "The restriction notation previously implied the containment. The explicit earlier repair already addresses the report and does not strengthen the theorem."
+    },
+    {
+      "id": "SHEAVES-RECON-070",
+      "occurrences": [
+        "OCC-11756"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        3933,
+        4092
+      ],
+      "operations": [],
+      "rationale": "Unique extension is used in its categorical sense, with the identification on the basis fixed. For two extensions, restrict a section over an open W to all basis opens contained in W, identify those restrictions through the fixed basis data, and glue them in the other extension. The sheaf condition gives existence and uniqueness. Reversing the construction gives the inverse and restriction compatibility; for structure-valued sheaves the same compatible local morphisms glue because their underlying-set sheaf condition detects the equality.",
+      "adverse_evidence": "Literal set-theoretic equality of arbitrary extensions is not claimed by the proof construction, which itself identifies the basis values through canonical maps. Up to unique isomorphism restricting to the specified basis identification would expand that convention, but uniqueness of arbitrary isomorphisms would be false."
+    },
+    {
+      "id": "SHEAVES-RECON-071",
+      "occurrences": [
+        "OCC-11758"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0122"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3944,
+        4091
+      ],
+      "operations": [],
+      "rationale": "The earlier operation replaces the reference to (**) by (*) at line 4090. Condition (*) is the locally represented family-of-germs formula used at 3947-3949; (**) separately denotes the sheaf gluing condition.",
+      "adverse_evidence": "Both conditions are related by the preceding proof, but they label different displayed assertions. The intended construction reference is already corrected."
+    },
+    {
+      "id": "SHEAVES-RECON-072",
+      "occurrences": [
+        "OCC-01321"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3968,
+        4239
+      ],
+      "operations": [
+        {
+          "line": 3972,
+          "old_text": "Denote $\\Sh(\\mathcal{B})$",
+          "replacement_text": "Denote by $\\Sh(\\mathcal{B})$"
+        },
+        {
+          "line": 4109,
+          "old_text": "Denote $\\Sh(\\mathcal{B}, \\mathcal{C})$",
+          "replacement_text": "Denote by $\\Sh(\\mathcal{B}, \\mathcal{C})$"
+        },
+        {
+          "line": 4229,
+          "old_text": "Denote $\\textit{Mod}(\\mathcal{O}|_\\mathcal{B})$",
+          "replacement_text": "Denote by $\\textit{Mod}(\\mathcal{O}|_\\mathcal{B})$"
+        }
+      ],
+      "rationale": "All three category-naming clauses lack by after Denote. Inserting it preserves the categories, value types and restriction functors.",
+      "adverse_evidence": "These are wording repairs, not changes to the equivalences of categories."
+    },
+    {
+      "id": "SHEAVES-RECON-073",
+      "occurrences": [
+        "OCC-11763",
+        "OCC-00051"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0120"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3982,
+        4244
+      ],
+      "operations": [],
+      "rationale": "Both reports cover the same three in given typos at 3983, 4122 and 4242. The earlier unit has an exact is given replacement at each locus.",
+      "adverse_evidence": "The inverse functors and their cited extension lemmas are unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-074",
+      "occurrences": [
+        "OCC-11757"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        4017,
+        4177
+      ],
+      "operations": [],
+      "rationale": "At both later loci the phrase associated presheaf of sets refers back to the explicitly defined functor U mapsto F(F(U)). The term presheaf retains its type and the sentence uses it to define the sheaf condition.",
+      "adverse_evidence": "Underlying would improve consistency, but associated presheaf is not associated sheaf or sheafification. The report establishes a terminology preference, not a changed object."
+    },
+    {
+      "id": "SHEAVES-RECON-075",
+      "occurrences": [
+        "OCC-11764",
+        "OCC-00050"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0121"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4043,
+        4046
+      ],
+      "operations": [],
+      "rationale": "The prior operation changes need to needs for the singular head analogue.",
+      "adverse_evidence": "No additional condition on structure-valued sheaves is introduced."
+    },
+    {
+      "id": "SHEAVES-RECON-076",
+      "occurrences": [
+        "OCC-11759"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0123"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4255,
+        4323
+      ],
+      "operations": [],
+      "rationale": "The earlier unit already uses the defined singular expression a type of algebraic structure at both reported loci.",
+      "adverse_evidence": "The plural was understandable in ordinary usage; the existing terminology correction is retained without counting a new defect."
+    },
+    {
+      "id": "SHEAVES-RECON-077",
+      "occurrences": [
+        "OCC-11765",
+        "OCC-00052",
+        "OCC-11762"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0124",
+        "MC-STK-ERR-0127"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4349,
+        4390
+      ],
+      "operations": [],
+      "rationale": "The two admitted units fix proves after let us and the plural maps on stalks are morphisms. The combined report covers both, while each of the other reports covers one.",
+      "adverse_evidence": "Changing only is to are would leave a singular complement. The existing unit corrects both agreement components."
+    },
+    {
+      "id": "SHEAVES-RECON-078",
+      "occurrences": [
+        "OCC-11760"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0125"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4328,
+        4376
+      ],
+      "operations": [],
+      "rationale": "The maps phi_V^U are given for V in B_Y. The prior operation correctly fixes V in B_Y before using them; after constructing compatible components on the basis, the cited lemma extends them to an f-map.",
+      "adverse_evidence": "One could first extend to arbitrary opens, but that would require another construction. The existing smaller correction follows the actual proof."
+    },
+    {
+      "id": "SHEAVES-RECON-079",
+      "occurrences": [
+        "OCC-11761"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0126"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4372,
+        4397
+      ],
+      "operations": [],
+      "rationale": "The earlier replacement retains the f-map type of the constructed object. Its component sends G(V) to F(f-inverse V), and the later ordinary sheaf morphism is its adjoint f-inverse G to F.",
+      "adverse_evidence": "The surrounding construction identifies the intended maps. The change clarifies the cross-space type rather than altering either adjunction."
+    },
+    {
+      "id": "SHEAVES-RECON-080",
+      "occurrences": [
+        "OCC-11766"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0128"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4434,
+        4437
+      ],
+      "operations": [],
+      "rationale": "The admitted complete sentence states that the proof is similar to the preceding one and is omitted.",
+      "adverse_evidence": "Brief proof notes are often fragments, so this is an existing editorial repair, not evidence that a proof has been supplied."
+    },
+    {
+      "id": "SHEAVES-RECON-081",
+      "occurrences": [
+        "OCC-11767"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0129"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4464,
+        4468
+      ],
+      "operations": [],
+      "rationale": "The admitted parentheses make explicit that the subscript u applies to the inverse-image sheaf j-inverse G.",
+      "adverse_evidence": "The heading already says identification of stalks. This is a notation clarification, not a new stalk identity."
+    },
+    {
+      "id": "SHEAVES-RECON-082",
+      "occurrences": [
+        "OCC-11768"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0130"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4469,
+        4718
+      ],
+      "operations": [],
+      "rationale": "The prior unit replaces of U by on U at all six stated presheaf/sheaf categories, including the abelian pair. The report covers those same loci.",
+      "adverse_evidence": "U is the base space rather than the value type. All functors and identity equations are preserved."
+    },
+    {
+      "id": "SHEAVES-RECON-083",
+      "occurrences": [
+        "OCC-01322",
+        "OCC-11769"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0131"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4477,
+        4480
+      ],
+      "operations": [],
+      "rationale": "Both reports identify the definite article omitted before collection. The prior operation already inserts the.",
+      "adverse_evidence": "The neighbourhood order is reverse inclusion, so the terminal indexing open V and the colimit evaluation are unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-084",
+      "occurrences": [
+        "OCC-11770"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0132"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4457,
+        4487
+      ],
+      "operations": [],
+      "rationale": "The admitted proof explicitly evaluates j_p j_* F on V for the presheaf assertion and uses the same computation with j-inverse for the sheaf assertion. Since V is open in U and in X, both evaluations return F(V).",
+      "adverse_evidence": "The original single sheaf notation did not state the presheaf computation; the existing repair supplies it without adding assumptions."
+    },
+    {
+      "id": "SHEAVES-RECON-085",
+      "occurrences": [
+        "OCC-11771"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0133"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4499,
+        4505
+      ],
+      "operations": [],
+      "rationale": "The earlier rewrite moves on X after all three value kinds, making the sheaf-of construction parallel.",
+      "adverse_evidence": "The intended three cases were recoverable, so this is an existing wording correction."
+    },
+    {
+      "id": "SHEAVES-RECON-086",
+      "occurrences": [
+        "OCC-00053"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        4509,
+        4522
+      ],
+      "operations": [
+        {
+          "line": 4518,
+          "old_text": "We leave a definition of the restriction of presheaves\nof modules to the reader. ",
+          "replacement_text": ""
+        }
+      ],
+      "rationale": "Item (4) already specifies the restricted module presheaf, its restricted scalar action and its name. Remove the immediately following claim that this definition is left to the reader.",
+      "adverse_evidence": "Do not invent an additional module case to justify the stale sentence. The next sentence begins the left-adjoint discussion and remains in place."
+    },
+    {
+      "id": "SHEAVES-RECON-087",
+      "occurrences": [
+        "OCC-11772"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style_not_required_erratum",
+      "authority_lines": [
+        4518,
+        4522
+      ],
+      "operations": [],
+      "rationale": "Ok, so introduces the next topic conversationally without asserting a false implication. The chapter also uses conversational questions and invitations elsewhere.",
+      "adverse_evidence": "Replacing it by Thus would introduce a deductive connection that the source does not require. Editorial register alone is not an erratum."
+    },
+    {
+      "id": "SHEAVES-RECON-088",
+      "occurrences": [
+        "OCC-11773"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0134"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4565,
+        4915
+      ],
+      "operations": [],
+      "rationale": "The earlier unit parenthesizes the extension before taking the stalk at each of the five reported loci: 4569, 4707, 4751, 4798 and 4907.",
+      "adverse_evidence": "The preceding prose already identifies stalks of the extended sheaf. Parentheses make the operator scope explicit; they do not prove or change the stalk formula."
+    },
+    {
+      "id": "SHEAVES-RECON-089",
+      "occurrences": [
+        "OCC-11774"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0135"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4591,
+        4596
+      ],
+      "operations": [],
+      "rationale": "The admitted replacement the relevant (pre)sheaf covers the separate presheaf and sheaf calculations in parts (4) and (5).",
+      "adverse_evidence": "The evaluation argument itself already works in both cases."
+    },
+    {
+      "id": "SHEAVES-RECON-090",
+      "occurrences": [
+        "OCC-11780"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0136"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4599,
+        4608
+      ],
+      "operations": [],
+      "rationale": "The prior unit removes both commas that split their complete subjects from is.",
+      "adverse_evidence": "The choice of initial object and the contrast between sets and abelian groups remain unchanged."
+    },
+    {
+      "id": "SHEAVES-RECON-091",
+      "occurrences": [
+        "OCC-01323",
+        "OCC-11775"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0137"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4647,
+        4653
+      ],
+      "operations": [],
+      "rationale": "Both reports identify give in the adjective phrase. The prior operation already replaces it by given.",
+      "adverse_evidence": "The chosen algebraic-structure type and its initial object remain fixed."
+    },
+    {
+      "id": "SHEAVES-RECON-092",
+      "occurrences": [
+        "OCC-11776"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0138"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4671,
+        4682
+      ],
+      "operations": [],
+      "rationale": "The prior operation typesets the two word labels rings and abelian in upright math roman. It preserves the two different extension functors and their initial objects.",
+      "adverse_evidence": "The surrounding prose made their label meaning clear even in italic type; the earlier change is typographical, not evidence that a product of variables was intended."
+    },
+    {
+      "id": "SHEAVES-RECON-093",
+      "occurrences": [
+        "OCC-11777"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0139"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4726,
+        4734
+      ],
+      "operations": [],
+      "rationale": "The admitted operation uses the established plural phrase sheaves of algebraic structures.",
+      "adverse_evidence": "This wording consistency correction introduces no new type or hypothesis."
+    },
+    {
+      "id": "SHEAVES-RECON-094",
+      "occurrences": [
+        "OCC-11778",
+        "OCC-00054"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0140"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4770,
+        4809
+      ],
+      "operations": [],
+      "rationale": "The earlier operation explicitly writes O restricted to U for the coefficient sheaf at line 4794, matching the surrounding module categories and open-subspace map.",
+      "adverse_evidence": "Suppressing restriction on an open subspace is a familiar convention, but the explicit coefficient already addresses both reports without changing the module."
+    },
+    {
+      "id": "SHEAVES-RECON-095",
+      "occurrences": [
+        "OCC-11779",
+        "OCC-01324",
+        "OCC-11747"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0141",
+        "MC-STK-ERR-0143"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4835,
+        4993
+      ],
+      "operations": [],
+      "rationale": "The two prior units replace Fully faithfulness by Full faithfulness at lines 4837 and 4991. One received report covers both and the other two cover the individual loci.",
+      "adverse_evidence": "Fully faithful remains correct as an adjective describing a functor; only the noun phrase is repaired."
+    },
+    {
+      "id": "SHEAVES-RECON-096",
+      "occurrences": [
+        "OCC-11746",
+        "OCC-00055"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0142"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        4937,
+        5053
+      ],
+      "operations": [],
+      "rationale": "The admitted unit parenthesizes i_* F before the stalk subscript at both 4942 and 5045. The first report covers both; the second covers the latter.",
+      "adverse_evidence": "The surrounding prose and the already-parenthesized occurrence at 5041 specify the intended stalk. This is an existing scope clarification rather than a new closed-immersion result."
+    },
+    {
+      "id": "SHEAVES-RECON-097",
+      "occurrences": [
+        "OCC-11748",
+        "OCC-00056"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0144"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5123,
+        5135
+      ],
+      "operations": [],
+      "rationale": "The prior operation already replaces the undefined s_V by the restriction s|_V, which lies in F(V) and is the argument required by phi_V. Its further restriction agrees with the preceding line by the sheaf morphism property.",
+      "adverse_evidence": "The identity being proved already printed s|_V correctly; the last line was a notation mismatch, not a new construction."
+    },
+    {
+      "id": "SHEAVES-RECON-098",
+      "occurrences": [
+        "OCC-01325",
+        "OCC-11749"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0145"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5136,
+        5145
+      ],
+      "operations": [],
+      "rationale": "The admitted wording given an open subset U in X already addresses the missing article and modifier order in both reports.",
+      "adverse_evidence": "Additional commas are an optional way to punctuate the same introductory data. They do not leave a second substantive defect or require redoing the admitted rewrite."
+    },
+    {
+      "id": "SHEAVES-RECON-099",
+      "occurrences": [
+        "OCC-01326",
+        "OCC-11750"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0146"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5186,
+        5259
+      ],
+      "operations": [],
+      "rationale": "The earlier unit uses datum for the individual glued object at the three loci with a singular article and also in Given any glueing datum. The wider report includes that fourth locus; the narrower report names the three singular-article loci.",
+      "adverse_evidence": "Data may be used as a mass noun in other contexts, and any data is grammatical on that reading. The correction retained here consistently names one tuple (F_i,phi_ij); it does not change genuine plural collections or any cocycle condition."
+    },
+    {
+      "id": "SHEAVES-RECON-100",
+      "occurrences": [
+        "OCC-11751",
+        "OCC-01262",
+        "OCC-01327"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0147"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        5224,
+        5228
+      ],
+      "operations": [],
+      "rationale": "All three reports concern the same extraneous article in by the restricting. The prior exact operation deletes it and keeps the componentwise restriction to W-prime intersect U_i.",
+      "adverse_evidence": "The restriction maps themselves were already correctly specified."
+    }
+  ],
+  "next_source_start_line": null,
+  "coverage": "All received report texts and their relevant original-source contexts read. This is a source-locus review, not a claim to have reread every line of the chapter or proved every unrelated theorem."
+}
