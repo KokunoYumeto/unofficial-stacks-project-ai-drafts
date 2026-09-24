@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,518 historical correction IDs are accounted for; 1,516 effective textual
+  The 1,594 historical correction IDs are accounted for; 1,592 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -89,7 +89,7 @@ All thirteen are now integrated in this draft: two limit-preservation fixes
 in R50 and the remaining eleven in R51. They are also in the larger export;
 do not apply the same fix twice. Upstream adoption is not claimed.
 Both sets target the pinned official revision. The official master ref was
-[checked on 23 September 2026](validation/upstream-ref-check-2026-09-23.json)
+[checked on 24 September 2026](validation/upstream-ref-check-2026-09-24.json)
 and still matched that revision; later upstream compatibility requires a new check.
 
 The source and fixes-only downloads include R49: five de Rham corrections
@@ -151,7 +151,18 @@ and [chapter PDFs with complete editable sources](ai-integrated/candidates/commo
 are available. The Sites patch and combined fixes-only download contain
 all 35 edits and retain the 107 earlier Sites corrections.
 
-R52/R53/R54/R55 review, correction preparation, builds and visual checks, and current
+R56 adds **76 proposed Stacks corrections and clarifications**: 34 copyedits,
+35 source corrections and seven clarifications. The substack criterion now
+requires the necessary isomorphism in the correct fibre. The localization
+criterion now detects cartesian arrows after an allowed refinement, with
+a complete proof and counterexample to the previous converse. The edits
+also restore missing comparison maps, composition factors and base labels.
+[Exact changes and complete mathematical evidence](ai-integrated/candidates/commons/stacks/errata/r56/REVIEW.md)
+and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidates/commons/stacks/errata/r56/README.md)
+accompany all 86 edits. They are included in the Stacks chapter patch and
+combined corrections-only download.
+
+R52/R53/R54/R55/R56 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

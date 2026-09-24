@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **55**
-- Stable correction IDs: **1,518**
-- Displayed exact change hunks: **1,840**
-- Manifest/source-map exact operations: **1,772**
+- Admitted errata batches: **56**
+- Stable correction IDs: **1,594**
+- Displayed exact change hunks: **1,926**
+- Manifest/source-map exact operations: **1,858**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **35**
-- Registry SHA-256: `7171C5F6E909946C20A29A76FD9A2341E20C36C789BD4D25BD3FE4D49FBEE067`
+- Affected source paths: **36**
+- Registry SHA-256: `63B02B5A386174B4235E60CB720534E278106953BA9CC2B3A00843D40FFCF5C3`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -43846,5 +43846,2291 @@ Pinned-official lines `11840-11840`; bytes `424030:424059`.
 ````
 
 Original SHA-256 `8224332803D3F113B5E9DA9F7F5C656F34E79982378AA9CF36C364A1EF03F446`; replacement SHA-256 `9AFE36EF92718BB92CE5CB7F6E6FD3B889D9320A650080CCF486CB3B33C31FCE`.
+
+</details>
+
+## stacks-errata-a04446e-r56
+
+76 stable IDs · 86 displayed change hunks · admitted 2026-09-24T21:10:34.175383Z.
+
+<details id="mc-stk-err-1783">
+<summary><code>MC-STK-ERR-1783 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1783`; producer ID: `STACKS-RECON-001`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L231) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The naming clause introduces the same object symbols for their corresponding 1-morphisms. Add the missing preposition and move also to the beginning of the naming clause.
+- Adverse evidence: Both functors, their domains and codomains, the 2-fibre-product statement and the comparison by beta composed with alpha inverse remain unchanged.
+
+### Change 1: `MC-STK-ERR-1783-OP1`
+
+Pinned-official lines `231-231`; bytes `7267:7335`.
+
+````diff
+- Denote $x, y : \mathcal{C}/U \to \mathcal{S}$ also the corresponding
++ Also denote by $x, y : \mathcal{C}/U \to \mathcal{S}$ the corresponding
+````
+
+Original SHA-256 `608775BE521BFAC0312205B0FB84A0A7D438DCAB17F0829CB1FAF3107E809DE0`; replacement SHA-256 `65D01D4E78A99AF5D7293504F4024149CF7D58EEC7868401C110A54D2C93E20C`.
+
+</details>
+
+<details id="mc-stk-err-1784">
+<summary><code>MC-STK-ERR-1784 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1784`; producer ID: `STACKS-RECON-002`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L370) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore of in the instruction selecting pullback functors. The same wording occurs in the definition at source line 432.
+- Adverse evidence: No chosen pullback, coherence data, fibre-product existence hypothesis or reference target changes.
+
+### Change 1: `MC-STK-ERR-1784-OP1`
+
+Pinned-official lines `370-370`; bytes `12849:12872`.
+
+````diff
+- Make a choice pullbacks
++ Make a choice of pullbacks
+````
+
+Original SHA-256 `C6D50FF3F4D3AD27AE861D553D8DDBB83F847349E28959FCC5381C6884BF03AD`; replacement SHA-256 `EA2CE2E3390D8DE46EB9393B69DDA30D302FC7AC86B424E3863FCD913F693D4E`.
+
+</details>
+
+<details id="mc-stk-err-1785">
+<summary><code>MC-STK-ERR-1785 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1785`; producer ID: `STACKS-RECON-003`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L374) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Two displayed families are introduced by the plural noun families; remove its conflicting singular article.
+- Adverse evidence: Both families, index sets, fixed targets and all four required fibre-product forms remain unchanged.
+
+### Change 1: `MC-STK-ERR-1785-OP1`
+
+Pinned-official lines `374-374`; bytes `13059:13072`.
+
+````diff
+- be a families
++ be families
+````
+
+Original SHA-256 `509CAA5BD0B2F5790F55B9EB81FB907DC6E27B68DAAA7DFFB2DB7E9DCDB37600`; replacement SHA-256 `339667AE848DAFD5D39F49691026A8F10FD5E3B812B89E71DC248BB415B66ACC`.
+
+</details>
+
+<details id="mc-stk-err-1786">
+<summary><code>MC-STK-ERR-1786 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1786`; producer ID: `STACKS-RECON-004`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L394-L397) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Put morphism of families before the displayed data specifying that morphism, so the hypothesis has a grammatical noun phrase. Retain the equality of base maps and the original conclusion.
+- Adverse evidence: This is a wording repair. No map, index, domain, codomain, hypothesis or conclusion is added, removed or identified.
+
+### Change 1: `MC-STK-ERR-1786-OP1`
+
+Pinned-official lines `394-397`; bytes `13870:14103`.
+
+````diff
+- \item Given a second $\alpha' : I \to J$, $h' : U \to V$ and
+- $g'_i : U_i \to V_{\alpha'(i)}$ morphism of families
+- of maps with fixed target, then if $h = h'$ the two resulting functors
+- between descent data are canonically isomorphic.
++ \item Given a second morphism of families of maps with fixed target,
++ $\alpha' : I \to J$, $h' : U \to V$ and
++ $g'_i : U_i \to V_{\alpha'(i)}$, if $h = h'$ then the two resulting functors
++ between descent data are canonically isomorphic.
+````
+
+Original SHA-256 `648B8C96737F0CEFD263EF0D147C89AEE2D4886D0E3623387251A3319C6EA4F7`; replacement SHA-256 `14F0B7ECDA92ADC5A4D9176B84D709466C5CC30CCDFCEF440AB61DE9DFEB357B`.
+
+</details>
+
+<details id="mc-stk-err-1787">
+<summary><code>MC-STK-ERR-1787 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1787`; producer ID: `STACKS-RECON-005`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L640) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Use the single-word noun for the corresponding morphism presheaves.
+- Adverse evidence: The comparison and its hypotheses are unchanged.
+
+### Change 1: `MC-STK-ERR-1787-OP1`
+
+Pinned-official lines `640-640`; bytes `22696:22709`.
+
+````diff
+- counter parts
++ counterparts
+````
+
+Original SHA-256 `DF386E9EB22FDD53A6B04B6F2B7A9E6CFDC5ED5B50AA3948AD86FF1FBACC7030`; replacement SHA-256 `3031BE2980F2E485CEC4FE2E2A4149D883C7B5E90BDBCD6DCF0619E9B045AFF6`.
+
+</details>
+
+<details id="mc-stk-err-1788">
+<summary><code>MC-STK-ERR-1788 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1788`; producer ID: `STACKS-RECON-006`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L639) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Definition-stack requires Mor(x,y) to be a sheaf. Fullness gives equality of the Hom sets in the fibre categories with those in the ambient stack, using the same chosen cartesian lifts; the restriction maps are then the same uniquely factored arrows. Thus the required Mor presheaf, not only its Isom subpresheaf, inherits the sheaf condition.
+- Adverse evidence: The categories here need not be groupoids, so Mor cannot be replaced by Isom. This correction does not change the intended statement. Independently checking the original unqualified isomorphism wording in the first and third assumptions remains part of this source review.
+
+### Change 1: `MC-STK-ERR-1788-OP1`
+
+Pinned-official lines `639-639`; bytes `22608:22621`.
+
+````diff
+- \mathit{Isom}
++ \mathit{Mor}
+````
+
+Original SHA-256 `844E8C125791C6EF055CDB6CC9708B24F6629E98D91396C31BF51DB0BE8E1E11`; replacement SHA-256 `45E647469DF111D50107288B8EA84F65BC87CC7CC0F996D945D7DCFE29830A49`.
+
+</details>
+
+<details id="mc-stk-err-1789">
+<summary><code>MC-STK-ERR-1789 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1789`; producer ID: `STACKS-RECON-007`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L675) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: F maps S1 to S2, so its image objects belong to S2. At f:V->U the exact map sends phi to beta_V^{-1} F(phi) alpha_V, where alpha_V:f^*F(x)->F(f^*x) and beta_V:f^*F(y)->F(f^*y) are the unique comparison isomorphisms commuting with the cartesian projections. Its inverse sends psi to the unique phi with F(phi)=beta_V psi alpha_V^{-1}, by full faithfulness of F on the fibre. Both maps commute with restrictions by uniqueness of cartesian factorization. Thus this is an isomorphism of the displayed presheaves, with precisely the corrected target subscript.
+- Adverse evidence: The base site, source presheaf, image objects, functors and descent argument remain unchanged. The comparison is already typed this way in lemma-presheaf-mor-map-fibred-categories, source 171-203.
+
+### Change 1: `MC-STK-ERR-1789-OP1`
+
+Pinned-official lines `675-675`; bytes `24226:24266`.
+
+````diff
+- \mathit{Mor}_{\mathcal{S}_1}(F(x), F(y))
++ \mathit{Mor}_{\mathcal{S}_2}(F(x), F(y))
+````
+
+Original SHA-256 `4B056AD4AD6BBBF8EBAC76DBB78464AABF28D1B25A48D74A72B7487723331080`; replacement SHA-256 `A8762459A56D0EFA68E274DBA3E7E56143B073EADCAD0F0C194E3D7E411A08D3`.
+
+</details>
+
+<details id="mc-stk-err-1790">
+<summary><code>MC-STK-ERR-1790 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1790`; producer ID: `STACKS-RECON-008`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L684-L686) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the preposition in both parallel descent-datum sentences.
+- Adverse evidence: Both categories, the same covering and the full descent data remain unchanged.
+
+### Change 1: `MC-STK-ERR-1790-OP1`
+
+Pinned-official lines `684-684`; bytes `24678:24699`.
+
+````diff
+- relative the covering
++ relative to the covering
+````
+
+Original SHA-256 `5CD53CA30A260EDE181D3B1D5327C6523135F9AFF33012E6D854FFB1536A2BB9`; replacement SHA-256 `45F89C3C9AB41315846E1353A8494D3B01A3DD60E7B214FDA7C4807173CC131B`.
+
+### Change 2: `MC-STK-ERR-1790-OP2`
+
+Pinned-official lines `686-686`; bytes `24815:24836`.
+
+````diff
+- relative the covering
++ relative to the covering
+````
+
+Original SHA-256 `5CD53CA30A260EDE181D3B1D5327C6523135F9AFF33012E6D854FFB1536A2BB9`; replacement SHA-256 `45F89C3C9AB41315846E1353A8494D3B01A3DD60E7B214FDA7C4807173CC131B`.
+
+</details>
+
+<details id="mc-stk-err-1791">
+<summary><code>MC-STK-ERR-1791 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1791`; producer ID: `STACKS-RECON-009`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L747) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the article introducing the second fibre-product object.
+- Adverse evidence: The complete quadruple and its common base object U remain unchanged.
+
+### Change 1: `MC-STK-ERR-1791-OP1`
+
+Pinned-official lines `747-747`; bytes `27268:27277`.
+
+````diff
+- be second
++ be a second
+````
+
+Original SHA-256 `137E931F75E2C3A40E2D2E7D729752DE365E0777987CA61392387BEA1C7C06E3`; replacement SHA-256 `0AD2433A1D51A12BC377B29E51DE74F53B9E2D0ADFCF022C56C8FE6030CD1553`.
+
+</details>
+
+<details id="mc-stk-err-1792">
+<summary><code>MC-STK-ERR-1792 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1792`; producer ID: `STACKS-RECON-010`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L752) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Agree the demonstrative with the plural noun.
+- Adverse evidence: Both displayed isomorphisms and the morphism-presheaf fibre-product formula remain unchanged.
+
+### Change 1: `MC-STK-ERR-1792-OP1`
+
+Pinned-official lines `752-752`; bytes `27503:27528`.
+
+````diff
+- With this identifications
++ With these identifications
+````
+
+Original SHA-256 `EC05B9DC13FF840B147C0E6BB7A6DE0B5E5DEFDAA2DD1057054379CE0D82EBB0`; replacement SHA-256 `F6861548E199D7733FB7FFD2AF07F44A0945551DB4F0335E0884A93A091A11AC`.
+
+</details>
+
+<details id="mc-stk-err-1793">
+<summary><code>MC-STK-ERR-1793 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1793`; producer ID: `STACKS-RECON-011`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L884) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the article for the singular functor.
+- Adverse evidence: The original functor, domain, codomain and size hypotheses remain unchanged.
+
+### Change 1: `MC-STK-ERR-1793-OP1`
+
+Pinned-official lines `884-884`; bytes `33043:33053`.
+
+````diff
+- is functor
++ is a functor
+````
+
+Original SHA-256 `6F668276B215C8DFF2A8CDD9801B7ED24491DA40371D0AD8C1259914030B0A27`; replacement SHA-256 `22DBF31E82AB97CF4CD25DCB3F4DC407DBE88EC4715203BD23F3A0A047900DCA`.
+
+</details>
+
+<details id="mc-stk-err-1794">
+<summary><code>MC-STK-ERR-1794 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1794`; producer ID: `STACKS-RECON-012`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L890) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Use the appropriate article before equivalent.
+- Adverse evidence: No change to equivalence or the stated size obstruction.
+
+### Change 1: `MC-STK-ERR-1794-OP1`
+
+Pinned-official lines `890-890`; bytes `33384:33405`.
+
+````diff
+- a equivalent category
++ an equivalent category
+````
+
+Original SHA-256 `A3CF043C09125137354BBACBA228B8C23477F13C1BDF5223F5CCFC4C7231C7AB`; replacement SHA-256 `71156F5002DD494B8EED5CBC8AD2041A543FB12E5385E9813ECEC5BC9B0E1753`.
+
+</details>
+
+<details id="mc-stk-err-1795">
+<summary><code>MC-STK-ERR-1795 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1795`; producer ID: `STACKS-RECON-013`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L891) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Agree the noun with the singular fibre and article.
+- Adverse evidence: The possible proper class of isomorphism classes is retained.
+
+### Change 1: `MC-STK-ERR-1795-OP1`
+
+Pinned-official lines `891-891`; bytes `33473:33491`.
+
+````diff
+- a fibre categories
++ a fibre category
+````
+
+Original SHA-256 `FD70328DF54D0FDEFBAB61D09424DC4AA1F872A6C996A6860EF8FE7C5D73F7C6`; replacement SHA-256 `1D3DD17D59385E53D2AD5FAA810B60D5731435098E879D792F17FDDEE23E0A1F`.
+
+</details>
+
+<details id="mc-stk-err-1796">
+<summary><code>MC-STK-ERR-1796 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1796`; producer ID: `STACKS-RECON-014`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1037) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the site hypothesis required by the defined 2-category of stacks in groupoids and both stack lemmas invoked in the proof. A topology is needed to give meaning to descent and to the stack condition.
+- Adverse evidence: The same site is already fixed in definition-stacks-in-groupoids-over-C at 1010. The fibre-product construction and its universal property are unchanged.
+
+### Change 1: `MC-STK-ERR-1796-OP1`
+
+Pinned-official lines `1037-1037`; bytes `38724:38756`.
+
+````diff
+- Let $\mathcal{C}$ be a category.
++ Let $\mathcal{C}$ be a site.
+````
+
+Original SHA-256 `D710A734D6131F40A243F20CF4C59BDA826FF2E615838BF694C1D712CF58696B`; replacement SHA-256 `4A88860E344AAC5B736E2546E23F01D8E2B164474819474FACC86C711DC26FE3`.
+
+</details>
+
+<details id="mc-stk-err-1797">
+<summary><code>MC-STK-ERR-1797 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1797`; producer ID: `STACKS-RECON-015`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1276-L1278) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The local essential-image hypothesis supplies one object x over U and one fibre isomorphism f:F(x)->G(y). State this directly so the quadruple (U,x,y,f) is a well-defined object of the 2-fibre product. Since G(gamma)=id, its endomorphism (id_x,gamma) obeys G(gamma) f = f F(id_x).
+- Adverse evidence: The shorter producer proposal saying that f is a morphism is also mathematically sufficient because the fibre is a groupoid; the adopted wording states exactly the supplied essential-image witness and repairs the original plural grammar. No stronger hypothesis is added.
+
+### Change 1: `MC-STK-ERR-1797-OP1`
+
+Pinned-official lines `1276-1278`; bytes `46537:46703`.
+
+````diff
+- we may therefore assume that we have
+- $f : F(x) \to G(y)$ for some object $x$ of $\mathcal{S}_2$ over $U$
+- and morphisms $f$ of $(\mathcal{S}_1)_U$. In this case we get
++ we may therefore assume that there are an object $x$ of $\mathcal{S}_2$
++ over $U$ and an isomorphism $f : F(x) \to G(y)$ in
++ $(\mathcal{S}_1)_U$. In this case we get
+````
+
+Original SHA-256 `3E9E7963E7EC3657DE843D68DC48503CE96B15893830102F074CC5537A2FAC04`; replacement SHA-256 `A12D307320F6DE22EFB9049E8F8D64300E2A8EE021348B81A40E41855EE96B10`.
+
+</details>
+
+<details id="mc-stk-err-1798">
+<summary><code>MC-STK-ERR-1798 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1798`; producer ID: `STACKS-RECON-016`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1284) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: G prime is the projection from S2 times over S1 T1 to S2. It sends (id_x,gamma) to id_x, an arrow in (S2)_U. Restore that target category.
+- Adverse evidence: The original object x, base U, arrow and faithfulness inference are retained.
+
+### Change 1: `MC-STK-ERR-1798-OP1`
+
+Pinned-official lines `1284-1284`; bytes `46876:46905`.
+
+````diff
+- under $G'$ in $\mathcal{S}_1$
++ under $G'$ in $\mathcal{S}_2$
+````
+
+Original SHA-256 `6053236E81A0C9229932389CF01CDD6AFB79983523F5DDCBBAF66338DE975257`; replacement SHA-256 `15986A3E6E5D539AAB60710AF7AFA048C252A6AE6F5CCE7F8A515130B819775D`.
+
+</details>
+
+<details id="mc-stk-err-1799">
+<summary><code>MC-STK-ERR-1799 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1799`; producer ID: `STACKS-RECON-017`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1319) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the verb in the purpose clause.
+- Adverse evidence: The local reduction and automorphism-sheaf argument remain unchanged.
+
+### Change 1: `MC-STK-ERR-1799-OP1`
+
+Pinned-official lines `1319-1319`; bytes `48053:48063`.
+
+````diff
+- To to this
++ To do this
+````
+
+Original SHA-256 `1816EE1FDCDBE2E4D4CAF14C41CB595525665B62F78368CC1AB898A1DAB7718C`; replacement SHA-256 `C72409047D55FB0B3E7C7E8BD77E280B1D0CF2F516564BD93AF78E8854364226`.
+
+</details>
+
+<details id="mc-stk-err-1800">
+<summary><code>MC-STK-ERR-1800 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1800`; producer ID: `STACKS-RECON-018`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1346) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The presheaf is evaluated at h:V->U. Its pair consists of x in S_V and an arrow f:F(x)->h^*y in T_V; f is a fibre arrow and cannot serve as a base-change arrow to U. Under a map k:W->V over U, restrict x and f and use the cartesian comparison k^*h^*y -> (h k)^*y. This gives the same isomorphism class independently of cartesian choices. The corrected formula has the exact object type used throughout both descent arguments.
+- Adverse evidence: Only the base-change label changes. The quotient by pair isomorphism, all objects, the original h, and the arrow f remain explicit. A separate adjacent discovery records incorrectly ordered descent-comparison inverses in this proof.
+
+### Change 1: `MC-STK-ERR-1800-OP1`
+
+Pinned-official lines `1346-1346`; bytes `49299:49303`.
+
+````diff
+- f^*y
++ h^*y
+````
+
+Original SHA-256 `91B5FBA17AC207B8430F53924805237C9CDF2AAA90A1108BE922EDC645DC850B`; replacement SHA-256 `9864B27F81A8B87322ECC5593EBA20D37B13626A194E1A8D7427D6A71E965A19`.
+
+</details>
+
+<details id="mc-stk-err-1801">
+<summary><code>MC-STK-ERR-1801 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1801`; producer ID: `STACKS-RECON-019`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1537) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Remove the preposition with no complement.
+- Adverse evidence: Both original objects, their bases and the locally defined morphism data are retained.
+
+### Change 1: `MC-STK-ERR-1801-OP1`
+
+Pinned-official lines `1537-1537`; bytes `56460:56492`.
+
+````diff
+- any object $y$ of lying over $V$
++ any object $y$ lying over $V$
+````
+
+Original SHA-256 `01D50CEC98E45A46AF70279C12B9A915B7F1AADA0827700BB2BD694E40A47943`; replacement SHA-256 `4BD2E5FC5DA60D74931DC41B5DE96F9774F107D1BAF9422A9CE975BBCB855D6F`.
+
+</details>
+
+<details id="mc-stk-err-1802">
+<summary><code>MC-STK-ERR-1802 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1802`; producer ID: `STACKS-RECON-020`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1581) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Cartesianness is a property of arrows. For a strongly cartesian a:y->x over u and a locally represented b:z->x over u v, each local representative b_i factors uniquely as a c_i, with c_i over the prescribed v on that cover. On pairwise overlaps the c_i agree by uniqueness of cartesian factorization. They define a locally defined morphism c:z->y, and the same uniqueness on a common refinement proves that c is unique. Thus G^2 preserves the original strongly cartesian morphisms.
+- Adverse evidence: The functor G^2, original categories, object set, base arrows and locally defined morphisms are unchanged; line 1530 uses the correct term for the preceding stage.
+
+### Change 1: `MC-STK-ERR-1802-OP1`
+
+Pinned-official lines `1581-1581`; bytes `58090:58116`.
+
+````diff
+- strongly cartesian objects
++ strongly cartesian morphisms
+````
+
+Original SHA-256 `983BDE45785F7F3C47604EA725BACA653AA776E0763543CC62CDA649A0915CBF`; replacement SHA-256 `EA625530AF00ABB380E2FFF313795CC5789C62DDF4D09203A1CFCF60E646A38F`.
+
+</details>
+
+<details id="mc-stk-err-1803">
+<summary><code>MC-STK-ERR-1803 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1803`; producer ID: `STACKS-RECON-021`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1596) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the preposition relating the descent datum to its covering.
+- Adverse evidence: The full covering and descent data are unchanged.
+
+### Change 1: `MC-STK-ERR-1803-OP1`
+
+Pinned-official lines `1596-1596`; bytes `58831:58867`.
+
+````diff
+- descent datum relative $\mathcal{U}$
++ descent datum relative to $\mathcal{U}$
+````
+
+Original SHA-256 `D0AABEF6B1196127FD7FFA160E7B3CB99C832FB76570C8AA0C0A660F98F3DCD5`; replacement SHA-256 `90A4E4529D68274C14888EEB9A1CE0D9F4A562BE545AC97F6B0D9022825B17D6`.
+
+</details>
+
+<details id="mc-stk-err-1804">
+<summary><code>MC-STK-ERR-1804 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1804`; producer ID: `STACKS-RECON-022`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L724) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The preceding definition includes all natural transformations over C, not only invertible ones. To see the distinction exactly, take the one-object one-arrow site with its identity covering. For any small category A, A->C is a stack: it is fibred using identity pullbacks, every Hom presheaf is a sheaf, and descent for the sole identity covering is effective. Take A to be the terminal category and B to be the category with objects 0,1 and a single nonidentity arrow a:0->1. The two functors A->B selecting 0 and 1 preserve cartesian arrows, and a gives a noninvertible 2-morphism. Therefore the defined category of stacks is a 2-category and is not in general a (2,1)-category. Its 2-fibre-product construction and the given proof still apply in this 2-category.
+- Adverse evidence: The correction retains all stacks and all specified 2-morphisms. Restricting to groupoids or to invertible transformations would alter the definition and scope. The groupoid-only subcategory is separately identified as (2,1) at 1031-1033.
+
+### Change 1: `MC-STK-ERR-1804-OP1`
+
+Pinned-official lines `724-724`; bytes `26260:26291`.
+
+````diff
+- The $(2, 1)$-category of stacks
++ The $2$-category of stacks
+````
+
+Original SHA-256 `EB4584CA1C19064F8828468D773723EF75742FD8326A527E0AAD545E0F32CA2D`; replacement SHA-256 `C8A240C6CF954EAB9D1F4B6F703C0CD141877E44CD05DE91A8B44FA7A6081D09`.
+
+</details>
+
+<details id="mc-stk-err-1805">
+<summary><code>MC-STK-ERR-1805 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1805`; producer ID: `STACKS-RECON-023`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1381-L1394) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Definition-descent-data has phi_ij:pr_0^*x_i->pr_1^*x_j. Here beta_i:F(x_i)->y|Ui and beta_j:F(x_j)->y|Uj. On Ui times_U Uj, the descent compatibility is beta_j F(phi_ij)=beta_i, so F(phi_ij)=beta_j^{-1} beta_i. Likewise alpha_i:x_i->x|Ui and alpha_j:x_j->x|Uj give alpha_j phi_ij=alpha_i. With beta_i=beta|Ui F(alpha_i), the corrected first equation yields F(phi_ij)=F(alpha_j)^{-1} F(alpha_i)=F(alpha_j^{-1} alpha_i), and fibre faithfulness gives phi_ij=alpha_j^{-1} alpha_i. Every restriction in the edited formulas is retained. These equations show precisely that the obtained object x realizes the original descent datum.
+- Adverse evidence: The original products beta_j beta_i^{-1} and alpha_j alpha_i^{-1} generally fail to compose: their middle objects differ. Neither the definition of phi_ij nor the displayed directions of beta_i and alpha_i are changed. No commutativity of the morphisms is assumed.
+
+### Change 1: `MC-STK-ERR-1805-OP1`
+
+Pinned-official lines `1381-1382`; bytes `50939:51025`.
+
+````diff
+- F(\varphi_{ij}) = \beta_j|_{U_i \times_U U_j} \circ
+- (\beta_i|_{U_i \times_U U_j})^{-1}
++ F(\varphi_{ij}) = (\beta_j|_{U_i \times_U U_j})^{-1} \circ
++ \beta_i|_{U_i \times_U U_j}
+````
+
+Original SHA-256 `E9327D5F27B03286B6AAB0773617326009852C854F44131F4FC0F6365709330F`; replacement SHA-256 `0BE235986501D87199C28248C8A660B9E7035AA45728A2FA15BA2658DAD65024`.
+
+### Change 2: `MC-STK-ERR-1805-OP2`
+
+Pinned-official lines `1393-1394`; bytes `51589:51674`.
+
+````diff
+- \varphi_{ij} = \alpha_j|_{U_i \times_U U_j} \circ
+- (\alpha_i|_{U_i \times_U U_j})^{-1}
++ \varphi_{ij} = (\alpha_j|_{U_i \times_U U_j})^{-1} \circ
++ \alpha_i|_{U_i \times_U U_j}
+````
+
+Original SHA-256 `B51B03E5030FCF2C4BDAEB7033A48E6257E54A19C24E7B00B8E327D7BD8484C6`; replacement SHA-256 `86B371658009248CE555A7A6D3DC8B71A854A4B3DBBF70C9D8FA1B38075D96AD`.
+
+</details>
+
+<details id="mc-stk-err-1806">
+<summary><code>MC-STK-ERR-1806 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1806`; producer ID: `STACKS-RECON-024`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1699) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The preceding item defines Hom sets between descent-data objects in F prime(U), by common refinements; the following item defines F prime(h). The composition just constructed is composition in F prime(U), not in the original category F(U).
+- Adverse evidence: The original category F(U) and its canonical map to F prime(U) are still used explicitly at 1722-1724. No original category or formula is replaced.
+
+### Change 1: `MC-STK-ERR-1806-OP1`
+
+Pinned-official lines `1699-1699`; bytes `63076:63095`.
+
+````diff
+- morphisms in $F(U)$
++ morphisms in $F'(U)$
+````
+
+Original SHA-256 `3F7042102C8B89F83489B2927F1B64D567854FFD5A40ED92BC2E02C7517EF85E`; replacement SHA-256 `7862A6EB7A7C890E5977DEA625A8CBF3D6A95D36AE5A056F2858DFE16A6D0495`.
+
+</details>
+
+<details id="mc-stk-err-1807">
+<summary><code>MC-STK-ERR-1807 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1807`; producer ID: `STACKS-RECON-025`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1735) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Supply be in the sentence introducing the already constructed stack and morphism.
+- Adverse evidence: The entire universal-property diagram and all functor types are retained.
+
+### Change 1: `MC-STK-ERR-1807-OP1`
+
+Pinned-official lines `1735-1735`; bytes `64854:64892`.
+
+````diff
+- the stack and $1$-morphism constructed
++ be the stack and $1$-morphism constructed
+````
+
+Original SHA-256 `BCB8E77C8E33C00E6BB5719F3B5DFE247DEE0AD3D84266F026EE3808C3A3B4B2`; replacement SHA-256 `79F5435233D5ED6BF77D5B63D6A817CCA18EDCDF6DA74A6B9189FE0D6220D8DA`.
+
+</details>
+
+<details id="mc-stk-err-1808">
+<summary><code>MC-STK-ERR-1808 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1808`; producer ID: `STACKS-RECON-026`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1766) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: F:S->X sends x_i to y_i=F(x_i), and y is obtained by effective descent of the y_i in X. Therefore its restrictions are isomorphic to F(x_i). G(x_i) lies instead in S prime and cannot be the displayed local object in X.
+- Adverse evidence: The local isomorphisms alpha_ijk, the induced beta_ij and H(x prime)=y are unchanged. The original G is retained in its proper role comparing x_i with x prime.
+
+### Change 1: `MC-STK-ERR-1808-OP1`
+
+Pinned-official lines `1766-1766`; bytes `66182:66204`.
+
+````diff
+- agreeing with $G(x_i)$
++ agreeing with $F(x_i)$
+````
+
+Original SHA-256 `94AC296324548C668FDDBFFD9A9BFB3D4B72E275A075BA99045E340F3497F0E1`; replacement SHA-256 `C7962426F54FD29A4CB07FEEB0ACEF45E8E437871D8BBA619C68810F8EEE7D1D`.
+
+</details>
+
+<details id="mc-stk-err-1809">
+<summary><code>MC-STK-ERR-1809 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1809`; producer ID: `STACKS-RECON-027`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1839) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Close the second argument and then the Mor expression: the base sheaf is Mor(j(f(x)),j(f(x prime))). This matches the original base presheaf immediately above and the declared functor j:Y->Y prime.
+- Adverse evidence: Every original functor, object and fibre-product factor remains present; this is delimiter repair, not a changed comparison.
+
+### Change 1: `MC-STK-ERR-1809-OP1`
+
+Pinned-official lines `1839-1839`; bytes `68822:68861`.
+
+````diff
+- \times_{\mathit{Mor}(j(f(x)), j(f(x'))}
++ \times_{\mathit{Mor}(j(f(x)), j(f(x')))}
+````
+
+Original SHA-256 `1027206A6E92E2C782E0A68860B39630E3D47739371589B7A4B466D913CA3A3B`; replacement SHA-256 `352944D737AF803FB8C2E64AE0CF9418DC7B58D82DF42EA50D94327AABBB4E15`.
+
+</details>
+
+<details id="mc-stk-err-1810">
+<summary><code>MC-STK-ERR-1810 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1810`; producer ID: `STACKS-RECON-028`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1871) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Supply the article for the specified inertia fibred category.
+- Adverse evidence: The inertia construction and stackification claim are unchanged.
+
+### Change 1: `MC-STK-ERR-1810-OP1`
+
+Pinned-official lines `1871-1871`; bytes `70254:70286`.
+
+````diff
+- is inertia of the stackification
++ is the inertia of the stackification
+````
+
+Original SHA-256 `EB88C5BF94BDDC10F309C1A77773BD68A9B41A5685A92C9F31FB5ABAB0FD20D8`; replacement SHA-256 `B8467298EBA390A2DC72ED012B83C3F57EB6B6E9BF35491B20B1196476A60253`.
+
+</details>
+
+<details id="mc-stk-err-1811">
+<summary><code>MC-STK-ERR-1811 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1811`; producer ID: `STACKS-RECON-029`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L1934) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Supply be in the sentence introducing the constructed stack in groupoids and its morphism.
+- Adverse evidence: All groupoid conditions, objects and functors are retained.
+
+### Change 1: `MC-STK-ERR-1811-OP1`
+
+Pinned-official lines `1934-1934`; bytes `72369:72420`.
+
+````diff
+- the stack in groupoids and $1$-morphism constructed
++ be the stack in groupoids and $1$-morphism constructed
+````
+
+Original SHA-256 `BFCF853374654B8334CB09781DA80C7FA10186AFDBDFE069A896FAB3C832E6CF`; replacement SHA-256 `32B43D2B99754417D49ED2CD66809597B8AA9A6067BF27CCF340CA69F956E81C`.
+
+</details>
+
+<details id="mc-stk-err-1812">
+<summary><code>MC-STK-ERR-1812 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1812`; producer ID: `STACKS-RECON-030`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2040) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Introduce the following content clause with that.
+- Adverse evidence: The structure of the inherited site and its original reference are unchanged.
+
+### Change 1: `MC-STK-ERR-1812-OP1`
+
+Pinned-official lines `2040-2040`; bytes `76144:76169`.
+
+````diff
+- fibred category. We say $
++ fibred category. We say that $
+````
+
+Original SHA-256 `1E4229E5D5592EF5DBDD0F472D6699EE1B1C2A028E5B24C2636EE596EE240DB7`; replacement SHA-256 `6FF410BBC7E7787AFF1B65699F6244D964B5C3986AC8CB6DD7B3F5759B59ACC1`.
+
+</details>
+
+<details id="mc-stk-err-1813">
+<summary><code>MC-STK-ERR-1813 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1813`; producer ID: `STACKS-RECON-031`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2090) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Remove the singular article before the plural predicate morphisms.
+- Adverse evidence: Both morphisms, their common target, common base arrow and unique fibre isomorphism are retained.
+
+### Change 1: `MC-STK-ERR-1813-OP1`
+
+Pinned-official lines `2090-2090`; bytes `78630:78659`.
+
+````diff
+- are both a strongly cartesian
++ are both strongly cartesian
+````
+
+Original SHA-256 `FC50A384745A436949FA4F4E2FA40B0E442288FDA14952E30B06A71B34077F2D`; replacement SHA-256 `D2FD4588978A22F44D3CC57B6B02490B7DE3F5F068DF9D731963FBFB265F74FD`.
+
+</details>
+
+<details id="mc-stk-err-1814">
+<summary><code>MC-STK-ERR-1814 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1814`; producer ID: `STACKS-RECON-032`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2151) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The base functors are p:X->C and q:Y->C, with q F=p. Since F(x_i)=y_i, p(x_i)=q(y_i). The local arrow F(psi_i) therefore defines the section of Isom_Y(F(x),y) over q(y_i), with the cartesian comparison between F(x)|q(y_i) and F(x|q(y_i)) and the covering identification of y_i with y|q(y_i). The expression q(x_i) is undefined because x_i belongs to X.
+- Adverse evidence: The two producer alternatives p(x_i) and q(y_i) are exactly equal by q F=p and F(x_i)=y_i. The adopted q(y_i) retains the labels already used in the surrounding restriction equations.
+
+### Change 1: `MC-STK-ERR-1814-OP1`
+
+Pinned-official lines `2151-2151`; bytes `81405:81423`.
+
+````diff
+- \mathit{I}(q(x_i))
++ \mathit{I}(q(y_i))
+````
+
+Original SHA-256 `EE09F2928228A01017FE7DB414FE032845E926BE46C8D343EEBFCB842350982E`; replacement SHA-256 `A845DE8B17991D92D8E45C06DF46CC1D54AEAAF410841512577C07BCC6B5EB76`.
+
+</details>
+
+<details id="mc-stk-err-1815">
+<summary><code>MC-STK-ERR-1815 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1815`; producer ID: `STACKS-RECON-033`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2218) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The available hypothesis is q:Y->X a stack for the inherited topology on X. The preceding descent datum is over the covering {x|Ui->x} of X; applying this hypothesis supplies its descent object. Invoking Y/C would invoke the conclusion being proved.
+- Adverse evidence: Both original stack assumptions and the resulting descent object over the same U are retained.
+
+### Change 1: `MC-STK-ERR-1815-OP1`
+
+Pinned-official lines `2218-2218`; bytes `84871:84937`.
+
+````diff
+- By our assumption that $\mathcal{Y}$ is a stack over $\mathcal{C}$
++ By our assumption that $\mathcal{Y}$ is a stack over $\mathcal{X}$
+````
+
+Original SHA-256 `17D72195BDD19EE18ADEB58C82F2D2942B6E2398F50683AC1BD4D987766700DC`; replacement SHA-256 `3D7D82D472330AC8F61F22E1DE1A9A319AB61D4B26542557A3FFDD0A3611CEF7`.
+
+</details>
+
+<details id="mc-stk-err-1816">
+<summary><code>MC-STK-ERR-1816 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1816`; producer ID: `STACKS-RECON-034`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2426) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the subject of may assume.
+- Adverse evidence: The original 2-fibre-product replacement and all projection labels remain unchanged.
+
+### Change 1: `MC-STK-ERR-1816-OP1`
+
+Pinned-official lines `2426-2426`; bytes `93281:93305`.
+
+````diff
+- fibre product may assume
++ fibre product we may assume
+````
+
+Original SHA-256 `A2EC3951FEBF3ED904E210A409893FAEDA8D95BB370C8014FECB909941F59E29`; replacement SHA-256 `9BF67B3DC84FE6F06855B501A5FFE47A48E7AB60039ECA3FBF795C1C7519BD1F`.
+
+</details>
+
+<details id="mc-stk-err-1817">
+<summary><code>MC-STK-ERR-1817 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1817`; producer ID: `STACKS-RECON-035`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2448-L2449) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The tuple x prime_i=(U,y prime_i,x_i,alpha_i) is in Y prime times_Y X. By the displayed square, F prime is its Y prime projection and G prime is its X projection. The two corrected equations therefore follow directly from the specified objects and functors.
+- Adverse evidence: The original functor labels and tuple order remain unchanged; the right sides are restored to their actual codomains.
+
+### Change 1: `MC-STK-ERR-1817-OP1`
+
+Pinned-official lines `2448-2448`; bytes `94286:94302`.
+
+````diff
+- $F'(x'_i) = x_i$
++ $F'(x'_i) = y'_i$
+````
+
+Original SHA-256 `450162C8A517C7AC987E2A7A4C60E944434AAF29980EB14832D5EDD43D822571`; replacement SHA-256 `5B1D8507DC93E8F4801F657FCFEBDC51A5BC2062455EA0266666B30CF808763F`.
+
+### Change 2: `MC-STK-ERR-1817-OP2`
+
+Pinned-official lines `2449-2449`; bytes `94307:94324`.
+
+````diff
+- $G'(x'_i) = y'_i$
++ $G'(x'_i) = x_i$
+````
+
+Original SHA-256 `F301C6D333658DB236E83221127C06CEB3D45851AE41732A955A592F7B6255CB`; replacement SHA-256 `559B10BD5645533BCE8A2EDC97B9A5D7F0AC46918DC7BF47C60A27CA3F24C6EF`.
+
+</details>
+
+<details id="mc-stk-err-1818">
+<summary><code>MC-STK-ERR-1818 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1818`; producer ID: `STACKS-RECON-036`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2516) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the subject of may assume in this second proof.
+- Adverse evidence: Its separate occurrence and separate producer reports are retained.
+
+### Change 1: `MC-STK-ERR-1818-OP1`
+
+Pinned-official lines `2516-2516`; bytes `96925:96949`.
+
+````diff
+- fibre product may assume
++ fibre product we may assume
+````
+
+Original SHA-256 `A2EC3951FEBF3ED904E210A409893FAEDA8D95BB370C8014FECB909941F59E29`; replacement SHA-256 `9BF67B3DC84FE6F06855B501A5FFE47A48E7AB60039ECA3FBF795C1C7519BD1F`.
+
+</details>
+
+<details id="mc-stk-err-1819">
+<summary><code>MC-STK-ERR-1819 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1819`; producer ID: `STACKS-RECON-038`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2739) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the word both referring to the two displayed lifts.
+- Adverse evidence: The associated corrections of their codomains are recorded in a separate mathematical group.
+
+### Change 1: `MC-STK-ERR-1819-OP1`
+
+Pinned-official lines `2739-2739`; bytes `105394:105402`.
+
+````diff
+- Then bot
++ Then both
+````
+
+Original SHA-256 `32FC359E15C420E156FAAA5494222E62A8C1B1EAFFEB6447283011860CF57FFF`; replacement SHA-256 `314F3E163ED76AC298AC188A5A45C111D9D6EF2035602A8CA2E974620164A6C9`.
+
+</details>
+
+<details id="mc-stk-err-1820">
+<summary><code>MC-STK-ERR-1820 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1820`; producer ID: `STACKS-RECON-039`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2739-L2740) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Both arrows lift the fixed a:U->U prime and both underlying arrows beta:y->y prime and beta prime:y double-prime->y prime have common target y prime. Their target objects must therefore both be (U prime,y prime). The cartesian properties then give a unique vertical isomorphism (id_U,iota) from (U,y) to (U,y double-prime) satisfying beta=beta prime iota, proving the stated comparison.
+- Adverse evidence: The source pairs, underlying arrows, base arrow a and comparison iota are preserved. No change of arrow direction is made.
+
+### Change 1: `MC-STK-ERR-1820-OP1`
+
+Pinned-official lines `2739-2739`; bytes `105404:105435`.
+
+````diff
+- (a, \beta) : (U, y) \to (U, y')
++ (a, \beta) : (U, y) \to (U', y')
+````
+
+Original SHA-256 `2382B5F84CAEC0FC0E20F0E221A40EE19FB91D9D52F0D154768845135AF09223`; replacement SHA-256 `D4F6A5D6A4F99B3AD83B3FF4A8323A11C2439FC99E33D70826A85091FCFC4CFB`.
+
+### Change 2: `MC-STK-ERR-1820-OP2`
+
+Pinned-official lines `2740-2740`; bytes `105442:105475`.
+
+````diff
+- (a, \beta') : (U, y'') \to (U, y)
++ (a, \beta') : (U, y'') \to (U', y')
+````
+
+Original SHA-256 `4A0E96303BF6DD5D64E5EF537F93C91EBAB33602DADE80AA8E7339E17648718E`; replacement SHA-256 `9E3503C74E6C79CB686168DEA0D8D0CD85D0236557E1F4588AC32AA140E5B4C1`.
+
+</details>
+
+<details id="mc-stk-err-1821">
+<summary><code>MC-STK-ERR-1821 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1821`; producer ID: `STACKS-RECON-040`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2774-L2775) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The functor p:S->D takes values in D. The fibre of the pullback over U consists of pairs (U,y) with p(y)=u(U), and fibre arrows (id_U,beta) with p(beta)=id_u(U). The projection to y and beta has inverse y->(U,y), beta->(id_U,beta), giving the declared identification with S_u(U). The same applies over U prime. Under these identifications, a^*(U prime,y prime)=(U,u(a)^*y prime), exactly as the next displayed formula states.
+- Adverse evidence: The source uses equality to denote its explicit identification already declared at 2693-2695. The repair changes only the erroneous indices, retaining the pairs and their comparison maps.
+
+### Change 1: `MC-STK-ERR-1821-OP1`
+
+Pinned-official lines `2774-2774`; bytes `106913:106947`.
+
+````diff
+- (u^p\mathcal{S})_U = \mathcal{S}_U
++ (u^p\mathcal{S})_U = \mathcal{S}_{u(U)}
+````
+
+Original SHA-256 `498D7F86850A7F4133426798EC870CDB5B9A7FF9F2B291C4076935919F49CB10`; replacement SHA-256 `5E8B6C642D03BF0366142590CCAB66DADD42B73835667ABED952D693DB151A1B`.
+
+### Change 2: `MC-STK-ERR-1821-OP2`
+
+Pinned-official lines `2775-2775`; bytes `106954:106994`.
+
+````diff
+- (u^p\mathcal{S})_{U'} = \mathcal{S}_{U'}
++ (u^p\mathcal{S})_{U'} = \mathcal{S}_{u(U')}
+````
+
+Original SHA-256 `1C21264D81E0F41FD2CCD4DD1B2303928E79708F82B2584471FE67852A939056`; replacement SHA-256 `51A20720391C00BAF2E44EFDC02450D8286A1E280576C55ADEA22252A8E859CE`.
+
+</details>
+
+<details id="mc-stk-err-1822">
+<summary><code>MC-STK-ERR-1822 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1822`; producer ID: `STACKS-RECON-041`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2786-L2787) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the defined term descent data in both occurrences.
+- Adverse evidence: The original covering families, fibre products, all pullback identifications and effectivity assertion are retained.
+
+### Change 1: `MC-STK-ERR-1822-OP1`
+
+Pinned-official lines `2786-2786`; bytes `107514:107526`.
+
+````diff
+- descend data
++ descent data
+````
+
+Original SHA-256 `58E173A298418B5D3CA513C25EAA7CA07D43F2F0AC0C11E70620DCBC7774871A`; replacement SHA-256 `46ABDFDBA92294A45723489C5D84677E7E2ACA3F96C08E2B7B745728F8EE023D`.
+
+### Change 2: `MC-STK-ERR-1822-OP2`
+
+Pinned-official lines `2787-2787`; bytes `107570:107582`.
+
+````diff
+- descend data
++ descent data
+````
+
+Original SHA-256 `58E173A298418B5D3CA513C25EAA7CA07D43F2F0AC0C11E70620DCBC7774871A`; replacement SHA-256 `46ABDFDBA92294A45723489C5D84677E7E2ACA3F96C08E2B7B745728F8EE023D`.
+
+</details>
+
+<details id="mc-stk-err-1823">
+<summary><code>MC-STK-ERR-1823 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1823`; producer ID: `STACKS-RECON-042`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2452) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The original tuple comparison maps are alpha_k:G(y prime_k)->F(x_k). Given b prime:y prime_1->y prime_2, the required arrow between F(x_1) and F(x_2) is alpha_2 G(b prime) alpha_1^{-1}. Gerbe condition (2)(b) gives local lifts a_i of this exact arrow. Multiplying the corrected equation on the right by alpha_1|Ui gives F(a_i) alpha_1|Ui=alpha_2|Ui G(b prime)|Ui, which is precisely the square defining the fibre-product morphism (b prime|Ui,a_i).
+- Adverse evidence: The previous formula omitted both original tuple isomorphisms and equated arrows with different sources and targets. Every original alpha, its direction, and its necessary inverse are now retained.
+
+### Change 1: `MC-STK-ERR-1823-OP1`
+
+Pinned-official lines `2452-2452`; bytes `94473:94535`.
+
+````diff
+- $F(a_i) = G(b')|_{U_i}$. Then $(b'|_{U_i}, a_i)$ is a morphism
++ $F(a_i) = \alpha_2|_{U_i} \circ G(b')|_{U_i} \circ
++ (\alpha_1|_{U_i})^{-1}$. Then $(b'|_{U_i}, a_i)$ is a morphism
+````
+
+Original SHA-256 `22C044EBADEFEAC08E6D57813A23017B88A23C55AAC10A74670526B1D41CFC61`; replacement SHA-256 `4CA2E3D7AF5D4E4CCD59B071542C3D0FA5086C233D23E6AC74BBA95716EFCAF5`.
+
+</details>
+
+<details id="mc-stk-err-1824">
+<summary><code>MC-STK-ERR-1824 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1824`; producer ID: `STACKS-RECON-043`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2771) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore if in the stated if and only if equivalence.
+- Adverse evidence: Both directions are proved in the preceding lemma; no mathematical condition is changed.
+
+### Change 1: `MC-STK-ERR-1824-OP1`
+
+Pinned-official lines `2771-2771`; bytes `106767:106801`.
+
+````diff
+- only $\beta$ is strongly cartesian
++ only if $\beta$ is strongly cartesian
+````
+
+Original SHA-256 `F56FAE227076E9BB4172FC1E90E1F76CEE9790E67ACB246C6675D02C351DF45D`; replacement SHA-256 `C42581B887096D2B02FB1CC1FDF3A06349E49364556EB9584C35FE6028B6D398`.
+
+</details>
+
+<details id="mc-stk-err-1825">
+<summary><code>MC-STK-ERR-1825 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1825`; producer ID: `STACKS-RECON-044`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2841) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the article introducing the fibre arrow alpha.
+- Adverse evidence: The full tuple, its base arrows and commutative square remain unchanged.
+
+### Change 1: `MC-STK-ERR-1825-OP1`
+
+Pinned-official lines `2841-2841`; bytes `109715:109729`.
+
+````diff
+- is morphism of
++ is a morphism of
+````
+
+Original SHA-256 `F51595C484950C3BD285F5E0D9C5EB73764F7D5FD51941D852EA9DF6069B2BCE`; replacement SHA-256 `3B363F6EE92836CF3949BE4674F4A3C3924974CCA36C6D176DFB29FFA53AA619`.
+
+</details>
+
+<details id="mc-stk-err-1826">
+<summary><code>MC-STK-ERR-1826 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1826`; producer ID: `STACKS-RECON-045`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2838) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Supply the noun triple before its three displayed entries.
+- Adverse evidence: The entry order a,b,alpha and all their domains and codomains remain unchanged.
+
+### Change 1: `MC-STK-ERR-1826-OP1`
+
+Pinned-official lines `2838-2838`; bytes `109551:109564`.
+
+````diff
+- is given by a
++ is given by a triple
+````
+
+Original SHA-256 `2F4D8EACECE39CD282DA62F960B1D0AC07B826D41FFE67D971DC88DF2C5CE9EF`; replacement SHA-256 `4555DB8D62E22124603E5319729ECD58FA04236C34978275BC799D98BC589239`.
+
+</details>
+
+<details id="mc-stk-err-1827">
+<summary><code>MC-STK-ERR-1827 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1827`; producer ID: `STACKS-RECON-046`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2906) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The two components into u(U1) and u(U prime) must both start at V1. The first is phi1; the second is phi prime b. They have the same composite to u(U), since u(a) phi1=phi b and u(c) phi prime=phi. Therefore the pullback universal property supplies the indicated map phi prime_1:V1->u(U prime_1).
+- Adverse evidence: Retain the original b and both original structure maps; the second component previously had the wrong domain.
+
+### Change 1: `MC-STK-ERR-1827-OP1`
+
+Pinned-official lines `2906-2906`; bytes `111637:111662`.
+
+````diff
+- \phi'_1 = (\phi_1, \phi')
++ \phi'_1 = (\phi_1, \phi' \circ b)
+````
+
+Original SHA-256 `9F74D9A8AF97822B17E46B4E9268643034613030A58FFDA158D53E44994312F7`; replacement SHA-256 `B082D1D939C0C59A74CF95C6C41AF5B293198E3D64AEC1207B72F45EDCF46D08`.
+
+</details>
+
+<details id="mc-stk-err-1828">
+<summary><code>MC-STK-ERR-1828 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1828`; producer ID: `STACKS-RECON-047`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2909) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The functor p:S->C sends gamma1:x prime_1->x1 to the projection c prime:U prime_1->U1. The map phi prime_1 instead lies in D and determines the structure map of the new triple.
+- Adverse evidence: The original cartesian lift and the pullback projection are retained, with their correct category types.
+
+### Change 1: `MC-STK-ERR-1828-OP1`
+
+Pinned-official lines `2909-2909`; bytes `111800:111821`.
+
+````diff
+- p(\gamma_1) = \phi'_1
++ p(\gamma_1) = c'
+````
+
+Original SHA-256 `DA275F3FDC51DE4904DA334B54631FE424DA5E600EE121D46BD8C74ECC1E6438`; replacement SHA-256 `9FCBF405BA9E6231DD00B754566DF9E46DCD2A92D520554A18CF1C05B81B6C79`.
+
+</details>
+
+<details id="mc-stk-err-1829">
+<summary><code>MC-STK-ERR-1829 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1829`; producer ID: `STACKS-RECON-048`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2916-L2918) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The object x prime_1 lies over U prime_1 and its structure map is phi prime_1:V1->u(U prime_1); x prime lies over U prime and its map is phi prime:V->u(U prime). These are exactly the source and target of (a prime,b,alpha prime), where p(alpha prime)=a prime and u(a prime) phi prime_1=phi prime b.
+- Adverse evidence: Restore tuple labels to the already constructed data without changing any map or object.
+
+### Change 1: `MC-STK-ERR-1829-OP1`
+
+Pinned-official lines `2916-2916`; bytes `112078:112115`.
+
+````diff
+- (U_1, \phi_1 : V_1 \to u(U'_1), x'_1)
++ (U'_1, \phi'_1 : V_1 \to u(U'_1), x'_1)
+````
+
+Original SHA-256 `71B0205C933B4FD8C992F774478963689FBDEB31799840D350408DB4D9658E84`; replacement SHA-256 `0EC6DE0350788F45018BFCD5138F8EFD8660BF4A1CD3582904D999F7D9CB1F8C`.
+
+### Change 2: `MC-STK-ERR-1829-OP2`
+
+Pinned-official lines `2918-2918`; bytes `112132:112159`.
+
+````diff
+- (U, \phi : V \to u(U'), x')
++ (U', \phi' : V \to u(U'), x')
+````
+
+Original SHA-256 `28EC5FD2AD62994B0162A2613FCC8625802C5346185AD6FA6456C2FE13796EFE`; replacement SHA-256 `57AF695DED0E7DA6BD879AD2050D2E1130C7EB486C4FE60F85894839FA09AE43`.
+
+</details>
+
+<details id="mc-stk-err-1830">
+<summary><code>MC-STK-ERR-1830 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1830`; producer ID: `STACKS-RECON-049`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2925) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The target is the original object X1 with structure map phi1, as defined at 2891. The arrow (c prime,id_V1,gamma1) satisfies u(c prime) phi prime_1=phi1 and belongs to R because gamma1 is cartesian.
+- Adverse evidence: The denominator arrow, target base, target object and original structure map are preserved.
+
+### Change 1: `MC-STK-ERR-1830-OP1`
+
+Pinned-official lines `2925-2925`; bytes `112279:112312`.
+
+````diff
+- (U_1, \phi : V_1 \to u(U_1), x_1)
++ (U_1, \phi_1 : V_1 \to u(U_1), x_1)
+````
+
+Original SHA-256 `5066C5B32CDADFF6E3F0EC0BDA4C1D815296387044C0D8AF2E28D18585C9631B`; replacement SHA-256 `AFEF46784895AC5147FBCFD67AAB064BE545B0833FBE73E9A7D9C2A7103CF8DD`.
+
+</details>
+
+<details id="mc-stk-err-1831">
+<summary><code>MC-STK-ERR-1831 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1831`; producer ID: `STACKS-RECON-050`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2927-L2928) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: State that the two constructed arrows form the required commutative square; this also repairs the singular/plural disagreement.
+- Adverse evidence: The RMS2 equation is gamma alpha prime=alpha gamma1, with ca prime=ac prime on bases and identity_V b=b identity_V1; both arrows are required, so an isolated singular forms wording would obscure their joint role.
+
+### Change 1: `MC-STK-ERR-1831-OP1`
+
+Pinned-official lines `2927-2928`; bytes `112316:112398`.
+
+````diff
+- is an element of $R$ which form a solution of the existence problem
+- posed by RMS2.
++ is an element of $R$. Together these two morphisms solve the existence
++ problem posed by RMS2.
+````
+
+Original SHA-256 `37B752F21CFA04679E9DF0AE8ECA97815ED7AC445CD01AB2CA956C772F4C8062`; replacement SHA-256 `509089A72896C40FCD68DE4B8F3F77FA7391F1D58D26CB161C9D252AB6723FCA`.
+
+</details>
+
+<details id="mc-stk-err-1832">
+<summary><code>MC-STK-ERR-1832 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1832`; producer ID: `STACKS-RECON-051`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2943) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The target structure map has codomain u(U prime) and is phi prime=u(c) phi. The source phi:V->u(U) is retained, so the same symbol no longer denotes two differently typed arrows.
+- Adverse evidence: The relation follows from the defining square for (c,id_V,gamma). Only its target label is repaired.
+
+### Change 1: `MC-STK-ERR-1832-OP1`
+
+Pinned-official lines `2943-2943`; bytes `112690:112718`.
+
+````diff
+- (U', \phi : V \to u(U'), x')
++ (U', \phi' : V \to u(U'), x')
+````
+
+Original SHA-256 `423C37A6B0A2F9917FC5163E9BD97E615B5B26EFF0689FF8FAFF2A76C7999E40`; replacement SHA-256 `57AF695DED0E7DA6BD879AD2050D2E1130C7EB486C4FE60F85894839FA09AE43`.
+
+</details>
+
+<details id="mc-stk-err-1833">
+<summary><code>MC-STK-ERR-1833 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1833`; producer ID: `STACKS-RECON-052`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2952) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Because b=b prime, u(a) phi1=phi b=phi b prime=u(a prime) phi1. The equalizer u(d):u(U2)->u(U1) therefore gives the unique phi2:V1->u(U2) with u(d) phi2=phi1, as required for the new source object.
+- Adverse evidence: The equalizer, both original parallel arrows and the unique factor phi2 are retained explicitly.
+
+### Change 1: `MC-STK-ERR-1833-OP1`
+
+Pinned-official lines `2952-2952`; bytes `113143:113169`.
+
+````diff
+- \phi_1 = u(d) \circ \phi_1
++ \phi_1 = u(d) \circ \phi_2
+````
+
+Original SHA-256 `916BF20CBB9DE65E5B04FE6BF631973A0E4C3BCED000D6DD16BC9CF0A9B07025`; replacement SHA-256 `76D3B5340B260C256737744304FB95900805C75F88E690D7A000A457D1C22B42`.
+
+</details>
+
+<details id="mc-stk-err-1834">
+<summary><code>MC-STK-ERR-1834 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1834`; producer ID: `STACKS-RECON-053`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2953) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The arrow delta:x2->x1 is a cartesian lift under p:S->C of d:U2->U1. Its p-image is d, while u(d) is the image of that base arrow in D. The lift gives p(x2)=U2 and p(alpha delta)=ad=a prime d=p(alpha prime delta).
+- Adverse evidence: No original functor is suppressed; the distinct roles of p and u are restored.
+
+### Change 1: `MC-STK-ERR-1834-OP1`
+
+Pinned-official lines `2953-2953`; bytes `113255:113271`.
+
+````diff
+- p(\delta) = u(d)
++ p(\delta) = d
+````
+
+Original SHA-256 `264E9DF3AECF4B57DB33FCD5C570965995233A8A8718C6BC2695C10BB38E2EA8`; replacement SHA-256 `9DF39B13D81CA6A1B9688B8FEDE2461815DB1931AF3F7D4AF0849BB25654C074`.
+
+</details>
+
+<details id="mc-stk-err-1835">
+<summary><code>MC-STK-ERR-1835 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1835`; producer ID: `STACKS-RECON-054`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3017) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: p_p has codomain D; X lies over V, X1 over V1, and b:V1->V2. Thus p_p(f2)=b b1 has b1:V->V1. This is the base map required for the cartesian factorization X->X1.
+- Adverse evidence: The original C-objects U,U1 remain in the triples but do not type a D-base arrow.
+
+### Change 1: `MC-STK-ERR-1835-OP1`
+
+Pinned-official lines `3017-3017`; bytes `115805:115820`.
+
+````diff
+- b_1 : U \to U_1
++ b_1 : V \to V_1
+````
+
+Original SHA-256 `1444EF2F8FBE2451B6C0BD2E2B9E5C330B4A7376814B5A74D54BC94792F1C65E`; replacement SHA-256 `A75CE0307435A4D1278E20C0AB76FBB636EE93B35E032CD0390510B96BBB4D19`.
+
+</details>
+
+<details id="mc-stk-err-1836">
+<summary><code>MC-STK-ERR-1836 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1836`; producer ID: `STACKS-RECON-055`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3026) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The arrow f prime_1 lies in the localized category u_p S, whose structural functor is p_p:u_p S->D, extending p_pp. Since r lies over id_V, passing between f1 and f prime_1 leaves its base arrow b1 unchanged.
+- Adverse evidence: The original p:S->C cannot be applied to this localized morphism.
+
+### Change 1: `MC-STK-ERR-1836-OP1`
+
+Pinned-official lines `3026-3026`; bytes `116390:116403`.
+
+````diff
+- p(f'_1) = b_1
++ p_p(f'_1) = b_1
+````
+
+Original SHA-256 `282B3494E6F887A0A50427502A25A121B4C7977C39D53B19E6753DFAD1581011`; replacement SHA-256 `E422F98FB855B9063987CEBEDCFB8340507BB7EDF142F66EAC878E92AA6F9AE9`.
+
+</details>
+
+<details id="mc-stk-err-1837">
+<summary><code>MC-STK-ERR-1837 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1837`; producer ID: `STACKS-RECON-056`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3084) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The arrows are r:X prime->X and r prime:X double-prime->X prime. Their composite with domain X double-prime is r r prime, the denominator in the refined roof at 3091.
+- Adverse evidence: The same two arrows and their given directions are retained.
+
+### Change 1: `MC-STK-ERR-1837-OP1`
+
+Pinned-official lines `3084-3084`; bytes `118626:118642`.
+
+````diff
+- r' \circ r \in R
++ r \circ r' \in R
+````
+
+Original SHA-256 `0C878C56EBDD9ABB689B0C1F7A0118D9D8D758B43B113A675EA2B40741B7105C`; replacement SHA-256 `E0C2B9C1A346B2EF50CF05A8829AAE6B72B888C33019EB70980E6F7ADE7B3202`.
+
+</details>
+
+<details id="mc-stk-err-1838">
+<summary><code>MC-STK-ERR-1838 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1838`; producer ID: `STACKS-RECON-057`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3088-L3096) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The numerator f2=(a2,b2,alpha2) has domain X, while f1,f prime_1 have domain X prime. Comparing their roofs over a common X double-prime requires f f1 r prime=f f prime_1 r prime=f2 r r prime. After refining and renaming X double-prime to X prime, the denominator remains r:X prime->X, so the equation is f f1=f f prime_1=f2 r. Its C-base and fibre-arrow components are precisely a a1=a a prime_1=a2 c and alpha alpha1=alpha alpha prime_1=alpha2 gamma at 3102-3103.
+- Adverse evidence: OCC-11940 reports the first omitted denominator only. The second omission at 3096 is an independent adjacent discovery, retained explicitly here; neither can be removed by merely renaming the common source.
+
+### Change 1: `MC-STK-ERR-1838-OP1`
+
+Pinned-official lines `3088-3088`; bytes `118724:118753`.
+
+````diff
+- (a_2, b_2, \alpha_2) \circ r'
++ (a_2, b_2, \alpha_2) \circ r \circ r'
+````
+
+Original SHA-256 `018131772BDBDEC507B5F127BE59F6F8C98D9BF1E1F789D4A8510B79E48C6C04`; replacement SHA-256 `3DFE3CC3C6D097514BD275EACDA8E067512FF7DC5FC35FBB49DA531F813E7F09`.
+
+### Change 2: `MC-STK-ERR-1838-OP2`
+
+Pinned-official lines `3096-3096`; bytes `118957:118978`.
+
+````diff
+- (a_2, b_2, \alpha_2).
++ (a_2, b_2, \alpha_2) \circ r.
+````
+
+Original SHA-256 `EB334ECDAB93F78765FD97A0A29592CD067D7F54EB2EEFC8EE27B4DE8D70157F`; replacement SHA-256 `787B4DC3B3E985B736DBCBDBCFFE0262E9CD04860D707CF9AFA088DC1F612BF2`.
+
+</details>
+
+<details id="mc-stk-err-1839">
+<summary><code>MC-STK-ERR-1839 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1839`; producer ID: `STACKS-RECON-058`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3098) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Complete the declared arrow signature with its already fixed target X=(U,phi:V->u(U),x). This makes the ensuing equations a2 c and alpha2 gamma explicitly typed.
+- Adverse evidence: This is the same r:X prime->X already specified at 3079-3080; no target is newly selected.
+
+### Change 1: `MC-STK-ERR-1839-OP1`
+
+Pinned-official lines `3098-3098`; bytes `118982:119051`.
+
+````diff
+- Write $r = (c, \text{id}_V, \gamma) : (U', \phi' : V \to u(U'), x')$,
++ Write $r = (c, \text{id}_V, \gamma) : (U', \phi' : V \to u(U'), x')
++ \to (U, \phi : V \to u(U), x)$,
+````
+
+Original SHA-256 `AA271716B6E698C7EB961C270381BC2E114D3A5B3F43C894FBFC825A6FFDE268`; replacement SHA-256 `197619EC684FEEA3C3930AA7C4BAE3F826D54482FB0A701DD78D94B024870B19`.
+
+</details>
+
+<details id="mc-stk-err-1840">
+<summary><code>MC-STK-ERR-1840 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1840`; producer ID: `STACKS-RECON-059`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3113) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The new arrow gamma prime:x double-prime->x prime is the cartesian lift of the equalizer inclusion c prime:U double-prime->U prime under p:S->C. The old gamma:x prime->x is already a morphism of S, so is not a base arrow that p can lift. With the corrected lift, the precomposed fibre arrows have equal p-images; cartesianness of alpha then gives their equality.
+- Adverse evidence: The equalizer object, both original parallel arrows, the denominator and every fibre object are retained.
+
+### Change 1: `MC-STK-ERR-1840-OP1`
+
+Pinned-official lines `3113-3113`; bytes `119901:119917`.
+
+````diff
+- lifting $\gamma$
++ lifting $c'$
+````
+
+Original SHA-256 `852ED2D51FF125B467828034BADACE78DFEC8607F5CFAED9B5DE2E1AC75EC77E`; replacement SHA-256 `7FA077121CFCF787B5CE4462C890E2B52A52130360D653C199CC6D73DBC1A95E`.
+
+</details>
+
+<details id="mc-stk-err-1841">
+<summary><code>MC-STK-ERR-1841 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1841`; producer ID: `STACKS-RECON-060`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L2912) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The cartesian property of gamma lifts the particular arrow alpha gamma1 over ac prime=ca prime. It supplies the unique alpha prime over a prime whose composite with gamma is alpha gamma1; its base alone does not specify it uniquely. This exact equation also proves the square required by RMS2.
+- Adverse evidence: The equation uses only the existing arrows and is required by the cited universal property. It is an independent omission adjacent to the reported base-lift label error.
+
+### Change 1: `MC-STK-ERR-1841-OP1`
+
+Pinned-official lines `2912-2912`; bytes `111982:112029`.
+
+````diff
+- $\alpha' : x'_1 \to x'$ with $p(\alpha') = a'$.
++ $\alpha' : x'_1 \to x'$ with $p(\alpha') = a'$ and
++ $\gamma \circ \alpha' = \alpha \circ \gamma_1$.
+````
+
+Original SHA-256 `02608B3FCEC7C7ADB4CE17C5D2807F447ED318284E5535C44EA5850C9268378D`; replacement SHA-256 `6696A88FE7E87EF17A66A28193DD2951D2E80371C422F5126C3110B1BE5B388F`.
+
+</details>
+
+<details id="mc-stk-err-1842">
+<summary><code>MC-STK-ERR-1842 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1842`; producer ID: `STACKS-RECON-061`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3161) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Separate the concluding hence clause from its cited justification.
+- Adverse evidence: The cited result and the invertibility argument are unchanged.
+
+### Change 1: `MC-STK-ERR-1842-OP1`
+
+Pinned-official lines `3161-3161`; bytes `121876:121933`.
+
+````diff
+- Categories, Lemma \ref{categories-lemma-fibred-groupoids}
++ Categories, Lemma \ref{categories-lemma-fibred-groupoids};
+````
+
+Original SHA-256 `10F90140E0F3A3A761C79E8B49F802A6D707E9EF8DC078C2ABD531CDDCED96E4`; replacement SHA-256 `2380C5A971DA8F55328509F0ADFECCCE167797A065B2625A4FE940983CE5E72A`.
+
+</details>
+
+<details id="mc-stk-err-1843">
+<summary><code>MC-STK-ERR-1843 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1843`; producer ID: `STACKS-RECON-062`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3205) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The defined source-arrow notation is alpha/a. A target arrow in u^p T consists of its C-base a and its T-arrow beta. Here beta=G prime(a,u(a),alpha) has q-image u(a), because G is over D. Hence the complete ordered pair is exactly (a,G prime(a,u(a),alpha)); it maps the object H(x/U) to H(x prime/U prime) with the types declared at 3201. Composition is componentwise: the C-components compose to a prime a and the T-components compose by functoriality of G prime; identities likewise have both required components.
+- Adverse evidence: Retain the previously suppressed base component a. No convention about recovering that component is needed and no object is changed.
+
+### Change 1: `MC-STK-ERR-1843-OP1`
+
+Pinned-official lines `3205-3205`; bytes `123576:123628`.
+
+````diff
+- H((\alpha, a) : x/U \to x'/U') = G'(a, u(a), \alpha)
++ H(\alpha/a : x/U \to x'/U') = (a, G'(a, u(a), \alpha))
+````
+
+Original SHA-256 `0BED3418C8363D808FC58D62128438534861A7D80235FAA45A4D50C4F7EA6634`; replacement SHA-256 `7455C36A5FB33451D52B6436668094AB100BC9EDDB3A3A8DDB7B17BEA7A9E014`.
+
+</details>
+
+<details id="mc-stk-err-1844">
+<summary><code>MC-STK-ERR-1844 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1844`; producer ID: `STACKS-RECON-063`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3196) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the preposition introducing the notation for the composite functor.
+- Adverse evidence: Both functors and their exact domains and codomains are retained.
+
+### Change 1: `MC-STK-ERR-1844-OP1`
+
+Pinned-official lines `3196-3196`; bytes `123267:123277`.
+
+````diff
+- Denote $G'
++ Denote by $G'
+````
+
+Original SHA-256 `86D7C49C72961D5283467B6E091B0452F3629869B0AC3EF0F120BA45AFCBB3ED`; replacement SHA-256 `EEEC2F16357EA6BC5483808B504C4B96F13465A7BDF0230B46ADD14C8CA93743`.
+
+</details>
+
+<details id="mc-stk-err-1845">
+<summary><code>MC-STK-ERR-1845 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1845`; producer ID: `STACKS-RECON-064`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3225) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore by in the naming clause for the projection functor.
+- Adverse evidence: The original projection and its value on (U,y) are retained.
+
+### Change 1: `MC-STK-ERR-1845-OP1`
+
+Pinned-official lines `3225-3225`; bytes `124420:124429`.
+
+````diff
+- We denote
++ We denote by
+````
+
+Original SHA-256 `4D42A0C45CDDA39D17EF3499A25ABF80DCDAA6728E0043E6915CB80AD3FC9AD7`; replacement SHA-256 `48E574D7ACE7224857A739EA9D6B5220FD1296DA0379EC45F54710153715BA50`.
+
+</details>
+
+<details id="mc-stk-err-1846">
+<summary><code>MC-STK-ERR-1846 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1846`; producer ID: `STACKS-RECON-065`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3246) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Use the source-arrow notation alpha/a established at 3191 and used in the corrected functor definition.
+- Adverse evidence: The full bottom arrow is pr(H(alpha/a)); its C-base has been forgotten by pr, leaving the required arrow in T. The square and all four objects are unchanged.
+
+### Change 1: `MC-STK-ERR-1846-OP1`
+
+Pinned-official lines `3246-3246`; bytes `125027:125039`.
+
+````diff
+- H(a, \alpha)
++ H(\alpha/a)
+````
+
+Original SHA-256 `C4A86FD0C94F9FBEC538DDF15CABCACDBC24F237921370B9B989BDDC14D0C948`; replacement SHA-256 `1EDF52577CDEA465FDAD11631BEE8F05E72A0746626E5E568400E74F045EF1C6`.
+
+</details>
+
+<details id="mc-stk-err-1847">
+<summary><code>MC-STK-ERR-1847 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1847`; producer ID: `STACKS-RECON-066`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L625-L626) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The literal unqualified condition permits changing the base object. Take the two-object groupoid with objects A,B and one arrow between each pair, all singleton-isomorphism covers, S=C with p=id, and S prime the full subcategory on A. S is a stack with terminal fibres. Every object of S is isomorphic to A, so all three original conditions hold, but S prime has no object over B and cannot lift B->A. With the corrected condition, an ambient cartesian lift c:y->x over f:V->U can be composed with a vertical isomorphism e:y prime->y from an S prime object; c e is an S prime cartesian lift by fullness. The inclusion preserves cartesian arrows by comparison with these lifts. Moreover any total isomorphism z->t with t in S prime, over h:U->W, becomes vertical by composing with the inverse of a cartesian S prime lift t_U->t of h. Thus the original condition (3) gives the fibre isomorphism needed for descent. The complete proof, including the exact natural Mor comparison and all descent comparison maps, is in SUBSTACK_VERTICAL_DERIVATION_20260923.md, Sections 3-7.
+- Adverse evidence: Qualifying (1) is sufficient: once S prime is fibred, the explicit cartesian lift of the base isomorphism proves that the unqualified condition (3) is equivalent to its fibre-qualified version. No unnecessary independent strengthening of (3) is asserted. The note was independently derived and then fully read and checked in the primary session.
+
+### Change 1: `MC-STK-ERR-1847-OP1`
+
+Pinned-official lines `625-626`; bytes `21990:22080`.
+
+````diff
+- $x$ is an object of $\mathcal{S}'$, then $y$ is isomorphic to an
+- object of $\mathcal{S}'$,
++ $x$ is an object of $\mathcal{S}'$, then $y$ is isomorphic in
++ $\mathcal{S}_{p(y)}$ to an object of $\mathcal{S}'$,
+````
+
+Original SHA-256 `B7A7AEF09F1B5254A4C7A396E6EED254EE94C2ED0FF8637326951F69D2CF2FA4`; replacement SHA-256 `80EA8396967867ED063A83497478887DE1264788EC824FFAC5CDD5BB142B8364`.
+
+</details>
+
+<details id="mc-stk-err-1848">
+<summary><code>MC-STK-ERR-1848 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1848`; producer ID: `STACKS-RECON-067`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3277) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Remove the article before the predicate adjective.
+- Adverse evidence: The full mathematical claim and its dependent argument are being checked separately; this wording repair alone does not certify the asserted characterization.
+
+### Change 1: `MC-STK-ERR-1848-OP1`
+
+Pinned-official lines `3277-3277`; bytes `126114:126138`.
+
+````diff
+- is a strongly cartesian.
++ is strongly cartesian.
+````
+
+Original SHA-256 `6A604824739786BB1A1A8C3CBAD952E403C97970A52D15CD158D8D72D771AC44`; replacement SHA-256 `0C7103D40DC50C3E4D9C70A3B1CFE7D7B86F8C5A503951CCC44C0FB2C3A5A742`.
+
+</details>
+
+<details id="mc-stk-err-1849">
+<summary><code>MC-STK-ERR-1849 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1849`; producer ID: `STACKS-RECON-068`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3279) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: A roof representing f:X->Y has numerator X prime->Y and denominator r:X prime->X; in the localization it is Q(numerator) Q(r)^{-1}. Restore the denominator target X.
+- Adverse evidence: The arrow f, numerator, denominator membership in R and all fibre/base components are retained. The separate mathematical correction to the cartesian characterization must be proved before candidate acceptance.
+
+### Change 1: `MC-STK-ERR-1849-OP1`
+
+Pinned-official lines `3279-3279`; bytes `126264:126276`.
+
+````diff
+- r : X' \to Y
++ r : X' \to X
+````
+
+Original SHA-256 `365A5CE89FA549BCFC6D750B5C60BEDDDD5809C024DBBEDA7D2E1F9B821773A9`; replacement SHA-256 `144596F3A261DA463986FA07AD6433ACA0F6290C23DAF4A3851C5DE5AFE25928`.
+
+</details>
+
+<details id="mc-stk-err-1850">
+<summary><code>MC-STK-ERR-1850 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1850`; producer ID: `STACKS-RECON-069`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3281) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore the separator between the second and third entries of the existing triple.
+- Adverse evidence: The original three entries and their defined meanings remain unchanged.
+
+### Change 1: `MC-STK-ERR-1850-OP1`
+
+Pinned-official lines `3281-3281`; bytes `126384:126399`.
+
+````diff
+- G'(a, b \alpha)
++ G'(a, b, \alpha)
+````
+
+Original SHA-256 `4B25227D497587B3E3AEE2E3240FE848689FC8737273DF9453F08E33E88FF8BC`; replacement SHA-256 `4F57100E1EEE45FAC4935DBFD6FB124F49B9BD03B1860650FE5DB44E4C61E67D`.
+
+</details>
+
+<details id="mc-stk-err-1851">
+<summary><code>MC-STK-ERR-1851 — stacks.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1851`; producer ID: `STACKS-RECON-070`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3283) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Use the defined source-morphism notation alpha/a in this second occurrence.
+- Adverse evidence: The projected morphism pr(H(alpha/a)) and all its domain and codomain data are retained.
+
+### Change 1: `MC-STK-ERR-1851-OP1`
+
+Pinned-official lines `3283-3283`; bytes `126508:126520`.
+
+````diff
+- H(a, \alpha)
++ H(\alpha/a)
+````
+
+Original SHA-256 `C4A86FD0C94F9FBEC538DDF15CABCACDBC24F237921370B9B989BDDC14D0C948`; replacement SHA-256 `1EDF52577CDEA465FDAD11631BEE8F05E72A0746626E5E568400E74F045EF1C6`.
+
+</details>
+
+<details id="mc-stk-err-1852">
+<summary><code>MC-STK-ERR-1852 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1852`; producer ID: `STACKS-RECON-071`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3285) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Agree the verb with the plural subject all arrows except possibly beta.
+- Adverse evidence: The sentence still distinguishes beta from the three arrows already known to be cartesian; no property of beta is assumed.
+
+### Change 1: `MC-STK-ERR-1852-OP1`
+
+Pinned-official lines `3285-3285`; bytes `126671:126700`.
+
+````diff
+- $\beta$ is strongly cartesian
++ $\beta$ are strongly cartesian
+````
+
+Original SHA-256 `6D452633735C49922F4A82BFB3A311ADA985E78C51757659C5235552F212CD7F`; replacement SHA-256 `E6EF48985C006C9FB27BCDC59E927B7121F8E2F1830C0DC49A062571AA261A9C`.
+
+</details>
+
+<details id="mc-stk-err-1853">
+<summary><code>MC-STK-ERR-1853 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1853`; producer ID: `STACKS-RECON-072`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3436-L3459) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Use the noun phrase full faithfulness in both the subsection lead-in and its later restatement.
+- Adverse evidence: The received locus identifies the first occurrence; the second matching misuse at 3459 was found in the same paragraph and is recorded explicitly.
+
+### Change 1: `MC-STK-ERR-1853-OP1`
+
+Pinned-official lines `3436-3436`; bytes `132146:132165`.
+
+````diff
+- Fully faithfulness.
++ Full faithfulness.
+````
+
+Original SHA-256 `FDAE3DB15FB39EC1C4F12A943B5A20532B697709533E3AA3826534965C28F78D`; replacement SHA-256 `78365DAE4A0305088ABA621E7CBE9F26284C7279B3CF3603930BA067A21B7823`.
+
+### Change 2: `MC-STK-ERR-1853-OP2`
+
+Pinned-official lines `3459-3459`; bytes `132879:132906`.
+
+````diff
+- proof of fully faithfulness
++ proof of full faithfulness
+````
+
+Original SHA-256 `0408145E0A744CB7BB6AFD5FD2ADE28B5A77F25ED99E9E2AEC1DBEF58A91CE79`; replacement SHA-256 `7F3FC94FE90959ADE7C056C4CCB2D808571958A8AFE44CED6EA070F27EAC6642`.
+
+</details>
+
+<details id="mc-stk-err-1854">
+<summary><code>MC-STK-ERR-1854 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1854`; producer ID: `STACKS-RECON-073`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3446) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Supply a grammatical subject for the pullback assertion.
+- Adverse evidence: Both producer alternatives convey the same assertion; the adopted text directly refers to the preceding equality without altering it.
+
+### Change 1: `MC-STK-ERR-1854-OP1`
+
+Pinned-official lines `3446-3446`; bytes `132481:132494`.
+
+````diff
+- Similar holds
++ The same holds
+````
+
+Original SHA-256 `B18ADB8323781DD1806B2E3B15AC7EB482059D0271B2B6F60F16544C4709E2AB`; replacement SHA-256 `3CB65B132778A7EF953FB57AC2851D9C125D25750EC33C4BE4CF65B852593152`.
+
+</details>
+
+<details id="mc-stk-err-1855">
+<summary><code>MC-STK-ERR-1855 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1855`; producer ID: `STACKS-RECON-074`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3464) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The category u_p S is over D. The canonical functor c prime sends x over U to (U,id_u(U),x), whose D-base is u(U). Therefore its Hom set between c prime(x) and c prime(y) is taken in the fibre over u(U).
+- Adverse evidence: All objects and functors are unchanged; the corrected target agrees with the presheaf formula already given at 3457 and the sentence immediately after the display.
+
+### Change 1: `MC-STK-ERR-1855-OP1`
+
+Pinned-official lines `3464-3464`; bytes `133009:133034`.
+
+````diff
+- \Mor_{(u_p\mathcal{S})_U}
++ \Mor_{(u_p\mathcal{S})_{u(U)}}
+````
+
+Original SHA-256 `58CFD424958C9275568301F37276B3C7F4692CA61A8773001B6EC604EBF6ED23`; replacement SHA-256 `82DE0E378C23FBC7C3ED796D195B1170DD4E3A3CFED1F8CEFECC8A340A74F8BB`.
+
+</details>
+
+<details id="mc-stk-err-1856">
+<summary><code>MC-STK-ERR-1856 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1856`; producer ID: `STACKS-RECON-075`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3482) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Here c:U prime->U and c prime:U->U prime. The denominator square gives u(c) phi=id_u(U). Writing phi=u(c prime), faithfulness of u yields c c prime=id_U, whose domain and codomain are U. The cartesian property of gamma then lifts c prime against id_x to the specified gamma prime with gamma gamma prime=id_x.
+- Adverse evidence: The base object U prime is retained as the domain of c; only the falsely typed identity is repaired.
+
+### Change 1: `MC-STK-ERR-1856-OP1`
+
+Pinned-official lines `3482-3482`; bytes `133562:133591`.
+
+````diff
+- $c \circ c' = \text{id}_{U'}$
++ $c \circ c' = \text{id}_U$
+````
+
+Original SHA-256 `E65C3AD1C9EF48C70EAC2CA36EEEEFF01B384B2EAB5C65BFAE437E12B03ACCCC`; replacement SHA-256 `451DAC80713D2E8D37977574741FE7AA06CF3E749272E286994362901F5C1008`.
+
+</details>
+
+<details id="mc-stk-err-1857">
+<summary><code>MC-STK-ERR-1857 — stacks.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1857`; producer ID: `STACKS-RECON-076`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3536) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: Restore by in the naming clause for the localization functor.
+- Adverse evidence: This is a distinct Stacks chapter occurrence, unrelated to the differently located Categories report mentioned by the producer.
+
+### Change 1: `MC-STK-ERR-1857-OP1`
+
+Pinned-official lines `3536-3536`; bytes `135237:135249`.
+
+````diff
+- We denote $j
++ We denote by $j
+````
+
+Original SHA-256 `75FF892EB0EE29673660D63D8BB5A7AE19251D469AC90470ED044E2ED3059545`; replacement SHA-256 `576242CE812DA3FA0C6409B1012C8B1733D66680347A4A92B134B0BE65D55514`.
+
+</details>
+
+<details id="mc-stk-err-1858">
+<summary><code>MC-STK-ERR-1858 — stacks.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r56`
+- Stable ID: `MC-STK-ERR-1858`; producer ID: `STACKS-RECON-077`
+- Bound source locator: `stacks.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/stacks.tex#L3009-L3128) · [Integrated source](stacks.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r56/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r56/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r56/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r56/replay/independent-review.json)
+- Rationale: The original converse is false. Let C=[0->1], D be terminal, and S have objects z over 0 and s,t over 1, with nonidentity arrows r_s:z->s, v:s->t, r_t:z->t=v r_s. Both r_s and r_t are cartesian, whereas v is not invertible and hence not cartesian over id_1. Both cartesian arrows become invertible in the localization, so Q(v)=Q(r_t)Q(r_s)^{-1} is invertible and cartesian. The corrected criterion retains the entire original construction and states exactly that Q(a,b,alpha) is cartesian iff an allowed R-refinement makes alpha gamma cartesian. The inserted proof derives invertibility of a vertical arrow after an admissible pullback from an inverse roof: equalize its two base maps, obtain a vertical inverse candidate, refine each inverse equation using the right-fraction equality criterion, pass to a common fibre-product refinement, and use cartesian uniqueness to prove both actual inverse identities. Factoring alpha through a cartesian lift then proves the full criterion, including refinement of any chosen roof. The complete independent derivation and counterexample are retained in LOCALIZED_CARTESIAN_DERIVATION_20260924.md, Sections 1-8.
+- Adverse evidence: No extra conservativity assumption is imposed and the original fibred-category and adjointness conclusions are retained. The false claim about an arbitrary numerator is replaced by a proved statement about a suitable refinement, not by an unproved existence assertion. The source construction preserves every original base arrow, comparison map and needed inverse. The later roof-based argument at 3274-3286 remains valid by the now-proved final paragraph; its independently recorded label corrections are retained.
+
+### Change 1: `MC-STK-ERR-1858-OP1`
+
+Pinned-official lines `3009-3011`; bytes `115417:115589`.
+
+````diff
+- of $u_{pp}\mathcal{S}$ has image $f = ((a, b, \alpha), 1)$
+- strongly cartesian in $u_p\mathcal{S}$ if and only if $\alpha$
+- is a strongly cartesian morphism of $\mathcal{S}$.
++ of $u_{pp}\mathcal{S}$ has image $f = ((a, b, \alpha), 1)$
++ strongly cartesian in $u_p\mathcal{S}$ if and only if there is an arrow
++ $r = (c,\text{id}_{V_1},\gamma) : Z \to X_1$ in $R$ such that
++ $\alpha \circ \gamma$ is strongly cartesian in $\mathcal{S}$.
++ In particular, this holds whenever $\alpha$ is strongly cartesian.
+````
+
+Original SHA-256 `5804ED2286B5934A64B4DB04630A0CA5E6E59B5287040F16E87736683EABCE5E`; replacement SHA-256 `187BE6E2AFD049DB58985F7F91EC8578E1DFBE79574F1BCEC6DD8903DEA1463D`.
+
+### Change 2: `MC-STK-ERR-1858-OP2`
+
+Pinned-official lines `3124-3128`; bytes `120396:120723`.
+
+````diff
+- We omit the proof of the fact that for any strongly cartesian morphism
+- of $u_p\mathcal{S}$ of the form $((a, b, \alpha), 1)$ the morphism
+- $\alpha$ is strongly cartesian in $\mathcal{S}$.
+- (We do not need the characterization of strongly cartesian morphisms
+- in the rest of the proof, although we do use it later in this section.)
++ We prove the converse with the stated refinement. Write
++ $Q : u_{pp}\mathcal{S} \to u_p\mathcal{S}$ for the localization functor.
++ For $Y = (U, \phi : V \to u(U), y)$ and $b : V' \to V$, put
++ $$
++ Y_b = (U, \phi \circ b : V' \to u(U), y),\qquad
++ k_b = (\text{id}_U, b, \text{id}_y) : Y_b \to Y.
++ $$
++ The implication already proved shows that $Q(k_b)$ is strongly cartesian.
++ Consequently every morphism $h : X \to Y$ over $b$ factors uniquely as
++ $h = Q(k_b) \circ i_h$, with $i_h : X \to Y_b$ over $\text{id}_{V'}$.
++ Moreover, $h$ is strongly cartesian if and only if $i_h$ is an isomorphism.
++ Indeed, if $h$ is strongly cartesian, its universal property gives
++ $j : Y_b \to X$ over $\text{id}_{V'}$ with $h \circ j = Q(k_b)$.
++ Uniqueness for $Q(k_b)$ gives $i_h \circ j = \text{id}_{Y_b}$, and
++ uniqueness for $h$ gives $j \circ i_h = \text{id}_X$.
++ The reverse implication follows by composition with an isomorphism.
++
++ \medskip\noindent
++ We first establish the required detection of vertical isomorphisms.
++ Fix $\phi : V \to u(U)$ and a morphism $\delta : x \to y$ in
++ $\mathcal{S}_U$. Write
++ $$
++ D_\delta = (\text{id}_U, \text{id}_V, \delta) :
++ (U,\phi,x) \longrightarrow (U,\phi,y).
++ $$
++ We claim that $Q(D_\delta)$ is invertible if and only if there exist
++ $c : W \to U$ and $\psi : V \to u(W)$ with $u(c) \circ \psi = \phi$
++ such that the pullback of $\delta$ along $c$ is invertible.
++ More explicitly, choose strongly cartesian morphisms
++ $\gamma_x : x_W \to x$ and $\gamma_y : y_W \to y$ over $c$.
++ The pullback is the unique vertical morphism $\delta_W : x_W \to y_W$
++ such that
++ $$
++ \gamma_y \circ \delta_W = \delta \circ \gamma_x.
++ $$
++ Changing these two cartesian lifts conjugates $\delta_W$ by the unique
++ vertical comparison isomorphisms, so invertibility is independent of
++ these choices. If $\delta_W$ is invertible, the displayed equation and
++ the two morphisms of $R$ defined by $\gamma_x,\gamma_y$ show that
++ $Q(D_\delta)$ is invertible.
++
++ \medskip\noindent
++ Conversely, represent an inverse to $Q(D_\delta)$ by $Q(e)Q(r)^{-1}$, where
++ $$
++ r = (c,\text{id}_V,\gamma) : (T,\theta,z) \to (U,\phi,y),\qquad
++ e = (a,\text{id}_V,\epsilon) : (T,\theta,z) \to (U,\phi,x),
++ $$
++ and $r \in R$. Thus $a,c : T \to U$ and
++ $u(a)\theta = \phi = u(c)\theta$.
++ Let $h : T_1 \to T$ be the equalizer of $a,c$.
++ As $u$ preserves this equalizer, there exists
++ $\theta_1 : V \to u(T_1)$ with $u(h)\theta_1 = \theta$.
++ Choose a strongly cartesian $\zeta : z_1 \to z$ over $h$ and refine
++ the inverse roof by $(h,\text{id}_V,\zeta) \in R$.
++ Put $d = ah = ch$ and $y_1 = z_1$.
++ Then $\tau_y = \gamma\zeta : y_1 \to y$ is strongly cartesian over $d$.
++ Choose a strongly cartesian $\tau_x : x_1 \to x$ over $d$.
++ There are unique vertical morphisms
++ $\eta : y_1 \to x_1$ and $\delta_1 : x_1 \to y_1$ satisfying
++ $$
++ \tau_x\eta = \epsilon\zeta,\qquad
++ \tau_y\delta_1 = \delta\tau_x.
++ $$
++ For this paragraph, regard $x_1,y_1$ as the triples with base $T_1$
++ and structure map $\theta_1$, and write
++ $$
++ t_x = (d,\text{id}_V,\tau_x),\quad
++ t_y = (d,\text{id}_V,\tau_y),\quad
++ E_\eta = (\text{id}_{T_1},\text{id}_V,\eta),\quad
++ D_1 = (\text{id}_{T_1},\text{id}_V,\delta_1).
++ $$
++ The inverse is $Q(t_x)Q(E_\eta)Q(t_y)^{-1}$, whereas
++ $Q(D_\delta) = Q(t_y)Q(D_1)Q(t_x)^{-1}$.
++ The two inverse identities therefore give
++ $$
++ Q(E_\eta D_1) = \text{id}_{(T_1,\theta_1,x_1)},\qquad
++ Q(D_1 E_\eta) = \text{id}_{(T_1,\theta_1,y_1)}.
++ $$
++ The equality criterion for right fractions, applied to denominators
++ equal to identities, supplies two arrows of $R$. Write their
++ $\mathcal{C}$-components as $c_x : T_x \to T_1$ and
++ $c_y : T_y \to T_1$, their structure maps as $\theta_x,\theta_y$, and
++ their strongly cartesian $\mathcal{S}$-components as
++ $\rho_x : z_x \to x_1$ and $\rho_y : z_y \to y_1$.
++ Then
++ $$
++ (\eta\delta_1)\rho_x = \rho_x,\qquad
++ (\delta_1\eta)\rho_y = \rho_y,\qquad
++ u(c_x)\theta_x = \theta_1 = u(c_y)\theta_y.
++ $$
++ Form $T_2 = T_x \times_{T_1} T_y$, with projections $e_x,e_y$, and put
++ $k = c_xe_x = c_ye_y$. Preservation of this fibre product gives
++ $\theta_2 : V \to u(T_2)$ such that
++ $u(e_x)\theta_2 = \theta_x$ and $u(e_y)\theta_2 = \theta_y$.
++ In particular $u(k)\theta_2 = \theta_1$ and $u(dk)\theta_2 = \phi$.
++ Choose strongly cartesian arrows $\kappa_x : x_2 \to x_1$ and
++ $\kappa_y : y_2 \to y_1$ over $k$, and the unique vertical arrows
++ $\delta_2 : x_2 \to y_2$ and $\eta_2 : y_2 \to x_2$ with
++ $$
++ \kappa_y\delta_2 = \delta_1\kappa_x,\qquad
++ \kappa_x\eta_2 = \eta\kappa_y.
++ $$
++ Since $k = c_xe_x$, cartesianness of $\rho_x$ factors $\kappa_x$
++ through $\rho_x$, and hence $\eta\delta_1\kappa_x = \kappa_x$.
++ Similarly $\delta_1\eta\kappa_y = \kappa_y$.
++ It follows that
++ $$
++ \kappa_x\eta_2\delta_2
++ = \eta\kappa_y\delta_2
++ = \eta\delta_1\kappa_x
++ = \kappa_x,
++ $$
++ and
++ $$
++ \kappa_y\delta_2\eta_2
++ = \delta_1\kappa_x\eta_2
++ = \delta_1\eta\kappa_y
++ = \kappa_y.
++ $$
++ Cartesian uniqueness, with fixed identity base maps, yields
++ $\eta_2\delta_2 = \text{id}_{x_2}$ and
++ $\delta_2\eta_2 = \text{id}_{y_2}$.
++ The composites $\tau_x\kappa_x,\tau_y\kappa_y$ are strongly cartesian
++ over $dk$, and
++ $$
++ (\tau_y\kappa_y)\delta_2 = \delta(\tau_x\kappa_x).
++ $$
++ Thus $\delta_2$ is the required invertible pullback of $\delta$.
++ This proves the detection claim without assuming that localization
++ reflects isomorphisms before a refinement.
++
++ \medskip\noindent
++ Return to $A = (a,b,\alpha) : X_1 \to X_2$.
++ Choose a strongly cartesian $\tau : a^*x_2 \to x_2$ over $a$, and
++ write $\alpha = \tau\delta$, where $\delta : x_1 \to a^*x_2$ is vertical.
++ Put $X_a = (U_1,\phi_1 : V_1 \to u(U_1),a^*x_2)$.
++ The exact factorization is
++ $$
++ A = k_b \circ (a,\text{id}_{V_1},\tau)
++ \circ (\text{id}_{U_1},\text{id}_{V_1},\delta),
++ $$
++ where $k_b : (X_2)_b \to X_2$, and the middle factor belongs to $R$.
++ Consequently, if $Q(A)$ is strongly cartesian, its vertical factor
++ relative to $Q(k_b)$ is invertible, and so is $Q(D_\delta)$.
++ The detection claim supplies $c : W \to U_1$, $\psi : V_1 \to u(W)$
++ with $u(c)\psi = \phi_1$, strongly cartesian
++ $\gamma : z \to x_1$ and $\rho : w \to a^*x_2$ over $c$, and an
++ invertible $\delta_W : z \to w$ such that
++ $\rho\delta_W = \delta\gamma$.
++ Therefore
++ $$
++ \alpha\gamma = \tau\delta\gamma = \tau\rho\delta_W
++ $$
++ is strongly cartesian. The arrow
++ $r = (c,\text{id}_{V_1},\gamma) : (W,\psi,z) \to X_1$
++ belongs to $R$, as required.
++ Conversely, if such an $r$ exists, the implication proved earlier
++ shows that $Q(Ar)$ is strongly cartesian. Since $Q(r)$ is an
++ isomorphism, $Q(A) = Q(Ar)Q(r)^{-1}$ is strongly cartesian as well.
++ This proves the stated characterization.
++ For any chosen roof $Q(A)Q(r_0)^{-1}$ representing a strongly
++ cartesian morphism, the same argument gives an additional $r_1 \in R$
++ with cartesian numerator in the refined roof
++ $Q(Ar_1)Q(r_0r_1)^{-1}$. Thus the characterization applies to the
++ roof representation used below, without asserting that an arbitrary
++ original numerator is already strongly cartesian.
+````
+
+Original SHA-256 `34C802A046D70793DD709D21E26E47B497BC106C59CD60C3A9591EA365D81973`; replacement SHA-256 `67D118DC40D3ADFF90190E58E7344EFA91731E64D729D37886F4533FD91A2AF4`.
 
 </details>

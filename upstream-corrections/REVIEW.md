@@ -39,5 +39,6 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [spaces-morphisms.tex](reviews/spaces-morphisms.md) — 7 correction units.
 - [spaces-perfect.tex](reviews/spaces-perfect.md) — 19 correction units.
 - [stacks-limits.tex](reviews/stacks-limits.md) — 11 correction units.
+- [stacks.tex](reviews/stacks.md) — 76 correction units.
 - [topologies.tex](reviews/topologies.md) — 19 correction units.
 - [topology.tex](reviews/topology.md) — 90 correction units.

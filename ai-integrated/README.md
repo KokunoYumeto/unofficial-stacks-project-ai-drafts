@@ -21,11 +21,11 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R55 and the Verdier insertion**: 56
-admitted overlays with 1,530 stable units (1,518 correction IDs and 12 Verdier
+The cumulative source includes **R1–R56 and the Verdier insertion**: 57
+admitted overlays with 1,606 stable units (1,594 correction IDs and 12 Verdier
 units). Admission and source composition are separate checks. The
-[R55 successor receipt](../validation/r55-successor-current.json) binds its
-exact 35-edit source change and validation; its immutable R54 predecessor
+[R56 successor receipt](../validation/r56-successor-current.json) binds its
+exact 86-edit source change and validation; its immutable R55 predecessor
 preserves all earlier source and evidence. The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
@@ -58,8 +58,13 @@ sheafification, a presheaf target, transition notation and covering-sieve
 references, and clarify two displayed maps. [Review and complete editable
 chapter proofs](candidates/commons/stacks/errata/r55/README.md) accompany
 the 35 edits. All 107 earlier Sites corrections remain intact.
-R49–R55 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54/R55 review, source
+R56 adds 76 proposed Stacks corrections and clarifications, with 86 edits.
+The substack hypothesis and localization criterion retain complete
+counterexamples and replacement proofs, including all refinement maps.
+[Review, complete proofs and editable chapter sources](candidates/commons/stacks/errata/r56/README.md)
+are available alongside the chapter and combined corrections-only patches.
+R49–R56 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 
