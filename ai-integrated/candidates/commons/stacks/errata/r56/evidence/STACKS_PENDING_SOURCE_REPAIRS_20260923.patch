@@ -1,0 +1,814 @@
+--- a/stacks.tex
++++ b/stacks.tex
+@@ -228,7 +228,7 @@
+ Let $p : \mathcal{S} \to \mathcal{C}$ be a fibred category,
+ see Categories, Section \ref{categories-section-fibred-categories}.
+ Let $U \in \Ob(\mathcal{C})$ and let $x, y \in \Ob(\mathcal{S}_U)$.
+-Denote $x, y : \mathcal{C}/U \to \mathcal{S}$ also the corresponding
++Also denote by $x, y : \mathcal{C}/U \to \mathcal{S}$ the corresponding
+ $1$-morphisms, see
+ Categories, Lemma \ref{categories-lemma-yoneda-2category}.
+ Then
+@@ -367,11 +367,11 @@
+ (Pullback of descent data.)
+ Let $\mathcal{C}$ be a category.
+ Let $p : \mathcal{S} \to \mathcal{C}$ be a fibred category.
+-Make a choice pullbacks as in Categories,
++Make a choice of pullbacks as in Categories,
+ Definition \ref{categories-definition-pullback-functor-fibred-category}.
+ Let $\mathcal{U} = \{f_i : U_i \to U\}_{i \in I}$, and
+ $\mathcal{V} = \{V_j \to V\}_{j \in J}$
+-be a families of morphisms of $\mathcal{C}$ with fixed target.
++be families of morphisms of $\mathcal{C}$ with fixed target.
+ Assume all the fibre products
+ $U_i \times_U U_{i'}$, $U_i \times_U U_{i'} \times_U U_{i''}$,
+ $V_j \times_V V_{j'}$, and $V_j \times_V V_{j'} \times_V V_{j''}$ exist.
+@@ -391,9 +391,9 @@
+ is a descent datum relative to $\mathcal{U}$.
+ \item This construction defines a functor between descent data relative
+ to $\mathcal{V}$ and descent data relative to $\mathcal{U}$.
+-\item Given a second $\alpha' : I \to J$, $h' : U \to V$ and
+-$g'_i : U_i \to V_{\alpha'(i)}$ morphism of families
+-of maps with fixed target, then if $h = h'$ the two resulting functors
++\item Given a second morphism of families of maps with fixed target,
++$\alpha' : I \to J$, $h' : U \to V$ and
++$g'_i : U_i \to V_{\alpha'(i)}$, if $h = h'$ then the two resulting functors
+ between descent data are canonically isomorphic.
+ \end{enumerate}
+ \end{lemma}
+@@ -622,8 +622,8 @@
+ \begin{enumerate}
+ \item if $\varphi : y \to x$ is a strongly cartesian
+ morphism of $\mathcal{S}$ and
+-$x$ is an object of $\mathcal{S}'$, then $y$ is isomorphic to an
+-object of $\mathcal{S}'$,
++$x$ is an object of $\mathcal{S}'$, then $y$ is isomorphic in
++$\mathcal{S}_{p(y)}$ to an object of $\mathcal{S}'$,
+ \item $\mathcal{S}'$ is a full subcategory of $\mathcal{S}$, and
+ \item if $\{f_i : U_i \to U\}$ is a covering of $\mathcal{C}$,
+ and $x$ an object of $\mathcal{S}$ over $U$ such that $f_i^*x$
+@@ -636,8 +636,8 @@
+ \begin{proof}
+ Omitted. Hints:
+ The first condition guarantees that $\mathcal{S}'$ is a fibred category.
+-The second condition guarantees that the $\mathit{Isom}$-presheaves
+-of $\mathcal{S}'$ are sheaves (as they are identical to their counter parts
++The second condition guarantees that the $\mathit{Mor}$-presheaves
++of $\mathcal{S}'$ are sheaves (as they are identical to their counterparts
+ in $\mathcal{S}$). The third condition guarantees that the descent condition
+ holds in $\mathcal{S}'$ as we can first descend in $\mathcal{S}$ and
+ then (3) implies the resulting object is isomorphic to an object of
+@@ -672,7 +672,7 @@
+ the presheaves
+ $$
+ \mathit{Mor}_{\mathcal{S}_1}(x, y),
+-\mathit{Mor}_{\mathcal{S}_1}(F(x), F(y)) :
++\mathit{Mor}_{\mathcal{S}_2}(F(x), F(y)) :
+ (\mathcal{C}/U)^{opp} \longrightarrow \textit{Sets}.
+ $$
+ are identified, see
+@@ -681,9 +681,9 @@
+ Finally, we have to show that if every descent datum in $\mathcal{S}_1$
+ is effective, then so is every descent datum in $\mathcal{S}_2$.
+ To do this, let $(X_i, \varphi_{ii'})$ be a descent datum
+-in $\mathcal{S}_2$ relative the covering $\{U_i \to U\}$ of the site
++in $\mathcal{S}_2$ relative to the covering $\{U_i \to U\}$ of the site
+ $\mathcal{C}$. Then $(G(X_i), G(\varphi_{ii'}))$ is a descent datum
+-in $\mathcal{S}_1$ relative the covering $\{U_i \to U\}$.
++in $\mathcal{S}_1$ relative to the covering $\{U_i \to U\}$.
+ Let $X$ be an object of $\mathcal{S}_{1, U}$ such that the
+ descent datum $(f_i^*X, can)$ is isomorphic to
+ $(G(X_i), G(\varphi_{ii'}))$. Then $F(X)$ is an object of $\mathcal{S}_{2, U}$
+@@ -721,7 +721,7 @@
+ \begin{lemma}
+ \label{lemma-2-product-stacks}
+ Let $\mathcal{C}$ be a site.
+-The $(2, 1)$-category of stacks over $\mathcal{C}$
++The $2$-category of stacks over $\mathcal{C}$
+ has 2-fibre products, and they are described as in
+ Categories, Lemma \ref{categories-lemma-2-product-categories-over-C}.
+ \end{lemma}
+@@ -744,12 +744,12 @@
+ Recall that an object of $\mathcal{X} \times_\mathcal{S} \mathcal{Y}$
+ is given by a quadruple $(U, x, y, \phi)$.
+ It lies over the object
+-$U$ of $\mathcal{C}$. Next, let $(U, x', y', \phi')$ be second
++$U$ of $\mathcal{C}$. Next, let $(U, x', y', \phi')$ be a second
+ object lying over $U$.
+ Recall that $\phi : f(x) \to g(y)$, and $\phi' : f(x') \to g(y')$
+ are isomorphisms in the category $\mathcal{S}_U$. Let us
+ use these isomorphisms to identify $z = f(x) = g(y)$ and
+-$z' = f(x') = g(y')$. With this identifications
++$z' = f(x') = g(y')$. With these identifications
+ it is clear that
+ $$
+ \mathit{Mor}((U, x, y, \phi), (U, x', y', \phi'))
+@@ -881,14 +881,14 @@
+ \label{remark-stack-make-small}
+ (Cutting down a ``big'' stack to get a stack.)
+ Let $\mathcal{C}$ be a site. Suppose that $p : \mathcal{S} \to \mathcal{C}$
+-is functor from a ``big'' category to $\mathcal{C}$, i.e., suppose
++is a functor from a ``big'' category to $\mathcal{C}$, i.e., suppose
+ that the collection of objects of $\mathcal{S}$ forms a proper class.
+ Finally, suppose that $p : \mathcal{S} \to \mathcal{C}$ satisfies
+ conditions (1), (2), (3) of
+ Definition \ref{definition-stack}.
+ In general there is no way to replace $p : \mathcal{S} \to \mathcal{C}$
+-by a equivalent category such that we obtain a stack. The reason is that
+-it can happen that a fibre categories $\mathcal{S}_U$ may have a proper
++by an equivalent category such that we obtain a stack. The reason is that
++it can happen that a fibre category $\mathcal{S}_U$ may have a proper
+ class of isomorphism classes of objects.
+ On the other hand, suppose that
+ \begin{enumerate}
+@@ -1034,7 +1034,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-2-product-stacks-in-groupoids}
+-Let $\mathcal{C}$ be a category.
++Let $\mathcal{C}$ be a site.
+ The $2$-category of stacks in groupoids over $\mathcal{C}$
+ has 2-fibre products, and they are described as in
+ Categories, Lemma \ref{categories-lemma-2-product-categories-over-C}.
+@@ -1273,15 +1273,15 @@
+ can find a covering $\{U_i \to U\}$ such that $G(y)|_{U_i}$ is in the
+ essential image of $F :(\mathcal{S}_2)_{U_i} \to (\mathcal{S}_1)_{U_i}$.
+ Since it suffices to show that $\gamma|_{U_i} = \text{id}$ for each $i$,
+-we may therefore assume that we have
+-$f : F(x) \to G(y)$ for some object $x$ of $\mathcal{S}_2$ over $U$
+-and morphisms $f$ of $(\mathcal{S}_1)_U$. In this case we get
++we may therefore assume that there are an object $x$ of $\mathcal{S}_2$
++over $U$ and an isomorphism $f : F(x) \to G(y)$ in
++$(\mathcal{S}_1)_U$. In this case we get
+ a morphism
+ $$
+ (1, \gamma) : (U, x, y, f) \longrightarrow (U, x, y, f)
+ $$
+ in the fibre category of $\mathcal{S}_2 \times_{\mathcal{S}_1} \mathcal{T}_1$
+-over $U$ whose image under $G'$ in $\mathcal{S}_1$ is $\text{id}_x$.
++over $U$ whose image under $G'$ in $\mathcal{S}_2$ is $\text{id}_x$.
+ As $G'$ is faithful we conclude that $\gamma = \text{id}_y$ and we win.
+ \end{proof}
+ 
+@@ -1316,7 +1316,7 @@
+ Pick $U \in \Ob(\mathcal{C})$ and
+ $y \in \Ob((\mathcal{T}_1)_U)$.
+ We have to show that the sheaf $\mathit{Aut}(y)$ on $\mathcal{C}/U$
+-is trivial. To to this we may replace $U$ by the members of
++is trivial. To do this we may replace $U$ by the members of
+ a covering of $U$. Hence by assumption (2) we may assume that
+ there exists an object $x \in \Ob((\mathcal{S}_2)_U)$
+ and an isomorphism $f : F(x) \to G(y)$.
+@@ -1343,7 +1343,7 @@
+ $$
+ (h : V \to U)
+ \longmapsto
+-\{(x, f) \mid x \in \Ob(\mathcal{S}_V), f : F(x) \to f^*y\text{ over }V\}/\cong
++\{(x, f) \mid x \in \Ob(\mathcal{S}_V), f : F(x) \to h^*y\text{ over }V\}/\cong
+ $$
+ is a sheaf on $\mathcal{C}/U$.
+ \end{enumerate}
+@@ -1378,8 +1378,8 @@
+ respect to the given covering. Because $\mathcal{T}$ is a stack in groupoids,
+ there is an object $y$ in $\mathcal{T}_U$ and isomorphisms
+ $\beta_i : F(x_i) \to y|_{U_i}$ such that
+-$F(\varphi_{ij}) = \beta_j|_{U_i \times_U U_j} \circ
+-(\beta_i|_{U_i \times_U U_j})^{-1}$.
++$F(\varphi_{ij}) = (\beta_j|_{U_i \times_U U_j})^{-1} \circ
++\beta_i|_{U_i \times_U U_j}$.
+ Then $(x_i, \beta_i)$ are sections of the presheaf associated to
+ $y$ over $U$ defined in assumption (3).
+ Moreover, $\varphi_{ij}$ defines an isomorphism
+@@ -1390,8 +1390,8 @@
+ This means there are morphisms $\alpha_i : x_i \to x|_{U_i}$
+ with $\beta_i = \beta|_{U_i} \circ F(\alpha_i)$.
+ Since $F$ is faithful on fibre categories a calculation shows
+-that $\varphi_{ij} = \alpha_j|_{U_i \times_U U_j} \circ
+-(\alpha_i|_{U_i \times_U U_j})^{-1}$. This finishes the proof.
++that $\varphi_{ij} = (\alpha_j|_{U_i \times_U U_j})^{-1} \circ
++\alpha_i|_{U_i \times_U U_j}$. This finishes the proof.
+ \end{proof}
+ 
+ 
+@@ -1534,7 +1534,7 @@
+ 
+ \medskip\noindent
+ Next, we add morphisms as follows. Given
+-$x$ lying over $U$ and any object $y$ of lying over $V$
++$x$ lying over $U$ and any object $y$ lying over $V$
+ a {\it locally defined morphism from $x$ to $y$} is given by
+ \begin{enumerate}
+ \item a morphism $f : U \to V$,
+@@ -1578,7 +1578,7 @@
+ $\mathcal{S}$ and with locally defined morphisms as morphisms
+ is a category over $\mathcal{C}$, that there is a functor
+ $G^2 : \mathcal{S} \to \mathcal{S}^2$ over $\mathcal{C}$,
+-that this functor preserves strongly cartesian objects,
++that this functor preserves strongly cartesian morphisms,
+ and that $\mathcal{S}^2$ is a fibred category over $\mathcal{C}$.
+ Checks omitted. This reduces one to the case where the
+ morphism presheaves of $\mathcal{S}$ are all sheaves, by
+@@ -1593,7 +1593,7 @@
+ consider the category $\mathcal{S}'$ whose objects are
+ pairs $(\mathcal{U}, \xi)$ where
+ $\mathcal{U} = \{U_i \to U\}$ is a covering of $\mathcal{C}$ and
+-$\xi = (X_i, \varphi_{ii'})$ is a descent datum relative $\mathcal{U}$.
++$\xi = (X_i, \varphi_{ii'})$ is a descent datum relative to $\mathcal{U}$.
+ Suppose given two such data
+ $(\mathcal{U}, \xi) = (\{f_i : U_i \to U\},  x_i, \varphi_{ii'})$ and
+ $(\mathcal{V}, \eta) = (\{g_j : V_j \to V\},  y_j, \psi_{jj'})$.
+@@ -1696,7 +1696,7 @@
+ where the colimit is over all common refinements
+ $a : \mathcal{W} \to \mathcal{U}$, $b : \mathcal{W} \to \mathcal{V}$.
+ This colimit is filtered (verification omitted).
+-Hence composition of morphisms in $F(U)$ is defined by
++Hence composition of morphisms in $F'(U)$ is defined by
+ finding a common refinement and composing in $DD(\mathcal{W})$.
+ \item Given $h : V \to U$ and an object
+ $(\mathcal{U}, \xi)$ of $F'(U)$ we set $F'(h)(\mathcal{U}, \xi)$
+@@ -1732,7 +1732,7 @@
+ Let $\mathcal{C}$ be a site.
+ Let $p : \mathcal{S} \to \mathcal{C}$ be a fibred category over $\mathcal{C}$.
+ Let $p' : \mathcal{S}' \to \mathcal{C}$ and $G : \mathcal{S} \to \mathcal{S}'$
+-the stack and $1$-morphism constructed in Lemma \ref{lemma-stackify}.
++be the stack and $1$-morphism constructed in Lemma \ref{lemma-stackify}.
+ This construction has the following universal property: Given a stack
+ $q : \mathcal{X} \to \mathcal{C}$ and a $1$-morphism
+ $F : \mathcal{S} \to \mathcal{X}$ of fibred categories over $\mathcal{C}$
+@@ -1763,7 +1763,7 @@
+ a morphism $\beta_{ij} : y_i|_{U_i \times_U U_j} \to y_j|_{U_i \times_U U_j}$.
+ Next, you check that the $\beta_{ij}$ define a descent datum. Since
+ $\mathcal{X}$ is a stack these descent data are effective and we find
+-an object $y$ of $\mathcal{X}_U$ agreeing with $G(x_i)$ over $U_i$.
++an object $y$ of $\mathcal{X}_U$ agreeing with $F(x_i)$ over $U_i$.
+ The hint is to set $H(x') = y$.
+ \end{proof}
+ 
+@@ -1836,7 +1836,7 @@
+ and that $\mathit{Mor}(h(\xi), h(\xi'))$ is equal to the fibre product
+ $$
+ \mathit{Mor}(i(x), i(x'))
+-\times_{\mathit{Mor}(j(f(x)), j(f(x'))}
++\times_{\mathit{Mor}(j(f(x)), j(f(x')))}
+ \mathit{Mor}(k(z), k(z'))
+ $$
+ where $i : \mathcal{X} \to \mathcal{X}'$,
+@@ -1868,7 +1868,7 @@
+ Let $\mathcal{C}$ be a site.
+ Let $\mathcal{X}$ be a fibred category over $\mathcal{C}$.
+ The stackification of the inertia fibred category $\mathcal{I}_\mathcal{X}$
+-is inertia of the stackification of $\mathcal{X}$.
++is the inertia of the stackification of $\mathcal{X}$.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -1931,7 +1931,7 @@
+ Let $p : \mathcal{S} \to \mathcal{C}$ be a category fibred in groupoids
+ over $\mathcal{C}$. Let $p' : \mathcal{S}' \to \mathcal{C}$ and
+ $G : \mathcal{S} \to \mathcal{S}'$
+-the stack in groupoids and $1$-morphism constructed in
++be the stack in groupoids and $1$-morphism constructed in
+ Lemma \ref{lemma-stackify-groupoids}.
+ This construction has the following universal property: Given a stack
+ in groupoids $q : \mathcal{X} \to \mathcal{C}$ and a $1$-morphism
+@@ -2037,7 +2037,7 @@
+ \begin{definition}
+ \label{definition-topology-inherited}
+ Let $\mathcal{C}$ be a site. Let $p : \mathcal{S} \to \mathcal{C}$ be a
+-fibred category. We say $(\mathcal{S}, \text{Cov}(\mathcal{S}))$ as in
++fibred category. We say that $(\mathcal{S}, \text{Cov}(\mathcal{S}))$ as in
+ Lemma \ref{lemma-topology-inherited}
+ is the {\it structure of site on $\mathcal{S}$ inherited from $\mathcal{C}$}.
+ We sometimes indicate this by saying that
+@@ -2087,7 +2087,7 @@
+ be a covering in $\mathcal{Y}$. Denote $\{U_i \to U\}_{i \in I}$ the
+ corresponding covering of $\mathcal{C}$. For each $i$ choose a strongly
+ cartesian morphism $x_i \to x$ in $\mathcal{X}$ lying over $U_i \to U$.
+-Then $F(x_i) \to F(x)$ and $y_i \to F(x)$ are both a strongly cartesian
++Then $F(x_i) \to F(x)$ and $y_i \to F(x)$ are both strongly cartesian
+ morphisms in $\mathcal{Y}$ lying over $U_i \to U$. Hence there exists
+ a unique isomorphism $F(x_i) \to y_i$ in $\mathcal{Y}_{U_i}$ compatible
+ with the maps to $F(x)$. Thus $\{x_i \to x\}_{i \in I}$ is a covering of
+@@ -2148,7 +2148,7 @@
+ \circ \psi_i^{-1}|_{q(y_i) \times_{q(y)} q(y_j)}.
+ $$
+ Consider the sheaf $\mathit{I} = \mathit{Isom}_\mathcal{Y}(F(x), y)$
+-on $\mathcal{C}/p(x)$. Note that $s_i = F(\psi_i) \in \mathit{I}(q(x_i))$
++on $\mathcal{C}/p(x)$. Note that $s_i = F(\psi_i) \in \mathit{I}(q(y_i))$
+ because $F(x_i) = y_i$. Because $F(\varphi_{ij}) = \text{id}$ (as we started
+ with a descent datum over $\{y_i \to y\}$) the displayed formula shows
+ that $s_i|_{q(y_i) \times_{q(y)} q(y_j)} = s_j|_{q(y_i) \times_{q(y)} q(y_j)}$.
+@@ -2215,7 +2215,7 @@
+ (Definition \ref{definition-effective-descent-datum}).
+ In this case $\{x|_{U_i} \to x\}$ is a covering and we can view
+ $(y_i, \varphi_{ij})$ as a descent datum relative to this covering.
+-By our assumption that $\mathcal{Y}$ is a stack over $\mathcal{C}$
++By our assumption that $\mathcal{Y}$ is a stack over $\mathcal{X}$
+ we see that it is effective which finishes the proof of condition (3).
+ 
+ \medskip\noindent
+@@ -2423,7 +2423,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-By the uniqueness property of a $2$-fibre product may assume that
++By the uniqueness property of a $2$-fibre product we may assume that
+ $\mathcal{X}' = \mathcal{Y}' \times_\mathcal{Y} \mathcal{X}$
+ as in
+ Categories, Lemma \ref{categories-lemma-2-product-categories-over-C}.
+@@ -2445,11 +2445,12 @@
+ Let $U \in \Ob(\mathcal{C})$, let $x'_1, x'_2$ be objects of
+ $\mathcal{Y}' \times_\mathcal{Y} \mathcal{X}$ over $U$, and let
+ $b' : F'(x'_1) \to F'(x'_2)$ be a morphism in $\mathcal{Y}'_U$.
+-Write $x'_i = (U, y'_i, x_i, \alpha_i)$. Note that $F'(x'_i) = x_i$
+-and $G'(x'_i) = y'_i$. By assumption there exists
++Write $x'_i = (U, y'_i, x_i, \alpha_i)$. Note that $F'(x'_i) = y'_i$
++and $G'(x'_i) = x_i$. By assumption there exists
+ a covering $\{U_i \to U\}$ in $\mathcal{C}$ and morphisms
+ $a_i : x_1|_{U_i} \to x_2|_{U_i}$ in $\mathcal{X}_{U_i}$ with
+-$F(a_i) = G(b')|_{U_i}$. Then $(b'|_{U_i}, a_i)$ is a morphism
++$F(a_i) = \alpha_2|_{U_i} \circ G(b')|_{U_i} \circ
++(\alpha_1|_{U_i})^{-1}$. Then $(b'|_{U_i}, a_i)$ is a morphism
+ $x'_1|_{U_i} \to x'_2|_{U_i}$ as required in (2)(b).
+ \end{proof}
+ 
+@@ -2513,7 +2514,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-By the uniqueness property of a $2$-fibre product may assume that
++By the uniqueness property of a $2$-fibre product we may assume that
+ $\mathcal{X}' = \mathcal{Y}' \times_\mathcal{Y} \mathcal{X}$
+ as in
+ Categories, Lemma \ref{categories-lemma-2-product-categories-over-C}.
+@@ -2736,8 +2737,8 @@
+ indeed $(a, \beta)$ is strongly cartesian. Conversely, suppose that
+ $(a, \beta)$ is strongly cartesian. Choose a strongly cartesian morphism
+ $\beta' : y'' \to y'$ in $\mathcal{S}$ with $p(\beta') = u(a)$.
+-Then bot $(a, \beta) : (U, y) \to (U, y')$ and
+-$(a, \beta') : (U, y'') \to (U, y)$ are strongly cartesian and
++Then both $(a, \beta) : (U, y) \to (U', y')$ and
++$(a, \beta') : (U, y'') \to (U', y')$ are strongly cartesian and
+ lift $a$. Hence, by the uniqueness of strongly cartesian morphisms
+ (see discussion in
+ Categories, Section \ref{categories-section-fibred-categories})
+@@ -2768,11 +2769,11 @@
+ that $u^p\mathcal{S}$ is a fibred category over $\mathcal{C}$.
+ Moreover, in the proof of that lemma we have seen that a morphism
+ $(a, \beta)$ of $u^p\mathcal{S}$ is strongly cartesian if and
+-only $\beta$ is strongly cartesian in $\mathcal{S}$. Hence,
++only if $\beta$ is strongly cartesian in $\mathcal{S}$. Hence,
+ given a morphism $a : U \to U'$ of $\mathcal{C}$, not only
+ do we have the equalities
+-$(u^p\mathcal{S})_U = \mathcal{S}_U$ and
+-$(u^p\mathcal{S})_{U'} = \mathcal{S}_{U'}$, but via these
++$(u^p\mathcal{S})_U = \mathcal{S}_{u(U)}$ and
++$(u^p\mathcal{S})_{U'} = \mathcal{S}_{u(U')}$, but via these
+ equalities the pullback functors agree; in a formula
+ $a^*(U', y') = (U, u(a)^*y')$.
+ 
+@@ -2783,8 +2784,8 @@
+ and that $u(U_i \times_U U_j) = u(U_i) \times_{u(U)} u(U_j)$ and
+ similarly for the triple fibre products $U_i \times_U U_j \times_U U_k$.
+ As we have the identifications of fibre categories and pullbacks
+-we see that descend data relative to $\mathcal{U}$ are identical
+-to descend data relative to $\mathcal{V}$. Since by assumption we have
++we see that descent data relative to $\mathcal{U}$ are identical
++to descent data relative to $\mathcal{V}$. Since by assumption we have
+ effective descent in $\mathcal{S}$ we conclude the same holds for
+ $u^p\mathcal{S}$.
+ \end{proof}
+@@ -2835,10 +2836,10 @@
+ \longrightarrow
+ (U_2, \phi_2 : V_2 \to u(U_2), x_2)
+ $$
+-of $u_{pp}\mathcal{S}$ is given by a
++of $u_{pp}\mathcal{S}$ is given by a triple
+ $(a, b, \alpha)$ where $a : U_1 \to U_2$ is a morphism of $\mathcal{C}$,
+ $b : V_1 \to V_2$ is a morphism of $\mathcal{D}$, and
+-$\alpha : x_1 \to x_2$ is morphism of $\mathcal{S}$,
++$\alpha : x_1 \to x_2$ is a morphism of $\mathcal{S}$,
+ such that $p(\alpha) = a$ and the diagram
+ $$
+ \xymatrix{
+@@ -2903,29 +2904,30 @@
+ $U'_1 = U_1 \times_U U'$, and denote $a' : U'_1 \to U'$ and
+ $c' : U'_1 \to U_1$ the projections.
+ As $u(U'_1) = u(U_1) \times_{u(U)} u(U')$
+-we see that $\phi'_1 = (\phi_1, \phi') : V_1 \to u(U'_1)$ is
++we see that $\phi'_1 = (\phi_1, \phi' \circ b) : V_1 \to u(U'_1)$ is
+ a morphism in $\mathcal{D}$. Let $\gamma_1 : x_1' \to x_1$
+ be a strongly cartesian morphism of $\mathcal{S}$ with
+-$p(\gamma_1) = \phi'_1$ (which exists because $\mathcal{S}$ is a
++$p(\gamma_1) = c'$ (which exists because $\mathcal{S}$ is a
+ fibred category over $\mathcal{C}$). Then as $\gamma : x' \to x$ is
+ strongly cartesian there exists a unique morphism
+-$\alpha' : x'_1 \to x'$ with $p(\alpha') = a'$.
++$\alpha' : x'_1 \to x'$ with $p(\alpha') = a'$ and
++$\gamma \circ \alpha' = \alpha \circ \gamma_1$.
+ At this point we see that
+ $$
+ (a', b, \alpha') :
+-(U_1, \phi_1 : V_1 \to u(U'_1), x'_1)
++(U'_1, \phi'_1 : V_1 \to u(U'_1), x'_1)
+ \longrightarrow
+-(U, \phi : V \to u(U'), x')
++(U', \phi' : V \to u(U'), x')
+ $$
+ is a morphism and that
+ $$
+ (c', \text{id}_{V_1}, \gamma_1) :
+ (U'_1, \phi'_1 : V_1 \to u(U'_1), x'_1)
+ \longrightarrow
+-(U_1, \phi : V_1 \to u(U_1), x_1)
+-$$
+-is an element of $R$ which form a solution of the existence problem
+-posed by RMS2.
++(U_1, \phi_1 : V_1 \to u(U_1), x_1)
++$$
++is an element of $R$. Together these two morphisms solve the existence
++problem posed by RMS2.
+ 
+ \medskip\noindent
+ Finally, suppose that
+@@ -2940,7 +2942,7 @@
+ (c, \text{id}_V, \gamma) :
+ (U, \phi : V \to u(U), x)
+ \longrightarrow
+-(U', \phi : V \to u(U'), x')
++(U', \phi' : V \to u(U'), x')
+ $$
+ is an element of $R$ which equalizes the morphisms
+ $(a, b, \alpha)$ and $(a', b', \alpha')$. This implies in particular
+@@ -2949,8 +2951,8 @@
+ Categories, Lemma \ref{categories-lemma-almost-finite-limits-exist}).
+ Moreover, $u(d) : u(U_2) \to u(U_1)$ is the equalizer of $u(a), u(a')$
+ hence (as $b = b'$) there is a morphism $\phi_2 : V_1 \to u(U_2)$ such that
+-$\phi_1 = u(d) \circ \phi_1$. Let $\delta : x_2 \to x_1$ be a strongly
+-cartesian morphism of $\mathcal{S}$ with $p(\delta) = u(d)$.
++$\phi_1 = u(d) \circ \phi_2$. Let $\delta : x_2 \to x_1$ be a strongly
++cartesian morphism of $\mathcal{S}$ with $p(\delta) = d$.
+ Now we claim that $\alpha \circ \delta = \alpha' \circ \delta$.
+ This is true because
+ $\gamma$ is strongly cartesian,
+@@ -3007,14 +3009,16 @@
+ (U_2, \phi_2 : V_2 \to u(U_2), x_2) = X_2
+ $$
+ of $u_{pp}\mathcal{S}$ has image $f = ((a, b, \alpha), 1)$
+-strongly cartesian in $u_p\mathcal{S}$ if and only if $\alpha$
+-is a strongly cartesian morphism of $\mathcal{S}$.
++strongly cartesian in $u_p\mathcal{S}$ if and only if there is an arrow
++$r = (c,\text{id}_{V_1},\gamma) : Z \to X_1$ in $R$ such that
++$\alpha \circ \gamma$ is strongly cartesian in $\mathcal{S}$.
++In particular, this holds whenever $\alpha$ is strongly cartesian.
+ 
+ \medskip\noindent
+ Assume $\alpha$ strongly cartesian.
+ Let $X = (U, \phi : V \to u(U), x)$ be another object, and let
+ $f_2 : X \to X_2$ be a morphism of $u_p\mathcal{S}$
+-such that $p_p(f_2) = b \circ b_1$ for some $b_1 : U \to U_1$.
++such that $p_p(f_2) = b \circ b_1$ for some $b_1 : V \to V_1$.
+ To show that $f$ is strongly cartesian we have to show
+ that there exists a unique morphism $f_1 : X \to X_1$ in $u_p\mathcal{S}$
+ such that $p_p(f_1) = b_1$ and $f_2 = f \circ f_1$ in $u_p\mathcal{S}$.
+@@ -3023,7 +3027,7 @@
+ is an isomorphism whose image in $\mathcal{D}$ is an identity we
+ see that finding a morphism $f_1 : X \to X_1$ with the required
+ properties is the same thing as finding a morphism $f'_1 : X' \to X_1$
+-in $u_p\mathcal{S}$ with $p(f'_1) = b_1$ and $f'_2 = f \circ f'_1$.
++in $u_p\mathcal{S}$ with $p_p(f'_1) = b_1$ and $f'_2 = f \circ f'_1$.
+ Hence we may assume that $f_2$ is of the form
+ $f_2 = ((a_2, b_2, \alpha_2), 1)$ with $b_2 = b \circ b_1$. Here is
+ a picture
+@@ -3081,11 +3085,11 @@
+ Categories, Lemma \ref{categories-lemma-equality-morphisms-right-localization}
+ we see that $f_2 = f \circ g_1 = f \circ g'_1$ means that there
+ exists a morphism $r' : X'' \to X'$ in $u_{pp}\mathcal{S}$ such that
+-$r' \circ r \in R$ and
++$r \circ r' \in R$ and
+ $$
+ (a, b, \alpha) \circ f_1 \circ r' =
+ (a, b, \alpha) \circ f'_1 \circ r' =
+-(a_2, b_2, \alpha_2) \circ r'
++(a_2, b_2, \alpha_2) \circ r \circ r'
+ $$
+ in $u_{pp}\mathcal{S}$. Note that
+ now $g_1$ is represented by $(f_1 \circ r', r \circ r')$ and
+@@ -3093,9 +3097,10 @@
+ $$
+ (a, b, \alpha) \circ f_1 =
+ (a, b, \alpha) \circ f'_1 =
+-(a_2, b_2, \alpha_2).
+-$$
+-Write $r = (c, \text{id}_V, \gamma) : (U', \phi' : V \to u(U'), x')$,
++(a_2, b_2, \alpha_2) \circ r.
++$$
++Write $r = (c, \text{id}_V, \gamma) : (U', \phi' : V \to u(U'), x')
++\to (U, \phi : V \to u(U), x)$,
+ $f_1 = (a_1, b_1, \alpha_1)$, and $f'_1 = (a'_1, b_1, \alpha'_1)$.
+ Here we have used the condition that $p_p(g_1) = p_p(g'_1)$.
+ The equalities above are now equivalent to
+@@ -3110,7 +3115,7 @@
+ above we see that $V \to u(U')$ maps into
+ $u(U'') = u(\text{Eq}(a_1, a'_1)) = \text{Eq}(u(a_1), u(a'_1))$.
+ Hence we get a new object $(U'', \phi'' : V \to u(U''), x'')$, where
+-$\gamma' : x'' \to x'$ is a strongly cartesian morphism lifting $\gamma$.
++$\gamma' : x'' \to x'$ is a strongly cartesian morphism lifting $c'$.
+ Then we see that we may precompose $f_1$ and $f'_1$ with the element
+ $(c', \text{id}_V, \gamma')$ of $R$. After doing this, i.e., replacing
+ $(U', \phi' : V \to u(U'), x')$ with
+@@ -3121,11 +3126,172 @@
+ This shows that $g_1 = g'_1$ as desired.
+ 
+ \medskip\noindent
+-We omit the proof of the fact that for any strongly cartesian morphism
+-of $u_p\mathcal{S}$ of the form $((a, b, \alpha), 1)$ the morphism
+-$\alpha$ is strongly cartesian in $\mathcal{S}$.
+-(We do not need the characterization of strongly cartesian morphisms
+-in the rest of the proof, although we do use it later in this section.)
++We prove the converse with the stated refinement. Write
++$Q : u_{pp}\mathcal{S} \to u_p\mathcal{S}$ for the localization functor.
++For $Y = (U, \phi : V \to u(U), y)$ and $b : V' \to V$, put
++$$
++Y_b = (U, \phi \circ b : V' \to u(U), y),\qquad
++k_b = (\text{id}_U, b, \text{id}_y) : Y_b \to Y.
++$$
++The implication already proved shows that $Q(k_b)$ is strongly cartesian.
++Consequently every morphism $h : X \to Y$ over $b$ factors uniquely as
++$h = Q(k_b) \circ i_h$, with $i_h : X \to Y_b$ over $\text{id}_{V'}$.
++Moreover, $h$ is strongly cartesian if and only if $i_h$ is an isomorphism.
++Indeed, if $h$ is strongly cartesian, its universal property gives
++$j : Y_b \to X$ over $\text{id}_{V'}$ with $h \circ j = Q(k_b)$.
++Uniqueness for $Q(k_b)$ gives $i_h \circ j = \text{id}_{Y_b}$, and
++uniqueness for $h$ gives $j \circ i_h = \text{id}_X$.
++The reverse implication follows by composition with an isomorphism.
++
++\medskip\noindent
++We first establish the required detection of vertical isomorphisms.
++Fix $\phi : V \to u(U)$ and a morphism $\delta : x \to y$ in
++$\mathcal{S}_U$. Write
++$$
++D_\delta = (\text{id}_U, \text{id}_V, \delta) :
++(U,\phi,x) \longrightarrow (U,\phi,y).
++$$
++We claim that $Q(D_\delta)$ is invertible if and only if there exist
++$c : W \to U$ and $\psi : V \to u(W)$ with $u(c) \circ \psi = \phi$
++such that the pullback of $\delta$ along $c$ is invertible.
++More explicitly, choose strongly cartesian morphisms
++$\gamma_x : x_W \to x$ and $\gamma_y : y_W \to y$ over $c$.
++The pullback is the unique vertical morphism $\delta_W : x_W \to y_W$
++such that
++$$
++\gamma_y \circ \delta_W = \delta \circ \gamma_x.
++$$
++Changing these two cartesian lifts conjugates $\delta_W$ by the unique
++vertical comparison isomorphisms, so invertibility is independent of
++these choices. If $\delta_W$ is invertible, the displayed equation and
++the two morphisms of $R$ defined by $\gamma_x,\gamma_y$ show that
++$Q(D_\delta)$ is invertible.
++
++\medskip\noindent
++Conversely, represent an inverse to $Q(D_\delta)$ by $Q(e)Q(r)^{-1}$, where
++$$
++r = (c,\text{id}_V,\gamma) : (T,\theta,z) \to (U,\phi,y),\qquad
++e = (a,\text{id}_V,\epsilon) : (T,\theta,z) \to (U,\phi,x),
++$$
++and $r \in R$. Thus $a,c : T \to U$ and
++$u(a)\theta = \phi = u(c)\theta$.
++Let $h : T_1 \to T$ be the equalizer of $a,c$.
++As $u$ preserves this equalizer, there exists
++$\theta_1 : V \to u(T_1)$ with $u(h)\theta_1 = \theta$.
++Choose a strongly cartesian $\zeta : z_1 \to z$ over $h$ and refine
++the inverse roof by $(h,\text{id}_V,\zeta) \in R$.
++Put $d = ah = ch$ and $y_1 = z_1$.
++Then $\tau_y = \gamma\zeta : y_1 \to y$ is strongly cartesian over $d$.
++Choose a strongly cartesian $\tau_x : x_1 \to x$ over $d$.
++There are unique vertical morphisms
++$\eta : y_1 \to x_1$ and $\delta_1 : x_1 \to y_1$ satisfying
++$$
++\tau_x\eta = \epsilon\zeta,\qquad
++\tau_y\delta_1 = \delta\tau_x.
++$$
++For this paragraph, regard $x_1,y_1$ as the triples with base $T_1$
++and structure map $\theta_1$, and write
++$$
++t_x = (d,\text{id}_V,\tau_x),\quad
++t_y = (d,\text{id}_V,\tau_y),\quad
++E_\eta = (\text{id}_{T_1},\text{id}_V,\eta),\quad
++D_1 = (\text{id}_{T_1},\text{id}_V,\delta_1).
++$$
++The inverse is $Q(t_x)Q(E_\eta)Q(t_y)^{-1}$, whereas
++$Q(D_\delta) = Q(t_y)Q(D_1)Q(t_x)^{-1}$.
++The two inverse identities therefore give
++$$
++Q(E_\eta D_1) = \text{id}_{(T_1,\theta_1,x_1)},\qquad
++Q(D_1 E_\eta) = \text{id}_{(T_1,\theta_1,y_1)}.
++$$
++The equality criterion for right fractions, applied to denominators
++equal to identities, supplies two arrows of $R$. Write their
++$\mathcal{C}$-components as $c_x : T_x \to T_1$ and
++$c_y : T_y \to T_1$, their structure maps as $\theta_x,\theta_y$, and
++their strongly cartesian $\mathcal{S}$-components as
++$\rho_x : z_x \to x_1$ and $\rho_y : z_y \to y_1$.
++Then
++$$
++(\eta\delta_1)\rho_x = \rho_x,\qquad
++(\delta_1\eta)\rho_y = \rho_y,\qquad
++u(c_x)\theta_x = \theta_1 = u(c_y)\theta_y.
++$$
++Form $T_2 = T_x \times_{T_1} T_y$, with projections $e_x,e_y$, and put
++$k = c_xe_x = c_ye_y$. Preservation of this fibre product gives
++$\theta_2 : V \to u(T_2)$ such that
++$u(e_x)\theta_2 = \theta_x$ and $u(e_y)\theta_2 = \theta_y$.
++In particular $u(k)\theta_2 = \theta_1$ and $u(dk)\theta_2 = \phi$.
++Choose strongly cartesian arrows $\kappa_x : x_2 \to x_1$ and
++$\kappa_y : y_2 \to y_1$ over $k$, and the unique vertical arrows
++$\delta_2 : x_2 \to y_2$ and $\eta_2 : y_2 \to x_2$ with
++$$
++\kappa_y\delta_2 = \delta_1\kappa_x,\qquad
++\kappa_x\eta_2 = \eta\kappa_y.
++$$
++Since $k = c_xe_x$, cartesianness of $\rho_x$ factors $\kappa_x$
++through $\rho_x$, and hence $\eta\delta_1\kappa_x = \kappa_x$.
++Similarly $\delta_1\eta\kappa_y = \kappa_y$.
++It follows that
++$$
++\kappa_x\eta_2\delta_2
++= \eta\kappa_y\delta_2
++= \eta\delta_1\kappa_x
++= \kappa_x,
++$$
++and
++$$
++\kappa_y\delta_2\eta_2
++= \delta_1\kappa_x\eta_2
++= \delta_1\eta\kappa_y
++= \kappa_y.
++$$
++Cartesian uniqueness, with fixed identity base maps, yields
++$\eta_2\delta_2 = \text{id}_{x_2}$ and
++$\delta_2\eta_2 = \text{id}_{y_2}$.
++The composites $\tau_x\kappa_x,\tau_y\kappa_y$ are strongly cartesian
++over $dk$, and
++$$
++(\tau_y\kappa_y)\delta_2 = \delta(\tau_x\kappa_x).
++$$
++Thus $\delta_2$ is the required invertible pullback of $\delta$.
++This proves the detection claim without assuming that localization
++reflects isomorphisms before a refinement.
++
++\medskip\noindent
++Return to $A = (a,b,\alpha) : X_1 \to X_2$.
++Choose a strongly cartesian $\tau : a^*x_2 \to x_2$ over $a$, and
++write $\alpha = \tau\delta$, where $\delta : x_1 \to a^*x_2$ is vertical.
++Put $X_a = (U_1,\phi_1 : V_1 \to u(U_1),a^*x_2)$.
++The exact factorization is
++$$
++A = k_b \circ (a,\text{id}_{V_1},\tau)
++\circ (\text{id}_{U_1},\text{id}_{V_1},\delta),
++$$
++where $k_b : (X_2)_b \to X_2$, and the middle factor belongs to $R$.
++Consequently, if $Q(A)$ is strongly cartesian, its vertical factor
++relative to $Q(k_b)$ is invertible, and so is $Q(D_\delta)$.
++The detection claim supplies $c : W \to U_1$, $\psi : V_1 \to u(W)$
++with $u(c)\psi = \phi_1$, strongly cartesian
++$\gamma : z \to x_1$ and $\rho : w \to a^*x_2$ over $c$, and an
++invertible $\delta_W : z \to w$ such that
++$\rho\delta_W = \delta\gamma$.
++Therefore
++$$
++\alpha\gamma = \tau\delta\gamma = \tau\rho\delta_W
++$$
++is strongly cartesian. The arrow
++$r = (c,\text{id}_{V_1},\gamma) : (W,\psi,z) \to X_1$
++belongs to $R$, as required.
++Conversely, if such an $r$ exists, the implication proved earlier
++shows that $Q(Ar)$ is strongly cartesian. Since $Q(r)$ is an
++isomorphism, $Q(A) = Q(Ar)Q(r)^{-1}$ is strongly cartesian as well.
++This proves the stated characterization.
++For any chosen roof $Q(A)Q(r_0)^{-1}$ representing a strongly
++cartesian morphism, the same argument gives an additional $r_1 \in R$
++with cartesian numerator in the refined roof
++$Q(Ar_1)Q(r_0r_1)^{-1}$. Thus the characterization applies to the
++roof representation used below, without asserting that an arbitrary
++original numerator is already strongly cartesian.
+ 
+ \medskip\noindent
+ Let $(U, \phi : V \to u(U), x)$ be an object of $u_p\mathcal{S}$.
+@@ -3158,7 +3324,7 @@
+ a pair $((a, b, \alpha), r)$ with $r \in R$. Then $p_p(r) = \text{id}_V$,
+ hence $p_{pp}((a, b, \alpha)) = \text{id}_V$. Hence $b = \text{id}_V$.
+ But any morphism of $\mathcal{S}$ is strongly cartesian, see
+-Categories, Lemma \ref{categories-lemma-fibred-groupoids}
++Categories, Lemma \ref{categories-lemma-fibred-groupoids};
+ hence we see that $(a, b, \alpha) \in R$ is invertible
+ in $u_p\mathcal{S}$ as desired.
+ \end{proof}
+@@ -3193,7 +3359,7 @@
+ 
+ \medskip\noindent
+ Let $G : u_p\mathcal{S} \to \mathcal{T}$ be a $1$-morphism of fibred
+-categories over $\mathcal{D}$. Denote $G' : u_{pp}\mathcal{S} \to \mathcal{T}$
++categories over $\mathcal{D}$. Denote by $G' : u_{pp}\mathcal{S} \to \mathcal{T}$
+ the composition of $G$ with the canonical (localization) functor
+ $u_{pp}\mathcal{S} \to u_p\mathcal{S}$. Then consider the functor
+ $H : \mathcal{S} \to u^p\mathcal{T}$ given by
+@@ -3202,7 +3368,7 @@
+ $$
+ on objects and by
+ $$
+-H((\alpha, a) : x/U \to x'/U') = G'(a, u(a), \alpha)
++H(\alpha/a : x/U \to x'/U') = (a, G'(a, u(a), \alpha))
+ $$
+ on morphisms. Since $G$ transforms strongly cartesian morphisms
+ into strongly cartesian morphisms, we see that if $\alpha$ is strongly
+@@ -3222,7 +3388,7 @@
+ \medskip\noindent
+ Conversely, let $H : \mathcal{S} \to u^p\mathcal{T}$ be a $1$-morphism
+ of fibred categories. Recall that an object of $u^p\mathcal{T}$ is
+-a pair $(U, y)$ with $y \in \Ob(\mathcal{T}_{u(U)})$. We denote
++a pair $(U, y)$ with $y \in \Ob(\mathcal{T}_{u(U)})$. We denote by
+ $\text{pr} : u^p\mathcal{T} \to \mathcal{T}$ the functor $(U, y) \mapsto y$.
+ In this case we define a functor
+ $G' : u_{pp}\mathcal{S} \to \mathcal{T}$ by the rules
+@@ -3243,7 +3409,7 @@
+ \xymatrix{
+ \phi^*\text{pr}(H(x)) \ar[d] \ar[r]_-{\beta} &
+ (\phi')^*\text{pr}(H(x')) \ar[d] \\
+-\text{pr}(H(x)) \ar[r]^{\text{pr}(H(a, \alpha))} & \text{pr}(H(x'))
++\text{pr}(H(x)) \ar[r]^{\text{pr}(H(\alpha/a))} & \text{pr}(H(x'))
+ }
+ $$
+ Such a morphism exists and is unique because $\mathcal{T}$ is a fibred
+@@ -3274,15 +3440,15 @@
+ \medskip\noindent
+ Next, let us prove that $G$ transforms strongly cartesian morphisms
+ into strongly cartesian morphisms.
+-Suppose that $f : X \to Y$ is a strongly cartesian. By the characterization
++Suppose that $f : X \to Y$ is strongly cartesian. By the characterization
+ of strongly cartesian morphisms in $u_p\mathcal{S}$ we can write $f$ as
+-$((a, b, \alpha) : X' \to Y, r : X' \to Y)$ where $r \in R$ and
++$((a, b, \alpha) : X' \to Y, r : X' \to X)$ where $r \in R$ and
+ $\alpha$ strongly cartesian in $\mathcal{S}$. By the above it suffices
+-to show that $G'(a, b \alpha)$ is strongly cartesian. As before
++to show that $G'(a, b, \alpha)$ is strongly cartesian. As before
+ the condition that $\alpha$ is strongly cartesian implies that
+-$\text{pr}(H(a, \alpha)) : \text{pr}(H(x)) \to \text{pr}(H(x'))$
++$\text{pr}(H(\alpha/a)) : \text{pr}(H(x)) \to \text{pr}(H(x'))$
+ is strongly cartesian in $\mathcal{T}$. Since in the commutative
+-square above now all arrows except possibly $\beta$ is strongly cartesian
++square above now all arrows except possibly $\beta$ are strongly cartesian
+ it follows that also $\beta$ is strongly cartesian as desired.
+ Clearly the construction $H \mapsto G$ is functorial in $H$ and we
+ obtain a functor
+@@ -3433,7 +3599,7 @@
+ $\alpha/a$ the morphism $(a, c(\alpha))$.
+ 
+ \medskip\noindent
+-Fully faithfulness. To prove this we are going to use
++Full faithfulness. To prove this we are going to use
+ Lemma \ref{lemma-characterize-ff}.
+ Let $U \in \Ob(\mathcal{C})$.
+ Let $x, y \in \mathcal{S}_U$.
+@@ -3443,7 +3609,7 @@
+ =
+ \Mor_{(f^{-1}\mathcal{S})_{u(U)}}(c(x), c(y))
+ $$
+-directly from the definition of $f_*$. Similar holds after
++directly from the definition of $f_*$. The same holds after
+ pulling back to any $U'/U$. Because $f^{-1}\mathcal{S}$ is the
+ stackification of $u_p\mathcal{S}$, and since $u$ is continuous
+ and cocontinuous the presheaf
+@@ -3456,12 +3622,12 @@
+ U'/U \longmapsto
+ \Mor_{(u_p\mathcal{S})_{u(U')}}(c'(x|_{U'}), c'(y|_{U'}))
+ $$
+-Hence to finish the proof of fully faithfulness it suffices
++Hence to finish the proof of full faithfulness it suffices
+ to show that for any $U$ and $x, y$ the map
+ $$
+ \Mor_{\mathcal{S}_U}(x, y)
+ \longrightarrow
+-\Mor_{(u_p\mathcal{S})_U}(c'(x), c'(y))
++\Mor_{(u_p\mathcal{S})_{u(U)}}(c'(x), c'(y))
+ $$
+ is bijective. A morphism $f : x \to y$ in $u_p\mathcal{S}$ over $u(U)$
+ is given by an equivalence class of diagrams
+@@ -3479,7 +3645,7 @@
+ But since $u$ is fully faithful we can write $\phi = u(c')$ for some
+ morphism $c' : U \to U'$
+ and then we see that $a \circ c' = \text{id}_U$ and
+-$c \circ c' = \text{id}_{U'}$. Because $\gamma$ is strongly cartesian
++$c \circ c' = \text{id}_U$. Because $\gamma$ is strongly cartesian
+ we can find a morphism $\gamma' : x \to x'$ lifting $c'$ such that
+ $\gamma \circ \gamma' = \text{id}_x$. By definition of the equivalence
+ classes defining morphisms in $u_p\mathcal{S}$ it follows that
+@@ -3533,7 +3699,7 @@
+ \noindent
+ Assume that $\mathcal{C}$ is a site,
+ and $U$ is an object of $\mathcal{C}$ whose associated representable
+-presheaf is a sheaf. We denote $j : \mathcal{C}/U \to \mathcal{C}$
++presheaf is a sheaf. We denote by $j : \mathcal{C}/U \to \mathcal{C}$
+ the localization functor.
+ 
+ \medskip\noindent
