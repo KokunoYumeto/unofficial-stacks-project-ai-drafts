@@ -1,0 +1,166 @@
+We prove the converse with the stated refinement. Write
+$Q : u_{pp}\mathcal{S} \to u_p\mathcal{S}$ for the localization functor.
+For $Y = (U, \phi : V \to u(U), y)$ and $b : V' \to V$, put
+$$
+Y_b = (U, \phi \circ b : V' \to u(U), y),\qquad
+k_b = (\text{id}_U, b, \text{id}_y) : Y_b \to Y.
+$$
+The implication already proved shows that $Q(k_b)$ is strongly cartesian.
+Consequently every morphism $h : X \to Y$ over $b$ factors uniquely as
+$h = Q(k_b) \circ i_h$, with $i_h : X \to Y_b$ over $\text{id}_{V'}$.
+Moreover, $h$ is strongly cartesian if and only if $i_h$ is an isomorphism.
+Indeed, if $h$ is strongly cartesian, its universal property gives
+$j : Y_b \to X$ over $\text{id}_{V'}$ with $h \circ j = Q(k_b)$.
+Uniqueness for $Q(k_b)$ gives $i_h \circ j = \text{id}_{Y_b}$, and
+uniqueness for $h$ gives $j \circ i_h = \text{id}_X$.
+The reverse implication follows by composition with an isomorphism.
+
+\medskip\noindent
+We first establish the required detection of vertical isomorphisms.
+Fix $\phi : V \to u(U)$ and a morphism $\delta : x \to y$ in
+$\mathcal{S}_U$. Write
+$$
+D_\delta = (\text{id}_U, \text{id}_V, \delta) :
+(U,\phi,x) \longrightarrow (U,\phi,y).
+$$
+We claim that $Q(D_\delta)$ is invertible if and only if there exist
+$c : W \to U$ and $\psi : V \to u(W)$ with $u(c) \circ \psi = \phi$
+such that the pullback of $\delta$ along $c$ is invertible.
+More explicitly, choose strongly cartesian morphisms
+$\gamma_x : x_W \to x$ and $\gamma_y : y_W \to y$ over $c$.
+The pullback is the unique vertical morphism $\delta_W : x_W \to y_W$
+such that
+$$
+\gamma_y \circ \delta_W = \delta \circ \gamma_x.
+$$
+Changing these two cartesian lifts conjugates $\delta_W$ by the unique
+vertical comparison isomorphisms, so invertibility is independent of
+these choices. If $\delta_W$ is invertible, the displayed equation and
+the two morphisms of $R$ defined by $\gamma_x,\gamma_y$ show that
+$Q(D_\delta)$ is invertible.
+
+\medskip\noindent
+Conversely, represent an inverse to $Q(D_\delta)$ by $Q(e)Q(r)^{-1}$, where
+$$
+r = (c,\text{id}_V,\gamma) : (T,\theta,z) \to (U,\phi,y),\qquad
+e = (a,\text{id}_V,\epsilon) : (T,\theta,z) \to (U,\phi,x),
+$$
+and $r \in R$. Thus $a,c : T \to U$ and
+$u(a)\theta = \phi = u(c)\theta$.
+Let $h : T_1 \to T$ be the equalizer of $a,c$.
+As $u$ preserves this equalizer, there exists
+$\theta_1 : V \to u(T_1)$ with $u(h)\theta_1 = \theta$.
+Choose a strongly cartesian $\zeta : z_1 \to z$ over $h$ and refine
+the inverse roof by $(h,\text{id}_V,\zeta) \in R$.
+Put $d = ah = ch$ and $y_1 = z_1$.
+Then $\tau_y = \gamma\zeta : y_1 \to y$ is strongly cartesian over $d$.
+Choose a strongly cartesian $\tau_x : x_1 \to x$ over $d$.
+There are unique vertical morphisms
+$\eta : y_1 \to x_1$ and $\delta_1 : x_1 \to y_1$ satisfying
+$$
+\tau_x\eta = \epsilon\zeta,\qquad
+\tau_y\delta_1 = \delta\tau_x.
+$$
+For this paragraph, regard $x_1,y_1$ as the triples with base $T_1$
+and structure map $\theta_1$, and write
+$$
+t_x = (d,\text{id}_V,\tau_x),\quad
+t_y = (d,\text{id}_V,\tau_y),\quad
+E_\eta = (\text{id}_{T_1},\text{id}_V,\eta),\quad
+D_1 = (\text{id}_{T_1},\text{id}_V,\delta_1).
+$$
+The inverse is $Q(t_x)Q(E_\eta)Q(t_y)^{-1}$, whereas
+$Q(D_\delta) = Q(t_y)Q(D_1)Q(t_x)^{-1}$.
+The two inverse identities therefore give
+$$
+Q(E_\eta D_1) = \text{id}_{(T_1,\theta_1,x_1)},\qquad
+Q(D_1 E_\eta) = \text{id}_{(T_1,\theta_1,y_1)}.
+$$
+The equality criterion for right fractions, applied to denominators
+equal to identities, supplies two arrows of $R$. Write their
+$\mathcal{C}$-components as $c_x : T_x \to T_1$ and
+$c_y : T_y \to T_1$, their structure maps as $\theta_x,\theta_y$, and
+their strongly cartesian $\mathcal{S}$-components as
+$\rho_x : z_x \to x_1$ and $\rho_y : z_y \to y_1$.
+Then
+$$
+(\eta\delta_1)\rho_x = \rho_x,\qquad
+(\delta_1\eta)\rho_y = \rho_y,\qquad
+u(c_x)\theta_x = \theta_1 = u(c_y)\theta_y.
+$$
+Form $T_2 = T_x \times_{T_1} T_y$, with projections $e_x,e_y$, and put
+$k = c_xe_x = c_ye_y$. Preservation of this fibre product gives
+$\theta_2 : V \to u(T_2)$ such that
+$u(e_x)\theta_2 = \theta_x$ and $u(e_y)\theta_2 = \theta_y$.
+In particular $u(k)\theta_2 = \theta_1$ and $u(dk)\theta_2 = \phi$.
+Choose strongly cartesian arrows $\kappa_x : x_2 \to x_1$ and
+$\kappa_y : y_2 \to y_1$ over $k$, and the unique vertical arrows
+$\delta_2 : x_2 \to y_2$ and $\eta_2 : y_2 \to x_2$ with
+$$
+\kappa_y\delta_2 = \delta_1\kappa_x,\qquad
+\kappa_x\eta_2 = \eta\kappa_y.
+$$
+Since $k = c_xe_x$, cartesianness of $\rho_x$ factors $\kappa_x$
+through $\rho_x$, and hence $\eta\delta_1\kappa_x = \kappa_x$.
+Similarly $\delta_1\eta\kappa_y = \kappa_y$.
+It follows that
+$$
+\kappa_x\eta_2\delta_2
+= \eta\kappa_y\delta_2
+= \eta\delta_1\kappa_x
+= \kappa_x,
+$$
+and
+$$
+\kappa_y\delta_2\eta_2
+= \delta_1\kappa_x\eta_2
+= \delta_1\eta\kappa_y
+= \kappa_y.
+$$
+Cartesian uniqueness, with fixed identity base maps, yields
+$\eta_2\delta_2 = \text{id}_{x_2}$ and
+$\delta_2\eta_2 = \text{id}_{y_2}$.
+The composites $\tau_x\kappa_x,\tau_y\kappa_y$ are strongly cartesian
+over $dk$, and
+$$
+(\tau_y\kappa_y)\delta_2 = \delta(\tau_x\kappa_x).
+$$
+Thus $\delta_2$ is the required invertible pullback of $\delta$.
+This proves the detection claim without assuming that localization
+reflects isomorphisms before a refinement.
+
+\medskip\noindent
+Return to $A = (a,b,\alpha) : X_1 \to X_2$.
+Choose a strongly cartesian $\tau : a^*x_2 \to x_2$ over $a$, and
+write $\alpha = \tau\delta$, where $\delta : x_1 \to a^*x_2$ is vertical.
+Put $X_a = (U_1,\phi_1 : V_1 \to u(U_1),a^*x_2)$.
+The exact factorization is
+$$
+A = k_b \circ (a,\text{id}_{V_1},\tau)
+\circ (\text{id}_{U_1},\text{id}_{V_1},\delta),
+$$
+where $k_b : (X_2)_b \to X_2$, and the middle factor belongs to $R$.
+Consequently, if $Q(A)$ is strongly cartesian, its vertical factor
+relative to $Q(k_b)$ is invertible, and so is $Q(D_\delta)$.
+The detection claim supplies $c : W \to U_1$, $\psi : V_1 \to u(W)$
+with $u(c)\psi = \phi_1$, strongly cartesian
+$\gamma : z \to x_1$ and $\rho : w \to a^*x_2$ over $c$, and an
+invertible $\delta_W : z \to w$ such that
+$\rho\delta_W = \delta\gamma$.
+Therefore
+$$
+\alpha\gamma = \tau\delta\gamma = \tau\rho\delta_W
+$$
+is strongly cartesian. The arrow
+$r = (c,\text{id}_{V_1},\gamma) : (W,\psi,z) \to X_1$
+belongs to $R$, as required.
+Conversely, if such an $r$ exists, the implication proved earlier
+shows that $Q(Ar)$ is strongly cartesian. Since $Q(r)$ is an
+isomorphism, $Q(A) = Q(Ar)Q(r)^{-1}$ is strongly cartesian as well.
+This proves the stated characterization.
+For any chosen roof $Q(A)Q(r_0)^{-1}$ representing a strongly
+cartesian morphism, the same argument gives an additional $r_1 \in R$
+with cartesian numerator in the refined roof
+$Q(Ar_1)Q(r_0r_1)^{-1}$. Thus the characterization applies to the
+roof representation used below, without asserting that an arbitrary
+original numerator is already strongly cartesian.

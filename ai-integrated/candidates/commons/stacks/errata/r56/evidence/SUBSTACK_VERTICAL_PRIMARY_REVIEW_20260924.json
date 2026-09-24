@@ -1,0 +1,39 @@
+{
+  "schema": "stacks-substack-proof-review/v1",
+  "reviewed_on": "2026-09-24",
+  "reviewer": "Primary session, after independent mathematical derivation",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "current_commit": "4fddc4a808dc08f74755ac2327e9e9547bb4501f",
+  "proof": {
+    "path": "SUBSTACK_VERTICAL_DERIVATION_20260923.md",
+    "bytes": 21699,
+    "sha256": "019603293F73F6BA27EA948A7D0FBA7065938C4AB4B4F8B12F47172BBB37DE47"
+  },
+  "actual_reading": "Complete note, sections 1-8, read in bounded intervals; current Categories definitions at 6196-6220,6357-6374,6513-6522 and convention example at 7450-7475 checked directly; original Stacks statement, definition, Mor comparison and descent data read.",
+  "checks": {
+    "two_object_groupoid_counterexample": true,
+    "exact_fibred_lift_via_vertical_isomorphism": true,
+    "inclusion_preserves_all_cartesian_arrows": true,
+    "unrestricted_isomorphism_to_vertical_conversion": true,
+    "condition_three_equivalence_after_condition_one_repair": true,
+    "natural_mor_comparison_with_all_pullback_comparisons": true,
+    "effective_descent_including_empty_cover": true
+  },
+  "dependent_source_review": [
+    {
+      "path": "examples-stacks.tex",
+      "sha256": "54DBC9D017B82B7C93A6CCD72A0295E5A2C1A3E535187083E4100101CD577976",
+      "read_lines": [
+        147,
+        228
+      ],
+      "uses": [
+        208,
+        217
+      ],
+      "result": "The only external direct uses of stacks-lemma-substack are in the same finite-type quasi-coherent module proof. For a cartesian (Y,G)->(X,F), the stated isomorphism f^*F->G lies in the module category on Y. Pullback of finite type is finite type, so G is finite type and (Y,G) itself belongs to the full subcategory. The required vertical isomorphism can be its identity over Y. Thus the corrected hypothesis is satisfied by the existing stronger argument; no dependent source edit is required."
+    }
+  ],
+  "source_mutations": 0,
+  "admission": false
+}

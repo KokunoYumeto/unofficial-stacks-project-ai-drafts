@@ -1,0 +1,1876 @@
+{
+  "schema": "stacks-occurrence-semantic-review-v1",
+  "date": "2026-09-23",
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "review_kind": "Primary-session source review; not a second AI or human review",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "compared_public_commit": "4fddc4a808dc08f74755ac2327e9e9547bb4501f",
+  "prepared_next_commit": "4fddc4a808dc08f74755ac2327e9e9547bb4501f",
+  "comparison_note": "Official authority, former public R54 and newly pushed R55 have byte-identical stacks.tex. The current source revision was rebound after the R55 push; no earlier admitted correction units or source mutations in this chapter.",
+  "inventory_sha256": "53667E865189AF21A0E0132B6CB670E9E6D83B9B5996F8EF1D3D903E8E56F56B",
+  "admission_state": "All 114 received reports adjudicated and both independent mathematical repairs proved and checked. Proposals only; no canonical allocation, source mutation, admission, build or publication.",
+  "source": "stacks.tex",
+  "authority_sha256": "CA374CB00B1C71ACF10E30FAEF293108D079258211D935FE0D4ADD1477634BA9",
+  "scope": "All 114 received Stacks chapter reports adjudicated exactly once in 77 groups: 76 accepted proposed units with 86 exact operations, and one rejected grammar proposal. Independent discoveries remain separately attributed; no overall project completion claim.",
+  "groups": [
+    {
+      "id": "STACKS-RECON-001",
+      "occurrences": [
+        "OCC-00178"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        225,
+        251
+      ],
+      "operations": [
+        {
+          "line": 231,
+          "old_text": "Denote $x, y : \\mathcal{C}/U \\to \\mathcal{S}$ also the corresponding",
+          "replacement_text": "Also denote by $x, y : \\mathcal{C}/U \\to \\mathcal{S}$ the corresponding"
+        }
+      ],
+      "rationale": "The naming clause introduces the same object symbols for their corresponding 1-morphisms. Add the missing preposition and move also to the beginning of the naming clause.",
+      "adverse_evidence": "Both functors, their domains and codomains, the 2-fibre-product statement and the comparison by beta composed with alpha inverse remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-002",
+      "occurrences": [
+        "OCC-00179"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        365,
+        381
+      ],
+      "operations": [
+        {
+          "line": 370,
+          "old_text": "Make a choice pullbacks",
+          "replacement_text": "Make a choice of pullbacks"
+        }
+      ],
+      "rationale": "Restore of in the instruction selecting pullback functors. The same wording occurs in the definition at source line 432.",
+      "adverse_evidence": "No chosen pullback, coherence data, fibre-product existence hypothesis or reference target changes."
+    },
+    {
+      "id": "STACKS-RECON-003",
+      "occurrences": [
+        "OCC-00180"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        368,
+        381
+      ],
+      "operations": [
+        {
+          "line": 374,
+          "old_text": "be a families",
+          "replacement_text": "be families"
+        }
+      ],
+      "rationale": "Two displayed families are introduced by the plural noun families; remove its conflicting singular article.",
+      "adverse_evidence": "Both families, index sets, fixed targets and all four required fibre-product forms remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-004",
+      "occurrences": [
+        "OCC-00181"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        378,
+        403
+      ],
+      "operations": [
+        {
+          "line": 394,
+          "old_text": "\\item Given a second $\\alpha' : I \\to J$, $h' : U \\to V$ and\n$g'_i : U_i \\to V_{\\alpha'(i)}$ morphism of families\nof maps with fixed target, then if $h = h'$ the two resulting functors\nbetween descent data are canonically isomorphic.",
+          "replacement_text": "\\item Given a second morphism of families of maps with fixed target,\n$\\alpha' : I \\to J$, $h' : U \\to V$ and\n$g'_i : U_i \\to V_{\\alpha'(i)}$, if $h = h'$ then the two resulting functors\nbetween descent data are canonically isomorphic."
+        }
+      ],
+      "rationale": "Put morphism of families before the displayed data specifying that morphism, so the hypothesis has a grammatical noun phrase. Retain the equality of base maps and the original conclusion.",
+      "adverse_evidence": "This is a wording repair. No map, index, domain, codomain, hypothesis or conclusion is added, removed or identified."
+    },
+    {
+      "id": "STACKS-RECON-005",
+      "occurrences": [
+        "OCC-00182",
+        "OCC-11899"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        637,
+        644
+      ],
+      "operations": [
+        {
+          "line": 640,
+          "old_text": "counter parts",
+          "replacement_text": "counterparts"
+        }
+      ],
+      "rationale": "Use the single-word noun for the corresponding morphism presheaves.",
+      "adverse_evidence": "The comparison and its hypotheses are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-006",
+      "occurrences": [
+        "OCC-11898"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        567,
+        644
+      ],
+      "operations": [
+        {
+          "line": 639,
+          "old_text": "\\mathit{Isom}",
+          "replacement_text": "\\mathit{Mor}"
+        }
+      ],
+      "rationale": "Definition-stack requires Mor(x,y) to be a sheaf. Fullness gives equality of the Hom sets in the fibre categories with those in the ambient stack, using the same chosen cartesian lifts; the restriction maps are then the same uniquely factored arrows. Thus the required Mor presheaf, not only its Isom subpresheaf, inherits the sheaf condition.",
+      "adverse_evidence": "The categories here need not be groupoids, so Mor cannot be replaced by Isom. This correction does not change the intended statement. Independently checking the original unqualified isomorphism wording in the first and third assumptions remains part of this source review."
+    },
+    {
+      "id": "STACKS-RECON-007",
+      "occurrences": [
+        "OCC-00183",
+        "OCC-11900"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        648,
+        693
+      ],
+      "operations": [
+        {
+          "line": 675,
+          "old_text": "\\mathit{Mor}_{\\mathcal{S}_1}(F(x), F(y))",
+          "replacement_text": "\\mathit{Mor}_{\\mathcal{S}_2}(F(x), F(y))"
+        }
+      ],
+      "rationale": "F maps S1 to S2, so its image objects belong to S2. At f:V->U the exact map sends phi to beta_V^{-1} F(phi) alpha_V, where alpha_V:f^*F(x)->F(f^*x) and beta_V:f^*F(y)->F(f^*y) are the unique comparison isomorphisms commuting with the cartesian projections. Its inverse sends psi to the unique phi with F(phi)=beta_V psi alpha_V^{-1}, by full faithfulness of F on the fibre. Both maps commute with restrictions by uniqueness of cartesian factorization. Thus this is an isomorphism of the displayed presheaves, with precisely the corrected target subscript.",
+      "adverse_evidence": "The base site, source presheaf, image objects, functors and descent argument remain unchanged. The comparison is already typed this way in lemma-presheaf-mor-map-fibred-categories, source 171-203."
+    },
+    {
+      "id": "STACKS-RECON-008",
+      "occurrences": [
+        "OCC-00184",
+        "OCC-11901"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        681,
+        693
+      ],
+      "operations": [
+        {
+          "line": 684,
+          "old_text": "relative the covering",
+          "replacement_text": "relative to the covering"
+        },
+        {
+          "line": 686,
+          "old_text": "relative the covering",
+          "replacement_text": "relative to the covering"
+        }
+      ],
+      "rationale": "Restore the preposition in both parallel descent-datum sentences.",
+      "adverse_evidence": "Both categories, the same covering and the full descent data remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-009",
+      "occurrences": [
+        "OCC-00185",
+        "OCC-11902"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        744,
+        750
+      ],
+      "operations": [
+        {
+          "line": 747,
+          "old_text": "be second",
+          "replacement_text": "be a second"
+        }
+      ],
+      "rationale": "Restore the article introducing the second fibre-product object.",
+      "adverse_evidence": "The complete quadruple and its common base object U remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-010",
+      "occurrences": [
+        "OCC-00186",
+        "OCC-11903"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        749,
+        762
+      ],
+      "operations": [
+        {
+          "line": 752,
+          "old_text": "With this identifications",
+          "replacement_text": "With these identifications"
+        }
+      ],
+      "rationale": "Agree the demonstrative with the plural noun.",
+      "adverse_evidence": "Both displayed isomorphisms and the morphism-presheaf fibre-product formula remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-011",
+      "occurrences": [
+        "OCC-00187",
+        "OCC-11904"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        880,
+        888
+      ],
+      "operations": [
+        {
+          "line": 884,
+          "old_text": "is functor",
+          "replacement_text": "is a functor"
+        }
+      ],
+      "rationale": "Restore the article for the singular functor.",
+      "adverse_evidence": "The original functor, domain, codomain and size hypotheses remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-012",
+      "occurrences": [
+        "OCC-00188",
+        "OCC-11905"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        889,
+        898
+      ],
+      "operations": [
+        {
+          "line": 890,
+          "old_text": "a equivalent category",
+          "replacement_text": "an equivalent category"
+        }
+      ],
+      "rationale": "Use the appropriate article before equivalent.",
+      "adverse_evidence": "No change to equivalence or the stated size obstruction."
+    },
+    {
+      "id": "STACKS-RECON-013",
+      "occurrences": [
+        "OCC-00189",
+        "OCC-11906"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        889,
+        898
+      ],
+      "operations": [
+        {
+          "line": 891,
+          "old_text": "a fibre categories",
+          "replacement_text": "a fibre category"
+        }
+      ],
+      "rationale": "Agree the noun with the singular fibre and article.",
+      "adverse_evidence": "The possible proper class of isomorphism classes is retained."
+    },
+    {
+      "id": "STACKS-RECON-014",
+      "occurrences": [
+        "OCC-00190",
+        "OCC-11907"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1008,
+        1048
+      ],
+      "operations": [
+        {
+          "line": 1037,
+          "old_text": "Let $\\mathcal{C}$ be a category.",
+          "replacement_text": "Let $\\mathcal{C}$ be a site."
+        }
+      ],
+      "rationale": "Restore the site hypothesis required by the defined 2-category of stacks in groupoids and both stack lemmas invoked in the proof. A topology is needed to give meaning to descent and to the stack condition.",
+      "adverse_evidence": "The same site is already fixed in definition-stacks-in-groupoids-over-C at 1010. The fibre-product construction and its universal property are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-015",
+      "occurrences": [
+        "OCC-00191",
+        "OCC-11908"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        1238,
+        1286
+      ],
+      "operations": [
+        {
+          "line": 1276,
+          "old_text": "we may therefore assume that we have\n$f : F(x) \\to G(y)$ for some object $x$ of $\\mathcal{S}_2$ over $U$\nand morphisms $f$ of $(\\mathcal{S}_1)_U$. In this case we get",
+          "replacement_text": "we may therefore assume that there are an object $x$ of $\\mathcal{S}_2$\nover $U$ and an isomorphism $f : F(x) \\to G(y)$ in\n$(\\mathcal{S}_1)_U$. In this case we get"
+        }
+      ],
+      "rationale": "The local essential-image hypothesis supplies one object x over U and one fibre isomorphism f:F(x)->G(y). State this directly so the quadruple (U,x,y,f) is a well-defined object of the 2-fibre product. Since G(gamma)=id, its endomorphism (id_x,gamma) obeys G(gamma) f = f F(id_x).",
+      "adverse_evidence": "The shorter producer proposal saying that f is a morphism is also mathematically sufficient because the fibre is a groupoid; the adopted wording states exactly the supplied essential-image witness and repairs the original plural grammar. No stronger hypothesis is added."
+    },
+    {
+      "id": "STACKS-RECON-016",
+      "occurrences": [
+        "OCC-11909"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1242,
+        1285
+      ],
+      "operations": [
+        {
+          "line": 1284,
+          "old_text": "under $G'$ in $\\mathcal{S}_1$",
+          "replacement_text": "under $G'$ in $\\mathcal{S}_2$"
+        }
+      ],
+      "rationale": "G prime is the projection from S2 times over S1 T1 to S2. It sends (id_x,gamma) to id_x, an arrow in (S2)_U. Restore that target category.",
+      "adverse_evidence": "The original object x, base U, arrow and faithfulness inference are retained."
+    },
+    {
+      "id": "STACKS-RECON-017",
+      "occurrences": [
+        "OCC-00192",
+        "OCC-11910"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1316,
+        1330
+      ],
+      "operations": [
+        {
+          "line": 1319,
+          "old_text": "To to this",
+          "replacement_text": "To do this"
+        }
+      ],
+      "rationale": "Restore the verb in the purpose clause.",
+      "adverse_evidence": "The local reduction and automorphism-sheaf argument remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-018",
+      "occurrences": [
+        "OCC-11911"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1333,
+        1395
+      ],
+      "operations": [
+        {
+          "line": 1346,
+          "old_text": "f^*y",
+          "replacement_text": "h^*y"
+        }
+      ],
+      "rationale": "The presheaf is evaluated at h:V->U. Its pair consists of x in S_V and an arrow f:F(x)->h^*y in T_V; f is a fibre arrow and cannot serve as a base-change arrow to U. Under a map k:W->V over U, restrict x and f and use the cartesian comparison k^*h^*y -> (h k)^*y. This gives the same isomorphism class independently of cartesian choices. The corrected formula has the exact object type used throughout both descent arguments.",
+      "adverse_evidence": "Only the base-change label changes. The quotient by pair isomorphism, all objects, the original h, and the arrow f remain explicit. A separate adjacent discovery records incorrectly ordered descent-comparison inverses in this proof."
+    },
+    {
+      "id": "STACKS-RECON-019",
+      "occurrences": [
+        "OCC-00193",
+        "OCC-11912"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1536,
+        1543
+      ],
+      "operations": [
+        {
+          "line": 1537,
+          "old_text": "any object $y$ of lying over $V$",
+          "replacement_text": "any object $y$ lying over $V$"
+        }
+      ],
+      "rationale": "Remove the preposition with no complement.",
+      "adverse_evidence": "Both original objects, their bases and the locally defined morphism data are retained."
+    },
+    {
+      "id": "STACKS-RECON-020",
+      "occurrences": [
+        "OCC-00194",
+        "OCC-11913"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1530,
+        1587
+      ],
+      "operations": [
+        {
+          "line": 1581,
+          "old_text": "strongly cartesian objects",
+          "replacement_text": "strongly cartesian morphisms"
+        }
+      ],
+      "rationale": "Cartesianness is a property of arrows. For a strongly cartesian a:y->x over u and a locally represented b:z->x over u v, each local representative b_i factors uniquely as a c_i, with c_i over the prescribed v on that cover. On pairwise overlaps the c_i agree by uniqueness of cartesian factorization. They define a locally defined morphism c:z->y, and the same uniqueness on a common refinement proves that c is unique. Thus G^2 preserves the original strongly cartesian morphisms.",
+      "adverse_evidence": "The functor G^2, original categories, object set, base arrows and locally defined morphisms are unchanged; line 1530 uses the correct term for the preceding stage."
+    },
+    {
+      "id": "STACKS-RECON-021",
+      "occurrences": [
+        "OCC-00195",
+        "OCC-11914"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1589,
+        1600
+      ],
+      "operations": [
+        {
+          "line": 1596,
+          "old_text": "descent datum relative $\\mathcal{U}$",
+          "replacement_text": "descent datum relative to $\\mathcal{U}$"
+        }
+      ],
+      "rationale": "Restore the preposition relating the descent datum to its covering.",
+      "adverse_evidence": "The full covering and descent data are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-022",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        699,
+        778
+      ],
+      "operations": [
+        {
+          "line": 724,
+          "old_text": "The $(2, 1)$-category of stacks",
+          "replacement_text": "The $2$-category of stacks"
+        }
+      ],
+      "rationale": "The preceding definition includes all natural transformations over C, not only invertible ones. To see the distinction exactly, take the one-object one-arrow site with its identity covering. For any small category A, A->C is a stack: it is fibred using identity pullbacks, every Hom presheaf is a sheaf, and descent for the sole identity covering is effective. Take A to be the terminal category and B to be the category with objects 0,1 and a single nonidentity arrow a:0->1. The two functors A->B selecting 0 and 1 preserve cartesian arrows, and a gives a noninvertible 2-morphism. Therefore the defined category of stacks is a 2-category and is not in general a (2,1)-category. Its 2-fibre-product construction and the given proof still apply in this 2-category.",
+      "adverse_evidence": "The correction retains all stacks and all specified 2-morphisms. Restricting to groupoids or to invertible transformations would alter the definition and scope. The groupoid-only subcategory is separately identified as (2,1) at 1031-1033.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "Source context for received fibre-product wording reports at 744-753; no received report alleges the type at 724."
+      }
+    },
+    {
+      "id": "STACKS-RECON-023",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1333,
+        1395
+      ],
+      "operations": [
+        {
+          "line": 1381,
+          "old_text": "F(\\varphi_{ij}) = \\beta_j|_{U_i \\times_U U_j} \\circ\n(\\beta_i|_{U_i \\times_U U_j})^{-1}",
+          "replacement_text": "F(\\varphi_{ij}) = (\\beta_j|_{U_i \\times_U U_j})^{-1} \\circ\n\\beta_i|_{U_i \\times_U U_j}"
+        },
+        {
+          "line": 1393,
+          "old_text": "\\varphi_{ij} = \\alpha_j|_{U_i \\times_U U_j} \\circ\n(\\alpha_i|_{U_i \\times_U U_j})^{-1}",
+          "replacement_text": "\\varphi_{ij} = (\\alpha_j|_{U_i \\times_U U_j})^{-1} \\circ\n\\alpha_i|_{U_i \\times_U U_j}"
+        }
+      ],
+      "rationale": "Definition-descent-data has phi_ij:pr_0^*x_i->pr_1^*x_j. Here beta_i:F(x_i)->y|Ui and beta_j:F(x_j)->y|Uj. On Ui times_U Uj, the descent compatibility is beta_j F(phi_ij)=beta_i, so F(phi_ij)=beta_j^{-1} beta_i. Likewise alpha_i:x_i->x|Ui and alpha_j:x_j->x|Uj give alpha_j phi_ij=alpha_i. With beta_i=beta|Ui F(alpha_i), the corrected first equation yields F(phi_ij)=F(alpha_j)^{-1} F(alpha_i)=F(alpha_j^{-1} alpha_i), and fibre faithfulness gives phi_ij=alpha_j^{-1} alpha_i. Every restriction in the edited formulas is retained. These equations show precisely that the obtained object x realizes the original descent datum.",
+      "adverse_evidence": "The original products beta_j beta_i^{-1} and alpha_j alpha_i^{-1} generally fail to compose: their middle objects differ. Neither the definition of phi_ij nor the displayed directions of beta_i and alpha_i are changed. No commutativity of the morphisms is assumed.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "Complete descent proof read to adjudicate the base-change-label report OCC-11911 at 1346."
+      }
+    },
+    {
+      "id": "STACKS-RECON-024",
+      "occurrences": [
+        "OCC-00196",
+        "OCC-11915"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1681,
+        1727
+      ],
+      "operations": [
+        {
+          "line": 1699,
+          "old_text": "morphisms in $F(U)$",
+          "replacement_text": "morphisms in $F'(U)$"
+        }
+      ],
+      "rationale": "The preceding item defines Hom sets between descent-data objects in F prime(U), by common refinements; the following item defines F prime(h). The composition just constructed is composition in F prime(U), not in the original category F(U).",
+      "adverse_evidence": "The original category F(U) and its canonical map to F prime(U) are still used explicitly at 1722-1724. No original category or formula is replaced."
+    },
+    {
+      "id": "STACKS-RECON-025",
+      "occurrences": [
+        "OCC-00197"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1730,
+        1748
+      ],
+      "operations": [
+        {
+          "line": 1735,
+          "old_text": "the stack and $1$-morphism constructed",
+          "replacement_text": "be the stack and $1$-morphism constructed"
+        }
+      ],
+      "rationale": "Supply be in the sentence introducing the already constructed stack and morphism.",
+      "adverse_evidence": "The entire universal-property diagram and all functor types are retained."
+    },
+    {
+      "id": "STACKS-RECON-026",
+      "occurrences": [
+        "OCC-00198",
+        "OCC-11916"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1730,
+        1768
+      ],
+      "operations": [
+        {
+          "line": 1766,
+          "old_text": "agreeing with $G(x_i)$",
+          "replacement_text": "agreeing with $F(x_i)$"
+        }
+      ],
+      "rationale": "F:S->X sends x_i to y_i=F(x_i), and y is obtained by effective descent of the y_i in X. Therefore its restrictions are isomorphic to F(x_i). G(x_i) lies instead in S prime and cannot be the displayed local object in X.",
+      "adverse_evidence": "The local isomorphisms alpha_ijk, the induced beta_ij and H(x prime)=y are unchanged. The original G is retained in its proper role comparing x_i with x prime."
+    },
+    {
+      "id": "STACKS-RECON-027",
+      "occurrences": [
+        "OCC-00199"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        1814,
+        1847
+      ],
+      "operations": [
+        {
+          "line": 1839,
+          "old_text": "\\times_{\\mathit{Mor}(j(f(x)), j(f(x'))}",
+          "replacement_text": "\\times_{\\mathit{Mor}(j(f(x)), j(f(x')))}"
+        }
+      ],
+      "rationale": "Close the second argument and then the Mor expression: the base sheaf is Mor(j(f(x)),j(f(x prime))). This matches the original base presheaf immediately above and the declared functor j:Y->Y prime.",
+      "adverse_evidence": "Every original functor, object and fibre-product factor remains present; this is delimiter repair, not a changed comparison."
+    },
+    {
+      "id": "STACKS-RECON-028",
+      "occurrences": [
+        "OCC-00200",
+        "OCC-11917"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1866,
+        1877
+      ],
+      "operations": [
+        {
+          "line": 1871,
+          "old_text": "is inertia of the stackification",
+          "replacement_text": "is the inertia of the stackification"
+        }
+      ],
+      "rationale": "Supply the article for the specified inertia fibred category.",
+      "adverse_evidence": "The inertia construction and stackification claim are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-029",
+      "occurrences": [
+        "OCC-00201"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1928,
+        1948
+      ],
+      "operations": [
+        {
+          "line": 1934,
+          "old_text": "the stack in groupoids and $1$-morphism constructed",
+          "replacement_text": "be the stack in groupoids and $1$-morphism constructed"
+        }
+      ],
+      "rationale": "Supply be in the sentence introducing the constructed stack in groupoids and its morphism.",
+      "adverse_evidence": "All groupoid conditions, objects and functors are retained."
+    },
+    {
+      "id": "STACKS-RECON-030",
+      "occurrences": [
+        "OCC-00202"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2037,
+        2045
+      ],
+      "operations": [
+        {
+          "line": 2040,
+          "old_text": "fibred category. We say $",
+          "replacement_text": "fibred category. We say that $"
+        }
+      ],
+      "rationale": "Introduce the following content clause with that.",
+      "adverse_evidence": "The structure of the inherited site and its original reference are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-031",
+      "occurrences": [
+        "OCC-00203",
+        "OCC-11918"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2084,
+        2096
+      ],
+      "operations": [
+        {
+          "line": 2090,
+          "old_text": "are both a strongly cartesian",
+          "replacement_text": "are both strongly cartesian"
+        }
+      ],
+      "rationale": "Remove the singular article before the plural predicate morphisms.",
+      "adverse_evidence": "Both morphisms, their common target, common base arrow and unique fibre isomorphism are retained."
+    },
+    {
+      "id": "STACKS-RECON-032",
+      "occurrences": [
+        "OCC-00204",
+        "OCC-11919"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2127,
+        2161
+      ],
+      "operations": [
+        {
+          "line": 2151,
+          "old_text": "\\mathit{I}(q(x_i))",
+          "replacement_text": "\\mathit{I}(q(y_i))"
+        }
+      ],
+      "rationale": "The base functors are p:X->C and q:Y->C, with q F=p. Since F(x_i)=y_i, p(x_i)=q(y_i). The local arrow F(psi_i) therefore defines the section of Isom_Y(F(x),y) over q(y_i), with the cartesian comparison between F(x)|q(y_i) and F(x|q(y_i)) and the covering identification of y_i with y|q(y_i). The expression q(x_i) is undefined because x_i belongs to X.",
+      "adverse_evidence": "The two producer alternatives p(x_i) and q(y_i) are exactly equal by q F=p and F(x_i)=y_i. The adopted q(y_i) retains the labels already used in the surrounding restriction equations."
+    },
+    {
+      "id": "STACKS-RECON-033",
+      "occurrences": [
+        "OCC-00205",
+        "OCC-11920"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2163,
+        2226
+      ],
+      "operations": [
+        {
+          "line": 2218,
+          "old_text": "By our assumption that $\\mathcal{Y}$ is a stack over $\\mathcal{C}$",
+          "replacement_text": "By our assumption that $\\mathcal{Y}$ is a stack over $\\mathcal{X}$"
+        }
+      ],
+      "rationale": "The available hypothesis is q:Y->X a stack for the inherited topology on X. The preceding descent datum is over the covering {x|Ui->x} of X; applying this hypothesis supplies its descent object. Invoking Y/C would invoke the conclusion being proved.",
+      "adverse_evidence": "Both original stack assumptions and the resulting descent object over the same U are retained."
+    },
+    {
+      "id": "STACKS-RECON-034",
+      "occurrences": [
+        "OCC-00206",
+        "OCC-11921"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2411,
+        2432
+      ],
+      "operations": [
+        {
+          "line": 2426,
+          "old_text": "fibre product may assume",
+          "replacement_text": "fibre product we may assume"
+        }
+      ],
+      "rationale": "Restore the subject of may assume.",
+      "adverse_evidence": "The original 2-fibre-product replacement and all projection labels remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-035",
+      "occurrences": [
+        "OCC-00208",
+        "OCC-11922"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2411,
+        2454
+      ],
+      "operations": [
+        {
+          "line": 2448,
+          "old_text": "$F'(x'_i) = x_i$",
+          "replacement_text": "$F'(x'_i) = y'_i$"
+        },
+        {
+          "line": 2449,
+          "old_text": "$G'(x'_i) = y'_i$",
+          "replacement_text": "$G'(x'_i) = x_i$"
+        }
+      ],
+      "rationale": "The tuple x prime_i=(U,y prime_i,x_i,alpha_i) is in Y prime times_Y X. By the displayed square, F prime is its Y prime projection and G prime is its X projection. The two corrected equations therefore follow directly from the specified objects and functors.",
+      "adverse_evidence": "The original functor labels and tuple order remain unchanged; the right sides are restored to their actual codomains."
+    },
+    {
+      "id": "STACKS-RECON-036",
+      "occurrences": [
+        "OCC-00207",
+        "OCC-11923"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2497,
+        2522
+      ],
+      "operations": [
+        {
+          "line": 2516,
+          "old_text": "fibre product may assume",
+          "replacement_text": "fibre product we may assume"
+        }
+      ],
+      "rationale": "Restore the subject of may assume in this second proof.",
+      "adverse_evidence": "Its separate occurrence and separate producer reports are retained."
+    },
+    {
+      "id": "STACKS-RECON-037",
+      "occurrences": [
+        "OCC-00209"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2525,
+        2536
+      ],
+      "operations": [],
+      "rationale": "The sentence uses the grammatical construction objects with F prime(x prime_ij) isomorphic to the restriction of y prime_i. The complement of with consists of a subject and its adjectival predicate; it does not require an additional is. The existing formula has the correct category and base.",
+      "adverse_evidence": "Changing it to such that ... is isomorphic would also be grammatical, but this is an optional recasting and does not establish the asserted defect. The original construction is retained."
+    },
+    {
+      "id": "STACKS-RECON-038",
+      "occurrences": [
+        "OCC-00210",
+        "OCC-11924"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2736,
+        2747
+      ],
+      "operations": [
+        {
+          "line": 2739,
+          "old_text": "Then bot",
+          "replacement_text": "Then both"
+        }
+      ],
+      "rationale": "Restore the word both referring to the two displayed lifts.",
+      "adverse_evidence": "The associated corrections of their codomains are recorded in a separate mathematical group."
+    },
+    {
+      "id": "STACKS-RECON-039",
+      "occurrences": [
+        "OCC-00211",
+        "OCC-11925"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2708,
+        2747
+      ],
+      "operations": [
+        {
+          "line": 2739,
+          "old_text": "(a, \\beta) : (U, y) \\to (U, y')",
+          "replacement_text": "(a, \\beta) : (U, y) \\to (U', y')"
+        },
+        {
+          "line": 2740,
+          "old_text": "(a, \\beta') : (U, y'') \\to (U, y)",
+          "replacement_text": "(a, \\beta') : (U, y'') \\to (U', y')"
+        }
+      ],
+      "rationale": "Both arrows lift the fixed a:U->U prime and both underlying arrows beta:y->y prime and beta prime:y double-prime->y prime have common target y prime. Their target objects must therefore both be (U prime,y prime). The cartesian properties then give a unique vertical isomorphism (id_U,iota) from (U,y) to (U,y double-prime) satisfying beta=beta prime iota, proving the stated comparison.",
+      "adverse_evidence": "The source pairs, underlying arrows, base arrow a and comparison iota are preserved. No change of arrow direction is made."
+    },
+    {
+      "id": "STACKS-RECON-040",
+      "occurrences": [
+        "OCC-00212",
+        "OCC-11926"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2682,
+        2695,
+        2758,
+        2777
+      ],
+      "operations": [
+        {
+          "line": 2774,
+          "old_text": "(u^p\\mathcal{S})_U = \\mathcal{S}_U",
+          "replacement_text": "(u^p\\mathcal{S})_U = \\mathcal{S}_{u(U)}"
+        },
+        {
+          "line": 2775,
+          "old_text": "(u^p\\mathcal{S})_{U'} = \\mathcal{S}_{U'}",
+          "replacement_text": "(u^p\\mathcal{S})_{U'} = \\mathcal{S}_{u(U')}"
+        }
+      ],
+      "rationale": "The functor p:S->D takes values in D. The fibre of the pullback over U consists of pairs (U,y) with p(y)=u(U), and fibre arrows (id_U,beta) with p(beta)=id_u(U). The projection to y and beta has inverse y->(U,y), beta->(id_U,beta), giving the declared identification with S_u(U). The same applies over U prime. Under these identifications, a^*(U prime,y prime)=(U,u(a)^*y prime), exactly as the next displayed formula states.",
+      "adverse_evidence": "The source uses equality to denote its explicit identification already declared at 2693-2695. The repair changes only the erroneous indices, retaining the pairs and their comparison maps."
+    },
+    {
+      "id": "STACKS-RECON-041",
+      "occurrences": [
+        "OCC-00213"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2780,
+        2789
+      ],
+      "operations": [
+        {
+          "line": 2786,
+          "old_text": "descend data",
+          "replacement_text": "descent data"
+        },
+        {
+          "line": 2787,
+          "old_text": "descend data",
+          "replacement_text": "descent data"
+        }
+      ],
+      "rationale": "Restore the defined term descent data in both occurrences.",
+      "adverse_evidence": "The original covering families, fibre products, all pullback identifications and effectivity assertion are retained."
+    },
+    {
+      "id": "STACKS-RECON-042",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2411,
+        2454
+      ],
+      "operations": [
+        {
+          "line": 2452,
+          "old_text": "$F(a_i) = G(b')|_{U_i}$. Then $(b'|_{U_i}, a_i)$ is a morphism",
+          "replacement_text": "$F(a_i) = \\alpha_2|_{U_i} \\circ G(b')|_{U_i} \\circ\n(\\alpha_1|_{U_i})^{-1}$. Then $(b'|_{U_i}, a_i)$ is a morphism"
+        }
+      ],
+      "rationale": "The original tuple comparison maps are alpha_k:G(y prime_k)->F(x_k). Given b prime:y prime_1->y prime_2, the required arrow between F(x_1) and F(x_2) is alpha_2 G(b prime) alpha_1^{-1}. Gerbe condition (2)(b) gives local lifts a_i of this exact arrow. Multiplying the corrected equation on the right by alpha_1|Ui gives F(a_i) alpha_1|Ui=alpha_2|Ui G(b prime)|Ui, which is precisely the square defining the fibre-product morphism (b prime|Ui,a_i).",
+      "adverse_evidence": "The previous formula omitted both original tuple isomorphisms and equated arrows with different sources and targets. Every original alpha, its direction, and its necessary inverse are now retained.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "Adjacent complete proof read for the reported reversed projection equations at 2448-2449."
+      }
+    },
+    {
+      "id": "STACKS-RECON-043",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2768,
+        2777
+      ],
+      "operations": [
+        {
+          "line": 2771,
+          "old_text": "only $\\beta$ is strongly cartesian",
+          "replacement_text": "only if $\\beta$ is strongly cartesian"
+        }
+      ],
+      "rationale": "Restore if in the stated if and only if equivalence.",
+      "adverse_evidence": "Both directions are proved in the preceding lemma; no mathematical condition is changed.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "Adjacent sentence to the received fibre-index corrections at 2774-2775."
+      }
+    },
+    {
+      "id": "STACKS-RECON-044",
+      "occurrences": [
+        "OCC-00214",
+        "OCC-11928"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2824,
+        2849
+      ],
+      "operations": [
+        {
+          "line": 2841,
+          "old_text": "is morphism of",
+          "replacement_text": "is a morphism of"
+        }
+      ],
+      "rationale": "Restore the article introducing the fibre arrow alpha.",
+      "adverse_evidence": "The full tuple, its base arrows and commutative square remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-045",
+      "occurrences": [
+        "OCC-11927"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2828,
+        2849
+      ],
+      "operations": [
+        {
+          "line": 2838,
+          "old_text": "is given by a",
+          "replacement_text": "is given by a triple"
+        }
+      ],
+      "rationale": "Supply the noun triple before its three displayed entries.",
+      "adverse_evidence": "The entry order a,b,alpha and all their domains and codomains remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-046",
+      "occurrences": [
+        "OCC-11929"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2888,
+        2912
+      ],
+      "operations": [
+        {
+          "line": 2906,
+          "old_text": "\\phi'_1 = (\\phi_1, \\phi')",
+          "replacement_text": "\\phi'_1 = (\\phi_1, \\phi' \\circ b)"
+        }
+      ],
+      "rationale": "The two components into u(U1) and u(U prime) must both start at V1. The first is phi1; the second is phi prime b. They have the same composite to u(U), since u(a) phi1=phi b and u(c) phi prime=phi. Therefore the pullback universal property supplies the indicated map phi prime_1:V1->u(U prime_1).",
+      "adverse_evidence": "Retain the original b and both original structure maps; the second component previously had the wrong domain."
+    },
+    {
+      "id": "STACKS-RECON-047",
+      "occurrences": [
+        "OCC-00215",
+        "OCC-11930"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2903,
+        2912
+      ],
+      "operations": [
+        {
+          "line": 2909,
+          "old_text": "p(\\gamma_1) = \\phi'_1",
+          "replacement_text": "p(\\gamma_1) = c'"
+        }
+      ],
+      "rationale": "The functor p:S->C sends gamma1:x prime_1->x1 to the projection c prime:U prime_1->U1. The map phi prime_1 instead lies in D and determines the structure map of the new triple.",
+      "adverse_evidence": "The original cartesian lift and the pullback projection are retained, with their correct category types."
+    },
+    {
+      "id": "STACKS-RECON-048",
+      "occurrences": [
+        "OCC-00216",
+        "OCC-11931"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2903,
+        2920
+      ],
+      "operations": [
+        {
+          "line": 2916,
+          "old_text": "(U_1, \\phi_1 : V_1 \\to u(U'_1), x'_1)",
+          "replacement_text": "(U'_1, \\phi'_1 : V_1 \\to u(U'_1), x'_1)"
+        },
+        {
+          "line": 2918,
+          "old_text": "(U, \\phi : V \\to u(U'), x')",
+          "replacement_text": "(U', \\phi' : V \\to u(U'), x')"
+        }
+      ],
+      "rationale": "The object x prime_1 lies over U prime_1 and its structure map is phi prime_1:V1->u(U prime_1); x prime lies over U prime and its map is phi prime:V->u(U prime). These are exactly the source and target of (a prime,b,alpha prime), where p(alpha prime)=a prime and u(a prime) phi prime_1=phi prime b.",
+      "adverse_evidence": "Restore tuple labels to the already constructed data without changing any map or object."
+    },
+    {
+      "id": "STACKS-RECON-049",
+      "occurrences": [
+        "OCC-00217",
+        "OCC-11932"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2921,
+        2928
+      ],
+      "operations": [
+        {
+          "line": 2925,
+          "old_text": "(U_1, \\phi : V_1 \\to u(U_1), x_1)",
+          "replacement_text": "(U_1, \\phi_1 : V_1 \\to u(U_1), x_1)"
+        }
+      ],
+      "rationale": "The target is the original object X1 with structure map phi1, as defined at 2891. The arrow (c prime,id_V1,gamma1) satisfies u(c prime) phi prime_1=phi1 and belongs to R because gamma1 is cartesian.",
+      "adverse_evidence": "The denominator arrow, target base, target object and original structure map are preserved."
+    },
+    {
+      "id": "STACKS-RECON-050",
+      "occurrences": [
+        "OCC-00218",
+        "OCC-11933"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        2913,
+        2928
+      ],
+      "operations": [
+        {
+          "line": 2927,
+          "old_text": "is an element of $R$ which form a solution of the existence problem\nposed by RMS2.",
+          "replacement_text": "is an element of $R$. Together these two morphisms solve the existence\nproblem posed by RMS2."
+        }
+      ],
+      "rationale": "State that the two constructed arrows form the required commutative square; this also repairs the singular/plural disagreement.",
+      "adverse_evidence": "The RMS2 equation is gamma alpha prime=alpha gamma1, with ca prime=ac prime on bases and identity_V b=b identity_V1; both arrows are required, so an isolated singular forms wording would obscure their joint role."
+    },
+    {
+      "id": "STACKS-RECON-051",
+      "occurrences": [
+        "OCC-11934"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2931,
+        2946
+      ],
+      "operations": [
+        {
+          "line": 2943,
+          "old_text": "(U', \\phi : V \\to u(U'), x')",
+          "replacement_text": "(U', \\phi' : V \\to u(U'), x')"
+        }
+      ],
+      "rationale": "The target structure map has codomain u(U prime) and is phi prime=u(c) phi. The source phi:V->u(U) is retained, so the same symbol no longer denotes two differently typed arrows.",
+      "adverse_evidence": "The relation follows from the defining square for (c,id_V,gamma). Only its target label is repaired."
+    },
+    {
+      "id": "STACKS-RECON-052",
+      "occurrences": [
+        "OCC-00219",
+        "OCC-11935"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2947,
+        2967
+      ],
+      "operations": [
+        {
+          "line": 2952,
+          "old_text": "\\phi_1 = u(d) \\circ \\phi_1",
+          "replacement_text": "\\phi_1 = u(d) \\circ \\phi_2"
+        }
+      ],
+      "rationale": "Because b=b prime, u(a) phi1=phi b=phi b prime=u(a prime) phi1. The equalizer u(d):u(U2)->u(U1) therefore gives the unique phi2:V1->u(U2) with u(d) phi2=phi1, as required for the new source object.",
+      "adverse_evidence": "The equalizer, both original parallel arrows and the unique factor phi2 are retained explicitly."
+    },
+    {
+      "id": "STACKS-RECON-053",
+      "occurrences": [
+        "OCC-00220",
+        "OCC-11936"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2947,
+        2967
+      ],
+      "operations": [
+        {
+          "line": 2953,
+          "old_text": "p(\\delta) = u(d)",
+          "replacement_text": "p(\\delta) = d"
+        }
+      ],
+      "rationale": "The arrow delta:x2->x1 is a cartesian lift under p:S->C of d:U2->U1. Its p-image is d, while u(d) is the image of that base arrow in D. The lift gives p(x2)=U2 and p(alpha delta)=ad=a prime d=p(alpha prime delta).",
+      "adverse_evidence": "No original functor is suppressed; the distinct roles of p and u are restored."
+    },
+    {
+      "id": "STACKS-RECON-054",
+      "occurrences": [
+        "OCC-00221",
+        "OCC-11937"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3014,
+        3026
+      ],
+      "operations": [
+        {
+          "line": 3017,
+          "old_text": "b_1 : U \\to U_1",
+          "replacement_text": "b_1 : V \\to V_1"
+        }
+      ],
+      "rationale": "p_p has codomain D; X lies over V, X1 over V1, and b:V1->V2. Thus p_p(f2)=b b1 has b1:V->V1. This is the base map required for the cartesian factorization X->X1.",
+      "adverse_evidence": "The original C-objects U,U1 remain in the triples but do not type a D-base arrow."
+    },
+    {
+      "id": "STACKS-RECON-055",
+      "occurrences": [
+        "OCC-00222",
+        "OCC-11938"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3021,
+        3026
+      ],
+      "operations": [
+        {
+          "line": 3026,
+          "old_text": "p(f'_1) = b_1",
+          "replacement_text": "p_p(f'_1) = b_1"
+        }
+      ],
+      "rationale": "The arrow f prime_1 lies in the localized category u_p S, whose structural functor is p_p:u_p S->D, extending p_pp. Since r lies over id_V, passing between f1 and f prime_1 leaves its base arrow b1 unchanged.",
+      "adverse_evidence": "The original p:S->C cannot be applied to this localized morphism."
+    },
+    {
+      "id": "STACKS-RECON-056",
+      "occurrences": [
+        "OCC-11939"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3073,
+        3092
+      ],
+      "operations": [
+        {
+          "line": 3084,
+          "old_text": "r' \\circ r \\in R",
+          "replacement_text": "r \\circ r' \\in R"
+        }
+      ],
+      "rationale": "The arrows are r:X prime->X and r prime:X double-prime->X prime. Their composite with domain X double-prime is r r prime, the denominator in the refined roof at 3091.",
+      "adverse_evidence": "The same two arrows and their given directions are retained."
+    },
+    {
+      "id": "STACKS-RECON-057",
+      "occurrences": [
+        "OCC-11940"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3073,
+        3103
+      ],
+      "operations": [
+        {
+          "line": 3088,
+          "old_text": "(a_2, b_2, \\alpha_2) \\circ r'",
+          "replacement_text": "(a_2, b_2, \\alpha_2) \\circ r \\circ r'"
+        },
+        {
+          "line": 3096,
+          "old_text": "(a_2, b_2, \\alpha_2).",
+          "replacement_text": "(a_2, b_2, \\alpha_2) \\circ r."
+        }
+      ],
+      "rationale": "The numerator f2=(a2,b2,alpha2) has domain X, while f1,f prime_1 have domain X prime. Comparing their roofs over a common X double-prime requires f f1 r prime=f f prime_1 r prime=f2 r r prime. After refining and renaming X double-prime to X prime, the denominator remains r:X prime->X, so the equation is f f1=f f prime_1=f2 r. Its C-base and fibre-arrow components are precisely a a1=a a prime_1=a2 c and alpha alpha1=alpha alpha prime_1=alpha2 gamma at 3102-3103.",
+      "adverse_evidence": "OCC-11940 reports the first omitted denominator only. The second omission at 3096 is an independent adjacent discovery, retained explicitly here; neither can be removed by merely renaming the common source.",
+      "discovery": {
+        "kind": "independent_adjacent_operation",
+        "authority_line": 3096,
+        "context": "The following displayed equality has the same missing denominator."
+      }
+    },
+    {
+      "id": "STACKS-RECON-058",
+      "occurrences": [
+        "OCC-11941"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        3079,
+        3103
+      ],
+      "operations": [
+        {
+          "line": 3098,
+          "old_text": "Write $r = (c, \\text{id}_V, \\gamma) : (U', \\phi' : V \\to u(U'), x')$,",
+          "replacement_text": "Write $r = (c, \\text{id}_V, \\gamma) : (U', \\phi' : V \\to u(U'), x')\n\\to (U, \\phi : V \\to u(U), x)$,"
+        }
+      ],
+      "rationale": "Complete the declared arrow signature with its already fixed target X=(U,phi:V->u(U),x). This makes the ensuing equations a2 c and alpha2 gamma explicitly typed.",
+      "adverse_evidence": "This is the same r:X prime->X already specified at 3079-3080; no target is newly selected."
+    },
+    {
+      "id": "STACKS-RECON-059",
+      "occurrences": [
+        "OCC-00223",
+        "OCC-11942"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3106,
+        3121
+      ],
+      "operations": [
+        {
+          "line": 3113,
+          "old_text": "lifting $\\gamma$",
+          "replacement_text": "lifting $c'$"
+        }
+      ],
+      "rationale": "The new arrow gamma prime:x double-prime->x prime is the cartesian lift of the equalizer inclusion c prime:U double-prime->U prime under p:S->C. The old gamma:x prime->x is already a morphism of S, so is not a base arrow that p can lift. With the corrected lift, the precomposed fibre arrows have equal p-images; cartesianness of alpha then gives their equality.",
+      "adverse_evidence": "The equalizer object, both original parallel arrows, the denominator and every fibre object are retained."
+    },
+    {
+      "id": "STACKS-RECON-060",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2903,
+        2928
+      ],
+      "operations": [
+        {
+          "line": 2912,
+          "old_text": "$\\alpha' : x'_1 \\to x'$ with $p(\\alpha') = a'$.",
+          "replacement_text": "$\\alpha' : x'_1 \\to x'$ with $p(\\alpha') = a'$ and\n$\\gamma \\circ \\alpha' = \\alpha \\circ \\gamma_1$."
+        }
+      ],
+      "rationale": "The cartesian property of gamma lifts the particular arrow alpha gamma1 over ac prime=ca prime. It supplies the unique alpha prime over a prime whose composite with gamma is alpha gamma1; its base alone does not specify it uniquely. This exact equation also proves the square required by RMS2.",
+      "adverse_evidence": "The equation uses only the existing arrows and is required by the cited universal property. It is an independent omission adjacent to the reported base-lift label error.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "The cartesian uniqueness sentence lacks its prescribed composite."
+      }
+    },
+    {
+      "id": "STACKS-RECON-061",
+      "occurrences": [
+        "OCC-11943"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3150,
+        3164
+      ],
+      "operations": [
+        {
+          "line": 3161,
+          "old_text": "Categories, Lemma \\ref{categories-lemma-fibred-groupoids}",
+          "replacement_text": "Categories, Lemma \\ref{categories-lemma-fibred-groupoids};"
+        }
+      ],
+      "rationale": "Separate the concluding hence clause from its cited justification.",
+      "adverse_evidence": "The cited result and the invertibility argument are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-062",
+      "occurrences": [
+        "OCC-00225",
+        "OCC-11944"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3186,
+        3220
+      ],
+      "operations": [
+        {
+          "line": 3205,
+          "old_text": "H((\\alpha, a) : x/U \\to x'/U') = G'(a, u(a), \\alpha)",
+          "replacement_text": "H(\\alpha/a : x/U \\to x'/U') = (a, G'(a, u(a), \\alpha))"
+        }
+      ],
+      "rationale": "The defined source-arrow notation is alpha/a. A target arrow in u^p T consists of its C-base a and its T-arrow beta. Here beta=G prime(a,u(a),alpha) has q-image u(a), because G is over D. Hence the complete ordered pair is exactly (a,G prime(a,u(a),alpha)); it maps the object H(x/U) to H(x prime/U prime) with the types declared at 3201. Composition is componentwise: the C-components compose to a prime a and the T-components compose by functoriality of G prime; identities likewise have both required components.",
+      "adverse_evidence": "Retain the previously suppressed base component a. No convention about recovering that component is needed and no object is changed."
+    },
+    {
+      "id": "STACKS-RECON-063",
+      "occurrences": [
+        "OCC-00224"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3194,
+        3199
+      ],
+      "operations": [
+        {
+          "line": 3196,
+          "old_text": "Denote $G'",
+          "replacement_text": "Denote by $G'"
+        }
+      ],
+      "rationale": "Restore the preposition introducing the notation for the composite functor.",
+      "adverse_evidence": "Both functors and their exact domains and codomains are retained."
+    },
+    {
+      "id": "STACKS-RECON-064",
+      "occurrences": [
+        "OCC-00226"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3222,
+        3228
+      ],
+      "operations": [
+        {
+          "line": 3225,
+          "old_text": "We denote",
+          "replacement_text": "We denote by"
+        }
+      ],
+      "rationale": "Restore by in the naming clause for the projection functor.",
+      "adverse_evidence": "The original projection and its value on (U,y) are retained."
+    },
+    {
+      "id": "STACKS-RECON-065",
+      "occurrences": [
+        "OCC-11945"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        3234,
+        3250
+      ],
+      "operations": [
+        {
+          "line": 3246,
+          "old_text": "H(a, \\alpha)",
+          "replacement_text": "H(\\alpha/a)"
+        }
+      ],
+      "rationale": "Use the source-arrow notation alpha/a established at 3191 and used in the corrected functor definition.",
+      "adverse_evidence": "The full bottom arrow is pr(H(alpha/a)); its C-base has been forgotten by pr, leaving the required arrow in T. The square and all four objects are unchanged."
+    },
+    {
+      "id": "STACKS-RECON-066",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        617,
+        645
+      ],
+      "operations": [
+        {
+          "line": 625,
+          "old_text": "$x$ is an object of $\\mathcal{S}'$, then $y$ is isomorphic to an\nobject of $\\mathcal{S}'$,",
+          "replacement_text": "$x$ is an object of $\\mathcal{S}'$, then $y$ is isomorphic in\n$\\mathcal{S}_{p(y)}$ to an object of $\\mathcal{S}'$,"
+        }
+      ],
+      "rationale": "The literal unqualified condition permits changing the base object. Take the two-object groupoid with objects A,B and one arrow between each pair, all singleton-isomorphism covers, S=C with p=id, and S prime the full subcategory on A. S is a stack with terminal fibres. Every object of S is isomorphic to A, so all three original conditions hold, but S prime has no object over B and cannot lift B->A. With the corrected condition, an ambient cartesian lift c:y->x over f:V->U can be composed with a vertical isomorphism e:y prime->y from an S prime object; c e is an S prime cartesian lift by fullness. The inclusion preserves cartesian arrows by comparison with these lifts. Moreover any total isomorphism z->t with t in S prime, over h:U->W, becomes vertical by composing with the inverse of a cartesian S prime lift t_U->t of h. Thus the original condition (3) gives the fibre isomorphism needed for descent. The complete proof, including the exact natural Mor comparison and all descent comparison maps, is in SUBSTACK_VERTICAL_DERIVATION_20260923.md, Sections 3-7.",
+      "adverse_evidence": "Qualifying (1) is sufficient: once S prime is fibred, the explicit cartesian lift of the base isomorphism proves that the unqualified condition (3) is equivalent to its fibre-qualified version. No unnecessary independent strengthening of (3) is asserted. The note was independently derived and then fully read and checked in the primary session.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "The first-condition pullback claim was checked during adjudication of OCC-11898; the received report itself concerned Isom versus Mor only."
+      },
+      "proof_evidence": {
+        "file": "SUBSTACK_VERTICAL_DERIVATION_20260923.md",
+        "sections": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "required_in_candidate": true
+      }
+    },
+    {
+      "id": "STACKS-RECON-067",
+      "occurrences": [
+        "OCC-00227",
+        "OCC-11946"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3274,
+        3286
+      ],
+      "operations": [
+        {
+          "line": 3277,
+          "old_text": "is a strongly cartesian.",
+          "replacement_text": "is strongly cartesian."
+        }
+      ],
+      "rationale": "Remove the article before the predicate adjective.",
+      "adverse_evidence": "The full mathematical claim and its dependent argument are being checked separately; this wording repair alone does not certify the asserted characterization."
+    },
+    {
+      "id": "STACKS-RECON-068",
+      "occurrences": [
+        "OCC-00228",
+        "OCC-11947"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2993,
+        2995,
+        3274,
+        3286
+      ],
+      "operations": [
+        {
+          "line": 3279,
+          "old_text": "r : X' \\to Y",
+          "replacement_text": "r : X' \\to X"
+        }
+      ],
+      "rationale": "A roof representing f:X->Y has numerator X prime->Y and denominator r:X prime->X; in the localization it is Q(numerator) Q(r)^{-1}. Restore the denominator target X.",
+      "adverse_evidence": "The arrow f, numerator, denominator membership in R and all fibre/base components are retained. The separate mathematical correction to the cartesian characterization must be proved before candidate acceptance."
+    },
+    {
+      "id": "STACKS-RECON-069",
+      "occurrences": [
+        "OCC-00229",
+        "OCC-11948"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        3234,
+        3241,
+        3277,
+        3286
+      ],
+      "operations": [
+        {
+          "line": 3281,
+          "old_text": "G'(a, b \\alpha)",
+          "replacement_text": "G'(a, b, \\alpha)"
+        }
+      ],
+      "rationale": "Restore the separator between the second and third entries of the existing triple.",
+      "adverse_evidence": "The original three entries and their defined meanings remain unchanged."
+    },
+    {
+      "id": "STACKS-RECON-070",
+      "occurrences": [
+        "OCC-11949"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        3191,
+        3192,
+        3277,
+        3286
+      ],
+      "operations": [
+        {
+          "line": 3283,
+          "old_text": "H(a, \\alpha)",
+          "replacement_text": "H(\\alpha/a)"
+        }
+      ],
+      "rationale": "Use the defined source-morphism notation alpha/a in this second occurrence.",
+      "adverse_evidence": "The projected morphism pr(H(alpha/a)) and all its domain and codomain data are retained."
+    },
+    {
+      "id": "STACKS-RECON-071",
+      "occurrences": [
+        "OCC-00230",
+        "OCC-11950"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3281,
+        3286
+      ],
+      "operations": [
+        {
+          "line": 3285,
+          "old_text": "$\\beta$ is strongly cartesian",
+          "replacement_text": "$\\beta$ are strongly cartesian"
+        }
+      ],
+      "rationale": "Agree the verb with the plural subject all arrows except possibly beta.",
+      "adverse_evidence": "The sentence still distinguishes beta from the three arrows already known to be cartesian; no property of beta is assumed."
+    },
+    {
+      "id": "STACKS-RECON-072",
+      "occurrences": [
+        "OCC-00231"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3435,
+        3460
+      ],
+      "operations": [
+        {
+          "line": 3436,
+          "old_text": "Fully faithfulness.",
+          "replacement_text": "Full faithfulness."
+        },
+        {
+          "line": 3459,
+          "old_text": "proof of fully faithfulness",
+          "replacement_text": "proof of full faithfulness"
+        }
+      ],
+      "rationale": "Use the noun phrase full faithfulness in both the subsection lead-in and its later restatement.",
+      "adverse_evidence": "The received locus identifies the first occurrence; the second matching misuse at 3459 was found in the same paragraph and is recorded explicitly.",
+      "discovery": {
+        "kind": "independent_adjacent_operation",
+        "authority_line": 3459,
+        "context": "Same noun phrase in the proof restatement, outside the received range."
+      }
+    },
+    {
+      "id": "STACKS-RECON-073",
+      "occurrences": [
+        "OCC-00232",
+        "OCC-11951"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3440,
+        3458
+      ],
+      "operations": [
+        {
+          "line": 3446,
+          "old_text": "Similar holds",
+          "replacement_text": "The same holds"
+        }
+      ],
+      "rationale": "Supply a grammatical subject for the pullback assertion.",
+      "adverse_evidence": "Both producer alternatives convey the same assertion; the adopted text directly refers to the preceding equality without altering it."
+    },
+    {
+      "id": "STACKS-RECON-074",
+      "occurrences": [
+        "OCC-00233",
+        "OCC-11952"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3423,
+        3467
+      ],
+      "operations": [
+        {
+          "line": 3464,
+          "old_text": "\\Mor_{(u_p\\mathcal{S})_U}",
+          "replacement_text": "\\Mor_{(u_p\\mathcal{S})_{u(U)}}"
+        }
+      ],
+      "rationale": "The category u_p S is over D. The canonical functor c prime sends x over U to (U,id_u(U),x), whose D-base is u(U). Therefore its Hom set between c prime(x) and c prime(y) is taken in the fibre over u(U).",
+      "adverse_evidence": "All objects and functors are unchanged; the corrected target agrees with the presheaf formula already given at 3457 and the sentence immediately after the display."
+    },
+    {
+      "id": "STACKS-RECON-075",
+      "occurrences": [
+        "OCC-00234",
+        "OCC-11953"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3478,
+        3496
+      ],
+      "operations": [
+        {
+          "line": 3482,
+          "old_text": "$c \\circ c' = \\text{id}_{U'}$",
+          "replacement_text": "$c \\circ c' = \\text{id}_U$"
+        }
+      ],
+      "rationale": "Here c:U prime->U and c prime:U->U prime. The denominator square gives u(c) phi=id_u(U). Writing phi=u(c prime), faithfulness of u yields c c prime=id_U, whose domain and codomain are U. The cartesian property of gamma then lifts c prime against id_x to the specified gamma prime with gamma gamma prime=id_x.",
+      "adverse_evidence": "The base object U prime is retained as the domain of c; only the falsely typed identity is repaired."
+    },
+    {
+      "id": "STACKS-RECON-076",
+      "occurrences": [
+        "OCC-01265"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3533,
+        3537
+      ],
+      "operations": [
+        {
+          "line": 3536,
+          "old_text": "We denote $j",
+          "replacement_text": "We denote by $j"
+        }
+      ],
+      "rationale": "Restore by in the naming clause for the localization functor.",
+      "adverse_evidence": "This is a distinct Stacks chapter occurrence, unrelated to the differently located Categories report mentioned by the producer."
+    },
+    {
+      "id": "STACKS-RECON-077",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2991,
+        3139
+      ],
+      "operations": [
+        {
+          "line": 3009,
+          "old_text": "of $u_{pp}\\mathcal{S}$ has image $f = ((a, b, \\alpha), 1)$\nstrongly cartesian in $u_p\\mathcal{S}$ if and only if $\\alpha$\nis a strongly cartesian morphism of $\\mathcal{S}$.",
+          "replacement_text": "of $u_{pp}\\mathcal{S}$ has image $f = ((a, b, \\alpha), 1)$\nstrongly cartesian in $u_p\\mathcal{S}$ if and only if there is an arrow\n$r = (c,\\text{id}_{V_1},\\gamma) : Z \\to X_1$ in $R$ such that\n$\\alpha \\circ \\gamma$ is strongly cartesian in $\\mathcal{S}$.\nIn particular, this holds whenever $\\alpha$ is strongly cartesian."
+        },
+        {
+          "line": 3124,
+          "old_text": "We omit the proof of the fact that for any strongly cartesian morphism\nof $u_p\\mathcal{S}$ of the form $((a, b, \\alpha), 1)$ the morphism\n$\\alpha$ is strongly cartesian in $\\mathcal{S}$.\n(We do not need the characterization of strongly cartesian morphisms\nin the rest of the proof, although we do use it later in this section.)",
+          "replacement_text": "We prove the converse with the stated refinement. Write\n$Q : u_{pp}\\mathcal{S} \\to u_p\\mathcal{S}$ for the localization functor.\nFor $Y = (U, \\phi : V \\to u(U), y)$ and $b : V' \\to V$, put\n$$\nY_b = (U, \\phi \\circ b : V' \\to u(U), y),\\qquad\nk_b = (\\text{id}_U, b, \\text{id}_y) : Y_b \\to Y.\n$$\nThe implication already proved shows that $Q(k_b)$ is strongly cartesian.\nConsequently every morphism $h : X \\to Y$ over $b$ factors uniquely as\n$h = Q(k_b) \\circ i_h$, with $i_h : X \\to Y_b$ over $\\text{id}_{V'}$.\nMoreover, $h$ is strongly cartesian if and only if $i_h$ is an isomorphism.\nIndeed, if $h$ is strongly cartesian, its universal property gives\n$j : Y_b \\to X$ over $\\text{id}_{V'}$ with $h \\circ j = Q(k_b)$.\nUniqueness for $Q(k_b)$ gives $i_h \\circ j = \\text{id}_{Y_b}$, and\nuniqueness for $h$ gives $j \\circ i_h = \\text{id}_X$.\nThe reverse implication follows by composition with an isomorphism.\n\n\\medskip\\noindent\nWe first establish the required detection of vertical isomorphisms.\nFix $\\phi : V \\to u(U)$ and a morphism $\\delta : x \\to y$ in\n$\\mathcal{S}_U$. Write\n$$\nD_\\delta = (\\text{id}_U, \\text{id}_V, \\delta) :\n(U,\\phi,x) \\longrightarrow (U,\\phi,y).\n$$\nWe claim that $Q(D_\\delta)$ is invertible if and only if there exist\n$c : W \\to U$ and $\\psi : V \\to u(W)$ with $u(c) \\circ \\psi = \\phi$\nsuch that the pullback of $\\delta$ along $c$ is invertible.\nMore explicitly, choose strongly cartesian morphisms\n$\\gamma_x : x_W \\to x$ and $\\gamma_y : y_W \\to y$ over $c$.\nThe pullback is the unique vertical morphism $\\delta_W : x_W \\to y_W$\nsuch that\n$$\n\\gamma_y \\circ \\delta_W = \\delta \\circ \\gamma_x.\n$$\nChanging these two cartesian lifts conjugates $\\delta_W$ by the unique\nvertical comparison isomorphisms, so invertibility is independent of\nthese choices. If $\\delta_W$ is invertible, the displayed equation and\nthe two morphisms of $R$ defined by $\\gamma_x,\\gamma_y$ show that\n$Q(D_\\delta)$ is invertible.\n\n\\medskip\\noindent\nConversely, represent an inverse to $Q(D_\\delta)$ by $Q(e)Q(r)^{-1}$, where\n$$\nr = (c,\\text{id}_V,\\gamma) : (T,\\theta,z) \\to (U,\\phi,y),\\qquad\ne = (a,\\text{id}_V,\\epsilon) : (T,\\theta,z) \\to (U,\\phi,x),\n$$\nand $r \\in R$. Thus $a,c : T \\to U$ and\n$u(a)\\theta = \\phi = u(c)\\theta$.\nLet $h : T_1 \\to T$ be the equalizer of $a,c$.\nAs $u$ preserves this equalizer, there exists\n$\\theta_1 : V \\to u(T_1)$ with $u(h)\\theta_1 = \\theta$.\nChoose a strongly cartesian $\\zeta : z_1 \\to z$ over $h$ and refine\nthe inverse roof by $(h,\\text{id}_V,\\zeta) \\in R$.\nPut $d = ah = ch$ and $y_1 = z_1$.\nThen $\\tau_y = \\gamma\\zeta : y_1 \\to y$ is strongly cartesian over $d$.\nChoose a strongly cartesian $\\tau_x : x_1 \\to x$ over $d$.\nThere are unique vertical morphisms\n$\\eta : y_1 \\to x_1$ and $\\delta_1 : x_1 \\to y_1$ satisfying\n$$\n\\tau_x\\eta = \\epsilon\\zeta,\\qquad\n\\tau_y\\delta_1 = \\delta\\tau_x.\n$$\nFor this paragraph, regard $x_1,y_1$ as the triples with base $T_1$\nand structure map $\\theta_1$, and write\n$$\nt_x = (d,\\text{id}_V,\\tau_x),\\quad\nt_y = (d,\\text{id}_V,\\tau_y),\\quad\nE_\\eta = (\\text{id}_{T_1},\\text{id}_V,\\eta),\\quad\nD_1 = (\\text{id}_{T_1},\\text{id}_V,\\delta_1).\n$$\nThe inverse is $Q(t_x)Q(E_\\eta)Q(t_y)^{-1}$, whereas\n$Q(D_\\delta) = Q(t_y)Q(D_1)Q(t_x)^{-1}$.\nThe two inverse identities therefore give\n$$\nQ(E_\\eta D_1) = \\text{id}_{(T_1,\\theta_1,x_1)},\\qquad\nQ(D_1 E_\\eta) = \\text{id}_{(T_1,\\theta_1,y_1)}.\n$$\nThe equality criterion for right fractions, applied to denominators\nequal to identities, supplies two arrows of $R$. Write their\n$\\mathcal{C}$-components as $c_x : T_x \\to T_1$ and\n$c_y : T_y \\to T_1$, their structure maps as $\\theta_x,\\theta_y$, and\ntheir strongly cartesian $\\mathcal{S}$-components as\n$\\rho_x : z_x \\to x_1$ and $\\rho_y : z_y \\to y_1$.\nThen\n$$\n(\\eta\\delta_1)\\rho_x = \\rho_x,\\qquad\n(\\delta_1\\eta)\\rho_y = \\rho_y,\\qquad\nu(c_x)\\theta_x = \\theta_1 = u(c_y)\\theta_y.\n$$\nForm $T_2 = T_x \\times_{T_1} T_y$, with projections $e_x,e_y$, and put\n$k = c_xe_x = c_ye_y$. Preservation of this fibre product gives\n$\\theta_2 : V \\to u(T_2)$ such that\n$u(e_x)\\theta_2 = \\theta_x$ and $u(e_y)\\theta_2 = \\theta_y$.\nIn particular $u(k)\\theta_2 = \\theta_1$ and $u(dk)\\theta_2 = \\phi$.\nChoose strongly cartesian arrows $\\kappa_x : x_2 \\to x_1$ and\n$\\kappa_y : y_2 \\to y_1$ over $k$, and the unique vertical arrows\n$\\delta_2 : x_2 \\to y_2$ and $\\eta_2 : y_2 \\to x_2$ with\n$$\n\\kappa_y\\delta_2 = \\delta_1\\kappa_x,\\qquad\n\\kappa_x\\eta_2 = \\eta\\kappa_y.\n$$\nSince $k = c_xe_x$, cartesianness of $\\rho_x$ factors $\\kappa_x$\nthrough $\\rho_x$, and hence $\\eta\\delta_1\\kappa_x = \\kappa_x$.\nSimilarly $\\delta_1\\eta\\kappa_y = \\kappa_y$.\nIt follows that\n$$\n\\kappa_x\\eta_2\\delta_2\n= \\eta\\kappa_y\\delta_2\n= \\eta\\delta_1\\kappa_x\n= \\kappa_x,\n$$\nand\n$$\n\\kappa_y\\delta_2\\eta_2\n= \\delta_1\\kappa_x\\eta_2\n= \\delta_1\\eta\\kappa_y\n= \\kappa_y.\n$$\nCartesian uniqueness, with fixed identity base maps, yields\n$\\eta_2\\delta_2 = \\text{id}_{x_2}$ and\n$\\delta_2\\eta_2 = \\text{id}_{y_2}$.\nThe composites $\\tau_x\\kappa_x,\\tau_y\\kappa_y$ are strongly cartesian\nover $dk$, and\n$$\n(\\tau_y\\kappa_y)\\delta_2 = \\delta(\\tau_x\\kappa_x).\n$$\nThus $\\delta_2$ is the required invertible pullback of $\\delta$.\nThis proves the detection claim without assuming that localization\nreflects isomorphisms before a refinement.\n\n\\medskip\\noindent\nReturn to $A = (a,b,\\alpha) : X_1 \\to X_2$.\nChoose a strongly cartesian $\\tau : a^*x_2 \\to x_2$ over $a$, and\nwrite $\\alpha = \\tau\\delta$, where $\\delta : x_1 \\to a^*x_2$ is vertical.\nPut $X_a = (U_1,\\phi_1 : V_1 \\to u(U_1),a^*x_2)$.\nThe exact factorization is\n$$\nA = k_b \\circ (a,\\text{id}_{V_1},\\tau)\n\\circ (\\text{id}_{U_1},\\text{id}_{V_1},\\delta),\n$$\nwhere $k_b : (X_2)_b \\to X_2$, and the middle factor belongs to $R$.\nConsequently, if $Q(A)$ is strongly cartesian, its vertical factor\nrelative to $Q(k_b)$ is invertible, and so is $Q(D_\\delta)$.\nThe detection claim supplies $c : W \\to U_1$, $\\psi : V_1 \\to u(W)$\nwith $u(c)\\psi = \\phi_1$, strongly cartesian\n$\\gamma : z \\to x_1$ and $\\rho : w \\to a^*x_2$ over $c$, and an\ninvertible $\\delta_W : z \\to w$ such that\n$\\rho\\delta_W = \\delta\\gamma$.\nTherefore\n$$\n\\alpha\\gamma = \\tau\\delta\\gamma = \\tau\\rho\\delta_W\n$$\nis strongly cartesian. The arrow\n$r = (c,\\text{id}_{V_1},\\gamma) : (W,\\psi,z) \\to X_1$\nbelongs to $R$, as required.\nConversely, if such an $r$ exists, the implication proved earlier\nshows that $Q(Ar)$ is strongly cartesian. Since $Q(r)$ is an\nisomorphism, $Q(A) = Q(Ar)Q(r)^{-1}$ is strongly cartesian as well.\nThis proves the stated characterization.\nFor any chosen roof $Q(A)Q(r_0)^{-1}$ representing a strongly\ncartesian morphism, the same argument gives an additional $r_1 \\in R$\nwith cartesian numerator in the refined roof\n$Q(Ar_1)Q(r_0r_1)^{-1}$. Thus the characterization applies to the\nroof representation used below, without asserting that an arbitrary\noriginal numerator is already strongly cartesian."
+        }
+      ],
+      "rationale": "The original converse is false. Let C=[0->1], D be terminal, and S have objects z over 0 and s,t over 1, with nonidentity arrows r_s:z->s, v:s->t, r_t:z->t=v r_s. Both r_s and r_t are cartesian, whereas v is not invertible and hence not cartesian over id_1. Both cartesian arrows become invertible in the localization, so Q(v)=Q(r_t)Q(r_s)^{-1} is invertible and cartesian. The corrected criterion retains the entire original construction and states exactly that Q(a,b,alpha) is cartesian iff an allowed R-refinement makes alpha gamma cartesian. The inserted proof derives invertibility of a vertical arrow after an admissible pullback from an inverse roof: equalize its two base maps, obtain a vertical inverse candidate, refine each inverse equation using the right-fraction equality criterion, pass to a common fibre-product refinement, and use cartesian uniqueness to prove both actual inverse identities. Factoring alpha through a cartesian lift then proves the full criterion, including refinement of any chosen roof. The complete independent derivation and counterexample are retained in LOCALIZED_CARTESIAN_DERIVATION_20260924.md, Sections 1-8.",
+      "adverse_evidence": "No extra conservativity assumption is imposed and the original fibred-category and adjointness conclusions are retained. The false claim about an arbitrary numerator is replaced by a proved statement about a suitable refinement, not by an unproved existence assertion. The source construction preserves every original base arrow, comparison map and needed inverse. The later roof-based argument at 3274-3286 remains valid by the now-proved final paragraph; its independently recorded label corrections are retained.",
+      "discovery": {
+        "kind": "independent_source_review",
+        "context": "The original converse was tested while reviewing the reported right-localization roof and typing errors."
+      },
+      "proof_evidence": {
+        "file": "LOCALIZED_CARTESIAN_DERIVATION_20260924.md",
+        "sections": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "required_in_candidate": true
+      }
+    }
+  ],
+  "next_source_start_line": null,
+  "prior_admitted_units": 0,
+  "reading_note": "Read report text for authority loci 1-500 and complete primary-source contexts 212-253 and 358-433. Source beyond these contexts has not been claimed read.\nRead all 17 report texts at authority loci 501-1000. Primary contexts 150-224, 550-721, 723-778 and 869-902 were checked, including the complete equivalence proof and its exact presheaf comparison. The substack assumption wording is also receiving an independent mathematical derivation under the explicit Astra exception; it is not yet certified as a separate correction.\nRead all 14 received reports at authority loci 1001-1600 and primary contexts 1008-1055, 1210-1422, 1480-1610. Verified the original descent-map direction at 255-359. Two independent source discoveries are recorded with complete arguments: the 2-category type at 724 and both reversed inverse placements at 1381-1382/1393-1394. Contexts 1660-1770 and 1790-1877 were additionally read for the next interval but are not yet counted as report dispositions.\nRead all 14 received reports at authority loci 1601-2200. Primary contexts 1660-1770, 1790-1877, 1927-1948, 2027-2058 and 2069-2170 were checked. Report alternatives for the local section at 2151 were compared using the exact equality p(x_i)=q(F(x_i))=q(y_i).\nRead all 16 received reports at authority loci 2201-2800 and complete primary contexts 2173-2233, 2400-2470, 2490-2550, 2674-2800, with the exact gerbe lifting condition at 2318-2374. Rejected OCC-00209 as a claimed grammatical defect because its original with-construction is grammatical. Independently restored the missing original tuple isomorphisms in the gerbe base-change proof and the missing if at 2771.\nRead all 26 received reports at authority loci 2801-3130 and complete primary context 2810-3130. The exact RMS2 square and right-localization roof comparisons were calculated; independent missing equations at 2912 and 3096 are explicit. Source 3130-3330 was also read, with the converse cartesian characterization at 3010/3124-3128 undergoing an independent mathematical counterexample and replacement-proof derivation before acceptance.\nRead the five received report groups before 3274 (six physical reports) against source 3130-3250. The independent substack derivation was read completely in bounded intervals and its counterexample, pullback lifts, conversion to a fibre isomorphism, natural Mor comparison and descent proof were checked. The proposed condition-(1) repair and its complete required proof evidence are now recorded separately from the received report.\nRead every remaining received report and complete primary contexts 3130-3330 and 3380-3552. All 114 report IDs now occur exactly once. The independent localized-cartesian characterization correction remains under complete mathematical proof review and is a required dependency before any candidate is built or admitted. One additional wording occurrence at 3459 is explicitly recorded. Report review completion does not assert candidate or overall project completion.\nThe localized-cartesian independent derivation was read completely in three bounded intervals and checked. The proposed source now contains the complete proof of the corrected refinement criterion, including eventual invertibility from both inverse equations, and preserves the downstream existential roof argument. No new assumptions were introduced to force the false original converse.",
+  "mathematical_review_complete": true,
+  "independent_mathematical_derivations": [
+    {
+      "task": "substack_vertical_proof",
+      "state": "complete and fully read by primary session",
+      "proof": "SUBSTACK_VERTICAL_DERIVATION_20260923.md",
+      "primary_review": "SUBSTACK_VERTICAL_PRIMARY_REVIEW_20260924.json"
+    },
+    {
+      "task": "localized_cartesian_proof",
+      "state": "Complete derivation and full fragment checked; primary session read both in full",
+      "proof": "LOCALIZED_CARTESIAN_DERIVATION_20260924.md",
+      "primary_review": "LOCALIZED_CARTESIAN_PRIMARY_REVIEW_20260924.json",
+      "independent_fragment_check": "STACKS_LOCALIZED_CARTESIAN_PROOF_CHECK_20260924.md"
+    }
+  ],
+  "required_proof_evidence": [
+    {
+      "path": "LOCALIZED_CARTESIAN_DERIVATION_20260924.md",
+      "bytes": 27171,
+      "sha256": "1AC4ABE855A5B259957BDEF9F2C1332C6622D4E4D5F0647504210FE388AEC562"
+    },
+    {
+      "path": "LOCALIZED_CARTESIAN_PRIMARY_REVIEW_20260924.json",
+      "bytes": 2493,
+      "sha256": "4D02EDA4F4C2399A9B3D9B7FD8430D931AD66682821A612E688B5DB47C9BB459"
+    },
+    {
+      "path": "STACKS_LOCALIZED_CARTESIAN_PROOF_20260924.tex",
+      "bytes": 6814,
+      "sha256": "70FCE1119BEED9A374306E537F7E35BB6DCE319030E3995BF31D66B3E5C70D87"
+    },
+    {
+      "path": "STACKS_LOCALIZED_CARTESIAN_PROOF_CHECK_20260924.md",
+      "bytes": 6449,
+      "sha256": "48FF7117C41203EF16D23BF467BE6C0A9DF38609D9E925932276E4817422D652"
+    },
+    {
+      "path": "SUBSTACK_VERTICAL_DERIVATION_20260923.md",
+      "bytes": 21699,
+      "sha256": "019603293F73F6BA27EA948A7D0FBA7065938C4AB4B4F8B12F47172BBB37DE47"
+    },
+    {
+      "path": "SUBSTACK_VERTICAL_PRIMARY_REVIEW_20260924.json",
+      "bytes": 2034,
+      "sha256": "70E3392A3570BF607502280AC0992A506FFB9B043A439BF58EC8A49E5D9D416E"
+    }
+  ],
+  "dependency_groups": [
+    {
+      "id": "substack-fibre-condition",
+      "review_ids": [
+        "STACKS-RECON-006",
+        "STACKS-RECON-066"
+      ],
+      "required_together": true,
+      "reason": "The Mor sheaf proof uses cartesian lifts in the full subcategory, supplied by the corrected fibre-isomorphism hypothesis and its complete proof."
+    },
+    {
+      "id": "localized-cartesian-criterion",
+      "review_ids": [
+        "STACKS-RECON-044",
+        "STACKS-RECON-045",
+        "STACKS-RECON-046",
+        "STACKS-RECON-047",
+        "STACKS-RECON-048",
+        "STACKS-RECON-049",
+        "STACKS-RECON-050",
+        "STACKS-RECON-051",
+        "STACKS-RECON-052",
+        "STACKS-RECON-053",
+        "STACKS-RECON-054",
+        "STACKS-RECON-055",
+        "STACKS-RECON-056",
+        "STACKS-RECON-057",
+        "STACKS-RECON-058",
+        "STACKS-RECON-059",
+        "STACKS-RECON-060",
+        "STACKS-RECON-061",
+        "STACKS-RECON-062",
+        "STACKS-RECON-063",
+        "STACKS-RECON-064",
+        "STACKS-RECON-065",
+        "STACKS-RECON-067",
+        "STACKS-RECON-068",
+        "STACKS-RECON-069",
+        "STACKS-RECON-070",
+        "STACKS-RECON-071",
+        "STACKS-RECON-077"
+      ],
+      "required_together": true,
+      "reason": "The complete refinement criterion uses the corrected multiplicative-system and forward-cartesianness arguments, and supplies the roof existence used by the corrected adjointness proof."
+    }
+  ]
+}
