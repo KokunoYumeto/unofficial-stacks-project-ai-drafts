@@ -28,11 +28,11 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         cls.model, cls.payloads = cls.generator.generated_payloads(ROOT)
 
     def test_complete_errata_registry_coverage(self) -> None:
-        self.assertEqual(self.model.overlay_count, 56)
-        self.assertEqual(self.model.unit_count, 1594)
-        self.assertEqual(self.model.exact_operation_count, 1858)
+        self.assertEqual(self.model.overlay_count, 57)
+        self.assertEqual(self.model.unit_count, 1641)
+        self.assertEqual(self.model.exact_operation_count, 1914)
         self.assertEqual(self.model.reconstructed_operation_count, 68)
-        self.assertEqual(self.model.operation_count, 1926)
+        self.assertEqual(self.model.operation_count, 1982)
         self.assertEqual(self.model.source_count, 36)
         self.assertEqual(
             self.model.excluded_overlay_ids,
@@ -49,7 +49,7 @@ class ChangesFromUpstreamTests(unittest.TestCase):
             entry for entry in registry["registered_entries"]
             if entry["id"].startswith("stacks-errata-")
         ]
-        self.assertEqual(len(errata), 56)
+        self.assertEqual(len(errata), 57)
         self.assertEqual(
             set(stable_ids),
             {stable_id for entry in errata for stable_id in entry["stable_ids"]},
@@ -129,7 +129,7 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         self.assertIn("Unofficial Stacks Project AI Drafts", page)
         self.assertIn("Registry admission", page)
         self.assertIn("Historical candidate status", page)
-        self.assertEqual(page.count('class="change-card"'), 1594)
+        self.assertEqual(page.count('class="change-card"'), 1641)
         self.assertIn('id="search"', page)
         self.assertIn('id="overlay"', page)
         self.assertIn('id="source"', page)

@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,594 historical correction IDs are accounted for; 1,592 effective textual
+  The 1,641 historical correction IDs are accounted for; 1,639 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -89,7 +89,7 @@ All thirteen are now integrated in this draft: two limit-preservation fixes
 in R50 and the remaining eleven in R51. They are also in the larger export;
 do not apply the same fix twice. Upstream adoption is not claimed.
 Both sets target the pinned official revision. The official master ref was
-[checked on 24 September 2026](validation/upstream-ref-check-2026-09-24.json)
+[checked on 25 September 2026](validation/upstream-ref-check-2026-09-25.json)
 and still matched that revision; later upstream compatibility requires a new check.
 
 The source and fixes-only downloads include R49: five de Rham corrections
@@ -162,7 +162,20 @@ and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidat
 accompany all 86 edits. They are included in the Stacks chapter patch and
 combined corrections-only download.
 
-R52/R53/R54/R55/R56 review, correction preparation, builds and visual checks, and current
+R57 adds **47 proposed Fields corrections and clarifications**: 21 copyedits,
+21 source corrections and five clarifications, across 56 exact edits.
+They repair field and quotient domains, polynomial arguments, characteristic-zero
+cases and a dropped Kummer sign. A complete proof of the normal algebraic
+decomposition replaces an omitted argument; the transcendence-basis extension
+property already proved in the source is now stated explicitly.
+[Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r57/REVIEW.md)
+and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidates/commons/stacks/errata/r57/README.md)
+are available. The accompanying proof check also derives linear disjointness
+without normality, preservation of both degrees and the canonical topological
+Galois-group comparison; these consequences carry no novelty claim.
+All eight earlier Fields fixes remain in the chapter and combined patches.
+
+R52/R53/R54/R55/R56/R57 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

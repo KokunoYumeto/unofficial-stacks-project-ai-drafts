@@ -1,6 +1,6 @@
 # Corrections only: review or reuse without adopting this fork
 
-**1,592 effective textual correction units across 35 chapters.**
+**1,639 effective textual correction units across 35 chapters.**
 Download one chapter patch or the combined patch. You do not need to clone this
 repository, import its history, or take any of its added theorems.
 
@@ -41,7 +41,7 @@ editing or interactive staging in your own checkout.
 | `derham.tex` | 5 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/derham.patch) | [entries](reviews/derham.md) |
 | `derived.tex` | 92 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/derived.patch) | [entries](reviews/derived.md) |
 | `descent.tex` | 35 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/descent.patch) | [entries](reviews/descent.md) |
-| `fields.tex` | 8 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/fields.patch) | [entries](reviews/fields.md) |
+| `fields.tex` | 55 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/fields.patch) | [entries](reviews/fields.md) |
 | `groupoids.tex` | 48 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/groupoids.patch) | [entries](reviews/groupoids.md) |
 | `homology.tex` | 60 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/homology.patch) | [entries](reviews/homology.md) |
 | `injectives.tex` | 40 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/injectives.patch) | [entries](reviews/injectives.md) |
@@ -70,8 +70,8 @@ editing or interactive staging in your own checkout.
 
 ## What is and is not included
 
-The 1,594 historical IDs in R1–R56 remain accounted for:
-1,592 effective textual units are exported; one earlier correction was
+The 1,641 historical IDs in R1–R57 remain accounted for:
+1,639 effective textual units are exported; one earlier correction was
 superseded by its explicitly recorded replacement, and one fork-specific tag
 allocation is excluded. No unofficial permanent tags are proposed for upstream.
 The original [13-item readable selection](../possible-fixes/README.md) remains available.

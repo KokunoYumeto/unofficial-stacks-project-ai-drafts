@@ -21,11 +21,11 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R56 and the Verdier insertion**: 57
-admitted overlays with 1,606 stable units (1,594 correction IDs and 12 Verdier
+The cumulative source includes **R1–R57 and the Verdier insertion**: 58
+admitted overlays with 1,653 stable units (1,641 correction IDs and 12 Verdier
 units). Admission and source composition are separate checks. The
-[R56 successor receipt](../validation/r56-successor-current.json) binds its
-exact 86-edit source change and validation; its immutable R55 predecessor
+[R57 successor receipt](../validation/r57-successor-current.json) binds its
+exact 56-edit source change and validation; its immutable R56 predecessor
 preserves all earlier source and evidence. The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
@@ -63,8 +63,14 @@ The substack hypothesis and localization criterion retain complete
 counterexamples and replacement proofs, including all refinement maps.
 [Review, complete proofs and editable chapter sources](candidates/commons/stacks/errata/r56/README.md)
 are available alongside the chapter and combined corrections-only patches.
-R49–R56 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56 review, source
+R57 adds 47 proposed Fields corrections and clarifications in 56 edits.
+It supplies the complete normal algebraic decomposition proof, repairs
+characteristic cases and polynomial arguments, and states the already-proved
+transcendence-basis extension property. [Review, further consequences and
+editable chapter sources](candidates/commons/stacks/errata/r57/README.md)
+accompany the Fields and combined corrections-only patches.
+R49–R57 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

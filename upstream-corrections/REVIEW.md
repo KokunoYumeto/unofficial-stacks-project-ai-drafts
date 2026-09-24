@@ -16,7 +16,7 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [derham.tex](reviews/derham.md) — 5 correction units.
 - [derived.tex](reviews/derived.md) — 92 correction units.
 - [descent.tex](reviews/descent.md) — 35 correction units.
-- [fields.tex](reviews/fields.md) — 8 correction units.
+- [fields.tex](reviews/fields.md) — 55 correction units.
 - [groupoids.tex](reviews/groupoids.md) — 48 correction units.
 - [homology.tex](reviews/homology.md) — 60 correction units.
 - [injectives.tex](reviews/injectives.md) — 40 correction units.

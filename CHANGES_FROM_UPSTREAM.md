@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **56**
-- Stable correction IDs: **1,594**
-- Displayed exact change hunks: **1,926**
-- Manifest/source-map exact operations: **1,858**
+- Admitted errata batches: **57**
+- Stable correction IDs: **1,641**
+- Displayed exact change hunks: **1,982**
+- Manifest/source-map exact operations: **1,914**
 - Hash-bound reconstructed legacy hunks: **68**
 - Affected source paths: **36**
-- Registry SHA-256: `63B02B5A386174B4235E60CB720534E278106953BA9CC2B3A00843D40FFCF5C3`
+- Registry SHA-256: `AF59863A2CC4374C648C64E9DFD6BFDC524B6AEB82D9430687C56F21C13D1449`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -46132,5 +46132,1517 @@ Pinned-official lines `3124-3128`; bytes `120396:120723`.
 ````
 
 Original SHA-256 `34C802A046D70793DD709D21E26E47B497BC106C59CD60C3A9591EA365D81973`; replacement SHA-256 `67D118DC40D3ADFF90190E58E7344EFA91731E64D729D37886F4533FD91A2AF4`.
+
+</details>
+
+## stacks-errata-a04446e-r57
+
+47 stable IDs · 56 displayed change hunks · admitted 2026-09-24T23:24:10.224325Z.
+
+<details id="mc-stk-err-1859">
+<summary><code>MC-STK-ERR-1859 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1859`; producer ID: `FIELDS-RECON-003`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L221) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Insert the missing conjunction between the two predicates finite and equal to the prime field.
+- Adverse evidence: Retain the explicit finiteness assertion as well as the rational-field alternative, the prime p and the characteristic cases; the producer proposal would delete the finiteness wording.
+
+### Change 1: `MC-STK-ERR-1859-OP1`
+
+Pinned-official lines `221-221`; bytes `8117:8135`.
+
+````diff
+- or finite equal to
++ or finite and equal to
+````
+
+Original SHA-256 `467AF44B0556AF2DA956D80569109E3743D92334BE6B7E78BB9F55734C22E47B`; replacement SHA-256 `4BAB1AF242F56FBC6281A06214C35B7328978BE73FF1A1526351754379832DA8`.
+
+</details>
+
+<details id="mc-stk-err-1860">
+<summary><code>MC-STK-ERR-1860 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1860`; producer ID: `FIELDS-RECON-004`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L295) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Remove the extra preposition before the displayed arrow describing the morphisms.
+- Adverse evidence: Keep the source E, target E prime, k-algebra condition, commuting triangle and Mor notation unchanged.
+
+### Change 1: `MC-STK-ERR-1860-OP1`
+
+Pinned-official lines `295-295`; bytes `10713:10738`.
+
+````diff
+- morphisms from $E \to E'$
++ morphisms $E \to E'$
+````
+
+Original SHA-256 `7FFFD0CC58CFB3AC9346F8C124F48C872485DAA2A340B202B2FD35D0384E9036`; replacement SHA-256 `8CBBD478CFD45318D4CBECDE072A13C743FD47A1816411786A0C3EE418CDB2C0`.
+
+</details>
+
+<details id="mc-stk-err-1861">
+<summary><code>MC-STK-ERR-1861 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1861`; producer ID: `FIELDS-RECON-005`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L605) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Give the singular subject class a singular verb while retaining exactly the extensions described by the relative clause.
+- Adverse evidence: Every element still generates a finite extension of the base. Recasting the sentence avoids the mismatched complement produced by only replacing are with is.
+
+### Change 1: `MC-STK-ERR-1861-OP1`
+
+Pinned-official lines `605-605`; bytes `22837:22909`.
+
+````diff
+- An important class of extensions are those where every element generates
++ An important class consists of extensions where every element generates
+````
+
+Original SHA-256 `ADFB69DF278DA39236DE8E6AAF513279BCAE96F6DBBD2C662BCED7E3769637A4`; replacement SHA-256 `16621216004FFBD2A733917790F29728C68AD65413CF925779C6EC13ED402C59`.
+
+</details>
+
+<details id="mc-stk-err-1862">
+<summary><code>MC-STK-ERR-1862 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1862`; producer ID: `FIELDS-RECON-006`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L636) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Restore the missing verb in the let-construction introducing the nonconstant meromorphic function.
+- Adverse evidence: Keep the compact Riemann surface, the nonconstant condition, both function fields and the algebraicity claim unchanged.
+
+### Change 1: `MC-STK-ERR-1862-OP1`
+
+Pinned-official lines `636-636`; bytes `24125:24163`.
+
+````diff
+- $f \in \mathbf{C}(X) - \mathbf{C}$ any
++ $f \in \mathbf{C}(X) - \mathbf{C}$ be any
+````
+
+Original SHA-256 `91846BF5B1890A44FA04B70A43DE7B5A5FA55C9C5604DB9AD7F62B8A0DA23AA1`; replacement SHA-256 `BC78E9E790923711B19DD0E6ED8E9372FB67345305148EB4E24732F17A3756BA`.
+
+</details>
+
+<details id="mc-stk-err-1863">
+<summary><code>MC-STK-ERR-1863 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1863`; producer ID: `FIELDS-RECON-007`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L712) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Make the grammatical subject the numbers that receive the name algebraic numbers, matching the existing plural verb.
+- Adverse evidence: The relative clause still specifies exactly the complex numbers algebraic over the rational field. The next assertion that these numbers form a field and all three examples remain unchanged.
+
+### Change 1: `MC-STK-ERR-1863-OP1`
+
+Pinned-official lines `712-712`; bytes `26834:26879`.
+
+````diff
+- The set of complex numbers that are algebraic
++ The complex numbers that are algebraic
+````
+
+Original SHA-256 `D94A9370E33502D42DDD347E3AD74CFFECF8AE8226DCB7A963D1EFD5FEE8B4E7`; replacement SHA-256 `56F0AE541A40CDB5EE4265CE94E5AA72FD8F7CA0BA06A322C52EC2D2DA941AE8`.
+
+</details>
+
+<details id="mc-stk-err-1864">
+<summary><code>MC-STK-ERR-1864 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1864`; producer ID: `FIELDS-RECON-008`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L732) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The quotient belongs to the finite field k(alpha,beta) only when its denominator is nonzero. State that domain condition explicitly; each resulting generated subfield is finite over k and its generator is algebraic by the cited lemmas.
+- Adverse evidence: For beta=0 the expression alpha/beta is undefined. The sum, difference and product assertions remain valid without the new restriction, so the condition applies only to the quotient.
+
+### Change 1: `MC-STK-ERR-1864-OP1`
+
+Pinned-official lines `732-732`; bytes `27823:27868`.
+
+````diff
+- product and quotient of $\alpha$ and $\beta$.
++ product and, when $\beta \not = 0$, the quotient of $\alpha$ by $\beta$.
+````
+
+Original SHA-256 `D69428A97D2A1B04B24EAAFA7C6FCABA196F0034D220359A89038CDCC35C5F3E`; replacement SHA-256 `63D2D133A6A8E98ED481846A107ED523DA6B1EB5DA9CC10A34BAAAFC5B41DB5B`.
+
+</details>
+
+<details id="mc-stk-err-1865">
+<summary><code>MC-STK-ERR-1865 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1865`; producer ID: `FIELDS-RECON-009`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L748) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The finite set S of polynomial coefficients lies in E and generates k(S) between k and E. The subextension is therefore of E/k.
+- Adverse evidence: Keep the field F containing alpha, its algebraicity over k(S), both finite degrees and the tower-degree argument. Do not replace the coefficient field by a subfield of k.
+
+### Change 1: `MC-STK-ERR-1865-OP1`
+
+Pinned-official lines `748-748`; bytes `28328:28367`.
+
+````diff
+- finitely generated subextension of $k$.
++ finitely generated subextension of $E/k$.
+````
+
+Original SHA-256 `FE029C6FC7F9D5F40A4159A59D615E66B8BECD196FD52BE37FCEF1B433F3370B`; replacement SHA-256 `E48BDC4EA1A80C974EFA1CF6C134A92FE92E1BE6A000084FFD164D1540EC0B2B`.
+
+</details>
+
+<details id="mc-stk-err-1866">
+<summary><code>MC-STK-ERR-1866 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1866`; producer ID: `FIELDS-RECON-010`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L808) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Insert the missing verb introducing the algebraic field extension.
+- Adverse evidence: No finiteness hypothesis is added to the extension. The arbitrary algebraic case and the F-algebra endomorphism remain in the statement.
+
+### Change 1: `MC-STK-ERR-1866-OP1`
+
+Pinned-official lines `808-808`; bytes `30797:30829`.
+
+````diff
+- Let $E/F$ an algebraic extension
++ Let $E/F$ be an algebraic extension
+````
+
+Original SHA-256 `068D76736D62796307DCBCCBA2BB524076A9DD4AA92387C1DDC4447CB574E98C`; replacement SHA-256 `1541BE40A543D31892A05F1D2C9840648EC36B4D67A355ECC5EC099086DABD21`.
+
+</details>
+
+<details id="mc-stk-err-1867">
+<summary><code>MC-STK-ERR-1867 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1867`; producer ID: `FIELDS-RECON-011`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L897) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Separate the two independent clauses with a semicolon.
+- Adverse evidence: Preserve the complex field, the attribution to Liouville and the exact reference to the later proof.
+
+### Change 1: `MC-STK-ERR-1867-OP1`
+
+Pinned-official lines `897-897`; bytes `34000:34026`.
+
+````diff
+- complex analysis, we shall
++ complex analysis; we shall
+````
+
+Original SHA-256 `69C244A3ECF6E77ED27665EA4E0A72D42E621CA72B2E8D3B294828E59EA9A833`; replacement SHA-256 `EAE228A01B1776D3EF22FAA70DD820085F43A6AD372AE16715CF8B9A555D997E`.
+
+</details>
+
+<details id="mc-stk-err-1868">
+<summary><code>MC-STK-ERR-1868 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1868`; producer ID: `FIELDS-RECON-012`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L550-L581) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The statement permits arbitrary towers, but the original proof chooses finite bases without a finiteness hypothesis. The added direct-sum map is proved surjective and injective with every coefficient support explicit, establishing the stated cardinal degree formula for arbitrary extensions.
+- Adverse evidence: Retain the complete original finite-basis calculation and its coefficients. Do not restrict the theorem to finite extensions or suppress the infinite cardinal case.
+
+### Change 1: `MC-STK-ERR-1868-OP1`
+
+Pinned-official lines `550-550`; bytes `21037:21104`.
+
+````diff
+- Let $\alpha_1, \ldots, \alpha_n \in F$ be an $E$-basis for $F$. Let
++ First suppose both degrees on the right are finite.
++ Let $\alpha_1, \ldots, \alpha_n \in F$ be an $E$-basis for $F$. Let
+````
+
+Original SHA-256 `9E0BD0288782EBA608832103723634FB94254C77CC8B6638B96D23E86510D18F`; replacement SHA-256 `89A8141263993EC6EFA9E559E4A9B51C76EF607199FF24EEE1A2773382C22698`.
+
+### Change 2: `MC-STK-ERR-1868-OP2`
+
+Pinned-official lines `580-581`; bytes `22131:22216`.
+
+````diff
+- Then $k$-linear independence of the $\{\beta_j\}$ shows that the
+- $c_{ij}$ all vanish.
++ Then $k$-linear independence of the $\{\beta_j\}$ shows that the
++ $c_{ij}$ all vanish.
++
++ \medskip\noindent
++ For arbitrary extensions, choose an $E$-basis
++ $\{\alpha_i\}_{i \in I}$ of $F$ and a $k$-basis
++ $\{\beta_j\}_{j \in J}$ of $E$. Define the $k$-linear map
++ $$
++ \Phi : \bigoplus_{(i,j) \in I \times J} k \longrightarrow F,
++ \qquad
++ (c_{ij}) \longmapsto \sum_{(i,j) \in I \times J} c_{ij}\alpha_i\beta_j.
++ $$
++ The direct sum means that the family $(c_{ij})$ has finite support,
++ so the displayed sum is defined. For $f \in F$, write
++ $f = \sum_{i \in I_0} a_i\alpha_i$ with $I_0 \subset I$ finite and
++ $a_i \in E$. For every $i \in I_0$, write
++ $a_i = \sum_{j \in J_i} b_{ij}\beta_j$ with $J_i \subset J$ finite
++ and $b_{ij} \in k$. Then
++ $$
++ f = \sum_{i \in I_0}\sum_{j \in J_i} b_{ij}\alpha_i\beta_j,
++ $$
++ so $\Phi$ is surjective. If a finitely supported family $(c_{ij})$
++ has image zero, regrouping its finite sum gives
++ $$
++ 0 = \sum_{i \in I}\alpha_i
++ \left(\sum_{j \in J} c_{ij}\beta_j\right).
++ $$
++ The $E$-linear independence of the $\alpha_i$ makes each inner sum
++ zero. The $k$-linear independence of the $\beta_j$ then gives
++ $c_{ij} = 0$ for every $(i,j)$, so $\Phi$ is injective.
++ Thus the products form a $k$-basis indexed by $I \times J$,
++ and $[F:k] = |I \times J| = |I||J| = [F:E][E:k]$,
++ including when a degree is infinite. The original finite-degree
++ calculation is the case $I = \{1,\ldots,n\}$ and $J = \{1,\ldots,m\}$.
+````
+
+Original SHA-256 `D907B270EE5C679A82A6835BAA932FAC37055C5F1FA08BF9CD7E16FDF5B69D34`; replacement SHA-256 `4B46497F845CC62EFA2C59C87C8FBF3B7E9B339009EAECB26609378244347F0E`.
+
+</details>
+
+<details id="mc-stk-err-1869">
+<summary><code>MC-STK-ERR-1869 — fields.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1869`; producer ID: `FIELDS-RECON-013`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L818) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Choose the annihilating polynomial nonzero, as guaranteed by algebraicity, so that its distinct roots form a finite set and the generated intermediate field is finite.
+- Adverse evidence: The zero polynomial also vanishes at alpha but has every element of E as a root. No restriction on the arbitrary algebraic extension E/F is justified or needed.
+
+### Change 1: `MC-STK-ERR-1869-OP1`
+
+Pinned-official lines `818-818`; bytes `31183:31220`.
+
+````diff
+- polynomial such that $P(\alpha) = 0$.
++ nonzero polynomial such that $P(\alpha) = 0$.
+````
+
+Original SHA-256 `06C7E66F6A5F23C70D38571BC6A39F51AD3DC26A77C9F849BA8C7D632041232C`; replacement SHA-256 `7FE8F21583D98656FFBF018A8FD21A5CE91C63E72080C9726C2060D67661678D`.
+
+</details>
+
+<details id="mc-stk-err-1870">
+<summary><code>MC-STK-ERR-1870 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1870`; producer ID: `FIELDS-RECON-014`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L991-L992) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Restore the prepositions naming the indexed extension of the fixed field F.
+- Adverse evidence: Retain the triple, the subset of S, both field-operation maps and the exact partial order.
+
+### Change 1: `MC-STK-ERR-1870-OP1`
+
+Pinned-official lines `991-991`; bytes `37821:37840`.
+
+````diff
+- we will denote $E_i
++ we will denote by $E_i
+````
+
+Original SHA-256 `BD25DFD1A94D70BBAD7B26464566A441DC642490D9521CFABBC0E1F4A940EF24`; replacement SHA-256 `C66475338F74467316D02A6F29E9DD2CBDBDFA2A1C99D4A7701747B0F27536AB`.
+
+### Change 2: `MC-STK-ERR-1870-OP2`
+
+Pinned-official lines `992-992`; bytes `37885:37907`.
+
+````diff
+- field extension to $F$
++ field extension of $F$
+````
+
+Original SHA-256 `A4A341E2A1BB59345072713F0F42739237EEF03CE187A53E08B5C1B20746E9B4`; replacement SHA-256 `9C25D2E8C9EB40E212EA50F06F64136867AB2AE4F0280AEDF69986D2E82298EA`.
+
+</details>
+
+<details id="mc-stk-err-1871">
+<summary><code>MC-STK-ERR-1871 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1871`; producer ID: `FIELDS-RECON-015`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1003) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Correct the participial adjective and indefinite article in the Zorn argument.
+- Adverse evidence: This grammatical repair alone does not repair the empty-chain case; that independent source issue is recorded separately.
+
+### Change 1: `MC-STK-ERR-1871-OP1`
+
+Pinned-official lines `1003-1003`; bytes `38468:38519`.
+
+````diff
+- every totally order subset of $I$ has a upper bound
++ every totally ordered subset of $I$ has an upper bound
+````
+
+Original SHA-256 `CC99E1BC614D76CD4158EAB5A725A82AEBDE7C9598E132835FE54D6566B06443`; replacement SHA-256 `BC9EBF22A80A98D057420C6B91C30AD58F7E76514AACF26361FFAA694B0C0E24`.
+
+</details>
+
+<details id="mc-stk-err-1872">
+<summary><code>MC-STK-ERR-1872 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1872`; producer ID: `FIELDS-RECON-016`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1040) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Restore the consequence marker after choosing alpha outside the maximal intermediate field.
+- Adverse evidence: Keep the algebraicity statement over E and the preceding and subsequent maps unchanged.
+
+### Change 1: `MC-STK-ERR-1872-OP1`
+
+Pinned-official lines `1040-1040`; bytes `40425:40450`.
+
+````diff
+- The $\alpha$ is algebraic
++ Then $\alpha$ is algebraic
+````
+
+Original SHA-256 `EC96EF2CD87316C1B88244CAF6EB0EAE94DD1673CE2F1AB6B7E809FD5D082BBE`; replacement SHA-256 `7CB0B1E5776A317ADC11832B42F337524A33DB7B6583F5C538CEE437860CBC8F`.
+
+</details>
+
+<details id="mc-stk-err-1873">
+<summary><code>MC-STK-ERR-1873 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1873`; producer ID: `FIELDS-RECON-018`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1081) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The roots belong to the algebraically closed field K fixed in this paragraph; lowercase k is not introduced there.
+- Adverse evidence: Retain each root, its multiplicity, the polynomial ring K[x] and the scalar c.
+
+### Change 1: `MC-STK-ERR-1873-OP1`
+
+Pinned-official lines `1081-1081`; bytes `41886:41900`.
+
+````diff
+- \alpha_n \in k
++ \alpha_n \in K
+````
+
+Original SHA-256 `077855983CC325DA9F4FFB8A14B279342CE909BA76D04ABCE5884F6973D279FE`; replacement SHA-256 `4400C4A66EB755213B0310331C36B3A0761531359DD72B8F15DD498CC75D4C24`.
+
+</details>
+
+<details id="mc-stk-err-1874">
+<summary><code>MC-STK-ERR-1874 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1874`; producer ID: `FIELDS-RECON-019`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1081) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: For nonzero P the product of the displayed monic factors has leading coefficient 1, so the multiplier c is the leading coefficient. The constant coefficient is c times the product of all negative roots.
+- Adverse evidence: Do not discard the factor c, any sign, any root or multiplicity. The zero-polynomial case is addressed by a separate linked source qualification.
+
+### Change 1: `MC-STK-ERR-1874-OP1`
+
+Pinned-official lines `1081-1081`; bytes `41845:41858`.
+
+````diff
+- constant term
++ leading coefficient
+````
+
+Original SHA-256 `6E9B3F1165B01D05F7339D712CB5145F571C31883B8ABC9E07236A22DAD499CF`; replacement SHA-256 `E590B9F3079995E603A80E75EF157A359E793692732DA6468E89EEDA4E55AF8E`.
+
+</details>
+
+<details id="mc-stk-err-1875">
+<summary><code>MC-STK-ERR-1875 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1875`; producer ID: `FIELDS-RECON-020`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1192) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Capitalize the opening word of the second complete sentence in the enumeration.
+- Adverse evidence: The hypotheses and separability assertion stay unchanged.
+
+### Change 1: `MC-STK-ERR-1875-OP1`
+
+Pinned-official lines `1192-1192`; bytes `46461:46473`.
+
+````diff
+- \item if $K$
++ \item If $K$
+````
+
+Original SHA-256 `DB0FF9E1A3891F3EA9C23D36A446FC18AA91A2CBD13AAE9EBBDE2157963090C6`; replacement SHA-256 `20E70A43A4E6427E6D35C391411579F0B3C885E5C2135D30AAA6DAD789B691F7`.
+
+</details>
+
+<details id="mc-stk-err-1876">
+<summary><code>MC-STK-ERR-1876 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1876`; producer ID: `FIELDS-RECON-021`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1228) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Use the plural sets for the two root sets compared by the Frobenius bijection, preserving the plural verb have.
+- Adverse evidence: The source proof gives alpha -> alpha^p as a bijection between the two sets, including constant and zero polynomials. Replacing have with has would leave a single set said to have the same cardinality without its comparison set.
+
+### Change 1: `MC-STK-ERR-1876-OP1`
+
+Pinned-official lines `1228-1228`; bytes `47976:48012`.
+
+````diff
+- the set of roots of $P$ and $P(x^p)$
++ the sets of roots of $P$ and $P(x^p)$
+````
+
+Original SHA-256 `045039DD03FDCAC2698F872C397397BC76B69E3BFD715BA3BBBA15BBC097ED5F`; replacement SHA-256 `DA62011804CD8765C1ED4D33018DB9463C8CD365790F56D9C6EED4FBF37EBC70`.
+
+</details>
+
+<details id="mc-stk-err-1877">
+<summary><code>MC-STK-ERR-1877 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1877`; producer ID: `FIELDS-RECON-022`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1270) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Correct the finite verb in the declarative introduction of the situation.
+- Adverse evidence: Retain the finite extension, every generator and each intermediate field.
+
+### Change 1: `MC-STK-ERR-1877-OP1`
+
+Pinned-official lines `1270-1270`; bytes `49807:49826`.
+
+````diff
+- Here $F$ be a field
++ Here $F$ is a field
+````
+
+Original SHA-256 `75040159C6C0B157D2FFDA07F2C5E4056D6B00B5EB7EBFBFEFD83252AC418C02`; replacement SHA-256 `47AEA1742FDD969E8B12985E88E715548B1308108E16C60CDD29F36C2708FA9C`.
+
+</details>
+
+<details id="mc-stk-err-1878">
+<summary><code>MC-STK-ERR-1878 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1878`; producer ID: `FIELDS-RECON-023`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1277) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Add the missing preposition in the naming construction.
+- Adverse evidence: The polynomial remains minimal over K_{i-1} and the algebraic closure remains fixed.
+
+### Change 1: `MC-STK-ERR-1878-OP1`
+
+Pinned-official lines `1277-1277`; bytes `50061:50073`.
+
+````diff
+- Denote $P_i$
++ Denote by $P_i$
+````
+
+Original SHA-256 `61F5B036B2A2FD22F1629E44AC3C27BFEFCA4521A012A6BC2ECDCC2845C544B7`; replacement SHA-256 `E41C9AFC3E92DCDD3A6FAD4F5A577C2AE005B6B641E777CA0100D880E4FD1755`.
+
+</details>
+
+<details id="mc-stk-err-1879">
+<summary><code>MC-STK-ERR-1879 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1879`; producer ID: `FIELDS-RECON-025`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1313-L1320) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Correct both misspellings of homomorphism.
+- Adverse evidence: Preserve the existence and uniqueness clauses, quotient presentation and extension conditions.
+
+### Change 1: `MC-STK-ERR-1879-OP1`
+
+Pinned-official lines `1313-1313`; bytes `51537:51547`.
+
+````diff
+- homorphism
++ homomorphism
+````
+
+Original SHA-256 `E301FA7BF84DA1CC8D807D59A094D172617706296DE078B3CA4165D7229BF8B8`; replacement SHA-256 `B83E27E8F16390F124EAE6FC4DFA3277489581FD0F42F5F31A3F27744B4EAEC9`.
+
+### Change 2: `MC-STK-ERR-1879-OP2`
+
+Pinned-official lines `1320-1320`; bytes `51886:51896`.
+
+````diff
+- homorphism
++ homomorphism
+````
+
+Original SHA-256 `E301FA7BF84DA1CC8D807D59A094D172617706296DE078B3CA4165D7229BF8B8`; replacement SHA-256 `B83E27E8F16390F124EAE6FC4DFA3277489581FD0F42F5F31A3F27744B4EAEC9`.
+
+</details>
+
+<details id="mc-stk-err-1880">
+<summary><code>MC-STK-ERR-1880 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1880`; producer ID: `FIELDS-RECON-028`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1379) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Restore the past participle in the reference to the part already established.
+- Adverse evidence: The equality and strict-inequality arguments and their order remain unchanged.
+
+### Change 1: `MC-STK-ERR-1880-OP1`
+
+Pinned-official lines `1379-1379`; bytes `54213:54232`.
+
+````diff
+- already prove above
++ already proved above
+````
+
+Original SHA-256 `5332ED3D2B77CB05D9C21A8D326774DAFE1CB56F138B1ABC3B8F27B6E1586433`; replacement SHA-256 `A93C729165B54E3C64FAE95704BE29F6027CB1E22FC02B4609C68B71CDCD33EB`.
+
+</details>
+
+<details id="mc-stk-err-1881">
+<summary><code>MC-STK-ERR-1881 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1881`; producer ID: `FIELDS-RECON-029`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1473) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Bind the omitted index of the vanishing coefficient.
+- Adverse evidence: Retain every coefficient, character and subsequent equality in the induction proof.
+
+### Change 1: `MC-STK-ERR-1881-OP1`
+
+Pinned-official lines `1473-1473`; bytes `57746:57760`.
+
+````diff
+- for some, then
++ for some $i$, then
+````
+
+Original SHA-256 `6CA74717BF91B4C43035E269229E45E3AE84842BA08C0F313009452611952E8E`; replacement SHA-256 `1D5BD4F53EBCA3E425FCA624A41DE0F888F7780594A8B0BD17E1FD101B159421`.
+
+</details>
+
+<details id="mc-stk-err-1882">
+<summary><code>MC-STK-ERR-1882 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1882`; producer ID: `FIELDS-RECON-030`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1000) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The union of an empty chain is not a field containing F. Give that chain the existing element F as an upper bound, and apply the union construction to nonempty chains.
+- Adverse evidence: The set I already contains F with its given addition and multiplication. Every nonempty chain union retains both field operations and remains algebraic because each element occurs in one member.
+
+### Change 1: `MC-STK-ERR-1882-OP1`
+
+Pinned-official lines `1000-1000`; bytes `38251:38319`.
+
+````diff
+- Let $T \subset I$ be a totally ordered subset. Then it is clear that
++ The empty totally ordered subset has an upper bound given by the
++ field $F$ with its given operations. Let $T \subset I$ be a nonempty
++ totally ordered subset. Then it is clear that
+````
+
+Original SHA-256 `DA8C1A9178A1FC3505F7ABEFB4BBB1F76A9888D007F83C0AFB4A0B6E5ADF8446`; replacement SHA-256 `C017F706815A31E5A63CBDC27E0AF76F86446D392C0459CF59F3294C8A7DA56F`.
+
+</details>
+
+<details id="mc-stk-err-1883">
+<summary><code>MC-STK-ERR-1883 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1883`; producer ID: `FIELDS-RECON-031`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1034-L1035) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Treat the empty chain separately using the prescribed embedding of F in its algebraic closure.
+- Adverse evidence: The union map remains the exact map used for every nonempty chain. Its restriction compatibility, domain inside M and F-linearity are unchanged.
+
+### Change 1: `MC-STK-ERR-1883-OP1`
+
+Pinned-official lines `1034-1034`; bytes `40014:40079`.
+
+````diff
+- $\varphi'|_E = \varphi$. If $T = \{(E_t,  \varphi_t)\} \subset I$
++ $\varphi'|_E = \varphi$. The empty chain has the upper bound
++ $(F, F \hookrightarrow \overline{F})$. If
++ $T = \{(E_t, \varphi_t)\} \subset I$ is nonempty and
+````
+
+Original SHA-256 `80F1C217B7D9B4B68C9E4E65EB9FA0CBA88A010E56B713B594431F2E666D317A`; replacement SHA-256 `4AC2E7ACEAC1FBE326265B0DFC3CF5F85803D56ED52F6FE0F50BAD30419E981F`.
+
+### Change 2: `MC-STK-ERR-1883-OP2`
+
+Pinned-official lines `1035-1035`; bytes `40080:40113`.
+
+````diff
+- is a totally ordered subset, then
++ totally ordered, then
+````
+
+Original SHA-256 `762114CC7E03BF3521A28B84D4467200556834D371FC971CDBDCA4E481E1D985`; replacement SHA-256 `B8553B710399DEB27D6467442B4E70054351D6F61E0ECD2B25B0580FCB391009`.
+
+</details>
+
+<details id="mc-stk-err-1884">
+<summary><code>MC-STK-ERR-1884 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1884`; producer ID: `FIELDS-RECON-032`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1077) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The finite complete root factorization with a leading coefficient requires a nonzero polynomial. Constants are included with no roots and the empty product equal to 1.
+- Adverse evidence: The zero polynomial has no leading coefficient and every field element is a root, so it does not have the displayed finite list of roots counted with multiplicity. The following relatively-prime criterion still allows zero polynomials.
+
+### Change 1: `MC-STK-ERR-1884-OP1`
+
+Pinned-official lines `1077-1077`; bytes `41731:41760`.
+
+````diff
+- every polynomial $P \in K[x]$
++ every nonzero polynomial $P \in K[x]$
+````
+
+Original SHA-256 `AC042E27C2803E42AA1152C8D4F702E6097FAE088087FA4EB27DA7D3F8BBCF6E`; replacement SHA-256 `90BED5D30E058AEBCA7BF8C24BD26367C7C7F31ECC04124D8860DE2AAF0FA1E1`.
+
+</details>
+
+<details id="mc-stk-err-1885">
+<summary><code>MC-STK-ERR-1885 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1885`; producer ID: `FIELDS-RECON-033`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1146-L1149) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The original contradiction used a strict degree bound for a generator of (P,P prime) without excluding the zero derivative. Split off that actual second case and prove the contradiction when the derivative is nonzero.
+- Adverse evidence: In positive characteristic irreducible polynomials with zero derivative exist. The repaired proof keeps that case and all subsequent coefficient formulas and characteristic-p arguments.
+
+### Change 1: `MC-STK-ERR-1885-OP1`
+
+Pinned-official lines `1146-1149`; bytes `44363:44614`.
+
+````diff
+- Note that $P'$ has degree $< \deg(P)$. Hence if $P$ and $P'$ are not relatively
+- prime, then $(P, P') = (R)$ where $R$ is a polynomial of degree $< \deg(P)$
+- contradicting the irreducibility of $P$. This proves we have the dichotomy
+- between (1) and (2).
++ If $P' = 0$, we are in case (2). Otherwise
++ $\deg(P') < \deg(P)$. If $P$ and $P'$ were not relatively prime,
++ write $(P, P') = (R)$. Then $R$ is a nonunit divisor of $P$,
++ so irreducibility gives $(R) = (P)$. But $R$ also divides the
++ nonzero polynomial $P'$, which would force
++ $\deg(P) = \deg(R) \leq \deg(P') < \deg(P)$, a contradiction.
++ Thus $P$ and $P'$ are relatively prime, and we are in case (1).
+````
+
+Original SHA-256 `F56200BB3529CA095C9C9AA571566E569EB0FAFB4643BD403B8F4237A8AAD4D3`; replacement SHA-256 `5E26B6A4B23440215EC2EF58065636385431853C5BDCAC952938E66377E13C77`.
+
+</details>
+
+<details id="mc-stk-err-1886">
+<summary><code>MC-STK-ERR-1886 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1886`; producer ID: `FIELDS-RECON-034`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1202) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: A nonconstant common factor over E contradicts the Bezout identity for the separable polynomial P over F. Explicitly transport that unchanged identity by F[x] -> E[x], then apply the dichotomy to Q over its actual coefficient field E.
+- Adverse evidence: P need not remain irreducible over E, so the preceding lemma cannot be applied to P there. Retain P=QR and the full derivative P prime=Q prime R+Q R prime; the correction proves the missing coefficient-field comparison.
+
+### Change 1: `MC-STK-ERR-1886-OP1`
+
+Pinned-official lines `1202-1202`; bytes `46900:46954`.
+
+````diff
+- hence $P' = 0$ by the lemma. This proves (1). Part (2)
++ in $E[x]$. Since $P$ is separable over $F$, there are
++ $A, B \in F[x]$ such that $AP + BP' = 1$. The same identity
++ holds in $E[x]$, so the nonconstant polynomial $Q$ would divide $1$,
++ a contradiction. Hence $Q' \not = 0$; as $Q$ is irreducible over $E$,
++ the lemma shows that $Q$ is separable. This proves (1). Part (2)
+````
+
+Original SHA-256 `5483892976D2EF2FD1F1CC7334A15B106716F9F3AE3A880D12D0A8764BC81065`; replacement SHA-256 `696812FCB9F6C3BEFCD84E5B6B11DA0AD79639EFB6F1BA9BC3F04A5998BED4B2`.
+
+</details>
+
+<details id="mc-stk-err-1887">
+<summary><code>MC-STK-ERR-1887 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1887`; producer ID: `FIELDS-RECON-037`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1658) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The definition allows only the identity purely inseparable extension in characteristic zero. Treat its elements first, then use the given p-power identities only in positive characteristic.
+- Adverse evidence: No elements outside k become purely inseparable in characteristic zero. Keep q, q prime, q double prime and the displayed additive identity in positive characteristic.
+
+### Change 1: `MC-STK-ERR-1887-OP1`
+
+Pinned-official lines `1658-1658`; bytes `64542:64579`.
+
+````diff
+- Let $p$ be the characteristic of $k$.
++ In characteristic zero the elements in question are exactly those of $k$,
++ so the assertion follows. Assume henceforth that the characteristic of $k$
++ is a prime $p > 0$.
+````
+
+Original SHA-256 `FA70169084C17C143928DAB54A1AE5611DF16A9407A967ACA58A8875762A9786`; replacement SHA-256 `915C084A31802D59A0A46E449E2D180E7E9A2120E6DDBC35223084330F816DD7`.
+
+</details>
+
+<details id="mc-stk-err-1888">
+<summary><code>MC-STK-ERR-1888 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1888`; producer ID: `FIELDS-RECON-038`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1721) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The cited irreducible-polynomial lemma gives a separable irreducible polynomial P; algebraic is a property of the field element, not the missing polynomial description.
+- Adverse evidence: Retain the p-power q, the original minimal polynomial P(x^q), and the consequent separability of alpha^q.
+
+### Change 1: `MC-STK-ERR-1888-OP1`
+
+Pinned-official lines `1721-1721`; bytes `67295:67323`.
+
+````diff
+- with $P$ separable algebraic
++ with $P$ a separable irreducible polynomial
+````
+
+Original SHA-256 `18A73522F5044AE2D8806855533B035F0BC5C61652C6CEBCB77CB4FE497AEB01`; replacement SHA-256 `7A0769027C7FAF0DC336F5E9A85DCB19AC6809FFEA8323BDCD558FFCB4423EB0`.
+
+</details>
+
+<details id="mc-stk-err-1889">
+<summary><code>MC-STK-ERR-1889 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1889`; producer ID: `FIELDS-RECON-041`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1853-L1858) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: A nonempty family supplies a member in which the minimal polynomial splits. The displayed complete proof puts each root, with its original multiplicity, into every member and hence into the intersection.
+- Adverse evidence: For an empty family the ambient intersection is M, which need not be normal. Take F=Q and M=Q(c), where c is the real cube root of 2. The polynomial x^3-2 is irreducible: its only possible rational roots are 1,-1,2,-2 and none is a root. Its other factor x^2+c x+c^2 has negative discriminant -3c^2, so it has nonreal roots outside the real field M. Thus M/Q is not normal. The sole source use at fields.tex:2116 is a two-member intersection and remains valid; a bounded root-TeX search found no other uses.
+
+### Change 1: `MC-STK-ERR-1889-OP1`
+
+Pinned-official lines `1853-1853`; bytes `71991:72033`.
+
+````diff
+- $M/E_i/F$, $i \in I$ be subextensions with
++ $M/E_i/F$, $i \in I$, be a nonempty family of subextensions with
+````
+
+Original SHA-256 `AAB98030F6CD8413962D3DF93D57AB17060CF1FB63860A70775287FF979368B4`; replacement SHA-256 `D497297C69C3475E018243266C8A42ED21E252F1E9A77D4D9BC6CC3A725A5DCF`.
+
+### Change 2: `MC-STK-ERR-1889-OP2`
+
+Pinned-official lines `1858-1858`; bytes `72116:72144`.
+
+````diff
+- Direct from the definitions.
++ Put $E = \bigcap_{i \in I} E_i$. Intersections of subfields of $M$
++ are subfields, and $E$ contains $F$ and is algebraic over $F$.
++ For $\alpha \in E$, let $P \in F[x]$ be its minimal polynomial.
++ Choose $i_0 \in I$. Normality of $E_{i_0}/F$ gives a factorization
++ $P = c\prod_{j=1}^d(x-\alpha_j)$ with $c \in F^*$ and
++ $\alpha_j \in E_{i_0} \subset M$, retaining multiplicities.
++ For every $i \in I$, the same polynomial splits over $E_i$ because
++ $\alpha \in E_i$. Each $\alpha_j$ is then a root of that factorization
++ in the field $M$, so $\alpha_j$ is one of its roots in $E_i$.
++ Thus every $\alpha_j$ lies in every $E_i$, and the displayed
++ factorization lies in $E[x]$. This proves that $E/F$ is normal.
+````
+
+Original SHA-256 `929BAB0CB752915591A4D5F9B8B64CB7E428AAACAF1015DC2B985F134F40068F`; replacement SHA-256 `0C4F4252E1F81819C9C648E6683360B8894A629E25AB4838211E3DB128C15493`.
+
+</details>
+
+<details id="mc-stk-err-1890">
+<summary><code>MC-STK-ERR-1890 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1890`; producer ID: `FIELDS-RECON-043`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L2127) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Insert the missing preposition naming the field whose normal closure is taken.
+- Adverse evidence: The extension K/E, base F and reference to the construction stay unchanged.
+
+### Change 1: `MC-STK-ERR-1890-OP1`
+
+Pinned-official lines `2127-2127`; bytes `82066:82093`.
+
+````diff
+- normal closure $E$ over $F$
++ normal closure of $E$ over $F$
+````
+
+Original SHA-256 `A4FEB13134DC8F3FBE12BAAD9667C3E1AAE7EB9D7809AAB14C509A08843F69CE`; replacement SHA-256 `724315AC83D0E1BC7338153E1FFB4946267F7DDF369180A7CB1A8FE28D9A37A9`.
+
+</details>
+
+<details id="mc-stk-err-1891">
+<summary><code>MC-STK-ERR-1891 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1891`; producer ID: `FIELDS-RECON-044`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L2241) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Treat the trivial group before choosing a first nontrivial invariant factor. For nontrivial A, exponent dividing n implies e_1 divides n; the hypothesis at d=e_1 gives e_1^r <= e_1, hence r=1 since e_1>1. Its order e_1 then divides n.
+- Adverse evidence: For A=0 the empty invariant-factor list has r=0 and e_1 is undefined. The new first case proves the actual conclusion without altering the nontrivial calculation.
+
+### Change 1: `MC-STK-ERR-1891-OP1`
+
+Pinned-official lines `2241-2241`; bytes `85848:85897`.
+
+````diff
+- The structure of finite abelian groups shows that
++ If $A = 0$, then $A$ is cyclic of order $1$, which divides $n$.
++ Suppose $A \not = 0$. The structure of finite abelian groups shows that
+````
+
+Original SHA-256 `38D71E36F2E407E5DC1DCC407A898D65938F6FDDA82DD5929B9091E41C0D97BA`; replacement SHA-256 `FF1387A0E8423D7C0C1CE49E95DB2A6197914287905CE06B5C239C78983B2334`.
+
+</details>
+
+<details id="mc-stk-err-1892">
+<summary><code>MC-STK-ERR-1892 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1892`; producer ID: `FIELDS-RECON-047`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1665) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Restrict the quotient to a nonzero denominator. For q double prime at least both p-powers, alpha^q double prime and beta^q double prime lie in k; the latter is nonzero, so their quotient also lies in k.
+- Adverse evidence: The restriction applies only to division and preserves the source sum, difference and product assertions and all p-powers.
+
+### Change 1: `MC-STK-ERR-1892-OP1`
+
+Pinned-official lines `1665-1665`; bytes `64924:64969`.
+
+````diff
+- product and quotient of $\alpha$ and $\beta$.
++ product and, when $\beta \not = 0$, the quotient of $\alpha$ by $\beta$.
+````
+
+Original SHA-256 `D69428A97D2A1B04B24EAAFA7C6FCABA196F0034D220359A89038CDCC35C5F3E`; replacement SHA-256 `63D2D133A6A8E98ED481846A107ED523DA6B1EB5DA9CC10A34BAAAFC5B41DB5B`.
+
+</details>
+
+<details id="mc-stk-err-1893">
+<summary><code>MC-STK-ERR-1893 — fields.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1893`; producer ID: `FIELDS-RECON-048`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L1757) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Separate the characteristic-zero identity case before invoking the finite purely inseparable tower lemma, whose hypothesis explicitly requires p>0.
+- Adverse evidence: Retain the earlier unique F-embedding correction and every positive-characteristic generator and count. No change to the arbitrary finite extension handled next.
+
+### Change 1: `MC-STK-ERR-1893-OP1`
+
+Pinned-official lines `1757-1757`; bytes `68522:68597`.
+
+````diff
+- We first prove this when $K/F$ is purely inseparable. Namely, we claim that
++ We first prove this when $K/F$ is purely inseparable. In characteristic
++ zero, $K = F$ and both sides of the asserted equality are $1$.
++ Assume for this paragraph that the characteristic is a prime $p > 0$.
++ Namely, we claim that
+````
+
+Original SHA-256 `35E5BB12B95B92C1CA368D750BDA108259631979A60E1B1EA5239F99A73BF035`; replacement SHA-256 `198D1E478BD994D1922359EA33F3E5DB5E14DC588EF0347C738B768C6FB7106B`.
+
+</details>
+
+<details id="mc-stk-err-1894">
+<summary><code>MC-STK-ERR-1894 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1894`; producer ID: `FIELDS-RECON-049`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L2576) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The extension, minimal polynomial and algebraic closure in the proof all have base K. Restore that same base in the separability assertion.
+- Adverse evidence: Lowercase k is not defined here; this is a base-field correction, not a renaming of the standing objects.
+
+### Change 1: `MC-STK-ERR-1894-OP1`
+
+Pinned-official lines `2576-2576`; bytes `98134:98158`.
+
+````diff
+- Since $L/k$ is separable
++ Since $L/K$ is separable
+````
+
+Original SHA-256 `297D3A980B5F67942C5B9F242570A5C4FF6147539E7B753525121E1F77599C1B`; replacement SHA-256 `197BDE2112BF21833785B162FC8BB8E33C0033D52826B9C9AB170A32F279C123`.
+
+</details>
+
+<details id="mc-stk-err-1895">
+<summary><code>MC-STK-ERR-1895 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1895`; producer ID: `FIELDS-RECON-051`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L2777) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The orbit polynomial has coefficients in K^G, and K=K^G(alpha). Its degree bounds the degree of alpha over K^G, which is [K:K^G].
+- Adverse evidence: The degree over K is one and cannot supply the stated bound on [K:K^G]. Retain the faithful action and automorphism inequality.
+
+### Change 1: `MC-STK-ERR-1895-OP1`
+
+Pinned-official lines `2777-2777`; bytes `105372:105394`.
+
+````diff
+- over $K$. However, the
++ over $K^G$. However, the
+````
+
+Original SHA-256 `51B10311C149855189E6CB269B8845D141DD19CFBEFA20C76FDFD84D6FD05023`; replacement SHA-256 `66CAF521C3397AE267B6F590C482D80ED14828F7229389BF0DCF3FFC0BFCFC2D`.
+
+</details>
+
+<details id="mc-stk-err-1896">
+<summary><code>MC-STK-ERR-1896 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1896`; producer ID: `FIELDS-RECON-052`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L2779) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The primitive element in this paragraph generates K over K^G; L was the auxiliary finite subfield in the preceding reduction.
+- Adverse evidence: The action is assumed faithful on K. Do not silently replace the tower or its fixed base.
+
+### Change 1: `MC-STK-ERR-1896-OP1`
+
+Pinned-official lines `2779-2779`; bytes `105454:105471`.
+
+````diff
+- $K^G(\alpha) = L$
++ $K^G(\alpha) = K$
+````
+
+Original SHA-256 `09A24346459513B34F2E941F255B23CA7901357FAE7594F82CE03314CEA8DD38`; replacement SHA-256 `E189A8DD1A7705FCAAD7953098563A4F279A52CE91C6FC9537FFC7EA7C43E990`.
+
+</details>
+
+<details id="mc-stk-err-1897">
+<summary><code>MC-STK-ERR-1897 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1897`; producer ID: `FIELDS-RECON-054`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3098) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Bind s to every element of the finite set S. Equality of restrictions c(h)=c(g) on E then proves h belongs to the displayed neighbourhood since S is contained in E.
+- Adverse evidence: The empty set S gives all of G, as required. Do not impose nonemptiness or change the pointwise-convergence topology.
+
+### Change 1: `MC-STK-ERR-1897-OP1`
+
+Pinned-official lines `3098-3098`; bytes `118141:118182`.
+
+````diff
+- $U_S(g) = \{g' \in G \mid g'(s) = g(s)\}$
++ $U_S(g) = \{g' \in G \mid g'(s) = g(s)\text{ for all }s\in S\}$
+````
+
+Original SHA-256 `1430093A6D781973A26C8CA14FB84A03D3553090BDE34C3EFE026804695E6075`; replacement SHA-256 `4CA00E39D15CE310B275A2321894D8573E289BDE519B3D022FB1C701522A49D7`.
+
+</details>
+
+<details id="mc-stk-err-1898">
+<summary><code>MC-STK-ERR-1898 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1898`; producer ID: `FIELDS-RECON-056`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3284) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Use the same compound noun as the definition and the proof below.
+- Adverse evidence: The tower L/L prime/K, divisibility condition and conclusion are unchanged.
+
+### Change 1: `MC-STK-ERR-1898-OP1`
+
+Pinned-official lines `3284-3284`; bytes `125309:125326`.
+
+````diff
+- any sub extension
++ any subextension
+````
+
+Original SHA-256 `5786A01F71305ABDDDD395AA2F0E2893AEDA7A3322F4554BFC2580E3497F05BB`; replacement SHA-256 `CA47268315948F8804197F6B229638F36B8D4F971CABDA280411B76DC27D7A70`.
+
+</details>
+
+<details id="mc-stk-err-1899">
+<summary><code>MC-STK-ERR-1899 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1899`; producer ID: `FIELDS-RECON-057`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3288-L3309) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Each of the d factors contributes -zeta_i alpha to the constant term. Retain (-1)^d in that equality and in the solved expression for alpha^d. Treat e=1 first so the later division by alpha^d is defined in the remaining case. Since zeta is a product of eth roots it is itself an eth root in L and hence in K.
+- Adverse evidence: The field-membership conclusion survives the missing sign, but the displayed equality does not in odd degree away from characteristic two. The statement also permits alpha=0 only when e=1; handle that case without narrowing its hypotheses.
+
+### Change 1: `MC-STK-ERR-1899-OP1`
+
+Pinned-official lines `3288-3288`; bytes `125408:125445`.
+
+````diff
+- Observe that for $d | e$ the subfield
++ If $e=1$, then $L=L'=K=K(\alpha)$ and the assertion holds with
++ $d=1$. Assume $e>1$. Since $L=K(\alpha)$ has degree $e$, we have
++ $\alpha\not =0$. Observe that for $d | e$ the subfield
+````
+
+Original SHA-256 `2BC05BCA8DA6106EC775FE285A17B1172A1676E7B669A0D34B8B007D71FDA76A`; replacement SHA-256 `C99068DA4D4FB729369FCD60D1157FA2E1F9E9F40DE88E8A30FB7C56E0694DD8`.
+
+### Change 2: `MC-STK-ERR-1899-OP2`
+
+Pinned-official lines `3305-3305`; bytes `126065:126121`.
+
+````diff
+- c = (\prod\nolimits_{i = 1, \ldots, d} \zeta_i) \alpha^d
++ c = (-1)^d (\prod\nolimits_{i = 1, \ldots, d} \zeta_i) \alpha^d
+````
+
+Original SHA-256 `CD55F9384AAE82D0E06274A87DBAFB20760DB2139D1AF47F9DF4BE4F1B57E34E`; replacement SHA-256 `3A4C582A8A4335A102D10220726C5FCB484EFD70F53CBCB7F1CD9F38332B60DE`.
+
+### Change 3: `MC-STK-ERR-1899-OP3`
+
+Pinned-official lines `3309-3309`; bytes `126284:126315`.
+
+````diff
+- $\alpha^d = \zeta^{-1}c \in L'$
++ $\alpha^d = (-1)^d\zeta^{-1}c \in L'$
+````
+
+Original SHA-256 `633ED8F028C8CF962843AFE7D1AD3EF79E34623DBABE8A61CE2068C2402BE764`; replacement SHA-256 `36635C94AA922CDF1FC5951A41E76EECADCC6706318B7F0B535363C7C2143243`.
+
+</details>
+
+<details id="mc-stk-err-1900">
+<summary><code>MC-STK-ERR-1900 — fields.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1900`; producer ID: `FIELDS-RECON-059`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3674-L3680) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Specify and prove the canonical multiplication map. The complete proof identifies the fixed field as the purely inseparable elements, proves the Galois upper extension and compositum equality, and proves linear disjointness through finite separable subextensions without assuming the original extension finite.
+- Adverse evidence: The source equality is conventional identification notation and does not make the theorem false. The substantive clarification gives the actual isomorphism and fills the omitted proof; the normality hypothesis and both embedded subfields are preserved. Three external uses were read and remain valid, including the reversed tensor factors via symmetry.
+
+### Change 1: `MC-STK-ERR-1900-OP1`
+
+Pinned-official lines `3674-3674`; bytes `140542:140582`.
+
+````diff
+- \item $E = E_{sep} \otimes_F E_{insep}$.
++ \item multiplication induces an isomorphism of $F$-algebras
++ $E_{sep}\otimes_F E_{insep}\longrightarrow E$,
++ $\sum_i a_i\otimes b_i\longmapsto\sum_i a_i b_i$.
+````
+
+Original SHA-256 `6977B09CC21874F238BEFDDC5431DA8EE7183235D1661B90F66EB40143F0DFB7`; replacement SHA-256 `54CEC01388E0529C4CA664E7452FFC61D6F94F9F71ED159CB86AFD04BD362226`.
+
+### Change 2: `MC-STK-ERR-1900-OP2`
+
+Pinned-official lines `3679-3680`; bytes `140626:140754`.
+
+````diff
+- We found the subfield $E_{sep}$ in Lemma \ref{lemma-separable-first}.
+- We set $E_{insep} = E^{\text{Aut}(E/F)}$. Details omitted.
++ Put $S = E_{sep}$, as constructed in Lemma \ref{lemma-separable-first},
++ and put $G = \text{Aut}(E/F)$ and $N = E^G$.
++ The extension $S/F$ is separable and $E/S$ is purely inseparable.
++ Moreover, $S/F$ is normal by Lemma \ref{lemma-separable-first-normal},
++ so $S/F$ is Galois. We will take $E_{insep} = N$.
++
++ \medskip\noindent
++ We first show that $N/F$ is purely inseparable. Let $a \in N$ and let
++ $f \in F[T]$ be its monic minimal polynomial. Since $E/F$ is normal,
++ every root $b$ of $f$ in an algebraic closure of $E$ belongs to $E$.
++ The map $F(a) \to E$ sending $a$ to $b$ is an $F$-embedding:
++ it is the map induced by evaluation at $b$ on $F[T]/(f)$.
++ By Lemma \ref{lemma-lift-maps} it extends to an element $g \in G$.
++ Thus $b = g(a) = a$. Consequently $f$ has just one distinct root.
++ In characteristic zero, $f$ is separable, so $\deg(f) = 1$ and $a \in F$.
++ In characteristic $p > 0$, Lemma \ref{lemma-irreducible-polynomials}
++ gives $f(T) = h(T^q)$ for $q = p^r$, $r \geq 0$, and a monic
++ separable irreducible polynomial $h \in F[T]$.
++ The map $x \mapsto x^q$ is bijective on an algebraically closed field:
++ existence follows by taking a root of $T^q-c$, and uniqueness follows
++ from $x^q-y^q=(x-y)^q$. Therefore $h$ has just one distinct root.
++ Since $h$ is separable and monic, $h(T)=T-c$ for some $c \in F$.
++ Hence $a^q=c \in F$. This proves the assertion in every characteristic.
++ Conversely, if $a \in E$ is purely inseparable over $F$, then every
++ $g \in G$ fixes $a$: in characteristic $p>0$, choose $q=p^r$ with
++ $a^q\in F$ and use $(g(a)-a)^q=g(a^q)-a^q=0$; in characteristic
++ zero the relevant elements already lie in $F$.
++ Thus $N$ consists exactly of the elements of $E$ purely inseparable
++ over $F$.
++
++ \medskip\noindent
++ The extension $E/N$ is normal by Lemma \ref{lemma-normal-goes-up}.
++ To prove separability, let $a \in E$. The orbit $G\cdot a$ is finite,
++ since its elements are roots of the minimal polynomial of $a$ over $F$.
++ The polynomial
++ $$
++ P_a(T)=\prod_{b\in G\cdot a}(T-b)
++ $$
++ has coefficients in $N$, since every element of $G$ permutes its factors.
++ Its roots are distinct, and the minimal polynomial of $a$ over $N$
++ divides $P_a$. Thus $a$ is separable over $N$. As $E/N$ is algebraic,
++ normal and separable, it is Galois.
++
++ \medskip\noindent
++ Let $C=SN$ be the compositum inside $E$. Since $E/N$ is separable,
++ so is $E/C$ by Lemma \ref{lemma-separable-goes-up}. Since $E/S$
++ is purely inseparable, $E/C$ is purely inseparable as well.
++ In characteristic zero, $E=S\subset C$. In characteristic $p>0$,
++ for each $a\in E$ choose $q=p^r$ with $a^q\in S\subset C$.
++ The minimal polynomial of $a$ over $C$ is separable and divides
++ $T^q-a^q=(T-a)^q$ in $E[T]$. It therefore has degree one, so $a\in C$.
++ It follows that $E=C=SN$.
++
++ \medskip\noindent
++ Multiplication in $E$ is $F$-balanced and defines the $F$-algebra map
++ $$
++ \mu:S\otimes_F N\longrightarrow E,\qquad
++ \sum_i s_i\otimes n_i\longmapsto\sum_i s_i n_i.
++ $$
++ Its image is a subring of the algebraic extension $E/F$ containing $F$,
++ and is therefore a field by Lemma \ref{lemma-subalgebra-algebraic-extension-field}.
++ The image contains both $S$ and $N$, so it contains $SN=E$.
++ Thus $\mu$ is surjective.
++
++ \medskip\noindent
++ It remains to prove injectivity. In characteristic zero, $N=F$ and
++ the inverse of $\mu$ is $a\mapsto a\otimes 1$.
++ Assume the characteristic is $p>0$. Let $L/F$ be any finite
++ subextension of $S/F$. By Lemma \ref{lemma-primitive-element},
++ write $L=F(\theta)$. Let $f\in F[T]$ be the monic minimal polynomial
++ of $\theta$ over $F$, and let $g\in N[T]$ be its monic minimal
++ polynomial over $N$. Then $g$ divides $f$ in $N[T]$.
++ Write $g(T)=\sum_{i=0}^d b_iT^i$, with $b_d=1$.
++ Since $N/F$ is purely inseparable and this list of coefficients is finite,
++ there is one $q=p^r$ such that every $b_i^q$ belongs to $F$. Hence
++ $$
++ g(T)^q=\sum_{i=0}^d b_i^q T^{iq}\in F[T].
++ $$
++ This polynomial vanishes at $\theta$, so $f$ divides $g^q$ in $F[T]$.
++ Separability of $f$ gives $A,B\in F[T]$ with $Af+Bf'=1$.
++ This identity also holds in $N[T]$, so $f$ is squarefree in $N[T]$.
++ Every irreducible factor of $f$ in $N[T]$ divides $g^q$, hence divides $g$.
++ Since those factors occur in $f$ with multiplicity one, $f$ divides $g$.
++ The two monic polynomials $f$ and $g$ therefore coincide.
++
++ \medskip\noindent
++ For completeness the corresponding tensor-product map is explicit.
++ Write $m=\deg(f)$, so $1,\theta,\ldots,\theta^{m-1}$ is an $F$-basis of $L$.
++ The map $L\otimes_F N\longrightarrow N[T]/(f)$ given by
++ $$
++ \left(\sum_{j=0}^{m-1}a_j\theta^j\right)\otimes n
++ \longmapsto\left[\sum_{j=0}^{m-1}a_j n T^j\right]
++ $$
++ and $[\sum_j c_jT^j]\mapsto\sum_j\theta^j\otimes c_j$
++ are mutually inverse algebra maps. The first respects products by reduction
++ modulo $f$; the second is well defined because $f(\theta)=0$.
++ Evaluation $N[T]/(f)\to N(\theta)=LN$ is an isomorphism, since $f=g$
++ is the minimal polynomial over $N$. Their composite is multiplication
++ $L\otimes_F N\to LN\subset E$, which is consequently injective.
++ Every element $z\in S\otimes_F N$ is a finite sum $\sum_i s_i\otimes n_i$.
++ The field $L=F(s_1,\ldots,s_t)\subset S$ is a finite separable extension
++ of $F$. Let $z_L=\sum_i s_i\otimes n_i\in L\otimes_F N$.
++ If $\mu(z)=0$, then multiplication sends $z_L$ to zero in $E$;
++ the injectivity just proved gives $z_L=0$, and its image $z$ is zero.
++ Thus $\mu$ is injective and hence an isomorphism, as claimed.
+````
+
+Original SHA-256 `AC6D6E53ECAE4AE396ECB18D03BACD1C883AE370A87F1955D708D7289903B843`; replacement SHA-256 `868FE2803710517468E14C5F80F15D3C9A779CE030EF110177ABACB17F05A675`.
+
+</details>
+
+<details id="mc-stk-err-1901">
+<summary><code>MC-STK-ERR-1901 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1901`; producer ID: `FIELDS-RECON-060`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3702) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Insert the missing preposition in the introduction of the minimal polynomial.
+- Adverse evidence: Its monic coefficients, irreducibility, degree and uniqueness assertions remain unchanged.
+
+### Change 1: `MC-STK-ERR-1901-OP1`
+
+Pinned-official lines `3702-3702`; bytes `141112:141141`.
+
+````diff
+- is algebraic over $k$. Denote
++ is algebraic over $k$. Denote by
+````
+
+Original SHA-256 `835CA76AD5382F4B96779E91EBCB5583112EA933A70A87701053A29365C6B058`; replacement SHA-256 `D3B1EBD3862209B5B56961FAEB1678F3F95A375D217D194DE754E596B10F2BA4`.
+
+</details>
+
+<details id="mc-stk-err-1902">
+<summary><code>MC-STK-ERR-1902 — fields.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1902`; producer ID: `FIELDS-RECON-061`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3716) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Give the greater-than relation its explicit left operand p.
+- Adverse evidence: Retain the named characteristic, the p-power q and the separability conclusion for alpha^q.
+
+### Change 1: `MC-STK-ERR-1902-OP1`
+
+Pinned-official lines `3716-3716`; bytes `141860:141895`.
+
+````diff
+- characteristic $p$ of $k$ is $ > 0$
++ characteristic $p$ of $k$ satisfies $p > 0$
+````
+
+Original SHA-256 `E952F18352FE5B67C3E9178483EEC3847DA6832E48C8379244FA070ECA7C1FCD`; replacement SHA-256 `8647E9A31FB8E1916E763DD0F06D1E59A54FF5710EBD9C6CCEC4283B33E6C76B`.
+
+</details>
+
+<details id="mc-stk-err-1903">
+<summary><code>MC-STK-ERR-1903 — fields.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1903`; producer ID: `FIELDS-RECON-062`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L2753) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The definition of Galois requires normality in addition to algebraicity and separability. The same orbit polynomial supplies it: each minimal polynomial divides a product of linear factors already in K[x].
+- Adverse evidence: This fills an omitted inference in the existing proof; it does not alter the finite faithful-group hypothesis or the degree argument.
+
+### Change 1: `MC-STK-ERR-1903-OP1`
+
+Pinned-official lines `2753-2753`; bytes `104216:104278`.
+
+````diff
+- we conclude that $K/K^G$ is separable. Thus $K/K^G$ is Galois.
++ we conclude that $K/K^G$ is separable. Also, $Q$ divides the displayed
++ polynomial $P$, which splits completely over $K$, so $Q$ splits over $K$.
++ Thus $K/K^G$ is normal as well, and hence Galois.
+````
+
+Original SHA-256 `DAB2A3EE55C7F0BAA167F2E97479BEC6F88C21B80814C5A9E02EADD75F044331`; replacement SHA-256 `5362FC8321CB262711B51A3D98B4972E331EBE4EC67F6876FB75E8D201E299A1`.
+
+</details>
+
+<details id="mc-stk-err-1904">
+<summary><code>MC-STK-ERR-1904 — fields.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1904`; producer ID: `FIELDS-RECON-063`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3731-L3732) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: Restore the identity-extension case explicitly included in definition-purely-inseparable at lines 1589-1592, which allows k prime=k in every characteristic.
+- Adverse evidence: The review otherwise contradicts the primary definition for characteristic-zero identity extensions. Keep the entire positive-characteristic condition unchanged.
+
+### Change 1: `MC-STK-ERR-1904-OP1`
+
+Pinned-official lines `3731-3732`; bytes `142447:142560`.
+
+````diff
+- extension $k'/k$ is called {\it purely inseparable} if
+- the characteristic of $k$ is $p > 0$ and for every element
++ extension $k'/k$ is called {\it purely inseparable} if $k'=k$, or if
++ the characteristic of $k$ is $p > 0$ and for every element
+````
+
+Original SHA-256 `FCB418AAF0FF62019BD60FF9A35E7DB94CC6BE0AFB56ED062A8DCBE3D1DA9360`; replacement SHA-256 `E953CD8BFD4DEB6DA8A8CCD10A768837ED2A9F0486E95B5909BA017B03DDD1EE`.
+
+</details>
+
+<details id="mc-stk-err-1905">
+<summary><code>MC-STK-ERR-1905 — fields.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r57`
+- Stable ID: `MC-STK-ERR-1905`; producer ID: `FIELDS-RECON-064`
+- Bound source locator: `fields.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/fields.tex#L3399-L3411) · [Integrated source](fields.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r57/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r57/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r57/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r57/replay/independent-review.json)
+- Rationale: The first paragraph of the original proof establishes the stronger extension property with prescribed independent A and generating G. Make that already-proved generality visible in the statement. For Zorn, the empty chain has upper bound A; a nonempty chain has union containing A and every finite polynomial relation occurs in one member. Maximality forces each generator algebraic over F(B), hence E algebraic over F(B).
+- Adverse evidence: Do not claim a new theorem or delete the original existence and cardinality conclusions. Without the nonempty qualifier the assertion that the union contains A fails for the empty chain when A is nonempty. This is an independent underclaim and boundary clarification, not a received producer defect.
+
+### Change 1: `MC-STK-ERR-1905-OP1`
+
+Pinned-official lines `3399-3400`; bytes `129149:129281`.
+
+````diff
+- Let $E/F$ be a field extension. A transcendence basis of $E$ over $F$ exists.
+- Any two transcendence bases have the same cardinality.
++ Let $E/F$ be a field extension. A transcendence basis of $E$ over $F$ exists.
++ More precisely, if $A\subset G\subset E$, $A$ is algebraically independent
++ over $F$, and $G$ generates $E/F$, then there is a transcendence basis $B$
++ with $A\subset B\subset G$.
++ Any two transcendence bases have the same cardinality.
+````
+
+Original SHA-256 `64BE86BDA5FE3B0B745E124FAF980176C38B444BE28509F85BCD78B1AF450C33`; replacement SHA-256 `026C373BE50694A63141E358B0A805957C12A39B0E880849FB97E7B247052D44`.
+
+### Change 2: `MC-STK-ERR-1905-OP2`
+
+Pinned-official lines `3411-3411`; bytes `129765:129839`.
+
+````diff
+- The union of the elements of a totally ordered subset $T$ of $\mathcal{B}$
++ The empty chain has upper bound $A\in\mathcal{B}$.
++ The union of the elements of a nonempty totally ordered subset $T$ of $\mathcal{B}$
+````
+
+Original SHA-256 `E1DF4FD3FEBD62B5AC49303AC270A10EB5E2EC46BFB86E34F6625A31AFFBE5F8`; replacement SHA-256 `465AF3083AF58B01055F0D8B0678A70247F48D1C0743B0A161A12267E35A4016`.
 
 </details>
