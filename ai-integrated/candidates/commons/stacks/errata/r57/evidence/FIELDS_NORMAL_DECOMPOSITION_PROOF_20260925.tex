@@ -1,0 +1,105 @@
+Put $S = E_{sep}$, as constructed in Lemma \ref{lemma-separable-first},
+and put $G = \text{Aut}(E/F)$ and $N = E^G$.
+The extension $S/F$ is separable and $E/S$ is purely inseparable.
+Moreover, $S/F$ is normal by Lemma \ref{lemma-separable-first-normal},
+so $S/F$ is Galois. We will take $E_{insep} = N$.
+
+\medskip\noindent
+We first show that $N/F$ is purely inseparable. Let $a \in N$ and let
+$f \in F[T]$ be its monic minimal polynomial. Since $E/F$ is normal,
+every root $b$ of $f$ in an algebraic closure of $E$ belongs to $E$.
+The map $F(a) \to E$ sending $a$ to $b$ is an $F$-embedding:
+it is the map induced by evaluation at $b$ on $F[T]/(f)$.
+By Lemma \ref{lemma-lift-maps} it extends to an element $g \in G$.
+Thus $b = g(a) = a$. Consequently $f$ has just one distinct root.
+In characteristic zero, $f$ is separable, so $\deg(f) = 1$ and $a \in F$.
+In characteristic $p > 0$, Lemma \ref{lemma-irreducible-polynomials}
+gives $f(T) = h(T^q)$ for $q = p^r$, $r \geq 0$, and a monic
+separable irreducible polynomial $h \in F[T]$.
+The map $x \mapsto x^q$ is bijective on an algebraically closed field:
+existence follows by taking a root of $T^q-c$, and uniqueness follows
+from $x^q-y^q=(x-y)^q$. Therefore $h$ has just one distinct root.
+Since $h$ is separable and monic, $h(T)=T-c$ for some $c \in F$.
+Hence $a^q=c \in F$. This proves the assertion in every characteristic.
+Conversely, if $a \in E$ is purely inseparable over $F$, then every
+$g \in G$ fixes $a$: in characteristic $p>0$, choose $q=p^r$ with
+$a^q\in F$ and use $(g(a)-a)^q=g(a^q)-a^q=0$; in characteristic
+zero the relevant elements already lie in $F$.
+Thus $N$ consists exactly of the elements of $E$ purely inseparable
+over $F$.
+
+\medskip\noindent
+The extension $E/N$ is normal by Lemma \ref{lemma-normal-goes-up}.
+To prove separability, let $a \in E$. The orbit $G\cdot a$ is finite,
+since its elements are roots of the minimal polynomial of $a$ over $F$.
+The polynomial
+$$
+P_a(T)=\prod_{b\in G\cdot a}(T-b)
+$$
+has coefficients in $N$, since every element of $G$ permutes its factors.
+Its roots are distinct, and the minimal polynomial of $a$ over $N$
+divides $P_a$. Thus $a$ is separable over $N$. As $E/N$ is algebraic,
+normal and separable, it is Galois.
+
+\medskip\noindent
+Let $C=SN$ be the compositum inside $E$. Since $E/N$ is separable,
+so is $E/C$ by Lemma \ref{lemma-separable-goes-up}. Since $E/S$
+is purely inseparable, $E/C$ is purely inseparable as well.
+In characteristic zero, $E=S\subset C$. In characteristic $p>0$,
+for each $a\in E$ choose $q=p^r$ with $a^q\in S\subset C$.
+The minimal polynomial of $a$ over $C$ is separable and divides
+$T^q-a^q=(T-a)^q$ in $E[T]$. It therefore has degree one, so $a\in C$.
+It follows that $E=C=SN$.
+
+\medskip\noindent
+Multiplication in $E$ is $F$-balanced and defines the $F$-algebra map
+$$
+\mu:S\otimes_F N\longrightarrow E,\qquad
+\sum_i s_i\otimes n_i\longmapsto\sum_i s_i n_i.
+$$
+Its image is a subring of the algebraic extension $E/F$ containing $F$,
+and is therefore a field by Lemma \ref{lemma-subalgebra-algebraic-extension-field}.
+The image contains both $S$ and $N$, so it contains $SN=E$.
+Thus $\mu$ is surjective.
+
+\medskip\noindent
+It remains to prove injectivity. In characteristic zero, $N=F$ and
+the inverse of $\mu$ is $a\mapsto a\otimes 1$.
+Assume the characteristic is $p>0$. Let $L/F$ be any finite
+subextension of $S/F$. By Lemma \ref{lemma-primitive-element},
+write $L=F(\theta)$. Let $f\in F[T]$ be the monic minimal polynomial
+of $\theta$ over $F$, and let $g\in N[T]$ be its monic minimal
+polynomial over $N$. Then $g$ divides $f$ in $N[T]$.
+Write $g(T)=\sum_{i=0}^d b_iT^i$, with $b_d=1$.
+Since $N/F$ is purely inseparable and this list of coefficients is finite,
+there is one $q=p^r$ such that every $b_i^q$ belongs to $F$. Hence
+$$
+g(T)^q=\sum_{i=0}^d b_i^q T^{iq}\in F[T].
+$$
+This polynomial vanishes at $\theta$, so $f$ divides $g^q$ in $F[T]$.
+Separability of $f$ gives $A,B\in F[T]$ with $Af+Bf'=1$.
+This identity also holds in $N[T]$, so $f$ is squarefree in $N[T]$.
+Every irreducible factor of $f$ in $N[T]$ divides $g^q$, hence divides $g$.
+Since those factors occur in $f$ with multiplicity one, $f$ divides $g$.
+The two monic polynomials $f$ and $g$ therefore coincide.
+
+\medskip\noindent
+For completeness the corresponding tensor-product map is explicit.
+Write $m=\deg(f)$, so $1,\theta,\ldots,\theta^{m-1}$ is an $F$-basis of $L$.
+The map $L\otimes_F N\longrightarrow N[T]/(f)$ given by
+$$
+\left(\sum_{j=0}^{m-1}a_j\theta^j\right)\otimes n
+\longmapsto\left[\sum_{j=0}^{m-1}a_j n T^j\right]
+$$
+and $[\sum_j c_jT^j]\mapsto\sum_j\theta^j\otimes c_j$
+are mutually inverse algebra maps. The first respects products by reduction
+modulo $f$; the second is well defined because $f(\theta)=0$.
+Evaluation $N[T]/(f)\to N(\theta)=LN$ is an isomorphism, since $f=g$
+is the minimal polynomial over $N$. Their composite is multiplication
+$L\otimes_F N\to LN\subset E$, which is consequently injective.
+Every element $z\in S\otimes_F N$ is a finite sum $\sum_i s_i\otimes n_i$.
+The field $L=F(s_1,\ldots,s_t)\subset S$ is a finite separable extension
+of $F$. Let $z_L=\sum_i s_i\otimes n_i\in L\otimes_F N$.
+If $\mu(z)=0$, then multiplication sends $z_L$ to zero in $E$;
+the injectivity just proved gives $z_L=0$, and its image $z$ is zero.
+Thus $\mu$ is injective and hence an isomorphism, as claimed.

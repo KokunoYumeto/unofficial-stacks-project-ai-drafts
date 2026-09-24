@@ -1,0 +1,1380 @@
+{
+  "schema": "stacks-occurrence-semantic-review-v1",
+  "date": "2026-09-24",
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "review_kind": "Primary-session source review; not a second AI or human review",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "compared_public_commit": "4cc7ccca622d29ae9893496e71ed4a162d285c03",
+  "inventory_sha256": "53667E865189AF21A0E0132B6CB670E9E6D83B9B5996F8EF1D3D903E8E56F56B",
+  "admission_state": "Received review complete; no new allocation, source mutation, admission, build or publication",
+  "source": "fields.tex",
+  "authority_sha256": "87E07F0373DC60CFC284E2F19078BC9BC7AB0B89C40EEF83941F6C38C765C549",
+  "scope": "All 75 received Fields chapter reports are intended for source review. 75 reports have dispositions; no overall project completion claim.",
+  "groups": [
+    {
+      "id": "FIELDS-RECON-001",
+      "occurrences": [
+        "OCC-00235"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_identifier_spelling",
+      "authority_lines": [
+        90,
+        101
+      ],
+      "operations": [],
+      "rationale": "The internal identifier contains a spelling error, but the example and its reference at line 311 use the same identifier and resolve. Renaming a stable, non-rendering label is optional and is not included in the correction batch.",
+      "adverse_evidence": "The printed polynomial-ring statement is correct. Preserve the existing identifier and every reference; a label-spelling preference does not prove mathematical or rendered-text damage."
+    },
+    {
+      "id": "FIELDS-RECON-002",
+      "occurrences": [
+        "OCC-00236"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style",
+      "authority_lines": [
+        193,
+        217
+      ],
+      "operations": [],
+      "rationale": "The passive construction says that each field is the target of exactly one map from exactly one member of the family and none from the other members. It is grammatical and has the required map direction; the proposed active-voice wording is optional.",
+      "adverse_evidence": "The following kernel argument identifies the family as the rational field and the prime finite fields and proves the stated uniqueness. Do not classify an uncommon grammatical construction as a source error."
+    },
+    {
+      "id": "FIELDS-RECON-003",
+      "occurrences": [
+        "OCC-00237"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        219,
+        231
+      ],
+      "operations": [
+        {
+          "line": 221,
+          "old_text": "or finite equal to",
+          "replacement_text": "or finite and equal to"
+        }
+      ],
+      "rationale": "Insert the missing conjunction between the two predicates finite and equal to the prime field.",
+      "adverse_evidence": "Retain the explicit finiteness assertion as well as the rational-field alternative, the prime p and the characteristic cases; the producer proposal would delete the finiteness wording."
+    },
+    {
+      "id": "FIELDS-RECON-004",
+      "occurrences": [
+        "OCC-00238"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        281,
+        296
+      ],
+      "operations": [
+        {
+          "line": 295,
+          "old_text": "morphisms from $E \\to E'$",
+          "replacement_text": "morphisms $E \\to E'$"
+        }
+      ],
+      "rationale": "Remove the extra preposition before the displayed arrow describing the morphisms.",
+      "adverse_evidence": "Keep the source E, target E prime, k-algebra condition, commuting triangle and Mor notation unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-005",
+      "occurrences": [
+        "OCC-00239",
+        "OCC-11967"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        601,
+        624
+      ],
+      "operations": [
+        {
+          "line": 605,
+          "old_text": "An important class of extensions are those where every element generates",
+          "replacement_text": "An important class consists of extensions where every element generates"
+        }
+      ],
+      "rationale": "Give the singular subject class a singular verb while retaining exactly the extensions described by the relative clause.",
+      "adverse_evidence": "Every element still generates a finite extension of the base. Recasting the sentence avoids the mismatched complement produced by only replacing are with is."
+    },
+    {
+      "id": "FIELDS-RECON-006",
+      "occurrences": [
+        "OCC-01334",
+        "OCC-11954"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        633,
+        640
+      ],
+      "operations": [
+        {
+          "line": 636,
+          "old_text": "$f \\in \\mathbf{C}(X) - \\mathbf{C}$ any",
+          "replacement_text": "$f \\in \\mathbf{C}(X) - \\mathbf{C}$ be any"
+        }
+      ],
+      "rationale": "Restore the missing verb in the let-construction introducing the nonconstant meromorphic function.",
+      "adverse_evidence": "Keep the compact Riemann surface, the nonconstant condition, both function fields and the algebraicity claim unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-007",
+      "occurrences": [
+        "OCC-11955",
+        "OCC-00240"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        711,
+        724
+      ],
+      "operations": [
+        {
+          "line": 712,
+          "old_text": "The set of complex numbers that are algebraic",
+          "replacement_text": "The complex numbers that are algebraic"
+        }
+      ],
+      "rationale": "Make the grammatical subject the numbers that receive the name algebraic numbers, matching the existing plural verb.",
+      "adverse_evidence": "The relative clause still specifies exactly the complex numbers algebraic over the rational field. The next assertion that these numbers form a field and all three examples remain unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-008",
+      "occurrences": [
+        "OCC-11965"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        720,
+        733
+      ],
+      "operations": [
+        {
+          "line": 732,
+          "old_text": "product and quotient of $\\alpha$ and $\\beta$.",
+          "replacement_text": "product and, when $\\beta \\not = 0$, the quotient of $\\alpha$ by $\\beta$."
+        }
+      ],
+      "rationale": "The quotient belongs to the finite field k(alpha,beta) only when its denominator is nonzero. State that domain condition explicitly; each resulting generated subfield is finite over k and its generator is algebraic by the cited lemmas.",
+      "adverse_evidence": "For beta=0 the expression alpha/beta is undefined. The sum, difference and product assertions remain valid without the new restriction, so the condition applies only to the quotient."
+    },
+    {
+      "id": "FIELDS-RECON-009",
+      "occurrences": [
+        "OCC-00241"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        739,
+        759
+      ],
+      "operations": [
+        {
+          "line": 748,
+          "old_text": "finitely generated subextension of $k$.",
+          "replacement_text": "finitely generated subextension of $E/k$."
+        }
+      ],
+      "rationale": "The finite set S of polynomial coefficients lies in E and generates k(S) between k and E. The subextension is therefore of E/k.",
+      "adverse_evidence": "Keep the field F containing alpha, its algebraicity over k(S), both finite degrees and the tower-degree argument. Do not replace the coefficient field by a subfield of k."
+    },
+    {
+      "id": "FIELDS-RECON-010",
+      "occurrences": [
+        "OCC-00242",
+        "OCC-11956"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        806,
+        826
+      ],
+      "operations": [
+        {
+          "line": 808,
+          "old_text": "Let $E/F$ an algebraic extension",
+          "replacement_text": "Let $E/F$ be an algebraic extension"
+        }
+      ],
+      "rationale": "Insert the missing verb introducing the algebraic field extension.",
+      "adverse_evidence": "No finiteness hypothesis is added to the extension. The arbitrary algebraic case and the F-algebra endomorphism remain in the statement."
+    },
+    {
+      "id": "FIELDS-RECON-011",
+      "occurrences": [
+        "OCC-00243",
+        "OCC-11966"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        891,
+        903
+      ],
+      "operations": [
+        {
+          "line": 897,
+          "old_text": "complex analysis, we shall",
+          "replacement_text": "complex analysis; we shall"
+        }
+      ],
+      "rationale": "Separate the two independent clauses with a semicolon.",
+      "adverse_evidence": "Preserve the complex field, the attribution to Liouville and the exact reference to the later proof."
+    },
+    {
+      "id": "FIELDS-RECON-012",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        541,
+        582
+      ],
+      "operations": [
+        {
+          "line": 550,
+          "old_text": "Let $\\alpha_1, \\ldots, \\alpha_n \\in F$ be an $E$-basis for $F$. Let",
+          "replacement_text": "First suppose both degrees on the right are finite.\nLet $\\alpha_1, \\ldots, \\alpha_n \\in F$ be an $E$-basis for $F$. Let"
+        },
+        {
+          "line": 580,
+          "old_text": "Then $k$-linear independence of the $\\{\\beta_j\\}$ shows that the\n$c_{ij}$ all vanish.",
+          "replacement_text": "Then $k$-linear independence of the $\\{\\beta_j\\}$ shows that the\n$c_{ij}$ all vanish.\n\n\\medskip\\noindent\nFor arbitrary extensions, choose an $E$-basis\n$\\{\\alpha_i\\}_{i \\in I}$ of $F$ and a $k$-basis\n$\\{\\beta_j\\}_{j \\in J}$ of $E$. Define the $k$-linear map\n$$\n\\Phi : \\bigoplus_{(i,j) \\in I \\times J} k \\longrightarrow F,\n\\qquad\n(c_{ij}) \\longmapsto \\sum_{(i,j) \\in I \\times J} c_{ij}\\alpha_i\\beta_j.\n$$\nThe direct sum means that the family $(c_{ij})$ has finite support,\nso the displayed sum is defined. For $f \\in F$, write\n$f = \\sum_{i \\in I_0} a_i\\alpha_i$ with $I_0 \\subset I$ finite and\n$a_i \\in E$. For every $i \\in I_0$, write\n$a_i = \\sum_{j \\in J_i} b_{ij}\\beta_j$ with $J_i \\subset J$ finite\nand $b_{ij} \\in k$. Then\n$$\nf = \\sum_{i \\in I_0}\\sum_{j \\in J_i} b_{ij}\\alpha_i\\beta_j,\n$$\nso $\\Phi$ is surjective. If a finitely supported family $(c_{ij})$\nhas image zero, regrouping its finite sum gives\n$$\n0 = \\sum_{i \\in I}\\alpha_i\n\\left(\\sum_{j \\in J} c_{ij}\\beta_j\\right).\n$$\nThe $E$-linear independence of the $\\alpha_i$ makes each inner sum\nzero. The $k$-linear independence of the $\\beta_j$ then gives\n$c_{ij} = 0$ for every $(i,j)$, so $\\Phi$ is injective.\nThus the products form a $k$-basis indexed by $I \\times J$,\nand $[F:k] = |I \\times J| = |I||J| = [F:E][E:k]$,\nincluding when a degree is infinite. The original finite-degree\ncalculation is the case $I = \\{1,\\ldots,n\\}$ and $J = \\{1,\\ldots,m\\}$."
+        }
+      ],
+      "rationale": "The statement permits arbitrary towers, but the original proof chooses finite bases without a finiteness hypothesis. The added direct-sum map is proved surjective and injective with every coefficient support explicit, establishing the stated cardinal degree formula for arbitrary extensions.",
+      "adverse_evidence": "Retain the complete original finite-basis calculation and its coefficients. Do not restrict the theorem to finite extensions or suppress the infinite cardinal case.",
+      "discovery": "Primary-source review of fields.tex:541-582 while checking the algebraic-extension reports; no additional producer occurrence."
+    },
+    {
+      "id": "FIELDS-RECON-013",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        812,
+        825
+      ],
+      "operations": [
+        {
+          "line": 818,
+          "old_text": "polynomial such that $P(\\alpha) = 0$.",
+          "replacement_text": "nonzero polynomial such that $P(\\alpha) = 0$."
+        }
+      ],
+      "rationale": "Choose the annihilating polynomial nonzero, as guaranteed by algebraicity, so that its distinct roots form a finite set and the generated intermediate field is finite.",
+      "adverse_evidence": "The zero polynomial also vanishes at alpha but has every element of E as a root. No restriction on the arbitrary algebraic extension E/F is justified or needed.",
+      "discovery": "Primary-source review adjacent to OCC-00242/OCC-11956 at fields.tex:817-821; the reports themselves concern the missing verb."
+    },
+    {
+      "id": "FIELDS-RECON-014",
+      "occurrences": [
+        "OCC-00244"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        976,
+        997
+      ],
+      "operations": [
+        {
+          "line": 991,
+          "old_text": "we will denote $E_i",
+          "replacement_text": "we will denote by $E_i"
+        },
+        {
+          "line": 992,
+          "old_text": "field extension to $F$",
+          "replacement_text": "field extension of $F$"
+        }
+      ],
+      "rationale": "Restore the prepositions naming the indexed extension of the fixed field F.",
+      "adverse_evidence": "Retain the triple, the subset of S, both field-operation maps and the exact partial order."
+    },
+    {
+      "id": "FIELDS-RECON-015",
+      "occurrences": [
+        "OCC-00245",
+        "OCC-11957"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        999,
+        1006
+      ],
+      "operations": [
+        {
+          "line": 1003,
+          "old_text": "every totally order subset of $I$ has a upper bound",
+          "replacement_text": "every totally ordered subset of $I$ has an upper bound"
+        }
+      ],
+      "rationale": "Correct the participial adjective and indefinite article in the Zorn argument.",
+      "adverse_evidence": "This grammatical repair alone does not repair the empty-chain case; that independent source issue is recorded separately."
+    },
+    {
+      "id": "FIELDS-RECON-016",
+      "occurrences": [
+        "OCC-00246",
+        "OCC-11958"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1029,
+        1049
+      ],
+      "operations": [
+        {
+          "line": 1040,
+          "old_text": "The $\\alpha$ is algebraic",
+          "replacement_text": "Then $\\alpha$ is algebraic"
+        }
+      ],
+      "rationale": "Restore the consequence marker after choosing alpha outside the maximal intermediate field.",
+      "adverse_evidence": "Keep the algebraicity statement over E and the preceding and subsequent maps unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-017",
+      "occurrences": [
+        "OCC-11991"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_presentation",
+      "authority_lines": [
+        1042,
+        1048,
+        1313,
+        1314
+      ],
+      "operations": [],
+      "rationale": "The equalities specify the canonical quotient presentation already proved at lines 874-883. Explicitly, evaluation E[x] -> E(alpha), f -> f(alpha), has kernel (P): divide f by P and a nonzero remainder of smaller degree cannot annihilate alpha by minimality. It induces an injective E-algebra map E[x]/(P) -> E(alpha); its image is a field containing E and alpha because P is irreducible, so it is all E(alpha). For phi:E -> Fbar and a root beta of P^phi, the homomorphism [sum a_j x^j] -> sum phi(a_j) beta^j is well-defined since it annihilates (P), and transporting it along the inverse evaluation isomorphism gives exactly phi prime. At line 1314 take E=K_{i-1}, alpha=alpha_i, P=P_i and phi=phi_{i-1}; the same proved maps give the unique extension. The reported equality-versus-isomorphism change is optional presentation, with the complete comparison made explicit here.",
+      "adverse_evidence": "Literal underlying sets need not coincide. This is not a claim of literal equality: the evaluation isomorphism and coefficient-transport homomorphism above justify the source presentation and its two uses without adding a new hypothesis."
+    },
+    {
+      "id": "FIELDS-RECON-018",
+      "occurrences": [
+        "OCC-00248",
+        "OCC-11960"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1075,
+        1084
+      ],
+      "operations": [
+        {
+          "line": 1081,
+          "old_text": "\\alpha_n \\in k",
+          "replacement_text": "\\alpha_n \\in K"
+        }
+      ],
+      "rationale": "The roots belong to the algebraically closed field K fixed in this paragraph; lowercase k is not introduced there.",
+      "adverse_evidence": "Retain each root, its multiplicity, the polynomial ring K[x] and the scalar c."
+    },
+    {
+      "id": "FIELDS-RECON-019",
+      "occurrences": [
+        "OCC-00247",
+        "OCC-11959"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1075,
+        1084
+      ],
+      "operations": [
+        {
+          "line": 1081,
+          "old_text": "constant term",
+          "replacement_text": "leading coefficient"
+        }
+      ],
+      "rationale": "For nonzero P the product of the displayed monic factors has leading coefficient 1, so the multiplier c is the leading coefficient. The constant coefficient is c times the product of all negative roots.",
+      "adverse_evidence": "Do not discard the factor c, any sign, any root or multiplicity. The zero-polynomial case is addressed by a separate linked source qualification."
+    },
+    {
+      "id": "FIELDS-RECON-020",
+      "occurrences": [
+        "OCC-11968"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1186,
+        1194
+      ],
+      "operations": [
+        {
+          "line": 1192,
+          "old_text": "\\item if $K$",
+          "replacement_text": "\\item If $K$"
+        }
+      ],
+      "rationale": "Capitalize the opening word of the second complete sentence in the enumeration.",
+      "adverse_evidence": "The hypotheses and separability assertion stay unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-021",
+      "occurrences": [
+        "OCC-00249",
+        "OCC-11969"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1224,
+        1242
+      ],
+      "operations": [
+        {
+          "line": 1228,
+          "old_text": "the set of roots of $P$ and $P(x^p)$",
+          "replacement_text": "the sets of roots of $P$ and $P(x^p)$"
+        }
+      ],
+      "rationale": "Use the plural sets for the two root sets compared by the Frobenius bijection, preserving the plural verb have.",
+      "adverse_evidence": "The source proof gives alpha -> alpha^p as a bijection between the two sets, including constant and zero polynomials. Replacing have with has would leave a single set said to have the same cardinality without its comparison set."
+    },
+    {
+      "id": "FIELDS-RECON-022",
+      "occurrences": [
+        "OCC-00250",
+        "OCC-11961"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1268,
+        1279
+      ],
+      "operations": [
+        {
+          "line": 1270,
+          "old_text": "Here $F$ be a field",
+          "replacement_text": "Here $F$ is a field"
+        }
+      ],
+      "rationale": "Correct the finite verb in the declarative introduction of the situation.",
+      "adverse_evidence": "Retain the finite extension, every generator and each intermediate field."
+    },
+    {
+      "id": "FIELDS-RECON-023",
+      "occurrences": [
+        "OCC-11962"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1270,
+        1279
+      ],
+      "operations": [
+        {
+          "line": 1277,
+          "old_text": "Denote $P_i$",
+          "replacement_text": "Denote by $P_i$"
+        }
+      ],
+      "rationale": "Add the missing preposition in the naming construction.",
+      "adverse_evidence": "The polynomial remains minimal over K_{i-1} and the algebraic closure remains fixed."
+    },
+    {
+      "id": "FIELDS-RECON-024",
+      "occurrences": [
+        "OCC-11970"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style",
+      "authority_lines": [
+        1307,
+        1309
+      ],
+      "operations": [],
+      "rationale": "The two participial modifiers extending phi_1 and sending alpha_2 to beta_2 both modify homomorphism. The construction is grammatical and unambiguous in the displayed tower; adding and is optional.",
+      "adverse_evidence": "Both properties are required and supplied by the quotient construction at 1313-1314. There is no missing map or altered domain to repair."
+    },
+    {
+      "id": "FIELDS-RECON-025",
+      "occurrences": [
+        "OCC-00251",
+        "OCC-11963"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1313,
+        1322
+      ],
+      "operations": [
+        {
+          "line": 1313,
+          "old_text": "homorphism",
+          "replacement_text": "homomorphism"
+        },
+        {
+          "line": 1320,
+          "old_text": "homorphism",
+          "replacement_text": "homomorphism"
+        }
+      ],
+      "rationale": "Correct both misspellings of homomorphism.",
+      "adverse_evidence": "Preserve the existence and uniqueness clauses, quotient presentation and extension conditions."
+    },
+    {
+      "id": "FIELDS-RECON-026",
+      "occurrences": [
+        "OCC-11971"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style",
+      "authority_lines": [
+        1317,
+        1323
+      ],
+      "operations": [],
+      "rationale": "The consecutive modifiers extending phi_{n-1} and sending alpha_n to beta_n specify the two properties of the unique homomorphism. They do not require an added conjunction.",
+      "adverse_evidence": "The separate spelling correction at line 1320 is accepted. No part of the coefficient map or assigned image is omitted by the current grammar."
+    },
+    {
+      "id": "FIELDS-RECON-027",
+      "occurrences": [
+        "OCC-11972"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_style",
+      "authority_lines": [
+        1342,
+        1353
+      ],
+      "operations": [],
+      "rationale": "The introductory hypothesis phrase Assumptions and notation as in Situation is conventional mathematical ellipsis and refers to the exact earlier situation. Adding a finite verb is optional.",
+      "adverse_evidence": "The source makes the full tower, finiteness and chosen generators available by an exact reference. The report identifies no missing or changed mathematical assumption."
+    },
+    {
+      "id": "FIELDS-RECON-028",
+      "occurrences": [
+        "OCC-00252",
+        "OCC-11964"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1369,
+        1381
+      ],
+      "operations": [
+        {
+          "line": 1379,
+          "old_text": "already prove above",
+          "replacement_text": "already proved above"
+        }
+      ],
+      "rationale": "Restore the past participle in the reference to the part already established.",
+      "adverse_evidence": "The equality and strict-inequality arguments and their order remain unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-029",
+      "occurrences": [
+        "OCC-11984"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        1469,
+        1497
+      ],
+      "operations": [
+        {
+          "line": 1473,
+          "old_text": "for some, then",
+          "replacement_text": "for some $i$, then"
+        }
+      ],
+      "rationale": "Bind the omitted index of the vanishing coefficient.",
+      "adverse_evidence": "Retain every coefficient, character and subsequent equality in the induction proof."
+    },
+    {
+      "id": "FIELDS-RECON-030",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        999,
+        1006
+      ],
+      "operations": [
+        {
+          "line": 1000,
+          "old_text": "Let $T \\subset I$ be a totally ordered subset. Then it is clear that",
+          "replacement_text": "The empty totally ordered subset has an upper bound given by the\nfield $F$ with its given operations. Let $T \\subset I$ be a nonempty\ntotally ordered subset. Then it is clear that"
+        }
+      ],
+      "rationale": "The union of an empty chain is not a field containing F. Give that chain the existing element F as an upper bound, and apply the union construction to nonempty chains.",
+      "adverse_evidence": "The set I already contains F with its given addition and multiplication. Every nonempty chain union retains both field operations and remains algebraic because each element occurs in one member.",
+      "discovery": "Primary review of the Zorn proof adjacent to OCC-00245/OCC-11957; the received reports concern grammar."
+    },
+    {
+      "id": "FIELDS-RECON-031",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1029,
+        1038
+      ],
+      "operations": [
+        {
+          "line": 1034,
+          "old_text": "$\\varphi'|_E = \\varphi$. If $T = \\{(E_t,  \\varphi_t)\\} \\subset I$",
+          "replacement_text": "$\\varphi'|_E = \\varphi$. The empty chain has the upper bound\n$(F, F \\hookrightarrow \\overline{F})$. If\n$T = \\{(E_t, \\varphi_t)\\} \\subset I$ is nonempty and"
+        },
+        {
+          "line": 1035,
+          "old_text": "is a totally ordered subset, then",
+          "replacement_text": "totally ordered, then"
+        }
+      ],
+      "rationale": "Treat the empty chain separately using the prescribed embedding of F in its algebraic closure.",
+      "adverse_evidence": "The union map remains the exact map used for every nonempty chain. Its restriction compatibility, domain inside M and F-linearity are unchanged.",
+      "discovery": "Primary review of the full algebraic-closure embedding proof at 1029-1049."
+    },
+    {
+      "id": "FIELDS-RECON-032",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1075,
+        1084
+      ],
+      "operations": [
+        {
+          "line": 1077,
+          "old_text": "every polynomial $P \\in K[x]$",
+          "replacement_text": "every nonzero polynomial $P \\in K[x]$"
+        }
+      ],
+      "rationale": "The finite complete root factorization with a leading coefficient requires a nonzero polynomial. Constants are included with no roots and the empty product equal to 1.",
+      "adverse_evidence": "The zero polynomial has no leading coefficient and every field element is a root, so it does not have the displayed finite list of roots counted with multiplicity. The following relatively-prime criterion still allows zero polynomials.",
+      "discovery": "Primary review of the factorization while adjudicating the reported coefficient and base-field errors."
+    },
+    {
+      "id": "FIELDS-RECON-033",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1145,
+        1149
+      ],
+      "operations": [
+        {
+          "line": 1146,
+          "old_text": "Note that $P'$ has degree $< \\deg(P)$. Hence if $P$ and $P'$ are not relatively\nprime, then $(P, P') = (R)$ where $R$ is a polynomial of degree $< \\deg(P)$\ncontradicting the irreducibility of $P$. This proves we have the dichotomy\nbetween (1) and (2).",
+          "replacement_text": "If $P' = 0$, we are in case (2). Otherwise\n$\\deg(P') < \\deg(P)$. If $P$ and $P'$ were not relatively prime,\nwrite $(P, P') = (R)$. Then $R$ is a nonunit divisor of $P$,\nso irreducibility gives $(R) = (P)$. But $R$ also divides the\nnonzero polynomial $P'$, which would force\n$\\deg(P) = \\deg(R) \\leq \\deg(P') < \\deg(P)$, a contradiction.\nThus $P$ and $P'$ are relatively prime, and we are in case (1)."
+        }
+      ],
+      "rationale": "The original contradiction used a strict degree bound for a generator of (P,P prime) without excluding the zero derivative. Split off that actual second case and prove the contradiction when the derivative is nonzero.",
+      "adverse_evidence": "In positive characteristic irreducible polynomials with zero derivative exist. The repaired proof keeps that case and all subsequent coefficient formulas and characteristic-p arguments.",
+      "discovery": "Primary reading of fields.tex:1130-1162 while checking the following separability statements."
+    },
+    {
+      "id": "FIELDS-RECON-034",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1196,
+        1203
+      ],
+      "operations": [
+        {
+          "line": 1202,
+          "old_text": "hence $P' = 0$ by the lemma. This proves (1). Part (2)",
+          "replacement_text": "in $E[x]$. Since $P$ is separable over $F$, there are\n$A, B \\in F[x]$ such that $AP + BP' = 1$. The same identity\nholds in $E[x]$, so the nonconstant polynomial $Q$ would divide $1$,\na contradiction. Hence $Q' \\not = 0$; as $Q$ is irreducible over $E$,\nthe lemma shows that $Q$ is separable. This proves (1). Part (2)"
+        }
+      ],
+      "rationale": "A nonconstant common factor over E contradicts the Bezout identity for the separable polynomial P over F. Explicitly transport that unchanged identity by F[x] -> E[x], then apply the dichotomy to Q over its actual coefficient field E.",
+      "adverse_evidence": "P need not remain irreducible over E, so the preceding lemma cannot be applied to P there. Retain P=QR and the full derivative P prime=Q prime R+Q R prime; the correction proves the missing coefficient-field comparison.",
+      "discovery": "Primary review of the proof adjacent to the capitalization report OCC-11968."
+    },
+    {
+      "id": "FIELDS-RECON-035",
+      "occurrences": [
+        "OCC-11993"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0344"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1542,
+        1564
+      ],
+      "operations": [],
+      "rationale": "The current source already says nonzero kernel. The square matrix of the displayed map has equal finite source and target dimensions; failure of invertibility gives a nonzero null vector, then a nonzero left null vector contradicting independence of embeddings.",
+      "adverse_evidence": "The repair is present in the current source and agrees exactly with the received report. Preserve it rather than allocate a second correction."
+    },
+    {
+      "id": "FIELDS-RECON-036",
+      "occurrences": [
+        "OCC-11986"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0338"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1639,
+        1649
+      ],
+      "operations": [],
+      "rationale": "The current source already treats characteristic zero first and then requires the positive characteristic to be a prime p before using p-powers.",
+      "adverse_evidence": "In characteristic zero both purely inseparable extensions are identities by the source definition. The original p-power calculation is retained for positive characteristic."
+    },
+    {
+      "id": "FIELDS-RECON-037",
+      "occurrences": [
+        "OCC-11979"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1651,
+        1666
+      ],
+      "operations": [
+        {
+          "line": 1658,
+          "old_text": "Let $p$ be the characteristic of $k$.",
+          "replacement_text": "In characteristic zero the elements in question are exactly those of $k$,\nso the assertion follows. Assume henceforth that the characteristic of $k$\nis a prime $p > 0$."
+        }
+      ],
+      "rationale": "The definition allows only the identity purely inseparable extension in characteristic zero. Treat its elements first, then use the given p-power identities only in positive characteristic.",
+      "adverse_evidence": "No elements outside k become purely inseparable in characteristic zero. Keep q, q prime, q double prime and the displayed additive identity in positive characteristic."
+    },
+    {
+      "id": "FIELDS-RECON-038",
+      "occurrences": [
+        "OCC-01266",
+        "OCC-11973"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1709,
+        1724
+      ],
+      "operations": [
+        {
+          "line": 1721,
+          "old_text": "with $P$ separable algebraic",
+          "replacement_text": "with $P$ a separable irreducible polynomial"
+        }
+      ],
+      "rationale": "The cited irreducible-polynomial lemma gives a separable irreducible polynomial P; algebraic is a property of the field element, not the missing polynomial description.",
+      "adverse_evidence": "Retain the p-power q, the original minimal polynomial P(x^q), and the consequent separability of alpha^q."
+    },
+    {
+      "id": "FIELDS-RECON-039",
+      "occurrences": [
+        "OCC-01267",
+        "OCC-11994"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0345"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1726,
+        1748
+      ],
+      "operations": [],
+      "rationale": "Both definition items in the current source use degree, so arbitrary infinite cardinal degrees remain allowed exactly as the following paragraph states.",
+      "adverse_evidence": "Do not impose finiteness on E/F, and do not duplicate the two existing operations."
+    },
+    {
+      "id": "FIELDS-RECON-040",
+      "occurrences": [
+        "OCC-11992"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0343"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        1750,
+        1775
+      ],
+      "operations": [],
+      "rationale": "The current source already specifies the unique F-embedding. In positive characteristic each generator satisfies x^p-alpha_i^p, whose sole distinct root in the algebraic closure forces uniqueness at each stage.",
+      "adverse_evidence": "Uniqueness is for F-field homomorphisms, not arbitrary set maps. A characteristic-zero boundary clarification is separately recorded."
+    },
+    {
+      "id": "FIELDS-RECON-041",
+      "occurrences": [
+        "OCC-11974"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1850,
+        1859
+      ],
+      "operations": [
+        {
+          "line": 1853,
+          "old_text": "$M/E_i/F$, $i \\in I$ be subextensions with",
+          "replacement_text": "$M/E_i/F$, $i \\in I$, be a nonempty family of subextensions with"
+        },
+        {
+          "line": 1858,
+          "old_text": "Direct from the definitions.",
+          "replacement_text": "Put $E = \\bigcap_{i \\in I} E_i$. Intersections of subfields of $M$\nare subfields, and $E$ contains $F$ and is algebraic over $F$.\nFor $\\alpha \\in E$, let $P \\in F[x]$ be its minimal polynomial.\nChoose $i_0 \\in I$. Normality of $E_{i_0}/F$ gives a factorization\n$P = c\\prod_{j=1}^d(x-\\alpha_j)$ with $c \\in F^*$ and\n$\\alpha_j \\in E_{i_0} \\subset M$, retaining multiplicities.\nFor every $i \\in I$, the same polynomial splits over $E_i$ because\n$\\alpha \\in E_i$. Each $\\alpha_j$ is then a root of that factorization\nin the field $M$, so $\\alpha_j$ is one of its roots in $E_i$.\nThus every $\\alpha_j$ lies in every $E_i$, and the displayed\nfactorization lies in $E[x]$. This proves that $E/F$ is normal."
+        }
+      ],
+      "rationale": "A nonempty family supplies a member in which the minimal polynomial splits. The displayed complete proof puts each root, with its original multiplicity, into every member and hence into the intersection.",
+      "adverse_evidence": "For an empty family the ambient intersection is M, which need not be normal. Take F=Q and M=Q(c), where c is the real cube root of 2. The polynomial x^3-2 is irreducible: its only possible rational roots are 1,-1,2,-2 and none is a root. Its other factor x^2+c x+c^2 has negative discriminant -3c^2, so it has nonreal roots outside the real field M. Thus M/Q is not normal. The sole source use at fields.tex:2116 is a two-member intersection and remains valid; a bounded root-TeX search found no other uses."
+    },
+    {
+      "id": "FIELDS-RECON-042",
+      "occurrences": [
+        "OCC-00253"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_identifier_spelling",
+      "authority_lines": [
+        2042,
+        2043
+      ],
+      "operations": [],
+      "rationale": "The section label has a spelling error but remains a stable non-rendering identifier. The actual chapter title is correct.",
+      "adverse_evidence": "The external reference algebra.tex:8510 uses the same identifier fields-section-splitting-fieds and resolves. Retain the identifier and that reference rather than create a label migration."
+    },
+    {
+      "id": "FIELDS-RECON-043",
+      "occurrences": [
+        "OCC-00254",
+        "OCC-11975"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        2123,
+        2128
+      ],
+      "operations": [
+        {
+          "line": 2127,
+          "old_text": "normal closure $E$ over $F$",
+          "replacement_text": "normal closure of $E$ over $F$"
+        }
+      ],
+      "rationale": "Insert the missing preposition naming the field whose normal closure is taken.",
+      "adverse_evidence": "The extension K/E, base F and reference to the construction stay unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-044",
+      "occurrences": [
+        "OCC-11976"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2232,
+        2246
+      ],
+      "operations": [
+        {
+          "line": 2241,
+          "old_text": "The structure of finite abelian groups shows that",
+          "replacement_text": "If $A = 0$, then $A$ is cyclic of order $1$, which divides $n$.\nSuppose $A \\not = 0$. The structure of finite abelian groups shows that"
+        }
+      ],
+      "rationale": "Treat the trivial group before choosing a first nontrivial invariant factor. For nontrivial A, exponent dividing n implies e_1 divides n; the hypothesis at d=e_1 gives e_1^r <= e_1, hence r=1 since e_1>1. Its order e_1 then divides n.",
+      "adverse_evidence": "For A=0 the empty invariant-factor list has r=0 and e_1 is undefined. The new first case proves the actual conclusion without altering the nontrivial calculation."
+    },
+    {
+      "id": "FIELDS-RECON-045",
+      "occurrences": [
+        "OCC-11987"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0339"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2363,
+        2377
+      ],
+      "operations": [],
+      "rationale": "The current source already removes the extraneous for before the regular-representation K-algebra map.",
+      "adverse_evidence": "The map, basis, degree, trace and determinant formulas are unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-046",
+      "occurrences": [
+        "OCC-01268",
+        "OCC-11977"
+      ],
+      "canonical_ids": [],
+      "disposition": "rejected_no_defect",
+      "authority_lines": [
+        2394,
+        2396
+      ],
+      "operations": [],
+      "rationale": "The first Exercises names the chapter; the second names the numbered item type for the two external references. This follows the cross-chapter reference format used throughout the project and is not accidental word duplication.",
+      "adverse_evidence": "Both labels begin exercises-exercise- and refer to the Exercises chapter. Removing the chapter name or item type is an optional reference-style change, not a source defect."
+    },
+    {
+      "id": "FIELDS-RECON-047",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        1657,
+        1666
+      ],
+      "operations": [
+        {
+          "line": 1665,
+          "old_text": "product and quotient of $\\alpha$ and $\\beta$.",
+          "replacement_text": "product and, when $\\beta \\not = 0$, the quotient of $\\alpha$ by $\\beta$."
+        }
+      ],
+      "rationale": "Restrict the quotient to a nonzero denominator. For q double prime at least both p-powers, alpha^q double prime and beta^q double prime lie in k; the latter is nonzero, so their quotient also lies in k.",
+      "adverse_evidence": "The restriction applies only to division and preserves the source sum, difference and product assertions and all p-powers.",
+      "discovery": "Primary review adjacent to OCC-11979; same domain issue as the earlier algebraic-element closure proof."
+    },
+    {
+      "id": "FIELDS-RECON-048",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        1756,
+        1764
+      ],
+      "operations": [
+        {
+          "line": 1757,
+          "old_text": "We first prove this when $K/F$ is purely inseparable. Namely, we claim that",
+          "replacement_text": "We first prove this when $K/F$ is purely inseparable. In characteristic\nzero, $K = F$ and both sides of the asserted equality are $1$.\nAssume for this paragraph that the characteristic is a prime $p > 0$.\nNamely, we claim that"
+        }
+      ],
+      "rationale": "Separate the characteristic-zero identity case before invoking the finite purely inseparable tower lemma, whose hypothesis explicitly requires p>0.",
+      "adverse_evidence": "Retain the earlier unique F-embedding correction and every positive-characteristic generator and count. No change to the arbitrary finite extension handled next.",
+      "discovery": "Primary review of the full context for the previously admitted unique F-embedding correction."
+    },
+    {
+      "id": "FIELDS-RECON-049",
+      "occurrences": [
+        "OCC-00255",
+        "OCC-11978"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2571,
+        2579
+      ],
+      "operations": [
+        {
+          "line": 2576,
+          "old_text": "Since $L/k$ is separable",
+          "replacement_text": "Since $L/K$ is separable"
+        }
+      ],
+      "rationale": "The extension, minimal polynomial and algebraic closure in the proof all have base K. Restore that same base in the separability assertion.",
+      "adverse_evidence": "Lowercase k is not defined here; this is a base-field correction, not a renaming of the standing objects."
+    },
+    {
+      "id": "FIELDS-RECON-050",
+      "occurrences": [
+        "OCC-11989"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0341"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        2573,
+        2574
+      ],
+      "operations": [],
+      "rationale": "The current source already uses singular map for the single multiplication endomorphism alpha:L to L.",
+      "adverse_evidence": "The old source plural has already been corrected; retain the previous unit and do not allocate another."
+    },
+    {
+      "id": "FIELDS-RECON-051",
+      "occurrences": [
+        "OCC-00256",
+        "OCC-11980"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2773,
+        2780
+      ],
+      "operations": [
+        {
+          "line": 2777,
+          "old_text": "over $K$. However, the",
+          "replacement_text": "over $K^G$. However, the"
+        }
+      ],
+      "rationale": "The orbit polynomial has coefficients in K^G, and K=K^G(alpha). Its degree bounds the degree of alpha over K^G, which is [K:K^G].",
+      "adverse_evidence": "The degree over K is one and cannot supply the stated bound on [K:K^G]. Retain the faithful action and automorphism inequality."
+    },
+    {
+      "id": "FIELDS-RECON-052",
+      "occurrences": [
+        "OCC-11985"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        2774,
+        2780
+      ],
+      "operations": [
+        {
+          "line": 2779,
+          "old_text": "$K^G(\\alpha) = L$",
+          "replacement_text": "$K^G(\\alpha) = K$"
+        }
+      ],
+      "rationale": "The primitive element in this paragraph generates K over K^G; L was the auxiliary finite subfield in the preceding reduction.",
+      "adverse_evidence": "The action is assumed faithful on K. Do not silently replace the tower or its fixed base."
+    },
+    {
+      "id": "FIELDS-RECON-053",
+      "occurrences": [
+        "OCC-00257"
+      ],
+      "canonical_ids": [],
+      "disposition": "optional_identifier_spelling",
+      "authority_lines": [
+        3053,
+        3054
+      ],
+      "operations": [],
+      "rationale": "The displayed theorem title is correct; the spelling error occurs only in a stable non-rendering label.",
+      "adverse_evidence": "The exact label is referenced by pione.tex at lines 98, 2414 and 2576. Retaining this consistent identifier preserves those references; a spelling migration is optional."
+    },
+    {
+      "id": "FIELDS-RECON-054",
+      "occurrences": [
+        "OCC-01269",
+        "OCC-11981"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3094,
+        3105
+      ],
+      "operations": [
+        {
+          "line": 3098,
+          "old_text": "$U_S(g) = \\{g' \\in G \\mid g'(s) = g(s)\\}$",
+          "replacement_text": "$U_S(g) = \\{g' \\in G \\mid g'(s) = g(s)\\text{ for all }s\\in S\\}$"
+        }
+      ],
+      "rationale": "Bind s to every element of the finite set S. Equality of restrictions c(h)=c(g) on E then proves h belongs to the displayed neighbourhood since S is contained in E.",
+      "adverse_evidence": "The empty set S gives all of G, as required. Do not impose nonemptiness or change the pointwise-convergence topology."
+    },
+    {
+      "id": "FIELDS-RECON-055",
+      "occurrences": [
+        "OCC-01270",
+        "OCC-11988"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0340"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3218,
+        3227
+      ],
+      "operations": [],
+      "rationale": "The current Kummer setup already requires a in K^*, ensuring b is nonzero before sigma(b)/b is defined.",
+      "adverse_evidence": "The source allows the trivial extension for a nonzero nth power; the correction excludes only the undefined division at a=0."
+    },
+    {
+      "id": "FIELDS-RECON-056",
+      "occurrences": [
+        "OCC-00258"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3281,
+        3285
+      ],
+      "operations": [
+        {
+          "line": 3284,
+          "old_text": "any sub extension",
+          "replacement_text": "any subextension"
+        }
+      ],
+      "rationale": "Use the same compound noun as the definition and the proof below.",
+      "adverse_evidence": "The tower L/L prime/K, divisibility condition and conclusion are unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-057",
+      "occurrences": [
+        "OCC-00259",
+        "OCC-11982"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3281,
+        3309
+      ],
+      "operations": [
+        {
+          "line": 3288,
+          "old_text": "Observe that for $d | e$ the subfield",
+          "replacement_text": "If $e=1$, then $L=L'=K=K(\\alpha)$ and the assertion holds with\n$d=1$. Assume $e>1$. Since $L=K(\\alpha)$ has degree $e$, we have\n$\\alpha\\not =0$. Observe that for $d | e$ the subfield"
+        },
+        {
+          "line": 3305,
+          "old_text": "c = (\\prod\\nolimits_{i = 1, \\ldots, d} \\zeta_i) \\alpha^d",
+          "replacement_text": "c = (-1)^d (\\prod\\nolimits_{i = 1, \\ldots, d} \\zeta_i) \\alpha^d"
+        },
+        {
+          "line": 3309,
+          "old_text": "$\\alpha^d = \\zeta^{-1}c \\in L'$",
+          "replacement_text": "$\\alpha^d = (-1)^d\\zeta^{-1}c \\in L'$"
+        }
+      ],
+      "rationale": "Each of the d factors contributes -zeta_i alpha to the constant term. Retain (-1)^d in that equality and in the solved expression for alpha^d. Treat e=1 first so the later division by alpha^d is defined in the remaining case. Since zeta is a product of eth roots it is itself an eth root in L and hence in K.",
+      "adverse_evidence": "The field-membership conclusion survives the missing sign, but the displayed equality does not in odd degree away from characteristic two. The statement also permits alpha=0 only when e=1; handle that case without narrowing its hypotheses."
+    },
+    {
+      "id": "FIELDS-RECON-058",
+      "occurrences": [
+        "OCC-11990",
+        "OCC-00260"
+      ],
+      "canonical_ids": [
+        "MC-STK-ERR-0342"
+      ],
+      "disposition": "already_composed",
+      "authority_lines": [
+        3629,
+        3645
+      ],
+      "operations": [],
+      "rationale": "The current warning already uses the defined noun compositum.",
+      "adverse_evidence": "Preserve both embeddings and both stated field degrees in the example; this received report does not establish a defect in those calculations."
+    },
+    {
+      "id": "FIELDS-RECON-059",
+      "occurrences": [
+        "OCC-11983"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        3665,
+        3681
+      ],
+      "operations": [
+        {
+          "line": 3674,
+          "old_text": "\\item $E = E_{sep} \\otimes_F E_{insep}$.",
+          "replacement_text": "\\item multiplication induces an isomorphism of $F$-algebras\n$E_{sep}\\otimes_F E_{insep}\\longrightarrow E$,\n$\\sum_i a_i\\otimes b_i\\longmapsto\\sum_i a_i b_i$."
+        },
+        {
+          "line": 3679,
+          "old_text": "We found the subfield $E_{sep}$ in Lemma \\ref{lemma-separable-first}.\nWe set $E_{insep} = E^{\\text{Aut}(E/F)}$. Details omitted.",
+          "replacement_text": "Put $S = E_{sep}$, as constructed in Lemma \\ref{lemma-separable-first},\nand put $G = \\text{Aut}(E/F)$ and $N = E^G$.\nThe extension $S/F$ is separable and $E/S$ is purely inseparable.\nMoreover, $S/F$ is normal by Lemma \\ref{lemma-separable-first-normal},\nso $S/F$ is Galois. We will take $E_{insep} = N$.\n\n\\medskip\\noindent\nWe first show that $N/F$ is purely inseparable. Let $a \\in N$ and let\n$f \\in F[T]$ be its monic minimal polynomial. Since $E/F$ is normal,\nevery root $b$ of $f$ in an algebraic closure of $E$ belongs to $E$.\nThe map $F(a) \\to E$ sending $a$ to $b$ is an $F$-embedding:\nit is the map induced by evaluation at $b$ on $F[T]/(f)$.\nBy Lemma \\ref{lemma-lift-maps} it extends to an element $g \\in G$.\nThus $b = g(a) = a$. Consequently $f$ has just one distinct root.\nIn characteristic zero, $f$ is separable, so $\\deg(f) = 1$ and $a \\in F$.\nIn characteristic $p > 0$, Lemma \\ref{lemma-irreducible-polynomials}\ngives $f(T) = h(T^q)$ for $q = p^r$, $r \\geq 0$, and a monic\nseparable irreducible polynomial $h \\in F[T]$.\nThe map $x \\mapsto x^q$ is bijective on an algebraically closed field:\nexistence follows by taking a root of $T^q-c$, and uniqueness follows\nfrom $x^q-y^q=(x-y)^q$. Therefore $h$ has just one distinct root.\nSince $h$ is separable and monic, $h(T)=T-c$ for some $c \\in F$.\nHence $a^q=c \\in F$. This proves the assertion in every characteristic.\nConversely, if $a \\in E$ is purely inseparable over $F$, then every\n$g \\in G$ fixes $a$: in characteristic $p>0$, choose $q=p^r$ with\n$a^q\\in F$ and use $(g(a)-a)^q=g(a^q)-a^q=0$; in characteristic\nzero the relevant elements already lie in $F$.\nThus $N$ consists exactly of the elements of $E$ purely inseparable\nover $F$.\n\n\\medskip\\noindent\nThe extension $E/N$ is normal by Lemma \\ref{lemma-normal-goes-up}.\nTo prove separability, let $a \\in E$. The orbit $G\\cdot a$ is finite,\nsince its elements are roots of the minimal polynomial of $a$ over $F$.\nThe polynomial\n$$\nP_a(T)=\\prod_{b\\in G\\cdot a}(T-b)\n$$\nhas coefficients in $N$, since every element of $G$ permutes its factors.\nIts roots are distinct, and the minimal polynomial of $a$ over $N$\ndivides $P_a$. Thus $a$ is separable over $N$. As $E/N$ is algebraic,\nnormal and separable, it is Galois.\n\n\\medskip\\noindent\nLet $C=SN$ be the compositum inside $E$. Since $E/N$ is separable,\nso is $E/C$ by Lemma \\ref{lemma-separable-goes-up}. Since $E/S$\nis purely inseparable, $E/C$ is purely inseparable as well.\nIn characteristic zero, $E=S\\subset C$. In characteristic $p>0$,\nfor each $a\\in E$ choose $q=p^r$ with $a^q\\in S\\subset C$.\nThe minimal polynomial of $a$ over $C$ is separable and divides\n$T^q-a^q=(T-a)^q$ in $E[T]$. It therefore has degree one, so $a\\in C$.\nIt follows that $E=C=SN$.\n\n\\medskip\\noindent\nMultiplication in $E$ is $F$-balanced and defines the $F$-algebra map\n$$\n\\mu:S\\otimes_F N\\longrightarrow E,\\qquad\n\\sum_i s_i\\otimes n_i\\longmapsto\\sum_i s_i n_i.\n$$\nIts image is a subring of the algebraic extension $E/F$ containing $F$,\nand is therefore a field by Lemma \\ref{lemma-subalgebra-algebraic-extension-field}.\nThe image contains both $S$ and $N$, so it contains $SN=E$.\nThus $\\mu$ is surjective.\n\n\\medskip\\noindent\nIt remains to prove injectivity. In characteristic zero, $N=F$ and\nthe inverse of $\\mu$ is $a\\mapsto a\\otimes 1$.\nAssume the characteristic is $p>0$. Let $L/F$ be any finite\nsubextension of $S/F$. By Lemma \\ref{lemma-primitive-element},\nwrite $L=F(\\theta)$. Let $f\\in F[T]$ be the monic minimal polynomial\nof $\\theta$ over $F$, and let $g\\in N[T]$ be its monic minimal\npolynomial over $N$. Then $g$ divides $f$ in $N[T]$.\nWrite $g(T)=\\sum_{i=0}^d b_iT^i$, with $b_d=1$.\nSince $N/F$ is purely inseparable and this list of coefficients is finite,\nthere is one $q=p^r$ such that every $b_i^q$ belongs to $F$. Hence\n$$\ng(T)^q=\\sum_{i=0}^d b_i^q T^{iq}\\in F[T].\n$$\nThis polynomial vanishes at $\\theta$, so $f$ divides $g^q$ in $F[T]$.\nSeparability of $f$ gives $A,B\\in F[T]$ with $Af+Bf'=1$.\nThis identity also holds in $N[T]$, so $f$ is squarefree in $N[T]$.\nEvery irreducible factor of $f$ in $N[T]$ divides $g^q$, hence divides $g$.\nSince those factors occur in $f$ with multiplicity one, $f$ divides $g$.\nThe two monic polynomials $f$ and $g$ therefore coincide.\n\n\\medskip\\noindent\nFor completeness the corresponding tensor-product map is explicit.\nWrite $m=\\deg(f)$, so $1,\\theta,\\ldots,\\theta^{m-1}$ is an $F$-basis of $L$.\nThe map $L\\otimes_F N\\longrightarrow N[T]/(f)$ given by\n$$\n\\left(\\sum_{j=0}^{m-1}a_j\\theta^j\\right)\\otimes n\n\\longmapsto\\left[\\sum_{j=0}^{m-1}a_j n T^j\\right]\n$$\nand $[\\sum_j c_jT^j]\\mapsto\\sum_j\\theta^j\\otimes c_j$\nare mutually inverse algebra maps. The first respects products by reduction\nmodulo $f$; the second is well defined because $f(\\theta)=0$.\nEvaluation $N[T]/(f)\\to N(\\theta)=LN$ is an isomorphism, since $f=g$\nis the minimal polynomial over $N$. Their composite is multiplication\n$L\\otimes_F N\\to LN\\subset E$, which is consequently injective.\nEvery element $z\\in S\\otimes_F N$ is a finite sum $\\sum_i s_i\\otimes n_i$.\nThe field $L=F(s_1,\\ldots,s_t)\\subset S$ is a finite separable extension\nof $F$. Let $z_L=\\sum_i s_i\\otimes n_i\\in L\\otimes_F N$.\nIf $\\mu(z)=0$, then multiplication sends $z_L$ to zero in $E$;\nthe injectivity just proved gives $z_L=0$, and its image $z$ is zero.\nThus $\\mu$ is injective and hence an isomorphism, as claimed."
+        }
+      ],
+      "rationale": "Specify and prove the canonical multiplication map. The complete proof identifies the fixed field as the purely inseparable elements, proves the Galois upper extension and compositum equality, and proves linear disjointness through finite separable subextensions without assuming the original extension finite.",
+      "adverse_evidence": "The source equality is conventional identification notation and does not make the theorem false. The substantive clarification gives the actual isomorphism and fills the omitted proof; the normality hypothesis and both embedded subfields are preserved. Three external uses were read and remain valid, including the reversed tensor factors via symmetry.",
+      "proof_evidence": {
+        "file": "FIELDS_NORMAL_DECOMPOSITION_PROOF_CHECK_20260925.md",
+        "required_in_candidate": true
+      }
+    },
+    {
+      "id": "FIELDS-RECON-060",
+      "occurrences": [
+        "OCC-00261"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3698,
+        3704
+      ],
+      "operations": [
+        {
+          "line": 3702,
+          "old_text": "is algebraic over $k$. Denote",
+          "replacement_text": "is algebraic over $k$. Denote by"
+        }
+      ],
+      "rationale": "Insert the missing preposition in the introduction of the minimal polynomial.",
+      "adverse_evidence": "Its monic coefficients, irreducibility, degree and uniqueness assertions remain unchanged."
+    },
+    {
+      "id": "FIELDS-RECON-061",
+      "occurrences": [
+        "OCC-00262"
+      ],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_copyedit",
+      "authority_lines": [
+        3715,
+        3718
+      ],
+      "operations": [
+        {
+          "line": 3716,
+          "old_text": "characteristic $p$ of $k$ is $ > 0$",
+          "replacement_text": "characteristic $p$ of $k$ satisfies $p > 0$"
+        }
+      ],
+      "rationale": "Give the greater-than relation its explicit left operand p.",
+      "adverse_evidence": "Retain the named characteristic, the p-power q and the separability conclusion for alpha^q."
+    },
+    {
+      "id": "FIELDS-RECON-062",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        2747,
+        2754
+      ],
+      "operations": [
+        {
+          "line": 2753,
+          "old_text": "we conclude that $K/K^G$ is separable. Thus $K/K^G$ is Galois.",
+          "replacement_text": "we conclude that $K/K^G$ is separable. Also, $Q$ divides the displayed\npolynomial $P$, which splits completely over $K$, so $Q$ splits over $K$.\nThus $K/K^G$ is normal as well, and hence Galois."
+        }
+      ],
+      "rationale": "The definition of Galois requires normality in addition to algebraicity and separability. The same orbit polynomial supplies it: each minimal polynomial divides a product of linear factors already in K[x].",
+      "adverse_evidence": "This fills an omitted inference in the existing proof; it does not alter the finite faithful-group hypothesis or the degree argument.",
+      "discovery": "Primary reading of the complete fixed-field proof for OCC-00256 and OCC-11985."
+    },
+    {
+      "id": "FIELDS-RECON-063",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_source_correction",
+      "authority_lines": [
+        3730,
+        3734
+      ],
+      "operations": [
+        {
+          "line": 3731,
+          "old_text": "extension $k'/k$ is called {\\it purely inseparable} if\nthe characteristic of $k$ is $p > 0$ and for every element",
+          "replacement_text": "extension $k'/k$ is called {\\it purely inseparable} if $k'=k$, or if\nthe characteristic of $k$ is $p > 0$ and for every element"
+        }
+      ],
+      "rationale": "Restore the identity-extension case explicitly included in definition-purely-inseparable at lines 1589-1592, which allows k prime=k in every characteristic.",
+      "adverse_evidence": "The review otherwise contradicts the primary definition for characteristic-zero identity extensions. Keep the entire positive-characteristic condition unchanged.",
+      "discovery": "Primary comparison of the review with the original definition while checking the normal decomposition."
+    },
+    {
+      "id": "FIELDS-RECON-064",
+      "occurrences": [],
+      "canonical_ids": [],
+      "disposition": "accepted_missing_clarification",
+      "authority_lines": [
+        3397,
+        3420
+      ],
+      "operations": [
+        {
+          "line": 3399,
+          "old_text": "Let $E/F$ be a field extension. A transcendence basis of $E$ over $F$ exists.\nAny two transcendence bases have the same cardinality.",
+          "replacement_text": "Let $E/F$ be a field extension. A transcendence basis of $E$ over $F$ exists.\nMore precisely, if $A\\subset G\\subset E$, $A$ is algebraically independent\nover $F$, and $G$ generates $E/F$, then there is a transcendence basis $B$\nwith $A\\subset B\\subset G$.\nAny two transcendence bases have the same cardinality."
+        },
+        {
+          "line": 3411,
+          "old_text": "The union of the elements of a totally ordered subset $T$ of $\\mathcal{B}$",
+          "replacement_text": "The empty chain has upper bound $A\\in\\mathcal{B}$.\nThe union of the elements of a nonempty totally ordered subset $T$ of $\\mathcal{B}$"
+        }
+      ],
+      "rationale": "The first paragraph of the original proof establishes the stronger extension property with prescribed independent A and generating G. Make that already-proved generality visible in the statement. For Zorn, the empty chain has upper bound A; a nonempty chain has union containing A and every finite polynomial relation occurs in one member. Maximality forces each generator algebraic over F(B), hence E algebraic over F(B).",
+      "adverse_evidence": "Do not claim a new theorem or delete the original existence and cardinality conclusions. Without the nonempty qualifier the assertion that the union contains A fails for the empty chain when A is nonempty. This is an independent underclaim and boundary clarification, not a received producer defect.",
+      "discovery": "Primary source reading, applying the user directive to look for underclaims and missed generality alongside errors."
+    }
+  ],
+  "reading_note": "Source and received reports bound to their exact bytes. Previously admitted units are retained separately and require source-specific semantic comparison.\nRead the complete authority text at lines 1-920 and all 16 received reports with first locus at most 900; read all eight prior admitted Fields units. Retained both optional proposals, recorded nine received correction groups and two independent proof/domain clarifications. No source or registry edit.\nRead authority lines 921-1520 and all 24 received reports with first locus 901-1500. Checked both quotient-presentation maps and retained that optional report with the exact comparison proof. Added explicit empty-chain cases, nonzero-factorization domain, derivative dichotomy proof and Bezout transport between F[x] and E[x]. No source or registry edit.\nRead authority lines 1521-2425 and all 16 received reports with first locus 1501-2400. Verified each of the eight prior Fields replacement texts in the current source. Recorded five prior-correction groups, repaired the normal-intersection boundary with full proof and counterexample, and retained chapter-plus-item reference wording. No source or registry edit.\nRead all remaining 19 reports and complete authority text from line 2401 to document end at 3792; reread the truncated display boundary at 3190-3418. Checked the original pure-inseparability definition, separable/normal permanence, lifting of embeddings, primitive elements and algebraic subalgebras against the complete normal-decomposition proof. Read all three external receiving uses. Retained the optional stable infinite-Galois label and all previous Fields units; completed the sign propagation and characteristic-zero boundary repair. Promoted the transcendence-basis extension property already proved in the source, following the new underclaims directive. Recorded further exact consequences separately in the proof check. No source or registry mutation.",
+  "next_source_start_line": null,
+  "mathematical_review_complete": true,
+  "mathematical_review_scope": "Primary source review of this proposed correction batch; not an exhaustive certification of every unedited proof in Fields",
+  "required_proof_evidence": [
+    {
+      "path": "FIELDS_NORMAL_DECOMPOSITION_PROOF_20260925.tex",
+      "bytes": 5353,
+      "sha256": "109B3D58B987DB6C399613DF9E177A8A0C082878DF9BE70F8D53E36776DB4A25"
+    },
+    {
+      "path": "FIELDS_NORMAL_DECOMPOSITION_PROOF_CHECK_20260925.md",
+      "bytes": 7508,
+      "sha256": "411A194E9F21C5652DE2AC16853EF74606CC123A51CEE1366EAD7129B6038D20"
+    },
+    {
+      "path": "FIELDS_NORMAL_DECOMPOSITION_PRIMARY_REVIEW_20260925.json",
+      "bytes": 1682,
+      "sha256": "48495F29D784178095F594E167A22E469936BA3D172CE81F7543E2BE255EC2B0"
+    }
+  ],
+  "dependency_groups": [
+    {
+      "id": "normal-decomposition-prerequisites",
+      "review_ids": [
+        "FIELDS-RECON-033",
+        "FIELDS-RECON-034",
+        "FIELDS-RECON-038",
+        "FIELDS-RECON-059"
+      ],
+      "required_together": true,
+      "reason": "Retain the corrected derivative dichotomy and separability transport proof, the precise separable-polynomial description, and the complete normal-decomposition proof together."
+    }
+  ],
+  "underclaims_review": {
+    "source_statement": "FIELDS-RECON-064 exposes the A-contained-in-B-contained-in-G property already proved in the source",
+    "separate_consequences": "FIELDS_NORMAL_DECOMPOSITION_PROOF_CHECK_20260925.md",
+    "proved": [
+      "separable/purely-inseparable linear disjointness without normality",
+      "intersection of the two factors",
+      "both base-changed degrees, including infinite cardinals",
+      "canonical isomorphism of the Galois groups with their profinite topologies"
+    ],
+    "source_additions_policy": "Further consequences remain in the complete proof evidence; no new theorem is silently classified as a received defect"
+  }
+}
