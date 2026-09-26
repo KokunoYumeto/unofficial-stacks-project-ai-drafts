@@ -26,6 +26,7 @@ DIRECT_TOOLS = direct_successor_composition.DIRECT_TOOLS
 SCHEMA = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-direct-successor/v1"
 STATUS = "PASS_SOURCE_CHECKPOINT_DIRECT_SUCCESSOR"
 AI_COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+VERDIER_COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-verdier-registered-insertion-successor/v1"
 SCHEMA_AI = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-ai-source-correction-successor/v1"
 STATUS_AI = "PASS_SOURCE_CHECKPOINT_AI_SOURCE_CORRECTION_SUCCESSOR"
 require = historical.require
@@ -259,8 +260,13 @@ def verify_current_illusie(build, source, composition, head):
     else:
         import ai_source_correction_composition as correction
     scope = composition.get("ai_source_correction_scope")
+    scope_source_commit = composition["composition_source_commit"]
+    scope_source_tree = composition["composition_source_tree"]
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        scope_source_commit = composition.get("inherited_ai_source_commit")
+        scope_source_tree = composition.get("inherited_ai_source_tree")
     correction.validate_ai_source_correction_scope(scope,
-        source_commit=composition["composition_source_commit"], source_tree=composition["composition_source_tree"])
+        source_commit=scope_source_commit, source_tree=scope_source_tree)
     protected = composition.get("correction_protected_inputs")
     require(isinstance(protected, dict) and {correction.MANIFEST, "simplicial.tex", "illusie_volume_I/verify.py",
             "illusie_volume_I/test_composition.py", "illusie_volume_I/test_ez.py"} <= set(protected),
@@ -294,8 +300,8 @@ def verify_current_illusie(build, source, composition, head):
     require(before == require_exact_inputs(build, source, head, sorted(protected)), "Illusie inputs changed during validation")
     return {"schema": "unofficial-stacks-project-ai-drafts-current-illusie-correction-binding/v1",
             "status": "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND", "current_commit": head,
-            "composition_source_commit": composition["composition_source_commit"],
-            "composition_source_tree": composition["composition_source_tree"], "scope": scope,
+            "composition_source_commit": scope_source_commit,
+            "composition_source_tree": scope_source_tree, "scope": scope,
             "review": manifest["independent_review"], "checker": checker, "checker_result": result,
             "regression_tests": {"status": "PASS", "tests_run": 5, "modules": modules}}
 
@@ -303,8 +309,9 @@ def verify_current_illusie(build, source, composition, head):
 def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: dict, head: str, *, live: bool):
     head = build.require_commit_object(source, head, "direct checkpoint actual revision")
     tree = build.git(source, "rev-parse", f"{head}^{{tree}}")
-    is_ai = composition.get("schema") == AI_COMPOSITION_SCHEMA
-    require(composition.get("schema") in {DIRECT_SCHEMA, AI_COMPOSITION_SCHEMA},
+    is_verdier = composition.get("schema") == VERDIER_COMPOSITION_SCHEMA
+    is_ai = composition.get("schema") in {AI_COMPOSITION_SCHEMA, VERDIER_COMPOSITION_SCHEMA}
+    require(composition.get("schema") in {DIRECT_SCHEMA, AI_COMPOSITION_SCHEMA, VERDIER_COMPOSITION_SCHEMA},
             "direct checkpoint requires typed direct composition")
     require(build.committed_file_identity(source, head, SEMANTIC_PATH) is not None,
             "post-content receipt topology requires a supported committed semantic successor")
@@ -331,7 +338,11 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
     inherited_id = build.committed_file_identity(source, prior, "validation/composition-current.json")
     require(inherited_id is not None, "direct checkpoint inherited composition is absent")
     inherited = build.parse_json_blob(source, inherited_id, "inherited actual composition")
-    require(inherited.get("schema") in {direct_successor_composition._helper.SCHEMA, DIRECT_SCHEMA}
+    require(inherited.get("schema") in {
+                direct_successor_composition._helper.SCHEMA,
+                DIRECT_SCHEMA,
+                AI_COMPOSITION_SCHEMA,
+            }
             and inherited.get("status") == "PASS" and isinstance(inherited.get("composition"), dict),
             "inherited composition is not a passing typed source binding")
     # The semantic increment belongs to its original cumulative source endpoint.
@@ -409,6 +420,10 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
         binding["current_illusie_successor"] = current_illusie
         binding["checks"].extend(["separate_AI_correction_exact_candidate_replay_and_review_closure",
                                   "current_Illusie_mechanical_checks_and_five_finite_regressions"])
+    if is_verdier:
+        binding["verdier_registered_insertion"] = composition["verdier_registered_insertion_scope"]
+        binding["checks"].extend(["single_registered_insertion_exact_prefix_suffix_replay",
+                                  "seven_Verdier_stable_units_and_registry_admission_bound"])
     if live:
         build.require_source_checkpoint_unchanged(source, binding, tuple(protected))
     else:
