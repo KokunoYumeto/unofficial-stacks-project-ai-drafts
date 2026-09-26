@@ -30,10 +30,11 @@ has passed a mutex-protected baseline-versus-candidate fixed-point build with
 zero new diagnostics and affected-page visual QA. The earlier mathematical and
 layout reviews are preserved in the merged candidate history, but public
 registry growth required a new lease-bound import. This initial manifest keeps
-review partial and independent replay not_performed until the newly frozen
-packet is checked. Admission, composition, publication, and public-byte
-readback remain separate hash-bound transitions. Candidate-local admission
-state remains not_admitted even after any later registry transition.
+the inherited separate mathematical review and a fresh deterministic replay of
+the newly frozen lease-bound packet. That replay passed and is bound in the
+final manifest. Admission, composition, publication, and public-byte readback
+remain separate hash-bound transitions. Candidate-local admission state
+remains not_admitted even after any later registry transition.
 
 Composition operation VDR-STK-COMP-0002 inserts the single payload after the
 complete proof of proposition-homotopy-category-triangulated and before

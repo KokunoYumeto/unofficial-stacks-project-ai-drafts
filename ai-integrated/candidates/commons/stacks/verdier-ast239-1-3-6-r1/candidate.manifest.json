@@ -24,7 +24,7 @@
   },
   "stable_unit_manifest": {
     "path": "stable-units.json",
-    "sha256": "4E8042DBEE76B9C44117F72911C88C566B26E395E570D5784C427F749E4CC51E"
+    "sha256": "34534F919352FE699219904EBB60D83CAC8375CA262C642CFA7EF17292074CA9"
   },
   "source_map": {
     "path": "source-map.jsonl",
@@ -32,15 +32,15 @@
   },
   "decision_ledger": {
     "path": "decisions.jsonl",
-    "sha256": "505C25F07014B446CD15B5F8F94895386053F103DF92088726255CDA30E7598F"
+    "sha256": "CEEAE30FC9BCF51D31E8432AFACD51F8F047A59420C0C00A3BD7427715AAE9DD"
   },
   "rejection_ledger": {
     "path": "rejections.jsonl",
-    "sha256": "F1BA1654121CA2DF66D4A0E175DF466775E2DC8A9C86364153F4F96DEBFA5EC9"
+    "sha256": "4A142C3C9671E17895D5461D9416099AE4267D1825829FC8230492729098314B"
   },
   "formula_diagram_inventory": {
     "path": "formula-diagram-inventory.json",
-    "sha256": "5EE80802B4CE2776214458BC383302986BC8F935B9EAB237A38521D0C6B90A8F"
+    "sha256": "C1035DC3D1DB1663543D31D119735D1128B81193DDF07B4ED4325A9B22FDCF6D"
   },
   "builds": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "A083703890362FCC75F7A853F26A5D83C35CF8344C2C26EEB1B8C213F6889F9C"
+      "sha256": "BAD4520D1F52F7D0473865F9F74155E9A5E1CD124129B6954CC7BB127953D5B7"
     },
     {
       "path": "_build_impl.py",
@@ -117,7 +117,7 @@
     },
     {
       "path": "candidate.config.json",
-      "sha256": "CC416488443C624B1054CF76D5530D6A59D99EC1CB23108152E50C1889815DA3"
+      "sha256": "2C8B89B9CDB3E673C3E66A65E067790F28E56010EDB41D4F95102C1BE4106C00"
     },
     {
       "path": "check-manifest.py",
@@ -132,18 +132,20 @@
       "sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E"
     },
     {
+      "path": "replay/independent-review.json",
+      "sha256": "010870DCEDE1C2FD52CC2FEDBF3A72691BEFA15EA668EAD25E810BD7C606F557"
+    },
+    {
       "path": "verify.py",
       "sha256": "E69588D4794725525EC9028E66D7C1ADC7C1968608E7BA1735417515F57072CD"
     }
   ],
   "rights_state": "Source locators and hashes only; payload independently worded; no source relicense asserted; GFDL compatibility required at composition.",
-  "review_state": "partial",
-  "independent_replay": "not_performed",
-  "unresolved_defects": [
-    "Independent frozen-candidate replay has not yet been performed."
-  ],
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [],
   "stop_conditions": [
     "Do not admit or compose unless manifest closure, deterministic validators, build, visual QA, and independent replay all pass."
   ],
-  "generated_at_utc": "2026-09-26T20:54:57.023260Z"
+  "generated_at_utc": "2026-09-26T20:58:11.343741Z"
 }
