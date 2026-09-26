@@ -1,0 +1,95 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-candidate-config/v1",
+  "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+  "lease_id": "stacks-lease-000064-verdier-ast239-1-3-6-r1",
+  "namespace": "commons/stacks/verdier-ast239-1-3-6-r1",
+  "writer_task": "019fca5a-c80e-7890-a46b-4948ff443e6d",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "composition_base": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts",
+    "branch": "main",
+    "commit": "f73b18165c7162b8386de06cc3c50bd4ced745b6",
+    "tree": "5bc25c775349eddf5fa90a7f37f5b11044d89ec1"
+  },
+  "authority_lock": "authority/authority.lock.json",
+  "composition_operation": {
+    "path": "composition.jsonl",
+    "operation_id": "VDR-STK-COMP-0002",
+    "operation": "insert_bytes",
+    "mode": "insertion_only"
+  },
+  "payload_artifact": {
+    "path": "payload/fragments/derived-homotopy-category-abelian-split.tex",
+    "bytes": 3673,
+    "sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E",
+    "proposed_label": "lemma-homotopy-category-abelian-split"
+  },
+  "build_evidence": {
+    "build_receipt": {"path":"builds/build-receipt.json","bytes":2472,"sha256":"5CD5F1A6B2A8B0A1DAA9E04F705AF5F334C21108CF242EC432FE090750C3F42D","status":"PASS"},
+    "validation": {"path":"builds/validation.json","bytes":1468,"sha256":"D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB","status":"PASS","new_candidate_diagnostic_count":0},
+    "visual_qa": {"path":"builds/visual-qa.json","bytes":1758,"sha256":"EA4A81FA009E323BE18F25D23AE2A0DEF2AA450354A66CC087EFF3C8FDF6D4D2","status":"PASS","rendered_pdf_pages":[37,38],"reported_issue_count":0},
+    "tex_mutex": {"path":"builds/tex-mutex.json","bytes":378,"sha256":"570D3A97C0D10F8BBC7A0B7D70F9DFCBCEB09BFFFB9C633831315E1AFAAA53C9","status":"PASS","released":true},
+    "derived_pdf": {"path":"builds/derived.pdf","bytes":1251089,"sha256":"1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331","pages":131},
+    "candidate_log": {"path":"builds/derived.log","bytes":51617,"sha256":"3907949D2C8BE01837677A4A9726563FB5EB5AB54252F55361D3E76B6662DCE6"},
+    "baseline_log": {"path":"builds/baseline-derived.log","bytes":51611,"sha256":"285307FCB784CBB447DA375958465A8127BF19E69AD587117C649CFC13B47BB8"}
+  },
+  "source_scope": {
+    "work": "Astérisque 239",
+    "statement": "Proposition II.1.3.6",
+    "physical_pages": [125],
+    "printed_pages": [108],
+    "anchor_start": "ch2-1-3-6",
+    "anchor_end": "ch2-1-3-6-proof-complete",
+    "anchor_start_sequence": 1184,
+    "anchor_end_sequence": 1190,
+    "source_unit_count": 7
+  },
+  "expected_anchor_ids": [
+    "ch2-1-3-6",
+    "ch2-1-3-6-equivalent-conditions",
+    "ch2-1-3-6-i-iff-ii",
+    "ch2-1-3-6-ii-implies-iii",
+    "ch2-1-3-6-hstar-complex",
+    "ch2-1-3-6-hstar-equivalence",
+    "ch2-1-3-6-proof-complete"
+  ],
+  "expected_unit_ids": [
+    "verdier:ast239:1.3.6",
+    "verdier:ast239:1.3.6:equivalent-conditions",
+    "verdier:ast239:1.3.6:proof:i-iff-ii",
+    "verdier:ast239:1.3.6:proof:ii-implies-iii",
+    "verdier:ast239:1.3.6:construction:hstar-complex",
+    "verdier:ast239:1.3.6:claim:hstar-equivalence",
+    "verdier:ast239:1.3.6:conclusion:iii-implies-ii"
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 7,
+    "manifested_units": 7,
+    "mapped_to_proposed_lemma": 6,
+    "existing_composite_dispositions": 1,
+    "unresolved_source_units": 0,
+    "complete": true
+  },
+  "payload_state": "authored_built_validated",
+  "payload_operation_count": 1,
+  "build_state": "validated_pass",
+  "visual_qa_state": "visual_qa_passed",
+  "review_state": "partial",
+  "independent_replay": "not_performed",
+  "admission_state": "not_admitted",
+  "rights_state": {
+    "evidence_mode": "locators_hashes_and_independent_paraphrase_only",
+    "verbatim_source_prose_in_candidate": false,
+    "source_work_license_assertion": "none_by_candidate",
+    "source_relicensed": false,
+    "payload_independently_worded": true,
+    "gfdl_compatibility_required_at_composition": true
+  },
+  "generated_at_utc": "2026-09-06T18:50:39.977Z",
+  "state_updated_at_utc": "2026-09-26T20:54:57.0232604Z"
+}
