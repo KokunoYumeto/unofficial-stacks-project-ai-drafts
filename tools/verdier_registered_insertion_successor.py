@@ -127,6 +127,12 @@ PREPARATION_PATHS = (
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
 
+POST_COMPOSITION_REPAIR_PATHS = (
+    "tools/direct_successor_checkpoint.py",
+    "tools/verdier_registered_insertion_successor.py",
+    "tools/tests/test_verdier_registered_insertion_successor.py",
+)
+
 TOOLS = (
     "tools/verdier_registered_insertion_successor.py",
     "tools/validate_verdier_registered_insertion_successor.py",
@@ -533,6 +539,50 @@ def _validate_preparation(
     return preparation_commit, row
 
 
+def _validate_post_composition_repair(
+    git: Git,
+    composition_commit: str,
+    repair_commit: str,
+) -> list[dict[str, object]]:
+    """Bind the failed-closed checkpoint repair without hiding its first seal.
+
+    The initial derived receipt proved the composition topology but exposed a
+    stale EGA-surface comparison during its verifier-only build gate.  The
+    replacement receipt records both that superseded one-file seal and the
+    exact three-file repair commit before any TeX process was launched.
+    """
+    repair_commit = _commit(git, repair_commit, "post-composition validation repair")
+    repair_parents = git.parents(repair_commit)
+    require(len(repair_parents) == 1,
+            "post-composition validation repair must have exactly one parent")
+    initial_receipt_commit = repair_parents[0]
+    initial_row = _require_step(
+        git,
+        composition_commit,
+        initial_receipt_commit,
+        None,
+        "superseded_initial_receipt_seal",
+        {RECEIPT},
+    )
+    repair_row = _require_step(
+        git,
+        initial_receipt_commit,
+        repair_commit,
+        None,
+        "post_composition_validation_repair",
+        set(POST_COMPOSITION_REPAIR_PATHS),
+    )
+    changes = git.changes(initial_receipt_commit, repair_commit)
+    expected_types = {
+        "tools/direct_successor_checkpoint.py": "M",
+        "tools/verdier_registered_insertion_successor.py": "M",
+        "tools/tests/test_verdier_registered_insertion_successor.py": "M",
+    }
+    require({path: data[4] for path, data in changes.items()} == expected_types,
+            "post-composition validation repair change types mismatch")
+    return [initial_row, repair_row]
+
+
 def _validate_admission(
     git: Git,
     review_commit: str,
@@ -667,6 +717,7 @@ def derive_successor(
     review_commit: str,
     admission_commit: str,
     composition_commit: str,
+    validation_repair_commit: str,
     *,
     validation_endpoint: str | None = None,
 ) -> dict:
@@ -675,6 +726,8 @@ def derive_successor(
     review_commit = _commit(git, review_commit, "independent review")
     admission_commit = _commit(git, admission_commit, "registry admission")
     composition_commit = _commit(git, composition_commit, "source composition")
+    validation_repair_commit = _commit(
+        git, validation_repair_commit, "post-composition validation repair")
     head = _commit(git, git.text("rev-parse", "HEAD"), "HEAD")
     endpoint = head if validation_endpoint is None else _commit(git, validation_endpoint, "validation endpoint")
     require(endpoint == head, "generic composer replay requires the validation endpoint to be current HEAD")
@@ -697,6 +750,9 @@ def derive_successor(
     require(git.changes(admission_commit, composition_commit)[TARGET][4] == "M",
             "composition must modify the existing derived.tex only")
     report = _run_composer(git, admission_commit, composition_commit)
+    post_source_rows = _validate_post_composition_repair(
+        git, composition_commit, validation_repair_commit)
+    git.raw("merge-base", "--is-ancestor", validation_repair_commit, endpoint)
     _metadata_preserved(git, composition_commit, endpoint, correction_inputs)
     for path, expected in correction_inputs.items():
         require(git.ident(endpoint, path) == expected, "current Illusie protected input drift: " + path)
@@ -821,7 +877,8 @@ def derive_successor(
             "cutoff_tree": git.tree(admission_commit),
             "source_commit": composition_commit,
             "source_tree": git.tree(composition_commit),
-            "commits": [*prefix_rows, review_row, preparation_row, *admission_rows, source_row],
+            "commits": [*prefix_rows, review_row, preparation_row, *admission_rows,
+                        source_row, *post_source_rows],
             "root_sources_unchanged_before_composition": True,
             "lease_issue_is_fresh_root": True,
         },
@@ -860,6 +917,7 @@ def derive_successor(
             "preparation_commit": preparation_commit,
             "admission_commit": admission_commit,
             "composition_commit": composition_commit,
+            "validation_repair_commit": validation_repair_commit,
             "lease_issue_event": ISSUE_EVENT,
             "lease_release_event": RELEASE_EVENT,
         },
@@ -961,6 +1019,7 @@ def load_verdier_registered_insertion_successor(
         scope.get("review_commit"),
         scope.get("admission_commit"),
         scope.get("composition_commit"),
+        scope.get("validation_repair_commit"),
     )
     require(saved == expected, "saved Verdier successor receipt differs from exact derivation")
     binding = normalize_binding(git, head, saved)
@@ -979,18 +1038,21 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--review-commit")
     parser.add_argument("--admission-commit")
     parser.add_argument("--composition-commit")
+    parser.add_argument("--validation-repair-commit")
     args = parser.parse_args(argv)
     if args.check:
-        require(not any((args.review_commit, args.admission_commit, args.composition_commit)),
+        require(not any((args.review_commit, args.admission_commit, args.composition_commit,
+                         args.validation_repair_commit)),
                 "--check does not accept derivation commits")
         binding, stems, affected = load_verdier_registered_insertion_successor(args.source)
         print(json.dumps({"status": "PASS", "source": binding["composition_source_commit"],
                           "stems": stems, "affected": affected}))
         return 0
-    require(all((args.review_commit, args.admission_commit, args.composition_commit)),
-            "derivation requires --review-commit, --admission-commit, and --composition-commit")
+    require(all((args.review_commit, args.admission_commit, args.composition_commit,
+                 args.validation_repair_commit)),
+            "derivation requires review, admission, composition, and validation-repair commits")
     receipt = derive_successor(args.source, args.review_commit, args.admission_commit,
-                               args.composition_commit)
+                               args.composition_commit, args.validation_repair_commit)
     print(json.dumps(receipt, indent=2, ensure_ascii=False))
     return 0
 

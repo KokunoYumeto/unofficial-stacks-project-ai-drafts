@@ -306,6 +306,19 @@ def verify_current_illusie(build, source, composition, head):
             "regression_tests": {"status": "PASS", "tests_run": 5, "modules": modules}}
 
 
+def historical_surface_comparison_commit(composition: dict, anchor: str) -> str:
+    """Return the revision whose EGA surface must equal the build head.
+
+    A Verdier successor inherits a separately validated historical checkpoint
+    and a later, already-public EGA integration.  Its root-source invariant is
+    therefore current-public-to-successor equality, while the historical
+    anchor remains independently replayed by ``verify_historical``.
+    """
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        return composition["previous_public_main_head"]
+    return anchor
+
+
 def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: dict, head: str, *, live: bool):
     head = build.require_commit_object(source, head, "direct checkpoint actual revision")
     tree = build.git(source, "rev-parse", f"{head}^{{tree}}")
@@ -320,10 +333,11 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
     build.require_ancestor(source, anchor, "historical checkpoint to previous public source",
                            composition["previous_public_main_head"])
     historical, old_protected = verify_historical(build, source, anchor)
+    surface_commit = historical_surface_comparison_commit(composition, anchor)
     for path in ("schemes.tex", "tags/tags"):
-        require(build.committed_file_identity(source, anchor, path)
+        require(build.committed_file_identity(source, surface_commit, path)
                 == build.committed_file_identity(source, head, path),
-                f"historical EGA root proof or official tag surface changed: {path}")
+                f"validated EGA root proof or official tag surface changed: {path}")
     root_names = build.git(source, "ls-tree", "--name-only", head).splitlines()
     root_tex = [p for p in root_names if "/" not in p and p.endswith(".tex")]
     source_commit = composition["composition_source_commit"]
@@ -408,7 +422,7 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
         "external_authority_inputs": historical["external_authority_inputs"],
         "checks": ["original_producer_and_consumer_run_at_actual_historical_receipt_head",
                    "historical_tools_content_receipt_topology_preserved",
-                   "historical_schemes_proof_and_tags_unchanged",
+                   "historical_anchor_replayed_and_current_public_EGA_surface_unchanged",
                    "all_current_root_tex_exact_at_validated_composition_source",
                    "semantic_increment_exact_append_prefixes_scope_and_checker",
                    "semantic_increment_checker_executed_at_its_actual_own_receipt_head",

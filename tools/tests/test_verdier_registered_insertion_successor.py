@@ -276,6 +276,19 @@ class CheckpointSchemaTests(unittest.TestCase):
         self.assertEqual(binding["inherited_composition"]["commit"], "prior-public")
         self.build.require_source_checkpoint_unchanged.assert_called_once()
 
+    def test_verdier_surface_compares_current_public_not_historical_anchor(self):
+        self.assertEqual(
+            checkpoint.historical_surface_comparison_commit(
+                self.composition, "historical-anchor"),
+            "prior-public",
+        )
+        ordinary = {"schema": checkpoint.AI_COMPOSITION_SCHEMA,
+                    "previous_public_main_head": "prior-public"}
+        self.assertEqual(
+            checkpoint.historical_surface_comparison_commit(ordinary, "historical-anchor"),
+            "historical-anchor",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
