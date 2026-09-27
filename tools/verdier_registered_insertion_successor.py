@@ -552,35 +552,39 @@ def _validate_post_composition_repair(
     exact three-file repair commit before any TeX process was launched.
     """
     repair_commit = _commit(git, repair_commit, "post-composition validation repair")
-    repair_parents = git.parents(repair_commit)
-    require(len(repair_parents) == 1,
-            "post-composition validation repair must have exactly one parent")
-    initial_receipt_commit = repair_parents[0]
-    initial_row = _require_step(
-        git,
-        composition_commit,
-        initial_receipt_commit,
-        None,
-        "superseded_initial_receipt_seal",
-        {RECEIPT},
-    )
-    repair_row = _require_step(
-        git,
-        initial_receipt_commit,
-        repair_commit,
-        None,
-        "post_composition_validation_repair",
-        set(POST_COMPOSITION_REPAIR_PATHS),
-    )
-    changes = git.changes(initial_receipt_commit, repair_commit)
+    chain: list[str] = []
+    cursor = repair_commit
+    while cursor != composition_commit:
+        require(len(chain) < 8,
+                "post-composition validation-repair chain is unexpectedly long")
+        parents = git.parents(cursor)
+        require(len(parents) == 1,
+                "post-composition validation-repair chain must be single-parent")
+        chain.append(cursor)
+        cursor = parents[0]
+    chain.reverse()
+    require(chain and len(chain) % 2 == 0,
+            "post-composition chain must alternate receipt seals and repairs")
     expected_types = {
         "tools/direct_successor_checkpoint.py": "M",
         "tools/verdier_registered_insertion_successor.py": "M",
         "tools/tests/test_verdier_registered_insertion_successor.py": "M",
     }
-    require({path: data[4] for path, data in changes.items()} == expected_types,
-            "post-composition validation repair change types mismatch")
-    return [initial_row, repair_row]
+    rows: list[dict[str, object]] = []
+    parent = composition_commit
+    for index, commit in enumerate(chain):
+        if index % 2 == 0:
+            rows.append(_require_step(
+                git, parent, commit, None, "superseded_receipt_seal", {RECEIPT}))
+        else:
+            rows.append(_require_step(
+                git, parent, commit, None, "post_composition_validation_repair",
+                set(POST_COMPOSITION_REPAIR_PATHS)))
+            changes = git.changes(parent, commit)
+            require({path: data[4] for path, data in changes.items()} == expected_types,
+                    "post-composition validation repair change types mismatch")
+        parent = commit
+    return rows
 
 
 def _validate_admission(

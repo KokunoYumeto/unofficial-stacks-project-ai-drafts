@@ -319,6 +319,60 @@ def historical_surface_comparison_commit(composition: dict, anchor: str) -> str:
     return anchor
 
 
+def historical_semantic_composition(
+    build,
+    source: Path,
+    prior: str,
+    inherited: dict,
+    *,
+    verdier_successor: bool,
+) -> tuple[dict[str, str], dict[str, object]]:
+    """Resolve the receipt that originally owns the EGA semantic increment.
+
+    The immediate predecessor of the Verdier lane carries a later Illusie
+    correction receipt.  Its composition source is not the parent of the
+    earlier EGA semantic commit.  Follow the correction receipt's exact
+    previous-cutoff pointer once, verify its declared receipt identity, and
+    use that sealed direct-composition source for the historical replay.
+    """
+    owner_commit = prior
+    owner_receipt = inherited
+    owner_identity = build.committed_file_identity(
+        source, owner_commit, "validation/composition-current.json")
+    require(owner_identity is not None, "semantic composition owner receipt is absent")
+    if verdier_successor and inherited.get("schema") == AI_COMPOSITION_SCHEMA:
+        cutoff = inherited.get("previous_cutoff")
+        require(isinstance(cutoff, dict),
+                "inherited AI correction lacks its previous composition cutoff")
+        owner_commit = build.require_commit_object(
+            source, cutoff.get("public_main_head"), "historical semantic composition owner")
+        build.require_ancestor(source, owner_commit,
+                               "historical semantic composition owner to immediate predecessor",
+                               prior)
+        owner_identity = build.committed_file_identity(
+            source, owner_commit, "validation/composition-current.json")
+        declared = cutoff.get("receipt")
+        require(owner_identity is not None and isinstance(declared, dict)
+                and declared.get("path") == "validation/composition-current.json"
+                and all(owner_identity.get(key) == declared.get(key)
+                        for key in ("bytes", "sha256", "git_blob")),
+                "historical semantic composition owner receipt identity mismatch")
+        owner_receipt = build.parse_json_blob(
+            source, owner_identity, "historical semantic composition owner")
+    require(owner_receipt.get("schema") in {
+                direct_successor_composition._helper.SCHEMA,
+                DIRECT_SCHEMA,
+            }
+            and owner_receipt.get("status") == "PASS"
+            and isinstance(owner_receipt.get("composition"), dict),
+            "historical semantic composition owner is not a passing direct composition")
+    binding = {
+        "composition_source_commit": owner_receipt["composition"]["source_commit"],
+        "composition_base_commit": owner_receipt["composition"]["base_commit"],
+    }
+    return binding, {"commit": owner_commit, **owner_identity}
+
+
 def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: dict, head: str, *, live: bool):
     head = build.require_commit_object(source, head, "direct checkpoint actual revision")
     tree = build.git(source, "rev-parse", f"{head}^{{tree}}")
@@ -361,10 +415,8 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
             "inherited composition is not a passing typed source binding")
     # The semantic increment belongs to its original cumulative source endpoint.
     # Never relabel it as a child of the new source-only composition commit.
-    inherited_binding = {
-        "composition_source_commit": inherited["composition"]["source_commit"],
-        "composition_base_commit": inherited["composition"]["base_commit"],
-    }
+    inherited_binding, semantic_owner = historical_semantic_composition(
+        build, source, prior, inherited, verdier_successor=is_verdier)
     for path in SEMANTIC_PATHS | set(PROTECTED_SEMANTIC_PATHS):
         require(build.committed_file_identity(source, prior, path)
                 == build.committed_file_identity(source, head, path),
@@ -408,6 +460,7 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                               "verification": historical},
         "semantic_successor": semantic, "current_ega_successor": current_ega,
         "inherited_composition": {"commit": prior, **inherited_id},
+        "historical_semantic_composition": semantic_owner,
         "root_source_stem": "schemes",
         "canonical_composition": {
             "path": composition["receipt"], "git_blob": composition["receipt_git_blob"],

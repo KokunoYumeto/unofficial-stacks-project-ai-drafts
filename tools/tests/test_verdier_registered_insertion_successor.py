@@ -265,8 +265,12 @@ class CheckpointSchemaTests(unittest.TestCase):
                 {"status": "PASS_CURRENT_PUBLIC_EGA_PRESERVED"}, [])),
             patch.object(checkpoint, "verify_current_illusie", return_value={
                 "status": "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND"}),
+            patch.object(checkpoint, "historical_semantic_composition", return_value=(
+                {"composition_source_commit": "old-ai-source",
+                 "composition_base_commit": "old-ai-base"},
+                {"commit": "prior-public", **ident("validation/composition-current.json")})),
         ]
-        with patches[0], patches[1], patches[2], patches[3], patches[4]:
+        with patches[0], patches[1], patches[2], patches[3], patches[4], patches[5]:
             binding, _, _ = checkpoint._load_at(
                 self.build, self.source, "validation/old-checkpoint.json", self.checkpoint,
                 self.composition, "actual-build-commit", live=True)
@@ -275,6 +279,39 @@ class CheckpointSchemaTests(unittest.TestCase):
                          self.composition["verdier_registered_insertion_scope"])
         self.assertEqual(binding["inherited_composition"]["commit"], "prior-public")
         self.build.require_source_checkpoint_unchanged.assert_called_once()
+
+    def test_semantic_owner_follows_inherited_ai_previous_cutoff(self):
+        inherited = {
+            "schema": checkpoint.AI_COMPOSITION_SCHEMA,
+            "status": "PASS",
+            "previous_cutoff": {
+                "public_main_head": "semantic-owner",
+                "receipt": ident("validation/composition-current.json"),
+            },
+            "composition": {"source_commit": "later-ai", "base_commit": "later-base"},
+        }
+        owner = {
+            "schema": checkpoint.direct_successor_composition._helper.SCHEMA,
+            "status": "PASS",
+            "composition": {"source_commit": "semantic-source",
+                            "base_commit": "semantic-base"},
+        }
+        self.build.committed_file_identity.return_value = ident(
+            "validation/composition-current.json")
+        self.build.require_commit_object.return_value = "semantic-owner"
+        self.build.parse_json_blob.return_value = owner
+        binding, receipt = checkpoint.historical_semantic_composition(
+            self.build, self.source, "prior-public", inherited,
+            verdier_successor=True)
+        self.assertEqual(binding, {
+            "composition_source_commit": "semantic-source",
+            "composition_base_commit": "semantic-base",
+        })
+        self.assertEqual(receipt["commit"], "semantic-owner")
+        self.build.require_ancestor.assert_called_once_with(
+            self.source, "semantic-owner",
+            "historical semantic composition owner to immediate predecessor",
+            "prior-public")
 
     def test_verdier_surface_compares_current_public_not_historical_anchor(self):
         self.assertEqual(
