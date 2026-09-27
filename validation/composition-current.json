@@ -643,7 +643,7 @@
         ]
       },
       {
-        "kind": "superseded_initial_receipt_seal",
+        "kind": "superseded_receipt_seal",
         "commit": "c2097b8597f00328d153ad7d17f4a3586f1085c0",
         "parent": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
         "parents": [
@@ -701,6 +701,68 @@
             "status": "M",
             "bytes": 54675,
             "sha256": "F0D4F67DA0A79100069BCD42CB91D22B4DC2C022C22C8DF8B1F06FD775553CB9"
+          }
+        ]
+      },
+      {
+        "kind": "superseded_receipt_seal",
+        "commit": "67eb247832d998b6445f4025c980b4a5591db2d7",
+        "parent": "9d14ea345155e537f55d7df4ba84780c1e403cbd",
+        "parents": [
+          "9d14ea345155e537f55d7df4ba84780c1e403cbd"
+        ],
+        "tree": "e9e1ef5f9505fec8307a1995d6db19952450efab",
+        "paths": [
+          {
+            "path": "validation/composition-current.json",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "3c7e315d9a72cd90fe263062df95338678a514c2",
+            "git_blob": "74c485c0638ecac754893f0e36b14000750bd9dc",
+            "status": "M",
+            "bytes": 58199,
+            "sha256": "402EF5D866FA04D19DF51F459BDAA44498D96CA4C67A62064F66751BF8D663A6"
+          }
+        ]
+      },
+      {
+        "kind": "post_composition_validation_repair",
+        "commit": "67275ba6d28877f8550357ace690770b4360d9ee",
+        "parent": "67eb247832d998b6445f4025c980b4a5591db2d7",
+        "parents": [
+          "67eb247832d998b6445f4025c980b4a5591db2d7"
+        ],
+        "tree": "8a120feff13f57604a1df3e96862e07a712a2ccf",
+        "paths": [
+          {
+            "path": "tools/direct_successor_checkpoint.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "28540afc498d7c97e12d79e13fc0dc374181f590",
+            "git_blob": "9687684f3fd3a0c2c8547b2691bee3f7d05e1761",
+            "status": "M",
+            "bytes": 30964,
+            "sha256": "9797D38CE20DFA46A269AB32F48A964EA3C9037AA7A9272ADD2B1545EF107B47"
+          },
+          {
+            "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "30fdf9e7f985445a2bc650f1bccd9a30b7064e1c",
+            "git_blob": "ac31753f20766b852d2d57a5d5ea297db110d130",
+            "status": "M",
+            "bytes": 16965,
+            "sha256": "5ECAE82550E5871A6BA9F7C9EFABAB7732EBDFAD3D7FCD7D2392466A67CD8B89"
+          },
+          {
+            "path": "tools/verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "28b902f2059895cdc3adcb61775d22fda07bf2df",
+            "git_blob": "e73bdc880b1d59a43dffba166cf52170a2f062ed",
+            "status": "M",
+            "bytes": 55078,
+            "sha256": "C4B2EC45EB7CD109C99E4446C4D5D5B5AF738533F080EA86C10A77122C8CA62A"
           }
         ]
       }
@@ -1307,7 +1369,7 @@
     "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
     "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-    "validation_repair_commit": "9d14ea345155e537f55d7df4ba84780c1e403cbd",
+    "validation_repair_commit": "67275ba6d28877f8550357ace690770b4360d9ee",
     "lease_issue_event": "lease-event-000124",
     "lease_release_event": "lease-event-000125"
   }
