@@ -148,6 +148,16 @@ COMPOSER_REPAIR_PATHS = (
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
 
+COMPOSER_REPAIR_COMMIT = "f83c16e148888fdbba0751c6b37e59f3d26956f8"
+COMPOSER_REPAIR_TREE = "c7ae8159ad9e5f97b9b9525629c1cfb716c14bef"
+SUPERSEDED_RECEIPT_SEAL_COMMIT = "e53c0fd52e494c4fa3036f1ffb6ef0332c9b9bdf"
+SUPERSEDED_RECEIPT_SEAL_TREE = "1c2c59432c018f509a36d9728a325a9237a450e5"
+CHECKPOINT_REPAIR_PATHS = (
+    "tools/direct_successor_checkpoint.py",
+    "tools/verdier_registered_insertion_successor.py",
+    "tools/tests/test_verdier_registered_insertion_successor.py",
+)
+
 TOOLS = (
     "tools/verdier_registered_insertion_successor.py",
     "tools/validate_verdier_registered_insertion_successor.py",
@@ -568,14 +578,34 @@ def _validate_validation_tools(
     composer_repair = _require_step(
         git,
         CLOSURE_VALIDATOR_COMMIT,
-        validation_tool_commit,
-        None,
+        COMPOSER_REPAIR_COMMIT,
+        COMPOSER_REPAIR_TREE,
         "exact_label_declaration_composer_repair",
         set(COMPOSER_REPAIR_PATHS),
     )
     require(all(data[4] == "M" for data in
-                git.changes(CLOSURE_VALIDATOR_COMMIT, validation_tool_commit).values()),
+                git.changes(CLOSURE_VALIDATOR_COMMIT, COMPOSER_REPAIR_COMMIT).values()),
             "composer repair must modify its three existing tool/test paths only")
+    superseded_receipt = _require_step(
+        git,
+        COMPOSER_REPAIR_COMMIT,
+        SUPERSEDED_RECEIPT_SEAL_COMMIT,
+        SUPERSEDED_RECEIPT_SEAL_TREE,
+        "superseded_composition_receipt_seal",
+        {RECEIPT},
+    )
+    checkpoint_repair = _require_step(
+        git,
+        SUPERSEDED_RECEIPT_SEAL_COMMIT,
+        validation_tool_commit,
+        None,
+        "nested_verdier_checkpoint_unwrap_repair",
+        set(CHECKPOINT_REPAIR_PATHS),
+    )
+    require(all(data[4] == "M" for data in
+                git.changes(SUPERSEDED_RECEIPT_SEAL_COMMIT,
+                            validation_tool_commit).values()),
+            "checkpoint repair must modify its three existing tool/test paths only")
     require(git.text("rev-parse", CANDIDATE_CLOSURE_COMMIT + ":" + CANDIDATE_DIR)
             == FINAL_CANDIDATE_SUBTREE,
             "candidate closure repair produced the wrong subtree")
@@ -583,7 +613,8 @@ def _validate_validation_tools(
             == FINAL_CANDIDATE_SUBTREE,
             "final validator commit changed the closed candidate")
     for revision in (INITIAL_VALIDATION_TOOL_COMMIT, CANDIDATE_CLOSURE_COMMIT,
-                     CLOSURE_VALIDATOR_COMMIT, validation_tool_commit):
+                     CLOSURE_VALIDATOR_COMMIT, COMPOSER_REPAIR_COMMIT,
+                     SUPERSEDED_RECEIPT_SEAL_COMMIT, validation_tool_commit):
         require(git.ident(composition_commit, TARGET) == git.ident(revision, TARGET),
                 "post-composition validation work changed the composed source")
     correction = git.document(validation_tool_commit, CLOSURE_CORRECTION_RECEIPT)
@@ -610,7 +641,8 @@ def _validate_validation_tools(
         require(git.ident(CANDIDATE_CLOSURE_COMMIT, row["path"])
                 == {key: row[key] for key in ID_KEYS},
                 "manifest-closure repaired-file identity mismatch")
-    return validation_tool_commit, [initial, closure, closure_seal, composer_repair]
+    return validation_tool_commit, [initial, closure, closure_seal, composer_repair,
+                                    superseded_receipt, checkpoint_repair]
 
 
 def _validate_admission(

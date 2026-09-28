@@ -451,6 +451,46 @@ class CheckpointSchemaTests(unittest.TestCase):
             "historical semantic composition owner to immediate predecessor",
             "prior-public")
 
+    def test_semantic_owner_unwraps_verdier_then_ai(self):
+        receipt_ref = ident("validation/composition-current.json")
+        inherited = {
+            "schema": checkpoint.VERDIER_COMPOSITION_SCHEMA,
+            "status": "PASS",
+            "previous_cutoff": {
+                "public_main_head": "ai-owner",
+                "receipt": receipt_ref,
+            },
+            "composition": {"source_commit": "later-verdier",
+                            "base_commit": "later-verdier-base"},
+        }
+        ai_wrapper = {
+            "schema": checkpoint.AI_COMPOSITION_SCHEMA,
+            "status": "PASS",
+            "previous_cutoff": {
+                "public_main_head": "direct-owner",
+                "receipt": receipt_ref,
+            },
+            "composition": {"source_commit": "later-ai", "base_commit": "later-ai-base"},
+        }
+        direct = {
+            "schema": checkpoint.direct_successor_composition._helper.SCHEMA,
+            "status": "PASS",
+            "composition": {"source_commit": "semantic-source",
+                            "base_commit": "semantic-base"},
+        }
+        self.build.committed_file_identity.return_value = receipt_ref
+        self.build.require_commit_object.side_effect = lambda source, value, label: value
+        self.build.parse_json_blob.side_effect = [ai_wrapper, direct]
+        binding, receipt = checkpoint.historical_semantic_composition(
+            self.build, self.source, "prior-public", inherited,
+            verdier_successor=True)
+        self.assertEqual(binding, {
+            "composition_source_commit": "semantic-source",
+            "composition_base_commit": "semantic-base",
+        })
+        self.assertEqual(receipt["commit"], "direct-owner")
+        self.assertEqual(self.build.require_ancestor.call_count, 2)
+
     def test_verdier_surface_compares_current_public_not_historical_anchor(self):
         self.assertEqual(
             checkpoint.historical_surface_comparison_commit(
