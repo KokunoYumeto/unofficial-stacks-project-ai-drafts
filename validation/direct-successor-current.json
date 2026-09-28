@@ -1,11 +1,11 @@
 {
   "schema": "unofficial-ai-integrated-stacks-direct-release-index/v1",
-  "status": "PUBLICATION_COMPLETE",
+  "status": "READY_FOR_PUBLICATION",
   "composition_scope": {
-    "source_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-    "registry_cutoff_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
+    "source_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
+    "registry_cutoff_commit": "37d4837dc283f6e97ae0d731453f73683e3d78e8",
     "new_overlay_ids": [
-      "stacks-verdier-a04446e-1-3-6-r1"
+      "stacks-verdier-a04446e-2-3-1-r1"
     ],
     "ai_source_correction": {
       "correction_id": "illusie-I-chain-comparison-localization-20260908",
@@ -23,63 +23,76 @@
       "sealed_predecessor_receipt_sha256": "546206C486E7722D9086B9E4ADF979CCA11DC8587D3E28CCFEA551C700606ADE"
     },
     "verdier_registered_insertion": {
-      "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
-      "operation_id": "VDR-STK-COMP-0002",
+      "candidate_id": "stacks-verdier-a04446e-2-3-1-r1",
+      "operation_id": "VDR-STK-COMP-0003",
       "stable_ids": [
-        "verdier:ast239:1.3.6",
-        "verdier:ast239:1.3.6:equivalent-conditions",
-        "verdier:ast239:1.3.6:proof:i-iff-ii",
-        "verdier:ast239:1.3.6:proof:ii-implies-iii",
-        "verdier:ast239:1.3.6:construction:hstar-complex",
-        "verdier:ast239:1.3.6:claim:hstar-equivalence",
-        "verdier:ast239:1.3.6:conclusion:iii-implies-ii"
+        "verdier:ast239:2.3.1",
+        "verdier:ast239:2.3.1:boundary:p143",
+        "verdier:ast239:2.3.1:setup:nested-subcategory",
+        "verdier:ast239:2.3.1:claim:denominator-intersection",
+        "verdier:ast239:2.3.1:claim:quotient-embedding",
+        "verdier:ast239:2.3.1:claim:quotient-transitivity",
+        "verdier:ast239:2.3.1:claim:saturated-image",
+        "verdier:ast239:2.3.1:setup:inverse-image",
+        "verdier:ast239:2.3.1:claim:inverse-image-triangulated",
+        "verdier:ast239:2.3.1:claim:inverse-image-denominators",
+        "verdier:ast239:2.3.1:claim:saturation-reflected",
+        "verdier:ast239:2.3.1:claim:subcategory-lattice",
+        "verdier:ast239:2.3.1:proof:intersection-and-embedding",
+        "verdier:ast239:2.3.1:proof:transitivity",
+        "verdier:ast239:2.3.1:proof:saturated-image",
+        "verdier:ast239:2.3.1:proof:inverse-image-basics",
+        "verdier:ast239:2.3.1:proof:saturation-forward",
+        "verdier:ast239:2.3.1:boundary:p144",
+        "verdier:ast239:2.3.1:proof:saturation-converse",
+        "verdier:ast239:2.3.1:proof:lattice-inverse",
+        "verdier:ast239:2.3.1:proof:roof-setup",
+        "verdier:ast239:2.3.1:diagram:roof",
+        "verdier:ast239:2.3.1:proof:lattice-complete"
       ],
-      "candidate_freeze_commit": "65da408e2209f68e134067bf8102f68522062a5c",
-      "review_commit": "0585dcb826a8025a7182b55f1ab62beeb1956e14",
-      "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
-      "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
-      "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-      "validation_repair_commit": "4907dd5f0173981c32a5d323a9e534aaeae01736",
-      "lease_issue_event": "lease-event-000124",
-      "lease_release_event": "lease-event-000125"
+      "candidate_authoring_commit": "6a9248713888305e153f47fd349b4ae941a93174",
+      "build_root_repair_commit": "c5125ff63f91abe0b7e8d0c1c04692a1971f17be",
+      "candidate_freeze_commit": "421ab3c5224ac59d845efa16cac42b5ae231813a",
+      "review_commit": "3ddcb012f50fa42d12efcde125376de463d24ae5",
+      "admission_commit": "37d4837dc283f6e97ae0d731453f73683e3d78e8",
+      "composition_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
+      "candidate_closure_commit": "b4dda8252385769162c8232360cf4fe2569c00cb",
+      "closure_correction_receipt": "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1-closure-correction.json",
+      "validation_tool_commit": "84f867ee93f329136c9ce464c4ab934f18ee53c2",
+      "lease_issue_event": "lease-event-000126",
+      "lease_release_event": "lease-event-000127"
     }
   },
   "references": {
     "composition": {
       "path": "validation/composition-current.json",
-      "bytes": 71127,
-      "sha256": "5301E0507D08BC0741E1F1CB437FDE2BEBBAFC5AAF5F05B61E9B30678A75E129",
-      "git_blob": "8cf42ad4c56715c940762db4fcf6e6e0767d7572"
+      "bytes": 74768,
+      "sha256": "46EB48D0CA43DDA686A50FFE1E8BE88AC1ECD038ACC3C6AB727C9BC4E9F2BAF3",
+      "git_blob": "4e1fe4b93ca5cbf1349305ec8a1114049f421879"
     },
     "build": {
-      "path": "validation/verdier-registered-insertion-successor-1-3-6-build-a-2026-09-28.json",
-      "bytes": 838750,
-      "sha256": "5AAEC0EDE4A0B9BDFBC86385F03E3FF8389663567CD114A0D0804F67A6163A2F",
-      "git_blob": "4284c95ae897c035e376e35cad37e9d42e2acff4"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-a-2026-09-28.json",
+      "bytes": 843633,
+      "sha256": "1F4C16108E2B533DEB27FCAA4AB2B09A817266D5C6298DBFEA06FF490B2185DC",
+      "git_blob": "879bb617111eb8db56721223fff11a0d12a441f6"
     },
     "second_build": {
-      "path": "validation/verdier-registered-insertion-successor-1-3-6-build-b-2026-09-28.json",
-      "bytes": 838732,
-      "sha256": "7F628F7638856CDA50AD2AA102038CB043267EAB3FDC2F9E5DC6655A11172459",
-      "git_blob": "89f34d4dd8aa6422f7791a1f97f7ed6360e5a4f1"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-b-2026-09-28.json",
+      "bytes": 843639,
+      "sha256": "85B297D5DCD040D549CF4F10DB7C971C0A860C63CA9DB0CD87D92982E975B3EC",
+      "git_blob": "8a4e9b4cf500f80585f08a556d9af6ca73274484"
     },
     "visual_qa": {
-      "path": "validation/verdier-registered-insertion-successor-1-3-6-visual-qa-2026-09-28.json",
-      "bytes": 10927,
-      "sha256": "DD9A35BBC9A07568180C5DC927537562727F45FFB9311D66EC81DEE9AA9FEE25",
-      "git_blob": "57af8f5e7e861483d5de23adac3e48e5569b8e95"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-visual-qa-2026-09-28.json",
+      "bytes": 9641,
+      "sha256": "855559304E4F3985D858EBBC5CBAC0F6DC090D0E31682F73CE934155AE9E59FF",
+      "git_blob": "3dcc99abbb02233686a3acedaddc96cbe1c167c6"
     },
     "reproducibility": {
-      "path": "validation/verdier-registered-insertion-successor-1-3-6-reproducibility-2026-09-28.json",
-      "bytes": 11481,
-      "sha256": "BAACF788C00642807CD8D2499929BD7B8C619208F7A5C21DB1C1A3045B784BEF",
-      "git_blob": "407a0a95246e85365d63336edbdecd37378a3f5f"
-    },
-    "release": {
-      "path": "validation/verdier-registered-insertion-successor-1-3-6-linear-release-2026-09-28.json",
-      "bytes": 20771,
-      "sha256": "840EABA3A6A3D6695936C28D43E677C17A02CF5B324A71052144F1DBD2DBFD97",
-      "git_blob": "e6beff83e96aa0e21797c095a464f963e7a24973"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-reproducibility-2026-09-28.json",
+      "bytes": 12674,
+      "sha256": "176328C15DE425DB92DFD7B8F21E64E05549404C6C93767965C5199E751BC1D6",
+      "git_blob": "d3bafcd088573b42f298a3713c099d34fb34f504"
     }
   }
 }
