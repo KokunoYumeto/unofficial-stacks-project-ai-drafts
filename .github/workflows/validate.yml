@@ -29,6 +29,15 @@ jobs:
       - name: Validate unified source, registry, and documentation
         shell: bash
         run: |
+          if test -f validation/verdier-linear-transport-current.json; then
+            transport_status="$(python -c 'import json; from pathlib import Path; print(json.loads(Path("validation/direct-successor-current.json").read_text())["status"])')"
+            if test "${transport_status}" = PUBLICATION_COMPLETE; then
+              python tools/validate_verdier_linear_transport.py
+            else
+              python tools/validate_verdier_linear_transport.py --pre-publication
+            fi
+            exit $?
+          fi
           if test -f tools/validate_r57_successor.py; then
             python tools/validate_r57_successor.py --verify-frozen-core
             exit $?

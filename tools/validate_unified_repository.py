@@ -29,6 +29,9 @@ UPSTREAM = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
+VERDIER_LINEAR_TRANSPORT_RECEIPT = Path(
+    "validation/verdier-linear-transport-current.json"
+)
 DEFAULT_BUILD_RECEIPT = Path(
     "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json"
 )
@@ -627,6 +630,11 @@ def main(argv: list[str] | None = None) -> int:
     explicit_build_receipt = args.build_receipt is not None
     if args.build_receipt is None:
         args.build_receipt = DEFAULT_BUILD_RECEIPT
+
+    if (ROOT / VERDIER_LINEAR_TRANSPORT_RECEIPT).is_file():
+        from validate_verdier_linear_transport import validate_linear_transport
+
+        return validate_linear_transport(ROOT, args.pre_publication)
 
     try:
         current_composition = json.loads(
