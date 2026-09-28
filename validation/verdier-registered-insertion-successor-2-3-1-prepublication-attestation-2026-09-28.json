@@ -1,0 +1,74 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-verdier-prepublication-attestation/v1",
+  "status": "PASS_PRE_PUBLICATION",
+  "recorded_at": "2026-09-28T12:19:55.3823289+02:00",
+  "observation_time_not_preserved": true,
+  "source": {
+    "commit": "cb8d4b3e9316519824975465d11a83572ab0512f",
+    "tree": "33b365537c44f0170c901ee212aedb18e34d38f8"
+  },
+  "command": "python -B tools/validate_verdier_registered_insertion_successor.py --build-receipt validation/verdier-registered-insertion-successor-2-3-1-build-a-2026-09-28.json --pre-publication",
+  "exit_code": 0,
+  "observed_output": [
+    "Verdier registered-insertion successor validation: PASS_PRE_PUBLICATION",
+    "- registered insertion operations: 1; stable IDs: 23",
+    "- full-profile chapters: 36; exact deterministic builds: 2",
+    "- affected chapters visually checked: 1; public readback checked: False"
+  ],
+  "validated_index": {
+    "path": "validation/direct-successor-current.json",
+    "bytes": 4947,
+    "sha256": "279FC38197E1A042C1F8A52BDA53CC86AE580A9F3029B9D57A98EFED2F71B863",
+    "git_blob": "7fdd42a3f4779e6cb20338529ead323d8349e752"
+  },
+  "core_receipts": {
+    "composition": {
+      "path": "validation/composition-current.json",
+      "bytes": 74768,
+      "sha256": "46EB48D0CA43DDA686A50FFE1E8BE88AC1ECD038ACC3C6AB727C9BC4E9F2BAF3",
+      "git_blob": "4e1fe4b93ca5cbf1349305ec8a1114049f421879"
+    },
+    "build": {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-a-2026-09-28.json",
+      "bytes": 843633,
+      "sha256": "1F4C16108E2B533DEB27FCAA4AB2B09A817266D5C6298DBFEA06FF490B2185DC",
+      "git_blob": "879bb617111eb8db56721223fff11a0d12a441f6"
+    },
+    "second_build": {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-b-2026-09-28.json",
+      "bytes": 843639,
+      "sha256": "85B297D5DCD040D549CF4F10DB7C971C0A860C63CA9DB0CD87D92982E975B3EC",
+      "git_blob": "8a4e9b4cf500f80585f08a556d9af6ca73274484"
+    },
+    "visual_qa": {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-visual-qa-2026-09-28.json",
+      "bytes": 9641,
+      "sha256": "855559304E4F3985D858EBBC5CBAC0F6DC090D0E31682F73CE934155AE9E59FF",
+      "git_blob": "3dcc99abbb02233686a3acedaddc96cbe1c167c6"
+    },
+    "reproducibility": {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-reproducibility-2026-09-28.json",
+      "bytes": 12674,
+      "sha256": "176328C15DE425DB92DFD7B8F21E64E05549404C6C93767965C5199E751BC1D6",
+      "git_blob": "d3bafcd088573b42f298a3713c099d34fb34f504"
+    }
+  },
+  "validator_tools": {
+    "tools/validate_unified_repository.py": {
+      "bytes": 152193,
+      "sha256": "80B4132D4715666D41F350F4B24192593FF402515B7B5097A58FE6974BEC73F9",
+      "git_blob": "f4ee037c577192169d02eea7b2dac6f315524cda"
+    },
+    "tools/validate_verdier_registered_insertion_successor.py": {
+      "bytes": 27450,
+      "sha256": "AA41F7E47B0285523DB6FDF88B1CCDC41D07065F28C4F9BCCF8A2968BC198196",
+      "git_blob": "a3731f9a684f0bd38a31a51cbf9732a6ad8ba870"
+    },
+    "tools/verdier_registered_insertion_successor.py": {
+      "bytes": 59347,
+      "sha256": "0BCF4DF6119ABD469F4D0976ED1C69EF09EBEE080C127ADB7C34765972EC96EE",
+      "git_blob": "98448ecf71c24f040a3ce576593f19b83b6ebe1d"
+    }
+  },
+  "statement": "The command and output above were observed directly on the exact committed validated DAG before constructing the merge-free public transport. This attestation records that completed observation; it does not claim a preserved wall-clock completion timestamp or replace the underlying build, visual, and reproducibility receipts bound by cryptographic hashes."
+}

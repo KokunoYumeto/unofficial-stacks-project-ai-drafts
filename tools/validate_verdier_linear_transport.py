@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the merge-free public transport of the Verdier II.1.3.6 successor.
+"""Validate the merge-free public transport of the Verdier II.2.3.1 successor.
 
 The mathematical/source state and its two-build QA remain frozen in a tagged
 validated DAG.  The public content commit has exactly that tree with one parent:
@@ -28,23 +28,23 @@ else:
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = "KokunoYumeto/unofficial-stacks-project-ai-drafts"
 REPOSITORY_ID = 1332406685
-BASE_COMMIT = "4828ebac86db7ebf4211227cabe183b09f11c992"
-BASE_TREE = "d351c98e5a4655f20b2ddf34783314cda21e6c91"
-VALIDATED_DAG_COMMIT = "649acbbcc8d41e346c46fa6bbad41077519b874f"
-VALIDATED_DAG_TREE = "bc81918b3ac1e0d1a5d1f1e7243dcb8d0b8913c1"
-VALIDATED_DAG_TAG = "verdier-ii-1-3-6-validated-dag-20260928"
-LINEAR_CONTENT_COMMIT = "e4e3426a9c0ecb23be0c6f742578f9357be958c3"
+BASE_COMMIT = "22dd577923c0faa54474021bc7de93a467aa1f47"
+BASE_TREE = "e47b62074035be104f95aaa29c49ac2249a7fa9c"
+VALIDATED_DAG_COMMIT = "cb8d4b3e9316519824975465d11a83572ab0512f"
+VALIDATED_DAG_TREE = "33b365537c44f0170c901ee212aedb18e34d38f8"
+VALIDATED_DAG_TAG = "verdier-ii-2-3-1-validated-dag-20260928"
+LINEAR_CONTENT_COMMIT = "e5abd8b3d699697b1ab9e2b611efe9f44d02101c"
 RECEIPT = "validation/verdier-linear-transport-current.json"
 ATTESTATION = (
-    "validation/verdier-registered-insertion-successor-1-3-6-"
+    "validation/verdier-registered-insertion-successor-2-3-1-"
     "prepublication-attestation-2026-09-28.json"
 )
 INDEX = "validation/direct-successor-current.json"
-PACKAGE_ZIP = "validation/verdier-ast239-1-3-6-candidate-derived-source.zip"
-PACKAGE_MANIFEST = "validation/verdier-ast239-1-3-6-candidate-derived-source-manifest.json"
+PACKAGE_ZIP = "validation/verdier-ast239-2-3-1-candidate-derived-source.zip"
+PACKAGE_MANIFEST = "validation/verdier-ast239-2-3-1-candidate-derived-source-manifest.json"
 PACKAGE_TOOL = "tools/package_verdier_candidate_pdf_source.py"
 PDF_PATH = (
-    "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/"
+    "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/"
     "builds/derived.pdf"
 )
 SCHEMA = "unofficial-ai-integrated-stacks-verdier-linear-publication-transport/v1"
@@ -58,7 +58,6 @@ AI_DISCLOSURE = "OpenAI Codex — GPT-5.6 Sol, Ultra effort"
 PUBLICATION_PREPARATION_CHANGES = {
     "CHANGES_FROM_UPSTREAM.md": "M",
     "tests/test_changes_from_upstream.py": "M",
-    "tools/validate_verdier_linear_transport.py": "M",
     "upstream-corrections/corrections-only.zip": "M",
     "upstream-corrections/downloads.json": "M",
     "upstream-corrections/manifest.json": "M",
@@ -129,12 +128,14 @@ def validate_attestation(objects: Objects, receipt: dict) -> None:
                 "commit": VALIDATED_DAG_COMMIT, "tree": VALIDATED_DAG_TREE,
             }
             and attestation.get("command") ==
-                "python -B tools/validate_unified_repository.py --pre-publication"
+                "python -B tools/validate_verdier_registered_insertion_successor.py "
+                "--build-receipt validation/verdier-registered-insertion-successor-2-3-1-"
+                "build-a-2026-09-28.json --pre-publication"
             and attestation.get("exit_code") == 0,
             "invalid prepublication attestation")
     expected_output = [
         "Verdier registered-insertion successor validation: PASS_PRE_PUBLICATION",
-        "- registered insertion operations: 1; stable IDs: 7",
+        "- registered insertion operations: 1; stable IDs: 23",
         "- full-profile chapters: 36; exact deterministic builds: 2",
         "- affected chapters visually checked: 1; public readback checked: False",
     ]
@@ -254,8 +255,6 @@ def validate_preparation(objects: Objects, receipt: dict) -> str:
             "transport preparation is not one exact linear child")
     paths = prep["paths"]
     required_paths = {
-        ".github/workflows/validate.yml",
-        "tools/validate_unified_repository.py",
         "tools/validate_verdier_linear_transport.py",
         PACKAGE_TOOL,
         ATTESTATION,
@@ -265,10 +264,8 @@ def validate_preparation(objects: Objects, receipt: dict) -> str:
     require(isinstance(paths, list) and {row.get("path") for row in paths} == required_paths,
             "transport-preparation path inventory mismatch")
     require(changes(objects, LINEAR_CONTENT_COMMIT, commit) == {
-        ".github/workflows/validate.yml": "M",
-        "tools/validate_unified_repository.py": "M",
-        "tools/validate_verdier_linear_transport.py": "A",
-        PACKAGE_TOOL: "A",
+        "tools/validate_verdier_linear_transport.py": "M",
+        PACKAGE_TOOL: "M",
         ATTESTATION: "A",
         PACKAGE_ZIP: "A",
         PACKAGE_MANIFEST: "A",
@@ -285,7 +282,7 @@ def validate_transport_seal(objects: Objects, receipt: dict, prep: str, seal: st
     publication = receipt.get("publication_preparation")
     if publication is None:
         require(parents(objects, seal) == [prep]
-                and changes(objects, prep, seal) == {RECEIPT: "A"},
+                and changes(objects, prep, seal) == {RECEIPT: "M"},
                 "prepublication transport seal mismatch")
         return
     require(isinstance(publication, dict)
@@ -294,7 +291,7 @@ def validate_transport_seal(objects: Objects, receipt: dict, prep: str, seal: st
     commit = objects.commit(publication["commit"])
     first_seal = objects.commit(publication["parent"])
     require(parents(objects, first_seal) == [prep]
-            and changes(objects, prep, first_seal) == {RECEIPT: "A"},
+            and changes(objects, prep, first_seal) == {RECEIPT: "M"},
             "publication preparation does not follow the original transport seal")
     require(parents(objects, commit) == [first_seal]
             and objects.text("rev-parse", commit + "^{tree}") == publication["tree"]

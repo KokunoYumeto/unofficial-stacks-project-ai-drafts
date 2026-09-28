@@ -13,14 +13,14 @@ import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE_COMMIT = "f73b18165c7162b8386de06cc3c50bd4ced745b6"
-BASE_TREE = "5bc25c775349eddf5fa90a7f37f5b11044d89ec1"
-CANDIDATE = Path("ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1")
+BASE_COMMIT = "22dd577923c0faa54474021bc7de93a467aa1f47"
+BASE_TREE = "e47b62074035be104f95aaa29c49ac2249a7fa9c"
+CANDIDATE = Path("ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1")
 OPERATION_PATH = CANDIDATE / "composition.jsonl"
-PAYLOAD_PATH = CANDIDATE / "payload/fragments/derived-homotopy-category-abelian-split.tex"
+PAYLOAD_PATH = CANDIDATE / "payload/fragments/derived-nested-quotients.tex"
 PDF_PATH = CANDIDATE / "builds/derived.pdf"
-ZIP_PATH = Path("validation/verdier-ast239-1-3-6-candidate-derived-source.zip")
-MANIFEST_PATH = Path("validation/verdier-ast239-1-3-6-candidate-derived-source-manifest.json")
+ZIP_PATH = Path("validation/verdier-ast239-2-3-1-candidate-derived-source.zip")
+MANIFEST_PATH = Path("validation/verdier-ast239-2-3-1-candidate-derived-source-manifest.json")
 STEMS = (
     "sets", "categories", "algebra", "homology", "more-algebra", "injectives",
     "examples", "derived",
@@ -101,12 +101,12 @@ def assembled_derived(operation: dict) -> bytes:
 
 def build_readme(operation: dict, pdf: bytes) -> bytes:
     return (
-        "Verdier II.1.3.6 candidate PDF — exact editable source\n"
+        "Verdier II.2.3.1 candidate PDF — exact editable source\n"
         "=======================================================\n\n"
         "This archive reproduces the candidate QA artifact\n"
         f"`{PDF_PATH.as_posix()}` ({len(pdf)} bytes; SHA-256 {sha(pdf)}).\n\n"
         f"The base is commit {BASE_COMMIT}, tree {BASE_TREE}.  `derived.tex` is the exact\n"
-        "insertion-only postimage of operation VDR-STK-COMP-0002; all other included source\n"
+        "insertion-only postimage of operation VDR-STK-COMP-0003; all other included source\n"
         "files are byte-exact base-commit files.  The eight stems used by the recorded build\n"
         "are sets, categories, algebra, homology, more-algebra, injectives, examples, and\n"
         "derived.  No unrelated external auxiliary files are required; the original build\n"
@@ -115,7 +115,7 @@ def build_readme(operation: dict, pdf: bytes) -> bytes:
         "once with pdfLaTeX, run BibTeX once for each stem, then run global pdfLaTeX sweeps\n"
         "over the stems in the order above until the PDF/AUX/TOC/OUT/BBL vector is unchanged\n"
         "on two consecutive sweeps (maximum six).  The recorded environment used MiKTeX\n"
-        "pdfTeX 4.27 and BibTeX 4.2 with `SOURCE_DATE_EPOCH=1788641805` and timezone UTC.\n\n"
+        "pdfTeX 4.27 and BibTeX 4.2 with `SOURCE_DATE_EPOCH=1790578563` and timezone UTC.\n\n"
         "AI typesetting and mathematical translation/correction for the inserted material:\n"
         "OpenAI Codex — GPT-5.6 Sol, Ultra effort.  No human review is claimed.\n"
     ).encode("utf-8")
@@ -136,8 +136,8 @@ def zip_bytes(entries: dict[str, bytes]) -> bytes:
 def render() -> tuple[bytes, bytes]:
     operation = load_operation()
     pdf = (ROOT / PDF_PATH).read_bytes()
-    require(len(pdf) == 1_251_089
-            and sha(pdf) == "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331",
+    require(len(pdf) == 1_269_159
+            and sha(pdf) == "A734E873ACD868482884E05E07E14C4F587CB29DDA91AED8F8C985A5DAE323B6",
             "candidate PDF identity mismatch")
     entries = {"source/" + path: git_bytes("show", BASE_COMMIT + ":" + path)
                for path in BASE_FILES}
@@ -155,7 +155,7 @@ def render() -> tuple[bytes, bytes]:
         "source_basis": {"commit": BASE_COMMIT, "tree": BASE_TREE,
                          "operation_id": operation["operation_id"]},
         "build_profile": {"stems": list(STEMS), "maximum_sweeps": 6,
-                          "source_date_epoch": "1788641805", "timezone": "UTC"},
+                          "source_date_epoch": "1790578563", "timezone": "UTC"},
         "archive": {"path": ZIP_PATH.as_posix(), "bytes": len(packed), "sha256": sha(packed),
                     "entry_count": len(entries)},
         "entries": [
