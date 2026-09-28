@@ -827,11 +827,74 @@
             "sha256": "0FA6AB988FC97D2D677DD15EF4415C19D4BB2075835BF4780546D05EC4946F67"
           }
         ]
+      },
+      {
+        "kind": "superseded_receipt_seal",
+        "commit": "47890fd9ea48cac693d228e0833e6c8bf8a9d543",
+        "parent": "fdccbdc82663f4a5e7564e83e75c70ba1b9cb6fe",
+        "parents": [
+          "fdccbdc82663f4a5e7564e83e75c70ba1b9cb6fe"
+        ],
+        "tree": "5d21b469ffbd16520df80d76d36bfd92ba1934c9",
+        "paths": [
+          {
+            "path": "validation/composition-current.json",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "5c5e5cb076596a6bd4c6e647e6275b957e8d5cde",
+            "git_blob": "935b5bba53279bab13c6b4933335434ebc94057f",
+            "status": "M",
+            "bytes": 63355,
+            "sha256": "67538B5D9A9E4BFFD00CD1834592FF0176520824E5DB6D90937E7FC5CACD37BE"
+          }
+        ]
+      },
+      {
+        "kind": "post_composition_validation_repair",
+        "commit": "8c06633c0e89e649dac0ea58652beb6ea16c8b22",
+        "parent": "47890fd9ea48cac693d228e0833e6c8bf8a9d543",
+        "parents": [
+          "47890fd9ea48cac693d228e0833e6c8bf8a9d543"
+        ],
+        "tree": "95ac761cc23c9b176567320f765167633cf8ff0a",
+        "paths": [
+          {
+            "path": "tools/direct_successor_checkpoint.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "b7b9223c109ec3350ec5b797b5cb50ffb42b4eef",
+            "git_blob": "f1a0ab6539619ac891d548f0dd6bd32cee665798",
+            "status": "M",
+            "bytes": 33033,
+            "sha256": "733AC7669C50C2D27AB00955503AB9EA74FA5AA1C562A38A9638F0B8F2565904"
+          },
+          {
+            "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "35a591593afb55a9ea70ec719ce8a80cb7eadd3e",
+            "git_blob": "8d8a70603251b1047e1efa585159dd07c74096f0",
+            "status": "M",
+            "bytes": 17729,
+            "sha256": "021E1EF56BA6A2647D400D9F15BB07A32ABD8665FA63C7B7A41D197DFAAB956C"
+          },
+          {
+            "path": "tools/verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "004f9e1b783affd7ed84b2e0d701b457db33c176",
+            "git_blob": "ede323cdd53165bc9adc0112fd5759678d9d9bda",
+            "status": "M",
+            "bytes": 55629,
+            "sha256": "B3104D2D8C30F0601A8F7FFB04BF8F8BF7AB8732CFAD01E2F09E2FF1EE037E23"
+          }
+        ]
       }
     ],
     "root_sources_unchanged_before_composition": true,
     "lease_issue_is_fresh_root": true,
-    "current_public_ega_errata_preservation_contract": "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier input preservation; no claim of fresh checker replay against later public errata"
+    "current_public_ega_errata_preservation_contract": "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier input preservation; no claim of fresh checker replay against later public errata",
+    "inherited_illusie_validation_contract": "manifest suffix replayed at the exact linear public predecessor; every protected Illusie byte plus the finite checker and regression suite revalidated at the endpoint"
   },
   "new_overlays": [
     {
@@ -1432,7 +1495,7 @@
     "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
     "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-    "validation_repair_commit": "fdccbdc82663f4a5e7564e83e75c70ba1b9cb6fe",
+    "validation_repair_commit": "8c06633c0e89e649dac0ea58652beb6ea16c8b22",
     "lease_issue_event": "lease-event-000124",
     "lease_release_event": "lease-event-000125"
   }
