@@ -63,6 +63,10 @@ PUBLICATION_PREPARATION_CHANGES = {
     "upstream-corrections/manifest.json": "M",
     "validation/changes-from-upstream-2026-08-30.json": "M",
 }
+WORKFLOW_REPAIR_CHANGES = {
+    "tests/test_changes_from_upstream.py": "M",
+    "tools/validate_verdier_linear_transport.py": "M",
+}
 
 
 require = common.require
@@ -278,7 +282,7 @@ def validate_preparation(objects: Objects, receipt: dict) -> str:
 
 
 def validate_transport_seal(objects: Objects, receipt: dict, prep: str, seal: str) -> None:
-    """Validate either the first seal or one bounded generated-export refresh."""
+    """Validate the initial seal, export refresh, and an optional bounded CI repair."""
     publication = receipt.get("publication_preparation")
     if publication is None:
         require(parents(objects, seal) == [prep]
@@ -306,8 +310,34 @@ def validate_transport_seal(objects: Objects, receipt: dict, prep: str, seal: st
     require(publication["reason"] ==
             "refresh deterministic downstream exports for the newly admitted Verdier overlay",
             "publication-preparation rationale mismatch")
-    require(parents(objects, seal) == [commit]
-            and changes(objects, commit, seal) == {RECEIPT: "M"},
+    expected_parent = commit
+    workflow_repair = receipt.get("workflow_repair")
+    if workflow_repair is not None:
+        require(isinstance(workflow_repair, dict)
+                and set(workflow_repair) == {"commit", "parent", "tree", "paths", "reason"},
+                "invalid workflow-repair record")
+        publication_seal = objects.commit(workflow_repair["parent"])
+        require(parents(objects, publication_seal) == [commit]
+                and changes(objects, commit, publication_seal) == {RECEIPT: "M"},
+                "workflow repair does not follow the refreshed transport seal")
+        repair_commit = objects.commit(workflow_repair["commit"])
+        require(parents(objects, repair_commit) == [publication_seal]
+                and objects.text("rev-parse", repair_commit + "^{tree}")
+                    == workflow_repair["tree"]
+                and changes(objects, publication_seal, repair_commit) == WORKFLOW_REPAIR_CHANGES,
+                "workflow-repair commit changed the wrong paths")
+        repair_rows = workflow_repair["paths"]
+        require(isinstance(repair_rows, list)
+                and {row.get("path") for row in repair_rows} == set(WORKFLOW_REPAIR_CHANGES),
+                "workflow-repair identity inventory mismatch")
+        for row in repair_rows:
+            clean_reference(objects, row, "workflow-repair path", repair_commit)
+        require(workflow_repair["reason"] ==
+                "include the newly admitted Verdier overlay in the generated-interface coverage assertion",
+                "workflow-repair rationale mismatch")
+        expected_parent = repair_commit
+    require(parents(objects, seal) == [expected_parent]
+            and changes(objects, expected_parent, seal) == {RECEIPT: "M"},
             "refreshed transport seal mismatch")
 
 
