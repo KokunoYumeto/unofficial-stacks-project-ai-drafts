@@ -2,10 +2,10 @@
   "schema": "unofficial-ai-integrated-stacks-direct-release-index/v1",
   "status": "READY_FOR_PUBLICATION",
   "composition_scope": {
-    "source_commit": "ea606e202707d215f38e050be2621d0c83cadef0",
-    "registry_cutoff_commit": "54cb855d7f499c885020efb7aebd24959cda5120",
+    "source_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
+    "registry_cutoff_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "new_overlay_ids": [
-      "stacks-errata-a04446e-r48"
+      "stacks-verdier-a04446e-1-3-6-r1"
     ],
     "ai_source_correction": {
       "correction_id": "illusie-I-chain-comparison-localization-20260908",
@@ -21,38 +21,59 @@
       "corrected_source_tree": "3a0e1ee6f7c575a261a254e1f4701a982e8c12a6",
       "sealed_predecessor_commit": "1c7fa79a3d8fdb24a9ec45ba65e65ce1fd8867c2",
       "sealed_predecessor_receipt_sha256": "546206C486E7722D9086B9E4ADF979CCA11DC8587D3E28CCFEA551C700606ADE"
+    },
+    "verdier_registered_insertion": {
+      "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+      "operation_id": "VDR-STK-COMP-0002",
+      "stable_ids": [
+        "verdier:ast239:1.3.6",
+        "verdier:ast239:1.3.6:equivalent-conditions",
+        "verdier:ast239:1.3.6:proof:i-iff-ii",
+        "verdier:ast239:1.3.6:proof:ii-implies-iii",
+        "verdier:ast239:1.3.6:construction:hstar-complex",
+        "verdier:ast239:1.3.6:claim:hstar-equivalence",
+        "verdier:ast239:1.3.6:conclusion:iii-implies-ii"
+      ],
+      "candidate_freeze_commit": "65da408e2209f68e134067bf8102f68522062a5c",
+      "review_commit": "0585dcb826a8025a7182b55f1ab62beeb1956e14",
+      "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
+      "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
+      "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
+      "validation_repair_commit": "4907dd5f0173981c32a5d323a9e534aaeae01736",
+      "lease_issue_event": "lease-event-000124",
+      "lease_release_event": "lease-event-000125"
     }
   },
   "references": {
     "composition": {
       "path": "validation/composition-current.json",
-      "bytes": 165405,
-      "sha256": "7CFA04B3A5F7BAD0653B63BC4D1BE2E84828CFB61DFC7880B7D8BAB2F7837AD2",
-      "git_blob": "ea590d297f07b484bfc1906c14ac9de7ba6350e6"
+      "bytes": 71127,
+      "sha256": "5301E0507D08BC0741E1F1CB437FDE2BEBBAFC5AAF5F05B61E9B30678A75E129",
+      "git_blob": "8cf42ad4c56715c940762db4fcf6e6e0767d7572"
     },
     "build": {
-      "path": "validation/direct-successor-r48-illusie-correction-build-a-2026-09-13.json",
-      "bytes": 973633,
-      "sha256": "2518B840E59FB0212E65028E6464D917853673192141B42463569DD6F22E3B2E",
-      "git_blob": "c6029cc56c644fb8fd34336d84faf599fd93f632"
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-build-a-2026-09-28.json",
+      "bytes": 838750,
+      "sha256": "5AAEC0EDE4A0B9BDFBC86385F03E3FF8389663567CD114A0D0804F67A6163A2F",
+      "git_blob": "4284c95ae897c035e376e35cad37e9d42e2acff4"
     },
     "second_build": {
-      "path": "validation/direct-successor-r48-illusie-correction-build-b-2026-09-13.json",
-      "bytes": 973643,
-      "sha256": "6B482C4712C26D1B77175428B08D4945E31878B4CE8AD8D4B97B4454573B79B5",
-      "git_blob": "64a1377e14d8ee0c062e661980ffbc91322a7402"
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-build-b-2026-09-28.json",
+      "bytes": 838732,
+      "sha256": "7F628F7638856CDA50AD2AA102038CB043267EAB3FDC2F9E5DC6655A11172459",
+      "git_blob": "89f34d4dd8aa6422f7791a1f97f7ed6360e5a4f1"
     },
     "visual_qa": {
-      "path": "validation/direct-successor-r48-illusie-correction-visual-qa-2026-09-13.json",
-      "bytes": 20839,
-      "sha256": "91171E8C5D92672AF856F749D9C8D0A009DE1375C91FD4A7EFAC3196579C4ED0",
-      "git_blob": "68dea9f57a0e77deccae3725e6a456553f13bbca"
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-visual-qa-2026-09-28.json",
+      "bytes": 10927,
+      "sha256": "DD9A35BBC9A07568180C5DC927537562727F45FFB9311D66EC81DEE9AA9FEE25",
+      "git_blob": "57af8f5e7e861483d5de23adac3e48e5569b8e95"
     },
     "reproducibility": {
-      "path": "validation/direct-successor-r48-illusie-correction-reproducibility-2026-09-13.json",
-      "bytes": 9678,
-      "sha256": "21F2738ADBCC69E9158CE7B83F483FEA26D8CBEA3941FEEAEA3F15A010A99CE3",
-      "git_blob": "465a921a3a156c8d06eaad5d8b994901acd08055"
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-reproducibility-2026-09-28.json",
+      "bytes": 9712,
+      "sha256": "C6DFFCC9356F3F7800D48F66E39661D99A06250856A831C82A54D652FF0417C6",
+      "git_blob": "e54425d996bd6ecc4272d2f1c6da87318da05efa"
     }
   }
 }
