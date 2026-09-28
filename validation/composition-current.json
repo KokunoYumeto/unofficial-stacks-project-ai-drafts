@@ -889,12 +889,74 @@
             "sha256": "B3104D2D8C30F0601A8F7FFB04BF8F8BF7AB8732CFAD01E2F09E2FF1EE037E23"
           }
         ]
+      },
+      {
+        "kind": "superseded_receipt_seal",
+        "commit": "fa11563a6571bbce91d980e67b507a8771bf0773",
+        "parent": "8c06633c0e89e649dac0ea58652beb6ea16c8b22",
+        "parents": [
+          "8c06633c0e89e649dac0ea58652beb6ea16c8b22"
+        ],
+        "tree": "16f1329b02f2a24a8af86c7a30a446327f037e49",
+        "paths": [
+          {
+            "path": "validation/composition-current.json",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "935b5bba53279bab13c6b4933335434ebc94057f",
+            "git_blob": "f8ad49e04a237723fdb10559d6cd0661d5596dee",
+            "status": "M",
+            "bytes": 66043,
+            "sha256": "CF27F0247A0B5DC57D2AB86BECF8D1F96461B890CA1442B2ED054A55A58DE91B"
+          }
+        ]
+      },
+      {
+        "kind": "post_composition_validation_repair",
+        "commit": "8f29b3c23da281e93d4fc2121696143b3bf29080",
+        "parent": "fa11563a6571bbce91d980e67b507a8771bf0773",
+        "parents": [
+          "fa11563a6571bbce91d980e67b507a8771bf0773"
+        ],
+        "tree": "0ba85b762bbc18f0dbfd473eb8e19b0e0b8467d3",
+        "paths": [
+          {
+            "path": "tools/direct_successor_checkpoint.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "f1a0ab6539619ac891d548f0dd6bd32cee665798",
+            "git_blob": "0bfda6a7f4bad0b5db786872907fe19f90c5fc16",
+            "status": "M",
+            "bytes": 33676,
+            "sha256": "646716F471344A2A73840D313944B02F94B10AF332518CB3D6602200BCC55C76"
+          },
+          {
+            "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "8d8a70603251b1047e1efa585159dd07c74096f0",
+            "git_blob": "174455d01ca633ccda2c3a248430f999aa696048",
+            "status": "M",
+            "bytes": 18184,
+            "sha256": "D47905C48BF4DF79621A818D0BABC909D764D70F47D2198CE0DAC2F61F90CF93"
+          },
+          {
+            "path": "tools/verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "ede323cdd53165bc9adc0112fd5759678d9d9bda",
+            "git_blob": "2976d7cba909715ea857fcdfa914c5d10e3a347b",
+            "status": "M",
+            "bytes": 56134,
+            "sha256": "6215B4F7DAC100E5BA70851515A689711755C85D81AE764DC3B1A2CC6AF9F0CB"
+          }
+        ]
       }
     ],
     "root_sources_unchanged_before_composition": true,
     "lease_issue_is_fresh_root": true,
     "current_public_ega_errata_preservation_contract": "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier input preservation; no claim of fresh checker replay against later public errata",
-    "inherited_illusie_validation_contract": "manifest suffix replayed at the exact linear public predecessor; every protected Illusie byte plus the finite checker and regression suite revalidated at the endpoint"
+    "inherited_illusie_validation_contract": "manifest suffix replayed at the exact sealed Illusie validation head; every protected Illusie byte plus the finite checker and regression suite revalidated at the endpoint"
   },
   "new_overlays": [
     {
@@ -1309,7 +1371,9 @@
       "sealed_predecessor_receipt_sha256": "546206C486E7722D9086B9E4ADF979CCA11DC8587D3E28CCFEA551C700606ADE"
     },
     "source_commit": "ea606e202707d215f38e050be2621d0c83cadef0",
-    "source_tree": "3a0e1ee6f7c575a261a254e1f4701a982e8c12a6"
+    "source_tree": "3a0e1ee6f7c575a261a254e1f4701a982e8c12a6",
+    "validation_head": "00856c315dabb2516cad6d956a25030909419947",
+    "validation_tree": "11aeb66e85471278dd828476c122b6b19c1d952f"
   },
   "correction_protected_inputs": {
     "illusie_volume_I/.gitignore": {
@@ -1495,7 +1559,7 @@
     "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
     "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-    "validation_repair_commit": "8c06633c0e89e649dac0ea58652beb6ea16c8b22",
+    "validation_repair_commit": "8f29b3c23da281e93d4fc2121696143b3bf29080",
     "lease_issue_event": "lease-event-000124",
     "lease_release_event": "lease-event-000125"
   }
