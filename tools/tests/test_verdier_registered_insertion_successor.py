@@ -255,14 +255,15 @@ class CheckpointSchemaTests(unittest.TestCase):
         self.checkpoint = {"content": {"commit": "old-content"}}
 
     def test_new_schema_uses_direct_loader_and_accepts_ai_predecessor(self):
+        ega = Mock(return_value=(
+            {"status": "PASS_CURRENT_PUBLIC_EGA_INHERITED_WITH_LATER_PUBLIC_ERRATA"}, []))
         patches = [
             patch.object(checkpoint, "receipt_anchor", return_value="real-anchor"),
             patch.object(checkpoint, "verify_historical", return_value=(
                 {"post_content": {"head_tree": "anchor-tree"}, "external_authority_inputs": []}, ())),
             patch.object(checkpoint, "verify_historical_semantic", return_value=(
                 {"commit": "old-semantic"}, [], [])),
-            patch.object(checkpoint, "verify_current_ega", return_value=(
-                {"status": "PASS_CURRENT_PUBLIC_EGA_PRESERVED"}, [])),
+            patch.object(checkpoint, "verify_current_ega", ega),
             patch.object(checkpoint, "verify_current_illusie", return_value={
                 "status": "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND"}),
             patch.object(checkpoint, "historical_semantic_composition", return_value=(
@@ -279,6 +280,9 @@ class CheckpointSchemaTests(unittest.TestCase):
                          self.composition["verdier_registered_insertion_scope"])
         self.assertEqual(binding["inherited_composition"]["commit"], "prior-public")
         self.build.require_source_checkpoint_unchanged.assert_called_once()
+        ega.assert_called_once_with(
+            self.build, self.source, "prior-public", "actual-build-commit",
+            replay_current_checker=False)
 
     def test_semantic_owner_follows_inherited_ai_previous_cutoff(self):
         inherited = {

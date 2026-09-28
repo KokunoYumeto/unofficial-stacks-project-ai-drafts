@@ -157,7 +157,7 @@ def verify_historical_semantic(build, source, prior, head, composition):
             "checker_input_tuple_sha256": build.canonical_tuple_sha256(protected)}, semantic_paths, protected
 
 
-def verify_current_ega(build, source, prior, head):
+def verify_current_ega(build, source, prior, head, *, replay_current_checker: bool = True):
     paths = ega_dependency_paths(build, source, prior)
     require(paths == ega_dependency_paths(build, source, head), "inherited current EGA input inventory changed")
     for path in paths:
@@ -189,20 +189,41 @@ def verify_current_ega(build, source, prior, head):
     require(isinstance(expected, dict) and expected.get("schema") == "ega-stacks-scaffold-check-v1"
             and expected.get("status") == "PASS" and expected.get("errors") == [],
             "current EGA sealed checker result is invalid")
-    with isolated_checker_import_cache():
-        check = subprocess.run([sys.executable, "-X", "utf8", "-B", "ega/check.py"], cwd=source,
-                               capture_output=True, text=True, encoding="utf-8", timeout=600)
-    require(check.returncode == 0, "current inherited EGA checker failed: " + (check.stderr or check.stdout))
-    observed = build.strict_json_loads(check.stdout, "current inherited EGA checker")
-    require(observed == expected, "current EGA checker differs from already-public integration result")
-    require(before == require_exact_inputs(build, source, head, paths), "current EGA inputs changed during checker")
-    return {"schema": SEMANTIC_JOIN_SCHEMA, "status": "PASS_CURRENT_PUBLIC_EGA_PRESERVED",
+    if replay_current_checker:
+        with isolated_checker_import_cache():
+            check = subprocess.run([sys.executable, "-X", "utf8", "-B", "ega/check.py"], cwd=source,
+                                   capture_output=True, text=True, encoding="utf-8", timeout=600)
+        require(check.returncode == 0,
+                "current inherited EGA checker failed: " + (check.stderr or check.stdout))
+        observed = build.strict_json_loads(check.stdout, "current inherited EGA checker")
+        require(observed == expected,
+                "current EGA checker differs from already-public integration result")
+        status = "PASS_CURRENT_PUBLIC_EGA_PRESERVED"
+    else:
+        # Later public errata legitimately changed root sources after the sealed
+        # EGA integration.  The historical checker encodes the older bytes and
+        # would reject that public successor.  Bind its sealed passing output,
+        # and prove that Verdier preserves the exact immediate-public EGA input
+        # closure, without misreporting a fresh checker replay.
+        observed = expected
+        status = "PASS_CURRENT_PUBLIC_EGA_INHERITED_WITH_LATER_PUBLIC_ERRATA"
+    require(before == require_exact_inputs(build, source, head, paths),
+            "current EGA inputs changed during validation")
+    result = {"schema": SEMANTIC_JOIN_SCHEMA, "status": status,
             "previous_public_commit": prior, "current_commit": head,
             "integration_receipt": validation_id, "integration_source_commit": integrated,
-            "checker": observed, "fresh_import_cache": True, "input_count": len(before),
+            "checker": observed, "fresh_import_cache": replay_current_checker,
+            "current_checker_replayed": replay_current_checker,
+            "input_count": len(before),
             "input_tuple_sha256": build.canonical_tuple_sha256([
                 build.protected_input("successor_current_input", head, row) for row in before]),
-            "historical_semantic_receipt_not_relabelled": True}, paths
+            "historical_semantic_receipt_not_relabelled": True}
+    if not replay_current_checker:
+        result["checker_evidence"] = (
+            "sealed passing EGA integration output plus exact immediate-public-to-Verdier "
+            "input preservation; no fresh replay against later public errata bytes"
+        )
+    return result, paths
 
 
 def _recheck_at(build, source, binding, protected):
@@ -423,7 +444,8 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                 f"inherited EGA semantic input drifted: {path}")
     semantic, semantic_paths, semantic_protected = verify_historical_semantic(
         build, source, prior, head, inherited_binding)
-    current_ega, current_ega_paths = verify_current_ega(build, source, prior, head)
+    current_ega, current_ega_paths = verify_current_ega(
+        build, source, prior, head, replay_current_checker=not is_verdier)
     current_illusie = verify_current_illusie(build, source, composition, head) if is_ai else None
     # Current inputs are frozen independently of the historical byte inventory.
     paths = set(root_tex + semantic_paths + [logical, "my.bib", "tags/tags",
@@ -479,7 +501,9 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                    "all_current_root_tex_exact_at_validated_composition_source",
                    "semantic_increment_exact_append_prefixes_scope_and_checker",
                    "semantic_increment_checker_executed_at_its_actual_own_receipt_head",
-                   "later_public_ega_inputs_preserved_and_current_checker_separately_replayed",
+                   ("later_public_ega_inputs_preserved_with_sealed_checker_evidence"
+                    if is_verdier else
+                    "later_public_ega_inputs_preserved_and_current_checker_separately_replayed"),
                    "historical_and_current_inputs_frozen_through_final_build_recheck"],
     }
     if is_ai:

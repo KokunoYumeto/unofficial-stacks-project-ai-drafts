@@ -885,6 +885,10 @@ def derive_successor(
                         source_row, *post_source_rows],
             "root_sources_unchanged_before_composition": True,
             "lease_issue_is_fresh_root": True,
+            "current_public_ega_errata_preservation_contract": (
+                "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier "
+                "input preservation; no claim of fresh checker replay against later public errata"
+            ),
         },
         "new_overlays": [overlay],
         "composition": {
