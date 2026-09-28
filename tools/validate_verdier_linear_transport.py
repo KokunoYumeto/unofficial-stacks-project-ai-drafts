@@ -57,7 +57,7 @@ CORE_ROLES = ("composition", "build", "second_build", "visual_qa", "reproducibil
 AI_DISCLOSURE = "OpenAI Codex — GPT-5.6 Sol, Ultra effort"
 PUBLICATION_PREPARATION_CHANGES = {
     "CHANGES_FROM_UPSTREAM.md": "M",
-    "tests/test_changes_from_upstream.py": "M",
+    "tools/validate_verdier_linear_transport.py": "M",
     "upstream-corrections/corrections-only.zip": "M",
     "upstream-corrections/downloads.json": "M",
     "upstream-corrections/manifest.json": "M",
