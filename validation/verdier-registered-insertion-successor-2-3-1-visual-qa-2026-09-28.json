@@ -1,0 +1,176 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-09-28T09:47:13Z",
+  "description": "Complete visual QA of the 133-page integrated Derived Categories PDF after the Verdier II.2.3.1 registered insertion: every page inspected in ordered contact sheets and the insertion locus plus its immediate neighbours inspected at 220 DPI.",
+  "inspection_by": "OpenAI Codex — GPT-5.6 Sol, Ultra effort",
+  "source": {
+    "commit": "59c94c5eb5cabab5dbe54c387947d2c88e5db113",
+    "tree": "9460acb7859e39f4662bfc93fbb10b47b8fb9a2b"
+  },
+  "build_receipt": {
+    "path": "validation/verdier-registered-insertion-successor-2-3-1-build-a-2026-09-28.json",
+    "bytes": 843633,
+    "sha256": "1F4C16108E2B533DEB27FCAA4AB2B09A817266D5C6298DBFEA06FF490B2185DC",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "derived"
+    ],
+    "verdier_registered_insertion": {
+      "candidate_id": "stacks-verdier-a04446e-2-3-1-r1",
+      "operation_id": "VDR-STK-COMP-0003",
+      "stable_ids": [
+        "verdier:ast239:2.3.1",
+        "verdier:ast239:2.3.1:boundary:p143",
+        "verdier:ast239:2.3.1:setup:nested-subcategory",
+        "verdier:ast239:2.3.1:claim:denominator-intersection",
+        "verdier:ast239:2.3.1:claim:quotient-embedding",
+        "verdier:ast239:2.3.1:claim:quotient-transitivity",
+        "verdier:ast239:2.3.1:claim:saturated-image",
+        "verdier:ast239:2.3.1:setup:inverse-image",
+        "verdier:ast239:2.3.1:claim:inverse-image-triangulated",
+        "verdier:ast239:2.3.1:claim:inverse-image-denominators",
+        "verdier:ast239:2.3.1:claim:saturation-reflected",
+        "verdier:ast239:2.3.1:claim:subcategory-lattice",
+        "verdier:ast239:2.3.1:proof:intersection-and-embedding",
+        "verdier:ast239:2.3.1:proof:transitivity",
+        "verdier:ast239:2.3.1:proof:saturated-image",
+        "verdier:ast239:2.3.1:proof:inverse-image-basics",
+        "verdier:ast239:2.3.1:proof:saturation-forward",
+        "verdier:ast239:2.3.1:boundary:p144",
+        "verdier:ast239:2.3.1:proof:saturation-converse",
+        "verdier:ast239:2.3.1:proof:lattice-inverse",
+        "verdier:ast239:2.3.1:proof:roof-setup",
+        "verdier:ast239:2.3.1:diagram:roof",
+        "verdier:ast239:2.3.1:proof:lattice-complete"
+      ],
+      "candidate_authoring_commit": "6a9248713888305e153f47fd349b4ae941a93174",
+      "build_root_repair_commit": "c5125ff63f91abe0b7e8d0c1c04692a1971f17be",
+      "candidate_freeze_commit": "421ab3c5224ac59d845efa16cac42b5ae231813a",
+      "review_commit": "3ddcb012f50fa42d12efcde125376de463d24ae5",
+      "admission_commit": "37d4837dc283f6e97ae0d731453f73683e3d78e8",
+      "composition_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
+      "candidate_closure_commit": "b4dda8252385769162c8232360cf4fe2569c00cb",
+      "closure_correction_receipt": "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1-closure-correction.json",
+      "validation_tool_commit": "84f867ee93f329136c9ce464c4ab934f18ee53c2",
+      "lease_issue_event": "lease-event-000126",
+      "lease_release_event": "lease-event-000127"
+    },
+    "full_page_render_count": 133,
+    "full_page_contact_sheet_review_count": 133,
+    "full_page_contact_sheet_count": 9,
+    "high_resolution_locus_pages": {
+      "derived": [25, 26, 27, 28, 29]
+    },
+    "high_resolution_locus_page_count": 5,
+    "review_scope": "All 133 pages received an ordered contact-sheet layout review. PDF pages 25-29 received direct 220-DPI inspection; Lemma 6.11 occupies pages 26-27, Lemma 6.12 occupies pages 27-28, and pages 25 and 29 establish clean neighbouring flow. This is visual QA, not a new whole-chapter mathematical proof audit."
+  },
+  "artifacts": {
+    "derived": {
+      "pdf": "derived.pdf",
+      "pages": 133,
+      "bytes": 1268792,
+      "sha256": "D877AF1DC95C98CF0BA72AE84DDAD9B21C7B52D0562BB7257D6AF93EF6262E35",
+      "encrypted": false,
+      "pages_without_ink": 0,
+      "duplicate_render_hashes": 0,
+      "page_boxes_points": [[0.0, 0.0, 612.0, 792.0]],
+      "full_page_dimensions_pixels": [816, 1056],
+      "minimum_ink_pixels_below_245": 31194
+    }
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm",
+    "full_page_dpi": 96,
+    "high_resolution_dpi": 220,
+    "contact_sheets": "Nine ordered 4-by-4 sheets; all 133 page tiles inspected for layout and continuity.",
+    "render_intermediates_published": false,
+    "text_extraction_role": "No text extraction substituted for image inspection.",
+    "tex_launched_for_qa": false
+  },
+  "insertion_locus_inspection": {
+    "pdf": "derived.pdf",
+    "pages": [
+      {
+        "page": 25,
+        "role": "preceding_context",
+        "status": "PASS",
+        "observation": "Lemmas 6.8-6.10 and the setup immediately preceding the insertion remain within the text block; formulas, links, proof boxes, header, page number, and margins are intact."
+      },
+      {
+        "page": 26,
+        "role": "insertion_start",
+        "status": "PASS",
+        "observation": "Lemma 6.11 begins after the preceding proof with normal vertical separation. The intersection statement, fully faithful quotient embedding, transitivity equivalence, cofinality argument, and colimit displays are legible and unclipped."
+      },
+      {
+        "page": 27,
+        "role": "insertion_middle",
+        "status": "PASS",
+        "observation": "Lemma 6.11 ends cleanly and Lemma 6.12 begins with normal spacing. Overlined images, inverse-image formulas, saturation statements, and the roof fraction are complete and legible."
+      },
+      {
+        "page": 28,
+        "role": "insertion_end",
+        "status": "PASS",
+        "observation": "The lattice and saturation proof completes cleanly before Lemma 6.13 and Section 7. All overlines, direct sums, proof box, references, and margins are intact."
+      },
+      {
+        "page": 29,
+        "role": "following_context",
+        "status": "PASS",
+        "observation": "The inherited adjoint-functor argument resumes without discontinuity; both large commutative diagrams, formulas, proof box, header, page number, and margins are intact."
+      }
+    ]
+  },
+  "full_page_overview_inspections": [
+    {"sheet": 1, "pages": [1, 16], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 866292, "sha256": "17F53A7BE98EEF8E527A3F54D03F07EDE3F8ED56D096300C90D2D4B7C9460A92"},
+    {"sheet": 2, "pages": [17, 32], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 910449, "sha256": "289438AECEBF629982481CB9889903A7F324737E39E72FAC3A53B90AF1682766"},
+    {"sheet": 3, "pages": [33, 48], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 895096, "sha256": "2330C38F94125D4E3E9B5AB3AAF902BE544CEF833AB32B8C391E77BEB589D898"},
+    {"sheet": 4, "pages": [49, 64], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 921959, "sha256": "6F850C27895FFD06936F5587FCEF4F74CF8BDA17CAB9C7957DCF951AA879E3E7"},
+    {"sheet": 5, "pages": [65, 80], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 870033, "sha256": "988E80B896FD98096D21F1569C0C44C4455D1E28EA4A489856B9BFAE751DBD5D"},
+    {"sheet": 6, "pages": [81, 96], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 862871, "sha256": "3DD3BD56EEED562B8336C751C1312FB9499C6EE495151405C6E58797ACD3D096"},
+    {"sheet": 7, "pages": [97, 112], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 885429, "sha256": "1A1513A8B0651F987A9F5DCF6943F20E6F2C9B95AE6E2606A445702CE604C861"},
+    {"sheet": 8, "pages": [113, 128], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 875647, "sha256": "91EE385B785E4047D47AE3293A72903DB4C1AF79F2CA7E686BC6099BFA58C712"},
+    {"sheet": 9, "pages": [129, 133], "status": "PASS_LAYOUT_OVERVIEW", "bytes": 289421, "sha256": "377F0987E8A49C1083B958FF558C540762F6E1EC33F07E00673B7DD58C625B97"}
+  ],
+  "private_evidence": {
+    "published": false,
+    "render_manifest": {
+      "bytes": 44278,
+      "sha256": "C2EDD49D513D80D309ACF4BE5287DCDF96C03694C105443E5C49E0B8776C77E6"
+    },
+    "high_resolution_renders": [
+      {"page": 25, "bytes": 573673, "sha256": "0FB4F82E08B66E8BD34B30E58320A9BC2247363CFC5101D85B37C34EB57050C4"},
+      {"page": 26, "bytes": 476992, "sha256": "C25CED62AFF4CA16B4756D487809E2915A843B0E4EF17431A1F38BAE74DB6BAD"},
+      {"page": 27, "bytes": 539951, "sha256": "C0F3859C757408361882C3AFC032987D1F79F3865D995A647C8DEDB7B8CE6759"},
+      {"page": 28, "bytes": 550460, "sha256": "5B2966CA35F2E85D7B24312E65FC6745FCDF7EB327F4EF882CD9747613D554CF"},
+      {"page": 29, "bytes": 423807, "sha256": "B27BF8CAA76BFAC51B2CFA75C31B81EA6874C9EE9EEAB28650C57DE966D65273"}
+    ]
+  },
+  "reader_facing_limitations": [
+    {
+      "kind": "existing_external_reference_placeholders",
+      "description": "References to chapters outside the 36-chapter build profile can display existing external-reference placeholders. The fixed-point build reports no newly unclassified undefined reference, citation, glyph, destination, or rerun warning."
+    }
+  ],
+  "claim_boundary": "PASS means the stated complete rendered-page layout review and insertion-locus checks passed. It does not claim a new proof audit of every theorem or removal of every inherited editorial limitation."
+}

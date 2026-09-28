@@ -378,21 +378,27 @@ def historical_semantic_composition(
 ) -> tuple[dict[str, str], dict[str, object]]:
     """Resolve the receipt that originally owns the EGA semantic increment.
 
-    The immediate predecessor of the Verdier lane carries a later Illusie
-    correction receipt.  Its composition source is not the parent of the
-    earlier EGA semantic commit.  Follow the correction receipt's exact
-    previous-cutoff pointer once, verify its declared receipt identity, and
-    use that sealed direct-composition source for the historical replay.
+    A later Verdier tranche may inherit another Verdier wrapper, which itself
+    inherits the Illusie AI-correction wrapper.  Follow only the exact typed
+    ``previous_cutoff`` chain, with a small bound, until the sealed direct
+    composition that owns the historical EGA semantic increment is reached.
     """
     owner_commit = prior
     owner_receipt = inherited
     owner_identity = build.committed_file_identity(
         source, owner_commit, "validation/composition-current.json")
     require(owner_identity is not None, "semantic composition owner receipt is absent")
-    if verdier_successor and inherited.get("schema") == AI_COMPOSITION_SCHEMA:
-        cutoff = inherited.get("previous_cutoff")
+    wrapper_count = 0
+    while verdier_successor and owner_receipt.get("schema") in {
+        VERDIER_COMPOSITION_SCHEMA,
+        AI_COMPOSITION_SCHEMA,
+    }:
+        wrapper_count += 1
+        require(wrapper_count <= 4,
+                "historical semantic composition wrapper chain is unexpectedly deep")
+        cutoff = owner_receipt.get("previous_cutoff")
         require(isinstance(cutoff, dict),
-                "inherited AI correction lacks its previous composition cutoff")
+                "inherited typed wrapper lacks its previous composition cutoff")
         owner_commit = build.require_commit_object(
             source, cutoff.get("public_main_head"), "historical semantic composition owner")
         build.require_ancestor(source, owner_commit,
@@ -459,6 +465,7 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                 direct_successor_composition._helper.SCHEMA,
                 DIRECT_SCHEMA,
                 AI_COMPOSITION_SCHEMA,
+                VERDIER_COMPOSITION_SCHEMA,
             }
             and inherited.get("status") == "PASS" and isinstance(inherited.get("composition"), dict),
             "inherited composition is not a passing typed source binding")

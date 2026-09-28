@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Validate one current-main-first Verdier registered-insertion successor.
+"""Validate the current Verdier registered-insertion successor.
 
-The contract is deliberately narrower than the historical v4 workflow.  It
-accepts exactly the already-public R48/Illusie state, the already-recorded
-Verdier II.1.3.6 candidate prefix, one independent-review transaction, one
-registry admission, and one insertion-only source transaction.  Future commit
-and tree identities are read from the committed receipt and then proved from
-Git objects; they are not compiled into this program.
+This revision binds Proposition II.2.3.1 to the already-public AI-integrated
+main containing II.1.3.6.  It proves the exact leased candidate history,
+frozen-byte review replay, append-only admission, and one insertion-only
+``derived.tex`` transaction while inheriting the earlier AI-correction dossier.
 """
 from __future__ import annotations
 
@@ -43,54 +41,82 @@ INDEX = "validation/direct-successor-current.json"
 
 AUTHORITY_COMMIT = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 AUTHORITY_TREE = "3feeb703b931a6e7259782c10e7d1575adc83e5e"
-PREVIOUS_PUBLIC = "4828ebac86db7ebf4211227cabe183b09f11c992"
-PREVIOUS_PUBLIC_TREE = "d351c98e5a4655f20b2ddf34783314cda21e6c91"
-INHERITED_RECEIPT_HEAD = "00856c315dabb2516cad6d956a25030909419947"
-INHERITED_RECEIPT_TREE = "11aeb66e85471278dd828476c122b6b19c1d952f"
+PREVIOUS_PUBLIC = "22dd577923c0faa54474021bc7de93a467aa1f47"
+PREVIOUS_PUBLIC_TREE = "e47b62074035be104f95aaa29c49ac2249a7fa9c"
+INHERITED_RECEIPT_HEAD = PREVIOUS_PUBLIC
+INHERITED_RECEIPT_TREE = PREVIOUS_PUBLIC_TREE
 INHERITED_RECEIPT_ID = {
-    "bytes": 165405,
-    "sha256": "7CFA04B3A5F7BAD0653B63BC4D1BE2E84828CFB61DFC7880B7D8BAB2F7837AD2",
-    "git_blob": "ea590d297f07b484bfc1906c14ac9de7ba6350e6",
+    "bytes": 71127,
+    "sha256": "5301E0507D08BC0741E1F1CB437FDE2BEBBAFC5AAF5F05B61E9B30678A75E129",
+    "git_blob": "8cf42ad4c56715c940762db4fcf6e6e0767d7572",
 }
 
-# This prefix is already committed and is part of the requested exact topology.
-PROVENANCE_COMMIT = "3102126f69604d3008029cd098f6a790acd9f027"
-PROVENANCE_TREE = PREVIOUS_PUBLIC_TREE
-PROVENANCE_SECOND_PARENT = "288a082f3f98438d824c22d1534fb168edd05728"
-PROVENANCE_SECOND_PARENT_TREE = "c58a417324696717c5add769c86d0e124dd3301b"
-LEASE_ISSUE_COMMIT = "8b5c4fb74822a225ce8aaa227d0496b9978b9db0"
-LEASE_ISSUE_TREE = "821a89b797890e6bff3d7f5e1f63c851201d7ac0"
-CANDIDATE_FREEZE_COMMIT = "65da408e2209f68e134067bf8102f68522062a5c"
-CANDIDATE_FREEZE_TREE = "bb8fb0db2fd0f87e5667a2a7863d178eb12a792b"
+# This exact linear prefix is committed from the current public predecessor.
+LEASE_ISSUE_COMMIT = "d0bfe6484efa49f49a469ba420d229033c56b624"
+LEASE_ISSUE_TREE = "4c129f548f8604b336e0384457b5f97757be6e14"
+CANDIDATE_AUTHORING_COMMIT = "6a9248713888305e153f47fd349b4ae941a93174"
+CANDIDATE_AUTHORING_TREE = "1fa6badd88e64204b1378cb0c5b02dcd3aae66bd"
+BUILD_ROOT_REPAIR_COMMIT = "c5125ff63f91abe0b7e8d0c1c04692a1971f17be"
+BUILD_ROOT_REPAIR_TREE = "cf275453b94751222eb6997bc2cd72dfeb8265d2"
+CANDIDATE_BUILD_COMMIT = "421ab3c5224ac59d845efa16cac42b5ae231813a"
+CANDIDATE_BUILD_TREE = "6e162bb89afd261f2482ea6611e25164c67d2d30"
 
-OVERLAY_ID = "stacks-verdier-a04446e-1-3-6-r1"
-NAMESPACE = "commons/stacks/verdier-ast239-1-3-6-r1"
+OVERLAY_ID = "stacks-verdier-a04446e-2-3-1-r1"
+NAMESPACE = "commons/stacks/verdier-ast239-2-3-1-r1"
 CANDIDATE_DIR = "ai-integrated/candidates/" + NAMESPACE
-LEASE_ID = "stacks-lease-000064-verdier-ast239-1-3-6-r1"
+LEASE_ID = "stacks-lease-000065-verdier-ast239-2-3-1-r1"
 WRITER_TASK = "019fca5a-c80e-7890-a46b-4948ff443e6d"
-ISSUE_EVENT = "lease-event-000124"
-RELEASE_EVENT = "lease-event-000125"
-REVIEW_SHA256 = "010870DCEDE1C2FD52CC2FEDBF3A72691BEFA15EA668EAD25E810BD7C606F557"
-FINAL_MANIFEST_SHA256 = "36C212923227798F4C4AEDEA09ED6385A79CD29FC944DD09946FC97AA267AF0E"
-FINAL_CANDIDATE_SUBTREE = "22b5f87d722f9f2b6d22aaeac4c1c2b69904e555"
+ISSUE_EVENT = "lease-event-000126"
+RELEASE_EVENT = "lease-event-000127"
+REVIEW_SHA256 = "B2F3E4735AB4A8094CE7C3826ABA725A2117DA925A198202E440039160B18F00"
+FINAL_MANIFEST_SHA256 = "5B7215DB879A5C3353446D67C85C3DB23D6BF85126504C3288B0B85BBC38EA06"
+REVIEWED_CANDIDATE_SUBTREE = "3c3e4ad49cd3dadc69a9640a6c3df5938cea748a"
+INITIAL_VALIDATION_TOOL_COMMIT = "3cda15a109d7bb1c362478716e3fe981d648c61b"
+INITIAL_VALIDATION_TOOL_TREE = "c156fc3c322e61e332033ff47474458a6d1a11fc"
+CANDIDATE_CLOSURE_COMMIT = "b4dda8252385769162c8232360cf4fe2569c00cb"
+CANDIDATE_CLOSURE_TREE = "8ecfdba218d25816868e460086d957b296310a28"
+FINAL_CANDIDATE_SUBTREE = "3cedabb80302dd3df9d2d2e191bb4773c614a1fc"
+CLOSURE_VALIDATOR_COMMIT = "6ee8278c2efa69ba8dc1dbcad2d4bbf2b7126c5e"
+CLOSURE_VALIDATOR_TREE = "62ab88f98dd1da0ebd579c5cfa8bff230bf5c5ba"
 OVERLAYS = "ai-integrated/registry/overlays.json"
 LEASES = "ai-integrated/registry/leases.json"
-ADMISSION_RECEIPT = "ai-integrated/registry/admission-receipts/verdier-ast239-1-3-6-r1.json"
+ADMISSION_RECEIPT = "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1.json"
+CLOSURE_CORRECTION_RECEIPT = (
+    "ai-integrated/registry/admission-receipts/"
+    "verdier-ast239-2-3-1-r1-closure-correction.json"
+)
 COMPOSER = "tools/compose_registered_insertion.py"
 TARGET = "derived.tex"
-PAYLOAD = "payload/fragments/derived-homotopy-category-abelian-split.tex"
+PAYLOAD = "payload/fragments/derived-nested-quotients.tex"
 COMPOSITION = "composition.jsonl"
 STABLE_UNITS = "stable-units.json"
 SOURCE_MAP = "source-map.jsonl"
+OPERATION_ID = "VDR-STK-COMP-0003"
 
 STABLE_IDS = (
-    "verdier:ast239:1.3.6",
-    "verdier:ast239:1.3.6:equivalent-conditions",
-    "verdier:ast239:1.3.6:proof:i-iff-ii",
-    "verdier:ast239:1.3.6:proof:ii-implies-iii",
-    "verdier:ast239:1.3.6:construction:hstar-complex",
-    "verdier:ast239:1.3.6:claim:hstar-equivalence",
-    "verdier:ast239:1.3.6:conclusion:iii-implies-ii",
+    "verdier:ast239:2.3.1",
+    "verdier:ast239:2.3.1:boundary:p143",
+    "verdier:ast239:2.3.1:setup:nested-subcategory",
+    "verdier:ast239:2.3.1:claim:denominator-intersection",
+    "verdier:ast239:2.3.1:claim:quotient-embedding",
+    "verdier:ast239:2.3.1:claim:quotient-transitivity",
+    "verdier:ast239:2.3.1:claim:saturated-image",
+    "verdier:ast239:2.3.1:setup:inverse-image",
+    "verdier:ast239:2.3.1:claim:inverse-image-triangulated",
+    "verdier:ast239:2.3.1:claim:inverse-image-denominators",
+    "verdier:ast239:2.3.1:claim:saturation-reflected",
+    "verdier:ast239:2.3.1:claim:subcategory-lattice",
+    "verdier:ast239:2.3.1:proof:intersection-and-embedding",
+    "verdier:ast239:2.3.1:proof:transitivity",
+    "verdier:ast239:2.3.1:proof:saturated-image",
+    "verdier:ast239:2.3.1:proof:inverse-image-basics",
+    "verdier:ast239:2.3.1:proof:saturation-forward",
+    "verdier:ast239:2.3.1:boundary:p144",
+    "verdier:ast239:2.3.1:proof:saturation-converse",
+    "verdier:ast239:2.3.1:proof:lattice-inverse",
+    "verdier:ast239:2.3.1:proof:roof-setup",
+    "verdier:ast239:2.3.1:diagram:roof",
+    "verdier:ast239:2.3.1:proof:lattice-complete",
 )
 
 EXPECTED_STEMS = (
@@ -104,38 +130,30 @@ EXPECTED_STEMS = (
     "spaces-perfect",
 )
 
-FIXED_CANDIDATE_PATHS = tuple(
-    CANDIDATE_DIR + "/" + path for path in (
-        ".gitattributes", ".gitignore", "LEASE.json", "README.md", "_build_impl.py",
-        "authority/authority.lock.json",
-        "build-manifest.py", "build.py", "builds/baseline-derived.log",
-        "builds/build-receipt.json", "builds/derived.log", "builds/derived.pdf",
-        "builds/tex-mutex.json", "builds/validation.json", "builds/visual-qa.json",
-        "builds/visual/derived-036.png", "builds/visual/derived-037.png",
-        "builds/visual/derived-038.png", "builds/visual/derived-039.png",
-        "candidate.config.json", "candidate.manifest.json", "check-manifest.py",
-        "composition.jsonl", "decisions.jsonl", "formula-diagram-inventory.json",
-        PAYLOAD, "rejections.jsonl", SOURCE_MAP, STABLE_UNITS, "verify.py",
-    )
-)
-
-PREPARATION_PATHS = (
-    "tools/build_fixed_point.py",
-    "tools/direct_successor_checkpoint.py",
-    "tools/validate_unified_repository.py",
+VALIDATION_TOOL_PATHS = (
     "tools/verdier_registered_insertion_successor.py",
     "tools/validate_verdier_registered_insertion_successor.py",
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
 
-POST_COMPOSITION_REPAIR_PATHS = (
-    "tools/direct_successor_checkpoint.py",
+FINAL_VALIDATOR_PATHS = (
+    CLOSURE_CORRECTION_RECEIPT,
     "tools/verdier_registered_insertion_successor.py",
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
 
-POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS = (
-    "tools/compare_fixed_point_builds.py",
+COMPOSER_REPAIR_PATHS = (
+    "tools/compose_registered_insertion.py",
+    "tools/verdier_registered_insertion_successor.py",
+    "tools/tests/test_verdier_registered_insertion_successor.py",
+)
+
+COMPOSER_REPAIR_COMMIT = "f83c16e148888fdbba0751c6b37e59f3d26956f8"
+COMPOSER_REPAIR_TREE = "c7ae8159ad9e5f97b9b9525629c1cfb716c14bef"
+SUPERSEDED_RECEIPT_SEAL_COMMIT = "e53c0fd52e494c4fa3036f1ffb6ef0332c9b9bdf"
+SUPERSEDED_RECEIPT_SEAL_TREE = "1c2c59432c018f509a36d9728a325a9237a450e5"
+CHECKPOINT_REPAIR_PATHS = (
+    "tools/direct_successor_checkpoint.py",
     "tools/verdier_registered_insertion_successor.py",
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
@@ -256,61 +274,60 @@ def _jsonl(raw: bytes, label: str) -> list[dict]:
 def _validate_inherited(git: Git) -> tuple[dict, dict[str, dict[str, object]]]:
     require(git.tree(PREVIOUS_PUBLIC) == PREVIOUS_PUBLIC_TREE, "wrong previous public tree")
     require(git.tree(INHERITED_RECEIPT_HEAD) == INHERITED_RECEIPT_TREE,
-            "wrong inherited AI validation-head tree")
+            "wrong inherited Verdier validation-head tree")
     observed = git.ident(PREVIOUS_PUBLIC, RECEIPT)
-    require(observed == INHERITED_RECEIPT_ID, "wrong inherited R48 AI receipt identity")
-    require(git.blob(PREVIOUS_PUBLIC, RECEIPT)
-            == git.blob(PREVIOUS_PUBLIC, ai_correction.NAMED_RECEIPT),
-            "inherited current/named AI receipts differ")
+    require(observed == INHERITED_RECEIPT_ID, "wrong inherited II.1.3.6 receipt identity")
     require(git.blob(INHERITED_RECEIPT_HEAD, RECEIPT) == git.blob(PREVIOUS_PUBLIC, RECEIPT),
-            "inherited AI receipt changed after its validation head")
+            "inherited Verdier receipt changed after its validation head")
     previous = git.document(PREVIOUS_PUBLIC, RECEIPT)
-    require(previous.get("schema") == ai_correction.SCHEMA and previous.get("status") == "PASS",
-            "inherited composition is not the passing R48 AI successor")
+    require(previous.get("schema") == SCHEMA and previous.get("status") == "PASS",
+            "inherited composition is not the passing II.1.3.6 successor")
     require(previous.get("authority") == {"commit": AUTHORITY_COMMIT, "tree": AUTHORITY_TREE},
             "inherited official authority mismatch")
-    comp = previous.get("composition", {})
+    inherited_ai = previous.get("inherited_ai_source_correction", {})
     ai_correction.validate_ai_source_correction_scope(
-        previous.get("ai_source_correction_scope"),
-        source_commit=comp.get("source_commit"),
-        source_tree=comp.get("source_tree"),
+        inherited_ai.get("scope"),
+        source_commit=inherited_ai.get("source_commit"),
+        source_tree=inherited_ai.get("source_tree"),
     )
     require(tuple(previous.get("required_build_stems", ())) == EXPECTED_STEMS,
             "inherited composition is not the exact 36-stem profile")
-    require(previous.get("registry", {}).get("last_admitted_overlay") == "stacks-errata-a04446e-r48",
-            "inherited registry is not sealed R48")
-    manifest = git.document(INHERITED_RECEIPT_HEAD, ai_correction.MANIFEST)
-    ai_correction.validate_manifest(git, manifest, INHERITED_RECEIPT_HEAD)
-    require(git.blob(INHERITED_RECEIPT_HEAD, ai_correction.MANIFEST)
-            == git.blob(PREVIOUS_PUBLIC, ai_correction.MANIFEST),
-            "AI correction manifest changed after its validated head")
+    require(previous.get("registry", {}).get("last_admitted_overlay")
+            == "stacks-verdier-a04446e-1-3-6-r1",
+            "inherited registry is not sealed II.1.3.6")
     protected = deepcopy(previous.get("correction_protected_inputs"))
     require(isinstance(protected, dict) and protected, "inherited Illusie protected inputs missing")
     for path, expected in protected.items():
         _valid_identity(expected, path)
         require(git.ident(PREVIOUS_PUBLIC, path) == expected,
                 "inherited Illusie input identity mismatch: " + path)
-    protected[ai_correction.NAMED_RECEIPT] = git.ident(PREVIOUS_PUBLIC, ai_correction.NAMED_RECEIPT)
     return previous, dict(sorted(protected.items()))
 
 
 def _validate_fixed_prefix(git: Git) -> tuple[list[dict[str, object]], dict]:
-    _commit(git, PROVENANCE_SECOND_PARENT, "preserved candidate-history parent")
-    require(git.tree(PROVENANCE_SECOND_PARENT) == PROVENANCE_SECOND_PARENT_TREE,
-            "preserved candidate-history parent tree mismatch")
-    require(git.parents(PROVENANCE_COMMIT) == [PREVIOUS_PUBLIC, PROVENANCE_SECOND_PARENT]
-            and git.tree(PROVENANCE_COMMIT) == PROVENANCE_TREE
-            and git.changes(PREVIOUS_PUBLIC, PROVENANCE_COMMIT) == {},
-            "current-main-first provenance merge identity or first-parent tree mismatch")
-    provenance = _step(git, PREVIOUS_PUBLIC, PROVENANCE_COMMIT, "current_main_first_provenance_merge")
     rows = [
-        provenance,
-        _require_step(git, PROVENANCE_COMMIT, LEASE_ISSUE_COMMIT, LEASE_ISSUE_TREE,
+        _require_step(git, PREVIOUS_PUBLIC, LEASE_ISSUE_COMMIT, LEASE_ISSUE_TREE,
                       "lease_issue", {LEASES}),
-        _require_step(git, LEASE_ISSUE_COMMIT, CANDIDATE_FREEZE_COMMIT, CANDIDATE_FREEZE_TREE,
-                      "candidate_freeze", set(FIXED_CANDIDATE_PATHS)),
+        _require_step(git, LEASE_ISSUE_COMMIT, CANDIDATE_AUTHORING_COMMIT,
+                      CANDIDATE_AUTHORING_TREE, "candidate_authoring", None),
+        _require_step(git, CANDIDATE_AUTHORING_COMMIT, BUILD_ROOT_REPAIR_COMMIT,
+                      BUILD_ROOT_REPAIR_TREE, "failed_closed_build_root_repair", None),
+        _require_step(git, BUILD_ROOT_REPAIR_COMMIT, CANDIDATE_BUILD_COMMIT,
+                      CANDIDATE_BUILD_TREE, "candidate_build_and_visual_validation", None),
     ]
-    before = git.document(PROVENANCE_COMMIT, LEASES)
+    for row in rows[1:]:
+        require(row["paths"] and all(path["path"].startswith(CANDIDATE_DIR + "/")
+                                     for path in row["paths"]),
+                row["kind"] + " escapes the leased candidate namespace")
+    repair_paths = {row["path"] for row in rows[2]["paths"]}
+    require(repair_paths == {
+        CANDIDATE_DIR + "/_build_impl.py",
+        CANDIDATE_DIR + "/builds/tex-mutex-failed-source-path-20260928.json",
+        CANDIDATE_DIR + "/builds/tex-mutex.json",
+        CANDIDATE_DIR + "/decisions.jsonl",
+        CANDIDATE_DIR + "/rejections.jsonl",
+    }, "failed-closed build-root repair path inventory mismatch")
+    before = git.document(PREVIOUS_PUBLIC, LEASES)
     issued = git.document(LEASE_ISSUE_COMMIT, LEASES)
     issue = _append_one(before, issued, "events", "lease issue")
     require("supersedes_event_id" not in issue,
@@ -324,7 +341,7 @@ def _validate_fixed_prefix(git: Git) -> tuple[list[dict[str, object]], dict]:
     }
     require(all(issue.get(key) == value for key, value in expected.items()),
             "lease issue identity mismatch")
-    pointer = git.document(CANDIDATE_FREEZE_COMMIT, CANDIDATE_DIR + "/LEASE.json")
+    pointer = git.document(CANDIDATE_BUILD_COMMIT, CANDIDATE_DIR + "/LEASE.json")
     require(pointer.get("schema") == "mathematics-commons-stacks-candidate-lease-pointer/v1"
             and pointer.get("lease_id") == LEASE_ID and pointer.get("namespace") == NAMESPACE
             and pointer.get("writer_task") == WRITER_TASK
@@ -407,7 +424,7 @@ def _validate_candidate(git: Git, review_commit: str, entry: dict) -> dict[str, 
     closure = manifest.get("source_closure", {})
     require(closure.get("enumerated") is True and closure.get("complete") is True
             and closure.get("expected_units") == closure.get("manifested_units") == len(STABLE_IDS),
-            "candidate seven-unit source closure mismatch")
+            "candidate source closure mismatch")
     require(manifest.get("review_state") == "performed" and manifest.get("independent_replay") == "passed"
             and manifest.get("unresolved_defects") == [], "final manifest is not independently reviewed")
     refs = _manifest_references(git, review_commit, manifest)
@@ -415,18 +432,18 @@ def _validate_candidate(git: Git, review_commit: str, entry: dict) -> dict[str, 
     units = git.document(review_commit, CANDIDATE_DIR + "/" + STABLE_UNITS)
     require(units.get("candidate_id") == OVERLAY_ID and units.get("unit_count") == len(STABLE_IDS)
             and [row.get("id") for row in units.get("units", [])] == list(STABLE_IDS),
-            "stable-unit manifest is not the exact seven-ID inventory")
+            "stable-unit manifest is not the exact stable-ID inventory")
     source_rows = _jsonl(git.blob(review_commit, CANDIDATE_DIR + "/" + SOURCE_MAP), "Verdier source map")
     require([row.get("unit_id") for row in source_rows] == list(STABLE_IDS)
             and [row.get("sequence") for row in source_rows] == list(range(1, len(STABLE_IDS) + 1)),
-            "source-map order does not match the seven stable IDs")
+            "source-map order does not match the stable IDs")
 
     operation_rows = _jsonl(git.blob(review_commit, CANDIDATE_DIR + "/" + COMPOSITION),
                             "Verdier composition")
     require(len(operation_rows) == 1, "Verdier candidate must contain exactly one composition operation")
     operation = operation_rows[0]
     require(operation.get("schema") == "mathematics-commons-stacks-composition-operation/v1"
-            and operation.get("operation_id") == "VDR-STK-COMP-0002"
+            and operation.get("operation_id") == OPERATION_ID
             and operation.get("operation") == "insert_bytes" and operation.get("mode") == "insertion_only",
             "candidate operation is not the exact registered insertion")
     require(operation.get("target", {}).get("path") == TARGET
@@ -507,125 +524,140 @@ def _admission_references(receipt: dict) -> set[str]:
     return found
 
 
-def _validate_preparation(
-    git: Git,
-    review_commit: str,
-    admission_commit: str,
-) -> tuple[str, dict[str, object]]:
-    """Bind the one tooling-only commit needed to validate this successor.
-
-    The preparation identity cannot be compiled into the validator that it
-    introduces.  It is therefore derived from the admission parent and then
-    constrained to one exact child of the reviewed packet with an exact path
-    and change-type allowlist.
-    """
-    parents = git.parents(admission_commit)
-    require(len(parents) == 1, "registry admission must have exactly one parent")
-    preparation_commit = parents[0]
-    row = _require_step(
-        git,
-        review_commit,
-        preparation_commit,
-        None,
-        "validation_tool_preparation",
-        set(PREPARATION_PATHS),
-    )
-    changes = git.changes(review_commit, preparation_commit)
-    expected_types = {
-        "tools/build_fixed_point.py": "M",
-        "tools/direct_successor_checkpoint.py": "M",
-        "tools/validate_unified_repository.py": "M",
-        "tools/verdier_registered_insertion_successor.py": "A",
-        "tools/validate_verdier_registered_insertion_successor.py": "A",
-        "tools/tests/test_verdier_registered_insertion_successor.py": "A",
-    }
-    require({path: data[4] for path, data in changes.items()} == expected_types,
-            "validation-tool preparation change types mismatch")
-    reviewed_subtree = git.text("rev-parse", review_commit + ":" + CANDIDATE_DIR)
-    require(git.text("rev-parse", preparation_commit + ":" + CANDIDATE_DIR)
-            == reviewed_subtree,
-            "validation-tool preparation changed the reviewed candidate")
-    return preparation_commit, row
-
-
-def _validate_post_composition_repair(
+def _validate_validation_tools(
     git: Git,
     composition_commit: str,
-    repair_commit: str,
-) -> list[dict[str, object]]:
-    """Bind failed-closed checkpoint repairs without hiding superseded seals.
-
-    The initial derived receipt proved the composition topology but exposed a
-    stale EGA-surface comparison during its verifier-only build gate.  The
-    replacement receipt records every superseded one-file seal, the exact
-    historical checkpoint-repair commits, and one terminal comparator-dispatch
-    repair before any replacement TeX process is launched.
-    """
-    repair_commit = _commit(git, repair_commit, "post-composition validation repair")
-    chain: list[str] = []
-    cursor = repair_commit
-    while cursor != composition_commit:
-        require(len(chain) < 32,
-                "post-composition validation-repair chain is unexpectedly long")
-        parents = git.parents(cursor)
-        require(len(parents) == 1,
-                "post-composition validation-repair chain must be single-parent")
-        chain.append(cursor)
-        cursor = parents[0]
-    chain.reverse()
-    require(chain and len(chain) % 2 == 0,
-            "post-composition chain must alternate receipt seals and repairs")
-    checkpoint_repair_types = {
-        "tools/direct_successor_checkpoint.py": "M",
+    validation_tool_commit: str,
+) -> tuple[str, list[dict[str, object]]]:
+    """Bind the validator update and the failed-closed manifest-closure repair."""
+    validation_tool_commit = _commit(git, validation_tool_commit, "validation-tool update")
+    initial = _require_step(
+        git,
+        composition_commit,
+        INITIAL_VALIDATION_TOOL_COMMIT,
+        INITIAL_VALIDATION_TOOL_TREE,
+        "initial_validation_tool_update",
+        set(VALIDATION_TOOL_PATHS),
+    )
+    require(all(data[4] == "M"
+                for data in git.changes(composition_commit, INITIAL_VALIDATION_TOOL_COMMIT).values()),
+            "initial validation-tool update must modify existing tools only")
+    dotfiles = {
+        CANDIDATE_DIR + "/.gitattributes",
+        CANDIDATE_DIR + "/.gitignore",
+    }
+    closure = _require_step(
+        git,
+        INITIAL_VALIDATION_TOOL_COMMIT,
+        CANDIDATE_CLOSURE_COMMIT,
+        CANDIDATE_CLOSURE_TREE,
+        "candidate_manifest_closure_repair",
+        dotfiles,
+    )
+    require(all(data[4] == "A"
+                for data in git.changes(INITIAL_VALIDATION_TOOL_COMMIT,
+                                        CANDIDATE_CLOSURE_COMMIT).values()),
+            "candidate closure repair must add the two ignored dotfiles")
+    closure_seal = _require_step(
+        git,
+        CANDIDATE_CLOSURE_COMMIT,
+        CLOSURE_VALIDATOR_COMMIT,
+        CLOSURE_VALIDATOR_TREE,
+        "closure_correction_receipt_and_validator",
+        set(FINAL_VALIDATOR_PATHS),
+    )
+    expected_types = {
+        CLOSURE_CORRECTION_RECEIPT: "A",
         "tools/verdier_registered_insertion_successor.py": "M",
         "tools/tests/test_verdier_registered_insertion_successor.py": "M",
     }
-    reproducibility_repair_types = {
-        "tools/compare_fixed_point_builds.py": "M",
-        "tools/verdier_registered_insertion_successor.py": "M",
-        "tools/tests/test_verdier_registered_insertion_successor.py": "M",
-    }
-    rows: list[dict[str, object]] = []
-    parent = composition_commit
-    for index, commit in enumerate(chain):
-        if index % 2 == 0:
-            rows.append(_require_step(
-                git, parent, commit, None, "superseded_receipt_seal", {RECEIPT}))
-        else:
-            terminal_reproducibility_repair = index == len(chain) - 1
-            repair_paths = (
-                POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS
-                if terminal_reproducibility_repair
-                else POST_COMPOSITION_REPAIR_PATHS
-            )
-            expected_types = (
-                reproducibility_repair_types
-                if terminal_reproducibility_repair
-                else checkpoint_repair_types
-            )
-            rows.append(_require_step(
-                git, parent, commit, None, "post_composition_validation_repair",
-                set(repair_paths)))
-            changes = git.changes(parent, commit)
-            require({path: data[4] for path, data in changes.items()} == expected_types,
-                    "post-composition validation repair change types mismatch")
-        parent = commit
-    return rows
+    require({path: row[4] for path, row in
+             git.changes(CANDIDATE_CLOSURE_COMMIT, CLOSURE_VALIDATOR_COMMIT).items()}
+            == expected_types,
+            "closure-correction validator path types mismatch")
+    composer_repair = _require_step(
+        git,
+        CLOSURE_VALIDATOR_COMMIT,
+        COMPOSER_REPAIR_COMMIT,
+        COMPOSER_REPAIR_TREE,
+        "exact_label_declaration_composer_repair",
+        set(COMPOSER_REPAIR_PATHS),
+    )
+    require(all(data[4] == "M" for data in
+                git.changes(CLOSURE_VALIDATOR_COMMIT, COMPOSER_REPAIR_COMMIT).values()),
+            "composer repair must modify its three existing tool/test paths only")
+    superseded_receipt = _require_step(
+        git,
+        COMPOSER_REPAIR_COMMIT,
+        SUPERSEDED_RECEIPT_SEAL_COMMIT,
+        SUPERSEDED_RECEIPT_SEAL_TREE,
+        "superseded_composition_receipt_seal",
+        {RECEIPT},
+    )
+    checkpoint_repair = _require_step(
+        git,
+        SUPERSEDED_RECEIPT_SEAL_COMMIT,
+        validation_tool_commit,
+        None,
+        "nested_verdier_checkpoint_unwrap_repair",
+        set(CHECKPOINT_REPAIR_PATHS),
+    )
+    require(all(data[4] == "M" for data in
+                git.changes(SUPERSEDED_RECEIPT_SEAL_COMMIT,
+                            validation_tool_commit).values()),
+            "checkpoint repair must modify its three existing tool/test paths only")
+    require(git.text("rev-parse", CANDIDATE_CLOSURE_COMMIT + ":" + CANDIDATE_DIR)
+            == FINAL_CANDIDATE_SUBTREE,
+            "candidate closure repair produced the wrong subtree")
+    require(git.text("rev-parse", validation_tool_commit + ":" + CANDIDATE_DIR)
+            == FINAL_CANDIDATE_SUBTREE,
+            "final validator commit changed the closed candidate")
+    for revision in (INITIAL_VALIDATION_TOOL_COMMIT, CANDIDATE_CLOSURE_COMMIT,
+                     CLOSURE_VALIDATOR_COMMIT, COMPOSER_REPAIR_COMMIT,
+                     SUPERSEDED_RECEIPT_SEAL_COMMIT, validation_tool_commit):
+        require(git.ident(composition_commit, TARGET) == git.ident(revision, TARGET),
+                "post-composition validation work changed the composed source")
+    correction = git.document(validation_tool_commit, CLOSURE_CORRECTION_RECEIPT)
+    require(correction.get("schema")
+            == "mathematics-commons-stacks-registry-admission-correction/v1"
+            and correction.get("status") == "PASS_MANIFEST_GIT_OBJECT_CLOSURE_CORRECTED"
+            and correction.get("candidate_id") == OVERLAY_ID,
+            "manifest-closure correction receipt does not pass the exact candidate")
+    state = correction.get("closure_correction", {})
+    require(state.get("commit") == CANDIDATE_CLOSURE_COMMIT
+            and state.get("tree") == CANDIDATE_CLOSURE_TREE
+            and state.get("candidate_subtree") == FINAL_CANDIDATE_SUBTREE
+            and state.get("declared_manifest_references") == 41
+            and state.get("tracked_manifest_references") == 41
+            and state.get("untracked_declared_paths") == []
+            and state.get("tracked_undeclared_paths") == []
+            and state.get("all_manifest_hashes_match") is True,
+            "manifest-closure correction state mismatch")
+    added = state.get("added_paths")
+    require(isinstance(added, list) and {row.get("path") for row in added} == dotfiles,
+            "manifest-closure correction omits a repaired dotfile")
+    for row in added:
+        _valid_identity(row, "closure repair", reference=True)
+        require(git.ident(CANDIDATE_CLOSURE_COMMIT, row["path"])
+                == {key: row[key] for key in ID_KEYS},
+                "manifest-closure repaired-file identity mismatch")
+    return validation_tool_commit, [initial, closure, closure_seal, composer_repair,
+                                    superseded_receipt, checkpoint_repair]
 
 
 def _validate_admission(
     git: Git,
     review_commit: str,
-    preparation_commit: str,
     admission_commit: str,
     issue: dict,
+    candidate_revision: str,
 ) -> tuple[list[dict[str, object]], dict, dict[str, object]]:
-    row = _require_step(git, preparation_commit, admission_commit, None, "registry_admission",
+    row = _require_step(git, review_commit, admission_commit, None, "registry_admission",
                         {LEASES, OVERLAYS, ADMISSION_RECEIPT})
-    changes = git.changes(preparation_commit, admission_commit)
+    changes = git.changes(review_commit, admission_commit)
     require(changes[LEASES][4] == changes[OVERLAYS][4] == "M"
             and changes[ADMISSION_RECEIPT][4] == "A", "admission change types mismatch")
-    previous_overlays = git.document(preparation_commit, OVERLAYS)
+    previous_overlays = git.document(review_commit, OVERLAYS)
     current_overlays = git.document(admission_commit, OVERLAYS)
     entry = _append_one(previous_overlays, current_overlays, "registered_entries", "overlay registry")
     require(entry.get("id") == OVERLAY_ID and entry.get("namespace") == NAMESPACE
@@ -633,9 +665,9 @@ def _validate_admission(
             and entry.get("source_tree") == AUTHORITY_TREE
             and entry.get("writer") == WRITER_TASK
             and direct.stable_ids(entry) == list(STABLE_IDS),
-            "admitted overlay identity or seven stable IDs mismatch")
+            "admitted overlay identity or stable IDs mismatch")
 
-    previous_leases = git.document(preparation_commit, LEASES)
+    previous_leases = git.document(review_commit, LEASES)
     current_leases = git.document(admission_commit, LEASES)
     release = _append_one(previous_leases, current_leases, "events", "lease release")
     expected = {
@@ -655,13 +687,15 @@ def _validate_admission(
     require(event_ids == [f"lease-event-{number:06d}" for number in range(1, len(event_ids) + 1)],
             "lease event IDs are not globally sequential")
 
-    candidate = _validate_candidate(git, review_commit, entry)
-    subtree = git.text("rev-parse", review_commit + ":" + CANDIDATE_DIR)
-    require(subtree == FINAL_CANDIDATE_SUBTREE, "unexpected final reviewed candidate subtree")
-    require(git.text("rev-parse", preparation_commit + ":" + CANDIDATE_DIR) == subtree,
-            "validation-tool preparation changed the independently reviewed candidate subtree")
-    require(git.text("rev-parse", admission_commit + ":" + CANDIDATE_DIR) == subtree,
+    reviewed_subtree = git.text("rev-parse", review_commit + ":" + CANDIDATE_DIR)
+    require(reviewed_subtree == REVIEWED_CANDIDATE_SUBTREE,
+            "unexpected pre-closure reviewed candidate subtree")
+    require(git.text("rev-parse", admission_commit + ":" + CANDIDATE_DIR) == reviewed_subtree,
             "admission changed the independently reviewed candidate subtree")
+    candidate = _validate_candidate(git, candidate_revision, entry)
+    subtree = git.text("rev-parse", candidate_revision + ":" + CANDIDATE_DIR)
+    require(subtree == FINAL_CANDIDATE_SUBTREE,
+            "unexpected manifest-closed candidate subtree")
     admission = git.document(admission_commit, ADMISSION_RECEIPT)
     require(admission.get("schema") == "mathematics-commons-stacks-registry-admission-receipt/v1"
             and str(admission.get("status", "")).startswith("PASS")
@@ -684,7 +718,7 @@ def _validate_admission(
         for path in refs
     }
     require(required_suffixes <= normalized, "admission receipt omits decisive candidate references")
-    candidate.update({"subtree": subtree, "entry": entry,
+    candidate.update({"subtree": subtree, "reviewed_subtree": reviewed_subtree, "entry": entry,
                       "admission_receipt": _reference(git, admission_commit, ADMISSION_RECEIPT)})
     return [row], candidate, release
 
@@ -703,7 +737,7 @@ def _run_composer(git: Git, admission: str, source: str) -> dict:
     require(isinstance(report, dict)
             and report.get("schema") == "unofficial-ai-integrated-stacks-registered-insertion-composition/v1"
             and report.get("status") == "PASS" and report.get("overlay_id") == OVERLAY_ID
-            and report.get("operation_id") == "VDR-STK-COMP-0002"
+            and report.get("operation_id") == OPERATION_ID
             and report.get("base_revision") == admission and report.get("check_revision") == source
             and report.get("write_requested") is False and report.get("source") == TARGET,
             "generic composer returned a mismatched report")
@@ -735,7 +769,7 @@ def _metadata_preserved(git: Git, source: str, endpoint: str, protected: dict[st
     decisive = {OVERLAYS, LEASES, CANDIDATE_DIR + "/candidate.manifest.json",
                 CANDIDATE_DIR + "/" + PAYLOAD, CANDIDATE_DIR + "/" + COMPOSITION,
                 CANDIDATE_DIR + "/" + SOURCE_MAP, CANDIDATE_DIR + "/" + STABLE_UNITS,
-                ADMISSION_RECEIPT, TARGET, COMPOSER}
+                ADMISSION_RECEIPT, TARGET}
     decisive.update(protected)
     for path in decisive:
         require(git.ident(source, path) == git.ident(endpoint, path),
@@ -747,23 +781,23 @@ def derive_successor(
     review_commit: str,
     admission_commit: str,
     composition_commit: str,
-    validation_repair_commit: str,
+    validation_tool_commit: str,
     *,
     validation_endpoint: str | None = None,
 ) -> dict:
-    """Derive the complete receipt from three future commit identities."""
+    """Derive the complete receipt from the frozen review-to-tool topology."""
     git = Git(source)
     review_commit = _commit(git, review_commit, "independent review")
     admission_commit = _commit(git, admission_commit, "registry admission")
     composition_commit = _commit(git, composition_commit, "source composition")
-    validation_repair_commit = _commit(
-        git, validation_repair_commit, "post-composition validation repair")
+    validation_tool_commit = _commit(
+        git, validation_tool_commit, "post-composition validation-tool update")
     head = _commit(git, git.text("rev-parse", "HEAD"), "HEAD")
     endpoint = head if validation_endpoint is None else _commit(git, validation_endpoint, "validation endpoint")
     require(endpoint == head, "generic composer replay requires the validation endpoint to be current HEAD")
     previous, correction_inputs = _validate_inherited(git)
     prefix_rows, issue = _validate_fixed_prefix(git)
-    review_row = _require_step(git, CANDIDATE_FREEZE_COMMIT, review_commit, None,
+    review_row = _require_step(git, CANDIDATE_BUILD_COMMIT, review_commit, None,
                                "independent_review", None)
     review_paths = {row["path"] for row in review_row["paths"]}
     require(review_paths and all(path.startswith(CANDIDATE_DIR + "/") for path in review_paths)
@@ -771,18 +805,18 @@ def derive_successor(
             and any(path.startswith(CANDIDATE_DIR + "/replay/") and path.endswith(".json")
                     for path in review_paths),
             "independent-review transition escapes the candidate or omits manifest/review")
-    preparation_commit, preparation_row = _validate_preparation(
-        git, review_commit, admission_commit)
-    admission_rows, candidate, release = _validate_admission(
-        git, review_commit, preparation_commit, admission_commit, issue)
     source_row = _require_step(git, admission_commit, composition_commit, None,
                                "registered_insertion_composition", {TARGET})
     require(git.changes(admission_commit, composition_commit)[TARGET][4] == "M",
             "composition must modify the existing derived.tex only")
     report = _run_composer(git, admission_commit, composition_commit)
-    post_source_rows = _validate_post_composition_repair(
-        git, composition_commit, validation_repair_commit)
-    git.raw("merge-base", "--is-ancestor", validation_repair_commit, endpoint)
+    validation_tool_commit, validation_tool_rows = _validate_validation_tools(
+        git, composition_commit, validation_tool_commit)
+    admission_rows, candidate, release = _validate_admission(
+        git, review_commit, admission_commit, issue, CANDIDATE_CLOSURE_COMMIT)
+    candidate["closure_correction"] = _reference(
+        git, validation_tool_commit, CLOSURE_CORRECTION_RECEIPT)
+    git.raw("merge-base", "--is-ancestor", validation_tool_commit, endpoint)
     _metadata_preserved(git, composition_commit, endpoint, correction_inputs)
     for path, expected in correction_inputs.items():
         require(git.ident(endpoint, path) == expected, "current Illusie protected input drift: " + path)
@@ -842,16 +876,18 @@ def derive_successor(
         "operation_kind": "registered_insertion",
         "manifest_sha256": candidate["manifest"]["sha256"],
         "review_receipt_sha256": candidate["review"]["sha256"],
-        "provenance_commit": PROVENANCE_COMMIT,
         "lease_issue_commit": LEASE_ISSUE_COMMIT,
-        "candidate_freeze_commit": CANDIDATE_FREEZE_COMMIT,
+        "candidate_authoring_commit": CANDIDATE_AUTHORING_COMMIT,
+        "build_root_repair_commit": BUILD_ROOT_REPAIR_COMMIT,
+        "candidate_freeze_commit": CANDIDATE_BUILD_COMMIT,
         "review_commit": review_commit,
-        "preparation_commit": preparation_commit,
-        "candidate_commit": review_commit,
-        "candidate_tree": git.tree(review_commit),
+        "validation_tool_commit": validation_tool_commit,
+        "candidate_commit": CANDIDATE_CLOSURE_COMMIT,
+        "candidate_tree": CANDIDATE_CLOSURE_TREE,
         "candidate_subtree": candidate["subtree"],
+        "reviewed_candidate_subtree": candidate["reviewed_subtree"],
         "admission_commit": admission_commit,
-        "admission_parent": preparation_commit,
+        "admission_parent": review_commit,
         "admission_tree": git.tree(admission_commit),
         "lease_issue_event": ISSUE_EVENT,
         "lease_release_event": RELEASE_EVENT,
@@ -863,6 +899,7 @@ def derive_successor(
         "source_map": candidate["source_map"],
         "stable_units": candidate["stable_units"],
         "admission_receipt": candidate["admission_receipt"],
+        "closure_correction": candidate["closure_correction"],
     }
     preservation = deepcopy(previous.get("preservation", {}))
     preservation[TARGET] = git.ident(composition_commit, TARGET)
@@ -878,14 +915,14 @@ def derive_successor(
             "public_main_head": PREVIOUS_PUBLIC,
             "public_main_tree": PREVIOUS_PUBLIC_TREE,
             "receipt": {"path": RECEIPT, **INHERITED_RECEIPT_ID},
-            "schema": ai_correction.SCHEMA,
+            "schema": previous["schema"],
             "composition_source_commit": previous["composition"]["source_commit"],
             "composition_source_tree": previous["composition"]["source_tree"],
             "registry_commit": previous["registry"]["cutoff_commit"],
             "registry_tree": previous["registry"]["cutoff_tree"],
             "last_admitted_overlay": previous["registry"]["last_admitted_overlay"],
             "source_blobs": {TARGET: git.ident(PREVIOUS_PUBLIC, TARGET)},
-            "role": "inherited_composition_cutoff_not_immediate_public_registry_predecessor",
+            "role": "immediate_public_ai_integrated_verdier_predecessor",
         },
         "immediate_public_registry_predecessor": {
             "commit": PREVIOUS_PUBLIC,
@@ -900,17 +937,17 @@ def derive_successor(
         "registry": registry,
         "transport": {
             "schema": TRANSPORT_SCHEMA,
-            "kind": "current_main_first_linear_registered_insertion",
+            "kind": "linear_registered_insertion_from_current_ai_integrated_main",
             "base_commit": PREVIOUS_PUBLIC,
             "base_tree": PREVIOUS_PUBLIC_TREE,
             "cutoff_commit": admission_commit,
             "cutoff_tree": git.tree(admission_commit),
             "source_commit": composition_commit,
             "source_tree": git.tree(composition_commit),
-            "commits": [*prefix_rows, review_row, preparation_row, *admission_rows,
-                        source_row, *post_source_rows],
+            "commits": [*prefix_rows, review_row, *admission_rows,
+                        source_row, *validation_tool_rows],
             "root_sources_unchanged_before_composition": True,
-            "lease_issue_is_fresh_root": True,
+            "lease_issue_is_fresh_sibling_namespace": True,
             "current_public_ega_errata_preservation_contract": (
                 "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier "
                 "input preservation; no claim of fresh checker replay against later public errata"
@@ -940,24 +977,27 @@ def derive_successor(
         "required_build_stems": list(EXPECTED_STEMS),
         "preservation": preservation,
         "inherited_ai_source_correction": {
-            "receipt": {"path": RECEIPT, **INHERITED_RECEIPT_ID},
-            "scope": deepcopy(previous["ai_source_correction_scope"]),
-            "source_commit": previous["composition"]["source_commit"],
-            "source_tree": previous["composition"]["source_tree"],
-            "validation_head": INHERITED_RECEIPT_HEAD,
-            "validation_tree": INHERITED_RECEIPT_TREE,
+            "receipt": deepcopy(previous["inherited_ai_source_correction"]["receipt"]),
+            "scope": deepcopy(previous["inherited_ai_source_correction"]["scope"]),
+            "source_commit": previous["inherited_ai_source_correction"]["source_commit"],
+            "source_tree": previous["inherited_ai_source_correction"]["source_tree"],
+            "validation_head": previous["inherited_ai_source_correction"]["validation_head"],
+            "validation_tree": previous["inherited_ai_source_correction"]["validation_tree"],
         },
         "correction_protected_inputs": correction_inputs,
         "verdier_registered_insertion_scope": {
             "candidate_id": OVERLAY_ID,
-            "operation_id": "VDR-STK-COMP-0002",
+            "operation_id": OPERATION_ID,
             "stable_ids": list(STABLE_IDS),
-            "candidate_freeze_commit": CANDIDATE_FREEZE_COMMIT,
+            "candidate_authoring_commit": CANDIDATE_AUTHORING_COMMIT,
+            "build_root_repair_commit": BUILD_ROOT_REPAIR_COMMIT,
+            "candidate_freeze_commit": CANDIDATE_BUILD_COMMIT,
             "review_commit": review_commit,
-            "preparation_commit": preparation_commit,
             "admission_commit": admission_commit,
             "composition_commit": composition_commit,
-            "validation_repair_commit": validation_repair_commit,
+            "candidate_closure_commit": CANDIDATE_CLOSURE_COMMIT,
+            "closure_correction_receipt": CLOSURE_CORRECTION_RECEIPT,
+            "validation_tool_commit": validation_tool_commit,
             "lease_issue_event": ISSUE_EVENT,
             "lease_release_event": RELEASE_EVENT,
         },
@@ -1061,7 +1101,7 @@ def load_verdier_registered_insertion_successor(
         scope.get("review_commit"),
         scope.get("admission_commit"),
         scope.get("composition_commit"),
-        scope.get("validation_repair_commit"),
+        scope.get("validation_tool_commit"),
     )
     require(saved == expected, "saved Verdier successor receipt differs from exact derivation")
     binding = normalize_binding(git, head, saved)
@@ -1080,21 +1120,21 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--review-commit")
     parser.add_argument("--admission-commit")
     parser.add_argument("--composition-commit")
-    parser.add_argument("--validation-repair-commit")
+    parser.add_argument("--validation-tool-commit")
     args = parser.parse_args(argv)
     if args.check:
         require(not any((args.review_commit, args.admission_commit, args.composition_commit,
-                         args.validation_repair_commit)),
+                         args.validation_tool_commit)),
                 "--check does not accept derivation commits")
         binding, stems, affected = load_verdier_registered_insertion_successor(args.source)
         print(json.dumps({"status": "PASS", "source": binding["composition_source_commit"],
                           "stems": stems, "affected": affected}))
         return 0
     require(all((args.review_commit, args.admission_commit, args.composition_commit,
-                 args.validation_repair_commit)),
-            "derivation requires review, admission, composition, and validation-repair commits")
+                 args.validation_tool_commit)),
+            "derivation requires review, admission, composition, and validation-tool commits")
     receipt = derive_successor(args.source, args.review_commit, args.admission_commit,
-                               args.composition_commit, args.validation_repair_commit)
+                               args.composition_commit, args.validation_tool_commit)
     print(json.dumps(receipt, indent=2, ensure_ascii=False))
     return 0
 

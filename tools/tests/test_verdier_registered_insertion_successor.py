@@ -16,6 +16,7 @@ if str(TOOLS) not in sys.path:
 
 import build_fixed_point as build
 import compare_fixed_point_builds as compare
+import compose_registered_insertion as composer
 import direct_successor_checkpoint as checkpoint
 import validate_verdier_registered_insertion_successor as release
 import verdier_registered_insertion_successor as verdier
@@ -31,46 +32,58 @@ def ident(path: str = "fixture") -> dict[str, object]:
 class ExactPublicPrefixTests(unittest.TestCase):
     """Exercise the real immutable prefix only; no build, write, or network."""
 
-    def test_inherited_ai_receipt_and_fixed_prefix(self):
+    def test_inherited_verdier_receipt_and_fixed_prefix(self):
         git = verdier.Git(ROOT)
         previous, protected = verdier._validate_inherited(git)
         rows, issue = verdier._validate_fixed_prefix(git)
-        self.assertEqual(previous["schema"], verdier.ai_correction.SCHEMA)
+        self.assertEqual(previous["schema"], verdier.SCHEMA)
         self.assertEqual(tuple(previous["required_build_stems"]), verdier.EXPECTED_STEMS)
         self.assertIn("simplicial.tex", protected)
         self.assertEqual([row["kind"] for row in rows], [
-            "current_main_first_provenance_merge", "lease_issue", "candidate_freeze",
+            "lease_issue", "candidate_authoring", "failed_closed_build_root_repair",
+            "candidate_build_and_visual_validation",
         ])
-        self.assertEqual(rows[0]["paths"], [])
-        self.assertEqual({row["path"] for row in rows[1]["paths"]}, {verdier.LEASES})
-        self.assertEqual({row["path"] for row in rows[2]["paths"]},
-                         set(verdier.FIXED_CANDIDATE_PATHS))
+        self.assertEqual({row["path"] for row in rows[0]["paths"]}, {verdier.LEASES})
+        for row in rows[1:]:
+            self.assertTrue(all(path["path"].startswith(verdier.CANDIDATE_DIR + "/")
+                                for path in row["paths"]))
         self.assertEqual(issue["event_id"], verdier.ISSUE_EVENT)
         self.assertNotIn("supersedes_event_id", issue)
 
 
 class PureContractTests(unittest.TestCase):
-    def test_preparation_is_derived_from_admission_parent_and_exactly_scoped(self):
-        git = Mock()
-        git.parents.return_value = ["p" * 40]
-        git.changes.return_value = {
-            "tools/build_fixed_point.py": (None, None, None, None, "M"),
-            "tools/direct_successor_checkpoint.py": (None, None, None, None, "M"),
-            "tools/validate_unified_repository.py": (None, None, None, None, "M"),
-            "tools/verdier_registered_insertion_successor.py": (None, None, None, None, "A"),
-            "tools/validate_verdier_registered_insertion_successor.py": (None, None, None, None, "A"),
-            "tools/tests/test_verdier_registered_insertion_successor.py": (None, None, None, None, "A"),
-        }
-        git.text.return_value = "candidate-subtree"
-        expected_row = {"kind": "validation_tool_preparation"}
-        with patch.object(verdier, "_require_step", return_value=expected_row) as require_step:
-            commit, row = verdier._validate_preparation(
-                git, "r" * 40, "a" * 40)
-        self.assertEqual(commit, "p" * 40)
-        self.assertEqual(row, expected_row)
-        require_step.assert_called_once_with(
-            git, "r" * 40, "p" * 40, None,
-            "validation_tool_preparation", set(verdier.PREPARATION_PATHS))
+    def test_composer_counts_exact_label_declarations_not_references(self):
+        label = "lemma-nested-quotients"
+        payload = (
+            "\\label{lemma-nested-quotients}\n"
+            "See Lemma \\ref{lemma-nested-quotients}.\n"
+        ).encode("utf-8")
+        declaration = composer.label_declaration_bytes(label)
+        self.assertEqual(payload.count(declaration), 1)
+        self.assertEqual(payload.count(label.encode("utf-8")), 2)
+
+    def test_manifest_closure_repair_is_two_dotfiles_only(self):
+        correction = json.loads((ROOT / verdier.CLOSURE_CORRECTION_RECEIPT).read_text(
+            encoding="utf-8"))
+        self.assertEqual(correction["status"],
+                         "PASS_MANIFEST_GIT_OBJECT_CLOSURE_CORRECTED")
+        self.assertEqual(
+            {Path(row["path"]).name
+             for row in correction["closure_correction"]["added_paths"]},
+            {".gitattributes", ".gitignore"},
+        )
+        self.assertEqual(correction["closure_correction"]["candidate_subtree"],
+                         verdier.FINAL_CANDIDATE_SUBTREE)
+        self.assertEqual(set(verdier.FINAL_VALIDATOR_PATHS), {
+            verdier.CLOSURE_CORRECTION_RECEIPT,
+            "tools/verdier_registered_insertion_successor.py",
+            "tools/tests/test_verdier_registered_insertion_successor.py",
+        })
+        self.assertEqual(set(verdier.COMPOSER_REPAIR_PATHS), {
+            "tools/compose_registered_insertion.py",
+            "tools/verdier_registered_insertion_successor.py",
+            "tools/tests/test_verdier_registered_insertion_successor.py",
+        })
 
     def test_append_one_rejects_header_mutation(self):
         before = {"schema": "x", "events": [{"event_id": "one"}]}
@@ -83,37 +96,6 @@ class PureContractTests(unittest.TestCase):
         new = {"event_id": "two"}
         after = {"schema": "x", "events": [*before["events"], new]}
         self.assertEqual(verdier._append_one(before, after, "events", "fixture"), new)
-
-    def test_post_composition_chain_ends_with_exact_comparator_repair(self):
-        composition, seal_one, repair_one, seal_two, repair_two = (
-            value * 40 for value in ("c", "1", "2", "3", "4")
-        )
-        git = Mock()
-        git.parents.side_effect = lambda commit: {
-            repair_two: [seal_two], seal_two: [repair_one],
-            repair_one: [seal_one], seal_one: [composition],
-        }[commit]
-        checkpoint_changes = {
-            path: (None, "100644", None, "a" * 40, "M")
-            for path in verdier.POST_COMPOSITION_REPAIR_PATHS
-        }
-        reproducibility_changes = {
-            path: (None, "100644", None, "b" * 40, "M")
-            for path in verdier.POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS
-        }
-        git.changes.side_effect = lambda parent, commit: {
-            repair_one: checkpoint_changes,
-            repair_two: reproducibility_changes,
-        }[commit]
-        with patch.object(verdier, "_commit", side_effect=lambda _, value, __: value), \
-             patch.object(verdier, "_require_step", return_value={}) as require_step:
-            rows = verdier._validate_post_composition_repair(
-                git, composition, repair_two)
-        self.assertEqual(len(rows), 4)
-        self.assertEqual(require_step.call_args_list[1].args[-1],
-                         set(verdier.POST_COMPOSITION_REPAIR_PATHS))
-        self.assertEqual(require_step.call_args_list[3].args[-1],
-                         set(verdier.POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS))
 
     def test_review_binds_authority_source_units(self):
         review = {
@@ -135,7 +117,7 @@ class PureContractTests(unittest.TestCase):
         receipt = {
             "registry": {
                 "cutoff_commit": "1" * 40, "cutoff_tree": "2" * 40,
-                "registered_overlays": 59, "registered_stable_ids": 1660,
+                "registered_overlays": 60, "registered_stable_ids": 1683,
                 "last_admitted_overlay": verdier.OVERLAY_ID,
                 "overlays_path": verdier.OVERLAYS, "overlays_git_blob": "3" * 40,
                 "overlays_sha256": "B" * 64,
@@ -151,7 +133,7 @@ class PureContractTests(unittest.TestCase):
                 "public_main_head": verdier.PREVIOUS_PUBLIC,
                 "public_main_tree": verdier.PREVIOUS_PUBLIC_TREE,
                 "registry_commit": "7" * 40,
-                "last_admitted_overlay": "stacks-errata-a04446e-r48",
+                "last_admitted_overlay": "stacks-verdier-a04446e-1-3-6-r1",
                 "source_blobs": {"derived.tex": {}}, "receipt": {},
             },
             "new_overlays": [{"candidate_commit": "8" * 40,
@@ -468,6 +450,46 @@ class CheckpointSchemaTests(unittest.TestCase):
             self.source, "semantic-owner",
             "historical semantic composition owner to immediate predecessor",
             "prior-public")
+
+    def test_semantic_owner_unwraps_verdier_then_ai(self):
+        receipt_ref = ident("validation/composition-current.json")
+        inherited = {
+            "schema": checkpoint.VERDIER_COMPOSITION_SCHEMA,
+            "status": "PASS",
+            "previous_cutoff": {
+                "public_main_head": "ai-owner",
+                "receipt": receipt_ref,
+            },
+            "composition": {"source_commit": "later-verdier",
+                            "base_commit": "later-verdier-base"},
+        }
+        ai_wrapper = {
+            "schema": checkpoint.AI_COMPOSITION_SCHEMA,
+            "status": "PASS",
+            "previous_cutoff": {
+                "public_main_head": "direct-owner",
+                "receipt": receipt_ref,
+            },
+            "composition": {"source_commit": "later-ai", "base_commit": "later-ai-base"},
+        }
+        direct = {
+            "schema": checkpoint.direct_successor_composition._helper.SCHEMA,
+            "status": "PASS",
+            "composition": {"source_commit": "semantic-source",
+                            "base_commit": "semantic-base"},
+        }
+        self.build.committed_file_identity.return_value = receipt_ref
+        self.build.require_commit_object.side_effect = lambda source, value, label: value
+        self.build.parse_json_blob.side_effect = [ai_wrapper, direct]
+        binding, receipt = checkpoint.historical_semantic_composition(
+            self.build, self.source, "prior-public", inherited,
+            verdier_successor=True)
+        self.assertEqual(binding, {
+            "composition_source_commit": "semantic-source",
+            "composition_base_commit": "semantic-base",
+        })
+        self.assertEqual(receipt["commit"], "direct-owner")
+        self.assertEqual(self.build.require_ancestor.call_count, 2)
 
     def test_verdier_surface_compares_current_public_not_historical_anchor(self):
         self.assertEqual(
