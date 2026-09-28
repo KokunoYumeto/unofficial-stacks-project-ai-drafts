@@ -79,3 +79,28 @@ whereas Alexander--Whitney is followed by the horizontal and vertical Moore
 projections. The resulting maps are natural chain-homotopy inverses. This is
 proved in `lemma-illusie-I-normalized-eilenberg-zilber`; the diplomatic source
 continues to preserve the printed claim.
+
+## I.2.1.1--I.2.1.2, printed pp.20--24
+
+I.2.1.1 is explicitly a review of standard simplicial-set homotopy theory.
+The frozen target already contains simplicial homotopies, Kan fibrations, the
+Kan property for simplicial groups, and normalized complexes, but not a
+standalone theory of general homotopy groups, geometric realization,
+barycentric subdivision, or `Ex^infinity`. Reproducing that whole review was
+therefore recorded as non-worthwhile background rather than a new
+Illusie-specific chapter.
+
+The exact sheaf-level consequence in Proposition 2.1.2.1 is worthwhile and is
+proved in `homotopy-sheaves.tex`. The proof uses only the standard operational
+description: each degree of `Ex` is a finite limit because the subdivided
+simplex is finite; `Ex^infinity` adds a filtered colimit; and the Kan
+cycle/homotopy quotient adds finite limits and a coequalizer. Filtered colimits
+of sets commute with finite limits, while an inverse-image functor of topoi
+preserves all colimits and finite limits.
+
+The diplomatic p.21 carrier has `0 <= i <= n` in the witness condition for
+the relation defining homotopy classes; the corrected French and English use
+the mathematically required `0 <= i < n`. The p.23 and p.24 corrections are
+typographical only (`distingué de Ker` and removal of an extra parenthesis).
+The coverage ledger binds all three lane identities and records these source
+truth distinctions.
