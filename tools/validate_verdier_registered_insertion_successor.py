@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate build, visual, reproducibility, and publication evidence for Verdier II.1.3.6.
+"""Validate build, visual, reproducibility, and publication evidence for Verdier II.2.3.1.
 
 Both modes are read-only and never launch TeX.  Pre-publication mode requires
 the committed composition, two complete deterministic build receipts, visual
@@ -481,7 +481,7 @@ def validate_verdier_successor(root: Path, build_path: Path, pre_publication: bo
         return 1
     print("Verdier registered-insertion successor validation: "
           + ("PASS_PRE_PUBLICATION" if pre_publication else "PUBLICATION_COMPLETE"))
-    print("- registered insertion operations: 1; stable IDs: 7")
+    print(f"- registered insertion operations: 1; stable IDs: {len(verdier.STABLE_IDS)}")
     print("- full-profile chapters: 36; exact deterministic builds: 2")
     print(f"- affected chapters visually checked: 1; public readback checked: {not pre_publication}")
     return 0
