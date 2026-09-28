@@ -70,10 +70,19 @@ ISSUE_EVENT = "lease-event-000126"
 RELEASE_EVENT = "lease-event-000127"
 REVIEW_SHA256 = "B2F3E4735AB4A8094CE7C3826ABA725A2117DA925A198202E440039160B18F00"
 FINAL_MANIFEST_SHA256 = "5B7215DB879A5C3353446D67C85C3DB23D6BF85126504C3288B0B85BBC38EA06"
-FINAL_CANDIDATE_SUBTREE = "3c3e4ad49cd3dadc69a9640a6c3df5938cea748a"
+REVIEWED_CANDIDATE_SUBTREE = "3c3e4ad49cd3dadc69a9640a6c3df5938cea748a"
+INITIAL_VALIDATION_TOOL_COMMIT = "3cda15a109d7bb1c362478716e3fe981d648c61b"
+INITIAL_VALIDATION_TOOL_TREE = "c156fc3c322e61e332033ff47474458a6d1a11fc"
+CANDIDATE_CLOSURE_COMMIT = "b4dda8252385769162c8232360cf4fe2569c00cb"
+CANDIDATE_CLOSURE_TREE = "8ecfdba218d25816868e460086d957b296310a28"
+FINAL_CANDIDATE_SUBTREE = "3cedabb80302dd3df9d2d2e191bb4773c614a1fc"
 OVERLAYS = "ai-integrated/registry/overlays.json"
 LEASES = "ai-integrated/registry/leases.json"
 ADMISSION_RECEIPT = "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1.json"
+CLOSURE_CORRECTION_RECEIPT = (
+    "ai-integrated/registry/admission-receipts/"
+    "verdier-ast239-2-3-1-r1-closure-correction.json"
+)
 COMPOSER = "tools/compose_registered_insertion.py"
 TARGET = "derived.tex"
 PAYLOAD = "payload/fragments/derived-nested-quotients.tex"
@@ -122,6 +131,12 @@ EXPECTED_STEMS = (
 VALIDATION_TOOL_PATHS = (
     "tools/verdier_registered_insertion_successor.py",
     "tools/validate_verdier_registered_insertion_successor.py",
+    "tools/tests/test_verdier_registered_insertion_successor.py",
+)
+
+FINAL_VALIDATOR_PATHS = (
+    CLOSURE_CORRECTION_RECEIPT,
+    "tools/verdier_registered_insertion_successor.py",
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
 
@@ -495,26 +510,88 @@ def _validate_validation_tools(
     git: Git,
     composition_commit: str,
     validation_tool_commit: str,
-) -> tuple[str, dict[str, object]]:
-    """Bind the one tooling-only commit that teaches the current validator."""
+) -> tuple[str, list[dict[str, object]]]:
+    """Bind the validator update and the failed-closed manifest-closure repair."""
     validation_tool_commit = _commit(git, validation_tool_commit, "validation-tool update")
-    row = _require_step(
+    initial = _require_step(
         git,
         composition_commit,
-        validation_tool_commit,
-        None,
-        "validation_tool_update",
+        INITIAL_VALIDATION_TOOL_COMMIT,
+        INITIAL_VALIDATION_TOOL_TREE,
+        "initial_validation_tool_update",
         set(VALIDATION_TOOL_PATHS),
     )
-    changes = git.changes(composition_commit, validation_tool_commit)
-    require(all(data[4] == "M" for data in changes.values()),
-            "validation-tool update must modify existing tools only")
-    require(git.text("rev-parse", composition_commit + ":" + CANDIDATE_DIR)
-            == git.text("rev-parse", validation_tool_commit + ":" + CANDIDATE_DIR),
-            "validation-tool update changed the reviewed candidate")
-    require(git.ident(composition_commit, TARGET) == git.ident(validation_tool_commit, TARGET),
-            "validation-tool update changed the composed source")
-    return validation_tool_commit, row
+    require(all(data[4] == "M"
+                for data in git.changes(composition_commit, INITIAL_VALIDATION_TOOL_COMMIT).values()),
+            "initial validation-tool update must modify existing tools only")
+    dotfiles = {
+        CANDIDATE_DIR + "/.gitattributes",
+        CANDIDATE_DIR + "/.gitignore",
+    }
+    closure = _require_step(
+        git,
+        INITIAL_VALIDATION_TOOL_COMMIT,
+        CANDIDATE_CLOSURE_COMMIT,
+        CANDIDATE_CLOSURE_TREE,
+        "candidate_manifest_closure_repair",
+        dotfiles,
+    )
+    require(all(data[4] == "A"
+                for data in git.changes(INITIAL_VALIDATION_TOOL_COMMIT,
+                                        CANDIDATE_CLOSURE_COMMIT).values()),
+            "candidate closure repair must add the two ignored dotfiles")
+    final = _require_step(
+        git,
+        CANDIDATE_CLOSURE_COMMIT,
+        validation_tool_commit,
+        None,
+        "closure_correction_receipt_and_validator",
+        set(FINAL_VALIDATOR_PATHS),
+    )
+    expected_types = {
+        CLOSURE_CORRECTION_RECEIPT: "A",
+        "tools/verdier_registered_insertion_successor.py": "M",
+        "tools/tests/test_verdier_registered_insertion_successor.py": "M",
+    }
+    require({path: row[4] for path, row in
+             git.changes(CANDIDATE_CLOSURE_COMMIT, validation_tool_commit).items()}
+            == expected_types,
+            "closure-correction validator path types mismatch")
+    require(git.text("rev-parse", CANDIDATE_CLOSURE_COMMIT + ":" + CANDIDATE_DIR)
+            == FINAL_CANDIDATE_SUBTREE,
+            "candidate closure repair produced the wrong subtree")
+    require(git.text("rev-parse", validation_tool_commit + ":" + CANDIDATE_DIR)
+            == FINAL_CANDIDATE_SUBTREE,
+            "final validator commit changed the closed candidate")
+    for revision in (INITIAL_VALIDATION_TOOL_COMMIT, CANDIDATE_CLOSURE_COMMIT,
+                     validation_tool_commit):
+        require(git.ident(composition_commit, TARGET) == git.ident(revision, TARGET),
+                "post-composition validation work changed the composed source")
+    correction = git.document(validation_tool_commit, CLOSURE_CORRECTION_RECEIPT)
+    require(correction.get("schema")
+            == "mathematics-commons-stacks-registry-admission-correction/v1"
+            and correction.get("status") == "PASS_MANIFEST_GIT_OBJECT_CLOSURE_CORRECTED"
+            and correction.get("candidate_id") == OVERLAY_ID,
+            "manifest-closure correction receipt does not pass the exact candidate")
+    state = correction.get("closure_correction", {})
+    require(state.get("commit") == CANDIDATE_CLOSURE_COMMIT
+            and state.get("tree") == CANDIDATE_CLOSURE_TREE
+            and state.get("candidate_subtree") == FINAL_CANDIDATE_SUBTREE
+            and state.get("declared_manifest_references") == 41
+            and state.get("tracked_manifest_references") == 41
+            and state.get("untracked_declared_paths") == []
+            and state.get("tracked_undeclared_paths") == []
+            and state.get("all_manifest_hashes_match") is True,
+            "manifest-closure correction state mismatch")
+    added = state.get("added_paths")
+    require(isinstance(added, list) and {row.get("path") for row in added} == dotfiles,
+            "manifest-closure correction omits a repaired dotfile")
+    for row in added:
+        _valid_identity(row, "closure repair", reference=True)
+        require(git.ident(CANDIDATE_CLOSURE_COMMIT, row["path"])
+                == {key: row[key] for key in ID_KEYS},
+                "manifest-closure repaired-file identity mismatch")
+    return validation_tool_commit, [initial, closure, final]
 
 
 def _validate_admission(
@@ -522,6 +599,7 @@ def _validate_admission(
     review_commit: str,
     admission_commit: str,
     issue: dict,
+    candidate_revision: str,
 ) -> tuple[list[dict[str, object]], dict, dict[str, object]]:
     row = _require_step(git, review_commit, admission_commit, None, "registry_admission",
                         {LEASES, OVERLAYS, ADMISSION_RECEIPT})
@@ -558,11 +636,15 @@ def _validate_admission(
     require(event_ids == [f"lease-event-{number:06d}" for number in range(1, len(event_ids) + 1)],
             "lease event IDs are not globally sequential")
 
-    candidate = _validate_candidate(git, review_commit, entry)
-    subtree = git.text("rev-parse", review_commit + ":" + CANDIDATE_DIR)
-    require(subtree == FINAL_CANDIDATE_SUBTREE, "unexpected final reviewed candidate subtree")
-    require(git.text("rev-parse", admission_commit + ":" + CANDIDATE_DIR) == subtree,
+    reviewed_subtree = git.text("rev-parse", review_commit + ":" + CANDIDATE_DIR)
+    require(reviewed_subtree == REVIEWED_CANDIDATE_SUBTREE,
+            "unexpected pre-closure reviewed candidate subtree")
+    require(git.text("rev-parse", admission_commit + ":" + CANDIDATE_DIR) == reviewed_subtree,
             "admission changed the independently reviewed candidate subtree")
+    candidate = _validate_candidate(git, candidate_revision, entry)
+    subtree = git.text("rev-parse", candidate_revision + ":" + CANDIDATE_DIR)
+    require(subtree == FINAL_CANDIDATE_SUBTREE,
+            "unexpected manifest-closed candidate subtree")
     admission = git.document(admission_commit, ADMISSION_RECEIPT)
     require(admission.get("schema") == "mathematics-commons-stacks-registry-admission-receipt/v1"
             and str(admission.get("status", "")).startswith("PASS")
@@ -585,7 +667,7 @@ def _validate_admission(
         for path in refs
     }
     require(required_suffixes <= normalized, "admission receipt omits decisive candidate references")
-    candidate.update({"subtree": subtree, "entry": entry,
+    candidate.update({"subtree": subtree, "reviewed_subtree": reviewed_subtree, "entry": entry,
                       "admission_receipt": _reference(git, admission_commit, ADMISSION_RECEIPT)})
     return [row], candidate, release
 
@@ -672,15 +754,17 @@ def derive_successor(
             and any(path.startswith(CANDIDATE_DIR + "/replay/") and path.endswith(".json")
                     for path in review_paths),
             "independent-review transition escapes the candidate or omits manifest/review")
-    admission_rows, candidate, release = _validate_admission(
-        git, review_commit, admission_commit, issue)
     source_row = _require_step(git, admission_commit, composition_commit, None,
                                "registered_insertion_composition", {TARGET})
     require(git.changes(admission_commit, composition_commit)[TARGET][4] == "M",
             "composition must modify the existing derived.tex only")
     report = _run_composer(git, admission_commit, composition_commit)
-    validation_tool_commit, validation_tool_row = _validate_validation_tools(
+    validation_tool_commit, validation_tool_rows = _validate_validation_tools(
         git, composition_commit, validation_tool_commit)
+    admission_rows, candidate, release = _validate_admission(
+        git, review_commit, admission_commit, issue, CANDIDATE_CLOSURE_COMMIT)
+    candidate["closure_correction"] = _reference(
+        git, validation_tool_commit, CLOSURE_CORRECTION_RECEIPT)
     git.raw("merge-base", "--is-ancestor", validation_tool_commit, endpoint)
     _metadata_preserved(git, composition_commit, endpoint, correction_inputs)
     for path, expected in correction_inputs.items():
@@ -747,9 +831,10 @@ def derive_successor(
         "candidate_freeze_commit": CANDIDATE_BUILD_COMMIT,
         "review_commit": review_commit,
         "validation_tool_commit": validation_tool_commit,
-        "candidate_commit": review_commit,
-        "candidate_tree": git.tree(review_commit),
+        "candidate_commit": CANDIDATE_CLOSURE_COMMIT,
+        "candidate_tree": CANDIDATE_CLOSURE_TREE,
         "candidate_subtree": candidate["subtree"],
+        "reviewed_candidate_subtree": candidate["reviewed_subtree"],
         "admission_commit": admission_commit,
         "admission_parent": review_commit,
         "admission_tree": git.tree(admission_commit),
@@ -763,6 +848,7 @@ def derive_successor(
         "source_map": candidate["source_map"],
         "stable_units": candidate["stable_units"],
         "admission_receipt": candidate["admission_receipt"],
+        "closure_correction": candidate["closure_correction"],
     }
     preservation = deepcopy(previous.get("preservation", {}))
     preservation[TARGET] = git.ident(composition_commit, TARGET)
@@ -808,7 +894,7 @@ def derive_successor(
             "source_commit": composition_commit,
             "source_tree": git.tree(composition_commit),
             "commits": [*prefix_rows, review_row, *admission_rows,
-                        source_row, validation_tool_row],
+                        source_row, *validation_tool_rows],
             "root_sources_unchanged_before_composition": True,
             "lease_issue_is_fresh_sibling_namespace": True,
             "current_public_ega_errata_preservation_contract": (
@@ -858,6 +944,8 @@ def derive_successor(
             "review_commit": review_commit,
             "admission_commit": admission_commit,
             "composition_commit": composition_commit,
+            "candidate_closure_commit": CANDIDATE_CLOSURE_COMMIT,
+            "closure_correction_receipt": CLOSURE_CORRECTION_RECEIPT,
             "validation_tool_commit": validation_tool_commit,
             "lease_issue_event": ISSUE_EVENT,
             "lease_release_event": RELEASE_EVENT,

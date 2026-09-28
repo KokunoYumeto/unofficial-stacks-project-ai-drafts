@@ -51,24 +51,23 @@ class ExactPublicPrefixTests(unittest.TestCase):
 
 
 class PureContractTests(unittest.TestCase):
-    def test_validation_tool_update_is_exactly_scoped(self):
-        git = Mock()
-        git.changes.return_value = {
-            path: (None, "100644", None, "a" * 40, "M")
-            for path in verdier.VALIDATION_TOOL_PATHS
-        }
-        git.text.return_value = "candidate-subtree"
-        git.ident.return_value = {"bytes": 1, "sha256": "A" * 64, "git_blob": "a" * 40}
-        expected_row = {"kind": "validation_tool_update"}
-        with patch.object(verdier, "_commit", side_effect=lambda _, value, __: value), \
-             patch.object(verdier, "_require_step", return_value=expected_row) as require_step:
-            commit, row = verdier._validate_validation_tools(
-                git, "c" * 40, "v" * 40)
-        self.assertEqual(commit, "v" * 40)
-        self.assertEqual(row, expected_row)
-        require_step.assert_called_once_with(
-            git, "c" * 40, "v" * 40, None,
-            "validation_tool_update", set(verdier.VALIDATION_TOOL_PATHS))
+    def test_manifest_closure_repair_is_two_dotfiles_only(self):
+        correction = json.loads((ROOT / verdier.CLOSURE_CORRECTION_RECEIPT).read_text(
+            encoding="utf-8"))
+        self.assertEqual(correction["status"],
+                         "PASS_MANIFEST_GIT_OBJECT_CLOSURE_CORRECTED")
+        self.assertEqual(
+            {Path(row["path"]).name
+             for row in correction["closure_correction"]["added_paths"]},
+            {".gitattributes", ".gitignore"},
+        )
+        self.assertEqual(correction["closure_correction"]["candidate_subtree"],
+                         verdier.FINAL_CANDIDATE_SUBTREE)
+        self.assertEqual(set(verdier.FINAL_VALIDATOR_PATHS), {
+            verdier.CLOSURE_CORRECTION_RECEIPT,
+            "tools/verdier_registered_insertion_successor.py",
+            "tools/tests/test_verdier_registered_insertion_successor.py",
+        })
 
     def test_append_one_rejects_header_mutation(self):
         before = {"schema": "x", "events": [{"event_id": "one"}]}
