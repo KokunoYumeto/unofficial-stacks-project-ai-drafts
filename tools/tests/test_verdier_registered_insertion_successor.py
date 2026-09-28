@@ -15,6 +15,7 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import build_fixed_point as build
+import compare_fixed_point_builds as compare
 import direct_successor_checkpoint as checkpoint
 import validate_verdier_registered_insertion_successor as release
 import verdier_registered_insertion_successor as verdier
@@ -82,6 +83,37 @@ class PureContractTests(unittest.TestCase):
         new = {"event_id": "two"}
         after = {"schema": "x", "events": [*before["events"], new]}
         self.assertEqual(verdier._append_one(before, after, "events", "fixture"), new)
+
+    def test_post_composition_chain_ends_with_exact_comparator_repair(self):
+        composition, seal_one, repair_one, seal_two, repair_two = (
+            value * 40 for value in ("c", "1", "2", "3", "4")
+        )
+        git = Mock()
+        git.parents.side_effect = lambda commit: {
+            repair_two: [seal_two], seal_two: [repair_one],
+            repair_one: [seal_one], seal_one: [composition],
+        }[commit]
+        checkpoint_changes = {
+            path: (None, "100644", None, "a" * 40, "M")
+            for path in verdier.POST_COMPOSITION_REPAIR_PATHS
+        }
+        reproducibility_changes = {
+            path: (None, "100644", None, "b" * 40, "M")
+            for path in verdier.POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS
+        }
+        git.changes.side_effect = lambda parent, commit: {
+            repair_one: checkpoint_changes,
+            repair_two: reproducibility_changes,
+        }[commit]
+        with patch.object(verdier, "_commit", side_effect=lambda _, value, __: value), \
+             patch.object(verdier, "_require_step", return_value={}) as require_step:
+            rows = verdier._validate_post_composition_repair(
+                git, composition, repair_two)
+        self.assertEqual(len(rows), 4)
+        self.assertEqual(require_step.call_args_list[1].args[-1],
+                         set(verdier.POST_COMPOSITION_REPAIR_PATHS))
+        self.assertEqual(require_step.call_args_list[3].args[-1],
+                         set(verdier.POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS))
 
     def test_review_binds_authority_source_units(self):
         review = {
@@ -151,6 +183,120 @@ class PureContractTests(unittest.TestCase):
 
 
 class ConsumerDispatchTests(unittest.TestCase):
+    def test_repro_comparator_accepts_exact_verdier_ega_inheritance_status(self):
+        scope = {
+            "corrected_source_commit": "a" * 40,
+            "corrected_source_tree": "b" * 40,
+            "manifest": ident("validation/manifest.json"),
+            "sealed_predecessor_receipt_sha256": "A" * 64,
+        }
+        review = ident("validation/review.json")
+        checker = ident("illusie_volume_I/verify.py")
+        current_source_sha256 = "A" * 64
+        protected = {
+            row["path"]: {key: row[key] for key in ("bytes", "sha256", "git_blob")}
+            for row in (scope["manifest"], review, checker)
+        }
+        protected.update({
+            "validation/direct-successor-r48-composition.json": {
+                "bytes": 1, "sha256": "A" * 64, "git_blob": "a" * 40,
+            },
+            "simplicial.tex": {
+                "bytes": 1, "sha256": current_source_sha256, "git_blob": "a" * 40,
+            },
+        })
+        receipt = {
+            "source": {"commit": "c" * 40},
+            "composition": {
+                "schema": compare.VERDIER_REGISTERED_INSERTION_SCHEMA,
+                "inherited_ai_validation_head": "d" * 40,
+                "correction_protected_inputs": protected,
+            },
+            "source_checkpoint": {
+                "historical_anchor": {"status": "PASS"},
+                "semantic_successor": {
+                    "validated_at_own_head": True, "fresh_import_cache": True,
+                },
+                "current_ega_successor": {
+                    "schema": "unofficial-stacks-project-ai-drafts-historical-current-ega-join/v1",
+                    "status": compare.VERDIER_EGA_INHERITED_STATUS,
+                    "current_commit": "c" * 40,
+                },
+                "current_illusie_successor": {
+                    "schema": "unofficial-stacks-project-ai-drafts-current-illusie-correction-binding/v1",
+                    "status": "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND",
+                    "current_commit": "c" * 40,
+                    "composition_source_commit": "a" * 40,
+                    "composition_source_tree": "b" * 40,
+                    "scope": scope,
+                    "review": review,
+                    "checker": checker,
+                    "checker_result": {
+                        "status": "PASS", "current_source_sha256": current_source_sha256,
+                    },
+                    "manifest_validation_revision": "d" * 40,
+                    "regression_tests": {
+                        "status": "PASS", "tests_run": 5,
+                        "modules": ["illusie_volume_I.test_composition", "illusie_volume_I.test_ez"],
+                    },
+                },
+            },
+        }
+        compare.validate_correction_semantics(receipt, scope, "fixture")
+        receipt["source_checkpoint"]["current_illusie_successor"][
+            "manifest_validation_revision"
+        ] = "e" * 40
+        with self.assertRaisesRegex(ValueError, "exact current Illusie binding"):
+            compare.validate_correction_semantics(receipt, scope, "fixture")
+        receipt["source_checkpoint"]["current_illusie_successor"][
+            "manifest_validation_revision"
+        ] = "d" * 40
+        receipt["composition"]["schema"] = compare.AI_CORRECTION_SCHEMA
+        with self.assertRaisesRegex(ValueError, "preserved historical/current EGA semantics"):
+            compare.validate_correction_semantics(receipt, scope, "fixture")
+
+    def test_repro_comparator_uses_inherited_ai_endpoint_for_verdier_wrapper(self):
+        scope = {"correction_id": "fixture"}
+        receipt = {
+            "composition": {
+                "schema": compare.VERDIER_REGISTERED_INSERTION_SCHEMA,
+                "inherited_ai_source_commit": "a" * 40,
+                "inherited_ai_source_tree": "b" * 40,
+                "composition_source_commit": "c" * 40,
+                "composition_source_tree": "d" * 40,
+                "ai_source_correction_scope": scope,
+            },
+            "source_checkpoint": {
+                "schema": compare.AI_CORRECTION_CHECKPOINT_SCHEMA,
+                "status": compare.AI_CORRECTION_CHECKPOINT_STATUS,
+                "ai_source_correction": scope,
+            },
+        }
+        with patch("ai_source_correction_composition.validate_ai_source_correction_scope") \
+                as validate_scope, \
+             patch.object(compare, "validate_correction_semantics") as validate_semantics:
+            self.assertIs(compare.ai_source_correction_scope(receipt, "fixture"), scope)
+        validate_scope.assert_called_once_with(
+            scope, source_commit="a" * 40, source_tree="b" * 40)
+        validate_semantics.assert_called_once_with(receipt, scope, "fixture")
+
+    def test_repro_comparator_requires_exact_inherited_ai_endpoint(self):
+        scope = {"correction_id": "fixture"}
+        receipt = {
+            "composition": {
+                "schema": compare.VERDIER_REGISTERED_INSERTION_SCHEMA,
+                "inherited_ai_source_commit": "a" * 40,
+                "ai_source_correction_scope": scope,
+            },
+            "source_checkpoint": {
+                "schema": compare.AI_CORRECTION_CHECKPOINT_SCHEMA,
+                "status": compare.AI_CORRECTION_CHECKPOINT_STATUS,
+                "ai_source_correction": scope,
+            },
+        }
+        with self.assertRaisesRegex(ValueError, "exact corrected composition source"):
+            compare.ai_source_correction_scope(receipt, "fixture")
+
     def test_build_loader_dispatches_new_schema(self):
         expected = ({"schema": verdier.SCHEMA}, verdier.EXPECTED_STEMS, ("derived",))
         fake = SimpleNamespace(load_verdier_registered_insertion_successor=Mock(return_value=expected))

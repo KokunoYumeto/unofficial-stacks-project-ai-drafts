@@ -134,6 +134,12 @@ POST_COMPOSITION_REPAIR_PATHS = (
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
 
+POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS = (
+    "tools/compare_fixed_point_builds.py",
+    "tools/verdier_registered_insertion_successor.py",
+    "tools/tests/test_verdier_registered_insertion_successor.py",
+)
+
 TOOLS = (
     "tools/verdier_registered_insertion_successor.py",
     "tools/validate_verdier_registered_insertion_successor.py",
@@ -551,8 +557,9 @@ def _validate_post_composition_repair(
 
     The initial derived receipt proved the composition topology but exposed a
     stale EGA-surface comparison during its verifier-only build gate.  The
-    replacement receipt records every superseded one-file seal and exact
-    three-file repair commit before any TeX process is launched.
+    replacement receipt records every superseded one-file seal, the exact
+    historical checkpoint-repair commits, and one terminal comparator-dispatch
+    repair before any replacement TeX process is launched.
     """
     repair_commit = _commit(git, repair_commit, "post-composition validation repair")
     chain: list[str] = []
@@ -568,8 +575,13 @@ def _validate_post_composition_repair(
     chain.reverse()
     require(chain and len(chain) % 2 == 0,
             "post-composition chain must alternate receipt seals and repairs")
-    expected_types = {
+    checkpoint_repair_types = {
         "tools/direct_successor_checkpoint.py": "M",
+        "tools/verdier_registered_insertion_successor.py": "M",
+        "tools/tests/test_verdier_registered_insertion_successor.py": "M",
+    }
+    reproducibility_repair_types = {
+        "tools/compare_fixed_point_builds.py": "M",
         "tools/verdier_registered_insertion_successor.py": "M",
         "tools/tests/test_verdier_registered_insertion_successor.py": "M",
     }
@@ -580,9 +592,20 @@ def _validate_post_composition_repair(
             rows.append(_require_step(
                 git, parent, commit, None, "superseded_receipt_seal", {RECEIPT}))
         else:
+            terminal_reproducibility_repair = index == len(chain) - 1
+            repair_paths = (
+                POST_COMPOSITION_REPRODUCIBILITY_REPAIR_PATHS
+                if terminal_reproducibility_repair
+                else POST_COMPOSITION_REPAIR_PATHS
+            )
+            expected_types = (
+                reproducibility_repair_types
+                if terminal_reproducibility_repair
+                else checkpoint_repair_types
+            )
             rows.append(_require_step(
                 git, parent, commit, None, "post_composition_validation_repair",
-                set(POST_COMPOSITION_REPAIR_PATHS)))
+                set(repair_paths)))
             changes = git.changes(parent, commit)
             require({path: data[4] for path, data in changes.items()} == expected_types,
                     "post-composition validation repair change types mismatch")
