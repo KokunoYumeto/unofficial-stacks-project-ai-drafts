@@ -951,6 +951,68 @@
             "sha256": "6215B4F7DAC100E5BA70851515A689711755C85D81AE764DC3B1A2CC6AF9F0CB"
           }
         ]
+      },
+      {
+        "kind": "superseded_receipt_seal",
+        "commit": "7cd0546324cb45046e1ff2b3b703515c8432e9e3",
+        "parent": "8f29b3c23da281e93d4fc2121696143b3bf29080",
+        "parents": [
+          "8f29b3c23da281e93d4fc2121696143b3bf29080"
+        ],
+        "tree": "0b6af9154f5bd274cc7e2e6224dc63658a710b04",
+        "paths": [
+          {
+            "path": "validation/composition-current.json",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "f8ad49e04a237723fdb10559d6cd0661d5596dee",
+            "git_blob": "d55b26ef7409db8261b7510444f10d43fef7c251",
+            "status": "M",
+            "bytes": 68655,
+            "sha256": "1A8EC1EE8BB56E47BC90DEF65A03D666496E058018EED976A418589969C3EBC7"
+          }
+        ]
+      },
+      {
+        "kind": "post_composition_validation_repair",
+        "commit": "4907dd5f0173981c32a5d323a9e534aaeae01736",
+        "parent": "7cd0546324cb45046e1ff2b3b703515c8432e9e3",
+        "parents": [
+          "7cd0546324cb45046e1ff2b3b703515c8432e9e3"
+        ],
+        "tree": "e8cc0762a3dae7fa2138762067fd7bd0e85d2b49",
+        "paths": [
+          {
+            "path": "tools/compare_fixed_point_builds.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "14c14caa0e4721bf47d621385a65bea48d665e94",
+            "git_blob": "1a5ea91f6176f64219636afc9f5e39d82c16af5e",
+            "status": "M",
+            "bytes": 22259,
+            "sha256": "376A1A765F9A150EFD42EEE346B35752757CF6B9121E92257F27F787D4605015"
+          },
+          {
+            "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "174455d01ca633ccda2c3a248430f999aa696048",
+            "git_blob": "72e35f7cccf986c7c89b0a7f4bda7a83be7462cc",
+            "status": "M",
+            "bytes": 25304,
+            "sha256": "E92CB30FE8AC6543535B5693D958668130A0CAB0E27E49DFBFB0CAF4089EC6B6"
+          },
+          {
+            "path": "tools/verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "2976d7cba909715ea857fcdfa914c5d10e3a347b",
+            "git_blob": "083aa99d6e5024dbfa1f1615763e686aee42cc2e",
+            "status": "M",
+            "bytes": 57114,
+            "sha256": "2AD65EF91DCF617C8FA725511C3277CA1945E0C5951280A4948FF03B5054F3B2"
+          }
+        ]
       }
     ],
     "root_sources_unchanged_before_composition": true,
@@ -1559,7 +1621,7 @@
     "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
     "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-    "validation_repair_commit": "8f29b3c23da281e93d4fc2121696143b3bf29080",
+    "validation_repair_commit": "4907dd5f0173981c32a5d323a9e534aaeae01736",
     "lease_issue_event": "lease-event-000124",
     "lease_release_event": "lease-event-000125"
   }
