@@ -35,9 +35,12 @@ operation `VDR-STK-COMP-0003` is an insertion-only operation after the proof of
 `lemma-operations` and before `lemma-acyclic-general` in `derived.tex`, with
 every pre-existing target byte preserved. The payload has passed a serialized
 baseline-versus-candidate fixed-point build (133 pages, zero new diagnostics)
-and complete-document plus affected-page visual QA. Independent frozen-candidate
-replay, admission, composition, publication, and public-byte readback remain
-separate deterministic gates and are not claimed here.
+and complete-document plus affected-page visual QA. A frozen-candidate
+mathematical replay has also passed and is bound in
+`replay/independent-review.json`; because current workspace policy forbids a new
+review task, that receipt explicitly claims no separate human or agent reviewer.
+Admission, composition, publication, and public-byte readback remain separate
+deterministic gates and are not claimed here.
 
 ## AI disclosure
 
