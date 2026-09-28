@@ -33,10 +33,11 @@ assignment.
 Lease `stacks-lease-000065-verdier-ast239-2-3-1-r1` is active. Composition
 operation `VDR-STK-COMP-0003` is an insertion-only operation after the proof of
 `lemma-operations` and before `lemma-acyclic-general` in `derived.tex`, with
-every pre-existing target byte preserved. The payload is authored; bounded
-build, visual QA, independent frozen-candidate replay, admission, composition,
-publication, and public-byte readback remain separate deterministic gates and
-are not claimed here.
+every pre-existing target byte preserved. The payload has passed a serialized
+baseline-versus-candidate fixed-point build (133 pages, zero new diagnostics)
+and complete-document plus affected-page visual QA. Independent frozen-candidate
+replay, admission, composition, publication, and public-byte readback remain
+separate deterministic gates and are not claimed here.
 
 ## AI disclosure
 
