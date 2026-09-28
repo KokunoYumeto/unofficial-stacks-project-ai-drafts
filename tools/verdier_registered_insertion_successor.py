@@ -889,6 +889,10 @@ def derive_successor(
                 "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier "
                 "input preservation; no claim of fresh checker replay against later public errata"
             ),
+            "inherited_illusie_validation_contract": (
+                "manifest suffix replayed at the exact linear public predecessor; every protected "
+                "Illusie byte plus the finite checker and regression suite revalidated at the endpoint"
+            ),
         },
         "new_overlays": [overlay],
         "composition": {

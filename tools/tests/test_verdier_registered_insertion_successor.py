@@ -330,6 +330,20 @@ class CheckpointSchemaTests(unittest.TestCase):
             "historical-anchor",
         )
 
+    def test_verdier_illusie_manifest_uses_linear_public_predecessor(self):
+        self.assertEqual(
+            checkpoint.illusie_manifest_validation_revision(
+                self.composition, "nonlinear-verdier-head"),
+            "prior-public",
+        )
+        ordinary = {"schema": checkpoint.AI_COMPOSITION_SCHEMA,
+                    "previous_public_main_head": "prior-public"}
+        self.assertEqual(
+            checkpoint.illusie_manifest_validation_revision(
+                ordinary, "linear-ai-head"),
+            "linear-ai-head",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
