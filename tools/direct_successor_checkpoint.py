@@ -275,9 +275,9 @@ def validate_direct_source_checkpoint_at(root, checkpoint_path, composition_bind
 
 
 def illusie_manifest_validation_revision(composition: dict, head: str) -> str:
-    """Choose the linear revision that owns the inherited Illusie manifest."""
+    """Choose the exact revision that sealed the inherited Illusie manifest."""
     if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
-        return composition["previous_public_main_head"]
+        return composition["inherited_ai_validation_head"]
     return head
 
 
@@ -307,13 +307,27 @@ def verify_current_illusie(build, source, composition, head):
                 f"current Illusie dossier identity mismatch: {path}")
     before = require_exact_inputs(build, source, head, sorted(protected))
     git = correction.Git(source)
-    manifest_revision = illusie_manifest_validation_revision(composition, head)
+    manifest_revision = build.require_commit_object(
+        source,
+        illusie_manifest_validation_revision(composition, head),
+        "inherited Illusie validation head",
+    )
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        expected_tree = composition.get("inherited_ai_validation_tree")
+        require(build.git(source, "rev-parse", f"{manifest_revision}^{{tree}}") == expected_tree,
+                "inherited Illusie validation tree mismatch")
+        build.require_ancestor(
+            source,
+            manifest_revision,
+            "inherited Illusie validation head to immediate public predecessor",
+            composition["previous_public_main_head"],
+        )
     require(build.committed_file_identity(source, manifest_revision, correction.MANIFEST)
             == build.committed_file_identity(source, head, correction.MANIFEST),
-            "inherited Illusie manifest changed after its linear validation revision")
+            "inherited Illusie manifest changed after its sealed validation revision")
     manifest = git.document(manifest_revision, correction.MANIFEST)
     # Recompute the exact candidate/source replay and review closure at the
-    # linear public revision that owns it.  The current endpoint is checked
+    # exact sealed validation revision that owns it.  The current endpoint is checked
     # independently above and below against every protected byte.
     correction.validate_manifest(git, manifest, manifest_revision)
     checker = build.committed_file_identity(source, head, "illusie_volume_I/verify.py")

@@ -46,6 +46,7 @@ AUTHORITY_TREE = "3feeb703b931a6e7259782c10e7d1575adc83e5e"
 PREVIOUS_PUBLIC = "4828ebac86db7ebf4211227cabe183b09f11c992"
 PREVIOUS_PUBLIC_TREE = "d351c98e5a4655f20b2ddf34783314cda21e6c91"
 INHERITED_RECEIPT_HEAD = "00856c315dabb2516cad6d956a25030909419947"
+INHERITED_RECEIPT_TREE = "11aeb66e85471278dd828476c122b6b19c1d952f"
 INHERITED_RECEIPT_ID = {
     "bytes": 165405,
     "sha256": "7CFA04B3A5F7BAD0653B63BC4D1BE2E84828CFB61DFC7880B7D8BAB2F7837AD2",
@@ -248,6 +249,8 @@ def _jsonl(raw: bytes, label: str) -> list[dict]:
 
 def _validate_inherited(git: Git) -> tuple[dict, dict[str, dict[str, object]]]:
     require(git.tree(PREVIOUS_PUBLIC) == PREVIOUS_PUBLIC_TREE, "wrong previous public tree")
+    require(git.tree(INHERITED_RECEIPT_HEAD) == INHERITED_RECEIPT_TREE,
+            "wrong inherited AI validation-head tree")
     observed = git.ident(PREVIOUS_PUBLIC, RECEIPT)
     require(observed == INHERITED_RECEIPT_ID, "wrong inherited R48 AI receipt identity")
     require(git.blob(PREVIOUS_PUBLIC, RECEIPT)
@@ -544,18 +547,18 @@ def _validate_post_composition_repair(
     composition_commit: str,
     repair_commit: str,
 ) -> list[dict[str, object]]:
-    """Bind the failed-closed checkpoint repair without hiding its first seal.
+    """Bind failed-closed checkpoint repairs without hiding superseded seals.
 
     The initial derived receipt proved the composition topology but exposed a
     stale EGA-surface comparison during its verifier-only build gate.  The
-    replacement receipt records both that superseded one-file seal and the
-    exact three-file repair commit before any TeX process was launched.
+    replacement receipt records every superseded one-file seal and exact
+    three-file repair commit before any TeX process is launched.
     """
     repair_commit = _commit(git, repair_commit, "post-composition validation repair")
     chain: list[str] = []
     cursor = repair_commit
     while cursor != composition_commit:
-        require(len(chain) < 8,
+        require(len(chain) < 32,
                 "post-composition validation-repair chain is unexpectedly long")
         parents = git.parents(cursor)
         require(len(parents) == 1,
@@ -890,7 +893,7 @@ def derive_successor(
                 "input preservation; no claim of fresh checker replay against later public errata"
             ),
             "inherited_illusie_validation_contract": (
-                "manifest suffix replayed at the exact linear public predecessor; every protected "
+                "manifest suffix replayed at the exact sealed Illusie validation head; every protected "
                 "Illusie byte plus the finite checker and regression suite revalidated at the endpoint"
             ),
         },
@@ -918,6 +921,8 @@ def derive_successor(
             "scope": deepcopy(previous["ai_source_correction_scope"]),
             "source_commit": previous["composition"]["source_commit"],
             "source_tree": previous["composition"]["source_tree"],
+            "validation_head": INHERITED_RECEIPT_HEAD,
+            "validation_tree": INHERITED_RECEIPT_TREE,
         },
         "correction_protected_inputs": correction_inputs,
         "verdier_registered_insertion_scope": {
@@ -1001,6 +1006,8 @@ def normalize_binding(git: Git, head: str, receipt: dict) -> dict[str, object]:
         "ai_source_correction_scope": receipt["inherited_ai_source_correction"]["scope"],
         "inherited_ai_source_commit": receipt["inherited_ai_source_correction"]["source_commit"],
         "inherited_ai_source_tree": receipt["inherited_ai_source_correction"]["source_tree"],
+        "inherited_ai_validation_head": receipt["inherited_ai_source_correction"]["validation_head"],
+        "inherited_ai_validation_tree": receipt["inherited_ai_source_correction"]["validation_tree"],
         "correction_protected_inputs": receipt["correction_protected_inputs"],
         "verdier_registered_insertion_scope": receipt["verdier_registered_insertion_scope"],
     }

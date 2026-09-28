@@ -129,7 +129,9 @@ class PureContractTests(unittest.TestCase):
             "projection_verifier": {"report": {"status": "PASS"}},
             "inherited_ai_source_correction": {"scope": {"correction_id": "x"},
                                                  "source_commit": "9" * 40,
-                                                 "source_tree": "0" * 40},
+                                                 "source_tree": "0" * 40,
+                                                 "validation_head": "8" * 40,
+                                                 "validation_tree": "7" * 40},
             "correction_protected_inputs": {"simplicial.tex": {"bytes": 1,
                 "sha256": "A" * 64, "git_blob": "a" * 40}},
             "verdier_registered_insertion_scope": {"candidate_id": verdier.OVERLAY_ID},
@@ -144,6 +146,8 @@ class PureContractTests(unittest.TestCase):
         self.assertEqual(binding["affected_source_stems"], ["derived"])
         self.assertEqual(binding["new_overlay_ids"], [verdier.OVERLAY_ID])
         self.assertEqual(binding["inherited_ai_source_commit"], "9" * 40)
+        self.assertEqual(binding["inherited_ai_validation_head"], "8" * 40)
+        self.assertEqual(binding["inherited_ai_validation_tree"], "7" * 40)
 
 
 class ConsumerDispatchTests(unittest.TestCase):
@@ -248,6 +252,8 @@ class CheckpointSchemaTests(unittest.TestCase):
             "ai_source_correction_scope": {"correction_id": "old"},
             "inherited_ai_source_commit": "old-ai-source",
             "inherited_ai_source_tree": "old-ai-tree",
+            "inherited_ai_validation_head": "old-ai-validation-head",
+            "inherited_ai_validation_tree": "old-ai-validation-tree",
             "correction_protected_inputs": {},
             "direct_validation_tools": {},
             "verdier_registered_insertion_scope": {"candidate_id": verdier.OVERLAY_ID},
@@ -330,11 +336,11 @@ class CheckpointSchemaTests(unittest.TestCase):
             "historical-anchor",
         )
 
-    def test_verdier_illusie_manifest_uses_linear_public_predecessor(self):
+    def test_verdier_illusie_manifest_uses_sealed_validation_head(self):
         self.assertEqual(
             checkpoint.illusie_manifest_validation_revision(
                 self.composition, "nonlinear-verdier-head"),
-            "prior-public",
+            "old-ai-validation-head",
         )
         ordinary = {"schema": checkpoint.AI_COMPOSITION_SCHEMA,
                     "previous_public_main_head": "prior-public"}
