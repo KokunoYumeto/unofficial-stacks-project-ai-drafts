@@ -9,11 +9,13 @@ Stacks Project contribution.
 The intended scope is all substantive mathematics of Volume I. The historical
 local map covers printed pp.1-16, I.1.1-I.1.4: 197 source anchors, 30 decisions,
 and 48 French/English witness files. The cumulative source-order ledger has
-since continued through I.2.1.2, printed p.24. Inventory coverage is not
+since continued through I.2.2, printed p.38. Inventory coverage is not
 mathematical completion. The normal/degenerate comparison diagram on p.11 is
 resolved by the normalized quotient/Moore-projection lemma recorded as
 `I-1.3-006`; Proposition 2.1.2.1 is now supplied by the bounded homotopy-sheaf
-fragment. Later Volume I material remains to be processed.
+fragment; the Whitehead theorem and its local finite-type reduction are now
+supplied by the bounded free-abelian fragment. Later Volume I material remains
+to be processed.
 
 ## Mathematics
 
@@ -37,7 +39,14 @@ finite-limit/colimit and filtered-colimit operations in the standard
 `Ex^infinity` construction; it does not add the unrelated geometric-realization
 review from I.2.1.1.
 
-All three fragments are composed into [`simplicial.tex`](../simplicial.tex).
+[`whitehead-free-abelian.tex`](whitehead-free-abelian.tex) defines
+$n$-equivalences and proves that the levelwise free abelian object preserves
+them in degrees at least two when the topos has enough points or the original
+map is additive. Its proof includes the pointwise relative-Hurewicz argument,
+local filtered colimits, finite-type approximation with the two explicit
+extension operations, and the varying-ring free-module colimit formula.
+
+All four fragments are composed into [`simplicial.tex`](../simplicial.tex).
 [`map.json`](map.json) distinguishes exact existing coverage, new proofs, and
 unresolved comparisons. No permanent Stacks tags are assigned to new labels.
 
@@ -74,6 +83,6 @@ passes. This sparse build has 67 unchanged external AUX references outside the
 addition, and is not a full-book build. New strict diagnostics must be zero.
 The current build and visual-inspection receipt records its precise scope.
 
-Next: continue at I.2.2, printed p.25. GitHub preserves coherent increments; the established
+Next: continue at I.2.3.1, printed p.38. GitHub preserves coherent increments; the established
 Zenodo lineage receives substantial cumulative milestones. Public access is
 preserved throughout.

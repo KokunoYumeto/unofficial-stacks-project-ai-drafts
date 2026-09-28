@@ -104,3 +104,28 @@ the mathematically required `0 <= i < n`. The p.23 and p.24 corrections are
 typographical only (`distingué de Ker` and removal of an extra parenthesis).
 The coverage ledger binds all three lane identities and records these source
 truth distinctions.
+
+## I.2.2.1--I.2.2.10, printed pp.25--38
+
+The target had the normalized-complex/Dold--Kan and free-abelian-sheaf
+ingredients, but no theorem asserting that the free abelian object preserves
+an $n$-equivalence. The new `whitehead-free-abelian.tex` supplies the missing
+statement in both cases used by Illusie: detection at enough points and a
+local finite-type reduction for a morphism of simplicial abelian sheaves.
+
+The point case is the relative Hurewicz theorem applied to the mapping-cylinder
+pair. In the additive case, normalization turns the assertion into a bounded
+cohomological approximation problem. The proof records both finite-free
+extension operations from 2.2.7 and 2.2.8 explicitly: one kills the kernel in
+the next cohomological degree without changing its image, and the other makes
+the current cohomology map surjective while preserving injectivity in the next
+degree. Alternating them proves the cofinal $n$-quasi-isomorphic subsystem of
+2.2.9. The varying-ring finite-support argument of 2.2.10 is retained as its
+own lemma rather than weakened to the constant-$\mathbf{Z}$ case needed by the
+main theorem.
+
+The unmatched-parenthesis repairs on printed p.25, `ci-dessous` to
+`ci-dessus` on p.27, and the grammatical repairs on pp.33 and 36 do not change
+the mathematical assertions. Remark 2.2.4 is explicitly a historical
+conjecture that the theorem's two sufficient hypotheses are unnecessary; it
+is recorded as context, not promoted to a theorem or asserted as resolved.
