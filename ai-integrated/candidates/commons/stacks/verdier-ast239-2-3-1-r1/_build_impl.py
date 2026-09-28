@@ -14,7 +14,10 @@ from typing import Any
 
 
 CANDIDATE = Path(__file__).resolve().parent
-SOURCE = CANDIDATE / ".work" / "unified-main"
+# This candidate already lives inside the dedicated AI-integrated worktree.
+# Build against that exact checkout instead of depending on an ignored,
+# untracked copy that may not exist after a clean clone.
+SOURCE = CANDIDATE.parents[4]
 COMPOSITION = CANDIDATE / "composition.jsonl"
 BUILD_DIR = CANDIDATE / "builds"
 PAYLOAD = CANDIDATE / "payload" / "fragments" / "derived-nested-quotients.tex"
