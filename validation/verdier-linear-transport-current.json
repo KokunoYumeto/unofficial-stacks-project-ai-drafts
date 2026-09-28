@@ -126,5 +126,25 @@
     ],
     "reason": "refresh deterministic downstream exports for the newly admitted Verdier overlay"
   },
+  "workflow_repair": {
+    "commit": "cfbff26120183ccb5455e04c6bb33cdcfb72b803",
+    "parent": "593e4520ee09f4d8401b1b61916b6f142ed6e19c",
+    "tree": "423df7666a50eb492c19d0aa97e80800dfd4d03b",
+    "paths": [
+      {
+        "path": "tests/test_changes_from_upstream.py",
+        "bytes": 7599,
+        "sha256": "C9F07967A25ABADFBCC57815E634BF6033EAC1EBB3EA26124BF3C8AEA8FE0E44",
+        "git_blob": "a8e48849ab7b3e10e99c52c29629bac7ddd849e7"
+      },
+      {
+        "path": "tools/validate_verdier_linear_transport.py",
+        "bytes": 24939,
+        "sha256": "DBB8DB8CC4316C8592D0877A9F9D1DC6F762402B3581E175B26F8B278A043C29",
+        "git_blob": "99b3fbd516d4562190172767d608b3f04a3973f7"
+      }
+    ],
+    "reason": "include the newly admitted Verdier overlay in the generated-interface coverage assertion"
+  },
   "statement": "The merge-bearing reviewed history remains immutable at the named tag. The public content commit has the exact validated tree and a single parent at the public predecessor. Later commits are restricted to this transport proof, deterministic source packaging for the already-present candidate PDF, deterministic downstream export refresh, and the final publication receipt."
 }
