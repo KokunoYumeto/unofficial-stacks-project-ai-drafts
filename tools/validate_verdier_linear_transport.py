@@ -55,6 +55,15 @@ PACKAGE_SCHEMA = "unofficial-ai-integrated-stacks-rendered-source-package/v1"
 REFERENCE_KEYS = {"path", "bytes", "sha256", "git_blob"}
 CORE_ROLES = ("composition", "build", "second_build", "visual_qa", "reproducibility")
 AI_DISCLOSURE = "OpenAI Codex — GPT-5.6 Sol, Ultra effort"
+PUBLICATION_PREPARATION_CHANGES = {
+    "CHANGES_FROM_UPSTREAM.md": "M",
+    "tests/test_changes_from_upstream.py": "M",
+    "tools/validate_verdier_linear_transport.py": "M",
+    "upstream-corrections/corrections-only.zip": "M",
+    "upstream-corrections/downloads.json": "M",
+    "upstream-corrections/manifest.json": "M",
+    "validation/changes-from-upstream-2026-08-30.json": "M",
+}
 
 
 require = common.require
@@ -271,6 +280,40 @@ def validate_preparation(objects: Objects, receipt: dict) -> str:
     return commit
 
 
+def validate_transport_seal(objects: Objects, receipt: dict, prep: str, seal: str) -> None:
+    """Validate either the first seal or one bounded generated-export refresh."""
+    publication = receipt.get("publication_preparation")
+    if publication is None:
+        require(parents(objects, seal) == [prep]
+                and changes(objects, prep, seal) == {RECEIPT: "A"},
+                "prepublication transport seal mismatch")
+        return
+    require(isinstance(publication, dict)
+            and set(publication) == {"commit", "parent", "tree", "paths", "reason"},
+            "invalid publication-preparation record")
+    commit = objects.commit(publication["commit"])
+    first_seal = objects.commit(publication["parent"])
+    require(parents(objects, first_seal) == [prep]
+            and changes(objects, prep, first_seal) == {RECEIPT: "A"},
+            "publication preparation does not follow the original transport seal")
+    require(parents(objects, commit) == [first_seal]
+            and objects.text("rev-parse", commit + "^{tree}") == publication["tree"]
+            and changes(objects, first_seal, commit) == PUBLICATION_PREPARATION_CHANGES,
+            "publication-preparation commit changed the wrong paths")
+    rows = publication["paths"]
+    require(isinstance(rows, list)
+            and {row.get("path") for row in rows} == set(PUBLICATION_PREPARATION_CHANGES),
+            "publication-preparation identity inventory mismatch")
+    for row in rows:
+        clean_reference(objects, row, "publication-preparation path", commit)
+    require(publication["reason"] ==
+            "refresh deterministic downstream exports for the newly admitted Verdier overlay",
+            "publication-preparation rationale mismatch")
+    require(parents(objects, seal) == [commit]
+            and changes(objects, commit, seal) == {RECEIPT: "M"},
+            "refreshed transport seal mismatch")
+
+
 def validate_release(objects: Objects, receipt: dict, head: str, prep: str, index: dict) -> None:
     refs = index.get("references")
     require(isinstance(refs, dict) and set(refs) == set(CORE_ROLES) | {"release"},
@@ -290,10 +333,9 @@ def validate_release(objects: Objects, receipt: dict, head: str, prep: str, inde
         "tree": VALIDATED_DAG_TREE,
     }, "release content/provenance mismatch")
     seal = objects.commit(release.get("transport_seal", {}).get("commit"))
-    require(release["transport_seal"].get("tree") == objects.text("rev-parse", seal + "^{tree}")
-            and parents(objects, seal) == [prep]
-            and changes(objects, prep, seal) == {RECEIPT: "A"},
-            "release transport-seal mismatch")
+    require(release["transport_seal"].get("tree") == objects.text("rev-parse", seal + "^{tree}"),
+            "release transport-seal tree mismatch")
+    validate_transport_seal(objects, receipt, prep, seal)
     require(parents(objects, head) == [seal]
             and changes(objects, seal, head) == {INDEX: "M", release_ref["path"]: "A"},
             "final publication commit is not the exact two-file seal")
@@ -378,9 +420,7 @@ def validate_linear_transport(root: Path, pre_publication: bool = False) -> int:
                 "merge commit remains in public transport")
         if status == "READY_FOR_PUBLICATION":
             require(pre_publication, "linear transport is not publication-complete")
-            require(parents(objects, initial) == [prep]
-                    and changes(objects, prep, initial) == {RECEIPT: "A"},
-                    "prepublication transport seal mismatch")
+            validate_transport_seal(objects, receipt, prep, initial)
         elif status == "PUBLICATION_COMPLETE":
             validate_release(objects, receipt, initial, prep, index)
         else:

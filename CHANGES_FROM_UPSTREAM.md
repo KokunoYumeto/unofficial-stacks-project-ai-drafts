@@ -12,7 +12,7 @@ remain readable as mathematics.
 - Manifest/source-map exact operations: **1,914**
 - Hash-bound reconstructed legacy hunks: **68**
 - Affected source paths: **36**
-- Registry SHA-256: `AF59863A2CC4374C648C64E9DFD6BFDC524B6AEB82D9430687C56F21C13D1449`
+- Registry SHA-256: `1DA8981DE4A471A86C007A7FFC9C71B64843C124048E60F3EE0ECE47B1A422D4`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
