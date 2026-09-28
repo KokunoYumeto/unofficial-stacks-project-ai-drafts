@@ -935,6 +935,68 @@
             "sha256": "1EBBE4A5B5CBE17A87E242E25EC4CDE2B7B32A155B19FF43374C1762CBAA2B8A"
           }
         ]
+      },
+      {
+        "kind": "superseded_composition_receipt_seal",
+        "commit": "e53c0fd52e494c4fa3036f1ffb6ef0332c9b9bdf",
+        "parent": "f83c16e148888fdbba0751c6b37e59f3d26956f8",
+        "parents": [
+          "f83c16e148888fdbba0751c6b37e59f3d26956f8"
+        ],
+        "tree": "1c2c59432c018f509a36d9728a325a9237a450e5",
+        "paths": [
+          {
+            "path": "validation/composition-current.json",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "8cf42ad4c56715c940762db4fcf6e6e0767d7572",
+            "git_blob": "d975326dfd3866b96dbf9b125b68b8236ebc6247",
+            "status": "M",
+            "bytes": 72278,
+            "sha256": "BEE6F0A459217D77F4F062D8C7522E762FCD0D2AA7F7EF4917AA51F5707B6D65"
+          }
+        ]
+      },
+      {
+        "kind": "nested_verdier_checkpoint_unwrap_repair",
+        "commit": "84f867ee93f329136c9ce464c4ab934f18ee53c2",
+        "parent": "e53c0fd52e494c4fa3036f1ffb6ef0332c9b9bdf",
+        "parents": [
+          "e53c0fd52e494c4fa3036f1ffb6ef0332c9b9bdf"
+        ],
+        "tree": "4c3cf7e2320b68aad219e8136cd2a7165fc61a6f",
+        "paths": [
+          {
+            "path": "tools/direct_successor_checkpoint.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "0bfda6a7f4bad0b5db786872907fe19f90c5fc16",
+            "git_blob": "687b4890d49bde8c33c8bf7ddf7f85b3ffa94b7a",
+            "status": "M",
+            "bytes": 33893,
+            "sha256": "49E9AA5772DC551C795B1A5BDE010C3CC92707854DD3A1E99D67B274F5EAC102"
+          },
+          {
+            "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "d0b3779813232f1e67ccd9a65b37a3954ac541b8",
+            "git_blob": "abade7e7146305804516780ebe509854d978c929",
+            "status": "M",
+            "bytes": 25977,
+            "sha256": "229E820644499DF171CC5FA47D54D0AB37AC7F0430493925B390AC4BA005FAA3"
+          },
+          {
+            "path": "tools/verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "7fa3a345e944bde4a744c7bfbb8faa8e7fa0ad9e",
+            "git_blob": "98448ecf71c24f040a3ce576593f19b83b6ebe1d",
+            "status": "M",
+            "bytes": 59347,
+            "sha256": "0BCF4DF6119ABD469F4D0976ED1C69EF09EBEE080C127ADB7C34765972EC96EE"
+          }
+        ]
       }
     ],
     "root_sources_unchanged_before_composition": true,
@@ -982,7 +1044,7 @@
       "build_root_repair_commit": "c5125ff63f91abe0b7e8d0c1c04692a1971f17be",
       "candidate_freeze_commit": "421ab3c5224ac59d845efa16cac42b5ae231813a",
       "review_commit": "3ddcb012f50fa42d12efcde125376de463d24ae5",
-      "validation_tool_commit": "f83c16e148888fdbba0751c6b37e59f3d26956f8",
+      "validation_tool_commit": "84f867ee93f329136c9ce464c4ab934f18ee53c2",
       "candidate_commit": "b4dda8252385769162c8232360cf4fe2569c00cb",
       "candidate_tree": "8ecfdba218d25816868e460086d957b296310a28",
       "candidate_subtree": "3cedabb80302dd3df9d2d2e191bb4773c614a1fc",
@@ -1586,7 +1648,7 @@
     "composition_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
     "candidate_closure_commit": "b4dda8252385769162c8232360cf4fe2569c00cb",
     "closure_correction_receipt": "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1-closure-correction.json",
-    "validation_tool_commit": "f83c16e148888fdbba0751c6b37e59f3d26956f8",
+    "validation_tool_commit": "84f867ee93f329136c9ce464c4ab934f18ee53c2",
     "lease_issue_event": "lease-event-000126",
     "lease_release_event": "lease-event-000127"
   }
