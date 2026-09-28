@@ -20,7 +20,9 @@
     "source_date_epoch": "1785270512"
   },
   "scope": {
-    "admitted_errata": "stacks-verdier-a04446e-1-3-6-r1",
+    "new_overlay_ids": [
+      "stacks-verdier-a04446e-1-3-6-r1"
+    ],
     "registry_cutoff_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "source_commit": "e7cd252c6b45c30b260af95a1c472c81e474a876",
     "source_tree": "27bfa5595c19a1fb797af7d68890f3b0fd372988",
@@ -40,7 +42,37 @@
       "corrected_source_tree": "3a0e1ee6f7c575a261a254e1f4701a982e8c12a6",
       "sealed_predecessor_commit": "1c7fa79a3d8fdb24a9ec45ba65e65ce1fd8867c2",
       "sealed_predecessor_receipt_sha256": "546206C486E7722D9086B9E4ADF979CCA11DC8587D3E28CCFEA551C700606ADE"
+    },
+    "verdier_registered_insertion": {
+      "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+      "operation_id": "VDR-STK-COMP-0002",
+      "stable_ids": [
+        "verdier:ast239:1.3.6",
+        "verdier:ast239:1.3.6:equivalent-conditions",
+        "verdier:ast239:1.3.6:proof:i-iff-ii",
+        "verdier:ast239:1.3.6:proof:ii-implies-iii",
+        "verdier:ast239:1.3.6:construction:hstar-complex",
+        "verdier:ast239:1.3.6:claim:hstar-equivalence",
+        "verdier:ast239:1.3.6:conclusion:iii-implies-ii"
+      ],
+      "candidate_freeze_commit": "65da408e2209f68e134067bf8102f68522062a5c",
+      "review_commit": "0585dcb826a8025a7182b55f1ab62beeb1956e14",
+      "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
+      "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
+      "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
+      "validation_repair_commit": "4907dd5f0173981c32a5d323a9e534aaeae01736",
+      "lease_issue_event": "lease-event-000124",
+      "lease_release_event": "lease-event-000125"
     }
+  },
+  "scope_normalization": {
+    "kind": "typed-successor-metadata-projection",
+    "comparison_recomputed": false,
+    "legacy_field_removed": {
+      "admitted_errata": "stacks-verdier-a04446e-1-3-6-r1"
+    },
+    "typed_fields_copied_exactly_from": "the identical build receipts' Verdier composition binding",
+    "reason": "The generic comparator serialized its legacy one-overlay argument although both build receipts carry the stronger Verdier registered-insertion scope required by the owning release validator. Only the release-scope metadata projection changed; the 36-artifact comparison, run identities, source, builder, environment, and comparison result are untouched."
   },
   "method": {
     "execution_model": "independent_linked_worktrees",
