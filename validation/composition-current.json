@@ -765,10 +765,73 @@
             "sha256": "C4B2EC45EB7CD109C99E4446C4D5D5B5AF738533F080EA86C10A77122C8CA62A"
           }
         ]
+      },
+      {
+        "kind": "superseded_receipt_seal",
+        "commit": "cb54424861452ccca4046fdc1fee3904da569f43",
+        "parent": "67275ba6d28877f8550357ace690770b4360d9ee",
+        "parents": [
+          "67275ba6d28877f8550357ace690770b4360d9ee"
+        ],
+        "tree": "f661b2839eb74a92a62136c56989a7aa1884ab5e",
+        "paths": [
+          {
+            "path": "validation/composition-current.json",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "74c485c0638ecac754893f0e36b14000750bd9dc",
+            "git_blob": "5c5e5cb076596a6bd4c6e647e6275b957e8d5cde",
+            "status": "M",
+            "bytes": 60664,
+            "sha256": "D1752D314A8C8EC7A9E2E295BFF44E5E9F1A52AD455D673559CAAEA074323818"
+          }
+        ]
+      },
+      {
+        "kind": "post_composition_validation_repair",
+        "commit": "fdccbdc82663f4a5e7564e83e75c70ba1b9cb6fe",
+        "parent": "cb54424861452ccca4046fdc1fee3904da569f43",
+        "parents": [
+          "cb54424861452ccca4046fdc1fee3904da569f43"
+        ],
+        "tree": "783d6b31dd9783243885afe1b807198539b1086e",
+        "paths": [
+          {
+            "path": "tools/direct_successor_checkpoint.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "9687684f3fd3a0c2c8547b2691bee3f7d05e1761",
+            "git_blob": "b7b9223c109ec3350ec5b797b5cb50ffb42b4eef",
+            "status": "M",
+            "bytes": 32177,
+            "sha256": "5697FB0FFD0D12DF7AB81BAE50162313D6F0EB2C2A1010DFF8BF68052110A30A"
+          },
+          {
+            "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "ac31753f20766b852d2d57a5d5ea297db110d130",
+            "git_blob": "35a591593afb55a9ea70ec719ce8a80cb7eadd3e",
+            "status": "M",
+            "bytes": 17165,
+            "sha256": "28B28AA54691660C7D3EF26417E87A7BF94B15CD7496E950080E2C85BD673287"
+          },
+          {
+            "path": "tools/verdier_registered_insertion_successor.py",
+            "old_mode": "100644",
+            "mode": "100644",
+            "old_blob": "e73bdc880b1d59a43dffba166cf52170a2f062ed",
+            "git_blob": "004f9e1b783affd7ed84b2e0d701b457db33c176",
+            "status": "M",
+            "bytes": 55355,
+            "sha256": "0FA6AB988FC97D2D677DD15EF4415C19D4BB2075835BF4780546D05EC4946F67"
+          }
+        ]
       }
     ],
     "root_sources_unchanged_before_composition": true,
-    "lease_issue_is_fresh_root": true
+    "lease_issue_is_fresh_root": true,
+    "current_public_ega_errata_preservation_contract": "sealed passing EGA integration evidence plus exact immediate-public-to-Verdier input preservation; no claim of fresh checker replay against later public errata"
   },
   "new_overlays": [
     {
@@ -1369,7 +1432,7 @@
     "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
     "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
     "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
-    "validation_repair_commit": "67275ba6d28877f8550357ace690770b4360d9ee",
+    "validation_repair_commit": "fdccbdc82663f4a5e7564e83e75c70ba1b9cb6fe",
     "lease_issue_event": "lease-event-000124",
     "lease_release_event": "lease-event-000125"
   }
