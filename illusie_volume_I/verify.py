@@ -76,7 +76,7 @@ def validate(root: Path) -> dict:
                 (root / "tags/tags").read_text(encoding="utf-8").splitlines()
                 if line and not line.startswith("#") and "," in line)
     local_labels = re.findall(rb"\\label\{([^}]+)\}", snippet)
-    assert len(local_labels) == len(set(local_labels)) == 14
+    assert len(local_labels) == len(set(local_labels)) == 15
     for row in mapping["decisions"]:
         assert len(row["tags"]) == len(row["labels"]), row["id"]
         for tag, label in zip(row["tags"], row["labels"]):

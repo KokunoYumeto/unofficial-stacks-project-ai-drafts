@@ -9,8 +9,9 @@ Stacks Project contribution.
 The intended scope is all substantive mathematics of Volume I. The current
 inventory covers printed pp.1-16, I.1.1-I.1.4: 197 source anchors, 30 decisions,
 and 48 French/English witness files. Inventory coverage is not mathematical
-completion. The normal/degenerate comparison diagram on p.11 remains explicitly
-pending as `I-1.3-006`; the rest of Volume I remains to be processed.
+completion. The normal/degenerate comparison diagram on p.11 is resolved by
+the normalized quotient/Moore-projection lemma recorded as `I-1.3-006`; the
+rest of Volume I remains to be processed.
 
 ## Mathematics
 
@@ -64,7 +65,6 @@ passes. This sparse build has 67 unchanged external AUX references outside the
 addition, and is not a full-book build. New strict diagnostics must be zero.
 The current build and visual-inspection receipt records its precise scope.
 
-Next: resolve the p.11 normal/degenerate comparison diagram, then continue at
-I.1.5, printed p.17. GitHub preserves coherent increments; the established
+Next: continue at I.1.5, printed p.17. GitHub preserves coherent increments; the established
 Zenodo lineage receives substantial cumulative milestones. Public access is
 preserved throughout.

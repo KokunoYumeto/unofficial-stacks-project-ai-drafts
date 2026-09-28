@@ -62,3 +62,20 @@ the new local theorem records iterated normalization in each simplicial
 variable, canonical comparison of successive orders, and signed-total
 compatibility. This is a constructive Stacks-style gap fill, not a silent
 repair of the source. No transcription witness was altered.
+
+### I.1.3.5, printed p.11: raw versus normalized Alexander--Whitney
+
+The printed diagram says that both unnormalized Eilenberg--Zilber arrows
+restrict to the Moore normal subcomplexes. The raw Alexander--Whitney arrow
+does not do so in general. For the free bisimplicial abelian group
+`Z[Hom([a],[0]) x Hom([b],[1])]`, the degree-one element
+`[(0,0);(0,0)] - [(0,0);(0,1)]` is killed by the positive diagonal face, but
+the positive horizontal face of the `(1,0)` Alexander--Whitney component is
+`[(0);(0)] - [(0);(1)]`, which is nonzero.
+
+The correct normalized assertion is obtained on the quotient by degenerate
+subcomplexes. Under the Moore splitting, shuffle restricts without change,
+whereas Alexander--Whitney is followed by the horizontal and vertical Moore
+projections. The resulting maps are natural chain-homotopy inverses. This is
+proved in `lemma-illusie-I-normalized-eilenberg-zilber`; the diplomatic source
+continues to preserve the printed claim.

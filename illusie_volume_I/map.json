@@ -549,14 +549,17 @@
         "d30"
       ],
       "claim": "The printed normal/degenerate comparison squares for shuffle and Alexander-Whitney.",
-      "disposition": "pending_exact_operator_and_diagram_comparison",
+      "disposition": "new_corrected_normalized_eilenberg_zilber",
       "tags": [
         "019G"
       ],
       "labels": [
         "simplicial-theorem-dold-kan"
       ],
-      "reason": "The earlier row incorrectly treated these squares as proved by iterated Dold-Kan. Raw Moore-subcomplex restrictions must be checked against the exact diagram and distinguished from quotient-normalized induced maps. No completed-coverage claim is made for these two anchors."
+      "local_labels": [
+        "lemma-illusie-I-normalized-eilenberg-zilber"
+      ],
+      "reason": "The printed top-right square overstates the raw Alexander--Whitney map: on the free bisimplicial group Z[Hom([a],[0]) x Hom([b],[1])], the degree-one element [(0,0);(0,0)]-[(0,0);(0,1)] is diagonal-Moore-normal but its raw AW (1,0) component has nonzero positive horizontal face. The new lemma proves that shuffle and AW preserve the relevant degenerate subcomplexes, hence induce quotient-normalized maps; under the Moore splittings these are the raw shuffle restriction and P^{h,v} AW, and they are natural chain-homotopy inverses."
     },
     {
       "id": "I-1.4-001",
@@ -770,12 +773,10 @@
       ]
     }
   ],
-  "next_source_unit": "Resolve I.1.3 p24/d30 (printed p.11) exact normalized comparison; then I.1.5 (printed p.17).",
+  "next_source_unit": "I.1.5, printed p.17.",
   "completion": {
     "covered_anchor_inventory": true,
-    "mathematical_dispositions_complete": false,
-    "pending_decisions": [
-      "I-1.3-006"
-    ]
+    "mathematical_dispositions_complete": true,
+    "pending_decisions": []
   }
 }
