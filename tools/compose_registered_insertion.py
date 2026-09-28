@@ -87,6 +87,11 @@ def require_sha256(value: object, label: str) -> str:
     return value.upper()
 
 
+def label_declaration_bytes(label: str) -> bytes:
+    """Return the exact TeX label declaration, excluding ordinary references."""
+    return ("\\label{" + label + "}").encode("utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--overlay-id", required=True)
@@ -298,7 +303,7 @@ def main() -> int:
     label = payload_record.get("proposed_label")
     if not isinstance(label, str) or not label:
         raise ValueError("payload lacks a proposed label")
-    label_bytes = label.encode("utf-8")
+    label_bytes = label_declaration_bytes(label)
     if base.count(label_bytes) != 0:
         raise ValueError("proposed label is already present in the canonical base")
     rebased_context_start = base.index(context)

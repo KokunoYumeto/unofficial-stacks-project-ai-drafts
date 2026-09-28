@@ -76,6 +76,8 @@ INITIAL_VALIDATION_TOOL_TREE = "c156fc3c322e61e332033ff47474458a6d1a11fc"
 CANDIDATE_CLOSURE_COMMIT = "b4dda8252385769162c8232360cf4fe2569c00cb"
 CANDIDATE_CLOSURE_TREE = "8ecfdba218d25816868e460086d957b296310a28"
 FINAL_CANDIDATE_SUBTREE = "3cedabb80302dd3df9d2d2e191bb4773c614a1fc"
+CLOSURE_VALIDATOR_COMMIT = "6ee8278c2efa69ba8dc1dbcad2d4bbf2b7126c5e"
+CLOSURE_VALIDATOR_TREE = "62ab88f98dd1da0ebd579c5cfa8bff230bf5c5ba"
 OVERLAYS = "ai-integrated/registry/overlays.json"
 LEASES = "ai-integrated/registry/leases.json"
 ADMISSION_RECEIPT = "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1.json"
@@ -136,6 +138,12 @@ VALIDATION_TOOL_PATHS = (
 
 FINAL_VALIDATOR_PATHS = (
     CLOSURE_CORRECTION_RECEIPT,
+    "tools/verdier_registered_insertion_successor.py",
+    "tools/tests/test_verdier_registered_insertion_successor.py",
+)
+
+COMPOSER_REPAIR_PATHS = (
+    "tools/compose_registered_insertion.py",
     "tools/verdier_registered_insertion_successor.py",
     "tools/tests/test_verdier_registered_insertion_successor.py",
 )
@@ -540,11 +548,11 @@ def _validate_validation_tools(
                 for data in git.changes(INITIAL_VALIDATION_TOOL_COMMIT,
                                         CANDIDATE_CLOSURE_COMMIT).values()),
             "candidate closure repair must add the two ignored dotfiles")
-    final = _require_step(
+    closure_seal = _require_step(
         git,
         CANDIDATE_CLOSURE_COMMIT,
-        validation_tool_commit,
-        None,
+        CLOSURE_VALIDATOR_COMMIT,
+        CLOSURE_VALIDATOR_TREE,
         "closure_correction_receipt_and_validator",
         set(FINAL_VALIDATOR_PATHS),
     )
@@ -554,9 +562,20 @@ def _validate_validation_tools(
         "tools/tests/test_verdier_registered_insertion_successor.py": "M",
     }
     require({path: row[4] for path, row in
-             git.changes(CANDIDATE_CLOSURE_COMMIT, validation_tool_commit).items()}
+             git.changes(CANDIDATE_CLOSURE_COMMIT, CLOSURE_VALIDATOR_COMMIT).items()}
             == expected_types,
             "closure-correction validator path types mismatch")
+    composer_repair = _require_step(
+        git,
+        CLOSURE_VALIDATOR_COMMIT,
+        validation_tool_commit,
+        None,
+        "exact_label_declaration_composer_repair",
+        set(COMPOSER_REPAIR_PATHS),
+    )
+    require(all(data[4] == "M" for data in
+                git.changes(CLOSURE_VALIDATOR_COMMIT, validation_tool_commit).values()),
+            "composer repair must modify its three existing tool/test paths only")
     require(git.text("rev-parse", CANDIDATE_CLOSURE_COMMIT + ":" + CANDIDATE_DIR)
             == FINAL_CANDIDATE_SUBTREE,
             "candidate closure repair produced the wrong subtree")
@@ -564,7 +583,7 @@ def _validate_validation_tools(
             == FINAL_CANDIDATE_SUBTREE,
             "final validator commit changed the closed candidate")
     for revision in (INITIAL_VALIDATION_TOOL_COMMIT, CANDIDATE_CLOSURE_COMMIT,
-                     validation_tool_commit):
+                     CLOSURE_VALIDATOR_COMMIT, validation_tool_commit):
         require(git.ident(composition_commit, TARGET) == git.ident(revision, TARGET),
                 "post-composition validation work changed the composed source")
     correction = git.document(validation_tool_commit, CLOSURE_CORRECTION_RECEIPT)
@@ -591,7 +610,7 @@ def _validate_validation_tools(
         require(git.ident(CANDIDATE_CLOSURE_COMMIT, row["path"])
                 == {key: row[key] for key in ID_KEYS},
                 "manifest-closure repaired-file identity mismatch")
-    return validation_tool_commit, [initial, closure, final]
+    return validation_tool_commit, [initial, closure, closure_seal, composer_repair]
 
 
 def _validate_admission(
@@ -718,7 +737,7 @@ def _metadata_preserved(git: Git, source: str, endpoint: str, protected: dict[st
     decisive = {OVERLAYS, LEASES, CANDIDATE_DIR + "/candidate.manifest.json",
                 CANDIDATE_DIR + "/" + PAYLOAD, CANDIDATE_DIR + "/" + COMPOSITION,
                 CANDIDATE_DIR + "/" + SOURCE_MAP, CANDIDATE_DIR + "/" + STABLE_UNITS,
-                ADMISSION_RECEIPT, TARGET, COMPOSER}
+                ADMISSION_RECEIPT, TARGET}
     decisive.update(protected)
     for path in decisive:
         require(git.ident(source, path) == git.ident(endpoint, path),

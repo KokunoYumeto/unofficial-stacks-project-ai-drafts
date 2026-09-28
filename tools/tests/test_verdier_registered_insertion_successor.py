@@ -16,6 +16,7 @@ if str(TOOLS) not in sys.path:
 
 import build_fixed_point as build
 import compare_fixed_point_builds as compare
+import compose_registered_insertion as composer
 import direct_successor_checkpoint as checkpoint
 import validate_verdier_registered_insertion_successor as release
 import verdier_registered_insertion_successor as verdier
@@ -51,6 +52,16 @@ class ExactPublicPrefixTests(unittest.TestCase):
 
 
 class PureContractTests(unittest.TestCase):
+    def test_composer_counts_exact_label_declarations_not_references(self):
+        label = "lemma-nested-quotients"
+        payload = (
+            "\\label{lemma-nested-quotients}\n"
+            "See Lemma \\ref{lemma-nested-quotients}.\n"
+        ).encode("utf-8")
+        declaration = composer.label_declaration_bytes(label)
+        self.assertEqual(payload.count(declaration), 1)
+        self.assertEqual(payload.count(label.encode("utf-8")), 2)
+
     def test_manifest_closure_repair_is_two_dotfiles_only(self):
         correction = json.loads((ROOT / verdier.CLOSURE_CORRECTION_RECEIPT).read_text(
             encoding="utf-8"))
@@ -65,6 +76,11 @@ class PureContractTests(unittest.TestCase):
                          verdier.FINAL_CANDIDATE_SUBTREE)
         self.assertEqual(set(verdier.FINAL_VALIDATOR_PATHS), {
             verdier.CLOSURE_CORRECTION_RECEIPT,
+            "tools/verdier_registered_insertion_successor.py",
+            "tools/tests/test_verdier_registered_insertion_successor.py",
+        })
+        self.assertEqual(set(verdier.COMPOSER_REPAIR_PATHS), {
+            "tools/compose_registered_insertion.py",
             "tools/verdier_registered_insertion_successor.py",
             "tools/tests/test_verdier_registered_insertion_successor.py",
         })
