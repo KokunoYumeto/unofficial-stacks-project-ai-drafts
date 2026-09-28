@@ -26,6 +26,7 @@ DIRECT_TOOLS = direct_successor_composition.DIRECT_TOOLS
 SCHEMA = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-direct-successor/v1"
 STATUS = "PASS_SOURCE_CHECKPOINT_DIRECT_SUCCESSOR"
 AI_COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+VERDIER_COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-verdier-registered-insertion-successor/v1"
 SCHEMA_AI = "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-ai-source-correction-successor/v1"
 STATUS_AI = "PASS_SOURCE_CHECKPOINT_AI_SOURCE_CORRECTION_SUCCESSOR"
 require = historical.require
@@ -156,7 +157,7 @@ def verify_historical_semantic(build, source, prior, head, composition):
             "checker_input_tuple_sha256": build.canonical_tuple_sha256(protected)}, semantic_paths, protected
 
 
-def verify_current_ega(build, source, prior, head):
+def verify_current_ega(build, source, prior, head, *, replay_current_checker: bool = True):
     paths = ega_dependency_paths(build, source, prior)
     require(paths == ega_dependency_paths(build, source, head), "inherited current EGA input inventory changed")
     for path in paths:
@@ -188,20 +189,41 @@ def verify_current_ega(build, source, prior, head):
     require(isinstance(expected, dict) and expected.get("schema") == "ega-stacks-scaffold-check-v1"
             and expected.get("status") == "PASS" and expected.get("errors") == [],
             "current EGA sealed checker result is invalid")
-    with isolated_checker_import_cache():
-        check = subprocess.run([sys.executable, "-X", "utf8", "-B", "ega/check.py"], cwd=source,
-                               capture_output=True, text=True, encoding="utf-8", timeout=600)
-    require(check.returncode == 0, "current inherited EGA checker failed: " + (check.stderr or check.stdout))
-    observed = build.strict_json_loads(check.stdout, "current inherited EGA checker")
-    require(observed == expected, "current EGA checker differs from already-public integration result")
-    require(before == require_exact_inputs(build, source, head, paths), "current EGA inputs changed during checker")
-    return {"schema": SEMANTIC_JOIN_SCHEMA, "status": "PASS_CURRENT_PUBLIC_EGA_PRESERVED",
+    if replay_current_checker:
+        with isolated_checker_import_cache():
+            check = subprocess.run([sys.executable, "-X", "utf8", "-B", "ega/check.py"], cwd=source,
+                                   capture_output=True, text=True, encoding="utf-8", timeout=600)
+        require(check.returncode == 0,
+                "current inherited EGA checker failed: " + (check.stderr or check.stdout))
+        observed = build.strict_json_loads(check.stdout, "current inherited EGA checker")
+        require(observed == expected,
+                "current EGA checker differs from already-public integration result")
+        status = "PASS_CURRENT_PUBLIC_EGA_PRESERVED"
+    else:
+        # Later public errata legitimately changed root sources after the sealed
+        # EGA integration.  The historical checker encodes the older bytes and
+        # would reject that public successor.  Bind its sealed passing output,
+        # and prove that Verdier preserves the exact immediate-public EGA input
+        # closure, without misreporting a fresh checker replay.
+        observed = expected
+        status = "PASS_CURRENT_PUBLIC_EGA_INHERITED_WITH_LATER_PUBLIC_ERRATA"
+    require(before == require_exact_inputs(build, source, head, paths),
+            "current EGA inputs changed during validation")
+    result = {"schema": SEMANTIC_JOIN_SCHEMA, "status": status,
             "previous_public_commit": prior, "current_commit": head,
             "integration_receipt": validation_id, "integration_source_commit": integrated,
-            "checker": observed, "fresh_import_cache": True, "input_count": len(before),
+            "checker": observed, "fresh_import_cache": replay_current_checker,
+            "current_checker_replayed": replay_current_checker,
+            "input_count": len(before),
             "input_tuple_sha256": build.canonical_tuple_sha256([
                 build.protected_input("successor_current_input", head, row) for row in before]),
-            "historical_semantic_receipt_not_relabelled": True}, paths
+            "historical_semantic_receipt_not_relabelled": True}
+    if not replay_current_checker:
+        result["checker_evidence"] = (
+            "sealed passing EGA integration output plus exact immediate-public-to-Verdier "
+            "input preservation; no fresh replay against later public errata bytes"
+        )
+    return result, paths
 
 
 def _recheck_at(build, source, binding, protected):
@@ -252,6 +274,13 @@ def validate_direct_source_checkpoint_at(root, checkpoint_path, composition_bind
     return binding
 
 
+def illusie_manifest_validation_revision(composition: dict, head: str) -> str:
+    """Choose the exact revision that sealed the inherited Illusie manifest."""
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        return composition["inherited_ai_validation_head"]
+    return head
+
+
 def verify_current_illusie(build, source, composition, head):
     """Bind actual reviewed proof evidence plus current finite/mechanical checks."""
     if __package__:
@@ -259,8 +288,13 @@ def verify_current_illusie(build, source, composition, head):
     else:
         import ai_source_correction_composition as correction
     scope = composition.get("ai_source_correction_scope")
+    scope_source_commit = composition["composition_source_commit"]
+    scope_source_tree = composition["composition_source_tree"]
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        scope_source_commit = composition.get("inherited_ai_source_commit")
+        scope_source_tree = composition.get("inherited_ai_source_tree")
     correction.validate_ai_source_correction_scope(scope,
-        source_commit=composition["composition_source_commit"], source_tree=composition["composition_source_tree"])
+        source_commit=scope_source_commit, source_tree=scope_source_tree)
     protected = composition.get("correction_protected_inputs")
     require(isinstance(protected, dict) and {correction.MANIFEST, "simplicial.tex", "illusie_volume_I/verify.py",
             "illusie_volume_I/test_composition.py", "illusie_volume_I/test_ez.py"} <= set(protected),
@@ -273,9 +307,29 @@ def verify_current_illusie(build, source, composition, head):
                 f"current Illusie dossier identity mismatch: {path}")
     before = require_exact_inputs(build, source, head, sorted(protected))
     git = correction.Git(source)
-    manifest = git.document(head, correction.MANIFEST)
-    # Recompute exact candidate/source replay and review closure at this build head.
-    correction.validate_manifest(git, manifest, head)
+    manifest_revision = build.require_commit_object(
+        source,
+        illusie_manifest_validation_revision(composition, head),
+        "inherited Illusie validation head",
+    )
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        expected_tree = composition.get("inherited_ai_validation_tree")
+        require(build.git(source, "rev-parse", f"{manifest_revision}^{{tree}}") == expected_tree,
+                "inherited Illusie validation tree mismatch")
+        build.require_ancestor(
+            source,
+            manifest_revision,
+            "inherited Illusie validation head to immediate public predecessor",
+            composition["previous_public_main_head"],
+        )
+    require(build.committed_file_identity(source, manifest_revision, correction.MANIFEST)
+            == build.committed_file_identity(source, head, correction.MANIFEST),
+            "inherited Illusie manifest changed after its sealed validation revision")
+    manifest = git.document(manifest_revision, correction.MANIFEST)
+    # Recompute the exact candidate/source replay and review closure at the
+    # exact sealed validation revision that owns it.  The current endpoint is checked
+    # independently above and below against every protected byte.
+    correction.validate_manifest(git, manifest, manifest_revision)
     checker = build.committed_file_identity(source, head, "illusie_volume_I/verify.py")
     with isolated_checker_import_cache():
         run = subprocess.run([sys.executable, "-X", "utf8", "-B", "illusie_volume_I/verify.py"], cwd=source,
@@ -294,17 +348,86 @@ def verify_current_illusie(build, source, composition, head):
     require(before == require_exact_inputs(build, source, head, sorted(protected)), "Illusie inputs changed during validation")
     return {"schema": "unofficial-stacks-project-ai-drafts-current-illusie-correction-binding/v1",
             "status": "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND", "current_commit": head,
-            "composition_source_commit": composition["composition_source_commit"],
-            "composition_source_tree": composition["composition_source_tree"], "scope": scope,
+            "composition_source_commit": scope_source_commit,
+            "composition_source_tree": scope_source_tree, "scope": scope,
             "review": manifest["independent_review"], "checker": checker, "checker_result": result,
+            "manifest_validation_revision": manifest_revision,
             "regression_tests": {"status": "PASS", "tests_run": 5, "modules": modules}}
+
+
+def historical_surface_comparison_commit(composition: dict, anchor: str) -> str:
+    """Return the revision whose EGA surface must equal the build head.
+
+    A Verdier successor inherits a separately validated historical checkpoint
+    and a later, already-public EGA integration.  Its root-source invariant is
+    therefore current-public-to-successor equality, while the historical
+    anchor remains independently replayed by ``verify_historical``.
+    """
+    if composition.get("schema") == VERDIER_COMPOSITION_SCHEMA:
+        return composition["previous_public_main_head"]
+    return anchor
+
+
+def historical_semantic_composition(
+    build,
+    source: Path,
+    prior: str,
+    inherited: dict,
+    *,
+    verdier_successor: bool,
+) -> tuple[dict[str, str], dict[str, object]]:
+    """Resolve the receipt that originally owns the EGA semantic increment.
+
+    The immediate predecessor of the Verdier lane carries a later Illusie
+    correction receipt.  Its composition source is not the parent of the
+    earlier EGA semantic commit.  Follow the correction receipt's exact
+    previous-cutoff pointer once, verify its declared receipt identity, and
+    use that sealed direct-composition source for the historical replay.
+    """
+    owner_commit = prior
+    owner_receipt = inherited
+    owner_identity = build.committed_file_identity(
+        source, owner_commit, "validation/composition-current.json")
+    require(owner_identity is not None, "semantic composition owner receipt is absent")
+    if verdier_successor and inherited.get("schema") == AI_COMPOSITION_SCHEMA:
+        cutoff = inherited.get("previous_cutoff")
+        require(isinstance(cutoff, dict),
+                "inherited AI correction lacks its previous composition cutoff")
+        owner_commit = build.require_commit_object(
+            source, cutoff.get("public_main_head"), "historical semantic composition owner")
+        build.require_ancestor(source, owner_commit,
+                               "historical semantic composition owner to immediate predecessor",
+                               prior)
+        owner_identity = build.committed_file_identity(
+            source, owner_commit, "validation/composition-current.json")
+        declared = cutoff.get("receipt")
+        require(owner_identity is not None and isinstance(declared, dict)
+                and declared.get("path") == "validation/composition-current.json"
+                and all(owner_identity.get(key) == declared.get(key)
+                        for key in ("bytes", "sha256", "git_blob")),
+                "historical semantic composition owner receipt identity mismatch")
+        owner_receipt = build.parse_json_blob(
+            source, owner_identity, "historical semantic composition owner")
+    require(owner_receipt.get("schema") in {
+                direct_successor_composition._helper.SCHEMA,
+                DIRECT_SCHEMA,
+            }
+            and owner_receipt.get("status") == "PASS"
+            and isinstance(owner_receipt.get("composition"), dict),
+            "historical semantic composition owner is not a passing direct composition")
+    binding = {
+        "composition_source_commit": owner_receipt["composition"]["source_commit"],
+        "composition_base_commit": owner_receipt["composition"]["base_commit"],
+    }
+    return binding, {"commit": owner_commit, **owner_identity}
 
 
 def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: dict, head: str, *, live: bool):
     head = build.require_commit_object(source, head, "direct checkpoint actual revision")
     tree = build.git(source, "rev-parse", f"{head}^{{tree}}")
-    is_ai = composition.get("schema") == AI_COMPOSITION_SCHEMA
-    require(composition.get("schema") in {DIRECT_SCHEMA, AI_COMPOSITION_SCHEMA},
+    is_verdier = composition.get("schema") == VERDIER_COMPOSITION_SCHEMA
+    is_ai = composition.get("schema") in {AI_COMPOSITION_SCHEMA, VERDIER_COMPOSITION_SCHEMA}
+    require(composition.get("schema") in {DIRECT_SCHEMA, AI_COMPOSITION_SCHEMA, VERDIER_COMPOSITION_SCHEMA},
             "direct checkpoint requires typed direct composition")
     require(build.committed_file_identity(source, head, SEMANTIC_PATH) is not None,
             "post-content receipt topology requires a supported committed semantic successor")
@@ -313,10 +436,11 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
     build.require_ancestor(source, anchor, "historical checkpoint to previous public source",
                            composition["previous_public_main_head"])
     historical, old_protected = verify_historical(build, source, anchor)
+    surface_commit = historical_surface_comparison_commit(composition, anchor)
     for path in ("schemes.tex", "tags/tags"):
-        require(build.committed_file_identity(source, anchor, path)
+        require(build.committed_file_identity(source, surface_commit, path)
                 == build.committed_file_identity(source, head, path),
-                f"historical EGA root proof or official tag surface changed: {path}")
+                f"validated EGA root proof or official tag surface changed: {path}")
     root_names = build.git(source, "ls-tree", "--name-only", head).splitlines()
     root_tex = [p for p in root_names if "/" not in p and p.endswith(".tex")]
     source_commit = composition["composition_source_commit"]
@@ -331,22 +455,25 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
     inherited_id = build.committed_file_identity(source, prior, "validation/composition-current.json")
     require(inherited_id is not None, "direct checkpoint inherited composition is absent")
     inherited = build.parse_json_blob(source, inherited_id, "inherited actual composition")
-    require(inherited.get("schema") in {direct_successor_composition._helper.SCHEMA, DIRECT_SCHEMA}
+    require(inherited.get("schema") in {
+                direct_successor_composition._helper.SCHEMA,
+                DIRECT_SCHEMA,
+                AI_COMPOSITION_SCHEMA,
+            }
             and inherited.get("status") == "PASS" and isinstance(inherited.get("composition"), dict),
             "inherited composition is not a passing typed source binding")
     # The semantic increment belongs to its original cumulative source endpoint.
     # Never relabel it as a child of the new source-only composition commit.
-    inherited_binding = {
-        "composition_source_commit": inherited["composition"]["source_commit"],
-        "composition_base_commit": inherited["composition"]["base_commit"],
-    }
+    inherited_binding, semantic_owner = historical_semantic_composition(
+        build, source, prior, inherited, verdier_successor=is_verdier)
     for path in SEMANTIC_PATHS | set(PROTECTED_SEMANTIC_PATHS):
         require(build.committed_file_identity(source, prior, path)
                 == build.committed_file_identity(source, head, path),
                 f"inherited EGA semantic input drifted: {path}")
     semantic, semantic_paths, semantic_protected = verify_historical_semantic(
         build, source, prior, head, inherited_binding)
-    current_ega, current_ega_paths = verify_current_ega(build, source, prior, head)
+    current_ega, current_ega_paths = verify_current_ega(
+        build, source, prior, head, replay_current_checker=not is_verdier)
     current_illusie = verify_current_illusie(build, source, composition, head) if is_ai else None
     # Current inputs are frozen independently of the historical byte inventory.
     paths = set(root_tex + semantic_paths + [logical, "my.bib", "tags/tags",
@@ -383,6 +510,7 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
                               "verification": historical},
         "semantic_successor": semantic, "current_ega_successor": current_ega,
         "inherited_composition": {"commit": prior, **inherited_id},
+        "historical_semantic_composition": semantic_owner,
         "root_source_stem": "schemes",
         "canonical_composition": {
             "path": composition["receipt"], "git_blob": composition["receipt_git_blob"],
@@ -397,11 +525,13 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
         "external_authority_inputs": historical["external_authority_inputs"],
         "checks": ["original_producer_and_consumer_run_at_actual_historical_receipt_head",
                    "historical_tools_content_receipt_topology_preserved",
-                   "historical_schemes_proof_and_tags_unchanged",
+                   "historical_anchor_replayed_and_current_public_EGA_surface_unchanged",
                    "all_current_root_tex_exact_at_validated_composition_source",
                    "semantic_increment_exact_append_prefixes_scope_and_checker",
                    "semantic_increment_checker_executed_at_its_actual_own_receipt_head",
-                   "later_public_ega_inputs_preserved_and_current_checker_separately_replayed",
+                   ("later_public_ega_inputs_preserved_with_sealed_checker_evidence"
+                    if is_verdier else
+                    "later_public_ega_inputs_preserved_and_current_checker_separately_replayed"),
                    "historical_and_current_inputs_frozen_through_final_build_recheck"],
     }
     if is_ai:
@@ -409,6 +539,10 @@ def _load_at(build, source: Path, logical: str, checkpoint: dict, composition: d
         binding["current_illusie_successor"] = current_illusie
         binding["checks"].extend(["separate_AI_correction_exact_candidate_replay_and_review_closure",
                                   "current_Illusie_mechanical_checks_and_five_finite_regressions"])
+    if is_verdier:
+        binding["verdier_registered_insertion"] = composition["verdier_registered_insertion_scope"]
+        binding["checks"].extend(["single_registered_insertion_exact_prefix_suffix_replay",
+                                  "seven_Verdier_stable_units_and_registry_admission_bound"])
     if live:
         build.require_source_checkpoint_unchanged(source, binding, tuple(protected))
     else:

@@ -1,0 +1,95 @@
+\begin{lemma}
+\label{lemma-homotopy-category-abelian-split}
+Let $\mathcal{A}$ be an abelian category. The following are equivalent.
+\begin{enumerate}
+\item The category $K(\mathcal{A})$ is abelian.
+\item Every morphism of $K(\mathcal{A})$ satisfies condition (3) of
+Lemma \ref{lemma-when-split}.
+\item Every short exact sequence in $\mathcal{A}$ splits.
+\end{enumerate}
+If these conditions hold, then the functor
+$$
+H^* : K(\mathcal{A}) \longrightarrow K(\mathcal{A}), \qquad
+H^*(X^\bullet)^n = H^n(X^\bullet), \quad d_{H^*(X)}^n = 0
+$$
+is an equivalence of categories.
+\end{lemma}
+
+\begin{proof}
+By Proposition \ref{proposition-homotopy-category-triangulated},
+$K(\mathcal{A})$ is pre-triangulated. Hence Lemma
+\ref{lemma-when-split} and
+Homology, Definition \ref{homology-definition-abelian-category}
+show that (1) and (2) are equivalent. More explicitly, an abelian
+category has kernels, so the lemma gives the normal form in (2).
+Conversely, that normal form supplies kernels and cokernels, and the
+canonical map from coimage to image becomes the identity on its middle
+summand.
+
+Assume (2), and let
+$$
+0 \longrightarrow A \xrightarrow{a} B \longrightarrow C
+\longrightarrow 0
+$$
+be a short exact sequence in $\mathcal{A}$. Apply (2) to $a$, viewed as
+a map between complexes concentrated in degree zero. The normal form gives
+a morphism $b : B \to A$ in $K(\mathcal{A})$ such that $aba = a$.
+There are no nonzero homotopies between maps of complexes concentrated in
+degree zero, so this is the same equality in $\mathcal{A}$. Since $a$ is
+a monomorphism, $ba = 1$, and the sequence splits. Thus (2) implies (3).
+
+Assume (3). For a complex $X^\bullet$, put
+$$
+Z_X^n = \Ker(d_X^n), \qquad B_X^n = \Im(d_X^{n - 1}).
+$$
+Choose splittings of the two short exact sequences
+$$
+0 \longrightarrow Z_X^n \longrightarrow X^n \longrightarrow
+B_X^{n + 1} \longrightarrow 0,
+\qquad
+0 \longrightarrow B_X^n \longrightarrow Z_X^n \longrightarrow
+H^n(X^\bullet) \longrightarrow 0.
+$$
+They give decompositions
+$$
+X^n = B_X^n \oplus H^n(X^\bullet) \oplus B_X^{n + 1}
+$$
+under which $d_X^n(b, h, c) = (c, 0, 0)$. Consequently $X^\bullet$
+is the direct sum of $H^*(X^\bullet)$ and the complex $C_X^\bullet$ with
+$$
+C_X^n = B_X^n \oplus B_X^{n + 1}, \qquad
+d_{C_X}^n(b, c) = (c, 0).
+$$
+The maps $s^n : C_X^n \to C_X^{n - 1}$ given by
+$s^n(b, c) = (0, b)$ form a contracting homotopy. We obtain maps
+$$
+i_X : H^*(X^\bullet) \longrightarrow X^\bullet, \qquad
+p_X : X^\bullet \longrightarrow H^*(X^\bullet)
+$$
+whose composites are inverse in $K(\mathcal{A})$ and which induce the
+identity on cohomology.
+
+The maps on cohomology define $H^*$ on morphisms of $K(\mathcal{A})$ by
+Homology, Lemma
+\ref{homology-lemma-map-cohomology-homotopy-cochain}. For any map
+$u : H^*(X^\bullet) \to H^*(Y^\bullet)$, the map
+$i_Y u p_X$ induces $u$ on cohomology. Conversely, for every
+$f : X^\bullet \to Y^\bullet$ in $K(\mathcal{A})$ we have
+$$
+f = i_Y p_Y f i_X p_X = i_Y H^*(f) p_X.
+$$
+Thus $u \mapsto i_Y u p_X$ is an inverse to the map on Hom sets induced
+by $H^*$, so $H^*$ is fully faithful. It is essentially surjective since
+every $X^\bullet$ is isomorphic to $H^*(X^\bullet)$ and
+$H^*H^*(X^\bullet) = H^*(X^\bullet)$.
+
+The full subcategory of complexes with zero differential is the category
+$\text{Gr}(\mathcal{A})$ of
+Homology, Definition \ref{homology-definition-graded}, which is abelian by
+Homology, Lemma \ref{homology-lemma-graded}. The equivalence just proved
+therefore implies that $K(\mathcal{A})$ is abelian. This proves (3)
+implies (1) and finishes the proof.
+
+The splittings used above are choices; no natural isomorphism between the
+identity functor and $H^*$ is asserted.
+\end{proof}

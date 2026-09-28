@@ -634,6 +634,21 @@ def main(argv: list[str] | None = None) -> int:
         )
     except (OSError, json.JSONDecodeError):
         current_composition = None
+    if isinstance(current_composition, dict) and current_composition.get("schema") == (
+        "unofficial-ai-integrated-stacks-verdier-registered-insertion-successor/v1"
+    ):
+        from validate_direct_successor_release import parse_json, INDEX
+        from validate_verdier_registered_insertion_successor import validate_verdier_successor
+
+        if not explicit_build_receipt:
+            try:
+                verdier_index = parse_json((ROOT / INDEX).read_bytes())
+                args.build_receipt = Path(verdier_index["references"]["build"]["path"])
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                print("Verdier successor release validation: FAIL\n- invalid current build index: " + str(exc), file=sys.stderr)
+                return 1
+
+        return validate_verdier_successor(ROOT, args.build_receipt, args.pre_publication)
     if isinstance(current_composition, dict) and current_composition.get("schema") in {
         "unofficial-ai-integrated-stacks-direct-composition/v1",
         "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1",

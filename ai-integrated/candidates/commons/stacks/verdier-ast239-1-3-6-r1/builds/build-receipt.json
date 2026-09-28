@@ -1,0 +1,80 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-build-receipt/v1",
+  "status": "PASS",
+  "passed": true,
+  "created_utc": "2026-09-06T20:05:55Z",
+  "source": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts",
+    "commit": "f73b18165c7162b8386de06cc3c50bd4ced745b6",
+    "tree": "5bc25c775349eddf5fa90a7f37f5b11044d89ec1",
+    "target": "derived.tex",
+    "source_date_epoch": "1788641805"
+  },
+  "environment": {
+    "python": "3.13.9",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdfinfo": "pdfinfo version 26.07.0",
+    "timezone": "UTC"
+  },
+  "strategy": {
+    "name": "bounded-direct-label-provider-fixed-point-with-baseline",
+    "stems": [
+      "sets",
+      "categories",
+      "algebra",
+      "homology",
+      "more-algebra",
+      "injectives",
+      "examples",
+      "derived"
+    ],
+    "stems_count": 8,
+    "fixed_point_vector_suffixes": [
+      ".pdf",
+      ".aux",
+      ".toc",
+      ".out",
+      ".bbl"
+    ],
+    "maximum_sweeps": 6,
+    "unrelated_external_auxiliaries": "held absent and identical between baseline and candidate"
+  },
+  "results": {
+    "baseline_derived_pdf_sha256": "1E8BB58097D302E08F61E4842BC9C7F167E3878F735AEF246AF06AAEE00B9244",
+    "candidate_derived_pages": 131,
+    "candidate_derived_pdf": {
+      "path": "builds/derived.pdf",
+      "bytes": 1251089,
+      "sha256": "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331"
+    },
+    "candidate_derived_log": {
+      "path": "builds/derived.log",
+      "bytes": 51617,
+      "sha256": "3907949D2C8BE01837677A4A9726563FB5EB5AB54252F55361D3E76B6662DCE6"
+    },
+    "baseline_derived_log": {
+      "path": "builds/baseline-derived.log",
+      "bytes": 51611,
+      "sha256": "285307FCB784CBB447DA375958465A8127BF19E69AD587117C649CFC13B47BB8"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 1468,
+      "sha256": "D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB"
+    }
+  },
+  "machine_wide_tex_mutex": {
+    "schema": "unofficial-ai-integrated-stacks-tex-mutex/v1",
+    "status": "PASS",
+    "passed": true,
+    "name": "Global\\InterlanguageTeXSlotV1",
+    "timeout_ms": 120000,
+    "acquired": true,
+    "acquired_at_utc": "2026-09-06T20:02:29.493Z",
+    "abandoned_mutex_recovered": false,
+    "released": true,
+    "released_at_utc": "2026-09-06T20:05:56.242Z",
+    "captured_child_exit_code": 0
+  }
+}

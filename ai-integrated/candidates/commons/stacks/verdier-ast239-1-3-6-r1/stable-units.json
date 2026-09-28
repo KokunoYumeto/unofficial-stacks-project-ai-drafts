@@ -1,0 +1,107 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-units/v1",
+  "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+  "authority_sha256": "6214C252BACEBA5584E3C4AEB564C129851941C1A9250BABAB45B79A3939B0AE",
+  "payload_state": "authored_built_validated",
+  "composition_operation_id": "VDR-STK-COMP-0002",
+  "payload_sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E",
+  "lifecycle": {
+    "build_state": "validated_pass",
+    "visual_qa_state": "visual_qa_passed",
+    "build_receipt_sha256": "5CD5F1A6B2A8B0A1DAA9E04F705AF5F334C21108CF242EC432FE090750C3F42D",
+    "validation_sha256": "D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB",
+    "visual_qa_sha256": "EA4A81FA009E323BE18F25D23AE2A0DEF2AA450354A66CC087EFF3C8FDF6D4D2",
+    "tex_mutex_sha256": "570D3A97C0D10F8BBC7A0B7D70F9DFCBCEB09BFFFB9C633831315E1AFAAA53C9",
+    "derived_pdf_sha256": "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331",
+    "review_state": "performed",
+    "independent_replay": "passed",
+    "admission_state": "not_admitted"
+  },
+  "unit_count": 7,
+  "units": [
+    {
+      "id": "verdier:ast239:1.3.6",
+      "type": "proposition",
+      "anchor_id": "ch2-1-3-6",
+      "anchor_map_sequence": 1184,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 49, "end": 54},
+      "summary": "Characterize when the homotopy category of complexes over an abelian category is abelian and identify the cohomology-complex equivalence in the split case.",
+      "target": {"kind": "proposed_new_lemma", "label": "lemma-homotopy-category-abelian-split", "disposition": "authored_candidate_payload"},
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.3.6:equivalent-conditions",
+      "type": "equivalence",
+      "anchor_id": "ch2-1-3-6-equivalent-conditions",
+      "anchor_map_sequence": 1185,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 55, "end": 61},
+      "summary": "Relate abelianness of K(A), split normal form for its morphisms, and the corresponding split condition in A.",
+      "target": {"kind": "proposed_new_lemma", "label": "lemma-homotopy-category-abelian-split", "disposition": "authored_candidate_payload"},
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.3.6:proof:i-iff-ii",
+      "type": "proof_dependency",
+      "anchor_id": "ch2-1-3-6-i-iff-ii",
+      "anchor_map_sequence": 1186,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 63, "end": 65},
+      "summary": "The abelianity versus per-morphism normal-form arm follows from the existing pre-triangulated split-form criterion and the definition of an abelian category.",
+      "target": {"kind": "existing_stacks_composite", "tags": ["014S", "05QU", "0109"], "labels": ["derived-proposition-homotopy-category-triangulated", "derived-lemma-when-split", "homology-definition-abelian-category"], "disposition": "existing_composite_cited_not_claimed_new"},
+      "status": "mapped_existing_coverage"
+    },
+    {
+      "id": "verdier:ast239:1.3.6:proof:ii-implies-iii",
+      "type": "proof_step",
+      "anchor_id": "ch2-1-3-6-ii-implies-iii",
+      "anchor_map_sequence": 1187,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 67, "end": 69},
+      "summary": "Apply the homotopy-category normal form to degree-zero complexes to split every monomorphism, hence every short exact sequence.",
+      "target": {"kind": "proposed_new_lemma", "label": "lemma-homotopy-category-abelian-split", "disposition": "authored_candidate_payload"},
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.3.6:construction:hstar-complex",
+      "type": "construction",
+      "anchor_id": "ch2-1-3-6-hstar-complex",
+      "anchor_map_sequence": 1188,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 71, "end": 78},
+      "summary": "Send a complex to its graded cohomology objects equipped with zero differentials.",
+      "target": {"kind": "proposed_new_lemma", "label": "lemma-homotopy-category-abelian-split", "disposition": "authored_candidate_payload"},
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.3.6:claim:hstar-equivalence",
+      "type": "claim",
+      "anchor_id": "ch2-1-3-6-hstar-equivalence",
+      "anchor_map_sequence": 1189,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 80, "end": 83},
+      "summary": "When every short exact sequence splits, cohomology with zero differential is full, faithful, and essentially surjective on K(A).",
+      "target": {"kind": "proposed_new_lemma", "label": "lemma-homotopy-category-abelian-split", "disposition": "authored_candidate_payload"},
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.3.6:conclusion:iii-implies-ii",
+      "type": "conclusion",
+      "anchor_id": "ch2-1-3-6-proof-complete",
+      "anchor_map_sequence": 1190,
+      "physical_page": 125,
+      "english_source": "content/en/p125.tex",
+      "english_lines": {"start": 85, "end": 87},
+      "summary": "The equivalence with graded objects makes K(A) abelian and closes the remaining implication.",
+      "target": {"kind": "proposed_new_lemma", "label": "lemma-homotopy-category-abelian-split", "disposition": "authored_candidate_payload"},
+      "status": "mapped_payload_authored_built_validated"
+    }
+  ]
+}

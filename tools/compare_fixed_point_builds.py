@@ -36,10 +36,15 @@ IDENTICAL_KEYS = (
 )
 
 AI_CORRECTION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+VERDIER_REGISTERED_INSERTION_SCHEMA = (
+    "unofficial-ai-integrated-stacks-verdier-registered-insertion-successor/v1"
+)
 AI_CORRECTION_CHECKPOINT_SCHEMA = (
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-ai-source-correction-successor/v1"
 )
 AI_CORRECTION_CHECKPOINT_STATUS = "PASS_SOURCE_CHECKPOINT_AI_SOURCE_CORRECTION_SUCCESSOR"
+EGA_PRESERVED_STATUS = "PASS_CURRENT_PUBLIC_EGA_PRESERVED"
+VERDIER_EGA_INHERITED_STATUS = "PASS_CURRENT_PUBLIC_EGA_INHERITED_WITH_LATER_PUBLIC_ERRATA"
 
 SOURCE_CHECKPOINT_CONTRACTS = {
     "unofficial-stacks-project-ai-drafts-ega-source-checkpoint-direct-successor/v1": "PASS_SOURCE_CHECKPOINT_DIRECT_SUCCESSOR",
@@ -74,6 +79,13 @@ def validate_correction_semantics(receipt: dict, scope: dict, label: str) -> Non
     incomplete objects. No EGA counts or mathematical completeness are inferred.
     """
     checkpoint = receipt["source_checkpoint"]
+    composition = receipt.get("composition")
+    composition_schema = composition.get("schema") if isinstance(composition, dict) else None
+    expected_ega_status = (
+        VERDIER_EGA_INHERITED_STATUS
+        if composition_schema == VERDIER_REGISTERED_INSERTION_SCHEMA
+        else EGA_PRESERVED_STATUS
+    )
     historical = checkpoint.get("historical_anchor")
     semantic = checkpoint.get("semantic_successor")
     ega = checkpoint.get("current_ega_successor")
@@ -83,12 +95,20 @@ def validate_correction_semantics(receipt: dict, scope: dict, label: str) -> Non
             or semantic.get("fresh_import_cache") is not True
             or not isinstance(ega, dict)
             or ega.get("schema") != "unofficial-stacks-project-ai-drafts-historical-current-ega-join/v1"
-            or ega.get("status") != "PASS_CURRENT_PUBLIC_EGA_PRESERVED"
+            or ega.get("status") != expected_ega_status
             or ega.get("current_commit") != receipt["source"]["commit"]):
         raise ValueError(f"{label} correction checkpoint lacks preserved historical/current EGA semantics")
     current = checkpoint.get("current_illusie_successor")
     keys = {"schema", "status", "current_commit", "composition_source_commit",
             "composition_source_tree", "scope", "review", "checker", "checker_result", "regression_tests"}
+    manifest_revision_valid = True
+    if composition_schema == VERDIER_REGISTERED_INSERTION_SCHEMA:
+        keys.add("manifest_validation_revision")
+        manifest_revision_valid = (
+            isinstance(composition.get("inherited_ai_validation_head"), str)
+            and current.get("manifest_validation_revision")
+            == composition.get("inherited_ai_validation_head")
+        ) if isinstance(current, dict) else False
     if (not isinstance(current, dict) or set(current) != keys
             or current.get("schema") != "unofficial-stacks-project-ai-drafts-current-illusie-correction-binding/v1"
             or current.get("status") != "PASS_CURRENT_ILLUSIE_CORRECTION_BOUND"
@@ -97,7 +117,8 @@ def validate_correction_semantics(receipt: dict, scope: dict, label: str) -> Non
             or current.get("composition_source_tree") != scope["corrected_source_tree"]
             or canonical_json(current.get("scope")) != canonical_json(scope)
             or not exact_file_identity(current.get("review"))
-            or not exact_file_identity(current.get("checker"))):
+            or not exact_file_identity(current.get("checker"))
+            or not manifest_revision_valid):
         raise ValueError(f"{label} correction checkpoint lacks an exact current Illusie binding")
     result = current["checker_result"]
     if (not isinstance(result, dict) or result.get("status") != "PASS"
@@ -136,7 +157,10 @@ def ai_source_correction_scope(receipt: dict, label: str) -> dict | None:
     checkpoint = receipt.get("source_checkpoint")
     if not isinstance(composition, dict) or not isinstance(checkpoint, dict):
         raise ValueError(f"{label} lacks composition or source_checkpoint state")
-    if composition.get("schema") != AI_CORRECTION_SCHEMA:
+    composition_schema = composition.get("schema")
+    if composition_schema not in {
+        AI_CORRECTION_SCHEMA, VERDIER_REGISTERED_INSERTION_SCHEMA,
+    }:
         if ("ai_source_correction_scope" in composition
                 or "ai_source_correction" in checkpoint
                 or checkpoint.get("schema") == AI_CORRECTION_CHECKPOINT_SCHEMA):
@@ -152,8 +176,19 @@ def ai_source_correction_scope(receipt: dict, label: str) -> dict | None:
     # These are the corrected composition endpoint, not the later build's
     # metadata head. Both identifiers must be present even if a helper treats
     # omitted optional expected-source arguments as an unbound validation.
-    endpoint = {key: composition.get(key)
-                for key in ("composition_source_commit", "composition_source_tree")}
+    if composition_schema == AI_CORRECTION_SCHEMA:
+        endpoint = {
+            "composition_source_commit": composition.get("composition_source_commit"),
+            "composition_source_tree": composition.get("composition_source_tree"),
+        }
+    else:
+        # The Verdier successor is a later additive composition.  Its embedded
+        # correction scope remains bound to the inherited AI-correction
+        # endpoint, not to the later Verdier composition endpoint.
+        endpoint = {
+            "composition_source_commit": composition.get("inherited_ai_source_commit"),
+            "composition_source_tree": composition.get("inherited_ai_source_tree"),
+        }
     if any(not isinstance(value, str) or re.fullmatch(r"[0-9a-f]{40}", value) is None
            for value in endpoint.values()):
         raise ValueError(f"{label} lacks an exact corrected composition source")
