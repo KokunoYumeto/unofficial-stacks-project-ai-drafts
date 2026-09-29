@@ -143,12 +143,25 @@ def generate():
     model = evidence.build_model(ROOT)
     units = model.units
     supersessions = {}
+    refinements = {}
     for name in sorted({u.source_map_link for u in units}):
         for row in evidence.jsonl_load(ROOT / name):
             for op in row.get("operations", []):
                 if op.get("supersedes_operation_id"):
                     supersessions[op["operation_id"]] = op["supersedes_operation_id"]
+                if op.get("refines_canonical_operation") is not None:
+                    require(op["operation_id"] not in refinements, "duplicate refinement")
+                    refinements[op["operation_id"]] = op["refines_canonical_operation"]
     owners, removed = active_operations(units, supersessions)
+    for identity, binding in refinements.items():
+        prior_id = binding["operation_id"]
+        require(identity in owners and prior_id in owners and
+                identity not in removed and prior_id not in removed,
+                "refinement depends on a missing or superseded operation")
+        new_unit, _ = owners[identity]
+        old_unit, _ = owners[prior_id]
+        require(new_unit.overlay_index > old_unit.overlay_index and
+                new_unit.source == old_unit.source, "invalid refinement chronology or source")
     before, after, chapter_units, chapter_ops = {}, {}, defaultdict(list), defaultdict(list)
     dispositions = []
     for unit in units:
@@ -169,9 +182,15 @@ def generate():
                              "operation_ids": [op.operation_id for op in effective]})
     patches = {}
     chapter_records = []
+    refinement_receipts = []
     for path in sorted(chapter_units):
         before[path] = git("show", model.official_commit + ":" + path)
-        after[path] = evidence.apply_operations(before[path], chapter_ops[path], path)
+        local_refinements = {op.operation_id: refinements[op.operation_id]
+                             for op in chapter_ops[path] if op.operation_id in refinements}
+        composed, receipts = evidence.compose_postimage_refinements(
+            before[path], chapter_ops[path], local_refinements, path)
+        refinement_receipts.extend({"source": path, **receipt} for receipt in receipts)
+        after[path] = evidence.apply_operations(before[path], composed, path)
         patch = make_patch(path, before[path], after[path])
         patches[path] = patch
         chapter_records.append({"source": path, "file": "chapters/" + path[:-4] + ".patch",
@@ -204,6 +223,8 @@ def generate():
         "ai_role": ATTRIBUTION,
         "input_closure": [{"path": p, "bytes": n, "sha256": h} for p, n, h in model.input_closure]
             + [{'path': status_path, 'bytes': len(status_raw), 'sha256': sha(status_raw)}]}
+    if refinement_receipts:
+        manifest["prior_postimage_refinements"] = refinement_receipts
     rows = ["# Corrections only: review or reuse without adopting this fork", "",
         f"**{included_count:,} effective textual correction units across {len(chapter_records)} chapters.**",
         "Download one chapter patch or the combined patch. You do not need to clone this",
@@ -271,6 +292,12 @@ def generate():
             if unit.proofs_link:
                 review += [f"[Detailed argument]({PUBLIC}/blob/main/{unit.proofs_link})", ""]
             for op in effective:
+                if op.operation_id in refinements:
+                    prior_id = refinements[op.operation_id]["operation_id"]
+                    review += [
+                        "This edit refines the unchanged fragment inside earlier operation " +
+                        prior_id + ". The chapter patch composes both changes, retaining the earlier " +
+                        "correction in full. Both immutable historical records remain available.", ""]
                 review += ["````diff", *difflib.unified_diff(op.old_text.splitlines(), op.replacement_text.splitlines(),
                                                           "original", "replacement", lineterm=""), "````", ""]
         review_name = "reviews/" + path[:-4] + ".md"

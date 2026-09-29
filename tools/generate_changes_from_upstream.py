@@ -307,6 +307,92 @@ def reconstructed_operation(
     )
 
 
+def compose_postimage_refinements(
+    authority: bytes,
+    operations: Iterable[Operation],
+    refinements: dict[str, dict[str, str]],
+    label: str,
+) -> tuple[list[Operation], list[dict[str, Any]]]:
+    """Compose explicitly bound edits inside immutable earlier replacements.
+
+    The returned operations are an export projection. Historical operations and
+    their owning units are never changed. A refinement identifies the earlier
+    operation and both of its hashes; the retained old fragment must occur once
+    in that earlier replacement. Ordinary overlaps remain errors in replay.
+    """
+    original = list(operations)
+    if not refinements:
+        return original, []
+    owners: dict[str, Operation] = {}
+    for op in original:
+        require(op.operation_id not in owners, f"{label}: duplicate operation ID")
+        owners[op.operation_id] = op
+        start, end = op.start_byte, op.end_byte_exclusive
+        require(start is not None and end is not None and 0 <= start <= end <= len(authority),
+                f"{label}: invalid refinement source bounds")
+        require(authority[start:end] == op.old_text.encode("utf-8"),
+                f"{label}/{op.operation_id}: refinement authority drift")
+        require(sha256_bytes(op.old_text.encode("utf-8")) == op.old_sha256 and
+                sha256_bytes(op.replacement_text.encode("utf-8")) == op.replacement_sha256,
+                f"{label}/{op.operation_id}: refinement operation hash drift")
+    require(set(refinements) <= set(owners), f"{label}: unknown refining operation")
+    grouped: dict[str, list[tuple[int, int, bytes, bytes, str]]] = defaultdict(list)
+    receipts = []
+    for identity, binding in sorted(refinements.items()):
+        require(isinstance(binding, dict) and
+                set(binding) == {"operation_id", "old_sha256", "replacement_sha256"},
+                f"{label}/{identity}: incomplete refinement binding")
+        require(all(isinstance(binding[k], str) for k in binding),
+                f"{label}/{identity}: nontext refinement binding")
+        require(all(re.fullmatch(r"[0-9A-F]{64}", binding[k]) for k in
+                    ("old_sha256", "replacement_sha256")),
+                f"{label}/{identity}: invalid refinement hash")
+        prior_id = binding["operation_id"]
+        require(prior_id in owners and prior_id != identity,
+                f"{label}/{identity}: unknown or self refinement target")
+        require(prior_id not in refinements, f"{label}/{identity}: nested refinement requires a new explicit replay")
+        prior, op = owners[prior_id], owners[identity]
+        require(prior.old_sha256 == binding["old_sha256"] and
+                prior.replacement_sha256 == binding["replacement_sha256"],
+                f"{label}/{identity}: immutable predecessor hash drift")
+        require(prior.start_byte <= op.start_byte < op.end_byte_exclusive <= prior.end_byte_exclusive,
+                f"{label}/{identity}: refinement is not enclosed by its predecessor")
+        old, new = op.old_text.encode("utf-8"), op.replacement_text.encode("utf-8")
+        require(old != new, f"{label}/{identity}: empty refinement")
+        postimage = prior.replacement_text.encode("utf-8")
+        require(postimage.count(old) == 1,
+                f"{label}/{identity}: ambiguous or missing predecessor postimage fragment")
+        start = postimage.index(old)
+        grouped[prior_id].append((start, start + len(old), old, new, identity))
+        receipts.append({
+            "refining_operation_id": identity,
+            "prior_operation_id": prior_id,
+            "immutable_prior_old_sha256": prior.old_sha256,
+            "immutable_prior_replacement_sha256": prior.replacement_sha256,
+            "prior_replacement_offset": start,
+            "refining_old_sha256": op.old_sha256,
+            "refining_replacement_sha256": op.replacement_sha256,
+            "historical_evidence_unchanged": True,
+        })
+    replacements = {}
+    for prior_id, edits in grouped.items():
+        ordered = sorted(edits)
+        require(all(a[1] <= b[0] for a, b in zip(ordered, ordered[1:])),
+                f"{label}/{prior_id}: overlapping postimage refinements")
+        postimage = owners[prior_id].replacement_text.encode("utf-8")
+        for start, end, old, new, identity in reversed(ordered):
+            require(postimage[start:end] == old, f"{label}/{identity}: postimage replay drift")
+            postimage = postimage[:start] + new + postimage[end:]
+        replacements[prior_id] = dataclasses.replace(
+            owners[prior_id], replacement_text=postimage.decode("utf-8"),
+            replacement_sha256=sha256_bytes(postimage))
+    for receipt in receipts:
+        receipt["combined_prior_replacement_sha256"] = replacements[
+            receipt["prior_operation_id"]].replacement_sha256
+    return [replacements.get(op.operation_id, op) for op in original
+            if op.operation_id not in refinements], receipts
+
+
 def apply_operations(authority: bytes, operations: Iterable[Operation], label: str) -> bytes:
     # Older records bind a complete source-locus hunk, including unchanged edge
     # context. A later correction may legitimately touch that unchanged context.
@@ -496,6 +582,7 @@ def canonical_spec_tuple(raw: dict[str, Any]) -> tuple[Any, ...]:
         raw["old_text"],
         raw["replacement_text"],
         str(raw.get("producer_id", "")),
+        json.dumps(raw.get("refines_canonical_operation"), sort_keys=True),
     )
 
 
@@ -645,6 +732,24 @@ def build_model(repo_root: Path) -> Model:
                 authority_rel = str(row.get("authority") or f"authority/source/{source}")
                 payload_rel = str(row.get("payload") or stable.get("payload") or "")
                 authority = evidence_bytes(authority_rel)
+                refinements = {
+                    operation.operation_id: raw_operation["refines_canonical_operation"]
+                    for operation, raw_operation in zip(operations, raw_operations)
+                    if raw_operation.get("refines_canonical_operation") is not None
+                }
+                if refinements:
+                    earlier = [
+                        op for earlier_unit in units_out if earlier_unit.source == source
+                        for op in earlier_unit.operations
+                    ]
+                    earlier_ids = {op.operation_id for op in earlier}
+                    require(all(isinstance(binding, dict) and
+                                binding.get("operation_id") in earlier_ids
+                                for binding in refinements.values()),
+                            f"{overlay_id}/{unit_id}: refinement target is not in an earlier same-source overlay")
+                    compose_postimage_refinements(
+                        authority, [*earlier, *operations], refinements,
+                        f"{overlay_id}/{unit_id}")
                 if row.get("authority_sha256"):
                     require(
                         sha256_bytes(authority) == str(row["authority_sha256"]).upper(),
