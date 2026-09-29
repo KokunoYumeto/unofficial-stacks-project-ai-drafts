@@ -129,3 +129,34 @@ The unmatched-parenthesis repairs on printed p.25, `ci-dessous` to
 the mathematical assertions. Remark 2.2.4 is explicitly a historical
 conjecture that the theorem's two sufficient hypotheses are unnecessary; it
 is recorded as context, not promoted to a theorem or asserted as resolved.
+
+## I.2.3.1, printed pp.38--42
+
+The target already contains the definition and expected degree formula for an
+internal Hom of simplicial objects (Tag 017G), the construction of Hom from a
+finite simplicial set (Tag 017L), and cartesian closedness for sheaves on a
+site (Tag 0BWQ). It did not identify simplicial sheaves with sheaves on a
+product site, so those ingredients did not by themselves prove that arbitrary
+internal Homs of simplicial sheaves exist. Nor did it record the geometric
+morphism induced degreewise or the finite-presentation criterion for inverse
+image to preserve internal Hom.
+
+The new `simplicial-topos.tex` fills exactly those residuals. It presents
+`Simp(Sh(C))` as sheaves on `C x Delta` for the degreewise topology and uses
+Tag 017F for the evaluation formula. The base-change proof constructs the
+canonical comparison from evaluation, reduces a constant finite first
+argument to the finite-limit construction of Tag 017L, and descends the result
+from slice topoi when the first argument is only locally constant. The arrow
+category and relative/slice Hom formulas (2.3.1.9--2.3.1.13) remain routine
+fiber-product and exponential-law consequences of cartesian closedness; the
+right-adjoint limit and algebraic-structure observation is already the general
+adjoint fact of Tag 0038. They are classified in the source ledger rather than
+repeated as new stand-alone Stacks lemmas.
+
+The p.39 `Quant` carrier is corrected to `Quand`. The diplomatic p.41 witness
+has three further printed defects corrected in the maintained French and
+English lanes: `Par exemples`, a morphism written `T' -> T'` rather than
+`T' -> T`, and a duplicated equation number `(2.3.1.13)` repaired to
+`(2.3.1.14)`. These repairs affect grammar, well-typedness, and numbering but
+not the intended theorem. The p.42 `d_1 s_1` defect belongs to the following
+subsection I.2.3.2 and is not part of this batch.

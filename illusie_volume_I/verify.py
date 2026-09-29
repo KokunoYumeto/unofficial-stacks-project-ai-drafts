@@ -14,6 +14,8 @@ HOMOTOPY_SHEAVES_START = b"% BEGIN ILLUSIE VOLUME I 2.1.2.1\n"
 HOMOTOPY_SHEAVES_END = b"% END ILLUSIE VOLUME I 2.1.2.1\n\n"
 WHITEHEAD_START = b"% BEGIN ILLUSIE VOLUME I 2.2\n"
 WHITEHEAD_END = b"% END ILLUSIE VOLUME I 2.2\n\n"
+SIMPLICIAL_TOPOS_START = b"% BEGIN ILLUSIE VOLUME I 2.3.1\n"
+SIMPLICIAL_TOPOS_END = b"% END ILLUSIE VOLUME I 2.3.1\n\n"
 
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest().upper()
@@ -61,11 +63,15 @@ def composition(root: Path) -> tuple[bytes, bytes, bytes]:
         root / "illusie_volume_I/homotopy-sheaves.tex").read_bytes()
     whitehead_snippet = (
         root / "illusie_volume_I/whitehead-free-abelian.tex").read_bytes()
+    simplicial_topos_snippet = (
+        root / "illusie_volume_I/simplicial-topos.tex").read_bytes()
     assert source.count(START) == source.count(END) == 1, "composition markers not unique"
     assert source.count(HOMOTOPY_SHEAVES_START) == 1
     assert source.count(HOMOTOPY_SHEAVES_END) == 1
     assert source.count(WHITEHEAD_START) == 1
     assert source.count(WHITEHEAD_END) == 1
+    assert source.count(SIMPLICIAL_TOPOS_START) == 1
+    assert source.count(SIMPLICIAL_TOPOS_END) == 1
     before, rest = source.split(START)
     inserted, after = rest.split(END)
     assert inserted == first_snippet, "first root insertion differs from reviewed snippets"
@@ -79,10 +85,15 @@ def composition(root: Path) -> tuple[bytes, bytes, bytes]:
     inserted, after = rest.split(WHITEHEAD_END)
     assert inserted == whitehead_snippet, (
         "Whitehead root insertion differs from reviewed snippet")
+    without_whitehead = before + after
+    before, rest = without_whitehead.split(SIMPLICIAL_TOPOS_START)
+    inserted, after = rest.split(SIMPLICIAL_TOPOS_END)
+    assert inserted == simplicial_topos_snippet, (
+        "simplicial-topos root insertion differs from reviewed snippet")
     preimage = before + after
     assert sha(preimage) == BASE_SHA256, "changes outside the bounded insertion"
     snippet = (first_snippet + b"\n" + homotopy_sheaves_snippet +
-               whitehead_snippet)
+               whitehead_snippet + simplicial_topos_snippet)
     return source, snippet, preimage
 
 def validate(root: Path) -> dict:
@@ -101,7 +112,7 @@ def validate(root: Path) -> dict:
                 (root / "tags/tags").read_text(encoding="utf-8").splitlines()
                 if line and not line.startswith("#") and "," in line)
     local_labels = re.findall(rb"\\label\{([^}]+)\}", snippet)
-    assert len(local_labels) == len(set(local_labels)) == 25
+    assert len(local_labels) == len(set(local_labels)) == 28
     assert b"section-illusie-I-homotopy-sheaves" in local_labels
     assert b"lemma-illusie-I-homotopy-sheaves-colimits-pullback" in local_labels
     assert b"section-illusie-I-whitehead-free-abelian" in local_labels
@@ -112,6 +123,9 @@ def validate(root: Path) -> dict:
     assert b"lemma-illusie-I-local-colimit-free-modules" in local_labels
     assert b"theorem-illusie-I-free-abelian-n-equivalence" in local_labels
     assert b"corollary-illusie-I-free-abelian-equivalence" in local_labels
+    assert b"section-illusie-I-simplicial-topos" in local_labels
+    assert b"lemma-illusie-I-simplicial-sheaves-topos" in local_labels
+    assert b"lemma-illusie-I-simplicial-topos-morphism" in local_labels
     for row in mapping["decisions"]:
         assert len(row["tags"]) == len(row["labels"]), row["id"]
         for tag, label in zip(row["tags"], row["labels"]):
@@ -169,7 +183,8 @@ def write_check(root: Path) -> None:
              "source": "simplicial.tex", "official_tags_assigned": [],
              "fragments": ["relative-homotopy.tex", "localization.tex",
                            "homotopy-sheaves.tex",
-                           "whitehead-free-abelian.tex"],
+                           "whitehead-free-abelian.tex",
+                           "simplicial-topos.tex"],
              "source_postimage": {"bytes": len(source), "sha256": sha(source)},
              "snippet": {"bytes": len(snippet), "sha256": sha(snippet)},
              "source_preimage": {"bytes": len(preimage), "sha256": sha(preimage)}}
