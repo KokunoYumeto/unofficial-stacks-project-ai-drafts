@@ -1,0 +1,35 @@
+\begin{lemma}
+\label{editorial-source-lemma-intersection-not-zero}
+Let $A \subset B$ be an inclusion of domains inducing an algebraic extension
+of fraction fields. If $J \subset B$ is a nonzero ideal, then $A \cap J$
+is nonzero too. Thus the image of a proper closed subset of $\Spec(B)$
+is not dense in $\Spec(A)$.
+For a specified ideal $J$, the same conclusion $A\cap J\ne0$ already
+follows if $J$ contains one nonzero element algebraic over
+$\operatorname{Frac}(A)$; the entire fraction-field extension need
+not be algebraic for this conclusion.
+\end{lemma}
+
+\begin{proof}
+Let $x\in J$ be nonzero and algebraic over $K=\operatorname{Frac}(A)$.
+Choose a nonzero polynomial $\sum_{i=0}^dc_iT^i\in K[T]$ of least
+degree vanishing at $x$, with $c_d\ne0$. Then $d\geq1$.
+Also $c_0\ne0$: otherwise dividing the equation by the nonzero
+$x\in\operatorname{Frac}(B)$ gives a nonzero polynomial relation
+of smaller degree. Write every coefficient as $c_i=b_i/t_i$ with
+$b_i,t_i\in A$, $t_i\ne0$, keeping zero coefficients as well, and set
+$$
+D=\prod_{i=0}^dt_i,\qquad
+a_i=b_i\prod_{\substack{0\leq j\leq d\\j\ne i}}t_j.
+$$
+Then $D\ne0$, $a_i=Dc_i$, $a_0,a_d\ne0$, and the complete equation is
+$$
+a_dx^d+a_{d-1}x^{d-1}+\cdots+a_0=0.
+$$
+Consequently $a_0=-\sum_{i=1}^d a_ix^i$ is a nonzero element of
+$A\cap J$. This uses only the stated algebraicity of $x$.
+For a proper closed subset $V(J)\subset\Spec(B)$, the domain property
+ensures $J\ne0$, since $(0)$ is a prime. Its image is contained in
+$V(a_0)\subset\Spec(A)$, a proper closed subset because
+$a_0\ne0$ and $(0)$ is a prime of $A$. Thus that image is not dense.
+\end{proof}

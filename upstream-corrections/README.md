@@ -1,6 +1,6 @@
 # Corrections only: review or reuse without adopting this fork
 
-**1,639 effective textual correction units across 35 chapters.**
+**2,199 effective textual correction units across 35 chapters.**
 Download one chapter patch or the combined patch. You do not need to clone this
 repository, import its history, or take any of its added theorems.
 
@@ -32,7 +32,7 @@ editing or interactive staging in your own checkout.
 
 | Chapter | Correction units | Download | Review |
 |---|---:|---|---|
-| `algebra.tex` | 228 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/algebra.patch) | [entries](reviews/algebra.md) |
+| `algebra.tex` | 788 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/algebra.patch) | [entries](reviews/algebra.md) |
 | `artin.tex` | 131 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/artin.patch) | [entries](reviews/artin.md) |
 | `brauer.tex` | 10 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/brauer.patch) | [entries](reviews/brauer.md) |
 | `categories.tex` | 91 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/categories.patch) | [entries](reviews/categories.md) |
@@ -70,8 +70,8 @@ editing or interactive staging in your own checkout.
 
 ## What is and is not included
 
-The 1,641 historical IDs in R1–R57 remain accounted for:
-1,639 effective textual units are exported; one earlier correction was
+The 2,201 historical IDs in R1–R58 remain accounted for:
+2,199 effective textual units are exported; one earlier correction was
 superseded by its explicitly recorded replacement, and one fork-specific tag
 allocation is excluded. No unofficial permanent tags are proposed for upstream.
 The original [13-item readable selection](../possible-fixes/README.md) remains available.

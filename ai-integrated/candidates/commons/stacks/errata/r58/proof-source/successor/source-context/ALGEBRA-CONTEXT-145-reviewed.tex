@@ -1,0 +1,68 @@
+\begin{lemma}
+\label{lemma-geometrically-irreducible-add-transcendental}
+Let $K/L/M$ be a tower of fields with $L/M$ geometrically irreducible.
+Let $x \in K$ be transcendental over $L$. Then $L(x)/M(x)$ is geometrically
+irreducible.
+\end{lemma}
+
+\begin{proof}
+Keep the original inclusions
+$M\subseteq L\subseteq K$ and
+the original $x\in K$.
+Transcendence over $L$ makes
+evaluation at $x$ injective on
+$L[t]$, and hence on its subring
+$M[t]$. In particular no original
+nonzero denominator vanishes.
+The maps
+$$
+\lambda:L(t)\longrightarrow L(x),\quad
+\frac{P(t)}{Q(t)}\longmapsto\frac{P(x)}{Q(x)},
+\qquad
+\mu:M(t)\longrightarrow M(x)
+$$
+with the same evaluation formula
+are injective field maps. They
+are surjective because their
+images are fields containing the
+original coefficient fields and
+$x$, respectively. Their inverses
+replace $x$ by $t$ in a rational
+expression; injectivity proves
+independence of that expression.
+The square with the original
+inclusions commutes because the
+formulas agree on every $M$
+coefficient, on $t$, and on
+every inverse denominator.
+
+For any original field $E/M(x)$,
+use its given embedding composed
+with $\mu$ to view it over $M(t)$.
+The map
+$$
+L(t)\otimes_{M(t)}E\longrightarrow L(x)\otimes_{M(x)}E,
+\qquad a\otimes b\longmapsto\lambda(a)\otimes b
+$$
+is well-defined by that commuting
+square, with inverse
+$c\otimes b\mapsto\lambda^{-1}(c)\otimes b$.
+Lemma
+\ref{lemma-geometrically-irreducible-base-change-transcendental}
+makes the left-hand spectrum
+irreducible from the hypothesis
+on $L/M$. This proves the assertion
+for every given $E/M(x)$.
+Conversely the same tensor maps,
+using $\mu^{-1}$ to transport a
+field over $M(t)$, show that
+geometric irreducibility of
+$L(x)/M(x)$ implies that of
+$L(t)/M(t)$. The converse in the
+preceding lemma then gives that
+of $L/M$. Thus, under the stated
+transcendence hypothesis, the
+original conclusion is in fact
+equivalent to geometric
+irreducibility of $L/M$.
+\end{proof}

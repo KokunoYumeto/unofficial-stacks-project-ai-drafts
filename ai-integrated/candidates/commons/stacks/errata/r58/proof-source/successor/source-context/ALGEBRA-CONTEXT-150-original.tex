@@ -1,0 +1,29 @@
+\begin{lemma}
+\label{lemma-geometrically-connected}
+Let $k$ be a field.
+Let $R$ be a $k$-algebra.
+The following are equivalent
+\begin{enumerate}
+\item for every field extension $k'/k$ the
+spectrum of $R \otimes_k k'$ is connected, and
+\item for every finite separable field extension $k'/k$ the
+spectrum of $R \otimes_k k'$ is connected.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For any extension of fields $k'/k$ the connectivity
+of the spectrum of $R \otimes_k k'$ is equivalent to $R \otimes_k k'$
+having no nontrivial idempotents, see
+Lemma \ref{lemma-characterize-spec-connected}. Assume (2).
+Let $k \subset \overline{k}$ be a separable algebraic closure of $k$.
+Using Lemma \ref{lemma-limit-argument}
+we see that (2) is equivalent to $R \otimes_k \overline{k}$
+having no nontrivial idempotents.
+For any field extension $k'/k$, there exists a field
+extension $\overline{k}'/\overline{k}$ with
+$k' \subset \overline{k}'$. By Lemma \ref{lemma-separably-closed-connected}
+we see that $R \otimes_k \overline{k}'$ has no nontrivial idempotents.
+If $R \otimes_k k'$ has a nontrivial idempotent,
+then also $R \otimes_k \overline{k}'$, contradiction.
+\end{proof}

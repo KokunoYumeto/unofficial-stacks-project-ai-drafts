@@ -1,0 +1,25 @@
+\begin{lemma}
+\label{lemma-locally-nilpotent}
+Let $R \to R'$ be a ring map and let $I \subset R$ be a locally nilpotent
+ideal. Then $IR'$ is a locally nilpotent ideal of $R'$.
+\end{lemma}
+
+\begin{proof}
+Write $\varphi:R\to R'$ for the map. Every element of $IR'$ has a
+finite expression $y=\sum_{i=1}^t b_i\varphi(x_i)$ with $x_i\in I$
+and $b_i\in R'$. Choose positive integers $d_i$ with $x_i^{d_i}=0$
+and put $N=1+\sum_{i=1}^t(d_i-1)$. The complete expansion is
+$$
+y^N=\sum_{\substack{\alpha_1,\ldots,\alpha_t\geq0\\
+\alpha_1+\cdots+\alpha_t=N}}
+\frac{N!}{\alpha_1!\cdots\alpha_t!}
+\prod_{i=1}^t b_i^{\alpha_i}\varphi(x_i)^{\alpha_i}.
+$$
+The displayed multinomial coefficients are integers, acting through
+the canonical map $\mathbf Z\to R'$. Every summand has
+$\alpha_i\geq d_i$ for some $i$, since otherwise its total degree
+would be at most $N-1$. Thus every summand is zero. If $t=0$ then
+$y=0$ and $N=1$ suffices. In particular the case of two nilpotents
+$x^n=y^m=0$ gives $(x+y)^{n+m-1}=0$, with both original exponents
+retained. This proves local nilpotence after extension.
+\end{proof}

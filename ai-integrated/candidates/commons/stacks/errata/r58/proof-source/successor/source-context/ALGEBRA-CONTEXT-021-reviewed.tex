@@ -1,0 +1,75 @@
+\begin{lemma}
+\label{lemma-cover-module}
+Let $R$ be a ring. Let $f_1, \ldots, f_n$ be elements of $R$
+generating the unit ideal. Let $M$ be an $R$-module.
+The sequence
+$$
+0 \to
+M \xrightarrow{\alpha}
+\bigoplus\nolimits_{i = 1}^n M_{f_i} \xrightarrow{\beta}
+\bigoplus\nolimits_{i, j = 1}^n M_{f_i f_j}
+$$
+is exact, where $\alpha(m) = (m/1, \ldots, m/1)$
+and $\beta(m_1/f_1^{e_1}, \ldots, m_n/f_n^{e_n})
+= (m_i/f_i^{e_i} - m_j/f_j^{e_j})_{(i, j)}$.
+\end{lemma}
+
+\begin{proof}
+It suffices to prove exactness after localization at each maximal
+ideal $\mathfrak m$, by Lemma \ref{lemma-characterize-zero-local}.
+The finite direct sums commute with localization. For each original
+index $i$, the comparison of the two localization orders is
+$$
+(M_{f_i})_{\mathfrak m}\longrightarrow
+(M_{\mathfrak m})_{f_i/1},\qquad
+\frac{x/f_i^a}{s}\longmapsto\frac{x/s}{(f_i/1)^a},
+$$
+where $s\in R\setminus\mathfrak m$. Its reverse formula is the
+inverse, by Proposition \ref{proposition-localize-twice-module}.
+The same formulas with $f_if_j$ give the comparisons on the last term.
+They commute with the original maps $\alpha$ and $\beta$, including
+the difference in each ordered pair $(i,j)$.
+
+\medskip\noindent
+Choose an original index $k$ with $f_k\notin\mathfrak m$, which exists
+because $(f_1,\ldots,f_n)=R$. Keep all indices and all elements $f_i$.
+The natural map
+$\iota_k:M_{\mathfrak m}\to(M_{f_k})_{\mathfrak m}$
+has the explicit inverse
+$$
+\theta_k\left(\frac{x/f_k^a}{s}\right)=\frac{x}{sf_k^a}
+\quad\text{in }M_{\mathfrak m}.
+$$
+The denominator $sf_k^a$ lies outside $\mathfrak m$.
+For each $i$, the natural map
+$(M_{f_i})_{\mathfrak m}\to(M_{f_kf_i})_{\mathfrak m}$
+is also an isomorphism, with inverse
+$$
+\theta_{k,i}\left(\frac{x/(f_kf_i)^a}{s}\right)
+=\frac{x/f_i^a}{sf_k^a}.
+$$
+Its forward formula sends $(x/f_i^a)/s$ to
+$(f_k^ax/(f_kf_i)^a)/s$. The two composites are identities by
+the equality-of-fractions relations. These maps come from localization
+at elements which already act invertibly, so the formulas are
+well-defined and preserve the original module structures.
+
+\medskip\noindent
+Projection to the $k$th summand followed by $\theta_k$ is a left
+inverse of $\alpha_{\mathfrak m}$, proving injectivity.
+Now let $(z_i)_{i=1}^n$ be in the kernel of $\beta_{\mathfrak m}$
+and put $z=\theta_k(z_k)\in M_{\mathfrak m}$.
+The $(k,i)$ coordinate says that the images of $z_k$ and $z_i$
+in $(M_{f_kf_i})_{\mathfrak m}$ agree. Applying $\theta_{k,i}$
+shows that $z_i$ is the image of $z$ in $(M_{f_i})_{\mathfrak m}$.
+For completeness, on a representative $z_k=(x/f_k^a)/s$ the image
+in the pair localization is $(f_i^ax/(f_kf_i)^a)/s$; applying
+$\theta_{k,i}$ gives $(f_i^ax/f_i^a)/(sf_k^a)$, which is precisely
+the image of $x/(sf_k^a)=z$. Thus
+$\alpha_{\mathfrak m}(z)=(z_i)_{i=1}^n$.
+The reverse inclusion follows from the original identity
+$\beta\alpha=0$, so the localized sequence is exact.
+The local exactness criterion proves the original sequence exact.
+If the covering list is empty, the unit-ideal hypothesis gives $R=0$,
+and every unital $R$-module is zero, so the same assertion holds.
+\end{proof}

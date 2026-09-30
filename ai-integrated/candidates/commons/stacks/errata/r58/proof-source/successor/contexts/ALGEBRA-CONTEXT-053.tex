@@ -1,0 +1,63 @@
+\begin{lemma}
+\label{editorial-source-lemma-invert-closed-split}
+Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
+Assume the image of the map $\Spec(S^{-1}R) \to \Spec(R)$
+is closed. If $R$ is Noetherian, or $\Spec(R)$ is a
+Noetherian topological space, or $S$ is finitely generated as a monoid,
+then $R\cong S^{-1}R\times R'$ for some ring $R'$.
+More generally, the same conclusion holds whenever the complement
+of the closed image is quasi-compact.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{editorial-source-lemma-invert-closed-quotient} we have $S^{-1}R \cong R/I$
+for some ideal $I \subset R$. By Lemma \ref{algebra-lemma-disjoint-implies-product}
+it suffices to show that $V(I)$ is open.
+If $R$ is Noetherian then $\Spec(R)$ is a Noetherian
+topological space, see Lemma \ref{editorial-source-lemma-Noetherian-topology}.
+If $\Spec(R)$ is Noetherian, the complement of $V(I)$ is
+quasi-compact by Topology, Lemma
+\ref{topology-lemma-Noetherian-quasi-compact}. More generally assume
+only that this complement is quasi-compact. Its cover by the opens
+$D(f)$, $f\in I$, has a finite subcover $D(f_1),\ldots,D(f_n)$,
+so $V(I)=V(f_1,\ldots,f_n)$. For each $i$ choose $s_i\in S$ with
+$s_if_i=0$, using the localization kernel criterion, and set
+$g=\prod_{i=1}^n s_i\in S$ (with empty product $1$).
+Then $gf_i=0$ for every $i$. If a prime does not contain $g$, it
+contains every $f_i$, so $D(g)\subset V(I)$. Conversely, every prime
+in $V(I)$ lies in the localization image and avoids all of $S$,
+including $g$. Hence $V(I)=D(g)$, which is open.
+
+\medskip\noindent
+If instead $S$ is generated as a monoid by $g_1,\ldots,g_m$, put
+$t=g_1\cdots g_m$, with $t=1$ when the list is empty.
+Each $g_i$ is a unit in $R_t$, because a factor of a unit in a
+commutative ring is a unit. Conversely $t$ is a unit in $S^{-1}R$.
+The resulting canonical maps $S^{-1}R\rightleftarrows R_t$ are
+inverse: their composites fix $R$ and the unique inverses adjoined.
+Thus their spectrum image is $D(t)$, again proving $V(I)$ open.
+
+\medskip\noindent
+To identify the original localization as the first product factor,
+choose an idempotent $e$ with $D(e)=V(I)$ by
+Lemma \ref{algebra-lemma-disjoint-decomposition}. Each $s\in S$ avoids every
+prime of $R_e$, because those primes correspond to $D(e)=V(I)$;
+thus it is a unit in $R_e$. Likewise $e/1$ avoids every prime of
+$S^{-1}R$, so it is a unit there. Being idempotent, it equals $1$.
+The canonical maps $S^{-1}R\rightleftarrows R_e$ therefore exist and
+are inverse by the same identity-on-$R$ and inverse-element argument.
+Finally
+$$
+R\longrightarrow R_e\times R_{1-e},\qquad
+r\longmapsto(r/1,r/1)
+$$
+has inverse $(a/e^u,b/(1-e)^v)\longmapsto ea+(1-e)b$.
+This formula is independent of fraction representatives: equality
+in $R_e$ implies $e(a-a')=0$, and equality in $R_{1-e}$ implies
+$(1-e)(b-b')=0$, by the localization equality criterion and
+idempotency. The two composites are identities, since $e$ maps to
+$1$ in $R_e$ and $0$ in $R_{1-e}$, and $e+(1-e)=1$ in $R$.
+The map is a ring map, and hence so is its inverse. Taking
+$R'=R_{1-e}$ gives the claimed decomposition, whose first projection
+is exactly the original map $R\to S^{-1}R$.
+\end{proof}

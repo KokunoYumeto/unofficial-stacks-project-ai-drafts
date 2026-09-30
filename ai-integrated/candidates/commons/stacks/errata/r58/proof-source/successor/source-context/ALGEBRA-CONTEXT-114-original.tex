@@ -1,0 +1,50 @@
+\begin{lemma}
+\label{lemma-unique-prime-over-localize-below}
+Let $R \to S$ be a ring map.
+Let $\mathfrak p \subset R$ be a prime.
+Assume that
+\begin{enumerate}
+\item there exists a unique prime $\mathfrak q \subset S$ lying over
+$\mathfrak p$, and
+\item either
+\begin{enumerate}
+\item going up holds for $R \to S$, or
+\item going down holds for $R \to S$ and there is at most one prime
+of $S$ above every prime of $R$.
+\end{enumerate}
+\end{enumerate}
+Then $S_{\mathfrak p} = S_{\mathfrak q}$.
+\end{lemma}
+
+\begin{proof}
+Consider any prime $\mathfrak q' \subset S$ which corresponds to
+a point of $\Spec(S_{\mathfrak p})$. This means that
+$\mathfrak p' = R \cap \mathfrak q'$ is contained in $\mathfrak p$.
+Here is a picture
+$$
+\xymatrix{
+\mathfrak q' \ar@{-}[d] \ar@{-}[r] & ? \ar@{-}[r] \ar@{-}[d] & S \ar@{-}[d] \\
+\mathfrak p' \ar@{-}[r] & \mathfrak p \ar@{-}[r] & R
+}
+$$
+Assume (1) and (2)(a).
+By going up there exists a prime $\mathfrak q'' \subset S$
+with $\mathfrak q' \subset \mathfrak q''$ and $\mathfrak q''$
+lying over $\mathfrak p$. By the uniqueness of $\mathfrak q$ we
+conclude that $\mathfrak q'' = \mathfrak q$. In other words
+$\mathfrak q'$ defines a point of $\Spec(S_{\mathfrak q})$.
+
+\medskip\noindent
+Assume (1) and (2)(b).
+By going down there exists a prime $\mathfrak q'' \subset \mathfrak q$
+lying over $\mathfrak p'$. By the uniqueness of primes lying over
+$\mathfrak p'$ we see that $\mathfrak q' = \mathfrak q''$.  In other words
+$\mathfrak q'$ defines a point of $\Spec(S_{\mathfrak q})$.
+
+\medskip\noindent
+In both cases we conclude that the map
+$\Spec(S_{\mathfrak q}) \to \Spec(S_{\mathfrak p})$
+is bijective. Clearly this means all the elements of $S - \mathfrak q$
+are all invertible in $S_{\mathfrak p}$, in other words
+$S_{\mathfrak p} = S_{\mathfrak q}$.
+\end{proof}

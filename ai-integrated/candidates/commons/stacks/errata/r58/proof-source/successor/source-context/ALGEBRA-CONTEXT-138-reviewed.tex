@@ -1,0 +1,192 @@
+\begin{lemma}
+\label{lemma-geometrically-irreducible}
+Let $k$ be a field.
+Let $R$ be a $k$-algebra.
+The following are equivalent
+\begin{enumerate}
+\item for every field extension $k'/k$ the
+spectrum of $R \otimes_k k'$ is irreducible,
+\item for every finite separable field extension $k'/k$ the
+spectrum of $R \otimes_k k'$ is irreducible,
+\item the spectrum of $R \otimes_k \overline{k}$ is irreducible
+where $\overline{k}$ is the separable algebraic closure of $k$, and
+\item the spectrum of $R \otimes_k \overline{k}$ is irreducible
+where $\overline{k}$ is the algebraic closure of $k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Condition (1) implies (2) directly.
+Under (2), taking the identity field
+extension shows that the original
+$R$ has nonempty spectrum, so $R\neq0$.
+Let $k_s$ be a separable algebraic
+closure of $k$. Its finite
+subextensions $E/k$ are separable,
+are directed under compositum,
+and have union $k_s$.
+Every original finite list of
+coefficients in $k_s$ belongs to
+one such $E$, so
+$R\otimes_k k_s=\bigcup_E R\otimes_k E$
+through the actual injective
+coefficient maps.
+
+This tensor is nonzero by a
+vector-space basis argument.
+Suppose $\mathfrak q_1,\mathfrak q_2$
+are minimal primes in it.
+For each original finite $E$,
+the map $R\otimes_k E\to R\otimes_k k_s$
+is flat: its module comparison
+is scalar extension by the field
+$k_s/E$. Going down makes the
+contractions of both primes
+minimal. Indeed a smaller prime
+under a contraction would lift
+to a smaller prime under the
+given minimal one. By (2), the
+ring $R\otimes_k E$ has only
+one minimal prime, so these
+contractions agree. Each element
+of $R\otimes_k k_s$ lies in some
+one of the displayed finite
+tensors; membership in either
+$\mathfrak q_i$ is therefore
+determined by equal contractions.
+Thus $\mathfrak q_1=\mathfrak q_2$.
+A nonzero ring has a minimal
+prime, so this proves (3),
+including the required existence.
+
+For (3) $\Rightarrow$ (4), choose
+an algebraic closure $\overline k$
+containing the specified $k_s$.
+The extension $\overline k/k_s$
+is purely inseparable, or is the
+identity in characteristic zero,
+by the separable-first theorem.
+The map
+$R\otimes_k k_s\to(R\otimes_k k_s)\otimes_{k_s}\overline k$
+is a homeomorphism on spectra
+by Lemma \ref{lemma-p-ring-map}
+in positive characteristic, and
+is the identity in characteristic
+zero. The latter tensor is
+identified with $R\otimes_k\overline k$
+by
+$(r\otimes a)\otimes b\mapsto r\otimes ab$,
+whose inverse is
+$r\otimes b\mapsto(r\otimes1)\otimes b$.
+This proves (4) for these original
+field embeddings.
+
+For (4) $\Rightarrow$ (1), keep
+an arbitrary original extension
+$L/k$. A common receiving field
+must contain compatible copies
+over $k$; construct it as follows.
+The tensor $L\otimes_k\overline k$
+is nonzero by extension of a
+vector-space basis. Choose a
+prime $\mathfrak a$ in it and put
+$$
+F=\operatorname{Frac}((L\otimes_k\overline k)/\mathfrak a).
+$$
+The maps $a\mapsto[a\otimes1]$
+and $b\mapsto[1\otimes b]$ embed
+$L$ and $\overline k$ into this
+nonzero field and agree on the
+original $k$ by tensor balancing.
+Thus they provide the needed
+commutative field diagram, not
+merely unrelated abstract copies.
+The scalar comparison
+$$
+(R\otimes_k\overline k)\otimes_{\overline k}F
+\longrightarrow R\otimes_k F,
+\qquad(r\otimes a)\otimes b\longmapsto r\otimes ab
+$$
+has inverse $r\otimes b\mapsto(r\otimes1)\otimes b$.
+Its source has irreducible
+spectrum by Lemma
+\ref{lemma-separably-closed-irreducible},
+applied over the algebraically
+closed $\overline k$ to the
+original $R\otimes_k\overline k$
+and the field $F$.
+
+The map $B=R\otimes_k L\to R\otimes_k F$
+is scalar extension by $F/L$.
+It is faithfully flat: for any
+nonzero $B$-module $M$, the
+comparison
+$M\otimes_B(B\otimes_L F)\simeq M\otimes_L F$
+sends $m\otimes(b\otimes a)$ to
+$bm\otimes a$, with inverse
+$m\otimes a\mapsto m\otimes(1\otimes a)$;
+extension of a vector-space
+basis preserves nonzeroness
+and exact sequences. More
+explicitly, over each prime
+$\mathfrak b$ of $B$ the
+nonzero ring $\kappa(\mathfrak b)\otimes_L F$
+has a prime. Its inverse image
+is a prime of $B\otimes_L F$
+contracting to $\mathfrak b$.
+Hence the spectrum map is
+surjective. The continuous
+surjective image of the
+nonempty irreducible spectrum
+just proved is irreducible,
+giving (1) for the original
+$R\otimes_k L$.
+
+Two further forms follow with
+the same maps. First, in (2)
+it suffices to test finite
+Galois extensions. Every finite
+separable $E/k$ embeds in a
+finite separable normal splitting
+field $N/k$: take a primitive
+element for $E/k$ and adjoin
+all roots of its separable
+minimal polynomial in an
+algebraic closure. These are
+finitely many algebraic roots,
+all separable, so the resulting
+extension is finite and
+separable; each embedding
+permutes the roots, so it is
+normal. The field extension
+$N/E$ makes
+$R\otimes_k E\to R\otimes_k N$
+faithfully flat by the same
+module comparison above.
+Irreducibility of the latter
+spectrum therefore descends
+to the former, proving (2).
+
+Second, for every fixed field
+extension $L/k$, the original
+$R$ is geometrically irreducible
+over $k$ if and only if
+$R\otimes_k L$ is geometrically
+irreducible over $L$.
+The forward direction uses
+$(R\otimes_k L)\otimes_L F\simeq R\otimes_k F$
+for every field $F/L$.
+For the reverse direction and
+any original field $E/k$, use
+the same prime-of-a-tensor
+construction to place $L$ and
+$E$ compatibly in a field $F$.
+The hypothesis over $L$ makes
+$R\otimes_k F$ irreducible,
+and the faithfully flat map
+$R\otimes_k E\to R\otimes_k F$
+descends irreducibility as
+above. Every scalar comparison
+is the displayed tensor map
+and its displayed inverse.
+\end{proof}

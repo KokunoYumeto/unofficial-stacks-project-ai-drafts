@@ -1,0 +1,175 @@
+\begin{lemma}
+\label{lemma-2-3-ring-map}
+Let $\varphi : R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item[(a)] $S$ is generated as an $R$-algebra by elements $x$ such
+that $x^2, x^3 \in \varphi(R)$, and
+\item[(b)] $\Ker(\varphi)$ is locally nilpotent,
+\end{enumerate}
+Then $\varphi$ induces isomorphisms on residue fields and
+a homeomorphism of spectra. For any ring map $R \to R'$
+the ring map $R' \to R' \otimes_R S$ also satisfies (a) and (b).
+\end{lemma}
+
+\begin{proof}
+For every original generator $x$, choose $a_x,b_x\in R$
+with $\varphi(a_x)=x^2$ and $\varphi(b_x)=x^3$.
+The monic equation $T^2-a_x$ proves integrality of
+$x$ over $R$. Every element of the generated algebra
+involves finitely many such generators, so the
+integral-closure subring property proves that
+$R\to S$ is integral. Put $I=\ker\varphi$.
+The integral injection $R/I\to S$ is surjective
+on spectra by Lemma \ref{lemma-integral-overring-surjective}.
+Since $I$ is locally nilpotent, $V(I)=\Spec(R)$.
+Thus the original map on spectra is surjective,
+and is closed by Lemmas \ref{lemma-integral-going-up}
+and \ref{lemma-going-up-closed}.
+
+Let $\mathfrak q$ lie over $\mathfrak p$, and use
+the original injection
+$\kappa(\mathfrak p)\to\kappa(\mathfrak q)$.
+If $\alpha$ is the image of $x$ in the receiving
+field, then $\alpha^2=\overline a_x$ and
+$\alpha^3=\overline b_x$, where the bars are the
+images of these original coefficients in
+$\kappa(\mathfrak p)$. If $\overline a_x=0$,
+then $\alpha=0$. Otherwise
+$\alpha=\overline b_x/\overline a_x$.
+Consequently every generator belongs to the
+image of the original base residue field.
+Since $\kappa(\mathfrak q)=\operatorname{Frac}(S/\mathfrak q)$
+is generated as a field by those images and
+$\kappa(\mathfrak p)$, this residue-field map
+is an isomorphism.
+
+If $\mathfrak q'$ also lies over $\mathfrak p$,
+compose the maps $S\to\kappa(\mathfrak q)$ and
+$S\to\kappa(\mathfrak q')$ with the respective
+inverses of the base residue-field isomorphisms.
+Both resulting maps to $\kappa(\mathfrak p)$
+agree on $R$ and send each original $x$ to
+the same displayed value, zero or
+$\overline b_x/\overline a_x$.
+They agree on every polynomial in the
+generators, hence on $S$. Their kernels
+are respectively $\mathfrak q$ and
+$\mathfrak q'$, so these primes are equal.
+The original spectrum map is a continuous
+closed bijection, hence a homeomorphism.
+
+Retain any original $f:R\to R'$ and put
+$S'=R'\otimes_R S$. It is generated over
+$R'$ by $1\otimes x$, with
+$$
+(1\otimes x)^2=f(a_x)\otimes1,
+\qquad (1\otimes x)^3=f(b_x)\otimes1.
+$$
+To verify the new kernel without assuming
+$f$ flat, let $\mathfrak p'\subset R'$
+contract to $\mathfrak p\subset R$.
+Choose an original $\mathfrak q$ above
+$\mathfrak p$, as is possible by surjectivity.
+The tensor ring
+$$
+C=\kappa(\mathfrak p')\otimes_{\kappa(\mathfrak p)}
+\kappa(\mathfrak q)
+$$
+is nonzero: a vector-space basis of either
+nonzero field remains a basis after extending
+scalars. The original maps give
+$S'\to C$, $r'\otimes s\mapsto\overline r'\otimes\overline s$.
+Take a prime of $C$. Its quotient is a
+nonzero domain, and the induced unital
+map from the field $\kappa(\mathfrak p')$
+is injective. The inverse image of that
+prime in $S'$ therefore contracts to
+exactly $\mathfrak p'$ in $R'$.
+Thus $\Spec(S')\to\Spec(R')$ is surjective,
+and its kernel lies in every prime of
+$R'$, hence consists of nilpotents.
+This proves both base-change hypotheses;
+the already proved argument gives the
+same homeomorphism and residue-field
+isomorphisms after every such base change.
+
+The exponents $2,3$ can more generally
+be replaced, separately for each original
+generator $x$, by a finite nonempty list
+of positive integers $d_1,\ldots,d_r$
+with greatest common divisor $1$, provided
+all $x^{d_i}$ belong to $\varphi(R)$.
+One positive exponent supplies the monic
+integral equation. Choose integers $u_i$
+with $\sum_i u_i d_i=1$. For a nonzero
+residue $\alpha$ of $x$, every $\alpha^{d_i}$
+is a nonzero element of the base residue
+field, and the full identity
+$$
+\alpha=\prod_{i=1}^r(\alpha^{d_i})^{u_i}
+$$
+puts it in that field, with negative
+powers interpreted through its actual
+field inverses. If any power is zero,
+then $\alpha=0$. This formula determines
+the same residue at every prime over
+the given base prime. The preceding
+integrality, kernel, and generator-map
+arguments therefore prove the same
+conclusions and their preservation by
+arbitrary base change for these lists.
+
+The greatest-common-divisor condition
+cannot be weakened to an arbitrary
+positive common divisor. For a list
+with greatest common divisor $d>1$,
+take the original field inclusion
+$\mathbf Q(u^d)\to\mathbf Q(u)$, with
+$u$ transcendental. The powers in the
+list all belong to the smaller field.
+The elements $1,u,\ldots,u^{d-1}$ are
+independent over $\mathbf Q(u^d)$:
+clearing the original denominators
+leaves polynomial monomials with
+distinct exponent residues modulo $d$.
+They span the algebra generated by $u$
+using $u^d\in\mathbf Q(u^d)$; that
+finite-dimensional domain is a field,
+since multiplication by a nonzero
+element is injective and hence
+surjective on its finite-dimensional
+vector space. Thus it is the original
+$\mathbf Q(u)$ and the residue-field
+extension has degree exactly $d$,
+not degree one.
+
+Even under the original $2,3$ hypotheses,
+an injective map can acquire a nonzero
+nilpotent kernel after base change.
+For any field $k$ let
+$$
+R=k[a,b]/(b^2-a^3)\longrightarrow S=k[t],
+\qquad a\longmapsto t^2,\quad b\longmapsto t^3.
+$$
+This is injective: monic division in
+$b$ writes an element uniquely as
+$f(a)+b g(a)$, and its image
+$f(t^2)+t^3g(t^2)$ has disjoint even
+and odd exponent supports. Also $S$
+is generated by the original $t$ with
+$t^2,t^3$ in the image. Base change
+by $R\to R/(a)=k[b]/(b^2)$ gives
+$$
+k[b]/(b^2)\longrightarrow k[t]/(t^2),
+\qquad b\longmapsto t^3=0.
+$$
+Its kernel is exactly the nonzero
+ideal $(b)$, whose square is zero.
+The quotient-tensor comparison
+$(R/(a))\otimes_R S\simeq S/(t^2)$
+sends $[r]\otimes s$ to $[\varphi(r)s]$
+and has inverse $[s]\mapsto1\otimes s$.
+Thus this is the actual base-changed
+map, with its nilpotent kernel fully
+identified.
+\end{proof}

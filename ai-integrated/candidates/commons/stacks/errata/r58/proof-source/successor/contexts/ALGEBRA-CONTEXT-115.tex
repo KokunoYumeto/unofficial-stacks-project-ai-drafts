@@ -1,0 +1,355 @@
+\begin{lemma}
+\label{editorial-source-lemma-going-down-flat-module}
+Let $R \to S$ be a ring map. Let $N$ be a finite $S$-module flat over $R$.
+Endow $\text{Supp}(N) \subset \Spec(S)$ with the induced topology.
+Then generalizations lift along $\text{Supp}(N) \to \Spec(R)$.
+\end{lemma}
+
+\begin{proof}
+Write the original map as $\varphi:R\to S$. The
+statement means the following. Given original primes
+$\mathfrak p\subseteq\mathfrak p'\subset R$ and
+$\mathfrak q'\in\operatorname{Supp}_S(N)$ with
+$\varphi^{-1}(\mathfrak q')=\mathfrak p'$, there
+must be a prime $\mathfrak q\subseteq\mathfrak q'$
+such that $\varphi^{-1}(\mathfrak q)=\mathfrak p$
+and $\mathfrak q\in\operatorname{Supp}_S(N)$.
+The contraction condition on $\mathfrak q'$ is
+part of the lifting statement and is retained
+explicitly here. For the induced topology on
+support, specialization between two of its points
+is the original prime inclusion: closure in a
+subspace is the intersection with the original
+closure. Thus these prime conditions are exactly
+the required generalization lift.
+
+Put
+$$
+A=R_{\mathfrak p'},\qquad C=S_{\mathfrak q'},
+\qquad E=N_{\mathfrak q'},\qquad
+\mathfrak m=\mathfrak p'R_{\mathfrak p'}.
+$$
+Keep the local ring map
+$A\to C$, $r/t\mapsto\varphi(r)/\varphi(t)$.
+Its denominators are valid because
+$t\notin\mathfrak p'$ implies
+$\varphi(t)\notin\mathfrak q'$.
+The module $E$ is flat over $A$, by
+Lemma \ref{editorial-source-lemma-flat-localization}. One may also
+see the original comparison directly: tensor an
+injection of $A$-modules with the $R$-flat $N$
+and then localize the resulting $S$-modules at
+$\mathfrak q'$. Exactness of localization preserves
+the injection, and the maps
+$$
+(L\otimes_RN)_{\mathfrak q'}\longrightarrow L\otimes_RE,
+\qquad (l\otimes n)/s\longmapsto l\otimes n/s
+$$
+and their inverses identify the result with
+tensoring by $E$. Here every original element of
+$R\setminus\mathfrak p'$ is invertible on both
+$L$ and $E$, so balancing already factors uniquely
+through $A$. This gives the same $A$-flatness.
+
+The module $E$ is nonzero by the chosen support
+point, and is finite over the local ring $C$.
+Nakayama's Lemma \ref{algebra-lemma-NAK} gives
+$E/\mathfrak q' E\ne0$. Since the image of
+$\mathfrak m$ lies in $\mathfrak q'C$, the quotient
+map
+$$
+E/\mathfrak mE\longrightarrow E/\mathfrak q'E,
+\qquad e+\mathfrak mE\longmapsto e+\mathfrak q'E
+$$
+is surjective. Consequently
+$E\otimes_A\kappa(\mathfrak p')=E/\mathfrak mE\ne0$.
+The quotient-tensor identification sends
+$e\otimes\overline a$ to $ae+\mathfrak mE$,
+with inverse $e+\mathfrak mE\mapsto e\otimes1$.
+
+The flat $A$-module $E$ is therefore faithfully
+flat. For a direct verification, if an arbitrary
+$A$-module $L$ has an element $l\ne0$, set
+$H=\operatorname{Ann}_A(l)\subseteq\mathfrak m$.
+The injection $A/H\hookrightarrow L$,
+$a+H\mapsto al$, becomes the injection
+$E/HE\hookrightarrow L\otimes_AE$ by flatness.
+The source surjects onto $E/\mathfrak mE\ne0$,
+so $L\otimes_AE\ne0$. This proves nonzero-module
+detection and, together with flatness, faithful
+flatness, in agreement with Lemma \ref{editorial-source-lemma-ff}.
+In particular for the nonzero $A$-module
+$K=\kappa(\mathfrak p)$, defined using the original
+chain $\mathfrak p\subseteq\mathfrak p'$, one has
+$$
+P=E\otimes_AK\ne0,
+\qquad B=C\otimes_AK.
+$$
+
+Here are the full localization and quotient maps
+in this fibre. Let $W=R\setminus\mathfrak p$,
+$D=W^{-1}C$ and $Q=W^{-1}E$, using the images of
+$W$ under the original map. Then
+$$
+B\simeq D/\mathfrak pD,\qquad
+P\simeq Q/\mathfrak pQ.
+$$
+The ring comparison sends
+$$
+c\otimes\frac{a+\mathfrak p}{w+\mathfrak p}
+\longmapsto\frac{\varphi(a)c}{\varphi(w)}+\mathfrak pD,
+$$
+where coefficients in $C$ are interpreted via its
+original map from $R$. Its inverse sends
+$c/\varphi(w)+\mathfrak pD$ to
+$c\otimes(1/(w+\mathfrak p))$.
+The module comparison uses the same formulas
+with $e\in E$ in place of $c$. The original
+relations of localization are respected because
+each image of $w\in W$ becomes a unit in $K$.
+The original ideal $\mathfrak p$ is killed in
+both targets. Thus the universal properties of
+localization and quotient, followed by tensor
+balancing over $A$, give these maps. Their
+composites fix every original coefficient,
+element of $E$, and inverse denominator, proving
+the assertions. These expressions retain the
+possibly noninjective maps and all denominators.
+
+Since $N$ is finite over $S$, the localized
+$E$ is finite over $C$, and its original finite
+generators tensor to generators of $P$ over $B$.
+Put $J=\operatorname{Ann}_B(P)$, the original
+annihilator ideal in the source proof.
+Because $P\ne0$, $J$ is proper. Choose a prime
+$\mathfrak b$ of $B$ containing $J$.
+The finite-module support equality of
+Lemma \ref{editorial-source-lemma-support-closed} gives
+$P_{\mathfrak b}\ne0$.
+Equivalently this prime is obtained from a prime
+of the original quotient $B/J$ by inverse image.
+Write
+$$
+\theta:S\longrightarrow C\longrightarrow B,
+\qquad s\longmapsto (s/1)\otimes1,
+\qquad \mathfrak q=\theta^{-1}(\mathfrak b).
+$$
+It is prime. Every $s\notin\mathfrak q'$ is a
+unit in $C$ and hence in $B$, so
+$\mathfrak q\subseteq\mathfrak q'$.
+Every $r\in\mathfrak p$ maps to zero, while
+every $r\notin\mathfrak p$ maps to the nonzero
+scalar $r+\mathfrak p$ in the field $K$, which
+is a unit in the nonzero ring $B$. The map
+$K\to B$ is unital and injective, since a
+nonzero field has no proper nonzero kernel.
+Thus
+$\varphi^{-1}(\mathfrak q)=\mathfrak p$ exactly.
+
+To prove support membership through the original
+module, use the balanced isomorphism
+$$
+N\otimes_SB\longrightarrow P,
+\qquad n\otimes(c\otimes a)\longmapsto(cn/1)\otimes a,
+$$
+with inverse $(n/s)\otimes a\mapsto
+n\otimes((1/s)\otimes a)$ for $s\notin\mathfrak q'$.
+All such $s$ are inverted in $C$, so localization
+and tensor balancing make these maps independent
+of representatives; both composites fix the
+original elements and scalar tensors. Localizing
+at $\mathfrak b$ gives the further comparison
+$$
+P_{\mathfrak b}\simeq
+N_{\mathfrak q}\otimes_{S_{\mathfrak q}}B_{\mathfrak b}.
+$$
+The map on an elementary fraction sends
+$(n\otimes b)/u$ to $n/1\otimes b/u$.
+Its inverse sends $n/s\otimes b/u$ to
+$(n\otimes b)/(\theta(s)u)$, where
+$s\notin\mathfrak q$ implies
+$\theta(s)\notin\mathfrak b$. These formulas
+respect both localization witness relations and
+the scalar balancing, and are inverse on the
+generators. Since the left side is nonzero,
+$N_{\mathfrak q}$ is nonzero. This proves the
+required lift in the original support.
+
+\medskip\noindent
+The exact places where finiteness was used give
+a weaker sufficient hypothesis. Suppose now that
+$N$ is any $S$-module flat over $R$ and that for
+every original $\mathfrak q'\in\operatorname{Supp}_S(N)$,
+with $\mathfrak p'=\varphi^{-1}(\mathfrak q')$, one has
+$$
+N_{\mathfrak q'}\otimes_{R_{\mathfrak p'}}
+\kappa(\mathfrak p')\ne0.
+$$
+The argument above still proves $A$-flatness of
+$E$; the displayed hypothesis replaces the
+Nakayama step, and gives its faithful flatness.
+Hence the same original fibre $P$ is nonzero
+for every $\mathfrak p\subseteq\mathfrak p'$.
+It need not be finite. Choose an original
+$z\ne0$ in $P$, and a maximal ideal
+$\mathfrak b\supseteq\operatorname{Ann}_B(z)$.
+Then $z/1\ne0$ in $P_{\mathfrak b}$: a witness
+$u\notin\mathfrak b$ with $uz=0$ would contradict
+the containment of its annihilator. The same
+prime contractions and comparison maps now give
+the lift. This replaces the finite-module use
+of $\operatorname{Ann}_B(P)$ by the exact cyclic
+support of the chosen original element.
+
+In particular it suffices that the localization
+support equal the residue-fibre set over $S$:
+$$
+\operatorname{Supp}_S(N)
+=\{\mathfrak q:N\otimes_S\kappa(\mathfrak q)\ne0\}.
+$$
+At a support point this supplies
+$E/\mathfrak q'E\ne0$, and the same quotient
+surjection supplies the required nonzero fibre
+over $R_{\mathfrak p'}$. Every arbitrary direct
+sum of finite $S$-modules satisfies this equality,
+as proved in the support base-change comparison;
+when that sum is also $R$-flat, the lifting
+conclusion therefore follows without finite
+generation of $N$. This is a sufficient hypothesis,
+not a claim that such fibre nonvanishing is
+necessary for every possible support lift.
+
+\medskip\noindent
+There is also an openness consequence. Suppose the
+original algebra $S$ is finitely presented over $R$,
+and the original $S$-module $N$ is finitely presented
+and $R$-flat. Then the map on its support is open,
+and the corresponding support map remains open
+after every base change $R\to A_1$.
+To prove this with the specified objects, retain
+a finite presentation $S^b\xrightarrow{H}S^a\to N\to0$.
+Let $J_H$ be the ideal generated by the original
+$a\times a$ minors of $H$, using determinant $1$
+in size zero. The full presentation calculation in
+Lemma \ref{editorial-source-lemma-support-finite-presentation-constructible}
+gives $\operatorname{Supp}_S(N)=V(J_H)$, with the
+quotient-spectrum homeomorphism
+$\Spec(S/J_H)\to V(J_H)$ given by contraction.
+The ideal $J_H$ is finitely generated. Appending
+polynomial representatives of its finitely many
+specified generators to a finite presentation of
+$S$ over $R$ proves that $S/J_H$ is finitely
+presented over $R$. The going-down result just
+proved lifts every prime generalization inside
+$V(J_H)$; under the quotient homeomorphism this
+is exactly going down for $R\to S/J_H$.
+Proposition \ref{editorial-source-proposition-fppf-open} therefore
+proves openness of the original support map.
+
+For the arbitrary original base change $R\to A_1$,
+put $S_1=S\otimes_RA_1$ and $N_1=N\otimes_RA_1$.
+Tensoring the displayed presentation and its
+coefficient maps gives
+$S_1^b\xrightarrow{H_1}S_1^a\to N_1\to0$,
+where every entry of $H_1$ is the original entry
+of $H$ tensored with $1$. The full determinant
+polynomial, with all its signs, shows that its
+minor ideal is $J_HS_1$. Thus
+$$
+\operatorname{Supp}_{S_1}(N_1)=V(J_HS_1),
+\qquad
+(S/J_H)\otimes_RA_1\simeq S_1/J_HS_1.
+$$
+The last map sends $(s+J_H)\otimes a$ to
+$s\otimes a+J_HS_1$; its inverse is the
+original quotient map followed by tensoring.
+The ideal generators are killed on both sides,
+so these are inverse maps with the indicated
+formulas. The algebra $S_1$ is finitely presented
+over $A_1$ by the base-change presentation.
+The module $N_1$ is $A_1$-flat: for an injection
+of $A_1$-modules $L\hookrightarrow L'$, the maps
+$$
+L\otimes_{A_1}N_1\simeq L\otimes_RN,
+\qquad l\otimes(n\otimes a)\longmapsto al\otimes n,
+$$
+with inverse $l\otimes n\mapsto l\otimes(n\otimes1)$,
+identify the tensor map with an injection by
+the original $R$-flatness of $N$.
+Applying the proven support argument to these
+original base-change objects proves openness
+for every $A_1$. Equivalently, the quotient map
+$\Spec(S/J_H)\to\Spec(R)$ is universally open,
+even though the argument did not require
+$S/J_H$ itself to be flat over $R$.
+
+Flatness alone, and even flatness together with
+finite annihilator detection, does not suffice.
+Retain the original ring and module
+$$
+R=S=k[x,y]/(xy),\qquad \varphi=\operatorname{id}_R,
+\qquad N=R_x,
+$$
+where $k$ is a field and $x,y$ denote their
+specified quotient classes. The module is flat
+by exactness of localization. Its annihilator
+is exactly $(y)$, and is detected by $1\in R_x$.
+Indeed $y$ kills the entire localization since
+$xy=0$ and $x$ is inverted. Conversely, if
+$r\cdot1=0$ in $R_x$, then $x^nr=0$ for some
+$n\geq0$. Modulo $(y)$ this says
+$x^n\overline r=0$ in the domain $k[x]$,
+so $r\in(y)$. The same condition is equivalent
+to $r$ killing every element of $R_x$ because
+all its elements are fractions with powers
+of $x$ as denominators.
+
+The exact comparison
+$$
+R_x\longrightarrow k[x,x^{-1}],\qquad
+r/x^n\longmapsto r(x,0)/x^n,
+$$
+is an isomorphism, with inverse given by the
+original class of $x$ and its inverse; $y$ is
+zero in $R_x$ by $xy=0$. Thus as an $R$-module,
+$N$ has support $V(y)$. To verify both directions,
+if $y\notin\mathfrak a$, its unit image in
+$R_{\mathfrak a}$ kills $N_{\mathfrak a}$,
+so that localization is zero. If
+$y\in\mathfrak a$, the prime
+$\overline{\mathfrak a}=\mathfrak a/(y)$
+in $k[x]$ identifies $N_{\mathfrak a}$ with
+the localization of $k[x,x^{-1}]$ at the
+images of $k[x]\setminus\overline{\mathfrak a}$.
+These images are all nonzero in a domain,
+so the localized ring is nonzero. The comparison
+sends each original fraction to the same
+fraction after $y=0$; the inverse follows from
+the two specified localization maps.
+Its fibre set, however, is exactly $D(x)$:
+$$
+N\otimes_R\kappa(\mathfrak a)
+\simeq\kappa(\mathfrak a)_{\overline x}.
+$$
+This is zero if $x\in\mathfrak a$ and is the
+nonzero field otherwise, with fraction maps
+$r/x^n\otimes c\mapsto\overline r c/\overline x^n$
+and the tensor inverse. For primes avoiding
+$x$, the relation $xy=0$ forces $y$ into the
+prime, consistently with $D(x)\subseteq V(y)$.
+
+Take the original primes
+$\mathfrak p=(x)\subset\mathfrak p'=(x,y)$
+and $\mathfrak q'=\mathfrak p'$. The latter
+is in $V(y)=\operatorname{Supp}(N)$, but the
+former is not, because $y\notin(x)$.
+Since the spectrum map for $\varphi$ is the
+identity, the only possible lift over
+$\mathfrak p$ is $\mathfrak p$ itself, which
+is outside support. This proves the failure
+of generalization lifting despite flatness
+and finite annihilator detection. At
+$\mathfrak q'$ the required base residue fibre
+is zero, exactly identifying the failed
+hypothesis in the extended proof.
+\end{proof}

@@ -1,0 +1,40 @@
+\begin{lemma}
+\label{editorial-source-lemma-image-dense-generic-points}
+Let $R \to S$ be a ring map. The following are equivalent:
+\begin{enumerate}
+\item The kernel of $R \to S$ consists of nilpotent elements.
+\item The minimal primes of $R$ are in the image of
+$\Spec(S) \to \Spec(R)$.
+\item The image of $\Spec(S) \to \Spec(R)$ is dense
+in $\Spec(R)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $\varphi:R\to S$ for the original map and $I=\ker\varphi$.
+By Lemma \ref{editorial-source-lemma-Zariski-topology} and the power criterion for a
+radical,
+$$
+\bigcap_{\mathfrak q\in\Spec(S)}\varphi^{-1}(\mathfrak q)
+=\varphi^{-1}(\sqrt{(0)_S})=\sqrt I.
+$$
+Indeed $\varphi(x)$ is nilpotent exactly when $x^a\in I$ for some
+$a\geq1$. A closed subset $V(J)\subset\Spec(R)$ contains the image
+exactly when $J$ lies in this intersection. Hence its closure is
+$V(\sqrt I)=V(I)$, proving (1) $\Leftrightarrow$ (3).
+For (2) $\Rightarrow$ (3), every prime of $R$ contains a minimal
+prime, and lies in the closure of that point, by
+Lemma \ref{editorial-source-lemma-Zariski-topology}.
+For (1) $\Rightarrow$ (2), the original map factors as
+$$
+R\longrightarrow R/I\lhook\joinrel\longrightarrow S.
+$$
+Every prime of $R$ contains $I$ under (1), and the quotient map
+identifies $\Spec(R/I)$ homeomorphically with $\Spec(R)$ by
+contraction, with inverse $\mathfrak p\mapsto\mathfrak p/I$.
+These inverse order-preserving maps carry minimal primes to minimal
+primes. The injection $R/I\hookrightarrow S$ hits all those points
+by Lemma \ref{algebra-lemma-injective-minimal-primes-in-image}. Its contraction
+composed with the quotient contraction is the contraction for
+$\varphi$, proving (2) for the original map.
+\end{proof}

@@ -5263,6 +5263,102 @@ Lemma \ref{lemma-illusie-I-signed-total-differential}. This statement does
 not identify normalization of a simplicial diagonal with a chain total.
 \end{proof}
 
+\begin{lemma}[Normalized Eilenberg--Zilber maps]
+\label{lemma-illusie-I-normalized-eilenberg-zilber}
+Let $X$ be a bisimplicial object of an abelian category. Write
+$D^hX$, $D^vX$, and $D^\Delta X$ for the degenerate subcomplexes in the
+horizontal, vertical, and diagonal simplicial directions. The shuffle and
+Alexander--Whitney maps carry
+\[
+ \operatorname{Tot}(D^hX+D^vX)\quad\hbox{into}\quad D^\Delta X
+ \qquad\hbox{and}\qquad
+ D^\Delta X\quad\hbox{into}\quad
+ \operatorname{Tot}(D^hX+D^vX),
+\]
+respectively. Consequently they induce natural chain maps on the normalized
+quotients.
+
+Use the Moore projections of Theorem
+\ref{theorem-illusie-I-iterated-dold-kan} to identify those quotients with
+the Moore normal complexes. Under these identifications the normalized maps
+are
+\[
+ \operatorname{Sh}^N=
+ \operatorname{Sh}|_{\operatorname{Tot}(N^hN^vX)}:
+ \operatorname{Tot}(N^hN^vX)\longrightarrow N^\Delta X
+\]
+and
+\[
+ \operatorname{AW}^N=
+ P^{h,v}\operatorname{AW}|_{N^\Delta X}:
+ N^\Delta X\longrightarrow\operatorname{Tot}(N^hN^vX),
+\]
+where on the $(p,q)$ summand $P^{h,v}=P^h_pP^v_q$. These maps are natural
+chain-homotopy inverses. In general the Moore projection in
+$\operatorname{AW}^N$ cannot be omitted.
+\end{lemma}
+
+\begin{proof}
+The degeneracy assertion is the normalized shuffle calculation. We recall
+it because it determines which of the unnormalized arrows can literally be
+restricted. In a shuffle summand, a degeneracy already present in one input
+is composed with the two surjections determined by the lattice path. Terms
+for which the repeated place is not common to both surjections occur in
+adjacent pairs obtained by interchanging the step at that place; their
+inversion signs are opposite. Every remaining term factors through a common
+diagonal degeneracy. Thus the shuffle of a horizontal or vertical degenerate
+simplex belongs to $D^\Delta X$.
+
+For Alexander--Whitney, apply its $(p,q)$ component to a diagonal degeneracy
+$s_i^hs_i^v y$. The simplicial identities move $s_i$ through the front
+horizontal and back vertical face strings. According to the position of the
+cut, a horizontal or a vertical degeneracy remains; at the boundary cut the
+same conclusion follows from $d_is_i=d_{i+1}s_i=1$ on one side and the
+surviving degeneracy on the other. Hence every component lies in
+$D^hX+D^vX$. Both maps therefore descend to the quotients.
+
+The Moore projection identifies each quotient by degeneracies with the
+corresponding normal complex. The shuffle calculation also shows directly
+that it sends $\operatorname{Tot}(N^hN^vX)$ into $N^\Delta X$, so its
+quotient map is the displayed restriction. The other quotient map is the raw
+Alexander--Whitney map followed by the horizontal and vertical Moore
+projections, which gives the displayed formula for $\operatorname{AW}^N$.
+
+The chain-homotopies can be obtained without making a choice of splitting.
+Repeat the free-model recursion in the proof of Theorem
+\ref{theorem-illusie-I-eilenberg-zilber} on the normalized free models. Their
+positive-degree contractions are obtained by composing the prepend-zero
+contractions there with the Moore projections. Since the projections are
+chain maps and are the identity on the normal summands, the contraction
+identity remains $\partial K+K\partial=1-e$. The same induction therefore
+gives natural homotopies
+\[
+ \operatorname{Sh}^N\operatorname{AW}^N\simeq 1,
+ \qquad
+ \operatorname{AW}^N\operatorname{Sh}^N\simeq 1.
+\]
+
+It remains to justify the last warning. Let
+\[
+ F_{a,b}=\mathbb Z[\operatorname{Hom}_\Delta([a],[0])\times
+                         \operatorname{Hom}_\Delta([b],[1])]
+\]
+and in $F_{1,1}$ write a basis element as a pair of vertex strings. Put
+\[
+ u=[(0,0);(0,0)]-[(0,0);(0,1)].
+\]
+Deleting the second vertex in both strings sends the two terms to the same
+basis element, so $u\in N^\Delta_1F$. The $(1,0)$ component of
+$\operatorname{AW}(u)$ is
+\[
+ [(0,0);(0)]-[(0,0);(1)]\in F_{1,0}.
+\]
+Its positive horizontal face is
+$[(0);(0)]-[(0);(1)]\neq0$. Hence the raw Alexander--Whitney map does not in
+general carry $N^\Delta X$ into $\operatorname{Tot}(N^hN^vX)$, while the
+projected normalized map does.
+\end{proof}
+
 % Independently written consequences for Illusie I.1.4, printed pp.11-16.
 % This file is composed additively with relative-homotopy.tex.
 
@@ -6684,6 +6780,550 @@ we conclude $\tilde \xi = 0$ and hence $\xi = 0$.
 
 
 
+
+% BEGIN ILLUSIE VOLUME I 2.1.2.1
+% Independently written draft from Illusie I, 2.1.2.1, printed pp.23--24.
+% Local labels only. Source snippet for bounded root-chapter composition.
+
+\section{Homotopy sheaves of simplicial sheaves}
+\label{section-illusie-I-homotopy-sheaves}
+
+\noindent
+Let $\mathcal{C}$ be a site. A pointed simplicial sheaf on $\mathcal{C}$
+is a simplicial object $X$ of $\Sh(\mathcal{C})$ together with a section
+$x : * \to X$. For $n \geq 0$ we write
+$\pi_n(X, x)$ for the sheaf associated to
+$$
+U \longmapsto \pi_n(X(U), x|_U).
+$$
+For $n = 0$ this is a sheaf of pointed sets, for $n = 1$ a sheaf of
+groups, and for $n \geq 2$ a sheaf of abelian groups.
+
+\begin{lemma}
+\label{lemma-illusie-I-homotopy-sheaves-colimits-pullback}
+Let $n \geq 0$.
+\begin{enumerate}
+\item If $(X_i, x_i)$ is a filtered diagram of pointed simplicial sheaves
+on $\mathcal{C}$, then the canonical map
+$$
+\colim_i \pi_n(X_i, x_i)
+\longrightarrow
+\pi_n(\colim_i X_i, \colim_i x_i)
+$$
+is an isomorphism.
+\item If
+$f : \Sh(\mathcal{D}) \to \Sh(\mathcal{C})$
+is a morphism of topoi, then the canonical map
+$$
+f^{-1}\pi_n(X, x)
+\longrightarrow
+\pi_n(f^{-1}X, f^{-1}x)
+$$
+is an isomorphism.
+\item In particular, for a point $p$ of $\Sh(\mathcal{C})$ there is a
+canonical isomorphism
+$$
+\pi_n(X, x)_p = \pi_n(X_p, x_p).
+$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We first recall exactly which limits and colimits occur in the usual
+simplicial-set construction. For a simplicial set $Y$, the standard
+fibrant replacement is
+$$
+\operatorname{Ex}^{\infty}(Y) =
+\colim_{r \geq 0} \operatorname{Ex}^r(Y).
+$$
+In degree $m$ one has
+$$
+\operatorname{Ex}(Y)_m =
+\Mor(\operatorname{Sd}\Delta[m], Y).
+$$
+The simplicial set $\operatorname{Sd}\Delta[m]$ is finite. Consequently
+this mapping set is a finite limit of finitely many of the sets $Y_j$.
+Thus every degree of $\operatorname{Ex}^{\infty}(Y)$ is obtained from
+$Y$ by iterating finite limits and then taking one filtered colimit.
+
+The simplicial set $\operatorname{Ex}^{\infty}(Y)$ is Kan and
+$Y \to \operatorname{Ex}^{\infty}(Y)$ induces isomorphisms on homotopy
+groups. If $Z$ is Kan with base point $z$, let $C_n(Z, z)$ be the set of
+$n$-simplices all of whose faces are the appropriate degeneracy of $z$.
+Let $W_n(Z, z)$ be the set of $(n + 1)$-simplices giving a homotopy between
+two elements of $C_n(Z, z)$ relative to the boundary. Both $C_n$ and $W_n$
+are finite limits of degrees of $Z$. The two end faces give maps
+$$
+W_n(Z, z) \rightrightarrows C_n(Z, z),
+$$
+and their coequalizer is $\pi_n(Z, z)$. Indeed, for a Kan complex the
+relation generated by these elementary relative homotopies is already the
+usual relative-boundary homotopy relation. We conclude that
+$\pi_n(Y, z)$ is constructed functorially using finite limits, colimits,
+and filtered colimits only.
+
+Colimits of sheaves are obtained by sheafifying colimits of presheaves,
+see Sites, Lemma \ref{sites-lemma-colimit-sheaves}, and sheafification
+commutes with finite limits, see Sites, Lemma
+\ref{sites-lemma-sheafification-exact}. Hence the same construction made
+inside $\Sh(\mathcal{C})$ is the sheaf associated to
+$U \mapsto \pi_n(X(U), x|_U)$.
+
+Filtered colimits of sets commute with finite limits by
+Categories, Lemma \ref{categories-lemma-directed-commutes}. Colimits
+commute with colimits. Applying these facts before sheafification, and
+then using the preceding paragraph, proves (1).
+
+The functor $f^{-1}$ commutes with all colimits because it is a left
+adjoint, by Categories, Lemma \ref{categories-lemma-adjoint-exact}, and
+it commutes with finite limits by the definition of a morphism of topoi,
+Sites, Definition \ref{sites-definition-topos}. It therefore commutes
+with every operation in the displayed construction of $\pi_n$, which
+proves (2). A point is a morphism from the punctual topos; applying (2)
+to its inverse-image functor proves (3).
+\end{proof}
+% END ILLUSIE VOLUME I 2.1.2.1
+
+% BEGIN ILLUSIE VOLUME I 2.2
+% Independently written from Illusie I, 2.2.1--2.2.10, printed pp.25--38.
+% Local labels only. Source snippet for bounded root-chapter composition.
+
+\section{Free abelian sheaves and $n$-equivalences}
+\label{section-illusie-I-whitehead-free-abelian}
+
+\begin{definition}
+\label{definition-illusie-I-n-equivalence}
+Let $\mathcal{T}$ be a topos and let $f : X \to Y$ be a map of
+simplicial objects of $\mathcal{T}$. For $n \geq 0$ we say that $f$ is an
+{\it $n$-equivalence} if $\pi_0(f)$ is an epimorphism and, after restriction
+to every object $U$ and choice of a base point $x$ of $X|_U$, the map
+$$
+\pi_i(X|_U, x) \longrightarrow \pi_i(Y|_U, f(x))
+$$
+is an isomorphism for $i < n$ and an epimorphism for $i = n$.
+We say that $f$ is an {\it equivalence} if it is an $n$-equivalence for
+every $n$.
+\end{definition}
+
+\begin{lemma}[Relative Hurewicz for free simplicial abelian groups]
+\label{lemma-illusie-I-relative-hurewicz-free-abelian}
+Let $n \geq 2$ and let $f : K \to L$ be an $n$-equivalence of simplicial
+sets. Then
+$$
+\mathbf{Z}[f] : \mathbf{Z}[K] \longrightarrow \mathbf{Z}[L]
+$$
+is an $n$-equivalence of simplicial abelian groups.
+\end{lemma}
+
+\begin{proof}
+The assertion can be checked one connected component at a time. Replace the
+geometric realization of $f$ by the inclusion of its mapping cylinder. The
+$n$-equivalence condition and the long exact sequence of relative homotopy
+groups say that the resulting pair has zero relative homotopy groups through
+degree $n$. Since $n \geq 2$, the relative Hurewicz theorem applies on every
+component and gives
+$$
+H_i(|L|, |K|; \mathbf{Z}) = 0 \quad\text{for }i \leq n.
+$$
+The normalized chain complex of $\mathbf{Z}[K]$ is the simplicial chain
+complex of $K$, and similarly for $L$. Hence the displayed vanishing says
+that its induced map on homology is an isomorphism below $n$ and a
+surjection in degree $n$. Homotopy groups of a simplicial abelian group are
+the homology groups of its normalized complex. Finally, the
+$n$-equivalence condition makes $\pi_0(f)$ bijective, while
+$\pi_0(\mathbf{Z}[K])$ is the free abelian group on $\pi_0(K)$. This proves
+the lemma.
+\end{proof}
+
+\begin{lemma}[Local filtered colimits]
+\label{lemma-illusie-I-local-filtered-colimit}
+Let $\mathcal{T}$ be a topos. Let $L \to \mathcal{T}^{\mathrm{opp}}$ be a
+cofibred category which is locally nonempty and in which any two objects
+have a common successor locally and any two parallel arrows become equal
+after a further local successor. Write $\operatorname{LSys}(L)$ for the
+category of systems of sets indexed by $L$, compatible with arrows and
+restriction in $\mathcal{T}$. Then the constant-system functor
+$\mathcal{T} \to \operatorname{LSys}(L)$ has a left adjoint
+$$
+\colim_L : \operatorname{LSys}(L) \longrightarrow \mathcal{T}.
+$$
+This functor preserves all colimits and finite limits. A locally cofinal full
+cofibred subcategory $L' \subset L$ gives the same local colimit.
+Moreover, free abelian objects and the homotopy sheaves of pointed
+simplicial objects commute with $\colim_L$.
+\end{lemma}
+
+\begin{proof}
+Give $L^{\mathrm{opp}}$ the topology in which a family is covering exactly
+when its image in $\mathcal{T}$ is covering. Local nonemptiness, common
+successors, and local equality of parallel arrows are respectively the
+density, local fullness, and local faithfulness conditions which identify
+the sheaf topos of this site with $\mathcal{T}$. Under this identification,
+$\colim_L$ is sheafification of the presheaf colimit of a local system. This
+proves the adjunction and preservation of colimits. Filtered colimits of sets
+commute with finite limits, and sheafification is left exact, so $\colim_L$
+preserves finite limits as well.
+
+The same site description for $L'$ gives the cofinality assertion: every
+object is locally reached from $L'$, and the two local filteredness axioms
+make the resulting identifications independent of the chosen arrows.
+
+The free abelian object functor is a left adjoint, so its universal property
+commutes with the displayed left adjoint. For homotopy sheaves, use the
+construction in the proof of Lemma
+\ref{lemma-illusie-I-homotopy-sheaves-colimits-pullback}: it uses finite
+limits, colimits, and filtered colimits only. Each of these is preserved by
+$\colim_L$, proving the last assertion.
+\end{proof}
+
+\begin{lemma}[Local finite-type approximation]
+\label{lemma-illusie-I-local-finite-type-approximation}
+Let $A$ be a ring, viewed as a constant ring object of a topos
+$\mathcal{T}$, and let $u : E \to F$ be a map of complexes of
+$A$-modules.
+\begin{enumerate}
+\item There are a locally filtered category $L$ and a local system
+$u_i : E_i \to F_i$ of maps of complexes of finitely presented $A$-modules
+such that $u = \colim_L u_i$.
+\item If $E$ and $F$ vanish in degrees greater than $a$, the system can be
+chosen with every $E_i$ and $F_i$ vanishing in degrees greater than $a$.
+\item If $A$ is Noetherian, $E$ and $F$ vanish in degrees greater than
+$a$, and
+$$
+H^q(\operatorname{Cone}(u)) = 0 \quad\text{for }q \geq b,
+$$
+then the full local subsystem of maps satisfying the same vanishing is
+locally cofinal.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Over an object $U$ of $\mathcal{T}$, consider maps $u_i \to u|_U$ where
+$u_i$ is a map between complexes of finitely presented $A$-modules.
+Restriction gives a cofibred category. A finite collection of sections of
+$E$ and $F$, together with finitely many equations expressing compatibility
+with the differentials and $u$, is represented locally by finite free
+$A$-modules. Two such finite presentations have a common refinement, and
+two maps between them which agree in $u$ agree after a further refinement.
+Thus this category is locally filtered. Every section and every relation is
+eventually represented, which proves that its local colimit is $u$. If
+$E$ and $F$ vanish above $a$, discard the corresponding terms in every
+finite presentation; this gives a locally cofinal subsystem and proves (2).
+
+We record the two extension operations used for (3). Let
+$v : C \to D$ be one finite presentation over an object $U$, with structure
+maps $\alpha : C \to E|_U$ and $\beta : D \to F|_U$.
+
+First suppose that $H^{q + 1}(u)$ is injective and that
+$H^q(\operatorname{Cone}(v))$ is of finite type. The cohomology sequence of
+the cone makes $\ker H^{q + 1}(v)$ finite type. Choose a finite free module
+$M$ and cycles $c : M \to Z^{q + 1}(C)$ whose classes generate this kernel.
+Choose $t : M \to D^q$ with $d t = v c$. Injectivity of
+$H^{q + 1}(u)$ says that $\alpha c$ is locally a boundary; after a covering
+choose $s : M \to E^q|_U$ with $d s = \alpha c$, and put
+$\delta = u s - \beta t$. Thus $d\delta = 0$.
+
+Adjoin $M$ in degree $q$ to both $C$ and $D$. On the source use outgoing
+differential $(c,d)$, on the target use $(0,d)$, and in degree $q$ use the
+map
+$$
+\begin{pmatrix}1&0\\ t&v\end{pmatrix} :
+M \oplus C^q \longrightarrow M \oplus D^q.
+$$
+The structure maps in that degree are $(s,\alpha)$ and $(\delta,\beta)$.
+These formulas define a refinement $v'$ of $v$. Its quotient by $v$ is the
+identity map of the complex with $M$ in degree $q$ and zero elsewhere.
+The cohomology sequence now shows that $H^{q + 1}(v')$ is injective and has
+the same image as $H^{q + 1}(v)$.
+
+Second suppose that $H^q(u)$ is surjective, $H^{q + 1}(v)$ is injective,
+and $H^q(\operatorname{Cone}(v))$ is of finite type. The cone sequence
+makes $H^q(D) \to H^q(\operatorname{Cone}(v))$ surjective. Choose a finite
+free $M$ and $t : M \to Z^q(D)$ whose classes generate the latter module.
+After a covering, surjectivity of $H^q(u)$ gives
+$s : M \to Z^q(E|_U)$ lifting their images. Then
+$\delta = u s - \beta t$ is a boundary; after another covering choose
+$\epsilon : M \to F^{q - 1}|_U$ with $d\epsilon = \delta$.
+
+Adjoin $M$ to $C^q$, and adjoin the two-term identity complex
+$M \xrightarrow{1} M$ in degrees $q - 1,q$ to $D$. In degrees $q - 1,q$
+the new map is
+$$
+C^{q - 1} \longrightarrow M \oplus D^{q - 1},\quad
+x \longmapsto (0,vx),
+$$
+and
+$$
+M \oplus C^q \longrightarrow M \oplus D^q,\quad
+(m,x) \longmapsto (m,t(m)+v(x)).
+$$
+Use $(s,\alpha)$ on the source in degree $q$, and
+$(\epsilon,\beta)$ and $(\delta,\beta)$ on the target in degrees
+$q - 1$ and $q$. These formulas define a refinement $v'$. Its quotient by
+$v$ is the map from the complex with $M$ in degree $q$ to the identity
+two-term complex just displayed. The cohomology sequence shows that
+$H^{q + 1}(v')=H^{q + 1}(v)$ and that $H^q(v')$ is surjective.
+
+Return to a finite presentation bounded above by $a$. Its cone cohomology
+is of finite type because $A$ is Noetherian. Starting with the automatic
+injectivity in degree $a + 1$, apply the second operation in degrees
+$q=a,a-1,\ldots,b$. After the operation in degree $q>b$, apply the first
+operation with index $q-1$; this makes $H^q(v)$ injective without changing
+its already surjective image. At the end, $H^q(v)$ is an isomorphism for
+$q>b$ and an epimorphism for $q=b$, equivalently its cone is acyclic in
+degrees at least $b$. Thus every object of the original indexing category
+locally maps to one in the asserted full subsystem. It is therefore locally
+cofinal, proving (3).
+\end{proof}
+
+\begin{lemma}
+\label{lemma-illusie-I-local-colimit-free-modules}
+Let $L$ be locally filtered over $\mathcal{T}$. Let $(S_i)_{i \in L}$ and
+$(A_i)_{i \in L}$ be local systems of sets and rings, and put
+$$
+S = \colim_L S_i, \qquad A = \colim_L A_i.
+$$
+Then the canonical map of $A$-modules
+$$
+\colim_L A_i^{(S_i)} \longrightarrow A^{(S)}
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+A local section of $A^{(S)}$ is a finite sum
+$\sum_{j=1}^r a_j[s_j]$. After a covering, every $a_j$ and $s_j$ comes from
+some index of the two local systems. Local filteredness supplies one common
+successor for these finitely many indices, so the section is locally in the
+image of $A_i^{(S_i)}$. If two such finite sums have the same image, pass
+first to a local successor at which all basis elements having the same image
+are identified, and group equal basis elements. The resulting finitely many
+coefficient equalities hold after another local successor. Thus the map of
+presheaf colimits is locally surjective and locally injective. Sheafification
+gives the asserted isomorphism.
+\end{proof}
+
+\begin{theorem}
+\label{theorem-illusie-I-free-abelian-n-equivalence}
+Let $n \geq 2$ and let $f : X \to Y$ be an $n$-equivalence of simplicial
+objects of a topos $\mathcal{T}$. Assume either
+\begin{enumerate}
+\item $\mathcal{T}$ has enough points, or
+\item $X$ and $Y$ are simplicial abelian group objects and $f$ is a
+homomorphism.
+\end{enumerate}
+Then the levelwise free abelian map
+$$
+\mathbf{Z}^{(f)} : \mathbf{Z}^{(X)} \longrightarrow \mathbf{Z}^{(Y)}
+$$
+is an $n$-equivalence.
+\end{theorem}
+
+\begin{proof}
+Assume first that $\mathcal{T}$ has enough points. Inverse image at a point
+commutes with homotopy sheaves by Lemma
+\ref{lemma-illusie-I-homotopy-sheaves-colimits-pullback}, and it commutes
+with free abelian objects because both are defined by colimits. Thus the
+assertion at every point is Lemma
+\ref{lemma-illusie-I-relative-hurewicz-free-abelian}. Points detect
+epimorphisms and isomorphisms, so the result follows.
+
+Assume now that $f$ is a map of simplicial abelian group objects. Use the
+normalized complex with cohomological indexing
+$N(X)^{-q} = N(X)_q$. By the Moore description of homotopy groups,
+$\operatorname{Cone}(N(f))$ is acyclic in degrees at least $-n$.
+Apply Lemma \ref{lemma-illusie-I-local-finite-type-approximation} with
+$A = \mathbf{Z}$, $a = 0$, and $b = -n$. We obtain a locally filtered
+system of maps
+$$
+g_i : E_i \longrightarrow F_i
+$$
+between complexes of finitely generated abelian groups, each with cone
+acyclic in degrees at least $-n$, whose local colimit is $N(f)$.
+
+Apply the inverse Dold--Kan functor degreewise. It uses finite direct sums,
+while normalization uses finite kernels; hence both commute with the local
+colimit by Lemma \ref{lemma-illusie-I-local-filtered-colimit}. We obtain
+$f = \colim_L h_i$, where every $h_i = K(g_i)$ is an $n$-equivalence of
+ordinary simplicial abelian groups. Lemma
+\ref{lemma-illusie-I-relative-hurewicz-free-abelian} says that every
+$\mathbf{Z}[h_i]$ is an $n$-equivalence. Lemma
+\ref{lemma-illusie-I-local-colimit-free-modules}, applied to the constant
+ring system $\mathbf{Z}$, identifies the free abelian object on the local
+colimit. Homotopy sheaves commute with the local colimit by Lemma
+\ref{lemma-illusie-I-local-filtered-colimit}. Therefore
+$$
+\mathbf{Z}^{(f)} = \colim_L \mathbf{Z}[h_i]
+$$
+is an $n$-equivalence.
+\end{proof}
+
+\begin{corollary}
+\label{corollary-illusie-I-free-abelian-equivalence}
+Under either hypothesis of Theorem
+\ref{theorem-illusie-I-free-abelian-n-equivalence}, if $f$ is an
+equivalence, then $\mathbf{Z}^{(f)}$ is an equivalence.
+\end{corollary}
+
+\begin{proof}
+Apply the theorem for every $n \geq 2$. The conclusions for $\pi_0$ and
+$\pi_1$ are already included in any one of these applications.
+\end{proof}
+% END ILLUSIE VOLUME I 2.2
+
+% BEGIN ILLUSIE VOLUME I 2.3.1
+% Independently written from Illusie I, 2.3.1, printed pp.38--42.
+% Local labels only. Source snippet for bounded root-chapter composition.
+
+\section{The topos of simplicial sheaves}
+\label{section-illusie-I-simplicial-topos}
+
+\begin{lemma}
+\label{lemma-illusie-I-simplicial-sheaves-topos}
+Let $\mathcal{C}$ be a site and put $\mathcal{T} = \Sh(\mathcal{C})$.
+Then the category $\text{Simp}(\mathcal{T})$ of simplicial sheaves is a
+topos.  Moreover, for $U \in \mathcal{T}$, $n \geq 0$, and
+$X \in \text{Simp}(\mathcal{T})$ there is a canonical bijection
+$$
+\Mor_{\text{Simp}(\mathcal{T})}(U \times \Delta[n], X)
+=
+\Mor_{\mathcal{T}}(U, X_n).
+$$
+Consequently, if a family $\mathcal{G}$ detects equality of arrows in
+$\mathcal{T}$, then the objects
+$$
+U \times \Delta[n], \qquad U \in \mathcal{G},\ n \geq 0,
+$$
+detect equality of arrows in $\text{Simp}(\mathcal{T})$.
+
+For $X,Y \in \text{Simp}(\mathcal{T})$ the internal hom
+$\SheafHom(X,Y)$ exists.  Its $n$th term is characterized by
+$$
+\Mor_{\mathcal{T}}(U,\SheafHom(X,Y)_n)
+=
+\Mor_{\text{Simp}(\mathcal{T})}
+(U \times \Delta[n] \times X,Y),
+$$
+functorially in $U$, and there are functorial isomorphisms
+$$
+\SheafHom(Z,\SheafHom(X,Y))
+\longrightarrow
+\SheafHom(Z \times X,Y).
+$$
+\end{lemma}
+
+\begin{proof}
+Let $\Delta$ denote the simplex category.  On
+$\mathcal{C} \times \Delta$ take the topology generated by the families
+$$
+(U_i,[n]) \longrightarrow (U,[n])
+$$
+for which $\{U_i \to U\}$ is a covering of $\mathcal{C}$.  A presheaf on
+$\mathcal{C} \times \Delta$ is the same thing as a simplicial presheaf on
+$\mathcal{C}$.  The sheaf condition for the displayed generating families
+says exactly that every degree is a sheaf on $\mathcal{C}$.  We therefore
+have an equivalence
+$$
+\Sh(\mathcal{C} \times \Delta)
+\longrightarrow
+\text{Simp}(\Sh(\mathcal{C})).
+$$
+Thus $\text{Simp}(\mathcal{T})$ is a topos by Sites, Definition
+\ref{sites-definition-topos}.
+
+The asserted bijection is Simplicial Methods, Lemma
+\ref{simplicial-lemma-morphism-from-coproduct}.  It also shows the assertion
+about a detecting family: equality in every degree is equality of simplicial
+arrows.
+
+Since $\text{Simp}(\mathcal{T})$ is a category of sheaves on a site, the
+internal hom exists by Sites, Lemma
+\ref{sites-lemma-internal-hom-sheaf}.  Applying the preceding bijection and
+then the defining adjunction gives
+\begin{align*}
+\Mor_{\mathcal{T}}(U,\SheafHom(X,Y)_n)
+&=
+\Mor_{\text{Simp}(\mathcal{T})}
+(U \times \Delta[n],\SheafHom(X,Y)) \\
+&=
+\Mor_{\text{Simp}(\mathcal{T})}
+(U \times \Delta[n] \times X,Y).
+\end{align*}
+The last displayed isomorphism in the statement follows by applying the
+same adjunction twice and using the Yoneda lemma.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-illusie-I-simplicial-topos-morphism}
+Let
+$$
+f : \Sh(\mathcal{D}) \longrightarrow \Sh(\mathcal{C})
+$$
+be a morphism of topoi.  Applying $f^{-1}$ and $f_*$ degreewise defines a
+morphism of topoi
+$$
+\text{Simp}(f) :
+\text{Simp}(\Sh(\mathcal{D}))
+\longrightarrow
+\text{Simp}(\Sh(\mathcal{C})).
+$$
+For simplicial sheaves $X,Y$ on $\mathcal{C}$ there is a canonical map
+$$
+f^{-1}\SheafHom(X,Y)
+\longrightarrow
+\SheafHom(f^{-1}X,f^{-1}Y).
+$$
+It is an isomorphism if, locally on $\Sh(\mathcal{C})$, the object $X$ is
+isomorphic to the constant simplicial sheaf associated to a finite
+simplicial set.  Here finite means that there are finitely many
+nondegenerate simplices; equivalently, the simplicial set has a presentation
+as a coequalizer of finite coproducts of standard simplices.
+\end{lemma}
+
+\begin{proof}
+The degreewise functors are adjoint: under the adjunction
+$f^{-1} \dashv f_*$, the compatibility squares for a family of maps
+$f^{-1}X_n \to Y_n$ correspond exactly to the compatibility squares for the
+adjoint family $X_n \to f_*Y_n$.  Limits and colimits of simplicial objects
+are computed degreewise.  The functor $f^{-1}$ preserves all colimits because
+it is a left adjoint, by Categories, Lemma
+\ref{categories-lemma-adjoint-exact}, and preserves finite limits by the
+definition of a morphism of topoi, Sites, Definition
+\ref{sites-definition-topos}.  Hence these degreewise functors define the
+asserted morphism of topoi.
+
+Apply $f^{-1}$ to the evaluation map and use preservation of finite products:
+$$
+f^{-1}\SheafHom(X,Y) \times f^{-1}X
+\longrightarrow
+f^{-1}Y.
+$$
+Its transpose is the canonical comparison in the statement.
+
+First suppose $X$ is the constant object associated to a finite simplicial
+set $E$.  If $E$ is empty, both internal homs are terminal.  Otherwise,
+Simplicial Methods, Lemma
+\ref{simplicial-lemma-exists-hom-from-simplicial-set-finite}
+constructs $\Hom(E,Y)$, and the defining universal property identifies it
+with $\SheafHom(E,Y)$.  The proof of that lemma constructs every degree from
+finitely many degrees of $Y$ using a finite limit.  Since $f^{-1}$ preserves
+finite limits and finite coproducts, it carries this construction to the
+identical construction for $f^{-1}Y$.  It also carries the constant object
+$E$ to the corresponding constant object.  Thus the comparison is an
+isomorphism for $X=E$.
+
+In general choose a covering $\{U_i \to *\}$ such that
+$X|_{U_i}$ is constant with finite value $E_i$.  The inverse images
+$f^{-1}U_i$ cover the final object.  Pullback to a slice preserves these
+internal homs: if $V \to U_i$ is a test object, both adjunctions identify the
+relevant maps with maps $V \times X|_{U_i} \to Y|_{U_i}$.  Thus the
+restriction of the comparison over $f^{-1}U_i$ is the comparison for the
+induced morphism of slice topoi and the constant finite object $E_i$.  It is
+an isomorphism by the preceding finite-limit argument.  Isomorphisms of
+simplicial sheaves can be checked degreewise and locally.  Therefore the
+original comparison is an isomorphism.
+\end{proof}
+% END ILLUSIE VOLUME I 2.3.1
 
 \section{A homotopy equivalence}
 \label{section-homotopy-equivalence}

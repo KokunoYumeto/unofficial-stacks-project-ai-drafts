@@ -1,0 +1,116 @@
+\begin{lemma}
+\label{editorial-source-lemma-characterize-geometrically-integral}
+Let $k$ be a field. Let $S$ be a $k$-algebra.
+The following are equivalent
+\begin{enumerate}
+\item $S$ is geometrically integral over $k$,
+\item for every finite extension $k'/k$ of fields
+the ring $S \otimes_k k'$ is a domain,
+\item $S \otimes_k \overline{k}$ is a domain
+where $\overline{k}$ is the algebraic closure of $k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Condition (1) implies (2) by
+restricting the field extensions.
+Assume (2). In particular its
+identity extension makes $S$
+a nonzero domain. Choose the
+original algebraic closure
+$\overline k$ and consider its
+finite subextensions $E/k$.
+They are directed under compositum
+and contain every finite list
+of coefficients of a tensor.
+The original injective coefficient
+maps therefore give
+$$
+S\otimes_k\overline k=\bigcup_E S\otimes_k E.
+$$
+Each ring in this union is a
+domain by (2). The union is
+nonzero, since the maps preserve
+the nonzero unit. For two
+nonzero elements, choose one
+stage containing both. Their
+product there is nonzero and
+remains so by injectivity.
+This proves (3), including
+nonemptiness and all zero-divisor
+conditions.
+
+Assume (3), and let $L/k$
+be any original extension.
+Choose a prime $\mathfrak a$
+of the nonzero field tensor
+$L\otimes_k\overline k$ and
+form the compatible receiving
+field
+$$
+F=\operatorname{Frac}((L\otimes_k\overline k)/\mathfrak a).
+$$
+The maps $a\mapsto[a\otimes1]$
+and $b\mapsto[1\otimes b]$
+embed the two original fields
+and agree on $k$. Write
+$B=S\otimes_k\overline k$.
+This is a nonzero domain
+by (3). Since $\overline k$
+is perfect, Lemma
+\ref{editorial-source-lemma-perfect-reduced}
+makes $B\otimes_{\overline k}F$
+reduced. Since $\overline k$
+is separably closed and both
+$B$ and $F$ have irreducible
+spectra, Lemma
+\ref{editorial-source-lemma-separably-closed-irreducible}
+makes its spectrum irreducible.
+Thus it is a domain by Lemma
+\ref{editorial-source-lemma-geometrically-integral}'s
+underlying ring criterion.
+
+For either original subfield
+$H=L$ or $H=\overline k$ of
+the receiving $F$, the maps
+$$
+(S\otimes_k H)\otimes_H F\longrightarrow S\otimes_k F,
+\qquad(s\otimes a)\otimes b\longmapsto s\otimes ab
+$$
+and $s\otimes b\mapsto(s\otimes1)\otimes b$
+are inverse by balancing.
+They identify the domain just
+proved with $S\otimes_k F$.
+The original scalar map
+$S\otimes_k L\to(S\otimes_k L)\otimes_L F$
+is injective by extension of
+an $L$-vector-space basis.
+Its source is therefore a
+nonzero subring of that domain,
+so is a domain. This proves
+(1) for every original $L/k$.
+
+The same receiving-field maps
+prove geometric integrality
+is preserved and reflected
+by every field extension
+$L/k$. Preservation follows
+from the displayed comparison
+for all $F/L$. For reflection,
+suppose $S\otimes_k L$ is
+geometrically integral over $L$.
+For any $E/k$, construct a
+compatible common field for
+$E$ and $L$ as above. The
+hypothesis makes $S\otimes_k F$
+a domain, and the injection
+$S\otimes_k E\to S\otimes_k F$
+then makes the original
+$S\otimes_k E$ a domain.
+This is precisely geometric
+integrality of $S/k$.
+The zero algebra satisfies
+none of (1)--(3), as each
+condition includes a nonzero
+domain after scalar extension.
+\end{proof}

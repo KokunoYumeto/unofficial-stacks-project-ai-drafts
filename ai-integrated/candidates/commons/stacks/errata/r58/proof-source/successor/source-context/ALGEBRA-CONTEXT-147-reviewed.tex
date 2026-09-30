@@ -1,0 +1,156 @@
+\begin{lemma}
+\label{lemma-make-geometrically-irreducible}
+Let $K/k$ be a field extension. Consider the subextension $K/k'/k$ consisting
+of elements separably algebraic over $k$. Then $K$ is geometrically irreducible
+over $k'$. If $K/k$ is a finitely generated field extension, then
+$[k' : k] < \infty$.
+\end{lemma}
+
+\begin{proof}
+The original set $k'$ is a subfield
+by Fields, Lemma \ref{fields-lemma-separable-elements}.
+If $a\in K$ is separably algebraic
+over $k'$, transitivity of separable
+algebraic extensions (Fields, Lemma
+\ref{fields-lemma-separable-permanence})
+makes $a$ separably algebraic over
+$k$. Hence $a\in k'$ by its
+definition. Lemma
+\ref{lemma-geometrically-irreducible-separable-elements}
+now proves geometric irreducibility
+of the original $K/k'$.
+
+For completeness, retain the full
+degree argument of Fields, Lemma
+\ref{fields-lemma-algebraic-closure-in-finitely-generated}.
+Choose a finite transcendence basis
+$x_1,\ldots,x_r$ of the finitely
+generated extension $K/k$ and put
+$$
+F=k(x_1,\ldots,x_r),\qquad n=[K:F]<\infty.
+$$
+Here $r=0$ is allowed, with $F=k$.
+The remaining members of a finite
+generating set for $K/k$ are
+algebraic over $F$, so adjoining
+them successively proves the
+displayed finiteness. Let $E/k$
+be any original finite algebraic
+subextension of $K/k$, and choose
+a basis $e_1=1,e_2,\ldots,e_d$ of
+$E/k$, where $d=[E:k]$.
+
+The original $x_i$ remain
+algebraically independent over $E$.
+Here is a direct proof retaining
+every coefficient. For nonzero
+$P\in E[T_1,\ldots,T_r]$, let $M_P$
+be the matrix of multiplication
+by $P$ on the free $k[T_1,\ldots,T_r]$-module
+$E[T_1,\ldots,T_r]$ in the basis
+$e_1,\ldots,e_d$. This multiplication
+is injective because the latter
+polynomial ring is a domain.
+After localization to $k(T_1,\ldots,T_r)$,
+the matrix is an injective square
+linear map on a finite-dimensional
+vector space, hence
+$N_P=\det(M_P)\neq0$ in $k[T_1,\ldots,T_r]$.
+Write $H_P\in E[T_1,\ldots,T_r]$
+for the element whose coordinate
+column is $\operatorname{adj}(M_P)(1,0,\ldots,0)^t$.
+The full adjugate identity gives
+$$
+P H_P=N_P.
+$$
+If $P(x_1,\ldots,x_r)=0$, this
+identity would imply
+$N_P(x_1,\ldots,x_r)=0$, contradicting
+the original independence over $k$.
+This proves the asserted independence
+over $E$, also for $r=0$.
+
+Consequently the original evaluation
+map induces inverse isomorphisms
+$$
+E\otimes_k F\longrightarrow E(x_1,\ldots,x_r),
+\qquad a\otimes h(x)\longmapsto a h(x).
+$$
+To specify the inverse, write a
+numerator in the basis $e_i$ and
+retain each original denominator
+$Q(x)$ with $Q\in E[T_1,\ldots,T_r]\setminus\{0\}$.
+Use exactly the identity
+$Q^{-1}=H_Q/N_Q$ just proved,
+then expand the numerator $P H_Q$
+in the same basis. This gives
+its unique expression
+$\sum_i e_i f_i(x)$ with $f_i\in F$,
+and the inverse sends it to
+$\sum_i e_i\otimes f_i(x)$.
+Uniqueness follows by multiplying
+all denominators in $k[T_1,\ldots,T_r]$
+and comparing polynomial coefficients
+in the basis $e_i$; no denominator
+vanishes at the original $x$.
+Thus these are well-defined inverse
+maps and
+$$
+[E:k]=[E(x_1,\ldots,x_r):F]\leq[K:F]=n.
+$$
+
+In fact this bounds the full
+algebraic constant field $k_a$
+inside $K$, not only $k'$.
+The degrees of its finite
+subextensions lie among the
+integers $1,\ldots,n$, so choose
+one, $E_0$, of maximal degree.
+For any $a\in k_a$, the original
+$E_0(a)/k$ is finite and has
+degree at least $[E_0:k]$.
+Maximality and degree multiplicativity
+give $[E_0(a):E_0]=1$. Hence every
+$a$ lies in $E_0$, proving
+$k_a=E_0$ and the precise bound
+$$
+[k':k]\leq[k_a:k]\leq[K:k(x_1,\ldots,x_r)].
+$$
+
+There is also an exact description
+of the algebraic intermediate
+fields $k\subseteq L\subseteq K$
+over which $K$ is geometrically
+irreducible: they are exactly
+those containing $k'$.
+For necessity, every $a\in k'$
+is separably algebraic over $L$,
+because its minimal polynomial
+over $L$ divides its original
+separable polynomial over $k$.
+Geometric irreducibility of $K/L$
+and the preceding criterion force
+$a\in L$. For sufficiency, suppose
+$k'\subseteq L$ and $L/k$ algebraic.
+The full algebraic constant field
+$k_a/k'$ is purely inseparable
+by Fields, Lemma
+\ref{fields-lemma-separable-first}.
+If $a\in K$ is separably algebraic
+over $L$, it is algebraic over
+$k$, hence belongs to $k_a$.
+Thus it is also purely inseparable
+over $L$: some original $p$-power
+lies in $k'\subseteq L$ in positive
+characteristic, and in characteristic
+zero $k_a=k'$. An element both
+separable and purely inseparable
+has degree one, since its minimal
+polynomial is separable and divides
+a polynomial with only one distinct
+root. Therefore $a\in L$, and the
+criterion proves sufficiency.
+The restriction $L/k$ algebraic
+is part of this characterization;
+it is not removed.
+\end{proof}

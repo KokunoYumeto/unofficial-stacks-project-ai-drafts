@@ -1,0 +1,242 @@
+# More flatness criteria: source review and separate editorial proofs
+
+Source: Stacks Project authors, algebra.tex, authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, complete interval 32643–33226. The original TeX file has SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. This note supplies editorial arguments and consequences; it does not replace the original exposition in a translation. Groups 830–853 bind the individual findings to their source passages. No novelty is claimed.
+
+All 21 received reports OCC-00638–OCC-00658 were read. Dependencies reread: algebra.tex:23423–23477 (Noetherian injectivity criterion), 23750–23810 (local flatness criterion and its remark), 23845–24023 (the two Tor comparisons, change-of-base criterion and Noetherian fibre criterion), and 9195–9262 (flatness and localization). The preceding approximation arguments are recorded separately in ALGEBRA_NOETHERIAN_APPROXIMATION_NOTES_20260928.md, especially groups 827–829. These are exact local proof locators, not claims of new public publication.
+
+## Source dispositions and translation treatment
+
+Restore “is” at 32662 and the comma ending the display at 32674. Supply “by” in the original declarations at 32772, 32794, 32871, 32888, 32925 and 33011; the occurrence at 32794 is an additional matching defect outside the report's three listed declarations. Change the index bound at 32813 to weak inequality: a directed preorder can have a largest element or a single element, so strict enlargement is not available.
+
+At 32841–32846 choose an actual fraction representative in the earlier module, retaining its tensor base. At 32927 use the quotient base ring and at 32933 state that base for flatness. At 32975 acknowledge the localization after base change. At 33040 retain both original relation families; at 33049 place the matrix over the primed ring. Both endpoint tensor equalities at 33108–33110 need localization. At 33136 use the finite-type hypothesis, not the finite-presentation conclusion being proved. At 33138 use “Let”; at 33158 use the two distinct ideals.
+
+The final proof must choose a prime in the support of the module, and must then consider all prime localizations, including those where the module is zero. The complete argument appears below. The proposed short source repair makes these two points visible without substituting the generalized theorem.
+
+The reordered modifier in OCC-00641, abbreviated proofs in OCC-00644 and OCC-00645, “whence” in OCC-00649, and double relative clause in OCC-00658 are optional prose changes. In OCC-00656 the plural “ideals” correctly quantifies over the family of finitely generated ideals having the specified property. None is a mathematical defect. Their source text is retained.
+
+All expanded arguments in this note, including proofs of source omissions, belong in source-linked editorial material. All consequences in groups 851–853 have zero translation replacement operations. Minimal proposed source changes are review records and are not yet source or translation mutations.
+
+## Regular bases and eventual flatness
+
+For miracle flatness, retain the original local Noetherian map \(R\to S\), with \(R\) regular, \(S\) Cohen–Macaulay, and
+\[
+\dim S=\dim R+\dim(S/\mathfrak m_RS).
+\]
+If \(\dim R=0\), \(R\) is a field. Otherwise every minimal prime \(\mathfrak q_i\) of the Cohen–Macaulay local ring \(S\) satisfies \(\dim(S/\mathfrak q_i)=\dim S\), by the source's maximal-chain lemma. If \(\mathfrak m_RS\subset\mathfrak q_i\), passage to that quotient would give \(\dim(S/\mathfrak q_i)\leq\dim(S/\mathfrak m_RS)\), a contradiction. Thus the contractions \(\mathfrak p_i\) are strictly smaller than \(\mathfrak m_R\).
+
+Prime avoidance, in precisely the form of the cited lemma-silly, gives \(x\in\mathfrak m_R\setminus\mathfrak m_R^2\) outside every \(\mathfrak p_i\). It avoids all associated primes of \(S\), since a Cohen–Macaulay local ring has no embedded associated primes. Hence multiplication by \(x\) on \(S\) is injective. The source regular-ring and Cohen–Macaulay results give
+\[
+\dim(R/xR)=\dim R-1,\qquad
+\dim(S/xS)=\dim S-1,
+\]
+with \(R/xR\) regular and \(S/xS\) Cohen–Macaulay. The closed fibre is unchanged. Induction gives flatness of \(S/xS\) over \(R/xR\). The exact resolution \(0\to R\xrightarrow{x}R\to R/xR\to0\), together with injectivity of multiplication on \(S\), gives \(\operatorname{Tor}_1^R(S,R/xR)=0\). The source local flatness criterion now proves \(S\) flat over \(R\).
+
+For lemma-flat-over-regular, a regular sequence of parameter images generates a proper ideal in the local ring \(S\). Thus all parameter images lie in its maximal ideal. Since those parameters generate \(\mathfrak m_R\), the ring map is local. Starting with the field quotient by all parameters, apply the same exact multiplication resolution and local criterion successively to the quotients by \(x_1,\ldots,x_{i-1}\). This proves the stated flatness without adding a hidden locality assumption.
+
+For eventual flatness retain the systems and all six comparison properties of lemma-limit-module-essentially-finite-presentation. Fix \(\lambda\). Write \(\mathfrak m_\lambda\) for the maximal ideal of \(R_\lambda\). The module
+\[
+K_\lambda=\operatorname{Tor}_1^{R_\lambda}
+ (M_\lambda,R_\lambda/\mathfrak m_\lambda)
+ =\ker(\mathfrak m_\lambda\otimes_{R_\lambda}M_\lambda\longrightarrow M_\lambda)
+\]
+is finite over the Noetherian ring \(S_\lambda\): both the ideal and the module have finite generating sets. Choose generators \(\xi_1,\ldots,\xi_n\). For \(\mu\geq\lambda\) let \(J_\mu=\mathfrak m_\lambda R_\mu\). The filtered colimit of
+\(J_\mu\otimes_{R_\mu}M_\mu\) is
+\(\mathfrak m_\lambda R\otimes_R M\).
+Indeed every tensor is a finite sum with finitely many coefficients, and both its representatives and the defining additive and balanced relations appear at a common stage. The images of all \(\xi_i\) in this colimit vanish because \(M\) is \(R\)-flat. Each image therefore vanishes at a sufficiently large common stage \(\mu\).
+
+The original quotient \(M_\lambda/\mathfrak m_\lambda M_\lambda\) is flat over the field \(R_\lambda/\mathfrak m_\lambda\). Apply the source change-of-base local criterion at 23920–23968 to the original local maps \(R_\lambda\to R_\mu\), \(S_\lambda\to S_\mu\), ideal \(\mathfrak m_\lambda\), and module \(M_\lambda\). Its base-changed module is localized to \(M_\mu\), as required by that criterion. The induced first Tor map is zero by the preceding generator calculation. It follows that \(M_\mu\) is \(R_\mu\)-flat. Every later module is a localization of its base change, so all later modules are flat over their respective bases.
+
+For later uses, filtered colimits of these varying-base flat modules are flat over the colimit ring. To verify this directly, take a finite relation \(\sum_i a_i m_i=0\) in the limit module. Lift its finitely many coefficients and elements to one stage and enlarge the stage until the relation is zero there. Stage flatness gives finitely many elements \(n_j\) and coefficients \(b_{ij}\) with \(m_i=\sum_jb_{ij}n_j\) and \(\sum_i a_i b_{ij}=0\) for every \(j\). Their images give the flatness relation criterion in the limit. No injectivity of transition maps is required.
+
+## Fibre injectivity with actual fraction representatives
+
+For the source mod-injective-general lemma retain \(u:M\to N\), with both modules finitely presented over the same essentially finitely presented local \(R\)-algebra \(S\), \(N\) flat over \(R\), and \(\overline u\) injective on the closed fibre. Group 827 supplies compatible models of this entire map. Eventual flatness permits restricting to a cofinal tail on which all \(N_\lambda\) are \(R_\lambda\)-flat.
+
+Put \(\kappa_\lambda=R_\lambda/\mathfrak m_\lambda\), \(\kappa=R/\mathfrak m\), \(A_\lambda=S_\lambda/\mathfrak m_\lambda S_\lambda\) and \(V_\lambda=M_\lambda/\mathfrak m_\lambda M_\lambda\). The ring \(A_\lambda\otimes_{\kappa_\lambda}\kappa\) is a localization of a finite-type algebra over the field \(\kappa\), so is Noetherian. Its finite module \(V_\lambda\otimes_{\kappa_\lambda}\kappa\) has a finite kernel
+\[
+K_\lambda=\ker\bigl(\Psi_\lambda:
+ V_\lambda\otimes_{\kappa_\lambda}\kappa\longrightarrow M/\mathfrak mM\bigr).
+\]
+Lift a finite generating list of this kernel to \(V_\lambda\otimes_{\kappa_\lambda}\kappa_\mu\). Each has zero image in the colimit of the \(V_\nu\); enlarging \(\mu\) kills all these images in \(V_\mu\). Consequently \(K_\lambda\) is generated, after extension to \(\kappa\), by the image of
+\[
+\ker\bigl(\Psi_{\lambda,\mu}:
+ V_\lambda\otimes_{\kappa_\lambda}\kappa_\mu\longrightarrow V_\mu\bigr).
+\]
+The reverse containment holds because this comparison factors the map to the final module.
+
+The original ring construction gives an actual multiplicative set
+\(W\subset S_\lambda\otimes_{R_\lambda}R_\mu\) and an isomorphism
+\[
+V_\mu\otimes_{\kappa_\mu}\kappa
+ \cong W^{-1}(V_\lambda\otimes_{\kappa_\lambda}\kappa).
+\]
+Here \(W\) in the right side denotes its image after the displayed scalar extensions; every such element maps to a unit in \(S\) and in the closed-fibre target. If \(x\in\ker\Psi_\mu\), choose an actual representative \(x=y/w\), with \(y\in V_\lambda\otimes_{\kappa_\lambda}\kappa\) and \(w\in W\). Since \(w\) acts invertibly on the target, \(\Psi_\lambda(y)=0\). The generators just constructed for \(K_\lambda\) all vanish in \(V_\mu\), hence their scalar-extended images vanish in \(V_\mu\otimes_{\kappa_\mu}\kappa\). Therefore \(y/1=0\) and \(x=0\). This does not identify an earlier module with its localization.
+
+For any later \(\nu\), write \(V_\nu\otimes_{\kappa_\nu}\kappa\) as a localization of \(V_\mu\otimes_{\kappa_\mu}\kappa\). The same fraction argument, using injectivity already established at \(\mu\), proves injectivity at \(\nu\). Because the field extension \(\kappa_\nu\to\kappa\) is faithfully flat, \(V_\nu\to V_\nu\otimes_{\kappa_\nu}\kappa\) is injective. Hence \(V_\nu\to M/\mathfrak mM\) is injective.
+
+If an element of \(V_\nu\) maps to zero under \(\overline{u_\nu}\), its image in the final closed fibre maps to zero under \(\overline u\), and thus is zero; the preceding injection makes the element itself zero. The Noetherian injectivity criterion at 23423–23477 gives injectivity of \(u_\nu\) and flatness of \(Q_\nu=N_\nu/u_\nu(M_\nu)\) over \(R_\nu\). Exactness of filtered colimits gives injectivity of \(u\) and identifies its cokernel with \(\operatorname{colim}Q_\nu\). The finite-relation calculation in the preceding section gives its \(R\)-flatness.
+
+## The local Tor criterion with its quotient bases
+
+Retain all four hypotheses of lemma-variant-local-criterion-flatness-general, including the proper ideal \(I\subset R\), finite presentation of \(S/R\) in the stated essential sense, finite presentation of \(M/S\), vanishing \(\operatorname{Tor}_1^R(M,R/I)\), and flatness of \(M/IM\) over \(R/I\). Let \(I_\lambda\) be the inverse image of \(I\) in \(R_\lambda\). The correct quotient system is
+\[
+R_\lambda/I_\lambda\longrightarrow S_\lambda/I_\lambda S_\lambda,
+\qquad M_\lambda/I_\lambda M_\lambda.
+\]
+Its colimit is the original quotient data. Its local transitions and module tensor isomorphisms follow by taking these exact quotients of the original system. Eventual flatness gives \(M_\lambda/I_\lambda M_\lambda\) flat over \(R_\lambda/I_\lambda\) on a cofinal tail.
+
+Fix \(\lambda\) there. The module
+\[
+K_\lambda=\operatorname{Tor}_1^{R_\lambda}(M_\lambda,R_\lambda/I_\lambda)
+ =\ker(I_\lambda\otimes_{R_\lambda}M_\lambda\to M_\lambda)
+\]
+is finite over \(S_\lambda\); choose its full generating list \(\xi_1,\ldots,\xi_n\). The ideal systems have colimit \(I\). Exactness of filtered colimits and the finite tensor-relation argument identify the colimit of these kernels with \(\operatorname{Tor}_1^R(M,R/I)=0\). Enlarge to one stage \(\mu\geq\lambda\) at which every \(\xi_i\) has zero image.
+
+The source's three comparison maps, with every original base retained, are
+\[
+\begin{aligned}
+R_\mu\otimes_{R_\lambda}\operatorname{Tor}_1^{R_\lambda}
+ (M_\lambda,R_\lambda/I_\lambda)
+&\longrightarrow \operatorname{Tor}_1^{R_\lambda}
+ (M_\lambda,R_\mu/I_\lambda R_\mu)\\
+&\longrightarrow \operatorname{Tor}_1^{R_\mu}
+ (M_\mu,R_\mu/I_\lambda R_\mu)\\
+&\longrightarrow \operatorname{Tor}_1^{R_\mu}
+ (M_\mu,R_\mu/I_\mu).
+\end{aligned}
+\]
+The first is onto by the source Tor comparison at 23845–23878 and quotient flatness at \(\lambda\). For the second, use the base-change comparison proved at 23880–23918, then the actual localization from \(S_\lambda\otimes_{R_\lambda}R_\mu\) to \(S_\mu\). Localization commutes with the relevant Tor: take a free \(R_\mu\)-resolution of its second argument, tensor with the module, and use exactness of localization on that complex and on its homology.
+
+For the third arrow the needed quotient module is \(M_\mu/I_\lambda M_\mu\). It is a localization of
+\[
+(M_\lambda/I_\lambda M_\lambda)
+ \otimes_{R_\lambda/I_\lambda}(R_\mu/I_\lambda R_\mu),
+\]
+and hence is flat over \(R_\mu/I_\lambda R_\mu\). Apply 23845–23878 again. Thus the composite is onto after tensoring its source with the actual \(S_\mu\) localization. The images of the full original generating list \(\xi_i\) are zero there, so the last Tor module is zero. The Noetherian local flatness criterion proves \(M_\mu\) flat over \(R_\mu\); passage to the final localized base change proves \(M\) flat over \(R\).
+
+## The fibre criterion with all relations and localizations
+
+Retain the local maps \(R\to S\to S'\), the nonzero finitely presented \(S'\)-module \(M\), both essential finite-presentation hypotheses over \(R\), \(R\)-flatness of \(M\), and \(S/\mathfrak mS\)-flatness of \(M/\mathfrak mM\). The relative map \(S\to S'\) is essentially finitely presented as well. Here is the finite presentation argument needed for the source construction.
+
+Write \(S=(R[x_1,\ldots,x_n]/(f_1,\ldots,f_u))_{\mathfrak q}\) and write \(S'\) as a prime localization of \(R[z_1,\ldots,z_l]/(h_1,\ldots,h_v)\). In the second presentation express the image of each \(x_i\) as an actual fraction \(a_i(z)/b_i(z)\), with \(b_i\) outside its specified prime. Over \(S\), impose the finite equations \(h_j(z)=0\) and \(b_i(z)x_i-a_i(z)=0\), then localize at the prime induced by \(S'\). Each \(b_i\) is invertible there. These equations give precisely the same local ring as \(S'\): the mutually inverse maps send every \(z_j\) to its original element and every \(x_i\) to its stated fraction, and elements outside the contracted prime become units. This keeps the full denominators and source relations; it does not erase the \(f_i\).
+
+Choose the compatible Noetherian systems of the preceding source construction, retaining all coefficients and contracted primes. The stage presentation over \(R_\lambda\) must be
+\[
+S'_\lambda=
+\bigl(R_\lambda[x_1,\ldots,x_n,y_1,\ldots,y_m]/
+ (f_{1,\lambda},\ldots,f_{u,\lambda},
+  g_{1,\lambda},\ldots,g_{v,\lambda})\bigr)_{\mathfrak q'_\lambda}.
+\]
+The \(f\)-relations already defining \(S_\lambda\) cannot be omitted on changing its presentation to one over \(R_\lambda\). All finite coefficient equalities hold after enlarging the stage. Descend the entire original matrix \(A\in\operatorname{Mat}(t\times s,S')\) to a matrix over \(S'_{\lambda_3}\), retaining its entries and both dimensions, and set
+\[
+M_\lambda=\operatorname{coker}\bigl((S'_\lambda)^{\oplus s}
+ \xrightarrow{A_\lambda}(S'_\lambda)^{\oplus t}\bigr).
+\]
+The module comparison \(M_\lambda\otimes_{S'_\lambda}S'\cong M\) is an isomorphism. In particular every stage module on this tail is nonzero, since \(M\ne0\).
+
+The original transition maps for \(S_\lambda\) and \(S'_\lambda\) are localizations of their stated base changes; the module transition maps over \(S'_\lambda\) are isomorphisms. Eventual flatness first makes \(M_\lambda\) flat over \(R_\lambda\). Apply it again to the exact closed-fibre systems
+\[
+S_\lambda/\mathfrak p_\lambda S_\lambda
+\longrightarrow S'_\lambda/\mathfrak p_\lambda S'_\lambda,\qquad
+M_\lambda/\mathfrak p_\lambda M_\lambda.
+\]
+These systems satisfy the same localization and module conditions by quotienting the original maps. Their limit module is flat over \(S/\mathfrak mS\) by hypothesis. Thus on a common cofinal tail the stage closed-fibre module is flat over \(S_\lambda/\mathfrak p_\lambda S_\lambda\). All rings there are Noetherian and all stage modules finite and nonzero. The Noetherian fibre criterion at 23977–24023 gives \(S_\lambda\) flat over \(R_\lambda\) and \(M_\lambda\) flat over \(S_\lambda\).
+
+At the endpoint, \(S_\lambda\otimes_{R_\lambda}R\to S\) is a localization. Therefore \(S\) is \(R\)-flat. Moreover
+\[
+M_\lambda\otimes_{S_\lambda}S
+ \cong M_\lambda\otimes_{S'_\lambda}(S'_\lambda\otimes_{S_\lambda}S)
+\]
+is \(S\)-flat, and \(S'_\lambda\otimes_{S_\lambda}S\to S'\) is a localization. Localizing this module gives \(M\), proving its \(S\)-flatness. These are localization maps, not generally the two tensor equalities printed in the source.
+
+For an explicit boundary take \(R_0=\mathbf Q\), \(R_1=\mathbf Q(t)\), \(S_0=\mathbf Q[x]_{(x)}\), and \(S_1=\mathbf Q(t)[x]_{(x)}\). The element \(1+tx\) is a unit in \(S_1\). It is not a unit in \(S_0\otimes_{\mathbf Q}\mathbf Q(t)\): that ring only inverts the nonzero rational polynomials with nonzero constant term, and \(1+tx\) divides none of them, since a nonzero rational polynomial cannot vanish at the transcendental element \(-1/t\). This disproves the first unlocalized equality. To test the module equality independently, use \(S_i=R_i\), take \(S'_i\) to be those same localized polynomial rings and \(M_i=S'_i\). The asserted module tensor equality would give the same false ring equality. Both corrections are necessary.
+
+## Finite presentation from the finite-type hypothesis
+
+In lemma-criterion-flatness-fibre-fp-over-ft start only with the stated essential finite type of \(S/R\). Write \(S=B/J\), with \(B=R[x_1,\ldots,x_n]_{\mathfrak q}\), retaining the original inverse-image prime and ideal. The closed fibre \(B/\mathfrak mB\) is Noetherian. Choose \(f_1,\ldots,f_k\in J\) whose images generate the image of \(J\) in that fibre, and put \(J_0=(f_1,\ldots,f_k)\).
+
+For each finitely generated \(J'\) with \(J_0\subset J'\subset J\), the local ring \(B/J'\) is essentially finitely presented over \(R\), and its closed fibre agrees with that of \(S\). The original nonzero module \(M\), regarded through the maps \(R\to B/J'\to S'\), has exactly the other fibre-criterion hypotheses. Hence \(B/J'\) is \(R\)-flat and \(M\) is \(B/J'\)-flat.
+
+If \(J'\subset J''\subset J\) are two such ideals, apply mod-injective-general to the common algebra \(B\) and the map of \(B\)-modules \(B/J'\to B/J''\). Both modules are finitely presented over \(B\), the target is \(R\)-flat, and the map on closed fibres is an isomorphism. This verifies every hypothesis of that lemma; essential finite presentation of two unrelated algebras alone would not state its module hypotheses. The map is injective, and being the quotient map it is also surjective. Its kernel \(J''/J'\) is zero.
+
+For any \(f\in J\), take \(J'=J_0\), \(J''=J_0+(f)\). Both satisfy the required conditions, so \(f\in J_0\). Thus \(J=J_0\) is finitely generated. It follows that \(S\) is essentially finitely presented over \(R\), and the preceding fibre criterion applied to the original \(R\to S\to S'\) gives the stated flatness conclusions. No finite-presentation conclusion was assumed at the start.
+
+## The support prime required by the nil-ideal proof
+
+Retain the original arbitrary ring diagram \(R\to S\to S'\), finite type of \(S/R\), finite presentation of \(S'/R\) and \(M/S'\), \(R\)-flatness of \(M\), and \(S/IS\)-flatness of \(M/IM\). First consider a prime \(\mathfrak q'\in\operatorname{Supp}_{S'}M\) whose contraction \(\mathfrak p\) to \(R\) contains \(I\), and write \(\mathfrak q\) for its contraction to \(S\).
+
+The maps \(R_{\mathfrak p}\to S_{\mathfrak q}\to S'_{\mathfrak q'}\) are local. The first is essentially of finite type and the composite essentially of finite presentation. The module \(M_{\mathfrak q'}\) is finitely presented and nonzero over the local ring \(S'_{\mathfrak q'}\), and is \(R_{\mathfrak p}\)-flat. Since \(I\subset\mathfrak p\),
+\[
+M/\mathfrak pM\cong (M/IM)\otimes_{S/IS}(S/\mathfrak pS)
+\]
+is \(S/\mathfrak pS\)-flat. Further localization at the elements defining \(R_{\mathfrak p},S_{\mathfrak q},S'_{\mathfrak q'}\) preserves this flatness. The closed-fibre hypothesis of fp-over-ft is therefore satisfied. That lemma gives \(M_{\mathfrak q'}\) flat over \(S_{\mathfrak q}\), and \(S_{\mathfrak q}\) flat and essentially finitely presented over \(R_{\mathfrak p}\), hence over \(R\). As an \(S\)-module \(M_{\mathfrak q'}\) is flat as well.
+
+For the source nil-ideal hypothesis, every prime of \(R\) contains \(I\). Thus the preceding argument applies to every nonzero stalk \(M_{\mathfrak q'}\). A zero stalk is flat automatically. The flat-localization criterion of 9195–9262 now proves \(M\) flat over \(S\). Equivalently, tensor an arbitrary injection of \(S\)-modules with \(M\); its kernel is an \(S'\)-module whose localization at each prime is zero by the stalk flatness just proved. A module with all prime localizations zero is zero.
+
+If \(M\otimes_S\kappa(\mathfrak q)\ne0\), this is a nonzero finite module over \(S'\otimes_S\kappa(\mathfrak q)\). Choose a prime in its support, not merely any prime of that fibre ring. Its inverse image \(\mathfrak q'\) in \(S'\) lies over \(\mathfrak q\) and has \(M_{\mathfrak q'}\ne0\). The preceding local argument then proves the asserted properties of \(S_{\mathfrak q}\).
+
+An arbitrary prime over \(\mathfrak q\) need not have this nonvanishing property: for example take \(S=k\), \(S'=k\times k\), \(M=k\times0\). The module fibre is nonzero, but its localization at the prime supported on the second factor is zero. This is why the source's choice must be made in the support. The source's final phrase “arbitrary prime” also needs the separate zero-stalk case, since its earlier choice only supplied one support prime.
+
+## Universal exactness and regular sequences
+
+Group 851. Under precisely the source mod-injective-general hypotheses, write \(Q=N/u(M)\). The preceding proof gives a short exact sequence
+\[
+0\longrightarrow M\xrightarrow{u}N\longrightarrow Q\longrightarrow0
+\]
+with \(N,Q\) flat over \(R\). For any \(R\)-module \(T\), the tensor long exact sequence has \(\operatorname{Tor}_1^R(Q,T)=0\); thus this short exact sequence remains exact after tensoring with \(T\).
+
+The module \(M\) is flat over \(R\). Indeed for any injection \(T_1\to T_2\), the two just-proved short exact tensor sequences form a commutative diagram. An element of \(M\otimes_R T_1\) killed in \(M\otimes_R T_2\) maps to an element of \(N\otimes_R T_1\) killed in \(N\otimes_R T_2\); \(N\)-flatness and the left injection in the first row force it to be zero. Also \(Q\) is finitely presented over \(S\): retain a finite presentation of \(N\), lift images of a finite generating list of \(M\) to its finite free module, and append those finitely many lifted vectors to its existing relation list. Its cokernel is exactly \(Q\).
+
+Under the source regular-sequence-general hypotheses let \(S_i=S/(f_1,\ldots,f_i)\), including \(S_0=S\). Induction by grothendieck-general makes every \(S_i\) flat over \(R\), and every multiplication sequence
+\[
+0\longrightarrow S_{i-1}\xrightarrow{f_i}S_{i-1}
+\longrightarrow S_i\longrightarrow0
+\]
+exact. These sequences remain exact after tensoring with every \(R\)-module because their right terms are \(R\)-flat. The original closed-fibre regular sequence generates a proper ideal, so each \(S_i\) is a nonzero local ring and \(R\to S_i\) is local and flat. Hence it is faithfully flat: any proper ideal of the local ring \(R\) lies in \(\mathfrak m\) and its extension remains in the maximal ideal of \(S_i\); the flatness criterion for faithful flatness applies.
+
+For every nonzero \(R\)-algebra \(R'\), all \(S_i\otimes_R R'\) are nonzero by that faithfulness. Their multiplication sequences stay exact, and their final quotient is nonzero. Thus the images of the same \(f_1,\ldots,f_c\) form a regular sequence in \(S\otimes_R R'\). Every quotient is faithfully flat over \(R'\), by base change. If \(R'=0\), the exactness statements still hold; no proper regular-sequence assertion is made in the zero ring.
+
+## Faithfulness and a pure receiving map
+
+Group 852. Under either local fibre criterion in this section, \(M\) is faithfully flat over \(S\) and \(S\) is faithfully flat over \(R\). The second assertion follows because \(R\to S\) is local and flat. For the first, \(M\) is flat over \(S\), finite nonzero over local \(S'\), and the extended ideal \(\mathfrak m_SS'\) lies in the maximal ideal of \(S'\). Nakayama's lemma gives \(M/\mathfrak m_SM\ne0\). For a proper ideal \(H\subset S\), the quotient \(M/HM\) maps onto this nonzero module. Flatness and nonvanishing of these quotients give faithful flatness over \(S\).
+
+The original map \(S\to S'\) is pure, even though no flatness of \(S'\) over \(S\) is asserted. For any \(S\)-module \(T\), tensor its unit map
+\[
+\eta_T:T\longrightarrow S'\otimes_S T,\qquad t\longmapsto1\otimes t
+\]
+with the faithfully flat \(S\)-module \(M\). The resulting map has the explicit retraction
+\[
+S'\otimes_S T\otimes_S M\longrightarrow T\otimes_S M,\qquad
+s'\otimes t\otimes m\longmapsto t\otimes(s'm).
+\]
+This is well-defined by the \(S'\)-module structure of \(M\), and its composite with \(\eta_T\otimes_S M\) is the identity. Thus that tensor map is injective. Flatness identifies its kernel with \((\ker\eta_T)\otimes_S M\); faithfulness forces \(\ker\eta_T=0\). This proves purity with the actual map and action.
+
+In particular \(S/H\to S'/HS'\) is injective for every ideal \(H\subset S\), so \(HS'\cap S=H\), including injectivity of \(S\to S'\) at \(H=0\). Also \(\kappa(\mathfrak q)\to S'\otimes_S\kappa(\mathfrak q)\) is injective for every prime \(\mathfrak q\subset S\). Each fibre ring is nonzero and has a prime, so \(\operatorname{Spec}(S')\to\operatorname{Spec}(S)\) is surjective. These are consequences of the original module criterion; replacing them by a claim that \(S'/S\) is flat would exceed the proof.
+
+## Nilness on module support suffices
+
+Group 853. In the global diagram of the locally nilpotent fibre criterion, replace the requirement that \(I\subset R\) be a nil ideal by
+\[
+IS'\subset\sqrt{\operatorname{Ann}_{S'}M}.
+\]
+Keep every other original hypothesis: \(S/R\) finite type, \(S'/R\) finite presentation, \(M/S'\) finite presentation, \(M\) flat over \(R\), and \(M/IM\) flat over \(S/IS\). Then exactly the source conclusions hold: \(M\) is \(S\)-flat, and \(S_{\mathfrak q}\) is flat and essentially finitely presented over \(R\) whenever \(M\otimes_S\kappa(\mathfrak q)\ne0\).
+
+To prove this, finiteness of \(M/S'\) gives \(\operatorname{Supp}_{S'}M=V(\operatorname{Ann}_{S'}M)\). Explicitly, if \(M_{\mathfrak q'}=0\), a product of finitely many elements outside \(\mathfrak q'\), one killing each chosen generator, annihilates \(M\); conversely an annihilator outside \(\mathfrak q'\) kills the localization. The displayed hypothesis is therefore equivalent to every prime in this support containing \(IS'\). Its contraction \(\mathfrak p\subset R\) contains \(I\). The complete local proof in the preceding support-prime section now applies to every nonzero stalk, while zero stalks are flat. It proves global \(S\)-flatness and the asserted properties at each receiving prime.
+
+For completeness the exact receiving locus is
+\[
+U=\{\mathfrak q\in\operatorname{Spec}S:
+M\otimes_S\kappa(\mathfrak q)\ne0\}
+=\operatorname{image}(\operatorname{Supp}_{S'}M\longrightarrow\operatorname{Spec}S).
+\]
+The forward inclusion follows by choosing a support prime of the nonzero finite fibre module. Conversely, let \(\mathfrak q'\in\operatorname{Supp}_{S'}M\) contract to \(\mathfrak q\). The finite nonzero local module \(M_{\mathfrak q'}\) has nonzero quotient by \(\mathfrak qM_{\mathfrak q'}\), by Nakayama, since \(\mathfrak qS'_{\mathfrak q'}\) lies in its maximal ideal. This quotient is the corresponding localization of \(M\otimes_S\kappa(\mathfrak q)\), so that fibre is nonzero. This proves equality of the loci; it does not assert openness of \(U\).
+
+The new condition is strictly weaker than nilness of \(I\) in \(R\). Let \(R=k\times k\), \(I=k\times0\), \(S=S'=k\) via the second projection, and \(M=k\). The ideal \(I\) contains a nonzero idempotent and is not nil, but annihilates \(M\). Both algebra presentations are finite, \(M\) is a projective \(R\)-module and a free \(S\)-module, and all the hypotheses and conclusions hold.
+
+Some support condition is needed for this extension. Let \(R=k[t]\), \(I=(t)\), \(S=R[x]\), \(S'=R[1/t]\) with \(x\mapsto0\), and \(M=S'\). The algebra \(S'/R\) has the finite presentation \(R[u]/(tu-1)\); \(S/R\) is polynomial, and \(M/S'\) is free of rank one. The module \(M\) is \(R\)-flat, and \(M/IM=0\) is \(S/IS\)-flat. But \(M\) is not \(S\)-flat: the injective multiplication map \(S\xrightarrow{x}S\) becomes the zero map on the nonzero module \(M\). Here \(IS'=S'\), so the support condition fails. This retains both the original base and every localization denominator.
+
+## Propagation and limits of the review
+
+Groups 834–835 repair the exact injection argument used by the local flatness and finite-presentation results; groups 838–839 and 841 repair its quotient-base successor; groups 842–844 repair the original fibre criterion; groups 845 and 848 keep the finite-type-to-finite-presentation proof noncircular; group 850 repairs the support and all-stalk reasoning of its global application. Their dependencies are traced above. Group 851 records universally exact module sequences and the full regular-sequence base-change conclusion. Group 852 records faithful flatness and purity of the receiving algebra map. Group 853 records the strictly weaker support condition and its exact receiving locus and counterexample.
+
+No translated source theorem is strengthened by substitution. The generalizations and full proofs stay in this editorial note and the durable claim ledger. Later source review must check dependent uses of the source criteria, and the broader cross-finding synthesis remains follow-on work after the core task. The corpus query “fibre flatness criterion” returned four unread routing hits in its two layers. No additional external text, PDF or claim of literature exhaustiveness or novelty is part of this batch.

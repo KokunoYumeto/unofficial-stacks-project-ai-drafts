@@ -1,0 +1,69 @@
+\begin{lemma}
+\label{lemma-geometrically-irreducible-transitive}
+Let $K/k$ be a geometrically irreducible field extension.
+Let $S$ be a geometrically irreducible $K$-algebra.
+Then $S$ is geometrically irreducible over $k$.
+\end{lemma}
+
+\begin{proof}
+Let $k'/k$ be any original finite
+separable extension. By Fields,
+Lemma \ref{fields-lemma-primitive-element},
+write $k'=k(\alpha)$ with monic
+separable minimal polynomial $P$.
+The inverse tensor-polynomial maps
+from Lemma
+\ref{lemma-field-extension-geometrically-irreducible}
+give $K'=K\otimes_k k'\simeq K[T]/(P)$.
+Since $P$ is separable, there are
+$U,V\in k[T]$ with $UP+VP'=1$.
+The same full identity holds in
+$K[T]$. Thus $P$ has no repeated
+irreducible factor there: a repeated
+factor would divide $P$ and $P'$
+and hence divide $1$.
+
+Factor $P=\prod_{i=1}^m Q_i$ into
+its distinct monic irreducible
+factors in $K[T]$. The leading
+coefficient of $P$ is $1$, so this
+product has exactly the original
+leading coefficient. The Chinese
+remainder map
+$$
+K[T]/(P)\longrightarrow\prod_{i=1}^m K[T]/(Q_i)
+$$
+sends the class of $F$ to its residue
+classes. For each $i$, Bezout gives
+$A_i\prod_{j\ne i}Q_j+B_iQ_i=1$;
+the inverse sends $([F_i])_i$ to
+$[\sum_i F_i A_i\prod_{j\ne i}Q_j]$.
+These formulas give both composites
+by reduction modulo every $Q_i$.
+Each factor is a nonzero field,
+so the spectrum has exactly $m$
+points and is irreducible exactly
+when $m=1$. The hypothesis on
+$K/k$ therefore makes $K'$ a field.
+It is finite over $K$ with basis
+$1,T,\ldots,T^{\deg(P)-1}$, and
+separable since its irreducible
+polynomial $P$ has the displayed
+Bezout identity with its derivative.
+
+There are inverse original maps
+$$
+S\otimes_K(K\otimes_k k')\longrightarrow S\otimes_k k',
+\qquad s\otimes(a\otimes b)\longmapsto as\otimes b,
+$$
+and $s\otimes b\mapsto s\otimes(1\otimes b)$.
+The $K$-balancing relation proves
+both composites are the identity.
+Geometric irreducibility of $S/K$
+applies to the actual field $K'/K$,
+so this tensor has irreducible
+spectrum. Every finite separable
+$k'/k$ passes the test, and Lemma
+\ref{lemma-geometrically-irreducible}
+proves the result over the original $k$.
+\end{proof}

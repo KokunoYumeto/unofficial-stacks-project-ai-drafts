@@ -1,0 +1,25 @@
+\begin{lemma}
+\label{editorial-source-lemma-finite-product-integral-closure}
+Let $R_i\to S_i$ be ring maps $i = 1, \ldots, n$.
+Denote the integral closure of $R_i$ in $S_i$ by $S'_i$.
+Further let $R$ and $S$ denote the product of the $R_i$ and $S_i$ respectively.
+Then the integral closure of $R$ in $S$
+is the product of the $S'_i$. In particular it equals the image
+of $R\to S$ if and only if each $S'_i$ equals the image of
+$R_i\to S_i$. When all the given maps are injective, this says
+that $R$ is integrally closed in $S$ if and only if every $R_i$
+is integrally closed in $S_i$, using Definition \ref{algebra-definition-integral-closure}.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{editorial-source-lemma-finite-product-integral}, the integral tuples
+are exactly $\prod_iS'_i$, with coordinatewise operations and the
+original product coefficient map. The image of that map is
+$\prod_i\varphi_i(R_i)$: each tuple of image elements has a tuple
+of preimages in the finite product. Equality of these two products
+is equivalent to equality in each coordinate, by projection and
+by filling the other coordinates with zero. If the maps are
+injective, their product is injective and the image equality is
+exactly the subring property defined above. The empty product
+case gives the zero ring and the assertions hold vacuously.
+\end{proof}

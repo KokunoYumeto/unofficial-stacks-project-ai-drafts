@@ -1,0 +1,34 @@
+\begin{lemma}
+\label{lemma-same-image}
+Let $k$ be a field, and let $R$, $S$ be $k$-algebras.
+Let $S' \subset S$ be a sub $k$-algebra, and let $f \in S' \otimes_k R$.
+In the commutative diagram
+$$
+\xymatrix{
+\Spec((S \otimes_k R)_f) \ar[rd] \ar[rr] & &
+\Spec((S' \otimes_k R)_f) \ar[ld] \\
+& \Spec(R) &
+}
+$$
+the images of the diagonal arrows are the same.
+\end{lemma}
+
+\begin{proof}
+Let $\mathfrak p \subset R$ be in the image of the south-west
+arrow. This means (Lemma \ref{lemma-in-image}) that
+$$
+(S' \otimes_k R)_f \otimes_R \kappa(\mathfrak p)
+=
+(S' \otimes_k \kappa(\mathfrak p))_f
+$$
+is not the zero ring, i.e., $S' \otimes_k \kappa(\mathfrak p)$
+is not the zero ring and the image of $f$ in it is not nilpotent.
+The ring map
+$S' \otimes_k \kappa(\mathfrak p) \to S \otimes_k \kappa(\mathfrak p)$
+is injective. Hence also $S \otimes_k \kappa(\mathfrak p)$
+is not the zero ring and the image of $f$ in it is not nilpotent.
+Hence $(S \otimes_k R)_f \otimes_R \kappa(\mathfrak p)$
+is not the zero ring. Thus (Lemma \ref{lemma-in-image})
+we see that $\mathfrak p$ is in the image of the south-east arrow
+as desired.
+\end{proof}

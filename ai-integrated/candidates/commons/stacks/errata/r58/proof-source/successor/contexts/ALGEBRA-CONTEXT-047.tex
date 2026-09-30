@@ -1,0 +1,24 @@
+\begin{lemma}
+\label{editorial-source-lemma-locally-nilpotent-unit}
+Let $R$ be a ring and let $I \subset R$ be a locally nilpotent
+ideal.
+An element $x$ of $R$ is a unit if and only if the image of $x$
+in $R/I$ is a unit.
+\end{lemma}
+
+\begin{proof}
+If $x$ is a unit in $R$, then its image is clearly a unit in $R/I$.
+It remains to prove the converse.
+Assume the image of $y \in R$ in $R/I$ is the inverse of the image of $x$.
+Then $xy=1-z$ for some $z\in I$, and $z^N=0$ for a positive
+integer $N$. Retain all terms in the finite geometric sum. They give
+$$
+x\left(y\sum_{j=0}^{N-1}z^j\right)
+=(1-z)\sum_{j=0}^{N-1}z^j=1-z^N=1.
+$$
+Commutativity gives the reverse product as well, so the displayed
+element $y\sum_{j=0}^{N-1}z^j$ is the inverse of the original $x$.
+In particular, $1+I$ is a group under multiplication: it is closed
+under products, and if $z\in I$ with $z^N=0$ then
+$(1+z)^{-1}=\sum_{j=0}^{N-1}(-z)^j\in1+I$.
+\end{proof}

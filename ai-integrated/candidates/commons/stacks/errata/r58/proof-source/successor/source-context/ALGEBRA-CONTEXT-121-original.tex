@@ -1,0 +1,49 @@
+\begin{lemma}
+\label{lemma-characterize-separable-field-extensions}
+Let $k$ be a field of characteristic $p > 0$.
+Let $K/k$ be a field extension.
+The following are equivalent:
+\begin{enumerate}
+\item $K$ is separable over $k$,
+\item for every $k$-linearly independent subset $\{a_1, \ldots, a_m\}$
+of $K$ the set $\{a^p_1, \ldots, a_m^p\}$ is $k$-linearly independent,
+\item the ring $K \otimes_k k^{1/p}$ is reduced, and
+\item $K$ is geometrically reduced over $k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The implication (1) $\Rightarrow$ (4) follows from
+Lemma \ref{lemma-separable-extension-preserves-reducedness}.
+The implication (4) $\Rightarrow$ (3) is immediate.
+
+\medskip\noindent
+Assume (3). Consider the ring homomorphism
+$m : K \otimes_k k^{1/p} \rightarrow K$ given by 
+$$
+\lambda \otimes \mu \rightarrow \lambda^p \mu^p
+$$
+Note that $x^p = m(x) \otimes 1$ for all $x \in K \otimes_k k^{1/p}$.
+Since $K \otimes_k k^{1/p}$ is reduced
+we see $m$ is injective. If $\{a_1, \ldots, a_m\} \subset K$
+is $k$-linearly independent, then $\{a_1 \otimes 1, \ldots, a_m \otimes 1\}$
+is $k^{1/p}$-linearly independent. By injectivity of $m$ we deduce
+that no nontrivial $k$-linear combination of $a_1^p, \ldots, a_m^p$ is
+is zero. Hence (3) implies (2).
+
+\medskip\noindent
+Assume (2). To prove (1) we may assume that $K$ is finitely generated over $k$
+and we have to prove that $K$ is separably generated over $k$.
+Let $\{x_1, \ldots, x_d\}$ be a transcendence base of $K/k$. By
+Fields, Lemma \ref{fields-lemma-algebraic-finitely-generated}
+we have $[K : K'] < \infty$ where $K' = k(x_1, \ldots, x_d)$.
+Choose the transcendence base such that the degree of inseparability
+$[K : K']_i$ is minimal. If $K / K'$ is separable then we win.
+Assume this is not the case to get a contradiction. Then there exists
+$x_{d + 1} \in K$ which is not separable over $K'$, and in particular
+$[K'(x_{d+1}) : K']_i > 1$. Then by
+Lemma \ref{lemma-mini-separability} there is $1 \leq j \leq n + 1$
+such that $K'' = k(x_1, \ldots, \widehat{x}_j, \ldots, x_{d+1})$
+satisfies $[K'(x_{d+1}) : K'']_i = 1$. By multiplicativity
+$[K : K'']_i < [K : K']_i$ and we obtain the contradiction.
+\end{proof}

@@ -1,0 +1,26 @@
+\begin{lemma}
+\label{lemma-characterize-domain}
+Let $R$ be a ring.
+\begin{enumerate}
+\item An ideal maximal among the ideals which do not contain a
+nonzerodivisor is prime.
+\item If $R$ is nonzero and every nonzero prime ideal in $R$
+contains a nonzerodivisor, then $R$ is a domain.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Consider the set $S$ of nonzerodivisors. It is a multiplicative
+subset of $R$. Hence any ideal maximal with respect to not intersecting
+$S$ is prime, see
+Lemma \ref{lemma-simple}.
+For the second assertion, assume $R\ne0$. Then $0\notin S$,
+so $(0)$ is an ideal disjoint from $S$. In the set of ideals disjoint
+from $S$, every nonempty totally ordered chain has its union as an
+upper bound: an element of that union belongs to some member, so
+the union still misses $S$. The empty chain is bounded by $(0)$.
+Zorn's lemma supplies a maximal member $\mathfrak p$, and the first
+assertion shows it is prime. By hypothesis every nonzero prime
+meets $S$, so this $\mathfrak p$ must equal $(0)$.
+Thus $(0)$ is prime, and the nonzero ring $R$ is a domain.
+\end{proof}

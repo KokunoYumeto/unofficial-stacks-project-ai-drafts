@@ -7,7 +7,7 @@ Patch export and packaging: OpenAI Codex — GPT-6 Astra, Ultra effort. This is 
 
 Review one chapter at a time; there is no need to open a megabyte-sized diff.
 
-- [algebra.tex](reviews/algebra.md) — 228 correction units.
+- [algebra.tex](reviews/algebra.md) — 788 correction units.
 - [artin.tex](reviews/artin.md) — 131 correction units.
 - [brauer.tex](reviews/brauer.md) — 10 correction units.
 - [categories.tex](reviews/categories.md) — 91 correction units.

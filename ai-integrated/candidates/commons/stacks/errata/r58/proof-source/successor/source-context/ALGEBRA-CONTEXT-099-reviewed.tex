@@ -1,0 +1,172 @@
+\begin{lemma}
+\label{lemma-annihilator-flat-base-change}
+Let $R \to S$ be a flat ring map. Let $M$ be an $R$-module and
+$m \in M$. Then $\text{Ann}_R(m) S = \text{Ann}_S(m \otimes 1)$.
+If $M$ is a finite $R$-module, then
+$\text{Ann}_R(M)S=\text{Ann}_S(M\otimes_R S)$.
+The latter conclusion also holds if finitely many elements
+$m_1,\ldots,m_n\in M$ have
+$\operatorname{Ann}_R(M)=\bigcap_{i=1}^n\operatorname{Ann}_R(m_i)$,
+without requiring that they generate $M$.
+\end{lemma}
+
+\begin{proof}
+Write the original ring map as $\varphi:R\to S$ and retain
+$I=\operatorname{Ann}_R(m)$. The exact sequence
+$$
+0\longrightarrow I\longrightarrow R\longrightarrow M,
+\qquad r\longmapsto rm,
+$$
+remains exact after tensoring with the flat $R$-module $S$.
+Under $R\otimes_RS\to S$, $r\otimes s\mapsto\varphi(r)s$,
+the last map becomes $s\mapsto m\otimes s=(m\otimes1)s$.
+The image of $I\otimes_RS\to S$, $a\otimes s\mapsto\varphi(a)s$,
+is exactly the extended ideal $IS$. Its equality with the
+kernel therefore proves
+$$
+\operatorname{Ann}_R(m)S=\operatorname{Ann}_S(m\otimes1).
+$$
+
+For the original finite generating family $m_1,\ldots,m_n$,
+retain $I_i=\operatorname{Ann}_R(m_i)$. An element kills $M$
+exactly when it kills every generator. The elements
+$m_i\otimes1$ generate $M\otimes_RS$, so the full comparison is
+$$
+\begin{split}
+\operatorname{Ann}_S(M\otimes_RS)
+&=\bigcap_{i=1}^n\operatorname{Ann}_S(m_i\otimes1)\\
+&=\bigcap_{i=1}^n(I_iS)
+=\left(\bigcap_{i=1}^n I_i\right)S
+=\operatorname{Ann}_R(M)S.
+\end{split}
+$$
+The finite-intersection equality is
+Lemma \ref{lemma-flat-intersect-ideals}.
+
+For the stronger assertion, suppose only that the original
+finite list detects the annihilator:
+$$
+J=\operatorname{Ann}_R(M)=\bigcap_{i=1}^n I_i.
+$$
+These elements need not generate $M$. The sequence
+$$
+0\longrightarrow J\longrightarrow R\longrightarrow M^n,
+\qquad r\longmapsto(rm_1,\ldots,rm_n),
+$$
+is exact. Tensoring and using the coordinate maps
+$M^n\otimes_RS\simeq(M\otimes_RS)^n$ gives
+$JS=\bigcap_i\operatorname{Ann}_S(m_i\otimes1)$.
+Consequently every element annihilating the whole tensor
+module belongs to $JS$. Conversely each finite sum
+$\sum_j\varphi(a_j)s_j$ with $a_j\in J$ kills every tensor:
+$$
+\left(\sum_j\varphi(a_j)s_j\right)(m\otimes s)
+=\sum_j(a_jm)\otimes s_js=0.
+$$
+This proves equality for the weaker hypothesis. For $n=0$
+the empty intersection is $R$, forcing $M=0$; both module
+annihilators are then the whole rings, as required.
+For example, any nonempty free module, even with an infinite
+basis, has its annihilator detected by one original basis
+vector: $re=0$ implies $r=0$ by that coordinate.
+
+\medskip\noindent
+For an arbitrary module the same element calculation gives
+the exact formula
+$$
+\operatorname{Ann}_S(M\otimes_RS)
+=\bigcap_{m\in M}\bigl(\operatorname{Ann}_R(m)S\bigr),
+$$
+since all the elements $m\otimes1$ generate the tensor module.
+Extension of ideals need not commute with this infinite
+intersection, even for a faithfully flat ring map.
+
+Retain the explicit example
+$$
+R=\mathbf Z,\qquad
+M=\bigoplus_{n\geq1}\mathbf Z/2^n\mathbf Z,\qquad
+S=\mathbf Z\times\mathbf Q,
+\qquad \varphi(a)=(a,a).
+$$
+The rational numbers are the localization at the nonzero
+integers. For every module $N$ the tensor-localization map is
+$N\otimes_{\mathbf Z}\mathbf Q\to
+(\mathbf Z\setminus\{0\})^{-1}N$,
+$n\otimes a/b\mapsto an/b$, with inverse $n/b\mapsto n\otimes1/b$.
+Localization preserves injections: a fraction mapping to zero
+has a nonzero integer witness killing its numerator, and
+injectivity gives the same relation in the original module.
+Thus $\mathbf Q$ is flat, as also established in
+Example \ref{example-flat-infinite-intersections}.
+The exact tensor comparison
+$$
+N\otimes_{\mathbf Z}(\mathbf Z\times\mathbf Q)
+\longrightarrow N\oplus(N\otimes_{\mathbf Z}\mathbf Q),
+\qquad n\otimes(a,q)\longmapsto(an,n\otimes q)
+$$
+has inverse
+$$
+\left(n,\sum_j n_j\otimes q_j\right)
+\longmapsto n\otimes(1,0)+\sum_j n_j\otimes(0,q_j).
+$$
+Both are balanced and their composites are identities on
+the displayed generators. This proves flatness of $S$ and
+faithfulness: the tensor of a homomorphism $h$ has first
+component $h$, so it is zero only if $h=0$.
+
+The original annihilator is
+$$
+\operatorname{Ann}_{\mathbf Z}(M)
+=\bigcap_{n\geq1}2^n\mathbf Z=0,
+$$
+because no nonzero integer is divisible by every $2^n$.
+Each original $m\in M$ has finite support, hence is killed
+by some $2^N$. Therefore
+$m\otimes q=(2^Nm)\otimes(q/2^N)=0$ in
+$M\otimes_{\mathbf Z}\mathbf Q$. The preceding comparison gives
+$M\otimes_{\mathbf Z}S\simeq M\oplus0$, with the action
+$(a,q)(m,0)=(am,0)$. It follows exactly that
+$$
+\operatorname{Ann}_{\mathbf Z}(M)S=0,
+\qquad
+\operatorname{Ann}_S(M\otimes_{\mathbf Z}S)=0\times\mathbf Q\ne0.
+$$
+Every finite family in $M$ is killed by a common nonzero
+power of $2$, so no such family detects its zero annihilator.
+This same module has support $\{(2)\}$: its first summand
+has nonzero localization at $(2)$, while at every other
+prime $2$ is a unit and every element is killed by a power
+of $2$. Thus its support is closed but is strictly smaller
+than $V(\operatorname{Ann}_{\mathbf Z}(M))=\Spec(\mathbf Z)$.
+
+The counterexample even has a finitely presented faithfully
+flat algebra version. Put $S'=\mathbf Z\times\mathbf Z[1/2]$.
+The identical localization and direct-sum arguments prove
+faithful flatness and give annihilator $0\times\mathbf Z[1/2]$.
+More explicitly,
+$$
+\mathbf Z[T]/(2T^2-T)\longrightarrow S',
+\qquad f(T)\longmapsto(f(0),f(1/2)),
+$$
+is an isomorphism. The ideals $(T)$ and $(2T-1)$ are
+comaximal since $2T-(2T-1)=1$; hence their intersection
+is their product $(2T^2-T)$. The Chinese remainder map
+is surjective with this kernel. Its factors are $\mathbf Z$
+and $\mathbf Z[1/2]$: in the second quotient $2T=1$, and
+the inverse to evaluation at $1/2$ sends $a/2^j$ to $aT^j$.
+This proves the asserted presentation with the original
+integer factors retained.
+
+Finally, faithful flatness does always imply the contraction
+identity
+$$
+\varphi^{-1}\bigl(\operatorname{Ann}_S(M\otimes_RS)\bigr)
+=\operatorname{Ann}_R(M).
+$$
+Multiplication by $r$ on $M$ becomes multiplication by
+$\varphi(r)$ on its tensor module, and a faithfully flat
+tensor functor detects whether this homomorphism is zero.
+Thus the counterexample fails extension, while contraction
+still recovers the original annihilator. For $M=0$ or the
+zero ring, all the annihilator statements retain these meanings.
+\end{proof}

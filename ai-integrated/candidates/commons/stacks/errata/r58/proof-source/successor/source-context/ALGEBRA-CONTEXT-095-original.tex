@@ -1,0 +1,18 @@
+\begin{lemma}
+\label{lemma-minimal-polynomial-normal-domain}
+Let $R \subset S$ be an inclusion of domains.
+Assume $R$ is normal. Let $g \in S$ be integral
+over $R$. Then the minimal polynomial of $g$
+has coefficients in $R$.
+\end{lemma}
+
+\begin{proof}
+Let $P = x^m + b_{m-1} x^{m-1} + \ldots + b_0$
+be a polynomial with coefficients in $R$
+such that $P(g) = 0$. Let $Q = x^n + a_{n-1}x^{n-1} + \ldots + a_0$
+be the minimal polynomial for $g$ over the fraction field
+$K$ of $R$. Then $Q$ divides $P$ in $K[x]$. By Lemma
+\ref{lemma-polynomials-divide} we see the $a_i$ are
+integral over $R$. Since $R$ is normal this
+means they are in $R$.
+\end{proof}

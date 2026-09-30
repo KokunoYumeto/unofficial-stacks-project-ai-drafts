@@ -1,0 +1,35 @@
+\begin{lemma}
+\label{editorial-source-lemma-separably-generated-separable}
+A separably generated field extension is separable.
+\end{lemma}
+
+\begin{proof}
+In characteristic $p>0$, Lemma
+\ref{editorial-source-lemma-separable-extension-preserves-reducedness}
+applies directly to the original separably generated
+extension $K/k$ and to every reduced $k$-algebra.
+In particular $K\otimes_k L$ is reduced for every
+field extension $L/k$. Thus $K/k$ is geometrically
+reduced, and Lemma
+\ref{editorial-source-lemma-characterize-separable-field-extensions}
+makes this original extension separable.
+
+In characteristic zero, every finitely generated
+intermediate field $E/k$ has a finite transcendence
+basis $y_1,\ldots,y_d$, and $E$ is finite algebraic
+over $k(y_1,\ldots,y_d)$. Each irreducible polynomial
+of positive degree over this field has nonzero
+derivative: its leading derivative coefficient is
+the original nonzero leading coefficient multiplied
+by its positive integer degree. The derivative has
+smaller degree, so irreducibility makes their greatest
+common divisor equal to a unit. Every algebraic
+element of $E$ is consequently separable over the
+chosen rational function field. Thus $E/k$ is
+separably generated. This holds for every such $E$,
+which is precisely the definition of separability
+of $K/k$. In fact this argument proves that every
+field extension in characteristic zero is separable,
+without requiring that the entire extension be
+separably generated.
+\end{proof}

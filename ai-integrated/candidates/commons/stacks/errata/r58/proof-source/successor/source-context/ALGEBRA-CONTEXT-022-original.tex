@@ -1,0 +1,86 @@
+\begin{lemma}
+\label{lemma-glue-modules}
+Let $R$ be a ring. Let $f_1, \ldots, f_n \in R$. Suppose we are given
+the following data:
+\begin{enumerate}
+\item For each $i$ an $R_{f_i}$-module $M_i$.
+\item For each pair $i, j$ an $R_{f_if_j}$-module isomorphism
+$\psi_{ij} : (M_i)_{f_j} \to (M_j)_{f_i}$.
+\end{enumerate}
+which satisfy the ``cocycle condition'' that all the diagrams
+$$
+\xymatrix{
+(M_i)_{f_jf_k}
+\ar[rd]_{\psi_{ij}}
+\ar[rr]^{\psi_{ik}}
+& &
+(M_k)_{f_if_j} \\
+&
+(M_j)_{f_if_k} \ar[ru]_{\psi_{jk}}
+}
+$$
+commute (for all triples $i, j, k$). Given this data define
+$$
+M = \Ker\left(
+\bigoplus\nolimits_{1 \leq i \leq n} M_i
+\longrightarrow
+\bigoplus\nolimits_{1 \leq i, j \leq n} (M_i)_{f_j}
+\right)
+$$
+where $(m_1, \ldots, m_n)$ maps to the element whose
+$(i, j)$th entry is $m_i/1 - \psi_{ji}(m_j/1)$.
+Then the natural map $M \to M_i$ induces an isomorphism
+$M_{f_i} \to M_i$. Moreover $\psi_{ij}(m/1) = m/1$
+for all $m \in M$ (with obvious notation).
+\end{lemma}
+
+\begin{proof}
+To show that $M_{f_1} \to M_1$ is an isomorphism, it suffices
+to show that its localization at every prime $\mathfrak p'$
+of $R_{f_1}$ is an isomorphism, see
+Lemma \ref{lemma-characterize-zero-local}.
+Write $\mathfrak p' = \mathfrak p R_{f_1}$
+for some prime $\mathfrak p \subset R$, $f_1 \not \in \mathfrak p$, see
+Lemma \ref{lemma-standard-open}.
+Since localization is exact
+(Proposition \ref{proposition-localization-exact}),
+we see that
+\begin{align*}
+(M_{f_1})_{\mathfrak p'} & =
+M_\mathfrak p \\
+& =
+\Ker\left(
+\bigoplus\nolimits_{1 \leq i \leq n} M_{i, \mathfrak p}
+\longrightarrow
+\bigoplus\nolimits_{1 \leq i, j \leq n} ((M_i)_{f_j})_\mathfrak p
+\right) \\
+& =
+\Ker\left(
+\bigoplus\nolimits_{1 \leq i \leq n} M_{i, \mathfrak p}
+\longrightarrow
+\bigoplus\nolimits_{1 \leq i, j \leq n} (M_{i, \mathfrak p})_{f_j}
+\right)
+\end{align*}
+Here we also used Proposition \ref{proposition-localize-twice-module}.
+Since $f_1$ is a unit in $R_\mathfrak p$, this reduces us to the case
+where $f_1 = 1$ by replacing $R$ by $R_\mathfrak p$, $f_i$ by the
+image of $f_i$ in $R_\mathfrak p$, $M$ by $M_\mathfrak p$, and
+$f_1$ by $1$.
+
+\medskip\noindent
+Assume $f_1 = 1$. Then $\psi_{1j} : (M_1)_{f_j} \to M_j$
+is an isomorphism for $j = 2, \ldots, n$. If we use these
+isomorphisms to identify $M_j = (M_1)_{f_j}$, then we see
+that $\psi_{ij} : (M_1)_{f_if_j} \to (M_1)_{f_if_j}$ is
+the canonical identification. Thus the complex
+$$
+0 \to M_1 \to
+\bigoplus\nolimits_{1 \leq i \leq n} (M_1)_{f_i}
+\longrightarrow
+\bigoplus\nolimits_{1 \leq i, j \leq n}
+(M_1)_{f_if_j}
+$$
+is exact by Lemma \ref{lemma-cover-module}.
+Thus the first map identifies $M_1$ with $M$ in this case
+and everything is clear.
+\end{proof}

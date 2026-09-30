@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 1,641 historical correction IDs are accounted for; 1,639 effective textual
+  The 2,201 historical correction IDs are accounted for; 2,199 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -89,7 +89,7 @@ All thirteen are now integrated in this draft: two limit-preservation fixes
 in R50 and the remaining eleven in R51. They are also in the larger export;
 do not apply the same fix twice. Upstream adoption is not claimed.
 Both sets target the pinned official revision. The official master ref was
-[checked on 25 September 2026](validation/upstream-ref-check-2026-09-25.json)
+[checked on 30 September 2026](validation/upstream-ref-check-2026-09-30.json)
 and still matched that revision; later upstream compatibility requires a new check.
 
 The source and fixes-only downloads include R49: five de Rham corrections
@@ -175,7 +175,18 @@ without normality, preservation of both degrees and the canonical topological
 Galois-group comparison; these consequences carry no novelty claim.
 All eight earlier Fields fixes remain in the chapter and combined patches.
 
-R52/R53/R54/R55/R56/R57 review, correction preparation, builds and visual checks, and current
+R58 adds **689 bounded Algebra edits in 559 review groups**, plus one local
+rendering dependency. The 560 units preserve the source exposition and link
+to a separate companion containing 173 contextual treatments and 73 complete
+proof notes. Conceptual errata, supplementary proofs and stronger consequences
+are identified as editorial material. The fixes-only patches exclude companion
+notices and supplementary arguments.
+[Read the 484-page corrected chapter and 667-page companion, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r58/README.md).
+Both PDFs reproduce byte for byte in fresh builds, and all page layouts and
+mapped correction regions were inspected. This chapter publication does not
+replace the older whole-project PDF release.
+
+R52/R53/R54/R55/R56/R57/R58 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

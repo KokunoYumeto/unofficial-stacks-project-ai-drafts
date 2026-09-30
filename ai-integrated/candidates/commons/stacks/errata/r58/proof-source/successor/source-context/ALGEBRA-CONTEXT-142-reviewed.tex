@@ -1,0 +1,110 @@
+\begin{lemma}
+\label{lemma-field-extension-geometrically-irreducible}
+Let $K/k$ be a field extension. If $k$ is algebraically closed in $K$, then
+$K$ is geometrically irreducible over $k$.
+\end{lemma}
+
+\begin{proof}
+We prove the assertion under the weaker
+hypothesis that every element of the
+original $K$ separably algebraic over
+$k$ belongs to $k$. The stated relative
+algebraic closedness implies this.
+By Lemma \ref{lemma-geometrically-irreducible}
+it suffices to treat each original
+finite separable extension $k'/k$.
+Choose its primitive element $\alpha$
+using Fields, Lemma
+\ref{fields-lemma-primitive-element},
+and retain its full minimal polynomial
+$$
+P=T^d+a_1T^{d-1}+\cdots+a_d\in k[T].
+$$
+The map $K[T]/(P)\to K\otimes_k k'$
+sends $\sum_{j=0}^{d-1}b_jT^j$ to
+$\sum_{j=0}^{d-1}b_j\otimes\alpha^j$.
+Its inverse sends $b\otimes Q(\alpha)$
+to the class of $bQ(T)$.
+The original basis $1,\alpha,\ldots,\alpha^{d-1}$
+and monic division by $P$ show that
+these maps are well-defined inverses.
+
+Suppose the original polynomial has
+a nontrivial factorization $P=P_1P_2$
+in $K[T]$. Set $r=\deg(P_1)$ and
+$c=\operatorname{lc}(P_1)\in K^\times$.
+Then $1\leq r\leq d-1$ and
+$\operatorname{lc}(P_2)=c^{-1}$.
+In an algebraic closure $\Omega_K$ of
+$K$, the original separable $P$ has
+distinct roots $\beta_1,\ldots,\beta_d$.
+There is a subset $J$ of cardinality
+$r$ such that the complete original
+factors are
+$$
+P_1=c\prod_{i\in J}(T-\beta_i),\qquad
+P_2=c^{-1}\prod_{i\notin J}(T-\beta_i).
+$$
+Define the auxiliary polynomials
+$Q_1=c^{-1}P_1$ and $Q_2=cP_2$,
+retaining the exact identity
+$P=(cQ_1)(c^{-1}Q_2)=Q_1Q_2$.
+For $0\leq j\leq r$, the coefficient
+of $T^{r-j}$ in the original $P_1$ is
+$$
+c(-1)^j\sum_{\substack{H\subseteq J\\|H|=j}}
+\prod_{i\in H}\beta_i.
+$$
+For $P_2$ the corresponding coefficient
+has factor $c^{-1}$ and the same signed
+sum over subsets of the complementary
+root set. Empty products give the
+original leading coefficients $c,c^{-1}$.
+
+Each $\beta_i$ is separably algebraic
+over $k$ because $P$ is separable.
+The finite compositum $k(\beta_1,\ldots,\beta_d)$
+is separable over $k$, by Fields,
+Lemma \ref{fields-lemma-separable-permanence}
+and permanence under enlarging the
+base field. Consequently every displayed
+coefficient ratio, namely each coefficient
+of $Q_1$ and $Q_2$, is separably algebraic
+over $k$. These ratios also lie in
+the original $K$ by their definitions,
+so the weakened hypothesis puts them
+in $k$. Both $Q_1,Q_2$ thus belong to
+$k[T]$ and have positive degree.
+Their product is the original $P$,
+contradicting its irreducibility over $k$.
+It follows that $K[T]/(P)$ is a field;
+in particular its spectrum is irreducible.
+All finite separable tests now give
+geometric irreducibility as asserted.
+
+The leading factors cannot be discarded
+from the coefficient argument in Lemma
+\ref{lemma-polynomials-divide}, whose
+statement concerns monic polynomials.
+For example, over the original
+$\mathbf Q(u)$ one has
+$$
+T^2-1=\bigl(u(T-1)\bigr)\bigl(u^{-1}(T+1)\bigr).
+$$
+The coefficients $u$ and $u^{-1}$
+are not algebraic over $\mathbf Q$;
+a nonzero polynomial equation for
+$u^{-1}$ would, after multiplication
+by its full power of $u$, give a
+nonzero polynomial equation for $u$.
+This example concerns the coefficient
+inference for an arbitrary monic
+product, not the irreducible-polynomial
+hypothesis of the lemma. The proof
+above keeps $c,c^{-1}$ and proves
+exactly the required claim about
+their coefficient ratios. It also
+proves the stronger conclusion that
+$K\otimes_k k'$ is a field for every
+finite separable original $k'/k$.
+\end{proof}

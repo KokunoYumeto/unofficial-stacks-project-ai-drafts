@@ -1,0 +1,124 @@
+\subsection{Base change and nilpotent flatness descent}\label{algebra-proof-017-base-change-and-nilpotent-flatness-descent}
+
+Separate editorial evidence for the Stacks Project authors' algebra.tex, authority commit a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, lines 24177--24575. Authority SHA-256: FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Every complete source unit and all eight received reports in this interval were read. The following complex section was read through line 24680; its unit-entry splitting lemma is complete in that reading, but no report or result beyond 24575 is adjudicated in this batch.
+
+All eight reports retain the four existing canonical units MC-STK-ERR-0487 through MC-STK-ERR-0490. One separate grammatical operation is proposed. The complete original arguments and two further consequences below are editorial material, with no chapter or translation mutation and no novelty claim. The new corpus query records four unread routing hits; its historical Bhatt--Scholze source coverage is not enlarged by rediscovering its index entry.
+
+\subsubsection{The original base-change and local-ring diagrams}\label{algebra-proof-017-the-original-base-change-and-local-ring-diagrams}
+
+Source 24184--24278. OCC-12144 and OCC-00493 retain MC-STK-ERR-0487: a \emph{nonzero} kernel stays nonzero under faithful flatness, which is the assertion required by the argument.
+
+Keep the original square \(R\to R'\), \(S\to S'\), the original multiplicative subset \(W\subset S\otimes_RR'\), and \(S'=W^{-1}(S\otimes_RR')\). The associativity map identifies \[
+S'\otimes_SM \cong W^{-1}(M\otimes_RR').
+\] Before localization its inverse balanced maps are \((s\otimes r')\otimes m\mapsto sm\otimes r'\) and \(m\otimes r'\mapsto(1\otimes r')\otimes m\); the same formulas on fractions give the localized comparison. If \(M\) is \(R\)-flat, base change makes \(M\otimes_RR'\) flat over \(R'\). Localizing this module in the auxiliary algebra preserves \(R'\)-flatness, since it is a filtered colimit of copies of the \(R'\)-flat module with its multiplication maps.
+
+If in addition \(R\to R'\) is flat, base changing it and then localizing proves flatness of \(S\to S'\). This is also a local map, so it is faithfully flat. For an ideal \(J\subset R\), flatness of \(R'\) identifies \(J\otimes_RR'\) with its actual image \(JR'\). The source's associativity isomorphism \[
+(J\otimes_RM)\otimes_SS'\cong JR'\otimes_{R'}M'
+\] sends \((j\otimes m)\otimes s'\) to \(\varphi(j)\otimes s'm\), using the canonical \(S'\)-module image of \(m\). Equivalently, before replacing \(J\otimes_RR'\) by its image it is the tensor associativity map, whose inverse moves the \(R'\)-coefficient into \(M'\). It intertwines multiplication into \(M'\). If the original map has kernel \(K\), \(S\)-flatness identifies the new kernel with \(K\otimes_SS'\). Faithfulness makes this nonzero when \(K\ne0\). But \(R'\)-flatness of \(M'\) makes the new multiplication map injective. Thus \(K=0\), proving \(R\)-flatness by the ideal criterion. Taking \(M=S\) gives the two ring statements.
+
+For the next square no localization assumption is made. Instead retain the source's two horizontal flat maps and \(\mathfrak m_RR'=\mathfrak m_{R'}\). The dependency lemma at 8929--8955, reread here, shows \(M'=M\otimes_SS'\) is \(R\)-flat: for every injection of \(R\)-modules the tensor kernel is the original kernel tensored over the flat map \(S\to S'\). Also \(M'\) is finite over \(S'\). The actual injection \(\mathfrak m_R\otimes_RM'\to M'\) identifies, by associativity and flatness of \(R'\), with \(\mathfrak m_{R'}\otimes_{R'}M'\to M'\). Consequently the residue-field Tor group over \(R'\) vanishes. The original local criterion applies because \(R'\) and \(S'\) are Noetherian. Neither Noetherianity of \(R,S\) nor a tensor-product-localization presentation is silently added to this lemma.
+
+\subsubsection{Nilpotent basis lifting with arbitrary index sets}\label{algebra-proof-017-nilpotent-basis-lifting-with-arbitrary-index-sets}
+
+Source 24294--24381. In every use of Nakayama here nilpotence supplies the result even for infinitely generated modules. If \(I^c=0\) and \(X=IX\), iteration gives \(X=I^cX=0\).
+
+For the first lemma, use the actual map \(F=R^{(A)}\to M\) with \(e_\alpha\mapsto x_\alpha\). Its cokernel is equal to its product by the nilpotent maximal ideal, so it is zero. Let \(K\) be the kernel. Flatness of \(M\) makes \[
+0\to K/\mathfrak mK\to F/\mathfrak mF\to M/\mathfrak mM\to0
+\] exact, and the basis hypothesis makes the middle map an isomorphism. Thus \(K=\mathfrak mK\), and nilpotence gives \(K=0\). This proves the equivalence for the originally chosen elements, including an empty basis when \(M=0\). Taking any vector-space basis of the residue quotient proves the source equivalence of flat, free and projective for a local ring with nilpotent maximal ideal. No Artinian or finite-generation hypothesis is needed, and the source already states this generality.
+
+For lemma-lift-basis, retain arbitrary \(R\), nilpotent \(I\), the original chosen elements, and \(\operatorname{Tor}_1^R(R/I,M)=0\). The same cokernel iteration proves \(F\to M\) is onto. The long exact sequence with \(F\) free and the assumed Tor vanishing gives \(0\to K/IK\to F/IF\to M/IM\to0\), hence \(K=IK\) and \(K=0\). This is a direct check of the source conclusion.
+
+The source's coefficient iteration is also valid, with the following exact comparison filling its implicit step. For every \(a\geq1\), \[
+\ker(F/I^aF\to M/I^aM)=(K+I^aF)/I^aF,
+\] because the inverse image of \(I^aM\) under the surjection \(F\to M\) is \(K+I^aF\). Thus the assertion that every relation in \(M\) has all coefficients in \(I^a\) is exactly what is needed for the images of the chosen generators to be a basis over \(R/I^a\).
+
+For a finite relation \(\sum_\alpha f_\alpha x_\alpha=0\), its coefficients first lie in \(I\). The assumed injectivity of \(I\otimes_RM\to M\) makes \(\sum_\alpha f_\alpha\otimes x_\alpha=0\). If the basis has already been proved modulo \(I^a\), map this tensor to \[
+(I/I^{a+1})\otimes_{R/I^a}(M/I^aM).
+\] Its first factor is indeed an \(R/I^a\)-module, since \(I^aI\subset I^{a+1}\). The original basis identifies this tensor module with a direct sum of copies of \(I/I^{a+1}\), so every \(f_\alpha\) lies in \(I^{a+1}\). The kernel comparison proves the next basis assertion. Nilpotence terminates the process. Only finitely supported relations are used; infinite index sets cause no change. This supplies the source's actual missing comparison as separate proof evidence, not an automatic replacement of its translated proof.
+
+\subsubsection{The contracted square and all quotient comparison maps}\label{algebra-proof-017-the-contracted-square-and-all-quotient-comparison-maps}
+
+Source 24383--24442. Keep \(\varphi:R\to R'\), \(I\), \(M\), \(M/IM\) flat over \(R/I\), and \(R'\otimes_RM\) flat over \(R'\). Define the original ideal \[
+I_2=\varphi^{-1}\bigl(\varphi(I^2)R'\bigr).
+\] Write \(J=\varphi(I)R'\); then \(J^2=\varphi(I^2)R'\) by finite sums of products. Put \[
+\overline R=R/I_2,\quad \overline M=M/I_2M,\quad
+\overline R'=R'/J^2,\quad \overline I=(I+I_2)/I_2 .
+\] The induced \(\overline R\to\overline R'\) is injective by the definition of \(I_2\), and \(\overline I^2=0\), since \(I^2\subset I_2\). The residue module is \[
+\overline M/\overline I\overline M
+ =M/(I+I_2)M
+ \cong (M/IM)\otimes_{R/I}R/(I+I_2),
+\] which is flat over \(R/(I+I_2)\) by base change. Also the canonical map \[
+\overline M\otimes_{\overline R}\overline R'
+ \cong (M\otimes_RR')\otimes_{R'}(R'/J^2)
+\] is an isomorphism: on simple tensors both sides send the original \(m\) and \(r'\) to \(m\otimes(r'\bmod J^2)\); balancing by \(I_2\) is permitted because its image is in \(J^2\). The right side is flat over \(\overline R'\). Thus every original hypothesis is transported by an explicit quotient map.
+
+In the reduced situation \(I^2=0\) and \(\varphi\) injective, the ideal \(I'=IR'\) is an \(R/I\)-module because \(I\cdot I'=I^2R'=0\), and \(I\to I'\) is injective. Flatness of \(M/IM\) gives injection \[
+I\otimes_{R/I}M/IM\longrightarrow I'\otimes_{R/I}M/IM.
+\] The canonical balanced isomorphisms identify these modules with \(I\otimes_RM\) and \(I'\otimes_{R'}(M\otimes_RR')\), respectively. The latter multiplication map into \(M\otimes_RR'\) is injective by its flatness over \(R'\). The original kernel \(\ker(I\otimes_RM\to M)\) maps to zero under this composite and is therefore zero. Applying the source's nilpotent Tor criterion proves flatness of \(M\) in the reduced situation, hence flatness of \(M/I_2M\) over \(R/I_2\) in the original one.
+
+For lemma-lift-flatness, retain exactly \[
+I_1=I,\qquad
+I_{n+1}=\varphi^{-1}\bigl(\varphi(I_n)^2R'\bigr).
+\] The preceding lemma applies successively because its second flatness hypothesis always concerns the same original \(M\otimes_RR'\), while its first is the previously obtained flat quotient. Thus every \(M/I_nM\) is flat over \(R/I_n\). If \(\varphi\) is injective and \(I\) is nilpotent, the source's powers force some \(I_n=0\), giving the desired flatness. The sharper exact recurrence and kernel quotient, without silently changing \(I_1\), are proved in the later section.
+
+\subsubsection{The Artinian statement and the retained module corrections}\label{algebra-proof-017-the-artinian-statement-and-the-retained-module-corrections}
+
+Source 24447--24517. The Artinian-local ideal criterion follows from the source's previously proved nilpotent-ideal criterion, since every proper ideal lies in its nilpotent maximal ideal. The printed proof also works: the quotient has nilpotent maximal ideal, its flat module is free by the preceding source theorem, and its basis lifts by the just-proved lemma. The general nilpotent criterion is already source content, not a newly discovered generalization here.
+
+For arbitrary Artinian \(R\), its Jacobson radical \(I\) is nilpotent and \(R/I\) is a finite product of fields. A module over that finite product is the finite direct sum of its idempotent components, each a vector space and hence flat. Therefore \(M/IM\) is flat, and the injective-map nilpotent lifting lemma proves the first source proof. The introductory phrase receives the independent grammatical correction ``injective homomorphisms''.
+
+In the second proof, OCC-12145 and OCC-00496 retain MC-STK-ERR-0488, replacing the repeated \(R\) by the module \(M\). Let \(1=\sum_{i=1}^t e_i\) be the original orthogonal central idempotents of \(R=\prod_i R_i\). The actual maps \[
+S\longrightarrow\prod_i e_iS,\quad s\longmapsto(e_is)_i,
+\qquad
+M\longrightarrow\prod_i e_iM,\quad m\longmapsto(e_im)_i
+\] have inverses given by the finite sums of their components. Orthogonality proves both composites are identities. Each \(R_i=e_iR\to e_iS\) is injective. Moreover \[
+e_i(M\otimes_RS)\cong(e_iM)\otimes_{R_i}(e_iS)
+\] via \((e_im)\otimes(e_is)\mapsto e_im\otimes s\) and the inverse obtained by applying \(e_i\) to both entries. Flatness of \(M\otimes_RS\) over \(S\) passes to these factors, so the local statement applies. Flatness of all \(e_iM\) over \(R_i\) gives flatness of \(M\) by these same finite decompositions and tensor exactness componentwise.
+
+OCC-12146 and OCC-00494 retain MC-STK-ERR-0489: the chosen \(x_\alpha\) belong to \(M\), indexed by \(A\). When \(R\) is local Artinian, nilpotent Nakayama makes these lifts of a residue basis generate \(M\). For \(N=S\otimes_RM\) and \(I=\mathfrak mS\), the canonical comparison \[
+N/IN\cong(S/\mathfrak mS)\otimes_{R/\mathfrak m}(M/\mathfrak mM)
+\] carries \(1\otimes x_\alpha\) to the base-changed basis. The ideal \(I\) is nilpotent, and flatness of \(N\) gives its required Tor vanishing. The lift-basis lemma says the same chosen elements are an \(S\)-basis of \(N\). Any finite relation \(\sum r_\alpha x_\alpha=0\) in \(M\) becomes a relation with coefficients \(\varphi(r_\alpha)\) in this \(S\)-basis; all vanish, and injectivity of \(R\to S\) makes all \(r_\alpha=0\). Thus the chosen lifts are the required \(R\)-basis. This verifies the original second proof with its actual elements and coefficients.
+
+\subsubsection{The nilpotent fibre criterion and its faithful support}\label{algebra-proof-017-the-nilpotent-fibre-criterion-and-its-faithful-support}
+
+Source 24528--24567. OCC-12147 and OCC-00495 retain MC-STK-ERR-0490: the exact quotient argument is \(S/IS\) in the first Tor slot.
+
+Flatness over \(R\) injects the original \(I\otimes_RM\) into \(M\). Multiplication first factors through the surjection \(I\otimes_RM\to IS\otimes_SM\), induced by \(I\otimes_RS\to IS\). Hence both arrows in the source factorization are injective, the first being an isomorphism. The exact sequence \(0\to IS\to S\to S/IS\to0\) identifies \[
+\ker(IS\otimes_SM\to M)=\operatorname{Tor}_1^S(S/IS,M)=0.
+\] Together with the given \(S/IS\)-flatness of \(M/IM\) and nilpotence of \(IS\), this proves \(S\)-flatness of \(M\) by the original criterion. Although eventual \(S\)-flatness also makes the misprinted Tor group zero, that fact is not available as the stated justification; the retained quotient correction repairs the actual inference.
+
+Let \(\mathfrak q\subset S\) have nonzero original fibre \(M\otimes_S\kappa(\mathfrak q)\). Then \(M_{\mathfrak q}\) is flat over \(S_{\mathfrak q}\) and has nonzero residue quotient, hence is faithfully flat over that local ring. It is also \(R\)-flat: localization in \(S\) is a filtered colimit of copies of the \(R\)-flat \(M\). For each ideal \(J\subset R\), let \[
+K_J=\ker(J\otimes_RS_{\mathfrak q}\to S_{\mathfrak q}).
+\] Tensoring with the \(S_{\mathfrak q}\)-flat \(M_{\mathfrak q}\) identifies \(K_J\otimes_{S_{\mathfrak q}}M_{\mathfrak q}\) with the kernel of \(J\otimes_RM_{\mathfrak q}\to M_{\mathfrak q}\), which is zero. Faithfulness gives \(K_J=0\). The ideal criterion proves \(S_{\mathfrak q}\) flat over \(R\), using the exact maps from the preceding batch's group 559. No nonzero-fibre conclusion is imposed at the other primes. The unused additional action through \(S'\) is retained as part of the source diagram.
+
+\subsubsection{Exact contraction powers and the kernel quotient}\label{algebra-proof-017-exact-contraction-powers-and-the-kernel-quotient}
+
+The square-contraction argument gives a stronger, quantitative statement even when \(\varphi\) is not injective. Continue to assume \(I^c=0\) for some integer \(c\geq1\), \(M/IM\) flat over \(R/I\), and \(M\otimes_RR'\) flat over \(R'\). Put \(J=\varphi(I)R'\) and \(H=\ker\varphi\). Retain the original \(I_n\).
+
+For any ideal \(L\subset R\), its contraction \(C=\varphi^{-1}((\varphi(L)R')^2)\) satisfies \[
+\varphi(C)R'=(\varphi(L)R')^2.
+\] One inclusion is the definition of contraction. For the reverse, \(L^2\subset C\), and \(\varphi(L^2)R'=(\varphi(L)R')^2\), so extending \(C\) contains the entire square. Induction therefore gives exact equalities \[
+\varphi(I_n)R'=J^{2^{\,n-1}}\quad(n\geq1),
+\qquad
+I_n=\varphi^{-1}(J^{2^{\,n-1}})\quad(n\geq2).
+\] The second formula need not hold for \(n=1\), because \(I\) need not be contracted. In particular \(I_2\subset I_1\) is not assumed; only the contracted stages from \(n=2\) onward are visibly decreasing.
+
+Choose \(n\geq2\) with \(2^{n-1}\geq c\), for example \(n=\max\{2,1+\lceil\log_2c\rceil\}\). Then \(J^{2^{n-1}}=0\), so the exact formula gives \(I_n=H\). Iteration of the already proved square-contraction lemma has shown \(M/I_nM\) flat over \(R/I_n\) at every stage. Hence the actual quotient \[
+M/HM\quad\hbox{is flat over }R/H.
+\] Its unit map and scalar action are the original quotient maps; no flatness over \(R\) is inferred unless further hypotheses justify it. If \(\varphi\) is injective, this proves the source conclusion with an explicit termination bound. If \(I=0\), the initial hypothesis already makes \(M\) flat over \(R\); the stated later-stage formula still holds.
+
+The quotient cannot be discarded. For \(R=k[\epsilon]/(\epsilon^2)\), \(R'=k\), \(I=(\epsilon)\), and \(M=k\), both source flatness hypotheses hold and \(H=I\). The quotient \(M/HM=k\) is flat over \(R/H=k\). But \(M\) is not \(R\)-flat: \(I\cong k\) as an \(R\)-module, so \(I\otimes_RM\cong k\ne0\), while its multiplication map to \(M\) is zero. This retains the exact obstruction supplied by the kernel.
+
+\subsubsection{Injective descent beyond Artinian source rings}\label{algebra-proof-017-injective-descent-beyond-artinian-source-rings}
+
+A separate consequence of the original nilpotent lifting lemma is the following. Suppose \(R\) has a nilpotent ideal \(I\) such that every \(R/I\)-module is flat. Then for every injective map \(R\to S\) and every \(R\)-module \(M\), flatness of \(M\otimes_RS\) over \(S\) implies flatness of \(M\) over \(R\). Indeed the residue hypothesis makes the original \(M/IM\) flat, and the proved nilpotent lifting argument applies without any Artinian assumption. The reverse implication is ordinary flat base change. Thus, under this stated property of the source ring, flatness is equivalent before and after every injective extension.
+
+This applies when \(R/I\) is an arbitrary product of fields, not only a finite product. Here is a proof that does not incorrectly decompose every module over an infinite product into its coordinate modules. Let \(B=\prod_{t\in T}k_t\). For \(a=(a_t)\in B\), set \(b_t=a_t^{-1}\) when \(a_t\ne0\), and \(b_t=0\) otherwise. Then \(e=ab\) is idempotent, \(a=ea\), and \((a)=eB\). For finitely many generators \(a_1,\ldots,a_m\), form their idempotents \(e_i\) and set \[
+e=1-\prod_{i=1}^m(1-e_i).
+\] This is idempotent, satisfies \(ee_i=e_i\), and belongs to the ideal generated by the \(e_i\), as seen by expanding the finite product. Consequently the original finitely generated ideal is exactly \(eB\). The zero ideal is the empty case \(e=0\).
+
+For any \(B\)-module \(X\), multiplication identifies \(eB\otimes_BX\) with \(eX\). Its inverse sends \(ex\) to \(e\otimes x\); if \(e(x-y)=0\), then \(e\otimes(x-y)=e\otimes e(x-y)=0\), so the inverse is well defined. Thus the map of this tensor into \(X\) is injective for every finitely generated ideal of \(B\). The ideal criterion makes \(X\) flat, as required.
+
+For an explicit source ring beyond the Artinian case, take \(R=\prod_{n\geq1}k[\epsilon]/(\epsilon^2)\) with its original ideal \(I=\prod_{n\geq1}(\epsilon)\). Then \(I^2=0\) and \(R/I=\prod_{n\geq1}k\), so the result applies. The ring is not Artinian: the ideals whose first \(n\) coordinates vanish form a strictly descending chain, with the coordinate idempotent at position \(n+1\) witnessing strictness. This example and the ideal-tensor maps prove a substantive extension of the reviewed Artinian statement, without a claim of novelty or an assertion that later source sections have been surveyed.
+
+Both new consequences are retained in the claim ledger with their exact maps and boundaries. They remain separate editorial results; broader cross-work synthesis and its short paper follow the core correction accounting.

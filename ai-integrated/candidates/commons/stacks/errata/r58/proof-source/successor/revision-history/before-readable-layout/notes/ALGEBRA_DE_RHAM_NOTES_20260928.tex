@@ -1,0 +1,127 @@
+\subsection{The de Rham complex: source review and editorial consequences}\label{algebra-proof-042-the-de-rham-complex-source-review-and-editorial-consequences}
+
+Authority: Stacks Project authors, \texttt{algebra.tex} at \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, SHA256 \texttt{FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3}, lines 34387--34650. All twelve reports are adjudicated here. The current interval equals the authority, with no prior canonical correction. Lines 34651--34780 are read lookahead in the following differential-operator section and remain unadjudicated. The exterior presentation dependency 2240--2404 was reread. The preceding differential arguments are in \texttt{ALGEBRA\_DIFFERENTIALS\_NOTES\_20260928.md}, SHA256 \texttt{0EC7E677030EF57E9AAA46CCBC90104CB59F57E386BF08F1ADE48A13937A62F9}.
+
+This is separate editorial material. Source statements and exposition remain identifiable; none of the expanded proofs or stronger consequences is a silent translation replacement. The corpus query \texttt{de\ Rham\ differential\ ideal\ quotient} returned two research and two local records. The Bhatt--Lurie record retains only its previously recorded bounded reading at 11899--11920; no new content from any query hit was read or used. The other three hits remain unread, including the PDF-only record. There is no novelty or exhaustive-reading claim.
+
+\subsubsection{Dispositions and the additive convention}\label{algebra-proof-042-dispositions-and-the-additive-convention}
+
+OCC-00697 corrects the opening declaration: \(d:B\to\Omega_{B/A}\) denotes the universal derivation into the module, rather than denoting the module itself. OCC-00698 supplies a period at 34414. OCC-00699 requests explicit bounds for the sum at 34465. The source has exactly \(p\) displayed tensor positions and uses \(i\) for the differentiated position; the bounds are determined by that notation. This optional clarification is retained unchanged, while the proof below states the bounds explicitly. OCC-00700 supplies a comma at 34498, OCC-00701 a comma at 34535, OCC-00702 a period after the diagram at 34545, and OCC-00703 a period at 34549. OCC-00704 supplies ``by'' at 34577. OCC-00705 supplies a period at 34591. OCC-00706 supplies a period after the diagram at 34607 and capitalizes the next sentence at 34609. OCC-00707 changes ``left most'' to ``leftmost''; OCC-00708 supplies the comma at 34633. These are twelve operations in eleven groups, with one optional report left unchanged.
+
+The absolute-module discussion at 34525--34537 retains additivity from the definition of derivation and the universal presentation. With that convention, Leibniz gives \(D(1)=2D(1)\), so \(D(1)=0\); additivity then gives \(D(n)=0\) for every integer, including negative integers. Thus additive Leibniz maps are precisely \(\mathbf Z\)-derivations. Leibniz alone without additivity is a different condition: on \(\mathbf R\), set \(D(0)=0\), \(D(x)=x\log|x|\) for \(x\ne0\). For nonzero \(x,y\), the logarithm product identity gives \(D(xy)=xD(y)+yD(x)\); if either is zero both sides are zero. But \(D(2)=2\log2\ne D(1)+D(1)=0\). This verifies the precise retained convention, without treating the source's reference to its existing additive derivation as an error.
+
+\subsubsection{Construction in degree one}\label{algebra-proof-042-construction-in-degree-one}
+
+Write \(M=\Omega_{B/A}\), with universal derivation \(d_0\). On the free \(B\)-module with generators \([b]\), define an additive \(A\)-linear rule \[
+\sum_i b'_i[b_i]\longmapsto\sum_i d_0b'_i\wedge d_0b_i.
+\] It is \(A\)-linear because \(d_0(ab')=a\,d_0b'\) for \(a\) in the image of \(A\). It sends \(b[a]\), with \(a\) in that image, to zero. Additive relations map to \(d_0b\wedge(d_0(b'+b'')-d_0b'-d_0b'')=0\). A multiplied Leibniz relation maps to \[
+d_0b\wedge(b'\,d_0b''+b''\,d_0b')
+-(b\,d_0b'+b'\,d_0b)\wedge d_0b''
+-(b\,d_0b''+b''\,d_0b)\wedge d_0b'=0.
+\] The two remaining terms are \(-b(d_0b'\wedge d_0b''+d_0b''\wedge d_0b')=0\). Anticommutativity here follows by expanding \((u+v)\wedge(u+v)=0\), without division by two. Thus the rule descends to \(d_1:M\to\bigwedge_B^2M\) over every base ring.
+
+For \(\omega=\sum b_i\,d_0c_i\), expansion gives the useful identity \[
+d_1(f\omega)=d_0f\wedge\omega+f\,d_1\omega.
+\] Indeed both sides equal \(\sum (b_i\,d_0f+f\,d_0b_i)\wedge d_0c_i\). Also \(d_1d_0b=d_01\wedge d_0b=0\). These are identities of the actual universal modules, with no freeness assumption.
+
+\subsubsection{Higher degrees, alternating signs and the graded product rule}\label{algebra-proof-042-higher-degrees-alternating-signs-and-the-graded-product-rule}
+
+For \(p\ge2\) define the \(A\)-multilinear map \[
+\gamma(\omega_1,\ldots,\omega_p)
+=\sum_{i=1}^p(-1)^{i+1}\omega_1\wedge\cdots\wedge d_1\omega_i\wedge\cdots\wedge\omega_p.
+\] All wedge products are over \(B\), even though the initial tensor product is over \(A\). First, swapping two adjacent positions reverses the sign. Terms differentiated outside these positions reverse sign by swapping two degree-one factors. If the positions are \(j,j+1\), their two terms are \[
+(-1)^{j+1}P\wedge d_1\omega_j\wedge\omega_{j+1}\wedge Q
++(-1)^{j+2}P\wedge\omega_j\wedge d_1\omega_{j+1}\wedge Q.
+\] After the swap, commuting a degree-two factor past a degree-one factor has sign \((-1)^2=1\); the resulting coefficients are the negatives of the respective original coefficients. If the adjacent factors are equal, the outside terms contain their repeated wedge and vanish; the two displayed terms cancel because the degree-two factor commutes with that degree-one factor. An arbitrary repetition can be brought adjacent by the already proved swap identity, so \(\gamma\) is alternating. The cancellation is valid in characteristic two as well.
+
+For a scalar \(f\in B\) inserted in position \(i\), the product identity in degree one gives \[
+\gamma(\omega_1,\ldots,f\omega_i,\ldots,\omega_p)
+=f\gamma(\omega_1,\ldots,\omega_p)
++d_0f\wedge\omega_1\wedge\cdots\wedge\omega_p.
+\] In the extra term, moving \(d_0f\) past \(i-1\) preceding degree-one factors changes its sign by \((-1)^{i-1}\), which cancels \((-1)^{i+1}\). The expression is independent of \(i\). Thus \(\gamma\) kills every scalar-balancing relation in 2353--2367 as well as every alternating relation. Those relations generate the kernel: first quotient the \(A\)-tensor power by scalar transfers to obtain the \(B\)-tensor power, then quotient by repeated tensors to obtain its exterior power. This proves that \(\gamma\) descends to \(d_p\).
+
+For the source's original generators, all \(d_1d_0b_i\) terms vanish and \[
+d_p(b_0d_0b_1\wedge\cdots\wedge d_0b_p)
+=d_0b_0\wedge d_0b_1\wedge\cdots\wedge d_0b_p.
+\] Every exterior power is additively generated by these expressions, so this proves uniqueness. Applying the next differential writes the result with coefficient \(1\), and hence gives zero because \(d_01=0\). Degree zero was handled above; therefore \(d_{p+1}d_p=0\) for every \(p\ge0\).
+
+Let \(\alpha\) have degree \(r\) and \(\beta\) degree \(s\). If \(r,s\ge1\), expand them into wedges of one-forms and split the sum defining \(\gamma\) between the first \(r\) positions and the last \(s\). The last positions contribute a factor \((-1)^r\), giving \[
+d(\alpha\wedge\beta)=d\alpha\wedge\beta+(-1)^r\alpha\wedge d\beta.
+\] If one degree is zero, this is the scalar identity just proved, with the degree-one differential moved across \(r\) factors when necessary. If both are zero it is the universal Leibniz rule. This proves the full graded product rule used at 34620 and 34631, including all degree and sign conventions. The proof is editorial; no expanded argument is substituted for the source construction.
+
+\subsubsection{Functoriality, base change and the quotient construction}\label{algebra-proof-042-functoriality-base-change-and-the-quotient-construction}
+
+For a commutative square with maps \(f:B\to B'\) and \(A\to A'\), the degree-\(p\) map sends \(b_0db_1\wedge\cdots\wedge db_p\) to \(f(b_0)df(b_1)\wedge\cdots\wedge df(b_p)\). It is well defined because the degree-one map respects every universal relation and because its induced tensor map respects the alternating relations and scalar transfers. The displayed differential formula proves commutation with \(d\) on generators; compositions and identities do so as well.
+
+If \(B'=B\otimes_A A'\), the preceding differential note proves \(M\otimes_A A'\cong\Omega_{B'/A'}\). Exterior powers commute with this base change directly from their presentation: tensor powers commute by the maps on elementary tensors, and the image of the submodule of alternating relations is exactly the submodule generated by the base-changed alternating relations. For the latter assertion, squares of sums expand into repeated terms and pairs \(u\otimes v+v\otimes u\), each a consequence of squares. Equivalently the alternating multilinear universal property on base-changed generators gives inverse maps. Thus \[
+(\bigwedge_B^pM)\otimes_A A'\cong\bigwedge_{B'}^p(M\otimes_A A')
+\] without flatness. In degree zero this is \(B\otimes_A A'=B'\). In every degree, on a generating tensor the differential acts on the original \(b_i\) and kills coefficients from \(A'\), so these isomorphisms assemble into an isomorphism of complexes and of graded algebras.
+
+For the source quotient lemma let \(\pi:M\twoheadrightarrow Q\), \(K=\ker\pi\), and \(q_p:\bigwedge^pM\twoheadrightarrow\bigwedge^pQ\). Its kernel is the degree-\(p\) part of the ideal generated by \(K\), namely the image of \(K\otimes_B\bigwedge^{p-1}M\) under the wedge map for \(p\ge1\). To see this, quotienting the tensor algebra by \(K\) gives the tensor algebra of \(Q\), and then impose the same alternating relations. This proves the exterior-presentation assertion at 2240--2267 and its use at 34626--34628 without an injection claim for \(K\otimes_B\bigwedge^{p-1}M\).
+
+If \(K\) is generated by \(\kappa_i\) with \(q_2(d\kappa_i)=0\), then \[
+q_2d\left(\sum b_i\kappa_i\right)
+=\sum q_2(db_i\wedge\kappa_i)+\sum b_iq_2(d\kappa_i)=0.
+\] For \(\kappa\in K\) and \(\eta\in\bigwedge^{p-1}M\), the graded product rule gives \(d(\kappa\wedge\eta)=d\kappa\wedge\eta-\kappa\wedge d\eta\), whose projection vanishes. Hence every square in the source diagram exists. Since every \(q_p\) is onto, the projected differential is unique; its square is zero by lifting an element to the original complex. The displayed rule follows by applying \(q\) to each original generator.
+
+\subsubsection{The exact obstruction to an exterior quotient complex}\label{algebra-proof-042-the-exact-obstruction-to-an-exterior-quotient-complex}
+
+Editorial consequence receiving 34574--34638. The map \[
+c:K\longrightarrow\bigwedge_B^2Q,\qquad c(\kappa)=q_2(d\kappa)
+\] is \(B\)-linear, since \(q_2d(b\kappa)=q_2(db\wedge\kappa)+bq_2d\kappa=bc(\kappa)\). The source's condition on some generating set is equivalent to \(c=0\), and this condition is both necessary and sufficient for the exterior algebra of \(Q\) to carry the differential specified in the source.
+
+Sufficiency is the preceding proof. For necessity, any such differential commutes with projection in every degree because the generator rule characterizes it. In particular \(q_2d\kappa=d(q_1\kappa)=d0=0\). This also proves uniqueness and identifies the exact module map whose nonvanishing prevents the construction, not merely a difference of presentations.
+
+The obstruction can be nonzero even when the kernel is generated by a single one-form. Take a nonzero field \(k\), \(B=k[x,y]\), \(A=k\), and \(K=B(x\,dy)\subset M=B\,dx\oplus B\,dy\). Then \[
+Q=B\,dx\oplus(B/(x))\,dy,
+\qquad\bigwedge^2_BQ=(B/(x))\,(dx\wedge dy).
+\] The second assertion follows by expanding alternating tensors: the two cyclic summands have zero second exterior power, and their cross term is \(B/(x)\); the coefficient map taking \(dx\wedge dy\) to \(1\bmod x\) supplies the inverse. Now \(c(x\,dy)=dx\wedge dy\ne0\). A hypothetical exterior quotient differential would therefore send the zero relation \(x\,dy\) to this nonzero class. This counterexample retains the original quotient module and proves precisely where the required differential fails.
+
+If \(A\to A'\) is any base change, set \(B'=B\otimes_A A'\), \(Q'=Q\otimes_A A'\), and let \(K'\) be the actual kernel of the resulting surjection \(M\otimes_A A'\to Q'\). Right exactness says \(K'\) is the image of \(K\otimes_A A'\), not necessarily an isomorphic copy. For \(\kappa\otimes a'\), the base-changed obstruction is \(c(\kappa)\otimes a'\). Consequently vanishing ascends under every base change. If \(A\to A'\) is faithfully flat, it also descends: the map \(\bigwedge^2Q\to(\bigwedge^2Q)\otimes_A A'\) is injective, since faithful flatness detects the nonzero cyclic submodule generated by any proposed kernel element. Thus its vanishing forces \(c(\kappa)=0\) for every \(\kappa\).
+
+\subsubsection{The smallest differential quotient when the obstruction is nonzero}\label{algebra-proof-042-the-smallest-differential-quotient-when-the-obstruction-is-nonzero}
+
+Editorial consequence retaining the same objects and the exact obstruction. In \(\Omega^\bullet=\bigwedge_B^\bullet M\), form the graded ideal \(\mathcal J\) generated by \(K\) in degree one and \(dK\) in degree two. Explicitly, \[
+\mathcal J^p=K\wedge\Omega^{p-1}+dK\wedge\Omega^{p-2},
+\] where a term with negative degree is zero and the notation means the \(B\)-span of the indicated wedges. For each generator \(\kappa\wedge\alpha\), its differential is \(d\kappa\wedge\alpha-\kappa\wedge d\alpha\). For each \(d\kappa\wedge\beta\), it is \(d\kappa\wedge d\beta\), because \(d^2\kappa=0\). Coefficients are already allowed inside \(\alpha,\beta\); their derivatives give the same included terms. Hence \(d\mathcal J\subset\mathcal J\).
+
+Every differential ideal containing \(K\) must also contain \(dK\), so \(\mathcal J\) is the smallest such ideal. The quotient \(\Omega^\bullet/\mathcal J\) is therefore a well-defined differential graded algebra. Its degree zero is still \(B\) and its degree one is still \(Q\). As a graded algebra it is exactly \[
+\left(\bigwedge_B^\bullet Q\right)\big/\left(c(K)\right),
+\] with the ideal on the right generated by the actual degree-two image of \(c\). This follows by first quotienting by the ideal generated by \(K\), and then by the images of \(dK\). Thus the original obstruction is retained as the precise additional relation module. When \(c=0\), this recovers the source exterior quotient complex; when \(c\ne0\), the exterior algebra itself cannot carry that differential, but this smaller graded algebra does.
+
+The construction is universal: a morphism of differential graded \(A\)-algebras out of \(\Omega^\bullet\) that kills \(K\) kills \(dK\) by commutation with the differential, hence factors uniquely through the quotient. Conversely every map through the quotient kills \(K\). In the preceding example, \(c(K)\) generates all of \(\bigwedge^2Q\); higher exterior powers are zero because \(Q\) has two generators. The resulting complex is therefore exactly \(B\to Q\to0\), with the original projected derivative in degree zero. This supplies the actual construction determined by the obstruction.
+
+Under any base change \(A\to A'\), the image of \(\mathcal J\otimes_A A'\) is the ideal generated by \(K'\) and \(dK'\). Indeed every element of \(K'\) is a finite sum of images of \(\kappa\otimes a'\), whose derivative is the image of \(d\kappa\otimes a'\), and all their products are images of the indicated generators. Conversely those images lie in that ideal. Right exactness and the already proved base-change isomorphism of de Rham algebras now give \[
+(\Omega^\bullet/\mathcal J)\otimes_A A'
+\cong \Omega_{B'/A'}^\bullet/\mathcal J'.
+\] No injectivity assertion for a tensor product of ideals is used. This is an exact base-change comparison for the constructed quotient even when the obstruction survives.
+
+\subsubsection{Complex base change and the exact polynomial cohomology boundary}\label{algebra-proof-042-complex-base-change-and-the-exact-polynomial-cohomology-boundary}
+
+Editorial consequence receiving 34559--34572 and the original polynomial differential calculation at 34309--34339. For every ring \(A\), retain the original polynomial coordinate \(x\) and \(B=A[x]\). The complex has exactly two possibly nonzero degrees: \[
+A[x]\xrightarrow d A[x]\,dx,
+\qquad d\left(\sum_{n\ge0}a_nx^n\right)=\sum_{n\ge1}n a_n x^{n-1}dx,
+\] with finite support and every integer coefficient retained in \(A\). Higher powers vanish because \(\Omega^1\) is free of rank one. Comparing coefficients independently gives the exact \(A\)-module descriptions \[
+H^0=A\ \oplus\!\bigoplus_{n\ge1}\operatorname{Ann}_A(n)x^n,
+\qquad
+H^1=\bigoplus_{n\ge1}(A/nA)x^{n-1}dx,
+\qquad H^p=0\ (p\ge2).
+\] The kernel description follows because \(n a_n=0\) for each \(n\); the image in the \(x^{n-1}dx\) coefficient is exactly \(nA\), giving the cokernel description. Direct sums, not products, record the finite polynomial support. Terms such as \(A/A=0\) are retained in the indexing.
+
+For a ring map \(A\to A'\), the comparison \(H^0\otimes_A A'\to H^0(\Omega_{A'[x]/A'}^\bullet)\) is the identity on the constant summand and, on each positive degree, the actual map \[
+\operatorname{Ann}_A(n)\otimes_A A'\longrightarrow\operatorname{Ann}_{A'}(n),\qquad a\otimes a'\longmapsto\operatorname{image}(a)a'.
+\] No general injectivity or surjectivity is asserted. In degree one the comparison is always an isomorphism, since \((A/nA)\otimes_A A'\cong A'/nA'\), with the displayed coordinates fixed. For flat base change, kernels commute with tensoring the exact sequence \(0\to\operatorname{Ann}_A(n)\to A\xrightarrow n A\), so the degree-zero comparison is also an isomorphism. More generally flatness gives cohomology base change for any complex: tensor the exact sequences from cycles to the terms to boundaries, and then from boundaries to cycles to cohomology. Exactness preserves both kernels and images in those sequences.
+
+For the explicit nonflat base change \(\mathbf Z\to\mathbf F_p\), with \(p\) prime, the formulas give \[
+H^0(\Omega_{\mathbf Z[x]/\mathbf Z}^\bullet)=\mathbf Z,
+\qquad H^1=\bigoplus_{n\ge1}(\mathbf Z/n\mathbf Z)x^{n-1}dx,
+\] whereas \[
+H^0(\Omega_{\mathbf F_p[x]/\mathbf F_p}^\bullet)=\mathbf F_p[x^p],
+\qquad H^1=\bigoplus_{m\ge1}\mathbf F_p\,x^{mp-1}dx.
+\] The degree-zero comparison is the inclusion of constants, with cokernel \(\bigoplus_{m\ge1}\mathbf F_p x^{mp}\). It is not surjective because \(x^p\) is not a constant polynomial, even though its derivative is \(p x^{p-1}dx=0\). The degree-one comparison remains the coordinatewise isomorphism just proved. Thus the source's arbitrary-base-change statement for complexes is correct and must not be silently promoted to arbitrary cohomology base change. The failed comparison is measured here with every exponent and coefficient intact.
+
+\subsubsection{Propagation and continuation}\label{algebra-proof-042-propagation-and-continuation}
+
+The degree-one calculation proves the scalar product rule; the higher-degree construction proves the alternating descent and full graded product rule used by the quotient lemma. The exact kernel map \(c\) makes the source hypothesis necessary as well as sufficient. When it does not vanish, its image defines the additional higher relations in the universal differential quotient, with explicit maps back to the original objects. The polynomial cohomology calculation provides the exact boundary of the source base-change statement.
+
+These three consequence groups have no translation operations. Their future use must retain the actual quotient module, the additional degree-two relations when required, and the distinction between complexes and cohomology. The next source section begins at 34651; its material, including the order-one differential-operator connection, remains to be adjudicated. A broader synthesis remains follow-on work after the core review. No translation rewrite, TeX build, publication, new task or delegation occurred.

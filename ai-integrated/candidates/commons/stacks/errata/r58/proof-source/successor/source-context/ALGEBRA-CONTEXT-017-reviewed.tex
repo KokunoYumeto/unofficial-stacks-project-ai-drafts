@@ -1,0 +1,31 @@
+\begin{lemma}
+\label{lemma-surjective-on-spec-units}
+Let $\varphi : R \to S$ be a ring map such that the induced map
+$\Spec(S) \to \Spec(R)$ is surjective. Then an element $x \in R$
+is a unit if and only if $\varphi(x) \in S$ is a unit.
+The same conclusion holds under the weaker assumption that the image
+of $\Spec(S)\to\Spec(R)$ contains every closed point of $\Spec(R)$.
+\end{lemma}
+
+\begin{proof}
+If $x$ is a unit, then so is $\varphi(x)$. Conversely, if $\varphi(x)$
+is a unit, then $\varphi(x) \not \in \mathfrak q$ for all
+$\mathfrak q \in \Spec(S)$. Hence
+$x \not \in \varphi^{-1}(\mathfrak q) = \Spec(\varphi)(\mathfrak q)$
+for all $\mathfrak q \in \Spec(S)$. Since $\Spec(\varphi)$ is surjective
+we conclude that $x$ is a unit by
+part (17) of Lemma \ref{lemma-Zariski-topology}.
+For the weaker assumption, suppose that $x$ is not a unit.
+Then $xR$ is proper, and a maximal ideal of the nonzero ring $R/xR$
+pulls back to a maximal ideal $\mathfrak m$ of $R$ containing $x$.
+This is a closed point, so the assumption supplies
+$\mathfrak q\in\Spec(S)$ with
+$\varphi^{-1}(\mathfrak q)=\mathfrak m$.
+Consequently $\varphi(x)\in\mathfrak q$, so $\varphi(x)$ is not a unit.
+The forward implication still follows by applying $\varphi$ to an inverse.
+The assumption is strictly weaker: for a prime integer $p$, the residue map
+$\mathbf Z_{(p)}\to\mathbf F_p$ hits the unique closed point $(p)$
+of $\Spec(\mathbf Z_{(p)})$, but misses its prime ideal $(0)$.
+Indeed, localization of the integer prime ideals leaves exactly $(0)$
+and $(p)$, and the only prime of the field $\mathbf F_p$ contracts to $(p)$.
+\end{proof}

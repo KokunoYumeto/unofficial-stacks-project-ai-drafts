@@ -1,0 +1,114 @@
+\subsection{Algebra: final colimit lemmas and a quasi-finite flat cover}\label{algebra-proof-073-algebra-final-colimit-lemmas-and-a-quasi-finite-flat-cover}
+
+Source: Stacks Project authors, algebra.tex 47521--47885, original authority a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, SHA-256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. The \href{https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex\#L47521}{original source}, including terminal apparatus, has been read. Six reports add seven missing copulas, retain two existing mathematical operations, and reject a proposed change to a valid redundant localization. This ends the source-reading denominator, not chapter admission, compilation or publication. Complete proofs remain separate editorial material.
+
+Fresh original dependencies: 23491--23504, 30195--30230, 30361--30390, 30879--30903, 33622--33698, 33958--33975, 36638--36668, and 36726--36764. Earlier complete syntomic, smooth, étale, differential, flatness, Cohen--Macaulay, quasi-finite and colimit proofs are reused with their source versions and corrections retained. Of the two indexed hits, one is unread and the Bhatt--Lurie Absolute Prismatic Cohomology source has only its previously recorded reading of lines 11899--11920. No further contents were read, and no theorem from that bounded opening is adopted. No novelty claim is made.
+
+\subsubsection{Original stage objects and the first four properties}\label{algebra-proof-073-original-stage-objects-and-the-first-four-properties}
+
+Keep the directed set \(I\), its specified element \(0\), and the actual \(A_0\)-algebra map \(\varphi_0:B_0\to C_0\). The subsystem \(i\ge0\) is cofinal by directedness. Put \[
+B_i=A_i\otimes_{A_0}B_0,\quad C_i=A_i\otimes_{A_0}C_0,\qquad
+B=A\otimes_{A_0}B_0,\quad C=A\otimes_{A_0}C_0.
+\] Every transition is the given coefficient map tensored with the identity. The comparison \(A_j\otimes_{A_i}B_i\cong B_j\) sends \(a\otimes(b\otimes x)\) to \(ab\otimes x\), with inverse \(a\otimes x\mapsto a\otimes(1\otimes x)\); the same formulas hold for \(C_i\). These are the original base-change systems with colimits \(B,C\). No transition is assumed injective or flat.
+
+For finite descent, retain \(x_1,\ldots,x_m\) generating \(C_0\) over \(B_0\). Finiteness of \(C/B\) supplies a monic polynomial \(P_j\) for each original image of \(x_j\). Lift every lower coefficient to one \(B_i\), keeping leading coefficient one. Then kill the finitely many evaluation errors in a later \(C_i\). If \(d_j\) is the degree of the retained equation, repeated substitution expresses every monomial as a linear combination of \[
+x_1^{e_1}\cdots x_m^{e_m},\qquad 0\le e_j<d_j.
+\] Each substitution decreases the selected exponent and retains every lower coefficient and sign. This finite list therefore spans \(C_i\) over \(B_i\). The empty generator list gives the empty monomial and a surjective coefficient map. For a zero target ring, choose monic degree-one equations for the generators; the same proof applies.
+
+For surjectivity, choose actual \(b_j\in B\) whose images are \(1\otimes x_j\). Lift them to one \(B_i\), then kill every error \(\varphi_i(b_{j,i})-1\otimes x_j\) at a common later stage. The image contains all target algebra generators and its coefficient ring, hence all of \(C_i\). Preimage lifting and the later equality are distinct necessary steps.
+
+For unramifiedness, the original symbols \(dx_1,\ldots,dx_m\) generate each \(\Omega_{C_i/B_i}\). The derivative of every polynomial is its full partial-derivative sum times these symbols; coefficient derivatives vanish. The filtered-colimit comparison sends \(dc_i\) to the differential of its original image. Every element and every additive, Leibniz or coefficient relation involves finitely many elements and equalities, so it lifts to a common later stage. This proves both directions of \[
+\operatorname{colim}_i\Omega_{C_i/B_i}\cong\Omega_{C/B}=0.
+\] Kill the finite symbol list at one stage. The whole differential module vanishes there, and finite type persists from \(C_0/B_0\); the source's finite-type unramified criterion applies. No finite-presentation hypothesis is added.
+
+For isomorphism descent, first use the proved surjective case. Write \(C_i=B_i/J\). The kernel \(J\) is finite by finite presentation. Explicitly choose \(C_i=B_i[Y]/(h_1,\ldots,h_s)\), and lifts \(b_j\in B_i\) of the images of \(Y_j\). Since \(Y_j-b_j\) belongs to the relation ideal, substitution gives \[
+J=(h_1(b),\ldots,h_s(b)).
+\] Indeed an element of \(B_i\) vanishing in \(C_i\) is a finite polynomial combination of the \(h_s\); evaluating that equality at \(b\) proves the assertion, with all coefficients retained. Each of these generators maps to zero in \(B\), since \(B\to C\) is injective. At a common later \(B_j\) all vanish. Right exactness and the original base-change comparisons give \(C_j=B_j/JB_j=B_j\), via exactly \(\varphi_j\). No tensor left-exactness or unchanged-kernel assumption is used.
+
+\subsubsection{Conormal colimits and both inverse identities}\label{algebra-proof-073-conormal-colimits-and-both-inverse-identities}
+
+Retain every original polynomial: \[
+P_i=B_i[x_1,\ldots,x_n],\quad I_i=(f_{1,i},\ldots,f_{m,i}),\quad
+C_i=P_i/I_i,\quad E_i=I_i/I_i^2,\quad F_i=\bigoplus_{k=1}^n C_i\,dx_k.
+\] The \(f_{j,i}\) are images of \(f_{j,0}\), with all monomials, coefficients and signs. Let \(P,I,E,F\) be their actual limit objects. Every element of \(I\) is a finite polynomial combination of the retained generators and thus comes from some \(I_i\); a represented element becoming zero does so at a later \(P_i\). Therefore \(\operatorname{colim}I_i=I\). Every element of \(I^2\) is a finite sum of products of such expressions, proving similarly \(\operatorname{colim}I_i^2=I^2\). A class of \(I_i/I_i^2\) becomes zero precisely when its representative becomes such a finite sum of products: lift that sum and the equality to a later stage. Hence \[
+\operatorname{colim}E_i\cong I/I^2,\qquad \operatorname{colim}F_i\cong F.
+\] These arguments do not assume the conormal modules are finitely presented or that nonflat base change preserves their kernels.
+
+The original differential is \[
+d_i([f_{j,i}])=\sum_{k=1}^n\frac{\partial f_{j,i}}{\partial x_k}\,dx_k.
+\] Differentiation commutes with coefficient maps. The \([f_{j,i}]\) generate \(E_i\), and the stated \(dx_k\) form the basis of \(F_i\). If \(B\to C\) is étale, its completed presentation criterion gives an isomorphism \(d:E\to F\). Set \(\xi_k=d^{-1}(dx_k)\). Lift this finite list to a stage and then annihilate at a common later stage every error in the two finite lists \[
+d_i(\xi_{k,i})=dx_k,\qquad
+\sum_{k=1}^n\frac{\partial f_{j,i}}{\partial x_k}\xi_{k,i}=[f_{j,i}].
+\] Define \(h_i:F_i\to E_i\) by \(dx_k\mapsto\xi_{k,i}\). The first list gives \(d_i h_i=1\) on every basis vector; the second gives \(h_i d_i=1\) on every generator. Linearity proves both identities on the entire modules. Thus \(d_i\) is an isomorphism, and the unchanged finite presentation gives étaleness.
+
+For smoothness, take a left inverse \(h:F\to E\) of the split injection \(d\), and lift \(\xi_k=h(dx_k)\). Kill just the second list of errors. Then \(h_i d_i=1\), so \(d_i\) is split injective and the source's finite-presentation smoothness criterion applies. No right inverse is required or asserted. Empty variable or relation lists obey the same equations: the remaining identities give precisely the stated splitting or inverse. This includes zero algebras.
+
+\subsubsection{Relative global complete intersections and the finite cover}\label{algebra-proof-073-relative-global-complete-intersections-and-the-finite-cover}
+
+For a relative global complete intersection \(B\to C\), retain the source's finite-type \(\mathbf Z\)-algebra \(R\), its map to \(B\), the actual relative global complete-intersection model \(R\to S\), and \(B\otimes_RS\cong C\). The earlier syntomic note proves this model theorem using all coefficients of the original equations and of the exact unit relation over dimension charts. Its base-change proof keeps all variables, equations and their number difference, including empty spectra.
+
+Because \(R\) is finitely presented over \(\mathbf Z\), lift the finite generator images to one \(B_i\), then kill all defining relation errors. Put \(D_i=B_i\otimes_RS\), a finitely presented \(B_i\)-algebra. Lift the given map \(D_i\to C\) by its finite generator images and relations to a later \(C_i\), retaining its \(B_i\)-algebra structure.
+
+The resulting map \(D_i\to C_i\) is itself finitely presented. Write \(D_i=B_i[Y]/(g)\), \(C_i=B_i[X]/(h)\), both finite presentations, and represent the images of \(Y_j\) by \(F_j(X)\). Then \[
+C_i\cong D_i[X]/(h_1,\ldots,h_s,\ Y_1-F_1(X),\ldots,Y_t-F_t(X)).
+\] The inverse maps send every original variable to its specified element. The original relations \(g(F(X))\) vanish modulo \((h)\) because the map already exists, so these formulas respect all relations. Apply the just-proved colimit isomorphism lemma to this map and the original base system. At a later stage it is an isomorphism. The map \(B_i\to D_i\) is the actual base change of the original \(R\to S\), so the relative global complete-intersection conclusion follows.
+
+For syntomic descent retain \(g_1,\ldots,g_m\in C\), the original identity \(\sum_j a_jg_j=1\), and each relative global complete-intersection chart \(B\to C_{g_j}\). Lift all \(g_j,a_j\), then kill the unit-relation error. Keep the localization presentation \[
+(C_i)_{g_{j,i}}=C_i[T]/(g_{j,i}T-1),
+\] with inverse element \(T=g_{j,i}^{-1}\). Each map from \(B_i\) to this localization is finitely presented. The preceding result descends each of these finitely many charts; choose a common later stage. Their original unit relation still holds, so the established principal-cover syntomic criterion applies. Flatness and the fibre complete-intersection condition are checked on exactly those charts; finite presentation is already retained.
+
+\subsubsection{The original algebra maps into the cover}\label{algebra-proof-073-the-original-algebra-maps-into-the-cover}
+
+For the final theorem retain the original faithfully flat finitely presented \(R\to S\). If \(R=0\), unitality forces \(S=0\); choose \(S'=0\). Otherwise the preceding faithful-flat descent construction gives \(R_0\to S_0\), with \(R_0\) finite type over \(\mathbf Z\) and \(R\otimes_{R_0}S_0\cong S\). A cover \(S_0\to T_0\) of the required kind gives \[
+S=R\otimes_{R_0}S_0\longrightarrow R\otimes_{R_0}T_0.
+\] Finite presentation and flatness persist by the actual base-change presentations and tensor comparisons. For an \(R\)-module \(M\), \(M\otimes_R(R\otimes_{R_0}T_0)\cong M\otimes_{R_0}T_0\); original faithful flatness reflects its vanishing. Quasi-finiteness persists by the source residue-field fibre comparison. Thus it suffices to construct the cover over the Noetherian model. Use the source names \(R,S\) for that model below, but retain the map from the initial algebra throughout.
+
+Let \(W\) be the full locus where the fibre local ring is Cohen--Macaulay. It is the union of the corrected fixed-relative-dimension opens from the earlier CM-locus proof and therefore open. It meets every nonempty fibre: a minimal prime of a finite-type fibre ring has zero-dimensional Noetherian local ring, hence Cohen--Macaulay. Faithfulness makes every fibre nonempty. Principal opens contained in \(W\) have open images in the base by flat finite-presentation openness, and these images cover the base. Quasi-compactness gives finitely many \(D(g_j)\). Put \[
+\widetilde S=\prod_{j=1}^m S_{g_j},\qquad
+S\longrightarrow\widetilde S,\quad s\longmapsto(s/1)_j.
+\] This is the original map into a replacement algebra, not an identification with the product. Its base map is flat of finite presentation, surjective on spectra, and all its local fibres are Cohen--Macaulay. Finite products are finite direct sums as modules and have disjoint-union spectra, proving flatness and the local assertions; finite presentation is verified below. As in the source, now use \(S\) for this product while retaining the original map into it.
+
+Fix \(\mathfrak p\subset R\). Choose a maximal ideal of the nonzero finite-type fibre \(S\otimes_R\kappa(\mathfrak p)\), with corresponding \(\mathfrak q\subset S\). Its residue field is finite over \(\kappa(\mathfrak p)\) by the finite-type field theorem. The nonzero local ring \[
+\overline S_{\mathfrak q}=S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}
+\] is Cohen--Macaulay of finite dimension \(d\). Choose a parameter regular sequence \(\overline f_1,\ldots,\overline f_d\) and actual lifts \(f_j\in\mathfrak q S_{\mathfrak q}\). The full fibre ideal is primary for the maximal ideal. When \(d=0\), the sequence is empty and the fibre is already zero-dimensional.
+
+Write \(f_j=a_j/u_j\) with \(u_j\notin\mathfrak q\), and take \(g=\prod_j u_j\), with \(g=1\) for the empty list. In \(S_g\) the same fractions are \(a_j\prod_{\ell\ne j}u_\ell/g\); these original unit factors are retained. Define \[
+S'=S_g/(f_1,\ldots,f_d),\qquad
+\mathfrak q'=\mathfrak qS_g/(f_1,\ldots,f_d).
+\] Each \(f_j\) lies in \(\mathfrak qS_g\), because contraction of \(\mathfrak qS_{\mathfrak q}\) to \(S_g\) is \(\mathfrak qS_g\). Thus \(\mathfrak q'\) is a prime over \(\mathfrak p\), with the original point correspondence.
+
+\subsubsection{The redundant localization and the complete denominator}\label{algebra-proof-073-the-redundant-localization-and-the-complete-denominator}
+
+The printed map \(S_g\to S'_g\) at 47851 is valid. The image \(\bar g\in S'\) already has inverse given by the image of \(g^{-1}\). The map \(j:S'\to S'_g\), \(x\mapsto x/1\), has exact inverse \[
+\rho:S'_g\longrightarrow S',\qquad x/\bar g^n\longmapsto x(\bar g^{-1})^n.
+\] An equality of fractions is witnessed by a power of \(\bar g\) killing their cross-multiplication difference; invertibility proves their displayed images equal. Both composites are the identity by the same powers. Thus the printed map is the quotient followed by this isomorphism and gives precisely the intended prime correspondence. OCC-12454 proposes removal of a redundant localization, not repair of a defect; the source is retained.
+
+The actual local fibre is \[
+S'_{\mathfrak q'}/\mathfrak pS'_{\mathfrak q'}
+\cong S_{\mathfrak q}/\big((f_1,\ldots,f_d)+\mathfrak pS_{\mathfrak q}\big)
+\cong\overline S_{\mathfrak q}/(\overline f_1,\ldots,\overline f_d).
+\] For the localization comparison, the image of \((a/g^n)/(b/g^t)\), \(b\notin\mathfrak q\), maps to the class of \(ag^t/(bg^n)\) in the original local quotient. Its inverse uses the same original fractions in the quotient localization. Quotienting by \(\mathfrak p\) gives exactly the sum of the two displayed ideals. The second map first reduces an original \(x\in S_{\mathfrak q}\) modulo \(\mathfrak p\), then modulo the fibre sequence; its kernel is the same sum ideal, proving the inverse quotient comparison. Unit 0744 restores the parentheses enclosing that entire denominator. Adding an ideal after forming the first quotient does not express this map.
+
+The final quotient is nonzero and zero-dimensional because the sequence is a system of parameters in the original Cohen--Macaulay local ring. Its residue field remains the original \(\kappa(\mathfrak q)\), finite over \(\kappa(\mathfrak p)\). These two conditions give quasi-finiteness at \(\mathfrak q'\) by the isolated-fibre criterion. Zero local dimension alone would not suffice without the chosen closed fibre point. Unit 0743 therefore correctly changes the point at 47852 from \(\mathfrak q\) to \(\mathfrak q'\).
+
+\subsubsection{Flatness, neighbourhoods, products and the final diagram}\label{algebra-proof-073-flatness-neighbourhoods-products-and-the-final-diagram}
+
+The original map \(R_{\mathfrak p}\to S_{\mathfrak q}\) is flat local between Noetherian local rings. Apply the preceding completed regular-sequence lifting criterion to every actual \(f_j\): multiplication by its image is injective on the appropriate fibre quotient, the local injection criterion lifts the injection, and it proves that the next quotient is flat over \(R_{\mathfrak p}\). Each quotient remains nonzero because its fibre quotient is nonzero. Induction gives \(R_{\mathfrak p}\to S'_{\mathfrak q'}\) flat, hence flatness over \(R\) after the localization comparison. If \(d=0\), this is simply the original local flat map.
+
+The algebra \(S'\) is finitely presented over \(R\): invert \(g\) by \(gZ-1\) and impose the finite list of \(f_j\), written as the exact polynomials \(a_j\prod_{\ell\ne j}u_\ell Z\). The flat and quasi-finite loci are both open and contain \(\mathfrak q'\). Choose a principal \(D(h)\) inside their intersection and containing that point. Lift \(h\) to \(a/g^n\in S_g\). Since \(h\notin\mathfrak q'\), \(a\notin\mathfrak q\). There is an exact isomorphism \[
+(S')_h\cong S_{ga}/(f_1,\ldots,f_d).
+\] One map sends each original fraction to the right-hand quotient; the inverse uses that \(g\) is already invertible and that inverting \(a/g^n\) is equivalent to inverting \(a\). Its inverse element for \(a\) is \(g^{-n}h^{-1}\). Both maps fix every original fraction and relation, giving the source's replacement \(g\mapsto gg'\) with \(g'=a\). The resulting flat quasi-finite finitely presented algebra has open image containing the original \(\mathfrak p\).
+
+Perform this construction for every base prime, and choose finitely many resulting open images covering the quasi-compact base. Denote their actual algebras by \(T_1,\ldots,T_N\) and put \(T=\prod_jT_j\). All maps from the original \(S\), including its earlier CM product map and the initial model map, compose to the requested \(S\to T\). The map \(R\to T\) is flat as a finite direct sum of flat modules and is surjective on spectra by the chosen cover, hence faithfully flat. Every prime of a finite product lies in exactly one factor and has that factor's local ring, so quasi-finiteness holds at every prime.
+
+Here are full equations for finite presentation of the product. Write \(T_j=R[X_{j,1},\ldots,X_{j,n_j}]/(h_{j,1},\ldots,h_{j,m_j})\). Introduce \(e_1,\ldots,e_N\) and these same variable lists, with the finite relations \[
+e_j^2=e_j,\quad e_je_\ell=0\ (j\ne\ell),\quad
+\sum_j e_j=1,\quad e_jX_{j,a}=X_{j,a},\quad
+e_jh_{j,b}(X_{j,1},\ldots,X_{j,n_j})=0.
+\] Map \(e_j\) to the actual coordinate idempotent and \(X_{j,a}\) to its original generator in that coordinate and zero elsewhere. Conversely these relations decompose the presented ring into its \(e_j\)-parts, each with unit \(e_j\). A coefficient \(r\) in that part means \(re_j\), and its polynomial relations are exactly the original \(h_{j,b}\); the remaining variable lists vanish there. This constructs the inverse maps to \(\prod_jT_j\), proves finite presentation and retains all factors. The already handled zero-base case covers an empty spectrum. The final diagram has exactly the three source properties.
+
+\subsubsection{Report accounting and the chapter boundary}\label{algebra-proof-073-report-accounting-and-the-chapter-boundary}
+
+OCC-01036 adds ``be'' before ``a map'' in the seven declarations at 47524, 47549, 47573, 47601, 47628, 47668 and 47708. The directed set, element \(0\), maps and hypotheses remain unchanged. OCC-12454 is rejected as a nondefect by the exact redundant-localization inverse. OCC-01037 and OCC-12455 retain 0743; OCC-01038 and OCC-12456 retain 0744. The chapter input, bibliography commands and terminator at 47880--47885 require no report disposition.
+
+The supporting arguments receive the earlier finite-stage witness constructions, conormal criteria, complete-intersection models, corrected CM and flat loci, regular-sequence quotient flatness and quasi-finite fibre comparisons. No new extension group is created. The next numeric position is the verified one-past-end 47886. The cumulative replay must prove all 1,351 reports have exactly one disposition. That accounting alone does not constitute candidate admission, a successful build, visual review or publication.

@@ -40,6 +40,15 @@ The source p.11 normal/degenerate shuffle/AW diagram is not proved merely by
 iterated normalization. Its two anchors have their own pending decision
 `I-1.3-006`. No complete disposition of that diagram is claimed in this increment.
 
+That historical pending state is superseded on 2026-09-29. A free
+bisimplicial degree-one counterexample proves that raw Alexander--Whitney need
+not preserve the Moore normal subcomplex. The correct statement uses the maps
+induced on the quotient by degeneracies; under the Moore splitting these are
+the raw shuffle restriction and the Moore-projected Alexander--Whitney map.
+The new lemma proves their natural chain-homotopy equivalence and records the
+counterexample explicitly. The printed diplomatic claim remains source
+evidence and is not silently rewritten.
+
 ## Source inventory
 
 An obsolete cut at the I.1.1/I.1.2 boundary on printed p.6 survived earlier

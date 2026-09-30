@@ -21,12 +21,14 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R57 and the Verdier insertion**: 58
-admitted overlays with 1,653 stable units (1,641 correction IDs and 12 Verdier
+The cumulative source includes **R1–R58 and three Verdier insertions**: 61
+admitted overlays with 2,243 stable units (2,201 correction IDs and 42 Verdier
 units). Admission and source composition are separate checks. The
-[R57 successor receipt](../validation/r57-successor-current.json) binds its
-exact 56-edit source change and validation; its immutable R56 predecessor
-preserves all earlier source and evidence. The older
+[R58 successor receipt](../validation/r58-successor-current.json) binds its
+690 exact source operations, identified companion notices and validation. The
+[concurrent integration record](../validation/r58-concurrent-integration-2026-09-30.json)
+preserves the separately published Verdier additions and both registry histories.
+The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
 [chapter-by-chapter comparison](changes/index.html) shows original and
@@ -69,8 +71,13 @@ characteristic cases and polynomial arguments, and states the already-proved
 transcendence-basis extension property. [Review, further consequences and
 editable chapter sources](candidates/commons/stacks/errata/r57/README.md)
 accompany the Fields and combined corrections-only patches.
-R49–R57 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57 review, source
+R58 adds 689 bounded Algebra edits in 559 review groups and one local rendering
+dependency. Its separate companion supplies 173 contextual treatments and 73
+complete proof notes. [Both PDFs, review records and complete editable sources](candidates/commons/stacks/errata/r58/README.md)
+are available. Source-linked notices identify the editorial material; the
+correction-only patches exclude those notices and supplementary arguments.
+R49–R58 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

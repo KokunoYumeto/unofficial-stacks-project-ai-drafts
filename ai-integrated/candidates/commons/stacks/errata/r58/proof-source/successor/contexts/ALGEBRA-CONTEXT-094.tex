@@ -1,0 +1,386 @@
+\begin{lemma}
+\label{editorial-source-lemma-polynomials-divide}
+Let $K$ be a field. Let $n, m \in \mathbf{N}$ and
+$a_0, \ldots, a_{n - 1}, b_0, \ldots, b_{m - 1} \in K$.
+If the polynomial $x^n + a_{n - 1}x^{n - 1} + \ldots + a_0$
+divides the polynomial $x^m + b_{m - 1} x^{m - 1} + \ldots + b_0$
+in $K[x]$ then
+\begin{enumerate}
+\item $a_0, \ldots, a_{n - 1}$ are integral over any subring
+$R_0$ of $K$ containing the elements $b_0, \ldots, b_{m - 1}$, and
+\item each $a_i$ lies in $\sqrt{(b_0, \ldots, b_{m-1})R}$
+for any subring $R \subset K$ containing the elements
+$a_0, \ldots, a_{n - 1}, b_0, \ldots, b_{m - 1}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write
+$$
+Q=x^n+\sum_{j=0}^{n-1}a_jx^j,\qquad
+P=x^m+\sum_{i=0}^{m-1}b_ix^i.
+$$
+Since both are monic and $Q$ divides $P$ over the field $K$,
+we have $m\geq n$. Choose a splitting field $L/K$ and retain
+the roots with their multiplicities:
+$$
+P=\prod_{i=1}^m(x-\beta_i),\qquad \beta_i\in L.
+$$
+See Fields, Section \ref{fields-section-splitting-fieds}.
+Unique factorization in $L[x]$ gives an indexed subset
+$J\subseteq\{1,\ldots,m\}$ of cardinality $n$ with
+$Q=\prod_{i\in J}(x-\beta_i)$. Equal roots remain distinct
+indices in this expression. Every $\beta_i$ is integral over
+$R_0$ by the original $P$, and every original coefficient is
+$$
+a_j=(-1)^{n-j}
+\sum_{\substack{E\subseteq J\\ |E|=n-j}}
+\prod_{i\in E}\beta_i\qquad(0\leq j<n).
+$$
+The subring property in Lemma \ref{editorial-source-lemma-integral-closure-is-ring}
+proves (1), retaining every sign and repeated-root contribution.
+
+For (2), first consider $m=n$. The monic quotient has degree
+zero and is $1$, so $a_i=b_i$ for every $i$, which gives the
+assertion directly. Now let $e=m-n>0$ and write the original
+monic quotient as
+$$
+C=x^e+\sum_{k=0}^{e-1}c_kx^k,\qquad P=QC.
+$$
+Put $a_n=c_e=1$. Comparing the coefficient of $x^{n+k}$
+for $k=e-1,e-2,\ldots,0$ gives the exact recurrence
+$$
+c_k=b_{n+k}-
+\sum_{i=\max(0,n+k-e)}^{n-1}a_i c_{n+k-i}.
+$$
+Every index $n+k-i$ in this sum is between $k+1$ and $e$.
+Thus descending induction shows $c_k\in R$ for all $k$,
+without negative coefficient indices or assumptions on $n>1$.
+Set $H=\sqrt{(b_0,\ldots,b_{m-1})R}$ and
+$\overline R=R/H$. This quotient is reduced. If it is the
+zero ring, the required membership in $H=R$ already holds.
+Otherwise the complete coefficient image of $P=QC$ is
+$$
+x^m+\sum_{i=0}^{m-1}\overline b_i x^i=x^m
+=\left(x^n+\sum_{j=0}^{n-1}\overline a_jx^j\right)
+ \left(x^e+\sum_{k=0}^{e-1}\overline c_kx^k\right).
+$$
+At a minimal prime $\mathfrak p$ of $\overline R$, the ring
+$\overline R_{\mathfrak p}$ is a field by
+Lemma \ref{algebra-lemma-minimal-prime-reduced-ring}. In its polynomial
+ring unique factorization makes the first monic factor
+$f=x^n+\sum_{j=0}^{n-1}\overline a_jx^j$ equal to $x^n$:
+every irreducible factor divides $x$, its degree is $n$, and
+its leading coefficient fixes the unit factor to be $1$.
+For each $j$ choose $s_j\notin\mathfrak p$ with
+$s_j\overline a_j=0$, using the equality in this localization,
+and take $s=\prod_{j=0}^{n-1}s_j$.
+Then there exists an $s\in\overline R$, $s\notin\mathfrak p$,
+such that $s(f-x^n)=0$, with this explicit common choice.
+Primality gives $\overline a_j\in\mathfrak p$ for every $j$.
+As this holds at every minimal prime and their intersection
+is zero in the reduced ring, every $\overline a_j$ is zero
+(Lemma \ref{algebra-lemma-reduced-ring-sub-product-fields}).
+Hence every $a_j$ belongs to $H$, proving (2).
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-weighted-monic-factor-coefficients}
+Let $R\subseteq K$ be a subring of a field and let $I\subseteq R$
+be an ideal. Suppose
+$$
+P=x^m+\sum_{i=0}^{m-1}b_ix^i,\qquad b_i\in I^{m-i},
+\qquad Q=x^n+\sum_{j=0}^{n-1}a_jx^j\in K[x]
+$$
+are monic, $1\leq n\leq m$, and $Q$ divides $P$.
+For each $0\leq j<n$, the coefficient $a_j$ is integral over
+$I^{n-j}$. More precisely, with $N=\binom{m}{n}$, it satisfies
+an equation
+$$
+a_j^N+\sum_{\ell=0}^{N-1}C_{j,\ell}a_j^\ell=0,
+\qquad C_{j,\ell}\in I^{(n-j)(N-\ell)}.
+$$
+\end{lemma}
+
+\begin{proof}
+In a splitting field $L/K$ retain the original indexed roots,
+including multiplicities, so
+$P=\prod_{r=1}^m(x-\beta_r)$. As in the proof of
+Lemma \ref{editorial-source-lemma-polynomials-divide}, there is an indexed subset
+$J\subseteq\{1,\ldots,m\}$ of cardinality $n$ with
+$Q=\prod_{r\in J}(x-\beta_r)$. Fix $j$ and put $w=n-j$.
+Let $\mathcal T$ be the set of all $n$-element subsets of
+$\{1,\ldots,m\}$, so $|\mathcal T|=N$. For each $T\in\mathcal T$
+define the full coefficient
+$$
+r_{j,T}=(-1)^w
+\sum_{\substack{U\subseteq T\\|U|=w}}\prod_{r\in U}\beta_r.
+$$
+In particular $a_j=r_{j,J}$. Form
+$$
+H_j(Y)=\prod_{T\in\mathcal T}(Y-r_{j,T})
+=Y^N+\sum_{\ell=0}^{N-1}C_{j,\ell}Y^\ell,
+$$
+where every coefficient, sign and repeated contribution is
+$$
+C_{j,\ell}=(-1)^{N-\ell}
+\sum_{\substack{\mathcal A\subseteq\mathcal T\\|\mathcal A|=N-\ell}}
+\prod_{T\in\mathcal A}r_{j,T}.
+$$
+Then $H_j(a_j)=0$.
+
+Replace the $\beta_r$ temporarily by independent variables
+$Z_r$. The same expression for $C_{j,\ell}$ is an integer
+polynomial, symmetric in the $m$ variables and homogeneous of
+total degree $D=w(N-\ell)$. It is an integer polynomial in
+the elementary symmetric polynomials $e_1,\ldots,e_m$, each
+monomial having weighted degree $D$ when $e_s$ has weight $s$.
+Here is a proof retaining the weights. In lexicographic order
+$Z_1>\cdots>Z_m$, the leading exponent vector
+$(\lambda_1,\ldots,\lambda_m)$ of a nonzero symmetric
+homogeneous polynomial satisfies
+$\lambda_1\geq\cdots\geq\lambda_m$: an inversion would give
+a larger monomial after interchanging the corresponding
+variables, contradicting maximality. With $\lambda_{m+1}=0$,
+the polynomial
+$$
+\prod_{s=1}^m e_s^{\lambda_s-\lambda_{s+1}}
+$$
+has that same leading monomial with coefficient $1$ and
+weighted degree
+$\sum_{s=1}^m s(\lambda_s-\lambda_{s+1})
+=\sum_{s=1}^m\lambda_s=D$.
+Subtract the integer multiple matching the leading coefficient.
+The result remains symmetric and homogeneous of degree $D$,
+with a smaller leading monomial. Only finitely many monomials
+have total degree $D$, so this procedure terminates. It proves
+an expression with integers $\kappa_{j,\ell,\nu}$:
+$$
+C_{j,\ell}
+=\sum_{\substack{\nu\in\mathbf Z_{\geq0}^m\\
+                  \sum_{s=1}^m s\nu_s=D}}
+\kappa_{j,\ell,\nu}
+\prod_{s=1}^m e_s(\beta_1,\ldots,\beta_m)^{\nu_s}.
+$$
+The original coefficients of $P$ give
+$e_s(\beta_1,\ldots,\beta_m)=(-1)^s b_{m-s}$, so the
+complete substituted expression is
+$$
+C_{j,\ell}
+=\sum_{\substack{\nu\in\mathbf Z_{\geq0}^m\\
+                  \sum_{s=1}^m s\nu_s=D}}
+\kappa_{j,\ell,\nu}
+\prod_{s=1}^m\bigl((-1)^s b_{m-s}\bigr)^{\nu_s}.
+$$
+Each product belongs to
+$\prod_s(I^s)^{\nu_s}=I^D=I^{w(N-\ell)}$.
+This proves the required equation over $R$. All identities
+were proved over the integers before evaluation, so no
+separability or characteristic restriction is present.
+
+The exact Rees comparison gives a second proof of the
+integrality conclusion. Put
+$A=\bigoplus_{h\geq0}I^ht^h\subseteq R[t]$ and map it to
+$L[t]$ by the given inclusion. Every $t\beta_r$ satisfies
+$$
+(t\beta_r)^m+
+\sum_{i=0}^{m-1}(b_it^{m-i})(t\beta_r)^i=t^mP(\beta_r)=0.
+$$
+Its coefficients belong to $A$, so all these elements are
+integral over $A$. The original signed identity
+$$
+a_jt^{n-j}=(-1)^{n-j}
+\sum_{\substack{U\subseteq J\\|U|=n-j}}
+\prod_{r\in U}(t\beta_r)
+$$
+and Lemma \ref{editorial-source-lemma-integral-closure-is-ring} show that this
+element is integral over $A$. The weight-$n-j$ assertion of
+Lemma \ref{editorial-source-lemma-characterize-integral-ideal} gives integrality
+of the original $a_j$ over $I^{n-j}$.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-integral-ideal-minimal-polynomial-criterion}
+Let $R$ be a domain, $K=\operatorname{Frac}(R)$, $I\subseteq R$
+an ideal, and $g$ an algebraic element in a field extension
+$L/K$. Write its monic minimal polynomial as
+$Q=x^n+\sum_{j=0}^{n-1}a_jx^j\in K[x]$.
+Then $g$ is integral over $I$ if and only if every $a_j$ is
+integral over $I^{n-j}$. If $R$ is normal, this is equivalent
+to $a_j\in\overline{I^{n-j}}\subseteq R$ for every $j$,
+where the bar denotes integral closure of the ideal inside $R$.
+\end{lemma}
+
+\begin{proof}
+If $g$ is integral over $I$, retain a witnessing equation
+$P(g)=0$ with $P=x^m+\sum_{i=0}^{m-1}b_ix^i$ and
+$b_i\in I^{m-i}$. Division by $Q$ in $K[x]$ gives a
+remainder of degree less than $n$ that vanishes at $g$, hence
+is zero by minimality. Thus $Q\mid P$, and
+Lemma \ref{editorial-source-lemma-weighted-monic-factor-coefficients} gives
+the asserted coefficient integrality.
+
+Conversely suppose every coefficient has that integrality.
+Use $A=\bigoplus_{h\geq0}I^ht^h\subseteq L[t]$ with the
+original coefficient inclusion. By the weighted Rees
+characterization every $h_j=a_jt^{n-j}$ is integral over $A$.
+The algebra $B=A[h_0,\ldots,h_{n-1}]$ is finite over $A$:
+if the chosen monic equation for $h_j$ has degree $d_j$,
+the products $\prod_jh_j^{e_j}$ with $0\leq e_j<d_j$
+generate it as an $A$-module, using those original monic
+equations to reduce each higher power. The element $gt$
+satisfies the full monic equation
+$$
+(gt)^n+\sum_{j=0}^{n-1}h_j(gt)^j=t^nQ(g)=0.
+$$
+Thus $B[gt]$ is generated over $A$ by all
+$\bigl(\prod_jh_j^{e_j}\bigr)(gt)^r$ with $0\leq r<n$.
+To see directly that this gives integrality over $A$, list
+these generators as $v_1,\ldots,v_M$, including $1$.
+Multiplication by $gt$ has relations
+$(gt)v_i=\sum_k d_{ik}v_k$ with $d_{ik}\in A$.
+Multiplying the vector equation by the adjugate of
+$XI-(d_{ik})$ at $X=gt$ shows that the monic polynomial
+$\det(XI-(d_{ik}))$ annihilates every $v_i$, including $1$.
+It is therefore an integral equation for $gt$ over $A$.
+The weight-one Rees characterization makes $g$ integral over
+$I$, proving the converse. This argument does not require
+the displayed module generators to be linearly independent.
+
+If $R$ is normal, each integral equation for $a_j$ over an
+ideal is in particular an integral equation over $R$.
+Since $a_j\in K$, integral closedness of the normal domain
+gives $a_j\in R$. The definition of integral closure of
+$I^{n-j}$ inside $R$ now gives exactly the stated equivalence.
+\end{proof}
+
+\begin{example}
+\label{editorial-source-example-weighted-coefficients-need-integral-closure}
+Normality does not place these coefficients in the ideal
+powers themselves. Let $k$ be any field,
+$R=k[u,v]$, $K=k(u,v)$ and $I=(u^2,v^2)$.
+The polynomial ring $R$ is a normal domain by
+Lemma \ref{editorial-source-lemma-polynomial-domain-normal}, applied twice to $k$.
+Choose a root $g$ of $x^2-u^3v$ in a field extension of $K$.
+This quadratic is irreducible: in $k(u)[v]$ the exponent of
+the factor $v$ defines an integer order on nonzero rational
+functions by numerator order minus denominator order.
+Multiplication adds this order, as follows by removing the
+largest powers of $v$ and observing that the remaining
+polynomials have nonzero values at $v=0$. Thus every nonzero
+square in $K$ has even order, whereas $u^3v$ has order $1$.
+It cannot be a square, so the quadratic has no root in $K$
+and is irreducible, including in characteristic two.
+Consequently $Q=x^2-u^3v$ is the minimal polynomial of $g$,
+and $S=R[g]$ in the chosen extension field is a domain.
+Yet the original equation
+$$
+g^4-u^6v^2=0,\qquad u^6v^2=(u^2)^3v^2\in I^4
+$$
+makes $g$ integral over $I$; its other three coefficients
+are zero and belong to the required powers. The constant
+coefficient $a_0=-u^3v$ of $Q$ is not in
+$I^2=(u^4,u^2v^2,v^4)$: the monomial $u^3v$ is divisible
+by none of these generators, and every polynomial multiple
+of a generator is a sum of divisible monomials. Its distinct
+monomial coefficient therefore cannot be obtained in their
+sum. However
+$$
+a_0^2-u^6v^2=0,\qquad -u^6v^2\in I^4=(I^2)^2,
+$$
+so $a_0\in\overline{I^2}\setminus I^2$.
+Even weight one need not give actual membership: $h=uv\in R$
+satisfies $h^2-u^2v^2=0$ with $u^2v^2\in I^2$, but the
+constant coefficient $-uv$ of its minimal polynomial $x-uv$
+is outside $I$ by the same monomial argument.
+\end{example}
+
+\begin{lemma}
+\label{editorial-source-lemma-integrally-closed-powers-monic-factors}
+For a normal domain $R$, $K=\operatorname{Frac}(R)$ and an
+ideal $I\subseteq R$, the following are equivalent:
+\begin{enumerate}
+\item Every positive power $I^w$ is integrally closed in $R$.
+\item For every monic $P=x^m+\sum_{i=0}^{m-1}b_ix^i$ with
+$b_i\in I^{m-i}$, every monic divisor
+$Q=x^n+\sum_{j=0}^{n-1}a_jx^j\in K[x]$ of positive degree
+has $a_j\in I^{n-j}$ for every $j$.
+\item Every element integral over $I$ in a field extension of
+$K$ has minimal-polynomial coefficients $a_j\in I^{n-j}$,
+where $n$ is its minimal-polynomial degree.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The weighted coefficient lemma gives (1)$\Rightarrow$(2):
+its equations first give $a_j\in R$ by normality and then
+$a_j\in I^{n-j}$ by integral closedness of that power.
+Minimal-polynomial division as above gives (2)$\Rightarrow$(3).
+For (3)$\Rightarrow$(2), factor the given $Q$ in $K[x]$
+into monic irreducible factors, repeated with their original
+multiplicities. A root of each factor in a splitting field
+is a root of $P$, hence is integral over $I$. Condition (3)
+gives the required powers for each irreducible factor.
+Write the factors as
+$Q_r=\sum_{j=0}^{d_r}c_{r,j}x^j$ for $1\leq r\leq q$,
+with $c_{r,d_r}=1\in I^0$ and
+$c_{r,j}\in I^{d_r-j}$ for $j<d_r$.
+The full coefficient of $x^j$ in their product is
+$$
+\sum_{\substack{0\leq j_r\leq d_r\ (1\leq r\leq q)\\
+                 j_1+\cdots+j_q=j}}
+\prod_{r=1}^q c_{r,j_r}
+\ \in I^{\sum_{r=1}^qd_r-j}=I^{n-j}.
+$$
+This retains the multiplicities and proves (2).
+
+Finally assume (2), fix $w\geq1$, and take
+$c\in\overline{I^w}\subseteq R$. Keep its defining equation
+$$
+c^d+\sum_{\ell=0}^{d-1}r_\ell c^\ell=0,
+\qquad r_\ell\in I^{w(d-\ell)}.
+$$
+Set $F(Y)=Y^d+\sum_{\ell=0}^{d-1}r_\ell Y^\ell$.
+The complete difference identity is
+$$
+F(Y)-F(c)=(Y-c)\left(
+\sum_{k=0}^{d-1}Y^{d-1-k}c^k+
+\sum_{\ell=1}^{d-1}r_\ell
+   \sum_{k=0}^{\ell-1}Y^{\ell-1-k}c^k\right).
+$$
+Since $F(c)=0$, substituting $Y=x^w$ proves that $x^w-c$
+divides
+$P=x^{wd}+\sum_{\ell=0}^{d-1}r_\ell x^{w\ell}$.
+The coefficient at $x^{w\ell}$ belongs to $I^{wd-w\ell}$;
+every omitted coefficient is zero and is retained in its
+required power. Condition (2) applied to this divisor gives
+$-c\in I^w$, hence $c\in I^w$. The reverse inclusion
+$I^w\subseteq\overline{I^w}$ follows from the degree-one
+equation for each of its elements. This proves (1).
+\end{proof}
+
+\begin{remark}
+\label{editorial-source-remark-weighted-coefficient-consequences}
+Under the normal-domain hypotheses, the original coefficient
+$a_j\in\overline{I^{n-j}}$ lies in $\sqrt I$: reduce its
+defining equation modulo $\sqrt I$, where all nonleading
+coefficients vanish; its positive leading power is zero, so
+it belongs to that radical. If $I$ is integrally closed,
+the same defining coefficients belong to $I^{N-\ell}$
+because $(n-j)(N-\ell)\geq N-\ell$, and therefore $a_j$
+is integral over $I$ and belongs to $I$. If $I$ is radical,
+the radical conclusion already gives membership in $I$.
+These claims do not assert membership in $I^{n-j}$ without
+the corresponding integral-closedness condition.
+
+The exponent $n-j$ cannot be increased in general.
+For $R=k[u]$, $I=(u)$ and any $w\geq1$, take
+$P=Q=x^w-u^w$. Its constant coefficient $a_0=-u^w$
+belongs to $I^w$. If it were integral over $I^{w+1}$,
+an equation of degree $d\geq1$ would have leading term
+$(-u^w)^d$ of $u$-order $wd$, whereas each other term
+$c_\ell(-u^w)^\ell$ would have order at least
+$(w+1)(d-\ell)+w\ell=wd+d-\ell>wd$.
+The coefficient of $u^{wd}$ in their sum would remain
+$(-1)^d\ne0$, a contradiction in every characteristic.
+\end{remark}

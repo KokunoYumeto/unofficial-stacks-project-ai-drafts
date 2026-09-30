@@ -1,0 +1,28 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-no-inclusion}
+Suppose $R \to S$ is integral.
+Let $\mathfrak q, \mathfrak q' \in \Spec(S)$
+be distinct primes
+having the same image in $\Spec(R)$.
+Then neither $\mathfrak q \subset \mathfrak q'$
+nor $\mathfrak q' \subset \mathfrak q$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathfrak p=\varphi^{-1}(\mathfrak q)=
+\varphi^{-1}(\mathfrak q')$ and set $U=R\setminus\mathfrak p$.
+Retain the fibre algebra
+$A=S\otimes_R\kappa(\mathfrak p)\cong U^{-1}S/\mathfrak pU^{-1}S$.
+The two ideals are sent to
+$U^{-1}\mathfrak q/\mathfrak pU^{-1}S$ and
+$U^{-1}\mathfrak q'/\mathfrak pU^{-1}S$. Localization and quotient
+preserve inclusion, and contraction recovers each original prime:
+$s/1\in U^{-1}\mathfrak q$ means
+$\varphi(u)s\in\mathfrak q$ for some $u\in U$, which by primality
+and $\varphi(u)\notin\mathfrak q$ is equivalent to $s\in\mathfrak q$.
+Thus the two resulting primes are distinct. Lemma
+\ref{editorial-source-lemma-base-change-integral} makes $A$ integral over
+$\kappa(\mathfrak p)$, so Lemma \ref{editorial-source-lemma-integral-over-field}
+makes both primes maximal. An inclusion between them would force
+equality, and contraction would contradict the original distinction.
+\end{proof}

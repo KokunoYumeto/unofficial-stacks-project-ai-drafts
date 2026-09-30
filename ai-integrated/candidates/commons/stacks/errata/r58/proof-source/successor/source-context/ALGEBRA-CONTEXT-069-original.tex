@@ -1,0 +1,13 @@
+\begin{lemma}
+\label{lemma-characterize-integral-element}
+Let $\varphi : R \to S$ be a ring map. Let $y \in S$. If there exists a
+finite $R$-submodule $M$ of $S$ such that $1 \in M$ and $yM \subset M$,
+then $y$ is integral over $R$.
+\end{lemma}
+
+\begin{proof}
+Consider the map $\varphi : M \to M$, $x \mapsto y \cdot x$.
+By Lemma \ref{lemma-charpoly-module} there exists a monic polynomial
+$P \in R[T]$ with $P(\varphi) = 0$. In the ring $S$ we get
+$P(y) = P(y) \cdot 1 = P(\varphi)(1) = 0$.
+\end{proof}

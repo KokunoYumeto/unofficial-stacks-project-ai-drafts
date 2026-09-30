@@ -1,0 +1,87 @@
+\begin{proposition}
+\label{editorial-source-proposition-fppf-open}
+Let $R \to S$ be flat and of finite presentation.
+Then $\Spec(S) \to \Spec(R)$ is open.
+More generally this holds for any ring map $R \to S$ of
+finite presentation which satisfies going down.
+\end{proposition}
+
+\begin{proof}
+If the original map $\varphi:R\to S$ is flat, it
+satisfies going down by Lemma \ref{editorial-source-lemma-flat-going-down}.
+Thus to prove the proposition it suffices to retain
+finite presentation and going down.
+For an original $g\in S$, write a finite presentation
+$S=R[x_1,\ldots,x_n]/(h_1,\ldots,h_m)$ and choose
+an original polynomial $G(x_1,\ldots,x_n)$ representing
+$g$. Then the localization has the finite presentation
+$$
+S_g\simeq
+R[x_1,\ldots,x_n,t]/(h_1,\ldots,h_m,tG-1).
+$$
+The map sends $x_i$ to its original class and $t$
+to $1/g$. The inverse sends $s/g^d$ to the class
+of $P(x)t^d$ for a polynomial lift $P$ of $s$.
+Independence follows from the original relations
+$h_j$ and the relation $tG=1$; these maps are
+inverse on the algebra generators and fractions.
+Hence Chevalley's Theorem \ref{editorial-source-theorem-chevalley}
+applies to this particular $R\to S_g$ and shows
+that the image $E_g$ of $D(g)$ is constructible.
+
+Going down shows that $E_g$ is stable under
+generalization. Given $\mathfrak q'\in D(g)$ over
+$\mathfrak p'$ and $\mathfrak p\subseteq\mathfrak p'$
+in $R$, take $\mathfrak q\subseteq\mathfrak q'$
+over $\mathfrak p$. Since $g\notin\mathfrak q'$,
+also $g\notin\mathfrak q$, and the lift remains
+in the original $D(g)$. This is also the exact
+going-down comparison for $S\to S_g$ and the
+composition lemma. The preceding constructible-set
+lemma now makes $E_g$ open. Every original open
+of $\Spec(S)$ is a union of such $D(g)$ and images
+commute with unions, proving openness of the map.
+
+The proof only needs constructibility of the
+images of all principal opens. Under that weaker
+assumption, going down is equivalent to openness:
+the proof just given gives one direction, and
+Lemma \ref{editorial-source-lemma-open-going-down} gives the other.
+In particular this is an equivalence for maps of
+finite presentation. Finite presentation is not
+necessary: for a field $k$, the map
+$k\to k[x_i:i\geq1]$ has open spectrum map,
+because the target spectrum $\Spec(k)$ has one
+point. The algebra is not even of finite type:
+finitely many polynomials use finitely many
+variables and cannot generate an omitted original
+indeterminate, as evaluation fixing those variables
+and changing that indeterminate verifies.
+
+For the flat finite-presentation case the map is
+universally open. Indeed for every original
+$R$-algebra $A$, the base change has presentation
+$$
+S\otimes_RA\simeq
+A[x_1,\ldots,x_n]/(h_1^A,\ldots,h_m^A),
+$$
+where $h_j^A$ retains every coefficient through
+the original map $R\to A$. The map sends
+$s\otimes a$ to $a$ times a polynomial representative
+of $s$; the inverse sends the original variables
+to $x_i\otimes1$ and each $a$ to $1\otimes a$.
+The displayed relations and tensor balancing make
+these maps inverse. Flatness is preserved because
+for an injection of $A$-modules $L\hookrightarrow L'$,
+the original comparison
+$$
+L\otimes_A(S\otimes_RA)\simeq L\otimes_RS,
+\qquad l\otimes(s\otimes a)\longmapsto al\otimes s,
+$$
+with inverse $l\otimes s\mapsto l\otimes(s\otimes1)$,
+identifies its tensor map with an injection by
+flatness of $S$ over $R$. Thus the proved proposition
+applies after every base change. This last assertion
+uses flatness, not merely the original going-down
+hypothesis.
+\end{proof}

@@ -1,0 +1,46 @@
+\begin{lemma}
+\label{lemma-cover-module}
+Let $R$ be a ring. Let $f_1, \ldots, f_n$ be elements of $R$
+generating the unit ideal. Let $M$ be an $R$-module.
+The sequence
+$$
+0 \to
+M \xrightarrow{\alpha}
+\bigoplus\nolimits_{i = 1}^n M_{f_i} \xrightarrow{\beta}
+\bigoplus\nolimits_{i, j = 1}^n M_{f_i f_j}
+$$
+is exact, where $\alpha(m) = (m/1, \ldots, m/1)$
+and $\beta(m_1/f_1^{e_1}, \ldots, m_n/f_n^{e_n})
+= (m_i/f_i^{e_i} - m_j/f_j^{e_j})_{(i, j)}$.
+\end{lemma}
+
+\begin{proof}
+It suffices to show that the localization of the sequence at
+any maximal ideal $\mathfrak m$ is exact, see
+Lemma \ref{lemma-characterize-zero-local}.
+Since $f_1, \ldots, f_n$ generate the unit ideal,
+there is an $i$ such that $f_i \not \in \mathfrak m$.
+After renumbering we may assume $i = 1$.
+Note that $(M_{f_i})_\mathfrak m = (M_\mathfrak m)_{f_i}$
+and $(M_{f_if_j})_\mathfrak m = (M_\mathfrak m)_{f_if_j}$, see
+Proposition \ref{proposition-localize-twice-module}.
+In particular $(M_{f_1})_\mathfrak m = M_\mathfrak m$ and
+$(M_{f_1 f_i})_\mathfrak m = (M_\mathfrak m)_{f_i}$, because
+$f_1$ is a unit.
+Note that the maps in the sequence are the canonical ones
+coming from
+Lemma \ref{lemma-universal-property-localization-module}
+and the identity map on $M$.
+Having said all of this, after replacing $R$ by $R_\mathfrak m$,
+$M$ by $M_\mathfrak m$, and $f_i$ by their image in $R_\mathfrak m$,
+and $f_1$ by $1 \in R_\mathfrak m$,
+we reduce to the case where $f_1 = 1$.
+
+\medskip\noindent
+Assume $f_1 = 1$. Injectivity of $\alpha$ is now trivial. Let
+$m = (m_i) \in \bigoplus_{i = 1}^n M_{f_i}$ be in the kernel of $\beta$.
+Then $m_1 \in M_{f_1} = M$. Moreover, $\beta(m) = 0$
+implies that $m_1$ and $m_i$ map to the same element of
+$M_{f_1f_i} = M_{f_i}$. Thus $\alpha(m_1) = m$ and the
+proof is complete.
+\end{proof}

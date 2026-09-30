@@ -1,0 +1,140 @@
+\subsection{Noetherian approximation: exact systems and their boundaries}\label{algebra-proof-037-noetherian-approximation-exact-systems-and-their-boundaries}
+
+Authority: Stacks Project authors, algebra.tex at a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, lines 32218--32642; SHA256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Bounded dependencies 5990--6025 and 7502--7515 were reread. All twelve received reports in this interval were read. This finishes the remaining part of the Colimits section; next is More flatness criteria at 32643.
+
+The original author exposition, including arguments left to the reader, remains identifiable in both translations. The following complete arguments, system-choice clarification and stronger consequences are separate editorial material. One canonical correction 0411 is retained. Eight small source operations are proposed in six groups; the source's example and all its original relations are retained. No novelty is claimed.
+
+\subsubsection{Subrings, localizations and the actual finite-type maps}\label{algebra-proof-037-subrings-localizations-and-the-actual-finite-type-maps}
+
+Source 32218--32343 and 32483--32503, 32539--32564; group 820. Let the original local map be \(\varphi:R\to S\), with maximal ideals \(\mathfrak m,\mathfrak n\), so \(\varphi^{-1}(\mathfrak n)=\mathfrak m\). For each finite pair \((A,B)\) with \(\varphi(A)\subset B\), retain \[
+R'_\lambda=\mathbf Z[A]\subset R,\quad S'_\lambda=\mathbf Z[B]\subset S,
+\quad
+\mathfrak m_\lambda=R'_\lambda\cap\mathfrak m,\quad
+\mathfrak n_\lambda=S'_\lambda\cap\mathfrak n.
+\] The empty pair is allowed and unions give common successors. The map \(R'_\lambda\to S'_\lambda\) is the restriction of the original \(\varphi\). If \(r\notin\mathfrak m_\lambda\), then \(\varphi(r)\notin\mathfrak n_\lambda\), so it extends to a local map \[
+R_\lambda=(R'_\lambda)_{\mathfrak m_\lambda}
+ \longrightarrow
+S_\lambda=(S'_\lambda)_{\mathfrak n_\lambda}.
+\] The maps to \(R,S\) are injections on the separate source and target rings: denominators map to units, and a zero fraction has zero numerator in the corresponding original subring. No injectivity of \(\varphi\) is assumed. A larger pair induces the actual inclusion maps on subrings and their fraction maps; contraction of the two fixed maximal ideals makes these transition maps local.
+
+The images of the \(R_\lambda\) cover \(R\), since any \(r\) can be included in \(A\). The images of the \(S_\lambda\) cover \(S\), since any \(s\) can be included in \(B\). Thus the colimit is the original map \(R\to S\), not merely a pair of abstractly isomorphic rings. Each \(R_\lambda\) is essentially of finite type over \(\mathbf Z\). The finite list \(B\) generates \(S'_\lambda\) over the image of \(R'_\lambda\), so \(S_\lambda\) is a localization of a finite-type \(R_\lambda\)-algebra. Removing the prime localizations gives the complete proof of the nonlocal assertion.
+
+For the essentially finite-type case, retain the original \(x_1,\ldots,x_n\in S\) and the image subalgebra \(T=\varphi(R)[x_1,\ldots,x_n]\subset S\). If \(S=U^{-1}T\) is local, then with \(\mathfrak p=T\cap\mathfrak n\) the natural maps \(T_{\mathfrak p}\to S\) and \(S\to T_{\mathfrak p}\) are inverse: \(U\) avoids \(\mathfrak p\), and every element outside \(\mathfrak p\) is already a unit in \(S\). Thus every original fraction of \(S\) can be represented with a numerator and denominator in \(T\), the latter outside \(\mathfrak n\).
+
+For a finite \(A\subset R\), set \(R'_\lambda=\mathbf Z[A]\) and \(S'_\lambda=\varphi(R'_\lambda)[x_1,\ldots,x_n]\), and use the same contracted-prime localizations. Any numerator and denominator in \(T\) involves finitely many original coefficients in \(R\), so appears at some stage, with its original denominator still outside the contracted prime. This proves the colimit assertion for \(S\); it does not presume \(S\) is generated as an algebra by the \(x_i\) without localization.
+
+For \(\lambda\le\mu\), the exact map \[
+b\otimes r\longmapsto b\varphi(r):
+S'_\lambda\otimes_{R'_\lambda}R'_\mu\longrightarrow S'_\mu
+\] is onto because its image contains both \(\varphi(R'_\mu)\) and every original \(x_i\). Let \(Q\) be its actual kernel. The ring \(S_\lambda\otimes_{R_\lambda}R_\mu\) is obtained from the source tensor ring by inverting the images of \(S'_\lambda\setminus\mathfrak n_\lambda\) and \(R'_\mu\setminus\mathfrak m_\mu\). These images avoid the inverse image of \(\mathfrak n_\mu\). Quotient by the extension of \(Q\), then invert the remaining elements outside \(\mathfrak n_\mu\); the result is exactly \(S_\mu\). This proves ``localization of a quotient'' with the original kernel and all denominator sets. Without the prime localizations, the same original map is a surjection and proves the nonlocal finite-type assertion.
+
+Both occurrences of ``Denote'' receive the missing ``by''; none of these full arguments is inserted in place of the author's abbreviated proof.
+
+\subsubsection{Finite presentations require a compatible local base system}\label{algebra-proof-037-finite-presentations-require-a-compatible-local-base-system}
+
+Source 32345--32392; groups 821--824. The statement's plural becomes ``local homomorphisms''. Keep the original chosen isomorphism and full equations \[
+\Phi:(R[X_1,\ldots,X_n]/(f_1,\ldots,f_m))_{\mathfrak q}\xrightarrow{\sim}S.
+\] Here each \(f_j\) is the original polynomial, with every coefficient and sign retained. The inverse image of \(\mathfrak q\) in \(R\) is \(\mathfrak m\); this is a contraction under the structural map, without any assumption that \(R\) embeds into the quotient.
+
+Choose the base system \(R_\lambda\) from the preceding subring construction, or any directed system as in the source with local transition maps. The explicit locality condition matters. A directed colimit of local rings and local transition maps has local structure maps: an element of the maximal ideal of a stage remains a nonunit at every later stage. If its image in the colimit were a unit, its inverse and the equality of their product with one would be represented at a later stage, making it a unit there, a contradiction. An element outside the maximal ideal is already a unit and stays so. The images of the maximal ideals form an ideal after passage to common stages, and every element outside it is a unit. This is the maximal ideal of the colimit. In particular every structural \(R_\lambda\to R\) is local.
+
+Requiring only that each ring be local is insufficient for the ``any way'' wording in this proof. In the two-stage diagram \(R_0=\mathbf Z_{(2)}\to R_1=\mathbf Q=R\), both rings are local and essentially of finite type over \(\mathbf Z\), and the colimit is \(\mathbf Q\). Take \(S=\mathbf Q\) with its identity local map from \(R\). Using the empty polynomial presentation, the source construction at stage zero localizes \(R_0\) at the inverse image \((0)\) of the prime of \(\mathbf Q\), giving \(S_0=\mathbf Q\). The resulting \(R_0\to S_0\) is not local: the inverse image of the zero maximal ideal is \((0)\), not \((2)\). The existence theorem remains true; a compatible local base system must be selected. The proposed short clarification adds ``with local transition maps'' to the base-system choice, and the original subring construction supplies it.
+
+All coefficients of the finite list \(f_j\) descend to one stage \(\lambda_0\). Choose their actual representatives \(f_{j,\lambda_0}\) and transport them unchanged to every later stage. Put \[
+B_\lambda=R_\lambda[X_1,\ldots,X_n]/(f_{1,\lambda},\ldots,f_{m,\lambda}),
+\quad
+\mathfrak q_\lambda=(B_\lambda\to B)^{-1}(\mathfrak q),\quad
+S_\lambda=(B_\lambda)_{\mathfrak q_\lambda},
+\] where the middle expression denotes inverse image under the actual map \(B_\lambda\to B=R[X]/(f_1,\ldots,f_m)\), not a tensor product of ideals. Locality of \(R_\lambda\to R\to S\) makes the contraction of \(\mathfrak q_\lambda\) the maximal ideal of \(R_\lambda\), so \(R_\lambda\to S_\lambda\) is local.
+
+The presentation gives the exact base-change isomorphism \(B_\lambda\otimes_{R_\lambda}R_\mu\cong B_\mu\). Let \(T_\lambda=B_\lambda\setminus\mathfrak q_\lambda\), transported into \(B_\mu\). Its elements avoid \(\mathfrak q_\mu\), and \[
+S_\lambda\otimes_{R_\lambda}R_\mu
+\cong T_\lambda^{-1}B_\mu,\qquad
+S_\mu\cong(T_\lambda^{-1}B_\mu)_{\mathfrak q_\mu T_\lambda^{-1}B_\mu}.
+\] These are the original maps induced by \(b/t\otimes r\mapsto br/t\) and subsequent localization. They prove the exact prime-localization assertion.
+
+Finite polynomial expressions give \(\operatorname{colim}B_\lambda=B\): elements are represented at a stage, and a relation in the ideal \((f_1,\ldots,f_m)\) is a finite sum of polynomial multiples, whose coefficients also appear at a later stage. For fractions, any \(b/t\in B_{\mathfrak q}\) lifts together with \(t\notin\mathfrak q\). If a represented fraction becomes zero, there is \(h\notin\mathfrak q\) with \(hb=0\) in \(B\); lift \(h\) and the finite equality to a later stage, where \(h\) is still outside the contracted prime and kills the numerator. This proves \(\operatorname{colim}S_\lambda=S\), without claiming that the individual maps \(S_\lambda\to S\) are injective.
+
+The two remaining wording operations add ``by'' to the transported polynomial's declaration and ``to be'' to the inverse-image prime's definition. All displayed coordinate and localization constructions remain source-linked editorial evidence.
+
+\subsubsection{The original wrong system and every later transition}\label{algebra-proof-037-the-original-wrong-system-and-every-later-transition}
+
+Source 32394--32424; group 825 and consequence 828. Keep \(k=\mathbf F_2\) and exactly \[
+R=\bigl(k[z,y_1,y_2,\ldots]/(y_i^2-z y_{i+1}:i\ge1)\bigr)_{(z,y_1,y_2,\ldots)},
+\quad S=R/zR,
+\] \[
+R_n=\bigl(k[z,y_1,\ldots,y_n]/(y_i^2-z y_{i+1}:1\le i<n)\bigr)_{(z,y_1,\ldots,y_n)},
+\quad S_n=R_n/(z,y_n^2),\quad n\ge1.
+\] The original polynomial rings, the full relation lists and the maximal-ideal localizations remain explicit. Their directed colimit is \(R\): any original polynomial fraction uses finitely many variables, and a zero relation uses only finitely many of the listed generators of the ideal. The colimit of the \(S_n\) is \(S\), because after setting \(z=0\) every original \(y_i^2\) is zero.
+
+For \(m>n\), exact right base change gives \[
+S_n\otimes_{R_n}R_m=R_m/(z,y_n^2)=R_m/zR_m=:T_m.
+\] The second equality is justified by the original relation \(y_n^2=z y_{n+1}\) present in \(R_m\). The comparison with \(S_m\) is the actual quotient map with kernel \[
+\ker(T_m\to S_m)=(y_m^2).
+\] Retaining the original presentation identifies \[
+T_m=
+\bigl(k[y_1,\ldots,y_m]/(y_i^2:1\le i<m)\bigr)_{(y_1,\ldots,y_m)}.
+\] The element \(y_m^2\) is nonzero: the local homomorphism to \(k[Y]_{(Y)}\) which sends \(y_m\) to \(Y\) and every earlier \(y_i\) to zero sends it to \(Y^2\ne0\). It is a non-zero-divisor as well. Before localization, this ring is the polynomial algebra in \(y_m\) over \(k[y_1,\ldots,y_{m-1}]/(y_i^2)\); multiplication by \(y_m^2\) shifts its coefficient list and is injective. Localization preserves that injection.
+
+Both \(T_m\) and \(S_m\) are local and the quotient map is local. If this map were a localization, every inverted element would have unit image, hence lie outside the maximal ideal of \(T_m\), hence already be a unit. Such a localization is an isomorphism, contrary to the computed nonzero kernel. This proves failure for every \(m>n\), not just adjacent indices. Consequently no cofinal subsequence of these stages makes the transition condition of the essentially finite-presentation lemma true. The obstruction at each later stage is the exact principal ideal generated by the original \(y_m^2\), despite its disappearance in the full colimit.
+
+The source's corrected system \(S_n'=R_n/zR_n\) instead satisfies \[
+S_n'\otimes_{R_n}R_m=R_m/zR_m=S_m'
+\] for all \(m\ge n\), with the canonical maps. The finite-presentation existence theorem guarantees an appropriate choice; it does not force every finite-type approximation to have this property. The wording ``None of the maps \ldots{} is a localization'' makes the source's intended universal negative explicit. The expanded calculation is editorial and keeps all nilpotents.
+
+\subsubsection{Modules and the nonlocal finite-presentation constructions}\label{algebra-proof-037-modules-and-the-nonlocal-finite-presentation-constructions}
+
+Source 32426--32481 and 32566--32628; consequence 827. For the original finitely presented \(S\)-module use the source presentation \[
+S^{\oplus s}\xrightarrow{A}S^{\oplus t}\longrightarrow M\longrightarrow0.
+\] Each of the finitely many entries of the actual \(t\times s\) matrix \(A\) is a fraction at a local stage. Lift all its numerators and denominators, with their original positions and values, to one common \(\lambda_2\ge\lambda_1\). Transport this same matrix to every later stage and set \(M_\lambda=\operatorname{coker}A_\lambda\). Right exactness gives the canonical isomorphisms \[
+M_\lambda\otimes_{S_\lambda}S_\mu\cong M_\mu,\qquad
+M_\lambda\otimes_{S_\lambda}S\cong M.
+\] No flatness of a stage transition is required. Tensoring commutes with the directed colimit by the universal property, so the underlying directed colimit of these modules is also \(M\). Each \(M_\lambda\) is finitely presented, stronger than the displayed assertion that it is finite. If \(s=0\) or \(t=0\), the same actual zero-dimensional matrices and their cokernels give the corresponding assertions.
+
+For the nonlocal finite-presentation statement choose finite-type subrings \(R_\lambda\subset R\) containing all coefficients of the original finite list \(f_j\), and put \[
+S_\lambda=R_\lambda[X_1,\ldots,X_n]/(f_{1,\lambda},\ldots,f_{m,\lambda}).
+\] Every transition gives the exact isomorphism \(S_\lambda\otimes_{R_\lambda}R_\mu\cong S_\mu\), and the same finite-relation argument gives colimit \(S\). Lift the finitely many entries of the module presentation matrix to one of these algebras and proceed as above. Now, for every stage in the restricted cofinal tail, \[
+S_\lambda\otimes_{R_\lambda}R\cong S,\qquad
+M_\lambda\otimes_{R_\lambda}R
+\cong M_\lambda\otimes_{S_\lambda}(S_\lambda\otimes_{R_\lambda}R)
+\cong M.
+\] The canonical map on elementary tensors is \(m\otimes r\mapsto m\otimes(1\otimes r)\), with inverse \(m\otimes(s\otimes r)\mapsto sm\otimes r\). These exact maps justify the final source equality. In the local version one must retain the further prime localization; this unrestricted base-change isomorphism is not asserted there.
+
+\subsubsection{Integral approximation with the original monic equations}\label{algebra-proof-037-integral-approximation-with-the-original-monic-equations}
+
+Source 32505--32537; group 826. For a pair \((E,F)\), retain finite \(E\subset R,F\subset S\) and an actual monic equation for every \(f\in F\), \[
+P_f(T)=T^{d_f}+\sum_{j=0}^{d_f-1}a_{f,j}T^j,\qquad
+a_{f,j}\in E,\qquad P_f(f)=0.
+\] Unions give upper bounds because the original witness equations remain present. The empty pair is allowed. The rings \(R_\lambda=\mathbf Z[E]\subset R\) and \(S_\lambda=\varphi(R_\lambda)[F]\subset S\) have the original structure maps and inclusion transitions. Every \(r\in R\) occurs by enlarging \(E\), and every \(s\in S\) occurs by taking its actual integral equation over \(R\) and including its coefficients in \(E\). The latter is the reason that canonical correction 0411 changes ``over S'' to ``over R''.
+
+Here is the finite-module calculation without discarding the equations. For each \(f\), the exact relation \[
+f^{d_f}=-\sum_{j=0}^{d_f-1}\varphi(a_{f,j})f^j
+\] reduces an exponent at least \(d_f\). Repeatedly substitute this whole sum, preserving its signs and coefficients, and induct on the excess exponents. Every product in the \(f\)'s is an \(R_\lambda\)-linear combination of \[
+\prod_{f\in F}f^{e_f},\qquad 0\le e_f<d_f.
+\] Thus \(S_\lambda\) is generated by at most \(\prod_{f\in F}d_f\) elements as a module. For \(F=\varnothing\), the product is one and its image is the structural unit. If the target is the zero ring, the same generating assertion remains valid; one can choose degree-one witness polynomials. This is a spanning family, not a claim of linear independence, freeness or constant rank. It proves the source finite-map statement and preserves the exact original monic polynomials.
+
+\subsubsection{Simultaneous Noetherian models for finite diagrams}\label{algebra-proof-037-simultaneous-noetherian-models-for-finite-diagrams}
+
+Source 32345--32392, 32426--32481 and 32566--32628; group 827, receiving groups 818--819. All \(R_\lambda\) in the constructions are Noetherian: \(\mathbf Z\) is Noetherian, finite-type extensions are Noetherian and localization preserves this property, by the reread source 5990--6025. Every \(S_\lambda\), being essentially of finite type over \(R_\lambda\), is Noetherian as well. Therefore the local stage maps are essentially of finite presentation: present their finite-type precursor as a quotient of a polynomial algebra over the Noetherian \(R_\lambda\); its actual kernel is finitely generated. Globally the stage maps are of finite presentation. Every finite stage module is finitely presented, because the kernel of a finite free surjection is a submodule of a finite free module over a Noetherian ring. For the chosen \(M_\lambda\) the original matrix already provides its explicit presentation.
+
+More generally take a diagram of finitely presented \(S\)-modules given by finitely many objects and generating arrows, with finitely many path or finite linear path equations. First construct the original ring system \(R_\lambda\to S_\lambda\) just proved. Apply the explicit diagram descent of group 818 to \(S=\operatorname{colim}S_\lambda\). It produces a common stage \(\lambda_0\) with the finitely many actual modules, arrows and equations, including all coefficient representatives. Restrict the base system to \(\lambda\ge\lambda_0\) and define each diagram at \(\lambda\) by tensoring that entire chosen diagram with \(S_\lambda\). Composition, addition and all equations are preserved; right exactness gives its finite presentations. Its transitions have the exact isomorphisms \(M_{\lambda,v}\otimes_{S_\lambda}S_\mu\cong M_{\mu,v}\) at every vertex \(v\), and all arrows commute with these isomorphisms. The colimit is the original entire diagram and its equations.
+
+Any specified finite set of natural transformations, inverse maps, idempotents, splitting witnesses or bounded contracting homotopies can be included among these finitely many data, as proved in group 819. The ring system continues to satisfy the source's exact base-change/localization conditions. This strengthens the single-module statement to a simultaneous finite diagram without assuming flat transitions or arbitrary exactness descent. The counterexample in group 819 remains a boundary.
+
+\subsubsection{Persistent defects and uniformly finite approximations}\label{algebra-proof-037-persistent-defects-and-uniformly-finite-approximations}
+
+Group 828 is the all-\(m>n\) result proved in the original wrong-system section: the comparison kernel is exactly the nonzero regular principal ideal \((y_m^2)\), and no cofinal subsequence repairs it. Its receiving comparison with group 819 distinguishes disappearance of each individual defect in a colimit from a finite stage satisfying every desired transition property.
+
+For group 829, the integral spanning bound above upgrades each finite stage to a finitely presented \(R_\lambda\)-module and finitely presented \(R_\lambda\)-algebra, because \(R_\lambda\) is Noetherian. There is an additional uniform construction when the original map \(R\to S\) is finite. Fix an actual finite \(R\)-module generating family \(f_1,\ldots,f_r\) containing \(1_S\); for the zero ring include \(f_1=0=1_S\). Choose the actual full multiplication table \[
+f_if_j=\sum_{k=1}^r\varphi(a_{ijk})f_k,\qquad a_{ijk}\in R.
+\] Take the directed finite-type subrings \(R_\lambda\subset R\) containing every original \(a_{ijk}\), and put \[
+S_\lambda=\sum_{k=1}^r\varphi(R_\lambda)f_k\subset S.
+\] This is an actual subring: it contains the unit, is closed under addition, and the displayed table proves closure under multiplication term by term. The structural map has image in it because it contains \(1_S\). Each \(S_\lambda\) is generated as an \(R_\lambda\)-module by these same \(r\) elements. For \(\lambda\le\mu\), the natural map \[
+S_\lambda\otimes_{R_\lambda}R_\mu\to S_\mu,\qquad s\otimes a\mapsto s\varphi(a)
+\] is onto: every element of \(S_\mu\) is a linear combination of the same \(f_k\). The subrings cover \(S\), since the finitely many coefficients of any such original linear combination eventually belong to \(R_\lambda\). Their colimit and that of the bases are the original map. All stages are finite and finitely presented as modules and algebras over their Noetherian bases, and the generator bound \(r\) is uniform. This makes no freeness, flatness or injective tensor-map claim. The exact multiplication coefficients are retained, not replaced by a different algebra model.
+
+\subsubsection{Corpus and continuation}\label{algebra-proof-037-corpus-and-continuation}
+
+Both canonical corpus layers were queried for Noetherian approximation local rings. The Aitken, Murayama, Connes--Consani and Arithmetic Time records remain unread routing records and supply no theorem here. The seven earlier external source records retain exactly their prior bounded coverage; no PDF fallback or novelty claim.
+
+Groups 820--829 dispose the twelve reports and record three separate consequence groups. Next is More flatness criteria, authority 32643. No later source or report is counted as read by this batch. No source or translation mutation, TeX build or publication is claimed.

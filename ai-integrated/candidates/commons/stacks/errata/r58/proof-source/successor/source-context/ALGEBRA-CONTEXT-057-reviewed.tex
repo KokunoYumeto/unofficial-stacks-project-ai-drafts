@@ -1,0 +1,37 @@
+\begin{lemma}
+\label{lemma-pid-jacobson}
+The ring $\mathbf{Z}$ is a Jacobson ring.
+More generally, let $R$ be a ring such that
+\begin{enumerate}
+\item $R$ is a domain,
+\item $R$ is Noetherian,
+\item any nonzero prime ideal is a maximal ideal, and
+\item $R$ has infinitely many maximal ideals.
+\end{enumerate}
+Then $R$ is a Jacobson ring. In (2), it suffices more generally
+that $\Spec(R)$ is a Noetherian topological space.
+\end{lemma}
+
+\begin{proof}
+Assume (1), (3), (4) and that $\Spec(R)$ is Noetherian. The statement
+means that $(0) = \bigcap_{\mathfrak m \subset R} \mathfrak m$.
+Since $R$ has infinitely many maximal ideals it suffices to
+show that any nonzero $x\in R$ belongs to only finitely many
+maximal ideals, or equivalently that $V(x)$ is finite.
+By Lemma \ref{lemma-spec-closed}
+we see that $V(x)$ is homeomorphic to $\Spec(R/xR)$.
+By assumption (3) every prime of $R/xR$ is minimal and hence
+corresponds to an irreducible component of $\Spec(R/xR)$
+(Lemma \ref{lemma-irreducible}).
+If $R$ is Noetherian, then $\Spec(R)$ is Noetherian by
+Lemma \ref{lemma-Noetherian-topology}. More generally assume only
+this topological condition. Its closed subspace $V(x)$ is Noetherian,
+and therefore has finitely many irreducible components by Topology,
+Lemma \ref{topology-lemma-Noetherian}. Every prime in $V(x)$ is
+nonzero and hence maximal by (3), so each irreducible component is
+a singleton. Thus $V(x)$ is finite. The infinitely many maximal
+ideals cannot all contain this $x$, proving their intersection is zero.
+The nonzero primes are already maximal by (3), so every prime is an
+intersection of maximal ideals and Lemma \ref{lemma-jacobson-prime}
+proves that $R$ is Jacobson.
+\end{proof}

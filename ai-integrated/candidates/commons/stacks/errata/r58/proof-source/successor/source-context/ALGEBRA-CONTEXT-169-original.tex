@@ -1,0 +1,28 @@
+\begin{lemma}
+\label{lemma-product-local}
+Any ring with finitely many maximal ideals and
+locally nilpotent Jacobson radical is the product of its localizations
+at its maximal ideals. Also, all primes are maximal.
+\end{lemma}
+
+\begin{proof}
+Let $R$ be a ring with finitely many maximal ideals
+$\mathfrak m_1, \ldots, \mathfrak m_n$.
+Let $I = \bigcap_{i = 1}^n \mathfrak m_i$
+be the Jacobson radical of $R$. Assume $I$ is locally nilpotent.
+Let $\mathfrak p$ be a prime ideal of $R$.
+Since every prime contains every nilpotent
+element of $R$ we see
+$ \mathfrak p \supset \mathfrak m_1 \cap \ldots \cap \mathfrak m_n$.
+Since $\mathfrak m_1 \cap \ldots \cap \mathfrak m_n \supset
+\mathfrak m_1 \ldots \mathfrak m_n$
+we conclude $\mathfrak p \supset \mathfrak m_1 \ldots \mathfrak m_n$.
+Hence $\mathfrak p \supset \mathfrak m_i$ for some $i$, and so
+$\mathfrak p = \mathfrak m_i$. Thus the spectrum of $R$
+is the discrete topological space $\{\mathfrak m_1, \ldots, \mathfrak m_n\}$.
+By Lemma \ref{lemma-disjoint-implies-product} applied $n - 1$ times
+we find that $R = R_1 \times \ldots \times R_n$ where the
+spectrum of $R_i$ is a singleton for each $i$.
+Thus $R_i$ is a local ring and since it is a localization of $R$
+(by the lemma), it is one of the local rings of $R$ as desired.
+\end{proof}

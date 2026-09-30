@@ -1,0 +1,139 @@
+\subsection{Local homomorphisms and integral closure: source review and editorial arguments}\label{local-homomorphisms-and-integral-closure-source-review-and-editorial-arguments}
+
+\subsubsection{Source identity and reading scope}\label{source-identity-and-reading-scope}
+
+The source is the Stacks Project authors' algebra.tex, commit a04446e57ec1fbc252a871afcec7752fb2807b14, SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The complete interval 40497--40768 and its fifteen new reports have been read. The next opening, 40769--40778, is read but unadjudicated. Dependencies read here are 7517--7554, 7596--7627, 9183--9190, 20254--20269 and 31676--31695. The source's Lindel and KC citations at 40509 are retained; those original publications have not been read here. The indexed query ``integral closure smooth'' produced four routing hits, none read or used. Earlier source-reading records retain their actual bounded coverage. No novelty claim is made.
+
+The proofs below are editorial material linked to the source. They do not replace its translated arguments. A compressed reduction, omitted argument or narrower theorem is not automatically a translation error. Earlier editorial arguments are in ALGEBRA\_ETALE\_LOCAL\_NOTES\_20260928.md, especially group 1147, and ALGEBRA\_SYNTOMIC\_NOTES\_20260928.md, group 1042.
+
+\subsubsection{Local homomorphisms and the original parameter}\label{local-homomorphisms-and-the-original-parameter}
+
+At 40506--40554 the source assumes a local map \((R,\mathfrak m_R)\to(S,\mathfrak m_S)\), with \(S=T_{\mathfrak q}\) for an étale \(R\)-algebra \(T\), and the specified residue-field map an isomorphism. Localizing the original standard étale chart at an element outside \(\mathfrak q\) does not change \(S\). Write that chart \(T=R[X]_g/(f)\), with \(f\) monic of degree \(d\), and choose the source's lift \(a\in R\) of the residue of \(X\). The coordinate comparison is exactly \[
+Y=X-a,\qquad F(Y)=f(Y+a),\qquad G(Y)=g(Y+a),\qquad
+t=F(0)=f(a).
+\] Its inverse sends \(X\) to \(Y+a\). Both the quotient relation and the denominator are transported by this map. The resulting prime is \((Y,\mathfrak m_R)\), \(t\in\mathfrak m_R\), and \(G(0)\) is a unit of \(R\), because its residue is nonzero. The original derivative being a unit implies that \(F'(0)=f'(a)\) has nonzero residue and is a unit of \(R\).
+
+For \(d\geq2\), retain all coefficients in \[
+F=Y^d+\sum_{i=1}^{d-1}a_iY^i+t,\qquad
+H=\sum_{i=1}^{d-1}a_iY^{i-1}+Y^{d-1},\qquad F=t+YH.
+\] Here \(a_1=F'(0)\) is a unit, so \(H\notin\mathfrak q\). Replacing the chart by \(T_1=R[Y]_{HG}/(F)\) leaves its local ring \(S\) unchanged. Modulo the actual \(t\), the relation becomes \(YH=0\). Since \(H\) is inverted, \(Y=0\); and the remaining denominator \(H(0)G(0)\) is a unit. Consequently the actual structure map \(R/tR\to T_1/tT_1\) is an isomorphism. For every \(n\geq1\), let \(M_n\) be the cokernel, as an \(R\)-module, of \(R/t^nR\to T_1/t^nT_1\). The mod-\(t\) surjectivity gives \(M_n=tM_n\); as \(t^nM_n=0\), iteration gives \(M_n=0\). This verifies the source's nilpotent surjectivity step without an unstated finiteness requirement.
+
+The map \(R\to S\) is flat and local, hence faithfully flat. Its base change \(R/t^nR\to S/t^nS\) is faithfully flat and therefore injective. It factors through the surjection onto \(T_1/t^nT_1\), so this surjection has zero kernel. Finally \(S/t^nS\) is the localization of \(T_1/t^nT_1=R/t^nR\) at the prime over \(\mathfrak m_R/t^nR\). This prime is the maximal ideal itself; that localization changes nothing. All isomorphisms commute with the maps for decreasing \(n\).
+
+The degree-one boundary requires its own interpretation because the printed \(a_1\) list is empty: then \(F=Y+t\), \(F'=1\), and \(H=1\). The quotient chart is \(R_{G(-t)}=R\), since \(G(-t)\) has the same nonzero residue as \(G(0)\). Thus \(S=R\), and the same \(t=F(0)\) works. A degree-zero monic polynomial is \(1\), whose zero quotient has no such prime. This explanation remains editorial, not a replacement proof.
+
+At 40556--40580 the second lemma does not assume residue-field equality. Choose the source's standard étale chart \(T\) and its prime \(\mathfrak q\) above \(\mathfrak m_R\). Group 1147 gives a finite free faithfully flat syntomic \(R\)-algebra \(D\), of rank \(d!\) for this chart's monic polynomial degree \(d\). This is the ordered-root construction, with its original coefficients and recursive monic divisions; its free basis has exponents \(0\leq e_i<d-i+1\), for \(1\leq i\leq d\). Every maximal ideal \(\mathfrak n\) of \(D\) contracts to \(\mathfrak m_R\): a finite algebra is integral, and contraction of a maximal ideal along an integral map is maximal. Apply the prescribed-pair property of 1147 to \((\mathfrak q,\mathfrak n)\). It gives \(T\to D_u\), \(u\notin\mathfrak n\), whose contraction of the selected prime is exactly \(\mathfrak q\). Every element of \(T\setminus\mathfrak q\) therefore maps to a unit in \(D_{\mathfrak n}\). The universal property gives the required map \(S=T_{\mathfrak q}\to D_{\mathfrak n}\), over the original \(R\). This proves the stronger finite free syntomic choice; it does not claim that all denominators of \(S\) already invert in a single \(D_u\).
+
+\subsubsection{Torsion, completion and an exact gluing square}\label{torsion-completion-and-an-exact-gluing-square}
+
+Keep the exact \(R,S,t\) above. More generally the following proof needs only a faithfully flat \(R\to S\) and the canonical isomorphisms \(R/t^nR\to S/t^nS\) for all \(n\geq1\). For any \(R\)-module \(M\) killed by \(t^n\), \[
+S\otimes_R M=(S/t^nS)\otimes_{R/t^nR}M\cong M,
+\] with the inverse to the actual unit \(m\mapsto1\otimes m\). If each element of \(M\) is killed by some power of \(t\), then \(M=\mathop{\rm colim}_n M[t^n]\); tensoring commutes with this union, so the same unit is an isomorphism. For an \(S\)-module \(N\) with that property, the action map \(S\otimes_R N\to N\) is inverse to the unit and is \(S\)-linear. These maps prove an equivalence between the two categories of elementwise \(t\)-power torsion modules, by extension and restriction of scalars. Neither finite generation nor a uniform exponent is imposed.
+
+If an ideal \(J\subset R\) contains \(t^a\), quotienting the canonical isomorphism at exponent \(a\) by \(J/t^aR\) gives \(R/J\cong S/JS\). If \(t\in\sqrt I\), choose the actual exponent \(a\) with \(t^a\in I\); then \(t^{an}\in I^n\) for every \(n\). Thus \[
+R/I^n\ \xrightarrow{\sim}\ S/I^nS,\qquad
+\varprojlim_n R/I^n\ \xrightarrow{\sim}\ \varprojlim_n S/I^nS.
+\] These are the original quotient maps, so compatibility in the inverse systems follows. In the local situation \(\mathfrak m_RS=\mathfrak m_S\): the étale fibre localized at the chosen prime is its residue field, so \(S/\mathfrak m_RS\) is a field. In particular the maximal-ideal completions agree, without a Noetherian assumption.
+
+There is also an exact ring comparison retaining the punctured part: \[
+\begin{matrix}
+R&\longrightarrow&S\\
+\downarrow&&\downarrow\\
+R[1/t]&\longrightarrow&S[1/t].
+\end{matrix}
+\tag{LI-1}
+\] To prove it is cartesian even when \(t\) is a zero divisor, set \(C=S/R\). Faithful flatness makes \(N\to S\otimes_R N\) injective for every \(N\): after tensoring once more with \(S\), the map has retraction \(n\otimes s\otimes s'\mapsto n\otimes ss'\); faithful flatness reflects injectivity. The exact sequence \(0\to R\to S\to C\to0\) and the Tor exact sequence give \(\operatorname{Tor}_1^R(N,C)=0\) for every \(N\), since \(S\) is flat and that unit is injective. Thus \(C\) is flat. The mod-\(t\) isomorphism gives \(C/tC=0\), or \(C=tC\). Tensor the exact sequence \(0\to\operatorname{Ann}_R(t)\to R\xrightarrow{t}R\) with the flat module \(C\). Its exactness says that \(\ker(t:C\to C)\) is generated by elements \(ac\), with \(at=0\). Write \(c=td\); then \(ac=atd=0\). Therefore multiplication by \(t\) on \(C\) is bijective, and \(C\to C[1/t]\) is an isomorphism.
+
+Localization of \(0\to R\to S\to C\to0\) is exact. Comparing it with the original sequence through \(C=C[1/t]\) gives \[
+0\longrightarrow R
+\xrightarrow{\,r\mapsto(r,r/1)\,} S\oplus R[1/t]
+\xrightarrow{\,(s,b)\mapsto s/1-b\,}S[1/t]
+\longrightarrow0.
+\tag{LI-2}
+\] For surjectivity, the class of an element of \(S[1/t]\) in \(C[1/t]=C\) lifts to an \(s\in S\); subtracting \(s/1\) leaves an element of \(R[1/t]\). For the kernel, an \(s\) whose localized class is zero has zero class already in \(C\), hence comes from \(r\in R\). The injectivity of \(R[1/t]\to S[1/t]\) forces \(b=r/1\). The first map is multiplicative and identifies \(R\) with \(S\times_{S[1/t]}R[1/t]\), proving (LI-1). As \(S[1/t]\) is flat over \(R\), (LI-2) remains exact after tensoring with every \(R\)-algebra \(R_1\). Its kernel is the corresponding ring fibre product, so (LI-1) remains cartesian after every base change. For \(t=0\), the conclusions reduce correctly to \(S=R\) and zero localized rings.
+
+Diagram (LI-1), with its explicitly labelled maps in (LI-2), shows the mechanism: the original rings agree modulo every power of \(t\), while their remaining difference is a module on which \(t\) acts invertibly. This last assertion is not a claim that its stalks vanish on \(V(t)\). No such support assertion is used.
+
+\subsubsection{Integral closure, the derivative and smooth base change}\label{integral-closure-the-derivative-and-smooth-base-change}
+
+At 40589--40628 take the original \(R\to B\), a monic \(f\in R[X]\) of degree \(d\), and \(h\in B[X]/(f)\) satisfying the original monic equation \[
+h^e+r_1h^{e-1}+\cdots+r_e=0,\qquad r_i\in R.
+\] For \(d>0\), the ordered-root construction gives a finite free faithfully flat extension \(B\hookrightarrow B'\), including \(1\) in its basis, with \(f=\prod_{i=1}^d(X-\alpha_i)\). Each \(\alpha_i\) is integral over \(R\), by this same monic \(f\). Let \(h=\sum_{j=0}^{d-1}h_jX^j\) be its unique monic remainder. The exact identity in \(B'[X]/(f)\) is \[
+f'h=\sum_{i=1}^d h(\alpha_i)\prod_{j\ne i}(X-\alpha_j).
+\tag{LI-3}
+\] Here is the universal argument without an assumption on the actual roots. Over \(U=\mathbf Z[A_1,\ldots,A_d,H_0,\ldots,H_{d-1}]\), take the monic remainder of the difference in (LI-3). Its degree is less than \(d\). In \(\operatorname{Frac}(U)\), the \(A_i\) are distinct; evaluation at each \(A_i\) gives zero because the derivative of the product at \(A_i\) is exactly \(\prod_{j\ne i}(A_i-A_j)\). A polynomial of degree less than \(d\) with those \(d\) roots is zero. Injectivity of \(U\to\operatorname{Frac}(U)\) makes every remainder coefficient zero already in \(U\). Monic division commutes with specialization, proving (LI-3) in \(B'\), including repeated roots and nilpotents. No actual Vandermonde denominator is inverted.
+
+Evaluating the original monic equation proves that every \(h(\alpha_i)\) is integral over \(R\). Finite sets of integral elements generate finite modules: successively reduce each power by its own monic equation, keeping the bounded monomials. Their sums and products are integral, by the determinant argument for multiplication on that finite module containing \(1\). Thus all coefficients on the right of (LI-3) are integral over \(R\). The monic bases \(1,X,\ldots,X^{d-1}\) over \(B\) and \(B'\), and the injection \(B\to B'\), identify those coefficients with the coefficients in \(B\) of \(f'h\). Their monic equations descend through the injection. If \(d=0\), \(f=1\) and the quotient is zero, so there are no coefficients to check.
+
+This proves a precise defect assertion. Set \[
+C_0=R[X]/(f),\quad C=B[X]/(f),\quad
+A=\overline R^{\,B},\quad D=A[X]/(f)\subset C,\quad
+T=\overline {C_0}^{\,C}.
+\] The displayed injection follows from the monic bases. Because \(C_0\) is integral over \(R\), transitivity says that \(T\) is also exactly the elements of \(C\) integral over \(R\). Conversely an \(R\)-monic equation is a \(C_0\)-monic equation, so both inclusions hold. Transitivity follows by adjoining the finitely many integral coefficients of a monic equation, then its root, and composing the two finite spanning sets. Every element of \(D\) is integral over \(R\), so \(D\subset T\). Hence \(E=T/D\) is a \(C_0\)-module, and (LI-3) proves \[
+f'E=0.
+\tag{LI-4}
+\] In particular \(D[1/f']=T[1/f']\). No reducedness hypothesis or discarded factor is hidden in this conclusion.
+
+For the source's standard étale \(S=(C_0)_g\), \(f'\) is invertible. Integral closure commutes with localization by 7596--7627, so \(\overline S^{\,S\otimes_RB}=T_g=D_g=S\otimes_RA\). For general étale \(S\), flatness first embeds \(S\otimes_RA\) in \(S\otimes_RB\); its elements are integral over \(S\). The standard étale open cover proves the reverse inclusion on each chart. The quotient module is zero because its localizations on that cover are zero, proving the original canonical isomorphism.
+
+For the Fourier example keep \(R=\mathbf Z[1/p]\) and \[
+R'=R[Z]/(Z^{p-1}+\cdots+Z+1),\quad \zeta=[Z],\quad
+\alpha_i=\zeta^i\ (0\leq i\leq p-1).
+\] The monic basis embeds \(R'\) in \(\mathbf Q[Z]/(\Phi_p)\): a monic remainder vanishing after rationalization has all coefficients zero in \(R\). The polynomial \(\Phi_p(Z+1)=\sum_{j=1}^p\binom pj Z^{j-1}\) is Eisenstein at \(p\): its leading coefficient is \(1\), all others are divisible by \(p\), and its constant coefficient is \(p\), not divisible by \(p^2\). Thus the rational quotient is a field. There \(\zeta\) has order \(p\) and its \(p\) powers are distinct roots of \(T^p-1\); comparing monic degree-\(p\) polynomials and using the injection proves \[
+T^p-1=\prod_{j=0}^{p-1}(T-\alpha_j),\qquad
+p\alpha_i^{p-1}=\prod_{\substack{0\leq j<p\\j\ne i}}
+(\alpha_i-\alpha_j).
+\tag{LI-5}
+\] Both \(p\) and \(\alpha_i\) are units. In a commutative ring, a factor of a unit product is a unit, so every difference in (LI-5) is a unit. The printed endpoints at 40684 and 40686 are both \(\alpha_1\); the correct endpoints are \(\alpha_0\) and \(\alpha_{p-1}\), with the same omitted \(i\)-factor. This is a source correction. Separately, the argument supports every \(d\leq p\), not only the stated \(d<p\). That stronger boundary is editorial and does not replace the source claim.
+
+For the polynomial step of smooth base change, let \(F=\sum_{i=0}^{d-1}b_iX^i\in B[X]\) be integral over \(R[X]\). For \(F=0\) the conclusion is immediate; otherwise choose any such positive \(d\). Choose distinct integer primes \(p,q>d\). For each \(\ell\in\{p,q\}\) separately, put \(R_\ell=R[1/\ell]\), \(B_\ell=B[1/\ell]\), and \[
+R'_\ell=R_\ell[Z]/\Phi_\ell(Z),\qquad
+B'_\ell=R'_\ell\otimes_{R_\ell}B_\ell.
+\] The first is finite free of positive rank \(\ell-1\), with \(1\) in its basis; hence \(B_\ell\hookrightarrow B'_\ell\). The chosen \(d\) powers of \(\zeta\) have unit pairwise differences by the base change of (LI-5). The full interpolation formula is \[
+F(X)=\sum_{i=1}^d F(\alpha_i)
+\frac{\prod_{j\ne i}(X-\alpha_j)}
+{\prod_{j\ne i}(\alpha_i-\alpha_j)}
+\quad\hbox{in }B'_\ell[X].
+\tag{LI-6}
+\] To prove it over this ring, evaluate the difference at all \(\alpha_i\). Its degree is less than \(d\), and the determinant of its coefficient evaluation matrix \((\alpha_i^{j-1})_{i,j}\) is \(\prod_{i<j}(\alpha_j-\alpha_i)\), a unit. The adjugate therefore forces every coefficient to be zero. Every denominator in (LI-6) is retained and is a unit of \(R'_\ell\).
+
+Evaluation of the original monic equation for \(F\) makes each \(F(\alpha_i)\) integral over \(R'_\ell\). Formula (LI-6) puts every image of \(b_i\) in the ring of integral elements over \(R'_\ell\). Since \(R'_\ell/R_\ell\) is finite, transitivity makes it integral over \(R_\ell\). The injection \(B_\ell\to B'_\ell\) then descends that monic equation to \(B_\ell\).
+
+For the exact gluing back to \(R\), if \(b\in B\) is integral in both localizations, choose degrees \(e_p,e_q\) for those equations, let \(N=\max(e_p,e_q)\), and set \(M=\sum_{j=0}^{N-1}Rb^j\subset R[b]\). The quotient \(Q=R[b]/M\) has \(Q_p=Q_q=0\). For any \(v\in Q\) there are exponents \(a,c\) with \(p^av=q^cv=0\). Integer Bézout coefficients for the coprime integers \(p^a,q^c\) give \(v=0\). Thus \(R[b]=M\) is a finite module. Write multiplication by \(b\) on its listed generators as a matrix \(A\). The adjugate identity for \(bI-A\) implies that the monic \(\det(TI-A)\) evaluated at \(b\) annihilates every generator, including \(1\). This is the required monic equation over \(R\). Zero localized rings cause no exception to the argument. The converse follows from closure of integral elements under sums and products. Induction handles several variables; the original standard smooth charts are étale over polynomial rings, so the proved étale comparison finishes the smooth theorem.
+
+The reduction at 40723--40729 has already stated the two localizations. Its reuse of \(R\) for the chosen localization is compressed notation, not a false assertion once that reduction is followed. The preceding argument makes both localizations and coefficient descent visible; it remains editorial instead of an automatic rewrite.
+
+Finally integral closure commutes with filtered diagrams of ring maps \(R_i\to C_i\), even when transition maps are not injective. Let \(A_i\subset C_i\) denote their integral elements. Filtered colimits preserve these injections: if a representative in \(A_i\) becomes zero in the colimit of \(C_i\), it is zero in some later \(C_j\), hence in \(A_j\). Every monic equation at a stage persists in the colimit. Conversely, an element and the finitely many coefficients of its monic equation in the colimit lift to one common stage; the asserted zero relation becomes zero at some later stage. The element there is integral. This proves the reverse inclusion. Tensor products commute with filtered colimits by their defining finite sums and bilinear relations. Apply this to \(R_i=S_i,\ C_i=S_i\otimes_R B\), for smooth \(R\)-algebras \(S_i\), to obtain exactly the canonical isomorphism at 40748--40762. Also \(S=\mathop{\rm colim}_iS_i\) is flat over \(R\): tensor an injection of \(R\)-modules with each flat \(S_i\), then take the exact filtered colimit. Thus the injectivity of the canonical tensor map and the later conductor calculation use a proved flatness assertion here.
+
+Flatness alone cannot replace smoothness. Keep \[
+R=\mathbf Q,\ B=\mathbf Q(z),\ A=\mathbf Q,\qquad
+S=\mathbf Q[\epsilon]/(\epsilon^2).
+\] The only elements of \(\mathbf Q(z)\) algebraic over \(\mathbf Q\) are constants: if a nonconstant \(u=P(z)/Q(z)\) were algebraic, the nonzero polynomial \(P(T)-uQ(T)\) would make \(z\) algebraic over \(\mathbf Q(u)\), hence over \(\mathbf Q\), a contradiction. Thus \(A\) is the claimed integral closure. The ring \(S\) is finite free but is not smooth: the map from \(S\) to \(\mathbf Q[v]/(v^2)\) taking \(\epsilon\) to \(v\) cannot lift through \(\mathbf Q[v]/(v^3)\); every lift \(v+av^2\) has square \(v^2\ne0\). This is a square-zero extension, so formal smoothness fails. In \(S\otimes_RB=B\oplus B\epsilon\), reducing any integral element modulo \(\epsilon\) forces its constant term into \(\mathbf Q\). Conversely \(a+b\epsilon\), \(a\in\mathbf Q,\ b\in B\), satisfies \((T-a)^2=0\). The integral closure is therefore \(\mathbf Q\oplus\mathbf Q(z)\epsilon\), whereas \(S\otimes_RA=\mathbf Q\oplus\mathbf Q\epsilon\). The defect is exactly \((\mathbf Q(z)/\mathbf Q)\epsilon\). For the original \(f=X^2\), it is annihilated by the full derivative \(f'=2\epsilon\), as (LI-4) predicts; the factor \(2\) is retained.
+
+\subsubsection{Finite conductors and an infinite boundary example}\label{finite-conductors-and-an-infinite-boundary-example}
+
+Suppose now that the original \(R\to B\) is injective, write \(A=\overline R^{\,B}\), and assume \(M=A/R\) is finitely generated. The conductor is the actual ideal \(\mathfrak c=\{r\in R:rA\subset R\}=\operatorname{Ann}_R(M)\); it is also an ideal of \(A\), because if \(rA\subset R\), then for \(a\in A\) one has \(ar\in R\) and \((ar)A\subset rA\subset R\). Let \(m_1,\ldots,m_s\) generate \(M\). The kernel of \[
+R\longrightarrow M^s,\qquad r\longmapsto(rm_1,\ldots,rm_s)
+\] is exactly \(\mathfrak c\). For a flat \(R\)-algebra \(S\), tensoring preserves this kernel; the elements \(1\otimes m_i\) generate \(S\otimes_RM\). Hence \[
+\operatorname{Ann}_S(S\otimes_RM)=\mathfrak cS.
+\tag{LI-7}
+\] When \(S\) is smooth, or a filtered colimit of smooth algebras, the source theorems identify its actual integral closure in \(S\otimes_R B\) with \(A_S=S\otimes_RA\), while flatness identifies \(A_S/S=S\otimes_RM\). Thus (LI-7) is the exact conductor comparison, and the conductor closed subscheme is the base change \(\operatorname{Spec}(S/\mathfrak cS)\). No Noetherian or finite-presentation assumption on \(M\) was used. Finite generation of \(M\) implies that \(A\) is finite over \(R\), by lifting the \(m_i\) and adjoining \(1\).
+
+Finite generation cannot be removed even for étale localization. Take \[
+K_n=\mathbf Q(2^{1/2^n})\ (n\geq0),\qquad
+K_\infty=\bigcup_{n\geq0}K_n,\qquad
+R=\bigoplus_{n\geq0}K_nx^n\subset A=K_\infty[x],\qquad
+B=K_\infty(x).
+\] Choose the compatible positive real roots, so \(K_n\subset K_{n+1}\). Eisenstein at \(2\) gives \([K_n:\mathbf Q]=2^n\), hence the inclusions are strict. Products stay in \(R\), since \(K_nK_m\subset K_{\max(n,m)}\subset K_{n+m}\). For \(\alpha\in K_n\), both \(\alpha x^n\) and \(x^n\) lie in \(R\), so \(\alpha=(\alpha x^n)/x^n\) is in its fraction field. Therefore \(\operatorname{Frac}(R)=K_\infty(x)\). We have \(A=R[K_\infty]\), and every adjoined constant is algebraic over \(\mathbf Q\subset R\), hence integral. Each particular polynomial uses only finitely many such constants, so \(A/R\) is integral. The polynomial ring over \(K_\infty\) is integrally closed: write an integral fraction \(u/v\) with coprime polynomials. Multiplying its monic equation by \(v^e\) shows \(v\mid u^e\), so \(v\) is a unit. It follows that \(A\) is exactly the integral closure of \(R\) in \(B\).
+
+For nonzero \(r=\sum c_nx^n\in R\), choose an index with \(c_n\ne0\) and choose \(\alpha\in K_\infty\setminus K_n\). Then \(\alpha c_n\notin K_n\), since \(c_n\) is nonzero in that field. Thus \(\alpha r\notin R\), and \(\mathfrak c=0\). In particular \(A\) is not finite over \(R\): if it had finitely many module generators in \(\operatorname{Frac}(R)\), the product of their nonzero denominators would give a nonzero \(c\in R\) with \(cA\subset R\), contradicting the computed conductor. Consequently \(A/R\) is not finitely generated either, by the lifting argument above. On the other hand \[
+R[1/x]=K_\infty[x,x^{-1}]=A[1/x]:
+\] the fraction \((\alpha x^n)/x^n\) displays every needed constant. Set \(S=R[1/x]\). This is an étale localization of \(R\). It is integrally closed in \(B\), by localization of the already proved integral-closure comparison. Its conductor in its own integral closure is therefore all of \(S\), whereas \(\mathfrak cS=0\). The rings are nonzero, so these ideals differ. This establishes the finiteness boundary in (LI-7), without contradicting the source theorem: integral closure still commutes with this localization.
+
+\subsubsection{Report accounting and propagation}\label{report-accounting-and-propagation}
+
+Nine report groups account for fifteen reports exactly once: the paired article reports 12180/916; paired spelling 12181/917; paired conjunction 12182/918; display period 12183; basis agreement 12187; paired Fourier endpoints 12188/919; implicit localization 920; paired ``OK'' wording 12189/921; and paired colimit agreement 12190/922. The basis list names one basis, so singular agreement is defensible; changing it to ``form a basis'' is optional. ``OK'' is informal but can be intentional authorial voice; no evidence makes it a mathematical defect or a certain unremoved draft marker. The implicit localization is valid as proved above. These three groups remain optional and unintegrated.
+
+The six other groups propose seven minimal operations: the article, spelling, conjunction, misplaced period, both Fourier endpoints, and the plural verb ``commute''. The full interval has no earlier canonical correction. Its mathematical formulas and maps have been checked above.
+
+Three zero-operation editorial groups record the torsion and completion comparisons, universally cartesian gluing and finite free syntomic domination; the derivative-annihilated defect, Fourier boundary and exact flat counterexample; and the conductor comparison with its infinite boundary example. Group 1147 supplies the prescribed-point root cover, and 1042 supplies the ordered-root algebra used in (LI-3). The smooth integral-closure theorem receives the derivative calculation after localization; the filtered-colimit theorem receives the exact finite-equation argument; the conductor result receives that canonical integral-closure comparison and retains its finite-generation hypothesis. Both corrections and strengthenings enter the ledger. Broader combined synthesis and its paper remain after the core task.

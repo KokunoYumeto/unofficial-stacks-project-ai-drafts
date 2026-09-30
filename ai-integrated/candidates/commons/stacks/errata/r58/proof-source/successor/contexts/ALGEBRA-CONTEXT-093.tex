@@ -1,0 +1,49 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-integral-over-ideal}
+Suppose $\varphi : R \to S$ is integral.
+Suppose $I \subset R$ is an ideal.
+Then every element of $IS$ is integral over $I$.
+\end{lemma}
+
+\begin{proof}
+An element of $IS$ is a finite sum
+$\sum_{i=1}^r\varphi(a_i)s_i$ with $a_i\in I$ and $s_i\in S$.
+Each $\varphi(a_i)$ is integral over $I$ by the degree-one
+equation $x-a_i$. Every $s_i$ is integral over $R$ by the
+hypothesis on $\varphi$. The product assertion and then addition
+in Lemma \ref{editorial-source-lemma-integral-over-ideal-is-submodule} give
+integrality of the entire sum over $I$. The empty sum is $0$,
+already covered by its degree-one equation.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-normal-principal-ideals-integrally-closed}
+A ring $R$ is normal if and only if every principal ideal
+$bR$, for $b\in R$, is integrally closed in $R$ in the sense
+of Definition \ref{editorial-source-definition-integral-over-ideal}.
+This includes $b=0$ and zero divisors $b$.
+\end{lemma}
+
+\begin{proof}
+For every integer $e\geq1$, the equality $(bR)^e=b^eR$
+follows in both directions by multiplying generators and by
+writing $b^er$ as a product of $e$ elements of $bR$.
+Consequently an element $a\in R$ is integral over $bR$ exactly
+when, for some $n\geq1$ and $c_0,\ldots,c_{n-1}\in R$,
+$$
+a^n+\sum_{j=0}^{n-1}c_ja^jb^{n-j}=0.
+$$
+Indeed each original coefficient of a defining equation lies in
+$(bR)^{n-j}=b^{n-j}R$ and can be written $c_jb^{n-j}$;
+conversely these displayed coefficients have the required ideal
+powers. This uses no cancellation or uniqueness of $c_j$.
+Also every $a\in bR$ is integral over $bR$ by $x-a$.
+Thus every principal ideal is integrally closed exactly when
+every displayed equation implies $a=bd$ for some $d\in R$.
+This is precisely the family of conditions $(\mathcal D_n)$,
+for all $n\geq1$, proved equivalent to normality in the proof of
+Lemma \ref{editorial-source-lemma-finite-product-normal}. Both implications of
+that characterization hold for arbitrary rings, including the
+zero ring and the cases where $b$ is a zero divisor; applying
+them proves the assertion.
+\end{proof}

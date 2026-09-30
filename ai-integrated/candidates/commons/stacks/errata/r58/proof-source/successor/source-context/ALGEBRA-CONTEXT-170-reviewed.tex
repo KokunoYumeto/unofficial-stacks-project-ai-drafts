@@ -1,0 +1,88 @@
+\begin{lemma}
+\label{lemma-artinian-finite-length}
+A ring $R$ is Artinian if and only if it has finite length
+as a module over itself. Any such ring $R$ is both Artinian and
+Noetherian, any prime ideal of $R$ is a maximal ideal, and $R$ is equal
+to the (finite) product of its localizations at its maximal ideals.
+\end{lemma}
+
+\begin{proof}
+If the original module $R$ has finite length, the proof of
+Lemma \ref{lemma-finite-length-finite} gives both chain conditions
+for its submodules, which are exactly its ideals. The descending
+condition says that $R$ is Artinian. The ascending condition says
+that every ideal is finite by the arbitrary-module equivalence
+proved in Lemma \ref{lemma-Noetherian-basic}, so $R$ is Noetherian.
+
+Conversely, suppose $R$ is Artinian. Lemmas
+\ref{lemma-artinian-finite-nr-max},
+\ref{lemma-artinian-radical-nilpotent}, and
+\ref{lemma-product-local} identify $R$ with the finite product
+of its original localizations $R_{\mathfrak m_i}$ and prove
+that every prime is maximal. The product comparison is the
+canonical map $r\mapsto(r/1)_i$, with the inverse proved there.
+Its component maps are surjective: in the preceding proof each
+localization is identified with the quotient $e_iR$ of $R$.
+Thus each $R_{\mathfrak m_i}$ is Artinian, since a descending
+chain of its ideals pulls back to such a chain in $R$.
+When $R=0$, the product is empty and the length is zero.
+For nonzero $R$, the module decomposition and length formula
+in that same proof show that it suffices to prove finite length
+for each original local factor.
+
+Consider one such local Artinian ring $C=R_{\mathfrak m_i}$,
+with maximal ideal $\mathfrak n=\mathfrak m_i C$ and residue
+field $k=C/\mathfrak n$. By the nilpotence lemma,
+$\mathfrak n^N=0$ for some $N\geq1$.
+Each layer $V_j=\mathfrak n^j/\mathfrak n^{j+1}$,
+$0\leq j<N$, is a $k$-vector space via the original quotient
+map, because $\mathfrak n V_j=0$.
+This space must have finite dimension. If not, choose a basis
+containing distinct elements $v_1,v_2,\ldots$.
+For each $a\geq0$ let $W_a$ be the span of all basis elements
+except $v_1,\ldots,v_a$. Then
+$W_0\supsetneq W_1\supsetneq\cdots$ is a strict descending
+chain of vector subspaces. Their inverse images under
+$\mathfrak n^j\to V_j$ are ideals of $C$ containing
+$\mathfrak n^{j+1}$, and strictness is preserved by the
+surjectivity of that quotient map. This contradicts the
+Artinian condition on $C$.
+By Lemma \ref{lemma-dimension-is-length}, the length of each
+layer is its finite $k$-dimension. Additivity along the original
+filtration gives
+$$
+\operatorname{length}_C(C)
+=\sum_{j=0}^{N-1}\dim_k(\mathfrak n^j/\mathfrak n^{j+1})<\infty.
+$$
+Summing these finite lengths over the original local factors
+proves finite length of $R$ and completes all assertions.
+
+There are quantitative consequences for the same ring.
+Write $\ell_i=\operatorname{length}_{R_{\mathfrak m_i}}
+(R_{\mathfrak m_i})$. Each is positive and finite, and
+$\operatorname{length}_R(R)=\sum_i\ell_i$.
+The bound proved in Lemma \ref{lemma-length-infinite} gives
+$(\mathfrak m_iR_{\mathfrak m_i})^{\ell_i}=0$.
+Under the canonical product map, the original Jacobson radical
+$I$ maps onto $\prod_i\mathfrak m_iR_{\mathfrak m_i}$:
+membership in each component maximal ideal is exactly membership
+in the corresponding original maximal ideal, and the product
+map is an isomorphism. Powers are componentwise, so for
+$R\neq0$,
+$$
+I^{\max_i\ell_i}=0.
+$$
+For $R=0$ the radical is already zero and no maximum of an empty
+set is used.
+Finally, every finite $R$-module $M$ has finite length. If its
+given generating list has $r$ members, the associated surjection
+$R^r\to M$ and additivity of length give the precise bound
+$$
+\operatorname{length}_R(M)\leq
+r\operatorname{length}_R(R).
+$$
+The reverse implication, from finite length to finite generation,
+is Lemma \ref{lemma-finite-length-finite}. Thus over this
+Artinian ring the two conditions on $M$ are equivalent, with
+the displayed bound retaining the chosen number of generators.
+\end{proof}

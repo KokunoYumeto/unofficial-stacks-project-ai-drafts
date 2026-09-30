@@ -1,0 +1,134 @@
+\subsection{Editorial evidence for Algebra 18022--18862}\label{algebra-proof-008-editorial-evidence-for-algebra-1802218862}
+
+Primary source: Stacks Project authors, algebra.tex, commit a04446e57ec1fbc252a871afcec7752fb2807b14, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The entire interval and seventeen due reports were read. The next direct-sum lemma, 18863--18870, is only partial lookahead. Source corrections below are proposals; the full arguments and strengthenings stay in source-linked editorial material.
+
+\subsubsection{Finite-map depth and the infinite boundary}\label{algebra-proof-008-finite-map-depth-and-the-infinite-boundary}
+
+Source: lemma-depth-goes-down-finite, 18047--18082; OCC-00433.
+
+Use \(\min\varnothing=\infty\). If \(S=0\), then \(N=0\), the set of maximal ideals is empty, and both sides are infinity. If \(N=0\) over nonzero \(S\), each displayed depth is infinity and equality again holds directly. These cases do not enter an induction on a finite integer.
+
+For \(N\ne0\), finite \(S\) over Noetherian local \(R\) is Noetherian and semilocal. Some maximal localization of \(N\) is nonzero: choose a prime in its nonempty support and then a maximal ideal containing it; localization at the latter cannot vanish because the support of a finite module is closed. Every nonzero such localization has finite depth by the preceding local dimension bound. Thus the minimum \(k\) is a finite nonnegative integer.
+
+At \(k=0\), the source associated-prime and contraction argument gives \(\mathfrak m\in\operatorname{Ass}_R(N)\), hence depth zero. For \(k>0\), no maximal ideal of \(S\) is associated to \(N\); the established associated-prime comparison gives \(\mathfrak m\notin\operatorname{Ass}_R(N)\). Choose the source nonzerodivisor \(f\in\mathfrak m\). At each nonzero maximal localization, its image is in the local maximal ideal, multiplication is injective, and the quotient is nonzero by Nakayama. Its depth drops by one. Zero localizations remain zero and keep infinite depth. The same finite depth drop holds for the nonzero finite \(R\)-module \(N\). Therefore the finite minimum drops from \(k\) to \(k-1\), and induction proves the equality. No arithmetic of the form an unqualified finite induction at infinity is used.
+
+The preceding localization inequality retains its source proof: if \(\mathfrak p\subset\mathfrak q\in\operatorname{Ass}(M)\), then the quotient map \(R/\mathfrak p\to R/\mathfrak q\) gives \(\dim(R/\mathfrak p)\geq\dim(R/\mathfrak q)\geq\operatorname{depth}(M)\). Under the opposite strict inequality prime avoidance supplies the required nonzerodivisor in \(\mathfrak p\); both nonzero depths drop by one. Vanishing local modules retain depth infinity.
+
+\subsubsection{Ext base change and the original splitting obstruction}\label{algebra-proof-008-ext-base-change-and-the-original-splitting-obstruction}
+
+Sources: 18087--18203; OCC-00434, OCC-00435 and OCC-01392.
+
+For the original flat map \(R\to R'\) and original free resolution \(F_\bullet\), the degreewise adjunction sends \[
+u:F_i\otimes_RR'\to N'
+\quad\longmapsto\quad (x\mapsto u(x\otimes1)).
+\] Its inverse sends \(v:F_i\to N'\) to \(x\otimes r'\mapsto r'v(x)\). Balancing and \(R'\)-linearity prove both maps well-defined, and evaluating on \(x\otimes r'\) proves they are inverse. They commute with precomposition by each original differential, so the resulting map is on cohomology. The two Ext operator changes are typographical consistency, not changes of functor. The missing article in ``is an injection'' is grammatical.
+
+For the splitting lemma keep \(\varphi:N\to M\), the original finite modules, and \(I\). Injectivity of the reductions puts \(\ker\varphi\) in every sufficiently small \(I\)-power submodule: cofinally large \(n\) implies containment in every \(I^mN\). When \(I\) lies in the Jacobson radical, the original Krull-intersection result makes this kernel zero.
+
+After this injectivity, let \(Q=M/N\) and retain the displayed initial segment of a resolution by finite free modules. Choose the stated \(\alpha:F_0\to M\). Its composite with \(d_1\) lands in \(N\) and defines \(\beta:F_1\to N\); \(\beta d_2=0\). If \(\beta=\gamma d_1\), then \(\alpha-\varphi\gamma\) vanishes on \(\operatorname{im}d_1\), hence descends to \(s:Q\to M\). The quotient map sends \(s\) to the identity. Conversely a section of \(M\to Q\) makes \(\alpha-s(F_0\to Q)\) factor uniquely through \(N\), giving such a \(\gamma\). This proves the exact obstruction assertion.
+
+For a split reduction choose its retraction \(r_n:M/I^nM\to N/I^nN\). The composite with the reduction of \(\alpha\) is \(\overline\gamma_n\), and \(\overline\gamma_n d_1=r_n\overline\varphi\,\overline\beta=\overline\beta\). Finite freeness of \(F_0\) lifts that map to \(\gamma_n:F_0\to N\). Finite freeness of \(F_1\) gives the exact equality \[
+\operatorname{Hom}_R(F_1,I^nN)
+=I^n\operatorname{Hom}_R(F_1,N):
+\] in a fixed finite free basis both sides consist of tuples with every entry in \(I^nN\). Thus the class of \(\beta\) in the original finite cokernel \[
+C=\operatorname{coker}\bigl(\operatorname{Hom}_R(F_0,N)
+\longrightarrow\operatorname{Hom}_R(F_1,N)\bigr)
+\] belongs to every \(I^nC\). The same intersection theorem makes it zero. This supplies the retraction, without assuming a finite-length free resolution or a compatible inverse system of retractions.
+
+\subsubsection{Splitting on one principal neighbourhood}\label{algebra-proof-008-splitting-on-one-principal-neighbourhood}
+
+There is a stronger geometric conclusion for an arbitrary ideal \(I\) of a Noetherian ring: under the same cofinally many split reductions, there exists \(s\in1+I\) such that the original localized map \(N_s\to M_s\) is a split injection. The original global theorem keeps its Jacobson-radical hypothesis.
+
+First let \(D=\bigcap_n I^nN\). The complete determinant/Artin--Rees argument in ALGEBRA-RECON-344 gives \(s_1\in1+I\) with \(s_1D=0\). Since \(\ker\varphi\subset D\), the map \(\varphi_{s_1}\) is injective. Put \(A=R_{s_1}\), \(J=IA\), and retain \(N_A,M_A,Q_A=M_A/N_A\). Localization of the original split reductions gives split maps modulo the same cofinal powers of \(J\).
+
+Repeat the finite-free construction of the preceding section over \(A\). It gives the actual class \(c\) of its \(\beta_A\) in the finite cokernel \(C_A\), with \(c\in\bigcap_nJ^nC_A\). The same uniform-annihilator result gives \(s_2\in1+J\) annihilating this intersection. Therefore \(c\) becomes zero over \(A_{s_2}\), and the explicit section construction splits \(\varphi\) there.
+
+Write the actual \(s_2\) as \(1+u/s_1^k\) with \(u\in I\), \(k\geq0\); this is possible since \(J=IR_{s_1}\). Set \[
+s=s_1(s_1^k+u).
+\] Both factors are congruent to one modulo \(I\), so \(s\in1+I\). Inverting their product in a commutative ring inverts each factor; conversely both factors are units in \(A_{s_2}\), since \(s_1^k+u=s_1^ks_2\). The two universal localization maps therefore give inverse isomorphisms \(R_s\cong(R_{s_1})_{s_2}\), preserving the original module fractions and map. The split injection is consequently on the one original principal open \(D(s)\), which contains \(V(I)\).
+
+If \(I=R\), take \(s=0\); the neighbourhood is empty and the localized modules are zero. If \(R=0\), this handles it as well. If \(I=0\), the hypothesis is already that \(\varphi\) splits, and \(s=1\) works. If an intermediate localization is zero, the same explicit localization conclusion is valid. For \(I\) contained in the Jacobson radical, every member of \(1+I\) is a unit, recovering the original global assertion.
+
+The unrestricted global assertion would be false. For \(R=k\times k\), \(I=k\times0\), \(N=k\times0\), \(M=0\), and \(\varphi=0\), every positive-power reduction is \(0\to0\) and splits, while \(\varphi\) is not injective. The actual \(s=(0,1)\in1+I\) kills \(N\) after localization and gives exactly the proved neighbourhood conclusion. This strengthening receives the uniform annihilator and neighbourhood maps from groups 344--345 and remains separate editorial material.
+
+\subsubsection{The zig-zag quotient with its original signs}\label{algebra-proof-008-the-zig-zag-quotient-with-its-original-signs}
+
+Source: lemma-no-spectral-sequence, 18397--18522; OCC-00436, OCC-12070, OCC-00437, OCC-00438, OCC-01393 and OCC-00439.
+
+Keep the commuting squares, \(d^2=\delta^2=0\), all bidegrees, and the original positive cycle equations. For a fixed \(n\geq0\), let \(Z_n\) be exactly the tuples \((a_{n,0},\ldots,a_{0,n})\) with \[
+d a_{p+1,q}=\delta a_{p,q+1}\qquad(p+q=n-1).
+\] The original denominator is the image \(B_n\) of \[
+(b_{n+1,0},\ldots,b_{0,n+1})
+\longmapsto
+(d b_{n+1,0}+\delta b_{n,1},\ldots,
+ d b_{1,n}+\delta b_{0,n+1}).
+\] Every image is a cycle: \(d(d b+\delta b)=\delta d b\), whereas the adjacent \(\delta(d b+\delta b)=\delta d b\). Thus \(B_n\subset Z_n\) over every ring, with no characteristic assumption.
+
+This image is generated by both endpoint tuples, whose only components are \(d b_{n+1,0}\) in position \((n,0)\) and \(\delta b_{0,n+1}\) in position \((0,n)\), and the adjacent pairs \[
+(\ldots,\delta b_{t+1,n-t},d b_{t+1,n-t},\ldots),
+\qquad0\leq t<n.
+\] Their positions are respectively \((t+1,n-t-1)\) and \((t,n-t)\). The input has total degree \(n+1\), both outputs have total degree \(n\), and both signs are positive. For \(n=0\) only the two endpoints occur, in the same sole component \(A_{0,0}\), and \(B_0=dA_{1,0}+\delta A_{0,1}\).
+
+The source paragraph has three linked defects: the reversed second index, the minus sign on one member of the pair, and missing endpoints. The sign is not a harmless alternative convention while the cycle equations remain as printed. Take \(A_{1,1}=A_{1,0}=A_{0,1}=A_{0,0}=\mathbf Z\), all four square maps the identity, and other terms zero. Every row and column is a resolution of its cokernel. For \(b_{1,1}=1\) the source pair \((-1,1)\) fails \(d a_{1,0}=\delta a_{0,1}\), while \((1,1)\) satisfies it. For the endpoint issue take only \(A_{1,0}=A_{0,0}=\mathbf Z\) with \(d=\mathrm{id}\). Again the hypotheses hold, and \(B_0=A_{0,0}\); a definition allowing only interior generators would incorrectly leave it unquotiented. The proposed paragraph corrects all three defects while retaining the displayed quotient and original cycle convention.
+
+The right endpoint map is \[
+\rho:Z_n/B_n\to H_n(R(A)_\bullet),\qquad
+[a]\mapsto[\text{image of }a_{0,n}].
+\] The cycle equation makes the image a cycle; right endpoint generators become \(\delta\)-boundaries, interior generators reaching the right end become \(d\)-images, and all others map to zero. Therefore this is well-defined.
+
+For surjectivity lift a cycle \(r\in R(A)_n\) to \(a_{0,n}\). If \(n>0\), its \(\delta\)-image is a horizontal boundary, so lift it to \(a_{1,n-1}\). At each next step, commutation and \(\delta^2=0\) show \(\delta a_{p,n-p}\) is in the kernel of \(d\). Exactness of the row at positive horizontal degree lifts it to \(a_{p+1,n-p-1}\). This terminates at \(p=n\). For \(n=0\) the initial lift already is a tuple, without a negative degree.
+
+For injectivity suppose the class of \(a_{0,n}\) is a boundary. With the correct source indices this means \[
+a_{0,n}=\delta b_{0,n+1}+d b_{1,n}.
+\] Subtract the right endpoint generator and the generator contributed by \(b_{1,n}\) (a left endpoint if \(n=0\)); the last component becomes zero. If \(n>0\), the cycle equation now says \(d a_{1,n-1}=0\), and exactness gives \(a_{1,n-1}=d b_{2,n-1}\). Subtract its adjacent-pair generator, or the left endpoint when \(n=1\). Continue: when all components with horizontal index less than \(p\) are zero, \(d a_{p,n-p}=0\); choose \(b_{p+1,n-p}\) with \(d b=a_{p,n-p}\), and subtract its generator. The other affected component has higher horizontal index, so no cleared component returns. The final \(p=n\) step uses the left endpoint. The entire tuple is a boundary. This proves injectivity.
+
+The top endpoint map to \(H_n(U(A)_\bullet)\) is proved by the same construction with the two indices and \(d,\delta\) interchanged; the equations and positive boundary formula are invariant under that interchange, and columns replace rows. A morphism of double complexes acts componentwise, preserves \(Z_n,B_n\), and commutes with both endpoint maps, proving their functoriality. No total-complex sign convention has replaced the original data.
+
+The unmatched parenthesis is already fixed by MC-STK-ERR-0413. The remaining minimal changes call a homological representative a cycle, close the parenthetical calculation, and restore the three \(R(A)\) cokernels to their actual degrees. In particular the preceding boundary group is \(\operatorname{coker}(A_{1,n+1}\to A_{0,n+1})\), not a transposed \(U(A)\) term.
+
+\subsubsection{Tensor comparison, swap and finiteness}\label{algebra-proof-008-tensor-comparison-swap-and-finiteness}
+
+Sources: 18533--18765; OCC-00440, OCC-01394, OCC-00441, OCC-12071 and OCC-01395.
+
+For \(A_{p,q}=F_p\otimes_RG_q\), the horizontal and vertical maps land in \(F_{p-1}\otimes_RG_q\) and \(F_p\otimes_RG_{q-1}\). Writing the two omitted subscripts makes the already specified base ring explicit; it does not change the tensor product. The corrected zig-zag quotient proves the source natural comparison between \(F_\bullet\otimes_RN\) and \(M\otimes_RG_\bullet\). Tensoring chain homotopies keeps their same covariance and degrees; it must not copy the contravariant arrow order of Hom. The original tensor swap is \(x\otimes y\mapsto y\otimes x\). No assertion is made here that the author's unsigned convention is the usual signed symmetry of every derived construction.
+
+For a basis \(e_1,\ldots,e_n\) of \(V\), preserve the decomposition \[
+V\otimes_kV
+=\bigoplus_{i=1}^n k(e_i\otimes e_i)
+\ \oplus\!
+\bigoplus_{1\leq i<j\leq n}
+\bigl(k(e_i\otimes e_j)\oplus k(e_j\otimes e_i)\bigr).
+\] The swap fixes the first \(n\) lines and exchanges the two vectors in every remaining pair. When \(\operatorname{char}k\ne2\), the sum and difference vectors form a basis of each pair, with eigenvalues \(+1,-1\); their coordinate change has determinant \(-2\), a unit. Thus the multiplicities are \(n(n+1)/2\) and \(n(n-1)/2\).
+
+In characteristic two, each pair has \(\tau-1\) of rank one and square zero: with \(u=e_i\otimes e_j\), \(v=e_j\otimes e_i\), \((\tau-1)u=u+v=(\tau-1)v\), and \((\tau-1)(u+v)=0\). The basis \((u+v,u)\) gives one size-two Jordan block with eigenvalue one. The diagonal lines give \(n\) size-one blocks. Hence the exact form is \(n\) blocks of size one and \(n(n-1)/2\) blocks of size two; it is not diagonalizable precisely for \(n\geq2\). At \(n=0,1\) it is the identity. The source statement that this swap is always nonidentity also needs ``need not be''; the higher Tor example does not remove these degree-zero exceptions.
+
+The Tor-finiteness homology wording is already corrected as MC-STK-ERR-0414. The filtered-colimit sentence only needs its missing verb. Tensor products commute with the given filtered colimit and exactness of that colimit commutes with kernels and images, so it also commutes with the original homology quotient.
+
+\subsubsection{Flat resolutions compute the same Tor}\label{algebra-proof-008-flat-resolutions-compute-the-same-tor}
+
+The corrected double-complex argument gives further generality without rewriting the source definition: any resolution \(P_\bullet\to M\) by flat \(R\)-modules computes the original Tor through \(H_n(P_\bullet\otimes_RN)\).
+
+Choose an original free resolution \(G_\bullet\to N\). In \(A_{p,q}=P_p\otimes_RG_q\), each row resolves \(M\otimes_RG_q\), since \(G_q\) is flat, and each column resolves \(P_p\otimes_RN\), since \(P_p\) is flat. Both cokernel identifications send the original simple tensors through the corresponding augmentation maps. The proved endpoint isomorphisms give \[
+H_n(P_\bullet\otimes_RN)
+\cong H_n(M\otimes_RG_\bullet)
+\cong\operatorname{Tor}_n^R(M,N),
+\] where the last map uses exactly the preceding original Tor comparison. Thus no projective lifting property for the flat terms is assumed. A map between flat resolutions and a lifted map between the free \(G\)-resolutions give a map of double complexes; functoriality of the endpoints proves naturality for such maps. Changing the free resolution of \(N\) gives inverse homotopy comparisons; tensoring those homotopies preserves them, so the isomorphism is independent of that choice. The existing projective comparison in group 460 is a receiving special case, but supplies no lifting assumption for arbitrary flat modules.
+
+\subsubsection{Projectors and the existing projective definition}\label{algebra-proof-008-projectors-and-the-existing-projective-definition}
+
+Sources: 18780--18862; OCC-00442 and OCC-01396.
+
+For \(F=P\oplus Q\), retain the actual two idempotents \(a(p,q)=(p,0)\) and \(b(p,q)=(0,q)\). The augmentation is \(\pi(p,q)=p\). Then \(\ker\pi=Q=\operatorname{im}b\), \(\ker b=P=\operatorname{im}a\), and \(\ker a=Q=\operatorname{im}b\). These equalities prove the alternating displayed free resolution in every degree. The leading ellipsis needs its arrow, and the prose needs the plural ``projectors \ldots{} respectively''; neither repair changes the maps.
+
+After applying Hom the decomposition into maps from \(P\) and from \(Q\) gives exactness in each positive degree. In the converse, the source map \(s:F_0\to\ker(F_0\to P)\) restricts to the identity on that kernel because its composite with the surjection \(F_1\to\ker(F_0\to P)\) is that surjection. Therefore \[
+F_0\longrightarrow\ker s\oplus\ker(F_0\to P),\quad
+f\longmapsto(f-s(f),s(f))
+\] and addition are inverse. The augmentation restricts to an isomorphism \(\ker s\to P\), proving the source characterization with its actual maps. This also verifies that the lifting convention used in group 460 agrees exactly with the now-read Hom-exactness definition. The next finite-projective criterion uses the same single finite kernel, as printed; its author's announced extensions are not new claims of this review.
+
+\subsubsection{Reading and preservation limits}\label{algebra-proof-008-reading-and-preservation-limits}
+
+The current interval differs from the authority by two already recorded canonical operations and one FAC reference/history pair at the projective definition. Those additions are retained, without a fresh certification of the external FAC citation.
+
+Two bounded corpus queries, first literal terms and then the exact phrase ``double complex'', were used. PDF and unrelated local hits remain unread routing records. Antti J. Harju's original TeX, Twisted K-theory constructions in the case of a decomposable Dixmier-Douady class II: Topological and Equivariant Models, lines 295--312, was read for the groupoid double-complex conventions and section context. Its Morita-invariance and de Rham assertions cite dependencies not read here and are not adopted. Its cohomological groupoid complex is not substituted for the source's commuting homological square.
+
+The proofs above use the exact source definitions and the named previously proved intersection result. There is no claim of novelty, exhaustive literature coverage, rewritten translation, formal certification, rendering or publication. Broader combined-results synthesis remains after core completion.

@@ -1,0 +1,32 @@
+\begin{lemma}
+\label{lemma-almost-directed-colimit-exact}
+Let $\mathcal{I}$ be an index category satisfying the assumptions of
+Categories, Lemma \ref{categories-lemma-split-into-directed}.
+Then taking colimits of diagrams of abelian groups over $\mathcal{I}$
+is exact (i.e., the analogue of
+Lemma \ref{lemma-directed-colimit-exact}
+holds in this situation).
+\end{lemma}
+
+\begin{proof}
+By
+Categories, Lemma \ref{categories-lemma-split-into-directed}
+we may write $\mathcal{I} = \coprod_{j \in J} \mathcal{I}_j$ with each
+$\mathcal{I}_j$ a filtered category, and $J$ possibly empty. By
+Categories, Lemma \ref{categories-lemma-directed-category-system}
+taking colimits over the index categories $\mathcal{I}_j$ is
+the same as taking the colimit over some directed set. Hence
+Lemma \ref{lemma-directed-colimit-exact}
+applies to these colimits. This reduces the problem to showing that
+coproducts in the category of $R$-modules over the set $J$ are exact.
+In other words, exact sequences
+$L_j \to M_j \to N_j$ of $R$ modules we have to show that
+$$
+\bigoplus\nolimits_{j \in J} L_j
+\longrightarrow
+\bigoplus\nolimits_{j \in J} M_j
+\longrightarrow
+\bigoplus\nolimits_{j \in J} N_j
+$$
+is exact. This can be verified by hand, and holds even if $J$ is empty.
+\end{proof}

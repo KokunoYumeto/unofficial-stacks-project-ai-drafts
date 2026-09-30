@@ -1,0 +1,94 @@
+\begin{lemma}
+\label{editorial-source-lemma-lift-nth-roots}
+Let $R$ be a ring. Let $I \subset R$ be a locally nilpotent ideal.
+Let $n \geq 1$ be an integer which is invertible in $R/I$. Then
+\begin{enumerate}
+\item the $n$th power map $1 + I \to 1 + I$, $1 + x \mapsto (1 + x)^n$
+is a bijection,
+\item a unit of $R$ is an $n$th power if and only if its image in $R/I$
+is an $n$th power.
+\end{enumerate}
+More precisely, for each unit $a\in R$, reduction induces a bijection
+between the solutions $u\in R^*$ of $u^n=a$ and the solutions
+$\overline u\in(R/I)^*$ of $\overline u^{,n}=\overline a$.
+\end{lemma}
+
+\begin{proof}
+Let $a \in R$ be a unit whose image in $R/I$ is the same as the image
+of $b^n$ with $b \in R$. Then $b$ is a unit
+(Lemma \ref{editorial-source-lemma-locally-nilpotent-unit}) and
+$ab^{-n} = 1 + x$ for some $x \in I$. Hence $ab^{-n} = c^n$ by
+part (1). Thus (2) follows from (1).
+
+\medskip\noindent
+Proof of (1). This is true because there is an inverse to the
+map $1 + x \mapsto (1 + x)^n$. Namely, we can consider the map
+which sends $1 + x$ to
+\begin{align*}
+(1 + x)^{1/n}
+& =
+1 + {1/n \choose 1}x +
+{1/n \choose 2}x^2 +
+{1/n \choose 3}x^3 + \ldots \\
+& =
+1 + \frac{1}{n} x + \frac{1 - n}{2n^2}x^2 +
+\frac{(1 - n)(1 - 2n)}{6n^3}x^3 + \ldots
+\end{align*}
+We justify the coefficients and both inverse properties over the original ring.
+For $k\geq1$ retain the full coefficient formula
+$$
+c_k={1/n\choose k}
+=\frac{\prod_{j=0}^{k-1}(1-jn)}{n^k k!},\qquad c_0=1.
+$$
+For each prime $p$ not dividing $n$ and each $a\geq1$, exactly one
+residue class of $j$ modulo $p^a$ solves $1-jn\equiv0\pmod{p^a}$.
+Among $k$ consecutive integers $j=0,\ldots,k-1$ there are at least
+$\lfloor k/p^a\rfloor$ elements of this class. If the numerator is
+nonzero, its $p$-adic valuation is therefore at least
+$\sum_{a\geq1}\lfloor k/p^a\rfloor$, which equals the valuation
+of $k!$: each multiple of $p^a$ among $1,\ldots,k$ contributes once
+to that sum. The denominator $n^k$ contributes nothing at $p$.
+If the numerator is zero, the coefficient is zero and the conclusion
+is immediate. Thus the denominator of $c_k$ has no prime divisor
+outside those dividing $n$, and $c_k\in\mathbf Z[1/n]$.
+This statement does not require $k!$ to be invertible in $R$.
+The integer $n$ is invertible in $R$ by
+Lemma \ref{editorial-source-lemma-locally-nilpotent-unit}, so every $c_k$ has a
+well-defined image in $R$ via $\mathbf Z[1/n]\to R$.
+
+\medskip\noindent
+Set $F(X)=\sum_{k\geq0}c_kX^k\in\mathbf Z[1/n][[X]]$.
+The full product formula gives
+$n(k+1)c_{k+1}=(1-kn)c_k$; hence in $\mathbf Q[[X]]$ it gives
+$n(1+X)F'(X)=F(X)$ and $F(0)=1$.
+For $H=F^n$, the product rule yields $(1+X)H'=H$, so the derivative
+of $H/(1+X)$ is zero. A formal series over $\mathbf Q$ with zero
+derivative is constant, and its constant term here is $1$.
+Therefore $F(X)^n=1+X$. The coefficientwise injection
+$\mathbf Z[1/n][[X]]\hookrightarrow\mathbf Q[[X]]$ proves the same
+identity over $\mathbf Z[1/n]$.
+For $x\in I$ with $x^N=0$, reduction modulo $X^N$ followed by
+$X\mapsto x$ makes the finite expression
+$c=\sum_{k=0}^{N-1}c_kx^k\in1+I$ satisfy $c^n=1+x$.
+Every larger truncation gives the same element, since the additional
+powers of $x$ vanish. This proves surjectivity in (1).
+
+\medskip\noindent
+For injectivity, if $u,v\in1+I$ and $u^n=v^n$, use the complete
+factorization
+$$
+0=u^n-v^n=(u-v)\sum_{j=0}^{n-1}u^{n-1-j}v^j.
+$$
+The sum maps to the unit $n$ in $R/I$, hence is a unit of $R$ by
+Lemma \ref{editorial-source-lemma-locally-nilpotent-unit}. Thus $u=v$.
+The constructed map is consequently the inverse in (1).
+
+\medskip\noindent
+Finally fix a unit $a$ and a root $\overline b$ of $\overline a$.
+Choose a lift $b\in R$; it is a unit, and $ab^{-n}\in1+I$.
+The unique root $c\in1+I$ furnished by (1) gives $u=bc$ with
+$u^n=a$ and $\overline u=\overline b$.
+If another such lift is $v$, then $uv^{-1}\in1+I$ and
+$(uv^{-1})^n=1$, so injectivity in (1) gives $u=v$.
+This proves the asserted bijection of root sets and also (2).
+\end{proof}

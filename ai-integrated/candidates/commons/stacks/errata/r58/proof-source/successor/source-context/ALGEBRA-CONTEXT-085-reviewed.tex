@@ -1,0 +1,330 @@
+\begin{lemma}
+\label{lemma-finite-finite-fibres}
+Suppose $R \to S$ is finite.
+Then the fibres of $\Spec(S)\to\Spec(R)$ are finite.
+More precisely, if $s_1,\ldots,s_m$ generate $S$ as an $R$-module,
+then for every $\mathfrak p\in\operatorname{Spec}(R)$,
+$$
+\begin{aligned}
+\#\{\mathfrak q:\varphi^{-1}(\mathfrak q)=\mathfrak p\}
+&\leq\sum_{\varphi^{-1}(\mathfrak q)=\mathfrak p}
+[\kappa(\mathfrak q):\kappa(\mathfrak p)]
+\\
+&\leq\dim_{\kappa(\mathfrak p)}(S\otimes_R\kappa(\mathfrak p))
+\leq m.
+\end{aligned}
+$$
+The middle difference is exactly the dimension of the nilradical
+of this fibre algebra. In particular the residue-degree sum equals
+the fibre dimension exactly when this fibre is reduced.
+\end{lemma}
+
+\begin{proof}
+By the discussion in
+Remark \ref{remark-fundamental-diagram}
+the fibres are the spectra of the rings $S \otimes_R \kappa(\mathfrak p)$.
+As $R \to S$ is finite, these fibre rings are finite over
+$\kappa(\mathfrak p)$ hence Noetherian by
+Lemma \ref{lemma-Noetherian-permanence}.
+By
+Lemma \ref{lemma-integral-no-inclusion}
+every prime of $S \otimes_R \kappa(\mathfrak p)$ is a minimal
+prime. Hence by
+Lemma \ref{lemma-Noetherian-irreducible-components}
+there are at most finitely many.
+\medskip\noindent
+For the quantitative assertions, keep the original map
+$\varphi:R\to S$ and the given module generators $s_1,\ldots,s_m$.
+Fix $\mathfrak p\in\operatorname{Spec}(R)$ and put
+$K=\kappa(\mathfrak p)$, $U=R\setminus\mathfrak p$,
+$A=S\otimes_R K$ and $d=\dim_K A$.
+The original surjection $R^m\to S$ induces the surjection
+$$
+K^m\longrightarrow A,\qquad
+(\lambda_j)_j\longmapsto\sum_{j=1}^m s_j\otimes\lambda_j.
+$$
+Indeed $s=\sum_j\varphi(a_j)s_j$ gives
+$s\otimes\lambda=\sum_j s_j\otimes(\overline{a_j}\lambda)$,
+and every tensor is a finite sum of pure tensors. Thus $d\leq m$.
+
+The exact fibre-ring isomorphism and its inverse are
+$$
+\begin{aligned}
+A&\longrightarrow U^{-1}S/\mathfrak pU^{-1}S,&
+s\otimes\frac{r+\mathfrak p}{u+\mathfrak p}
+&\longmapsto\frac{s\varphi(r)}{\varphi(u)}+\mathfrak pU^{-1}S,\\
+\frac{s}{\varphi(u)}+\mathfrak pU^{-1}S
+&\longmapsto s\otimes\frac1{u+\mathfrak p}.&&
+\end{aligned}
+$$
+Here $U^{-1}S$ means localization at the image $\varphi(U)$.
+Tensor balancing respects the original coefficient map; a change
+of fraction representatives is killed by a denominator from $U$
+on both sides, and an element of $\mathfrak p$ acts as zero on
+$K$. These facts verify the defining relations of both maps.
+Their composites on the displayed fractions and pure tensors
+are identities, proving the isomorphism.
+Write $\beta:S\to A$, $s\mapsto s\otimes1$.
+A prime $\mathfrak q$ of $S$ with
+$\varphi^{-1}(\mathfrak q)=\mathfrak p$ corresponds to
+$$
+\mathfrak n_{\mathfrak q}
+=U^{-1}\mathfrak q/\mathfrak pU^{-1}S\subset A.
+$$
+It is proper because $\mathfrak q$ avoids $\varphi(U)$, and
+contraction recovers $\mathfrak q$: the condition
+$s/1\in U^{-1}\mathfrak q$ is equivalent to
+$\varphi(u)s\in\mathfrak q$ for some $u\in U$, hence to
+$s\in\mathfrak q$ by primality. Conversely, a prime
+$\mathfrak n\subset A$ contracts to a prime $\mathfrak q\subset S$
+whose contraction in $R$ is $\mathfrak p$: elements of
+$\mathfrak p$ act as zero and elements of $U$ act as units.
+Every element of $A$ is represented by a fraction $s/\varphi(u)$
+modulo $\mathfrak p$, and it belongs to $\mathfrak n$ precisely
+when $\beta(s)$ does. This verifies the remaining composite of
+the two prime correspondences. In particular the correspondence
+is a bijection for the original, possibly noninjective map.
+
+For every prime $\mathfrak n$ of $A$, the quotient $A/\mathfrak n$
+is a finite dimensional domain over $K$, hence a field by
+Lemma \ref{lemma-integral-over-field}. Therefore all these primes
+are maximal. If $\mathfrak n=\mathfrak n_{\mathfrak q}$,
+its field is canonically the original residue field:
+$$
+A/\mathfrak n_{\mathfrak q}
+\cong U^{-1}(S/\mathfrak q)
+\xrightarrow{\ \sim\ }\kappa(\mathfrak q),\qquad
+\frac{s+\mathfrak q}{\varphi(u)+\mathfrak q}
+\longmapsto\frac{s+\mathfrak q}{\varphi(u)+\mathfrak q}.
+$$
+The last map is injective since $S/\mathfrak q$ is a domain.
+Its source is already a field containing $S/\mathfrak q$,
+so it contains the inverse of each nonzero element of that domain;
+it therefore contains every fraction and the map is surjective.
+This also identifies the coefficient field $K$ in both targets.
+
+Here is the Chinese remainder map with its actual preimages.
+For any finite family of distinct maximal ideals
+$\mathfrak n_1,\ldots,\mathfrak n_t$ of $A$, comaximality gives
+$b_{ij}\in\mathfrak n_j$ with $1-b_{ij}\in\mathfrak n_i$
+when $i\ne j$. Put $e_i=\prod_{j\ne i}b_{ij}$.
+It is $1$ modulo $\mathfrak n_i$ and $0$ modulo each other
+$\mathfrak n_j$. Hence
+$$
+\rho:A\longrightarrow\prod_{i=1}^t A/\mathfrak n_i,
+\qquad a\longmapsto(a+\mathfrak n_i)_i
+$$
+is surjective: representatives $a_i$ of a prescribed tuple have
+preimage $\sum_i e_ia_i$. Its kernel is exactly
+$\bigcap_i\mathfrak n_i$. Comparing $K$-dimensions gives
+$\sum_i\dim_K(A/\mathfrak n_i)\leq d$. Every field factor has
+positive dimension, so there cannot be more than $d$ maximal
+ideals: any $d+1$ distinct ones would contradict the inequality.
+If $A\ne0$ it has a maximal ideal, for example a proper ideal of
+greatest $K$-dimension. Thus its primes are a finite family and
+the preceding construction applies to all of them at once.
+Let $L_i=A/\mathfrak n_i\cong\kappa(\mathfrak q_i)$ and
+$f_i=[L_i:K]$. With $J=\bigcap_i\mathfrak n_i$, it gives
+$$
+0\longrightarrow J\longrightarrow A\xrightarrow{\rho}
+\prod_iL_i\longrightarrow0,
+\qquad
+d=\sum_i f_i+\dim_KJ.
+$$
+
+The ideal $J$ is precisely the nilradical, and is nilpotent.
+To prove the latter assertion directly, the decreasing chain
+$J,J^2,J^3,\ldots$ stabilizes since these are subspaces of the
+finite dimensional $K$-space $A$. Choose $N\geq1$ with
+$J^N=J^{N+1}$. A finite $K$-basis of $J^N$ generates it as an
+$A$-module. Write each generator as a $J$-linear combination
+of all generators, giving a matrix $C$ with entries in $J$.
+Multiplication by the adjugate of $I-C$ gives
+$\det(I-C)J^N=0$. This determinant belongs to $1+J$ and is a
+unit: if it lay in a maximal ideal, that ideal would also contain
+$J$, and hence would contain $1$. Therefore $J^N=0$.
+Every nilpotent element lies in all prime ideals, and conversely
+every element of $J$ is now nilpotent, proving the assertion.
+Consequently the middle inequality is an equality exactly when
+$A$ is reduced. Together with $f_i\geq1$ and $d\leq m$, this
+proves all the displayed inequalities. For $A=0$ there are no
+prime ideals, its dimension is zero, and the formulas use empty sums.
+
+There is a more precise local formula, retaining every multiplicity.
+For $A\ne0$ and the above $N$, the ideals $\mathfrak n_i^N$ are
+pairwise comaximal. In fact, if $a+b=1$ with
+$a\in\mathfrak n_i$, $b\in\mathfrak n_j$, every term of
+$(a+b)^{2N-1}=1$ belongs to $\mathfrak n_i^N$ or $\mathfrak n_j^N$.
+For two comaximal ideals their intersection is their product:
+if $x$ is in both and $a+b=1$ with one element in each ideal,
+then $x=xa+xb$ belongs to the product. Induction gives the finite
+version; the product of the first ideals stays comaximal with
+the next since multiplying equations congruent to $1$ modulo
+the next ideal gives another such equation. It follows that
+$$
+\bigcap_i\mathfrak n_i^N
+=\prod_i\mathfrak n_i^N
+=\left(\prod_i\mathfrak n_i\right)^N
+=J^N=0.
+$$
+The same Chinese remainder construction therefore gives
+$$
+A\xrightarrow{\ \sim\ }\prod_i C_i,
+\qquad C_i=A/\mathfrak n_i^N.
+$$
+Each $C_i$ has unique maximal ideal
+$\mathfrak m_i=\mathfrak n_i/\mathfrak n_i^N$: a prime
+containing $\mathfrak n_i^N$ contains every element of
+$\mathfrak n_i$, by taking its $N$th power, and thus equals
+that maximal ideal. The residue field is $L_i$.
+
+The identification $C_i\cong A_{\mathfrak n_i}$ has explicit maps.
+Choose the Chinese remainder element $e_i$ that is $1$ modulo
+$\mathfrak n_i^N$ and $0$ modulo the other powers. For
+$a\in\mathfrak n_i^N$, the product $e_ia$ is in the intersection
+of all powers and is zero. Since $e_i\notin\mathfrak n_i$,
+this gives $a/1=0$ in $A_{\mathfrak n_i}$. Thus
+$\overline a\mapsto a/1$ defines $C_i\to A_{\mathfrak n_i}$.
+Its inverse sends $a/u$ to $\overline a\,\overline u^{-1}$;
+the inverse exists since $u\notin\mathfrak n_i$ and $C_i$ is
+local. The two composites on elements and fractions are identities.
+There is also the exact original-ring comparison
+$$
+A_{\mathfrak n_i}\cong S_{\mathfrak q_i}/\mathfrak pS_{\mathfrak q_i}.
+$$
+One direction sends $s/v$ modulo $\mathfrak p$ to
+$\beta(s)/\beta(v)$ for $v\notin\mathfrak q_i$.
+The other is induced by
+$s\otimes((r+\mathfrak p)/(u+\mathfrak p))
+\mapsto s\varphi(r)/\varphi(u)$ modulo $\mathfrak p$.
+It extends to localization at $\mathfrak n_i$, since an element
+outside that maximal ideal maps to an element with nonzero
+residue in the identified field $\kappa(\mathfrak q_i)$ and
+hence to a unit of the target local ring. Tensor, fraction and
+quotient relations are respected as in the preceding fibre map,
+and the composites fix every such fraction, proving the comparison.
+
+Use the finite filtration
+$C_i\supset\mathfrak m_i\supset\mathfrak m_i^2\supset\cdots\supset0$.
+Each quotient $\mathfrak m_i^j/\mathfrak m_i^{j+1}$ is annihilated
+by $\mathfrak m_i$ and is a finite dimensional $L_i$-space.
+Put
+$$
+\mu_i=\sum_{j\geq0}
+\dim_{L_i}(\mathfrak m_i^j/\mathfrak m_i^{j+1}).
+$$
+This positive integer is the length of $C_i$ over itself:
+refine each quotient by a vector-space flag, and note that every
+simple module over the local ring $C_i$ is $L_i$, because the
+annihilator of a nonzero simple-module generator is its unique
+maximal ideal. Every composition series has the same number of
+factors, since each such factor has $K$-dimension $f_i$.
+Taking dimensions of the filtration and of the product yields
+the exact formulas
+$$
+\begin{aligned}
+\dim_K(S\otimes_RK)&=\sum_i\mu_i[\kappa(\mathfrak q_i):K],\\
+\dim_KJ&=\sum_i(\mu_i-1)[\kappa(\mathfrak q_i):K],\\
+\mu_i&=\operatorname{length}_{S_{\mathfrak q_i}/\mathfrak pS_{\mathfrak q_i}}
+ (S_{\mathfrak q_i}/\mathfrak pS_{\mathfrak q_i}).
+\end{aligned}
+$$
+Thus no local multiplicity has been absorbed into a residue degree.
+
+The empty fibre also has an exact criterion:
+$A=0$ if and only if $\ker\varphi\not\subseteq\mathfrak p$.
+If some $u\in U$ is in the kernel, its zero image is inverted
+in $U^{-1}S$, giving the zero ring. Conversely $A=0$ implies
+$U^{-1}S=\mathfrak pR_{\mathfrak p}(U^{-1}S)$.
+This is a finite $R_{\mathfrak p}$-module generated by the images
+of the specified $s_j$. Nakayama's Lemma \ref{lemma-NAK} gives
+$U^{-1}S=0$, so $1/1=0$ implies $\varphi(u)=0$ for some
+$u\in U$. This proves the criterion without assuming injectivity.
+
+For clarity, all equality cases follow from these formulas.
+The number of primes equals the residue-degree sum precisely
+when every $f_i=1$. That sum equals $d$ precisely when $J=0$,
+equivalently all $\mu_i=1$. The upper equality $d=m$ holds
+precisely when the original images $s_j\otimes1$ are a $K$-basis.
+In particular the number of primes equals $d$ exactly when
+$A\cong K^t$, where $t$ is the number of primes: the equalities
+give $J=0$, $f_i=1$ and the proved Chinese remainder isomorphism;
+the converse follows from that product's coordinate maximal ideals.
+The number of primes equals $m$ exactly when $A\cong K^m$.
+These statements include the empty product, interpreted as the zero ring.
+In terms of the original relation module
+$H=\ker(R^m\to S)$, the kernel of $K^m\to A$ is exactly
+$$
+\frac{H_{\mathfrak p}+\mathfrak pR_{\mathfrak p}^m}
+{\mathfrak pR_{\mathfrak p}^m},
+$$
+because localization gives $S_{\mathfrak p}=R_{\mathfrak p}^m/H_{\mathfrak p}$
+and reduction gives that quotient. Thus $d=m$ exactly when
+$H_{\mathfrak p}\subseteq\mathfrak pR_{\mathfrak p}^m$, equivalently
+$H\subseteq\mathfrak pR^m$. The last equivalence is coordinatewise:
+$a/1\in\mathfrak pR_{\mathfrak p}$ if and only if $a\in\mathfrak p$,
+by the fraction equality criterion and primality.
+
+The bounds and their limitations can be seen in explicit examples.
+For $R=k$, $S=k^m$ and the coordinate idempotent generators,
+the fibre has $m$ primes and all inequalities are equalities.
+For $R=k[t]$, $S=k[x]$ and $\varphi(t)=x^m$ with $m\geq1$,
+the original generators $1,x,\ldots,x^{m-1}$ form a free
+$R$-basis: collecting powers by their residue modulo $m$ gives
+spanning and uniqueness of the coefficients in $k[t]$.
+At $\mathfrak p=(t)$ the fibre is $k[x]/(x^m)$, so it has
+one prime, residue degree $1$, multiplicity $m$ and nilradical
+dimension $m-1$, although both original rings are domains.
+For the noninjective map $k[t]\to k$, $t\mapsto0$, with generator
+$1$, the fibre at $(t-1)$ is zero, while the fibre at $(t)$ is $k$.
+Repeating the generator $1$ for $R=S=k$ gives $d=1<m$ whenever
+the supplied family has $m>1$ entries.
+
+Equality in the residue-degree bound does not imply separability.
+In characteristic $\ell>0$, let $K=\mathbb F_\ell(t)$ and
+$L=\mathbb F_\ell(u)$ with $t\mapsto u^\ell$.
+The elements $1,u,\ldots,u^{\ell-1}$ are linearly independent
+over $K$: clearing denominators in any relation gives
+$\sum_{j=0}^{\ell-1}u^jP_j(u^\ell)=0$, whose powers in distinct
+residue classes modulo $\ell$ cannot cancel. Their span is closed
+under multiplication since $u^\ell=t$, and is a finite dimensional
+domain over $K$, hence a field. It contains $u$ and therefore is
+the whole $L$, proving $[L:K]=\ell$ and
+$L\cong K[X]/(X^\ell-t)$. Its unique residue field has degree
+equal to its dimension and it is reduced. But
+$$
+L\otimes_KL\cong L[X]/(X^\ell-u^\ell)
+=L[X]/((X-u)^\ell)
+$$
+is not reduced: $X-u$ is a nonzero element of nilpotence order
+$\ell$, as its degree is smaller than that of the defining monic
+polynomial. Thus the equality asserts reducedness of the specified
+fibre, not reducedness after every field extension.
+
+Finally every finite choice of positive integers $f_i,\mu_i$
+is realized, showing the numerical formula is sharp. Take
+$K=F(t_0)$ for a field $F$ and
+$L_i=F(u_i)$ with $t_0\mapsto u_i^{f_i}$.
+The same distinct-residue-class argument proves
+$[L_i:K]=f_i$, with basis $1,u_i,\ldots,u_i^{f_i-1}$;
+the spanning ring is a finite dimensional domain and hence a field
+containing $u_i$, so the argument applies to the full rational
+function field. Set
+$$
+S=\prod_i L_i[\varepsilon_i]/(\varepsilon_i^{\mu_i}).
+$$
+Its $K$-basis consists of the elements supported in factor $i$
+with entries $u_i^a\varepsilon_i^b$ for
+$0\leq a<f_i$, $0\leq b<\mu_i$. The nilpotent ideal in each
+factor is $(\varepsilon_i)$, its quotient is the field $L_i$,
+and its successive powers have one dimensional quotients over
+$L_i$ until exponent $\mu_i$. Thus its unique prime has residue
+degree $f_i$ and local length $\mu_i$. A prime of the product
+selects exactly one factor because the coordinate idempotents
+are orthogonal and sum to $1$. Consequently the fibre over the
+zero prime of $K$ has exactly these degrees and multiplicities.
+The displayed basis has size $\sum_i\mu_if_i$; appending zeros
+gives a specified generating family of any larger size $m$.
+Thus positivity and $\sum_i\mu_if_i\leq m$ are the complete
+universal numerical restrictions on these data.
+\end{proof}

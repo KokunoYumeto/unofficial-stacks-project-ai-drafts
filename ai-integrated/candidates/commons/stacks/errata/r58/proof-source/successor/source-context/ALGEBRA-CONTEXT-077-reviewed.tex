@@ -1,0 +1,31 @@
+\begin{lemma}
+\label{lemma-base-change-integral}
+\begin{slogan}
+Integrality and finiteness are preserved under base change.
+\end{slogan}
+Let $R \to S$ and $R \to R'$ be ring maps.
+Set $S' = R' \otimes_R S$.
+\begin{enumerate}
+\item If $R \to S$ is integral so is $R' \to S'$.
+\item If $R \to S$ is finite so is $R' \to S'$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For (1), write an arbitrary element of the original tensor algebra
+as a finite sum $z=\sum_{i=1}^m r'_i\otimes s_i$.
+Each $s_i$ satisfies its monic equation
+$s_i^{d_i}+\sum_{j=0}^{d_i-1}\varphi(a_{ij})s_i^j=0$.
+Tensoring gives the same equation for $1\otimes s_i$, with the
+coefficients $a_{ij}$ mapped into $R'$. The finite-subalgebra
+argument of Lemma \ref{lemma-characterize-integral} places all
+$1\otimes s_i$, and hence their $R'$-linear combination $z$,
+in a finite $R'$-subalgebra of $S'$. Lemma
+\ref{lemma-finite-is-integral} proves $z$ integral.
+For (2), choose original $R$-module generators $s_1,\ldots,s_m$
+of $S$. An expression $s=\sum_i a_i s_i$ gives
+$r'\otimes s=\sum_i r'\varphi'(a_i)(1\otimes s_i)$, where
+$\varphi':R\to R'$ is the given map. Every tensor is a finite
+sum of such terms, so $1\otimes s_1,\ldots,1\otimes s_m$
+generate $S'$ as an $R'$-module.
+\end{proof}

@@ -1,0 +1,157 @@
+# Editorial evidence for Algebra 13991–14710
+
+Authority: `algebra.tex` at commit `a04446e57ec1fbc252a871afcec7752fb2807b14`, SHA-256 `FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3`. The complete interval and its twelve reports were read. These arguments support separately recorded minimal corrections, retained source statements, and editorial consequences. They are not replacement proof bodies for translations, and no novelty is claimed.
+
+The earlier files `algebra_length_restriction_action_20260927.tex` and `algebra_semilocal_nil_localization_product_20260927.tex` were reread in full for the scalar-restriction and local-factor issue below. They are the complete proof files for review groups 351 and 363. The original and current `topology.tex` passages labelled `definition-Krull` were also read: authority lines 1391–1418, current lines 1450–1477. Both explicitly assign dimension \(-\infty\) to the empty space.
+
+## Finite-length wording
+
+Source: lines 14026–14042; report `OCC-00380`. The proposed “has finite length” wording is a small copyedit. The finite-length assertion is mathematically unchanged. If \(\mathfrak m^r\subset I\) and \(I^aM=0\), then \(\mathfrak m^{ra}M\subset I^aM=0\). Every successive \(\mathfrak m\)-adic layer of the finite module is a finite-dimensional vector space over the original residue field. There are only finitely many nonzero layers, so their original \(R\)-lengths sum to a finite length. No scalar field, ideal, or exponent is replaced.
+
+## Finite-colength comparison and explicit constants
+
+Source: `lemma-differ-finite`, lines 14044–14085; reports `OCC-00381` and `OCC-12300` identify the same “there exists a constants” wording. One correction accounts for both reports.
+
+Let \(Q=M/M'\) and \(l=\operatorname{length}_R(Q)\). In addition to correcting the wording, one can make the source's constants explicit: **\(c_1=c_2=l\) works**, retaining the original \(I\), \(M'\), and \(M\). Here is the proof. Every simple factor of a finite-length module over the original local ring is its residue field and is annihilated by \(\mathfrak m\). Along a composition series \(0=Q_0\subset Q_1\subset\cdots\subset Q_l=Q\), multiplication by \(\mathfrak m\) sends \(Q_j\) into \(Q_{j-1}\). Hence \(\mathfrak m^lQ=0\). Since an ideal of definition is contained in \(\mathfrak m\), one has \(I^lQ=0\), or \(I^lM\subset M'\). For \(l=0\), the quotient is zero and this inclusion is \(M=M'\).
+
+For \(n\geq l\), the exact inclusion and quotient maps give
+
+\[
+0\longrightarrow M'/I^{n+1}M\longrightarrow M/I^{n+1}M
+\longrightarrow Q\longrightarrow0.
+\]
+
+Thus \(\chi_{I,M}(n)=l+\operatorname{length}_R(M'/I^{n+1}M)\). The original submodules satisfy
+
+\[
+I^{n+1}M'\subset I^{n+1}M
+ =I^{n+1-l}(I^lM)\subset I^{n+1-l}M'\subset M'.
+\]
+
+Their quotient maps are surjective in the reverse order. Additivity of length yields the exact bounds
+
+\[
+l+\chi_{I,M'}(n-l)\leq\chi_{I,M}(n)
+\leq l+\chi_{I,M'}(n)\qquad(n\geq l).
+\]
+
+This explicit choice is an editorial consequence; the source's existence statement is retained.
+
+## Artin–Rees endpoint
+
+Source: `lemma-hilbert-ses`, lines 14087–14132. The statement, including the endpoint \(n=c\), is valid. The displayed intermediate proof at lines 14119–14127 uses \(\chi_{I,N}(-1)\) when its original index equals \(c\), although the function was introduced only for nonnegative arguments. State the convention \(\chi_{I,Q}(-1)=0\) for every finite module \(Q\). It agrees with the original quotient formula because \(I^0Q=Q\), so \(\operatorname{length}_R(Q/I^0Q)=0\). It does not change any previously defined value.
+
+Write the original exact sequence as \(0\to M'\xrightarrow{u}M\xrightarrow{v}M''\to0\), identifying \(M'\) with its image, and set \(N=M'\cap I^cM\). Artin–Rees gives \(M'\cap I^rM=I^{r-c}N\) for \(r\geq c\). Since \(I^cM'\subset N\), the quotient \(M'/N\) has finite length \(l\). For \(n\geq c\), the quotient sequence and the intermediate quotient by \(N\) give
+
+\[
+\chi_{I,M}(n)=\chi_{I,M''}(n)
+ +\operatorname{length}_R(M'/I^{n+1-c}N)
+=\chi_{I,M''}(n)+l+\chi_{I,N}(n-c).
+\]
+
+There is also a direct proof of the \(\varphi\)-formula at every stated index, including the endpoint. The exact degree sequence is
+
+\[
+0\longrightarrow I^{n-c}N/I^{n+1-c}N
+\longrightarrow I^nM/I^{n+1}M
+\longrightarrow I^nM''/I^{n+1}M''\longrightarrow0.
+\]
+
+The first map is the original inclusion; its kernel is zero because \(I^{n-c}N=M'\cap I^nM\) and \(M'\cap I^{n+1}M=I^{n+1-c}N\). The last map is induced by \(v\) and is surjective. If \(m\in I^nM\) maps into \(I^{n+1}M''\), lift that image to an element of \(I^{n+1}M\); subtracting that lift puts \(m\) in \(M'\cap I^nM\) modulo \(I^{n+1}M\). This proves exactness and, by length additivity, the source's \(\varphi\)-formula. At \(n=c\), the left term is exactly \(N/IN\), as required.
+
+## Degree comparison and highest coefficients
+
+Source: `lemma-differ-finite-chi` and `lemma-hilbert-ses-chi`, lines 14212–14269; report `OCC-00382` supplies the missing article before “degree”. The source identifies the two polynomials by the immediately preceding \(M\) and \(M'\); no new mathematical hypothesis is needed for this copyedit.
+
+Here are the precise polynomial consequences used in the receiving argument. For any nonzero finite module \(Q\), \(\chi_{I,Q}(n)\) is positive for all \(n\geq0\): its quotient maps onto the nonzero \(Q/IQ\), which is nonzero by Nakayama because \(I\subset\mathfrak m\). Consequently its eventual polynomial has a positive leading coefficient. Its degree is zero exactly when \(Q\) has finite length. One direction is immediate from a power of \(I\) killing a finite-length module. For the reverse direction, eventual constancy makes \(\operatorname{length}_R(I^nQ/I^{n+1}Q)=0\) for large \(n\), so \(I^nQ=I I^nQ\). The finite module \(I^nQ\) is zero by Nakayama. A module killed by that power of the ideal of definition has finite length, by the earlier layer argument. Thus a module without finite length has a positive-degree eventual polynomial.
+
+In the finite-colength comparison, if \(M\) lacks finite length, then so does \(M'\); otherwise additivity in \(0\to M'\to M\to Q\to0\) would give finite length to \(M\). Let \(P(t)\) and \(P'(t)\) be their original eventual polynomials. The proved bounds give
+
+\[
+l+P'(n-l)\leq P(n)\leq l+P'(n)
+\]
+
+for all sufficiently large integers. Since \(P'\) has positive leading coefficient, these two bounding polynomials have the same positive degree and leading coefficient. If \(P\) had a larger or smaller degree, or a different leading coefficient at that degree, the corresponding polynomial difference would eventually have a sign contradicting one of the inequalities. Hence the two original polynomials have the same degree and leading coefficient, and \(P-P'\) has strictly smaller degree. This proves the receiving comparison without replacing either original polynomial by a rescaled one.
+
+For the original exact sequence, retain its \(N,c,l\) from Artin–Rees and let \(P_Q\) denote each original eventual polynomial. The full error identity is
+
+\[
+P_M(t)-P_{M'}(t)-P_{M''}(t)
+=\bigl(P_N(t-c)-P_N(t)\bigr)
+ +\bigl(P_N(t)-P_{M'}(t)\bigr)+l.
+\]
+
+If \(M'\) has infinite length, its degree \(d'\) is positive; the finite-colength comparison applies to \(N\subset M'\). Each parenthesized term has degree strictly less than \(d'\). For the first, retain the original expansion \(P_N(t)=\sum_j a_jt^j\); the term is \(\sum_j a_j((t-c)^j-t^j)\), whose degree-\(j\) coefficients cancel for each \(j\). The constant \(l\) also has smaller degree. If \(M'\) has finite length, choose \(b\) with \(I^bM'=0\). Artin–Rees gives \(M'\cap I^rM=I^{r-c}N=0\) for \(r\geq c+b\), so the quotient exact sequence gives \(P_M-P_{M''}=\operatorname{length}_R(M')=P_{M'}\) exactly.
+
+Thus one further consequence is proved without changing the source: for any such exact sequence with a nonzero term, put \(D=\max\{d(M'),d(M'')\}\). Then
+
+\[
+[t^D]P_M=[t^D]P_{M'}+[t^D]P_{M''}.
+\]
+
+For \(D\geq1\), this follows from the full error formula and its degree bound, including a finite-length \(M'\). For \(D=0\), both end terms have finite length, so all three polynomials are their actual lengths and the equality is the original exact-sequence additivity. If both end terms are zero, the middle term is zero and all three polynomials vanish; no coefficient with index \(-\infty\) is used. This is a highest-coefficient identity of the original polynomials, not a replacement of them by a normalized invariant. Zero polynomials have degree \(-\infty\) in these comparisons.
+
+## Punctuation in the dimension definition
+
+Source: lines 14331–14343; report `OCC-12301`. Remove the period at the end of the displayed prime chain so that “of length \(n\)” continues its sentence. The strict inclusions and chain length do not change.
+
+## Minimal prime wording
+
+Source: lines 14369–14378; report `OCC-00383`. An irreducible component \(V(\mathfrak p_i)\) corresponds to a minimal **prime** ideal. Minimality is within the prime ideals, because a smaller prime gives a larger irreducible closed subset and contradicts maximality of that component. “Minimal ideal” would ordinarily describe a different condition among all ideals; insert “prime”.
+
+## Length over the original ring is correct
+
+Source: lines 14382–14390; report `OCC-00384`. Retain the source's assertion that each \(A_i=R_{\mathfrak p_i}\) has finite length **over \(R\)**. It is true, and the preceding product decomposition already supplies the required reason. The report correctly observes that the cited local finite-length lemma initially gives finiteness over \(A_i\); its suggested objection does not account for the immediately preceding isomorphism.
+
+The original canonical isomorphism \(\theta:R\to\prod_i A_i\) sends \(r\) to \((r/1)_i\). Its inverse, fully proved in `algebra_semilocal_nil_localization_product_20260927.tex`, sends \((r_i/s_i)_i\) to \(\sum_i(e_i r_i)(e_i s_i)^{-1}\), using the original orthogonal idempotents and the inverses in \(e_iR\). In particular each original localization map \(R\to A_i\) is surjective: apply \(\theta^{-1}\) to the tuple with the requested element in slot \(i\) and zero elsewhere.
+
+For any \(R\)-submodule \(L\subset A_i\), \(a\in A_i\), and \(x\in L\), choose \(r\in R\) with image \(a\). Then \(ax=rx\in L\). Hence every such \(L\) is an \(A_i\)-submodule, and the converse is immediate by restriction of scalars. The full submodule lattices and all strict chains coincide. Therefore
+
+\[
+\operatorname{length}_R(A_i)=\operatorname{length}_{A_i}(A_i)<\infty.
+\]
+
+The canonical product decomposition is also an \(R\)-module isomorphism; the product is finite, hence is its direct sum. Length additivity gives \(\operatorname{length}_R(R)=\sum_i\operatorname{length}_{A_i}(A_i)<\infty\), exactly the receiving conclusion needed by the source. The empty product is the zero ring with zero length. The same argument applies to every module over each factor, not just the factor itself; that stronger scalar-restriction statement is already proved in group 351 and is reused here. No source replacement or duplicate generalization is needed.
+
+## Zero ring and dimension at most zero
+
+Source: `lemma-Noetherian-dimension-0` at lines 14363–14397 and `proposition-dimension-zero-ring` at lines 14414–14443. The original topological definition explicitly gives \(\dim\varnothing=-\infty\); it is unchanged in the current chapter. Thus the zero ring is Artinian and Noetherian, with length zero, but its Krull dimension is \(-\infty\), not zero. This is a real exception to the printed converse and to item (2) of the ten-condition proposition.
+
+The minimal corrections are “dimension at most zero” in the converse and \(\dim(R)\leq0\) in item (2). They preserve the original dimension convention. To verify the corrected scope, a nonzero ring has a maximal ideal, so its spectrum is nonempty and dimension is at least zero. Consequently the new bound is exactly dimension zero on every nonzero ring, where the source argument applies. For the zero ring, the bound holds, both chain conditions are automatic, and its sole unital module is zero. Every finite-product condition in the proposition holds using the empty product; the finite discrete spectrum and absence of strict prime inclusions hold for the empty space; and the Jacobson radical is the zero ideal, hence nilpotent. Thus all ten conditions remain equivalent, now including the original zero ring.
+
+The subsequent local lemmas are unchanged: a local ring in those statements has its specified maximal ideal and residue field and is nonzero. Likewise every localization at a prime is nonzero. Hence the local assertions \(\dim(R)=0\iff d(R)=0\) and the height statements still use equality with zero. Do not propagate the new weak inequality into those different, already correct statements.
+
+## One-dimensional wording
+
+Source: lines 14482–14487; reports `OCC-00385` and `OCC-12302` identify the same misplaced “directly”. One operation changes “from directly” to “directly from”. The equivalence of the two ideal-of-definition descriptions is unchanged.
+
+## Multiplication maps in both dimension proofs
+
+Source: lines 14506–14517 and 14579–14592; report `OCC-00386` names the first occurrence. The identical later sequence requires the same visible map label, so the correction is propagated to both.
+
+Since the original \(\mathfrak p\) is prime and \(x\notin\mathfrak p\), the element \(\bar x\) is nonzero in the original domain \(R/\mathfrak p\). Define
+
+\[
+\mu_x:R/\mathfrak p\longrightarrow R/\mathfrak p,
+\qquad a+\mathfrak p\longmapsto xa+\mathfrak p.
+\]
+
+Changing a representative by an element of \(\mathfrak p\) changes its product by an element of \(\mathfrak p\), so the map is defined and \(R\)-linear. Its kernel is zero by primality and \(x\notin\mathfrak p\); its image is \((xR+\mathfrak p)/\mathfrak p\). The quotient map onto \(R/(xR+\mathfrak p)\) has exactly this kernel and is surjective, proving the displayed short exact sequence. It is generally not multiplication by 1: \(x\in\mathfrak q\subset\mathfrak m\) is retained throughout. Both source operations label the first nonzero arrow by \(x\).
+
+The two polynomial contributions from \(R/\mathfrak p\) are those of the same original module with the same original ideal action, so their difference is zero and the full signed expression remains \(-\chi_{I,R/(xR+\mathfrak p)}\), as printed. The quotient is nonzero since \(xR+\mathfrak p\subset\mathfrak q\) is proper. In the first proof it has degree zero and hence finite length; the two displayed distinct primes contradict dimension zero. In the general proof its polynomial degree is strictly smaller than that of \(R/\mathfrak p\), hence smaller than \(d(R)\); the induction therefore applies to that exact quotient.
+
+There is no mismatch between degrees calculated over \(R\) and over a quotient ring \(B=R/J\): the structural map is surjective, its action on each module is unchanged, and the submodule lattices coincide by the same scalar argument above. Also \(I^nB=(IB)^n\) as submodules of \(B\), and \(IB\) is an ideal of definition whenever \(J\subset\mathfrak m\). Thus every corresponding \(\chi\)-value is exactly equal, with no suppressed length factor.
+
+## Closing sentence and induction scope
+
+Source: lines 14594–14596; report `OCC-12303`. Retain “Reading back the reader will see we proved the circular inequalities as desired.” The participial phrase has the stated reader as its subject; “reading back” means reviewing the preceding argument, and the complement after “see” may omit “that”. A comma or the proposed longer sentence is an optional style change, not a demonstrated grammatical or mathematical defect. The term “circular inequalities” describes the cycle of inequalities printed at lines 14544–14546, not a claim that a premise is assumed from its conclusion.
+
+For the mathematical scope, the source's induction can be read exactly as follows. Assume the equivalence for every smaller integer. If \(\dim R=d\), its prime-avoidance quotient has dimension at most \(d-1\), so induction yields \(d'(R)\leq d\). Independently, an ideal of definition with \(d\) generators gives the full monomial length bound and hence \(d(R)\leq d\). If \(d(R)=d\), the labelled injection and the nonzero quotient in the preceding section give \(\dim R\leq d\) by induction on the quotient's smaller numerical degree; arbitrary finite chains are tested, so an infinite Krull dimension has not been assumed away. For any of the three invariants equal to \(d\), a strict drop of another to a smaller integer would, by that integer's induction equivalence, force all three to equal the smaller integer and contradict the premise. This proves equality. In addition \(d(R)\) is a finite nonnegative integer for a nonzero Noetherian local ring, by its already proved numerical polynomial, so the argument covers every such ring. This explanation stays in editorial material.
+
+## Elements generating the maximal ideal
+
+Source: lines 14599–14608; report `OCC-00387`. The original maximal ideal is generated by elements of its original ring, which need not be specified polynomial variables. Replace “variables” by “elements”. Nakayama identifies the minimal number with the dimension of the original residue vector space \(\mathfrak m/\mathfrak m^2\); the printed inequality and its original residue field remain unchanged.
+
+## Receiving height results and limits
+
+The complete proofs through `lemma-one-equation` at line 14710 were read. For a prime minimal over a given generated ideal, the original localization maps identify primes with the primes below it and show that the localized ideal has radical equal to the localized maximal ideal. The dimension bound uses that exact localized ring; the zero-ring correction does not change it. For primes above an original prime \(\mathfrak p\), quotient and localization give the same strict-chain correspondence used in the two height statements. The one-equation comparison likewise retains the original quotient and parameter lifts. No source changes or new certification of omitted details are asserted for these receiving statements. Source 14711–14720 is only the next lemma's statement and proof opening, and remains unadjudicated. Broader synthesis of the collected findings and its short paper remain after the core task.

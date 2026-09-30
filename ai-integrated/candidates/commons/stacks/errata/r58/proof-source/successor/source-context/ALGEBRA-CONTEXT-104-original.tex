@@ -1,0 +1,23 @@
+\begin{lemma}
+\label{lemma-support-quotient}
+Let $R$ be a ring and let $M$ be an $R$-module.
+\begin{enumerate}
+\item If $M$ is finite then the support
+of $M/IM$ is $\text{Supp}(M) \cap V(I)$.
+\item If $N \subset M$, then $\text{Supp}(N) \subset
+\text{Supp}(M)$.
+\item If $Q$ is a quotient module of $M$ then $\text{Supp}(Q) \subset
+\text{Supp}(M)$.
+\item If $0 \to N \to M \to Q \to 0$ is a short exact sequence
+then $\text{Supp}(M) = \text{Supp}(Q) \cup \text{Supp}(N)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The functors $M \mapsto M_{\mathfrak p}$ are exact. This immediately
+implies all but the first assertion. For the first assertion
+we need to show that $M_\mathfrak p \not = 0$ and
+$I \subset \mathfrak p$ implies $(M/IM)_{\mathfrak p}
+= M_\mathfrak p/IM_\mathfrak p \not = 0$. This follows
+from Nakayama's Lemma \ref{lemma-NAK}.
+\end{proof}

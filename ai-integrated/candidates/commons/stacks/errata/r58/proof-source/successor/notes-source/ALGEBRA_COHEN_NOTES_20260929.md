@@ -1,0 +1,200 @@
+# Cohen structure: original-source corrections and complete receiving arguments
+
+Source: Stacks Project authors, algebra.tex:44779–45127, original authority a04446e57ec1fbc252a871afcec7752fb2807b14, file SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. This note validates the original rings, inverse systems, ideals and maps. The eight existing units MC-STK-ERR-0698 through MC-STK-ERR-0705 are retained. Additional paper mining and optional extensions remain deferred; this fuller argument is editorial material, not a replacement of the translated source.
+
+## Completeness, proper quotients and finite products
+
+The source definition uses the actual map
+\[
+ R\longrightarrow\varprojlim_{n\geq1}R/\mathfrak m^n,\qquad
+ r\longmapsto(r\bmod\mathfrak m^n)_n.
+\]
+Being an isomorphism includes both surjectivity and the exact kernel assertion \(\bigcap_n\mathfrak m^n=0\). For an Artinian local ring, some power of the maximal ideal is zero, so the inverse system is eventually the unchanged ring; the displayed map is an isomorphism.
+
+The finite-generation qualification in the footnote is essential to its cited completeness argument. For a finitely generated ideal \(I\) and an \(R\)-module \(M\), retain the exact completion comparison from algebra.tex:22644–22678:
+\[
+ I^n\widehat M
+   =\ker(\widehat M\longrightarrow M/I^nM),\qquad
+ \widehat M/I^n\widehat M\cong M/I^nM.
+\]
+To see the stated kernel map, choose the actual finite generators \(f_1,\ldots,f_r\) of \(I^n\). Completion of the surjection \(M^{\oplus r}\to I^nM\), with coordinates mapped by \((f_1,\ldots,f_r)\), is onto. Its image in \(\widehat M\) is exactly \(I^n\widehat M\), and its target identifies with
+\(\varprojlim_{m\geq n}I^nM/I^mM\), which is the kernel of the displayed reduction. Taking inverse limits of the quotient isomorphisms proves completeness of \(\widehat M\). All maps send represented elements to the same residue classes. This is the earlier source completion-surjectivity argument; the finite generating list is not discarded.
+
+If \(R/I\) is Noetherian and \(I\) is finitely generated, the original completion \(\widehat R\) is Noetherian by algebra.tex:23010–23062. The proof retains the map
+\[
+ (R/I)[T_1,\ldots,T_t]\twoheadrightarrow
+ \bigoplus_{n\geq0}I^n/I^{n+1},\qquad T_i\longmapsto[f_i]
+\]
+and the actual initial forms of generators of an arbitrary ideal. In a complete ring, homogeneous generators \(\overline g_j\) of degrees \(d_j\) for the initial-form ideal are lifted to \(g_j\in J\cap I^{d_j}\). Successive correction of an original \(x\in J\) produces coefficients
+\[
+ a_{j,n}\in I^{\max(0,n-d_j)},\qquad
+ x-\sum_{n=0}^{N}\sum_j a_{j,n}g_j\in I^{N+1}.
+\]
+For each \(j\), the sum \(A_j=\sum_{n\geq0}a_{j,n}\) converges, and separatedness gives the full identity \(x=\sum_j A_jg_j\). Thus \(J\) is finitely generated. Applied to the completion, the preceding exact quotient comparison supplies the required complete ring with the same Noetherian residue quotient. Applied to a complete local \(R\) with finitely generated \(\mathfrak m\), it makes \(R\) itself Noetherian. MC-STK-ERR-0705 only clarifies the footnote's attachment of these two already valid assertions.
+
+For a Noetherian complete local \(R\), a finite \(R\)-algebra \(S\) is Noetherian and the finite-module completion comparison identifies its actual map
+\[
+ S\longrightarrow\varprojlim_n S/\mathfrak m^nS
+\]
+as an isomorphism. Here this is the original finite-module theorem, not an assertion about arbitrary modules. There are finitely many maximal ideals \(\mathfrak n_1,\ldots,\mathfrak n_s\) of \(S\), all over \(\mathfrak m\), because \(S/\mathfrak mS\) is a finite-dimensional algebra over \(R/\mathfrak m\). Put \(J=\bigcap_i\mathfrak n_i\). The radical of the Artinian ring \(S/\mathfrak mS\) is nilpotent, so for some actual integer \(c\geq1\),
+\[
+ J^c\subseteq\mathfrak mS\subseteq J,\qquad
+ J^{cn}\subseteq\mathfrak m^nS\subseteq J^n.
+\]
+The two filtrations are cofinal, and the identity on \(S\) induces inverse maps on their inverse limits. The maximal ideals are pairwise comaximal, so \(J^n=\bigcap_i\mathfrak n_i^n\), and the Chinese remainder maps give
+\[
+ S\cong\varprojlim_n S/J^n
+   \cong\prod_{i=1}^{s}\varprojlim_n S/\mathfrak n_i^n
+   \cong\prod_{i=1}^{s}\widehat{S_{\mathfrak n_i}}.
+\]
+Each map is induced by the original quotient or localization map. In the last comparison, every element outside \(\mathfrak n_i\) is already a unit modulo \(\mathfrak n_i^n\): that quotient has a unique maximal ideal with nilpotent image, so the inverse is lifted by the finite geometric-series identity. Thus localization does not change that quotient. Each completion is Noetherian and complete for its finitely generated maximal ideal by the preceding completion statements. This verifies the source finite-product conclusion and its original comparison at 23134–23174. If \(S=0\), the product is empty and equals the zero ring.
+
+For \(S=R/I\) with \(I\) proper, the unique maximal ideal is \(\mathfrak m/I\), its powers are the images of \(\mathfrak m^n\), and the finite-module comparison proves completeness for exactly this ideal. Hence the quotient is a Noetherian complete local ring. For \(I=R\), the quotient is zero and has no maximal ideal, so it is not a local ring under the source convention. MC-STK-ERR-0698's proper-ideal restriction corrects that boundary overclaim; it is not imposed on the finite-product statement. MC-STK-ERR-0699 only removes the doubled conditional wording in the latter statement.
+
+## The original Cohen ring and all its finite quotients
+
+For a coefficient subring \(C\subset R\), the source conditions say that \(C\) is complete local, that its maximal ideal is \(C\cap\mathfrak m\), that its residue field maps isomorphically to \(R/\mathfrak m\), and that this maximal ideal equals \(pC\), with \(p\) the characteristic of that residue field. In residue characteristic zero \(p=0\), so \(C\) is a field. In equal positive characteristic \(pR=0\), again \(pC=0\), so \(C\) is a field. A local ring with residue characteristic zero contains \(\mathbf Q\): each nonzero integer has nonzero residue and is therefore a unit, giving the original inverse-denominator map into \(R\). Conversely any field contained in \(R\) injects into its residue field, since its nonzero elements remain units, and its characteristic agrees with that of the residue field.
+
+For a complete local ring \(C\) with maximal ideal \(pC\), separatedness shows that every nonzero \(a\in C\) has a largest integer \(v\geq0\) with \(a\in p^vC\); write \(a=p^vu\). The actual factor \(u\) is a unit, since otherwise \(a\in p^{v+1}C\). If no power of \(p\) is zero, then products
+\[
+ (p^vu)(p^ww)=p^{v+w}uw
+\]
+are nonzero. Thus \(C\) is a domain, every nonzero ideal is generated by the smallest power occurring among its nonzero elements, and the only prime ideals are zero and \((p)\). It is a discrete valuation ring with the actual uniformizer \(p\), and it is complete by assumption. If instead \(p^e=0\), \(p^{e-1}\ne0\), then the finite filtration by \(p^iC\) has successive quotients of dimension at most one over \(C/pC\), because each is generated by the original \(p^i\). It gives finite length, so \(C\) is Artinian. This verifies the three cases without discarding unit factors or the nilpotent cases. MC-STK-ERR-0700 clarifies the wording that the uniformizer of a Cohen ring is the image of an actual prime integer.
+
+For existence, retain the exact flat local extension
+\[
+ \mathbf Z_p\longrightarrow R_*,\qquad
+ \mathfrak m_{R_*}=pR_*,\qquad R_*/pR_*=k
+\]
+constructed in the preceding section; \(R_*\) here names that auxiliary source ring, while \(R\) below remains the given ring of the structure theorem. Let \(\Lambda=\widehat{R_*}=\varprojlim_n R_*/p^nR_*\). The completion argument above gives
+\[
+ \Lambda/p^n\Lambda\cong R_*/p^nR_*
+\]
+for every \(n\), completeness, and Noetherianity, since \(pR_*\) is principal and its quotient is a field. The isomorphisms are induced by the original projection from the inverse limit. The maximal ideal of \(\Lambda\) is \(p\Lambda\): an element with nonzero residue has an inverse modulo \(p\), and the error is in \(p\Lambda\), so the convergent geometric series lifts the inverse in the \(p\)-adically complete ring.
+
+Flatness of \(R_*/\mathbf Z_p\) makes multiplication by \(p\) injective on \(R_*\). It also proves injectivity on the actual completion without a suppressed limit argument. If \(a=(a_n)\in\Lambda\) satisfies \(pa=0\), then \(pa_{n+1}=0\) in \(R_*/p^{n+1}R_*\). The original injectivity on \(R_*\) implies \(a_{n+1}\in p^nR_*/p^{n+1}R_*\), so its projection \(a_n\) is zero. Every coordinate vanishes, hence \(a=0\). As the residue field is nonzero, \(p\) is a nonzero nonunit and no power vanishes. The preceding exact valuation argument now proves that \(\Lambda\) is a complete discrete valuation ring with uniformizer \(p\). This supplies the ring required by the source existence lemma.
+
+The cited flatness argument in 44895–44898 is valid as well: with source ring \(\mathbf Z_p\), target \(\Lambda\), ideal \((p)\), and module \(\Lambda\), both rings are Noetherian, the target module is finite over itself, and every reduction is flat because it is the base change of the original flat \(\mathbf Z_p\to R_*\). The ideal lies in the target maximal ideal, so the precise final clause of algebra.tex:23807–23843 applies.
+
+For every \(n\geq1\), put \(A_n=\mathbf Z/p^n\mathbf Z\) and \(B_n=\Lambda/p^n\Lambda\). The original map \(A_n\to B_n\) is flat. Indeed every ideal of \(A_n\) is \((p^i)\), \(0\leq i\leq n\), and for \(i<n\) the tensor comparison is
+\[
+ (p^i)\otimes_{A_n}B_n
+   \cong B_n/p^{n-i}B_n
+   \longrightarrow B_n,\qquad [b]\longmapsto p^ib.
+\]
+It is injective: if a lift \(\widetilde b\in\Lambda\) satisfies \(p^i\widetilde b\in p^n\Lambda\), injectivity of multiplication by \(p^i\) in \(\Lambda\) gives \(\widetilde b\in p^{n-i}\Lambda\). The zero ideal case has zero source. The ideal criterion proves flatness.
+
+At \(n=1\), \(B_1=k\) is formally smooth over \(\mathbf F_p\), by the separable-field criterion already verified in ALGEBRA_FIELD_FORMAL_SMOOTH_NOTES_20260929.md; the prime field is perfect. In the induction from \(n\) to \(n+1\), keep the exact square-zero ideal
+\[
+ I=(p^n)\subset A_{n+1},\qquad I^2=0
+\]
+because \(2n\geq n+1\). Its quotient map is precisely \(A_n\to B_n\), and the unquotiented map is flat by the preceding calculation. Thus all three hypotheses of the square-zero formal-smoothness lemma at 38099–38166 are satisfied.
+
+The receiving proof uses the already corrected tensor base in MC-STK-ERR-0449 and the splitting directions of ALGEBRA-RECON-1083. For a polynomial presentation \(P\to S\) with kernel \(J\), keep
+\[
+ E=J/J^2,\qquad F=\Omega_{P/A}\otimes_P S,\qquad d:E\to F.
+\]
+The quotient by \(I\) supplies a left inverse, and its lifted map \(r_0:F\to E\) satisfies
+\(\Delta=1_E-r_0d\), \(\Delta(E)\subset IE\). Since \(I^2=0\) and \(\Delta\) is \(S\)-linear, \(\Delta^2=0\). The exact correction \(r=r_0+\Delta r_0\) then satisfies
+\[
+ rd=(1_E+\Delta)(1_E-\Delta)=1_E.
+\]
+This is a left inverse to the conormal differential, with its original domain and codomain; it is the split-conormal criterion for formal smoothness. The complete earlier proof is in ALGEBRA_FORMAL_SMOOTH_NOTES_20260928.md, “Projective differentials and the direction of the splittings”. It proves formal smoothness of every actual \(A_n\to B_n\) used in the next construction.
+
+## The compatible coefficient-ring lifting maps
+
+Retain the source complete local ring \((R,\mathfrak m)\) and residue field \(\kappa\), without imposing Noetherianity for the coefficient-ring assertion. If \(\operatorname{char}(\kappa)=0\), the canonical \(\mathbf Q\)-map into \(R\) was proved above. Begin with \(\varphi_1:\kappa\to R/\mathfrak m=\kappa\) equal to the identity. For \(n\geq2\), the kernel of
+\[
+ R/\mathfrak m^n\longrightarrow R/\mathfrak m^{n-1}
+\]
+is \(\mathfrak m^{n-1}/\mathfrak m^n\), whose square is zero since \(2n-2\geq n\). Formal smoothness of the original \(\kappa/\mathbf Q\) therefore lifts the already chosen \(\varphi_{n-1}\) to a \(\mathbf Q\)-map \(\varphi_n\). This choice explicitly gives
+\(\pi_n\varphi_n=\varphi_{n-1}\). Hence the map
+\[
+ \kappa\longrightarrow\varprojlim_n R/\mathfrak m^n=R,\qquad
+ a\longmapsto(\varphi_n(a))_n
+\]
+is a ring map splitting the original residue map. It is injective because its residue composite is the identity. Its image is a field with zero intersection with \(\mathfrak m\), complete for its zero maximal ideal, and has exactly the required residue isomorphism.
+
+If \(\operatorname{char}(\kappa)=p>0\), retain the source Cohen ring \(\Lambda\) with the fixed identification \(\Lambda/p\Lambda=\kappa\). Since \(p\in\mathfrak m\), \(p^nR\subset\mathfrak m^n\), so every \(R/\mathfrak m^n\) is an \(A_n\)-algebra. Begin with that fixed identification for \(\varphi_1\). At stage \(n\geq2\), the actual already constructed arrow used in the lifting square is
+\[
+ \psi_{n-1}:
+ \Lambda/p^n\Lambda
+ \xrightarrow{q_n}\Lambda/p^{n-1}\Lambda
+ \xrightarrow{\varphi_{n-1}}R/\mathfrak m^{n-1}.
+\]
+MC-STK-ERR-0701 explicitly introduces this composite before reusing the shorter arrow label. The square commutes as an \(A_n\)-algebra square. Formal smoothness of \(A_n\to B_n\), proved with all its flatness hypotheses above, gives a map
+\(\varphi_n:B_n\to R/\mathfrak m^n\) satisfying the exact identity
+\[
+ \pi_n\varphi_n=\varphi_{n-1}q_n.
+\]
+Thus the original inverse-limit map is
+\[
+ \varphi:\Lambda=\varprojlim_n\Lambda/p^n\Lambda
+       \longrightarrow\varprojlim_n R/\mathfrak m^n=R,\qquad
+ a\longmapsto\bigl(\varphi_n(a\bmod p^n)\bigr)_n.
+\]
+It is a ring map and its residue map is the selected identity on \(\kappa\).
+
+Its image \(C=\varphi(\Lambda)\) is the actual coefficient subring. To verify every defining condition, let \(J=\ker\varphi\). The nonzero residue map makes \(J\) proper, and the Cohen-ring ideal classification gives either \(J=0\) or \(J=(p^e)\), \(e\geq1\). In the first case \(C\cong\Lambda\) is complete local; in the second \(C\cong\Lambda/(p^e)\) is Artinian local and complete for its nilpotent maximal ideal. The kernel of the induced residue map on \(C\) is exactly \(pC\), because an element \(\varphi(a)\) has zero residue precisely when \(a\in p\Lambda\). Therefore \(C\cap\mathfrak m=pC\), and \(C/pC\to\kappa\) is the required isomorphism. When \(pR=0\), \(J=(p)\), so \(C\) is a field; when no power of \(p\) vanishes in \(R\), \(J=0\); when \(p\) has exact nilpotence exponent \(e\), \(J=(p^e)\). All original cases are covered without treating an image as automatically complete.
+
+## Power-series surjectivity with the respective ideals
+
+Assume now that \(\mathfrak m=(y_1,\ldots,y_n)\) is finitely generated. The source ring for the presentation is \(A=\Lambda[[x_1,\ldots,x_n]]\), where in the equal-characteristic case \(\Lambda\) is the coefficient field, and in positive residue characteristic one may use the original Cohen ring mapping to \(R\), even when its image is an Artinian coefficient ring. Retain every coefficient and monomial. Define
+\[
+ \Phi:A\longrightarrow R,\qquad
+ \sum_{I\in\mathbf N^n}a_Ix^I
+ \longmapsto
+ \lim_{N\to\infty}\sum_{|I|<N}\varphi(a_I)y^I.
+\]
+The terms of total degree at least \(N\) lie in \(\mathfrak m^N\), so completeness and separatedness of \(R\) give the limit. Modulo \(\mathfrak m^N\) only finitely many degrees contribute; finite coefficient convolution proves additivity and multiplication, hence \(\Phi\) is a ring map. It sends every original variable \(x_i\) to the specified \(y_i\).
+
+Write \(\mathfrak a=(x_1,\ldots,x_n)\subset A\). The exact ideal comparison is \(\mathfrak aR=(y_1,\ldots,y_n)=\mathfrak m\), and
+\[
+ A/\mathfrak a=\Lambda\longrightarrow R/\mathfrak m
+\]
+is onto. The source is \(\mathfrak a\)-adically complete and the target is \(\mathfrak m\)-adically complete. This is MC-STK-ERR-0702's explicit wording. The original wording also admits the usual reading of \(\mathfrak a\)-adic completeness on the \(A\)-module \(R\), where \(x_i\) acts by \(y_i\); the retained edit is a clarification of the respective ideals, not a newly false completeness theorem.
+
+For exact surjectivity, choose for a given \(r\in R\) a coefficient lifting its residue. Suppose polynomials through degree \(N-1\) have been chosen with residual error in \(\mathfrak m^N\). This ideal is generated by the original degree-\(N\) monomials \(y^I\). Write the error as a finite sum \(\sum_{|I|=N}b_Iy^I\), and lift each residue \(b_I\bmod\mathfrak m\) by a coefficient \(a_I\in\Lambda\). The degree-\(N\) polynomial \(\sum a_Ix^I\) corrects the error modulo \(\mathfrak m^{N+1}\). Iterating preserves every selected term and gives a series \(F\) with \(r-\Phi(F)\in\bigcap_N\mathfrak m^N=0\). Thus \(\Phi\) is onto and the original \(R\) is exactly \(A/\ker\Phi\). If \(n=0\), the same residue construction has no higher-degree terms and \(\mathfrak m=0\); it says that the coefficient map itself is onto the field \(R\).
+
+## Regular power-series rings and the two finite-extension cases
+
+For the uses in 45022–45122, retain either a field \(k\) or the actual Cohen ring \(\Lambda\). The ring \(k[[X_1,\ldots,X_d]]\) is complete for \((X_1,\ldots,X_d)\). The ring \(\Lambda[[X_1,\ldots,X_d]]\) is complete for \(\mathfrak q=(p,X_1,\ldots,X_d)\): modulo \(\mathfrak q^N\), the coefficient of \(X^I\), \(|I|<N\), is specified modulo \(p^{N-|I|}\); coefficients in degrees at least \(N\) contribute zero. Compatible systems recover each full coefficient by the original \(p\)-adic completeness of \(\Lambda\), giving inverse maps between the full series ring and this inverse limit.
+
+Both series rings are Noetherian by the completion theorem applied to the polynomial ring over their Noetherian coefficient ring and the finitely generated variable ideal. Their units are exactly the series with unit constant term. For \(F=\sum a_IX^I\) with \(a_0\) a unit, the inverse coefficients are determined without omitting terms by
+\[
+ b_0=a_0^{-1},\qquad
+ b_I=-a_0^{-1}\sum_{0<J\leq I}a_Jb_{I-J}\quad(I\ne0).
+\]
+If the constant term is a nonunit, the series lies in the stated maximal ideal, respectively \((X)\) or \((p,X)\). They are domains: the first nonzero total-degree homogeneous parts of two nonzero series multiply to a nonzero polynomial over the original coefficient domain, so their product series is nonzero. Prime chains obtained by successively adjoining the actual parameters give dimension at least \(d\), respectively \(d+1\); the bound by the number of generators of the maximal ideal gives the reverse inequalities. The parameter classes are independent modulo the square of the maximal ideal by coefficient comparison, including the nonzero class of \(p\) modulo \(p^2\). Thus these are the original complete regular local rings of dimensions \(d\) and \(d+1\).
+
+The remark on universal catenarity follows with its original hypotheses. A regular local ring is Cohen–Macaulay by algebra.tex:25731–25747, and a Noetherian Cohen–Macaulay ring is universally catenary by 25606–25638. The latter proof computes the length of a maximal chain between \(\mathfrak p\) and \(\mathfrak q\) as
+\(\dim A_{\mathfrak q}-\dim A_{\mathfrak p}\), using the Cohen–Macaulay full-chain length theorem, and applies the same argument to polynomial algebras. A quotient \(R=A/J\) inherits universal catenarity because every finite type \(R\)-algebra, with its original presentation, is also a finite type \(A\)-algebra. The Cohen presentation above therefore has exactly the consequence asserted in the source remark.
+
+For a complete regular local \(R\) with coefficient field \(k\), choose the original \(f_1,\ldots,f_d\) lifting a basis of \(\mathfrak m/\mathfrak m^2\). Nakayama's lemma makes them generators of \(\mathfrak m\), and regularity says \(d=\dim R\). The just-proved power-series construction gives a surjective \(k\)-algebra map
+\[
+ k[[x_1,\ldots,x_d]]\longrightarrow R,\qquad x_i\longmapsto f_i.
+\]
+If the kernel contained a nonzero \(F\), then \(F\) is in the source maximal ideal and is not in its zero minimal prime. The exact one-equation theorem, algebra.tex:14693–14710, gives source quotient dimension \(d-1\), forcing \(\dim R\leq d-1\), a contradiction. Thus the map is an isomorphism. This verifies both clauses of the regular-complete lemma, with the given \(k\)-algebra structure retained. Its wording about variable-adic completeness has the same legitimate module-action reading as above and does not require a new source correction.
+
+Finally let the original \(R\) be a Noetherian complete local domain. Its coefficient subring is a field or a Cohen ring: an Artinian coefficient ring with a nonzero nilpotent \(p\) cannot embed in a domain. In Case I retain the coefficient field \(k\), set \(d=\dim R\), and choose the original \(x_1,\ldots,x_d\in\mathfrak m\) generating an ideal of definition \(I\). In Case II retain the coefficient Cohen ring \(\Lambda\), set \(d+1=\dim R\), and use its actual prime \(p\). It is a nonzero nonunit in the domain \(R\), so 14693–14710 gives \(\dim R/pR=d\). Choose the source \(x_1,\ldots,x_d\) whose images generate an ideal of definition in \(R/pR\); their lifts lie in \(\mathfrak m\). Then \(I=(p,x_1,\ldots,x_d)\) is an ideal of definition in \(R\).
+
+In either case \(I\subseteq\mathfrak m\) and some \(\mathfrak m^c\subseteq I\); hence
+\(\mathfrak m^{cn}\subseteq I^n\subseteq\mathfrak m^n\). The identity map gives both inverse completion comparisons, so \(R\) is complete and separated for the actual \(I\)-adic filtration. Define, respectively,
+\[
+ A=k[[X_1,\ldots,X_d]],\quad I_0=(X_1,\ldots,X_d),
+\]
+or
+\[
+ A=\Lambda[[X_1,\ldots,X_d]],\quad I_0=(p,X_1,\ldots,X_d).
+\]
+The continuous map \(A\to R\) sends \(X_i\) to the original \(x_i\), and the coefficient ring by its original embedding. Then \(I_0R=I\). The ring \(R/I\) is Noetherian local of dimension zero, hence Artinian, and it has a finite filtration with factors its residue field \(k=A/I_0\). Thus it is a finite \(A/I_0\)-module.
+
+Here is the exact finite-module lifting underlying algebra.tex:22859–22883 in this application. Choose elements \(e_1,\ldots,e_t\in R\) whose images generate \(R/I\) over \(k\). Given \(r\in R\), choose a first coefficient vector over \(A\) realizing its class modulo \(I\). An error in \(I^N=I_0^NR\) is a sum of degree-\(N\) monomials in the original generators of \(I_0\) times elements of \(R\). Lift the latter elements modulo \(I\) using the same \(e_j\). This gives a correction vector \(c_N\in I_0^N A^t\), leaving error in \(I^{N+1}\). The sum of the vectors converges in the complete module \(A^t\); its image under \((e_1,\ldots,e_t)\) is \(r\) by separatedness of \(R\). Hence \(A^t\to R\) is onto and the original map \(A\to R\) is finite.
+
+Its kernel is prime because \(R\) is a domain. If it were nonzero, choose a nonzero \(F\) in it. The source \(A\) is a Noetherian local domain of dimension \(N=\dim R\), and \(F\) is a nonzero nonunit. The one-equation theorem gives \(\dim A/(F)=N-1\), so the quotient by the kernel has dimension at most \(N-1\). But \(R\) is integral over that quotient, and going up together with incomparability gives equality of their dimensions: prime chains lift and a strict chain in the integral extension has strict contracted inclusions. This contradicts \(\dim R=N\). Thus the map is injective, and its image is the exact subring \(R_0\subset R\) specified by MC-STK-ERR-0703. Its residue map is the original coefficient residue isomorphism. Case I has now been proved only in Case I; MC-STK-ERR-0704 correctly leaves the proof open until Case II is also completed. The argument retains the independent dimensions \(d\) and \(d+1\), all original parameters and both cases, including \(d=0\).
+
+## Report dispositions and propagation
+
+Ten physical reports give eight retained-unit groups and eight retained operations. The proper-ideal qualification corrects the zero-ring boundary. The typed lifting composite and the completion-ideal clarification preserve the original maps; the latter is not evidence that the source's module-adic interpretation was false. The remaining edits clarify terminology, sentence structure and which proof case has finished. No new operation or optional extension group is added.
+
+The original flat-local residue-field construction of ALGEBRA_CONSTRUCT_FLAT_NOTES_20260929.md feeds the Cohen-ring existence proof. The field formal-smoothness theorem and the previously corrected square-zero lifting proof feed the compatible coefficient maps; their exact quotient arrows then feed power-series surjectivity. The same coefficient ring and completeness maps are retained in both finite-extension cases. These receiving effects, the complete source dependencies and the earlier proof-note hashes are bound in the evidence receipt. Source attribution includes the original completion reference to Matlis, Theorem 15, and the source's attribution of that argument to Bjorn Poonen; no new reading of those external materials is claimed.

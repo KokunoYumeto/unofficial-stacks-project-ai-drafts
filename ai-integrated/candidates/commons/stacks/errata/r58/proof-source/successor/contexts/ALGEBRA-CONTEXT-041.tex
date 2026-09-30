@@ -1,0 +1,74 @@
+\begin{lemma}
+\label{editorial-source-lemma-surjective-spec-radical-ideal}
+Let $\varphi : R \to S$ be a ring map.
+The following are equivalent:
+\begin{enumerate}
+\item The map $\Spec(S) \to \Spec(R)$ is surjective.
+\item For any ideal $I \subset R$
+the inverse image of $\sqrt{IS}$ in $R$ is equal to $\sqrt{I}$.
+\item For any radical ideal $I \subset R$ the inverse image
+of $IS$ in $R$ is equal to $I$.
+\item For every prime $\mathfrak p$ of $R$ the inverse
+image of $\mathfrak p S$ in $R$ is $\mathfrak p$.
+\end{enumerate}
+In this case the same is true after any base change: Given a ring map
+$R \to R'$ the ring map $R' \to R' \otimes_R S$ has the equivalent
+properties (1), (2), (3), and (4) as well.
+\end{lemma}
+
+\begin{proof}
+For any ideal $J\subset S$, an element $x\in R$ belongs to
+$\sqrt{\varphi^{-1}(J)}$ if and only if
+$\varphi(x)^a\in J$ for some $a\geq1$. Thus
+$\sqrt{\varphi^{-1}(J)}=\varphi^{-1}(\sqrt J)$.
+Assume (1). For any ideal $I\subset R$, the inclusion
+$\sqrt I\subset\varphi^{-1}(\sqrt{IS})$ follows by applying
+$\varphi$ to a power lying in $I$. If $x\notin\sqrt I$, there is
+a prime $\mathfrak p\supset I$ with $x\notin\mathfrak p$, by
+Lemma \ref{editorial-source-lemma-Zariski-topology}. Choose a prime $\mathfrak q$
+of $S$ over $\mathfrak p$. Then $IS\subset\mathfrak q$ but
+$\varphi(x)\notin\mathfrak q$, so $\varphi(x)\notin\sqrt{IS}$.
+This proves (2). If $I$ is radical, (2) gives
+$I\subset\varphi^{-1}(IS)\subset\varphi^{-1}(\sqrt{IS})=I$,
+proving (3), which immediately implies (4).
+Finally assume (4). The quotient map $R/\mathfrak p\to S/\mathfrak pS$
+is injective for every prime $\mathfrak p$. Inverting the nonzero
+elements of the domain $R/\mathfrak p$ gives a nonzero ring:
+otherwise some such element would map to zero in $S/\mathfrak pS$
+by the equality criterion for $1/1=0/1$, contradicting injectivity.
+This ring is $S\otimes_R\kappa(\mathfrak p)$, so
+Lemma \ref{editorial-source-lemma-in-image} places $\mathfrak p$ in the image.
+This proves (1), and hence the equivalence of all four properties.
+
+\medskip\noindent
+Assume (1) holds. Let $R \to R'$ be a ring map. Let
+$\mathfrak p' \subset R'$ be a prime ideal lying over the prime
+$\mathfrak p$ of $R$. To see that $\mathfrak p'$ is in the image
+of $\Spec(R' \otimes_R S) \to \Spec(R')$ we have to show
+that $(R' \otimes_R S) \otimes_{R'} \kappa(\mathfrak p')$ is not zero, see
+Lemma \ref{editorial-source-lemma-in-image}.
+Write $K=\kappa(\mathfrak p)$ and $K'=\kappa(\mathfrak p')$.
+The given map induces an injection $\iota:K\hookrightarrow K'$:
+its map $R/\mathfrak p\to R'/\mathfrak p'$ is injective and every
+nonzero denominator remains nonzero in $K'$. There is an isomorphism
+$$
+(R'\otimes_RS)\otimes_{R'}K'
+\longrightarrow (S\otimes_RK)\otimes_KK'
+$$
+sending $(r'\otimes s)\otimes\lambda$ to
+$(s\otimes1)\otimes\overline{r'}\lambda$, where
+$\overline{r'}$ denotes the image in $K'$.
+Its inverse sends $(s\otimes a)\otimes\lambda$ to
+$(1\otimes s)\otimes\iota(a)\lambda$.
+The balancing relations over $R$, $R'$ and $K$ hold because the
+coefficient maps into $K'$ agree; the maps preserve products and
+units. Their composites are identities: in one direction move
+$r'$ across the tensor product over $R'$, and in the other move
+$a$ across the tensor product over $K$.
+By (1) and Lemma \ref{editorial-source-lemma-in-image}, $S\otimes_RK$ is nonzero.
+A $K$-basis containing its nonzero element $1$ gives a direct sum
+of copies of $K$, whose tensor product with $K'$ is the corresponding
+direct sum of copies of $K'$. It is nonzero. Thus every
+$\mathfrak p'$ is in the image, proving (1) after base change and
+therefore all four equivalent properties there.
+\end{proof}

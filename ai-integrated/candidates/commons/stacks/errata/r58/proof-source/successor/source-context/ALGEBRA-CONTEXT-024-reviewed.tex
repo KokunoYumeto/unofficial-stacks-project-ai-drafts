@@ -1,0 +1,34 @@
+\begin{lemma}
+\label{lemma-irreducible}
+Let $R$ be a ring.
+\begin{enumerate}
+\item For a prime $\mathfrak p \subset R$ the closure
+of $\{\mathfrak p\}$ in the Zariski topology is $V(\mathfrak p)$.
+In a formula $\overline{\{\mathfrak p\}} = V(\mathfrak p)$.
+\item The irreducible closed subsets of $\Spec(R)$ are
+exactly the subsets $V(\mathfrak p)$, with $\mathfrak p \subset R$
+a prime.
+\item The irreducible components (see Topology,
+Definition \ref{topology-definition-irreducible-components})
+of $\Spec(R)$ are  exactly the subsets $V(\mathfrak p)$,
+with $\mathfrak p \subset R$ a minimal prime.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Note that if $ \mathfrak p \in V(I)$, then
+$I \subset \mathfrak p$. Hence,
+clearly $\overline{\{\mathfrak p\}} = V(\mathfrak p)$.
+In particular $V(\mathfrak p)$ is the closure of
+a singleton and hence irreducible.
+The second assertion implies the third.
+To show the second, let
+$V(I) \subset \Spec(R)$ with $I$ a radical ideal.
+If $I=R$, then $V(I)=\emptyset$, which is not irreducible.
+We may therefore suppose that $I$ is proper.
+If $I$ is not prime, then choose $a, b\in R$, $a, b\not \in I$
+with $ab\in I$. In this case $V(I, a) \cup V(I, b) = V(I)$,
+but neither $V(I, b) = V(I)$ nor $V(I, a) = V(I)$, by
+Lemma \ref{lemma-Zariski-topology}. Hence $V(I)$ is not
+irreducible.
+\end{proof}

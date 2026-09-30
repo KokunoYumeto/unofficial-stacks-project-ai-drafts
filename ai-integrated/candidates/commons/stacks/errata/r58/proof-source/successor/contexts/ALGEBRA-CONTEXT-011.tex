@@ -1,0 +1,31 @@
+\begin{lemma}
+\label{editorial-source-lemma-fun}
+Let $R$ be a ring.
+Let $M$ be a finite $R$-module.
+Let $\varphi : M \to M$ be a surjective $R$-module map.
+Then $\varphi$ is an isomorphism. Moreover, its inverse belongs
+to the subalgebra $R[\varphi]\subset\operatorname{End}_R(M)$:
+there is a polynomial $Q\in R[T]$ with $\varphi^{-1}=Q(\varphi)$.
+\end{lemma}
+
+\begin{proof}[First proof]
+Write $R' = R[x]$ and think of $M$ as a finite $R'$-module with
+$x$ acting via $\varphi$. Set $I = (x) \subset R'$. By our assumption that
+$\varphi$ is surjective we have $IM = M$. Hence we may apply
+Lemma \ref{editorial-source-lemma-charpoly-module-ideal}
+to $M$ as an $R'$-module, the ideal $I$ and the endomorphism $\text{id}_M$.
+We conclude that
+$(1 + a_1 + \ldots + a_n)\text{id}_M = 0$ with $a_j \in I$.
+Write $a_j = b_j(x)x$ for some $b_j(x) \in R[x]$.
+Translating back into $\varphi$ we see that
+$\text{id}_M = -(\sum_{j = 1}^{n} b_j(\varphi)) \varphi$, and hence
+$\varphi$ is invertible. More explicitly, put
+$Q(T)=-\sum_{j=1}^{n}b_j(T)\in R[T]$, where $b_j(T)$ is
+obtained from $b_j(x)$ by replacing its indeterminate $x$ by $T$.
+The displayed identity gives $Q(\varphi)\varphi=\mathrm{id}_M$.
+Every power of $\varphi$ and every scalar multiplication commute
+with $\varphi$, so also $\varphi Q(\varphi)=\mathrm{id}_M$.
+Thus the same polynomial gives the two-sided inverse.
+If $M=0$, the zero polynomial gives its unique endomorphism,
+which is also its identity and inverse.
+\end{proof}

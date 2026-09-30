@@ -1,0 +1,238 @@
+# Dimension of fibres: original charts, universal loci and valuation coefficients
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:31140–31433, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All twenty reports in this section are read. The complete current interval equals the authority plus MC-STK-ERR-0660 through 0666, seven units with ten operations. Three proposed operations supply two terminal periods and “by” after “denote”. Complete proofs and all extended statements below are separate editorial material; neither current nor diplomatic translations are rewritten around them.
+
+## The original polynomial chart and every localization
+
+The relative dimension at \(\mathfrak q\) is the dimension of the fibre as a topological space at its point, not just the dimension of the local fibre ring. For example, at the generic prime of \(k[X]\) the local ring \(k(X)\) has dimension zero, but every open neighbourhood in \(\operatorname{Spec}(k[X])\) has dimension one. This distinction is retained in every use below.
+
+At 31170 the already composed 0660 defines \(\mathfrak p\) as the inverse image of \(\mathfrak q\). Set
+\[
+ H=S\otimes_R\kappa(\mathfrak p),\qquad
+ n=\dim_{\bar{\mathfrak q}}\operatorname{Spec}(H).
+\]
+This is a finite-type field algebra, and \(\bar{\mathfrak q}\) exists, so the fibre is nonzero and \(n\) is a finite nonnegative integer. Choose an open neighbourhood \(U\) of dimension \(n\). The fibre topology is induced by the quotient and localization maps from \(S\): each fibre element is a fraction of the image of an element of \(S\) by an element from \(R\setminus\mathfrak p\), and that denominator is a unit on the entire fibre. Thus the principal fibre opens have the form \(D(\bar a)\), \(a\in S\). Choose \(a\notin\mathfrak q\) with \(D(\bar a)\subset U\). Its dimension is at most \(n\) and at least the minimum neighbourhood dimension \(n\); hence it is exactly \(n\). Keep \(S^{(1)}=S_a\), with this explicit localization map.
+
+Choose original generators \(z_1,\ldots,z_N\) of \(S^{(1)}\) over \(R\), including \(a^{-1}\) if needed. The Noether normalization lemma at 28024–28054 gives polynomials with integer coefficients in these original generators, whose images \(y_1,\ldots,y_n\) make
+\[
+ \kappa(\mathfrak p)[t_1,\ldots,t_n]\longrightarrow
+                  H_{\bar a},\qquad t_i\longmapsto\bar y_i
+\]
+finite. Their integer coefficients lift without choosing an embedding of \(\kappa(\mathfrak p)\) into \(R\). Hence they define the actual map
+\[
+ P=R[t_1,\ldots,t_n]\longrightarrow S^{(1)}.
+\]
+Let \(\mathfrak r\) be the inverse image of \(\mathfrak qS_a\). It contracts to \(\mathfrak p\), and its residue field is an algebra over \(\kappa(\mathfrak p)\). The fibre of \(S^{(1)}\) over \(\mathfrak r\) is the base change of the displayed finite map to \(\kappa(\mathfrak r)\), so it is finite. Thus \(P\to S^{(1)}\) is quasi-finite at \(\mathfrak qS_a\).
+
+Openness provides \(v\in S_a\) outside that prime such that \(S_a[1/v]\) is quasi-finite over \(P\). Write the actual \(v=b/a^M\), \(b\in S\), with \(b\notin\mathfrak q\). Then
+\[
+ S_a[1/v]\cong S_{ab};
+\]
+one direction sends \(v^{-1}\) to \(a^M/b\), and the other uses the fact that \(a\) and \(v\) are units to invert \(b=a^M v\). Set \(g=ab\). This proves the source conclusion with a witness in the original \(S\), including \(n=0\). Corrections 0661 and 0662 retain the actual barred prime and the polynomial-variable comma; no map or coefficient is changed.
+
+## The refined chart and its contracted prime
+
+At 31211 retain \(n=\dim_{\mathfrak q}(S/R)\) and
+\[
+ r=\operatorname{trdeg}_{\kappa(\mathfrak p)}\kappa(\mathfrak q).
+\]
+Use the preceding principal chart \(P=R[t_1,\ldots,t_n]\to S_a\), and denote the corresponding prime of \(P\) by \(\mathfrak q'\). Its residue extension into \(\kappa(\mathfrak q)\) is finite because the map is quasi-finite. Consequently the corresponding prime \(\overline{\mathfrak q}'\) of \(\kappa(\mathfrak p)[t_1,\ldots,t_n]\) has residue transcendence degree \(r\), and \(0\leq r\leq n\).
+
+The refined normalization theorem at 28073–28123 gives a finite map
+\[
+ \kappa(\mathfrak p)[x_1,\ldots,x_n]\longrightarrow
+ \kappa(\mathfrak p)[t_1,\ldots,t_n],\qquad x_i\longmapsto\bar h_i,
+\]
+whose contracted prime is \((x_{r+1},\ldots,x_n)\). The earlier proof audit ALGEBRA-RECON-667 and 673 retains the original leading coefficient, its unit inverse, and the forward and inverse polynomial-coordinate maps. Those exact maps supply this dependency; no source change of coordinate is used to erase its original data.
+
+There are finitely many coefficients in the \(\bar h_i\). Write them as original fractions in \(\operatorname{Frac}(R/\mathfrak p)\), choose lifts of each numerator and denominator to \(R\), and let \(f\notin\mathfrak p\) be the product of the denominators. Then each \(\bar h_i\) lifts to a specified \(h_i\in R_f[t_1,\ldots,t_n]\). Define
+\[
+ \psi:R_f[x_1,\ldots,x_n]\longrightarrow R_f[t_1,\ldots,t_n],
+ \qquad x_i\longmapsto h_i.
+\]
+Its fibre over \(\mathfrak p\) is the displayed finite map. The same fibre calculation as above proves quasi-finiteness at \(\mathfrak q'R_f[t_1,\ldots,t_n]\). Choose the original principal witness \(v\) outside this prime for its quasi-finite neighbourhood. The second map to \(S_{af}\), being a base change and restriction of the first quasi-finite chart, is quasi-finite, and remains so after inverting the image of \(v\). Their composite is quasi-finite.
+
+To express the conclusion in the original \(S\), write that image as
+\[
+ \varphi(v)=b/(a^M\varphi(f)^N)\in S_{a\varphi(f)},
+ \qquad b\notin\mathfrak q.
+\]
+Set \(g=a\varphi(f)b\in S\setminus\mathfrak q\). The stated inversions give exactly \(S_g\); none of the three required factors is suppressed. Since \(f\) has invertible image there, this is an \(R_f\)-algebra.
+
+The contracted prime of the composite is exactly
+\[
+ \mathfrak pR_f[x_1,\ldots,x_n]+
+                      (x_{r+1},\ldots,x_n).
+ \tag{1}
+\]
+Indeed reduction to \(\kappa(\mathfrak p)[x_1,\ldots,x_n]\) gives the coordinate-tail ideal by construction. Its contraction to \(R_f[x_1,\ldots,x_n]\) is (1): after deleting monomials involving a tail variable, membership says that each remaining original coefficient maps to zero in \(\kappa(\mathfrak p)\), which is equivalent to its membership in \(\mathfrak pR_f\). The quotient \((R_f/\mathfrak pR_f)[x_1,\ldots,x_r]\) is a domain, and its inclusion into \(\kappa(\mathfrak p)[x_1,\ldots,x_r]\) is injective, confirming the contraction without a hidden denominator. The proposed period at 31226 only terminates this statement. OCC-01428 has an inaccurate quoted phrase, but its specified terminal locus does have this punctuation omission; the review does not adopt that quote as source text.
+
+## Dimension bounds and exact base change
+
+For 31267, localize the original map at \(\mathfrak p\) and put \(T=(R\setminus\mathfrak p)^{-1}S\). Its integral closure \(B\subset T\) over the image of \(R_{\mathfrak p}\) is an integral \(R_{\mathfrak p}\)-algebra. The main theorem at the original prime gives
+\[
+ S_{\mathfrak q}\cong B_{\mathfrak r},
+ \qquad \mathfrak r=B\cap\mathfrak qT.
+\]
+This is the prime corrected by 0663. In particular one must not assert \(B\subset S\) before that base localization, nor reverse the direction of the prime map. An integral ring map, even if not injective, contracts every strictly increasing prime chain strictly, by integral incomparability after quotienting its kernel. Thus the original integral dimension result at 27347–27358 gives
+\[
+ \dim S_{\mathfrak q}
+ =\dim B_{\mathfrak r}
+ \leq\dim B
+ \leq\dim R_{\mathfrak p}.
+ \tag{2}
+\]
+No Noetherian hypothesis is needed. For a quasi-finite map \(k[t_1,\ldots,t_n]\to A\) with \(A\) of finite type over a field \(k\), apply (2) to every prime. Any finite prime chain in \(A\) lies in the localization at its last prime, so \(\dim A\) is the supremum of those local dimensions, at most \(n\). Injectivity of the polynomial map is unnecessary. Correction 0664 changes the inclusion sign to a map; this is needed by the later fibre applications, whose maps may have kernels.
+
+The polynomial chart through \(\mathfrak q\) now proves upper semicontinuity of pointwise relative dimension. At any base prime \(\mathfrak p'\), the chart fibre is quasi-finite over \(\kappa(\mathfrak p')[t_1,\ldots,t_n]\). The bound just proved shows its entire dimension at most \(n\), so all its point dimensions are at most \(n\). The principal chart is therefore an open neighbourhood on which the source's relative dimension is at most its original value at \(\mathfrak q\).
+
+For a base change \(R\to R'\), let \(S'=R'\otimes_R S\), let \(\mathfrak q'\subset S'\) contract to \(\mathfrak q\subset S\), and let \(\mathfrak p'\subset R'\) and \(\mathfrak p\subset R\) be their base primes. Keep the induced field map \(\kappa(\mathfrak p)\to\kappa(\mathfrak p')\). Associativity and the original quotient/localization maps give
+\[
+ S'\otimes_{R'}\kappa(\mathfrak p')
+ \cong S\otimes_R\kappa(\mathfrak p')
+ \cong
+ (S\otimes_R\kappa(\mathfrak p))
+                   \otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak p').
+ \tag{3}
+\]
+On a pure tensor the first isomorphism sends \((a'\otimes s)\otimes c\) to \(s\otimes a'c\); its inverse sends \(s\otimes c\) to \((1\otimes s)\otimes c\). The second uses the same scalar balancing, and its inverse inserts \(1\). These maps match the corresponding primes. The original point-dimension field-extension result at 28306–28356 therefore gives equality of the two relative dimensions, with no assertion that local-ring heights or nilpotent multiplicities stay unchanged. This proves the stated inverse-image identity. The proposed “denote by” at 31337 corrects the actual source sentence, not the inaccurate “composition” quoted in OCC-01430.
+
+For finite presentation, retain
+\[
+ S=R[z_1,\ldots,z_N]/(F_1,\ldots,F_m).
+\]
+The bound \(n\) is independent of the number \(N\) of variables, as corrected in both occurrences by 0665. Let \(R_0\) be the actual integer subalgebra generated by all original coefficients in the \(F_i\), and define \(S_0\) by those same polynomials. The natural map \(R\otimes_{R_0}S_0\to S\), sending \(r\otimes z_i\) to \(rz_i\), is an isomorphism by the polynomial presentation. The ring \(R_0\) is Noetherian as a quotient of a finitely generated integer polynomial ring, and so is \(S_0\). Hence its open relative-dimension locus \(V_{0,n}\) is quasi-compact. Express it as a finite union of principal opens. By (3), its inverse image is exactly \(V_n\), and the inverse image of each principal open is the corresponding principal open in \(\operatorname{Spec}(S)\), which is quasi-compact. This proves the assertion directly without an extra finiteness condition on \(R_0\to R\).
+
+## Minimal chart dimension and finite charts
+
+**ALGEBRA-RECON-781, editorial consequence.** For any finite-type \(R\to S\) and \(\mathfrak q\subset S\), \(\dim_{\mathfrak q}(S/R)\) equals the least nonnegative integer \(d\) for which some original \(g\in S\setminus\mathfrak q\) admits a quasi-finite \(R\)-algebra map
+\[
+ R[t_1,\ldots,t_d]\longrightarrow S_g.
+ \tag{4}
+\]
+The source chart proves existence for \(d=n=\dim_{\mathfrak q}(S/R)\). Conversely base changing (4) to \(\kappa(\mathfrak p)\) and using (2) gives dimension at most \(d\) on that fibre chart. The point dimension at \(\mathfrak q\) is unchanged by restriction to an open neighbourhood, by its definition as the minimum over such neighbourhoods. Hence \(n\leq d\). This proves the minimum statement, including \(n=0\), without changing the original coordinate system of \(S\). By (3), this minimum is unchanged at every point above \(\mathfrak q\) under arbitrary base change.
+
+Suppose in addition \(S/R\) is finitely presented, and fix \(n\geq0\). The quasi-compact open \(V_n\) has a finite cover by such principal charts with integers \(d_i\leq n\). If desired to use the same number of variables in each chart, define the explicit quotient map
+\[
+ R[t_1,\ldots,t_n]\longrightarrow R[t_1,\ldots,t_{d_i}],
+ \quad t_j\longmapsto
+ \begin{cases}t_j&j\leq d_i,\\0&j>d_i.\end{cases}
+\]
+It is finite as a module map because it is surjective, and composition preserves quasi-finiteness. The zero images are retained, not treated as an injective polynomial inclusion. For each chart, ALGEBRA-RECON-764 then constructs a finite algebra over its polynomial base into whose spectrum the chart is an open immersion. This is a finite list of actual finite-envelope factorizations covering \(V_n\), not a claim of one globally chosen coordinate map.
+
+## Universal dimension ideals and the finite-presentation boundary
+
+**ALGEBRA-RECON-782, editorial consequence.** For each finite-type map and \(n\geq0\), define the actual ideal
+\[
+ I_n=\{a\in S:D_S(a)\subseteq V_n\}.
+ \tag{5}
+\]
+This set is an ideal: \(D(ab)\subseteq D(a)\), and \(D(a+b)\subseteq D(a)\cup D(b)\). It is radical since \(D(a^r)=D(a)\) for every positive integer \(r\). Every point of the open \(V_n\) has a principal neighbourhood contained in it, so
+\[
+ D(I_n)=V_n,\qquad V(I_n)=\operatorname{Spec}(S)\setminus V_n.
+\]
+Thus (5) is the unique radical ideal of that closed complement. The ideals increase with \(n\), because the open sets do.
+
+For any base change \(R\to R'\), (3) identifies the open \(V_n'\) with the inverse image of \(V_n\). Consequently their closed complements have radical ideals related by the exact equality
+\[
+ I_n(S'/R')=\sqrt{I_n(S/R)\,S'}.
+ \tag{6}
+\]
+This does not assert equality of the extended ideal before taking its radical. If \(S/R\) is finitely presented, quasi-compactness supplies finitely many original \(a_1,\ldots,a_\ell\in I_n\) whose principal opens cover \(V_n\), and
+\[
+ I_n=\sqrt{(a_1,\ldots,a_\ell)S}.
+\]
+For any ring map \(S\to T\), the induced spectrum map has image in \(V_n\) exactly when \(I_nT=T\): this is equivalent to saying no prime of \(T\) contains its extension, and any proper ideal is contained in a maximal ideal. This gives a universal algebraic test for that open, without imposing finite type on \(T\).
+
+If \(S\) is generated by \(N\) elements over \(R\), every fibre is a quotient of a polynomial ring in \(N\) variables over a field and has dimension at most \(N\). Thus \(V_N=\operatorname{Spec}(S)\). In the finitely presented case the exact relative-dimension sets are
+\[
+ V_0,\quad V_1\setminus V_0,\quad\ldots,\quad V_N\setminus V_{N-1}.
+\]
+Each is a finite Boolean combination of principal opens, using the finite lists just constructed; hence these give a finite constructible stratification. Formula (3) shows that every one of these strata pulls back exactly under arbitrary base change.
+
+Finite type alone does not imply quasi-compactness of \(V_0\). Retain the product ring and coordinate idempotents from the earlier boundary example in ALGEBRA-RECON-685:
+\[
+ R=\prod_{i\geq1}k,\qquad
+ I=\bigoplus_{i\geq1}k e_i,\qquad
+ S=R[X]/(e_iX:i\geq1).
+ \tag{7}
+\]
+This is a finite-type \(R\)-algebra, with its full infinite relation list retained. If a prime \(\mathfrak p\) of \(R\) avoids some \(e_i\), its localization has \(e_i=1\), hence is \(k\) via the \(i\)-th coordinate; such a prime is uniquely the coordinate kernel. The corresponding fibre of (7) is \(k[X]/(X)=k\), of dimension zero. If \(\mathfrak p\) contains all \(e_i\), then it contains \(I\), and the fibre is \(\kappa(\mathfrak p)[X]\), with point dimension one at every prime. Such primes exist because \(I\) is proper: a finite-support element cannot equal \(1\), so \(I\) lies in a maximal ideal.
+
+It follows that
+\[
+ V_0=\bigcup_{i\geq1}D_S(e_i).
+\]
+Each displayed open is the nonempty one-point spectrum of \(k\), and they are pairwise disjoint because \(e_ie_j=0\) for \(i\ne j\). This cover has no finite subcover; hence \(V_0\) is not quasi-compact. In fact its radical ideal is \(IS\), with no suppressed relation: \(R/I\) is reduced because a power of a sequence has finite support only when the sequence has finite support, and
+\[
+ S/IS=(R/I)[X]
+\]
+is reduced. Therefore \(IS\) is radical, its complement open is exactly the displayed union, and (5) gives \(I_0=IS\). This counterexample proves why the finite-presentation step needs finite coefficient data; it does not weaken the source openness statement, which holds for all finite-type maps.
+
+## The valuation-ring proof with the original coefficient factor
+
+At 31380 retain the valuation domain \(R\), its fraction field \(K\), its residue field \(k\), and the original finite-type domain \(S\) containing \(R\). Put
+\[
+ d=\dim(S\otimes_R K),\qquad
+ n=\dim_{\mathfrak q}(S/R)
+\]
+for any \(\mathfrak q\supseteq\mathfrak m_R S\). The three substitutions in 0666 are necessary: \(S\) is not generally a \(k\)-algebra. For \(R=\mathbf Z_{(p)}\), \(S=R\), a unital map \(\mathbf F_p\to S\) cannot exist, since it would make \(p1_S=0\). Only \(S\otimes_R k\) has the stated residue-field algebra structure.
+
+Upper semicontinuity supplies a principal open through \(\mathfrak q\) with relative dimension at most \(n\). Since \(S\) is a domain, this open contains its generic prime zero. At zero the fibre is the generic domain \(S\otimes_R K\); its point dimension is \(d\), since a finite-type field domain has the same dimension on every nonempty open, equal to its fraction-field transcendence degree. Thus \(d\leq n\).
+
+Use the original chart \(R[t_1,\ldots,t_n]\to S_g\), \(g\notin\mathfrak q\). Its generic fibre remains a domain with dimension \(d\). If \(d<n\), the generic polynomial map has a nonzero kernel: injectivity would make the images of \(t_1,\ldots,t_n\) algebraically independent in \(\operatorname{Frac}(S)\), forcing transcendence degree at least \(n\). Choose the original nonzero kernel polynomial
+\[
+ f=\sum_{\alpha}a_\alpha t^\alpha\in K[t_1,\ldots,t_n].
+\]
+The finitely many nonzero coefficients have a member \(a_\beta\) of least valuation, because the divisibility order of a valuation ring is total. Retain both this coefficient and the comparison polynomial
+\[
+ F=\sum_\alpha (a_\alpha/a_\beta)t^\alpha\in R[t_1,\ldots,t_n],
+ \qquad f=a_\beta F,\qquad
+ a_\beta\ne0,\quad [t^\beta]F=1.
+ \tag{8}
+\]
+Equation (8) is an explicit factorization of the original polynomial, not permission to replace it without its factor. In \(S_g\otimes_R K\), the image of \(a_\beta\) is a unit, so the original equation \(f=0\) gives \(F=0\). The map \(S_g\to S_g\otimes_R K\) is injective since \(S_g\) is a domain containing \(R\); therefore the same \(F=0\) holds in \(S_g\) itself. Its residue polynomial \(\bar F\in k[t_1,\ldots,t_n]\) is nonzero, because its coefficient at \(t^\beta\) is \(1\).
+
+The special-fibre chart consequently factors through
+\[
+ k[t_1,\ldots,t_n]/(\bar F)\longrightarrow S_g\otimes_R k.
+\]
+This map is quasi-finite: its fibres are the same as those of the original chart over primes containing \(\bar F\), and it is of finite type. A nonzero polynomial quotient has dimension at most \(n-1\): for any prime containing \(\bar F\), its image domain has fraction field generated by \(n\) elements satisfying the nonzero relation \(\bar F\), so its transcendence degree is at most \(n-1\); the dimension theorem for finite-type field domains then bounds every irreducible component. Applying (2) to this quasi-finite map bounds the entire special chart by \(n-1\). Its point at the original \(\mathfrak q\) still has point dimension \(n\), since the chart is an open neighbourhood. This is the contradiction. The case \(n=0\) needs no polynomial argument, since \(d\geq0\) already prevents \(d<n\).
+
+Therefore every point of the nonempty special fibre has point dimension \(d\). This proves equidimensionality as well: for each irreducible component of the finite-type field fibre, its generic point lies on no other component, and an open neighbourhood obtained by removing the other finitely many components has the dimension of that component. Its point dimension is therefore that same dimension, which was proved to equal \(d\). The special fibre is nonempty, so its dimension is \(d\). The proposed period at 31386 only terminates this source equality.
+
+## Every nonempty valuation fibre and the generically finite consequence
+
+**ALGEBRA-RECON-783, editorial extension.** Under the same hypotheses, every nonempty fibre over every prime \(\mathfrak p\subset R\) is equidimensional of dimension \(d=\dim(S\otimes_R K)\). Indeed \(R_{\mathfrak p}\) is again a valuation ring, with fraction field \(K\) and residue field \(\kappa(\mathfrak p)\). The actual localization
+\[
+ S_{\mathfrak p}=(R\setminus\mathfrak p)^{-1}S
+\]
+is a domain of finite type containing \(R_{\mathfrak p}\), and
+\[
+ S_{\mathfrak p}\otimes_{R_{\mathfrak p}}\kappa(\mathfrak p)
+       =S\otimes_R\kappa(\mathfrak p),\qquad
+ S_{\mathfrak p}\otimes_{R_{\mathfrak p}}K=S\otimes_R K
+\]
+by the original scalar maps. Apply the proved special-fibre theorem to this pair. At every existing point \(\mathfrak q\) of \(S\), its fibre is nonempty, so its relative point dimension is exactly \(d\). Thus the source function is constant on \(\operatorname{Spec}(S)\), even when some base fibres are empty.
+
+If \(\operatorname{Frac}(S)/K\) is algebraic, then the finite-type generic field algebra has dimension zero, so \(d=0\). Conversely \(d=0\) gives a finite algebraic fraction-field extension. The constant-dimension conclusion makes \(R\to S\) globally quasi-finite. ALGEBRA-RECON-764 then supplies a finite \(R\)-subalgebra \(A\subset S\) such that \(\operatorname{Spec}(S)\to\operatorname{Spec}(A)\) is an open immersion. This includes the actual finite-envelope maps; it is not a claim that \(S\) itself must be finite over \(R\).
+
+Two boundary examples retain the source hypotheses that matter. For \(R=k[t]_{(t)}\) and \(S=R[1/t]=k(t)\), the closed fibre is zero while the generic fibre is nonzero; one must restrict the equality to nonempty fibres. If “domain” is weakened only to a reduced algebra with injective base map, take
+\[
+ S=R[X]\times R/(t),\qquad
+ r\longmapsto(r,\bar r).
+\]
+This map is injective because of the first factor. The algebra is reduced, and its actual finite presentation is
+\[
+ R[e,z]/(e^2-e,ez-z,t(1-e))\longrightarrow R[X]\times R/(t),
+ \quad e\longmapsto(1,0),\quad z\longmapsto(X,0).
+\]
+The quotient splits by its complementary idempotents \(e,1-e\). Its \(e\)-factor is \(R[z]\), and its \(1-e\)-factor has \(z=0\) and \(t=0\), hence is \(R/(t)\). These two descriptions give the inverse and prove the asserted presentation. Its generic fibre is \(K[X]\), of dimension one, while the special fibre is \(k[X]\times k\), with components of dimensions one and zero. Thus equidimensionality and constant point dimension fail. The source domain hypothesis excludes that vertical component; the proof did not silently discard it.
+
+## Reading and propagation
+
+The exact bounded dependencies reread are algebra.tex:28024–28054, 28073–28123, 28306–28356 and 27347–27358. Earlier groups 665, 667 and 673 supply the checked normalization arguments with all original coefficient factors, and 674 supplies the point-dimension comparison. Group 781 combines the source chart with the corrected noninjective polynomial bound. Group 782 carries the exact base-change equality into radical ideals and finite constructible strata, and reuses the original product-ring data from group 685 for the finite-presentation boundary. Group 783 applies the source valuation argument at every original base prime and carries its zero-dimensional case into the finite-envelope theorem 764.
+
+The corpus query “valuation fibre dimension” has two research and two local-layer routing hits. The Bhatt–Scholze item is already present in the reading ledger with only lines 251–284 read earlier; this repeated hit adds no reading coverage or adopted result. The Bouis source and the two Split Support Geometry records remain unread and unadopted. No PDF fallback or novelty claim occurs. The existing source identities and exact historical coverage are retained.
+
+Next is Algebras and modules of finite presentation at 31434. Lookahead 31434–31460 and its three displayed report hits remain unadjudicated. No source or translation mutation, TeX build or publication occurs in this review.

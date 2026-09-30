@@ -1,0 +1,37 @@
+\begin{proposition}
+\label{editorial-source-proposition-localize-twice-module}
+View $S'^{-1}M$ as an $A$-module, then $S^{-1}(S'^{-1}M)$ is
+isomorphic to $(SS')^{-1}M$.
+\end{proposition}
+
+\begin{proof}
+Note that given an $A$-module $M$, the universal property of
+Lemma \ref{algebra-lemma-universal-property-localization-module} is available.
+We give an explicit construction of the isomorphism.
+
+\medskip\noindent
+We define the maps as follows
+\begin{align*}
+& f : S^{-1}(S'^{-1}M) \longrightarrow (SS')^{-1}M, \quad \frac{x/s'}{s}\mapsto
+x/ss'\\
+& g : (SS')^{-1}M \longrightarrow S^{-1}(S'^{-1}M), \quad x/t\mapsto
+\frac{x/s'}{s}\ \text{for some }s\in S, s'\in S', \text{ and }
+t = ss'
+\end{align*}
+We have to check that these homomorphisms are well-defined, that is,
+independent of the choice of the fraction. The universal property proves that these maps are well defined:
+every element of $S'$ and of $S$ acts invertibly on $(SS')^{-1}M$,
+so the map $M \to (SS')^{-1}M$ extends first to $S'^{-1}M$
+and then to $S^{-1}(S'^{-1}M)$, giving $f$ with the displayed formula.
+On $S^{-1}(S'^{-1}M)$ every $s' \in S'$ acts invertibly already
+on the inner localization, and every $s \in S$ acts invertibly
+on the outer localization. Thus every $ss' \in SS'$ acts invertibly,
+and $M \to S^{-1}(S'^{-1}M)$ extends uniquely to $g$.
+The displayed formula for $g$ follows by inverting the actions of
+$s'$ and $s$; it therefore does not depend on the chosen factorization
+of the denominator. Both composites restrict to the original
+localization map on $M$. Uniqueness in the universal property,
+applied once for $(SS')^{-1}M$ and successively for the two
+localizations, gives $f \circ g = \mathrm{id}_{(SS')^{-1}M}$ and
+$g \circ f = \mathrm{id}_{S^{-1}(S'^{-1}M)}$.
+\end{proof}

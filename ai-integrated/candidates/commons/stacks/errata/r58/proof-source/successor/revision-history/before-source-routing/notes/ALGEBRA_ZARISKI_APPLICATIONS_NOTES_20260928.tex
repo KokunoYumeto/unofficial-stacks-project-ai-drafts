@@ -1,0 +1,158 @@
+\subsection{Applications of Zariski Main: missing points and completed finite factors}\label{applications-of-zariski-main-missing-points-and-completed-finite-factors}
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:30954--31139, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All three reports in this interval are read. The complete current interval is the authority plus MC-STK-ERR-0659, which adds that \(B\) is not a field. Two new proposed language/punctuation operations are separate from all editorial proofs below. The original statements and source exposition remain identifiable in both translated branches.
+
+\subsubsection{The field exception and the original order formula}\label{the-field-exception-and-the-original-order-formula}
+
+At 30964 let \(A\subset B\) be the original domains, with \(A\) Noetherian local of dimension one, \(B\) of finite type over \(A\), and finite fraction-field extension \(L/K\). The generic fibre \(B\otimes_A K\) is \(L\): it is a finitely generated \(K\)-algebra contained in the finite-dimensional field extension \(L\), so is a finite-dimensional domain, hence a field, and has fraction field \(L\). Thus its only prime is zero. The earlier lemma at 27602--27638 says there are only finitely many primes above \(\mathfrak m_A\), each of height one and with algebraic residue extension. Their residue extensions are finite by finite type and the field case of Zariski's lemma, as used in the source. These primes are maximal because every nonzero prime has height one and no longer chain can occur; the only other prime of \(B\) is zero.
+
+If \(B\) is not a field, zero is not maximal, so all maximal ideals of \(B\) lie above \(\mathfrak m_A\), have height one, and have finite residue extensions. The ring \(B\) is then semi-local of dimension one and \(\mathfrak m_A B\ne B\). Conversely, if \(B\) is a field, it is \(L\), and each nonzero element of \(\mathfrak m_A\) becomes a unit; hence \(\mathfrak m_A B=B\). This proves the equivalence of the field exclusion with the stated closed-fibre condition in this particular setting.
+
+The source's original hypotheses do allow the field case. For \[
+ A=k[t]_{(t)},\qquad B=k(t)=A[1/t],
+\] the extension is of finite type and \(L=K\), yet the unique maximal ideal of \(B\) is zero. Its local ring has dimension zero, so the cited one-dimensional definition of \(\operatorname{ord}_{B_{(0)}}\) does not apply. Nor is there a residue-field map from \(A/\mathfrak m_A\) to \(B\) induced by the given inclusion: \(t\) is zero in the former and invertible in the latter. Even an independently chosen inclusion of constants does not give the required finite residue extension. Its contraction in a finite integral intermediate algebra is the generic prime, not a maximal ideal. MC-STK-ERR-0659 excludes exactly this case. It is retained as one already composed correction, not allocated again.
+
+The above fibre description also proves \(A\to B\) is globally quasi-finite, including when \(B=L\): the generic fibre is the finite field \(L/K\), and the closed fibre is a finite-type zero-dimensional algebra over \(\kappa(\mathfrak m_A)\), hence Artinian finite-dimensional (or zero). Thus the source's use of the global finite-envelope lemma at 30990 has its needed hypothesis.
+
+Under the added nonfield assumption, let \(C\subset B\) be the finite \(A\)-subalgebra from that lemma. The actual map \(\operatorname{Spec}(B)\to\operatorname{Spec}(C)\) is an open immersion by ALGEBRA-RECON-764. For each maximal ideal \(\mathfrak m_i\) of \(B\), its contraction \(\mathfrak n_i\) in \(C\) lies above \(\mathfrak m_A\), and is therefore maximal by integrality of \(C/A\). These contractions are distinct and \[
+ C_{\mathfrak n_i}=B_{\mathfrak m_i}
+\] under the original inclusions. Their residue fields and local orders consequently agree. Also \(\operatorname{Frac}(C)=L\): a nonzero principal chart on which \(C_g=B_g\) identifies their fraction fields. All remaining maximal ideals of \(C\) are the source's missing \(\mathfrak p_j\).
+
+For \(0\ne x\in\mathfrak m_A\), multiplication by \(x\) on the \(K\)-space \(L\) is scalar multiplication. In any basis its matrix is \(x\) times the identity, so its determinant, with no factor omitted, is \(x^{[L:K]}\). Apply the original finite norm/order formula at 30037--30078 to \(A\subset C\): \[
+ [L:K]\operatorname{ord}_A(x)
+ =
+ \sum_i[\kappa(\mathfrak n_i):\kappa(\mathfrak m_A)]
+          \operatorname{ord}_{C_{\mathfrak n_i}}(x)
+ +
+ \sum_j[\kappa(\mathfrak p_j):\kappa(\mathfrak m_A)]
+          \operatorname{ord}_{C_{\mathfrak p_j}}(x).
+ \tag{1}
+\] Each local ring here is a one-dimensional Noetherian domain. The quotient by \(x\) is nonzero (since \(x\) belongs to its maximal ideal) and Artinian (all primes containing nonzero \(x\) are maximal). Therefore its length, which is the displayed order, is a positive finite integer. Each residue degree is also a positive finite integer. Dropping the second sum yields the original inequality, and equality forces no missing maximal ideals.
+
+With no missing ideals, fix any original \(b\in B\) and set \[
+ I_b=\{c\in C:cb\in C\}.
+\] For every maximal ideal \(\mathfrak n_i\) of \(C\), the local equality writes \(b=d_i/s_i\) with \(d_i,s_i\in C\) and \(s_i\notin\mathfrak n_i\). The equality holds in \(L\), so \(s_i b=d_i\) holds in the original \(B\); hence \(I_b\) avoids each maximal ideal. It follows that \(I_b=C\), and \(b\in C\). Thus \(B=C\) is finite over \(A\). Conversely, if \(B/A\) is finite, the same finite norm formula directly gives equality. Equality for one chosen \(0\ne x\in\mathfrak m_A\) already suffices.
+
+\subsubsection{The exact deficit, including the field case}\label{the-exact-deficit-including-the-field-case}
+
+\textbf{ALGEBRA-RECON-769, editorial extension.} The field case can be included without assigning a one-dimensional order to a field. Retain all three original hypotheses, and index the first sum only by the primes of \(B\) lying above \(\mathfrak m_A\). Define \[
+ \Delta_B(x)
+ =
+ [L:K]\operatorname{ord}_A(x)
+ -
+ \sum_{\mathfrak q\cap A=\mathfrak m_A}
+       [\kappa(\mathfrak q):\kappa(\mathfrak m_A)]
+       \operatorname{ord}_{B_{\mathfrak q}}(x),
+ \qquad 0\ne x\in\mathfrak m_A.
+ \tag{2}
+\] All these local rings have dimension one by the argument above. If \(B=L\), the sum is empty, rather than a term at its zero maximal ideal. Take any finite envelope \(C\subset B\) with its actual open immersion. Let \(M_C\) be the maximal ideals of \(C\) absent from its image. Equation (1), with these indexing conventions, proves the exact identity \[
+ \Delta_B(x)=
+ \sum_{\mathfrak p\in M_C}
+     [\kappa(\mathfrak p):\kappa(\mathfrak m_A)]
+     \operatorname{length}_{C_{\mathfrak p}}
+                          (C_{\mathfrak p}/xC_{\mathfrak p}).
+ \tag{3}
+\] This includes every missing residue degree and local multiplicity. In particular \[
+ \Delta_B(x)\geq
+ \sum_{\mathfrak p\in M_C}
+       [\kappa(\mathfrak p):\kappa(\mathfrak m_A)]
+ \geq |M_C|.
+\] There is no cancellation because every length is positive. The left side shows that the full weighted sum, although its presentation uses an envelope, is independent of the choice of \(C\).
+
+For all these \(B\), including fields, \(\Delta_B(x)=0\) for one such \(x\) if and only if \(B/A\) is finite, and then it vanishes for every such \(x\). Indeed zero deficit means no missing maximal ideals. The denominator-ideal argument then gives \(B=C\), exactly as above. Conversely finiteness gives (1) with no missing points. A field \(B=L\) cannot be finite integral over the nonfield \(A\): if a field is integral over a domain, then for \(0\ne a\in A\), a monic equation for \(a^{-1}\), multiplied by \(a^{d-1}\), puts \(a^{-1}\) in \(A\), making \(A\) a field. For this field case (2) is explicitly \([L:K]\operatorname{ord}_A(x)>0\).
+
+For the original example \(A=k[t]_{(t)}, B=k(t)\), choose \(C=A\). For \(x=t^n u\), \(n\geq1\) and \(u\in A^*\), the sole missing prime is \((t)\). Its residue degree is one and the quotient \(A/(t^n u)\) has the filtration with successive quotients \(k\) given by \(1,t,\ldots,t^{n-1}\), so \(\Delta_B(x)=n\). The original unit \(u\) is retained; multiplication by it induces the actual equality of ideals \((t^n u)=(t^n)\).
+
+This exact deficit strengthens the previously reviewed rank bound in ALGEBRA-RECON-700 within the present finite-type hypotheses. It does not remove the module-finiteness requirement from the norm formula for an arbitrary integral overring: the nonfinite normalization counterexample in ALGEBRA-RECON-701 remains outside that conclusion. The source's corrected nonfield theorem stays unchanged in the translation; (2)--(3) are editorial statements with a different indexing convention.
+
+\subsubsection{The local finite-algebra realization}\label{the-local-finite-algebra-realization}
+
+At 31023 retain the local map \((R,\mathfrak m_R)\to(S,\mathfrak m_S)\), the essentially finite-type hypothesis, the finite residue extension and the zero-dimensional closed fibre. Choose the actual finite-type presentation \(S=S'_{\mathfrak q'}\) used in the source. Its local fibre is \[
+ S'_{\mathfrak q'}/\mathfrak m_R S'_{\mathfrak q'}
+ =S/\mathfrak m_R S.
+\] It has dimension zero and the given finite residue extension, so \(S'/R\) is quasi-finite at \(\mathfrak q'\). Openness provides \(g'\notin\mathfrak q'\) whose principal open is wholly quasi-finite. Applying the finite-envelope construction to this localized finite-type algebra gives a finite \(R\)-algebra \(S''\) and an open immersion of its spectrum into \(\operatorname{Spec}(S'')\). Choose one principal chart through the point. The chart identifies a localization of \(S'_{g'}\) with a localization of \(S''\), and localizing at the corresponding prime \(\mathfrak q''\) gives the actual \(R\)-algebra isomorphism \[
+ S=S'_{\mathfrak q'}\cong S''_{\mathfrak q''}.
+\] Each arrow comes from the chosen inclusion and the explicit numerator/denominator maps in ALGEBRA-RECON-764. This proves the source conclusion; no whole-proof replacement is proposed.
+
+The finite residue extension is essential even with zero-dimensional local fibre. For the local map \(k\to k(t)\), the target is a localization of \(k[t]\), so is essentially of finite type, and its fibre is the zero-dimensional field \(k(t)\). It cannot be a localization of a finite \(k\)-algebra: such an algebra is finite-dimensional, has only finite residue extensions, and every localization is a finite product of its finite-dimensional Artinian local factors. Thus the conclusion would make \(k(t)/k\) finite, a contradiction. This counterexample verifies why the source retains both conditions rather than just zero fibre dimension.
+
+\subsubsection{The completion factor and the citation scope}\label{the-completion-factor-and-the-citation-scope}
+
+At 31052 write \[
+ D=\widehat{R_{\mathfrak p}},\qquad T=D\otimes_R S.
+\] The hypotheses make \(R\) Noetherian, \(S/R\) of finite type, and the selected \(\mathfrak q\) quasi-finite above \(\mathfrak p\). They do not say that \(S/R\) is quasi-finite everywhere.
+
+The first paragraph, 31065--31069, cites the global quasi-finite open-integral-closure lemma for the existence of a finite \(R\)-subalgebra \(C\subset S\) and a witness \(g\in C\setminus\mathfrak q\) with \(C_g=S_g\). That particular global hypothesis has not been supplied. \textbf{ALGEBRA-RECON-768 records this citation scope problem as a separate conceptual correction.} The claimed finite algebra does exist, directly from the main theorem and the finite-subalgebra construction in the proof of the openness lemma, as written fully in ALGEBRA-RECON-764: if \(B_g=S_g\) for the integral closure \(B\), lift the finite list of original algebra generators as \(a_j/g^{n_j}\), and take \(C=\operatorname{Im}(R)[g,a_1,\ldots,a_r]\). It is finite by the original monic equations and \(C_g=S_g\). Thus no stronger hypothesis or normalized source statement is needed.
+
+Put \(\mathfrak q'=C\cap\mathfrak q\). Then \(C_{\mathfrak q'}=S_{\mathfrak q}\). The finite-completion lemma, reread at 23134--23174, gives \[
+ D\otimes_R C=E\times F,\qquad
+ E=\widehat{C_{\mathfrak q'}}.
+\] Its proof uses the actual Artinian product decomposition modulo each \(\mathfrak p^n\), followed by inverse limit, and the equivalence of the maximal-ideal and \(\mathfrak p\)-adic topologies on these finite local factors. Let \(e=(1,0)\) be this specified idempotent, and let \(\bar e\) be its image in \(T\). The actual ring maps \[
+ T\longrightarrow \bar eT\times(1-\bar e)T,\qquad
+ t\longmapsto(\bar et,(1-\bar e)t)
+\] have inverse addition. Write \(A=\bar eT\) and \(B=(1-\bar e)T\), as in the source. The element \(g\) has image \((u,v)\) in \(E\times F\), with \(u\) a unit in \(E\); its inverse is the image in \(E\) of \(g^{-1}\in C_{\mathfrak q'}\). Therefore the image of \(g\) in \(A\) is already a unit, with inverse transported from \(E\).
+
+Tensoring \(C_g=S_g\) with \(D\) and localizing gives \[
+ (D\otimes_R C)_g=T_g.
+\] Restrict to the specified idempotent component. Localization leaves \(E\) and \(A\) unchanged because their \(g\)-images are units, so this canonical map gives \(E\cong A\). Finally \(C_{\mathfrak q'}=S_{\mathfrak q}\) induces the canonical isomorphism of their completions. Hence \[
+ T=\widehat{S_{\mathfrak q}}\times B
+\] with the claimed completed factor.
+
+To identify the projection, denote it by \(\phi:T\to\widehat{S_{\mathfrak q}}\). On \(d\otimes1\), it is the natural map from \(D\), by the finite-completion construction. For any original \(y\in S\), the equality \(C_g=S_g\) writes \(y=c/g^n\) in \(S_g\), \(c\in C\). Retain the possible localization kernel: some \(g^m\) kills \(g^ny-c\) in \(S\), so \[
+ g^{m+n}y=g^m c
+\] in the original \(S\). The projection agrees with the natural completion map on \(g^mc\), because this is an element of \(C\). Since the image of \(g\) is a unit in \(\widehat{S_{\mathfrak q}}\), multiplying by its inverse power gives the correct natural value of \(\phi(1\otimes y)\). Pure tensors generate the tensor product additively, so this proves the naturality on all of \(T\). No injectivity of \(S\to S_g\) was assumed.
+
+The period proposed at 31080 terminates the displayed product decomposition. The preposition proposed at 31097 changes ``by the composition'' to ``under the composition''. Neither changes a ring map or replaces the source argument.
+
+\subsubsection{All isolated completed factors and their maximality}\label{all-isolated-completed-factors-and-their-maximality}
+
+\textbf{ALGEBRA-RECON-770, editorial consequence.} Let \(R\) be Noetherian, \(S/R\) of finite type, and fix \(\mathfrak p\subset R\). Let \(Q\) be the set of primes of \(S\) over \(\mathfrak p\) at which \(S/R\) is quasi-finite. These correspond to the isolated points of the finite-type fibre \[
+ H=S\otimes_R\kappa(\mathfrak p).
+\] They form a finite set: by ALGEBRA-RECON-746, the isolated points of a finite-type field algebra are finitely many clopen points, with actual Artinian local factors. Each \(\mathfrak q\in Q\) gives from the preceding proof an idempotent \(e_{\mathfrak q}\in T=D\otimes_R S\) and the natural factor \[
+ e_{\mathfrak q}T\cong\widehat{S_{\mathfrak q}}.
+\] This factor is finite over \(D\), because it is a direct factor of the finite algebra \(D\otimes_R C\), and it is a nonzero local ring.
+
+Its reduction modulo the maximal ideal \(\mathfrak m_D\) is the original fibre local ring \[
+ (e_{\mathfrak q}T)/\mathfrak m_D(e_{\mathfrak q}T)
+ \cong S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}
+ =H_{\bar{\mathfrak q}}.
+ \tag{4}
+\] Indeed the right side is Artinian local. Its maximal ideal is nilpotent, so \((\mathfrak qS_{\mathfrak q})^N\subseteq\mathfrak pS_{\mathfrak q}\) for some \(N\), while \(\mathfrak pS_{\mathfrak q}\subseteq\mathfrak qS_{\mathfrak q}\). Thus completing at \(\mathfrak q\) and then reducing modulo \(\mathfrak p\) yields that same Artinian quotient. Exactness of completion for finite modules over the Noetherian local ring \(S_{\mathfrak q}\) justifies the quotient map; the local topologies and every original ideal are specified here.
+
+If \(\mathfrak q\ne\mathfrak r\), then \(e_{\mathfrak q}e_{\mathfrak r}\) is an idempotent in the local ring \(e_{\mathfrak q}T\), hence is either zero or its identity \(e_{\mathfrak q}\). In a local ring an idempotent \(a\) satisfies \(a(1-a)=0\), and either \(a\) or \(1-a\) is a unit, proving this dichotomy. By (4), the two idempotents reduce to different isolated-point idempotents in \(H\), whose product is zero, so the product cannot be the identity. They are pairwise orthogonal. Put \[
+ e=\sum_{\mathfrak q\in Q}e_{\mathfrak q}.
+\] Then \(e^2=e\), and the actual mutually inverse maps are \[
+ eT\longrightarrow\prod_{\mathfrak q\in Q}e_{\mathfrak q}T,\quad
+ t\longmapsto(e_{\mathfrak q}t)_{\mathfrak q},
+ \qquad
+ (t_{\mathfrak q})_{\mathfrak q}\longmapsto\sum_{\mathfrak q}t_{\mathfrak q}.
+\] Consequently \[
+ T\cong
+ \left(\prod_{\mathfrak q\in Q}\widehat{S_{\mathfrak q}}\right)
+ \times(1-e)T.
+ \tag{5}
+\] For \(Q=\varnothing\), take \(e=0\), the empty product is the zero ring, and (5) is the identity \(T=0\times T\).
+
+This is the unique largest direct factor of \(T\) finite over \(D\). To prove maximality let \(f\in T\) be any idempotent such that \(fT\) is a finite \(D\)-module. Its special fibre \(fH\) is finite-dimensional over \(\kappa(\mathfrak p)\); as a direct factor of \(H\), every one of its points is isolated and therefore lies in \(Q\). Thus \[
+ f(1-e)H=0.
+\] The direct factor \(f(1-e)T\) is finite over the local ring \(D\), and its reduction modulo \(\mathfrak m_D\) is zero. Nakayama's lemma gives \(f(1-e)T=0\), so \(f=fe\) and \(fT\) is a direct factor of \(eT\). Since \(eT\) itself is finite, this proves maximality and uniqueness: two largest such factors have identities \(e,e'\) satisfying \(e=ee'\) and \(e'=ee'\), hence \(e=e'\). In particular \((1-e)T\) has no nonzero direct factor finite over \(D\). This is a statement about finite direct factors, not a claim that its special fibre has no points.
+
+Each individual factor is also independent of the chosen finite envelope. If two choices give \(e_{\mathfrak q},e'_{\mathfrak q}\), their product has nonzero special fibre \(H_{\bar{\mathfrak q}}\). Since both factors are local, the product equals each identity, so the idempotents agree. The projection in (5) is therefore exactly the tuple of the natural completion maps proved above.
+
+If in addition the original \(R\)-module \(S\) is flat, then \(T\) is flat over \(D\), and so is its finite direct factor \(eT\). A finite flat module over the Noetherian local ring \(D\) is finite free. Its rank is its special-fibre dimension, namely the full sum \[
+ \operatorname{rank}_D(eT)
+ =
+ \sum_{\mathfrak q\in Q}
+   \operatorname{length}_{H_{\bar{\mathfrak q}}}
+                         (H_{\bar{\mathfrak q}})
+   [\kappa(\mathfrak q):\kappa(\mathfrak p)].
+ \tag{6}
+\] For each Artinian local factor, take a composition series; every simple quotient is its residue field, so vector-space dimension is the displayed length times residue degree. This proves (6) including nonreduced fibres and inseparable residue extensions. Without flatness no rank claim is made.
+
+\subsubsection{Coverage and propagation}\label{coverage-and-propagation}
+
+The source dependencies reread in this batch are algebra.tex:27602--27638, 23134--23174 and 30037--30078. The exact missing-point formula retains the weighted norm/order calculation from ALGEBRA-RECON-736 and compares with the boundary in 701. The completed decomposition receives the finite-envelope argument in 764 and the canonical isolated fibre factor in 746. All supplementary statements have complete arguments above and stay separate from the translated source. No novelty is asserted.
+
+The corpus query ``quasi-finite completion'' returned two research-layer PDF routing records (SGA I and Mazur's Modular curves and the Eisenstein ideal), and no local-layer hits. Both records remain unread and unadopted. No PDF fallback was used. These routing results do not establish literature coverage or novelty.
+
+Next source section is Dimension of fibres at 31140. The opening 31140--31170 and reports whose first loci lie in 31171--31280 were seen as lookahead only; no disposition for those reports is claimed. No source or translation mutation, TeX build or publication occurs in this review.

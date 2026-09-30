@@ -1,0 +1,122 @@
+\subsection{Smooth ring maps: source decisions and editorial consequences}\label{smooth-ring-maps-source-decisions-and-editorial-consequences}
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:37055--37794, SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The chapter's original objects, equations and exposition remain identifiable. These supporting proofs and further consequences are editorial material, not replacement translations. The next section starts at 37795; only its opening through 37805 is read. The bounded corpus query ``smooth Jacobian cotangent'' returned two TeX-routing hits whose titles concern integrable systems and Hitchin quantization; neither has been read or used as evidence. No novelty or exhaustive-literature claim is made.
+
+\subsubsection{The source definitions and the split conormal map}\label{the-source-definitions-and-the-split-conormal-map}
+
+The reports OCC-00822 and OCC-00831 incorrectly call \(H_1(L_{S/R})\) unexplained. The source defines that very notation at 35152--35153 as \(H_1(\mathrm{NL}_{S/R})\), then defines the full cotangent complex and its truncation at 35157--35176. The previously checked explicit truncation comparison remains in ALGEBRA\_NAIVE\_COTANGENT\_NOTES\_20260928.md, group 993. Thus the original notation at 37528--37566 and 37736--37737 is valid and is retained.
+
+For a finite presentation \(P=R[x_1,\ldots,x_n]\to S=P/I\), let \(E=I/I^2\), \(F=\bigoplus_iS\,dx_i\), and \(d:E\to F\) be the original differential. Smoothness says \(d\) is injective and \(\Omega_{S/R}=\operatorname{coker}(d)\) is finite projective. Choose a section \(s:\Omega_{S/R}\to F\) of the quotient \(p:F\to\Omega_{S/R}\). The map \(1-sp\) has image \(d(E)\), so define \(h:F\to E\) as \(d^{-1}(1-sp)\). Then \[
+dh=1-sp,\qquad hd=1_E,\qquad ps=1_{\Omega_{S/R}}.
+\] These equations give a homotopy equivalence between the original two-term complex and its degree-zero cokernel, with all chosen maps explicit. They do not give literal equality of the complexes. OCC-00815 therefore receives the minimal ``quasi-isomorphic'' qualification; the stronger homotopy statement is editorial evidence already supported by the earlier general comparison.
+
+For arbitrary \(R\to R'\), put \(P'=R'[x_1,\ldots,x_n]\), \(S'=S\otimes_RR'\) and \(I'=\ker(P'\to S')\). The natural map \[
+E\otimes_RR'\longrightarrow I'/(I')^2
+\] is onto: tensor the sequence \(I\to P\to S\to0\) and then pass to conormal quotients. The top differential \(E\otimes_RR'\to F\otimes_RR'\) is split injective because the equations \(hd=1\) persist under tensoring. Its factorization through \(I'/(I')^2\) proves that the preceding surjection is also injective. Hence the conormal map is an isomorphism, the bottom differential is split injective, and its cokernel is \(\Omega_{S/R}\otimes_SS'\), a finite projective module. This proves base change without assuming flatness of \(S/R\) before the source establishes it. Localization follows by the earlier comparison; finite presentation also persists in each case.
+
+The opening characteristic-\(p\) example keeps \(f=x^p+y^p\), with both derivatives zero. Since this polynomial is monic in \(x\), it is a nonzerodivisor in \(R[x,y]\); its conormal module is \(S\), and the differential \(S\to S\,dx\oplus S\,dy\) is zero. For \(R\ne0\), \(S\ne0\), so \(H_1=S\ne0\) although \(\Omega_{S/R}\) is free of rank two. Every nonempty fibre has dimension one. This verifies the stated failure of the criterion using only freeness of differentials.
+
+\subsubsection{Standard smooth charts with exact Jacobian matrices}\label{standard-smooth-charts-with-exact-jacobian-matrices}
+
+Retain the source equations \(f_1,\ldots,f_c\in R[x_1,\ldots,x_n]\), \(n\ge c\), and \(S=P/(f_1,\ldots,f_c)\). With variables indexing rows and equations indexing columns, write the full derivative matrix as \[
+J=\begin{pmatrix}A\\B\end{pmatrix},\quad
+A_{ij}=\frac{\partial f_j}{\partial x_i}\ (1\le i,j\le c),\quad
+B_{rj}=\frac{\partial f_j}{\partial x_{c+r}},\quad
+\Delta=\det A.
+\] If \(\Delta\) is a unit in \(S\), the map \(S^c\to I/I^2\to S^n\) has composite \(J\), and its projection onto the first \(c\) coordinates is the invertible matrix \(A\). The first arrow is already onto, so it is an isomorphism. The original differential has left inverse \[
+(u,v)\longmapsto A^{-1}u=\Delta^{-1}\operatorname{adj}(A)u.
+\] The quotient map to the actual remaining coordinates is \[
+(u,v)\longmapsto v-BA^{-1}u,
+\] with section \(v\mapsto(0,v)\). Its kernel consists exactly of \(J(A^{-1}u)\). Thus \(\Omega_{S/R}\) has the claimed basis \(dx_{c+1},\ldots,dx_n\), and no factor \(\Delta^{-1}\) or adjugate entry is suppressed.
+
+For a localization at \(g\in S\), choose the source lift \(h\in P\) and add the equation \(hz-1\). Order the selected variables as \(x_1,\ldots,x_c,z\). The selected Jacobian matrix, with the same row convention, is \[
+\begin{pmatrix}
+A & (z\,\partial h/\partial x_i)_{i=1}^c\\
+0 & h
+\end{pmatrix}.
+\] Its determinant is \(\Delta h\), which maps to the unit \(\Delta g\) in \(S_g\). The resulting presentation is \(P[z]/(f_1,\ldots,f_c,hz-1)\), with \(z\mapsto g^{-1}\), exactly as in the source. In Example 37339--37370 take \(h=\Delta\); the determinant is \(\Delta^2\), not merely \(\Delta\). Under a coefficient map \(R\to R'\), each formal derivative and each determinant maps coefficient by coefficient to the corresponding derivative or determinant. Base localization at an already invertible element of \(S\) preserves the same presentation.
+
+The argument over an algebraically closed field at 37179--37233 uses the original coordinates \(x_i-a_i\). For each polynomial \(f\), expansion of its monomials at \(a=(a_i)\) gives \[
+f(x)-f(a)-\sum_{i=1}^n\frac{\partial f}{\partial x_i}(a)(x_i-a_i)
+\in(x_1-a_1,\ldots,x_n-a_n)^2.
+\] Indeed in the full product expansion the constant term is \(f(a)\), the terms with exactly one coordinate factor are the displayed derivative terms, and every other term has at least two coordinate factors. For \(f\in I\), \(f(a)=0\). This proves the source diagram commutes. The split conormal injection makes the chosen \(f_i\) independent in the maximal ideal modulo its square. Extend them to a basis there and apply the original regular-local-ring lemma, 25731--25747. They form a regular sequence and generate the localized ideal by Nakayama. This establishes the source complete-intersection criterion at every maximal ideal and hence its local conclusion; the initial field extension descends it by the previously verified complete-intersection comparison.
+
+\subsubsection{Empty fibres and the composition lifts}\label{empty-fibres-and-the-composition-lifts}
+
+The proof at 37326--37336 must restrict its dimension equalities to nonzero fibres or nonzero field algebras, as the definition of a relative global complete intersection does. For example, \[
+R=\mathbf Z,\qquad S=\mathbf Z[z]/(2z-1)\cong\mathbf Z[1/2].
+\] This is a standard smooth presentation with \(n=c=1\): its selected derivative is \(2\), a unit in \(S\). Its fibre over \((2)\) is the zero ring, with empty spectrum, so it is not a nonempty dimension-zero fibre. The theorem that standard smooth algebras are relative global complete intersections is unaffected. Two minimal qualifications restore the actual source definition. For a nonzero standard smooth algebra over a field, the preceding complete-intersection argument and the conormal rank \(c\) give dimension \(n-c\) on every component. These are exactly the fibres needed for the theorem.
+
+For composition retain \[
+S=R[x_1,\ldots,x_n]/(f_1,\ldots,f_c),\qquad
+S'=S[y_1,\ldots,y_m]/(g_1,\ldots,g_d),
+\] and the chosen lifts \(g'_j\in R[x_1,\ldots,x_n,y_1,\ldots,y_m]\). In the combined presentation order the selected variables as \[
+x_1,\ldots,x_c,y_1,\ldots,y_d
+\] before the other variables, leaving the equations ordered \(f_1,\ldots,f_c,g'_1,\ldots,g'_d\). The selected matrix is \[
+\begin{pmatrix}
+A&C\\0&D
+\end{pmatrix},
+\qquad
+C_{ij}=\frac{\partial g'_j}{\partial x_i},\qquad
+D_{\ell j}=\frac{\partial g'_j}{\partial y_\ell}.
+\] All entries are then reduced in \(S'\). The \(y\)-derivatives reduce to the well-defined derivatives of \(g_j\in S[y_1,\ldots,y_m]\). In contrast, \(\partial/\partial x_i\) need not descend to \(S\), so the source's four displayed \(x\)-derivatives of \(g_j\) must use \(g'_j\). For example \(S=R[x]/(x)\) represents the zero coefficient both by \(0\) and by \(x\), whose \(x\)-derivatives differ. Thus this is a genuine type correction, not the harmless TeX ordering of a prime and subscript reported in OCC-00820.
+
+The determinant is exactly \(\det(A)\det(D)\). One proof expands over permutations: the lower-left zero block forces the last \(d\) rows to use the last \(d\) columns, and the remaining permutation terms give the product, with no additional sign for the stated ordering. Both factors are units by the original hypotheses. If another lift replaces \(g'_j\) by \(g'_j+\sum_i a_{ij}f_i\), its \(x\)-column changes in \(S'\) by \(\sum_i a_{ij}\) times the corresponding \(f_i\)-columns; the \(y\)-column is unchanged because every \(f_i\) is independent of \(y\) and maps to zero. Column operations therefore leave the determinant unchanged. This proves composition with the original choices and also verifies the comparison between different lifts. Empty \(c\)- or \(d\)-blocks have determinant one.
+
+\subsubsection{The local criterion and the correct splitting}\label{the-local-criterion-and-the-correct-splitting}
+
+The standard smooth cover at 37437--37508 follows from the original finite projective conormal module. At any prime, choose a subset of its given generators giving a basis of the residue vector space. Because it is locally free, the corresponding determinant is a unit on a neighbourhood; this gives the first finite principal cover. The localization conormal comparison and Huber presentation preserve the original algebra on each chart. The split injection from that now-free conormal module to the free differential module has rank \(c\) over every residue field, so some \(c\)-row minor is a unit locally. The finitely many corresponding minor opens cover. The preceding localization determinant \(\Delta g\) proves each further principal localization is standard smooth with the indicated coordinate ordering. This verifies every passage used to conclude smooth implies syntomic.
+
+For OCC-00823, after making \(\Omega_{S/R}\) free on \(D(g)\), put \(E=(I/I^2)_g\), \(F=S_g^n\), \(C=\Omega_{S/R,g}\), and \(V=\operatorname{im}(d)\). The split sequence \[
+0\longrightarrow V\longrightarrow F\longrightarrow C\longrightarrow0
+\] makes \(V\) finite projective. It is the surjection \(E\to V\) that therefore has a right inverse \(t:V\to E\). The map \[
+E\longrightarrow\ker(d),\qquad e\longmapsto e-t(d(e))
+\] is a surjection and restricts to the identity on \(\ker(d)\). Hence \(H_1=\ker(d)\) is finite, as a direct summand of the finite module \(E\). This finiteness does not follow for an arbitrary kernel over a non-Noetherian ring. If \(H_{1,\mathfrak q}=0\), finitely many killing denominators, one per generator, yield a product \(g'\notin\mathfrak q\) with \(H_{1,gg'}=0\), proving the source local criterion. The map \(E\to F\) need not have a right inverse: for the polynomial algebra \(S=R[x]\), \(E=0\), \(F=S\,dx\ne0\) when \(R\ne0\). The correction names its actual image target.
+
+Finite principal covers detect vanishing of \(H_1\) and finite projectivity of \(\Omega\); finite presentation also descends from the cover. This proves the target-locality assertion used in composition and in the product lemma. For a product \(S'\times S''\), the original idempotents \((1,0)\) and \((0,1)\) give the two open-and-closed charts and identify their localizations with the two factors, proving both implications including a zero factor.
+
+The flat-fibre criterion at 37672--37706 applies the syntomic local criterion at the given prime. Its chosen \(g\) must and can satisfy \(g\notin\mathfrak q\); the report's added condition records that actual choice. On the resulting original relative-complete-intersection presentation, formal derivatives commute with passage to the residue field, and the same chosen minor is a unit at the original prime exactly when its fibre image is a unit at the fibre prime. This proves the criterion.
+
+For flat base change, \(S_{\mathfrak q}\to S'_{\mathfrak q'}\) is flat and local, hence faithfully flat. Exactness of flat tensor products and the verified conormal comparison identify the first homology after base change. Faithful flatness detects its vanishing. The finite module \(\Omega_{S/R,\mathfrak q}\) becomes finite projective and is therefore finite projective by 19268--19288. This proves reflection in the source's stated scope.
+
+The smooth lifting lemma retains each original standard presentation modulo the given ideal. Lift all its coefficients and invert the full lifted determinant by adjoining \(z\) and imposing \(z\Delta-1\). The resulting selected determinant is \(\Delta^2\), a unit; reduction is the original quotient algebra because \(\overline\Delta\) was already a unit. The reductions send \(z\) to \(\overline\Delta^{-1}\), and the inverse comparison is the original coefficient quotient map with that forced value of \(z\). The barred localizers in both source occurrences remain under the previously checked MC-STK-ERR-0446; its earlier report OCC-12103 is not counted again. No global gluing of the chart lifts is asserted.
+
+\subsubsection{Smooth loci under arbitrary base change of a flat map}\label{smooth-loci-under-arbitrary-base-change-of-a-flat-map}
+
+The source at 37712--37744 assumes the base-change map is flat. A separate consequence allows every base change when the original map \(R\to S\) is flat and finitely presented. Let \(R\to R'\) be arbitrary, \(S'=S\otimes_RR'\), and \(\mathfrak q'\subset S'\) contract to \(\mathfrak q\subset S\). Let \(\mathfrak p'\subset R'\) and \(\mathfrak p\subset R\) be their base contractions. Then \[
+S'\otimes_{R'}\kappa(\mathfrak p')
+\cong
+(S\otimes_R\kappa(\mathfrak p))\otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak p').
+\] The isomorphism sends \((s\otimes r')\otimes a\) to \((s\otimes1)\otimes r'a\), with inverse \((s\otimes b)\otimes a\mapsto(s\otimes1)\otimes ba\). Localization gives the corresponding primes on these fibres. Field extension is flat, so the already proved field-change criterion 37746--37758 says smoothness of these two fibre maps at the indicated primes is equivalent. Both original and base-changed maps are flat and finitely presented. Smoothness implies fibre smoothness by base change; the flat-fibre criterion proves the converse at each prime. Hence the smooth locus in \(\operatorname{Spec}(S')\) is exactly the inverse image of the smooth locus in \(\operatorname{Spec}(S)\).
+
+The original-map flatness assumption cannot simply be omitted. Take \(R=k[t]\), \(S=R/(t)=k\), \(R'=k\). The map \(R\to S\) is not flat: tensoring the injection \(R\xrightarrow{t}R\) with \(S\) produces the zero map \(S\to S\), which is not injective. Since smooth maps are syntomic and therefore flat, its sole target point is not smooth. The base-changed map \(k\to k\) is smooth. Thus arbitrary base change can improve the locus for a nonflat original map. This preserves the source theorem while identifying the precise further scope.
+
+\subsubsection{Intrinsic Jacobian defect and its full Fitting ideals}\label{intrinsic-jacobian-defect-and-its-full-fitting-ideals}
+
+For the original relative global complete-intersection presentation, use the full \(n\)-by-\(c\) Jacobian matrix \(J\) above without selecting a preferred minor. Put \(d=n-c\). At a prime \(\mathfrak q\subset S\), define \[
+\sigma(\mathfrak q)=c-\operatorname{rank}_{\kappa(\mathfrak q)}J
+=\dim_{\kappa(\mathfrak q)}(\Omega_{S/R}\otimes_S\kappa(\mathfrak q))-d.
+\] The equality follows by taking the cokernel of the actual matrix over the residue field. Thus \(\sigma\ge0\); it also equals the dimension of the degree-one homology of the original two-term complex after tensoring with that residue field. This is not a claim that tensoring the original \(H_1\) alone computes that homology.
+
+For \(s\ge1\), let \[
+\mathcal J_s=\operatorname{Fitt}_{d+s-1}(\Omega_{S/R}).
+\] By the source definition of Fitting ideals, More on Algebra 1355--1447, this is the ideal generated by every \((c-s+1)\)-by-\((c-s+1)\) minor of the full original matrix. For \(c-s+1\le0\) this means the unit ideal, and sizes exceeding the matrix dimensions generate zero. Over a residue field all these minors vanish exactly when the matrix rank is at most \(c-s\), which is exactly \(\sigma\ge s\). Hence \[
+\{\sigma\ge s\}=V(\mathcal J_s),\qquad
+\{\sigma=s\}=V(\mathcal J_s)\setminus V(\mathcal J_{s+1})\quad(s\ge1),
+\] and \(\{\sigma=0\}=\operatorname{Spec}(S)\setminus V(\mathcal J_1)\) is precisely the smooth locus by the original Jacobian criterion. This proves upper semicontinuity and all locally closed defect strata.
+
+The construction is independent of the chosen relative complete-intersection presentation. The integer \(d\) is the dimension of the nonempty fibre on each such chart, so two presentations of the same nonzero algebra have the same \(d\). The module \(\Omega_{S/R}\) and its Fitting ideals are intrinsic. For arbitrary \(R\to R'\), conormal and differential base change on these presentations give exactly the image matrix, while \(\Omega_{S'/R'}\cong\Omega_{S/R}\otimes_SS'\). Right exactness preserves its finite presentation, and each determinant commutes with the coefficient map. Thus, as actual ideals, not only as reduced closed subsets, \[
+\mathcal J_s(S'/R')=\mathcal J_s(S/R)S'.
+\] Ranks of matrices are preserved under the residue-field extension at any prime above \(\mathfrak q\), so \(\sigma(\mathfrak q')=\sigma(\mathfrak q)\). Empty spectra impose no extra rank convention. No radical is inserted in this ideal equality.
+
+For a general syntomic \(R\to S\), use its finite principal cover by relative global complete intersections. Each chart has constant nonempty fibre dimension \(d\), so the function \(d\) is locally constant on the target and takes finitely many values by quasi-compactness. It gives a finite partition into open-and-closed subsets with rings \(S_d=e_dS\), where \(1=\sum_d e_d\) and \(e_de_{d'}=0\) for \(d\ne d'\). Define \(\sigma\) by the same intrinsic formula on each part and define the ideal with component \[
+\mathcal J_sS_d=\operatorname{Fitt}_{d+s-1}(\Omega_{S_d/R}).
+\] The chart calculation proves these definitions agree on overlaps. Equivalently, \(\mathcal J_s\) is the sum in \(S\) of these component ideals embedded by their original idempotents \(e_d\). All displayed locus and base-change conclusions persist: each base-changed chart has the same \(n,c,d\); the idempotents map to their original images; and finite-presentation Fitting ideals commute with the same base change. This gives intrinsic, possibly nonreduced defect subschemes for the full syntomic map.
+
+This use of Fitting independence also exposed a bounded source-index typo outside the current chapter. At More on Algebra 1385, the added kernel vectors are written \(z'_{n+j'}\); the construction has first chosen \(n-k\) vectors and then adds \(n'\), so the added vectors must be \(z'_{n-k+j'}\), \(1\le j'\le n'\). To verify the comparison, append the actual \(n'\) coordinate unit vectors to the \(n-k\) original kernel vectors. The corresponding \((n+n'-k)\)-row minors are exactly the original \((n-k)\)-row minors, up to the row-selection signs. Conversely, expand any enlarged minor along the added-coordinate rows that it selects. Each remaining original-coordinate minor has size at least \(n-k\); expand it further to size \(n-k\) to see that every term belongs to the original minor ideal. This argument is for \(0\le k<n\). For \(k\ge n\), both Fitting ideals are the unit ideal: the added coordinate vectors give a unit minor of the required size, with the size-zero convention when needed. Both ideal inclusions follow. For two surjections \(\pi:A^n\to M\) and \(\rho:A^m\to M\), choose a lift \(U:A^m\to A^n\) with \(\pi U=\rho\). Then \((\pi,\rho)=(\pi,0)\circ T\), where \(T(a,b)=(a+Ub,b)\) has inverse \(T^{-1}(a,b)=(a-Ub,b)\). Interchanging the two surjections gives the other comparison with the common surjection \((\pi,\rho)\). Multilinearity of each determinant under \(T\) gives one ideal inclusion, and applying \(T^{-1}\) gives the reverse inclusion. This proves the comparison with the correct indices. The typo is recorded as a pending More on Algebra item, with no change to that chapter and no claim that it has been fully reviewed.
+
+\subsubsection{Report decisions and propagation}\label{report-decisions-and-propagation}
+
+The twenty-one reports receive twelve one-operation corrections, five optional dispositions, three nondefect rejections, and one retained canonical-unit disposition. The harmless prime/subscript ordering is rejected alongside the two cotangent-notation reports. Slogan punctuation, enumeration punctuation, the implicit finite summation range and the phrase ``free rank'' remain optional. Two additional source groups propose the two nonempty-fibre qualifications and four required primes on the chosen lifts in \(x\)-derivatives. The valid \(y\)-derivatives of the original \(g_j\) remain unchanged.
+
+The two consequence groups have zero translation operations: arbitrary base change of the smooth locus for flat finitely presented maps, and intrinsic Jacobian defect ideals for syntomic maps. The first keeps a counterexample outside its flatness scope; the second preserves all minors and their actual nonreduced ideals. The further More on Algebra index finding is separately pending and propagates into the proof just given, not into an unreviewed chapter edit. Source proofs and statements remain identifiable, and combined-results synthesis remains after completion of the core correction work.

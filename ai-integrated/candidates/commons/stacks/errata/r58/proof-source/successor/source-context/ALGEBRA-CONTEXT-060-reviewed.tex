@@ -1,0 +1,43 @@
+\begin{lemma}
+\label{lemma-dimension}
+Suppose that $k$ is a field and suppose that $V$ is a nonzero vector
+space over $k$. Assume the dimension of $V$ (which is a cardinal number)
+is smaller than the cardinality of $k$. Then for any linear operator
+$T : V \to V$ there exists some monic polynomial $P(t) \in k[t]$ such that
+$P(T)$ is not invertible.
+\end{lemma}
+
+\begin{proof}
+Suppose every monic polynomial $P$ gives an invertible $P(T)$.
+For an arbitrary nonzero $Q\in k[t]$ with leading coefficient $c$,
+retain the exact comparison
+$Q(T)=c\,(c^{-1}Q)(T)$, where $c^{-1}Q$ is monic.
+Its inverse is $((c^{-1}Q)(T))^{-1}c^{-1}$, so every such $Q(T)$
+is invertible, with its scalar factor retained.
+Define the action of the original rational-function field by
+$$
+\rho:k(t)\longrightarrow\operatorname{End}_k(V),\qquad
+p/q\longmapsto p(T)q(T)^{-1}.
+$$
+All polynomial operators commute, and their inverses commute with
+them and with each other. If $p/q=p'/q'$, then $pq'=p'q$;
+evaluation at $T$ and multiplication by $q(T)^{-1}q'(T)^{-1}$
+prove equality of the proposed operators. The common-denominator
+formulas prove additivity and multiplicativity, and $\rho(1)$ is
+the identity. This is a $k(t)$-vector-space structure extending
+the original $k$-structure on $V$. For $0\ne v\in V$, the map
+$k(t)\to V$, $a\mapsto\rho(a)v$, is injective: if $a\ne0$,
+multiplication by $\rho(a^{-1})$ recovers $v$.
+
+\medskip\noindent
+The elements $1/(t-\lambda)$ for $\lambda\in k$ are linearly
+independent over $k$. Indeed, multiplying a finite relation
+$\sum_{i=1}^r c_i/(t-\lambda_i)=0$ for distinct $\lambda_i$ by
+the full product $\prod_{i=1}^r(t-\lambda_i)$ gives
+$\sum_{i=1}^r c_i\prod_{j\ne i}(t-\lambda_j)=0$.
+Evaluation at $t=\lambda_i$ gives
+$c_i\prod_{j\ne i}(\lambda_i-\lambda_j)=0$, and every factor
+in that product is nonzero. Thus every $c_i=0$.
+Their images in $V$ are linearly independent, so
+$\dim_k(V)\geq\#k$, contradicting the hypothesis.
+\end{proof}

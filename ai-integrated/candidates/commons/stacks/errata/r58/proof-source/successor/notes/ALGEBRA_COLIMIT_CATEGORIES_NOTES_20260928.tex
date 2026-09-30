@@ -1,0 +1,124 @@
+\subsection{Colimits and categories of finite presentations}\label{algebra-proof-036-colimits-and-categories-of-finite-presentations}
+
+Authority: Stacks Project authors, algebra.tex at a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, lines 31759--32217, SHA256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Categories dependencies 2130--2147 and 2229--2243 at that same commit were read. The latter gives a reference to Kashiwara--Schapira, Proposition 3.2.4; that cited book passage was not read here. The full argument needed below is proved directly.
+
+All fifty received reports in this interval were read. The source continues with local-ring approximations at 32218; the already read source interval 32218--32380 remains unadjudicated. This batch is the first part of the longer section, not its completion.
+
+All extended arguments below are editorial. The translated author text, its sequence and its hypotheses remain identifiable. Twelve canonical correction units 0399--0410 are retained, comprising sixteen operations. Eight new small source operations are proposed. Two proposed changes of the original B-colimit are rejected. Two requests to spell out an implicit composite map are optional; the exact finite-stage witness construction is recorded separately. No novelty is claimed.
+
+\subsubsection{Filtered presentations with their actual structural maps}\label{algebra-proof-036-filtered-presentations-with-their-actual-structural-maps}
+
+Source 31759--31877 and 31946--31960; groups 796--803. The opening count noun becomes ``results''. The first object of the category of finitely presented \(R\)-algebras mapping to \(A\) is the actual structural map \(R\to A\), not \(R\to R\). This fixes an unreported wrong target at 31782. The source set-size convention can be implemented by choosing presentations with finitely many named variables within the countable list; tensor products and quotients are replaced by their specified isomorphic presentations when needed.
+
+Given two objects \(A'\to A,A''\to A\), the object \(A'\otimes_R A''\to A\) has structure map \(a'\otimes a''\mapsto f(a')g(a'')\). Tensoring the finite presentations and retaining both lists of generators and relations proves finite presentation. The two factor maps give a common successor. For parallel maps \(\sigma,\tau:A'\to A''\), keep the source generators \(x_1,\ldots,x_r\) and quotient by the actual differences \(\sigma(x_i)-\tau(x_i)\). This quotient has a finite presentation over \(R\), maps to \(A\), and equalizes the maps on every polynomial in the original generators. The indexing category is therefore filtered in exactly the variance of Categories 2130--2147. MC-\AlgebraIdentifierBreak{}STK-\AlgebraIdentifierBreak{}ERR-\AlgebraIdentifierBreak{}0400 corrects ``cofiltered''; 0399 restores the index set \(\Lambda\).
+
+For completeness, the set colimit of a filtered ring diagram has a ring structure: represent finitely many elements at a common successor, add or multiply there, and pass to their equivalence classes. Two choices agree at a further successor by filteredness, including equalization of parallel arrows. The ring laws hold at such common successors. This construction has the ring-colimit universal property because a compatible family of ring maps preserves the operations on all representatives. Equality with zero in this colimit means vanishing after an arrow to a successor.
+
+Every \(a\in A\) is the image of \(X\) under \(R[X]\to A\). If an element represented by \(a'\in A'\) maps to zero, pass to the actual finitely presented quotient \(A'/(a')\to A\), which kills it. Thus the colimit map is bijective as a set map and an isomorphism of rings.
+
+In the explicit partially ordered construction retain \(A_{S,E}=R[X_s:s\in S]/(f_e:e\in E)\). Unions of two finite generator sets and the images of their two relation lists give a common upper bound. Every element of \(A\) has a representative \(X_a\). A polynomial in a finite generator set that maps to zero can be added as one more original relation, proving injectivity of the colimit map. For finite-type \(A=R[x_1,\ldots,x_n]/I\), fix the actual finite generating set and increase only the finite relation list; every element of \(I\) is eventually included, so the resulting colimit is \(A\) and all transition maps are surjective. This restricted indexing set need not be cofinal in the set of all arbitrary finite subsets of \(A\); the direct generator-and-relation argument is what proves its colimit. The remaining new operations here are ``be'', ``equal to'', ``a given type'' and the source's standard \(R\)-algebra spelling.
+
+\subsubsection{The Hom comparison, retractions and cofinality}\label{algebra-proof-036-the-hom-comparison-retractions-and-cofinality}
+
+Source 31879--31980. For a finitely presented algebra \(S=R[x_1,\ldots,x_n]/(f_1,\ldots,f_m)\), two maps into possibly different stages with equal colimit maps agree at some common stage: first put the stages above a common upper bound, then kill the finitely many differences of the images of the original \(x_i\). This proves injectivity of the Hom comparison. A map into the colimit is represented on all \(x_i\) at one stage; each of the finitely many actual \(f_j\) then has zero colimit value, so a later common stage kills them all. This proves surjectivity. Empty generator and relation lists cause no problem because the directed indexing set is nonempty.
+
+Conversely, if the comparison is surjective for every directed system, express the original \(S\) as the colimit of finitely presented algebras just constructed. Its identity factors as \[
+S\xrightarrow{i}B\xrightarrow{p}S,\qquad pi=\operatorname{id}_S,
+\] with \(B\) finitely presented over \(R\). To prove the retract statement explicitly, write \(B=R[b_1,\ldots,b_n]/(F_1,\ldots,F_m)\) and choose actual polynomials \(H_j(b)\) representing \(i(p(b_j))\). The kernel of \(p\) is generated by \[
+b_j-i(p(b_j))=b_j-H_j(b),\qquad 1\le j\le n.
+\] Indeed for any polynomial \(Q\), telescoping replacement of its variables shows \(Q(b)-Q(i p(b))\) belongs to this ideal, term by term. For \(z\in\ker p\), this difference is \(z-i p(z)=z\). The reverse inclusion follows from \(pi=\operatorname{id}\). Hence the original \(S\) has the finite presentation with all \(F_\ell\) and all \(b_j-H_j(b)\). This proves the source conclusion and the finite-presentation comparison without concealing a kernel assumption.
+
+For the class \(\mathcal E\), the factorization property implies that its full subcategory \(\mathcal J\) inside the filtered presentation category \(\mathcal I\) is nonempty. Common successors for two objects of \(\mathcal J\) are obtained first in \(\mathcal I\) and then mapped to an object of \(\mathcal J\); the same procedure after an equalizing arrow proves filteredness. For every \(i\in\mathcal I\), the category of arrows \(i\to j\), \(j\in\mathcal J\), is nonempty and connected: given two such arrows, take a common successor, then equalize their two composites out of \(i\), and map the resulting object to \(\mathcal J\). Thus compatible cocones on \(\mathcal J\) extend uniquely to \(\mathcal I\): define the value at \(i\) via any such arrow; connectedness makes it independent, and the same argument gives naturality. This is the required cofinality and proves the source's colimit criterion.
+
+\subsubsection{Module maps and the exact finite-stage witnesses}\label{algebra-proof-036-module-maps-and-the-exact-finite-stage-witnesses}
+
+Source 31982--32100; groups 804--808. The variance in the introductory categorical sentence is colimit; the proposed operation changes ``limit of the category'' to ``colimit of the categories''. The precise categorical construction is given below rather than silently replacing the source exposition.
+
+For fixed \(A\)-modules \(M,N\) and directed \(A\)-algebras \(R_i\) with colimit \(R\), tensoring identifies \(N\otimes_A R\) with \(\operatorname{colim}_i(N\otimes_A R_i)\), and likewise for \(M\). One can verify this from the tensor universal property, or from the presentation of a tensor product by generators and its finite bilinearity relations. If \(M\) has generators \(x_1,\ldots,x_m\), equality of two maps after tensoring with \(R\) kills the finite list \((u-u')(x_j)\otimes1\) at a common stage. These elements lie in \(N\otimes_A R_i\), as retained correction 0401 states.
+
+For surjectivity, keep the original finite generators \(y_j\) of \(N\). Surjectivity at \(R\) gives actual \(w_j\in M\otimes_A R\) with \(u_R(w_j)=y_j\otimes1\). The colimit for \(M\) represents all \(w_j\) by \(z_j\in M\otimes_A R_i\) at one stage. Then form the actual errors \[
+d_j=u_i(z_j)-y_j\otimes1\in N\otimes_A R_i.
+\] The colimit for \(N\) kills these errors at a later common stage \(k\ge i\). Thus \(u_k(z_j\otimes1)=y_j\otimes1\) in \(N\otimes_A R_k\), and \(u_k\) is surjective. Images in the source prose already mean the evident composite \(M_i\to N_i\to N_R\); spelling out that composite is optional. However, lifting preimages and annihilating their finitely many errors are distinct steps. The supplementary proof records both.
+
+The first representing stage need not itself work. Take \(A=k[t]\), \(M=N=A\), \(u\) multiplication by \(1+t\), and the two-stage system \(R_0=A\to R_1=A/(t)=R\). The element \(z=1\in M\otimes_A R_0\) maps under \(u\) to \(1\) in \(N\otimes_A R\), but \(u_0\) is not onto since \(1+t\) is not a unit of \(k[t]\). The later stage kills the error \(t\). This does not contradict the source existence theorem; it identifies the required finite refinement.
+
+For map lifting, use exactly the original presentation \[
+A^t\xrightarrow{(k_{sj})}A^m\longrightarrow N\longrightarrow0,
+\qquad (a_1,\ldots,a_m)\longmapsto\sum_j a_jy_j.
+\] Correction 0402 restores \(y_j\). Lift \(v(y_j\otimes1)\) to \(z_j\) at one stage and kill all the actual relation errors \(\xi_s=\sum_jk_{sj}z_j\) at a later stage. Right exactness of tensoring, not injectivity of the tensor of the kernel, then gives the required map. For the isomorphism assertion, first descend the inverse. Over a later stage apply the equality assertion with that stage as the new coefficient ring to each of the two composites and its identity. The finite module \(M\) and finite module \(N\) provide the two finite generator lists. Correction 0403 keeps both tensor bases equal to \(A\).
+
+Finally, a presentation matrix of a finitely presented \(R\)-module has finitely many original entries. Lift them together to \(R_i\), with no discarded entry or factor; its cokernel is the descended module. The preceding map and equality arguments establish all three source categorical assertions.
+
+\subsubsection{Algebra maps, rejected target changes and inverse identities}\label{algebra-proof-036-algebra-maps-rejected-target-changes-and-inverse-identities}
+
+Source 32102--32217; groups 809--816. For equality of algebra maps \(u,u':B\to C\), the finite list of generator images lies in \(C\), so correction 0404 properly changes both the colimit and equality target to \(C\).
+
+For surjectivity, the original \(B\)-colimit at 32143 is correct and needed to lift actual preimages of the target generators. Pick \(y_j\) generating \(C\); surjectivity over \(R\) gives \(w_j\in B\otimes_A R\) mapping to them. The \(B\)-colimit puts these preimages at one stage. The \(C\)-colimit subsequently kills the finitely many errors \(u_i(z_j)-y_j\otimes1\). Thus the reports OCC-01451 and OCC-12061 incorrectly treat the \(B\)-colimit as a wrong target. Replacing it by only the \(C\)-colimit removes the stated reason that the preimages themselves descend. Both colimits participate, with these different exact maps. The requested explicit composite in OCC-00626 is optional and is covered in the separate proof.
+
+The same early-stage pitfall occurs with \(A=k[t]\), \(B=A[x]\), \(C=A[y]\), \(u(x)=(1+t)y\), and \(R_0=A\to R_1=A/(t)\). The element \(x\) maps to \(y\) after base change to \(R_1\), but \(u_0\) is not onto: applying \(A\to k\), \(t\mapsto-1\), would make an alleged preimage of \(y\) express \(y\) as a constant in \(k[y]\). The refinement kills the actual error \(ty\).
+
+For map lifting retain the presentation \[
+A[x_1,\ldots,x_m]\longrightarrow C,\quad x_j\longmapsto c_j,
+\qquad K=(f_1,\ldots,f_t).
+\] Corrections 0405 and 0406 restore the codomain \(C\) and the individual generator images. In particular, sending every variable to the sum is not an equivalent presentation. Lift the images of \(c_j\) under \(v\) to \(z_j\in B\otimes_A R_i\), then annihilate the original finite list \(f_s(z_1,\ldots,z_m)\). Correction 0407 aligns the subscript \(s\). Right exactness identifies the quotient by the image of \(K\otimes_A R_i\); no left-exactness assumption is used.
+
+The inverse to \(u_R:B_R\to C_R\) is \(v:C_R\to B_R\), as correction 0408 states. Descend this map and apply generator-wise eventual equality over the later stage to both \(v_i u_i\) and \(u_i v_i\). Their identities have the original base \(A\), as correction 0409 records. The supplementary minimal clarification at 32124 explicitly declares the \(A\)-algebra map \(u:B\to C\), which item (4) uses but did not quantify in that item. It supplies no new hypothesis beyond the kind of map the displayed tensor formulas require.
+
+For the final categorical lemma lift every coefficient of every original relation polynomial \(f_j\) to one stage, preserving its monomials, signs and coefficients. The resulting finite presentation tensors to the original one. Arrow descent and eventual equality follow from the proved map statements. Correction 0410 retains the originally quantified \(\varphi_\lambda,\psi_\lambda\) in all four occurrences.
+
+\subsubsection{Finite type and the boundary between unions and arbitrary colimits}\label{algebra-proof-036-finite-type-and-the-boundary-between-unions-and-arbitrary-colimits}
+
+Source 31879--31944; group 817. An \(R\)-algebra \(S\) is of finite type if and only if, for every directed system of \(R\)-algebras with injective transition maps, the canonical map \[
+\operatorname{colim}_i\operatorname{Hom}_R(S,A_i)
+\longrightarrow\operatorname{Hom}_R(S,\operatorname{colim}_i A_i)
+\] is bijective. Surjectivity for these systems alone already suffices.
+
+If \(S\) has finite generators, equality of maps descends by the finite list argument. For a map to the union, put all generator images at one stage. Every original polynomial relation vanishes in the union, hence at that same stage because its map into the union is injective. This kills even an infinite relation ideal without asserting finite presentation; the original quotient map therefore factors through this stage. To prove the converse, write \(S\) as the directed union of its finitely generated \(R\)-subalgebras. The identity factors through one of them by the assumed surjectivity. Since the structural map of that stage is the actual inclusion into \(S\), its image is all of \(S\), proving finite type.
+
+The distinction from arbitrary transition maps is strict. Use the earlier original ring \(R=\prod_{n\ge1}k\), its ideal \(I=\bigoplus_{n\ge1}ke_n\), and \(S=R/I\). For finite \(F\subset\mathbf N\), let \(J_F=(e_n:n\in F)\) and \(A_F=R/J_F\). Quotient transitions have colimit \(R/I=S\), because every finite-support element is eventually killed. An \(R\)-algebra map \(S\to A_F\) would imply \(I\subset J_F\), as it must take the image of each \(r\in R\) to its original image modulo \(J_F\). For \(n\notin F\), \(e_n\in I\setminus J_F\), a contradiction. Thus every \(\operatorname{Hom}_R(S,A_F)\) is empty, while the target Hom set contains \(\operatorname{id}_S\). The finite-type algebra \(S\) preserves the directed-union comparison but fails the arbitrary-colimit one. This proves the exact role of finite presentation without weakening the source theorem.
+
+\subsubsection{Descent of finite diagrams and finite equations}\label{algebra-proof-036-descent-of-finite-diagrams-and-finite-equations}
+
+Source 31988--32216; group 818. Let \(R=\operatorname{colim}_iR_i\). Define a category \(\mathcal C\) whose objects are pairs \((i,M_i)\), with \(M_i\) a finitely presented \(R_i\)-module. For two objects its morphism set is \[
+\operatorname{Hom}_{\mathcal C}((i,M_i),(j,N_j))
+ =
+\operatorname{colim}_{k\ge i,j}
+\operatorname{Hom}_{R_k}(M_i\otimes_{R_i}R_k,N_j\otimes_{R_j}R_k).
+\] Composition is represented at a common successor and is independent of representatives, since a later stage preserves each equality. Identities are the original identities. The functor to finitely presented \(R\)-modules sends an object to its actual base change and a morphism to the base-changed map. It is essentially surjective by matrix descent, full by map descent over a common starting stage, and faithful by eventual equality. This is the precise equivalence intended by the source categorical colimit. It keeps stage objects and comparison isomorphisms explicit. The identical construction with finitely presented algebras and their algebra maps gives the algebra statement.
+
+More generally, fix a category \(D\) presented by a finite directed graph and finitely many equalities between paths with the same endpoints. A diagram of finitely presented \(R\)-modules or \(R\)-algebras indexed by \(D\) descends to some \(R_i\). Indeed descend the finitely many objects to a common stage; descend all generating arrows at a further common stage; then kill the differences in the finite list of path equations at a final common stage, using the finite source generators of each path. The path equalities then hold exactly, so the arrows define a functor from the original presented \(D\). No enumeration of all composite paths is needed: equality respects composition, so every consequence of the defining relations is retained.
+
+Natural transformations descend as well. Descend their finitely many components, then enforce naturality for each generating arrow; this implies naturality for every path by composition. Two natural transformations that agree at \(R\) agree at a common later stage on the finite object list. An isomorphism of diagrams descends with its inverse and the two finite lists of identity equations. Thus the corresponding functor from the category of stage diagrams and eventual morphisms to diagrams over \(R\) is an equivalence.
+
+For module diagrams the same proof handles finitely many equations that are finite \(R\)-linear combinations of parallel paths. Descend all coefficients in these equations together with the objects and arrows. Their differences are actual maps between the descended modules. Eventual equality on finite source generators makes them zero at one further stage. This retains every coefficient and every path; it is not a replacement by a different presentation. The source results are therefore applicable to specified finite systems of operators, commutation equations and additive identities.
+
+\subsubsection{Split structures descend but unrestricted exactness need not}\label{algebra-proof-036-split-structures-descend-but-unrestricted-exactness-need-not}
+
+Source 31988--32216; group 819. The preceding proof has concrete receiving cases. If \(e:M\to M\) is an idempotent on a finitely presented \(R\)-module, descend \(M,e\) and the equation \(e^2=e\). The stage decomposition is the actual isomorphism \[
+M_i\longrightarrow e_iM_i\oplus(1-e_i)M_i,\quad
+m\longmapsto(e_i m,(1-e_i)m),
+\] with inverse \((x,y)\mapsto x+y\). Each summand is finitely presented: for example \(e_iM_i=M_i/(1-e_i)M_i\), and the denominator submodule is generated by the images of the finite generator list of \(M_i\). Appending lifts of those generators to a finite presentation gives a finite presentation of the quotient. Tensoring the direct-sum decomposition recovers the original one. In particular a finite projective \(R\)-module, presented as the image of an idempotent on \(R^n\), descends to the actual image of a descended idempotent matrix on \(R_i^n\).
+
+A specified split exact sequence descends with all its witnesses. Write its maps as \(a:L\to M\), \(b:M\to N\), \(r:M\to L\), \(s:N\to M\) satisfying \[
+ra=1_L,\quad bs=1_N,\quad ba=0,\quad rs=0,\quad ar+sb=1_M.
+\] Descend this finite diagram and all five equations. They imply that \((a,s):L\oplus N\to M\) and \((r,b):M\to L\oplus N\) are inverse, so the sequence is split exact at that stage. The exact equations, not tensor exactness for a possibly nonflat transition, prove the assertion.
+
+Likewise, for a bounded cochain complex of finitely presented \(R\)-modules with specified contracting homotopy, descend every original \(d^n:M^n\to M^{n+1}\), \(h^n:M^n\to M^{n-1}\) and the finite lists \[
+d^{n+1}d^n=0,\qquad
+d^{n-1}h^n+h^{n+1}d^n=1_{M^n}.
+\] Only finitely many objects and equations occur. These same equations hold at a sufficiently late stage, proving contractibility there and preserving the original complex after base change.
+
+Unrestricted injectivity or exactness has a different boundary. Let \[
+A=k[t,x_1,x_2,\ldots]/(t x_j:j\ge1),\qquad
+R_n=A/(x_1,\ldots,x_n),\qquad
+R=\operatorname{colim}_{n\ge0}R_n=k[t].
+\] Keep the full infinite relation list. For each \(n\), consider the complex \[
+0\longrightarrow R_n\xrightarrow{\,t\,}R_n
+\longrightarrow R_n/(t)\longrightarrow0.
+\] Every term is finitely presented over \(R_n\), and the maps commute with the transition maps. At the limit the complex is the exact sequence \(0\to k[t]\xrightarrow{t}k[t]\to k\to0\). At every finite stage, \(x_{n+1}\ne0\) and \(t x_{n+1}=0\); nonvanishing is witnessed by the homomorphism \(R_n\to k[X]\) taking \(t\) and every other \(x_j\) to zero and \(x_{n+1}\) to \(X\). Thus the first map is never injective at a finite stage. This proves that the source isomorphism-descent assertions and the finite-diagram result must not be strengthened to arbitrary exactness descent. The split and contractible cases work because their exact additional witnesses descend.
+
+\subsubsection{Corpus, propagation and continuation}\label{algebra-proof-036-corpus-propagation-and-continuation}
+
+The existing disk index was queried in both layers for filtered colimit finite presentation. The Ben-Zvi--Nadler--Preygel TeX record and two local Split Support records remain unread routing records. The repeated Bhatt--Scholze record retains only its previously recorded bounded definition/example reading; this query adds no content coverage or adopted result. All seven earlier external source records remain unchanged. There is no PDF fallback or novelty claim.
+
+Groups 796--819 account for the fifty reports and these three proved consequence groups. The retract proof, both finite-stage error lists and the exact diagram comparison provide receiving arguments for the following local approximation section without changing its unread or unadjudicated status. Next is lemma-\AlgebraIdentifierBreak{}limit-\AlgebraIdentifierBreak{}no-\AlgebraIdentifierBreak{}condition-\AlgebraIdentifierBreak{}local at 32218. No source or translation mutation, build or publication is claimed.

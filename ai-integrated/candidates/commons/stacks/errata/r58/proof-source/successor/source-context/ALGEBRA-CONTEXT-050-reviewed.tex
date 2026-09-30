@@ -1,0 +1,30 @@
+\begin{lemma}
+\label{lemma-lift-idempotents-noncommutative}
+Let $A$ be a possibly noncommutative algebra.
+Let $e \in A$ be an element such that $x = e^2 - e$ is nilpotent.
+Then there exists an idempotent of the form
+$e' = e + x(\sum a_{i, j}e^ix^j) \in A$
+with $a_{i, j} \in \mathbf{Z}$.
+\end{lemma}
+
+\begin{proof}
+Choose $n\geq1$ with $x^n=0$, and distinguish the indeterminate
+$E$ from the original element $e\in A$. Evaluation gives a unital
+ring map
+$$
+\mathbf Z[E]/((E^2-E)^n)\longrightarrow A,\qquad E\longmapsto e.
+$$
+This map exists even if $A$ is noncommutative: integer multiples of
+$1_A$ are central and every polynomial in the single element $e$
+commutes with every other such polynomial. The relation vanishes
+because $(e^2-e)^n=x^n=0$.
+In the commutative source ring let $I=(E^2-E)$ and apply
+Lemma \ref{lemma-lift-idempotents} to the class of $E$ modulo $I$.
+Its idempotent lift $P$ differs from $E$ by an element of $I$,
+so $P=E+(E^2-E)Q(E)$ for a polynomial $Q\in\mathbf Z[E]$.
+Its image is the idempotent $e'=e+xQ(e)$ in $A$.
+Writing $Q(E)=\sum_i a_{i,0}E^i$ gives the required finite sum,
+with $a_{i,j}=0$ for $j>0$. Alternatively the same explicit cubic
+updates in the preceding proof construct $P$. No uniqueness of
+arbitrary idempotent lifts in the whole noncommutative algebra is asserted.
+\end{proof}

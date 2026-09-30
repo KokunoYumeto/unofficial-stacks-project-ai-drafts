@@ -1,0 +1,108 @@
+\subsection{Editorial evidence for Algebra 16445--17135}\label{editorial-evidence-for-algebra-1644517135}
+
+Authority: Stacks Project authors, \texttt{algebra.tex}, commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, SHA-256 \texttt{FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3}. The complete interval and twelve due reports were read. Source 17136--17170 is lookahead through the blowup definition and first lemma opening, not adjudicated. Corrections remain minimal proposed operations; the arguments and stronger statements below remain separate editorial material.
+
+\subsubsection{The embedded-prime quotient and its exact kernel}\label{the-embedded-prime-quotient-and-its-exact-kernel}
+
+Source: lemma-remove-embedded-primes, 16467--16533; reports OCC-12152, OCC-00412, OCC-00413 and OCC-12069. The localization at 16508 must name the newly quantified submodule \(K'\). The empty-set correction at 16531 is already composed as MC-STK-ERR-0412. Its current text has \(D(f)\cap\operatorname{supp}(K)=\varnothing\). Lowercase \texttt{supp} identifies the same support; changing its capitalization is optional typography, not an additional mathematical correction. Retain the prior correction without allocating it again.
+
+Let \(Q=\{\mathfrak q_1,\ldots,\mathfrak q_t\}\) be the original minimal support primes and \(E=\{\mathfrak p_1,\ldots,\mathfrak p_s\}\) the original embedded associated primes. The submodule constructed in the source is exactly
+
+\[
+K=\ker\left(M\longrightarrow\prod_{\mathfrak q\in Q}M_{\mathfrak q}\right).
+\]
+
+Indeed, a cyclic submodule supported in \(\bigcup_{\mathfrak p\in E}V(\mathfrak p)\) has zero localization at every \(\mathfrak q\in Q\): no embedded prime can be contained in a minimal support prime. Conversely, if \(m\) vanishes at all those localizations, every associated prime of \(Rm\) belongs to \(\operatorname{Ass}(M)\), and none is in \(Q\). Every minimal support prime of the finite module \(Rm\) is associated. Its closed support is therefore contained in the union of the closed sets of the remaining associated primes, all in \(E\). This puts \(m\) in the original constructed submodule.
+
+Every submodule of the finite module \(M\) is finite over the Noetherian ring. Its support is closed; such a support is nowhere dense in \(\operatorname{Supp}(M)\) precisely when it omits all the generic points \(Q\). One direction follows because containing a generic point would contain that entire irreducible component. For the converse, a closed set containing a nonempty open set must contain the generic point of a component meeting that open set, since opens are stable under generization. Thus the displayed kernel is the \textbf{unique greatest} submodule with nowhere-dense support. The source's maximality assertion is consequently stronger than mere existence of a maximal choice, and \(M/K\) is determined canonically.
+
+The quotient map is an isomorphism at every prime in \(Q\). Since both modules have closed support and every component of \(\operatorname{Supp}(M)\) is retained, their supports agree. If \(\bar m\in M/K\) has prime annihilator, its lift does not belong to \(K\), so its image is nonzero at some \(\mathfrak q\in Q\). The annihilator is then contained in \(\mathfrak q\). It belongs to the common support, so minimality of \(\mathfrak q\) forces equality. Thus the quotient has no embedded associated primes. If \(f\) belongs to every prime in \(E\), then the closed union containing \(\operatorname{Supp}(K)\) misses \(D(f)\), giving the already-recorded empty intersection and \(K_f=0\).
+
+\subsubsection{Compatibility with arbitrary localization}\label{compatibility-with-arbitrary-localization}
+
+Source: lemma-remove-embedded-primes-localize, 16535--16546. Its principal-localization conclusion extends to any multiplicative subset \(T\subset R\), with no change to its original Noetherian and finite-module hypotheses. Let \(K_T^{new}\) denote the greatest submodule with nowhere-dense support constructed inside \(T^{-1}M\). Then
+
+\[
+K_T^{new}=T^{-1}K,\qquad
+T^{-1}(M/K)\xrightarrow{\;\sim\;}(T^{-1}M)/(T^{-1}K),
+\quad (m+K)/t\longmapsto(m/t)+T^{-1}K.
+\]
+
+The inverse sends the displayed class of \(m/t\) to \((m+K)/t\); exact localization makes both maps well-defined and their composites the identity.
+
+The minimal primes of the localized support correspond exactly to the \(\mathfrak q\in Q\) disjoint from \(T\). In fact, any support prime disjoint from \(T\) contains a member of \(Q\), which is then disjoint from \(T\) too; minimality on either side gives the assertion. For such a surviving prime the original comparison of fractions identifies the iterated localization with \(M_{\mathfrak q}\). If \(\mathfrak q\cap T\ne\varnothing\), choose an actual \(t\in\mathfrak q\cap T\). The finite module \(M_{\mathfrak q}\) has support consisting of the maximal ideal alone. The support/power criterion, in the finite-principal-ideal form proved in ALGEBRA-RECON-404, gives \(t^N M_{\mathfrak q}=0\) for some \(N\). Inverting \(t\) therefore kills that factor. Localization is exact and commutes with the finite product indexed by \(Q\), so localizing the kernel formula above leaves exactly the kernel formula for the localized module. This proves the asserted equality.
+
+If \(M=0\), the set \(Q\) is empty, its product in the module category is zero, and \(K=0\). If no support prime survives, \(T^{-1}M=0\) and the same formula applies. Multiplicative sets containing zero are included. The stronger result is editorial; the source's principal-localization lemma and its omitted proof remain identifiable.
+
+\subsubsection{Regular sequences retain their module and order}\label{regular-sequences-retain-their-module-and-order}
+
+Source: 16593--16844; reports OCC-00414, OCC-00415 and OCC-00416. The source's definition requires a nonzero final quotient and preserves the order of the elements. These conditions are retained.
+
+The permutation lemma must conclude \textbf{\(M\)-regular}, not unqualified ring regularity. For a concrete distinction, take
+
+\[
+R=\bigl(k[t,\epsilon]/(t\epsilon,\epsilon^2)\bigr)_{(t,\epsilon)},
+\qquad M=R/(\epsilon).
+\]
+
+Multiplication by \(t\) is injective on \(M=k[t]_{(t)}\), and \(M/tM=k\ne0\). But \(t\epsilon=0\) in \(R\), and \(\epsilon\ne0\): the map to \(k[\epsilon]/(\epsilon^2)\) setting \(t=0\) extends through this localization, since its denominators have nonzero constant term, and sends \(\epsilon\) to a nonzero element. Thus even a one-term \(M\)-regular sequence need not be ring regular. The source's adjacent-transposition proof works on \(M/(x_1,\ldots,x_{i-2})M\), so the omitted final \(M\) in that quotient is restored. All the \(x_i\) are nonunits in the local ring, since the final quotient is nonzero; Nakayama in its finite kernel is therefore applicable as printed.
+
+In the polynomial criterion the next multiplier is \(f_{i+1}x_{i+1}\), not \(f_{i+1}x_i\). Retain the source decomposition into monomial components
+
+\[
+R[x_1,\ldots,x_r]/(f_1x_1,\ldots,f_ix_i)
+=\bigoplus_{E\in\mathbf Z_{\geq0}^r}(R/I_E)x^E,
+\qquad I_E=(f_j:1\leq j\leq i,\ e_j>0).
+\]
+
+Multiplication by \(x_{i+1}\) sends the component \(E\) to \(E+\mathbf e_{i+1}\), and these two components have exactly the same ideal \(I_E\), because only indices at most \(i\) enter that ideal. The map on coefficients is multiplication by \(f_{i+1}\), and different components remain different. Thus injection holds precisely when it holds on every \(R/I_E\). Taking supports of \(E\) to be arbitrary subsets of \(\{1,\ldots,i\}\), rather than just the all-positive case mentioned in the source, verifies every ordered subsequence condition. The final quotients are nonzero because the ideal generated by the original \(f_j\) is proper; the polynomial quotient also has its unchanged degree-zero component \(R\). The case of no variables has the same conclusion under that proper-ideal hypothesis. No permutation or index is absorbed into different notation.
+
+\subsubsection{Faithfully flat preservation and reflection}\label{faithfully-flat-preservation-and-reflection}
+
+Sources: lemma-flat-increases-depth, 16675--16693, and lemma-flat-base-change-quasi-regular, 16980--17002. Both comparisons have a separate common strengthening: for \textbf{any faithfully flat} map \(R\to S\), with no locality assumption, an ordered sequence is \(M\)-regular, respectively \(M\)-quasi-regular, if and only if its image is so on \(M\otimes_RS\).
+
+For regularity, write \(Q_i=M/(f_1,\ldots,f_i)M\), including \(Q_0=M\), and \(L_i=\ker(f_i:Q_{i-1}\to Q_{i-1})\). The quotient comparison sends \((m+(f_1,\ldots,f_i)M)\otimes s\) to \(m\otimes s\) modulo the extended generated submodule. Its inverse is induced by the tensor of the original quotient map. Right exactness gives the inverse identifications. Flatness then identifies \(L_i\otimes_RS\) with the kernel of the same multiplier on the extended quotient. Faithfulness says these kernels vanish exactly when \(L_i=0\), and says \(Q_r\otimes_RS\ne0\) exactly when \(Q_r\ne0\). This proves every part of the original definition, including the empty sequence and zero-module boundaries, without changing the order of any element.
+
+For quasi-regularity let \(J=(f_1,\ldots,f_c)\) and let \(\mu\) be the original canonical graded map. Exact tensoring sends \(J^nM\subset M\) to \((JS)^n(M\otimes_RS)\subset M\otimes_RS\), and sends each graded quotient to its corresponding extended quotient. On the polynomial side the comparison sends each \(((m+JM)\otimes X^E)\otimes s\) to \((m\otimes s+(JS)(M\otimes_RS))\otimes X^E\). The reverse tensor/quotient comparison defines the inverse; balancing over the original coefficient quotient proves well-definedness. These maps preserve every monomial and identify the target canonical map with \(\mu\otimes_RS\). Since \(\mu\) is always surjective, flatness gives \(\ker(\mu\otimes_RS)=\ker(\mu)\otimes_RS\), and faithfulness detects whether that kernel vanishes. No nonzero-quotient condition is inserted into the source's different definition of quasi-regularity. In particular the zero module remains included there.
+
+Local flat maps in the source are faithfully flat, so its regularity statement is a receiving special case. The flat quasi-regularity statement retains its original forward implication. The stronger reflection assertion and removal of locality stay in this editorial note.
+
+\subsubsection{The two induction boundaries and module coefficients}\label{the-two-induction-boundaries-and-module-coefficients}
+
+Source: lemma-regular-quasi-regular, 16895--16978; reports OCC-00418 and OCC-00417. The outer induction starts at the empty sequence, where the canonical map is the identity in degree zero and has zero source and target in positive degree. For \(c>0\), keep the original \(J'=(f_1,\ldots,f_{c-1})\), total degree \(n\), and last exponent \(l\). At \(l=0\), the relation involves only the first \(c-1\) elements, so the outer induction gives every coefficient in \(J'\). There is no term with exponent \(-1\). The rewrite involving \(l-1\) must begin only at \(l\geq1\); when \(l=1\), the sum from 0 through \(l-2\) is empty.
+
+For the step, all terms with last exponent less than \(l\) have primed degree at least \(n-l+1\). Thus the leading primed sum, multiplied by \(f_c^l\), is in \((J')^{n-l+1}\). The outer induction gives \(f_c^l a_{I',l}\in J'\), and regularity on \(R/J'\) gives \(a_{I',l}\in J'\). Write each such coefficient as \(\sum_{j<c}f_jd_{I',j}\). Regrouping the actual terms of primed degree \(n-l+1\) gives coefficients \(b_{B,l-1}=\sum_{j<c,\ B_j>0}d_{B-\mathbf e_j,j}\). The leading term becomes precisely \((\sum_B f_cb_{B,l-1}f^B)f_c^{l-1}\). The inner induction applies, and subtracting \(f_cb_{B,l-1}\in J\) recovers the original coefficients in \(J\). If there are no primed variables, the corresponding sums are empty; the same argument uses \(J'=0\). All coefficients and summands are retained.
+
+For the original module assertion, make this same argument with coefficients in \(M\), the graded map for the first \(c-1\) elements, and injective action by \(f_c\) on \(M/J'M\). A relation belonging to \(J^{n+1}M\) can first be expressed with degree-\(n\) coefficients in \(JM\) and subtracted, exactly as for the ring. The conclusion is \(m_I\in JM\), not membership in the ring ideal \(J\). The proposed changes state the missing inner base case and repair this type; they do not replace the full proof body.
+
+\subsubsection{Truncation in degree zero and the original polynomial module}\label{truncation-in-degree-zero-and-the-original-polynomial-module}
+
+Source: lemma-truncate-quasi-regular, 17026--17057; reports OCC-00419 and OCC-00420. In degree zero the source quotient is \(M/JM\), also the degree-zero term of the desired polynomial quotient. Separate that case. For every \(n\geq1\) the required intersection is
+
+\[
+J^nM\cap f_1M=f_1J^{n-1}M.
+\]
+
+The right side is visibly contained in the left. For the reverse, suppose \(f_1m\in J^nM\). At \(n=1\), the claim is immediate because \(m\in M=J^0M\). At \(n\geq2\), if \(m\notin J^{n-1}M\), there is a greatest \(k\in\{0,\ldots,n-2\}\) for which \(m\in J^kM\). Its class in \(J^kM/J^{k+1}M\) is nonzero. The exact original graded identification is with the polynomial \textbf{module}
+
+\[
+(M/JM)\otimes_{R/J}(R/J)[X_1,\ldots,X_c].
+\]
+
+Multiplication by \(X_1\) is injective on this module: it shifts distinct monomial components to distinct components, leaving their coefficients unchanged. Thus \(f_1m\notin J^{k+2}M\), contrary to \(J^nM\subset J^{k+2}M\). This proves the intersection without assuming separatedness, finiteness, or Noetherianity. Taking the associated graded quotient by \(X_1\) gives exactly the tail-variable polynomial module for \(\overline M\), as required. There is no \(J^{-1}\). A coefficient module must not be called a polynomial algebra, and the source's omitted denominator \(M\) must be restored.
+
+\subsubsection{The separated quotient and its explicit ideal}\label{the-separated-quotient-and-its-explicit-ideal}
+
+Source: lemma-quasi-regular-on-quotient, 17116--17130; report OCC-00421. Define the missing ideal \(\overline J=J\overline R=(\overline f_1,\ldots,\overline f_r)\). Write \(C=\bigcap_{n\geq0}J^n\) and \(D=\bigcap_{n\geq0}J^nM\), with the original \(\overline R=R/C\) and \(\overline M=M/D\). Since \(CM\subset D\), the module structure is defined. For every \(n\), the quotient map identifies \(\overline J^n\overline M\) with \(J^nM/D\), and \(D\subset J^{n+1}M\). The displayed comparison sends
+
+\[
+m+J^{n+1}M\longmapsto (m+D)+\overline J^{n+1}\overline M
+\]
+
+for \(m\in J^nM\); its inverse uses any representative in \(J^nM\). Changing representatives by \(D\) changes nothing in the source quotient. This proves both composites are identities in every degree. The degree-zero coefficient comparison and the quotient \(R/J\cong\overline R/\overline J\) identify the two polynomial modules, and the canonical maps commute on every original monomial. Consequently the original quasi-regularity equivalence is retained, including the unit-ideal and zero-module cases.
+
+\subsubsection{Reading limits and propagation}\label{reading-limits-and-propagation}
+
+The original source was read through 17135, without turning every omitted source proof into a rewrite. The source-defined order and nonzero-final-quotient condition for regularity are not imposed on its distinct quasi-regularity definition. The earlier support/power result in ALGEBRA-RECON-404 is used at the precise localization step above. The original local regular/quasi-regular equivalence at 17059--17081 retains its Noetherian, finite, nonzero and maximal-ideal hypotheses; no unproved removal of separatedness is inferred from the graded calculation.
+
+The bounded corpus route retains the previous actual queries and adds one exact-phrase query for quasi-regularity. Its top hits were not used as mathematical evidence. Additional reading of M. Richard Sayanagi's original TeX, lines 692--729, covered the stated grade/height result and its proof, plus commented material; its dependency Theorem \texttt{unmixed} was not reviewed here, so that grade/height result is not adopted. The source Stacks proofs above supply the current dependencies. No novelty or exhaustive literature claim is made, and broader synthesis remains after the core work.

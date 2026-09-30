@@ -1,0 +1,22 @@
+\begin{lemma}[Krull's intersection theorem]
+\label{lemma-intersect-powers-ideal-module-zero}
+Let $R$ be a Noetherian local ring. Let $I \subset R$ be
+a proper ideal. Let $M$ be a finite $R$-module.
+Then $\bigcap_{n \geq 0} I^nM = 0$.
+\end{lemma}
+
+\begin{proof}
+Let $N=\bigcap_{n\geq0}I^nM$. It is a submodule of the finite
+module $M$, hence is finite by Lemma \ref{lemma-Noetherian-basic}.
+For every $n\geq0$ one has $I^nM\cap N=N$.
+Apply Lemma \ref{lemma-Artin-Rees} to $N\subset M$ and take
+$n=c+1$, where $c>0$ is the integer it supplies. This gives
+$$
+N=I^{c+1}M\cap N=I(I^cM\cap N)=IN.
+$$
+The proper ideal $I$ lies in the maximal ideal $\mathfrak m$
+of the local ring $R$. Hence
+$N=IN\subset\mathfrak mN\subset N$, so
+$N=\mathfrak mN$. Nakayama's Lemma \ref{lemma-NAK}, applied
+to the finite module $N$, gives $N=0$.
+\end{proof}

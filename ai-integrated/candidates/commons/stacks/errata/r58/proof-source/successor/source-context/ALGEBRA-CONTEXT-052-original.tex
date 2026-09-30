@@ -1,0 +1,23 @@
+\begin{lemma}
+\label{lemma-invert-closed-quotient}
+Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
+Assume the image of the map $\Spec(S^{-1}R) \to \Spec(R)$
+is closed. Then $S^{-1}R \cong R/I$ for some ideal $I \subset R$.
+\end{lemma}
+
+\begin{proof}
+Let $I = \Ker(R \to S^{-1}R)$ so that $V(I)$ contains the image.
+Say the image is the closed subset $V(I') \subset \Spec(R)$ for
+some ideal $I' \subset R$. So $V(I') \subset V(I)$.
+For $f \in I'$ we see that $f/1 \in S^{-1}R$
+is contained in every prime ideal. Hence $f^n$ maps to zero in $S^{-1}R$
+for some $n \geq 1$ (Lemma \ref{lemma-Zariski-topology}).
+Hence $V(I') = V(I)$.
+Then this implies every $g \in S$ is invertible mod $I$.
+Hence we get ring maps $R/I \to S^{-1}R$ and $S^{-1}R \to R/I$.
+The first map is injective by choice of $I$.
+The second is the map $S^{-1}R \to S^{-1}(R/I) = R/I$ which
+has kernel $S^{-1}I$ because localization is exact.
+Since $S^{-1}I = 0$ we see also the second map is injective.
+Hence $S^{-1}R \cong R/I$.
+\end{proof}

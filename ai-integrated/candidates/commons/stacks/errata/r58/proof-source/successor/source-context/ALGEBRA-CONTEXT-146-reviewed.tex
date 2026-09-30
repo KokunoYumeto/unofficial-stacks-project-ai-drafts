@@ -1,0 +1,174 @@
+\begin{lemma}
+\label{lemma-geometrically-irreducible-separable-elements}
+Let $K/k$ be a field extension. The following are equivalent
+\begin{enumerate}
+\item $K/k$ is geometrically irreducible, and
+\item every element $\alpha \in K$ separably algebraic over $k$ is
+in $k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Assume (1) and let the original
+$\alpha\in K$ be separably algebraic
+over $k$. Put $k'=k(\alpha)$ and
+let $P\in k[T]$ be its monic
+minimal polynomial of degree $d$.
+Choose an algebraic closure
+$\overline k$ of $k$ and retain
+the distinct roots
+$\alpha_1,\ldots,\alpha_d$ of $P$
+in it. The original inclusion
+$k'\subseteq K$ and Lemma
+\ref{lemma-subalgebra-geometrically-irreducible}
+make $k'/k$ geometrically irreducible.
+The tensor-polynomial comparison
+and the following explicit Chinese
+remainder maps give
+$$
+k'\otimes_k\overline k\simeq
+\overline k[T]/(P)\simeq\prod_{i=1}^d\overline k.
+$$
+The first sends $Q(\alpha)\otimes b$
+to $[bQ(T)]$; its inverse sends
+$[\sum_j b_jT^j]$ to
+$\sum_j\alpha^j\otimes b_j$.
+The second sends $[F]$ to
+$(F(\alpha_i))_i$; its inverse is
+$$
+(b_1,\ldots,b_d)\longmapsto
+\left[\sum_{i=1}^d b_i
+\frac{\prod_{j\ne i}(T-\alpha_j)}
+{\prod_{j\ne i}(\alpha_i-\alpha_j)}\right].
+$$
+All displayed denominators are
+nonzero because the roots are
+distinct. The interpolation
+polynomials evaluate to the
+coordinate vectors. Conversely,
+a polynomial vanishing at all
+these roots is divisible by
+their full product $P$, proving
+the other composite. These are
+the embedding maps of Fields,
+Lemma
+\ref{fields-lemma-finite-separable-tensor-alg-closed},
+with their inverse now explicit.
+The product has $d$ distinct
+maximal and minimal primes,
+the kernels of its projections.
+It has irreducible spectrum
+only if $d=1$. Therefore the
+original $\alpha$ belongs to $k$,
+proving (2).
+
+Assume (2) and retain the original
+subfield $k'\subseteq K$ consisting
+of all elements algebraic over $k$.
+It is a field: a finite list of
+such elements generates a finite
+field extension of $k$, containing
+their sums, products and inverses
+of nonzero elements. Furthermore
+$k'$ is algebraically closed in
+$K$. Indeed if $\beta\in K$ is
+algebraic over $k'$, the finitely
+many coefficients of a polynomial
+equation for $\beta$ belong to a
+finite extension $E/k$ in $k'$.
+Then $E(\beta)/E$ is finite, so
+$E(\beta)/k$ is finite and
+$\beta\in k'$ by the definition.
+Lemma
+\ref{lemma-field-extension-geometrically-irreducible}
+therefore makes $K/k'$ geometrically
+irreducible, using the full relative
+algebraic closedness just proved.
+
+By Fields, Lemma
+\ref{fields-lemma-separable-first},
+the algebraic extension $k'/k$
+is purely inseparable over its
+maximal separable subextension.
+Condition (2) says precisely
+that this subextension is $k$.
+In characteristic zero this
+forces $k'=k$. In characteristic
+$p>0$, for every original $L/k$
+the map $L\to L\otimes_k k'$
+is injective by extension of
+a vector-space basis. Its
+receiving algebra is generated
+over $L$ by $1\otimes a$ with
+$a\in k'$, and each such
+generator has some $p$-power
+in the image of $L$, while
+its corresponding integer
+$p$-power multiple is zero.
+Lemma \ref{lemma-p-ring-map}
+thus identifies its spectrum
+with the one-point $\Spec(L)$.
+This proves geometric
+irreducibility of $k'/k$,
+including infinite extensions
+with no common exponent assumed.
+Lemma
+\ref{lemma-geometrically-irreducible-transitive}
+now proves (1) for the original
+tower $K/k'/k$.
+
+The criterion has an exact
+tensor-field form: (1) and (2)
+are also equivalent to
+$K\otimes_k E$ being a field
+for every separable algebraic
+extension $E/k$. To prove it
+from (2), each finite separable
+subextension $E_i/k$ gives a
+field $K\otimes_k E_i$ by the
+coefficient proof of Lemma
+\ref{lemma-field-extension-geometrically-irreducible}.
+These fields form a directed
+system of injective original
+maps whose union is
+$K\otimes_k E$: every tensor
+has finitely many coefficients.
+A nonzero element belongs to
+one of those fields and has
+its inverse there. Their union
+is therefore a field. The
+converse follows at once by
+applying the finite separable
+tests of Lemma
+\ref{lemma-geometrically-irreducible}.
+
+For any compatible embeddings
+of the original $K$ and $E$
+into a common field $F$, the
+multiplication map
+$$
+K\otimes_k E\longrightarrow KE\subseteq F,
+\qquad a\otimes b\longmapsto ab
+$$
+is consequently an isomorphism:
+it is a unital map from a field,
+so is injective; its image is
+a field containing both original
+embedded fields and consists of
+their finite tensor sums, hence
+equals their compositum.
+For finite $E/k$, extension of
+its original $k$-basis gives
+the exact degree equality
+$[KE:K]=[E:k]$. More generally,
+every original finite linearly
+independent family over $k$
+in $E$ remains independent
+over $K$: its tensor extension
+is independent, and the proved
+multiplication map is injective.
+This identifies the precise
+linear-disjointness consequence
+without replacing the original
+field embeddings.
+\end{proof}

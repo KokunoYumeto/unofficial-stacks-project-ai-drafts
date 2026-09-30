@@ -1,0 +1,157 @@
+\subsection{Finite components after étale base change, with full fibre structure}\label{algebra-proof-053-finite-components-after-uxe9tale-base-change-with-full-fibre-structure}
+
+Private source-linked editorial evidence, 2026-09-28. Source: The Stacks Project authors, algebra.tex at a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, lines 40188--40496; full authority SHA-256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. The original integral closures, factor polynomials, prime contractions and fibre rings are retained. Additional arguments are editorial supplements, not replacements for the translated exposition. No novelty is claimed.
+
+\subsubsection{The original finite-component construction}\label{algebra-proof-053-the-original-finite-component-construction}
+
+For 40200--40225 retain \(R\to S'\to S\), the integral first map, the finite type composite, the element \(g\in S'\), the isomorphism \(S'_g\to S_g\), and \(\mathfrak p\subset R\). The image of \(V(g)\subset\operatorname{Spec}S'\) is closed by integrality. More explicitly it is \[
+V\bigl(R\cap gS'\bigr),
+\] where the intersection means inverse image along \(R\to S'\). Indeed \(R/(R\cap gS')\to S'/gS'\) is injective and integral, so lying over gives exactly that image. The unit condition on \(g\) in \(S'\otimes_R\kappa(\mathfrak p)\) says this image excludes \(\mathfrak p\). Choose an actual \[
+f\in (R\cap gS')\setminus\mathfrak p,\qquad f=gt\text{ in }S'
+\] for some \(t\in S'\). Then the inverse of \(g\) in \(S'_f\) is \(t/f\). Its image also inverts \(g\) in \(S_f\), so the original localization isomorphism gives \(S'_f=S_f\). This algebra is integral and finite type over \(R_f\), hence finite. Concretely, for algebra generators \(s_1,\ldots,s_a\) and monic integral equations of degrees \(d_1,\ldots,d_a\), the products \(\prod_j s_j^{b_j}\), \(0\le b_j<d_j\), span the algebra as an \(R_f\)-module. This is a spanning bound \(\prod_j d_j\), not a claim of freeness or exact rank.
+
+For 40227--40359 put \(K=\kappa(\mathfrak p)\), \(F=S\otimes_R K\), and let \(S'\subset S\) be the original integral closure, with \(F'=S'\otimes_R K\). The prime \(\mathfrak q\) is quasi-finite exactly when its fibre point \(\overline{\mathfrak q}\) is isolated and closed. The Zariski Main Theorem element \(g\) identifies \(S'_g\) with \(S_g\), hence \(F'_g\) with \(F_g\). The corresponding point \(\overline{\mathfrak q}'\) of \(F'\) is closed because every domain integral over a field is a field: each nonzero element lies in a finite-dimensional domain subalgebra, where injective multiplication is surjective and supplies its inverse. The same point is open by the indicated open-neighbourhood isomorphism. Thus it determines a clopen factor \[
+F'=F'_1\times F'_2,\qquad
+\operatorname{Spec}F'_1=\{\overline{\mathfrak q}'\}.
+\] The bar in the closedness clause at 40272 is essential: the claim concerns a point of the fibre spectrum, not a closed point of \(\operatorname{Spec}S'\). For example \((0)\subset\mathbf Z\) is not closed, whereas its point in the fibre \(\mathbf Q\) is closed.
+
+The point \(\overline{\mathfrak q}\) is the only point of \(F\) mapping to \(\overline{\mathfrak q}'\), since any such point excludes \(g\) and belongs to the open on which the map is an isomorphism. Lift a scalar multiple of the idempotent \((1,0)\) to \(s'\in S'\): an element of the tensor fibre is represented by an element of \(S'\) divided by the image of an element of \(R\setminus\mathfrak p\). Thus there are \(r\in R\setminus\mathfrak p\) and \(s'\) whose actual image is \((\bar r,0)\), with \(\bar r\in K^\times\). This retains the scalar \(\bar r\); it is not silently replaced by one.
+
+Keep a monic \(f(x)\in R[x]\) annihilating \(s'\). Its reduction factors as \(x^e\bar h\) with \(\bar h(0)\ne0\); multiplying the actual \(f\) by \(x\) when needed makes \(e\ge1\) and still annihilates \(s'\). Because \(f(\bar r)=0\) in the nonzero first factor and \(\bar r\ne0\), the factor \(\bar h\) has positive degree. The source's coprime-factor lifting produces an étale \(R\to R'\), a prime \(\mathfrak p'\) with its specified residue-field identity \(K=\kappa(\mathfrak p')\), and actual polynomials \[
+f=hi,\qquad \bar i=x^e,\qquad \bar h=h\bmod\mathfrak p',
+\qquad ah+bi=1.
+\] All symbols refer to these actual polynomials and their evaluations, including the source's order of the two factors.
+
+In \(D'=R'\otimes_R S'\), set \[
+u=h(s'),\quad v=i(s'),\quad
+\varepsilon=b(s')v,\quad 1-\varepsilon=a(s')u.
+\] The relations \(uv=0\) and \(a(s')u+b(s')v=1\) give \(\varepsilon(1-\varepsilon)=0\), so \(\varepsilon^2=\varepsilon\). The exact product isomorphism is \[
+D'\longrightarrow \varepsilon D'\times(1-\varepsilon)D',
+\qquad z\longmapsto(\varepsilon z,(1-\varepsilon)z),
+\] with inverse \((z_1,z_2)\mapsto z_1+z_2\). The first factor is \(D'_v\): in \(\varepsilon D'\), \(v\) has inverse \(b(s')\varepsilon\), and in \(D'_v\), the relation \(uv=0\) gives \(u=0\), hence \(\varepsilon=1\). Similarly the second factor is \(D'_u\).
+
+The image of \(v\) in \(F'\) is exactly \((\bar r^{\,e},0)\). Therefore \(\varepsilon\) reduces to \((1,0)\), and the two factors reduce to the original \(F'_1,F'_2\) with their entire ring structures. The first factor \(S'_1=\varepsilon D'\) is integral over \(R'\), because it is a quotient of the integral algebra \(D'\). This quotient argument matters: arbitrary localizations of integral algebras need not remain integral.
+
+The same idempotent maps into \(D=R'\otimes_R S\), giving \(D=S_1\times S_2\). Its first fibre factor has the one specified point, and the second has no point mapping to the original \(\mathfrak q\). The original \(g\) is a unit in \(S'_1\otimes_{R'}K\): it excludes the only prime of that fibre. The first lemma then applies to \(R'\to S'_1\to S_1\). Here \(S_1\) is finite type, being an idempotent quotient of \(D\), and the required \(g\)-localization isomorphism is inherited from \(S'_g=S_g\). Localizing \(R'\) at the actual resulting element outside \(\mathfrak p'\) makes \(S_1\) finite without changing the pointed residue field or the fibre decomposition.
+
+For 40361--40418, the finite type fibre \(F\) is Noetherian. Each isolated closed point is an irreducible component, so there are only finitely many. Extract one, then repeat on the complementary algebra after the pointed étale base change. Finiteness of the already extracted algebra persists under every subsequent base change. Because each selected residue field is identified with the original \(K\), the fibre ring and the number of its remaining isolated closed points stay exactly the same except for the one removed component. This proves termination after the original finite number, and gives the displayed decomposition with no quasi-finite point of the remainder over the distinguished base point. It also checks the omitted verification at 40411--40417.
+
+\subsubsection{Full Artinian fibres and a selected set of components}\label{algebra-proof-053-full-artinian-fibres-and-a-selected-set-of-components}
+
+Let \(\mathfrak m_1,\ldots,\mathfrak m_n\) be the isolated closed points of \(F=S\otimes_R K\). Each corresponds to a clopen component, and \[
+C_i=F_{\mathfrak m_i}
+\] is a finite-dimensional local Artinian \(K\)-algebra. One way to see finite dimension is the finite-type isolated-point criterion: its clopen factor is a finite type zero-dimensional \(K\)-algebra, hence Artinian with finite residue extension and a finite composition series. In the one-point construction above the first fibre factor is exactly this clopen factor, not only a field with the same point. Let \(\eta_i\in F\) be its original indicator idempotent, and let \(\pi_i:F\to A_i\otimes_{R'}K\) be the fibre of the resulting projection. The explicit idempotent calculation gives \(\ker\pi_i=(1-\eta_i)F\). Thus \(\pi_i\) restricted to \(\eta_iF\) is an isomorphism with inverse \(\pi_i(x)\mapsto\eta_i x\). The original localization identifies the one-point factor \(\eta_iF\) with \(F_{\mathfrak m_i}\). Their composition gives the specified \(K\)-algebra isomorphism \[
+A_i\otimes_{R'}K\xrightarrow{\;\sim\;}C_i
+\] which sends \(\pi_i(x)\) to the image of \(\eta_i x\) in \(F_{\mathfrak m_i}\). It retains the original residue map, every nilpotent element, the maximal ideal and all its powers.
+
+More generally choose any subset \(T\subset\{1,\ldots,n\}\). Repeating just those extraction steps gives a pointed étale base change with residue field \(K\) and \[
+R'\otimes_R S=
+\left(\prod_{i\in T}A_i\right)\times B_T,
+\quad A_i/R'\text{ finite},\quad A_i\otimes_{R'}K=C_i,
+\] where \(B_T\otimes_{R'}K\) is the complementary original clopen factor of \(F\). Each step removes precisely the chosen point, because its idempotent reduces to the prescribed indicator idempotent. Thus the other chosen points remain in the complementary fibre with their original local algebras, so induction applies. For \(T=\varnothing\), use \(R'=R\), the empty product \(0\), and \(B_T=S\). For all points, the complementary fibre has no isolated closed point. The identities of the fibres are canonical relative to the specified residue-field identity and chosen labelled components; the lifted algebras away from that fibre are not claimed unique.
+
+In particular, if \(E_i=C_i/\mathfrak m_iC_i\) and \(\ell_i=\operatorname{length}_{C_i}C_i\), the finite block has \[
+\dim_K(A_i\otimes_{R'}K)=\ell_i[E_i:K],
+\] and the complete filtration by powers of its fibre maximal ideal agrees with that of \(C_i\). This does not assert that \(A_i\) is flat or projective over \(R'\), or identify this fibre dimension with a constant rank.
+
+The remainder cannot be discarded merely because its distinguished fibre is empty. For a field \(k\), take \[
+R=k[t],\quad \mathfrak p=(t),\quad
+S=R\times R[1/t].
+\] The map is étale, quasi-finite, and surjective on spectra. The source fibre at \(\mathfrak p\) is \(k\), and the component \(R\) already gives the desired finite block; the remainder \(R[1/t]\) has zero fibre there.
+
+Nevertheless no pointed étale base change \(R\to R'\), \(\mathfrak p'\) over \((t)\), makes the entire \(R'\otimes_R S\) finite on a base neighbourhood of \(\mathfrak p'\). If it did, its direct factor would give a finite module \[
+M=R'_{\mathfrak p'}[1/t]
+\] over the local ring \(R'_{\mathfrak p'}\). Since \(t\) lies in that local ring's maximal ideal and acts invertibly on \(M\), its residue quotient is zero. Nakayama would imply \(M=0\). But the local map \(R_{(t)}\to R'_{\mathfrak p'}\) is flat, and \(t\) is a non-zero-divisor on the nonzero target. No power of \(t\) is zero, so its localization \(M\) is nonzero, a contradiction. Further base localization outside \(\mathfrak p'\) does not change this local argument. The exact direct factor and its punctured-base support explain the obstruction; this is a boundary on a possible overstatement, not a claimed error in the source's deliberately qualified introduction.
+
+\subsubsection{Separable splitting, inseparable degree and every fibre length}\label{algebra-proof-053-separable-splitting-inseparable-degree-and-every-fibre-length}
+
+In 40420--40489 set \(K=\kappa(\mathfrak p)\) and retain the local Artinian factors \(C_i\), their residue fields \(E_i=\kappa(\mathfrak q_i)\), and their lengths \(\ell_i\). Let \(K_i\) be the maximal subfield of \(E_i\) separable over \(K\), and put \[
+s_i=[K_i:K],\qquad d_i=[E_i:K_i].
+\] The extension \(E_i/K_i\) is purely inseparable. In characteristic \(p>0\), for each element \(\alpha\in E_i\), its minimal polynomial is a separable irreducible polynomial in \(X^{p^a}\) for some \(a\), so \(\alpha^{p^a}\) is separable over \(K\) and lies in \(K_i\). Finitely many generators give a finite purely inseparable extension. In characteristic zero, \(K_i=E_i\) and \(d_i=1\).
+
+Take the source's finite Galois extension \(L/K\) containing the conjugates of all \(K_i\). Primitive-element factorization and the Chinese remainder theorem give \[
+K_i\otimes_K L\cong
+\prod_{\sigma:K_i\hookrightarrow L}L,\qquad
+E_i\otimes_K L\cong
+\prod_{\sigma:K_i\hookrightarrow L}
+\bigl(E_i\otimes_{K_i,\sigma}L\bigr).
+\] There are exactly \(s_i\) embeddings \(\sigma\). Every factor \[
+E_{i,\sigma}=E_i\otimes_{K_i,\sigma}L
+\] is a field purely inseparable of degree exactly \(d_i\) over \(L\); in particular there is no discarded nilpotent part in this residue-field tensor product.
+
+Here is a proof of that field and degree assertion which covers non-simple purely inseparable extensions. Express \(E_i/K_i\) as a finite tower adjoining one purely inseparable element at a time. At a step the original minimal polynomial is \(X^{p^a}-c\). Over a separable extension of the preceding field it remains irreducible: if the minimal polynomial of its unique root shortened to \(X^{p^b}-u\) with \(b<a\), then \(u\) would lie in that separable extension while being purely inseparable over the original field, hence lie in the original field. That would contradict the original minimal degree. An irreducible polynomial with only one distinct root necessarily has the displayed pure-power form, by repeatedly removing zero derivatives. Thus adjoining the root still gives a field of the same degree. The base-changed extension of the preceding field is separable at each step, since separability is preserved by base change and by taking a field factor. Induction proves the assertion, retaining the product of all original tower degrees.
+
+Now examine the entire \(C_i\), not only \(E_i\). Its maximal ideal \(\mathfrak n_i\) is nilpotent. The algebra \(C_i\otimes_K L\) has the nilpotent ideal \(\mathfrak n_i\otimes_K L\), and its quotient is the product of the fields \(E_{i,\sigma}\). The indicator idempotents of this product have unique orthogonal lifts, giving \[
+C_i\otimes_K L=
+\prod_{\sigma:K_i\hookrightarrow L} C_{i,\sigma}.
+\] Each \(C_{i,\sigma}\) is local Artinian with residue field \(E_{i,\sigma}\).
+
+For clarity the needed idempotent lifting uses no inverse of \(2\). If \(J^N=0\) in a commutative ring and \(a\) lifts an idempotent modulo \(J\), put \(r=a^2-a\in J\). The element \(u=2a-1\) is invertible since \[
+u^2=1+4r,\qquad
+(1+4r)^{-1}=\sum_{j=0}^{N-1}(-4r)^j.
+\] Set \(a_{\mathrm{new}}=a-r/u\). Direct expansion gives \[
+a_{\mathrm{new}}^2-a_{\mathrm{new}}=r^2/u^2.
+\] Iteration reaches an idempotent once \(2^b\ge N\). If two idempotents \(e,f\) have the same reduction, then \(e(1-f)\) and \(f(1-e)\) are idempotents in the nilpotent ideal, hence zero; so \(e=f\). Products of lifts of distinct indicators therefore vanish, and their sum is the unique lift of \(1\), namely \(1\). This proves the full product decomposition, including in characteristic two.
+
+Choose a composition series of the original \(C_i\)-module \(C_i\); all \(\ell_i\) simple factors are \(E_i\). Tensoring with the field \(L\) preserves exactness. Multiplication by each lifted indicator idempotent is an exact projection onto a direct summand, so projecting that series gives \(\ell_i\) nonzero simple factors, each \(E_{i,\sigma}\), in \(C_{i,\sigma}\). Thus \[
+\operatorname{length}_{C_{i,\sigma}}C_{i,\sigma}=\ell_i,
+\qquad
+\dim_L C_{i,\sigma}=\ell_i d_i.
+\] Summing the \(s_i\) factors recovers \[
+\dim_L(C_i\otimes_K L)
+=s_i\ell_i d_i=\dim_K C_i.
+\] This keeps the separable degree, purely inseparable degree and every original Artinian multiplicity separately.
+
+The residue extension \(L/K\) is realized by the actual standard étale construction of 39809--39841, retaining its coefficient-clearing powers and specified evaluation map. The fibre after this base change is \(F\otimes_K L\). Quasi-finiteness is preserved and reflected at every point by 30362--30390, so its isolated closed points are precisely those just described. Applying the residue-preserving component extraction from the preceding section now gives one finite block for every pair \((i,\sigma)\), with distinguished fibre exactly \(C_{i,\sigma}\), residue degree \(d_i\), and length \(\ell_i\). The second étale extension keeps the residue field \(L\) fixed, so none of these data changes. This proves the source's variant and its full multiplicity refinement.
+
+There is a sharp limitation: further étale base changes cannot remove \(d_i>1\). More generally for any finite separable \(L'/K\), the algebra \(K_i\otimes_K L'\) is a product of finite separable fields \(M_j/L'\), each also separable over the corresponding embedded \(K_i\). The same tower proof makes \[
+E_i\otimes_K L'=
+\prod_j(E_i\otimes_{K_i}M_j)
+\] a product of fields purely inseparable of degree \(d_i\) over \(M_j\). Within each factor, \(M_j\) is exactly its maximal separable subfield over \(L'\): an element separable over \(L'\) is also separable over \(M_j\), whereas the whole factor is purely inseparable over \(M_j\). Consequently the inseparable degree at every lifted point remains \(d_i\). The identical composition-series argument preserves length \(\ell_i\) for every local factor under this arbitrary separable base change as well.
+
+Since pointed étale residue extensions are finite separable, one can make all selected residue fields equal to the new base residue field if and only if every original \(E_i/K\) is separable. Necessity follows from the invariant \(d_i\); sufficiency follows by choosing the finite Galois extension containing all \(E_i\). The original Artinian lengths can still exceed one. Rational residue fields do not mean reduced fibres.
+
+Separable base change is necessary for the length assertion. Take \(K=\mathbf F_p(t)\), \(E=K(a)\) with \(a^p=t\), and base change by the purely inseparable extension \(L=E\). In \(E\otimes_K L\), the element \[
+u=a\otimes1-1\otimes a
+\] satisfies \(u^p=0\), and the map \(L[U]/(U^p)\to E\otimes_K L\), \(U\mapsto u\), is an isomorphism. Indeed the original basis \(1,a,\ldots,a^{p-1}\) tensored with \(L\) is transformed to \(1,u,\ldots,u^{p-1}\) by the triangular formulas \[
+(a\otimes1)^j=
+\sum_{k=0}^{j}\binom{j}{k}(1\otimes a)^{j-k}u^k,
+\] with every diagonal entry \(1\). All coefficients and exponents are retained. The source field of length one becomes a local algebra of length \(p\), with rational residue field; the total dimension remains \(p\).
+
+\subsubsection{Report accounting and propagation}\label{algebra-proof-053-report-accounting-and-propagation}
+
+Twenty-five new received reports have nineteen report groups. The earlier report OCC-12163 about extension notation is already disposed of in group 1130, including its locus 40463--40470; it is not counted again. No existing canonical correction lies in the present source interval, which agrees with authority.
+
+\begin{itemize}
+\tightlist
+\item
+  OCC-00895 supplies ``is'' at 40210; OCC-00896 removes the incorrect indefinite article before \(f\) at 40212.
+\item
+  OCC-00897 repairs the punctuation of the specific closed-image citation across 40219--40220; adding ``that'' is not required.
+\item
+  OCC-00898 and OCC-00909 share the missing finite-type predicate repair at 40232 and 40424. The identical unreported omission at 40365 is corrected in the same group.
+\item
+  OCC-00899, OCC-00904, OCC-00905, OCC-00910 and OCC-00911 are optional enumeration-colon preferences.
+\item
+  OCC-12172 and OCC-00901 share the missing bar on the fibre prime at 40272.
+\item
+  OCC-00900 and OCC-00902 supply separate ``Denote by'' corrections at 40259 and 40295.
+\item
+  OCC-00903 is optional doubled source whitespace.
+\item
+  OCC-12173, OCC-00906 and OCC-00912 share the two missing ``is'' predicates for the remainder at 40381 and 40442.
+\item
+  OCC-00907 supplies ``Denote by'' at 40386, and OCC-00908 punctuates the completed displayed decomposition at 40409.
+\item
+  OCC-12174 and OCC-00914 share ``may'' to ``many'' at 40455.
+\item
+  OCC-12175 and OCC-00915 share the corrected base prime at 40457, replacing \(R\) by \(\mathfrak p\).
+\item
+  OCC-00913 supplies ``Denote by'' at 40452.
+\end{itemize}
+
+These give sixteen operations in thirteen proposed units and six optional groups. Group 1168 is a zero-operation editorial consequence recording exact Artinian fibres, any selected set of components, and the obstruction to discarding an empty-fibre remainder. Group 1169 records the full separable splitting, invariant inseparable degree and Artinian length, the exact criterion for rational residue fields after étale extension, and the inseparable-base-change counterexample. Original finite blocks are not relabelled as flat or étale algebras.
+
+The receiving notes are ALGEBRA\_\allowbreak{}ETALE\_\allowbreak{}NOTES\_\allowbreak{}20260928.\allowbreak{}md for the actual coprime-factor lifting and nilpotent structure, and ALGEBRA\_\allowbreak{}ETALE\_\allowbreak{}LOCAL\_\allowbreak{}NOTES\_\allowbreak{}20260928.\allowbreak{}md for the prescribed residue-field construction and its full denominator powers. Source dependencies read include 4376--4413, 7774--7804, 9644--9680, 30226--30272 and 30355--30415; exact cited intervals are bound in the evidence receipt. Four new literature-index hits remain unread routing records, while seven earlier external-source reading records retain their coverage. No exhaustive-literature or novelty claim.
+
+Next authority line: 40497, Local homomorphisms. Only opening 40497--40509 has been read, without adjudication. Complete proofs remain here as editorial material; the translation has not been rewritten. Broader synthesis follows the core review. No TeX run or publication is performed by this intake.

@@ -1,0 +1,18 @@
+\begin{lemma}
+\label{lemma-map-into-tensor-algebra-open}
+Let $k$ be a field.
+Let $R$ and $S$ be $k$-algebras.
+The map $\Spec(S \otimes_k R) \to \Spec(R)$
+is open.
+\end{lemma}
+
+\begin{proof}
+Let $f \in S \otimes_k R$.
+It suffices to prove that the image of the standard open $D(f)$ is open.
+Let $S' \subset S$ be a finite type $k$-subalgebra such that
+$f \in S' \otimes_k R$. The map $R \to S' \otimes_k R$ is flat
+and of finite presentation, hence the image $U$ of
+$\Spec((S' \otimes_k R)_f) \to \Spec(R)$ is open
+by Proposition \ref{proposition-fppf-open}.
+By Lemma \ref{lemma-same-image} this is also the image of $D(f)$ and we win.
+\end{proof}

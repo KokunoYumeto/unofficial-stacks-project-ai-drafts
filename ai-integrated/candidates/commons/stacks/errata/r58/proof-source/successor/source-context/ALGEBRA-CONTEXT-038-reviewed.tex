@@ -1,0 +1,93 @@
+\begin{theorem}[Chevalley's Theorem]
+\label{theorem-chevalley}
+Suppose that $R \to S$ is of finite presentation.
+The image of a constructible subset of
+$\Spec(S)$ in $\Spec(R)$ is constructible.
+\end{theorem}
+
+\begin{proof}
+Write $S = R[x_1, \ldots, x_n]/(f_1, \ldots, f_m)$.
+We may factor $R \to S$ as $R \to R[x_1] \to R[x_1, x_2]
+\to \ldots \to R[x_1, \ldots, x_{n-1}] \to S$. Hence
+we may assume that $S = R[x]/(f_1, \ldots, f_m)$.
+In this case we factor the map as $R \to R[x] \to S$,
+and by Lemma \ref{lemma-closed-fp} we reduce to
+the case $S = R[x]$. By Lemma \ref{lemma-constructible} it suffices
+to show that if
+$T = (\bigcup_{i = 1\ldots n} D(f_i)) \cap V(g_1, \ldots, g_m)$
+for $f_i , g_j \in R[x]$ then the image in $\Spec(R)$ is
+constructible. Since finite unions of constructible sets
+are constructible, it suffices to deal with the case $n = 1$,
+i.e., when $T = D(f) \cap V(g_1, \ldots, g_m)$.
+
+\medskip\noindent
+For $c \in R$, the following are disjoint decompositions of sets:
+$$
+\Spec(R) =
+V(c) \amalg D(c) =
+\Spec(R/(c)) \amalg \Spec(R_c),
+$$
+and correspondingly $\Spec(R[x]) =
+V(c) \amalg D(c) = \Spec(R/(c)[x]) \amalg
+\Spec(R_c[x])$. The intersection of $T = D(f) \cap V(g_1, \ldots, g_m)$
+with each part still has the same shape, with $f$, $g_i$ replaced
+by their images in $R/(c)[x]$, respectively $R_c[x]$.
+Note that the image of $T$
+in $\Spec(R)$ is the union of the image of
+$T \cap V(c)$ and $T \cap D(c)$. Using Lemmas \ref{lemma-open-fp}
+and \ref{lemma-closed-fp} it suffices to prove the images of both
+parts are constructible in $\Spec(R/(c))$, respectively
+$\Spec(R_c)$.
+
+\medskip\noindent
+We prove the assertion for
+$T=D(f)\cap V(g_1,\ldots,g_m)$ over every ring by induction on
+$$
+N=\sum_{j=1}^m w(g_j),\qquad
+w(g)=\begin{cases}0&g=0,\\ \deg(g)+1&g\ne0.\end{cases}
+$$
+All original polynomial labels are retained, including zero relations.
+For $N=0$ all $g_j$ are zero, so $T=D(f)$ and
+Lemma \ref{lemma-affineline-open} applies. If the coefficient ring is
+zero, the spectrum is empty and the assertion also holds. For $N>0$
+choose a nonzero $g_i$ of least degree among the nonzero relations and
+write its full polynomial as
+$g_i=c x^{d_i}+\sum_{a=0}^{d_i-1}c_{ia}x^a$, with $c\ne0$.
+
+\medskip\noindent
+Use the preceding decomposition into $R/(c)$ and $R_c$. Over $R/(c)$,
+the weight of the image of $g_i$ strictly decreases, including when
+$d_i=0$ and that image is zero. Every other weight is at most its
+original value, so induction applies on this piece.
+If $R_c=0$, its piece is empty. Otherwise the image of $c$ is a unit
+and the image of $g_i$ retains degree $d_i$. If $g_i$ was the only
+nonzero relation over $R$, Lemma \ref{lemma-affineline-special}
+applies over $R_c$. If there was another nonzero relation, choose
+one, say
+$g_j=c_jx^{d_j}+\sum_{a=0}^{d_j-1}c_{ja}x^a$, where $d_j\geq d_i$
+by the choice of $i$. In $R_c[x]$ replace only this relation by
+$$
+g'_j=g_j-(c_j/c)x^{d_j-d_i}g_i.
+$$
+Here every coefficient denotes its image in $R_c$; in particular
+$c_j/c$ may be zero. The coefficient of $x^{d_j}$ cancels exactly,
+so $g'_j=0$ or $\deg(g'_j)<d_j$. The other relations have weight
+no larger than before base change, and the total weight is therefore
+strictly less than the original $N$. Moreover,
+$$
+g'_j=g_j-(c_j/c)x^{d_j-d_i}g_i,\qquad
+g_j=g'_j+(c_j/c)x^{d_j-d_i}g_i
+$$
+prove both inclusions between the original ideal and the ideal with
+$g_j$ replaced by $g'_j$. Thus the two lists define exactly the same
+subset $T$ over $R_c$, and induction proves its image constructible
+there. In the notation $i=1,j=2$ this is precisely
+$V(g_1,g'_2,g_3,\ldots,g_m)$, with every separator present.
+The two induction base cases are a standard open and a standard open
+intersected with the zero set of one polynomial having unit leading
+coefficient, as in Lemmas \ref{lemma-affineline-open} and
+\ref{lemma-affineline-special}. Finally,
+Lemmas \ref{lemma-open-fp} and \ref{lemma-closed-fp} carry the two
+constructible images back to $\Spec(R)$, and their finite union is
+the desired image.
+\end{proof}

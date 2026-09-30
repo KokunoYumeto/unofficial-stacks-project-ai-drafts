@@ -1,0 +1,106 @@
+\begin{proposition}
+\label{proposition-going-down-normal-integral}
+Let $R \subset S$ be an inclusion of domains.
+Assume $R$ is normal and $S$ integral over $R$.
+Let $\mathfrak p \subset \mathfrak p' \subset R$
+be primes. Let $\mathfrak q'$ be a prime of $S$
+with $\mathfrak p' = R \cap \mathfrak q'$.
+Then there exists a prime $\mathfrak q$
+with $\mathfrak q \subset \mathfrak q'$
+such that $\mathfrak p = R \cap \mathfrak q$. In other words:
+the going down property holds for $R \to S$, see
+Definition \ref{definition-going-up-down}.
+\end{proposition}
+
+\begin{proof}
+Keep the stated primes and the original inclusion, and put
+$B=S_{\mathfrak q'}$. It suffices to prove
+$\mathfrak pB\cap R=\mathfrak p$, as in Lemma \ref{lemma-in-image}.
+Here is the precise prime construction supplied by that equality.
+The ring
+$$
+F=(R\setminus\mathfrak p)^{-1}(B/\mathfrak pB)
+$$
+is nonzero: if $1=0$ in $F$, some $r\in R\setminus\mathfrak p$
+has zero image in $B/\mathfrak pB$, contradicting the equality.
+A prime of $F$ pulls back through the quotient and localization
+maps to a prime of $B$ containing $\mathfrak pB$ and avoiding
+the image of $R\setminus\mathfrak p$. Its inverse image
+$\mathfrak q$ under $S\to B$ has contraction $\mathfrak p$
+in $R$. Every element of $S\setminus\mathfrak q'$ is a unit
+in $B$, so none belongs to $\mathfrak q$ and
+$\mathfrak q\subseteq\mathfrak q'$. This proves the desired
+conclusion once the equality is established.
+
+The inclusion $\mathfrak p\subseteq\mathfrak pB\cap R$ is
+immediate. For the reverse inclusion choose an original
+$z\in R$ whose image belongs to $\mathfrak pB$. Write that
+image as a finite sum $\sum_{i=1}^r r_i h_i/g_i$ with
+$r_i\in\mathfrak p$, $h_i\in S$ and $g_i\notin\mathfrak q'$.
+Take
+$$
+g=\prod_{i=1}^r g_i,\qquad
+y=\sum_{i=1}^r r_i h_i\prod_{k\ne i}g_k\in\mathfrak pS.
+$$
+Then $g\notin\mathfrak q'$ and $z=y/g$ in $B$. Since $S$
+is a domain, the map $S\to B$ is injective, and the exact
+identity $zg=y$ holds in $S$ itself. For the empty sum use
+$g=1$ and $y=0$.
+
+\medskip\noindent
+By Lemma \ref{lemma-integral-integral-over-ideal}
+there exists a monic polynomial
+$P = x^m + b_{m-1} x^{m-1} + \ldots + b_0$
+with $b_i\in\mathfrak p^{m-i}\subseteq\mathfrak p$
+for every $0\leq i<m$, such that $P(y)=0$.
+These are the full coefficient powers in the original definition
+of integrality over $\mathfrak p$.
+
+\medskip\noindent
+By Lemma \ref{lemma-minimal-polynomial-normal-domain}, the
+minimal polynomial of $g$ over $K=\operatorname{Frac}(R)$ has
+coefficients in $R$. Write it as
+$Q=x^n+\sum_{j=0}^{n-1}a_jx^j$. If every $a_j$ belonged to
+$\mathfrak p$, its original equation would give
+$$
+g^n=-\sum_{j=0}^{n-1}a_jg^j\in\mathfrak pS
+\subseteq\mathfrak p'S\subseteq\mathfrak q'.
+$$
+Since $n\geq1$ and $\mathfrak q'$ is prime, this would give
+$g\in\mathfrak q'$, a contradiction. Therefore at least one
+of the original $a_j$ is outside $\mathfrak p$.
+
+\medskip\noindent
+If $z=0$, the desired membership $z\in\mathfrak p$ already
+holds. Hence assume $z\ne0$, so $z$ is a unit in the original
+$K$, and retain $y=zg$. The coefficient-preserving substitution
+map $K[x]\to K[x]$, $H(x)\mapsto H(zx)$, has inverse
+$H(x)\mapsto H(x/z)$. Set
+$$
+Q'(x)=z^nQ(x/z)
+=x^n+\sum_{j=0}^{n-1}z^{n-j}a_jx^j.
+$$
+This is monic of degree $n$ and satisfies
+$Q'(y)=z^nQ(g)=0$. If $H(y)=0$ for $H\in K[x]$, then
+$H(zg)=0$, so minimality of $Q$ gives $H(zx)=Q(x)D(x)$
+for some $D\in K[x]$. The inverse substitution yields
+$$
+H(x)=Q(x/z)D(x/z)=Q'(x)\bigl(z^{-n}D(x/z)\bigr).
+$$
+Thus $Q'$ divides every annihilating polynomial of $y$ and is
+its monic minimal polynomial; in particular $Q'$ divides the
+original $P$. All coefficients of $P$ and $Q'$ belong to $R$.
+Part (2) of Lemma \ref{lemma-polynomials-divide} gives
+$$
+z^ja_{n-j}\in\sqrt{(b_0,\ldots,b_{m-1})R}
+\subseteq\mathfrak p,\qquad 1\leq j\leq n.
+$$
+The full powers $b_i\in\mathfrak p^{m-i}$ also yield the
+stronger statement that each $z^ja_{n-j}$ is integral over
+$\mathfrak p^j$, by
+Lemma \ref{lemma-weighted-monic-factor-coefficients}.
+Choose $a_{n-j}\notin\mathfrak p$ from the previous paragraph.
+Primality first gives $z^j\in\mathfrak p$ and then
+$z\in\mathfrak p$, since $j\geq1$. The required contraction
+equality, and therefore the prime constructed above, follow.
+\end{proof}

@@ -1,0 +1,57 @@
+\begin{remark}
+\label{editorial-source-remark-local-ring-fibre}
+Let $R \to S$ be a ring map. Let $\mathfrak q$ be a prime
+ideal of $S$ lying over the prime ideal $\mathfrak p$ of $R$.
+According to Remark \ref{algebra-remark-fundamental-diagram}
+the prime $\mathfrak q$ corresponds to a unique prime
+$\overline{\mathfrak q}$ of the fibre ring
+$F = S \otimes_R \kappa(\mathfrak p)$.
+Then we have
+$$
+F_{\overline{\mathfrak q}}
+\cong S_\mathfrak q \otimes_{R_\mathfrak p} \kappa(\mathfrak p)
+\cong S_\mathfrak q/\mathfrak p S_\mathfrak q
+$$
+Namely, there is an obvious ring map
+$F \to S_\mathfrak q \otimes_{R_\mathfrak p} \kappa(\mathfrak p)$
+which, under the displayed isomorphism, identifies with $F \to F_{\overline{\mathfrak q}}$.
+The second isomorphism follows from the fact that $\kappa(\mathfrak p)$
+is the quotient of $R_\mathfrak p$ by $\mathfrak pR_\mathfrak p$.
+Explicitly, write $T=R\setminus\mathfrak p$. The fibre-ring
+description is $F=T^{-1}(S/\mathfrak pS)$, and the prime in it is
+$\overline{\mathfrak q}=T^{-1}(\mathfrak q/\mathfrak pS)$.
+For $a\in S$ and $u\in T$, the fraction
+$(a+\mathfrak pS)/u$ belongs to $\overline{\mathfrak q}$
+if and only if $a\in\mathfrak q$; here every $\varphi(u)$
+is outside $\mathfrak q$.
+Thus the mutually inverse maps between $F_{\overline{\mathfrak q}}$
+and $S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}$ are
+$$
+\frac{(a+\mathfrak pS)/u}{(b+\mathfrak pS)/v}
+\longmapsto
+\frac{a\varphi(v)}{\varphi(u)b}+\mathfrak pS_{\mathfrak q},
+\qquad
+\frac{a}{b}+\mathfrak pS_{\mathfrak q}
+\longmapsto
+\frac{(a+\mathfrak pS)/1}{(b+\mathfrak pS)/1},
+$$
+where $u,v\in T$ and $b\in S\setminus\mathfrak q$.
+The first map is induced by $S\to S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}$:
+it kills $\mathfrak pS$, inverts $T$, and inverts exactly the
+additional denominators displayed above. The second is induced by
+$S\to F_{\overline{\mathfrak q}}$, which inverts
+$S\setminus\mathfrak q$ and kills $\mathfrak pS$.
+The formulas show that both composites fix every fraction.
+The tensor comparison sends
+$$
+\frac{a}{b}\otimes\overline{r/t}
+\longmapsto
+\frac{a\varphi(r)}{b\varphi(t)}+\mathfrak pS_{\mathfrak q},
+$$
+for $r\in R$, $t\in T$, and has inverse
+$a/b+\mathfrak pS_{\mathfrak q}\mapsto(a/b)\otimes\overline{1}$.
+Balancing over $R_{\mathfrak p}$ and the vanishing of
+$\mathfrak pR_{\mathfrak p}$ prove well-definedness and both
+inverse identities. These maps identify the original map out of
+$F$ with localization at $\overline{\mathfrak q}$.
+\end{remark}

@@ -99,6 +99,23 @@ class ShuffleRegression(unittest.TestCase):
                          {((0, 0), (0,)): 1, ((0,), (0, 0)): 1})
         self.assertNotEqual(linear(sh((0, 0), (0,)), aw), unit((0, 0), (0,)))
 
+    def test_raw_aw_need_not_preserve_moore_normal_subcomplex(self):
+        u = add((1, unit((0, 0), (0, 0))),
+                (-1, unit((0, 0), (0, 1))))
+        diagonal_positive_face = linear(
+            u, lambda a, b: unit(a[:-1], b[:-1]))
+        self.assertEqual(diagonal_positive_face, {})
+
+        aw_u = linear(u, aw)
+        component_10 = {
+            basis: coefficient for basis, coefficient in aw_u.items()
+            if len(basis[0]) == 2 and len(basis[1]) == 1
+        }
+        horizontal_positive_face = linear(
+            component_10, lambda a, b: unit(a[:-1], b))
+        self.assertEqual(horizontal_positive_face,
+                         {((0,), (0,)): 1, ((0,), (1,)): -1})
+
     def test_chain_maps_on_universal_simplices_through_degree_four(self):
         for n in range(5):
             a = tuple(range(n+1))

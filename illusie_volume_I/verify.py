@@ -1,4 +1,4 @@
-"""Bounded checks for the Illusie I source map and additive chapter change."""
+"""Bounded checks for the Illusie I source map and chapter additions."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -10,6 +10,12 @@ BASE_SHA256 = "23E8DB6115B5B3465D2C1292D7E6CB244308204C6D1B7EE5F3AC071092D643F9"
 AUTHORITY_SHA256 = "1855B49FE461B13B1CBAEE1341C8FC3E3E0CDDC034C54ABEC1165AF061B90A56"
 START = b"% BEGIN ILLUSIE VOLUME I 1.1.6\n"
 END = b"% END ILLUSIE VOLUME I 1.1.6\n\n"
+HOMOTOPY_SHEAVES_START = b"% BEGIN ILLUSIE VOLUME I 2.1.2.1\n"
+HOMOTOPY_SHEAVES_END = b"% END ILLUSIE VOLUME I 2.1.2.1\n\n"
+WHITEHEAD_START = b"% BEGIN ILLUSIE VOLUME I 2.2\n"
+WHITEHEAD_END = b"% END ILLUSIE VOLUME I 2.2\n\n"
+SIMPLICIAL_TOPOS_START = b"% BEGIN ILLUSIE VOLUME I 2.3.1\n"
+SIMPLICIAL_TOPOS_END = b"% END ILLUSIE VOLUME I 2.3.1\n\n"
 
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest().upper()
@@ -50,14 +56,44 @@ def write_source_lock(root: Path, edition: Path, authority: Path) -> None:
 
 def composition(root: Path) -> tuple[bytes, bytes, bytes]:
     source = (root / "simplicial.tex").read_bytes()
-    snippet = b"\n\n".join((root / "illusie_volume_I" / name).read_bytes().rstrip()
-                           for name in ("relative-homotopy.tex", "localization.tex")) + b"\n"
+    first_snippet = b"\n\n".join(
+        (root / "illusie_volume_I" / name).read_bytes().rstrip()
+        for name in ("relative-homotopy.tex", "localization.tex")) + b"\n"
+    homotopy_sheaves_snippet = (
+        root / "illusie_volume_I/homotopy-sheaves.tex").read_bytes()
+    whitehead_snippet = (
+        root / "illusie_volume_I/whitehead-free-abelian.tex").read_bytes()
+    simplicial_topos_snippet = (
+        root / "illusie_volume_I/simplicial-topos.tex").read_bytes()
     assert source.count(START) == source.count(END) == 1, "composition markers not unique"
+    assert source.count(HOMOTOPY_SHEAVES_START) == 1
+    assert source.count(HOMOTOPY_SHEAVES_END) == 1
+    assert source.count(WHITEHEAD_START) == 1
+    assert source.count(WHITEHEAD_END) == 1
+    assert source.count(SIMPLICIAL_TOPOS_START) == 1
+    assert source.count(SIMPLICIAL_TOPOS_END) == 1
     before, rest = source.split(START)
     inserted, after = rest.split(END)
-    assert inserted == snippet, "root insertion differs from reviewed snippet"
+    assert inserted == first_snippet, "first root insertion differs from reviewed snippets"
+    without_first = before + after
+    before, rest = without_first.split(HOMOTOPY_SHEAVES_START)
+    inserted, after = rest.split(HOMOTOPY_SHEAVES_END)
+    assert inserted == homotopy_sheaves_snippet, (
+        "homotopy-sheaf root insertion differs from reviewed snippet")
+    without_homotopy_sheaves = before + after
+    before, rest = without_homotopy_sheaves.split(WHITEHEAD_START)
+    inserted, after = rest.split(WHITEHEAD_END)
+    assert inserted == whitehead_snippet, (
+        "Whitehead root insertion differs from reviewed snippet")
+    without_whitehead = before + after
+    before, rest = without_whitehead.split(SIMPLICIAL_TOPOS_START)
+    inserted, after = rest.split(SIMPLICIAL_TOPOS_END)
+    assert inserted == simplicial_topos_snippet, (
+        "simplicial-topos root insertion differs from reviewed snippet")
     preimage = before + after
     assert sha(preimage) == BASE_SHA256, "changes outside the bounded insertion"
+    snippet = (first_snippet + b"\n" + homotopy_sheaves_snippet +
+               whitehead_snippet + simplicial_topos_snippet)
     return source, snippet, preimage
 
 def validate(root: Path) -> dict:
@@ -76,7 +112,20 @@ def validate(root: Path) -> dict:
                 (root / "tags/tags").read_text(encoding="utf-8").splitlines()
                 if line and not line.startswith("#") and "," in line)
     local_labels = re.findall(rb"\\label\{([^}]+)\}", snippet)
-    assert len(local_labels) == len(set(local_labels)) == 14
+    assert len(local_labels) == len(set(local_labels)) == 28
+    assert b"section-illusie-I-homotopy-sheaves" in local_labels
+    assert b"lemma-illusie-I-homotopy-sheaves-colimits-pullback" in local_labels
+    assert b"section-illusie-I-whitehead-free-abelian" in local_labels
+    assert b"definition-illusie-I-n-equivalence" in local_labels
+    assert b"lemma-illusie-I-relative-hurewicz-free-abelian" in local_labels
+    assert b"lemma-illusie-I-local-filtered-colimit" in local_labels
+    assert b"lemma-illusie-I-local-finite-type-approximation" in local_labels
+    assert b"lemma-illusie-I-local-colimit-free-modules" in local_labels
+    assert b"theorem-illusie-I-free-abelian-n-equivalence" in local_labels
+    assert b"corollary-illusie-I-free-abelian-equivalence" in local_labels
+    assert b"section-illusie-I-simplicial-topos" in local_labels
+    assert b"lemma-illusie-I-simplicial-sheaves-topos" in local_labels
+    assert b"lemma-illusie-I-simplicial-topos-morphism" in local_labels
     for row in mapping["decisions"]:
         assert len(row["tags"]) == len(row["labels"]), row["id"]
         for tag, label in zip(row["tags"], row["labels"]):
@@ -98,9 +147,22 @@ def validate(root: Path) -> dict:
     assert not set(effective) & set(tags.values()), "local label has permanent tag"
     for label in local_labels:
         assert source.count(b"\\label{" + label + b"}") == 1
-    # References within the inserted text must resolve in the live chapter.
+    # References within the inserted text must resolve either in the live
+    # chapter or to a permanent cross-chapter label in the tag table.
+    tagged_labels = set(tags.values())
     for label in re.findall(rb"\\ref\{([^}]+)\}", snippet):
-        assert source.count(b"\\label{" + label + b"}") == 1, label
+        if source.count(b"\\label{" + label + b"}") == 1:
+            continue
+        assert label.decode() in tagged_labels, label
+    stack = []
+    for token in re.finditer(rb"\\(begin|end)\{([^}]+)\}", snippet):
+        kind, environment = token.group(1), token.group(2)
+        if kind == b"begin":
+            stack.append(environment)
+        else:
+            assert stack and stack.pop() == environment, (
+                "unbalanced environment", environment)
+    assert not stack, ("unclosed environments", stack)
     check = json.loads((dossier / "check.json").read_text(encoding="utf-8"))
     for key, data in (("source_postimage", source), ("snippet", snippet),
                       ("source_preimage", preimage)):
@@ -119,6 +181,10 @@ def write_check(root: Path) -> None:
     check = {"schema": "illusie-volume-I-composition/v1",
              "base_commit": "f73b18165c7162b8386de06cc3c50bd4ced745b6",
              "source": "simplicial.tex", "official_tags_assigned": [],
+             "fragments": ["relative-homotopy.tex", "localization.tex",
+                           "homotopy-sheaves.tex",
+                           "whitehead-free-abelian.tex",
+                           "simplicial-topos.tex"],
              "source_postimage": {"bytes": len(source), "sha256": sha(source)},
              "snippet": {"bytes": len(snippet), "sha256": sha(snippet)},
              "source_preimage": {"bytes": len(preimage), "sha256": sha(preimage)}}

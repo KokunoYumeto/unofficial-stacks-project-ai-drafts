@@ -1,0 +1,20 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-permanence}
+Let $A \to B \to C$ be ring maps.
+\begin{enumerate}
+\item If $A \to C$ is integral so is $B \to C$.
+\item If $A \to C$ is finite so is $B \to C$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $\alpha:A\to B$ and $\beta:B\to C$ for the original maps.
+If $c\in C$ satisfies
+$c^d+\sum_{i=0}^{d-1}(\beta\alpha)(a_i)c^i=0$, the same monic
+polynomial with coefficients $\alpha(a_i)\in B$ proves integrality
+over $B$. This proves (1) for every original $c$.
+If $c_1,\ldots,c_m$ generate $C$ as an $A$-module, every expression
+$c=\sum_i(\beta\alpha)(a_i)c_i$ is also a $B$-linear expression,
+with coefficients $\alpha(a_i)$. The same family generates $C$
+as a $B$-module, proving (2).
+\end{proof}

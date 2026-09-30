@@ -1,0 +1,49 @@
+\begin{lemma}
+\label{lemma-support-quotient}
+Let $R$ be a ring, let $M$ be an $R$-module, and let $I\subseteq R$ be an ideal.
+\begin{enumerate}
+\item If $M$ is finite then the support
+of $M/IM$ is $\text{Supp}(M) \cap V(I)$.
+\item If $N \subset M$, then $\text{Supp}(N) \subset
+\text{Supp}(M)$.
+\item If $Q$ is a quotient module of $M$ then $\text{Supp}(Q) \subset
+\text{Supp}(M)$.
+\item If $0 \to N \to M \to Q \to 0$ is a short exact sequence
+then $\text{Supp}(M) = \text{Supp}(Q) \cup \text{Supp}(N)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Localization preserves the original injections, surjections
+and short exact sequences. For (2), the map
+$N_{\mathfrak p}\to M_{\mathfrak p}$ is injective, so
+the first module can be nonzero only if the second is.
+For (3), the map $M_{\mathfrak p}\to Q_{\mathfrak p}$
+is surjective, so the same conclusion holds for a nonzero
+quotient. In (4), the exact localized sequence shows
+$M_{\mathfrak p}=0$ if and only if both
+$N_{\mathfrak p}=0$ and $Q_{\mathfrak p}=0$, which is
+precisely the stated union formula.
+
+For (1), retain the exact quotient comparison
+$$
+(M/IM)_{\mathfrak p}\longrightarrow M_{\mathfrak p}/IM_{\mathfrak p},
+\qquad (m+IM)/s\longmapsto m/s+IM_{\mathfrak p}.
+$$
+Its inverse sends $m/s+IM_{\mathfrak p}$ to $(m+IM)/s$.
+The original quotient map localizes to a surjection with
+kernel $(IM)_{\mathfrak p}=IM_{\mathfrak p}$: the equality
+follows by writing finite sums of products over a common
+denominator. This proves well-definedness and both
+composites of the displayed maps. If $M_{\mathfrak p}=0$,
+the quotient is zero. If some $a\in I$ lies outside
+$\mathfrak p$, it is a unit in $R_{\mathfrak p}$ and
+$IM_{\mathfrak p}=M_{\mathfrak p}$, so the quotient is
+again zero. Conversely, if $M_{\mathfrak p}\ne0$ and
+$I\subseteq\mathfrak p$, then $IR_{\mathfrak p}$ lies
+in the maximal ideal of the local ring. The module
+$M_{\mathfrak p}$ is finite, so Nakayama's
+Lemma \ref{lemma-NAK} prevents
+$M_{\mathfrak p}/IM_{\mathfrak p}$ from being zero.
+These cases prove the exact intersection formula.
+\end{proof}

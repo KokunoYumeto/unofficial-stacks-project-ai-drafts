@@ -1,0 +1,19 @@
+\begin{lemma}
+\label{lemma-map-AR}
+Suppose that $0 \to K \to M \xrightarrow{f} N$ is an
+exact sequence of finitely generated modules
+over a Noetherian ring $R$. Let $I \subset R$ be an ideal.
+Then there exists a $c$ such that
+$$
+f^{-1}(I^nN) = K + I^{n-c}f^{-1}(I^cN)
+\quad\text{and}\quad
+f(M) \cap I^nN \subset f(I^{n - c}M)
+$$
+for all $n \geq c$.
+\end{lemma}
+
+\begin{proof}
+Apply Lemma \ref{lemma-Artin-Rees} to
+$\Im(f) \subset N$ and note that
+$f : I^{n-c}M \to I^{n-c}f(M)$ is surjective.
+\end{proof}

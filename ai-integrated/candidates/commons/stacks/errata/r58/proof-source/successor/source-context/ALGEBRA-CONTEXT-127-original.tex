@@ -1,0 +1,51 @@
+\begin{lemma}
+\label{lemma-powers}
+Let $\varphi : R \to S$ be a ring map. If
+\begin{enumerate}
+\item for any $x \in S$ there exists $n > 0$ such that
+$x^n$ is in the image of $\varphi$, and
+\item $\Ker(\varphi)$ is locally nilpotent,
+\end{enumerate}
+then $\varphi$ induces a homeomorphism on spectra and induces residue
+field extensions satisfying the equivalent conditions of
+Lemma \ref{lemma-powers-field}.
+\end{lemma}
+
+\begin{proof}
+Assume (1) and (2). Let $\mathfrak q, \mathfrak q'$ be primes of $S$
+lying over the same prime ideal $\mathfrak p$ of $R$. Suppose $x \in S$ with
+$x \in \mathfrak q$, $x \not \in \mathfrak q'$. Then $x^n \in \mathfrak q$
+and $x^n \not \in \mathfrak q'$ for all $n > 0$. If $x^n = \varphi(y)$ with
+$y \in R$ for some $n > 0$ then
+$$
+x^n \in \mathfrak q \Rightarrow y \in \mathfrak p \Rightarrow
+x^n \in \mathfrak q'
+$$
+which is a contradiction. Hence there does not exist an $x$ as above and
+we conclude that $\mathfrak q = \mathfrak q'$, i.e., the map on spectra
+is injective. By assumption (2) the kernel $I = \Ker(\varphi)$ is
+contained in every prime, hence $\Spec(R) = \Spec(R/I)$ as
+topological spaces. As the induced map $R/I \to S$ is integral by
+assumption (1)
+Lemma \ref{lemma-integral-overring-surjective}
+shows that $\Spec(S) \to \Spec(R/I)$ is surjective. Combining
+the above we see that $\Spec(S) \to \Spec(R)$ is bijective.
+If $x \in S$ is arbitrary, and we pick $y \in R$ such that
+$\varphi(y) = x^n$ for some $n > 0$, then we see that the open
+$D(x) \subset \Spec(S)$ corresponds to the open
+$D(y) \subset \Spec(R)$ via the bijection above. Hence we see that
+the map $\Spec(S) \to \Spec(R)$ is a homeomorphism.
+
+\medskip\noindent
+To see the statement on residue fields, let $\mathfrak q \subset S$
+be a prime lying over a prime ideal $\mathfrak p \subset R$. Let
+$x \in \kappa(\mathfrak q)$. If we think of $\kappa(\mathfrak q)$
+as the residue field of the local ring $S_\mathfrak q$, then we
+see that $x$ is the image of some $y/z \in S_\mathfrak q$
+with $y \in S$, $z \in S$, $z \not \in \mathfrak q$.
+Choose $n, m > 0$ such that $y^n, z^m$ are in the image of $\varphi$.
+Then $x^{nm}$ is the residue of $(y/z)^{nm} = (y^n)^m/(z^m)^n$
+which is in the image of $R_\mathfrak p \to S_\mathfrak q$.
+Hence $x^{nm}$ is in the image of
+$\kappa(\mathfrak p) \to \kappa(\mathfrak q)$.
+\end{proof}

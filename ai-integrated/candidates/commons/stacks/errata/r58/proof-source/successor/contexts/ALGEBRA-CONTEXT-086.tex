@@ -1,0 +1,29 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-going-up}
+Let $R \to S$ be a ring map such that
+$S$ is integral over $R$.
+Let $\mathfrak p \subset \mathfrak p' \subset R$
+be primes. Let $\mathfrak q$ be a prime of $S$ mapping
+to $\mathfrak p$. Then there exists a prime $\mathfrak q'$
+with $\mathfrak q \subset \mathfrak q'$
+mapping to $\mathfrak p'$.
+\end{lemma}
+
+\begin{proof}
+Keep the original map $\varphi:R\to S$ and form
+$$
+\overline\varphi:R/\mathfrak p\longrightarrow S/\mathfrak q,
+\qquad r+\mathfrak p\longmapsto\varphi(r)+\mathfrak q.
+$$
+It is well defined and injective because
+$\varphi^{-1}(\mathfrak q)=\mathfrak p$; both rings are domains.
+It is integral because the monic equation for each original
+$s\in S$ descends coefficient by coefficient to its class.
+Lemma \ref{editorial-source-lemma-integral-overring-surjective} therefore gives
+a prime $\overline{\mathfrak q'}$ of $S/\mathfrak q$ contracting
+to $\mathfrak p'/\mathfrak p$. Let $\mathfrak q'$ be its inverse
+image in $S$. This is prime, contains the original $\mathfrak q$,
+and its contraction is exactly $\mathfrak p'$: an element $r\in R$
+maps into it if and only if $r+\mathfrak p\in\mathfrak p'/\mathfrak p$,
+which is equivalent to $r\in\mathfrak p'$.
+\end{proof}

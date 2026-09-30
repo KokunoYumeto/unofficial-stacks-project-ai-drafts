@@ -1,0 +1,24 @@
+\begin{proposition}
+\label{proposition-localize-twice-module}
+View $S'^{-1}M$ as an $A$-module, then $S^{-1}(S'^{-1}M)$ is
+isomorphic to $(SS')^{-1}M$.
+\end{proposition}
+
+\begin{proof}
+Note that given a $A$-module M, we have not proved any
+universal property for $S^{-1}M$. Hence we cannot reason
+as in the preceding proof; we have to construct the isomorphism explicitly.
+
+\medskip\noindent
+We define the maps as follows
+\begin{align*}
+& f : S^{-1}(S'^{-1}M) \longrightarrow (SS')^{-1}M, \quad \frac{x/s'}{s}\mapsto
+x/ss'\\
+& g : (SS')^{-1}M \longrightarrow S^{-1}(S'^{-1}M), \quad x/t\mapsto
+\frac{x/s'}{s}\ \text{for some }s\in S, s'\in S', \text{ and }
+t = ss'
+\end{align*}
+We have to check that these homomorphisms are well-defined, that is,
+independent the choice of the fraction. This is easily checked and it is also
+straightforward to show that they are inverse to each other.
+\end{proof}

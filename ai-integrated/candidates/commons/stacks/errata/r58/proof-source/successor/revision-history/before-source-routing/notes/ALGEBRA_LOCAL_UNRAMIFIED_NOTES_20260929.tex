@@ -1,0 +1,137 @@
+\subsection{Local unramified charts, retained scalars and their conormal objects}\label{local-unramified-charts-retained-scalars-and-their-conormal-objects}
+
+\subsubsection{Source identity and reading scope}\label{source-identity-and-reading-scope}
+
+Source: the Stacks Project authors, algebra.tex at a04446e57ec1fbc252a871afcec7752fb2807b14, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The complete source interval 41712--42061 and its twelve received reports have been read. The next opening, 42062--42084, is read but unadjudicated. Bounded dependency reading covers 566--624, 9797--9830, 30906--30949, 31623--31660 and 40419--40463. These readings do not claim that every dependency proof was newly read in full. Earlier checked proofs are retained in ALGEBRA\_ETALE\_LOCAL\_NOTES\_20260928.md, ALGEBRA\_ETALE\_QUASIFINITE\_NOTES\_20260928.md and ALGEBRA\_CONORMAL\_THICKENING\_NOTES\_20260928.md, together with the diagonal calculation in ALGEBRA\_UNRAMIFIED\_NOTES\_20260928.md.
+
+Four indexed hits for ``unramified etale thickening'' are routing records only; none has been read or used here. No novelty or exhaustive literature-reading claim is made. The source's unramified convention is finite type with zero differentials, and its G-unramified convention adds finite presentation. Keep both conventions and the original eleven-step proof identifiable. All expanded proofs and consequences below are source-linked editorial material.
+
+\subsubsection{The source reductions and all scalar factors}\label{the-source-reductions-and-all-scalar-factors}
+
+We verify proposition-unramified-locally-standard at 41720--41938 with its original rings and localizations. Step 1 replaces \(S\) by \(S_a\), with \(a\notin\mathfrak q\), on which the map is unramified. Step 2 uses the finite-coefficient model established in the previous section: there is an unramified \(R_0\to S_0\), with \(R_0\) of finite type over \(\mathbf Z\), and a surjection \(R\otimes_{R_0}S_0\to S_a\). Contract the specified prime to \(S_0\). A standard étale algebra surjecting onto a principal neighbourhood of this contraction remains standard étale after tensoring with \(R\). The base-changed map is still surjective, and its composite surjects onto the corresponding principal localization of \(S_a\). Thus the Noetherian reduction in the source is legitimate even though \(S_a\) need only be a quotient of the base-changed model.
+
+Here and at the later reductions, principal localizations return to the original ring exactly. If the second denominator in \(S_a\) is \(b/a^N\), the two localization rings have inverse maps \[
+(S_a)_{b/a^N}\ \longleftrightarrow\ S_{ab}.
+\] Both maps preserve every original element of \(S\). In the left ring, \(b^{-1}=a^{-N}(b/a^N)^{-1}\), and hence \(ab\) is invertible. In the right ring, \(a^{-1}=b(ab)^{-1}\) and \(b^{-1}=a(ab)^{-1}\), and \((b/a^N)^{-1}=a^Nb^{-1}\). These formulas prove the two maps are inverse. The specified prime avoids \(a\) and \(b\), so it avoids \(ab\).
+
+Step 3 uses the already proved quasi-finite finite-neighbourhood lemma at 30906--30949. If its finite algebra is \(T\), its map is \(\varphi:T\to S\), and its denominator is \(b\in T\), the condition is \(\varphi(b)\notin\mathfrak q\), equivalently \(b\notin\varphi^{-1}(\mathfrak q)\). Membership through this stated map is conventional notation, not a false mathematical assertion. The repeated ``such that'' is a prose defect; the proposed correction also spells out the image. The isomorphism \(T_b\cong S_{\varphi(b)}\) permits transfer of any later chart by localizing its source at a lift of \(b\). A principal localization of a standard étale algebra \(R[x]_g/(f)\), at an element \(h/g^N\), is \(R[x]_{gh}/(f)\), by the same inverse formulas. Thus the transfer keeps the required standard étale form and an actual principal open of the original target.
+
+For Steps 4--6, write \(K=\kappa(\mathfrak p)\) and retain the actual finite fibre decomposition \[
+S\otimes_R K=A_1\times\cdots\times A_n,\qquad
+A_1=S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}
+    =\kappa(\mathfrak q).
+\] The last equality and finite separability follow from unramifiedness at \(\mathfrak q\); the other factors are local Artinian rings, not necessarily fields. Choose a nonzero primitive element \(\alpha\) in the first factor. Since the fibre is the localization of \(S/\mathfrak pS\) at \(R\setminus\mathfrak p\), some scalar \(\bar c\in K^\times\), \(c\in R\setminus\mathfrak p\), makes \((\bar c\alpha,0,\ldots,0)\) lift to \(t\in S\). The source then uses this nonzero scalar multiple as its primitive element; \(K(\bar c\alpha)=K(\alpha)\), with inverse \(\alpha=\bar c^{-1}(\bar c\alpha)\).
+
+Put \(T=R[t]\subset S\), the ring called \(S'\) in Steps 5--7. Every other fibre prime sends \(t\) to zero, whereas the distinguished prime does not. Consequently \(\mathfrak q\) is the only prime of \(S\) over its contraction \(\mathfrak q'\subset T\). The map \(T\to S\) is finite: a finite set of \(R\)-module generators of \(S\) also generates it as a \(T\)-module. Thus it is integral, and the unique-prime localization result gives \(S_{\mathfrak q'}=S_{\mathfrak q}\). The map \(T_{\mathfrak q'}\hookrightarrow S_{\mathfrak q}\) is finite and injective. The actual ideals satisfy \[
+\mathfrak pS_{\mathfrak q}
+\subset\mathfrak q'S_{\mathfrak q}
+\subset\mathfrak qS_{\mathfrak q}
+=\mathfrak pS_{\mathfrak q}.
+\] The first residue field contains the chosen primitive element, so the induced inclusion \(\kappa(\mathfrak q')\subset\kappa(\mathfrak q)\) is equality. The finite \(T_{\mathfrak q'}\)-module \(S_{\mathfrak q}/T_{\mathfrak q'}\) therefore has zero quotient by \(\mathfrak q'\), and Nakayama makes it zero. This proves the exact local isomorphism used in Step 7.
+
+In the source's Noetherian reduction, \(T\) is a finite \(R\)-module as a submodule of the finite module \(S\). Both algebras are finitely presented, so 31623--31660 gives principal neighbourhoods with the same local isomorphism. The earlier corrections of that dependency, including inversion of the idempotent selecting the correct factor, remain recorded in the prior review; no duplicate fix is made here. The missing copula in condition (b) at 41853 is a copyedit.
+
+Now use the original Step 8 presentation \(S=R[x]/I\). The fibre ideal \(\bar I=I K[x]\) is nonzero because \(I\) contains a monic integral relation for \(x\), and it is proper because the specified fibre point exists. Let \(H\in K[x]\) be its monic generator. Its membership is in \(K[x]\), not in the coefficient field \(K\). Write an actual finite expression \[
+H=\sum_{j=1}^r P_j\,\overline{a_j},
+\qquad a_j\in I,\quad P_j\in K[x].
+\] For every coefficient of each \(P_j\), choose a fraction with numerator in \(R/\mathfrak p\) and denominator the image of an element of \(R\setminus\mathfrak p\). Let \(c\) be the product of all these finitely many denominators (the empty product is 1), and put \(\lambda=\bar c\in K^\times\). Every coefficient of \(\lambda P_j\) is now in the image of \(R\). Choose lifts \(Q_j\in R[x]\), and define \[
+h=\sum_{j=1}^r Q_j a_j\in I.
+\] Then \(\bar h=\lambda H\). This establishes the required stronger choice \(h\in I\), not merely \(h\in R[x]\), while retaining the actual nonzero scalar. It does not assert that \(h\) can be monic.
+
+Retain the source's distinct monic irreducibles, their original multiplicities, and its distinguished separable factor: \[
+H=\overline h_1\overline h_2^{e_2}\cdots\overline h_n^{e_n},
+\qquad e_1=1,\quad e_i\ge1\ (i\ge2).
+\] Thus the exact replacement at 41872 is \[
+\bar h=\lambda\overline h_1
+                 \overline h_2^{e_2}\cdots\overline h_n^{e_n}.
+\] The factor algebras are still \(A_i=K[x]/(\overline h_i^{e_i})\), including \(i=1\); the unit \(\lambda\) does not change these ideals but cannot be deleted from polynomial equalities.
+
+Keep the chosen monic \(m\in I\), its full factorization \[
+\bar m=\bar k\,\overline h_1^{d_1}\cdots\overline h_n^{d_n},
+\quad d_1\ge1,\quad d_i\ge e_i\ (i\ge2),
+\] where \(\bar k\) is prime to every \(\overline h_i\). Choose the source's integer \(l\ge2\) with \(l\deg(m)>\deg(h)\). Then \(f=m^l+h\) is monic and belongs to \(I\). Its full reduction is \[
+\begin{aligned}
+\bar f
+&=\lambda\overline h_1\prod_{i=2}^n\overline h_i^{e_i}
+  +\bar k^{\,l}\prod_{i=1}^n\overline h_i^{ld_i}\\
+&=\overline h_1\left(
+ \lambda\prod_{i=2}^n\overline h_i^{e_i}
+ +\bar k^{\,l}\overline h_1^{ld_1-1}
+                 \prod_{i=2}^n\overline h_i^{ld_i}\right)
+=\overline h_1\bar w .
+\end{aligned}
+\] The terms involving \(\lambda\) at 41898 and 41903 are therefore also required. Modulo \(\overline h_1\), the second term in parentheses is zero since \(ld_1-1\ge1\). The first term is nonzero, since \(\lambda\ne0\) and the other irreducibles are coprime to \(\overline h_1\). Consequently \(\bar w\) is prime to \(\overline h_1\). The original derivative remains \[
+g=f'=l m^{l-1}m'+h',\qquad
+\bar g=\overline h_1'\bar w+\overline h_1\bar w'.
+\] No coefficient is removed in positive characteristic. At the specified residue point the second summand is zero and the first is nonzero by separability. Therefore \(g\notin\mathfrak q\), and the exact map \[
+R[x]_g/(f)\longrightarrow (R[x]/I)_g
+\] is surjective. Its source is standard étale, since \(f\) is monic and the image of \(f'=g\) is invertible. This proves Steps 9--11 with the original \(m,h,l,f,g\) and all their coefficients retained.
+
+For a concrete adverse example, take \(R=\mathbf Z\), \(\mathfrak p=(3)\), \(I=(x-1)\), \(h=2(x-1)\), \(m=x-1\), \(l=2\). Here \(\lambda=2\) in \(\mathbf F_3\), and the actual \(f=(x-1)^2+2(x-1)=x^2-1\). Dropping the scalar instead gives \((x-1)^2+(x-1)=x^2-x\), a different polynomial in \(\mathbf F_3[x]\). This propagates the same defect already proved in group 1145 to its distinct unramified occurrence; the earlier operation is not duplicated.
+
+\subsubsection{The direct comparison and the separated fibre factors}\label{the-direct-comparison-and-the-separated-fibre-factors}
+
+The finite-cokernel argument of group 1148 also applies with the unramified residue-field conclusions just proved. In the finite neighbourhood of Step 3, \(t\) is integral over \(R\), so an actual monic relation of degree \(d\) makes \(1,t,\ldots,t^{d-1}\) span \(T=R[t]\). Thus \(T/R\) is finite over an arbitrary base. After the local isomorphism \(T_{\mathfrak q'}=S_{\mathfrak q}\), the finite \(T\)-module \(C=S/T\) vanishes at \(\mathfrak q'\). For generators \(c_1,\ldots,c_b\), choose \(u_i\notin\mathfrak q'\) with \(u_i c_i=0\) and put \(u=\prod_i u_i\). Then \(C_u=0\), and the original injection gives \(T_u=S_u\). This replaces the Noetherian and finite-presentation uses in Step 7. Steps 8--11 and their denominator formulas above apply unchanged. This is an alternative proof of the source's already arbitrary-base theorem, not a new generalization of its conclusion.
+
+For 41942--42051, retain the earlier étale quasi-finite decomposition of 40420--40496, with its proved residue-field and finite-component construction in group 1168. At a chosen prime the finite factor \(A_i\) has a unique prime \(\mathfrak r_i\) over \(\mathfrak p\) and a purely inseparable residue extension. If the map is unramified there, the extension is also separable, hence trivial: a minimal polynomial that is both separable and a factor of a polynomial \(X^{p^a}-c\) has degree one; in characteristic zero purely inseparable already means trivial. The local fibre is the residue field and \(\mathfrak p(A_i)_{\mathfrak r_i}\) is its maximal ideal. Since \(A_i/R\) is finite, unique-prime localization gives \((A_i)_{\mathfrak p}=(A_i)_{\mathfrak r_i}\). The finite cokernel of \(R_{\mathfrak p}\to(A_i)_{\mathfrak p}\) has zero residue quotient and is zero by Nakayama.
+
+For each finite factor to which this applies, choose actual generators of \(A_i/\operatorname{im}(R)\); each is annihilated by an element of \(R\setminus\mathfrak p\). The product of these denominators makes \(R_f\to(A_i)_f\) surjective. For all finitely many factors take the product of all their denominators, so one \(f\notin\mathfrak p\) works simultaneously. If no factor occurs, the product is 1. Localizing the étale base preserves étaleness and its specified prime. The image \(\mathfrak pA_i\) is prime with contraction exactly \(\mathfrak p\), because \(A_i=R/I_i\) and the surviving fibre implies \(I_i\subset\mathfrak p\). This supplies the precise simultaneous step implicit at 42049--42050.
+
+For the one-point lemma, collect the other finite factors and the old remainder into the complementary factor. For the everywhere-unramified lemma, quasi-finiteness holds at every prime. Hence the remainder \(B\), which is not quasi-finite at any prime of the selected fibre, has no such prime at all. Equivalently \(B\otimes_R\kappa(\mathfrak p)=0\); a nonzero commutative ring has a prime ideal, so a nonzero fibre would contradict the assertion.
+
+Writing the final surjections as \(R'\to R'/I_i\) makes the resulting decomposition exact: \[
+R'\otimes_RS=\prod_{i=1}^n R'/I_i\times B.
+\] For any \(R'\)-algebra \(T\), tensoring gives \[
+T\otimes_RS=\prod_{i=1}^n T/I_iT\times(T\otimes_{R'}B).
+\] The map is the coordinate map on pure tensors; its inverse uses the finite orthogonal idempotents selecting the original factors, whose sum is 1. Thus it is a ring isomorphism for arbitrary base change. At a prime \(\mathfrak t\) contracting to the specified \(\mathfrak p'\), each \(I_iT\subset\mathfrak t\) and each displayed quotient has fibre \(\kappa(\mathfrak t)\). The remaining fibre is \[
+(B\otimes_{R'}\kappa(\mathfrak p'))
+   \otimes_{\kappa(\mathfrak p')}\kappa(\mathfrak t)=0.
+\] These claims concern the specified fibre and its pullbacks.
+
+The remainder cannot in general be discarded on a neighbourhood. Take \(R=k[t]\), \(\mathfrak p=(t)\), and the unramified (indeed étale) algebra \(S=R\times R_t\). The second factor has zero fibre at \(\mathfrak p\), but for every \(f\notin(t)\) its localization is \(R_{tf}\ne0\), since \(tf\) is a nonzero polynomial in a domain. Thus the exact decomposition retains a nonzero remainder on every principal neighbourhood of the specified point.
+
+\subsubsection{The exact conormal object on an etale quotient chart}\label{the-exact-conormal-object-on-an-etale-quotient-chart}
+
+Let \(E\) be a formally étale \(R\)-algebra and let \(A=E/I\), for any ideal \(I\). No finite-generation hypothesis is imposed here. The local standard étale charts above provide this situation for the original unramified map. Define the actual rings and module \[
+U=E/I^2,\qquad C=I/I^2,\qquad
+0\longrightarrow C\longrightarrow U\longrightarrow A
+\longrightarrow0.
+\] The ideal \(C\) is square-zero.
+
+For an \(R\)-algebra \(B\), a square-zero ideal \(J\subset B\), and an \(R\)-map \(a:A\to B/J\), formal étaleness gives a unique lift \(\beta:E\to B\) of \(E\to A\xrightarrow a B/J\). For \(i\in I\), \(\beta(i)\in J\), so \(\beta(I^2)\subset J^2=0\). Hence \(\beta\) factors through a unique \(q:U\to B\), compatible with \(a\) on the quotients. Conversely any such \(q\) precomposed with \(E\to U\) is this unique lift. Thus \(U\to A\) has exactly the universal square-zero thickening property constructed in group 1205.
+
+The restriction \[
+\lambda=q|_C:C\longrightarrow J
+\] is \(A\)-linear using \(a\) for the action on \(J\): changing a lift of an element of \(A\) changes its product with \(q(C)\subset J\) by an element of \(J^2=0\). A lift \(A\to B\) of \(a\) exists exactly when \(\lambda=0\), since this is exactly the condition that \(q\) kill \(\ker(U\to A)\). It is unique: any two lifts give two lifts from \(E\), which agree, and \(E\to A\) is surjective. This also proves that \(A/R\) is formally unramified.
+
+If another formally étale presentation \(A=E'/I'\) is given, apply the universal property to \(B=E'/I'^2\), \(J=I'/I'^2\), and the identity on \(A\). It gives a unique map \(E/I^2\to E'/I'^2\) over \(A\). The reverse construction gives its inverse, since both composites are the unique endomorphism over the identity of \(A\). Restricting these maps gives inverse \(A\)-linear maps \(I/I^2\leftrightarrow I'/I'^2\). This constructs the exact comparison with the earlier universal conormal object, not merely a claimed similarity of presentations.
+
+It follows that \(A/R\) is formally étale if \(I=I^2\). Conversely, if \(A/R\) is formally étale, lift its identity through \(E/I^2\to A\) to a section \(s:A\to E/I^2\). The maps \(E\to E/I^2\) given by the quotient and by \(E\to A\xrightarrow s E/I^2\) lift the same map into \(A\). Formal étaleness of \(E/R\) makes them equal. Every \(i\in I\) therefore maps to zero in \(E/I^2\), so \(I\subset I^2\). We have proved the exact criterion \[
+A/R\text{ formally étale}\quad\Longleftrightarrow\quad I=I^2.
+\]
+
+For a standard étale \(E=R[x]_g/(f)\), use its unchanged presentation \[
+E=R[x,z]/(f,zg-1).
+\] Then \(A/R\) is finitely presented exactly when \(I\) is finitely generated as an ideal of \(E\). In one direction, lifts of finitely many generators of \(I\), together with \(f,zg-1\), present \(A\). In the other, finite-presentation independence at 566--581 makes the kernel of the given polynomial surjection \(R[x,z]\to A\) finitely generated; its image in \(E\) generates \(I\). Thus the source's G-unramified finiteness condition on the chart is precisely finite generation of this particular ideal.
+
+If \(I=I^2\) and \(I\) is generated by \(u_1,\ldots,u_m\), choose \(a_{ij}\in I\) with \(u_i=\sum_j a_{ij}u_j\), and set \[
+\delta=\det(\mathrm{Id}-(a_{ij}))
+ =\sum_{\pi\in\mathfrak S_m}\operatorname{sgn}(\pi)
+       \prod_{i=1}^m(\delta_{i,\pi(i)}-a_{i,\pi(i)}).
+\] The adjugate identity gives \(\delta I=0\), and \(\delta-1\in I\). Therefore \(\delta^2=\delta\), and \(e=1-\delta\in I\) satisfies \(e^2=e\) and \(I=eE\): for every \(u\in I\), \(u=(1-\delta)u=eu\). The empty generator list gives \(\delta=1\), \(e=0\). The quotient and localization have inverse ring maps \[
+E/I=E/eE\ \longleftrightarrow\ E_{1-e},
+\] since \(1-e\) maps to 1 in the quotient, while inverting \(1-e\) forces \(e=0\). Hence a finitely presented formally étale chart is an actual principal localization of the original étale algebra. All determinant factors and signs are retained.
+
+Finally let \(R\to R_1\) be arbitrary, put \(E_1=R_1\otimes_RE\), \(A_1=R_1\otimes_RA\), and \(I_1=\ker(E_1\to A_1)\). Right exactness of tensor identifies \(I_1\) with the image of \(R_1\otimes_R I\). Products of such images show that \(I_1^2\) is the image of \(R_1\otimes_R I^2\). Hence the canonical maps give \[
+R_1\otimes_R U=E_1/I_1^2.
+\] Formal étaleness is preserved: an \(R_1\)-algebra lifting problem for \(E_1\) is the corresponding \(R\)-problem for \(E\), and the unique lift extends to \(E_1\) by its prescribed \(R_1\)-action. Thus the displayed ring is the universal thickening of \(A_1\). Its actual kernel \(C_1=I_1/I_1^2\) is the image of \(R_1\otimes_R C\), with exact sequence \[
+\operatorname{Tor}_1^R(R_1,U)\longrightarrow
+\operatorname{Tor}_1^R(R_1,A)\longrightarrow
+R_1\otimes_R C\longrightarrow C_1\longrightarrow0.
+\] This is the tensor long exact sequence of \(0\to C\to U\to A\to0\), ending at the actual kernel of \(R_1\otimes_R U\to R_1\otimes_R A\). It is not permissible to replace this image by the tensor product without checking the preceding map. For \(R=E=\mathbf Z\), \(I=(p)\), \(A=\mathbf F_p\), the original \(U=\mathbf Z/p^2\) and \(C=p\mathbf Z/p^2\). After \(R_1=\mathbf F_p\), \(I_1=0\), \(U_1=A_1=\mathbf F_p\), and \(C_1=0\), whereas \(R_1\otimes_R C=\mathbf F_p\). This retains and confirms the earlier exact base-change boundary.
+
+\subsubsection{Report accounting and propagation}\label{report-accounting-and-propagation}
+
+Groups 1215--1221 account for all twelve reports, with nine operations in seven proposed units. They respectively repair the repeated clause with an explicit image, the copula, the polynomial-ring membership, the nonzero scalar, all three occurrences of that scalar, the lift inside \(I\), and the explicit exponent \(e_1=1\). The report's strict typing objection to conventional prime-membership notation is not accepted as an independent mathematical defect. No optional or rejected group and no duplicate canonical operation is introduced in this interval.
+
+Group 1219 receives group 1145's scalar correction at this distinct source locus. Group 1222 has no source operation: it receives 1148's finite-cokernel comparison, 1168's finite-fibre decomposition, 1205's universal conormal thickening and 1214's idempotent calculation. It records the direct arbitrary-base proof, exact separated quotient factors, universal chart thickening, obstruction map, presentation comparison, formal-étale and finite-presentation criteria, and the actual kernel after arbitrary base change. These arguments remain separate editorial material. The original translation, mathematical objects, eleven-step exposition and finite-type versus finite-presentation conventions remain identifiable. Broader synthesis and any paper follow completion of the core work.

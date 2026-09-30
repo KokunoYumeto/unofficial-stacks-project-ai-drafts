@@ -1,0 +1,98 @@
+\begin{lemma}
+\label{lemma-glue-modules}
+Let $R$ be a ring. Let $f_1, \ldots, f_n \in R$. Suppose we are given
+the following data:
+\begin{enumerate}
+\item For each $i$ an $R_{f_i}$-module $M_i$.
+\item For each pair $i, j$ an $R_{f_if_j}$-module isomorphism
+$\psi_{ij} : (M_i)_{f_j} \to (M_j)_{f_i}$.
+\end{enumerate}
+which satisfy the ``cocycle condition'' that all the diagrams
+$$
+\xymatrix{
+(M_i)_{f_jf_k}
+\ar[rd]_{\psi_{ij}}
+\ar[rr]^{\psi_{ik}}
+& &
+(M_k)_{f_if_j} \\
+&
+(M_j)_{f_if_k} \ar[ru]_{\psi_{jk}}
+}
+$$
+commute (for all triples $i, j, k$). Given this data define
+$$
+M = \Ker\left(
+\bigoplus\nolimits_{1 \leq i \leq n} M_i
+\longrightarrow
+\bigoplus\nolimits_{1 \leq i, j \leq n} (M_i)_{f_j}
+\right)
+$$
+where $(m_1, \ldots, m_n)$ maps to the element whose
+$(i, j)$th entry is $m_i/1 - \psi_{ji}(m_j/1)$.
+Then the natural map $M \to M_i$ induces an isomorphism
+$M_{f_i} \to M_i$. Moreover $\psi_{ij}(m/1) = m/1$
+for all $m \in M$ (with obvious notation).
+\end{lemma}
+
+\begin{proof}
+Fix an original index $k\in\{1,\ldots,n\}$.
+Localizing the defining kernel at $f_k$ and using exactness of
+localization gives the isomorphism
+$$
+M_{f_k}\longrightarrow H_k:=
+\Ker\left(
+\bigoplus_{i=1}^n(M_i)_{f_k}\longrightarrow
+\bigoplus_{i,j=1}^n((M_i)_{f_j})_{f_k}
+\right),\qquad
+\frac{(m_i)_{i=1}^n}{f_k^a}\longmapsto
+\left(\frac{m_i}{f_k^a}\right)_{i=1}^n.
+$$
+The map defining $H_k$ keeps the original $(i,j)$ component
+$z_i/1-\psi_{ji}(z_j/1)$, after the indicated localizations.
+The comparison between localization orders sends
+$(x/f_j^a)/f_k^b$ to $(x/f_k^b)/f_j^a$ and has the reverse
+formula as inverse, by Proposition \ref{proposition-localize-twice-module}.
+
+\medskip\noindent
+Since $M_k$ is already an $R_{f_k}$-module, the canonical map
+$M_k\to(M_k)_{f_k}$ has inverse
+$x/f_k^a\mapsto f_k^{-a}x$.
+The cocycle condition for $(k,k,k)$ gives $\psi_{kk}^2=\psi_{kk}$
+under these comparisons; since $\psi_{kk}$ is invertible, it is the
+identity. Likewise the conditions with repeated indices give
+$\psi_{ik}\psi_{ki}=\mathrm{id}$ on each overlap.
+Define
+$$
+\eta_k:M_k\longrightarrow\bigoplus_{i=1}^n(M_i)_{f_k},\qquad
+a\longmapsto\bigl(\psi_{ki}(a/1)\bigr)_{i=1}^n,
+$$
+where $a/1$ is the image of $a$ in $(M_k)_{f_i}$ for the $i$th entry.
+The cocycle for $(k,j,i)$ says
+$\psi_{ji}\psi_{kj}=\psi_{ki}$ after localizing at $f_if_j$,
+so every defining difference for $H_k$ vanishes on this tuple.
+Thus $\eta_k$ takes values in $H_k$.
+Projection onto the $k$th summand, followed by
+$(M_k)_{f_k}\to M_k$, defines $\pi_k:H_k\to M_k$.
+The identity $\psi_{kk}=\mathrm{id}$ proves $\pi_k\eta_k=\mathrm{id}$.
+For $z=(z_i)\in H_k$, its $(i,k)$ equation identifies $z_i$
+with $\psi_{ki}(\pi_k(z)/1)$; hence $\eta_k\pi_k=\mathrm{id}$.
+
+\medskip\noindent
+There is also an explicit fraction representing this inverse in $M_{f_k}$.
+Write $\psi_{ki}(a/1)=b_i/f_k^{r_i}$ with $b_i\in M_i$ and $r_i\geq0$.
+Choose $N\geq r_i$ for all $i$, and put $b'_i=f_k^{N-r_i}b_i$.
+For each pair $(i,j)$ the element
+$d_{ij}=b'_i/1-\psi_{ji}(b'_j/1)$ of $(M_i)_{f_j}$
+vanishes after localization at $f_k$.
+Choose $s_{ij}\geq0$ with $f_k^{s_{ij}}d_{ij}=0$, and choose
+$L\geq s_{ij}$ for all pairs. The tuple
+$m=(f_k^Lb'_i)_{i=1}^n$ belongs to $M$, and the fraction
+$m/f_k^{N+L}$ maps to $\eta_k(a)$.
+Independence of these choices follows from the injectivity of the
+displayed kernel comparison, since their images are the same tuple.
+Consequently the original projection induces $M_{f_k}\cong M_k$.
+Finally, for $m=(m_i)\in M$, its $(j,i)$ equation reads
+$m_j/1=\psi_{ij}(m_i/1)$, which is the asserted compatibility.
+The proof uses no cover assumption on the $f_i$ and changes none of them.
+If $n=0$, then $M=0$ and there are no indexed assertions to prove.
+\end{proof}

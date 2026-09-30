@@ -1,0 +1,123 @@
+\subsection{Projectivity descent and completion}\label{projectivity-descent-and-completion}
+
+Separate editorial evidence for the Stacks Project authors' algebra.tex, authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, lines 22461--23009. Authority SHA-256: FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The complete source units in this interval and all eleven due reports were read. The theorem beginning at 23010 remains unadjudicated.
+
+The source's Matlis citation, Poonen email attribution, and Lenstra--de Smit attribution are retained without claiming independent reading of those works or correspondence. The five operations already composed as MC-STK-ERR-0455 and MC-STK-ERR-0456 resolve four reports. The proposed rewriting of induction on the well-ordered set M is rejected. Seven further minimal copyedits or missing declarations are recorded. Full arguments and the consequences below remain separate editorial material; no cumulative chapter or translation source is changed. These are source-review consequences, without a novelty claim or completion of the later synthesis.
+
+\subsubsection{Faithfully flat projectivity descent and the retained corrections}\label{faithfully-flat-projectivity-descent-and-the-retained-corrections}
+
+Source 22461--22515. Reports OCC-12112 and OCC-00471 retain MC-STK-ERR-0455; OCC-12113 and OCC-00473 retain the four ordinal-symbol operations of MC-STK-ERR-0456. Report OCC-00472 is rejected as a mathematical objection.
+
+Keep the original faithfully flat map \(R\to S\), the module \(M\), and the decomposition \[
+M\otimes_R S=\bigoplus_{i\in I}Q_i
+\] into countably generated projective summands. Tensoring an inclusion \(M_\alpha\subset M\) with the flat module \(S\) identifies its image as an actual submodule. Write that image as a coordinate sum \(A_\alpha=\bigoplus_{i\in J_\alpha}Q_i\). Zero summands may be included consistently in every \(J_\alpha\); they affect none of the images or arguments. At a limit stage, the original union commutes with tensor product, and every element has finite support. The resulting submodule is precisely the sum over the union of the preceding coordinate subsets.
+
+At a successor stage with \(M_\alpha\ne M\), retain the least missing element \(x\) in the fixed well-order. Flatness and the quotient map identify \[
+(M/M_\alpha)\otimes_R S
+ \cong (M\otimes_R S)/A_\alpha
+ \cong\bigoplus_{i\notin J_\alpha}Q_i .
+\] The adapted-submodule lemma gives a countably generated \(P\subset M/M_\alpha\) containing the image of \(x\), whose tensor image is a coordinate sum \(B\) in this displayed quotient. Flatness makes \(P\otimes_R S\to(M/M_\alpha)\otimes_R S\) injective. This is the map repaired by MC-STK-ERR-0455. There is no previously chosen section to \(M\), so the old codomain \(M\otimes_R S\) was not justified.
+
+The module \(P\otimes_R S\) is projective because it is a coordinate summand. The preceding countable projectivity descent lemma gives projectivity of \(P\). Let \(M_{\alpha+1}\) be its original preimage in \(M\). Tensoring its kernel description with the flat module \(S\) shows that its image in \(M\otimes_R S\) is exactly the preimage of \(B\), namely \(A_\alpha\oplus B\). Thus the coordinate-sum property is maintained, not merely an abstract isomorphism to a sum. The quotient \(M_{\alpha+1}/M_\alpha=P\) is projective, so its exact sequence splits. If \(M_\alpha=M\), use the stationary step and zero quotient.
+
+The source explicitly chooses a well-order on the underlying set \(M\). Therefore induction on that well-ordered set is legitimate. To verify exhaustion and its precise indexing, let \(\lambda\) be its order type and write its elements \(x_\beta\), \(\beta<\lambda\). We claim that \(x_\beta\in M_\alpha\) for every \(\beta<\alpha\leq\lambda\). The assertion at zero is empty. At a successor, all earlier elements are already present. If \(x_\alpha\) is missing it is the least missing element and is inserted; if it is present it remains present. At a limit, each earlier element belongs to an earlier stage and hence to the union. This proves the claim and \(M_\lambda=M\). Choosing the fresh ordinal \(\gamma=\lambda+1\) retains the terminal stage and supplies the index required in the source. The existing correction renames all four ordinal occurrences and leaves the ring \(S\) intact.
+
+For completeness, choose each actual quotient section \(s_\alpha:M_{\alpha+1}/M_\alpha\to M_{\alpha+1}\), for \(\alpha<\lambda\). The resulting map from the direct sum of these quotients to \(M\) sends a finite tuple to the sum of its images under the sections. A zero image has zero component in its largest successor quotient, then in the next largest, and hence every component is zero. Surjectivity follows by induction: successor stages add that quotient, and limit stages are unions. Thus the original \(M\), with its actual submodules, is isomorphic to the displayed sum of projective quotients. This also checks the terminal-stage correction from group 503 and the least-missing-element argument from group 504. No unrestricted descent of an arbitrary \(S\)-decomposition along a merely pure map is asserted; the preimage calculation here uses flatness.
+
+\subsubsection{Completion exactness and the original finite-generation hypothesis}\label{completion-exactness-and-the-original-finite-generation-hypothesis}
+
+Source 22528--22699. The completion of \(M\) is the original inverse limit \(\widehat M=\lim_{n\geq1}M/I^nM\), with its canonical unit and tensor comparison. All inverse systems in this section are indexed by the positive integers, so the countable lifting arguments from group 510 apply.
+
+Suppose \(\varphi:M\to N\) is onto modulo \(I\). Its cokernel modulo \(I^n\) equals its own multiple by \(I/I^n\); iterating \(n\) times gives zero. This proves surjectivity \(M/I^nM\to N/I^nN\), without assuming either module is finite. Let \(K_n=\{x:\varphi(x)\in I^nN\}\). For \(x\in K_n\), write the finite expression \(\varphi(x)=\sum_jz_jn_j\), with \(z_j\in I^n\), and use the modulo-\(I\) surjectivity to write \(n_j=\varphi(m_j)+\sum_kz_{jk}n_{jk}\), with \(z_{jk}\in I\). Then \[
+x'=x-\sum_jz_jm_j\in K_{n+1},
+\qquad x'-x\in I^nM .
+\] The kernels \(K_n/I^nM\) therefore have surjective transition maps. Compatible lifts are constructed recursively by subtracting lifts from these kernels. This proves surjectivity on completions. If \(0\to K\to M\to N\to0\) is exact and \(N\) is flat, tensoring with \(R/I^n\) is exact also on the left. The kernels are then \(K/I^nK\), whose transitions are onto, proving the source's completed short exact sequence. If \(M\) is finite, completing its finite free surjection gives the asserted surjection \(M\otimes_R\widehat R\to\widehat M\).
+
+For a finitely generated ideal \(I\), fix \(n\geq1\) and actual generators \(f_1,\ldots,f_r\) of \(I^n\). The completion of the surjection \(M^{\oplus r}\to I^nM\) is onto. The internal filtration on \(I^nM\) is \(I^k(I^nM)=I^{n+k}M\). Consequently its completion is the same inverse limit over the tail \(m\geq n\) of \(I^nM/I^mM\). Each \(M/I^mM\to M/I^nM\) is onto, with that kernel. Thus this tail limit is precisely the kernel of \(\widehat M\to M/I^nM\), embedded through the original inclusion. The image of the completed generator map is exactly \(I^n\widehat M\). This proves \[
+I^n\widehat M=(I^nM)^\wedge
+ =\ker(\widehat M\to M/I^nM).
+\] The induced isomorphisms \(\widehat M/I^n\widehat M\to M/I^nM\) carry the canonical unit to the identity compatible family; passing to their limits proves completeness of \(\widehat M\) through that unit. Empty generating lists for \(I^n=0\) give the zero kernel and the same conclusion.
+
+For the torsion-quotient lemma, keep \(I^cQ=0\) in \(0\to M\to N\to Q\to0\). Then \(I^cN\subset M\), and for \(n\geq c\) \[
+I^nM\subset M\cap I^nN\subset I^{n-c}M.
+\] The natural map from the \(I\)-adic completion of \(M\) to \(\lim M/(M\cap I^nN)\) reduces each coordinate using the first inclusion. The inverse obtains its coordinate modulo \(I^aM\) from coordinate \(a+c\) using the second inclusion. Compatibility makes both composites the identity. The systems of kernels \(M/(M\cap I^nN)\) have onto transitions. Applying the same recursive lifting to the quotient system, which is constantly \(Q\) for \(n\geq c\), gives the asserted exact sequence. If \(c=0\), \(Q=0\) and the same formulas remain valid.
+
+\subsubsection{The exact split defect of a second completion}\label{the-exact-split-defect-of-a-second-completion}
+
+Source 22701--22731; propagation from group 510. Retain the original ideals and modules, with no finite-generation assumption on \(I\). Set \[
+K_n=\ker(\widehat M\to M/I^nM),\qquad
+D_n=K_n/I^n\widehat M,\qquad D=\lim_nD_n .
+\] These are the source's defect quotients, not replacements for its completion. The inclusion \(I^n\widehat M\subset K_n\) follows coordinatewise. The projection \(\widehat M\to M/I^nM\) is onto: choose a representative in \(M\) and its canonical compatible family. This gives the source's levelwise short exact sequences.
+
+For \(k\in K_n\), its next coordinate belongs to \(I^nM/I^{n+1}M\). Write a representative as \(\sum_j a_jm_j\) with \(a_j\in I^n\), and set \(u=\sum_j a_j\eta_M(m_j)\in I^n\widehat M\). Then \(k-u\in K_{n+1}\). This proves \(K_{n+1}+I^n\widehat M=K_n\) and surjectivity of \(D_{n+1}\to D_n\). Taking limits gives exact maps \[
+0\longrightarrow D\xrightarrow{\iota}
+  \widehat{\widehat M}\xrightarrow{\pi}\widehat M
+  \longrightarrow0.
+\] Here \(\iota\) is the limit of the actual inclusions, and \(\pi\) sends a family of classes in \(\widehat M/I^n\widehat M\) to its images in \(M/I^nM\). The canonical completion map \(\eta_{\widehat M}:\widehat M\to\widehat{\widehat M}\) satisfies \(\pi\eta_{\widehat M}=\mathrm{id}_{\widehat M}\) on every original coordinate. The exact sequence therefore splits canonically as \(R\)-modules, with maps \[
+\widehat M\oplus D\longrightarrow\widehat{\widehat M},
+\quad (m,d)\longmapsto\eta_{\widehat M}(m)+\iota(d),
+\] \[
+t\longmapsto
+ \bigl(\pi(t),\ \iota^{-1}(t-\eta_{\widehat M}\pi(t))\bigr).
+\] The second component is defined because its argument has zero \(\pi\)-image. The two displayed composites are identities by exactness and the section identity. Every construction commutes with a map of the original modules. This records an explicit structural consequence of the source proof, without a novelty claim.
+
+Because the transitions of \(D_n\) are onto, any specified class at any level has a compatible family of lifts: lift to higher levels recursively and reduce to lower levels. Thus \(D=0\) if and only if every \(D_n=0\). It follows that the canonical map \(\eta_{\widehat M}\) is an isomorphism if and only if every \(K_n=I^n\widehat M\), exactly the source criterion. Also \(\bigcap_n I^n\widehat M=0\), since it is contained in \(\bigcap_nK_n=0\). The defect measures failure of completeness, not failure of this separatedness. The finitely generated case in the preceding section annihilates each \(D_n\), so all the maps agree with that case. No infinite-generation case is silently identified with it.
+
+\subsubsection{Units and the principal-generator completion argument}\label{units-and-the-principal-generator-completion-argument}
+
+Source 22733--22822. An element \(x=(x_n)\in\widehat R\) invertible modulo \(I\) is invertible at every level: \(I/I^n\) is nilpotent, and the finite geometric sum in a nilpotent error gives an inverse lift. Uniqueness of the inverse ensures that the \(x_n^{-1}\) form a compatible family. This proves the first unit assertion and the two assertions about \(1+I\) and \(1+I\widehat R\). If \(a\) belongs to the kernel of \(\widehat R\to R/I\), then \(1-ba\) maps to \(1\) for every \(b\in\widehat R\), so it is a unit. This is the Jacobson radical criterion. It applies also to \(I\widehat R\) but does not identify that ideal with the kernel when \(I\) is arbitrary.
+
+Reports OCC-00474 and OCC-00475 correctly request the missing declarations that \(M\) is an \(A\)-module. These are the only new source operations in the two principal-generator lemmas.
+
+There is also an unreported boundary in the first proof: for \(r=0\), the ideal \(I\) and each empty-generated \(J_n\) are zero, while the displayed \(I^{rn}=I^0=A\) need not be contained in \(J_n\). The theorem remains true, since \(M\to\lim M/(0)M\) is the identity compatible-family map. This separate editorial verification handles the boundary without imposing \(I\ne0\), changing the statement, or substituting a new proof for the translation.
+
+For \(r>0\), set \(J_n=(f_1^n,\ldots,f_r^n)\). Retain both inclusions \(I^n\supset J_n\supset I^{rn}\). The second follows because a monomial of degree \(rn\) in \(r\) generators has an exponent at least \(n\). Thus the systems are cofinal with the displayed exponents. Given the source element \(\xi\in\lim M/J_nM\), choose representatives \(y_n\in M\) of its coordinates for \(n\geq1\), and put \(y_0=0\). Compatibility gives \[
+y_{n+1}-y_n=\sum_{i=1}^r f_i^n x_{n,i}\quad(n\geq0).
+\] For \(n=0\), this uses \(J_0=A\), since \(r>0\), so it also retains the initial term of the source series. Each individual series \(\sum_{n\geq0}f_i^nx_{n,i}\) defines an element of the \(f_i\)-adic completion. By hypothesis choose \(x_i\in M\) mapping to it. Modulo \(J_NM\), the difference between \(x_i\) and its first \(N\) terms lies in \(f_i^NM\). Therefore \(\sum_i x_i\) agrees with \(y_N\) modulo \(J_NM\), for every \(N\). Its image is \(\xi\). This proves the asserted surjectivity with the original coefficients and initial term.
+
+For the subideal lemma, \(I^nM\subset J^nM\) gives separatedness. The preceding surjectivity argument reduces to \(I=(f)\), including \(f=0\). Keep the original sequence \(x_n\) and its \(J\)-adic limit \(x\), and put \(u_n=x_n-x\). Then \(u_n\in J^nM\), and write \(u_n-u_{n+1}=f^nz_n\). The partial sums \[
+v_{n,c}=\sum_{k=0}^{c-1}f^kz_{n+k}
+\] form a \(J\)-adic Cauchy sequence, hence have a limit \(v_n\) in \(M\). Multiplication by \(f^n\) preserves the \(J\)-adic congruences, while \[
+f^nv_{n,c}=u_n-u_{n+c}.
+\] The second term tends to zero. Separatedness therefore gives \(u_n=f^nv_n\). This proves the required \(f\)-adic congruences for the original limit \(x\), without discarding it during the temporary subtraction.
+
+For the change-of-ideal lemma retain \(I^c\subset J\), \(J^d\subset I\), \(c,d>0\). The exact inclusions \(I^n\subset J^{\lfloor n/c\rfloor}\) and \(J^m\subset I^{\lfloor m/d\rfloor}\) give the printed maps. For example, a coordinate modulo \(J^aM\) of the first limit map can be taken from coordinate \(ca\) of the \(I\)-system. Its inverse obtains coordinate \(b\) from coordinate \(db\). Composing uses coordinate \(cdb\), which reduces to the original coordinate \(b\) by compatibility. The other composite is identical in the opposite order. Floor value zero gives the zero quotient by \(I^0M=M\) or \(J^0M=M\), so it causes no boundary defect.
+
+\subsubsection{Quotients and finite modules over a complete ring}\label{quotients-and-finite-modules-over-a-complete-ring}
+
+Source 22824--22883. For complete \(M\) and \(K\subset M\), the composite \(M\to M/K\to\widehat{M/K}\) is onto by completion surjectivity. Its kernel is \[
+\overline K=\bigcap_{n\geq1}(K+I^nM).
+\] Consequently the actual map identifies \(\widehat{M/K}\) with \(M/\overline K\), and the unit on \(M/K\) is an isomorphism precisely when \(\overline K=K\), the source claim. The submodule \(\overline K\) is closed: for every \(n\), \(\overline K+I^nM\subset K+I^nM\), whence taking intersections gives closure of \(\overline K\) contained in \(\overline K\); the reverse containment is immediate. Applying the proved equivalence shows \(M/\overline K\) is complete even without finite generation of \(I\). No claim about all arbitrary module completions follows from this quotient-of-a-complete-module case.
+
+When \(R\) is complete and \(M\) finite, the canonical map \(M\otimes_R\widehat R\to\widehat M\) is onto and its source is canonically \(M\). Its kernel is exactly \(\bigcap_n I^nM\). Thus the source's additional separatedness hypothesis makes it an isomorphism. For the next lemma choose the original lifts \(x_1,\ldots,x_n\) and their span \(M'\subset M\). Since \(I^aM'\subset I^aM\), the submodule \(M'\) is separated. It is finite and hence complete by the just-proved lemma. Completion of \(M'\to M\) is onto because it is onto modulo \(I\). Hence every element of \(M\) has the same image in \(\widehat M\) as some element of \(M'\); injectivity of \(M\to\widehat M\) proves it is that same element. Therefore \(M=M'\), and both are complete. For \(n=0\), this argument says \(M'=0\) and proves \(M=0\), so the zero-generator case is retained. Reports OCC-00476 and OCC-00477 concern only the article and the missing ``by''.
+
+\subsubsection{Noetherian exactness and the tensor comparison}\label{noetherian-exactness-and-the-tensor-comparison}
+
+Source 22900--23009. Reports OCC-00478 and OCC-00479 request the missing ``by'' in the completion notation. The identical naming omission at 22978 is independently propagated as one further copyedit.
+
+For an exact sequence \(0\to K\to N\to M\to0\) of finite modules over the original Noetherian ring \(R\), the quotient sequence has left term \(K/(I^nN\cap K)\). Its transitions are onto, so the original inverse limit sequence is exact. Artin--Rees supplies the actual bound \[
+I^nK\subset I^nN\cap K\subset I^{n-c}K\quad(n\geq c).
+\] The natural map from \(\widehat K\) to the limit of the induced quotients and its inverse using coordinate \(a+c\) for coordinate \(a\) are the same explicit maps verified above. Thus completion is exact on these finite modules.
+
+For the tensor comparison choose the source's presentation \(0\to K\to R^{\oplus t}\to M\to0\). Noetherianity makes \(K\) finite. The tensor row is right exact; no injection of \(K\otimes_R\widehat R\) is assumed. The completed row is exact, and the comparison for \(K\) is onto while the comparison for \(R^{\oplus t}\) is an isomorphism. To prove injectivity of the comparison for \(M\), lift an element in its kernel to \(R^{\oplus t}\otimes_R\widehat R\). Its completed image lifts from \(\widehat K\), which in turn lifts from \(K\otimes_R\widehat R\). Subtracting this latter image gives zero under the middle isomorphism and hence zero. The original element is therefore zero. Surjectivity was already proved. This is the source's diagram argument without presupposing flatness of \(\widehat R\).
+
+Every ideal \(J\subset R\) is finite, so \(J\otimes_R\widehat R\to\widehat R\) identifies with the now-proved injection \(\widehat J\to\widehat R\). The ideal criterion for flatness gives flatness of \(R\to\widehat R\). The source's exactness assertion is exactly the preceding finite-module result. Finally, completeness of \(\widehat M\) for arbitrary \(M\) follows from the already-proved finitely generated ideal lemma, because \(I\) is finite in a Noetherian ring. This last statement is explicitly identified by the source as a special case; it is not a newly discovered extension to all rings.
+
+\subsubsection{Faithful flatness criterion and projectivity after completion}\label{faithful-flatness-criterion-and-projectivity-after-completion}
+
+Source 22733--22753 and 22955--23008, receiving the exact projectivity descent proof at 22461--22515. For Noetherian \(R\), \[
+R\longrightarrow\widehat R\text{ is faithfully flat}
+\quad\Longleftrightarrow\quad I\subset\operatorname{Jac}(R).
+\] The forward implication is an additional consequence; the reverse is the source lemma.
+
+First prove necessity, which does not require Noetherianity once faithful flatness is assumed. A faithfully flat map reflects units: if the image of \(a\) is invertible, then \((R/aR)\otimes_R\widehat R=0\), so faithfulness gives \(R/aR=0\), and \(a\) is a unit. For \(i\in I\) and \(r\in R\), the image of \(1-ri\) is a unit by the original completion unit lemma. Thus \(1-ri\) is a unit in \(R\) for every \(r\), proving \(i\in\operatorname{Jac}(R)\).
+
+Conversely, Noetherianity supplies flatness as proved above. If \(I\subset\operatorname{Jac}(R)\), every maximal ideal \(\mathfrak m\) contains \(I\). The composite \(\widehat R\to R/I\to R/\mathfrak m\) is onto and its kernel contracts to \(\mathfrak m\). To check faithfulness directly, take a nonzero element \(x\) of any nonzero \(R\)-module \(X\), set \(\mathfrak a=\operatorname{Ann}_R(x)\), and choose a maximal ideal \(\mathfrak m\) containing the proper ideal \(\mathfrak a\). Flatness preserves the injection \(R/\mathfrak a\to X\) after tensoring. Its source after tensoring is \(\widehat R/\mathfrak a\widehat R\), which is nonzero because it maps onto \(R/\mathfrak m\). Hence \(X\otimes_R\widehat R\ne0\). For the zero ring there is no nonzero \(X\), and the identity map satisfies the assertion.
+
+Under these equivalent conditions, any \(R\)-module \(M\) satisfies \[
+M\text{ is projective over }R
+\quad\Longleftrightarrow\quad
+M\otimes_R\widehat R\text{ is projective over }\widehat R .
+\] A splitting of a free module remains a splitting after tensoring, proving ascent; the exact faithfully flat theorem above proves descent. If \(M\) is finite, the proved tensor comparison identifies the right-hand module with its actual completion. Thus a finite \(R\)-module is finite projective if and only if its completion is projective over \(\widehat R\); the completion is finite because it is the base change of the finite module. For arbitrary \(M\), the tensor comparison need not be an isomorphism, and no replacement of \(M\otimes_R\widehat R\) by \(\widehat M\) is made.
+
+These consequences connect the existing projectivity review to completion while retaining every finite-generation and faithful-flatness boundary. They remain editorial consequences and will be compared with the rest of the work as source-ordered review continues. They do not replace the source's statement or initiate the later combined-results paper.

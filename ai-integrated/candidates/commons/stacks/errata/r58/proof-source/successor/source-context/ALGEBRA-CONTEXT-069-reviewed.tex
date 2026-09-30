@@ -1,0 +1,28 @@
+\begin{lemma}
+\label{lemma-characterize-integral-element}
+Let $\varphi : R \to S$ be a ring map. Let $y \in S$. If there exists a
+finite $R$-submodule $M$ of $S$ such that $1 \in M$ and $yM \subset M$,
+then $y$ is integral over $R$.
+Conversely, if $y$ is integral, the original subalgebra
+$\varphi(R)[y]\subset S$ is a finite $R$-submodule containing $1$
+and stable under multiplication by $y$.
+\end{lemma}
+
+\begin{proof}
+Keep $\varphi:R\to S$ for the original coefficient map and write
+$m_y:M\to M$, $x\mapsto yx$, for the $R$-linear endomorphism.
+By Lemma \ref{lemma-charpoly-module} there is a monic
+$P(T)=T^d+\sum_{i=1}^d a_iT^{d-i}\in R[T]$ with $P(m_y)=0$.
+Evaluation at the original element $1\in M$ gives in $S$
+$$
+P^\varphi(y)=y^d+\sum_{i=1}^d\varphi(a_i)y^{d-i}
+=P(m_y)(1)=0.
+$$
+Conversely, such a monic equation expresses $y^d$ as
+$-\sum_{i=1}^d\varphi(a_i)y^{d-i}$. Multiplying this equation by
+each needed power of $y$ and using induction expresses every power
+of $y$ in the $R$-span of $1,y,\ldots,y^{d-1}$.
+That span is exactly $\varphi(R)[y]$, contains $1$ and is stable
+under $m_y$. If $S$ is the zero ring the same conclusion holds with
+the zero submodule; a degree-one equation may be used.
+\end{proof}

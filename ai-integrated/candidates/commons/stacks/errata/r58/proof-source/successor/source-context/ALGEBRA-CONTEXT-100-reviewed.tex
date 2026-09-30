@@ -1,0 +1,60 @@
+\begin{lemma}
+\label{lemma-support-closed}
+Let $R$ be a ring and let $M$ be an $R$-module.
+If $M$ is finite, then $\text{Supp}(M)$ is closed.
+More precisely, if $I = \text{Ann}(M)$ is the annihilator of $M$, then
+$V(I) = \text{Supp}(M)$.
+\end{lemma}
+
+\begin{proof}
+We will show that $V(I) = \text{Supp}(M)$.
+
+\medskip\noindent
+Suppose $\mathfrak p \in \text{Supp}(M)$. Then $M_{\mathfrak p} \not = 0$.
+Choose an element $m \in M$ whose image in $M_\mathfrak p$ is nonzero.
+Then the annihilator of $m$ is contained in $\mathfrak p$ by construction
+of the localization $M_\mathfrak p$. Hence
+a fortiori $I = \text{Ann}(M)$ must be contained in $\mathfrak p$.
+
+\medskip\noindent
+If $M=0$, then $I=R$ and both sets are empty.
+Otherwise retain generators $x_1,\ldots,x_r$ with $r\geq1$.
+Suppose $\mathfrak p\notin\operatorname{Supp}(M)$.
+Each $x_i/1$ is zero in $M_{\mathfrak p}$, so
+Lemma \ref{lemma-localization-colimit} gives a common
+$f\notin\mathfrak p$ for which all are zero in $M_f$.
+For each original generator choose $n_i\geq1$ with
+$f^{n_i}x_i=0$, and keep $n=\max\{n_1,\ldots,n_r\}$.
+The complete equality
+$f^nx_i=f^{n-n_i}(f^{n_i}x_i)=0$ shows that $f^n$ kills
+every generator and therefore $f^nM=0$.
+Thus $f^n\in I$ while $f^n\notin\mathfrak p$, proving
+$\mathfrak p\notin V(I)$ and the required equality.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-support-finite-annihilator-detection}
+Let $M$ be an arbitrary $R$-module. If finitely many
+$m_1,\ldots,m_n\in M$ satisfy
+$\operatorname{Ann}_R(M)=\bigcap_{i=1}^n\operatorname{Ann}_R(m_i)$,
+then $\operatorname{Supp}(M)=V(\operatorname{Ann}_R(M))$.
+\end{lemma}
+
+\begin{proof}
+Retain the original submodule $N=\sum_{i=1}^n Rm_i\subseteq M$.
+An element kills $N$ exactly when it kills each $m_i$,
+so $\operatorname{Ann}_R(N)=\operatorname{Ann}_R(M)$ by
+the stated hypothesis. Since $N$ is finite, the preceding
+lemma gives $\operatorname{Supp}(N)=V(\operatorname{Ann}_R(M))$.
+Localizing the actual injection $N\hookrightarrow M$
+is injective, so $\operatorname{Supp}(N)\subseteq\operatorname{Supp}(M)$.
+For every $M$, the first half of the preceding proof
+gives $\operatorname{Supp}(M)\subseteq V(\operatorname{Ann}_R(M))$.
+The inclusions prove equality without replacing the
+original $M$ by $N$. If the list is empty its intersection
+of annihilators is $R$, hence $M=0$, which also satisfies
+the conclusion. For example an arbitrary nonempty free
+module is covered by this hypothesis: one original basis
+vector already has annihilator zero, although the basis
+may be infinite.
+\end{proof}

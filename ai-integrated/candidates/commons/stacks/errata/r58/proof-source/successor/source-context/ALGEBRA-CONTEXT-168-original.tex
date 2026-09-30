@@ -1,0 +1,18 @@
+\begin{lemma}
+\label{lemma-artinian-radical-nilpotent}
+Let $R$ be Artinian. The Jacobson radical of $R$ is a nilpotent ideal.
+\end{lemma}
+
+\begin{proof}
+Let $I \subset R$ be the Jacobson radical.
+Note that $I \supset I^2 \supset I^3 \supset \ldots$ is a descending
+sequence. Thus $I^n = I^{n + 1}$ for some $n$.
+Set $J = \{ x\in R \mid xI^n = 0\}$. We have to show $J = R$.
+If not, choose an ideal $J' \not = J$, $J \subset J'$ minimal (possible
+by the Artinian property). Then $J'/J$ is a simple $R$-module, hence
+isomorphic to $R/\mathfrak m$ for some maximal ideal $\mathfrak m$,
+see Lemma \ref{lemma-characterize-length-1}.
+Then $\mathfrak m I^n$ kills $J'$. Since $I \subset \mathfrak m$
+we conclude that $I^{n + 1} = I^n$ kills $J'$. Hence $J' = J$
+which is a contradiction.
+\end{proof}

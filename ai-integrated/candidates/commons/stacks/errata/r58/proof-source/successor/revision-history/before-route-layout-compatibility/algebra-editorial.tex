@@ -1,0 +1,52 @@
+\input{preamble}
+% AMS symbols required by the reviewed strict-inclusion correction.
+\usepackage{amssymb}
+\providecommand{\Supp}{\operatorname{Supp}}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{unicode-math}
+\setmainfont{Cambria}
+\setmathfont{Cambria Math}
+
+% Preserve the original S_\mathfrak q syntax with unicode-math.
+% The wrapper passes exactly the original argument to the original alphabet.
+\let\AlgebraOriginalMathfrak\mathfrak
+\def\mathfrak#1{{\AlgebraOriginalMathfrak{#1}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Bound each supplied figure by the available text width; preserve its aspect ratio.
+\newsavebox{\AlgebraFigureBox}
+\providecommand{\pandocbounded}[1]{%
+  \sbox{\AlgebraFigureBox}{#1}%
+  \ifdim\wd\AlgebraFigureBox>\linewidth
+    \resizebox{\linewidth}{!}{\usebox{\AlgebraFigureBox}}%
+  \else\usebox{\AlgebraFigureBox}\fi}
+% Long editorial headings occupy their own line; their numbering and text remain.
+\makeatletter
+\def\subsection{\@startsection{subsection}{2}%
+  \z@{.5\linespacing\@plus.7\linespacing}{.3\linespacing}%
+  {\normalfont\bfseries}}
+\def\subsubsection{\@startsection{subsubsection}{3}%
+  \z@{.5\linespacing\@plus.7\linespacing}{.3\linespacing}%
+  {\normalfont\bfseries}}
+\makeatother
+\emergencystretch=3em
+\usepackage{enumitem}
+\newlist{AlgebraSourceRoutes}{description}{1}
+\setlist[AlgebraSourceRoutes]{style=nextline,leftmargin=1.5em,font=\normalfont\bfseries}
+\begin{document}
+\title{Commutative Algebra: Conceptual Errata and Supplementary Proofs}
+\maketitle
+\noindent
+This companion identifies editorial corrections, complete supplementary
+proofs and stronger consequences alongside their original source passages.
+The Stacks Project authors remain the authors of the cited source.
+Editorial review and proof work: OpenAI Codex---GPT-6 Astra, Ultra effort.
+No human review, novelty or official endorsement is claimed.
+The original chapter and its source records accompany this document.
+\tableofcontents
+\input{source-routing}
+\input{contextual-arguments}
+\input{complete-proof-notes}
+\bibliographystyle{alpha}
+\bibliography{my}
+\end{document}

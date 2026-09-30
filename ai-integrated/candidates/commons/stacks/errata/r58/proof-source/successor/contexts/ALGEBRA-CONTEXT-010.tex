@@ -1,0 +1,39 @@
+\begin{lemma}
+\label{editorial-source-lemma-charpoly-module-ideal}
+Let $R$ be a ring. Let $I \subset R$ be an ideal.
+Let $M$ be a finite $R$-module.
+Let $\varphi : M \to M$ be an endomorphism such
+that $\varphi(M) \subset IM$.
+Then there exists a monic polynomial
+$P = T^n + a_1 T^{n - 1} + \ldots + a_n \in R[T]$
+such that $a_j \in I^j$ and $P(\varphi) = 0$ as an endomorphism of $M$.
+\end{lemma}
+
+\begin{proof}
+Choose a surjective $R$-module map $R^{\oplus n} \to M$, given by
+$(a_1, \ldots, a_n) \mapsto \sum a_ix_i$ for some generators $x_i \in M$.
+Choose $(a_{i1}, \ldots, a_{in}) \in I^{\oplus n}$ such that
+$\varphi(x_i) = \sum a_{ij} x_j$. In other words the diagram
+$$
+\xymatrix{
+R^{\oplus n} \ar[d]_{A^{\mathrm{t}}} \ar[r] & M \ar[d]^\varphi \\
+I^{\oplus n} \ar[r] & M
+}
+$$
+is commutative where $A = (a_{ij})$: its transpose sends
+$e_i$ to $\sum_j a_{ij}e_j \in I^{\oplus n}$, whose image in
+$M$ is $\varphi(x_i)$. By
+Lemma \ref{algebra-lemma-charpoly}
+the polynomial
+$P(t) = \det(t\text{id}_{n \times n} - A)$
+is monic of degree $n$ and satisfies $P(A)=0$.
+Transposing yields $P(A^{\mathrm{t}})=0$, so the commutative diagram
+and the surjection $R^{\oplus n}\to M$ give $P(\varphi)=0$.
+In the determinant expansion, a term contributing to the coefficient
+of $t^{n-j}$ uses exactly $j$ entries of $-A$ and $n-j$ copies of $t$
+from diagonal entries. Each such term is therefore a product of
+$j$ elements of $I$, with its determinant sign, and lies in $I^j$.
+Their sum is the coefficient $a_j$, so $a_j\in I^j$ as required.
+When $n=0$, $M=0$ and the empty determinant is $P=1$;
+its action is the zero endomorphism of the zero module.
+\end{proof}

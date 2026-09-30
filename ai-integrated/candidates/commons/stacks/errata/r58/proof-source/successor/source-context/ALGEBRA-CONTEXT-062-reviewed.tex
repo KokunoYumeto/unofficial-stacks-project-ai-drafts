@@ -1,0 +1,28 @@
+\begin{lemma}
+\label{lemma-base-change-Jacobson}
+Let $k$ be a field. Let $S$ be a $k$-algebra.
+For any field extension $K/k$ whose cardinality is larger
+than the cardinality of $S$ we have
+\begin{enumerate}
+\item for every maximal ideal $\mathfrak m$ of $S_K$ the field
+$\kappa(\mathfrak m)$ is algebraic over $K$, and
+\item $S_K$ is a Jacobson ring.
+\end{enumerate}
+It suffices more generally that $S$ have a $k$-algebra generating
+set of cardinality less than $\#K$. If this set is finite, no
+cardinality restriction on $K$ is needed.
+\end{lemma}
+
+\begin{proof}
+Fix the given field extension $K/k$ and write
+$S_K=K\otimes_kS$. If $(s_i)_{i\in I}$ generates $S$ as a
+$k$-algebra, then $(1\otimes s_i)_{i\in I}$ generates $S_K$ as a
+$K$-algebra. Indeed every tensor is a finite sum of terms
+$\lambda\otimes s$, and an expression for $s$ as a polynomial
+in finitely many $s_i$ gives the corresponding expression for
+$\lambda\otimes s$, with all coefficients carried by $k\to K$.
+Theorem \ref{theorem-uncountable-nullstellensatz} therefore applies
+whenever $\#I<\#K$, and its finite-generator case applies without
+that restriction. Taking the generating family indexed by every
+element of $S$ gives the hypotheses and conclusion stated originally.
+\end{proof}

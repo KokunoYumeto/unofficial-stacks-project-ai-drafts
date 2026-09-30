@@ -1,0 +1,14 @@
+{
+  "id": "RENDER-TEX-005",
+  "failed_build": "../ALGEBRA_PORTABLE_BUILD_20260929/attempt-04/BUILD_RECEIPT.json",
+  "failed_stage": "a-algebra-tex-1",
+  "source_operation": "MC-STK-ERR-1990-OP1",
+  "failure": "The preamble loads amsfonts but does not define the reviewed subsetneq command.",
+  "correction": "Load the standard amssymb package, whose subsetneq declaration is mathrel, AMSb slot hexadecimal 28.",
+  "standard_definition": "\\DeclareMathSymbol{\\subsetneq}{\\mathrel}{AMSb}{\"28}",
+  "mathematical_operands_changed": false,
+  "original_source_operations_unchanged": true,
+  "public_cumulative_and_fixes_only_dependency_required": true,
+  "dependency_integration_status": "prepared_renderer_support_not_yet_registered_in_the_source_patch",
+  "required_before_admission": "Bind and replay the supporting preamble change in the cumulative composition and reusable fixes-only export; a package-only repair is insufficient."
+}

@@ -1,0 +1,5 @@
+# References in the standalone edition
+
+Cross-document references use freshly built auxiliary labels when available. When an auxiliary document is absent, a reference displays its original Stacks tag in brackets and links to the exact author-source passage at commit a04446e57ec1fbc252a871afcec7752fb2807b14. The pre-existing FAC graded-duality addition instead displays Fork tag 0HCB and links to its retained proof at fork commit 4828ebac86db7ebf4211227cabe183b09f11c992; it is not attributed to the original Stacks source. These tags are source locators, not reconstructed theorem numbers or page numbers. The reference-authority directory preserves the complete files used to verify those locators. Its label scan is not a claim to have reviewed those chapters mathematically.
+
+The package preamble loads external-reference-locators.tex after its usual imports. That adapter leaves every already imported label intact. Build algebra.tex before algebra-editorial.tex to give the companion references to the accompanying chapter PDF. The repository chapter and repository preamble remain unchanged by this packaging step. No historical auxiliary output is used.

@@ -1,0 +1,167 @@
+# Regular rings and Auslander–Buchsbaum: source review
+
+Primary source: Stacks Project authors, algebra.tex at git a04446e57ec1fbc252a871afcec7752fb2807b14, complete lines 26914–27304, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All twelve due reports were read. The current complete interval is exactly the authority with MC-STK-ERR-1600 retained and the captured FAC addition at the end. Its 49-line lemma/proof and surrounding whitespace are preserved by ALGEBRA_REGULAR_AB_RETAINED_EXTRA_20260928.json.
+
+These full arguments, boundary clarifications and consequences are separate editorial material. The source statements and exposition remain identifiable, including in the current translation. Four proposed text operations are separately enumerated. An omitted low-degree proof case is not treated as a translation error. No novelty claim or later combined-results synthesis is asserted.
+
+## Finite depth and the maximal-localization criterion
+
+At 26921–26936 the indexed resolution requires \(M\ne0\). The original depth definition, reread at 17765–17787, assigns depth \(+\infty\) to zero. Thus \(F_{d-e}\) is undefined for \(M=0\). The minimal proposal adds “nonzero”; the zero module itself has the zero free resolution and creates no exception to the global-dimension bound.
+
+For nonzero finite \(M\), \(e\) is an integer with \(0\le e\le d\). The full original syzygy construction in ALGEBRA-RECON-589 gives a maximal Cohen–Macaulay terminal module at step \(d-e\), including the actual identity complex for \(e=d\). The source regular-ring theorem makes that finite module free. The resulting original resolution gives projective dimension at most \(d-e\). Every finite module therefore has projective dimension at most \(d\), including zero separately; the cyclic-module criterion then gives the stated bound for every module.
+
+At 26938–26963 localization proves the forward implication. The two wording reports receive “We saw in Lemma”. For the converse, let \(M\) be finite. If \(n=0\), put \(K_0=M\); every maximal localization is projective, and the finite-presentation local criterion makes \(M\) finite projective. This supplies the omitted case in a linked proof clarification, without imposing a negative-index convention on the displayed source complex. If \(n\ge1\), take the original finite free terms up to \(F_{n-1}\). Their terminal kernel \(K_n\) is finite by Noetherianity. Its maximal localizations are projective by the resolution-independence criterion; hence \(K_n\) is finite projective over \(R\). Splicing it to the same free terms proves \(\operatorname{pd}M\le n\). Apply the cyclic criterion again. Over the zero ring all modules are zero, so this bound and its vacuous maximal-localization condition both hold.
+
+## The Koszul map, its signs and a characteristic-free left inverse
+
+For 26965–27069 keep the source elements \(x_1,\ldots,x_n\), their original basis classes in \(\mathfrak m/\mathfrak m^2\), and
+\[
+d(e_{j_1}\wedge\cdots\wedge e_{j_i})
+=\sum_{a=1}^i(-1)^{a+1}x_{j_a}
+ e_{j_1}\wedge\cdots\widehat e_{j_a}\cdots\wedge e_{j_i}.
+\]
+For \(a<b\), removing \(a\) and then \(b\) has sign
+\((-1)^{a+1}(-1)^b\); removing \(b\) and then \(a\) has sign
+\((-1)^{b+1}(-1)^{a+1}\). Their coefficients \(x_{j_a}x_{j_b}\) coincide and their signs are opposite. Thus \(d^2=0\), also in characteristic two. Nakayama makes the \(x_j\) generate \(\mathfrak m\), so the degree-zero cokernel is the original residue field \(\kappa\).
+
+Choose a minimal free resolution \(F_\bullet\to\kappa\). In the finite-projective-dimension case it may be taken finite; otherwise a minimal resolution exists degree by degree, since each kernel over the Noetherian local ring is finite. At each step choose a minimal generating set of the kernel. Its relations have all coefficients in \(\mathfrak m\), because a relation with a unit coefficient would express one chosen generator in terms of the others. Consequently all differentials have entries in \(\mathfrak m\), and \(F_0\) has rank one.
+
+A comparison \(\alpha:K_\bullet\to F_\bullet\) lifting \(1_\kappa\) can be constructed directly, without assuming the Koszul complex is a resolution. Lift the augmentation from \(K_0=R\). At each next degree the image of \(\alpha_{i-1}d_K\) is a cycle in the exact target complex; the surjection \(F_i\to Z_{i-1}(F)\) and freeness of \(K_i\) lift it to \(\alpha_i\). In degree one use the augmentation kernel. These maps commute with exactly the original differentials.
+
+Let \(V=\kappa^n\), with basis \(v_j\), and \(W=\mathfrak m/\mathfrak m^2\), with basis \(w_j=x_j+\mathfrak m^2\). The first-order Koszul map is
+\[
+\Delta_i(v_{j_1}\wedge\cdots\wedge v_{j_i})
+=\sum_{a=1}^i(-1)^{a+1}
+(v_{j_1}\wedge\cdots\widehat v_{j_a}\cdots\wedge v_{j_i})\otimes w_{j_a}.
+\]
+For \(i\ge1\), define a \(\kappa\)-linear map \(L_i:\bigwedge^{i-1}V\otimes W\to\bigwedge^iV\) on the ordered basis by
+\[
+L_i(v_{l_1}\wedge\cdots\wedge v_{l_{i-1}}\otimes w_j)
+=\begin{cases}
+v_j\wedge v_{l_1}\wedge\cdots\wedge v_{l_{i-1}},
+ &j<l_1,\\
+0,&\text{otherwise}.
+\end{cases}
+\]
+For \(i=1\) the list is empty and the first case applies to every \(j\). For \(i>n\) the source of \(\Delta_i\) is zero and the target exterior power of \(L_i\) is zero. In \(\Delta_i(v_{j_1}\wedge\cdots\wedge v_{j_i})\) with increasing indices, \(L_i\) keeps exactly the summand \(a=1\); its sign is \(+1\). Thus \(L_i\Delta_i=1\). No division by \(i\), factorial or characteristic-dependent coefficient is used.
+
+The source's square modulo \(\mathfrak m^2\) now proves by induction that every \(\bar\alpha_i\) is injective. Its right vertical map is \(\bar\alpha_{i-1}\otimes1_W\), injective over the field. The upper horizontal map is \(\Delta_i\), just proved injective. If \(\bar\alpha_i(v)=0\), commutativity forces \(\Delta_i(v)=0\), so \(v=0\). At degree zero the nonzero augmentation composite proves injection. When the resolution is finite, \(F_n\ne0\) follows and gives \(\operatorname{pd}\kappa\ge n\), exactly as needed by the source.
+
+The same argument gives a separate consequence without a finite-projective-dimension hypothesis. For every Noetherian local \(R\) of embedding dimension \(n\),
+\[
+\beta_i^R(\kappa)=\dim_\kappa\operatorname{Tor}_i^R(\kappa,\kappa)
+=\operatorname{rank}_RF_i\ \ge\ \binom ni\qquad(0\le i\le n).
+\]
+The Tor equality follows because tensoring this minimal resolution with \(\kappa\) makes every differential zero. This proves the precise further bound carried by the source argument; it is not attributed as a new theorem of the source or claimed novel.
+
+## The dimension bound, exact global dimension and zero rings
+
+MC-STK-ERR-1600 already changes “have to property” to “have the property” at 27084; both reports retain that identity.
+
+For 27071–27093, when \(n=0\), the inequality \(\dim R\ge0\) holds because the local ring has its maximal prime. No positive differential \(\varphi_0\) or determinantal ideal is needed. This is a separate boundary clarification. When \(n>0\), remove identity disks using the exact original pivot and chain maps of ALGEBRA-RECON-569. The last nonzero degree is exactly \(n\), since tensoring the resulting minimal resolution with \(\kappa\) gives nonzero \(\operatorname{Tor}_n(\kappa,\kappa)\). The top free module has positive rank. The exactness criterion and the fully checked top-rank argument of ALGEBRA-RECON-576 give
+\[
+\operatorname{depth}_{I(\varphi_n)}R\ge n,\qquad
+I(\varphi_n)\subset\mathfrak m .
+\]
+The containment is valid for this positive-rank top map; it is not inferred for a rank-zero map, whose zeroth-minor ideal is the unit ideal. Every regular sequence in that proper ideal is also in \(\mathfrak m\), so
+\(\dim R\ge\operatorname{depth}R\ge n\).
+The earlier zero-tail correction therefore propagates to this receiving proof.
+
+Together with the Koszul bound, finite projective dimension of the residue field gives
+\(\dim R\ge\operatorname{pd}\kappa\ge\dim_\kappa(\mathfrak m/\mathfrak m^2)\).
+The reverse dimension inequality is the original height bound for a minimal generating set of \(\mathfrak m\). Thus equality holds and \(R\) is regular. Conversely the source regular-ring resolution bound gives finite global dimension. It is at most \(\dim R\) and at least \(\operatorname{pd}\kappa\), so all three dimensions equal. This proves the regular/local/global statements and their localization consequences at 27095–27161.
+
+For the exact global characterization at 27163–27186 the ring must be nonzero. Under the existing conventions the zero ring has only the zero module, hence global dimension 0, but its spectrum is empty and its Krull dimension is \(-\infty\). The latter convention was reread in the same authority topology.tex:1397–1413, particularly 1410. The “at least one prime/maximal ideal” clauses are false for the zero ring. Adding “nonzero” is the minimal proposed source guard, while the zero-ring case remains explicitly documented here.
+
+For a nonzero ring and a fixed nonnegative integer \(n\), the precise equivalence says that global dimension is exactly \(n\), regular Krull dimension is exactly \(n\), and all prime (or maximal) localizations are regular with dimensions at most \(n\), with at least one attaining \(n\). Every finite chain of primes is contained in some maximal ideal, and localization there preserves its strict inclusions. Conversely every chain in a localization is such a chain in \(R\). Therefore \(\dim R=\sup_{\mathfrak m}\dim R_{\mathfrak m}\); a finite nonnegative integer supremum of this nonempty set is attained. Use the proved uniform local global-dimension criterion and the local equalities to obtain each implication. The bound is uniform; pointwise finite local dimensions with no uniform bound are not claimed to give finite global dimension.
+
+## Flat descent with the actual low-degree kernels
+
+For 27188–27213 a flat local map is faithfully flat. Indeed its closed fibre is nonzero because \(\mathfrak m_RS\subset\mathfrak m_S\); a flat module with nonzero closed fibre over a local ring is faithful, by the source ideal/fibre criterion.
+
+Retain \(F_\bullet\to\kappa\), and use \(K_1=\ker(F_0\to\kappa)\), \(K_d=\ker(F_{d-1}\to F_{d-2})\) for \(d\ge2\). Flatness gives the actual kernel after tensoring. Since \(\operatorname{gldim}S=d\), these \(d\)th syzygies over \(S\) are projective and finite, hence free; finite projectivity descends under faithful flatness, so the original \(K_d\) is finite free over \(R\). The completed resolution of \(\kappa\) proves \(R\) regular.
+
+For \(d=0\), \(S\) is a field. Locality sends \(\mathfrak m_R\) to zero, and faithful flatness makes \(R\to S\) injective. Thus \(\mathfrak m_R=0\) and \(R\) is a field. Equivalently the zeroth module is \(K_0=\kappa\), but no negative-index free term is placed in the displayed complex. The two low-degree reports receive this separate proof clarification, which handles both \(d=0\) and \(d=1\).
+
+The equality at 27205–27206 is correct. The report is resolved by citing proposition-finite-gl-dim-regular, which proves that equality, rather than weakening the claim to the bound proved by the currently cited proposition. This is one reference operation.
+
+There is a further reduction of hypotheses, proved here separately. If \(R\to S\) is any flat local map and \(S\) is regular local, the assumption that \(R\) is Noetherian is unnecessary. Faithful flatness and Noetherianity of \(S\) imply it: for any ideal \(I\subset R\), the ideal \(IS\) is generated by finitely many elements. Express those generators as finite sums of elements of \(I\) times coefficients of \(S\), and let \(I_0\subset I\) be generated by the finitely many original \(I\)-elements appearing. Then \(I_0S=IS\). Faithful flatness gives injective quotient unit maps \(R/I_0\to S/I_0S\), so contraction gives \(I_0=I\). Thus every ideal of \(R\) is finite. The already proved local descent theorem then applies.
+
+More generally, if \(R\to S\) is faithfully flat and \(S\) is a Noetherian regular ring, then \(R\) is Noetherian regular. The same ideal proof gives Noetherianity. For every \(\mathfrak p\), the nonzero fibre \(S\otimes_R\kappa(\mathfrak p)\) has a prime, yielding \(\mathfrak q\) contracting to \(\mathfrak p\). The actual localized map \(R_{\mathfrak p}\to S_{\mathfrak q}\) is flat and local, with regular target, so the original \(R_{\mathfrak p}\) is regular. This asserts no uniform dimension bound when none is supplied for \(S\).
+
+## Auslander–Buchsbaum with every short case
+
+For 27228–27295 retain nonzero finite \(M\), its original finite projective dimension \(e\), and a minimal finite free resolution. Write \(t=\operatorname{depth}R\). The top-minor argument above gives \(t\ge e\) if \(e>0\), and \(t\ge0\) if \(e=0\).
+
+In the depth-zero base case, if \(e=0\), \(M\) is a nonzero finite free module and its regular sequences are exactly those of \(R\), with the same nonzero final quotients; hence \(\operatorname{depth}M=t=0\). If \(e=1\), the exact sequence \(0\to F_1\to F_0\to M\to0\) and the depth lemma give
+\(0=\operatorname{depth}M\ge t-1\), while the top-minor bound gives \(t\ge1\); therefore \(t=1\).
+For \(e\ge2\), the original sequence decomposition and iterative depth inequality give
+\(\operatorname{depth}M\ge t-e\), so \(t\le e\); together with the other bound this is equality. At the short end \(e=2\), the decomposition consists of \(0\to F_2\to F_1\to K_0\to0\) and \(0\to K_0\to F_0\to M\to0\); no intermediate \(K_{-1}\) is introduced by the ellipsis. These cases resolve the two reports as a separate proof clarification.
+
+If \(\operatorname{depth}M>0\), the same top-minor bound gives \(\operatorname{depth}R>0\) when \(e>0\), and the nonzero free case gives it when \(e=0\). Thus neither \(M\) nor \(R\) has \(\mathfrak m\) as an associated prime. Finite prime avoidance for the union of their associated primes gives the original \(x\in\mathfrak m\) regular on both \(R\) and \(M\).
+
+The source announces this choice, justifies its existence, and then restates the conclusion. OCC-00535 treats this as a second unnecessary choice, but there is no distinct element or conflicting hypothesis. The exposition is mathematically sound; deleting this explanation is optional editing, not a required correction. The source wording is retained.
+
+Multiplication by the actual \(x\) is injective on every free term. The short exact sequence of complexes
+\(0\to F_\bullet\xrightarrow{x}F_\bullet\to F_\bullet/xF_\bullet\to0\)
+has homology sequence with the only possibly positive homology of the quotient equal to \(\ker(x:M\to M)=0\). Its degree-zero homology is \(M/xM\). Thus it is exactly the displayed free resolution over \(R/xR\); tensoring was not assumed flat. This quotient is nonzero by Nakayama. All differential coefficients remain in the quotient maximal ideal, so the resolution is minimal; its last free term remains nonzero since \(R/xR\ne0\). Tensoring with the common residue field therefore detects projective dimension exactly \(e\).
+
+The depth-drop lemma lowers both depths by one. For a module annihilated by \(x\), regular sequences in the original maximal ideal correspond exactly, by quotient and lifting, to regular sequences in the quotient maximal ideal: the actions and successive quotient modules coincide. This proves the equality of the two depth conventions used in the source, without changing rings silently. Induction over \(R/xR\) now gives
+\[
+\operatorname{depth}R-1=e+\operatorname{depth}M-1,
+\]
+which is the desired formula.
+
+## The retained FAC quotient result and all Betti numbers
+
+The captured current lemma lemma-projective-dimension-modulo-nonzerodivisor cites FAC Chapter III, §5, no. 76, Lemma 2, pp. 270–271. Its hypothesis is nonzero finite \(M\) of finite projective dimension and \(x\in\mathfrak m\) regular on \(M\), without assuming that \(x\) is regular on \(R\). Its exact sequence, depth drop and the just-checked Auslander–Buchsbaum formula prove
+\(\operatorname{pd}_R(M/xM)=\operatorname{pd}_R(M)+1\).
+All 49 lines remain unchanged. Reading this retained source/history block is not a fresh reading of FAC.
+
+The exact same module quotient permits a stronger separate calculation, retaining \(R\) throughout. Let \(M\ne0\) be any finite module over a Noetherian local ring, without finite projective dimension, and let \(x\in\mathfrak m\) be regular on \(M\). Choose its original minimal free resolution \((F_i,d_i)\), finite or infinite. Write \(p:F_0\to M\) for its augmentation and put \(F_{-1}=0\), \(d_0:F_0\to0\) for the following unaugmented complex and cone. Define
+\[
+C_i=F_i\oplus F_{i-1},\qquad
+D_i(a,b)=(d_i a+x b,\ -d_{i-1}b)
+\]
+for \(i\ge1\), with augmentation \(C_0=F_0\to M/xM\). Terms involving \(F_{-1}\) are zero. Direct computation gives \(D_{i-1}D_i=0\): the first component is \(d^2a+x\,db-x\,db=0\), and the second is \(d^2b=0\).
+
+Here is exactness with the original signs. For a cycle \((a,b)\) in positive degree \(i\), \(db=0\). If \(i\ge2\), exactness of \(F\) gives \(b=dc\). If \(i=1\), applying the augmentation to \(da+xb=0\) gives \(x\bar b=0\) in \(M\); regularity gives \(\bar b=0\), so again \(b=dc\). Then \(d(a+xc)=0\), hence \(a+xc=du\), and
+\[
+D_{i+1}(u,-c)=(du-xc,dc)=(a,b).
+\]
+At degree zero, an element mapping to zero in \(M/xM\) has augmentation \(x\bar b\); lift \(\bar b\) to \(b\in F_0\), write \(a-xb=dc\), and obtain \(a=D_1(c,b)\). Thus this is a free resolution of the actual \(M/xM\).
+
+All its matrix entries lie in \(\mathfrak m\), including the retained diagonal \(x\). It is minimal, so tensoring with \(\kappa\) gives zero differentials and yields the exact formula
+\[
+\beta_i^R(M/xM)=\beta_i^R(M)+\beta_{i-1}^R(M)
+\quad(i\ge0),\qquad \beta_{-1}^R(M)=0 .
+\]
+If \(M\) has finite projective dimension \(e\), \(C_{e+1}=F_e\ne0\) and there are no higher terms; this proves the retained FAC formula directly. If its projective dimension is infinite, its minimal resolution has nonzero terms in arbitrarily large degrees and so does \(C\); the quotient still has infinite projective dimension. For every \(a\ge1\), \(x^a\) is regular on \(M\) by repeated injectivity, so all these formulas also hold for the original quotient \(M/x^aM\).
+
+For an \(M\)-regular sequence \(x_1,\ldots,x_c\) in \(\mathfrak m\), apply exactly this construction successively to the nonzero modules \(M/(x_1,\ldots,x_j)M\). Each is nonzero by Nakayama. Induction on the displayed two-term rank formula gives
+\[
+\beta_i^R\bigl(M/(x_1,\ldots,x_c)M\bigr)
+=\sum_{j=0}^c\binom cj\beta_{i-j}^R(M),
+\]
+where terms with negative index are zero. Equivalently the formal power series is multiplied by \((1+t)^c\), with no convergence assertion. Finite projective dimension increases by exactly \(c\); infinite projective dimension remains infinite. No regularity of this sequence on \(R\) is used. This extends the retained quotient result through explicit maps while keeping the translated source and the current added lemma intact.
+
+## Bounded literature reading and a separate source overclaim
+
+The existing corpus lookup for Auslander–Buchsbaum returned two original-TeX records. The DG-ring item, PUBUNIT-41E1EB5390E0880F61FC0B92, remains unread. Neil Epstein and Hop D. Nguyen's Algebra retracts and Stanley-Reisner rings, arXiv:1301.3967, canonical PUBUNIT-E140D1A58DCB9288442C1AD5, was previously read only at 246–266 and 368–383. This turn read the complete additional native TeX range 390–456, with section routing checked. The exact author file is F:/user/Documents/arxiv_latex/_expanded_by_topic/motives_motivic_cohomology/6e7bbb412e444a77/1301.3967/1301.3967.tex, SHA-256 83131E01670F9EF5AB2E6480F668267364B9B1729CB612C9EAE469FFBF12FED1. It declares Latin-1 and was read accordingly; its source archive and files are unchanged.
+
+The introduction and background conventions at 203–246 were also read, and a bounded file search checked for any blanket exclusion of zero modules; none was found. The convention at 242 requires Noetherian commutative rings with unit, which the example below satisfies. The displayed theorem at lines 427–430, labelled regularity_ci_descent and attributed there to Apassov, asserts descent from a regular target if there exists a finite target module of finite flat dimension over the source. As printed it does not require that module to be nonzero. The literal statement fails. Let
+\[
+R=k[\epsilon]/(\epsilon^2),\quad S=k,\quad
+\varphi(a+b\epsilon)=a,\quad M=0 .
+\]
+This is a local map of Noetherian local rings; \(S\) is regular, and zero is a finite \(S\)-module of finite flat dimension over \(R\). But \(R\) has its unique prime/maximal ideal \((\epsilon)\), hence dimension zero, while
+\(\dim_k(\mathfrak m/\mathfrak m^2)=1\); it is not regular. This is an exact counterexample to the statement as printed. It shows a nonzero-module restriction is necessary; it does not certify that adding that restriction alone gives the exact theorem proved by Apassov.
+
+No result depending on the unread Apassov proof, the unread Herzog Poincaré-series identity, or the later complete-intersection arguments is adopted. For the flat local maps treated above, the receiving module is explicitly \(M=S\), finite free of rank one over \(S\), nonzero, and flat over \(R\). The exact preceding proof establishes this special case independently. The printed external overclaim is recorded separately in the claim ledger, not converted into an upstream Stacks edit. This preserves authorship and the distinction between the consulted author's quotation of another theorem and a reading of its original proof.
+
+## Propagation and remaining work
+
+The nonzero-depth guard receives ALGEBRA-RECON-589. The positive top-rank/depth inference receives ALGEBRA-RECON-576, with the original pivot maps of group 569 retained. The low-degree syzygy clarifications receive group 621. The flat regularity argument uses the exact faithful unit and finite-projectivity descent of group 501. The cone computation checks and extends the current FAC quotient lemma without changing it. Each receiving link is recorded in the ledger.
+
+Lookahead through 27420 includes Homomorphisms and dimension and stops at the beginning of a new lemma; it is unadjudicated. The next review starts at 27305. No source or translation mutation, rendering or publication occurred. Wider combined-results synthesis remains after core completion.
+

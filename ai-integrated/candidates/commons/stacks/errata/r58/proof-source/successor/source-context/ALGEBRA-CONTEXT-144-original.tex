@@ -1,0 +1,36 @@
+\begin{lemma}
+\label{lemma-geometrically-irreducible-base-change-transcendental}
+Let $K/k$ be a field extension. The following are equivalent
+\begin{enumerate}
+\item $K$ is geometrically irreducible over $k$, and
+\item the induced extension $K(t)/k(t)$ of purely transcendental extensions
+is geometrically irreducible.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Assume (1). Denote $\Omega$ an algebraic closure of $k(t)$.
+By Definition \ref{definition-geometrically-irreducible}
+we find that the spectrum of
+$$
+K \otimes_k \Omega = K \otimes_k k(t) \otimes_{k(t)} \Omega
+$$
+is irreducible. Since $K(t)$ is a localization of $K \otimes_k k(T)$
+we conclude that the spectrum of $K(t) \otimes_{k(t)} \Omega$
+is irreducible. Thus by Lemma \ref{lemma-geometrically-irreducible}
+we find that $K(t)/k(t)$ is geometrically irreducible.
+
+\medskip\noindent
+Assume (2). Let $k'/k$ be a field extension.
+We have to show that $K \otimes_k k'$ has a unique minimal prime.
+We know that the spectrum of
+$$
+K(t) \otimes_{k(t)} k'(t)
+$$
+is irreducible, i.e., has a unique minimal prime.
+Since there is an injective map
+$K \otimes_k k' \to K(t) \otimes_{k(t)} k'(t)$ (details omitted)
+we conclude by
+Lemmas \ref{lemma-injective-minimal-primes-in-image} and
+\ref{lemma-minimal-prime-image-minimal-prime}.
+\end{proof}

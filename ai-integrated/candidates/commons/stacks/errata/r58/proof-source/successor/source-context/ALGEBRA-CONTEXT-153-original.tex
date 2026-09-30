@@ -1,0 +1,40 @@
+\begin{lemma}
+\label{lemma-geometrically-connected-any-base-change}
+Let $k$ be a field.
+Let $S$ be a geometrically connected $k$-algebra.
+Let $R$ be any $k$-algebra.
+The map
+$$
+R \longrightarrow R \otimes_k S
+$$
+induces a bijection on idempotents, and the map
+$$
+\Spec(R \otimes_k S) \longrightarrow \Spec(R)
+$$
+induces a bijection on connected components.
+\end{lemma}
+
+\begin{proof}
+The second assertion follows from the first combined with
+Lemma \ref{lemma-connected-component}.
+By Lemmas \ref{lemma-subalgebra-geometrically-connected}
+and \ref{lemma-limit-argument} we may assume that $R$ and $S$
+are of finite type over $k$. Then we see that also
+$R \otimes_k S$ is of finite type over $k$. Note that in this
+case all the rings are Noetherian and hence their spectra
+have finitely many connected components (since they have
+finitely many irreducible components, see
+Lemma \ref{lemma-Noetherian-irreducible-components}).
+In particular, all connected components in question are open!
+Hence via Lemma \ref{lemma-disjoint-implies-product}
+we see that the first statement of the
+lemma in this case is equivalent to the second. Let's prove this.
+As the algebra $S$ is geometrically connected
+and nonzero we see that all fibres of $X = \Spec(R \otimes_k S)
+\to \Spec(R) = Y$ are connected and nonempty. Also, as
+$R \to R \otimes_k S$ is flat of finite presentation the map
+$X \to Y$ is open
+(Proposition \ref{proposition-fppf-open}).
+Topology, Lemma \ref{topology-lemma-connected-fibres-connected-components}
+shows that $X \to Y$ induces bijection on connected components.
+\end{proof}

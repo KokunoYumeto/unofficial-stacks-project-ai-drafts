@@ -1,0 +1,141 @@
+\subsection{Formal unramifiedness, universal thickenings and principal parts}\label{algebra-proof-055-formal-unramifiedness-universal-thickenings-and-principal-parts}
+
+\subsubsection{Source identity and scope}\label{algebra-proof-055-source-identity-and-scope}
+
+Source: Stacks Project authors, algebra.tex at commit a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, SHA256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Read and adjudicated: the complete 40769--41376 interval and its twenty-six reports. The next section was read through 41490 but remains unadjudicated. Dependencies read: 34102--34137, 34241--34292, 34657--34751, 34929--34970, 35411--35460, 37862--37902 and 38168--38184. Reading of a displayed dependency does not claim reading of its entire surrounding chapter. The earlier differential-operator note and formal-smoothness note retain their complete proofs and hashed reading coverage. Four indexed hits for ``formally unramified'' were routing records only; none was read or used. No novelty claim or comprehensive literature claim is made.
+
+All supplementary arguments below remain source-linked editorial material. They do not replace the author's translated proofs. The visible source corrections retain all original rings, kernels, coefficients and tensor actions. In particular, the source graph error is corrected as a source error, not silently attributed to a translator.
+
+\subsubsection{Uniqueness, colimits and the nilpotence boundary}\label{algebra-proof-055-uniqueness-colimits-and-the-nilpotence-boundary}
+
+For \(R\to S\), let \(J=\ker(S\otimes_R S\to S)\). With the exact source sign convention, \[
+ds\longleftrightarrow 1\otimes s-s\otimes1\pmod {J^2}.
+\] Thus the maps \(\sigma_1(s)=s\otimes1\) and \(\sigma_2(s)=1\otimes s\) into \((S\otimes_R S)/J^2\) satisfy \(\sigma_2-\sigma_1=d\). Uniqueness of square-zero lifting forces their equality, hence every \(ds=0\), hence \(\Omega_{S/R}=0\). Conversely, if two lifts \(\tau_1,\tau_2:S\to A\) agree modulo an ideal \(I\) with \(I^2=0\), then \(\delta(s)=\tau_2(s)-\tau_1(s)\in I\) satisfies \[
+\delta(st)=\tau_1(s)\delta(t)+\tau_1(t)\delta(s),
+\qquad \delta(r)=0\quad(r\in R).
+\] The omitted product is \(\delta(s)\delta(t)=0\). Hence \(\delta\) factors through \(\Omega_{S/R}\), proving uniqueness. Equivalently the source map \(s_1\otimes s_2\mapsto\tau_1(s_1)\tau_2(s_2)\) sends \(J\) into \(I\) and \(J^2\) to zero, so its quotient map is well defined. This supplies the source's omitted verification.
+
+Base change preserves uniqueness by the tensor universal property. Localizing either ring gives the original localization isomorphisms of differentials, so the source's local and localization criteria follow by testing the zero module at every prime. No finite-generation assumption on \(\Omega\) is needed for vanishing at all primes: if a nonzero element \(m\) existed, choose a prime containing its proper annihilator; its localization there would remain nonzero.
+
+The two source colimit lemmas hold for every small diagram of \(R\)-algebras, not just a directed system. If every object is formally unramified, two lifts from its colimit restrict to the same lift on every object and hence are equal by the colimit universal property. If every object is formally étale, each restriction has one lift. For an arrow \(u:S_i\to S_j\), the chosen lift on \(S_j\), composed with \(u\), and the chosen lift on \(S_i\) have the same reduction. Uniqueness on \(S_i\) makes them equal. Thus all lifts form a compatible cocone and give one lift from the colimit. The empty diagram has colimit \(R\) and also satisfies the conclusion. No injectivity, finite presentation or filtering assumption is used in this proof.
+
+Square-zero uniqueness, and square-zero existence when available, extend to every nilpotent ideal by the successive maps \(A/I^{j+1}\to A/I^j\). Their kernels \(I^j/I^{j+1}\) have square zero for \(j\geq1\). A finite nilpotence exponent terminates the induction. This argument does not justify arbitrary nil ideals.
+
+The exact example already constructed in group 1085 establishes that boundary even for a formally étale map. Fix a field \(k\) and take the injective system \[
+R_n=k[t_n]/(t_n^{2^n}),\quad
+t_n\longmapsto t_{n+1}^2\quad(n\geq1),\qquad
+R=\mathop{\rm colim}_nR_n,\quad J=(t_n:n\geq1).
+\] The monomials \(1,t_n,\ldots,t_n^{2^n-1}\) map to distinct nonzero even monomials, proving injectivity. Thus \(J\ne0\), while each element of \(J\) belongs to a nilpotent ideal at a finite stage and is nilpotent. The relations give \(J=J^2\), and \(S=R/J=k\). For any \(R\to A\) and \(S\to A/I\) with \(I^2=0\), the image of \(J\) lies in \(I\), and the image of \(J=J^2\) is therefore zero. The given \(R\to A\) factors uniquely through \(S\). Hence \(R\to S\) is formally étale. But the identity \(S\to R/J\) has no \(R\)-algebra lift \(S\to R\), since the composite \(R\to S\to R\) would have to be the identity while killing the nonzero ideal \(J\). Also \(J\) is not finitely generated: it is contained in the Jacobson radical, and \(J=J^2\) would make Nakayama force a finite \(J\) to zero. The quotient map is finite type but not finitely presented. This reinforces why the source's formally-étale/étale equivalence at 41200 keeps finite presentation.
+
+\subsubsection{The universal thickening and its exact obstruction}\label{algebra-proof-055-the-universal-thickening-and-its-exact-obstruction}
+
+Let \(R\to S\) be formally unramified. Retain the original presentation \(P=R[x_i]\twoheadrightarrow S\), \(x_i\mapsto z_i\), with kernel \(J\). The source uses \(I\) both for the variable index set and later for a square-zero ideal. The indices here are exactly its original indices; \(I\) in the lifting argument below denotes only that target ideal. There is no change to the set of variables. Set \[
+E=J/J^2,\quad F=\Omega_{P/R}\otimes_PS=\bigoplus_iS\,dx_i,\quad
+d:E\twoheadrightarrow F.
+\] The last map is onto because \(\Omega_{S/R}=0\). Choose the source splitting \(\sigma:F\to E\). Let \(K=\ker d\), \(L=\sigma(F)\), and let \(J'\) be the inverse image of \(L\) in \(J\). Thus \[
+E=K\oplus L,\quad d|_L:L\xrightarrow{\sim}F,\quad
+U=P/J',\quad C=\ker(U\to S)=J/J'\cong K,\quad C^2=0.
+\tag{CT-1}
+\] The isomorphism \(K\to C\) is induced by the original quotient map: it is injective because \(K\cap L=0\), and surjective because \(E=K+L\).
+
+Given \(R\to A,\ a:S\to A/I\), \(I^2=0\), choose lifts of all the \(z_i\) to define \(\beta:P\to A\). The ideal \(I\) is an \(S\)-module via \(a\): two lifts of a scalar differ by an element of \(I\), which annihilates \(I\). We have \(\beta(J)\subset I\), \(\beta(J^2)=0\), and the induced map \(\bar\beta:E\to I\) is \(S\)-linear. For \(\delta_i\in I\), replacing \(\beta(x_i)\) by \(\beta(x_i)+\delta_i\) gives the exact finite Taylor identity \[
+\beta'(g)=\beta(g)+\sum_i\delta_i\,
+\beta\!\left(\frac{\partial g}{\partial x_i}\right).
+\tag{CT-2}
+\] Each polynomial has only finitely many terms and variables. Every term with two \(\delta\)'s vanishes; no convergence or bounded number of variables is assumed. Define \[
+\delta_i=-\bar\beta\bigl(\sigma(dx_i)\bigr).
+\] Then on \(L\), the changed map is \(\bar\beta-\bar\beta\sigma d=0\). Hence \(\beta'(J')=0\), giving \(q:U\to A\). Any other choice which kills \(J'\) must have these same \(\delta_i\), since \(d|_L\) is an isomorphism onto the free basis. This proves the claimed existence and uniqueness, including the full missing summation in the source formula for \(dg\) at 40990.
+
+The restriction \[
+\lambda=q|_C:C\longrightarrow I
+\tag{CT-3}
+\] is the exact obstruction to a lift \(S\to A\): such a lift exists if and only if \(\lambda=0\), since this is precisely the condition that \(q\) factor through \(U/C=S\). When it exists it is unique. Under \(K\cong C\), (CT-3) is \(\bar\beta|_K\), independent of the chosen polynomial lift: a change adds an \(S\)-linear map composed with \(d\), which vanishes on \(K\). Different splittings give uniquely isomorphic \(U\)'s by applying their universal properties to each other; the composites must be the identity by the same uniqueness. Thus the resulting conormal module and obstruction do not depend on that choice.
+
+For the quotient \(S=R/H\), take \(P=R,J=H,F=0\). Then \(J'=H^2\), \(U=R/H^2\), and \(C=H/H^2\), proving the omitted quotient lemma. Both localization assertions also follow directly: a lift of a unit modulo a square-zero ideal is a unit. Explicitly, if \(uv=1-e\), \(e^2=0\), its inverse is \(v(1+e)\). Apply this to the images of the specified multiplicative subset in \(R\), or to its full inverse image in \(U\) when the subset lies in \(S\). The unique universal map therefore extends uniquely to the indicated localization. The two comparison maps in the source are inverse because their composites are the unique maps of the same universal lifting diagram. Localization of the exact kernel sequence gives precisely the stated localized conormal modules.
+
+There is a stronger base-change statement with an essential kernel qualification. For every \(R\to R_1\), set \(S_1=R_1\otimes_RS\), \(U_1=R_1\otimes_RU\). The map \(U_1\to S_1\) is surjective, with square-zero kernel the image of \(R_1\otimes_RC\). For a lifting diagram over \(R_1\), the universal map \(U\to A\) combines with the given \(R_1\to A\) to give the unique \(R_1\)-algebra map \(U_1\to A\). Thus \(U_1\) is the actual universal thickening of \(S_1/R_1\), without a flatness assumption. Its conormal module \(C_1\) fits in the exact sequence \[
+\operatorname{Tor}_1^R(R_1,U)\longrightarrow
+\operatorname{Tor}_1^R(R_1,S)\longrightarrow
+R_1\otimes_RC\longrightarrow C_1\longrightarrow0.
+\tag{CT-4}
+\] This is the tensor long exact sequence of \(0\to C\to U\to S\to0\); the last map is the actual inclusion image in \(U_1\). For flat \(R_1\), or whenever the displayed middle Tor group vanishes, the conormal map is an isomorphism. In general it need not be: for \(R=\mathbf Z,\ S=\mathbf Z/p,\ U=\mathbf Z/p^2,\ R_1=\mathbf Z/p\), we have \(C=p\mathbf Z/p^2\), \(R_1\otimes_RC=\mathbf F_p\), but \(U_1=S_1=\mathbf F_p\) and \(C_1=0\). The connecting map in (CT-4) is then surjective onto \(\mathbf F_p\). Universal thickenings commute with this base change; their kernels require the exact Tor correction.
+
+For completeness this obstruction also classifies every square-zero \(R\)-algebra extension of \(S\) with a fixed identified kernel \(M\), an arbitrary \(S\)-module. Given \(\lambda:C\to M\), form the ring \[
+E_\lambda=(U\oplus M)/
+\{(c,-\lambda(c)):c\in C\},\qquad
+(u,m)(v,n)=(uv,\bar u n+\bar v m).
+\tag{CT-5}
+\] The denominator is an ideal: multiplication by \((u,m)\) sends its element indexed by \(c\) to that indexed by \(uc=\bar u c\). It intersects \(0\oplus M\) trivially. Thus (CT-5) has identified square-zero kernel \(M\) and quotient \(S\). The map \(U\to E_\lambda\) restricts on \(C\) to \(\lambda\). Conversely an extension \(0\to M\to E\to S\to0\) receives the unique map \(q:U\to E\); let \(\lambda=q|_C\). The map \((u,m)\mapsto q(u)+m\) factors through (CT-5), is the identity on kernel and quotient, and is an isomorphism: surjectivity follows by lifting the quotient element to \(u\), and injectivity follows by subtracting \((c,-\lambda(c))\) from a kernel representative. An automorphism fixing \(S,M,R\) fixes \(q\) by universality and fixes \(M\), hence is the identity. Under the Baer sum, use \(E_\lambda\times_SE_\mu\) and quotient its kernel \(M\oplus M\) by \(\{(m,-m)\}\); the map from \(C\) becomes \(\lambda+\mu\). Hence the classes, with this operation, are exactly \(\operatorname{Hom}_S(C,M)\). The zero class is the split extension.
+
+In particular, for formally unramified \(R\to S\), formal étaleness is equivalent to \(C=0\). One direction follows from \(U=S\) and its lifting property. Conversely formal étaleness gives a section \(s:S\to U\); both \(1_U\) and \(s\pi\) are universal maps from \(U\) in the same diagram, so uniqueness forces \(s\pi=1_U\), and \(C=0\). This criterion is valid without finite presentation; it is not a claim that formal étaleness alone implies étaleness.
+
+\subsubsection{The differential graph and the original base contribution}\label{algebra-proof-055-the-differential-graph-and-the-original-base-contribution}
+
+At 41090--41154 retain the source rings \(R\to A\to B\), its presentation \(P=A[x_i]\twoheadrightarrow B\) with kernel \(J\), and its chosen \(f_i\in J\) such that \(d_{P/A}f_i=dx_i\) after tensoring with \(B\). Set \(J'=(f_i)+J^2\), \(B'=P/J'\), and \(N=J/J'\). The nilpotent ideal in \(B'\) is \(N\), not \(J'/J^2\). Indeed \(N^2=0\) and \(B'/N=B\). The cokernel of the differentials \(df_i\) in \(\Omega_{P/A}\otimes_PB'\) vanishes modulo \(N\), so it equals its multiple by \(N\), hence its multiple by \(N^2=0\). This proves \(\Omega_{B'/A}=0\) even with infinitely many variables. No finite-module version of Nakayama is being used.
+
+For the \(R\)-relative statement, retain both summands \[
+\Omega_{P/R}\otimes_PB=E_0\oplus F_0,\qquad
+E_0=\Omega_{A/R}\otimes_AB,\qquad F_0=\bigoplus_iB\,dx_i.
+\] If \(f_i=\sum_\nu a_{i,\nu}x^\nu\) is its full coefficient expansion, then \[
+df_i=(\eta_i,dx_i),\qquad
+\eta_i=\sum_\nu(da_{i,\nu})\otimes z^\nu\in E_0.
+\tag{CT-6}
+\] All multi-indices, coefficients and monomials are retained; the second component is \(dx_i\) by the chosen \(A\)-relative condition. The exact differential sequence, tensored with \(B\), identifies \(\Omega_{B'/R}\otimes_{B'}B\) with the quotient by the image of \(J'/(J')^2\otimes_{B'}B=J'/JJ'\). The image of \(J^2\) is zero, by the Leibniz rule after reduction modulo \(J\). Every element of \(J'\) is a finite sum of multiples of \(f_i\) plus an element of \(J^2\); its differential has image a finite \(B\)-linear combination of the pairs (CT-6).
+
+Consequently this image is the graph of \(\eta:F_0\to E_0,\ dx_i\mapsto\eta_i\). Its projection to \(F_0\) is an isomorphism, but it need not be the second summand itself. The exact quotient map and its inverse are \[
+(E_0\oplus F_0)/\{(\eta(v),v):v\in F_0\}
+\xrightarrow{\sim}E_0,\quad [(e,v)]\mapsto e-\eta(v),
+\qquad e\mapsto[(e,0)].
+\tag{CT-7}
+\] These are inverse because their difference on \((e,v)\) is the graph element \((\eta(v),v)\). Thus the canonical map \(E_0\to\Omega_{B'/R}\otimes_{B'}B\) is indeed an isomorphism. The theorem survives, but the printed claim at 41149--41150 that the submodule maps onto the summand must be replaced by projection of the image onto the summand.
+
+For a concrete counterexample to the printed intermediate claim, take \(R=k,\ A=k[t],\ P=A[x],\ J=(x-t)\), and \(B=A\). Then \(f=x-t\) has \(d_{P/A}f=dx\), \(J'=J\), and \(B'=A\); but \(d_{P/k}f=dx-dt\). Its image is the graph of \(dx\mapsto-dt\), not \(0\oplus A\,dx\). Formula (CT-7) sends \(e+b\,dx\) to \(e+b\,dt\), preserving the original base differential and its sign.
+
+\subsubsection{Formal étale jets and differential operators}\label{algebra-proof-055-formal-uxe9tale-jets-and-differential-operators}
+
+The source's finite-presentation equivalence is valid: formal étaleness means formal smoothness and zero differentials; finite presentation turns formal smoothness into smoothness, and zero differentials then gives étaleness. In the other direction étale maps are finitely presented, formally smooth and have zero differentials. Localization lifts uniquely because units lift across square-zero ideals, with the inverse formula already given above.
+
+For 41256--41288 keep its exact \(R\to S\), \(J\subset S\), and \(I=\ker(R\to S/J)\), with \(R/I\cong S/J\). Successive unique lifts \(v_n:S\to R/I^n\) exist by formal étaleness; the kernels \(I^n/I^{n+1}\) are square zero. Compatibility is forced by uniqueness. Each \(v_n\) sends \(J\) into \(I/I^n\), because it reduces to the specified isomorphism modulo \(I\), and so kills \(J^n\). It induces \(\bar v_n:S/J^n\to R/I^n\). The composite \(R/I^n\to S/J^n\to R/I^n\) is the identity because both maps are \(R\)-algebra maps. For the opposite composite, precompose with \(S\to S/J^n\). It and the canonical map agree modulo \(J\); uniqueness of lifts across the nilpotent ideal \(J/J^n\) makes them equal. This proves the canonical isomorphisms for every \(n\geq1\). Their commuting transition maps identify each kernel \(I^n/I^{n+1}\) with \(J^n/J^{n+1}\), including multiplication, giving the source graded-ring isomorphism. Their inverse limits give the corresponding completion isomorphism as a separate direct consequence.
+
+For \(R\to S\to S'\) with \(S\to S'\) formally étale, define the actual diagonal ideals \[
+J=\ker(S\otimes_RS\to S),\qquad
+J'=\ker(S'\otimes_RS'\to S').
+\] The printed \(R'\) at 41294 is undefined and is corrected to \(R\). On every diagonal algebra distinguish the left action \(s\otimes1\) and the right action \(1\otimes s\). Set \(T=S'\otimes_RS\) and \(T'=S'\otimes_RS'\). The map \(T\to T'\) is the base change of \(S\to S'\) through the right \(S\)-action and is formally étale. The map \(T\to T'/J'=S'\), \(s'\otimes s\mapsto s's\), is onto and has kernel \(I=JT\). To verify the kernel statement without flatness, the map from \(S\otimes_RS\) onto \(S\), as a left \(S\)-module map, has section \(s\mapsto s\otimes1\). Its split kernel sequence stays exact after tensoring on the left with \(S'\); its kernel image is precisely the ideal generated by \(J\). Also \(I^n=J^nT\), since products of generators give both inclusions. The preceding infinitesimal-isomorphism lemma yields \[
+S'\otimes_{S,\mathrm{left}}
+\bigl((S\otimes_RS)/J^{k+1}\bigr)
+\xrightarrow{\sim}(S'\otimes_RS')/(J')^{k+1}.
+\tag{CT-8}
+\] It is the original map \((s'\otimes(a\otimes b))\mapsto s'a\otimes b\). It respects the right \(S\)-action and the quotient maps in \(k\). For \(k=1\), the split multiplication sequences identify their kernels with \(S'\otimes_S J/J^2\) and \(J'/(J')^2\). This proves the source differential isomorphism with its original sign convention.
+
+Write \(Q_k=(S\otimes_RS)/J^{k+1}\) and \(Q'_k=(S'\otimes_RS')/(J')^{k+1}\). For any \(S\)-module \(M\), the source principal-parts construction is \(P^k_{S/R}(M)=Q_k\otimes_{S,\mathrm{right}}M\), with its left \(S\)-module structure. Retain the corrected extension \(M'=S'\otimes_SM\), not \(S'\otimes_RM\). For example, with \(R=k,\ S=S'=k[x]\) and \(M=S\), the identity map \(S\to S'\) is formally étale. At order zero the left module in the claimed comparison is \(S\), whereas the incorrectly defined \(M'\) is \(S\otimes_kS\), free of infinite rank as a left \(S\)-module. Thus the erroneous tensor base already fails at order zero. Tensoring (CT-8) with \(M\) on the right gives \[
+S'\otimes_S P^k_{S/R}(M)
+\cong Q'_k\otimes_{S,\mathrm{right}}M
+\cong Q'_k\otimes_{S',\mathrm{right}}(S'\otimes_SM)
+=P^k_{S'/R}(M').
+\tag{CT-9}
+\] The middle isomorphism sends \(q\otimes(s'\otimes m)\) to \(q(1\otimes s')\otimes m\), with inverse \(q\otimes m\mapsto
+q\otimes(1\otimes m)\). Thus the left and right actions are never interchanged. The full module quotients use numerator \(S'\otimes_RM'\); the source's abbreviated quotient notation is interpreted accordingly. That convention is not a new mathematical defect. The \(R'\) at 41349, however, is undefined and must again be \(R\).
+
+For every \(S'\)-module \(N'\), (CT-9), the principal-parts universal property, and scalar-extension adjunction give the exact bijection \[
+\operatorname{Diff}^{\,k}_{S'/R}(M',N')
+\xrightarrow{\sim}\operatorname{Diff}^{\,k}_{S/R}(M,N'),
+\qquad D'\longmapsto D'\circ(m\mapsto1\otimes m).
+\tag{CT-10}
+\] To check that the adjunction is this map, the universal operator sends \(m\) to the class of \(1\otimes m\); (CT-9) sends that class to the corresponding class of \(1\otimes(1\otimes m)\). Hence restriction is exactly the asserted operation, not just an abstract bijection. No flatness or finite presentation of \(M\) is assumed.
+
+Given the source's \(D:M\to N\), compose it with \(N\to S'\otimes_SN\). If \(D=\gamma\circ D_{\rm univ}\), its extension corresponds under (CT-9) to \(1\otimes\gamma\), tensoring all three relevant modules over \(S\). This proves the corrections at 41356--41357. It also proves uniqueness by (CT-10). The correspondence commutes with order truncation because (CT-8) commutes with all diagonal quotient maps. It preserves addition and identity maps. If \(D_1,D_2\) have orders at most \(k_1,k_2\), their composite has order at most \(k_1+k_2\), by the exact commutator identity \[
+[D_2D_1,g]=D_2[D_1,g]+[D_2,g]D_1.
+\] The extended composite and the composite of extensions restrict to the same map on \(M\). Applying (CT-10) at \(k_1+k_2\) makes them equal. Thus extension defines a functor on the category of \(S\)-modules with finite-order \(R\)-linear differential operators as morphisms, preserving the order filtration. In particular it extends complexes whose differentials have finite order: the square remains zero by this composition identity, not by an assertion of exactness of tensoring. It does not assert that arbitrary cohomology commutes with this possibly nonflat scalar extension.
+
+The resulting endomorphism ring \(\operatorname{Diff}_{S/R}(M,M)\) is a possibly noncommutative \(R\)-algebra, not in general an \(S\)-algebra with central structural scalars. This requires a correction to the final sentence at 41369. For \(R=\mathbf Q,\ S=\mathbf Q[x],\ M=S,\ S'=S\), let \(\partial=d/dx\) and \(\mu_x\) be multiplication by \(x\). Then for every polynomial \(f\), \[
+(\partial\mu_x-\mu_x\partial)(f)
+ =\partial(xf)-x\partial(f)=f.
+\] So the natural \(S\)-scalars are not central and multiplication is not bilinear over those \(S\)-scalars. All operators are \(R\)-linear, hence the image of \(R\) is central; addition and composition make the asserted \(R\)-algebra, and its action on \(M'=S'\otimes_SM\) is exactly the extension just constructed. The module conclusion remains valid with this corrected algebra base.
+
+\subsubsection{Report decisions and propagation}\label{algebra-proof-055-report-decisions-and-propagation}
+
+Twenty report groups cover all twenty-six reports. Five groups remain optional: the conventional ``Follows from'' proof opening (923), reuse of the index symbol in a typed context (925), renaming the individually specified inverse image \(g\) to \(g_i\) (929), the conventional ``With notation and assumptions'' openings (930), and the already grammatical plural ``unique maps'' (935). Report 12203 is rejected as a nondefect of the source's quotient-notation convention, consistently with the earlier quotient-notation adjudication; the actual quotient and its two actions are specified in (CT-8)--(CT-9).
+
+The other fourteen report groups give sixteen operations: terminal punctuation at 40898, 40950, 40987, 41142, 41229, 41282 and 41325; the sum at 40990; both wrong kernel occurrences in the one line 41120; the ``given above,'' connection at 41148; tensor-base corrections at 41294, 41323, 41349, 41356 and twice at 41357. Two additional source-correction groups repair the differential graph argument at 41149--41150 and the algebra base at 41369. Those mathematical problems were found during source review, beyond the received reports.
+
+Three zero-operation consequence groups record arbitrary small colimits with the exact nilpotence boundary; the universal obstruction, extension classification and arbitrary-base-change Tor comparison; and the order-preserving restriction bijections and differential-operator functor. Group 1085 receives the formally étale conclusion for its existing nil-idempotent example. The earlier differential-operator proof supplies the principal-parts universal map, corrected as \(D=\gamma\circ D_{\rm univ}\), and its full commutator relations. The graph correction is propagated into the conormal differential isomorphism, retaining every coefficient differential. The principal-parts tensor corrections are propagated through the operator extension and its composition action. All these source corrections and proved strengthenings are recorded separately in the ledger. The broader combined-results synthesis remains after core work.

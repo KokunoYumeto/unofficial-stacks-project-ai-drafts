@@ -1,0 +1,193 @@
+\subsection{Orders of vanishing with the original lattices, determinants and norms}\label{algebra-proof-030-orders-of-vanishing-with-the-original-lattices-determinants-and-norms}
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:29779--30092, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All eleven reports are read. The whole current interval equals this authority plus MC-STK-ERR-0643, 0644 and 0645, comprising eight operations, with no added environment.
+
+The complete arguments and consequences below are editorial material, not replacement translations. Three proposed operations are punctuation or grammar. The additional source-citation mismatch is recorded visibly below rather than silently reconstructing the translated proof. The source's signed distance and all original rings, modules, maps and multipliers remain identifiable. No novelty claim is made.
+
+\subsubsection{Nonzerodivisor lengths and the citation hypothesis}\label{algebra-proof-030-nonzerodivisor-lengths-and-the-citation-hypothesis}
+
+At 29794--29799, the map in the original exact sequence is \[
+ R/(a)\longrightarrow R/(ab),\qquad r+(a)\longmapsto br+(ab),
+\] followed by the quotient map to \(R/(b)\). It is well-defined since \(b(a)\subset(ab)\). If \(br=abq\), the original nonzerodivisor \(b\) cancels and gives \(r=aq\); hence this map is injective. The kernel of the quotient map consists precisely of the classes \(br+(ab)\). The quotient map is surjective. This proves the entire displayed short exact sequence.
+
+There is an unreported mismatch in the finiteness citation at 29795. The cited lemma-finite-length-global, authority 29266--29290, assumes that its base ring is a domain. The present lemma allows a semilocal Noetherian ring of dimension one with zero divisors. Its conclusion is still correct; the cited domain result by itself does not prove that generality.
+
+Here is the missing argument for the original ring, and in fact for any Noetherian ring \(R\) of dimension at most one, without semilocality. A nonzerodivisor \(a\) belongs to no minimal prime \(\mathfrak p\). Indeed \(R_{\mathfrak p}\) is a nonzero zero-dimensional Noetherian local ring and hence Artinian; its maximal ideal is nilpotent. If \(a\in\mathfrak p\), the localized \(a\) is nilpotent and still a nonzerodivisor. Iterated cancellation in an equality \(a^n=0\) would give \(1=0\), a contradiction. Every prime containing \(a\) is therefore maximal: a longer chain above a minimal prime would contradict the original dimension bound. Thus \(R/(a)\) is zero-dimensional Noetherian, or the zero ring if \(a\) is a unit, and has finite length. The same argument applies to the original \(b\) and \(ab\), since a product of nonzerodivisors is a nonzerodivisor. This uses the source's zero-dimensional Noetherian/Artinian and finite-length results, with the zero quotient kept separate.
+
+Additivity of length in the proved sequence now gives exactly \[
+ \ell_R(R/(ab))=\ell_R(R/(a))+\ell_R(R/(b)).
+\] The grammar operation for OCC-00576 inserts ``that'' after ``Use''; it does not replace the source proof with this expanded editorial argument.
+
+There is also a precise total-fraction-ring version. Let \(S\) be the set of nonzerodivisors of \(R\) and \(Q(R)=S^{-1}R\). Every unit of \(Q(R)\) can be written \(a/s\) with \(a,s\in S\). To check the numerator assertion, if \((a/s)(b/t)=1\), some \(v\in S\) satisfies \(v(ab-st)=0\); cancellation gives \(ab=st\), so \(a\) is a nonzerodivisor. Define \[
+ o_R(a/s)=\ell_R(R/(a))-\ell_R(R/(s)).
+\] If \(a/s=a'/s'\), cancellation of a common nonzerodivisor gives \(as'=a's\), and the proved length identity gives equal differences. Applying that same identity to both numerator and denominator proves that \(o_R:Q(R)^\times\to\mathbf Z\) is a group homomorphism. In the original domain case \(Q(R)=K\), this is precisely the source's \(\operatorname{ord}_R\). Units of \(R\) have order zero. No valuation inequality is asserted.
+
+\subsubsection{The original lattices and their signed distance}\label{algebra-proof-030-the-original-lattices-and-their-signed-distance}
+
+Keep the source's original domain \(R\), fraction field \(K\), vector space \(V\), and finite submodules of that same \(V\). The proofs in this section also work when \(R\) is any one-dimensional Noetherian domain, without locality. A finite torsion \(R\)-module has finite length: the product of annihilators of a finite generating list supplies a single nonzero annihilator \(f\), and \(R/(f)\) has finite length by the preceding argument.
+
+A lattice contains a \(K\)-basis of \(V\), since a finite spanning list contains a basis. Conversely a finite submodule containing a basis localizes to all of \(V\). The map \(K\otimes_R M\to V\) sends \(a/b\otimes m\) to \(am/b\); it is injective because localization of the inclusion \(M\subset V\) remains injective, and surjective by spanning.
+
+If \(M\subset M'\subset V\) and \(M'\) is finite, express each original generator \(y_i\) as \(x_i/f_i\), with \(x_i\in M\) and \(0\ne f_i\in R\). Their actual product \(f=\prod_i f_i\) satisfies \(fM'\subset M\). Therefore \(M'/M\) is finite torsion and has finite length. Conversely, a finite-length quotient is finitely generated, and lifting its finitely many generators and adjoining the original generators of \(M\) generates \(M'\). Since \(M'\) contains \(M\), it spans \(V\). This proves all three equivalences in part (1).
+
+If \(M'\subset M\), it is finite by Noetherianity. When \(M'\) is a lattice, the preceding argument gives finite length of \(M/M'\). Conversely a finite-length module over a one-dimensional domain is torsion: each of its finitely many simple factors is \(R/\mathfrak m_i\), with \(\mathfrak m_i\ne0\); choose an actual \(0\ne f_i\in\mathfrak m_i\). The product of those elements annihilates the module, by its composition filtration. Thus \(fM\subset M'\) for a nonzero \(f\), and multiplying the original basis in \(M\) by \(f\) gives a basis in \(M'\). This proves part (2), retaining the original module inclusions.
+
+The intersection \(M\cap M'\) is finite as a submodule of \(M\). For an original basis \(x_i\in M\), choose \(0\ne f_i\in R\) with \(f_ix_i\in M'\); the vectors \(f_ix_i\) lie in the intersection and are still a \(K\)-basis. The sum is generated by the union of the two finite generating lists and contains \(M\). This proves part (3), including \(V=0\), when every lattice is zero.
+
+For \(M\subset M'\subset M''\), the actual inclusion and quotient maps give \[
+ 0\longrightarrow M'/M\longrightarrow M''/M
+   \longrightarrow M''/M'\longrightarrow0.
+\] All terms have finite length, proving part (4). OCC-00578 adds the missing period to this display; OCC-00577 and OCC-01416 add the earlier sentence-ending period.
+
+Put \(P=M\cap M'\). If \(N\subset P\), the two exact sequences with common submodule \(P/N\) give \[
+ \ell_R(M/P)-\ell_R(M'/P)
+ =\ell_R(M/N)-\ell_R(M'/N).
+\] The maps \(m+P\mapsto m+M'\) and \(m'+P\mapsto m'+M\) give the explicit isomorphisms \[
+ M/P\cong(M+M')/M',\qquad M'/P\cong(M+M')/M.
+\] Their kernels are precisely \(P\), and the sums show surjectivity. If \(M+M'\subset N'\), quotienting \(N'/M'\) by its submodule \((M+M')/M'\), and doing the same with \(M\), gives a common remaining quotient \(N'/(M+M')\). Cancelling its length proves the last equality in part (5). These are the six grouping corrections already supplied by MC-STK-ERR-0643 for OCC-12352.
+
+Consequently the original signed distance \[
+ d_R(M,M')=\ell_R(M/(M\cap M'))-\ell_R(M'/(M\cap M'))
+\] can be computed using any common lower lattice \(N\). For three lattices take \(N=M\cap M'\cap M''\); the two intermediate terms \(\ell_R(M'/N)\) cancel, giving \[
+ d_R(M,M'')=d_R(M,M')+d_R(M',M'').
+\] It follows that \(d_R(M,M)=0\) and \(d_R(M,M')=-d_R(M',M)\). This supplies the proof explicitly omitted at 29961--29963 as separate editorial material. The source's term ``distance'' denotes this signed integer and does not impose the axioms of a metric.
+
+\subsubsection{The original determinant identity and every generator}\label{algebra-proof-030-the-original-determinant-identity-and-every-generator}
+
+A \(K\)-linear isomorphism \(\varphi:V\to V\) carries intersections to intersections and gives \(R\)-linear isomorphisms on the two quotient modules. Hence \[
+ d_R(\varphi M,\varphi M')=d_R(M,M').
+\] Using the just-proved cocycle identity in the exact order written in the source yields \[
+\begin{aligned}
+ d_R(M,\varphi M)
+ &=d_R(M,M')+d_R(M',\varphi M')+
+        d_R(\varphi M',\varphi M)\\
+ &=d_R(M',\varphi M').
+\end{aligned}
+\] Thus \(D_R(\varphi)=d_R(M,\varphi M)\) is independent of the original lattice used to compute it. Also \[
+ D_R(\varphi\psi)
+ =d_R(M,\psi M)+d_R(\psi M,\varphi\psi M)
+ =D_R(\psi)+D_R(\varphi).
+\] MC-STK-ERR-0644 correctly closes the source's extra grouping around \(M\). Its resulting expression is balanced and has the same composite. The alternative proposal deleting that redundant grouping is not another required operation.
+
+The other side, \(\operatorname{ord}_R(\det_K\varphi)\), is additive under composition by determinant multiplicativity and the proved order homomorphism. Retain a chosen original basis \(e_1,\ldots,e_n\) of \(V\). For \(n=0\), the lattice is zero, the determinant is the empty determinant \(1\), and both sides are zero.
+
+For \(n\ge1\), the group is generated by the transvections \(E_{ij}(\lambda)\), \(i\ne j\), and diagonal scalings \(E_i(a)\), \(a\ne0\). Gaussian elimination proves this without assuming a nonzero first pivot: exchange the first row with a row having a nonzero first-column entry, retain that entry as the diagonal scaling factor, clear the other entries by the corresponding actual transvections, and apply induction to the remaining invertible block. Clear the remaining first-row entries with further transvections. Row exchange is itself a product of the stated generators; on the affected two coordinates, \[
+ \begin{pmatrix}0&1\\1&0\end{pmatrix}
+ =E_{12}(1)E_{21}(-1)E_{12}(1)
+       \begin{pmatrix}-1&0\\0&1\end{pmatrix}.
+\] Direct multiplication verifies this identity, including characteristic two, and retains its determinant factor \(-1\).
+
+If \(\lambda=0\), the transvection is the identity. If \(\lambda\ne0\), retain the actual new lattice with basis \(f_i=\lambda e_i\) and \(f_k=e_k\) for \(k\ne i\). The original transformation sends \(f_j\) to \(f_j+f_i\), fixes the other basis vectors, and its inverse subtracts \(f_i\). Hence it carries this lattice to itself. This is the source basis comparison with its multiplier \(\lambda\) and inverse \(\lambda^{-1}\) kept explicit. Its distance is zero and its determinant is \(1\).
+
+For a diagonal factor \(a=f/g\), with the original nonzero \(f,g\in R\), compare \[
+ M=Re_1\oplus\cdots\oplus Re_n,\qquad
+ E_1(a)M=aRe_1\oplus Re_2\oplus\cdots\oplus Re_n
+\] using the common lower lattice \(N=fRe_1\oplus Re_2\oplus\cdots\oplus Re_n\). The quotients are \(R/fR\) and \(aR/fR\), and \[
+ R/gR\xrightarrow{\cong}aR/fR,\qquad r+gR\longmapsto ar+fR.
+\] It is surjective, and \(ar=fq=agq\) gives \(r=gq\) by cancellation in \(K\), proving injectivity. Thus \[
+ d_R(M,E_1(a)M)=\ell_R(R/fR)-\ell_R(R/gR)
+              =\operatorname{ord}_R(a).
+\] This verifies the original equality with its actual fraction, without an assumption that \(a\in R\). MC-STK-ERR-0645 corrects only the undefined rank \(b\) to the original \(n\). Additivity on all the displayed generators proves \[
+ d_R(M,\varphi M)=\operatorname{ord}_R(\det_K\varphi).
+\] The proof has established this for every one-dimensional Noetherian domain, with no local or semilocal assumption.
+
+\subsubsection{Finite modules, torsion terms and exact-sequence indices}\label{algebra-proof-030-finite-modules-torsion-terms-and-exact-sequence-indices}
+
+Let \(R\) be a one-dimensional Noetherian domain, \(M\) any finite \(R\)-module, and \(\varphi:M\to M\) an endomorphism for which \(\varphi_K\) on the original \(V=K\otimes_R M\) is invertible. The actual kernel and cokernel are finite torsion modules, hence have finite length. Let \(T\subset M\) be its torsion submodule, preserved by \(\varphi\), and let \(\overline M=M/T\), embedded canonically in \(V\). It is a lattice. The induced \(\overline\varphi\) is injective since it is injective after passage to \(V\). The exact kernel/cokernel sequence for \(0\to T\to M\to\overline M\to0\) is therefore \[
+ 0\to\ker\varphi_T\to\ker\varphi\to0
+ \to\operatorname{coker}\varphi_T
+ \to\operatorname{coker}\varphi
+ \to\operatorname{coker}\overline\varphi\to0.
+\] Both equalities \(\ell_R(T)=\ell_R(\ker\varphi_T)+\ell_R(\operatorname{im}\varphi_T)\) and \(\ell_R(T)=\ell_R(\operatorname{im}\varphi_T)+\ell_R(\operatorname{coker}\varphi_T)\) hold, so the torsion kernel and cokernel have equal lengths. Subtracting in the exact sequence gives the full formula \[
+ \ell_R(\operatorname{coker}\varphi)-\ell_R(\ker\varphi)
+ =\ell_R(\overline M/\overline\varphi\overline M)
+ =\operatorname{ord}_R(\det_K\varphi_K).
+\] The original \(M\) has not been replaced by its torsion-free quotient: both original torsion contributions are present and their cancellation is proved. For multiplication by \(0\ne x\in R\), with \(r=\dim_K V\), this gives \[
+ \ell_R(M/xM)-\ell_R(M[x])=r\,\ell_R(R/xR).
+\] It recovers the previously verified torsion-free length equality in ALGEBRA-RECON-700 and specifies exactly the extra term when torsion is allowed. If \(r=0\), the determinant is \(1\) and the formula is equality of the two lengths.
+
+There is also exact compatibility with subspaces. Let \(W\subset V\) be a \(K\)-subspace and \(\pi:V\to V/W\) the actual quotient map. For lattices \(M,M'\), the submodules \(M\cap W,M'\cap W\) are lattices in \(W\): they are finite by Noetherianity, and denominators can be cleared in each vector of a basis of \(W\) to place it in the corresponding original lattice. The images \(\pi M,\pi M'\) are finite and span the quotient. Choose a common lower lattice \(N\subset M\cap M'\). The actual maps give \[
+ 0\longrightarrow (M\cap W)/(N\cap W)
+ \longrightarrow M/N\longrightarrow \pi M/\pi N\longrightarrow0.
+\] If \(\pi m=\pi n\) with \(n\in N\), then \(m-n\in M\cap W\); this proves exactness at the middle term and identifies its kernel without assuming a splitting. The analogous sequence for \(M'\), followed by subtraction of lengths, proves \[
+ d_V(M,M')=
+ d_W(M\cap W,M'\cap W)+
+ d_{V/W}(\pi M,\pi M').
+\] If \(\varphi W=W\), then \(\varphi M\cap W=\varphi(M\cap W)\), while \(\pi(\varphi M)=\overline\varphi(\pi M)\). Thus the determinant-distance identity is additive in this exact sequence, with determinant product \(\det(\varphi|_W)\det(\overline\varphi)\). An adapted original basis represents \(\varphi\) by an upper block triangular matrix; expanding its determinant retains exactly this product, with no extra sign or scalar.
+
+\subsubsection{The original finite-extension norm and its global version}\label{algebra-proof-030-the-original-finite-extension-norm-and-its-global-version}
+
+At 30037--30078 retain the original finite injection \(A\subset B\) of domains and the corresponding fraction fields \(K\subset L\). The ring \(K\otimes_A B\) embeds in \(L\), is a finite-dimensional domain over \(K\), and hence is a field: multiplication by any nonzero element is an injective endomorphism of a finite-dimensional vector space, so is surjective and gives an inverse. It contains \(B\) and \(K\), so equals the original fraction field \(L\). Consequently \(B\) is an \(A\)-lattice in that same \(L\).
+
+For local \(A\) of dimension one, finiteness makes \(B\) integral and Noetherian of dimension one. Every maximal ideal of \(B\) contracts to \(\mathfrak m_A\). The algebra \(B/\mathfrak m_AB\) is finite-dimensional over \(\kappa(\mathfrak m_A)\), and hence has finitely many maximal ideals and finite residue fields. These are precisely the maximal ideals of \(B\); none is zero, since a field integral over \(A\) would force \(A\) to be a field. Thus each \(B_{\mathfrak m_i}\) has dimension one, as required for its original order function.
+
+Write the original \(y\in L^\times\) as \(b/b'\), with \(b,b'\in B\) nonzero. Both the order functions and the norm are multiplicative in the exact sense needed to subtract the two cases, so first take \(y=b\in B\setminus\{0\}\). The finite-length \(B\)-module \(B/yB\) has a composition series. Each simple factor is one of the residue fields \(\kappa(\mathfrak m_i)\), and as an \(A\)-module its length is the actual field degree \([\kappa(\mathfrak m_i):\kappa(\mathfrak m_A)]\). Localizing the composition series at \(\mathfrak m_i\) counts precisely the factors of that type. This proves the restriction-of-scalars formula, as in the source lemma-pushdown-module, authority 12602--12639: \[
+ \ell_A(B/yB)
+ =\sum_i[\kappa(\mathfrak m_i):\kappa(\mathfrak m_A)]
+          \ell_{B_{\mathfrak m_i}}((B/yB)_{\mathfrak m_i}).
+\] On the other hand the proved determinant identity for multiplication by the same \(y\) on the same \(L\) gives \[
+ \ell_A(B/yB)=d_A(B,yB)
+ =\operatorname{ord}_A(\det_K(L\xrightarrow{\,y\,}L))
+ =\operatorname{ord}_A(\operatorname{Nm}_{L/K}(y)).
+\] Subtracting the expressions for \(b\) and \(b'\) proves the source formula for all \(y\), preserving every residue degree. Separability and normality of \(B\) are not needed.
+
+For a finite injection of arbitrary one-dimensional Noetherian domains \(A\subset B\), the identical argument gives the global expression \[
+ o_A(\operatorname{Nm}_{L/K}(y))
+ =\sum_{\mathfrak q\in\operatorname{Max}(B)}
+ [\kappa(\mathfrak q):\kappa(\mathfrak q\cap A)]
+       \operatorname{ord}_{B_{\mathfrak q}}(y).
+\] For \(b/b'\), only the finitely many maximal ideals in the supports of \(B/bB\) and \(B/b'B\) contribute. Each contraction is maximal by integrality, and the restriction of the corresponding simple factor has the displayed length over \(A\). The global determinant identity supplies the left side. In particular, for an original \(a\in K^\times\), multiplication on \(L\) is the scalar \(a\) on \([L:K]\) dimensions, so \[
+ [L:K]\,o_A(a)=
+ \sum_{\mathfrak q}
+ [\kappa(\mathfrak q):\kappa(\mathfrak q\cap A)]
+       \operatorname{ord}_{B_{\mathfrak q}}(a).
+\] All weights and the actual extension degree remain in this equation.
+
+\subsubsection{Two exact boundaries: valuations and finite extensions}\label{algebra-proof-030-two-exact-boundaries-valuations-and-finite-extensions}
+
+First, the original order homomorphism need not be a valuation, even on elements of its local domain. Work with the following explicit original rings and elements over \(\mathbf Q\): \[
+ x=t^2-1,\quad y=t(t^2-1),\quad
+ R_0=\mathbf Q[x,y]\subset\mathbf Q[t],\qquad
+ R=(R_0)_{(x,y)}.
+\] The exact presentation is \[
+ R_0\cong\mathbf Q[X,Y]/(Y^2-X^2(1+X)),
+ \qquad X\mapsto x,\quad Y\mapsto y.
+\] To prove its kernel, divide by the monic polynomial in \(Y\). A remaining expression \(F(X)+YG(X)\) maps to \(F(t^2-1)+t(t^2-1)G(t^2-1)\). Its even and odd parts both vanish, by applying \(t\mapsto-t\) and adding or subtracting. Since \(\mathbf Q[X]\to\mathbf Q[t]\) is injective and \(t(t^2-1)\ne0\), both \(F\) and \(G\) vanish. Thus the presentation is exact. It makes \(R_0\) finite over \(\mathbf Q[X]\), and hence a one-dimensional Noetherian domain; \(R\) is its one-dimensional local domain at the stated maximal ideal. Its fraction field is the original \(\mathbf Q(t)\), since \(t=y/x\).
+
+The ring \(\mathbf Q[t]=R_0+R_0t\) is finite over \(R_0\), because \(t^2=1+x\). Localize it by \(R_0\setminus(x,y)\) to obtain \(B\). The fibre is \[
+ \mathbf Q[t]/(t^2-1)\cong\mathbf Q\times\mathbf Q,
+\] with points \(t=1,-1\). Hence \(B\) has exactly two maximal ideals and its localizations are the two original DVRs \(\mathbf Q[t]_{(t-1)}\) and \(\mathbf Q[t]_{(t+1)}\), both with residue field \(\mathbf Q\). The fraction-field extension has degree one, so its norm is the identity. The proved formula therefore gives, for the same \(z\in\mathbf Q(t)^\times\), \[
+ \operatorname{ord}_R(z)=v_{t-1}(z)+v_{t+1}(z).
+\]
+
+This failure of a single valuation can be seen entirely in \(R\), with every length explicit. Take \[
+ f=y-x,\qquad g=-y-x,\qquad f+g=-2x.
+\] Substitution in the exact presentation gives \[
+ R/(y-x)\cong\mathbf Q[X]_{(X)}/(X^3),\qquad
+ R/(y+x)\cong\mathbf Q[X]_{(X)}/(X^3),\qquad
+ R/(x)\cong\mathbf Q[Y]_{(Y)}/(Y^2).
+\] The filtrations by \(X\) and \(Y\) have respectively three, three and two simple quotients, all \(\mathbf Q\). Since \(-1,-2\) are units, the original orders are \[
+ \operatorname{ord}_R(f)=3,\qquad
+ \operatorname{ord}_R(g)=3,\qquad
+ \operatorname{ord}_R(f+g)=2<3.
+\] The valuation inequality fails. Equivalently \(t-1=f/x\) and \(-t-1=g/x\) both have order one, while their sum \(-2\) has order zero. These actual maps and numbers prevent extending the earlier DVR valuation arguments to every order homomorphism.
+
+Second, module finiteness in the source norm formula cannot be replaced by integrality plus Noetherianity. Reuse the exact characteristic-\(p\) example already proved in ALGEBRA\_KRULL\_AKIZUKI\_NOTES\_20260928.md, section ``The two original examples and their exact completions,'' and group ALGEBRA-RECON-701: \[
+ A=\bigcup_{[F:k^p]<\infty}F[[x]],\qquad
+ K=\operatorname{Frac}(A),\quad
+ f\in k[[x]]\setminus A,\quad L=K(f),\quad
+ V=L\cap k[[x]],
+\] where \(k^p\subset F\subset k\), \([k:k^p]=\infty\), and \(\operatorname{char}(k)=p>0\). That proof establishes that \(A,V\) are DVRs, \(V\) is integral but not finite over \(A\), both original uniformizers are \(x\), both residue fields are \(k\), and \([L:K]=p\). On the original \(K\)-space \(L\), multiplication by \(x\) is the scalar \(x\) on \(p\) dimensions, so \[
+ \operatorname{ord}_A(\operatorname{Nm}_{L/K}(x))
+ =\operatorname{ord}_A(x^p)=p,
+ \qquad
+ [k:k]\operatorname{ord}_V(x)=1.
+\] These unequal integers violate the proposed formula without finiteness. This propagates the earlier strict ramification example to the exact norm identity without changing the original field extension or its uniformizer.
+
+\subsubsection{Reading and propagation}\label{algebra-proof-030-reading-and-propagation}
+
+The bounded corpus queries ``lattice determinant length'' and ``Noetherian lattice determinant'' were inspected in both research and local-work layers. Each gives two research and two local routing records. The broad query is dominated by Euclidean-lattice material; the refined query still does not supply an adopted primary result. All eight new routing records remain unread and unadopted, including the two local TeX hits. There is no PDF fallback or claim of exhaustive literature coverage or novelty.
+
+The complete Orders of vanishing section and all eleven reports are reviewed. The domain-only finiteness citation is a separate conceptual source correction; its full proof and the source's omitted cocycle argument are editorial. The three retained canonical units are checked against their actual current text, including the valid redundant-parentheses repair. Three consequence groups record the general order/determinant and torsion formulas, exact-sequence and global norm compatibility, and the two explicit boundaries. The earlier rank-sensitive length equality and characteristic-\(p\) normalization example receive the precise implications proved above. Broader synthesis remains after core completion.
+
+Next source is Quasi-finite maps at 30093. Lookahead through 30140 is read but unadjudicated.

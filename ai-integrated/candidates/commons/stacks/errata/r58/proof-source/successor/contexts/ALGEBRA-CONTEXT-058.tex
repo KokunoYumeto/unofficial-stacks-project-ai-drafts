@@ -1,0 +1,40 @@
+\begin{example}
+\label{editorial-source-example-infinite-product-fields-jacobson}
+Let $A$ be an infinite set.
+For each $\alpha \in A$, let $k_\alpha$ be a field.
+We claim that $R = \prod_{\alpha\in A} k_\alpha$ is Jacobson.
+For the original element $f=(f_\alpha)_\alpha$, define
+$$
+e_\alpha=\begin{cases}1&f_\alpha\ne0,\\0&f_\alpha=0,\end{cases}
+\qquad
+u_\alpha=\begin{cases}f_\alpha&f_\alpha\ne0,\\1&f_\alpha=0.\end{cases}
+$$
+Then $e=(e_\alpha)$ is idempotent, $u=(u_\alpha)$ is a unit with
+inverse $(u_\alpha^{-1})$, and $f=ue$ coordinate by coordinate.
+Thus $D(f)=D(e)$ and the canonical maps identify
+$R_f\cong R_e\cong R/(1-e)$. The first pair of inverse maps comes
+from inverting $f=ue$ with $u$ already a unit. For the second, an
+invertible idempotent is $1$, so $R\to R_e$ kills $1-e$; conversely
+$e$ becomes $1$ in $R/(1-e)$. These universal maps are inverse
+because their composites fix the image of $R$ and the adjoined inverse.
+
+In fact every prime of this product ring is maximal. In the domain
+$R/\mathfrak p$, the image of an idempotent is either $0$ or $1$.
+For any $f\notin\mathfrak p$, its decomposition $f=ue$ forces the
+image of $e$ to be $1$, so the image of $f$ is the unit given by
+the image of $u$. Every nonzero element of $R/\mathfrak p$ is
+therefore a unit. All primes are maximal, and each radical ideal
+is the intersection of primes containing it, proving that $R$ is Jacobson.
+This also covers finite index sets and the empty product, whose
+spectrum is empty. More generally, the following original argument
+proves the Jacobson property whenever each canonical localization
+$R\to R_f$ is surjective.
+Namely, say $\mathfrak p \subset R$ is a prime ideal
+and $f \in R$, $f \not \in \mathfrak p$. We have to find
+a maximal ideal $\mathfrak m$ of $R$ such that
+$\mathfrak p \subset \mathfrak m$ and $f \not\in \mathfrak m$.
+Because $R_f$ is a quotient of $R$ we see that any maximal
+ideal of $R_f$ corresponds to a maximal ideal of $R$
+not containing $f$. Hence the result follows
+by choosing a maximal ideal of $R_f$ containing $\mathfrak p R_f$.
+\end{example}

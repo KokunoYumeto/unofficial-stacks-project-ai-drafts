@@ -1,0 +1,149 @@
+\begin{lemma}
+\label{editorial-source-lemma-separably-closed-connected}
+Let $k$ be a separably closed field.
+Let $R$, $S$ be $k$-algebras. If $\Spec(R)$ and
+$\Spec(S)$ are connected, then so is
+$\Spec(R \otimes_k S)$.
+\end{lemma}
+
+\begin{proof}
+The source convention for connectedness
+includes nonemptiness (Topology,
+Definition \ref{topology-definition-connected-components}).
+Thus the original $R$ and $S$ are
+nonzero, and Lemma
+\ref{algebra-lemma-characterize-spec-connected}
+applies to them. Their tensor is
+also nonzero, since extending $1$
+in each factor to a $k$-basis
+shows $1\otimes1\neq0$.
+
+Suppose this tensor had a nontrivial
+idempotent $e$. A finite tensor
+expression for this original $e$
+uses coefficients in finite type
+$k$-subalgebras $R_0\subseteq R$
+and $S_0\subseteq S$. These are
+nonzero and have no nontrivial
+idempotents, since their inclusions
+in the original factors preserve
+idempotents and reflect $0$ and $1$.
+They therefore have connected spectra.
+The map $R_0\otimes_k S_0\to R\otimes_k S$
+is injective by applying the two
+vector-space injections successively.
+It follows that the same $e$ is
+a nontrivial idempotent in this
+finite type tensor: its equation
+$e^2-e=0$ is reflected by that
+injection. Thus it suffices to
+prove connectedness for the actual
+finite type subalgebras, with
+the original $e$ and all its
+coefficients retained.
+
+For the finite type assertion,
+use $R,S$ for the two algebras
+under consideration. They are
+Noetherian and have finite
+nonzero numbers $n,m$ of
+irreducible components by Lemma
+\ref{editorial-source-lemma-Noetherian-irreducible-components}.
+We induct on $n+m$. For $n=m=1$,
+Lemma \ref{editorial-source-lemma-separably-closed-irreducible}
+gives irreducibility, hence
+connectedness, of the tensor.
+If $n=1$ and $m>1$, interchange
+the factors through the inverse
+maps $r\otimes s\mapsto s\otimes r$
+and $s\otimes r\mapsto r\otimes s$.
+It remains to handle $n>1$.
+
+Here are the component-selection
+details of Topology, Lemma
+\ref{topology-lemma-remove-irreducible-connected}.
+Form the finite graph whose
+vertices are the original
+irreducible components and whose
+edges record nonempty intersection.
+It is connected: otherwise the
+unions over two parts with no
+edges between them would be
+disjoint nonempty closed sets
+covering the spectrum, a separation.
+Choose a spanning tree, obtained
+by adding adjacent new vertices
+until every vertex is reached.
+A leaf exists by taking an
+endpoint of a longest simple
+path in this finite tree.
+Remove that leaf. The remaining
+tree is connected, so the union
+of its connected vertex spaces
+is connected: add them in tree
+order, each meeting the existing
+union. This proves the required
+choice without changing any
+irreducible component.
+
+Let $T=V(\mathfrak p)$ be the
+chosen component and let $T'$
+be the union of the other
+$n-1$ components. Take the
+original ideal $I$ to be the
+intersection of their minimal
+primes. Then $T'=V(I)$, by
+finite union of closed sets,
+and its irreducible components
+are those same $n-1$ components:
+their defining primes are
+pairwise incomparable. Both
+$T$ and $T'$ are connected
+and nonempty. They meet,
+since otherwise these two
+closed sets would separate
+the original connected spectrum.
+Their intersection is exactly
+$V(\mathfrak p+I)$, so
+$R/(\mathfrak p+I)\neq0$.
+
+Under the original spectrum map,
+the inverse images of $T$ and
+$T'$ are respectively
+$$
+\Spec((R/\mathfrak p)\otimes_k S),\qquad
+\Spec((R/I)\otimes_k S).
+$$
+For each of the ideals $J$
+involved, the quotient comparison
+sends $[r\otimes s]$ to
+$[r]\otimes s$ and has inverse
+$[r]\otimes s\mapsto[r\otimes s]$,
+identifying $(R\otimes_k S)/J(R\otimes_k S)$
+with $(R/J)\otimes_k S$.
+The induction parameters for
+these two inverse images are
+$1+m$ and $(n-1)+m$, both
+smaller than $n+m$; hence
+both are connected. Their
+intersection is the inverse
+image of $T\cap T'$, namely
+$$
+\Spec((R/(\mathfrak p+I))\otimes_k S).
+$$
+It is nonempty because both
+original tensor factors are
+nonzero vector spaces and
+their unit tensor is nonzero.
+The two inverse images cover
+the spectrum of $R\otimes_k S$.
+A union of two connected sets
+with nonempty intersection is
+connected: a separation would
+put each in one part, and
+the common point forces the
+same part for both.
+This finishes the induction
+and excludes the original
+nontrivial idempotent $e$.
+\end{proof}

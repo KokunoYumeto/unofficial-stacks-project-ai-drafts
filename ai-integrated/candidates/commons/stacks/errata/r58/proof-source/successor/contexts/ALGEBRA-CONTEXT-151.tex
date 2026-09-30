@@ -1,0 +1,34 @@
+\begin{lemma}
+\label{editorial-source-lemma-separably-closed-connected-implies-geometric}
+Let $k$ be a field.
+Let $R$ be a $k$-algebra.
+If $k$ is separably closed then $R$ is
+geometrically connected over $k$ if and only if the
+spectrum of $R$ is connected.
+\end{lemma}
+
+\begin{proof}
+Geometric connectedness implies
+connectedness by the identity field
+extension in Definition
+\ref{algebra-definition-geometrically-connected}.
+Conversely, if $\Spec(R)$ is
+connected, then $R\neq0$ under
+the source nonemptiness convention.
+For any finite separable extension
+$E/k$, separably closedness of $k$
+makes the given embedding $\iota:k\to E$
+an isomorphism: each element has
+a separable minimal polynomial,
+which must be linear over $k$.
+The inverse maps
+$R\otimes_k E\to R$, $r\otimes a\mapsto r\iota^{-1}(a)$,
+and $r\mapsto r\otimes1$ show
+that all the finite separable
+tests have connected spectrum.
+Lemma \ref{editorial-source-lemma-geometrically-connected}
+proves geometric connectedness.
+For $R=0$, neither side is
+connected, so the same equivalence
+holds without changing the definition.
+\end{proof}

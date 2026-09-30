@@ -1,0 +1,21 @@
+\begin{lemma}
+\label{lemma-open-going-down}
+Let $R \to S$ be a ring map. If the induced map
+$\varphi : \Spec(S) \to \Spec(R)$ is open, then
+$R \to S$ satisfies going down.
+\end{lemma}
+
+\begin{proof}
+Suppose that $\mathfrak p \subset \mathfrak p' \subset R$ and
+$\mathfrak q' \subset S$ lies over $\mathfrak p'$. As $\varphi$ is open,
+for every $g \in S$, $g \not \in \mathfrak q'$ we see that $\mathfrak p$
+is in the image of $D(g) \subset \Spec(S)$. In other words
+$S_g \otimes_R \kappa(\mathfrak p)$ is not zero. Since $S_{\mathfrak q'}$
+is the directed colimit of these $S_g$ this implies
+that $S_{\mathfrak q'} \otimes_R \kappa(\mathfrak p)$ is not
+zero, see
+Lemmas \ref{lemma-localization-colimit} and
+\ref{lemma-tensor-products-commute-with-limits}.
+Hence $\mathfrak p$ is in the image of
+$\Spec(S_{\mathfrak q'}) \to \Spec(R)$ as desired.
+\end{proof}

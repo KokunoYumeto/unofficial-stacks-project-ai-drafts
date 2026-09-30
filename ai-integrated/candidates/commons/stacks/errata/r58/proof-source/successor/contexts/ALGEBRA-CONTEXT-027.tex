@@ -1,0 +1,309 @@
+\begin{example}
+\label{editorial-source-example-affine-open-not-standard}
+Consider the ring
+$$
+R = \{ f \in \mathbf{Q}[z]\text{ with }f(0) = f(1) \}.
+$$
+Consider the map
+$$
+\varphi : \mathbf{Q}[A, B] \to R
+$$
+defined by $\varphi(A)=A(z)=z^2-z$ and
+$\varphi(B)=B(z)=z^3-z^2=zA(z)$.
+Put $F=A^3-B^2+AB$. The exact identity
+$$
+F(A(z),B(z))=A(z)^3-z^2A(z)^2+zA(z)^2
+=A(z)^2\bigl(A(z)-z^2+z\bigr)=0
+$$
+shows $(F)\subset\Ker(\varphi)$.
+Since the leading coefficient of $F$ as a polynomial in $B$ is $-1$,
+division in $\mathbf Q[A][B]$ writes any polynomial as
+$Q(A,B)F+C(A)+BD(A)$.
+Suppose its remainder evaluates to zero, so
+$C(A(z))+zA(z)D(A(z))=0$.
+Substituting $1-z$ for $z$ fixes $A(z)$ and sends $B(z)$ to
+$(1-z)A(z)$; thus also $C(A(z))+(1-z)A(z)D(A(z))=0$.
+Subtracting gives $(2z-1)A(z)D(A(z))=0$ in the domain $\mathbf Q[z]$.
+The first two factors are nonzero, hence $D(A(z))=0$.
+Substitution $\mathbf Q[A]\to\mathbf Q[z]$, $A\mapsto z^2-z$,
+is injective: a nonzero polynomial of degree $d$ has after substitution
+degree $2d$ with the same nonzero leading coefficient.
+Consequently $D=0$ and then $C=0$, proving $\Ker(\varphi)=(F)$.
+This ideal is prime because the image is a subring of $\mathbf Q[z]$.
+It follows that $F$ is irreducible: in a factorization $F=GH$, primality
+puts one factor, say $G$, in $(F)$, and writing $G=FK$ and cancelling
+the nonzero $F$ gives $KH=1$.
+The surjectivity proved next therefore gives the induced isomorphism
+$$
+\overline\varphi:\mathbf Q[A,B]/(A^3-B^2+AB)\longrightarrow R.
+$$
+
+\medskip\noindent
+To see that $\varphi$ is surjective, we must express any
+$f\in R$ as a $\mathbf{Q}$-coefficient polynomial in $A(z) = z^2-z$
+and $B(z) = z^3-z^2$. Note the relation $zA(z) = B(z)$. Let
+$a = f(0) = f(1)$. Then $z(z-1)$ must divide $f(z)-a$, so we can write
+$f(z) = z(z-1)g(z)+a = A(z)g(z)+a$.  If $\deg(g) < 2$, then
+$g(z) = c_1z + c_0$ and $f(z) = A(z)(c_1z + c_0)+a = c_1B(z)+c_0A(z)+a$, so we
+are done.  If $\deg(g)\geq 2$, then by the polynomial division
+algorithm, we can write $g(z) = A(z)h(z)+b_1z + b_0$
+($\deg(h)\leq\deg(g)-2$), so $f(z) = A(z)^2h(z)+b_1B(z)+b_0A(z)+a$.
+Applying division to $h(z)$ and iterating, we obtain an expression
+for $f(z)$ as a polynomial in $A(z)$ and $B(z)$; hence $\varphi$ is
+surjective.
+
+\medskip\noindent
+Now let $a \in \mathbf{Q}$, $a \neq 0, \frac{1}{2}, 1$ and
+consider
+$$
+R_a = \{ f \in \mathbf{Q}[z, \frac{1}{z-a}]\text{ with }f(0) = f(1)
+\}.
+$$
+This is a finitely generated $\mathbf Q$-algebra. Here is a proof
+with the stated generators. Put
+$$
+\delta=a^2-a,\qquad
+w=z+\frac{\delta}{z-a},\qquad
+D=\mathbf Q[z,1/(z-a)],\qquad
+E=\mathbf Q[z^2-z,z^3-z,w].
+$$
+The values of the first two generators at $0$ and $1$ are $0$;
+the values of $w$ are both $1-a$. Thus $E\subset R_a$.
+Since $\delta\ne0$ and $(z-a)^{-1}=(w-z)/\delta$, we have
+$D=E[z]$. The original relation $z^2=z+A(z)$, with $A(z)\in E$,
+shows $D=E+Ez$ as an $E$-module.
+Also $R_a=\mathbf Q+A(z)D$: if $f\in R_a$ and
+$\lambda=f(0)=f(1)$, write $f-\lambda=P(z)/(z-a)^N$.
+Its numerator vanishes at both $0$ and $1$, so $P(z)=z(z-1)H(z)$
+for a polynomial $H$, giving $f-\lambda\in A(z)D$.
+The reverse inclusion follows by evaluation.
+Finally $A(z)\in E$ and
+$zA(z)=z^3-z^2=(z^3-z)-(z^2-z)\in E$, hence
+$A(z)D\subset E+E$ and $R_a\subset E$.
+This proves $R_a=E$, with all three original generators retained.
+We have the following inclusions:
+$$
+R\subset R_a\subset\mathbf{Q}[z, \frac{1}{z-a}], \quad
+R\subset\mathbf{Q}[z]\subset\mathbf{Q}[z, \frac{1}{z-a}].
+$$
+Recall (Lemma \ref{editorial-source-lemma-spec-localization}) that for a ring $T$ and a
+multiplicative subset $S\subset T$, the ring map $T \to S^{-1}T$
+induces a map on spectra $\Spec(S^{-1}T) \to \Spec(T)$
+which is a homeomorphism onto the subset
+$$
+\{\mathfrak p \in \Spec(T) \mid S \cap \mathfrak p = \emptyset\}
+\subset \Spec(T).
+$$
+When $S = \{ 1, f, f^2, \ldots\}$ for some $f\in T$, this is
+the open set $D(f)\subset \Spec(T)$.  We now verify a corresponding
+property for the ring map $R \to R_a$: we will show that the map
+$\theta : \Spec(R_a) \to \Spec(R)$ induced by inclusion
+$R\subset R_a$ is a homeomorphism onto an open subset of
+$\Spec(R)$ by verifying that $\theta$ is an injective local
+homeomorphism.  We do so with respect to an open cover of
+$\Spec(R_a)$ by two distinguished opens, as we now describe.
+For any $r\in\mathbf{Q}$, let $\text{ev}_r : R \to \mathbf{Q}$ be the
+homomorphism given by evaluation at $r$.  Note that for $r = 0$ and
+$r = 1-a$, this can be extended to a homomorphism
+$\text{ev}_r' : R_a \to \mathbf{Q}$ (the latter because $\frac{1}{z-a}$
+is well-defined at $z = 1-a$, since $a\neq\frac{1}{2}$).  However,
+$\text{ev}_a$ does not extend to $R_a$.  Write
+$\mathfrak{m}_r = \Ker(\text{ev}_r)$. We have
+$$
+\mathfrak{m}_0 = (z^2-z, z^3-z),
+$$
+$$
+\mathfrak{m}_a = ((z-1 + a)(z-a), (z^2-1 + a)(z-a)), \text{ and}
+$$
+$$
+\mathfrak{m}_{1-a} = ((z-1 + a)(z-a), (z-1 + a)(z^2-a)).
+$$
+For every $r\in\mathbf Q$, the presentation already proved gives
+$\mathfrak m_r=(A-r(r-1),B-r^2(r-1))$.
+Indeed, evaluating $A$ and $B$ at those two constants gives a quotient
+equal to $\mathbf Q$, so this ideal is exactly the evaluation kernel.
+Write
+$$
+u=(z-1+a)(z-a)=A-\delta,\qquad
+v=(z^2+z+2a-2)(z-a)=B+(2-a)A-2\delta.
+$$
+The displayed generators above are verified by the identities
+$$
+\begin{aligned}
+z^3-z&=B+A,\\
+(z^2-1+a)(z-a)&=(B-a\delta)+(1-a)(A-\delta),\\
+(z-1+a)(z^2-a)&=(B-(1-a)\delta)+a(A-\delta).
+\end{aligned}
+$$
+Each formula is reversible by subtracting the indicated multiple
+of $A-\delta$, proving the asserted ideal equalities.
+In particular $(u,v)=(A-\delta,B-a\delta)=\mathfrak m_a$,
+since $v=(B-a\delta)+(2-a)(A-\delta)$.
+Note that
+$\mathfrak{m}_a$ is not in the image of $\theta$: we have
+$$
+(z^2 - z)^2(z - a)\left(\frac{a^2 - a}{z - a} + z\right) =
+(z^2 - z)^2(a^2 - a) + (z^2 - z)^2(z - a)z
+$$
+The left hand side is in $\mathfrak m_a R_a$ because
+$(z^2 - z)(z - a)$ is in $\mathfrak m_a$ and because
+$(z^2 - z)(\frac{a^2 - a}{z - a} + z)$ is in $R_a$. Similarly
+the element $(z^2 - z)^2(z - a)z$ is in $\mathfrak m_a R_a$
+because $(z^2 - z)$ is in $R_a$ and $(z^2 - z)(z - a)$ is in $\mathfrak m_a$.
+As $a \not \in \{0, 1\}$ we conclude that
+$(z^2 - z)^2 \in \mathfrak m_a R_a$. Hence
+no ideal $I$ of $R_a$ can satisfy $I \cap R = \mathfrak m_a$, as such
+an $I$ would have to contain $(z^2 - z)^2$, which is in $R$ but not in
+$\mathfrak m_a$. The distinguished open set
+$D((z-1 + a)(z-a))\subset\Spec(R)$ is equal to the complement of
+the closed set $\{\mathfrak{m}_a, \mathfrak{m}_{1-a}\}$.
+Then check that $R_{(z-1 + a)(z-a)} = (R_a)_{(z-1 + a)(z-a)}$; calling
+this localized ring $R'$, then, it follows that the map $R \to R'$
+factors as $R \to R_a \to R'$.  By Lemma
+\ref{editorial-source-lemma-spec-localization}, then, these maps express
+$\Spec(R') \subset \Spec(R_a)$ and
+$\Spec(R') \subset \Spec(R)$ as open subsets; hence
+$\theta : \Spec(R_a) \to \Spec(R)$, when restricted to
+$D((z-1 + a)(z-a))$, is a homeomorphism onto an open subset.
+Similarly, $\theta$ restricted to
+$D((z^2 + z + 2a-2)(z-a)) \subset \Spec(R_a)$ is a homeomorphism
+onto the open subset $D((z^2 + z + 2a-2)(z-a)) \subset \Spec(R)$.
+In $\Spec(R)$, the complement of this distinguished open consists
+of $\mathfrak m_a$ and the one or two closed points associated to the
+irreducible factors of $z^2+z+2a-2$; a repeated factor gives only one point.
+In $\Spec(R_a)$ the point $\mathfrak m_a$ is absent.
+The verification below identifies these zero sets as well.
+Furthermore, the ideal in $R_a$ generated by the
+elements $(z^2 + z + 2a-2)(z-a)$ and $(z-1 + a)(z-a)$ is all of $R_a$, so
+these two distinguished open sets cover $\Spec(R_a)$. Hence in
+order to show that $\theta$ is a homeomorphism onto
+$\Spec(R)-\{\mathfrak{m}_a\}$, it suffices to show
+that these one or two points can never equal $\mathfrak{m}_{1-a}$.
+And this is indeed the case, since $1-a$ is a root of $z^2 + z + 2a-2$
+if and only if $a = 0$ or $a = 1$, both of which do not occur.
+
+\medskip\noindent
+Here are the exact localization maps and the cover certificate.
+As identities in the original rational-function field,
+$$
+uw=B+(a-1)\delta\in R,
+\qquad
+vw=zv+\delta(z^2+z+2a-2)\in R.
+$$
+The second numerator is polynomial and has value
+$2\delta(a-1)$ at both $z=0$ and $z=1$, proving the stated membership.
+Thus $w=(B+(a-1)\delta)/u$ belongs to $R_u$, and
+$w=(zv+\delta(z^2+z+2a-2))/v$ belongs to $R_v$.
+Since $R_a$ is generated by $A$, $B+A$ and $w$, inclusion induces
+isomorphisms
+$R_u\to(R_a)_u$ and $R_v\to(R_a)_v$.
+Their inverse maps send the original $w$ to the respective fractions
+just displayed, send each element of $R$ to itself, and send
+$u^{-1}$ or $v^{-1}$ to that same inverse in the rational-function field.
+These formulas prove both composites are identities; on the overlap
+they agree as maps into $\mathbf Q(z)$.
+The full unit-ideal identity is
+$$
+u(w-a+2)-v=\delta(2a-1).
+$$
+Its right hand side is a nonzero rational constant under the present
+hypotheses. Division by this displayed constant gives
+$1=((w-a+2)/(\delta(2a-1)))u-(1/(\delta(2a-1)))v$ in $R_a$.
+Hence $D(u)$ and $D(v)$ cover $\Spec(R_a)$.
+Their images are respectively $D_R(u)$ and $D_R(v)$, and those images
+have union $\Spec(R)\setminus V(u,v)=\Spec(R)\setminus\{\mathfrak m_a\}$.
+Contraction of prime ideals gives
+$\theta^{-1}(D_R(u))=D_{R_a}(u)$ and the analogous equality for $v$.
+If two source points have the same image, choose one of these target
+opens containing it; both points belong to its inverse image and
+are equal by that chart isomorphism. Thus $\theta$ is injective.
+The two chart maps also prove surjectivity onto the stated union and
+openness there, establishing the asserted homeomorphism.
+
+\medskip\noindent
+For the zero-set descriptions, the presentation of $R$ shows that the
+only prime containing $A$ is $\mathfrak m_0$: modulo $A$ the relation
+gives $B^2=0$. The values of $u$ and $v$ at this point are respectively
+$-\delta$ and $-2\delta$, both nonzero.
+Moreover $R_A=\mathbf Q[z,1/A(z)]$ inside $\mathbf Q(z)$, since
+$z=B/A$ and the converse inclusion preserves $A(z)^{-1}$.
+Thus all zeros under consideration can be read in this polynomial
+localization. The two roots of $u$ are $a$ and $1-a$, distinct and
+different from $0,1$. The other factors of $v$ come from
+$q(z)=z^2+z+2a-2$, with $q(0)=2a-2\ne0$ and $q(1)=2a\ne0$.
+Also $q(a)=a^2+3a-2\ne0$ for rational $a$: equality would give
+$(2a+3)^2=17$, whereas $17$ is not a square of a rational number.
+Consequently the irreducible factors of $q$ give one or two distinct
+closed points in addition to $\mathfrak m_a$ in the target spectrum.
+Finally $q(1-a)=a^2-a=\delta\ne0$, so none is $\mathfrak m_{1-a}$.
+Deleting $\mathfrak m_a$ through the proved chart correspondence
+gives exactly the claimed source zero set.
+
+\medskip\noindent
+Despite this homeomorphism which mimics the behavior of a
+localization at an element of $R$, while
+$\mathbf{Q}[z, \frac{1}{z-a}]$ is the localization of $\mathbf{Q}[z]$
+at the element $z-a$, the ring $R_a$ is {\it not} a
+localization of $R$: Any proper localization $S^{-1}R$ results in more
+units than the original ring $R$.  The units of $R$ are
+$\mathbf{Q}^\times$, the units of $\mathbf{Q}$.  In fact, it is
+easy to see that the units of $R_a$ are $\mathbf{Q}^*$.
+Namely, the units of $\mathbf{Q}[z, \frac{1}{z - a}]$ are
+$c (z - a)^n$ for $c \in \mathbf{Q}^*$ and $n \in \mathbf{Z}$
+and such a unit belongs to $R_a$ if and only if
+$c(-a)^n=c(1-a)^n$. Its inverse then has equal values too, so
+this is exactly the condition for it to be a unit of $R_a$.
+For $n\ne0$ the equality implies
+$\bigl((-a)/(1-a)\bigr)^n=1$.
+A rational number with a nonzero integer power equal to $1$ is $1$ or $-1$:
+writing it as a quotient of coprime integers shows that their absolute
+values must agree. The value $1$ would give $-a=1-a$, which is impossible;
+the value $-1$ gives $a=1/2$, which is excluded here.
+Thus $n=0$ and $R_a^\times=\mathbf Q^\times=R^\times$.
+The ambient description of units follows as well from polynomial
+factorization: if $P(z)/(z-a)^r$ has inverse $Q(z)/(z-a)^s$, then
+$P(z)Q(z)=(z-a)^{r+s}$, so $P(z)=c(z-a)^j$ and the original unit
+is $c(z-a)^{j-r}$, with the coefficient and exponent retained.
+Moreover $R_a\ne R$: the element
+$w=z+(a^2-a)/(z-a)$ has a pole at $z=a$, since its numerator
+$z(z-a)+(a^2-a)$ has nonzero value $a^2-a$ there, whereas all
+elements of $R$ are polynomials.
+If the inclusion $R\to R_a$ were a localization at a multiplicative
+subset $S$, every $s\in S$ would become a unit of $R_a$ and hence
+would already be a nonzero rational constant, a unit of $R$.
+Then $S^{-1}R=R$ under the original map, contradicting $w\notin R$.
+Therefore there is no $R$-algebra isomorphism $S^{-1}R\cong R_a$
+compatible with the specified inclusion.
+
+\medskip\noindent
+We used the fact that $a\neq 0, 1$ to ensure that
+$\frac{1}{z-a}$ makes sense at $z = 0, 1$.  We used the fact that
+$a\neq 1/2$ in a few places: (1) In order to be able to talk about
+the kernel of $\text{ev}_{1-a}$ on $R_a$, which ensures that
+$\mathfrak{m}_{1-a}$ is a point of $R_a$ (i.e., that $R_a$ is
+missing just one point of $R$). (2) At the end in order to conclude
+that $(z-a)^n$ can belong to $R_a$ only for $n = 0$; indeed, if
+$a = 1/2$, then it belongs to $R_a$ whenever $n$ is even. Hence
+there are indeed more units in the ring defined by the same formula
+at $a=1/2$. In this exceptional case we can decide the localization
+question exactly. Set $h=(z-1/2)^2$. Its values at $0$ and $1$ are
+both $1/4$, so $h\in R$ and $h^{-1}\in R_{1/2}$.
+The original inclusion induces
+$$
+R_h\longrightarrow
+R_{1/2}=\{f\in\mathbf Q[z,1/(z-1/2)]\mid f(0)=f(1)\}.
+$$
+It is injective because both rings are subrings of $\mathbf Q(z)$.
+For surjectivity, write any $f\in R_{1/2}$ as
+$P(z)/(z-1/2)^N$ and choose $m\geq0$ with $2m\geq N$.
+Then $h^mf=P(z)(z-1/2)^{2m-N}$ is a polynomial, and its values at
+$0$ and $1$ are equal because $h(0)=h(1)=1/4$ and $f(0)=f(1)$.
+Thus $h^mf\in R$ and $f=(h^mf)/h^m\in R_h$.
+This proves $R_{1/2}=R_{(z-1/2)^2}$ via the specified map.
+The same endpoint calculation gives its exact unit group
+$R_{1/2}^{\times}=\{c(z-1/2)^{2j}\mid c\in\mathbf Q^{\times},\ j\in\mathbf Z\}$,
+including negative exponents. Its spectrum is the standard open
+$D_R((z-1/2)^2)=\Spec(R)\setminus\{\mathfrak m_{1/2}\}$:
+its only zero lies in $D_R(A)$ and corresponds there to the factor
+$z-1/2$, while its value at $\mathfrak m_0$ is $1/4\ne0$.
+\end{example}

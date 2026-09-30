@@ -1,0 +1,30 @@
+\begin{lemma}
+\label{lemma-pid-jacobson}
+The ring $\mathbf{Z}$ is a Jacobson ring.
+More generally, let $R$ be a ring such that
+\begin{enumerate}
+\item $R$ is a domain,
+\item $R$ is Noetherian,
+\item any nonzero prime ideal is a maximal ideal, and
+\item $R$ has infinitely many maximal ideals.
+\end{enumerate}
+Then $R$ is a Jacobson ring.
+\end{lemma}
+
+\begin{proof}
+Let $R$ satisfy (1), (2), (3) and (4). The statement
+means that $(0) = \bigcap_{\mathfrak m \subset R} \mathfrak m$.
+Since $R$ has infinitely many maximal ideals it suffices to
+show that any nonzero $x \in R$ is contained in at most
+finitely many maximal ideals, in other words that $V(x)$ is finite.
+By Lemma \ref{lemma-spec-closed}
+we see that $V(x)$ is homeomorphic to $\Spec(R/xR)$.
+By assumption (3) every prime of $R/xR$ is minimal and hence
+corresponds to an irreducible component of $\Spec(R/xR)$
+(Lemma \ref{lemma-irreducible}).
+As $R/xR$ is Noetherian, the topological space $\Spec(R/xR)$
+is Noetherian (Lemma \ref{lemma-Noetherian-topology})
+and has finitely many irreducible components
+(Topology, Lemma \ref{topology-lemma-Noetherian}).
+Thus $V(x)$ is finite as desired.
+\end{proof}

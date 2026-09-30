@@ -1,0 +1,147 @@
+\subsection{Generic freeness, exact presentations and the original good locus}\label{generic-freeness-exact-presentations-and-the-original-good-locus}
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:28448--28876; SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The entire current interval equals this authority. Seven received reports are read in full. The next section starts at 28877; lookahead ends at 28895 and is unadjudicated.
+
+This is separate editorial evidence. Both translation branches retain the original structure and arguments. The six proposed minimal operations concern five reported wording/type loci and the separately detected empty-spectrum dimension convention. The expanded arguments and two consequences below are not replacement translation text. No novelty claim is made.
+
+\subsubsection{The Noetherian argument and the empty generic fibre}\label{the-noetherian-argument-and-the-empty-generic-fibre}
+
+Source: 28457--28524. Write \(K=\operatorname{Frac}(R)\), \(S_K=K\otimes_R S\). If \(S_K=0\), the equality \(1/1=0\) in the localization supplies \(0\ne f\in R\) with \(f1_S=0\). Then \(S_f=0\) and \(M_f=0\), which is free of rank zero. This also treats \(S=0\), taking \(f=1\). The dimension of this spectrum is \(-\infty\), not \(-1\): Topology, definition-Krull, authority topology.tex:1391--1419, explicitly says this at 1410. Algebra repeats the convention at 43890--43895. Hence the proposed source correction at 28494 is precisely \(d=-1\) to \(d=-\infty\); the start of the induction remains the same.
+
+For nonempty generic fibre put \(d=\dim S_K\), a nonnegative integer. Since \(R\) is Noetherian and \(S\) is of finite type, \(S\) is Noetherian and the finite \(S\)-module \(M\) has the source's finite prime filtration. Its factors are \(S/\mathfrak q\). A finite product of the nonzero localizing elements for these factors remains nonzero in \(R\). Localization preserves the filtration. For an exact sequence with free quotient, choose a lift of each quotient basis vector; this defines a module section and splits the sequence. Thus freeness of all factors yields freeness of \(M\), with no finite-rank assumption.
+
+Each domain factor with nonzero kernel from \(R\) is killed by a nonzero element of that kernel. For a remaining factor, retain its name \(S\) and the injection \(R\subset S\). The original normalization-over-a-domain argument (28125--28161, verified in group 676) gives, after one localization in \(R\), the original finite extension \[
+ A=R[y_1,\ldots,y_d]\ \subset\ S.
+\] Here the \(y_i\) are algebraically independent. Localizing \(S\) by \(A\setminus\{0\}\) gives a finite-dimensional domain over \(\operatorname{Frac}(A)\), hence a field: multiplication by a nonzero element is an injective endomorphism of a finite-dimensional vector space, therefore surjective. This field is \(\operatorname{Frac}(S)\). Choose its basis \(z_1,\ldots,z_r\) from the spanning images of elements of \(S\). The original map \[
+ A^{\oplus r}\longrightarrow S,\qquad (b_j)\longmapsto\sum_j b_jz_j
+\] is injective by that basis independence. Its cokernel \(N\) is finite over \(A\) and becomes zero over \(\operatorname{Frac}(A)\). For a finite generating set of \(N\), choose a nonzero annihilator for each generator after localization; their product is a nonzero \(g\in A\) annihilating \(N\). No common annihilator for an arbitrary infinite family is presumed.
+
+The image of \(g\) in \(K[y_1,\ldots,y_d]\) is nonzero. If it is a unit, the quotient has empty spectrum. Otherwise every prime containing it is nonzero, so every chain above such a prime extends strictly downward by \((0)\); the polynomial ring has dimension \(d\), and its quotient by \(g\) has dimension at most \(d-1\). For \(d=0\) the quotient is necessarily zero. The lower-dimensional induction applies to \(N\) as a module over \(A/(g)\). After the resulting localization \(N_f\) is free over \(R_f\). The original \(A_f^{\oplus r}\) is also free over \(R_f\), on the monomials in the specified \(y_i\) and the \(r\) basis positions. The displayed exact sequence therefore splits over \(R_f\) and \(S_f\) is free. If successive localizations use a fraction \(b/a^v\), their common base is \(R_{ab}\), with \(ab\ne0\); this retains the actual numerator and denominator.
+
+Report OCC-00557 concerns the two fused clauses at 28522. Replacing ``also we conclude'' by ``also, we conclude'' gives the required clause boundary with a minimal edit. It does not change this argument.
+
+\subsubsection{Finite coefficient models and the original relation kernel}\label{finite-coefficient-models-and-the-original-relation-kernel}
+
+Source: 28526--28625. Retain the presentation \[
+ S=R[x_1,\ldots,x_n]/(g_1,\ldots,g_m),\qquad
+ M=S^{\oplus t}/\sum_i S n_i,\qquad
+ n_i=(\overline g_{i1},\ldots,\overline g_{it}).
+\] Let \(R_0\) be the subring generated over the prime subring by every original coefficient in these finitely many polynomials. It is the image of a polynomial ring over \(\mathbf Z\) with finitely many variables, hence Noetherian, and is a domain because \(R_0\subset R\). Define \(S_0,M_0\) by the same polynomials and the same matrices, now over \(R_0\).
+
+The coefficient map gives \(R\otimes_{R_0}S_0\to S\), \(r\otimes \overline p\mapsto r\overline p\). Its inverse sends each coefficient \(r\) to \(r\otimes1\) and each original variable to \(1\otimes\overline{x_i}\); every \(g_i\) vanishes in both directions. These maps are inverse on the algebra generators. On modules, tensor the actual presentation of \(M_0\). Right exactness gives the presentation with the same relation rows over \(S\), so the map \(r\otimes\overline v\mapsto r\overline v\) identifies it with \(M\). No flatness of \(R\) over \(R_0\) is used. A nonzero \(f\in R_0\) from the preceding argument stays nonzero in \(R\); a basis of \((M_0)_f\) tensors to a basis of \(M_f\).
+
+For the arbitrary finite-type case first take \(P=R[x_1,\ldots,x_n]\) and a finite \(P\)-module \(M\), with its actual surjection \(P^t\to M\) and kernel \(N\). Localization at the nonzero elements of \(R\) is exact: for example, a localized vector with zero image has a nonzero multiplier sending its numerator into the original kernel. Thus \(N_K\) is the kernel of \(P_K^t\to M_K\). The ring \(P_K\) is Noetherian, so choose finitely many generators of \(N_K\), each a fraction with numerator in \(N\). The finitely many original numerators \(n_1,\ldots,n_r\) generate \(N_K\) after localization. Put \[
+ M'=P^t/\sum_{i=1}^r Pn_i.
+\] The map \(M'\to M\) is surjective and becomes an isomorphism over \(K\). The finite coefficient argument gives \(M'_f\) free over \(R_f\). A free module over the domain \(R_f\) injects into its tensor product with \(K\): every vector has finite support and each coefficient injects. Consequently every element of the kernel of \(M'_f\to M_f\) is zero, since it is already zero over \(K\). This proves the isomorphism without assuming that \(N\) was finitely generated before localization. It proves both freeness and finite presentation after localization.
+
+For \(P\to S\) surjective, \(S\) and \(M\) are finite \(P\)-modules. Apply this result to both and take the product of the two nonzero base elements. Write \(J=\ker(P_f\to S_f)\). Finite presentation of the cyclic \(P_f\)-module \(S_f\) implies that this particular kernel \(J\) is finitely generated (the finite-presentation kernel property proved in algebra.tex:390--475). Thus \(S_f\) is a finitely presented \(R_f\)-algebra. A finite presentation of \(M_f\) over \(P_f\), tensored along \(P_f\to S_f\), remains a presentation of \(M_f\) over \(S_f\): the multiplication map \(S_f\otimes_{P_f}M_f\to M_f\) has inverse \(m\mapsto1\otimes m\), since \(J\) acts by zero. This proves the last source inference.
+
+OCC-00558 inserts ``by'' at 28545. OCC-00559 changes the same original line 28593 to ``Denote by \(K\) the fraction field of \(R\). Set'', followed by the existing displayed definitions. No relation or map changes.
+
+\subsubsection{The good locus and its localization maps}\label{the-good-locus-and-its-localization-maps}
+
+Source: 28627--28723. Keep exactly the source definition \(U(R\to S,M)\): it is the union of \(D(f)\) on which \(S_f\) is a finitely presented \(R_f\)-algebra, \(M_f\) is a finitely presented \(S_f\)-module, and both are free over \(R_f\). Freeness may have infinite rank. This definition is stronger than the statement that each stalk is free.
+
+If \(0\to M_1\to M_2\to M_3\to0\) is exact and a point has good neighborhoods \(D(f_1)\) and \(D(f_3)\) for the outer terms, localize at the actual product \(f_1f_3\). The two outer modules remain free, and the sequence splits as a sequence of base modules by lifting a basis of \(M_3\). Finite presentation of the middle \(S\)-module follows from algebra.tex:390--475; explicitly lift generators of \(M_3\), add generators of \(M_1\), and lift their finitely many relations. The relations for \(M_1\), together with the lifted relations for \(M_3\), generate the middle relation module: subtract the latter to make the projection zero, then use the former. This proves the source inclusion of good loci.
+
+For the localization equality, retain \(g=a/f^n\in R_f\) and \(h=af\). The comparison \(R_h\to(R_f)_g\) fixes \(R\); \(a=g f^n\) and \(f\) are invertible on the right. Its inverse sends \(1/f\) to \(a/h\) and \(1/g\) to \(f^{n+1}/h\) in \(R_h\). Indeed \(1/a=f/h\), so the latter is precisely \(f^n/a\), also for \(n=0\). These formulas prove both composites on all original generators and inverses. The same formulas give the ring maps for \(S\) and the module maps on fractions of \(M\). Hence \[
+ U(R_f\to S_f,M_f)=D(f)\cap U(R\to S,M).
+\] Conversely a witness \(g\in R\) is restricted by replacing it with \(fg\); freeness and both presentations persist under this localization. Zero localizations yield empty opens and zero modules, so cause no exception.
+
+For the dense-open reduction, let \(W\) be a nonempty open of \(\operatorname{Spec}R\). It meets the dense covered open \(U\). Some \(W\cap D(f_i)\) is nonempty, and density of the good locus within \(D(f_i)\) makes it meet that locus. The preceding equality then makes \(W\) meet the original good locus. This proves density directly for arbitrary spectra and arbitrary covering index sets.
+
+\subsubsection{Reduced bases, coefficients and finite presentation across the substitution}\label{reduced-bases-coefficients-and-finite-presentation-across-the-substitution}
+
+Source: 28725--28870. A finite \(P=R[x_1,\ldots,x_n]\)-module with generators \(m_1,\ldots,m_t\) has the filtration \(M_i=\sum_{j\le i}Pm_j\). Its \(i\)-th factor is \(P/J_i\), where \(J_i\) is the annihilator of the image of \(m_i\) in that quotient. In the source notation \(P=S\); thus the three reports OCC-12286, OCC-00560 and OCC-01408 identify one type error, corrected once: \(R/J_i\) at 28771 becomes \(S/J_i\). No contraction of \(J_i\) to \(R\) gives the same module in general.
+
+A finite intersection of dense opens is dense: intersect a nonempty open successively with each dense open; at every finite step the intersection remains nonempty and open. The extension result reduces the proof to \(P/J\).
+
+Let \(I\subset R\) be the ideal generated by all coefficients of elements of \(J\). The set of coefficients itself is already an ideal. Scalar multiples are coefficients after multiplying the polynomial by that scalar. For addition, if \(a,b\) are the coefficients at multi-indices \(A,B\) of \(p,q\in J\), choose a coordinatewise upper bound \(L\) of \(A,B\). The coefficient at \(L\) of \[
+ x^{L-A}p+x^{L-B}q\in J
+\] is exactly \(a+b\); no other monomial of either polynomial contributes at \(L\). Negatives and zero are included. When \(n=0\), this is simply addition in the ideal \(J\subset R\). Thus \(1\in I\) is an actual coefficient of an actual element of \(J\).
+
+Put \(U_1=D(I)\) and \(U_2=\operatorname{Spec}R\setminus\overline{U_1}\). Their union is dense: every nonempty open either meets \(U_1\), or is disjoint from its closure and lies in \(U_2\). On a basic open within \(U_1\), the localized coefficient ideal is the unit ideal because it lies in no prime. On a basic open within \(U_2\), the localized coefficient ideal lies in every prime, and hence is zero because \(R_f\) remains reduced. For completeness, if \((a/f^r)^v=0\), some \(f^s a^v=0\); then \((f^s a)^v=0\), so \(f^s a=0\) and \(a/f^r=0\). In the latter case \(J_f=0\) and \(M_f=P_f\).
+
+In the unit-ideal case keep an actual polynomial \(g=\sum_{K\in E}a_Kx^K\in J\) with a unit coefficient. Take \(E\) to be its finite nonzero support, and let \(m\) count the nonunit coefficients. If \(m>0\), select a nonunit coefficient \(a_K\) and perform the same dense-open division using \(D(a_K)\) and the complement of its closure. On each basic open of the first part \(a_K\) becomes a unit; on each basic open of the second it becomes zero, by reducedness. Original unit coefficients stay units unless the localization is the zero ring, whose spectrum is empty. Other nonunit coefficients can become units or zero, but no original unit becomes a nonunit in a nonzero localization. Delete only coefficients proved zero. Therefore \(m\) strictly decreases on every nonempty branch.
+
+For \(m=0\), a constant support makes \(g\) a unit and \(M=0\). This treats \(n=0\). Otherwise use exactly the source substitution \[
+ x_i=y_i+y_n^{e_i}\quad(i<n),\qquad x_n=y_n,
+\] with inverse \(y_i=x_i-x_n^{e_i}\), \(y_n=x_n\). Group 672 supplies explicit weights from the original support ranges, \(e_n=1\), \(e_i=\prod_{j>i}(A_j+1)\), where \(A_j=\max_E k_j-\min_E k_j\). Their strict separation proof applies to this same support. The entire polynomial is \[
+ G=\sum_{K\in E}a_K
+ \sum_{0\le b_i\le k_i,\ i<n}
+ \left(\prod_{i<n}\binom{k_i}{b_i}y_i^{b_i}\right)
+ y_n^{\,k_n+\sum_{i<n}e_i(k_i-b_i)}.
+\] The unique largest exponent has its original coefficient \(a\), which is a unit. Write \(G=aT^d+\sum_{j<d}c_j(y)T^j\), \(T=y_n\), \(d\ge1\), and \(A=R[y_1,\ldots,y_{n-1}]\). The original quotient is a module over \[
+ B=A[T]/(a^{-1}G).
+\] Monic division gives the precise free \(A\)-basis \(1,T,\ldots,T^{d-1}\): subtract the leading term repeatedly, retaining all coefficients \(a^{-1}c_j\); a nonzero multiple of the monic polynomial cannot have degree below \(d\), so remainders are unique. Since \(G\in J\), the same quotient \(M\) is finite over \(A\).
+
+We now justify the source equality of good loci at 28833, rather than presuming finite presentation transfers automatically. For any finite \(B\)-module \(L\), \[
+ L\text{ is finitely presented over }A[T]
+ \quad\Longleftrightarrow\quad
+ L\text{ is finitely presented over }B
+ \quad\Longleftrightarrow\quad
+ L\text{ is finitely presented over }A.
+\] The first forward implication tensors an \(A[T]\)-presentation with \(B\), using that \(G\) kills \(L\). The reverse lifts the finitely many \(B\)-relation vectors and adds the relation \(a^{-1}G\) in every generator position. For the second forward implication, replace the finite free \(B\)-modules in a presentation by their displayed finite free \(A\)-bases, giving an \(A\)-presentation. Conversely choose a finite \(A\)-presentation with generators \(v_j\) and relation vectors \(r_\ell\). Write \(Tv_j=\sum_i b_{ij}v_i\), \(b_{ij}\in A\). Over \(B\), the finitely many relations \(r_\ell\) and \(T e_j-\sum_i b_{ij}e_i\) present \(L\): repeated use of the action relations reduces every coefficient polynomial to an \(A\)-linear vector, which vanishes exactly when it is a combination of the \(r_\ell\). This proves injectivity of the presented map as well as surjectivity.
+
+These arguments persist after every localization in \(R\). Both polynomial algebras over \(R_f\) are free and finitely presented. The condition that \(M_f\) be free over \(R_f\) is literally identical on the two sides. Thus their good loci are equal, and induction on \(n\) proves density.
+
+Finally for \(P\to S=P/J\), at each base localization finite presentation of \(S\) as an \(R\)-algebra is equivalent to finite generation of this presentation ideal \(J\), hence to finite presentation of \(S\) as a \(P\)-module. One direction of this standard presentation independence follows by lifting a second finite set of algebra generators to polynomials in the original generators, and the original generators to polynomials in the second set. Adjoin both sets and the finitely many equations giving those polynomial expressions. Eliminating either set by substitution identifies the resulting quotient with the original algebra. The finitely many defining relations in the second presentation, together with these expression relations, therefore generate the kernel in the first. The reverse direction uses the presentation \(P/J\) itself.
+
+If \(J\) is finitely generated, a finite \(S\)-presentation for \(M\) becomes a finite \(P\)-presentation by lifting its relations and adding \(J\) times each module generator; the converse tensors with \(S\). The freeness conditions in the source then show exactly \[
+ U(R\to S,M)=U(R\to P,S)\cap U(R\to P,M).
+\] This proves the final displayed equality and its density consequence. OCC-00561 repairs the clause order at 28868--28869; it does not add a different topological hypothesis.
+
+\subsubsection{Finite complexes and arbitrary base change after one localization}\label{finite-complexes-and-arbitrary-base-change-after-one-localization}
+
+Consequence of the source generic-freeness argument, with its full finite coefficient construction retained. Let \(R\) be a domain, \(S\) a finite-type \(R\)-algebra and \(C_\bullet\) a complex with only finitely many nonzero terms, each a finite \(S\)-module. There exists \(0\ne f\in R\) such that \(S_f\) is finitely presented over \(R_f\), and every term, cycle, boundary and homology module of \(C_{\bullet,f}\) is free over \(R_f\) and finitely presented over \(S_f\). For every \(R_f\)-algebra \(T\), the natural maps identify cycles and boundaries after tensoring and give \[
+ T\otimes_{R_f}H_i(C_{\bullet,f})
+ \ \xrightarrow{\ \cong\ }\
+ H_i(T\otimes_{R_f}C_{\bullet,f})
+\] in every degree. No flatness of \(T\) is required and no finite rank over \(R_f\) is asserted.
+
+Here is a proof without assuming that the original kernels over \(S\) are finite. First apply the source theorem to \(S\) and each of the finitely many terms, and take the product \(a\ne0\) of the resulting elements. Work temporarily over \(R_a\); \(S_a\) is finitely presented and each \(C_{i,a}\) has a finite \(S_a\)-presentation. Choose matrices \(A_i:S_a^{p_i}\to S_a^{q_i}\) with cokernel \(C_{i,a}\), and matrices \(D_i:S_a^{q_i}\to S_a^{q_{i-1}}\) lifting the actual differentials. Because these are well-defined differentials, there are finite matrices \(E_i,F_i\) with \[
+ D_i A_i=A_{i-1}E_i,\qquad
+ D_{i-1}D_i=A_{i-2}F_i.
+\] Choose polynomial representatives for every matrix entry and for a finite algebra presentation of \(S_a\). Each of the finitely many entrywise equalities above has a witness as a finite sum of polynomial multiples of the defining algebra relations. Include every coefficient of these witness polynomials as well as every original presentation and matrix coefficient in a finitely generated subring \(R_0\subset R_a\).
+
+The identical algebra presentation over \(R_0\) defines a Noetherian algebra \(S_0\). The same matrices and the retained witness equations define an actual complex \(C_{\bullet,0}\) over \(S_0\), not merely a sequence of unrelated maps. Its base change to \(R_a\) is the original complex \(C_{\bullet,a}\), with the specified maps. Set \[
+ Z_{i,0}=\ker d_{i,0},\quad B_{i,0}=\operatorname{im}d_{i+1,0},
+ \quad H_{i,0}=Z_{i,0}/B_{i,0}.
+\] These modules are finite, and hence finitely presented, over the Noetherian ring \(S_0\). Apply Noetherian generic freeness to \(S_0\), all \(C_{i,0}\), all \(Z_{i,0},B_{i,0},H_{i,0}\), and take the product \(b\ne0\) of their finitely many witnesses in \(R_0\). All those localized modules are free over \((R_0)_b\). In particular both exact sequences \[
+ 0\to Z_{i,0,b}\to C_{i,0,b}\to B_{i-1,0,b}\to0,\qquad
+ 0\to B_{i,0,b}\to Z_{i,0,b}\to H_{i,0,b}\to0
+\] split as sequences of \((R_0)_b\)-modules, by lifting bases of their free quotients.
+
+Write the actual image of \(b\) in \(R_a\) as \(c/a^v\), \(c\in R\), \(c\ne0\), and take \(f=ac\). The original inclusion \(R_0\subset R_a\) sends \(b\) to a unit in \(R_f\). Tensor the two split sequences with \(R_f\). They remain exact even though this coefficient extension need not be flat. The differential factors through the displayed quotient onto \(B_{i-1}\) and its inclusion into \(C_{i-1}\), so the resulting cycle, boundary and homology modules are precisely those of the original \(C_{\bullet,f}\). They are free over \(R_f\), because a free basis tensors to a free basis, and finitely presented over \(S_f\), because their finite \(S_{0,b}\)-presentations tensor to presentations over \(S_f\).
+
+The same two sequences now split over \(R_f\). Tensoring them with an arbitrary \(T\) proves the claimed identifications of kernels and images. The displayed homology map sends \(t\otimes[z]\) to \([t\otimes z]\); exactness proves it is well-defined and bijective. These identifications are the natural ones and do not depend on which sections were used to prove exactness. Zero terms and zero cycles are free on the empty basis. A finite list of maps can be treated by applying this proof to their two-term complexes and taking a common product of the witnesses; thus kernels, images and cokernels for every map in that list have the same base-change property.
+
+\subsubsection{A dense good locus with no dense principal open}\label{a-dense-good-locus-with-no-dense-principal-open}
+
+This exact example records the boundary of the source's reduced-base conclusion and of replacing neighborhood freeness by stalkwise freeness. Fix a field \(k\), let \[
+ R=\prod_{n\ge1}k,\qquad I=\bigoplus_{n\ge1} k e_n\subset R,\qquad
+ S=R,\quad M=R/I,
+\] where \(e_n\) is the original coordinate idempotent. The ideal \(I\) consists of the sequences with finite support. The ring \(R\) is reduced, \(S\) is a finite-type \(R\)-algebra and \(M\) is cyclic.
+
+For \(f=(f_n)\in R\), put \(A=\{n:f_n\ne0\}\) and define \(g_n=f_n^{-1}\) on \(A\), \(g_n=0\) otherwise. Then \(fg=e_A\), the coordinate indicator of \(A\). Projection gives an isomorphism \[
+ R_f\longrightarrow R_A:=\prod_{n\in A}k,\qquad
+ r/f^j\longmapsto (r_n f_n^{-j})_{n\in A}.
+\] Its inverse extends a sequence by zero outside \(A\), and sends that extension to its class in \(R_f\). The two composites agree because \(e_A=1\) in \(R_f\) and \(f\) is invertible on \(A\). This includes \(A=\varnothing\), with the zero ring as the empty product. The image of \(I_f\) is exactly the finite-support ideal \(I_A\): localization cannot add coordinates to a support, and every finite-support vector is the projection of one in \(I\). Thus \(M_f=R_A/I_A\).
+
+If \(A\) is finite, \(I_A=R_A\), so \(M_f=0\), free and finitely presented. If \(A\) is infinite, \(I_A\) is a nonzero proper ideal: it contains each \(e_n\) for \(n\in A\), while the unit has infinite support. It is not finitely generated, since a finite collection of its generators has support in one finite subset, and multiplication by arbitrary sequences cannot enlarge that union. Hence its cyclic quotient is not finitely presented. It is not free either: its annihilator is the nonzero ideal \(I_A\), whereas a nonzero free module over a nonzero ring is faithful. We have proved the exact equality \[
+ U(R\to R,R/I)=\bigcup_{n\ge1}D(e_n).
+\]
+
+Each \(D(e_n)\) is a singleton, identified through \(R_{e_n}=k\) with the coordinate prime. The union is dense: any nonempty basic open \(D(f)\) has at least one nonzero coordinate \(f_n\) and contains that coordinate prime. But no dense principal open is contained in it. Indeed, if \(f\) vanishes at any coordinate \(n\), the nonempty open \(D(e_n)\) is disjoint from \(D(f)\), so \(D(f)\) is not dense. If \(f\) has no zero coordinate, its coordinatewise inverse belongs to \(R\); it is a unit and \(D(f)=\operatorname{Spec}R\). This spectrum is not the displayed union: the nonzero ring \(R/I\) has a maximal ideal, whose preimage contains every \(e_n\). Thus its prime lies outside every coordinate open. Equivalently a principal witness for the good locus has finite support, which always misses another coordinate.
+
+Nevertheless every stalk of \(M\) is free. To see this without a classification by ultrafilters, first note that \(R_{\mathfrak p}\) is a field for any prime \(\mathfrak p\). For \(r\in\mathfrak p\), the coordinate indicator \(e\) of its support satisfies \(e=rg\) for the coordinatewise partial inverse \(g\). Thus \(e\in\mathfrak p\), and \(1-e\notin\mathfrak p\) annihilates \(r\); hence \(r/1=0\) in the localization. The local ring therefore has zero maximal ideal. If some \(e_n\notin\mathfrak p\), it becomes a unit and \(I_{\mathfrak p}=R_{\mathfrak p}\), so \(M_{\mathfrak p}=0\). If all \(e_n\in\mathfrak p\), each finite-support element of \(I\) becomes zero and \(I_{\mathfrak p}=0\), so \(M_{\mathfrak p}=R_{\mathfrak p}\). This proves stalkwise freeness in all cases and the strict difference from the good-neighborhood conclusion.
+
+Reducedness cannot be omitted altogether: for \(R=k[\epsilon]/(\epsilon^2)\), \(S=R\), \(M=R/(\epsilon)\), the spectrum has one point. Every nonempty basic open inverts a unit, leaving \(M\) unchanged. Its nonzero annihilator \((\epsilon)\) precludes freeness. The good locus is empty, hence is not dense in this nonempty spectrum.
+
+\subsubsection{Reading and propagation record}\label{reading-and-propagation-record}
+
+The two new indexed queries return eight routing records across both corpus layers. All remain unread and unadopted. Their contents include PDF-primary entries and unrelated programme records; no PDF fallback is used. The one query carrying quotation marks still reports literal\_terms\_and behavior and is not described as an exact-phrase search.
+
+Group 672's explicit weights are applied to the original reduced-base substitution, with every binomial coefficient and the leading unit retained. Group 676's generic-domain proof supplies the precise normalization input and preserves its annihilator factors. The original presentation and filtration dependencies at algebra.tex:390--498 were reread. Topology:1391--1419 and Algebra:43890--43895 fix the empty-spectrum convention; no conclusion about the later Algebra section is made beyond these lines.
+
+The finite-complex consequence and the exact product-ring good locus belong in source-linked editorial supplements and the claim ledger. They do not recast the source theorem or its translation. Further combined-results synthesis follows completion of the core correction work.

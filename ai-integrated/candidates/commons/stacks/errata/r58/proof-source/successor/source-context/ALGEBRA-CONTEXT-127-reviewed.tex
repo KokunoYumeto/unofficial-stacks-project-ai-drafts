@@ -1,0 +1,133 @@
+\begin{lemma}
+\label{lemma-powers}
+Let $\varphi : R \to S$ be a ring map. If
+\begin{enumerate}
+\item for any $x \in S$ there exists $n > 0$ such that
+$x^n$ is in the image of $\varphi$, and
+\item $\Ker(\varphi)$ is locally nilpotent,
+\end{enumerate}
+then $\varphi$ induces a homeomorphism on spectra and induces residue
+field extensions satisfying the equivalent conditions of
+Lemma \ref{lemma-powers-field}.
+\end{lemma}
+
+\begin{proof}
+Write $I=\ker\varphi$. First use only
+condition (1). Every original $x\in S$
+has an equation $x^n-\varphi(y)=0$
+for some $n>0$ and $y\in R$. This is
+a monic equation over the actual image
+$R/I$, so $R/I\to S$ is an integral
+injection. Lemma
+\ref{lemma-integral-overring-surjective}
+therefore makes $\Spec(S)\to\Spec(R/I)$
+surjective. Under the original quotient
+map, $\Spec(R/I)$ identifies with
+the closed subset $V(I)\subseteq\Spec(R)$.
+
+To prove injectivity, suppose primes
+$\mathfrak q,\mathfrak q'$ have the
+same contraction $\mathfrak p$ and
+$x\in\mathfrak q\setminus\mathfrak q'$.
+Choose the original equation
+$x^n=\varphi(y)$ from (1). It gives
+$y\in\mathfrak p$, and therefore
+$x^n\in\mathfrak q'$, contradicting
+primality and $x\notin\mathfrak q'$.
+Interchanging the two primes proves
+equality. For this same equation,
+the resulting bijection sends $D(x)$
+exactly onto $D(y)\cap V(I)$: a prime
+contains $x$ if and only if its
+contraction contains $y$. Hence it
+is open for the subspace topology
+on $V(I)$, and is a homeomorphism
+onto that closed subset, since the
+original map on spectra is continuous.
+Condition (2) says precisely that
+$I\subseteq\operatorname{Nil}(R)$,
+so $V(I)=\Spec(R)$ and gives the
+homeomorphism in the statement.
+
+Retain corresponding original primes
+$\mathfrak q$ and $\mathfrak p$.
+The map $R/\mathfrak p\to S/\mathfrak q$
+is injective and thus extends to the
+specified residue-field embedding.
+Let $x$ in the receiving residue
+field be represented by $y/z$ with
+$y,z\in S$, $z\notin\mathfrak q$.
+Choose original $a,b\in R$ and
+positive $n,m$ with
+$y^n=\varphi(a)$, $z^m=\varphi(b)$.
+Then $b\notin\mathfrak p$, because
+its image is $z^m\notin\mathfrak q$.
+The full identity in $S_{\mathfrak q}$ is
+$$
+(y/z)^{nm}
+=\frac{(y^n)^m}{(z^m)^n}
+=\frac{\varphi(a)^m}{\varphi(b)^n}
+=\varphi_{\mathfrak p,\mathfrak q}(a^m/b^n).
+$$
+Passing to residue fields proves
+that the original $x^{nm}$ belongs
+to the image of $\kappa(\mathfrak p)$.
+Lemma \ref{lemma-powers-field} now
+applies to these exact residue fields.
+This part did not require (2).
+
+Thus (1) alone gives a homeomorphism
+onto $V(\ker\varphi)$ and the same
+residue-field conclusion; under (1),
+(2) is equivalent to surjectivity
+on all primes of $R$. No universal
+homeomorphism follows from these two
+conditions alone. For an exact
+counterexample take the original
+inclusion
+$$
+R=\mathbf F_2\longrightarrow
+S=\mathbf F_2[\alpha]/(\alpha^2+\alpha+1).
+$$
+The polynomial has no root in
+$\mathbf F_2$, so $S$ is a field
+with elements $0,1,\alpha,\alpha^2$,
+and $\alpha^3=1$. Hence every
+element of $S$ has cube in $R$,
+and the kernel is zero. After the
+original base change $R\to S$,
+the tensor ring has the comparison
+$$
+S\otimes_R S\simeq S[T]/(T^2+T+1),
+\qquad1\otimes\alpha\longleftrightarrow T,
+$$
+fixing $S$ through the first factor.
+The bases $1,\alpha$ and $1,T$
+prove this map and its inverse.
+Retain the two distinct roots
+$\alpha,\alpha^2$ and the full
+factorization
+$T^2+T+1=(T-\alpha)(T-\alpha^2)$.
+Evaluation gives
+$$
+S[T]/(T^2+T+1)\longrightarrow S\times S,
+\qquad[H]\longmapsto(H(\alpha),H(\alpha^2)).
+$$
+Its inverse sends $(a,b)$ to
+$$
+\left[
+a\frac{T-\alpha^2}{\alpha-\alpha^2}
++b\frac{T-\alpha}{\alpha^2-\alpha}
+\right].
+$$
+The original denominators are nonzero
+in $S$; evaluating verifies both
+coordinates, and a polynomial zero
+at both roots is divisible by the
+original product of the two distinct
+linear factors. These are inverse
+ring maps. The base-changed spectrum
+therefore has two points mapping
+to the single point of $\Spec(S)$,
+and cannot be a homeomorphism.
+\end{proof}

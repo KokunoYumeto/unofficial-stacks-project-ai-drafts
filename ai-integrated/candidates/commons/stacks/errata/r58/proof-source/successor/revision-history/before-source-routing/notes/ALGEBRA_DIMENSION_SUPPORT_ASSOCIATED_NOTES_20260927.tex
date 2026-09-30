@@ -1,0 +1,102 @@
+\subsection{Editorial evidence for Algebra 14711--15541}\label{editorial-evidence-for-algebra-1471115541}
+
+Authority: original \texttt{algebra.tex}, commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, SHA-256 \texttt{FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3}. The complete interval and all seventeen reports whose first loci fall there were read. Minimal proposed corrections are recorded separately from these supporting arguments and extensions. The original source's editorial reminders remain identifiable. These are standard source-review consequences, with no novelty claim.
+
+\subsubsection{Parameter quotients and the infinite-open argument}\label{parameter-quotients-and-the-infinite-open-argument}
+
+Source: \texttt{lemma-elements-generate-ideal-definition}, lines 14712--14723, and \texttt{lemma-Noetherian-local-domain-dim-2-infinite-opens}, lines 14738--14765. These statements are retained. For the first, let \(J_i=(x_1,\ldots,x_i)\). Iterating the one-equation inequality on the original quotients gives \(\dim(R/J_i)\geq d-i\). The remaining original parameters generate an ideal of definition in \(R/J_i\); the already proved dimension criterion gives \(\dim(R/J_i)\leq d-i\). Thus equality holds, also after any permutation of the original parameter list. All these quotients are nonzero because every parameter lies in the original maximal ideal. For \(d=0\) the asserted list of equalities is empty.
+
+In the second proof, any nonempty open subset of the spectrum of a domain contains its generic point \((0)\). If such an open is finite, removing the finitely many closures of its other points leaves the generic point as an open singleton. A standard open \(D(x)\) inside that singleton has \(x\ne0\). It has \(x\in\mathfrak m\), since a unit would give the entire spectrum and the ring has dimension at least two. The domain has only the minimal prime \((0)\), so the original one-equation result gives \(\dim(R/xR)=d-1\). Lifting a parameter list and permuting it with \(y_2\) first and \(x\) second gives the two dimensions \(d-1\) and \(d-2\) printed in the source. In particular \(y_2\ne0\). If every prime containing \(y_2\) also contained \(x\), then \(V(y_2)=V(y_2,x)\), contradicting those dimensions. Hence the constructed prime contains nonzero \(y_2\) and avoids \(x\), contradicting \(D(x)=\{(0)\}\). This verifies the later Jacobson proof's required input without replacing either source proof.
+
+\subsubsection{The p-adic example}\label{the-p-adic-example}
+
+Source: lines 14767--14770; report \texttt{OCC-00388}. The intended one-dimensional example is the ring of \(p\)-adic \textbf{integers} \(\mathbf Z_p\). The \(p\)-adic numbers \(\mathbf Q_p\) form a field and have dimension zero.
+
+For the stated correction, retain the usual \(p\)-adic digit description: a nonzero \(z\in\mathbf Z_p\) has a least index \(n\) with nonzero digit and factors as \(p^n u\), where \(u\) has nonzero residue modulo \(p\). Such a \(u\) is a unit: choose an integer \(c\) with \(uc=1+pw\); completeness makes \(c\sum_{j\geq0}(-pw)^j\) an inverse. Products of nonzero elements have the sum of their least digit indices, so the ring is a domain. In a nonzero ideal choose an element of least index \(n\); its unit factor shows \(p^n\) belongs to that ideal, and every other element is divisible by \(p^n\). Thus every nonzero ideal is \((p^n)\). Its only prime ideals are \((0)\) and \((p)\): for \(n>1\), the product \(p\cdot p^{n-1}\) lies in \((p^n)\) while neither factor does. Ascending chains of these ideals stabilize because their nonnegative exponents decrease, so \(\mathbf Z_p\) is Noetherian and has dimension one. Its fraction field \(\mathbf Q_p\) has only the prime \((0)\). The proposed word change therefore repairs the example without changing the surrounding dimension theorem.
+
+\subsubsection{Source editorial reminders}\label{source-editorial-reminders}
+
+Source: the final list item at line 14803 and the placement note at line 15519; reports \texttt{OCC-00389}, \texttt{OCC-12304}, \texttt{OCC-00396}, and \texttt{OCC-12310}.
+
+The proof of \texttt{lemma-finite-type-algebra-finite-nr-primes} establishes exactly its seven mathematical conditions. ``Add more here'' is the source's editorial reminder, not an eighth proposition. The proposed treatment retains those words as a labelled, unnumbered source reminder in the list. It neither invents another theorem nor attributes an editorial deletion to the original author. The nonzero algebra hypothesis already excludes the zero-ring dimension exception found in the preceding batch; it remains unchanged.
+
+The later sentence ``This lemma should probably be put somewhere else'' is also a source editorial note. Keep it in its original location with a visible label identifying that status. The reports do not establish an intended new location, and their suggestions do not require a source reorganization. In particular the reference to ``this lemma'' is not used as authority to move the preceding or following lemma. These choices apply the user's translation-fidelity instruction while making both notes distinguishable from mathematical assertions.
+
+\subsubsection{The nonmaximal prime and strict localization}\label{the-nonmaximal-prime-and-strict-localization}
+
+Source: \texttt{lemma-noetherian-dim-1-Jacobson}, lines 14841--14888; reports \texttt{OCC-00390} and \texttt{OCC-00391}. The point \(\mathfrak p\in\operatorname{Spec}(R)\) supplied by the topological argument is a nonmaximal \textbf{prime} ideal. Insert the missing word.
+
+Write \(A=R/\mathfrak p\), a nonzero domain. The locally closed singleton of its generic point is open: the closure of that point is all of \(\operatorname{Spec}(A)\), and any closed subset occurring in a representation of the singleton as a locally closed set must therefore be the whole space. For a prime \(\mathfrak q\supsetneq\mathfrak p\), let \(\mathfrak r=\mathfrak q/\mathfrak p\). This is nonzero. The original localization \(A_{\mathfrak r}\) is a local domain with a nonzero maximal ideal: a nonzero element of \(\mathfrak r\) remains nonzero in the domain localization and belongs to that maximal ideal. Thus its dimension is at least one. The open generic singleton pulls back to an open generic singleton in its spectrum. The infinite-open lemma excludes dimension at least two, so the dimension is exactly one.
+
+At \(\mathfrak q=\mathfrak p\), by contrast, the localization is the original fraction field \(\operatorname{Frac}(A)\), whose dimension is zero. Both quantified occurrences in the proof must therefore specify strict containment. Since \(\mathfrak p\) is nonmaximal, maximal ideals above it exist and are strictly larger. Every localization of \(A\) at a maximal ideal has dimension one, so the supremum-of-heights formula gives \(\dim A=1\). The source hypothesis gives infinitely many primes of \(A\), all but its zero prime maximal.
+
+For completeness of the receiving Jacobson step, in a one-dimensional Noetherian domain every prime containing a nonzero \(a\) is maximal and minimal over \((a)\); there are finitely many of these by Noetherian finiteness of minimal primes. Infinitely many maximal ideals therefore cannot all contain any one nonzero \(a\), so their intersection is zero. The other primes are maximal and are their own intersections of maximal ideals. The ring is Jacobson. Equivalently its closed points are dense. Its open generic singleton, whose point is nonmaximal, cannot meet those closed points, a contradiction. The original conclusion and each original quotient and localization are retained.
+
+\subsubsection{Filtration wording and the original multiplicities}\label{filtration-wording-and-the-original-multiplicities}
+
+Source: lines 14949--15051; reports \texttt{OCC-12306}, \texttt{OCC-00392}, \texttt{OCC-12305}, and \texttt{OCC-01381}. The two reports about ``counter example'' share one copyedit. The two reports about the repeated ``Let \ldots{} as in'' opening share the two needed insertions of ``be''. The prime filtration and its original primes are unchanged.
+
+The surrounding multiplicity argument is consistent with these corrections. Exact localization gives the filtration quotients \((R/\mathfrak p_i)_{\mathfrak p}=R_{\mathfrak p}/\mathfrak p_iR_{\mathfrak p}\). If \(\mathfrak p_i\not\subset\mathfrak p\), an element of \(\mathfrak p_i\setminus\mathfrak p\) acts as both zero and a unit, so this quotient is zero. If \(\mathfrak p\) is minimal in the support and \(\mathfrak p_i\subset\mathfrak p\), then \(\mathfrak p_i=\mathfrak p\), since all filtration primes are in that support. The quotient is then the original residue field \(\kappa(\mathfrak p)\), of length one over \(R_{\mathfrak p}\). Adding these lengths proves exactly the printed multiplicity formula. No extra residue-field factor occurs here: both the simple factors and their lengths use the same original local ring.
+
+\subsubsection{Support and a finitely generated annihilating ideal}\label{support-and-a-finitely-generated-annihilating-ideal}
+
+Source: \texttt{lemma-Noetherian-power-ideal-kills-module}, lines 14996--15014. Keep the source statement unchanged. Its Noetherian-ring hypothesis can be weakened in a precise editorial extension: \textbf{for any commutative ring \(R\), any finite \(R\)-module \(M\), and any finitely generated ideal \(I\), one has \(\operatorname{Supp}(M)\subset V(I)\) if and only if \(I^NM=0\) for some \(N\geq0\)}.
+
+First, the original finite module has \(\operatorname{Supp}(M)=V(\operatorname{Ann}_R M)\) over any ring. If \(M_{\mathfrak p}=0\), choose a finite generating list \(m_1,\ldots,m_t\) and, for each generator, an original \(s_j\notin\mathfrak p\) with \(s_jm_j=0\). The full product \(s=\prod_{j=1}^t s_j\) lies outside \(\mathfrak p\) and annihilates all of \(M\). Conversely, an annihilator outside \(\mathfrak p\) becomes a unit and kills the localization. For the empty generating list \(M=0\), the empty product is 1 and gives the same statement.
+
+Let \(I=(a_1,\ldots,a_r)\). The support containment is therefore equivalent, by the original radical/intersection-of-primes identity, to \(a_j\in\sqrt{\operatorname{Ann}_R M}\) for every \(j\). Choose positive integers \(n_j\) such that \(a_j^{n_j}M=0\), and retain the explicit integer
+
+\[
+N=1+\sum_{j=1}^r(n_j-1).
+\]
+
+Every monomial generator \(a_1^{e_1}\cdots a_r^{e_r}\) of \(I^N\) has \(\sum e_j=N\), so at least one \(e_j\geq n_j\); otherwise the sum would be at most \(N-1\). It annihilates \(M\). Thus every term of every finite \(R\)-linear combination generating \(I^N\) annihilates \(M\), proving \(I^NM=0\). If the ideal has an empty generating list, it is zero and the formula gives \(N=1\), which works. Conversely, if \(I^NM=0\), at any prime outside \(V(I)\) an element of \(I\) becomes a unit and its \(N\)-th power kills the localization. If \(N=0\), then \(M=0\) directly. This proves both directions, retaining all original annihilators, generators, and factors.
+
+The finite-generation condition on the ideal cannot be dropped from this general assertion. Use exactly the algebra already appearing in the source at lines 15347--15349:
+
+\[
+A=k[x_1,x_2,\ldots]/(x_i^2:i\geq1),\qquad
+J=(x_1,x_2,\ldots),\qquad M=A.
+\]
+
+The squarefree monomials are a \(k\)-basis: the monomial ideal being divided out has as basis precisely the monomials divisible by some \(x_i^2\). Every element of \(J\) involves finitely many variables and has zero constant term, so a power greater than their number is zero. Therefore \(J\) is nil, and \(A/J=k\) shows that \(J\) is the unique prime. Hence \(\operatorname{Supp}_A(A)=V(J)\). Yet \(x_1\cdots x_N\ne0\) belongs to \(J^N\) for every \(N\geq1\). Thus no power of \(J\) kills the finite, cyclic module \(A\). The ideal is not finitely generated: a finite collection of its elements involves only finitely many variables, and the homomorphism setting those variables to zero sends that generated ideal to zero but leaves any fresh variable nonzero.
+
+This same basis calculation verifies the source's associated-prime counterexample. For any nonzero \(a\in A\), choose a variable absent from its finite monomial support. Multiplication by that variable sends the distinct basis monomials of \(a\) to distinct nonzero squarefree monomials, so it does not annihilate \(a\). Thus \(\operatorname{Ann}_A(a)\ne J\); as \(J\) is the only prime, \(\operatorname{Ass}_A(A)=\varnothing\). Over the original coefficient field \(k\), every nonzero vector has annihilator zero, so \(\operatorname{Ass}_k(A)=\{(0)\}\). The original example and the new finiteness boundary use the very same algebra; neither is replaced by a different presentation.
+
+\subsubsection{Annihilator spelling in the exact sequence}\label{annihilator-spelling-in-the-exact-sequence}
+
+Source: \texttt{lemma-ass}, lines 15130--15150; reports \texttt{OCC-12307} and \texttt{OCC-00393}. Replace ``annilator'' by ``annihilator'' once. The original dichotomy is valid for arbitrary modules and rings. If \(\operatorname{Ann}_R(m)=\mathfrak p\) and \(g\notin\mathfrak p\), then \(a(gm)=0\) is equivalent to \(ag\in\mathfrak p\), hence to \(a\in\mathfrak p\). If no such \(g\) sends \(m\) into the submodule, every annihilator of its quotient image lies in \(\mathfrak p\), while every element of \(\mathfrak p\) already kills \(m\). Thus the image has exactly that annihilator. The source maps and hypotheses are unchanged.
+
+\subsubsection{One-equation module wording}\label{one-equation-module-wording}
+
+Source: lines 15296--15326; reports \texttt{OCC-12308} and \texttt{OCC-00394}. Both name the same ``Let \(R\) is'' error. FAC integration has already repaired it to ``Let \(R\) be'': the current lemma's history retains the earlier reading, and \texttt{fac/qa.json} records the correction under \texttt{algebra-lemma-one-equation-module}, kind \texttt{ungrammatical\_ring\_hypothesis}. The original finite-module and local-ring hypotheses and complete proof are unchanged. This is an already-composed correction, not a new edit. It lies outside the existing correction-only model, so its minimal original/replacement pair is retained separately in the review for the reusable fixes-only export at release. No second cumulative application is needed.
+
+The support equality used in its proof is exact: outside \(V(f)\), the scalar \(f\) is invertible and the quotient localizes to zero. At \(\mathfrak p\) in the original support with \(f\in\mathfrak p\), the finite nonzero module \(M_{\mathfrak p}\) over the local ring \(R_{\mathfrak p}\) has nonzero quotient modulo \(f\), by Nakayama. Therefore \(\operatorname{Supp}(M/fM)=\operatorname{Supp}(M)\cap V(f)\). The original finite prime filtration expresses this closed support as a finite union of \(V(\mathfrak p_i)\). Applying the already proved original quotient dimension inequalities to each \(R/\mathfrak p_i\) gives the two inequalities, with the same prime-chain interpretation for equality when \(f\) avoids the minimal support primes. For \(M=0\), both supports are empty and both dimensions are \(-\infty\), with the extended-integer convention \(-\infty+1=-\infty\). No extra nonzero-module assumption is inserted.
+
+\subsubsection{Prime type and the two localization maps}\label{prime-type-and-the-two-localization-maps}
+
+Source: \texttt{lemma-localize-ass}, lines 15422--15448; reports \texttt{OCC-12309} and \texttt{OCC-00395}. The object being quantified is \(\mathfrak p\in\operatorname{Spec}(R)\), not a ring element. Both reports are resolved by one operation.
+
+For the original multiplicative subset \(S\subset R\) disjoint from \(\mathfrak p\), the exact comparison used by the proof is
+
+\[
+\alpha:M_{\mathfrak p}\longrightarrow(S^{-1}M)_{S^{-1}\mathfrak p},
+\quad m/r\longmapsto(m/1)/(r/1),
+\] \[
+\beta:(S^{-1}M)_{S^{-1}\mathfrak p}\longrightarrow M_{\mathfrak p},
+\quad (m/s)/(r/t)\longmapsto tm/(sr),
+\]
+
+where \(s,t\in S\) and \(r\notin\mathfrak p\). The latter condition follows from the original prime contraction correspondence, since \(r/t\notin S^{-1}\mathfrak p\). The maps are induced by the original module map to \(M_{\mathfrak p}\): each \(s\in S\) becomes a unit, and then each \(r/t\notin S^{-1}\mathfrak p\) becomes a unit. This proves their existence and well-definedness by the two localization universal properties. Conversely the map to the iterated localization inverts every \(r\notin\mathfrak p\), so it induces \(\alpha\). The composite \(\beta\alpha\) fixes every fraction \(m/r\). For the other composite the full expression \((tm/1)/(sr/1)\) equals \((m/s)/(r/t)\), by multiplying numerator and denominator using the original units \(s/1,t/1\); equivalently both maps agree on \(M\) and its two required inversions. Thus both composites are identities. The Noetherian condition still ensures finite generation of the prime used in the preceding associated-localization converse; the grammar correction does not remove it.
+
+\subsubsection{Nonzerodivisors in arbitrary ideals}\label{nonzerodivisors-in-arbitrary-ideals}
+
+Source: \texttt{lemma-ideal-nonzerodivisor}, lines 15470--15493. The original lemma remains a translation of its stated local result. The same proof establishes a separate strengthening: \textbf{for every Noetherian ring \(R\), every finite \(R\)-module \(M\), and every ideal \(I\subset R\), the ideal contains a nonzerodivisor on \(M\) if and only if it is contained in none of the associated primes of \(M\)}. Locality and the condition \(I\subset\mathfrak m\) are unnecessary for this conclusion.
+
+If \(x\in I\) acts injectively, it lies in no annihilator prime of a nonzero element, so \(I\) is contained in none of them. Conversely, the original Noetherian finite-module result gives a finite set \(\operatorname{Ass}_R(M)\). If \(I\) is contained in none, finite prime avoidance produces \(x\in I\) outside their union. The already proved zero-divisor characterization then makes multiplication by this exact \(x\) injective. These arguments use no maximal ideal or local ring. If \(M=0\), the associated set is empty and \(x=0\in I\) acts injectively on the zero module. If \(I=R\), the element 1 provides the required injection. Thus the previously excluded boundaries are retained and verified.
+
+The proof also applies directly to the receiving lemma at lines 15521--15538. In fact \textbf{every Noetherian ring with infinitely many maximal ideals contains a nonzero nonunit nonzerodivisor}. Its associated set as a module over itself is finite, so choose a maximal ideal \(\mathfrak m\) absent from that set. It is contained in none of those proper prime ideals: containment would imply equality by maximality. The strengthened criterion gives an injective multiplier \(f\in\mathfrak m\). The ring is nonzero because it has maximal ideals, so injectivity makes \(f\ne0\); membership in \(\mathfrak m\) makes it a nonunit. The source's positive-dimensional finite-type algebra has infinitely many maximal ideals by its preceding equivalence, so this gives precisely its intended receiving application. The source's field, finite-type, and dimension hypotheses are kept in its translation; the broader result stays here as editorial material.
+
+\subsubsection{Reading and propagation limits}\label{reading-and-propagation-limits}
+
+The source proofs concerning finite filtrations, associated primes, minimal support primes, scalar restriction, associated-prime localization, and detection by associated localizations were read through line 15538. The named corrections do not newly certify every omitted proof as a separate reconstruction. Support equalities in the original finite-module statements retain their hypotheses; no arbitrary-module dimension assertion is inferred from them. The earlier zero-ring correction was checked against the explicitly nonzero finite-type-algebra lemma and the positive-dimensional receiving lemma; both retain their original statements. The symbolic-power section through 15565 is lookahead, ending before the first lemma's proof, and is unadjudicated. Broader combined-results synthesis and the short mathematical paper remain after the core work.

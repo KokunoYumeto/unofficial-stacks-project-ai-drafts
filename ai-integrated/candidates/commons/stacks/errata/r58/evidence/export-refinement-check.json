@@ -1,0 +1,127 @@
+{
+  "schema": "stacks-algebra-export-refinement-check/v1",
+  "created_at_utc": "2026-09-29T21:11:46.741897+00:00",
+  "checks": [
+    {
+      "name": "actual_281_prior_plus_689_new_operations",
+      "result": "PASS",
+      "effective_authority_spans": 969,
+      "correction_only_sha256": "C441C084BD2D3B9E3AF5DCCFAA42CF466E81AC3560B3BC89B0671702C6398898",
+      "immutable_prior_objects_unchanged": true,
+      "entire_prior_zero_module_paragraph_retained": true,
+      "isolated_new_payload_unchanged": true
+    },
+    {
+      "name": "isolated_git_index_patch_and_combined_replay",
+      "result": "PASS",
+      "bytes": 344497,
+      "sha256": "CC438FC82DD59841CF392B0C8CF1D65C85A2CCB1DBEA073FB8F9C2C0EB5F87B9"
+    },
+    {
+      "name": "unbound_overlap",
+      "result": "EXPECTED_REJECTION",
+      "error": "unbound Algebra: overlapping operations near byte 1713861"
+    },
+    {
+      "name": "stale_prior_old_sha256",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: immutable predecessor hash drift"
+    },
+    {
+      "name": "stale_prior_replacement_sha256",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: immutable predecessor hash drift"
+    },
+    {
+      "name": "unknown_predecessor",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: unknown or self refinement target"
+    },
+    {
+      "name": "unknown_refining_operation",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra: unknown refining operation"
+    },
+    {
+      "name": "incomplete_binding",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: incomplete refinement binding"
+    },
+    {
+      "name": "unrecognized_binding_field",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: incomplete refinement binding"
+    },
+    {
+      "name": "ambiguous_postimage_fragment",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: ambiguous or missing predecessor postimage fragment"
+    },
+    {
+      "name": "missing_postimage_fragment",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: ambiguous or missing predecessor postimage fragment"
+    },
+    {
+      "name": "nonenclosed_authority_span",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-001-BODY1: refinement is not enclosed by its predecessor"
+    },
+    {
+      "name": "overlapping_postimage_refinements",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/MC-STK-ERR-0725-OP1: overlapping postimage refinements"
+    },
+    {
+      "name": "nested_or_self_refinement",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: nested refinement requires a new explicit replay"
+    },
+    {
+      "name": "source_preimage_drift",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra/ALGEBRA-RECON-1320-BODY1: refinement authority drift"
+    },
+    {
+      "name": "duplicate_operation_identity",
+      "result": "EXPECTED_REJECTION",
+      "error": "adverse Algebra: duplicate operation ID"
+    },
+    {
+      "name": "operation_spec_requires_identical_refinement_metadata",
+      "result": "PASS"
+    },
+    {
+      "name": "no_refinement_preserves_prior_operations",
+      "result": "PASS"
+    }
+  ],
+  "repository_sources_changed": false,
+  "candidate_admitted": false,
+  "result": "PASS",
+  "total_checks": 18,
+  "refinement_receipts": [
+    {
+      "refining_operation_id": "ALGEBRA-RECON-1320-BODY1",
+      "prior_operation_id": "MC-STK-ERR-0725-OP1",
+      "immutable_prior_old_sha256": "F663E8FA6BDC6A274AFE2CF7913079B85A04CBE477C54446B7966EE1A4FF2DCB",
+      "immutable_prior_replacement_sha256": "13C9F6921E24E96A84FB5043B2FEE8638D19E994BCBCC024DE89C7DE7015476E",
+      "prior_replacement_offset": 148,
+      "refining_old_sha256": "710250F934048DE1CF445EACE6597892877498E00E1ED0D661635B8B75BB9F7C",
+      "refining_replacement_sha256": "D39833E2816C9DFEA6E93A24F9050BDF730EEAC4CC6F02894BCAE45FAEC289F0",
+      "historical_evidence_unchanged": true,
+      "combined_prior_replacement_sha256": "205AB73CBFFDFC40B3F577F9789161D562C57E873E8FCFA6C97A687398455A9B"
+    }
+  ],
+  "input_batch_sha256": "828DAD9A1D25DF964FB27A7AE61D20D337514FD1F42CD3168459E9508E0D5557",
+  "tools": [
+    {
+      "file": "tools/generate_changes_from_upstream.py",
+      "sha256": "C22E49DB1EB8D1D92FD7C9445A0809CDAA66CE5C0831047E8A3675B543122E9F"
+    },
+    {
+      "file": "tools/export_upstream_corrections.py",
+      "sha256": "6E8A266D696B60FDF615C146FEA8258E7EFF0EBD3A75E3428C8D6B6DCE2C2BC9"
+    }
+  ]
+}

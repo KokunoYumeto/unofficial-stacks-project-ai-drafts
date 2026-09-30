@@ -1,0 +1,35 @@
+\begin{lemma}
+\label{lemma-geometrically-irreducible-any-base-change}
+Let $k$ be a field.
+Let $S$ be a geometrically irreducible $k$-algebra.
+Let $R$ be any $k$-algebra.
+The map
+$$
+\Spec(R \otimes_k S) \longrightarrow \Spec(R)
+$$
+induces a bijection on irreducible components.
+\end{lemma}
+
+\begin{proof}
+Recall that irreducible components correspond to minimal primes
+(Lemma \ref{lemma-irreducible}).
+As $R \to R \otimes_k S$ is flat we see by going down
+(Lemma \ref{lemma-flat-going-down}) that
+any minimal prime of $R \otimes_k S$ lies over a minimal prime of $R$.
+Conversely, if $\mathfrak p \subset R$ is a (minimal) prime then
+$$
+R \otimes_k S/\mathfrak p(R \otimes_k S)
+=
+(R/\mathfrak p) \otimes_k S
+\subset
+\kappa(\mathfrak p) \otimes_k S
+$$
+by flatness of $R \to R \otimes_k S$. The ring
+$\kappa(\mathfrak p) \otimes_k S$ has irreducible spectrum
+by assumption. It follows that
+$R \otimes_k S/\mathfrak p(R \otimes_k S)$ has a single minimal
+prime (Lemma \ref{lemma-injective-minimal-primes-in-image}).
+In other words, the inverse image of the irreducible set
+$V(\mathfrak p)$ is irreducible.
+Hence the lemma follows.
+\end{proof}

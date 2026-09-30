@@ -1,0 +1,65 @@
+\begin{theorem}[Chevalley's Theorem]
+\label{theorem-chevalley}
+Suppose that $R \to S$ is of finite presentation.
+The image of a constructible subset of
+$\Spec(S)$ in $\Spec(R)$ is constructible.
+\end{theorem}
+
+\begin{proof}
+Write $S = R[x_1, \ldots, x_n]/(f_1, \ldots, f_m)$.
+We may factor $R \to S$ as $R \to R[x_1] \to R[x_1, x_2]
+\to \ldots \to R[x_1, \ldots, x_{n-1}] \to S$. Hence
+we may assume that $S = R[x]/(f_1, \ldots, f_m)$.
+In this case we factor the map as $R \to R[x] \to S$,
+and by Lemma \ref{lemma-closed-fp} we reduce to
+the case $S = R[x]$. By Lemma \ref{lemma-qc-open} suffices
+to show that if
+$T = (\bigcup_{i = 1\ldots n} D(f_i)) \cap V(g_1, \ldots, g_m)$
+for $f_i , g_j \in R[x]$ then the image in $\Spec(R)$ is
+constructible. Since finite unions of constructible sets
+are constructible, it suffices to deal with the case $n = 1$,
+i.e., when $T = D(f) \cap V(g_1, \ldots, g_m)$.
+
+\medskip\noindent
+Note that if $c \in R$, then we have
+$$
+\Spec(R) =
+V(c) \amalg D(c) =
+\Spec(R/(c)) \amalg \Spec(R_c),
+$$
+and correspondingly $\Spec(R[x]) =
+V(c) \amalg D(c) = \Spec(R/(c)[x]) \amalg
+\Spec(R_c[x])$. The intersection of $T = D(f) \cap V(g_1, \ldots, g_m)$
+with each part still has the same shape, with $f$, $g_i$ replaced
+by their images in $R/(c)[x]$, respectively $R_c[x]$.
+Note that the image of $T$
+in $\Spec(R)$ is the union of the image of
+$T \cap V(c)$ and $T \cap D(c)$. Using Lemmas \ref{lemma-open-fp}
+and \ref{lemma-closed-fp} it suffices to prove the images of both
+parts are constructible in $\Spec(R/(c))$, respectively
+$\Spec(R_c)$.
+
+\medskip\noindent
+Let us assume we have $T = D(f) \cap V(g_1, \ldots, g_m)$
+as above, with $\deg(g_1) \leq \deg(g_2) \leq \ldots \leq \deg(g_m)$.
+We are going to use induction on $m$, and on the
+degrees of the $g_i$. Let $d_1 = \deg(g_1)$, i.e., $g_1 = c x^{d_1} + l.o.t$
+with $c \in R$ not zero. Cutting $R$ up into the pieces
+$R/(c)$ and $R_c$ we either lower the degree of $g_1$ (and this
+is covered by induction)
+or we reduce to the case where $c$ is invertible.
+If $c$ is invertible, and $m > 1$, then write
+$g_2 = c' x^{d_2} + l.o.t$. In this case consider
+$g_2' = g_2 - (c'/c) x^{d_2 - d_1} g_1$. Since the ideals
+$(g_1, g_2, \ldots, g_m)$ and $(g_1, g_2', g_3, \ldots, g_m)$
+are equal we see that $T = D(f) \cap V(g_1, g_2', g_3\ldots, g_m)$.
+But here the degree of $g_2'$ is strictly less than the degree
+of $g_2$ and hence this case is covered by induction.
+
+\medskip\noindent
+The bases case for the induction above are the cases
+(a) $T = D(f) \cap V(g)$ where the leading coefficient
+of $g$ is invertible, and (b) $T = D(f)$. These two cases
+are dealt with in Lemmas \ref{lemma-affineline-special}
+and \ref{lemma-affineline-open}.
+\end{proof}

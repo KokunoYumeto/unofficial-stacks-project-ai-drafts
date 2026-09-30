@@ -433,3 +433,99 @@ as well, proving the assertion about adjacent chain totals by
 Lemma \ref{lemma-illusie-I-signed-total-differential}. This statement does
 not identify normalization of a simplicial diagonal with a chain total.
 \end{proof}
+
+\begin{lemma}[Normalized Eilenberg--Zilber maps]
+\label{lemma-illusie-I-normalized-eilenberg-zilber}
+Let $X$ be a bisimplicial object of an abelian category. Write
+$D^hX$, $D^vX$, and $D^\Delta X$ for the degenerate subcomplexes in the
+horizontal, vertical, and diagonal simplicial directions. The shuffle and
+Alexander--Whitney maps carry
+\[
+ \operatorname{Tot}(D^hX+D^vX)\quad\hbox{into}\quad D^\Delta X
+ \qquad\hbox{and}\qquad
+ D^\Delta X\quad\hbox{into}\quad
+ \operatorname{Tot}(D^hX+D^vX),
+\]
+respectively. Consequently they induce natural chain maps on the normalized
+quotients.
+
+Use the Moore projections of Theorem
+\ref{theorem-illusie-I-iterated-dold-kan} to identify those quotients with
+the Moore normal complexes. Under these identifications the normalized maps
+are
+\[
+ \operatorname{Sh}^N=
+ \operatorname{Sh}|_{\operatorname{Tot}(N^hN^vX)}:
+ \operatorname{Tot}(N^hN^vX)\longrightarrow N^\Delta X
+\]
+and
+\[
+ \operatorname{AW}^N=
+ P^{h,v}\operatorname{AW}|_{N^\Delta X}:
+ N^\Delta X\longrightarrow\operatorname{Tot}(N^hN^vX),
+\]
+where on the $(p,q)$ summand $P^{h,v}=P^h_pP^v_q$. These maps are natural
+chain-homotopy inverses. In general the Moore projection in
+$\operatorname{AW}^N$ cannot be omitted.
+\end{lemma}
+
+\begin{proof}
+The degeneracy assertion is the normalized shuffle calculation. We recall
+it because it determines which of the unnormalized arrows can literally be
+restricted. In a shuffle summand, a degeneracy already present in one input
+is composed with the two surjections determined by the lattice path. Terms
+for which the repeated place is not common to both surjections occur in
+adjacent pairs obtained by interchanging the step at that place; their
+inversion signs are opposite. Every remaining term factors through a common
+diagonal degeneracy. Thus the shuffle of a horizontal or vertical degenerate
+simplex belongs to $D^\Delta X$.
+
+For Alexander--Whitney, apply its $(p,q)$ component to a diagonal degeneracy
+$s_i^hs_i^v y$. The simplicial identities move $s_i$ through the front
+horizontal and back vertical face strings. According to the position of the
+cut, a horizontal or a vertical degeneracy remains; at the boundary cut the
+same conclusion follows from $d_is_i=d_{i+1}s_i=1$ on one side and the
+surviving degeneracy on the other. Hence every component lies in
+$D^hX+D^vX$. Both maps therefore descend to the quotients.
+
+The Moore projection identifies each quotient by degeneracies with the
+corresponding normal complex. The shuffle calculation also shows directly
+that it sends $\operatorname{Tot}(N^hN^vX)$ into $N^\Delta X$, so its
+quotient map is the displayed restriction. The other quotient map is the raw
+Alexander--Whitney map followed by the horizontal and vertical Moore
+projections, which gives the displayed formula for $\operatorname{AW}^N$.
+
+The chain-homotopies can be obtained without making a choice of splitting.
+Repeat the free-model recursion in the proof of Theorem
+\ref{theorem-illusie-I-eilenberg-zilber} on the normalized free models. Their
+positive-degree contractions are obtained by composing the prepend-zero
+contractions there with the Moore projections. Since the projections are
+chain maps and are the identity on the normal summands, the contraction
+identity remains $\partial K+K\partial=1-e$. The same induction therefore
+gives natural homotopies
+\[
+ \operatorname{Sh}^N\operatorname{AW}^N\simeq 1,
+ \qquad
+ \operatorname{AW}^N\operatorname{Sh}^N\simeq 1.
+\]
+
+It remains to justify the last warning. Let
+\[
+ F_{a,b}=\mathbb Z[\operatorname{Hom}_\Delta([a],[0])\times
+                         \operatorname{Hom}_\Delta([b],[1])]
+\]
+and in $F_{1,1}$ write a basis element as a pair of vertex strings. Put
+\[
+ u=[(0,0);(0,0)]-[(0,0);(0,1)].
+\]
+Deleting the second vertex in both strings sends the two terms to the same
+basis element, so $u\in N^\Delta_1F$. The $(1,0)$ component of
+$\operatorname{AW}(u)$ is
+\[
+ [(0,0);(0)]-[(0,0);(1)]\in F_{1,0}.
+\]
+Its positive horizontal face is
+$[(0);(0)]-[(0);(1)]\neq0$. Hence the raw Alexander--Whitney map does not in
+general carry $N^\Delta X$ into $\operatorname{Tot}(N^hN^vX)$, while the
+projected normalized map does.
+\end{proof}

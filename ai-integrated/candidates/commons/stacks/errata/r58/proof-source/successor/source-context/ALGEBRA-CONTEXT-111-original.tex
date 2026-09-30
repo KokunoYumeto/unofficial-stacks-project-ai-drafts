@@ -1,0 +1,31 @@
+\begin{proposition}
+\label{proposition-fppf-open}
+Let $R \to S$ be flat and of finite presentation.
+Then $\Spec(S) \to \Spec(R)$ is open.
+More generally this holds for any ring map $R \to S$ of
+finite presentation which satisfies going down.
+\end{proposition}
+
+\begin{proof}
+If $R \to S$ is flat, then $R \to S$ satisfies going down by
+Lemma \ref{lemma-flat-going-down}. Thus to prove the lemma we may
+assume that $R \to S$ has finite presentation and satisfies going down.
+
+\medskip\noindent
+Since the standard opens $D(g) \subset \Spec(S)$, $g \in S$
+form a basis for the topology, it suffices to prove that the
+image of $D(g)$ is open. Recall that $\Spec(S_g) \to \Spec(S)$
+is a homeomorphism of $\Spec(S_g)$ onto $D(g)$
+(Lemma \ref{lemma-standard-open}).
+Since $S \to S_g$ satisfies going down (see above), we see that
+$R \to S_g$ satisfies going down by
+Lemma \ref{lemma-going-up-down-composition}. Thus after replacing
+$S$ by $S_g$ we see it suffices to prove the image is open.
+By Chevalley's theorem (Theorem \ref{theorem-chevalley})
+the image is a constructible set $E$. And $E$ is stable
+under generalization because $R \to S$ satisfies going down,
+see Topology, Lemmas \ref{topology-lemma-open-closed-specialization}
+and \ref{topology-lemma-lift-specializations-images}.
+Hence $E$ is open by
+Lemma \ref{lemma-constructible-stable-specialization-closed}.
+\end{proof}

@@ -1,0 +1,17 @@
+\begin{lemma}
+\label{lemma-surjective-locally-nilpotent-kernel}
+Let $\varphi : R \to S$ be a surjective map with locally nilpotent kernel.
+Then $\varphi$ induces a homeomorphism of spectra and isomorphisms
+on residue fields. For any ring map $R \to R'$ the ring map
+$R' \to R' \otimes_R S$ is surjective with locally nilpotent kernel.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-spec-closed} the map $\Spec(S) \to \Spec(R)$ is
+a homeomorphism onto the closed subset $V(\Ker(\varphi))$. Of course
+$V(\Ker(\varphi)) = \Spec(R)$ because every prime ideal of $R$ contains
+every nilpotent element of $R$. This also implies the statement on
+residue fields. By right exactness of tensor product we see that
+$\Ker(\varphi)R'$ is the kernel of the surjective map $R' \to R' \otimes_R S$.
+Hence the final statement by Lemma \ref{lemma-locally-nilpotent}.
+\end{proof}

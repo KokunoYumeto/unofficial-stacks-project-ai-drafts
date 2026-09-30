@@ -1,0 +1,44 @@
+\begin{lemma}
+\label{lemma-p-ring-map}
+Let $\varphi : R \to S$ be a ring map. Let $p$ be a prime number. Assume
+\begin{enumerate}
+\item[(a)] $S$ is generated as an $R$-algebra by elements $x$ such
+that there exists an $n > 0$ with $x^{p^n} \in \varphi(R)$ and
+$p^nx \in \varphi(R)$, and
+\item[(b)] $\Ker(\varphi)$ is locally nilpotent,
+\end{enumerate}
+Then $\varphi$ induces a homeomorphism of spectra and induces
+residue field extensions satisfying the equivalent conditions
+of Lemma \ref{lemma-p-ring-map-field}. For any ring map $R \to R'$
+the ring map $R' \to R' \otimes_R S$ also satisfies (a) and (b).
+\end{lemma}
+
+\begin{proof}
+Assume (a) and (b). Note that (b) is equivalent to condition (2)
+of Lemma \ref{lemma-powers}. Let $T \subset S$ be the set of
+elements $x \in S$ such that there exists an
+integer $n > 0$ such that $x^{p^n} , p^n x \in \varphi(R)$.
+We claim that $T = S$. This will prove that condition (1) of
+Lemma \ref{lemma-powers} holds and hence $\varphi$ induces
+a homeomorphism on spectra.
+By assumption (a) it suffices to show that $T \subset S$ is an $R$-sub algebra.
+If $x \in T$ and $y \in R$, then it is clear that $yx \in T$.
+Suppose $x, y \in T$ and $n, m > 0$ such that
+$x^{p^n}, y^{p^m}, p^n x, p^m y \in \varphi(R)$.
+Then $(xy)^{p^{n + m}}, p^{n + m}xy \in \varphi(R)$
+hence $xy \in T$. We have $x + y \in T$ by Lemma \ref{lemma-help-with-powers}
+and the claim is proved.
+
+\medskip\noindent
+Since $\varphi$ induces a homeomorphism on spectra, it is in particular
+surjective on spectra which is a property preserved under any base change, see
+Lemma \ref{lemma-surjective-spec-radical-ideal}.
+Therefore for any $R \to R'$ the kernel of the ring map
+$R' \to R' \otimes_R S$ consists of nilpotent elements, see
+Lemma \ref{lemma-image-dense-generic-points},
+in other words (b) holds for $R' \to R' \otimes_R S$.
+It is clear that (a) is preserved under base change.
+Finally, the condition on residue fields follows from (a)
+as generators for $S$ as an $R$-algebra map to generators for
+the residue field extensions.
+\end{proof}

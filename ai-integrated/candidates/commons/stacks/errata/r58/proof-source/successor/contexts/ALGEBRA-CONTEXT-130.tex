@@ -1,0 +1,60 @@
+\begin{lemma}
+\label{editorial-source-lemma-p-ring-map-field}
+Let $k'/k$ be a field extension. Let $p$ be a prime number.
+The following are equivalent
+\begin{enumerate}
+\item $k'$ is generated as a field extension of $k$ by elements
+$x$ such that there exists an $n > 0$ with $x^{p^n} \in k$ and
+$p^nx \in k$, and
+\item $k = k'$ or the characteristic of $k$
+and $k'$ is $p$ and $k'/k$ is purely inseparable.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The original field embedding preserves $1$, hence
+the characteristic of $k$ and $k'$ is the
+same. If that characteristic differs from
+the specified prime $p$, the image of
+$p^n$ is a nonzero field element and
+therefore a unit of $k$. Thus
+$x=(p^n x)/p^n\in k$ for every generator
+in (1). Those generators generate $k'/k$,
+so $k'=k$.
+
+If the common characteristic is $p$,
+each such generator has a $p$-power
+in the original $k$. Every element
+of the generated field is a rational
+expression in finitely many original
+generators. Choose an exponent at
+least all their witnessing exponents.
+Applying Frobenius to that full
+rational expression raises its
+coefficients and each generator to
+elements of $k$; its denominator
+remains nonzero in the field.
+Thus every element of $k'$ has a
+$p$-power in $k$, proving pure
+inseparability without a finiteness
+assumption on the whole extension.
+
+Conversely, if $k'=k$, each element
+itself satisfies (1) with $n=1$.
+If the extension is purely
+inseparable in characteristic $p$,
+each original element has a
+$p^e$th power in $k$. Choose
+$n=\max(1,e)$; then its $p^n$th
+power is still in $k$ and
+$p^n x=0\in k$. The set of all
+original elements can serve as
+the generating set, proving (1).
+The proof also shows exactly
+which condition is needed for
+fields: outside characteristic
+$p$ the integer-multiple condition
+alone forces the identity extension;
+in characteristic $p$ it is automatic,
+and the power condition is sufficient.
+\end{proof}

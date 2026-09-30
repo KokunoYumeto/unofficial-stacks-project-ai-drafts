@@ -1,0 +1,32 @@
+\begin{lemma}
+\label{lemma-going-down-flat-module}
+Let $R \to S$ be a ring map. Let $N$ be a finite $S$-module flat over $R$.
+Endow $\text{Supp}(N) \subset \Spec(S)$ with the induced topology.
+Then generalizations lift along $\text{Supp}(N) \to \Spec(R)$.
+\end{lemma}
+
+\begin{proof}
+The meaning of the statement is as follows. Let
+$\mathfrak p \subset \mathfrak p' \subset R$ be primes. Let
+$\mathfrak q' \subset S$ be a prime $\mathfrak q' \in \text{Supp}(N)$
+Then there exists a prime $\mathfrak q \subset \mathfrak q'$,
+$\mathfrak q \in \text{Supp}(N)$ lying over $\mathfrak p$.
+As $N$ is flat over $R$ we see that $N_{\mathfrak q'}$ is flat
+over $R_{\mathfrak p'}$, see Lemma \ref{lemma-flat-localization}.
+As $N_{\mathfrak q'}$ is finite over $S_{\mathfrak q'}$
+and not zero since $\mathfrak q' \in \text{Supp}(N)$ we see
+that $N_{\mathfrak q'} \otimes_{S_{\mathfrak q'}} \kappa(\mathfrak q')$
+is nonzero by Nakayama's Lemma \ref{lemma-NAK}.
+Thus $N_{\mathfrak q'} \otimes_{R_{\mathfrak p'}} \kappa(\mathfrak p')$
+is also not zero. We conclude from Lemma \ref{lemma-ff}
+that $N_{\mathfrak q'} \otimes_{R_{\mathfrak p'}} \kappa(\mathfrak p)$
+is nonzero. Let
+$J \subset S_{\mathfrak q'} \otimes_{R_{\mathfrak p'}} \kappa(\mathfrak p)$
+be the annihilator of the finite nonzero module
+$N_{\mathfrak q'} \otimes_{R_{\mathfrak p'}} \kappa(\mathfrak p)$.
+Since $J$ is a proper ideal we can choose a prime $\mathfrak q \subset S$
+which corresponds to a prime of
+$S_{\mathfrak q'} \otimes_{R_{\mathfrak p'}} \kappa(\mathfrak p)/J$.
+This prime is in the support of $N$, lies over $\mathfrak p$, and
+is contained in $\mathfrak q'$ as desired.
+\end{proof}

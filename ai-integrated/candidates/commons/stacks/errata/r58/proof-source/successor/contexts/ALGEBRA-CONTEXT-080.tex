@@ -1,0 +1,19 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-closure-transitive}
+Let $A \to B \to C$ be ring maps.
+Let $B'$ be the integral closure of $A$ in $B$,
+let $C'$ be the integral closure of $B'$ in $C$. Then
+$C'$ is the integral closure of $A$ in $C$.
+\end{lemma}
+
+\begin{proof}
+The coefficient map $A\to B$ lands in $B'$ by the degree-one
+equations for its image elements, and $A\to B'$ is integral by
+definition. If $c\in C'$ is integral over $B'$, transitivity of
+integrality (Lemma \ref{algebra-lemma-integral-transitive}) shows that $c$
+is integral over $A$. Conversely, every monic equation for $c$
+over $A$ becomes a monic equation over $B'$ under the original
+map $A\to B'$, since its composite into $C$ is unchanged.
+Thus the two sets of integral elements of the same ring $C$ agree,
+and their subalgebra structures and coefficient maps agree as well.
+\end{proof}

@@ -1,0 +1,42 @@
+\begin{lemma}
+\label{lemma-separably-closed-connected}
+Let $k$ be a separably algebraically closed field.
+Let $R$, $S$ be $k$-algebras. If $\Spec(R)$, and
+$\Spec(S)$ are connected, then so is
+$\Spec(R \otimes_k S)$.
+\end{lemma}
+
+\begin{proof}
+Recall that $\Spec(R)$ is connected if and only if
+$R$ has no nontrivial idempotents, see
+Lemma \ref{lemma-characterize-spec-connected}.
+Hence, by Lemma \ref{lemma-limit-argument} we may assume $R$ and $S$ are of
+finite type over $k$.
+In this case $R$ and $S$ are Noetherian,
+and have finitely many minimal primes, see
+Lemma \ref{lemma-Noetherian-irreducible-components}.
+Thus we may argue by induction on $n + m$ where $n$, resp.\ $m$
+is the number of irreducible components of $\Spec(R)$,
+resp.\ $\Spec(S)$. Of course the case where either $n$ or
+$m$ is zero is trivial. If $n = m = 1$, i.e.,
+$\Spec(R)$ and $\Spec(S)$ both have one irreducible component,
+then the result holds by Lemma \ref{lemma-separably-closed-irreducible}.
+Suppose that $n > 1$. Let $\mathfrak p \subset R$ be a minimal prime
+corresponding to the irreducible closed subset $T \subset \Spec(R)$.
+Let $T' \subset \Spec(R)$ be the union of the other $n - 1$
+irreducible components. Choose an ideal $I \subset R$
+such that $T' = V(I) = \Spec(R/I)$ (Lemma \ref{lemma-spec-closed}).
+By choosing our minimal prime carefully
+we may in addition arrange it so that $T'$ is connected, see
+Topology, Lemma \ref{topology-lemma-remove-irreducible-connected}.
+Then $T \cup T' = \Spec(R)$ and
+$T \cap T' = V(\mathfrak p + I) = \Spec(R/(\mathfrak p + I))$
+is not empty as $\Spec(R)$ is assumed connected.
+The inverse image of $T$ in $\Spec(R \otimes_k S)$
+is $\Spec(R/\mathfrak p \otimes_k S)$, and the inverse
+of $T'$ in $\Spec(R \otimes_k S)$
+is $\Spec(R/I \otimes_k S)$. By induction these are both
+connected. The inverse image of $T \cap T'$ is
+$\Spec(R/(\mathfrak p + I) \otimes_k S)$ which is nonempty.
+Hence $\Spec(R \otimes_k S)$ is connected.
+\end{proof}

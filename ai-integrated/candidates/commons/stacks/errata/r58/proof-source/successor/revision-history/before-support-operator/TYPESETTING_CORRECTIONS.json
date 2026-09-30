@@ -1,0 +1,326 @@
+{
+  "schema": "stacks-algebra-typesetting-corrections/v1",
+  "created_at_utc": "2026-09-29T20:58:41.478243+00:00",
+  "previous_manifest_sha256": "DD44FB5DC8A417386CB5C4E47F82CA531219DA55F7FEA2438CCAA3EDA07A978E",
+  "failed_probe": "../ALGEBRA_COMPANION_BUILD_20260929/probe-04/PROBE_RECEIPT.json",
+  "distinct_defects": 2,
+  "changed_live_representations": 3,
+  "corrections": [
+    {
+      "file": "contextual-arguments.tex",
+      "input_sha256": "3CA62F27373C0929EAC29BDEB846A787A722E184416DCE93310CF839AC9BA74B",
+      "output_sha256": "725B780CA9BC76297F076603DF3EAFCD914E76487C7BF62CFAE0E6CF6E278F57",
+      "byte_offset": 395786,
+      "input_line": 8895,
+      "original_bytes_hex": "0869672f",
+      "corrected_tex": "\\big/",
+      "source_locator": "ALGEBRA-RECON-225-OP1",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    },
+    {
+      "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+      "input_sha256": "38331117A50EA42174E57661869257A0A0C5ED19B740734E7FEC49A303A5321E",
+      "output_sha256": "D251CCF041D8210743C726C1226BFFD700B09417D67FD19095E1F8BF1D36AD65",
+      "byte_offset": 27721,
+      "input_line": 678,
+      "original_bytes_hex": "0869672f",
+      "corrected_tex": "\\big/",
+      "source_locator": "ALGEBRA-RECON-225-OP1",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    },
+    {
+      "file": "notes/ALGEBRA_HENSELIZATION_NOTES_20260929.tex",
+      "input_sha256": "CB2EDD66AF7BE5EDF9FC698D6D4E17CF92826DE28082316B1E4BAC541CCE3453",
+      "output_sha256": "8B9120B52B4D2A2450F757FB8E46B7415F4AA7732920E6D7511C88A9FEA234FF",
+      "byte_offset": 22071,
+      "input_line": 98,
+      "original_bytes_hex": "0869676c28",
+      "corrected_tex": "\\bigl(",
+      "source_locator": "The finite etale tower and the original tensor formula, authority lines 43540--43558",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    }
+  ],
+  "original_review_and_markdown_preserved": true,
+  "original_reviewed_source_context_preserved": true,
+  "note": "Original bytes remain in revision history and authoring evidence. These are declared editorial transcription repairs, not new source errata.",
+  "compiled_control_character_scan_passed": true,
+  "tab_and_bare_carriage_return_scan_passed": true,
+  "mathematics_reassessed": false,
+  "source_chapter_changed": false,
+  "build_verified": false,
+  "display_wrapper_repairs": {
+    "failure_receipt": "../ALGEBRA_COMPANION_BUILD_20260929/probe-05/PROBE_RECEIPT.json",
+    "reason": "The amsmath split environment needs an amsmath display wrapper.",
+    "distinct_displays": 9,
+    "changed_representations": 18,
+    "records": [
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 15312,
+        "display_contents_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 12605,
+        "display_contents_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 11768,
+        "display_contents_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 10365,
+        "display_contents_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 10355,
+        "display_contents_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 10064,
+        "display_contents_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 9631,
+        "display_contents_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 9071,
+        "display_contents_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 9028,
+        "display_contents_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "input_line": 1414,
+        "display_contents_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "input_line": 854,
+        "display_contents_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "input_line": 811,
+        "display_contents_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-099.tex",
+        "input_line": 34,
+        "display_contents_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "input_line": 85,
+        "display_contents_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "input_line": 75,
+        "display_contents_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-113.tex",
+        "input_line": 99,
+        "display_contents_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-118.tex",
+        "input_line": 171,
+        "display_contents_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-126.tex",
+        "input_line": 239,
+        "display_contents_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      }
+    ],
+    "all_mathematical_contents_preserved_byte_exactly": true
+  },
+  "display_wrapper_whitespace_repair": {
+    "failed_probe": "../ALGEBRA_COMPANION_BUILD_20260929/probe-08/PROBE_RECEIPT.json",
+    "cause": "The wrapper repair had added a newline before and after an already newline-delimited display body, creating math paragraph breaks.",
+    "correction": "Remove only the two wrapper-added newlines; retain each original display body byte-exactly.",
+    "records": [
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "original_display_body_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "original_display_body_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "original_display_body_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-099.tex",
+        "original_display_body_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "original_display_body_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "original_display_body_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-113.tex",
+        "original_display_body_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-118.tex",
+        "original_display_body_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-126.tex",
+        "original_display_body_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_math_body_exactly_restored": true
+      }
+    ],
+    "distinct_displays": 9,
+    "mathematical_content_changed": false
+  },
+  "ams_symbol_support": {
+    "id": "RENDER-TEX-005",
+    "failed_build": "../ALGEBRA_PORTABLE_BUILD_20260929/attempt-04/BUILD_RECEIPT.json",
+    "failed_stage": "a-algebra-tex-1",
+    "source_operation": "MC-STK-ERR-1990-OP1",
+    "failure": "The preamble loads amsfonts but does not define the reviewed subsetneq command.",
+    "correction": "Load amssymb directly after the chapter preamble input. The companion master loads it likewise.",
+    "standard_definition": "\\DeclareMathSymbol{\\subsetneq}{\\mathrel}{AMSb}{\"28}",
+    "mathematical_operands_changed": false,
+    "original_source_operations_unchanged": true,
+    "public_cumulative_and_fixes_only_dependency_required": true,
+    "dependency_integration_status": "registered_in_candidate_source_operation_and_replayed_not_admitted",
+    "required_before_admission": "Bind and replay the supporting preamble change in the cumulative composition and reusable fixes-only export; a package-only repair is insufficient.",
+    "supporting_unit": "MC-STK-ERR-2465",
+    "supporting_operation": "MC-STK-ERR-2465-OP1",
+    "source": "algebra.tex",
+    "source_start_line": 1,
+    "common_repository_preamble_change": false,
+    "reusable_chapter_patch_carries_dependency": true
+  }
+}

@@ -1,0 +1,127 @@
+\begin{lemma}
+\label{lemma-product-local}
+Any ring with finitely many maximal ideals and
+locally nilpotent Jacobson radical is the product of its localizations
+at its maximal ideals. Also, all primes are maximal.
+\end{lemma}
+
+\begin{proof}
+Let the maximal ideals be the distinct ideals
+$\mathfrak m_1,\ldots,\mathfrak m_n$, and retain
+$I=\bigcap_{i=1}^n\mathfrak m_i$.
+If $n=0$, the ring is zero, since every nonzero ring has a
+maximal ideal. Its spectrum is empty and its map to the empty
+product of rings is the isomorphism of zero rings. Assume $n\geq1$.
+Every element of $I$ is nilpotent, so it belongs to every prime.
+Since $\mathfrak m_1\cdots\mathfrak m_n\subset I$, a prime
+$\mathfrak p$ must contain some $\mathfrak m_i$.
+Indeed, otherwise one could choose $a_i\in\mathfrak m_i\setminus
+\mathfrak p$ for each $i$, whose product would belong to
+$\mathfrak p$ while all its factors avoid it, contradicting
+primality. Maximality then gives $\mathfrak p=\mathfrak m_i$.
+This proves the assertion about prime ideals.
+
+We construct the precise product isomorphism. For each ordered
+pair $i\neq j$, choose $a_{ij}\in\mathfrak m_j$ and
+$b_{ij}\in\mathfrak m_i$ with $a_{ij}+b_{ij}=1$, and set
+$c_i=\prod_{j\neq i}a_{ij}$. For $n=1$ this product is $1$.
+The element $c_i$ has residue $1$ at $\mathfrak m_i$ and
+residue $0$ at every other maximal ideal. Thus
+$c_i(1-c_i)\in I$. Choose $N_i\geq1$ for which
+$[c_i(1-c_i)]^{N_i}=0$. Define the actual element
+$$
+e_i=\sum_{k=N_i}^{2N_i-1}
+\binom{2N_i-1}{k}c_i^k(1-c_i)^{2N_i-1-k}.
+$$
+All its coefficients and powers are part of this construction.
+The binomial identity $(c_i+(1-c_i))^{2N_i-1}=1$ gives
+$$
+1-e_i=\sum_{k=0}^{N_i-1}
+\binom{2N_i-1}{k}c_i^k(1-c_i)^{2N_i-1-k}.
+$$
+Every term of $e_i$ contains $c_i^{N_i}$, and every term of
+$1-e_i$ contains $(1-c_i)^{N_i}$. Their product is zero by
+the chosen nilpotence equation. Hence $e_i^2=e_i$.
+The residues of $e_i$ at all maximal ideals are the same as
+those of $c_i$: substituting $0$ gives zero, and substituting
+$1$ leaves just the term with $k=2N_i-1$, equal to one.
+For $i\neq j$, the product $e_ie_j$ is an idempotent in $I$.
+An idempotent that is nilpotent is zero, since all its positive
+powers equal itself. Thus $e_ie_j=0$.
+The sum $\sum_i e_i$ is an idempotent, and
+$1-\sum_i e_i$ is an idempotent in $I$, so it is zero too.
+We have obtained $\sum_i e_i=1$ with pairwise orthogonal
+idempotents, without assuming a uniform nilpotence exponent for $I$.
+
+Put $R_i=e_iR$, viewed as a ring with identity $e_i$.
+The maps
+$$
+R\longrightarrow\prod_{i=1}^n R_i,\quad r\longmapsto(e_ir)_i,
+\qquad
+\prod_{i=1}^n R_i\longrightarrow R,\quad (x_i)_i\longmapsto\sum_i x_i
+$$
+are inverse ring homomorphisms, by the orthogonality and sum
+equations just proved. The first component map is surjective
+and has kernel $(1-e_i)R$: $e_ir=0$ implies
+$r=(1-e_i)r$, and the reverse implication follows from
+$e_i(1-e_i)=0$.
+Maximal ideals of $R_i$ correspond to maximal ideals of $R$
+containing $(1-e_i)R$. By the computed residues, only
+$\mathfrak m_i$ contains $1-e_i$.
+Therefore $R_i$ is a nonzero local ring with unique maximal
+ideal $e_i\mathfrak m_i$.
+
+The comparison with the original localization is
+$$
+R_i\longrightarrow R_{\mathfrak m_i},\quad x\longmapsto x/1,
+\qquad
+R_{\mathfrak m_i}\longrightarrow R_i,\quad
+r/s\longmapsto (e_ir)(e_is)^{-1}.
+$$
+Here $s\notin\mathfrak m_i$ implies
+$e_is\notin e_i\mathfrak m_i$: reducing modulo
+$\mathfrak m_i$ would otherwise give $s=0$ in its residue
+field. Hence $e_is$ is a unit in the original ring $R_i$.
+Also $e_i/1$ is an idempotent unit in $R_{\mathfrak m_i}$,
+so it equals one there. The first map is consequently unital.
+For the second map, a fraction relation
+$t(s'r-sr')=0$ with $t\notin\mathfrak m_i$ becomes the
+same relation multiplied by $e_i$ in $R_i$; the images of
+$t,s,s'$ are units, so the two prescribed images agree.
+The maps preserve sums and products by their fraction formulas.
+Their composites fix $x\in R_i$ and each original $r/s$,
+respectively. Thus both are isomorphisms.
+Combining them proves that the canonical map in the assertion is
+$$
+R\longrightarrow\prod_i R_{\mathfrak m_i},\qquad r\longmapsto(r/1)_i,
+$$
+with inverse
+$(r_i/s_i)_i\mapsto\sum_i(e_ir_i)(e_is_i)^{-1}$.
+All terms of this sum are elements of their specified subrings
+$e_iR\subset R$; the original denominators and their inverses
+in those subrings are retained.
+
+The same construction works for every original $R$-module $M$,
+without a finite-generation hypothesis. The maps
+$M\to\bigoplus_i e_iM$, $x\mapsto(e_ix)_i$, and
+$(x_i)_i\mapsto\sum_i x_i$ are inverse module maps.
+The maps $e_iM\to M_{\mathfrak m_i}$, $x\mapsto x/1$,
+have inverses
+$$
+x/s\longmapsto(e_is)^{-1}e_ix.
+$$
+The same fraction relation and the unit $e_it$ verify that this
+inverse is well defined; the composites are identities because
+$e_i/1=1$ in the localization.
+Consequently $M\to\prod_i M_{\mathfrak m_i}$ is the canonical
+isomorphism, with the displayed component maps and inverse sum.
+Using finite additivity of length and the surjections
+$R\to e_iR$, Lemma \ref{lemma-length-independent} gives
+$$
+\operatorname{length}_R(M)
+=\sum_{i=1}^n\operatorname{length}_{R_{\mathfrak m_i}}
+ (M_{\mathfrak m_i}),
+$$
+also when one or more terms are infinite. In the zero-ring case
+every unital module is zero and this is the empty sum.
+\end{proof}

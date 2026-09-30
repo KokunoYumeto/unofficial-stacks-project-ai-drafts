@@ -1,0 +1,32 @@
+\begin{lemma}
+\label{editorial-source-lemma-going-up-down-specialization}
+Let $R \to S$ be a ring map.
+\begin{enumerate}
+\item $R \to S$ satisfies going down if and only if
+generalizations lift along the map $\Spec(S) \to \Spec(R)$,
+see Topology, Definition \ref{topology-definition-lift-specializations}.
+\item $R \to S$ satisfies going up if and only if
+specializations lift along the map $\Spec(S) \to \Spec(R)$,
+see Topology, Definition \ref{topology-definition-lift-specializations}.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For the original map $\varphi:R\to S$, the spectrum map
+sends a prime $\mathfrak q$ to $\varphi^{-1}(\mathfrak q)$.
+The point of $\mathfrak p$ specializes to the point of
+$\mathfrak p'$ exactly when $\mathfrak p\subseteq\mathfrak p'$,
+because the closure of the point of $\mathfrak p$ is
+$V(\mathfrak p)$. The same statement holds for primes of $S$.
+Thus, given the original $\mathfrak p\subseteq\mathfrak p'$
+and a prime $\mathfrak q'$ over $\mathfrak p'$, lifting
+the generalization is precisely finding
+$\mathfrak q\subseteq\mathfrak q'$ with contraction
+$\mathfrak p$. This is the stated going-down condition,
+in both directions. Given instead a prime $\mathfrak q$
+over $\mathfrak p$, lifting the specialization is precisely
+finding $\mathfrak q'\supseteq\mathfrak q$ with contraction
+$\mathfrak p'$, the going-up condition, again in both
+directions. These identifications agree exactly with
+Topology, Definition \ref{topology-definition-lift-specializations}.
+\end{proof}

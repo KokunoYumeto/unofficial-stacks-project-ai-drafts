@@ -1,0 +1,97 @@
+\begin{lemma}
+\label{editorial-source-lemma-surjective-locally-nilpotent-kernel}
+Let $\varphi : R \to S$ be a surjective map with locally nilpotent kernel.
+Then $\varphi$ induces a homeomorphism of spectra and isomorphisms
+on residue fields. For any ring map $R \to R'$ the ring map
+$R' \to R' \otimes_R S$ is surjective with locally nilpotent kernel.
+\end{lemma}
+
+\begin{proof}
+Put $I=\ker\varphi$ and retain the isomorphism
+$R/I\to S$, $[r]\mapsto\varphi(r)$, supplied
+by surjectivity. Every prime of $R$ contains
+$I$, since each element of $I$ is nilpotent.
+The inverse maps on primes are therefore
+$$
+\mathfrak q\longmapsto\varphi^{-1}(\mathfrak q),
+\qquad \mathfrak p\longmapsto\varphi(\mathfrak p).
+$$
+The second is a prime ideal because its
+quotient is the original domain $R/\mathfrak p$.
+Surjectivity and $I\subseteq\mathfrak p$
+show both composites are identities.
+Moreover $D(\varphi(r))$ corresponds to
+$D(r)$ for every original $r\in R$;
+these sets form bases, so the bijection
+and its inverse are continuous.
+
+For corresponding primes $\mathfrak p$
+and $\mathfrak q$, the residue-field map is
+the explicit isomorphism
+$$
+\operatorname{Frac}(R/\mathfrak p)
+\longrightarrow\operatorname{Frac}(S/\mathfrak q),
+\qquad
+\frac{r+\mathfrak p}{t+\mathfrak p}
+\longmapsto
+\frac{\varphi(r)+\mathfrak q}{\varphi(t)+\mathfrak q},
+\quad t\notin\mathfrak p.
+$$
+The inverse lifts numerator and denominator
+along $\varphi$; different lifts differ by
+$I\subseteq\mathfrak p$, so the fractions
+are unchanged. A nonzero denominator on
+either side remains nonzero on the other.
+
+For an arbitrary original map $f:R\to R'$,
+there are inverse algebra maps
+$$
+R'\otimes_R S\longrightarrow R'/IR',\qquad
+a\otimes\varphi(r)\longmapsto[af(r)],
+\qquad
+R'/IR'\longrightarrow R'\otimes_R S,\quad
+[a]\longmapsto a\otimes1.
+$$
+Changing a lift $r$ of an element of $S$
+adds an element of $I$, and balancing
+uses the same $f(r)$, so the first map
+is well-defined. The second kills $IR'$
+because $f(i)\otimes1=1\otimes\varphi(i)=0$
+for $i\in I$. The formulas prove both
+composites are identities. Thus the
+original map $R'\to R'\otimes_R S$ is
+surjective with kernel exactly $IR'$.
+
+Each element of that kernel is a finite
+sum $\sum_{j=1}^m a_j f(i_j)$ with $i_j\in I$.
+Choose $d_j\geq1$ with $i_j^{d_j}=0$.
+In the full multinomial expansion of its
+$D$th power, for $D=1+\sum_j(d_j-1)$,
+every term contains some $f(i_j)^{d_j}$,
+and is zero. Thus $IR'$ is locally
+nilpotent, without a uniform exponent
+being assumed for the whole ideal.
+Applying the first part to this actual
+quotient proves the asserted base-change
+conclusions, with the same prime and
+residue-field maps.
+
+The kernel hypothesis is also necessary
+for a surjective ring map to induce a
+homeomorphism onto the entire spectrum:
+its image is $V(I)$, so surjectivity on
+primes requires $I$ to lie in every
+prime, equivalently in the nilradical.
+In addition, the given quotient induces
+an exact isomorphism of reduced rings
+$R_{red}\to S_{red}$. Indeed if
+$\varphi(r)$ is nilpotent, then $r^n\in I$
+for some $n$, and $(r^n)^m=0$ for some
+$m$, so $r$ is nilpotent. The converse
+is immediate under a ring homomorphism.
+The preimage of $\operatorname{Nil}(S)$
+is consequently exactly
+$\operatorname{Nil}(R)$, proving the
+stated reduced-quotient isomorphism and
+the same assertion after each base change.
+\end{proof}

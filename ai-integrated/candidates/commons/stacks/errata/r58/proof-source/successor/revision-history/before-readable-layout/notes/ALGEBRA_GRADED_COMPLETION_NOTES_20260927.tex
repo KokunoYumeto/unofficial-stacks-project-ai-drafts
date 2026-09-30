@@ -1,0 +1,144 @@
+\subsection{Noetherian completion and graded inverse systems}\label{algebra-proof-015-noetherian-completion-and-graded-inverse-systems}
+
+Separate editorial evidence for the Stacks Project authors' algebra.tex, authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, lines 23010--23414. Authority SHA-256: FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All complete source units in this interval and all five received reports were read. The following flatness section was read only through line 23452; its first proof is incomplete and unadjudicated.
+
+The current interval has no previously composed canonical correction. Five received reports and one independently found reference correction yield nine minimal operations in six groups. The graded stabilization repair also handles zero generators and avoids nonpositive indices. The complete proofs and three further consequences below remain separate editorial material. The original hypotheses and exposition stay identifiable; there is no chapter or translation mutation and no novelty claim. The bounded corpus lookup records all four routing hits, including the local-work hits, without claiming content reading or using PDFs.
+
+\subsubsection{Associated-graded generation and the completion map}\label{algebra-proof-015-associated-graded-generation-and-the-completion-map}
+
+Source 23010--23087; OCC-00480. Retain the original ideal \(I\subset R\) with \(R/I\) Noetherian and \(I\) finitely generated. Write \(B=\widehat R\) and \(L=IB\). The already proved canonical comparison gives \(B/L=R/I\), \(L^n=I^nB\), and completeness of \(B\). Thus the source's temporary replacement has these exact maps; it changes none of the original conclusion about \(\widehat R\).
+
+For its argument in a complete ring, keep the source notation \(R,I,J,f_i,g_j,d_j\). The polynomial map \(R/I[T_1,\ldots,T_t]\to\bigoplus_{n\geq0}I^n/I^{n+1}\) sends \(T_i\) to the actual class of \(f_i\). Every degree-\(n\) ideal product is a finite sum of degree-\(n\) monomials in these generators with coefficients in \(R\); reducing the coefficients modulo \(I\) proves surjectivity. The associated graded ring is therefore Noetherian. The submodule \[
+\bigoplus_{n\geq0}(J\cap I^n)/(J\cap I^{n+1})
+\] is a homogeneous ideal of that ring: multiplication by a class in \(I^a/I^{a+1}\) sends its degree-\(n\) part into degree \(n+a\). Choose its finitely many homogeneous generators \(\overline g_j\) and original lifts \(g_j\in J\cap I^{d_j}\). In degree \(n\) its exact expression is \[
+(J\cap I^n)/(J\cap I^{n+1})
+ =\sum_{j:\,d_j\leq n}
+    \overline g_j\,(I^{n-d_j}/I^{n-d_j+1}).
+\] The restriction is necessary; no negative ideal power is defined. This is the report's minimal correction. For \(d_j>n\) choose the corresponding coefficient zero, which satisfies the source's stated bound \(I^{\max(0,n-d_j)}\).
+
+Starting with \(x\in J\), choose coefficients \(a_{j,n}\) inductively to remove the degree-\(n\) residual. The residual remains in \(J\cap I^{n+1}\), and \(a_{j,n}\in I^{\max(0,n-d_j)}\). For each fixed \(j\), the partial sums form a Cauchy sequence: terms with \(n\geq b+d_j\) lie in \(I^b\). Completeness gives \(A_j=\sum_{n\geq0}a_{j,n}\). Multiplication by the fixed \(g_j\) preserves all \(I\)-adic congruences. Taking limits in the source's finite sum over \(j\), with residual in \(I^{N+1}\), gives \(x=\sum_jA_jg_j\). Separatedness gives actual equality. If the graded ideal has no generators, each \(x\in J\) lies in every \(I^n\), hence \(x=0\); the empty case is included. This proves finite generation of every \(J\) and hence the original Noetherian-completion assertion.
+
+The alternative formal-power-series map in 23079 also has its stated meaning. At level \(R/I^n\), evaluate the terms of total degree \(<n\) in \(R[[x_1,\ldots,x_t]]\) at the original \(f_i\); every higher-degree monomial vanishes. There are finitely many monomials below each total degree. These compatible ring maps give the printed map into \(\widehat R\). For \(\xi\in\widehat R\), choose \(y_n\in R\) representing its \(n\)-th coordinate. Set \(y_0=0\). The initial \(y_1\) is a constant coefficient; for \(n\geq1\), \(y_{n+1}-y_n\in I^n\) is a finite linear combination of the degree-\(n\) monomials \(f^\alpha\). Use the same coefficients on \(x^\alpha\). The resulting power series evaluates to \(\xi\) at every level. With no generators \(I=0\), the map is the identity \(R\to R\). This verifies the omitted detail as editorial evidence, without making a rewritten source proof a requirement.
+
+\subsubsection{Local completion and the redundant maximal-ideal assumption}\label{algebra-proof-015-local-completion-and-the-redundant-maximal-ideal-assumption}
+
+Source 23089--23132; OCC-00481 requests only ``Hence it has dimension 0''. Keep the local homomorphism \(R\to S\), maximal ideals \(\mathfrak m,\mathfrak n\), and \(k=R/\mathfrak m\). Let \[
+C=S/\mathfrak mS,\qquad
+\mathfrak r=\mathfrak n/\mathfrak mS,\qquad
+d=\dim_k C<\infty .
+\] This finite-dimensional local algebra is Artinian. Its maximal ideal is nilpotent: its descending powers stabilize because they are subspaces of a finite-dimensional space; at a stable power \(V=\mathfrak rV\), the ordinary Nakayama lemma over the local Artinian ring \(C\), applied to the finite module \(V\), gives \(V=0\). Until zero each step is a strict inclusion. Therefore \(\mathfrak r^d=0\), and \[
+\mathfrak n^d\subset\mathfrak mS\subset\mathfrak n.
+\] Here \(d\geq1\) for the nonzero local rings in the source convention. Consequently the two adic filtrations on \(S\) are cofinal with the actual bound \(\mathfrak n^{dn}\subset\mathfrak m^nS\subset\mathfrak n^n\). Coordinate reduction from levels \(dn\) and \(n\) gives mutually inverse canonical maps between the two completions, as in the already proved change-of-ideal lemma.
+
+Only finite generation of \(\mathfrak m\) is needed as a separate hypothesis. To prove this, let \(e=\dim_k(S/\mathfrak n)\). The vector space \(\mathfrak r\) has dimension \(d-e\). Lift a basis \(z_1,\ldots,z_{d-e}\) to \(\mathfrak n\), and let \(a_1,\ldots,a_h\) generate \(\mathfrak m\). Every element of \(\mathfrak n\) differs from an \(R\)-linear combination of the \(z_j\) by an element of \(\mathfrak mS\): lift its basis coefficients from \(k\) to \(R\). Therefore \[
+\mathfrak n=(a_1,\ldots,a_h,z_1,\ldots,z_{d-e})S .
+\] The source's separate finite-generation assumption on \(\mathfrak n\) follows, with this explicit bound. No Noetherianity of \(R\) or \(S\) is used.
+
+The generator hypothesis on \(\mathfrak m\) gives completeness of \(\widehat R\) and of \(\widehat S=\lim S/\mathfrak m^nS\) as modules for the original \(\mathfrak m\)-action, together with \[
+\widehat R/\mathfrak m\widehat R=k,\qquad
+\widehat S/\mathfrak m\widehat S=C.
+\] The canonical action of \(\widehat R\) on \(\widehat S\) is defined at each quotient level. Powers of \(\mathfrak m\widehat R\) acting on \(\widehat S\) are precisely \(\mathfrak m^n\widehat S\), so the separatedness and completeness required for the finite-module lemma hold for that ring and ideal. Choose \(d\) actual lifts of a \(k\)-basis of \(C\). The source's finite-over-complete-ring argument proves that these elements generate \(\widehat S\) over \(\widehat R\). Their number is minimal: any generating family maps to a spanning family of the \(d\)-dimensional quotient \(C\). Also \(\widehat R\) is local, because an element outside the kernel of its map to \(k\) is a unit by the completion unit lemma. The preceding Noetherian-completion theorem applies to \((R,\mathfrak m)\), so \(\widehat R\) is Noetherian even when \(R\) is not. Its finite algebra \(\widehat S\) is then Noetherian. These are proved editorial consequences, not replacement hypotheses silently inserted in the translated source.
+
+\subsubsection{The finite-extension product with its localization maps}\label{algebra-proof-015-the-finite-extension-product-with-its-localization-maps}
+
+Source 23134--23174. Retain \(R\to S\) finite, \(R\) Noetherian, and the original prime \(\mathfrak p\). Put \(T=R_{\mathfrak p}\), \(U=S\otimes_R T\), and \(\mathfrak a=\mathfrak pT\). The canonical tensor isomorphism \[
+\widehat T\otimes_R S
+ \longrightarrow\widehat T\otimes_T U
+\] sends \(b\otimes s\) to \(b\otimes(s\otimes1)\); its inverse sends \(b\otimes(s\otimes t)\) to \(tb\otimes s\). Both maps respect the balancing relations and their composites fix every simple tensor. The finite-module completion comparison now identifies the second tensor with the \(\mathfrak a\)-adic completion of \(U\).
+
+The primes \(\mathfrak q_i\) of \(S\) over \(\mathfrak p\) correspond to the maximal ideals of \(U\) over \(\mathfrak a\). The actual localizations identify \(U_{\mathfrak q_iU}\) with \(S_{\mathfrak q_i}\): writing a fraction in \(U\) as \(s/u\), the map sends \((s/u)/(t/v)\) to \(sv/(ut)\); all denominators lie outside \(\mathfrak q_i\), since the original \(u,v\) lie in \(R\setminus\mathfrak p\). Its inverse sends \(s/t\) to \((s/1)/(t/1)\). The fraction equivalence relations give inverse ring maps.
+
+For each \(n\geq1\), \(U/\mathfrak a^nU\) is a finite module over the Artinian local ring \(T/\mathfrak a^n\), hence is Artinian. Its maximal ideals are exactly the images of the \(\mathfrak q_i\). The already proved Artinian-ring product theorem identifies this ring, by its canonical localization map, with \[
+\prod_i U_{\mathfrak q_iU}/\mathfrak a^nU_{\mathfrak q_iU}.
+\] The maps commute with reduction from \(n+1\) to \(n\). Taking the limit and commuting a finite product with the compatible-family construction gives the product of the \(\mathfrak a\)-adic completions. Each local factor has finite-dimensional residue quotient over \(T/\mathfrak a\): it is the localization of the finite-dimensional algebra \(U/\mathfrak aU\). The preceding local lemma identifies this completion with its maximal-ideal completion. These exact maps produce the source's whole displayed comparison.
+
+If no prime lies over \(\mathfrak p\), the finite-dimensional fibre \(U/\mathfrak aU\) has no prime and is the zero ring. Nakayama applied to the finite \(T\)-module \(U\) gives \(U=0\). The tensor, completion and empty product are then all the zero ring. No nonempty-fibre assumption has been inserted.
+
+\subsubsection{Compatible splittings and successive completion}\label{algebra-proof-015-compatible-splittings-and-successive-completion}
+
+Source 23176--23237. In the split-completed-sequence lemma retain \(0\to K\to P\to M\to0\), flatness of \(M\), and projectivity of \(M/IM\). Flatness gives the original levelwise short exact sequences. For every \(n\geq1\), \(M/I^nM\) is flat over \(R/I^n\), its reduction modulo the nilpotent ideal \(I/I^n\) is the given projective module, and the source's nilpotent projectivity-lifting lemma at 18923--18958 proves its projectivity.
+
+Choose the original \(s_1\). Given \(s_n\), use exactly the source's submodule \[
+P_{n+1}=\{p\in P:p\bmod I^nP\in\operatorname{im}s_n\}.
+\] It maps onto \(M\). Indeed, lift \(m\in M\) to \(p\in P\); the difference between \(p\bmod I^nP\) and \(s_n(m\bmod I^nM)\) is in the kernel \(K/I^nK\). Subtract a lift \(k\in K\). Then \(p-k\in P_{n+1}\) and still maps to \(m\). Hence the printed quotient map \(P_{n+1}/I^{n+1}P_{n+1}\to M/I^{n+1}M\) is onto. Projectivity gives its section \(t\). After mapping to \(P/I^{n+1}P\), the image reduces modulo \(I^n\) into \(\operatorname{im}s_n\); its image in \(M/I^nM\) is the original argument, so that reduction is exactly \(s_n\). Thus the \(s_n\) are compatible. Their limit is a section of the completed quotient map, linear even over \(\widehat R\) by checking its \(R/I^n\)-linear coordinates. The source's exactness lemma supplies the left term \(\widehat K\). No choice of a noncompatible family of splittings has been used.
+
+For the following lemma, retain the original Noetherian \(A\), ideals \(I,J\), and \(B=\varprojlim A/(I+J)^n\). The canonical finite-module tensor-completion comparison, applied to \(A/I\), gives \[
+B/IB
+ \cong (A/I)\otimes_A B
+ \cong \lim_n A/(I+(I+J)^n)
+ =\lim_n A/(I+J^n).
+\] The last equality follows because every mixed monomial in \(I+J\) lies in \(I\), leaving \(J^n\) modulo \(I\). This is precisely the \(J\)-adic completion of \(A/I\). The source cites lemma-completion-flat at 23224; the direct supporting statement is lemma-completion-tensor. The reference correction is recorded independently of the received grammatical report OCC-00482.
+
+By hypothesis the last limit is canonically \(A/I\). The module \(B\) is \((I+J)\)-adically complete and hence \(I\)-adically complete by the finite-subideal lemma. As \(A\) is \(I\)-adically complete, the finite-over-complete-ring lemma makes \(B\) finite over \(A\). The quotient \(B/\operatorname{im}(A)\) is finite and is zero modulo \(I\). The completion unit lemma places \(I\) in \(\operatorname{Jac}(A)\), so Nakayama gives surjectivity \(A\to B\). Completion is flat here. Every maximal ideal of \(A\) contains \(I\), and the isomorphism \(B/IB=A/I\) supplies a prime above it. The faithful-flatness criterion therefore gives faithful flatness, and the canonical unit map is injective. Thus \(A\to B\) is an isomorphism. Its unit is the completion map, so \(A\) is \((I+J)\)-adically complete, and the finite-subideal lemma gives \(J\)-adic completeness. The title's reference to nilpotence is not a new hypothesis.
+
+\subsubsection{Limits and their canonical completeness maps}\label{algebra-proof-015-limits-and-their-canonical-completeness-maps}
+
+Source 23253--23297; receiving group 539 and its exact section. Let \(M=\lim M_n\), with \(I^nM_n=0\) and \(I\) finitely generated. The coordinate maps factor through \(M/I^nM\). Their inverse limit gives \(\pi:\widehat M\to M\), and \(\pi\eta_M=\mathrm{id}_M\) on every coordinate. Hence \(M\) is a direct summand of \(\widehat M\), through these specific maps. The latter is complete by finite generation of \(I\). A direct summand of a complete module is complete: for a decomposition \(X=Y\oplus Z\), one has \(I^nX=I^nY\oplus I^nZ\), and both the quotients and their limits split into these two factors; the canonical unit on \(X\) is the direct sum of the two units. If it is an isomorphism, both component units are isomorphisms. This proves the source lemma without identifying abstractly isomorphic modules in place of the canonical units.
+
+In the next lemma the transition maps identify \(M_n=M_{n+1}/I^nM_{n+1}\). They are onto, and \(I^nM_n=0\). Recursive lifting gives surjectivity \(M\to M_n\). Set \(N_n=\ker(M\to M_n)\), so \(I^nM\subset N_n\). If \(u\in N_n\), its coordinate in \(M_{n+1}\) lies in \(I^nM_{n+1}\). Write it as a finite sum of products \(a_jv_j\), \(a_j\in I^n\), and lift each \(v_j\) to \(M\). Subtracting the resulting element of \(I^nM\) places \(u\) in \(N_{n+1}\). This proves \(N_n=N_{n+1}+I^nM\) and surjective transitions on \(N_n/I^nM\). The source's expressions with intersections agree because \(I^nM\subset N_n\).
+
+Their limit injects into the kernel of the canonical \(\pi:\widehat M\to M\). By the first lemma \(\eta_M\) is an isomorphism, and the section identity makes \(\pi\) its inverse. Thus that kernel is zero. Prescribed-coordinate lifting in the onto defect system proves each \(N_n/I^nM=0\), and so the actual projection induces \(M/I^nM\cong M_n\). This is an application of the previously proved defect mechanism, not a replacement of the original inverse system.
+
+\subsubsection{Correct stabilization of graded modules}\label{algebra-proof-015-correct-stabilization-of-graded-modules}
+
+Source 23299--23333; OCC-00483. Graded rings have nonnegative degrees, while the original modules may have nonzero components in any integer degree. Keep the original homogeneous ideal \(I\subset A_+\), transition maps, lifted generators \(x_{n,i}\), and their degrees \(d_i\). For \(k\geq n\), composing the transitions gives \[
+N_n\cong N_k/I^nN_k .
+\] This follows inductively: passing successively through quotient by \(I^{k-1}\) and then by \(I^n\), with \(n\leq k-1\), has kernel exactly \(I^n\). In particular \(I^nN_n=0\) and \(N_n/IN_n=N_1\).
+
+If \(N_1=0\), then \(N_n=IN_n\). Iterating \(n\) times gives \(N_n=I^nN_n=0\); take \(N=0\). Otherwise choose \(r>0\) homogeneous generators of \(N_1\) and compatible homogeneous lifts \(x_{n,i}\). Such lifts exist by the surjective graded transitions. The quotient of \(N_n\) by their span is equal to its own multiple by \(I\), and is killed by \(I^n\); it is zero. Thus these original \(r\) elements generate every \(N_n\), without an additional finiteness argument.
+
+Put \(\delta=\min_i d_i\). A homogeneous product in \(I^mN_k\) has degree at least \(m+\delta\), since every homogeneous element of \(I\) has degree at least one. Therefore \[
+(N_{n+1})_d\longrightarrow(N_n)_d
+\quad\hbox{is an isomorphism when }n>d-\delta.
+\] The strict inequality is essential. Set the positive index \[
+b(d)=\max\{1,1+d-\delta\}.
+\] Then the stable tail is \[
+\cdots=(N_{b(d)+2})_d=(N_{b(d)+1})_d=(N_{b(d)})_d.
+\] For \(d<\delta\) all the degree-\(d\) parts are zero. At \(d=\delta\), \(b(d)=1\), so no \(N_0\) is invoked. The source's equality at level \(d-\delta\) is unjustified; its later generation check needs the same corrected index.
+
+Define \(N_d=\lim_n(N_n)_d\) and \(N=\bigoplus_{d\in\mathbb Z}N_d\). Multiplication by \(a\in A_e\) acts coordinatewise and sends \(N_d\) into \(N_{d+e}\); distributivity, unit and associativity follow at every original coordinate. This gives an actual graded \(A\)-module. Each \(x_i=(x_{n,i})_n\) lies in \(N_{d_i}\). For \(x\in N_d\), its image in \((N_{b(d)})_d\) is a homogeneous expression \(\sum_i a_ix_{b(d),i}\), with \(a_i\in A_{d-d_i}\), using zero when \(d-d_i<0\). The same coefficients define \(\sum_i a_ix_i\in N_d\). It has the same stable coordinate as \(x\), so it equals \(x\). Thus the \(x_i\) generate \(N\).
+
+The projection \(N\to N_n\) is onto because it contains the original generating family. Its kernel is exactly \(I^nN\). One inclusion follows from \(I^nN_n=0\). For the reverse, take a homogeneous \(x\in N_d\) mapping to zero and choose \(k\geq n,b(d)\). Its image in \(N_k\) belongs to \((I^nN_k)_d\). As \(N_k\) is generated by the \(x_{k,i}\), it can be written \(\sum_i a_ix_{k,i}\) with \(a_i\in (I^n)_{d-d_i}\): expand the finite products and then retain their actual degree-\(d\) terms. The same coefficients give an element of \((I^nN)_d\), with the same stable coordinate as \(x\). They are equal. For a general kernel element, apply this to its finitely many homogeneous components, since the projection is graded. Hence the canonical maps induce \(N/I^nN\cong N_n\).
+
+The premature equality has a direct source-compatible counterexample. Take \(A=k[t]\) with \(t\) in degree one, \(I=(t)\), and \(N_n=A/(t^n)\), generated in degree zero. In degree one, the transition from \(N_2\) to \(N_1\) maps the nonzero class of \(t\) to zero. Thus equality at level \(d-\delta=1\) is false, while the repaired stable level is \(b(1)=2\). In degree zero, the repaired level is one and never invokes the undefined \(N_0\).
+
+\subsubsection{Graded algebraization without Noetherianity}\label{algebra-proof-015-graded-algebraization-without-noetherianity}
+
+The proof in the preceding section never uses Noetherianity of \(A\) or finite generation of \(I\). It only uses the nonnegative grading, the homogeneous containment \(I\subset A_+\), the specified quotient transitions, and finite generation of \(N_1\). Thus the following strengthening is established as editorial material:
+
+For every nonnegatively graded ring \(A\), every homogeneous ideal \(I\subset A_+\), and every system of graded modules with transition maps \(N_{n+1}\to N_n\) inducing \(N_n\cong N_{n+1}/I^nN_{n+1}\), if \(N_1\) is finitely generated, there is a finitely generated graded \(A\)-module \(N\) with compatible canonical isomorphisms \(N/I^nN\cong N_n\). All the modules \(N_n\) are already finitely generated by the same number of compatible lifted generators. Its construction and all comparison maps are proved above, including \(N_1=0\).
+
+This gives an equivalence with the category of such systems, with morphisms compatible graded maps, from the category of finite graded \(A\)-modules. Here is the remaining proof. For a finite graded \(U\), choose homogeneous generators of least degree \(\delta_U\). Its degree-\(d\) part maps isomorphically to \((U/I^nU)_d\) for \(n>d-\delta_U\), so \[
+U_d\cong\lim_n(U/I^nU)_d .
+\] For \(U=0\) this holds directly. Given compatible graded maps \(f_n:U/I^nU\to V/I^nV\), apply them to these compatible families in each degree. The resulting maps \(U_d\to V_d\) define \(f:U\to V\) on their direct sums. Additivity and compatibility with each homogeneous element of \(A\) follow coordinatewise; hence \(f\) is a graded \(A\)-module map. Its reduction is \(f_n\) for every \(n\), because it agrees on each original coordinate and on all homogeneous elements. Conversely any graded \(f\) gives these reductions. If all reductions vanish, each homogeneous image lies in every \(I^nV\) and is zero by the degree bound. Thus this correspondence on morphisms is injective as well as surjective, and respects composition and identities. The construction above proves essential surjectivity, completing the equivalence.
+
+The direct sum of degreewise limits used here is not identified with the unrestricted module limit. For \(A=k[t]\), \(I=(t)\), and \(N_n=k[t]/(t^n)\), the reconstructed graded module is \(k[t]\), while the unrestricted limit is \(k[[t]]\). The compatible series with every coefficient one has infinitely many nonzero degrees and therefore is not in that direct sum. This exact example retains the distinction necessary for the source's next lemma. No finite-presentation claim is made after removing Noetherianity.
+
+\subsubsection{The shifted degree bound and separate injectivity and surjectivity}\label{algebra-proof-015-the-shifted-degree-bound-and-separate-injectivity-and-surjectivity}
+
+Source 23335--23401; OCC-00484. Retain \(A'=\lim A/I^n\), the graded modules \(G_n\) with \(I^nG_n=0\), the original \(M\), and compatible graded maps \(\varphi_n\). Coordinate actions give the canonical map \[
+\varphi:M\otimes_A A'\longrightarrow\lim_nG_n.
+\]
+
+First verify the canonical unit \(M\to M\otimes_AA'\) is injective for every graded \(M\), with no finite-generation assumption. Suppose a nonzero \(x\in M\) maps to zero. Express \(M\) as the filtered union of its finitely generated homogeneous submodules. Tensor products commute with this union's colimit, so one such submodule \(M'\) contains \(x\) and witnesses its zero tensor image; a finite homogeneous generating family exists by taking components of the finitely many generators and enlarging to another stage if necessary. Let \(\delta\) be the least generator degree and \(D\) the greatest degree in the finite homogeneous support of \(x\). Then \(D\geq\delta\), and choose \(n=D-\delta+1>0\). Every component of \(I^nM'\) has degree at least \(\delta+n=D+1\). The quotient \(M'\to M'/I^nM'\) is therefore injective on the direct sum of degrees at most \(D\). But this quotient factors as \[
+M'\longrightarrow M'\otimes_AA'
+ \longrightarrow M'\otimes_A(A/I^n)
+ \cong M'/I^nM',
+\] so the assumed zero tensor image forces \(x=0\), a contradiction.
+
+Applied to a homogeneous element of degree \(d\), this proof uses \(n=d-\delta+1\) and the module-degree bound \(e<\delta+n\). The source's coefficient bound \(e\leq n-1\) does not account for generator shifts. Replacing its module bound by \(e<\min(d_i)+n\), explicitly including degree \(d\), is the minimal report correction. If \(x=0\) the claim is immediate, so the nonempty generating family and positive \(n\) can be chosen as just described.
+
+It follows that injectivity of \(\varphi\) alone implies injectivity of \(M_d\to\lim_nG_{n,d}\): a homogeneous element with zero image has zero tensor image by that injectivity and hence is zero by the unit argument. The source's full isomorphism hypothesis is stronger than needed for this direction.
+
+For the surjectivity direction, the homogeneous coefficient construction is also exact without Noetherianity. Since \(I\subset A_+\), the degree-\(j\) part of \(A/I^n\) agrees with \(A_j\) for \(n>j\). An element \(f'\in A'\) therefore has a well-defined coefficient in every \(A_j\). These coefficients identify \(A'\) as a submodule of \(\prod_{j\geq0}A_j\): if all coefficients vanish, its image in each graded quotient \(A/I^n\) has every homogeneous component zero and is zero. Conversely no arbitrary infinite product is assumed to define an element of \(A'\). Every finite sum of actual homogeneous coefficients is in \(A\subset A'\); the latter inclusion is injective because a nonzero finite homogeneous sum cannot lie in all \(I^n\).
+
+Suppose only that \(\varphi\) is surjective and take \(y\in\lim_nG_{n,d}\). Lift it to a finite tensor sum \(\sum_i x_i\otimes f'_i\), splitting each \(x_i\) into homogeneous parts, with degrees \(d_i\). Put \(c_i=d-d_i\). If \(c_i\geq0\), decompose using the original coefficients \[
+f'_i=\sum_{0\leq j<c_i}f_{i,j}+f_i+g'_i,
+\quad f_{i,j}\in A_j,\quad f_i\in A_{c_i},
+\] where every coefficient of \(g'_i\) in degrees at most \(c_i\) is zero. If \(c_i<0\), take the finite lower sum and \(f_i\) to be zero and put \(g'_i=f'_i\). This handles the negative-degree boundary of the printed expression without inventing negative coefficients in \(A\).
+
+At every quotient level, a lower term \(f_{i,j}\varphi_n(x_i)\) has degree \(j+d_i<d\). The image of \(g'_i\) in \(A/I^n\) has only finitely many homogeneous components, all of degree greater than \(c_i\), or of nonnegative degree if \(c_i<0\). Multiplying by \(\varphi_n(x_i)\) therefore gives only degrees greater than \(d\). Consequently the degree-\(d\) component of the lifted tensor image is exactly \(\varphi_n(\sum_i f_ix_i)\) at every \(n\). Since \(y\) has degree \(d\) at every coordinate, \(\sum_i f_ix_i\in M_d\) maps to \(y\). Surjectivity of \(\varphi\) alone thus gives surjectivity on every degree. Together the two directions prove the source lemma and the separate stronger implications.
+
+The unit result concerns graded modules and is not purity on every ungraded module. For \(A=k[t]\), \(I=(t)\), the ungraded \(U=A/(t-1)\) is nonzero, but \(U\otimes_A k[[t]]=k[[t]]/(t-1)=0\), since \(t-1\) has inverse \(-\sum_{n\geq0}t^n\). This example prevents an unsupported propagation to the pure-descent results elsewhere. Likewise the finite tensor lift in the surjectivity proof is essential; no identification of an arbitrary tensor product with an unrestricted product of homogeneous pieces is used.
+
+The strengthened algebraization and degreewise implications are linked to their exact source passages in the claim ledger. They preserve all original generator degrees and completion maps. Later source review must check whether these consequences already appear elsewhere before any broader classification or novelty assessment. The combined-results synthesis remains after the core correction work.

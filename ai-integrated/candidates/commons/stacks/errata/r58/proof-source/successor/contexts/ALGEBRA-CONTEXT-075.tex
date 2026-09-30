@@ -1,0 +1,51 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-closure-localize}
+Integral closure commutes with localization: If $A \to B$ is a ring
+map, and $S \subset A$ is a multiplicative subset, then the integral
+closure of $S^{-1}A$ in $S^{-1}B$ is $S^{-1}B'$, where $B' \subset B$
+is the integral closure of $A$ in $B$.
+\end{lemma}
+
+\begin{proof}
+Since localization is exact we see that $S^{-1}B' \subset S^{-1}B$.
+Suppose $x \in B'$ and $f \in S$. Then
+$x^d + \sum_{i = 1, \ldots, d} a_i x^{d - i} = 0$
+in $B$ for some $a_i \in A$. Hence also
+$$
+(x/f)^d + \sum\nolimits_{i = 1, \ldots, d} a_i/f^i (x/f)^{d - i} = 0
+$$
+in $S^{-1}B$. In this way we see that $S^{-1}B'$ is contained in
+the integral closure of $S^{-1}A$ in $S^{-1}B$. Conversely, suppose
+that $x/f \in S^{-1}B$ is integral over $S^{-1}A$. Choosing a monic equation of positive degree, we have
+$$
+(x/f)^d + \sum\nolimits_{i = 1, \ldots, d} (a_i/f_i) (x/f)^{d - i} = 0
+$$
+in $S^{-1}B$ for the original $a_i\in A$ and $f_i\in S$.
+Put $F=\prod_{j=1}^d f_j\in S$ and define the actual element of $B$
+$$
+H=Fx^d+\sum_{i=1}^d a_i f^i
+\left(\prod_{j\ne i}f_j\right)x^{d-i},
+$$
+where all coefficients from $A$ act through the given map $A\to B$.
+Multiplying the original equality by $f^dF$ shows that $H/1=0$
+in $S^{-1}B$. Therefore there is $f'\in S$ with $f'H=0$ in $B$.
+No injectivity of $B\to S^{-1}B$ is assumed. Multiplying this
+last equality by $(f')^{d-1}F^{d-1}$ gives exactly
+$$
+(f'Fx)^d+
+\sum_{i=1}^d f^i(f')^i
+\left(f_i^{i-1}\prod_{j\ne i}f_j^i\right)a_i
+(f'Fx)^{d-i}=0.
+$$
+Indeed every term equals its original term in $H$ multiplied by
+$(f')^dF^{d-1}$, with no denominator remaining. This is a monic
+equation for the original scaled element $y=f'Fx$, so $y\in B'$.
+The equality of fractions
+$$
+x/f=y/(ff'F)
+$$
+holds in $S^{-1}B$ by multiplying numerator and denominator by
+$f'F\in S$. The right side is the image of an element of
+$S^{-1}B'$, proving the reverse inclusion with all original
+denominators and the annihilating factor $f'$ retained.
+\end{proof}

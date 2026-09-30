@@ -1,0 +1,68 @@
+\begin{example}
+\label{editorial-source-example-noetherian-topology-on-spec}
+\begin{reference}
+Comment by Lukas Heger of November 12, 2020.
+\end{reference}
+Let $R$ be a ring and $X = \Spec(R)$. Since closed subsets of $X$ correspond to
+radical ideals of $R$ (Lemma \ref{editorial-source-lemma-Zariski-topology}) we see that $X$ is a
+Noetherian topological space if and only if we have ACC for radical ideals.
+This holds if and only if every radical ideal is the radical of a finitely
+generated ideal. For completeness, under ACC the set of radicals
+of finitely generated subideals of a radical ideal $K$ has a maximal
+member $\sqrt{F}$. Otherwise successive strict enlargements would
+give an infinite ascending chain. For every $x\in K$ the ideal
+$\sqrt{F+(x)}$ is another such member containing $\sqrt F$,
+so maximality gives $x\in\sqrt F$ and hence $K=\sqrt F$.
+Conversely, the union $K$ of an ascending sequence of radical ideals
+$K_1\subset K_2\subset\cdots$ is radical: if a power of an element
+lies in the union, it lies in one $K_i$, which then contains the element.
+Write $K=\sqrt{(f_1,\ldots,f_n)}$. Each $f_j$ belongs to some
+$K_i$, and a single $K_N$ contains all of them. Therefore
+$K=\sqrt{(f_1,\ldots,f_n)}\subset K_N\subset K$, so the sequence
+stabilizes. This proves ACC. Let
+$$
+\mathcal{F} = \{I \subset R \mid
+\sqrt{I} = \sqrt{(f_1, \ldots, f_n)}\text{ for some }n
+\text{ and }f_1, \ldots, f_n \in R\}.
+$$
+We now prove that $\mathcal F$ is an Oka family. First, $R\in\mathcal F$
+using the generator $1$. For any $I$ and $a$, the product
+$(I,a)(I:a)$ is contained in $I$. Conversely, for $x\in I$ we have
+$x\in(I,a)$ and $x\in(I:a)$, since $xa\in I$; hence
+$x^2\in(I,a)(I:a)$. These two containments prove the identity
+$$
+\sqrt{I} = \sqrt{(I, a)(I : a)}
+$$
+for every ideal $I\subset R$ and element $a\in R$.
+If $\sqrt{(I,a)}=\sqrt{(f_1,\ldots,f_r)}$ and
+$\sqrt{(I:a)}=\sqrt{(g_1,\ldots,g_s)}$, it follows that
+$$
+\sqrt I=\sqrt{(f_i g_j\mid 1\leq i\leq r,\ 1\leq j\leq s)}.
+$$
+Indeed, a prime contains a product of two ideals if and only if it
+contains one of them, and replacing each ideal by another with the
+same radical preserves precisely those primes. The radical is the
+intersection of its containing primes by Lemma \ref{editorial-source-lemma-Zariski-topology}.
+The displayed finite set of products therefore proves the Oka condition.
+If the complement of $\mathcal F$ is nonempty, choose an ideal
+in it as an upper bound for the empty chain. On the other hand,
+if we have a nonempty totally ordered chain of ideals
+$\{I_\alpha\}$ none of which are in $\mathcal{F}$, then the union
+$I = \bigcup I_\alpha$ cannot be in $\mathcal{F}$ either. Otherwise
+$\sqrt{I} = \sqrt{(f_1, \ldots, f_n)}$, then $f_i^e \in I$ for some $e$,
+then $f_i^e \in I_\alpha$ for some $\alpha$ independent of $i$, then
+$\sqrt{I_\alpha} = \sqrt{(f_1, \ldots, f_n)}$, contradiction.
+Thus if the set of ideals not in $\mathcal{F}$ is nonempty, then it
+has maximal elements and
+exactly as in Lemma \ref{editorial-source-lemma-cohen} we conclude that $X$ is a
+Noetherian topological space if and only if every prime ideal of $R$
+is equal to $\sqrt{(f_1, \ldots, f_n)}$ for some $f_1, \ldots, f_n \in R$.
+In detail, if every prime belongs to $\mathcal F$ but its complement
+were nonempty, the chain argument and Zorn's lemma would give a maximal
+excluded ideal, which is prime by Proposition \ref{algebra-proposition-oka},
+a contradiction. Thus every ideal belongs to $\mathcal F$, giving
+ACC for radical ideals by the equivalence just proved.
+Conversely, ACC gives the finite radical presentation of every radical
+ideal, in particular every prime. This proves the stated criterion
+for the spectrum to be Noetherian.
+\end{example}

@@ -1,0 +1,24 @@
+\begin{lemma}
+\label{editorial-source-lemma-minimal-polynomial-normal-domain}
+Let $R \subset S$ be an inclusion of domains.
+Assume $R$ is normal. Let $g \in S$ be integral
+over $R$. Then the minimal polynomial of $g$
+has coefficients in $R$.
+\end{lemma}
+
+\begin{proof}
+The original inclusion $R\subset S$ of domains gives an
+injective map $K=\operatorname{Frac}(R)\to\operatorname{Frac}(S)$,
+sending $a/b$ to the same fraction; denominators stay nonzero,
+and equality of fractions is preserved in both directions by
+cross multiplication. Regard $g$ in this fixed extension field.
+Choose its original monic equation
+$P=x^m+\sum_{i=0}^{m-1}b_ix^i\in R[x]$, with $P(g)=0$,
+and its monic minimal polynomial
+$Q=x^n+\sum_{j=0}^{n-1}a_jx^j\in K[x]$.
+Division in $K[x]$ gives $P=QC+D$ with $\deg D<n$ or $D=0$.
+Evaluation at $g$ gives $D(g)=0$, so minimality forces $D=0$.
+Part (1) of Lemma \ref{editorial-source-lemma-polynomials-divide} makes every
+$a_j$ integral over $R$. Each already belongs to the original
+$K$, so normality gives $a_j\in R$.
+\end{proof}

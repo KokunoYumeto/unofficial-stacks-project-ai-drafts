@@ -1,0 +1,1358 @@
+{
+  "schema": "stacks-r58-completed-evidence-transport/v1",
+  "scope": "Location-only redaction. All original source, artifact and receipt hashes in transported records are preserved. Resolve an original receipt hash through this table to its public_file and public_sha256. All numeric, mathematical, diagnostic and review data are unchanged.",
+  "location_aliases": {
+    "@candidate": "This candidate directory",
+    "@build": "Original attempt-16 build directory; its receipts are in builds/attempt-16",
+    "@control": "Private control directory; exact artifact identities retained",
+    "@repository": "Repository worktree",
+    "@continuity": "Private task continuity directory",
+    "@home": "Original machine home directory"
+  },
+  "files": [
+    {
+      "source_locator": "@control/R58_FINAL_SOURCE_AUDIT_20260930.json",
+      "source_sha256": "EBE8A11972F57B5C51E6E329063F0E2D5719FFD3B5B582DA16639645D0D59B01",
+      "public_file": "evidence/completed/FINAL_SOURCE_AUDIT.json",
+      "public_sha256": "EBE8A11972F57B5C51E6E329063F0E2D5719FFD3B5B582DA16639645D0D59B01",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/BUILD_RECEIPT.json",
+      "source_sha256": "C1FF2F884C0EC5A03983703185178D613F293900F98546740E8ABEC3506B282B",
+      "public_file": "builds/attempt-16/BUILD_RECEIPT.json",
+      "public_sha256": "C1FF2F884C0EC5A03983703185178D613F293900F98546740E8ABEC3506B282B",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/prior-algebra-tex-1-capture.json",
+      "source_sha256": "81B98EE3D057A3474D4E195641606D91D26A63A350CCD575B9162705F9D537E9",
+      "public_file": "builds/attempt-16/prior-algebra-tex-1-capture.json",
+      "public_sha256": "D6A7B5B511E12CDF181316F30FF81E811E4F25D53AA16E53159687185FEDC323",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "F4D9B48391AA9D278612BA796DAFE4B7F00B37BC7A5698D93FC6CF17F3058330",
+          "public_value": "@build\\prior"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/prior-algebra-bibtex-capture.json",
+      "source_sha256": "09E05ADBB34F65D18AF6DDD496E64ECC3162151343C3B165275755F215ED64E8",
+      "public_file": "builds/attempt-16/prior-algebra-bibtex-capture.json",
+      "public_sha256": "36AC4C8ABB0E46B22B2C2A3A0A03170C9696E99551825C3CBAE1FC2C5376757B",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "D95F1FFE45266F559ED59DCFF9FB8BAD6893307A66B42D268648AE71DE5EE7A2",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "700C806DB0A9194738669E77EEEF9B4D05C4B1CF92F6D5AD3546130E80E49289",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "F4D9B48391AA9D278612BA796DAFE4B7F00B37BC7A5698D93FC6CF17F3058330",
+          "public_value": "@build\\prior"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/prior-algebra-tex-2-capture.json",
+      "source_sha256": "E5643B8DB80F426B1A77BED0156F9CF6AA5DC57C17088ED29EC6CEB1EA127A3B",
+      "public_file": "builds/attempt-16/prior-algebra-tex-2-capture.json",
+      "public_sha256": "72F9CC4657040209C797B13AB85D0AE96C5E4A4928C9725E7813B3F80633E015",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "F4D9B48391AA9D278612BA796DAFE4B7F00B37BC7A5698D93FC6CF17F3058330",
+          "public_value": "@build\\prior"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/prior-algebra-tex-3-capture.json",
+      "source_sha256": "DAD5120D6E4D7155089FEE5DF49007ABB1B71E704B137B205010E87211D0066B",
+      "public_file": "builds/attempt-16/prior-algebra-tex-3-capture.json",
+      "public_sha256": "576A43343B9E70E0560D17ECE50BA2D2BA0351B845BF01F099789E1CB3586E85",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "F4D9B48391AA9D278612BA796DAFE4B7F00B37BC7A5698D93FC6CF17F3058330",
+          "public_value": "@build\\prior"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/prior-algebra-tex-4-capture.json",
+      "source_sha256": "7233023A2158A9E95EF9CFFC13EC128EA35AD73F2052DC60AC6A2AAC8F3D0B61",
+      "public_file": "builds/attempt-16/prior-algebra-tex-4-capture.json",
+      "public_sha256": "672735BBC42D785193A3A40D11C0B7BA8593B101247D4399B8DB29B45845BB14",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "F4D9B48391AA9D278612BA796DAFE4B7F00B37BC7A5698D93FC6CF17F3058330",
+          "public_value": "@build\\prior"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-tex-1-capture.json",
+      "source_sha256": "50E92052657634B8B79769DD29FB9A23F4AFE035C498C1FCE7EBAD65104F3419",
+      "public_file": "builds/attempt-16/a-algebra-tex-1-capture.json",
+      "public_sha256": "C75F69752081D5BCF4216D433A0DEED8C60BE31187B8A6D7A945227257471E52",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-bibtex-capture.json",
+      "source_sha256": "568811B5DF033160EC9C0D3A86557F823D5804155758EC3428F5C5082A5C484D",
+      "public_file": "builds/attempt-16/a-algebra-bibtex-capture.json",
+      "public_sha256": "52107B249D1634FEBA52D10DFD45ACB425E1F1631764DDBD18CB7B6CB2A6E703",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "D95F1FFE45266F559ED59DCFF9FB8BAD6893307A66B42D268648AE71DE5EE7A2",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "700C806DB0A9194738669E77EEEF9B4D05C4B1CF92F6D5AD3546130E80E49289",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-tex-2-capture.json",
+      "source_sha256": "FE74E21FA0A774ED0D8751BDF3DA7AFD0559349355A4FBFA55B9EC91DFBB945E",
+      "public_file": "builds/attempt-16/a-algebra-tex-2-capture.json",
+      "public_sha256": "4028A55C7462F3486ADC84A7D2201489B29E9862DD996F28644971A6AE541C79",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-tex-3-capture.json",
+      "source_sha256": "F9A2BB2B463D01C1A09D47F36A255533748752E58EE2B34D4BC3C11B99BCE635",
+      "public_file": "builds/attempt-16/a-algebra-tex-3-capture.json",
+      "public_sha256": "B869FBDD434AA2AA1FD2BC61462DB200BEDA82498F3161C105C6597F316C76D0",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-tex-4-capture.json",
+      "source_sha256": "29DC5FD340A3BA5A6A5772459D436C9C80AEB7A8FA0001E48BB2818EF7FF879B",
+      "public_file": "builds/attempt-16/a-algebra-tex-4-capture.json",
+      "public_sha256": "54F5F7DA309216809584C22090CDA0B843A8565C33793A2B2959D15C8D5AAE0A",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-editorial-tex-1-capture.json",
+      "source_sha256": "097F5AAC9A42F34D8A7E1E6CEF6DCFB29CC749649242B1D37FA59BBB014899B1",
+      "public_file": "builds/attempt-16/a-algebra-editorial-tex-1-capture.json",
+      "public_sha256": "B22326089A755F9070182F3DEC2B958E9EB6F5ADCBD593DE0A5BA93DE1F2BDAA",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-editorial-bibtex-capture.json",
+      "source_sha256": "12E8AA55470E5A68652D98203C7F0DB6CF9C0E09CB9826941793F72142E5E67B",
+      "public_file": "builds/attempt-16/a-algebra-editorial-bibtex-capture.json",
+      "public_sha256": "4162328DE6D4166862D5F67788B72CE339240EFE7D8DF3BA4D23E55A3614AE38",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "D95F1FFE45266F559ED59DCFF9FB8BAD6893307A66B42D268648AE71DE5EE7A2",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "700C806DB0A9194738669E77EEEF9B4D05C4B1CF92F6D5AD3546130E80E49289",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-editorial-tex-2-capture.json",
+      "source_sha256": "1BBEC5C266588B054A22CDB2EA0024633244464E9D98A0AEF0F6A961EAAF1A35",
+      "public_file": "builds/attempt-16/a-algebra-editorial-tex-2-capture.json",
+      "public_sha256": "6ACFA820FA238F51DDFDB6E8109F087F10EC607D0D3F55009EFB1494B4DA2589",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-editorial-tex-3-capture.json",
+      "source_sha256": "535B055B406B707200BE26CEED041337A85A460D57087FCC9F3B1D20CBD4A544",
+      "public_file": "builds/attempt-16/a-algebra-editorial-tex-3-capture.json",
+      "public_sha256": "DB6F93FEB40BF90E0A14C04AA7E9B480384FC170DC279F4DC465FECBC4986F2B",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-editorial-tex-4-capture.json",
+      "source_sha256": "E2F2A2D44776F1FB57BD8ABD73DC649CB371E5FCDD9030ECB9A2A8E7F581D011",
+      "public_file": "builds/attempt-16/a-algebra-editorial-tex-4-capture.json",
+      "public_sha256": "18FB83B542B22BE9C559870422D164CEA49DF740493882DDE6C68273FA612739",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/a-algebra-editorial-tex-5-capture.json",
+      "source_sha256": "91F627AA56B67ADDA29823162B2BB11616F1D0C67045554B6EDFD34B0E9E04DD",
+      "public_file": "builds/attempt-16/a-algebra-editorial-tex-5-capture.json",
+      "public_sha256": "1BF6FFC0D4B2626BAB12AB17347FC92936EC87E99CF6DCA4B13C38927DC888AD",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "15BD91E92C393EF2DDD81C9A9FF01C74D27F6ECFA9FE767083E8E8716731E60B",
+          "public_value": "@build\\a"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-tex-1-capture.json",
+      "source_sha256": "1AF0325BA08FB9D5852F392A5260B4F8753D7BE0B5ED9D922CFF8B452CA431EF",
+      "public_file": "builds/attempt-16/b-algebra-tex-1-capture.json",
+      "public_sha256": "21B4C82131AEA20B5E505D9A283855ACE3ABD3CA33E270A7CE3FD32B7BD288F9",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-bibtex-capture.json",
+      "source_sha256": "BAE6FC935ABB33E9FAF3ECFDBCE2C2ADC304D04E6483A52DC64CAB89BDEDFE9F",
+      "public_file": "builds/attempt-16/b-algebra-bibtex-capture.json",
+      "public_sha256": "6192880D25C58674CC39A7DFDA3B8FE98C398C6246B0634E4890BE003001CD45",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "D95F1FFE45266F559ED59DCFF9FB8BAD6893307A66B42D268648AE71DE5EE7A2",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "700C806DB0A9194738669E77EEEF9B4D05C4B1CF92F6D5AD3546130E80E49289",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-tex-2-capture.json",
+      "source_sha256": "0B3B184EE8C6EDEF8AB2B3CE688FC6FC6D44201A870DDDB39E7943ED407BC812",
+      "public_file": "builds/attempt-16/b-algebra-tex-2-capture.json",
+      "public_sha256": "FA78FAE24C13095E513B1717DF7BA814A066430632D1433F9AC39E9F5AD72470",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-tex-3-capture.json",
+      "source_sha256": "E0EE0A0411D6D0A3B971319BA85DC0C1F85EDD9F81A5A4F2B45B063B5E4DC1F2",
+      "public_file": "builds/attempt-16/b-algebra-tex-3-capture.json",
+      "public_sha256": "433112A1E9BF3AED7B4E2A831D655251DFAC28D40EAED5751C1EBBDAC1F0614E",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-tex-4-capture.json",
+      "source_sha256": "165932BF87C7F101E4B1FE086A34CA490549B38E4E88AA3A1973DE0E2889BC73",
+      "public_file": "builds/attempt-16/b-algebra-tex-4-capture.json",
+      "public_sha256": "0D1CF97F16CC3AD8A84BEF2F4FEC71926ACED179108013C4FF267FDE94519F50",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "FF53694D0948C66577FAB66F22F3358DF4BEB8DA38E8362510DD19DC2A53A5EB",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "DE42D70A63CFE575749E46A37B27F22CB43E249B2E5C84468A0EB30F6005D504",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-editorial-tex-1-capture.json",
+      "source_sha256": "FFB16597BAEF991F6D439A51E2192FC877BAD17D636FEE3C7ECE805028152DA0",
+      "public_file": "builds/attempt-16/b-algebra-editorial-tex-1-capture.json",
+      "public_sha256": "B642056AB251FE4817C2D6239D1B99F2C881C0902C1ECD1BF7B2BCCFCBA7A22D",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-editorial-bibtex-capture.json",
+      "source_sha256": "3095FFEE20D151BE6CF96CB0F86A5EA987EDCE17B16706E3A7CCE621FCDD8183",
+      "public_file": "builds/attempt-16/b-algebra-editorial-bibtex-capture.json",
+      "public_sha256": "1DD92F7186AC1BD4C83081944B048C458EC205CF8CE39237A8BD7FEC80562918",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "D95F1FFE45266F559ED59DCFF9FB8BAD6893307A66B42D268648AE71DE5EE7A2",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "700C806DB0A9194738669E77EEEF9B4D05C4B1CF92F6D5AD3546130E80E49289",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\bibtex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-editorial-tex-2-capture.json",
+      "source_sha256": "E6DFCA4E7CA211E219314B743B0FF858B74C351DC4D8339BB63B28219CF1401C",
+      "public_file": "builds/attempt-16/b-algebra-editorial-tex-2-capture.json",
+      "public_sha256": "EF6ADA3D2B90DB19574B0926CB43475C959374F6B67278717EADF53B61A623A6",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-editorial-tex-3-capture.json",
+      "source_sha256": "01557320829BB2FE6200E4ABB90056767C1CFE3449A11F13FA0006D4041519CF",
+      "public_file": "builds/attempt-16/b-algebra-editorial-tex-3-capture.json",
+      "public_sha256": "0C2BB3B5C837A924DF17D45806513B7F56CE44C692C2551BDAAC3CF0C1EBF0D8",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-editorial-tex-4-capture.json",
+      "source_sha256": "0500C22CD0BD890E3D709F3AA54AE88778642755979B00CA84D2552E52D39910",
+      "public_file": "builds/attempt-16/b-algebra-editorial-tex-4-capture.json",
+      "public_sha256": "AB4EE7F6696FFCFD0ABC4FC13C5616F98D0061BCEE60BFFCBFF752E4E65F7D04",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PORTABLE_BUILD_20260929/attempt-16/b-algebra-editorial-tex-5-capture.json",
+      "source_sha256": "B54292033DC6F9BCA676F1CBEB16CFB47ACA6CAA151E2EDF21567734342807D7",
+      "public_file": "builds/attempt-16/b-algebra-editorial-tex-5-capture.json",
+      "public_sha256": "3BAC5C43F9E3C11E46563CC306CF49515E82AF35C50D458DED11499FB3D00E31",
+      "location_changes": [
+        {
+          "pointer": "/command/0",
+          "original_value_sha256": "5891F46C7ED49F9438E938F88FD9A735C590CD7DA63AF97069BF85FF174B080E",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE"
+        },
+        {
+          "pointer": "/resolved_executable",
+          "original_value_sha256": "D0EE06F3B14255C5FACD0AA2CE5086854AECB9F289AE1A17F1E210BEC362B954",
+          "public_value": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe"
+        },
+        {
+          "pointer": "/cwd",
+          "original_value_sha256": "7063D7AB41BD27C7DE68F5C5CF01DEF41B8E3907D8826A83346B53831983A002",
+          "public_value": "@build\\b"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_001.json",
+      "source_sha256": "D4398A81E4AF6966C4C1A25C06C8F6E90D64DB14C0ECC9436E01DBE46905802C",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_001.json",
+      "public_sha256": "D4398A81E4AF6966C4C1A25C06C8F6E90D64DB14C0ECC9436E01DBE46905802C",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_002.json",
+      "source_sha256": "E7AC5BB27F83ED41EAE3E18EDBE837AB6ED90DC4E9278922A70B70A061D4380B",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_002.json",
+      "public_sha256": "E7AC5BB27F83ED41EAE3E18EDBE837AB6ED90DC4E9278922A70B70A061D4380B",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_003.json",
+      "source_sha256": "83D20D9FD2F87412502857C40D6A226549DA7D40FB62BEE8A759926DFA9EE6E0",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_003.json",
+      "public_sha256": "83D20D9FD2F87412502857C40D6A226549DA7D40FB62BEE8A759926DFA9EE6E0",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_004.json",
+      "source_sha256": "D73380F6D6C7C0D2D28AFB2A83354566F14B8E47E65CD3F8A23A3C30FC29CA10",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_004.json",
+      "public_sha256": "D73380F6D6C7C0D2D28AFB2A83354566F14B8E47E65CD3F8A23A3C30FC29CA10",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_005.json",
+      "source_sha256": "54A526D05095C0B1778FA2E569A9502DFEC6EF4F68CAFF1A075F90115F293D6E",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_005.json",
+      "public_sha256": "54A526D05095C0B1778FA2E569A9502DFEC6EF4F68CAFF1A075F90115F293D6E",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_006.json",
+      "source_sha256": "FB36061A3C85F6B16579159231316CDAB94FD61AA295DF80A63AC3B0AE199435",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_006.json",
+      "public_sha256": "FB36061A3C85F6B16579159231316CDAB94FD61AA295DF80A63AC3B0AE199435",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_007.json",
+      "source_sha256": "7B269953624B043D943CC7E9675F576EA33C18FD2AB96A69BAB6DBAA249130C7",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_007.json",
+      "public_sha256": "7B269953624B043D943CC7E9675F576EA33C18FD2AB96A69BAB6DBAA249130C7",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_008.json",
+      "source_sha256": "CECA962886C1E21FD84733245DE20CD4FEC7377C68A0930A7185CE1F498D40E5",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_008.json",
+      "public_sha256": "CECA962886C1E21FD84733245DE20CD4FEC7377C68A0930A7185CE1F498D40E5",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_009.json",
+      "source_sha256": "FE315BA51E1890671A2DB9F36F332560EF938DB496E7D47868E7FA46FDA09571",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_009.json",
+      "public_sha256": "FE315BA51E1890671A2DB9F36F332560EF938DB496E7D47868E7FA46FDA09571",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_010.json",
+      "source_sha256": "4C90C3C77F32E78DC3FE2D91EF8B4B7DC9776A6C1D63B46CD5EEC41D6B578671",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_010.json",
+      "public_sha256": "4C90C3C77F32E78DC3FE2D91EF8B4B7DC9776A6C1D63B46CD5EEC41D6B578671",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_011.json",
+      "source_sha256": "CB0B38E6ED066EA4509173090ABC33CDDCFCCBB8AB0A9CE4D7397A94464518C9",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_011.json",
+      "public_sha256": "CB0B38E6ED066EA4509173090ABC33CDDCFCCBB8AB0A9CE4D7397A94464518C9",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_012.json",
+      "source_sha256": "FF7C9F24AB9A91BCEA38CD21ED21309FC68164727D278C17DCFEDAA1AAB523A0",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_012.json",
+      "public_sha256": "FF7C9F24AB9A91BCEA38CD21ED21309FC68164727D278C17DCFEDAA1AAB523A0",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/ACTUAL_REVIEW_013.json",
+      "source_sha256": "BE13AFD7D5DC551C0FB9DABDC1343B6C9E3AFEF382EB49044C061C6C1C8D0BD7",
+      "public_file": "visual/chapter/ACTUAL_REVIEW_013.json",
+      "public_sha256": "BE13AFD7D5DC551C0FB9DABDC1343B6C9E3AFEF382EB49044C061C6C1C8D0BD7",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/CHAPTER_VISUAL_ACCEPTANCE.json",
+      "source_sha256": "2A2EC4A0DD761086E0D201267492C005C0B5DD7B5B1731F630E5383DB1351C69",
+      "public_file": "visual/chapter/CHAPTER_VISUAL_ACCEPTANCE.json",
+      "public_sha256": "7AE3C2E3AF786B1BF494B343D173172751043AC4BF042AC167AD6B2F42E1498D",
+      "location_changes": [
+        {
+          "pointer": "/warning_review/file",
+          "original_value_sha256": "D6971474EEEC9FF88EC42F3C7D29402430CAD020A61AF3566A92B3825259D044",
+          "public_value": "@control\\ALGEBRA_CORRECTED_LAYOUT_REVIEW_20260930\\VISUAL_REVIEW.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/MAPPED_VISUALS.json",
+      "source_sha256": "C2C2CE27522A2CF6BEB0B0DA9884E79788B2CB751118825B8BE2CD4E11E4807F",
+      "public_file": "visual/chapter/MAPPED_VISUALS.json",
+      "public_sha256": "C2C2CE27522A2CF6BEB0B0DA9884E79788B2CB751118825B8BE2CD4E11E4807F",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_OPERATION_VISUAL_REVIEW_20260930/band-sheets/SHEETS.json",
+      "source_sha256": "307BEF16142D25B1C85985ACA5E6BDA0758FB082E2DD08E192C88F4273AA1CF2",
+      "public_file": "visual/chapter/band-sheets/SHEETS.json",
+      "public_sha256": "307BEF16142D25B1C85985ACA5E6BDA0758FB082E2DD08E192C88F4273AA1CF2",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_001.json",
+      "source_sha256": "43A536D4F6766E8E6B649D0568968727F6130F750436294973F8326F993E1105",
+      "public_file": "visual/companion/ACTUAL_REVIEW_001.json",
+      "public_sha256": "FE7B09A5A8152231390FB08879624872A800DA41E3D6F9FB34A68D919030B763",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_002.json",
+      "source_sha256": "2346E461CE2802BE3C55507F4C8D1AA88ED0E02BACFC512682196ECE613B10EB",
+      "public_file": "visual/companion/ACTUAL_REVIEW_002.json",
+      "public_sha256": "7D96B960943A75398E149EB0AA3D222E733217CF7B50001975F6E84C317C53D1",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_003.json",
+      "source_sha256": "7BAE60252AEF3A7507E814B5550014D00F650A1985A39E0AC045130C99710BDA",
+      "public_file": "visual/companion/ACTUAL_REVIEW_003.json",
+      "public_sha256": "E6964ADBF4B87DABE3D24320672978CF881A6DA9A72FFBB547C14396FAC5AF44",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_004.json",
+      "source_sha256": "A577BA36CDCF9D3B8097C00B195DBD059748B187DE47CC8C3D41F79F8AFAE651",
+      "public_file": "visual/companion/ACTUAL_REVIEW_004.json",
+      "public_sha256": "DCFCCF0A674C94974CB01B4C0EDD8FF0812A301C9C021AF6D4BD47CC4AE06845",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_005.json",
+      "source_sha256": "921A41FDE14734480BF3065B1F91F7C12633EA11FBFD8C2B9168889274A0AEF4",
+      "public_file": "visual/companion/ACTUAL_REVIEW_005.json",
+      "public_sha256": "C7546495B312B5E216A36031F2DDBE6D2CD871CA8BA7A24EA0937405B09AC6E7",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_006.json",
+      "source_sha256": "EA1E4F124401EB27F247A6757ED2C32C3FC2E35049C3354034A2645F6D9AFB00",
+      "public_file": "visual/companion/ACTUAL_REVIEW_006.json",
+      "public_sha256": "8A9378FB6FA94C00E33A622DC48ABF2D5B253FB3D1947B2029B7C3A14E2F5C0D",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_007.json",
+      "source_sha256": "F83FE104ED607E6BA3DD5C971B5AA4CF2FDDD4EB2F64F6AA2D1873BEB41258C6",
+      "public_file": "visual/companion/ACTUAL_REVIEW_007.json",
+      "public_sha256": "670294E186B27AFC970CEE70856283CD7FF1755EAEC4911DFD83530F5FE43570",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_008.json",
+      "source_sha256": "7AFC6053AAE748178C0C3645C86C593EA3647991E20793B1A95D2D9FB2B0A8D5",
+      "public_file": "visual/companion/ACTUAL_REVIEW_008.json",
+      "public_sha256": "78DC5F5F03196FD8D99A8FDB35742FB50A7501640EEFACE4A1EBF6DABB9F86A6",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_009.json",
+      "source_sha256": "746757AA17AF4FA535E15D9F5448D84BE8BEAFB534716027B6DD8E1F3998977D",
+      "public_file": "visual/companion/ACTUAL_REVIEW_009.json",
+      "public_sha256": "EC7219CF7F16753AC5875D2102756A52F5C28C20CC80C49195479C1751D0C3CC",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_010.json",
+      "source_sha256": "BC19F7271CF2F46FC1C2B115443397916640DF23329511E046658F22DBC66F30",
+      "public_file": "visual/companion/ACTUAL_REVIEW_010.json",
+      "public_sha256": "C317531FE90EF5FD8F32EAB784FD7BA0D42D8E4EEB214AE7A4412826F7221C77",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_011.json",
+      "source_sha256": "18404DC5A7FFD300A80DDE45A750FE85267DF978ACD8DA115C32516A2C91F95F",
+      "public_file": "visual/companion/ACTUAL_REVIEW_011.json",
+      "public_sha256": "0E487B9310A1FADCCC7DD08AADC736875657E518B6FE0F4E9C68C62189377403",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_012.json",
+      "source_sha256": "1C51997B2525BDC8837F21A812C010909ACEE46BCCCE1F0004B2046ED56683AD",
+      "public_file": "visual/companion/ACTUAL_REVIEW_012.json",
+      "public_sha256": "71B30D5324AA3B215446C21F3C59A020820BF22D3D8B1410EC5B61E3BD04721C",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_013.json",
+      "source_sha256": "A1F39DDAFD9B2A786745C652D9A4EF61586EFB187DED79A2F9AF7F2EBE3BC2A3",
+      "public_file": "visual/companion/ACTUAL_REVIEW_013.json",
+      "public_sha256": "35F2CC7450985EA2E6FB473BF55D8A27980283CC39A1CCC163B5C58B5FD16081",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_014.json",
+      "source_sha256": "582D38EC0835B467D5C312511534BBD82F46778521A116EFA4ECD1E5B96BC654",
+      "public_file": "visual/companion/ACTUAL_REVIEW_014.json",
+      "public_sha256": "F0D3475C47D604F91118FC1B0B5FE0B9FC022E70A0D250E0FA88FA65B0308D86",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/ACTUAL_REVIEW_015.json",
+      "source_sha256": "8F2056E048DD8CFDECCE2E938B16BAD694F3D1BD0B235A19B9A6574F76011DCD",
+      "public_file": "visual/companion/ACTUAL_REVIEW_015.json",
+      "public_sha256": "34E9D80D986F70FCAD37C1E818497B65BBF096CD103A29E71D21FEC2D74E658B",
+      "location_changes": [
+        {
+          "pointer": "/prior_warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/prior_warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/COMPANION_VISUAL_ACCEPTANCE.json",
+      "source_sha256": "58EC0D3A11D3026D4ECD7F7E8F08D0D286364860C89890118BAA26F925415D5A",
+      "public_file": "visual/companion/COMPANION_VISUAL_ACCEPTANCE.json",
+      "public_sha256": "ABF838EBC835B9B10E953E4192941321893FF3236E9E5910EAADC111EF36888E",
+      "location_changes": [
+        {
+          "pointer": "/warning_review_receipts/0/file",
+          "original_value_sha256": "BB0C8ED7F95DEB6B95DA2750FB8F58691ECCDE0E4AA86F7153FAC4EAC5A48311",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_001.json"
+        },
+        {
+          "pointer": "/warning_review_receipts/1/file",
+          "original_value_sha256": "405C4D0E724CB536CB377CACE100AA81658C9F93021BBC64E20830AE51E19F0B",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_002.json"
+        },
+        {
+          "pointer": "/warning_review_receipts/2/file",
+          "original_value_sha256": "C65D768DE159A706486D4CB8EC0D4BEDB4B5D42CA0796301AC6BD683019A3F78",
+          "public_value": "@control\\ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930\\ACTUAL_REVIEW_003.json"
+        },
+        {
+          "pointer": "/chapter_visual_acceptance/file",
+          "original_value_sha256": "97913F06AE6C43BEEB69B9384455085AA19344F91F87B0D13F08762F70410EB5",
+          "public_value": "@control\\ALGEBRA_OPERATION_VISUAL_REVIEW_20260930\\CHAPTER_VISUAL_ACCEPTANCE.json"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_COMPANION_PAGE_REVIEW_20260930/RENDER_MANIFEST.json",
+      "source_sha256": "8F07A555361C9EAB188898034108DCA904134F0C326110DCE0D0357D7551F5F9",
+      "public_file": "visual/companion/RENDER_MANIFEST.json",
+      "public_sha256": "C42A63035545F7C50C72DA97DA970327BE3D845EEF16EDB4DFF9B6EA5A35E135",
+      "location_changes": [
+        {
+          "pointer": "/source_pdf",
+          "original_value_sha256": "19ED9A4D2CC1003AC1ED53F01DC3D9DBE52A6DEA392536D07D4F66BBA1CA02C0",
+          "public_value": "@build\\a\\algebra-editorial.pdf"
+        }
+      ],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930/ACTUAL_REVIEW_001.json",
+      "source_sha256": "27D17CF7C891367897DD1F7AF804E339CECA514F17D31827EF9E5E49A8E8F0A0",
+      "public_file": "visual/companion-warnings/ACTUAL_REVIEW_001.json",
+      "public_sha256": "27D17CF7C891367897DD1F7AF804E339CECA514F17D31827EF9E5E49A8E8F0A0",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930/ACTUAL_REVIEW_002.json",
+      "source_sha256": "6117E1B044457DF29AE747C422A23B4FB25E057003C2206E8FFE40098533303A",
+      "public_file": "visual/companion-warnings/ACTUAL_REVIEW_002.json",
+      "public_sha256": "6117E1B044457DF29AE747C422A23B4FB25E057003C2206E8FFE40098533303A",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930/ACTUAL_REVIEW_003.json",
+      "source_sha256": "4170CAF554A6B5C3D8C458910EDA662BC55487D66F8E298682ABD7C7E4E68E63",
+      "public_file": "visual/companion-warnings/ACTUAL_REVIEW_003.json",
+      "public_sha256": "4170CAF554A6B5C3D8C458910EDA662BC55487D66F8E298682ABD7C7E4E68E63",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930/BOUNDARY_LOCATOR_REPAIR.json",
+      "source_sha256": "1959912D2AE0AB32D2C5141894BE1B3EAC65FBE70C54EECD6F734CD396D90EE6",
+      "public_file": "visual/companion-warnings/BOUNDARY_LOCATOR_REPAIR.json",
+      "public_sha256": "1959912D2AE0AB32D2C5141894BE1B3EAC65FBE70C54EECD6F734CD396D90EE6",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_WIDTH_LAYOUT_REVIEW_20260930/RENDER_MANIFEST.json",
+      "source_sha256": "3E080E11A3E1260452CA006293EAD6089660131FF6C9E96A374A41534280F24A",
+      "public_file": "visual/companion-warnings/RENDER_MANIFEST.json",
+      "public_sha256": "3E080E11A3E1260452CA006293EAD6089660131FF6C9E96A374A41534280F24A",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_CORRECTED_LAYOUT_REVIEW_20260930/RENDER_MANIFEST.json",
+      "source_sha256": "905B99AF254FE531B683B55F2EF731F4C3A2EA4093372C09C03244F79DCACA78",
+      "public_file": "visual/chapter-warnings/RENDER_MANIFEST.json",
+      "public_sha256": "905B99AF254FE531B683B55F2EF731F4C3A2EA4093372C09C03244F79DCACA78",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_CORRECTED_LAYOUT_REVIEW_20260930/VISUAL_REVIEW.json",
+      "source_sha256": "565931339A86CDF94BBD7FB6FAF9FA06DAF02AC0B3E043CA239262017BFF34E4",
+      "public_file": "visual/chapter-warnings/VISUAL_REVIEW.json",
+      "public_sha256": "565931339A86CDF94BBD7FB6FAF9FA06DAF02AC0B3E043CA239262017BFF34E4",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PRIOR_LAYOUT_REVIEW_20260930/RENDER_MANIFEST.json",
+      "source_sha256": "38BB1A65401036CBCA30EB85AE7227D8331F71AA6F4AE2501A151E711ACFD19D",
+      "public_file": "visual/prior-warnings/RENDER_MANIFEST.json",
+      "public_sha256": "38BB1A65401036CBCA30EB85AE7227D8331F71AA6F4AE2501A151E711ACFD19D",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    },
+    {
+      "source_locator": "@control/ALGEBRA_PRIOR_LAYOUT_REVIEW_20260930/VISUAL_REVIEW.json",
+      "source_sha256": "F24B29DF57758ACDEC72EF0246FFFEDD7BDF6BFAC0C5D976C2001FC5F71636DB",
+      "public_file": "visual/prior-warnings/VISUAL_REVIEW.json",
+      "public_sha256": "F24B29DF57758ACDEC72EF0246FFFEDD7BDF6BFAC0C5D976C2001FC5F71636DB",
+      "location_changes": [],
+      "inverse_recovers_original_json": true,
+      "original_bytes_retained_locally": true
+    }
+  ]
+}
