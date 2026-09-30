@@ -21,8 +21,8 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R59 and three Verdier insertions**: 62
-admitted overlays with 2,248 stable units (2,206 correction IDs and 42 Verdier
+The cumulative source includes **R1–R60 and three Verdier insertions**: 63
+admitted overlays with 2,283 stable units (2,241 correction IDs and 42 Verdier
 units). Admission and source composition are separate checks. The
 [R59 successor receipt](../validation/r59-successor-current.json) binds five
 findings and thirteen edits in Examples, More on Algebra and Brauer Groups. The
@@ -85,8 +85,18 @@ the complete editorial supplement and editable sources](candidates/commons/stack
 retain the original passages and complete derivations. The stronger Schur and
 bicommutant statements are editorial consequences. No resolution of the
 separately received open Brauer problem is claimed.
-R49–R59 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58/R59 review, source
+R60 records 35 units and 43 edits in Homology and its dependent passages in
+More on Algebra, Weil Cohomology Theories and Cohomology on Sites. All 136
+received Homology reports have individual dispositions. The
+[four corrected chapters, complete 55-page editorial supplement and editable sources](candidates/commons/stacks/errata/r60/README.md)
+retain eleven proved editorial underclaims and the correction propagation.
+The corrections-only download excludes the explicitly labelled Kunneth proof
+completion and exports the other 34 units / 42 edits. The
+[R60 successor receipt](../validation/r60-successor-current.json) and
+[reviewed history](../validation/r60-reviewed-publication-history.json) bind the
+separate transitions; incoming Illusie drafts remain queued outside this release.
+R49–R60 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58/R59/R60 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

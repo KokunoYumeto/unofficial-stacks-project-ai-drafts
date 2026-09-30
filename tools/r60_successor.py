@@ -19,6 +19,7 @@ OVERLAYS = 'ai-integrated/registry/overlays.json'
 LEASES = 'ai-integrated/registry/leases.json'
 ADMISSION = 'validation/r60-admission-2026-09-30.json'
 COMPOSITION = 'validation/r60-source-composition-2026-09-30.json'
+HISTORY = 'validation/r60-reviewed-publication-history.json'
 
 
 def require(condition, message):
@@ -38,8 +39,25 @@ def git(*args):
     return subprocess.check_output(['git', '-C', str(ROOT), *args])
 
 
+def evidence_commit(ref):
+    path = ROOT/HISTORY
+    if not path.exists():
+        return ref
+    history = json.loads(path.read_bytes())
+    require(history['schema'] == 'stacks-r60-reviewed-history-transport/v1'
+        and history['public_predecessor'] == PRIOR
+        and history['candidate_manifest_sha256'] == MANIFEST, 'Wrong reviewed-history binding')
+    expected = {'lease':'f3af398e9066dd8b70f4d827907aa2efb767ce6c', 'candidate':CANDIDATE,
+        'admission':'a8ffbcb6dd43b87090b7a009bfaa94f676100d89',
+        'composition':'0dd88fdc40de013bee54a4ff3a019f7ef217cae4'}
+    require({x['kind']:x['local_commit'] for x in history['steps']} == expected
+        and len(history['steps']) == 4, 'Transition provenance changed')
+    matches = [x['public_commit'] for x in history['steps'] if x['local_commit'] == ref]
+    return matches[0] if matches else ref
+
+
 def blob(ref, name):
-    return git('show', ref+':'+name)
+    return git('show', evidence_commit(ref)+':'+name)
 
 
 def write(name, value):
@@ -53,6 +71,7 @@ def now():
 
 
 def frozen_files(ref, expected):
+    ref = evidence_commit(ref)
     tree = {}
     for line in git('ls-tree', '-r', '-z', ref, '--', PREFIX).split(b'\0'):
         if not line:

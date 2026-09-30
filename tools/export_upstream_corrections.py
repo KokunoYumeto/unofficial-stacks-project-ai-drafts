@@ -56,6 +56,14 @@ def source_path(path):
     return path
 
 
+def correction_exclusion_reason(unit):
+    if unit.source == "tags/tags":
+        return "excluded_fork_tag_allocation"
+    if unit.defect_class == "editorial_proof_completion":
+        return "excluded_editorial_proof_completion"
+    return None
+
+
 def review_locus(unit, operations):
     if unit.locus:
         return unit.locus
@@ -165,9 +173,13 @@ def generate():
     before, after, chapter_units, chapter_ops = {}, {}, defaultdict(list), defaultdict(list)
     dispositions = []
     for unit in units:
-        if unit.source == "tags/tags":
-            dispositions.append({"id": unit.stable_id, "status": "excluded_fork_tag_allocation",
-                "reason": "Fork-allocated permanent tags are not proposed official Stacks tag assignments.",
+        excluded = correction_exclusion_reason(unit)
+        if excluded:
+            reason = ("Fork-allocated permanent tags are not proposed official Stacks tag assignments."
+                if excluded == "excluded_fork_tag_allocation" else
+                "This explicitly labelled editorial proof completion remains in the full edition and proof package; it is not a corrections-only source replacement.")
+            dispositions.append({"id": unit.stable_id, "status": excluded,
+                "reason": reason,
                 "evidence": PUBLIC + "/blob/main/CHANGES_FROM_UPSTREAM.md#" + unit.stable_id.lower()})
             continue
         source_path(unit.source)
@@ -255,7 +267,9 @@ def generate():
         f"The {model.unit_count:,} historical IDs in R1–R{model.overlay_count} remain accounted for:",
         f"{included_count:,} effective textual units are exported; one earlier correction was",
         "superseded by its explicitly recorded replacement, and one fork-specific tag",
-        "allocation is excluded. No unofficial permanent tags are proposed for upstream.",
+        "allocation is excluded. Explicitly classified editorial proof completions remain",
+        "available in the full comparison and their candidate packages, but are excluded",
+        "from this corrections-only download. No unofficial permanent tags are proposed for upstream.",
         "The original [13-item readable selection](../possible-fixes/README.md) remains available.",
         f"{len(selection['composed'])} of those fixes are now included here; {selection['pending_units']} remain pending.",
         "Do not apply an individual selection patch again if the combined patch already includes it. Translation",

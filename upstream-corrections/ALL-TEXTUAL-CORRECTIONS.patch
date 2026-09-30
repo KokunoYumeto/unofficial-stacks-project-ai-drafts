@@ -12529,9 +12529,18 @@ index 58275d8ac118829123e2dc8757bf27614741ba9e..e67695efd8749f51c4eacae6fca59530
  $v_1, \ldots, v_d \in V_y$ there exists an affine open
  $U \subset V$ with $v_1, \ldots, v_d \in U$.
 diff --git a/homology.tex b/homology.tex
-index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e97b5247cc 100644
+index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..17877ce505942ed1ed95b960aa47388f6a17fedb 100644
 --- a/homology.tex
 +++ b/homology.tex
+@@ -351,7 +351,7 @@
+ 
+ \noindent
+ We finish this section by some lemmas on splitting images of
+-idempotent endormorphisms. Recall that an endomorphism $f$
++idempotent endomorphisms. Recall that an endomorphism $f$
+ is idempotent if $f \circ f = f$.
+ 
+ \begin{remark}
 @@ -631,7 +631,7 @@
  preserved when passing to the opposite category.
  Finally, to see that
@@ -12667,16 +12676,45 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  the maps $\delta$ in degrees $\leq n$.
  
  \medskip\noindent
-@@ -3243,7 +3243,7 @@
+@@ -3162,7 +3162,7 @@
+ \begin{enumerate}
+ \item A morphism of cochain complexes $f : A^\bullet \to B^\bullet$
+ of $\mathcal{A}$ is called a {\it quasi-isomorphism} if the induced
+-maps $H^i(f) : H^i(A^\bullet) \to H^i(B^\bullet)$
++map $H^i(f) : H^i(A^\bullet) \to H^i(B^\bullet)$
+ is an isomorphism for all $i \in \mathbf{Z}$.
+ \item A cochain complex $A^\bullet$ is called
+ {\it acyclic} if all of its cohomology objects
+@@ -3215,9 +3215,9 @@
+ }
+ $$
+ The construction produces long exact cohomology sequences
+-which are functorial in the short exact
+-sequence and compatible with shifts as in
+-Definition \ref{definition-cohomology-shift}.
++which are functorial in the short exact sequence. Under the identifications
++of Definition \ref{definition-cohomology-shift},
++shifting by $k$ multiplies the boundary maps by $(-1)^k$.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -3243,9 +3243,12 @@
  This works as the kernel of the right vertical map is equal to
  $H^i(C^\bullet)$ and the cokernel of the left vertical map is
  $H^{i + 1}(A^\bullet)$. The exactness of the long sequence is
 -the exactnesss in part (2) of Lemma \ref{lemma-snake}.
+-The functoriality is Lemma \ref{lemma-snake-natural}. Compatibility
+-with shifts is immediate from the definitions.
 +the exactness in part (2) of Lemma \ref{lemma-snake}.
- The functoriality is Lemma \ref{lemma-snake-natural}. Compatibility
- with shifts is immediate from the definitions.
++The functoriality is Lemma \ref{lemma-snake-natural}. For a shift by $k$,
++the three vertical maps in the displayed diagram are multiplied by $(-1)^k$.
++The construction in Lemma \ref{lemma-snake} therefore multiplies the
++boundary map by $(-1)^k$, while the kernel and cokernel identifications
++are those of Definition \ref{definition-cohomology-shift}.
  \end{proof}
-@@ -3557,7 +3557,7 @@
+ 
+ 
+@@ -3557,7 +3560,7 @@
  H^i(\delta) :
  H^i(C^\bullet) \longrightarrow H^i(A[1]^\bullet) = H^{i + 1}(A^\bullet)
  $$
@@ -12685,7 +12723,16 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  to the short exact sequence of cochain complexes by
  Lemma \ref{lemma-long-exact-sequence-cochain}.
  \end{lemma}
-@@ -3959,7 +3959,7 @@
+@@ -3574,7 +3577,7 @@
+ $\beta : B^\bullet \to C^\bullet$ be the given
+ morphisms of complexes.
+ Suppose $(s')^n : C^n \to B^n$ and $(\pi')^n : B^n \to A^n$
+-is a second choice of splittings.
++are a second choice of splittings.
+ Write $(s')^n = s^n + \alpha^n \circ h^n$ and
+ $(\pi')^n = \pi^n + g^n \circ \beta^n$ for some unique
+ morphisms $h^n : C^n \to A^n$ and $g^n : C^n \to A^n$. Then
+@@ -3959,7 +3962,7 @@
  the category are called {\it bigraded} objects of $\mathcal{A}$.
  The $(p, q)$ component of a bigraded object $A$ is usually denoted
  $A^{p, q}$. For $(a, b) \in \mathbf{Z} \times \mathbf{Z}$ we write
@@ -12694,7 +12741,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  A morphism $A \to A[a, b]$ is sometimes called a
  {\it map of bidegree $(a, b)$}.
  
-@@ -4045,7 +4045,7 @@
+@@ -4045,7 +4048,7 @@
  $$
  U^p \otimes_F (V^q \otimes_F W^r) \to (U^p \otimes_F V^q) \otimes_F W^r
  $$
@@ -12703,7 +12750,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  which has $F$ in degree $0$ and is zero in other degrees.
  There are two commutativity constraints on $\mathcal{C}$
  which turn $\mathcal{C}$ into a symmetric monoidal category: one involves the
-@@ -4071,7 +4071,7 @@
+@@ -4071,7 +4074,7 @@
  \end{lemma}
  
  \begin{proof}
@@ -12712,7 +12759,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  By Categories, Definition \ref{categories-definition-dual} we have
  maps
  $$
-@@ -4228,8 +4228,8 @@
+@@ -4228,8 +4231,8 @@
  and differential
  $$
  d^n_{\text{Tot}(A^{\bullet, \bullet, \bullet})} =
@@ -12723,7 +12770,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $$
  With this definition a simple calculation shows that the associated total
  complex is equal to
-@@ -4239,7 +4239,7 @@
+@@ -4239,7 +4242,7 @@
  \text{Tot}(\text{Tot}_{23}(A^{\bullet, \bullet, \bullet}))
  $$
  In other words, we can either first combine the first two of the variables
@@ -12732,7 +12779,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  last two variables and then combine the first with the sum of the last two.
  \end{remark}
  
-@@ -4432,7 +4432,7 @@
+@@ -4432,7 +4435,7 @@
  $$
  is equal to $\delta'$ where $\gamma$ is as in
  Remark \ref{remark-shift-double-complex}. To see this denote
@@ -12741,7 +12788,16 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $\pi^{p, q} : B^{p, q} \to A^{p, q}$ the components of $s^q$ and $\pi^q$.
  As splittings
  $(s')^n : \text{Tot}^n(C^{\bullet, \bullet}) \to
-@@ -4515,7 +4515,7 @@
+@@ -4465,7 +4468,7 @@
+ as $s$ and $\pi$ correspond to a direct sum decomposition of $B$
+ in every bidegree. On the other hand, for $\delta$ we have
+ $$
+-\delta^q =  \pi^q \circ d_2 \circ s^q :
++\delta^q =  \pi^{q + 1} \circ d_2 \circ s^q :
+ C^{\bullet, q} \to A^{\bullet, q + 1}
+ $$
+ whose restriction to the summand $C^{p, q}$ is equal to
+@@ -4515,7 +4518,7 @@
  $$
  are homotopic maps of complexes. Indeed, let $h = (h^p)$
  be a homotopy between $f$ and $g$. If we denote
@@ -12750,7 +12806,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  then this means that
  $$
  f^{p, q} - g^{p, q} = d_1^{p - 1, q} \circ h^{p, q} +
-@@ -4578,7 +4578,7 @@
+@@ -4578,7 +4581,7 @@
  as complexes of complexes in the manner given above.
  This on the one hand produces a map
  $$
@@ -12759,7 +12815,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $$
  by the procedure in Lemma \ref{lemma-ses-termwise-split-cochain}.
  On the other hand taking $\text{Tot}$ we obtain a complex
-@@ -4605,8 +4605,8 @@
+@@ -4605,8 +4608,8 @@
  $$
  is equal to $\delta'$ where $\gamma$ is as in
  Remark \ref{remark-shift-double-complex}. To see this denote
@@ -12770,7 +12826,61 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  As splittings
  $(s')^n : \text{Tot}^n(C^{\bullet, \bullet}) \to
  \text{Tot}^n(B^{\bullet, \bullet})$
-@@ -5004,13 +5004,13 @@
+@@ -4638,7 +4641,7 @@
+ as $s$ and $\pi$ correspond to a direct sum decomposition of $B$
+ in every bidegree. On the other hand, for $\delta$ we have
+ $$
+-\delta^p =  \pi^p \circ d_1 \circ s^p :
++\delta^p =  \pi^{p + 1} \circ d_1 \circ s^p :
+ C^{p, \bullet} \to A^{p + 1, \bullet}
+ $$
+ whose restriction to the summand $C^{p, q}$ is equal to
+@@ -4673,7 +4676,7 @@
+ A \supset \ldots \supset F^nA \supset F^{n + 1}A \supset \ldots \supset 0
+ $$
+ \item A {\it filtered object of $\mathcal{A}$} is
+-pair $(A, F)$ consisting of an object $A$ of $\mathcal{A}$
++a pair $(A, F)$ consisting of an object $A$ of $\mathcal{A}$
+ and a decreasing filtration $F$ on $A$.
+ \item A {\it morphism $(A, F) \to (B, F)$ of filtered objects}
+ is given by a morphism $\varphi : A \to B$ of $\mathcal{A}$
+@@ -4744,7 +4747,7 @@
+ \end{definition}
+ 
+ \noindent
+-This also equivalent to requiring that $f^{-1}(F^iB) = F^iA + \Ker(f)$
++This is also equivalent to requiring that $f^{-1}(F^iB) = F^iA + \Ker(f)$
+ for all $i \in \mathbf{Z}$. We characterize strict morphisms
+ as follows.
+ 
+@@ -4826,7 +4829,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $B$ a vector space over a field $k$ with basis $e_1, e_2$, with the
++Let $B$ be a vector space over a field $k$ with basis $e_1, e_2$, with the
+ filtration $F^nB = B$ for $n < 0$, with $F^0B = ke_1$, and $F^nB = 0$ for
+ $n > 0$. Now take $A = k(e_1 + e_2)$ and $C = B/ke_2$ with filtrations
+ induced by $B$, i.e., such that $A \to B$ and $B \to C$ are strict
+@@ -4843,7 +4846,7 @@
+ & = (g \circ f)(A) \cap (g(B) \cap F^pC) \\
+ & = (g \circ f)(A) \cap F^pC.
+ \end{align*}
+-The first equality as $f$ is strict, the second because $g$ is injective,
++The first equality holds as $f$ is strict, the second because $g$ is injective,
+ the third because $g$ is strict, and the fourth because
+ $(g \circ f)(A) \subset g(B)$.
+ 
+@@ -4855,7 +4858,7 @@
+ & = F^iA + \Ker(f) + \Ker(g \circ f) \\
+ & = F^iA + \Ker(g \circ f)
+ \end{align*}
+-The first equality because $g$ is strict, the second because $f$ is
++The first equality holds because $g$ is strict, the second because $f$ is
+ surjective, the third because $f$ is strict, and the last because
+ $\Ker(f) \subset \Ker(g \circ f)$.
+ \end{proof}
+@@ -5004,13 +5007,13 @@
  \end{lemma}
  
  \begin{proof}
@@ -12788,7 +12898,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  short exact sequence of (1).
  \end{proof}
  
-@@ -5049,7 +5049,7 @@
+@@ -5049,13 +5052,13 @@
  we see that (4), (5), (6) imply (3) and that (3) implies (4), (5), (6).
  Hence it suffices to show that (3) implies (2).
  Thus we have to show that if $f : A \to B$ is an injective and surjective
@@ -12797,7 +12907,14 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $\text{gr}(A) \to \text{gr}(B)$, then $f$ induces an isomorphism of
  filtered objects. In other words, we have to show that
  $f(F^pA) = F^pB$ for all $p$.
-@@ -5079,7 +5079,7 @@
+ As the filtrations are finite we may prove this by descending induction
+ on $p$. Suppose that $f(F^{p + 1}A) = F^{p + 1}B$.
+-Then commutative diagram
++Then the commutative diagram
+ $$
+ \xymatrix{
+ 0 \ar[r] &
+@@ -5079,7 +5082,7 @@
  of filtered objects of $\mathcal{A}$. Assume $\alpha : A \to B$ and
  $\beta : B \to C$ are strict morphisms of filtered objects. Then
  $\text{gr}(\Ker(\beta)/\Im(\alpha)) =
@@ -12806,7 +12923,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  \end{lemma}
  
  \begin{proof}
-@@ -5121,7 +5121,7 @@
+@@ -5121,7 +5124,7 @@
  $\text{gr}(A) = F^nA \oplus \text{gr}(A')$
  and similarly for $B$ and $C$. The induction hypothesis
  applies to $A' \to B' \to C'$, which implies that
@@ -12815,7 +12932,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  To conclude the same for $p = n + 1$, i.e., to prove that $A \to B \to C$
  is exact we use the commutative diagram
  $$
-@@ -5424,10 +5424,10 @@
+@@ -5424,10 +5427,10 @@
  We set $d = g \circ f : E \to SE$. Then $d \circ S^{-1}d =
  g \circ f \circ S^{-1}g \circ S^{-1}f = 0$ because $f \circ S^{-1}g = 0$.
  Set $E' = \Ker(d)/\Im(S^{-1}d)$. Set $A' = \Im(T\alpha)$.
@@ -12828,7 +12945,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  ``$Tg \circ (T\alpha)^{-1}$''\footnote{This works because
  $TSE' = \Ker(TSd)/\Im(Td)$ and
  $Tg(\Ker(T\alpha)) = Tg(\Im(Tf)) = \Im(T(d))$
-@@ -5564,9 +5564,9 @@
+@@ -5564,9 +5567,9 @@
  under the natural map $A \to A/\alpha A$,
  \item $Z_r$ is the image of $d^{-1}(\alpha^r A)$
  under the natural map $A \to A/\alpha A$, and
@@ -12841,7 +12958,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  \end{enumerate}
  Warning: It is not necessarily the case that
  $\alpha A \subset (\alpha^{r - 1})^{-1}(dA)$, nor
-@@ -5677,7 +5677,7 @@
+@@ -5677,7 +5680,7 @@
  \noindent
  To describe the spectral sequence associated to such an object
  we assume, for the moment, that $\mathcal{A}$ is an abelian category
@@ -12850,7 +12967,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  (this is not automatic, see Remark \ref{remark-direct-sums-not-exact}).
  Let $(K, F, d)$ be a filtered differential object of $\mathcal{A}$.
  Note that each $F^nK$ is a differential object by itself.
-@@ -5770,7 +5770,7 @@
+@@ -5770,7 +5773,7 @@
  $$
  \alpha : A \to A[-1]
  $$
@@ -12859,7 +12976,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  This is clearly an injective morphism of differential objects
  $\alpha : (A, d) \to (A, d)[-1]$. Hence, we can apply
  Remark \ref{remark-differential-object-selfmap}
-@@ -5778,19 +5778,19 @@
+@@ -5778,19 +5781,19 @@
  The corresponding spectral sequence $(E_r, d_r)_{r \geq 0}$
  in $\text{Gr}(\mathcal{A})$ is the spectral sequence we are looking
  for. Let us unwind the definitions a bit.
@@ -12882,16 +12999,28 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  for $Z_r^p$ and $B_r^p$ given above.
  \end{proof}
  
-@@ -5974,7 +5974,7 @@
+@@ -5875,7 +5878,7 @@
+ $$
+ E_\infty^p =
+ \frac{\bigcap_r (F^pK \cap d^{-1}(F^{p + r}K) + F^{p + 1}K)}
+-{\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)}.
++{\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)},
+ $$
+ where the top and bottom exist. We have
+ \begin{equation}
+@@ -5974,9 +5977,9 @@
  \medskip\noindent
  To describe the spectral sequence associated to such an object
  we assume, for the moment, that $\mathcal{A}$ is an abelian category
 -which has countable direct sums and countable direct sums are exact
 +which has countable direct sums and in which countable direct sums are exact
  (this is not automatic, see Remark \ref{remark-direct-sums-not-exact}).
- Let us denote $d$ the differential of $K$. Forgetting the grading
+-Let us denote $d$ the differential of $K$. Forgetting the grading
++Let us denote by $d$ the differential of $K$. Forgetting the grading
  we can think of $\bigoplus K^n$ as a filtered differential object of
-@@ -6085,7 +6085,7 @@
+ $\mathcal{A}$. Hence according to Section \ref{section-filtered-differential}
+ we obtain a spectral sequence $(E_r, d_r)_{r \geq 0}$. In this section
+@@ -6085,7 +6088,7 @@
  $d_r^{p, q} : E_r^{p, q} \to E_r^{p + r, q - r + 1}$.
  
  \medskip\noindent
@@ -12900,7 +13029,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  as above. Namely, first we have
  $$
  E_0 = \Coker(\alpha : A \to A[-1, 1])[0, -1] =
-@@ -6099,7 +6099,7 @@
+@@ -6099,7 +6102,7 @@
  $d_0^{p, q} = \text{gr}^pd^{p + q} : E_0^{p, q} \to E_0^{p, q + 1}$.
  Next, the description of the boundaries $B_r$ and the cocycles $Z_r$
  in Remark \ref{remark-differential-object-selfmap}
@@ -12909,7 +13038,16 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  for $Z_r^{p, q}$ and $B_r^{p, q}$ given above.
  \end{proof}
  
-@@ -6290,8 +6290,8 @@
+@@ -6227,7 +6230,7 @@
+ \frac{\bigcap_r (F^pK^{p + q} \cap d^{-1}(F^{p + r}K^{p + q + 1})
+ + F^{p + 1}K^{p + q})}
+ {\bigcup_r (F^pK^{p + q} \cap d(F^{p - r + 1}K^{p + q - 1})
+-+ F^{p + 1}K^{p + q})}.
+++ F^{p + 1}K^{p + q})},
+ $$
+ where the top and the bottom exist. With $n = p + q$ we have
+ \begin{equation}
+@@ -6290,8 +6293,8 @@
  
  \begin{lemma}
  \label{lemma-relate-boundedness}
@@ -12920,7 +13058,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $(p, q)$-graded parts of $Z_r, B_r$ defined as in
  Section \ref{section-spectral-sequence}.
  \begin{enumerate}
-@@ -6381,7 +6381,7 @@
+@@ -6381,7 +6384,7 @@
  that the spectral sequence weakly converges. Fix $p, n \in \mathbf{Z}$.
  The right hand side of (\ref{equation-on-top-bigraded})
  is equal to $F^pK^n \cap \Ker(d) + F^{p + 1}K^n$ because
@@ -12929,7 +13067,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  is an equality. The left hand side of (\ref{equation-at-bottom-bigraded})
  is equal to $F^pK^n \cap \Im(d) + F^{p + 1}K^n$ because
  $F^{p - r + 1}K^{n - 1} = K^{n - 1}$ for $r \gg 0$.
-@@ -6396,8 +6396,8 @@
+@@ -6396,8 +6399,8 @@
  
  \medskip\noindent
  Proof of (4). Assume that for some $r \geq 0$ we have
@@ -12940,7 +13078,16 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  in $\mathcal{C}$ as well, see
  Lemma \ref{lemma-characterize-weak-serre-subcategory}.
  By boundedness proved above (which implies that the spectral sequence
-@@ -6439,7 +6439,7 @@
+@@ -6425,7 +6428,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Denote $E_r^{even}$ and $E_r^{odd}$ the even and odd part of $E_r$
++Denote by $E_r^{even}$ and $E_r^{odd}$ the even and odd part of $E_r$
+ defined as the direct sum of the $(p, q)$ components with $p + q$ even
+ and odd. The differential $d_r$ defines maps
+ $\varphi : E_r^{even} \to E_r^{odd}$ and $\psi : E_r^{odd} \to E_r^{even}$
+@@ -6439,7 +6442,7 @@
  & =
  [E_{r + 1}^{even}] - [E_{r + 1}^{odd}]
  \end{align*}
@@ -12949,7 +13096,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  subcategory containing the objects $E_r^{p, q}$.
  Continuing in this manner we see that we can increase $r$ at will.
  Since there are only a finite number of pairs $(p, q)$ for which
-@@ -6465,9 +6465,9 @@
+@@ -6465,15 +6468,16 @@
  Let $\mathcal{A}$ be an abelian category. Let $(K^\bullet, F)$ be a
  filtered complex of $\mathcal{A}$. Assume
  \begin{enumerate}
@@ -12961,7 +13108,39 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $H^n(F^pK^\bullet) \to H^n(K^\bullet)$ is an isomorphism
  for $p \leq p_1(n)$.
  \end{enumerate}
-@@ -6513,13 +6513,13 @@
+ Then
+ \begin{enumerate}
+-\item the spectral sequence associated to $(K^\bullet, F)$ is bounded,
++\item the spectral sequence $(E_r, d_r)_{r \geq 1}$ associated to
++$(K^\bullet, F)$ is bounded,
+ \item the filtration on each $H^n(K^\bullet)$ is finite,
+ \item the spectral sequence associated to $(K^\bullet, F)$ converges
+ to $H^*(K^\bullet)$.
+@@ -6487,7 +6491,7 @@
+ 0 \to F^{p + 1}K^\bullet \to F^pK^\bullet \to \text{gr}^pK^\bullet \to 0
+ $$
+ we find that $E_1^{p, n - p} = 0$ for $p \geq \max(p_0(n), p_0(n + 1))$ and
+-$p < \min(p_1(n), p_1(n + 1))$. Hence the spectral sequence is bounded
++for $p < \min(p_1(n), p_1(n + 1))$. Hence the spectral sequence starting with its $E_1$ page is bounded
+ (Definition \ref{definition-bounded-ss}). This proves (1).
+ 
+ \medskip\noindent
+@@ -6500,26 +6504,26 @@
+ $H^*(K^\bullet)$ using
+ Lemma \ref{lemma-filtered-complex-ss-converges}.
+ Let us show that we have equality in (\ref{equation-on-top-bigraded}).
+-Namely, for $p + r > p_0(n + 1)$ the map
++Namely, for $r \geq 1$ and $p + r > p_0(n + 1)$ the map
+ $$
+ d : F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) \to F^{p + r}K^{n + 1}
+ $$
+ ends up in the image of $d : F^{p + r}K^n \to F^{p + r}K^{n + 1}$
+ because the complex $F^{p + r}K^\bullet$ is exact in degree $n + 1$.
+ We conclude that $F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) =
+-d(F^{p + r}K^n) + \Ker(d) \cap F^pK^n$. Hence for such $r$ we have
++F^{p + r}K^n + \Ker(d) \cap F^pK^n$. Hence for such $r$ we have
+ $$
+ \Ker(d) \cap F^pK^{n} + F^{p + 1}K^{n} =
  F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) + F^{p + 1}K^{n}
  $$
  which proves the desired equality. To show that we have equality in
@@ -12977,7 +13156,51 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  we have
  $$
  F^pK^{n} \cap d(F^{p - r + 1}K^{n - 1}) + F^{p + 1}K^{n} =
-@@ -6825,7 +6825,7 @@
+@@ -6567,12 +6571,12 @@
+ 
+ \noindent
+ Let $K^{\bullet, \bullet}$ be a double complex, see
+-Section \ref{section-double-complexes}. It is customary to denote
++Section \ref{section-double-complexes}. It is customary to denote by
+ $H^p_I(K^{\bullet, \bullet})$
+ the complex with terms $\Ker(d_1^{p, q})/\Im(d_1^{p - 1, q})$
+ (varying $q$) and differential induced by $d_2$.
+ Then $H^q_{II}(H^p_I(K^{\bullet, \bullet}))$ denotes its cohomology in
+-degree $q$. It is also customary to denote $H^q_{II}(K^{\bullet, \bullet})$
++degree $q$. It is also customary to denote by $H^q_{II}(K^{\bullet, \bullet})$
+ the complex with terms $\Ker(d_2^{p, q})/\Im(d_2^{p, q - 1})$
+ (varying $p$) and differential induced by $d_1$.
+ Then $H^p_I(H^q_{II}(K^{\bullet, \bullet}))$ denotes its cohomology in
+@@ -6599,8 +6603,8 @@
+ $(\text{Tot}(K^{\bullet, \bullet}), F_{II})$ are filtered complexes.
+ By Section \ref{section-filtered-complex}
+ we obtain two spectral sequences. It is customary to
+-denote $({}'E_r, {}'d_r)_{r \geq 0}$ the spectral sequence associated
+-to the filtration $F_I$ and to denote $({}''E_r, {}''d_r)_{r \geq 0}$
++denote by $({}'E_r, {}'d_r)_{r \geq 0}$ the spectral sequence associated
++to the filtration $F_I$ and to denote by $({}''E_r, {}''d_r)_{r \geq 0}$
+ the spectral sequence associated to the filtration $F_{II}$.
+ Here is a description of these spectral sequences.
+ 
+@@ -6631,7 +6635,7 @@
+ \noindent
+ These spectral sequences define two filtrations on
+ $H^n(\text{Tot}(K^{\bullet, \bullet}))$.
+-We will denote these $F_I$ and $F_{II}$.
++We will denote these by $F_I$ and $F_{II}$.
+ 
+ \begin{definition}
+ \label{definition-ss-double-complex-converge}
+@@ -6782,7 +6786,7 @@
+ such that $a \circ b - \text{id} = d_1 \circ h + h \circ d_1$
+ which exist by assumption. Here $d_1 : A^{n, \bullet} \to A^{n + 1, \bullet}$
+ are the differentials of the complex of complexes. We will also
+-denote $d_2$ the differentials of the complexes $A^{n, \bullet}$
++denote by $d_2$ the differentials of the complexes $A^{n, \bullet}$
+ for all $n$. Let $h^{n, m} : A^{n, m} \to A^{n - 1, m}$ be the components of
+ $h^n$. Then we can consider
+ $$
+@@ -6825,7 +6829,7 @@
  
  \noindent
  In this section we put some results on double complexes of abelian groups
@@ -12986,7 +13209,26 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  categories. Please be careful not to use these lemmas except when the
  underlying abelian category is the category of abelian groups or some
  such (e.g., the category of modules over a ring). Some of the arguments
-@@ -6921,7 +6921,7 @@
+@@ -6846,7 +6850,8 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-If there exists a $t \in \mathbf{Z}$ such that $A_0^q = 0$ for $q < t$, then
++If there exists a $t \in \mathbf{Z}$ such that $A_i^q = 0$
++for all $i \geq 0$ and $q < t$, then
+ this follows immediately from
+ Lemma \ref{lemma-double-complex-gives-resolution}
+ (with $p$ and $q$ swapped as in the final statement of that lemma).
+@@ -6858,7 +6863,7 @@
+ \sigma_{\geq t}A_1^\bullet \to
+ \sigma_{\geq t}A_2^\bullet \to \ldots
+ $$
+-of stupid truncations. Denote $A(t)^{\bullet, \bullet}$ the corresponding
++of stupid truncations. Denote by $A(t)^{\bullet, \bullet}$ the corresponding
+ double complex. Every element $\xi$ of $H^n(\text{Tot}(A^{\bullet, \bullet}))$
+ is the image of an element of $H^n(\text{Tot}(A(t)^{\bullet, \bullet}))$
+ for some $t$ (look at explicit representatives of cohomology classes).
+@@ -6921,7 +6926,7 @@
  class $\xi$ is represented by a cocycle $x = x_0$.
  Finally, the condition on exactness of kernels tells us
  two such cocycles $x_0$ and $x_0'$ are cohomologous if
@@ -12995,7 +13237,16 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  \end{proof}
  
  \begin{lemma}
-@@ -6996,11 +6996,11 @@
+@@ -6970,7 +6975,7 @@
+ $m_0 \in M^0$ and $y \in A_0^{-1}$.
+ Then $d_{M^\bullet}(m_0) = 0$ because $\text{d}_{A_0^\bullet}(x_0) = 0$
+ as $\text{d}_{T^\bullet}(x) = 0$.
+-Thus, replacing $\xi$ by something in the image of
++Thus, subtracting from $\xi$ an element in the image of
+ $H^0(M^\bullet) \to H^0(T^\bullet)$ we may assume that $x_0$
+ is in $\Im(d^{-1}_{A_0^\bullet})$.
+ 
+@@ -6996,11 +7001,11 @@
  H^p(A_2^\bullet) \to \ldots
  $$
  is exact for all $p \in \mathbf{Z}$. Thus after changing $y_{n - 1}$
@@ -13009,7 +13260,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  This shows that $H^0(M^\bullet) \to H^0(T^\bullet)$ is surjective.
  
  \medskip\noindent
-@@ -7040,7 +7040,7 @@
+@@ -7040,7 +7045,7 @@
  are the maps of complexes in the lemma.
  We will show that $T^\bullet$ is acyclic when
  $M^\bullet$ is the zero complex. This will suffice by
@@ -13018,20 +13269,22 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  and $B_0^\bullet = M^\bullet$. Then we have an exact sequence
  $$
  \ldots \to B_2^\bullet \to B_1^\bullet \to B_0^\bullet \to 0 \to 0
-@@ -7057,9 +7057,9 @@
+@@ -7057,10 +7062,10 @@
  works for other degrees. Let $x =(x_n) \in \Ker(d_{T^\bullet})$
  map to $\xi \in H^0(T^\bullet)$ with $x_n \in A^{-n, n} = A_n^n$.
  Since $M^0 = 0$ we find that $x_0 = f_1^0(y_0)$ for some $y_0 \in A_1^0$.
 -Then $x_1 - d^0_{A_1^\bullet}(y_0) = f_2^1(y_1)$
 -because it is mapped to zero by $f_1^1$ as $x$ is a cocycle.
 -for some $y_1 \in A_2^1$. Continuing, using induction, we find
+-$y = (y_i) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
 +Then $x_1 + d^0_{A_1^\bullet}(y_0) = f_2^1(y_1)$ for some
 +$y_1 \in A_2^1$, because it is mapped to zero by $f_1^1$
 +as $x$ is a cocycle. Continuing, using induction, we find
- $y = (y_i) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
++$y = (0, y_0, y_1, \ldots) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
  \end{proof}
  
-@@ -7219,8 +7219,8 @@
+ 
+@@ -7219,8 +7224,8 @@
  \label{definition-enough-projectives}
  Let $\mathcal{A}$ be an abelian category.
  We say $\mathcal{A}$ has {\it enough projectives}
@@ -13042,7 +13295,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  \end{definition}
  
  \begin{definition}
-@@ -7237,7 +7237,7 @@
+@@ -7237,7 +7242,7 @@
  \item for any object $A \in \Ob(\mathcal{A})$
  the morphism $P(A)$ is surjective, and
  \item for any object $A \in \Ob(\mathcal{A})$
@@ -13051,7 +13304,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  \end{enumerate}
  We will denote such a functor by
  $A \mapsto (P(A) \to A)$.
-@@ -7353,7 +7353,7 @@
+@@ -7353,7 +7358,7 @@
  \label{remark-faithfulness-needed}
  Let $\mathcal{A}$, $\mathcal{B}$, $u : \mathcal{A} \to \mathcal{B}$ and
  $v : \mathcal{B} \to \mathcal{A}$ be as
@@ -13060,7 +13313,25 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  In the presence of conditions (1) and (2) condition (4) is equivalent
  to $v$ being faithful. Moreover, condition (4) is needed.
  An example is to consider the
-@@ -7535,16 +7535,16 @@
+@@ -7406,7 +7411,7 @@
+ the object $Q$ of $\mathcal{A}$ corresponding to $P$ is defined up to
+ unique isomorphism by the formula
+ $\Hom_\mathcal{A}(Q, A) = \Hom_\mathcal{B}(P, u(A))$. Let us write
+-$Q = v(P)$. Denote $i_P : P \to u(v(P))$ the map corresponding to
++$Q = v(P)$. Denote by $i_P : P \to u(v(P))$ the map corresponding to
+ $\text{id}_{v(P)}$ in $\Hom_\mathcal{A}(v(P), v(P))$. Functoriality
+ in (2) implies that the bijection is given by
+ $$
+@@ -7515,7 +7520,7 @@
+ we can replace $\mathcal{I}$ by $\mathcal{I}'$, see
+ Categories, Lemma \ref{categories-lemma-cofinal-essentially-constant}.
+ Pick any $i \in \Ob(\mathcal{I})$
+-and denote $X \to M_i$ the inverse of the isomorphism $X_i \to X$
++and denote by $X \to M_i$ the inverse of the isomorphism $X_i \to X$
+ followed by the inclusion map $X_i \to M_i$. If $j$ is
+ a second object, then choose $j \to k$ such that $Z_j \to M_k$ is
+ zero. Since $\mathcal{I}$ is filtered we may also assume there is
+@@ -7535,16 +7540,16 @@
  category. Let $F : \mathcal{I} \to \mathcal{A}$ and
  $G : \mathcal{I} \to \mathcal{A}$ be functors. The following are equivalent
  \begin{enumerate}
@@ -13081,7 +13352,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $F \oplus G \to F \oplus G$ which is idempotent. Hence we obtain
  an idempotent endomorphism $W \to W$ by
  Categories, Lemma \ref{categories-lemma-functorial-colimit}.
-@@ -7568,7 +7568,7 @@
+@@ -7568,7 +7573,7 @@
  \end{lemma}
  
  \begin{proof}
@@ -13090,7 +13361,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  and hence by Lemma \ref{lemma-direct-sum-from-product-colimit}
  we have $W = X \oplus Y$ with $X = \colim_\mathcal{I} F$ and
  $Y = \colim_\mathcal{I} G$. A straightforward argument (omitted)
-@@ -7621,7 +7621,7 @@
+@@ -7621,7 +7626,7 @@
  \item If $\mathcal{C}$ is an abelian category, then the category
  of inverse systems with values in $\mathcal{C}$ is an abelian category.
  A sequence $(K_i) \to (L_i) \to (M_i)$ of inverse systems
@@ -13099,7 +13370,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  \end{enumerate}
  \end{lemma}
  
-@@ -7645,7 +7645,7 @@
+@@ -7645,7 +7650,7 @@
  0 \to (A_i) \to (B_i) \to (C_i) \to 0
  $$
  of inverse systems of abelian groups it is not always the case
@@ -13108,7 +13379,30 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  this further we introduce the following notion.
  
  \begin{definition}
-@@ -7829,7 +7829,7 @@
+@@ -7789,7 +7794,7 @@
+ The equivalence follows from this (small detail omitted).
+ 
+ \medskip\noindent
+-If $C \not = 0$, denote $B'_i \subset B_i$ the inverse image
++If $C \not = 0$, denote by $B'_i \subset B_i$ the inverse image
+ of $C$ by the map $B_i \to C \oplus Z_i$. Then by the previous
+ paragraph we see that $(B'_i)$ has ML if and only if $(B_i)$
+ has ML. Thus we may replace $(B_i)$ by $(B'_i)$.
+@@ -7812,10 +7817,10 @@
+ $$
+ (A^{-2}_i \to A^{-1}_i \to A^0_i \to A^1_i)
+ $$
+-be an inverse system of complexes of abelian groups and denote
+-$A^{-2} \to A^{-1} \to A^0 \to A^1$ its limit. Denote
++be an inverse system of complexes of abelian groups and denote by
++$A^{-2} \to A^{-1} \to A^0 \to A^1$ its limit. Denote by
+ $(H_i^{-1})$, $(H_i^0)$ the inverse systems of cohomologies, and
+-denote $H^{-1}$, $H^0$ the cohomologies of $A^{-2} \to A^{-1} \to A^0 \to A^1$.
++denote by $H^{-1}$, $H^0$ the cohomologies of $A^{-2} \to A^{-1} \to A^0 \to A^1$.
+ If $(A^{-2}_i)$ and $(A^{-1}_i)$ are ML and
+ $(H^{-1}_i)$ is essentially constant, then
+ $H^0 = \lim H_i^0$.
+@@ -7829,7 +7834,7 @@
  The systems $(I^{-1}_i)$ and $(I^0_i)$ have ML as quotients of
  the systems $(A^{-2}_i)$ and $(A^{-1}_i)$, see
  Lemma \ref{lemma-Mittag-Leffler}.
@@ -13117,7 +13411,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $$
  0 \to (I^{-1}_i) \to (Z^{-1}_i) \to (H^{-1}_i) \to 0
  $$
-@@ -7863,7 +7863,7 @@
+@@ -7863,7 +7868,7 @@
  Let $\alpha$ be an ordinal. Let $K_\beta^\bullet$, $\beta < \alpha$
  be an inverse system of complexes of abelian groups over $\alpha$. If
  for all $\beta < \alpha$ the complex $K_\beta^\bullet$ is acyclic and
@@ -13126,7 +13420,7 @@ index a322afe31e0a4407f5ec7ead75630f0bb4de8b15..d6e5d84c7756d927036de922ed2258e9
  $$
  K^n_\beta \longrightarrow \lim_{\gamma < \beta} K^n_\gamma
  $$
-@@ -7875,7 +7875,7 @@
+@@ -7875,7 +7880,7 @@
  By transfinite induction we prove this holds for every ordinal
  $\alpha$ and every system as in the lemma. In particular, whilst
  proving the result for $\alpha$ we may assume the complexes
@@ -13619,7 +13913,7 @@ index a2a37c72e7495f518bf3f87783963219e56cd4f5..c2fa948ffae4be7cf3bc6108732afd3f
  (g \circ f)^{-1}\mathcal{O}_Z \to f^{-1}\mathcal{O}_Y \to \mathcal{O}_X
  $$
 diff --git a/more-algebra.tex b/more-algebra.tex
-index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..d2b25de36ddc80d2bd27be997ad853df61d2f94c 100644
+index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..00629e42e796b898cf4e5877374270daaec4feea 100644
 --- a/more-algebra.tex
 +++ b/more-algebra.tex
 @@ -1382,7 +1382,7 @@
@@ -13725,6 +14019,15 @@ index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..d2b25de36ddc80d2bd27be997ad853df
  
  \begin{lemma}
  \label{lemma-functoriality-product-tor}
+@@ -15528,7 +15527,7 @@
+ \item $F^jL^\bullet \to L^\bullet$ is a quasi-isomorphism for $j \ll 0$.
+ \end{enumerate}
+ \end{enumerate}
+-Then the spectral sequence is bounded, the associated filtration on each
++Then the spectral sequence starting with its $E_1$ page is bounded, the associated filtration on each
+ $H^n(T^\bullet) = H^n(K^\bullet \otimes_R^\mathbf{L} L^\bullet)$ is finite
+ and we have convergence
+ $$
 @@ -15703,7 +15702,7 @@
  \Omega_{n, i, m} = \Ker\left(\Ker(d^n_{F^iP_m}) \to H^n(F^iK^\bullet)\right),
  $$
@@ -16457,7 +16760,7 @@ index 7c8f1587d35975d03fad854588638273cbdcb429..e900e483dff82cf8e7712e74f42f3d26
  \Mor(U, \Delta[n])
  =
 diff --git a/sites-cohomology.tex b/sites-cohomology.tex
-index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150ee0bbc29 100644
+index ba8f62453f35abc5d9f10c14c361382128ebb042..4608877583aea0e142e50f11a95e8495f05265d7 100644
 --- a/sites-cohomology.tex
 +++ b/sites-cohomology.tex
 @@ -109,10 +109,10 @@
@@ -16872,7 +17175,21 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Since $u$ is a $1$-morphism of fibred categories over $\mathcal{D}$
  it transforms strongly cartesian morphisms into strongly cartesian morphisms,
  hence the functor $v = u \circ v'$ is the functor of
-@@ -10217,11 +10217,11 @@
+@@ -10071,9 +10071,10 @@
+ The construction of $K_\bullet(\mathcal{F})$ is functorial in $\mathcal{F}$
+ and transforms short exact sequences of $\textit{Ab}(\mathcal{C})$ into
+ short exact sequences of complexes. Thus the sequence of functors
+-$\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a $\delta$-functor, see
+-Homology, Definition \ref{homology-definition-cohomological-delta-functor} and
+-Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
++$\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a homological
++$\delta$-functor, in the sense dual to
++Homology, Definition \ref{homology-definition-cohomological-delta-functor}; see
++Homology, Lemma \ref{homology-lemma-long-exact-sequence-chain}.
+ For $\mathcal{F} = j_{U!}\mathbf{Z}_U$ the complex $K_\bullet(\mathcal{F})$
+ is the complex associated to the free $\mathbf{Z}$-module on the simplicial
+ set $X_\bullet$ with terms
+@@ -10217,11 +10218,11 @@
  (*, B) & (*, B') \ar[l]_f
  }
  $$
@@ -16889,7 +17206,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $D(B') \to D(\underline{B})$.
  \end{proof}
  
-@@ -10487,7 +10487,7 @@
+@@ -10487,7 +10488,7 @@
  Let $\mathcal{C}$ and $B$ be as in Example \ref{example-category-to-point}.
  Assume there exists a cosimplicial object as in
  Lemma \ref{lemma-compute-by-cosimplicial-resolution}.
@@ -16898,7 +17215,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\mathcal{C}$ which induces an isomorphism
  $L\pi_!\mathcal{O} \to L\pi_!\underline{B}$.
  In this case we obtain an exact functor of triangulated categories
-@@ -10588,13 +10588,13 @@
+@@ -10588,13 +10589,13 @@
  covering $\{V_j \to V\}$ such that $\xi|_{V_j}$ is zero in
  $K_n(\mathcal{F})(V_j)$. We write
  $$
@@ -16915,7 +17232,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  to zero in $\mathcal{F}^+(U_{i, 0})$. By construction of
  $\mathcal{F}^+$ there exist coverings $\{U_{i, 0, j} \to U_{i, 0}\}$
  such that $\sigma_i|_{U_{i, 0, j}}$ is zero. By our construction of
-@@ -10622,7 +10622,7 @@
+@@ -10622,7 +10623,7 @@
  
  \begin{proof}
  Consider the sequence of functors $\mathcal{F} \mapsto L_n(\mathcal{F})$
@@ -16924,7 +17241,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Since for each $V \in \Ob(\mathcal{D})$ the sequence of functors
  $H_n(\mathcal{C}_V, - )$ forms a $\delta$-functor
  so do the functors $\mathcal{F} \mapsto L_n(\mathcal{F})$.
-@@ -10639,7 +10639,7 @@
+@@ -10639,7 +10640,7 @@
  \mathcal{F}_{U'}(U) =
  \bigoplus\nolimits_{\Mor_\mathcal{C}(U, U')} \mathbf{Z}
  $$
@@ -16933,7 +17250,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  then any morphism $a : U \to U'$ factors uniquely as $U \to h^*U' \to U'$
  where $h = p(a) : V \to V'$ (see
  Categories, Definition
-@@ -10954,7 +10954,7 @@
+@@ -10954,7 +10955,7 @@
  (U \to \ldots \to U \to U_i \to \ldots \to U_n, \text{id})
  $$
  for $i > 0$ and $h_{n, 0} = \text{id}$. Verifications omitted.
@@ -16942,7 +17259,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $K^\bullet(p_{U, *}A)$ has trivial cohomology in positive degrees
  (by the functoriality of
  Simplicial, Remark \ref{simplicial-remark-homotopy-better}
-@@ -10964,7 +10964,7 @@
+@@ -10964,7 +10965,7 @@
  degrees also if $\mathcal{F}$ is a product of sheaves of the form
  $p_{U, *}A$. As every abelian sheaf on $\mathcal{C}$ embeds
  into such a product we conclude that $K^\bullet(\mathcal{F})$
@@ -16951,7 +17268,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $H^n(\mathcal{C}, -)$ of $H^0(\mathcal{C}, -)$
  for example by
  Homology, Lemma \ref{homology-lemma-efface-implies-universal}
-@@ -11044,7 +11044,7 @@
+@@ -11044,7 +11045,7 @@
  On $H^0$ we obtain
  $$
  0 \to \Hom(\mathcal{G}, p_{U, *}A) \to
@@ -16960,7 +17277,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  \Hom(\mathcal{G}', p_{U, *}A) \to 0
  $$
  which is exact as
-@@ -11064,7 +11064,7 @@
+@@ -11064,7 +11065,7 @@
  \Mor_\mathcal{C}(U, U_0) \times \Mor_\mathcal{C}(U_n, U')
  $$
  This simplicial set is homotopy equivalent to the constant simplicial
@@ -16969,7 +17286,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  as the corresponding statement in Example \ref{example-right-derived-limits}.
  This finishes the proof of the claim.
  
-@@ -11146,7 +11146,7 @@
+@@ -11146,7 +11147,7 @@
  it suffices to show that for every morphism $U \to V$ of
  $\mathcal{C}$ the map
  $$
@@ -16978,7 +17295,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  is an isomorphism. We are given that the map
  $$
-@@ -11275,7 +11275,7 @@
+@@ -11275,7 +11276,7 @@
  
  \medskip\noindent
  Construction of $\mathcal{S}_{n + 1}^\bullet$ given
@@ -16987,7 +17304,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\Omega^{i - 1}_U \subset \mathcal{F}^{i - 1}(U)$ be a subset
  such that $\text{d} : \mathcal{F}^{i - 1}(U) \to \mathcal{F}^i(U)$
  maps $\Omega^{i - 1}_U$ bijectively onto
-@@ -11283,11 +11283,11 @@
+@@ -11283,11 +11284,11 @@
  \mathcal{S}_n^i(U) \cap
  \text{Im}(\text{d} : \mathcal{F}^{i - 1}(U)\to \mathcal{F}^i(U))
  $$
@@ -17001,7 +17318,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  and everything is clear.
  \end{proof}
-@@ -11444,7 +11444,7 @@
+@@ -11444,7 +11445,7 @@
  \mathcal{S}_{n + 1}^\bullet \subset
  \mathcal{F}^\bullet
  $$
@@ -17010,7 +17327,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $|\mathcal{S}_{n + 1}^\bullet| \leq \kappa$.
  Conditions (1) and (2) hold because the corresponding statements
  hold for 
-@@ -11597,9 +11597,9 @@
+@@ -11597,9 +11598,9 @@
  Conversely, if $M$ is an object of $D_\QCoh(\mathcal{O})$, then due to
  Modules on Sites, Lemma \ref{sites-modules-lemma-chaotic-quasi-coherent}
  we see that the map $R\Gamma(V, M) \to R\Gamma(U, M)$ induces isomorphisms
@@ -17023,7 +17340,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  of $\mathcal{O}(V) \to \mathcal{O}(U)$ and we
  conclude that $M$ is in $\mathit{QC}(\mathcal{O})$.
  \end{proof}
-@@ -11668,7 +11668,7 @@
+@@ -11668,7 +11669,7 @@
  $$
  R\Gamma(U, R\epsilon_*(\epsilon^*M)) =
  R\Gamma((\mathcal{C}/U)_\tau,
@@ -17032,7 +17349,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  and assumption (2) tells us this is equal to
  $R\Gamma(U, M) = \mathcal{M}^\bullet(U)$ as desired.
-@@ -11930,7 +11930,7 @@
+@@ -11930,7 +11931,7 @@
  $$
  (\mathcal{H}')^n =
  \prod\nolimits_{n = p + q}
@@ -17041,7 +17358,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  which represents $R\SheafHom(\mathcal{E}^\bullet, \mathcal{F}^\bullet)$
  by the construction in Section \ref{section-internal-hom}. It suffices
-@@ -11998,7 +11998,7 @@
+@@ -11998,7 +11999,7 @@
  the double complex with terms
  $\SheafHom_\mathcal{O}(\mathcal{E}^{-q}, \mathcal{F}^p)$
  and similarly for $(\mathcal{H}')^\bullet$.
@@ -17050,7 +17367,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  comes from a map of double complexes.
  Thus to show this map is a quasi-isomorphism, we may use the spectral
  sequence of a double complex
-@@ -12197,11 +12197,11 @@
+@@ -12197,11 +12198,11 @@
  for $j < m + 1$. After refining the covering we may choose
  maps $\beta_i : \mathcal{L}_i^\bullet \to L|_{U_i}$ in $D(\mathcal{O}_{U_i})$
  with $\mathcal{L}_i^\bullet$ strictly perfect such that
@@ -17064,7 +17381,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  such that the diagrams
  $$
  \xymatrix{
-@@ -12255,9 +12255,9 @@
+@@ -12255,9 +12256,9 @@
  we may assume there exist strictly perfect complexes $\mathcal{K}^\bullet$
  and $\mathcal{L}^\bullet$ and maps
  $\alpha : \mathcal{K}^\bullet \to K$ and
@@ -17076,7 +17393,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Then the map
  $$
  \alpha \otimes^\mathbf{L} \beta :
-@@ -12323,7 +12323,7 @@
+@@ -12323,7 +12324,7 @@
  
  \begin{proof}
  Proof of (1). Let $U$ be an object of $\mathcal{C}$. We have to show that
@@ -17085,7 +17402,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  a covering of $U$ (see
  Modules on Sites, Definition \ref{sites-modules-definition-site-local}).
  Thus during the proof we may (finitely often) choose a covering
-@@ -12337,7 +12337,7 @@
+@@ -12337,7 +12338,7 @@
  If $n = m$, then $H^m(\mathcal{E}^\bullet)$ is a quotient of
  $\mathcal{E}^n$ and the result is clear.
  If $n > m$, then $\mathcal{E}^{n - 1} \to \mathcal{E}^n$ is surjective as
@@ -17094,7 +17411,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  we can (after replacing $U$ by the members of a covering)
  find a section of this surjection and write
  $\mathcal{E}^{n - 1} = \mathcal{E}' \oplus \mathcal{E}^n$.
-@@ -12458,7 +12458,7 @@
+@@ -12458,7 +12459,7 @@
  (Modules on Sites, Lemma \ref{sites-modules-lemma-flat-ses}).
  Hence we may replace $\mathcal{K}^\bullet$ by
  $\tau_{\leq n - 1}\mathcal{K}^\bullet$. Thus, by induction on $n$, we
@@ -17103,7 +17420,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\mathcal{O}$-modules with $\mathcal{K}^i = 0$ for $i > b$.
  
  \medskip\noindent
-@@ -12535,7 +12535,7 @@
+@@ -12535,7 +12536,7 @@
  because the short exact sequence
  $0 \to \mathcal{I} \to \mathcal{K}^a \to \mathcal{N} \to 0$
  of flat modules pulls back to a short exact sequence.
@@ -17112,7 +17429,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  the complex $f^*\mathcal{E}^\bullet$ is K-flat and the proof is complete.
  \end{proof}
  
-@@ -12552,12 +12552,12 @@
+@@ -12552,12 +12553,12 @@
  \begin{proof}
  Assume $E$ has tor amplitude in $[a, b]$. By
  Lemma \ref{lemma-tor-amplitude}
@@ -17127,7 +17444,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Thus by Lemma \ref{lemma-tor-amplitude}
  we conclude that $Lf^*E$ has tor amplitude in $[a, b]$.
  \end{proof}
-@@ -13063,16 +13063,16 @@
+@@ -13063,16 +13064,16 @@
  \end{lemma}
  
  \begin{proof}
@@ -17148,7 +17465,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  (K^\vee)^\vee
  $$
  see Lemma \ref{lemma-internal-hom-evaluate}. It suffices to prove there
-@@ -13606,7 +13606,7 @@
+@@ -13606,7 +13607,7 @@
  \item $\theta^n$ corresponds to a map
  $h^n : \text{Tot}^n(M^\bullet \otimes_R N^\bullet) \to
  \text{Tot}^{n - 1}(M^\bullet \otimes_R N^\bullet)$, and
@@ -17157,7 +17474,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  \end{enumerate}
  It follows that $M^\bullet$ and $N^\bullet$ define
  mutually inverse objects of $D(R)$. By
-@@ -13854,7 +13854,7 @@
+@@ -13854,7 +13855,7 @@
  Proof of (2). This holds by Lemma \ref{lemma-is-limit-dimension} with $d = 0$.
  
  \medskip\noindent
@@ -17166,7 +17483,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\mathcal{F} = \lim \mathcal{F}_n$. If $U \in \mathcal{B}$, then
  $\mathcal{F}(U) = \lim \mathcal{F}_n(U)$
  surjects onto $\mathcal{F}_1(U)$ as all the transition maps
-@@ -13958,7 +13958,7 @@
+@@ -13958,7 +13959,7 @@
  This makes sense as in each degree the direct sum on the right is finite.
  By assumption this map factors through a finite direct sum.
  We conclude that $K \to \tau_{\geq n} K$ is zero for at least one $n$,
@@ -17175,7 +17492,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  
  \medskip\noindent
  We may represent $K$ by a bounded above complex $K^\bullet$ each of whose
-@@ -13973,7 +13973,7 @@
+@@ -13973,7 +13974,7 @@
  Hence by Derived Categories, Lemmas \ref{derived-lemma-colim-hocolim} and
  \ref{derived-lemma-commutes-with-countable-sums}
  we see that $1 : K^\bullet \to K^\bullet$ factors through
@@ -17184,7 +17501,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Thus we see that $1 : K^\bullet \to K^\bullet$ factors as
  $$
  K^\bullet \xrightarrow{\varphi} L^\bullet \xrightarrow{\psi} K^\bullet
-@@ -13981,7 +13981,7 @@
+@@ -13981,7 +13982,7 @@
  in $D(\mathcal{A})$ for some complex $L^\bullet$ which is bounded and
  whose terms are direct sums of elements of $S$. Say $L^i$ is zero for
  $i \not \in [a, b]$. Let $c$ be the largest integer $\leq b + 1$ such
@@ -17193,7 +17510,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Claim: if $c < b + 1$, then we can modify $L^\bullet$ to increase $c$.
  By induction this claim will show we have a factorization
  of $1_K$ as
-@@ -13995,7 +13995,7 @@
+@@ -13995,7 +13996,7 @@
  Lemma \ref{derived-lemma-projectors-have-images-triangulated}
  we see that $L = \Ker(e) \oplus \Ker(1 - e)$.
  The map $\varphi : K \to L$ induces an isomorphism with
@@ -17202,7 +17519,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  
  \medskip\noindent
  Proof of the claim. Write $L^c = \bigoplus_{\lambda \in \Lambda} E_\lambda$.
-@@ -14008,10 +14008,10 @@
+@@ -14008,10 +14009,10 @@
  \pi :
  L^\bullet
  \longrightarrow
@@ -17215,7 +17532,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  By our assumption on $K$ we see that, after possibly replacing $\Lambda'$ by
  a larger finite subset, we may assume that $\pi \circ \varphi = 0$
  in $D(\mathcal{A})$.
-@@ -14086,7 +14086,7 @@
+@@ -14086,7 +14087,7 @@
  H^p(U, \bigoplus\nolimits_{i \in I} \mathcal{I}_i) =
  \bigoplus\nolimits_{i \in I} H^p(U, \mathcal{I}_i) = 0
  $$
@@ -17224,7 +17541,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  see that there exists an $a \in \mathbf{Z}$ such that $H^n(M_i) = 0$
  for $n < a$. Thus we can choose complexes of injective $\mathcal{O}$-modues
  $\mathcal{I}_i^\bullet$ representing $M_i$
-@@ -14099,7 +14099,7 @@
+@@ -14099,7 +14100,7 @@
  we see that
  $$
  R\Gamma(U, M) = \Gamma(U, \bigoplus \mathcal{I}_i^\bullet) =
@@ -17233,7 +17550,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  \bigoplus R\Gamma(U, M_i)
  $$
  as desired.
-@@ -14272,8 +14272,8 @@
+@@ -14272,8 +14273,8 @@
  \medskip\noindent
  By a slight generalization of
  Lemma \ref{lemma-kill-cohomology-class-on-covering} (details omitted)
@@ -17244,7 +17561,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $U_i$ we reach the situation where there is a map
  $\underline{\Lambda^{\oplus r}}[-b] \to K$
  inducing a surjection on cohomology sheaves in degree $b$.
-@@ -14294,9 +14294,9 @@
+@@ -14294,9 +14295,9 @@
  \ref{sites-modules-lemma-kernel-finite-locally-constant}
  we see that $H^{b - 1}(L)$ is locally constant of finite type.
  By induction hypothesis we obtain an isomorphism
@@ -21995,3 +22312,25 @@ index 618cd08f833a3f7382a129d8eae653dd1644bb3d..069bd0f893e7ae077e3fbca54c618c51
  see that addition on $M$ is continuous. Similarly for multiplication
  $R \times M \to M$.
  Let $a, b : M \to M'$ be two homomorphisms of topological modules over $R$.
+diff --git a/weil.tex b/weil.tex
+index ac007a2e586fb974d22829ed294bde2a12e3680b..f36ab5ca50d43d9d22f2e8f5fa58e087639340fd 100644
+--- a/weil.tex
++++ b/weil.tex
+@@ -1709,7 +1709,7 @@
+ Thus the class of the cycle $[X]$ in $\CH_d(X)$ defines a morphism
+ $h(X)(d) \to \mathbf{1}$. Applying $G$ we obtain
+ $$
+-H^*(X) \otimes F[-2d] = G(h(X)(d)) \longrightarrow G(\mathbf{1}) = F
++H^*(X) \otimes F[2d] = G(h(X)(d)) \longrightarrow G(\mathbf{1}) = F
+ $$
+ This map is zero except in degree $0$ where we obtain
+ $\int_X : H^{2d}(X) \to F$. This is the datum (D3).
+@@ -1718,7 +1718,7 @@
+ Let $X$ be a smooth projective variety of dimension $d$.
+ By Lemma \ref{lemma-dual}
+ we know that $h(X)(d)$ is a left dual to $h(X)$. Hence
+-$G(h(X)(d)) = H^*(X) \otimes F[-2d]$ is a left dual to
++$G(h(X)(d)) = H^*(X) \otimes F[2d]$ is a left dual to
+ $H^*(X)$ in the category of graded $F$-vector spaces.
+ By Homology, Lemma \ref{homology-lemma-left-dual-graded-vector-spaces}
+ we find that $\sum_i \dim_F H^i(X) < \infty$ and that

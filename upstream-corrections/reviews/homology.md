@@ -1256,3 +1256,508 @@ Adverse evidence / qualification: The exact type/domain argument is recorded in 
 -in stead of
 +instead of
 ````
+
+### MC-STK-ERR-2471
+
+`homology.tex` — homology.tex:354; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L354) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-endormorphisms
++endomorphisms
+````
+
+### MC-STK-ERR-2472
+
+`homology.tex` — homology.tex:3165; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3165) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-maps $H^i(f)
++map $H^i(f)
+````
+
+### MC-STK-ERR-2473
+
+`homology.tex` — homology.tex:3217; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3217-L3248) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1,4 +1,4 @@
+ The construction produces long exact cohomology sequences
+-which are functorial in the short exact
+-sequence and compatible with shifts as in
+-Definition \ref{definition-cohomology-shift}.
++which are functorial in the short exact sequence. Under the identifications
++of Definition \ref{definition-cohomology-shift},
++shifting by $k$ multiplies the boundary maps by $(-1)^k$.
+````
+
+````diff
+--- original
++++ replacement
+@@ -1,2 +1,5 @@
+-Compatibility
+-with shifts is immediate from the definitions.
++For a shift by $k$,
++the three vertical maps in the displayed diagram are multiplied by $(-1)^k$.
++The construction in Lemma \ref{lemma-snake} therefore multiplies the
++boundary map by $(-1)^k$, while the kernel and cokernel identifications
++are those of Definition \ref{definition-cohomology-shift}.
+````
+
+### MC-STK-ERR-2474
+
+`homology.tex` — homology.tex:3577; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3577) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-is a second choice of splittings.
++are a second choice of splittings.
+````
+
+### MC-STK-ERR-2475
+
+`homology.tex` — homology.tex:4468; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4468-L4641) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\pi^q \circ d_2 \circ s^q
++\pi^{q + 1} \circ d_2 \circ s^q
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\pi^p \circ d_1 \circ s^p
++\pi^{p + 1} \circ d_1 \circ s^p
+````
+
+### MC-STK-ERR-2476
+
+`homology.tex` — homology.tex:4676; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4676) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-pair $(A, F)$ consisting
++a pair $(A, F)$ consisting
+````
+
+### MC-STK-ERR-2477
+
+`homology.tex` — homology.tex:4747; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4747) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-This also equivalent
++This is also equivalent
+````
+
+### MC-STK-ERR-2478
+
+`homology.tex` — homology.tex:4829; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4829) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Let $B$ a vector space
++Let $B$ be a vector space
+````
+
+### MC-STK-ERR-2479
+
+`homology.tex` — homology.tex:4846; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4846) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-The first equality as
++The first equality holds as
+````
+
+### MC-STK-ERR-2480
+
+`homology.tex` — homology.tex:4858; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4858) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-The first equality because
++The first equality holds because
+````
+
+### MC-STK-ERR-2481
+
+`homology.tex` — homology.tex:5058; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L5058) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Then commutative diagram
++Then the commutative diagram
+````
+
+### MC-STK-ERR-2482
+
+`homology.tex` — homology.tex:5878; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L5878) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-{\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)}.
++{\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)},
+````
+
+### MC-STK-ERR-2483
+
+`homology.tex` — homology.tex:5979; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L5979) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Let us denote $d$ the differential
++Let us denote by $d$ the differential
+````
+
+### MC-STK-ERR-2484
+
+`homology.tex` — homology.tex:6230; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6230) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-+ F^{p + 1}K^{p + q})}.
+++ F^{p + 1}K^{p + q})},
+````
+
+### MC-STK-ERR-2485
+
+`homology.tex` — homology.tex:6428; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6428) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $E_r^{even}
++Denote by $E_r^{even}
+````
+
+### MC-STK-ERR-2486
+
+`homology.tex` — homology.tex:6473; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6473-L6490) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1,4 +1,5 @@
+ \end{enumerate}
+ Then
+ \begin{enumerate}
+-\item the spectral sequence associated to $(K^\bullet, F)$ is bounded,
++\item the spectral sequence $(E_r, d_r)_{r \geq 1}$ associated to
++$(K^\bullet, F)$ is bounded,
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Hence the spectral sequence is bounded
++Hence the spectral sequence starting with its $E_1$ page is bounded
+````
+
+### MC-STK-ERR-2487
+
+`homology.tex` — homology.tex:6490; clarification.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6490) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$p < \min(p_1(n), p_1(n + 1))$.
++for $p < \min(p_1(n), p_1(n + 1))$.
+````
+
+### MC-STK-ERR-2488
+
+`homology.tex` — homology.tex:6503; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6503-L6510) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Namely, for $p + r > p_0(n + 1)$ the map
++Namely, for $r \geq 1$ and $p + r > p_0(n + 1)$ the map
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-d(F^{p + r}K^n) + \Ker(d) \cap F^pK^n
++F^{p + r}K^n + \Ker(d) \cap F^pK^n
+````
+
+### MC-STK-ERR-2489
+
+`homology.tex` — homology.tex:6570; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6570) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Section \ref{section-double-complexes}. It is customary to denote
++Section \ref{section-double-complexes}. It is customary to denote by
+````
+
+### MC-STK-ERR-2490
+
+`homology.tex` — homology.tex:6575; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6575) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-degree $q$. It is also customary to denote
++degree $q$. It is also customary to denote by
+````
+
+### MC-STK-ERR-2491
+
+`homology.tex` — homology.tex:6602; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6602-L6603) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-denote $({}'E_r, {}'d_r)_{r \geq 0}$
++denote by $({}'E_r, {}'d_r)_{r \geq 0}$
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-the filtration $F_I$ and to denote
++the filtration $F_I$ and to denote by
+````
+
+### MC-STK-ERR-2492
+
+`homology.tex` — homology.tex:6634; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6634) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-We will denote these $F_I$ and $F_{II}$.
++We will denote these by $F_I$ and $F_{II}$.
+````
+
+### MC-STK-ERR-2493
+
+`homology.tex` — homology.tex:6785; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6785) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-denote $d_2$ the differentials
++denote by $d_2$ the differentials
+````
+
+### MC-STK-ERR-2494
+
+`homology.tex` — homology.tex:6849; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6849) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1,2 @@
+-If there exists a $t \in \mathbf{Z}$ such that $A_0^q = 0$ for $q < t$, then
++If there exists a $t \in \mathbf{Z}$ such that $A_i^q = 0$
++for all $i \geq 0$ and $q < t$, then
+````
+
+### MC-STK-ERR-2495
+
+`homology.tex` — homology.tex:6861; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6861) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $A(t)
++Denote by $A(t)
+````
+
+### MC-STK-ERR-2496
+
+`homology.tex` — homology.tex:6973; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6973) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Thus, replacing $\xi$ by something in the image of
++Thus, subtracting from $\xi$ an element in the image of
+````
+
+### MC-STK-ERR-2497
+
+`homology.tex` — homology.tex:7063; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7063) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$y = (y_i) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
++$y = (0, y_0, y_1, \ldots) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
+````
+
+### MC-STK-ERR-2498
+
+`homology.tex` — homology.tex:7409; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7409) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Denote $i_P
++Denote by $i_P
+````
+
+### MC-STK-ERR-2499
+
+`homology.tex` — homology.tex:7518; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7518) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-and denote $X
++and denote by $X
+````
+
+### MC-STK-ERR-2500
+
+`homology.tex` — homology.tex:7792; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7792) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-denote $B'_i
++denote by $B'_i
+````
+
+### MC-STK-ERR-2501
+
+`homology.tex` — homology.tex:7815; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7815-L7818) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-be an inverse system of complexes of abelian groups and denote
++be an inverse system of complexes of abelian groups and denote by
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-its limit. Denote
++its limit. Denote by
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-denote $H^{-1}$
++denote by $H^{-1}$
+````

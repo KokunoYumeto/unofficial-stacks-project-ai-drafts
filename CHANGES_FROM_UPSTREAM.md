@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **59**
-- Stable correction IDs: **2,206**
-- Displayed exact change hunks: **2,685**
-- Manifest/source-map exact operations: **2,617**
+- Admitted errata batches: **60**
+- Stable correction IDs: **2,241**
+- Displayed exact change hunks: **2,728**
+- Manifest/source-map exact operations: **2,660**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **37**
-- Registry SHA-256: `33C6883E17704C365133DF92D5234D90A35AC00093E8907953795A7BB783F6F0`
+- Affected source paths: **38**
+- Registry SHA-256: `B97509913738F8E182423AB38FC27F56CCB73F64C797C486C92343853F371F2B`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -64033,5 +64033,1017 @@ Pinned-official lines `546-546`; bytes `18825:18866`.
 ````
 
 Original SHA-256 `7D29B7573234B729B9BD8956E41DEAD8EE31141BA695408EB94BF60516990F20`; replacement SHA-256 `2956AF6176E924792A0326058DC4F0B5AB4FB717602ABCEBC9FE498F5BC57F24`.
+
+</details>
+
+## stacks-errata-a04446e-r60
+
+35 stable IDs · 43 displayed change hunks · admitted 2026-09-30T09:01:20.094033+00:00.
+
+<details id="mc-stk-err-2471">
+<summary><code>MC-STK-ERR-2471 — homology.tex:homology.tex:354 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2471`; producer ID: `HOMOLOGY-RECON-001`
+- Bound source locator: `homology.tex:homology.tex:354`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L354) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2471-OP1`
+
+Pinned-official lines `354-354`; bytes `11281:11295`.
+
+````diff
+- endormorphisms
++ endomorphisms
+````
+
+Original SHA-256 `BDABE133D80C278220AD8D1C9389D7BBE06F13BAB5F187E3C66863209A9566FD`; replacement SHA-256 `651F83A0DC15202291F5C77E34A0BF66D236DF44759CCDD83E5898611B6EFA32`.
+
+</details>
+
+<details id="mc-stk-err-2472">
+<summary><code>MC-STK-ERR-2472 — homology.tex:homology.tex:3165 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2472`; producer ID: `HOMOLOGY-RECON-017`
+- Bound source locator: `homology.tex:homology.tex:3165`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3165) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2472-OP1`
+
+Pinned-official lines `3165-3165`; bytes `103711:103723`.
+
+````diff
+- maps $H^i(f)
++ map $H^i(f)
+````
+
+Original SHA-256 `16743F1E6324F5D9B1B1C80D6283AB6E0D6CDD126883B0F134FF3EEDAA0B30B4`; replacement SHA-256 `A83C75B8122A37FA6C39075E31A7CE83D5B84795EDD5FEB0FCD720F4ACC59E82`.
+
+</details>
+
+<details id="mc-stk-err-2473">
+<summary><code>MC-STK-ERR-2473 — homology.tex:homology.tex:3217 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2473`; producer ID: `HOMOLOGY-FIND-001`
+- Bound source locator: `homology.tex:homology.tex:3217`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3217-L3248) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2473-OP1`
+
+Pinned-official lines `3217-3220`; bytes `105011:105196`.
+
+````diff
+- The construction produces long exact cohomology sequences
+- which are functorial in the short exact
+- sequence and compatible with shifts as in
+- Definition \ref{definition-cohomology-shift}.
++ The construction produces long exact cohomology sequences
++ which are functorial in the short exact sequence. Under the identifications
++ of Definition \ref{definition-cohomology-shift},
++ shifting by $k$ multiplies the boundary maps by $(-1)^k$.
+````
+
+Original SHA-256 `AA082857FF318A4C304C98623F98B574C67C8FD9D4EE5A8F69285129D5E2A30A`; replacement SHA-256 `4EB62C18AFF3A89DC03FD02CA7726FE0EC4B71386878370E155CDBF7372CC507`.
+
+### Change 2: `MC-STK-ERR-2473-OP2`
+
+Pinned-official lines `3247-3248`; bytes `106069:106129`.
+
+````diff
+- Compatibility
+- with shifts is immediate from the definitions.
++ For a shift by $k$,
++ the three vertical maps in the displayed diagram are multiplied by $(-1)^k$.
++ The construction in Lemma \ref{lemma-snake} therefore multiplies the
++ boundary map by $(-1)^k$, while the kernel and cokernel identifications
++ are those of Definition \ref{definition-cohomology-shift}.
+````
+
+Original SHA-256 `E308395F0A7AC21C723527FC923EE63CBB0CAD3EF0E8BE4AD64B74DD1B1154A1`; replacement SHA-256 `81FD3314BA13095A7F6B988278A13AA7CA8DFABA1B30252179F1220033A0303D`.
+
+</details>
+
+<details id="mc-stk-err-2474">
+<summary><code>MC-STK-ERR-2474 — homology.tex:homology.tex:3577 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2474`; producer ID: `HOMOLOGY-RECON-020`
+- Bound source locator: `homology.tex:homology.tex:3577`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L3577) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2474-OP1`
+
+Pinned-official lines `3577-3577`; bytes `117015:117048`.
+
+````diff
+- is a second choice of splittings.
++ are a second choice of splittings.
+````
+
+Original SHA-256 `CEB22E8EE3F900979C7F9B43EDBFC5338D4AEC299B687A4285AFF9B7814CF8E2`; replacement SHA-256 `A848F3859E80B755B6E43C514704DE93E4B1E4F7BCC47EFE609D7E02CEF211DF`.
+
+</details>
+
+<details id="mc-stk-err-2475">
+<summary><code>MC-STK-ERR-2475 — homology.tex:homology.tex:4468 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2475`; producer ID: `HOMOLOGY-FIND-004`
+- Bound source locator: `homology.tex:homology.tex:4468`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4468-L4641) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2475-OP1`
+
+Pinned-official lines `4468-4468`; bytes `144758:144783`.
+
+````diff
+- \pi^q \circ d_2 \circ s^q
++ \pi^{q + 1} \circ d_2 \circ s^q
+````
+
+Original SHA-256 `1907FBAE6F9EED4362F65990DFB866DC94881E3F9AD5919FA15E058606F0712C`; replacement SHA-256 `399FF3FBAAFBF419404A4C52B679F9C9DF8BD89BC1968D88CA569504A8F0B6BA`.
+
+### Change 2: `MC-STK-ERR-2475-OP2`
+
+Pinned-official lines `4641-4641`; bytes `150914:150939`.
+
+````diff
+- \pi^p \circ d_1 \circ s^p
++ \pi^{p + 1} \circ d_1 \circ s^p
+````
+
+Original SHA-256 `BA90ABC669DD83A6EB3BF4C78006D6DF761015CB5D80511AA3CC4F2B7C5F7C77`; replacement SHA-256 `3109432E0931F82CAD5A47D8EE4FCF3C5239BC21CC2879584068FE2B7777311A`.
+
+</details>
+
+<details id="mc-stk-err-2476">
+<summary><code>MC-STK-ERR-2476 — homology.tex:homology.tex:4676 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2476`; producer ID: `HOMOLOGY-RECON-030`
+- Bound source locator: `homology.tex:homology.tex:4676`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4676) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2476-OP1`
+
+Pinned-official lines `4676-4676`; bytes `151889:151913`.
+
+````diff
+- pair $(A, F)$ consisting
++ a pair $(A, F)$ consisting
+````
+
+Original SHA-256 `FD039EC9236ACFD46DB41EF2E79EF67FAAE94FFFE42482EB6F55FB7455090B35`; replacement SHA-256 `AA0A6A0DC7279D8FAE2684563D322735E98B565E33AF923BF85C83BB6C138172`.
+
+</details>
+
+<details id="mc-stk-err-2477">
+<summary><code>MC-STK-ERR-2477 — homology.tex:homology.tex:4747 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2477`; producer ID: `HOMOLOGY-RECON-031`
+- Bound source locator: `homology.tex:homology.tex:4747`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4747) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2477-OP1`
+
+Pinned-official lines `4747-4747`; bytes `154885:154905`.
+
+````diff
+- This also equivalent
++ This is also equivalent
+````
+
+Original SHA-256 `BD41842AD8CA5D5006EDB3F65E4195EEA10F3032BEF5CE13272434EAC3C19B33`; replacement SHA-256 `DB9B330E57059FBFB2E6339D63AF495CBA211B0599C4C7BFDDA573DFD0FBF7E8`.
+
+</details>
+
+<details id="mc-stk-err-2478">
+<summary><code>MC-STK-ERR-2478 — homology.tex:homology.tex:4829 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2478`; producer ID: `HOMOLOGY-RECON-032`
+- Bound source locator: `homology.tex:homology.tex:4829`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4829) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2478-OP1`
+
+Pinned-official lines `4829-4829`; bytes `157526:157548`.
+
+````diff
+- Let $B$ a vector space
++ Let $B$ be a vector space
+````
+
+Original SHA-256 `20932625484EA09456BB15C19ABEB0C359D2212333A63877C6F7D7B93E4879A4`; replacement SHA-256 `FDEC5F3BFBF2397178EBAA0929AD51113C6CF9ED158377237DF317B5D9D9EA5C`.
+
+</details>
+
+<details id="mc-stk-err-2479">
+<summary><code>MC-STK-ERR-2479 — homology.tex:homology.tex:4846 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2479`; producer ID: `HOMOLOGY-RECON-033`
+- Bound source locator: `homology.tex:homology.tex:4846`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4846) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2479-OP1`
+
+Pinned-official lines `4846-4846`; bytes `158257:158278`.
+
+````diff
+- The first equality as
++ The first equality holds as
+````
+
+Original SHA-256 `20CE4C41D7F8B7A2AA34C9466E82C0F0BAD979656DC812E1659788B7E8969B04`; replacement SHA-256 `2D2BCE78DE94B46A163B6D304A656C38D8748D6413FC0BEDDC5246E1471F9176`.
+
+</details>
+
+<details id="mc-stk-err-2480">
+<summary><code>MC-STK-ERR-2480 — homology.tex:homology.tex:4858 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2480`; producer ID: `HOMOLOGY-FIND-005`
+- Bound source locator: `homology.tex:homology.tex:4858`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L4858) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2480-OP1`
+
+Pinned-official lines `4858-4858`; bytes `158654:158680`.
+
+````diff
+- The first equality because
++ The first equality holds because
+````
+
+Original SHA-256 `ED8529BF561E0B452864E800B00C81C593036D70A8B5D565123721F86682886A`; replacement SHA-256 `1C03EDD76A55605C41F7E5C766B47781D62574132E202106FBA0C04D6159C081`.
+
+</details>
+
+<details id="mc-stk-err-2481">
+<summary><code>MC-STK-ERR-2481 — homology.tex:homology.tex:5058 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2481`; producer ID: `HOMOLOGY-FIND-006`
+- Bound source locator: `homology.tex:homology.tex:5058`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L5058) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2481-OP1`
+
+Pinned-official lines `5058-5058`; bytes `164580:164604`.
+
+````diff
+- Then commutative diagram
++ Then the commutative diagram
+````
+
+Original SHA-256 `5DB6323E8C79D52AF18217C8AEC19ADD50EE19528EE869CDC71A7DE0995EA98C`; replacement SHA-256 `B3BB126168BACFCC09F6C2A622BEE0CF4499B38EC3677CC5A88FA1B420684186`.
+
+</details>
+
+<details id="mc-stk-err-2482">
+<summary><code>MC-STK-ERR-2482 — homology.tex:homology.tex:5878 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2482`; producer ID: `HOMOLOGY-RECON-048`
+- Bound source locator: `homology.tex:homology.tex:5878`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L5878) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2482-OP1`
+
+Pinned-official lines `5878-5878`; bytes `192976:193031`.
+
+````diff
+- {\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)}.
++ {\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)},
+````
+
+Original SHA-256 `829E12F2DA126095F13E7BDAF185A8FC17BE63858A07596D45F5932106BFA4F0`; replacement SHA-256 `2BDFEBDA1F5588E02EC5D7E41E94CF8CA786E6FD2698BF784965F79DEFBA2088`.
+
+</details>
+
+<details id="mc-stk-err-2483">
+<summary><code>MC-STK-ERR-2483 — homology.tex:homology.tex:5979 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2483`; producer ID: `HOMOLOGY-RECON-049`
+- Bound source locator: `homology.tex:homology.tex:5979`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L5979) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2483-OP1`
+
+Pinned-official lines `5979-5979`; bytes `196176:196210`.
+
+````diff
+- Let us denote $d$ the differential
++ Let us denote by $d$ the differential
+````
+
+Original SHA-256 `AFBECFB67C94D6E9C92CE92D207E2CE1FD78FCD06E5A415E3EA581CECE58C856`; replacement SHA-256 `488885EDF2C7BF350E6A7B069048D98D6CF8C20B95F6355D21D7AE0261C8D256`.
+
+</details>
+
+<details id="mc-stk-err-2484">
+<summary><code>MC-STK-ERR-2484 — homology.tex:homology.tex:6230 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2484`; producer ID: `HOMOLOGY-RECON-050`
+- Bound source locator: `homology.tex:homology.tex:6230`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6230) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2484-OP1`
+
+Pinned-official lines `6230-6230`; bytes `205570:205593`.
+
+````diff
+- + F^{p + 1}K^{p + q})}.
++ + F^{p + 1}K^{p + q})},
+````
+
+Original SHA-256 `B257D274DEDF68CDADEF988D4F2C6CEC2B8AD263A3C121AEC6246E1290340219`; replacement SHA-256 `C3481F0FA8C5537CCBB62B75334A99B2FAF9DC75F47E2CE0459F6C70B9A51A38`.
+
+</details>
+
+<details id="mc-stk-err-2485">
+<summary><code>MC-STK-ERR-2485 — homology.tex:homology.tex:6428 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2485`; producer ID: `HOMOLOGY-RECON-056`
+- Bound source locator: `homology.tex:homology.tex:6428`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6428) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2485-OP1`
+
+Pinned-official lines `6428-6428`; bytes `213603:213621`.
+
+````diff
+- Denote $E_r^{even}
++ Denote by $E_r^{even}
+````
+
+Original SHA-256 `D693C704E8AA7C936DE7C7744A4522599118B57F4C842BE8732FC4B9E71ACD2A`; replacement SHA-256 `25F3680E7F9FF567AA33A09C78A8908CF3249A68507E1DF1FD79D9F7C1FD7F55`.
+
+</details>
+
+<details id="mc-stk-err-2486">
+<summary><code>MC-STK-ERR-2486 — homology.tex:homology.tex:6473 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2486`; producer ID: `HOMOLOGY-FIND-007`
+- Bound source locator: `homology.tex:homology.tex:6473`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6473-L6490) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2486-OP1`
+
+Pinned-official lines `6473-6476`; bytes `215461:215570`.
+
+````diff
+- \end{enumerate}
+- Then
+- \begin{enumerate}
+- \item the spectral sequence associated to $(K^\bullet, F)$ is bounded,
++ \end{enumerate}
++ Then
++ \begin{enumerate}
++ \item the spectral sequence $(E_r, d_r)_{r \geq 1}$ associated to
++ $(K^\bullet, F)$ is bounded,
+````
+
+Original SHA-256 `D0AEEA63609A30C5458EC213641728AFEBC027218ED1F10AA2C09333CC956FCA`; replacement SHA-256 `196D222D1D069CD0D60989B5EC6DFAC6AAC02633155161ED23CBA29B78F05736`.
+
+### Change 2: `MC-STK-ERR-2486-OP2`
+
+Pinned-official lines `6490-6490`; bytes `216050:216088`.
+
+````diff
+- Hence the spectral sequence is bounded
++ Hence the spectral sequence starting with its $E_1$ page is bounded
+````
+
+Original SHA-256 `F1B4570B45752BFAD23D27F8A6DA768D6E17C501FAB975C50333D3FF7F5FDAF5`; replacement SHA-256 `2740D2C2F0C8E628E58E63EC1D1226CA28F67054F16016EFE907EB01E61C718A`.
+
+</details>
+
+<details id="mc-stk-err-2487">
+<summary><code>MC-STK-ERR-2487 — homology.tex:homology.tex:6490 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2487`; producer ID: `HOMOLOGY-RECON-058`
+- Bound source locator: `homology.tex:homology.tex:6490`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6490) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2487-OP1`
+
+Pinned-official lines `6490-6490`; bytes `216018:216049`.
+
+````diff
+- $p < \min(p_1(n), p_1(n + 1))$.
++ for $p < \min(p_1(n), p_1(n + 1))$.
+````
+
+Original SHA-256 `478C4E1EF5F8CEEF0C3262CD8D205F70BAC2933E4DFAD2481862DE4C5A301CFC`; replacement SHA-256 `D9743875A8A1F5C2E70E53EFB07540AB17EAAEDAB6D266DDEECD05D0ACE2AC8C`.
+
+</details>
+
+<details id="mc-stk-err-2488">
+<summary><code>MC-STK-ERR-2488 — homology.tex:homology.tex:6503 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2488`; producer ID: `HOMOLOGY-FIND-008`
+- Bound source locator: `homology.tex:homology.tex:6503`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6503-L6510) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2488-OP1`
+
+Pinned-official lines `6503-6503`; bytes `216562:216602`.
+
+````diff
+- Namely, for $p + r > p_0(n + 1)$ the map
++ Namely, for $r \geq 1$ and $p + r > p_0(n + 1)$ the map
+````
+
+Original SHA-256 `079DE7A2ED4C6132DC4FFE25F2AAFC4EFF0AF1473811548A39ABA3737570903D`; replacement SHA-256 `2A1E4CFE9BCC9A3AA0B946404D4A09FAD86C6D7CEC365E45BA526CD5106780E1`.
+
+### Change 2: `MC-STK-ERR-2488-OP2`
+
+Pinned-official lines `6510-6510`; bytes `216873:216910`.
+
+````diff
+- d(F^{p + r}K^n) + \Ker(d) \cap F^pK^n
++ F^{p + r}K^n + \Ker(d) \cap F^pK^n
+````
+
+Original SHA-256 `0543F33E21AD12CF2EF14056B7EFD33B55413D0FD243AFD27DF9275D612781D1`; replacement SHA-256 `4567F489B0F553C5DA32CCF317828DE45985986B4C800CCC348E536495C53833`.
+
+</details>
+
+<details id="mc-stk-err-2489">
+<summary><code>MC-STK-ERR-2489 — homology.tex:homology.tex:6570 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2489`; producer ID: `HOMOLOGY-RECON-060`
+- Bound source locator: `homology.tex:homology.tex:6570`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6570) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2489-OP1`
+
+Pinned-official lines `6570-6570`; bytes `218288:218353`.
+
+````diff
+- Section \ref{section-double-complexes}. It is customary to denote
++ Section \ref{section-double-complexes}. It is customary to denote by
+````
+
+Original SHA-256 `339BE4766DC5036B86870262BCCD5063348C8034524BED9274221D0E5B36B52B`; replacement SHA-256 `6CD1FA2D20B38013C369B42BC99DEF34E0FDB6FDF8586AB8875CE5D259C9AE82`.
+
+</details>
+
+<details id="mc-stk-err-2490">
+<summary><code>MC-STK-ERR-2490 — homology.tex:homology.tex:6575 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2490`; producer ID: `HOMOLOGY-RECON-061`
+- Bound source locator: `homology.tex:homology.tex:6575`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6575) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2490-OP1`
+
+Pinned-official lines `6575-6575`; bytes `218566:218608`.
+
+````diff
+- degree $q$. It is also customary to denote
++ degree $q$. It is also customary to denote by
+````
+
+Original SHA-256 `C4825F772366755518DAEE6DE3DDB953483F662ADCD38385B09BE7F5A7D9972D`; replacement SHA-256 `4FDDF2A631B77BFEC4C4B6D614AFD138AE3C6E33E8C40AA8B3AA98096358E5D9`.
+
+</details>
+
+<details id="mc-stk-err-2491">
+<summary><code>MC-STK-ERR-2491 — homology.tex:homology.tex:6602 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2491`; producer ID: `HOMOLOGY-RECON-062`
+- Bound source locator: `homology.tex:homology.tex:6602`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6602-L6603) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2491-OP1`
+
+Pinned-official lines `6602-6602`; bytes `219706:219742`.
+
+````diff
+- denote $({}'E_r, {}'d_r)_{r \geq 0}$
++ denote by $({}'E_r, {}'d_r)_{r \geq 0}$
+````
+
+Original SHA-256 `A2EF7FB4F385149A75A40B0EFDEC0440D1F115B0637EFE3DEC9EEDE8B85DAE54`; replacement SHA-256 `40DCDC214013318209BD0A527081EFEA899B9463F78BE07E4EE1934E4766C6A1`.
+
+### Change 2: `MC-STK-ERR-2491-OP2`
+
+Pinned-official lines `6603-6603`; bytes `219779:219813`.
+
+````diff
+- the filtration $F_I$ and to denote
++ the filtration $F_I$ and to denote by
+````
+
+Original SHA-256 `2A6AA3F4D2FCC516C18BA292314D231D4B85D2A9C2F008C7253C02FBC5814EF1`; replacement SHA-256 `EEFE5677A66AF61B3589AF7F74BE074E1CD55831C103394C715074AB0D9FDEC1`.
+
+</details>
+
+<details id="mc-stk-err-2492">
+<summary><code>MC-STK-ERR-2492 — homology.tex:homology.tex:6634 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2492`; producer ID: `HOMOLOGY-RECON-063`
+- Bound source locator: `homology.tex:homology.tex:6634`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6634) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2492-OP1`
+
+Pinned-official lines `6634-6634`; bytes `220883:220923`.
+
+````diff
+- We will denote these $F_I$ and $F_{II}$.
++ We will denote these by $F_I$ and $F_{II}$.
+````
+
+Original SHA-256 `5C12AB7AF5C25F4AB7322F0BC9593D5FBC061BE0A3C44EB5403BA5054AC2D19E`; replacement SHA-256 `43DA5B61E70B5FF5F403CE943051A2167A58B8823492B44FA511D2D5F2DFA8A5`.
+
+</details>
+
+<details id="mc-stk-err-2493">
+<summary><code>MC-STK-ERR-2493 — homology.tex:homology.tex:6785 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2493`; producer ID: `HOMOLOGY-RECON-065`
+- Bound source locator: `homology.tex:homology.tex:6785`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6785) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2493-OP1`
+
+Pinned-official lines `6785-6785`; bytes `227047:227077`.
+
+````diff
+- denote $d_2$ the differentials
++ denote by $d_2$ the differentials
+````
+
+Original SHA-256 `444641F93BF96C7BDFB09C9A912DEEBD01C14D7933A4EB50C085B08DDAF7262B`; replacement SHA-256 `3996220377604E1374D7AAACB58DA632D0BF06B19B514C231BCC1B47C80589D1`.
+
+</details>
+
+<details id="mc-stk-err-2494">
+<summary><code>MC-STK-ERR-2494 — homology.tex:homology.tex:6849 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2494`; producer ID: `HOMOLOGY-FIND-009`
+- Bound source locator: `homology.tex:homology.tex:6849`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6849) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2494-OP1`
+
+Pinned-official lines `6849-6849`; bytes `229160:229236`.
+
+````diff
+- If there exists a $t \in \mathbf{Z}$ such that $A_0^q = 0$ for $q < t$, then
++ If there exists a $t \in \mathbf{Z}$ such that $A_i^q = 0$
++ for all $i \geq 0$ and $q < t$, then
+````
+
+Original SHA-256 `20E68F01BDBF82ACBE49712FC6091AC57BC1422D73D0F9566730F89D79E774FE`; replacement SHA-256 `8D48E9DC3F5F09964E7C96D9BFB96E75133361B65ED526855A1D63E1F4DB2030`.
+
+</details>
+
+<details id="mc-stk-err-2495">
+<summary><code>MC-STK-ERR-2495 — homology.tex:homology.tex:6861 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2495`; producer ID: `HOMOLOGY-RECON-067`
+- Bound source locator: `homology.tex:homology.tex:6861`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6861) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2495-OP1`
+
+Pinned-official lines `6861-6861`; bytes `229604:229616`.
+
+````diff
+- Denote $A(t)
++ Denote by $A(t)
+````
+
+Original SHA-256 `A856C778B94A957ACD17DE37491BD3F7CBF2A25693EF026D0BEE40C3013BA299`; replacement SHA-256 `B00B2107EBB80FA5170FC72C6B285A8C3E8DFF597DFA80E28FA8A74D38730516`.
+
+</details>
+
+<details id="mc-stk-err-2496">
+<summary><code>MC-STK-ERR-2496 — homology.tex:homology.tex:6973 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2496`; producer ID: `HOMOLOGY-FIND-011`
+- Bound source locator: `homology.tex:homology.tex:6973`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L6973) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2496-OP1`
+
+Pinned-official lines `6973-6973`; bytes `234185:234235`.
+
+````diff
+- Thus, replacing $\xi$ by something in the image of
++ Thus, subtracting from $\xi$ an element in the image of
+````
+
+Original SHA-256 `2559AF5FC8FE0D90D4AC19B5D07F4B236283ABFD96D3E43BA8F8592B4F0AB4CF`; replacement SHA-256 `71C73C9E06988DBE7155003809C390D9D97958651631BB21A0985B1EAD526D2D`.
+
+</details>
+
+<details id="mc-stk-err-2497">
+<summary><code>MC-STK-ERR-2497 — homology.tex:homology.tex:7063 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2497`; producer ID: `HOMOLOGY-FIND-010`
+- Bound source locator: `homology.tex:homology.tex:7063`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7063) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2497-OP1`
+
+Pinned-official lines `7063-7063`; bytes `238104:238166`.
+
+````diff
+- $y = (y_i) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
++ $y = (0, y_0, y_1, \ldots) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
+````
+
+Original SHA-256 `5F244C0A3BD5AC6770D41B6E47D40E14E558BC84B2C127E56FB3659741D46103`; replacement SHA-256 `B9427DEDBF8C3DDFD1054039BD94E08EE8FD28339FC0251C0D541CA64C9594D8`.
+
+</details>
+
+<details id="mc-stk-err-2498">
+<summary><code>MC-STK-ERR-2498 — homology.tex:homology.tex:7409 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2498`; producer ID: `HOMOLOGY-RECON-077`
+- Bound source locator: `homology.tex:homology.tex:7409`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7409) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2498-OP1`
+
+Pinned-official lines `7409-7409`; bytes `248407:248418`.
+
+````diff
+- Denote $i_P
++ Denote by $i_P
+````
+
+Original SHA-256 `82F9C53333B161CFA30731F92D0910B346AEA046437BADA5843D8EC645AAFB8F`; replacement SHA-256 `3150E23940FDA46289E30F6B71E7515ACDC593D3A3BBB6992CC4690BD65BC442`.
+
+</details>
+
+<details id="mc-stk-err-2499">
+<summary><code>MC-STK-ERR-2499 — homology.tex:homology.tex:7518 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2499`; producer ID: `HOMOLOGY-RECON-078`
+- Bound source locator: `homology.tex:homology.tex:7518`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7518) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2499-OP1`
+
+Pinned-official lines `7518-7518`; bytes `252605:252618`.
+
+````diff
+- and denote $X
++ and denote by $X
+````
+
+Original SHA-256 `369E071B1BBA7BC906DCEAD7053DF746115B5896DDC57B999CDC3AE7CD59D17E`; replacement SHA-256 `BC946AFA7C338C6BCDD347CFC0466C17464AF5E552D2656DF3824999FCF30787`.
+
+</details>
+
+<details id="mc-stk-err-2500">
+<summary><code>MC-STK-ERR-2500 — homology.tex:homology.tex:7792 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2500`; producer ID: `HOMOLOGY-RECON-084`
+- Bound source locator: `homology.tex:homology.tex:7792`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7792) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2500-OP1`
+
+Pinned-official lines `7792-7792`; bytes `262277:262289`.
+
+````diff
+- denote $B'_i
++ denote by $B'_i
+````
+
+Original SHA-256 `4C6EDA2437A01C53D80C4307D7886499A28B9998C4A949B6A730EB584BB80921`; replacement SHA-256 `9D8E5DDBC209AB4123FC4B591D3E202A0AE61A4A7EA9CFF37A48B815B1E8551D`.
+
+</details>
+
+<details id="mc-stk-err-2501">
+<summary><code>MC-STK-ERR-2501 — homology.tex:homology.tex:7815 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2501`; producer ID: `HOMOLOGY-RECON-085`
+- Bound source locator: `homology.tex:homology.tex:7815`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex#L7815-L7818) · [Integrated source](homology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2501-OP1`
+
+Pinned-official lines `7815-7815`; bytes `263072:263134`.
+
+````diff
+- be an inverse system of complexes of abelian groups and denote
++ be an inverse system of complexes of abelian groups and denote by
+````
+
+Original SHA-256 `DAA5BFDC938B2EF17AC055BC0B5B71F9797FF7BA571CF5B35159F20558C489DE`; replacement SHA-256 `E1D3C355EB79F79B3AE213F778D9082B9DB00911EA52A17C8B71AA5EC8B4AB6F`.
+
+### Change 2: `MC-STK-ERR-2501-OP2`
+
+Pinned-official lines `7816-7816`; bytes `263171:263188`.
+
+````diff
+- its limit. Denote
++ its limit. Denote by
+````
+
+Original SHA-256 `64E1813AA3968ED7F982EC9B34292BC35F8E1EC543635184EFC9FD821706DD25`; replacement SHA-256 `974C0BD34F32C140BD802003A1C666CC155212ED907ACA09AABB22467984A420`.
+
+### Change 3: `MC-STK-ERR-2501-OP3`
+
+Pinned-official lines `7818-7818`; bytes `263254:263269`.
+
+````diff
+- denote $H^{-1}$
++ denote by $H^{-1}$
+````
+
+Original SHA-256 `DA24F3861CF8E2B09EB0111AAA51E474A32CD2EF120B6B99955F02466BE43ADE`; replacement SHA-256 `597DAC9FE353AABDC6E742D32E5E75F651396586CD3FA3B76ABCDE9AB6276B52`.
+
+</details>
+
+<details id="mc-stk-err-2502">
+<summary><code>MC-STK-ERR-2502 — more-algebra.tex:more-algebra.tex:15531 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2502`; producer ID: `HOMOLOGY-FIND-007`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:15531`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L15531) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2502-OP1`
+
+Pinned-official lines `15531-15531`; bytes `585094:585132`.
+
+````diff
+- Then the spectral sequence is bounded,
++ Then the spectral sequence starting with its $E_1$ page is bounded,
+````
+
+Original SHA-256 `86C375AA91473E0BABFBA38F510330230204CEAEDEB9E7649AAB8F1DFD694087`; replacement SHA-256 `E4397E5B7B9E3C86EB26C8C92CC005BEEBE57FF4DA6AD6A8E4BAE68698A24AE7`.
+
+</details>
+
+<details id="mc-stk-err-2503">
+<summary><code>MC-STK-ERR-2503 — more-algebra.tex:more-algebra.tex:15797 — editorial_proof_completion</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2503`; producer ID: `HOMOLOGY-FIND-007`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:15797`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L15797) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2503-OP1`
+
+Pinned-official lines `15797-15797`; bytes `594731:594767`.
+
+````diff
+- Lemma \ref{lemma-kunneth-converges}.
++ Lemma \ref{lemma-kunneth-converges}.
++
++ \medskip\noindent
++ \textbf{Editorial proof completion.}
++ Under the four additional assumptions, the representative can be chosen
++ so that the filtration itself is finite. This verifies boundedness also
++ for the spectral sequence starting with its $E_0$ page. Choose integers
++ $a_P < b_P$ and $a_Q < b_Q$ such that $F^iP^\bullet \to P^\bullet$
++ is a quasi-isomorphism for $i \leq a_P$ and $F^iP^\bullet$ is acyclic
++ for $i \geq b_P$, and similarly for $Q^\bullet$. These conditions follow
++ from the corresponding conditions for $K^\bullet$ and $L^\bullet$
++ because the resolution maps are quasi-isomorphisms on every filtration step.
++ Set
++ $$
++ P'^\bullet = F^{a_P}P^\bullet/F^{b_P}P^\bullet,
++ \qquad
++ Q'^\bullet = F^{a_Q}Q^\bullet/F^{b_Q}Q^\bullet.
++ $$
++ Give $P'^\bullet$ the filtration equal to all of $P'^\bullet$ for
++ $i \leq a_P$, to $F^iP^\bullet/F^{b_P}P^\bullet$ for
++ $a_P < i < b_P$, and to zero for $i \geq b_P$; similarly for $Q'^\bullet$.
++ The inclusion and quotient maps give filtered quasi-isomorphisms
++ $$
++ P^\bullet \longleftarrow F^{a_P}P^\bullet \longrightarrow P'^\bullet,
++ \qquad
++ Q^\bullet \longleftarrow F^{a_Q}Q^\bullet \longrightarrow Q'^\bullet.
++ $$
++ For the inclusions this follows from the lower-tail quasi-isomorphisms;
++ for the quotients it follows from acyclicity of the upper filtration steps.
++ The same maps induce quasi-isomorphisms on associated graded complexes
++ by the long exact sequences of successive filtration quotients.
++
++ \medskip\noindent
++ The terms of every filtration step of $P'^\bullet$ and $Q'^\bullet$
++ are free: their finite filtrations have free graded terms, and extensions
++ by free modules split. The steps are K-flat as well. For example,
++ for $a_P \leq i < b_P$ use the termwise split short exact sequence
++ $$
++ 0 \to F^{b_P}P^\bullet \to F^iP^\bullet \to F^iP'^\bullet \to 0
++ $$
++ and the K-flatness of its first two terms. Tensoring with an acyclic
++ complex preserves this short exact sequence and proves acyclicity of
++ the third tensor complex. The graded complexes retain the K-flatness
++ of the original graded complexes or are zero.
++
++ \medskip\noindent
++ Now use $T'^\bullet = \text{Tot}(P'^\bullet \otimes_R Q'^\bullet)$
++ with its convolution filtration as the representative $T^\bullet$.
++ The displayed quasi-isomorphisms and K-flatness identify it with
++ $K^\bullet \otimes_R^{\mathbf L} L^\bullet$ in $D(R)$.
++ Its filtration is all of $T'^\bullet$ for $p \leq a_P+a_Q$ and zero
++ for $p \geq b_P+b_Q-1$. The canonical graded tensor comparison gives
++ the same $E_1$ formula: the graded complexes outside the two finite
++ filtration intervals were acyclic, and those inside are unchanged.
++ Thus Homology, Lemma \ref{homology-lemma-biregular-ss-converges}
++ proves boundedness from $E_0$, the finite cohomology filtration,
++ and convergence for this choice.
+````
+
+Original SHA-256 `A5952FA00FA5EE38F8ACF9853BA4EC9DA9BDFB19D9B540C048E3CE583606D940`; replacement SHA-256 `EF4BDB5B3B3A04D5CD6BE5A71277DEFA9541F8E40CD97B2E44001A7258DB7E5E`.
+
+</details>
+
+<details id="mc-stk-err-2504">
+<summary><code>MC-STK-ERR-2504 — weil.tex:weil.tex:1712 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2504`; producer ID: `HOMOLOGY-FIND-002`
+- Bound source locator: `weil.tex:weil.tex:1712`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/weil.tex#L1712-L1721) · [Integrated source](weil.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2504-OP1`
+
+Pinned-official lines `1712-1712`; bytes `60785:60853`.
+
+````diff
+- H^*(X) \otimes F[-2d] = G(h(X)(d)) \longrightarrow G(\mathbf{1}) = F
++ H^*(X) \otimes F[2d] = G(h(X)(d)) \longrightarrow G(\mathbf{1}) = F
+````
+
+Original SHA-256 `8DF6488FB1FE0DB53E7EA5C73F193F4498D0ED7CAE7AC1C5173EE2E46A47C292`; replacement SHA-256 `52444C6DAF1F73FF9FCFC911A40B1B5D3EE0BE2BB8D6A822FA41A8A0AE2DA71D`.
+
+### Change 2: `MC-STK-ERR-2504-OP2`
+
+Pinned-official lines `1721-1721`; bytes `61120:61174`.
+
+````diff
+- $G(h(X)(d)) = H^*(X) \otimes F[-2d]$ is a left dual to
++ $G(h(X)(d)) = H^*(X) \otimes F[2d]$ is a left dual to
+````
+
+Original SHA-256 `6150EE4835BFD0513A22F7A47747EF2C30AE56DB9729FD467304653A66941843`; replacement SHA-256 `7B49D862EE7D712CAC1AD19E6B2B2473EE2B5675F41280250E028EF9A063737F`.
+
+</details>
+
+<details id="mc-stk-err-2505">
+<summary><code>MC-STK-ERR-2505 — sites-cohomology.tex:sites-cohomology.tex:10074 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r60`
+- Stable ID: `MC-STK-ERR-2505`; producer ID: `HOMOLOGY-FIND-003`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:10074`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L10074-L10076) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r60/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r60/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2505-OP1`
+
+Pinned-official lines `10074-10076`; bytes `364575:364789`.
+
+````diff
+- $\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a $\delta$-functor, see
+- Homology, Definition \ref{homology-definition-cohomological-delta-functor} and
+- Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
++ $\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a homological
++ $\delta$-functor, in the sense dual to
++ Homology, Definition \ref{homology-definition-cohomological-delta-functor}; see
++ Homology, Lemma \ref{homology-lemma-long-exact-sequence-chain}.
+````
+
+Original SHA-256 `F7BEF187EF043A056D6432400845D53B695C806A14319266F73BFE747A7C20A4`; replacement SHA-256 `DBD7BB0CC530C2985CBB6B64D1263EAAA479B17E2E151765DE77D7B92C804350`.
 
 </details>

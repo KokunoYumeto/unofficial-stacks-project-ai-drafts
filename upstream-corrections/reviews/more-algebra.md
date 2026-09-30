@@ -2256,3 +2256,17 @@ Independent authority replay confirmed exact preimages, mathematical or grammati
 -$I/I^2 \otimes_A C \to K/K^2$.
 +$I/I^2 \otimes_B C \to K/K^2$.
 ````
+
+### MC-STK-ERR-2502
+
+`more-algebra.tex` — more-algebra.tex:15531; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L15531) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Then the spectral sequence is bounded,
++Then the spectral sequence starting with its $E_1$ page is bounded,
+````

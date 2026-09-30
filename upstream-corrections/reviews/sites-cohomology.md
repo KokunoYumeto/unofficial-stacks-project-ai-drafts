@@ -1560,3 +1560,22 @@ Adverse evidence / qualification: The distinguished triangle14282–14283 alread
 -$L \to \Lambda^{\oplus r}[-b + 1]$
 +$L \to \underline{\Lambda^{\oplus r}}[-b + 1]$
 ````
+
+### MC-STK-ERR-2505
+
+`sites-cohomology.tex` — sites-cohomology.tex:10074; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L10074-L10076) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r60/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1,3 +1,4 @@
+-$\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a $\delta$-functor, see
+-Homology, Definition \ref{homology-definition-cohomological-delta-functor} and
+-Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
++$\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a homological
++$\delta$-functor, in the sense dual to
++Homology, Definition \ref{homology-definition-cohomological-delta-functor}; see
++Homology, Lemma \ref{homology-lemma-long-exact-sequence-chain}.
+````

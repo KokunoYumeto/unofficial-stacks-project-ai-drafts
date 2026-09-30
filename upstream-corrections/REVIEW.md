@@ -19,18 +19,18 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [examples.tex](reviews/examples.md) — 1 correction units.
 - [fields.tex](reviews/fields.md) — 55 correction units.
 - [groupoids.tex](reviews/groupoids.md) — 48 correction units.
-- [homology.tex](reviews/homology.md) — 60 correction units.
+- [homology.tex](reviews/homology.md) — 91 correction units.
 - [injectives.tex](reviews/injectives.md) — 40 correction units.
 - [introduction.tex](reviews/introduction.md) — 1 correction units.
 - [modules.tex](reviews/modules.md) — 14 correction units.
-- [more-algebra.tex](reviews/more-algebra.md) — 118 correction units.
+- [more-algebra.tex](reviews/more-algebra.md) — 119 correction units.
 - [more-groupoids.tex](reviews/more-groupoids.md) — 22 correction units.
 - [perfect.tex](reviews/perfect.md) — 24 correction units.
 - [schemes.tex](reviews/schemes.md) — 16 correction units.
 - [sets.tex](reviews/sets.md) — 6 correction units.
 - [sheaves.tex](reviews/sheaves.md) — 83 correction units.
 - [simplicial.tex](reviews/simplicial.md) — 11 correction units.
-- [sites-cohomology.tex](reviews/sites-cohomology.md) — 80 correction units.
+- [sites-cohomology.tex](reviews/sites-cohomology.md) — 81 correction units.
 - [sites-modules.tex](reviews/sites-modules.md) — 31 correction units.
 - [sites.tex](reviews/sites.md) — 136 correction units.
 - [smoothing.tex](reviews/smoothing.md) — 30 correction units.
@@ -43,3 +43,4 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 - [stacks.tex](reviews/stacks.md) — 76 correction units.
 - [topologies.tex](reviews/topologies.md) — 19 correction units.
 - [topology.tex](reviews/topology.md) — 90 correction units.
+- [weil.tex](reviews/weil.md) — 1 correction units.

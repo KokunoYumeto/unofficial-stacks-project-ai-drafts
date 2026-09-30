@@ -1,5 +1,5 @@
 diff --git a/sites-cohomology.tex b/sites-cohomology.tex
-index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150ee0bbc29 100644
+index ba8f62453f35abc5d9f10c14c361382128ebb042..4608877583aea0e142e50f11a95e8495f05265d7 100644
 --- a/sites-cohomology.tex
 +++ b/sites-cohomology.tex
 @@ -109,10 +109,10 @@
@@ -414,7 +414,21 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Since $u$ is a $1$-morphism of fibred categories over $\mathcal{D}$
  it transforms strongly cartesian morphisms into strongly cartesian morphisms,
  hence the functor $v = u \circ v'$ is the functor of
-@@ -10217,11 +10217,11 @@
+@@ -10071,9 +10071,10 @@
+ The construction of $K_\bullet(\mathcal{F})$ is functorial in $\mathcal{F}$
+ and transforms short exact sequences of $\textit{Ab}(\mathcal{C})$ into
+ short exact sequences of complexes. Thus the sequence of functors
+-$\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a $\delta$-functor, see
+-Homology, Definition \ref{homology-definition-cohomological-delta-functor} and
+-Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
++$\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a homological
++$\delta$-functor, in the sense dual to
++Homology, Definition \ref{homology-definition-cohomological-delta-functor}; see
++Homology, Lemma \ref{homology-lemma-long-exact-sequence-chain}.
+ For $\mathcal{F} = j_{U!}\mathbf{Z}_U$ the complex $K_\bullet(\mathcal{F})$
+ is the complex associated to the free $\mathbf{Z}$-module on the simplicial
+ set $X_\bullet$ with terms
+@@ -10217,11 +10218,11 @@
  (*, B) & (*, B') \ar[l]_f
  }
  $$
@@ -431,7 +445,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $D(B') \to D(\underline{B})$.
  \end{proof}
  
-@@ -10487,7 +10487,7 @@
+@@ -10487,7 +10488,7 @@
  Let $\mathcal{C}$ and $B$ be as in Example \ref{example-category-to-point}.
  Assume there exists a cosimplicial object as in
  Lemma \ref{lemma-compute-by-cosimplicial-resolution}.
@@ -440,7 +454,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\mathcal{C}$ which induces an isomorphism
  $L\pi_!\mathcal{O} \to L\pi_!\underline{B}$.
  In this case we obtain an exact functor of triangulated categories
-@@ -10588,13 +10588,13 @@
+@@ -10588,13 +10589,13 @@
  covering $\{V_j \to V\}$ such that $\xi|_{V_j}$ is zero in
  $K_n(\mathcal{F})(V_j)$. We write
  $$
@@ -457,7 +471,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  to zero in $\mathcal{F}^+(U_{i, 0})$. By construction of
  $\mathcal{F}^+$ there exist coverings $\{U_{i, 0, j} \to U_{i, 0}\}$
  such that $\sigma_i|_{U_{i, 0, j}}$ is zero. By our construction of
-@@ -10622,7 +10622,7 @@
+@@ -10622,7 +10623,7 @@
  
  \begin{proof}
  Consider the sequence of functors $\mathcal{F} \mapsto L_n(\mathcal{F})$
@@ -466,7 +480,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Since for each $V \in \Ob(\mathcal{D})$ the sequence of functors
  $H_n(\mathcal{C}_V, - )$ forms a $\delta$-functor
  so do the functors $\mathcal{F} \mapsto L_n(\mathcal{F})$.
-@@ -10639,7 +10639,7 @@
+@@ -10639,7 +10640,7 @@
  \mathcal{F}_{U'}(U) =
  \bigoplus\nolimits_{\Mor_\mathcal{C}(U, U')} \mathbf{Z}
  $$
@@ -475,7 +489,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  then any morphism $a : U \to U'$ factors uniquely as $U \to h^*U' \to U'$
  where $h = p(a) : V \to V'$ (see
  Categories, Definition
-@@ -10954,7 +10954,7 @@
+@@ -10954,7 +10955,7 @@
  (U \to \ldots \to U \to U_i \to \ldots \to U_n, \text{id})
  $$
  for $i > 0$ and $h_{n, 0} = \text{id}$. Verifications omitted.
@@ -484,7 +498,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $K^\bullet(p_{U, *}A)$ has trivial cohomology in positive degrees
  (by the functoriality of
  Simplicial, Remark \ref{simplicial-remark-homotopy-better}
-@@ -10964,7 +10964,7 @@
+@@ -10964,7 +10965,7 @@
  degrees also if $\mathcal{F}$ is a product of sheaves of the form
  $p_{U, *}A$. As every abelian sheaf on $\mathcal{C}$ embeds
  into such a product we conclude that $K^\bullet(\mathcal{F})$
@@ -493,7 +507,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $H^n(\mathcal{C}, -)$ of $H^0(\mathcal{C}, -)$
  for example by
  Homology, Lemma \ref{homology-lemma-efface-implies-universal}
-@@ -11044,7 +11044,7 @@
+@@ -11044,7 +11045,7 @@
  On $H^0$ we obtain
  $$
  0 \to \Hom(\mathcal{G}, p_{U, *}A) \to
@@ -502,7 +516,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  \Hom(\mathcal{G}', p_{U, *}A) \to 0
  $$
  which is exact as
-@@ -11064,7 +11064,7 @@
+@@ -11064,7 +11065,7 @@
  \Mor_\mathcal{C}(U, U_0) \times \Mor_\mathcal{C}(U_n, U')
  $$
  This simplicial set is homotopy equivalent to the constant simplicial
@@ -511,7 +525,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  as the corresponding statement in Example \ref{example-right-derived-limits}.
  This finishes the proof of the claim.
  
-@@ -11146,7 +11146,7 @@
+@@ -11146,7 +11147,7 @@
  it suffices to show that for every morphism $U \to V$ of
  $\mathcal{C}$ the map
  $$
@@ -520,7 +534,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  is an isomorphism. We are given that the map
  $$
-@@ -11275,7 +11275,7 @@
+@@ -11275,7 +11276,7 @@
  
  \medskip\noindent
  Construction of $\mathcal{S}_{n + 1}^\bullet$ given
@@ -529,7 +543,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\Omega^{i - 1}_U \subset \mathcal{F}^{i - 1}(U)$ be a subset
  such that $\text{d} : \mathcal{F}^{i - 1}(U) \to \mathcal{F}^i(U)$
  maps $\Omega^{i - 1}_U$ bijectively onto
-@@ -11283,11 +11283,11 @@
+@@ -11283,11 +11284,11 @@
  \mathcal{S}_n^i(U) \cap
  \text{Im}(\text{d} : \mathcal{F}^{i - 1}(U)\to \mathcal{F}^i(U))
  $$
@@ -543,7 +557,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  and everything is clear.
  \end{proof}
-@@ -11444,7 +11444,7 @@
+@@ -11444,7 +11445,7 @@
  \mathcal{S}_{n + 1}^\bullet \subset
  \mathcal{F}^\bullet
  $$
@@ -552,7 +566,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $|\mathcal{S}_{n + 1}^\bullet| \leq \kappa$.
  Conditions (1) and (2) hold because the corresponding statements
  hold for 
-@@ -11597,9 +11597,9 @@
+@@ -11597,9 +11598,9 @@
  Conversely, if $M$ is an object of $D_\QCoh(\mathcal{O})$, then due to
  Modules on Sites, Lemma \ref{sites-modules-lemma-chaotic-quasi-coherent}
  we see that the map $R\Gamma(V, M) \to R\Gamma(U, M)$ induces isomorphisms
@@ -565,7 +579,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  of $\mathcal{O}(V) \to \mathcal{O}(U)$ and we
  conclude that $M$ is in $\mathit{QC}(\mathcal{O})$.
  \end{proof}
-@@ -11668,7 +11668,7 @@
+@@ -11668,7 +11669,7 @@
  $$
  R\Gamma(U, R\epsilon_*(\epsilon^*M)) =
  R\Gamma((\mathcal{C}/U)_\tau,
@@ -574,7 +588,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  and assumption (2) tells us this is equal to
  $R\Gamma(U, M) = \mathcal{M}^\bullet(U)$ as desired.
-@@ -11930,7 +11930,7 @@
+@@ -11930,7 +11931,7 @@
  $$
  (\mathcal{H}')^n =
  \prod\nolimits_{n = p + q}
@@ -583,7 +597,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $$
  which represents $R\SheafHom(\mathcal{E}^\bullet, \mathcal{F}^\bullet)$
  by the construction in Section \ref{section-internal-hom}. It suffices
-@@ -11998,7 +11998,7 @@
+@@ -11998,7 +11999,7 @@
  the double complex with terms
  $\SheafHom_\mathcal{O}(\mathcal{E}^{-q}, \mathcal{F}^p)$
  and similarly for $(\mathcal{H}')^\bullet$.
@@ -592,7 +606,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  comes from a map of double complexes.
  Thus to show this map is a quasi-isomorphism, we may use the spectral
  sequence of a double complex
-@@ -12197,11 +12197,11 @@
+@@ -12197,11 +12198,11 @@
  for $j < m + 1$. After refining the covering we may choose
  maps $\beta_i : \mathcal{L}_i^\bullet \to L|_{U_i}$ in $D(\mathcal{O}_{U_i})$
  with $\mathcal{L}_i^\bullet$ strictly perfect such that
@@ -606,7 +620,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  such that the diagrams
  $$
  \xymatrix{
-@@ -12255,9 +12255,9 @@
+@@ -12255,9 +12256,9 @@
  we may assume there exist strictly perfect complexes $\mathcal{K}^\bullet$
  and $\mathcal{L}^\bullet$ and maps
  $\alpha : \mathcal{K}^\bullet \to K$ and
@@ -618,7 +632,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Then the map
  $$
  \alpha \otimes^\mathbf{L} \beta :
-@@ -12323,7 +12323,7 @@
+@@ -12323,7 +12324,7 @@
  
  \begin{proof}
  Proof of (1). Let $U$ be an object of $\mathcal{C}$. We have to show that
@@ -627,7 +641,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  a covering of $U$ (see
  Modules on Sites, Definition \ref{sites-modules-definition-site-local}).
  Thus during the proof we may (finitely often) choose a covering
-@@ -12337,7 +12337,7 @@
+@@ -12337,7 +12338,7 @@
  If $n = m$, then $H^m(\mathcal{E}^\bullet)$ is a quotient of
  $\mathcal{E}^n$ and the result is clear.
  If $n > m$, then $\mathcal{E}^{n - 1} \to \mathcal{E}^n$ is surjective as
@@ -636,7 +650,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  we can (after replacing $U$ by the members of a covering)
  find a section of this surjection and write
  $\mathcal{E}^{n - 1} = \mathcal{E}' \oplus \mathcal{E}^n$.
-@@ -12458,7 +12458,7 @@
+@@ -12458,7 +12459,7 @@
  (Modules on Sites, Lemma \ref{sites-modules-lemma-flat-ses}).
  Hence we may replace $\mathcal{K}^\bullet$ by
  $\tau_{\leq n - 1}\mathcal{K}^\bullet$. Thus, by induction on $n$, we
@@ -645,7 +659,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\mathcal{O}$-modules with $\mathcal{K}^i = 0$ for $i > b$.
  
  \medskip\noindent
-@@ -12535,7 +12535,7 @@
+@@ -12535,7 +12536,7 @@
  because the short exact sequence
  $0 \to \mathcal{I} \to \mathcal{K}^a \to \mathcal{N} \to 0$
  of flat modules pulls back to a short exact sequence.
@@ -654,7 +668,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  the complex $f^*\mathcal{E}^\bullet$ is K-flat and the proof is complete.
  \end{proof}
  
-@@ -12552,12 +12552,12 @@
+@@ -12552,12 +12553,12 @@
  \begin{proof}
  Assume $E$ has tor amplitude in $[a, b]$. By
  Lemma \ref{lemma-tor-amplitude}
@@ -669,7 +683,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Thus by Lemma \ref{lemma-tor-amplitude}
  we conclude that $Lf^*E$ has tor amplitude in $[a, b]$.
  \end{proof}
-@@ -13063,16 +13063,16 @@
+@@ -13063,16 +13064,16 @@
  \end{lemma}
  
  \begin{proof}
@@ -690,7 +704,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  (K^\vee)^\vee
  $$
  see Lemma \ref{lemma-internal-hom-evaluate}. It suffices to prove there
-@@ -13606,7 +13606,7 @@
+@@ -13606,7 +13607,7 @@
  \item $\theta^n$ corresponds to a map
  $h^n : \text{Tot}^n(M^\bullet \otimes_R N^\bullet) \to
  \text{Tot}^{n - 1}(M^\bullet \otimes_R N^\bullet)$, and
@@ -699,7 +713,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  \end{enumerate}
  It follows that $M^\bullet$ and $N^\bullet$ define
  mutually inverse objects of $D(R)$. By
-@@ -13854,7 +13854,7 @@
+@@ -13854,7 +13855,7 @@
  Proof of (2). This holds by Lemma \ref{lemma-is-limit-dimension} with $d = 0$.
  
  \medskip\noindent
@@ -708,7 +722,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $\mathcal{F} = \lim \mathcal{F}_n$. If $U \in \mathcal{B}$, then
  $\mathcal{F}(U) = \lim \mathcal{F}_n(U)$
  surjects onto $\mathcal{F}_1(U)$ as all the transition maps
-@@ -13958,7 +13958,7 @@
+@@ -13958,7 +13959,7 @@
  This makes sense as in each degree the direct sum on the right is finite.
  By assumption this map factors through a finite direct sum.
  We conclude that $K \to \tau_{\geq n} K$ is zero for at least one $n$,
@@ -717,7 +731,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  
  \medskip\noindent
  We may represent $K$ by a bounded above complex $K^\bullet$ each of whose
-@@ -13973,7 +13973,7 @@
+@@ -13973,7 +13974,7 @@
  Hence by Derived Categories, Lemmas \ref{derived-lemma-colim-hocolim} and
  \ref{derived-lemma-commutes-with-countable-sums}
  we see that $1 : K^\bullet \to K^\bullet$ factors through
@@ -726,7 +740,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Thus we see that $1 : K^\bullet \to K^\bullet$ factors as
  $$
  K^\bullet \xrightarrow{\varphi} L^\bullet \xrightarrow{\psi} K^\bullet
-@@ -13981,7 +13981,7 @@
+@@ -13981,7 +13982,7 @@
  in $D(\mathcal{A})$ for some complex $L^\bullet$ which is bounded and
  whose terms are direct sums of elements of $S$. Say $L^i$ is zero for
  $i \not \in [a, b]$. Let $c$ be the largest integer $\leq b + 1$ such
@@ -735,7 +749,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  Claim: if $c < b + 1$, then we can modify $L^\bullet$ to increase $c$.
  By induction this claim will show we have a factorization
  of $1_K$ as
-@@ -13995,7 +13995,7 @@
+@@ -13995,7 +13996,7 @@
  Lemma \ref{derived-lemma-projectors-have-images-triangulated}
  we see that $L = \Ker(e) \oplus \Ker(1 - e)$.
  The map $\varphi : K \to L$ induces an isomorphism with
@@ -744,7 +758,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  
  \medskip\noindent
  Proof of the claim. Write $L^c = \bigoplus_{\lambda \in \Lambda} E_\lambda$.
-@@ -14008,10 +14008,10 @@
+@@ -14008,10 +14009,10 @@
  \pi :
  L^\bullet
  \longrightarrow
@@ -757,7 +771,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  By our assumption on $K$ we see that, after possibly replacing $\Lambda'$ by
  a larger finite subset, we may assume that $\pi \circ \varphi = 0$
  in $D(\mathcal{A})$.
-@@ -14086,7 +14086,7 @@
+@@ -14086,7 +14087,7 @@
  H^p(U, \bigoplus\nolimits_{i \in I} \mathcal{I}_i) =
  \bigoplus\nolimits_{i \in I} H^p(U, \mathcal{I}_i) = 0
  $$
@@ -766,7 +780,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  see that there exists an $a \in \mathbf{Z}$ such that $H^n(M_i) = 0$
  for $n < a$. Thus we can choose complexes of injective $\mathcal{O}$-modues
  $\mathcal{I}_i^\bullet$ representing $M_i$
-@@ -14099,7 +14099,7 @@
+@@ -14099,7 +14100,7 @@
  we see that
  $$
  R\Gamma(U, M) = \Gamma(U, \bigoplus \mathcal{I}_i^\bullet) =
@@ -775,7 +789,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  \bigoplus R\Gamma(U, M_i)
  $$
  as desired.
-@@ -14272,8 +14272,8 @@
+@@ -14272,8 +14273,8 @@
  \medskip\noindent
  By a slight generalization of
  Lemma \ref{lemma-kill-cohomology-class-on-covering} (details omitted)
@@ -786,7 +800,7 @@ index ba8f62453f35abc5d9f10c14c361382128ebb042..6a812f3953e86a14554308cc1ebee150
  $U_i$ we reach the situation where there is a map
  $\underline{\Lambda^{\oplus r}}[-b] \to K$
  inducing a surjection on cohomology sheaves in degree $b$.
-@@ -14294,9 +14294,9 @@
+@@ -14294,9 +14295,9 @@
  \ref{sites-modules-lemma-kernel-finite-locally-constant}
  we see that $H^{b - 1}(L)$ is locally constant of finite type.
  By induction hypothesis we obtain an isomorphism

@@ -13,6 +13,18 @@ def unit(name, index=1, source="algebra.tex", start=0, end=3):
 
 
 class ExportTests(unittest.TestCase):
+    def test_editorial_completion_stays_out_of_corrections_only(self):
+        value = SimpleNamespace(source='more-algebra.tex', defect_class='editorial_proof_completion')
+        self.assertEqual(e.correction_exclusion_reason(value), 'excluded_editorial_proof_completion')
+
+    def test_source_proof_correction_remains_exportable(self):
+        value = SimpleNamespace(source='more-algebra.tex', defect_class='mathematical_source_correction')
+        self.assertIsNone(e.correction_exclusion_reason(value))
+
+    def test_fork_tag_exclusion_remains(self):
+        value = SimpleNamespace(source='tags/tags', defect_class='copyedit')
+        self.assertEqual(e.correction_exclusion_reason(value), 'excluded_fork_tag_allocation')
+
     def test_missing_summary_locus_uses_exact_operation_lines(self):
         ops = [SimpleNamespace(source_start_line=a, source_end_line=b) for a, b in [(596,596),(592,592),(594,594)]]
         self.assertEqual(e.review_locus(SimpleNamespace(locus=''), ops), '592, 594, 596')

@@ -63,9 +63,9 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 2,206 historical correction IDs are accounted for; 2,204 effective textual
-  units are exported, with one superseded correction and one fork tag allocation
-  explicitly excluded. No clone of this fork is needed.
+  The 2,241 historical correction IDs are accounted for; 2,238 effective textual
+  units are exported. One superseded correction, one fork tag allocation and
+  one explicitly labelled editorial proof completion are excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
   original location, smallest replacement, and a short reason. The readable
   selection also has [standalone patches](possible-fixes/README.md), checked
@@ -195,7 +195,20 @@ stronger Schur and bicommutant consequences remain editorial material.
 All thirteen edits are included in the chapter and combined fixes-only patches.
 The separately received open Brauer problem remains unresolved.
 
-R52/R53/R54/R55/R56/R57/R58/R59 review, correction preparation, builds and visual checks, and current
+R60 records **35 units and 43 edits** in Homology and three dependent chapters.
+The review reconciles all 136 received Homology reports, with earlier fixes,
+copyedits, source corrections and seven unintegrated optional proposals kept
+separate. Corrections include boundary signs and projections, spectral-sequence
+page bounds, the Weil grading shift and a totalization primitive. Eleven
+stronger editorial consequences retain their complete proofs and propagation
+records. The longer Kunneth proof completion is explicitly labelled editorial.
+[Read the four corrected chapters and 55-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r60/README.md).
+The fixes-only download includes the other 34 units and 42 edits; it excludes
+that editorial completion. The [reviewed publication history](validation/r60-reviewed-publication-history.json)
+retains each R60 transition without incorporating the newer Illusie drafts
+awaiting their separate review. This remains a source-and-patch update.
+
+R52/R53/R54/R55/R56/R57/R58/R59/R60 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

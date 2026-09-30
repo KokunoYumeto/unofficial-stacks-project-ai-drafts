@@ -29,6 +29,10 @@ jobs:
       - name: Validate unified source, registry, and documentation
         shell: bash
         run: |
+          if test -f tools/validate_r60_successor.py; then
+            python tools/validate_r60_successor.py
+            exit $?
+          fi
           if test -f tools/validate_r59_successor.py; then
             python tools/validate_r59_successor.py
             exit $?
@@ -108,6 +112,7 @@ jobs:
           python -m unittest tests.test_upstream_correction_export
           python -m unittest tests.test_r58_successor
           python -m unittest tests.test_r59_successor
+          python -m unittest tests.test_r60_successor
           python -m unittest tests.test_r49_successor
           python -m unittest tests.test_r50_successor
           python -m unittest tests.test_r51_successor tests.test_errata_build_diagnostics
