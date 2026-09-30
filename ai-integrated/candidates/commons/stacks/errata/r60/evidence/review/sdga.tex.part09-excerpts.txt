@@ -1,0 +1,50 @@
+3927: In case (2) there is a short exact sequence
+3928: $$
+3929: 0 \to \mathcal{K}_\beta \to \mathcal{K}_\alpha \to \mathcal{N}_\alpha \to 0
+3930: $$
+3931: By Remark \ref{remark-why-graded-injective}
+3932: and since we've seen that $\mathcal{I}$ is graded
+3933: injective, we obtain an exact sequence
+3934: $$
+3935: \Hom_{K(\textit{Mod}(\mathcal{A}, \text{d}))}(\mathcal{K}_\beta, \mathcal{I})
+3936: \to
+3937: \Hom_{K(\textit{Mod}(\mathcal{A}, \text{d}))}(\mathcal{K}_\alpha, \mathcal{I})
+3938: \to
+3939: \Hom_{K(\textit{Mod}(\mathcal{A}, \text{d}))}(\mathcal{N}_\alpha, \mathcal{I})
+3940: $$
+3941: By induction the term on the left is zero. By assumption (2)
+3942: the term on the right is zero: any map $\mathcal{M}_s \to \mathcal{I}$
+3943: factors through $\mathcal{M}'_s$ and hence is homotopic to zero.
+3944: Thus the middle group is zero too. Finally, suppose that $\alpha$ is a
+3945: limit ordinal. Because we also have
+3946: $\mathcal{K}_\alpha = \colim \mathcal{K}_\alpha$ as graded
+3947: $\mathcal{A}$-modules we see that
+3948: $$
+3949: \Hom_{\textit{Mod}^{dg}(\mathcal{A}, \text{d})}
+3950: (\mathcal{K}_\alpha, \mathcal{I})
+3951: = \lim_{\beta < \alpha}
+3952: \Hom_{\textit{Mod}^{dg}(\mathcal{A}, \text{d})}
+3953: (\mathcal{K}_\beta, \mathcal{I})
+3954: $$
+3955: as complexes of abelian groups. The cohomology groups of these
+3956: complexes compute morphisms in $K(\textit{Mod}(\mathcal{A}, \text{d}))$
+3957: between shifts. The transition maps in the system of complexes
+3958: are surjective by Remark \ref{remark-why-graded-injective}
+3959: because $\mathcal{I}$ is graded injective.
+3960: Moreover, for a limit ordinal $\beta \leq \alpha$
+3961: we have equality of limit and value. Thus we may apply
+3962: Homology, Lemma \ref{homology-lemma-ML-over-ordinals}
+3963: to conclude.
+3964: \end{proof}
+3965: 
+3966: \begin{lemma}
+3967: \label{lemma-functor-set-of-monos}
+3968: Let $(\mathcal{C}, \mathcal{O})$ be a ringed site.
+3969: Let $(\mathcal{A}, \text{d})$
+3970: be a sheaf of differential graded algebras on $(\mathcal{C}, \mathcal{O})$.
+3971: Let $R$ be a set and for each $r \in R$ let an injective map
+3972: $\mathcal{M}_r \to \mathcal{M}'_r$ of
+3973: acyclic differential graded $\mathcal{A}$-modules be given.
+3974: There exists a functor $M : \textit{Mod}(\mathcal{A}, \text{d}) \to
+3975: \textit{Mod}(\mathcal{A}, \text{d})$ and a natural transformation
+3976: $j : \text{id} \to M$ such that

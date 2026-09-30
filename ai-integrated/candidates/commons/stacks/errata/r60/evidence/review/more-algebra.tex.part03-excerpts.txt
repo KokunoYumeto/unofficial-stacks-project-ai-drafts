@@ -1,0 +1,71 @@
+18952: we obtain $(-1)^{r(q + r)} = (-1)^{r + qr}$ as in the direct proof.
+18953: \end{remark}
+18954: 
+18955: 
+18956: 
+18957: 
+18958: 
+18959: 
+18960: 
+18961: \section{Sign rules}
+18962: \label{section-sign-rules}
+18963: 
+18964: \noindent
+18965: In this section we review the sign rules used so far and we discuss
+18966: some of their ramifications. It also seems appropriate to discuss
+18967: these issues in the setting of the category of complexes of modules
+18968: over a ring, as most interesting phenomena already occur in this case.
+18969: We sincerely hope the reader will not
+18970: need to use the more esoteric aspects of this section.
+18971: 
+18972: \medskip\noindent
+18973: For the rest of this section, we fix a ring $R$ and we denote
+18974: $M^\bullet$ a complex of $R$-modules with differentials
+18975: $d^n_M : M^n \to M^{n + 1}$.
+18976: \begin{enumerate}
+18977: \item The $k$th shifted complex $M^\bullet[k]$ has terms
+18978: $(M^\bullet[k])^n = M^{n + k}$ and differentials
+18979: $d_{M[k]}^n = (-1)^kd^{n + k}_M$, see
+18980: Homology, Definition \ref{homology-definition-shift-cochain}.
+18981: \item Given a map $f : M^\bullet \to N^\bullet$ of complexes, we define
+18982: $f[k] : M^\bullet[k] \to N^\bullet[k]$ without the intervention of signs, see
+18983: Homology, Definition \ref{homology-definition-shift-cochain}.
+18984: \item We identify $H^n(M^\bullet[k])$ with $H^{n + k}(M^\bullet)$
+18985: without the intervention of signs, see
+18986: Homology, Definition \ref{homology-definition-cohomology-shift}.
+18987: \item The boundary map of a short exact sequence of complexes
+18988: is defined as in the snake lemma without the intervention of signs, see
+18989: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
+18990: \item The distinguished triangle associated to a termwise split
+18991: short exact sequence $0 \to K^\bullet \to L^\bullet \to M^\bullet \to 0$
+18992: of complexes is given by
+18993: $$
+18994: K^\bullet \to L^\bullet \to M^\bullet \to K^\bullet[1]
+18995: $$
+18996: where $M^n \to K^{n + 1}$ is the map $\pi^{n + 1} \circ d^n_L \circ s^n$
+18997: if $s$ and $\pi$ are compatible termwise splittings. In other words,
+18998: without the intervention of signs. See
+18999: Derived Categories, Definitions \ref{derived-definition-distinguished-triangle}
+19000: and \ref{derived-definition-split-ses}.
+19001: \item The total complex $\text{Tot}(M^\bullet \otimes_R N^\bullet)$
+19002: has differential $d$ satisfying the Leibniz rule
+19003: $d(x \otimes y) = d(x) \otimes y + (-1)^{\deg(x)}x \otimes d(y)$.
+19004: See Homology, Example
+19005: \ref{homology-example-double-complex-as-tensor-product-of} and
+19006: Homology, Definition \ref{homology-definition-associated-simple-complex}.
+19007: \item
+19008: \label{item-shift-tensor}
+19009: There is a canonical isomorphism
+19010: $$
+19011: \text{Tot}(M^\bullet \otimes_R N^\bullet)[a + b] \to
+19012: \text{Tot}(M^\bullet[a] \otimes_R N^\bullet[b])
+19013: $$
+19014: which uses the sign $(-1)^{pb}$ on the summand $M^p \otimes_R N^q$,
+19015: see Homology, Remark \ref{homology-remark-shift-double-complex}. It
+19016: is often more convenient to consider the corresponding shifted map
+19017: $\text{Tot}(M^\bullet \otimes_R N^\bullet) \to
+19018: \text{Tot}(M^\bullet[a] \otimes_R N^\bullet[b])[-a - b]$.
+19019: \item There is a canonical isomorphism of complexes
+19020: $$
+19021: \text{Tot}(
+19022: \text{Tot}(K^\bullet \otimes_R L^\bullet) \otimes_R M^\bullet) \to

@@ -1,0 +1,126 @@
+3942: involves signs (this goes back to the signs chosen in
+3943: Homology, Remark \ref{homology-remark-shift-double-complex}).
+3944: \end{remark}
+3945: 
+3946: 
+3947: 
+3948: 
+3949: 
+3950: 
+3951: \section{Derived categories}
+3952: \label{section-derived-categories}
+3953: 
+3954: \noindent
+3955: In this section we construct the derived category of an abelian category
+3956: $\mathcal{A}$ by inverting the quasi-isomorphisms in $K(\mathcal{A})$.
+3957: Before we do this recall that the functors
+3958: $H^i : \text{Comp}(\mathcal{A}) \to \mathcal{A}$
+3959: factor through $K(\mathcal{A})$, see
+3960: Homology, Lemma \ref{homology-lemma-map-cohomology-homotopy-cochain}.
+3961: Moreover, in
+3962: Homology, Definition \ref{homology-definition-cohomology-shift}
+3963: we have defined identifications $H^i(K^\bullet[n]) = H^{i + n}(K^\bullet)$.
+3964: At this point it makes sense to redefine
+3965: $$
+3966: H^i(K^\bullet) = H^0(K^\bullet[i])
+3967: $$
+3968: in order to avoid confusion and possible sign errors.
+3969: 
+3970: \begin{lemma}
+3971: \label{lemma-cohomology-homological}
+3972: Let $\mathcal{A}$ be an abelian category. The functor
+3973: $$
+3974: H^0 : K(\mathcal{A}) \longrightarrow \mathcal{A}
+3975: $$
+3976: is homological.
+3977: \end{lemma}
+3978: 
+3979: \begin{proof}
+3980: Because $H^0$ is a functor, and by our definition of distinguished triangles
+3981: it suffices to prove that given a termwise split short exact sequence
+3982: of complexes $0 \to A^\bullet \to B^\bullet \to C^\bullet \to 0$
+3983: the sequence $H^0(A^\bullet) \to H^0(B^\bullet) \to H^0(C^\bullet)$
+3984: is exact. This follows from
+3985: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
+3986: \end{proof}
+3987: 
+3988: \noindent
+3989: In particular, this lemma implies that a distinguished triangle
+3990: $(X, Y, Z, f, g, h)$ in $K(\mathcal{A})$ gives rise to a long exact
+3991: cohomology sequence
+3992: \begin{equation}
+3993: \label{equation-long-exact-cohomology-sequence-D}
+3994: \xymatrix{
+3995: \ldots \ar[r] &
+3996: H^i(X) \ar[r]^{H^i(f)} &
+3997: H^i(Y) \ar[r]^{H^i(g)} &
+3998: H^i(Z) \ar[r]^{H^i(h)} &
+3999: H^{i + 1}(X) \ar[r] & \ldots
+4000: }
+4001: \end{equation}
+4002: see (\ref{equation-long-exact-cohomology-sequence}). Moreover, there is
+4003: a compatibility with the long exact sequence of cohomology associated to
+4004: a short exact sequence of complexes. For
+4005: example, if $(A^\bullet, B^\bullet, C^\bullet, \alpha, \beta, \delta)$
+4006: is the distinguished triangle associated to a termwise split exact
+4007: sequence of complexes (see
+4008: Definition \ref{definition-split-ses}),
+4009: then the cohomology sequence above agrees with the one defined using the
+4010: snake lemma, see
+4011: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}
+4012: and for agreement of sequences, see
+4013: Homology, Lemma \ref{homology-lemma-ses-termwise-split-long-cochain}.
+4014: 
+4015: \medskip\noindent
+4016: Recall that a complex $K^\bullet$ is {\it acyclic} if $H^i(K^\bullet) = 0$
+4017: for all $i \in \mathbf{Z}$. Moreover, recall that a morphism of complexes
+4018: $f : K^\bullet \to L^\bullet$ is a {\it quasi-isomorphism} if and only if
+4019: $H^i(f)$ is an isomorphism for all $i$. See
+4020: Homology, Definition \ref{homology-definition-quasi-isomorphism-cochain}.
+4021: 
+4022: \begin{lemma}
+4023: \label{lemma-acyclic}
+4024: Let $\mathcal{A}$ be an abelian category. The full subcategory
+4025: $\text{Ac}(\mathcal{A})$ of $K(\mathcal{A})$ consisting of acyclic complexes
+4026: is a strictly full saturated triangulated subcategory of $K(\mathcal{A})$.
+4027: The corresponding saturated multiplicative system (see
+4028: Lemma \ref{lemma-operations})
+4029: of $K(\mathcal{A})$ is the set $\text{Qis}(\mathcal{A})$
+4030: of quasi-isomorphisms. In particular, the kernel of the localization
+
+6958: Lemma \ref{lemma-injective-resolutions-exist}) or use the given one.
+6959: Recall that $\text{Comp}^{+}(\mathcal{A})$ is an
+6960: abelian category, see
+6961: Homology, Lemma \ref{homology-lemma-cat-cochain-abelian}.
+6962: Hence we may form the pushout along
+6963: the map $A^\bullet \to I^\bullet$ to get
+6964: $$
+6965: \xymatrix{
+6966: 0 \ar[r] &
+6967: A^\bullet \ar[r] \ar[d] &
+6968: B^\bullet \ar[r] \ar[d] &
+6969: C^\bullet \ar[r] \ar[d] &
+6970: 0 \\
+6971: 0 \ar[r] &
+6972: I^\bullet \ar[r] &
+6973: E^\bullet \ar[r] &
+6974: C^\bullet \ar[r] &
+6975: 0
+6976: }
+6977: $$
+6978: Because of the $5$-lemma and the last assertion of
+6979: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}
+6980: the map $B^\bullet \to E^\bullet$ is a quasi-isomorphism.
+6981: Note that the lower short exact sequence is termwise split, see
+6982: Homology, Lemma \ref{homology-lemma-characterize-injectives}.
+6983: Hence it suffices to prove the lemma when
+6984: $0 \to A^\bullet \to B^\bullet \to C^\bullet \to 0$ is
+6985: termwise split.
+6986: 
+6987: \medskip\noindent
+6988: Step 2. Choose splittings. In other words, write
+6989: $B^n = A^n \oplus C^n$. Denote $\delta : C^\bullet \to A^\bullet[1]$
+6990: the morphism as in
+6991: Homology, Lemma \ref{homology-lemma-ses-termwise-split-cochain}.
+6992: Choose injective resolutions $f_1 : A^\bullet \to I_1^\bullet$
+6993: and $f_3 : C^\bullet \to I_3^\bullet$. (If $A^\bullet$ is a complex of

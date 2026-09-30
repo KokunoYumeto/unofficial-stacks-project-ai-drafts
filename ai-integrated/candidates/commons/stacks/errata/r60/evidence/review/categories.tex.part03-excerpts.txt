@@ -1,0 +1,71 @@
+9450: \end{proof}
+9451: 
+9452: \begin{definition}
+9453: \label{definition-invertible}
+9454: Let $\mathcal{C}$ be a monoidal category. An object $X$ of $\mathcal{C}$
+9455: is called {\it invertible} if any (or all) of the equivalent conditions of
+9456: Lemma \ref{lemma-invertible} hold.
+9457: \end{definition}
+9458: 
+9459: \noindent
+9460: Observe that if $F : \mathcal{C} \to \mathcal{C}'$ is a functor of
+9461: monoidal categories, then $F$ sends invertible objects to invertible
+9462: objects.
+9463: 
+9464: \begin{definition}
+9465: \label{definition-dual}
+9466: Given a monoidal category $(\mathcal{C}, \otimes, \phi)$
+9467: and an object $X$ a {\it left dual} is an object $Y$ together with
+9468: morphisms $\eta : \mathbf{1} \to X \otimes Y$ and
+9469: $\epsilon : Y \otimes X \to \mathbf{1}$
+9470: such that the diagrams
+9471: $$
+9472: \vcenter{
+9473: \xymatrix{
+9474: X \ar[rd]_1 \ar[r]_-{\eta \otimes 1} &
+9475: X \otimes Y \otimes X \ar[d]^{1 \otimes \epsilon} \\
+9476: & X
+9477: }
+9478: }
+9479: \quad\text{and}\quad
+9480: \vcenter{
+9481: \xymatrix{
+9482: Y \ar[rd]_1 \ar[r]_-{1 \otimes \eta} &
+9483: Y \otimes X \otimes Y \ar[d]^{\epsilon \otimes 1} \\
+9484: & Y
+9485: }
+9486: }
+9487: $$
+9488: commute. In this situation we say that $X$ is a {\it right dual} of $Y$.
+9489: \end{definition}
+9490: 
+9491: \noindent
+9492: Observe that if $F : \mathcal{C} \to \mathcal{C}'$ is a functor of
+9493: monoidal categories, then $F(Y)$ is a left dual of $F(X)$ if
+9494: $Y$ is a left dual of $X$.
+9495: 
+9496: \begin{lemma}
+9497: \label{lemma-left-dual}
+9498: Let $\mathcal{C}$ be a monoidal category. If $Y$ is a left dual to $X$,
+9499: then
+9500: $$
+9501: \Mor(Z' \otimes X, Z) = \Mor(Z', Z \otimes Y)
+9502: \quad\text{and}\quad
+9503: \Mor(Y \otimes Z', Z) = \Mor(Z', X \otimes Z)
+9504: $$
+9505: functorially in $Z$ and $Z'$.
+9506: \end{lemma}
+9507: 
+9508: \begin{proof}
+9509: Consider the maps
+9510: $$
+9511: \Mor(Z' \otimes X, Z) \to
+9512: \Mor(Z' \otimes X \otimes Y, Z \otimes Y) \to
+9513: \Mor(Z', Z \otimes Y)
+9514: $$
+9515: where we use $\eta$ in the second arrow
+9516: and the sequence of maps
+9517: $$
+9518: \Mor(Z', Z \otimes Y) \to
+9519: \Mor(Z' \otimes X, Z \otimes Y \otimes X) \to
+9520: \Mor(Z' \otimes X, Z)

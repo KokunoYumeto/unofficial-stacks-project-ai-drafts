@@ -1,0 +1,451 @@
+{
+  "schema": "stacks-homology-source-review/v1",
+  "created_utc": "2026-09-30T07:43:27.852231+00:00",
+  "current_commit": "b4b30d521cfbe300860903ff788059627da6a434",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "groups": [
+    {
+      "group_id": "HOMOLOGY-RECON-053",
+      "occurrence_ids": [
+        "OCC-12500"
+      ],
+      "stable_correction_ids": [
+        "MC-STK-ERR-0786"
+      ],
+      "source_lines": [
+        6384
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 2
+      },
+      "kind": "vanishing_target_degree",
+      "rationale": "The inverse image is under d^n, so the vanishing target is F^{p+r}K^{n+1}.",
+      "semantic_status": "confirmed_existing_correction",
+      "integration_status": "already_present_in_pinned_cumulative_source",
+      "prior_operation_checks": [
+        {
+          "operation": {
+            "old_text": "$F^{p + r}K^n = 0$",
+            "replacement_text": "$F^{p + r}K^{n + 1} = 0$",
+            "source_start_line": 6384,
+            "source_end_line": 6384,
+            "start_byte": 211469,
+            "end_byte_exclusive": 211487,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0786-OP1",
+            "old_sha256": "0E4DC4BEAED0AB6F099421D35972A8CA21AFA797CD63C128A46C7A464745A894",
+            "replacement_sha256": "A1E41DF7A974AFD0C5EE41AE0E51CCB16BD28E8EC8E9672641B6E546B425FC3B"
+          },
+          "current_start_byte": 215497,
+          "current_end_byte_exclusive": 215521,
+          "current_postimage_verified": true
+        }
+      ]
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-054",
+      "occurrence_ids": [
+        "OCC-02862",
+        "OCC-12501"
+      ],
+      "stable_correction_ids": [
+        "MC-STK-ERR-0787"
+      ],
+      "source_lines": [
+        6399,
+        6400
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 2
+      },
+      "kind": "explicit_bidegree_quantifiers",
+      "rationale": "Retain all bidegrees in the weak Serre hypothesis; the theorem statement itself already had them.",
+      "semantic_status": "confirmed_existing_correction",
+      "integration_status": "already_present_in_pinned_cumulative_source",
+      "prior_operation_checks": [
+        {
+          "operation": {
+            "old_text": "$E_r^{p, q} \\in \\mathcal{C}$ for some weak Serre subcategory",
+            "replacement_text": "$E_r^{p, q} \\in \\mathcal{C}$ for all $p, q \\in \\mathbf{Z}$, where",
+            "source_start_line": 6399,
+            "source_end_line": 6399,
+            "start_byte": 212271,
+            "end_byte_exclusive": 212331,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0787-OP1",
+            "old_sha256": "C66C211B603D6C9600ABC2BED299CDA72DC4E01CEB73ABB4E1639786141E6464",
+            "replacement_sha256": "9779E4B046D4E5618AA99DDC04BB77A0899A4EE2133BB2F47B6F91B7792B4455"
+          },
+          "current_start_byte": 216305,
+          "current_end_byte_exclusive": 216370,
+          "current_postimage_verified": true
+        },
+        {
+          "operation": {
+            "old_text": "$\\mathcal{C}$ of $\\mathcal{A}$. Then",
+            "replacement_text": "$\\mathcal{C}$ is a weak Serre subcategory of $\\mathcal{A}$. Then",
+            "source_start_line": 6400,
+            "source_end_line": 6400,
+            "start_byte": 212332,
+            "end_byte_exclusive": 212368,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0787-OP2",
+            "old_sha256": "98CADE23D655DEE20FC84E6EBE99AEE5E3BF27A6F0009150840F972D6F8C5D7F",
+            "replacement_sha256": "72CD2E62BBF04F8CE5D9C9D00E88273FC126E66D981765324218A0960A5B8A54"
+          },
+          "current_start_byte": 216371,
+          "current_end_byte_exclusive": 216435,
+          "current_postimage_verified": true
+        }
+      ]
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-055",
+      "occurrence_ids": [
+        "OCC-02864",
+        "OCC-12502"
+      ],
+      "stable_correction_ids": [
+        "MC-STK-ERR-0788"
+      ],
+      "source_lines": [
+        6442
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 2
+      },
+      "kind": "weak_serre_ambient_category",
+      "rationale": "All intervening kernels, images, cohomologies and finite extensions lie in the specified weak Serre closure.",
+      "semantic_status": "confirmed_existing_correction",
+      "integration_status": "already_present_in_pinned_cumulative_source",
+      "prior_operation_checks": [
+        {
+          "operation": {
+            "old_text": "smallest Serre",
+            "replacement_text": "smallest weak Serre",
+            "source_start_line": 6442,
+            "source_end_line": 6442,
+            "start_byte": 214196,
+            "end_byte_exclusive": 214210,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0788-OP1",
+            "old_sha256": "10ED99B4B0AC9F77B26200FC62325CF3DA79847C4A81D4FE7D30DF8B32CFC32B",
+            "replacement_sha256": "EC19D1077A4E09F644CB4EAEA5F0622B964B148BA8AA28CA57D9CEFCD84203B5"
+          },
+          "current_start_byte": 218263,
+          "current_end_byte_exclusive": 218282,
+          "current_postimage_verified": true
+        }
+      ]
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-056",
+      "occurrence_ids": [
+        "OCC-02863"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6428
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_preposition",
+      "rationale": "Insert by in the notation introduction.",
+      "semantic_status": "confirmed_missing_copyedit",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-057",
+      "occurrence_ids": [
+        "OCC-02865",
+        "OCC-12519"
+      ],
+      "stable_correction_ids": [
+        "MC-STK-ERR-0805"
+      ],
+      "source_lines": [
+        6468,
+        6470
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_agreement",
+      "rationale": "Each bound is singular, so both existing exists corrections are valid.",
+      "semantic_status": "confirmed_existing_correction",
+      "integration_status": "already_present_in_pinned_cumulative_source",
+      "prior_operation_checks": [
+        {
+          "operation": {
+            "old_text": "there exist $p_0(n)$",
+            "replacement_text": "there exists $p_0(n)$",
+            "source_start_line": 6468,
+            "source_end_line": 6468,
+            "start_byte": 215256,
+            "end_byte_exclusive": 215276,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0805-OP1",
+            "old_sha256": "A7CA6389A6E5C4182FDCA701C9069554C40405F8F1D1A4D69B92FC868D9AEAB3",
+            "replacement_sha256": "FA42C2FC31044FE1DA448B15D0B8A44EB4F92368927ECDBD762D8D355B7B9B75"
+          },
+          "current_start_byte": 219328,
+          "current_end_byte_exclusive": 219349,
+          "current_postimage_verified": true
+        },
+        {
+          "operation": {
+            "old_text": "there exist $p_1(n)$",
+            "replacement_text": "there exists $p_1(n)$",
+            "source_start_line": 6470,
+            "source_end_line": 6470,
+            "start_byte": 215352,
+            "end_byte_exclusive": 215372,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0805-OP2",
+            "old_sha256": "0E147EE76258EC7CA2BC593B053D48218D0366E5A3234FD6BD63C5D83BD3D5E4",
+            "replacement_sha256": "431E34E790776D4AA383B4544EE7D1957BCC5A03EBA40BC05AC5099888D12BE4"
+          },
+          "current_start_byte": 219425,
+          "current_end_byte_exclusive": 219446,
+          "current_postimage_verified": true
+        }
+      ]
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-058",
+      "occurrence_ids": [
+        "OCC-02866"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6490
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 3
+      },
+      "kind": "clarification_two_tails",
+      "rationale": "Insert the second for. The intended two-tail vanishing is correct; the separately found initial-page issue has a separate finding ID.",
+      "semantic_status": "confirmed_missing_clarification",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-059",
+      "occurrence_ids": [
+        "OCC-12503"
+      ],
+      "stable_correction_ids": [
+        "MC-STK-ERR-0789"
+      ],
+      "source_lines": [
+        6516,
+        6522
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 3
+      },
+      "kind": "boundary_cohomology_degree",
+      "rationale": "Injectivity on H^n identifies degree-n boundaries, proving both existing index corrections.",
+      "semantic_status": "confirmed_existing_correction",
+      "integration_status": "already_present_in_pinned_cumulative_source",
+      "prior_operation_checks": [
+        {
+          "operation": {
+            "old_text": "$p - r + 1 < p_1(n - 1)$",
+            "replacement_text": "$p - r + 1 < p_1(n)$",
+            "source_start_line": 6516,
+            "source_end_line": 6516,
+            "start_byte": 217165,
+            "end_byte_exclusive": 217189,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0789-OP1",
+            "old_sha256": "7E2C4D782A0F839525D083883F568EE6983F1E3C0DADA7E847B0625124720F9F",
+            "replacement_sha256": "44665501912468FE7C10F464FA2B9D7AEFD42FA002561B78B2A96BD59E267B57"
+          },
+          "current_start_byte": 221239,
+          "current_end_byte_exclusive": 221259,
+          "current_postimage_verified": true
+        },
+        {
+          "operation": {
+            "old_text": "cohomology in degree $n - 1$",
+            "replacement_text": "cohomology in degree $n$",
+            "source_start_line": 6522,
+            "source_end_line": 6522,
+            "start_byte": 217342,
+            "end_byte_exclusive": 217370,
+            "fidelity": "manifest-bound exact operation",
+            "operation_id": "MC-STK-ERR-0789-OP2",
+            "old_sha256": "C69DE0F9F7255E633581C6725076F135CE1AE8BD6B108D16CB1CB1F1E4AFB8A8",
+            "replacement_sha256": "58A3DB5EF73B9F9F689932F8DFFF53B27C93AA8F14AB34C6B2354460E23A3F87"
+          },
+          "current_start_byte": 221412,
+          "current_end_byte_exclusive": 221436,
+          "current_postimage_verified": true
+        }
+      ]
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-060",
+      "occurrence_ids": [
+        "OCC-01466"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6570
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_preposition",
+      "rationale": "Insert by in the first cohomology-complex notation introduction.",
+      "semantic_status": "confirmed_missing_copyedit",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-061",
+      "occurrence_ids": [
+        "OCC-01467"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6575
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_preposition",
+      "rationale": "Insert by in the second cohomology-complex notation introduction.",
+      "semantic_status": "confirmed_missing_copyedit",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-062",
+      "occurrence_ids": [
+        "OCC-01468"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6602,
+        6603
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_preposition",
+      "rationale": "Insert by at both spectral-sequence notation introductions; count the report once.",
+      "semantic_status": "confirmed_missing_copyedit",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-063",
+      "occurrence_ids": [
+        "OCC-01469"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6634
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_preposition",
+      "rationale": "Denote these by F_I and F_II.",
+      "semantic_status": "confirmed_missing_copyedit",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-064",
+      "occurrence_ids": [
+        "OCC-01470"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6734
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "optional_typography",
+      "rationale": "The leading prime still identifies the first spectral sequence. The empty group is optional consistency; no rendering equivalence is claimed.",
+      "semantic_status": "optional_not_integrated",
+      "integration_status": "not_selected_for_integration",
+      "prior_operation_checks": []
+    },
+    {
+      "group_id": "HOMOLOGY-RECON-065",
+      "occurrence_ids": [
+        "OCC-01471"
+      ],
+      "stable_correction_ids": [],
+      "source_lines": [
+        6785
+      ],
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 1
+      },
+      "kind": "copyedit_preposition",
+      "rationale": "Insert by in the differential notation introduction.",
+      "semantic_status": "confirmed_missing_copyedit",
+      "integration_status": "local_exact_preview_not_admitted",
+      "prior_operation_checks": []
+    }
+  ],
+  "physical_reports": 16,
+  "groups_count": 13,
+  "prior_units_reconciled": 5,
+  "prior_operations_reconciled": 8,
+  "new_report_copyedit_operations": 7,
+  "new_report_clarification_operations": 1,
+  "optional_reports": 1,
+  "new_unreported_findings": 2,
+  "new_finding_operations": 6,
+  "new_editorial_underclaims": 3,
+  "cumulative_reviewed_reports": 97,
+  "remaining_physical_reports": 39
+}

@@ -1,0 +1,268 @@
+2150: the inclusion functor is exact.
+2151: \end{lemma}
+2152: 
+2153: \begin{proof}
+2154: Omitted.
+2155: \end{proof}
+2156: 
+2157: \begin{lemma}
+2158: \label{lemma-characterize-weak-serre-subcategory}
+2159: Let $\mathcal{A}$ be an abelian category.
+2160: Let $\mathcal{C}$ be a subcategory of $\mathcal{A}$.
+2161: Then $\mathcal{C}$ is a weak Serre subcategory if and only if
+2162: the following conditions are satisfied:
+2163: \begin{enumerate}
+2164: \item $0 \in \Ob(\mathcal{C})$,
+2165: \item $\mathcal{C}$ is a strictly full subcategory of $\mathcal{A}$,
+2166: \item kernels and cokernels in $\mathcal{A}$ of morphisms
+2167: between objects of $\mathcal{C}$ are in $\mathcal{C}$,
+2168: \item if $A \in \Ob(\mathcal{A})$ is an extension of objects of $\mathcal{C}$
+2169: then also $A \in \Ob(\mathcal{C})$.
+2170: \end{enumerate}
+2171: Moreover, a weak Serre subcategory is an abelian category and
+2172: the inclusion functor is exact.
+2173: \end{lemma}
+2174: 
+2175: \begin{proof}
+2176: Omitted.
+2177: \end{proof}
+2178: 
+2179: \begin{lemma}
+2180: \label{lemma-kernel-exact-functor}
+2181: Let $\mathcal{A}$, $\mathcal{B}$ be abelian categories.
+2182: Let $F : \mathcal{A} \to \mathcal{B}$ be an exact functor.
+2183: Then the full subcategory of objects $C$ of $\mathcal{A}$
+2184: such that $F(C) = 0$ forms a Serre subcategory of $\mathcal{A}$.
+2185: \end{lemma}
+2186: 
+2187: \begin{proof}
+2188: Omitted.
+2189: \end{proof}
+2190: 
+2191: \begin{definition}
+2192: \label{definition-kernel-category}
+2193: Let $\mathcal{A}$, $\mathcal{B}$ be abelian categories.
+2194: Let $F : \mathcal{A} \to \mathcal{B}$ be an exact functor.
+2195: Then the full subcategory of objects $C$ of $\mathcal{A}$
+2196: such that $F(C) = 0$ is called the {\it kernel of the functor $F$},
+2197: and is sometimes denoted $\Ker(F)$.
+2198: \end{definition}
+2199: 
+2200: \noindent
+2201: Any Serre subcategory of an abelian category is the kernel of
+2202: an exact functor. In
+
+4275: $X^p \otimes Y^q \to X^{p + 1} \otimes Y^q$ induced by
+4276: the morphism $X^p \to X^{p + 1}$ and the identity on $Y^q$.
+4277: Similarly for the second differential.
+4278: \end{example}
+4279: 
+4280: \begin{definition}
+4281: \label{definition-associated-simple-complex}
+4282: Let $\mathcal{A}$ be an additive category.
+4283: Let $A^{\bullet, \bullet}$ be a double complex.
+4284: The {\it associated simple complex}, denoted $sA^\bullet$, also
+4285: often called the {\it associated total complex}, denoted
+4286: $\text{Tot}(A^{\bullet, \bullet})$, is
+4287: given by
+4288: $$
+4289: sA^n = \text{Tot}^n(A^{\bullet, \bullet}) =
+4290: \bigoplus\nolimits_{n = p + q} A^{p, q}
+4291: $$
+4292: (if it exists) with differential
+4293: $$
+4294: d_{sA^\bullet}^n = d_{\text{Tot}(A^{\bullet, \bullet})}^n =
+4295: \sum\nolimits_{n = p + q} (d_1^{p, q} + (-1)^p d_2^{p, q})
+4296: $$
+4297: \end{definition}
+4298: 
+4299: \noindent
+4300: If countable direct sums exist in $\mathcal{A}$ or if for each $n$ at most
+4301: finitely many $A^{p, n - p}$ are nonzero, then
+4302: $\text{Tot}(A^{\bullet, \bullet})$ exists. Note that
+4303: the definition is {\it not} symmetric in the indices $(p, q)$.
+4304: 
+4305: \begin{remark}
+4306: \label{remark-triple-complex}
+4307: Let $\mathcal{A}$ be an additive category. Let $A^{\bullet, \bullet, \bullet}$
+4308: be a triple complex. The associated total complex is the complex with
+4309: terms
+4310: $$
+4311: \text{Tot}^n(A^{\bullet, \bullet, \bullet}) =
+4312: \bigoplus\nolimits_{p + q + r = n} A^{p, q, r}
+
+6348: \label{definition-bounded-ss}
+6349: Let $\mathcal{A}$ be an abelian category. Let $(E_r, d_r)_{r \geq r_0}$
+6350: be a spectral sequence of bigraded objects of
+6351: $\mathcal{A}$ with $d_r$ of bidegree $(r, -r + 1)$.
+6352: We say such a spectral sequence is
+6353: \begin{enumerate}
+6354: \item {\it regular} if for all $p, q \in \mathbf{Z}$ there is
+6355: a $b = b(p, q)$ such that the maps
+6356: $d_r^{p, q} : E_r^{p, q} \to E_r^{p + r, q - r + 1}$ are zero for $r \geq b$,
+6357: \item {\it coregular} if for all $p, q \in \mathbf{Z}$ there is a
+6358: $b = b(p, q)$ such that the maps
+6359: $d_r^{p - r, q + r - 1} : E_r^{p - r, q + r - 1} \to E_r^{p, q}$
+6360: are zero for $r \geq b$,
+6361: \item {\it bounded} if for all $n$
+6362: there are only a finite number of nonzero $E_{r_0}^{p, n - p}$,
+6363: \item {\it bounded below} if for all $n$ there is a $b = b(n)$ such that
+6364: $E_{r_0}^{p, n - p} = 0$ for $p \geq b$.
+6365: \item {\it bounded above} if for all $n$ there is a $b = b(n)$ such that
+6366: $E_{r_0}^{p, n - p} = 0$ for $p \leq b$.
+6367: \end{enumerate}
+6368: \end{definition}
+6369: 
+6370: \noindent
+
+6550: \label{lemma-ss-converges-trivial}
+6551: Let $\mathcal{A}$ be an abelian category. Let $(K^\bullet, F)$ be a
+6552: filtered complex of $\mathcal{A}$. Assume
+6553: \begin{enumerate}
+6554: \item for every $n$ there exists $p_0(n)$ such that
+6555: $H^n(F^pK^\bullet) = 0$ for $p \geq p_0(n)$,
+6556: \item for every $n$ there exists $p_1(n)$ such that
+6557: $H^n(F^pK^\bullet) \to H^n(K^\bullet)$ is an isomorphism
+6558: for $p \leq p_1(n)$.
+6559: \end{enumerate}
+6560: Then
+6561: \begin{enumerate}
+6562: \item the spectral sequence associated to $(K^\bullet, F)$ is bounded,
+6563: \item the filtration on each $H^n(K^\bullet)$ is finite,
+6564: \item the spectral sequence associated to $(K^\bullet, F)$ converges
+6565: to $H^*(K^\bullet)$.
+6566: \end{enumerate}
+6567: \end{lemma}
+6568: 
+6569: \begin{proof}
+6570: Fix $n$. Using the long exact cohomology sequence associated to
+6571: the short exact sequence of complexes
+6572: $$
+6573: 0 \to F^{p + 1}K^\bullet \to F^pK^\bullet \to \text{gr}^pK^\bullet \to 0
+6574: $$
+6575: we find that $E_1^{p, n - p} = 0$ for $p \geq \max(p_0(n), p_0(n + 1))$ and
+6576: $p < \min(p_1(n), p_1(n + 1))$. Hence the spectral sequence is bounded
+6577: (Definition \ref{definition-bounded-ss}). This proves (1).
+6578: 
+6579: \medskip\noindent
+6580: It is clear from the assumptions and
+6581: Definition \ref{definition-filtration-cohomology-filtered-complex}
+6582: that the filtration on $H^n(K^\bullet)$ is finite. This proves (2).
+6583: 
+6584: \medskip\noindent
+6585: Next we prove that the spectral sequence weakly converges to
+6586: $H^*(K^\bullet)$ using
+6587: Lemma \ref{lemma-filtered-complex-ss-converges}.
+6588: Let us show that we have equality in (\ref{equation-on-top-bigraded}).
+6589: Namely, for $p + r > p_0(n + 1)$ the map
+6590: $$
+6591: d : F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) \to F^{p + r}K^{n + 1}
+6592: $$
+6593: ends up in the image of $d : F^{p + r}K^n \to F^{p + r}K^{n + 1}$
+6594: because the complex $F^{p + r}K^\bullet$ is exact in degree $n + 1$.
+6595: We conclude that $F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) =
+6596: d(F^{p + r}K^n) + \Ker(d) \cap F^pK^n$. Hence for such $r$ we have
+6597: $$
+6598: \Ker(d) \cap F^pK^{n} + F^{p + 1}K^{n} =
+6599: F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) + F^{p + 1}K^{n}
+6600: $$
+6601: which proves the desired equality. To show that we have equality in
+6602: (\ref{equation-at-bottom-bigraded}) we use that for $p - r + 1 < p_1(n)$
+6603: we have
+6604: $$
+6605: d(F^{p - r + 1}K^{n - 1}) = \Im(d) \cap F^{p - r + 1}K^n
+6606: $$
+6607: because the map $F^{p - r + 1}K^\bullet \to K^\bullet$ induces an
+6608: isomorphism on cohomology in degree $n$. This shows that
+6609: we have
+6610: $$
+6611: F^pK^{n} \cap d(F^{p - r + 1}K^{n - 1}) + F^{p + 1}K^{n} =
+6612: \Im(d) \cap F^pK^{n} + F^{p + 1}K^{n}
+6613: $$
+6614: for such $r$ which proves the desired equality.
+6615: 
+6616: \medskip\noindent
+6617: To see that the spectral sequence abuts to $H^*(K^\bullet)$ using
+6618: Lemma \ref{lemma-filtered-complex-ss-converges} we have to show that
+6619: $\bigcap_p (\Ker(d) \cap F^pK^n + \Im(d) \cap K^n) = \Im(d) \cap K^n$
+6620: and
+6621: $\bigcup_p (\Ker(d) \cap F^pK^n + \Im(d) \cap K^n) = \Ker(d) \cap K^n$.
+6622: For $p \geq p_0(n)$ we have
+6623: $\Ker(d) \cap F^pK^n + \Im(d) \cap K^n = \Im(d) \cap K^n$
+6624: and for $p \leq p_1(n)$ we have
+6625: $\Ker(d) \cap F^pK^n + \Im(d) \cap K^n = \Ker(d) \cap K^n$.
+6626: Combining weak convergence, abutment, and boundedness we see
+6627: that (2) and (3) are true.
+6628: \end{proof}
+
+6775: \end{lemma}
+6776: 
+6777: \begin{proof}
+6778: Follows immediately from Lemma \ref{lemma-biregular-ss-converges}.
+6779: \end{proof}
+6780: 
+6781: \noindent
+6782: Here is our first application of spectral sequences.
+6783: 
+6784: \begin{lemma}
+6785: \label{lemma-double-complex-gives-resolution}
+6786: \begin{reference}
+6787: \cite[Chapter I, \S 4, no. 27, Proposition 1, p. 220]{FAC}
+6788: \end{reference}
+6789: Let $\mathcal{A}$ be an abelian category.
+6790: Let $K^\bullet$ be a complex.
+6791: Let $A^{\bullet, \bullet}$ be a double complex.
+6792: Let $\alpha^p : K^p \to A^{p, 0}$ be morphisms.
+6793: Assume that
+6794: \begin{enumerate}
+6795: \item For every $n \in \mathbf{Z}$ there are only finitely many nonzero
+6796: $A^{p, q}$ with $p + q = n$.
+6797: \item We have $A^{p, q} = 0$ if $q < 0$.
+6798: \item The morphisms $\alpha^p$ give rise to a morphism
+6799: of complexes $\alpha : K^\bullet \to A^{\bullet, 0}$.
+6800: \item The complex $A^{p, \bullet}$ is exact in all degrees
+6801: $q \not = 0$ and the morphism $K^p \to A^{p, 0}$ induces
+6802: an isomorphism $K^p \to \Ker(d_2^{p, 0})$.
+6803: \end{enumerate}
+6804: Then $\alpha$ induces a quasi-isomorphism
+6805: $$
+6806: K^\bullet \longrightarrow \text{Tot}(A^{\bullet, \bullet})
+6807: $$
+6808: of complexes.
+6809: Moreover, there is a variant of this lemma involving the second
+6810: variable $q$ instead of $p$.
+6811: \end{lemma}
+6812: 
+6813: \begin{proof}
+6814: The map is simply the map given by the morphisms
+6815: $K^n \to A^{n, 0} \to \text{Tot}^n(A^{\bullet, \bullet})$,
+6816: which are easily seen to define a morphism of complexes.
+6817: Consider the spectral sequence $({}'E_r, {}'d_r)_{r \geq 0}$
+6818: associated to the double complex $A^{\bullet, \bullet}$.
+6819: By Lemma \ref{lemma-first-quadrant-ss} this spectral sequence converges
+6820: and the induced filtration on $H^n(\text{Tot}(A^{\bullet, \bullet}))$
+6821: is finite for each $n$.
+6822: By Lemma \ref{lemma-ss-double-complex} and assumption (4) we have
+6823: ${}'E_1^{p, q} = 0$ unless $q = 0$ and $'E_1^{p, 0} = K^p$
+6824: with differential ${}'d_1^{p, 0}$ identified with $d_K^p$.
+6825: Hence ${}'E_2^{p, 0} = H^p(K^\bullet)$ and zero otherwise.
+6826: This clearly implies ${}'d_2^{p, q} = {}'d_3^{p, q} = \ldots = 0$
+6827: for degree reasons. Hence we conclude that
+6828: $H^n(\text{Tot}(A^{\bullet, \bullet})) = H^n(K^\bullet)$.
+6829: We omit the verification that this identification is given by the
+6830: morphism of complexes $K^\bullet \to \text{Tot}(A^{\bullet, \bullet})$
+6831: introduced above.
+6832: \end{proof}
+6833: 
+6834: \begin{lemma}
+6835: \label{lemma-homotopy-complex-complexes}
+6836: Let $\mathcal{A}$ be an abelian category.
+6837: Let $M^\bullet$ be a complex of $\mathcal{A}$. Let
+6838: $$
+6839: a :
+6840: M^\bullet[0]
+6841: \longrightarrow
+6842: \left(A^{0, \bullet} \to A^{1, \bullet} \to A^{2, \bullet} \to \ldots \right)
+6843: $$
+6844: be a homotopy equivalence in the category of complexes of complexes
+6845: of $\mathcal{A}$. Then the map

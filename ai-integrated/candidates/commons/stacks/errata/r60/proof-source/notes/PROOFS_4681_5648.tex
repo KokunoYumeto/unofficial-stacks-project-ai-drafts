@@ -1,0 +1,221 @@
+\section{Homology: filtrations, strictness and the differential-object sequence}\label{note-05-homology-filtrations-strictness-and-the-differential-object-sequence}
+
+This is a separate editorial proof note. The primary source is the Stacks Project, homology.tex, official commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. Its original line numbers are used below. The comparison source is the cumulative edition at commit b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434. The source definitions, filtration indices, maps and quotient objects are retained. No novelty is claimed.
+
+\subsection{1. Received reports}\label{note-05-received-reports}
+
+Eighteen physical reports are assigned to twelve groups. Ten reports belong to the first six already corrected filtration findings; four more reports belong to two already corrected exact-couple findings; four reports identify missing copyedits.
+
+{ % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Original locus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Disposition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+HOMOLOGY-RECON-030 & 4676 & Insert the article in ``is a pair''. \\
+HOMOLOGY-RECON-031 & 4747 & Insert ``is'' in ``This is also equivalent''. \\
+HOMOLOGY-RECON-032 & 4829 & Insert ``be'' in ``Let B be a vector space''. \\
+HOMOLOGY-RECON-033 & 4846 & Insert ``holds'' in the first explanation of the displayed equalities. \\
+HOMOLOGY-RECON-034 & 5007 & MC-STK-ERR-0778 already supplies ``the map''. \\
+HOMOLOGY-RECON-035 & 5010--5011 & MC-STK-ERR-0779 already supplies the correctly typed quotient target and parenthesized kernel. \\
+HOMOLOGY-RECON-036 & 5013 & MC-STK-ERR-0780 already makes ``The two short exact sequences'' plural. \\
+HOMOLOGY-RECON-037 & 5052 & MC-STK-ERR-0781 already corrects ``and isomorphism'' to ``an isomorphism''. \\
+HOMOLOGY-RECON-038 & 5082 & MC-STK-ERR-0782 already removes the extra closing parenthesis. \\
+HOMOLOGY-RECON-039 & 5124 & MC-STK-ERR-0783 already corrects the induction range to p \textless= n. \\
+HOMOLOGY-RECON-040 & 5427, 5430 & MC-STK-ERR-0799 already supplies both passive auxiliaries. Its one French report and two p02 reports are reconciled to the same two-operation unit. \\
+HOMOLOGY-RECON-041 & 5567--5569 & MC-STK-ERR-0784 already distinguishes the representative z in A from its class in A/alpha A. \\
+\end{longtable}
+}
+
+P02-E1381 proposes pluralizing both occurrences of ``sequence'' in the sentence at 5013--5014. Only the first occurrence is a defect: ``The two short exact sequences of (2) are special cases of the short exact sequence of (1)'' is grammatical and accurately names the single construction in (1), specialized to two subobjects. The existing first change is accepted; the proposed second change is not needed and is not applied.
+
+Two additional copyedits, found while reading the proof rather than in these reports, are recorded separately: line 4858 needs ``holds'' after ``The first equality'', and line 5058 needs ``the'' after ``Then''. They do not change any mathematical map or hypothesis.
+
+\subsection{2. Quotients, strictness and the associated graded sequence}\label{note-05-quotients-strictness-and-the-associated-graded-sequence}
+
+All sums and intersections below are sums and intersections of subobjects in the original abelian category. Their canonical maps, not chosen presentations as vector spaces, determine the identifications.
+
+For a morphism f:A -\textgreater{} B let K=ker(f), I=im(f), and let e:A -\textgreater{} I be the canonical epimorphism. The underlying isomorphism A/K -\textgreater{} I transports the quotient filtration to \[
+P^pI=f(F^pA).
+\] The image object as a subobject of B has the induced filtration \[
+Q^pI=I\cap F^pB.
+\] There is a canonical filtered map \[
+c:(I,P)\longrightarrow(I,Q)
+\] whose underlying map is the identity and for which P\^{}pI is contained in Q\^{}pI in every degree. These are exactly the coimage-to-image map and its two filtrations in the source.
+
+The inverse-image criterion for strictness is obtained without an elementwise assumption on the category. The inverse image under e of the subobject f(F\^{}pA) is F\^{}pA+K: both are the inverse image of the image of F\^{}pA in A/K under A -\textgreater{} A/K. The inverse image of Q\^{}pI is f\^{}\{-1\}(F\^{}pB). Since inverse image under the epimorphism e gives the subobject correspondence between subobjects of I and subobjects of A containing K, equality P\^{}pI=Q\^{}pI is equivalent to \[
+f^{-1}(F^pB)=F^pA+K.                                      \tag{2.1}
+\] Thus the missing verb at line 4747 does not conceal a changed mathematical assertion.
+
+For a subobject X of a filtered object A, retain F\^{}pX=X intersect F\^{}pA and the quotient filtration F\^{}p(A/X)=(F\^{}pA+X)/X. The graded quotient map is the canonical map \[
+F^pA/F^{p+1}A
+\longrightarrow
+(F^pA+X)/(F^{p+1}A+X).                                    \tag{2.2}
+\] It is epic because the sum F\^{}pA+X is the image of F\^{}pA direct-sum X, and the summand X maps to zero in the target. Its kernel is \[
+\frac{F^pA\cap(F^{p+1}A+X)}{F^{p+1}A}
+=\frac{F^{p+1}A+(F^pA\cap X)}{F^{p+1}A}.                  \tag{2.3}
+\] The equality uses the modular law for subobjects with F\^{}\{p+1\}A contained in F\^{}pA. The map from F\^{}pA intersect X to (2.3) is induced by its inclusion in F\^{}pA. It is epic by the displayed sum, and its kernel is F\^{}\{p+1\}A intersect X. Consequently it induces the specified isomorphism \[
+\frac{F^pX}{F^{p+1}X}
+\xrightarrow{\ \sim\ }
+\frac{F^{p+1}A+(F^pA\cap X)}{F^{p+1}A}.                    \tag{2.4}
+\] This proves the short exact sequence \[
+0\longrightarrow\operatorname{gr}^pX
+\longrightarrow\operatorname{gr}^pA
+\longrightarrow\operatorname{gr}^p(A/X)\longrightarrow0
+                                                               \tag{2.5}
+\] with the source's actual quotient map and induced injection. It proves both operations in MC-STK-ERR-0779. The two sequences in part (2) of lemma-ses-gr are (2.5) for K in A and I in B.
+
+Now take a complex A -\textgreater{} B -\textgreater{} C with maps alpha and beta both strict. Put X=im(alpha) and Y=ker(beta), as subobjects of B, so X is contained in Y. Give H=Y/X the source's induced/quotient filtration. Strictness and the two sequences (2.5) identify \[
+\operatorname{gr}X=\operatorname{im}(\operatorname{gr}\alpha),
+\qquad
+\operatorname{gr}Y=\ker(\operatorname{gr}\beta).
+\] For the second equality, factor beta through its coimage and image; strictness makes c an isomorphism, the map on the quotient by its kernel is epic on each graded piece, and the image injection is monic on each graded piece by (2.5). Apply (2.5) again to X in Y. Its cokernel is the canonical isomorphism \[
+\operatorname{gr}(Y/X)
+\cong
+\ker(\operatorname{gr}\beta)/
+\operatorname{im}(\operatorname{gr}\alpha).                \tag{2.6}
+\] More explicitly its degree-p source is F\^{}pY/(F\^{}\{p+1\}Y+(X intersect F\^{}pY)); the map is induced by the inclusion of F\^{}pY in F\^{}pB. This supplies the original formula with the extra parenthesis removed, without changing the filtered homology object.
+
+\subsection{3. Underclaim: bounds on the image suffice for strictness}\label{note-05-underclaim-bounds-on-the-image-suffice-for-strictness}
+
+\textbf{HOMOLOGY-UNDER-005.} Use P, Q, I and c from Section 2. No finiteness of the whole filtrations on A and B is assumed in the following one-sided assertions.
+
+If there is an integer m such that P\^{}mI=I, then a monomorphism gr(c) implies P=Q and hence f is strict. If there is an integer n such that Q\^{}nI=0, then an epimorphism gr(c) implies P=Q and hence f is strict. In particular, if both bounds hold, all six conditions of lemma-characterize-strict, lines 5017--5042, are equivalent. These bounds concern the two filtrations on the image; the kernel and cokernel may have infinite filtrations.
+
+To prove the assertions, compute the kernel and image of the actual degree-p map \[
+c_p:P^pI/P^{p+1}I\longrightarrow Q^pI/Q^{p+1}I.
+\] They are respectively \[
+\ker(c_p)=
+\frac{P^pI\cap Q^{p+1}I}{P^{p+1}I},\qquad
+\operatorname{im}(c_p)=
+\frac{P^pI+Q^{p+1}I}{Q^{p+1}I}.                           \tag{3.1}
+\] The first formula follows by taking the inverse image of Q\^{}\{p+1\}I under P\^{}pI -\textgreater{} Q\^{}pI. The second is the image under the same quotient map. These are identities of canonical subobjects.
+
+Assume c\_p is monic for every p and P\^{}mI=I. Then Q\^{}mI=I because P\^{}mI is contained in Q\^{}mI, and equality P\^{}pI=Q\^{}pI=I holds for p \textless= m. Suppose equality has been established at p.~The zero kernel in (3.1) gives \[
+P^{p+1}I=P^pI\cap Q^{p+1}I
+=Q^pI\cap Q^{p+1}I=Q^{p+1}I.
+\] Ascending induction proves equality in every degree.
+
+Assume instead that c\_p is epic for every p and Q\^{}nI=0. Then P\^{}pI=Q\^{}pI=0 for p \textgreater= n.~If equality is known at p+1, the image formula in (3.1) gives \[
+Q^pI=P^pI+Q^{p+1}I=P^pI+P^{p+1}I=P^pI.
+\] Descending induction proves equality in every degree. No infinite limit, completion or interchange of intersections and colimits has been used.
+
+For completeness, the relation with the six source conditions is as follows. The exact sequences (2.5) factor gr(f) as \[
+\operatorname{gr}A
+\twoheadrightarrow\operatorname{gr}(I,P)
+\xrightarrow{\operatorname{gr}c}\operatorname{gr}(I,Q)
+\lhook\joinrel\longrightarrow\operatorname{gr}B.
+\] Therefore exactness at gr(A) in source condition (4) is equivalent to gr(c) being monic: the kernel of the first epimorphism is gr(K), and inverse image under that epimorphism identifies the additional kernel precisely with ker(gr(c)). Exactness at gr(B) in condition (5) is equivalent to gr(c) being epic: the kernel of gr(B) -\textgreater{} gr(coker f) is the displayed image gr(I,Q), so equality of that kernel with im(gr(f)) says exactly that gr(c) has full image. Condition (6) is the conjunction of (4) and (5), since the two outer maps in (2.5) are already monic and epic. Conditions (1) and (2) are P=Q; condition (3) says gr(c) is an isomorphism.
+
+Under only the lower bound P\^{}mI=I, conditions (1), (2), (3), (4) and (6) are equivalent. Under only the upper bound Q\^{}nI=0, conditions (1), (2), (3), (5) and (6) are equivalent. Under both bounds all six are equivalent. The source's finite filtrations supply both bounds and therefore its theorem is valid. The two exact graded sequences alone give monicity or epicity; the appropriate induction supplies the implication to an isomorphism. This detailed proof supplements the terse source proof at 5047--5057 and is not counted as a newly discovered false theorem.
+
+The bounds cannot simply be discarded. Let I be a nonzero vector space and take the identity map from (I,P) to (I,Q). If P\^{}p=0 and Q\^{}p=I for every p, both associated graded objects are zero and gr(c) is an isomorphism, but c is not a filtered isomorphism. If P\^{}p=I for p \textless= 0 and P\^{}p=0 for p \textgreater= 1, while Q\^{}p=I for every p, the lower bound holds and gr(c) is epic but c is not strict. If P\^{}p=0 for every p and Q\^{}p=I for p \textless= 0, Q\^{}p=0 for p \textgreater= 1, the upper bound holds and gr(c) is monic but c is not strict. These examples preserve the original objects and show why the two one-sided criteria use different directions.
+
+There are useful corollaries for morphisms, also kept as editorial material. If A has a finite filtration and B is arbitrary, then gr(f) monic is equivalent to f being a strict monomorphism. Indeed gr(f) monic implies gr(K)=0 by (2.5). The induced filtration on K is finite; descending from a zero filtration step and using its zero successive quotients gives K=0. Condition (4) holds, and P\^{}mI=I follows from F\^{}mA=A, so the lower-bound argument proves strictness. Conversely any strict monomorphism gives an injection on each graded piece by (2.5). Dually, if B has a finite filtration and A is arbitrary, then gr(f) epic is equivalent to f being a strict epimorphism. The quotient filtration on coker(f) is finite, (2.5) gives its associated graded object zero, and the same finite descending argument gives coker(f)=0. Condition (5) and Q\^{}nI=0 then prove strictness. The converse again follows from (2.5).
+
+Receiving comparison: Exercises lines 2403--2409 state the strict-monomorphism criterion with both filtrations finite; the first corollary shows that the target finiteness is unnecessary for that criterion. This does not remove the finiteness assumption from the surrounding extension-property exercise without checking its other arguments. Derived Categories uses the original finite criterion in the bounded passages recorded in the ledger. Those uses remain valid. No receiving statement is silently enlarged.
+
+\subsection{4. The finite-filtration induction}\label{note-05-the-finite-filtration-induction}
+
+Source: lemma-filtered-acyclic, lines 5094--5144. Let A -\textgreater{} B -\textgreater{} C be a complex with finite decreasing filtrations and with each associated graded sequence exact at its middle term.
+
+Here is the finite extension argument used in the induction. Suppose there is a termwise short exact sequence of three-term complexes 0 -\textgreater{} L -\textgreater{} M -\textgreater{} N -\textgreater{} 0, and both L and N are exact at the middle. For a map from a test object into the middle cycles of M, project to N. Exactness in N gives a lift from its left term after pulling back along the epimorphism from that left term onto the middle cycles. Pull back once more along M\_left -\textgreater{} N\_left, which is epic, to lift the chosen left term. Subtract its boundary in M\_middle. The result comes from L\_middle because its N component is zero, and it is a cycle in L because L\_right -\textgreater{} M\_right is monic. Exactness in L supplies, after a further epimorphic pullback, a left lift in L. The sum of the two lifts maps to the original cycle. This proves that im(M\_left -\textgreater{} M\_middle) equals its middle kernel: an epimorphism onto a test source does not change the image of its map into M\_middle. Thus M is exact at the middle. This argument takes place in the given abelian category; it does not assume global element lifts or a projective generator.
+
+Choose a common finite interval containing all nonzero graded pieces of A, B and C. Induct on its length, including the empty interval where all three objects are zero. Let n be the largest index with a nonzero filtration step in at least one object. The top-step sequence F\^{}nA -\textgreater{} F\^{}nB -\textgreater{} F\^{}nC is exactly the degree-n graded sequence and is exact. The quotient objects A'=A/F\^{}nA, B'=B/F\^{}nB and C'=C/F\^{}nC have a shorter filtration, with the other graded pieces unchanged. Their sequence is exact by induction. The finite extension argument applied to these top steps and quotients proves exactness of A -\textgreater{} B -\textgreater{} C.
+
+The same result applies to the complex of induced filtered objects F\^{}pA -\textgreater{} F\^{}pB -\textgreater{} F\^{}pC: its graded pieces below p are zero and its graded pieces at or above p are the corresponding original ones. It also applies to the quotient complex A/F\^{}pA -\textgreater{} B/F\^{}pB -\textgreater{} C/F\^{}pC, whose pieces at or above p are zero and whose lower pieces are the original ones. Hence both of the source's truncated exactness assertions hold for every p.
+
+In the source's quotient-first presentation, the relation between A' and A is explicitly \[
+A'/F^pA'
+ \cong A/(F^pA+F^nA)=A/F^pA\quad\text{for }p\le n.        \tag{4.1}
+\] It is p \textless= n, not p \textgreater= n, because the filtration decreases. For p=n+1, the original F\^{}\{n+1\}A is zero and the required sequence is the full A -\textgreater{} B -\textgreater{} C; the extension step is precisely what supplies it. This proves the earlier correction MC-STK-ERR-0783 rather than accepting it only from its locus.
+
+Write f:A -\textgreater{} B and g:B -\textgreater{} C. Truncated exactness gives \[
+f(F^pA)=\ker(F^pB\longrightarrow F^pC).
+\] Since the underlying sequence is exact, this kernel is ker(g) intersect F\^{}pB=f(A) intersect F\^{}pB, proving strictness of f. The exact quotient sequence gives \[
+g^{-1}(F^pC)=F^pB+f(A)=F^pB+\ker(g),
+\] so (2.1) proves strictness of g. This proves all five conclusions of the source lemma, including the two strictness assertions.
+
+\subsection{5. The shifted exact-couple constructions}\label{note-05-the-shifted-exact-couple-constructions}
+
+In remark-shifted-exact-couple, the source has isomorphisms of categories S and T, maps alpha:A -\textgreater{} T\^{}\{-1\}A, f:E -\textgreater{} A, g:A -\textgreater{} SE, and the exact sequence \[
+TE\xrightarrow{Tf}TA\xrightarrow{T\alpha}A
+\xrightarrow{g}SE\xrightarrow{Sf}SA.
+\] Isomorphisms between abelian categories preserve the canonical addition, zero, kernels, cokernels and image factorizations: these are characterized by zero objects, finite products and coproducts, and the indicated universal properties. Thus the shifts used below are exact additive functors.
+
+Set d=gf, E'=ker(d)/im(S\^{}\{-1\}d), and A'=im(Talpha), as in the source. The map alpha restricted to A' lands in im(alpha), which is T\^{}\{-1\}A'. This is the map alpha':A' -\textgreater{} T\^{}\{-1\}A'. The map f restricted to ker(d) lands in ker(g)=A', and kills im(S\^{}\{-1\}d), since f S\^{}\{-1\}g=0. Hence it induces f':E' -\textgreater{} A'.
+
+The map Tg:TA -\textgreater{} TSE lands in ker(TSd), because TSd Tg=TSg TSf Tg=0. On ker(Talpha)=im(Tf), its image is im(Tg Tf)=im(Td), which is the denominator of TSE'. Thus TA -\textgreater{} TSE' descends uniquely through the image quotient TA -\textgreater{} A' to \[
+g':A'\longrightarrow TSE',\qquad
+g'(T\alpha)(a)=[Tg(a)].                                  \tag{5.1}
+\] The formula means equality of the two descended morphisms; it does not claim that every test map into A' lifts on its original test object. It proves the two ``be induced'' constructions in their original domains and codomains.
+
+The resulting exactness can also be checked directly. The image of f' is A' intersect ker(alpha), which is the kernel of alpha': an element of that intersection lifts locally through f because ker(alpha)=im(f), and the condition that it belongs to A' puts its lift in ker(gf). Next, for x=Talpha(a) in A', g'(x)=0 means Tg(a)=Td(e) after an epimorphic local lift. Thus a-Tf(e) belongs to \(\ker(Tg)=\operatorname{im}(T^2\alpha)\), and Talpha(a)=Talpha T\^{}2alpha(b), since Talpha Tf=0. This is exactly im(Talpha') in A'; the reverse inclusion follows from Tg T\^{}2alpha=0. Finally a class in TSE' is killed by TSf' precisely when its cycle representative is in ker(TSf)=im(Tg). A representative Tg(a) gives the class g'(Talpha(a)), by (5.1). This proves ker(TSf')=im(g'). Applying T to the first equality also gives exactness at TA'. Hence the new couple is exact for the shifts TS and T, with no change to the source formulas. The local lifts here are implemented by finite pullbacks of epimorphisms as in Section 4; equality of the resulting subobjects descends along those epimorphisms.
+
+\subsection{6. The differential-object formula and all representative choices}\label{note-05-the-differential-object-formula-and-all-representative-choices}
+
+Source: lines 5532--5591 and the existing correction MC-STK-ERR-0784. Let (A,d) be a differential object with d\^{}2=0, and let alpha:A -\textgreater{} A be monic with d alpha=alpha d. For each integer r \textgreater= 1, keep the original subobjects \[
+P_r=(\alpha^{r-1})^{-1}(\operatorname{im}d),\qquad
+Q_r=d^{-1}(\operatorname{im}\alpha^r),\qquad
+J_r=P_r+\operatorname{im}\alpha,\qquad
+L_r=Q_r+\operatorname{im}\alpha.                           \tag{6.1}
+\] The images and inverse images are taken in A. The source's terms are exactly \[
+B_r=J_r/\operatorname{im}\alpha,\quad
+Z_r=L_r/\operatorname{im}\alpha,\quad
+E_r=L_r/J_r.                                             \tag{6.2}
+\] In particular Z\_r is a subobject of A/alpha A, not of A. The extra alpha A summands in (6.1) are retained throughout.
+
+For P\_r, applying d alpha\^{}\{r-1\}=alpha\^{}\{r-1\}d and d\^{}2=0, then using monicity of alpha\^{}\{r-1\}, proves P\_r is contained in ker(d). Consequently P\_r is contained in every Q\_s. The subobjects P\_r increase with r and Q\_r decrease with r. There is a unique morphism \[
+t_r:Q_r\longrightarrow A,\qquad
+\alpha^r t_r=d|_{Q_r},                                   \tag{6.3}
+\] because alpha\^{}r identifies A with its image. Monicity of alpha\^{}r applied to alpha\^{}r d t\_r=d d\textbar\_\{Q\_r\}=0 proves im(t\_r) is contained in ker(d), hence in Q\_r.
+
+The epimorphism Q\_r -\textgreater{} E\_r has kernel \[
+Q_r\cap J_r=P_r+(Q_r\cap\operatorname{im}\alpha),           \tag{6.4}
+\] by the modular law and P\_r contained in Q\_r. On P\_r, (6.3) is zero, so t\_r is zero. On the pullback of Q\_r intersect im(alpha) under alpha, write z=alpha(a). The equality alpha\^{}r t\_r(z)=d alpha(a)=alpha d(a), followed by cancellation of alpha, gives \[
+\alpha^{r-1}t_r(z)=d(a).
+\] Thus t\_r(z) belongs to P\_r. This proves, as a statement about the restricted morphism on that pullback, that t\_r maps (6.4) into J\_r. It therefore induces a unique differential \[
+d_r:E_r\longrightarrow E_r.
+\] Moreover t\_r t\_r=0: its first application lands in ker(d), and (6.3) makes its second application zero by monicity. Hence d\_r\^{}2=0.
+
+For the representative description, an element of Z\_r has a representative z in Q\_r because Z\_r is the image of Q\_r in A/alpha A. Put y=t\_r(z), so d(z)=alpha\^{}r(y). If bars denote images in A/alpha A, the actual formula is \[
+d_r(\overline z+B_r)=\overline y+B_r.                     \tag{6.5}
+\] Equations (6.3) and (6.4) prove that (6.5) is independent of all permissible representatives and of the later quotient by B\_r. For generalized elements, a representative in Q\_r may first require pullback along the epimorphism Q\_r -\textgreater{} Z\_r. The construction of d\_r itself uses (6.3) and the quotient property and therefore makes no unjustified global lifting assumption. This verifies the three existing representative corrections.
+
+One can also verify the next-page identity with all summands present. The image equality \[
+t_r(Q_r)=P_{r+1}                                         \tag{6.6}
+\] follows from (6.3): its image is contained in P\_\{r+1\}, and the pullback describing alpha\^{}r(y) in im(d) is exactly the same pullback used to define Q\_r and t\_r. More concretely, after an epimorphic pullback alpha\^{}r(y)=d(z) implies z in Q\_r and t\_r(z)=y; equality of images then descends.
+
+The cycle condition t\_r(z) in J\_r is equivalent to \[
+z\in Q_r\cap(Q_{r+1}+\operatorname{im}\alpha).             \tag{6.7}
+\] For the forward direction, locally write t\_r(z)=p+alpha(a), where p is in P\_r, and choose w with alpha\^{}\{r-1\}(p)=d(w). Then \[
+d(z)=\alpha^r(p)+\alpha^{r+1}(a)
+     =d(\alpha(w))+\alpha^{r+1}(a),
+\] so z-alpha(w) belongs to Q\_\{r+1\}. Conversely, if z=q+alpha(w) with q in Q\_\{r+1\}, then \(t_r(q)=\alpha(t_{r+1}(q))\); the other term alpha(w) belongs to Q\_r and its t\_r image belongs to P\_r by the argument after (6.4). Thus t\_r(z) belongs to J\_r. Each decomposition as a sum or image is obtained after a finite epimorphic pullback; this proves (6.7) as equality of subobjects.
+
+Since P\_r is contained in Q\_\{r+1\}, (6.7) and (6.2) give \[
+\ker d_r=L_{r+1}/J_r,\qquad
+\operatorname{im}d_r=J_{r+1}/J_r,
+\] where the second equality uses (6.6). The quotient is therefore \[
+\ker(d_r)/\operatorname{im}(d_r)
+\cong L_{r+1}/J_{r+1}=E_{r+1}.                            \tag{6.8}
+\] For r=1, Q\_1/alpha A is the kernel of the differential induced on A/alpha A (Q\_1 contains alpha A because d and alpha commute), and its image is (im d+alpha A)/alpha A. Thus E\_1=H(A/alpha A,d), with E\_0=A/alpha A as the source specifies. Together with (6.8) this proves the stated sequence directly, without discarding either alpha A contribution.
+
+\subsection{7. Reading and propagation limits}\label{note-05-reading-and-propagation-limits}
+
+The primary source was read consecutively through line 5670. The definition of a filtered differential object begins there and continues at 5671. The eighteen received reports in this note are adjudicated; this is not a claim that every spectral sequence lemma or all of its external dependencies have been independently certified.
+
+All ten top-level TeX reference hits to the four reviewed filtration lemmas were routed to bounded passages in Derived Categories and Exercises. Their finite-filtration uses remain valid. The exact lines read and their source hashes are recorded with the propagation ledger. No new paper was mined, no external proof was inferred from a catalogue hit, and no novelty claim is made.
+
+New copyedits are exact local previews. Earlier operations, inherited additions and the source translations are preserved. The underclaim and the expanded proofs belong to the separate editorial supplement, with their own statement and provenance.

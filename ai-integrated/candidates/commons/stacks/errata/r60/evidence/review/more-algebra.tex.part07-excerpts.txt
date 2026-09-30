@@ -1,0 +1,225 @@
+16126: \begin{lemma}
+16127: \label{lemma-kunneth-converges}
+16128: Under the assumptions above, if in addition
+16129: \begin{enumerate}
+16130: \item the filtration on $K^\bullet$ is finite and the filtration on
+16131: $L^\bullet$ is finite, or
+16132: \item more generally the following are true
+16133: \begin{enumerate}
+16134: \item $F^iK^\bullet$ is acyclic for $i \gg 0$,
+16135: \item $F^iK^\bullet \to K^\bullet$ is a quasi-isomorphism for $i \ll 0$,
+16136: \item $F^jL^\bullet$ is acyclic for $j \gg 0$, and
+16137: \item $F^jL^\bullet \to L^\bullet$ is a quasi-isomorphism for $j \ll 0$.
+16138: \end{enumerate}
+16139: \end{enumerate}
+16140: Then the spectral sequence is bounded, the associated filtration on each
+16141: $H^n(T^\bullet) = H^n(K^\bullet \otimes_R^\mathbf{L} L^\bullet)$ is finite
+16142: and we have convergence
+16143: $$
+16144: E_1^{p, q} =
+16145: \bigoplus\nolimits_{i + j = p}
+16146: H^{p + q}(\text{gr}^iK^\bullet \otimes_R^\mathbf{L} \text{gr}^jL^\bullet)
+16147: \Rightarrow
+16148: H^n(K^\bullet \otimes_R^\mathbf{L} L^\bullet)
+16149: $$
+16150: \end{lemma}
+16151: 
+16152: \begin{proof}
+16153: In case (1) the filtration on $T^\bullet$ is finite and the lemma follows
+16154: immediately from
+16155: Homology, Lemma \ref{homology-lemma-biregular-ss-converges}.
+16156: In case (2) choose $a < b$ such that $F^iK^\bullet$ and $F^jL^\bullet$ are
+16157: acyclic for $i, j > b$ and $F^iK^\bullet \to K^\bullet$ and
+16158: $F^jL^\bullet \to L^\bullet$ are quasi-isomorphisms for $i, j < a$.
+16159: We claim that in this case the complex $F^nT^\bullet$ is acyclic for
+16160: $n > 2b$ and that $F^nT^\bullet \to T^\bullet$ is a quasi-isomorphism
+16161: for $n < 2a - 1$. Since the claim shows that
+16162: Homology, Lemma \ref{homology-lemma-ss-converges-trivial}
+16163: applies we see that our lemma is true.
+16164: 
+16165: \medskip\noindent
+16166: Proof of the claim. Given $n$ and integers $i_1 \leq i_2$ consider
+16167: $$
+16168: S^{n, i_1, i_2} =
+16169: \Im\left(
+16170: \bigoplus\nolimits_{i_1 \leq i \leq i_2}
+16171: \text{Tot}(F^iK^\bullet \otimes_R F^{n - i}L^\bullet)
+16172: \to
+16173: \text{Tot}(K^\bullet \otimes_R L^\bullet)
+16174: \right)
+16175: $$
+16176: viewed as a subcomplex of $\text{Tot}(K^\bullet \otimes_R L^\bullet)$.
+16177: Observe that $F^nT^\bullet = \colim S^{n, i_1, i_2}$ is a filtered colimit.
+16178: Thus to show the claim it suffices to show that $S^{n, i_1, i_2}$ is acyclic
+16179: for $n > 2b$ and that
+16180: $S^{n, i_1, i_2} \to \text{Tot}(K^\bullet \otimes L^\bullet)$
+16181: is a quasi-isomorphism for $n < 2a - 1$ and a cofinal set of choices of
+16182: pairs $i_1, i_2$.
+16183: 
+16184: \medskip\noindent
+16185: If $i_1 = i_2 = i$ and $n > 2b$, then
+16186: $$
+16187: S^{n, i, i} =
+16188: \text{Tot}(F^iK^\bullet \otimes_R F^{n - i}L^\bullet)
+16189: $$
+16190: is acyclic: either $i > b$ and this complex is acyclic by 
+16191: our assumption that $F^{n - i}L^\bullet$ is K-flat, or
+16192: $i \leq b$ and then $n - i \geq n - b > b$ and the same holds.
+16193: Using our flatness assumptions the reader shows that there is a short
+16194: exact sequence
+16195: $$
+16196: 0 \to
+16197: S^{n + 1, i_2 + 1, i_2 + 1}
+16198: \to
+16199: S^{n, i_1, i_2} \oplus S^{n, i_2 + 1, i_2 + 1}
+16200: \to
+16201: S^{n, i_1, i_2 + 1}
+16202: \to
+16203: 0
+16204: $$
+16205: of complexes. Thus we see by induction on $i_2 - i_1$ that all of the complexes
+16206: $S^{n, i_1, i_2}$ for $n > 2b$ are acyclic.
+16207: 
+16208: \medskip\noindent
+16209: Assume $n < 2a - 1$. Observe that
+16210: $$
+16211: S^{n, a - 1, a - 1} =
+16212: \text{Tot}(F^{a - 1}K^\bullet \otimes_R F^{n - a + 1}L^\bullet)
+16213: \to \text{Tot}(K^\bullet \otimes_R L^\bullet)
+16214: $$
+16215: is a quasi-isomorphism because both $a - 1 < a$ and $n - a + 1 < a$
+16216: and all our complexes are K-flat hence both sides compute the
+16217: same object of $D(R)$.
+16218: Observe that for $i_2 \geq a - 1$ and $n < 2a - 1$ the map
+16219: $$
+16220: S^{n + 1, i_2 + 1, i_2 + 1} \to S^{n, i_2 + 1, i_2 + 1}
+16221: $$
+16222: is a quasi-isomorphism because left and right hand side are quasi-isomorphic
+16223: to $\text{Tot}(F^{i_2 + 1}K^\bullet \otimes L^\bullet)$.
+16224: Thus using the short exact
+16225: sequence of complexes in the previous paragraph we find that
+16226: $S^{n, a - 1, a - 1} \to S^{n, a - 1, t}$ is a quasi-isomorphism for
+16227: all $t \geq a - 1$. On the other hand, there are similarly short
+16228: exact sequences
+16229: $$
+16230: 0 \to
+16231: S^{n + 1, i_1, i_1}
+16232: \to
+16233: S^{n, i_1 - 1, i_1 - 1} \oplus
+16234: S^{n, i_1, i_2}
+16235: \to
+16236: S^{n, i_1 - 1, i_2}
+16237: \to
+16238: 0
+16239: $$
+16240: of complexes. Similarly to the above, we note that for $i_1 \leq a - 1$
+16241: the map
+16242: $$
+16243: S^{n + 1, i_1, i_1} \to S^{n, i_1 - 1, i_1 - 1}
+16244: $$
+16245: is a quasi-isomorphism because left and right hand side are quasi-isomorphic
+16246: to $\text{Tot}(K^\bullet \otimes F^{n - i_1 + 1}L^\bullet)$.
+16247: Thus we conclude that $S^{n, s, t} \to S^{n, a - 1, t}$ is a quasi-isomorphism
+16248: for all $s \leq a - 1$. Combined we find that $S^{n, s, t}$ for $s \leq a - 1$
+16249: and $t \geq a - 1$ maps quasi-isomorphically to
+16250: $\text{Tot}(K^\bullet \otimes_R L^\bullet)$.
+16251: This finishes the proof of the lemma.
+16252: \end{proof}
+16253: 
+16254: \begin{lemma}
+16255: \label{lemma-resolution-filtered-complex}
+16256: Let $R$ be a ring. Let $K^\bullet$ be a filtered complex. There exists a
+16257: map $f : P^\bullet \to K^\bullet$ of filtered complexes such that
+16258: \begin{enumerate}
+16259: \item each $P^n$, $F^iP^n$, $\text{gr}^iP^n$ is a free $R$-module,
+16260: \item the complexes of $R$-modules $P^\bullet$, $F^iP^\bullet$, and
+16261: $\text{gr}^iP^\bullet$ are K-flat,
+16262: \item $f$ induces quasi-isomorphisms
+16263: $P^\bullet \to K^\bullet$,
+16264: $F^iP^\bullet \to F^iK^\bullet$, and
+16265: $\text{gr}^iP^\bullet \to \text{gr}^iK^\bullet$.
+16266: \end{enumerate}
+16267: \end{lemma}
+16268: 
+16269: \begin{proof}
+16270: Let us say a filtered complex $L^\bullet$ is {\it basic} if
+
+16375: \begin{proposition}
+16376: \label{proposition-kunneth-filtered}
+16377: Let $R$ be a ring. Let $K^\bullet$ and $L^\bullet$ be filtered complexes
+16378: of $R$-modules. Then there exists a filtered complex $T^\bullet$
+16379: representing $K^\bullet \otimes_R^\mathbf{L} L^\bullet$ in $D(R)$
+16380: such that the associated spectral sequence has $E_1$-page
+16381: $$
+16382: E_1^{p, q} =
+16383: \bigoplus\nolimits_{i + j = p}
+16384: H^{p + q}(\text{gr}^iK^\bullet \otimes_R^\mathbf{L} \text{gr}^jL^\bullet)
+16385: $$
+16386: If
+16387: \begin{enumerate}
+16388: \item $F^iK^\bullet$ is acyclic for $i \gg 0$,
+16389: \item $F^iK^\bullet \to K^\bullet$ is a quasi-isomorphism for $i \ll 0$,
+16390: \item $F^jL^\bullet$ is acyclic for $j \gg 0$, and
+16391: \item $F^jL^\bullet \to L^\bullet$ is a quasi-isomorphism for $j \ll 0$.
+16392: \end{enumerate}
+16393: then the spectral sequence is bounded, the associated filtration on each
+16394: $H^n(K^\bullet \otimes_R^\mathbf{L} L^\bullet)$ is finite
+16395: and the spectral sequence convergences.
+16396: \end{proposition}
+16397: 
+16398: \begin{proof}
+16399: Choose $P^\bullet \to K^\bullet$ and $Q^\bullet \to L^\bullet$ as in
+16400: Lemma \ref{lemma-resolution-filtered-complex}. Then we use the spectral
+16401: sequence for the filtered complex
+16402: $$
+16403: T^\bullet = \text{Tot}(P^\bullet \otimes_R Q^\bullet)
+16404: $$
+16405: described in the text of this section and in
+16406: Lemma \ref{lemma-kunneth-converges}.
+16407: \end{proof}
+16408: 
+16409: \begin{lemma}[K\"unneth Spectral Sequence]
+16410: \label{lemma-kunneth-spectral-sequence}
+16411: Let $R$ be a ring. Let $K$ and $L$ be objects of $D^b(R)$.
+16412: There exists a bigraded bounded spectral sequence $\{E_r\}_{r \geq 2}$
+16413: with
+16414: $$
+16415: E_2^{p, q} = \bigoplus\nolimits_{i + j = q} \text{Tor}^R_{-p}(H^i(K), H^j(L))
+16416: $$
+16417: and $d_r$ of bidegree $(r, -r + 1)$
+16418: converging to $H^{p + q}(K \otimes_R^\mathbf{L} L)$.
+16419: \end{lemma}
+16420: 
+16421: \begin{proof}
+16422: Let $K^\bullet$ be a complex of $R$-modules representing $K$ and let
+16423: $L^\bullet$ be a complex of $R$-modules representing $L$. Set
+16424: $F^iK^\bullet = \tau_{\leq -i}K^\bullet$ and similarly for $L$, see
+16425: Homology, Section \ref{homology-section-truncations}. Apply
+16426: Proposition \ref{proposition-kunneth-filtered} noting that
+16427: $\text{gr}^iK^\bullet = H^{-i}(K)[i]$ to get a bounded
+16428: spectral sequence $\{(E')_r\}_{r \geq 1}$ with
+16429: $$
+16430: (E')^{p, q}_1 =
+16431: \bigoplus\nolimits_{i + j = p} \text{Tor}^R_{-2p - q}(H^{-i}(K), H^{-j}(L))
+16432: $$
+16433: converging to the cohomology of $K \otimes_R^\mathbf{L} L$. By
+16434: construction this spectral sequence has differentials
+16435: $d_r^{p, q} : (E')_r^{p, q} \to (E')_r^{p + r, q - r + 1}$ for $r \geq 1$.
+16436: To get the spectral sequence of the lemma we set for $r \geq 2$
+16437: $$
+16438: E_r^{p, q} = (E')_{r - 1}^{-q, p + 2q}
+16439: $$
+16440: We leave it to the reader to show that this works.
+16441: \end{proof}
+16442: 
+16443: \begin{example}
+16444: \label{example-kunneth-dedekind}
+16445: If $R = \mathbf{Z}$ or more generally if $R$ is a Dedekind domain, then
+16446: $\text{Tor}_i^R(M, N) = 0$ for $i \not \in \{0, 1\}$ for all $R$-modules
+16447: $M$ and $N$. Hence the spectral sequence of
+16448: Lemma \ref{lemma-kunneth-spectral-sequence} degenerates
+16449: at the $E_2$ page and we get short exact sequences
+16450: $$
+16451: 0 \to \bigoplus_{i + j = n} H^i(K) \otimes_R H^j(L) \to
+16452: H^n(K \otimes_R^\mathbf{L} L) \to
+16453: \bigoplus_{i + j = n + 1} \text{Tor}^R_1(H^i(K), H^j(L)) \to 0

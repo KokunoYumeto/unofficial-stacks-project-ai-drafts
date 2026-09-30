@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "receipt_identity": {
+        "bytes": 899,
+        "sha256": "E19F373A2467FF18986F16481BA2FAB7B8AE0F3C66B72814F3502E050F0F3E12"
+      },
+      "status": "BUILD_ERROR",
+      "error": "Engine failed: a-correction-proofs-tex-1"
+    },
+    {
+      "attempt": 2,
+      "receipt_identity": {
+        "bytes": 59407,
+        "sha256": "F95E60156A05807384EA1E806D139A94A8C95F244E9B45476ED2C29F99E9BAD0"
+      },
+      "status": "PASS_FIXED_POINT_REPRODUCTION_VISUAL_PENDING",
+      "error": null
+    },
+    {
+      "attempt": 3,
+      "receipt_identity": {
+        "bytes": 5987,
+        "sha256": "39D47248911EA96B34EC5C6752839A8C9DAB70FDAA5EE2A4233F8E8F1F543CC9"
+      },
+      "status": "PASS_FIXED_POINT_REPRODUCTION_VISUAL_PENDING",
+      "error": null
+    },
+    {
+      "attempt": 4,
+      "receipt_identity": {
+        "bytes": 572,
+        "sha256": "A2D387DF7A326F7555DFB0DC2C7285B2C704EB4E1608F5A13BD2862278276D58"
+      },
+      "status": "NO_ENGINE_SLOT_UNAVAILABLE",
+      "error": "TeX slot not acquired: 0x102; no engine launched"
+    },
+    {
+      "attempt": 5,
+      "receipt_identity": {
+        "bytes": 5987,
+        "sha256": "EF097A08792DF0A857771D1F69C859660D77EEB2618F9B2E8F42347FE6EC9CB1"
+      },
+      "status": "PASS_FIXED_POINT_REPRODUCTION_VISUAL_PENDING",
+      "error": null
+    }
+  ],
+  "failed_presentation_retained": true,
+  "explanation": "Attempt 1 exposed an unsupported longtable counter override. Attempt 2 contains the final unchanged chapters. Attempt 3 was inspected in full and three pages required repairs to unintended Markdown emphasis. Attempt 4 launched no engine because the shared mutex was occupied. Attempt 5 is the final supplement; its three changed pages passed direct visual inspection."
+}

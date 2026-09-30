@@ -1,0 +1,142 @@
+2220: problem posed by the lemma. Namely, $F^pJ^n$ is an injective object
+2221: of $\mathcal{A}$ because it is isomorphic to
+2222: $I^{p, n} \times \prod_{p' > p} J^{p', n}$ and products of
+2223: injectives are injective. Then the injective map $F^pJ^n \to J^n$
+2224: splits and hence the quotient $J^n/F^pJ^n$ is injective as well
+2225: as a direct summand of the injective object $J^n$.
+2226: Similarly for $F^pJ^n/F^{p'}J^n$. This in particular means
+2227: that $0 \to F^pJ^\bullet \to J^\bullet \to J^\bullet/F^pJ^\bullet \to 0$
+2228: is a termwise split short exact sequence of complexes, hence defines
+2229: a distinguished triangle in $K(\mathcal{A})$ by fiat.
+2230: Since $J^\bullet$ and $F^pJ^\bullet$ are K-injective complexes
+2231: we see that the same is true for $J^\bullet/F^pJ^\bullet$
+2232: by Derived Categories, Lemma \ref{derived-lemma-triangle-K-injective}.
+2233: A similar argument shows that $F^pJ^\bullet/F^{p'}J^\bullet$
+2234: is K-injective. By construction $j : K^\bullet \to J^\bullet$
+2235: and the induced maps $F^pK^\bullet \to F^pJ^\bullet$ are
+2236: quasi-isomorphisms. Using the long exact cohomology sequences
+2237: of the complexes in play we find that the same holds for
+2238: $K^\bullet/F^pK^\bullet \to J^\bullet/F^pJ^\bullet$ and
+2239: $F^pK^\bullet/F^{p'}K^\bullet \to F^pJ^\bullet/F^{p'}J^\bullet$.
+2240: \end{proof}
+2241: 
+2242: \begin{remark}
+2243: \label{remark-ext-into-filtered-complex}
+2244: Let $\mathcal{A}$ be a Grothendieck abelian category.
+2245: Let $K^\bullet$ be a filtered complex of $\mathcal{A}$, see
+2246: Homology, Definition \ref{homology-definition-filtered-complex}.
+2247: For ease of notation denote by $K$, $F^pK$, $\text{gr}^pK$ the
+2248: objects of $D(\mathcal{A})$ represented by $K^\bullet$,
+2249: $F^pK^\bullet$, $\text{gr}^pK^\bullet$. Let $M \in D(\mathcal{A})$.
+2250: Using Lemma \ref{lemma-K-injective-embedding-filtration}
+2251: we can construct a spectral sequence $(E_r, d_r)_{r \geq 1}$
+2252: of bigraded objects of $\mathcal{A}$ with $d_r$ of bidgree
+2253: $(r, -r + 1)$ and
+2254: with
+2255: $$
+2256: E_1^{p, q} = \Ext^{p + q}(M, \text{gr}^pK)
+2257: $$
+2258: If for every $n$ we have
+2259: $$
+2260: \Ext^n(M, F^pK) = 0 \text{ for } p \gg 0
+2261: \quad\text{and}\quad
+2262: \Ext^n(M, F^pK) = \Ext^n(M, K) \text{ for } p \ll 0
+2263: $$
+2264: then the spectral sequence is bounded and converges to $\Ext^{p + q}(M, K)$.
+2265: Namely, choose any complex $M^\bullet$ representing $M$, choose
+2266: $j : K^\bullet \to J^\bullet$ as in the lemma, and consider the complex
+2267: $$
+2268: \Hom^\bullet(M^\bullet, J^\bullet)
+2269: $$
+2270: defined exactly as in
+2271: More on Algebra, Section \ref{more-algebra-section-hom-complexes}.
+2272: Setting $F^p\Hom^\bullet(M^\bullet, J^\bullet) =
+2273: \Hom^\bullet(M^\bullet, F^pJ^\bullet)$ we obtain a filtered complex.
+2274: The spectral sequence of
+2275: Homology, Section \ref{homology-section-filtered-complex}
+2276: has differentials and terms as described above; details omitted.
+2277: The boundedness and convergence follows from
+2278: Homology, Lemma \ref{homology-lemma-ss-converges-trivial}.
+2279: \end{remark}
+2280: 
+2281: \begin{remark}
+2282: \label{remark-spectral-sequences-ext}
+2283: Let $\mathcal{A}$ be a Grothendieck abelian category.
+2284: Let $M, K$ be objects of $D(\mathcal{A})$.
+2285: For any choice of complex $K^\bullet$ representing $K$ we
+2286: can use the filtration $F^pK^\bullet = \tau_{\leq -p}K^\bullet$
+2287: and the discussion in Remark \ref{remark-ext-into-filtered-complex}
+2288: to get a spectral sequence with
+2289: $$
+2290: E_1^{p, q} = \Ext^{2p + q}(M, H^{-p}(K))
+2291: $$
+2292: This spectral sequence is independent of the choice of
+2293: complex $K^\bullet$ representing $K$. After renumbering
+2294: $p = -j$ and $q = i + 2j$ we find a spectral sequence
+2295: $(E'_r, d'_r)_{r \geq 2}$ with $d'_r$ of bidegree $(r, -r + 1)$, with
+
+2300: both $E_r$ and $E'_r$ are bounded and converge to $\Ext^{p + q}(M, K)$.
+2301: If we use the filtration $F^pK^\bullet = \sigma_{\geq p}K^\bullet$
+2302: then we get
+2303: $$
+2304: E_1^{p, q} = \Ext^q(M, K^p)
+2305: $$
+2306: If $M \in D^-(\mathcal{A})$ and $K^\bullet$ is bounded below, then
+2307: this spectral sequence is bounded and converges to $\Ext^{p + q}(M, K)$.
+2308: \end{remark}
+2309: 
+2310: \begin{remark}
+2311: \label{remark-ext-from-filtered-complex}
+2312: Let $\mathcal{A}$ be a Grothendieck abelian category. Let
+2313: $K \in D(\mathcal{A})$. Let $M^\bullet$ be a filtered complex of
+2314: $\mathcal{A}$, see Homology, Definition
+2315: \ref{homology-definition-filtered-complex}.
+2316: For ease of notation denote by $M$, $M/F^pM$, $\text{gr}^pM$ the
+2317: objects of $D(\mathcal{A})$ represented by $M^\bullet$,
+2318: $M^\bullet/F^pM^\bullet$, $\text{gr}^pM^\bullet$.
+2319: Dually to Remark \ref{remark-ext-into-filtered-complex}
+2320: we can construct a spectral sequence $(E_r, d_r)_{r \geq 1}$
+2321: of bigraded objects of $\mathcal{A}$ with $d_r$ of bidgree
+2322: $(r, -r + 1)$ and
+2323: with
+2324: $$
+2325: E_1^{p, q} = \Ext^{p + q}(\text{gr}^{-p}M, K)
+2326: $$
+2327: If for every $n$ we have
+2328: $$
+2329: \Ext^n(M/F^pM, K) = 0 \text{ for } p \ll 0
+2330: \quad\text{and}\quad
+2331: \Ext^n(M/F^pM, K) = \Ext^n(M, K) \text{ for } p \gg 0
+2332: $$
+2333: then the spectral sequence is bounded and converges to $\Ext^{p + q}(M, K)$.
+2334: Namely, choose a K-injective complex $I^\bullet$ with injective terms
+2335: representing $K$, see Theorem \ref{theorem-K-injective-embedding-grothendieck}.
+2336: Consider the complex
+2337: $$
+2338: \Hom^\bullet(M^\bullet, I^\bullet)
+2339: $$
+2340: defined exactly as in
+2341: More on Algebra, Section \ref{more-algebra-section-hom-complexes}.
+2342: Setting
+2343: $$
+2344: F^p\Hom^\bullet(M^\bullet, I^\bullet) =
+2345: \Hom^\bullet(M^\bullet/F^{-p + 1}M^\bullet, I^\bullet)
+2346: $$
+2347: we obtain a filtered complex (note sign and shift in filtration).
+2348: The spectral sequence of
+2349: Homology, Section \ref{homology-section-filtered-complex}
+2350: has differentials and terms as described above; details omitted.
+2351: The boundedness and convergence follows from
+2352: Homology, Lemma \ref{homology-lemma-ss-converges-trivial}.
+2353: \end{remark}
+2354: 
+2355: \begin{remark}
+2356: \label{remark-spectral-sequences-ext-variant}
+2357: Let $\mathcal{A}$ be a Grothendieck abelian category.
+2358: Let $M, K$ be objects of $D(\mathcal{A})$.
+2359: For any choice of complex $M^\bullet$ representing $M$ we
+2360: can use the filtration $F^pM^\bullet = \tau_{\leq -p}M^\bullet$
+2361: and the discussion in Remark \ref{remark-ext-into-filtered-complex}
+2362: to get a spectral sequence with
+2363: $$
+2364: E_1^{p, q} = \Ext^{2p + q}(H^p(M), K)

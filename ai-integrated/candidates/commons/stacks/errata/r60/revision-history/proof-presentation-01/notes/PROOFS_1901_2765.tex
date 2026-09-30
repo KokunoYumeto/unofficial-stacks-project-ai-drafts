@@ -1,0 +1,136 @@
+\subsection{Homology source review, original lines 1901--2765}\label{homology-source-review-original-lines-19012765}
+
+Primary source: the Stacks Project authors, \href{https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/homology.tex}{Homological Algebra}, commit a04446e57ec1fbc252a871afcec7752fb2807b14. The authority bytes are preserved in authority-homology.tex. The cumulative comparison remains the exact homology.tex blob at b4b30d521cfbe300860903ff788059627da6a434. The inherited FAC material is preserved; its presence is not a new certification of its historical source comparison.
+
+Consecutive reading extended through original line 2798. The chain-complex definition continues beyond that boundary and is not adjudicated here. This note resolves the seven received reports whose first locus lies between 1901 and 2765. All their requested changes are already present. The arguments below supply exact receiving maps and editorial explanations. An omitted proof, an implicit transport, or an implicit exchange of two differentials is not automatically an additional source defect.
+
+\subsubsection{1. Localization and the Serre quotient used in the K-group argument}\label{localization-and-the-serre-quotient-used-in-the-k-group-argument}
+
+For an additive category \(\mathcal C\) and a multiplicative system \(S\), if \(0:X\to Y\) lies in \(S\), its image is a zero isomorphism. Multiplying by its inverse gives \(1_{QX}=0\), so \(QX\) is zero. The same holds for a zero arrow into \(X\). Conversely, if \(QX=0\), the arrow \(f:0\to X\) is inverted. The exact criterion in Categories, lemma-what-gets-inverted, supplies \(h:Z\to0\) with \(fh\in S\). Thus a zero arrow into \(X\) belongs to \(S\). Applying the criterion to \(X\to0\) gives a zero arrow out of \(X\) in \(S\). No saturation hypothesis on \(S\) was silently added.
+
+For the Serre system \[
+S=\{f:\ker f,\operatorname{coker}f\in\mathcal C\}
+\] in an abelian category \(\mathcal A\), the displayed composition kernel and cokernel sequences in the original proof show closure under composition: their outer terms lie in \(\mathcal C\), and the defining Serre property puts the middle terms there. For the original pushout of \(t:A\to C\) along \(g:A\to B\), retain \[
+W=\operatorname{coker}((t,-g):A\to C\oplus B).
+\] A map from \(W\) killing \(B\to W\) is exactly a map from \(C\) killing \(t\), so \(\operatorname{coker}(B\to W)\cong\operatorname{coker}t\). The map \(\ker t\to B\), induced by \(g\), has image \(\ker(B\to W)\). To see the image equality without element notation, pull back the image inclusion of \((t,-g)\) along \(B\to C\oplus B\). Its projection to \(B\) is the kernel of \(B\to W\). Pulling back the epimorphism \(A\to\operatorname{im}(t,-g)\) gives an epimorphism onto that pullback; its source is \(\ker t\), with the sign \(-g\). Negating that map does not change its image. Hence \(\ker t\to\ker(B\to W)\) is epic. Serre closure under quotients gives the required new denominator. The pullback assertion is dual.
+
+For the cancellation axiom, \(fs=gs\) implies that \(\operatorname{im}(f-g)\) is a quotient of \(\operatorname{coker}s\). Its inclusion in the codomain therefore has source in \(\mathcal C\); quotienting by that image gives an arrow in \(S\) equalizing \(f,g\). The other cancellation axiom is dual. This proves the multiplicative-system properties with the original objects.
+
+Localization preserves cokernels for a left system and kernels for a right system. The precise finite-colimit argument read in Categories, lemma-left-localization-limits, uses \[
+\operatorname{Hom}(Q(\operatorname{colim}X_i),QY)
+ =
+\operatorname{colim}_{(s:Y\to Y')\in Y/S}
+\operatorname{Hom}(\operatorname{colim}X_i,Y')
+ =
+\lim_i\operatorname{colim}_{(s:Y\to Y')\in Y/S}
+\operatorname{Hom}(X_i,Y').
+\] The indexing category \(Y/S\) is filtered and \(i\) ranges over the given finite diagram. The displayed map preserves each projection, so it gives the colimit universal property. Its dual gives the kernel statement. The existing localization construction and the filtered-colimit lemma are dependencies here; this bounded read does not claim a new audit of the whole Categories chapter.
+
+Every localized arrow is an original arrow composed with an inverted denominator. Its coimage-to-image comparison is consequently the image of the original invertible comparison, with those endpoint isomorphisms. Thus the quotient is abelian and \(Q\) exact. Its zero objects are exactly \(\mathcal C\): if \(QX=0\), a zero arrow \(X\to Z\) belongs to \(S\), whose kernel is \(X\); conversely \(X\in\mathcal C\) makes \(0\to X\) an element of \(S\).
+
+It follows as well that this particular \(S\) is saturated. Indeed, \(Qf\) invertible implies \(Q\ker f=\ker Qf=0\) and \(Q\operatorname{coker}f=\operatorname{coker}Qf=0\). The kernel characterization just proved puts both objects in \(\mathcal C\), so \(f\in S\). This establishes the claim already made in the source proof; it is not counted as a new result.
+
+For an exact \(F:\mathcal A\to\mathcal B\) vanishing on \(\mathcal C\), the quotient factorization is defined on a fraction by \(\overline F(s^{-1}f)=F(s)^{-1}F(f)\). Exactness follows by representing an arrow by a fraction and applying preservation of its kernel and cokernel. If \(\mathcal C=\ker F\) and \(\overline F(u)=0\), exactness gives \(\overline F(\operatorname{im}u)=0\). The kernel characterization makes \(\operatorname{im}u=0\) in the quotient, so \(u=0\). Conversely faithfulness sends the equation \(\overline F(1_X)=1_{FX}=0\) back to \(1_X=0\) in the quotient, which puts \(X\) in \(\mathcal C\). This verifies the source's receiving faithfulness criterion.
+
+\subsubsection{2. The presentation and the lift of a short exact sequence}\label{the-presentation-and-the-lift-of-a-short-exact-sequence}
+
+OCC-12477 receives MC-STK-ERR-0763. At original line 2359 the first arrow of the presentation has codomain the free abelian group on objects and sends \[
+[A\to B\to C]\longmapsto[B]-[A]-[C].
+\] The next arrow takes a generator to its class in \(K_0(\mathcal A)\). There the displayed relation becomes zero. Stating which arrow is meant repairs the malformed source clause without changing the presentation. OCC-02833 and OCC-12478 receive MC-STK-ERR-0764: ``where computed'' becomes ``were computed'' at line 2365.
+
+The zero short exact sequence gives \([0]=0\). If \(A\cong B\), the short exact sequence \(0\to A\to B\to0\to0\) gives \([B]-[A]=0\). Consequently the presentation on objects and the presentation on isomorphism classes give the same \(K_0\). More explicitly, the projection from the free group on objects to the free group on isomorphism classes has kernel generated by differences of objects in the same class. These differences already lie in the subgroup of short-exact-sequence relations. The projected relation subgroup is precisely the relation subgroup of the isomorphism-class presentation, proving the induced isomorphism. This is the exact comparison used at source line 2446.
+
+The split sequence \(0\to A\to A\oplus B\to B\to0\) gives \([A\oplus B]=[A]+[B]\). Thus every finite integral combination of classes can be written as \([P]-[Q]\), with repeated summands retaining their integer multiplicities. The empty sum is the zero object. An exact functor sends each defining short exact sequence to one, so \([A]\mapsto[F(A)]\) kills every defining relation and induces \(K_0(F)\).
+
+OCC-12479 receives both operations of MC-STK-ERR-0765: ``proof'' becomes ``proofs'' at 2467, and ``we choose'' becomes ``we can choose'' at 2468. The existence assertion has the following proof. For a monomorphism \(\beta:B_1\to B_2\) in \(\mathcal A/\mathcal C\), choose a right-fraction representative \[
+\beta=Q(f)Q(s)^{-1},\qquad s:X\to B_1\text{ in }S,\quad f:X\to B_2.
+\] The same objects denote the chosen quotient objects, as in the localization construction. Put \(I=\operatorname{im}f\) in \(\mathcal A\). Exactness gives \(QI=\operatorname{im}Qf\). Since \(\beta\) is monic and \(Qs\) invertible, \(Qf\) is monic and its source \(QX\) maps isomorphically onto \(QI\). The quotient short exact sequence is therefore isomorphic, with all three arrows, to the image under \(Q\) of \[
+0\longrightarrow I\longrightarrow B_2
+\longrightarrow\operatorname{coker}f\longrightarrow0.
+\] The isomorphism of first terms is \(B_1\xrightarrow{(Qs)^{-1}}QX\to QI\); the middle map is the identity; the final map is the unique isomorphism between the two cokernels making the quotient map commute. This proves the needed lift of each short exact sequence in part (1).
+
+If \(QM\cong QN\), choose a roof \(M\xleftarrow{s}M'\xrightarrow{f}N\). The first leg is in \(S\). The second leg also lies in \(S\), because its image is invertible and the preceding saturation argument applies. For either leg \(v:M'\to V\), its kernel and cokernel give the exact equality \[
+[V]-[M']=[\operatorname{coker}v]-[\ker v]
+\] in \(K_0(\mathcal A)\). Subtracting the equalities for the two legs proves \[
+[M]-[N]
+=[\operatorname{coker}s]-[\ker s]
+-[\operatorname{coker}f]+[\ker f],
+\] an element in the image of \(K_0(\mathcal C)\). Apply this equality to every matched pair in the source's labelled multisets, using the lifted short exact sequences. Summing preserves every multiplicity and proves exactness in part (1).
+
+\subsubsection{3. Exact transport and sign of the periodic-complex witness}\label{exact-transport-and-sign-of-the-periodic-complex-witness}
+
+Retain the source's finite \(I=I^+\amalg I^-\), the labelled sets \[
+T^+=\{p\}\amalg(\{a,c\}\times I^+)\amalg(\{b\}\times I^-),\qquad
+T^-=\{q\}\amalg(\{a,c\}\times I^-)\amalg(\{b\}\times I^+),
+\] and \(O(p)=P,\ O(q)=Q,\ O(a,i)=A_i,\ O(b,i)=B_i,\ O(c,i)=C_i\). The defining relation gives a bijection \(\tau:T^+\to T^-\) with \(O(t)=O(\tau(t))\). For the actual biproducts \(M^+,M^-\), denote their injections and projections by \(\iota_t^\pm,\pi_t^\pm\). The exact isomorphism represented by the source's equality of direct sums is \[
+J=\sum_{t\in T^+}\iota_{\tau(t)}^-\pi_t^+:M^+\to M^-,
+\qquad
+J^{-1}=\sum_{t\in T^+}\iota_t^+\pi_{\tau(t)}^-:M^-\to M^+.
+\] The component identifications are the equalities \(O(t)=O(\tau(t))\). The biproduct relations give \(J^{-1}J=1_{M^+}\) and \(JJ^{-1}=1_{M^-}\). If one starts with the isomorphism-class presentation instead, insert the chosen component isomorphisms and their inverses in these formulas.
+
+Keep the source's maps \(\varphi:M^+\to M^-\) and \(\psi:M^-\to M^+\). For \(i\in I^+\), \(\varphi\) is \(A_i\to B_i\) on the \((a,i)\) summand, while \(\psi\) is \(B_i\to C_i\) on \((b,i)\). For \(i\in I^-\), \(\psi\) is \(A_i\to B_i\), while \(\varphi\) is \(B_i\to C_i\). All other components are zero: \(\varphi\) vanishes on \(p\) and on every \((c,i)\) with \(i\in I^+\); \(\psi\) vanishes on \(q\) and on every \((c,i)\) with \(i\in I^-\). The only possibly nonzero two-step composites are \(A_i\to B_i\to C_i\), and those are zero by the chosen short exact sequences. Thus \(\psi\varphi=0\) and \(\varphi\psi=0\).
+
+The original direct-sum kernels and images give \[
+\ker\varphi
+=P\oplus\bigoplus_{i\in I^+}C_i\oplus
+ \bigoplus_{i\in I^-}A_i,\qquad
+\operatorname{im}\psi
+=\bigoplus_{i\in I^+}C_i\oplus\bigoplus_{i\in I^-}A_i,
+\] where each \(A_i\) is its given subobject of the corresponding \(B_i\). These equalities mean the canonical direct-sum maps, with their indicated subobject inclusions. Quotienting by those last summands gives \(\ker\varphi/\operatorname{im}\psi\cong P\). Dually \(\ker\psi/\operatorname{im}\varphi\cong Q\).
+
+To supply a single-object witness with the sign in the theorem, set \[
+M=M^+,\qquad
+\widehat\varphi=\psi J,\qquad
+\widehat\psi=J^{-1}\varphi.
+\] Both composites are zero: \[
+\widehat\psi\,\widehat\varphi=J^{-1}\varphi\psi J=0,\qquad
+\widehat\varphi\,\widehat\psi=\psi\varphi=0.
+\] Since \(J\) is invertible, \[
+H^0(M,\widehat\varphi,\widehat\psi)
+=\ker\varphi/\operatorname{im}\psi\cong P,
+\qquad
+H^1(M,\widehat\varphi,\widehat\psi)
+\cong\ker\psi/\operatorname{im}\varphi\cong Q.
+\] The second isomorphism is induced by \(J\). Thus the difference is exactly \([P]-[Q]\), with the required sign, and the complex is exact in the Serre quotient since both cohomology objects belong to \(\mathcal C\).
+
+If instead one first transports without exchanging the maps, the pair is \((J^{-1}\varphi,\psi J)\); its \(H^0\) is \(Q\) and its \(H^1\) is \(P\). Exchanging them gives the preceding witness. The source claims that the kernel is the collection of all such differences. That collection is closed under this exchange, so the sign observation does not refute the theorem. The formulas here make its implicit final witness explicit. This is editorial proof clarification, not a new received report, not a replacement of the source proof, and not a novelty claim.
+
+Conversely, for any source complex \((M,\varphi,\psi)\), the four exact kernel/image sequences give \[
+0=[M]-[M]
+=[\ker\varphi]+[\operatorname{im}\varphi]
+-[\ker\psi]-[\operatorname{im}\psi]
+=[H^1]-[H^0].
+\] Hence its displayed difference lies in the kernel. This proves both directions of the claimed witness description.
+
+The proof also establishes the following stronger, object-level statement. For any prescribed objects \(P,Q\) of a small abelian category \(\mathcal A\), \([P]=[Q]\) in \(K_0(\mathcal A)\) if and only if a single-object periodic complex as above has \(H^0\cong P\) and \(H^1\cong Q\). For sufficiency, use the last four exact-sequence relations. For necessity, equality in the presented group supplies the finite signed relation used to define \(I^\pm,T^\pm,O,\tau\); the full construction above uses no Serre assumption until its assertion of exactness in the quotient. Thus it applies to the prescribed pair itself. If \(P,Q\in\mathcal C\) for a Serre subcategory, exactness after passing to \(\mathcal A/\mathcal C\) is the additional consequence already proved. This is a proved refinement of the stated source conclusion, extracted from its proof, with no novelty claim.
+
+The original receiving proof in \href{https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/b4b30d521cfbe300860903ff788059627da6a434/chow.tex\#L18526}{Chow Homology and Chern Classes} at lines 18526--18568 uses precisely this refinement: \(P=\mathcal A\oplus\mathcal A'\) and \(Q=\mathcal B\oplus\mathcal B'\) are prescribed coherent sheaves, and it needs their individual realization as \(H^0,H^1\), not only an equality of differences of classes. The explicit construction supplies that implication with the stated sign. This checks the use of the Homology result; it does not certify the other geometric lemmas in that proof. The earlier references at Chow lines 3792 and 13180 use part (1), whose exact-sequence statement is unchanged. Line 18414 identifies the periodic-complex result as motivation.
+
+\subsubsection{4. Delta-functor transformations, independence and naturality}\label{delta-functor-transformations-independence-and-naturality}
+
+OCC-02834 covers two loci, original lines 2679 and 2723. They already have the distinct corrections MC-STK-ERR-0766 and MC-STK-ERR-0767. OCC-12480 duplicates the first locus and OCC-12481 the second. Use ``transformations'' in both places. Do not count the single two-locus report twice in the physical-report ledger.
+
+For completeness, the omitted construction check in the source can be made with the following exact diagrams. Assume \(t^i:F^i\to G^i\) has been constructed naturally through degree \(n\), with connecting-map compatibility in the already defined degrees. For a monomorphism \(u:A\to B\) effacing \(F^{n+1}(A)\), put \(C=\operatorname{coker}u\). The connecting map \(\delta_F:F^n(C)\to F^{n+1}(A)\) is epic and is a cokernel of \(F^n(B)\to F^n(C)\). Naturality of \(t^n\) gives \[
+\delta_Gt_C^nF^n(B\to C)
+=\delta_GG^n(B\to C)t_B^n=0.
+\] Thus there is a unique \(T_A^u:F^{n+1}(A)\to G^{n+1}(A)\) with \[
+T_A^u\delta_F=\delta_Gt_C^n.
+\] This is precisely the source's displayed cokernel construction.
+
+For two choices \(u:A\to B\), \(v:A\to B'\), the map \(w=(u,v):A\to B\oplus B'\) is monic and also effaces \(F^{n+1}(A)\). It is monic because its first component is; its \(F^{n+1}\)-image is zero because that additive functor preserves biproduct components and both components are zero. Projection onto \(B\) gives a map of short exact sequences with identity on \(A\), hence a map \(c:\operatorname{coker}w\to C\). Naturality of both connecting morphisms and of \(t^n\) gives \[
+T_A^u\delta_{F,w}
+=T_A^u\delta_{F,u}F^n(c)
+=\delta_{G,u}t_C^nF^n(c)
+=\delta_{G,w}t_{\operatorname{coker}w}^n.
+\] Cancel the epimorphism \(\delta_{F,w}\) to obtain \(T_A^u=T_A^w\). The second projection proves \(T_A^v=T_A^w\). Thus the map is independent of the chosen effacement.
+
+For \(f:A\to A'\), choose effacements \(u:A\to B\) and \(v:A'\to B'\). Now \(w=(u,vf):A\to B\oplus B'\) is monic and effaces \(F^{n+1}(A)\). The second projection together with \(f\) makes a map from its short exact sequence to that of \(v\). Write \(c\) for the induced quotient map. The two candidates \(G^{n+1}(f)T_A^w\) and \(T_{A'}^vF^{n+1}(f)\) have, after composition with the epic \(\delta_{F,w}\), the common value \(\delta_{G,v}t_{\operatorname{coker}v}^nF^n(c)\). They are equal, proving naturality of \(t^{n+1}\).
+
+Finally, for any \(0\to A\xrightarrow{i}B\to C\to0\), choose a monomorphism \(v:B\to E\) effacing \(F^{n+1}(B)\). Then \(u=vi\) effaces \(F^{n+1}(A)\). The maps \(1_A,v\) induce \(c:C\to\operatorname{coker}u\). The defining identity for \(t_A^{n+1}\), followed by \(F^n(c)\), becomes \[
+t_A^{n+1}\delta_{F,A\to B\to C}
+=\delta_{G,A\to E\to\operatorname{coker}u}
+ t_{\operatorname{coker}u}^nF^n(c)
+=\delta_{G,A\to B\to C}t_C^n.
+\] This is the required connecting-map compatibility. Any other extension must obey the same equation for an effacing short exact sequence, whose connecting map is epic; it therefore agrees in degree \(n+1\). Induction proves existence and uniqueness in every degree.
+
+For the subsequent uniqueness lemma, apply universality in both directions to the identity on the fixed degree-zero functor \(F\). The two composites are the identity because they extend that identity and extension is unique. The resulting isomorphism is unique among those inducing the identity on the specified \(F\). This does not assert that a universal delta-functor has no automorphisms inducing nonidentity automorphisms of \(F\). Again this states the exact comparison implicit in the source; it is editorial explanation, not a new defect or a newly discovered theorem.

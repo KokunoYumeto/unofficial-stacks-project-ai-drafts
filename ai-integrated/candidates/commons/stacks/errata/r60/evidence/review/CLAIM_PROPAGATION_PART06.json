@@ -1,0 +1,96 @@
+{
+  "findings": [],
+  "claims": [
+    {
+      "claim_id": "HOMOLOGY-UNDER-006",
+      "kind": "first_differential_without_countable_sums",
+      "source_label": "lemma-spectral-sequence-filtered-complex-d1",
+      "original_source_lines": [
+        6106,
+        6145
+      ],
+      "original_statement": "The first differential is the connecting map of successive filtration quotients; if d raises filtration, it is induced directly by d. The statement additionally assumes countable direct sums.",
+      "proved_statement": "Both conclusions hold for every filtered complex in any abelian category; countable direct sums are unnecessary.",
+      "proof": {
+        "file": "PROOFS_5671_6359.md",
+        "bytes": 18811,
+        "sha256": "353D246B20E752CD0F8886E81CE6983A77CA0E1733131BD2BA3F361C838EC4DA",
+        "section": 3
+      },
+      "supporting_component_calculation": {
+        "file": "PROOFS_5671_6359.md",
+        "bytes": 18811,
+        "sha256": "353D246B20E752CD0F8886E81CE6983A77CA0E1733131BD2BA3F361C838EC4DA",
+        "section": 2
+      },
+      "hypotheses": "A is abelian; F is decreasing and d preserves it. For the second assertion, d(F^p K^n) is contained in F^{p+1}K^{n+1} for all p,n.",
+      "exact_maps": "The short exact sequence gr^{p+1}K -> F^pK/F^{p+2}K -> gr^pK has connecting map [z] -> [d^n z], of bidegree (1,0), without any cochain translation.",
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "example": "Finite-dimensional vector spaces give an abelian category without countable coproducts; the representative proof still applies.",
+      "affected_results": [
+        "derived.tex:8927,8937",
+        "more-algebra.tex:16114"
+      ],
+      "propagation": "Bounded receiving applications checked; no source formula changes or unrelated removal of hypotheses. The editorial supplement carries the stronger statement and exact maps.",
+      "novelty": "not_claimed"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "derived.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 464343,
+        "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+      },
+      "actual_lines_read": [
+        [
+          8875,
+          8975
+        ]
+      ],
+      "hits": [
+        8927,
+        8937
+      ],
+      "excerpt": {
+        "file": "derived.tex.part06-excerpts.txt",
+        "bytes": 4654,
+        "sha256": "2A579997DD9D35F733066ED9ED2261AFD326B0F6E264766F93F1F57AE1D2521D"
+      },
+      "receiving_outcome": "Part (2) applies to the stated filtration in an arbitrary abelian category. This lemma supplies no countable-sum requirement; the full independent derived-functor comparison and sign conventions are not certified by this bounded dependency check.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "more-algebra.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 1518085,
+        "sha256": "3785C52A72AA218E39E338910940C7C4AF374F557550825BAC2594678F9216BB"
+      },
+      "actual_lines_read": [
+        [
+          16065,
+          16142
+        ]
+      ],
+      "hits": [
+        16114
+      ],
+      "excerpt": {
+        "file": "more-algebra.tex.part06-excerpts.txt",
+        "bytes": 3722,
+        "sha256": "23076C8DF1A26F5588383F19DF71C2D7D2ED1DAD70ED33F7135FBD3EBA56F8D8"
+      },
+      "receiving_outcome": "The cited successive-quotient short exact sequence gives d1 by the proved connecting-map formula. The module category already admits countable sums; all tensor and K-flatness hypotheses are retained.",
+      "whole_chapter_reviewed": false
+    }
+  ],
+  "supplementary_proofs": [
+    "Componentwise differentials, complete kernel/image calculation and canonical next-page quotient.",
+    "Canonical subquotient with both convergence defects and all comparison maps.",
+    "Regularity and coregularity bounds with the source's direction conventions."
+  ],
+  "omitted_source_proofs_counted_as_errors": false
+}

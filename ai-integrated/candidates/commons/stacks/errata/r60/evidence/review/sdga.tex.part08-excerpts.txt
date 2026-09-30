@@ -1,0 +1,157 @@
+2816: commute with tensor products and with pullbacks.
+2817: \end{proof}
+2818: 
+2819: \begin{lemma}
+2820: \label{lemma-good-quotient}
+2821: Let $(\mathcal{C}, \mathcal{O})$ be a ringed site.
+2822: Let $\mathcal{A}$ be a sheaf of differential graded algebras
+2823: on $(\mathcal{C}, \mathcal{O})$. Let $\mathcal{M}$
+2824: be a differential graded $\mathcal{A}$-module. There exists a homomorphism
+2825: $\mathcal{P} \to \mathcal{M}$ of differential graded $\mathcal{A}$-modules
+2826: with the following properties
+2827: \begin{enumerate}
+2828: \item $\mathcal{P} \to \mathcal{M}$ is surjective,
+2829: \item $\Ker(\text{d}_\mathcal{P}) \to \Ker(\text{d}_\mathcal{M})$
+2830: is surjective, and
+2831: \item $\mathcal{P}$ is good.
+2832: \end{enumerate}
+2833: \end{lemma}
+2834: 
+2835: \begin{proof}
+2836: Consider triples $(U, k, x)$ where $U$ is an object of $\mathcal{C}$,
+2837: $k \in \mathbf{Z}$, and $x$ is a section of $\mathcal{M}^k$ over $U$
+2838: with $\text{d}_\mathcal{M}(x) = 0$. Then we obtain a unique morphism
+2839: of differential graded $\mathcal{A}_U$-modules
+2840: $\varphi_x : \mathcal{A}_U[-k] \to \mathcal{M}|_U$
+2841: mapping $1$ to $x$. This is adjoint to a morphism
+2842: $\psi_x : j_{U!}\mathcal{A}_U[-k] \to \mathcal{M}$.
+2843: Observe that $1 \in \mathcal{A}_U(U)$ corresponds to
+2844: a section $1 \in j_{U!}\mathcal{A}_U[-k](U)$ of degree $k$
+2845: whose differential is zero and which is mapped to $x$ by $\psi_x$.
+2846: Thus if we consider the map
+2847: $$
+2848: \bigoplus\nolimits_{(U, k, x)} j_{U!}\mathcal{A}_U[-k]
+2849: \longrightarrow
+2850: \mathcal{M}
+2851: $$
+2852: then we will have conditions (2) and (3). Namely, the objects
+2853: $j_{U!}\mathcal{A}_U[-k]$ are good (Lemma \ref{lemma-supply-good})
+2854: and any direct sum of good objects is good (Lemma \ref{lemma-good-direct-sum}).
+2855: 
+
+3008: $$
+3009: Then we set
+3010: $$
+3011: \mathcal{P}_{i + 1} = \mathcal{P}_i \oplus \mathcal{A}[\mathcal{S}_{i + 1}]
+3012: $$
+3013: as graded $\mathcal{A}$-module with differential and map to
+3014: $\mathcal{M}$ defined as follows
+3015: \begin{enumerate}
+3016: \item for local sections of $\mathcal{P}_i$ use the differential on
+3017: $\mathcal{P}_i$ and the given map to $\mathcal{M}$,
+3018: \item for a local section $s = (p, m)$ of $\mathcal{S}_{i + 1}$ we set
+3019: $\text{d}(s)$ equal to $p$ viewed as a section of $\mathcal{P}_i$
+3020: of degree $\deg(s) + 1$ and we map $s$ to $m$ in $\mathcal{M}$, and
+3021: \item extend the differential uniquely so that the Leibniz rule holds.
+3022: \end{enumerate}
+3023: This makes sense because $\text{d}(m)$ is the image of $p$ and
+3024: $\text{d}(p) = 0$.
+3025: Finally, we set $\mathcal{P} = \colim \mathcal{P}_i$ with the
+3026: induced map to $\mathcal{M}$.
+3027: 
+3028: \medskip\noindent
+3029: The map $\mathcal{P} \to \mathcal{M}$ is a quasi-isomorphism:
+3030: we have $H^n(\mathcal{P}) = \colim H^n(\mathcal{P}_i)$
+3031: and for each $i$ the map $H^n(\mathcal{P}_i) \to H^n(\mathcal{M})$
+3032: is surjective with kernel annihilated  by the map
+3033: $H^n(\mathcal{P}_i) \to H^n(\mathcal{P}_{i + 1})$ by construction.
+3034: Each $\mathcal{P}_i$ is good because $\mathcal{P}_0$ is good
+3035: by Lemma \ref{lemma-free-graded-module-good} and each $\mathcal{P}_{i + 1}$
+3036: is in the middle of the admissible short exact sequence
+3037: $0 \to \mathcal{P}_i \to \mathcal{P}_{i + 1} \to
+3038: \mathcal{A}[\mathcal{S}_{i + 1}] \to 0$
+3039: whose outer terms are good by induction. Hence
+3040: $\mathcal{P}_{i + 1}$ is good by
+3041: Lemma \ref{lemma-good-admissible-ses}.
+3042: Finally, we conclude that $\mathcal{P}$ is good by
+3043: Lemma \ref{lemma-good-direct-sum}.
+3044: \end{proof}
+3045: 
+3046: \begin{proof}[Second proof]
+3047: We urge the reader to read the proof of Differential Graded Algebra,
+3048: Lemma \ref{dga-lemma-resolve} before reading this proof.
+3049: Set $\mathcal{M} = \mathcal{M}_0$.
+3050: We inductively choose short exact sequences
+3051: $$
+3052: 0 \to \mathcal{M}_{i + 1} \to \mathcal{P}_i \to \mathcal{M}_i \to 0
+3053: $$
+3054: where the maps
+3055: $\mathcal{P}_i \to \mathcal{M}_i$ are chosen as in
+3056: Lemma \ref{lemma-good-quotient}.
+3057: This gives a ``resolution''
+3058: $$
+3059: \ldots \to \mathcal{P}_2 \xrightarrow{f_2}
+3060: \mathcal{P}_1 \xrightarrow{f_1} \mathcal{P}_0 \to \mathcal{M} \to 0
+3061: $$
+3062: Then we let $\mathcal{P}$ be the differential graded
+3063: $\mathcal{A}$-module defined as follows
+3064: \begin{enumerate}
+3065: \item as a graded $\mathcal{A}$-module we set
+3066: $\mathcal{P} = \bigoplus_{a \leq 0} \mathcal{P}_{-a}[-a]$, i.e.,
+3067: the degree $n$ part is given by
+3068: $\mathcal{P}^n = \bigoplus\nolimits_{a + b = n} \mathcal{P}_{-a}^b$,
+3069: \item the differential on $\mathcal{P}$ is as in the construction of
+3070: the total complex associated to a double complex given by
+3071: $$
+3072: \text{d}_\mathcal{P}(x) = f_{-a}(x) + (-1)^a \text{d}_{\mathcal{P}_{-a}}(x)
+3073: $$
+3074: for $x$ a local section of $\mathcal{P}_{-a}^b$.
+3075: \end{enumerate}
+3076: With these conventions $\mathcal{P}$ is indeed a
+3077: differential graded $\mathcal{A}$-module; we omit the details.
+3078: There is a map $\mathcal{P} \to \mathcal{M}$ of differential graded
+3079: $\mathcal{A}$-modules which is zero on the summands $\mathcal{P}_{-a}[-a]$
+3080: for $a < 0$ and the given map $\mathcal{P}_0 \to \mathcal{M}$ for $a = 0$.
+3081: Observe that we have
+3082: $$
+3083: \mathcal{P} = \colim_i F_i\mathcal{P}
+3084: $$
+3085: where $F_i\mathcal{P} \subset \mathcal{P}$ is the differential
+3086: graded $\mathcal{A}$-submodule whose underlying graded $\mathcal{A}$-module
+3087: is
+3088: $$
+3089: F_i\mathcal{P} =
+3090: \bigoplus\nolimits_{i \geq -a \geq 0} \mathcal{P}_{-a}[-a]
+3091: $$
+3092: It is immediate that the maps
+3093: $$
+3094: 0 \to F_1\mathcal{P} \to F_2\mathcal{P} \to F_3\mathcal{P} \to
+3095: \ldots \to \mathcal{P}
+3096: $$
+3097: are all admissible monomorphisms and we have admissible short exact sequences
+3098: $$
+3099: 0 \to F_i\mathcal{P} \to
+3100: F_{i + 1}\mathcal{P} \to
+3101: \mathcal{P}_{i + 1}[i + 1] \to 0
+3102: $$
+3103: By induction and Lemma \ref{lemma-good-admissible-ses}
+3104: we find that $F_i\mathcal{P}$ is a good differential graded
+3105: $\mathcal{A}$-module. Since $\mathcal{P} = \colim F_i\mathcal{P}$
+3106: we find that $\mathcal{P}$ is good by Lemma \ref{lemma-good-direct-sum}.
+3107: 
+3108: \medskip\noindent
+3109: Finally, we have to show that $\mathcal{P} \to \mathcal{M}$
+3110: is a quasi-isomorphism. If $\mathcal{C}$ has enough points, then
+3111: this follows from the elementary
+3112: Homology, Lemma \ref{homology-lemma-good-resolution-gives-qis}
+3113: by checking on stalks. In general, we can argue as follows
+3114: (this proof is far too long --- there is an alternative argument by
+3115: working with local sections as in the elementary proof but it
+3116: is also rather long).
+3117: Since filtered colimits are exact on the category of abelian
+3118: sheaves, we have
+3119: $$
+3120: H^d(\mathcal{P}) = \colim H^d(F_i\mathcal{P})
+3121: $$
+3122: We claim that for each $i \geq 0$ and $d \in \mathbf{Z}$
+3123: we have (a) a short exact sequence

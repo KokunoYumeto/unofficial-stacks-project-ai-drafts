@@ -1,0 +1,142 @@
+{
+  "findings": [
+    {
+      "finding_id": "HOMOLOGY-FIND-009",
+      "kind": "temporary_bound_all_columns",
+      "source": "homology.tex",
+      "source_lines": [
+        6849
+      ],
+      "original": "Only A_0 is bounded below in the first proof step.",
+      "correction": "Bound every A_i below in that temporary case, and then use the original truncations to prove the fully general conclusion.",
+      "proof": {
+        "file": "PROOFS_6815_7064.md",
+        "bytes": 20901,
+        "sha256": "CDD5300A3111B55C4F2C34BA5F9C8F2CFA0641C23FAFDB456B2E49CFEB8A31C5",
+        "section": 2
+      },
+      "operations": [
+        "HOMOLOGY-NEW-030"
+      ],
+      "status": "proved_local_not_admitted",
+      "report_count": 0,
+      "novelty": "not_claimed",
+      "original_lemma_statement_preserved": true,
+      "propagation": "The four original augmentation quasi-isomorphisms are proved in all degrees. Direct receiving uses in DGA and the enough-points SDGA argument preserve their conclusions; see proof section 6."
+    },
+    {
+      "finding_id": "HOMOLOGY-FIND-010",
+      "kind": "primitive_component_index",
+      "source": "homology.tex",
+      "source_lines": [
+        7063
+      ],
+      "original": "The tuple (y_i) places y_0 from A_1^0 in the component for A_0^-1.",
+      "correction": "The primitive is (0,y_0,y_1,...), with the displayed alternating recursion and exact signed augmentation comparison.",
+      "proof": {
+        "file": "PROOFS_6815_7064.md",
+        "bytes": 20901,
+        "sha256": "CDD5300A3111B55C4F2C34BA5F9C8F2CFA0641C23FAFDB456B2E49CFEB8A31C5",
+        "section": 5
+      },
+      "operations": [
+        "HOMOLOGY-NEW-031"
+      ],
+      "status": "proved_local_not_admitted",
+      "report_count": 0,
+      "novelty": "not_claimed",
+      "original_lemma_statement_preserved": true,
+      "propagation": "The four original augmentation quasi-isomorphisms are proved in all degrees. Direct receiving uses in DGA and the enough-points SDGA argument preserve their conclusions; see proof section 6."
+    },
+    {
+      "finding_id": "HOMOLOGY-FIND-011",
+      "kind": "cohomology_class_subtraction",
+      "source": "homology.tex",
+      "source_lines": [
+        6973
+      ],
+      "original": "The reduction replaces xi by something in the image.",
+      "correction": "Subtract from xi the class obtained from M; then the first component is a boundary and the proved product recursion applies.",
+      "proof": {
+        "file": "PROOFS_6815_7064.md",
+        "bytes": 20901,
+        "sha256": "CDD5300A3111B55C4F2C34BA5F9C8F2CFA0641C23FAFDB456B2E49CFEB8A31C5",
+        "section": 4
+      },
+      "operations": [
+        "HOMOLOGY-NEW-032"
+      ],
+      "status": "proved_local_not_admitted",
+      "report_count": 0,
+      "novelty": "not_claimed",
+      "original_lemma_statement_preserved": true,
+      "propagation": "The four original augmentation quasi-isomorphisms are proved in all degrees. Direct receiving uses in DGA and the enough-points SDGA argument preserve their conclusions; see proof section 6."
+    }
+  ],
+  "claims": [],
+  "dependencies": [
+    {
+      "source": "dga.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 253806,
+        "sha256": "2DBB23D26F8344707F3D3F1FDA14DC271D106EC754F6322BB99C10CBF634ACA5"
+      },
+      "actual_lines_read": [
+        [
+          2268,
+          2356
+        ],
+        [
+          2430,
+          2487
+        ],
+        [
+          2498,
+          2544
+        ]
+      ],
+      "hits": [
+        2348,
+        2534
+      ],
+      "excerpt": {
+        "file": "dga.tex.part08-excerpts.txt",
+        "bytes": 8108,
+        "sha256": "B09452FCDACD28B90594FE04CF8EA4F22837584AC36723735AF4522C3628905C"
+      },
+      "receiving_outcome": "The selected good quotient and subobject properties give exact cycle and cokernel rows. The totals and augmentations match the proved Homology maps. No change needed to these uses; no certification of the other filtration claims.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "sdga.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 234982,
+        "sha256": "7C9C1056B5A68F2DDEE0FF57BABD09F738566F7342432784FF10FAE75E237435"
+      },
+      "actual_lines_read": [
+        [
+          2816,
+          2855
+        ],
+        [
+          3008,
+          3123
+        ]
+      ],
+      "hits": [
+        3112
+      ],
+      "excerpt": {
+        "file": "sdga.tex.part08-excerpts.txt",
+        "bytes": 7121,
+        "sha256": "617D8FD96CEEEBA630E99702375E0E7AB6DEB23D7328117572B72A93AEC72B78"
+      },
+      "receiving_outcome": "The good quotient gives surjections on cycle sheaves. Exact stalks and preservation of direct sums identify the enough-points argument with the good left-resolution lemma. The later no-enough-points argument is outside this check.",
+      "whole_chapter_reviewed": false
+    }
+  ],
+  "omitted_source_proofs_counted_as_errors": false,
+  "original_lemma_statements_preserved": true
+}

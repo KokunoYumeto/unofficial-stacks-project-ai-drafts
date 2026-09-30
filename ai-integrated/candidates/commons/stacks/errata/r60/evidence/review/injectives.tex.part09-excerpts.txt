@@ -1,0 +1,65 @@
+1651: For $\alpha = 0$ we set $K_0^\bullet = 0$. For $\alpha > 0$
+1652: we proceed as follows:
+1653: \begin{enumerate}
+1654: \item If $\alpha = \beta + 1$ and $K_\beta^\bullet = M^\bullet$
+1655: then we choose $K_\alpha^\bullet = K_\beta^\bullet$.
+1656: \item If $\alpha = \beta + 1$ and $K_\beta^\bullet \not = M^\bullet$
+1657: then $M^\bullet/K_\beta^\bullet$ is a nonzero acyclic complex.
+1658: We choose a subcomplex $N_\alpha^\bullet \subset M^\bullet/K_\beta^\bullet$
+1659: as in Lemma \ref{lemma-acyclic-quotient-complexes-bounded-size}.
+1660: Finally, we let $K_\alpha^\bullet \subset M^\bullet$
+1661: be the inverse image of $N_\alpha^\bullet$.
+1662: \item If $\alpha$ is a limit ordinal we set
+1663: $K_\alpha^\bullet = \colim_{\beta < \alpha} K_\beta^\bullet$.
+1664: \end{enumerate}
+1665: It is clear that $M^\bullet = K_\alpha^\bullet$ for a suitably large
+1666: ordinal $\alpha$. We will prove that
+1667: $$
+1668: \Hom_{K(\mathcal{A})}(K_\alpha^\bullet, I^\bullet)
+1669: $$
+1670: is zero by transfinite induction on $\alpha$. It holds for $\alpha = 0$
+1671: since $K_0^\bullet$ is zero. Suppose it holds for $\beta$ and
+1672: $\alpha = \beta + 1$. In case (1) of the list above the result is clear.
+1673: In case (2) there is a short exact sequence of complexes
+1674: $$
+1675: 0 \to K_\beta^\bullet \to K_\alpha^\bullet \to N_\alpha^\bullet \to 0
+1676: $$
+1677: Since each component of $I^\bullet$ is injective we see that we obtain
+1678: an exact sequence
+1679: $$
+1680: \Hom_{K(\mathcal{A})}(K_\beta^\bullet, I^\bullet) \leftarrow
+1681: \Hom_{K(\mathcal{A})}(K_\alpha^\bullet, I^\bullet) \leftarrow
+1682: \Hom_{K(\mathcal{A})}(N_\alpha^\bullet, I^\bullet)
+1683: $$
+1684: By induction the term on the left is zero and by assumption on $I^\bullet$
+1685: the term on the right is zero. Thus the middle group is zero too.
+1686: Finally, suppose that $\alpha$ is a limit ordinal. Then we see that
+1687: $$
+1688: \Hom^\bullet(K_\alpha^\bullet, I^\bullet) =
+1689: \lim_{\beta < \alpha} \Hom^\bullet(K_\beta^\bullet, I^\bullet)
+1690: $$
+1691: with notation as in
+1692: More on Algebra, Section \ref{more-algebra-section-hom-complexes}.
+1693: These complexes compute morphisms in $K(\mathcal{A})$ by
+1694: More on Algebra, Equation
+1695: (\ref{more-algebra-equation-cohomology-hom-complex}).
+1696: Note that the transition maps in the system are surjective
+1697: because $I^j$ is injective for each $j$. Moreover, for a limit
+1698: ordinal $\alpha$ we have equality of limit and value
+1699: (see displayed formula above). Thus we may apply
+1700: Homology, Lemma \ref{homology-lemma-ML-over-ordinals}
+1701: to conclude.
+1702: \end{proof}
+1703: 
+1704: \begin{lemma}
+1705: \label{lemma-functorial-homotopies}
+1706: Let $\mathcal{A}$ be a Grothendieck abelian category.
+1707: Let $(K_i^\bullet)_{i \in I}$ be a set of acyclic complexes.
+1708: There exists a functor $M^\bullet \mapsto \mathbf{M}^\bullet(M^\bullet)$
+1709: and a natural transformation
+1710: $j_{M^\bullet} : M^\bullet \to \mathbf{M}^\bullet(M^\bullet)$
+1711: such that
+1712: \begin{enumerate}
+1713: \item $j_{M^\bullet}$ is a (termwise) injective quasi-isomorphism, and
+1714: \item for every $i \in I$ and $w : K_i^\bullet \to M^\bullet$
+1715: the morphism $j_{M^\bullet} \circ w$ is homotopic to zero.

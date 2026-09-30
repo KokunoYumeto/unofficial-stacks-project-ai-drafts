@@ -1,0 +1,65 @@
+5168: If $RF$ is defined at $X$ and $Y$, then the distinguished triangle
+5169: $X \to X \oplus Y \to Y \to X[1]$ (Lemma \ref{lemma-split}) and
+5170: Lemma \ref{lemma-2-out-of-3-defined}
+5171: shows that $RF$ is defined at $X \oplus Y$ and that we
+5172: have a distinguished triangle
+5173: $RF(X) \to RF(X \oplus Y) \to RF(Y) \to RF(X)[1]$.
+5174: Applying Lemma \ref{lemma-split} to this once more we find
+5175: that $RF(X \oplus Y) = RF(X) \oplus RF(Y)$.
+5176: This proves (1) and the final assertion.
+5177: 
+5178: \medskip\noindent
+5179: Conversely, assume that $RF$ is defined at $X \oplus Y$ and that $\mathcal{D}'$
+5180: is Karoubian. Since $S$ is a saturated system $S$ is the set of arrows which
+5181: become invertible under the additive localization functor
+5182: $Q : \mathcal{D} \to S^{-1}\mathcal{D}$, see
+5183: Categories, Lemma \ref{categories-lemma-what-gets-inverted}.
+5184: Thus for any $s : X \to X'$ and $s' : Y \to Y'$ in $S$ the morphism
+5185: $s \oplus s' : X \oplus Y \to X' \oplus Y'$ is an element of $S$.
+5186: In this way we obtain a functor
+5187: $$
+5188: X/S \times Y/S \longrightarrow (X \oplus Y)/S
+5189: $$
+5190: Recall that the categories $X/S, Y/S, (X \oplus Y)/S$ are filtered
+5191: (Categories, Remark
+5192: \ref{categories-remark-left-localization-morphisms-colimit}).
+5193: By Categories, Lemma \ref{categories-lemma-essentially-constant-over-product}
+5194: $X/S \times Y/S$ is filtered and
+5195: $F|_{X/S} : X/S \to \mathcal{D}'$ (resp.\ $F|_{Y/S} : Y/S \to \mathcal{D}'$)
+5196: is essentially constant if and only if
+5197: $F|_{X/S} \circ \text{pr}_1 : X/S \times Y/S \to \mathcal{D}'$
+5198: (resp.\ $F|_{Y/S} \circ \text{pr}_2 : X/S \times Y/S \to \mathcal{D}'$)
+5199: is essentially constant. Below we will show that the displayed functor
+5200: is cofinal, hence by
+5201: Categories, Lemma \ref{categories-lemma-cofinal-essentially-constant},
+5202: we see that $F|_{(X \oplus Y)/S}$ is essentially constant implies that
+5203: $F|_{X/S} \circ \text{pr}_1 \oplus F|_{Y/S} \circ \text{pr}_2 :
+5204: X/S \times Y/S \to \mathcal{D}'$
+5205: is essentially constant. By Homology, Lemma
+5206: \ref{homology-lemma-direct-sum-from-product-essentially-constant}
+5207: (and this is where we use that $\mathcal{D}'$ is Karoubian)
+5208: we see that 
+5209: $F|_{X/S} \circ \text{pr}_1 \oplus F|_{Y/S} \circ \text{pr}_2$
+5210: being essentially constant implies
+5211: $F|_{X/S} \circ \text{pr}_1$ and
+5212: $F|_{Y/S} \circ \text{pr}_2$ are essentially constant proving that $RF$ is
+5213: defined at $X$ and $Y$.
+5214: 
+5215: \medskip\noindent
+5216: Proof that the displayed functor is cofinal.
+5217: To do this pick any $t : X \oplus Y \to Z$ in $S$.
+5218: Using MS2 we can find morphisms $Z \to X'$, $Z \to Y'$
+5219: and $s : X \to X'$, $s' : Y \to Y'$ in $S$ such that
+5220: $$
+5221: \xymatrix{
+5222: X \ar[d]^s & X \oplus Y \ar[d] \ar[l] \ar[r] & Y \ar[d]_{s'} \\
+5223: X' & Z \ar[l] \ar[r] & Y'
+5224: }
+5225: $$
+5226: commutes. This proves there is a map $Z \to X' \oplus Y'$ in
+5227: $(X \oplus Y)/S$, i.e., we get part (1) of Categories, Definition
+5228: \ref{categories-definition-cofinal}. To prove part (2) it suffices
+5229: to prove that given $t : X \oplus Y \to Z$ and morphisms
+5230: $s_i \oplus s'_i : Z \to X'_i \oplus Y'_i$, $i = 1, 2$ in $(X \oplus Y)/S$
+5231: we can find morphisms $a : X'_1 \to X'$, $b : X'_2 \to X'$,
+5232: $c : Y'_1 \to Y'$, $d : Y'_2 \to Y'$ in $S$ such that

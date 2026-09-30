@@ -1,0 +1,185 @@
+2925: that there exist an $i \in \mathcal{I}$ and a morphism $X \to M_i$ such
+2926: that the composition $X \to M_i \to X$ is $\text{id}_X$. An even
+2927: stronger condition is the following.
+2928: 
+2929: \begin{definition}
+2930: \label{definition-essentially-constant-diagram}
+2931: Let $M : \mathcal{I} \to \mathcal{C}$ be a diagram in a category
+2932: $\mathcal{C}$.
+2933: \begin{enumerate}
+2934: \item Assume the index category $\mathcal{I}$ is filtered and
+2935: let $(X, \{M_i \to X\}_i)$ be a cocone for $M$, see
+2936: Remark \ref{remark-cones-and-cocones}. We say $M$ is
+2937: {\it essentially constant} with {\it value} $X$ if there exist an
+2938: $i \in \mathcal{I}$ and a morphism $X \to M_i$ such that
+2939: \begin{enumerate}
+2940: \item $X \to M_i \to X$ is $\text{id}_X$, and
+2941: \item for all $j$ there exist $k$ and morphisms $i \to k$ and $j \to k$
+2942: such that the morphism $M_j \to M_k$ equals the composition
+2943: $M_j \to X \to M_i \to M_k$.
+2944: \end{enumerate}
+2945: \item Assume the index category $\mathcal{I}$ is cofiltered and let
+2946: $(X, \{X \to M_i\}_i)$ be a cone for $M$, see
+2947: Remark \ref{remark-cones-and-cocones}. We say
+2948: $M$ is {\it essentially constant} with {\it value} $X$ if
+2949: there exist an $i \in \mathcal{I}$
+2950: and a morphism $M_i \to X$ such that
+2951: \begin{enumerate}
+2952: \item $X \to M_i \to X$ is $\text{id}_X$, and
+2953: \item for all $j$ there exist $k$ and morphisms $k \to i$ and $k \to j$
+2954: such that the morphism $M_k \to M_j$ equals the composition
+2955: $M_k \to M_i \to X \to M_j$.
+2956: \end{enumerate}
+2957: \end{enumerate}
+2958: Please keep in mind Lemma \ref{lemma-essentially-constant-is-limit-colimit}
+2959: when using this definition.
+2960: \end{definition}
+2961: 
+2962: \noindent
+2963: Which of the two versions is meant will be clear from context. If there is
+2964: any confusion we will distinguish between these by saying that the first
+2965: version means $M$ is essentially constant as an {\it ind-object}, and in
+2966: the second case we will say it is essentially constant as a {\it pro-object}.
+2967: This terminology is further explained in
+2968: Remarks \ref{remark-ind-category} and \ref{remark-pro-category}.
+2969: In fact we will often use the terminology ``essentially constant system''
+2970: which formally speaking is only defined for systems over directed sets.
+2971: 
+2972: \begin{definition}
+2973: \label{definition-essentially-constant-system}
+2974: Let $\mathcal{C}$ be a category. A directed system
+2975: $(M_i, f_{ii'})$ is an {\it essentially constant system}
+2976: if $M$ viewed as a functor $I \to \mathcal{C}$
+2977: defines an essentially constant diagram. A directed inverse system
+2978: $(M_i, f_{ii'})$ is an {\it essentially constant inverse system} if
+2979: $M$ viewed as a functor $I^{opp} \to \mathcal{C}$ defines an
+2980: essentially constant inverse diagram.
+2981: \end{definition}
+2982: 
+2983: \noindent
+2984: If $(M_i, f_{ii'})$ is an essentially constant system and the morphisms
+2985: $f_{ii'}$ are monomorphisms, then for all $i \leq i'$ sufficiently large the
+2986: morphisms $f_{ii'}$ are isomorphisms. On the other hand, consider the system
+2987: $$
+2988: \mathbf{Z}^2 \to \mathbf{Z}^2 \to \mathbf{Z}^2 \to \ldots
+2989: $$
+2990: with maps given by $(a, b) \mapsto (a + b, 0)$. This system is essentially
+2991: constant with value $\mathbf{Z}$ but every transition map has a kernel.
+2992: 
+2993: \medskip\noindent
+2994: Here is an example of a system which is not essentially constant. Let
+2995: $M = \bigoplus_{n \geq 0} \mathbf{Z}$ and let $S : M \to M$ be the
+2996: shift operator $(a_0, a_1, \ldots) \mapsto (a_1, a_2, \ldots)$. In this
+
+3282: If $X$ is a value for $M$, then it follows immediately from the
+3283: definition that $F(X)$ is a value for $F \circ M$.
+3284: \end{proof}
+3285: 
+3286: \begin{lemma}
+3287: \label{lemma-characterize-essentially-constant-ind}
+3288: Let $\mathcal{C}$ be a category. Let $M : \mathcal{I} \to \mathcal{C}$
+3289: be a diagram with filtered index category $\mathcal{I}$.
+3290: The following are equivalent
+3291: \begin{enumerate}
+3292: \item $M$ is an essentially constant ind-object,
+3293: \item there exists a cocone $(X, \{M_i \to X\}_i)$ such that for any
+3294: $W$ in $\mathcal{C}$ the map
+3295: $\colim_i \Mor_\mathcal{C}(W, M_i) \to \Mor_\mathcal{C}(W, X)$
+3296: is bijective,
+3297: \item $X = \colim_i M_i$ exists and for any $W$ in $\mathcal{C}$
+3298: the map
+3299: $\colim_i \Mor_\mathcal{C}(W, M_i) \to \Mor_\mathcal{C}(W, X)$
+3300: is bijective, and
+3301: \item there exists an $i$ in $\mathcal{I}$ and a morphism $X \to M_i$
+3302: such that for any $W$ in $\mathcal{C}$ the map $\Mor_\mathcal{C}(W, X) \to
+3303: \colim_{j \in \mathcal{I}} \Mor_\mathcal{C}(W, M_j)$
+3304: is bijective.
+3305: \end{enumerate}
+3306: In cases (2), (3), and (4) the value of the essentially constant system is $X$.
+3307: \end{lemma}
+3308: 
+3309: \begin{proof}
+3310: It is clear that (3) implies (2). Assume (2).
+3311: Then $\text{id}_X \in \Mor_\mathcal{C}(X, X)$
+3312: comes from a morphism $X \to M_i$ for some $i$, i.e., $X \to M_i \to X$
+3313: is the identity. Then both maps
+3314: $$
+3315: \Mor_\mathcal{C}(W, X)
+3316: \longrightarrow
+3317: \colim_i \Mor_\mathcal{C}(W, M_i)
+3318: \longrightarrow
+3319: \Mor_\mathcal{C}(W, X)
+3320: $$
+3321: are bijective for all $W$ where the first one is induced by the morphism
+3322: $X \to M_i$ we found above, and the composition is the identity. This means
+3323: that the composition
+3324: $$
+3325: \colim_i \Mor_\mathcal{C}(W, M_i)
+3326: \longrightarrow
+3327: \Mor_\mathcal{C}(W, X)
+3328: \longrightarrow
+3329: \colim_i \Mor_\mathcal{C}(W, M_i)
+3330: $$
+3331: is the identity too. Setting $W = M_j$ and starting with $\text{id}_{M_j}$
+3332: in the colimit, we see that $M_j \to X \to M_i \to M_k$ is equal to
+3333: $M_j \to M_k$ for some $k$ large enough. This proves (1) holds.
+3334: 
+3335: \medskip\noindent
+3336: Assume (4). Let $k$ be an object of $\mathcal{I}$. Setting $W = M_k$
+3337: we deduce there exists a unique morphism $M_k \to X$ such that
+3338: there exists a $j$ and morphisms $k \to j$ and
+3339: $i \to j$ in $\mathcal{I}$ such that $M_k \to X \to M_i \to M_j$
+3340: is equal to $M_k \to M_j$. The uniqueness guarantees that we obtain a
+3341: cocone $(X, \{M_k \to X\})$. In this way we see that (4) implies (2);
+3342: some details omitted.
+3343: 
+3344: \medskip\noindent
+3345: We omit the proof that (1) implies the other conditions.
+3346: \end{proof}
+3347: 
+3348: \begin{lemma}
+3349: \label{lemma-characterize-essentially-constant-pro}
+3350: Let $\mathcal{C}$ be a category. Let $M : \mathcal{I} \to \mathcal{C}$
+3351: be a diagram with cofiltered index category $\mathcal{I}$.
+3352: The following are equivalent
+3353: \begin{enumerate}
+3354: \item $M$ is an essentially constant pro-object,
+3355: \item there exists a cone $(X, \{X \to M_i\})$
+3356: such that for any $W$ in $\mathcal{C}$ the map
+3357: $\colim_{i \in \mathcal{I}^{opp}} \Mor_\mathcal{C}(M_i, W) \to
+3358: \Mor_\mathcal{C}(X, W)$ is bijective,
+3359: \item $X = \lim_i M_i$ exists and for any $W$ in $\mathcal{C}$
+3360: the map
+3361: $\colim_{i \in \mathcal{I}^{opp}} \Mor_\mathcal{C}(M_i, W) \to
+3362: \Mor_\mathcal{C}(X, W)$ is bijective, and
+3363: \item there exists an $i$ in $\mathcal{I}$ and a morphism $M_i \to X$
+3364: such that for any $W$ in $\mathcal{C}$ the map $\Mor_\mathcal{C}(X, W) \to
+3365: \colim_{j \in \mathcal{I}^{opp}} \Mor_\mathcal{C}(M_j, W)$ is bijective.
+3366: \end{enumerate}
+3367: In cases (2), (3), and (4) the value of the essentially constant system is $X$.
+3368: \end{lemma}
+3369: 
+3370: \begin{proof}
+3371: This lemma is dual to Lemma \ref{lemma-characterize-essentially-constant-ind}.
+3372: \end{proof}
+3373: 
+3374: \begin{lemma}
+3375: \label{lemma-cofinal-essentially-constant}
+3376: Let $\mathcal{C}$ be a category. Let $H : \mathcal{I} \to \mathcal{J}$
+3377: be a functor of filtered index categories. If $H$ is cofinal, then
+3378: any diagram $M : \mathcal{J} \to \mathcal{C}$ is essentially constant
+3379: if and only if $M \circ H$ is essentially constant.
+3380: \end{lemma}
+3381: 
+3382: \begin{proof}
+3383: This follows formally from
+3384: Lemmas \ref{lemma-characterize-essentially-constant-ind} and
+3385: \ref{lemma-cofinal}.
+3386: \end{proof}
+3387: 
+3388: \begin{lemma}
+3389: \label{lemma-essentially-constant-over-product}
+3390: Let $\mathcal{I}$ and $\mathcal{J}$ be filtered categories and denote
+3391: $p : \mathcal{I} \times \mathcal{J} \to \mathcal{J}$ the projection.
+3392: Then $\mathcal{I} \times \mathcal{J}$ is filtered and a diagram
+3393: $M : \mathcal{J} \to \mathcal{C}$ is essentially constant if and only

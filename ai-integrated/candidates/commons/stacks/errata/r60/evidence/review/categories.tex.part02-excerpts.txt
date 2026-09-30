@@ -1,0 +1,200 @@
+4058: \begin{definition}
+4059: \label{definition-multiplicative-system}
+4060: Let $\mathcal{C}$ be a category. A set of arrows $S$ of $\mathcal{C}$ is
+4061: called a {\it left multiplicative system} if it has the following properties:
+4062: \begin{enumerate}
+4063: \item[LMS1] The identity of every object of $\mathcal{C}$ is in $S$ and
+4064: the composition of two composable elements of $S$ is in $S$.
+4065: \item[LMS2] Every solid diagram
+4066: $$
+4067: \xymatrix{
+4068: X \ar[d]_t \ar[r]_g & Y \ar@{..>}[d]^s \\
+4069: Z \ar@{..>}[r]^f & W
+4070: }
+4071: $$
+4072: with $t \in S$ can be completed to a commutative dotted square with
+4073: $s \in S$.
+4074: \item[LMS3] For every pair of morphisms $f, g : X \to Y$ and
+4075: $t \in S$ with target $X$ such that $f \circ t = g \circ t$
+4076: there exists an $s \in S$ with source $Y$ such that
+
+4558: \begin{lemma}
+4559: \label{lemma-properties-left-localization}
+4560: Let $\mathcal{C}$ be a category and let $S$ be a left multiplicative
+4561: system of morphisms of $\mathcal{C}$.
+4562: \begin{enumerate}
+4563: \item The rules $X \mapsto X$ and
+4564: $(f : X \to Y) \mapsto (f : X \to Y, \text{id}_Y : Y \to Y)$
+4565: define a functor $Q : \mathcal{C} \to S^{-1}\mathcal{C}$.
+4566: \item For any $s \in S$ the morphism $Q(s)$ is an isomorphism in
+4567: $S^{-1}\mathcal{C}$.
+4568: \item If $G : \mathcal{C} \to \mathcal{D}$ is any functor such that
+4569: $G(s)$ is invertible for every $s \in S$, then there exists a
+4570: unique functor $H : S^{-1}\mathcal{C} \to \mathcal{D}$
+4571: such that $H \circ Q = G$.
+4572: \end{enumerate}
+4573: \end{lemma}
+4574: 
+4575: \begin{proof}
+4576: Parts (1) and (2) are clear. (In (2), the inverse of $Q(s)$ is
+4577: the equivalence class of the pair $(\text{id}_Y, s)$.)
+4578: To see (3) just set $H(X) = G(X)$
+4579: and set $H((f : X \to Y', s : Y \to Y')) = G(s)^{-1} \circ G(f)$.
+4580: Details omitted.
+4581: \end{proof}
+4582: 
+4583: \begin{lemma}
+4584: \label{lemma-left-localization-limits}
+4585: Let $\mathcal{C}$ be a category and let $S$ be a left multiplicative
+4586: system of morphisms of $\mathcal{C}$. The localization functor
+4587: $Q : \mathcal{C} \to S^{-1}\mathcal{C}$ commutes with finite colimits.
+4588: \end{lemma}
+4589: 
+4590: \begin{proof}
+4591: Let $\mathcal{I}$ be a finite category and let
+4592: $\mathcal{I} \to \mathcal{C}$, $i \mapsto X_i$
+4593: be a functor whose colimit exists. Then using
+4594: (\ref{equation-left-localization-morphisms-colimit}),
+4595: the fact that $Y/S$ is filtered, and
+4596: Lemma \ref{lemma-directed-commutes} we have
+4597: \begin{align*}
+4598: \Mor_{S^{-1}\mathcal{C}}(Q(\colim X_i), Q(Y))
+4599: & =
+4600: \colim_{(s : Y \to Y') \in Y/S} \Mor_\mathcal{C}(\colim X_i, Y') \\
+4601: & =
+4602: \colim_{(s : Y \to Y') \in Y/S} \lim_i \Mor_\mathcal{C}(X_i, Y') \\
+4603: & =
+4604: \lim_i \colim_{(s : Y \to Y') \in Y/S} \Mor_\mathcal{C}(X_i, Y') \\
+4605: & =
+4606: \lim_i \Mor_{S^{-1}\mathcal{C}}(Q(X_i), Q(Y))
+4607: \end{align*}
+4608: and this isomorphism commutes with the projections
+4609: from both sides to the set
+4610: $\Mor_{S^{-1}\mathcal{C}}(Q(X_j), Q(Y))$ for each
+4611: $j \in \Ob(\mathcal{I})$. Thus, $Q(\colim X_i)$ satisfies
+4612: the universal property for the colimit of the functor
+4613: $i \mapsto Q(X_i)$; hence, it is this colimit, as desired.
+4614: \end{proof}
+4615: 
+4616: \begin{lemma}
+4617: \label{lemma-left-localization-diagram}
+4618: Let $\mathcal{C}$ be a category. Let $S$ be a left multiplicative
+4619: system. If $f : X \to Y$, $f' : X' \to Y'$ are two morphisms of
+4620: $\mathcal{C}$ and if
+4621: $$
+4622: \xymatrix{
+4623: Q(X) \ar[d]_{Q(f)} \ar[r]_a & Q(X') \ar[d]^{Q(f')} \\
+4624: Q(Y) \ar[r]^b & Q(Y')
+4625: }
+4626: $$
+4627: is a commutative diagram in $S^{-1}\mathcal{C}$, then there exist
+4628: a morphism $f'' : X'' \to Y''$ in $\mathcal{C}$ and a commutative
+4629: diagram
+4630: $$
+4631: \xymatrix{
+4632: X \ar[d]_f \ar[r]_g & X'' \ar[d]^{f''} & X' \ar[d]^{f'} \ar[l]^s \\
+4633: Y \ar[r]^h & Y'' & Y' \ar[l]_t
+4634: }
+4635: $$
+4636: in $\mathcal{C}$ with $s, t \in S$ and $a = s^{-1}g$, $b = t^{-1}h$.
+4637: \end{lemma}
+4638: 
+4639: \begin{proof}
+4640: We choose maps and objects in the following way:
+
+4930: 
+4931: \begin{definition}
+4932: \label{definition-saturated-multiplicative-system}
+4933: Let $\mathcal{C}$ be a category and let $S$ be a multiplicative system.
+4934: We say $S$ is {\it saturated} if, in addition to MS1, MS2, MS3, we
+4935: also have
+4936: \begin{enumerate}
+4937: \item[MS4] Given three composable morphisms $f, g, h$, if
+4938: $fg, gh \in S$, then $g \in S$.
+4939: \end{enumerate}
+4940: \end{definition}
+4941: 
+4942: \noindent
+4943: Note that a saturated multiplicative system contains all isomorphisms.
+4944: Moreover, if $f, g, h$ are composable morphisms in a category and
+4945: $fg, gh$ are isomorphisms, then $g$ is an isomorphism (because then $g$
+4946: has both a left and a right inverse, hence is invertible).
+4947: 
+4948: \begin{lemma}
+4949: \label{lemma-what-gets-inverted}
+4950: Let $\mathcal{C}$ be a category and let $S$ be a multiplicative system.
+4951: Denote $Q : \mathcal{C} \to S^{-1}\mathcal{C}$ the localization functor.
+4952: The set
+4953: $$
+4954: \hat S = \{f \in \text{Arrows}(\mathcal{C}) \mid
+4955: Q(f) \text{ is an isomorphism}\}
+4956: $$
+4957: is equal to
+4958: $$
+4959: S' = \{f \in \text{Arrows}(\mathcal{C}) \mid
+4960: \text{there exist }g, h\text{ such that }gf, fh \in S\}
+4961: $$
+4962: and is the smallest saturated multiplicative system containing $S$.
+4963: In particular, if $S$ is saturated, then $\hat S = S$.
+4964: \end{lemma}
+4965: 
+4966: \begin{proof}
+4967: It is clear that $S \subset S' \subset \hat S$ because elements of
+4968: $S'$ map to morphisms in $S^{-1}\mathcal{C}$ which have both left
+4969: and right inverses. Note that $S'$ satisfies MS4, and that
+4970: $\hat S$ satisfies MS1. Next, we prove that $S' = \hat S$.
+4971: 
+4972: \medskip\noindent
+4973: Let $f \in \hat S$. Let $s^{-1}g = ht^{-1}$ be the inverse morphism
+4974: in $S^{-1}\mathcal{C}$. (We may use both left fractions and right
+4975: fractions to describe morphisms in $S^{-1}\mathcal{C}$, see
+4976: Lemma \ref{lemma-multiplicative-system}.)
+4977: The relation $\text{id}_X = s^{-1}gf$ in $S^{-1}\mathcal{C}$ means
+4978: there exists a commutative diagram
+4979: $$
+4980: \xymatrix{
+4981:  & X' \ar[d]^u & \\
+4982: X \ar[ru]^{gf} \ar[r]^{f'} \ar[rd]_{\text{id}_X} &
+4983: X'' &
+4984: X \ar[lu]_s \ar[l]_{s'} \ar[ld]^{\text{id}_X} \\
+4985: & X \ar[u]_v &
+4986: }
+4987: $$
+4988: for some morphisms $f', u, v$ and $s' \in S$. Hence $ugf = s' \in S$.
+4989: Similarly, using that $\text{id}_Y = fht^{-1}$ one proves that
+4990: $fhw \in S$ for some $w$. We conclude that $f \in S'$. Thus
+4991: $S' = \hat S$. Provided we prove that $S' = \hat S$ is a
+4992: multiplicative system it is now clear that this implies that $S' = \hat S$
+4993: is the smallest saturated system containing $S$.
+4994: 
+4995: \medskip\noindent
+4996: Our remarks above take care of MS1 and MS4, so to finish the proof of the
+4997: lemma we have to show that LMS2, RMS2, LMS3, RMS3 hold for $\hat S$.
+4998: Let us check that LMS2 holds for $\hat S$. Suppose we have a solid diagram
+4999: $$
+5000: \xymatrix{
+5001: X \ar[d]_t \ar[r]_g & Y \ar@{..>}[d]^s \\
+5002: Z \ar@{..>}[r]^f & W
+5003: }
+5004: $$
+5005: with $t \in \hat S$. Pick a morphism $a : Z \to Z'$ such that
+5006: $at \in S$. Then we can use LMS2 for $S$ to find a commutative diagram
+5007: $$
+5008: \xymatrix{
+5009: X \ar[d]_t \ar[r]_g & Y \ar[dd]^s \\
+5010: Z \ar[d]_a \\
+5011: Z' \ar[r]^{f'} & W
+5012: }
+5013: $$
+5014: and setting $f = f' \circ a$ we win. The proof of RMS2 is dual to this.
+5015: Finally, suppose given a pair of morphisms $f, g : X \to Y$ and
+5016: $t \in \hat S$ with target $X$ such that $ft = gt$.
+5017: Then we pick a morphism $b$ such that $tb \in S$. Then
+5018: $ftb = gtb$ which implies by LMS3 for $S$ that there exists an $s \in S$
+5019: with source $Y$ such that $sf = sg$ as desired. The proof of
+5020: RMS3 is dual to this.
+5021: \end{proof}
+5022: 
+5023: 
+5024: 
+5025: 

@@ -1,0 +1,71 @@
+7240: K \otimes_{\mathcal{O}_X}^\mathbf{L} L$ for which we can take the
+7241: composition of the isomorphism
+7242: $Lf^*(Rf_*K \otimes_{\mathcal{O}_Y}^\mathbf{L} Rf_*L) =
+7243: Lf^*Rf_*K \otimes_{\mathcal{O}_X}^\mathbf{L} Lf^*Rf_*L$
+7244: (Lemma \ref{lemma-pullback-tensor-product})
+7245: with the map
+7246: $Lf^*Rf_*K \otimes_{\mathcal{O}_X}^\mathbf{L} Lf^*Rf_*L
+7247: \to K \otimes_{\mathcal{O}_X}^\mathbf{L} L$
+7248: coming from the counit $Lf^* \circ Rf_* \to \text{id}$.
+7249: \end{remark}
+7250: 
+7251: 
+7252: 
+7253: 
+7254: 
+7255: 
+7256: \section{Cohomology of filtered complexes}
+7257: \label{section-cohomology-filtered-object}
+7258: 
+7259: \noindent
+7260: Filtered complexes of sheaves frequently come up in a natural fashion
+7261: when studying cohomology of algebraic varieties, for example the de Rham
+7262: complex comes with its Hodge filtration. In this sectionwe use the very general
+7263: Injectives, Lemma \ref{injectives-lemma-K-injective-embedding-filtration}
+7264: to find construct spectral sequences on cohomology and we relate these to
+7265: previously constructed spectral sequences.
+7266: 
+7267: \begin{lemma}
+7268: \label{lemma-spectral-sequence-filtered-object}
+7269: Let $(X, \mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}^\bullet$ be a
+7270: filtered complex of $\mathcal{O}_X$-modules. There exists a canonical
+7271: spectral sequence $(E_r, \text{d}_r)_{r \geq 1}$ of bigraded
+7272: $\Gamma(X, \mathcal{O}_X)$-modules with $d_r$ of bidegree $(r, -r + 1)$ and
+7273: $$
+7274: E_1^{p, q} = H^{p + q}(X, \text{gr}^p\mathcal{F}^\bullet)
+7275: $$
+7276: If for every $n$ we have
+7277: $$
+7278: H^n(X, F^p\mathcal{F}^\bullet) = 0\text{ for }p \gg 0
+7279: \quad\text{and}\quad
+7280: H^n(X, F^p\mathcal{F}^\bullet) = H^n(X, \mathcal{F}^\bullet)\text{ for }p \ll 0
+7281: $$
+7282: then the spectral sequence is bounded and converges to
+7283: $H^*(X, \mathcal{F}^\bullet)$.
+7284: \end{lemma}
+7285: 
+7286: \begin{proof}
+7287: (For a proof in case the complex is a bounded below complex
+7288: of modules with finite filtrations, see the remark below.)
+7289: Choose an map of filtered complexes
+7290: $j : \mathcal{F}^\bullet \to \mathcal{J}^\bullet$ as in
+7291: Injectives, Lemma
+7292: \ref{injectives-lemma-K-injective-embedding-filtration}.
+7293: The spectral sequence is the spectral sequence of
+7294: Homology, Section \ref{homology-section-filtered-complex}
+7295: associated to the filtered complex
+7296: $$
+7297: \Gamma(X, \mathcal{J}^\bullet)
+7298: \quad\text{with}\quad
+7299: F^p\Gamma(X, \mathcal{J}^\bullet) = \Gamma(X, F^p\mathcal{J}^\bullet)
+7300: $$
+7301: Since cohomology is computed by evaluating on K-injective representatives
+7302: we see that the $E_1$ page is as stated in the lemma.
+7303: The convergence and boundedness under the stated conditions
+7304: follows from Homology, Lemma \ref{homology-lemma-ss-converges-trivial}.
+7305: \end{proof}
+7306: 
+7307: \begin{remark}
+7308: \label{remark-spectral-sequence-filtered-object}
+7309: Let $(X, \mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}^\bullet$ be a
+7310: filtered complex of $\mathcal{O}_X$-modules. If $\mathcal{F}^\bullet$

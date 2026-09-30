@@ -1,0 +1,218 @@
+\section{Homology review: convergence and double complexes, original lines 6360--6814}\label{note-07-homology-review-convergence-and-double-complexes-original-lines-63606814}
+
+This editorial proof note uses the Stacks Project authors' original \texttt{homology.tex} at \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}, SHA-256 \texttt{483CAF01\allowbreak{}B4BD164D\allowbreak{}BC9103D7\allowbreak{}6196E294\allowbreak{}E00EFE17\allowbreak{}E706178E\allowbreak{}CF2DC2C1\allowbreak{}DEF4ABE0}. Receiving locators explicitly marked current refer to \texttt{b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434}. The machine-readable ledger binds the actual files, report rows, source operations, and proof sections. No novelty is asserted. Source corrections and the separately identified underclaims must remain distinguishable from the original statements.
+
+\subsection{1. Report dispositions}\label{note-07-report-dispositions}
+
+HOMOLOGY-RECON-053 confirms French HOMOLOGY-034 and MC-STK-ERR-0786: the vanishing used at original 6384 is in degree \(n+1\), the target of \(d^n\), not in degree \(n\). Section 2 proves the exact calculation. HOMOLOGY-RECON-054 joins P02-E1394 and French HOMOLOGY-035 to the two operations of MC-STK-ERR-0787. Its explicit quantifiers retain all bidegrees in the weak Serre hypothesis. The original theorem's hypothesis was correct; the repaired proof explicitly repeats it. HOMOLOGY-RECON-055 joins P02-E1396 and French HOMOLOGY-036 to MC-STK-ERR-0788: the intervening objects really belong to the smallest \textbf{weak} Serre subcategory specified by the theorem, as proved below.
+
+HOMOLOGY-RECON-056 accepts P02-E1395, inserting ``by'' after ``Denote'' at 6428. HOMOLOGY-RECON-057 joins P02-E1397 and French HOMOLOGY-053 to the two singular ``exists'' corrections of MC-STK-ERR-0805. HOMOLOGY-RECON-058 accepts P02-E1398 as a clarification: insert the second ``for'' before the lower-tail inequality at 6490. The intended English already describes two vanishing ranges; this is not evidence that vanishing in both tails is false. The different issue concerning which page is bounded is independently proved in §4 and has its own finding ID, HOMOLOGY-FIND-007.
+
+HOMOLOGY-RECON-059 confirms French HOMOLOGY-037 and both operations of MC-STK-ERR-0789. Injectivity on \(H^n\), rather than on \(H^{n-1}\), identifies the degree-\(n\) boundaries in the filtered subcomplex; §3 proves this with all degrees retained.
+
+HOMOLOGY-RECON-060, 061, 062, 063, and 065 accept P02-E1399, P02-E1400, P02-E1401, P02-E1402, and P02-E1404 respectively. They insert the missing ``by'' in the notation introductions at 6570, 6575, 6602, 6603, 6634, and 6785. The two operations for P02-E1401 belong to one physical report. No index or map changes.
+
+HOMOLOGY-RECON-064 records P02-E1403 as optional typographical consistency, not integrated. The leading prime at 6734 still identifies the same first spectral sequence; adding its empty group does not repair a mathematical index or a map. No rendering comparison is claimed by this source-only decision.
+
+\subsection{2. Finite termwise filtrations, weak Serre closure, and the Euler equality}\label{note-07-finite-termwise-filtrations-weak-serre-closure-and-the-euler-equality}
+
+For a filtered complex write \(Z^n=\ker d^n\), \(B^n=\operatorname{im}d^{n-1}\). Fix \(p,n\). The numerator subobject defining \(Z_r^{p,n-p}\), before quotient by \(F^{p+1}K^n\), is
+
+\[
+(F^pK^n\cap(d^n)^{-1}(F^{p+r}K^{n+1}))+F^{p+1}K^n. \tag{2.1}
+\]
+
+For a finite filtration on \(K^{n+1}\), choose \(u(n+1)\) with \(F^{u(n+1)}K^{n+1}=0\). For \(r\geq u(n+1)-p\), (2.1) is exactly \((Z^n\cap F^pK^n)+F^{p+1}K^n\). This proves why 6384 needs \(K^{n+1}\), and proves the required eventual equality of subobjects. Choose \(\ell(n-1)\) with \(F^{\ell(n-1)}K^{n-1}=K^{n-1}\). For \(r\geq p+1-\ell(n-1)\), the boundary numerator is exactly \((B^n\cap F^pK^n)+F^{p+1}K^n\). Both limiting subobjects therefore stabilize and exist in any abelian category. Their quotient comparison with \(\operatorname{gr}^pH^n(K^\bullet)\) is the one induced by cycles, as in \texttt{PROOFS\_5671\_6359.md}, §4; these equalities make both defect objects there zero.
+
+The initial page is \(E_0^{p,n-p}=F^pK^n/F^{p+1}K^n\), which has finite support in \(p\). Also \(F^pH^n=((Z^n\cap F^pK^n)+B^n)/B^n\) is zero for \(p\geq u(n)\) and is all of \(H^n\) for \(p\leq\ell(n)\). This proves boundedness at the actual initial page, weak convergence, and abutment. Boundedness implies regularity by the explicit target-degree argument in the preceding proof note. Finally the canonical map
+
+\[
+H^n\longrightarrow\lim_p H^n/F^pH^n
+\]
+
+is an isomorphism: for \(p\geq u(n)\) the quotients and their transition maps are \(H^n\) and its identity; every compatible cone to the whole inverse system is determined by its map into one such term, and its earlier components are exactly the quotient composites. This is a proof of the limit's universal property, so no unassumed infinite product is needed. It completes the printed convergence assertion.
+
+Let \(\mathcal C\) be weak Serre. The source's characterization means that it is strictly full, contains zero, is closed under kernels and cokernels of morphisms between its objects, and is closed under extensions. Thus it also contains images of such morphisms: the image is the kernel of the morphism to the cokernel, between objects already in \(\mathcal C\). If all \(E_r^{p,q}\) lie in \(\mathcal C\), all their outgoing kernels and incoming images lie in \(\mathcal C\); the cokernel of the inclusion of each image into its kernel does too. This proves membership of every next-page term, and induction proves membership on all subsequent pages.
+
+For a fixed total degree \(n\), only finitely many initial components are nonzero. Each stabilizes by regularity and coregularity, so the maximum of their finitely many stabilization bounds is a bound for the whole diagonal. The limiting terms lie in \(\mathcal C\). The finite filtration of \(H^n\), together with its short exact sequences \(0\to F^{p+1}H^n\to F^pH^n\to\operatorname{gr}^pH^n\to0\), then proves \(H^n\in\mathcal C\) by descending finite induction.
+
+For the Euler equality assume one page \(E_s\) has finite support as a set of pairs \((p,q)\). All later supports are subsets of that finite set, because the next-page term is a subquotient of the preceding term. Let \(\mathcal A'\) be its smallest weak Serre closure. The even and odd finite sums \(P_s,Q_s\) lie in \(\mathcal A'\) (finite sums are extensions). The maps \(\varphi:P_s\to Q_s\) and \(\psi:Q_s\to P_s\) induced by \(d_s\) have zero composites and all their kernels, images and cohomologies belong to \(\mathcal A'\). The four short exact sequences for these kernels and images give
+
+\[
+\begin{aligned}
+[P_s]-[Q_s]
+&=[\ker\varphi]+[\operatorname{im}\varphi]
+ -[\ker\psi]-[\operatorname{im}\psi]\\
+&=[\ker\varphi/\operatorname{im}\psi]
+ -[\ker\psi/\operatorname{im}\varphi]
+=[P_{s+1}]-[Q_{s+1}]
+\end{aligned}                                             \tag{2.2}
+\]
+
+in precisely \(K_0(\mathcal A')\), not in an unspecified larger closure. Choose \(R\geq\max(s,1,p_{\max}-p_{\min}+1)\), where the extrema are taken over this finite support. All differentials \(d_t\) with \(t\geq R\) vanish, since their filtration-degree change \(t\) exits the support. If the support is empty take \(R\geq\max(s,1)\). This proves permanent stabilization, rather than assuming that one zero differential forces all later differentials to vanish. Only finitely many cohomology degrees can then have a nonzero graded piece; finite filtrations show all the other \(H^n\) are zero. Summing their finite filtration relations and (2.2) gives exactly
+
+\[
+\sum_n(-1)^n[H^n(K^\bullet)]
+=\sum_{p,q}(-1)^{p+q}[E_s^{p,q}].             \tag{2.3}
+\]
+
+\subsection{3. Cohomological tail hypotheses and the ill-typed equality}\label{note-07-cohomological-tail-hypotheses-and-the-ill-typed-equality}
+
+Assume the original hypotheses at 6468--6472: for each \(n\), \(H^n(F^pK^\bullet)=0\) for \(p\geq p_0(n)\), while \(H^n(F^pK^\bullet)\to H^n(K^\bullet)\) is an isomorphism for \(p\leq p_1(n)\). No finiteness of the filtration on \(K^n\) is assumed.
+
+The exact sequence \(0\to F^{p+1}K^\bullet\to F^pK^\bullet\to\operatorname{gr}^pK^\bullet\to0\) shows \(H^n(\operatorname{gr}^pK^\bullet)=0\) in each of two tails. For \(p\geq\max(p_0(n),p_0(n+1))\), the adjacent cohomology groups \(H^n(F^pK)\) and \(H^{n+1}(F^{p+1}K)\) vanish. For \(p<\min(p_1(n),p_1(n+1))\), both maps \(H^j(F^{p+1}K)\to H^j(F^pK)\), for \(j=n,n+1\), are isomorphisms: their composites into \(H^j(K)\) and the two comparison maps are isomorphisms. The exact sequence forces the middle graded cohomology to vanish. Thus the sequence \textbf{starting at \(E_1\)} is bounded.
+
+Fix \(p,n\) and take \(r\geq1\) with \(p+r>p_0(n+1)\). Put \(t=p+r\). Exactness of \(F^tK^\bullet\) in degree \(n+1\) implies the equality of subobjects of \(K^n\)
+
+\[
+F^pK^n\cap(d^n)^{-1}(F^tK^{n+1})
+=F^tK^n+(Z^n\cap F^pK^n).                  \tag{3.1}
+\]
+
+For the forward inclusion, a test morphism \(z\) on the left has \(d^nz\) in the degree-\(n+1\) cycles of \(F^tK\), hence in the image of \(d^n:F^tK^n\to F^tK^{n+1}\). Pull back that epimorphism onto its image to lift locally to \(v\in F^tK^n\); then \(z-v\in Z^n\cap F^pK^n\). The local lift proves the subobject inclusion, since factorization through a subobject is tested by its cokernel and can be checked after an epimorphism. Conversely every \(v\in F^tK^n\) maps into \(F^tK^{n+1}\), every cycle maps to zero, and \(F^tK^n\subset F^pK^n\). This proves (3.1) in an arbitrary abelian category.
+
+Original 6510 instead puts \(d(F^tK^n)\) on the right. That is a subobject of \(K^{n+1}\), so it cannot be summed with the displayed subobject of \(K^n\). HOMOLOGY-FIND-008 replaces it by \(F^tK^n\) and explicitly takes \(r\geq1\). This last inequality ensures \(F^tK^n\subset F^{p+1}K^n\), giving the required equality of numerators after adding \(F^{p+1}K^n\). Choosing arbitrarily large such \(r\) proves the asserted intersection identity.
+
+For the boundary identity put \(s=p-r+1\), with \(r\geq1\) large enough that \(s<p_1(n)\). Consider the kernel of \(H^n(F^sK)\to H^n(K)\). By the definitions of cycles and boundaries it is
+
+\[
+\frac{B^n\cap F^sK^n}{d^{n-1}(F^sK^{n-1})}.       \tag{3.2}
+\]
+
+Indeed the preimage of zero consists of cycles in \(F^sK^n\) whose image is a boundary in \(K^n\), and every boundary is already a cycle. Injectivity on \(H^n\) makes (3.2) zero, proving \(d^{n-1}(F^sK^{n-1})=B^n\cap F^sK^n\). Because \(s\leq p\), intersecting with \(F^pK^n\) and adding \(F^{p+1}K^n\) proves the required boundary numerator equality. This proves the two prior \(n-1\)-to-\(n\) corrections.
+
+The cohomology filtration is zero for \(p\geq p_0(n)\) and all of \(H^n(K)\) for \(p\leq p_1(n)\). It is therefore finite, separated, exhaustive and complete, by the same universal-property argument as in §2. Boundedness from \(E_1\) gives regularity and coregularity of the original sequence too: both definitions ask only for eventual vanishing of differentials and are unaffected by retaining an earlier page. Together with the two numerator equalities this proves the original convergence conclusion, without asserting boundedness of the \(E_0\) page.
+
+HOMOLOGY-UNDER-007 is the following additional consequence. Under these cohomological tail hypotheses, if every term on one page lies in a weak Serre subcategory \(\mathcal C\), then every \(H^n(K)\) lies in \(\mathcal C\). If one page has finite support, the finite Euler equality (2.3) holds in its smallest weak Serre closure, and only finitely many cohomology objects are nonzero. To prove this, start at a page at least 1 and at least the specified page. Pagewise weak Serre closure, eventual stabilization, and (2.2) apply exactly as proved in §2. The finite cohomology filtration proved in this section supplies the last induction. No finiteness of the termwise filtration is needed for either consequence. These strengthenings are editorial material; the original finite-termwise lemma is retained.
+
+\subsection{4. HOMOLOGY-FIND-007: the initial page matters}\label{note-07-homology-find-007-the-initial-page-matters}
+
+Let \(k\) be a nonzero field and let \(V=\bigoplus_{j\geq0}ke_j\). Define the cochain complex \(K^0=V\), \(K^1=V\), \(d^0=\operatorname{id}_V\), with all other terms and differentials zero. Give both copies of \(V\) the filtration
+
+\[
+F^pV=\bigoplus_{j\geq\max(p,0)}ke_j.
+\]
+
+Every filtered subcomplex \(F^pK\) has identity differential and zero cohomology, as does \(K\). Thus both hypotheses in §3 hold in every degree, with for example \(p_0(n)=p_1(n)=0\). For every \(p\geq0\),
+
+\[
+E_0^{p,-p}=k\bar e_p,\qquad
+E_0^{p,1-p}=k\bar e_p,
+\]
+
+and \(d_0\) is the identity between these two terms. All other terms are zero. Both total-degree diagonals 0 and 1 have infinitely many nonzero initial components, so \((E_r)_{r\geq0}\) is not bounded under \texttt{definition-bounded-ss}. Nevertheless \(E_1=0\), every later page is zero, and all convergence conclusions hold. This is a direct counterexample to an \(E_0\)-bounded reading of 6476, not to the cohomological convergence theorem.
+
+The correction specifies \((E_r,d_r)_{r\geq1}\) in that conclusion and specifies its \(E_1\) starting page in the proof. It leaves the chapter's definition of boundedness unchanged. The second ``for'' from P02-E1398 clarifies the two tails but does not itself solve this starting-page problem.
+
+Literal external citations of this Homology lemma occur in current \texttt{cohomology.tex:7304}, \texttt{injectives.tex:2278,2352}, and \texttt{more-algebra.tex:16162}. The Cohomology and both Injectives statements already specify \(r\geq1\) at 7271, 2251, and 2320 respectively. Their boundedness assertions are therefore compatible with the corrected lemma. This dependency check does not certify their entire derived-functor constructions.
+
+The More Algebra lemma \texttt{lemma-kunneth-converges} refers to the spectral sequence of a specified filtered tensor total complex. Its conclusion at original 15531/current 16140 needs the same explicit starting page under its second set of hypotheses. The counterexample above also realizes this setting: take \(R=k\), and let \(L^0=k\) with \(F^jL=L\) for \(j\leq0\) and zero for \(j\geq1\). All required terms are flat. The two-term identity complexes \(K,F^iK,\operatorname{gr}^iK\) are contractible (or zero), hence K-flat; their tensor with any complex is contracted by their degree-\(-1\) homotopy with the usual tensor differential. The one-term complexes associated with \(L\) are free, hence K-flat. The convolution filtration satisfies
+
+\[
+F^p\operatorname{Tot}(K\otimes_k L)
+=\sum_{i+j=p}F^iK\otimes_k F^jL
+=\sum_{i\geq p}F^iK\otimes_k k
+\xrightarrow{\ v\otimes a\mapsto av\ }F^pK.
+\]
+
+The equality of subobjects holds because all summands lie in \(F^pK\) and the summand \(i=p,j=0\) is exactly \(F^pK\). The given tensor representative therefore has unbounded \(E_0\) and zero \(E_1\). The lemma is corrected to boundedness starting at \(E_1\); the stronger finite-filtration case remains available without changing its hypotheses.
+
+The subsequent existential proposition at original 15766--15798/current 16375--16407 is different: it permits a choice of representative. The counterexample does not disprove that proposition. Its bounded initial page can be achieved by the construction in §5. Accordingly its statement is preserved and its proof is completed. The later Künneth spectral sequence at current 16409--16441 explicitly starts at page 2 and receives the preceding sequence from page 1, so no starting-page correction is needed there.
+
+\subsection{5. HOMOLOGY-UNDER-008: finite filtration representatives and the Künneth proof}\label{note-07-homology-under-008-finite-filtration-representatives-and-the-kuxfcnneth-proof}
+
+First work in any abelian category. Suppose there are integers \(a<b\) such that \(F^iK\to K\) is a quasi-isomorphism for every \(i\leq a\) and \(F^iK\) is acyclic for every \(i\geq b\). Set
+
+\[
+K'=F^aK/F^bK,
+\qquad
+F^iK'=
+\begin{cases}
+F^aK/F^bK&i\leq a,\\
+F^iK/F^bK&a<i<b,\\
+0&i\geq b.
+\end{cases}                                  \tag{5.1}
+\]
+
+The original object is connected by the explicit zigzag
+
+\[
+K\ \xleftarrow{\iota}\ F^aK\ \xrightarrow{\pi}\ K',       \tag{5.2}
+\]
+
+where the middle filtration is \(F^i(F^aK)=F^{\max(i,a)}K\), \(\iota\) is inclusion, and \(\pi\) is quotient by \(F^bK\). Both are filtered chain maps. On a step \(i\leq a\), the first map is \(F^aK\to F^iK\), a quasi-isomorphism because both composites to \(K\) are quasi-isomorphisms. For \(i>a\) it is the identity on \(F^iK\). On a step \(i<b\), the second map is the quotient \(F^{\max(i,a)}K\to F^{\max(i,a)}K/F^bK\), whose kernel is acyclic. For \(i\geq b\), it is the map from the acyclic complex \(F^iK\) to zero. Thus both maps are quasi-isomorphisms on every filtration step and on the underlying complexes. The short exact sequences of successive steps give quasi-isomorphisms on every associated graded complex as well. This proves all comparisons, while retaining the original \(K\), its full filtration, and the maps (5.2).
+
+In particular \(\operatorname{gr}^iK'\) is canonically \(\operatorname{gr}^iK\) for \(a\leq i<b\). For \(i<a\), both \(F^{i+1}K\) and \(F^iK\) map quasi-isomorphically to \(K\), so \(\operatorname{gr}^iK\) is acyclic. For \(i\geq b\), both steps are acyclic, so that graded complex is again acyclic. The new zero graded objects outside \([a,b)\) therefore come with exact derived comparisons, not discarded contributions.
+
+Apply this construction to the filtered resolutions \(P\to K\) and \(Q\to L\) in \texttt{proposition-kunneth-filtered}, under that proposition's four additional uniform tail hypotheses. They transfer to \(P,Q\) because the resolution maps are quasi-isomorphisms on every filtration step. Choose \(a_P<b_P\) and \(a_Q<b_Q\), and set \(P'=F^{a_P}P/F^{b_P}P\), \(Q'=F^{a_Q}Q/F^{b_Q}Q\), with (5.1).
+
+Each term of \(F^iP'\) is free. For \(a_P\leq i<b_P\), it has the finite filtration with successive quotients \(\operatorname{gr}^jP^n\), \(i\leq j<b_P\), which are free by the original resolution lemma. Each extension by a free module splits because that quotient is projective, so finite induction gives a free middle module. The steps outside this range are the whole quotient or zero. The same argument applies to \(Q'\), and all their graded terms are free.
+
+The complexes \(F^iP'\) are K-flat. For the internal range they occur in the degreewise split short exact sequence
+
+\[
+0\to F^{b_P}P\to F^iP\to F^iP'\to0.          \tag{5.3}
+\]
+
+Both left-hand complexes are K-flat by the resolution lemma. Tensor (5.3) with any acyclic complex and form the direct-sum total complex. The sequence remains short exact degreewise, since the termwise quotients are free and direct sums of exact sequences of modules are exact. The first two tensor complexes are acyclic; their long exact cohomology sequence proves the third is acyclic. This is the definition of K-flatness. The whole quotient and zero steps follow as above, and the argument for \(Q'\) is identical. For the internal graded complexes K-flatness is inherited from the already specified \(\operatorname{gr}^iP\) and \(\operatorname{gr}^jQ\); outside they are zero.
+
+Define
+
+\[
+T'=\operatorname{Tot}(P'\otimes_R Q'),\qquad
+F^pT'=\sum_{i+j=p}\operatorname{Tot}(F^iP'\otimes_R F^jQ').       \tag{5.4}
+\]
+
+The zigzags (5.2) for \(P,Q\), and their original maps to \(K,L\), show that \(T'\) represents \(K\otimes_R^{\mathbf L}L\). Every intermediate tensor comparison is a quasi-isomorphism because the other factor is K-flat; for example tensor the acyclic cone of \(F^{a_P}P\to P'\) with a K-flat representative of the second factor. The cone commutes with tensor totalization by its defining two-term direct sums and signed differentials, giving the stated comparison.
+
+The filtration (5.4) is all of \(T'\) for \(p\leq a_P+a_Q\): choose \(i=a_P\), \(j=p-a_P\leq a_Q\). It is zero for \(p\geq b_P+b_Q-1\): a nonzero summand would require \(i\leq b_P-1\) and \(j\leq b_Q-1\), contrary to that inequality. Thus it is finite, with uniform bounds, and its \(E_0\) page is bounded. Degreewise finite filtrations of free modules split, so their tensor has the canonical associated graded isomorphism
+
+\[
+\operatorname{gr}^pT'
+\cong\bigoplus_{i+j=p}\operatorname{Tot}
+  (\operatorname{gr}^iP'\otimes_R\operatorname{gr}^jQ').       \tag{5.5}
+\]
+
+The map sends a tensor of filtration classes to the class of the tensor in \(F^pT'/F^{p+1}T'\). It is independent of lifts because raising either filtration index places the difference in \(F^{p+1}\). Splitting the finite filtrations makes this map the identity on each pair of graded summands, proving it is an isomorphism. The canonical map, rather than the choice of splitting, is used in (5.5); it commutes with the total differential since both tensor differentials preserve the filtration and keep their original signs.
+
+The comparisons of graded complexes following (5.2), K-flatness, and exactness of module direct sums now give
+
+\[
+H^{p+q}(\operatorname{gr}^pT')
+\cong\bigoplus_{i+j=p}
+H^{p+q}(\operatorname{gr}^iK\otimes_R^{\mathbf L}\operatorname{gr}^jL).
+\]
+
+The terms outside the finite index intervals are zero in the derived category for the proved acyclicity reasons, so this formula retains the original sum and every one of its contributions. Section 2 proves convergence and the finite cohomology filtration. This repairs the existential proposition's proof while keeping its stronger boundedness statement. Without the four tail hypotheses the original choice \(\operatorname{Tot}(P\otimes_R Q)\) still supplies its initial existence and \(E_1\)-formula, as in the unchanged first paragraph.
+
+The later reindexing in current \texttt{more-algebra.tex:16436–16440} retains boundedness: on a fixed total degree \(p+q=n\), the map \((p,q)\mapsto(-q,p+2q)\) is a bijection onto the corresponding old diagonal. An old differential of bidegree \((r-1,2-r)\) becomes \((r,1-r)\) under this substitution, by solving for the new two coordinates. Thus no new boundedness restriction is needed there.
+
+\subsection{6. Double-complex signs, the resolution map, and additive homotopies}\label{note-07-double-complex-signs-the-resolution-map-and-additive-homotopies}
+
+Retain the source convention \(D=d_1+(-1)^i d_2\) on \(K^{i,j}\). The filtration by \(i\) has \({}'E_0^{p,q}=K^{p,q}\) and differential \((-1)^pd_2\); the filtration by \(j\) has \({}''E_0^{p,q}=K^{q,p}\) and differential \(d_1\). Multiplication of a differential by \(-1\) leaves its kernel and image as the same subobjects, so the cycle quotient gives the displayed unsigned identifications of the two \(E_1\) pages. If \(x\in K^{p,q}\) is a vertical cycle, \(Dx=d_1x\), giving \({}'d_1^{p,q}=H^q(d_1^{p,\bullet})\). If \(x\in K^{q,p}\) is a horizontal cycle, \(Dx=(-1)^qd_2x\), giving the printed \({}''d_1^{p,q}=(-1)^qH^q(d_2^{\bullet,p})\). In the latter complex the sign is constant as its filtration coordinate \(p\) varies, so its kernels and images agree with those for the unsigned induced \(d_2\). This proves both \(E_2\) formulas, with no sign removed from either \(d_0\) or \(d_1\).
+
+Under the finite-diagonal hypothesis in 6673--6675, both total filtrations are finite in each degree. Section 2 gives the four conclusions of \texttt{lemma-first-quadrant-ss}, without requiring a literal first-quadrant support assumption.
+
+For \texttt{lemma-double-complex-gives-resolution}, let the double complex \(B\) have \(B^{p,0}=K^p\), all other rows zero, horizontal differential \(d_K\), and vertical differential zero. The given \(\alpha^p\) define a morphism \(B\to A\): the horizontal compatibility is assumption (3), and the vertical compatibility follows from assumption (4). On totals the component in degree \(n\) is exactly \(K^n\xrightarrow{\alpha^n}A^{n,0}\to\operatorname{Tot}^nA\). Its differential is \(d_1\alpha^n+(-1)^n d_2\alpha^n
+=\alpha^{n+1}d_K^n\). The first spectral sequence map is an isomorphism on \(E_1\), because each column resolution has the specified degree-zero cohomology and no other cohomology. Taking cohomology repeatedly makes it an isomorphism on all later pages. Finite-diagonal convergence identifies these limiting maps with the associated graded maps on cohomology. A map between finite filtered objects inducing isomorphisms on the associated graded is an isomorphism: take common upper and lower filtration bounds, start with the zero top step, and use the short exact sequences of consecutive steps to prove successively that each step map is an isomorphism (kernel and cokernel exactness give this conclusion). At the lower bound this is the original map. Thus the stated quasi-isomorphism is induced by the actual displayed chain map, filling the omitted identification at 6740--6742.
+
+HOMOLOGY-UNDER-009: the homotopy-totalization statement at 6745--6814 holds in any additive category, provided the diagonal coproducts defining its total complex exist. No kernels, cokernels, exactness of coproducts, or abelian structure is used. Here is the complete map calculation with those existence requirements explicit.
+
+Let \(a:M^\bullet[0]\to A^{\bullet,\bullet}\) be the given outer homotopy equivalence, with outer inverse \(b\). A degree-\(-1\) outer homotopy on the complex concentrated in outer degree zero must be zero. Hence \(ba=\operatorname{id}_{M^\bullet}\), and \(b\) has only its component \(b^0:A^{0,\bullet}\to M^\bullet\). The induced maps \(\alpha:M\to\operatorname{Tot}A\) and \(\beta:\operatorname{Tot}A\to M\) use the degree-zero summand inclusion and the family consisting of \(b^0\) and zero on every other summand. Their existence follows from the coproduct universal property. They are chain maps, by the inner-chain-map conditions and outer compatibility, and \(\beta\alpha=\operatorname{id}_M\).
+
+Choose the outer homotopy \(h^{i,j}:A^{i,j}\to A^{i-1,j}\) with \(ab-1=d_1h+hd_1\). On each total degree its component maps into one summand of the preceding total degree, so the coproduct gives a morphism \(H^n:\operatorname{Tot}^nA\to\operatorname{Tot}^{n-1}A\). On the summand \(A^{i,j}\), the composite \(DH+HD\) is
+
+\[
+d_1^{i-1,j}h^{i,j}
++(-1)^{i-1}d_2^{i-1,j}h^{i,j}
++h^{i+1,j}d_1^{i,j}
++(-1)^ih^{i,j+1}d_2^{i,j}.
+\]
+
+Since \(h^{i,\bullet}\) is an inner chain map, \(d_2^{i-1,j}h^{i,j}=h^{i,j+1}d_2^{i,j}\); the middle signed pair cancels exactly. The remaining terms equal \(ab-1\), which on totals is \(\alpha\beta-1\). Agreement on all summand inclusions proves \(DH+HD=\alpha\beta-1\). This is the claimed homotopy equivalence in an additive category.
+
+Existence of the total is a real requirement, already signaled by the source's total-complex definition ``if it exists''. For example, in finite-dimensional \(k\)-vector spaces put \(A^{2i,-2i}=A^{2i+1,-2i}=k\) for \(i\geq0\), set each displayed horizontal differential to the identity, and set all other terms and differentials to zero. As an outer complex of inner complexes it is contracted by the reverse identity maps on these pairs, so it is outer homotopy equivalent to zero. Its proposed degree-zero total is a coproduct of infinitely many copies of \(k\), which does not exist in this category. The coproduct universal property would make arbitrarily many summand inclusions linearly independent by testing them against their coordinate maps to \(k\), contradicting finite dimension. Thus the additive strengthening explicitly retains existence of the diagonal sums; it does not infer that existence merely from the outer homotopy. The original source body is not changed to assert automatic existence.
+
+\subsection{7. Coverage limits}\label{note-07-coverage-limits}
+
+The 16 physical reports with first locus after 6359 and through 6814 receive one disposition each. The two new findings have distinct mathematical proofs and do not inflate that physical report count. The source was additionally read consecutively through 7000; those later resolution reports and arguments remain for the next review. The receiving Künneth changes concern the bounded-page assertion and the finite-filtration choice proved above. Other claims in the surrounding tensor-convolution proof, and unrelated local notation issues observed while reading it, are not certified by this note. No live chapter, accepted registry, or public release is changed by this local proof checkpoint.

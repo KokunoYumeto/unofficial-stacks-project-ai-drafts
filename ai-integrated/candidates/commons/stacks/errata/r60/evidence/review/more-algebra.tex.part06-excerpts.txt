@@ -1,0 +1,78 @@
+16065: of $K^n/F^{i + 1}K^n \otimes_R L^m/F^{j + 1}L^m$.
+16066: Consider the map
+16067: $$
+16068: F^nT^n \longrightarrow
+16069: \bigoplus\nolimits_{i + j = n}
+16070: \text{Tot}(K^\bullet / F^{i + 1}K^\bullet
+16071: \otimes_R L^\bullet / F^{j + 1}L^\bullet)
+16072: $$
+16073: We leave it to the reader to show that we do indeed end up in the direct
+16074: sum and not the direct product, due to our definition of $F^nT^\bullet$.
+16075: For $a + b = n$, the restriction of the displayed arrow to the subcomplex
+16076: $\text{Tot}(F^aK^\bullet \otimes_R F^bL^\bullet)$ of $F^nT^\bullet$
+16077: maps into the summand with $i = a$ and $j = b$.
+16078: Moreover, by our flatness assumptions, the image is isomorphic to
+16079: $\text{Tot}(\text{gr}^iK^\bullet \otimes_R \text{gr}^jL^\bullet)$
+16080: and the kernel of $\text{Tot}(F^iK^\bullet \otimes_R F^jL^\bullet) \to
+16081: \text{Tot}(\text{gr}^iK^\bullet \otimes_R \text{gr}^jL^\bullet)$ is
+16082: $\text{Tot}(F^{i + 1}K^\bullet \otimes_R F^jL^\bullet) +
+16083: \text{Tot}(F^iK^\bullet \otimes_R F^{j + 1}L^\bullet)$.
+16084: It follows that we have a short exact sequence of complexes
+16085: $$
+16086: 0 \to F^{n + 1}T^\bullet \to F^nT^\bullet \to
+16087: \bigoplus\nolimits_{i + j = n}
+16088: \text{Tot}(\text{gr}^iK^\bullet \otimes_R \text{gr}^jL^\bullet) \to 0
+16089: $$
+16090: under our assumptions. In other words, this tells us that
+16091: $\text{gr}^nT^\bullet$ is a direct sum of the complexes
+16092: $\text{Tot}(\text{gr}^iK^\bullet \otimes_R \text{gr}^jL^\bullet)$
+16093: for $i + j = n$.
+16094: 
+16095: \medskip\noindent
+16096: Assume in addition that the complexes of $R$-modules
+16097: $K^\bullet$, $F^iK^\bullet$, $\text{gr}^iK^\bullet$, $L^\bullet$,
+16098: $F^jL^\bullet$, and $\text{gr}^jL^\bullet$ are K-flat.
+16099: In this case we conclude that the spectral sequence of
+16100: Homology, Section \ref{homology-section-filtered-complex}
+16101: associated to the filtered complex $T^\bullet$ has terms
+16102: $$
+16103: E_1^{p, q} =
+16104: \bigoplus\nolimits_{i + j = p}
+16105: H^{p + q}(\text{gr}^iK^\bullet \otimes_R^\mathbf{L} \text{gr}^jL^\bullet)
+16106: $$
+16107: with differentials induced from the short exact sequences
+16108: $$
+16109: 0 \to \text{gr}^{n + 1}T^\bullet \to
+16110: F^nT^\bullet/F^{n + 2}T^\bullet \to
+16111: \text{gr}^nT^\bullet \to 0
+16112: $$
+16113: as explained in Homology, Lemma
+16114: \ref{homology-lemma-spectral-sequence-filtered-complex-d1}.
+16115: In particular, the reader can show this means that the summand
+16116: $H^{p + q}(\text{gr}^iK^\bullet \otimes_R^\mathbf{L} \text{gr}^jL^\bullet)$
+16117: of $E_1^{p, q}$ maps into the sum
+16118: $$
+16119: H^{p + q + 1}(\text{gr}^{i + 1}K^\bullet \otimes_R^\mathbf{L}
+16120: \text{gr}^jL^\bullet) \oplus
+16121: H^{p + q + 1}(\text{gr}^iK^\bullet \otimes_R^\mathbf{L}
+16122: \text{gr}^{j + 1}L^\bullet)
+16123: $$
+16124: inside $E_1^{p + 1, q}$.
+16125: 
+16126: \begin{lemma}
+16127: \label{lemma-kunneth-converges}
+16128: Under the assumptions above, if in addition
+16129: \begin{enumerate}
+16130: \item the filtration on $K^\bullet$ is finite and the filtration on
+16131: $L^\bullet$ is finite, or
+16132: \item more generally the following are true
+16133: \begin{enumerate}
+16134: \item $F^iK^\bullet$ is acyclic for $i \gg 0$,
+16135: \item $F^iK^\bullet \to K^\bullet$ is a quasi-isomorphism for $i \ll 0$,
+16136: \item $F^jL^\bullet$ is acyclic for $j \gg 0$, and
+16137: \item $F^jL^\bullet \to L^\bullet$ is a quasi-isomorphism for $j \ll 0$.
+16138: \end{enumerate}
+16139: \end{enumerate}
+16140: Then the spectral sequence is bounded, the associated filtration on each
+16141: $H^n(T^\bullet) = H^n(K^\bullet \otimes_R^\mathbf{L} L^\bullet)$ is finite
+16142: and we have convergence

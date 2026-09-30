@@ -1,0 +1,101 @@
+{
+  "claims": [
+    {
+      "claim_id": "HOMOLOGY-UNDER-003",
+      "kind": "underclaim_prescribed_cohomology_objects",
+      "source_label": "lemma-serre-subcategory-K-groups",
+      "original_source_lines": [
+        2400,
+        2614
+      ],
+      "original_statement": "The kernel of K_0(C)->K_0(A) consists of the differences [H^0]-[H^1] of the specified periodic complexes exact in A/C.",
+      "proved_statement": "For prescribed objects P,Q of a small abelian category A, [P]=[Q] in K_0(A) if and only if there is a periodic complex on one object M whose H^0 is isomorphic to P and whose H^1 is isomorphic to Q. If P,Q lie in a Serre subcategory C, the constructed complex is exact in A/C.",
+      "exact_transport": "Use the labelled permutation J:M^+->M^- and the source maps phi:M^+->M^-, psi:M^-->M^+. On M=M^+ set phi_hat=psi J and psi_hat=J^{-1} phi. All summands, zero components and signs are retained.",
+      "status": "proved_editorial_consequence",
+      "proof": {
+        "file": "PROOFS_1901_2765.md",
+        "bytes": 18219,
+        "sha256": "4B3508F52A078125345331DBE4B3563D0CC8F333B52941C5CF04A4F3E49EB787",
+        "section": 3
+      },
+      "novelty": "not_claimed",
+      "source_body_replacement": false,
+      "receiving_proof": "chow.tex at pinned commit, lines 18526-18568, especially 18548-18553",
+      "propagation": "The receiving proof needs realization of its prescribed pair, not only equality of differences of classes. The exact construction supplies it; no receiving statement is invalidated or body edit forced.",
+      "other_reference_uses": "Chow lines 3792 and 13180 use part (1), unchanged. Line 18414 gives motivation. The reference at 18546 uses part (1).",
+      "limits": "This verifies the use of the Homology result, not every geometric dependency of the Chow proof.",
+      "next": "Carry this proved strengthening and exact witness into the separate editorial supplement and claim ledger at Homology integration."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "categories.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 357956,
+        "sha256": "05AD27C125BC31801DC1C4644D44684DB74ED6D43F2BDC6E01FB9D4B46260688"
+      },
+      "actual_lines_read": [
+        [
+          4058,
+          4076
+        ],
+        [
+          4558,
+          4640
+        ],
+        [
+          4930,
+          5025
+        ]
+      ],
+      "excerpt": {
+        "file": "categories.tex.part02-excerpts.txt",
+        "bytes": 8051,
+        "sha256": "16106BC569DBDD85BC892EE5D1519730266943324D6F5A62A4B32DEBBA0FC308"
+      },
+      "role": "Bounded dependency reading for localization, saturation and Serre quotient.",
+      "whole_chapter_reviewed": false,
+      "all_dependencies_reviewed": false
+    },
+    {
+      "source": "chow.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 688563,
+        "sha256": "0522BD9A5934C5A65D9FCCD651C77C1E012D9937AEC49737D0B7FEA6190DC001"
+      },
+      "actual_lines_read": [
+        [
+          3762,
+          3799
+        ],
+        [
+          13150,
+          13198
+        ],
+        [
+          18397,
+          18423
+        ],
+        [
+          18525,
+          18574
+        ]
+      ],
+      "excerpt": {
+        "file": "chow.tex.part02-excerpts.txt",
+        "bytes": 6634,
+        "sha256": "DB243E9A4B91581069830D2E2E46FB6EA12C1A3605B40D6FF7E838279422909E"
+      },
+      "role": "All five top-level TeX reference hits to the reviewed K-group lemma routed to their receiving passages.",
+      "whole_chapter_reviewed": false,
+      "all_dependencies_reviewed": false
+    }
+  ],
+  "editorial_clarifications": [
+    "The periodic-complex witness needs the displayed transport and exchange to realize the theorem's sign; the theorem's collection is already closed under exchange.",
+    "Effacement construction: complete independence, naturality, compatibility and uniqueness verification supplied; omitted source proofs are not counted as defects.",
+    "Uniqueness of the universal delta-functor is relative to the identity of the specified degree-zero functor."
+  ]
+}

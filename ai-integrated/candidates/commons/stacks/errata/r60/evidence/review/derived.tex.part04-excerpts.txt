@@ -1,0 +1,73 @@
+3828: we see that $(A^\bullet, W^\bullet[-1], C^\bullet, -i[-1], p[-1], c)$
+3829: is a distinguished triangle. By TR3 there is a morphism of distinguished
+3830: triangles
+3831: $(\text{id}, \beta, \text{id}) : (A^\bullet, B^\bullet, C^\bullet, a, b, c) \to
+3832: (A^\bullet, W^\bullet[-1], C^\bullet, -i[-1], p[-1], c)$
+3833: which must be an isomorphism by Lemma \ref{lemma-third-isomorphism-triangle}.
+3834: This finishes the proof because
+3835: $0 \to A^\bullet \to W^\bullet[-1] \to C^\bullet \to 0$
+3836: is a termwise split short exact sequence of complexes
+3837: by the very construction of cones in Section \ref{section-cones}.
+3838: \end{proof}
+3839: 
+3840: \begin{remark}
+3841: \label{remark-homotopy-double}
+3842: Let $\mathcal{A}$ be an additive category with countable direct sums.
+3843: Let $\text{DoubleComp}(\mathcal{A})$ denote the category of double complexes
+3844: in $\mathcal{A}$, see
+3845: Homology, Section \ref{homology-section-double-complexes}.
+3846: We can use this category to construct two triangulated categories.
+3847: \begin{enumerate}
+3848: \item We can consider an object $A^{\bullet, \bullet}$ of
+3849: $\text{DoubleComp}(\mathcal{A})$ as a complex of complexes
+3850: as follows
+3851: $$
+3852: \ldots \to A^{\bullet, -1} \to A^{\bullet, 0} \to A^{\bullet, 1} \to \ldots
+3853: $$
+3854: and take the homotopy category $K_{first}(\text{DoubleComp}(\mathcal{A}))$
+3855: with the corresponding triangulated structure given by
+3856: Proposition \ref{proposition-homotopy-category-triangulated}.
+3857: By Homology, Remark
+3858: \ref{homology-remark-double-complex-complex-of-complexes-first} the functor
+3859: $$
+3860: \text{Tot} :
+3861: K_{first}(\text{DoubleComp}(\mathcal{A}))
+3862: \longrightarrow
+3863: K(\mathcal{A})
+3864: $$
+3865: is an exact functor of triangulated categories.
+3866: \item We can consider an object $A^{\bullet, \bullet}$ of
+3867: $\text{DoubleComp}(\mathcal{A})$ as a complex of complexes
+3868: as follows
+3869: $$
+3870: \ldots \to A^{-1, \bullet} \to A^{0, \bullet} \to A^{1, \bullet} \to \ldots
+3871: $$
+3872: and take the homotopy category $K_{second}(\text{DoubleComp}(\mathcal{A}))$
+3873: with the corresponding triangulated structure given by
+3874: Proposition \ref{proposition-homotopy-category-triangulated}.
+3875: By Homology, Remark
+3876: \ref{homology-remark-double-complex-complex-of-complexes-second} the functor
+3877: $$
+3878: \text{Tot} :
+3879: K_{second}(\text{DoubleComp}(\mathcal{A}))
+3880: \longrightarrow
+3881: K(\mathcal{A})
+3882: $$
+3883: is an exact functor of triangulated categories.
+3884: \end{enumerate}
+3885: \end{remark}
+3886: 
+3887: \begin{remark}
+3888: \label{remark-double-complex-as-tensor-product-of}
+3889: Let $\mathcal{A}$, $\mathcal{B}$, $\mathcal{C}$ be additive categories
+3890: and assume $\mathcal{C}$ has countable direct sums. Suppose that
+3891: $$
+3892: \otimes : \mathcal{A} \times \mathcal{B} \longrightarrow \mathcal{C},
+3893: \quad
+3894: (X, Y) \longmapsto X \otimes Y
+3895: $$
+3896: is a functor which is bilinear on morphisms. This determines a functor
+3897: $$
+3898: \text{Comp}(\mathcal{A}) \times \text{Comp}(\mathcal{B})
+3899: \longrightarrow
+3900: \text{DoubleComp}(\mathcal{C}), \quad

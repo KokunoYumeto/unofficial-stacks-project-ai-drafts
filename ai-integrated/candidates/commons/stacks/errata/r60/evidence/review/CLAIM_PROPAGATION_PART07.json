@@ -1,0 +1,254 @@
+{
+  "findings": [
+    {
+      "finding_id": "HOMOLOGY-FIND-007",
+      "kind": "starting_page_bound_and_receiving_proof",
+      "source": "homology.tex",
+      "source_lines": [
+        6476,
+        6490
+      ],
+      "original": "Boundedness of the associated sequence is asserted after proving only boundedness of E1.",
+      "correction": "Specify the sequence starting at E1; qualify the given tensor representative likewise; preserve the existential Kunneth proposition by proving a finite filtered choice.",
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "sections": [
+          3,
+          4,
+          5
+        ]
+      },
+      "operations": [
+        "HOMOLOGY-NEW-025",
+        "HOMOLOGY-NEW-026",
+        "HOMOLOGY-MORE-NEW-001",
+        "HOMOLOGY-MORE-NEW-002"
+      ],
+      "status": "proved_local_not_admitted",
+      "report_count": 0,
+      "novelty": "not_claimed",
+      "convergence_conclusion_preserved": true,
+      "propagation": "Four direct Homology citations and the successive Kunneth references read. Already page-1/page-2 statements remain valid. No existential counterexample falsely inferred from one bad representative.",
+      "inventory_note": "The two-tail report overlaps the proof locus but concerns a different issue. Adjacent More Algebra reports are retained in their own pending queue."
+    },
+    {
+      "finding_id": "HOMOLOGY-FIND-008",
+      "kind": "ill_typed_subobject_sum",
+      "source": "homology.tex",
+      "source_lines": [
+        6503,
+        6510
+      ],
+      "original": "A subobject in K^n is equated to a sum containing d(F^{p+r}K^n), a subobject of K^{n+1}.",
+      "correction": "Use F^{p+r}K^n itself, and explicitly take r>=1 before passing modulo F^{p+1}K^n.",
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 3
+      },
+      "operations": [
+        "HOMOLOGY-NEW-027",
+        "HOMOLOGY-NEW-028"
+      ],
+      "status": "proved_local_not_admitted",
+      "report_count": 0,
+      "novelty": "not_claimed",
+      "propagation": "The exact-cycle and boundary numerator arguments now prove the original weak convergence assertion. The prior H^n index repair is retained."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "HOMOLOGY-UNDER-007",
+      "kind": "weak_serre_and_euler_from_cohomological_tails",
+      "original_source_lines": [
+        6361,
+        6451,
+        6463,
+        6542
+      ],
+      "proved_statement": "The weak Serre membership conclusion and finite-support Euler equality also hold under the cohomological tail hypotheses, without finite filtrations on the terms.",
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "sections": [
+          2,
+          3
+        ]
+      },
+      "hypotheses": "Exactly the tail hypotheses of lemma-ss-converges-trivial; for membership, all terms on one page in the fixed weak Serre category; for the Euler identity, one page has finite total support.",
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "novelty": "not_claimed",
+      "propagation": "Record the extension separately; the original finite-termwise conclusions remain valid."
+    },
+    {
+      "claim_id": "HOMOLOGY-UNDER-008",
+      "kind": "finite_filtered_representative",
+      "original_source_lines": [
+        6463,
+        6472
+      ],
+      "proved_statement": "Uniform acyclic upper tails and uniform quasi-isomorphic lower tails give the explicit finite filtered representative F^aK/F^bK through a zigzag of quasi-isomorphisms on every filtration step and every associated graded complex.",
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 5
+      },
+      "hypotheses": "Integers a<b work simultaneously in every cohomological degree; the source's merely degree-dependent bounds are not asserted to supply these uniform integers.",
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "novelty": "not_claimed",
+      "propagation": "Apply to the two K-flat resolutions to repair the existing existential Kunneth proof while preserving its bounded E0 conclusion and original E1 formula."
+    },
+    {
+      "claim_id": "HOMOLOGY-UNDER-009",
+      "kind": "additive_homotopy_totalization",
+      "original_source_lines": [
+        6745,
+        6814
+      ],
+      "proved_statement": "The displayed totalization homotopy equivalence works in any additive category with the diagonal coproducts used by Tot; no abelian structure or exactness of coproducts is needed.",
+      "proof": {
+        "file": "PROOFS_6360_6814.md",
+        "bytes": 27740,
+        "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03",
+        "section": 6
+      },
+      "hypotheses": "The original outer homotopy equivalence and existence of its diagonal coproducts.",
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "novelty": "not_claimed",
+      "propagation": "Original abelian uses retain their convention that Tot exists. An explicit finite-dimensional counterexample shows outer contractibility does not force that existence."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "cohomology.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 539704,
+        "sha256": "591F19389EF437DDFE05B00214064DDA31AA225D44B019A779F9F98F6EC0B4DE"
+      },
+      "actual_lines_read": [
+        [
+          7240,
+          7310
+        ]
+      ],
+      "hits": [
+        7304
+      ],
+      "excerpt": {
+        "file": "cohomology.tex.part07-excerpts.txt",
+        "bytes": 3126,
+        "sha256": "03B035B6BD7DFE1030090B13898D231BEA85EA595B3A5CE414A3017165EC0B78"
+      },
+      "receiving_outcome": "The receiving statement already starts at E1. No correction to its boundedness assertion.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "injectives.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 105225,
+        "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+      },
+      "actual_lines_read": [
+        [
+          2220,
+          2295
+        ],
+        [
+          2300,
+          2364
+        ]
+      ],
+      "hits": [
+        2278,
+        2352
+      ],
+      "excerpt": {
+        "file": "injectives.tex.part07-excerpts.txt",
+        "bytes": 6690,
+        "sha256": "B6AA2D6FDE20FB2245FFBF4D9E3623D9967541FDD11DC04C0D911FEE991EC31B"
+      },
+      "receiving_outcome": "Both direct receiving Ext statements explicitly start at E1. This bounded dependency check does not certify their full derived-functor construction.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "more-algebra.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 1518085,
+        "sha256": "3785C52A72AA218E39E338910940C7C4AF374F557550825BAC2594678F9216BB"
+      },
+      "actual_lines_read": [
+        [
+          16126,
+          16270
+        ],
+        [
+          16375,
+          16453
+        ]
+      ],
+      "hits": [
+        16162,
+        16406,
+        16426
+      ],
+      "excerpt": {
+        "file": "more-algebra.tex.part07-excerpts.txt",
+        "bytes": 9651,
+        "sha256": "1EE08C4BC0059583A8787B1367F02BB2DA19323C76A0CF6F1E65EB5A22FA494B"
+      },
+      "receiving_outcome": "Qualify the given-representative lemma by E1; retain the existential proposition's stronger conclusion using the proved finite-filtration choice. The later E2 sequence keeps its boundedness through the explicit diagonal reindexing.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "homology.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 271572,
+        "sha256": "9CEEA86F962C06EBA69FEEC00BC91D4FA5BAA5187094C39549B62EBEA205FDAD"
+      },
+      "actual_lines_read": [
+        [
+          2150,
+          2202
+        ],
+        [
+          4275,
+          4312
+        ],
+        [
+          6348,
+          6370
+        ],
+        [
+          6550,
+          6628
+        ],
+        [
+          6775,
+          6845
+        ]
+      ],
+      "hits": [],
+      "excerpt": {
+        "file": "homology.tex.part07-excerpts.txt",
+        "bytes": 11131,
+        "sha256": "534487144CAA42920585A5A71E4F7601362FDF79965892514476F6612C35F57C"
+      },
+      "receiving_outcome": "Current-source comparison and precise weak Serre and total-complex conventions; these are additional rereads in current coordinates.",
+      "whole_chapter_reviewed": false
+    }
+  ],
+  "omitted_source_proofs_counted_as_errors": false,
+  "existential_proposition_statement_preserved": true
+}

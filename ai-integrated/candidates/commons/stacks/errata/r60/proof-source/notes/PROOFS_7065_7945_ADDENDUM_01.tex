@@ -1,0 +1,25 @@
+\section{Individual essential-constancy witness for HOMOLOGY-UNDER-010}\label{note-10-individual-essential-constancy-witness-for-homology-under-010}
+
+This supplements §4 of \texttt{PROOFS\_7065\_7945.md}. It makes explicit that the witness for the first summand requires only its own projection idempotent to split; the complementary idempotent need not split.
+
+Keep the original notation \(H_j=F_j\oplus G_j\), with inclusions \(a_j\), projections \(p_j\), colimit maps \(c_j:H_j\to W\), and \(e c_j=c_j a_jp_j\). Suppose \(e=sr\), \(rs=1_X\). Then \(es=s\) and \(re=r\). As proved in §4, the maps \(x_j=rc_ja_j\) make \(X\) the colimit of \(F\).
+
+Assume \(H\) is essentially constant, witnessed by \(t:W\to H_i\) with \(c_i t=1_W\). Put \(t_F=p_i t s:X\to F_i\). Then
+
+\[
+x_i t_F=r c_i a_i p_i t s
+       =r e c_i t s=r e s=rs=1_X.
+\]
+
+For each index \(j\), the given witness supplies arrows \(\alpha:i\to k\), \(\beta:j\to k\) satisfying \(H(\beta)=H(\alpha)t c_j\). Restrict to \(F_j\) and project to \(F_k\). Naturality of the biproduct maps gives
+
+\[
+F(\beta)=p_kH(\beta)a_j
+=F(\alpha)p_i t c_j a_j
+=F(\alpha)p_i t s x_j
+=F(\alpha)t_F x_j.
+\]
+
+Here \(c_j a_j=e c_j a_j=s r c_j a_j=sx_j\). These are exactly the two defining witness identities for essential constancy of \(F\) with value \(X\). Replacing the displayed inclusion, projection, and idempotent by those of \(G\) and \(1-e\) proves the individual second summand assertion. No existence of a complementary object was used.
+
+This is an explicit completion of the existing editorial claim, not a new claim ID or a change to the translated source. No novelty is asserted.

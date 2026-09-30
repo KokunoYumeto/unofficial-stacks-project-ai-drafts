@@ -1,0 +1,113 @@
+6465: 
+6466: \begin{proof}
+6467: Proof for $p = 1$. Choose a short exact sequence
+6468: $0 \to K \to A^{\oplus t} \to M \to 0$. Then
+6469: $\text{Tor}_1^A(M, A/I^n) = K \cap (I^n)^{\oplus t}/I^nK$.
+6470: By Artin-Rees (Algebra, Lemma \ref{algebra-lemma-Artin-Rees})
+6471: there is a constant $c \geq 0$ such that
+6472: $K \cap (I^n)^{\oplus t} \subset I^{n - c}K$ for $n \geq c$. Thus the result
+6473: for $p = 1$. For $p > 1$ we have
+6474: $\text{Tor}_p^A(M, A/I^n) = \text{Tor}^A_{p - 1}(K, A/I^n)$.
+6475: Thus the lemma follows by induction.
+6476: \end{proof}
+6477: 
+6478: \begin{lemma}
+6479: \label{lemma-limit-flat}
+6480: Let $A$ be a Noetherian ring. Let $I$ be an ideal of $A$. Let
+6481: $(M_n)$ be an inverse system of $A$-modules such that
+6482: \begin{enumerate}
+6483: \item $M_n$ is a flat $A/I^n$-module,
+6484: \item $M_{n + 1} \to M_n$ is surjective.
+6485: \end{enumerate}
+6486: Then $M = \lim M_n$ is a flat $A$-module and
+6487: $Q \otimes_A M = \lim Q \otimes_A M_n$ for every finite $A$-module $Q$.
+6488: \end{lemma}
+6489: 
+6490: \begin{proof}
+6491: We first show that $Q \otimes_A M = \lim Q \otimes_A M_n$ for every finite
+6492: $A$-module $Q$. Choose a resolution $F_2 \to F_1 \to F_0 \to Q \to 0$
+6493: by finite free $A$-modules $F_i$. Then
+6494: $$
+6495: F_2 \otimes_A M_n \to F_1 \otimes_A M_n \to F_0 \otimes_A M_n
+6496: $$
+6497: is a chain complex whose homology in degree $0$ is $Q \otimes_A M_n$
+6498: and whose homology in degree $1$ is
+6499: $$
+6500: \text{Tor}_1^A(Q, M_n) = \text{Tor}_1^A(Q, A/I^n) \otimes_{A/I^n} M_n
+6501: $$
+6502: as $M_n$ is flat over $A/I^n$. By Lemma \ref{lemma-tor-strictly-pro-zero}
+6503: we see that this system is essentially constant (with value $0$).
+6504: It follows from Homology, Lemma \ref{homology-lemma-apply-Mittag-Leffler-again}
+6505: that $\lim Q \otimes_A M_n =
+6506: \Coker(\lim F_1 \otimes_A M_n \to \lim F_0 \otimes_A M_n)$.
+6507: Since $F_i$ is finite free this equals
+6508: $\Coker(F_1 \otimes_A M \to F_0 \otimes_A M) = Q \otimes_A M$.
+6509: 
+6510: \medskip\noindent
+6511: Next, let $Q \to Q'$ be an injective map of finite $A$-modules.
+6512: We have to show that $Q \otimes_A M \to Q' \otimes_A M$ is injective
+6513: (Algebra, Lemma \ref{algebra-lemma-flat}). By the above we see
+6514: $$
+6515: \Ker(Q \otimes_A M \to Q' \otimes_A M) =
+6516: \Ker(\lim Q \otimes_A M_n \to \lim Q' \otimes_A M_n).
+6517: $$
+6518: For each $n$ we have an exact sequence
+6519: $$
+6520: \text{Tor}_1^A(Q', M_n) \to \text{Tor}_1^A(Q'', M_n) \to
+6521: Q \otimes_A M_n \to Q' \otimes_A M_n
+6522: $$
+6523: where $Q'' = \Coker(Q \to Q')$. Above we have seen that the
+6524: inverse systems of Tor's are essentially constant with value $0$.
+6525: It follows from
+6526: Homology, Lemma \ref{homology-lemma-apply-Mittag-Leffler-again}
+6527: that the inverse limit of the right most maps is injective.
+6528: \end{proof}
+6529: 
+6530: \begin{lemma}
+6531: \label{lemma-flat-after-completion}
+6532: Let $R$ be a ring. Let $I \subset R$ be an ideal. Let $M$ be
+6533: an $R$-module. Assume
+6534: \begin{enumerate}
+6535: \item $I$ is finitely generated,
+
+23610: Set $C_n = A_{n - 1} \oplus \ldots \oplus A_1$ for $n > 1$ and
+23611: $C_1 = 0$ with transition maps given by projections as well.
+23612: Then there is a short exact sequence of inverse systems
+23613: $0 \to (A_n) \to (B_n) \to (C_n) \to 0$ where $B_n \to C_n$
+23614: is given by $(x_i) \mapsto (x_i - f_{i + 1}(x_{i + 1}))$.
+23615: Since $(C_n)$ is ML as well, we conclude that (2) holds
+23616: (by proposition reference above) which also implies (1).
+23617: Finally, this implies by Derived Categories, Lemma
+23618: \ref{derived-lemma-unbounded-right-derived}
+23619: that $R\lim$ is in fact defined on all of $D(\textit{Ab}(\mathbf{N}))$.
+23620: In fact, the proof of Derived Categories, Lemma
+23621: \ref{derived-lemma-unbounded-right-derived}
+23622: proceeds by proving assertions (4) and (5).
+23623: \end{proof}
+23624: 
+23625: \begin{lemma}
+23626: \label{lemma-six-term-Rlim}
+23627: Let
+23628: $$
+23629: 0 \to (A_i) \to (B_i) \to (C_i) \to 0
+23630: $$
+23631: be a short exact sequence of inverse systems of abelian groups.
+23632: Then there is an associated $6$ term exact sequence
+23633: $0 \to \lim A_i \to \lim B_i \to \lim C_i \to
+23634: R^1\lim A_i \to R^1\lim B_i \to R^1\lim C_i \to 0$.
+23635: \end{lemma}
+23636: 
+23637: \begin{proof}
+23638: Follows from the vanishing in Lemma \ref{lemma-compute-Rlim}.
+23639: \end{proof}
+23640: 
+23641: \noindent
+23642: Here is the ``correct'' formulation of
+23643: Homology, Lemma \ref{homology-lemma-apply-Mittag-Leffler-again}.
+23644: 
+23645: \begin{lemma}
+23646: \label{lemma-apply-Mittag-Leffler-again}
+23647: Let
+23648: $$
+23649: (A^{-2}_n \to A^{-1}_n \to A^0_n \to A^1_n)
+23650: $$

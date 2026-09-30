@@ -1,0 +1,118 @@
+780: $$
+781: This long exact sequence is functorial in $\mathcal{F}$.
+782: \end{lemma}
+783: 
+784: \begin{proof}
+785: The sheaf condition says that the kernel of
+786: $(1, -1) : \mathcal{F}(U) \oplus \mathcal{F}(V) \to \mathcal{F}(U \cap V)$
+787: is equal to the image of $\mathcal{F}(X)$ by the first map
+788: for any abelian sheaf $\mathcal{F}$.
+789: Lemma \ref{lemma-injective-restriction-surjective} above implies that the map
+790: $(1, -1) : \mathcal{I}(U) \oplus \mathcal{I}(V) \to \mathcal{I}(U \cap V)$
+791: is surjective whenever $\mathcal{I}$ is an injective $\mathcal{O}_X$-module.
+792: Hence if $\mathcal{F} \to \mathcal{I}^\bullet$ is an injective resolution
+793: of $\mathcal{F}$, then we get a short exact sequence of complexes
+794: $$
+795: 0 \to
+796: \mathcal{I}^\bullet(X) \to
+797: \mathcal{I}^\bullet(U) \oplus \mathcal{I}^\bullet(V) \to
+798: \mathcal{I}^\bullet(U \cap V) \to
+799: 0.
+800: $$
+801: Taking cohomology gives the result (use
+802: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}).
+803: We omit the proof of the functoriality of the sequence.
+804: \end{proof}
+805: 
+806: \begin{lemma}[Relative Mayer-Vietoris]
+807: \label{lemma-relative-mayer-vietoris}
+808: Let $f : X \to Y$ be a morphism of ringed spaces.
+809: Suppose that $X = U \cup V$ is a union of two open subsets.
+810: Denote $a = f|_U : U \to Y$, $b = f|_V : V \to Y$, and
+811: $c = f|_{U \cap V} : U \cap V \to Y$.
+812: For every $\mathcal{O}_X$-module $\mathcal{F}$
+813: there exists a long exact sequence
+814: $$
+815: 0 \to
+816: f_*\mathcal{F} \to
+817: a_*(\mathcal{F}|_U) \oplus b_*(\mathcal{F}|_V) \to
+
+1094: from $\textit{PMod}(\mathcal{O}_X)$ to $\text{Mod}_{\mathcal{O}_X(U)}$.
+1095: The terms
+1096: $\check{\mathcal{C}}^p(\mathcal{U}, \mathcal{F})$
+1097: of the complex are products of these exact functors and hence exact.
+1098: Moreover a sequence of complexes is exact if and only if the sequence
+1099: of terms in a given degree is exact. Hence the lemma follows.
+1100: \end{proof}
+1101: 
+1102: \begin{lemma}
+1103: \label{lemma-cech-cohomology-delta-functor-presheaves}
+1104: Let $X$ be a ringed space.
+1105: Let $\mathcal{U} : U = \bigcup_{i \in I} U_i$ be an open covering.
+1106: The functors $\mathcal{F} \mapsto \check{H}^n(\mathcal{U}, \mathcal{F})$
+1107: form a $\delta$-functor from the abelian category of
+1108: presheaves of $\mathcal{O}_X$-modules to the category
+1109: of $\mathcal{O}_X(U)$-modules (see
+1110: Homology, Definition \ref{homology-definition-cohomological-delta-functor}).
+1111: \end{lemma}
+1112: 
+1113: \begin{proof}
+1114: By
+1115: Lemma \ref{lemma-cech-exact-presheaves}
+1116: a short exact sequence of presheaves of
+1117: $\mathcal{O}_X$-modules
+1118: $0 \to \mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3 \to 0$
+1119: is turned into a short exact sequence of complexes of
+1120: $\mathcal{O}_X(U)$-modules. Hence we can use
+1121: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}
+1122: to get the boundary maps
+1123: $\delta_{\mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3} :
+1124: \check{H}^n(\mathcal{U}, \mathcal{F}_3) \to
+1125: \check{H}^{n + 1}(\mathcal{U}, \mathcal{F}_1)$
+1126: and a corresponding long exact sequence. We omit the verification
+1127: that these maps are compatible with maps between short exact
+1128: sequences of presheaves.
+1129: \end{proof}
+1130: 
+1131: 
+1132: \noindent
+
+3166: }
+3167: $$
+3168: as in Derived Categories, Lemma \ref{derived-lemma-injective-resolution-ses}.
+3169: This will give a commutative diagram
+3170: $$
+3171: \xymatrix{
+3172: 0 \ar[r] &
+3173: \check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F}) \ar[r] \ar[d] &
+3174: \check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{G}) \ar[r] \ar[d] &
+3175: \check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{H}) \ar[r] \ar[d] &
+3176: 0 \\
+3177: 0 \ar[r] &
+3178: \text{Tot}(\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{I}_1^\bullet))
+3179: \ar[r] &
+3180: \text{Tot}(\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{I}_2^\bullet))
+3181: \ar[r] &
+3182: \text{Tot}(\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{I}_3^\bullet))
+3183: \ar[r] &
+3184: 0
+3185: }
+3186: $$
+3187: Here $\mathcal{U}$ is an open covering as above and
+3188: the vertical maps are those used to define the maps
+3189: $\check{H}^n(\mathcal{U}, -) \to H^n(X, -)$, see
+3190: Lemma \ref{lemma-cech-cohomology}.
+3191: The bottom complex is exact as the sequence of
+3192: complexes of injectives is termwise split exact.
+3193: Hence the boundary map in cohomology is computed
+3194: by the usual procedure for this lower exact sequence, see
+3195: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
+3196: The same will be true after passing to the refinement
+3197: $\mathcal{V}$ where the boundary map for {\v C}ech cohomology
+3198: was defined. Hence the boundary maps agree because they
+3199: use the same construction (whenever the first one is defined
+3200: on an element in {\v C}ech cohomology on a given open covering).
+3201: This finishes our discussion of the construction of
+3202: the structure of a $\delta$-functor on {\v C}ech cohomology
+3203: and why this structure is compatible with the given
+3204: $\delta$-functor structure on usual cohomology.

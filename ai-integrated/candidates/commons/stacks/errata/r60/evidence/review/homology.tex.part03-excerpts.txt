@@ -1,0 +1,36 @@
+5585: For a differential object $(A, d)$ we denote
+5586: $$
+5587: H(A, d) = \Ker(d)/\Im(d)
+5588: $$
+5589: its {\it homology}.
+5590: \end{definition}
+5591: 
+5592: \begin{lemma}
+5593: \label{lemma-differential-objects-ses}
+5594: Let $\mathcal{A}$ be an abelian category.
+5595: Let $0 \to (A, d) \to (B, d) \to (C, d) \to 0$ be a short exact sequence
+5596: of differential objects. Then we get an exact homology sequence
+5597: $$
+5598: \ldots \to H(C, d) \to H(A, d) \to H(B, d) \to H(C, d) \to \ldots
+5599: $$
+5600: \end{lemma}
+5601: 
+5602: \begin{proof}
+5603: Apply Lemma \ref{lemma-long-exact-sequence-cochain}
+5604: to the short exact sequence of complexes
+5605: $$
+5606: \begin{matrix}
+5607: 0 & \to & A & \to & B & \to & C & \to & 0 \\
+5608: & & \downarrow & & \downarrow & & \downarrow \\
+5609: 0 & \to & A & \to & B & \to & C & \to & 0 \\
+5610: & & \downarrow & & \downarrow & & \downarrow \\
+5611: 0 & \to & A & \to & B & \to & C & \to & 0
+5612: \end{matrix}
+5613: $$
+5614: where the vertical arrows are $d$.
+5615: \end{proof}
+5616: 
+5617: \noindent
+5618: We come to an important example of a spectral sequence.
+5619: Let $\mathcal{A}$ be an abelian category.
+5620: Let $(A, d)$ be a differential object of $\mathcal{A}$.

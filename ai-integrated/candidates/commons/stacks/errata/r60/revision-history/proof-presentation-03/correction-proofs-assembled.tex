@@ -1,0 +1,1730 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{fontspec,unicode-math}
+\setmainfont{Cambria}
+\setmathfont{Cambria Math}
+\setmonofont{Cambria Math}
+\usepackage{longtable,booktabs,array,calc,graphicx}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{breaklines,breakanywhere,fontsize=\small}
+\usepackage[hidelinks,unicode]{hyperref}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\setlength{\emergencystretch}{2em}
+\title{Homology Source Review and Cross-Chapter Corrections\\Complete Editorial Arguments}
+\author{AI editorial work: OpenAI Codex---GPT-6 Astra, Ultra effort}
+\date{30 September 2026}
+\begin{document}
+\maketitle
+\noindent
+The original source is by the Stacks Project authors. These ten notes
+supply the complete arguments for the Homology review and its receiving
+passages in More on Algebra, Weil Cohomology Theories, and Cohomology on
+Sites. The chapter files retain the source exposition with forty-three
+bounded edits in thirty-five units. The longer arguments, proof
+completions, and stronger conclusions here are identified as editorial
+work. The eleven recorded strengthenings are not claims of novelty.
+The original proof notes and their source locators are included. Statements
+about review progress in those notes record their preparation history;
+release status is recorded separately in the candidate receipts.
+\setcounter{secnumdepth}{1}
+\tableofcontents\clearpage
+\section{Homology source review, original lines 1--1900}\label{note-01-homology-source-review-original-lines-11900}
+
+Authority: the Stacks Project authors' \href{https://github.com/stacks/stacks-project/blob/a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14/homology.tex}{Homological Algebra} at a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14, SHA-256 483CAF01\allowbreak{}B4BD164D\allowbreak{}BC9103D7\allowbreak{}6196E294\allowbreak{}E00EFE17\allowbreak{}E706178E\allowbreak{}CF2DC2C1\allowbreak{}DEF4ABE0. Compared cumulative source: b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434. Its sixty earlier correction units, comprising eighty-one operations, are bound in prior-canonical-units.json. Seven additional source regions, including FAC references and the dual delta-functor lemma, are preserved separately. They are not newly certified by this note.
+
+Actual sequential reading covers original lines 1--1900. The proof beginning at 1898 continues beyond this interval and is not adjudicated here. This note checks the received reports through line 1848 and their receiving maps. A source's omitted proof is not a source error merely because it is omitted. Additional arguments below are editorial material, not replacements attributed to the source authors. There is no novelty claim.
+
+\subsection{1. Biproducts, complementary idempotents and the first copyedit}\label{note-01-biproducts-complementary-idempotents-and-the-first-copyedit}
+
+At 354, ``endormorphisms'' should be ``endomorphisms''. OCC-01475 is correct. This spelling has no earlier correction operation and remains in the compared cumulative source. No mathematical symbol changes.
+
+For the original biproduct \(z=x\oplus y\), keep \(i:x\to z\), \(j:y\to z\), \(p:z\to x\), \(q:z\to y\) and \[
+pi=1_x,\quad qj=1_y,\quad pj=0,\quad qi=0,\quad ip+jq=1_z.
+\] The inverse maps for the product property are \[
+\operatorname{Hom}(u,z)\longrightarrow
+\operatorname{Hom}(u,x)\times\operatorname{Hom}(u,y),\quad
+t\longmapsto(pt,qt),\qquad (a,b)\longmapsto ia+jb.
+\] For the coproduct property they are \[
+\operatorname{Hom}(z,u)\longrightarrow
+\operatorname{Hom}(x,u)\times\operatorname{Hom}(y,u),\quad
+t\longmapsto(ti,tj),\qquad (a,b)\longmapsto ap+bq.
+\] Each composite is the identity by the five relations. If \(qt=0\), then \(t=(ip+jq)t=ipt\), with unique factor \(pt\), because \(pi=1_x\). Thus \(i\) is a kernel of \(q\). If \(tj=0\), then \(t=t(ip+jq)=(ti)p\), with unique factor \(ti\), because \(pi=1_x\). Thus \(p\) is a cokernel of \(j\).
+
+For the original idempotent \(f:x\to x\), set \(g=1_x-f\). Bilinearity gives \(fg=gf=0\), \(g^2=g\), and \(f+g=1_x\). If \(i:K\to x\) is a kernel of \(f\), there is a unique \(p:x\to K\) with \(ip=g\). Then \(ipi=gi=(1_x-f)i=i\), so \(pi=1_K\). For \(a:x\to u\) with \(af=0\), one has \(a=a(f+g)=ag=(ai)p\). Any factor \(b\) with \(bp=a\) must satisfy \(b=bpi=ai\). Hence \(p\) is a cokernel of \(f\). The complementary construction gives \(j:J\to x\), \(q:x\to J\) with \(jq=f\), \(qj=1_J\). Since \(gj=0\) and \(fi=0\), monicity of \(i,j\) applied to \(ipj=0\), \(jqi=0\) yields \(pj=qi=0\). Also \(ip+jq=g+f=1_x\). These are exactly the displayed biproduct identities.
+
+The countable-product argument at 544--587 retains the source coordinates. Let \(P=\prod_{n\geq1}X\), with coordinate maps \(p_n:P\to X\), and let \(e:X\to X\) satisfy \(e^2=e\). Define \[
+p_n\Phi=e p_n+(1_X-e)p_{n+1},\qquad
+p_1\Psi=p_1,\qquad
+p_n\Psi=(1_X-e)p_{n-1}+e p_n\ (n\geq2).
+\] For \(n=1\), \[
+p_1\Phi\Psi=e p_1+(1_X-e)((1_X-e)p_1+e p_2)=p_1.
+\] For \(n\geq2\), \[
+p_n\Phi\Psi
+=e((1_X-e)p_{n-1}+e p_n)
+ +(1_X-e)((1_X-e)p_n+e p_{n+1})=p_n.
+\] The product property gives \(\Phi\Psi=1_P\). Suppose \(k:K\to P\) is a kernel of this particular split epimorphism \(\Phi\). Put \(i=p_1k\). From \(e p_nk+(1_X-e)p_{n+1}k=0\), composition with \(e\) and \(1_X-e\) gives \(e p_nk=0\) and \((1_X-e)p_{n+1}k=0\). For \(n\geq2\), therefore, \(p_nk=0\), while \(ei=0\). For \(t:W\to X\) with \(et=0\), define \(v:W\to P\) by \(p_1v=t,\ p_nv=0\) for \(n\geq2\). Then \(\Phi v=0\). There is a unique \(u:W\to K\) with \(ku=v\), and \(iu=t\). If \(iu'=t\), the first coordinate of \(ku'\) is \(t\) and all other coordinates are zero. Thus \(ku'=v\), and \(u'=u\). This proves that \(i\) is the kernel of \(e\).
+
+The resulting local refinement is exact: for this \(X,e\), only this countable power and this particular kernel of \(\Phi\) are needed. Kernels of unrelated split epimorphisms are not used. For the entire category to be Karoubian, the construction must be available for every object and every idempotent. This is an editorial consequence of the source proof, with no replacement of the original theorem.
+
+In particular, countable powers suffice for that global argument: no product of a sequence of different objects occurs. For a fixed \(X,e\), the construction above supplies \(\ker e\); to obtain both complementary summands by this method, apply it also to \(1_X-e\). The five biproduct identities proved above then give the decomposition. A kernel of \(e\) alone is not being claimed to supply both summands.
+
+\subsection{2. Existing grammar corrections and the exactness criterion}\label{note-01-existing-grammar-corrections-and-the-exactness-criterion}
+
+OCC-01476 and OCC-12467 receive MC-STK-ERR-0753 at 634: ``observes that'' becomes ``observe that''. The French report's ``we observes'' is not the literal source, which uses an imperative after ``Finally, to see that''. Its proposed replacement is still correct. Passing to the opposite category exchanges kernels with cokernels and coimages with images. The opposite of the canonical map \(\operatorname{Coim}(f)\to\operatorname{Im}(f)\) is the canonical coimage-to-image map for the reversed arrow. Inverse arrows remain inverse after reversal, proving the relevant invariance of the abelian axiom.
+
+OCC-01477 and OCC-12468 receive MC-STK-ERR-0754 at 729, inserting ``say''. Exactness in the finite sequence remains imposed at \(x_i\) for \(1<i<n\), where both neighbours are displayed; no endpoint is added.
+
+The pullback stability of epimorphisms used below keeps the source's signs. For a cartesian square with sides \(f:w\to y,g:w\to x,h:y\to z,k:x\to z\), the sequence \(0\to w\xrightarrow{(g,f)}x\oplus y\xrightarrow{(k,-h)}z\) is exact. If \(k\) is epic, \((k,-h)\) is epic, since its composite with the inclusion of \(x\) is \(k\). Applying the automorphism \(J=\operatorname{diag}(1_x,-1_y)\) to the middle term produces the exact sequence with arrows \(J(g,f)=(g,-f)\) and \((k,-h)J=(k,h)\). This is the cokernel characterization of the same square being cocartesian. The induced map \(\operatorname{coker}(f)\to\operatorname{coker}(k)\) is invertible by the pushout universal property: a map out of \(z\) killing \(k\) is the same as a map out of \(y\) killing \(f\). Since \(k\) is epic its cokernel is zero; therefore \(f\) is epic. This proves exactly the stability assertion used in the following pullback.
+
+For the lifting criterion, let \(x\xrightarrow f y\xrightarrow g z\) satisfy \(gf=0\) in an abelian category. Write \(i:\ker g\to y\) and \(f=i j p\), where \(p:x\to\operatorname{Coim}f\cong\operatorname{Im}f\) is epic and \(j:\operatorname{Im}f\to\ker g\) is monic. If \(j\) is invertible, any \(h:w\to y\) with \(gh=0\) factors uniquely as \(ic\). Pulling back the epimorphism \(jp\) along \(c:w\to\ker g\) gives an epic \(k:v\to w\) and \(l:v\to x\) with \(hk=fl\). Conversely, apply the stated lifting property to \(i\). It gives an epic \(k:v\to\ker g\) and \(l:v\to x\) with \(fl=ik\). Monicity of \(i\) yields \(jpl=k\). If \(rj=sj\), then \(rk=sk\), and epicity of \(k\) gives \(r=s\). Thus \(j\) is epic as well as monic, hence invertible in an abelian category. This proves the criterion at 934--966. OCC-01478 and OCC-12469 receive the existing singular-noun correction MC-STK-ERR-0755 at 965. The argument and its hypotheses are unchanged.
+
+\subsection{3. The snake projection, factorization and naturality}\label{note-01-the-snake-projection-factorization-and-naturality}
+
+Keep the source's exact rows \[
+x\xrightarrow f y\xrightarrow g z\to0,\qquad
+0\to u\xrightarrow k v\xrightarrow l w
+\] and vertical maps \(\alpha:x\to u,\beta:y\to v,\gamma:z\to w\), with \(\beta f=k\alpha,\ l\beta=\gamma g\). Let \(i:\ker\gamma\to z\), \(p=y\times_z\ker\gamma\), with projections \(\pi':p\to y,\ \pi:p\to\ker\gamma\), and let \(\pi'':u\to\operatorname{coker}\alpha\) be the cokernel projection. In particular \(p\) is an object, not a second named morphism from \(u\) to the cokernel. This corrects the report's paraphrase while confirming its requested projection-label replacement.
+
+The map \(\pi\) is epic since it is the pullback of \(g\). Since \(l\beta\pi'=\gamma i\pi=0\) and \(k\) is a kernel of \(l\), there is a unique \(a:p\to u\) with \(ka=\beta\pi'\). Write \(j:\ker\pi\to p\). The pullback identifies \(\ker\pi\) with \(\ker g\), by the map induced by \(\pi'\). First-row exactness gives an epic \(b:x\to\ker\pi\) with \(\pi'jb=f\). Then \[
+kajb=\beta\pi'jb=\beta f=k\alpha,\quad
+ajb=\alpha,\quad \pi''ajb=\pi''\alpha=0.
+\] Since \(b\) is epic, \(\pi''aj=0\). The epimorphism \(\pi\) is a cokernel of \(j\), so there is a unique \(\delta:\ker\gamma\to\operatorname{coker}\alpha\) with \(\delta\pi=\pi''a\). For the pushout \(q=\operatorname{coker}\alpha\amalg_u v\), keep \(\iota:\operatorname{coker}\alpha\to q,\ \iota':v\to q\). The equality \[
+\iota\delta\pi=\iota\pi''a=\iota'ka=\iota'\beta\pi'
+\] is exactly the source characterization. Here \(\iota\) is monic, being the pushout of \(k\), and \(\pi\) is epic, which also gives uniqueness.
+
+For the receiving argument at 1100--1124, let \(d:r\to\ker\gamma\) satisfy \(\delta d=0\). Pulling back \(\pi\) gives an epic \(m:s\to r\) and \(n:s\to p\) with \(\pi n=dm\). Thus \(\pi''an=\delta dm=0\). The exact sequence to which the lifting criterion applies is \[
+x\xrightarrow{\alpha}u\xrightarrow{\pi''}\operatorname{coker}\alpha.
+\] It gives an epic \(\varepsilon:t\to s\) and \(\zeta:t\to x\) with \(an\varepsilon=\alpha\zeta\). Set \(\eta=\pi'n\varepsilon-f\zeta:t\to y\). Then \(\beta\eta=kan\varepsilon-k\alpha\zeta=0\). Write \(\eta=h\vartheta\), where \(h:\ker\beta\to y\) is canonical. For \(g':\ker\beta\to\ker\gamma\), the defining kernel maps give \[
+ig'\vartheta=gh\vartheta
+=g\pi'n\varepsilon-gf\zeta
+=i\pi n\varepsilon=idm\varepsilon.
+\] Cancel the monomorphism \(i\) to obtain \(g'\vartheta=dm\varepsilon\). The composite \(m\varepsilon\) is epic. Conversely the canonical \(c:\ker\beta\to p\), characterized by \(\pi'c=h,\ \pi c=g'\), gives \(\iota\delta g'=\iota'\beta h=0\), hence \(\delta g'=0\). The lifting criterion now proves exactness at \(\ker\gamma\). MC-STK-ERR-0756 already replaces the wrong label at 1107 with \(\pi''\). OCC-12470 is an existing-correction report, not a new operation.
+
+The same construction proves the later source naturality assertion. For a morphism to a second such diagram, decorate its data by tildes; write \(r_x,r_y,r_z,r_u,r_v,r_w\) for its six component maps. They induce maps \(r_K:\ker\gamma\to\ker\widetilde\gamma\), \(r_C:\operatorname{coker}\alpha\to\operatorname{coker}\widetilde\alpha\), and \(r_p:p\to\widetilde p\), satisfying both projection identities. Then \[
+\widetilde k\,\widetilde a\,r_p
+=\widetilde\beta\widetilde\pi' r_p
+=\widetilde\beta r_y\pi'
+=r_v\beta\pi'
+=\widetilde k\,r_u a.
+\] Since \(\widetilde k\) is monic, \(\widetilde a r_p=r_u a\). Consequently \[
+\widetilde\delta r_K\pi
+=\widetilde\delta\widetilde\pi r_p
+=\widetilde\pi''\widetilde a r_p
+=\widetilde\pi''r_u a
+=r_C\pi''a=r_C\delta\pi.
+\] Cancel the epimorphism \(\pi\) to get \(\widetilde\delta r_K=r_C\delta\). This supplies an editorial proof of an already stated source lemma. It does not turn its original omitted proof into a defect.
+
+\subsection{4. Additive functors and the exactness test}\label{note-01-additive-functors-and-the-exactness-test}
+
+MC-STK-ERR-0757, 0758 and 0759 receive OCC-12471, OCC-12472 and OCC-12473, at 1494, 1530 and 1568. These grammar corrections preserve all four canonical biproduct maps.
+
+For a functor \(F\), suppose the canonical map \(c:F(A)\oplus F(B)\to F(A\oplus B)\) is invertible for all pairs. Setting \(A=B=0\) makes the diagonal \(\operatorname{Hom}(F(0),C)\to\operatorname{Hom}(F(0),C)^2\) bijective. The diagonal of an abelian group \(G\) is surjective only when \(G=0\): the pair \((0,g)\) can be diagonal only when \(g=0\). With \(C=F(0)\), this gives \(1_{F(0)}=0\). Thus \(F(0)\) is zero, and \(F\) sends a morphism factoring through zero to a morphism factoring through zero. For the canonical \(d:F(A\oplus B)\to F(A)\oplus F(B)\), the matrix of \(dc\) is \(\left(\begin{smallmatrix}F(1)&F(0)\\F(0)&F(1)\end{smallmatrix}\right)=1\); hence \(d=c^{-1}\). Starting from invertibility of \(d\) gives the dual argument. The identity \[
+f+g=\Sigma\operatorname{diag}(f,g)\Delta
+\] uses \(\Delta:A\to A\oplus A\) and \(\Sigma:B\oplus B\to B\). Projection and inclusion identities transport its image under \(F\), via \(c,d\), to \(\Sigma\operatorname{diag}(F(f),F(g))\Delta=F(f)+F(g)\). This proves additivity.
+
+The converse left-exactness test at 1570--1595 needs no added hypothesis. Apply its assumption first to the zero short exact sequence. Its image is the complex \(0\to F(0)\xrightarrow1 F(0)\xrightarrow1 F(0)\). The consecutive composite must vanish, so \(1_{F(0)}=0\). Thus zero maps are preserved before the split-sequence diagram is used. For \(0\to A\xrightarrow i A\oplus B\xrightarrow q B\to0\), \(F(q)\) has right inverse \(F(j)\), as \(qj=1_B\). The assumed left-exact sequence is therefore short exact and split. Its comparison with the biproduct sequence gives the isomorphism \(c\), and the preceding argument proves additivity. For a general \(f=i f'\), where \(f':A\to I\) is epic and \(i:I\to B\) monic, the two source short exact sequences show that \(F(i)\) is monic and \(F(\ker f')\to F(A)\) is a kernel of \(F(f')\). Since \(F(i)\) is monic, it is also a kernel of \(F(i)F(f')=F(f)\): every annihilated map is annihilated by \(F(f')\), and its unique factorization is unchanged. Additivity identifies equalizers with kernels of differences and finite products with biproducts, giving finite-limit preservation. The converse follows by applying finite-limit preservation to kernels and the zero object. Reversing arrows proves the right-exact assertion.
+
+\subsection{5. Reflector parentheses and a proved retract refinement}\label{note-01-reflector-parentheses-and-a-proved-retract-refinement}
+
+OCC-02209 and OCC-12474 receive MC-STK-ERR-0760, deleting the extra final parenthesis at 1716. The map is still \(b\operatorname{Coker}(\operatorname{Ker}(a\psi)\to aA_1)\).
+
+An editorial refinement is available. Let \(\mathcal A\) be preadditive, \(\mathcal B\) abelian, \(b:\mathcal B\to\mathcal A\) additive, and \(a:\mathcal A\to\mathcal B\) a functor. Suppose a natural isomorphism \(\theta:ba\to1_{\mathcal A}\) is given and \(b\) sends every kernel and every cokernel diagram of \(\mathcal B\) to a kernel and a cokernel diagram of \(\mathcal A\), respectively. Then \(\mathcal A\) is abelian. No adjunction is needed once these preservation properties are given.
+
+Indeed \(1_{b0}=b(1_0)=b(0)=0\), so \(b0\) is a zero object. For \(A_1,A_2\in\mathcal A\), put \(P=b(aA_1\oplus aA_2)\). The maps \[
+b(i_r)\theta_{A_r}^{-1}:A_r\to P,\qquad
+\theta_{A_r}b(p_r):P\to A_r\quad(r=1,2)
+\] satisfy all biproduct identities of §1 because \(b\) preserves addition and composition. Hence \(P\) is a biproduct and \(\mathcal A\) is additive. For \(\psi:A_1\to A_2\), its kernel is \[
+b\ker(a\psi)\longrightarrow baA_1\xrightarrow{\theta_{A_1}}A_1.
+\] If \(\psi t=0\), naturality gives \(ba(\psi)\theta_{A_1}^{-1}t=\theta_{A_2}^{-1}\psi t=0\). The kernel property preserved by \(b\) supplies the unique factorization. Its cokernel is \[
+A_2\xrightarrow{\theta_{A_2}^{-1}}baA_2
+\longrightarrow b\operatorname{coker}(a\psi).
+\] If \(s\psi=0\), then \(s\theta_{A_2}ba(\psi)=s\psi\theta_{A_1}=0\); the preserved cokernel property supplies the unique factorization.
+
+Apply preservation once more to the kernel and cokernel maps of \(a\psi\). It gives canonical identifications of \(\operatorname{Coim}(\psi)\) with \(b\operatorname{Coim}(a\psi)\), and of \(\operatorname{Im}(\psi)\) with \(b\operatorname{Im}(a\psi)\). The canonical map \(\lambda:\operatorname{Coim}(a\psi)\to\operatorname{Im}(a\psi)\) is invertible in \(\mathcal B\). Apply \(b\) to the full canonical factorization of \(a\psi\) and transport the endpoints by \(\theta\). Naturality makes its composite \(\psi\). The universal properties just proved make its first and last arrows the canonical coimage and image arrows. Uniqueness of the middle arrow identifies it with the canonical map for \(\psi\). It is \(b\lambda\) under those identifications, and is invertible because \(b\) sends the inverse of \(\lambda\) to an inverse. All abelian axioms have been proved.
+
+In the original lemma, left exactness of \(b\) gives kernel preservation and its being a left adjoint gives cokernel preservation. The original \(ba\cong1_{\mathcal A}\) supplies \(\theta\). Thus this argument proves the source conclusion with its original data and records exactly what the adjunction was used to obtain. It does not claim that an arbitrary retraction of categories is abelian: both preservation properties were used. Keep this proved refinement in the editorial underclaim ledger, without replacing the source theorem or claiming novelty.
+
+\subsection{6. Localization and the second numerator}\label{note-01-localization-and-the-second-numerator}
+
+OCC-12475 receives MC-STK-ERR-0761, the article insertion at 1785. OCC-01479 and OCC-12476 receive MC-STK-ERR-0762 at 1848. Retain the left fractions \(\alpha=s^{-1}f,\ \beta=s^{-1}g:X\to Y\) and \(\delta=r^{-1}i:W\to X\), with \[
+s:Y\to Y',\ f,g:X\to Y',\
+r:X\to X',\ i:W\to X'.
+\] The two Ore squares require \[
+ar=s_1f,\qquad br=s_2g,
+\] where \(s_1:Y'\to Y_1,\ s_2:Y'\to Y_2\) lie in \(S\), and \(a:X'\to Y_1,\ b:X'\to Y_2\). A common refinement supplies \(s':Y'\to Y''\) in \(S\) and \(a':Y_1\to Y'',b':Y_2\to Y''\) with \(a's_1=s'=b's_2\). For \(a''=a'a,b''=b'b\), one gets \[
+a''r=s'f,\quad b''r=s'g,\quad (a''+b'')r=s'(f+g).
+\] Therefore \[
+\alpha\delta=(s's)^{-1}(a''i),\quad
+\beta\delta=(s's)^{-1}(b''i),\quad
+(\alpha+\beta)\delta=(s's)^{-1}((a''+b'')i).
+\] The last numerator is \(a''i+b''i\), proving right distributivity. Using \(f\) in both initial squares would not represent \(\beta\). For an explicit failure of that reading, take vector spaces, \(S\) the identities, \(X=Y=X'=Y'=W=k\), \(r=s=i=1\), \(f=0,g=1\). The incorrect relation forces \(b=0\), although \(\beta\delta=1\). The corrected relation gives \(b=1\).
+
+For left distributivity, keep \(\gamma=t^{-1}h:Y\to Z\), \(h:Y\to Z',t:Z\to Z'\), with \(t\in S\). Choose \(a:Y'\to Z''\) and \(t':Z'\to Z''\) with \(t'\in S\) and \(as=t'h\). Then \[
+\gamma\alpha=(t't)^{-1}(af),\quad
+\gamma\beta=(t't)^{-1}(ag),\quad
+\gamma(\alpha+\beta)=(t't)^{-1}(a(f+g)).
+\] The equality \(a(f+g)=af+ag\) proves left distributivity. Only \(t'\), not \(a\), must belong to \(S\). The final ``in S'' in the source at 1815 is read as qualifying the last map. If it were read as qualifying both maps, the identity-only case with \(s=1,h=0\) would force \(a=0\in S\), which fails on a nonzero vector space. This is an editorial clarification of scope, not an additional source-defect report.
+
+For different representatives, the common refinement at 1791--1806 gives \(a_1f=a_2f'\), \(a_1g=a_2g'\), so \(a_1(f+g)=a_2(f'+g')\). Addition is therefore well defined. Three numerators can be placed over one denominator, transferring associativity and commutativity from the original Hom group. The zero is \(1_Y^{-1}0\) and the negative of \(s^{-1}f\) is \(s^{-1}(-f)\). Together with the two distributive calculations, this proves the required preadditive structure with the source's exact fractions, objects and auxiliary maps.
+\clearpage
+\section{Homology source review, original lines 1901--2765}\label{note-02-homology-source-review-original-lines-19012765}
+
+Primary source: the Stacks Project authors, \href{https://github.com/stacks/stacks-project/blob/a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14/homology.tex}{Homological Algebra}, commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. The authority bytes are preserved in authority-homology.tex. The cumulative comparison remains the exact homology.tex blob at b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434. The inherited FAC material is preserved; its presence is not a new certification of its historical source comparison.
+
+Consecutive reading extended through original line 2798. The chain-complex definition continues beyond that boundary and is not adjudicated here. This note resolves the seven received reports whose first locus lies between 1901 and 2765. All their requested changes are already present. The arguments below supply exact receiving maps and editorial explanations. An omitted proof, an implicit transport, or an implicit exchange of two differentials is not automatically an additional source defect.
+
+\subsection{1. Localization and the Serre quotient used in the K-group argument}\label{note-02-localization-and-the-serre-quotient-used-in-the-k-group-argument}
+
+For an additive category \(\mathcal C\) and a multiplicative system \(S\), if \(0:X\to Y\) lies in \(S\), its image is a zero isomorphism. Multiplying by its inverse gives \(1_{QX}=0\), so \(QX\) is zero. The same holds for a zero arrow into \(X\). Conversely, if \(QX=0\), the arrow \(f:0\to X\) is inverted. The exact criterion in Categories, lemma-what-gets-inverted, supplies \(h:Z\to0\) with \(fh\in S\). Thus a zero arrow into \(X\) belongs to \(S\). Applying the criterion to \(X\to0\) gives a zero arrow out of \(X\) in \(S\). No saturation hypothesis on \(S\) was silently added.
+
+For the Serre system \[
+S=\{f:\ker f,\operatorname{coker}f\in\mathcal C\}
+\] in an abelian category \(\mathcal A\), the displayed composition kernel and cokernel sequences in the original proof show closure under composition: their outer terms lie in \(\mathcal C\), and the defining Serre property puts the middle terms there. For the original pushout of \(t:A\to C\) along \(g:A\to B\), retain \[
+W=\operatorname{coker}((t,-g):A\to C\oplus B).
+\] A map from \(W\) killing \(B\to W\) is exactly a map from \(C\) killing \(t\), so \(\operatorname{coker}(B\to W)\cong\operatorname{coker}t\). The map \(\ker t\to B\), induced by \(g\), has image \(\ker(B\to W)\). To see the image equality without element notation, pull back the image inclusion of \((t,-g)\) along \(B\to C\oplus B\). Its projection to \(B\) is the kernel of \(B\to W\). Pulling back the epimorphism \(A\to\operatorname{im}(t,-g)\) gives an epimorphism onto that pullback; its source is \(\ker t\), with the sign \(-g\). Negating that map does not change its image. Hence \(\ker t\to\ker(B\to W)\) is epic. Serre closure under quotients gives the required new denominator. The pullback assertion is dual.
+
+For the cancellation axiom, \(fs=gs\) implies that \(\operatorname{im}(f-g)\) is a quotient of \(\operatorname{coker}s\). Its inclusion in the codomain therefore has source in \(\mathcal C\); quotienting by that image gives an arrow in \(S\) equalizing \(f,g\). The other cancellation axiom is dual. This proves the multiplicative-system properties with the original objects.
+
+Localization preserves cokernels for a left system and kernels for a right system. The precise finite-colimit argument read in Categories, lemma-left-localization-limits, uses \[
+\operatorname{Hom}(Q(\operatorname{colim}X_i),QY)
+ =
+\operatorname{colim}_{(s:Y\to Y')\in Y/S}
+\operatorname{Hom}(\operatorname{colim}X_i,Y')
+ =
+\lim_i\operatorname{colim}_{(s:Y\to Y')\in Y/S}
+\operatorname{Hom}(X_i,Y').
+\] The indexing category \(Y/S\) is filtered and \(i\) ranges over the given finite diagram. The displayed map preserves each projection, so it gives the colimit universal property. Its dual gives the kernel statement. The existing localization construction and the filtered-colimit lemma are dependencies here; this bounded read does not claim a new audit of the whole Categories chapter.
+
+Every localized arrow is an original arrow composed with an inverted denominator. Its coimage-to-image comparison is consequently the image of the original invertible comparison, with those endpoint isomorphisms. Thus the quotient is abelian and \(Q\) exact. Its zero objects are exactly \(\mathcal C\): if \(QX=0\), a zero arrow \(X\to Z\) belongs to \(S\), whose kernel is \(X\); conversely \(X\in\mathcal C\) makes \(0\to X\) an element of \(S\).
+
+It follows as well that this particular \(S\) is saturated. Indeed, \(Qf\) invertible implies \(Q\ker f=\ker Qf=0\) and \(Q\operatorname{coker}f=\operatorname{coker}Qf=0\). The kernel characterization just proved puts both objects in \(\mathcal C\), so \(f\in S\). This establishes the claim already made in the source proof; it is not counted as a new result.
+
+For an exact \(F:\mathcal A\to\mathcal B\) vanishing on \(\mathcal C\), the quotient factorization is defined on a fraction by \(\overline F(s^{-1}f)=F(s)^{-1}F(f)\). Exactness follows by representing an arrow by a fraction and applying preservation of its kernel and cokernel. If \(\mathcal C=\ker F\) and \(\overline F(u)=0\), exactness gives \(\overline F(\operatorname{im}u)=0\). The kernel characterization makes \(\operatorname{im}u=0\) in the quotient, so \(u=0\). Conversely faithfulness sends the equation \(\overline F(1_X)=1_{FX}=0\) back to \(1_X=0\) in the quotient, which puts \(X\) in \(\mathcal C\). This verifies the source's receiving faithfulness criterion.
+
+\subsection{2. The presentation and the lift of a short exact sequence}\label{note-02-the-presentation-and-the-lift-of-a-short-exact-sequence}
+
+OCC-12477 receives MC-STK-ERR-0763. At original line 2359 the first arrow of the presentation has codomain the free abelian group on objects and sends \[
+[A\to B\to C]\longmapsto[B]-[A]-[C].
+\] The next arrow takes a generator to its class in \(K_0(\mathcal A)\). There the displayed relation becomes zero. Stating which arrow is meant repairs the malformed source clause without changing the presentation. OCC-02833 and OCC-12478 receive MC-STK-ERR-0764: ``where computed'' becomes ``were computed'' at line 2365.
+
+The zero short exact sequence gives \([0]=0\). If \(A\cong B\), the short exact sequence \(0\to A\to B\to0\to0\) gives \([B]-[A]=0\). Consequently the presentation on objects and the presentation on isomorphism classes give the same \(K_0\). More explicitly, the projection from the free group on objects to the free group on isomorphism classes has kernel generated by differences of objects in the same class. These differences already lie in the subgroup of short-exact-sequence relations. The projected relation subgroup is precisely the relation subgroup of the isomorphism-class presentation, proving the induced isomorphism. This is the exact comparison used at source line 2446.
+
+The split sequence \(0\to A\to A\oplus B\to B\to0\) gives \([A\oplus B]=[A]+[B]\). Thus every finite integral combination of classes can be written as \([P]-[Q]\), with repeated summands retaining their integer multiplicities. The empty sum is the zero object. An exact functor sends each defining short exact sequence to one, so \([A]\mapsto[F(A)]\) kills every defining relation and induces \(K_0(F)\).
+
+OCC-12479 receives both operations of MC-STK-ERR-0765: ``proof'' becomes ``proofs'' at 2467, and ``we choose'' becomes ``we can choose'' at 2468. The existence assertion has the following proof. For a monomorphism \(\beta:B_1\to B_2\) in \(\mathcal A/\mathcal C\), choose a right-fraction representative \[
+\beta=Q(f)Q(s)^{-1},\qquad s:X\to B_1\text{ in }S,\quad f:X\to B_2.
+\] The same objects denote the chosen quotient objects, as in the localization construction. Put \(I=\operatorname{im}f\) in \(\mathcal A\). Exactness gives \(QI=\operatorname{im}Qf\). Since \(\beta\) is monic and \(Qs\) invertible, \(Qf\) is monic and its source \(QX\) maps isomorphically onto \(QI\). The quotient short exact sequence is therefore isomorphic, with all three arrows, to the image under \(Q\) of \[
+0\longrightarrow I\longrightarrow B_2
+\longrightarrow\operatorname{coker}f\longrightarrow0.
+\] The isomorphism of first terms is \(B_1\xrightarrow{(Qs)^{-1}}QX\to QI\); the middle map is the identity; the final map is the unique isomorphism between the two cokernels making the quotient map commute. This proves the needed lift of each short exact sequence in part (1).
+
+If \(QM\cong QN\), choose a roof \(M\xleftarrow{s}M'\xrightarrow{f}N\). The first leg is in \(S\). The second leg also lies in \(S\), because its image is invertible and the preceding saturation argument applies. For either leg \(v:M'\to V\), its kernel and cokernel give the exact equality \[
+[V]-[M']=[\operatorname{coker}v]-[\ker v]
+\] in \(K_0(\mathcal A)\). Subtracting the equalities for the two legs proves \[
+[M]-[N]
+=[\operatorname{coker}s]-[\ker s]
+-[\operatorname{coker}f]+[\ker f],
+\] an element in the image of \(K_0(\mathcal C)\). Apply this equality to every matched pair in the source's labelled multisets, using the lifted short exact sequences. Summing preserves every multiplicity and proves exactness in part (1).
+
+\subsection{3. Exact transport and sign of the periodic-complex witness}\label{note-02-exact-transport-and-sign-of-the-periodic-complex-witness}
+
+Retain the source's finite \(I=I^+\amalg I^-\), the labelled sets \[
+T^+=\{p\}\amalg(\{a,c\}\times I^+)\amalg(\{b\}\times I^-),\qquad
+T^-=\{q\}\amalg(\{a,c\}\times I^-)\amalg(\{b\}\times I^+),
+\] and \(O(p)=P,\ O(q)=Q,\ O(a,i)=A_i,\ O(b,i)=B_i,\ O(c,i)=C_i\). The defining relation gives a bijection \(\tau:T^+\to T^-\) with \(O(t)=O(\tau(t))\). For the actual biproducts \(M^+,M^-\), denote their injections and projections by \(\iota_t^\pm,\pi_t^\pm\). The exact isomorphism represented by the source's equality of direct sums is \[
+J=\sum_{t\in T^+}\iota_{\tau(t)}^-\pi_t^+:M^+\to M^-,
+\qquad
+J^{-1}=\sum_{t\in T^+}\iota_t^+\pi_{\tau(t)}^-:M^-\to M^+.
+\] The component identifications are the equalities \(O(t)=O(\tau(t))\). The biproduct relations give \(J^{-1}J=1_{M^+}\) and \(JJ^{-1}=1_{M^-}\). If one starts with the isomorphism-class presentation instead, insert the chosen component isomorphisms and their inverses in these formulas.
+
+Keep the source's maps \(\varphi:M^+\to M^-\) and \(\psi:M^-\to M^+\). For \(i\in I^+\), \(\varphi\) is \(A_i\to B_i\) on the \((a,i)\) summand, while \(\psi\) is \(B_i\to C_i\) on \((b,i)\). For \(i\in I^-\), \(\psi\) is \(A_i\to B_i\), while \(\varphi\) is \(B_i\to C_i\). All other components are zero: \(\varphi\) vanishes on \(p\) and on every \((c,i)\) with \(i\in I^+\); \(\psi\) vanishes on \(q\) and on every \((c,i)\) with \(i\in I^-\). The only possibly nonzero two-step composites are \(A_i\to B_i\to C_i\), and those are zero by the chosen short exact sequences. Thus \(\psi\varphi=0\) and \(\varphi\psi=0\).
+
+The original direct-sum kernels and images give \[
+\ker\varphi
+=P\oplus\bigoplus_{i\in I^+}C_i\oplus
+ \bigoplus_{i\in I^-}A_i,\qquad
+\operatorname{im}\psi
+=\bigoplus_{i\in I^+}C_i\oplus\bigoplus_{i\in I^-}A_i,
+\] where each \(A_i\) is its given subobject of the corresponding \(B_i\). These equalities mean the canonical direct-sum maps, with their indicated subobject inclusions. Quotienting by those last summands gives \(\ker\varphi/\operatorname{im}\psi\cong P\). Dually \(\ker\psi/\operatorname{im}\varphi\cong Q\).
+
+To supply a single-object witness with the sign in the theorem, set \[
+M=M^+,\qquad
+\widehat\varphi=\psi J,\qquad
+\widehat\psi=J^{-1}\varphi.
+\] Both composites are zero: \[
+\widehat\psi\,\widehat\varphi=J^{-1}\varphi\psi J=0,\qquad
+\widehat\varphi\,\widehat\psi=\psi\varphi=0.
+\] Since \(J\) is invertible, \[
+H^0(M,\widehat\varphi,\widehat\psi)
+=\ker\varphi/\operatorname{im}\psi\cong P,
+\qquad
+H^1(M,\widehat\varphi,\widehat\psi)
+\cong\ker\psi/\operatorname{im}\varphi\cong Q.
+\] The second isomorphism is induced by \(J\). Thus the difference is exactly \([P]-[Q]\), with the required sign, and the complex is exact in the Serre quotient since both cohomology objects belong to \(\mathcal C\).
+
+If instead one first transports without exchanging the maps, the pair is \((J^{-1}\varphi,\psi J)\); its \(H^0\) is \(Q\) and its \(H^1\) is \(P\). Exchanging them gives the preceding witness. The source claims that the kernel is the collection of all such differences. That collection is closed under this exchange, so the sign observation does not refute the theorem. The formulas here make its implicit final witness explicit. This is editorial proof clarification, not a new received report, not a replacement of the source proof, and not a novelty claim.
+
+Conversely, for any source complex \((M,\varphi,\psi)\), the four exact kernel/image sequences give \[
+0=[M]-[M]
+=[\ker\varphi]+[\operatorname{im}\varphi]
+-[\ker\psi]-[\operatorname{im}\psi]
+=[H^1]-[H^0].
+\] Hence its displayed difference lies in the kernel. This proves both directions of the claimed witness description.
+
+The proof also establishes the following stronger, object-level statement. For any prescribed objects \(P,Q\) of a small abelian category \(\mathcal A\), \([P]=[Q]\) in \(K_0(\mathcal A)\) if and only if a single-object periodic complex as above has \(H^0\cong P\) and \(H^1\cong Q\). For sufficiency, use the last four exact-sequence relations. For necessity, equality in the presented group supplies the finite signed relation used to define \(I^\pm,T^\pm,O,\tau\); the full construction above uses no Serre assumption until its assertion of exactness in the quotient. Thus it applies to the prescribed pair itself. If \(P,Q\in\mathcal C\) for a Serre subcategory, exactness after passing to \(\mathcal A/\mathcal C\) is the additional consequence already proved. This is a proved refinement of the stated source conclusion, extracted from its proof, with no novelty claim.
+
+The original receiving proof in \href{https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434/chow.tex\#L18526}{Chow Homology and Chern Classes} at lines 18526--18568 uses precisely this refinement: \(P=\mathcal A\oplus\mathcal A'\) and \(Q=\mathcal B\oplus\mathcal B'\) are prescribed coherent sheaves, and it needs their individual realization as \(H^0,H^1\), not only an equality of differences of classes. The explicit construction supplies that implication with the stated sign. This checks the use of the Homology result; it does not certify the other geometric lemmas in that proof. The earlier references at Chow lines 3792 and 13180 use part (1), whose exact-sequence statement is unchanged. Line 18414 identifies the periodic-complex result as motivation.
+
+\subsection{4. Delta-functor transformations, independence and naturality}\label{note-02-delta-functor-transformations-independence-and-naturality}
+
+OCC-02834 covers two loci, original lines 2679 and 2723. They already have the distinct corrections MC-STK-ERR-0766 and MC-STK-ERR-0767. OCC-12480 duplicates the first locus and OCC-12481 the second. Use ``transformations'' in both places. Do not count the single two-locus report twice in the physical-report ledger.
+
+For completeness, the omitted construction check in the source can be made with the following exact diagrams. Assume \(t^i:F^i\to G^i\) has been constructed naturally through degree \(n\), with connecting-map compatibility in the already defined degrees. For a monomorphism \(u:A\to B\) effacing \(F^{n+1}(A)\), put \(C=\operatorname{coker}u\). The connecting map \(\delta_F:F^n(C)\to F^{n+1}(A)\) is epic and is a cokernel of \(F^n(B)\to F^n(C)\). Naturality of \(t^n\) gives \[
+\delta_Gt_C^nF^n(B\to C)
+=\delta_GG^n(B\to C)t_B^n=0.
+\] Thus there is a unique \(T_A^u:F^{n+1}(A)\to G^{n+1}(A)\) with \[
+T_A^u\delta_F=\delta_Gt_C^n.
+\] This is precisely the source's displayed cokernel construction.
+
+For two choices \(u:A\to B\), \(v:A\to B'\), the map \(w=(u,v):A\to B\oplus B'\) is monic and also effaces \(F^{n+1}(A)\). It is monic because its first component is; its \(F^{n+1}\)-image is zero because that additive functor preserves biproduct components and both components are zero. Projection onto \(B\) gives a map of short exact sequences with identity on \(A\), hence a map \(c:\operatorname{coker}w\to C\). Naturality of both connecting morphisms and of \(t^n\) gives \[
+T_A^u\delta_{F,w}
+=T_A^u\delta_{F,u}F^n(c)
+=\delta_{G,u}t_C^nF^n(c)
+=\delta_{G,w}t_{\operatorname{coker}w}^n.
+\] Cancel the epimorphism \(\delta_{F,w}\) to obtain \(T_A^u=T_A^w\). The second projection proves \(T_A^v=T_A^w\). Thus the map is independent of the chosen effacement.
+
+For \(f:A\to A'\), choose effacements \(u:A\to B\) and \(v:A'\to B'\). Now \(w=(u,vf):A\to B\oplus B'\) is monic and effaces \(F^{n+1}(A)\). The second projection together with \(f\) makes a map from its short exact sequence to that of \(v\). Write \(c\) for the induced quotient map. The two candidates \(G^{n+1}(f)T_A^w\) and \(T_{A'}^vF^{n+1}(f)\) have, after composition with the epic \(\delta_{F,w}\), the common value \(\delta_{G,v}t_{\operatorname{coker}v}^nF^n(c)\). They are equal, proving naturality of \(t^{n+1}\).
+
+Finally, for any \(0\to A\xrightarrow{i}B\to C\to0\), choose a monomorphism \(v:B\to E\) effacing \(F^{n+1}(B)\). Then \(u=vi\) effaces \(F^{n+1}(A)\). The maps \(1_A,v\) induce \(c:C\to\operatorname{coker}u\). The defining identity for \(t_A^{n+1}\), followed by \(F^n(c)\), becomes \[
+t_A^{n+1}\delta_{F,A\to B\to C}
+=\delta_{G,A\to E\to\operatorname{coker}u}
+ t_{\operatorname{coker}u}^nF^n(c)
+=\delta_{G,A\to B\to C}t_C^n.
+\] This is the required connecting-map compatibility. Any other extension must obey the same equation for an effacing short exact sequence, whose connecting map is epic; it therefore agrees in degree \(n+1\). Induction proves existence and uniqueness in every degree.
+
+For the subsequent uniqueness lemma, apply universality in both directions to the identity on the fixed degree-zero functor \(F\). The two composites are the identity because they extend that identity and extension is unique. The resulting isomorphism is unique among those inducing the identity on the specified \(F\). This does not assert that a universal delta-functor has no automorphisms inducing nonidentity automorphisms of \(F\). Again this states the exact comparison implicit in the source; it is editorial explanation, not a new defect or a newly discovered theorem.
+\clearpage
+\section{Homology: complexes, shifts, graded duals and total complexes}\label{note-03-homology-complexes-shifts-graded-duals-and-total-complexes}
+
+This is an editorial review note, not a replacement for the source. The primary source is the Stacks Project, homology.tex, official commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. Line numbers for Homology below refer to that original file. Receiving passages in other chapters refer to commit b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434 unless stated otherwise. Exact source identities and reading intervals are recorded in SOURCE\_READING\_PART03.json. No novelty is claimed.
+
+\subsection{1. Received reports and their exact scope}\label{note-03-received-reports-and-their-exact-scope}
+
+The following nine groups account for thirteen physical reports. Their occurrence identities, original producer text, earlier accepted operations and exact current postimages are bound in REVIEW\_PART03.json and REPORT\_DISPOSITIONS\_PART03.json.
+
+{ % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Original locus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Decision
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+HOMOLOGY-RECON-017 & 3165 & Change ``maps'' to ``map''; the following ``is an isomorphism for all i'' then has a singular quantified subject. \\
+HOMOLOGY-RECON-018 & 3246 & The earlier correction of ``exactnesss'' to ``exactness'' is valid and present. \\
+HOMOLOGY-RECON-019 & 3560 & The objects are cohomology objects of cochain complexes. The earlier change from ``homology'' to ``cohomology'' is valid and present. \\
+HOMOLOGY-RECON-020 & 3577 & The maps s' and pi' form a compound subject. Change ``is a second choice'' to ``are a second choice''. \\
+HOMOLOGY-RECON-021 & 3962 & The earlier change from ``in stead of'' to ``instead of'' is valid and present. \\
+HOMOLOGY-RECON-022 & 4048 & The earlier change from ``vectors spaces'' to ``vector spaces'' is valid and present. The p02 report's interval ends one line before the actual target. \\
+HOMOLOGY-RECON-023 & 4074 & The unfinished unit sentence has already been completed with the explicitly defined graded unit. Keep that valid completion. Deleting the original fragment was an alternative repair, not an instruction to delete the now complete sentence. \\
+HOMOLOGY-RECON-024 & 4231--4232 & The summation must enclose all three component maps. The two earlier operations supply the opening and closing parentheses. Section 5 checks the complete differential. \\
+HOMOLOGY-RECON-025 & 4242 & The earlier insertion of the article in ``combine the sum of those'' is valid and present. \\
+\end{longtable}
+}
+
+The complete differential and splitting arguments below are supporting mathematics. They do not convert every copyedit into a mathematical defect. The findings in Sections 2, 4 and 6 were discovered during this review and are recorded separately from the thirteen received reports.
+
+\subsection{2. Connecting morphisms under the stated shift convention}\label{note-03-connecting-morphisms-under-the-stated-shift-convention}
+
+Source locators: lemma-long-exact-sequence-cochain, lines 3192--3249; definition-shift-cochain, lines 3426--3444; and definition-cohomology-shift, lines 3461--3469. The snake construction used here is lemma-snake, lines 1011--1086.
+
+Let S be a short exact sequence of cochain complexes in an abelian category: \[
+S:\quad 0\longrightarrow A^\bullet\xrightarrow{u}B^\bullet
+\xrightarrow{v}C^\bullet\longrightarrow0.
+\] Use exactly the source's differential \[
+A[k]^i=A^{i+k},\qquad d_{A[k]}^i=(-1)^k d_A^{i+k},
+\] and write \[
+c_{k,A}^i:H^{i+k}(A^\bullet)\longrightarrow H^i(A[k]^\bullet)
+\] for the source's identification induced by the identity of the underlying objects. There is no additional sign in c.~The same convention applies to B and C.
+
+The precise shift formula for the source's snake boundary is \[
+\boxed{\quad
+\delta_{S[k]}^i\,c_{k,C}^i
+ =(-1)^k c_{k,A}^{i+1}\,\delta_S^{i+k}.
+\quad}                                                    \tag{2.1}
+\] Both sides have domain H\^{}\{i+k\}(C) and codomain H\^{}\{i+1\}(A{[}k{]}). The formula is valid for every integer k.
+
+Here is a proof within the original abelian category, without replacing it by a category of modules. In the source snake diagram write the rows as \[
+x\xrightarrow{f}y\xrightarrow{g}z\longrightarrow0,\qquad
+0\longrightarrow u_0\xrightarrow{\kappa}v_0
+\xrightarrow{\ell}w,
+\] and the vertical maps as alpha, beta and gamma. Thus kappa is monic and g is epic. Put \[
+P=y\times_z\ker(\gamma),\quad
+\pi':P\longrightarrow y,\quad
+\pi:P\longrightarrow\ker(\gamma),\quad
+q:u_0\longrightarrow\operatorname{coker}(\alpha).
+\] The pullback projection pi is epic. The map beta pi' lands in ker(ell), which is the image of kappa. Consequently there is a unique a:P -\textgreater{} u\_0 with kappa a=beta pi'. The snake boundary is characterized by \[
+\delta\pi=qa.
+\] Replace all three vertical maps by lambda times those maps, where lambda=(-1)\^{}k is an invertible scalar endomorphism, central for every additive morphism. Kernels of gamma and lambda gamma and cokernels of alpha and lambda alpha have their canonical identical presentations. The pullback P, its projections, and q can therefore be kept fixed. The new lift a\_lambda satisfies \[
+\kappa a_\lambda=\lambda\beta\pi'
+ =\kappa(\lambda a).
+\] Monicity gives a\_lambda=lambda a. Hence \[
+\delta_\lambda\pi=q a_\lambda
+ =\lambda q a=\lambda\delta\pi.
+\] Epicity of pi gives delta\_lambda=lambda delta.
+
+Apply this calculation to the exact-row diagram used in the source: \[
+\begin{array}{ccccccc}
+A^j/\operatorname{im}d_A^{j-1}&\longrightarrow&
+B^j/\operatorname{im}d_B^{j-1}&\longrightarrow&
+C^j/\operatorname{im}d_C^{j-1}&\longrightarrow&0\\
+\downarrow d_A^j&&\downarrow d_B^j&&\downarrow d_C^j\\
+\ker d_A^{j+1}&\longrightarrow&
+\ker d_B^{j+1}&\longrightarrow&\ker d_C^{j+1}.
+\end{array}
+\] The lower row has an initial zero. The kernel of the right vertical map is H\^{}j(C), and the cokernel of the left vertical map is H\^{}\{j+1\}(A). For S{[}k{]} take j=i+k. All three vertical maps acquire lambda; the kernels, images and quotient presentations remain canonically the same. The snake calculation therefore gives (2.1).
+
+The unsigned interpretation fails even in abelian groups. Take A with A\^{}1=Z and all other terms zero; C with C\^{}0=Z and all other terms zero; and B with B\^{}0=B\^{}1=Z and d\_B\^{}0=id\_Z. The inclusion u\^{}1 and projection v\^{}0 are identities, and all their other components are zero. This is termwise short exact. The boundary \[
+H^0(C)=\mathbb Z\xrightarrow{\delta_S^0}H^1(A)=\mathbb Z
+\] is id\_Z: lift an integer to B\^{}0, apply d\_B\^{}0, and identify B\^{}1 with A\^{}1. In the shift by 1, d\_\{B{[}1{]}\}\^{}\{-1\}=-id\_Z, so \[
+H^{-1}(C[1])=\mathbb Z
+\xrightarrow{\delta_{S[1]}^{-1}}
+H^0(A[1])=\mathbb Z
+\] is -id\_Z. The source c maps on these groups are identities. Thus the sign in (2.1) cannot be discarded.
+
+This does not invalidate existence, exactness or naturality of the long exact sequence. It makes the source's assertion ``compatible with shifts'' precise and repairs the unsigned reading of that assertion.
+
+There is also an exact coherent comparison of long exact sequences if such a comparison is wanted. Define a \emph{different, explicitly named} map \[
+\widetilde c_{k,A}^i
+=\varepsilon(k,i)c_{k,A}^i,\qquad
+\varepsilon(k,i)=(-1)^{ki+k(k-1)/2}.                         \tag{2.2}
+\] This does not change or silently redefine the source c.~Within one cohomological degree, the same scalar multiplies the A, B and C terms, so all horizontal squares commute. For the connecting square, \[
+\delta_{S[k]}^i\widetilde c_{k,C}^i
+=\varepsilon(k,i)(-1)^k c_{k,A}^{i+1}\delta_S^{i+k}
+=\widetilde c_{k,A}^{i+1}\delta_S^{i+k},
+\] because epsilon(k,i+1)=(-1)\^{}k epsilon(k,i). All components are isomorphisms. Finally the comparison for a shift by k followed by l has scalar \[
+\varepsilon(l,i)\varepsilon(k,i+l)
+=(-1)^{li+l(l-1)/2+k(i+l)+k(k-1)/2}
+=\varepsilon(k+l,i).
+\] The last equality follows from (k+l)(k+l-1)/2=k(k-1)/2+l(l-1)/2+kl, also for negative integers. Thus (2.2) is coherent for successive shifts; it is not merely an objectwise observation that the original unsigned square fails.
+
+Propagation: the bounded receiving passages listed in the ledger use existence, exactness, naturality or the unshifted split boundary. Those uses remain valid. More on Algebra, lines 18977--18999, explicitly retains the same unsigned cohomology identification and snake boundary, which agrees with (2.1). Its conventions must be kept, not silently changed. No claim is made here to have audited every lemma of a receiving chapter.
+
+\subsection{3. Split boundaries and the orientation of their homotopy}\label{note-03-split-boundaries-and-the-orientation-of-their-homotopy}
+
+At lines 3520--3606 the source fixes a termwise split short exact sequence with u:A -\textgreater{} B and v:B -\textgreater{} C. Write its splitting maps in degree n as s\^{}n:C\^{}n -\textgreater{} B\^{}n and pi\^{}n:B\^{}n -\textgreater{} A\^{}n.~They obey \[
+v^ns^n=1,\quad \pi^nu^n=1,\quad \pi^ns^n=0,\quad
+u^n\pi^n+s^nv^n=1.
+\] The component delta\^{}n=pi\^{}\{n+1\}d\_B\^{}ns\^{}n has source C\^{}n and target A\^{}\{n+1\}=A{[}1{]}\^{}n.~In the decomposition B\^{}n=A\^{}n direct-sum C\^{}n the differential has matrix \[
+d_B^n=
+\begin{pmatrix}d_A^n&\delta^n\\0&d_C^n\end{pmatrix}.
+\] The upper-right component of d\_B\^{}\{n+1\}d\_B\^{}n=0 is d\_A\^{}\{n+1\}delta\^{}n+delta\^{}\{n+1\}d\_C\^{}n=0. Since the differential of A{[}1{]} is -d\_A, this says exactly that delta:C -\textgreater{} A{[}1{]} is a cochain map. On cycles in C, its formula is the snake lift of Section 2; quotienting by boundaries therefore gives the stated long exact \emph{cohomology} boundary. The terminology correction at line 3560 changes none of these maps.
+
+For the second splitting write s'=s+u h and pi'=pi+g v, retaining all degrees as in the source. From pi's'=0 and the four splitting identities, \[
+0=(\pi+gv)(s+uh)=h+g,
+\] so g=-h. Expanding the boundary, with no terms suppressed before their vanishing is justified, gives \[
+\begin{aligned}
+(\delta')^n
+&=(\pi^{n+1}+g^{n+1}v^{n+1})d_B^n(s^n+u^nh^n)\\
+&=\delta^n+
+  \pi^{n+1}d_B^nu^nh^n+
+  g^{n+1}v^{n+1}d_B^ns^n+
+  g^{n+1}v^{n+1}d_B^nu^nh^n\\
+&=\delta^n+d_A^nh^n+g^{n+1}d_C^n+0\\
+&=\delta^n+d_{A[1]}^{n-1}g^n+g^{n+1}d_C^n .
+\end{aligned}
+\] The zero term is zero because v\^{}\{n+1\}d\_B\^{}nu\^{}n=d\_C\^{}nv\^{}nu\^{}n=0. With the convention f-g=dh+hd, the displayed g is a homotopy from delta' to delta, and h=-g is a homotopy from delta to delta'. The source says ``between'' and displays the correct equation. This orientation clarification is not counted as an additional source error.
+
+\subsection{4. Graded duals and propagation to the Weil shift}\label{note-03-graded-duals-and-propagation-to-the-weil-shift}
+
+Source: lemma-left-dual-graded-vector-spaces, lines 4063--4107, with the tensor product and unit of example-graded-vector-spaces. The exact left-dual convention is Categories, definition-dual, lines 9464--9489: \[
+\eta:F\longrightarrow V\otimes W,\qquad
+\epsilon:W\otimes V\longrightarrow F,
+\] and both triangle composites are identities. The associators and unit maps are the usual ones on vector spaces and are retained in these composites. Their action sends nested tensors to the same ordered three factors; no interchange of factors occurs.
+
+\textbf{HOMOLOGY-UNDER-004.} A graded F-vector space V has a left dual if and only if sum\_n dim\_F V\^{}n is finite. In that case evaluation identifies the component W\^{}\{-n\} of any left dual with (V\^{}n)\^{}\emph{, and a dual is provided by W\^{}\{-n\}=(V\^{}n)\^{}} with the evaluation and coevaluation below.
+
+For necessity, write the degree-zero tensor eta(1) as a finite sum \[
+\eta(1)=\sum_{(n,i)\in J} e_{n,i}\otimes w_{-n,i}.
+\] Here each e\_\{n,i\} is a member of a homogeneous basis of V and J is finite; coefficients have been absorbed into the displayed w, with zero coefficients still allowed. The triangle on V states, for every v in V, \[
+v=\sum_{(n,i)\in J}e_{n,i}\epsilon(w_{-n,i},v).
+\] Thus the finitely many displayed e span V. In particular only finitely many V\^{}n are nonzero, and each is finite-dimensional. The triangle on W states \[
+w=\sum_{(n,i)\in J}\epsilon(w,e_{n,i})w_{-n,i},
+\] so W is also finite-dimensional. Let E\_n:W\^{}\{-n\} -\textgreater{} (V\^{}n)\^{}* send w to the functional v -\textgreater{} epsilon(w,v). If E\_n(w)=0, all coefficients in the second triangle vanish: components of degrees other than n pair to zero since epsilon has degree zero. Hence w=0, proving injectivity. Taking a full homogeneous basis of the now finite V in eta(1), the first triangle with v=e\_\{n,j\} gives \[
+\epsilon(w_{-n,i},e_{n,j})=\delta_{ij}.
+\] The images E\_n(w\_\{-n,i\}) are the full dual basis. Thus E\_n is also surjective and is the asserted isomorphism.
+
+Conversely assume the total dimension is finite. For each n choose a basis e\_\{n,1\},\ldots,e\_\{n,r\_n\} of V\^{}n, and its dual basis e\^{}*\_\{n,1\},\ldots,e\^{}*\_\{n,r\_n\}. Set \[
+W^m=(V^{-m})^*,\qquad
+\eta(1)=\sum_n\sum_{i=1}^{r_n}e_{n,i}\otimes e^*_{n,i}.
+\] The sum is finite and has total degree zero. Define epsilon on W\^{}\{-n\} tensor V\^{}n to be evaluation and on all components of nonzero total degree to be zero. Both maps preserve degrees. For homogeneous v in V\^{}n the triangle on V is \[
+v\longmapsto
+\sum_{m,i}e_{m,i}\otimes e^*_{m,i}\otimes v
+\longmapsto
+\sum_i e_{n,i}e^*_{n,i}(v)=v.
+\] For w in W\^{}\{-n\}, the other triangle is \[
+w\longmapsto
+\sum_{m,i}w\otimes e_{m,i}\otimes e^*_{m,i}
+\longmapsto
+\sum_i w(e_{n,i})e^*_{n,i}=w.
+\] Linearity proves both identities on all vectors. No Koszul sign occurs because neither composite uses a symmetry map.
+
+The coevaluation is independent of the bases. Explicitly, in one degree write e'\emph{j=sum\_i e\_i M}\{ij\}. The corresponding dual basis is (e')\^{}\emph{\emph{j=sum\_k (M\^{}\{-1\})}\{jk\}e\_k\^{}}. Therefore \[
+\sum_j e'_j\otimes(e')^*_j
+=\sum_{i,k,j}M_{ij}(M^{-1})_{jk}e_i\otimes e_k^*
+=\sum_i e_i\otimes e_i^*.
+\] Adding the finitely many degrees proves independence for eta. This establishes the converse and exact dual identification without substituting a stronger lemma into the translated source.
+
+\textbf{Weil receiving correction.} In lemma-from-functor-to-weil-classical, Weil lines 1681--1685 fix F{[}n{]} to mean F in degree -n and choose \[
+F[2n]\xrightarrow{\sim}G(\mathbf1(n))
+\] compatibly with tensor products for every integer n.~With the source's monoidal identification h(X)(d)=h(X) tensor 1(d), these maps force \[
+G(h(X)(d))
+\cong G(h(X))\otimes G(\mathbf1(d))
+\cong H^*(X)\otimes F[2d].                                \tag{4.1}
+\] Each isomorphism here is the source's given monoidal comparison or the chosen degree-preserving isomorphism. No coordinate or twist has been discarded.
+
+In particular \[
+(H^*(X)\otimes F[2d])^r
+ = H^{r+2d}(X)\otimes F,
+\] since the second factor has its sole nonzero component in degree -2d. At r=0 the class {[}X{]}:h(X)(d) -\textgreater{} 1 therefore supplies exactly the trace H\^{}\{2d\}(X) -\textgreater{} F printed at line 1715. The two source occurrences of F{[}-2d{]}, at lines 1712 and 1721, have the opposite shift and must be F{[}2d{]}. With the erroneous shift the degree-zero component would instead be H\^{}\{-2d\}(X); at degree -i it would be H\^{}\{-i-2d\}(X). With (4.1), the dual component is H\^{}\{2d-i\}(X), and the dual evaluation in Section 4 has precisely the source's stated pairing \[
+H^{2d-i}(X)\otimes_F H^i(X)\longrightarrow F.
+\] The conclusion about that pairing need not be weakened: it is its incorrect intermediate shift that is repaired.
+
+The later treatment at Weil lines 2885--2891 already has \[
+G(h(X)(d))=H^*(X)\otimes_F F(d)[2d],
+\qquad
+H^{2d-i}(X)(d)\otimes_F H^i(X)\longrightarrow F.
+\] Its Tate factor F(d) remains present. The classical chosen trivialization does not authorize deleting that factor in the later treatment. Other bounded receiving uses at lines 4646 and 4717 require the original finite-dimensionality consequence and are unaffected. This review checks these uses of graded duality, not the entire construction of motives or every geometric dependency.
+
+\subsection{5. The full total differentials and the double shift}\label{note-03-the-full-total-differentials-and-the-double-shift}
+
+For a double complex, the source's differentials square to zero in their own directions and commute in the two directions. On the summand A\^{}\{p,q\} the total differential is \[
+D=d_1^{p,q}+(-1)^p d_2^{p,q}.
+\] The two square terms in D\^{}2 vanish. The coefficient of d\_2\^{}\{p+1,q\}d\_1\^{}\{p,q\} is (-1)\^{}\{p+1\}; that of d\_1\^{}\{p,q+1\}d\_2\^{}\{p,q\} is (-1)\^{}p.~The two composites agree and these coefficients sum to zero. Thus D\^{}2=0 with precisely the original signs.
+
+For a triple complex the total differential on A\^{}\{p,q,r\} is \[
+D=d_1^{p,q,r}+(-1)^p d_2^{p,q,r}
+                    +(-1)^{p+q}d_3^{p,q,r}.              \tag{5.1}
+\] Each same-direction square is zero. For the 1/2 cross pair the coefficients are (-1)\^{}\{p+1\} and (-1)\^{}p.~For the 1/3 pair the coefficients are (-1)\^{}\{p+q+1\} and (-1)\^{}\{p+q\}. For the 2/3 pair the coefficient for d\_3 after d\_2 is (-1)\^{}p(-1)\^{}\{p+q+1\}=(-1)\^{}\{2p+q+1\}; the coefficient for d\_2 after d\_3 is (-1)\^{}\{p+q\}(-1)\^{}p=(-1)\^{}\{2p+q\}. In each pair the composites agree by the defining commutation relation, and the coefficients add to zero. This verifies every term of D\^{}2. Consequently the sum over p+q+r=n must enclose all of (5.1), as the accepted parentheses correction does.
+
+The comparison with iterated totals retains every summand. Combining indices 1 and 2 first gives internal differential d\_1+(-1)\^{}p d\_2; then combining its index p+q with r adds (-1)\^{}\{p+q\}d\_3. Combining 2 and 3 first gives d\_2+(-1)\^{}q d\_3; combining p with q+r gives d\_1+(-1)\^{}p(d\_2+(-1)\^{}q d\_3), which is (5.1). The flattening map sends each original A\^{}\{p,q,r\} to that same labelled summand in the three-index coproduct. Its inverse is determined by the reverse summand inclusions. The coproduct universal properties make both composites identities. These statements apply when the displayed coproducts exist, as required by the source; existence is not inferred for an arbitrary additive category.
+
+For the double shift at lines 4247--4302, use the source's comparison \[
+\gamma:\operatorname{Tot}(A)[a+b]
+\longrightarrow \operatorname{Tot}(A[a,b]).
+\] On the summand originally labelled (p,q), the target label is (p-a,q-b), and gamma is multiplication by (-1)\^{}\{pb\}. The source differential on that summand has coefficients (-1)\^{}\{a+b\} for d\_1 and (-1)\^{}\{a+b+p\} for d\_2. The target differential has coefficients (-1)\^{}a for d\_1 and (-1)\^{}\{p-a+b\} for d\_2. For d\_1, the coefficients in d\_target gamma and gamma d\_source are respectively \[
+(-1)^{a+pb},\qquad
+(-1)^{(p+1)b+a+b}=(-1)^{pb+a+2b}.
+\] They agree. For d\_2 they are respectively \[
+(-1)^{p-a+b+pb},\qquad
+(-1)^{pb+a+b+p};
+\] their exponents differ by 2a. They also agree. Multiplication by the same sign on each reverse summand is the inverse. Thus the source's comparison is an isomorphism of complexes with all original indices and signs retained; no correction is needed there.
+
+\subsection{6. Homological versus cohomological delta-functors in Sites Cohomology}\label{note-03-homological-versus-cohomological-delta-functors-in-sites-cohomology}
+
+Source: example-category-to-point and example-left-derived-colimits, Sites Cohomology lines 10015--10114. The category carries the chaotic topology, so its sheaves are presheaves. Exactness of their sequences is objectwise. Each term of K\_n(F) is the stated direct sum of groups F(U\_0) indexed by chains of n arrows. Evaluations are exact, and direct sums of short exact sequences of abelian groups are exact. The construction therefore sends short exact sequences of these presheaves to termwise short exact sequences of chain complexes.
+
+For such a sequence F\_1 -\textgreater{} F\_2 -\textgreater{} F\_3 the connecting maps are \[
+H_n(K_\bullet(F_3))\longrightarrow H_{n-1}(K_\bullet(F_1)).
+                                                               \tag{6.1}
+\] This is the homological convention. The source at lines 10074--10076 cites the cohomological delta-functor definition and cochain long exact sequence without stating the change of convention.
+
+There is an exact comparison, not an unrelated pair of conventions. For a chain complex K define \[
+L^i=K_{-i},\qquad d_L^i=d_{K,-i}:K_{-i}\longrightarrow K_{-i-1}.
+\] No sign is inserted. On a chain map f define its cochain component to be f\_\{-i\}. The differential and morphism equations are the same equations with changed indices. This construction has inverse K\_n=L\^{}\{-n\} with d\_\{K,n\}=d\_L\^{}\{-n\}; both composites are the identities. Moreover \[
+H^i(L)=
+\ker(d_{K,-i})/\operatorname{im}(d_{K,-i+1})
+=H_{-i}(K)
+\] with the identical kernel, image and quotient maps. The snake diagram for L at degree -n is the chain snake diagram for K at degree n, so their connecting maps agree and give exactly (6.1).
+
+For the definition indexed by nonnegative integers, the precise dual description is also available. If A is the abelian category of these presheaves and T\_n(F)=H\_n(K(F)), regard T\_n as a covariant functor A\^{}op -\textgreater{} Ab\^{}op. A short exact sequence 0 -\textgreater{} F\_1 -\textgreater{} F\_2 -\textgreater{} F\_3 -\textgreater{} 0 in A becomes 0 -\textgreater{} F\_3 -\textgreater{} F\_2 -\textgreater{} F\_1 -\textgreater{} 0 in A\^{}op. In Ab\^{}op the map (6.1) at index n+1 is the cohomological boundary \[
+T_n(F_1)\longrightarrow T_{n+1}(F_3).
+\] Reversing the homological long exact sequence gives the required cohomological exact sequence in Ab\^{}op, starting with 0 -\textgreater{} T\_0(F\_3) -\textgreater{} T\_0(F\_2) -\textgreater{} T\_0(F\_1). Naturality is the reversal of the natural snake squares; compositions and identity maps are preserved by the functors on both opposite categories. This proves exactly the sense in which the homological definition is dual to the cited definition.
+
+The proposed editorial clarification says ``homological delta-functor'', specifies the dual convention, and cites lemma-long-exact-sequence-chain. It does not call the intended left-derived-functor assertion false. The later use of dual universal-delta-functor lemmas at 10110--10113 is consistent with this convention. The receiving passage at 10624--10629 uses the same homological functors; the convention clarification applies without changing its claimed functors. The genuinely cochain example at 10923--10928 keeps its original cochain citation.
+
+\subsection{7. Reading and integration limits}\label{note-03-reading-and-integration-limits}
+
+The primary Homology source has been read consecutively through line 4336. The remark beginning at line 4304 continues past that boundary and is not certified here. The next source line is 4337. The thirteen received reports in Section 1 have been adjudicated; this does not certify every result in the whole chapter.
+
+The previews and inverse checks recorded with this note preserve all inherited additions and every earlier accepted correction. They are local proposed changes, not an admission, cumulative composition or publication receipt. The graded-dual equivalence and coherent long-exact-sequence comparison belong in the separate editorial supplement. Broader synthesis remains after the core correction and received-candidate queue.
+\clearpage
+\section{Homology: the two complexes-of-complexes conventions}\label{note-04-homology-the-two-complexes-of-complexes-conventions}
+
+This editorial note continues PROOFS\_2799\_4336.md. Primary source: Stacks Project, homology.tex, official commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14, especially remark-double-complex-complex-of-complexes-first (4304--4475) and remark-double-complex-complex-of-complexes-second (4477--4651). The pinned cumulative source is commit b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434. No novelty is claimed.
+
+\subsection{1. Twelve reports represent four already corrected findings}\label{note-04-twelve-reports-represent-four-already-corrected-findings}
+
+{ % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source locus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Existing correction
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+HOMOLOGY-RECON-026 & 4435 & MC-STK-ERR-0774: the component s\^{}\{p,q\} lands in B\^{}\{p,q\}. \\
+HOMOLOGY-RECON-027 & 4518 & MC-STK-ERR-0775: h\^{}\{p,q\} is the degree-q component of h\^{}p. \\
+HOMOLOGY-RECON-028 & 4581 & MC-STK-ERR-0776: the first-index connecting map lands in A{[}1,0{]}. \\
+HOMOLOGY-RECON-029 & 4608--4609 & MC-STK-ERR-0777: the component lands in B\^{}\{p,q\}, and the families are s\^{}p and pi\^{}p. \\
+\end{longtable}
+}
+
+Each group has one original p02 report, one later p02 report explicitly withdrawn by its producer as a duplicate, and one French report. The withdrawal is preserved. The twelve physical reports do not become twelve corrections: there are four existing units, containing five existing source operations. All current postimages are checked exactly in REVIEW\_PART04.json.
+
+\subsection{2. Homotopies and shifts in both conventions}\label{note-04-homotopies-and-shifts-in-both-conventions}
+
+Work in the source's additive category with countable direct sums. The double differentials commute and the total differential on A\^{}\{p,q\} is d\_1\^{}\{p,q\}+(-1)\^{}p d\_2\^{}\{p,q\}.
+
+In the first convention the outer degree is q. A homotopy h\^{}q between f and g has components \[
+h^{p,q}:A^{p,q}\longrightarrow B^{p,q-1}.
+\] The outer homotopy equation and the assertion that h\^{}q is an inner cochain map are respectively \[
+f^{p,q}-g^{p,q}
+=d_{B,2}^{p,q-1}h^{p,q}+h^{p,q+1}d_{A,2}^{p,q},
+\] \[
+d_{B,1}^{p,q-1}h^{p,q}=h^{p+1,q}d_{A,1}^{p,q}.
+\] Define H on the summand A\^{}\{p,q\} of Tot\^{}n(A), n=p+q, to be (-1)\^{}p h\^{}\{p,q\}, with target the indicated summand of Tot\^{}\{n-1\}(B). The full component of D\_B H+H D\_A is \[
+\begin{aligned}
+&(-1)^p d_{B,1}^{p,q-1}h^{p,q}
+ +(-1)^{2p}d_{B,2}^{p,q-1}h^{p,q}\\
+&\hspace{1em}
+ +(-1)^{p+1}h^{p+1,q}d_{A,1}^{p,q}
+ +(-1)^{2p}h^{p,q+1}d_{A,2}^{p,q}.
+\end{aligned}
+\] The two terms with d\_1 have opposite coefficients and equal composites. The other two terms give f\^{}\{p,q\}-g\^{}\{p,q\}. Thus Tot sends this homotopy to a homotopy with the asserted sign.
+
+The outer shift by k is {[}0,k{]}. By Section 5 of the preceding note, the comparison \[
+\gamma_{0,k}:\operatorname{Tot}(B)[k]
+\longrightarrow\operatorname{Tot}(B[0,k])
+\] on the original summand B\^{}\{p,q\} is (-1)\^{}\{pk\}. If f=g, the homotopy equation says exactly that h:A -\textgreater{} B{[}0,-1{]} is a cochain map in the outer direction: -d\_\{B,2\}h=h d\_\{A,2\}. It is also a map in the inner direction by the displayed inner equation. Composing Tot(h) with gamma\_\{0,-1\}\^{}\{-1\} multiplies its component by (-1)\^{}\{-p\}=(-1)\^{}p and therefore gives precisely H as a map Tot(A) -\textgreater{} Tot(B){[}-1{]}.
+
+In the second convention the outer degree is p.~The homotopy h\^{}p has degree-q component \[
+h^{p,q}:A^{p,q}\longrightarrow B^{p-1,q}.
+\] Consequently it is not a component of h\^{}q. Its equations are \[
+f^{p,q}-g^{p,q}
+=d_{B,1}^{p-1,q}h^{p,q}+h^{p+1,q}d_{A,1}^{p,q},
+\qquad
+d_{B,2}^{p-1,q}h^{p,q}=h^{p,q+1}d_{A,2}^{p,q}.
+\] Put H\textbar{}\emph{\{A\^{}\{p,q\}\}=h\^{}\{p,q\}, with no additional sign. Then \[
+\begin{aligned}
+(D_BH+HD_A)|_{A^{p,q}}
+={}&d_{B,1}^{p-1,q}h^{p,q}
+ +(-1)^{p-1}d_{B,2}^{p-1,q}h^{p,q}\\
+ &+h^{p+1,q}d_{A,1}^{p,q}
+ +(-1)^p h^{p,q+1}d_{A,2}^{p,q}.
+\end{aligned}
+\] The d\_2 terms cancel by the inner-map equation, and the d\_1 terms give f-g. The shift comparison gamma}\{k,0\} has component (-1)\^{}\{p\cdot0\}=1. For f=g, the outer homotopy is a map to B{[}-1,0{]}, and Tot(h) followed by gamma\_\{-1,0\}\^{}\{-1\} is exactly H. These calculations verify the component and degree corrections above and preserve the different signs in the two conventions.
+
+\subsection{3. Split boundaries and the two remaining projection-index errors}\label{note-04-split-boundaries-and-the-two-remaining-projection-index-errors}
+
+Let \[
+0\longrightarrow A^{\bullet,\bullet}
+\xrightarrow{u}B^{\bullet,\bullet}
+\xrightarrow{v}C^{\bullet,\bullet}\longrightarrow0
+\] have the stated splittings. In each bidegree they give \[
+v s=1,\quad \pi u=1,\quad \pi s=0,\quad u\pi+s v=1.
+\] The induced total splitting is the direct sum of these component maps, so these same identities hold on each total term.
+
+First suppose the splittings are morphisms of the p-complexes, indexed by q: \[
+s^q:C^{\bullet,q}\longrightarrow B^{\bullet,q},\qquad
+\pi^q:B^{\bullet,q}\longrightarrow A^{\bullet,q}.
+\] Their degree-p components have types s\^{}\{p,q\}:C\^{}\{p,q\} -\textgreater{} B\^{}\{p,q\} and pi\^{}\{p,q\}:B\^{}\{p,q\} -\textgreater{} A\^{}\{p,q\}, confirming MC-STK-ERR-0774. The boundary in the outer complex is \[
+\boxed{\quad
+\delta^q=\pi^{q+1}\,d_{B,2}^{\,q}\,s^q:
+C^{\bullet,q}\longrightarrow A^{\bullet,q+1}.
+\quad}                                                     \tag{3.1}
+\] The middle map has codomain B\^{}\{bullet,q+1\}, which is the domain of pi\^{}\{q+1\}, not pi\^{}q. The source's line 4468 incorrectly prints pi\^{}q. Equation (3.1) is also forced by the source's correctly indexed component formula at line 4472.
+
+On C\^{}\{p,q\}, the boundary of the total split sequence is \[
+\begin{aligned}
+\Delta^{p,q}
+={}&\pi^{p+1,q}d_{B,1}^{p,q}s^{p,q}
+ +(-1)^p\pi^{p,q+1}d_{B,2}^{p,q}s^{p,q}\\
+={}&0+(-1)^p\pi^{p,q+1}d_{B,2}^{p,q}s^{p,q}.
+\end{aligned}                                               \tag{3.2}
+\] Indeed d\_\{B,1\}\^{}\{p,q\}s\^{}\{p,q\}=s\^{}\{p+1,q\}d\_\{C,1\}\^{}\{p,q\}, because s\^{}q is an inner cochain map, and pi\^{}\{p+1,q\}s\^{}\{p+1,q\}=0. The remaining term is exactly the component of Tot(delta) followed by gamma\_\{0,1\}\^{}\{-1\}, whose component on A\^{}\{p,q+1\} is (-1)\^{}p. Thus the source's totalization comparison holds, with all domains, codomains and signs displayed.
+
+Next suppose the splittings are morphisms of the q-complexes, indexed by p: \[
+s^p:C^{p,\bullet}\longrightarrow B^{p,\bullet},\qquad
+\pi^p:B^{p,\bullet}\longrightarrow A^{p,\bullet}.
+\] The components are degree-q components of these families. They have the same bidegree types as above. The boundary now is \[
+\boxed{\quad
+\delta^p=\pi^{p+1}\,d_{B,1}^{\,p}\,s^p:
+C^{p,\bullet}\longrightarrow A^{p+1,\bullet}.
+\quad}                                                     \tag{3.3}
+\] The source's line 4641 incorrectly prints pi\^{}p.~The next-degree projection pi\^{}\{p+1\} is required by the codomain of d\_\{B,1\} and by the correctly indexed component formula at line 4645. The map delta in this convention has target A{[}1,0{]}, as the existing correction MC-STK-ERR-0776 states. It is a morphism of double complexes: it commutes with the inner q-differential because each factor in (3.3) is a map of q-complexes; in the p-direction its cochain equation is the split-boundary identity of Section 3 in the preceding note, with the negative differential on the shifted target.
+
+For the total boundary, the first line of (3.2) still applies, but now the second term vanishes: \[
+\pi^{p,q+1}d_{B,2}^{p,q}s^{p,q}
+=\pi^{p,q+1}s^{p,q+1}d_{C,2}^{p,q}=0.
+\] What remains is \[
+\Delta^{p,q}=\pi^{p+1,q}d_{B,1}^{p,q}s^{p,q},
+\] the component of (3.3). Since gamma\_\{1,0\}\^{}\{-1\} has all components equal to identities, this is precisely the other totalization comparison. The corrections of the two projection indices restore the displayed composite types; they do not change the correctly printed component calculations or the totalization conclusions.
+
+The two new operations form HOMOLOGY-FIND-004. No received report in the bound Homology inventory has a parsed interval containing either 4468 or 4641. The inventory and earlier-operation checks are retained in CLAIM\_PROPAGATION\_PART04.json.
+
+\subsection{4. Receiving use and limits}\label{note-04-receiving-use-and-limits}
+
+The exact top-level TeX reference search for these two remark labels at the pinned cumulative commit found their uses in derived.tex, remark-homotopy-double, lines 3858 and 3876. The surrounding passage 3828--3900 was read. It uses the two totalization functors on the two homotopy categories. Sections 2 and 3 above verify the relevant homotopy, shift and split-boundary comparisons with the original orientations intact. No additional body correction in that receiving passage is required. The foundational construction of its triangulated categories is not claimed to have been reaudited in full here.
+
+Primary-source reading continued through line 4680, where the filtered-object definition is still in progress. Reports through the end of the second double-complex remark, line 4651, have been adjudicated. The report at 4675--4677 has been read but is left for the next coherent filtration review. Next source line: 4681.
+
+All new edits remain exact local previews, with full inverse checks. The accepted source and all inherited additions remain unchanged.
+\clearpage
+\section{Homology: filtrations, strictness and the differential-object sequence}\label{note-05-homology-filtrations-strictness-and-the-differential-object-sequence}
+
+This is a separate editorial proof note. The primary source is the Stacks Project, homology.tex, official commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. Its original line numbers are used below. The comparison source is the cumulative edition at commit b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434. The source definitions, filtration indices, maps and quotient objects are retained. No novelty is claimed.
+
+\subsection{1. Received reports}\label{note-05-received-reports}
+
+Eighteen physical reports are assigned to twelve groups. Ten reports belong to the first six already corrected filtration findings; four more reports belong to two already corrected exact-couple findings; four reports identify missing copyedits.
+
+{ % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Original locus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Disposition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+HOMOLOGY-RECON-030 & 4676 & Insert the article in ``is a pair''. \\
+HOMOLOGY-RECON-031 & 4747 & Insert ``is'' in ``This is also equivalent''. \\
+HOMOLOGY-RECON-032 & 4829 & Insert ``be'' in ``Let B be a vector space''. \\
+HOMOLOGY-RECON-033 & 4846 & Insert ``holds'' in the first explanation of the displayed equalities. \\
+HOMOLOGY-RECON-034 & 5007 & MC-STK-ERR-0778 already supplies ``the map''. \\
+HOMOLOGY-RECON-035 & 5010--5011 & MC-STK-ERR-0779 already supplies the correctly typed quotient target and parenthesized kernel. \\
+HOMOLOGY-RECON-036 & 5013 & MC-STK-ERR-0780 already makes ``The two short exact sequences'' plural. \\
+HOMOLOGY-RECON-037 & 5052 & MC-STK-ERR-0781 already corrects ``and isomorphism'' to ``an isomorphism''. \\
+HOMOLOGY-RECON-038 & 5082 & MC-STK-ERR-0782 already removes the extra closing parenthesis. \\
+HOMOLOGY-RECON-039 & 5124 & MC-STK-ERR-0783 already corrects the induction range to p \textless= n. \\
+HOMOLOGY-RECON-040 & 5427, 5430 & MC-STK-ERR-0799 already supplies both passive auxiliaries. Its one French report and two p02 reports are reconciled to the same two-operation unit. \\
+HOMOLOGY-RECON-041 & 5567--5569 & MC-STK-ERR-0784 already distinguishes the representative z in A from its class in A/alpha A. \\
+\end{longtable}
+}
+
+P02-E1381 proposes pluralizing both occurrences of ``sequence'' in the sentence at 5013--5014. Only the first occurrence is a defect: ``The two short exact sequences of (2) are special cases of the short exact sequence of (1)'' is grammatical and accurately names the single construction in (1), specialized to two subobjects. The existing first change is accepted; the proposed second change is not needed and is not applied.
+
+Two additional copyedits, found while reading the proof rather than in these reports, are recorded separately: line 4858 needs ``holds'' after ``The first equality'', and line 5058 needs ``the'' after ``Then''. They do not change any mathematical map or hypothesis.
+
+\subsection{2. Quotients, strictness and the associated graded sequence}\label{note-05-quotients-strictness-and-the-associated-graded-sequence}
+
+All sums and intersections below are sums and intersections of subobjects in the original abelian category. Their canonical maps, not chosen presentations as vector spaces, determine the identifications.
+
+For a morphism f:A -\textgreater{} B let K=ker(f), I=im(f), and let e:A -\textgreater{} I be the canonical epimorphism. The underlying isomorphism A/K -\textgreater{} I transports the quotient filtration to \[
+P^pI=f(F^pA).
+\] The image object as a subobject of B has the induced filtration \[
+Q^pI=I\cap F^pB.
+\] There is a canonical filtered map \[
+c:(I,P)\longrightarrow(I,Q)
+\] whose underlying map is the identity and for which P\^{}pI is contained in Q\^{}pI in every degree. These are exactly the coimage-to-image map and its two filtrations in the source.
+
+The inverse-image criterion for strictness is obtained without an elementwise assumption on the category. The inverse image under e of the subobject f(F\^{}pA) is F\^{}pA+K: both are the inverse image of the image of F\^{}pA in A/K under A -\textgreater{} A/K. The inverse image of Q\^{}pI is f\^{}\{-1\}(F\^{}pB). Since inverse image under the epimorphism e gives the subobject correspondence between subobjects of I and subobjects of A containing K, equality P\^{}pI=Q\^{}pI is equivalent to \[
+f^{-1}(F^pB)=F^pA+K.                                      \tag{2.1}
+\] Thus the missing verb at line 4747 does not conceal a changed mathematical assertion.
+
+For a subobject X of a filtered object A, retain F\^{}pX=X intersect F\^{}pA and the quotient filtration F\^{}p(A/X)=(F\^{}pA+X)/X. The graded quotient map is the canonical map \[
+F^pA/F^{p+1}A
+\longrightarrow
+(F^pA+X)/(F^{p+1}A+X).                                    \tag{2.2}
+\] It is epic because the sum F\^{}pA+X is the image of F\^{}pA direct-sum X, and the summand X maps to zero in the target. Its kernel is \[
+\frac{F^pA\cap(F^{p+1}A+X)}{F^{p+1}A}
+=\frac{F^{p+1}A+(F^pA\cap X)}{F^{p+1}A}.                  \tag{2.3}
+\] The equality uses the modular law for subobjects with F\^{}\{p+1\}A contained in F\^{}pA. The map from F\^{}pA intersect X to (2.3) is induced by its inclusion in F\^{}pA. It is epic by the displayed sum, and its kernel is F\^{}\{p+1\}A intersect X. Consequently it induces the specified isomorphism \[
+\frac{F^pX}{F^{p+1}X}
+\xrightarrow{\ \sim\ }
+\frac{F^{p+1}A+(F^pA\cap X)}{F^{p+1}A}.                    \tag{2.4}
+\] This proves the short exact sequence \[
+0\longrightarrow\operatorname{gr}^pX
+\longrightarrow\operatorname{gr}^pA
+\longrightarrow\operatorname{gr}^p(A/X)\longrightarrow0
+                                                               \tag{2.5}
+\] with the source's actual quotient map and induced injection. It proves both operations in MC-STK-ERR-0779. The two sequences in part (2) of lemma-ses-gr are (2.5) for K in A and I in B.
+
+Now take a complex A -\textgreater{} B -\textgreater{} C with maps alpha and beta both strict. Put X=im(alpha) and Y=ker(beta), as subobjects of B, so X is contained in Y. Give H=Y/X the source's induced/quotient filtration. Strictness and the two sequences (2.5) identify \[
+\operatorname{gr}X=\operatorname{im}(\operatorname{gr}\alpha),
+\qquad
+\operatorname{gr}Y=\ker(\operatorname{gr}\beta).
+\] For the second equality, factor beta through its coimage and image; strictness makes c an isomorphism, the map on the quotient by its kernel is epic on each graded piece, and the image injection is monic on each graded piece by (2.5). Apply (2.5) again to X in Y. Its cokernel is the canonical isomorphism \[
+\operatorname{gr}(Y/X)
+\cong
+\ker(\operatorname{gr}\beta)/
+\operatorname{im}(\operatorname{gr}\alpha).                \tag{2.6}
+\] More explicitly its degree-p source is F\^{}pY/(F\^{}\{p+1\}Y+(X intersect F\^{}pY)); the map is induced by the inclusion of F\^{}pY in F\^{}pB. This supplies the original formula with the extra parenthesis removed, without changing the filtered homology object.
+
+\subsection{3. Underclaim: bounds on the image suffice for strictness}\label{note-05-underclaim-bounds-on-the-image-suffice-for-strictness}
+
+\textbf{HOMOLOGY-UNDER-005.} Use P, Q, I and c from Section 2. No finiteness of the whole filtrations on A and B is assumed in the following one-sided assertions.
+
+If there is an integer m such that P\^{}mI=I, then a monomorphism gr(c) implies P=Q and hence f is strict. If there is an integer n such that Q\^{}nI=0, then an epimorphism gr(c) implies P=Q and hence f is strict. In particular, if both bounds hold, all six conditions of lemma-characterize-strict, lines 5017--5042, are equivalent. These bounds concern the two filtrations on the image; the kernel and cokernel may have infinite filtrations.
+
+To prove the assertions, compute the kernel and image of the actual degree-p map \[
+c_p:P^pI/P^{p+1}I\longrightarrow Q^pI/Q^{p+1}I.
+\] They are respectively \[
+\ker(c_p)=
+\frac{P^pI\cap Q^{p+1}I}{P^{p+1}I},\qquad
+\operatorname{im}(c_p)=
+\frac{P^pI+Q^{p+1}I}{Q^{p+1}I}.                           \tag{3.1}
+\] The first formula follows by taking the inverse image of Q\^{}\{p+1\}I under P\^{}pI -\textgreater{} Q\^{}pI. The second is the image under the same quotient map. These are identities of canonical subobjects.
+
+Assume c\_p is monic for every p and P\^{}mI=I. Then Q\^{}mI=I because P\^{}mI is contained in Q\^{}mI, and equality P\^{}pI=Q\^{}pI=I holds for p \textless= m. Suppose equality has been established at p.~The zero kernel in (3.1) gives \[
+P^{p+1}I=P^pI\cap Q^{p+1}I
+=Q^pI\cap Q^{p+1}I=Q^{p+1}I.
+\] Ascending induction proves equality in every degree.
+
+Assume instead that c\_p is epic for every p and Q\^{}nI=0. Then P\^{}pI=Q\^{}pI=0 for p \textgreater= n.~If equality is known at p+1, the image formula in (3.1) gives \[
+Q^pI=P^pI+Q^{p+1}I=P^pI+P^{p+1}I=P^pI.
+\] Descending induction proves equality in every degree. No infinite limit, completion or interchange of intersections and colimits has been used.
+
+For completeness, the relation with the six source conditions is as follows. The exact sequences (2.5) factor gr(f) as \[
+\operatorname{gr}A
+\twoheadrightarrow\operatorname{gr}(I,P)
+\xrightarrow{\operatorname{gr}c}\operatorname{gr}(I,Q)
+\lhook\joinrel\longrightarrow\operatorname{gr}B.
+\] Therefore exactness at gr(A) in source condition (4) is equivalent to gr(c) being monic: the kernel of the first epimorphism is gr(K), and inverse image under that epimorphism identifies the additional kernel precisely with ker(gr(c)). Exactness at gr(B) in condition (5) is equivalent to gr(c) being epic: the kernel of gr(B) -\textgreater{} gr(coker f) is the displayed image gr(I,Q), so equality of that kernel with im(gr(f)) says exactly that gr(c) has full image. Condition (6) is the conjunction of (4) and (5), since the two outer maps in (2.5) are already monic and epic. Conditions (1) and (2) are P=Q; condition (3) says gr(c) is an isomorphism.
+
+Under only the lower bound P\^{}mI=I, conditions (1), (2), (3), (4) and (6) are equivalent. Under only the upper bound Q\^{}nI=0, conditions (1), (2), (3), (5) and (6) are equivalent. Under both bounds all six are equivalent. The source's finite filtrations supply both bounds and therefore its theorem is valid. The two exact graded sequences alone give monicity or epicity; the appropriate induction supplies the implication to an isomorphism. This detailed proof supplements the terse source proof at 5047--5057 and is not counted as a newly discovered false theorem.
+
+The bounds cannot simply be discarded. Let I be a nonzero vector space and take the identity map from (I,P) to (I,Q). If P\^{}p=0 and Q\^{}p=I for every p, both associated graded objects are zero and gr(c) is an isomorphism, but c is not a filtered isomorphism. If P\^{}p=I for p \textless= 0 and P\^{}p=0 for p \textgreater= 1, while Q\^{}p=I for every p, the lower bound holds and gr(c) is epic but c is not strict. If P\^{}p=0 for every p and Q\^{}p=I for p \textless= 0, Q\^{}p=0 for p \textgreater= 1, the upper bound holds and gr(c) is monic but c is not strict. These examples preserve the original objects and show why the two one-sided criteria use different directions.
+
+There are useful corollaries for morphisms, also kept as editorial material. If A has a finite filtration and B is arbitrary, then gr(f) monic is equivalent to f being a strict monomorphism. Indeed gr(f) monic implies gr(K)=0 by (2.5). The induced filtration on K is finite; descending from a zero filtration step and using its zero successive quotients gives K=0. Condition (4) holds, and P\^{}mI=I follows from F\^{}mA=A, so the lower-bound argument proves strictness. Conversely any strict monomorphism gives an injection on each graded piece by (2.5). Dually, if B has a finite filtration and A is arbitrary, then gr(f) epic is equivalent to f being a strict epimorphism. The quotient filtration on coker(f) is finite, (2.5) gives its associated graded object zero, and the same finite descending argument gives coker(f)=0. Condition (5) and Q\^{}nI=0 then prove strictness. The converse again follows from (2.5).
+
+Receiving comparison: Exercises lines 2403--2409 state the strict-monomorphism criterion with both filtrations finite; the first corollary shows that the target finiteness is unnecessary for that criterion. This does not remove the finiteness assumption from the surrounding extension-property exercise without checking its other arguments. Derived Categories uses the original finite criterion in the bounded passages recorded in the ledger. Those uses remain valid. No receiving statement is silently enlarged.
+
+\subsection{4. The finite-filtration induction}\label{note-05-the-finite-filtration-induction}
+
+Source: lemma-filtered-acyclic, lines 5094--5144. Let A -\textgreater{} B -\textgreater{} C be a complex with finite decreasing filtrations and with each associated graded sequence exact at its middle term.
+
+Here is the finite extension argument used in the induction. Suppose there is a termwise short exact sequence of three-term complexes 0 -\textgreater{} L -\textgreater{} M -\textgreater{} N -\textgreater{} 0, and both L and N are exact at the middle. For a map from a test object into the middle cycles of M, project to N. Exactness in N gives a lift from its left term after pulling back along the epimorphism from that left term onto the middle cycles. Pull back once more along M\_left -\textgreater{} N\_left, which is epic, to lift the chosen left term. Subtract its boundary in M\_middle. The result comes from L\_middle because its N component is zero, and it is a cycle in L because L\_right -\textgreater{} M\_right is monic. Exactness in L supplies, after a further epimorphic pullback, a left lift in L. The sum of the two lifts maps to the original cycle. This proves that im(M\_left -\textgreater{} M\_middle) equals its middle kernel: an epimorphism onto a test source does not change the image of its map into M\_middle. Thus M is exact at the middle. This argument takes place in the given abelian category; it does not assume global element lifts or a projective generator.
+
+Choose a common finite interval containing all nonzero graded pieces of A, B and C. Induct on its length, including the empty interval where all three objects are zero. Let n be the largest index with a nonzero filtration step in at least one object. The top-step sequence F\^{}nA -\textgreater{} F\^{}nB -\textgreater{} F\^{}nC is exactly the degree-n graded sequence and is exact. The quotient objects A'=A/F\^{}nA, B'=B/F\^{}nB and C'=C/F\^{}nC have a shorter filtration, with the other graded pieces unchanged. Their sequence is exact by induction. The finite extension argument applied to these top steps and quotients proves exactness of A -\textgreater{} B -\textgreater{} C.
+
+The same result applies to the complex of induced filtered objects F\^{}pA -\textgreater{} F\^{}pB -\textgreater{} F\^{}pC: its graded pieces below p are zero and its graded pieces at or above p are the corresponding original ones. It also applies to the quotient complex A/F\^{}pA -\textgreater{} B/F\^{}pB -\textgreater{} C/F\^{}pC, whose pieces at or above p are zero and whose lower pieces are the original ones. Hence both of the source's truncated exactness assertions hold for every p.
+
+In the source's quotient-first presentation, the relation between A' and A is explicitly \[
+A'/F^pA'
+ \cong A/(F^pA+F^nA)=A/F^pA\quad\text{for }p\le n.        \tag{4.1}
+\] It is p \textless= n, not p \textgreater= n, because the filtration decreases. For p=n+1, the original F\^{}\{n+1\}A is zero and the required sequence is the full A -\textgreater{} B -\textgreater{} C; the extension step is precisely what supplies it. This proves the earlier correction MC-STK-ERR-0783 rather than accepting it only from its locus.
+
+Write f:A -\textgreater{} B and g:B -\textgreater{} C. Truncated exactness gives \[
+f(F^pA)=\ker(F^pB\longrightarrow F^pC).
+\] Since the underlying sequence is exact, this kernel is ker(g) intersect F\^{}pB=f(A) intersect F\^{}pB, proving strictness of f. The exact quotient sequence gives \[
+g^{-1}(F^pC)=F^pB+f(A)=F^pB+\ker(g),
+\] so (2.1) proves strictness of g. This proves all five conclusions of the source lemma, including the two strictness assertions.
+
+\subsection{5. The shifted exact-couple constructions}\label{note-05-the-shifted-exact-couple-constructions}
+
+In remark-shifted-exact-couple, the source has isomorphisms of categories S and T, maps alpha:A -\textgreater{} T\^{}\{-1\}A, f:E -\textgreater{} A, g:A -\textgreater{} SE, and the exact sequence \[
+TE\xrightarrow{Tf}TA\xrightarrow{T\alpha}A
+\xrightarrow{g}SE\xrightarrow{Sf}SA.
+\] Isomorphisms between abelian categories preserve the canonical addition, zero, kernels, cokernels and image factorizations: these are characterized by zero objects, finite products and coproducts, and the indicated universal properties. Thus the shifts used below are exact additive functors.
+
+Set d=gf, E'=ker(d)/im(S\^{}\{-1\}d), and A'=im(Talpha), as in the source. The map alpha restricted to A' lands in im(alpha), which is T\^{}\{-1\}A'. This is the map alpha':A' -\textgreater{} T\^{}\{-1\}A'. The map f restricted to ker(d) lands in ker(g)=A', and kills im(S\^{}\{-1\}d), since f S\^{}\{-1\}g=0. Hence it induces f':E' -\textgreater{} A'.
+
+The map Tg:TA -\textgreater{} TSE lands in ker(TSd), because TSd Tg=TSg TSf Tg=0. On ker(Talpha)=im(Tf), its image is im(Tg Tf)=im(Td), which is the denominator of TSE'. Thus TA -\textgreater{} TSE' descends uniquely through the image quotient TA -\textgreater{} A' to \[
+g':A'\longrightarrow TSE',\qquad
+g'(T\alpha)(a)=[Tg(a)].                                  \tag{5.1}
+\] The formula means equality of the two descended morphisms; it does not claim that every test map into A' lifts on its original test object. It proves the two ``be induced'' constructions in their original domains and codomains.
+
+The resulting exactness can also be checked directly. The image of f' is A' intersect ker(alpha), which is the kernel of alpha': an element of that intersection lifts locally through f because ker(alpha)=im(f), and the condition that it belongs to A' puts its lift in ker(gf). Next, for x=Talpha(a) in A', g'(x)=0 means Tg(a)=Td(e) after an epimorphic local lift. Thus a-Tf(e) belongs to \(\ker(Tg)=\operatorname{im}(T^2\alpha)\), and Talpha(a)=Talpha T\^{}2alpha(b), since Talpha Tf=0. This is exactly im(Talpha') in A'; the reverse inclusion follows from Tg T\^{}2alpha=0. Finally a class in TSE' is killed by TSf' precisely when its cycle representative is in ker(TSf)=im(Tg). A representative Tg(a) gives the class g'(Talpha(a)), by (5.1). This proves ker(TSf')=im(g'). Applying T to the first equality also gives exactness at TA'. Hence the new couple is exact for the shifts TS and T, with no change to the source formulas. The local lifts here are implemented by finite pullbacks of epimorphisms as in Section 4; equality of the resulting subobjects descends along those epimorphisms.
+
+\subsection{6. The differential-object formula and all representative choices}\label{note-05-the-differential-object-formula-and-all-representative-choices}
+
+Source: lines 5532--5591 and the existing correction MC-STK-ERR-0784. Let (A,d) be a differential object with d\^{}2=0, and let alpha:A -\textgreater{} A be monic with d alpha=alpha d. For each integer r \textgreater= 1, keep the original subobjects \[
+P_r=(\alpha^{r-1})^{-1}(\operatorname{im}d),\qquad
+Q_r=d^{-1}(\operatorname{im}\alpha^r),\qquad
+J_r=P_r+\operatorname{im}\alpha,\qquad
+L_r=Q_r+\operatorname{im}\alpha.                           \tag{6.1}
+\] The images and inverse images are taken in A. The source's terms are exactly \[
+B_r=J_r/\operatorname{im}\alpha,\quad
+Z_r=L_r/\operatorname{im}\alpha,\quad
+E_r=L_r/J_r.                                             \tag{6.2}
+\] In particular Z\_r is a subobject of A/alpha A, not of A. The extra alpha A summands in (6.1) are retained throughout.
+
+For P\_r, applying d alpha\^{}\{r-1\}=alpha\^{}\{r-1\}d and d\^{}2=0, then using monicity of alpha\^{}\{r-1\}, proves P\_r is contained in ker(d). Consequently P\_r is contained in every Q\_s. The subobjects P\_r increase with r and Q\_r decrease with r. There is a unique morphism \[
+t_r:Q_r\longrightarrow A,\qquad
+\alpha^r t_r=d|_{Q_r},                                   \tag{6.3}
+\] because alpha\^{}r identifies A with its image. Monicity of alpha\^{}r applied to alpha\^{}r d t\_r=d d\textbar\_\{Q\_r\}=0 proves im(t\_r) is contained in ker(d), hence in Q\_r.
+
+The epimorphism Q\_r -\textgreater{} E\_r has kernel \[
+Q_r\cap J_r=P_r+(Q_r\cap\operatorname{im}\alpha),           \tag{6.4}
+\] by the modular law and P\_r contained in Q\_r. On P\_r, (6.3) is zero, so t\_r is zero. On the pullback of Q\_r intersect im(alpha) under alpha, write z=alpha(a). The equality alpha\^{}r t\_r(z)=d alpha(a)=alpha d(a), followed by cancellation of alpha, gives \[
+\alpha^{r-1}t_r(z)=d(a).
+\] Thus t\_r(z) belongs to P\_r. This proves, as a statement about the restricted morphism on that pullback, that t\_r maps (6.4) into J\_r. It therefore induces a unique differential \[
+d_r:E_r\longrightarrow E_r.
+\] Moreover t\_r t\_r=0: its first application lands in ker(d), and (6.3) makes its second application zero by monicity. Hence d\_r\^{}2=0.
+
+For the representative description, an element of Z\_r has a representative z in Q\_r because Z\_r is the image of Q\_r in A/alpha A. Put y=t\_r(z), so d(z)=alpha\^{}r(y). If bars denote images in A/alpha A, the actual formula is \[
+d_r(\overline z+B_r)=\overline y+B_r.                     \tag{6.5}
+\] Equations (6.3) and (6.4) prove that (6.5) is independent of all permissible representatives and of the later quotient by B\_r. For generalized elements, a representative in Q\_r may first require pullback along the epimorphism Q\_r -\textgreater{} Z\_r. The construction of d\_r itself uses (6.3) and the quotient property and therefore makes no unjustified global lifting assumption. This verifies the three existing representative corrections.
+
+One can also verify the next-page identity with all summands present. The image equality \[
+t_r(Q_r)=P_{r+1}                                         \tag{6.6}
+\] follows from (6.3): its image is contained in P\_\{r+1\}, and the pullback describing alpha\^{}r(y) in im(d) is exactly the same pullback used to define Q\_r and t\_r. More concretely, after an epimorphic pullback alpha\^{}r(y)=d(z) implies z in Q\_r and t\_r(z)=y; equality of images then descends.
+
+The cycle condition t\_r(z) in J\_r is equivalent to \[
+z\in Q_r\cap(Q_{r+1}+\operatorname{im}\alpha).             \tag{6.7}
+\] For the forward direction, locally write t\_r(z)=p+alpha(a), where p is in P\_r, and choose w with alpha\^{}\{r-1\}(p)=d(w). Then \[
+d(z)=\alpha^r(p)+\alpha^{r+1}(a)
+     =d(\alpha(w))+\alpha^{r+1}(a),
+\] so z-alpha(w) belongs to Q\_\{r+1\}. Conversely, if z=q+alpha(w) with q in Q\_\{r+1\}, then \(t_r(q)=\alpha(t_{r+1}(q))\); the other term alpha(w) belongs to Q\_r and its t\_r image belongs to P\_r by the argument after (6.4). Thus t\_r(z) belongs to J\_r. Each decomposition as a sum or image is obtained after a finite epimorphic pullback; this proves (6.7) as equality of subobjects.
+
+Since P\_r is contained in Q\_\{r+1\}, (6.7) and (6.2) give \[
+\ker d_r=L_{r+1}/J_r,\qquad
+\operatorname{im}d_r=J_{r+1}/J_r,
+\] where the second equality uses (6.6). The quotient is therefore \[
+\ker(d_r)/\operatorname{im}(d_r)
+\cong L_{r+1}/J_{r+1}=E_{r+1}.                            \tag{6.8}
+\] For r=1, Q\_1/alpha A is the kernel of the differential induced on A/alpha A (Q\_1 contains alpha A because d and alpha commute), and its image is (im d+alpha A)/alpha A. Thus E\_1=H(A/alpha A,d), with E\_0=A/alpha A as the source specifies. Together with (6.8) this proves the stated sequence directly, without discarding either alpha A contribution.
+
+\subsection{7. Reading and propagation limits}\label{note-05-reading-and-propagation-limits}
+
+The primary source was read consecutively through line 5670. The definition of a filtered differential object begins there and continues at 5671. The eighteen received reports in this note are adjudicated; this is not a claim that every spectral sequence lemma or all of its external dependencies have been independently certified.
+
+All ten top-level TeX reference hits to the four reviewed filtration lemmas were routed to bounded passages in Derived Categories and Exercises. Their finite-filtration uses remain valid. The exact lines read and their source hashes are recorded with the propagation ledger. No new paper was mined, no external proof was inferred from a catalogue hit, and no novelty claim is made.
+
+New copyedits are exact local previews. Earlier operations, inherited additions and the source translations are preserved. The underclaim and the expanded proofs belong to the separate editorial supplement, with their own statement and provenance.
+\clearpage
+\section{Homology review: filtered spectral sequences, original lines 5671--6359}\label{note-06-homology-review-filtered-spectral-sequences-original-lines-56716359}
+
+This is editorial review evidence, not a replacement for the source chapter. The source is the Stacks Project authors' \texttt{homology.tex} at \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}, preserved here as \texttt{authority-homology.tex}. Its SHA-256 is \texttt{483CAF01\allowbreak{}B4BD164D\allowbreak{}BC9103D7\allowbreak{}6196E294\allowbreak{}E00EFE17\allowbreak{}E706178E\allowbreak{}CF2DC2C1\allowbreak{}DEF4ABE0}. Existing corrections are checked against the cumulative edition \texttt{b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434}. These arguments verify the original constructions and one weakening of an unnecessary hypothesis. No novelty is claimed. In all formulas, the sums with the next filtration step remain present; neither a quotient nor a grading shift is suppressed.
+
+\subsection{1. Report decisions}\label{note-06-report-decisions}
+
+HOMOLOGY-RECON-042 joins French HOMOLOGY-048 to MC-STK-ERR-0800. The insertions of ``in which'' at original lines 5680 and 5977 correctly join the two relative clauses. These are the temporary direct-sum constructions, whose stated exactness hypotheses are retained.
+
+HOMOLOGY-RECON-043 joins P02-E0015 and French HOMOLOGY-033 to MC-STK-ERR-0785. At 5764--5773 the graded object has components \(A^p=F^{p+1}K\), so the component of \(A\to A[-1]\) is exactly \(F^{p+1}K\hookrightarrow F^pK\). A second application of a filtration to \(A\) is not part of the construction. The replacement of both printed occurrences of \(A\) by \(K\) is mathematically necessary.
+
+HOMOLOGY-RECON-044 joins French HOMOLOGY-049 to MC-STK-ERR-0801: ``we have that'' supplies the missing complementizer at 5781. HOMOLOGY-RECON-045 joins P02-E1386, P02-E1390, and French HOMOLOGY-050 to the two operations of MC-STK-ERR-0802: the singular ``description'' requires ``holds'' at 5786 and 6088. HOMOLOGY-RECON-046 joins French HOMOLOGY-051 to MC-STK-ERR-0803: ``in a straightforward manner'' is the appropriate construction at both 5793 and 6102.
+
+HOMOLOGY-RECON-047 records P02-E1387 as optional terminology, not a mathematical defect and not integrated. The earlier definition calls \(\ker(d)/\operatorname{im}(d)\) homology, while 5849 calls the same explicitly defined object cohomology. Here \(d:K\to K\) has no chain or cochain degree. Both words refer to that same quotient; no opposite variance, different object, or sign is introduced. Replacing the word would improve local consistency but is not needed to make the theorem correct. The original wording remains identifiable.
+
+HOMOLOGY-RECON-048 accepts the punctuation correction P02-E1388 at 5878: a comma joins the display to ``where the top and bottom exist''. HOMOLOGY-RECON-049 accepts P02-E1389 at 5979: insert ``by'' in ``Let us denote by \(d\) the differential of \(K\)''. Although its report interval overlaps the already corrected relative clause at 5977, MC-STK-ERR-0800 does not fix this different token. HOMOLOGY-RECON-050 accepts the corresponding display-final comma at 6230, P02-E1391. None of these three edits changes a formula.
+
+HOMOLOGY-RECON-051 joins P02-E1392 and French HOMOLOGY-052 to MC-STK-ERR-0804. The introductory phrase at 6293 joins the following lowercase ``let'' with a comma. Both existing operations are retained.
+
+HOMOLOGY-RECON-052 records P02-E1393 as optional notation, not a mathematical defect and not integrated. The isolated \(H^*(K)\) at 6349 denotes the already specified complex \(K^\bullet\). Indeed the same section uses \(K\) for this complex at 5979 and 6127. There is no competing object \(K\) in the lemma. Adding the bullet is a possible consistency edit, but the printed abutment has the same domain and meaning. The actual abutment criterion is verified in §4.
+
+\subsection{2. Component construction and the complete next-page calculation}\label{note-06-component-construction-and-the-complete-next-page-calculation}
+
+Let \(\mathcal A\) be an abelian category, \(K\) an object with a decreasing filtration \(F\), and \(d:K\to K\) satisfy \(d^2=0\) and \(d(F^pK)\subset F^pK\). For \(r\geq0\), retain the following subobjects of \(K\):
+
+\[
+R_r^p=F^pK\cap d^{-1}(F^{p+r}K),\qquad
+S_r^p=F^pK\cap d(F^{p-r+1}K),
+\] \[
+L_r^p=R_r^p+F^{p+1}K,\qquad
+J_r^p=S_r^p+F^{p+1}K.                 \tag{2.1}
+\]
+
+Since \(d^2=0\), \(S_r^p\subset R_r^p\); hence \(J_r^p\subset L_r^p\). The original objects at 5719--5736 are exactly
+
+\[
+Z_r^p=L_r^p/F^{p+1}K,\quad B_r^p=J_r^p/F^{p+1}K,\quad
+E_r^p=Z_r^p/B_r^p\cong L_r^p/J_r^p.       \tag{2.2}
+\]
+
+The last comparison sends the class of \(x+F^{p+1}K\) modulo \(J_r^p/F^{p+1}K\) to \(x+J_r^p\). Its inverse is induced by \(x\mapsto x+F^{p+1}K\). Their composites are identities because both quotient maps are epimorphisms. Thus (2.2) is a specified comparison, not a substitution of an unproved quotient formula.
+
+For precision in an arbitrary abelian category, a representative below means a morphism from an arbitrary test object. A morphism to an image can be lifted after pulling back the epimorphism onto that image. A morphism to a sum \(U+V\) similarly lifts after pulling back \(U\oplus V\twoheadrightarrow U+V\). Pullbacks of epimorphisms are epimorphisms in an abelian category. All lifts used below require only finitely many such pullbacks. If a morphism has zero composite with a cokernel after an epimorphism, the composite was already zero; hence the original morphism factors through the corresponding kernel. This proves that these local calculations establish the asserted subobject inclusions and equalities. No projective test object, global lift, countable coproduct, or elementwise exactness assumption is used.
+
+The restriction of \(d\) maps \(R_r^p\) to \(R_r^{p+r}\): the first condition is \(dR_r^p\subset F^{p+r}K\), and the second follows from \(d^2=0\). The kernel of the epimorphism \(R_r^p\twoheadrightarrow L_r^p/J_r^p\) is
+
+\[
+R_r^p\cap J_r^p=S_r^p+(R_r^p\cap F^{p+1}K).       \tag{2.3}
+\]
+
+This identity follows from the modular law and \(S_r^p\subset R_r^p\). The first summand is killed by \(d\). The image of the second lies in \(F^{p+r}K\cap d(F^{p+1}K)=S_r^{p+r}\). Thus there is a unique map
+
+\[
+d_r^p:E_r^p\longrightarrow E_r^{p+r},\qquad
+[z]\longmapsto[dz],                     \tag{2.4}
+\]
+
+with the source representatives in \(R_r^p\) and the target quotient including both summands of \(J_r^{p+r}\). Its square is zero.
+
+We now calculate its kernel. A representative \(z\in R_r^p\) belongs to that kernel precisely when
+
+\[
+dz\in S_r^{p+r}+F^{p+r+1}K
+=(F^{p+r}K\cap d(F^{p+1}K))+F^{p+r+1}K.
+\]
+
+After the finite epimorphic refinements just specified, write \(dz=dv+w\), with \(v\in F^{p+1}K\), \(dv\in F^{p+r}K\), and \(w\in F^{p+r+1}K\). Then \(z-v\in R_{r+1}^p\), and it has the same class as \(z\) in \(E_r^p\). Conversely every element of \(R_{r+1}^p\) maps to \(F^{p+r+1}K\) and therefore gives a kernel class. Because \(J_r^p\subset L_{r+1}^p\subset L_r^p\), this proves the exact identity
+
+\[
+\ker(d_r^p)=L_{r+1}^p/J_r^p.            \tag{2.5}
+\]
+
+For the incoming image, the restriction of \(d\) gives the equality of subobjects
+
+\[
+d(R_r^{p-r})=F^pK\cap d(F^{p-r}K)=S_{r+1}^p.       \tag{2.6}
+\]
+
+The forward inclusion follows from the definition of \(R_r^{p-r}\). For the reverse inclusion lift a test morphism into the right-hand image to \(F^{p-r}K\). Its differential lies in \(F^pK\), so the lift belongs to \(R_r^{p-r}\). The epimorphic-local criterion proves the inclusion before refinement. The image in \(E_r^p\) is consequently \(J_{r+1}^p/J_r^p\), since \(S_r^p\subset S_{r+1}^p\). Combining with (2.5), the next-page isomorphism is the specified quotient map
+
+\[
+H(E_r,d_r)^p
+=\frac{L_{r+1}^p/J_r^p}{J_{r+1}^p/J_r^p}
+\xrightarrow{\ [z]\mapsto[z]\ }
+L_{r+1}^p/J_{r+1}^p=E_{r+1}^p.          \tag{2.7}
+\]
+
+At \(r=0\), \(R_0^p=F^pK\) and \(S_0^p\subset F^{p+1}K\), giving \(E_0^p=F^pK/F^{p+1}K\) and \(d_0^p=\operatorname{gr}^p(d)\). Equation (2.7) gives the stated \(E_1^p\).
+
+For a complex, perform every construction in degree \(n\), using \(d^n:K^n\to K^{n+1}\) for inverse images and \(d^{n-1}:K^{n-1}\to K^n\) for images. More explicitly,
+
+\[
+R_r^{p,q}=F^pK^{p+q}\cap(d^{p+q})^{-1}(F^{p+r}K^{p+q+1}),
+\] \[
+S_r^{p,q}=F^pK^{p+q}\cap d^{p+q-1}(F^{p-r+1}K^{p+q-1}),
+\] \[
+L_r^{p,q}=R_r^{p,q}+F^{p+1}K^{p+q},\qquad
+J_r^{p,q}=S_r^{p,q}+F^{p+1}K^{p+q}.
+\]
+
+Then \(E_r^{p,q}=L_r^{p,q}/J_r^{p,q}\) and (2.4) has target \(E_r^{p+r,q-r+1}\), since \((p+r)+(q-r+1)=p+q+1\). In the incoming calculation use \(R_r^{p-r,q+r-1}\); its total degree is \(p+q-1\). Equations (2.5)--(2.7) hold with these exact indices. They prove the bigraded spectral sequence without any sums of the components in \(\mathcal A\).
+
+The source's shift construction agrees: with \(A^{p,q}=F^{p+1}K^{p+1+q}\), the map \(\alpha:A\to A[-1,1]\) has components \(F^{p+1}K^{p+1+q}\hookrightarrow F^pK^{p+1+q}\). Consequently \(\operatorname{coker}(\alpha)[0,-1]^{p,q}
+=F^pK^{p+q}/F^{p+1}K^{p+q}\), and \(T^rS=[r,-r+1]\) for \(S=[0,1]\), \(T=[1,-1]\), as printed. These are reindexings of families, with no signed cochain translation being silently inserted. A filtered chain map preserves each of \(R,S,L,J\); its induced quotient maps commute with (2.4) and (2.7). This proves the stated functoriality at 6147--6162.
+
+\subsection{3. HOMOLOGY-UNDER-006: the first differential without countable sums}\label{note-06-homology-under-006-the-first-differential-without-countable-sums}
+
+For every abelian category and every filtered complex, the statements of \texttt{lemma-spectral-sequence-filtered-complex-d1} at 6106--6145 hold without the assumption at 6110 that countable direct sums exist. This is a separate editorial strengthening. The source lemma and its stronger printed hypothesis remain identifiable.
+
+Fix \(p,q\) and write \(n=p+q\). The inclusions of filtration steps give a degreewise short exact sequence of complexes
+
+\[
+0\longrightarrow F^{p+1}K^\bullet/F^{p+2}K^\bullet
+\xrightarrow{i}F^pK^\bullet/F^{p+2}K^\bullet
+\xrightarrow{\pi}F^pK^\bullet/F^{p+1}K^\bullet
+\longrightarrow0.                         \tag{3.1}
+\]
+
+Here \(i\) sends the class of a section in \(F^{p+1}\) to the same class modulo \(F^{p+2}\), and \(\pi\) is reduction modulo \(F^{p+1}\). The kernel of \(\pi\) is exactly the image of \(i\) by the subobject correspondence for the quotient by \(F^{p+2}\). All maps commute with the differentials because the filtration is preserved.
+
+A cycle class on the right in degree \(n\) is represented, after an epimorphic refinement if necessary, by \(z\in F^pK^n\) with \(d^nz\in F^{p+1}K^{n+1}\), namely \(z\in R_1^{p,q}\). Lift it in (3.1) to \(z\bmod F^{p+2}K^n\). Its differential is \(d^nz\bmod F^{p+2}K^{n+1}\), which is the image under \(i\) of that same class in \(\operatorname{gr}^{p+1}K^{n+1}\). It is a cycle because \(d^{n+1}d^nz=0\). The unsigned connecting map for (3.1) therefore sends \([z]\) to \([d^nz]\).
+
+This operation is independent of the representative. Adding \(w\in F^{p+1}K^n\) changes the output by the boundary \(d^nw\) in \(\operatorname{gr}^{p+1}K^\bullet\). Adding a boundary lifted from \(F^pK^{n-1}\) changes \(z\) by \(d^{n-1}v\) modulo \(F^{p+1}K^n\), and \(d^nd^{n-1}v=0\). The same finite lifting argument from §2 proves this as equality of morphisms in \(\mathcal A\). Formula (2.4) at \(r=1\) is exactly this operation. Thus
+
+\[
+d_1^{p,q}:H^n(\operatorname{gr}^pK^\bullet)
+\longrightarrow H^{n+1}(\operatorname{gr}^{p+1}K^\bullet)
+\]
+
+is the connecting morphism of (3.1). No shift of (3.1) has been performed, so no translation sign is suppressed.
+
+If \(d^n(F^pK^n)\subset F^{p+1}K^{n+1}\) for all \(n,p\), then the differentials on every \(\operatorname{gr}^pK^\bullet\) are zero. Its degree-\(n\) cohomology is exactly \(F^pK^n/F^{p+1}K^n\). Moreover \(d^n(F^{p+1}K^n)\subset F^{p+2}K^{n+1}\), so the induced map on these quotients is well defined and equals the map just calculated. This proves the second part with no countable sums.
+
+The weakening has actual instances: finite-dimensional vector spaces over a nonzero field form an abelian category without a coproduct of countably many copies of the field. If such a finite-dimensional coproduct existed, its first \(m\) inclusions would be linearly independent for every \(m\): the universal property supplies a map to the field taking any one of them to the identity and the others to zero. This contradicts finite dimension. Formula (3.1) and the proof above still apply to every filtered complex in that category.
+
+The literal reference search in tracked top-level TeX finds external uses in \texttt{derived.tex} at 8927 and 8937 and in \texttt{more-algebra.tex} at 16114, in edition \texttt{b4b30d...}. The read intervals are recorded in the reading ledger. The first Derived use concerns the filtration \(F^pK^\bullet=\sigma_{\geq p}K^\bullet\): its differential raises filtration, so part (2) applies in the stated arbitrary abelian category. The later comparison of derived-functor spectral sequences does not acquire a countable-sum requirement from this lemma either; this bounded check does not certify the entire Cartan--Eilenberg comparison or its independent sign conventions. The More Algebra use identifies \(d_1\) with the boundary for the displayed sequence of successive filtration quotients of \(T^\bullet\). This is exactly (3.1); its module category already admits countable sums. No receiving formula needs alteration from this strengthening, and no tensor or K-flatness hypothesis is removed.
+
+\subsection{4. The canonical subquotient and its two defects}\label{note-06-the-canonical-subquotient-and-its-two-defects}
+
+This section spells out the source's proof; it is not counted as a new theorem or an independently discovered source defect. Fix \(p\), and retain all subobjects in (2.1). Suppose the indicated intersection and union exist and set
+
+\[
+U=\bigcap_{r\geq0}L_r^p,\qquad V=\bigcup_{r\geq0}J_r^p,
+\] \[
+M=(\ker d\cap F^pK)+F^{p+1}K,\qquad
+N=(\operatorname{im}d\cap F^pK)+F^{p+1}K.       \tag{4.1}
+\]
+
+Every \(S_r^p\) lies in \(\operatorname{im}d\cap F^pK\), so \(V\subset N\). The identity \(d^2=0\) gives \(N\subset M\). Every cycle in \(F^pK\) lies in every \(R_r^p\), so \(M\subset U\). Thus
+
+\[
+V\subset N\subset M\subset U,\qquad E_\infty^p=U/V.       \tag{4.2}
+\]
+
+Unions and intersections can be taken degreewise in the category of graded families: a map of families factors through a candidate subobject exactly when every component does. This proves the universal properties componentwise and uses no direct sum in \(\mathcal A\).
+
+Put \(Z=\ker d\) and \(B=\operatorname{im}d\), with \(B\subset Z\). The filtration on \(H(K)=Z/B\) is \(F^pH(K)=((Z\cap F^pK)+B)/B\). Hence the map \(Z\cap F^pK\to\operatorname{gr}^pH(K)\) is epic with kernel \((Z\cap F^{p+1}K)+(B\cap F^pK)\). Indeed it is the restriction of the quotient by \((Z\cap F^{p+1}K)+B\); intersecting that subobject with \(Z\cap F^pK\) gives the stated kernel by the modular law. The map \(Z\cap F^pK\to M/N\) has the identical kernel, because \(N\cap(Z\cap F^pK)=(B\cap F^pK)+(Z\cap F^{p+1}K)\). Both epimorphisms therefore give the specified isomorphism
+
+\[
+M/N\xrightarrow{\ [z]\mapsto[z]\ }
+\operatorname{gr}^pH(K).                  \tag{4.3}
+\]
+
+There is a canonical filtration of the limit term
+
+\[
+0\subset N/V\subset M/V\subset U/V,
+\]
+
+whose three consecutive factors are \(N/V\), \(\operatorname{gr}^pH(K)\) via (4.3), and \(U/M\). Every arrow here is induced by an inclusion or a quotient; in particular there are exact sequences
+
+\[
+0\to N/V\to M/V\to\operatorname{gr}^pH(K)\to0,
+\qquad
+0\to M/V\to E_\infty^p\to U/M\to0.          \tag{4.4}
+\]
+
+The source's canonical subquotient is the entire limit exactly when both defect objects \(N/V\) and \(U/M\) vanish, equivalently \(V=N\) and \(M=U\). These are precisely its two displayed equality conditions. An unrelated abstract isomorphism between the two objects would not prove either equality; the word ``via'' in the source convergence definition is essential.
+
+For the abutment, let \(W_p=(Z\cap F^pK)+B\), so \(B\subset W_p\subset Z\). The quotient correspondence for \(Z\to Z/B\) preserves every intersection and union that exists, because it is an order isomorphism on subobjects containing \(B\). Thus the conditions \(\bigcap_pF^pH(K)=0\) and \(\bigcup_pF^pH(K)=H(K)\) are exactly \(\bigcap_pW_p=B\) and \(\bigcup_pW_p=Z\), as printed at 5932--5933.
+
+For a filtered complex the same proof is degreewise. In (4.1) use \(\ker d^n\subset K^n\), \(\operatorname{im}d^{n-1}\subset K^n\), \(R_r^{p,n-p}\), \(S_r^{p,n-p}\), and \(F^{p+1}K^n\). Then (4.3) is \(M/N\cong\operatorname{gr}^pH^n(K^\bullet)\), and (4.4) is the specified comparison with \(E_\infty^{p,n-p}\). This proves both parts of the criterion at 6341--6359. It does not discard the additional regularity and completeness conditions in the separate definition of convergence at 6329--6331.
+
+\subsection{5. Boundedness with the source's direction conventions}\label{note-06-boundedness-with-the-sources-direction-conventions}
+
+For the original general spectral sequence beginning at \(r_0\), the defining subobjects in \(E_{r_0}^{p,q}\) satisfy
+
+\[
+Z_{r+1}^{p,q}/B_r^{p,q}=\ker(d_r^{p,q}),\qquad
+B_{r+1}^{p,q}/B_r^{p,q}
+=\operatorname{im}(d_r^{p-r,q+r-1}).
+\]
+
+Consequently \(d_r^{p,q}=0\) if and only if \(Z_{r+1}^{p,q}=Z_r^{p,q}\): its kernel equals \(E_r^{p,q}=Z_r^{p,q}/B_r^{p,q}\) exactly then. Likewise the incoming differential vanishes if and only if \(B_{r+1}^{p,q}=B_r^{p,q}\). Applying these equalities for every \(r\) after the indicated bound proves the regularity and coregularity assertions at 6298--6303.
+
+If a component vanishes on one page, its next-page cohomology component vanishes, and induction gives vanishing on all later pages. Fix \((p,q)\) and put \(n=p+q\). Under the source's ``bounded below'' hypothesis, choose \(b(n+1)\) so the initial components on total degree \(n+1\) vanish for filtration degree at least that bound. For every \(r\geq\max(r_0,b(n+1)-p)\), the target at \((p+r,q-r+1)\) is therefore zero. This proves regularity.
+
+Under the source's ``bounded above'' hypothesis choose \(b(n-1)\) so that initial components on total degree \(n-1\) vanish for filtration degree at most that bound. For every \(r\geq\max(r_0,p-b(n-1))\), the source of the incoming differential at \((p-r,q+r-1)\) is zero. This proves coregularity. Finally, finite support on every diagonal is equivalent to having both lower and upper bounds on its integer filtration indices. This proves the remaining boundedness equivalence without reversing the source's explicit terminology.
+
+\subsection{6. Continuation and limits of this review}\label{note-06-continuation-and-limits-of-this-review}
+
+The three pending copyedits are local previews only. The six earlier units and their ten operations are checked separately against their authority preimages and cumulative postimages. The two optional reports remain recorded exactly once. UNDER-006 is proved editorial material, not an admitted source replacement. The source review continues at original line 6360, with 55 physical Homology reports still to adjudicate. No convergence claim outside the explicit hypotheses in §4, no generality change to the surrounding derived or tensor constructions, and no new paper-mining assignment follows from this checkpoint.
+\clearpage
+\section{Homology review: convergence and double complexes, original lines 6360--6814}\label{note-07-homology-review-convergence-and-double-complexes-original-lines-63606814}
+
+This editorial proof note uses the Stacks Project authors' original \texttt{homology.tex} at \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}, SHA-256 \texttt{483CAF01\allowbreak{}B4BD164D\allowbreak{}BC9103D7\allowbreak{}6196E294\allowbreak{}E00EFE17\allowbreak{}E706178E\allowbreak{}CF2DC2C1\allowbreak{}DEF4ABE0}. Receiving locators explicitly marked current refer to \texttt{b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434}. The machine-readable ledger binds the actual files, report rows, source operations, and proof sections. No novelty is asserted. Source corrections and the separately identified underclaims must remain distinguishable from the original statements.
+
+\subsection{1. Report dispositions}\label{note-07-report-dispositions}
+
+HOMOLOGY-RECON-053 confirms French HOMOLOGY-034 and MC-STK-ERR-0786: the vanishing used at original 6384 is in degree \(n+1\), the target of \(d^n\), not in degree \(n\). Section 2 proves the exact calculation. HOMOLOGY-RECON-054 joins P02-E1394 and French HOMOLOGY-035 to the two operations of MC-STK-ERR-0787. Its explicit quantifiers retain all bidegrees in the weak Serre hypothesis. The original theorem's hypothesis was correct; the repaired proof explicitly repeats it. HOMOLOGY-RECON-055 joins P02-E1396 and French HOMOLOGY-036 to MC-STK-ERR-0788: the intervening objects really belong to the smallest \textbf{weak} Serre subcategory specified by the theorem, as proved below.
+
+HOMOLOGY-RECON-056 accepts P02-E1395, inserting ``by'' after ``Denote'' at 6428. HOMOLOGY-RECON-057 joins P02-E1397 and French HOMOLOGY-053 to the two singular ``exists'' corrections of MC-STK-ERR-0805. HOMOLOGY-RECON-058 accepts P02-E1398 as a clarification: insert the second ``for'' before the lower-tail inequality at 6490. The intended English already describes two vanishing ranges; this is not evidence that vanishing in both tails is false. The different issue concerning which page is bounded is independently proved in §4 and has its own finding ID, HOMOLOGY-FIND-007.
+
+HOMOLOGY-RECON-059 confirms French HOMOLOGY-037 and both operations of MC-STK-ERR-0789. Injectivity on \(H^n\), rather than on \(H^{n-1}\), identifies the degree-\(n\) boundaries in the filtered subcomplex; §3 proves this with all degrees retained.
+
+HOMOLOGY-RECON-060, 061, 062, 063, and 065 accept P02-E1399, P02-E1400, P02-E1401, P02-E1402, and P02-E1404 respectively. They insert the missing ``by'' in the notation introductions at 6570, 6575, 6602, 6603, 6634, and 6785. The two operations for P02-E1401 belong to one physical report. No index or map changes.
+
+HOMOLOGY-RECON-064 records P02-E1403 as optional typographical consistency, not integrated. The leading prime at 6734 still identifies the same first spectral sequence; adding its empty group does not repair a mathematical index or a map. No rendering comparison is claimed by this source-only decision.
+
+\subsection{2. Finite termwise filtrations, weak Serre closure, and the Euler equality}\label{note-07-finite-termwise-filtrations-weak-serre-closure-and-the-euler-equality}
+
+For a filtered complex write \(Z^n=\ker d^n\), \(B^n=\operatorname{im}d^{n-1}\). Fix \(p,n\). The numerator subobject defining \(Z_r^{p,n-p}\), before quotient by \(F^{p+1}K^n\), is
+
+\[
+(F^pK^n\cap(d^n)^{-1}(F^{p+r}K^{n+1}))+F^{p+1}K^n. \tag{2.1}
+\]
+
+For a finite filtration on \(K^{n+1}\), choose \(u(n+1)\) with \(F^{u(n+1)}K^{n+1}=0\). For \(r\geq u(n+1)-p\), (2.1) is exactly \((Z^n\cap F^pK^n)+F^{p+1}K^n\). This proves why 6384 needs \(K^{n+1}\), and proves the required eventual equality of subobjects. Choose \(\ell(n-1)\) with \(F^{\ell(n-1)}K^{n-1}=K^{n-1}\). For \(r\geq p+1-\ell(n-1)\), the boundary numerator is exactly \((B^n\cap F^pK^n)+F^{p+1}K^n\). Both limiting subobjects therefore stabilize and exist in any abelian category. Their quotient comparison with \(\operatorname{gr}^pH^n(K^\bullet)\) is the one induced by cycles, as in \texttt{PROOFS\_5671\_6359.md}, §4; these equalities make both defect objects there zero.
+
+The initial page is \(E_0^{p,n-p}=F^pK^n/F^{p+1}K^n\), which has finite support in \(p\). Also \(F^pH^n=((Z^n\cap F^pK^n)+B^n)/B^n\) is zero for \(p\geq u(n)\) and is all of \(H^n\) for \(p\leq\ell(n)\). This proves boundedness at the actual initial page, weak convergence, and abutment. Boundedness implies regularity by the explicit target-degree argument in the preceding proof note. Finally the canonical map
+
+\[
+H^n\longrightarrow\lim_p H^n/F^pH^n
+\]
+
+is an isomorphism: for \(p\geq u(n)\) the quotients and their transition maps are \(H^n\) and its identity; every compatible cone to the whole inverse system is determined by its map into one such term, and its earlier components are exactly the quotient composites. This is a proof of the limit's universal property, so no unassumed infinite product is needed. It completes the printed convergence assertion.
+
+Let \(\mathcal C\) be weak Serre. The source's characterization means that it is strictly full, contains zero, is closed under kernels and cokernels of morphisms between its objects, and is closed under extensions. Thus it also contains images of such morphisms: the image is the kernel of the morphism to the cokernel, between objects already in \(\mathcal C\). If all \(E_r^{p,q}\) lie in \(\mathcal C\), all their outgoing kernels and incoming images lie in \(\mathcal C\); the cokernel of the inclusion of each image into its kernel does too. This proves membership of every next-page term, and induction proves membership on all subsequent pages.
+
+For a fixed total degree \(n\), only finitely many initial components are nonzero. Each stabilizes by regularity and coregularity, so the maximum of their finitely many stabilization bounds is a bound for the whole diagonal. The limiting terms lie in \(\mathcal C\). The finite filtration of \(H^n\), together with its short exact sequences \(0\to F^{p+1}H^n\to F^pH^n\to\operatorname{gr}^pH^n\to0\), then proves \(H^n\in\mathcal C\) by descending finite induction.
+
+For the Euler equality assume one page \(E_s\) has finite support as a set of pairs \((p,q)\). All later supports are subsets of that finite set, because the next-page term is a subquotient of the preceding term. Let \(\mathcal A'\) be its smallest weak Serre closure. The even and odd finite sums \(P_s,Q_s\) lie in \(\mathcal A'\) (finite sums are extensions). The maps \(\varphi:P_s\to Q_s\) and \(\psi:Q_s\to P_s\) induced by \(d_s\) have zero composites and all their kernels, images and cohomologies belong to \(\mathcal A'\). The four short exact sequences for these kernels and images give
+
+\[
+\begin{aligned}
+[P_s]-[Q_s]
+&=[\ker\varphi]+[\operatorname{im}\varphi]
+ -[\ker\psi]-[\operatorname{im}\psi]\\
+&=[\ker\varphi/\operatorname{im}\psi]
+ -[\ker\psi/\operatorname{im}\varphi]
+=[P_{s+1}]-[Q_{s+1}]
+\end{aligned}                                             \tag{2.2}
+\]
+
+in precisely \(K_0(\mathcal A')\), not in an unspecified larger closure. Choose \(R\geq\max(s,1,p_{\max}-p_{\min}+1)\), where the extrema are taken over this finite support. All differentials \(d_t\) with \(t\geq R\) vanish, since their filtration-degree change \(t\) exits the support. If the support is empty take \(R\geq\max(s,1)\). This proves permanent stabilization, rather than assuming that one zero differential forces all later differentials to vanish. Only finitely many cohomology degrees can then have a nonzero graded piece; finite filtrations show all the other \(H^n\) are zero. Summing their finite filtration relations and (2.2) gives exactly
+
+\[
+\sum_n(-1)^n[H^n(K^\bullet)]
+=\sum_{p,q}(-1)^{p+q}[E_s^{p,q}].             \tag{2.3}
+\]
+
+\subsection{3. Cohomological tail hypotheses and the ill-typed equality}\label{note-07-cohomological-tail-hypotheses-and-the-ill-typed-equality}
+
+Assume the original hypotheses at 6468--6472: for each \(n\), \(H^n(F^pK^\bullet)=0\) for \(p\geq p_0(n)\), while \(H^n(F^pK^\bullet)\to H^n(K^\bullet)\) is an isomorphism for \(p\leq p_1(n)\). No finiteness of the filtration on \(K^n\) is assumed.
+
+The exact sequence \(0\to F^{p+1}K^\bullet\to F^pK^\bullet\to\operatorname{gr}^pK^\bullet\to0\) shows \(H^n(\operatorname{gr}^pK^\bullet)=0\) in each of two tails. For \(p\geq\max(p_0(n),p_0(n+1))\), the adjacent cohomology groups \(H^n(F^pK)\) and \(H^{n+1}(F^{p+1}K)\) vanish. For \(p<\min(p_1(n),p_1(n+1))\), both maps \(H^j(F^{p+1}K)\to H^j(F^pK)\), for \(j=n,n+1\), are isomorphisms: their composites into \(H^j(K)\) and the two comparison maps are isomorphisms. The exact sequence forces the middle graded cohomology to vanish. Thus the sequence \textbf{starting at \(E_1\)} is bounded.
+
+Fix \(p,n\) and take \(r\geq1\) with \(p+r>p_0(n+1)\). Put \(t=p+r\). Exactness of \(F^tK^\bullet\) in degree \(n+1\) implies the equality of subobjects of \(K^n\)
+
+\[
+F^pK^n\cap(d^n)^{-1}(F^tK^{n+1})
+=F^tK^n+(Z^n\cap F^pK^n).                  \tag{3.1}
+\]
+
+For the forward inclusion, a test morphism \(z\) on the left has \(d^nz\) in the degree-\(n+1\) cycles of \(F^tK\), hence in the image of \(d^n:F^tK^n\to F^tK^{n+1}\). Pull back that epimorphism onto its image to lift locally to \(v\in F^tK^n\); then \(z-v\in Z^n\cap F^pK^n\). The local lift proves the subobject inclusion, since factorization through a subobject is tested by its cokernel and can be checked after an epimorphism. Conversely every \(v\in F^tK^n\) maps into \(F^tK^{n+1}\), every cycle maps to zero, and \(F^tK^n\subset F^pK^n\). This proves (3.1) in an arbitrary abelian category.
+
+Original 6510 instead puts \(d(F^tK^n)\) on the right. That is a subobject of \(K^{n+1}\), so it cannot be summed with the displayed subobject of \(K^n\). HOMOLOGY-FIND-008 replaces it by \(F^tK^n\) and explicitly takes \(r\geq1\). This last inequality ensures \(F^tK^n\subset F^{p+1}K^n\), giving the required equality of numerators after adding \(F^{p+1}K^n\). Choosing arbitrarily large such \(r\) proves the asserted intersection identity.
+
+For the boundary identity put \(s=p-r+1\), with \(r\geq1\) large enough that \(s<p_1(n)\). Consider the kernel of \(H^n(F^sK)\to H^n(K)\). By the definitions of cycles and boundaries it is
+
+\[
+\frac{B^n\cap F^sK^n}{d^{n-1}(F^sK^{n-1})}.       \tag{3.2}
+\]
+
+Indeed the preimage of zero consists of cycles in \(F^sK^n\) whose image is a boundary in \(K^n\), and every boundary is already a cycle. Injectivity on \(H^n\) makes (3.2) zero, proving \(d^{n-1}(F^sK^{n-1})=B^n\cap F^sK^n\). Because \(s\leq p\), intersecting with \(F^pK^n\) and adding \(F^{p+1}K^n\) proves the required boundary numerator equality. This proves the two prior \(n-1\)-to-\(n\) corrections.
+
+The cohomology filtration is zero for \(p\geq p_0(n)\) and all of \(H^n(K)\) for \(p\leq p_1(n)\). It is therefore finite, separated, exhaustive and complete, by the same universal-property argument as in §2. Boundedness from \(E_1\) gives regularity and coregularity of the original sequence too: both definitions ask only for eventual vanishing of differentials and are unaffected by retaining an earlier page. Together with the two numerator equalities this proves the original convergence conclusion, without asserting boundedness of the \(E_0\) page.
+
+HOMOLOGY-UNDER-007 is the following additional consequence. Under these cohomological tail hypotheses, if every term on one page lies in a weak Serre subcategory \(\mathcal C\), then every \(H^n(K)\) lies in \(\mathcal C\). If one page has finite support, the finite Euler equality (2.3) holds in its smallest weak Serre closure, and only finitely many cohomology objects are nonzero. To prove this, start at a page at least 1 and at least the specified page. Pagewise weak Serre closure, eventual stabilization, and (2.2) apply exactly as proved in §2. The finite cohomology filtration proved in this section supplies the last induction. No finiteness of the termwise filtration is needed for either consequence. These strengthenings are editorial material; the original finite-termwise lemma is retained.
+
+\subsection{4. HOMOLOGY-FIND-007: the initial page matters}\label{note-07-homology-find-007-the-initial-page-matters}
+
+Let \(k\) be a nonzero field and let \(V=\bigoplus_{j\geq0}ke_j\). Define the cochain complex \(K^0=V\), \(K^1=V\), \(d^0=\operatorname{id}_V\), with all other terms and differentials zero. Give both copies of \(V\) the filtration
+
+\[
+F^pV=\bigoplus_{j\geq\max(p,0)}ke_j.
+\]
+
+Every filtered subcomplex \(F^pK\) has identity differential and zero cohomology, as does \(K\). Thus both hypotheses in §3 hold in every degree, with for example \(p_0(n)=p_1(n)=0\). For every \(p\geq0\),
+
+\[
+E_0^{p,-p}=k\bar e_p,\qquad
+E_0^{p,1-p}=k\bar e_p,
+\]
+
+and \(d_0\) is the identity between these two terms. All other terms are zero. Both total-degree diagonals 0 and 1 have infinitely many nonzero initial components, so \((E_r)_{r\geq0}\) is not bounded under \texttt{definition-bounded-ss}. Nevertheless \(E_1=0\), every later page is zero, and all convergence conclusions hold. This is a direct counterexample to an \(E_0\)-bounded reading of 6476, not to the cohomological convergence theorem.
+
+The correction specifies \((E_r,d_r)_{r\geq1}\) in that conclusion and specifies its \(E_1\) starting page in the proof. It leaves the chapter's definition of boundedness unchanged. The second ``for'' from P02-E1398 clarifies the two tails but does not itself solve this starting-page problem.
+
+Literal external citations of this Homology lemma occur in current \texttt{cohomology.tex:7304}, \texttt{injectives.tex:2278,2352}, and \texttt{more-algebra.tex:16162}. The Cohomology and both Injectives statements already specify \(r\geq1\) at 7271, 2251, and 2320 respectively. Their boundedness assertions are therefore compatible with the corrected lemma. This dependency check does not certify their entire derived-functor constructions.
+
+The More Algebra lemma \texttt{lemma-kunneth-converges} refers to the spectral sequence of a specified filtered tensor total complex. Its conclusion at original 15531/current 16140 needs the same explicit starting page under its second set of hypotheses. The counterexample above also realizes this setting: take \(R=k\), and let \(L^0=k\) with \(F^jL=L\) for \(j\leq0\) and zero for \(j\geq1\). All required terms are flat. The two-term identity complexes \(K,F^iK,\operatorname{gr}^iK\) are contractible (or zero), hence K-flat; their tensor with any complex is contracted by their degree-\(-1\) homotopy with the usual tensor differential. The one-term complexes associated with \(L\) are free, hence K-flat. The convolution filtration satisfies
+
+\[
+F^p\operatorname{Tot}(K\otimes_k L)
+=\sum_{i+j=p}F^iK\otimes_k F^jL
+=\sum_{i\geq p}F^iK\otimes_k k
+\xrightarrow{\ v\otimes a\mapsto av\ }F^pK.
+\]
+
+The equality of subobjects holds because all summands lie in \(F^pK\) and the summand \(i=p,j=0\) is exactly \(F^pK\). The given tensor representative therefore has unbounded \(E_0\) and zero \(E_1\). The lemma is corrected to boundedness starting at \(E_1\); the stronger finite-filtration case remains available without changing its hypotheses.
+
+The subsequent existential proposition at original 15766--15798/current 16375--16407 is different: it permits a choice of representative. The counterexample does not disprove that proposition. Its bounded initial page can be achieved by the construction in §5. Accordingly its statement is preserved and its proof is completed. The later Künneth spectral sequence at current 16409--16441 explicitly starts at page 2 and receives the preceding sequence from page 1, so no starting-page correction is needed there.
+
+\subsection{5. HOMOLOGY-UNDER-008: finite filtration representatives and the Künneth proof}\label{note-07-homology-under-008-finite-filtration-representatives-and-the-kuxfcnneth-proof}
+
+First work in any abelian category. Suppose there are integers \(a<b\) such that \(F^iK\to K\) is a quasi-isomorphism for every \(i\leq a\) and \(F^iK\) is acyclic for every \(i\geq b\). Set
+
+\[
+K'=F^aK/F^bK,
+\qquad
+F^iK'=
+\begin{cases}
+F^aK/F^bK&i\leq a,\\
+F^iK/F^bK&a<i<b,\\
+0&i\geq b.
+\end{cases}                                  \tag{5.1}
+\]
+
+The original object is connected by the explicit zigzag
+
+\[
+K\ \xleftarrow{\iota}\ F^aK\ \xrightarrow{\pi}\ K',       \tag{5.2}
+\]
+
+where the middle filtration is \(F^i(F^aK)=F^{\max(i,a)}K\), \(\iota\) is inclusion, and \(\pi\) is quotient by \(F^bK\). Both are filtered chain maps. On a step \(i\leq a\), the first map is \(F^aK\to F^iK\), a quasi-isomorphism because both composites to \(K\) are quasi-isomorphisms. For \(i>a\) it is the identity on \(F^iK\). On a step \(i<b\), the second map is the quotient \(F^{\max(i,a)}K\to F^{\max(i,a)}K/F^bK\), whose kernel is acyclic. For \(i\geq b\), it is the map from the acyclic complex \(F^iK\) to zero. Thus both maps are quasi-isomorphisms on every filtration step and on the underlying complexes. The short exact sequences of successive steps give quasi-isomorphisms on every associated graded complex as well. This proves all comparisons, while retaining the original \(K\), its full filtration, and the maps (5.2).
+
+In particular \(\operatorname{gr}^iK'\) is canonically \(\operatorname{gr}^iK\) for \(a\leq i<b\). For \(i<a\), both \(F^{i+1}K\) and \(F^iK\) map quasi-isomorphically to \(K\), so \(\operatorname{gr}^iK\) is acyclic. For \(i\geq b\), both steps are acyclic, so that graded complex is again acyclic. The new zero graded objects outside \([a,b)\) therefore come with exact derived comparisons, not discarded contributions.
+
+Apply this construction to the filtered resolutions \(P\to K\) and \(Q\to L\) in \texttt{proposition-kunneth-filtered}, under that proposition's four additional uniform tail hypotheses. They transfer to \(P,Q\) because the resolution maps are quasi-isomorphisms on every filtration step. Choose \(a_P<b_P\) and \(a_Q<b_Q\), and set \(P'=F^{a_P}P/F^{b_P}P\), \(Q'=F^{a_Q}Q/F^{b_Q}Q\), with (5.1).
+
+Each term of \(F^iP'\) is free. For \(a_P\leq i<b_P\), it has the finite filtration with successive quotients \(\operatorname{gr}^jP^n\), \(i\leq j<b_P\), which are free by the original resolution lemma. Each extension by a free module splits because that quotient is projective, so finite induction gives a free middle module. The steps outside this range are the whole quotient or zero. The same argument applies to \(Q'\), and all their graded terms are free.
+
+The complexes \(F^iP'\) are K-flat. For the internal range they occur in the degreewise split short exact sequence
+
+\[
+0\to F^{b_P}P\to F^iP\to F^iP'\to0.          \tag{5.3}
+\]
+
+Both left-hand complexes are K-flat by the resolution lemma. Tensor (5.3) with any acyclic complex and form the direct-sum total complex. The sequence remains short exact degreewise, since the termwise quotients are free and direct sums of exact sequences of modules are exact. The first two tensor complexes are acyclic; their long exact cohomology sequence proves the third is acyclic. This is the definition of K-flatness. The whole quotient and zero steps follow as above, and the argument for \(Q'\) is identical. For the internal graded complexes K-flatness is inherited from the already specified \(\operatorname{gr}^iP\) and \(\operatorname{gr}^jQ\); outside they are zero.
+
+Define
+
+\[
+T'=\operatorname{Tot}(P'\otimes_R Q'),\qquad
+F^pT'=\sum_{i+j=p}\operatorname{Tot}(F^iP'\otimes_R F^jQ').       \tag{5.4}
+\]
+
+The zigzags (5.2) for \(P,Q\), and their original maps to \(K,L\), show that \(T'\) represents \(K\otimes_R^{\mathbf L}L\). Every intermediate tensor comparison is a quasi-isomorphism because the other factor is K-flat; for example tensor the acyclic cone of \(F^{a_P}P\to P'\) with a K-flat representative of the second factor. The cone commutes with tensor totalization by its defining two-term direct sums and signed differentials, giving the stated comparison.
+
+The filtration (5.4) is all of \(T'\) for \(p\leq a_P+a_Q\): choose \(i=a_P\), \(j=p-a_P\leq a_Q\). It is zero for \(p\geq b_P+b_Q-1\): a nonzero summand would require \(i\leq b_P-1\) and \(j\leq b_Q-1\), contrary to that inequality. Thus it is finite, with uniform bounds, and its \(E_0\) page is bounded. Degreewise finite filtrations of free modules split, so their tensor has the canonical associated graded isomorphism
+
+\[
+\operatorname{gr}^pT'
+\cong\bigoplus_{i+j=p}\operatorname{Tot}
+  (\operatorname{gr}^iP'\otimes_R\operatorname{gr}^jQ').       \tag{5.5}
+\]
+
+The map sends a tensor of filtration classes to the class of the tensor in \(F^pT'/F^{p+1}T'\). It is independent of lifts because raising either filtration index places the difference in \(F^{p+1}\). Splitting the finite filtrations makes this map the identity on each pair of graded summands, proving it is an isomorphism. The canonical map, rather than the choice of splitting, is used in (5.5); it commutes with the total differential since both tensor differentials preserve the filtration and keep their original signs.
+
+The comparisons of graded complexes following (5.2), K-flatness, and exactness of module direct sums now give
+
+\[
+H^{p+q}(\operatorname{gr}^pT')
+\cong\bigoplus_{i+j=p}
+H^{p+q}(\operatorname{gr}^iK\otimes_R^{\mathbf L}\operatorname{gr}^jL).
+\]
+
+The terms outside the finite index intervals are zero in the derived category for the proved acyclicity reasons, so this formula retains the original sum and every one of its contributions. Section 2 proves convergence and the finite cohomology filtration. This repairs the existential proposition's proof while keeping its stronger boundedness statement. Without the four tail hypotheses the original choice \(\operatorname{Tot}(P\otimes_R Q)\) still supplies its initial existence and \(E_1\)-formula, as in the unchanged first paragraph.
+
+The later reindexing in current \texttt{more-algebra.tex:16436–16440} retains boundedness: on a fixed total degree \(p+q=n\), the map \((p,q)\mapsto(-q,p+2q)\) is a bijection onto the corresponding old diagonal. An old differential of bidegree \((r-1,2-r)\) becomes \((r,1-r)\) under this substitution, by solving for the new two coordinates. Thus no new boundedness restriction is needed there.
+
+\subsection{6. Double-complex signs, the resolution map, and additive homotopies}\label{note-07-double-complex-signs-the-resolution-map-and-additive-homotopies}
+
+Retain the source convention \(D=d_1+(-1)^i d_2\) on \(K^{i,j}\). The filtration by \(i\) has \({}'E_0^{p,q}=K^{p,q}\) and differential \((-1)^pd_2\); the filtration by \(j\) has \({}''E_0^{p,q}=K^{q,p}\) and differential \(d_1\). Multiplication of a differential by \(-1\) leaves its kernel and image as the same subobjects, so the cycle quotient gives the displayed unsigned identifications of the two \(E_1\) pages. If \(x\in K^{p,q}\) is a vertical cycle, \(Dx=d_1x\), giving \({}'d_1^{p,q}=H^q(d_1^{p,\bullet})\). If \(x\in K^{q,p}\) is a horizontal cycle, \(Dx=(-1)^qd_2x\), giving the printed \({}''d_1^{p,q}=(-1)^qH^q(d_2^{\bullet,p})\). In the latter complex the sign is constant as its filtration coordinate \(p\) varies, so its kernels and images agree with those for the unsigned induced \(d_2\). This proves both \(E_2\) formulas, with no sign removed from either \(d_0\) or \(d_1\).
+
+Under the finite-diagonal hypothesis in 6673--6675, both total filtrations are finite in each degree. Section 2 gives the four conclusions of \texttt{lemma-first-quadrant-ss}, without requiring a literal first-quadrant support assumption.
+
+For \texttt{lemma-double-complex-gives-resolution}, let the double complex \(B\) have \(B^{p,0}=K^p\), all other rows zero, horizontal differential \(d_K\), and vertical differential zero. The given \(\alpha^p\) define a morphism \(B\to A\): the horizontal compatibility is assumption (3), and the vertical compatibility follows from assumption (4). On totals the component in degree \(n\) is exactly \(K^n\xrightarrow{\alpha^n}A^{n,0}\to\operatorname{Tot}^nA\). Its differential is \(d_1\alpha^n+(-1)^n d_2\alpha^n
+=\alpha^{n+1}d_K^n\). The first spectral sequence map is an isomorphism on \(E_1\), because each column resolution has the specified degree-zero cohomology and no other cohomology. Taking cohomology repeatedly makes it an isomorphism on all later pages. Finite-diagonal convergence identifies these limiting maps with the associated graded maps on cohomology. A map between finite filtered objects inducing isomorphisms on the associated graded is an isomorphism: take common upper and lower filtration bounds, start with the zero top step, and use the short exact sequences of consecutive steps to prove successively that each step map is an isomorphism (kernel and cokernel exactness give this conclusion). At the lower bound this is the original map. Thus the stated quasi-isomorphism is induced by the actual displayed chain map, filling the omitted identification at 6740--6742.
+
+HOMOLOGY-UNDER-009: the homotopy-totalization statement at 6745--6814 holds in any additive category, provided the diagonal coproducts defining its total complex exist. No kernels, cokernels, exactness of coproducts, or abelian structure is used. Here is the complete map calculation with those existence requirements explicit.
+
+Let \(a:M^\bullet[0]\to A^{\bullet,\bullet}\) be the given outer homotopy equivalence, with outer inverse \(b\). A degree-\(-1\) outer homotopy on the complex concentrated in outer degree zero must be zero. Hence \(ba=\operatorname{id}_{M^\bullet}\), and \(b\) has only its component \(b^0:A^{0,\bullet}\to M^\bullet\). The induced maps \(\alpha:M\to\operatorname{Tot}A\) and \(\beta:\operatorname{Tot}A\to M\) use the degree-zero summand inclusion and the family consisting of \(b^0\) and zero on every other summand. Their existence follows from the coproduct universal property. They are chain maps, by the inner-chain-map conditions and outer compatibility, and \(\beta\alpha=\operatorname{id}_M\).
+
+Choose the outer homotopy \(h^{i,j}:A^{i,j}\to A^{i-1,j}\) with \(ab-1=d_1h+hd_1\). On each total degree its component maps into one summand of the preceding total degree, so the coproduct gives a morphism \(H^n:\operatorname{Tot}^nA\to\operatorname{Tot}^{n-1}A\). On the summand \(A^{i,j}\), the composite \(DH+HD\) is
+
+\[
+d_1^{i-1,j}h^{i,j}
++(-1)^{i-1}d_2^{i-1,j}h^{i,j}
++h^{i+1,j}d_1^{i,j}
++(-1)^ih^{i,j+1}d_2^{i,j}.
+\]
+
+Since \(h^{i,\bullet}\) is an inner chain map, \(d_2^{i-1,j}h^{i,j}=h^{i,j+1}d_2^{i,j}\); the middle signed pair cancels exactly. The remaining terms equal \(ab-1\), which on totals is \(\alpha\beta-1\). Agreement on all summand inclusions proves \(DH+HD=\alpha\beta-1\). This is the claimed homotopy equivalence in an additive category.
+
+Existence of the total is a real requirement, already signaled by the source's total-complex definition ``if it exists''. For example, in finite-dimensional \(k\)-vector spaces put \(A^{2i,-2i}=A^{2i+1,-2i}=k\) for \(i\geq0\), set each displayed horizontal differential to the identity, and set all other terms and differentials to zero. As an outer complex of inner complexes it is contracted by the reverse identity maps on these pairs, so it is outer homotopy equivalent to zero. Its proposed degree-zero total is a coproduct of infinitely many copies of \(k\), which does not exist in this category. The coproduct universal property would make arbitrarily many summand inclusions linearly independent by testing them against their coordinate maps to \(k\), contradicting finite dimension. Thus the additive strengthening explicitly retains existence of the diagonal sums; it does not infer that existence merely from the outer homotopy. The original source body is not changed to assert automatic existence.
+
+\subsection{7. Coverage limits}\label{note-07-coverage-limits}
+
+The 16 physical reports with first locus after 6359 and through 6814 receive one disposition each. The two new findings have distinct mathematical proofs and do not inflate that physical report count. The source was additionally read consecutively through 7000; those later resolution reports and arguments remain for the next review. The receiving Künneth changes concern the bounded-page assertion and the finite-filtration choice proved above. Other claims in the surrounding tensor-convolution proof, and unrelated local notation issues observed while reading it, are not certified by this note. No live chapter, accepted registry, or public release is changed by this local proof checkpoint.
+\clearpage
+\section{Homology review: four resolution totalizations, original lines 6815--7064}\label{note-08-homology-review-four-resolution-totalizations-original-lines-68157064}
+
+Source: the Stacks Project authors' \texttt{homology.tex}, commit \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}, SHA-256 \texttt{483CAF01\allowbreak{}B4BD164D\allowbreak{}BC9103D7\allowbreak{}6196E294\allowbreak{}E00EFE17\allowbreak{}E706178E\allowbreak{}CF2DC2C1\allowbreak{}DEF4ABE0}. This editorial proof note records exact signs, coordinates, support conditions, and maps for the four original resolution lemmas. It does not replace the source's original objects or call an omitted proof a false theorem. The old/new operation ledger separately identifies actual corrections and clarifications. No novelty is asserted.
+
+All groups in the proofs are abelian groups. Every formula also consists of module homomorphisms when the input consists of modules over a ring. The proofs then give the corresponding module quasi-isomorphisms, as already anticipated by the source's introductory comment. No extension to an arbitrary abelian category with unproved infinite lifting or exactness properties is asserted here.
+
+\subsection{1. Physical report decisions}\label{note-08-physical-report-decisions}
+
+HOMOLOGY-RECON-066 joins P02-E1405 and French HOMOLOGY-054 to MC-STK-ERR-0806: the subject ``we'' and adjective ``analogous'' correct the introductory sentence at 6828. HOMOLOGY-RECON-067 accepts P02-E1406: insert ``by'' in the notation introduction at 6861. HOMOLOGY-RECON-068 joins P02-E1407 and French HOMOLOGY-055 to MC-STK-ERR-0807: the plural ``images'' agrees with the two cocycles and the verb at 6924.
+
+HOMOLOGY-RECON-069 joins P02-E1408 and French HOMOLOGY-038 to MC-STK-ERR-0790. The source token was \(d^{n-1}\), not \(d^n\) as the French observation describes it. Its corrected exponent \(-n\) is nevertheless exactly right: the changed component \(y_{n-1}\) has degree \(-n\). Section 4 proves the full induction.
+
+HOMOLOGY-RECON-070 joins P02-E0016, P02-E1409, P02-E1410, and French HOMOLOGY-039 to MC-STK-ERR-0791. Its one operation fixes both the assembled cochain's degree to \(-1\) and the equation to \(Dy=x\), where \(x\) is the cocycle. The class \(\xi\in H^0(T)\) is not a cochain. The French observation's claim that the old equation was reversed is not the literal old text; the exact correction is still verified against the actual source.
+
+HOMOLOGY-RECON-071 joins P02-E1411 and French HOMOLOGY-040 to MC-STK-ERR-0792: set \(B_0=M\) and \(B_{n+1}=A_n\) for \(n\geq0\). The old text was \(B_n=A_{n+1}\), not \(B_n=A_n\) as the French observation says. Section 5 proves the corrected totalization and the nontrivial sign in its quotient map to \(T[1]\).
+
+HOMOLOGY-RECON-072 joins P02-E1412 and French HOMOLOGY-041 to MC-STK-ERR-0793. All three existing operations are needed to retain the positive sign in \(x_1+d_{A_1}^0y_0=f_2^1y_1\) and place the existential phrase before its justification. The full alternating recursion is proved in §5.
+
+These seven groups account for fifteen physical reports, fourteen already corrected and one pending copyedit. Misdescriptions in a producer's evidence are retained rather than silently rewritten; acceptance uses the exact original and current TeX.
+
+\subsection{2. A right resolution and the direct-sum total}\label{note-08-a-right-resolution-and-the-direct-sum-total}
+
+Consider the exact sequence of complexes
+
+\[
+0\longrightarrow M^\bullet\xrightarrow{\alpha}A_0^\bullet
+\xrightarrow{f_0}A_1^\bullet\xrightarrow{f_1}A_2^\bullet
+\longrightarrow\cdots.
+\]
+
+Put \(A^{p,q}=A_p^q\), for \(p\geq0\), and zero for \(p<0\). Its direct-sum total has
+
+\[
+T^m=\bigoplus_{i\geq0}A_i^{m-i},\qquad
+(D^mx)_i=f_{i-1}^{m-i+1}x_{i-1}+(-1)^i d_{A_i}^{m-i}x_i,       \tag{2.1}
+\]
+
+where the first summand is zero for \(i=0\). Each input summand maps into at most two output summands, so (2.1) defines a map on direct sums. The horizontal squares and vertical squares vanish, and the cross terms cancel because the \(f_i\) are chain maps and the two vertical signs are opposite. Thus \(D^{m+1}D^m=0\). The inclusion of \(\alpha^m:M^m\to A_0^m\) into \(T^m\) defines a chain map: \(f_0\alpha=0\) and \(d_{A_0}\alpha=\alpha d_M\).
+
+First suppose that a single integer \(t\) satisfies \(A_i^q=0\) for \textbf{every} \(i\geq0\) and every \(q<t\). Then the same is true for \(M^q\), since \(M^q\to A_0^q\) is injective. In total degree \(m\), nonzero terms require \(0\leq i\leq m-t\), so each diagonal is finite. Each horizontal row is the given exact resolution of \(M^q\). The swapped-variable version of \texttt{lemma-double-complex-gives-resolution} gives the quasi-isomorphism \(M\to T\).
+
+For explicit sign compatibility in this swap, write the transposed double complex as \(C^{q,p}=A^{p,q}\), with horizontal differential the old vertical differential and vertical differential the old horizontal differential. Its total differential is \(d_{A_p}+(-1)^q f_p\). The morphism
+
+\[
+\operatorname{Tot}(C)\longrightarrow\operatorname{Tot}(A),\qquad
+x\in A^{p,q}\longmapsto(-1)^{pq}x
+\]
+
+is an isomorphism of complexes. The vertical term on the source side obtains sign \((-1)^{p(q+1)}\); on the target side it obtains \((-1)^{pq+p}\). The horizontal term on the source side obtains \((-1)^{q+(p+1)q}=(-1)^{pq}\); on the target it obtains the same sign. Both equalities hold term by term. On the augmentation row \(p=0\), the isomorphism is the identity, so the resulting quasi-isomorphism is the stated original augmentation map.
+
+Original 6849 assumes only \(A_0^q=0\) for \(q<t\) before citing the finite-diagonal result. That bound alone does not imply finite diagonals. For example take \(M=A_0=0\), and for each \(j\geq0\) put \(A_{2j+1}^{-(2j+1)}=A_{2j+2}^{-(2j+1)}=\mathbf Z\), with the horizontal map between the two copies equal to the identity and all vertical maps zero. The rows are exact and \(A_0\) satisfies every lower bound, but total degree zero has one nonzero term for every \(j\). HOMOLOGY-FIND-009 corrects the temporary bound in this proof to all \(A_i\). It does not impose a new assumption on the lemma's general conclusion.
+
+For the general case use the original stupid truncations \(\sigma_{\geq t}M\), \(\sigma_{\geq t}A_i\). At each fixed inner degree the truncated horizontal sequence is either the original exact sequence or all zero, so it remains exact. The uniform bound just proved applies to these truncations and gives a quasi-isomorphism \(\sigma_{\geq t}M\to T(t)=\operatorname{Tot}(A(t))\) for every \(t\).
+
+A degree-\(m\) cocycle in \(T\) has finite support in \(i\), hence has representatives only in finitely many inner degrees \(m-i\). Choose \(t\) no greater than all these degrees. It is then a cocycle in \(T(t)\), since the truncation includes all the terms occurring in its differential, and its cohomology class comes from \(H^m(\sigma_{\geq t}M)\). This proves surjectivity of \(H^m(M)\to H^m(T)\). For injectivity, suppose a cycle in \(M^m\) becomes a boundary \(Dy\) in \(T\). The cochain \(y\) also has finite support; choose \(t\leq m\) below its finitely many inner degrees. The same equation holds in \(T(t)\). Injectivity of the truncated cohomology map gives a primitive in \(\sigma_{\geq t}M\), and hence in \(M\). This proves the original quasi-isomorphism with its original direct-sum total.
+
+\subsection{3. A good left resolution and the direct-sum total}\label{note-08-a-good-left-resolution-and-the-direct-sum-total}
+
+Consider
+
+\[
+\cdots\xrightarrow{f_3}A_2^\bullet\xrightarrow{f_2}A_1^\bullet
+\xrightarrow{f_1}A_0^\bullet\xrightarrow{\epsilon}M^\bullet\to0
+\]
+
+exact in every degree, and suppose its sequences of cycles \(\cdots\to Z^j(A_1)\to Z^j(A_0)\to Z^j(M)\to0\) are exact too. First the sequences of boundaries and of cohomology are exact. Indeed regard a fixed inner-degree row as an augmented chain complex in the resolution index. The short exact sequence of such rows \(0\to Z^j\to A^j\to B^{j+1}\to0\) has its first two rows exact, so the homology long exact sequence shows that the third is exact. Then \(0\to B^j\to Z^j\to H^j\to0\) proves exactness of the cohomology row. This retains every augmentation term \(M\).
+
+With \(A^{p,q}=A_{-p}^q\), the direct-sum total and its differential are
+
+\[
+T^m=\bigoplus_{i\geq0}A_i^{m+i},\qquad
+(D^mx)_i=f_{i+1}^{m+i+1}x_{i+1}+(-1)^i d_{A_i}^{m+i}x_i.       \tag{3.1}
+\]
+
+The augmentation \(T^m\to M^m\) is \(x\mapsto\epsilon^m x_0\). It is a chain map because \(\epsilon f_1=0\) and \(\epsilon d_{A_0}=d_M\epsilon\). Every cycle of \(M^m\) lifts to a cycle of \(A_0^m\) by the assumed exactness of cycles. Put that lift into component 0 and zeros elsewhere; (3.1) shows it is a total cycle. This proves surjectivity on cohomology in every degree.
+
+Let \(x\) be a total degree-\(m\) cycle, with support in \(0\leq i\leq N\). If \(N>0\), its component equation at \(N\) gives \(d_{A_N}x_N=0\). The equation at \(N-1\) gives \(f_Nx_N=(-1)^N d_{A_{N-1}}x_{N-1}\), so the class of \(x_N\) maps to zero in \(H^{m+N}(A_{N-1})\). The exact cohomology row supplies a cycle \(c\in A_{N+1}^{m+N}\) and an element \(u\in A_N^{m+N-1}\) such that \(x_N-f_{N+1}c=d_{A_N}u\). Define \(w\in T^{m-1}\) by
+
+\[
+w_{N+1}=c,\qquad w_N=(-1)^N u,
+\qquad w_i=0\quad(i\notin\{N,N+1\}).
+\]
+
+Then \((Dw)_N=x_N\), \((Dw)_{N+1}=0\), and no component above \(N+1\) is created. Thus \(x-Dw\) has support at most \(N-1\). Repeating finitely many times leaves a cycle supported only in component 0. These changes preserve its image in \(H^m(M)\).
+
+Suppose that remaining cycle \(x_0\) has image \(d_Mv\), \(v\in M^{m-1}\). Lift \(v\) to \(u_0\in A_0^{m-1}\) by exactness of the original degree-\(m-1\) row. The cycle \(x_0-d_{A_0}u_0\) maps to zero in \(Z^m(M)\), so exactness of the cycle row gives \(c_1\in Z^m(A_1)\) with \(f_1c_1=x_0-d_{A_0}u_0\). The cochain with components \(w_0=u_0,w_1=c_1\), all others zero, has \(Dw=x_0\), because its component 1 is \(-d_{A_1}c_1=0\). This proves injectivity. It also proves the final source sentence comparing the two images in \(H^0(M)\), and supplies the signs hidden in its finite elimination.
+
+\subsection{4. A good right resolution and the product total}\label{note-08-a-good-right-resolution-and-the-product-total}
+
+Return to the right resolution of §2, and assume that for every \(j\) the augmented sequence of cokernels of \(d^j\) is exact:
+
+\[
+0\to C^j(M)\to C^j(A_0)\to C^j(A_1)\to\cdots,
+\qquad C^j(A)=A^{j+1}/\operatorname{im}d_A^j.
+\]
+
+Its boundary, cycle, and cohomology rows are exact. First use \(0\to B^{j+1}\to A^{j+1}\to C^j\to0\), then \(0\to Z^j\to A^j\to B^{j+1}\to0\), then \(0\to B^j\to Z^j\to H^j\to0\). In each case two of the rows are exact, so the long exact sequence proves exactness of the third.
+
+Now take the \textbf{product} \(T^m=\prod_{i\geq0}A_i^{m-i}\), with the same two-component differential formula (2.1). Each output coordinate depends on only two input coordinates, so it defines a map on products; the same termwise calculation proves \(D^2=0\). The augmentation is the map into component 0, with zeros elsewhere.
+
+Let \(x=(x_i)\) be a total degree-\(m\) cocycle. Its first two equations are \(d_{A_0}x_0=0\) and \(f_0x_0=d_{A_1}x_1\). Thus the class of \(x_0\) in \(C^{m-1}(A_0)\) maps to zero in \(C^{m-1}(A_1)\). Exactness of the cokernel row gives \(v\in M^m\) and \(u_0\in A_0^{m-1}\) with
+
+\[
+x_0=\alpha v+d_{A_0}u_0.
+\]
+
+Since \(d_{A_0}x_0=0\) and \(\alpha\) is injective, \(d_Mv=0\). Subtract the augmentation of this cycle from \(x\). The remaining cycle has its component 0 in the image of \(d_{A_0}\). HOMOLOGY-FIND-011 makes this subtraction explicit at 6973: one subtracts an element in the image from the original class; one cannot simply replace the class by an arbitrary image class and infer surjectivity for the original class from that replacement.
+
+We prove that a cycle with \(x_0=d_{A_0}y_0\) is a boundary. Construct successively \(y_i\in A_i^{m-i-1}\) satisfying
+
+\[
+x_j=f_{j-1}^{m-j}y_{j-1}+(-1)^j d_{A_j}^{m-j-1}y_j
+\quad (j\geq1),                             \tag{4.1}
+\]
+
+along with the already satisfied equation at \(j=0\). Suppose the components through \(y_{j-1}\) solve all equations through \(j-1\), and set \(w_j=x_j-f_{j-1}y_{j-1}\). The cycle equation for \(x\) gives \(d_{A_j}x_j=(-1)^{j+1}f_{j-1}x_{j-1}\). Substituting the preceding equation in (4.1), and using \(f_{j-1}f_{j-2}=0\), gives \(d_{A_j}x_j=f_{j-1}d_{A_{j-1}}y_{j-1}\). Thus \(d_{A_j}w_j=0\). Also \(f_jw_j=f_jx_j=(-1)^j d_{A_{j+1}}x_{j+1}\), so its class maps to zero in \(H^{m-j}(A_{j+1})\).
+
+By the exact cohomology row, choose \(c_{j-1}\in Z^{m-j}(A_{j-1})\) mapping to the class of \(w_j\). Replace \(y_{j-1}\) by \(y_{j-1}+c_{j-1}\). This preserves the already satisfied equations, since its only effect on equation \(j-1\) is the differential of a cycle, which is zero. It changes \(w_j\) by \(-f_{j-1}c_{j-1}\), so the new \(w_j\) is a boundary. Choose \(u_j\in A_j^{m-j-1}\) with \(d_{A_j}u_j=w_j\), and put \(y_j=(-1)^j u_j\). Then (4.1) holds at \(j\) as well.
+
+At stage \(j\), the components through \(j-2\) are unchanged. Every component therefore attains its final value after finitely many stages: \(y_i\) is last changed at stage \(i+1\). The resulting tuple belongs to the product \(T^{m-1}\); no finite support assertion is made. Each equation depends on two coordinates and remains valid after those coordinates stabilize, so \(Dy=x\). For the source's degree \(m=0\), the adjustment of \(y_{j-1}\) lies in \(\ker d^{-j}_{A_{j-1}}\), and the final tuple lies in \(T^{-1}\). This verifies MC-STK-ERR-0790 and MC-STK-ERR-0791.
+
+For injectivity suppose a cycle \(v\in M^m\) maps to \(Dy\), with \(y\in T^{m-1}\). The component-1 equation gives \(f_0y_0=d_{A_1}y_1\). Exactness of the row of \(C^{m-2}\) gives \(u\in M^{m-1}\) and \(z\in A_0^{m-2}\) with \(y_0=\alpha u+d_{A_0}z\). The component-0 equation then gives \(\alpha v=d_{A_0}y_0=\alpha d_Mu\). Injectivity of \(\alpha\) implies \(v=d_Mu\). Surjectivity and injectivity prove the claimed quasi-isomorphism in every degree.
+
+\subsection{5. An arbitrary left resolution and the product total}\label{note-08-an-arbitrary-left-resolution-and-the-product-total}
+
+For the left resolution of §3, without its additional cycle-row assumption, take
+
+\[
+T^m=\prod_{i\geq0}A_i^{m+i},\qquad
+(D^mx)_i=f_{i+1}^{m+i+1}x_{i+1}+(-1)^i d_{A_i}^{m+i}x_i.       \tag{5.1}
+\]
+
+First let \(M=0\). For a cocycle \(x\in T^m\), exactness at \(A_0^m\) gives \(u_0\in A_1^m\) with \(f_1u_0=x_0\). Suppose \(u_0,\ldots,u_{i-1}\) are constructed, with \(u_j\in A_{j+1}^{m+j}\). Define
+
+\[
+r_i=x_i-(-1)^i d_{A_i}^{m+i-1}u_{i-1},\qquad i\geq1.
+\]
+
+It belongs to \(\ker f_i^{m+i}\). In fact the cycle equation in component \(i-1\) gives \(f_ix_i=(-1)^i d_{A_{i-1}}x_{i-1}\). The preceding construction gives \(f_iu_{i-1}=x_{i-1}-(-1)^{i-1}d_{A_{i-1}}u_{i-2}\) when \(i>1\), and \(f_1u_0=x_0\) when \(i=1\). Commutativity with differentials and \(d^2=0\) show \(f_ir_i=0\) in either case. Exactness supplies \(u_i\in A_{i+1}^{m+i}\) with \(f_{i+1}u_i=r_i\).
+
+The primitive is the tuple
+
+\[
+y=(0,u_0,u_1,\ldots)\in T^{m-1},             \tag{5.2}
+\]
+
+where component 0 is in \(A_0^{m-1}\), and component \(i+1\) is \(u_i\in A_{i+1}^{m+i}\). Its differential is \(x\) by (5.1). For \(m=0\), the first recursion is \(x_1+d_{A_1}^0u_0=f_2^1u_1\), verifying the corrected positive sign of MC-STK-ERR-0793. The source names these \(u_i\) as \(y_i\). Accordingly HOMOLOGY-FIND-010 changes its final tuple at 7063 to \((0,y_0,y_1,\ldots)\); the displayed leading zero supplies the component in \(A_0^{-1}\). The given \(y_0\in A_1^0\) cannot be placed in that component. We have proved acyclicity in every degree.
+
+For general \(M\), define the corrected augmented resolution \(B_0=M\), \(B_{i+1}=A_i\) for \(i\geq0\), ending at zero. It is exact. Its product total \(S\) is acyclic by the case just proved. In degree \(m\), write
+
+\[
+S^m=M^m\times\prod_{i\geq0}A_i^{m+i+1}.
+\]
+
+The inclusion \(\iota:M\to S\) is into the first factor. The quotient map in the source's short exact sequence is the following signed map, rather than an unqualified unsigned reindexing:
+
+\[
+q^m:S^m\longrightarrow T[1]^m=T^{m+1},\qquad
+(v,(a_i))\longmapsto((-1)^ia_i)_{i\geq0}.       \tag{5.3}
+\]
+
+The source differential on the \(A_i\) tail has horizontal part \(f_{i+1}a_{i+1}\) and vertical part \((-1)^{i+1}d_{A_i}a_i\). Multiplication by \((-1)^i\) in the output gives \((-1)^if_{i+1}a_{i+1}-d_{A_i}a_i\). On the target, the differential is \(-D_T\); applied to (5.3) it gives \(-(-1)^{i+1}f_{i+1}a_{i+1}-(-1)^i(-1)^id_{A_i}a_i\), the same expression. Hence \(q\) is a chain map. It is surjective in every degree, with kernel the first factor \(M^m\), so
+
+\[
+0\longrightarrow M\xrightarrow{\iota}S\xrightarrow{q}T[1]
+\longrightarrow0                                      \tag{5.4}
+\]
+
+is a short exact sequence of complexes. The inclusion is a chain map because a component in \(B_0=M\) has no outgoing horizontal map inside \(S\), and its vertical sign is positive.
+
+For a cycle \(x\in T^{m+1}\), lift its corresponding class in \(T[1]^m\) by \((0,((-1)^ix_i))\in S^m\). Its differential has zero tail and first component \(\epsilon x_0\in M^{m+1}\). Thus the connecting map of (5.4), after the source's unsigned identification \(H^m(T[1])=H^{m+1}(T)\), is exactly
+
+\[
+H^{m+1}(T)\longrightarrow H^{m+1}(M),\qquad
+[x]\longmapsto[\epsilon x_0].
+\]
+
+Since \(S\) is acyclic, the long exact sequence makes this map an isomorphism in every degree. It is the map induced by the original augmentation \(T\to M\). This proves the original lemma and the exact comparison omitted at 7053, while retaining the cochain shift sign and every resolution-index shift.
+
+\subsection{6. Receiving uses in differential graded algebra}\label{note-08-receiving-uses-in-differential-graded-algebra}
+
+The receiving source is pinned at \texttt{b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434}. In \texttt{dga.tex}, the direct-sum resolution at 2301--2349 invokes the good left-resolution lemma. The construction chooses short exact sequences \(0\to M_{i+1}\to P_i\to M_i\to0\), with surjections on cycles by \texttt{lemma-good-quotient}, 2273--2299. For every degree \(j\), these give short exact sequences
+
+\[
+0\to Z^j(M_{i+1})\to Z^j(P_i)\to Z^j(M_i)\to0.
+\]
+
+Indeed, a cycle in the kernel of the last map lies in \(M_{i+1}^j\) by degreewise exactness; the injective chain map from \(M_{i+1}\) then shows that it is a cycle there. Surjectivity is the selected property of the quotient. Splicing these sequences proves the exact cycle rows required by §3. Under \(a=-i\), the displayed differential \(f_{-a}+(-1)^a d_{P_{-a}}\) is exactly (3.1), since \((-1)^{-i}=(-1)^i\). Its augmentation is the same map. Thus the receiving quasi-isomorphism follows with no change of hypotheses.
+
+The product resolution in \texttt{dga.tex}, 2501--2535, uses \(0\to M_i\to I_i\to M_{i+1}\to0\), with injective maps \(C^j(M_i)\to C^j(I_i)\) by \texttt{lemma-good-sub}, 2438--2487. The sequence
+
+\[
+0\to C^j(M_i)\to C^j(I_i)\to C^j(M_{i+1})\to0
+\]
+
+is exact. Surjectivity on the right follows by lifting an element in degree \(j+1\). If \(u\in I_i^{j+1}\) maps to a boundary \(dv\) in \(M_{i+1}\), lift \(v\) to \(w\in I_i^j\). Then \(u-dw\) lies in \(M_i^{j+1}\), proving exactness in the middle. The left injection is the chosen property of the subobject. Splicing gives the cokernel rows required by §4. The product terms and their differential agree exactly with (2.1); hence the original augmentation \(M\to I\) remains a quasi-isomorphism. This verifies the cited Homology input, not every separate assertion about the filtration used to prove property (I).
+
+For \texttt{sdga.tex}, the second proof at 3043--3113 repeats the direct-sum construction with sheaves, choosing surjections on cycle sheaves from \texttt{lemma-good-quotient}, 2820--2833. The same kernel argument gives exact cycle rows of sheaves. At each point, inverse image to abelian groups is exact and commutes with coproducts, so the stalks have the exact rows, total terms, differential, and augmentation of §3. Consequently the augmentation is a quasi-isomorphism on every stalk. When the site has enough points, an abelian sheaf with every stalk zero is zero; apply this to the kernel and cokernel of each induced cohomology map. This proves precisely the receiving enough-points argument. The separate subsequent argument without enough points has not been certified by this dependency check.
+
+All four resolution labels were searched in the tracked top-level TeX chapters. The three receiving occurrences are \texttt{dga.tex} 2348 and 2534, and \texttt{sdga.tex} 3112. No correction to these three uses is required by the present findings. This bounded dependency check is not a whole-chapter review, and unrelated DGA and SDGA reports remain in their own review queues.
+
+\subsection{7. Continuation}\label{note-08-continuation}
+
+The four original quasi-isomorphism statements hold. Their exact maps are the augmentations calculated above. The three new local proof repairs are the temporary lower bound on all columns, the explicit subtraction in the good right-resolution argument, and the leading zero in the arbitrary left-resolution primitive. The six older correction units with eight operations remain valid. The next source-ordered report review begins after 7064; actual consecutive reading has already reached 7320, including the injective/projective definitions and the first adjunction lemma. Those later reports have not been disposed by this proof note.
+\clearpage
+\section{Homology review: adjunctions, split diagrams, and inverse limits}\label{note-09-homology-review-adjunctions-split-diagrams-and-inverse-limits}
+
+The original source is the Stacks Project authors' \texttt{homology.tex} at \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}, SHA-256 \texttt{483CAF01\allowbreak{}B4BD164D\allowbreak{}BC9103D7\allowbreak{}6196E294\allowbreak{}E00EFE17\allowbreak{}E706178E\allowbreak{}CF2DC2C1\allowbreak{}DEF4ABE0}. This note covers original lines 7065--7945. The earlier source-bound corrections and the proposed copyedits have separate exact operations. Omitted source proofs are completed here as editorial material. No novelty is claimed, and the original statements remain identifiable.
+
+\subsection{1. Report decisions}\label{note-09-report-decisions}
+
+Groups 073 and 074 concern P02-E1413 and P02-E1414. The indexed objects can collectively be called a set; inserting braces around the family would clarify the notation, but the singular verb does not establish a mathematical defect or an obligatory grammatical correction. Both are recorded as optional and not integrated.
+
+Group 075 joins P02-E1415, P02-E1416, and French HOMOLOGY-056 to MC-STK-ERR-0808. Its three existing article corrections are valid. Group 076 joins P02-E1417 and French HOMOLOGY-057 to MC-STK-ERR-0809: the sentence continues across the line break, so ``in'' takes lower case. Group 077 accepts P02-E1418, adding ``by'' at 7409. Group 078 accepts P02-E1419, adding ``by'' at 7518.
+
+Group 079 verifies all four parenthesized colimits of MC-STK-ERR-0794, reported by French HOMOLOGY-042. Their object is the pointwise sum functor, with the exact colimit maps proved in §4. Group 080 joins P02-E1420 and French HOMOLOGY-058 to the existing article insertion MC-STK-ERR-0810. Group 081 leaves P02-E1421 unintegrated: ``the characterization of'' can identify the characterization supplied by the cited lemma. Replacing ``of'' with ``in'' is optional wording, not a mathematical correction.
+
+Group 082 joins P02-E0017 and French HOMOLOGY-043 to MC-STK-ERR-0795: the pointwise third object is the declared \(M_i\), not an undefined \(N_i\). Group 083 verifies MC-STK-ERR-0798 from French HOMOLOGY-046: the displayed objects form a sequence of limits.
+
+Group 084 accepts P02-E1422, adding ``by'' at 7792. Group 085 accepts P02-E1423 once, with three operations at 7815, 7816, and 7818. Group 086 joins P02-E1424 and French HOMOLOGY-059 to MC-STK-ERR-0811, which supplies the verb in the sentence introducing the short exact sequence. Group 087 verifies the degree quantifier of MC-STK-ERR-0796 from French HOMOLOGY-044. Group 088 joins P02-E0018 and French HOMOLOGY-045 to MC-STK-ERR-0797: the induction hypothesis concerns the complex \(\lim_{\gamma<\beta}K_\gamma^\bullet\), not a single degree object.
+
+Group 089 leaves P02-E1425 unintegrated. In the ungraded three-term complex \(L_i\to M_i\to N_i\), both terms identify the same kernel-modulo-image object at the middle position. A consistent choice of ``cohomology'' is editorial style; the switch does not alter a sign, index, object, or claim. Section 8 proves the actual comparison map.
+
+There are seventeen groups here, accounting for twenty-four reports: sixteen already corrected, four pending copyedit reports with six operations, and four optional reports. The nine existing correction units contain fourteen operations. The full Homology intake therefore has 136 reports in 89 groups, with every one of its sixty earlier units and eighty-one earlier operations reconciled.
+
+\subsection{2. Injectives, projectives, and adjunctions}\label{note-09-injectives-projectives-and-adjunctions}
+
+For an abelian category \(\mathcal A\), left exactness of \(\operatorname{Hom}(-,I)\) follows from the universal property of a cokernel. Surjectivity of \(\operatorname{Hom}(B,I)\to\operatorname{Hom}(A,I)\) for every monomorphism \(A\to B\) is exactly injectivity of \(I\). Hence the first two conditions in 7094--7111 agree. Injectivity splits every extension \(0\to I\to E\to C\to0\) by extending \(1_I\) to a retraction \(E\to I\). Conversely, given a monomorphism \(a:A\to B\) and \(f:A\to I\), form
+
+\[
+E=\operatorname{Coker}\bigl(A\xrightarrow{(a,-f)}B\oplus I\bigr).
+\]
+
+The induced \(I\to E\) is monic: if a morphism into \(I\) has zero image in the cokernel, the corresponding morphism into \(B\oplus I\) factors through \((a,-f)\); its \(B\)-component is zero, so monicity of \(a\) makes that factor zero. The cokernel is \(\operatorname{Coker}a\). A splitting of this extension gives a retraction \(r:E\to I\). The composite \(B\to E\xrightarrow r I\) extends \(f\), since the defining relation identifies \((a(x),0)\) with \((0,f(x))\). Thus the splitting condition implies injectivity. In the source's extension-group interpretation of \(\operatorname{Ext}\), its zero element is the split extension; this gives the fourth equivalence.
+
+For projectives, \(\operatorname{Hom}(P,-)\) is left exact by the kernel universal property; lifting through every epimorphism is exactness. Projectivity splits every epimorphism onto \(P\). Conversely pull back an epimorphism \(A\to B\) along \(P\to B\). The pullback \(A\times_B P\to P\) is epic, and a section followed by the projection to \(A\) is the requested lift. This proves the dual extension-group criterion, retaining the original positions of all objects.
+
+For \(J=\prod_\omega I_\omega\), extend the composite to each \(I_\omega\) across a monomorphism and combine the extensions by the product universal property. Their combined map extends the original map to \(J\); thus \(J\) is injective whenever the product exists. For \(P=\coprod_\omega P_\omega\), lift the restriction to every summand through a given epimorphism and combine the lifts by the coproduct universal property. This proves projectivity whenever that coproduct exists. The choices here are the usual set-indexed choices of lifts; no exactness of arbitrary products in \(\mathcal A\) is used.
+
+Now let \(v:\mathcal B\to\mathcal A\) be left adjoint to \(u:\mathcal A\to\mathcal B\), with the original additive hypotheses. A left adjoint preserves cokernels, so preservation of monomorphisms is equivalent to exactness of \(v\). A lifting problem into \(uI\) is, under adjunction, a lifting problem into \(I\) along the image under \(v\) of the same monomorphism. This proves preservation of injectives when \(v\) is exact. For the converse, embed \(A=\ker(vf)\) in an injective \(I\) and extend this embedding to \(vB\). Its adjoint \(B\to uI\) extends across the monomorphism \(f:B\to B'\). Taking the adjoint back gives \(k:vB'\to I\) whose composite with \(vf\) is the chosen extension. Restricted to \(A\), it is both the original embedding and zero. Hence \(A=0\).
+
+If \(v\) is exact and detects zero objects, an embedding \(a:vB\to I\) has monic adjoint \(j:B\to uI\). To see this, let \(e:K\to B\) be its kernel. Naturality of adjunction identifies \(je=0\) with \(a\,v(e)=0\). Both \(a\) and \(v(e)\) are monic, so \(vK=0\), and zero detection gives \(K=0\). This supplies the omitted kernel argument in the enough-injectives lemma. For an exact functor, detecting zero objects is equivalent to faithfulness: if \(v(f)=0\), exactness identifies \(v(\operatorname{im}f)\) with zero, so \(\operatorname{im}f=0\), whence \(f=0\). Conversely faithfulness applied to \(1_B\) proves zero detection. Functorial embeddings are obtained by the explicit map \(B\xrightarrow{\eta_B}uvB\to uJ(vB)\); naturality of the unit and of the chosen embedding gives its naturality, and the same kernel argument gives monicity. The already assumed functorial embeddings imply enough injectives; that redundant assumption causes no defect.
+
+\subsection{3. The partially defined left adjoint}\label{note-09-the-partially-defined-left-adjoint}
+
+In 7387--7454 the functor \(u\) is initially arbitrary. It is not necessary to insert an additive-functor assumption. For each generator \(P\in\mathcal P\), the representing bijection evaluated at the zero object shows that \(\operatorname{Hom}(P,u0)\) is a singleton. Choose an epimorphism from an element of \(\mathcal P\) onto \(u0\). That epimorphism must be zero, so \(u0=0\). Thus \(u\) preserves zero morphisms, and naturality shows that all the representing bijections preserve their distinguished zero elements.
+
+Fix \(P_2\xrightarrow d P_1\xrightarrow p B\to0\). The map \(v(d)\) is uniquely determined by \(u(v(d))i_{P_2}=i_{P_1}d\). This rule also proves the identity and composition laws on the full subcategory \(\mathcal P\). Put \(v(B)=\operatorname{Coker}(v(d))\), with quotient \(q\). A morphism \(h:v(P_1)\to A\) factors uniquely through \(q\) if and only if \(h v(d)=0\). Under the representing bijection this condition is precisely \((u(h)i_{P_1})d=0\), which is equivalent to a unique factorization through \(p\). Therefore
+
+\[
+\operatorname{Hom}_{\mathcal A}(v(B),A)
+\simeq \operatorname{Hom}_{\mathcal B}(B,uA)
+\]
+
+naturally in \(A\). In particular the comparison written using kernels in the source is valid as a bijection of zero fibers, without silently presupposing additivity of \(u\). For \(t:B\to B'\), precomposition gives a natural map from the functor represented by \(v(B')\) to the one represented by \(v(B)\). Yoneda supplies the unique \(v(t):v(B)\to v(B')\). Uniqueness proves composition and independence of the selected presentations up to the unique compatible isomorphism. These are the exact maps giving the left adjoint.
+
+\subsection{4. Colimits of direct sums and the precise splitting criterion}\label{note-09-colimits-of-direct-sums-and-the-precise-splitting-criterion}
+
+Write \(H_i=F_i\oplus G_i\), with inclusions \(a_i,b_i\) and projections \(p_i,q_i\). If \(W=\operatorname{colim}H\) exists, write its structure maps as \(c_i:H_i\to W\). The natural idempotents \(a_i p_i\) induce \(e:W\to W\), characterized by \(e c_i=c_i a_i p_i\). Equality after all \(c_i\) determines a map out of \(W\), so \(e^2=e\).
+
+Suppose \(e=s r\), where \(r:W\to X\), \(s:X\to W\), and \(rs=1_X\). Define \(x_i=r c_i a_i:F_i\to X\). For any cocone \(f_i:F_i\to Z\), the maps \(f_i p_i:H_i\to Z\) induce a unique \(h:W\to Z\). They satisfy \(he=h\). The map \(hs:X\to Z\) then obeys \(hs x_i=f_i\). Conversely any map with that property has composite with \(r\) equal to \(h\), since \(r c_i=r e c_i=r c_i a_i p_i=x_i p_i\). Its composite with \(rs=1_X\) is therefore \(hs\), proving uniqueness. Thus \(X\) is the colimit of \(F\).
+
+Conversely, if \(X=\operatorname{colim}F\) exists, the cocone \(c_i a_i\) induces \(s:X\to W\), while the maps \(x_i p_i:H_i\to X\) induce \(r:W\to X\). Checking on all \(x_i\) and all \(c_i\) gives \(rs=1_X\) and \(sr=e\). We have proved the exact editorial strengthening HOMOLOGY-UNDER-010:
+
+\begin{itemize}
+\tightlist
+\item
+  given \(W=\operatorname{colim}(F\oplus G)\), the colimit of \(F\) exists if and only if this particular \(e\) splits;
+\item
+  the colimit of \(G\) exists if and only if \(1-e\) splits;
+\item
+  both colimits exist if and only if both idempotents split, in which case their inclusions and projections give \(W\simeq\operatorname{colim}F\oplus\operatorname{colim}G\).
+\end{itemize}
+
+The last isomorphism follows because the two composite endomorphisms on \(W\) are \(e\) and \(1-e\), their sum is \(1_W\), and their cross composites are zero. Conversely, if the two colimits exist, their biproduct has the colimit universal property: a cocone on \(F\oplus G\) is exactly a pair of cocones on \(F\) and \(G\). The Karoubian assumption in the original lemma ensures both required splittings. Splitting one idempotent has not been asserted to split its complement in an arbitrary additive category. This finding specializes the earlier idempotent and retract calculations in HOMOLOGY-UNDER-001 and HOMOLOGY-UNDER-002 to a specific receiving colimit, without changing those earlier results.
+
+For essential constancy, use the precise definition in \texttt{categories.tex} 2930--2961 at the pinned current commit. If \(H\) is essentially constant with value \(W=X\oplus Y\), let \(t:W\to H_i\) be its witness. Then \(p_i t s_X:X\to F_i\) is a witness for \(F\): its composite to \(X\) is the identity, and restricting the equation \(H_j\to H_k=(H_i\to H_k)t c_j\) to \(F_j\), then projecting to \(F_k\), gives the required factorization through \(X\). The same construction with \(q_i\) and \(s_Y\) works for \(G\). Conversely, take witnesses for \(F\) and \(G\), move them to a common index, and combine them by direct sum. For any index \(j\), the two factorization equalities hold at two later indices. Filteredness gives a common later index; its equalization axiom lets us equalize the finitely many parallel arrows from the witness index and from \(j\). After those postcompositions, both equalities hold along the same two index arrows, so their direct sum is the defining equality for \(H\). Thus the source equivalence holds. More precisely, its forward direction only requires the two specified idempotents on its value to split. The backward direction needs no Karoubian hypothesis.
+
+For the preceding decomposition criterion in 7466--7530, a witness \(X\to M_i\) supplies a split section at every index reached from \(i\). Split the associated idempotent there; its complementary summand is \(\ker(M_j\to X)\). The defining eventual factorization kills that summand. Conversely, after choosing a split section at one index, kill the complementary summand of \(M_j\) at a later common index \(k\). The difference between the two candidate maps \(M_j\to M_k\) has zero projection to \(X\), so it factors through the complementary summand of \(M_k\). Kill this at a still later index. The difference is then zero, which is exactly the defining factorization. Applying the same argument in the opposite category gives the inverse-diagram assertion with all arrows reversed.
+
+\subsection{5. Exact sequences and the Mittag--Leffler condition}\label{note-09-exact-sequences-and-the-mittagleffler-condition}
+
+Kernels, cokernels, addition, zero objects, and biproducts of inverse systems are computed at each index. For example, the transition on \(\ker(L_i\to M_i)\) is the unique map whose composite with the kernel inclusion is the restriction of the transition on \(L_i\). The kernel universal property gives its composition law and its universal factorization for maps of systems. The cokernel construction is dual. The canonical coimage-to-image map is an isomorphism at each index, and its inverses commute with transitions by uniqueness. This proves the additive and abelian assertions and their pointwise exactness criterion, including the corrected object \(M_i\) at 7624.
+
+For a short exact sequence \(0\to(A_i)\to(B_i)\to(C_i)\to0\) of abelian groups, a compatible tuple in \(B_i\) mapping to zero in each \(C_i\) comes from a unique compatible tuple in \(A_i\). This proves left exactness of inverse limits. If \((B_i)\) is ML, \(\operatorname{im}(C_k\to C_i)\) is the image in \(C_i\) of \(\operatorname{im}(B_k\to B_i)\); hence these images stabilize too.
+
+Suppose now \((A_i)\) is ML and fix \(c=(c_i)\in\lim C_i\). The nonempty fibers \(T_i\subset B_i\) over \(c_i\) form an inverse system of sets. Each image of \(T_k\to T_i\) is a nonempty coset of \(\operatorname{im}(A_k\to A_i)\). These cosets are nested, and once those subgroups stabilize, the nonempty nested cosets are equal. Let \(U_i\subset T_i\) be that stable image. Its transition to \(U_{i-1}\) is surjective: given a member of \(U_{i-1}\), lift it from \(T_k\) with \(k\) beyond stabilization at both indices; its image at \(i\) belongs to \(U_i\). Choose successively compatible members of the nonempty \(U_i\). They give a lift of \(c\) in \(\lim B_i\). This proves the exactness assertion used below.
+
+The lack of general right exactness can be seen without dropping any transition data. Set \(A_i=B_i=\mathbf Z\), embed \(A_i\) into \(B_i\) by multiplication by \(2^i\), use multiplication by 2 on \(A_{i+1}\to A_i\), and the identity on \(B_{i+1}\to B_i\). Then \(C_i=\mathbf Z/2^i\mathbf Z\) has reduction transitions. Let \(c_i\) be the residue of \(\sum_{0\leq 2k<i}2^{2k}\). These residues are compatible and \(3c_i=-1\) modulo \(2^i\). If they came from an integer \(b\), then \(3b+1\) would be divisible by every \(2^i\), forcing \(3b=-1\), which is impossible in \(\mathbf Z\).
+
+For the four-term exact sequence at 7700, put \(I_i=\operatorname{im}(A_i\to B_i)\) and \(Z_i=\ker(C_i\to D_i)\). The quotient argument makes \((I_i)\) ML, and \(0\to I_i\to B_i\to Z_i\to0\) gives surjectivity \(\lim B_i\to\lim Z_i\). Left exactness identifies \(\lim Z_i\) with the required kernel, proving the assertion.
+
+An essentially constant inverse system over \(\mathbf N\) has a retraction \(A_i\to A\) at some index. For \(j\geq i\), compose \(A_j\to A_i\to A\). Its section is the limit projection \(A\to A_j\), so \(A_j=A\oplus Z_j\), compatibly with transitions. The defining eventual factorization kills each fixed \(Z_j\) after a sufficiently late transition. Conversely these decompositions give that factorization by projecting to \(A\). In particular the stable image at each fixed index is the image of \(A\), proving ML.
+
+For 7760--7803, first take an essentially zero quotient system \((Z_i)\). Choose \(n_1<n_2<\cdots\), cofinal in \(\mathbf N\), with \(Z_{n_{j+1}}\to Z_{n_j}\) zero. For fixed \(i\) and \(j>i\), the source's exact inclusions are
+
+\[
+\operatorname{im}(A_{n_j}\to A_{n_i})
+\subset\operatorname{im}(B_{n_j}\to B_{n_i})
+\subset\operatorname{im}(A_{n_{j-1}}\to A_{n_i}).
+\]
+
+Stabilization of the outer images forces stabilization of the middle ones. Conversely the middle images for \(j+1\) and \(j\) enclose the first image for \(j\), proving the reverse implication. A cofinal subsequence detects ML: for any original index, map from a later subsequence index and squeeze every subsequent image between two subsequence images. Thus the conclusion holds for the full systems. For a quotient \(C\oplus Z_i\), replace \(B_i\) by the inverse image \(B'_i\) of \(C\); the first case handles \(B/B'=Z\). With constant quotient \(C\), there is an exact sequence
+
+\[
+0\to\operatorname{im}(A_j\to A_i)
+\to\operatorname{im}(B_j\to B_i)\to C\to0.
+\]
+
+To verify its kernel, a lift from \(B_j\) mapping to zero in \(C\) already belongs to \(A_j\), because the transition on \(C\) is the identity. Nested image subgroups with the same kernel and with surjective map to \(C\) are equal: lift an element's image in \(C\) from the smaller subgroup and subtract; the difference belongs to the common kernel. This proves both directions of stabilization.
+
+\subsection{6. Cohomology and countable limits}\label{note-09-cohomology-and-countable-limits}
+
+Retain the four original terms \(A_i^{-2}\to A_i^{-1}\to A_i^0\to A_i^1\), and write \(Z_i^j=\ker d_i^j\), \(I_i^j=\operatorname{im}d_i^{j-1}\). Under the stated hypotheses, \((I_i^{-1})\) and \((I_i^0)\) are ML as quotients of \((A_i^{-2})\) and \((A_i^{-1})\). The exact sequence \(0\to I_i^{-1}\to Z_i^{-1}\to H_i^{-1}\to0\), with essentially constant last system, then makes \((Z_i^{-1})\) ML by §5. Applying §5 to \(0\to Z_i^{-1}\to A_i^{-1}\to I_i^0\to0\) gives \(\lim A_i^{-1}\twoheadrightarrow\lim I_i^0\). Applying it to \(0\to I_i^0\to Z_i^0\to H_i^0\to0\) gives
+
+\[
+0\to\lim I_i^0\to\lim Z_i^0\to\lim H_i^0\to0.
+\]
+
+The kernel universal property identifies \(\lim Z_i^0\) with \(\ker(\lim A_i^0\to\lim A_i^1)\), and the first surjection identifies \(\lim I_i^0\) with the image of \(\lim A_i^{-1}\to\lim A_i^0\). Taking the quotient proves the source's isomorphism. Explicitly it sends the class of a compatible cycle tuple \((x_i)\) to \(([x_i])\). The two exact sequences prove both injectivity and surjectivity of this particular map.
+
+\subsection{7. Ordinal limits and a bounded-degree consequence}\label{note-09-ordinal-limits-and-a-bounded-degree-consequence}
+
+Let \(r_\beta:K_\beta^\bullet\to L_\beta^\bullet\), where \(L_\beta^\bullet=\lim_{\gamma<\beta}K_\gamma^\bullet\), be the matching map. The limit over the empty ordinal is the zero complex. For a fixed integer \(N\), suppose
+
+\[
+H^q(K_\beta^\bullet)=0\quad(q\leq N),\qquad
+r_\beta^j\text{ is surjective}\quad(j\leq N-2)
+\]
+
+for every \(\beta<\alpha\). Then \(H^q(\lim_{\beta<\alpha}K_\beta^\bullet)=0\) for all \(q\leq N\). This is HOMOLOGY-UNDER-011. Its hypotheses are actual data about the original complexes and matching maps; no vanishing of a limit is assumed.
+
+Prove the assertion by transfinite induction on \(\alpha\), retaining all degrees \(q\leq N\) simultaneously. It holds for \(\alpha=0\). For a cycle \(x=(x_\beta)\) of degree \(q\), construct compatible primitives \(y_\beta\in K_\beta^{q-1}\) recursively. At stage \(\beta\), choose \(y'_\beta\) with \(dy'_\beta=x_\beta\), using \(H^q(K_\beta)=0\). The previously chosen tuple \(y_{<\beta}\) belongs to \(L_\beta^{q-1}\). Its difference from \(r_\beta(y'_\beta)\) is a cycle, since both differentials equal \(r_\beta(x_\beta)\). The induction hypothesis at \(\beta<\alpha\) gives \(H^{q-1}(L_\beta)=0\). Consequently
+
+\[
+y_{<\beta}-r_\beta(y'_\beta)=dz
+\quad\text{for some }z\in L_\beta^{q-2}.
+\]
+
+Surjectivity of \(r_\beta^{q-2}\), since \(q-2\leq N-2\), gives \(\widetilde z\in K_\beta^{q-2}\) with \(r_\beta\widetilde z=z\). Set \(y_\beta=y'_\beta+d\widetilde z\). Its differential remains \(x_\beta\), and its entire tuple of preceding images is \(y_{<\beta}\). At \(\beta=0\), that tuple and \(z\) are zero. The recursion therefore works at both successor and limit ordinals and gives a compatible \(y\) with \(dy=x\). This proves the claim.
+
+The original acyclicity assertion follows by applying this result for every integer \(N\), because the source assumes acyclicity in every degree and matching surjectivity in every degree. This verifies both the inserted quantifier and the corrected complex-valued induction hypothesis. The stronger bounded-degree statement does not require matching surjectivity in degrees \(N-1,N,N+1,\ldots\), nor any cohomology vanishing above \(N\). It is retained as an editorial consequence, not substituted for the source lemma.
+
+\subsection{8. Exactness of products}\label{note-09-exactness-of-products}
+
+For the source's complexes \(L_i\xrightarrow{a_i}M_i\xrightarrow{b_i}N_i\), the product kernel is exactly \(\prod_i\ker b_i\): the equation \((b_i(m_i))=0\) is equivalent to all its coordinate equations. The image of \(\prod_i a_i\) is exactly \(\prod_i\operatorname{im}a_i\): one inclusion follows coordinatewise, and the other follows by choosing a preimage of each coordinate. The map
+
+\[
+\frac{\prod_i\ker b_i}{\prod_i\operatorname{im}a_i}
+\longrightarrow \prod_i(\ker b_i/\operatorname{im}a_i),
+\qquad [(m_i)]\longmapsto([m_i])
+\]
+
+is injective because its zero fiber consists of exactly the indicated product image, and it is surjective by choosing a representative of each coordinate class. For an empty index set both groups are zero, so the same statement holds. This establishes the original comparison without making a chain-versus-cochain convention out of the ungraded three-term notation.
+
+\subsection{9. Propagation and bounded reading scope}\label{note-09-propagation-and-bounded-reading-scope}
+
+The direct split-diagram use in \texttt{derived.tex} 5168--5232 invokes the forward essential-constancy assertion to separate the diagrams of \(X\) and \(Y\). Its stated Karoubian hypothesis supplies both splittings, so that use remains valid. The exact local requirement exposed in §4 is the splitting of the two projection idempotents on the colimit value. It does not by itself certify the separate cofinality argument later in that receiving proof.
+
+The ordinal-limit uses at \texttt{injectives.tex} 1700 and \texttt{sdga.tex} 3962 invoke the original all-degree assertion on complexes of homomorphisms. Their displayed constructions use surjective restrictions at successor stages and equality with the earlier limit at limit stages. Thus their matching-map requirement has the correct form, and the original Homology implication is preserved. These bounded reads do not certify the entire transfinite constructions or unrelated SDGA formulas.
+
+The countable cohomology comparison is cited in \texttt{more-algebra.tex} 6504 and 6526 and in \texttt{cohomology.tex} 10726. At the first More Algebra use, the degree -2 and -1 terms are finite free modules tensored with the given surjective system, hence have surjective transitions; the preceding Tor system is identified there as essentially zero. At the second use, both Tor systems are essentially zero and therefore ML; the four-term sequence is exact and its degree -1 cohomology is zero. These supply the exact Homology hypotheses. The Tor comparison and Artin--Rees input are cited receiving data, not newly certified results. The Cohomology use explicitly has eventual constancy of cohomology; the earlier construction supplying its termwise surjectivity remains outside the displayed bounded interval, so that use is routed without a claim of complete verification.
+
+The link at \texttt{more-algebra.tex} 23643 points to that chapter's stronger treatment. Its complete statement and proof have not been read in this batch; the bounded-degree consequence in §7 has no novelty claim. Product-exactness references in Cohomology and Sites Cohomology are listed in the receiving-route ledger; no mathematical change arose from the optional terminology report, and no unperformed review of those receiving passages is claimed.
+
+Actual consecutive reading now covers all 7,945 original source lines. All received Homology reports have decisions. Candidate preparation, integration, builds, rendered-page inspection, and publication remain subsequent work; this proof note is not an admission or release receipt.
+\clearpage
+\section{Individual essential-constancy witness for HOMOLOGY-UNDER-010}\label{note-10-individual-essential-constancy-witness-for-homology-under-010}
+
+This supplements §4 of \texttt{PROOFS\_7065\_7945.md}. It makes explicit that the witness for the first summand requires only its own projection idempotent to split; the complementary idempotent need not split.
+
+Keep the original notation \(H_j=F_j\oplus G_j\), with inclusions \(a_j\), projections \(p_j\), colimit maps \(c_j:H_j\to W\), and \(e c_j=c_j a_jp_j\). Suppose \(e=sr\), \(rs=1_X\). Then \(es=s\) and \(re=r\). As proved in §4, the maps \(x_j=rc_ja_j\) make \(X\) the colimit of \(F\).
+
+Assume \(H\) is essentially constant, witnessed by \(t:W\to H_i\) with \(c_i t=1_W\). Put \(t_F=p_i t s:X\to F_i\). Then
+
+\[
+x_i t_F=r c_i a_i p_i t s
+       =r e c_i t s=r e s=rs=1_X.
+\]
+
+For each index \(j\), the given witness supplies arrows \(\alpha:i\to k\), \(\beta:j\to k\) satisfying \(H(\beta)=H(\alpha)t c_j\). Restrict to \(F_j\) and project to \(F_k\). Naturality of the biproduct maps gives
+
+\[
+F(\beta)=p_kH(\beta)a_j
+=F(\alpha)p_i t c_j a_j
+=F(\alpha)p_i t s x_j
+=F(\alpha)t_F x_j.
+\]
+
+Here \(c_j a_j=e c_j a_j=s r c_j a_j=sx_j\). These are exactly the two defining witness identities for essential constancy of \(F\) with value \(X\). Replacing the displayed inclusion, projection, and idempotent by those of \(G\) and \(1-e\) proves the individual second summand assertion. No existence of a complementary object was used.
+
+This is an explicit completion of the existing editorial claim, not a new claim ID or a change to the translated source. No novelty is asserted.
+\clearpage
+\end{document}

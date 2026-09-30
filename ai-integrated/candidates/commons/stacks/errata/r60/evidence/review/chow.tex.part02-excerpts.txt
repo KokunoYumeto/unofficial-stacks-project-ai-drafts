@@ -1,0 +1,167 @@
+3762: Z_k(X)
+3763: \longrightarrow
+3764: K_0(\textit{Coh}_{\leq k}(X)/\textit{Coh}_{\leq k - 1}(X)),
+3765: \quad
+3766: \sum n_Z[Z] \mapsto
+3767: \left[\bigoplus\nolimits_{n_Z > 0} \mathcal{O}_Z^{\oplus n_Z}\right]
+3768: -
+3769: \left[\bigoplus\nolimits_{n_Z < 0} \mathcal{O}_Z^{\oplus -n_Z}\right]
+3770: $$
+3771: and
+3772: $$
+3773: K_0(\textit{Coh}_{\leq k}(X)/\textit{Coh}_{\leq k - 1}(X))
+3774: \longrightarrow
+3775: Z_k(X),\quad
+3776: \mathcal{F} \longmapsto [\mathcal{F}]_k
+3777: $$
+3778: are mutually inverse isomorphisms.
+3779: \end{lemma}
+3780: 
+3781: \begin{proof}
+3782: Note that if $\sum n_Z[Z]$ is in $Z_k(X)$, then
+3783: the direct sums
+3784: $\bigoplus\nolimits_{n_Z > 0} \mathcal{O}_Z^{\oplus n_Z}$ and
+3785: $\bigoplus\nolimits_{n_Z < 0} \mathcal{O}_Z^{\oplus -n_Z}$
+3786: are coherent sheaves on $X$ since the family $\{Z \mid n_Z > 0\}$
+3787: is locally finite on $X$.
+3788: The map $\mathcal{F} \to [\mathcal{F}]_k$ is additive
+3789: on $\textit{Coh}_{\leq k}(X)$, see
+3790: Lemma \ref{lemma-additivity-sheaf-cycle}. And $[\mathcal{F}]_k = 0$
+3791: if $\mathcal{F} \in \textit{Coh}_{\leq k - 1}(X)$. By part (1)
+3792: of Homology, Lemma \ref{homology-lemma-serre-subcategory-K-groups}
+3793: this implies that the second map is well defined too.
+3794: It is clear that the composition of the first map with the second
+3795: map is the identity.
+3796: 
+3797: \medskip\noindent
+3798: Conversely, say we start with a coherent sheaf $\mathcal{F}$
+3799: on $X$. Write $[\mathcal{F}]_k = \sum_{i \in I} n_i[Z_i]$
+
+13150: 
+13151: 
+13152: 
+13153: 
+13154: 
+13155: 
+13156: 
+13157: 
+13158: 
+13159: 
+13160: 
+13161: \section{Chow groups and K-groups revisited}
+13162: \label{section-chow-and-K-II}
+13163: 
+13164: \noindent
+13165: This section is the continuation of Section \ref{section-chow-and-K}.
+13166: Let $(S, \delta)$ be as in Situation \ref{situation-setup}.
+13167: Let $X$ be locally of finite type over $S$. The K-group
+13168: $K'_0(X) = K_0(\textit{Coh}(X))$ of coherent sheaves on $X$
+13169: has a canonical increasing filtration
+13170: $$
+13171: F_kK'_0(X) =
+13172: \Im\Big(K_0(\textit{Coh}_{\leq k}(X)) \to K_0(\textit{Coh}(X)\Big)
+13173: $$
+13174: This is called the filtration by dimension of supports. Observe that
+13175: $$
+13176: \text{gr}_k K'_0(X) \subset K'_0(X)/F_{k - 1}K'_0(X) =
+13177: K_0(\textit{Coh}(X)/\textit{Coh}_{\leq k - 1}(X))
+13178: $$
+13179: where the equality holds
+13180: by Homology, Lemma \ref{homology-lemma-serre-subcategory-K-groups}.
+13181: The discussion in Remark \ref{remark-good-cases-K-A} shows
+13182: that there are canonical maps
+13183: $$
+13184: \CH_k(X) \longrightarrow \text{gr}_k K'_0(X)
+13185: $$
+13186: defined by sending the class of an integral closed subscheme
+13187: $Z \subset X$ of $\delta$-dimension $k$ to the class of
+13188: $[\mathcal{O}_Z]$ on the right hand side.
+13189: 
+13190: \begin{proposition}
+13191: \label{proposition-K-tensor-Q}
+13192: Let $(S, \delta)$ be as in Situation \ref{situation-setup}. Assume given a
+13193: closed immersion $X \to Y$ of schemes locally of finite type over $S$
+13194: with $Y$ regular and quasi-compact. Then the composition
+13195: $$
+13196: K'_0(X) \to
+13197: K_0(D_{X, perf}(\mathcal{O}_Y)) \to
+13198: A^*(X \to Y) \otimes \mathbf{Q} \to
+
+18397: 
+18398: \noindent
+18399: In this appendix we first briefly try to connect the material
+18400: in the main text with $K$-theory of coherent sheaves. In
+18401: particular we describe how cupping with $c_1$ of an invertible
+18402: module is related to tensoring by this invertible module, see
+18403: Lemma \ref{lemma-coherent-sheaf-cap-c1}.
+18404: This material is obviously very interesting and
+18405: deserves a much more detailed and expansive exposition.
+18406: 
+18407: 
+18408: \subsection{Rational equivalence and K-groups}
+18409: \label{subsection-rational-equivalence-K-groups}
+18410: 
+18411: \noindent
+18412: This section is a continuation of Section \ref{section-chow-and-K}.
+18413: The motivation for the following lemma is
+18414: Homology, Lemma \ref{homology-lemma-serre-subcategory-K-groups}.
+18415: 
+18416: \begin{lemma}
+18417: \label{lemma-maps-between-coherent-sheaves}
+18418: Let $(S, \delta)$ be as in Situation \ref{situation-setup}.
+18419: Let $X$ be a scheme locally of finite type over $S$.
+18420: Let $\mathcal{F}$ be a coherent sheaf on $X$.
+18421: Let
+18422: $$
+18423: \xymatrix{
+
+18525: 
+18526: \begin{proof}
+18527: By Lemma \ref{lemma-cycles-k-group} we have
+18528: $Z_k(X) = K_0(\textit{Coh}_{\leq k}(X)/\textit{Coh}_{\leq k - 1}(X))$
+18529: compatible with the map of Lemma \ref{lemma-from-chow-to-K}.
+18530: Thus, suppose we have an element $[A] - [B]$ of
+18531: $K_0(\textit{Coh}_{\leq k}(X)/\textit{Coh}_{\leq k - 1}(X))$
+18532: which maps to zero in $B_k(X)$, i.e., maps to zero in
+18533: $K_0(\textit{Coh}_{\leq k + 1}(X)/\textit{Coh}_{\leq k - 1}(X))$.
+18534: We have to show that $[A] - [B]$ corresponds to a cycle
+18535: rationally equivalent to zero on $X$.
+18536: Suppose $[A] = [\mathcal{A}]$ and $[B] = [\mathcal{B}]$
+18537: for some coherent sheaves $\mathcal{A}, \mathcal{B}$ on
+18538: $X$ supported in $\delta$-dimension $\leq k$.
+18539: The assumption that $[A] - [B]$ maps to zero in the group
+18540: $K_0(\textit{Coh}_{\leq k + 1}(X)/\textit{Coh}_{\leq k - 1}(X))$
+18541: means that there exists coherent sheaves
+18542: $\mathcal{A}', \mathcal{B}'$ on $X$ supported in
+18543: $\delta$-dimension $\leq k - 1$ such that
+18544: $[\mathcal{A} \oplus \mathcal{A}'] - [\mathcal{B} \oplus \mathcal{B}']$
+18545: is zero in $K_0(\textit{Coh}_{k + 1}(X))$ (use part (1) of
+18546: Homology, Lemma \ref{homology-lemma-serre-subcategory-K-groups}).
+18547: By part (2) of
+18548: Homology, Lemma \ref{homology-lemma-serre-subcategory-K-groups}
+18549: this means there exists a $(2, 1)$-periodic complex
+18550: $(\mathcal{F}, \varphi, \psi)$ in the category $\textit{Coh}_{\leq k + 1}(X)$
+18551: such that
+18552: $\mathcal{A} \oplus \mathcal{A}' = H^0(\mathcal{F}, \varphi, \psi)$
+18553: and $\mathcal{B} \oplus \mathcal{B}' = H^1(\mathcal{F}, \varphi, \psi)$.
+18554: By Lemma \ref{lemma-maps-between-coherent-sheaves}
+18555: this implies that
+18556: $$
+18557: [\mathcal{A} \oplus \mathcal{A}']_k
+18558: \sim_{rat}
+18559: [\mathcal{B} \oplus \mathcal{B}']_k
+18560: $$
+18561: This proves that $[A] - [B]$ maps to a cycle rationally
+18562: equivalent to zero by the map
+18563: $$
+18564: K_0(\textit{Coh}_{\leq k}(X)/\textit{Coh}_{\leq k - 1}(X))
+18565: \longrightarrow Z_k(X)
+18566: $$
+18567: of Lemma \ref{lemma-cycles-k-group}. This is what we
+18568: had to prove and the proof is complete.
+18569: \end{proof}
+18570: 
+18571: 
+18572: 
+18573: 
+18574: 

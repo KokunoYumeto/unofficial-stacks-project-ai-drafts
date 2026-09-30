@@ -1,0 +1,321 @@
+937: \sigma : (Z, q, n) \to
+938: (Z \times X^{m - n}, q \otimes c_2 \otimes \ldots \otimes c_2, m)
+939: $$
+940: (see proof of Lemma \ref{lemma-additive}). Composing $a$ with this isomorphism
+941: gives
+942: $$
+943: \sigma \circ a \in
+944: \Hom((Y, p, m),
+945: (Z \times X^{m - n}, q \otimes c_2 \otimes \ldots \otimes c_2, m))
+946: $$
+947: Putting everything together we obtain
+948: $$
+949: s^{-1} \circ F(\sigma \circ a) :
+950: F(Y, p, m) \to
+951: F(Z, q, n)
+952: $$
+953: If $n > m$ we similarly define isomorphisms
+954: $$
+955: t : F((Y, p, m)) \to
+956: F((Y \times X^{n - m}, p \otimes c_2 \otimes \ldots \otimes c_2, n))
+957: $$
+958: and
+959: $$
+960: \tau : (Y, p, m)) \to
+961: (Y \times X^{n - m}, p \otimes c_2 \otimes \ldots \otimes c_2, n)
+962: $$
+963: and we set $F(a) = F(a \circ \tau^{-1}) \circ t$.
+964: We omit the verification that this construction defines a functor
+965: of symmetric monoidal categories.
+966: \end{proof}
+967: 
+968: \begin{lemma}
+969: \label{lemma-dual}
+970: Let $X$ be a smooth projective scheme over $k$ which is equidimensional
+971: of dimension $d$. Then $h(X)(d)$ is a left dual to $h(X)$ in $M_k$.
+972: \end{lemma}
+973: 
+974: \begin{proof}
+975: We will use Lemma \ref{lemma-composition-correspondences}
+976: without further mention. We compute
+977: $$
+978: \Hom(\mathbf{1}, h(X) \otimes h(X)(d)) =
+979: \text{Corr}^d(\Spec(k), X \times X) = \CH^d(X \times X)
+980: $$
+981: Here we have $\eta = [\Delta]$. On the other hand, we have
+982: $$
+983: \Hom(h(X)(d) \otimes h(X), \mathbf{1}) =
+984: \text{Corr}^{-d}(X \times X, \Spec(k)) = \CH_d(X \times X)
+985: $$
+986: and here we have the class $\epsilon = [\Delta]$
+987: of the diagonal as well. The composition of the correspondence
+988: $[\Delta] \otimes 1$ with $1 \otimes [\Delta]$ either way
+989: is the correspondence $[\Delta] = 1$ in $\text{Corr}^0(X, X)$ which proves
+990: the required diagrams of
+991: Categories, Definition \ref{categories-definition-dual} commute.
+992: Namely, observe that
+993: $$
+994: [\Delta] \otimes 1 \in \text{Corr}^d(X, X \times X \times X) =
+995: \CH^{2d}(X \times X \times X \times X)
+996: $$
+997: is given by the class of the cycle
+998: $\text{pr}^{1234, -1}_{23}(\Delta) \cap \text{pr}^{1234, -1}_{14}(\Delta)$ with
+999: obvious notation. Similarly, the class
+1000: $$
+1001: 1 \otimes [\Delta] \in \text{Corr}^{-d}(X \times X \times X, X) =
+1002: \CH^{2d}(X \times X \times X \times X)
+1003: $$
+1004: is given by the class of the cycle
+1005: $\text{pr}^{1234, -1}_{23}(\Delta) \cap \text{pr}^{1234, -1}_{14}(\Delta)$.
+1006: The composition $(1 \otimes [\Delta]) \circ ([\Delta] \otimes 1)$
+1007: is by definition the pushforward $\text{pr}^{12345}_{15, *}$
+1008: of the intersection product
+1009: $$
+1010: [\text{pr}^{12345, -1}_{23}(\Delta) \cap \text{pr}^{12345, -1}_{14}(\Delta)]
+1011: \cdot
+1012: [\text{pr}^{12345, -1}_{34}(\Delta) \cap \text{pr}^{12345, -1}_{15}(\Delta)]
+1013: =
+1014: [\text{small diagonal in } X^5]
+1015: $$
+1016: which is equal to $\Delta$ as desired. We omit the proof of the formula
+
+1601: by capping $[\Delta]$ with
+1602: the top Chern class of the normal sheaf of $\Delta \subset X \times X$
+1603: (Chow Homology, Lemma \ref{chow-lemma-gysin-fundamental}).
+1604: Since the conormal sheaf of $\Delta$ is $\Omega_{X/k}$
+1605: (Morphisms, Lemma \ref{morphisms-lemma-differentials-diagonal})
+1606: we see that the normal sheaf is equal to the tangent sheaf
+1607: $\mathcal{T}_X = \SheafHom_{\mathcal{O}_X}(\Omega_{X/k}, \mathcal{O}_X)$
+1608: as desired.
+1609: 
+1610: \medskip\noindent
+1611: Equality on the left. By Lemma \ref{lemma-degrees-cycles-classical} we have
+1612: \begin{align*}
+1613: \deg([\Delta] \cdot [\Delta])
+1614: & =
+1615: \int_{X \times X} \gamma([\Delta]) \cup \gamma([\Delta]) \\
+1616: & =
+1617: \int_{X \times X} \Delta_*1 \cup \gamma([\Delta]) \\
+1618: & =
+1619: \int_{X \times X} \Delta_*(\Delta^*\gamma([\Delta])) \\
+1620: & =
+1621: \int_X \Delta^*\gamma([\Delta])
+1622: \end{align*}
+1623: Write $\gamma([\Delta]) = \sum  e_{i, j} \otimes e'_{2d - i , j}$
+1624: as in Lemma \ref{lemma-class-diagonal-classical}.
+1625: Recalling that $\Delta^*$ is given by cup product we obtain
+1626: $$
+1627: \int_X \sum\nolimits_{i, j} e_{i, j} \cup e'_{2d - i, j} =
+1628: \sum\nolimits_{i, j} \int_X e_{i, j} \cup e'_{2d - i, j} =
+1629: \sum\nolimits_{i, j} (-1)^i = \sum (-1)^i\beta_i
+1630: $$
+1631: as desired.
+1632: \end{proof}
+1633: 
+1634: 
+1635: 
+1636: 
+1637: \noindent
+1638: We will now tie classical Weil cohomology theories in with motives as follows.
+1639: 
+1640: \begin{lemma}
+1641: \label{lemma-from-functor-to-weil-classical}
+1642: Let $k$ be an algebraically closed field. Let $F$ be a field of
+1643: characteristic $0$. Consider a $\mathbf{Q}$-linear functor
+1644: $$
+1645: G : M_k \longrightarrow \text{graded }F\text{-vector spaces}
+1646: $$
+1647: of symmetric monoidal categories such that $G(\mathbf{1}(1))$
+1648: is nonzero only in degree $-2$. Then we obtain data (D1), (D2), (D3)
+1649: satisfying all of (A), (B), (C) except for possibly (A)(c) and (A)(d).
+1650: \end{lemma}
+1651: 
+1652: \begin{proof}
+1653: We obtain a contravariant functor from the category of smooth
+1654: projective varieties to the category of graded $F$-vector spaces
+1655: by setting $H^*(X) = G(h(X))$. By assumption we have a canonical
+1656: isomorphism
+1657: $$
+1658: H^*(X \times Y) = G(h(X \times Y)) = G(h(X) \otimes h(Y)) =
+1659: G(h(X)) \otimes G(h(Y)) = H^*(X) \otimes H^*(Y)
+1660: $$
+1661: compatible with pullbacks. Using pullback along the diagonal
+1662: $\Delta : X \to X \times X$ we obtain a canonical map
+1663: $$
+1664: H^*(X) \otimes H^*(X) = H^*(X \times X) \to H^*(X)
+1665: $$
+1666: of graded vector spaces compatible with pullbacks.
+1667: This defines a functorial graded $F$-algebra structure on
+1668: $H^*(X)$. Since $\Delta$ commutes with the commutativity
+1669: constraint $h(X) \otimes h(X) \to h(X) \otimes h(X)$ (switching the factors)
+1670: and since $G$ is a functor of symmetric monoidal categories (so compatible with
+1671: commutativity constraints), and by our convention in
+1672: Homology, Example \ref{homology-example-graded-vector-spaces}
+1673: we conclude that $H^*(X)$ is a graded
+1674: commutative algebra! Hence we get our datum (D1).
+1675: 
+1676: \medskip\noindent
+1677: Since $\mathbf{1}(1)$ is invertible in the category of motives
+1678: we see that $G(\mathbf{1}(1))$ is invertible in the category of
+1679: graded $F$-vector spaces. Thus $\sum_i \dim_F G^i(\mathbf{1}(1)) = 1$.
+1680: By assumption we only get something nonzero in degree $-2$ and we may
+1681: choose an isomorphism $F[2] \to G(\mathbf{1}(1))$ of graded $F$-vector spaces.
+1682: Here and below $F[n]$ means the graded $F$-vector space which has
+1683: $F$ in degree $-n$ and zero elsewhere. Using compatibility with
+1684: tensor products, we find for all $n \in \mathbf{Z}$ an isomorphism
+1685: $F[2n] \to G(\mathbf{1}(n))$ compatible with tensor products.
+1686: 
+1687: \medskip\noindent
+1688: Let $X$ be a smooth projective variety. By
+1689: Lemma \ref{lemma-composition-correspondences} we have
+1690: $$
+1691: \CH^r(X) \otimes \mathbf{Q} = \text{Corr}^r(\Spec(k), X) =
+1692: \Hom(\mathbf{1}(-r), h(X))
+1693: $$
+1694: Applying the functor $G$ we obtain
+1695: $$
+1696: \gamma :
+1697: \CH^r(X) \otimes \mathbf{Q} \longrightarrow
+1698: \Hom(G(\mathbf{1}(-r)), H^*(X)) = H^{2r}(X)
+1699: $$
+1700: This is the datum (D2).
+1701: 
+1702: \medskip\noindent
+1703: Let $X$ be a smooth projective variety of dimension $d$. By
+1704: Lemma \ref{lemma-composition-correspondences} we have
+1705: $$
+1706: \Mor(h(X)(d), \mathbf{1}) = \Mor((X, 1, d), (\Spec(k), 1, 0)) =
+1707: \text{Corr}^{-d}(X, \Spec(k)) = \CH_d(X)
+1708: $$
+1709: Thus the class of the cycle $[X]$ in $\CH_d(X)$ defines a morphism
+1710: $h(X)(d) \to \mathbf{1}$. Applying $G$ we obtain
+1711: $$
+1712: H^*(X) \otimes F[-2d] = G(h(X)(d)) \longrightarrow G(\mathbf{1}) = F
+1713: $$
+1714: This map is zero except in degree $0$ where we obtain
+1715: $\int_X : H^{2d}(X) \to F$. This is the datum (D3).
+1716: 
+1717: \medskip\noindent
+1718: Let $X$ be a smooth projective variety of dimension $d$.
+1719: By Lemma \ref{lemma-dual}
+1720: we know that $h(X)(d)$ is a left dual to $h(X)$. Hence
+1721: $G(h(X)(d)) = H^*(X) \otimes F[-2d]$ is a left dual to
+1722: $H^*(X)$ in the category of graded $F$-vector spaces.
+1723: By Homology, Lemma \ref{homology-lemma-left-dual-graded-vector-spaces}
+1724: we find that $\sum_i \dim_F H^i(X) < \infty$ and that
+1725: $\epsilon : h(X)(d) \otimes h(X) \to \mathbf{1}$ produces
+1726: nondegenerate pairings $H^{2d - i}(X) \otimes_F H^i(X) \to F$.
+1727: In the proof of Lemma \ref{lemma-dual} we have seen that
+1728: $\epsilon$ is given by $[\Delta]$ via the identifications
+1729: $$
+1730: \Hom(h(X)(d) \otimes h(X), \mathbf{1}) =
+1731: \text{Corr}^{-d}(X \times X, \Spec(k)) =
+1732: \CH_d(X \times X)
+1733: $$
+
+2873: Thus the class of the cycle $[X]$ in $\CH_d(X)$ defines a morphism
+2874: $h(X)(d) \to \mathbf{1}$. Applying $G$ and taking degree $0$
+2875: parts we obtain
+2876: $$
+2877: H^{2d}(X)(d) = G^0(h(X)(d)) \longrightarrow G^0(\mathbf{1}) = F
+2878: $$
+2879: This map $\int_X : H^{2d}(X)(d) \to F$ is the datum (D3).
+2880: 
+2881: \medskip\noindent
+2882: Let $X$ be a smooth projective scheme over $k$ which is
+2883: nonempty and equidimensional of dimension $d$. By Lemma \ref{lemma-dual}
+2884: we know that $h(X)(d)$ is a left dual to $h(X)$. Hence
+2885: $G(h(X)(d)) = H^*(X) \otimes_F F(d)[2d]$
+2886: is a left dual to $H^*(X)$ in the category of graded $F$-vector spaces.
+2887: Here $[n]$ is the shift functor on graded vector spaces.
+2888: By Homology, Lemma \ref{homology-lemma-left-dual-graded-vector-spaces}
+2889: we find that $\sum_i \dim_F H^i(X) < \infty$ and that
+2890: $\epsilon : h(X)(d) \otimes h(X) \to \mathbf{1}$ produces
+2891: nondegenerate pairings $H^{2d - i}(X)(d) \otimes_F H^i(X) \to F$.
+2892: In the proof of Lemma \ref{lemma-dual} we have seen that
+2893: $\epsilon$ is given by $[\Delta]$ via the identifications
+2894: $$
+2895: \Hom(h(X)(d) \otimes h(X), \mathbf{1}) =
+2896: \text{Corr}^{-d}(X \times X, \Spec(k)) =
+2897: \CH_d(X \times X)
+2898: $$
+2899: Thus $\epsilon$ is the composition of $[X] : h(X)(d) \to \mathbf{1}$
+2900: and $h(\Delta)(d) : h(X)(d) \otimes h(X) \to h(X)(d)$. It follows
+2901: that the pairings above are given by cup product followed by
+2902: $\int_X$. This proves axiom (A).
+2903: 
+2904: \medskip\noindent
+2905: Axiom (B) follows from the assumption that $G$ is compatible
+
+4622: $$
+4623: b^*(\gamma([Z]) \cup a) = b^*\gamma([Z]) \cup b^*a = 0
+4624: $$
+4625: By Lemma \ref{lemma-divide-pullback-good-blowing-up} we have
+4626: $$
+4627: b^*\gamma([Z]) = \gamma(b^*[Z]) =
+4628: \gamma([E] \cdot \theta) =
+4629: \gamma([E]) \cup \gamma(\theta)
+4630: $$
+4631: Hence because $b^*a$ restricts to zero on $E$ and since
+4632: $\gamma([E]) = c^H_1(\mathcal{O}_{X'}(E))$ we get what we want from (A4).
+4633: \end{proof}
+4634: 
+4635: \begin{lemma}
+4636: \label{lemma-poincare-duality}
+4637: Assume given data (D0), (D1), and (D2') satisfying axioms (A1) -- (A7).
+4638: Then axiom (A) of Section \ref{section-axioms} holds with
+4639: $\int_X = \lambda$ as in axiom (A6).
+4640: \end{lemma}
+4641: 
+4642: \begin{proof}
+4643: Let $X$ be a nonempty smooth projective scheme over $k$ which is
+4644: equidimensional of dimension $d$. We will show that the graded $F$-vector space
+4645: $H^*(X)(d)[2d]$ is a left dual to $H^*(X)$. This will prove what we want by
+4646: Homology, Lemma \ref{homology-lemma-left-dual-graded-vector-spaces}. We are
+4647: going to use axiom (A5) which in particular says that
+4648: $$
+4649: H^*(X \times X)(d) =
+4650: \bigoplus H^i(X) \otimes H^j(X)(d) =
+4651: \bigoplus H^i(X)(d) \otimes H^j(X)
+4652: $$
+4653: Define a map
+4654: $$
+4655: \eta : F \longrightarrow H^*(X \times X)(d)
+4656: $$
+4657: by multiplying by $\gamma([\Delta]) \in H^{2d}(X \times X)(d)$.
+4658: On the other hand, define a map
+4659: $$
+4660: \epsilon :
+
+4702: Note that $p_1^*a$ and $\text{pr}_2^*a$ restrict to the same
+4703: cohomology class on $\Delta \subset X \times X$. Moreover we
+4704: have $\mathcal{C}_{\Delta/X \times X} = \Omega^1_\Delta$ which
+4705: is the restriction of $p_1^*\Omega^1_X$. Hence
+4706: Lemma \ref{lemma-A5-A6-imply} implies
+4707: $\gamma([\Delta]) \cup p_1^*a = \gamma([\Delta]) \cup p_2^*a$
+4708: and the proof is complete.
+4709: \end{proof}
+4710: 
+4711: \begin{remark}[Uniqueness of trace maps]
+4712: \label{remark-trace}
+4713: Assume given data (D0), (D1), and (D2') satisfying axioms (A1) -- (A7).
+4714: Let $X$ be a smooth projective scheme over $k$ which is nonempty
+4715: and equidimensional of dimension $d$. Combining what was said in
+4716: the proofs of Lemma \ref{lemma-poincare-duality} and
+4717: Homology, Lemma \ref{homology-lemma-left-dual-graded-vector-spaces}
+4718: we see that
+4719: $$
+4720: \gamma([\Delta]) \in \bigoplus\nolimits_i H^i(X) \otimes H^{2d - i}(X)(d)
+4721: $$
+4722: defines a perfect duality between $H^i(X)$ and $H^{2d - i}(X)(d)$
+4723: for all $i$.
+4724: In particular, the linear map $\int_X = \lambda : H^{2d}(X)(d) \to F$ of
+4725: axiom (A6) is unique! We will call the linear map $\int_X$ the trace map
+4726: of $X$ from now on.
+4727: \end{remark}
+4728: 
+4729: \begin{lemma}
+4730: \label{lemma-trace-product}
+4731: Assume given data (D0), (D1), and (D2') satisfying axioms (A1) -- (A7).
+4732: Then axiom (B) of Section \ref{section-axioms} holds.
+4733: \end{lemma}

@@ -1,0 +1,111 @@
+{
+  "claims": [
+    {
+      "claim_id": "HOMOLOGY-UNDER-001",
+      "kind": "underclaim_local_hypotheses",
+      "source_label": "lemma-projectors-have-images",
+      "source_lines": [
+        544,
+        587
+      ],
+      "original_statement": "A preadditive category with countable products and kernels of all split epimorphisms is Karoubian; dually for coproducts and split monomorphisms.",
+      "proved_statement": "For a fixed X and idempotent e, existence of the countable power X^N and of the kernel of the explicitly displayed split epimorphism Phi suffices to construct ker(e), via its first coordinate. Thus countable powers, rather than all countable products, suffice for the original global conclusion when the required kernels exist for every X and e.",
+      "caveat": "For the decomposition of a particular object into both summands, apply the argument to both e and 1-e. A kernel of e alone is not asserted to supply both summands.",
+      "proof": {
+        "file": "PROOFS_0001_1900.md",
+        "bytes": 19416,
+        "sha256": "DEBEE35E32355E0EE4353FB11669E648BBC4ADD23C37B5D793A8E31CA6946347",
+        "section": 1
+      },
+      "status": "proved_editorial_consequence",
+      "novelty": "not_claimed",
+      "body_replacement": false,
+      "affected_sources": [
+        "derived.tex:lemma-projectors-have-images-triangulated"
+      ],
+      "propagation_status": "receiving_use_checked; no existing conclusion invalidated; separate supplement pending"
+    },
+    {
+      "claim_id": "HOMOLOGY-UNDER-002",
+      "kind": "underclaim_exact_retract",
+      "source_label": "lemma-adjoint-get-abelian",
+      "source_lines": [
+        1661,
+        1741
+      ],
+      "original_statement": "An additive retraction b with right adjoint a, abelian source, left exact b, and ba naturally isomorphic to the identity gives an abelian target.",
+      "proved_statement": "Let A be preadditive, B abelian, b:B->A additive and preserving kernel and cokernel diagrams, a:A->B a functor, and theta:ba->Id_A a natural isomorphism. Then A is abelian, with the exact transported zero, biproduct, kernel, cokernel and canonical coimage-to-image maps in the proof.",
+      "proof": {
+        "file": "PROOFS_0001_1900.md",
+        "bytes": 19416,
+        "sha256": "DEBEE35E32355E0EE4353FB11669E648BBC4ADD23C37B5D793A8E31CA6946347",
+        "section": 5
+      },
+      "status": "proved_editorial_consequence",
+      "novelty": "not_claimed",
+      "body_replacement": false,
+      "affected_sources": [
+        "sites-modules.tex:abelian sheaves"
+      ],
+      "propagation_status": "receiving_use_checked; original adjunction supplies the preservation hypotheses; separate supplement pending"
+    }
+  ],
+  "receiving_checks": [
+    {
+      "source": "derived.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 464343,
+        "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+      },
+      "actual_lines_read": [
+        770,
+        828
+      ],
+      "excerpt_identity": {
+        "bytes": 2739,
+        "sha256": "B915DF9A0CE4FB6D69112549EB5E549CC33DBD67669A7C589109BF070DAEA45C"
+      },
+      "claim_ids": [
+        "HOMOLOGY-UNDER-001"
+      ],
+      "receiving_use_verified": true,
+      "entire_chapter_or_dependency_closure_reviewed": false,
+      "outcome": "Original application remains valid; no source change forced. Editorial refinement stays separate."
+    },
+    {
+      "source": "sites-modules.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 312169,
+        "sha256": "3144CBC676F1FF16F76117BB4E6ABE35705B9293C7FA0987951A1A7D28ED93C4"
+      },
+      "actual_lines_read": [
+        130,
+        188
+      ],
+      "excerpt_identity": {
+        "bytes": 3414,
+        "sha256": "1D0BDC473AB2B8B1200FEC5739803686AE970A7E07A3625792963EC010DD1262"
+      },
+      "claim_ids": [
+        "HOMOLOGY-UNDER-002"
+      ],
+      "receiving_use_verified": true,
+      "entire_chapter_or_dependency_closure_reviewed": false,
+      "outcome": "Original application remains valid; no source change forced. Editorial refinement stays separate."
+    }
+  ],
+  "other_editorial_material": [
+    "Section 3 supplies naturality already asserted by the source; no new theorem count.",
+    "Section 6 clarifies which auxiliary arrow lies in S; no extra defect count."
+  ],
+  "metadata_corrections": [
+    {
+      "stable_id": "MC-STK-ERR-0753",
+      "issue": "Inherited rationale refers to a nonexistent first-person plural subject.",
+      "corrected_rationale": "The original construction is an imperative: Finally, to see that ..., observe that. The French report and inherited rationale misdescribe a first-person plural subject. The accepted replacement itself is correct.",
+      "pending_action": "Carry into current explanatory exports as an explicit review correction; do not rewrite frozen evidence."
+    }
+  ]
+}

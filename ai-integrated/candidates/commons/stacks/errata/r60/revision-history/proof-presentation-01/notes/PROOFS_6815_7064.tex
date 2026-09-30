@@ -1,0 +1,204 @@
+\subsection{Homology review: four resolution totalizations, original lines 6815--7064}\label{homology-review-four-resolution-totalizations-original-lines-68157064}
+
+Source: the Stacks Project authors' \texttt{homology.tex}, commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, SHA-256 \texttt{483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0}. This editorial proof note records exact signs, coordinates, support conditions, and maps for the four original resolution lemmas. It does not replace the source's original objects or call an omitted proof a false theorem. The old/new operation ledger separately identifies actual corrections and clarifications. No novelty is asserted.
+
+All groups in the proofs are abelian groups. Every formula also consists of module homomorphisms when the input consists of modules over a ring. The proofs then give the corresponding module quasi-isomorphisms, as already anticipated by the source's introductory comment. No extension to an arbitrary abelian category with unproved infinite lifting or exactness properties is asserted here.
+
+\subsubsection{1. Physical report decisions}\label{physical-report-decisions}
+
+HOMOLOGY-RECON-066 joins P02-E1405 and French HOMOLOGY-054 to MC-STK-ERR-0806: the subject ``we'' and adjective ``analogous'' correct the introductory sentence at 6828. HOMOLOGY-RECON-067 accepts P02-E1406: insert ``by'' in the notation introduction at 6861. HOMOLOGY-RECON-068 joins P02-E1407 and French HOMOLOGY-055 to MC-STK-ERR-0807: the plural ``images'' agrees with the two cocycles and the verb at 6924.
+
+HOMOLOGY-RECON-069 joins P02-E1408 and French HOMOLOGY-038 to MC-STK-ERR-0790. The source token was \(d^{n-1}\), not \(d^n\) as the French observation describes it. Its corrected exponent \(-n\) is nevertheless exactly right: the changed component \(y_{n-1}\) has degree \(-n\). Section 4 proves the full induction.
+
+HOMOLOGY-RECON-070 joins P02-E0016, P02-E1409, P02-E1410, and French HOMOLOGY-039 to MC-STK-ERR-0791. Its one operation fixes both the assembled cochain's degree to \(-1\) and the equation to \(Dy=x\), where \(x\) is the cocycle. The class \(\xi\in H^0(T)\) is not a cochain. The French observation's claim that the old equation was reversed is not the literal old text; the exact correction is still verified against the actual source.
+
+HOMOLOGY-RECON-071 joins P02-E1411 and French HOMOLOGY-040 to MC-STK-ERR-0792: set \(B_0=M\) and \(B_{n+1}=A_n\) for \(n\geq0\). The old text was \(B_n=A_{n+1}\), not \(B_n=A_n\) as the French observation says. Section 5 proves the corrected totalization and the nontrivial sign in its quotient map to \(T[1]\).
+
+HOMOLOGY-RECON-072 joins P02-E1412 and French HOMOLOGY-041 to MC-STK-ERR-0793. All three existing operations are needed to retain the positive sign in \(x_1+d_{A_1}^0y_0=f_2^1y_1\) and place the existential phrase before its justification. The full alternating recursion is proved in §5.
+
+These seven groups account for fifteen physical reports, fourteen already corrected and one pending copyedit. Misdescriptions in a producer's evidence are retained rather than silently rewritten; acceptance uses the exact original and current TeX.
+
+\subsubsection{2. A right resolution and the direct-sum total}\label{a-right-resolution-and-the-direct-sum-total}
+
+Consider the exact sequence of complexes
+
+\[
+0\longrightarrow M^\bullet\xrightarrow{\alpha}A_0^\bullet
+\xrightarrow{f_0}A_1^\bullet\xrightarrow{f_1}A_2^\bullet
+\longrightarrow\cdots.
+\]
+
+Put \(A^{p,q}=A_p^q\), for \(p\geq0\), and zero for \(p<0\). Its direct-sum total has
+
+\[
+T^m=\bigoplus_{i\geq0}A_i^{m-i},\qquad
+(D^mx)_i=f_{i-1}^{m-i+1}x_{i-1}+(-1)^i d_{A_i}^{m-i}x_i,       \tag{2.1}
+\]
+
+where the first summand is zero for \(i=0\). Each input summand maps into at most two output summands, so (2.1) defines a map on direct sums. The horizontal squares and vertical squares vanish, and the cross terms cancel because the \(f_i\) are chain maps and the two vertical signs are opposite. Thus \(D^{m+1}D^m=0\). The inclusion of \(\alpha^m:M^m\to A_0^m\) into \(T^m\) defines a chain map: \(f_0\alpha=0\) and \(d_{A_0}\alpha=\alpha d_M\).
+
+First suppose that a single integer \(t\) satisfies \(A_i^q=0\) for \textbf{every} \(i\geq0\) and every \(q<t\). Then the same is true for \(M^q\), since \(M^q\to A_0^q\) is injective. In total degree \(m\), nonzero terms require \(0\leq i\leq m-t\), so each diagonal is finite. Each horizontal row is the given exact resolution of \(M^q\). The swapped-variable version of \texttt{lemma-double-complex-gives-resolution} gives the quasi-isomorphism \(M\to T\).
+
+For explicit sign compatibility in this swap, write the transposed double complex as \(C^{q,p}=A^{p,q}\), with horizontal differential the old vertical differential and vertical differential the old horizontal differential. Its total differential is \(d_{A_p}+(-1)^q f_p\). The morphism
+
+\[
+\operatorname{Tot}(C)\longrightarrow\operatorname{Tot}(A),\qquad
+x\in A^{p,q}\longmapsto(-1)^{pq}x
+\]
+
+is an isomorphism of complexes. The vertical term on the source side obtains sign \((-1)^{p(q+1)}\); on the target side it obtains \((-1)^{pq+p}\). The horizontal term on the source side obtains \((-1)^{q+(p+1)q}=(-1)^{pq}\); on the target it obtains the same sign. Both equalities hold term by term. On the augmentation row \(p=0\), the isomorphism is the identity, so the resulting quasi-isomorphism is the stated original augmentation map.
+
+Original 6849 assumes only \(A_0^q=0\) for \(q<t\) before citing the finite-diagonal result. That bound alone does not imply finite diagonals. For example take \(M=A_0=0\), and for each \(j\geq0\) put \(A_{2j+1}^{-(2j+1)}=A_{2j+2}^{-(2j+1)}=\mathbf Z\), with the horizontal map between the two copies equal to the identity and all vertical maps zero. The rows are exact and \(A_0\) satisfies every lower bound, but total degree zero has one nonzero term for every \(j\). HOMOLOGY-FIND-009 corrects the temporary bound in this proof to all \(A_i\). It does not impose a new assumption on the lemma's general conclusion.
+
+For the general case use the original stupid truncations \(\sigma_{\geq t}M\), \(\sigma_{\geq t}A_i\). At each fixed inner degree the truncated horizontal sequence is either the original exact sequence or all zero, so it remains exact. The uniform bound just proved applies to these truncations and gives a quasi-isomorphism \(\sigma_{\geq t}M\to T(t)=\operatorname{Tot}(A(t))\) for every \(t\).
+
+A degree-\(m\) cocycle in \(T\) has finite support in \(i\), hence has representatives only in finitely many inner degrees \(m-i\). Choose \(t\) no greater than all these degrees. It is then a cocycle in \(T(t)\), since the truncation includes all the terms occurring in its differential, and its cohomology class comes from \(H^m(\sigma_{\geq t}M)\). This proves surjectivity of \(H^m(M)\to H^m(T)\). For injectivity, suppose a cycle in \(M^m\) becomes a boundary \(Dy\) in \(T\). The cochain \(y\) also has finite support; choose \(t\leq m\) below its finitely many inner degrees. The same equation holds in \(T(t)\). Injectivity of the truncated cohomology map gives a primitive in \(\sigma_{\geq t}M\), and hence in \(M\). This proves the original quasi-isomorphism with its original direct-sum total.
+
+\subsubsection{3. A good left resolution and the direct-sum total}\label{a-good-left-resolution-and-the-direct-sum-total}
+
+Consider
+
+\[
+\cdots\xrightarrow{f_3}A_2^\bullet\xrightarrow{f_2}A_1^\bullet
+\xrightarrow{f_1}A_0^\bullet\xrightarrow{\epsilon}M^\bullet\to0
+\]
+
+exact in every degree, and suppose its sequences of cycles \(\cdots\to Z^j(A_1)\to Z^j(A_0)\to Z^j(M)\to0\) are exact too. First the sequences of boundaries and of cohomology are exact. Indeed regard a fixed inner-degree row as an augmented chain complex in the resolution index. The short exact sequence of such rows \(0\to Z^j\to A^j\to B^{j+1}\to0\) has its first two rows exact, so the homology long exact sequence shows that the third is exact. Then \(0\to B^j\to Z^j\to H^j\to0\) proves exactness of the cohomology row. This retains every augmentation term \(M\).
+
+With \(A^{p,q}=A_{-p}^q\), the direct-sum total and its differential are
+
+\[
+T^m=\bigoplus_{i\geq0}A_i^{m+i},\qquad
+(D^mx)_i=f_{i+1}^{m+i+1}x_{i+1}+(-1)^i d_{A_i}^{m+i}x_i.       \tag{3.1}
+\]
+
+The augmentation \(T^m\to M^m\) is \(x\mapsto\epsilon^m x_0\). It is a chain map because \(\epsilon f_1=0\) and \(\epsilon d_{A_0}=d_M\epsilon\). Every cycle of \(M^m\) lifts to a cycle of \(A_0^m\) by the assumed exactness of cycles. Put that lift into component 0 and zeros elsewhere; (3.1) shows it is a total cycle. This proves surjectivity on cohomology in every degree.
+
+Let \(x\) be a total degree-\(m\) cycle, with support in \(0\leq i\leq N\). If \(N>0\), its component equation at \(N\) gives \(d_{A_N}x_N=0\). The equation at \(N-1\) gives \(f_Nx_N=(-1)^N d_{A_{N-1}}x_{N-1}\), so the class of \(x_N\) maps to zero in \(H^{m+N}(A_{N-1})\). The exact cohomology row supplies a cycle \(c\in A_{N+1}^{m+N}\) and an element \(u\in A_N^{m+N-1}\) such that \(x_N-f_{N+1}c=d_{A_N}u\). Define \(w\in T^{m-1}\) by
+
+\[
+w_{N+1}=c,\qquad w_N=(-1)^N u,
+\qquad w_i=0\quad(i\notin\{N,N+1\}).
+\]
+
+Then \((Dw)_N=x_N\), \((Dw)_{N+1}=0\), and no component above \(N+1\) is created. Thus \(x-Dw\) has support at most \(N-1\). Repeating finitely many times leaves a cycle supported only in component 0. These changes preserve its image in \(H^m(M)\).
+
+Suppose that remaining cycle \(x_0\) has image \(d_Mv\), \(v\in M^{m-1}\). Lift \(v\) to \(u_0\in A_0^{m-1}\) by exactness of the original degree-\(m-1\) row. The cycle \(x_0-d_{A_0}u_0\) maps to zero in \(Z^m(M)\), so exactness of the cycle row gives \(c_1\in Z^m(A_1)\) with \(f_1c_1=x_0-d_{A_0}u_0\). The cochain with components \(w_0=u_0,w_1=c_1\), all others zero, has \(Dw=x_0\), because its component 1 is \(-d_{A_1}c_1=0\). This proves injectivity. It also proves the final source sentence comparing the two images in \(H^0(M)\), and supplies the signs hidden in its finite elimination.
+
+\subsubsection{4. A good right resolution and the product total}\label{a-good-right-resolution-and-the-product-total}
+
+Return to the right resolution of §2, and assume that for every \(j\) the augmented sequence of cokernels of \(d^j\) is exact:
+
+\[
+0\to C^j(M)\to C^j(A_0)\to C^j(A_1)\to\cdots,
+\qquad C^j(A)=A^{j+1}/\operatorname{im}d_A^j.
+\]
+
+Its boundary, cycle, and cohomology rows are exact. First use \(0\to B^{j+1}\to A^{j+1}\to C^j\to0\), then \(0\to Z^j\to A^j\to B^{j+1}\to0\), then \(0\to B^j\to Z^j\to H^j\to0\). In each case two of the rows are exact, so the long exact sequence proves exactness of the third.
+
+Now take the \textbf{product} \(T^m=\prod_{i\geq0}A_i^{m-i}\), with the same two-component differential formula (2.1). Each output coordinate depends on only two input coordinates, so it defines a map on products; the same termwise calculation proves \(D^2=0\). The augmentation is the map into component 0, with zeros elsewhere.
+
+Let \(x=(x_i)\) be a total degree-\(m\) cocycle. Its first two equations are \(d_{A_0}x_0=0\) and \(f_0x_0=d_{A_1}x_1\). Thus the class of \(x_0\) in \(C^{m-1}(A_0)\) maps to zero in \(C^{m-1}(A_1)\). Exactness of the cokernel row gives \(v\in M^m\) and \(u_0\in A_0^{m-1}\) with
+
+\[
+x_0=\alpha v+d_{A_0}u_0.
+\]
+
+Since \(d_{A_0}x_0=0\) and \(\alpha\) is injective, \(d_Mv=0\). Subtract the augmentation of this cycle from \(x\). The remaining cycle has its component 0 in the image of \(d_{A_0}\). HOMOLOGY-FIND-011 makes this subtraction explicit at 6973: one subtracts an element in the image from the original class; one cannot simply replace the class by an arbitrary image class and infer surjectivity for the original class from that replacement.
+
+We prove that a cycle with \(x_0=d_{A_0}y_0\) is a boundary. Construct successively \(y_i\in A_i^{m-i-1}\) satisfying
+
+\[
+x_j=f_{j-1}^{m-j}y_{j-1}+(-1)^j d_{A_j}^{m-j-1}y_j
+\quad (j\geq1),                             \tag{4.1}
+\]
+
+along with the already satisfied equation at \(j=0\). Suppose the components through \(y_{j-1}\) solve all equations through \(j-1\), and set \(w_j=x_j-f_{j-1}y_{j-1}\). The cycle equation for \(x\) gives \(d_{A_j}x_j=(-1)^{j+1}f_{j-1}x_{j-1}\). Substituting the preceding equation in (4.1), and using \(f_{j-1}f_{j-2}=0\), gives \(d_{A_j}x_j=f_{j-1}d_{A_{j-1}}y_{j-1}\). Thus \(d_{A_j}w_j=0\). Also \(f_jw_j=f_jx_j=(-1)^j d_{A_{j+1}}x_{j+1}\), so its class maps to zero in \(H^{m-j}(A_{j+1})\).
+
+By the exact cohomology row, choose \(c_{j-1}\in Z^{m-j}(A_{j-1})\) mapping to the class of \(w_j\). Replace \(y_{j-1}\) by \(y_{j-1}+c_{j-1}\). This preserves the already satisfied equations, since its only effect on equation \(j-1\) is the differential of a cycle, which is zero. It changes \(w_j\) by \(-f_{j-1}c_{j-1}\), so the new \(w_j\) is a boundary. Choose \(u_j\in A_j^{m-j-1}\) with \(d_{A_j}u_j=w_j\), and put \(y_j=(-1)^j u_j\). Then (4.1) holds at \(j\) as well.
+
+At stage \(j\), the components through \(j-2\) are unchanged. Every component therefore attains its final value after finitely many stages: \(y_i\) is last changed at stage \(i+1\). The resulting tuple belongs to the product \(T^{m-1}\); no finite support assertion is made. Each equation depends on two coordinates and remains valid after those coordinates stabilize, so \(Dy=x\). For the source's degree \(m=0\), the adjustment of \(y_{j-1}\) lies in \(\ker d^{-j}_{A_{j-1}}\), and the final tuple lies in \(T^{-1}\). This verifies MC-STK-ERR-0790 and MC-STK-ERR-0791.
+
+For injectivity suppose a cycle \(v\in M^m\) maps to \(Dy\), with \(y\in T^{m-1}\). The component-1 equation gives \(f_0y_0=d_{A_1}y_1\). Exactness of the row of \(C^{m-2}\) gives \(u\in M^{m-1}\) and \(z\in A_0^{m-2}\) with \(y_0=\alpha u+d_{A_0}z\). The component-0 equation then gives \(\alpha v=d_{A_0}y_0=\alpha d_Mu\). Injectivity of \(\alpha\) implies \(v=d_Mu\). Surjectivity and injectivity prove the claimed quasi-isomorphism in every degree.
+
+\subsubsection{5. An arbitrary left resolution and the product total}\label{an-arbitrary-left-resolution-and-the-product-total}
+
+For the left resolution of §3, without its additional cycle-row assumption, take
+
+\[
+T^m=\prod_{i\geq0}A_i^{m+i},\qquad
+(D^mx)_i=f_{i+1}^{m+i+1}x_{i+1}+(-1)^i d_{A_i}^{m+i}x_i.       \tag{5.1}
+\]
+
+First let \(M=0\). For a cocycle \(x\in T^m\), exactness at \(A_0^m\) gives \(u_0\in A_1^m\) with \(f_1u_0=x_0\). Suppose \(u_0,\ldots,u_{i-1}\) are constructed, with \(u_j\in A_{j+1}^{m+j}\). Define
+
+\[
+r_i=x_i-(-1)^i d_{A_i}^{m+i-1}u_{i-1},\qquad i\geq1.
+\]
+
+It belongs to \(\ker f_i^{m+i}\). In fact the cycle equation in component \(i-1\) gives \(f_ix_i=(-1)^i d_{A_{i-1}}x_{i-1}\). The preceding construction gives \(f_iu_{i-1}=x_{i-1}-(-1)^{i-1}d_{A_{i-1}}u_{i-2}\) when \(i>1\), and \(f_1u_0=x_0\) when \(i=1\). Commutativity with differentials and \(d^2=0\) show \(f_ir_i=0\) in either case. Exactness supplies \(u_i\in A_{i+1}^{m+i}\) with \(f_{i+1}u_i=r_i\).
+
+The primitive is the tuple
+
+\[
+y=(0,u_0,u_1,\ldots)\in T^{m-1},             \tag{5.2}
+\]
+
+where component 0 is in \(A_0^{m-1}\), and component \(i+1\) is \(u_i\in A_{i+1}^{m+i}\). Its differential is \(x\) by (5.1). For \(m=0\), the first recursion is \(x_1+d_{A_1}^0u_0=f_2^1u_1\), verifying the corrected positive sign of MC-STK-ERR-0793. The source names these \(u_i\) as \(y_i\). Accordingly HOMOLOGY-FIND-010 changes its final tuple at 7063 to \((0,y_0,y_1,\ldots)\); the displayed leading zero supplies the component in \(A_0^{-1}\). The given \(y_0\in A_1^0\) cannot be placed in that component. We have proved acyclicity in every degree.
+
+For general \(M\), define the corrected augmented resolution \(B_0=M\), \(B_{i+1}=A_i\) for \(i\geq0\), ending at zero. It is exact. Its product total \(S\) is acyclic by the case just proved. In degree \(m\), write
+
+\[
+S^m=M^m\times\prod_{i\geq0}A_i^{m+i+1}.
+\]
+
+The inclusion \(\iota:M\to S\) is into the first factor. The quotient map in the source's short exact sequence is the following signed map, rather than an unqualified unsigned reindexing:
+
+\[
+q^m:S^m\longrightarrow T[1]^m=T^{m+1},\qquad
+(v,(a_i))\longmapsto((-1)^ia_i)_{i\geq0}.       \tag{5.3}
+\]
+
+The source differential on the \(A_i\) tail has horizontal part \(f_{i+1}a_{i+1}\) and vertical part \((-1)^{i+1}d_{A_i}a_i\). Multiplication by \((-1)^i\) in the output gives \((-1)^if_{i+1}a_{i+1}-d_{A_i}a_i\). On the target, the differential is \(-D_T\); applied to (5.3) it gives \(-(-1)^{i+1}f_{i+1}a_{i+1}-(-1)^i(-1)^id_{A_i}a_i\), the same expression. Hence \(q\) is a chain map. It is surjective in every degree, with kernel the first factor \(M^m\), so
+
+\[
+0\longrightarrow M\xrightarrow{\iota}S\xrightarrow{q}T[1]
+\longrightarrow0                                      \tag{5.4}
+\]
+
+is a short exact sequence of complexes. The inclusion is a chain map because a component in \(B_0=M\) has no outgoing horizontal map inside \(S\), and its vertical sign is positive.
+
+For a cycle \(x\in T^{m+1}\), lift its corresponding class in \(T[1]^m\) by \((0,((-1)^ix_i))\in S^m\). Its differential has zero tail and first component \(\epsilon x_0\in M^{m+1}\). Thus the connecting map of (5.4), after the source's unsigned identification \(H^m(T[1])=H^{m+1}(T)\), is exactly
+
+\[
+H^{m+1}(T)\longrightarrow H^{m+1}(M),\qquad
+[x]\longmapsto[\epsilon x_0].
+\]
+
+Since \(S\) is acyclic, the long exact sequence makes this map an isomorphism in every degree. It is the map induced by the original augmentation \(T\to M\). This proves the original lemma and the exact comparison omitted at 7053, while retaining the cochain shift sign and every resolution-index shift.
+
+\subsubsection{6. Receiving uses in differential graded algebra}\label{receiving-uses-in-differential-graded-algebra}
+
+The receiving source is pinned at \texttt{b4b30d521cfbe300860903ff788059627da6a434}. In \texttt{dga.tex}, the direct-sum resolution at 2301--2349 invokes the good left-resolution lemma. The construction chooses short exact sequences \(0\to M_{i+1}\to P_i\to M_i\to0\), with surjections on cycles by \texttt{lemma-good-quotient}, 2273--2299. For every degree \(j\), these give short exact sequences
+
+\[
+0\to Z^j(M_{i+1})\to Z^j(P_i)\to Z^j(M_i)\to0.
+\]
+
+Indeed, a cycle in the kernel of the last map lies in \(M_{i+1}^j\) by degreewise exactness; the injective chain map from \(M_{i+1}\) then shows that it is a cycle there. Surjectivity is the selected property of the quotient. Splicing these sequences proves the exact cycle rows required by §3. Under \(a=-i\), the displayed differential \(f_{-a}+(-1)^a d_{P_{-a}}\) is exactly (3.1), since \((-1)^{-i}=(-1)^i\). Its augmentation is the same map. Thus the receiving quasi-isomorphism follows with no change of hypotheses.
+
+The product resolution in \texttt{dga.tex}, 2501--2535, uses \(0\to M_i\to I_i\to M_{i+1}\to0\), with injective maps \(C^j(M_i)\to C^j(I_i)\) by \texttt{lemma-good-sub}, 2438--2487. The sequence
+
+\[
+0\to C^j(M_i)\to C^j(I_i)\to C^j(M_{i+1})\to0
+\]
+
+is exact. Surjectivity on the right follows by lifting an element in degree \(j+1\). If \(u\in I_i^{j+1}\) maps to a boundary \(dv\) in \(M_{i+1}\), lift \(v\) to \(w\in I_i^j\). Then \(u-dw\) lies in \(M_i^{j+1}\), proving exactness in the middle. The left injection is the chosen property of the subobject. Splicing gives the cokernel rows required by §4. The product terms and their differential agree exactly with (2.1); hence the original augmentation \(M\to I\) remains a quasi-isomorphism. This verifies the cited Homology input, not every separate assertion about the filtration used to prove property (I).
+
+For \texttt{sdga.tex}, the second proof at 3043--3113 repeats the direct-sum construction with sheaves, choosing surjections on cycle sheaves from \texttt{lemma-good-quotient}, 2820--2833. The same kernel argument gives exact cycle rows of sheaves. At each point, inverse image to abelian groups is exact and commutes with coproducts, so the stalks have the exact rows, total terms, differential, and augmentation of §3. Consequently the augmentation is a quasi-isomorphism on every stalk. When the site has enough points, an abelian sheaf with every stalk zero is zero; apply this to the kernel and cokernel of each induced cohomology map. This proves precisely the receiving enough-points argument. The separate subsequent argument without enough points has not been certified by this dependency check.
+
+All four resolution labels were searched in the tracked top-level TeX chapters. The three receiving occurrences are \texttt{dga.tex} 2348 and 2534, and \texttt{sdga.tex} 3112. No correction to these three uses is required by the present findings. This bounded dependency check is not a whole-chapter review, and unrelated DGA and SDGA reports remain in their own review queues.
+
+\subsubsection{7. Continuation}\label{continuation}
+
+The four original quasi-isomorphism statements hold. Their exact maps are the augmentations calculated above. The three new local proof repairs are the temporary lower bound on all columns, the explicit subtraction in the good right-resolution argument, and the leading zero in the arbitrary left-resolution primitive. The six older correction units with eight operations remain valid. The next source-ordered report review begins after 7064; actual consecutive reading has already reached 7320, including the injective/projective definitions and the first adjunction lemma. Those later reports have not been disposed by this proof note.

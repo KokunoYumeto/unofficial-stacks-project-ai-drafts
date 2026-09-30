@@ -1,0 +1,168 @@
+{
+  "findings": [
+    {
+      "finding_id": "HOMOLOGY-FIND-005",
+      "source": "homology.tex",
+      "source_lines": [
+        4858
+      ],
+      "kind": "unreported_copyedit",
+      "original": "The first equality because",
+      "correction": "The first equality holds because",
+      "proof": {
+        "file": "PROOFS_4681_5648.md",
+        "bytes": 23361,
+        "sha256": "C7CBDCA99ACB227E0D2E6F7EB5A5F8224612D3477086860AB75675DD0FBAFFEA",
+        "section": 1
+      },
+      "status": "confirmed_local_not_admitted",
+      "operations": [
+        "HOMOLOGY-NEW-012"
+      ],
+      "report_count": 0,
+      "mathematical_claim_changed": false,
+      "inventory_check": "No bound received-report interval contains this token; no earlier accepted operation overlaps.",
+      "propagation": "Grammar only; all displayed maps, hypotheses and formulas remain unchanged.",
+      "novelty": "not_claimed"
+    },
+    {
+      "finding_id": "HOMOLOGY-FIND-006",
+      "source": "homology.tex",
+      "source_lines": [
+        5058
+      ],
+      "kind": "unreported_copyedit",
+      "original": "Then commutative diagram",
+      "correction": "Then the commutative diagram",
+      "proof": {
+        "file": "PROOFS_4681_5648.md",
+        "bytes": 23361,
+        "sha256": "C7CBDCA99ACB227E0D2E6F7EB5A5F8224612D3477086860AB75675DD0FBAFFEA",
+        "section": 1
+      },
+      "status": "confirmed_local_not_admitted",
+      "operations": [
+        "HOMOLOGY-NEW-013"
+      ],
+      "report_count": 0,
+      "mathematical_claim_changed": false,
+      "inventory_check": "No bound received-report interval contains this token; no earlier accepted operation overlaps.",
+      "propagation": "Grammar only; all displayed maps, hypotheses and formulas remain unchanged.",
+      "novelty": "not_claimed"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "HOMOLOGY-UNDER-005",
+      "kind": "strictness_from_image_filtration_bounds",
+      "source_label": "lemma-characterize-strict",
+      "original_source_lines": [
+        5017,
+        5074
+      ],
+      "original_statement": "For a morphism between finite filtered objects, strictness, graded coimage-image isomorphism and either exactness condition at gr(A) or gr(B) are equivalent.",
+      "proved_statement": "On I=im(f), put P^p=f(F^p A), Q^p=I intersect F^p B. If P^m=I, monicity of gr(P)->gr(Q) forces strictness. If Q^n=0, epicity forces strictness. Both bounds give all six original equivalences without requiring finite filtrations on the full source and target.",
+      "corollaries": [
+        "Finite source filtration alone suffices for gr(f) monic iff f is a strict monomorphism.",
+        "Finite target filtration alone suffices for gr(f) epic iff f is a strict epimorphism."
+      ],
+      "exact_maps": "The underlying identity c:(I,P)->(I,Q) is the canonical coimage-image map transported via A/ker(f) -> I. Its graded kernel and image are the explicit subquotients in proof equations (3.1).",
+      "proof": {
+        "file": "PROOFS_4681_5648.md",
+        "bytes": 23361,
+        "sha256": "C7CBDCA99ACB227E0D2E6F7EB5A5F8224612D3477086860AB75675DD0FBAFFEA",
+        "section": 3
+      },
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "counterexamples": "Three explicit identity maps on a nonzero vector space show failures without the correct bound/direction.",
+      "affected_results": [
+        "Derived filtration uses at the nine recorded lines",
+        "Exercises strict-monomorphism criterion at 2403-2409"
+      ],
+      "propagation": "Original finite applications remain valid; weaker criteria recorded separately. No wholesale generalization of the filtered derived category or surrounding exercises.",
+      "novelty": "not_claimed",
+      "next": "Carry the exact image-filtration criteria and corollaries into the separate Homology editorial supplement."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "derived.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 464343,
+        "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+      },
+      "actual_lines_read": [
+        [
+          4701,
+          4795
+        ],
+        [
+          8170,
+          8250
+        ],
+        [
+          8286,
+          8342
+        ],
+        [
+          8370,
+          8408
+        ],
+        [
+          8558,
+          8593
+        ]
+      ],
+      "hits": [
+        4724,
+        4765,
+        4776,
+        8193,
+        8234,
+        8308,
+        8333,
+        8396,
+        8583
+      ],
+      "excerpt": {
+        "file": "derived.tex.part05-excerpts.txt",
+        "bytes": 13293,
+        "sha256": "C709C236F27EE9FB0107BFA75F67FE7A90674B6C77B72DF9DA6F497A923B9E61"
+      },
+      "receiving_outcome": "Original uses assume finite filtered objects and remain valid. Verify the cited filtration consequence only, not all surrounding derived-category proofs.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "exercises.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 235703,
+        "sha256": "6C99DFF3D5D29278ABC8708839550B8EE8D185476687C2385558033CCD1DA5F5"
+      },
+      "actual_lines_read": [
+        [
+          2388,
+          2416
+        ]
+      ],
+      "hits": [
+        2409
+      ],
+      "excerpt": {
+        "file": "exercises.tex.part05-excerpts.txt",
+        "bytes": 1244,
+        "sha256": "CBC92B5EBA14BCA12774726527486CAD9358CE6C8D76E1EB6DBBC504051307C2"
+      },
+      "receiving_outcome": "The strict-monomorphism criterion needs finite source filtration but not finite target filtration. This is recorded separately; no claim that all hypotheses in the surrounding extension-property exercise can be dropped.",
+      "whole_chapter_reviewed": false
+    }
+  ],
+  "supplementary_proofs": [
+    "Finite-filtration acyclicity with exact induction direction.",
+    "Shifted derived exact-couple maps and exactness.",
+    "Well-defined differential-object maps and next-page quotient with both alpha A summands retained."
+  ],
+  "omitted_source_proofs_counted_as_errors": false
+}

@@ -1,0 +1,253 @@
+\section{Homology: complexes, shifts, graded duals and total complexes}\label{note-03-homology-complexes-shifts-graded-duals-and-total-complexes}
+
+This is an editorial review note, not a replacement for the source. The primary source is the Stacks Project, homology.tex, official commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. Line numbers for Homology below refer to that original file. Receiving passages in other chapters refer to commit b4b30d52\allowbreak{}1cfbe300\allowbreak{}860903ff\allowbreak{}78805962\allowbreak{}7da6a434 unless stated otherwise. Exact source identities and reading intervals are recorded in SOURCE\_READING\_PART03.json. No novelty is claimed.
+
+\subsection{1. Received reports and their exact scope}\label{note-03-received-reports-and-their-exact-scope}
+
+The following nine groups account for thirteen physical reports. Their occurrence identities, original producer text, earlier accepted operations and exact current postimages are bound in REVIEW\_PART03.json and REPORT\_DISPOSITIONS\_PART03.json.
+
+{ % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Original locus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Decision
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+HOMOLOGY-RECON-017 & 3165 & Change ``maps'' to ``map''; the following ``is an isomorphism for all i'' then has a singular quantified subject. \\
+HOMOLOGY-RECON-018 & 3246 & The earlier correction of ``exactnesss'' to ``exactness'' is valid and present. \\
+HOMOLOGY-RECON-019 & 3560 & The objects are cohomology objects of cochain complexes. The earlier change from ``homology'' to ``cohomology'' is valid and present. \\
+HOMOLOGY-RECON-020 & 3577 & The maps s' and pi' form a compound subject. Change ``is a second choice'' to ``are a second choice''. \\
+HOMOLOGY-RECON-021 & 3962 & The earlier change from ``in stead of'' to ``instead of'' is valid and present. \\
+HOMOLOGY-RECON-022 & 4048 & The earlier change from ``vectors spaces'' to ``vector spaces'' is valid and present. The p02 report's interval ends one line before the actual target. \\
+HOMOLOGY-RECON-023 & 4074 & The unfinished unit sentence has already been completed with the explicitly defined graded unit. Keep that valid completion. Deleting the original fragment was an alternative repair, not an instruction to delete the now complete sentence. \\
+HOMOLOGY-RECON-024 & 4231--4232 & The summation must enclose all three component maps. The two earlier operations supply the opening and closing parentheses. Section 5 checks the complete differential. \\
+HOMOLOGY-RECON-025 & 4242 & The earlier insertion of the article in ``combine the sum of those'' is valid and present. \\
+\end{longtable}
+}
+
+The complete differential and splitting arguments below are supporting mathematics. They do not convert every copyedit into a mathematical defect. The findings in Sections 2, 4 and 6 were discovered during this review and are recorded separately from the thirteen received reports.
+
+\subsection{2. Connecting morphisms under the stated shift convention}\label{note-03-connecting-morphisms-under-the-stated-shift-convention}
+
+Source locators: lemma-long-exact-sequence-cochain, lines 3192--3249; definition-shift-cochain, lines 3426--3444; and definition-cohomology-shift, lines 3461--3469. The snake construction used here is lemma-snake, lines 1011--1086.
+
+Let S be a short exact sequence of cochain complexes in an abelian category: \[
+S:\quad 0\longrightarrow A^\bullet\xrightarrow{u}B^\bullet
+\xrightarrow{v}C^\bullet\longrightarrow0.
+\] Use exactly the source's differential \[
+A[k]^i=A^{i+k},\qquad d_{A[k]}^i=(-1)^k d_A^{i+k},
+\] and write \[
+c_{k,A}^i:H^{i+k}(A^\bullet)\longrightarrow H^i(A[k]^\bullet)
+\] for the source's identification induced by the identity of the underlying objects. There is no additional sign in c.~The same convention applies to B and C.
+
+The precise shift formula for the source's snake boundary is \[
+\boxed{\quad
+\delta_{S[k]}^i\,c_{k,C}^i
+ =(-1)^k c_{k,A}^{i+1}\,\delta_S^{i+k}.
+\quad}                                                    \tag{2.1}
+\] Both sides have domain H\^{}\{i+k\}(C) and codomain H\^{}\{i+1\}(A{[}k{]}). The formula is valid for every integer k.
+
+Here is a proof within the original abelian category, without replacing it by a category of modules. In the source snake diagram write the rows as \[
+x\xrightarrow{f}y\xrightarrow{g}z\longrightarrow0,\qquad
+0\longrightarrow u_0\xrightarrow{\kappa}v_0
+\xrightarrow{\ell}w,
+\] and the vertical maps as alpha, beta and gamma. Thus kappa is monic and g is epic. Put \[
+P=y\times_z\ker(\gamma),\quad
+\pi':P\longrightarrow y,\quad
+\pi:P\longrightarrow\ker(\gamma),\quad
+q:u_0\longrightarrow\operatorname{coker}(\alpha).
+\] The pullback projection pi is epic. The map beta pi' lands in ker(ell), which is the image of kappa. Consequently there is a unique a:P -\textgreater{} u\_0 with kappa a=beta pi'. The snake boundary is characterized by \[
+\delta\pi=qa.
+\] Replace all three vertical maps by lambda times those maps, where lambda=(-1)\^{}k is an invertible scalar endomorphism, central for every additive morphism. Kernels of gamma and lambda gamma and cokernels of alpha and lambda alpha have their canonical identical presentations. The pullback P, its projections, and q can therefore be kept fixed. The new lift a\_lambda satisfies \[
+\kappa a_\lambda=\lambda\beta\pi'
+ =\kappa(\lambda a).
+\] Monicity gives a\_lambda=lambda a. Hence \[
+\delta_\lambda\pi=q a_\lambda
+ =\lambda q a=\lambda\delta\pi.
+\] Epicity of pi gives delta\_lambda=lambda delta.
+
+Apply this calculation to the exact-row diagram used in the source: \[
+\begin{array}{ccccccc}
+A^j/\operatorname{im}d_A^{j-1}&\longrightarrow&
+B^j/\operatorname{im}d_B^{j-1}&\longrightarrow&
+C^j/\operatorname{im}d_C^{j-1}&\longrightarrow&0\\
+\downarrow d_A^j&&\downarrow d_B^j&&\downarrow d_C^j\\
+\ker d_A^{j+1}&\longrightarrow&
+\ker d_B^{j+1}&\longrightarrow&\ker d_C^{j+1}.
+\end{array}
+\] The lower row has an initial zero. The kernel of the right vertical map is H\^{}j(C), and the cokernel of the left vertical map is H\^{}\{j+1\}(A). For S{[}k{]} take j=i+k. All three vertical maps acquire lambda; the kernels, images and quotient presentations remain canonically the same. The snake calculation therefore gives (2.1).
+
+The unsigned interpretation fails even in abelian groups. Take A with A\^{}1=Z and all other terms zero; C with C\^{}0=Z and all other terms zero; and B with B\^{}0=B\^{}1=Z and d\_B\^{}0=id\_Z. The inclusion u\^{}1 and projection v\^{}0 are identities, and all their other components are zero. This is termwise short exact. The boundary \[
+H^0(C)=\mathbb Z\xrightarrow{\delta_S^0}H^1(A)=\mathbb Z
+\] is id\_Z: lift an integer to B\^{}0, apply d\_B\^{}0, and identify B\^{}1 with A\^{}1. In the shift by 1, d\_\{B{[}1{]}\}\^{}\{-1\}=-id\_Z, so \[
+H^{-1}(C[1])=\mathbb Z
+\xrightarrow{\delta_{S[1]}^{-1}}
+H^0(A[1])=\mathbb Z
+\] is -id\_Z. The source c maps on these groups are identities. Thus the sign in (2.1) cannot be discarded.
+
+This does not invalidate existence, exactness or naturality of the long exact sequence. It makes the source's assertion ``compatible with shifts'' precise and repairs the unsigned reading of that assertion.
+
+There is also an exact coherent comparison of long exact sequences if such a comparison is wanted. Define a \emph{different, explicitly named} map \[
+\widetilde c_{k,A}^i
+=\varepsilon(k,i)c_{k,A}^i,\qquad
+\varepsilon(k,i)=(-1)^{ki+k(k-1)/2}.                         \tag{2.2}
+\] This does not change or silently redefine the source c.~Within one cohomological degree, the same scalar multiplies the A, B and C terms, so all horizontal squares commute. For the connecting square, \[
+\delta_{S[k]}^i\widetilde c_{k,C}^i
+=\varepsilon(k,i)(-1)^k c_{k,A}^{i+1}\delta_S^{i+k}
+=\widetilde c_{k,A}^{i+1}\delta_S^{i+k},
+\] because epsilon(k,i+1)=(-1)\^{}k epsilon(k,i). All components are isomorphisms. Finally the comparison for a shift by k followed by l has scalar \[
+\varepsilon(l,i)\varepsilon(k,i+l)
+=(-1)^{li+l(l-1)/2+k(i+l)+k(k-1)/2}
+=\varepsilon(k+l,i).
+\] The last equality follows from (k+l)(k+l-1)/2=k(k-1)/2+l(l-1)/2+kl, also for negative integers. Thus (2.2) is coherent for successive shifts; it is not merely an objectwise observation that the original unsigned square fails.
+
+Propagation: the bounded receiving passages listed in the ledger use existence, exactness, naturality or the unshifted split boundary. Those uses remain valid. More on Algebra, lines 18977--18999, explicitly retains the same unsigned cohomology identification and snake boundary, which agrees with (2.1). Its conventions must be kept, not silently changed. No claim is made here to have audited every lemma of a receiving chapter.
+
+\subsection{3. Split boundaries and the orientation of their homotopy}\label{note-03-split-boundaries-and-the-orientation-of-their-homotopy}
+
+At lines 3520--3606 the source fixes a termwise split short exact sequence with u:A -\textgreater{} B and v:B -\textgreater{} C. Write its splitting maps in degree n as s\^{}n:C\^{}n -\textgreater{} B\^{}n and pi\^{}n:B\^{}n -\textgreater{} A\^{}n.~They obey \[
+v^ns^n=1,\quad \pi^nu^n=1,\quad \pi^ns^n=0,\quad
+u^n\pi^n+s^nv^n=1.
+\] The component delta\^{}n=pi\^{}\{n+1\}d\_B\^{}ns\^{}n has source C\^{}n and target A\^{}\{n+1\}=A{[}1{]}\^{}n.~In the decomposition B\^{}n=A\^{}n direct-sum C\^{}n the differential has matrix \[
+d_B^n=
+\begin{pmatrix}d_A^n&\delta^n\\0&d_C^n\end{pmatrix}.
+\] The upper-right component of d\_B\^{}\{n+1\}d\_B\^{}n=0 is d\_A\^{}\{n+1\}delta\^{}n+delta\^{}\{n+1\}d\_C\^{}n=0. Since the differential of A{[}1{]} is -d\_A, this says exactly that delta:C -\textgreater{} A{[}1{]} is a cochain map. On cycles in C, its formula is the snake lift of Section 2; quotienting by boundaries therefore gives the stated long exact \emph{cohomology} boundary. The terminology correction at line 3560 changes none of these maps.
+
+For the second splitting write s'=s+u h and pi'=pi+g v, retaining all degrees as in the source. From pi's'=0 and the four splitting identities, \[
+0=(\pi+gv)(s+uh)=h+g,
+\] so g=-h. Expanding the boundary, with no terms suppressed before their vanishing is justified, gives \[
+\begin{aligned}
+(\delta')^n
+&=(\pi^{n+1}+g^{n+1}v^{n+1})d_B^n(s^n+u^nh^n)\\
+&=\delta^n+
+  \pi^{n+1}d_B^nu^nh^n+
+  g^{n+1}v^{n+1}d_B^ns^n+
+  g^{n+1}v^{n+1}d_B^nu^nh^n\\
+&=\delta^n+d_A^nh^n+g^{n+1}d_C^n+0\\
+&=\delta^n+d_{A[1]}^{n-1}g^n+g^{n+1}d_C^n .
+\end{aligned}
+\] The zero term is zero because v\^{}\{n+1\}d\_B\^{}nu\^{}n=d\_C\^{}nv\^{}nu\^{}n=0. With the convention f-g=dh+hd, the displayed g is a homotopy from delta' to delta, and h=-g is a homotopy from delta to delta'. The source says ``between'' and displays the correct equation. This orientation clarification is not counted as an additional source error.
+
+\subsection{4. Graded duals and propagation to the Weil shift}\label{note-03-graded-duals-and-propagation-to-the-weil-shift}
+
+Source: lemma-left-dual-graded-vector-spaces, lines 4063--4107, with the tensor product and unit of example-graded-vector-spaces. The exact left-dual convention is Categories, definition-dual, lines 9464--9489: \[
+\eta:F\longrightarrow V\otimes W,\qquad
+\epsilon:W\otimes V\longrightarrow F,
+\] and both triangle composites are identities. The associators and unit maps are the usual ones on vector spaces and are retained in these composites. Their action sends nested tensors to the same ordered three factors; no interchange of factors occurs.
+
+\textbf{HOMOLOGY-UNDER-004.} A graded F-vector space V has a left dual if and only if sum\_n dim\_F V\^{}n is finite. In that case evaluation identifies the component \(W^{-n}\) of any left dual with \((V^n)^*\), and a dual is provided by \(W^{-n}=(V^n)^*\) with the evaluation and coevaluation below.
+
+For necessity, write the degree-zero tensor eta(1) as a finite sum \[
+\eta(1)=\sum_{(n,i)\in J} e_{n,i}\otimes w_{-n,i}.
+\] Here each e\_\{n,i\} is a member of a homogeneous basis of V and J is finite; coefficients have been absorbed into the displayed w, with zero coefficients still allowed. The triangle on V states, for every v in V, \[
+v=\sum_{(n,i)\in J}e_{n,i}\epsilon(w_{-n,i},v).
+\] Thus the finitely many displayed e span V. In particular only finitely many V\^{}n are nonzero, and each is finite-dimensional. The triangle on W states \[
+w=\sum_{(n,i)\in J}\epsilon(w,e_{n,i})w_{-n,i},
+\] so W is also finite-dimensional. Let E\_n:W\^{}\{-n\} -\textgreater{} (V\^{}n)\^{}* send w to the functional v -\textgreater{} epsilon(w,v). If E\_n(w)=0, all coefficients in the second triangle vanish: components of degrees other than n pair to zero since epsilon has degree zero. Hence w=0, proving injectivity. Taking a full homogeneous basis of the now finite V in eta(1), the first triangle with v=e\_\{n,j\} gives \[
+\epsilon(w_{-n,i},e_{n,j})=\delta_{ij}.
+\] The images E\_n(w\_\{-n,i\}) are the full dual basis. Thus E\_n is also surjective and is the asserted isomorphism.
+
+Conversely assume the total dimension is finite. For each n choose a basis e\_\{n,1\},\ldots,e\_\{n,r\_n\} of V\^{}n, and its dual basis e\^{}*\_\{n,1\},\ldots,e\^{}*\_\{n,r\_n\}. Set \[
+W^m=(V^{-m})^*,\qquad
+\eta(1)=\sum_n\sum_{i=1}^{r_n}e_{n,i}\otimes e^*_{n,i}.
+\] The sum is finite and has total degree zero. Define epsilon on W\^{}\{-n\} tensor V\^{}n to be evaluation and on all components of nonzero total degree to be zero. Both maps preserve degrees. For homogeneous v in V\^{}n the triangle on V is \[
+v\longmapsto
+\sum_{m,i}e_{m,i}\otimes e^*_{m,i}\otimes v
+\longmapsto
+\sum_i e_{n,i}e^*_{n,i}(v)=v.
+\] For w in W\^{}\{-n\}, the other triangle is \[
+w\longmapsto
+\sum_{m,i}w\otimes e_{m,i}\otimes e^*_{m,i}
+\longmapsto
+\sum_i w(e_{n,i})e^*_{n,i}=w.
+\] Linearity proves both identities on all vectors. No Koszul sign occurs because neither composite uses a symmetry map.
+
+The coevaluation is independent of the bases. Explicitly, in one degree write \(e'_j=\sum_i e_i M_{ij}\). The corresponding dual basis is \((e')^*_j=\sum_k (M^{-1})_{jk}e_k^*\). Therefore \[
+\sum_j e'_j\otimes(e')^*_j
+=\sum_{i,k,j}M_{ij}(M^{-1})_{jk}e_i\otimes e_k^*
+=\sum_i e_i\otimes e_i^*.
+\] Adding the finitely many degrees proves independence for eta. This establishes the converse and exact dual identification without substituting a stronger lemma into the translated source.
+
+\textbf{Weil receiving correction.} In lemma-from-functor-to-weil-classical, Weil lines 1681--1685 fix F{[}n{]} to mean F in degree -n and choose \[
+F[2n]\xrightarrow{\sim}G(\mathbf1(n))
+\] compatibly with tensor products for every integer n.~With the source's monoidal identification h(X)(d)=h(X) tensor 1(d), these maps force \[
+G(h(X)(d))
+\cong G(h(X))\otimes G(\mathbf1(d))
+\cong H^*(X)\otimes F[2d].                                \tag{4.1}
+\] Each isomorphism here is the source's given monoidal comparison or the chosen degree-preserving isomorphism. No coordinate or twist has been discarded.
+
+In particular \[
+(H^*(X)\otimes F[2d])^r
+ = H^{r+2d}(X)\otimes F,
+\] since the second factor has its sole nonzero component in degree -2d. At r=0 the class {[}X{]}:h(X)(d) -\textgreater{} 1 therefore supplies exactly the trace H\^{}\{2d\}(X) -\textgreater{} F printed at line 1715. The two source occurrences of F{[}-2d{]}, at lines 1712 and 1721, have the opposite shift and must be F{[}2d{]}. With the erroneous shift the degree-zero component would instead be H\^{}\{-2d\}(X); at degree -i it would be H\^{}\{-i-2d\}(X). With (4.1), the dual component is H\^{}\{2d-i\}(X), and the dual evaluation in Section 4 has precisely the source's stated pairing \[
+H^{2d-i}(X)\otimes_F H^i(X)\longrightarrow F.
+\] The conclusion about that pairing need not be weakened: it is its incorrect intermediate shift that is repaired.
+
+The later treatment at Weil lines 2885--2891 already has \[
+G(h(X)(d))=H^*(X)\otimes_F F(d)[2d],
+\qquad
+H^{2d-i}(X)(d)\otimes_F H^i(X)\longrightarrow F.
+\] Its Tate factor F(d) remains present. The classical chosen trivialization does not authorize deleting that factor in the later treatment. Other bounded receiving uses at lines 4646 and 4717 require the original finite-dimensionality consequence and are unaffected. This review checks these uses of graded duality, not the entire construction of motives or every geometric dependency.
+
+\subsection{5. The full total differentials and the double shift}\label{note-03-the-full-total-differentials-and-the-double-shift}
+
+For a double complex, the source's differentials square to zero in their own directions and commute in the two directions. On the summand A\^{}\{p,q\} the total differential is \[
+D=d_1^{p,q}+(-1)^p d_2^{p,q}.
+\] The two square terms in D\^{}2 vanish. The coefficient of d\_2\^{}\{p+1,q\}d\_1\^{}\{p,q\} is (-1)\^{}\{p+1\}; that of d\_1\^{}\{p,q+1\}d\_2\^{}\{p,q\} is (-1)\^{}p.~The two composites agree and these coefficients sum to zero. Thus D\^{}2=0 with precisely the original signs.
+
+For a triple complex the total differential on A\^{}\{p,q,r\} is \[
+D=d_1^{p,q,r}+(-1)^p d_2^{p,q,r}
+                    +(-1)^{p+q}d_3^{p,q,r}.              \tag{5.1}
+\] Each same-direction square is zero. For the 1/2 cross pair the coefficients are (-1)\^{}\{p+1\} and (-1)\^{}p.~For the 1/3 pair the coefficients are (-1)\^{}\{p+q+1\} and (-1)\^{}\{p+q\}. For the 2/3 pair the coefficient for d\_3 after d\_2 is (-1)\^{}p(-1)\^{}\{p+q+1\}=(-1)\^{}\{2p+q+1\}; the coefficient for d\_2 after d\_3 is (-1)\^{}\{p+q\}(-1)\^{}p=(-1)\^{}\{2p+q\}. In each pair the composites agree by the defining commutation relation, and the coefficients add to zero. This verifies every term of D\^{}2. Consequently the sum over p+q+r=n must enclose all of (5.1), as the accepted parentheses correction does.
+
+The comparison with iterated totals retains every summand. Combining indices 1 and 2 first gives internal differential d\_1+(-1)\^{}p d\_2; then combining its index p+q with r adds (-1)\^{}\{p+q\}d\_3. Combining 2 and 3 first gives d\_2+(-1)\^{}q d\_3; combining p with q+r gives d\_1+(-1)\^{}p(d\_2+(-1)\^{}q d\_3), which is (5.1). The flattening map sends each original A\^{}\{p,q,r\} to that same labelled summand in the three-index coproduct. Its inverse is determined by the reverse summand inclusions. The coproduct universal properties make both composites identities. These statements apply when the displayed coproducts exist, as required by the source; existence is not inferred for an arbitrary additive category.
+
+For the double shift at lines 4247--4302, use the source's comparison \[
+\gamma:\operatorname{Tot}(A)[a+b]
+\longrightarrow \operatorname{Tot}(A[a,b]).
+\] On the summand originally labelled (p,q), the target label is (p-a,q-b), and gamma is multiplication by (-1)\^{}\{pb\}. The source differential on that summand has coefficients (-1)\^{}\{a+b\} for d\_1 and (-1)\^{}\{a+b+p\} for d\_2. The target differential has coefficients (-1)\^{}a for d\_1 and (-1)\^{}\{p-a+b\} for d\_2. For d\_1, the coefficients in d\_target gamma and gamma d\_source are respectively \[
+(-1)^{a+pb},\qquad
+(-1)^{(p+1)b+a+b}=(-1)^{pb+a+2b}.
+\] They agree. For d\_2 they are respectively \[
+(-1)^{p-a+b+pb},\qquad
+(-1)^{pb+a+b+p};
+\] their exponents differ by 2a. They also agree. Multiplication by the same sign on each reverse summand is the inverse. Thus the source's comparison is an isomorphism of complexes with all original indices and signs retained; no correction is needed there.
+
+\subsection{6. Homological versus cohomological delta-functors in Sites Cohomology}\label{note-03-homological-versus-cohomological-delta-functors-in-sites-cohomology}
+
+Source: example-category-to-point and example-left-derived-colimits, Sites Cohomology lines 10015--10114. The category carries the chaotic topology, so its sheaves are presheaves. Exactness of their sequences is objectwise. Each term of K\_n(F) is the stated direct sum of groups F(U\_0) indexed by chains of n arrows. Evaluations are exact, and direct sums of short exact sequences of abelian groups are exact. The construction therefore sends short exact sequences of these presheaves to termwise short exact sequences of chain complexes.
+
+For such a sequence F\_1 -\textgreater{} F\_2 -\textgreater{} F\_3 the connecting maps are \[
+H_n(K_\bullet(F_3))\longrightarrow H_{n-1}(K_\bullet(F_1)).
+                                                               \tag{6.1}
+\] This is the homological convention. The source at lines 10074--10076 cites the cohomological delta-functor definition and cochain long exact sequence without stating the change of convention.
+
+There is an exact comparison, not an unrelated pair of conventions. For a chain complex K define \[
+L^i=K_{-i},\qquad d_L^i=d_{K,-i}:K_{-i}\longrightarrow K_{-i-1}.
+\] No sign is inserted. On a chain map f define its cochain component to be f\_\{-i\}. The differential and morphism equations are the same equations with changed indices. This construction has inverse K\_n=L\^{}\{-n\} with d\_\{K,n\}=d\_L\^{}\{-n\}; both composites are the identities. Moreover \[
+H^i(L)=
+\ker(d_{K,-i})/\operatorname{im}(d_{K,-i+1})
+=H_{-i}(K)
+\] with the identical kernel, image and quotient maps. The snake diagram for L at degree -n is the chain snake diagram for K at degree n, so their connecting maps agree and give exactly (6.1).
+
+For the definition indexed by nonnegative integers, the precise dual description is also available. If A is the abelian category of these presheaves and T\_n(F)=H\_n(K(F)), regard T\_n as a covariant functor A\^{}op -\textgreater{} Ab\^{}op. A short exact sequence 0 -\textgreater{} F\_1 -\textgreater{} F\_2 -\textgreater{} F\_3 -\textgreater{} 0 in A becomes 0 -\textgreater{} F\_3 -\textgreater{} F\_2 -\textgreater{} F\_1 -\textgreater{} 0 in A\^{}op. In Ab\^{}op the map (6.1) at index n+1 is the cohomological boundary \[
+T_n(F_1)\longrightarrow T_{n+1}(F_3).
+\] Reversing the homological long exact sequence gives the required cohomological exact sequence in Ab\^{}op, starting with 0 -\textgreater{} T\_0(F\_3) -\textgreater{} T\_0(F\_2) -\textgreater{} T\_0(F\_1). Naturality is the reversal of the natural snake squares; compositions and identity maps are preserved by the functors on both opposite categories. This proves exactly the sense in which the homological definition is dual to the cited definition.
+
+The proposed editorial clarification says ``homological delta-functor'', specifies the dual convention, and cites lemma-long-exact-sequence-chain. It does not call the intended left-derived-functor assertion false. The later use of dual universal-delta-functor lemmas at 10110--10113 is consistent with this convention. The receiving passage at 10624--10629 uses the same homological functors; the convention clarification applies without changing its claimed functors. The genuinely cochain example at 10923--10928 keeps its original cochain citation.
+
+\subsection{7. Reading and integration limits}\label{note-03-reading-and-integration-limits}
+
+The primary Homology source has been read consecutively through line 4336. The remark beginning at line 4304 continues past that boundary and is not certified here. The next source line is 4337. The thirteen received reports in Section 1 have been adjudicated; this does not certify every result in the whole chapter.
+
+The previews and inverse checks recorded with this note preserve all inherited additions and every earlier accepted correction. They are local proposed changes, not an admission, cumulative composition or publication receipt. The graded-dual equivalence and coherent long-exact-sequence comparison belong in the separate editorial supplement. Broader synthesis remains after the core correction and received-candidate queue.

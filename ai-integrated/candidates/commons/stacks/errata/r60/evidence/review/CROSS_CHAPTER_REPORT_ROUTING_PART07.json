@@ -1,0 +1,144 @@
+{
+  "inventory": {
+    "path": "private-source-locator/CORRECTION_OCCURRENCES.jsonl",
+    "bytes": 19788292,
+    "sha256": "53667E865189AF21A0E0132B6CB670E9E6D83B9B5996F8EF1D3D903E8E56F56B"
+  },
+  "records": [
+    {
+      "inventory_line": 1691,
+      "inventory_row_sha256": "0B1F298CD557B3AA95B06FC35FE8DE27AFC854CA25B503625A64E2E9EFCAA313",
+      "producer": "p02",
+      "producer_id": "P02-E0224",
+      "locus": "more-algebra.tex:15531-15540",
+      "source_record": {
+        "record_type": "candidate",
+        "id": "P02-E0224",
+        "timestamp": "2026-08-23T00:13:11.1432173+02:00",
+        "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+        "source_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+        "exact_locus": "more-algebra.tex:15531-15540",
+        "defect": "The convergence display targets H^n even though n is free in the display; the spectral-sequence indices are p and q.",
+        "evidence": "The preceding sentence quantifies each H^n separately, while a cohomological spectral sequence with E_1^{p,q} converges in total degree p+q.",
+        "smallest_correction": "Replace H^n in the convergence display with H^{p + q}.",
+        "confidence": "certain",
+        "translation_impact": "The zh-Hans-CN target preserves the frozen free n in the display.",
+        "status": "candidate_for_canon_verification"
+      },
+      "disposition": "not_adjudicated_in_this_homology_batch"
+    },
+    {
+      "inventory_line": 1695,
+      "inventory_row_sha256": "9454600B3173146B2F5441AE9A6A2D94CCE2B48427F71144544E0C337EBEF7EA",
+      "producer": "p02",
+      "producer_id": "P02-E0228",
+      "locus": "more-algebra.tex:15636-15637",
+      "source_record": {
+        "record_type": "candidate",
+        "id": "P02-E0228",
+        "timestamp": "2026-08-23T00:13:11.1432173+02:00",
+        "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+        "source_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+        "exact_locus": "more-algebra.tex:15636-15637",
+        "defect": "The total complex Tot(K tensor F^{n-i_1+1}L) omits the base-ring subscript R.",
+        "evidence": "Both factors are R-complexes and the corresponding filtered construction consistently uses tensor_R.",
+        "smallest_correction": "Insert the missing subscript R: \\otimes_R.",
+        "confidence": "certain",
+        "translation_impact": "The zh-Hans-CN target preserves the frozen unsubscripted tensor exactly.",
+        "status": "candidate_for_canon_verification"
+      },
+      "disposition": "not_adjudicated_in_this_homology_batch"
+    },
+    {
+      "inventory_line": 1696,
+      "inventory_row_sha256": "C3981F29D9CED4CA1DFBC70F5CA20F5EDCB3A5E8C018E17040AE917C29205FDB",
+      "producer": "p02",
+      "producer_id": "P02-E0229",
+      "locus": "more-algebra.tex:15638-15641",
+      "source_record": {
+        "record_type": "candidate",
+        "id": "P02-E0229",
+        "timestamp": "2026-08-23T00:13:11.1432173+02:00",
+        "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+        "source_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+        "exact_locus": "more-algebra.tex:15638-15641",
+        "defect": "The displayed quasi-isomorphism arrow between S^{n,s,t} and S^{n,a-1,t} points opposite to the natural inclusion for s <= a-1.",
+        "evidence": "By definition S^{n,a-1,t} uses a subset of the summands used by S^{n,s,t}; hence the canonical map supplied by the construction is S^{n,a-1,t} to S^{n,s,t}.",
+        "smallest_correction": "Reverse the arrow and sentence order to S^{n,a-1,t} \\to S^{n,s,t}.",
+        "confidence": "certain",
+        "translation_impact": "The zh-Hans-CN target preserves the frozen arrow direction exactly pending canon verification.",
+        "status": "candidate_for_canon_verification"
+      },
+      "disposition": "not_adjudicated_in_this_homology_batch"
+    },
+    {
+      "inventory_line": 1701,
+      "inventory_row_sha256": "9D9A16816A700F34C78DCADBD3952A85AA5E9717101EBF96DBB79B0F83246058",
+      "producer": "p02",
+      "producer_id": "P02-E0234",
+      "locus": "more-algebra.tex:15784-15786",
+      "source_record": {
+        "record_type": "candidate",
+        "id": "P02-E0234",
+        "timestamp": "2026-08-23T00:13:11.1432173+02:00",
+        "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+        "source_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+        "exact_locus": "more-algebra.tex:15784-15786",
+        "defect": "The proposition says “the spectral sequence convergences,” using a noun where a verb is required.",
+        "evidence": "The grammatical predicate is “converges.”",
+        "smallest_correction": "Replace “convergences” with “converges.”",
+        "confidence": "certain",
+        "translation_impact": "The zh-Hans-CN target uses the correct verbal predicate.",
+        "status": "candidate_for_canon_verification"
+      },
+      "disposition": "not_adjudicated_in_this_homology_batch"
+    },
+    {
+      "inventory_line": 2383,
+      "inventory_row_sha256": "A53877FBB08A4E29FBA6487B3686408E89C8A6C36349FF9B123D48B4CD2C42D1",
+      "producer": "p02",
+      "producer_id": "P02-E0916",
+      "locus": "more-algebra.tex:15531-15540",
+      "source_record": {
+        "record_type": "candidate",
+        "timestamp": "2026-08-26T04:32:00+02:00",
+        "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+        "source_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+        "status": "candidate_for_canon_verification",
+        "id": "P02-E0916",
+        "confidence": "high",
+        "exact_locus": "more-algebra.tex:15531-15540",
+        "defect": "The convergence display uses H^n as its unquantified abutment while its E-page is indexed by p,q.",
+        "evidence": "For this cohomological spectral sequence the total degree is p+q; the surrounding sentence quantifies each H^n separately but the display gives no relation n=p+q.",
+        "smallest_correction": "Replace H^n in the display with H^{p + q}, or explicitly state n=p+q.",
+        "translation_impact": "Japanese preserves the frozen abutment index and carries non-rendering P02-E0916."
+      },
+      "disposition": "not_adjudicated_in_this_homology_batch"
+    },
+    {
+      "inventory_line": 2390,
+      "inventory_row_sha256": "8CE7B25419AAAEFC1634B93651533FC2B4171C0883AA47796A4A17F41E98D70F",
+      "producer": "p02",
+      "producer_id": "P02-E0923",
+      "locus": "more-algebra.tex:15777-15787",
+      "source_record": {
+        "record_type": "candidate",
+        "timestamp": "2026-08-26T04:32:00+02:00",
+        "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+        "source_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+        "status": "candidate_for_canon_verification",
+        "id": "P02-E0923",
+        "confidence": "certain",
+        "exact_locus": "more-algebra.tex:15777-15787",
+        "defect": "The proposition concludes 'the spectral sequence convergences'.",
+        "evidence": "The sentence requires the verb 'converges', not the plural noun 'convergences'.",
+        "smallest_correction": "Replace 'convergences' with 'converges'.",
+        "translation_impact": "Japanese renders the intended verb and carries non-rendering P02-E0923."
+      },
+      "disposition": "not_adjudicated_in_this_homology_batch"
+    }
+  ],
+  "reading_scope": "Read full source records for adjacent More Algebra reports; route them to their existing chapter queue, without counting them as Homology dispositions.",
+  "relation": "Received reports at the boundedness statement concern its free abutment index; the finite-choice proposition reports concern the word convergences. Neither reports the starting-page defect.",
+  "deferred_observation": "P02-E0229 already reports the direction of the S^{n,s,t} inclusion at original 15638/current 16247; retain for its chapter review, not as a new discovery."
+}

@@ -1,0 +1,196 @@
+2268: for all acyclic differential graded $A$-modules $N$ and all $k$.
+2269: This follows from Lemma \ref{lemma-hom-from-shift-free}.
+2270: \end{proof}
+2271: 
+2272: \begin{lemma}
+2273: \label{lemma-good-quotient}
+2274: Let $(A, \text{d})$ be a differential graded algebra.
+2275: Let $M$ be a differential graded $A$-module. There exists a homomorphism
+2276: $P \to M$ of differential graded $A$-modules with the following
+2277: properties
+2278: \begin{enumerate}
+2279: \item $P \to M$ is surjective,
+2280: \item $\Ker(\text{d}_P) \to \Ker(\text{d}_M)$ is surjective, and
+2281: \item $P$ sits in an admissible short exact sequence
+2282: $0 \to P' \to P \to P'' \to 0$ where $P'$, $P''$ are direct sums
+2283: of shifts of $A$.
+2284: \end{enumerate}
+2285: \end{lemma}
+2286: 
+2287: \begin{proof}
+2288: Let $P_k$ be the free $A$-module with generators $x, y$ in degrees
+2289: $k$ and $k + 1$. Define the structure of a differential graded
+2290: $A$-module on $P_k$ by setting $\text{d}(x) = y$ and $\text{d}(y) = 0$.
+2291: For every element $m \in M^k$ there is a homomorphism
+2292: $P_k \to M$ sending $x$ to $m$ and $y$ to $\text{d}(m)$.
+2293: Thus we see that there is a surjection from a direct sum
+2294: of copies of $P_k$ to $M$. This clearly produces $P \to M$
+2295: having properties (1) and (3). To obtain property (2) note
+2296: that if $m \in \Ker(\text{d}_M)$ has degree $k$, then there is a map
+2297: $A[k] \to M$ mapping $1$ to $m$. Hence we can achieve (2) by adding
+2298: a direct sum of copies of shifts of $A$.
+2299: \end{proof}
+2300: 
+2301: \begin{lemma}
+2302: \label{lemma-resolve}
+2303: Let $(A, \text{d})$ be a differential graded algebra.
+2304: Let $M$ be a differential graded $A$-module. There exists a homomorphism
+2305: $P \to M$ of differential graded $A$-modules such that
+2306: \begin{enumerate}
+2307: \item $P \to M$ is a quasi-isomorphism, and
+2308: \item $P$ has property (P).
+2309: \end{enumerate}
+2310: \end{lemma}
+2311: 
+2312: \begin{proof}
+2313: Set $M = M_0$. We inductively choose short exact sequences
+2314: $$
+2315: 0 \to M_{i + 1} \to P_i \to M_i \to 0
+2316: $$
+2317: where the maps $P_i \to M_i$ are chosen as in Lemma \ref{lemma-good-quotient}.
+2318: This gives a ``resolution''
+2319: $$
+2320: \ldots \to P_2 \xrightarrow{f_2} P_1 \xrightarrow{f_1} P_0 \to M \to 0
+2321: $$
+2322: Then we set
+2323: $$
+2324: P = \bigoplus\nolimits_{i \geq 0} P_i
+2325: $$
+2326: as an $A$-module with grading given by
+2327: $P^n = \bigoplus_{a + b = n} P_{-a}^b$ and
+2328: differential (as in the construction of the total complex associated
+2329: to a double complex) by
+2330: $$
+2331: \text{d}_P(x) = f_{-a}(x) + (-1)^a \text{d}_{P_{-a}}(x)
+2332: $$
+2333: for $x \in P_{-a}^b$. With these conventions $P$ is indeed a differential
+2334: graded $A$-module. Recalling that each $P_i$ has a two step filtration
+2335: $0 \to P_i' \to P_i \to P_i'' \to 0$ we set
+2336: $$
+2337: F_{2i}P = \bigoplus\nolimits_{i \geq j \geq 0} P_j
+2338: \subset
+2339: \bigoplus\nolimits_{i \geq 0} P_i = P
+2340: $$
+2341: and we add $P'_{i + 1}$ to $F_{2i}P$ to get $F_{2i + 1}$.
+2342: These are differential graded submodules and the successive quotients
+2343: are direct sums of shifts of $A$. By
+2344: Lemma \ref{lemma-target-graded-projective} we see that
+2345: the inclusions $F_iP \to F_{i + 1}P$ are admissible monomorphisms.
+2346: Finally, we have to show that the map $P \to M$ (given by the
+2347: augmentation $P_0 \to M$) is a quasi-isomorphism. This follows from
+2348: Homology, Lemma \ref{homology-lemma-good-resolution-gives-qis}.
+2349: \end{proof}
+2350: 
+2351: 
+2352: 
+2353: 
+2354: 
+2355: \section{I-resolutions}
+2356: \label{section-I-resolutions}
+
+2430: \Hom_{K(\text{Mod}_{(A, \text{d})})}(N, A^\vee[k]) = 0
+2431: $$
+2432: for all acyclic differential graded $A$-modules $N$ and all $k$.
+2433: This follows from Lemma \ref{lemma-hom-into-shift-dual-free}
+2434: and the fact that $(-)^\vee$ is an exact functor.
+2435: \end{proof}
+2436: 
+2437: \begin{lemma}
+2438: \label{lemma-good-sub}
+2439: Let $(A, \text{d})$ be a differential graded algebra.
+2440: Let $M$ be a differential graded $A$-module. There exists a homomorphism
+2441: $M \to I$ of differential graded $A$-modules with the following
+2442: properties
+2443: \begin{enumerate}
+2444: \item $M \to I$ is injective,
+2445: \item $\Coker(\text{d}_M) \to \Coker(\text{d}_I)$ is injective,
+2446: and
+2447: \item $I$ sits in an admissible short exact sequence
+2448: $0 \to I' \to I \to I'' \to 0$ where $I'$, $I''$ are products
+2449: of shifts of $A^\vee$.
+2450: \end{enumerate}
+2451: \end{lemma}
+2452: 
+2453: \begin{proof}
+2454: We will use the functors $N \mapsto N^\vee$ (from left to right
+2455: differential graded modules and from right to left differential
+2456: graded modules) constructed in
+2457: Section \ref{section-modules-noncommutative-differential-graded}
+2458: and all of their properties.
+2459: For every $k \in \mathbf{Z}$ let $Q_k$ be the free left $A$-module with
+2460: generators $x, y$ in degrees $k$ and $k + 1$. Define the structure of a
+2461: left differential graded $A$-module on $Q_k$ by setting $\text{d}(x) = y$
+2462: and $\text{d}(y) = 0$. Arguing exactly as in the proof of
+2463: Lemma \ref{lemma-good-quotient} we find a surjection
+2464: $$
+2465: \bigoplus\nolimits_{i \in I} Q_{k_i} \longrightarrow M^\vee
+2466: $$
+2467: of left differential graded $A$-modules. Then we can consider the injection
+2468: $$
+2469: M \to (M^\vee)^\vee \to (\bigoplus\nolimits_{i \in I} Q_{k_i})^\vee =
+2470: \prod\nolimits_{i \in I} I_{k_i}
+2471: $$
+2472: where $I_k = Q_{-k}^\vee$ is the ``dual'' right differential graded $A$-module.
+2473: Further, the short exact sequence $0 \to A[-k - 1] \to Q_k \to A[-k] \to 0$
+2474: produces a short exact sequence
+2475: $0 \to A^\vee[k] \to I_k \to A^\vee[k + 1] \to 0$.
+2476: 
+2477: \medskip\noindent
+2478: The result of the previous paragraph produces $M \to I$
+2479: having properties (1) and (3). To obtain property (2), suppose
+2480: $\overline{m} \in \Coker(\text{d}_M)$ is a nonzero element of
+2481: degree $k$. Pick a map $\lambda : M^k \to \mathbf{Q}/\mathbf{Z}$
+2482: which vanishes on $\Im(M^{k - 1} \to M^k)$ but not on $m$. By
+2483: Lemma \ref{lemma-hom-into-shift-dual-free}
+2484: this corresponds to a homomorphism $M \to A^\vee[k]$ of
+2485: differential graded $A$-modules which does not vanish on $m$.
+2486: Hence we can achieve (2) by adding
+2487: a product of copies of shifts of $A^\vee$.
+
+2498: \end{enumerate}
+2499: \end{lemma}
+2500: 
+2501: \begin{proof}
+2502: Set $M = M_0$. We inductively choose short exact sequences
+2503: $$
+2504: 0 \to M_i \to I_i \to M_{i + 1} \to 0
+2505: $$
+2506: where the maps $M_i \to I_i$ are chosen as in Lemma \ref{lemma-good-sub}.
+2507: This gives a ``resolution''
+2508: $$
+2509: 0 \to M \to I_0 \xrightarrow{f_0} I_1 \xrightarrow{f_1} I_1 \to \ldots
+2510: $$
+2511: Denote $I$ the differential graded $A$-module with graded parts
+2512: $$
+2513: I^n = \prod\nolimits_{i \geq 0} I^{n - i}_i
+2514: $$
+2515: and differential defined by
+2516: $$
+2517: \text{d}_I(x) = f_i(x) + (-1)^i \text{d}_{I_i}(x)
+2518: $$
+2519: for $x \in I_i^{n - i}$. With these conventions $I$ is indeed a differential
+2520: graded $A$-module. Recalling that each $I_i$ has a two step filtration
+2521: $0 \to I_i' \to I_i \to I_i'' \to 0$ we set
+2522: $$
+2523: F_{2i}I^n = \prod\nolimits_{j \geq i} I^{n - j}_j
+2524: \subset
+2525: \prod\nolimits_{i \geq 0} I^{n - i}_i = I^n
+2526: $$
+2527: and we add a factor $I'_{i + 1}$ to $F_{2i}I$ to get $F_{2i + 1}I$.
+2528: These are differential graded submodules and the successive quotients
+2529: are products of shifts of $A^\vee$. By
+2530: Lemma \ref{lemma-source-graded-injective} we see that
+2531: the inclusions $F_{i + 1}I \to F_iI$ are admissible monomorphisms.
+2532: Finally, we have to show that the map $M \to I$ (given by the
+2533: augmentation $M \to I_0$) is a quasi-isomorphism. This follows from
+2534: Homology, Lemma \ref{homology-lemma-good-right-resolution-gives-qis}.
+2535: \end{proof}
+2536: 
+2537: 
+2538: 
+2539: 
+2540: 
+2541: 
+2542: \section{The derived category}
+2543: \label{section-derived}
+2544: 

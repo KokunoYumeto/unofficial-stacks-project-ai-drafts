@@ -1,0 +1,256 @@
+944: Let $\mathcal{U} = \{U_i \to U\}_{i \in I}$ be a family of morphisms
+945: with fixed target such that all fibre products
+946: $U_{i_0} \times_U \ldots \times_U U_{i_p}$ exist in $\mathcal{C}$.
+947: The functors $\mathcal{F} \mapsto \check{H}^n(\mathcal{U}, \mathcal{F})$
+948: form a $\delta$-functor from the abelian category $\textit{PAb}(\mathcal{C})$
+949: to the category of $\mathbf{Z}$-modules (see
+950: Homology, Definition \ref{homology-definition-cohomological-delta-functor}).
+951: \end{lemma}
+952: 
+953: \begin{proof}
+954: By
+955: Lemma \ref{lemma-cech-exact-presheaves}
+956: a short exact sequence of abelian presheaves
+957: $0 \to \mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3 \to 0$
+958: is turned into a short exact sequence of complexes of
+959: $\mathbf{Z}$-modules. Hence we can use
+960: Homology, Lemma \ref{homology-lemma-long-exact-sequence-cochain}
+961: to get the boundary maps
+962: $\delta_{\mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3} :
+963: \check{H}^n(\mathcal{U}, \mathcal{F}_3) \to
+964: \check{H}^{n + 1}(\mathcal{U}, \mathcal{F}_1)$
+965: and a corresponding long exact sequence. We omit the verification
+966: that these maps are compatible with maps between short exact
+967: sequences of presheaves.
+968: \end{proof}
+969: 
+970: \begin{lemma}
+971: \label{lemma-cech-map-into}
+972: Let $\mathcal{C}$ be a category. Let $\mathcal{U} = \{U_i \to U\}_{i \in I}$
+
+9985: \mathcal{F}|_{\mathcal{C}_{V'}} \circ h^*.
+9986: $$
+9987: Hence a map $\mathcal{H}(V) \to \mathcal{H}(V')$ between colimits, see
+9988: Categories, Lemma \ref{categories-lemma-functorial-colimit}.
+9989: 
+9990: \medskip\noindent
+9991: To prove the lemma we show that
+9992: $$
+9993: \Mor_{\textit{PSh}(\mathcal{D})}(\mathcal{H}, \mathcal{G}) =
+9994: \Mor_{\Sh(\mathcal{C})}(\mathcal{F}, \pi^{-1}\mathcal{G})
+9995: $$
+9996: for every sheaf $\mathcal{G}$ on $\mathcal{C}$. An element of the
+9997: left hand side is a compatible system of maps
+9998: $\mathcal{F}(U) \to \mathcal{G}(p(U))$ for all $U$ in $\mathcal{C}$.
+9999: Since $\pi^{-1}\mathcal{G}(U) = \mathcal{G}(p(U))$ by our choice
+10000: of topology on $\mathcal{C}$ we see the same thing is true for the
+10001: right hand side and we win.
+10002: \end{proof}
+10003: 
+10004: 
+10005: 
+10006: 
+10007: 
+10008: \section{Homology on a category}
+10009: \label{section-homology}
+10010: 
+10011: \noindent
+10012: In the case of a category over a point we will baptize the left derived
+10013: lower shriek functors the homology functors.
+10014: 
+10015: \begin{example}[Category over point]
+10016: \label{example-category-to-point}
+10017: Let $\mathcal{C}$ be a category. Endow $\mathcal{C}$ with the chaotic
+10018: topology (Sites, Example \ref{sites-example-indiscrete}). Thus
+10019: presheaves and sheaves agree on $\mathcal{C}$.
+10020: The functor $p : \mathcal{C} \to *$ where $*$ is the category with a single
+10021: object and a single morphism is cocontinuous and continuous. Let
+10022: $\pi : \Sh(\mathcal{C}) \to \Sh(*)$ be the corresponding morphism
+10023: of topoi. Let $B$ be a ring. We endow $*$ with the sheaf of rings $B$
+10024: and $\mathcal{C}$ with $\mathcal{O}_\mathcal{C} = \pi^{-1}B$ which
+10025: we will denote $\underline{B}$. In this way
+10026: $$
+10027: \pi : (\Sh(\mathcal{C}), \underline{B}) \to (\Sh(*), B)
+10028: $$
+10029: is an example of Situation \ref{situation-fibred-category}.
+10030: By Remark \ref{remark-fibred-category} we do not need to distinguish
+10031: between $\pi_!$ on modules or abelian sheaves. By
+10032: Lemma \ref{lemma-compute-pi-shriek} we see that
+10033: $\pi_!\mathcal{F} = \colim_{\mathcal{C}^{opp}} \mathcal{F}$.
+10034: Thus $L_n\pi_!$ is the $n$th left derived functor of taking colimits.
+10035: In the following, we write
+10036: $$
+10037: H_n(\mathcal{C}, \mathcal{F}) = L_n\pi_!(\mathcal{F})
+10038: $$
+10039: and we will name this the {\it $n$th homology group of $\mathcal{F}$}
+10040: on $\mathcal{C}$.
+10041: \end{example}
+10042: 
+10043: \begin{example}[Computing homology]
+10044: \label{example-left-derived-colimits}
+10045: In Example \ref{example-category-to-point} we can compute
+10046: the functors $H_n(\mathcal{C}, -)$ as follows. Let
+10047: $\mathcal{F} \in \Ob(\textit{Ab}(\mathcal{C}))$.
+10048: Consider the chain complex
+10049: $$
+10050: K_\bullet(\mathcal{F}) :
+10051: \ \ldots \to
+10052: \bigoplus\nolimits_{U_2 \to U_1 \to U_0} \mathcal{F}(U_0)
+10053: \to
+10054: \bigoplus\nolimits_{U_1 \to U_0} \mathcal{F}(U_0)
+10055: \to
+10056: \bigoplus\nolimits_{U_0} \mathcal{F}(U_0)
+10057: $$
+10058: where the transition maps are given by
+10059: $$
+10060: (U_2 \to U_1 \to U_0, s)
+10061: \longmapsto
+10062: (U_1 \to U_0, s) - (U_2 \to U_0, s) + (U_2 \to U_1, s|_{U_1})
+10063: $$
+10064: and similarly in other degrees. By construction
+10065: $$
+10066: H_0(\mathcal{C}, \mathcal{F}) =
+10067: \colim_{\mathcal{C}^{opp}} \mathcal{F} =
+10068: H_0(K_\bullet(\mathcal{F})),
+10069: $$
+10070: see Categories, Lemma \ref{categories-lemma-colimits-coproducts-coequalizers}.
+10071: The construction of $K_\bullet(\mathcal{F})$ is functorial in $\mathcal{F}$
+10072: and transforms short exact sequences of $\textit{Ab}(\mathcal{C})$ into
+10073: short exact sequences of complexes. Thus the sequence of functors
+10074: $\mathcal{F} \mapsto H_n(K_\bullet(\mathcal{F}))$ forms a $\delta$-functor, see
+10075: Homology, Definition \ref{homology-definition-cohomological-delta-functor} and
+10076: Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
+10077: For $\mathcal{F} = j_{U!}\mathbf{Z}_U$ the complex $K_\bullet(\mathcal{F})$
+10078: is the complex associated to the free $\mathbf{Z}$-module on the simplicial
+10079: set $X_\bullet$ with terms
+10080: $$
+10081: X_n = \coprod\nolimits_{U_n \to \ldots \to U_1 \to U_0}
+10082: \Mor_\mathcal{C}(U_0, U)
+10083: $$
+10084: This simplicial set is homotopy equivalent to the constant simplicial
+10085: set on a singleton $\{*\}$. Namely, the map $X_\bullet \to \{*\}$
+10086: is obvious, the map $\{*\} \to X_n$ is given
+10087: by mapping $*$ to $(U \to \ldots \to U, \text{id}_U)$, and the
+10088: maps
+10089: $$
+10090: h_{n, i} : X_n \longrightarrow X_n
+10091: $$
+10092: (Simplicial, Lemma \ref{simplicial-lemma-relations-homotopy})
+10093: defining the homotopy between the two maps $X_\bullet \to X_\bullet$
+10094: are given by the rule
+10095: $$
+10096: h_{n, i} :
+10097: (U_n \to \ldots \to U_0, f)
+10098: \longmapsto
+10099: (U_n \to \ldots \to U_i \to U \to \ldots \to U, \text{id})
+10100: $$
+10101: for $i > 0$ and $h_{n, 0} = \text{id}$. Verifications omitted.
+10102: This implies that $K_\bullet(j_{U!}\mathbf{Z}_U)$ has trivial
+10103: cohomology in negative degrees
+10104: (by the functoriality of
+10105: Simplicial, Remark \ref{simplicial-remark-homotopy-better}
+10106: and the result of
+10107: Simplicial, Lemma \ref{simplicial-lemma-homotopy-s-N}).
+10108: Thus $K_\bullet(\mathcal{F})$ computes the left derived functors
+10109: $H_n(\mathcal{C}, -)$ of $H_0(\mathcal{C}, -)$
+10110: for example by (the duals of)
+10111: Homology, Lemma \ref{homology-lemma-efface-implies-universal}
+10112: and
+10113: Derived Categories, Lemma \ref{derived-lemma-right-derived-delta-functor}.
+10114: \end{example}
+10115: 
+10116: \begin{example}
+10117: \label{example-morphism-categories}
+10118: Let $u : \mathcal{C}' \to \mathcal{C}$ be a functor.
+10119: Endow $\mathcal{C}'$ and $\mathcal{C}$ with the chaotic
+10120: topology as in Example \ref{example-category-to-point}.
+10121: The functors $u$, $\mathcal{C}' \to *$, and $\mathcal{C} \to *$
+10122: where $*$ is the category with a single object and a single morphism
+10123: are cocontinuous and continuous. Let
+10124: $g : \Sh(\mathcal{C}') \to \Sh(\mathcal{C})$,
+10125: $\pi' : \Sh(\mathcal{C}') \to \Sh(*)$, and
+10126: $\pi : \Sh(\mathcal{C}) \to \Sh(*)$,
+10127: be the corresponding morphisms of topoi.
+10128: Let $B$ be a ring. We endow $*$ with the sheaf of rings $B$ and
+10129: $\mathcal{C}'$, $\mathcal{C}$ with the constant sheaf $\underline{B}$.
+10130: In this way
+10131: $$
+10132: \xymatrix{
+10133: (\Sh(\mathcal{C}'), \underline{B}) \ar[rd]_{\pi'} \ar[rr]_g & &
+10134: (\Sh(\mathcal{C}), \underline{B}) \ar[ld]^\pi \\
+
+10613: 
+10614: \begin{lemma}
+10615: \label{lemma-compute-left-derived-pi-shriek}
+10616: Assumptions and notation as in Situation \ref{situation-fibred-category}.
+10617: For $\mathcal{F}$ in $\textit{Ab}(\mathcal{C})$ and $n \geq 0$
+10618: the sheaf $L_n\pi_!(\mathcal{F})$ is equal to the sheaf
+10619: $L_n(\mathcal{F})$ constructed in
+10620: Lemma \ref{lemma-compute-left-derived-pi-shriek-pre}.
+10621: \end{lemma}
+10622: 
+10623: \begin{proof}
+10624: Consider the sequence of functors $\mathcal{F} \mapsto L_n(\mathcal{F})$
+10625: from $\textit{PAb}(\mathcal{C}) \to \textit{Ab}(\mathcal{D})$.
+10626: Since for each $V \in \Ob(\mathcal{D})$ the sequence of functors
+10627: $H_n(\mathcal{C}_V, - )$ forms a $\delta$-functor
+10628: so do the functors $\mathcal{F} \mapsto L_n(\mathcal{F})$.
+10629: Our goal is to show these form a universal $\delta$-functor.
+10630: In order to do this we construct some abelian presheaves
+10631: on which these functors vanish.
+10632: 
+10633: \medskip\noindent
+10634: For $U' \in \Ob(\mathcal{C})$ consider the abelian presheaf
+10635: $\mathcal{F}_{U'} = j_{U'!}^{\textit{PAb}}\mathbf{Z}_{U'}$
+10636: (Modules on Sites, Remark \ref{sites-modules-remark-localize-presheaves}).
+10637: Recall that
+10638: $$
+10639: \mathcal{F}_{U'}(U) =
+10640: \bigoplus\nolimits_{\Mor_\mathcal{C}(U, U')} \mathbf{Z}
+10641: $$
+10642: If $U$ lies over $V = p(U)$ in $\mathcal{D}$ and $U'$ lies over $V' = p(U')$
+10643: then any morphism $a : U \to U'$ factors uniquely as $U \to h^*U' \to U'$
+10644: where $h = p(a) : V \to V'$ (see
+10645: Categories, Definition
+10646: \ref{categories-definition-pullback-functor-fibred-category}).
+10647: Hence we see that
+10648: $$
+
+10905: \to
+10906: \prod\nolimits_{U_0 \to U_1 \to U_2} \mathcal{F}(U_0)
+10907: \to \ldots
+10908: $$
+10909: where the transition maps are given by
+10910: $$
+10911: (s_{U_0 \to U_1})
+10912: \longmapsto
+10913: ((U_0 \to U_1 \to U_2) \mapsto s_{U_0 \to U_1} - s_{U_0 \to U_2}
+10914: + s_{U_1 \to U_2}|_{U_0})
+10915: $$
+10916: and similarly in other degrees. By construction
+10917: $$
+10918: H^0(\mathcal{C}, \mathcal{F}) =
+10919: \lim_{\mathcal{C}^{opp}} \mathcal{F} =
+10920: H^0(K^\bullet(\mathcal{F})),
+10921: $$
+10922: see Categories, Lemma \ref{categories-lemma-limits-products-equalizers}.
+10923: The construction of $K^\bullet(\mathcal{F})$ is functorial in $\mathcal{F}$
+10924: and transforms short exact sequences of $\textit{Ab}(\mathcal{C})$ into
+10925: short exact sequences of complexes. Thus the sequence of functors
+10926: $\mathcal{F} \mapsto H^n(K^\bullet(\mathcal{F}))$ forms a $\delta$-functor, see
+10927: Homology, Definition \ref{homology-definition-cohomological-delta-functor} and
+10928: Lemma \ref{homology-lemma-long-exact-sequence-cochain}.
+10929: For an object $U$ of $\mathcal{C}$ denote $p_U : \Sh(*) \to \Sh(\mathcal{C})$
+10930: the corresponding point with $p_U^{-1}$ equal to evaluation at $U$, see
+10931: Sites, Example \ref{sites-example-indiscrete-points}.
+10932: Let $A$ be an abelian group and set $\mathcal{F} = p_{U, *}A$. In this case
+10933: the complex $K^\bullet(\mathcal{F})$ is the complex with terms
+10934: $\text{Map}(X_n, A)$ where
+10935: $$
+10936: X_n = \coprod\nolimits_{U_0 \to \ldots \to U_{n - 1} \to U_n}
+10937: \Mor_\mathcal{C}(U, U_0)
+10938: $$
+10939: This simplicial set is homotopy equivalent to the constant simplicial
+10940: set on a singleton $\{*\}$. Namely, the map $X_\bullet \to \{*\}$
+10941: is obvious, the map $\{*\} \to X_n$ is given
+10942: by mapping $*$ to $(U \to \ldots \to U, \text{id}_U)$, and the

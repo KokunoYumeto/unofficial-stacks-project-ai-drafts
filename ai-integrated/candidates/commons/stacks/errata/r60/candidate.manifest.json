@@ -1,0 +1,2285 @@
+{
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r60",
+  "lease_id": "stacks-lease-000067-errata-r60",
+  "namespace": "commons/stacks/errata/r60",
+  "writer_task": "01a0cc46-4ba8-77b1-9c55-33449e55fea7",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/homology.tex",
+      "bytes": 267354,
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    },
+    {
+      "path": "authority/more-algebra.tex",
+      "bytes": 1492039,
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    {
+      "path": "authority/weil.tex",
+      "bytes": 205138,
+      "sha256": "3861F2D85EB151058B6A0248E7F1B06910ADF8C4F4F017E856CC76F7A439AD3B"
+    },
+    {
+      "path": "authority/sites-cohomology.tex",
+      "bytes": 534394,
+      "sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 35,
+    "manifested_units": 35,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "bytes": 33125,
+    "sha256": "CDD249B3C4010A21E7C948B78D6DCF2E37FD0476B555A035AEF3C1E4442AA295"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 60100,
+    "sha256": "45B28BF6D71F5925CD0E52724EF3348D2EBE5739ADAE4E5C5AA5371D907903AE"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "bytes": 24905,
+    "sha256": "1FADDFBC12A3C4DD26B27EB4E30D602F9A4F9B6F5D4EFD2D2622B572AECB836F"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "bytes": 1714,
+    "sha256": "D1751F637956837760D24F84A0CA250CAB716BF9400AF513D927EFC4894FAFAB"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "bytes": 7144,
+    "sha256": "5C9A9265F5DC064A3A6482192416CC9D32F6F9C70D1F6EDDAB81DEAF7ACC7D07"
+  },
+  "builds": [
+    {
+      "path": "builds/chapter-input-reuse.json",
+      "bytes": 1016,
+      "sha256": "731A0F9A90DD1BE505849F20A6F5351E8BD66336D7110EEAE0AFD46EE7FEA0BD"
+    },
+    {
+      "path": "builds/chapters.json",
+      "bytes": 59407,
+      "sha256": "F95E60156A05807384EA1E806D139A94A8C95F244E9B45476ED2C29F99E9BAD0"
+    },
+    {
+      "path": "builds/presentation-history.json",
+      "bytes": 1793,
+      "sha256": "FD2A1EDA8103A708F4408ECE2908DAE782FD81C39FAB579CE4D8C2AD57B1F9F4"
+    },
+    {
+      "path": "builds/supplement.json",
+      "bytes": 5987,
+      "sha256": "EF097A08792DF0A857771D1F69C859660D77EEB2618F9B2E8F42347FE6EC9CB1"
+    },
+    {
+      "path": "COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "cumulative-operation-spec.json",
+      "bytes": 44314,
+      "sha256": "941EE2C12173D73BAF439D57B334675E0BE767ADB0F8CFCB5CD818797663D6D4"
+    },
+    {
+      "path": "cumulative-preview/homology.tex",
+      "bytes": 272052,
+      "sha256": "AC1CFAE066AEBFC4174B476BF222EAA2BDC7B721C017A57BC49B1E9A152B06CE"
+    },
+    {
+      "path": "cumulative-preview/more-algebra.tex",
+      "bytes": 1520872,
+      "sha256": "5418CDC6A440B6ABA391F34341B32E205DC84FAB3013308F7EE5E1684EA22372"
+    },
+    {
+      "path": "cumulative-preview/sites-cohomology.tex",
+      "bytes": 534570,
+      "sha256": "622D623F9FEEF8C178AC3239216F8EB67DA2E21C935E232BDFAFF23E7F2365A3"
+    },
+    {
+      "path": "cumulative-preview/weil.tex",
+      "bytes": 205136,
+      "sha256": "D2E0989DD630D11745C346A34F2945A21BA9B9CACC283DCA45D5FFA6DC9DA4CF"
+    },
+    {
+      "path": "evidence/review/categories.tex.part02-excerpts.txt",
+      "bytes": 8051,
+      "sha256": "16106BC569DBDD85BC892EE5D1519730266943324D6F5A62A4B32DEBBA0FC308"
+    },
+    {
+      "path": "evidence/review/categories.tex.part03-excerpts.txt",
+      "bytes": 2222,
+      "sha256": "1EB51BF8EBBB855D52655E900C1A93C55D153407CCC000759EB2A30E93C939F7"
+    },
+    {
+      "path": "evidence/review/categories.tex.part09-excerpts.txt",
+      "bytes": 8668,
+      "sha256": "A6CC37E6A0771AD1204DC4B432CBF48E70865A9E69FF42045539799FAEEBCFBB"
+    },
+    {
+      "path": "evidence/review/chow.tex.part02-excerpts.txt",
+      "bytes": 6634,
+      "sha256": "DB243E9A4B91581069830D2E2E46FB6EA12C1A3605B40D6FF7E838279422909E"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART01.json",
+      "bytes": 4980,
+      "sha256": "B86613E564C61637766147B96BEEA6AEBB1EF0BE566329C4CEE01079E88AF02E"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART02.json",
+      "bytes": 4192,
+      "sha256": "59B8180B0CF6AA29473C3C1650881905B3E240AB761676D8F25D6FEB492C5503"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART03.json",
+      "bytes": 13517,
+      "sha256": "DAECAA08763F1BBCB7AD42685CD77645ACC3C9AD58F2C740A4477842EC2DE351"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART04.json",
+      "bytes": 2970,
+      "sha256": "7A4E664E0C2DCA0131A8E0C91552FE67846F67562923934AF518C689D0BA37A1"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART05.json",
+      "bytes": 6201,
+      "sha256": "BF2DB4534B9ECEB144419810E73C974DB413724A4CA3DCB2DCEDAD016A58CBD5"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART06.json",
+      "bytes": 4084,
+      "sha256": "26B7A325D55DB684C0F95BCA77AA4308F3803C5CCECCA5F4ED5FCF20B03904FF"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART07.json",
+      "bytes": 9242,
+      "sha256": "C9799D5623F9EE0CD6F4707BD8ABAD44349C57040B156F09707C5F115E7197D3"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART08.json",
+      "bytes": 5101,
+      "sha256": "5EACE72EB1B479383304A14A7107B5663A02C0906DC2607C2EF01325B1F3F0FD"
+    },
+    {
+      "path": "evidence/review/CLAIM_PROPAGATION_PART09.json",
+      "bytes": 8078,
+      "sha256": "A0CC974102E6AAE8B7731C7DE68141D8BD620A55770454B7FF58F1C085D904AF"
+    },
+    {
+      "path": "evidence/review/cohomology.tex.part03-excerpts.txt",
+      "bytes": 5199,
+      "sha256": "CC9AC5E3CB13AC6BFCF709A7008F02A4EB5501799BA7219709D8D783ADB23781"
+    },
+    {
+      "path": "evidence/review/cohomology.tex.part07-excerpts.txt",
+      "bytes": 3126,
+      "sha256": "03B035B6BD7DFE1030090B13898D231BEA85EA595B3A5CE414A3017165EC0B78"
+    },
+    {
+      "path": "evidence/review/cohomology.tex.part09-excerpts.txt",
+      "bytes": 1320,
+      "sha256": "B9CCE411E24F10C995D62B85C054B536D9E09DEAE9E4C1CF309052B454D8F371"
+    },
+    {
+      "path": "evidence/review/CROSS_CHAPTER_REPORT_ROUTING_PART03.json",
+      "bytes": 107742,
+      "sha256": "39D86F3A6787BD610D0A06FA74AF1B9ED92D3745EDA3A3F1FDA1EE2DA205EA36"
+    },
+    {
+      "path": "evidence/review/CROSS_CHAPTER_REPORT_ROUTING_PART07.json",
+      "bytes": 8333,
+      "sha256": "F83EA9AE13D2DAB4744B07644B83DD367A8CD7D88AEE9B3BDCBA9DFF88D905B5"
+    },
+    {
+      "path": "evidence/review/derived.tex.part03-excerpts.txt",
+      "bytes": 5262,
+      "sha256": "B411E09C4D305DE51C2DFDC8AFE6B7222B8E8A73984606E8099269EA91F84988"
+    },
+    {
+      "path": "evidence/review/derived.tex.part04-excerpts.txt",
+      "bytes": 3195,
+      "sha256": "D8836D3E37D62114CC42AA3A7C3497F56F3972D67B7F37487D0CD11187F358ED"
+    },
+    {
+      "path": "evidence/review/derived.tex.part05-excerpts.txt",
+      "bytes": 13293,
+      "sha256": "C709C236F27EE9FB0107BFA75F67FE7A90674B6C77B72DF9DA6F497A923B9E61"
+    },
+    {
+      "path": "evidence/review/derived.tex.part06-excerpts.txt",
+      "bytes": 4654,
+      "sha256": "2A579997DD9D35F733066ED9ED2261AFD326B0F6E264766F93F1F57AE1D2521D"
+    },
+    {
+      "path": "evidence/review/derived.tex.part09-excerpts.txt",
+      "bytes": 3423,
+      "sha256": "E63EFDFD76B45FBE52BAD96623CF121580C3BF1A4F51B2C102F623E0BDFF721B"
+    },
+    {
+      "path": "evidence/review/dga.tex.part03-excerpts.txt",
+      "bytes": 1344,
+      "sha256": "E37AB05C0AAF735A5A525BC1A543AE568CE66D4F1D296DD727E8B6B66D7A950E"
+    },
+    {
+      "path": "evidence/review/dga.tex.part08-excerpts.txt",
+      "bytes": 8108,
+      "sha256": "B09452FCDACD28B90594FE04CF8EA4F22837584AC36723735AF4522C3628905C"
+    },
+    {
+      "path": "evidence/review/exercises.tex.part05-excerpts.txt",
+      "bytes": 1244,
+      "sha256": "CBC92B5EBA14BCA12774726527486CAD9358CE6C8D76E1EB6DBBC504051307C2"
+    },
+    {
+      "path": "evidence/review/FINAL_CLAIM_PROPAGATION.json",
+      "bytes": 28665,
+      "sha256": "811C187CBD285413109C565A85068BE552FFCA7415B7AA3A631AD2B86FFE92A6"
+    },
+    {
+      "path": "evidence/review/FINAL_NEW_OPERATIONS.json",
+      "bytes": 62613,
+      "sha256": "A6FFE24CE4838C05582DEFF3DF4D65D31428834B083CF602A0BC2AC955164CA6"
+    },
+    {
+      "path": "evidence/review/FINAL_REPORT_DISPOSITIONS.json",
+      "bytes": 123389,
+      "sha256": "8830DC1727C7D1FE71782F6F67E16883D1E46E9380DDDAEB488BD1DA0166979D"
+    },
+    {
+      "path": "evidence/review/homology.tex.part03-excerpts.txt",
+      "bytes": 1228,
+      "sha256": "212CA72205CCCB190F898A1F47481F0479ED236DFAC29AB10CABFCE525A27C56"
+    },
+    {
+      "path": "evidence/review/homology.tex.part07-excerpts.txt",
+      "bytes": 11131,
+      "sha256": "534487144CAA42920585A5A71E4F7601362FDF79965892514476F6612C35F57C"
+    },
+    {
+      "path": "evidence/review/injectives.tex.part07-excerpts.txt",
+      "bytes": 6690,
+      "sha256": "B6AA2D6FDE20FB2245FFBF4D9E3623D9967541FDD11DC04C0D911FEE991EC31B"
+    },
+    {
+      "path": "evidence/review/injectives.tex.part09-excerpts.txt",
+      "bytes": 3271,
+      "sha256": "56A8337BB6D62F8F324B6A0CC26D18E00C064FD9F3B87CC322651633687CC08E"
+    },
+    {
+      "path": "evidence/review/KUNNETH_FINITE_REPRESENTATIVE_PROOF_ADDITION.tex",
+      "bytes": 2720,
+      "sha256": "14102530D11659D9B98E3EDB35A416727FA79A9E294CF6E3C2237B0916715BF4"
+    },
+    {
+      "path": "evidence/review/more-algebra.tex.part03-excerpts.txt",
+      "bytes": 3462,
+      "sha256": "F3AC56F8C0CC8F2CE0207061BCC550077CD66A687C5F2792E108A4C37A4DF576"
+    },
+    {
+      "path": "evidence/review/more-algebra.tex.part06-excerpts.txt",
+      "bytes": 3722,
+      "sha256": "23076C8DF1A26F5588383F19DF71C2D7D2ED1DAD70ED33F7135FBD3EBA56F8D8"
+    },
+    {
+      "path": "evidence/review/more-algebra.tex.part07-excerpts.txt",
+      "bytes": 9651,
+      "sha256": "1EE08C4BC0059583A8787B1367F02BB2DA19323C76A0CF6F1E65EB5A22FA494B"
+    },
+    {
+      "path": "evidence/review/more-algebra.tex.part09-excerpts.txt",
+      "bytes": 4737,
+      "sha256": "74B6A0F68C5F8DC5372395557528471518A65144E8536472B5087BBEF926E916"
+    },
+    {
+      "path": "evidence/review/original-reports.jsonl",
+      "bytes": 165530,
+      "sha256": "98A74C1B57CDEAC5AB0F2B231409DF5B134CFDE6E56CE727B11587C829DD4A9E"
+    },
+    {
+      "path": "evidence/review/prior-canonical-units.json",
+      "bytes": 122774,
+      "sha256": "4B0324DCAF4613A56227858154B810FE970CF6EBE367309A337D5B996E2B0BE7"
+    },
+    {
+      "path": "evidence/review/PROOFS_0001_1900.md",
+      "bytes": 19416,
+      "sha256": "DEBEE35E32355E0EE4353FB11669E648BBC4ADD23C37B5D793A8E31CA6946347"
+    },
+    {
+      "path": "evidence/review/PROOFS_1901_2765.md",
+      "bytes": 18219,
+      "sha256": "4B3508F52A078125345331DBE4B3563D0CC8F333B52941C5CF04A4F3E49EB787"
+    },
+    {
+      "path": "evidence/review/PROOFS_2799_4336.md",
+      "bytes": 22048,
+      "sha256": "5C2DF238C2920D93FF7B76E81ACF3058A6923E4C4F408AF49F5A7F4C67C03DCE"
+    },
+    {
+      "path": "evidence/review/PROOFS_4337_4651.md",
+      "bytes": 8753,
+      "sha256": "2773CA5ABAC8882179D63061ECF9222977C00511AA911594CB69C6CBDE7B6CE5"
+    },
+    {
+      "path": "evidence/review/PROOFS_4681_5648.md",
+      "bytes": 23361,
+      "sha256": "C7CBDCA99ACB227E0D2E6F7EB5A5F8224612D3477086860AB75675DD0FBAFFEA"
+    },
+    {
+      "path": "evidence/review/PROOFS_5671_6359.md",
+      "bytes": 18811,
+      "sha256": "353D246B20E752CD0F8886E81CE6983A77CA0E1733131BD2BA3F361C838EC4DA"
+    },
+    {
+      "path": "evidence/review/PROOFS_6360_6814.md",
+      "bytes": 27740,
+      "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03"
+    },
+    {
+      "path": "evidence/review/PROOFS_6815_7064.md",
+      "bytes": 20901,
+      "sha256": "CDD5300A3111B55C4F2C34BA5F9C8F2CFA0641C23FAFDB456B2E49CFEB8A31C5"
+    },
+    {
+      "path": "evidence/review/PROOFS_7065_7945.md",
+      "bytes": 24992,
+      "sha256": "6514F1253243050BBCAFE48DAD07EDE4CBF8D307A823BBFD268936A09AA18DDE"
+    },
+    {
+      "path": "evidence/review/PROOFS_7065_7945_ADDENDUM_01.md",
+      "bytes": 1543,
+      "sha256": "A850DB198BA41ABDE66175135B7C3F6033779414A03F8904FC6FFDA69C3A4509"
+    },
+    {
+      "path": "evidence/review/RECEIVING_ROUTE_PART09.json",
+      "bytes": 5782,
+      "sha256": "7C43C94A4ADA88D5B24B853B598D3B448B19F15BD73A2ED005A47668D0EE237D"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART01.json",
+      "bytes": 12858,
+      "sha256": "E80AEFD1EF569AB6A1B52C9D33C46E472348CFB651168D328206EB8246732695"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART02.json",
+      "bytes": 6162,
+      "sha256": "249598A42B8CA857DB9F223667B538B18C505A79A3F67FDC9574A31C7397933C"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART03.json",
+      "bytes": 11196,
+      "sha256": "8B1A5ADED72845E59CAC9DB541A16DA09130EE33FF1E049D3B678E8502B80FF4"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART04.json",
+      "bytes": 11535,
+      "sha256": "AF0EE830D541F4667A95BE92FE7D673387C666AAF9D774EE0FE5E4611DED2182"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART05.json",
+      "bytes": 15294,
+      "sha256": "9EC7138115615292F7B61210ED514BB5C4B871758DA974FFD589443816A3D529"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART06.json",
+      "bytes": 14293,
+      "sha256": "35CF033ABE2F75F68956C6E1F4BE32EBFB127ABD602C722867E42C1AE1565928"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART07.json",
+      "bytes": 14864,
+      "sha256": "328780A7905C816DB2FC6E74EB559C68D4EB59E618256D3C288A457E61B29D78"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART08.json",
+      "bytes": 14817,
+      "sha256": "BBA9874F1F7BB62F5F9A08EFC80FA13DEEEA595642F8ED2E7463D6E8ABD41427"
+    },
+    {
+      "path": "evidence/review/REPORT_DISPOSITIONS_PART09.json",
+      "bytes": 22394,
+      "sha256": "1F15C6A4F4032335C4DB6B8733AD06B139EE37BCC8A1286C4764A1EEE8EAA5F7"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART01.json",
+      "bytes": 16359,
+      "sha256": "D7D40969A33CB72A7A278EC97CC4D58A195C8923B32278CE7E150D1F147F0336"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART02.json",
+      "bytes": 9148,
+      "sha256": "86A6A28F8F5B54DB04E79D42E36E2F55092BC8F843C2568EBB5D7143BC69035C"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART03.json",
+      "bytes": 13702,
+      "sha256": "BFF22E4D77207D26E6A9BC967ED9B05CD970CA49482AE7CDF82DC3F73D6E0A37"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART04.json",
+      "bytes": 7295,
+      "sha256": "3507F88E01A1854190D8EA2849FFBB11B5245642F1FFBCC0D9381CFC00F43384"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART05.json",
+      "bytes": 19293,
+      "sha256": "9F81A7FF6C7C2AA8B0F7A6A0D4E06917575B451979C130288B09EFEEEBE990A0"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART06.json",
+      "bytes": 16675,
+      "sha256": "3A40351C6CC4CA6905039FB536643975F63A6E063C14B43B2380ADBD3EDFFDD9"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART07.json",
+      "bytes": 16081,
+      "sha256": "A582DFD943DEDC3EC9DA0FA3D76AA1FFA28EE5C36161FAF24066BEBC5806E894"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART08.json",
+      "bytes": 12713,
+      "sha256": "2EA2A3B4BD42AED4711458E84F7D753E510E87D032048D8AD99A71F82AC24D68"
+    },
+    {
+      "path": "evidence/review/REVIEW_PART09.json",
+      "bytes": 23745,
+      "sha256": "C2F161A42FBFE3F078F0C4F28101E7AE73B2BAA96CCC2760D7064444BC417722"
+    },
+    {
+      "path": "evidence/review/sdga.tex.part03-excerpts.txt",
+      "bytes": 1433,
+      "sha256": "DAF88F002A2CABCB5FBB675DDCE741269712E728B83E740B6FC0EE6A89CD0029"
+    },
+    {
+      "path": "evidence/review/sdga.tex.part08-excerpts.txt",
+      "bytes": 7121,
+      "sha256": "617D8FD96CEEEBA630E99702375E0E7AB6DEB23D7328117572B72A93AEC72B78"
+    },
+    {
+      "path": "evidence/review/sdga.tex.part09-excerpts.txt",
+      "bytes": 2415,
+      "sha256": "3FA66463B4D5C3BA42DEFCD20D5F9ED5119B780FF9D95BB7617E7E32DFDEC10D"
+    },
+    {
+      "path": "evidence/review/sites-cohomology.tex.part03-excerpts.txt",
+      "bytes": 11667,
+      "sha256": "3D91A37341B3A4050F17EFF57DAC82FB587C9522DCC23C647C514A02BD82228A"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART01.json",
+      "bytes": 4098,
+      "sha256": "D66F7FE70A21EEDDBF97A4BB33D3B58F6F7078DEA2B5B0E743178B22FC513F8E"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART02.json",
+      "bytes": 2541,
+      "sha256": "0BD608EBEFF200595E9FF2E49EFFFBCA44829B8D9A36F6386C5B3CBAB948B4E1"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART03.json",
+      "bytes": 7956,
+      "sha256": "1A59767B67AA9D7734ED96B917B76BD1484AE6E3268FCF5F0C2A6A69C14639FD"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART04.json",
+      "bytes": 1959,
+      "sha256": "8B7F7A9F76E21AFEF0621915213D597D2A6DAF5ED9568B022918AEFA0E0AA91B"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART05.json",
+      "bytes": 3127,
+      "sha256": "0EB756BED39CCE0E5D398A7E39D83AE2FF18D3D1632BFA93101613E7DFAB94A8"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART06.json",
+      "bytes": 2760,
+      "sha256": "72B9A69CFA5540AF1B0F6F1880E510E9C5F86646ED7629503C3D788ABD4BAEA5"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART07.json",
+      "bytes": 4685,
+      "sha256": "E729BA4A1E8EAC56F596D2980F2FA7184D7FB97F619D5958870BBAB1DBFA6457"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART08.json",
+      "bytes": 3088,
+      "sha256": "968746E91EFF80557E6D102232A0E1A48B06619031ADE74D3581FBEF8F9CFFEB"
+    },
+    {
+      "path": "evidence/review/SOURCE_READING_PART09.json",
+      "bytes": 6424,
+      "sha256": "64A3D36408436CBB73F10D48D447E87B8AC3BA78B02527242CA7083334D744C4"
+    },
+    {
+      "path": "evidence/review/weil.tex.part03-excerpts.txt",
+      "bytes": 13419,
+      "sha256": "27DF3498EA8FAD878594CEDB1C11F099F5CDE54AB04714523E4BC1FA85F707F5"
+    },
+    {
+      "path": "evidence-export.json",
+      "bytes": 36621,
+      "sha256": "8B82DE258A825F2A4327A7A6C2A54C3669A1FE44DC5A35C02E91B18A230BB1DE"
+    },
+    {
+      "path": "LEASE.json",
+      "bytes": 520,
+      "sha256": "BF183144A955178BE8E11690F9F63D14A967B03E99251A955CBC18B067F6ED7D"
+    },
+    {
+      "path": "materialization.json",
+      "bytes": 3500,
+      "sha256": "613F739A0CC6492065B0421222BD1D74BD7AADC2C5090040A4E48A18C2CDA53A"
+    },
+    {
+      "path": "mathematical-proof-dependencies.json",
+      "bytes": 27235,
+      "sha256": "80D33F1E7C48F7FB1CB10E659ACC1227AA9043F5274B63A3AB8F46D15B5E866D"
+    },
+    {
+      "path": "operation-spec.json",
+      "bytes": 44390,
+      "sha256": "2ABDBD08D55247EDC2CFE1FE4359C31FFA21179E7608938C7ED07C995B46B7F9"
+    },
+    {
+      "path": "payload/homology.tex",
+      "bytes": 267834,
+      "sha256": "6F33092B728D5C7BAE1FC3A5B462E97460E6BBB0747BA6FA1F991E3006EEAA5F"
+    },
+    {
+      "path": "payload/more-algebra.tex",
+      "bytes": 1494826,
+      "sha256": "AB46E9A70C424469A5B86C93DAC6DF9AA9EE62D247569CBC8EF9412D45ACDE73"
+    },
+    {
+      "path": "payload/sites-cohomology.tex",
+      "bytes": 534432,
+      "sha256": "E360E9CEE94D809FBE53EAA6ADB8BE2ADC91F7882EF431AB4F36532DF8F84D98"
+    },
+    {
+      "path": "payload/weil.tex",
+      "bytes": 205136,
+      "sha256": "D2E0989DD630D11745C346A34F2945A21BA9B9CACC283DCA45D5FFA6DC9DA4CF"
+    },
+    {
+      "path": "presentation-amendment.json",
+      "bytes": 6353,
+      "sha256": "FB4A8E53F09A46B290A295CF2D499592E3D91244F781F6581D9D782768408D03"
+    },
+    {
+      "path": "proof-source/build.py",
+      "bytes": 8764,
+      "sha256": "03885BC0D21EA8124DE6E102E8E549535FD368CD4903BD8668F103FBFCBEFB55"
+    },
+    {
+      "path": "proof-source/chapters.tex",
+      "bytes": 16915,
+      "sha256": "69B26A6D6CC96862A9186431A204FF05FD020AA4A1C98C797B6BBF5CF9EB1ADF"
+    },
+    {
+      "path": "proof-source/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "proof-source/correction-proofs-assembled.tex",
+      "bytes": 197907,
+      "sha256": "303B26C8D0F0300A6C1FE04C1956D6E1FFAC6C6B43C6DA9CD7500660450A5821"
+    },
+    {
+      "path": "proof-source/correction-proofs.tex",
+      "bytes": 2036,
+      "sha256": "4F51B0B45AD9A2CFE892B8996751B37019F4B90C048944019FAD408A94A1AC20"
+    },
+    {
+      "path": "proof-source/external-reference-locators.tex",
+      "bytes": 236259,
+      "sha256": "960507A809C53C4EF766C65D432D42D622506EA28CEF1A3DEAADF7C62DE91278"
+    },
+    {
+      "path": "proof-source/EXTERNAL_REFERENCE_CLOSURE.json",
+      "bytes": 630947,
+      "sha256": "A41B42E1E6F8D98733CF1CCB0E91B508641064FE092989816AC77A869E1D5DE1"
+    },
+    {
+      "path": "proof-source/homology.tex",
+      "bytes": 272052,
+      "sha256": "AC1CFAE066AEBFC4174B476BF222EAA2BDC7B721C017A57BC49B1E9A152B06CE"
+    },
+    {
+      "path": "proof-source/more-algebra.tex",
+      "bytes": 1520872,
+      "sha256": "5418CDC6A440B6ABA391F34341B32E205DC84FAB3013308F7EE5E1684EA22372"
+    },
+    {
+      "path": "proof-source/my.bib",
+      "bytes": 213719,
+      "sha256": "60E8F8B420439626D32B56CB1901E7CA01DDA461058FAF2DE7FACF82EDC27885"
+    },
+    {
+      "path": "proof-source/NAVIGATION_DERIVATION.json",
+      "bytes": 54502,
+      "sha256": "E973380F58F09AD2E3AF6229B12F4128A388367A7C8F43484E9B6590B5FD0931"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_0001_1900.tex",
+      "bytes": 20162,
+      "sha256": "B1E03BEEFD5BB1CF98C3A8F93061018E22F266153774B5501F47E9425A2E90FC"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_1901_2765.tex",
+      "bytes": 18828,
+      "sha256": "4698DFD41B1A4E8BC0B2607D1F6450EFB331FB8FDCE6E0929E3225ADE8BCF682"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_2799_4336.tex",
+      "bytes": 24129,
+      "sha256": "2468A76CD340550AAE33B20DD4E11B0FC34D1A6B21766E8B34E173103D171402"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_4337_4651.tex",
+      "bytes": 10112,
+      "sha256": "BCF6B98AE9F7615589100E64BF7A1E3B77021F15473A9F70677E8EB01ED07A55"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_4681_5648.tex",
+      "bytes": 25552,
+      "sha256": "C8F28AD01033460A3B750F3459E2DBE5750ADCB62AAE443EAA227F8112ACC49F"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_5671_6359.tex",
+      "bytes": 19555,
+      "sha256": "FE09106772F9759C2D3B87F1EC2A4B9B0D77351FD0EBEAB496CBC137EDD3D7E7"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_6360_6814.tex",
+      "bytes": 28642,
+      "sha256": "E00DB7C9382A5DD39E17461DC372AF98AAEB6F69FAE6D3E153DF55C70397A800"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_6815_7064.tex",
+      "bytes": 21724,
+      "sha256": "D9A8E6CF4D2FA2DF41FD55F04FD9B5A541B2734F46C869534D467D3DF3635018"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_7065_7945.tex",
+      "bytes": 25882,
+      "sha256": "0CB001D320EFAF8967D764FC86F4FDB704ADC7B6C18F40CF18815B1BA635A0B7"
+    },
+    {
+      "path": "proof-source/notes/PROOFS_7065_7945_ADDENDUM_01.tex",
+      "bytes": 1637,
+      "sha256": "8F704F1AED6EFCE7ECDDC0AE62EF090771CF025EDB6016921105C4195E4E3BC4"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_0001_1900.md",
+      "bytes": 19416,
+      "sha256": "DEBEE35E32355E0EE4353FB11669E648BBC4ADD23C37B5D793A8E31CA6946347"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_0001_1900.pandoc.json",
+      "bytes": 287820,
+      "sha256": "1B7B21D3DAB5660A818284A8BDE365A88723BAF8DA2C8BE66A8640A0FF9AA148"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_0001_1900.typeset.pandoc.json",
+      "bytes": 287820,
+      "sha256": "1B7B21D3DAB5660A818284A8BDE365A88723BAF8DA2C8BE66A8640A0FF9AA148"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_1901_2765.md",
+      "bytes": 18219,
+      "sha256": "4B3508F52A078125345331DBE4B3563D0CC8F333B52941C5CF04A4F3E49EB787"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_1901_2765.pandoc.json",
+      "bytes": 272936,
+      "sha256": "1D60DAA99A13563962E210E0451580A424036B08799B134DB4EB1EB0661BBB7F"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_1901_2765.typeset.pandoc.json",
+      "bytes": 272936,
+      "sha256": "1D60DAA99A13563962E210E0451580A424036B08799B134DB4EB1EB0661BBB7F"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_2799_4336.md",
+      "bytes": 22048,
+      "sha256": "5C2DF238C2920D93FF7B76E81ACF3058A6923E4C4F408AF49F5A7F4C67C03DCE"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_2799_4336.pandoc.json",
+      "bytes": 361450,
+      "sha256": "DA36261C2204FBE9FBBDC29542353B70A4330AA5BC16FAF4D992742BCF5368D8"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_2799_4336.typeset.md",
+      "bytes": 22070,
+      "sha256": "D9E3CAF06D0A51A7B6D8A47820B72DFEEC3F348A6B20A8F9231E8CA6AB9B9220"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_2799_4336.typeset.pandoc.json",
+      "bytes": 356218,
+      "sha256": "11944C0175870916E9841E77432FF6B98B5C05EB6BD6796F799D12DD9B27A8E5"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4337_4651.md",
+      "bytes": 8753,
+      "sha256": "2773CA5ABAC8882179D63061ECF9222977C00511AA911594CB69C6CBDE7B6CE5"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4337_4651.pandoc.json",
+      "bytes": 131981,
+      "sha256": "F7094D3DF28AF7DA4E87A93BB5DD0F87A73113DE955F7DF6E29193C2AF040533"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4337_4651.typeset.md",
+      "bytes": 8757,
+      "sha256": "A0B6B2946E1CEE99414E349C93B8C61064865F615E3BEE7C9C0691583ABC7C61"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4337_4651.typeset.pandoc.json",
+      "bytes": 129243,
+      "sha256": "24740121622F9463DCA979ED08638B81C3E1284194D6C3CA8C1CE55F68DC370C"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4681_5648.md",
+      "bytes": 23361,
+      "sha256": "C7CBDCA99ACB227E0D2E6F7EB5A5F8224612D3477086860AB75675DD0FBAFFEA"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4681_5648.pandoc.json",
+      "bytes": 407831,
+      "sha256": "F821E49275FE117A51F8C8187127B04FD1988EE10C5873AF0402D4F10CAB5D4A"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_4681_5648.typeset.pandoc.json",
+      "bytes": 406326,
+      "sha256": "50C088CFECE8F1FA38E489AF2B7C31A1550081B2BF02C261AE22327C6D2A0F75"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_5671_6359.md",
+      "bytes": 18811,
+      "sha256": "353D246B20E752CD0F8886E81CE6983A77CA0E1733131BD2BA3F361C838EC4DA"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_5671_6359.pandoc.json",
+      "bytes": 278145,
+      "sha256": "3C848DA4D08353D677D5971EF026AEF5D7DB2911A88E861553CDED73932278A6"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_5671_6359.typeset.pandoc.json",
+      "bytes": 278145,
+      "sha256": "3C848DA4D08353D677D5971EF026AEF5D7DB2911A88E861553CDED73932278A6"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_6360_6814.md",
+      "bytes": 27740,
+      "sha256": "50CED8FF503BD8FDC11A3A170219868FA6A1CF8E4FE111DF18C4835129404C03"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_6360_6814.pandoc.json",
+      "bytes": 430674,
+      "sha256": "0F6426F0D54B5D4BA76ED793C1013B32AA36E701B8619CF4CA764B54402CB591"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_6360_6814.typeset.pandoc.json",
+      "bytes": 430674,
+      "sha256": "0F6426F0D54B5D4BA76ED793C1013B32AA36E701B8619CF4CA764B54402CB591"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_6815_7064.md",
+      "bytes": 20901,
+      "sha256": "CDD5300A3111B55C4F2C34BA5F9C8F2CFA0641C23FAFDB456B2E49CFEB8A31C5"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_6815_7064.pandoc.json",
+      "bytes": 329769,
+      "sha256": "4AB0211EBEA5166EF40D759330A40F50D4E95417C7EDFDD235B54CE7AF535ECF"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_6815_7064.typeset.pandoc.json",
+      "bytes": 329769,
+      "sha256": "4AB0211EBEA5166EF40D759330A40F50D4E95417C7EDFDD235B54CE7AF535ECF"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_7065_7945.md",
+      "bytes": 24992,
+      "sha256": "6514F1253243050BBCAFE48DAD07EDE4CBF8D307A823BBFD268936A09AA18DDE"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_7065_7945.pandoc.json",
+      "bytes": 404776,
+      "sha256": "9F95FB708755D97F2F2FBF1B8058697A14BF451DC85C1A45D0FA9FA770AB75C4"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_7065_7945.typeset.pandoc.json",
+      "bytes": 404776,
+      "sha256": "9F95FB708755D97F2F2FBF1B8058697A14BF451DC85C1A45D0FA9FA770AB75C4"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_7065_7945_ADDENDUM_01.md",
+      "bytes": 1543,
+      "sha256": "A850DB198BA41ABDE66175135B7C3F6033779414A03F8904FC6FFDA69C3A4509"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_7065_7945_ADDENDUM_01.pandoc.json",
+      "bytes": 24473,
+      "sha256": "44C75AFD6DCFB3E1E300FAB69D0A78BAE850A1941ED180924D5E5157C924399E"
+    },
+    {
+      "path": "proof-source/notes-source/PROOFS_7065_7945_ADDENDUM_01.typeset.pandoc.json",
+      "bytes": 24473,
+      "sha256": "44C75AFD6DCFB3E1E300FAB69D0A78BAE850A1941ED180924D5E5157C924399E"
+    },
+    {
+      "path": "proof-source/PACKAGE_MANIFEST.json",
+      "bytes": 21913,
+      "sha256": "CFB5C0C1133EBE3F20B76D7AC98AB8FF2BE2C90774B774643CBD3A90B8187688"
+    },
+    {
+      "path": "proof-source/preamble.tex",
+      "bytes": 8698,
+      "sha256": "E653BEC940234159E56E56046C3F57B2AC22850BDA333556587AB9CB05A45A43"
+    },
+    {
+      "path": "proof-source/prior/chapters.tex",
+      "bytes": 8589,
+      "sha256": "8C40B11962DD6F7693AEDC158839D78DDD7E82EDF0D6345533F5D79EF3D2BCC8"
+    },
+    {
+      "path": "proof-source/prior/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "proof-source/prior/homology.tex",
+      "bytes": 271572,
+      "sha256": "9CEEA86F962C06EBA69FEEC00BC91D4FA5BAA5187094C39549B62EBEA205FDAD"
+    },
+    {
+      "path": "proof-source/prior/more-algebra.tex",
+      "bytes": 1518085,
+      "sha256": "3785C52A72AA218E39E338910940C7C4AF374F557550825BAC2594678F9216BB"
+    },
+    {
+      "path": "proof-source/prior/my.bib",
+      "bytes": 213719,
+      "sha256": "60E8F8B420439626D32B56CB1901E7CA01DDA461058FAF2DE7FACF82EDC27885"
+    },
+    {
+      "path": "proof-source/prior/preamble.tex",
+      "bytes": 8596,
+      "sha256": "4AF3F52ED0F1E932DEF5C8725068968407CE9E4B0CD4F4C4B803607B5BCBBE0D"
+    },
+    {
+      "path": "proof-source/prior/sites-cohomology.tex",
+      "bytes": 534532,
+      "sha256": "0D9E067D20F6A708BB228EC7B0F6DA7881901C6C49CB38887553C17CD3A7B023"
+    },
+    {
+      "path": "proof-source/prior/stacks-project.cls",
+      "bytes": 60186,
+      "sha256": "DBACE0CB163B1B24F2816D89C547A3D487D51D59EDE0303FAD079E8AE3F93254"
+    },
+    {
+      "path": "proof-source/prior/weil.tex",
+      "bytes": 205138,
+      "sha256": "3861F2D85EB151058B6A0248E7F1B06910ADF8C4F4F017E856CC76F7A439AD3B"
+    },
+    {
+      "path": "proof-source/PROOF_CONVERSION.json",
+      "bytes": 168545,
+      "sha256": "AC21561CE72C8CE764D4E7CE37B194975E185B3D6602E35295C0AE9FB390F0E6"
+    },
+    {
+      "path": "proof-source/PROOF_PRESENTATION_01.json",
+      "bytes": 26571,
+      "sha256": "78D9314D9126691E8BAD31633ADD44E9486E72A44B43BC5B79CD9CEB08202BF8"
+    },
+    {
+      "path": "proof-source/PROOF_PRESENTATION_02.json",
+      "bytes": 1111,
+      "sha256": "FDA88FF8819B16CEADA72F9013256851D37B32D161767CDDEE14B7A84D0AD5B8"
+    },
+    {
+      "path": "proof-source/PROOF_PRESENTATION_03.json",
+      "bytes": 2367,
+      "sha256": "9BC072C4117B1732C78040CA3A3469B8E3BB6A63CE5C0A837590BA08BD2D65A5"
+    },
+    {
+      "path": "proof-source/README.md",
+      "bytes": 817,
+      "sha256": "37E0A07802E118644007A682BC5A5402DFCB6F00799FDCA60FFE8050128F847C"
+    },
+    {
+      "path": "proof-source/reference-authority/retained-fork/algebra.tex",
+      "bytes": 1864221,
+      "sha256": "EB0DB6EE32DEAB7B24E055A73CF2CC19904394E516A5B22567E7EF895A7B9CEC"
+    },
+    {
+      "path": "proof-source/reference-authority/retained-fork/more-algebra.tex",
+      "bytes": 1518085,
+      "sha256": "3785C52A72AA218E39E338910940C7C4AF374F557550825BAC2594678F9216BB"
+    },
+    {
+      "path": "proof-source/reference-authority/retained-fork/tags",
+      "bytes": 989923,
+      "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/algebra.tex",
+      "bytes": 1771230,
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/categories.tex",
+      "bytes": 350957,
+      "sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/chow.tex",
+      "bytes": 688563,
+      "sha256": "0522BD9A5934C5A65D9FCCD651C77C1E012D9937AEC49737D0B7FEA6190DC001"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/coherent.tex",
+      "bytes": 313162,
+      "sha256": "702CA51850D0F9A615888DC0CED8100E104C98961E05A48B32C3DDF6EDA61604"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/cohomology.tex",
+      "bytes": 519286,
+      "sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/constructions.tex",
+      "bytes": 186080,
+      "sha256": "A642498DBEBE4B72547D8E3AC03D8C8A7C3A3C9B1E604439C2899F18BEB4CDDB"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/derham.tex",
+      "bytes": 230539,
+      "sha256": "2DC4E936FCE0E3B2729F9D9B68D4FF5E6F188F1C25F6723D61B92FA682E90FC8"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/derived.tex",
+      "bytes": 449677,
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/descent.tex",
+      "bytes": 353760,
+      "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/dga.tex",
+      "bytes": 252179,
+      "sha256": "74D8EFFC5693C38A1E408591FCAF5F62017C125AD636768D943DC22C55403409"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/divisors.tex",
+      "bytes": 374145,
+      "sha256": "DCD32B7F25D55AFD13B2E44FBAA6324F7263C53DFBF445354CEC1F685FBBA675"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/dualizing.tex",
+      "bytes": 209978,
+      "sha256": "02CF32DA2341150FACAE8B9961981F76BCB48C800D8D40F0B445B44A5A99915C"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/examples.tex",
+      "bytes": 268601,
+      "sha256": "30EAF58E0953F17E3A659E73AA37AC8C146BC4136FC68850CB0341E23EF398B4"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/fields.tex",
+      "bytes": 144442,
+      "sha256": "87E07F0373DC60CFC284E2F19078BC9BC7AB0B89C40EEF83941F6C38C765C549"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/flat.tex",
+      "bytes": 563759,
+      "sha256": "B4D84512290A62109009ED1A6E9CE4B58D09A566589CAE90FECF88EFB630A804"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/groupoids.tex",
+      "bytes": 189166,
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/homology.tex",
+      "bytes": 267354,
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/injectives.tex",
+      "bytes": 105120,
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/modules.tex",
+      "bytes": 204133,
+      "sha256": "7BD3E9E096717EF6FD458492D8AD91FC9FFE428CFD7DD80E386FAE377BB7CB0D"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/more-algebra.tex",
+      "bytes": 1492039,
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/more-morphisms.tex",
+      "bytes": 920705,
+      "sha256": "30F7B685A426BD02518CD30BE6F3D8E03646C3D9C1BB7B247B983C739ECB278F"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/morphisms.tex",
+      "bytes": 587157,
+      "sha256": "3350FD2C4E3ABC78A4AE3BCDB32694C70A5765E500C308C7EA7D239F5A3E3B69"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/perfect.tex",
+      "bytes": 417503,
+      "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/pic.tex",
+      "bytes": 62647,
+      "sha256": "EB99495B46D3A83628C599F0D195FA90640FBFC7518727C8A427BB058F2DBFF4"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/pione.tex",
+      "bytes": 305984,
+      "sha256": "947055995CD971D8C9886CBEC72E90D6EC352B693EAE35588E9522B74F80CDBC"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/properties.tex",
+      "bytes": 206060,
+      "sha256": "52F3785B3EF80828FE135A8CE92ADE6F68EBFF0E13310ED91C88F95C03FDC2F0"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/restricted.tex",
+      "bytes": 282508,
+      "sha256": "22B0E13CC9846725C165CECCCDD371259E920A7BEFBFABAD26EB674DC11DB53E"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/sets.tex",
+      "bytes": 46628,
+      "sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/sheaves.tex",
+      "bytes": 184841,
+      "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/simplicial.tex",
+      "bytes": 234898,
+      "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/sites-cohomology.tex",
+      "bytes": 534394,
+      "sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/sites-modules.tex",
+      "bytes": 312143,
+      "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/sites.tex",
+      "bytes": 424197,
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/smoothing.tex",
+      "bytes": 134660,
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/spaces-pushouts.tex",
+      "bytes": 147916,
+      "sha256": "B99EB8C15A534AF251C0AE4DFD179C3F551E75BA367B099D196CD172D60F8ED9"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/stacks-sheaves.tex",
+      "bytes": 192171,
+      "sha256": "7E28B1ED25663BF5868C34B99F567E1CE49B0EEBC238D39E4117BA9D5E4C2E36"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/stacks.tex",
+      "bytes": 137049,
+      "sha256": "CA374CB00B1C71ACF10E30FAEF293108D079258211D935FE0D4ADD1477634BA9"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/tags",
+      "bytes": 969923,
+      "sha256": "098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/topology.tex",
+      "bytes": 237731,
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    },
+    {
+      "path": "proof-source/reference-authority/upstream/varieties.tex",
+      "bytes": 447377,
+      "sha256": "53D0AF48818D22AE85675EFF76B79FCAD4335FDA0B4574EC09F5C9E73CC93995"
+    },
+    {
+      "path": "proof-source/REFERENCE_README.md",
+      "bytes": 527,
+      "sha256": "453428967AF39C811524FD5F67465AFE0730F5A8826A1B9160F30A159654DDF7"
+    },
+    {
+      "path": "proof-source/sites-cohomology.tex",
+      "bytes": 534570,
+      "sha256": "622D623F9FEEF8C178AC3239216F8EB67DA2E21C935E232BDFAFF23E7F2365A3"
+    },
+    {
+      "path": "proof-source/stacks-project.cls",
+      "bytes": 60186,
+      "sha256": "DBACE0CB163B1B24F2816D89C547A3D487D51D59EDE0303FAD079E8AE3F93254"
+    },
+    {
+      "path": "proof-source/successor/chapters.tex",
+      "bytes": 8589,
+      "sha256": "8C40B11962DD6F7693AEDC158839D78DDD7E82EDF0D6345533F5D79EF3D2BCC8"
+    },
+    {
+      "path": "proof-source/successor/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "proof-source/successor/homology.tex",
+      "bytes": 272052,
+      "sha256": "AC1CFAE066AEBFC4174B476BF222EAA2BDC7B721C017A57BC49B1E9A152B06CE"
+    },
+    {
+      "path": "proof-source/successor/more-algebra.tex",
+      "bytes": 1520872,
+      "sha256": "5418CDC6A440B6ABA391F34341B32E205DC84FAB3013308F7EE5E1684EA22372"
+    },
+    {
+      "path": "proof-source/successor/my.bib",
+      "bytes": 213719,
+      "sha256": "60E8F8B420439626D32B56CB1901E7CA01DDA461058FAF2DE7FACF82EDC27885"
+    },
+    {
+      "path": "proof-source/successor/preamble.tex",
+      "bytes": 8596,
+      "sha256": "4AF3F52ED0F1E932DEF5C8725068968407CE9E4B0CD4F4C4B803607B5BCBBE0D"
+    },
+    {
+      "path": "proof-source/successor/sites-cohomology.tex",
+      "bytes": 534570,
+      "sha256": "622D623F9FEEF8C178AC3239216F8EB67DA2E21C935E232BDFAFF23E7F2365A3"
+    },
+    {
+      "path": "proof-source/successor/stacks-project.cls",
+      "bytes": 60186,
+      "sha256": "DBACE0CB163B1B24F2816D89C547A3D487D51D59EDE0303FAD079E8AE3F93254"
+    },
+    {
+      "path": "proof-source/successor/weil.tex",
+      "bytes": 205136,
+      "sha256": "D2E0989DD630D11745C346A34F2945A21BA9B9CACC283DCA45D5FFA6DC9DA4CF"
+    },
+    {
+      "path": "proof-source/tex_mutex.py",
+      "bytes": 2313,
+      "sha256": "B001045FC54C68DC2837AEEB1A9B625231B31B58CF3291963F4452552C37A046"
+    },
+    {
+      "path": "proof-source/tex_process_guard.py",
+      "bytes": 26393,
+      "sha256": "254073A3099DC88637F8ECA6A7292F7C2CDCC5ADA11CE1E48BEA0DD55471F3AA"
+    },
+    {
+      "path": "proof-source/weil.tex",
+      "bytes": 205136,
+      "sha256": "D2E0989DD630D11745C346A34F2945A21BA9B9CACC283DCA45D5FFA6DC9DA4CF"
+    },
+    {
+      "path": "proofs/complete-proof-source.zip",
+      "bytes": 7012742,
+      "sha256": "673686A0E7A99F4CE6BD0AD1D5AA193E2EE3DF74B45DA502AA0D1131E95F9A80"
+    },
+    {
+      "path": "proofs/correction-proofs.pdf",
+      "bytes": 353393,
+      "sha256": "E2098A02696B3111437A572C0789610B06939DC7B6729F9292F19579BB15AF4D"
+    },
+    {
+      "path": "proofs/homology-prior.pdf",
+      "bytes": 921391,
+      "sha256": "AA7E0DF7F976FA9B8C35D0E5CA8C482B98429F35A56522FA686181F1BF8E31B6"
+    },
+    {
+      "path": "proofs/homology-successor.pdf",
+      "bytes": 922583,
+      "sha256": "64EE285D32367E0D0E82051EC0922AD7593F004C00C18E6DF4B1D42CB47FF615"
+    },
+    {
+      "path": "proofs/more-algebra-prior.pdf",
+      "bytes": 3569860,
+      "sha256": "F39E81A3044847DA26989E9AC52F756F029B955E39ADC60FE65A0D33A5316BD7"
+    },
+    {
+      "path": "proofs/more-algebra-successor.pdf",
+      "bytes": 3572291,
+      "sha256": "07A4B6FDC64BD01D0B042110C9883422BF9B294341D87959D70C4551BE95EFE5"
+    },
+    {
+      "path": "proofs/sites-cohomology-prior.pdf",
+      "bytes": 1436099,
+      "sha256": "1DC13354F4DE55170D41144D282B299F7C6EE63D5D9583776BAAD4F7FAB64C63"
+    },
+    {
+      "path": "proofs/sites-cohomology-successor.pdf",
+      "bytes": 1436091,
+      "sha256": "20ABB858238ED4851F6515C0B2F1D4489D6EBFECEA56FEAE65EBBC0E2ED1EC8A"
+    },
+    {
+      "path": "proofs/weil-prior.pdf",
+      "bytes": 795488,
+      "sha256": "EA17A134D55DE9CCA379DADB4DB0D77EA687B2FA389E29E265274D8FA39DF823"
+    },
+    {
+      "path": "proofs/weil-successor.pdf",
+      "bytes": 795480,
+      "sha256": "FB16B9AEF74D107E86DCF22FC81A9F37B606716E60C1F2D3C50D60C789C04620"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3826,
+      "sha256": "A40A1BCEACC7921879E8EAE2B6EDFD864BEADA9D152C9E4668183B4AB8F02A0D"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "bytes": 1626,
+      "sha256": "34482C704E901F7C97DE421D9057F192F43CEB4751431C84CC4A43A1EE126438"
+    },
+    {
+      "path": "replay/proof-preparation.json",
+      "bytes": 430,
+      "sha256": "60E50286C8BA65850B94CC2357BAD300CB016E378839FB06313C2CB432318D40"
+    },
+    {
+      "path": "replay/source-package.json",
+      "bytes": 4578,
+      "sha256": "2A3A773EB973C9D9153DA3D2D0D8A6D58A928A48F80F54CE7166522EF767CE7A"
+    },
+    {
+      "path": "replay/source-replay.json",
+      "bytes": 5874,
+      "sha256": "8204386120435F041847BC50A8C3D5B8AE1E6DC2EB7949FA19A1731D628D7879"
+    },
+    {
+      "path": "replay/verify.py",
+      "bytes": 7925,
+      "sha256": "428B0A43C62BD6C53376E98692C25643246CB167EBF06D77BC5FE60DCF8F3D3C"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 19490,
+      "sha256": "9932A41BC107A2F9DCDB7304813833F797AD5154586A588133BB5602DF52FF3C"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/correction-proofs-assembled.tex",
+      "bytes": 196550,
+      "sha256": "6608845345FA1DCC6A49A88745CD34C61AF379524F77124596BF5ADE5681E84F"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_0001_1900.tex",
+      "bytes": 19880,
+      "sha256": "3CCA0CDF7E77E6BF5E3F5E7BAE37C31544CCDB1EE8D15F15513516F1B5FB8317"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_1901_2765.tex",
+      "bytes": 18595,
+      "sha256": "96FC4BAD38F860A9BD704AA9364CB07F9F1744E5E293701823E493CABD08B460"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_2799_4336.tex",
+      "bytes": 24266,
+      "sha256": "36C31D2D45E9B3EA8AB4ECE7227F11DBD8F5E05F35F51BD8757E69904F75DE18"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_4337_4651.tex",
+      "bytes": 10114,
+      "sha256": "8A9666852F9B8C16E5E3EBDA8819869797F99565D60A63BBD0828AE9588C0880"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_4681_5648.tex",
+      "bytes": 25479,
+      "sha256": "29C9445B9E0743C3A878D0B0F0589FF0950D9F6034365423B185DDBCB35D4C51"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_5671_6359.tex",
+      "bytes": 19325,
+      "sha256": "C9AA56324445EC46EC797F897CB174F4B950130B19AA53046A8BB921E2C44A06"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_6360_6814.tex",
+      "bytes": 28407,
+      "sha256": "E5F5C46050FDCC5157A33379BAA257DBF35A6260FF1F2F5EE2B70FA3FCE287C0"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_6815_7064.tex",
+      "bytes": 21489,
+      "sha256": "39DA4F40F4CE95C5E60E5DA64BD1C00631F1A71ADCA7C106D1B09D9D424A92B6"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_7065_7945.tex",
+      "bytes": 25689,
+      "sha256": "DFECD2E4802305C6A4834FFB1B9D04954017B18B4F18667938EAEDA205666E3C"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/notes/PROOFS_7065_7945_ADDENDUM_01.tex",
+      "bytes": 1632,
+      "sha256": "12F3C6FC6CED73AFAB3D17B72232C1B9EE8A8BFF7BA9204F3638AB693E1570CA"
+    },
+    {
+      "path": "revision-history/proof-presentation-01/PACKAGE_MANIFEST.json",
+      "bytes": 19177,
+      "sha256": "C6240C8959E228D616EA0B9314AF45A4A4FB7B0362B6C73F3AEED7D80B10A457"
+    },
+    {
+      "path": "revision-history/proof-presentation-02/correction-proofs-assembled.tex",
+      "bytes": 197938,
+      "sha256": "A191ECAEABC89B36127CEB46E4349CA40ED32B71CA4BFFCBA890494E6C7CB7A1"
+    },
+    {
+      "path": "revision-history/proof-presentation-02/correction-proofs.tex",
+      "bytes": 2026,
+      "sha256": "8DBAC520747F624FE9BC5B4554E828ABE59C464C584F54740D94495629133691"
+    },
+    {
+      "path": "revision-history/proof-presentation-02/notes/PROOFS_4681_5648.tex",
+      "bytes": 25533,
+      "sha256": "773B54E426EF11471128DE00F711A7C789FF2E72A39160EA5D93BAFEAFA574BF"
+    },
+    {
+      "path": "revision-history/proof-presentation-02/PACKAGE_MANIFEST.json",
+      "bytes": 21240,
+      "sha256": "EB99ACCE6A0CF22C77E7431C93D7E01FB9475A66E96E278A71C392C9FEA5156D"
+    },
+    {
+      "path": "revision-history/proof-presentation-03/correction-proofs-assembled.tex",
+      "bytes": 197967,
+      "sha256": "29CD172380F6EA34C238AFBE561B5DC47FB3D2988F7EF892AD9FAD5254A39340"
+    },
+    {
+      "path": "revision-history/proof-presentation-03/notes/PROOFS_2799_4336.tex",
+      "bytes": 24168,
+      "sha256": "CD0356533F8D9F9ADA10E89F233A0FD38E227A265683A5F917284452A0FBF888"
+    },
+    {
+      "path": "revision-history/proof-presentation-03/notes/PROOFS_4337_4651.tex",
+      "bytes": 10133,
+      "sha256": "8A823503ABA5DBE95BAAA0B9E9E2B6CEABAE5AAD67AEA8ABBFE603AECE2FF5DC"
+    },
+    {
+      "path": "revision-history/proof-presentation-03/notes-source/PROOFS_2799_4336.typeset.pandoc.json",
+      "bytes": 356961,
+      "sha256": "E4125176C0C77CE40559928E544626E34A42B990657F8E1F6B6A8E7CBFA8AD1A"
+    },
+    {
+      "path": "revision-history/proof-presentation-03/notes-source/PROOFS_4337_4651.typeset.pandoc.json",
+      "bytes": 129994,
+      "sha256": "2DFEE15D5D9DB3B9ED331EE9560C8804C5DFEDA321834CA8DA4583246BE5D99C"
+    },
+    {
+      "path": "revision-history/proof-presentation-03/PACKAGE_MANIFEST.json",
+      "bytes": 21401,
+      "sha256": "E8FFCC7E517E97F06D51BCA2E651E66865958B61A74D6B8E2CF65FE22B2187AD"
+    },
+    {
+      "path": "visual/chapters/ACTUAL_REVIEW.json",
+      "bytes": 36587,
+      "sha256": "8AF103D53FF3610B490010A04A3739FABAAB6BC5E10A458AB1492621A425B791"
+    },
+    {
+      "path": "visual/chapters/COMPARISON.json",
+      "bytes": 374502,
+      "sha256": "30E133ADE3BD8796C86F9E5346F8701CA99BC8F538D21456848BC23CDB9BE775"
+    },
+    {
+      "path": "visual/chapters/homology-page-001.png",
+      "bytes": 126661,
+      "sha256": "498932A87787168FABC925EBA526E6FE134D8A963355E07AE76A43F34B872EA4"
+    },
+    {
+      "path": "visual/chapters/homology-page-005.png",
+      "bytes": 254711,
+      "sha256": "A8CA83D56937ABBCB4CD4ED588AD19CCA2A5F57A8D773595FF44BCC065D498CF"
+    },
+    {
+      "path": "visual/chapters/homology-page-034.png",
+      "bytes": 261041,
+      "sha256": "D0CDB7B6E000CB308A1509D3FD7FE972222FDB529D56245FD4D241DD25C43E79"
+    },
+    {
+      "path": "visual/chapters/homology-page-035.png",
+      "bytes": 437565,
+      "sha256": "447AB874E190359DC898D241E6D2E451BA38FF69A8E02F25238C5078790F9FF4"
+    },
+    {
+      "path": "visual/chapters/homology-page-036.png",
+      "bytes": 395407,
+      "sha256": "B4636F95659E6D6A1CCE595C35D8AB7CC5DFBC769FCD5D06A8F0D51A9783A03B"
+    },
+    {
+      "path": "visual/chapters/homology-page-037.png",
+      "bytes": 417740,
+      "sha256": "B27F507E4678F59B56297645CEAB6A691A818F1D1AB1C6B60828174820F1490D"
+    },
+    {
+      "path": "visual/chapters/homology-page-038.png",
+      "bytes": 287979,
+      "sha256": "CA90453E620626E5DE3B1D152B11E7CBFAE9097CCED2252313BE4DEE36DAEDA3"
+    },
+    {
+      "path": "visual/chapters/homology-page-039.png",
+      "bytes": 250868,
+      "sha256": "829C475E323EEB6299A66E3E66CA6A025F586F85F4E94CACC05E6EF7E3FA6528"
+    },
+    {
+      "path": "visual/chapters/homology-page-040.png",
+      "bytes": 439823,
+      "sha256": "D53C4F42D5E8B93E2455B235E514A49B1A27826645CB3F7A8024B359CA9B9018"
+    },
+    {
+      "path": "visual/chapters/homology-page-041.png",
+      "bytes": 431639,
+      "sha256": "F33AB5F2C3CEA64084C3A8CBA1F42FCFF47C716BF7596DB25D74D56E97A13143"
+    },
+    {
+      "path": "visual/chapters/homology-page-042.png",
+      "bytes": 357377,
+      "sha256": "B057FFE0CB6C820D74482C1E5F4E1862DF9D7A7FB784D87EB09A9F5ACB9C06CA"
+    },
+    {
+      "path": "visual/chapters/homology-page-046.png",
+      "bytes": 216395,
+      "sha256": "5C1321CD63E1E2A5B39E668AFE56774CCE5AB03424444BDBC5B1BD49F4022F47"
+    },
+    {
+      "path": "visual/chapters/homology-page-047.png",
+      "bytes": 193642,
+      "sha256": "4B1CF0AE84E1409FEFCBF8EA2C5E6275DF03829894299783CC9703DDAF5C1235"
+    },
+    {
+      "path": "visual/chapters/homology-page-048.png",
+      "bytes": 262789,
+      "sha256": "E0C2638D0F0204CF9EBFB8A88F33DDF15C32A8E22E9029292E7FEF8C22A25232"
+    },
+    {
+      "path": "visual/chapters/homology-page-049.png",
+      "bytes": 258097,
+      "sha256": "C853150793922EE6B6E61BE9F3CE7DC827DB89EE874D72BDB7F0B29A3483DC32"
+    },
+    {
+      "path": "visual/chapters/homology-page-050.png",
+      "bytes": 189241,
+      "sha256": "75FAE27D8C6A0ABB34437C08B5C06C479B3007ABB4F2511A39EE72B8C32E0B65"
+    },
+    {
+      "path": "visual/chapters/homology-page-052.png",
+      "bytes": 241453,
+      "sha256": "B2DA719F1171225545E8A29BEFB888E4037EDB85D921FEE9529141B0FE30D6BC"
+    },
+    {
+      "path": "visual/chapters/homology-page-060.png",
+      "bytes": 228809,
+      "sha256": "2A6454F5321C74095A83204DD7CE9E919DDE2EE534B8692DBDBD60D26D8EB1EE"
+    },
+    {
+      "path": "visual/chapters/homology-page-061.png",
+      "bytes": 241701,
+      "sha256": "27E6CB04F5F79CD011CAB4EA213280DB3386D29FA8D7FE774666DF5A916325F7"
+    },
+    {
+      "path": "visual/chapters/homology-page-064.png",
+      "bytes": 234989,
+      "sha256": "4667CF8566C8399041230A9B7ED36605092CCCC5159683DDF508896C2646BB21"
+    },
+    {
+      "path": "visual/chapters/homology-page-066.png",
+      "bytes": 256986,
+      "sha256": "9CD82BEFDEDD172CE1388D6D4D4AF2899A0DA2D791AAC68306260F3E3ACD39A5"
+    },
+    {
+      "path": "visual/chapters/homology-page-067.png",
+      "bytes": 434263,
+      "sha256": "3791B58732B1E372B30FCF940DCC1AC64044384B2F9A09C50A6CEAF856476FDD"
+    },
+    {
+      "path": "visual/chapters/homology-page-068.png",
+      "bytes": 409956,
+      "sha256": "EECA34AA02A6BB452DA11A2F45ABDCE509BD6362E774E6674EE033C5B27B35BB"
+    },
+    {
+      "path": "visual/chapters/homology-page-069.png",
+      "bytes": 301801,
+      "sha256": "FC9582A9E2B262B5DBEC44034967576A8148BD0BFADE63952339E291FE1FB2ED"
+    },
+    {
+      "path": "visual/chapters/homology-page-070.png",
+      "bytes": 262553,
+      "sha256": "34C54A236731259DB84641BEC52B3E871E338D8DE152023AFA34D8A8E026CB28"
+    },
+    {
+      "path": "visual/chapters/homology-page-071.png",
+      "bytes": 265761,
+      "sha256": "5BB0DF0AFA8E846E73D9FBD1D817498AD3BEAD103FBB9AEED4929C4A23C12431"
+    },
+    {
+      "path": "visual/chapters/homology-page-072.png",
+      "bytes": 206526,
+      "sha256": "B48FB70818F40B60A751F46A6569B3DD37C283ABD96E3B4472B6A1EA5F87E800"
+    },
+    {
+      "path": "visual/chapters/homology-page-075.png",
+      "bytes": 233272,
+      "sha256": "DB59DFD10356BF1F31DD7F1AC97171AB9A772F88B60D0E123F884526FCEA7EFE"
+    },
+    {
+      "path": "visual/chapters/homology-page-076.png",
+      "bytes": 243696,
+      "sha256": "03F2D772E10ADCF253A55811D363CC993AF989126F653E1921CC1758803F82E0"
+    },
+    {
+      "path": "visual/chapters/homology-page-079.png",
+      "bytes": 239687,
+      "sha256": "187E6625C0A6BBE06B80D80DE5339B3FC0E5941D27EA13DF7C04762E19FD9343"
+    },
+    {
+      "path": "visual/chapters/homology-page-080.png",
+      "bytes": 243011,
+      "sha256": "93BB04C7A893AB79E32ED7A2C33A14A383B16CBBEF7DDCE54ACBAB18ECE5E59A"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-002.png",
+      "bytes": 191482,
+      "sha256": "8817DC0E7E6B3797E1100B559E51A74A0939C380548D3F93491C0D4C18062E4C"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-162.png",
+      "bytes": 255174,
+      "sha256": "B680B18E936F4D44ADC6E4E0AB2B08F4C79A715DE0E36A8D7AC8C12874B05EC0"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-165.png",
+      "bytes": 376624,
+      "sha256": "0945312F38BD5649B8CCB6AB6DBFFA2E62EC20535FFF7D3801FBEF9EC84491CF"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-166.png",
+      "bytes": 432259,
+      "sha256": "173840BC2771A40A531DB1B5739B7A0C1FECABA494364D0173C6486A22F724FE"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-167.png",
+      "bytes": 443736,
+      "sha256": "98D1836F938C2E6A2CDCACE0E714A9CB58C0CB19220CE6B4223ED892A213FECE"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-168.png",
+      "bytes": 421356,
+      "sha256": "90C726CB6D707D1B92580852C589F7851863318699DD16DFE23880A74E5078F1"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-169.png",
+      "bytes": 427451,
+      "sha256": "0A58AE6261E4BD65BF45DE8BC2DE3E380263095B6EE1EAFA6DABFB1C3AFBC28B"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-170.png",
+      "bytes": 490123,
+      "sha256": "922FBA89B0B1E77C9E067D59D76810A68914EE4A724FDD09B6B534C5E1B33E6D"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-171.png",
+      "bytes": 488733,
+      "sha256": "C52AD13F176F409C8D6D5D532C4E75AFDA3F22A445DA559FBE0856706562180A"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-172.png",
+      "bytes": 479279,
+      "sha256": "8A480D4B88644E31EEB7053B7C52751619EC795F405B17DFBFA8275D0357F61B"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-173.png",
+      "bytes": 478554,
+      "sha256": "035686F8D0D86B4BBF653074BA4E6FFD429D3671F47DE921682B8FE2254A0269"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-174.png",
+      "bytes": 497952,
+      "sha256": "CBDE4C75B7B287108C205F54FAAABF02D7536C528713C1F0B4EBEE4B09566AAE"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-175.png",
+      "bytes": 434694,
+      "sha256": "F1D49A2C3651D5217A925EC827E8BD3C6797802268F3E059DC1C8BF7953A7E6F"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-176.png",
+      "bytes": 452285,
+      "sha256": "0BD816443FDC7F35A651EB15055C971E7738161BEE066C9491888DFF8336446B"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-177.png",
+      "bytes": 427872,
+      "sha256": "5FA2950BC42F886807A90A13DC8AAA50F3F873992154491F82E0061C8416181B"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-178.png",
+      "bytes": 419538,
+      "sha256": "AEB5A18752FFB86AD32F90F653DBC4B0B8FF661F0457D3F8635A26DE62831BBD"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-179.png",
+      "bytes": 482501,
+      "sha256": "B49A56D41FF2A245640057241D0285B586FE0E863FAB061EC6695031551D29E1"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-180.png",
+      "bytes": 457631,
+      "sha256": "EC589C89E4C18F79ED4D6AE04641A1DA340097E3EB0A3C432C484E1140E980FE"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-181.png",
+      "bytes": 415684,
+      "sha256": "7C483FA1D947087F21ADC1A06A72EAF7CF56B0CB862E764B8A1F293ED5D4F217"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-182.png",
+      "bytes": 370289,
+      "sha256": "5B2BFDCB34FF09FC735E219D5146641C2CE1D30EF297A2644DF9EC5D329F9504"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-183.png",
+      "bytes": 371629,
+      "sha256": "814ACFF939F2AE798ECA70DBA83E12AFB5C89F72C19140CA36F446F043B68063"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-184.png",
+      "bytes": 447013,
+      "sha256": "05904D6A95D122CE8D96414453685033A0A136A0F53BD343F2DFE527CE737A96"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-185.png",
+      "bytes": 477893,
+      "sha256": "CBBBB35446805F640CDF07DE352CC34F4C5C36F7FB05DC97A9FB5E1BCE166776"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-186.png",
+      "bytes": 409211,
+      "sha256": "38170F8C9113725B7DA257AD638077E595F1B01F9B716B23ACEA09C4E2E39276"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-187.png",
+      "bytes": 360781,
+      "sha256": "020BC37000412CBBEB8C048CD2767A5E3486DF03C6802A5FD5B98662164FAAD2"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-188.png",
+      "bytes": 335701,
+      "sha256": "A2A6B3AA822486A21A08F22C21D4C154C0B5306DB241126D339B32A5CA3025B3"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-189.png",
+      "bytes": 353239,
+      "sha256": "75CD5F55998B46792BC604AC80E730637C94BC8BE75853BD7D0BA92128BF3999"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-190.png",
+      "bytes": 338207,
+      "sha256": "AEB2E31D1A9803E928AE00A9B2CC3C8942B3B51F129D476B916443B877D68A22"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-191.png",
+      "bytes": 415661,
+      "sha256": "21C54EFF6F695980AB2913B5E42D41587DA08989339E320CC5407F5EC24C9F70"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-192.png",
+      "bytes": 397238,
+      "sha256": "C8AA3A8F44EA5B8DA006630C8A1C8E691FBF5D4EE40064ED628E6B34F25C2014"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-193.png",
+      "bytes": 406798,
+      "sha256": "29BB7AFD8512C8AE95191D54B5277C9603FBF9CE3879A0395A4464D70AF19FD0"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-194.png",
+      "bytes": 359967,
+      "sha256": "35BAFFA62A93E68FE724758A669150CD7E3DBCAAE309699D31395C0E900397E7"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-195.png",
+      "bytes": 403135,
+      "sha256": "48871C6956001DC35F2FAA6AB81F62CA6D084E8135F6C56DB803FF412EDB9429"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-196.png",
+      "bytes": 385348,
+      "sha256": "086B2CD4C5317BAB446EF838265928CD2FD9EFBD9922C376EF934675B25F718E"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-197.png",
+      "bytes": 432345,
+      "sha256": "2C4B49F87B563578C2F0B154EAD426BD55834159BD7B72C72D6647323987C5CF"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-198.png",
+      "bytes": 465292,
+      "sha256": "54D8F848C40A65C4874BAEBF322F1EF22F8B00EE3C783C2E1417FF5D484509ED"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-199.png",
+      "bytes": 477730,
+      "sha256": "1F805873A55A8B88A4C28F2B3C370A26EB3000267F3ABA7F6F9D33C3B15AAD9A"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-200.png",
+      "bytes": 460925,
+      "sha256": "26B10770C3D78A0B4CF82E7C0F8A1263CCE1D404EEAD9E7516A5864D89DB2691"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-201.png",
+      "bytes": 442129,
+      "sha256": "F081D7B86412FBEF020488A4D3C82294573CAA1889EDC1D3F8F74CF72EAC7911"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-202.png",
+      "bytes": 486885,
+      "sha256": "FC2370D44DD9AB84DD2FE3ADE26F82BAB3D4A05C8E5023B159A858A35D2578B2"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-203.png",
+      "bytes": 492392,
+      "sha256": "6BF46F3F77B617FAFA783406A0B885F73E442E29122342EF5EBC4FC7BB0FD3AB"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-204.png",
+      "bytes": 455278,
+      "sha256": "F04B4F362D95BEF9A05743573E0ED4D8A84036AFC7850407D23B8959197E8BD1"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-205.png",
+      "bytes": 463062,
+      "sha256": "D81ED8FE2A0828DD0C2F3AAEEED52A296EA16997A7F7F318D930DEA441FF3CD7"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-206.png",
+      "bytes": 467364,
+      "sha256": "A9F974EF146F14D2B859CF15F6888FA268AB0E8E063448E243392B23B0DB4921"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-207.png",
+      "bytes": 492607,
+      "sha256": "1EF216EC6A551944F6ECFC1BCAB4D0A543ABC6B99824D2E5CAED284E5DB8133C"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-208.png",
+      "bytes": 490869,
+      "sha256": "5EA293A1D654AE83602C6B4C5E9B9E5DAEEAF2D0922B17DA473EE10E76E01C2D"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-209.png",
+      "bytes": 429950,
+      "sha256": "B0DAC3379CB1CF743F881AF5AC54E31ACA25F533896346B9A39FD076703D5EEA"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-210.png",
+      "bytes": 437574,
+      "sha256": "66EAEA4E5CA9A429D91FD51F196482F2D109B690E03DB99186CC145D9A3EF427"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-211.png",
+      "bytes": 413815,
+      "sha256": "8AA132C19FFA439246FD40CDA4034AD4D85B4972DDDF0BDDE628B4EE82C60AF7"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-212.png",
+      "bytes": 435307,
+      "sha256": "B80A4B876A9BB9E64CF3A315479858A2EF7A2C5905175E1B80DCCEC0C5D88D6A"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-213.png",
+      "bytes": 408493,
+      "sha256": "765C784856A47EBE68631C47BA615B1A3F82C3B9B72B3660950271BEFCB1CCFB"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-214.png",
+      "bytes": 336729,
+      "sha256": "8504EA36BA492DB21E8FD79F62210B6939707CC76C6CF74B0DBDBE8802BF2AB6"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-215.png",
+      "bytes": 430174,
+      "sha256": "60F0EFD566C44954B5F021919EAE8D282FC8FF3B7CA883E05F0B4A58E130D147"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-216.png",
+      "bytes": 491592,
+      "sha256": "6DB2371704608CCEAF32EDA62A6368C4D951431B9A905543ADB888BBD5281985"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-217.png",
+      "bytes": 395792,
+      "sha256": "14D8FE0412CB6DAE00B9EA3FB440825872A3E31B29161955B251CDBDC6D6B141"
+    },
+    {
+      "path": "visual/chapters/more-algebra-page-218.png",
+      "bytes": 414873,
+      "sha256": "C83772EE73CCB5D4E6CF68F05DDAD6F7D46A80D456B4343DAF190F9C1653F1DA"
+    },
+    {
+      "path": "visual/chapters/PARTIAL_ACTUAL_REVIEW.json",
+      "bytes": 5039,
+      "sha256": "79AC484C63466887E3BDBD2EAF1C33ADD7EC1ECF622E3FD30DC9948EE48271FE"
+    },
+    {
+      "path": "visual/chapters/sites-cohomology-page-093.png",
+      "bytes": 348046,
+      "sha256": "2E59A313BF3364A65EFA4DCA6BB2604DEC0EC95FAB4A1856CFB0AB96A3C24D64"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-01.png",
+      "bytes": 338091,
+      "sha256": "7B1E8B8D3318AFBD4EB0B63C85179EC8DF0A6A57FA903FCD2B26614C883CDF7A"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-02.png",
+      "bytes": 391674,
+      "sha256": "8B1216DB81992E5488A56B752450E6BC10386BB63E0A2B1E2CA6A3BF3F55B7CA"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-03.png",
+      "bytes": 410870,
+      "sha256": "C688EABBF5389A86850330CE699604F4B367F51ECC4F4441DCD08DB4BD9E8B69"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-04.png",
+      "bytes": 268994,
+      "sha256": "848B910EB8A9A7EAB75BCC14D6AC1BFE8D3781AC570958E3D515699CC2F1ABEC"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-05.png",
+      "bytes": 437047,
+      "sha256": "B71640B465B65705F8373522C272719D27362809C0081467A3EA6D91C898B8EA"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-06.png",
+      "bytes": 384164,
+      "sha256": "D506F6AB18E0F0BFB55496599DE9ADD9E01131F0A695C8CFBD0DFA2709ED50D6"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-07.png",
+      "bytes": 399586,
+      "sha256": "707A245085160A8F91FEBA702AC0D08FD1F1F93047673FB45E9F1EB6A1A3C04B"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-08.png",
+      "bytes": 382877,
+      "sha256": "84753303FA27F09DC2C4E4F7F194673459DF6FC5CEEF7F0B76F51680389D780B"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-09.png",
+      "bytes": 424890,
+      "sha256": "4E7C1D7B10827AF807A84745DC3EB4A0BAE5B2E0C079315613C29ED5B216DC36"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-10.png",
+      "bytes": 416511,
+      "sha256": "600775285E0483FCF4A405B3604ABD1AB1BB9391387DEB08AE2A37405615EB13"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-11.png",
+      "bytes": 442505,
+      "sha256": "58920D9471383FD35A1E95E29878567DCF60F66F80CF01D63A39D0BA39F80D08"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-12.png",
+      "bytes": 442465,
+      "sha256": "AB95C62AAE06DC63FF9DBFBDB9BA3B05B362B0394F82A4FCDD428D92684355F5"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-13.png",
+      "bytes": 439574,
+      "sha256": "A4544C47D0B45FD18CA5646DC80A47F743F2B65215E3060B3805CB62E6678B07"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-14.png",
+      "bytes": 390687,
+      "sha256": "E26CF0C6AE8839D03865135327C3B972739F68B62B25D7C1F512329157429FFB"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-15.png",
+      "bytes": 433101,
+      "sha256": "0F0781F04ED70B7E199309CDDF59360FF0621AB224C98FD10573637572B5C3AF"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/homology-16.png",
+      "bytes": 211657,
+      "sha256": "5C65937B26A2315F0CFE87CED8F06C648DA54245DE667BDDA0C3283BEBD1F8F7"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-01.png",
+      "bytes": 386350,
+      "sha256": "F537ADECF85A5972583A164FC9DBC346434DDB8AA2821BD193F4D4587AF32587"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-02.png",
+      "bytes": 427916,
+      "sha256": "65E99BF6A09EE55635273927AC37C121CC12B4C06892533F2347D2ED4FE7468F"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-03.png",
+      "bytes": 434499,
+      "sha256": "93D52A2CBE66A60A1B229B737444AA0643450276ADAF3FFEE4F5BFC2A66074A6"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-04.png",
+      "bytes": 444386,
+      "sha256": "1778CB5E027773DCB2AEACE450D9A4B61A8E4801A5988C33D21AF81FD436028C"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-05.png",
+      "bytes": 475747,
+      "sha256": "61A2E204F50F0C2C1CC2F78E2BBD95406F5B30875EBAB1D2CC92B3CF382528B5"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-06.png",
+      "bytes": 493859,
+      "sha256": "34F11816615D97C19901EF3C153ABFB11315F8F71A4E9532B6739BE581B58684"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-07.png",
+      "bytes": 447596,
+      "sha256": "84EFCC403D61A491F0E74076E746A1E8595C0B1DE9E020121E2490D6D978E568"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-08.png",
+      "bytes": 402574,
+      "sha256": "69FF0EB2107A2C2484D6E42EA1216822BEDDA86A9093472979EAFA27598C1CD6"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-09.png",
+      "bytes": 476120,
+      "sha256": "3BD3A1238F2960BD003C3A28A77027357868E63F99E2502A17AC898B462902D4"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-10.png",
+      "bytes": 419980,
+      "sha256": "E4D90CBAAF2111EF9D1E1F28576C202920285C3F76AFB56B0DCC260334927AC4"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-11.png",
+      "bytes": 387268,
+      "sha256": "4B1E2BBF576C03B84A2F1538205AAC84B19A10FF8398031ED5FC9C9C1B5CAC5A"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-12.png",
+      "bytes": 455730,
+      "sha256": "726A599490AA541D8E2E1FCDBF4AEBCF4F4B21BD47FDE17115ACF1EEF8DDECFA"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-13.png",
+      "bytes": 356782,
+      "sha256": "5D73598AD8E017304B24CEDD0D2AA4AD6980509EEFC9912A160C2DE740801924"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-14.png",
+      "bytes": 361267,
+      "sha256": "679A1D6CA50C5C3210012A402DD4115BCCDBD045F3889EEBDB66E1ECF71B36F0"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-15.png",
+      "bytes": 405467,
+      "sha256": "44E7B53C0CB5F61B1F08D00E1ACB9403A25E1623987C80C0379A29F1703D5DBA"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-16.png",
+      "bytes": 391685,
+      "sha256": "55408DF1901AF1AA594DF1576E429A2BF1B9A6FE68B03C3F3A572FB923271345"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-17.png",
+      "bytes": 393695,
+      "sha256": "A8628931287CD544C5C886B4400AF4C5DE2478A7A8943B8A30EDE1CCB4516CD0"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-18.png",
+      "bytes": 448621,
+      "sha256": "71F0D58AE6D815154589562CE80D86400378CE64EED31AB4FDE4C503BCA2C266"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-19.png",
+      "bytes": 461886,
+      "sha256": "D5D969EAECB82011E15DE3F35FB11DEDDCF05FEAE4634CC8D63098C3E2F234D5"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-20.png",
+      "bytes": 459778,
+      "sha256": "0DE8434861BD17D02D49BB8FBA277176DACBB0A0641254B6C909081A1BA67E51"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-21.png",
+      "bytes": 469097,
+      "sha256": "60305C1A29167AD4B5041C52F00DA9C5087E97F31669F35ADF6999726285DAF5"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-22.png",
+      "bytes": 470224,
+      "sha256": "CC9C0D3077F8B88D6939202D9FA79C0621123AE22BA114A528776F60A9C0129A"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-23.png",
+      "bytes": 492318,
+      "sha256": "7D48920282F8CD4959C4D6807A4A0EF4EAE7366D1FE88E76AB4F1D83A548BCE6"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-24.png",
+      "bytes": 439900,
+      "sha256": "AD4D3E684A7B4549729625C2F28DE868BFE4511DF2DE4BAEA4D003BE16F9F9CF"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-25.png",
+      "bytes": 421634,
+      "sha256": "29E98FF967C2E84412487EB8EDF30F5E975C0DD205F8BC491981048D747B36C5"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-26.png",
+      "bytes": 385301,
+      "sha256": "093C8F05C5E7009998FC60F11DE2265B6453C31F0FE130758072D00B3BF55A84"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-27.png",
+      "bytes": 480236,
+      "sha256": "7980AE392D6FE014847BA7A7B676F6CA11C20D8F397647803245218B623AC8F4"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/more-algebra-28.png",
+      "bytes": 420477,
+      "sha256": "F0FFB6ADB87C840FB3C4BBF3D8A82017541ACC1A28661668B87985C7BCF5DB1C"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/sites-cohomology-01.png",
+      "bytes": 205460,
+      "sha256": "6552D74EE5478DC46C1E5F9E74F9D0FC745BE464A22746E8F263F71DC13F69F8"
+    },
+    {
+      "path": "visual/chapters/successor-sheets/weil-01.png",
+      "bytes": 224780,
+      "sha256": "B3798F306D79CC1F5D27E4DB20CB90444D0ED360E927D4D49C71AB434062DAA2"
+    },
+    {
+      "path": "visual/chapters/SUCCESSOR_SHEETS.json",
+      "bytes": 11669,
+      "sha256": "1A821160458CCC1163D97110FABB9D3C2B616D0A8039B559A27FC3F13F03F73D"
+    },
+    {
+      "path": "visual/chapters/weil-page-019.png",
+      "bytes": 252622,
+      "sha256": "FF46B7B36F443A73F341B84457B5AC0E9067F5222EA1379D63726571C3F3CEB7"
+    },
+    {
+      "path": "visual/supplement/ACTUAL_REVIEW.json",
+      "bytes": 2022,
+      "sha256": "2913C08F2E4E8B6D41BAD166F7DF4A86005A5A2CEAACEFCE1844645A939E4050"
+    },
+    {
+      "path": "visual/supplement/attempt-03/ACTUAL_REVIEW.json",
+      "bytes": 1902,
+      "sha256": "EC72AF54107180EEF648F5EFFCCE19777DC77FF1E55EDDE28A7C39DB78BD887F"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-01-02.png",
+      "bytes": 437558,
+      "sha256": "B838CCA96C81FF54804E599D2DCA6E47A45EF762B95A27394FB7A7EAE7458B0B"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-03-04.png",
+      "bytes": 565021,
+      "sha256": "B61B9F2204ADAA6B09F019A022DA85D2DEC0D28B12F38D397F91A503D41B6725"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-05-06.png",
+      "bytes": 557364,
+      "sha256": "477A9C4BF9C3BD689AC29B5634E5FEE1C47950DFCE28B6A81F52F454212B8F29"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-07-08.png",
+      "bytes": 502576,
+      "sha256": "E0D7037D79CC46C92172DC331B564C62E716B47A9E43EBB4209E7C28B452FDF8"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-09-10.png",
+      "bytes": 517675,
+      "sha256": "F241D6656A9C9AA87792D9F734CDC709FA47874DFAF57E536429FEC55C77DA99"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-11-12.png",
+      "bytes": 438507,
+      "sha256": "1D42AAE9256B50C13BDE52463CEE6A15D95B3E783E97717E3C1B2860D3B0CD95"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-13-14.png",
+      "bytes": 380835,
+      "sha256": "5A70A2E2ED2F1A6271FBAE328189660166C7D4150CFA62D1311C4CFB7121ABDD"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-15-16.png",
+      "bytes": 495407,
+      "sha256": "55EF3B63CC4D9D7F0A02B6DA0197AF02EE7C465482B190733CA7FF402F31A7BF"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-17-18.png",
+      "bytes": 470315,
+      "sha256": "6FE3C6570ABAB4CEEB3B9B28FD5DAA1C249DC7D98E680FA152207F057DBE9D2F"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-19-20.png",
+      "bytes": 371453,
+      "sha256": "EF9C246D57B0DF2AB18C1A8958255C6788034D085732D67B62772D451049E75F"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-21-22.png",
+      "bytes": 435003,
+      "sha256": "64B4EF2D6D586FBE9F615F622D29F56B9B11D59BF871FCE95F94B8AC6078023E"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-23-24.png",
+      "bytes": 426206,
+      "sha256": "BF5ED8B43733C2E4BD1B688692E9C2BA2B5E7F967EA1C608747F61AD463A28DE"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-25-26.png",
+      "bytes": 463507,
+      "sha256": "358A092307BD8C50DDC59FA5846DA58F302B64BCAF76F61E9BE55091D0CB9CBC"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-27-28.png",
+      "bytes": 614960,
+      "sha256": "76293BDE681F17F726DD008F42A54221E75B151F2245165424AB3A51380C7EFD"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-29-30.png",
+      "bytes": 527988,
+      "sha256": "72464B2E7A4EC61823576272265A0CD44782D97E285D577D50441AA3F3FEF4C7"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-31-32.png",
+      "bytes": 580641,
+      "sha256": "F66DF90842DF536FD52896BDE6C9F027F26344957015F4E060705889DD1B7064"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-33-34.png",
+      "bytes": 530756,
+      "sha256": "182A5A55131B7765395F1866357C11F6609F38D7AC0F7F763FE690255C910740"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-35-36.png",
+      "bytes": 598116,
+      "sha256": "85712FB6E9CB919700BD6D2F02F4043E2504F9E770BCABB4314789E944B98ED8"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-37-38.png",
+      "bytes": 573805,
+      "sha256": "64E06A38090ED879E2AA86D110D1CBDA6785E79611282BAB4D995DA11CA9D0D6"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-39-40.png",
+      "bytes": 541807,
+      "sha256": "B172B780FCAFFA09985C319CA7E32D9F653C0539CC6CC92FCBD6197D221C4461"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-41-42.png",
+      "bytes": 510031,
+      "sha256": "AB74349C949CA29355E424BA26DA627EF83D94D2E640545BEB7DE786EAA2A410"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-43-44.png",
+      "bytes": 591931,
+      "sha256": "BD7785513279B51109A8191E607F19E75964A0FE5FCE96FE3C03F55F71E586B3"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-45-46.png",
+      "bytes": 545115,
+      "sha256": "ECEAFF8C753E68EE678E283ABB0A54040BE9B69B8244B926AC8CACA55D63A411"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-47-48.png",
+      "bytes": 405669,
+      "sha256": "76899717DF9BD0D71ED1C7F7937155127FEC2052D21C26F472E462C7A8CDAC61"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-49-50.png",
+      "bytes": 665147,
+      "sha256": "BB82A0F5AFE9B4EA52D4E09017DE3C90A8C9B1182495E3ABFD77D0164522F91F"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-51-52.png",
+      "bytes": 622266,
+      "sha256": "7D0BA42DABF62ED8E936AD58ED42FB89272A44134271E9AFE11B8C4755D724F1"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-53-54.png",
+      "bytes": 492491,
+      "sha256": "BC1202EA9336A42B616AAD3712E545FAB6A9AC9716B3669F43189040A9F6902B"
+    },
+    {
+      "path": "visual/supplement/attempt-03/pages-55-55.png",
+      "bytes": 125747,
+      "sha256": "B8F08CFE950016CA1DD5EDBA9C81E456C80F95C6D63B09FE04AFC2B06479382E"
+    },
+    {
+      "path": "visual/supplement/attempt-03/RENDERS.json",
+      "bytes": 6023,
+      "sha256": "691F2CAD1EB611DD4A92E00280AF6038BCB6E2BFDC1BB374C20BEC0C65D80DDD"
+    },
+    {
+      "path": "visual/supplement/attempt-05/pages-16-17.png",
+      "bytes": 437416,
+      "sha256": "4AF74291AC62F0FFF224F83FD5CF0612BE2E32A723A6C1795FB6EABCFA33364D"
+    },
+    {
+      "path": "visual/supplement/attempt-05/pages-22-22.png",
+      "bytes": 222365,
+      "sha256": "CC4381C2E1A08FAEBBE408A45D3E6D70F2E2CE76F5245D13F5585701E09D0C74"
+    },
+    {
+      "path": "visual/supplement/attempt-05/RENDERS.json",
+      "bytes": 14759,
+      "sha256": "895B1B3FF690D9B10EFABF47C8494969124D95E71E159D1887B268C4F150A276"
+    }
+  ],
+  "rights_state": "Modified Stacks source retains GNU FDL 1.2; exact licence included; no official endorsement.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [],
+  "stop_conditions": [
+    "Fail on source, evidence, lease or hash drift; unlisted edits; failed reproduction; or damaged mathematical notation or rendering."
+  ],
+  "generated_at_utc": "2026-09-30T08:55:30.068188+00:00"
+}

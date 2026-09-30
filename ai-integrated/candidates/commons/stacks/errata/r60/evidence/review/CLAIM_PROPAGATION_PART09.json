@@ -1,0 +1,213 @@
+{
+  "findings": [],
+  "claims": [
+    {
+      "claim_id": "HOMOLOGY-UNDER-010",
+      "kind": "individual_colimit_splitting_criterion",
+      "original_source_lines": [
+        7533,
+        7555,
+        7559,
+        7579
+      ],
+      "original_statement": "The source assumes the ambient additive category is Karoubian to separate the two colimits and the two essentially constant summands.",
+      "proved_statement": "Given W=colim(F direct-sum G), colim F exists exactly when the induced F-projection idempotent e on W splits, and colim G exists exactly when 1-e splits. When the sum diagram is essentially constant, the corresponding splitting also gives an explicit essential-constancy witness for that summand.",
+      "hypotheses": "The specified sum colimit exists in the original additive category; each individual splitting is proved equivalent to its own colimit. No splitting of the complementary idempotent is inferred without proof.",
+      "proof": {
+        "file": "PROOFS_7065_7945.md",
+        "bytes": 24992,
+        "sha256": "6514F1253243050BBCAFE48DAD07EDE4CBF8D307A823BBFD268936A09AA18DDE",
+        "section": 4
+      },
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "novelty": "not_claimed",
+      "related_claim_ids": [
+        "HOMOLOGY-UNDER-001",
+        "HOMOLOGY-UNDER-002"
+      ],
+      "propagation": "The receiving derived-functor proof supplies both splittings through its stated Karoubian hypothesis. The criterion isolates the requirement at its colimit value without changing its source statement or certifying its separate cofinality proof."
+    },
+    {
+      "claim_id": "HOMOLOGY-UNDER-011",
+      "kind": "bounded_degree_ordinal_limit_vanishing",
+      "original_source_lines": [
+        7861,
+        7913
+      ],
+      "original_statement": "Acyclic complexes with matching maps surjective in every degree have acyclic ordinal inverse limit.",
+      "proved_statement": "For a fixed integer N, vanishing of H^q(K_beta) for q<=N and surjectivity of K_beta^j to lim_(gamma<beta) K_gamma^j for j<=N-2 imply H^q(lim K_beta)=0 for q<=N.",
+      "hypotheses": "An inverse system of complexes of abelian groups over a set-sized ordinal, with exactly the displayed degree ranges at every index.",
+      "proof": {
+        "file": "PROOFS_7065_7945.md",
+        "bytes": 24992,
+        "sha256": "6514F1253243050BBCAFE48DAD07EDE4CBF8D307A823BBFD268936A09AA18DDE",
+        "section": 7
+      },
+      "status": "proved_editorial_consequence",
+      "source_body_replacement": false,
+      "novelty": "not_claimed",
+      "propagation": "The all-degree assertion follows by applying the proved statement for every N. Existing Injectives and SDGA citations retain their original Homology conclusion; a degree-range refinement of their separate theorems has not been claimed."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "categories.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 357956,
+        "sha256": "05AD27C125BC31801DC1C4644D44684DB74ED6D43F2BDC6E01FB9D4B46260688"
+      },
+      "actual_lines_read": [
+        [
+          2925,
+          2996
+        ],
+        [
+          3282,
+          3393
+        ]
+      ],
+      "hits": [
+        2930,
+        3287,
+        3375
+      ],
+      "excerpt": {
+        "file": "categories.tex.part09-excerpts.txt",
+        "bytes": 8668,
+        "sha256": "A6CC37E6A0771AD1204DC4B432CBF48E70865A9E69FF42045539799FAEEBCFBB"
+      },
+      "receiving_outcome": "Read the exact definitions and equivalences for essentially constant diagrams. The proof note uses the original witness maps and eventual equalities.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "derived.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 464343,
+        "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+      },
+      "actual_lines_read": [
+        [
+          5168,
+          5232
+        ]
+      ],
+      "hits": [
+        5206
+      ],
+      "excerpt": {
+        "file": "derived.tex.part09-excerpts.txt",
+        "bytes": 3423,
+        "sha256": "E63EFDFD76B45FBE52BAD96623CF121580C3BF1A4F51B2C102F623E0BDFF721B"
+      },
+      "receiving_outcome": "The stated Karoubian assumption supplies both splitting idempotents. The local splitting criterion identifies the precise Homology requirement. The separate cofinality argument is not fully checked.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "injectives.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 105225,
+        "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+      },
+      "actual_lines_read": [
+        [
+          1651,
+          1715
+        ]
+      ],
+      "hits": [
+        1700
+      ],
+      "excerpt": {
+        "file": "injectives.tex.part09-excerpts.txt",
+        "bytes": 3271,
+        "sha256": "56A8337BB6D62F8F324B6A0CC26D18E00C064FD9F3B87CC322651633687CC08E"
+      },
+      "receiving_outcome": "The displayed Hom complexes have successor surjectivity and continuity at limit indices, matching the original all-degree ordinal-limit input. The whole transfinite construction is not certified.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "sdga.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 234982,
+        "sha256": "7C9C1056B5A68F2DDEE0FF57BABD09F738566F7342432784FF10FAE75E237435"
+      },
+      "actual_lines_read": [
+        [
+          3927,
+          3976
+        ]
+      ],
+      "hits": [
+        3962
+      ],
+      "excerpt": {
+        "file": "sdga.tex.part09-excerpts.txt",
+        "bytes": 2415,
+        "sha256": "3FA66463B4D5C3BA42DEFCD20D5F9ED5119B780FF9D95BB7617E7E32DFDEC10D"
+      },
+      "receiving_outcome": "The displayed Hom complexes use matching surjectivity and continuity. This bounded routing does not certify preceding assertions or unrelated formulas.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "more-algebra.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 1518085,
+        "sha256": "3785C52A72AA218E39E338910940C7C4AF374F557550825BAC2594678F9216BB"
+      },
+      "actual_lines_read": [
+        [
+          6465,
+          6535
+        ],
+        [
+          23610,
+          23650
+        ]
+      ],
+      "hits": [
+        6504,
+        6526,
+        23643
+      ],
+      "excerpt": {
+        "file": "more-algebra.tex.part09-excerpts.txt",
+        "bytes": 4737,
+        "sha256": "74B6A0F68C5F8DC5372395557528471518A65144E8536472B5087BBEF926E916"
+      },
+      "receiving_outcome": "The two flat-limit uses supply the ML terms and essentially-zero preceding cohomology needed by Homology, taking the separately cited Tor facts as inputs. The later stronger treatment is routed only; its full statement and proof are unread.",
+      "whole_chapter_reviewed": false
+    },
+    {
+      "source": "cohomology.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 539704,
+        "sha256": "591F19389EF437DDFE05B00214064DDA31AA225D44B019A779F9F98F6EC0B4DE"
+      },
+      "actual_lines_read": [
+        [
+          10705,
+          10738
+        ]
+      ],
+      "hits": [
+        10726
+      ],
+      "excerpt": {
+        "file": "cohomology.tex.part09-excerpts.txt",
+        "bytes": 1320,
+        "sha256": "B9CCE411E24F10C995D62B85C054B536D9E09DEAE9E4C1CF309052B454D8F371"
+      },
+      "receiving_outcome": "Eventual constancy of the cohomology is explicit. The earlier termwise-surjectivity construction is outside this read, so complete verification is not claimed.",
+      "whole_chapter_reviewed": false
+    }
+  ],
+  "omitted_source_proofs_counted_as_errors": false,
+  "original_lemma_statements_preserved": true
+}

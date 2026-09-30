@@ -1,0 +1,90 @@
+{
+  "findings": [
+    {
+      "finding_id": "HOMOLOGY-FIND-004",
+      "kind": "next_degree_projection",
+      "source": "homology.tex",
+      "source_lines": [
+        4468,
+        4641
+      ],
+      "original": "The outer split boundary composes the differential with a projection indexed by its starting degree.",
+      "correction": "Use pi^{q+1} d_2 s^q and pi^{p+1} d_1 s^p, matching the next-degree codomains and the already correct following component formulas.",
+      "proof": {
+        "file": "PROOFS_4337_4651.md",
+        "bytes": 8753,
+        "sha256": "2773CA5ABAC8882179D63061ECF9222977C00511AA911594CB69C6CBDE7B6CE5",
+        "section": 3
+      },
+      "status": "proved_local_not_admitted",
+      "novelty": "not_claimed",
+      "report_count": 0,
+      "operations": [
+        "HOMOLOGY-NEW-006",
+        "HOMOLOGY-NEW-007"
+      ],
+      "propagation": {
+        "source": "derived.tex",
+        "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+        "source_identity": {
+          "bytes": 464343,
+          "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+        },
+        "actual_lines_read": [
+          [
+            3828,
+            3900
+          ]
+        ],
+        "excerpt": {
+          "file": "derived.tex.part04-excerpts.txt",
+          "bytes": 3195,
+          "sha256": "D8836D3E37D62114CC42AA3A7C3497F56F3972D67B7F37487D0CD11187F358ED"
+        },
+        "hits": [
+          3858,
+          3876
+        ],
+        "labels": [
+          "remark-double-complex-complex-of-complexes-first",
+          "remark-double-complex-complex-of-complexes-second"
+        ],
+        "receiving_outcome": "The two exact totalization comparisons retain their original signs and objects. No receiving-body change required.",
+        "entire_triangulated_foundations_reviewed": false
+      },
+      "inventory_check": "No bound report interval contains either target line; all earlier accepted Homology operations are disjoint."
+    }
+  ],
+  "claims": [],
+  "dependencies": [
+    {
+      "source": "derived.tex",
+      "commit": "b4b30d521cfbe300860903ff788059627da6a434",
+      "source_identity": {
+        "bytes": 464343,
+        "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+      },
+      "actual_lines_read": [
+        [
+          3828,
+          3900
+        ]
+      ],
+      "excerpt": {
+        "file": "derived.tex.part04-excerpts.txt",
+        "bytes": 3195,
+        "sha256": "D8836D3E37D62114CC42AA3A7C3497F56F3972D67B7F37487D0CD11187F358ED"
+      },
+      "hits": [
+        3858,
+        3876
+      ],
+      "labels": [
+        "remark-double-complex-complex-of-complexes-first",
+        "remark-double-complex-complex-of-complexes-second"
+      ],
+      "receiving_outcome": "The two exact totalization comparisons retain their original signs and objects. No receiving-body change required.",
+      "entire_triangulated_foundations_reviewed": false
+    }
+  ]
+}

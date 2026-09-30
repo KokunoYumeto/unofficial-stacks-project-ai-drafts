@@ -1,0 +1,312 @@
+4701: DF(\mathcal{A})
+4702: \longrightarrow
+4703: D(\text{Gr}(\mathcal{A}))
+4704: $$
+4705: which commute with the localization functors.
+4706: \end{lemma}
+4707: 
+4708: \begin{proof}
+4709: This follows from the universal property of localization, see
+4710: Lemma \ref{lemma-universal-property-localization},
+4711: provided we can show that a filtered quasi-isomorphism is turned
+4712: into a quasi-isomorphism by each of the functors
+4713: $\text{gr}^p, \text{gr}, (\text{forget }F)$. This is true by definition
+4714: for the first two. For the last one we have to do a little
+4715: bit of work. Let $f : K^\bullet \to L^\bullet$ be a filtered
+4716: quasi-isomorphism in $K(\text{Fil}^f(\mathcal{A}))$.
+4717: Choose a distinguished triangle $(K^\bullet, L^\bullet, M^\bullet, f, g, h)$
+4718: which contains $f$. Then $M^\bullet$ is filtered acyclic, see
+4719: Lemma \ref{lemma-filtered-acyclic}.
+4720: Hence by the corresponding lemma for $K(\mathcal{A})$ it suffices
+4721: to show that a filtered acyclic complex is an acyclic complex if
+4722: we forget the filtration.
+4723: This follows from
+4724: Homology, Lemma \ref{homology-lemma-filtered-acyclic}.
+4725: \end{proof}
+4726: 
+4727: \begin{definition}
+4728: \label{definition-filtered-derived-bounded}
+4729: Let $\mathcal{A}$ be an abelian category.
+4730: The {\it bounded filtered derived category} $DF^b(\mathcal{A})$ is
+4731: the full subcategory of $DF(\mathcal{A})$ with objects those $X$
+4732: such that $\text{gr}(X) \in D^b(\mathcal{A})$.
+4733: Similarly for the bounded below filtered derived category
+4734: $DF^{+}(\mathcal{A})$ and the bounded above filtered derived category
+4735: $DF^{-}(\mathcal{A})$.
+4736: \end{definition}
+4737: 
+4738: \begin{lemma}
+4739: \label{lemma-filtered-complex-cohomology-bounded}
+4740: Let $\mathcal{A}$ be an abelian category.
+4741: Let $K^\bullet \in K(\text{Fil}^f(\mathcal{A}))$.
+4742: \begin{enumerate}
+4743: \item If $H^n(\text{gr}(K^\bullet)) = 0$ for all $n < a$, then there exists
+4744: a filtered quasi-isomorphism $K^\bullet \to L^\bullet$ with
+4745: $L^n = 0$ for all $n < a$.
+4746: \item If $H^n(\text{gr}(K^\bullet)) = 0$ for all $n > b$, then there exists
+4747: a filtered quasi-isomorphism $M^\bullet \to K^\bullet$ with
+4748: $M^n = 0$ for all $n > b$.
+4749: \item If $H^n(\text{gr}(K^\bullet)) = 0$ for all $|n| \gg 0$, then there
+4750: exists a commutative diagram of morphisms of complexes
+4751: $$
+4752: \xymatrix{
+4753: K^\bullet \ar[r] & L^\bullet \\
+4754: M^\bullet \ar[u] \ar[r] & N^\bullet \ar[u]
+4755: }
+4756: $$
+4757: where all the arrows are filtered quasi-isomorphisms, $L^\bullet$
+4758: bounded below, $M^\bullet$ bounded above, and $N^\bullet$ a bounded
+4759: complex.
+4760: \end{enumerate}
+4761: \end{lemma}
+4762: 
+4763: \begin{proof}
+4764: Suppose that $H^n(\text{gr}(K^\bullet)) = 0$ for all $n < a$. By
+4765: Homology, Lemma \ref{homology-lemma-filtered-acyclic}
+4766: the sequence
+4767: $$
+4768: K^{a - 2} \xrightarrow{d^{a - 2}} K^{a - 1} \xrightarrow{d^{a - 1}} K^a
+4769: $$
+4770: is an exact sequence of objects of $\mathcal{A}$ and the morphisms
+4771: $d^{a - 2}$ and $d^{a - 1}$ are strict. Hence
+4772: $\Coim(d^{a - 1}) = \Im(d^{a - 1})$ in $\text{Fil}^f(\mathcal{A})$
+4773: and the map $\text{gr}(\Im(d^{a - 1})) \to \text{gr}(K^a)$
+4774: is injective with image equal to the image of
+4775: $\text{gr}(K^{a - 1}) \to \text{gr}(K^a)$, see
+4776: Homology, Lemma \ref{homology-lemma-characterize-strict}.
+4777: This means that the map $K^\bullet \to \tau_{\geq a}K^\bullet$
+4778: into the truncation
+4779: $$
+4780: \tau_{\geq a}K^\bullet =
+4781: (\ldots \to 0 \to K^a/\Im(d^{a - 1}) \to K^{a + 1} \to \ldots)
+4782: $$
+4783: is a filtered quasi-isomorphism. This proves (1). The proof of (2)
+4784: is dual to the proof of (1). Part (3) follows formally from (1) and (2).
+4785: \end{proof}
+4786: 
+4787: \noindent
+4788: To state the following lemma denote
+4789: $\text{FAc}^{+}(\mathcal{A})$, $\text{FAc}^{-}(\mathcal{A})$,
+4790: resp.\ $\text{FAc}^b(\mathcal{A})$ the intersection of
+4791: $K^{+}(\text{Fil}^f\mathcal{A})$, $K^{-}(\text{Fil}^f\mathcal{A})$,
+4792: resp.\ $K^b(\text{Fil}^f\mathcal{A})$ with $\text{FAc}(\mathcal{A})$.
+4793: Denote $\text{FQis}^{+}(\mathcal{A})$, $\text{FQis}^{-}(\mathcal{A})$,
+4794: resp.\ $\text{FQis}^b(\mathcal{A})$ the intersection of
+4795: $K^{+}(\text{Fil}^f\mathcal{A})$, $K^{-}(\text{Fil}^f\mathcal{A})$,
+
+8170: 
+8171: 
+8172: \section{Filtered derived category and injective resolutions}
+8173: \label{section-filtered-derived}
+8174: 
+8175: \noindent
+8176: Let $\mathcal{A}$ be an abelian category. In this section we will show
+8177: that if $\mathcal{A}$ has enough injectives, then so does
+8178: the category $\text{Fil}^f(\mathcal{A})$ in some sense. One
+8179: can use this observation to compute in the filtered derived category
+8180: of $\mathcal{A}$.
+8181: 
+8182: \medskip\noindent
+8183: The category $\text{Fil}^f(\mathcal{A})$ is an example of an
+8184: exact category, see
+8185: Injectives, Remark \ref{injectives-remark-embed-exact-category}.
+8186: A special role is played by the strict morphisms, see
+8187: Homology, Definition \ref{homology-definition-strict},
+8188: i.e., the morphisms $f$ such that $\Coim(f) = \Im(f)$.
+8189: We will say that a complex $A \to B \to C$ in $\text{Fil}^f(\mathcal{A})$ is
+8190: {\it exact} if the sequence $\text{gr}(A) \to \text{gr}(B) \to \text{gr}(C)$
+8191: is exact in $\mathcal{A}$. This implies that $A \to B$ and $B \to C$
+8192: are strict morphisms, see
+8193: Homology, Lemma \ref{homology-lemma-filtered-acyclic}.
+8194: 
+8195: \begin{definition}
+8196: \label{definition-filtered-complexes-notation}
+8197: Let $\mathcal{A}$ be an abelian category.
+8198: We say an object $I$ of $\text{Fil}^f(\mathcal{A})$
+8199: is {\it filtered injective} if each $\text{gr}^p(I)$ is
+8200: an injective object of $\mathcal{A}$.
+8201: \end{definition}
+8202: 
+8203: \begin{lemma}
+8204: \label{lemma-filtered-injective}
+8205: Let $\mathcal{A}$ be an abelian category.
+8206: An object $I$ of $\text{Fil}^f(\mathcal{A})$ is filtered injective
+8207: if and only if
+8208: there exist $a \leq b$, injective objects $I_n$, $a \leq n \leq b$
+8209: of $\mathcal{A}$ and an isomorphism $I \cong \bigoplus_{a \leq n \leq b} I_n$
+8210: such that $F^pI = \bigoplus_{n \geq p} I_n$.
+8211: \end{lemma}
+8212: 
+8213: \begin{proof}
+8214: Follows from the fact that any injection $J \to M$ of $\mathcal{A}$
+8215: is split if $J$ is an injective object. Details omitted.
+8216: \end{proof}
+8217: 
+8218: \begin{lemma}
+8219: \label{lemma-split-strict-monomorphism}
+8220: Let $\mathcal{A}$ be an abelian category.
+8221: Any strict monomorphism $u : I \to A$ of $\text{Fil}^f(\mathcal{A})$
+8222: where $I$ is a filtered injective object is a split injection.
+8223: \end{lemma}
+8224: 
+8225: \begin{proof}
+8226: Let $p$ be the largest integer such that $F^pI \not = 0$.
+8227: In particular $\text{gr}^p(I) = F^pI$.
+8228: Let $I'$ be the object of $\text{Fil}^f(\mathcal{A})$ whose
+8229: underlying object of $\mathcal{A}$ is $F^pI$ and with filtration
+8230: given by $F^nI' = 0$ for $n > p$ and $F^nI' = I' = F^pI$ for
+8231: $n \leq p$. Note that $I' \to I$ is a strict monomorphism too.
+8232: The fact that $u$ is a strict monomorphism implies that
+8233: $F^pI \to A/F^{p + 1}(A)$ is injective, see
+8234: Homology, Lemma \ref{homology-lemma-characterize-strict}.
+8235: Choose a splitting $s : A/F^{p + 1}A \to F^pI$ in $\mathcal{A}$.
+8236: The induced morphism $s' : A \to I'$ is a strict morphism of
+8237: filtered objects splitting the composition $I' \to I \to A$.
+8238: Hence we can write $A = I' \oplus \Ker(s')$ and
+8239: $I = I' \oplus \Ker(s'|_I)$. Note that
+8240: $\Ker(s'|_I) \to \Ker(s')$ is a strict monomorphism
+8241: and that $\Ker(s'|_I)$ is a filtered injective object.
+8242: By induction on the length of the filtration on $I$ the map
+8243: $\Ker(s'|_I) \to \Ker(s')$ is a split injection.
+8244: Thus we win.
+8245: \end{proof}
+8246: 
+8247: \begin{lemma}
+8248: \label{lemma-injective-property-filtered-injective}
+8249: Let $\mathcal{A}$ be an abelian category.
+8250: Let $u : A \to B$ be a strict monomorphism
+
+8286: For any object $A$ of $\text{Fil}^f(\mathcal{A})$ there exists
+8287: a filtered quasi-isomorphism $A[0] \to I^\bullet$
+8288: where $I^\bullet$ is a complex of filtered injective objects
+8289: with $I^n = 0$ for $n < 0$.
+8290: \end{lemma}
+8291: 
+8292: \begin{proof}
+8293: First choose a strict monomorphism $u_0 : A \to I^0$ of $A$ into a filtered
+8294: injective object, see
+8295: Lemma \ref{lemma-strict-monomorphism-into-filtered-injective}.
+8296: Next, choose a strict monomorphism
+8297: $u_1 : \Coker(u_0) \to I^1$ into a filtered injective object of
+8298: $\text{Fil}^f(\mathcal{A})$. Denote $d^0$ the induced map $I^0 \to I^1$.
+8299: Next, choose a strict monomorphism $u_2 : \Coker(u_1) \to I^2$ into
+8300: a filtered injective object of $\text{Fil}^f(\mathcal{A})$. Denote $d^1$ the induced
+8301: map $I^1 \to I^2$. And so on. This works because each
+8302: of the sequences
+8303: $$
+8304: 0 \to \Coker(u_n) \to I^{n + 1} \to \Coker(u_{n + 1}) \to 0
+8305: $$
+8306: is short exact, i.e., induces a short exact sequence on applying
+8307: $\text{gr}$. To see this use
+8308: Homology, Lemma \ref{homology-lemma-characterize-strict}.
+8309: \end{proof}
+8310: 
+8311: \begin{lemma}
+8312: \label{lemma-filtered-injective-right-resolution-map}
+8313: Let $\mathcal{A}$ be an abelian category with enough injectives.
+8314: Let $f : A \to B$ be a morphism of $\text{Fil}^f(\mathcal{A})$.
+8315: Given filtered quasi-isomorphisms $A[0] \to I^\bullet$ and
+8316: $B[0] \to J^\bullet$ where $I^\bullet, J^\bullet$ are complexes of
+8317: filtered injective objects with $I^n = J^n = 0$ for $n < 0$, then
+8318: there exists a commutative diagram
+8319: $$
+8320: \xymatrix{
+8321: A[0] \ar[r] \ar[d] &
+8322: B[0] \ar[d] \\
+8323: I^\bullet \ar[r] &
+8324: J^\bullet
+8325: }
+8326: $$
+8327: \end{lemma}
+8328: 
+8329: \begin{proof}
+8330: As $A[0] \to I^\bullet$ and $B[0] \to J^\bullet$ are filtered
+8331: quasi-isomorphisms we conclude that $a : A \to I^0$, $b : B \to J^0$
+8332: and all the morphisms $d_I^n$, $d_J^n$ are strict, see
+8333: Homology, Lemma \ref{homology-lemma-filtered-acyclic}.
+8334: We will inductively construct the maps $f^n$ in the following
+8335: commutative diagram
+8336: $$
+8337: \xymatrix{
+8338: A \ar[r]_a \ar[d]_f &
+8339: I^0 \ar[r] \ar[d]^{f^0} &
+8340: I^1 \ar[r] \ar[d]^{f^1} &
+8341: I^2 \ar[r] \ar[d]^{f^2} &
+8342: \ldots \\
+
+8370: $\text{Fil}^f(\mathcal{A})$.
+8371: Given filtered quasi-isomorphisms $A[0] \to I^\bullet$ and
+8372: $C[0] \to J^\bullet$ where $I^\bullet, J^\bullet$ are complexes of
+8373: filtered injective objects with $I^n = J^n = 0$ for $n < 0$, then
+8374: there exists a commutative diagram
+8375: $$
+8376: \xymatrix{
+8377: 0 \ar[r] &
+8378: A[0] \ar[r] \ar[d] &
+8379: B[0] \ar[r] \ar[d] &
+8380: C[0] \ar[r] \ar[d] &
+8381: 0 \\
+8382: 0 \ar[r] &
+8383: I^\bullet \ar[r] &
+8384: M^\bullet \ar[r] &
+8385: J^\bullet \ar[r] &
+8386: 0
+8387: }
+8388: $$
+8389: where the lower row is a termwise split sequence of complexes.
+8390: \end{lemma}
+8391: 
+8392: \begin{proof}
+8393: As $A[0] \to I^\bullet$ and $C[0] \to J^\bullet$ are filtered
+8394: quasi-isomorphisms we conclude that $a : A \to I^0$, $c : C \to J^0$
+8395: and all the morphisms $d_I^n$, $d_J^n$ are strict, see
+8396: Homology, Lemma \ref{homology-lemma-filtered-acyclic}.
+8397: We are going to step by step construct the south-east and the south
+8398: arrows in the following commutative diagram
+8399: $$
+8400: \xymatrix{
+8401: B \ar[r]_\beta \ar[rd]^b &
+8402: C \ar[r]_c \ar[rd]^{\overline{b}} &
+8403: J^0 \ar[d]^{\delta^0} \ar[r] &
+8404: J^1 \ar[d]^{\delta^1} \ar[r] & \ldots \\
+8405: A \ar[u]^\alpha \ar[r]^a &
+8406: I^0 \ar[r] &
+8407: I^1 \ar[r] &
+8408: I^2 \ar[r] & \ldots
+
+8558: \begin{proof}
+8559: Let $\alpha : K^\bullet \to I^\bullet$ be a morphism of
+8560: complexes. Assume that $\alpha^j = 0$ for $j < n$.
+8561: We will show that there exists a morphism $h : K^{n + 1} \to I^n$
+8562: such that $\alpha^n = h \circ d$. Thus $\alpha$ will be homotopic
+8563: to the morphism of complexes $\beta$ defined by
+8564: $$
+8565: \beta^j =
+8566: \left\{
+8567: \begin{matrix}
+8568: 0 & \text{if} & j \leq n \\
+8569: \alpha^{n + 1} - d \circ h & \text{if} & j = n + 1 \\
+8570: \alpha^j & \text{if} & j > n + 1
+8571: \end{matrix}
+8572: \right.
+8573: $$
+8574: This will clearly prove the lemma (by induction).
+8575: To prove the existence of $h$ note that
+8576: $\alpha^n \circ d_K^{n - 1} = 0$ since
+8577: $\alpha^{n - 1} = 0$. Since $K^\bullet$ is filtered acyclic
+8578: we see that $d_K^{n - 1}$ and $d_K^n$ are strict and that
+8579: $$
+8580: 0 \to \Im(d_K^{n - 1}) \to K^n \to \Im(d_K^n) \to 0
+8581: $$
+8582: is an exact sequence of the exact category $\text{Fil}^f(\mathcal{A})$, see
+8583: Homology, Lemma \ref{homology-lemma-filtered-acyclic}.
+8584: Hence we can think of $\alpha^n$ as a map into $I^n$ defined
+8585: on $\Im(d_K^n)$.
+8586: Using that $\Im(d_K^n) \to K^{n + 1}$ is a strict monomorphism
+8587: and that $I^n$ is filtered injective we may lift this map to a map
+8588: $h : K^{n + 1} \to I^n$ as desired, see
+8589: Lemma \ref{lemma-injective-property-filtered-injective}.
+8590: \end{proof}
+8591: 
+8592: \begin{lemma}
+8593: \label{lemma-morphisms-into-filtered-injective-complex}

@@ -1,0 +1,101 @@
+8875: $E_1^{p, q} = R^{p + q}T(\text{gr}^p(K^\bullet))$.
+8876: 
+8877: \medskip\noindent
+8878: On the other hand, each $I^n$ has a finite filtration and hence
+8879: each $T(I^n)$ has a finite filtration. Thus we may apply
+8880: Homology, Lemma \ref{homology-lemma-biregular-ss-converges}
+8881: to conclude that the spectral sequence is bounded, converges to
+8882: $H^*(T(I^\bullet)) = R^*T(K^\bullet)$
+8883: and induces a finite filtration on each $H^n(T(I^\bullet)) = R^nT(K^\bullet)$.
+8884: 
+8885: \medskip\noindent
+8886: Suppose that $K^\bullet \to L^\bullet$ is a morphism of
+8887: $\text{Comp}^{+}(\text{Fil}^f(\mathcal{A}))$.
+8888: Choose a filtered quasi-isomorphism $L^\bullet \to J^\bullet$
+8889: with $J^\bullet$ a bounded below complex of filtered injective
+8890: objects, see
+8891: Lemma \ref{lemma-right-resolution-by-filtered-injectives}.
+8892: By our results above,
+8893: for example
+8894: Lemma \ref{lemma-morphisms-into-filtered-injective-complex},
+8895: there exists a diagram
+8896: $$
+8897: \xymatrix{
+8898: K^\bullet \ar[r] \ar[d] & L^\bullet \ar[d] \\
+8899: I^\bullet \ar[r] & J^\bullet
+8900: }
+8901: $$
+8902: which commutes up to homotopy. Hence we get a morphism of filtered
+8903: complexes $T(I^\bullet) \to T(J^\bullet)$ which gives rise to the
+8904: morphism of spectral sequences, see
+8905: Homology,
+8906: Lemma \ref{homology-lemma-spectral-sequence-filtered-complex-functorial}.
+8907: The last statement follows from this.
+8908: \end{proof}
+8909: 
+8910: \begin{remark}
+8911: \label{remark-final-functorial}
+8912: As promised in Remark \ref{remark-functorial-ss} we discuss the connection
+8913: of the lemma above with the constructions using Cartan-Eilenberg resolutions.
+8914: Namely, let $T : \mathcal{A} \to \mathcal{B}$ be a left exact functor
+8915: of abelian categories, assume $\mathcal{A}$
+8916: has enough injectives, and let $K^\bullet$ be a bounded below complex
+8917: of $\mathcal{A}$. We give an alternative construction of the
+8918: spectral sequences ${}'E$ and ${}''E$ of
+8919: Lemma \ref{lemma-two-ss-complex-functor}.
+8920: 
+8921: \medskip\noindent
+8922: First spectral sequence. Consider the ``stupid'' filtration on $K^\bullet$
+8923: obtained by setting $F^p(K^\bullet) = \sigma_{\geq p}(K^\bullet)$, see
+8924: Homology, Section \ref{homology-section-truncations}.
+8925: Note that this is stupid in the sense that
+8926: $d(F^p(K^\bullet)) \subset F^{p + 1}(K^\bullet)$, compare
+8927: Homology, Lemma \ref{homology-lemma-spectral-sequence-filtered-complex-d1}.
+8928: Note that $\text{gr}^p(K^\bullet) = K^p[-p]$ with this filtration.
+8929: According to Lemma \ref{lemma-ss-filtered-derived} there is a spectral sequence
+8930: with $E_1$ term
+8931: $$
+8932: E_1^{p, q} = R^{p + q}T(K^p[-p]) = R^qT(K^p)
+8933: $$
+8934: as in the spectral sequence ${}'E_r$. Observe moreover that the differentials
+8935: $E_1^{p, q} \to E_1^{p + 1, q}$ agree with the differentials in $'{}E_1$, see
+8936: Homology, Lemma
+8937: \ref{homology-lemma-spectral-sequence-filtered-complex-d1} part (2)
+8938: and the description of ${}'d_1$ in the proof of
+8939: Lemma \ref{lemma-two-ss-complex-functor}.
+8940: 
+8941: \medskip\noindent
+8942: Second spectral sequence. Consider the filtration on the complex $K^\bullet$
+8943: obtained by setting $F^p(K^\bullet) = \tau_{\leq -p}(K^\bullet)$, see
+8944: Homology, Section \ref{homology-section-truncations}.
+8945: The minus sign is necessary
+8946: to get a decreasing filtration. Note that
+8947: $\text{gr}^p(K^\bullet)$ is quasi-isomorphic to $H^{-p}(K^\bullet)[p]$
+8948: with this filtration. According to Lemma \ref{lemma-ss-filtered-derived}
+8949: there is a spectral sequence with $E_1$ term
+8950: $$
+8951: E_1^{p, q} = R^{p + q}T(H^{-p}(K^\bullet)[p])
+8952: = R^{2p + q}T(H^{-p}(K^\bullet)) = {}''E_2^{i, j}
+8953: $$
+8954: with $i = 2p + q$ and $j = -p$. (This looks unnatural, but note that we
+8955: could just as well have developed the whole theory of filtered complexes
+8956: using increasing filtrations, with the end result that this then looks
+8957: natural, but the other one doesn't.) We leave it to the reader to see
+8958: that the differentials match up.
+8959: 
+8960: \medskip\noindent
+8961: Actually, given a Cartan-Eilenberg resolution
+8962: $K^\bullet \to I^{\bullet, \bullet}$ the induced morphism
+8963: $K^\bullet \to \text{Tot}(I^{\bullet, \bullet})$
+8964: into the associated total complex
+8965: will be a filtered injective resolution for either filtration
+8966: using suitable filtrations on $\text{Tot}(I^{\bullet, \bullet})$.
+8967: This can be used
+8968: to match up the spectral sequences exactly.
+8969: \end{remark}
+8970: 
+8971: 
+8972: 
+8973: 
+8974: 
+8975: 
