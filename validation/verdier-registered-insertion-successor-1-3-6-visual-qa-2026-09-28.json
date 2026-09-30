@@ -1,0 +1,298 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-09-28T05:17:03Z",
+  "description": "Complete visual QA of the 131-page Derived Categories PDF after the Verdier II.1.3.6 registered insertion: every page inspected in ordered contact sheets and the insertion locus plus its immediate neighbours inspected at 220 DPI.",
+  "inspection_by": "OpenAI Codex — GPT-5.6 Sol, Ultra",
+  "source": {
+    "commit": "e7cd252c6b45c30b260af95a1c472c81e474a876",
+    "tree": "27bfa5595c19a1fb797af7d68890f3b0fd372988"
+  },
+  "build_receipt": {
+    "path": "validation/verdier-registered-insertion-successor-1-3-6-build-a-2026-09-28.json",
+    "bytes": 838750,
+    "sha256": "5AAEC0EDE4A0B9BDFBC86385F03E3FF8389663567CD114A0D0804F67A6163A2F",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "derived"
+    ],
+    "verdier_registered_insertion": {
+      "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+      "operation_id": "VDR-STK-COMP-0002",
+      "stable_ids": [
+        "verdier:ast239:1.3.6",
+        "verdier:ast239:1.3.6:equivalent-conditions",
+        "verdier:ast239:1.3.6:proof:i-iff-ii",
+        "verdier:ast239:1.3.6:proof:ii-implies-iii",
+        "verdier:ast239:1.3.6:construction:hstar-complex",
+        "verdier:ast239:1.3.6:claim:hstar-equivalence",
+        "verdier:ast239:1.3.6:conclusion:iii-implies-ii"
+      ],
+      "candidate_freeze_commit": "65da408e2209f68e134067bf8102f68522062a5c",
+      "review_commit": "0585dcb826a8025a7182b55f1ab62beeb1956e14",
+      "preparation_commit": "68cd2f4bb103a392e4203cd7b3607e64f92dbcaf",
+      "admission_commit": "fc7f95c13e52d8dd575dcdcbc2db0b73021126e0",
+      "composition_commit": "f21cd2561e30e077dcd5914b72f934c41a098ca5",
+      "validation_repair_commit": "4907dd5f0173981c32a5d323a9e534aaeae01736",
+      "lease_issue_event": "lease-event-000124",
+      "lease_release_event": "lease-event-000125"
+    },
+    "full_page_render_count": 131,
+    "full_page_contact_sheet_review_count": 131,
+    "full_page_contact_sheet_count": 9,
+    "high_resolution_locus_pages": {
+      "derived": [
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    "high_resolution_locus_page_count": 4,
+    "review_scope": "All 131 pages received a contact-sheet layout review. PDF pages 36-39 received direct 220-DPI inspection; Lemma 10.4 occupies pages 37-38 and pages 36 and 39 establish clean neighbouring flow. This is visual QA, not a new whole-chapter mathematical proof audit."
+  },
+  "artifacts": {
+    "derived": {
+      "pdf": "derived.pdf",
+      "pages": 131,
+      "bytes": 1256575,
+      "sha256": "9A39DB587854D70AB7B721DB39A1355DB5E2D39D6261C98A0BB3189820DB59BA",
+      "encrypted": false,
+      "pages_without_ink": 0,
+      "duplicate_render_hashes": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "full_page_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "minimum_ink_pixels_below_245": 31209
+    }
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm",
+    "full_page_dpi": 96,
+    "high_resolution_dpi": 220,
+    "contact_sheets": "Nine ordered 4-by-4 sheets; all 131 page tiles inspected for layout and continuity.",
+    "render_intermediates_published": false,
+    "text_extraction_role": "No text extraction substituted for image inspection.",
+    "tex_launched_for_qa": false
+  },
+  "insertion_locus_inspection": {
+    "pdf": "derived.pdf",
+    "pages": [
+      {
+        "page": 36,
+        "role": "preceding_context",
+        "status": "PASS",
+        "observation": "End of Proposition 10.3 and its TR proofs remains within the text block; formulas, diagram, links, header, page number, and lower margin are intact."
+      },
+      {
+        "page": 37,
+        "role": "insertion_start",
+        "status": "PASS",
+        "observation": "Lemma 10.4 begins after the preceding proof with normal vertical separation. The three equivalent conditions, displayed H-star functor, short exact sequence, decompositions, and contracting homotopy are legible and unclipped."
+      },
+      {
+        "page": 38,
+        "role": "insertion_end",
+        "status": "PASS",
+        "observation": "The H-star equivalence proof ends cleanly before Remark 10.5; the explicit non-naturality sentence is visible. Subsequent Lemmas 10.6-10.8 retain normal spacing and margins."
+      },
+      {
+        "page": 39,
+        "role": "following_context",
+        "status": "PASS",
+        "observation": "Continuation of Lemma 10.8 and Remarks 10.9-10.10 is complete; large displays and prose remain inside the page body with no collision or discontinuity."
+      }
+    ]
+  },
+  "full_page_overview_inspections": [
+    {
+      "sheet": 1,
+      "pages": [
+        1,
+        16
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Contents, opening definitions, diagrams, proofs, running headers, and page numbers are consistently placed; no blank, clipped, duplicated, or corrupted page is visible.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 866290,
+        "sha256": "44531A899E49927173382B0845A3B6C6EB190FBE36A085C5264686588F5D0FFA"
+      }
+    },
+    {
+      "sheet": 2,
+      "pages": [
+        17,
+        32
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Triangulated-category and homotopy-category formulas and commutative diagrams remain within margins; dense proof pages retain intact lower edges.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 885493,
+        "sha256": "56EC7400A919BC343E5D7FFF156F6A3B1AD924EEE4FF6B7FE265B824B5C1ECC4"
+      }
+    },
+    {
+      "sheet": 3,
+      "pages": [
+        33,
+        48
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "The Verdier insertion on pages 37-38 and surrounding constructions flow normally; formulas, references, proof boxes, section transition, and diagrams are intact.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 922545,
+        "sha256": "E47CEEB531B88CD649B03ECCE645448ADBC77812BD5434CB0B73F5BBC1F2646D"
+      }
+    },
+    {
+      "sheet": 4,
+      "pages": [
+        49,
+        64
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Filtered derived-category material, displays, and diagrams retain consistent page geometry, legible labels, and uninterrupted proof flow.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 908406,
+        "sha256": "E0F78C7FE568F9FFB8374D08065C61ED7C11FF3059CE3E167E18AA58EE2F7DE6"
+      }
+    },
+    {
+      "sheet": 5,
+      "pages": [
+        65,
+        80
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Injective and projective resolution sections show regular margins and headers; exact-sequence diagrams and long displays are complete.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 868241,
+        "sha256": "EA0774CDF788981E595B3A0FF28AA5D39E8524E71913795C9BC42917B1B36411"
+      }
+    },
+    {
+      "sheet": 6,
+      "pages": [
+        81,
+        96
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Derived functor and K-projective/K-injective discussions remain readable; larger diagrams and bottom-of-page continuations are not clipped.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 869114,
+        "sha256": "F2171848117ABD28A682921C9DADA2EF1DF9B6516DFA016280AE68739EF4D146"
+      }
+    },
+    {
+      "sheet": 7,
+      "pages": [
+        97,
+        112
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Derived adjunction, dimensions, and triangulated-category generators render with consistent hierarchy, complete formulas, and intact diagrams.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 877737,
+        "sha256": "5EA0D41D9C20A0C03C10D36A3BD617D5C2EDBACF54805B513E549043F5F3F953"
+      }
+    },
+    {
+      "sheet": 8,
+      "pages": [
+        113,
+        128
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "Compact-object, Brown representability, and Postnikov-system pages retain regular layout; wide diagrams remain inside the text area.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 883562,
+        "sha256": "8E15752CB995EEACF0E9D46F0279634B0602C53EEDC40E51E7D4520A7C812CD5"
+      }
+    },
+    {
+      "sheet": 9,
+      "pages": [
+        129,
+        131
+      ],
+      "status": "PASS_LAYOUT_OVERVIEW",
+      "observation": "The final proof, two-column chapter index, and bibliography are complete. The intentionally short closing page is partially filled but not blank or corrupted.",
+      "private_contact_sheet": {
+        "published": false,
+        "bytes": 181326,
+        "sha256": "23544D9047DF82D76F679C14C5E0311EC33BCBD5E27AE4CC78475AE521F80931"
+      }
+    }
+  ],
+  "private_evidence": {
+    "published": false,
+    "render_manifest": {
+      "bytes": 43486,
+      "sha256": "3EC5571C8883867A9BE1C4606BE6A6221E971D707495FA8E0216015665C33621"
+    },
+    "high_resolution_renders": [
+      {
+        "page": 36,
+        "bytes": 529456,
+        "sha256": "F905D79BFC98B32CEAF5B685D14CF07F75692DB8502CA2E7F5C2A4669CD6E844"
+      },
+      {
+        "page": 37,
+        "bytes": 466968,
+        "sha256": "9A2FFA9983D2E6B2A6806B98098705A0F95DCD8285ED28E538611A54F9AE2818"
+      },
+      {
+        "page": 38,
+        "bytes": 575493,
+        "sha256": "937D5EDC40E8B6C5B39E772CE388E7B991819ED0C7A398523EDE85F47FBECEA6"
+      },
+      {
+        "page": 39,
+        "bytes": 456741,
+        "sha256": "63172D4BE6A40B541D1C5E8A923FE9EF44AE5ACAB4DA5E8FE5B916DA2875940D"
+      }
+    ]
+  },
+  "reader_facing_limitations": [
+    {
+      "kind": "existing_external_reference_placeholders",
+      "description": "References to chapters outside the 36-chapter build profile can display existing external-reference placeholders. The fixed-point build reports no newly unclassified undefined reference, citation, glyph, destination, or rerun warning."
+    }
+  ],
+  "claim_boundary": "PASS means the stated complete rendered-page layout review and insertion-locus checks passed. It does not claim a new proof audit of every theorem or removal of every inherited editorial limitation."
+}

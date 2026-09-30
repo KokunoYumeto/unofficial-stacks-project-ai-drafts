@@ -21,12 +21,14 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R58 and the Verdier insertion**: 59
-admitted overlays with 2,213 stable units (2,201 correction IDs and 12 Verdier
+The cumulative source includes **R1–R58 and three Verdier insertions**: 61
+admitted overlays with 2,243 stable units (2,201 correction IDs and 42 Verdier
 units). Admission and source composition are separate checks. The
 [R58 successor receipt](../validation/r58-successor-current.json) binds its
-690 exact source operations, identified companion notices and validation; its immutable R57 predecessor
-preserves all earlier source and evidence. The older
+690 exact source operations, identified companion notices and validation. The
+[concurrent integration record](../validation/r58-concurrent-integration-2026-09-30.json)
+preserves the separately published Verdier additions and both registry histories.
+The older
 [composition receipt](../validation/composition-current.json) remains historical
 and is not a claim that it already described these later updates. The
 [chapter-by-chapter comparison](changes/index.html) shows original and

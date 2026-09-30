@@ -1,0 +1,244 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "review_id": "verdier-ast239-1-3-6-r1-lease-64-replay",
+  "candidate_id": "stacks-verdier-a04446e-1-3-6-r1",
+  "status": "PASS",
+  "passed": true,
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "reviewed_at_utc": "2026-09-26T20:58:11.3437416Z",
+  "reviewer_role": "lease-transport replay auditor binding a prior separately performed mathematical review",
+  "reviewer_separation": {
+    "new_task_or_session_created": false,
+    "reason": "The current workspace directive forbids creating another task or worker. The mathematical and source review was already performed by a separate reviewer and is preserved byte-for-byte in commit 288a082f3f98438d824c22d1534fb168edd05728. This replay independently rechecks the newly frozen lease-bound packet and proves that no mathematical, source-map, payload, composition, build, or visual-evidence byte changed.",
+    "current_replay_scope": "current public baseline, registry lease identity, frozen candidate closure, unchanged mathematical bytes, nonduplication, references, and insertion-only projection"
+  },
+  "ai_disclosure": {
+    "system": "OpenAI Codex",
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "Ultra",
+    "human_review_claimed": false
+  },
+  "frozen_candidate": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts",
+    "candidate_git_path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1",
+    "commit": "65da408e2209f68e134067bf8102f68522062a5c",
+    "repository_tree": "bb8fb0db2fd0f87e5667a2a7863d178eb12a792b",
+    "candidate_subtree": "10543dcad93da4c0c0bf95d2ddf376ce2b76ccca",
+    "manifest": {
+      "path": "candidate.manifest.json",
+      "git_blob": "2c0c6c692a62ef6a5194a25d5fef69ab16771651",
+      "bytes": 5221,
+      "sha256": "04E7C56746490BE7E9642165C3A76653B2D099CA366616CF76ECDF929599E3AB",
+      "declared_references": 29,
+      "unique_references": 29,
+      "closure_complete": true
+    }
+  },
+  "public_base": {
+    "commit": "4828ebac86db7ebf4211227cabe183b09f11c992",
+    "tree": "d351c98e5a4655f20b2ddf34783314cda21e6c91",
+    "is_first_parent_of_provenance_merge": true,
+    "provenance_merge": "3102126f69604d3008029cd098f6a790acd9f027",
+    "derived_tex": {
+      "git_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+      "bytes": 452054,
+      "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+      "identical_to_original_composition_base": true
+    }
+  },
+  "lease_registry": {
+    "issue_commit": "8b5c4fb74822a225ce8aaa227d0496b9978b9db0",
+    "issue_event": "lease-event-000124",
+    "lease_id": "stacks-lease-000064-verdier-ast239-1-3-6-r1",
+    "namespace": "commons/stacks/verdier-ast239-1-3-6-r1",
+    "candidate_path": "candidates/commons/stacks/verdier-ast239-1-3-6-r1",
+    "issued_at_utc": "2026-09-26T20:53:18.9837344Z",
+    "public_prefix_events": 123,
+    "issue_state_events": 124,
+    "public_prefix_preserved": true,
+    "issue_registry_sha256": "7373D56B6BB221B405C4266E83752C241FD2E42D42BDB090B0AAC4C81D138627",
+    "lineage": "fresh root; issue event intentionally has no supersedes_event_id",
+    "schema_validation": "PASS"
+  },
+  "inherited_independent_mathematical_review": {
+    "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/replay/independent-review.json",
+    "containing_commit": "288a082f3f98438d824c22d1534fb168edd05728",
+    "git_blob": "e6a5d7c6522629149b1cd05f5c8a9bfe2d46a49e",
+    "bytes": 22927,
+    "sha256": "280FC5B83193563AA5DA92FB024B6FDC3824790DFCBD6650AEFDF79876FA62BA",
+    "status": "PASS",
+    "passed": true,
+    "reviewer_was_separate_from_candidate_writer": true,
+    "unresolved_defects": [],
+    "scope": "all source units, authority locators, proof steps, six Stacks references, nonduplication, build and visual evidence, and insertion-only projection"
+  },
+  "exact_delta_from_reviewed_packet": {
+    "reviewed_packet_commit": "288a082f3f98438d824c22d1534fb168edd05728",
+    "new_frozen_commit": "65da408e2209f68e134067bf8102f68522062a5c",
+    "changed_candidate_paths": [
+      "LEASE.json",
+      "README.md",
+      "candidate.config.json",
+      "candidate.manifest.json",
+      "decisions.jsonl",
+      "formula-diagram-inventory.json",
+      "rejections.jsonl",
+      "replay/independent-review.json",
+      "stable-units.json"
+    ],
+    "change_classification": "lease pointer, lifecycle reset, manifest reseal, truthful decision/rejection history, AI disclosure, and removal of the stale review receipt before replay",
+    "unchanged_mathematical_and_evidence_files": [
+      {
+        "path": "payload/fragments/derived-homotopy-category-abelian-split.tex",
+        "git_blob": "21303a3a85b27b0fda2790a61de49f44d76076e1",
+        "bytes": 3673,
+        "sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E"
+      },
+      {
+        "path": "source-map.jsonl",
+        "git_blob": "542ca0df9b52d8c8e27868108591f230a4fd8b56",
+        "bytes": 7340,
+        "sha256": "742383E24BB69BBC775401313E8AC49A154F325FF3117CD10E6A27718FA8AF70"
+      },
+      {
+        "path": "composition.jsonl",
+        "git_blob": "37194587a44312a44f027ba31f000bd71a2d03ac",
+        "bytes": 1885,
+        "sha256": "C3DD45A0CAF2263EF7FF645F0573AE775112012A681706420DB9A86C47F242D7"
+      },
+      {
+        "path": "authority/authority.lock.json",
+        "git_blob": "36ce2caed7a7513a6956d67c4f74cd1488bbe0ca",
+        "bytes": 2602,
+        "sha256": "BE5854692B1470F74ABA10B84DD057B0F7D209C23863D40B426904EA2FFABE03"
+      },
+      {
+        "path": "builds/build-receipt.json",
+        "git_blob": "edf3d050134aebf4700621095724d5a36ff1f263",
+        "bytes": 2472,
+        "sha256": "5CD5F1A6B2A8B0A1DAA9E04F705AF5F334C21108CF242EC432FE090750C3F42D"
+      },
+      {
+        "path": "builds/validation.json",
+        "git_blob": "4949498e548f7e6a3150595c9a31cb1376ee91c9",
+        "bytes": 1468,
+        "sha256": "D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB"
+      },
+      {
+        "path": "builds/visual-qa.json",
+        "git_blob": "c89b8ed566213e922dda8169011149a7ac309ec9",
+        "bytes": 1758,
+        "sha256": "EA4A81FA009E323BE18F25D23AE2A0DEF2AA450354A66CC087EFF3C8FDF6D4D2"
+      }
+    ],
+    "mathematical_payload_changed": false,
+    "source_mapping_changed": false,
+    "composition_operation_changed": false,
+    "build_or_visual_evidence_changed": false
+  },
+  "authority": {
+    "work": "Astérisque 239",
+    "pdf": {
+      "path": "C:/Users/Floris/Documents/Papors/OS/AST_1996__239__R1_0.pdf",
+      "bytes": 19188423,
+      "pages": 270,
+      "sha256": "6214C252BACEBA5584E3C4AEB564C129851941C1A9250BABAB45B79A3939B0AE"
+    },
+    "english_source": {
+      "path": "content/en/p125.tex",
+      "physical_page": 125,
+      "sha256": "01D96DD78685171DB3897E129FC3085A4343AC7297169D60C3FA3C6A9E52C532"
+    },
+    "source_units": [
+      {"unit_id": "verdier:ast239:1.3.6", "anchor": "ch2-1-3-6", "sequence": 1184},
+      {"unit_id": "verdier:ast239:1.3.6:equivalent-conditions", "anchor": "ch2-1-3-6-equivalent-conditions", "sequence": 1185},
+      {"unit_id": "verdier:ast239:1.3.6:proof:i-iff-ii", "anchor": "ch2-1-3-6-i-iff-ii", "sequence": 1186},
+      {"unit_id": "verdier:ast239:1.3.6:proof:ii-implies-iii", "anchor": "ch2-1-3-6-ii-implies-iii", "sequence": 1187},
+      {"unit_id": "verdier:ast239:1.3.6:construction:hstar-complex", "anchor": "ch2-1-3-6-hstar-complex", "sequence": 1188},
+      {"unit_id": "verdier:ast239:1.3.6:claim:hstar-equivalence", "anchor": "ch2-1-3-6-hstar-equivalence", "sequence": 1189},
+      {"unit_id": "verdier:ast239:1.3.6:conclusion:iii-implies-ii", "anchor": "ch2-1-3-6-proof-complete", "sequence": 1190}
+    ]
+  },
+  "stable_ids": [
+    "verdier:ast239:1.3.6",
+    "verdier:ast239:1.3.6:equivalent-conditions",
+    "verdier:ast239:1.3.6:proof:i-iff-ii",
+    "verdier:ast239:1.3.6:proof:ii-implies-iii",
+    "verdier:ast239:1.3.6:construction:hstar-complex",
+    "verdier:ast239:1.3.6:claim:hstar-equivalence",
+    "verdier:ast239:1.3.6:conclusion:iii-implies-ii"
+  ],
+  "payload": {
+    "path": "payload/fragments/derived-homotopy-category-abelian-split.tex",
+    "bytes": 3673,
+    "sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E",
+    "proposed_label": "lemma-homotopy-category-abelian-split",
+    "mathematical_review": "PASS",
+    "proof_checks": [
+      "the existing pre-triangulated split-form criterion supplies the first equivalence without duplicating Tag 05QU",
+      "the degree-zero-complex argument turns aba=a into ba=1 for a monomorphism and splits short exact sequences",
+      "split cycle and boundary sequences give X^n = B^n plus H^n plus B^(n+1) with the stated differential",
+      "the displayed contracting homotopy contracts the boundary summand",
+      "cohomology on morphisms is full, faithful, and essentially surjective through the chosen decompositions",
+      "the zero-differential subcategory is the abelian category of graded objects",
+      "the final note correctly avoids asserting naturality of the chosen decomposition"
+    ]
+  },
+  "stacks_references": [
+    {"tag": "014S", "label": "proposition-homotopy-category-triangulated", "status": "present_once"},
+    {"tag": "05QU", "label": "lemma-when-split", "status": "present_once"},
+    {"tag": "0109", "label": "homology-definition-abelian-category", "status": "present_once"},
+    {"tag": "0116", "label": "homology-lemma-map-cohomology-homotopy-cochain", "status": "present_once"},
+    {"tag": "0125", "label": "homology-definition-graded", "status": "present_once"},
+    {"tag": "0126", "label": "homology-lemma-graded", "status": "present_once"}
+  ],
+  "nonduplication": {
+    "public_overlay_count": 58,
+    "public_unique_stable_ids": 1653,
+    "candidate_id_matches": 0,
+    "candidate_stable_id_matches": 0,
+    "target_label_matches": 0,
+    "payload_matches": 0,
+    "status": "PASS"
+  },
+  "insertion_only_composition": {
+    "operation_id": "VDR-STK-COMP-0002",
+    "target": "derived.tex",
+    "mode": "insertion_only",
+    "public_preimage_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37",
+    "public_preimage_bytes": 452054,
+    "public_preimage_sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+    "projected_postimage_bytes": 455727,
+    "projected_postimage_sha256": "726404F52F8E9EFD8D091DA3BF0EE9A1B288E6CFCC7A24DAD20ACB92926C62CE",
+    "prefix_preserved": true,
+    "suffix_preserved": true,
+    "writes_performed": false,
+    "status": "PASS"
+  },
+  "pre_receipt_validators": {
+    "build_manifest": "PASS",
+    "check_manifest": "PASS",
+    "verify": "PASS",
+    "manifest_sha256": "04E7C56746490BE7E9642165C3A76653B2D099CA366616CF76ECDF929599E3AB"
+  },
+  "post_receipt_lifecycle": {
+    "required_transition": "set review_state performed and independent_replay passed; bind this receipt in a regenerated final manifest",
+    "admission_state": "not_admitted",
+    "composition_state": "not_performed",
+    "publication_state": "not_performed"
+  },
+  "check_results": {
+    "frozen_candidate_closure": "PASS",
+    "current_public_baseline": "PASS",
+    "lease_identity": "PASS",
+    "inherited_independent_mathematical_review": "PASS",
+    "unchanged_mathematical_bytes": "PASS",
+    "authority_and_source_units": "PASS",
+    "stacks_reference_closure": "PASS",
+    "mathematical_proof": "PASS",
+    "nonduplication": "PASS",
+    "insertion_only_projection": "PASS"
+  },
+  "unresolved_defects": []
+}

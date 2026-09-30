@@ -1,0 +1,646 @@
+{
+  "schema": "stacks-r58-concurrent-integration/v1",
+  "status": "PASS_LOCAL_RECONCILIATION",
+  "recorded_at_utc": "2026-09-30T03:35:15.269840+00:00",
+  "common_published_predecessor": "4828ebac86db7ebf4211227cabe183b09f11c992",
+  "local_predecessor": "db4ab5225904b2161697d7264148326b20edc21d",
+  "public_predecessor": "9629f0c7311926edf85b1c5ca045a1478becebcc",
+  "public_registry_prefix_preserved_exactly": true,
+  "r58_overlay_entry_preserved_exactly": true,
+  "candidate_contents_changed": false,
+  "original_r58_events_preserved_at_commit": "db4ab5225904b2161697d7264148326b20edc21d",
+  "lease_event_transport": [
+    {
+      "original": {
+        "event_id": "lease-event-000124",
+        "event": "issued",
+        "lease_id": "stacks-lease-000064-errata-r58",
+        "namespace": "commons/stacks/errata/r58",
+        "candidate_path": "candidates/commons/stacks/errata/r58",
+        "writer_task": "01a0cc46-4ba8-77b1-9c55-33449e55fea7",
+        "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+        "issued_at_utc": "2026-09-29T21:17:48.838405Z",
+        "state": "active",
+        "writer_contract": "candidates/CONTRACT.md"
+      },
+      "transported": {
+        "event_id": "lease-event-000128",
+        "event": "issued",
+        "lease_id": "stacks-lease-000064-errata-r58",
+        "namespace": "commons/stacks/errata/r58",
+        "candidate_path": "candidates/commons/stacks/errata/r58",
+        "writer_task": "01a0cc46-4ba8-77b1-9c55-33449e55fea7",
+        "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+        "issued_at_utc": "2026-09-29T21:17:48.838405Z",
+        "state": "active",
+        "writer_contract": "candidates/CONTRACT.md"
+      }
+    },
+    {
+      "original": {
+        "event_id": "lease-event-000125",
+        "event": "released",
+        "lease_id": "stacks-lease-000064-errata-r58",
+        "namespace": "commons/stacks/errata/r58",
+        "candidate_path": "candidates/commons/stacks/errata/r58",
+        "writer_task": "01a0cc46-4ba8-77b1-9c55-33449e55fea7",
+        "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+        "issued_at_utc": "2026-09-30T03:28:02.710530+00:00",
+        "state": "released",
+        "writer_contract": "candidates/CONTRACT.md",
+        "supersedes_event_id": "lease-event-000124"
+      },
+      "transported": {
+        "event_id": "lease-event-000129",
+        "event": "released",
+        "lease_id": "stacks-lease-000064-errata-r58",
+        "namespace": "commons/stacks/errata/r58",
+        "candidate_path": "candidates/commons/stacks/errata/r58",
+        "writer_task": "01a0cc46-4ba8-77b1-9c55-33449e55fea7",
+        "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+        "issued_at_utc": "2026-09-30T03:28:02.710530+00:00",
+        "state": "released",
+        "writer_contract": "candidates/CONTRACT.md",
+        "supersedes_event_id": "lease-event-000128"
+      }
+    }
+  ],
+  "lease_registry_sha256": "D5ABAD81E8733388B749FB6CAA82FBE7A09C70E9AB749C0B7523071276C372DF",
+  "overlay_registry_sha256": "3FAF4B5C6DBC4AF790F55C93319B3804695005C0621F795E5E923C5E10D203C0",
+  "admitted_overlays": 61,
+  "stable_ids": 2243,
+  "correction_ids": 2201,
+  "verdier_ids": 42,
+  "sources_preserved": [
+    {
+      "path": "algebra.tex",
+      "from_commit": "db4ab5225904b2161697d7264148326b20edc21d",
+      "bytes": 1864221,
+      "sha256": "EB0DB6EE32DEAB7B24E055A73CF2CC19904394E516A5B22567E7EF895A7B9CEC"
+    },
+    {
+      "path": "derived.tex",
+      "from_commit": "9629f0c7311926edf85b1c5ca045a1478becebcc",
+      "bytes": 464343,
+      "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+    },
+    {
+      "path": "simplicial.tex",
+      "from_commit": "db4ab5225904b2161697d7264148326b20edc21d",
+      "bytes": 298250,
+      "sha256": "8438A8AE956E0C4FDA0C1549472AE00B882B30CBF960208D33AFDF6263CE5C36"
+    }
+  ],
+  "explanation": "The public Verdier branch and private R58 branch allocated the same event numbers after their common predecessor. The public 127-event prefix is retained exactly. Only the two R58 event identifiers and the release back-reference are transported to 128/129. Their lease identity, namespace, writer, source identities and timestamps remain exact. The sealed candidate and original separate admission receipt remain unchanged; this record proves their relation to the reconciled registry.",
+  "publication": false,
+  "validation": {
+    "registry_manifest_hash_closures": 61,
+    "unique_stable_ids": 2243,
+    "lease_events": 129,
+    "focused_tests_passed": 27,
+    "illusie_check": "PASS: existing inventory, labels and composition; no new mathematical review claimed"
+  },
+  "immutable_public_artifacts_preserved": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 9070,
+      "sha256": "1EB36684F675F053B5B3D2E216103A418D1F6ECBDC221E870256B44CB163B86B"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/.gitattributes",
+      "bytes": 117,
+      "sha256": "19A1DCCFFFD90CC9A3FCE89B2D147B1844EE285291736D1245CE061DF6864549"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/.gitignore",
+      "bytes": 26,
+      "sha256": "5B561AA9AE36CA5FF408C3A22CE239167F80F4D3B6EF53FF095A6136FB824AA8"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/LEASE.json",
+      "bytes": 476,
+      "sha256": "70D8D98DE123E90DAE50BCA176903D33E053423D27ACE585CDFCA0255A44E70B"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/README.md",
+      "bytes": 2589,
+      "sha256": "BAD4520D1F52F7D0473865F9F74155E9A5E1CD124129B6954CC7BB127953D5B7"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/_build_impl.py",
+      "bytes": 18272,
+      "sha256": "8B4A4151408745EA8DC6C325B623DA1E9017AE922C8A12363206E95E57E53610"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/authority/authority.lock.json",
+      "bytes": 2602,
+      "sha256": "BE5854692B1470F74ABA10B84DD057B0F7D209C23863D40B426904EA2FFABE03"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/build-manifest.py",
+      "bytes": 10862,
+      "sha256": "22F99D0268A2967A45C19B01D5D0CEE94F4FC101A206203DAD423E4EFD71945B"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/build.py",
+      "bytes": 5402,
+      "sha256": "744443361AF8C2BF173A584A11D84AD493BE8B9AF72FEE340C6CB5DEC7F1AFFE"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/baseline-derived.log",
+      "bytes": 51611,
+      "sha256": "285307FCB784CBB447DA375958465A8127BF19E69AD587117C649CFC13B47BB8"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/build-receipt.json",
+      "bytes": 2472,
+      "sha256": "5CD5F1A6B2A8B0A1DAA9E04F705AF5F334C21108CF242EC432FE090750C3F42D"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/derived.log",
+      "bytes": 51617,
+      "sha256": "3907949D2C8BE01837677A4A9726563FB5EB5AB54252F55361D3E76B6662DCE6"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/derived.pdf",
+      "bytes": 1251089,
+      "sha256": "1B45A53DFDC6394AB795855172915794F20634953361E8596AF17FC2E6F97331"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/tex-mutex.json",
+      "bytes": 378,
+      "sha256": "570D3A97C0D10F8BBC7A0B7D70F9DFCBCEB09BFFFB9C633831315E1AFAAA53C9"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/validation.json",
+      "bytes": 1468,
+      "sha256": "D78874DBF4DE9FEB305ED55B7977AB3FBCF940D2B62236C696018BED1E08C1AB"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/visual-qa.json",
+      "bytes": 1758,
+      "sha256": "EA4A81FA009E323BE18F25D23AE2A0DEF2AA450354A66CC087EFF3C8FDF6D4D2"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/visual/derived-036.png",
+      "bytes": 361399,
+      "sha256": "1E23A83D3F8B184431A42CECC8C1A6D8B7C189D3CA7EC0818E18DE0C91B15285"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/visual/derived-037.png",
+      "bytes": 320218,
+      "sha256": "368B0CF805CD601FBEB02CFABE8CEE5F67401BEBAC970BB6F5796A27622127CC"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/visual/derived-038.png",
+      "bytes": 395858,
+      "sha256": "1A1776CCB10E078BCBE13097CBAB46B35AD329082AE8391F307ED767F1839740"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/builds/visual/derived-039.png",
+      "bytes": 311982,
+      "sha256": "EE36F139634BFB5527592CA1FDEF401649E3DFDF2E1E4C6047BD7CDED63E5F71"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/candidate.config.json",
+      "bytes": 4295,
+      "sha256": "2C8B89B9CDB3E673C3E66A65E067790F28E56010EDB41D4F95102C1BE4106C00"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/candidate.manifest.json",
+      "bytes": 5287,
+      "sha256": "36C212923227798F4C4AEDEA09ED6385A79CD29FC944DD09946FC97AA267AF0E"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/check-manifest.py",
+      "bytes": 12842,
+      "sha256": "870EB89C753F9DF0A73E42DE1436369763149640BD86C3EFA05A425F6E656013"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/composition.jsonl",
+      "bytes": 1885,
+      "sha256": "C3DD45A0CAF2263EF7FF645F0573AE775112012A681706420DB9A86C47F242D7"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/decisions.jsonl",
+      "bytes": 9325,
+      "sha256": "CEEAE30FC9BCF51D31E8432AFACD51F8F047A59420C0C00A3BD7427715AAE9DD"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/formula-diagram-inventory.json",
+      "bytes": 2747,
+      "sha256": "C1035DC3D1DB1663543D31D119735D1128B81193DDF07B4ED4325A9B22FDCF6D"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/payload/fragments/derived-homotopy-category-abelian-split.tex",
+      "bytes": 3673,
+      "sha256": "C61FEF90594F0B1C3BD48870452A35C95F7DC85F56C551C0C68F40A01BE8BE9E"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/rejections.jsonl",
+      "bytes": 7545,
+      "sha256": "4A142C3C9671E17895D5461D9416099AE4267D1825829FC8230492729098314B"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/replay/independent-review.json",
+      "bytes": 11525,
+      "sha256": "010870DCEDE1C2FD52CC2FEDBF3A72691BEFA15EA668EAD25E810BD7C606F557"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/source-map.jsonl",
+      "bytes": 7340,
+      "sha256": "742383E24BB69BBC775401313E8AC49A154F325FF3117CD10E6A27718FA8AF70"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/stable-units.json",
+      "bytes": 5738,
+      "sha256": "34534F919352FE699219904EBB60D83CAC8375CA262C642CFA7EF17292074CA9"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-1-3-6-r1/verify.py",
+      "bytes": 20091,
+      "sha256": "E69588D4794725525EC9028E66D7C1ADC7C1968608E7BA1735417515F57072CD"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/.gitattributes",
+      "bytes": 130,
+      "sha256": "6041D578FC41CD2AB5109AAC6AEEEFE2ED70064448E7A6033CD7F49F930D13BE"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/.gitignore",
+      "bytes": 26,
+      "sha256": "5B561AA9AE36CA5FF408C3A22CE239167F80F4D3B6EF53FF095A6136FB824AA8"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/LEASE.json",
+      "bytes": 476,
+      "sha256": "442E085119530CAB707F544C875A741CC571BEF4A47F2DFBB5581857F51458F2"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/README.md",
+      "bytes": 2642,
+      "sha256": "4984AD9D1418D1BA1BC70924489DAF6DC512C01CD36F013FE25890023A5736A6"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/_build_impl.py",
+      "bytes": 18440,
+      "sha256": "4FA90D8BA249EEB0D78603FA5392D0227EE4357D40EDCD16FB462DB0091535E0"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/authority/authority.lock.json",
+      "bytes": 3216,
+      "sha256": "98C7E3AE2173AE154D7C6B70954D6CE78EC266363393C39C0C96CE5FC7A29E28"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/build-manifest.py",
+      "bytes": 10862,
+      "sha256": "22F99D0268A2967A45C19B01D5D0CEE94F4FC101A206203DAD423E4EFD71945B"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/build.py",
+      "bytes": 5402,
+      "sha256": "744443361AF8C2BF173A584A11D84AD493BE8B9AF72FEE340C6CB5DEC7F1AFFE"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/baseline-derived.log",
+      "bytes": 48230,
+      "sha256": "BF9F1BF53B3D078BC5F41625CC87E9958E73DB76B5A3E95E98EE84CCF34493ED"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/build-receipt.json",
+      "bytes": 2472,
+      "sha256": "B807F16E8BC1627002711CF3A146B5BABAE6DD662C595152327C4EA54867E05C"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/derived.log",
+      "bytes": 48541,
+      "sha256": "39E584414B6FF76DED2A958EFE952FF942B4EE6A5633C7570AD01974CC00BDCF"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/derived.pdf",
+      "bytes": 1269159,
+      "sha256": "A734E873ACD868482884E05E07E14C4F587CB29DDA91AED8F8C985A5DAE323B6"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/tex-mutex-failed-source-path-20260928.json",
+      "bytes": 379,
+      "sha256": "BB6EFD9F02F96E7648545E77AD35AF49CA9048471BA49D8561E467AC4D443576"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/tex-mutex.json",
+      "bytes": 378,
+      "sha256": "57FD003D4919D33B376CF44B0C98A349BD07BB8BFC8779BE4B3C043A6C06C305"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/validation.json",
+      "bytes": 1462,
+      "sha256": "A69BB35C4394CC7D2916983EDAEE6C22B9521D54D4E34D02417E986F649677A9"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual-qa.json",
+      "bytes": 3635,
+      "sha256": "818701A9CAEE1807560753EFE8D60DE7601748CBE98BD803C7E543630C1D212F"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/affected-025.png",
+      "bytes": 573673,
+      "sha256": "0FB4F82E08B66E8BD34B30E58320A9BC2247363CFC5101D85B37C34EB57050C4"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/affected-026.png",
+      "bytes": 476992,
+      "sha256": "C25CED62AFF4CA16B4756D487809E2915A843B0E4EF17431A1F38BAE74DB6BAD"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/affected-027.png",
+      "bytes": 539951,
+      "sha256": "C0F3859C757408361882C3AFC032987D1F79F3865D995A647C8DEDB7B8CE6759"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/affected-028.png",
+      "bytes": 550460,
+      "sha256": "5B2966CA35F2E85D7B24312E65FC6745FCDF7EB327F4EF882CD9747613D554CF"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/affected-029.png",
+      "bytes": 423807,
+      "sha256": "B27BF8CAA76BFAC51B2CFA75C31B81EA6874C9EE9EEAB28650C57DE966D65273"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-01.png",
+      "bytes": 2718469,
+      "sha256": "D1565D78903297B20755495C5B2C9D08AB7284E9BA108D6F555CE1C5D98CE95A"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-02.png",
+      "bytes": 2874240,
+      "sha256": "2CE900FC95EC7391D5869E810E4C848E825434EA8D2DB7FEBD5849C1145E996E"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-03.png",
+      "bytes": 2825409,
+      "sha256": "4A2168F9887495C6FF270E94179C4F406BE53E91A60836764B3C8483923B1297"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-04.png",
+      "bytes": 2902428,
+      "sha256": "47C7D747B0B1D2952363A45E5F5AFB8DF19945828A71BA7B028CE251D955A7FA"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-05.png",
+      "bytes": 2768752,
+      "sha256": "764E83224315D3DA27A014A6FD803966D2267BACE4C8EC7BF91C72F6A5289A67"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-06.png",
+      "bytes": 2744765,
+      "sha256": "ED0D1A0A1D0DF9913D6B4C5F60BE9CCB9DC8C4AB6EB8B64E7B68AAB334A217E7"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-07.png",
+      "bytes": 2815404,
+      "sha256": "2843C21023550686EF66D0F713D3DE190856EDB894C0175F721E2A183828A965"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-08.png",
+      "bytes": 2770697,
+      "sha256": "2C7BF3D089D0C4E39805278D852D013D7FA496EE3C9C2B7C8AA1ED9CAD944B12"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/builds/visual/contact-09.png",
+      "bytes": 889372,
+      "sha256": "6094D65173A90DCB8D1126115C8A541D78302CA88B82A39F76B07902CDE87B5F"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/candidate.config.json",
+      "bytes": 4418,
+      "sha256": "44F1E51C6821C54306F2B6598B4D2DDDC835370559429404737C37E20AE2ABA2"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/candidate.manifest.json",
+      "bytes": 6863,
+      "sha256": "5B7215DB879A5C3353446D67C85C3DB23D6BF85126504C3288B0B85BBC38EA06"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/check-manifest.py",
+      "bytes": 12842,
+      "sha256": "870EB89C753F9DF0A73E42DE1436369763149640BD86C3EFA05A425F6E656013"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/composition.jsonl",
+      "bytes": 1815,
+      "sha256": "65145DD0B114C37E75817077A9836B879025214CDD5C19DD9AFC258D83D908F5"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/decisions.jsonl",
+      "bytes": 7924,
+      "sha256": "7FDDA699C7A0C020FE7C27609DC1D1B12C7E207E5318A860C417FE693AE32182"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/formula-diagram-inventory.json",
+      "bytes": 5158,
+      "sha256": "A1FA6CFA4E02F33275EE08EC648052B452B66B20982A4D10E9D86A05EF998B53"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/payload/fragments/derived-nested-quotients.tex",
+      "bytes": 8616,
+      "sha256": "E8A3086DA0DCFA5E876C0C6A98F193EA02761CCB911ACA6C0275F5E6AA5963C2"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/rejections.jsonl",
+      "bytes": 4878,
+      "sha256": "A0B39C430BF8917C15F503526F1F31CE51FC51F1E6C55122284C75E56F0EAA7E"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/replay/independent-review.json",
+      "bytes": 12323,
+      "sha256": "B2F3E4735AB4A8094CE7C3826ABA725A2117DA925A198202E440039160B18F00"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/source-map.jsonl",
+      "bytes": 22079,
+      "sha256": "E7B767B8F3FC9ACF8FBCD725688A0FEA8B08C4CC5F37A2AF1758708020F58743"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/stable-units.json",
+      "bytes": 14876,
+      "sha256": "862B2E61412AD2E0E1D619B4B961116213E10B5F48B1EF036CA584922449C108"
+    },
+    {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/verify.py",
+      "bytes": 20777,
+      "sha256": "6031472D8E95050FDA0B2B12B16676382F306FC860471F7F8CC1A3BDF2923960"
+    },
+    {
+      "path": "ai-integrated/registry/admission-receipts/verdier-ast239-1-3-6-r1.json",
+      "bytes": 5866,
+      "sha256": "590C09EC8B6B41BDBA60B056A3C9B2BBCEC8741F7AD0919881A623CCBEB1AFF6"
+    },
+    {
+      "path": "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1-closure-correction.json",
+      "bytes": 3654,
+      "sha256": "71A0735DFAC2BF8EFC0927304BCF49258BF991DEA2BC63D5914139E2C1C7317D"
+    },
+    {
+      "path": "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1.json",
+      "bytes": 6666,
+      "sha256": "11BB4E0EECBB662C1940839DE2274830CA855B63469C241A62C4FD4CE1C0B169"
+    },
+    {
+      "path": "derived.tex",
+      "bytes": 464343,
+      "sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+    },
+    {
+      "path": "tools/build_fixed_point.py",
+      "bytes": 213896,
+      "sha256": "1CF55B934468219BFDD19EE4D2F432D344A5F89468C231FA06636FB33CFA49E7"
+    },
+    {
+      "path": "tools/compare_fixed_point_builds.py",
+      "bytes": 22259,
+      "sha256": "376A1A765F9A150EFD42EEE346B35752757CF6B9121E92257F27F787D4605015"
+    },
+    {
+      "path": "tools/compose_registered_insertion.py",
+      "bytes": 17614,
+      "sha256": "EAA4C85B89477D02507DBFF875316F1062775C5CFE3E9158B1F5C93FD841D72F"
+    },
+    {
+      "path": "tools/direct_successor_checkpoint.py",
+      "bytes": 33893,
+      "sha256": "49E9AA5772DC551C795B1A5BDE010C3CC92707854DD3A1E99D67B274F5EAC102"
+    },
+    {
+      "path": "tools/package_verdier_candidate_pdf_source.py",
+      "bytes": 9239,
+      "sha256": "5C9E857298969A45E6A1747C0DFA3D9E4A5FADB340060359F5C75D6FE17ED026"
+    },
+    {
+      "path": "tools/tests/test_verdier_registered_insertion_successor.py",
+      "bytes": 25977,
+      "sha256": "229E820644499DF171CC5FA47D54D0AB37AC7F0430493925B390AC4BA005FAA3"
+    },
+    {
+      "path": "tools/validate_unified_repository.py",
+      "bytes": 152193,
+      "sha256": "80B4132D4715666D41F350F4B24192593FF402515B7B5097A58FE6974BEC73F9"
+    },
+    {
+      "path": "tools/validate_verdier_linear_transport.py",
+      "bytes": 24939,
+      "sha256": "DBB8DB8CC4316C8592D0877A9F9D1DC6F762402B3581E175B26F8B278A043C29"
+    },
+    {
+      "path": "tools/validate_verdier_registered_insertion_successor.py",
+      "bytes": 27450,
+      "sha256": "AA41F7E47B0285523DB6FDF88B1CCDC41D07065F28C4F9BCCF8A2968BC198196"
+    },
+    {
+      "path": "tools/verdier_registered_insertion_successor.py",
+      "bytes": 59347,
+      "sha256": "0BCF4DF6119ABD469F4D0976ED1C69EF09EBEE080C127ADB7C34765972EC96EE"
+    },
+    {
+      "path": "validation/composition-current.json",
+      "bytes": 74768,
+      "sha256": "46EB48D0CA43DDA686A50FFE1E8BE88AC1ECD038ACC3C6AB727C9BC4E9F2BAF3"
+    },
+    {
+      "path": "validation/direct-successor-current.json",
+      "bytes": 5241,
+      "sha256": "50AE03F45D8FD153FF2B5B18EEF824AE81B55DEE2D5EA68A83D5164E338AAC0E"
+    },
+    {
+      "path": "validation/verdier-ast239-1-3-6-candidate-derived-source-manifest.json",
+      "bytes": 4391,
+      "sha256": "36CFEACC1CFFA949EA455F384DEEE4F22B1B3212D75F7EB25E930BA34D854824"
+    },
+    {
+      "path": "validation/verdier-ast239-1-3-6-candidate-derived-source.zip",
+      "bytes": 1244355,
+      "sha256": "3FAEA890421440B1EDC66F9E8BCF91A8F1AEC08C201D010491ED2EA127D8B36B"
+    },
+    {
+      "path": "validation/verdier-ast239-2-3-1-candidate-derived-source-manifest.json",
+      "bytes": 4391,
+      "sha256": "74472005C430A0692DE9E75AFC28D07839E5666F7E50C5D5D73BC7037018FB87"
+    },
+    {
+      "path": "validation/verdier-ast239-2-3-1-candidate-derived-source.zip",
+      "bytes": 1253514,
+      "sha256": "B3CEFA4B24C33909206A8350785AA48F320183F728BE965E3D1897761CB0F1C5"
+    },
+    {
+      "path": "validation/verdier-linear-transport-current.json",
+      "bytes": 6644,
+      "sha256": "C6E4704BF39E6FABC8AB33CC30FC4EBF2A3FA4A2ED1657F72D887940A40EA154"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-build-a-2026-09-28.json",
+      "bytes": 838750,
+      "sha256": "5AAEC0EDE4A0B9BDFBC86385F03E3FF8389663567CD114A0D0804F67A6163A2F"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-build-b-2026-09-28.json",
+      "bytes": 838732,
+      "sha256": "7F628F7638856CDA50AD2AA102038CB043267EAB3FDC2F9E5DC6655A11172459"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-linear-release-2026-09-28.json",
+      "bytes": 20771,
+      "sha256": "840EABA3A6A3D6695936C28D43E677C17A02CF5B324A71052144F1DBD2DBFD97"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-prepublication-attestation-2026-09-28.json",
+      "bytes": 3534,
+      "sha256": "F3DCD6985B18B1B9015DD3B1563B3FBBEFF97E4F828A861A350470BA0BFE25FB"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-reproducibility-2026-09-28.json",
+      "bytes": 11481,
+      "sha256": "BAACF788C00642807CD8D2499929BD7B8C619208F7A5C21DB1C1A3045B784BEF"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-1-3-6-visual-qa-2026-09-28.json",
+      "bytes": 10927,
+      "sha256": "DD9A35BBC9A07568180C5DC927537562727F45FFB9311D66EC81DEE9AA9FEE25"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-a-2026-09-28.json",
+      "bytes": 843633,
+      "sha256": "1F4C16108E2B533DEB27FCAA4AB2B09A817266D5C6298DBFEA06FF490B2185DC"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-b-2026-09-28.json",
+      "bytes": 843639,
+      "sha256": "85B297D5DCD040D549CF4F10DB7C971C0A860C63CA9DB0CD87D92982E975B3EC"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-linear-release-2026-09-28.json",
+      "bytes": 24112,
+      "sha256": "0CE1652631C2079F4A9202141B5EC029454BEE2B49C23507C2C05DCD9F681E69"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-prepublication-attestation-2026-09-28.json",
+      "bytes": 3666,
+      "sha256": "91DC080C0E77E51DCB1F652C2E5BE85D2615C0092DE69381E821CF60A90516B0"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-reproducibility-2026-09-28.json",
+      "bytes": 12674,
+      "sha256": "176328C15DE425DB92DFD7B8F21E64E05549404C6C93767965C5199E751BC1D6"
+    },
+    {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-visual-qa-2026-09-28.json",
+      "bytes": 9641,
+      "sha256": "855559304E4F3985D858EBBC5CBAC0F6DC090D0E31682F73CE934155AE9E59FF"
+    }
+  ],
+  "workflow_repair": "The registry contract now enumerates all three already-admitted Verdier overlays; its other assertions remain unchanged.",
+  "public_history_requirement": "Preserve this validated local merge as evidence. Publish a single-parent exact-tree transport on the current public main; do not push this merge directly to protected main."
+}

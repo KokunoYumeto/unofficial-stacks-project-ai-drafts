@@ -29,6 +29,9 @@ UPSTREAM = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
+VERDIER_LINEAR_TRANSPORT_RECEIPT = Path(
+    "validation/verdier-linear-transport-current.json"
+)
 DEFAULT_BUILD_RECEIPT = Path(
     "validation/stacks-errata-a04446e-r47-illusie-build-2026-09-07.json"
 )
@@ -628,12 +631,32 @@ def main(argv: list[str] | None = None) -> int:
     if args.build_receipt is None:
         args.build_receipt = DEFAULT_BUILD_RECEIPT
 
+    if (ROOT / VERDIER_LINEAR_TRANSPORT_RECEIPT).is_file():
+        from validate_verdier_linear_transport import validate_linear_transport
+
+        return validate_linear_transport(ROOT, args.pre_publication)
+
     try:
         current_composition = json.loads(
             (ROOT / COMPOSITION_RECEIPT).read_text(encoding="utf-8")
         )
     except (OSError, json.JSONDecodeError):
         current_composition = None
+    if isinstance(current_composition, dict) and current_composition.get("schema") == (
+        "unofficial-ai-integrated-stacks-verdier-registered-insertion-successor/v1"
+    ):
+        from validate_direct_successor_release import parse_json, INDEX
+        from validate_verdier_registered_insertion_successor import validate_verdier_successor
+
+        if not explicit_build_receipt:
+            try:
+                verdier_index = parse_json((ROOT / INDEX).read_bytes())
+                args.build_receipt = Path(verdier_index["references"]["build"]["path"])
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                print("Verdier successor release validation: FAIL\n- invalid current build index: " + str(exc), file=sys.stderr)
+                return 1
+
+        return validate_verdier_successor(ROOT, args.build_receipt, args.pre_publication)
     if isinstance(current_composition, dict) and current_composition.get("schema") in {
         "unofficial-ai-integrated-stacks-direct-composition/v1",
         "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1",

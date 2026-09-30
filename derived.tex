@@ -2284,6 +2284,207 @@ Categories, Lemma \ref{categories-lemma-what-gets-inverted}.
 The final statement of that lemma finishes the proof.
 \end{proof}
 
+
+\begin{lemma}
+\label{lemma-nested-quotients}
+Let $\mathcal{D}$ be a triangulated category and let
+$\mathcal{B} \subset \mathcal{A} \subset \mathcal{D}$ be full
+triangulated subcategories.
+\begin{enumerate}
+\item The multiplicative system used to form
+$\mathcal{A}/\mathcal{B}$ is the intersection with
+$\text{Arrows}(\mathcal{A})$ of the multiplicative system used to form
+$\mathcal{D}/\mathcal{B}$.
+\item The canonical exact functor
+$$
+\mathcal{A}/\mathcal{B} \longrightarrow \mathcal{D}/\mathcal{B}
+$$
+is fully faithful. It is injective on objects, and its image is the full
+triangulated subcategory on the objects coming from $\mathcal{A}$.
+\item After identifying $\mathcal{A}/\mathcal{B}$ with this image, the
+canonical exact functor
+$$
+\mathcal{D}/\mathcal{A} \longrightarrow
+(\mathcal{D}/\mathcal{B})/(\mathcal{A}/\mathcal{B})
+$$
+is an equivalence of triangulated categories.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $S_{\mathcal{D}}(\mathcal{B})$ and
+$S_{\mathcal{A}}(\mathcal{B})$ for the two multiplicative systems in
+question. By Lemma \ref{lemma-construct-multiplicative-system}, an arrow
+belongs to either system precisely when it occurs as the first arrow of a
+distinguished triangle whose third object is isomorphic to an object of
+$\mathcal{B}$. The distinguished triangles of $\mathcal{A}$ are exactly
+the distinguished triangles of $\mathcal{D}$ all of whose objects belong
+to $\mathcal{A}$; see Lemma \ref{lemma-triangulated-subcategory}. This
+proves (1).
+
+Let $X$ be an object of $\mathcal{A}$. We claim that the full subcategory
+of $S_{\mathcal{D}}(\mathcal{B})/X$ consisting of arrows whose source is
+in $\mathcal{A}$ is cofinal. Indeed, suppose that
+$s : X' \to X$ belongs to $S_{\mathcal{D}}(\mathcal{B})$. Complete $s$
+to a distinguished triangle
+$$
+X' \longrightarrow X \longrightarrow B \longrightarrow X'[1]
+$$
+where $B$ is isomorphic to an object of $\mathcal{B}$. Since
+$\mathcal{B} \subset \mathcal{A}$ and $\mathcal{A}$ is a full
+triangulated subcategory, $X'$ is isomorphic to an object $X''$ of
+$\mathcal{A}$. After precomposing $s$ by such an isomorphism we obtain an
+object of $S_{\mathcal{A}}(\mathcal{B})/X$ isomorphic to $s$ in
+$S_{\mathcal{D}}(\mathcal{B})/X$. The claim follows.
+
+For $X,Y$ in $\mathcal{A}$, Categories, Remark
+\ref{categories-remark-right-localization-morphisms-colimit}, fullness of
+$\mathcal{A}$ in $\mathcal{D}$, and the cofinality just proved give
+\begin{align*}
+\Mor_{\mathcal{D}/\mathcal{B}}(X,Y)
+&=
+\mathop{\rm colim}_{s:X'\to X\text{ in }S_{\mathcal{D}}(\mathcal{B})}
+\Mor_{\mathcal{D}}(X',Y) \\
+&=
+\mathop{\rm colim}_{s:X'\to X\text{ in }S_{\mathcal{A}}(\mathcal{B})}
+\Mor_{\mathcal{A}}(X',Y) \\
+&=
+\Mor_{\mathcal{A}/\mathcal{B}}(X,Y).
+\end{align*}
+This proves (2). Exactness follows from
+Lemma \ref{lemma-universal-property-quotient}.
+
+The composite
+$$
+\mathcal{D} \longrightarrow \mathcal{D}/\mathcal{B}
+\longrightarrow (\mathcal{D}/\mathcal{B})/(\mathcal{A}/\mathcal{B})
+$$
+annihilates $\mathcal{A}$, and hence factors through an exact functor from
+$\mathcal{D}/\mathcal{A}$. Conversely, the quotient functor
+$\mathcal{D} \to \mathcal{D}/\mathcal{A}$ annihilates $\mathcal{B}$,
+so it first factors through $\mathcal{D}/\mathcal{B}$; this factorization
+annihilates $\mathcal{A}/\mathcal{B}$ and therefore factors through
+$(\mathcal{D}/\mathcal{B})/(\mathcal{A}/\mathcal{B})$. The uniqueness in
+Lemma \ref{lemma-universal-property-quotient} shows that the resulting
+two functors are quasi-inverse. This proves (3).
+\end{proof}
+
+\begin{lemma}
+\label{lemma-subcategories-of-quotient}
+Let $\mathcal{D}$ be a triangulated category, let
+$\mathcal{B} \subset \mathcal{D}$ be a full triangulated subcategory,
+and let
+$$
+Q : \mathcal{D} \longrightarrow \mathcal{D}/\mathcal{B}
+$$
+be the quotient functor. Set $\mathcal{K}=\Ker(Q)$.
+\begin{enumerate}
+\item If $\mathcal{C}$ is a full triangulated subcategory of
+$\mathcal{D}/\mathcal{B}$, then
+$$
+Q^{-1}(\mathcal{C})=
+\{X\in\Ob(\mathcal{D})\mid Q(X)\text{ is isomorphic to an object of }
+\mathcal{C}\}
+$$
+is a strictly full triangulated subcategory of $\mathcal{D}$. Moreover,
+the multiplicative system associated to $Q^{-1}(\mathcal{C})$ is
+$$
+\{f\in\text{Arrows}(\mathcal{D})\mid
+Q(f)\text{ belongs to the multiplicative system associated to }
+\mathcal{C}\}.
+$$
+\item The rules
+$$
+\mathcal{A}\longmapsto \overline{Q(\mathcal{A})}
+\quad\text{and}\quad
+\mathcal{C}\longmapsto Q^{-1}(\mathcal{C})
+$$
+are mutually inverse, inclusion-preserving bijections between
+\begin{enumerate}
+\item strictly full triangulated subcategories $\mathcal{A}$ of
+$\mathcal{D}$ which contain $\mathcal{K}$, and
+\item strictly full triangulated subcategories $\mathcal{C}$ of
+$\mathcal{D}/\mathcal{B}$.
+\end{enumerate}
+Here $\overline{Q(\mathcal{A})}$ denotes the strictly full closure of the
+image of $\mathcal{A}$.
+\item For every full triangulated subcategory $\mathcal{C}$ of
+$\mathcal{D}/\mathcal{B}$, the subcategory $Q^{-1}(\mathcal{C})$ is
+saturated if and only if $\mathcal{C}$ is saturated. Equivalently, under
+the bijection in (2), $\mathcal{A}$ is saturated if and only if
+$\overline{Q(\mathcal{A})}$ is saturated. In particular, if
+$\mathcal{A}$ is a full saturated triangulated subcategory of
+$\mathcal{D}$ containing $\mathcal{B}$, then its image in
+$\mathcal{D}/\mathcal{B}$ is saturated.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Since $Q$ is exact, inverse images under $Q$ preserve shifts and
+distinguished triangles. Strict fullness follows from the definition of
+$Q^{-1}(\mathcal{C})$. This proves the first assertion of (1). If
+$(X,Y,Z,f,g,h)$ is a distinguished triangle of $\mathcal{D}$, then its
+image under $Q$ is distinguished. Thus the cone of $f$ is isomorphic to
+an object of $Q^{-1}(\mathcal{C})$ if and only if the cone of $Q(f)$ is
+isomorphic to an object of $\mathcal{C}$. By
+Lemma \ref{lemma-construct-multiplicative-system}, this proves the final
+assertion of (1).
+
+Every inverse image in (2) contains $\mathcal{K}$. Conversely, if
+$\mathcal{A}$ is strictly full, triangulated, and contains
+$\mathcal{K}$, then $\mathcal{B}\subset\mathcal{A}$ and
+Lemma \ref{lemma-nested-quotients} shows that its image has a strictly
+full triangulated closure in $\mathcal{D}/\mathcal{B}$. It is immediate
+that
+$$
+\overline{Q(Q^{-1}(\mathcal{C}))}=\mathcal{C}.
+$$
+We prove the other equality. Suppose that $X$ is an object of
+$Q^{-1}(\overline{Q(\mathcal{A})})$. There is an object $Y$ of
+$\mathcal{A}$ and an isomorphism $Q(Y)\to Q(X)$. Represent this
+isomorphism by a fraction
+$$
+Q(Y) \xleftarrow{Q(s)} Q(Z) \xrightarrow{Q(f)} Q(X),
+$$
+where $Q(s)$ and $Q(f)$ are isomorphisms. Categories, Lemma
+\ref{categories-lemma-what-gets-inverted} and
+Lemma \ref{lemma-operations} show that $s$ and $f$ belong to the
+multiplicative system associated to $\mathcal{K}$. Hence they may be
+completed to distinguished triangles whose third objects are isomorphic
+to objects of $\mathcal{K}$. Since $Y$ and $\mathcal{K}$ are contained
+in $\mathcal{A}$, the first triangle gives $Z\in\Ob(\mathcal{A})$; the
+second then gives $X\in\Ob(\mathcal{A})$. Here we use strict fullness of
+$\mathcal{A}$ to replace objects by isomorphic ones. Therefore
+$$
+Q^{-1}(\overline{Q(\mathcal{A})})=\mathcal{A},
+$$
+which proves (2).
+
+Replacing $\mathcal{C}$ by its strictly full closure changes neither
+$Q^{-1}(\mathcal{C})$ nor whether $\mathcal{C}$ is saturated. Thus, for
+the first assertion of (3), we may assume that $\mathcal{C}$ is strictly
+full and put $\mathcal{A}=Q^{-1}(\mathcal{C})$. Part (2) gives
+$\mathcal{C}=\overline{Q(\mathcal{A})}$. Suppose first that
+$\mathcal{A}$ is saturated and that
+$U\oplus V$ is isomorphic to an object of
+$\overline{Q(\mathcal{A})}$. Since the quotient functor is the identity
+on objects, write $U=Q(X)$ and $V=Q(Y)$. Part (2) gives
+$X\oplus Y\in\Ob(\mathcal{A})$. Saturation and strict fullness of
+$\mathcal{A}$ imply that $X,Y\in\Ob(\mathcal{A})$, and hence $U,V$ lie
+in $\overline{Q(\mathcal{A})}$. Thus the latter is saturated. The converse
+follows similarly: if $X\oplus Y$ belongs to $Q^{-1}(\mathcal{C})$ and
+$\mathcal{C}$ is saturated, then $Q(X)$ and $Q(Y)$ are isomorphic to
+objects of
+$\mathcal{C}$, so $X$ and $Y$ belong to $Q^{-1}(\mathcal{C})$. This
+proves the equivalence in (3).
+
+Finally, let $\mathcal{A}$ be full, saturated, and contain $\mathcal{B}$.
+Its strictly full closure $\overline{\mathcal{A}}$ is saturated and
+contains $\mathcal{K}$ by Lemma \ref{lemma-operations}. The case just
+proved shows that $\overline{Q(\overline{\mathcal{A}})}$ is saturated.
+This is the strictly full closure of the image of $\mathcal{A}$, and the
+final assertion follows.
+\end{proof}
 \begin{lemma}
 \label{lemma-acyclic-general}
 Let $H : \mathcal{D} \to \mathcal{A}$ be a homological functor from a
@@ -3442,6 +3643,101 @@ are split injective morphisms. In this case the result follows
 from Lemma \ref{lemma-two-split-injections}.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-homotopy-category-abelian-split}
+Let $\mathcal{A}$ be an abelian category. The following are equivalent.
+\begin{enumerate}
+\item The category $K(\mathcal{A})$ is abelian.
+\item Every morphism of $K(\mathcal{A})$ satisfies condition (3) of
+Lemma \ref{lemma-when-split}.
+\item Every short exact sequence in $\mathcal{A}$ splits.
+\end{enumerate}
+If these conditions hold, then the functor
+$$
+H^* : K(\mathcal{A}) \longrightarrow K(\mathcal{A}), \qquad
+H^*(X^\bullet)^n = H^n(X^\bullet), \quad d_{H^*(X)}^n = 0
+$$
+is an equivalence of categories.
+\end{lemma}
+
+\begin{proof}
+By Proposition \ref{proposition-homotopy-category-triangulated},
+$K(\mathcal{A})$ is pre-triangulated. Hence Lemma
+\ref{lemma-when-split} and
+Homology, Definition \ref{homology-definition-abelian-category}
+show that (1) and (2) are equivalent. More explicitly, an abelian
+category has kernels, so the lemma gives the normal form in (2).
+Conversely, that normal form supplies kernels and cokernels, and the
+canonical map from coimage to image becomes the identity on its middle
+summand.
+
+Assume (2), and let
+$$
+0 \longrightarrow A \xrightarrow{a} B \longrightarrow C
+\longrightarrow 0
+$$
+be a short exact sequence in $\mathcal{A}$. Apply (2) to $a$, viewed as
+a map between complexes concentrated in degree zero. The normal form gives
+a morphism $b : B \to A$ in $K(\mathcal{A})$ such that $aba = a$.
+There are no nonzero homotopies between maps of complexes concentrated in
+degree zero, so this is the same equality in $\mathcal{A}$. Since $a$ is
+a monomorphism, $ba = 1$, and the sequence splits. Thus (2) implies (3).
+
+Assume (3). For a complex $X^\bullet$, put
+$$
+Z_X^n = \Ker(d_X^n), \qquad B_X^n = \Im(d_X^{n - 1}).
+$$
+Choose splittings of the two short exact sequences
+$$
+0 \longrightarrow Z_X^n \longrightarrow X^n \longrightarrow
+B_X^{n + 1} \longrightarrow 0,
+\qquad
+0 \longrightarrow B_X^n \longrightarrow Z_X^n \longrightarrow
+H^n(X^\bullet) \longrightarrow 0.
+$$
+They give decompositions
+$$
+X^n = B_X^n \oplus H^n(X^\bullet) \oplus B_X^{n + 1}
+$$
+under which $d_X^n(b, h, c) = (c, 0, 0)$. Consequently $X^\bullet$
+is the direct sum of $H^*(X^\bullet)$ and the complex $C_X^\bullet$ with
+$$
+C_X^n = B_X^n \oplus B_X^{n + 1}, \qquad
+d_{C_X}^n(b, c) = (c, 0).
+$$
+The maps $s^n : C_X^n \to C_X^{n - 1}$ given by
+$s^n(b, c) = (0, b)$ form a contracting homotopy. We obtain maps
+$$
+i_X : H^*(X^\bullet) \longrightarrow X^\bullet, \qquad
+p_X : X^\bullet \longrightarrow H^*(X^\bullet)
+$$
+whose composites are inverse in $K(\mathcal{A})$ and which induce the
+identity on cohomology.
+
+The maps on cohomology define $H^*$ on morphisms of $K(\mathcal{A})$ by
+Homology, Lemma
+\ref{homology-lemma-map-cohomology-homotopy-cochain}. For any map
+$u : H^*(X^\bullet) \to H^*(Y^\bullet)$, the map
+$i_Y u p_X$ induces $u$ on cohomology. Conversely, for every
+$f : X^\bullet \to Y^\bullet$ in $K(\mathcal{A})$ we have
+$$
+f = i_Y p_Y f i_X p_X = i_Y H^*(f) p_X.
+$$
+Thus $u \mapsto i_Y u p_X$ is an inverse to the map on Hom sets induced
+by $H^*$, so $H^*$ is fully faithful. It is essentially surjective since
+every $X^\bullet$ is isomorphic to $H^*(X^\bullet)$ and
+$H^*H^*(X^\bullet) = H^*(X^\bullet)$.
+
+The full subcategory of complexes with zero differential is the category
+$\text{Gr}(\mathcal{A})$ of
+Homology, Definition \ref{homology-definition-graded}, which is abelian by
+Homology, Lemma \ref{homology-lemma-graded}. The equivalence just proved
+therefore implies that $K(\mathcal{A})$ is abelian. This proves (3)
+implies (1) and finishes the proof.
+
+The splittings used above are choices; no natural isomorphism between the
+identity functor and $H^*$ is asserted.
+\end{proof}
 \begin{remark}
 \label{remark-boundedness-conditions-triangulated}
 Let $\mathcal{A}$ be an additive category.

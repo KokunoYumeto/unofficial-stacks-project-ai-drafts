@@ -1,6 +1,6 @@
 {
   "schema": "stacks-r58-successor-current/v1",
-  "status": "LOCAL_INTEGRATION_COMPLETE_PUBLICATION_PENDING_RECONCILIATION",
+  "status": "LOCAL_INTEGRATION_COMPLETE_PUBLICATION_VALIDATION_PENDING",
   "predecessor": "29c4c1d1cd236d1629c0c8277ebf14d2a28dcce0",
   "lease_commit": "683234f29d03c3981e5f3142c65ebbf8cf140958",
   "candidate_commit": "2c11aaef69501eeafc2a1fb53c27e2da1e0503b0",
@@ -33,8 +33,16 @@
     ]
   },
   "public_main_observed": "9629f0c7311926edf85b1c5ca045a1478becebcc",
-  "publication_pending": "Reconcile the two newer Verdier overlays and their immutable publication evidence before pushing. The independently allocated lease-event numbers collide; preserve original records and provide an explicit registry transport.",
+  "publication_pending": "Complete combined successor validation and the single-parent public transport, then push and verify anonymous bytes and exact-commit CI.",
   "publication": false,
   "model": "OpenAI Codex - GPT-6 Astra, Ultra effort",
-  "human_review": false
+  "human_review": false,
+  "reconciliation": {
+    "receipt": "validation/r58-concurrent-integration-2026-09-30.json",
+    "sha256": "E3FFDA103AB6FF25EAC9C979EF9F9D4CE15FEB030AFB099CABE94D57E79AAD8E",
+    "public_predecessor": "9629f0c7311926edf85b1c5ca045a1478becebcc",
+    "overlays": 61,
+    "stable_ids": 2243,
+    "verdier_ids": 42
+  }
 }

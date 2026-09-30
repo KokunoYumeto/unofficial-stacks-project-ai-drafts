@@ -36,7 +36,11 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         self.assertEqual(self.model.source_count, 36)
         self.assertEqual(
             self.model.excluded_overlay_ids,
-            ("stacks-verdier-a04446e-1-2-13-r1",),
+            (
+                "stacks-verdier-a04446e-1-2-13-r1",
+                "stacks-verdier-a04446e-1-3-6-r1",
+                "stacks-verdier-a04446e-2-3-1-r1",
+            ),
         )
         stable_ids = [unit.stable_id for unit in self.model.units]
         self.assertEqual(len(stable_ids), len(set(stable_ids)))

@@ -1,11 +1,11 @@
 {
   "schema": "unofficial-ai-integrated-stacks-direct-release-index/v1",
-  "status": "READY_FOR_PUBLICATION",
+  "status": "PUBLICATION_COMPLETE",
   "composition_scope": {
-    "source_commit": "ea606e202707d215f38e050be2621d0c83cadef0",
-    "registry_cutoff_commit": "54cb855d7f499c885020efb7aebd24959cda5120",
+    "source_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
+    "registry_cutoff_commit": "37d4837dc283f6e97ae0d731453f73683e3d78e8",
     "new_overlay_ids": [
-      "stacks-errata-a04446e-r48"
+      "stacks-verdier-a04446e-2-3-1-r1"
     ],
     "ai_source_correction": {
       "correction_id": "illusie-I-chain-comparison-localization-20260908",
@@ -21,38 +21,84 @@
       "corrected_source_tree": "3a0e1ee6f7c575a261a254e1f4701a982e8c12a6",
       "sealed_predecessor_commit": "1c7fa79a3d8fdb24a9ec45ba65e65ce1fd8867c2",
       "sealed_predecessor_receipt_sha256": "546206C486E7722D9086B9E4ADF979CCA11DC8587D3E28CCFEA551C700606ADE"
+    },
+    "verdier_registered_insertion": {
+      "candidate_id": "stacks-verdier-a04446e-2-3-1-r1",
+      "operation_id": "VDR-STK-COMP-0003",
+      "stable_ids": [
+        "verdier:ast239:2.3.1",
+        "verdier:ast239:2.3.1:boundary:p143",
+        "verdier:ast239:2.3.1:setup:nested-subcategory",
+        "verdier:ast239:2.3.1:claim:denominator-intersection",
+        "verdier:ast239:2.3.1:claim:quotient-embedding",
+        "verdier:ast239:2.3.1:claim:quotient-transitivity",
+        "verdier:ast239:2.3.1:claim:saturated-image",
+        "verdier:ast239:2.3.1:setup:inverse-image",
+        "verdier:ast239:2.3.1:claim:inverse-image-triangulated",
+        "verdier:ast239:2.3.1:claim:inverse-image-denominators",
+        "verdier:ast239:2.3.1:claim:saturation-reflected",
+        "verdier:ast239:2.3.1:claim:subcategory-lattice",
+        "verdier:ast239:2.3.1:proof:intersection-and-embedding",
+        "verdier:ast239:2.3.1:proof:transitivity",
+        "verdier:ast239:2.3.1:proof:saturated-image",
+        "verdier:ast239:2.3.1:proof:inverse-image-basics",
+        "verdier:ast239:2.3.1:proof:saturation-forward",
+        "verdier:ast239:2.3.1:boundary:p144",
+        "verdier:ast239:2.3.1:proof:saturation-converse",
+        "verdier:ast239:2.3.1:proof:lattice-inverse",
+        "verdier:ast239:2.3.1:proof:roof-setup",
+        "verdier:ast239:2.3.1:diagram:roof",
+        "verdier:ast239:2.3.1:proof:lattice-complete"
+      ],
+      "candidate_authoring_commit": "6a9248713888305e153f47fd349b4ae941a93174",
+      "build_root_repair_commit": "c5125ff63f91abe0b7e8d0c1c04692a1971f17be",
+      "candidate_freeze_commit": "421ab3c5224ac59d845efa16cac42b5ae231813a",
+      "review_commit": "3ddcb012f50fa42d12efcde125376de463d24ae5",
+      "admission_commit": "37d4837dc283f6e97ae0d731453f73683e3d78e8",
+      "composition_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
+      "candidate_closure_commit": "b4dda8252385769162c8232360cf4fe2569c00cb",
+      "closure_correction_receipt": "ai-integrated/registry/admission-receipts/verdier-ast239-2-3-1-r1-closure-correction.json",
+      "validation_tool_commit": "84f867ee93f329136c9ce464c4ab934f18ee53c2",
+      "lease_issue_event": "lease-event-000126",
+      "lease_release_event": "lease-event-000127"
     }
   },
   "references": {
     "composition": {
       "path": "validation/composition-current.json",
-      "bytes": 165405,
-      "sha256": "7CFA04B3A5F7BAD0653B63BC4D1BE2E84828CFB61DFC7880B7D8BAB2F7837AD2",
-      "git_blob": "ea590d297f07b484bfc1906c14ac9de7ba6350e6"
+      "bytes": 74768,
+      "sha256": "46EB48D0CA43DDA686A50FFE1E8BE88AC1ECD038ACC3C6AB727C9BC4E9F2BAF3",
+      "git_blob": "4e1fe4b93ca5cbf1349305ec8a1114049f421879"
     },
     "build": {
-      "path": "validation/direct-successor-r48-illusie-correction-build-a-2026-09-13.json",
-      "bytes": 973633,
-      "sha256": "2518B840E59FB0212E65028E6464D917853673192141B42463569DD6F22E3B2E",
-      "git_blob": "c6029cc56c644fb8fd34336d84faf599fd93f632"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-a-2026-09-28.json",
+      "bytes": 843633,
+      "sha256": "1F4C16108E2B533DEB27FCAA4AB2B09A817266D5C6298DBFEA06FF490B2185DC",
+      "git_blob": "879bb617111eb8db56721223fff11a0d12a441f6"
     },
     "second_build": {
-      "path": "validation/direct-successor-r48-illusie-correction-build-b-2026-09-13.json",
-      "bytes": 973643,
-      "sha256": "6B482C4712C26D1B77175428B08D4945E31878B4CE8AD8D4B97B4454573B79B5",
-      "git_blob": "64a1377e14d8ee0c062e661980ffbc91322a7402"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-build-b-2026-09-28.json",
+      "bytes": 843639,
+      "sha256": "85B297D5DCD040D549CF4F10DB7C971C0A860C63CA9DB0CD87D92982E975B3EC",
+      "git_blob": "8a4e9b4cf500f80585f08a556d9af6ca73274484"
     },
     "visual_qa": {
-      "path": "validation/direct-successor-r48-illusie-correction-visual-qa-2026-09-13.json",
-      "bytes": 20839,
-      "sha256": "91171E8C5D92672AF856F749D9C8D0A009DE1375C91FD4A7EFAC3196579C4ED0",
-      "git_blob": "68dea9f57a0e77deccae3725e6a456553f13bbca"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-visual-qa-2026-09-28.json",
+      "bytes": 9641,
+      "sha256": "855559304E4F3985D858EBBC5CBAC0F6DC090D0E31682F73CE934155AE9E59FF",
+      "git_blob": "3dcc99abbb02233686a3acedaddc96cbe1c167c6"
     },
     "reproducibility": {
-      "path": "validation/direct-successor-r48-illusie-correction-reproducibility-2026-09-13.json",
-      "bytes": 9678,
-      "sha256": "21F2738ADBCC69E9158CE7B83F483FEA26D8CBEA3941FEEAEA3F15A010A99CE3",
-      "git_blob": "465a921a3a156c8d06eaad5d8b994901acd08055"
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-reproducibility-2026-09-28.json",
+      "bytes": 12674,
+      "sha256": "176328C15DE425DB92DFD7B8F21E64E05549404C6C93767965C5199E751BC1D6",
+      "git_blob": "d3bafcd088573b42f298a3713c099d34fb34f504"
+    },
+    "release": {
+      "path": "validation/verdier-registered-insertion-successor-2-3-1-linear-release-2026-09-28.json",
+      "bytes": 24112,
+      "sha256": "0CE1652631C2079F4A9202141B5EC029454BEE2B49C23507C2C05DCD9F681E69",
+      "git_blob": "5a56f7c24c1e0bfe6d9e99dfe2d60eed1d55be0d"
     }
   }
 }

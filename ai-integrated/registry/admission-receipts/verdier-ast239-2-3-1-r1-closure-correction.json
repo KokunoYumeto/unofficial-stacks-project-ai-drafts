@@ -1,0 +1,84 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-correction/v1",
+  "candidate_id": "stacks-verdier-a04446e-2-3-1-r1",
+  "status": "PASS_MANIFEST_GIT_OBJECT_CLOSURE_CORRECTED",
+  "corrected_at_utc": "2026-09-28T08:21:40.9175723Z",
+  "defect": {
+    "classification": "packaging_closure_only",
+    "description": "The final manifest hash-bound .gitattributes and .gitignore bytes, but the repository root ignore rule .* had kept those two dotfiles out of the reviewed Git subtree.",
+    "detected_by": "exact Git-object manifest replay before composition receipt sealing",
+    "mathematical_payload_affected": false,
+    "built_pdf_affected": false,
+    "composition_operation_affected": false
+  },
+  "reviewed_candidate_before_correction": {
+    "commit": "3ddcb012f50fa42d12efcde125376de463d24ae5",
+    "tree": "2355b0be7c0d869c1d762956b62d1e337b0f9b73",
+    "candidate_subtree": "3c3e4ad49cd3dadc69a9640a6c3df5938cea748a",
+    "declared_manifest_references": 41,
+    "tracked_manifest_references": 39,
+    "missing_git_paths": [
+      ".gitattributes",
+      ".gitignore"
+    ]
+  },
+  "closure_correction": {
+    "commit": "b4dda8252385769162c8232360cf4fe2569c00cb",
+    "tree": "8ecfdba218d25816868e460086d957b296310a28",
+    "candidate_subtree": "3cedabb80302dd3df9d2d2e191bb4773c614a1fc",
+    "parent": "3cda15a109d7bb1c362478716e3fe981d648c61b",
+    "added_paths": [
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/.gitattributes",
+        "bytes": 130,
+        "sha256": "6041D578FC41CD2AB5109AAC6AEEEFE2ED70064448E7A6033CD7F49F930D13BE",
+        "git_blob": "2f5ae21a5950ce80d2a3e9e10c3b9090ebb49f31"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/.gitignore",
+        "bytes": 26,
+        "sha256": "5B561AA9AE36CA5FF408C3A22CE239167F80F4D3B6EF53FF095A6136FB824AA8",
+        "git_blob": "eba87b7b2b47f90b03762169a2bd5e61cc60051d"
+      }
+    ],
+    "declared_manifest_references": 41,
+    "tracked_manifest_references": 41,
+    "untracked_declared_paths": [],
+    "tracked_undeclared_paths": [],
+    "all_manifest_hashes_match": true
+  },
+  "unchanged_decisive_bytes": {
+    "manifest": {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/candidate.manifest.json",
+      "bytes": 6863,
+      "sha256": "5B7215DB879A5C3353446D67C85C3DB23D6BF85126504C3288B0B85BBC38EA06",
+      "git_blob": "232a61d5265a85f8c83373e5da9dff112295aebc"
+    },
+    "review": {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/replay/independent-review.json",
+      "bytes": 12323,
+      "sha256": "B2F3E4735AB4A8094CE7C3826ABA725A2117DA925A198202E440039160B18F00",
+      "git_blob": "b160a57464886c71095ba1637926c4a2ebfc4d3a"
+    },
+    "payload": {
+      "path": "ai-integrated/candidates/commons/stacks/verdier-ast239-2-3-1-r1/payload/fragments/derived-nested-quotients.tex",
+      "bytes": 8616,
+      "sha256": "E8A3086DA0DCFA5E876C0C6A98F193EA02761CCB911ACA6C0275F5E6AA5963C2",
+      "git_blob": "9feb1df46190154ad39341f5354e718d4b6c851c"
+    }
+  },
+  "registry_and_composition": {
+    "admission_commit": "37d4837dc283f6e97ae0d731453f73683e3d78e8",
+    "composition_commit": "6a2a52cc417e3bef34660739b77ed6e8b311037f",
+    "registry_manifest_sha256_unchanged": true,
+    "lease_release_event": "lease-event-000127",
+    "derived_postimage_sha256": "1A246938E1C5B0DA05F5EE734B5B55AE3CA05C77406252DE8B678E4BF89B3D3A"
+  },
+  "ai_disclosure": {
+    "system": "OpenAI Codex",
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "Ultra",
+    "human_review_claimed": false
+  },
+  "unresolved_defects": []
+}

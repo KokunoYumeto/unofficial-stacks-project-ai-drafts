@@ -209,6 +209,10 @@ SHA256_PATTERN = re.compile(r"^[0-9A-Fa-f]{64}$")
 LINE_RANGE_PATTERN = re.compile(r"^(\d+)-(\d+)$")
 COMPOSITION_SCHEMA_V3 = "unofficial-ai-integrated-stacks-composition/v3"
 COMPOSITION_SCHEMA_V4 = "unofficial-ai-integrated-stacks-composition/v4"
+AI_SOURCE_CORRECTION_SCHEMA = "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1"
+VERDIER_REGISTERED_INSERTION_SUCCESSOR_SCHEMA = (
+    "unofficial-ai-integrated-stacks-verdier-registered-insertion-successor/v1"
+)
 COMPOSITION_MODE_V3 = (
     "manifest-bound registry-order replay rebased onto verified cumulative source"
 )
@@ -630,7 +634,10 @@ def require_clean_build_tree(
     if composition_binding is not None:
         require_direct_tools_unchanged(source, composition_binding)
         critical_paths.update(composition_binding.get("direct_validation_tools", {}))
-        if composition_binding.get("schema") == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+        if composition_binding.get("schema") in {
+            AI_SOURCE_CORRECTION_SCHEMA,
+            VERDIER_REGISTERED_INSERTION_SUCCESSOR_SCHEMA,
+        }:
             correction_inputs = composition_binding.get("correction_protected_inputs")
             if not isinstance(correction_inputs, dict) or not correction_inputs:
                 raise RuntimeError("AI correction protected-input inventory is missing")
@@ -671,7 +678,17 @@ def require_clean_build_tree(
 
 
 def require_direct_tools_unchanged(source: Path, binding: dict[str, object]) -> None:
-    if binding.get("schema") == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+    if binding.get("schema") == VERDIER_REGISTERED_INSERTION_SUCCESSOR_SCHEMA:
+        if __package__:
+            from .verdier_registered_insertion_successor import recheck_verdier_successor_tools
+        else:
+            from verdier_registered_insertion_successor import recheck_verdier_successor_tools
+        try:
+            recheck_verdier_successor_tools(source, binding)
+        except ValueError as exc:
+            raise RuntimeError(str(exc)) from exc
+        return
+    if binding.get("schema") == AI_SOURCE_CORRECTION_SCHEMA:
         if __package__:
             from .ai_source_correction_composition import recheck_ai_source_correction_tools
         else:
@@ -1405,7 +1422,8 @@ def load_source_checkpoint(
     head_tree = git(source, "rev-parse", "HEAD^{tree}")
     if composition_binding.get("schema") in {
         "unofficial-ai-integrated-stacks-direct-composition/v1",
-        "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1",
+        AI_SOURCE_CORRECTION_SCHEMA,
+        VERDIER_REGISTERED_INSERTION_SUCCESSOR_SCHEMA,
     }:
         if __package__:
             from .direct_successor_checkpoint import load_direct_source_checkpoint
@@ -2515,7 +2533,16 @@ def load_composition_receipt(
     if not isinstance(receipt, dict):
         raise RuntimeError("composition receipt must contain a JSON object")
     composition_schema = receipt.get("schema")
-    if composition_schema == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+    if composition_schema == VERDIER_REGISTERED_INSERTION_SUCCESSOR_SCHEMA:
+        if __package__:
+            from .verdier_registered_insertion_successor import load_verdier_registered_insertion_successor
+        else:
+            from verdier_registered_insertion_successor import load_verdier_registered_insertion_successor
+        try:
+            return load_verdier_registered_insertion_successor(source, requested_path)
+        except ValueError as exc:
+            raise RuntimeError(str(exc)) from exc
+    if composition_schema == AI_SOURCE_CORRECTION_SCHEMA:
         if __package__:
             from .ai_source_correction_composition import load_ai_source_correction
         else:
@@ -4431,7 +4458,10 @@ def main() -> int:
         )
     require_source_checkpoint_build_stem(source_checkpoint_binding, stems)
     full_profile = stems == required_stems
-    if composition_binding.get("schema") == "unofficial-ai-integrated-stacks-ai-source-correction-successor/v1":
+    if composition_binding.get("schema") in {
+        AI_SOURCE_CORRECTION_SCHEMA,
+        VERDIER_REGISTERED_INSERTION_SUCCESSOR_SCHEMA,
+    }:
         if not full_profile or len(stems) != 36 or not {"schemes", "groupoids", "spaces-perfect", "simplicial"} <= set(stems):
             raise RuntimeError("AI correction requires the complete 36-chapter cumulative build")
         if args.source_checkpoint is None or source_checkpoint_binding is None:
