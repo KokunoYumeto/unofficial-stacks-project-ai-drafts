@@ -1,6 +1,6 @@
 {
   "schema": "stacks-r58-successor-current/v1",
-  "status": "LOCAL_INTEGRATION_COMPLETE_PUBLICATION_VALIDATION_PENDING",
+  "status": "READY_FOR_PUBLICATION",
   "predecessor": "29c4c1d1cd236d1629c0c8277ebf14d2a28dcce0",
   "lease_commit": "683234f29d03c3981e5f3142c65ebbf8cf140958",
   "candidate_commit": "2c11aaef69501eeafc2a1fb53c27e2da1e0503b0",
@@ -25,15 +25,16 @@
     "new_theorem_additions": false
   },
   "local_focused_tests": {
-    "passed": 27,
+    "passed": 35,
     "modules": [
       "tests.test_changes_from_upstream",
       "tests.test_upstream_correction_export",
-      "tests.test_legacy_context_replay"
+      "tests.test_legacy_context_replay",
+      "tests.test_r58_successor"
     ]
   },
   "public_main_observed": "9629f0c7311926edf85b1c5ca045a1478becebcc",
-  "publication_pending": "Complete combined successor validation and the single-parent public transport, then push and verify anonymous bytes and exact-commit CI.",
+  "publication_pending": "Validate the single-parent exact-tree public transport, push, and verify anonymous artifact bytes and exact-commit CI.",
   "publication": false,
   "model": "OpenAI Codex - GPT-6 Astra, Ultra effort",
   "human_review": false,
@@ -44,5 +45,6 @@
     "overlays": 61,
     "stable_ids": 2243,
     "verdier_ids": 42
-  }
+  },
+  "combined_validation": "Exact 1366-file candidate closure, inverse source maps, all 61 admitted registry closures, transported lease events, preserved public artifacts and deterministic correction exports passed. The new tests reject corrupted event transport and proof-file changes."
 }
