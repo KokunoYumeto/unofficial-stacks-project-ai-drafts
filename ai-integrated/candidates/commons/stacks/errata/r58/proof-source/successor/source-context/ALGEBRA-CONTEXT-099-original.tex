@@ -1,0 +1,20 @@
+\begin{lemma}
+\label{lemma-annihilator-flat-base-change}
+Let $R \to S$ be a flat ring map. Let $M$ be an $R$-module and
+$m \in M$. Then $\text{Ann}_R(m) S = \text{Ann}_S(m \otimes 1)$.
+If $M$ is a finite $R$-module, then
+$\text{Ann}_R(M) S = \text{Ann}_S(M \otimes_R S)$.
+\end{lemma}
+
+\begin{proof}
+Set $I = \text{Ann}_R(m)$. By definition there is an exact sequence
+$0 \to I \to R \to M$ where the map $R \to M$ sends $f$ to $fm$. Using
+flatness we obtain an exact sequence
+$0 \to I \otimes_R S \to S \to M \otimes_R S$ which proves the first
+assertion. If $m_1, \ldots, m_n$ is a set of generators of $M$
+then $\text{Ann}_R(M) = \bigcap \text{Ann}_R(m_i)$. Similarly
+$\text{Ann}_S(M \otimes_R S) = \bigcap \text{Ann}_S(m_i \otimes 1)$.
+Set $I_i = \text{Ann}_R(m_i)$. Then it suffices to show that
+$\bigcap_{i = 1, \ldots, n} (I_i S) = (\bigcap_{i = 1, \ldots, n} I_i)S$.
+This is Lemma \ref{lemma-flat-intersect-ideals}.
+\end{proof}

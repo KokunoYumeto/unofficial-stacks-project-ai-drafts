@@ -1,0 +1,235 @@
+# Pure ideals and finite global dimension: editorial review
+
+Primary source: Stacks Project authors, algebra.tex at git a04446e57ec1fbc252a871afcec7752fb2807b14, complete lines 26192–26913, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All twelve reports in that interval were read. The complete current interval contains exactly the earlier wording correction MC-STK-ERR-1599 and 112 lines of separately admitted FAC material, captured verbatim in ALGEBRA_PURE_GLOBAL_RETAINED_EXTRAS_20260928.json. Those additions were read and are retained exactly.
+
+All complete arguments, boundary clarifications and consequences in this file are editorial material. They do not replace the source's translation, including the current branch. Minimal wording, notation and reference proposals remain separately enumerated. An omitted source case is not classified as a translation error. No novelty or complete literature-survey claim is made. Later synthesis remains after the core intake.
+
+## The eleven pure-ideal conditions
+
+For 26199–26286 retain the original ring \(R\), ideal \(I\), and every auxiliary ideal \(J\). There are natural maps
+\[
+J\otimes_RR/I\longrightarrow J/JI,\quad j\otimes\bar r\mapsto rj+JI,
+\qquad j+JI\longmapsto j\otimes1
+\]
+which are well-defined inverses. The map to \(R/I\) is \(j+JI\mapsto j+I\), with kernel \((J\cap I)/JI\) and cokernel \(R/(I+J)\). Thus the flatness criterion in lemma-flat proves (1), (2), (3) equivalent; the criterion tests injectivity for all finitely generated ideals. The two received reports at 26232 restore the actual quotient parentheses.
+
+Conditions (2) and (3) imply (4) by taking principal ideals. If \(x\in I\), then \(x\in(x)\cap I=xI\), giving (5). For the finite list in (6), choose \(x_i=x_i y_i\), \(y_i\in I\), and retain exactly
+\[
+y=1-\prod_{i=1}^n(1-y_i)\in I .
+\]
+Each \(x_i(1-y)\) contains the vanishing factor \(x_i(1-y_i)\). For the empty list the product is 1 and \(y=0\). Thus (5) and (6) are equivalent.
+
+The set \(1+I\) is multiplicative: \((1+a)(1+b)=1+(a+b+ab)\). In (5), \(x(1-y)=0\) shows \(x\) vanishes after localization. Conversely if \(x\) vanishes, some \(1+a\), \(a\in I\), kills it, and \(x=(-a)x\). For any ideal \(I\) the localization kernel lies in \(I\), because every \(1+a\) maps to 1 in \(R/I\) and the quotient map factors through the localization. This proves the equivalence with (9), with the zero localization included.
+
+For a prime \(\mathfrak p\notin V(I)\), any element of \(I\setminus\mathfrak p\) becomes a unit, so \(IR_{\mathfrak p}=R_{\mathfrak p}\). For \(\mathfrak p\in V(I)\), the equation \(x(1-y)=0\) has \(1-y\notin\mathfrak p\); hence every \(x/1\) vanishes and \(IR_{\mathfrak p}=0\). The received repeated-verb correction at 26259 expresses this consequence without changing the equation. Condition (7) makes every localized quotient either \(R_{\mathfrak p}\) or zero, both flat, so the local flatness criterion proves (1). For (8), outside \(V(I)\) the ideal localization is the nonzero local ring, and on \(V(I)\) it is zero; conversely (8) supplies the zero case and the unit argument supplies the other case. If \(R=0\) there are no primes and every module under discussion is zero.
+
+Under these conditions the explicit isomorphism in (11) is
+\[
+R/I\longrightarrow(1+I)^{-1}R,\quad r+I\mapsto r/1,
+\qquad r/(1+a)\longmapsto r+I .
+\]
+The second map is well-defined by the localization universal property. In the localization every \(a\in I\) is zero, so \(1+a\) equals 1; both composites are identities. This gives the source surjectivity assertion at 26277–26279 directly, without assuming a finite ideal. Condition (11) implies (10); every localization is flat, proving (10) implies (1).
+
+## Closed sets, exact kernels and idempotents
+
+For 26288–26364 a pure ideal is recovered by the source's actual kernel
+\[
+I=\ker\left(R\longrightarrow\prod_{\mathfrak p\in V(I)}R_{\mathfrak p}\right).
+\]
+The inclusion from left to right follows from the preceding local calculation. If \(x\notin I\), its nonzero class in \(R/I\) has a proper annihilator. A maximal ideal containing that annihilator contains \(I\), and the class remains nonzero there: a denominator killing it would lie in the annihilator and outside that maximal ideal. Since \(I_{\mathfrak m}=0\), \(x\) itself is nonzero in \(R_{\mathfrak m}\). This proves the reverse inclusion. For \(I=R\) the empty product is the zero ring and its kernel is \(R\), as required.
+
+The vanishing locus of a pure ideal is closed under generalizations directly. If \(\mathfrak q\subset\mathfrak p\), \(I\subset\mathfrak p\), and \(x\in I\), choose \(x=xy\), \(y\in I\). Then \(1-y\notin\mathfrak p\), hence not in \(\mathfrak q\); primality in \(x(1-y)=0\) forces \(x\in\mathfrak q\).
+
+Conversely retain the source closed generalization-stable set \(Z=V(J)\), with \(J\) radical, and
+\(I=\{x\in R:\exists f\in J,\ x=xf\}\).
+If \(x=xf\) and \(y=yg\), then
+\((x+y)(f+g-fg)=x+y\): for \(x\), the terms \(xg-xfg\) cancel because \(xf=x\); for \(y\), \(yf-yfg\) cancel because \(yg=y\). The multiplier belongs to \(J\). Scalar multiples and additive inverses retain the same multiplier, so \(I\) is an ideal. Also \(I\subset J\).
+
+For a prime \(\mathfrak p\) containing \(I\), consider exactly
+\(S=(R\setminus\mathfrak p)(1+J)\).
+If \(t(1+j)=0\) with \(t\notin\mathfrak p\), then \(t=t(-j)\), hence \(t\in I\), a contradiction. Thus \(0\notin S\). A maximal ideal of the nonzero localization \(S^{-1}R\) contracts to a prime \(\mathfrak q\) disjoint from \(S\); consequently \(\mathfrak q\subset\mathfrak p\) and \(\mathfrak q\cap(1+J)=\varnothing\). The latter says \(\mathfrak q+J\ne R\), since \(1=q+j\) would put \(1-j=q\) in that intersection. Choose a maximal ideal \(\mathfrak m\supset\mathfrak q+J\). Generalization stability gives \(\mathfrak q\in Z\) from \(\mathfrak m\in Z\), and closedness gives \(\mathfrak p\in Z\). Therefore \(V(I)=V(J)\) and \(\sqrt I=J\). For \(x=xy\) with \(y\in J\), choose \(n>0\) with \(y^n\in I\); iteration gives \(x=xy^n\), proving purity by condition (5). This proves both existence and uniqueness, not only uniqueness.
+
+For 26366–26399, if \(I\) is pure and generated by \(x_1,\ldots,x_n\), condition (6) gives \(e\in I\) acting as the identity on all generators. It acts as the identity on \(I\), so \(e^2=e\) and \(I=eR\). Conversely \(R=eR\oplus(1-e)R\), and \(R/I\cong(1-e)R\) is projective; \(V(e)=D(1-e)\). If \(R/I\) is projective, choose a splitting of \(R\to R/I\). The complementary projection onto \(I\) is \(R\)-linear, hence multiplication by \(e\), its value on 1. Being a projection gives \(e^2=e\) and image \(I=eR\). If \(I\) is pure and \(V(I)\) is open, the source clopen-idempotent correspondence supplies \(e\) with \(V(I)=V(e)\); uniqueness of pure ideals then gives \(I=eR\). The zero ideal and unit ideal correspond to \(e=0,1\), also in the zero ring.
+
+## Finite flat modules and their rank strata
+
+For 26405–26469, the implication from finite locally free modules to open closed-generalization-stable subsets requires the existence result lemma-pure-open-closed-specializations. The cited uniqueness lemma alone cannot produce an ideal for an arbitrary such set. The two reports at 26419 receive the reference correction.
+
+Here are the exact rank and relation arguments for the converse, which will also be used below. A finite flat \(M\) localizes to a finite free module at every prime by lemma-finite-flat-local. Its support is \(V(\operatorname{Ann}M)\), and if \(\mathfrak p\subset\mathfrak p'\), a nonzero free \(M_{\mathfrak p'}\) remains a nonzero free module after localization to the nonzero ring \(R_{\mathfrak p}\). Thus support is generalization-stable. The punctuation report at 26429 terminates exactly that localization equality.
+
+For a generating list of length \(r\), each \(\bigwedge^i M\) is finite, and its localization is the exterior power of the finite free localization of \(M\). It is therefore flat by the local criterion. Under condition (1) each support
+\(W_i=\operatorname{Supp}(\bigwedge^iM)\) is clopen. Put \(W_0=\operatorname{Spec}R\), \(W_{r+1}=\varnothing\), and \(U_i=W_i\setminus W_{i+1}\). These are the original rank-\(i\) strata: at a prime where \(M_{\mathfrak p}\) has rank \(q\), \(\bigwedge^i M_{\mathfrak p}\) is nonzero exactly when \(i\le q\). Thus the \(U_i\) partition the spectrum into clopen sets.
+
+At \(\mathfrak p\in U_i\), choose \(i\) of the original generators whose residues form a basis. Nakayama makes their map \(R_{\mathfrak p}^i\to M_{\mathfrak p}\) onto. Its finite cokernel vanishes after localizing at one \(f\notin\mathfrak p\): kill a finite generating set by a product of denominators. Shrink \(D(f)\) inside the open \(U_i\). For \(i=0\) this already gives \(M_f=0\), which is the required rank-zero isomorphism. For \(i>0\), the surjection \(R_f^i\to M_f\) gives a cyclic flat \(\bigwedge^iM_f\cong R_f/J\), with support all of \(\operatorname{Spec}R_f\). The preceding kernel criterion gives \(J=0\).
+
+Explicitly, if \(\sum_{j=1}^i a_jm_j=0\), wedge this equality with the ordered list of all \(m_k\) except \(m_j\). Every term except the \(j\)th vanishes; that term is \((-1)^{j-1}a_j(m_1\wedge\cdots\wedge m_i)\), up to the fixed choice of putting the omitted-list wedge after the relation. Its coefficient is zero because this top wedge is a basis. Thus every \(a_j=0\), proving the original map injective. (With the relation first and the remaining indices increasing, the sign is exactly \((-1)^{j-1}\).)
+
+This proves finite local freeness. The argument also proves the precise reusable statement: a finite flat module is finite locally free if its local rank function is locally constant. Indeed for finite \(r\) its rank fibres \(U_i\) are then clopen, and the same maps apply. Conversely local freeness makes the ranks locally constant. Finite locally free is equivalent to finite projective by lemma-finite-projective.
+
+## Schanuel maps with their original signs
+
+The two wording reports at 26495 are already corrected by MC-STK-ERR-1599. No new operation is allocated.
+
+In 26484–26566, retain \(c_1,c_2,p_1,p_2,a,b\) and \(N=\ker(p_1,p_2)\), where the map is the sum, not a difference. Projection \(N\to P_1\) is onto by choosing a lift of \(-p_1(u)\) in \(P_2\); its kernel is \(c_2(L)\). Projection to \(P_2\) is onto by the corresponding lift of \(-p_2(v)\); its kernel is \(c_1(K)\). Their projective targets split these sequences.
+
+The source matrices and inverses are
+\[
+S=\begin{pmatrix}1&0\\a&1\end{pmatrix},\
+S^{-1}=\begin{pmatrix}1&0\\-a&1\end{pmatrix},\qquad
+T=\begin{pmatrix}1&b\\0&1\end{pmatrix},\
+T^{-1}=\begin{pmatrix}1&-b\\0&1\end{pmatrix}.
+\]
+Direct multiplication gives identity. Moreover \((0,p_2)S=(p_1,p_2)\) and \((p_1,0)T=(p_1,p_2)\). Thus the map from the top exact sequence to the bottom one is
+\[
+ST^{-1}=\begin{pmatrix}1&-b\\a&1-ab\end{pmatrix},
+\qquad
+TS^{-1}=\begin{pmatrix}1-ba&b\\-a&1\end{pmatrix}
+\]
+for its inverse; the orders \(ab\) and \(ba\) are retained.
+
+On \(K\oplus P_2\) the first map sends \((k,v)\), through its specified inclusion, to
+\((c_1k-bv,\ ac_1k+(1-ab)v)\).
+The second component belongs to \(\ker p_2=c_2(L)\), since applying \(p_2\) gives \(0+p_2v-p_1bv=0\). Conversely for \((u,\ell)\in P_1\oplus L\), the inverse pair in \(P_1\oplus P_2\) is
+\(((1-ba)u+bc_2\ell,-au+c_2\ell)\), whose first component lies in \(\ker p_1=c_1(K)\). The injectivity of \(c_1,c_2\) identifies the actual kernel coordinates uniquely. This proves all vertical isomorphisms and commutativity in the source diagram.
+
+## Syzygies, augmented indices and the reported boundary cases
+
+For 26584–26627 use induction on an upper bound \(d\) for projective dimension, so a resolution of length less than \(d\) is also covered. If \(d=0\), \(F_0\to M\) splits and its kernel is projective; repeat this along the remaining finite complex to reach the stated final kernel. For \(d>0\), let \(K_F=\ker(F_0\to M)\) and \(K_P=\ker(P_0\to M)\), using a projective resolution of length at most \(d\). Schanuel gives
+\(P_0\oplus K_F\cong F_0\oplus K_P\).
+The right module has a projective resolution of length at most \(d-1\), obtained by adjoining \(F_0\) to the last surjection onto \(K_P\). For \(e=0\) the hypotheses give \(d\le1\); the displayed isomorphism immediately makes \(K_F\) projective. For \(e>0\), the source exact sequence ending in \(P_0\oplus K_F\) has projective terms and length \(e-1\). Its final kernel is the original kernel for \(e\ge2\). For \(e=1\) its final map is the identity on \(P_0\) plus \(F_1\to K_F\), so its kernel is exactly \(\ker(F_1\to F_0)\). Induction proves the claim. This verifies the bound and all cases used in 26629–26675.
+
+The two reports at 26690–26698 identify omitted cases in an otherwise valid theorem, rather than a false theorem or translation error. They are resolved here as a source-linked proof clarification, with zero source operations. For \(d=0\), \(M\) is already finite projective and the resolution is \(0\to M\xrightarrow{1}M\to0\). For \(d=1\), take \(P_1=\ker(F_0\to M)\); it is projective by the earlier criterion and finite by Noetherianity, so \(0\to P_1\to F_0\to M\to0\) is the desired resolution. For \(d\ge2\) the source's original \(P_d=\ker(F_{d-1}\to F_{d-2})\) and displayed sequence apply unchanged. Over a local ring each finite projective term is finite free, proving the stated local variant. None of this supplies undefined negative-index free modules.
+
+For the Ext argument at 26724–26759, the required notation clarification is
+\[
+d_0:F_0\to M,\quad d_e:F_e\to F_{e-1}\ (e\ge1),\quad
+P_{-1}=M,\quad P_e=\ker d_e\ (e\ge0).
+\]
+Then \(0\to P_e\to F_e\to P_{e-1}\to0\) is exact for every \(e\ge0\). If \(\operatorname{pd}M\le n\), each \(P_e\) for \(e\ge n-1\) is projective, with \(P_{-1}=M\) in the \(n=0\) case. Whenever \(e\ge n\), projectivity of \(P_{e-1}\) gives the actual split sequence
+\(F_e\cong P_e\oplus P_{e-1}\).
+Its differential projects to \(P_{e-1}\) and includes that summand in the next term. Applying \(\operatorname{Hom}_R(-,N)\) makes the cochain tail split exact above degree \(n\), so the required Ext groups vanish. The two small source operations specify these indices; they do not replace the proof.
+
+Conversely, if \(\operatorname{Ext}^{n+1}_R(M,N)=0\) for every \(N\), the case \(n=0\) makes \(M\) projective: a surjection from a free module has extension class zero and splits. If \(n>0\), a free cover with kernel \(K\) gives
+\(\operatorname{Ext}^n_R(K,N)\cong\operatorname{Ext}^{n+1}_R(M,N)\)
+by the long exact Ext sequence and vanishing of positive Ext from the free module. Induction gives \(\operatorname{pd}K\le n-1\), and adjoining the free cover gives the required resolution of \(M\).
+
+For the three short-exact-sequence bounds at 26761–26782, apply that criterion to the original contravariant long exact sequence. The first uses
+\(\operatorname{Ext}^i(M,N)\to\operatorname{Ext}^i(M',N)\to\operatorname{Ext}^{i+1}(M'',N)\)
+for \(i\ge n+1\); the second uses
+\(\operatorname{Ext}^i(M'',N)\to\operatorname{Ext}^i(M,N)\to\operatorname{Ext}^i(M',N)\);
+the third uses
+\(\operatorname{Ext}^{i-1}(M',N)\to\operatorname{Ext}^i(M'',N)\to\operatorname{Ext}^i(M,N)\)
+for \(i\ge n+2\). The outside terms vanish with exactly the source bounds.
+
+## Transfinite filtrations and the cyclic-module test
+
+For 26799–26853 the \(n=0\) section maps give the source \(\psi:\bigoplus_eP_e\to M\). A nonzero finite-support element has a largest index; its image modulo the union of earlier submodules is its nonzero last coordinate, proving injection. For surjection, transfinite induction subtracts the chosen lift of the current quotient class, leaving an element at an earlier stage. No infinite sum is taken. If the index set is empty, \(M=0\) and the claim holds.
+
+For \(n>0\), retain \(F_e\) as the free module on all elements of \(M_e\), including its zero element. Its transition maps include basis sets, and its kernel \(K_e\) maps injectively into later kernels. The unions give an exact sequence \(0\to K\to F\to M\to0\): every element has finite support and therefore occurs in one stage. At a limit, the same finite-support argument makes the earlier union sequence exact.
+
+The quotient \(F_e/F_{<e}\) is free on the set of elements of \(M_e\) not belonging to any \(M_{e'}\) with \(e'<e\). At the least index there are no earlier sets, so its basis is all of \(M_e\), still including zero. The zero module used as the empty union of submodules must not be mistaken for an earlier underlying basis set. With this precise convention the source free-basis argument is valid; no defect or new source correction is inferred from it.
+
+The injective maps of the earlier and current exact sequences give, by the kernel/cokernel sequence, exactly
+\[
+0\to K_e/K_{<e}\to F_e/F_{<e}\to M_e/M_{<e}\to0.
+\]
+The middle term is free and the last has projective dimension at most \(n\). The first short-exact-sequence bound gives projective dimension at most \(n-1\) for the kernel quotient. Induction gives the same bound for \(K\), and adjoining \(F\) gives the bound \(n\) for \(M\).
+
+For 26855–26878 choose the original well-ordered generating set and its generated submodules. Each successive quotient is cyclic (zero is allowed as \(R/R\)), so the proved filtration result transfers the uniform cyclic bound to every module. The other implications are direct. For 26880–26903 localization preserves exactness and projective summands, hence the original localized resolution. For any \(S^{-1}R\)-module \(N\), the maps \(S^{-1}N\to N\), \(n/s\mapsto s^{-1}n\), and \(n\mapsto n/1\) are inverse, giving the global bound.
+
+## Finite resolution data in place of Noetherianity
+
+Here is a separate weakening of the hypotheses of 26677–26722. Let \(R\) be any ring, \(d\ge0\), and suppose \(M\) has projective dimension at most \(d\). For \(d=0\), suppose \(M\) is finite. For \(d\ge1\), suppose the original module has an exact partial resolution
+\[
+F_d\longrightarrow F_{d-1}\longrightarrow\cdots
+\longrightarrow F_0\longrightarrow M\longrightarrow0
+\]
+with all \(F_i\) finite free. Then \(M\) has a resolution of length at most \(d\) by finite projective modules, with no Noetherianity assumption.
+
+For \(d=0\) this is the finite projective module itself. For \(d\ge1\), put \(K_d=\ker(F_{d-1}\to F_{d-2})\), using \(M\) as the target when \(d=1\). The already proved projective-dimension criterion makes \(K_d\) projective. Exactness makes it the image of the finite module \(F_d\), hence finite. Truncate the same original complex at \(K_d\); all lower terms remain the original \(F_i\). Over a local ring this is a finite free resolution, since finite projectives are free. The partial-resolution hypothesis is often called finite presentation through degree \(d\); its full displayed meaning, rather than that terminology, is what is assumed here.
+
+There is a corresponding extension of the retained local FAC addition. If \(R\) is any nonzero local ring and \(M\ne0\) has finite projective dimension \(d\) and the finite resolution data just specified, then
+\(\operatorname{Ext}^d_R(M,R)\ne0\).
+The unit removal below uses the complete original-coordinate proof of ALGEBRA-RECON-569, ALGEBRA_COMPLEX_EXACTNESS_NOTES_20260928.md, section “The original pivot and its exact splitting maps”, SHA-256 02D6389E6F820C53832BD9691965D4D8479783E8B80D9BDD761B077E29B7ECC3, reread for this application. For the actual coefficient \(u=a_{pq}\), its bases are \(E_p=e_p\), \(E_j=e_j-a_{jq}u^{-1}e_p\), \(F_q=\sum_k a_{pk}f_k\), \(F_k=f_k\) for the other indices. The complementary coefficients are exactly \(a_{jk}-a_{jq}u^{-1}a_{pk}\); the incoming complex equation kills the \(E_p\)-coordinate and the outgoing map kills \(F_q\). Its inverse basis formulas and chain homotopy retain every coefficient in the cited proof. Thus its identity-disk removal preserves the original module and all homology, not only a matrix rank.
+To prove it, take the resulting finite free resolution. Any unit matrix entry can be made a one-term identity block by invertible row and column operations; the adjacent differential equations force the incoming and outgoing entries for that block to vanish. Remove this contractible pair. The total finite rank strictly decreases, so the process ends with all differential entries in the maximal ideal. Minimality of \(d\) forces the last term \(F_d\ne0\). For \(d\ge1\), the image of
+\(\operatorname{Hom}(F_{d-1},R)\to\operatorname{Hom}(F_d,R)\)
+lies in \(\mathfrak m\operatorname{Hom}(F_d,R)\); its cokernel surjects onto the nonzero residue vector space of the last dual free module. For \(d=0\), \(M\) is nonzero finite free and \(\operatorname{Hom}(M,R)\ne0\) directly. Positive Ext above degree \(d\) vanishes by the resolution, so testing Ext against \(R\) alone detects every nonnegative bound, under this finite-data hypothesis. This proof retains the actual complex and does not assume that arbitrary finite modules over non-Noetherian rings have such a resolution.
+
+## Pure ideals under base change and pure descent
+
+For any \(\varphi:R\to S\), if \(I\) is pure then \(IS\) is pure: the canonical quotient isomorphism
+\[
+S\otimes_R(R/I)\longrightarrow S/IS,\quad
+s\otimes(r+I)\longmapsto s\varphi(r)+IS
+\]
+has inverse \(s+IS\mapsto s\otimes1\), and base change preserves flatness. The local-unit proof is equally explicit. Express finitely many generators of any chosen element of \(IS\) using finitely many coefficients from \(I\); choose one \(y\in I\) fixing all those coefficients by condition (6). Then \(\varphi(y)\in IS\) fixes the original element.
+
+Conversely if \(R\to S\) is pure and \(IS\) is pure, \(S/IS\) is flat over \(S\); the flatness-descent argument of ALGEBRA-RECON-501 applied to the original module \(R/I\) proves it flat over \(R\). Hence \(I\) is pure. Purity also makes the actual map
+\(R/I\to (R/I)\otimes_RS=S/IS\) injective, which says exactly \(\varphi^{-1}(IS)=I\).
+No injectivity of a different kernel tensor map and no flatness of \(S\) is assumed. The earlier full argument is bound at ALGEBRA_OPEN_LOCI_PURE_DESCENT_NOTES_20260927.md, “Descent along the original universally injective ring map”, SHA-256 07F5EE25587956218DB7F89CE8F82C9B054F75E0C79C1E50ADA24FAC25C8C7A5.
+
+## Nil-ideal invariance with the actual quotient maps
+
+Let \(N\subset R\) be a nil ideal, without a uniform nilpotence exponent. Every prime contains every element of \(N\), so the inverse-image bijection
+\(\operatorname{Spec}(R/N)\to\operatorname{Spec}R\)
+preserves inclusions and identifies the vanishing set of any ideal image with its original vanishing set. It is a homeomorphism by those same equations for closed sets.
+
+Consequently \(I\mapsto(I+N)/N\) gives a bijection between pure ideals of \(R\) and of \(R/N\). Base change proves the image pure. For surjection, let \(\bar J\) be pure in \(R/N\), put \(L=\pi^{-1}(\bar J)\), and use the explicit inverse
+\[
+I=\{x\in R:\exists y\in L,\ x=xy\}.
+\]
+Indeed \(V(L)\) is closed and generalization-stable. The earlier constructive proof with \(J=\sqrt L\) gives a pure ideal by that formula with \(y\in\sqrt L\). If \(x=xy\) and \(y^m\in L\), iteration gives \(x=xy^m\); therefore the same ideal is given by the displayed formula with \(L\) itself. Its vanishing set is \(V(L)\), so its image, a pure ideal with the same vanishing set as \(\bar J\), equals \(\bar J\). Uniqueness of the pure ideal from its vanishing set proves injectivity as well.
+
+This does not identify \(I\) with \(\bar J\): its actual kernel is
+\(I\cap N=IN\), by condition (2) for the pure ideal \(I\), so the exact comparison is \(I/IN\cong\bar J\). Finite generation of corresponding pure ideals is equivalent, because the source criterion identifies it with openness of their common vanishing set. Thus idempotent-generated pure ideals correspond as well.
+
+The property that every finite flat module is finite projective is also invariant under \(R\to R/N\), by the original closed-generalization-stable-set criterion and this homeomorphism. More precisely, for an individual finite flat \(R\)-module \(M\),
+\[
+M\text{ finite projective over }R
+\quad\Longleftrightarrow\quad
+M/NM\text{ finite projective over }R/N .
+\]
+The forward implication is base change. For the reverse, the residue fields at corresponding primes are the same via the quotient map, and
+\((M/NM)\otimes_{R/N}\kappa(\mathfrak p/N)
+\cong M\otimes_R\kappa(\mathfrak p)\).
+These isomorphisms send \((m+NM)\otimes\bar r\) to \(m\otimes r\). The rank of the finite free stalk of \(M\) equals this fibre dimension; hence its rank function is locally constant when the quotient is projective. The exact rank-stratum argument above proves \(M\) finite locally free, hence finite projective. The original flatness hypothesis on \(M\) is essential to this argument and is retained; no assertion of projectivity descent for arbitrary modules along a nil quotient is made.
+
+## Global dimension along flat epimorphisms
+
+The source localization bound extends to every flat ring epimorphism \(\varphi:R\to S\). For any \(S\)-module \(Q\), the multiplication map
+\[
+S\otimes_RQ\longrightarrow Q,\quad s\otimes q\mapsto sq
+\]
+is an isomorphism with inverse \(q\mapsto1\otimes q\).
+To verify its \(S\)-linearity and inverse identities, tensor the already proved isomorphism \(S\otimes_RS\to S\) over its second \(S\)-action with \(Q\). The explicit comparison is
+\((s\otimes t)\otimes q\mapsto s\otimes tq\), with inverse
+\(s\otimes q\mapsto(s\otimes1)\otimes q\).
+The equality \(s\otimes1=1\otimes s\) yields \(s\otimes q=1\otimes sq\), exactly the needed identity.
+
+A projective \(R\)-resolution of the underlying \(Q\) stays exact after tensoring with the flat \(S\); its terms stay projective because tensoring preserves a given direct-summand decomposition of a free module. The last term is the original \(Q\) by the preceding map. Thus
+\[
+\operatorname{pd}_S(Q)\le\operatorname{pd}_R(Q)
+\]
+whenever the right side is finite. In particular a bound \(n\) for the global dimension of \(R\) is also a bound for that of \(S\). The zero target is included. This receives the exact tensor-factor characterization of ALGEBRA-RECON-606, rather than merely an abstract resemblance to localization.
+
+For the present section's pure ideal \(I\), the map \(R\to R/I\) is flat by definition and epic by surjectivity. Hence the same inequality applies to every \(R/I\)-module with its actual restricted \(R\)-action. The source identifies this quotient with \((1+I)^{-1}R\); the two proofs agree through that explicit isomorphism, and no new multiplication or quotient presentation is substituted.
+
+## Retained FAC additions and their degree-zero clarification
+
+The current source adds a reference/history block at definition-finite-proj-dim, citing FAC Chapter III, §5, no. 74, pp. 268–269, and two Ext lemmas after lemma-projective-dimension-ext, citing FAC no. 74, Lemma 1, and no. 77, Lemma 3. The entire 16-line block and 96-line pair of lemmas and proofs are captured and preserved byte for byte. Reading these local additions is not a fresh reading of FAC.
+
+The local added lemma's theorem is valid. Its proof at current algebra.tex:27340 and following, however, writes the top Ext cokernel using \(F_{d-1}\) after handling only \(M=0\). For a nonzero projective \(M\), \(d=0\) and \(F_{-1}\) is undefined in that dual complex. This is recorded as a conceptual boundary clarification of the retained addition, with no source operation against the upstream authority. Handle \(d=0\) by the nonzero finite free module \(\operatorname{Hom}(M,R)\); use the stated top-cokernel proof only for \(d\ge1\), exactly as proved above. The augmented convention \(F_{-1}=M\) from the resolution argument is not a valid substitute inside this Hom cochain complex. This distinction prevents a false degree-zero cokernel formula.
+
+The global added lemma at current label line 27390 also holds. For \(d=0\), choose a maximal ideal in the support of the nonzero finite projective module. For \(d>0\), if every maximal localization had projective dimension at most \(d-1\), the finite syzygy testing that bound would be projective at every maximal localization and hence finite projective over \(R\), by lemma-finite-projective and Noetherian finite presentation. When \(d=1\), the module testing the zero bound is \(M\) itself. This contradicts the definition of \(d\). Thus some maximal localization attains \(d\). A finite projective resolution computes Ext, its Hom terms commute with localization, and exact localization commutes with its cohomology; therefore
+\(\operatorname{Ext}^d_R(M,R)_{\mathfrak m}
+\cong\operatorname{Ext}^d_{R_{\mathfrak m}}(M_{\mathfrak m},R_{\mathfrak m})\ne0\).
+The corrected local argument supplies the last nonvanishing.
+
+The finite-projective-dimension hypothesis in both additions must be retained. For a field \(k\), let \(A=k[\epsilon]/(\epsilon^2)\) and \(M=k=A/(\epsilon)\). The exact infinite free resolution has every differential multiplication by \(\epsilon\), since its kernel and image are both \(\epsilon A\). Tensoring with \(k\) makes all these differentials zero, so \(\operatorname{Tor}^A_i(k,k)=k\) for every \(i\ge0\); consequently \(k\) has infinite projective dimension. But applying \(\operatorname{Hom}_A(-,A)\) gives the same multiplication-by-\(\epsilon\) maps, exact in every positive degree, so \(\operatorname{Ext}_A^i(k,A)=0\) for all \(i>0\). This explicitly checks the adverse case rather than silently removing the finite-dimension hypothesis.
+
+## Source and reading limits
+
+The two new bounded corpus queries yielded eight routing records across both layers, including two PDF-primary records and duplicate-topic or unrelated material. None was content-read or used for a theorem. They remain routing records, not proof or evidence of novelty. Earlier immutable routes and their actual reading coverage are retained.
+
+Authority 26914–27280 was read as lookahead, including the regular/global-dimension section and the beginning of Auslander–Buchsbaum; it is not adjudicated. The last proof is incomplete at the lookahead boundary. The next review starts at 26914. The original human references Lazard, Bkouche, DeMarco and Auslander, the retained FAC materials, and unrelated dirty files remain unchanged. No translation/source mutation, rendering or publication occurred.
+

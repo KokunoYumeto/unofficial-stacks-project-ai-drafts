@@ -1,0 +1,38 @@
+\begin{lemma}
+\label{editorial-source-lemma-total-ring-fractions}
+Let $R$ be a ring.
+Let $S \subset R$ be a multiplicative subset consisting of nonzerodivisors.
+Then $Q(R) \cong Q(S^{-1}R)$.
+In particular $Q(R) \cong Q(Q(R))$.
+\end{lemma}
+
+\begin{proof}
+Let $T\subset R$ be the set of nonzerodivisors.
+Since $S\subset T$, the map $R\to S^{-1}R$ is injective.
+An element $x=r/f$ of $S^{-1}R$, with $r\in R$ and $f\in S$,
+is a nonzerodivisor if and only if $r\in T$.
+Indeed, if $x$ is a nonzerodivisor and $ra=0$ in $R$, then
+$x(a/1)=0$, hence $a/1=0$, and injectivity gives $a=0$.
+Conversely, if $r\in T$ and $x(a/s)=0$, then
+$ura=0$ for some $u\in S$. Both $u$ and $r$ are nonzerodivisors,
+so $a=0$ and $a/s=0$.
+The two ring maps are
+$$
+Q(R)\longrightarrow Q(S^{-1}R),\qquad
+\frac{r}{t}\longmapsto\frac{r/1}{t/1},
+$$
+and
+$$
+Q(S^{-1}R)\longrightarrow Q(R),\qquad
+\frac{r/s}{a/u}\longmapsto\frac{ru}{sa},
+\quad s,u\in S,\quad a\in T.
+$$
+The first is induced by $R\to S^{-1}R$ because each $t\in T$
+remains a nonzerodivisor. The second is induced by $S^{-1}R\to Q(R)$:
+it sends every nonzerodivisor $a/u$ to a unit with inverse $u/a$.
+Thus both formulas are well-defined by the localization universal
+properties. Their composites fix each element of $R$ and every
+adjoined inverse; explicitly, $r/t$ returns to $r/t$, and
+$(r/s)/(a/u)$ returns to $(ru/1)/(sa/1)$, the original fraction.
+Taking $S=T$ gives the final assertion, with the same maps.
+\end{proof}

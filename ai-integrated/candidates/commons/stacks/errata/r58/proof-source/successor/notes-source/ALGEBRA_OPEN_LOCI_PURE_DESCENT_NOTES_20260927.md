@@ -1,0 +1,175 @@
+# Editorial evidence for Algebra 19375–20373
+
+Primary source: Stacks Project authors, algebra.tex, commit a04446e57ec1fbc252a871afcec7752fb2807b14, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The complete interval and seven received reports were read. Substantive corrections and the consequences below remain source-linked editorial material. The translated source is not rewritten around them.
+
+## The original isomorphism neighbourhood
+
+Sources: 19408–19444; OCC-00445 and OCC-00446. Keep the presentation \(N=R^n/\sum_jRk_j\), its generators \(e_i\), and the actual map \(\varphi:M\to N\).
+
+Surjectivity of \(\varphi_{\mathfrak p}\) supplies \(n_i/s_i\in M_{\mathfrak p}\), with \(n_i\in M\), \(s_i\notin\mathfrak p\), whose image is \(e_i/1\). Equality of fractions means there is \(t_i\notin\mathfrak p\) with
+\[
+t_i\bigl(\varphi(n_i)-s_ie_i\bigr)=0\quad\text{in }N.
+\]
+Put \(m_i=t_in_i\in M\) and \(f_i=t_is_i\notin\mathfrak p\). Then \(\varphi(m_i)=f_ie_i\) holds in the original module \(N\), not merely in its localization. For the original product \(f=\prod_i f_i\), every \(m_i/f_i\) now belongs to \(M_f\). The resulting \(\psi:R_f^n\to M_f\) has \(\varphi_f\psi\) equal to the original presentation map.
+
+The element \(\psi(k_j)\) is in \(M_f\). Its image in \(M_{\mathfrak p}\) is zero because \(\varphi_{\mathfrak p}\) is injective. The map \(M_f\to M_{\mathfrak p}\) is localization at the image of \(R\setminus\mathfrak p\); therefore some original \(g_j\notin\mathfrak p\) annihilates \(\psi(k_j)\) already in \(M_f\). With \(g=\prod_jg_j\), the map factors to \(\chi:N_{fg}\to M_{fg}\) and \(\varphi_{fg}\chi=\operatorname{id}\).
+
+The finite target \(M_{fg}\) permits the source surjectivity-locus lemma to be applied to \(\chi\). It gives a principal neighbourhood of the selected prime where \(\chi\) is onto. A fraction in \(R_{fg}\) determining that neighbourhood has an original numerator \(h\notin\mathfrak p\); inverting it in \(R_{fg}\) is canonically localization at \(fgh\). A surjective right inverse is also a left inverse: for \(x=\chi(y)\), one has \(\chi\varphi(x)=\chi\varphi\chi(y)=\chi(y)=x\). Thus the original \(\varphi_{fgh}\) is an isomorphism. Empty products when \(n=0\) or the list of relations is empty are one; the same argument includes the zero module. These are denominator and codomain repairs, not changed finiteness hypotheses.
+
+## Split kernels and the original minors
+
+Source: 19471–19532; OCC-00447 and OCC-12087. The source correction is already composed as MC-STK-ERR-0430, changing only the ambient summand from \(P_{2,f}\) to \(P_{1,f}\).
+
+For the original split surjection \(u:P_{1,f}\to P_{2,f}\), choose its section \(s\). The mutually inverse maps are
+\[
+\ker u\oplus P_{2,f}\longrightarrow P_{1,f},\quad(k,y)\mapsto k+s(y),
+\qquad
+x\longmapsto(x-su(x),u(x)).
+\]
+The first coordinate of the inverse is in \(\ker u\), and both composites are identities because \(us=1\). Thus the kernel is a finite-projective summand of the domain. It need not be a summand of the codomain: the surjection \(R\to0\) over nonzero \(R\) already disproves that claim.
+
+The injectivity-locus argument preserves the original matrix. On a chosen chart, after listing the selected \(n_1\) rows first, write it as \(\binom A B\), where \(A\) is the actual invertible \(n_1\times n_1\) minor and \(B\) contains all remaining rows. The map \((v,w)\mapsto w-BA^{-1}v\) has kernel exactly the original image of \(x\mapsto(Ax,Bx)\). It induces an isomorphism of the cokernel with \(R^{n_2-n_1}\), whose inverse sends \(w\) to the class of \((0,w)\). The left inverse on the image is \(A^{-1}\) applied to the selected coordinates. This proves both injectivity and the source cokernel assertion without replacing the matrix. When \(n_1=0\), the empty minor is one and the source module is zero; when \(n_1>n_2\), the fibre-injectivity locus is empty. On a principal open contained in that locus the source local assertions patch exactly as printed.
+
+## Finite relations and universal exactness
+
+Sources: 19583–19993. The supplied proofs of Lazard's theorem and the universally exact criteria were read through their ends; no source correction is required in those arguments.
+
+The equational criterion writes \(x_i=\sum_j a_{ij}y_j\) with \(\sum_i f_i a_{ij}=0\). In the source map \(h:R^n\to R^m\), this means exactly \(h(e_i)=\sum_j a_{ij}e'_j\): the matrix entry in row \(j\), column \(i\), is \(a_{ij}\). Its composite with \(g(e'_j)=y_j\) recovers the original map, and it kills the original relation vector \((f_i)\). Successive compositions that kill one more relation retain every relation already killed. Thus a finite relation submodule can be killed after finitely many steps. For a finite presentation \(P=R^n/\operatorname{im}A\), applying this to the finitely many columns of \(A\) gives exactly a factorization of any map \(P\to M\) through a finite free module when \(M\) is flat. Conversely the presentation \(R^n/Rx\) for a single relation recovers the equational criterion from this factorization property.
+
+In the source directed system \(E\), a finite vector in the free module has finite support. Two pairs \((J,N)\) have a common upper bound using the union of their finite supports and sum of their finite relation modules. An element mapping to zero in \(M\) is killed at the larger pair obtained by adjoining its one kernel vector to the relation module. This proves the displayed colimit map is both onto and injective. In the flat case, the new basis labels chosen from \(M\times\mathbf Z\) lie outside the original finite \(J\). The map onto the actual finite free \(F\) splits on these new basis vectors, so its kernel is the image of a projector on a finite free module and is finite. The original relations lie in that kernel, and the diagram to \(M\) commutes. Therefore the constructed free stages are cofinal. The empty basis and zero module cases obey the same construction.
+
+For the universal-exactness theorem, the original cokernel \(Q\) of the matrix \((a_{ij})\) turns its finite system of equations into the class of \((x_i)\) in \(M_1\otimes Q\). Injectivity into \(M_2\otimes Q\) makes that class zero, supplying the \(z_j\) in the same original module \(M_1\). For a finite presentation \(R^n\xrightarrow{g_1}R^m\xrightarrow{g_2}P\), the printed subtraction \(h'_2=h_2-f_1k_1\) kills the relations since \(k_1g_1=h_1\); then \(f_2h'_2=\varphi g_2\) proves its descended map is a lift. The subsequent fibre product \(M_{2,i}=M_2\times_{M_3}M_{3,i}\) has the exact kernel identification \(x\mapsto(f_1(x),0)\). A lift \(M_{3,i}\to M_2\) supplies a section into this fibre product. These sections need not be compatible with the transition maps: the exact sequences themselves form the required system, and each is split. Exact filtered colimits identify its first and third terms with the original ones and then its middle term. No compatibility of arbitrary chosen splittings is assumed. These observations verify the full source implication chain and its later splitting and flatness applications.
+
+## The nonzero boundary in the examples
+
+Source: 19995–20038. The statement “any torsion module” includes the zero module, which is flat. To obtain the promised nonflat example over \(\mathbf Z\), it must read “any nonzero torsion module”. This finding was detected in the source review independently of the received reports.
+
+The first example is correct. The groups \(A=\bigoplus_{n\geq1}\mathbf Z\) and \(B=\prod_{n\geq1}\mathbf Z\) are torsion-free. Their quotient \(C\) is torsion-free too: if \(d b\) has finite support for nonzero integer \(d\), then \(b\) has finite support, since each integer coordinate has no nonzero torsion. For completeness, a torsion-free abelian group \(T\) is flat by the original equational criterion. For a relation \(a(x_1,\ldots,x_n)^t=0\), apply successive two-coordinate integral changes of basis to the row \(a\). For a pair \((u,v)\) of integers with positive gcd \(d\), Bezout coefficients \(r,s\) give
+\[
+(u,v)\begin{pmatrix}r&-v/d\\s&u/d\end{pmatrix}=(d,0),
+\qquad \det\begin{pmatrix}r&-v/d\\s&u/d\end{pmatrix}=1.
+\]
+Iterating gives \(aU=(d,0,\ldots,0)\) with integral invertible \(U\). Write \(x=Uy\). Torsion-freeness gives \(y_1=0\), so the remaining columns of \(U\) express the original \(x_i\) as combinations with every original coefficient relation annihilated. If \(a=0\), use the identity matrix instead. This is exactly the equational criterion, including an empty relation. Thus the three source groups are flat.
+
+The class \(x\in C\) of the original sequence \((2,2^2,2^3,\ldots)\) is nonzero because this sequence has infinite support. For each \(r\geq1\), truncate its first finitely many coordinates and divide the remaining coordinates by \(2^r\); this gives an element of \(B\) whose class multiplies to \(x\). Any homomorphism \(C\to B\) consequently sends \(x\) to an integer sequence each of whose coordinates is divisible by every \(2^r\), hence to zero. A section cannot do this to a nonzero quotient class. The original extension is therefore nonsplit.
+
+For a nonzero torsion module \(T\), choose a nonzero element killed by a nonzero integer \(d\). Tensoring \(\mathbf Z\xrightarrow{d}\mathbf Z\) with \(T\) fails to preserve injectivity, proving nonflatness. The middle term \(T\oplus T\) is likewise nonflat, as witnessed in either coordinate. The split sequence is universally exact. Taking its direct sum with the first example preserves universal exactness and gives three nonflat terms. A section of this new quotient would, after inclusion of the original quotient and projection to its original middle term, give a section of the nonsplit original sequence. Thus the combined example is nonsplit as claimed. The extra word “nonzero” is the only required correction.
+
+## Localization and the rejected proof-gap report
+
+Source: 20160–20194; OCC-00448.
+
+Retain the original map \(A\to B\), multiplicative sets \(S\subset A\), \(S'\subset B\), and condition \(\varphi(S)\subset S'\). For every \(A\)-module \(Q\), the map
+\[
+(S')^{-1}(Q\otimes_AM)\longrightarrow Q\otimes_A(S')^{-1}M,
+\quad (q\otimes m)/u\longmapsto q\otimes(m/u)
+\]
+is an isomorphism: the inverse is induced by the balanced map \((q,m/u)\mapsto(q\otimes m)/u\). Localization of the original injection after tensoring is therefore the first conclusion of (1), as the source proves.
+
+Part (2) is precisely the remaining required comparison. If \(M,M'\) are \((S')^{-1}B\)-modules, they are \(S^{-1}A\)-modules. For an \(S^{-1}A\)-module \(Q\), balancing by inverses of elements of \(S\) gives
+\(Q\otimes_AM\cong Q\otimes_{S^{-1}A}M\).
+For an arbitrary \(A\)-module \(Q\), the mutually inverse fraction maps give
+\[
+Q\otimes_AM\cong(S^{-1}Q)\otimes_{S^{-1}A}M,
+\quad q\otimes m\mapsto(q/1)\otimes m,
+\quad(q/s)\otimes m\mapsto q\otimes s^{-1}m.
+\]
+These identities, with their counterparts for \(M'\), prove both implications of (2). Apply (2) to the already localized pair \((S')^{-1}M,(S')^{-1}M'\) from (1). Its established universal injectivity over \(A\) is equivalent to universal injectivity over \(S^{-1}A\). Thus the second conclusion of (1) already follows from the next part of the printed proof. There is no missing hypothesis or mathematical gap. An explicit cross-reference would be optional exposition; the received claim of a required correction is rejected, with zero source operations.
+
+The same fraction identities verify the preceding stalk comparison. Testing the tensor kernel at all maximal ideals of the original \(S\) detects its vanishing, including when the test module is initially only over \(R\). Tensor associativity proves permanence under tensoring; composition and the first-factor implication follow by composing the actual injective maps after each tensor test. These source omissions are not turned into rewrite assignments.
+
+## The finite descent statement and coefficients
+
+Source: 20306–20343; OCC-00449 and OCC-00450.
+
+The fourth enumerated item, “add more here as needed”, is an authoring instruction with no theorem or proof content. The proposal removes that item and makes the third item end with a period. In a receiving translation its original occurrence must remain identifiable in editorial documentation; this is not a new mathematical descent property attributed to the author.
+
+For the original finitely many \(S\)-generators \(y_j\) of \(M\otimes_RS\), write each as a finite sum of simple tensors. Take the union of all the original module entries of those sums, label it \(x_1,\ldots,x_n\), and sum coefficients for any repeated entry. Setting missing coefficients to zero gives exactly
+\[
+y_j=\sum_{i=1}^n x_i\otimes f_{ij},\qquad f_{ij}\in S.
+\]
+The second index is needed to describe this whole family; a single fixed list \(f_i\) need not produce every \(y_j\). The original map \(R^n\to M\) now becomes visibly surjective after base change. The source faithfully flat proof remains valid. Its kernel-base-change step uses flatness of \(S\); the broader argument below proves the stronger case separately instead of silently deleting that hypothesis from this step.
+
+## Surjectivity needs only a finite cokernel
+
+This is a separate consequence of the first source lemma, 19383–19406. For any original map \(u:M\to N\), suppose only that its actual cokernel \(C\) is finite. Then
+\[
+U=\{\mathfrak p:u_{\mathfrak p}\text{ is onto}\}
+=\{\mathfrak p:u\otimes_R\kappa(\mathfrak p)\text{ is onto}\}
+=\operatorname{Spec}R\setminus V(\operatorname{Ann}_RC).
+\]
+Indeed right exactness gives the original cokernels \(C_{\mathfrak p}\) and \(C\otimes_R\kappa(\mathfrak p)\); finite Nakayama makes one zero exactly when the other is zero. For finitely many generators \(c_i\) of \(C\), vanishing at \(\mathfrak p\) gives annihilators \(s_i\notin\mathfrak p\), whose product annihilates all \(C\). Thus \(C_{\mathfrak p}=0\) exactly when \(\operatorname{Ann}_RC\) contains an element outside \(\mathfrak p\), giving the stated open set. If \(D(f)\subset U\), the localized cokernel has zero localizations everywhere and hence is zero, proving the original localized surjection.
+
+This open locus commutes with every ring base change \(R\to T\). For a prime \(\mathfrak q\subset T\) over \(\mathfrak p\subset R\), the actual cokernel fibre is
+\[
+(C\otimes_RT)\otimes_T\kappa(\mathfrak q)
+\cong (C\otimes_R\kappa(\mathfrak p))\otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak q).
+\]
+The isomorphism sends each original simple tensor to the same element after the residue-field maps. A field extension kills no nonzero vector space, so the two fibres vanish simultaneously. This proves the exact inverse-image assertion for \(U\). It does not assert equality of the two annihilator ideals. If \(C=0\), its annihilator is \(R\) and the open is all of the spectrum; zero rings and empty spectra are included. The source hypothesis that \(N\) is finite is sufficient but stronger than needed, and remains in its original statement.
+
+## Descent along the original universally injective ring map
+
+The source definition calls \(R\to S\) universally injective when every canonical map
+\[
+\eta_X:X\to X\otimes_RS,\qquad x\mapsto x\otimes1
+\]
+is injective. Such a ring map is also called pure. Under this hypothesis, finite type, finite presentation, flatness, and finite projectivity of \(M\otimes_RS\) over \(S\) imply the corresponding property of the original \(M\) over \(R\). The converses hold by base change. Here is a full proof, which never assumes \(S\) is flat over \(R\).
+
+First, the source reflection lemma has a direct proof from the actual unit maps. If \(u\otimes_RS\) is injective and \(u(x)=0\), then \(u_S(x\otimes1)=0\), hence \(x\otimes1=0\), hence \(x=0\). If \(u_S\) is onto, right exactness gives \((\operatorname{coker}u)\otimes_RS=0\), and injectivity of its unit map gives \(\operatorname{coker}u=0\). This proves reflection of injections, surjections and isomorphisms.
+
+For finite type, use the original coefficient construction in the preceding section. The resulting \(u:R^n\to M\) is onto after tensoring with \(S\), hence onto by reflection. No flatness is required.
+
+For finite presentation, first descend finite type and choose the resulting surjection \(p:F=R^n\to M\), with actual kernel \(K\). Right exactness alone identifies
+\[
+L:=\ker(F\otimes_RS\to M\otimes_RS)
+=\operatorname{im}(K\otimes_RS\to F\otimes_RS).
+\]
+The hypothesis that \(M\otimes_RS\) is finitely presented makes \(L\) finite. This uses the elementary finite-presentation fact for a finite free surjection: comparing it with a fixed finite presentation and lifting the two finite generating families shows that its kernel is generated by the images of the finitely many original relations together with the finitely many differences of the composite lifts from the identity. More explicitly, if \(S^a\xrightarrow{A}S^b\xrightarrow{q}M_S\to0\) is a finite presentation, choose \(v:S^b\to F_S\), \(w:F_S\to S^b\) with \(p_Sv=q\), \(qw=p_S\). Then \(vA(S^a)\) and \((1-vw)(F_S)\) lie in \(L\), and for \(z\in L\), write \(wz=A t\) to obtain \(z=vAt+(1-vw)z\). Their finite sets of columns therefore generate \(L\).
+
+Lift those finitely many generators of \(L\) to finite sums in \(K\otimes_RS\). Let \(K_0\subset K\) be generated by all original \(K\)-entries appearing in these sums. Then
+\(\operatorname{im}(K_0\otimes_RS\to F_S)=L\).
+Set \(C=F/K_0\). The induced surjection \(C\to M\) becomes an isomorphism after base change, since both resulting quotients of \(F_S\) are \(F_S/L\). Reflection makes \(C\to M\) an isomorphism. Hence \(K=K_0\) is finite and the original \(M\) is finitely presented. At no point was \(K\otimes_RS\to F_S\) assumed injective.
+
+For flatness let \(M_S=M\otimes_RS\) be flat over \(S\). We prove the source finite-presentation factorization criterion for \(M\). Fix an arbitrary finite presentation
+\[
+R^t\xrightarrow{A}R^n\xrightarrow{p}P\to0
+\]
+and an arbitrary map \(f:P\to M\). Over \(S\), the criterion factors \(f_S\) through \(S^r\): write \(f_S=g_Sh_S\). Express the finitely many images of the basis of \(S^r\) under \(g_S\) as finite sums of original elements of \(M\) tensored with coefficients in \(S\). Collect these module elements as \(m_1,\ldots,m_q\), and define the actual \(R\)-linear map
+\[
+G:R^q\to M,\qquad e_i\mapsto m_i.
+\]
+There is a coefficient matrix \(B:S^r\to S^q\) with \(G_SB=g_S\). The map \(Bh_S:P_S\to S^q\), composed with \(p_S\), is a matrix \(H_S\in\operatorname{Mat}(q\times n,S)\) satisfying
+\[
+H_SA=0,\qquad G_SH_S=(fp)_S.
+\]
+
+Retain all original coefficients of \(A,G,fp\). Form the actual \(R\)-linear map
+\[
+\beta:\operatorname{Mat}(q\times n,R)\longrightarrow
+M^n\oplus\operatorname{Mat}(q\times t,R),
+\quad H\longmapsto(GH,HA),
+\]
+and let \(W=\operatorname{coker}\beta\). The element \(c=(fp,0)\) of the target has image zero in \(W\otimes_RS\), because \(H_S\) is its preimage under \(\beta_S\); cokernels commute with tensoring by right exactness. Purity says precisely that \(W\to W\otimes_RS\) is injective. Thus the class of \(c\) was already zero in \(W\), so there is an actual \(H\in\operatorname{Mat}(q\times n,R)\) with
+\[
+HA=0,\qquad GH=fp.
+\]
+The first equation makes \(H\) descend to \(h:P\to R^q\); the second gives \(Gh=f\), because \(p\) is onto. This is the required factorization through a finite free module. The source criterion therefore proves \(M\) flat. Empty lists and zero matrix dimensions yield the same maps between zero modules; no nonzero-rank assumption is used.
+
+If \(M_S\) is finite projective, its finite presentation and flatness descend by the two constructions just proved. Apply the proved factorization criterion to \(P=M\) and \(f=\operatorname{id}_M\). It gives actual maps \(h:M\to R^q\), \(G:R^q\to M\) with \(Gh=\operatorname{id}_M\). Thus the original \(M\) is a finite-projective summand. Explicitly, let \(\lambda_i\) be the coordinates of \(h\) and \(m_i=G(e_i)\). Then \(m=\sum_i\lambda_i(m)m_i\), giving the identity tensor of the earlier converse evaluation criterion, ALGEBRA-RECON-492. This propagates the earlier characterization through the descended maps. The result generalizes the source faithfully flat descent proposition. Faithfully flat maps are pure by the preceding source lemma: after tensoring, the map \(x\otimes s\mapsto x\otimes1\otimes s\) has the multiplication retraction, and faithful flatness reflects its injection. Thus all original faithfully flat statements are receiving cases of the proved result; their author hypotheses are preserved in the translation.
+
+The new hypothesis really allows ring maps excluded by flatness. Take the original diagonal map
+\[
+\mathbf Z\longrightarrow\mathbf Z\times\mathbf Z/2\mathbf Z,
+\qquad n\longmapsto(n,\overline n).
+\]
+Projection to the first coordinate is a ring retraction. For every \(X\), the map \(X\otimes_RS\to X\), \(x\otimes s\mapsto r(s)x\), retracts \(\eta_X\), proving purity. But multiplication by two on \(S\) kills its nonzero element \((0,\overline1)\), so this \(S\) is not flat over \(\mathbf Z\). This exact example verifies the additional generality. It does not claim effective descent of arbitrary module objects or arbitrary projectivity; those larger assertions have not been proved here.
+
+## Source reading and preservation limits
+
+The current interval differs from the authority by exactly MC-STK-ERR-0430, with no other correction or editorial environment in this interval. The earlier correction is retained under that identity. The source's historical discussion of Raynaud–Gruson, Gruson and Kaplansky is retained; reading this discussion does not constitute reading or certifying those external works or the later infinite-projectivity proofs.
+
+Two bounded corpus queries were executed, the exact phrase “pure morphisms” and the literal terms “pure descent”. PDF-primary and unrelated local hits remain unread routing records. Neil Epstein and Hop D. Nguyen's original TeX, *Algebra retracts and Stanley-Reisner rings*, canonical source PUBUNIT-E140D1A58DCB9288442C1AD5, was read at lines 246–266 and 368–383, with the relevant section structure checked. Its retraction and pure-subring definitions agree exactly with the displayed original unit map; the retraction tensor formula above proves this comparison and supplies the nonflat example. The local retraction comparison is given by the actual maps \(R_{\mathfrak p}\to S_{r^{-1}\mathfrak p}\to R_{\mathfrak p}\), whose composition is identity by the universal localization maps. No later theorem about normality, regularity or complete intersections is adopted.
+
+The author source declares Latin-1. The first attempted whole-file UTF-8 read failed without modifying the file. The actual bounded passages were then read as their exact ASCII byte lines; the original source and archive were left intact. File SHA-256: 83131E01670F9EF5AB2E6480F668267364B9B1729CB612C9EAE469FFBF12FED1.
+
+Lookahead 20374–20390 is only the introduction and first part of the transfinite-devissage definition. The definition is incomplete and unadjudicated. No chapter mutation, rendering, publication, exhaustive literature survey or novelty claim is made. Combined-results synthesis remains after the core work.

@@ -1,0 +1,38 @@
+\begin{lemma}
+\label{editorial-source-lemma-generating-finitely-generated-separable-field-extensions}
+Let $K/k$ be a separably generated and finitely generated
+field extension.
+Set $r = \text{trdeg}_k(K)$. Then there exist elements
+$x_1, \ldots, x_{r + 1}$ of $K$ such that
+\begin{enumerate}
+\item $x_1, \ldots, x_r$ is a transcendence basis of $K$ over $k$,
+\item $K = k(x_1, \ldots, x_{r + 1})$, and
+\item $x_{r + 1}$ is separable over $k(x_1, \ldots, x_r)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Choose a separating transcendence basis of the
+original extension. Since $K/k$ is finitely
+generated, it has finite size $r$; enumerate
+the chosen elements as $x_1,\ldots,x_r$.
+Put $F=k(x_1,\ldots,x_r)$, retaining this
+original subfield of $K$. If
+$K=k(z_1,\ldots,z_m)$ is a finite generating
+list, each $z_j$ is algebraic over $F$,
+and $K=F(z_1,\ldots,z_m)$. The successive
+finite algebraic degrees therefore prove
+that $K/F$ is finite. It is separable by
+the chosen separating basis. Fields,
+Lemma \ref{fields-lemma-primitive-element}
+supplies an original $x_{r+1}\in K$ with
+$K=F(x_{r+1})$. Its minimal polynomial over
+$F$ is separable because the extension is.
+This proves all three assertions with the
+same original elements. If $K=F$, take
+$x_{r+1}=0$, whose minimal polynomial $T$
+is separable. If $r=0$, the basis is empty,
+$F=k$, and the same finite-extension
+argument applies without any transcendental
+generators.
+\end{proof}

@@ -1,0 +1,22 @@
+\begin{lemma}
+\label{lemma-integral-over-ideal-is-submodule}
+Let $\varphi : R \to S$ be a ring map.
+Let $I \subset R$ be an ideal.
+The set of elements of $S$ which are integral
+over $I$ form a $R$-submodule of $S$.
+Furthermore, if $s \in S$ is integral over
+$R$, and $s'$ is integral over $I$, then
+$ss'$ is integral over $I$.
+\end{lemma}
+
+\begin{proof}
+We will use Lemma \ref{lemma-integral-closure-is-ring} without
+further mention. Closure under addition is clear from the
+characterization of Lemma \ref{lemma-characterize-integral-ideal}
+whose notation we adopt.
+Any element $s \in S$ which is integral over
+$R$ corresponds to the degree $0$ element $s$ of $S[t]$
+which is integral over $A$ (because $R \subset A$).
+Hence we see that multiplication by $s$ on $S[t]$
+preserves the property of being integral over $A$,
+\end{proof}

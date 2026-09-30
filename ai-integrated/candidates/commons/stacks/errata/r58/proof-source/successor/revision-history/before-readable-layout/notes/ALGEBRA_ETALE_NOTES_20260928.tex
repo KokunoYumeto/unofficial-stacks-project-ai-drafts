@@ -1,0 +1,142 @@
+\subsection{Étale maps, their infinitesimal kernels and polynomial factorizations}\label{algebra-proof-051-uxe9tale-maps-their-infinitesimal-kernels-and-polynomial-factorizations}
+
+Private source-linked editorial evidence, 2026-09-28. Source: The Stacks Project authors, algebra.tex at authority a04446e57ec1fbc252a871afcec7752fb2807b14, lines 39236--39753; full source SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The following arguments explain and extend the original passages; they do not replace the translated source or claim novelty.
+
+\subsubsection{Original presentations and permanence arguments}\label{algebra-proof-051-original-presentations-and-permanence-arguments}
+
+At 39264--39287 the source uses a finite polynomial presentation \(S=P/I\), \(P=R[x_1,\ldots,x_n]\). Étaleness says the original conormal differential \[
+d:I/I^2\longrightarrow\bigoplus_{i=1}^n S\,dx_i
+\] is an isomorphism. Choose \(f_i\in I\) lifting the inverse images of these particular \(n\) coordinate vectors. The proof of lemma-huber, 36520--36546, applies Nakayama to the finitely generated module \(I/(f_1,\ldots,f_n)\): there is \(v\in1+I\) with \(vI\subset(f_1,\ldots,f_n)\). Hence \[
+S=P_v/(f_1,\ldots,f_n)
+ =R[x_1,\ldots,x_n,z]/(f_1,\ldots,f_n,vz-1).
+\] There are exactly \(n+1\) variables and \(n+1\) equations. The enlarged Jacobian has the original \(n\) by \(n\) derivative block, a zero column above its last entry, and last row \((z\partial v/\partial x_1,\ldots,z\partial v/\partial x_n,v)\). Its determinant is \(v\det(\partial f_i/\partial x_j)\), whose image in \(S\) is a unit. This proves the stated global square presentation while retaining the particular generators and the extra equation. It also avoids inferring equality of ranks over the zero ring: the number of chosen lifts was \(n\) from the outset. If \(S=0\), the alternative presentation \(R[x]/(1)\) has determinant \(0=1\) in \(S\), which is its unit. No extra nonzero hypothesis is needed.
+
+For 39289--39387, composition follows from the differential sequence, base change from \(\Omega_{S'/R'}=S'\otimes_S\Omega_{S/R}\), and principal-cover locality from localization of that module and smoothness. In the flat-base-change statement finite presentation is explicitly present and retained. At a prime above a given prime, the induced map of local rings is faithfully flat; vanishing of the localized differential module descends. The smooth locus comparison is the earlier proved smoothness result. In 39368--39372 the descended smooth algebra has the clopen relative-dimension decomposition of 33757--33771. After the specified base change every component of positive dimension is empty, so retaining the dimension-zero factor gives exactly the original algebra. Finite presentation over the integers allows the coefficients and their finite equations to descend to a filtered stage. Principal localizations then give the multiplicative-set assertion. The differential module of a finite product is the product of the component differential modules.
+
+At 39393--39432 the field case gives a finite product of finite separable field extensions; the empty product is allowed and is the zero ring. Nonempty factors are fields because they are zero-dimensional regular local rings. Finiteness follows from the finite type field theorem, and separability follows from smoothness at the generic point. Conversely the minimal polynomial of a primitive element is coprime to its derivative, so its conormal differential is an isomorphism. Base changing this description proves both conclusions at a prime in 39434--39453 and quasi-finiteness in 39455--39467.
+
+For the converse at 39469--39502, isolate the specified fibre point by \(g\notin\mathfrak q\). The resulting fibre has one prime, is local, and equals \(S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}=\kappa(\mathfrak q)\). The finite separable fibre and local flatness give a smooth neighbourhood. On its standard smooth presentation the original relative dimension is zero, so the numbers of equations and variables agree. In 39507--39530, an \(R\)-map between two étale algebras is finitely presented by 539--563. Apply 32991--33005 with \(M=S_{\mathfrak q}\): both local algebras are essentially finitely presented over \(R_{\mathfrak p}\), \(M\) is nonzero and finitely presented over itself, flat over the base, and its residue fibre is flat over the intermediate residue field. This proves the required local flatness. The residue extension is finite separable, so the preceding converse applies.
+
+For a surjective flat finitely presented map \(R\to S\), its kernel \(K\) is finitely generated and tensoring \(0\to K\to R\to S\to0\) with the flat module \(S\) gives \(K/K^2=0\). The proof in 3922--3951 supplies an idempotent \(e\in K\) with \(K=(e)\). Thus \(S=R_{1-e}\), keeping the distinction between the generator of the kernel and the complementary idempotent inverted in the quotient.
+
+In the arbitrary-ideal lifting argument at 39564--39587, retain every original lifted polynomial and write \[
+S=R[x_1,\ldots,x_n,z]/(f_1,\ldots,f_n,z\Delta-1),
+\qquad \Delta=\det(\partial f_i/\partial x_j).
+\] With equation order \((f_1,\ldots,f_n,z\Delta-1)\) and variable order \((x_1,\ldots,x_n,z)\), the full derivative matrix is \[
+\begin{pmatrix}
+(\partial f_i/\partial x_j)_{i,j=1}^n&0\\
+z\partial\Delta/\partial x_1\ \cdots\ z\partial\Delta/\partial x_n&\Delta
+\end{pmatrix}.
+\] Its determinant is \(\Delta^2\), a unit since \(z\Delta=1\). Modulo the original ideal the extra variable equals the already existing inverse of \(\overline\Delta\), so the reduction is precisely \(\overline S\). For \(n=0\), the empty determinant is \(1\), the extra equation is \(z-1\), and the conclusion remains valid. Existence here needs no nilpotence assumption.
+
+\subsubsection{Canonical infinitesimal map and nil ideals}\label{algebra-proof-051-canonical-infinitesimal-map-and-nil-ideals}
+
+Keep the exact diagram of 39589--39620: \(A'\to A\) and \(B'\to B\) are surjections with square-zero kernels \(I,J\); the vertical homomorphisms are \(A'\to B'\) and \(A\to B\). Multiplication defines the specific map \[
+\mu:I\otimes_A B\longrightarrow J,\qquad
+i\otimes b\longmapsto \iota(i)\widetilde b.
+\] Here \(\iota:A'\to B'\) is the given map and \(\widetilde b\) is any lift of \(b\). A change of lift lies in \(J\), and \(\iota(I)J\subset J^2=0\), proving independence. Balancing over \(A\) follows by lifting an element of \(A\) to \(A'\); changes of that lift lie in \(I\), whose square is zero. Both sides are \(B\)-modules via the quotient. The source's equality \(J=I\otimes_A B\) must refer to this canonical identification.
+
+Suppose \(A\to B\) is étale and \(\mu\) is an isomorphism. Lift \(B\) to an étale \(A'\)-algebra \(C\) by the preceding arbitrary-ideal construction, with a specified identification \(C/IC=B\). Formal smoothness lifts this specified quotient map to an \(A'\)-map \(\varphi:C\to B'\) reducing to the identity of \(B\). Flatness of \(C\) identifies \[
+IC=I\otimes_{A'}C=I\otimes_A(C/IC)=I\otimes_A B.
+\] Under this identification the restriction of \(\varphi\) to \(IC\) is exactly \(\mu\). It is therefore an isomorphism onto \(J\), and in particular \(J=IB'\). The quotient map is also an isomorphism. For injectivity of \(\varphi\), an element of its kernel first lies in \(IC\), where the restriction is injective. For surjectivity, lift the quotient class of any element of \(B'\), then lift its remaining difference in \(J\) through \(IC\). Thus \(\varphi\) is an isomorphism and \(A'\to B'\) is étale.
+
+The converse also holds under the same square-zero diagram and the same assumption that \(A\to B\) is étale. If \(A'\to B'\) is étale, put \(D=B'/IB'\). Both \(D\) and \(B\) are étale over \(A\); hence the surjection \(D\to B\) is étale by 39507--39530. Its finitely generated kernel \(J/IB'\) is idempotent by flatness, but is square zero. Consequently it is zero. Thus \(J=IB'\), and flatness of \(B'\) over \(A'\) gives exactly the canonical isomorphism \(\mu\). This is a proved converse, recorded as an editorial consequence.
+
+An abstract module isomorphism cannot replace \(\mu\). Let \(k\) be a field, \[
+A'=k[\epsilon]/(\epsilon^2),\quad A=k,\quad
+B'=k[\delta]/(\delta^2),\quad B=k,
+\] with the map \(A'\to B'\) sending \(\epsilon\) to zero. Then \(I\otimes_A B\) and \(J\) are each one-dimensional over \(k\), but \(\mu=0\). Tensoring the inclusion \((\epsilon)\hookrightarrow A'\) with \(B'\) gives a zero map from the nonzero module \(B'\) to \(B'\). Thus \(B'\) is not flat over \(A'\) and the map is not étale. This clarifies the intended canonical reading; it does not assert that the source intended an arbitrary abstract isomorphism.
+
+\textbf{Nil-ideal consequence.} For every nil ideal \(I\subset R\), reduction defines an equivalence between the categories of étale \(R\)-algebras and étale \(R/I\)-algebras. It restricts to finite étale algebras and preserves their ranks at corresponding primes. The whole ideal need not have a common nilpotence exponent.
+
+Essential surjectivity is the source's lifting construction. For full faithfulness, take étale \(R\)-algebras \(S,T\). The ideal \(IT\) is nil: each of its elements is a finite sum of multiples of nilpotent elements of \(I\), and a sufficiently high power of such a finite sum is zero. Given a map \(S/IS\to T/IT\), choose a finite presentation \(S=R[x_1,\ldots,x_a]/(F_1,\ldots,F_b)\) and lifts \(t_i\in T\) of the images of the generators. Put \(e_j=F_j(t_1,\ldots,t_a)\in IT\) and choose positive integers \(d_j\) with \(e_j^{d_j}=0\). The finitely generated ideal \(Q=(e_1,\ldots,e_b)\) satisfies \[
+Q^{\,1+\sum_{j=1}^b(d_j-1)}=0:
+\] in each monomial of that total degree one exponent is at least its specified \(d_j\). If \(b=0\), then \(Q=0\) and exponent \(1\) suffices. The chosen coordinates define \(S\to T/Q\). Formal smoothness lifts it successively through the finitely many maps \(T/Q^{j+1}\to T/Q^j\), whose kernels are square zero for \(j\ge1\), until it gives \(S\to T\). Each coordinate correction lies in \(Q\subset IT\), so this is the required lift.
+
+For uniqueness, let \(\phi,\psi:S\to T\) have the same reduction. For a finite algebra generating set \(s_1,\ldots,s_a\), set \(\eta_i=\phi(s_i)-\psi(s_i)\in IT\), and \(K=(\eta_1,\ldots,\eta_a)\). Choose \(e_i\ge1\) with \(\eta_i^{e_i}=0\); then \(K^{1+\sum(e_i-1)}=0\). Polynomial subtraction shows \(\phi(s)-\psi(s)\in K\) for every \(s\in S\). Modulo \(K^2\) this difference is an \(R\)-derivation into \(K/K^2\), with \(S\)-action induced by their common map to \(T/K\): the omitted product of two differences is in \(K^2\). Since \(\Omega_{S/R}=0\), the derivation is zero. Every \(\eta_i\) lies in \(K^2\), so \(K=K^2\); nilpotence gives \(K=0\). Thus \(\phi=\psi\). This proves full faithfulness. Lifts of inverse isomorphisms are inverse because of this uniqueness, completing the equivalence.
+
+To check the finite subcategory, let the lifted \(S\) reduce to a finite \(R/I\)-module. Each of its finitely many algebra generators \(x_i\) satisfies a monic polynomial modulo \(IS\). One can obtain such a polynomial by writing multiplication by \(\bar x_i\) on finitely many module generators, taking the determinant of the matrix \(X\,1-M\), and using its adjugate; the resulting polynomial annihilates every generator and hence \(1\). Lift all its coefficients to \(R\), obtaining a monic \(p_i(X)\) with \(p_i(x_i)\in IS\). This element is nilpotent; choose \(N_i\ge1\) with \(p_i(x_i)^{N_i}=0\). The monic polynomial \(p_i(X)^{N_i}\) annihilates \(x_i\). Successive division by these monic polynomials shows that the monomials \[
+\prod_i x_i^{a_i},\qquad 0\le a_i<N_i\deg p_i,
+\] span \(S\) over \(R\). Retain all these actual degrees and exponents.
+
+Moreover \(S\) is a finitely presented \(R\)-module. Indeed the intermediate algebra \[
+U=R[X_1,\ldots,X_a]/(p_i(X_i)^{N_i}:1\le i\le a)
+\] is finite free on the displayed bounded monomials. The kernel of \(U\to S\) is generated as a \(U\)-ideal by the finitely many relations of the original finite presentation; multiplying them by the finite \(R\)-basis of \(U\) gives finitely many \(R\)-module generators. Étale flatness now makes \(S\) finite projective over \(R\). Conversely reduction preserves finite étale algebras. Every prime of \(R\) contains \(I\), and its residue field agrees with that of the corresponding prime of \(R/I\). Tensoring the original module with these identical fields proves equality of ranks. No finite-degree or uniqueness assertion for arbitrary nonnil ideals follows from this argument.
+
+\subsubsection{The full factorization matrix and its fibres}\label{algebra-proof-051-the-full-factorization-matrix-and-its-fibres}
+
+Keep \(N=n+m\), \(R=\mathbf Z[a_1,\ldots,a_N]\), \(S=\mathbf Z[b_1,\ldots,b_n,c_1,\ldots,c_m]\), \(b_0=c_0=1\), and \(b_i=c_j=0\) outside their original index ranges. The map is \(a_k\mapsto\sum_{i+j=k}b_ic_j\). Put \[
+g=x^n+b_1x^{n-1}+\cdots+b_n,\qquad
+h=x^m+c_1x^{m-1}+\cdots+c_m.
+\] The source's matrix \(J\) at 39640--39653 has rows ordered by \(b_1,\ldots,b_n,c_1,\ldots,c_m\) and columns by equations \(k=1,\ldots,N\). Its first \(n\) rows are the shifted coefficient rows of \(h\), and its last \(m\) rows are those of \(g\). Set \(\Delta=\det J\), exactly as in the source.
+
+With descending monomial bases, \(J^t\) is the coefficient matrix of \[
+L:S[x]_{<n}\oplus S[x]_{<m}\longrightarrow S[x]_{<N},
+\qquad (u,v)\longmapsto hu+gv.
+\] The map displayed in the source instead writes the summands in the other order: \[
+T:S[x]_{<m}\oplus S[x]_{<n}\longrightarrow S[x]_{<N},
+\qquad(a,b)\longmapsto ga+hb.
+\] Let \(P(a,b)=(b,a)\). Then \(T=L\circ P\). Moving a block of \(m\) basis elements across a block of \(n\) elements gives exactly \(nm\) transpositions, so \[
+\det T=(-1)^{nm}\det L=(-1)^{nm}\Delta.
+\] Thus the source's transpose identification is exact after the specified permutation of the two domain blocks. Its displayed determinant and all its localization opens stay unchanged. For \(n=m=1\), \(J=\left(\begin{smallmatrix}1&c_1\\1&b_1\end{smallmatrix}\right)\), so \(\Delta=b_1-c_1\), whereas \(\det T=c_1-b_1\). This records the sign without replacing the source's resultant convention by an unstated convention.
+
+At a prime of \(S\), work over its residue field \(K\). Let \(d\) be the monic greatest common divisor of the actual images of \(g,h\), of degree \(r\), and write \(g=dg_0,h=dh_0\). The kernel of the actual tangent coefficient map \(L_K\) is exactly \[
+K[x]_{<r}\longrightarrow\ker L_K,\qquad
+w\longmapsto(g_0w,-h_0w).
+\] Indeed \(hu+gv=0\) implies \(h_0u=-g_0v\). Coprimality of \(g_0,h_0\), using their Bézout identity, gives \(g_0\mid u\) and \(h_0\mid v\); hence \(u=g_0w,v=-h_0w\). The two original degree bounds are each precisely \(\deg w<r\). Conversely those pairs satisfy the equation. Therefore the kernel dimension is \(r\), the rank is \(N-r\), and the cokernel dimension is \(r\). The zero polynomial \(w\) is included; when \(r=0\) the parameter space is zero.
+
+The original universal factorization algebra is a relative global complete intersection of relative dimension zero, as proved with its full coefficients in group 1042. Consequently group 1068 applies with \(N\) variables and \(N\) equations: the Jacobian defect is exactly \(\deg\gcd(g,h)\). The locus where it is at least \(s\), for \(1\le s\le N\), has the previously defined scheme structure cut out by every \((N-s+1)\)-minor of the actual matrix \(J\), that is \(\operatorname{Fitt}_{s-1}(\Omega_{S/R})\). All these full ideals, not just their radicals, commute with every base change. The zero and unit boundary ideals for thresholds outside this range are retained. For \(s=1\), the ideal is \((\Delta)\), giving exactly the original étale open.
+
+For completeness, the matrix equivalence also supplies the actual bounded Bézout coefficients. When \(\Delta\) is a unit, so is \(\det T=(-1)^{nm}\Delta\). Apply \((\det T)^{-1}\operatorname{adj}(T)\) to the coefficient vector of the constant polynomial \(1\) in the descending basis. The resulting vectors give \(a\in S[1/\Delta][x]_{<m}\), \(b\in S[1/\Delta][x]_{<n}\) with \(ag+bh=1\). Neither the determinant sign nor the polynomial degree bounds is discarded.
+
+There are further precise consequences for the fibres. Over an algebraically closed field \(K\), write the base polynomial as \[
+f=\prod_{i=1}^t(x-\alpha_i)^{e_i},
+\quad \alpha_i\ne\alpha_j\ (i\ne j),\quad e_i\ge1.
+\] A monic degree-\(n\) factor corresponds to integers \(r_i\) with \(0\le r_i\le e_i\), \(\sum_i r_i=n\). Its complementary factor has exponents \(e_i-r_i\). Their greatest common divisor has degree \[
+\sum_{i=1}^t\min(r_i,e_i-r_i).
+\] Thus they are coprime precisely when each entire multiplicity block goes into one factor. The number of étale points is \[
+[z^n]\prod_{i=1}^t(1+z^{e_i}).
+\] The fibre algebra is finite by group 1042. Its localization at \(\Delta\) remains finite-dimensional over \(K\): a finite-dimensional commutative algebra is Artinian and decomposes as finitely many local Artinian factors, and localizing keeps exactly the factors on which \(\Delta\) is a unit. Every retained factor is étale over \(K\), hence is \(K\) by the field classification above. Therefore the localized fibre is the product of exactly the displayed number of copies of \(K\). Zero copies means the zero ring, not a missing case. If all roots are distinct, this number is \(\binom{N}{n}\).
+
+One can also retain the finite rank on the discriminant open of the base. Write \(D(f)\) for the monic discriminant, with root definition \(\prod_{i<j}(\rho_i-\rho_j)^2\), and similarly \(D(g),D(h)\). To check its full pullback, use the ordered-root extension from group 1042, putting \(g=\prod_{i=1}^n(x+u_i)\), \(h=\prod_{j=1}^m(x+v_j)\). Its map from \(S\) is injective: the two ordered-root towers are finite free with bases containing \(1\), so the coefficient map is an injection at every stage. Over the fraction field of the root polynomial ring, division by monic \(g\) decomposes every polynomial of degree \(<N\) uniquely as \(ga+r\), \(\deg a<m,\deg r<n\). In descending bases this division coordinate change is triangular with diagonal entries \(1\). The map \(T\) in these coordinates is block triangular with first diagonal block the identity and second block multiplication by \(h\) modulo \(g\). Evaluation at the distinct roots \(-u_i\) diagonalizes that second block, giving \[
+\det T=\prod_{i=1}^n h(-u_i)
+ =\prod_{i,j}(v_j-u_i)=(-1)^{nm}\prod_{i,j}(u_i-v_j).
+\] The equality is polynomial and therefore holds in the entire root polynomial ring. It follows that \(\Delta=\prod_{i,j}(u_i-v_j)\). Separating the internal and cross pairs in the root product for \(f=gh\), and using injectivity, gives exactly \[
+D(f)=D(g)D(h)\Delta^2.
+\] No factorial or characteristic assumption is used. After inverting the actual base element \(D(f)\), \(\Delta\) is a unit because a factor of a unit in a commutative ring is a unit. Hence the entire base-changed factorization algebra is finite étale, of the same finite locally free rank \(\binom{N}{n}\) established in group 1042. This does not assert that \(S[1/\Delta]\) is finite over the original uninverted base; localization of a finite algebra need not have that property.
+
+\subsubsection{Original factors and report accounting}\label{algebra-proof-051-original-factors-and-report-accounting}
+
+In 39684--39748 the input factors need not be monic. Keep their original leading coefficients \(\overline b_0,\overline c_0\) with \(\overline b_0\overline c_0=1\). Choose \(a,s\in R\setminus\mathfrak p\) representing \(\overline b_0=\bar a/\bar s\) in \(\kappa(\mathfrak p)\). Work first over \(R[(as)^{-1}]\); both \(a,s\) are now units, and \(u=a/s\) is a unit lifting that specific leading coefficient. Apply the universal monic factorization to the auxiliary factors \(\overline g/\bar u\) and \(\bar u\overline h\), obtaining monic lifts \(G,H\) on its étale \(\Delta\)-open. Recover the required original factors by \[
+g=uG,\qquad h=u^{-1}H.
+\] They have exactly the original reductions and satisfy \(gh=GH=f\). If \(\alpha G+\beta H=1\), then \[
+(\alpha/u)g+(\beta u)h=1.
+\] The first \(n\) rows of the original coefficient matrix scale by \(u^{-1}\) and the last \(m\) rows by \(u\), so its determinant for \((g,h)\) is \(u^{m-n}\Delta(G,H)\); this explicit unit factor is retained. These auxiliary monic objects prove the statement about the original factors; they do not replace those factors.
+
+The point in the universal algebra is the kernel of the coefficient-evaluation map into \(\kappa(\mathfrak p)\). Although that ring homomorphism need not be surjective, the residue field at its kernel is exactly \(\kappa(\mathfrak p)\): the image is a subring containing the image of \(R/\mathfrak p\), and hence its fraction field contains \(\operatorname{Frac}(R/\mathfrak p)=\kappa(\mathfrak p)\) while being contained in that same field. The nonzero determinant permits the same point after localization. For \(n=0\), take \(g=u,h=u^{-1}f\) already over \(R[(as)^{-1}]\); for \(m=0\), take \(h=u^{-1},g=uf\). The nonzero constant factor is a unit, so the Bézout property holds. If both degrees are zero then \(f=1\), and both formulas give the same unit factorization.
+
+Exactly twelve received reports are accounted for in seven report groups:
+
+\begin{itemize}
+\tightlist
+\item
+  OCC-12127 retains the whole existing canonical correction MC-STK-ERR-0470 at 39440.
+\item
+  OCC-12128 and OCC-00874 retain MC-STK-ERR-0471 at 39464. The additional claim that ``fields finite separable over'' requires ``that are'' is not a defect; the original mathematical adjective phrase is valid.
+\item
+  OCC-00875 and OCC-12129 retain the whole multiline MC-STK-ERR-0472 at 39496.
+\item
+  OCC-00876 and OCC-12130 retain MC-STK-ERR-0473 at 39536.
+\item
+  OCC-00877 proposes only source whitespace in math mode at 39624; it is optional and is not integrated.
+\item
+  OCC-12131, OCC-00879 and explicitly duplicate OCC-01311 retain MC-STK-ERR-0474 at 39744, replacing the wrong pair \(\operatorname{Res}_x(f,g)\) by the actually inverted pair \(\operatorname{Res}_x(g,h)\). All three physical reports have a disposition, but there is one retained correction.
+\item
+  OCC-00878 supplies the single new grammar operation ``Denote'' to ``Denote by'' at 39735.
+\end{itemize}
+
+Groups 1127 and 1128 are separate zero-operation editorial consequence groups. The former receives group 1085's finite-error lifting argument and proves the canonical infinitesimal converse and nil-ideal equivalence, including finite étale ranks. The latter receives groups 1042 and 1068, identifies their actual Jacobian defect with the full gcd degree, proves the multiplicity-aware fibre count, and verifies the complete signed determinant and discriminant comparison. Source omissions of these details are not reclassified as translation errors. No silent replacement of the original presentation is proposed.
+
+The complete current source interval is checked against the original after the five retained canonical operations. Dependency reading includes 539--563, 3922--3951, 32991--33005 (the flatness criterion's statement and its actual hypotheses), 33757--33771 and 36520--36546. The four new indexed query hits are unread routing records, not supporting literature; seven earlier external-source reading records retain their exact coverage. Relevant earlier proof notes are ALGEBRA\_FORMAL\_SMOOTH\_NOTES\_20260928.md, ALGEBRA\_SYNTOMIC\_NOTES\_20260928.md and ALGEBRA\_SMOOTH\_NOTES\_20260928.md, each hash-bound in the receipt. No external exhaustiveness or novelty claim is made.
+
+Next authority line: 39754, Local structure of étale ring maps. Only the opening 39754--39765 has been read, without adjudication. The full claim ledger records the receiving links; broader synthesis and its paper remain follow-on work after the core review. No translation mutation, TeX run or publication is performed by this intake.

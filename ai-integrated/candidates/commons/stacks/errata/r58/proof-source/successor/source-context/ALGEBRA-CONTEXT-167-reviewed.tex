@@ -1,0 +1,22 @@
+\begin{lemma}
+\label{lemma-artinian-finite-nr-max}
+If $R$ is Artinian then $R$ has only finitely many maximal ideals.
+\end{lemma}
+
+\begin{proof}
+If there were infinitely many maximal ideals, choose distinct
+$\mathfrak m_1,\mathfrak m_2,\ldots$ and put
+$J_n=\bigcap_{i=1}^n\mathfrak m_i$ for $n\geq1$.
+For every $i\leq n$, distinctness and maximality imply
+$\mathfrak m_i+\mathfrak m_{n+1}=R$. Choose actual elements
+$a_i\in\mathfrak m_i$ and $b_i\in\mathfrak m_{n+1}$ with
+$a_i+b_i=1$. Their product
+$a_1\cdots a_n$ belongs to every $\mathfrak m_i$ for
+$i\leq n$, hence to $J_n$, and is congruent to $1$ modulo
+$\mathfrak m_{n+1}$. It therefore does not belong to
+$J_{n+1}=J_n\cap\mathfrak m_{n+1}$.
+Consequently $J_1\supsetneq J_2\supsetneq\cdots$ is an
+infinite strict descending chain of ideals, contradicting the
+Artinian hypothesis. Thus the set of maximal ideals is finite.
+For the zero ring the set is empty, which also satisfies the claim.
+\end{proof}

@@ -1,0 +1,55 @@
+\begin{lemma}
+\label{lemma-map-AR}
+Suppose that $0 \to K \to M \xrightarrow{f} N$ is an
+exact sequence of finitely generated modules
+over a Noetherian ring $R$. Let $I \subset R$ be an ideal.
+Then there exists a $c$ such that
+$$
+f^{-1}(I^nN) = K + I^{n-c}f^{-1}(I^cN)
+\quad\text{and}\quad
+f(M) \cap I^nN \subset f(I^{n - c}M)
+$$
+for all $n \geq c$.
+\end{lemma}
+
+\begin{proof}
+Identify $K$ with its image in $M$, which is $\ker(f)$ by
+exactness. The module $f(M)$ is finite over $R$.
+Apply Lemma \ref{lemma-Artin-Rees} to $f(M)\subset N$, giving
+an integer $c>0$ with
+$$
+f(M)\cap I^nN=I^{n-c}(f(M)\cap I^cN)\quad(n\geq c).
+$$
+Put $P=f^{-1}(I^cN)$. The restriction $f:P\to f(M)\cap I^cN$
+is surjective: an element of the intersection already has an
+inverse image in $M$, and every such inverse image lies in $P$.
+For every integer $d\geq0$, linearity and lifting each member
+of a finite sum give the exact equality
+$f(I^dP)=I^d f(P)$.
+Consequently, for $n\geq c$,
+$$
+f(M)\cap I^nN
+=f\bigl(I^{n-c}P\bigr)
+\subset f(I^{n-c}M).
+$$
+
+If $x\in f^{-1}(I^nN)$, the preceding equality expresses
+$f(x)=\sum_{j=1}^t a_jf(p_j)$ for original coefficients
+$a_j\in I^{n-c}$ and original elements $p_j\in P$.
+Thus $x-\sum_{j=1}^t a_jp_j\in K$ and
+$x\in K+I^{n-c}P$. Conversely, $f(K)=0$ and
+$f(I^{n-c}P)\subset I^nN$, so every member of
+$K+I^{n-c}P$ belongs to $f^{-1}(I^nN)$. This proves the
+first equality as well as the second claimed containment.
+The same maps give the more precise exact sequence
+$$
+0\longrightarrow K\cap I^{n-c}P
+\longrightarrow I^{n-c}P
+\xrightarrow{\ f\ }f(M)\cap I^nN
+\longrightarrow0.
+$$
+Here the first arrow is the inclusion, its image is exactly the
+kernel of the displayed restriction of the original $f$, and
+surjectivity is the lifting calculation above. The kernel $K$
+has not been assumed to vanish or omitted from the preimage formula.
+\end{proof}

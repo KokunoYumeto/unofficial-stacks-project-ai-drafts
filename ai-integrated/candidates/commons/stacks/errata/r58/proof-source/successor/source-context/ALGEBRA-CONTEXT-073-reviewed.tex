@@ -1,0 +1,43 @@
+\begin{lemma}
+\label{lemma-finite-product-integral}
+Let $R_i\to S_i$ be ring maps $i = 1, \ldots, n$.
+Let $R$ and $S$ denote the product of the $R_i$ and $S_i$ respectively.
+Then an element $s = (s_1, \ldots, s_n) \in S$ is integral over $R$
+if and only if each $s_i$ is integral over $R_i$.
+For a product indexed by an arbitrary set, the exact corresponding
+condition is the existence of monic equations for all $s_i$ whose
+degrees have one common finite bound.
+\end{lemma}
+
+\begin{proof}
+Let $\varphi_i:R_i\to S_i$ be the original maps. If the tuple $s$
+satisfies a monic equation of degree $D$ over $R=\prod_iR_i$,
+projection to the $i$th coordinate gives an equation of degree $D$
+for $s_i$ over $R_i$, with each coefficient projected separately.
+Conversely choose monic equations
+$P_i(T)=T^{d_i}+\sum_{j=0}^{d_i-1}a_{ij}T^j$ and a finite bound
+$D\geq d_i$ for every $i$. Keep these polynomials and form
+$Q_i(T)=T^{D-d_i}P_i(T)$; its coefficient of $T^j$ is
+$a_{i,j-(D-d_i)}$ for $D-d_i\leq j<D$ and is zero for
+$0\leq j<D-d_i$. Let $b_j\in\prod_iR_i$ have precisely these
+coordinates. Then
+$$
+Q(T)=T^D+\sum_{j=0}^{D-1}b_jT^j
+$$
+is monic and its evaluation at the original tuple has $i$th coordinate
+$s_i^{D-d_i}P_i^{\varphi_i}(s_i)=0$. This proves the assertion for
+arbitrary products with that uniform bound. For a nonempty finite
+product take $D=\max_i d_i$; for an empty product the rings are zero
+and the degree-one polynomial $T$ works.
+
+The bound is necessary for an infinite product. Fix a field $k$ and
+use $R_i=k[v_i]$, $S_i=k[u_i]$ with $v_i\mapsto u_i^i$ for $i\geq1$.
+The original element $s_i=u_i$ satisfies $T^i-v_i$.
+No nonzero polynomial of degree less than $i$ in $T$ with
+coefficients in $k[v_i]$ vanishes at $u_i$: after substitution,
+the terms $a_j(u_i^i)u_i^j$ for $0\leq j<i$ have powers of $u_i$
+in distinct residue classes modulo $i$, so they cannot cancel.
+Thus the least monic degree is $i$. Each $s_i$ is integral but
+no uniform finite bound exists. The preceding equivalence shows
+that $(s_i)_i$ is not integral over $\prod_{i\geq1}R_i$.
+\end{proof}

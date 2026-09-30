@@ -1,0 +1,180 @@
+\begin{lemma}
+\label{editorial-source-lemma-map-into-tensor-algebra-open}
+Let $k$ be a field.
+Let $R$ and $S$ be $k$-algebras.
+The map $\Spec(S \otimes_k R) \to \Spec(R)$
+is open.
+\end{lemma}
+
+\begin{proof}
+Retain the original $k$-algebras $S,R$ and write the
+specified tensor as a finite sum
+$$
+f=\sum_{i=1}^d s_i\otimes r_i\in S\otimes_kR.
+$$
+Set $S'=k[s_1,\ldots,s_d]\subseteq S$, keeping every
+original coefficient $s_i$. Tensoring $S'\hookrightarrow S$
+with $R$ is injective because $R$ is a $k$-vector space,
+so the same displayed tensor is an element of
+$S'\otimes_kR$ with its specified image $f$.
+The $k$-algebra $S'$ is finitely presented: it is
+a quotient of $k[x_1,\ldots,x_d]$, and this polynomial
+ring is Noetherian by Lemma \ref{editorial-source-lemma-Noetherian-permanence}.
+Hence the kernel of the original map $x_i\mapsto s_i$
+has finitely many generators $h_1,\ldots,h_m$.
+This also follows from
+Lemma \ref{editorial-source-lemma-Noetherian-finite-type-is-finite-presentation}.
+
+The base change retains the presentation
+$$
+S'\otimes_kR\simeq R[x_1,\ldots,x_d]/(h_1^R,\ldots,h_m^R),
+$$
+where every coefficient of $h_j^R$ is the image of
+the corresponding coefficient of $h_j$ in $R$.
+The map sends $s_i\otimes1$ to the class of $x_i$
+and $1\otimes r$ to $r$, and its inverse sends the
+original polynomial generators and coefficients back
+to these tensors. The relations and balancing prove
+both maps are well defined and inverse.
+The algebra is flat over $R$. To see this directly,
+choose a $k$-basis $(b_\lambda)$ of $S'$.
+The map
+$$
+\bigoplus_\lambda R\longrightarrow S'\otimes_kR,
+\qquad (a_\lambda)_\lambda\longmapsto
+\sum_\lambda b_\lambda\otimes a_\lambda
+$$
+is an $R$-module isomorphism; its inverse is the
+finite basis expansion in the first tensor factor.
+Tensoring a free module preserves injections by
+the corresponding direct-sum maps. Thus
+Proposition \ref{editorial-source-proposition-fppf-open} applies to
+$R\to S'\otimes_kR$ and makes the image of the
+original principal open $D(f)$ in this spectrum
+open. Lemma \ref{editorial-source-lemma-same-image}, with the exact
+same $f$, identifies it with the image of $D(f)$
+in $\Spec(S\otimes_kR)$. Principal opens form a
+basis and images commute with unions, so the
+original spectrum map is open, as claimed.
+
+This also proves universal openness of the
+original map. For an arbitrary original $R$-algebra
+$A$, its base change is identified with
+$\Spec(S\otimes_kA)\to\Spec(A)$ through the map
+$$
+(S\otimes_kR)\otimes_RA\longrightarrow S\otimes_kA,
+\qquad (s\otimes r)\otimes a\longmapsto s\otimes\overline r a,
+$$
+whose inverse is $s\otimes a\mapsto(s\otimes1)\otimes a$.
+Both maps respect the original algebra products
+and balancing, and their composites fix all
+elementary tensors. The result already proved
+applies to this $k$-algebra $A$, giving openness
+after every base change, without finite generation
+of the full algebra $S$.
+
+\medskip\noindent
+One can make the principal-open image more explicit
+without confusing nonzero and nonnilpotent elements.
+For the fixed original list $s_1,\ldots,s_d$, there
+exists an integer $N\geq1$, independent of $R$
+and $r_1,\ldots,r_d$, such that the image of $D(f)$
+is the union of the coefficient opens of the full
+power $f^N$ in a $k$-basis of $S'$.
+Here is a proof with all coefficients retained.
+
+Put $A_0=k[T_1,\ldots,T_d]$ and
+$F=\sum_{i=1}^d s_i\otimes T_i\in S'\otimes_kA_0$.
+Choose a $k$-basis $(b_\lambda)_{\lambda\in\Lambda}$
+of $S'$. For each ordered tuple $(i_1,\ldots,i_n)$,
+write the complete finite expansion
+$$
+s_{i_1}\cdots s_{i_n}
+=\sum_{\lambda\in\Lambda}
+\mu_{i_1,\ldots,i_n,\lambda}b_\lambda,
+\qquad \mu_{i_1,\ldots,i_n,\lambda}\in k.
+$$
+Then, with all ordered tuples and their repeated
+terms retained, the coefficients of $F^n$ are
+$$
+\begin{split}
+F^n&=\sum_{\lambda\in\Lambda}b_\lambda\otimes C_{n,\lambda}(T),\\
+C_{n,\lambda}(T)
+&=\sum_{i_1=1}^d\cdots\sum_{i_n=1}^d
+\mu_{i_1,\ldots,i_n,\lambda}T_{i_1}\cdots T_{i_n}.
+\end{split}
+$$
+For fixed $n$ only finitely many of these polynomials
+are nonzero. Put $J_n=(C_{n,\lambda}:\lambda\in\Lambda)
+\subseteq A_0$ and $Z_n=V(J_n)$. Extension of the
+basis to every residue field shows that
+$\mathfrak p\in Z_n$ exactly when the original
+$F$ has $n$-th power zero in
+$S'\otimes_k\kappa(\mathfrak p)$. Hence
+$Z_n\subseteq Z_{n+1}$. The fibre criterion and
+the tensor-localization maps of the preceding
+lemma give
+$$
+\Spec(A_0)\setminus
+\operatorname{image}\bigl(D(F)\to\Spec(A_0)\bigr)
+=\bigcup_{n\geq1}Z_n.
+$$
+Call this complement $Z$. The proven openness
+result, applied to the original algebra $S'$
+and base $A_0$, says that $Z$ is closed.
+
+The ring $A_0$ is Noetherian, so its closed set
+$Z$ has finitely many irreducible components
+$V(\mathfrak p_1),\ldots,V(\mathfrak p_e)$ with
+their indicated generic points. This follows
+by applying Lemma \ref{editorial-source-lemma-Noetherian-irreducible-components}
+to the quotient defining $Z$. Each generic point
+lies in some $Z_{n_j}$, because their union is
+$Z$. Since $Z_{n_j}$ is closed, it contains
+the full component $V(\mathfrak p_j)$.
+Thus for $N=\max(1,n_1,\ldots,n_e)$,
+$$
+Z=Z_N.
+$$
+If $Z$ is empty, use $N=1$: every $Z_n$ is
+already empty. This is a finite-component argument;
+it does not infer stabilization of increasing
+closed sets merely from Noetherianity.
+
+For any original $R$ and $r_i$, use the original
+map $A_0\to R$, $T_i\mapsto r_i$.
+At a prime $\mathfrak p\subset R$, its contraction
+$\mathfrak p_0\subset A_0$ induces an injective
+field map $\kappa(\mathfrak p_0)\to\kappa(\mathfrak p)$.
+The map
+$S'\otimes_k\kappa(\mathfrak p_0)\to
+S'\otimes_k\kappa(\mathfrak p)$ is injective by
+extension of vector spaces, and carries the full
+original $F$ to $f$. Therefore nilpotence is
+equivalent in these two fibres, and by $Z=Z_N$
+it is equivalent to the vanishing of the $N$-th
+power. Its coefficients are exactly
+$C_{N,\lambda}(r_1,\ldots,r_d)$, with the same
+ordered-tuple formula. It follows that
+$$
+\operatorname{image}\bigl(D(f)\subseteq
+\Spec(S\otimes_kR)\to\Spec(R)\bigr)
+=\bigcup_{\lambda\in\Lambda}
+D\bigl(C_{N,\lambda}(r_1,\ldots,r_d)\bigr).
+$$
+Only finitely many original coefficient polynomials
+contribute, giving a finite union of basic opens
+and hence a quasi-compact open image. The equality
+for $S$ uses the same-image lemma after the equality
+for its specified subalgebra $S'$. None of these
+comparisons replaces $f$ by its linear nonzero
+coefficient test: the required test uses the
+proved power $N$. For instance in
+$S'=k[\epsilon]/(\epsilon^2)$ with $f=\epsilon\otimes1$,
+the first power is nonzero and has a unit coefficient,
+while the actual principal open is empty; the
+second power vanishes, giving the correct empty
+union. The case $d=0$ has $F=f=0$ and can use
+$N=1$, and zero tensor algebras give empty images
+under the same formulas.
+\end{proof}

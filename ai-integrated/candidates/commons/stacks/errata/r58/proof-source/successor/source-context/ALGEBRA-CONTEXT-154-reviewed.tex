@@ -1,0 +1,28 @@
+\begin{lemma}
+\label{lemma-geometrically-integral}
+Let $k$ be a field.
+Let $S$ be a $k$-algebra.
+In this case $S$ is geometrically integral over $k$ if and only if
+$S$ is geometrically irreducible as well as geometrically reduced over $k$.
+\end{lemma}
+
+\begin{proof}
+For any original field extension $L/k$,
+put $A=S\otimes_k L$. If $A$ is
+a domain, it is nonzero and reduced,
+and its zero ideal is prime. Its
+spectrum is therefore irreducible.
+Conversely, if $A$ is reduced and
+its spectrum is irreducible, then
+it is nonzero and its nilradical
+is prime by Lemma \ref{lemma-irreducible}.
+Reducedness makes that nilradical
+the zero ideal, so the zero ideal
+is prime and $A$ is a domain.
+Apply this exact ring equivalence
+for every original $L/k$ to obtain
+both directions of the assertion.
+Nonemptiness comes from irreducibility;
+reducedness alone would allow the
+zero ring and would not suffice.
+\end{proof}

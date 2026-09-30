@@ -1,0 +1,40 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r58",
+  "passed": true,
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [],
+  "generated_at_utc": "2026-09-30T03:19:53.724060+00:00",
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "human_review": false,
+  "independence_scope": "Executable replay, two fresh builds and primary AI source/visual review. No second AI or human review is claimed.",
+  "checks": [
+    {
+      "name": "All 690 operations and their inverse; all prior Algebra operations, source routes and public metadata",
+      "passed": true,
+      "receipt": "evidence/completed/FINAL_SOURCE_AUDIT.json"
+    },
+    {
+      "name": "Two byte-identical corrected chapter and companion builds with complete source reproduction",
+      "passed": true,
+      "receipt": "builds/attempt-16/BUILD_RECEIPT.json"
+    },
+    {
+      "name": "All 484 chapter page layouts, 495 mapped correction bands and compiler warning regions",
+      "passed": true,
+      "receipt": "visual/chapter/CHAPTER_VISUAL_ACCEPTANCE.json"
+    },
+    {
+      "name": "All 667 companion page layouts and 104 compiler warning regions",
+      "passed": true,
+      "receipt": "visual/companion/COMPANION_VISUAL_ACCEPTANCE.json"
+    },
+    {
+      "name": "All 1121 source ZIP members match expanded source; 73 proof notes retain original evidence and declared transcription repairs",
+      "passed": true,
+      "receipt": "evidence/completed/FINAL_SOURCE_AUDIT.json"
+    }
+  ],
+  "scope": "Algebra corrections, visible editorial notices and separate complete supplementary proofs. No claim of official review, novelty or whole-project completion.",
+  "retained_limitations": "Modest formula margin protrusions, uneven metadata spacing and sparse final pages remain visible and recorded; no page-edge clipping or collisions were observed. Receipt hashes retain source identities through the location transport ledger. Admission, composition and remote publication are separate later transitions."
+}

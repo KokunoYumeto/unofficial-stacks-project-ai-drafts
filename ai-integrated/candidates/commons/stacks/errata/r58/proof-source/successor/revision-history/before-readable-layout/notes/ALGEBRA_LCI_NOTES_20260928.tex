@@ -1,0 +1,144 @@
+\subsection{Local complete intersections: source review and editorial consequences}\label{algebra-proof-045-local-complete-intersections-source-review-and-editorial-consequences}
+
+Source: Stacks Project authors, \texttt{algebra.tex:35805–36426} at commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex\#L35805 . This note retains the original presentations, ideals, local rings, dimensions and residue fields. It supports the twenty received reports and records further exact consequences. Complete supplementary arguments remain editorial material; they do not silently replace a translation. No novelty is claimed.
+
+Primary dependencies read: Algebra 16880--17001, 23423--23504, 25051--25075, 25749--25777, 27420--27480, 27781--27852, 28269--28356 and 31623--31660. The last dependency includes the previously adjudicated wrong-factor sentence at 31659: use the already composed correction MC-STK-ERR-0669 selecting the S factor, and the full proof in ALGEBRA\_FINITE\_PRESENTATION\_NOTES\_20260928.md. The preceding cotangent note supplies the corrected exact stable-conormal matrices, not an unjustified cancellation. Four disk-index hits for ``complete intersection conormal'' remain unread routing records. Syntomic 36427--36470 is lookahead, with its first proof incomplete and unadjudicated.
+
+\subsubsection{Original finite-type presentations and local criteria}\label{algebra-proof-045-original-finite-type-presentations-and-local-criteria}
+
+Write the original global presentation as \(S=k[x_1,\ldots,x_n]/(f_1,\ldots,f_c)\), with \(\dim S=n-c\), and first suppose \(S\ne0\). Every maximal ideal \(\mathfrak m'\) of the polynomial ring containing the presentation ideal corresponds to a maximal ideal \(\mathfrak m\) of \(S\). The localized polynomial ring is regular local of dimension \(n\). Successive principal quotients have dimension at least \(n-c\), whereas \(\dim S_{\mathfrak m}\leq\dim S=n-c\); equality follows. In particular the parameter criterion for a Cohen--Macaulay module (Algebra 25051--25075) proves that the original ordered sequence is regular at each such maximal ideal, and that its quotient is Cohen--Macaulay. Localizing these regular sequences proves the same statements at every prime of \(S\). This also proves the Cohen--Macaulay claim for a locally complete-intersection cover.
+
+For equidimensionality, each minimal prime over the ideal has height at most \(c\) by the height theorem for \(c\) generators. Its component dimension is \(n\) minus that height, hence at least \(n-c\); since no component exceeds \(\dim S=n-c\), all have dimension \(n-c\). A nonempty principal open meets at least one component. Every nonempty open in an irreducible finite-type scheme over a field has the full component dimension, by the closed-point and chain argument in Algebra 27781--27852. Thus \(\dim S_g=n-c\) whenever \(S_g\ne0\). For an original polynomial lift \(g'\) of \(g\), keep the actual presentation \[
+S_g=k[x_1,\ldots,x_n,x_{n+1}]/(f_1,\ldots,f_c,x_{n+1}g'-1).
+\] The number of variables and equations both increase by one. If \(S_g=0\), the source's explicit zero-ring convention applies instead. Localizing every member of a local complete-intersection cover proves its localization assertion.
+
+For an arbitrary presentation \(P=k[x_1,\ldots,x_n]\twoheadrightarrow S\) with kernel \(I\) and primes \(\mathfrak q'\mapsto\mathfrak q\), put \[
+R=P_{\mathfrak q'},\quad \overline R=S_{\mathfrak q},\quad
+c=\dim R-\dim\overline R=n-\dim_{\mathfrak q}\operatorname{Spec}S.
+\] The last equality is the source codimension formula, which retains topological dimension at the point rather than substituting local-ring dimension. Set \(J=IR\subset\mathfrak m_R\). The least number of generators of \(J\) equals that of \(J/J^2\) over \(R/J\): both residue vector spaces are \(J/\mathfrak m_RJ\), since \(J^2\subset\mathfrak m_RJ\). Nakayama applies because \(R\) is Noetherian and \(J\) is finite. If \(c\) elements generate either module, the Cohen--Macaulay parameter criterion shows they form an ordered regular sequence. A regular sequence of length \(c\) makes \(J/J^2\) free of rank \(c\), via the source regular-to-quasi-regular theorem. Conversely freeness of rank \(c\) gives \(c\) generators. Any regular sequence generating \(J\) has length \(\dim R-\dim R/J=c\), by successive dimension drops in the Cohen--Macaulay ring. This proves conditions (2)--(5) and the assertion about any residue-basis lifts in the source lemma.
+
+To obtain the actual global neighbourhood, write each selected element of \(IR\) as \(a_i/d_i\), with \(a_i\in I\) and \(d_i\notin\mathfrak q'\). Multiplication by these units retains both generation and regularity locally. The finite module \(I/(a_1,\ldots,a_c)\) vanishes at \(\mathfrak q'\), so a product of finitely many annihilating denominators gives \(g'\notin\mathfrak q'\) with \(I_{g'}=(a_1,\ldots,a_c)_{g'}\). Choose \(g''\notin\mathfrak q'\) excluding every irreducible component not passing through \(\mathfrak q\). Then \(\dim S_{g''}=\dim_{\mathfrak q}\operatorname{Spec}S=n-c\). Each component through \(\mathfrak q\) survives further localization at \(g'\), so the same dimension holds for \(S_g\), where \(g\) is the image of \(g'g''\). The exact presentation is \[
+S_g=P[x_{n+1}]/(a_1,\ldots,a_c,x_{n+1}g'g''-1),
+\] with \(n+1\) variables and \(c+1\) equations. No denominator has been suppressed.
+
+Conversely, take the source global presentation \(S_g=k[y_1,\ldots,y_m]/J\), with \(t=m-\dim S_g\) equations. At the prime in question its conormal is free of rank \(t\), by the local parameter argument. The corrected stable-conormal comparison from the preceding cotangent note gives \[
+(J/J^2)_{\mathfrak q}\oplus S_{\mathfrak q}^{\oplus n}
+\cong (I/I^2)_{\mathfrak q}\oplus S_{\mathfrak q}^{\oplus m}.
+\] It follows that the finite module \((I/I^2)_{\mathfrak q}\) is projective. A finite projective module over a local ring is free: lift a basis of its residue vector space to a surjection from a finite free module, split the surjection, and use Nakayama on the finite complementary summand to show it is zero. Comparing residue ranks in the displayed isomorphism gives rank \(t+n-m=n-\dim S_g=c\). This proves condition (1) implies (4) without free-summand cancellation over an arbitrary ring.
+
+\subsubsection{Changing regular presentations and the quantitative defect}\label{algebra-proof-045-changing-regular-presentations-and-the-quantitative-defect}
+
+Keep the source surjections \(A\twoheadrightarrow B\twoheadrightarrow C\) of local rings with \(A,B\) regular. Write \(\mathfrak m=\mathfrak m_A\), \(J=\ker(A\to B)\), \(I=\ker(A\to C)\), and \(r=\dim A-\dim B\). The original regular-quotient lemma (25749--25777) gives parameters \(x_1,\ldots,x_d\) of \(A\) with \(J=(x_1,\ldots,x_r)\). In particular \(J/\mathfrak mJ\to\mathfrak m/\mathfrak m^2\) is injective. Since \(I\subset\mathfrak m\), this implies \(J\cap\mathfrak mI=\mathfrak mJ\): one inclusion is immediate, and the other follows from \(\mathfrak mI\subset\mathfrak m^2\) and that injectivity. Thus there is an exact sequence of residue-field vector spaces \[
+0\to J/\mathfrak mJ\to I/\mathfrak mI
+\to (I/J)/\mathfrak m_B(I/J)\to0.
+\tag{1}
+\] Consequently \[
+\mu_A(I)=r+\mu_B(I/J),\quad
+\mu_A(I)-(\dim A-\dim C)
+=\mu_B(I/J)-(\dim B-\dim C).\tag{2}
+\] This proves the equivalence of the two generator counts in the source. Each is equivalent to generation by a regular sequence by the Cohen--Macaulay parameter criterion. It also proves the source induction step exactly: a nonzero residue class from \(J\) extends to a minimal generating set of \(I\), and is part of the regular system of parameters of \(A\); quotienting by it decreases both relevant counts by one. The zero-dimensional difference gives \(J=0\), which is the induction base.
+
+For a finite-type \(k\)-algebra define, at every prime \(\mathfrak q\), \[
+\delta_S(\mathfrak q)=
+\dim_{\kappa(\mathfrak q)}\big((I/I^2)\otimes_S\kappa(\mathfrak q)\big)
+-n+\dim_{\mathfrak q}\operatorname{Spec}S.\tag{3}
+\] This integer retains the full conormal fibre and the original number of variables. It is nonnegative because an ideal with \(\mu\) generators decreases local dimension by at most \(\mu\). The local criteria above show \(\delta_S(\mathfrak q)=0\) exactly at complete-intersection local rings.
+
+It is independent of the finite polynomial presentation. Indeed the stable-conormal isomorphism for two presentations, after tensoring with the residue field, says \(\mu(I/I^2)+m=\mu(J/J^2)+n\); the last dimension in (3) is intrinsic. The localized stable comparison proves invariance under a principal localization around \(\mathfrak q\). Formula (2) proves its counterpart for arbitrary regular local presentations related by a surjection, and the source local-isomorphism neighbourhood construction permits comparison through polynomial presentations in the essentially finite-type setting.
+
+For a field extension \(K/k\) and \(\mathfrak q_K\) over \(\mathfrak q\), flat tensoring gives the exact original ideal \(I_K=K\otimes_k I\) and conormal \(I_K/I_K^2=(I/I^2)\otimes_S S_K\). Their residue vector spaces differ only by scalar extension along \(\kappa(\mathfrak q)\to\kappa(\mathfrak q_K)\), so their dimensions are equal. The source equality of topological dimensions at the corresponding points follows from the two local polynomial/quotient squares: their flat vertical arrows have the same closed fibre, so the local dimension additions cancel, giving equal height differences and hence equal topological dimensions. Therefore \[
+\delta_{S_K}(\mathfrak q_K)=\delta_S(\mathfrak q).\tag{4}
+\] This proves equality of the entire nonnegative defect, extending the source's equivalence of its vanishing. It does not assert equality of the two local-ring dimensions individually.
+
+\subsubsection{The closed loci of each defect value}\label{algebra-proof-045-the-closed-loci-of-each-defect-value}
+
+Keep a finite presentation \(P\to S\), and put \(M=I/I^2\). For \(0\leq d\leq n\), let \(C_d\) be the union of irreducible components of \(\operatorname{Spec}S\) of dimension at least \(d\). It is closed because there are finitely many components. Algebra 27781--27852 identifies it with the set where \(\dim_{\mathfrak q}\operatorname{Spec}S\geq d\). For an integer \(s\geq1\), define \[
+Z_s=\bigcup_{d=0}^{n}
+\left(C_d\cap V(\operatorname{Fitt}_{n-d+s-1}(M))\right).\tag{5}
+\] To specify all ideals, choose a finite module presentation \(S^a\xrightarrow D S^b\to M\to0\). The Fitting ideal \(\operatorname{Fitt}_i(M)\) consists of all \((b-i)\)-minors of this full matrix; it is \(S\) for \(i\geq b\), and zero for \(i<0\). No row, coefficient or minor is dropped. At a residue field the rank calculation gives \[
+\mathfrak q\in V(\operatorname{Fitt}_i(M))
+\quad\Longleftrightarrow\quad
+\dim_{\kappa(\mathfrak q)}M\otimes\kappa(\mathfrak q)>i.
+\] If \(\mathfrak q\) belongs to the term of (5) indexed by \(d\), its actual point dimension is at least \(d\), so (3) gives \(\delta_S(\mathfrak q)\geq s\). Conversely take \(d\) equal to the actual point dimension of a prime with defect at least \(s\); it belongs to that term. Thus \(Z_s=\{\delta_S\geq s\}\). These are closed, and the defect is upper semicontinuous. In particular the complete-intersection locus is the open complement of \(Z_1\); exact defect strata are \(Z_s\setminus Z_{s+1}\), with the zero stratum treated separately.
+
+For an explicit reduced defining ideal let \(a_d\) be the intersection of the minimal primes defining the components in \(C_d\), with empty intersection \(S\). Then \[
+J_s=\bigcap_{d=0}^{n}\sqrt{a_d+\operatorname{Fitt}_{n-d+s-1}(M)}
+\] defines \(Z_s\). Equations (3)--(4) prove that these closed sets are independent of presentation and their inverse images under every field extension are exactly the corresponding sets for \(S_K\). Accordingly their reduced ideals satisfy \[
+J_{s,S_K}=\sqrt{J_{s,S}\,S_K}.
+\] The radical is retained; no assertion about an unreduced scheme structure after inseparable base change is made. For the zero algebra the spectrum is empty and all these reduced defining ideals are the unit ideal. These consequences belong in editorial material rather than being inserted in the original definitions.
+
+\subsubsection{Local presentations, neighbourhoods and field change}\label{algebra-proof-045-local-presentations-neighbourhoods-and-field-change}
+
+For the source essentially finite-type local \(k\)-algebra, write a regular local presentation as \(R=(k[x_1,\ldots,x_n]/J)_{\mathfrak q}\twoheadrightarrow S\), with polynomial kernel \(I\supset J\). The local ring \(k[x]_{\mathfrak q}\) and its quotient \(R\) are regular. Formula (1) transfers the generator count to \(I_{\mathfrak q}\), and the original local criterion constructs a global complete-intersection principal neighbourhood whose local ring is \(S\). This proves (3) implies (4) in Algebra 36079--36157 with the actual presentation and prime.
+
+In the converse, the given isomorphism \(S\cong A_{\mathfrak a}\) with \(A\) a finite-type local complete intersection extends to isomorphic principal neighbourhoods of the two finite-presentation \(k\)-algebras. The proof at 31623--31660 lifts the finitely many generators, clears the finitely many relation denominators, and uses the local-isomorphism product decomposition. Its previously composed correction selects the idempotent \((1,0)\) for the desired algebra, not \((0,1)\) for the other factor. Adding one variable with equation \(zg'-1\) expresses the relevant principal localization as a polynomial quotient. The local criterion then proves its polynomial kernel regular, and the regular-presentation equivalence proves that the kernel of the original \(R\to S\) is regular. This supplies (5) implies (2), retaining the given isomorphism and its denominators. The other implications follow directly from the definitions and the local parameter criterion.
+
+The pointwise criterion now gives the three global equivalences in the source: checking maximal ideals suffices because every prime is contained in a maximal ideal, and a principal open containing a maximal ideal also contains each of its generizations. The resulting opens cover the spectrum; quasi-compactness yields a finite subcover if desired. The zero spectrum is covered by the empty family. Equation (4) gives the field-change equivalence at every pair of corresponding primes. Every prime downstairs has a prime above it because field extension is faithfully flat, so it also gives the global equivalence.
+
+The alternative proof in the source is valid: regular sequences ascend through the flat localized polynomial map; at a maximal ideal downstairs the finite residue extension \(\kappa/k\) gives a nonzero finite \(K\)-algebra \(K\otimes_k\kappa\). Its finitely many primes are maximal and form a nonempty set. A chosen prime above it has zero-dimensional closed fibre. The flat local dimension formula consequently gives equal local dimensions in this special maximal-ideal situation. Conormal residue dimensions agree by the exact field-base-change map, and the local generator criterion gives descent. This does not extrapolate that local-dimension equality to arbitrary primes.
+
+\subsubsection{The permanence proof has a genuine hypothesis gap}\label{algebra-proof-045-the-permanence-proof-has-a-genuine-hypothesis-gap}
+
+In Algebra 36360--36420 the square has local rings, with \(R\) and \(\overline S=S/\mathfrak m_RS\) regular, but does not assume \(S\) Noetherian. The cited regular-sequence lifting lemma at 23492 requires both local rings Noetherian. The injectivity lemma at 23424 requires the target Noetherian. The dimension formula at 27421 also requires Noetherian rings. Regularity of the base and closed fibre with flatness does not supply the missing hypothesis.
+
+Here is an exact boundary example, including all maps. Let \(k\) be a field, \[
+R=k[t]_{(t)},\quad F=k((t)),\quad
+S=k[[t]]+uF[[u]]\subset F[[u]],\quad P=uF[[u]].
+\] The map \(R\to S\) is inclusion. The ring \(S\) is local: a series with constant coefficient a unit in \(k[[t]]\) has its formal \(u\)-series inverse in \(S\); the remaining elements form \(\mathfrak m_S=tk[[t]]+P=tS\). Its residue field is \(k\), so \(S/\mathfrak m_RS=k\) is regular. The inclusion is flat because \(S\) is torsion free over the principal ideal domain \(R\): it is the directed union of its finitely generated torsion-free, hence free, \(R\)-submodules.
+
+The ideal \(P\) is not finitely generated. For a finite list of putative generators, their coefficients of \(u\) have \(t\)-valuations bounded below. Multiplying by elements of \(S\) only multiplies those first coefficients by elements of \(k[[t]]\). A term \(u/t^N\) with sufficiently large \(N\) violates that bound. Also \(\bigcap_{n\geq1}t^nS=P\ne0\). There is a strict prime chain \(0\subset P\subset\mathfrak m_S\). It exhausts the primes: primes containing \(P\) correspond to the two primes of \(k[[t]]\); if a nonzero prime contained in \(P\) contains a nonzero element of \(u\)-order \(a\), then a sufficiently high power of every element of \(P\) is divisible by that element with quotient in \(P\subset S\), and hence the prime contains all of \(P\). A prime not contained in \(P\) contains an element with nonzero constant coefficient in \(tk[[t]]\), which is a unit times a power of \(t\) in \(S\), and is therefore maximal. Thus \(\dim S=2\), whereas \(\dim R+\dim(S/tS)=1\).
+
+Take \(A=R\), \(B=S\), \(I=J=0\). Both ideals in condition (3) are generated by the empty regular sequence and both vertical maps are flat. All source assumptions hold, while the dimension equation invoked at 36415 is false. This refutes that step of the printed proof, not the lemma's conclusion (which is true in this example). The next two sections prove the original conclusion without adding Noetherianity of \(S\), and in fact remove two unused regularity hypotheses. The source proof needs a visible conceptual erratum, not an unproved assertion that its whole theorem is false or a silent restriction of its statement.
+
+\subsubsection{A Tor-product criterion with a complete proof}\label{algebra-proof-045-a-tor-product-criterion-with-a-complete-proof}
+
+Let \((R,\mathfrak m,k)\) be a Noetherian local ring, \(I\subset\mathfrak m\), and \(A=R/I\). If the graded algebra \(\operatorname{Tor}^R_*(A,k)\) is generated by its degree-one part, then \(I\) is generated by a regular sequence. Only the surjectivity of products onto degree two is needed.
+
+Choose a minimal generating list \(f_1,\ldots,f_r\) of \(I\), and keep its Koszul differential \[
+d(e_i)=f_i,\qquad d(e_i\wedge e_j)=f_i e_j-f_j e_i.
+\] The finite module \(H_1(K_R(f))\) is annihilated by \(I\), because multiplication by each \(f_i\) is homotopic to zero through wedge multiplication by \(e_i\). Choose a minimal list of its generators, represented by cycles \(z_1,\ldots,z_a\in K_1\). Every coefficient of every \(z_j\) is in \(\mathfrak m\): a relation \(\sum b_i f_i=0\) reduces in \(I/\mathfrak mI\) to a relation on the basis given by the minimal generators, so each \(b_i\) is zero modulo \(\mathfrak m\).
+
+Extend the augmented differential graded algebra \(K_R(f)\to A\) to an \(R\)-free differential graded algebra resolution by adjoining generators \(y_j\) of degree two with \(dy_j=z_j\), then adjoining generators in successive degrees whose differentials represent generators of the remaining positive homology. One may use free associative graded algebra adjunctions with \(R\) central; no division by factorials is required. The original exterior relations among the \(e_i\) are retained. In each step adjoining a generator in degree \(n+1\) kills its specified degree-\(n\) class and changes no lower degree. Taking the union after successively killing all positive degrees gives an augmented resolution. Its underlying modules are free: free products over \(R\) have the basis of alternating words in the chosen free augmentation-ideal bases. This construction provides the resolution rather than assuming a missing acyclicity assertion.
+
+In degrees at most two the resulting resolution \(T\) has \[
+T_0=R,\quad T_1=\bigoplus_i Re_i,\quad
+T_2=\bigwedge^2R^r\oplus\bigoplus_{j=1}^a Ry_j.
+\] Its first two differentials vanish after tensoring with \(k\). For every element \(w+\sum a_jy_j\in\ker(T_2\to T_1)\), the equation \(d_Kw+\sum a_jz_j=0\) gives \(\sum a_j[z_j]=0\) in \(H_1(K_R(f))\). Minimality of the chosen homology generators implies \(a_j\in\mathfrak m\) for every \(j\). Every image from degree three is such a cycle, including differentials of products and of the subsequently adjoined degree-three generators. Consequently projection onto the \(y_j\) coordinates induces a surjection \[
+\operatorname{Tor}^R_2(A,k)=H_2(T\otimes_R k)\longrightarrow k^a.
+\] All degree-one products come from \(e_i e_j\), so this projection kills every such product. The Tor product here is the usual one obtained by tensoring an \(R\)-flat differential graded algebra resolution with \(k\); comparison through free algebra resolutions preserves the multiplication. Hence generation by degree one forces \(a=0\), and Nakayama gives \(H_1(K_R(f))=0\).
+
+Finally, vanishing of this Koszul homology implies regularity in the Noetherian local ring. Induct on \(r\). Write \(K'=K_R(f_1,\ldots,f_{r-1})\). The mapping-cone exact sequence contains \[
+H_1(K')\xrightarrow{f_r}H_1(K')\to H_1(K_R(f))
+\to H_0(K')\xrightarrow{f_r}H_0(K').
+\] The zero middle homology makes the first map surjective. The finite module \(H_1(K')\) is therefore zero by Nakayama. Induction gives regularity of the first \(r-1\) elements, and the last arrow is injective, proving regularity of \(f_r\) on the preceding quotient. The final quotient is nonzero because all generators lie in \(\mathfrak m\). The empty list gives \(I=0\), with the same conclusion. This proves the criterion in every characteristic.
+
+\subsubsection{Permanence without the unused regularity assumptions}\label{algebra-proof-045-permanence-without-the-unused-regularity-assumptions}
+
+Consider the source square \(R\to S\), \(A=R/I\to B=S/J\), with local maps, \(R\) Noetherian local, and both \(R\to S\) and \(A\to B\) flat. Assume \(J\) is generated by a regular sequence of length \(c\), and its image \[
+\overline J=J/(\mathfrak m_RS\cap J)\subset\overline S=S/\mathfrak m_RS
+\] is generated by a regular sequence of length \(b\). Put \(k=R/\mathfrak m_R\) and \(\overline B=B/\mathfrak m_RB=\overline S/\overline J\). These are the original image ideal and fibre rings; the two already composed denominator corrections MC-STK-ERR-0443 and 0444 remain under their existing identities.
+
+Let \(z_1,\ldots,z_c\) be the specified regular generators of \(J\). Their Koszul algebra is a finite resolution of \(B\) by free \(S\)-modules, each flat over \(R\). Its tensor product with \(k\) is exactly \(K_{\overline S}(\overline z_1,\ldots,\overline z_c)\). To compute its entire homology algebra, choose regular generators \(h_1,\ldots,h_b\) of \(\overline J\). A regular sequence has free conormal module on its classes, so these form a minimal generating list over the local ring \(\overline S\). Write the \(\overline z_i\) as linear combinations of the \(h_j\). Their coefficient matrix has rank \(b\) modulo the maximal ideal, since the \(\overline z_i\) generate \(\overline J\). An invertible \(b\)-minor, permutation, its matrix inverse, and elementary row subtractions give a matrix in \(\mathrm{GL}_c(\overline S)\) carrying this list to \((h_1,\ldots,h_b,0,\ldots,0)\). This also proves \(c\geq b\). The induced exterior-power maps give an isomorphism of Koszul algebras, keeping all matrix coefficients and differentials. Since \(h\) is regular, \[
+\operatorname{Tor}^R_*(B,k)
+\cong\bigwedge^*_{\overline B}(\overline B^{\oplus(c-b)}).
+\tag{6}
+\] This calculation uses no Noetherian property of \(S\) or \(\overline S\).
+
+For the second computation, take an \(R\)-free differential graded algebra resolution \(G\to k\), constructed by successive cycle adjunctions as above. The complex \(G\otimes_R A\) consists of free \(A\)-modules and has homology \(\operatorname{Tor}^R_*(A,k)\). Flatness of \(B\) over \(A\) commutes with its kernels and images, giving the multiplicative isomorphism \[
+\operatorname{Tor}^R_*(A,k)\otimes_k\overline B
+\ \xrightarrow{\ \cong\ }\ \operatorname{Tor}^R_*(B,k).
+\tag{7}
+\] The scalar reduction is exact: the \(A\)-action on these Tor groups factors through \(k\), and \(B\otimes_A k=\overline B\). The map sends a Tor class tensored with \(b\) to \(b\) times its image under \(A\to B\), so it respects products. Locality makes \(\overline B\ne0\), and hence it is faithfully flat over the field \(k\).
+
+In (6), the intrinsic map from the exterior algebra of degree-one homology to all homology is an isomorphism. Combining (6) and (7), and descending its kernel and cokernel along the faithful field extension to the nonzero \(k\)-algebra \(\overline B\), shows that \(\operatorname{Tor}^R_*(A,k)\) is generated by degree one. The preceding criterion now proves that \(I\) is generated by a regular sequence. Also \[
+\operatorname{Tor}^R_1(A,k)=I/\mathfrak m_RI,
+\qquad \mu_R(I)=c-b,
+\] because (6) has degree-one rank \(c-b\); tensoring further to the residue field of \(\overline B\) compares these finite ranks. Any minimal generating list of \(I\) is regular by the same Koszul criterion. Thus the original conclusion holds for arbitrary \(S\), and the assumptions that \(R\) and \(\overline S\) are regular can be replaced by the sole requirement that \(R\) be Noetherian local, while retaining all the flatness and regular-sequence assumptions. In particular no missing hypothesis has been inserted to make the printed proof work.
+
+The source's equation \(J=(f_1,\ldots,f_b)+IS\), for lifts of regular fibre generators, also admits a direct proof without the cited Noetherian-target injectivity lemma. Its kernel module \(L=J/((f_1,\ldots,f_b)+IS)\) is finite over \(S\), because \(J\) is finitely generated. Tensor the exact sequence \(0\to L\to S/((f)+IS)\to B\to0\) over \(A\) with \(k\). Flatness of \(B\) over \(A\) preserves injectivity on the left, and the two quotient rings have identical closed fibres. Hence \(L/\mathfrak m_RL=0\), so Nakayama gives \(L=0\). The later claims of flatness of \(S/(f)\) and the dimension calculations still require a different justification in the source's stated generality; (6)--(7) supply a complete proof of the theorem without relying on them.
+
+\subsubsection{Report dispositions and propagation}\label{algebra-proof-045-report-dispositions-and-propagation}
+
+Localization of an algebra at a prime of its base polynomial ring means inversion of the complement of that prime; it is well defined and equals localization at the corresponding quotient prime when the kernel is contained in it. Thus the notation in OCC-00771 is not an undefined localization. A maximal prime is a maximal ideal, so OCC-00773 is a terminology preference. Finite products and sums of modules coincide, making the ordinary powers in OCC-00774 legitimate finite free modules. The TeX forms q-subscript-K-prime and q-prime-subscript-K render identically, so OCC-00779 does not identify a mathematical or rendered inconsistency. A comma in ``Let {[}diagram{]} be \ldots'' would interrupt the verb construction; OCC-00785 is rejected. Source-only spacing in OCC-00788 and terse transitions remain optional. Missing designation prepositions, one finite verb, the singular condition wording, and terminal punctuation receive local proposals. The two repeated mathematical denominator findings retain their two existing canonical units and three operations, with no double application.
+
+The precise stable-conormal result from groups 991--992 supports the presentation independence and local criterion here. The original conormal base-change result and group 995 support the exact residue comparison; no Tor defect is lost because field extension is flat. Groups 1017--1018 record the quantitative defect and its closed strata, and group 1019 records the generalized permanence theorem and exact length formula. Group 1016 records the printed proof's actual hypothesis gap together with its full resolution, rather than asserting a false counterexample to the theorem. All three strengthenings have zero source operations. The pending More on Algebra tensor-base correction from group 997 remains separate. Broader synthesis and a short paper follow completion of the core work.

@@ -1,0 +1,155 @@
+\subsection{Cohen--Macaulay modules and rings: source review and conceptual errata}\label{algebra-proof-019-cohenmacaulay-modules-and-rings-source-review-and-conceptual-errata}
+
+Primary source: the Stacks Project, algebra.tex at authority commit a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, SHA256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Complete new review: 24952--25455, both Cohen--Macaulay sections. Lookahead 25456--25480 is unadjudicated and ends before the last proof terminates.
+
+Dependencies reread: 9487--9508, 14694--14710, 15297--15326, 16639--16687, 17765--17787, and 17961--18045. The original topology.tex at the same commit, SHA256 C6BA\allowbreak{}C8DC\allowbreak{}F8AD\allowbreak{}96DC\allowbreak{}4741\allowbreak{}6BF3\allowbreak{}4CB4\allowbreak{}5BA4\allowbreak{}A10B\allowbreak{}894E\allowbreak{}40D6\allowbreak{}7D3E\allowbreak{}1FA6\allowbreak{}8D8E\allowbreak{}F0D9\allowbreak{}F872, is checked at 1397--1413 for the empty-space convention. The earlier complete proof in ALGEBRA\_\allowbreak{}BLOWUP\_\allowbreak{}EXT\_\allowbreak{}DEPTH\_\allowbreak{}NOTES\_\allowbreak{}20260927.\allowbreak{}md, section ``Depth quotients and propagation to large powers'', is reread and received explicitly below (group 463).
+
+The original EGA Chapter 0, Proposition 16.5.4 reference is retained; this batch does not claim a fresh reading of EGA. The saved corpus query returns three routing hits. Two have PDF paths only; the third has original TeX but is not read in this batch. The supplied original Stacks TeX is the primary treatment used. No novelty or exhaustive literature coverage is asserted.
+
+All complete arguments and further consequences here are source-linked editorial material. Proposed source corrections remain identifiable separately; the cumulative chapter and all translated branches are unchanged. The broader synthesis follows core completion.
+
+\subsubsection{The zero module and the good-element boundary}\label{algebra-proof-019-the-zero-module-and-the-good-element-boundary}
+
+The source sets \(\operatorname{depth}(0)=+\infty\) at 17772 and 17779--17782, while its topology definition gives dimension of the empty support as \(-\infty\). Therefore its literal equality at 24964 does not call the zero module Cohen--Macaulay. Later it asserts localization is Cohen--Macaulay at every prime and that checking maximal ideals suffices. These formulations are incompatible with that omission. For an explicit example let \(R=k[t]_{(t)}\), \(M=R/(t)\), and \(\mathfrak p=(0)\). The nonzero module \(M\) has dimension and depth zero, but \(M_{\mathfrak p}=0\). The later localization assertion thus fails under the literal initial definition.
+
+The proposed conceptual correction states the zero-module exception explicitly: \(M\) is Cohen--Macaulay if \(M=0\), or if its support dimension equals its depth. It does not identify \(+\infty\) with \(-\infty\) or change either convention. Where an actual regular sequence is asserted, the nonzero hypothesis must still be retained: the source regular-sequence definition requires a nonzero final quotient, even for the empty sequence. Thus the proposition at 25054 is made explicitly about a nonzero Cohen--Macaulay module. The numerical depth definition of maximal Cohen--Macaulay at 25138 still excludes zero, so its explanatory ``largest possible depth'' comparison is restricted to nonzero finite modules. In the polynomial proof a zero localization is dealt with before choosing a finite length parameter sequence.
+
+Independently, the given regular sequence in the good-element setup already forces \(M\ne0\), but it allows \(d=0\). Then the conditions indexed by \(0\le i\le d-1\) are empty, so every \(g\in\mathfrak m\) is good. Taking \(g=0\) on \(M=k\) over \(R=k\) contradicts the claimed injectivity. The minimal repair is \(d>0\) in the lemma, and induction beginning at \(d=1\). The definition of goodness itself is retained.
+
+For \(d=1\) let \(K=\ker(g:M\to M)\). Localization away from \(V(g)\) makes \(g\) invertible, and \(K\subset M\); hence \[
+ \operatorname{Supp}K\subset
+ \operatorname{Supp}M\cap V(g)=\{\mathfrak m\}.
+\] The containment is essential: the source writes equality even though its goal is \(K=0\), whose support is empty. This gets a separate minimal wording repair within the same lemma. A finite module supported at the closed point has finite length: a power of \(\mathfrak m\) annihilates it, and its finite filtration by powers of \(\mathfrak m\) has finite-dimensional residue-field factors. Multiplication by \(f_1\) is injective on \(K\), so equality of lengths makes it surjective. Nakayama gives \(K=0\). Also \(M/gM\ne0\) by Nakayama, has zero-dimensional support, and has depth zero.
+
+For \(d>1\), the actual quotient \(M/f_1M\) has depth and support dimension \(d-1\) by the earlier depth-drop and dimension lemmas. Goodness descends through the support identity \[
+ \operatorname{Supp}(M/(f_1,\ldots,f_i)M)
+ =\operatorname{Supp}M\cap V(f_1,\ldots,f_i).
+\] Induction gives \(g\) regular on \(M/f_1M\) and regularity of the stated tail on \(M/(f_1,g)M\). The original permutation lemma then gives the regular sequence \(g,f_1,\ldots,f_{d-1}\) on \(M\). The support of \(M/gM\) has dimension \(d-1\) by the \(i=0\) goodness condition. The tail has that length, so its depth reaches the dimension bound; the quotient is Cohen--Macaulay. This verifies the full original induction without replacing it.
+
+\subsubsection{One-element cuts and complete parameter sequences}\label{algebra-proof-019-one-element-cuts-and-complete-parameter-sequences}
+
+In the one-element lemma, first take nonzero \(M\) and let \(d=\dim\operatorname{Supp}M\). If its displayed dimension-drop hypothesis holds, then \(d\ge1\): for \(d=0\), Nakayama keeps \(M/gM\ne0\), so its support cannot have dimension \(-1\). The \(d=1\) case is the corrected good-element lemma.
+
+For \(d>1\), every original quotient \(M/(f_1,\ldots,f_i)M\) is nonzero Cohen--Macaulay of dimension \(d-i\). The finitely many closed sets listed in 25034--25037 all have positive dimension. None has the maximal ideal as a minimal prime: each contains a nonmaximal prime below it, and the maximal ideal contains every prime of the local ring. Prime avoidance therefore chooses the source's \(h\in\mathfrak m\) avoiding every listed minimal prime. The one-equation dimension lemma, applied to their actual annihilator quotients, decreases each dimension exactly by one. Thus \(h\) is good for the original data and \(\dim(\operatorname{Supp}M\cap V(h,g))=d-2\).
+
+The corrected good-element lemma makes \(M/hM\) Cohen--Macaulay. Induction makes \(g\) regular there and its quotient Cohen--Macaulay. Permuting the regular pair \(h,g\) gives \(g,h\), so \(g\) is regular on \(M\) and \(h\) on \(M/gM\). The latter quotient has support dimension \(d-1\), while its quotient by \(h\) has depth \(d-2\). The earlier depth-drop formula gives depth \(d-1\) for \(M/gM\), proving the assertion. With the explicit zero-module exception, the zero case is separate and tautological: all modules in that case are zero, and no finite-dimensional induction or regular sequence is asserted. Its infinite depth remains infinite.
+
+For the parameter proposition retain \(M\ne0\), \(g_j\in\mathfrak m\), and the original equality of dimensions. Every quotient is nonzero by Nakayama. Put \[
+ M_i=M/(g_1,\ldots,g_i)M,\qquad d_i=\dim\operatorname{Supp}M_i.
+\] The maps are the actual quotient maps with kernel \((g_1,\ldots,g_i)M/(g_1,\ldots,g_{i-1})M\). The one-equation inequality gives \(d_i\le d_{i-1}\le d_i+1\). Since \(d_0=d\) and \(d_c=d-c\), every difference is exactly one. Repeatedly apply the one-element lemma to these exact modules. This proves regularity, Cohen--Macaulayness of each quotient, and depth \(d-i\). The omitted terminal \(M\) at 25068 is therefore a genuine type correction.
+
+If \(c<d\), avoid the finitely many minimal primes of \(\operatorname{Supp}M_c\) to choose the next element in \(\mathfrak m\). The support dimension drops by one, and the same argument extends the sequence. It terminates at length \(d\); the depth bound forbids extension beyond this length. This includes \(c=0\) for nonzero \(M\).
+
+The two article reports correct the original notation at 25027 and 25249. They do not change the chosen elements or their localizations.
+
+\subsubsection{Quotients, associated primes, chains and localization}\label{algebra-proof-019-quotients-associated-primes-chains-and-localization}
+
+If \(x\in\mathfrak m\) is regular on a nonzero finite \(M\), both its depth and its support dimension drop exactly by one. Hence the Cohen--Macaulay equivalence at 25081--25094 follows. If \(M=0\), both sides are zero and the corrected convention supplies the equivalence directly, without subtracting finite numbers from an empty support dimension in a proof.
+
+For the omitted proof at 25096--25105 let \(R\to S=R/J\) be the given surjection. For a finite \(S\)-module \(N\), \(J\) annihilates \(N\). The exact correspondence \(\mathfrak q\mapsto\varphi^{-1}(\mathfrak q)\) is an inclusion-preserving bijection from \(\operatorname{Supp}_S N\) onto \(\operatorname{Supp}_R N\). Its inverse is \(\mathfrak p\mapsto\mathfrak p/J\). Localizations identify by \[
+ N_{\mathfrak q}\longrightarrow N_{\mathfrak p},\qquad n/\bar s\longmapsto n/s,
+\] where \(s\) is any lift outside \(\mathfrak p\); another lift differs by an element of \(J\), which acts as zero. The reverse map is given by reduction of denominators. Thus chains and their lengths are preserved exactly. A sequence in \(\mathfrak m_R\) and its image in \(\mathfrak m_S\) have the same successive multiplication maps and quotient modules. Conversely every finite sequence in \(\mathfrak m_S\) lifts into \(\mathfrak m_R\). Regularity, including the nonzero final quotient, is identical. Depths are therefore equal, and the support dimensions are equal. The zero case follows from the explicit exception. This is an editorial proof of the original equivalence, not replacement text.
+
+For nonzero Cohen--Macaulay \(M\), each \(\mathfrak p\in\operatorname{Ass}M\) satisfies \[
+ d=\operatorname{depth}M\le\dim R/\mathfrak p\le d.
+\] Thus equality holds. If a support prime strictly contained \(\mathfrak p\), a chain of maximal length above \(\mathfrak p\) could be extended downward, contradicting dimension \(d\) of the support. Every associated prime is therefore minimal in the support, and the earlier theorem that minimal support primes are associated gives equality of the two sets. This proves the cited EGA consequence from the actual preceding Stacks results.
+
+Now assume the original full-support hypothesis of 25150--25185. Let \(\mathfrak p_0\subsetneq\cdots\subsetneq\mathfrak p_n=\mathfrak m\) be a maximal chain. The first prime is minimal and every adjacent inclusion is saturated. If \(d=0\), \(n=0\). If \(d>0\), prime avoidance supplies \(x\in\mathfrak p_1\) outside all minimal primes of \(R\). The support and dimension statements imply \(x\) is \(M\)-regular and the quotient is Cohen--Macaulay, with support \(V(x)\) and dimension \(d-1\).
+
+The prime \(\mathfrak p_1\) is minimal over \(\mathfrak p_0+(x)\), since \(x\notin\mathfrak p_0\) and no prime lies strictly between the two chain terms. Use the original cyclic submodule \(N_0\cong R/\mathfrak p_0\subset M\) and the Artin--Rees constant from group 463. For any integer \(a\) at least its bound, \(\mathfrak p_1\in\operatorname{Ass}(M/x^aM)\). The actual power \(x^a\) is still regular on \(M\). The module \(M/x^aM\) is Cohen--Macaulay over the distinct ring \(R/(x^a)\); its support is all that spectrum and its dimension is \(d-1\). We do not identify that ring or module with the quotients by \(x\); only their support sets coincide under the original prime correspondence.
+
+The just-proved associated-prime result makes \(\mathfrak p_1/(x^a)\) a minimal prime of \(R/(x^a)\). The original remaining chain gives a maximal chain there of length \(n-1\). Induction gives \(n-1=d-1\). Thus every original maximal chain has length \(d\). For any prime \(\mathfrak p\), concatenate maximal chains below and above it. Their lengths are respectively \(\dim R_{\mathfrak p}\) and \(\dim R/\mathfrak p\), since every maximal concatenation has the same length. This proves the exact dimension formula at 25187--25199.
+
+For localization at 25201--25225, first treat \(M_{\mathfrak p}=0\) by the explicit zero convention. This is the actual trivial case that must precede dimension or regular-sequence arguments. Otherwise \(M\ne0\) and \(\mathfrak p\in\operatorname{Supp}M\). The case \(\mathfrak p=\mathfrak m\) is identical to the original module. For the other primes, choose a saturated finite chain from \(\mathfrak p\) to \(\mathfrak m\) and induct along it. For an immediate predecessor, \(\dim R/\mathfrak p=1\). A chain in \(\operatorname{Supp}M_{\mathfrak p}\) extends by \(\mathfrak m\), giving \[
+ \dim\operatorname{Supp}M_{\mathfrak p}\le d-1
+ =\operatorname{depth}M-1
+ \le\operatorname{depth}M_{\mathfrak p}.
+\] The last inequality is the earlier depth-localization theorem, and the opposite dimension/depth inequality holds for the nonzero finite localized module. Equality proves the immediate step. Applying it successively proves the source localization theorem. The proof's opening clause is corrected to \(M_{\mathfrak p}\) being nonzero, also repairing the received missing verb.
+
+For a general Noetherian ring, every prime lies in a maximal ideal and iterated localization identifies \((M_{\mathfrak m})_{\mathfrak pR_{\mathfrak m}}\) with \(M_{\mathfrak p}\) via the original fractions. Thus checking the maximal localizations suffices, now consistently including zero localizations.
+
+\subsubsection{The complete polynomial-module argument}\label{algebra-proof-019-the-complete-polynomial-module-argument}
+
+It suffices to add one variable at a time. Put \(T=R[x]\), take a maximal ideal \(\mathfrak n\subset T\), and put \(\mathfrak p=\mathfrak n\cap R\). If \(M_{\mathfrak p}=0\), then \((M\otimes_R T)_{\mathfrak n}=0\), and there is no parameter sequence to choose. Assume \(M_{\mathfrak p}\ne0\). Let \[
+ A=R_{\mathfrak p},\quad B=T_{\mathfrak n},\quad
+ L=M_{\mathfrak p}/(f_1,\ldots,f_d)M_{\mathfrak p}.
+\] The original flat local map \(A\to B\) is faithfully flat. Indeed localization and polynomial extension are flat, the map is local, and its closed residue fibre is nonzero. Equivalently, every nonzero cyclic module has nonzero residue after this local flat base change, which is the usual faithful-flatness criterion. The chosen \(f_1,\ldots,f_d\) remain regular on \(M_{\mathfrak p}\otimes_A B\) by tensoring their injective maps; the nonzero successive final quotient is preserved by faithfulness.
+
+The actual quotient \(Q=L\otimes_A B\) is nonzero. Its support is precisely \(V(\mathfrak pB)\): \(L\) is nonzero finite length over \(A\), so its annihilator has radical \(\mathfrak pA\). For a flat extension, the annihilator of a finite module extends exactly. To see this without assuming a tensor injection falsely, choose finitely many generators \(l_1,\ldots,l_s\). The annihilator is the kernel of the actual map \(A\to L^s\), \(a\mapsto(al_1,\ldots,al_s)\). Flatness identifies its tensor kernel with the kernel of \(B\to(L\otimes_A B)^s\), whose entries generate the extended module. This proves the assertion and hence the support formula.
+
+The residue map gives a surjection \(\kappa(\mathfrak p)[x]\to T/\mathfrak n=\kappa(\mathfrak n)\). Its kernel \(\mathfrak q\) is a nonzero maximal ideal. Surjectivity holds because the image of \(R/\mathfrak p\) in the field contains its fractions after extending scalars, and the original field quotient is generated by the image of \(x\). A zero kernel would identify a polynomial ring in one indeterminate with a field, which is impossible. This nonzero maximal ideal is generated by an irreducible polynomial \(P\); division using its actual invertible leading coefficient gives the basis \(1,x,\ldots,x^{\deg P-1}\) for the quotient field over \(\kappa(\mathfrak p)\). This also verifies the source's finite residue-field extension. Thus \[
+ B/\mathfrak pB=\kappa(\mathfrak p)[x]_{\mathfrak q}
+\] has dimension one. In particular the original \(Q\) has support dimension one. Clearing the finitely many denominators in a nonzero polynomial of \(\mathfrak q\) gives \(f\in\mathfrak n\subset R[x]\) whose leading coefficient does not belong to \(\mathfrak p\). Such an \(f\) has positive degree.
+
+Multiplication by \(f\) on \[
+ L\otimes_R R[x]=\bigoplus_{j\ge0}Lx^j
+\] is injective: for a nonzero polynomial vector, its highest nonzero coefficient times the unit leading coefficient of \(f\) remains nonzero and is the unique coefficient at the highest resulting degree. Localization preserves this injection on \(Q\). Also \(Q/fQ\ne0\) by Nakayama because \(f\in\mathfrak nB\) and \(Q\) is finite and nonzero. Hence depth \(Q\ge1\), and the dimension bound makes it exactly one. The original module localized at \(\mathfrak n\) has depth \(d+1\) by reversing the \(d\) depth drops, and support dimension \(d+1\) by reversing the corresponding dimension drops. It is Cohen--Macaulay. Induction proves the stated finite-variable module theorem.
+
+The ring corollary says ``Any polynomial algebra'', although the definition requires Noetherian rings and the cited theorem has finitely many variables. The chapter elsewhere permits infinitely many variables. For a field \(k\), the chain \((x_1)\subsetneq(x_1,x_2)\subsetneq\cdots\) in \(k[x_1,x_2,\ldots]\) is strictly increasing: the next variable survives after setting the preceding variables to zero. Thus the ring is not Noetherian and is not Cohen--Macaulay under this chapter's definition. The correction explicitly says finitely many variables; it does not replace that definition by a different non-Noetherian notion.
+
+\subsubsection{The ring specializations and the exact syzygy depths}\label{algebra-proof-019-the-ring-specializations-and-the-exact-syzygy-depths}
+
+For the local ring results use the original module \(M=R\). Its support is the entire spectrum and it is nonzero. Regularity gives each successive quotient depth and dimension one smaller; conversely the required dimension drop gives regularity by the module proposition. All intermediate quotient rings are Cohen--Macaulay and the sequence extends to length \(d\). The article before \(R\)-regular is corrected.
+
+The maximal-chain statement requires prime ideals. For a concrete adverse example, \(k[\epsilon]/(\epsilon^2)\) is a zero-dimensional Cohen--Macaulay local ring and its maximal chain of arbitrary ideals is \(0\subsetneq(\epsilon)\subsetneq R\), of length two, not zero. It has exactly those ideals because every element with a nonzero constant coefficient is a unit and every nonzero element of \((\epsilon)\) spans it. Thus ``prime'' is necessary, not merely stylistic. The two reports on the opening sentence share the same article-and-noun correction.
+
+In the depth-shift lemma, if \(M=0\), its first alternative holds. If \(M\ne0\) and \(K=0\), depth \(K=+\infty>\operatorname{depth}M\), so the second alternative holds. Otherwise all required modules in the short exact sequence are nonzero, and write \(e=\operatorname{depth}M\le d\). The depth lemma gives \[
+ \operatorname{depth}K\ge\min\{d,e+1\}.
+\] In fact equality holds. If \(e=d\), the dimension bound on nonzero \(K\) gives equality \(d\). If \(e<d\) and depth \(K>e+1\), the other depth inequality would give \[
+ e=\operatorname{depth}M\ge
+ \min\{d,\operatorname{depth}K-1\}\ge e+1,
+\] a contradiction. Thus for every nonzero kernel in this exact sequence \[
+ \operatorname{depth}K=\min\{d,e+1\}.
+\]
+
+For the resolution lemma require \(M\ne0\), so \(0\le e\le d\) is a finite integer. If \(e=d\), take the actual identity complex \(0\to K=M\xrightarrow{1}M\to0\); there is no free segment and no \(F_{-1}\). If \(e<d\), put \(L_0=M\). For each \(j=0,\ldots,d-e-1\), choose a finite set of generators of \(L_j\), let \(G_j\to L_j\) be its finite free cover, and use \[
+ F_j=G_j\oplus R\longrightarrow L_j,\qquad (v,r)\longmapsto v\text{ mapped to }L_j.
+\] Its kernel \(L_{j+1}\) contains the actual extra summand \(R\), so it is nonzero. It is finite because \(R\) is Noetherian. This harmless freedom in the choice of a free cover is needed because the source definition of maximal Cohen--Macaulay excludes the zero module. The preceding exact formula gives \(\operatorname{depth}L_j=\min\{d,e+j\}\). Splicing the kernel inclusions and covers yields exactly the source complex, with \(K=L_{d-e}\) nonzero and depth \(d\). This supplies the complete existence argument without assuming a nonzero syzygy from an arbitrary minimal resolution.
+
+\subsubsection{The original image-parameter construction and its module extension}\label{algebra-proof-019-the-original-image-parameter-construction-and-its-module-extension}
+
+At 25425--25447 the radical hypothesis makes the original map local, and prime avoidance may choose \(f\) inside \(\mathfrak m_A\), not merely in \(A\). For positive dimension the minimal primes of the Cohen--Macaulay ring \(B\) are all strictly below \(\mathfrak m_B\). None contains \(\varphi(\mathfrak m_A)B\), since its radical is \(\mathfrak m_B\). The finitely many contracted prime ideals therefore do not contain \(\mathfrak m_A\), and prime avoidance chooses the required \(f\). Its image avoids all associated primes of \(B\), which are minimal, so it is regular and reduces the dimension by one. The same original map followed by \(B\to B/\varphi(f)B\) retains the radical hypothesis. Induction constructs the complete sequence. Dimension zero uses the empty sequence, whose final module \(B\ne0\) satisfies the source regularity convention.
+
+More generally let \(A\to B\) be a local ring map, with \(B\) Noetherian local, and let \(N\ne0\) be a finite Cohen--Macaulay \(B\)-module of support dimension \(d\). It suffices to assume the weaker, support-relative condition \[
+ \operatorname{Supp}\bigl(N/\varphi(\mathfrak m_A)N\bigr)
+       =\{\mathfrak m_B\}.
+\] Equivalently \(\sqrt{\varphi(\mathfrak m_A)B+\operatorname{ann}_B N}=\mathfrak m_B\); the equivalence is the actual support-of-quotient formula.
+
+For \(d>0\), none of the finitely many minimal support primes is maximal. If one contained every image of \(\mathfrak m_A\), the radical equality would force it to contain \(\mathfrak m_B\), a contradiction. Prime avoidance in the original \(A\) chooses \(f_1\in\mathfrak m_A\) whose image avoids all those primes. The one-element module lemma makes \(\varphi(f_1)\) regular on \(N\) and gives a Cohen--Macaulay quotient of dimension \(d-1\). The original image ideal still cuts its support down to the closed point, because this new quotient's support is a subset of the old one, contains the maximal ideal, and is intersected with the same closed image-ideal set. Repeat on the actual successive quotients. This constructs \(f_1,\ldots,f_d\in\mathfrak m_A\) whose images are \(N\)-regular and whose final quotient has dimension zero. For \(d=0\), the empty sequence suffices. No Noetherianity of \(A\) or Cohen--Macaulayness of \(B\) itself is assumed. Taking \(N=B\) and the source radical hypothesis recovers its construction.
+
+\subsubsection{Support-relative dimension and chain formulas}\label{algebra-proof-019-support-relative-dimension-and-chain-formulas}
+
+Let \(R\) be Noetherian local and \(M\ne0\) finite Cohen--Macaulay of dimension \(d\). Retain the original module and put \(J=\operatorname{ann}_R M\), \(A=R/J\) solely to prove the comparison. The quotient-map argument above shows that the same \(M\) is Cohen--Macaulay over \(A\), with full support \(\operatorname{Spec}A\). For every \(\mathfrak p\in\operatorname{Supp}_R M\), write \(\bar{\mathfrak p}=\mathfrak p/J\). The actual prime and localization maps give \[
+ A_{\bar{\mathfrak p}}\simeq R_{\mathfrak p}/JR_{\mathfrak p},\qquad
+ A/\bar{\mathfrak p}\simeq R/\mathfrak p,\qquad
+ \operatorname{Spec}A_{\bar{\mathfrak p}}\simeq
+ \operatorname{Supp}_{R_{\mathfrak p}}M_{\mathfrak p}.
+\] For the final identity, annihilators commute with this flat localization: apply the finite-generator kernel argument used above. Each comparison is given by the original quotient classes and denominators.
+
+Applying the source's full-support chain theorem and dimension formula to these actual comparison objects proves \[
+ d=\dim\operatorname{Supp}_{R_{\mathfrak p}}M_{\mathfrak p}
+       +\dim R/\mathfrak p
+   =\operatorname{depth}_{R_{\mathfrak p}}M_{\mathfrak p}
+       +\dim R/\mathfrak p .
+\] The second equality uses the already proved localization theorem at this support prime. No assertion that \(R\) itself is Cohen--Macaulay is made. At a prime outside the support the localized module is zero; its two infinite conventions cannot be substituted into this finite formula.
+
+Every maximal chain inside \(\operatorname{Supp}M\) has length \(d\), through the same prime correspondence. For \(\mathfrak p\subset\mathfrak q\) in that support, fix maximal chains below \(\mathfrak p\) and above \(\mathfrak q\). Inserting any maximal chain between them gives a maximal chain in the support. Its total length is \(d\), so all interval chains have the same finite length. Similarly every maximal chain from \(\mathfrak p\) to \(\mathfrak m\) has length \(\dim R/\mathfrak p\). Subtracting the lengths of the actual concatenated chains gives the interval length \[
+ \dim R/\mathfrak p-\dim R/\mathfrak q.
+\] Thus this closed support is catenary with its exact dimension function. This is a proved consequence of the current module results, not a claim that the entire ambient spectrum is catenary. The following source catenary section remains unadjudicated.
+
+\subsubsection{Every positive parameter power and its associated primes}\label{algebra-proof-019-every-positive-parameter-power-and-its-associated-primes}
+
+Let \(M\ne0\) be Cohen--Macaulay over the same Noetherian local \(R\), and let \(g_1,\ldots,g_c\in\mathfrak m\) be \(M\)-regular, with \(0\le c\le d\). Each successive quotient is Cohen--Macaulay of dimension \(d-i\), by the original regular-element equivalence. Fix any positive integers \(a_1,\ldots,a_c\) and any permutation \(\sigma\). Keep the original elements and their powers: \[
+ J_{\mathbf a}=(g_1^{a_1},\ldots,g_c^{a_c}),\qquad
+ h_i=g_{\sigma(i)}^{a_{\sigma(i)}} .
+\] These ideals have the same radical as \(J_{\mathbf 1}\), since a prime contains \(g_j^{a_j}\) exactly when it contains \(g_j\). Therefore the support of the actual quotient \(M/J_{\mathbf a}M\) equals \(\operatorname{Supp}M\cap V(g_1,\ldots,g_c)\), of dimension \(d-c\). The corrected nonzero-module parameter proposition applies to the ordered tuple \(h_1,\ldots,h_c\) and proves it regular. It also proves every intermediate quotient Cohen--Macaulay of its required dimension. All final quotients are nonzero by Nakayama. In particular \[
+ \operatorname{Ass}_R(M/J_{\mathbf a}M)
+ =\operatorname{Min}\bigl(\operatorname{Supp}M\cap V(g_1,\ldots,g_c)\bigr)
+\] for every positive exponent vector, and every prime in this set has \(\dim R/\mathfrak p=d-c\). The empty tuple gives the original \(\operatorname{Ass}M=\operatorname{Min}\operatorname{Supp}M\).
+
+At any prime of this final support, the original quotient and localization maps identify \((M/J_{\mathbf a}M)_{\mathfrak p}\) with \(M_{\mathfrak p}/J_{\mathbf a}M_{\mathfrak p}\). The powers remain regular there: localization preserves injectivity, and the last quotient is nonzero since the prime belongs to its support. Thus \[
+ \dim\operatorname{Supp}(M/J_{\mathbf a}M)_{\mathfrak p}
+ =\dim\operatorname{Supp}M_{\mathfrak p}-c .
+\] These equalities retain the full exponent vector; no quotient modules for different vectors are identified with one another.
+
+This receives group 463 concretely. For a single \(M\)-regular \(x\in\mathfrak m\), that earlier proof puts every prime minimal over \(\mathfrak p+(x)\), \(\mathfrak p\in\operatorname{Ass}M\), in \(\operatorname{Ass}(M/x^nM)\) for all sufficiently large \(n\). The equality of associated-prime sets just proved holds for every \(n\ge1\). Hence every such prime is already associated to \(M/xM\), and remains associated for every positive power. The large-power bound is removable in this Cohen--Macaulay regular-element setting. It is not removed from the earlier theorem for arbitrary finite modules or arbitrary \(x\).

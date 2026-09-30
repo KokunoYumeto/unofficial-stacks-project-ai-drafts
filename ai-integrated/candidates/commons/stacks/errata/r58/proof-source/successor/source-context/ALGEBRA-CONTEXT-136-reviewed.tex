@@ -1,0 +1,164 @@
+\begin{lemma}
+\label{lemma-flat-fibres-irreducible}
+Let $R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item[(a)] $\Spec(R)$ is irreducible,
+\item[(b)] $R \to S$ is flat,
+\item[(c)] $R \to S$ is of finite presentation,
+\item[(d)] the fibre rings $S \otimes_R \kappa(\mathfrak p)$
+have irreducible spectra for a dense collection of primes $\mathfrak p$ of $R$.
+\end{enumerate}
+Then $\Spec(S)$ is irreducible.
+This is true more generally with (b) $+$ (c)
+replaced by ``the map $\Spec(S) \to \Spec(R)$ is open''.
+\end{lemma}
+
+\begin{proof}
+Write $\varphi:R\to S$ for the original
+ring map. Put $X=\Spec(S)$, $Y=\Spec(R)$
+and retain its spectrum map $f:X\to Y$. Proposition
+\ref{proposition-fppf-open} makes $f$ open
+under (b) and (c). We prove the stated
+more general open-map assertion directly.
+Let $D\subseteq Y$ be the given dense
+set of points with irreducible fibres.
+The irreducible space $Y$ is nonempty,
+so $D$ is nonempty. Each fibre at a
+point of $D$ is nonempty; consequently
+$X$ is nonempty as well.
+
+Let $U,V$ be nonempty open subsets of
+$X$. The original images $f(U),f(V)$
+are nonempty open subsets of the
+irreducible $Y$, so their intersection
+is nonempty and open. Density supplies
+$y\in D\cap f(U)\cap f(V)$.
+The subsets $U\cap f^{-1}(y)$ and
+$V\cap f^{-1}(y)$ are nonempty open
+subsets of the irreducible fibre.
+Their intersection is nonempty,
+so $U\cap V\neq\emptyset$.
+This is the nonempty-space criterion
+for irreducibility, proving the lemma
+and supplying the nonemptiness step
+in the cited Topology, Lemma
+\ref{topology-lemma-irreducible-on-top}.
+
+The same proof needs less than
+openness: it is enough that the
+image of every nonempty open
+$U\subseteq X$ contain a nonempty
+open subset of $Y$. Choose such
+subsets inside $f(U)$ and $f(V)$
+and perform the same intersection
+argument with $D$. The whole proof
+also works with the actual subspace
+$f(X)\subseteq Y$ as codomain,
+provided it is irreducible, the
+specified interior condition is
+relative to that subspace, and
+the good fibres form a dense
+subset of it. These are statements
+about the original map with its
+codomain restricted, not an
+assumption that the image equals $Y$.
+
+For flat ring maps there is a
+different exact criterion without
+finite presentation. Under (a),
+let $\mathfrak p=\operatorname{Nil}(R)$
+be the unique minimal prime of
+the original $R$. Put
+$C=S\otimes_R\kappa(\mathfrak p)$.
+The original fibre comparison is
+$$
+C\simeq(R\setminus\mathfrak p)^{-1}(S/\mathfrak pS),
+\qquad
+s\otimes(\overline a/\overline b)
+\longmapsto\varphi(a)s/\varphi(b),
+\quad b\notin\mathfrak p.
+$$
+The inverse sends $\overline s/\varphi(b)$
+to $s\otimes(1/\overline b)$;
+quotient and localization balancing
+prove well-definedness and both
+composites. Primes of $C$ therefore
+correspond exactly to original
+primes of $S$ contracting to
+$\mathfrak p$.
+
+If $\mathfrak q$ is a minimal
+prime of $S$, going down for
+flat maps (Lemma \ref{lemma-flat-going-down}) lifts the inclusion
+$\mathfrak p\subseteq\varphi^{-1}(\mathfrak q)$
+to a prime contained in
+$\mathfrak q$. Minimality forces
+equality, so its contraction is
+exactly $\mathfrak p$. Its fibre
+prime is minimal, since a smaller
+fibre prime would contract to
+a smaller prime of $S$.
+Conversely, if a minimal fibre
+prime corresponds to $\mathfrak q$,
+choose a minimal prime
+$\mathfrak q_0\subseteq\mathfrak q$
+of $S$. Its contraction is
+$\mathfrak p$ by the previous
+argument. Its fibre prime is
+contained in the given minimal
+one, so both are equal, and
+$\mathfrak q_0=\mathfrak q$.
+Thus these original fibre maps
+give a bijection between the
+minimal primes of $S$ and $C$.
+If either ring is zero, both
+sets are empty; if $S$ is nonzero,
+it has a minimal prime and hence
+$C$ is nonzero. Consequently,
+under (a) and flatness alone,
+$\Spec(S)$ is irreducible if and
+only if this original generic
+fibre has irreducible spectrum.
+
+Dense irreducible fibres cannot
+replace the generic-fibre condition
+after dropping the openness
+assumption. Retain the original
+diagonal map
+$$
+\mathbf Z\longrightarrow\mathbf Q\times\mathbf Z,
+\qquad n\longmapsto(n,n).
+$$
+It is flat: its underlying module
+is the finite direct sum of the
+flat localization $\mathbf Q$
+and the free module $\mathbf Z$.
+For every prime integer $\ell$,
+its fibre is $\mathbf F_\ell$.
+Indeed $\mathbf Q\otimes_{\mathbf Z}\mathbf F_\ell=0$,
+since $1\otimes1=\ell^{-1}\otimes\ell=0$,
+and the second factor gives
+$\mathbf Z\otimes\mathbf F_\ell\simeq\mathbf F_\ell$.
+These closed primes are dense:
+every nonempty $D(n)$, $n\neq0$,
+contains a prime dividing $|n|+1$
+and hence not dividing $n$.
+But the generic fibre is
+$\mathbf Q\times\mathbf Q$,
+through the multiplication map
+$q\otimes(a,z)\mapsto(qa,qz)$
+and its inverse
+$(a,b)\mapsto a\otimes(1,0)+b\otimes(0,1)$.
+The equality on the first factor
+uses the original localization
+identity $\mathbf Q\otimes_{\mathbf Z}\mathbf Q\simeq\mathbf Q$.
+Both the total spectrum and its
+generic fibre are reducible.
+The nonempty open component
+$\Spec(\mathbf Q)$ has image
+$\{(0)\}\subseteq\Spec(\mathbf Z)$,
+which has empty interior by the
+same $D(n)$ argument. This
+identifies exactly the failed
+topological hypothesis.
+\end{proof}

@@ -1,0 +1,83 @@
+\begin{lemma}
+\label{lemma-support-element}
+Let $R$ be a ring, let $M$ be an $R$-module, and let $m \in M$.
+Then $\mathfrak p \in V(\text{Ann}(m))$ if and only if
+$m$ does not map to zero in $M_\mathfrak p$.
+\end{lemma}
+
+\begin{proof}
+If $\operatorname{Ann}_R(m)\subseteq\mathfrak p$ and
+$m/1=0$ in the original $M_{\mathfrak p}$, there would
+be $s\notin\mathfrak p$ with $sm=0$. This contradicts
+$s\in\operatorname{Ann}_R(m)\subseteq\mathfrak p$.
+Conversely, if $\operatorname{Ann}_R(m)$ is not contained
+in $\mathfrak p$, take an original annihilator
+$s\notin\mathfrak p$. It becomes a unit at $\mathfrak p$
+and kills $m/1$, so $m/1=0$.
+The exact cyclic comparison underlying this argument is
+the injection
+$$
+R/\operatorname{Ann}_R(m)\longrightarrow M,\qquad
+r+\operatorname{Ann}_R(m)\longmapsto rm,
+$$
+whose image is the actual submodule $Rm$ and whose
+inverse on that image sends $rm$ to the indicated class.
+Equality of two such expressions is exactly an
+annihilator relation, proving independence. Localization
+gives the injection $(r+\operatorname{Ann}_R(m))/s\mapsto rm/s$
+into the original $M_{\mathfrak p}$. Thus the cyclic
+module comparison preserves, rather than replaces, $M$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-support-arbitrary-cyclic-union}
+For every original $R$-module $M$,
+$$
+\operatorname{Supp}(M)=\bigcup_{m\in M}V(\operatorname{Ann}_R(m)).
+$$
+Consequently supports of arbitrary modules are stable
+under specialization, and every subset of $\Spec(R)$
+stable under specialization is the support of an $R$-module.
+\end{lemma}
+
+\begin{proof}
+A localization $M_{\mathfrak p}$ is nonzero exactly when
+some original $m\in M$ has $m/1\ne0$: a nonzero fraction
+$m/s$ has nonzero numerator image since $s/1$ is a unit.
+Lemma \ref{lemma-support-element} gives the displayed union.
+If $\mathfrak p\subseteq\mathfrak q$ and
+$\operatorname{Ann}_R(m)\subseteq\mathfrak p$, the same
+annihilator is contained in $\mathfrak q$. Hence support
+is stable under specialization with the original element
+as its witness.
+
+Localization commutes with arbitrary direct sums by the
+maps
+$$
+(\bigoplus_{\lambda\in\Lambda}M_\lambda)_{\mathfrak p}
+\longrightarrow\bigoplus_{\lambda\in\Lambda}(M_\lambda)_{\mathfrak p},
+\qquad (m_\lambda)_\lambda/s\longmapsto(m_\lambda/s)_\lambda.
+$$
+For finitely many nonzero coordinates indexed by a set
+$E\subseteq\Lambda$, its inverse sends
+$(m_\lambda/s_\lambda)_{\lambda\in E}$ to the vector
+with numerator coordinate
+$m_\lambda\prod_{\mu\in E,\mu\ne\lambda}s_\mu$
+and common denominator $\prod_{\mu\in E}s_\mu$.
+All factors are outside $\mathfrak p$.
+Equivalently the inverse is the sum of the localized
+original inclusions $M_\lambda\to\bigoplus M_\lambda$,
+which proves independence of representations; these
+formulas verify both composites. Thus the support of
+a direct sum is the union of the supports of its summands.
+
+For a specialization-stable subset $T\subseteq\Spec(R)$,
+take the specified module
+$M_T=\bigoplus_{\mathfrak p\in T}R/\mathfrak p$.
+Each summand has support $V(\mathfrak p)$ by
+Lemma \ref{lemma-support-closed}, since its annihilator
+is exactly $\mathfrak p$. Their union is $T$: it contains
+each original $\mathfrak p\in T$, and every prime
+containing one of them belongs to $T$ by specialization
+stability. The empty subset gives the zero direct sum.
+\end{proof}

@@ -1,0 +1,58 @@
+\begin{lemma}
+\label{lemma-characterize-image-finite-type}
+Let $R \to S$ be a finite type ring map.
+Denote $X = \Spec(R)$ and $Y = \Spec(S)$.
+Write $f : Y \to X$ for the induced
+map of spectra. Let $E \subset Y = \Spec(S)$ be a
+constructible set.
+If a point $\xi \in X$ is in $f(E)$, then
+$\overline{\{\xi\}} \cap f(E)$ contains an open
+dense subset of $\overline{\{\xi\}}$.
+\end{lemma}
+
+\begin{proof}
+Let $\xi \in X$ be a point of $f(E)$. Choose a point $\eta \in E$
+mapping to $\xi$. Let $\mathfrak p \subset R$ be the prime
+corresponding to $\xi$ and let $\mathfrak q \subset S$ be the
+prime corresponding to $\eta$. Consider the diagram
+$$
+\xymatrix{
+\eta \ar[r] \ar@{|->}[d] & E \cap Y' \ar[r] \ar[d] &
+Y' = \Spec(S/\mathfrak q) \ar[r] \ar[d] &
+Y \ar[d] \\
+\xi \ar[r] & f(E) \cap X' \ar[r] &
+X' = \Spec(R/\mathfrak p) \ar[r] &
+X
+}
+$$
+By Lemma \ref{lemma-affine-map-quasi-compact} the set $E \cap Y'$
+is constructible in $Y'$.
+The original ring map induces an injection of domains
+$R/\mathfrak p\hookrightarrow S/\mathfrak q$, still of finite type:
+the original finite set of generators maps to a generating set of the
+quotient. Let $\bar f:Y'\to X'$ be its map of spectra. The image
+$\bar f(E\cap Y')$ is contained in $f(E)\cap X'$, so it suffices
+to find a dense open subset of $X'$ contained in this smaller image.
+The points $\xi,\eta$ are the generic points of $X',Y'$ respectively.
+Lemma \ref{lemma-generic-finite-presentation} supplies nonzero
+$a\in R/\mathfrak p$ and $b\in S/\mathfrak q$ with
+$(R/\mathfrak p)_a\to(S/\mathfrak q)_{ab}$ finitely presented.
+Thus $U=D(a)\subset X'$ and $V=D(ab)\subset Y'$ are dense opens,
+contain $\xi$ and $\eta$, and $\bar f(V)\subset U$.
+The set $E\cap Y'\cap V$ is constructible in $V$, by Topology,
+Lemma \ref{topology-lemma-open-immersion-constructible-inverse-image}.
+Chevalley's theorem (Theorem \ref{theorem-chevalley}) implies its
+image $C$ is constructible in $U$ and contains $\xi$.
+By Topology, Lemma \ref{topology-lemma-generic-point-in-constructible},
+$C$ contains a dense open $U'\subset U$.
+For completeness, a finite expression
+$C=\bigcup_j(U_j\cap V_j^c)$ in the irreducible space $U$ has a
+term containing $\xi$. Its open set $V_j$ cannot be nonempty:
+every nonempty open of an irreducible space contains its generic
+point. Hence $V_j=\emptyset$ and the nonempty open $U_j$ lies in
+$C$. Such an open is dense in $U$. Since $U$ is open dense in $X'$,
+$U'$ is open dense in $X'$ and is contained in $f(E)\cap X'$.
+Under the original closed immersion
+$X'=V(\mathfrak p)=\overline{\{\xi\}}\subset X$, this is exactly
+the required assertion.
+\end{proof}

@@ -1,0 +1,65 @@
+{
+  "result": "PASS",
+  "stable_units": 560,
+  "operations": 690,
+  "reviewed_body_operations": 689,
+  "original_689_body_operations_unchanged_except_payload_lines": true,
+  "cumulative_body_sha256": "3F42406045D6B4CF037359927161F8F954EEA3EC9FABE4D8CF2F01B19DB45A3C",
+  "cumulative_inverse_recovers_entire_prior": true,
+  "apparatus_inverse_exact": true,
+  "previous_materialization_sha256": "E9C7C3848698D65F63FE20FB4CD9C486987F9693E703632722CE7CD7429FBA39",
+  "current_companion_manifest_sha256": "0ED5DE14F6D7D27462549348BE3EBE5F64D367295FA87AB2B469FB089BF87937",
+  "prior_refinement": [
+    {
+      "refining_operation_id": "MC-STK-ERR-2459-OP1",
+      "prior_operation_id": "MC-STK-ERR-0725-OP1",
+      "immutable_prior_old_sha256": "F663E8FA6BDC6A274AFE2CF7913079B85A04CBE477C54446B7966EE1A4FF2DCB",
+      "immutable_prior_replacement_sha256": "13C9F6921E24E96A84FB5043B2FEE8638D19E994BCBCC024DE89C7DE7015476E",
+      "prior_replacement_offset": 148,
+      "refining_old_sha256": "710250F934048DE1CF445EACE6597892877498E00E1ED0D661635B8B75BB9F7C",
+      "refining_replacement_sha256": "D39833E2816C9DFEA6E93A24F9050BDF730EEAC4CC6F02894BCAE45FAEC289F0",
+      "historical_evidence_unchanged": true,
+      "combined_prior_replacement_sha256": "205AB73CBFFDFC40B3F577F9789161D562C57E873E8FCFA6C97A687398455A9B"
+    }
+  ],
+  "patches": {
+    "isolated": {
+      "file": "replay/support-operator-patches/isolated.patch",
+      "sha256": "41AEF7950EA6865561204250FC1E8CA071528AE9E821BCDC7E05D2C38AA34189"
+    },
+    "combined-corrections": {
+      "file": "replay/support-operator-patches/combined-corrections.patch",
+      "sha256": "21887715EE8B86CC29E43E6DE5EE6C8AEC661AB601DDC720897AA602A470459F"
+    },
+    "cumulative": {
+      "file": "replay/support-operator-patches/cumulative.patch",
+      "sha256": "7B20AD4FD5D89BB23C52A90854F178CD48D52F985FDC2EF670975D6AA1626509"
+    }
+  },
+  "support": {
+    "id": "RENDER-TEX-006",
+    "source_operation": "MC-STK-ERR-2214-OP2",
+    "failure": "The reviewed flatness passage uses the undeclared support operator Supp.",
+    "correction": "\\providecommand{\\Supp}{\\operatorname{Supp}}",
+    "mathematical_operands_changed": false,
+    "original_689_body_operations_unchanged": true,
+    "supporting_unit": "MC-STK-ERR-2465",
+    "failed_capture_sha256": "9CA7740852ECE04D13818468A62B5BD96CC1FD5601EBAB2CD0B6A2969C50D236",
+    "error_excerpt": "build-error-Supp.log",
+    "new_body_command_inventory": [
+      "\\Supp",
+      "\\cdots",
+      "\\ne",
+      "\\operatorname",
+      "\\subsetneq",
+      "\\supsetneq",
+      "\\textit",
+      "\\varnothing"
+    ],
+    "inventory_scope": "All commands introduced by the 689 body operations but absent from the authority chapter. This static set comparison is not a successful TeX build.",
+    "definitions": "operatorname comes from loaded amsmath; subsetneq, supsetneq and varnothing come from amssymb; ne, cdots and textit are standard loaded LaTeX commands. Supp is declared through operatorname without changing its argument or subscript."
+  },
+  "complete_build": false,
+  "admission": false,
+  "publication": false
+}

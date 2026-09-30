@@ -1,0 +1,38 @@
+\begin{lemma}
+\label{lemma-separably-closed-irreducible-implies-geometric}
+Let $k$ be a field.
+Let $R$ be a $k$-algebra.
+If $k$ is separably closed then $R$ is
+geometrically irreducible over $k$ if and only if the
+spectrum of $R$ is irreducible.
+\end{lemma}
+
+\begin{proof}
+If $R$ is geometrically irreducible,
+take the identity field extension in
+Definition \ref{definition-geometrically-irreducible}.
+It gives irreducibility of $\Spec(R)$.
+Conversely suppose $\Spec(R)$ is
+irreducible and $k$ is separably closed.
+For every finite separable extension
+$E/k$, each original element of $E$
+has a separable irreducible minimal
+polynomial over $k$. Separably closedness
+forces that polynomial to be linear,
+so the given embedding $k\to E$ is
+surjective and hence an isomorphism.
+The map $R\otimes_k E\to R$ sends
+$r\otimes a$ to $r\iota^{-1}(a)$,
+where $\iota:k\to E$ is that given
+embedding; its inverse is $r\mapsto r\otimes1$.
+Thus every finite separable test has
+irreducible spectrum. Lemma
+\ref{lemma-geometrically-irreducible}
+gives geometric irreducibility over
+the original $k$. The proof imposes
+neither perfectness nor algebraic
+closedness on that separably closed
+field. If $R=0$, both irreducibility
+assertions are false, in accordance
+with the nonemptiness convention.
+\end{proof}

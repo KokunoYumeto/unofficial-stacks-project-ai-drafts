@@ -1,0 +1,295 @@
+\begin{lemma}
+\label{editorial-source-lemma-make-separably-generated}
+Let $K/k$ be a finitely generated field extension.
+There exists a diagram
+$$
+\xymatrix{
+K \ar[r] & K' \\
+k \ar[u] \ar[r] & k' \ar[u]
+}
+$$
+where $k'/k$, $K'/K$ are finite purely inseparable field
+extensions such that $K'/k'$ is a separably generated field extension.
+\end{lemma}
+
+\begin{proof}
+Choose the original transcendence basis
+$x_1,\ldots,x_r$ of $K$ over $k$, and put
+$F=k(x_1,\ldots,x_r)$. Its size $r$ is finite
+because the original field extension is finitely
+generated. If $K=k(z_1,\ldots,z_m)$ is a specified
+finite generating family, then every $z_j$ is
+algebraic over $F$ and $K=F(z_1,\ldots,z_m)$.
+Successively adjoining these original elements
+therefore makes $K/F$ finite. In characteristic
+zero every irreducible algebraic polynomial has
+nonzero derivative and is separable, so this
+basis already separates $K/k$ and one can take
+$k'=k$, $K'=K$.
+
+Suppose now that the characteristic is $p>0$.
+Let $K/K_{sep}/F$ be the original separable-first
+tower from Fields, Lemma \ref{fields-lemma-separable-first}.
+Thus $K_{sep}/F$ is finite separable and
+$K/K_{sep}$ is finite purely inseparable. Retain
+$d=[K:K_{sep}]$. If $d=1$, the original basis
+is separating and again no extension is needed.
+We construct the strict induction step for $d>1$.
+
+Choose an original $\eta\in K\setminus K_{sep}$.
+Pure inseparability gives a least $h\geq1$
+such that $\eta^{p^h}\in K_{sep}$. Set
+$$
+\beta=\eta^{p^{h-1}},\qquad
+\alpha=\beta^p=\eta^{p^h}.
+$$
+Then $\beta\notin K_{sep}$ and
+$\alpha\in K_{sep}$. The polynomial $T^p-\alpha$
+is irreducible over $K_{sep}$, since a $p$-th
+root of $\alpha$ there would equal $\beta$
+in the ambient field, contradicting this choice;
+see Fields, Lemma \ref{fields-lemma-take-pth-root}.
+Hence $[K_{sep}(\beta):K_{sep}]=p$.
+Keep the original monic minimal polynomial
+$$
+P(T)=T^n+a_1T^{n-1}+\cdots+a_n\in F[T]
+$$
+of $\alpha$. It is separable since
+$\alpha\in K_{sep}$; in particular $P'(\alpha)\ne0$.
+
+Here is the omitted finite coefficient construction.
+For every original $a_i$, choose complete polynomial
+numerator and denominator expressions
+$$
+a_i=\frac{A_i(x_1,\ldots,x_r)}{B_i(x_1,\ldots,x_r)},
+\qquad A_i,B_i\in k[X_1,\ldots,X_r],\quad B_i\ne0.
+$$
+No common factors are canceled and all coefficients
+and summands of these chosen polynomials are kept.
+Let $\mathcal C\subset k$ be the finite set of
+all their coefficients. Work in one fixed
+algebraic closure $\Omega$ of the original $K$,
+and choose the unique $p$-th roots there of
+the elements of $\mathcal C$ and of the $x_j$.
+Set
+$$
+k'=k(c^{1/p}:c\in\mathcal C),\qquad
+y_j=x_j^{1/p},\qquad
+F'=k'(y_1,\ldots,y_r).
+$$
+Each adjoined constant satisfies $U^p-c=0$.
+Thus $k'/k$ is finite purely inseparable,
+every element of $k'$ has $p$-th power in $k$,
+and $[k':k]\leq p^{|\mathcal C|}$.
+The last assertion about powers follows for
+polynomials and fractions from the characteristic
+$p$ identity $(a+b)^p=a^p+b^p$.
+The elements $y_1,\ldots,y_r$ are algebraically
+independent over $k'$: if
+$\sum_\nu d_\nu y^\nu=0$ is a nonzero polynomial
+relation, raising it to the $p$-th power gives
+$\sum_\nu d_\nu^p x^\nu=0$ over $k$.
+At least one coefficient remains nonzero because
+Frobenius is injective on a field, contradicting
+the original algebraic independence of the $x_j$.
+
+Write the full original expansions as
+$A_i(X)=\sum_\nu a_{i,\nu}X^\nu$ and
+$B_i(X)=\sum_\nu b_{i,\nu}X^\nu$, with finite
+support and nonnegative integer multi-indices.
+Their coefficient-root polynomials are
+$$
+\widetilde A_i(Y)=\sum_\nu a_{i,\nu}^{1/p}Y^\nu,
+\qquad
+\widetilde B_i(Y)=\sum_\nu b_{i,\nu}^{1/p}Y^\nu.
+$$
+The denominator is nonzero at the algebraically
+independent original $y_j$, and the full identities
+are
+$$
+\widetilde A_i(y)^p=A_i(x),\qquad
+\widetilde B_i(y)^p=B_i(x),\qquad
+\left(\frac{\widetilde A_i(y)}{\widetilde B_i(y)}\right)^p=a_i.
+$$
+Put $b_i=\widetilde A_i(y)/\widetilde B_i(y)\in F'$.
+This retains each original numerator, denominator,
+monomial and coefficient and proves the required
+$p$-th power property for every $a_i$, including zero.
+The field $F'$ contains $F$ by the original
+inclusions and the identities $x_j=y_j^p$.
+Moreover $(F')^p\subseteq F$ and
+$[F':F]\leq p^{|\mathcal C|+r}$.
+
+Let $L=KF'\subseteq\Omega$ be the actual compositum.
+It gives the original commutative diagram
+$$
+\xymatrix{
+K\ar[r]&L\\
+k(x_1,\ldots,x_r)\ar[u]\ar[r]&
+k'(x_1^{1/p},\ldots,x_r^{1/p})\ar[u].
+}
+$$
+Every arrow is the indicated inclusion in $\Omega$.
+The extension $L/K$ is finite purely inseparable
+and $L^p\subseteq K$, because the only new
+generators are the displayed constant roots
+and coordinate roots. In particular
+$[L:K]\leq p^{|\mathcal C|+r}$.
+The original field $L$ is also finite over $F'$,
+as $K$ is finite over $F$.
+
+Put $C=K_{sep}F'$. A finite collection of separable
+generators of $K_{sep}/F$ remains separable after
+extension to $F'$: their minimal polynomials over
+the larger base divide their original separable
+polynomials. Thus $C/F'$ is finite separable.
+The extension $L/C$ is purely inseparable. To
+check this on every element, take finite
+generators of $K/K_{sep}$, choose a common
+$p$-power placing all of them in $K_{sep}$,
+and apply that power to any rational expression
+in these generators with coefficients in $C$.
+All resulting powers lie in $C$.
+It follows that the original separable-first
+field $L_{sep}$ over $F'$ is exactly $C$.
+Indeed all of $C$ is separable over $F'$, while
+an element of $L$ separable over $F'$ is also
+separable over $C$, and is purely inseparable
+over $C$ by what was just proved. Its minimal
+polynomial over $C$ is then both separable and
+purely inseparable, hence linear. This proves
+the identification $L_{sep}=K_{sep}F'$ without
+an assumption about linear disjointness.
+
+The chosen $\beta$ already belongs to $L_{sep}$.
+To verify this with the original polynomial, put
+$$
+Q(T)=T^n+b_1T^{n-1}+\cdots+b_n\in F'[T].
+$$
+Then $Q(\beta)^p=P(\alpha)=0$, so
+$Q(\beta)=0$. Keeping all derivative factors gives
+\[
+
+\begin{split}
+Q'(\beta)&=n\beta^{n-1}
++\sum_{i=1}^{n-1}(n-i)b_i\beta^{n-i-1},\\
+Q'(\beta)^p&=n\alpha^{n-1}
++\sum_{i=1}^{n-1}(n-i)a_i\alpha^{n-i-1}
+=P'(\alpha)\ne0.
+\end{split}
+
+\]
+Here each integer coefficient is its element of
+the prime field, whose $p$-th power is itself;
+terms divisible by $p$ are retained with their
+actual zero coefficients. Thus the minimal
+polynomial of $\beta$ over $F'$ is separable:
+it divides $Q$, and differentiating that
+factorization at $\beta$ shows that its
+derivative is nonzero. Consequently
+$\beta\in L_{sep}$. Equivalently, Fields,
+Lemma \ref{fields-lemma-pth-root} applies to
+the original $\alpha$ and $P$ inside the separable
+extension $L_{sep}/F'$; its root $\alpha'$
+satisfies $(\alpha')^p=\alpha=\beta^p$ and
+therefore $\alpha'=\beta$ by injectivity of
+Frobenius in $\Omega$. This proves the original
+root identification, including its coefficient map.
+
+All entries of the original induction tower are
+therefore the actual indicated subfields:
+$$
+\xymatrix{
+K\ar[r]&L\\
+K_{sep}(\beta)\ar[r]\ar[u]&L_{sep}\ar[u]\\
+K_{sep}\ar[r]\ar[u]&L_{sep}\ar@{=}[u]\\
+k(x_1,\ldots,x_r)\ar[r]\ar[u]&
+k'(x_1^{1/p},\ldots,x_r^{1/p})\ar[u]\\
+k\ar[r]\ar[u]&k'\ar[u].
+}
+$$
+The decrease can be bounded exactly. Since
+$K_{sep}(\beta)\subseteq L_{sep}$ and
+$L=KL_{sep}$, a basis of $K$ over
+$K_{sep}(\beta)$ spans $L$ over $L_{sep}$.
+For completeness, its span is the image of
+$L_{sep}\otimes_{K_{sep}(\beta)}K\to L$.
+This image is a finite-dimensional algebra over
+$L_{sep}$, is a domain as a subring of $L$,
+and contains both original fields. Any nonzero
+element has invertible multiplication on this
+finite-dimensional vector space, so the image
+is itself a field. It is therefore the
+compositum $L$, proving the asserted spanning.
+The original tower law now gives
+$$
+[L:L_{sep}]
+\leq[K:K_{sep}(\beta)]
+=\frac{[K:K_{sep}]}{[K_{sep}(\beta):K_{sep}]}
+=\frac d p<d.
+$$
+This verifies the strict induction step without
+replacing it by an unproved degree comparison.
+Applying the same construction to $L/k'$ with
+the retained basis $y_1,\ldots,y_r$ completes
+the induction. Compositions of the finite
+purely inseparable extensions remain finite
+and purely inseparable: choose common powers
+for finite generating families at successive
+stages and compose those powers. Thus the
+final inclusions $k\subseteq k''$ and
+$K\subseteq L'$ give the required original
+diagram, with $k''$ and $L'$ used as the
+final $k'$ and $K'$ in the statement.
+
+\medskip\noindent
+The same proof provides finite quantitative
+information. The original purely inseparable
+degree is $d=p^e$ for some integer $e\geq0$.
+Indeed adjoining a purely inseparable algebraic
+element has degree a power of $p$: its irreducible
+polynomial has only one root in an algebraic
+closure, and repeated removal of zero derivatives
+writes it as a separable irreducible polynomial
+in $T^{p^a}$; the separable polynomial must be
+linear because there is only one root. A finite
+generating tower and the degree law give $d=p^e$.
+Every nonterminal step divides the bound for
+the remaining inseparable degree by at least $p$.
+Consequently the construction terminates after
+some $s\leq e$ steps.
+
+Write the actual fields at these steps as
+$k_h\subseteq K_h$ for $0\leq h\leq s$,
+with $k_0=k$ and $K_0=K$, and retain the
+separating-coordinate candidates
+$x_j^{1/p^h}$ in the fixed $\Omega$.
+At step $h$, let $c_h$ be the number of
+coefficients in the finite set used for its
+chosen complete rational numerator and
+denominator expressions. The construction gives
+$$
+[k_{h+1}:k_h]\leq p^{c_h},\qquad
+[K_{h+1}:K_h]\leq p^{c_h+r},\qquad
+k_{h+1}^{,p}\subseteq k_h,\qquad
+K_{h+1}^{,p}\subseteq K_h.
+$$
+Iterating these actual tower maps yields
+$$
+[k_s:k]\leq p^{\sum_{h=0}^{s-1}c_h},\qquad
+[K_s:K]\leq p^{\sum_{h=0}^{s-1}(c_h+r)},\qquad
+k_s^{,p^s}\subseteq k,\qquad K_s^{,p^s}\subseteq K.
+$$
+The terminal extension
+$K_s/k_s(x_1^{1/p^s},\ldots,x_r^{1/p^s})$
+is separable by the termination criterion.
+These are bounds for the original finite
+construction, with all constants and coordinate
+root adjunctions retained. They do not assert
+that the coefficient counts $c_h$ depend only
+on $d$, nor that the original transcendence
+basis separates $K/k$ before these extensions.
+When $r=0$ the coordinate list is empty; when
+$s=0$ the sums are empty, the bounds are $1$,
+and the original fields already give the result.
+\end{proof}

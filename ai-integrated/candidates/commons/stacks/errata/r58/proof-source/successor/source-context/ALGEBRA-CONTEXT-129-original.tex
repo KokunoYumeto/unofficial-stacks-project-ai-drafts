@@ -1,0 +1,33 @@
+\begin{lemma}
+\label{lemma-help-with-powers}
+Let $p$ be a prime number. Let $n, m > 0$ be two integers. There exists
+an integer $a$ such that
+$(x + y)^{p^a}, p^a(x + y) \in \mathbf{Z}[x^{p^n}, p^nx, y^{p^m}, p^my]$.
+\end{lemma}
+
+\begin{proof}
+This is clear for $p^a(x + y)$ as soon as $a \geq n, m$.
+In fact, pick $a \gg n, m$. Write
+$$
+(x + y)^{p^a}  = \sum\nolimits_{i, j \geq 0, i + j = p^a}
+{p^a \choose i, j} x^iy^j
+$$
+For every $i, j \geq 0$ with $i + j = p^a$ write
+$i = q p^n + r$ with $r \in \{0, \ldots, p^n - 1\}$ and
+$j = q' p^m + r'$ with $r' \in \{0, \ldots, p^m - 1\}$.
+The condition $(x + y)^{p^a} \in \mathbf{Z}[x^{p^n}, p^nx, y^{p^m}, p^my]$
+holds if
+$$
+p^{nr + mr'} \text{ divides } {p^a \choose i, j}
+$$
+If $r = r' = 0$ then the divisibility holds. If $r \not = 0$, then
+we write
+$$
+{p^a \choose i, j} = \frac{p^a}{i} {p^a - 1 \choose i - 1, j}
+$$
+Since $r \not = 0$ the rational number $p^a/i$ has $p$-adic
+valuation at least $a - (n - 1)$ (because $i$ is not divisible by $p^n$).
+Thus ${p^a \choose i, j}$ is divisible by $p^{a - n + 1}$ in this case.
+Similarly, we see that if $r' \not = 0$, then ${p^a \choose i, j}$ is
+divisible by $p^{a - m + 1}$. Picking $a = np^n + mp^m + n + m$ will work.
+\end{proof}

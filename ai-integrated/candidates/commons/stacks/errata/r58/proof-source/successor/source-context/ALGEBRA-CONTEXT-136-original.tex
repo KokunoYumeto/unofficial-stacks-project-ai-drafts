@@ -1,0 +1,22 @@
+\begin{lemma}
+\label{lemma-flat-fibres-irreducible}
+Let $R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item[(a)] $\Spec(R)$ is irreducible,
+\item[(b)] $R \to S$ is flat,
+\item[(c)] $R \to S$ is of finite presentation,
+\item[(d)] the fibre rings $S \otimes_R \kappa(\mathfrak p)$
+have irreducible spectra for a dense collection of primes $\mathfrak p$ of $R$.
+\end{enumerate}
+Then $\Spec(S)$ is irreducible.
+This is true more generally with (b) $+$ (c)
+replaced by ``the map $\Spec(S) \to \Spec(R)$ is open''.
+\end{lemma}
+
+\begin{proof}
+The assumptions (b) and (c) imply that the map on spectra is open,
+see
+Proposition \ref{proposition-fppf-open}.
+Hence the lemma follows from
+Topology, Lemma \ref{topology-lemma-irreducible-on-top}.
+\end{proof}

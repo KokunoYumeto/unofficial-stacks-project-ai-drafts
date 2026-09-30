@@ -1,0 +1,29 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-under-field}
+Let $R$ be a ring. Let $K$ be a field.
+If $R \subset K$ and $K$ is integral over $R$,
+then $R$ is a field and $K$ is an algebraic extension.
+If $R \subset K$ and $K$ is finite over $R$,
+then $R$ is a field and $K$ is a finite algebraic extension.
+\end{lemma}
+
+\begin{proof}
+Assume that $R \subset K$ is integral.
+By Lemma \ref{editorial-source-lemma-integral-overring-surjective} we see that
+$\Spec(R)$ has $1$ point. Since clearly $R$ is a domain we see
+that $R = R_{(0)}$ is a field (Lemma \ref{algebra-lemma-minimal-prime-reduced-ring}).
+For an explicit inverse calculation, if $0\ne r\in R$, the
+element $r^{-1}\in K$ satisfies a monic equation
+$(r^{-1})^d+\sum_{i=1}^d a_i(r^{-1})^{d-i}=0$ with $a_i\in R$
+and $d\geq1$. Multiplication by $r^{d-1}$ in the original field
+gives the full formula
+$$
+r^{-1}=-\sum_{i=1}^d a_i r^{i-1}\in R.
+$$
+Every element of $K$ is then algebraic over the field $R$, since
+its monic integral equation is a nonzero polynomial over $R$.
+In the finite case, Lemma \ref{algebra-lemma-finite-is-integral} first
+gives integrality, and the original finite module generators
+become a finite vector-space spanning family over this same field
+$R$. Hence the algebraic extension has finite degree.
+\end{proof}

@@ -1,0 +1,298 @@
+\begin{lemma}
+\label{lemma-support-finite-presentation-constructible}
+Let $R$ be a ring and let $M$ be an $R$-module.
+If $M$ is a finitely presented $R$-module, then $\text{Supp}(M)$ is a
+closed subset of $\Spec(R)$ whose complement is quasi-compact.
+\end{lemma}
+
+\begin{proof}
+Retain the original finite presentation
+$$
+R^{\oplus m}\xrightarrow{A}R^{\oplus n}
+\xrightarrow{\pi}M\longrightarrow0,
+$$
+where $A=(a_{ri})$ is the original $n\times m$ matrix.
+Write $e_1,\ldots,e_n$ for the original standard basis
+of $R^{\oplus n}$ and $a_i$ for column $i$ of $A$.
+For each sorted subset $S=\{i_1<\cdots<i_n\}$ of
+$\{1,\ldots,m\}$, set
+$$
+A_S=(a_{i_1},\ldots,a_{i_n}),\qquad
+\Delta_S=\det(A_S),\qquad
+I=(\Delta_S:|S|=n).
+$$
+Thus $I$ is exactly the original ideal of maximal minors.
+
+Fix $\mathfrak p\in\Spec(R)$ and retain
+$K=\kappa(\mathfrak p)$.
+Applying $R\to R_{\mathfrak p}\to K$ to every matrix
+entry gives $A_{\mathfrak p}$ and $A(\mathfrak p)$.
+The localized presentation is exact. In detail, the last
+map sends $v/s$ to $\pi(v)/s$ and is surjective by lifting
+the original numerator. If $\pi(v)/s=0$, there is
+$u\notin\mathfrak p$ with $u\pi(v)=0$. Then $uv=Aw$
+for some $w\in R^{\oplus m}$, and the full equality
+$$
+\frac vs=\frac{uv}{us}
+=A_{\mathfrak p}\left(\frac w{us}\right)
+$$
+proves its kernel statement. No injectivity of
+$R\to R_{\mathfrak p}$ is assumed.
+The fibre quotient comparison is
+$$
+K^n/\operatorname{im}A(\mathfrak p)
+\longrightarrow M\otimes_RK,
+\qquad
+[(\lambda_1,\ldots,\lambda_n)]
+\longmapsto\sum_{r=1}^n\pi(e_r)\otimes\lambda_r.
+$$
+Its inverse sends $m\otimes\lambda$ to
+$[\lambda\overline v]$ for a lift $\pi(v)=m$.
+Changing $v$ by $Aw$ changes this vector by
+$\lambda A(\mathfrak p)\overline w$, which is in the
+matrix image. Additivity and $R$-balancing follow from
+the original linear map $\pi$. Both composites are
+identities on the displayed generators. Hence
+$$
+\dim_K(M\otimes_RK)=n-\operatorname{rank}_K A(\mathfrak p).
+$$
+
+For $n\geq1$, a minor $\Delta_S\notin\mathfrak p$
+gives the explicit right inverse
+$$
+A_{\mathfrak p}
+\left(E_S\frac{\operatorname{adj}(A_S)_{\mathfrak p}}
+{\Delta_S/1}\right)=I_n,
+$$
+where $E_S:R^n\to R^m$ sends its $\ell$-th basis
+vector to the $i_\ell$-th original basis vector.
+Indeed $AE_S=A_S$ and the adjugate identity gives the
+displayed product. Thus $M_{\mathfrak p}=0$.
+If $M_{\mathfrak p}=0$, the localized map is surjective;
+preimages of the original basis vectors reduce to a
+right inverse for $A(\mathfrak p)$, so the fibre is zero.
+Conversely, if the fibre is zero, choose
+$C\in\operatorname{Mat}_{m\times n}(K)$ with
+$A(\mathfrak p)C=I_n$. Cauchy--Binet gives
+$$
+1=\sum_{\substack{S\subseteq\{1,\ldots,m\}\\|S|=n}}
+\overline{\Delta_S}\det(C_{S,\{1,\ldots,n\}}).
+$$
+At least one original minor therefore lies outside
+$\mathfrak p$. This proves, with explicit maps, all
+the original equivalences
+$$
+M_{\mathfrak p}\ne0
+\quad\Longleftrightarrow\quad
+M\otimes_RK\ne0
+\quad\Longleftrightarrow\quad
+\operatorname{rank}_K A(\mathfrak p)<n.
+$$
+In particular $\operatorname{Supp}(M)=V(I)$.
+
+If $n=0$, the target is zero and $M=0$. There is one
+$0\times0$ minor indexed by the empty subset, with
+determinant $1$, so $I=R$ and both sets are empty.
+If $m<n$, there are no maximal minors, so $I=0$.
+Every fibre then has dimension at least $n-m>0$, giving
+support all of $\Spec(R)$. For the zero ring there are
+no primes; every module in the presentation is zero,
+and the same support identities hold.
+
+There are only finitely many original maximal minors,
+and the complement is the exact finite union
+$$
+\Spec(R)\setminus\operatorname{Supp}(M)
+=\bigcup_{\substack{S\subseteq\{1,\ldots,m\}\\|S|=n}}D(\Delta_S).
+$$
+Each $D(f)$ is quasi-compact. To recall the proof,
+localization identifies $\Spec(R_f)$ with $D(f)$:
+contraction is one map and
+$\mathfrak p\mapsto\{r/f^a:r\in\mathfrak p,\ a\geq0\}$
+is its inverse. The prime localization correspondence
+gives these inverse maps, and $D(r/f^a)$ corresponds
+to $D(r)\cap D(f)$, proving that they are homeomorphisms.
+For any ring $B$, refine a cover of $\Spec(B)$ by
+basic opens $D(b_\lambda)$. If their ideal were proper,
+a maximal ideal containing it would be missed. Hence
+$1=\sum_{j=1}^t c_jb_{\lambda_j}$ for finitely many
+original cover elements, and those basic opens cover.
+This proves quasi-compactness of every spectrum and
+of $D(f)$. A finite union of quasi-compact subspaces
+is quasi-compact, by restricting any cover to each
+of the finitely many subspaces and joining their finite
+subcovers. This proves the original assertion. The
+empty union is allowed; for $n=0$ the union is $D(1)$.
+
+\medskip\noindent
+The presentation also proves the more precise ideal
+bounds. Put $H=\operatorname{Ann}_R(M)$. For $n\geq1$,
+$$
+I\subseteq H,\qquad H^n\subseteq I.
+$$
+To prove the first, retain the original column indices
+and every cofactor sign in the adjugate identity:
+$$
+\Delta_Se_r
+=\sum_{\ell=1}^n(-1)^{r+\ell}
+\det A_{\{1,\ldots,n\}\setminus\{r\},\,
+S\setminus\{i_\ell\}}\ a_{i_\ell}.
+$$
+The remaining rows and columns have inherited increasing
+order. In coordinate $k$ the right side is the cofactor
+expansion along row $r$ of the matrix with that row
+replaced by row $k$. It is $\Delta_S$ if $k=r$ and
+zero if $k\ne r$, since then two rows coincide.
+Applying $\pi$ proves $\Delta_S\pi(e_r)=0$ for all
+$r$. These original elements generate $M$, so
+$\Delta_S\in H$ and $I\subseteq H$.
+
+For the second bound take arbitrary original
+$t_1,\ldots,t_n\in H$. Since $\pi(t_je_j)=0$,
+choose $b_j\in R^m$ with $Ab_j=t_je_j$.
+Let $B=(b_{ij})$ be the $m\times n$ matrix with these
+columns. Then $AB=\operatorname{diag}(t_1,\ldots,t_n)$.
+The full ordered-column determinant expansion is
+$$
+t_1\cdots t_n=\det(AB)
+=\sum_{u_1=1}^m\cdots\sum_{u_n=1}^m
+\left(\prod_{j=1}^n b_{u_j,j}\right)
+\det(a_{u_1},\ldots,a_{u_n}).
+$$
+Terms with repeated indices vanish because the determinant
+has repeated columns. For distinct indices let
+$S=\{i_1<\cdots<i_n\}$ be their sorted set and let
+$u_j=i_{\sigma(j)}$. The determinant is
+$\operatorname{sgn}(\sigma)\Delta_S$. Thus the full sum is
+$$
+\sum_{\substack{S=\{i_1<\cdots<i_n\}\\S\subseteq\{1,\ldots,m\}}}
+\Delta_S
+\left(\sum_{\sigma\in\mathfrak S_n}
+\operatorname{sgn}(\sigma)\prod_{j=1}^n b_{i_{\sigma(j)},j}\right).
+$$
+For $\tau=\sigma^{-1}$ the inner product is
+$\prod_{\ell=1}^n b_{i_\ell,\tau(\ell)}$, with the same
+sign, so the exact Cauchy--Binet identity is
+$$
+t_1\cdots t_n
+=\sum_{\substack{S\subseteq\{1,\ldots,m\}\\|S|=n}}
+\Delta_S\det(B_{S,\{1,\ldots,n\}}).
+$$
+This proves that every product of $n$ possibly different
+elements of $H$ is in $I$. Those products generate $H^n$,
+so it proves the ideal-power statement, not only the
+statement about individual $n$-th powers. If $m<n$
+the sum is empty, giving $H^n=0$. If $n=0$, both $H$
+and $I$ are $R$ and the convention $H^0=R$ retains the
+two containments. They also hold over the zero ring.
+For $n\geq1$ they imply $\sqrt I=\sqrt H$: one inclusion
+uses $I\subseteq H$; for $h\in H$, the other uses
+$h^n\in H^n\subseteq I$, followed by radicals.
+Thus the exact support formula is also
+$V(I)=V(\operatorname{Ann}_R(M))$.
+
+The exponent $n$ is sharp uniformly. For a field $k$
+take the original presentation $A=xI_n$ over $R=k[x]$,
+with $m=n\geq1$. It gives
+$$
+M=(R/(x))^n,\qquad H=(x),\qquad I=(x^n).
+$$
+Here an element kills all basis quotient classes exactly
+when it belongs to $(x)$, and the single maximal minor
+is $x^n$. Thus $H^n=I$; for $n\geq2$ the polynomial
+$x^{n-1}$ belongs to $H^{n-1}$ and not to $(x^n)$.
+Also $I\subsetneq H$ for these $n$.
+
+\medskip\noindent
+There is an exact weaker condition for the topological
+conclusion. For any original module $N$ and specified
+ideal $L$ with $\operatorname{Supp}(N)=V(L)$, its
+complement is quasi-compact if and only if
+$$
+\sqrt L=\sqrt{(f_1,\ldots,f_t)}
+\quad\hbox{for finitely many }f_1,\ldots,f_t\in L.
+$$
+Indeed $D(L)=\bigcup_{f\in L}D(f)$, so quasi-compactness
+gives a finite subcover of this specific cover. Taking
+complements gives $V(L)=V((f_1,\ldots,f_t))$ and hence
+the radical equality. Conversely that equality gives the
+same finite union of quasi-compact basic opens.
+The empty list is allowed, with generated ideal zero.
+The radical characterization used here follows directly:
+every prime containing $J$ contains $\sqrt J$. If
+$a\notin\sqrt J$, the ring $(R/J)_a$ is nonzero, since
+otherwise some original $a^N$ would be in $J$.
+A maximal ideal of this localization contracts to a prime
+containing $J$ and avoiding $a$. Consequently $\sqrt J$
+is exactly the intersection of the primes containing $J$,
+which proves the asserted equivalence of radicals and
+closed sets without a finiteness assumption on $J$.
+
+Finite presentation is not necessary for this topology.
+Take the specified example
+$$
+R=k[x,y_1,y_2,\ldots],\qquad
+I=(x^2,xy_i:i\geq1),\qquad M=R/I,
+$$
+where $k$ is a field. Here $I\subseteq(x)$ and $x^2\in I$,
+while $R/(x)=k[y_1,y_2,\ldots]$ is a domain: two
+nonzero polynomials belong to a polynomial ring in
+finitely many variables over $k$, where their product
+is nonzero. Thus $\sqrt I=(x)$.
+The original cyclic quotient has support $V(I)$.
+If $a\in I\setminus\mathfrak p$, the unit $a/1$
+makes $(R/I)_{\mathfrak p}$ zero; if $I\subseteq\mathfrak p$,
+this quotient maps onto the nonzero residue field.
+Therefore the support is $V(x)$ and its complement
+is $D(x)=D(x^2)$, a quasi-compact basic open. In the
+weaker criterion one can take the actual original
+element $f_1=x^2\in I$; there is no replacement of
+the original ideal by its radical.
+
+To prove that $I$ is not finitely generated, suppose
+$I=(h_1,\ldots,h_r)$ and choose $N$ containing all
+indices of variables $y_i$ occurring in any $h_j$.
+Define $\rho:R\to k[x,z]$ by fixing $x$, sending
+$y_{N+1}$ to $z$, and sending every other $y_i$ to
+zero. Define also $\rho_0:R\to k[x]$ by fixing $x$
+and sending all the $y_i$ to zero. Since $y_{N+1}$
+does not occur in $h_j$, one has
+$\rho(h_j)=\rho_0(h_j)\in(x^2)$: the last membership
+follows by applying $\rho_0$ to the original generators
+$x^2,xy_i$ of $I$. Every combination of the proposed
+finite generators therefore maps into $(x^2)$.
+But $xy_{N+1}\in I$ maps to $xz\notin(x^2)$.
+Indeed its coefficient of $x^1$ over $k[z]$ is the
+nonzero polynomial $z$, whereas every multiple of
+$x^2$ has that coefficient zero. This is a contradiction.
+
+Finally, for every ring and ideal, the cyclic module
+$R/I$ is finitely presented exactly when $I$ is
+finitely generated. A finite generating list gives
+the presentation $R^t\to R\to R/I\to0$ with that
+list as the first matrix. Conversely choose a finite
+presentation with surjection $\pi:R^b\to R/I$ and
+finitely generated kernel $K=(k_1,\ldots,k_t)$.
+Let $q:R\to R/I$ be the original quotient. Choose
+$v\in R^b$ with $\pi(v)=1+I$, and an $R$-linear
+lift $f:R^b\to R$ of $\pi$ by choosing representatives
+for the images of the original basis vectors.
+Thus $qf=\pi$, $f(v)-1\in I$, and $f(k_j)\in I$.
+For each original $a\in I$, the vector $av$ lies
+in $K$, so $av=\sum_j c_jk_j$ for some coefficients.
+Retaining both original terms gives the exact identity
+$$
+a=f(av)+a(1-f(v))
+=\sum_{j=1}^t c_jf(k_j)+a(1-f(v)).
+$$
+Every listed generator is in $I$, and the identity
+proves the reverse inclusion in
+$$
+I=(f(k_1),\ldots,f(k_t),1-f(v)).
+$$
+This covers $R/I=0$ as well, including $b=0$, where
+$1-f(v)=1$ supplies the unit. Applying it to the
+specified infinitely generated ideal proves that the
+example's original $M$ is not finitely presented,
+despite its quasi-compact support complement.
+\end{proof}

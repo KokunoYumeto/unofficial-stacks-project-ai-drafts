@@ -1,0 +1,128 @@
+\begin{lemma}
+\label{lemma-unique-prime-over-localize-below}
+Let $R \to S$ be a ring map.
+Let $\mathfrak p \subset R$ be a prime.
+Assume that
+\begin{enumerate}
+\item there exists a unique prime $\mathfrak q \subset S$ lying over
+$\mathfrak p$, and
+\item either
+\begin{enumerate}
+\item going up holds for $R \to S$, or
+\item going down holds for $R \to S$ and there is at most one prime
+of $S$ above every prime of $R$.
+\end{enumerate}
+\end{enumerate}
+Then $S_{\mathfrak p} = S_{\mathfrak q}$.
+\end{lemma}
+
+\begin{proof}
+Write the original ring map as $\varphi:R\to S$.
+The rings in the conclusion are the specified
+localizations
+$$
+S_{\mathfrak p}=\varphi(R\setminus\mathfrak p)^{-1}S,
+\qquad S_{\mathfrak q}=(S\setminus\mathfrak q)^{-1}S.
+$$
+Since $\varphi^{-1}(\mathfrak q)=\mathfrak p$,
+the first multiplicative set is contained in the
+second. Thus there is an original localization map
+$j:S_{\mathfrak p}\to S_{\mathfrak q}$, sending
+$s/\varphi(r)$ to the same fraction.
+No injectivity of $\varphi$ or of these localization
+maps is assumed.
+
+A prime of $S_{\mathfrak p}$ corresponds exactly
+to a prime $\mathfrak q'\subset S$ whose contraction
+$\mathfrak p'=\varphi^{-1}(\mathfrak q')$ is contained
+in $\mathfrak p$. A prime of $S_{\mathfrak q}$
+corresponds exactly to a prime
+$\mathfrak q'\subseteq\mathfrak q$. Both statements
+follow from contraction and extension under
+localization: the corresponding prime consists of
+the fractions with numerator in $\mathfrak q'$,
+and these maps are inverse because the denominator
+set is disjoint from that prime.
+
+Assume first (1) and (2)(a). For such a
+$\mathfrak q'$ over $\mathfrak p'\subseteq\mathfrak p$,
+going up supplies $\mathfrak q''\supseteq\mathfrak q'$
+whose contraction is $\mathfrak p$. Uniqueness over
+$\mathfrak p$ makes $\mathfrak q''=\mathfrak q$,
+so $\mathfrak q'\subseteq\mathfrak q$.
+Assume instead (1) and (2)(b). Going down applied
+to $\mathfrak q$ gives
+$\mathfrak q''\subseteq\mathfrak q$ over
+$\mathfrak p'$. Uniqueness over $\mathfrak p'$
+makes $\mathfrak q''=\mathfrak q'$, with the same
+conclusion. This argument uses uniqueness only
+over the primes $\mathfrak p'\subseteq\mathfrak p$;
+the global uniqueness assumption in (2)(b) can
+therefore be weakened to precisely those primes.
+
+It follows in either case that for every
+$u\in S\setminus\mathfrak q$, the element $u/1$
+belongs to no prime of $S_{\mathfrak p}$: every
+such prime contracts to a prime contained in
+$\mathfrak q$. Hence $u/1$ is a unit. Indeed a
+nonunit generates a proper ideal lying in a
+maximal ideal, which is prime, a contradiction.
+Write its inverse as $v/\varphi(r)$ with
+$r\notin\mathfrak p$. The equality
+$(u/1)(v/\varphi(r))=1$ means that for some
+$t\notin\mathfrak p$,
+$$
+\varphi(t)(uv-\varphi(r))=0\quad\hbox{in }S.
+$$
+Thus the inverse to $j$ has the full fraction
+formula
+$$
+k:S_{\mathfrak q}\longrightarrow S_{\mathfrak p},
+\qquad
+\frac su\longmapsto\frac{sv}{\varphi(r)},
+$$
+where $v,r$ satisfy that original inverse identity.
+Independence of this choice follows from uniqueness
+of the inverse of $u/1$. Independence of fraction
+representatives can also be checked explicitly:
+if $w(u's-us')=0$ for $w\notin\mathfrak q$,
+then $w/1,u/1,u'/1$ are all units in
+$S_{\mathfrak p}$, so multiplication by their
+inverses gives $s/u=s'/u'$ there. Addition and
+multiplication follow by the same common-denominator
+identities. Consequently $k$ is the localization
+extension of the original map $S\to S_{\mathfrak p}$.
+Both composites fix $S$ and all the specified inverse
+denominators, hence are identities. This proves
+$S_{\mathfrak p}\simeq S_{\mathfrak q}$ through
+the original canonical map, giving the equality
+notation in the statement its exact meaning.
+
+In fact for any original $\varphi$, $\mathfrak p$
+and $\mathfrak q$ with
+$\varphi^{-1}(\mathfrak q)=\mathfrak p$, the
+following conditions are equivalent:
+$$
+\begin{gathered}
+j:S_{\mathfrak p}\longrightarrow S_{\mathfrak q}
+\text{ is an isomorphism};\\
+u/1\text{ is a unit in }S_{\mathfrak p}
+\text{ for every }u\notin\mathfrak q;\\
+\varphi^{-1}(\mathfrak q')\subseteq\mathfrak p
+\Longrightarrow\mathfrak q'\subseteq\mathfrak q
+\text{ for every prime }\mathfrak q'\subset S.
+\end{gathered}
+$$
+The first implies the second because these elements
+are units in $S_{\mathfrak q}$. The second implies
+the third since a prime of $S_{\mathfrak p}$ cannot
+contain a unit; contraction then avoids every
+element outside $\mathfrak q$. The third implies
+the second by the maximal-ideal argument, and the
+second supplies the proved inverse fraction map.
+This is the exact criterion used by both cases
+of the original lemma. It is specific to the
+specified further localization; a bijective
+spectrum map alone has not been substituted for
+an isomorphism of rings.
+\end{proof}

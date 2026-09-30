@@ -1,0 +1,57 @@
+\begin{lemma}
+\label{lemma-universally-bijective}
+Let $\varphi : R \to S$ be a ring map such that
+\begin{enumerate}
+\item the kernel of $\varphi$ is locally nilpotent, and
+\item $S$ is generated as an $R$-algebra by elements $x$
+such that there exist $n > 0$ and a polynomial $P(T) \in R[T]$
+whose image in $S[T]$ is $(T - x)^n$.
+\end{enumerate}
+Then $\Spec(S) \to \Spec(R)$ is a homeomorphism and $R \to S$
+induces purely inseparable extensions of residue fields.
+Moreover, conditions (1) and (2) remain true on arbitrary base change.
+\end{lemma}
+
+\begin{proof}
+We may replace $R$ by $R/\Ker(\varphi)$, see
+Lemma \ref{lemma-surjective-locally-nilpotent-kernel}.
+Assumption (2) implies $S$ is generated over $R$ by
+elements which are integral over $R$.
+Hence $R \subset S$ is integral
+(Lemma \ref{lemma-integral-closure-is-ring}).
+In particular $\Spec(S) \to \Spec(R)$ is surjective and closed
+(Lemmas \ref{lemma-integral-overring-surjective},
+\ref{lemma-going-up-closed}, and
+\ref{lemma-integral-going-up}).
+
+\medskip\noindent
+Let $x \in S$ be one of the generators in (2), i.e., there exists an
+$n > 0$ be such that $(T - x)^n \in R[T]$.
+Let $\mathfrak p \subset R$ be a prime.
+The $\kappa(\mathfrak p) \otimes_R S$ ring is nonzero by
+the above and Lemma \ref{lemma-in-image}.
+If the characteristic of $\kappa(\mathfrak p)$ is zero
+then we see that $nx \in R$ implies $1 \otimes x$ is in the image
+of $\kappa(\mathfrak p) \to \kappa(\mathfrak p) \otimes_R S$.
+Hence $\kappa(\mathfrak p) \to \kappa(\mathfrak p) \otimes_R S$
+is an isomorphism.
+If the characteristic of $\kappa(\mathfrak p)$ is $p > 0$,
+then write $n = p^k m$ with $m$ prime to $p$.
+In $\kappa(\mathfrak p) \otimes_R S[T]$ we have
+$$
+(T - 1 \otimes x)^n = ((T - 1 \otimes x)^{p^k})^m =
+(T^{p^k} - 1 \otimes x^{p^k})^m
+$$
+and we see that $mx^{p^k} \in R$. This implies that
+$1 \otimes x^{p^k}$ is in the image of
+$\kappa(\mathfrak p) \to \kappa(\mathfrak p) \otimes_R S$.
+Hence Lemma \ref{lemma-p-ring-map} applies to
+$\kappa(\mathfrak p) \to \kappa(\mathfrak p) \otimes_R S$.
+In both cases we conclude that $\kappa(\mathfrak p) \otimes_R S$
+has a unique prime ideal with residue field purely inseparable
+over $\kappa(\mathfrak p)$. By Remark \ref{remark-fundamental-diagram}
+we conclude that $\varphi$ is bijective on spectra.
+
+\medskip\noindent
+The statement on base change is immediate.
+\end{proof}

@@ -1,0 +1,151 @@
+\begin{lemma}
+\label{lemma-geometrically-connected-any-base-change}
+Let $k$ be a field.
+Let $S$ be a geometrically connected $k$-algebra.
+Let $R$ be any $k$-algebra.
+The map
+$$
+R \longrightarrow R \otimes_k S
+$$
+induces a bijection on idempotents, and the map
+$$
+\Spec(R \otimes_k S) \longrightarrow \Spec(R)
+$$
+induces a bijection on connected components.
+\end{lemma}
+
+\begin{proof}
+Put $A=R\otimes_k S$ and retain
+$f:X=\Spec(A)\to Y=\Spec(R)$.
+Geometric connectedness of the
+original $S$ includes nonemptiness,
+so $S\neq0$. If $R=0$, both
+spectra are empty and both
+rings have one idempotent,
+so the two asserted bijections
+hold. Assume $R\neq0$.
+For every $\mathfrak p\in Y$,
+the original fibre comparison
+$$
+A\otimes_R\kappa(\mathfrak p)\longrightarrow
+\kappa(\mathfrak p)\otimes_k S,
+\qquad(r\otimes s)\otimes a\longmapsto ra\otimes s
+$$
+has inverse $a\otimes s\mapsto(1\otimes s)\otimes a$.
+The receiving spectrum is
+connected by the hypothesis
+on $S$ and is nonempty.
+Hence $f$ is surjective with
+connected fibres. It is open
+without finite type assumptions,
+by Lemma
+\ref{lemma-map-into-tensor-algebra-open}.
+
+Let $C\subseteq X$ be open
+and closed. Connectedness
+of each fibre implies that
+the fibre is contained either
+in $C$ or in its complement:
+otherwise their intersections
+would separate the fibre.
+The images $f(C)$ and $f(X\setminus C)$
+are therefore disjoint open
+sets covering $Y$. In
+particular $f(C)$ is open
+and closed, and
+$$
+C=f^{-1}(f(C)).
+$$
+Conversely, inverse images of
+open and closed subsets are
+open and closed, and surjectivity
+gives $f(f^{-1}(D))=D$ for
+every such $D\subseteq Y$.
+This proves a bijection of
+the original open-and-closed
+subsets in both directions.
+
+By Lemma \ref{lemma-disjoint-decomposition},
+the map $e\mapsto D(e)$ is
+a bijection between idempotents
+of each ring and its open-and-closed
+subsets. Under the original
+ring map $R\to A$, the
+identity $f^{-1}(D(e))=D(e\otimes1)$
+therefore proves exactly the
+claimed idempotent bijection.
+The inverse takes an idempotent
+$a\in A$ to the unique
+idempotent $e\in R$ such
+that $D(e)=f(D(a))$.
+These maps also preserve
+complements and intersections,
+represented by $1-e$ and
+$ee'$, so give an isomorphism
+of the corresponding Boolean
+algebras. They commute with
+arbitrary original $k$-algebra
+base change: the image of
+$e\otimes1$ is $\theta(e)\otimes1$,
+and uniqueness of descent
+gives the inverse compatibility.
+
+We prove the component assertion
+directly as well. For any
+connected component $D$ of
+$Y$, the restriction
+$f^{-1}(D)\to D$ is open,
+surjective and has the same
+connected fibres. Openness
+holds because for every open
+$U\subseteq X$,
+$$
+f(U\cap f^{-1}(D))=f(U)\cap D.
+$$
+If $f^{-1}(D)$ were separated
+into disjoint nonempty open
+and closed parts, the same
+fibre argument would give
+a separation of $D$ by
+their open images. Thus
+$f^{-1}(D)$ is connected
+and nonempty. It is maximal
+connected: any larger connected
+subset would have connected
+image contained in a component
+of $Y$, which must be $D$
+because it meets $D$.
+Conversely each component
+of $X$ has connected image
+in some component $D$ of
+$Y$ and hence equals this
+connected inverse image.
+This proves the claimed
+bijection and the exact
+inverse-image description,
+as in Topology, Lemma
+\ref{topology-lemma-connected-fibres-connected-components}.
+
+With the quotient topologies
+on the sets of components,
+the bijection is a homeomorphism.
+Write $q_X,q_Y$ for the two
+quotient maps and $h$ for
+the induced bijection.
+The relation $h q_X=q_Y f$
+proves continuity by the
+quotient property. If $V$
+is open in the component
+space of $X$, then
+$$
+q_Y^{-1}(h(V))=f(q_X^{-1}(V))
+$$
+by the exact component
+correspondence. The right
+side is open because $f$
+is open, proving that $h$
+is open and hence a
+homeomorphism. None of this
+requires individual components
+to be open in their spectra.
+\end{proof}

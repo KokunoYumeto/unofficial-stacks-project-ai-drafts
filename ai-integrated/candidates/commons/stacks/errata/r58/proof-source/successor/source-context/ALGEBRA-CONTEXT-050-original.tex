@@ -1,0 +1,15 @@
+\begin{lemma}
+\label{lemma-lift-idempotents-noncommutative}
+Let $A$ be a possibly noncommutative algebra.
+Let $e \in A$ be an element such that $x = e^2 - e$ is nilpotent.
+Then there exists an idempotent of the form
+$e' = e + x(\sum a_{i, j}e^ix^j) \in A$
+with $a_{i, j} \in \mathbf{Z}$.
+\end{lemma}
+
+\begin{proof}
+Consider the ring $R_n = \mathbf{Z}[e]/((e^2 - e)^n)$. It is clear that
+if we can prove the result for each $R_n$ then the lemma follows.
+In $R_n$ consider the ideal $I = (e^2 - e)$ and apply
+Lemma \ref{lemma-lift-idempotents}.
+\end{proof}

@@ -1,0 +1,65 @@
+\subsection{Transfinite dévissage: source indices and the original stopping bound}\label{algebra-proof-011-transfinite-duxe9vissage-source-indices-and-the-original-stopping-bound}
+
+This is separate editorial evidence for the Stacks Project authors' \texttt{algebra.tex}, authority commit \texttt{a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14}, lines 20374--20588. The exact authority SHA-256 is \texttt{FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3}. The source follows Kaplansky; that attribution is retained. The cited Kaplansky publication has not been independently read in this batch. The actual source and all due received reports were read. Later passages through 21480 were read as lookahead and are not adjudicated by this note.
+
+The complete current interval equals this authority interval. Two minimal index corrections are proposed; neither the current chapter nor a translation has been changed. In a receiving translation, preserve the original reading and visibly identify the source corrections. The supplementary proofs and stopping bound below belong in linked conceptual errata or a supplement. There is no claim of mathematical novelty or of completion of the later combined-results synthesis.
+
+\subsubsection{Sections exist only at successor stages in the index}\label{algebra-proof-011-sections-exist-only-at-successor-stages-in-the-index}
+
+Source: \texttt{definition-\AlgebraIdentifierBreak{}devissage}, lines 20384--20404, and \texttt{lemma-\AlgebraIdentifierBreak{}direct-\AlgebraIdentifierBreak{}sum-\AlgebraIdentifierBreak{}devissage}, lines 20409--20453. Its index is an ordinal \(S\), with \(M_0=0\), increasing submodules, union \(M\), continuity at limits, and a splitting of \(M_\alpha\subset M_{\alpha+1}\) when \(\alpha+1\in S\). The definition's occurrence of \(M_0\) requires that its indexing family include zero.
+
+Line 20418 says that the section of \(M_{\alpha+1}/M_\alpha\) is chosen for each \(\alpha\in S\). If \(S\) has a last member, the next module is not part of the family. The precise correction is to quantify over \(\alpha+1\in S\), as the definition and displayed direct sum already do. No change to the lemma's statement is needed.
+
+For each such successor choose a retraction \(r_\alpha:M_{\alpha+1}\to M_\alpha\) of the inclusion and define \[
+s_\alpha:M_{\alpha+1}/M_\alpha\longrightarrow M_{\alpha+1},
+\qquad [x]\longmapsto x-r_\alpha(x).
+\] This is independent of the representative because \(r_\alpha(a)=a\) for \(a\in M_\alpha\). The quotient map composed with \(s_\alpha\) is the identity, and every \(x\in M_{\alpha+1}\) has the unique expression \(r_\alpha(x)+s_\alpha([x])\). Compose each section with the original inclusion in \(M\). Their sum is exactly the source map \[
+f:\bigoplus_{\alpha+1\in S}M_{\alpha+1}/M_\alpha\longrightarrow M.
+\] For \(\beta\in S\), its restriction \(f_\beta\) to terms with \(\alpha+1\leq\beta\) is an isomorphism onto the original submodule \(M_\beta\). At zero this is the unique map between zero modules. At a successor it follows from the unique decomposition just proved and the induction hypothesis for \(f_\alpha\). At a limit, any element of the domain has finite support, hence lies in the domain of some earlier \(f_\gamma\); the same assertion proves injectivity. Any element of \(M_\beta\) lies in an earlier \(M_\gamma\) by continuity and therefore has a preimage. Finally, the union property gives surjectivity of \(f\), and finite support gives injectivity by choosing a stage containing every nonzero component. This includes successor and limit values of \(S\).
+
+The source's later remark, lines 20485--20486, that (3) and (5) are equivalent under (0)--(2) is also justified by these actual maps. Under (3), split the displayed direct sum into terms \(\alpha+1\leq\beta\) and \(\beta<\alpha+1\), and transport its projection through \(f\). This is a retraction \(M\to M_\beta\). Conversely, a retraction \(M\to M_\alpha\) restricts to a retraction \(M_{\alpha+1}\to M_\alpha\). This proves the equivalence without requiring the quotients to be countably generated.
+
+\subsubsection{Include the terminal partial sum}\label{algebra-proof-011-include-the-terminal-partial-sum}
+
+Source: \texttt{lemma-\AlgebraIdentifierBreak{}Kaplansky-\AlgebraIdentifierBreak{}devissage}, lines 20455--20467; received report \texttt{OCC-00451}. Keep the original direct sum \(M=\bigoplus_{i\in I}N_i\), with each \(N_i\) countably generated, and the chosen well-order on \(I\). Identify that ordered set with its ordinal, as the source does. Set \[
+S=I+1,\qquad M_\alpha=\bigoplus_{j<\alpha}N_j
+\quad(\alpha\in S,\text{ equivalently }\alpha\leq I).
+\] All these sums are actual coordinate submodules of the original \(M\). We have \(M_0=0\) and \(M_I=M\), so the union is \(M\). For a limit \(\lambda\leq I\), an element of \(M_\lambda\) has finite coordinate support below \(\lambda\). There is \(\beta<\lambda\) larger than all those indices, so that element lies in \(M_\beta\). The reverse inclusion follows from increasing coordinate sets. At a successor \(\alpha+1\leq I\), \[
+M_{\alpha+1}=M_\alpha\oplus N_\alpha.
+\] The coordinate projection is the required retraction; \(N_\alpha\to M_{\alpha+1}/M_\alpha\), sending an element to its coset, is an isomorphism with inverse induced by the coordinate projection to \(N_\alpha\). Thus the quotient is countably generated and all five defining properties hold.
+
+This verifies every ordinal boundary. If \(I=0\), then \(M=0\), \(S=1\), and the family consists of \(M_0=0\); there are no successor quotients. If \(I=\delta+1\), the original index omitted \(M_I\) and its union was \(\bigoplus_{j<\delta}N_j\); it fails when \(N_\delta\ne0\). For example, \(I=1\) and \(N_0=\mathbb Z\) give only the zero stage in the source's uncorrected family. For a nonzero limit \(I\), the original union already exhausts the direct sum, but the uniform terminal-stage construction is still valid.
+
+The reverse implication of the source lemma follows from the preceding exact isomorphism \(f\): its summands are the original countably generated successor quotients. The correction does not strengthen that statement or replace its proof by an unrelated construction.
+
+\subsubsection{The original projector closure and a bounded stopping stage}\label{algebra-proof-011-the-original-projector-closure-and-a-bounded-stopping-stage}
+
+Source: \texttt{theorem-\AlgebraIdentifierBreak{}kaplansky-\AlgebraIdentifierBreak{}direct-\AlgebraIdentifierBreak{}sum}, lines 20469--20566, followed by \texttt{theorem-\AlgebraIdentifierBreak{}projective-\AlgebraIdentifierBreak{}direct-\AlgebraIdentifierBreak{}sum}, lines 20572--20585. Preserve \(M=P\oplus Q=\bigoplus_{i\in I}N_i\). Write \(p:M\to P\) and \(q:M\to Q\) for the original projections, viewed also as endomorphisms of \(M\). They satisfy \(p+q=1\), \(p^2=p\), \(q^2=q\), and \(pq=qp=0\).
+
+The source constructs at each nonterminal successor a countable matrix \((x_{mn})\), first listing generators of the least missing \(N_j\), then adding generators of each coordinate summand occurring in the finite supports of \(p(x_{mn})\) and \(q(x_{mn})\). Its specified order is valid: the entry \((m,n)\) has position \[
+t(m,n)=\frac{(m+n-2)(m+n-1)}2+m
+\] in the successive antidiagonals. The first row is present initially, and processing position \(t\) creates row \(t+1\). Since \(t(m,n)\geq m\), row \(m\) has already been created when that entry is processed. Every pair occurs at a finite position. Each new row can be chosen countable because the two supports are finite and each involved \(N_i\) has a countable generating set. Pad finite or empty lists with zero entries. This is precisely the source's order \((1,1),(1,2),(2,1),(1,3),\ldots\).
+
+Let \(B\) be the submodule generated by all entries, and let \(D\) consist of \(j\) and every coordinate appearing in the supports of the two projections of any entry. The construction includes a generating set for each \(N_i\), \(i\in D\), hence \(\bigoplus_{i\in D}N_i\subset B\). Conversely, \(x=p(x)+q(x)\) for each entry, so each entry has support in \(D\). Thus \[
+B=\bigoplus_{i\in D}N_i,
+\qquad p(B)\subset B,\qquad q(B)\subset B.
+\] The inclusions follow first on the generating entries and then by linearity. Consequently, if \(M_\alpha\) is a coordinate sum stable under both projections, so is \(M_{\alpha+1}=M_\alpha+B\). Its quotient by \(M_\alpha\) is countably generated by the images of the entries. Coordinate projections give a retraction from \(M\) onto every such coordinate sum. At limits, a union of increasing coordinate sums is the coordinate sum of the union of their coordinate sets: every vector has finite support. Stability under \(p,q\) is preserved by that union. Zero coordinate modules cause no exception, since they are already contained in every stage.
+
+There is a useful precise bound on the source's phrase ``some large enough ordinal.'' Write the chosen well-order as the ordinal \(I\). The same recursion need only be performed for \(\alpha\leq I\), and it satisfies \[
+\bigoplus_{i<\alpha}N_i\subset M_\alpha
+\qquad(\alpha\leq I).
+\] At zero the assertion holds. At a successor, all earlier \(N_i\) are already contained by induction. If \(N_\alpha\) is not yet contained, it is therefore the least missing summand, and the actual next step includes it. If it is contained, the increasing family retains it. At a limit the claim follows from the union rule, since every \(i<\alpha\) occurs by stage \(i+1<\alpha\). This proves the formula by transfinite induction and in particular \(M_I=M\). Thus \textbf{the original construction works with \(S=I+1\)}, including \(I=0\). No enlargement of its original modules or replacement of its projector maps is involved. This bound is separate editorial information; the source's unquantified existence assertion is correct and receives no source edit.
+
+For completeness of the propagation check, put \(P_\alpha=P\cap M_\alpha\) and \(Q_\alpha=Q\cap M_\alpha\). Stability gives \(M_\alpha=P_\alpha\oplus Q_\alpha\), with actual projections the restrictions of \(p,q\). The map \[
+M_{\alpha+1}/M_\alpha\longrightarrow
+(P_{\alpha+1}/P_\alpha)\oplus(Q_{\alpha+1}/Q_\alpha),
+\quad [x]\longmapsto([p(x)],[q(x)])
+\] is well-defined. Its inverse sends \(([a],[b])\) to \([a+b]\); changing representatives alters that sum by an element of \(M_\alpha\). Both composites are the identity. Projection onto the first factor shows the original \(P\)-quotient is countably generated. If \(\rho_\alpha:M\to M_\alpha\) is a coordinate retraction, then \(p\rho_\alpha:M\to P_\alpha\) fixes \(P_\alpha\); its restriction to \(P_{\alpha+1}\) proves the successor inclusion splits. Intersections with \(P\) commute with these increasing unions, so the zero, union, and limit properties also hold. The corrected direct-sum lemma therefore proves the original theorem for \(P\).
+
+If \(P\) is projective, take its original realization as a summand of a free module. The resulting countably generated pieces are direct summands of \(P\), hence projective. Explicitly, their inclusion and projection compose to the identity; for any surjection and any map from one piece, compose with that projection, lift from \(P\) by projectivity, then restrict along the inclusion. This proves the lifting property for that piece. The result and its projective adjective are unchanged.
+
+\subsubsection{Propagation and coverage}\label{algebra-proof-011-propagation-and-coverage}
+
+Groups 502 and 503 record the two source-index repairs. Group 504 has zero source operations and records the exact stopping bound for the original projector construction. Its proof receives both repaired indexing conventions. The direct-sum equivalence, summand theorem, and projective corollary in the current interval remain valid, with their original objects and conclusions. Later local-ring and Mittag-Leffler statements remain pending adjudication even where their source text has been read. Do not infer full downstream review from the present propagation check.
+
+The bounded disk-literature query \texttt{Kaplansky\ Mittag\ Leffler} returned two PDF-routing records, for \emph{Geometric Methods in Physics XL} and \emph{Constructing Projective Modules}. Neither was read or used as proof evidence; no PDF fallback was performed. The supplied original Stacks TeX is the primary treatment used here. This is not an exhaustive literature survey, and the explicit stopping bound is not described as a new result.

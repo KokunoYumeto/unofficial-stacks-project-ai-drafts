@@ -1,0 +1,42 @@
+\begin{lemma}
+\label{editorial-source-lemma-conclude-jacobson-Noetherian}
+With notation as above, assume that $R$ is a Noetherian Jacobson ring.
+Further assume $R \to S$ is of finite type.
+There is a commutative diagram
+$$
+\xymatrix{
+\text{Constr}(Y) \ar[r]^{E \mapsto E_0} \ar[d]^{E \mapsto f(E)} &
+\text{Constr}(Y_0) \ar[d]^{E \mapsto f(E)} \\
+\text{Constr}(X) \ar[r]^{E \mapsto E_0} &
+\text{Constr}(X_0)
+}
+$$
+where the horizontal arrows are the bijections from
+Topology, Lemma \ref{topology-lemma-jacobson-equivalent-constructible}.
+The same diagram and conclusions hold more generally when $R$ is
+Jacobson and $R\to S$ is of finite presentation, without requiring
+$R$ to be Noetherian.
+\end{lemma}
+
+\begin{proof}
+Under the original hypotheses, the finite type map $R\to S$ is of
+finite presentation by
+Lemma \ref{editorial-source-lemma-Noetherian-finite-type-is-finite-presentation}.
+For the more general assertion, finite presentation is assumed directly.
+In both cases it implies finite type, so $S$ is Jacobson by
+Proposition \ref{editorial-source-proposition-Jacobson-permanence}. Therefore $X$ and
+$Y$ are Jacobson spaces and the two horizontal maps are bijections
+by Topology, Lemma \ref{topology-lemma-jacobson-equivalent-constructible},
+which requires no Noetherian hypothesis.
+Chevalley's theorem (Theorem \ref{editorial-source-theorem-chevalley}) states that
+the image of a constructible subset of the source $Y$ is constructible
+in the target $X$. For each such $E\subset Y$,
+Lemma \ref{editorial-source-lemma-image-finite-type-map-Jacobson-rings} gives
+$f(E_0)=f(E)_0$, proving commutativity.
+The right vertical arrow is well defined as a direct-image map:
+given a constructible subset $C\subset Y_0$, the top horizontal
+bijection supplies a unique constructible $E\subset Y$ with $E_0=C$,
+and then $f(C)=f(E)_0$ is constructible in $X_0$ by the bottom
+horizontal bijection. This proves every arrow and the square in
+the stated greater generality.
+\end{proof}

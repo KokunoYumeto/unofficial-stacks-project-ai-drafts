@@ -1,0 +1,199 @@
+\begin{lemma}
+\label{editorial-source-lemma-Galois-orbit}
+Let $K/k$ be an extension of fields.
+Let $\overline{k}/k$ be a separable algebraic closure.
+Then $\text{Gal}(\overline{k}/k)$ acts transitively on the
+primes of $\overline{k} \otimes_k K$.
+\end{lemma}
+
+\begin{proof}
+Retain the original separable closure
+$\overline k$, put $G=\operatorname{Gal}(\overline k/k)$,
+and let $K/k'/k$ be the original
+subextension of Lemma
+\ref{editorial-source-lemma-make-geometrically-irreducible}.
+Write
+$$
+B=\overline k\otimes_k k',\qquad
+A=\overline k\otimes_k K.
+$$
+Both tensors are nonzero by extension
+of vector-space bases over $k$.
+As $\overline k/k$ is algebraic,
+these are integral algebras over
+the respective fields $k'$ and
+$K$: each generator $a\otimes1$
+satisfies its original monic
+polynomial over $k$. Thus all
+their primes are maximal by
+Lemma \ref{editorial-source-lemma-integral-no-inclusion},
+and are also minimal since
+there are no strict inclusions
+between primes over a field.
+The two original comparison maps
+$$
+B\otimes_{k'}K\longrightarrow A,
+\qquad(a\otimes b)\otimes c\longmapsto a\otimes bc,
+$$
+and $a\otimes c\mapsto(a\otimes1)\otimes c$
+are inverse by $k'$-balancing.
+Since $K/k'$ is geometrically
+irreducible, Lemma
+\ref{editorial-source-lemma-geometrically-irreducible-any-base-change}
+therefore identifies the spectra
+of $A$ and $B$, including their
+topologies by its minimal-prime
+homeomorphism. The map is
+contraction, and commutes with
+the original automorphisms
+$g\otimes1$ for $g\in G$.
+
+For a prime $\mathfrak p$ of $B$,
+its residue field is separably
+algebraic over the original
+$\overline k$. Indeed $B$ is
+generated over $\overline k$ by
+$1\otimes b$ for $b\in k'$,
+and each of their images satisfies
+the original separable polynomial
+of $b$ over $k$. Minimal
+polynomials over $\overline k$
+divide these separable polynomials.
+Every element of the field
+$B/\mathfrak p$ belongs to a
+finite subextension generated
+by finitely many such images,
+so that extension is separable.
+As $\overline k$ is separably
+closed, its structural embedding
+into $B/\mathfrak p$ is an
+isomorphism. Its inverse composed
+with $b\mapsto[1\otimes b]$
+defines a unique embedding
+$\sigma:k'\to\overline k$ over $k$.
+Consequently
+$$
+\mathfrak p=\mathfrak p_\sigma
+=\ker(\mu_\sigma),\qquad
+\mu_\sigma:B\to\overline k,\quad
+\sum_i a_i\otimes b_i\longmapsto\sum_i a_i\sigma(b_i).
+$$
+Conversely this map is surjective
+because $a=\mu_\sigma(a\otimes1)$,
+so its kernel is a prime. The
+structural field isomorphism
+above proves uniqueness of
+$\sigma$ from its kernel.
+This gives the stated bijection
+with $\operatorname{Hom}_k(k',\overline k)$.
+Separability, rather than
+maximality alone, is what
+identifies these residue fields
+with the separably closed field.
+
+Given embeddings $\sigma,\tau$,
+extend the isomorphism
+$\tau\sigma^{-1}:\sigma(k')\to\tau(k')$
+to a $k$-embedding of $\overline k$
+in itself. Here are the needed
+extension details, including
+infinite $k'/k$. Order partial
+extensions by inclusion and
+take unions on chains. If a
+maximal partial extension has
+domain $L\neq\overline k$, choose
+$a\in\overline k\setminus L$.
+Its minimal polynomial over
+$L$ divides a separable
+polynomial over $k$, hence is
+separable. Transporting its
+coefficients gives a separable
+polynomial over the image field,
+which has a root in the
+separably closed $\overline k$.
+Sending $a$ to that root extends
+the embedding to $L(a)$, a
+contradiction. Thus the domain
+is all of $\overline k$.
+Any $k$-embedding of this field
+in itself is surjective: each
+$b\in\overline k$ lies in a
+finite Galois subextension $N/k$,
+obtained by adjoining all roots
+of its separable minimal polynomial.
+The embedding permutes those
+roots, sends $N$ into itself,
+and its injective $k$-linear
+map on the finite-dimensional
+$N$ is surjective. In particular
+$b$ is in its image. We have
+therefore constructed $g\in G$
+with $g\sigma=\tau$.
+
+Use the action on ideals
+$\mathfrak p\mapsto(g\otimes1)(\mathfrak p)$.
+For every original $z\in B$,
+$$
+\mu_{g\sigma}((g\otimes1)z)=g(\mu_\sigma(z)).
+$$
+It follows that
+$(g\otimes1)(\mathfrak p_\sigma)=\mathfrak p_{g\sigma}$.
+This proves transitivity on
+$\Spec(B)$ and, by equivariant
+contraction, on the original
+$\Spec(A)$.
+
+The correspondence also identifies
+the actual prime and residue
+field of $A$. Give $\overline k$
+its $k'$-structure through
+$\sigma$. The extension
+$\overline k/\sigma(k')$ is
+separable algebraic. The tensor-field
+form of Lemma
+\ref{editorial-source-lemma-geometrically-irreducible-separable-elements}
+applied to $K/k'$ therefore makes
+$$
+C_\sigma=\overline k\otimes_{k',\sigma}K
+$$
+a field. The original quotient
+comparison sends the class of
+$a\otimes x$ to $a\otimes x$
+and gives an isomorphism
+$A/\mathfrak p_\sigma A\simeq C_\sigma$;
+its inverse sends the same pure
+tensor to its class. The additional
+$k'$-balancing relations are
+exactly the extended kernel
+of $\mu_\sigma$, so both maps
+are well-defined. Hence the
+corresponding prime is exactly
+$\mathfrak q_\sigma=\mathfrak p_\sigma A$,
+and its residue field is
+$C_\sigma$. No further radical
+or residue-field identification
+is needed or assumed.
+
+For a fixed $\sigma$, its
+stabilizer in $G$ is exactly
+the subgroup fixing $\sigma(k')$
+pointwise, by the injectivity
+of the embedding-to-prime
+correspondence. Thus the orbit
+is the corresponding coset
+set. If $K/k$ is finitely
+generated, the preceding lemma
+makes $k'/k$ finite separable;
+Fields, Lemma
+\ref{fields-lemma-separable-equality}
+then gives exactly $[k':k]$
+primes of $A$. Since this
+finite spectrum has every
+point closed, each point is
+also open: its complement is
+a finite union of closed
+points. It is therefore a
+finite discrete orbit. No
+finite-degree count is asserted
+for an infinite $k'/k$.
+\end{proof}

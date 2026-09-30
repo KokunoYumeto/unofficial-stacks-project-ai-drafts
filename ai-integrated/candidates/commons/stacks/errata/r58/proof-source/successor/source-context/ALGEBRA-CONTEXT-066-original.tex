@@ -1,0 +1,27 @@
+\begin{lemma}
+\label{lemma-conclude-jacobson-Noetherian}
+With notation as above. Assume that $R$ is a Noetherian Jacobson ring.
+Further assume $R \to S$ is of finite type.
+There is a commutative diagram
+$$
+\xymatrix{
+\text{Constr}(Y) \ar[r]^{E \mapsto E_0} \ar[d]^{E \mapsto f(E)} &
+\text{Constr}(Y_0) \ar[d]^{E \mapsto f(E)} \\
+\text{Constr}(X) \ar[r]^{E \mapsto E_0} &
+\text{Constr}(X_0)
+}
+$$
+where the horizontal arrows are the bijections from
+Topology, Lemma \ref{topology-lemma-jacobson-equivalent-constructible}.
+\end{lemma}
+
+\begin{proof}
+Since $R \to S$ is of finite type, it is of finite presentation,
+see Lemma \ref{lemma-Noetherian-finite-type-is-finite-presentation}.
+Thus the image of a constructible set in $X$ is constructible
+in $Y$ by Chevalley's theorem
+(Theorem \ref{theorem-chevalley}).
+Combined with
+Lemma \ref{lemma-image-finite-type-map-Jacobson-rings}
+the lemma follows.
+\end{proof}

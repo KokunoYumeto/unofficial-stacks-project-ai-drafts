@@ -1,0 +1,66 @@
+\begin{lemma}
+\label{editorial-source-lemma-almost-directed-colimit-exact}
+Let $R$ be a ring. Let $\mathcal{I}$ be an index category satisfying the assumptions of
+Categories, Lemma \ref{categories-lemma-split-into-directed}.
+Then taking colimits of diagrams of $R$-modules over $\mathcal{I}$
+is exact (i.e., the analogue of
+Lemma \ref{algebra-lemma-directed-colimit-exact}
+holds in this situation).
+\end{lemma}
+
+\begin{proof}
+By
+Categories, Lemma \ref{categories-lemma-split-into-directed}
+we may write $\mathcal{I} = \coprod_{j \in J} \mathcal{I}_j$ with each
+$\mathcal{I}_j$ a filtered category, and $J$ possibly empty. By
+Categories, Lemma \ref{categories-lemma-directed-category-system}
+taking colimits over the index categories $\mathcal{I}_j$ is
+the same as taking the colimit over some directed set. Hence
+Lemma \ref{algebra-lemma-directed-colimit-exact}
+applies to these colimits. This reduces the problem to showing that
+coproducts in the category of $R$-modules over the set $J$ are exact.
+In other words, given exact sequences
+$L_j \to M_j \to N_j$ of $R$-modules, we have to show that
+$$
+\bigoplus\nolimits_{j \in J} L_j
+\longrightarrow
+\bigoplus\nolimits_{j \in J} M_j
+\longrightarrow
+\bigoplus\nolimits_{j \in J} N_j
+$$
+is exact. Indeed, denote its component maps by
+$\alpha_j : L_j \to M_j$ and $\beta_j : M_j \to N_j$.
+An element $(m_j)_{j \in J}$ of $\bigoplus_{j \in J} M_j$
+has finite support. It is in the kernel of $\bigoplus_j\beta_j$
+if and only if every $m_j$ is in $\Ker(\beta_j)$.
+For each index in its finite support, exactness gives
+$l_j \in L_j$ such that $\alpha_j(l_j) = m_j$.
+Set $l_j = 0$ at every other index. Then $(l_j)_{j \in J}$
+has finite support and maps to $(m_j)_{j \in J}$.
+Conversely, $\beta_j\alpha_j = 0$ at every index, so the image
+of $\bigoplus_j\alpha_j$ is contained in this kernel.
+
+\medskip\noindent
+More generally, for complexes $L_j \xrightarrow{\alpha_j} M_j
+\xrightarrow{\beta_j} N_j$, the canonical $R$-linear map
+$$
+\bigoplus_{j \in J}
+\bigl(\Ker(\beta_j)/\Im(\alpha_j)\bigr)
+\longrightarrow
+\Ker\bigl(\bigoplus_j\beta_j\bigr)
+/\Im\bigl(\bigoplus_j\alpha_j\bigr),
+\qquad ([m_j])_j \longmapsto [(m_j)_j]
+$$
+is an isomorphism. Choose representatives at the finitely many
+nonzero components and zero representatives elsewhere. Changing these
+choices changes $(m_j)_j$ by the image of a finitely supported
+family in $\bigoplus_j L_j$, so the map is well defined.
+Every element of the target has a finitely supported representative
+whose components lie in $\Ker(\beta_j)$; this proves surjectivity.
+If a representative lies in $\Im(\bigoplus_j\alpha_j)$, each
+$m_j$ lies in $\Im(\alpha_j)$, proving injectivity.
+All maps used are $R$-linear. Applying this to the colimits over
+the components $\mathcal{I}_j$ proves the homology assertion as well.
+If $J$ is empty, all the displayed direct sums and homology modules
+are zero, and the same assertions hold.
+\end{proof}

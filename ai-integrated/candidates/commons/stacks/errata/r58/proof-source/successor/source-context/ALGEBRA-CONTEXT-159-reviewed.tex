@@ -1,0 +1,92 @@
+\begin{lemma}[Artin-Rees]
+\label{lemma-Artin-Rees}
+Suppose that $R$ is Noetherian. Let $I \subset R$ be an ideal.
+Let $N \subset M$ be finite $R$-modules.
+There exists a constant $c > 0$ such that
+$I^n M \cap N  =  I^{n-c}(I^cM \cap N)$ for all $n \geq c$.
+\end{lemma}
+
+\begin{proof}
+Keep the graded ring
+$$
+S=\bigoplus_{n\geq0}I^n,\qquad I^0=R,
+$$
+with its actual degree inclusions $\iota_n:I^n\to S$.
+Thus $\iota_n(a)\iota_m(b)=\iota_{n+m}(ab)$.
+Since $R$ is Noetherian, write $I=(f_1,\ldots,f_t)$.
+The $R$-algebra map $R[X_1,\ldots,X_t]\to S$ sends $r\in R$
+to $\iota_0(r)$ and sends a monomial with its coefficient to
+$$
+rX_1^{e_1}\cdots X_t^{e_t}
+\longmapsto
+\iota_{e_1+\cdots+e_t}
+ (rf_1^{e_1}\cdots f_t^{e_t}).
+$$
+Every element of $I^n$ is a finite sum of these products of total
+degree $n$, so the map is surjective. The polynomial ring, and
+therefore $S$, is Noetherian by Lemma
+\ref{lemma-Noetherian-permanence}. If $I=0$, the empty generator
+list gives $S=R$ in degree zero and the same argument applies.
+
+The graded $S$-module
+$E=\bigoplus_{n\geq0}I^nM$ has action
+$\iota_d(a)\jmath_n(x)=\jmath_{d+n}(ax)$, where $\jmath_n$
+denotes its degree inclusion. If $x_1,\ldots,x_r$ generate
+$M$, their degree-zero images generate $E$: each member of
+$I^nM$ is a sum $\sum_{i=1}^r a_ix_i$ with $a_i\in I^n$.
+The graded subgroup
+$$
+L=\bigoplus_{n\geq0}(I^nM\cap N)\subset E
+$$
+is an $S$-submodule, since
+$I^d(I^nM\cap N)\subset I^{d+n}M\cap N$.
+By Lemma \ref{lemma-Noetherian-basic}, $L$ is finite over $S$.
+Take a finite generating list and replace it by the collection of
+all its homogeneous components. Each component is in $L$, each
+old generator is the sum of its components, and the generated
+submodule is consequently still exactly $L$. Denote this finite
+list by $\jmath_{d_j}(\xi_j)$ for $1\leq j\leq s$, where
+$\xi_j\in I^{d_j}M\cap N$. The list may be empty when $L=0$.
+Set
+$$
+c=\max\bigl(\{1\}\cup\{d_j:1\leq j\leq s\}\bigr)>0.
+$$
+For $n\geq c$, taking the degree-$n$ component of an expression
+in these generators shows that every $x\in I^nM\cap N$ is
+$$
+x=\sum_{j=1}^s h_j\xi_j,\qquad h_j\in I^{n-d_j}.
+$$
+The degree inclusions above specify the graded expression from
+which this equality in the original $M$ is obtained.
+For each $j$, the ideal identity
+$I^{n-d_j}=I^{n-c}I^{c-d_j}$ means that one can write
+$h_j=\sum_{\ell=1}^{q_j}a_{j\ell}b_{j\ell}$ with
+$a_{j\ell}\in I^{n-c}$ and $b_{j\ell}\in I^{c-d_j}$.
+Each $b_{j\ell}\xi_j$ lies in $I^cM\cap N$, so the full
+equality
+$x=\sum_{j=1}^s\sum_{\ell=1}^{q_j}
+a_{j\ell}(b_{j\ell}\xi_j)$ proves
+$I^nM\cap N\subset I^{n-c}(I^cM\cap N)$.
+The opposite inclusion holds because a product with a member of
+$I^cM\cap N$ remains in $N$ and lies in $I^nM$.
+If the generating list is empty then $L=0$, both modules in the
+desired equality are zero, and the same choice $c=1$ is valid.
+
+Every larger integer $d\geq c$ is also valid. Indeed, for $n\geq d$,
+the equalities already proved at $n$ and at $d$ give
+$$
+I^nM\cap N=I^{n-c}(I^cM\cap N)
+=I^{n-d}\bigl(I^{d-c}(I^cM\cap N)\bigr)
+=I^{n-d}(I^dM\cap N).
+$$
+In particular, the two original filtrations on $N$ satisfy
+$$
+I^nN\subset I^nM\cap N\quad(n\geq0),\qquad
+I^{k+c}M\cap N\subset I^kN\quad(k\geq0).
+$$
+The first containment follows from $N\subset M$; the second
+uses the equality at $n=k+c$ and $I^cM\cap N\subset N$.
+Thus the subspace $I$-adic topology from $M$ and the $I$-adic
+topology on $N$ have cofinal neighbourhood systems, with the
+displayed explicit index bound.
+\end{proof}

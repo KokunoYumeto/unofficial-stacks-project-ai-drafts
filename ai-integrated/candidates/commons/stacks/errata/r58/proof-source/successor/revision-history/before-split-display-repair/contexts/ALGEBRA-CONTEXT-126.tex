@@ -1,0 +1,264 @@
+\begin{lemma}
+\label{editorial-source-lemma-powers-field}
+\begin{reference}
+\cite[Lemma 3.1.6]{Alper-adequate}
+\end{reference}
+Let $k'/k$ be a field extension. The following are equivalent
+\begin{enumerate}
+\item for each $x \in k'$ there exists an $n > 0$ such that $x^n \in k$, and
+\item $k' = k$ or $k$ and $k'$ have characteristic $p > 0$ and
+either $k'/k$ is a purely inseparable extension or
+$k$ and $k'$ are algebraic extensions of $\mathbf{F}_p$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Each case of (2) implies (1). For $k'=k$
+take $n=1$. For a purely inseparable
+extension in characteristic $p>0$, each
+original element has a $p$-power in $k$.
+If both fields are algebraic over
+$\mathbf F_p$, a nonzero $x\in k'$
+lies in the finite field $\mathbf F_p(x)$,
+whose multiplicative group is finite;
+some positive power of $x$ is $1\in k$.
+For $x=0$ take $n=1$.
+
+Assume (1) and retain the original extension
+$k'/k$. Each $x\in k'$ is algebraic over
+$k$, being a root of $T^n-x^n\in k[T]$.
+Let $E$ be its maximal separable
+subextension from Fields, Lemma
+\ref{fields-lemma-separable-first}.
+In positive characteristic, if $E=k$
+then $k'/k$ is purely inseparable and
+we have finished. In characteristic
+zero $E=k'$, so $E=k$ is precisely the
+identity case. Otherwise choose
+$x\in E\setminus k$ and keep the finite
+separable intermediate field $L=k(x)$.
+Property (1) is inherited by $L/k$.
+It is enough to show that $k$ has
+positive characteristic and is algebraic
+over its prime field: the original
+$k'/k$ is already algebraic, and then
+$k'$ is algebraic over the same prime
+field by transitivity. This proves the
+reduction for infinite $k'/k$ as well.
+
+First let $z$ be any element of $L\setminus k$.
+There are $k$-embeddings $\sigma,\tau$ of
+$k(z)$ into an algebraic closure $\overline k$
+with $A=\sigma(z)\neq B=\tau(z)$, because
+its separable minimal polynomial has
+degree at least two. This is the
+embedding count of Fields, Lemma
+\ref{fields-lemma-count-embeddings}.
+Both $z$ and $z+1$ are nonzero, since
+neither belongs to $k$. Choose the
+original positive integers $n,m$ with
+$z^n,(z+1)^m\in k$. Their images give
+$A^n=B^n$ and $(A+1)^m=(B+1)^m$.
+Thus, with all denominators nonzero,
+$$
+\zeta=A/B,\qquad \zeta'=(A+1)/(B+1),
+\qquad \zeta^n=1,\quad(\zeta')^m=1.
+$$
+One has $\zeta'\neq1$ because $A\neq B$.
+The full identity
+$$
+\zeta'(B+1)=A+1=\zeta B+1
+$$
+gives $B(\zeta'-\zeta)=1-\zeta'$.
+Since the right side is nonzero,
+$\zeta'-\zeta\neq0$, and hence
+$$
+B=\frac{1-\zeta'}{\zeta'-\zeta}.
+$$
+Both roots of unity are algebraic over
+the prime field, so this formula makes
+$B$ algebraic over that field. The
+embedding $\tau$ fixes the prime field;
+pulling back an annihilating polynomial
+through the injective $\tau$ proves that
+the original $z$ is algebraic over it.
+This applies to every $z\in L\setminus k$.
+For any $a\in k$, both $x$ and $x+a$
+lie outside $k$ and are algebraic over
+the prime field, so their difference
+$a=(x+a)-x$ is algebraic. It follows
+that $k$, and then the original $k'$,
+are algebraic over the prime field.
+
+It remains to exclude characteristic
+zero. Use the fixed original $x\in L\setminus k$
+and two embeddings as above, with
+$A=\sigma(x)$, $B=\tau(x)$, and the
+same $\zeta,\zeta'$. Both $A=\zeta B$
+and $B=(1-\zeta')/(\zeta'-\zeta)$
+belong to the number field
+$F=\mathbf Q(\zeta,\zeta')$.
+This field contains only finitely many
+roots of unity, for the following exact
+reason. Put $d=[F:\mathbf Q]$. The monic
+minimal polynomial of a root of unity
+in $F$ has degree $e\leq d$ and integer
+coefficients: it divides some $T^N-1$
+in $\mathbf Q[T]$, and the primitive
+Gauss lemma gives a factor in $\mathbf Z[T]$
+whose leading coefficient divides $1$.
+Every complex root $\xi_i$ of that
+minimal polynomial is also an $N$th
+root of unity and has absolute value
+$1$. Its coefficient of $T^{e-j}$ is
+the full signed sum
+$$
+(-1)^j\sum_{1\leq i_1<\cdots<i_j\leq e}
+\xi_{i_1}\cdots\xi_{i_j},
+$$
+so its absolute value is at most
+$\binom ej$. There are finitely many
+integer coefficient lists with these
+bounds and $e\leq d$, and each resulting
+nonzero polynomial has finitely many
+roots. This proves the required
+finiteness inside $F$.
+
+For every original rational $y$, one
+has $x+y\notin k$ and $B+y\neq0$.
+Property (1) gives a positive exponent
+for $x+y$, so
+$$
+\zeta_y=\frac{A+y}{B+y}
+=\frac{\zeta B+y}{B+y}\in F
+$$
+is a root of unity, and $\zeta_y\neq1$.
+Infinitely many rational $y$ and only
+finitely many roots of unity in $F$
+give distinct $y,y'$ with
+$\zeta_y=\zeta_{y'}$. Subtracting the
+two original identities gives
+$$
+y-y'=(A+y)-(A+y')
+=\zeta_y\big((B+y)-(B+y')\big)
+=\zeta_y(y-y').
+$$
+Since $y-y'\neq0$, this forces
+$\zeta_y=1$, a contradiction. Thus the
+nontrivial separable case has positive
+characteristic, and the already proved
+algebraicity gives exactly (2).
+
+The argument also determines when a
+single positive exponent can work for
+all elements. Such an exponent exists
+if and only if $k'=k$, or the fields
+have characteristic $p>0$ and either
+$k'/k$ is purely inseparable of bounded
+exponent, or $k'$ is a finite field.
+The converse is immediate with exponent
+$1$, a common $p$-power, or $|k'|-1$,
+respectively. For necessity retain a
+single original exponent $N$ for all
+elements. If a nontrivial separable
+intermediate field exists, choose
+$A=\sigma(x)\neq B=\tau(x)$ as above.
+For every $a\in k$, the quotient
+$(A+a)/(B+a)$ is an $N$th root of unity.
+These quotients are distinct for
+distinct $a$: cross multiplication
+gives the full identity
+$$
+(A+a)(B+b)-(A+b)(B+a)=(A-B)(b-a).
+$$
+Their denominators are nonzero because
+$x\notin k$. Hence $|k|\leq N$, as a
+nonzero degree-$N$ polynomial has at
+most $N$ roots. The field $k$ is finite.
+Every element of $k'$ is then among
+the roots of the finitely many original
+polynomials $T^N-c$, $c\in k$. For
+$c=0$ the only root is zero; for
+each of the $|k|-1$ nonzero values
+there are at most $N$ roots. Thus
+$|k'|\leq1+N(|k|-1)$, and $k'$ is finite.
+
+In the remaining nonidentity case
+$k'/k$ is purely inseparable in
+characteristic $p$. Write the original
+$N=p^e m$ with $p\nmid m$. For every
+nonzero $x\in k'$, put $u=x^{p^e}$.
+It is purely inseparable over $k$ and
+satisfies $u^m=x^N\in k$. The polynomial
+$T^m-x^N$ has nonzero derivative at
+each root, since $m$ and each root
+are nonzero. Hence $u$ is also
+separable over $k$, and belongs to
+$k$. The zero element satisfies the
+same conclusion directly. Therefore
+$(k')^{p^e}\subseteq k$, giving a
+uniform inseparability exponent from
+the full original integer $N$.
+
+For finite original fields the fixed-exponent
+condition has an exact form. Put $q=|k|$
+and $q'=|k'|$. The multiplicative group
+of a finite field is cyclic, as follows
+directly from the root bound. For a
+finite subgroup $G$ of a field's
+multiplicative group, let $h$ be the
+least common multiple of its element
+orders. For every prime $\ell$ dividing
+$h$, choose an element whose order
+has the largest $\ell$-power $\ell^{a_\ell}$
+occurring in $h$, and raise that element
+to the prime-to-$\ell$ part of its
+order. The result has order exactly
+$\ell^{a_\ell}$. The product of these
+elements has order $h$: if its $m$th
+power is $1$, raising to
+$h/\ell^{a_\ell}$ shows
+$\ell^{a_\ell}\mid m$ for each $\ell$,
+since $h/\ell^{a_\ell}$ is coprime
+to $\ell$. Conversely its $h$th power
+is $1$. All elements of $G$ are
+roots of $T^h-1$, so $|G|\leq h$;
+the element of order $h$ gives
+$|G|\geq h$. Thus it generates $G$.
+For the trivial group the empty
+product has order $1$, giving the
+same conclusion.
+
+Choose a generator $g$ of the original
+$(k')^\times$, of order $q'-1$.
+Inside $k'$, the nonzero roots of
+$T^{q-1}-1$ are exactly $k^\times$:
+all its $q-1$ elements are roots,
+and a degree-$q-1$ polynomial has
+no additional ones. Therefore
+$$
+\begin{split}
+(\forall x\in k')\ x^N\in k
+&\quad\Longleftrightarrow\quad g^N\in k^\times\\
+&\quad\Longleftrightarrow\quad g^{N(q-1)}=1\\
+&\quad\Longleftrightarrow\quad (q'-1)\mid N(q-1).
+\end{split}
+$$
+The zero element satisfies the condition
+for every positive $N$. If $d=[k':k]$,
+then $q'=q^d$, by counting the coordinate
+vectors of a $k$-basis. Retaining the
+full factorization
+$$
+q'-1=q^d-1=(q-1)(1+q+\cdots+q^{d-1}),
+$$
+the displayed divisibility is equivalently
+$(1+q+\cdots+q^{d-1})\mid N$. The least
+positive common exponent is consequently
+the full sum $1+q+\cdots+q^{d-1}$.
+This also proves the sharp cardinality
+bound above: equality holds for this
+least exponent, with every contribution
+from the original zero and nonzero
+elements retained.
+\end{proof}

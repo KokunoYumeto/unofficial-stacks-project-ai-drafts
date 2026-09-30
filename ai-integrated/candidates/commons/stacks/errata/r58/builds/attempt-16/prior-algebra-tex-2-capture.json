@@ -1,0 +1,56 @@
+{
+  "schema": "unofficial-stacks-project-ai-drafts-tex-process-tree/v1",
+  "status": "PASS",
+  "started_utc": "2026-09-30T00:05:01.098887+00:00",
+  "command": [
+    "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+    "-no-shell-escape",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-recorder",
+    "-synctex=1",
+    "--disable-installer",
+    "algebra.tex"
+  ],
+  "resolved_executable": "@home\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+  "cwd": "@build\\prior",
+  "timeout_seconds": 900,
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "caller_asserted_mutex_owned": true,
+  "created_suspended": true,
+  "assigned_before_resume": true,
+  "resumed": true,
+  "kill_on_close": true,
+  "breakaway_allowed": false,
+  "handle_inheritance": "explicit stdin/stdout handles only",
+  "root_identity": {
+    "pid": 81936,
+    "creation_filetime_100ns": 134352003011299765,
+    "identity_kind": "PID plus kernel process creation FILETIME"
+  },
+  "observed_empty_tree": true,
+  "empty_tree_evidence": "job_accounting_active_processes_zero",
+  "root_exited_before_tree_empty": false,
+  "peak_observed_active_processes": 2,
+  "job_termination_requested": false,
+  "cleanup_errors": [],
+  "root_thread_id": 37664,
+  "initial_accounting": {
+    "active_processes": 1,
+    "total_processes": 1,
+    "total_terminated_processes": 0
+  },
+  "final_accounting": {
+    "active_processes": 0,
+    "total_processes": 2,
+    "total_terminated_processes": 0
+  },
+  "finished_utc": "2026-09-30T00:05:08.062725+00:00",
+  "elapsed_seconds": 6.935155,
+  "returncode": 0,
+  "stdout_bytes": 41258,
+  "stdout_sha256": "3A9975F60F4B740B6CEF93E90ABEDBAE67D1A564E02A2DC62D8EBAB218E447D1",
+  "deferred_keyboard_signals": [],
+  "failure": null
+}

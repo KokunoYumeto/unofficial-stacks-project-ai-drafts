@@ -1,0 +1,46 @@
+\begin{lemma}
+\label{lemma-characterize-image-finite-type}
+Let $R \to S$ be a finite type ring map.
+Denote $X = \Spec(R)$ and $Y = \Spec(S)$.
+Write $f : Y \to X$ the induced
+map of spectra. Let $E \subset Y = \Spec(S)$ be a
+constructible set.
+If a point $\xi \in X$ is in $f(E)$, then
+$\overline{\{\xi\}} \cap f(E)$ contains an open
+dense subset of $\overline{\{\xi\}}$.
+\end{lemma}
+
+\begin{proof}
+Let $\xi \in X$ be a point of $f(E)$. Choose a point $\eta \in E$
+mapping to $\xi$. Let $\mathfrak p \subset R$ be the prime
+corresponding to $\xi$ and let $\mathfrak q \subset S$ be the
+prime corresponding to $\eta$. Consider the diagram
+$$
+\xymatrix{
+\eta \ar[r] \ar@{|->}[d] & E \cap Y' \ar[r] \ar[d] &
+Y' = \Spec(S/\mathfrak q) \ar[r] \ar[d] &
+Y \ar[d] \\
+\xi \ar[r] & f(E) \cap X' \ar[r] &
+X' = \Spec(R/\mathfrak p) \ar[r] &
+X
+}
+$$
+By Lemma \ref{lemma-affine-map-quasi-compact} the set $E \cap Y'$
+is constructible in $Y'$.
+It follows that we may replace $X$ by $X'$ and
+$Y$ by $Y'$. Hence we may assume that $R \subset S$ is an
+inclusion of domains, $\xi$ is the generic
+point of $X$, and $\eta$ is the generic point of $Y$.
+By Lemma \ref{lemma-generic-finite-presentation}
+combined with Chevalley's theorem
+(Theorem \ref{theorem-chevalley})
+we see that there exist dense opens $U \subset X$,
+$V \subset Y$ such that $f(V) \subset U$ and
+such that $f : V \to U$ maps constructible sets
+to constructible sets. Note that $E \cap V$ is
+constructible in $V$, see Topology,
+Lemma \ref{topology-lemma-open-immersion-constructible-inverse-image}.
+Hence $f(E \cap V)$ is constructible in $U$ and contains $\xi$.
+By Topology, Lemma \ref{topology-lemma-generic-point-in-constructible}
+we see that $f(E \cap V)$ contains a dense open $U' \subset U$.
+\end{proof}

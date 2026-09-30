@@ -1,0 +1,56 @@
+\begin{proposition}
+\label{proposition-going-down-normal-integral}
+Let $R \subset S$ be an inclusion of domains.
+Assume $R$ is normal and $S$ integral over $R$.
+Let $\mathfrak p \subset \mathfrak p' \subset R$
+be primes. Let $\mathfrak q'$ be a prime of $S$
+with $\mathfrak p' = R \cap \mathfrak q'$.
+Then there exists a prime $\mathfrak q$
+with $\mathfrak q \subset \mathfrak q'$
+such that $\mathfrak p = R \cap \mathfrak q$. In other words:
+the going down property holds for $R \to S$, see
+Definition \ref{definition-going-up-down}.
+\end{proposition}
+
+\begin{proof}
+Let $\mathfrak p$, $\mathfrak p'$ and $\mathfrak q'$
+be as in the statement. We have to show there is a prime
+$\mathfrak q$, with $\mathfrak q \subset \mathfrak q'$ and
+$R \cap \mathfrak q = \mathfrak p$. This is the same
+as finding a prime of
+$S_{\mathfrak q'}$ mapping to $\mathfrak p$.
+According to Lemma \ref{lemma-in-image} we have to show
+that $\mathfrak p S_{\mathfrak q'} \cap R
+= \mathfrak p$. Pick $z \in \mathfrak p S_{\mathfrak q'} \cap R$.
+We may write $z = y/g$ with $y \in \mathfrak pS$ and
+$g \in S$, $g \not\in \mathfrak q'$. Written
+differently we have $zg = y$.
+
+\medskip\noindent
+By Lemma \ref{lemma-integral-integral-over-ideal}
+there exists a monic polynomial
+$P = x^m + b_{m-1} x^{m-1} + \ldots + b_0$
+with $b_i \in \mathfrak p$ such that $P(y) = 0$.
+
+\medskip\noindent
+By Lemma \ref{lemma-minimal-polynomial-normal-domain}
+the minimal polynomial of $g$ over $K$ has coefficients
+in $R$. Write it as $Q = x^n + a_{n-1} x^{n-1} + \ldots
++ a_0$. Note that not all $a_i$, $i = n-1, \ldots, 0$
+are in $\mathfrak p$ since that would imply
+$g^n = \sum_{j < n} a_j g^j \in \mathfrak pS
+\subset \mathfrak p'S
+\subset \mathfrak q'$
+which is a contradiction.
+
+\medskip\noindent
+Since $y = zg$ we see immediately from the above
+that $Q' = x^n + za_{n-1} x^{n-1} + \ldots + z^{n}a_0$
+is the minimal polynomial for $y$. Hence
+$Q'$ divides $P$ and by Lemma \ref{lemma-polynomials-divide}
+we see that $z^ja_{n - j} \in \sqrt{(b_0, \ldots, b_{m-1})}
+\subset \mathfrak p$, $j =  1, \ldots, n$.
+Because not all $a_i$, $i = n-1, \ldots, 0$
+are in $\mathfrak p$ we conclude $z \in \mathfrak p$
+as desired.
+\end{proof}

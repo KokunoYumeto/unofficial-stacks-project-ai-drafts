@@ -1,0 +1,34 @@
+\begin{lemma}
+\label{lemma-going-up-down-composition}
+Suppose $R \to S$ and $S \to T$ are ring maps satisfying
+going down. Then so does $R \to T$. Similarly for going up.
+\end{lemma}
+
+\begin{proof}
+Write the original maps as $\varphi:R\to S$ and
+$\psi:S\to T$. For going down, take
+$\mathfrak p\subseteq\mathfrak p'$ in $R$ and a prime
+$\mathfrak r'$ of $T$ contracting to $\mathfrak p'$.
+Put $\mathfrak q'=\psi^{-1}(\mathfrak r')$.
+Going down for $\varphi$ gives
+$\mathfrak q\subseteq\mathfrak q'$ contracting to
+$\mathfrak p$. Going down for $\psi$ then gives
+$\mathfrak r\subseteq\mathfrak r'$ with
+$\psi^{-1}(\mathfrak r)=\mathfrak q$. Its original
+composite contraction is
+$(\psi\circ\varphi)^{-1}(\mathfrak r)
+=\varphi^{-1}(\mathfrak q)=\mathfrak p$.
+
+For going up, take the same chain in $R$ and a prime
+$\mathfrak r$ of $T$ contracting to $\mathfrak p$.
+Set $\mathfrak q=\psi^{-1}(\mathfrak r)$.
+Going up for $\varphi$ supplies
+$\mathfrak q'\supseteq\mathfrak q$ contracting to
+$\mathfrak p'$, and going up for $\psi$ supplies
+$\mathfrak r'\supseteq\mathfrak r$ contracting to
+$\mathfrak q'$. The same inverse-image composition gives
+$(\psi\circ\varphi)^{-1}(\mathfrak r')=\mathfrak p'$.
+These are the precise prime maps underlying
+Lemma \ref{lemma-going-up-down-specialization} and
+Topology, Lemma \ref{topology-lemma-lift-specialization-composition}.
+\end{proof}

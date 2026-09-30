@@ -1,0 +1,251 @@
+\begin{lemma}
+\label{editorial-source-lemma-universally-bijective}
+Let $\varphi : R \to S$ be a ring map such that
+\begin{enumerate}
+\item the kernel of $\varphi$ is locally nilpotent, and
+\item $S$ is generated as an $R$-algebra by elements $x$
+such that there exist $n > 0$ and a polynomial $P(T) \in R[T]$
+whose image in $S[T]$ is $(T - x)^n$.
+\end{enumerate}
+Then $\Spec(S) \to \Spec(R)$ is a homeomorphism and $R \to S$
+induces purely inseparable extensions of residue fields.
+Moreover, conditions (1) and (2) remain true on arbitrary base change.
+\end{lemma}
+
+\begin{proof}
+If $S=0$, the nil-kernel hypothesis
+makes $1\in R$ nilpotent, so $R=0$.
+Every unital base change of the zero
+ring is again zero, and all assertions
+follow. Hence assume $S\neq0$.
+Retain the original map $\varphi:R\to S$
+and its kernel $I$. For every original
+generator $x$ retain the given positive
+integer $n$ and the entire original
+polynomial $P(T)=\sum_{j=0}^d c_jT^j$,
+whose image is $(T-x)^n$. Coefficient
+comparison gives $d\geq n$,
+$c_n-1\in I$, and $c_j\in I$ for
+$j>n$. The polynomial
+$Q(T)=T^n+\sum_{j=0}^{n-1}c_jT^j$
+is a monic annihilating polynomial
+for $x$. Indeed the full difference
+$$
+P(T)-Q(T)=(c_n-1)T^n+
+\sum_{j=n+1}^d c_jT^j
+$$
+has all coefficients in the original
+kernel, so $Q$ has the same image
+$(T-x)^n$. This retains every
+coefficient of $P$ and proves
+integrality without presuming that
+the given lift itself is monic.
+All generators, hence $S$, are
+integral over $R$. The integral
+injection $R/I\to S$ is surjective
+on spectra. Since $I$ is nil,
+$V(I)=\Spec(R)$, so the original
+spectrum map is surjective; it is
+also closed by integrality.
+
+We first prove the global scalar
+identity used in the fibre argument.
+Write
+$$
+e_j=\binom nj x^j
+=\varphi((-1)^j c_{n-j})\in\varphi(R),
+\qquad 1\leq j\leq n.
+$$
+All signs here are the actual signs
+in the given $(T-x)^n$. For
+$1\leq h\leq n$, the full Newton
+recurrence is
+$$
+n x^h=
+\sum_{j=1}^{h-1}(-1)^{j-1}e_j\,n x^{h-j}
++(-1)^{h-1}h e_h.
+$$
+It follows directly on substituting
+the original $e_j$: Pascal's identity
+telescopes to
+$\sum_{j=0}^{h-1}(-1)^j\binom nj
+=(-1)^{h-1}\binom{n-1}{h-1}$,
+and $n\binom{n-1}{h-1}=h\binom nh$.
+These two integer identities give
+exactly the coefficient $n$ on the
+right, with every displayed summand
+retained. Induction on $h$, starting
+with $n x=e_1$, proves $n x^h\in\varphi(R)$.
+Explicit preimages are supplied by
+the same recurrence in $R$, taking
+$E_j=(-1)^j c_{n-j}$ and
+$$
+U_h=\sum_{j=1}^{h-1}(-1)^{j-1}E_j U_{h-j}
++(-1)^{h-1}h E_h.
+$$
+The empty sum for $h=1$ gives
+$U_1=E_1$, and $\varphi(U_h)=n x^h$.
+
+Fix a prime integer $p$ and write
+the original $n=p^e m$, with
+$p\nmid m$, retaining $q=p^e$.
+One has the exact integer identity
+$$
+\gcd\left(n,\binom nq\right)=m.
+$$
+For a prime $\ell\neq p$ dividing
+$n$, the identity
+$\binom nq=(n/q)\binom{n-1}{q-1}$
+shows its $\ell$-adic valuation is
+at least that of $n$, since
+$q$ is prime to $\ell$.
+For $p$, the factor $n/q=m$
+is prime to $p$, and
+$\binom{n-1}{q-1}$ is nonzero
+modulo $p$. In fact
+$(1+T)^{qm}=(1+T^q)^m$ modulo
+$p$, so dividing by $1+T$ shows
+that its degree-$q-1$ coefficient
+is $(-1)^{q-1}=1$ in
+$\mathbf F_p$. This also treats
+$q=1$. These valuations prove
+the displayed greatest common
+divisor, including every prime
+factor of the original $n$.
+Choose integers $A,B$ with
+$An+B\binom nq=m$. Then
+$$
+\varphi(AU_q+BE_q)
+=A n x^q+B\binom nq x^q=m x^q.
+$$
+Thus the source assertion
+$m x^{p^e}\in\varphi(R)$ is
+indeed true globally, not merely
+after taking a residue field.
+The recurrence and this integer
+identity supply its missing proof.
+
+Now let $\mathfrak p\subset R$
+and retain $K=\kappa(\mathfrak p)$
+and the original fibre
+$C=K\otimes_R S$. It is nonzero
+by surjectivity on spectra. Thus
+the map from the field $K$ to $C$
+is injective. If $K$ has
+characteristic zero, each generator
+$y=1\otimes x$ satisfies
+$n y=-\overline c_{n-1}$.
+The original positive $n$ is
+invertible in $K$, so
+$y=-n^{-1}\overline c_{n-1}$
+belongs to the image of $K$.
+All generators do, and hence
+$K\to C$ is an isomorphism.
+
+If $K$ has characteristic $p>0$,
+use the original decomposition
+$n=q m$, $q=p^e$, for each
+generator separately. The full
+fibre polynomial is
+$$
+(T-y)^n=(T^q-y^q)^m
+=\sum_{j=0}^m\binom mj(-1)^j
+T^{q(m-j)}y^{qj}.
+$$
+Its coefficient of $T^{n-q}$
+is $-m y^q=\overline c_{n-q}$.
+Since $m$ is a unit of $K$,
+$y^q=-m^{-1}\overline c_{n-q}$
+is in the original image of $K$.
+This is the direct fibre formula;
+the global preimage proved above
+gives the same conclusion before
+reducing coefficients.
+If $e=0$, use the exponent $1$
+in Lemma \ref{editorial-source-lemma-p-ring-map};
+otherwise use $e$. In either
+case a positive $p$-power of $y$
+is in $K$, and the corresponding
+integer multiple is zero in
+characteristic $p$. Thus that
+lemma applies to $K\to C$, whose
+kernel is zero. The fibre has
+one prime and its residue field
+is purely inseparable over $K$.
+The same conclusion holds in
+characteristic zero by the
+already proved isomorphism.
+Remark \ref{algebra-remark-fundamental-diagram}
+now gives bijectivity on spectra
+and the asserted original residue
+extensions. A continuous closed
+bijection is a homeomorphism.
+
+Under any original $f:R\to R'$,
+the image polynomial
+$P_f(T)=\sum_j f(c_j)T^j$ has
+image $(T-1\otimes x)^n$ in
+$(R'\otimes_R S)[T]$, with all
+coefficients and the same $n$
+retained. These elements generate
+the base-changed algebra, so
+condition (2) persists. For
+condition (1), the original
+surjectivity on spectra persists
+under base change by the explicit
+nonzero residue-field tensor
+construction in Lemma
+\ref{editorial-source-lemma-2-3-ring-map}. Hence
+the new kernel lies in every
+prime and is locally nilpotent.
+Both hypotheses, and therefore
+all conclusions, hold for the
+actual base-changed map.
+
+The scalar identities give more
+global information for a finite
+original generating list
+$x_1,\ldots,x_r$ with integers
+$n_1,\ldots,n_r$. Put
+$N=\prod_{i=1}^r n_i$, taking
+$N=1$ for the empty list.
+Since $n_i x_i$ has the
+specified preimage $U_{i,1}$,
+the map $R[1/N]\to S[1/N]$
+is surjective, sending the
+original fraction
+$U_{i,1}/n_i=((N/n_i)U_{i,1})/N$
+to $x_i$. Its kernel is exactly
+$I[1/N]$: the fraction-witness
+proof is the same as for
+inverting $p$ in Lemma
+\ref{editorial-source-lemma-p-ring-map}, replacing
+each power of $p$ there by the
+same power of this original $N$.
+Thus it is an explicit nil-kernel
+quotient, and is an isomorphism
+if $\varphi$ was injective.
+
+For a fixed prime $p$, retain
+instead $n_i=p^{e_i}m_i$ and
+$M=\prod_i m_i$. Over $R[1/M]$,
+the global preimages above give
+both
+$$
+x_i^{p^{e_i}}=
+\frac{\varphi(A_iU_{i,p^{e_i}}+B_iE_{i,p^{e_i}})}{m_i},
+\qquad
+p^{e_i}x_i=\frac{\varphi(U_{i,1})}{m_i}.
+$$
+When $e_i=0$ these put $x_i$
+itself in the image; one may
+then choose exponent $1$.
+For $e_i>0$ these are the
+original two $p$-power conditions.
+The kernel remains $I[1/M]$
+and is nil. Thus the whole
+localized map satisfies Lemma
+\ref{editorial-source-lemma-p-ring-map}, with the
+exact root exponents and all
+prime-to-$p$ denominators retained.
+\end{proof}

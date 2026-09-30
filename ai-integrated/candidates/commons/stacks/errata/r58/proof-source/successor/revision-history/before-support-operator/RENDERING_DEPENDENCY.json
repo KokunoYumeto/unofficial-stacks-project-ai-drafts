@@ -1,0 +1,20 @@
+{
+  "id": "RENDER-TEX-005",
+  "failed_build": "../ALGEBRA_PORTABLE_BUILD_20260929/attempt-04/BUILD_RECEIPT.json",
+  "failed_stage": "a-algebra-tex-1",
+  "source_operation": "MC-STK-ERR-1990-OP1",
+  "failure": "The preamble loads amsfonts but does not define the reviewed subsetneq command.",
+  "correction": "Load amssymb directly after the chapter preamble input. The companion master loads it likewise.",
+  "standard_definition": "\\DeclareMathSymbol{\\subsetneq}{\\mathrel}{AMSb}{\"28}",
+  "mathematical_operands_changed": false,
+  "original_source_operations_unchanged": true,
+  "public_cumulative_and_fixes_only_dependency_required": true,
+  "dependency_integration_status": "registered_in_candidate_source_operation_and_replayed_not_admitted",
+  "required_before_admission": "Bind and replay the supporting preamble change in the cumulative composition and reusable fixes-only export; a package-only repair is insufficient.",
+  "supporting_unit": "MC-STK-ERR-2465",
+  "supporting_operation": "MC-STK-ERR-2465-OP1",
+  "source": "algebra.tex",
+  "source_start_line": 1,
+  "common_repository_preamble_change": false,
+  "reusable_chapter_patch_carries_dependency": true
+}

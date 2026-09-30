@@ -1,0 +1,179 @@
+\begin{lemma}
+\label{editorial-source-lemma-geometrically-irreducible-any-base-change}
+Let $k$ be a field.
+Let $S$ be a geometrically irreducible $k$-algebra.
+Let $R$ be any $k$-algebra.
+The map
+$$
+\Spec(R \otimes_k S) \longrightarrow \Spec(R)
+$$
+induces a bijection on irreducible components.
+\end{lemma}
+
+\begin{proof}
+Write $A=R\otimes_k S$ and retain
+$f:\Spec(A)\to\Spec(R)$. The
+original $S$ is nonzero, since
+geometric irreducibility includes
+nonemptiness. If $R=0$, then
+$A=0$ and both sets of components
+are empty, so the assertion
+holds. Otherwise, for every
+$\mathfrak p\in\Spec(R)$ the
+original quotient and fibre maps
+give
+$$
+A/\mathfrak pA\simeq(R/\mathfrak p)\otimes_k S
+\longrightarrow\kappa(\mathfrak p)\otimes_k S.
+$$
+The quotient isomorphism sends
+$[r\otimes s]$ to $\overline r\otimes s$
+and has inverse
+$\overline r\otimes s\mapsto[r\otimes s]$.
+The arrow is injective, since
+$R/\mathfrak p\to\kappa(\mathfrak p)$
+is an injection of $k$-vector
+spaces and tensoring by $S$
+preserves it. Its target has
+prime nilradical by the given
+geometric irreducibility of $S$.
+The inverse image of this
+nilradical is precisely the
+nilradical of the source, by
+injectivity, and is therefore
+a proper prime. In particular
+$A/\mathfrak pA$ has irreducible
+nonempty spectrum.
+
+Consequently the original ideal
+$$
+\sigma(\mathfrak p)=\sqrt{\mathfrak pA}
+$$
+is prime, and $f^{-1}(V(\mathfrak p))$
+is the irreducible closed subset
+$V(\sigma(\mathfrak p))$.
+Its contraction is exactly
+$\mathfrak p$. To verify this,
+the injection
+$R/\mathfrak p\to(R/\mathfrak p)\otimes_k S$
+can be split as a linear map
+by choosing a $k$-linear
+functional $S\to k$ taking
+$1$ to $1$. Hence an element
+of $R/\mathfrak p$ becomes
+nilpotent in that tensor
+exactly when it was nilpotent
+in the original domain, that
+is, exactly when it is zero.
+This proves the contraction
+claim with the given scalar
+map.
+
+The map $R\to A$ is flat: a
+$k$-basis of $S$ gives a free
+$R$-module basis of $A$.
+Going down therefore sends
+every minimal prime of $A$
+to a minimal prime of $R$.
+If $\mathfrak p$ is minimal
+in $R$, choose a minimal
+$\mathfrak q_0\subseteq\sigma(\mathfrak p)$
+of $A$. Its contraction is
+a minimal prime contained
+in $\mathfrak p$, hence is
+exactly $\mathfrak p$.
+It contains $\mathfrak pA$,
+so it contains
+$\sqrt{\mathfrak pA}=\sigma(\mathfrak p)$.
+Thus equality holds, proving
+that $\sigma(\mathfrak p)$
+is minimal. Conversely, for
+any minimal $\mathfrak q$
+of $A$, put
+$\mathfrak p=\mathfrak q\cap R$.
+Then $\sigma(\mathfrak p)\subseteq\mathfrak q$,
+so minimality makes them equal.
+These actual inverse maps on
+minimal primes prove the
+bijection on components via
+Lemma \ref{editorial-source-lemma-irreducible}.
+
+The construction gives more:
+$\sigma$ is a continuous section
+of $f$ on the entire spectra,
+selecting the generic point
+of each original fibre.
+For every $\mathfrak p$, its
+prime is contained in every
+prime of $A$ over $\mathfrak p$,
+and its contraction equals
+$\mathfrak p$, so it is the
+unique generic fibre prime.
+For an original $a\in A$ one
+has the exact equality
+$$
+\sigma^{-1}(D(a))=f(D(a)).
+$$
+If a prime above $\mathfrak p$
+does not contain $a$, the
+smaller $\sigma(\mathfrak p)$
+does not contain it. Conversely
+if $a\notin\sigma(\mathfrak p)$,
+this prime itself is a point
+of $D(a)$ above $\mathfrak p$.
+Lemma \ref{editorial-source-lemma-map-into-tensor-algebra-open}
+makes the right side open,
+proving continuity. Since
+$f\sigma$ is the identity,
+the section is a topological
+embedding, with inverse the
+restriction of $f$ to its
+image. That image is dense:
+every nonempty basic open
+$D(a)$ has nonempty image,
+and the displayed equality
+puts a section point in it.
+Also
+$$
+\overline{\{\sigma(\mathfrak p)\}}
+=V(\sqrt{\mathfrak pA})
+=f^{-1}(V(\mathfrak p)).
+$$
+Restricting the two continuous
+inverse maps to the minimal
+primes proves a homeomorphism
+of their subspaces in the
+respective spectra, strengthening
+the stated component bijection.
+
+Finally this section is
+compatible with arbitrary
+original $k$-algebra base change
+$\theta:R\to R'$. If $\mathfrak p'$
+contracts to $\mathfrak p$,
+the induced map of fields
+$\kappa(\mathfrak p)\to\kappa(\mathfrak p')$
+gives an injection
+$$
+\kappa(\mathfrak p)\otimes_k S
+\longrightarrow\kappa(\mathfrak p')\otimes_k S.
+$$
+The inverse image of the
+nilradical on the right is
+the nilradical on the left,
+since injective ring maps
+reflect nilpotence. The two
+quotient-fibre descriptions
+above therefore show that
+$\sigma_{R'}(\mathfrak p')$
+contracts to
+$\sigma_R(\mathfrak p)$ in
+$R\otimes_k S$. This proves
+the stated compatibility
+through the original tensor
+map $r\otimes s\mapsto\theta(r)\otimes s$.
+The section is a continuous
+map of these spectra; no
+extra residue-field
+isomorphisms are asserted.
+\end{proof}

@@ -1,0 +1,25 @@
+\begin{lemma}
+\label{lemma-constructible}
+Let $R$ be a ring. A subset of $\Spec(R)$ is constructible if and only
+if it can be written as a finite union of subsets of the form
+$D(f) \cap V(g_1, \ldots, g_m)$ for $f, g_1, \ldots, g_m \in R$.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-qc-open} the subset $D(f)$ and the complement of
+$V(g_1, \ldots, g_m)$ are retro-compact open. Hence
+$D(f) \cap V(g_1, \ldots, g_m)$ is a constructible subset and so is
+any finite union of such. Conversely, by Topology, Definition
+\ref{topology-definition-constructible}, a constructible subset has an
+expression $T=\bigcup_{\alpha=1}^k(U_\alpha\cap V_\alpha^c)$ with
+$U_\alpha,V_\alpha$ retrocompact open. By Lemma \ref{lemma-qc-open}, write
+$U_\alpha=\bigcup_{i=1}^{n_\alpha}D(f_{\alpha i})$ and
+$V_\alpha=\bigcup_{j=1}^{m_\alpha}D(g_{\alpha j})$. Then
+$$
+T=\bigcup_{\alpha=1}^k\bigcup_{i=1}^{n_\alpha}
+\left(D(f_{\alpha i})\cap
+V(g_{\alpha1},\ldots,g_{\alpha m_\alpha})\right).
+$$
+These are finite unions; an empty inner union is empty, and
+$V()=\Spec(R)$ when $m_\alpha=0$.
+\end{proof}

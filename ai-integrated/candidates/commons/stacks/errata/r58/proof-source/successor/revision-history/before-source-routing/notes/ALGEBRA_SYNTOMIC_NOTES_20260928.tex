@@ -1,0 +1,127 @@
+\subsection{Syntomic morphisms: source review and separate editorial consequences}\label{syntomic-morphisms-source-review-and-separate-editorial-consequences}
+
+Authority: Stacks Project authors, commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, \texttt{algebra.tex:36427–37054}, SHA256 \texttt{FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3}. The additional bounded reading at 37760--37775 verifies the other two operations of the already composed localization unit MC-STK-ERR-0446; it does not adjudicate the intervening smooth section. The next source interval begins at 37055.
+
+This is editorial evidence. It does not replace the source statements, original presentations, proofs or exposition in a translation. Minimal text operations are recorded separately in the review. The source's omitted details do not automatically count as errors. The consequences below are proved comparisons and deductions, without a novelty claim. The bounded corpus query \texttt{syntomic\ complete\ intersection} returned two research records, including one PDF-only record; both remain unread routing records. No PDF reading or exhaustive literature survey is claimed.
+
+\subsubsection{Descent, base change and the original presentations}\label{descent-base-change-and-the-original-presentations}
+
+For a faithfully flat map \(R\to R'\), write \(S'=R'\otimes_R S\). Finite presentation and flatness descend and ascend as stated at 36462--36464. For every prime \(\mathfrak p'\) above \(\mathfrak p\), the original fibre comparison is \[
+(R'\otimes_R S)\otimes_{R'}\kappa(\mathfrak p')
+\longrightarrow
+(S\otimes_R\kappa(\mathfrak p))\otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak p'),
+\qquad (r'\otimes s)\otimes a\longmapsto(s\otimes1)\otimes r'a.
+\] Its inverse sends \((s\otimes b)\otimes a\) to \((1\otimes s)\otimes ba\). The balancing relations give well-defined mutually inverse algebra maps. Faithful flatness supplies a prime above every \(\mathfrak p\); the previously checked field-extension equivalence for local complete intersections then gives both directions. For arbitrary base change the same comparison gives ascent at every new prime. The finite principal-cover assertion follows because flatness, finite presentation and the complete-intersection property of the fibre local rings are local on the target. Empty spectra and the zero algebra satisfy the stated conventions.
+
+Retain a relative global complete-intersection presentation exactly as given: \[
+P=R[x_1,\ldots,x_n],\qquad I=(f_1,\ldots,f_c),\qquad S=P/I.
+\] Every nonempty fibre has dimension \(n-c\). Localizing at the image \(g\) of \(h\in P\) uses the original presentation \[
+S_g=R[x_1,\ldots,x_n,x_{n+1}]/(f_1,\ldots,f_c,hx_{n+1}-1).
+\] The forward map sends \(x_{n+1}\) to \(g^{-1}\); the inverse extends \(P\to P[x_{n+1}]/(I,hx_{n+1}-1)\), where \(g\) is invertible. A nonempty open of a field global complete intersection has the same component dimension \(n-c\), by the original complete-intersection criterion. Thus this additional variable and additional equation retain the required difference. The presentation and these maps commute with arbitrary \(R\to R'\).
+
+For Huber's lemma, finite presentation makes \(I\) finitely generated. If \(S\ne0\), a free finite \(S\)-module has finite rank: a finite generating family involves only finitely many basis coordinates, so any further basis vector could not lie in its span. Choose the specified basis lifts \(f_1,\ldots,f_c\). In the finite module \(M=I/(f_1,\ldots,f_c)\), one has \(IM=M\). The determinant proof of Nakayama, authority 3615--3668, supplies \(g\in1+I\) annihilating \(M\). Therefore \(I_g=(f_1,\ldots,f_c)_g\) and \(S_g=S\). For the kernel \(J=(f_1,\ldots,f_c,gz-1)\) of \(P[z]\to S\), the principal-localization conormal comparison at 35604--35661, with its already checked continuation, identifies \[
+J/J^2\cong (I/I^2)_g\oplus S(gz-1).
+\] The comparison sends each original \(f_i\) to its class and the last basis vector to \(gz-1\). Hence these actual equations form the claimed basis. If \(S=0\), the presentation \(R/(1)\) suffices; its conormal module is zero over the zero ring, so the basis assertion has the stipulated empty-spectrum interpretation.
+
+\subsubsection{Neighbourhoods, approximation and local regularity}\label{neighbourhoods-approximation-and-local-regularity}
+
+Authority 36670--36720 uses the open locus where fibre dimension is at most \(n-c\), established at 31307--31327. In case (1), write that open as \(\operatorname{Spec}(S)\setminus V(J)\). Disjointness \(V(J)\cap V(IS)=\varnothing\) means \(J+IS=S\); an identity \(g+a=1\), \(g\in J\), \(a\in IS\), supplies the required \(g\). In case (2), \(J(S\otimes_R\kappa(\mathfrak p))\) is the unit ideal. A finite identity there can be written \[
+1=\sum_{i=1}^r \overline{j_i}\,\overline{s_i}/\overline{t_i},
+\qquad j_i\in J,\ s_i\in S,\ t_i\in R\setminus\mathfrak p.
+\] Put \(t=\prod_i t_i\) and \(g=\sum_i j_i s_i\prod_{\ell\ne i}t_\ell\). Then \(g\in J\) and its image in the fibre is the nonzero scalar \(\overline t\), hence is a unit. The empty finite sum causes no issue in a zero fibre: take \(g=0\), whose image is the unit of the zero ring. In case (3), choose a principal neighbourhood of the given prime within the same dimension open. In every case the displayed localization has \(n+1\) variables and \(c+1\) equations. The height theorem in the polynomial ring over each residue field gives dimension at least \(n-c\) for each of its nonempty components. The constructed upper bound therefore gives equality. No equation or denominator has been dropped.
+
+For 36726--36764, begin with the subring \(R_0\) generated over \(\mathbf Z\) by every coefficient of the original \(f_i\). The source field-extension argument and quasi-compactness give finitely many \(g_j\in S_0\) whose distinguished opens have the required dimension bound and cover the image of \(\operatorname{Spec}(S)\). Choose polynomial lifts \(G_j\) and representatives \(A_j\in R[x_1,\ldots,x_n]\) of a unit-ideal identity in \(S\). There are polynomials \(H_i\in R[x_1,\ldots,x_n]\) with \[
+1-\sum_j A_jG_j=\sum_i H_i f_i.
+\] Adjoin every coefficient of all \(A_j,H_i\) to \(R_0\). This finite enlargement makes the identity hold already over the enlarged ring, with the same original \(f_i\). Fibre dimensions on each localized chart remain bounded after that base change. The charts now cover its entire spectrum, and the height lower bound gives equality. If \(S=0\), use the certificate \(1=\sum_i H_i f_i\); the enlarged \(S_0\) is then zero. This proves the approximation without assuming a nonempty spectrum or inserting an extra relation.
+
+In 36766--36840, over a Noetherian base the original fibre regular sequence lifts by the local Noetherian result at 23491--23504, since the localized polynomial ring is flat over the local base. It also gives flatness of each displayed partial quotient. For an arbitrary base take all finitely generated \(\mathbf Z\)-subalgebras containing the just-constructed \(R_0\). Each is Noetherian and each carries the same complete-intersection presentation. At the contractions of a fixed original prime, the local polynomial rings, their partial quotients and the multiplication maps by each \(f_{i+1}\) have the stated filtered colimits. Exactness of filtered colimits preserves those injections; the quotient by all \(f_i\) is nonzero at the original prime. The flat-colimit criterion gives flatness over \(R\) of each partial quotient. This use of the Noetherian lemma has its hypothesis at every finite stage and does not apply it directly to the possibly non-Noetherian final ring.
+
+The map \(S^c\to I/I^2\), \((a_i)\mapsto\sum_i a_i f_i\bmod I^2\), is an isomorphism at every prime of \(S\), by regular implies quasi-regular, authority 16895--16978. Its kernel and cokernel consequently vanish. Flatness of \(S\) follows from the proved flatness of \(S_{\mathfrak q}\) for every \(\mathfrak q\): for any injection of \(R\)-modules, the kernel after tensoring with \(S\) has zero localization at every prime of \(S\), and is therefore zero. The source's phrase ``syntomic, i.e., flat'' is valid in this relative-global-complete-intersection context, where finite presentation and the fibre condition are already established.
+
+\subsubsection{Ordered roots with all coefficients and signs}\label{ordered-roots-with-all-coefficients-and-signs}
+
+The basis asserted at 36604--36636 can be proved without replacing the original polynomial by a rescaled one. Start with \[
+Q_0(x)=x^n+a_1x^{n-1}+\cdots+a_n\in R[x],\qquad
+R=\mathbf Z[a_1,\ldots,a_n].
+\] Set \(T_0=R\). Inductively put \[
+T_i=T_{i-1}[\beta_i]/(Q_{i-1}(\beta_i)),\qquad
+Q_{i-1}(x)=(x-\beta_i)Q_i(x)\quad\hbox{in }T_i[x].
+\] The second equality exists uniquely by division by the monic linear polynomial. To retain its full coefficients, if \(Q_{i-1}(x)=x^d+u_1x^{d-1}+\cdots+u_d\), write \(Q_i(x)=x^{d-1}+v_1x^{d-2}+\cdots+v_{d-1}\), where \(v_0=1\) and \(v_j=u_j+\beta_i v_{j-1}\) for \(1\le j\le d-1\). The final constant equality is \(u_d=-\beta_i v_{d-1}\), precisely the relation \(Q_{i-1}(\beta_i)=0\). Monic polynomial division gives \(T_i\) the free \(T_{i-1}\)-basis \(1,\beta_i,\ldots,\beta_i^{n-i}\). Thus \(T_n\) has the original ordered monomial basis with \(0\le e_i\le n-i\), and rank \(n!\).
+
+There is a map \(T_n\to\mathbf Z[\alpha_1,\ldots,\alpha_n]\) taking \(\beta_i\mapsto-\alpha_i\), \(a_j\mapsto e_j(\alpha_1,\ldots,\alpha_n)\). Each successive factor relation is satisfied. Conversely send \(\alpha_i\mapsto-\beta_i\). In \(T_n[x]\), the iterated divisions give \(Q_0(x)=\prod_i(x-\beta_i)\); comparison of every coefficient gives \(a_j=e_j(-\beta_1,\ldots,-\beta_n)\). The two maps are inverse on all generators, including the original \(a_j\). The signs change each basis monomial by the unit \((-1)^{\sum e_i}\), and the displayed \(\alpha\)-basis follows.
+
+For the source polynomial \(P(x)=x^n+b_1x^{n-1}+\cdots+b_n\in A[x]\), base change along \(a_i\mapsto b_i\) gives precisely \(A'=A\otimes_R S\) and roots \(\beta_i=-1\otimes\alpha_i\). It is free of rank \(n!\). Its basis contains \(1\), so the map \(A\to A'\) is injective and tensoring with \(A'\) is a direct sum of \(n!\) copies on underlying modules; it reflects zero modules. Its syntomic property follows by the checked base-change result. For \(n=0\), the polynomial is \(1\), the extension is \(A'=A\), the basis is the single empty monomial, and the factorization is the empty product. No factorial has been inverted in any coefficient ring.
+
+\subsubsection{Finite locally free factorization algebras and their exact rank}\label{finite-locally-free-factorization-algebras-and-their-exact-rank}
+
+This is a separate consequence of the source example 36550--36602 and the proved flatness theorem 36842--36854. Retain \(n,m\ge1\), \(N=n+m\), and the original rings \[
+R=\mathbf Z[a_1,\ldots,a_N],\qquad
+S=\mathbf Z[b_1,\ldots,b_n,c_1,\ldots,c_m].
+\] The original coefficient map is exactly \(a_\ell\mapsto\sum_{i+j=\ell}b_i c_j\), with \(b_0=c_0=1\), \(b_i=0\) outside \(0\le i\le n\), and \(c_j=0\) outside \(0\le j\le m\). This convention interprets the displayed \(b_2,c_2\) when \(n=1\) or \(m=1\) and agrees with the source's defining polynomial identity.
+
+The map is finite. Indeed \(S\) is a domain, so apply the monic-divisor result at 8432--8456 in its fraction field to each factor of the original monic degree-\(N\) polynomial. Each \(b_i,c_j\) is integral over the image of \(R\), and the finite list of integral generators makes \(S\) finite as an \(R\)-module. Every geometric fibre is nonempty: split the specialized polynomial over an algebraic closure and allocate any \(n\) of its \(N\) roots, with multiplicities, to the first factor. Finiteness gives dimension zero for each nonempty fibre. The source presentation has \(N\) variables and \(N\) equations, hence is a relative global complete intersection and is flat. Since \(R\) is Noetherian, its finite module \(S\) is finitely presented. It is therefore finite projective, equivalently finite locally free.
+
+Its rank is exactly \(\binom{N}{n}\). The rank of a finite projective module is locally constant; \(\operatorname{Spec}(R)\) is connected since \(R\) is a domain. It suffices to compute after extending the fraction field of \(R\) to an algebraic closure \(E\). The generic polynomial has distinct roots: its discriminant is a nonzero polynomial, as witnessed by the characteristic-zero specialization \(\prod_{i=1}^N(x-i)\). There are precisely \(\binom Nn\) monic factorizations of degrees \(n,m\) over \(E\), one for each size-\(n\) subset of these distinct roots.
+
+To count scheme lengths as well as points, fix such a factorization \(F=BC\). Its Zariski tangent vectors are coefficient lists of polynomials \(\dot B,\dot C\), with degrees less than \(n,m\), satisfying \[
+C\dot B+B\dot C=0.
+\] The factors \(B,C\) are relatively prime. Reduction modulo \(B\) gives \(\dot B=0\bmod B\), hence \(\dot B=0\) by its degree; then \(\dot C=0\). This calculation is the linearization of all \(N\) original coefficient equations, with no discarded constant term. The finite local \(E\)-algebra at the point thus has maximal ideal \(\mathfrak m\) with \(\mathfrak m/\mathfrak m^2=0\). Nakayama gives \(\mathfrak m=0\); its residue field is \(E\), so its length is one. Decomposition of the finite Artinian fibre into its local factors proves that its dimension over \(E\) is \(\binom Nn\), as claimed.
+
+For every map \(R\to A\), the same algebra \(A\otimes_R S\), with the same coefficient equations, is finite locally free of constant rank \(\binom Nn>0\), and is faithfully flat and syntomic. The rank remains the same at repeated-root fibres, counting their full algebraic lengths; reducedness at those fibres is not asserted. Faithfulness follows because localization at each prime is a nonzero finite free module of that positive rank. This argument asserts finite local freeness, not an unproved global choice of basis for the factorization algebra.
+
+\subsubsection{Universal Koszul resolution and every infinitesimal neighbourhood}\label{universal-koszul-resolution-and-every-infinitesimal-neighbourhood}
+
+Keep the original relative global complete-intersection presentation \(P=R[x_1,\ldots,x_n]\), \(I=(f_1,\ldots,f_c)\), \(S=P/I\). Its Koszul complex has \[
+K_j=\bigwedge^j_P P^c,\qquad
+d(e_{i_1}\wedge\cdots\wedge e_{i_j})
+=\sum_{r=1}^j(-1)^{r-1}f_{i_r}
+ e_{i_1}\wedge\cdots\widehat e_{i_r}\cdots\wedge e_{i_j},
+\] for \(i_1<\cdots<i_j\). Every pair of terms in \(d^2\) has opposite signs and the same coefficient \(f_{i_r}f_{i_s}\), so \(d^2=0\).
+
+This complex resolves \(S\). At a prime containing \(I\), the source has proved that the specified \(f_i\) form a regular sequence. The regular-sequence Koszul assertion follows by induction: adjoining \(f_j\) forms the mapping cone of multiplication by \(f_j\) on the preceding Koszul complex; its only possible positive homology is the kernel of multiplication by \(f_j\) on \(P/(f_1,\ldots,f_{j-1})\), and that kernel is zero. At a prime not containing \(I\), some \(f_i\) is invertible. The degree-one operator \(h(\omega)=f_i^{-1} e_i\wedge\omega\) obeys \(dh+hd=1\) by the displayed differential. Thus the localized complex is contractible there. Localizing its homology at every prime now proves exactness globally, with degree-zero cokernel \(S\).
+
+Every \(K_j\) is \(R\)-flat, and \(S\) is \(R\)-flat by the source theorem. In the augmented exact complex, let \(Z_0=S\) and let \(Z_{j+1}\) be the kernel of the surjection \(K_j\to Z_j\). In \[
+0\longrightarrow Z_{j+1}\longrightarrow K_j\longrightarrow Z_j\longrightarrow0,
+\] flatness of \(K_j,Z_j\) implies flatness of \(Z_{j+1}\), by the long exact Tor sequence. Induction shows that all these sequences remain exact after tensoring with every \(R\)-module \(M\). Consequently \(K\otimes_R M\to S\otimes_R M\) is exact in positive degrees. In particular every algebra base change retains the resolution, with the original images of all \(f_i\).
+
+Tensoring the \(P\)-free resolution with \(S\) makes every differential zero. Its multiplication is the exterior multiplication already specified, so there is an isomorphism of graded \(S\)-algebras \[
+\operatorname{Tor}^{P}_*(S,S)\cong\bigwedge^*_S S^c,
+\] with degree-one basis labelled by the original equations. This assertion includes its algebra structure and commutes with the algebra base changes just established.
+
+The entire associated graded algebra is also explicit: \[
+S[T_1,\ldots,T_c]\longrightarrow\operatorname{gr}_I(P)
+=\bigoplus_{d\ge0}I^d/I^{d+1},\qquad T_i\longmapsto f_i\bmod I^2.
+\] At primes of \(S\), it is the regular-to-quasi-regular isomorphism whose full coefficient induction is at 16907--16977. For completeness, its coefficient test says that if \(\sum_{|\nu|=d}a_\nu f^\nu\in I^{d+1}\), then every \(a_\nu\in I\). Subtract a representation of the element of \(I^{d+1}\) to obtain a zero relation. With \(J=(f_1,\ldots,f_{c-1})\), group it by the highest occurring power \(f_c^\ell\). Induction on \(c\) identifies each \(J^r/J^{r+1}\) as free over \(P/J\); multiplication by \(f_c\) is injective there. The highest group therefore has every coefficient in \(J\). Write those coefficients as sums of multiples of \(f_1,\ldots,f_{c-1}\), and move one factor \(f_c\) into the coefficient in the group with power \(\ell-1\). Induction on \(\ell\) then puts every coefficient in \(I\). For \(c=1\), cancel the nonzerodivisor power \(f_1^d\); for \(c=0\), the assertion is the identity in degree zero and zero in positive degrees. This proves the localized coefficient test. The kernel and cokernel of each graded piece are \(S\)-modules and vanish at all its primes, so the displayed map is globally an isomorphism.
+
+In particular \(I^d/I^{d+1}\) is free over \(S\) on every monomial \(f_1^{\nu_1}\cdots f_c^{\nu_c}\) with \(\nu_i\in\mathbf Z_{\ge0}\) and \(\sum_i\nu_i=d\). Each such module is \(R\)-flat. The sequences \[
+0\longrightarrow I^d/I^{d+1}\longrightarrow P/I^{d+1}\longrightarrow P/I^d\longrightarrow0
+\] show inductively that every \(P/I^d\), \(d\ge1\), is \(R\)-flat. From \(0\to I^d\to P\to P/I^d\to0\) it follows that \(I^d\) is \(R\)-flat too. For an arbitrary algebra map \(R\to R'\), put \(P'=R'[x_1,\ldots,x_n]\) and \(I'=IP'\). Tensoring that last short exact sequence gives an injection \(I^d\otimes_R R'\to P'\) whose image is exactly \((I')^d\). Thus \[
+I^d\otimes_R R'\cong(I')^d,\quad
+(P/I^d)\otimes_R R'\cong P'/(I')^d,\quad
+\operatorname{gr}_I(P)\otimes_R R'\cong\operatorname{gr}_{I'}(P').
+\] The maps send each original power product to the identical power product of its images, and respect multiplication in every degree. No flatness of \(R'\) over \(R\) is needed. These strengthenings follow for this particular relative-complete-intersection presentation; they do not assert arbitrary nonflat base change for all quasi-regular ideals.
+
+Global regularity of the ordered list in the whole polynomial ring is not inferred. For example, take \(R=k\times k\), \(P=R[x,y]\cong k[x,y]\times k[x,y]\), \(f_1=(x,0)\), \(f_2=(y,1)\). Then \(P/(f_1,f_2)\cong k\times0\); its nonempty fibre has dimension \(0=2-2\), so this is a relative global complete intersection. But \(f_1(0,1)=0\), and \((0,1)\ne0\). The original ordered list is not regular in \(P\). The local statements, full Koszul resolution and associated graded conclusion above all still hold.
+
+\subsubsection{Local criteria, composition and lifting}\label{local-criteria-composition-and-lifting}
+
+For 36877--36943, after the permitted principal localization choose \(P\to S=P/I\) with \(I\) finite, and retain the prime \(\mathfrak q'\subset P\) above \(\mathfrak q\), with contraction \(\mathfrak p\subset R\). Choose the original lifts \(f_1,\ldots,f_c\in I\) of a basis of the fibre ideal modulo its local maximal ideal. They generate that localized fibre ideal by Nakayama. Put \(S'=P/(f_1,\ldots,f_c)\), \(J=I/(f_1,\ldots,f_c)\). The ideal \(J\) is finite because \(I\) is finite. Localization gives \[
+0\to J_{\mathfrak q'}\to S'_{\mathfrak q'}\to S_{\mathfrak q}\to0.
+\] The assumed flatness over \(R_{\mathfrak p}\), followed by flatness of \(R_{\mathfrak p}\) over \(R\), makes the last module \(R\)-flat. Tensoring with \(\kappa(\mathfrak p)\) therefore preserves the initial injection. The last map is an isomorphism on that fibre by choice of the \(f_i\), so \(J_{\mathfrak q'}/\mathfrak pJ_{\mathfrak q'}=0\). Nakayama in the local ring \(S'_{\mathfrak q'}\) gives \(J_{\mathfrak q'}=0\). For each of a finite set of generators of \(J\), choose a killing denominator outside \(\mathfrak q'\); their product gives the one \(g\) with \(J_g=0\). The relative dimension at the point is \(n-c\) by the fibre complete-intersection criterion. Applying the proved neighbourhood lemma gives the required further principal localization, still avoiding the given prime. This establishes the source implication without assuming flatness of \(S'\) in advance.
+
+The conormal projectivity statement at 36945--36964 uses a finite cover by those relative complete intersections. On each chart, the corrected stable comparison at 35775--35797 says that the localized original conormal module plus a finite free module is isomorphic to the chart conormal module plus another finite free module. The chart conormal module is finite free. The original conormal module is consequently a direct summand of a finite free module and is finite projective on that chart. The finite-cover criterion then gives the result over \(S_g\). No cancellation claiming freeness of a stably free module is used.
+
+For composition retain both presentations and all chosen lifts: \[
+S=R[x_1,\ldots,x_n]/(f_1,\ldots,f_c),\quad
+S'=S[y_1,\ldots,y_m]/(h_1,\ldots,h_d),
+\] \[
+S'=R[x_1,\ldots,x_n,y_1,\ldots,y_m]/(f_1,\ldots,f_c,h'_1,\ldots,h'_d).
+\] On a fibre over a field, localize at a maximal ideal of \(S'\) and contract to \(S\). The source base/fibre dimension inequality bounds that local dimension by \((n-c)+(m-d)\). Taking the supremum over maximal ideals bounds the total fibre dimension by the same number. The polynomial height theorem for the displayed \(c+d\) equations gives the reverse bound on every nonempty component. This proves the exact relative global complete-intersection condition, including the permitted empty fibres. For syntomic maps use the corrected primes \(\mathfrak q'\subset S'\), \(\mathfrak q\subset S\), choose \(g'\in S'\setminus\mathfrak q'\) and \(g\in S\setminus\mathfrak q\), and retain the actual base change \(S_g\to S'_{gg'}\). Their composition is \(R\to S'_{gg'}\). These are exactly the three operations of MC-STK-ERR-0445. Quasi-compactness gives a finite principal cover of \(\operatorname{Spec}(S')\), completing the source argument.
+
+In the lifting lemma, the chosen elements lie in \(\overline S\) and are \(\overline g_i\); the target is therefore \(\overline S_{\overline g_i}\). Choose a finite subcover, keep its given presentations, and lift all coefficients of every \(\overline f_i\) to \(R\). For each chart the resulting \(S\) has \(S/IS\cong\overline S\). The earlier neighbourhood construction supplies \(g\equiv1\bmod IS\) with \(S_g\) a relative global complete intersection. Its reduction is canonically the same \(\overline S\), since the image of \(g\) is \(1\). This proves the chartwise lifting asserted by the source; no global gluing of those lifts is claimed. The two occurrences here and the two in 37760--37775 are the four operations of MC-STK-ERR-0446. The later smooth proof as a whole remains unadjudicated.
+
+\subsubsection{Report dispositions and propagation}\label{report-dispositions-and-propagation}
+
+Twenty-six received reports occupy twenty-two decision groups. Eleven groups propose fourteen minimal prose or punctuation operations. Seven source-style or optional wording preferences are retained unchanged: whitespace after a TeX comma, ``at most finitely'', the ordinal spelling, punctuation before an enumeration, the collective singular regular-sequence and basis constructions, and ``Proof of (2).'' as a proof transition. Two reports are rejected as nondefects: the context-specific equivalence with flatness, and the two TeX orders for the same prime/subscript notation. Four reports share the already composed composition unit; two share the already composed lifting unit. The latter is verified as a whole across its two source intervals.
+
+Two further groups have no source operations. The factorization rank result receives the proved syntomic flatness and the finite-projective criterion, with every fibre multiplicity retained. The universal Koszul and infinitesimal-neighbourhood result receives the earlier regular/quasi-regular and Tor arguments and sharpens their base-change conclusion in the specified relative-complete-intersection setting. The stronger permanence theorem from the preceding LCI note is preserved but is not needed as a new hypothesis here. The More on Algebra tensor-base correction recorded earlier remains a separate pending chapter item. The source hypotheses and exposition remain identifiable throughout; combined-results synthesis and a short paper remain follow-on work after core completion.

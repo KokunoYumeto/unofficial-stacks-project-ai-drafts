@@ -1,0 +1,184 @@
+\begin{lemma}
+\label{editorial-source-lemma-geometrically-reduced-finite-purely-inseparable-extension}
+Let $k$ be a field. Let $S$ be a $k$-algebra.
+The following are equivalent:
+\begin{enumerate}
+\item $k' \otimes_k S$ is reduced for every finite
+purely inseparable extension $k'$ of $k$,
+\item if $\operatorname{char}(k)=p>0$, then
+$k^{1/p}\otimes_k S$ is reduced; if
+$\operatorname{char}(k)=0$, then $S$ is reduced,
+\item $k^{perf} \otimes_k S$ is reduced, where $k^{perf}$ is the
+perfect closure of $k$,
+\item $\overline{k} \otimes_k S$ is reduced, where $\overline{k}$ is the
+algebraic closure of $k$, and
+\item $S$ is geometrically reduced over $k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We treat characteristic zero explicitly. Every field
+extension in that characteristic is separable, as
+proved in Lemma \ref{editorial-source-lemma-separably-generated-separable}.
+Every finite purely inseparable extension is the
+identity extension and $k^{perf}=k$. Thus (1), (2)
+and (3) each say that the original $S$ is reduced.
+If it is reduced, Lemma
+\ref{editorial-source-lemma-separable-extension-preserves-reducedness}
+makes $L\otimes_k S$ reduced for every field
+extension $L/k$. This proves (5), and hence (4).
+Conversely (4) implies that $S$ is reduced through
+the injection $s\mapsto1\otimes s$ into
+$\overline k\otimes_k S$. This proves all equivalences
+in characteristic zero without using undefined
+$p$th-root notation.
+
+Now suppose $\operatorname{char}(k)=p>0$. Use an
+algebraic closure $\overline k$ to contain the
+specified perfect closure and $k^{1/p}$. A finite
+purely inseparable extension $k'/k$ has a unique
+$k$-embedding into $\overline k$, and its image lies
+in $k^{perf}$, since each element has a $p$-power
+in $k$. Extension of scalars by the $k$-vector
+space $S$ preserves these field injections.
+Consequently their original maps
+$a\otimes s\mapsto a\otimes s$ prove
+(5) $\Rightarrow$ (4) $\Rightarrow$ (3) $\Rightarrow$ (2)
+and (3) $\Rightarrow$ (1). A subring of a reduced
+ring is reduced, which is the exact assertion
+used at each injection.
+
+For (1) $\Rightarrow$ (5), let $K/k$ be any original
+field extension and let $z=\sum_{i=1}^m a_i\otimes s_i$
+be a nilpotent of $K\otimes_k S$. Retain the
+finitely generated intermediate field
+$K_0=k(a_1,\ldots,a_m)\subseteq K$. The map
+$K_0\otimes_k S\to K\otimes_k S$ is injective,
+so the same displayed tensor is already nilpotent
+in $K_0\otimes_k S$. Apply Lemma
+\ref{editorial-source-lemma-make-separably-generated} to this $K_0/k$.
+It gives the original commutative field diagram
+$$
+\xymatrix{
+K_0\ar[r]&K_0'\\
+k\ar[u]\ar[r]&k'\ar[u]
+}
+$$
+where $k'/k$ and $K_0'/K_0$ are finite purely
+inseparable and $K_0'/k'$ is separably generated.
+By (1), $S'=k'\otimes_k S$ is reduced. The original
+comparison map is
+$$
+K_0'\otimes_{k'}S'\longrightarrow K_0'\otimes_k S,
+\qquad b\otimes(c\otimes s)\longmapsto bc\otimes s.
+$$
+Its inverse sends $b\otimes s$ to
+$b\otimes(1\otimes s)$. Balancing follows from
+the displayed commutative field diagram, and
+both composites are the identity on generating
+pure tensors. Lemma
+\ref{editorial-source-lemma-separable-extension-preserves-reducedness}
+makes the left side reduced, so the right side
+is reduced. The injection
+$K_0\otimes_k S\to K_0'\otimes_k S$ now makes
+the original $z$ zero. Its image in $K\otimes_k S$
+is the tensor we started with. Thus every
+nilpotent in that original tensor ring is zero,
+proving (5).
+
+For (2) $\Rightarrow$ (5), inject $S$ into
+$k^{1/p}\otimes_k S$ by $s\mapsto1\otimes s$;
+hence $S$ is reduced. Let $\mathfrak p$ be any
+minimal prime of $S$ and put $W=S\setminus\mathfrak p$.
+There are inverse original localization maps
+$$
+k^{1/p}\otimes_k S_{\mathfrak p}
+\longrightarrow (1\otimes W)^{-1}(k^{1/p}\otimes_k S),
+\qquad a\otimes(s/w)\longmapsto (a\otimes s)/(1\otimes w),
+$$
+and
+$$
+\frac{\sum_i a_i\otimes s_i}{1\otimes w}
+\longmapsto\sum_i a_i\otimes(s_i/w).
+$$
+The first comes from inverting exactly $W$ in
+the $S$-factor; the second comes from inverting
+exactly $1\otimes W$ in the tensor ring. These
+universal properties prove well-definedness,
+and the formulas show both composites are
+identities, with the same original denominators.
+The localized tensor ring is reduced by (2).
+Since $S_{\mathfrak p}$ is a field by Lemma
+\ref{algebra-lemma-minimal-prime-reduced-ring}, Lemma
+\ref{editorial-source-lemma-characterize-separable-field-extensions}
+applied to this original field says it is
+geometrically reduced over $k$. Lemma
+\ref{editorial-source-lemma-generic-points-geometrically-reduced}
+then proves that $S$ is geometrically reduced.
+This also covers the zero ring: it has no
+minimal primes and all its scalar extensions
+are zero.
+
+There are two useful exact forms of the test in
+positive characteristic. First, it suffices in
+(1) to test only finite purely inseparable
+extensions $l/k$ with $l^p\subseteq k$.
+Necessity follows from (5). Conversely every
+finite list of coefficients in $k^{1/p}$ lies
+in a field $l=k(b_1,\ldots,b_r)$ with $b_i^p\in k$.
+This extension is finite of degree at most $p^r$,
+and every element of $l$ has its $p$th power in
+$k$, by applying Frobenius to its full rational
+expression. If a tensor in $k^{1/p}\otimes_k S$
+is nilpotent, capture its finite coefficient
+list in this original $l$. Injectivity of
+$l\otimes_k S\to k^{1/p}\otimes_k S$ places the
+same nilpotence equation in the smaller tensor
+ring. The restricted test makes it zero there
+and therefore zero in the original ring.
+Thus the restricted tests imply (2) and all
+five conditions.
+
+Second, the field's linear-independence criterion
+extends to the original arbitrary $k$-algebra $S$:
+geometric reducedness is equivalent to the
+following condition. Every finite $k$-linearly
+independent family $s_1,\ldots,s_r$ in $S$ has
+$k$-linearly independent $p$th powers. To prove
+this, retain $A=S\otimes_k k^{1/p}$ and the ring
+homomorphism
+$$
+m_S:A\longrightarrow S,\qquad
+\sum_i s_i\otimes b_i\longmapsto\sum_i s_i^p b_i^p.
+$$
+Balancing uses $(cs)^p b^p=s^p(cb)^p$, and the
+full Frobenius identity gives
+$z^p=m_S(z)\otimes1$. The original map
+$S\to A$ is injective, so $\ker m_S$ is exactly
+the kernel of the $p$th-power map on $A$.
+That kernel is zero exactly when $A$ is reduced:
+for the nontrivial direction, if $z$ is nilpotent,
+choose $p^e$ at least a nilpotence exponent and
+apply injectivity of Frobenius $e$ times to
+$z^{p^e}=0$.
+
+If $m_S$ is injective and
+$\sum_i c_i s_i^p=0$, take the unique roots
+$b_i^p=c_i$ in $k^{1/p}$. Injectivity makes
+$\sum_i s_i\otimes b_i=0$, and extension of the
+independent family to a vector-space basis
+forces every $b_i=0$, hence every $c_i=0$.
+Conversely any original $z\in A$ can be written
+$z=\sum_i s_i\otimes b_i$ with $s_i$ independent:
+choose a basis of the finite-dimensional span
+of its original first-factor coefficients and
+rewrite those coefficients in that basis,
+using tensor balancing. If the asserted
+independence of $p$th powers holds and $m_S(z)=0$,
+then every $b_i^p=0$ and hence every $b_i=0$.
+Thus $m_S$ is injective. We have proved the
+equivalence with reducedness of $A$, which is
+(2) after the explicit tensor-factor symmetry.
+No domain, finiteness, or Noetherian hypothesis
+on the original $S$ is used.
+\end{proof}

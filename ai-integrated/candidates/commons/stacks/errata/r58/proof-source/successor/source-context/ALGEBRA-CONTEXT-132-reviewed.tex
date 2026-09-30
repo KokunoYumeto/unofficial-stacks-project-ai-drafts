@@ -1,0 +1,194 @@
+\begin{lemma}
+\label{lemma-radicial}
+Let $\varphi : R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item $\varphi$ induces an injective map of spectra,
+\item $\varphi$ induces purely inseparable residue field extensions.
+\end{enumerate}
+Then for any ring map $R \to R'$ properties (1) and (2) are true for
+$R' \to R' \otimes_R S$.
+\end{lemma}
+
+\begin{proof}
+Retain the original base-change algebra
+$S'=R'\otimes_R S$ and its two structural
+maps. Let $\mathfrak p'\subset R'$ contract
+to $\mathfrak p\subset R$, and set
+$K=\kappa(\mathfrak p)$ and
+$K'=\kappa(\mathfrak p')$ with the original
+field embedding $K\to K'$. The original
+fibre algebra is $F=K\otimes_R S$.
+By Remark \ref{remark-fundamental-diagram},
+its primes correspond to the primes
+of $S$ over $\mathfrak p$, with their
+original residue-field maps.
+
+If there is no such prime, $F$ has
+no prime and is zero, since every
+nonzero unital ring has a maximal
+ideal. The new fibre is zero as
+well by the explicit comparison
+below. Otherwise there is exactly
+one original prime $\mathfrak q$
+above $\mathfrak p$. Let $\mathfrak r$
+be its corresponding prime in $F$.
+It is the only prime of $F$, hence
+is both its nilradical and its
+unique maximal ideal. Consequently
+$F/\mathfrak r$ is a field, and
+the canonical map $F\to\kappa(\mathfrak r)$
+is surjective with kernel $\mathfrak r$.
+The original fibre correspondence
+identifies this field with
+$E=\kappa(\mathfrak q)$ over $K$.
+By hypothesis $E/K$ is purely
+inseparable. This proves the
+needed nil-kernel quotient without
+assuming that $F$ itself is reduced.
+
+There is an original fibre isomorphism
+$$
+K'\otimes_{R'} S'\longrightarrow
+K'\otimes_K F,\qquad
+c\otimes(r'\otimes s)\longmapsto
+c\overline r'\otimes(1\otimes s).
+$$
+Its inverse sends
+$c\otimes(a\otimes s)$ to
+$ca\otimes(1\otimes s)$, using the
+specified embedding $K\to K'$.
+Balancing follows from the original
+commutative scalar diagram, and
+these formulas compose to the
+identity on every pure tensor.
+Write $H=K'\otimes_K F$.
+Lemma \ref{lemma-surjective-locally-nilpotent-kernel}
+applied to $F\to E$ gives a
+surjection
+$H\to K'\otimes_K E$ with locally
+nilpotent kernel.
+
+Embed the purely inseparable $E$
+in an algebraic closure of $K'$
+by the unique roots compatible
+with $K$. The full tensor comparison
+proved in Lemma \ref{lemma-make-separable}
+gives
+$$
+(K'\otimes_K E)_{red}\simeq C=K'E,
+\qquad [\sum_i c_i\otimes e_i]
+\longmapsto\sum_i c_i e_i.
+$$
+It applies also when $E/K$ is
+infinite; each individual tensor
+uses only finitely many root
+exponents. The field $C/K'$ is
+purely inseparable, because every
+finite sum or quotient in the
+compositum has a sufficiently high
+$p$-power in $K'$ in positive
+characteristic; in characteristic
+zero $E=K$ and $C=K'$.
+Both kernels in the composite
+$H\to K'\otimes_K E\to C$ are nil.
+Its full kernel is nil as well:
+if an element maps to zero, some
+power lies in the first nil kernel,
+and a further power is zero.
+Thus $H_{red}\simeq C$. The fibre
+$H$ has exactly one prime and its
+residue field is the original $C$.
+The fibre correspondence proves
+both required base-change properties.
+
+In particular we obtain the exact
+prime and residue field, rather
+than only their uniqueness. Whenever
+$\mathfrak q$ exists, the unique
+$\mathfrak q'\subset S'$ over
+$\mathfrak p'$ is the kernel of
+$$
+S'\longrightarrow C,\qquad
+r'\otimes s\longmapsto
+\overline r'\,\overline s,
+$$
+with the two factors embedded in
+$K'$ and $E$ as above. Its contraction
+to $S$ is $\mathfrak q$ and its
+contraction to $R'$ is $\mathfrak p'$.
+The fraction field of its image
+is exactly $C$: it contains the
+fractions giving $K'$ and $E$,
+and is contained in their compositum.
+This identifies $\kappa(\mathfrak q')$
+with $C$ through the original maps.
+It also proves that the image on
+spectra after base change is exactly
+the inverse image of the original
+image on spectra.
+
+Conversely, these two original
+hypotheses are necessary for
+injectivity on spectra after every
+base change. Injectivity before
+base change follows by choosing
+$R'=R$. For an original
+$\mathfrak q$ over $\mathfrak p$,
+use the same $K,E,F$ above; injectivity
+makes $F\to E$ a surjective nil-kernel
+map. If $E/K$ were not purely
+inseparable, the ring $E\otimes_K E$
+would have at least two primes, as
+we now prove with the original maps.
+Its multiplication map onto $E$
+has a prime kernel containing every
+$z\otimes1-1\otimes z$.
+If some $z\in E$ is transcendental
+over $K$, no positive power of
+this difference is zero: in its
+full binomial expansion, the
+coefficient of $1\otimes z^n$
+is $(-1)^n$, and the powers
+$1,z,\ldots,z^n$ remain independent
+after extension from $K$ to $E$.
+
+Otherwise $E/K$ is algebraic but
+not purely inseparable. The
+separable-first theorem supplies
+$z\in E\setminus K$ separable over
+$K$. Let $P(T)$ be its original
+monic minimal polynomial, of degree
+at least two. The ring
+$E\otimes_K K(z)\simeq E[T]/(P)$
+is reduced because $P$ is separable,
+by the original polynomial and
+Bezout argument in Lemma
+\ref{lemma-separable-extension-preserves-reducedness}.
+The element corresponding to $T-z$
+is nonzero, by monic division,
+and so is not nilpotent. The map
+$E\otimes_K K(z)\to E\otimes_K E$
+is injective by extension of a
+vector-space basis. Thus the same
+diagonal difference is not nilpotent
+in the larger tensor ring either.
+In both cases some prime avoids
+that difference, while the original
+multiplication kernel contains it.
+They are two distinct primes.
+
+Now take the actual base change
+$R\to E$ through $R\to K\to E$.
+Its algebra is
+$E\otimes_R S\simeq E\otimes_K F$.
+The surjection from this algebra
+to $E\otimes_K E$ pulls the two
+distinct primes back to distinct
+primes, both over the unique prime
+of the field $E$. This contradicts
+universal injectivity. Hence every
+original residue-field extension
+must be purely inseparable, proving
+the converse and the exact
+characterization.
+\end{proof}

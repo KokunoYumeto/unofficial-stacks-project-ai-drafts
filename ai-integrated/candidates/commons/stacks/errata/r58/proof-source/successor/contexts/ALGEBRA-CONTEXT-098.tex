@@ -1,0 +1,22 @@
+\begin{lemma}
+\label{editorial-source-lemma-support-zero}
+\begin{slogan}
+A module over a ring has empty support if and only if it is the trivial module.
+\end{slogan}
+Let $R$ be a ring. Let $M$ be an $R$-module. Then
+$$
+M = (0) \Leftrightarrow \text{Supp}(M) = \emptyset.
+$$
+\end{lemma}
+
+\begin{proof}
+If $M=0$, all its localizations are zero, so its support
+is empty. Conversely, for any original nonzero $m\in M$,
+the ideal $\{r\in R:rm=0\}$ is proper and lies in a
+maximal ideal $\mathfrak p$. The fraction $m/1$ is nonzero
+in $M_{\mathfrak p}$: if it were zero, a witness
+$s\notin\mathfrak p$ would satisfy $sm=0$, contradicting
+membership of every such annihilator in $\mathfrak p$.
+Thus the support contains a maximal ideal, as also proved
+in Lemma \ref{algebra-lemma-characterize-zero-local}.
+\end{proof}

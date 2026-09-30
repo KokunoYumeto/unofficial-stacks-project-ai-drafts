@@ -1,0 +1,166 @@
+\subsection{Smooth differentials, section completions and field criteria}\label{algebra-proof-049-smooth-differentials-section-completions-and-field-criteria}
+
+Source: Stacks Project authors, authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:38340--38932, SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. The entire interval and all twenty received reports were read. All supplementary arguments and extensions below remain identifiable editorial material; they do not replace the translated source. The next section starts at 38933; only its opening through 38943 is read. The bounded corpus query ``smooth conormal completion'' returned four unread routing records. One PDF-primary record and one TeX record concern the same Bhatt--Hochster--Ma title; the other two are local TeX records. No source-content reading, independent-work count, exhaustive literature survey or novelty claim follows from these hits.
+
+\subsubsection{Exact sequences and the completion along the original section}\label{algebra-proof-049-exact-sequences-and-the-completion-along-the-original-section}
+
+For the source maps \(A\to B\to C\) with \(B\to C\) smooth, the exact sequence at 38350 is in fact split: \[
+0\longrightarrow C\otimes_B\Omega_{B/A}\longrightarrow
+\Omega_{C/A}\longrightarrow\Omega_{C/B}\longrightarrow0.
+\] The earlier Jacobi--Zariski comparison gives the initial injection because \(H_1(L_{C/B})=0\); the final module is finite projective over \(C\), so a \(C\)-linear section of the last surjection exists. The tensor swap from the earlier statement is the exact map \(c\otimes\omega\mapsto\omega\otimes c\), with its inverse. Thus the weaker statement ``exact'' is valid and needs no replacement.
+
+Likewise, when \(A\to C\) is onto, \(A\to B\) is smooth, \(I=\ker(A\to C)\) and \(J=\ker(B\to C)\), the original sequence \[
+0\longrightarrow I/I^2\longrightarrow J/J^2
+\longrightarrow\Omega_{B/A}\otimes_B C\longrightarrow0
+\] is split. Formal smoothness gives a map \(B\to A/I^2\) reducing to the given \(B\to C\) and commuting with \(A\). Restrict it to \(J\); it kills \(J^2\) and gives the left inverse \(J/J^2\to I/I^2\) proved in group 1083. For the other source sequence with \(A\to C\) smooth and \(B\to C\) onto, lift \(1_C\) to an \(A\)-algebra section \(C\to B/J^2\). The difference \(b-\sigma(\bar b)\) is the original square-zero derivation and gives a left inverse on the conormal module. These are the exact maps in all three source statements.
+
+Keep the source smooth map \(\varphi:R\to S\), its specified retraction \(\sigma:S\to R\), and \(I=\ker\sigma\). Put \(M=I/I^2\). The split conormal sequence gives the canonical isomorphism \[
+M\xrightarrow{\ d\ }\Omega_{S/R}\otimes_{S,\sigma}R,
+\] so \(M\) is finite projective over \(R\). The following extends the source's free-module case without choosing new source coordinates.
+
+Choose an \(R\)-linear lift \(\ell:M\to I\) of the quotient map; it exists by projectivity of \(M\). Let \[
+T=\operatorname{Sym}_R(M),\qquad J=\bigoplus_{q\ge1}\operatorname{Sym}_R^q(M).
+\] The map \(\ell\) induces an augmented \(R\)-algebra map \(\Psi:T\to S\). For every integer \(n\ge1\), it induces \[
+\Psi_n:T/J^n\longrightarrow S/I^n.
+\] These maps are isomorphisms, as follows.
+
+For \(n=1\) both rings are the specified \(R\). For \(n=2\) the retraction identifies \(S/I^2\) with the square-zero algebra \(R\oplus M\), and \(\Psi_2\) is the identity on both summands. For any \(q\ge1\), products of elements of \(I\) generate \(I^q/I^{q+1}\). Replacing each factor modulo \(I^2\) by \(\ell(m)\) changes its product by an element of \(I^{q+1}\). Coefficients may be reduced modulo \(I\), so the original product map \[
+\operatorname{Sym}_R^q(M)\longrightarrow I^q/I^{q+1}
+\] is surjective. Induction on \(n\) therefore makes each \(\Psi_n\) surjective.
+
+Suppose \(n\ge3\) and \(\Psi_{n-1}\) is invertible. The ideal \(J^{n-1}/J^n\) is square zero, since \(2(n-1)\ge n\). Formal smoothness lifts \[
+S\longrightarrow S/I^{n-1}\xrightarrow{\Psi_{n-1}^{-1}}T/J^{n-1}
+\] to an \(R\)-algebra map \(\tau:S\to T/J^n\). Its augmentation is \(\sigma\), so \(\tau(I)\subset J/J^n\), whence \(\tau(I^n)=0\). Write \(\bar\tau:S/I^n\to T/J^n\).
+
+The endomorphism \(U=\bar\tau\Psi_n\) of \(T/J^n\) is the identity modulo \(J^{n-1}\). Write \(U=1+D\). It fixes \(R\) and takes each \(m\in M\) to \(m+D(m)\), with \(D(m)\in J^{n-1}/J^n\). Expansion of products shows that \(D\) kills \(J^2/J^n\): every changed term has degree at least \(n\). Also \(D\) is an \(R\)-derivation, since its product defect \(D(a)D(b)\) lies in \(J^{2n-2}/J^n=0\). As \(n-1\ge2\), \(D^2=0\). Consequently \(1-D\) is a ring map and is both inverses to \(1+D\), by direct multiplication. Thus \(U\) is invertible; \(\Psi_n\) is injective as well as surjective and hence is an isomorphism. Its inverse is uniquely determined and is compatible with the inverse at every earlier quotient.
+
+Taking inverse limits gives the filtered \(R\)-algebra isomorphism \[
+\widehat\Psi:\prod_{q\ge0}\operatorname{Sym}_R^q(M)
+=\varprojlim_n T/J^n
+\xrightarrow{\ \sim\ }\varprojlim_n S/I^n.
+\] The product algebra uses the full convolution product: in degree \(q\), multiply by summing all products of degrees \(a,b\) with \(a+b=q\). This isomorphism depends on the chosen lift \(\ell\). Its associated graded isomorphism \[
+\operatorname{Sym}_R(M)\xrightarrow{\ \sim\ }\bigoplus_{q\ge0}I^q/I^{q+1}
+\] is the canonical original product map and is independent of that choice, since changing a lift by an element of \(I^2\) changes a degree-\(q\) product only modulo \(I^{q+1}\). If \(M\) is free on the classes of the source's \(f_1,\ldots,f_d\), this is precisely its power-series map \(x_i\mapsto f_i\). It also supplies the source's omitted finite-order inverse computation, with the negative corrections retained.
+
+Every \(\operatorname{Sym}_R^q(M)\) is finite projective: choose a finite projective complement \(N\) with \(M\oplus N\cong R^r\); the degree-\(q\) decomposition of \(\operatorname{Sym}(M\oplus N)\) exhibits \(\operatorname{Sym}^q(M)\) as a direct summand of the finite free \(\operatorname{Sym}^q(R^r)\). Thus each \(S/I^n\) is finite projective over \(R\).
+
+For every map \(R\to R'\), let \(S'=S\otimes_RR'\), with its induced retraction and kernel \(I'\). The split sequence \(0\to I\to S\to R\to0\) identifies \(I'\) with \(I\otimes_RR'\). Since \(S/I^n\) is \(R\)-flat, tensoring \(0\to I^n\to S\to S/I^n\to0\) remains exact. The image of \(I^n\otimes_RR'\) is exactly \((I')^n\): both are generated by the same original \(n\)-fold products and all their coefficients. Hence \[
+(S/I^n)\otimes_RR'\cong S'/(I')^n,\qquad
+I^n\otimes_RR'\cong(I')^n.
+\] Symmetric powers commute with this base change by their explicit tensor-quotient definition. Thus all finite-order comparisons and all graded pieces commute with arbitrary base change. The assertion about completions uses the inverse limit of these finite-order base changes; it does not identify ordinary tensor product of an infinite product with that inverse limit.
+
+\subsubsection{The regular-local hypotheses and the field smoothness criterion}\label{algebra-proof-049-the-regular-local-hypotheses-and-the-field-smoothness-criterion}
+
+The short exact sequence at 38546--38550 is valid in its actual setting, contrary to OCC-00855. Put \(P=k[x_1,\ldots,x_n]\), \(\mathfrak m''=(x_1,\ldots,x_n)\), \(A=P_{\mathfrak m''}\), and \(B=S_{\mathfrak m}\). Both \(A\) and \(B\) are regular local, with dimensions \(n\) and \(d\). The earlier lemma at 25749--25777 shows that the kernel \(I_A\) is generated by \(c=n-d\) members of a regular system of parameters of \(A\). Here is its exact argument in these objects.
+
+The kernel of \(\mathfrak m_A/\mathfrak m_A^2\to\mathfrak m_B/\mathfrak m_B^2\) has dimension \(n-d\). Choose \(f_1,\ldots,f_c\in I_A\) mapping to a basis of that kernel and extend their classes to a basis of \(\mathfrak m_A/\mathfrak m_A^2\). The corresponding minimal generators form a regular sequence, and \(A/(f_1,\ldots,f_c)\) is regular local of dimension \(d\), by 25731--25747. Its surjection onto \(B\) has zero kernel. Indeed both are domains; a nonzero prime kernel would let any chain above it be extended by the zero prime, reducing quotient dimension strictly below \(d\). Consequently \(I_A=(f_1,\ldots,f_c)\). Their images in \(I_A/\mathfrak m_A I_A\) generate, and any linear relation there would yield a relation between their independent images in \(\mathfrak m_A/\mathfrak m_A^2\). They are a basis, and the conormal map is injective. Localization at \(\mathfrak m''\) does not change the original \(k\)-vector spaces \(I/\mathfrak m'' I\) and \(\mathfrak m''/(\mathfrak m'')^2\). This proves the displayed short exact sequence with precisely the source hypotheses. The general counterexample of a singular quotient is irrelevant here.
+
+The original construction of \(S'\) and its surjection to \(S\) remains intact. The regular-local argument proves \(S'_{\mathfrak m'}\to S_{\mathfrak m}\) is an isomorphism. Its finite kernel is killed by one element outside \(\mathfrak m'\): take a product of annihilating denominators for a finite generating set. This gives the indicated principal localization. The already composed prime on \(S'\) and the prime on \(g'\) are retained. Writing \(S_{g'}\) denotes localization at the image of \(g'\) under the specified map \(S'\to S\), a valid convention which does not require a new correction.
+
+For an algebraically closed \(k\), the residue field of a maximal ideal of a finite type \(k\)-algebra is \(k\). The specified quotient map therefore has a \(k\)-algebra section, giving \(\mathfrak m/\mathfrak m^2\cong\Omega_{S/k}\otimes_S k\). Thus regularity gives exactly the rank condition on the original conormal matrix, and a nonvanishing \(c\)-minor gives a standard smooth neighbourhood. Conversely a standard smooth neighbourhood has differential rank equal to its constant local dimension, so its maximal local ring is regular.
+
+For any field \(k\) and original prime \(\mathfrak q\), put \(d=\dim_x\operatorname{Spec}S\), preserving point dimension rather than replacing it by \(\dim S_{\mathfrak q}\). If the differential fibre dimension is at most \(d\), finite generation and Nakayama give a principal neighbourhood on which \(\Omega_{S/k}\) has at most \(d\) generators. Choose an embedding \(\kappa(\mathfrak q)\to K\) into an algebraically closed field. The map \[
+K\otimes_kS\longrightarrow K,\qquad a\otimes s\longmapsto a\,\psi(\bar s)
+\] is onto and defines the specified maximal ideal \(\mathfrak m\). Its contraction is \(\mathfrak q\). Point dimension is preserved by this field extension, and at this closed point equals the local dimension. The base-changed differential module therefore satisfies the algebraically closed criterion. Smoothness descends along the flat base change at this prime by 37713--37744. Regularity descends along the resulting faithfully flat local map as in the source's earlier regularity theorem. Conversely a standard smooth neighbourhood has precisely \(d\) independent differentials. This proves all three original conditions and the regularity conclusion, keeping the residue field and point dimension distinct.
+
+\subsubsection{Residue-field sections without the Noetherian restriction}\label{algebra-proof-049-residue-field-sections-without-the-noetherian-restriction}
+
+The source proof at 38686--38737 does not use Noetherianity. More generally, let \(A\) be any local \(k\)-algebra, with maximal ideal \(\mathfrak m\) and residue field \(\kappa\). Suppose there is a possibly infinite transcendence basis \(T\) such that \(\kappa\) is separable algebraic over \(F=k(T)\). Then the original conormal sequence is split exact: \[
+0\longrightarrow\mathfrak m/\mathfrak m^2
+\longrightarrow\Omega_{A/k}\otimes_A\kappa
+\longrightarrow\Omega_{\kappa/k}\longrightarrow0.
+\] Neither Noetherianity of \(A\) nor finite generation of \(\kappa/k\) is required under this stated separating-basis hypothesis.
+
+Set \(D=A/\mathfrak m^2\) and \(\mathfrak n=\mathfrak m/\mathfrak m^2\). Choose an actual lift \(x_t\in D\) of every \(t\in T\). Every nonzero polynomial in a finite subset of \(T\) has nonzero residue on these lifts, and hence is a unit in the local ring \(D\). Evaluation therefore defines a \(k\)-algebra map \(F\to D\) reducing to the given inclusion in \(\kappa\).
+
+For a finite separable intermediate extension \(E/F\), choose a primitive element \(\bar y\) with monic separable minimal polynomial \(P\in F[Y]\), and any lift \(y\in D\). The exact correction is \[
+y^*=y-\frac{P^\varphi(y)}{(P')^\varphi(y)}.
+\] The denominator is a unit, and \(P^\varphi(y)\in\mathfrak n\). Since \(\mathfrak n^2=0\), the full polynomial expansion is \[
+P^\varphi(y+\delta)=P^\varphi(y)+(P')^\varphi(y)\delta
+\quad(\delta\in\mathfrak n),
+\] so \(P^\varphi(y^*)=0\). If two roots have the same residue, their difference \(\delta\in\mathfrak n\) satisfies the same equation with a unit derivative, so \(\delta=0\). This gives the unique \(F\)-algebra map \(E\to D\) lifting the inclusion of \(E\) in \(\kappa\). Uniqueness makes these maps compatible on all finite separable subextensions. Their union defines a \(k\)-algebra section \(s:\kappa\to D\).
+
+The exact inverse maps for the resulting square-zero decomposition are \[
+D\longrightarrow\kappa\oplus\mathfrak n,\quad
+a\longmapsto(\bar a,a-s(\bar a)),\qquad
+(\lambda,u)\longmapsto s(\lambda)+u,
+\] where \((\lambda,u)(\mu,v)=(\lambda\mu,\lambda v+\mu u)\). Differentiating products of elements of \(\mathfrak m\) shows directly that \(\Omega_{A/k}\otimes_A\kappa\cong\Omega_{D/k}\otimes_D\kappa\). Under this identification the derivation \[
+D\longrightarrow\mathfrak n\oplus\Omega_{\kappa/k},\qquad
+a\longmapsto(a-s(\bar a),d\bar a)
+\] induces an isomorphism of \(\kappa\)-modules. Its inverse sends \(u\in\mathfrak n\) to \(du\), and sends \(d\lambda\) to \(d(s(\lambda))\); these maps respect the derivation relations because \(\mathfrak n^2=0\). The two composites are the identity on \(du\) and \(d(s(\lambda))\), which generate. This proves the split exact sequence.
+
+Finally \(\Omega_{\kappa/k}\) is free on the original \(dt\), \(t\in T\). Generation follows by differentiating the finite separable polynomial equation of each algebraic element: its nonzero derivative solves for that element's differential. Independence follows by extending each coordinate derivation of \(F\) to every finite separable extension, with the exact formula \[
+D(\bar y)=-\frac{(D_{\mathrm{coeff}}P)(\bar y)}{P'(\bar y)}.
+\] Uniqueness again makes these extensions compatible. These derivations detect the coefficients of every finite linear relation between the \(dt\).
+
+In the source's finite type situation, \(T\) is finite whenever the residue extension is separable. Taking dimensions gives exactly \[
+\dim_\kappa(\Omega_{S/k}\otimes_S\kappa)
+=\dim_\kappa(\mathfrak m/\mathfrak m^2)+\operatorname{trdeg}_k\kappa.
+\] The original dimension identity at 28222--28263 is \(\dim_x\operatorname{Spec}S=\dim S_{\mathfrak q}+\operatorname{trdeg}_k\kappa\). Subtracting these two complete expressions proves that, for the stated separable residue fields, the excess of differential dimension over point dimension equals the embedding-dimension excess of the local ring. In particular it vanishes exactly when that ring is regular, proving the source criterion. No separability hypothesis is silently removed.
+
+\subsubsection{The characteristic-zero derivation and its exact boundary}\label{algebra-proof-049-the-characteristic-zero-derivation-and-its-exact-boundary}
+
+The proof at 38783--38815 requires that the specified cyclic summand \(S\,df\) be free with basis \(df\): the coefficient \(\theta(a)\) must be uniquely defined and \(\theta(f)=1\). Under a literal cyclic-submodule reading, the displayed decomposition alone does not imply that. For \(R=S=\mathbf Q\), \(f=0\) and \(C=0\), it holds as \(0=0\oplus0\), but the conclusion that \(f\) is not nilpotent fails. The zero ring gives another boundary to that conclusion. The proposed source clarification explicitly requires \(S\ne0\) and that \(S\to S\,df,\ a\mapsto a\,df\), be an isomorphism. The original decomposition, derivation and conclusion are otherwise retained. The intended free-summand reading already has this property; no failure of the subsequent regularity theorem follows.
+
+Equivalently, work with the exact datum actually used in the argument: a nonzero \(\mathbf Q\)-algebra \(S\), an \(R\)-derivation \(\theta:S\to S\), and an element \(f\) with \(\theta(f)=1\). If \(f^n=0\) with \(n\ge1\) minimal, then \[
+0=\theta(f^n)=n f^{n-1}.
+\] The integer \(n\) is invertible, and \(f^0=1\ne0\) includes the \(n=1\) case. This is a contradiction. Conversely such a derivation induces \(\Omega_{S/R}\to S\) carrying \(df\) to \(1\), so it exhibits \(S\,df\) as the specified free direct summand.
+
+For every \(a\) satisfying \(fa=0\), the source induction proves \[
+\operatorname{Ann}_S(f)\subseteq\bigcap_{n\ge1}f^nS.
+\] Indeed \(0=\theta(fa)=a+f\theta(a)\) gives the first inclusion. If \(a=f^n b\), then \(f^{n+1}b=0\), so \[
+0=(n+1)f^n b+f^{n+1}\theta(b),\qquad
+a=-\frac{f^{n+1}\theta(b)}{n+1}.
+\] All coefficients and the sign are retained. Thus \(f\) is a nonzerodivisor whenever \(S\) is \(f\)-adically separated; Noetherianity or locality is not needed for this implication.
+
+The source's local Noetherian conclusion also extends to every nonzero Noetherian \(\mathbf Q\)-algebra \(S\). At each maximal ideal, the derivation extends by \[
+\theta(a/u)=\frac{u\theta(a)-a\theta(u)}{u^2},
+\] and still sends \(f\) to \(1\). If \(f\) becomes a unit its annihilator is zero; otherwise local Krull intersection and the preceding inclusion give zero annihilator. Hence the localization of every element of \(\operatorname{Ann}_S(f)\) is zero at every maximal ideal. An element vanishing at all those localizations is zero: if its annihilator were proper, choose a maximal ideal containing it, where its image could not vanish. Thus \(\operatorname{Ann}_S(f)=0\).
+
+One cannot simply drop both separation and Noetherianity. Let \[
+B=\mathbf Q[x],\qquad
+V=\mathbf Q[x,x^{-1}]/\mathbf Q[x],\qquad
+S=B\oplus V
+\] with square-zero multiplication \((a,u)(b,v)=(ab,av+bu)\). Ordinary differentiation preserves both Laurent polynomials and the submodule of polynomials, so \(\theta(a,u)=(a',u')\) is a well-defined \(\mathbf Q\)-derivation of \(S\). For \(f=(x,0)\), \(\theta(f)=(1,0)\). Nevertheless \[
+f(0,[x^{-1}])=(0,[1])=0,\qquad (0,[x^{-1}])\ne0.
+\] Multiplication by \(x\) is onto \(V\), while \(\bigcap_nx^nB=0\), so \[
+\bigcap_{n\ge1}f^nS=0\oplus V,\qquad
+\operatorname{Ann}_S(f)=0\oplus\mathbf Q\cdot[x^{-1}].
+\] Explicitly, \(x\sum_{j=1}^N a_jx^{-j}\) is a polynomial exactly when all \(a_j\), \(j\ge2\), vanish. The ideal \(0\oplus V\) is not finitely generated: multiplying finitely many Laurent classes by polynomials cannot create a larger negative exponent than already occurs. Hence \(S\) is not Noetherian. This example has the actual free differential summand, so its failure is not the earlier notation issue.
+
+For the source regularity theorem in characteristic zero, use induction on \(e=\dim_\kappa\mathfrak m/\mathfrak m^2\). If \(e=0\), Nakayama gives a field. Otherwise choose the original \(f\in\mathfrak m\setminus\mathfrak m^2\). The separable residue-field injection makes \(df\) nonzero modulo the maximal ideal in the assumed finite free differential module. A coordinate is a unit; replacing one basis vector by \(df\) is an invertible basis change. Thus \(df\) has the required free summand and \(f\) is a nonzerodivisor. The exact conormal map for quotienting by \(f\) sends the basis of \((f)/(f^2)\cong S_{\mathfrak q}/fS_{\mathfrak q}\) to \(df\), so its cokernel is finite free. The quotient is still essentially of finite type over \(k\), and its embedding dimension is \(e-1\), since the original class of \(f\) is nonzero. Induction makes it regular, and the original regular-mod-a-nonzerodivisor lemma 25816--25831 makes \(S_{\mathfrak q}\) regular. This checks the exact use of the clarified hypothesis.
+
+\subsubsection{Characteristic-p examples with every coefficient retained}\label{algebra-proof-049-characteristic-p-examples-with-every-coefficient-retained}
+
+The already composed correction MC-STK-ERR-0463 specifies the source's missing parameter as \(t\). Its example is the case \(m=2\) of the following separate family, where the letter \(m\) here is a positive integer: \[
+k=\mathbf F_p(t),\qquad
+S_m=k[x,y]/(x^p+y^m+t),\qquad m\ge1.
+\] Keep the original \(x,y,t\). Before inverting nonzero polynomials in \(t\), elimination of the equation gives the mutually inverse maps \[
+\mathbf F_p[t,x,y]/(x^p+y^m+t)\ \longleftrightarrow\ \mathbf F_p[x,y],
+\quad t\longmapsto-x^p-y^m,\quad x\longmapsto x,\ y\longmapsto y.
+\] The map \(\mathbf F_p[t]\to\mathbf F_p[x,y]\) is injective: in a nonzero polynomial \(h(-x^p-y^m)\), the largest power of \(x\) has nonzero coefficient and cannot cancel. Thus localization at its nonzero elements gives exactly \(S_m\), a regular domain as a localization of \(\mathbf F_p[x,y]\). As a \(k[y]\)-module it is free on the original basis \(1,x,\ldots,x^{p-1}\), by monic division. It is finite integral over \(k[y]\), with dimension \(1\).
+
+In \(S_m\), the ideal \(\mathfrak q=(y,x^p+t)\) equals \((y)\). Its quotient is \(k[x]/(x^p+t)\), a field: \(t\) is not a \(p\)th power in \(k\), since its order at \(t=0\) is \(1\), whereas orders of \(p\)th powers are divisible by \(p\); the same holds for \(-t\). A purely inseparable root of exponent one has degree either \(1\) or \(p\), so \(x^p+t\) is irreducible. Thus \(\mathfrak q\) is maximal and its local ring has dimension \(1\), consistent with its regularity and the generator \(y\).
+
+The exact conormal differential over the original \(k\) is \[
+d(x^p+y^m+t)=m y^{m-1}\,dy,
+\] with \(p=0\) in \(k\) and \(dt=0\). Consequently \[
+\Omega_{S_m/k}=S_m\,dx\ \oplus\
+\bigl(S_m/(m y^{m-1})\bigr)\,dy.
+\] The exact smooth locus is \(D(m y^{m-1})\). At such a point the displayed derivative is a unit and supplies the standard smooth criterion. At every other point the differential fibre has dimension \(2\), whereas the original point dimension is \(1\), so the field criterion excludes smoothness.
+
+If \(p\nmid m\) and \(m>1\), this locus is \(D(y)\); if \(m=1\), it is the whole spectrum. If \(p\mid m\), it is empty and the differential module is nevertheless free of rank \(2\). In particular the source's \(m=2,p>2\) ring is regular and is nonsmooth exactly along \(V(y)\), while its omitted \(p=2\) case is also regular, has free differentials, and is nowhere smooth over \(k\). These are statements about the original full rings, including their inseparable residue fields; regularity is not being silently substituted for smoothness.
+
+This family also tests the preceding residue-conormal extension. At \(\mathfrak q=(y)\), the residue field is always the same purely inseparable \(\kappa=k[x]/(x^p+t)\). If \(m=1\), then \(y=-x^p-t\), so \(dy=0\) over \(k\). The nonzero generator of \(\mathfrak q/\mathfrak q^2\) therefore maps to zero in the differential fibre, even though the local ring is regular and the algebra smooth. Thus separability cannot simply be omitted from the general residue-injection statement. If \(m\ge2\), that same conormal generator maps to the independent \(dy\), and the sequence is injective on the left despite the inseparable residue extension. In fact \(x^p+t=-y^m=0\) modulo \(y^2\), so \(x\mapsto x\bmod y^2\) defines an explicit section \(\kappa\to(S_m)_{\mathfrak q}/(y^2)\). Hence separability is a sufficient condition in the proved general result, not a necessary one for an individual conormal splitting. This records both boundaries using the original coordinates and exact first-order quotients.
+
+The other source example \(S=\mathbf F_p[x]/(x^p)\) has \(\Omega_{S/\mathbf F_p}=S\,dx\), because the relation differential is zero. Its unique local ring has dimension zero and nonzero maximal ideal modulo its square, so it is not regular or smooth. This verifies both source counterexamples and their different failures.
+
+\subsubsection{Generic smoothness and report dispositions}\label{algebra-proof-049-generic-smoothness-and-report-dispositions}
+
+For the original injective finite type map of domains \(R\to S\), preserve the fraction fields \(K\subset L\). A smooth neighbourhood of the generic point base changes to a smooth \(K\)-algebra, and after every extension \(K'/K\) its local rings are regular by the preceding field criterion. Thus it is geometrically reduced. Localizing to \(L\) preserves geometric reducedness, and the source field-extension criterion identifies this with separability of \(L/K\).
+
+Conversely, the original generic finite-presentation lemma at 5729--5767 supplies nonzero \(f\in R\), \(g\in S\) with \(R_f\to S_{fg}\) finitely presented. Its one-generator proof inverts the actual nonzero leading coefficient and uses monic division, and its induction preserves the successive nonzero denominators. These localizations retain the generic point and the same fraction fields. For this finitely presented map, flat base change to \(K\) detects smoothness at the corresponding generic point by 37713--37744. Its local ring is \(L\), regular, and its residue extension is the specified separable \(L/K\); the proved separable criterion applies. Composition with the localization \(R\to R_f\) gives the required original smooth neighbourhood. The already composed grammatical correction at 38905 changes none of these maps.
+
+Twenty reports give sixteen decision groups: eight new copyediting groups with twelve operations, three nondefect rejections, one optional punctuation preference, and four retained canonical units with five operations. OCC-00849 repeats the false undefined-H\_1(L) complaint; OCC-00852 asks for a period already present at 38411; OCC-00855 overlooks the original regular-local hypotheses. OCC-00858's genuine missing prime is already corrected, while localization at the image of \(g'\) is valid shorthand. The original homology notation, existing period and short exact sequence are preserved.
+
+One additional source group explicitly supplies the intended free-summand and nonzero-ring conditions and includes the \(n=1\) nilpotence case. Four separate consequence groups cover projective section completions and finite base change; residue-field sections beyond the Noetherian and finite-generation assumptions; derivation regularity and its exact non-Noetherian boundary; and the complete characteristic-\(p\) family. None of these four has a source replacement operation. They are not a claim of new mathematics. The earlier More on Algebra findings remain separately pending, and broader synthesis follows core completion.

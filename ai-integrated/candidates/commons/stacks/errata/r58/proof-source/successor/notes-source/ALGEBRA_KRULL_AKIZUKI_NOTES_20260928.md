@@ -1,0 +1,235 @@
+# Krull–Akizuki: original maps, local modifications and length bounds
+
+Source: Stacks Project authors, authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:28877–29346, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All 23 reports in this interval are read. The current interval is exactly the authority with nine previously composed correction operations, MC-STK-ERR-0621 through 0629, and no added environment. Those operations are retained, not proposed again.
+
+These are separate source-linked editorial arguments. Three new minimal operations supply “by,” give the local ring to which the local modification lemma applies, and parenthesize the residue field in the associated graded polynomial ring. Neither translation is replaced by these expanded proofs. Four consequence groups are recorded below without claiming novelty.
+
+## The original domination chart
+
+At 28903–28919 choose the source valuation ring \(A\subset K\) dominating the original local Noetherian domain \(R\), and its valuation \(v\) in its actual ordered value group. No discreteness or rank-one assumption is made about \(A\). Since \(R\) is not a field, its maximal ideal \(\mathfrak m\) has a nonempty finite minimal generating set \(x_1,\ldots,x_r\), all nonzero. Reorder this same set so \(v(x_r)\) is minimal. Each quotient \(x_i/x_r\) belongs to \(A\), and \(v(x_r)>0\). Thus the specified ring
+\[
+ S=R[x_1/x_r,\ldots,x_{r-1}/x_r]\subset K
+\]
+satisfies \(\mathfrak mS=x_rS\ne S\). It is a Noetherian domain of finite type over \(R\). A prime \(\mathfrak q\) minimal over \(x_rS\) has height at most one by the principal ideal theorem, and at least one because it contains the nonzero element \(x_r\) in a domain. Its contraction contains \(\mathfrak m\), so equals \(\mathfrak m\). Consequently \(R'=S_{\mathfrak q}\subset K\) has dimension one, is essentially of finite type, dominates \(R\), and has the same fraction field \(K\). The last equality follows from \(R\subset R'\subset K=\operatorname{Frac}(R)\).
+
+The existing MC-STK-ERR-0621 supplies the singular verb at 28905. OCC-00562 additionally supplies “by” in the original valuation declaration at 28906.
+
+## The four local cases and an explicit annihilator exponent
+
+At 28922–29029 keep Kollár's four alternatives exactly as stated in the source. The source attributes the lemma to János Kollár's “Variants of normality for Noetherian schemes”; that attribution is retained. No separate reading of that manuscript is claimed here.
+
+Assume the local Noetherian ring \((R,\mathfrak m)\) is not Artinian. The union
+\(J=\bigcup_{n\ge0}(0:_R\mathfrak m^n)\)
+stabilizes because \(R\) is Noetherian; hence some power of \(\mathfrak m\) kills \(J\). It is proper, since otherwise a power of \(\mathfrak m\) would be zero, making \(R\) Artinian. If \(J\ne0\), \(R\to R/J\) is a nonisomorphism with the required finite kernel. The quotient has no nonzero element killed by any power of \(\mathfrak m\): if \(\mathfrak m^a r\subset J\) and \(\mathfrak m^b J=0\), then \(\mathfrak m^{a+b}r=0\), so \(r\in J\). In particular \(\mathfrak m\) is not an associated prime of \(R/J\), and this quotient is nonzero.
+
+Now let \(J=0\). By the associated-prime criterion there is a nonzerodivisor \(x\in\mathfrak m\). If \(R/xR\) also has a nonzerodivisor in \(\mathfrak m\), this gives depth at least two. Otherwise choose the original \(y\notin xR\) with \(y\mathfrak m\subset xR\).
+
+Suppose first \(y\mathfrak m\subset x\mathfrak m\). Put \(z=y/x\in R_x\) and retain the map
+\[
+ \varphi:\mathfrak m\longrightarrow\mathfrak m,\qquad t\longmapsto yt/x.
+\]
+Let \(r\) be the number of elements of a chosen minimal generating set of \(\mathfrak m\). Write the image of each generator under \(\varphi\) as an \(R\)-linear combination of these same generators, producing an \(r\)-by-\(r\) matrix \(C\). The adjugate identity for \(TI-C\) gives the monic polynomial \(P(T)=\det(TI-C)\), of degree \(r\), with \(P(\varphi)\mathfrak m=0\). In \(R_x\), \(\varphi\) is multiplication by the actual element \(z\). Since \(x\in\mathfrak m\) is invertible in \(R_x\), \(xP(z)=0\) implies \(P(z)=0\). Thus
+\[
+ R'=R[z]\subset R_x
+\]
+is finite, generated over \(R\) by \(1,z,\ldots,z^{r-1}\). The injection \(R\to R_x\) and \(y\notin xR\) show \(R'\ne R\). Also \(x\) remains a nonzerodivisor on \(R'\), so \(\mathfrak m\notin\operatorname{Ass}_R(R')\) and \(R'\ne0\).
+
+There is an explicit bound stronger than “a power”: since \(\mathfrak m z\subset R\),
+\[
+ \mathfrak m^i z^i\subset R,\qquad
+ \mathfrak m^{r-1}(R'/R)=0.
+\]
+For the first inclusion write a generator of \(\mathfrak m^i\) as a product of \(i\) elements of \(\mathfrak m\), and group each factor with one \(z\). For \(i<r-1\), the remaining factors lie in \(R\). Applying this to the displayed generators proves the second inclusion. Necessarily \(r\ge2\), since a monic degree-one equation would give \(z\in R\). The cokernel is generated by at most \(r-1\) elements over \(R/\mathfrak m^{r-1}\), so also
+\[
+ \operatorname{length}_R(R'/R)
+ \le (r-1)\operatorname{length}_R(R/\mathfrak m^{r-1}).
+\]
+This is the first separate consequence group.
+
+If instead \(y\mathfrak m\not\subset x\mathfrak m\), the original argument gives \(t_0\in\mathfrak m\) and a unit \(u\in R\) with \(yt_0=ux\). Keep the unit explicit and set \(t=u^{-1}t_0\), so \(yt=x\). If \(ya=0\), then \(xa=tya=0\), hence \(a=0\). Thus \(y\) is a nonzerodivisor. For each \(t'\in\mathfrak m\), write \(yt'=xs\); then \(y(t'-st)=0\), so \(t'=st\). Hence \(\mathfrak m=(t)\). The ring is not Artinian and the principal ideal theorem gives dimension at most one, so it has dimension one and is regular.
+
+The alternatives are disjoint. A nonzero Artinian local ring has depth zero; every nonzero finite module over it has a simple submodule, hence associated prime \(\mathfrak m\), excluding the fourth alternative. A regular one-dimensional local ring has depth one, excluding depth at least two. In that regular case, a finite target as in alternative four has depth at least one, so the earlier source theorem lemma-regular-mcm-free makes it free. Its generic fibre is one-dimensional, so its rank is one. Multiplication gives an injective map \(R'\to\operatorname{End}_R(R')\cong R\); it is injective because an element annihilating \(1\) is zero, and its image contains every scalar from \(R\), hence is all of \(R\). This map is inverse to \(R\to R'\). For depth at least two, a kernel killed by \(\mathfrak m^N\) is zero, since an \(R\)-regular element in \(\mathfrak m\) acts injectively on it. The depth inequality for the resulting exact sequence gives depth at least one to its cokernel; a nonzero finite module killed by \(\mathfrak m^N\) has a simple submodule and depth zero. The cokernel is therefore zero as well.
+
+MC-STK-ERR-0622 retains exactly the map hypotheses while fixing their relative clauses. MC-STK-ERR-0623 fixes the preposition at the generic point. Neither changes this classification.
+
+## Globalizing the specified local modification
+
+The report OCC-12323 correctly identifies that the lemma invoked at 29075 is local, while the remark starts with a semilocal domain. The minimal text correction applies it to \((R_{\mathfrak m},\mathfrak mR_{\mathfrak m})\). Here is the actual finite global extension; no local hypothesis is imposed on the original \(R\).
+
+More generally let \(R\) be any Noetherian domain of dimension one, \(K=\operatorname{Frac}(R)\), and \(\mathfrak m\) a maximal ideal. Let
+\[
+ R_{\mathfrak m}\subset B\subset K
+\]
+be a finite overring. Choose integral generators \(b_j\) of \(B\) over \(R_{\mathfrak m}\). In their finitely many monic equations clear coefficient denominators using \(s\in R\setminus\mathfrak m\). Choose \(N\) large enough that all coefficients \(s^{N(d-i)}c_i\) of the equations for \(s^Nb_j\) lie in \(R\). Explicitly an equation \(b^d+\sum_{i<d}c_i b^i=0\) becomes
+\[
+ (s^Nb)^d+\sum_{i<d}s^{N(d-i)}c_i(s^Nb)^i=0.
+\]
+Put \(B_0=R[s^Nb_1,\ldots,s^Nb_t]\subset K\). It is finite over \(R\), and \((B_0)_{\mathfrak m}=B\), since \(s\) is a unit there.
+
+The finite module \(Q=B_0/R\) is torsion, so a nonzero \(d\in R\) kills it: take a common denominator for its finite generating set. Its support lies in the finite set of maximal ideals containing \(d\), because \(R/dR\) is a zero-dimensional Noetherian ring. There is an integer \(a\ge1\) such that \(\mathfrak n^a Q_{\mathfrak n}=0\) at each ideal in that finite support. The Chinese remainder theorem provides \(c\in R\) with \(c\equiv1\pmod{\mathfrak m^a}\) and \(c\equiv0\pmod{\mathfrak n^a}\) for every other ideal in the support. If the support does not contain \(\mathfrak m\), adjoin that ideal to the finite CRT list. Define
+\[
+ B_1=R[c s^Nb_1,\ldots,c s^Nb_t]\subset B_0.
+\]
+Each generator is integral over \(R\), so \(B_1\) is finite. At \(\mathfrak m\), \(c,s\) are units and \((B_1)_{\mathfrak m}=B\). At any other maximal ideal, \(cQ_{\mathfrak n}=0\) if \(Q_{\mathfrak n}\ne0\), so all these generators belong to \(R_{\mathfrak n}\); if \(Q_{\mathfrak n}=0\), the same assertion already holds. Thus \((B_1)_{\mathfrak n}=R_{\mathfrak n}\) at every other maximal ideal. In particular \(B_1/R\) is killed by a power of \(\mathfrak m\), and \(B_1\ne R\) whenever \(B\ne R_{\mathfrak m}\).
+
+For the remark, the local construction in the preceding section over the one-dimensional domain \(R_{\mathfrak m}\) has \(J=0\), depth one, and produces exactly such a strict integral overring \(B\subset K\). Thus the required global extension exists with unchanged fraction field. If \(R\) is semilocal, a finite algebra over it is semilocal: its finitely many fibres over maximal ideals are finite-dimensional algebras over fields, hence have finitely many maximal ideals, and every maximal ideal lies over one of the original maximal ideals by integrality. Dimension remains one by the integral-extension prime-chain theorem.
+
+The remark's optional blowup construction is also finite. The blowup is
+\[
+ X'=\operatorname{Proj}\bigoplus_{n\ge0}\mathfrak m^n,
+\]
+with original affine charts \(R[\mathfrak m/a]\subset K\). This is a projective morphism, is an isomorphism away from \(\mathfrak m\), and makes \(\mathfrak m\mathcal O_{X'}\) invertible. These precise assertions and chart maps are in the same authority's divisors.tex, lemma-blowing-up-affine, lemma-blowing-up-gives-effective-Cartier-divisor, and lemma-blowing-up-projective (bounded reading recorded below). Its fibre over \(\mathfrak m\) is
+\(\operatorname{Proj}\operatorname{gr}_{\mathfrak mR_{\mathfrak m}}R_{\mathfrak m}\).
+For each original nonzero chart generator \(a\in\mathfrak m\), the chart \(S_a=R[\mathfrak m/a]\subset K\) has \(\mathfrak mS_a=aS_a\). Localizing this chart over \(R_{\mathfrak m}\) keeps it a subring of \(K\). The finite-length argument proved below, applied to this original submodule of \(K\), says that its quotient by \(\mathfrak m\) is finite dimensional over \(\kappa(\mathfrak m)\). This is exactly the chart of the displayed fibre; localizing the coefficients outside \(\mathfrak m\) does not change that quotient. There are finitely many such charts from a finite generating set of \(\mathfrak m\), so the fibre has finitely many points. All other fibres are singletons because the blowup is an isomorphism away from \(\mathfrak m\). More on Morphisms, lemma-characterize-finite, authority more-morphisms.tex:12543–12589, proves that a proper morphism with finite fibres is finite, so \(X'\) is affine and gives a finite birational overring of \(R\). It is strict at a nonregular \(R_{\mathfrak m}\): if the blowup were an isomorphism there, the original maximal ideal would be invertible, hence principal in that local ring, making it regular of dimension one. This verifies the optional construction without identifying it with every extension produced by the earlier lemma.
+
+## Termination, a numerical bound and the completion obstruction
+
+The current MC-STK-ERR-0624 removes the unresolved placeholder and specifies completion at each maximal ideal. The underlying implication has a precise source already present later in the authority: algebra.tex, lemma-analytically-unramified-easy, 45807–45887, especially assertion (4). Here is its application and the numerical consequence for the original procedure.
+
+For a Noetherian local domain \(T\) with reduced completion \(\widehat T\), that lemma proves the integral closure \(\overline T\) in \(\operatorname{Frac}(T)\) finite. The actual argument uses faithful flatness \(T\to\widehat T\) and the finite normalization of the reduced complete Noetherian ring \(\widehat T\). The latter is a finite product of the normalizations of \(\widehat T/\mathfrak p_i\) at its finitely many minimal primes; finiteness follows from lemma-Noetherian-complete-local-Nagata, 45754–45778. Since every nonzerodivisor of \(T\) remains one on \(\widehat T\), the map
+\[
+ Q(T)\otimes_T\widehat T\longrightarrow Q(\widehat T)
+\]
+is the injective localization map retaining those same denominators. Flatness embeds \(\overline T\otimes_T\widehat T\) in it. This tensor ring is integral over \(\widehat T\), hence lies in its finite normalization, and is a finite module since \(\widehat T\) is Noetherian. Choose finitely many original elements of \(\overline T\) whose tensors generate it. Their quotient module tensors to zero, so faithful flatness shows it was zero. This proves finiteness over \(T\), with the complete-local Nagata theorem as the explicitly cited source dependency, not a newly proved theorem.
+
+Now retain the original semilocal domain \(R\) and assume each \(\widehat{R_{\mathfrak m}}\) reduced. Integral closure in \(K\) commutes with localization (the earlier source result), so \(\overline R_{\mathfrak m}\) is finite over \(R_{\mathfrak m}\) at each of the finitely many maximal ideals. Choose finitely many elements of \(\overline R\) whose localizations generate at each ideal, and let \(N\) be their combined \(R\)-span. Then \((\overline R/N)_{\mathfrak m}=0\) at every maximal ideal. Any nonzero element of this quotient has a proper annihilator contained in a maximal ideal and survives there, a contradiction. Thus \(N=\overline R\) and the global normalization is finite.
+
+The finite module \(\overline R/R\) is torsion and has finite length, as it is killed by a nonzero denominator and \(R/dR\) is Artinian. Put
+\[
+ \delta=\operatorname{length}_R(\overline R/R).
+\]
+Every finite birational integral modification \(R_i\subset R_{i+1}\) in the original fraction field lies inside \(\overline R\), and
+\[
+ 0\longrightarrow R_{i+1}/R_i
+ \longrightarrow \overline R/R_i
+ \longrightarrow \overline R/R_{i+1}
+ \longrightarrow0
+\]
+is the actual sequence of \(R\)-modules. A strict step decreases the last length by at least one. Hence any such procedure has at most \(\delta\) strict steps. If its current semilocal ring is nonregular somewhere, the globalization above supplies a further strict step. It must therefore stop at a regular semilocal ring. That terminal ring is normal by the DVR characterization below, so, being intermediate and integral, equals \(\overline R\). This is a quantitative consequence of the original claim, independent of which admissible strict modifications are chosen.
+
+Conversely, if some completion \(\widehat{R_{\mathfrak m}}\) is nonreduced, no finite birational extension \(B\) of \(R\) can be a regular semilocal ring. If it were, exactness of completion on finite modules would embed \(\widehat{R_{\mathfrak m}}\) into the \(\mathfrak m\)-adic completion of \(B\otimes_R R_{\mathfrak m}\). The latter is the product of the completions of its finitely many DVR localizations. To justify the product, the radical of \(\mathfrak m B\) is the intersection of those finitely many maximal ideals, a power of that radical lies in \(\mathfrak mB\), and the two filtrations are cofinal; CRT then gives the product in the inverse limit. A DVR completion is a domain: each nonzero series in its inverse limit has a least uniformizer order, and the leading graded coefficients multiply nontrivially in the residue field, so orders add. The product is reduced, and so is every subring, contradicting the assumed completion. Thus the source's nontermination implication is valid for every chain of finite birational extensions that would otherwise terminate in a regular ring.
+
+## The two original examples and their exact completions
+
+First, at 29031–29047 retain \(R=k[[x,y]]/(y^2)\), written uniquely as \(k[[x]]\oplus k[[x]]y\). In \(R_x\) put \(z_n=y/x^n\) and
+\[
+ R_n=k[[x]]\oplus k[[x]]z_n,\qquad z_n^2=0.
+\]
+The original injection sends \(a(x)+b(x)y\) to \(a(x)+x^nb(x)z_n\). The transition \(R_n\to R_{n+1}\) sends \(z_n\) to \(xz_{n+1}\). Every \(R_n\) is finite over \(R\), and
+\[
+ R_n/R\cong k[[x]]/(x^n)\cdot z_n,\qquad
+ \operatorname{Ann}_R(R_n/R)=(x^n,y),\qquad
+ \operatorname{length}_R(R_n/R)=n.
+\]
+These formulas follow by comparing the two displayed coordinates; \(y\) kills the quotient and \(a(x)\) kills it precisely when divisible by \(x^n\). Each inclusion is strict. Multiplication by \(x\) is injective, while the nilradical is the square-zero \(k[[x]]y\), so the original ring has dimension one and depth one, as stated.
+
+Next retain exactly the source's field \(k\) of characteristic \(p>0\) with \([k:k^p]\) infinite, and
+\[
+ A=\left\{\sum_{i\ge0}a_i x^i:
+       [\,k^p(a_0,a_1,\ldots):k^p\,]<\infty\right\}.
+\]
+It is the union of \(F[[x]]\) over intermediate fields \(k^p\subset F\subset k\) finite over \(k^p\). The compositum of two such fields is still finite, so this is a ring. For each nonzero member, remove its exact initial power \(x^n\); the remaining unit and its inverse both have coefficients in the same \(F\). Thus \(A\) has uniformizer \(x\), residue field \(k\), and every nonzero ideal is generated by a power of \(x\), by choosing its least order. It is a DVR. Truncation gives \(A/x^nA=k[x]/(x^n)\): all finitely many coefficients belong to a finite extension of \(k^p\), and divisibility by \(x^n\) does not change the field of coefficients. Hence \(\widehat A=k[[x]]\). Its fraction field is
+\[
+ K=\bigcup_F F((x)),
+\]
+so \(K\cap k[[x]]=A\). Every Laurent series has its \(p\)-th power in \(k^p((x^p))\subset K\); therefore \(k((x))/K\) is purely inseparable of exponent one.
+
+For completeness, this extension has infinite degree, as asserted in the source. Choose an infinite \(p\)-basis of \(k/k^p\), and for each prescribed finite \(r\) choose disjoint sequences \(t_{j,n}\) from it, \(1\le j\le r,n\ge1\). Set \(f_j=\sum_{n\ge1}t_{j,n}x^n\). Then \(f_j^p\in K\). If a nonzero polynomial relation of degrees less than \(p\) in each \(f_j\) existed over \(K\), choose one of least total degree. Its finitely many coefficients belong to \(F((x))\) for a field \(F\) contained in \(k^p\) with finitely many \(p\)-basis elements adjoined. For a variable occurring with positive exponent, choose a corresponding \(t_{j,n}\) outside that finite basis set. The coefficientwise \(p\)-basis derivation \(\partial/\partial t_{j,n}\) on Laurent series kills all relation coefficients and all other \(f_i\), and sends \(f_j\) to \(x^n\). Dividing the differentiated relation by the nonzero \(x^n\) gives its nonzero formal partial derivative as a relation of smaller total degree. It is nonzero because all positive exponents are less than \(p\). This is impossible; a constant relation is also impossible. The derivation used here exists by defining it on the \(p\)-basis monomials of exponents \(0,\ldots,p-1\), extending over \(k^p\), and differentiating quotients; on series the coefficient of each product involves a finite sum, so the Leibniz rule remains valid. Therefore \([K(f_1,\ldots,f_r):K]=p^r\) for every \(r\), proving infinite degree.
+
+Now take the source's arbitrary \(f\in k[[x]]\setminus A\), not merely one of these auxiliary choices. Write \(a=f^p\in k^p[[x^p]]\subset A\), and \(a_0=f(0)\in k\). Since \(f\notin K\) but \(f^p\in K\), its minimal polynomial over \(K\) is \(T^p-a\). Thus the original domain \(R=A[f]\) has the exact presentation
+\[
+ R=A[T]/(T^p-a)
+\]
+and free \(A\)-basis \(1,T,\ldots,T^{p-1}\). It is Noetherian and integral of dimension one over \(A\). Modulo \(x\) the equation is \((T-a_0)^p\), so it has exactly one maximal ideal, \(\mathfrak m=(x,T-a_0)\). All maximal ideals lie over \((x)\) by integrality. Since \(\mathfrak m^p\subset xR\), the maximal-adic and \(x\)-adic filtrations are cofinal. Taking inverse limits in the displayed finite free \(A\)-basis gives
+\[
+ \widehat R=k[[x]][T]/(T^p-f^p)
+       \ \cong\ k[[x]][\epsilon]/(\epsilon^p),\qquad T\longmapsto f+\epsilon.
+\]
+The inverse sends \(\epsilon\) to \(T-f\). Thus the original generator \(f\in R\) maps to \(f+\epsilon\) in this presentation of its completion; the subsequent map to \(k[[x]]\) kills \(\epsilon\). The element \(\epsilon^{p-1}\) is nonzero in the displayed free basis, while \(\epsilon^p=0\). This proves the source's nonreduced completion, including its precise nilpotence.
+
+There is a further exact consequence. With \(L=K(f)\), the integral closure of \(R\) is
+\[
+ V=L\cap k[[x]].
+\]
+Indeed \(z\in V\) has \(z^p\in K\cap k[[x]]=A\), so it is integral over \(A\), hence over \(R\). Conversely an element integral over \(A\) cannot have negative \(x\)-order: in a monic equation its highest power would have strictly smaller valuation than every other term. Integrality over \(R\) implies integrality over \(A\) by transitivity. These prove both inclusions. The ring \(V\) is a DVR with the same \(x\), residue field \(k\), fraction field \(L\), and completion \(k[[x]]\); each assertion follows from its actual order and the inclusion \(A\subset V\). It is not finite over \(R\). Otherwise it would be finite torsion-free over the DVR \(A\), hence free of rank \([L:K]=p\). Completion of this finite free module would have rank \(p\) over \(k[[x]]\), whereas the actual completion of \(V\) is \(k[[x]]\), of rank one. This contradiction proves nonfiniteness without confusing the Noetherian conclusion of Krull–Akizuki with finiteness of normalization.
+
+## Uniformizers and the original discrete valuation
+
+At 29103–29158 the DVR characterization retains all five conditions. MC-STK-ERR-0625 makes the exponent range explicit; the proposed new operation at 29135 writes \((A/\mathfrak m)[T]\). The direct-sum degree is already specified by “for all \(n\ge0\)” and does not need a second correction.
+
+For the substantive regular-local implication, keep \(\mathfrak m=(\pi)\), with \(\pi\ne0\), in the original Noetherian local domain. A nonzero \(a\in A\) cannot lie in every \(\pi^nA\): otherwise write \(a=\pi^n a_n\), and use cancellation to obtain \(a_n=\pi a_{n+1}\). The ascending chain \((a_n)\) stabilizes, giving \(a_{n+1}=b a_n\); then \((1-\pi b)a_n=0\), and \(1-\pi b\) is a unit, a contradiction. There is therefore a unique largest \(n\ge0\) with \(a\in\pi^nA\). Write \(a=u\pi^n\); \(u\notin\mathfrak m\) is a unit. If \(u\pi^n=v\pi^m\), unequal exponents would make a unit a multiple of \(\pi\), so \(n=m\) and cancellation gives \(u=v\).
+
+The map \((A/\mathfrak m)[T]\to\bigoplus_{n\ge0}\mathfrak m^n/\mathfrak m^{n+1}\) sends \(\overline cT^n\) to \(c\pi^n\) modulo \(\pi^{n+1}\). It is well-defined, multiplicative and onto; each homogeneous kernel is zero by cancellation and the fact that \(\pi\) is not a unit. Hence it is an isomorphism. The actual order satisfies \(v(ab)=v(a)+v(b)\); the formula \(v(a/b)=v(a)-v(b)\) is well-defined by cross-multiplication. The original ring is exactly the nonnegative part, giving the valuation ring and PID characterizations. Conversely the earlier source result for Noetherian valuation rings gives discreteness unless the ring is a field. The finite one-dimensional modification argument shows a normal Noetherian local domain of dimension one must be regular: its finite target has no torsion, since all nonzero torsion would be supported at \(\mathfrak m\) and have associated prime \(\mathfrak m\); its generic fibre is the original fraction field, so it embeds there, and normality forces equality.
+
+## Length inequalities with the original ambient vector space retained
+
+At 29170–29290 keep \(M\subset K^{\oplus r}\) and put \(\rho=\dim_K(KM)\le r\). This defines the actual span inside the given ambient coordinates; it does not replace that ambient space. If \(x\) is a nonzero unit, all asserted lengths are zero. Otherwise \(R/xR\) is an Artinian local ring because its only prime is the maximal ideal.
+
+If \(M\) is finite, choose original elements \(m_1,\ldots,m_\rho\in M\) which form a \(K\)-basis of \(KM\), and let \(L=\bigoplus Rm_i\subset M\). For each remaining member of a finite generating set of \(M\), clear the coefficients in its expression in that basis; one nonzero product of the denominators kills \(C=M/L\). Thus \(C\) is a finite torsion module supported at the maximal ideal and has finite length. Multiplication by \(x\) is injective on both \(L\) and \(M\), since they remain actual submodules of \(K^r\). The original inclusion and quotient maps give, by their multiplication-by-\(x\) diagram, the exact sequence
+\[
+ 0\to C[x]\to L/xL\to M/xM\to C/xC\to0.
+\]
+The first map sends a class represented by \(m\in M\) with \(xm\in L\) to \(xm\bmod xL\); changing \(m\) by an element of \(L\) changes this by \(xL\), and injectivity follows from cancellation in \(M\). The remaining maps are induced by inclusion and quotient. Since the kernel and cokernel of multiplication by \(x\) on the finite-length module \(C\) have equal length, the sequence proves exactly
+\[
+ \operatorname{length}_R(M/xM)=\rho\operatorname{length}_R(R/xR).
+\]
+
+This also verifies the source's original denominator-clearing and sandwich argument without silently changing coordinates. A scalar \(d\ne0\) clearing the coordinates of a finite generating set gives an isomorphism \(M\to dM\), \(m\mapsto dm\), with inverse division by the same \(d\), including on quotients modulo \(x\). When the span is all of \(K^r\), the quotient \(C'=R^r/dM\) has finite length, hence \(x^cR^r\subset dM\) for some \(c\). For \(n\ge c\), the actual inclusions
+\[
+ x^{n+c}R^r\subset x^n dM\subset x^nR^r,\qquad
+ x^cR^r\subset dM\subset R^r
+\]
+bound the length of \(dM/x^ndM\) between \(r(n-c)\ell\) and \(r(n+c)\ell\), where \(\ell=\operatorname{length}_R(R/xR)\). For example the upper bound follows by embedding in \(R^r/x^{n+c}R^r\); for the lower bound, the image of \(x^cR^r\) in \(dM/x^ndM\) has kernel contained in \(x^nR^r\). Successive multiplication by \(x\) identifies each \(x^iM/x^{i+1}M\) with \(M/xM\), so dividing the inequalities by \(n\) and letting \(n\) grow proves equality, exactly as in the source.
+
+For arbitrary \(M\), retain any finite chain of \(k\) strict inclusions in \(M/xM\) and lift the source witnesses \(m_i\) of its successive differences to \(M\). The submodule \(M'=\sum_iRm_i\subset M\) is finite. The inverse images of that chain under \(M'/xM'\to M/xM\) remain strict because of these witnesses. No injectivity of this quotient map is assumed. The finite case gives
+\(k\le\operatorname{length}_R(M'/xM')\le\rho\ell\).
+If \(M/xM\) had length greater than \(\rho\ell\), such a chain with \(k>\rho\ell\) would exist. Hence its length is at most \(\rho\ell\). This treats \(\rho=0\), when \(M=0\). MC-STK-ERR-0626 fixes “vectors space”; 0627 restores the missing inclusion symbol while allowing \(N_0=0\).
+
+For a nonlocal one-dimensional Noetherian domain, the quotient \(R/xR\) is Artinian with finitely many maximal ideals \(\mathfrak m_i\). Its orthogonal idempotents split every \(R/xR\)-module, including \(M/xM\), into the product of its actual localizations at those ideals. Finite-length modules supported at one \(\mathfrak m_i\) have identical lengths over \(R\) and \(R_{\mathfrak m_i}\), since the same simple factors are the residue field. Summing the local formulas gives the stronger global bound
+\[
+ \operatorname{length}_R(M/xM)
+ \le \rho\operatorname{length}_R(R/xR),
+\]
+with equality if \(M\) is finite. This is stronger than the global finiteness statement in the source, with the original module and all local contributions retained.
+
+## Residue fields, ramification and Krull–Akizuki
+
+At 29240–29264 let \(R\to S\) and \(K\subset L\) be the source domains and finite fraction-field extension, \(n=[L:K]\). A \(K\)-basis of the original \(L\) supplies an explicit linear isomorphism with \(K^n\), so the preceding inequality applies to the original \(R\)-submodule \(S\subset L\). The ring \(B=S/\mathfrak mS\), a quotient of \(S/xS\), has
+\[
+ \dim_{\kappa(\mathfrak m)}B
+ \le n\,\operatorname{length}_R(R/xR).
+\]
+It may be zero. If nonzero it is Artinian and splits into its local factors \(B_i\). Their composition factors are their residue fields, so the exact formula is
+\[
+ \dim_{\kappa(\mathfrak m)}B
+ =\sum_i \operatorname{length}_{B_i}(B_i)
+          [\kappa(\mathfrak n_i):\kappa(\mathfrak m)].
+\]
+Every nilpotent multiplicity is retained. This proves the source's three assertions and their quantitative bound. MC-STK-ERR-0628 corrects only the plural verb.
+
+If \(R\) is a DVR and \(S\) its integral closure in \(L\), Krull–Akizuki below makes \(S\) Noetherian, and the residue-field assertion makes it semilocal. Each \(S_{\mathfrak n_i}\) is a DVR. With the original uniformizer \(\pi\) of \(R\), put \(e_i=v_i(\pi)\), \(f_i=[\kappa(\mathfrak n_i):\kappa(\mathfrak m)]\). The filtration by the first \(e_i\) powers of a local uniformizer shows
+\[
+ \sum_i e_i f_i
+ =\operatorname{length}_R(S/\pi S)\le [L:K].
+\]
+Equality holds if \(S\) is finite over \(R\), by the finite-module length equality. It need not hold merely because \(S\) is Noetherian: the source's characteristic-\(p\) example above has \(A\subset V\), \([K(f):K]=p\), and a single prime with \(e=f=1\), giving \(1<p\). Thus the completed example sharpens the precise limit of the length consequence.
+
+For the Krull–Akizuki assertion at 29292–29309, let \(R\subset A\subset L\) and \(0\ne I\subset A\). Choose \(0\ne a\in I\). Its algebraicity over \(K\) gives an equation \(c_0+c_1a+\cdots+c_da^d=0\) with \(c_i\in R\), \(c_0\ne0\), by starting with its minimal polynomial over \(K\) and clearing every denominator. Then \(c_0=-a(c_1+\cdots+c_da^{d-1})\in I\cap R\). Put \(x=c_0\). The global length result makes \(A/xA\) a finite-length \(R\)-module, so \(I/xA\) has finitely many \(R\)-generators. Lift these to \(I\), and add \(x\). They generate \(I\) as an \(A\)-ideal: subtract the lifted \(R\)-linear combination to leave an element of \(xA\). The zero ideal is generated by the empty set. Thus every ideal of \(A\) is finitely generated. This proof asserts Noetherianity, not module finiteness over \(R\).
+
+## A DVR in the original finitely generated extension
+
+For 29311–29338 retain the original local Noetherian domain \(R\), \(K\), and finitely generated extension \(L/K\). If necessary choose actual elements \(x_1,\ldots,x_r\in L\) forming a transcendence basis and let
+\[
+ T=R[x_1,\ldots,x_r]_{(\mathfrak m_R,x_1,\ldots,x_r)}.
+\]
+The polynomial ring is the specified subring of \(L\), its displayed ideal is maximal with residue field \(R/\mathfrak m_R\), and its contraction is \(\mathfrak m_R\). Hence \(T\) dominates \(R\), is Noetherian, and has fraction field \(K(x_1,\ldots,x_r)\); \(L\) is finite over this field. The chart construction in the first section gives a one-dimensional local domain \(T'\) inside that same fraction field dominating \(T\).
+
+Let \(C\) be the integral closure of \(T'\) in the original \(L\). Its fraction field is \(L\): for any \(z\in L\), clear a monic equation's coefficient denominators by multiplying \(z\) by a nonzero \(d\in T'\); the equation for \(dz\) has coefficients \(d^{m-i}c_i\), all in \(T'\) for a sufficiently divisible \(d\). Thus \(dz\in C\) and \(z=(dz)/d\). Krull–Akizuki makes \(C\) Noetherian, and lying over gives a prime \(\mathfrak q\) over the maximal ideal of \(T'\). Integral prime-chain comparison gives dimension one, and the localization \(C_{\mathfrak q}\) is a normal one-dimensional Noetherian local domain, hence a DVR by the characterization. Its fraction field is the original \(L\). Contractions through the three local maps show it dominates the original \(R\). MC-STK-ERR-0629 restores the article without changing this construction.
+
+## Reading and consequence record
+
+The indexed query “Krull Akizuki” returned two research-layer routing records, one PDF-primary and one original-TeX Bhatt survey; the local-unpublished layer returned no matches. Both hits remain unread and unadopted. The arguments above use the read original Stacks TeX and the identified existing source results; no PDF fallback or novelty claim is made.
+
+Bounded later dependencies: algebra.tex:45732–45887, including the complete-local Nagata proof and the analytically unramified normalization lemma; more-morphisms.tex:12543–12589 for the proper finite-fibre criterion; divisors.tex:8321–8341,8382–8435,8622–8648 for the stated blowup charts, exceptional ideal and projectivity. The foundational theorems cited within those source proofs are identified there; this is not a claim to have reread their entire dependency closure. Later report hits are not adjudicated by this bounded dependency reading.
+
+The four editorial consequence groups record the explicit local annihilator exponent, globalization with the termination bound, global length and ramification bounds, and the precise completion/normalization consequences of the two source examples. These implications are propagated together: the positive-characteristic example proves the strict case of the ramification inequality and the limit of module-finiteness claims. Wider synthesis follows completion of the core task. Next source: 29347, Factorization; bounded lookahead through 29370 is read but unadjudicated.

@@ -1,0 +1,162 @@
+\subsection{Algebra: descending properties and the original catenarity example}\label{algebra-descending-properties-and-the-original-catenarity-example}
+
+This editorial review covers the Stacks Project authors' \texttt{algebra.tex} 46633--46877 at authority commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, SHA-256 \texttt{FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3}. The twelve received reports retain six existing units, MC-STK-ERR-0729--0734. No additional change to Algebra source text is proposed. Complete arguments and the linked Examples correction remain editorial.
+
+Primary-source dependencies read for this review are \texttt{algebra.tex} 25455--25639, 27188--27213, 27518--27596, 42001--42051, and \texttt{examples.tex} 1410--1540 at the same commit. The Examples construction retains its attribution to Nagata, Appendix, Example 2, and its Eakin citation. The proof below supplies a direct Noetherianity argument for this particular construction. The \href{https://stacks.math.columbia.edu/tag/0355}{current Stacks remark, Tag 0355}, was checked only to confirm that its local-étale wording agrees with the frozen source. The mathematical proof below uses the original TeX and the exact displayed rings, with no new source-version admission or novelty claim.
+
+\subsubsection{Faithful contraction, Noetherianity and the regularity receiver}\label{faithful-contraction-noetherianity-and-the-regularity-receiver}
+
+Let the original map be \(\varphi:R\to S\). For every ideal \(I\subset R\), faithful flatness gives an injective quotient unit \[
+ R/I\longrightarrow S/IS,\qquad r+I\longmapsto\varphi(r)+IS.
+\] Consequently \(\varphi^{-1}(IS)=I\), and the case \(I=0\) makes \(\varphi\) injective. This proves the exact interpretation of the source's \(R\cap IS\) notation. If \(S\) is Noetherian and \(I_0\subset I_1\subset\cdots\) is the original sequence of ideals, the extended sequence stabilizes at some \(n\). Contracting each equality gives \(I_n=I_{n+1}=\cdots\), so \(R\) is Noetherian. The retained singular ``assumption \ldots{} is'' in unit 0729 is grammatical and adequate; pluralizing both words would be an alternative wording, not another correction to compose.
+
+If \(S\) is reduced, an element \(r\in R\) with \(r^e=0\) maps to a nilpotent of \(S\), hence to zero, and injectivity gives \(r=0\). This proves the original reduced descent. In particular only injectivity is needed for that individual implication; no stronger new source theorem is inserted.
+
+If \(S\) is regular in the source's Noetherian convention, the preceding argument first proves that \(R\) is Noetherian. For \(\mathfrak p\subset R\), faithful flatness makes \(S\otimes_R\kappa(\mathfrak p)\) a nonzero ring; a prime of it gives \(\mathfrak q\subset S\) contracting to \(\mathfrak p\). The map \[
+ R_{\mathfrak p}\longrightarrow S_{\mathfrak q},\qquad
+ r/u\longmapsto\varphi(r)/\varphi(u)
+\] is flat and local. Its target is regular, so the complete local regularity descent of group 634 applies. In that proof, for \(d=\dim S_{\mathfrak q}\ge2\) the original kernel is \(K_d=\ker(F_{d-1}\to F_{d-2})\), for \(d=1\) it is \(K_1=\ker(F_0\to\kappa(\mathfrak p))\), and for \(d=0\) the target is a field and locality plus injectivity makes the source a field. Tensoring the finite-free resolution preserves these kernels; global dimension \(d\) of the regular target makes the last finite syzygy projective. Faithful flatness descends its projectivity, and a finite projective module over the local source is free. The residue field therefore has finite projective dimension, giving regularity of the source. These details and the corrected exact-global-dimension reference are preserved in \texttt{ALGEBRA\_REGULAR\_AB\_NOTES\_20260928.md}, ``Flat descent with the actual low-degree kernels'', groups 634--635.
+
+The faithfully flat global regularity assertion in earlier group 639 is now identified as already explicit source content at 46714--46732. Its earlier proof remains valid. Its status in a whole-work comparison is recovered source content, while the separately proved redundancy of the Noetherian hypothesis in the earlier local statement remains a strengthening of that stated hypothesis. No claim of a new global regularity theorem is carried forward.
+
+\subsubsection{Normal descent with the actual principal-ideal map}\label{normal-descent-with-the-actual-principal-ideal-map}
+
+Assume the original \(S\) is normal and \(R\to S\) faithfully flat. Normal rings are reduced by local detection of nilpotents, so the preceding argument makes \(R\) reduced. Fix \(\mathfrak p\subset R\). Base change gives the faithfully flat map \[
+ R_{\mathfrak p}\longrightarrow S_{\mathfrak p}
+ =(R\setminus\mathfrak p)^{-1}S,
+\] where the equality sends \((r/u)\otimes s\) to \(\varphi(r)s/\varphi(u)\), and the inverse sends \(s/\varphi(u)\) to \((1/u)\otimes s\). Unit 0730 restores the missing word ``flat''. Choosing a prime of the nonzero closed fibre and localizing gives a flat local map from \(R_{\mathfrak p}\) to a prime localization of \(S\), hence a faithfully flat map to a normal domain. These are the actual localizations of the original rings. The resulting injection makes \(R_{\mathfrak p}\) a domain.
+
+Write these local rings as \(R,S\), as the source does after its reductions. Let \(a/b\in\operatorname{Frac}(R)\), with the required \(b\ne0\), satisfy its monic equation over \(R\). The injective domain map makes \(b\) nonzero in \(S\), so the fraction is defined in \(\operatorname{Frac}(S)\), satisfies the image equation with all its coefficients, and lies in \(S\) by normality. Thus \(a\in bS\). The original multiplication map \[
+ R\longrightarrow R/bR,\qquad r\longmapsto ra+bR
+\] becomes zero after tensoring with \(S\), because its image of 1 is zero in \(S/bS\). The quotient unit \(R/bR\to S/bS\) is injective, so \(a+bR=0\). Hence \(a=bd\) for some \(d\in R\), and the unchanged fraction \(a/b=d\) belongs to \(R\). This proves normality of every original \(R_{\mathfrak p}\) and therefore of the original ring.
+
+\subsubsection{The minimal-fibre choice in Serre descent}\label{the-minimal-fibre-choice-in-serre-descent}
+
+Assume \(R\to S\) faithfully flat and \(S\) Noetherian. For an original prime \(\mathfrak p\subset R\), put \(F=S\otimes_R\kappa(\mathfrak p)\). It is nonzero by faithful flatness and Noetherian, being a quotient of a localization of \(S\). Choose a minimal prime \(\bar{\mathfrak q}\) of \(F\) and its corresponding \(\mathfrak q\subset S\). The exact local fibre maps from the preceding ascent review identify \[
+ A=R_{\mathfrak p},\qquad B=S_{\mathfrak q},\qquad
+ B/\mathfrak pB\cong F_{\bar{\mathfrak q}}.
+\] Explicitly, if \(U=R\setminus\mathfrak p\), then \[
+ \frac{\overline{s/\varphi(u)}}{\overline{t/\varphi(v)}}
+ \longmapsto\overline{\frac{s\varphi(v)}{t\varphi(u)}}
+\] maps the localized fibre to the quotient local ring; its inverse takes the class of \(s/t\) to \((s\otimes1)/(t\otimes1)\). The conditions \(u,v\notin\mathfrak p\) and \(t\notin\mathfrak q\) make every denominator invertible. Both composites are the identity by the original fraction relations.
+
+The ring \(F_{\bar{\mathfrak q}}\) is a nonzero zero-dimensional Noetherian local ring. Its maximal ideal is nilpotent; if it is nonzero, a last nonzero power contains a nonzero element annihilated by the maximal ideal, while if it is zero the ring is a field. In either case its depth is zero. Its dimension is zero by the minimal-prime choice. Thus \(\mathfrak m_AB\) has radical \(\mathfrak m_B\) and is an ideal of definition. The original dimension and depth formulas give \[
+ \dim B=\dim A+0,\qquad
+ \operatorname{depth}B=\operatorname{depth}A+0.
+\] If \(S\) satisfies \((S_k)\), then \[
+ \operatorname{depth}A=\operatorname{depth}B
+ \ge\min(k,\dim B)=\min(k,\dim A),
+\] at each original \(\mathfrak p\). If \(S\) satisfies \((R_k)\) and \(\dim A\le k\), then \(\dim B=\dim A\le k\) makes \(B\) regular, and the complete local descent including its \(d=0,1\) cases makes \(A\) regular. Both conclusions retain source Noetherianity proved by faithful descent; no regularity or reducedness of the chosen zero-dimensional fibre is assumed.
+
+\subsubsection{Nagata descent and every total-quotient denominator}\label{nagata-descent-and-every-total-quotient-denominator}
+
+Keep the original smooth map \(R\to S\) surjective on spectra and the Nagata ring \(S\). Smoothness gives flatness, and surjectivity on spectra makes it faithful; Noetherianity descends to \(R\). For the original finite-type map into a domain \(R\to A\), put \(B=A\otimes_RS\). The map \(A\to B\) is faithfully flat and smooth by base change; \(B\) is a finite-type algebra over Nagata \(S\), hence Nagata by the already proved finite-type theorem. It is reduced by the preceding smooth reduced-ascent argument applied to the unchanged domain \(A\).
+
+Let \(\mathfrak q_1,\ldots,\mathfrak q_t\) be its finitely many minimal primes. The ring \(B\ne0\), because \(A\ne0\) and the map is faithfully flat. Each \(\mathfrak q_i\) contracts to \((0)\subset A\): if its contraction contained a nonzero prime chain above \((0)\), flat going down would give a strictly smaller prime below \(\mathfrak q_i\). Unit 0731 terminates this sentence with a period. For the original total quotient ring, \[
+ Q(B)=\prod_{i=1}^t L_i,\qquad L_i=\kappa(\mathfrak q_i).
+\] The reduced Noetherian total-quotient comparison is the one already proved in the Nagata note. The integral closure \(B'\) equals the product of the closures \(B_i'\) of \(B/\mathfrak q_i\) in \(L_i\): an integral tuple has integral coordinates, while conversely the product of the finitely many lifted monic coordinate equations is a monic polynomial vanishing on the tuple in every coordinate. Each \(B_i'\) is finite over \(B/\mathfrak q_i\) by the Nagata property, and the product is therefore finite over \(B\).
+
+Unit 0732 defines the previously unnamed \(A'\) to be the integral closure of the original \(A\) in \(Q(A)=\operatorname{Frac}(A)\). Each \(d\in A\setminus\{0\}\) acts injectively on \(A\); flatness makes its image act injectively on \(B\). Hence the map \[
+ Q(A)\otimes_AB
+ =(A\setminus\{0\})^{-1}A\otimes_AB
+ \xrightarrow{\sim}(A\setminus\{0\})^{-1}B
+ \longrightarrow Q(B)
+\] sends \((a/d)\otimes b\) to \(\varphi(a)b/\varphi(d)\). The middle inverse sends \(b/\varphi(d)\) to \((1/d)\otimes b\). The last map is injective: if such a fraction is zero after inverting all nonzerodivisors of \(B\), a nonzerodivisor \(u\in B\) annihilates its numerator, forcing that numerator to be zero already. No nonzero denominator of \(A\) was discarded or assumed invertible in \(B\) itself.
+
+Flatness injects \(A'\otimes_AB\) into \(Q(A)\otimes_AB\). The image lies in \(B'\), since the image of each element of \(A'\) satisfies its original monic equation over the image of \(A\), and the integral closure is a subring containing \(B\). This proves the original injection \[
+ A'\otimes_AB\hookrightarrow B'.
+\] As \(B\) is Noetherian and \(B'\) finite, its submodule \(A'\otimes_AB\) is finite. Express a finite set of its generators as finite sums of actual tensors \(x_i\otimes b_i\); collect all finitely many \(x_i\in A'\). The elements \(x_i\otimes1\) generate, because each original tensor generator is their \(B\)-linear combination. Put \(M=A'/\sum_iAx_i\). Right exactness gives \(M\otimes_AB=0\), and faithful flatness gives \(M=0\). Thus the original \(x_i\) generate \(A'\), as unit 0733 states in the present tense. Every finite-type domain algebra over \(R\) is N-1, so the previously proved criterion makes \(R\) universally Japanese and, together with its Noetherianity, Nagata.
+
+\subsubsection{The original series construction and its missing coefficient factor}\label{the-original-series-construction-and-its-missing-coefficient-factor}
+
+Retain the Examples data: a field \(k\), a series \[
+ z=\sum_{i=1}^{\infty}a_ix^i\in k[[x]]
+\] transcendental over \(k(x)\), and \[
+ z_j=x^{-j}\left(z-\sum_{i=1}^{j-1}a_ix^i\right)
+     =\sum_{i=j}^{\infty}a_ix^{i-j},\qquad j\ge1.
+\] Such data exist, for example with \(k=\mathbf Q\): the elements algebraic over the countable field \(\mathbf Q(x)\) form a countable set, while \(x\mathbf Q[[x]]\) is uncountable. Thus the construction really supplies counterexamples. No specific choice of its infinitely many coefficients is suppressed in the calculations.
+
+For \(R=k[x,z_1,z_2,\ldots]\subset k[[x]]\), the exact relations are \[
+ z=xz_1,\qquad xz_{j+1}+a_j=z_j,
+ \qquad z_{j+1}=x^{-1}(z_j-a_j).
+\] The last equality applies where \(x\) is inverted. \textbf{The source at \texttt{examples.tex:1481} writes \(x^{-1}z_j-a_j\), omitting the factor \(x^{-1}\) on \(a_j\).} Its difference from the correct expression is \(a_j(x^{-1}-1)\). At least one \(a_j\ne0\), since the stipulated series is transcendental, and for that index the difference is nonzero in \(k((x))\). This is a source correction in the cited Examples dependency, not an Algebra text operation. The construction and the claimed local-ring isomorphism remain valid with the exact recurrence.
+
+Each \(z_j\) is transcendental over \(k(x)\), since its displayed formula would otherwise make \(z\) algebraic. Hence \(R_j=k[x,z_j]\) is a polynomial ring in the two indicated elements, and \[
+ R=\operatorname{colim}_{j\ge1}R_j,\qquad
+ R_j\to R_{j+1}:x\mapsto x,\ z_j\mapsto xz_{j+1}+a_j.
+\] The maps are the actual injections inside \(k[[x]]\). Modulo \(x-1\), the transition is the invertible translation \(z_j\mapsto z_{j+1}+a_j\). Quotients commute with this colimit by their element relations. Therefore the quotient is exactly \(k[z]\), with \[
+ x\mapsto1,\qquad z_j\mapsto z-\sum_{i=1}^{j-1}a_i.
+\] The inverse sends the indeterminate \(z\) to the class of the original \(z=xz_1\). The formula verifies both composites at every generator. This supplies a direct proof of the source's quotient assertion, preserving every coefficient.
+
+For the original \(\mathfrak m=(x)\), the relations show that reduction modulo \(x\) sends \(z_j\) to \(a_j\), so \(R/\mathfrak m=k\). If a nonzero \(r\in R\) has \(x\)-adic order \(v\) in \(k[[x]]\), vanishing of its constant term means \(r\in xR\). Repeating this exact divisibility \(v\) times gives \(r=x^vu\), with \(u\in R\setminus\mathfrak m\). Thus every nonzero element of \(R_{\mathfrak m}\) has this unique order and a unit factor, and any nonzero ideal is generated by an element of minimum order. It is a DVR with parameter \(x\) and residue field \(k\).
+
+The quotient calculation shows that the original \[
+ \mathfrak n=(x-1,z_1,z_2+a_1,z_3+a_1+a_2,\ldots)
+\] equals \((x-1,z)\), and has residue field \(k\). Inverting the original \(x\) gives \[
+ R[1/x]=k[x,x^{-1},z],
+\] with every \(z_j\) given by its full displayed expression. Since \(x\notin\mathfrak n\), localizing gives the exact isomorphism \[
+ k[x,x^{-1},z]_{(x-1,z)}\xrightarrow{\sim}R_{\mathfrak n}.
+\] It sends \(x,z\) to the original elements; its inverse sends each \(z_j\) to \(x^{-j}(z-\sum_{i<j}a_ix^i)\) and each inverted denominator to its inverse. These formulas are mutually inverse on generators and respect every localization denominator. The ring is regular local of dimension 2, with parameters \(x-1,z\), and residue field \(k\).
+
+Let the source's multiplicative set be \(W=R\setminus(\mathfrak m\cup\mathfrak n)\), and keep its original ring \(B=W^{-1}R\). Its maximal ideals are precisely \(\mathfrak mB,\mathfrak nB\): a prime disjoint from \(W\) is contained in their union, hence in one of them by the two-ideal prime-avoidance argument. Both ideals survive and are maximal. Their local rings are the original \(R_{\mathfrak m},R_{\mathfrak n}\), with fractions mapped to the same original fractions and inverse localization maps. To prove \(B\) Noetherian, take any ideal \(I\). At each of its two maximal ideals choose finitely many elements of \(I\) whose images generate the localized ideal. Let \(I_0\) be the ideal generated by the union of these two finite sets. Then \((I/I_0)\) vanishes at both maximal ideals and hence at every maximal ideal; an element of a nonzero module would have annihilator contained in some maximal ideal and would survive there. Thus \(I=I_0\). Every prime localization of \(B\) is a localization of one of its two regular local rings, so \(B\) is regular, a domain, and has dimension 2.
+
+\subsubsection{The conductor ring and a finite étale counterexample}\label{the-conductor-ring-and-a-finite-uxe9tale-counterexample}
+
+Keep \(J=\mathfrak mB\cap\mathfrak nB\) and the original \(A=k+J\subset B\). The two maximal ideals are comaximal, so \(B/J\cong k\times k\); the image of \(A\) is the diagonal copy of \(k\). Choose \(b\in B\) whose residues are \((1,0)\), in that order. For an arbitrary \(v\in B\) with residues \((v_1,v_2)\), \[
+ v-\bigl(v_2+(v_1-v_2)b\bigr)\in J\subset A.
+\] Thus \(B=A+Ab\). Also \(c=b^2-b\in J\subset A\). These are exact elements of the original rings.
+
+The ring \(A\) is local with maximal ideal \(J\): an element with nonzero common residue is a unit of \(B\), whose inverse has the same inverse residue in both coordinates and therefore belongs to \(A\). It is a domain. The module \(B/A\) is isomorphic to \(k\) by the residue difference and is killed by \(J\). Here is a direct proof that \(A\) is Noetherian. For an ideal \(I\subset A\), Noetherianity of \(B\) lets us choose \(i_1,\ldots,i_r\in I\) generating \(IB\) over \(B\), by expanding any finite generating set into the original \(I\)-elements. Put \(I_0=\sum Ai_j\). The module \(IB/I_0\) is a quotient of \((B/A)^r\), since the surjection \(B^r\to IB/I_0\), \((v_j)\mapsto\sum v_ji_j+I_0\), kills \(A^r\). It is consequently a finite-dimensional \(k\)-vector space. Its submodule \(I/I_0\) is another finite-dimensional \(k\)-vector space, so finitely many lifts together with the \(i_j\) generate \(I\) over \(A\). This proves Noetherianity without leaving a finiteness assertion to be assumed.
+
+The nonzero element \(x(x-1)\) lies in \(J\); for any \(v\in B\), its product with this element belongs to \(J\subset A\). Hence \(\operatorname{Frac}(A)=\operatorname{Frac}(B)=K\). The extension is finite, since \(B=A+Ab\), so integral dimension comparison gives \(\dim A=\dim B=2\). If \(A\) were universally catenary, the source dimension formula at 27519--27596 for the original finite birational extension and the prime \(\mathfrak mB\) would give \[
+ \operatorname{height}(\mathfrak mB)
+ =\operatorname{height}(J)
+   +\operatorname{trdeg}_{\operatorname{Frac}(A)}\operatorname{Frac}(B)
+   -\operatorname{trdeg}_{\kappa(J)}\kappa(\mathfrak mB)
+ =2+0-0=2.
+\] The actual DVR calculation gives height 1. Thus the unchanged \(A\) is not universally catenary. The dimensions in the Algebra remark list the two maximal ideals in the opposite order; the two original local rings and their residue fields are the same ones, with this permutation made explicit.
+
+Now form an explicit algebra over this original \(A\): \[
+ C=A[T]/(T^2-T-c),\qquad t=[T],\qquad c=b^2-b.
+\] Monic division proves that \(1,t\) is an \(A\)-basis. Thus \(C\) is finite free of rank 2 and faithfully flat: for every \(A\)-module \(M\), the basis identifies \(M\otimes_AC\) with \(M\oplus M\). The equality \[
+ (2t-1)^2=1+4c
+\] retains both numerical coefficients in every characteristic. Since \(c\in J\), \(1+4c\) is a unit of the local ring \(A\), and the derivative \(2t-1\) has inverse \((2t-1)/(1+4c)\) in \(C\). Consequently \(C\) is étale. Explicitly, for a square-zero ideal \(I\) in an \(A\)-algebra \(D\), a root modulo \(I\) has a lift \(r\); its unique root correction is \[
+ \delta=-\frac{r^2-r-c}{2r-1}\in I.
+\] The derivative is a unit because it is a unit modulo the nilpotent ideal. Expanding retains the full identity \[
+ (r+\delta)^2-(r+\delta)-c
+ =(r^2-r-c)+(2r-1)\delta+\delta^2=0.
+\] The same identity proves uniqueness. Together with finite presentation, this proves formal étaleness and étaleness of the actual quadratic algebra.
+
+There is an exact base-change decomposition \[
+ B\otimes_AC=B[T]/\bigl((T-b)(T-(1-b))\bigr)
+ \xrightarrow{\sim}B\times B,
+ \qquad f(t)\longmapsto(f(b),f(1-b)).
+\] The root difference \(2b-1\) is a unit in \(B\): its residues are \((1,-1)\). The inverse sends \((v,w)\) to \[
+ v\frac{t-(1-b)}{2b-1}
+ +w\frac{b-t}{2b-1}.
+\] Evaluation proves both composites, and the two displayed fractions are the orthogonal idempotents summing to 1. This retains the actual numerator, sign and denominator in the splitting.
+
+The two evaluation maps \(C\to B\), \(t\mapsto b\) and \(t\mapsto1-b\), are surjective because \(B=A+Ab=A+A(1-b)\). The product map \[
+ C\hookrightarrow B\times B,\qquad
+ a+dt\longmapsto(a+db,a+d(1-b))
+\] is injective: equality to zero in both coordinates gives \(d(2b-1)=0\), hence \(d=0\) and \(a=0\). Let \(I_+,I_-\) be the two kernels. They are prime and have intersection zero. They are distinct and incomparable: write the original \(b=a_0/d_0\) with \(a_0,d_0\in A\), \(d_0\ne0\), using the proved equality of fraction fields. Then \[
+ d_0t-a_0\in I_+\setminus I_-,\qquad
+ d_0t-(d_0-a_0)\in I_-\setminus I_+,
+\] because their other evaluations are respectively \(d_0(1-2b)\) and \(d_0(2b-1)\), both nonzero. Every prime of \(C\) contains one of these ideals: otherwise a product of elements chosen outside that prime, one from each ideal, would be zero. Thus these are its two minimal primes and both component quotients are the original regular domain \(B\).
+
+The ring \(B\) is universally catenary. Its regular local rings are Cohen--Macaulay, and the source's Cohen--Macaulay catenarity theorem at 25606--25638 proves universal catenarity: a saturated prime chain has length equal to the difference of the two local dimensions, and polynomial extensions remain Cohen--Macaulay. It follows directly that \(C\) is universally catenary. Indeed, take any prime interval in \(C[X_1,\ldots,X_n]\). Its lower prime contracts to a prime of \(C\) containing \(I_+\) or \(I_-\); the whole interval then contains the extended chosen ideal. Quotienting identifies all its intermediate primes, inclusions and saturated chains with the same interval in \(B[X_1,\ldots,X_n]\). Lengths are bounded and all saturated chains have the same length there. This proves catenarity of every polynomial algebra over \(C\); quotient prime correspondence then gives it for every finite-type \(C\)-algebra. No locality of \(C\) or unproved finite presentation of a localization was used.
+
+We have therefore proved the stronger precise counterexample: \textbf{the original non-universally-catenary Noetherian local domain \(A\) has a finite, faithfully flat, étale algebra \(C\) of rank 2 which is universally catenary.} This is a complete construction from the source's original \(A,B\), not a novelty claim.
+
+\subsubsection{The local comparison and report accounting}\label{the-local-comparison-and-report-accounting}
+
+The algebra \(C\) has exactly two maximal ideals over \(J\), since it is finite over local \(A\) and \[
+ C/JC=k[T]/(T(T-1))\cong k\times k.
+\] Let \(\mathfrak r_0=(J,t)\). Its localization \(C_{\mathfrak r_0}\) is a local ring essentially étale over \(A\), and is universally catenary by localization of the proved \(C\). The exact split algebra becomes \[
+ B\otimes_AC_{\mathfrak r_0}
+ \cong B_{\mathfrak nB}\times B_{\mathfrak mB}.
+\] For the first evaluation, \(t\mapsto b\), the inverse image of \(\mathfrak nB\) is \(\mathfrak r_0\), because \(b\) has residue zero there; for the second evaluation the corresponding prime is \(\mathfrak mB\). Surjectivity of the evaluation maps shows that the image of each denominator outside \(\mathfrak r_0\) ranges over the elements outside the appropriate target maximal ideal. Thus the localization maps send an original fraction to its evaluated numerator divided by its evaluated denominator; inverses lift each target numerator and denominator through the surjection, with independence following from the quotient relation. The two quotient local rings have the originally proved dimensions 2 and 1 and residue field \(k\). The two distinct minimal-prime quotients of \(C_{\mathfrak r_0}\) are these actual local rings.
+
+The source's cited decomposition lemma supplies an étale algebra with a specified prime, and localization at that prime supplies a local essentially étale algebra. Arbitrary prime localization is not itself a justification of finite presentation. The explicit \(C\) above proves the stated étale non-descent conclusion, in the stronger finite form, and its exact localization proves the local comparison. The original stronger wording ``local étale ring map'' is not certified by silently treating ``essentially étale'' as ``étale''; nor is a falsehood claim about all possible local étale constructions inferred from this particular construction. The source passage stays identifiable and this clarification is editorial.
+
+The twelve reports are paired under six existing units: OCC-01021/12440 under 0729, 01022/12441 under 0730, 01023/12442 under 0731, 01024/12443 under 0732, 01025/12444 under 0733, and 01026/12445 under 0734. The last unit's explicit comparison of each residue field is retained. Separate records hold the finite quadratic counterexample and the Examples recurrence correction. The regularity, depth, smooth-reducedness, Nagata and unramified-chart dependencies are propagated from their earlier verified records. Later synthesis and optional paper mining remain after the core review; the next authority section starts at 46878.

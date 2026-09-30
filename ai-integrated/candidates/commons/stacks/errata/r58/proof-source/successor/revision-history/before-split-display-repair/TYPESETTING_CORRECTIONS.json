@@ -1,0 +1,54 @@
+{
+  "schema": "stacks-algebra-typesetting-corrections/v1",
+  "created_at_utc": "2026-09-29T20:58:41.478243+00:00",
+  "previous_manifest_sha256": "DD44FB5DC8A417386CB5C4E47F82CA531219DA55F7FEA2438CCAA3EDA07A978E",
+  "failed_probe": "../ALGEBRA_COMPANION_BUILD_20260929/probe-04/PROBE_RECEIPT.json",
+  "distinct_defects": 2,
+  "changed_live_representations": 3,
+  "corrections": [
+    {
+      "file": "contextual-arguments.tex",
+      "input_sha256": "3CA62F27373C0929EAC29BDEB846A787A722E184416DCE93310CF839AC9BA74B",
+      "output_sha256": "725B780CA9BC76297F076603DF3EAFCD914E76487C7BF62CFAE0E6CF6E278F57",
+      "byte_offset": 395786,
+      "input_line": 8895,
+      "original_bytes_hex": "0869672f",
+      "corrected_tex": "\\big/",
+      "source_locator": "ALGEBRA-RECON-225-OP1",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    },
+    {
+      "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+      "input_sha256": "38331117A50EA42174E57661869257A0A0C5ED19B740734E7FEC49A303A5321E",
+      "output_sha256": "D251CCF041D8210743C726C1226BFFD700B09417D67FD19095E1F8BF1D36AD65",
+      "byte_offset": 27721,
+      "input_line": 678,
+      "original_bytes_hex": "0869672f",
+      "corrected_tex": "\\big/",
+      "source_locator": "ALGEBRA-RECON-225-OP1",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    },
+    {
+      "file": "notes/ALGEBRA_HENSELIZATION_NOTES_20260929.tex",
+      "input_sha256": "CB2EDD66AF7BE5EDF9FC698D6D4E17CF92826DE28082316B1E4BAC541CCE3453",
+      "output_sha256": "8B9120B52B4D2A2450F757FB8E46B7415F4AA7732920E6D7511C88A9FEA234FF",
+      "byte_offset": 22071,
+      "input_line": 98,
+      "original_bytes_hex": "0869676c28",
+      "corrected_tex": "\\bigl(",
+      "source_locator": "The finite etale tower and the original tensor formula, authority lines 43540--43558",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    }
+  ],
+  "original_review_and_markdown_preserved": true,
+  "original_reviewed_source_context_preserved": true,
+  "note": "Original bytes remain in revision history and authoring evidence. These are declared editorial transcription repairs, not new source errata.",
+  "compiled_control_character_scan_passed": true,
+  "tab_and_bare_carriage_return_scan_passed": true,
+  "mathematics_reassessed": false,
+  "source_chapter_changed": false,
+  "build_verified": false
+}

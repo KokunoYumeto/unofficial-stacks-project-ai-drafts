@@ -1,0 +1,20 @@
+\begin{lemma}
+\label{lemma-integral-local}
+Let $R \to S$ be a ring map.
+Let $f_1, \ldots, f_n \in R$ generate the unit ideal.
+\begin{enumerate}
+\item If each $R_{f_i} \to S_{f_i}$ is integral, so is $R \to S$.
+\item If each $R_{f_i} \to S_{f_i}$ is finite, so is $R \to S$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Proof of (1).
+Let $s \in S$. Consider the ideal $I \subset R[x]$ of
+polynomials $P$ such that $P(s) = 0$. Let $J \subset R$
+denote the ideal (!) of leading coefficients of elements of $I$.
+By assumption and clearing denominators
+we see that $f_i^{n_i} \in J$ for all $i$
+and certain $n_i \geq 0$. Hence $J$ contains $1$ and we see
+$s$ is integral over $R$. Proof of (2) omitted.
+\end{proof}

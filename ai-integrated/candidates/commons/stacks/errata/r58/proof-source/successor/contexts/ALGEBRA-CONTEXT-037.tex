@@ -1,0 +1,56 @@
+\begin{lemma}
+\label{editorial-source-lemma-affineline-special}
+Let $R$ be a ring. Let $f, g \in R[x]$ be polynomials.
+Assume the leading coefficient of $g$ is a unit of $R$.
+There exist elements $r_i\in R$, $i = 1\ldots, n$ such that
+the image of $D(f) \cap V(g)$ in $\Spec(R)$ is
+$\bigcup_{i = 1, \ldots, n} D(r_i)$.
+\end{lemma}
+
+\begin{proof}
+Write $g = ux^d + a_{d-1}x^{d-1} + \ldots + a_0$, where
+$d$ is the degree of $g$, and hence $u \in R^*$.
+If $d=0$, then $g=u$ is a unit, so $V(g)$ and its image are empty;
+the required union may be taken to have no terms. Suppose $d>0$ and
+consider the original ring $A=R[x]/(g)$. It is finite free with basis
+the images of $1,x,\ldots,x^{d-1}$. Indeed, if a polynomial has leading
+term $bx^e$ with $e\geq d$, subtracting
+$bu^{-1}x^{e-d}g$ cancels that term and lowers its degree. Iteration
+gives a remainder of degree less than $d$, keeping $g$ and all its
+coefficients unchanged. If a nonzero multiple $qg$ had degree less
+than $d$, its leading coefficient would be the product of the nonzero
+leading coefficient of $q$ with the unit $u$, hence nonzero, and its
+degree would be $\deg(q)+d\geq d$, a contradiction. This proves both
+spanning and independence. Consider multiplication by the image of
+$f$ on $A$. This is an $R$-module map.
+Hence we can let $P(T) \in R[T]$ be the characteristic polynomial
+of this map. Write $P(T) = T^d + r_{d-1} T^{d-1} + \ldots + r_0$.
+We claim that $r_0, \ldots, r_{d-1}$ have the desired property.
+We will use below the property of characteristic polynomials
+that
+$$
+\mathfrak p \in V(r_0, \ldots, r_{d-1})
+\Leftrightarrow
+\text{multiplication by }f\text{ is nilpotent on }
+A \otimes_R \kappa(\mathfrak p).
+$$
+This was proved in Lemma \ref{editorial-source-lemma-characteristic-polynomial-prime}.
+
+\medskip\noindent
+Suppose $\mathfrak q\in D(f) \cap V(g)$, and let
+$\mathfrak p = \mathfrak q \cap R$. Then there is a nonzero map
+$A \otimes_R \kappa(\mathfrak p) \to \kappa(\mathfrak q)$ which
+is compatible with multiplication by $f$.
+And $f$ acts as a unit on $\kappa(\mathfrak q)$.
+Thus we conclude $\mathfrak p \not \in  V(r_0, \ldots, r_{d-1})$.
+
+\medskip\noindent
+On the other hand, suppose that $r_i \not\in \mathfrak p$ for some
+prime $\mathfrak p$ of $R$ and some $0 \leq i \leq d - 1$.
+Then multiplication by $f$ is not nilpotent on the algebra
+$A \otimes_R \kappa(\mathfrak p)$.
+Hence there exists a prime ideal $\overline{\mathfrak q} \subset
+A \otimes_R \kappa(\mathfrak p)$ not containing the image of $f$.
+The inverse image of $\overline{\mathfrak q}$ in $R[x]$
+is an element of $D(f) \cap V(g)$ mapping to $\mathfrak p$.
+\end{proof}

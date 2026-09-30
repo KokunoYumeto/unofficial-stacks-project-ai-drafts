@@ -1,0 +1,143 @@
+\subsection{Finite presentation: source review and separate editorial arguments}\label{algebra-proof-035-finite-presentation-source-review-and-separate-editorial-arguments}
+
+Authority: Stacks Project authors, algebra.tex at commit a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, lines 31434--31758; whole-file SHA256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Bounded primary dependencies 539--563 and 26366--26399 were reread. All twenty-one received reports whose first locus is in this section were read. The previous reading summary missed OCC-00612; the source-ordered inventory includes it here.
+
+This document is editorial evidence. The translated source retains the author's statements, hypotheses, argument structure and omitted-proof wording. The existing six canonical units 0667--0672 remain identifiable; their ten operations correct two index switches, the selected product factor, three variable bounds, two verbs and two coordinated replacement clauses. One terminal period is proposed. One stylistic rearrangement is declined as optional. All supplementary proofs and stronger statements below remain separate from both translation branches. No novelty claim is made. Broader synthesis follows completion of the core intake.
+
+\subsubsection{The original descent families}\label{algebra-proof-035-the-original-descent-families}
+
+Source 31442--31487; groups 784--785. In the first proof retain \[
+y_j=\sum_i a_{ij}\otimes x_{ji},\qquad
+A=R[x_{ji}:j,i]\subset S.
+\] The finite families need not have interchangeable index ranges. MC-STK-ERR-0667 changes only the subsequent reference to this original family. Flatness injects \(R'\otimes_R A\) into \(R'\otimes_R S\), where its image contains every \(y_j\); hence the cokernel \((S/A)\otimes_R R'\) vanishes. Faithful flatness gives \(S/A=0\). The converse follows by tensoring an actual finite generating family.
+
+In the second proof retain the original polynomial algebra \(P=R[x_1,\ldots,x_n]\), its kernel \(I\), and \[
+g_j=\sum_i a_{ij}\otimes f_{ji},\qquad
+J=(f_{ji}:j,i)\subset I.
+\] MC-STK-ERR-0668 restores the reference to this family. Flatness identifies both tensor ideals inside \(R'[x_1,\ldots,x_n]\); since the first contains the generators \(g_j\) of the second, they coincide. Faithfulness applied to \(I/J\) yields \(I=J\). All coefficients and all components of the two tensor expressions are retained.
+
+\subsubsection{The original module lifts and stalk specialization}\label{algebra-proof-035-the-original-module-lifts-and-stalk-specialization}
+
+Source 31489--31578; group 786. For \(R'=S^{-1}(R/I)\) and \(M'=(R')^n/K'\), let \(K\) be the inverse image of \(K'\) in \(R^n\). The image of \(I R^n\) is zero, hence \(IR^n\subset K\). Each element of \(K'\) is a vector over \(R'\); multiplying its finitely many entries by one original denominator \(s\in S\) lifts it to \(v\in R^n\). Since \(K'\) is an \(R'\)-submodule, \(v\in K\), and the original element is the image of \(v/s\). Thus \(S^{-1}K\) maps onto \(K'\), and the quotient \(M=R^n/K\) has \(S^{-1}(M/IM)=M'\).
+
+For the finitely presented case retain the actual matrix relation \[
+A_{R'}=sA',\qquad s\in S,
+\] and the actual generators \(x_i\mapsto x'_i\). Multiplication by \(s\) is an automorphism of \((R')^m\), so \(\operatorname{im}(A_{R'})=\operatorname{im}(A')\). Their cokernels are identified by the identity of the original \((R')^n\), which proves the asserted map. The factor \(s\) is neither discarded nor hidden in a replacement definition. Zero source or target ranks give the same argument with zero matrices.
+
+For the approximation of an arbitrary \(M\), numerators \(x_i\in M\) of a finite localized generating family generate \(S^{-1}M\). The map \(R^n\to M\) need not be onto before localization. After localization it is onto, with kernel \(S^{-1}K\) by exactness of localization. Finite presentation of \(S^{-1}M\) makes that kernel finite. Choose numerators of its generators in the actual \(K\) and let \(K'\) be their finite span. Then \(M'=R^n/K'\to M\) induces the required isomorphism after localization. Taking \(S=R\setminus\mathfrak p\) proves the stalk statements. The only proposed text operation is the missing period after the lemma reference at 31577.
+
+\subsubsection{Local isomorphisms with all original denominators}\label{algebra-proof-035-local-isomorphisms-with-all-original-denominators}
+
+Source 31580--31660; groups 787--788. Write the original presentation \[
+S=R[x_1,\ldots,x_n]/(g_1,\ldots,g_m)
+\] and the images of the original \(x_i\) under \(S_{\mathfrak q}\cong R_{\mathfrak p}\) as \(a_i=b_i/f_0\), with \(f_0\notin\mathfrak p\). In \(S_{f_0}\) define \(\xi_i=x_i-a_i\). This is an explicit coordinate comparison; the original presentation remains recorded. The new relation is exactly \[
+G_j(\xi_1,\ldots,\xi_n)=g_j(\xi_1+a_1,\ldots,\xi_n+a_n).
+\] Retain every term of this polynomial and its constant \(c_j=g_j(a_1,\ldots,a_n)\). Since \(c_j\) vanishes in \(R_{\mathfrak p}\), choose an annihilator \(h_j\in R\setminus\mathfrak p\) of \(c_j\) in \(R_{f_0}\), and set \(f_1=f_0\prod_jh_j\). Evaluation at \(\xi_i=0\), equivalently at the original \(x_i=a_i\), defines \[
+v:S_{f_1}\to R_{f_1},\qquad J=\ker v=(\xi_1,\ldots,\xi_n).
+\] The composite into \(R_{\mathfrak p}\) agrees with the original isomorphism on \(S\), so the inverse image of \(\mathfrak pR_{f_1}\) is the original \(\mathfrak q\) localized. It extends to \(S_{\mathfrak q}\), since every element outside \(\mathfrak q\) maps to a unit of \(R_{\mathfrak p}\). Consequently \(S_{\mathfrak p}/J_{\mathfrak p}\cong R_{\mathfrak p}\cong S_{\mathfrak q}\) as \(S_{\mathfrak p}\)-algebras.
+
+The last quotient is a localization of \(S_{\mathfrak p}\), hence flat. The ideal \(J_{\mathfrak p}\) is finitely generated and pure. The source lemma 26366--26399 gives an idempotent \(e\) with \(J_{\mathfrak p}=eS_{\mathfrak p}\). To record its actual spreading, write \(e=z/t\), \(t\in R\setminus\mathfrak p\). Its equation \(e^2-e=0\) means an additional \(u\in R\setminus\mathfrak p\) kills \(z^2-tz\). After inverting \(f_1tu\), \(e'=z/t\) is idempotent. Each of the finitely many \(\xi_i\) lies in \(e'S_{\mathfrak p}\), and \(e'\) is a finite combination of them there. Take the product of all coefficient denominators and all annihilators of the resulting differences, each outside \(\mathfrak p\). With this further factor included in \(f\), the actual ideals satisfy \(J_f=e'S_f\).
+
+Thus the exact maps are \[
+S_f\longrightarrow R_f\times e'S_f,\quad z\longmapsto(v(z),e'z),
+\qquad
+(r,c)\longmapsto(1-e')\varphi(r)+c.
+\] They are inverse: \(v(e')=0\), the kernel of \(v\) is \(e'S_f\), and \((1-e')\varphi(v(z))=(1-e')z\). The ring \(e'S_f\) has unit \(e'\) and its \(R_f\)-structure is \(r\mapsto e'\varphi(r)\).
+
+For the next lemma, retain the original \(S,S'\) and \(\psi:S_{\mathfrak q}\to S'_{\mathfrak q'}\). If \(\psi(x_i)=h_i/g_i\), put \(d=\prod_i g_i\) in \(S'\); it is outside \(\mathfrak q'\). The polynomial presentation of \(S'_d\) adjoins a variable \(Y\) with relation \(dY-1\), and the image of \(x_i\) is \(h_i(\prod_{k\ne i}g_k)Y\). Each original \(f_j\) evaluated at these images becomes zero at \(\mathfrak q'\). Kill its numerator by an element outside that prime and multiply those finitely many annihilators to get a further denominator. These are exactly the two coordinated replacement operations corrected by MC-STK-ERR-0672; they do not alter the original isomorphism.
+
+This constructs \(u:S\to S'_D\) for some original \(D\notin\mathfrak q'\). The finite-presentation composition lemma 539--563 applies. The preceding local result supplies \(a\in S\setminus\mathfrak q\) and \[
+(S'_D)_{u(a)}\cong S_a\times C.
+\] Write \(u(a)=b/D^r\), so the left ring is \(S'_{Db}\) and \(b\notin\mathfrak q'\). Its relevant prime is on the first factor: it is the inverse image of the original prime under the evaluation map used above. Therefore \(e=(1,0)\) lies outside that prime. MC-STK-ERR-0669 selects this \(S_a\) factor; \((0,1)\) selects \(C\), the wrong factor. Write \(e=c/(Db)^s\) with \(c\in S'\). Then \(c\notin\mathfrak q'\), and inverting \(e\) is precisely passage from \(S'_{Db}\) to \(S'_{Dbc}\). The result uses the original principal neighborhoods \(S_a\cong S'_{Dbc}\), not unnamed replacement rings.
+
+\subsubsection{Nilpotent lifting and the source automorphism}\label{algebra-proof-035-nilpotent-lifting-and-the-source-automorphism}
+
+Source 31662--31695; group 789. For nilpotent \(I\), lift the original finite generating family of \(S/IS\) and let \(A\subset S\) be its \(R\)-subalgebra. The \(R\)-module \(M=S/A\) satisfies \(M=IM\). Iterating gives \(M=I^NM=0\) for the original nilpotence exponent \(N\); finite generation of \(M\) is not needed.
+
+In the locally nilpotent argument keep the source presentation \(S'=R[x_1,\ldots,x_m]/K\) and all polynomials \[
+g_j=x_j+\sum_J\delta_{j,J}x^J,\qquad \delta_{j,J}\in I.
+\] MC-STK-ERR-0670 changes the three unbound \(n\)'s to the original \(m\). Only finitely many displayed coefficients are nonzero. Enumerate them as \(\delta_1,\ldots,\delta_t\), choose \(n_\ell\ge1\) with \(\delta_\ell^{n_\ell}=0\), and set \[
+D=(\delta_1,\ldots,\delta_t),\qquad N=1+\sum_{\ell=1}^t(n_\ell-1).
+\] Every degree-\(N\) product in these ideal generators contains some \(\delta_\ell\) at least \(n_\ell\) times, so \(D^N=0\). For an empty coefficient list take \(D=0,N=1\).
+
+Let \(F:R[x_1,\ldots,x_m]\to R[x_1,\ldots,x_m]\) send \(x_j\) to the full \(g_j\), and let \(\Delta=F-\operatorname{id}\) as an \(R\)-linear map. For every monomial, replacing each \(x_j\) by \(x_j+\sum_J\delta_{j,J}x^J\) shows that the difference lies in \(D R[x]\). Since \(F\) fixes \(R\), \[
+\Delta(D^kR[x])\subset D^{k+1}R[x],\qquad \Delta^N=0.
+\] The finite sum \[
+H=\sum_{k=0}^{N-1}(-1)^k\Delta^k
+\] satisfies \(HF=FH=\operatorname{id}\) by multiplication of these exact additive operators; the terminal term is \((-1)^{N-1}\Delta^N=0\). Thus \(F\) is bijective. Its inverse is a ring homomorphism: applying injective \(F\) to \(H(ab)\) and to \(H(a)H(b)\) gives \(ab\) in both cases, and the same argument proves addition and the unit. Its coordinates are the explicit polynomials \(H(x_j)\). Hence the \(g_j\) generate the original polynomial ring, so their classes in the image of \(S\to S'\) generate \(S'\). This supplies the omitted source argument as an editorial proof. It does not replace the author's Noetherian-subring argument in the translation.
+
+\subsubsection{The original isomorphism criteria}\label{algebra-proof-035-the-original-isomorphism-criteria}
+
+Source 31697--31753; groups 790--791. The two missing verbs are retained as MC-STK-ERR-0671. In the local lemma let \(J=\ker(S\to S')\). The source composition lemma makes the surjection finitely presented, so \(J\) is a finitely generated ideal. Localization gives the exact sequence \[
+0\to J_{\mathfrak q}\to S_{\mathfrak q}\to S'_{\mathfrak q}\to0.
+\] Tensoring over the original \(R\) with \(R/I\) remains left exact at \(J_{\mathfrak q}/IJ_{\mathfrak q}\) because the stated \(R\)-flatness of \(S'_{\mathfrak q}\) makes the preceding Tor group vanish. The assumed quotient isomorphism therefore gives \(J_{\mathfrak q}/IJ_{\mathfrak q}=0\). Since \(IS_{\mathfrak q}\) is contained in its maximal ideal and \(J_{\mathfrak q}\) is finite, Nakayama gives \(J_{\mathfrak q}=0\). For actual generators \(j_1,\ldots,j_t\) of \(J\), choose \(u_i\in S\setminus\mathfrak q\) with \(u_i j_i=0\). Their product \(g=\prod_i u_i\) kills \(J\), proving \(S_g\cong S'_g\). If the generator list is empty use \(g=1\).
+
+In the globally locally nilpotent case the preceding surjectivity result applies since \(S'\) is finitely presented, in particular finite type. Every prime contains \(IS\), so the local result applies everywhere. If \(j\in J\) were nonzero, its proper annihilator would be contained in a maximal ideal \(\mathfrak q\), and \(j/1\ne0\) there: an element outside \(\mathfrak q\) cannot annihilate it. This contradicts the local vanishing. Thus the global map is an isomorphism. The source's phrase ``for example by'' has an unambiguous inference and citation; OCC-00612 proposes an optional rearrangement, not a mathematical or grammatical defect. No operation is adopted for it.
+
+\subsubsection{Algebra descent along the original pure map}\label{algebra-proof-035-algebra-descent-along-the-original-pure-map}
+
+Source 31442--31487; group 792, receiving the exact unit-map mechanism of ALGEBRA-RECON-501. Suppose \(R\to R'\) is pure, meaning every \(R\)-module \(M\) has an injective unit map \(M\to R'\otimes_R M\). For an arbitrary \(R\)-algebra \(S\), finite type and finite presentation each hold for \(S/R\) if and only if they hold for \(S'=R'\otimes_R S\) over \(R'\).
+
+For finite type use precisely the source's \(y_j=\sum_i a_{ij}\otimes x_{ji}\) and \(A=R[x_{ji}]\). The image of \(R'\otimes_R A\to S'\) contains every \(y_j\), so it is all of \(S'\). Right exactness implies \(R'\otimes_R(S/A)=0\). Purity of the unit on the original module \(S/A\) gives \(S=A\). No injection of \(R'\otimes_R A\) was presumed.
+
+For finite presentation use the resulting \(P=R[x_1,\ldots,x_n]\twoheadrightarrow S\), kernel \(I\). Its base change has kernel \[
+L=\operatorname{im}(R'\otimes_R I\to R'\otimes_R P),
+\] by right exactness. This is a finitely generated ideal because the target \(S'\) is finitely presented. To justify this for the chosen original generators, take any finite presentation \(S'=R'[y_1,\ldots,y_b]/(h_1,\ldots,h_c)\). Express the images of \(x_i\) as \(u_i(y)\), and the images of \(y_j\) as \(v_j(x)\). The kernel of \(R'[x]\to S'\) is generated by the finite list \[
+h_\ell(v_1(x),\ldots,v_b(x)),\qquad x_i-u_i(v_1(x),\ldots,v_b(x)).
+\] Indeed these vanish in \(S'\); in their quotient, \(y_j\mapsto v_j(x)\) defines an inverse to the map onto \(S'\), with the composites fixed on every original generator. This proves the finite-kernel claim without flatness.
+
+Choose generators \(g_j\) of \(L\), express each as the image of \(\sum_i a_{ij}\otimes f_{ji}\), \(f_{ji}\in I\), and let \(J=(f_{ji})\subset I\). The image of \(R'\otimes_R J\) is exactly \(L\). Consequently the actual surjection \(P/J\to S\) becomes an isomorphism after tensoring. An element in its kernel has zero image in \(R'\otimes_R(P/J)\), because that last map is an isomorphism. Purity on \(P/J\) makes the element zero. Hence \(I=J\), and \(S\) is finitely presented. The converse in both cases is direct base change of the finite generators and relations.
+
+This strictly weakens faithful flatness: \(R=\mathbf Z\to R'=\mathbf Z\times\mathbf Z/2\mathbf Z\), \(n\mapsto(n,\bar n)\), has a ring retraction to the first coordinate, so every module unit is split injective. It is not flat, since multiplying by two kills the nonzero \((0,\bar1)\). All original source hypotheses remain in the translation; this is a separate generalization, with the tensor-kernel injection deliberately replaced by its proved image formula.
+
+\subsubsection{Finite inverse for endomorphisms over a nil ideal}\label{algebra-proof-035-finite-inverse-for-endomorphisms-over-a-nil-ideal}
+
+Source 31677--31695; group 793. Let \(A\) be a finite-type \(R\)-algebra, \(I\subset R\) a nil ideal, and \(\alpha:A\to A\) an \(R\)-algebra endomorphism inducing the identity on \(A/IA\). Then \(\alpha\) is an automorphism.
+
+Fix actual generators \(a_1,\ldots,a_m\) and write \[
+\alpha(a_j)-a_j=\sum_{\ell=1}^{t_j}d_{j\ell}b_{j\ell},\qquad
+d_{j\ell}\in I,\ b_{j\ell}\in A.
+\] Let \(D\) be the ideal generated by all these actual \(d_{j\ell}\). The same sum of individual nilpotence exponents as above gives \(D^N=0\). The maps \(\alpha\) and the identity agree on all generators modulo \(DA\), hence on all of \(A/DA\). With \(\Delta=\alpha-\operatorname{id}\), \(R\)-linearity gives \[
+\Delta(D^kA)\subset D^{k+1}A,\quad
+\alpha^{-1}=\sum_{k=0}^{N-1}(-1)^k\Delta^k.
+\] The exact operator multiplication and multiplicativity argument in the preceding source-proof section apply to this original \(A\), including all its relations. This proves the statement without finite presentation or a globally nilpotent \(I\). If \(I^N=0\) itself, finite type is unnecessary: the same filtration works for any \(R\)-algebra \(A\).
+
+For the source polynomial map let \(d=\max(1,\deg g_1,\ldots,\deg g_m)\). Expanding substitution gives \(\deg\Delta(p)\le d\deg p\) for positive-degree \(p\), and \(\Delta\) kills constants. Induction gives \(\deg\Delta^k(x_j)\le d^k\). Thus the displayed exact inverse has degree at most \(d^{N-1}\) on each generator. This bound supplements the full finite inverse; it does not replace its coefficients or terms. This result asserts no lifting of arbitrary automorphisms of \(A/IA\): an actual endomorphism \(\alpha\) with the stated reduction is part of the hypothesis.
+
+\subsubsection{The exact Tor obstruction and weaker sufficient hypotheses}\label{algebra-proof-035-the-exact-tor-obstruction-and-weaker-sufficient-hypotheses}
+
+Source 31697--31753; group 794. Retain an arbitrary \(R\)-algebra surjection \(S\to S'\) with finitely generated kernel \(J\), a prime \(\mathfrak q\supset IS\), and the source isomorphism modulo \(I\) at \(\mathfrak q\). The long exact tensor sequence contains the actual map \[
+\delta:\operatorname{Tor}_1^R(S'_{\mathfrak q},R/I)
+\longrightarrow J_{\mathfrak q}/IJ_{\mathfrak q}
+\longrightarrow S_{\mathfrak q}/IS_{\mathfrak q}
+\longrightarrow S'_{\mathfrak q}/IS'_{\mathfrak q}\longrightarrow0.
+\] The last arrow is an isomorphism, so \(\delta\) is onto. Therefore \(\delta=0\) if and only if \(J_{\mathfrak q}/IJ_{\mathfrak q}=0\). By the finite-generation and local Jacobson hypotheses, Nakayama makes this equivalent to \(J_{\mathfrak q}=0\). The original finite list of kernel generators and its annihilator product then show that it is equivalent to the existence of \(g\notin\mathfrak q\) with \(S_g\cong S'_g\). Conversely such an isomorphism makes \(J_{\mathfrak q}=0\), hence \(\delta=0\). This proves the exact obstruction, not only a one-way sufficient condition.
+
+In particular \(\operatorname{Tor}_1^R(S'_{\mathfrak q},R/I)=0\) suffices in place of \(R\)-flatness, and finite generation of \(J\) suffices in place of the pair of finite-type/finite-presentation assumptions used to obtain it. Vanishing of the whole Tor group is stronger than necessary: for \(R=k[\epsilon]/(\epsilon^2)\), \(I=(\epsilon)\), and the identity \(S=S'=k\), the kernel and \(\delta\) vanish, although \(\operatorname{Tor}_1^R(k,k)=k\).
+
+The flatness assumption cannot simply be removed with no substitute. For that same original \(R,I\), take instead \(S=R\to S'=k\), \(\mathfrak q=(\epsilon)\). Both finite-presentation assumptions hold and reduction modulo \(I\) is an isomorphism. The resolution \[
+\cdots\xrightarrow{\epsilon}R\xrightarrow{\epsilon}R
+\xrightarrow{\epsilon}R\longrightarrow k\longrightarrow0
+\] is exact because both the kernel and image of multiplication by \(\epsilon\) equal \((\epsilon)\). Tensoring with \(k\) gives zero differentials, so the first Tor group is \(k\). For the usual boundary convention, lifting its generator to \(1\in R\) and applying the differential gives \(\delta(1)=\epsilon\) in \(J/IJ=(\epsilon)\). The map is nonzero; every \(g\notin\mathfrak q\) is a unit, so no such localization kills this kernel.
+
+The global version is also exact. For a surjection with finite kernel, a global isomorphism modulo \(I\), and \(IS\subset\operatorname{Jac}(S)\), the global boundary \[
+\operatorname{Tor}_1^R(S',R/I)\longrightarrow J/IJ
+\] is onto, and it vanishes if and only if \(J=0\), by the same Nakayama argument. Consequently the source locally nilpotent theorem still holds if its flatness hypothesis is replaced by \(\operatorname{Tor}_1^R(S',R/I)=0\): the preceding source lemma first proves surjectivity, finite presentation gives finite \(J\), and the nil ideal \(IS\) lies in every maximal ideal. This propagates the local weakening through the actual global receiving result.
+
+\subsubsection{Finite type does not replace finite presentation in the local splitting}\label{algebra-proof-035-finite-type-does-not-replace-finite-presentation-in-the-local-splitting}
+
+Source 31580--31660; group 795, using and extending the exact product-ring example in ALGEBRA-RECON-685. Fix a field \(k\) and retain \[
+R=\prod_{i\ge1}k,\qquad I=\bigoplus_{i\ge1}ke_i,\qquad S=R/I.
+\] The quotient \(R/I\ne0\) has a maximal ideal; let \(\mathfrak p\subset R\) be its preimage and \(\mathfrak q=\mathfrak p/I\). Every finite-support element \(z\in I\) is killed by \(1-e_F\), where \(F\) contains its support and \(e_F=\sum_{i\in F}e_i\in I\subset\mathfrak p\). Thus \(1-e_F\notin\mathfrak p\), and \(I_{\mathfrak p}=0\). The original quotient map induces \[
+R_{\mathfrak p}\xrightarrow{\sim}S_{\mathfrak q}.
+\] The \(R\)-algebra \(S\) is finite type, even cyclic as an \(R\)-module. It is flat: it is the filtered colimit of \(R/(e_F)\) over finite \(F\), each an idempotent direct summand of \(R\). Tensoring an injection with each such summand preserves it, and filtered colimits preserve injections of modules, proving the flatness assertion. It is not finitely presented, since a finite family in \(I\) has support in one finite \(F\) and cannot generate any \(e_i\) outside it.
+
+For any \(f=(f_i)\notin\mathfrak p\), its support \(A=\{i:f_i\ne0\}\) is infinite, since every finite-support element is in \(\mathfrak p\). The exact localization maps from group 685 give \[
+R_f\cong\prod_{i\in A}k,\qquad I_f\cong\bigoplus_{i\in A}ke_i.
+\] Here \(I_f\ne0\). If an \(R_f\)-algebra isomorphism \(S_f\cong R_f\times C\) existed, the surjection \(R_f\to S_f\) would make the structural map \(r\mapsto(r,\eta(r))\) onto the product. A preimage of \((1,0)\) must be \(r=1\), giving \(1_C=0\). Hence \(C\) would be the zero ring, and that same structural map would force \(I_f=0\), a contradiction. Thus even a flat finite-type map with the given stalk isomorphism need not split on any such base principal neighborhood. The finite-presentation hypothesis is preserved; the failure of this stronger assertion is an editorial boundary, not an error in the source theorem.
+
+\subsubsection{Corpus use and continuation}\label{algebra-proof-035-corpus-use-and-continuation}
+
+The existing canonical disk index was queried in both layers for nilpotent polynomial automorphism. The Bell--Hamidizadeh--Huang--Venegas TeX routing record, the PDF-only Nonstandard analysis record and the two local Split Support records are routing hits only; their contents were not read or adopted. The seven earlier externally read source records retain exactly their prior bounded coverage. No PDF fallback or literature-novelty claim is made.
+
+The current section and twenty-one reports are adjudicated by groups 784--795. Source lookahead 31759--31990 was read earlier but remains unadjudicated, with no report dispositions inferred from it. Continue at Colimits and maps of finite presentation, authority 31759. No source or translation is changed by this review, and no TeX build or publication is claimed.

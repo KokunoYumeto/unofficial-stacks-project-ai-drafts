@@ -1,0 +1,1132 @@
+\subsubsection{Geometrically reduced algebras}
+\label{editorial-source-section-geometrically-reduced}
+
+\noindent
+The main result on geometrically reduced algebras is
+Lemma \ref{editorial-source-lemma-geometrically-reduced-finite-purely-inseparable-extension}.
+We suggest the reader skip to the lemma after reading the definition.
+
+\begin{definition}
+\label{editorial-source-definition-geometrically-reduced}
+Let $k$ be a field. Let $S$ be a $k$-algebra.
+We say $S$ is {\it geometrically reduced over $k$}
+if for every field extension $K/k$ the
+$K$-algebra $K \otimes_k S$ is reduced.
+\end{definition}
+
+\noindent
+Let $k$ be a field and let $S$ be a reduced $k$-algebra.
+To check that $S$ is geometrically reduced it will suffice
+to check that $\overline{k} \otimes_k S$ is reduced (where
+$\overline{k}$ denotes the algebraic closure of $k$).
+In fact it is enough to check this for finite purely inseparable
+field extensions $k'/k$. See
+Lemma \ref{editorial-source-lemma-geometrically-reduced-finite-purely-inseparable-extension}.
+
+\begin{lemma}
+\label{editorial-source-lemma-subalgebra-separable}
+Elementary properties of geometrically reduced algebras.
+Let $k$ be a field. Let $S$ be a $k$-algebra.
+\begin{enumerate}
+\item If $S$ is geometrically reduced over $k$ so is every
+$k$-subalgebra.
+\item If all finitely generated $k$-subalgebras of $S$ are
+geometrically reduced, then $S$ is geometrically reduced.
+\item A directed colimit of geometrically reduced $k$-algebras
+is geometrically reduced.
+\item If $S$ is geometrically reduced over $k$, then any localization
+of $S$ is geometrically reduced over $k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Fix an arbitrary original field extension $K/k$.
+For (1), if $S'\subseteq S$ is the specified
+$k$-subalgebra, the map
+$K\otimes_kS'\to K\otimes_kS$ is injective.
+Indeed choosing a $k$-basis of $K$ identifies it
+with the direct sum of copies of the original
+injection. If an element of the first tensor
+ring is nilpotent, its image in the reduced
+second ring is zero, and injectivity makes the
+original element zero. This proves (1).
+
+For (2), retain an original nilpotent element
+$z=\sum_{i=1}^n\lambda_i\otimes s_i$ of
+$K\otimes_kS$, with $z^d=0$ for some $d\geq1$.
+The same sum belongs to $K\otimes_kS_0$ for
+the original finite subalgebra
+$S_0=k[s_1,\ldots,s_n]\subseteq S$.
+The map into $K\otimes_kS$ is injective by
+the same basis argument, so the identical
+$d$-th power is zero already in this subalgebra.
+It is reduced by the hypothesis on $S_0$;
+thus the sum is zero and so is its original
+image $z$. This proves (2), including the
+empty sum, which is zero from the outset.
+
+For (3), write the original system as
+$(S_i,\varphi_{ij})$ and its directed colimit
+as $S$. The comparison
+$$
+\mathop{\rm colim}_i(K\otimes_kS_i)
+\longrightarrow K\otimes_kS,
+\qquad [\lambda\otimes s_i]\longmapsto
+\lambda\otimes[s_i]
+$$
+is an isomorphism. Its inverse sends a finite
+sum of tensors to representatives at a common
+stage. Independence follows because any finite
+list of equalities of colimit elements holds
+at a later common stage; the tensor balancing
+and additivity relations are finite such lists.
+These formulas give both composites on the
+original elementary tensors. If the class of
+$z_i\in K\otimes_kS_i$ has $d$-th power zero,
+then at some later stage $j$ the image of
+$z_i^d$ is zero. The image of $z_i$ has
+$d$-th power zero in the reduced ring
+$K\otimes_kS_j$, and is therefore zero there.
+Thus its original colimit class is zero.
+No injectivity of the transition maps is used.
+This proves the second and third properties
+with the actual tensor-colimit comparison.
+
+For (4), let $U\subseteq S$ be the original
+multiplicative set and let $U_K$ be its image
+$\{1\otimes u:u\in U\}$ in $K\otimes_kS$.
+There are inverse algebra maps
+$$
+K\otimes_kU^{-1}S\longrightarrow
+U_K^{-1}(K\otimes_kS),\qquad
+\lambda\otimes s/u\longmapsto
+\frac{\lambda\otimes s}{1\otimes u},
+$$
+and
+$$
+\frac{\sum_i\lambda_i\otimes s_i}{1\otimes u}
+\longmapsto\sum_i\lambda_i\otimes s_i/u.
+$$
+Products of denominators still have the displayed
+form. The original balancing maps send every
+denominator to a unit, so localization gives
+well-defined homomorphisms; their composites
+fix both tensor factors and the inverses of
+the original denominators. A localization of
+a reduced ring $B$ is reduced: if
+$(b/u)^d=0$, there is $v$ in the multiplicative
+set with $vb^d=0$. Then
+$(vb)^d=v^{d-1}(vb^d)=0$, so $vb=0$ in $B$.
+This is a zero witness for the original fraction
+$b/u$. If zero is inverted, the localization
+is the zero ring and the same conclusion holds.
+Apply this to the reduced $K\otimes_kS$.
+Since $K$ was arbitrary, all four assertions
+hold for the original algebras.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-geometrically-reduced-permanence}
+Let $k$ be a field.
+If $R$ is geometrically reduced over $k$,
+and $S \subset R$ is a multiplicative subset, then the localization
+$S^{-1}R$ is geometrically reduced over $k$.
+If $R$ is geometrically reduced over $k$, then $R[x]$ is geometrically
+reduced over $k$.
+\end{lemma}
+
+\begin{proof}
+For the original multiplicative set $S\subseteq R$,
+the preceding proof gives the exact maps
+$$
+K\otimes_kS^{-1}R\simeq
+S_K^{-1}(K\otimes_kR),\qquad
+\lambda\otimes r/s\longmapsto
+\frac{\lambda\otimes r}{1\otimes s},
+$$
+where $S_K=\{1\otimes s:s\in S\}$.
+Its inverse sends a fraction with numerator
+$\sum_i\lambda_i\otimes r_i$ and denominator
+$1\otimes s$ to $\sum_i\lambda_i\otimes r_i/s$.
+That proof verifies the original balancing,
+fraction witnesses and reducedness of this
+localization, including the zero localization.
+
+For the original polynomial ring the comparison is
+$$
+K\otimes_kR[x]\longrightarrow(K\otimes_kR)[x],
+\qquad \lambda\otimes\sum_i r_i x^i
+\longmapsto\sum_i(\lambda\otimes r_i)x^i.
+$$
+Its inverse sends each coefficient tensor
+times $x^i$ to $\lambda\otimes r_i x^i$
+and extends additively, retaining every
+original coefficient and exponent. The
+monomial bases verify both composites,
+balancing and multiplication.
+If a nonzero polynomial over a reduced
+ring $B$ has highest nonzero coefficient
+$b_d$, its $n$-th power has coefficient
+$b_d^n$ at the original degree $nd$.
+That coefficient is nonzero, since $b_d$
+is nonzero and $B$ reduced. Thus a nonzero
+polynomial cannot be nilpotent. Applying
+this to $B=K\otimes_kR$ proves reducedness
+for every original $K/k$, as required.
+
+The same comparison and induction apply
+to any finite list of original variables.
+A polynomial in an arbitrary variable
+set uses only a finite sublist; its
+nilpotence relation therefore holds in
+that finite polynomial subring by the
+injective monomial inclusion. Thus the
+polynomial assertion holds for arbitrary
+sets of indeterminates. It is an equivalence:
+the constant inclusion
+$K\otimes_kR\hookrightarrow(K\otimes_kR)[x_i]$
+is injective, with evaluation at all
+$x_i=0$ a left inverse. Hence geometric
+reducedness of the polynomial algebra
+implies that of the original coefficient
+algebra. Further localization of these
+original polynomial rings is covered
+by the proved localization maps.
+\end{proof}
+
+\noindent
+In the proofs of the following lemmas we will repeatedly use
+the following observation: Suppose that $R' \subset R$ and
+$S' \subset S$ are inclusions of $k$-algebras.
+Then the map $R' \otimes_k S' \to R \otimes_k S$
+is injective. More explicitly it factors as
+$$
+R'\otimes_kS'\longrightarrow R\otimes_kS'
+\longrightarrow R\otimes_kS.
+$$
+The first map is injective by choosing a
+$k$-basis of $S'$ and applying the original
+injection $R'\to R$ in each coordinate.
+The second is injective by choosing a
+$k$-basis of $R$ and applying $S'\to S$
+in each coordinate. Both maps send every
+original elementary tensor to its indicated
+image and are algebra homomorphisms, so
+their composite is the stated injection.
+
+\begin{lemma}
+\label{editorial-source-lemma-limit-argument}
+Let $k$ be a field. Let $R$, $S$ be $k$-algebras.
+\begin{enumerate}
+\item If $R \otimes_k S$ is nonreduced, then there exist
+finitely generated subalgebras $R' \subset R$,
+$S' \subset S$ such that $R' \otimes_k S'$ is not reduced.
+\item If $R \otimes_k S$ contains a nonzero zerodivisor, then there exist
+finitely generated subalgebras $R' \subset R$,
+$S' \subset S$ such that $R' \otimes_k S'$ contains a nonzero zerodivisor.
+\item If $R \otimes_k S$ contains a nontrivial idempotent, then there exist
+finitely generated subalgebras $R' \subset R$,
+$S' \subset S$ such that $R' \otimes_k S'$ contains a nontrivial idempotent.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For (1), retain a nonzero nilpotent original
+$z=\sum_{i=1}^n x_i\otimes y_i$ with
+$z^d=0$, $d\geq1$. Let $R'$ be the
+original subalgebra generated by all $x_i$
+and $S'$ that generated by all $y_i$.
+The same full sum defines $z'\in R'\otimes_kS'$.
+Its image is $z$, and the preceding
+injection gives $(z')^d=0$. It is nonzero,
+since its image is nonzero. Thus this
+original tensor subalgebra is not reduced.
+
+For (2), retain both original witnesses
+$z\ne0$ and $w\ne0$ with $zw=0$.
+Write each as a finite tensor sum, and
+generate $R'$ and $S'$ using all the
+coefficients from both sums. Their
+preimages $z',w'$ are nonzero, and
+$z'w'=0$ by the same tensor injection.
+Thus $z'$ is a nonzero zerodivisor
+in the stated finite subalgebra.
+Keeping only the coefficients of $z$
+would not by itself supply its required
+nonzero annihilating witness.
+
+For (3), retain an original idempotent
+$e$ with $e^2=e$, $e\ne0$ and $e\ne1$.
+Use all the coefficients of a finite
+tensor expression of $e$. The tensor
+injection is unital, so its preimage
+$e'$ satisfies $(e')^2=e'$ and has
+$e'\ne0,1$. This proves (3).
+
+More generally any fixed finite collection
+of original tensor elements and polynomial
+equations and inequations over $k$ among
+them can be witnessed in such finitely
+generated $R',S'$. Include every coefficient
+of the finite tensor expressions for all
+the specified elements. Each original
+equation descends because the algebra
+map is injective, and each inequation
+is preserved because its evaluated image
+is nonzero. This assertion concerns the
+complete specified finite list and keeps
+all witnesses; no infinite collection
+is replaced by a finite one.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-geometrically-reduced-any-reduced-base-change}
+Let $k$ be a field.
+Let $S$ be a geometrically reduced $k$-algebra.
+Let $R$ be any reduced $k$-algebra.
+Then $R \otimes_k S$ is reduced.
+\end{lemma}
+
+\begin{proof}
+We first retain the original finite-subalgebra
+argument and its maps. Let
+$z=\sum_{i=1}^n r_i\otimes s_i$ be nilpotent
+in the original $R\otimes_kS$, and let
+$R_0=k[r_1,\ldots,r_n]\subseteq R$.
+It is reduced as a subring of the reduced
+original $R$ and Noetherian by
+Lemma \ref{editorial-source-lemma-Noetherian-permanence}.
+The map $R_0\otimes_kS\to R\otimes_kS$ is
+injective by the vector-space tensor comparison,
+so the same original sum has its power zero
+already in $R_0\otimes_kS$.
+
+The original minimal-prime localizations of
+$R_0$ are fields $F_j=(R_0)_{\mathfrak p_j}$,
+and there are finitely many of them. The maps
+$$
+R_0\longrightarrow\prod_j F_j,\qquad
+r\longmapsto(r/1)_j
+$$
+are injective, by
+Lemmas \ref{editorial-source-lemma-Noetherian-irreducible-components}
+and \ref{algebra-lemma-minimal-prime-reduced-ring}.
+More explicitly each localization has just its
+zero prime, since it is reduced and has a
+unique prime. Its kernel on $R_0$ is
+$\mathfrak p_j$: a numerator outside that
+prime becomes a unit, and a numerator inside
+it maps into the zero maximal ideal. The
+intersection of the minimal primes is the
+nilradical, which is zero. This proves the
+injection without replacing the original
+$R_0$ by its product of fields.
+It agrees with the original total-fraction
+comparison from
+Lemma \ref{algebra-lemma-total-ring-fractions-no-embedded-points}:
+a fraction $r/t$ with $t$ a nonzerodivisor
+maps to $(r/1)/(t/1)$ in every factor.
+That lemma identifies the total fraction ring
+with this finite product; the argument here
+uses its indicated injection and maps.
+
+Tensoring the injection with the $k$-vector
+space $S$ preserves injectivity. For this
+finite product the exact comparison is
+$$
+\left(\prod_j F_j\right)\otimes_kS
+\longrightarrow\prod_j(F_j\otimes_kS),\qquad
+(a_j)_j\otimes s\longmapsto(a_j\otimes s)_j.
+$$
+Its inverse sends $(w_j)_j$ to
+$\sum_j(\iota_j\otimes1)(w_j)$, where
+$\iota_j:F_j\to\prod_jF_j$ is the original
+coordinate inclusion as a $k$-linear map.
+The finite sum proves both inverse identities
+and preserves multiplication, since distinct
+coordinate factors multiply to zero.
+Each $F_j\otimes_kS$ is reduced by geometric
+reducedness of $S$. A product of reduced rings
+is reduced, because nilpotence is checked
+coordinate by coordinate. Thus the image of
+the original $z$ in this product is zero.
+Both injections show $z=0$ in the original
+$R\otimes_kS$. If $R_0=0$, the original sum
+is already zero; the empty product causes
+no exception. This proves the lemma.
+
+\medskip\noindent
+The same result yields an exact formula with
+an arbitrary original $k$-algebra $A$, which
+need not be reduced. Write
+$\mathcal N=\sqrt{(0)}\subseteq A$ for its
+original nilradical. Then
+$$
+\sqrt{(0)}_{\,A\otimes_kS}
+=\operatorname{image}\bigl(\mathcal N\otimes_kS
+\longrightarrow A\otimes_kS\bigr)
+=\mathcal N(A\otimes_kS).
+$$
+The tensor map is injective, by flatness over
+the field. Its image is the displayed ideal:
+multiplying a tensor $n\otimes s$ by
+$a\otimes t$ gives $an\otimes st$, still
+with $an\in\mathcal N$, and every generator
+$(n\otimes1)(1\otimes s)$ is such a tensor.
+Every original finite element
+$w=\sum_{i=1}^m n_i\otimes s_i$ of this image
+is nilpotent. Choose $d_i\geq1$ with
+$n_i^{d_i}=0$ and retain
+$D=1+\sum_{i=1}^m(d_i-1)$.
+For $m\geq1$ its full multinomial expansion is
+$$
+w^D=\sum_{\substack{a_1+\cdots+a_m=D\\a_i\geq0}}
+\frac{D!}{a_1!\cdots a_m!}
+\left(\prod_{i=1}^m n_i^{a_i}\right)
+\otimes\left(\prod_{i=1}^m s_i^{a_i}\right)=0.
+$$
+For each tuple some $a_i\geq d_i$; otherwise
+their sum would be at most $D-1$. Thus every
+displayed term is zero with its full integer
+multinomial coefficient retained. These are
+integer coefficients acting in the ring,
+not divisions by possibly noninvertible
+factorials. The empty sum is zero.
+
+Conversely, exactness of tensoring gives the
+quotient comparison
+$$
+(A\otimes_kS)/\operatorname{image}(\mathcal N\otimes_kS)
+\longrightarrow(A/\mathcal N)\otimes_kS,
+\qquad [a\otimes s]\longmapsto(a+\mathcal N)\otimes s.
+$$
+The inverse is induced by the same elementary
+formula in the reverse direction, independent
+of the representative because the difference
+has numerator in $\mathcal N$. The original
+quotient $A/\mathcal N$ is reduced, so the
+proved lemma makes this tensor quotient reduced.
+Every nilpotent in $A\otimes_kS$ consequently
+maps to zero there, proving the reverse
+inclusion and the exact nilradical identity.
+
+If $S\ne0$, the map $A\to A\otimes_kS$,
+$a\mapsto a\otimes1$, is injective: extend
+$1\in S$ to a $k$-basis and take the linear
+functional $\ell:S\to k$ with $\ell(1)=1$
+and zero on the other basis elements.
+Then $1\otimes\ell$ is a left inverse.
+It follows that for this geometrically
+reduced nonzero $S$, the original $A$ is
+reduced if and only if $A\otimes_kS$ is
+reduced. For $S=0$ the tensor is always
+zero, so this last converse is not asserted;
+the nilradical formula itself still holds.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-separable-extension-preserves-reducedness}
+Let $k$ be a field.
+Let $S$ be a reduced $k$-algebra.
+Let $K/k$ be either a separable field extension,
+or a separably generated field extension.
+Then $K \otimes_k S$ is reduced.
+\end{lemma}
+
+\begin{proof}
+We first prove the assertion for an original
+finitely generated and separably generated
+extension $K/k$ and an original domain $D$
+over $k$. Choose the original elements
+$x_1,\ldots,x_r,\alpha=x_{r+1}$ from
+Lemma \ref{editorial-source-lemma-generating-finitely-generated-separable-field-extensions}.
+Put $E=k(x_1,\ldots,x_r)$, so that
+$K=E(\alpha)$, and retain the monic separable
+minimal polynomial $P(T)\in E[T]$ of $\alpha$.
+If $K=E$, the choice $\alpha=0$, $P(T)=T$
+gives the same proof.
+
+The tensor map
+$$
+k[x_1,\ldots,x_r]\otimes_kD
+\longrightarrow D[x_1,\ldots,x_r],\qquad
+\left(\sum_\nu c_\nu x^\nu\right)\otimes d
+\longmapsto\sum_\nu c_\nu d x^\nu
+$$
+is an isomorphism. Its inverse sends
+$\sum_\nu d_\nu x^\nu$ to
+$\sum_\nu x^\nu\otimes d_\nu$; the original
+monomial bases prove balancing and both
+composites. With
+$W=k[x_1,\ldots,x_r]\setminus\{0\}$,
+the original fraction map gives
+$$
+A=E\otimes_kD\simeq W^{-1}D[x_1,\ldots,x_r],
+\qquad (g/h)\otimes d\longmapsto dg/h.
+$$
+The inverse sends $\sum_\nu d_\nu x^\nu/h$
+to $\sum_\nu(x^\nu/h)\otimes d_\nu$.
+The universal property of inverting the
+same original $h\in W$ verifies these maps,
+including equality witnesses for fractions.
+Every element of $W$ remains nonzero in the
+polynomial ring over the domain $D$, because
+the original coefficient map $k\to D$ is
+injective. Thus $A$ is a domain. Retain its
+fraction field $F=\operatorname{Frac}(A)$.
+
+There is an exact original algebra comparison
+$$
+A[T]/(P)\longrightarrow K\otimes_kD,
+\qquad T\longmapsto\alpha\otimes1,
+$$
+with coefficients $e\otimes d$ sent to the
+same original tensor. The powers
+$1,\alpha,\ldots,\alpha^{n-1}$, where
+$n=\deg P$, form an $E$-basis of $K$.
+Consequently both sides are free $A$-modules
+with these corresponding bases, proving the
+map an isomorphism. Its inverse sends
+$\gamma\otimes d$, for the unique expansion
+$\gamma=\sum_{i=0}^{n-1}e_i\alpha^i$, to
+$\sum_{i=0}^{n-1}(e_i\otimes d)T^i$ modulo
+the original $P$. Multiplication is preserved
+because both sides impose exactly $P(\alpha)=0$.
+The map $A[T]/(P)\to F[T]/(P)$ is injective:
+monic division leaves a unique remainder
+of degree less than $n$, and its coefficients
+cannot become zero in the fraction field
+unless they were zero in $A$.
+
+Separability supplies polynomials $U,V\in E[T]$
+with the full identity $UP+VP'=1$.
+The original coefficient maps carry this
+identity into $F[T]$. Thus $P$ has no repeated
+irreducible factor there. Write its actual
+factorization $P=\prod_{j=1}^t P_j$ into
+distinct monic irreducible polynomials over
+$F$. The Chinese remainder comparison sends
+$$
+F[T]/(P)\longrightarrow\prod_{j=1}^t F[T]/(P_j),
+\qquad [H]\longmapsto([H])_j.
+$$
+For the inverse, put $H_j=P/P_j$ and choose
+$U_j$ with $U_jH_j\equiv1\pmod{P_j}$.
+A tuple $([G_j])_j$ maps to
+$[\sum_jG_jU_jH_j]$ modulo $P$. It is
+independent of lifts and composes to the
+identity, since each term is $G_j$ in its
+own factor and zero in the others; a
+polynomial vanishing modulo all the coprime
+$P_j$ is divisible by their original
+product $P$. Each quotient is a field.
+Hence $F[T]/(P)$ is reduced, and the
+proved injections show $K\otimes_kD$
+is reduced for the original $K$ and $D$.
+
+Now suppose $K/k$ is separable according to
+the definition, with no finiteness hypothesis,
+and retain an original nilpotent
+$z=\sum_{i=1}^m\lambda_i\otimes s_i$
+in $K\otimes_kS$. Let
+$K_0=k(\lambda_1,\ldots,\lambda_m)\subseteq K$
+and $S_0=k[s_1,\ldots,s_m]\subseteq S$.
+By definition $K_0/k$ is separably generated
+and finitely generated. The original $S_0$
+is reduced and Noetherian. The tensor map
+$K_0\otimes_kS_0\to K\otimes_kS$ is injective,
+so the same original sum is nilpotent already
+in the smaller tensor ring.
+As in the preceding reduced-base-change
+proof, retain the injection
+$S_0\to\prod_j (S_0)_{\mathfrak p_j}$
+through its finitely many minimal-prime
+fields, with every map $s\mapsto s/1$.
+This is the original total-fraction comparison
+of Lemmas \ref{algebra-lemma-minimal-prime-reduced-ring}
+and \ref{algebra-lemma-total-ring-fractions-no-embedded-points}.
+Tensoring with $K_0$ is injective, and the
+finite-product tensor map is an isomorphism
+with inverse given by the finite sum of
+coordinate inclusions. Each factor
+$K_0\otimes_k(S_0)_{\mathfrak p_j}$ is
+reduced by the domain case just proved.
+Thus the original sum is zero in their
+product and, by injectivity, zero in
+$K\otimes_kS$. This proves the separable case.
+If $S_0=0$ the tensor was already zero.
+
+Finally suppose $K/k$ is separably generated,
+possibly by an infinite original separating
+basis $(x_i)_{i\in I}$. We do not assume
+the later theorem that this implies separability.
+Put $E=k(x_i:i\in I)$ and take any finite
+list $\lambda_1,\ldots,\lambda_m\in K$.
+Each $\lambda_j$ has a monic separable
+minimal polynomial $P_j\in E[T]$, with a
+Bezout identity $U_jP_j+V_jP_j'=1$ in $E[T]$.
+Every coefficient in this finite collection
+of complete polynomials and identities is
+a rational function in finitely many of
+the original $x_i$. Choose a finite
+$J\subseteq I$ containing all those indices.
+The same polynomials and identities then
+belong to $E_J[T]$, where
+$E_J=k(x_i:i\in J)$, since its inclusion
+into $E$ is injective. Each $\lambda_j$
+is algebraic and separable over $E_J$:
+its minimal polynomial divides the same
+monic $P_j$, which has no repeated roots
+by the retained Bezout identity.
+Therefore
+$$
+K_{J,\lambda}=k(x_i:i\in J)(\lambda_1,\ldots,\lambda_m)
+$$
+is finite separable over $E_J$, and is a
+finitely generated, separably generated
+subextension of the original $K/k$.
+The original algebraic independence of the
+$x_i$ shows that the selected sublist is
+indeed a transcendence basis for this field.
+
+These subfields form a directed family:
+for two finite lists and two finite index
+sets, include their unions and the finitely
+many coefficient indices required for the
+combined list. Enlarging the rational base
+retains separability because each minimal
+polynomial still divides its specified
+separable polynomial. Their union is $K$,
+since every original element is included
+by taking it in a one-element list.
+Every nilpotent tensor in $K\otimes_kS$
+therefore belongs to one of these original
+finite subextensions tensored with $S$.
+Its power relation holds there by injectivity,
+and that tensor algebra is reduced by the
+finite separably generated argument above
+and the finite-subalgebra argument for $S$.
+Hence the original tensor is zero. This
+also gives explicitly the directed-colimit
+description in the original proof.
+
+As a consequence, either hypothesis on
+$K/k$ makes $K$ geometrically reduced over
+$k$: apply the result with an arbitrary
+receiving field as the reduced algebra $S$
+and use the tensor flip
+$\lambda\otimes s\mapsto s\otimes\lambda$,
+whose inverse is the same flip. Moreover,
+for every original $k$-algebra $B$, the
+nilradical formula of the preceding lemma
+now gives the exact equality
+$$
+\sqrt{(0)}_{\,K\otimes_kB}
+=\operatorname{image}\bigl(K\otimes_k\sqrt{(0)}_B
+\longrightarrow K\otimes_kB\bigr).
+$$
+Thus this result preserves the entire
+nilradical under the original scalar
+extension, not only reducedness when
+that ideal happens to vanish.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-generic-points-geometrically-reduced}
+Let $k$ be a field and let $S$ be a $k$-algebra. Assume that
+$S$ is reduced and that $S_{\mathfrak p}$ is geometrically
+reduced for every minimal prime $\mathfrak p$ of $S$.
+Then $S$ is geometrically reduced.
+\end{lemma}
+
+\begin{proof}
+Retain the original localizations $S_{\mathfrak p}$
+at every minimal prime. Since $S$ is reduced,
+so is each localization. Its sole prime is
+$\mathfrak pS_{\mathfrak p}$, and the intersection
+of its primes is its zero nilradical; hence
+$\mathfrak pS_{\mathfrak p}=0$ and this local
+ring is a field. The original map
+$S\to S_{\mathfrak p}$ has kernel exactly
+$\mathfrak p$: elements in it map to zero,
+whereas an element outside it maps to a unit
+in this nonzero field. The intersection of
+the minimal primes of $S$ is zero, so
+$$
+S\longrightarrow\prod_{\mathfrak p\text{ minimal}}S_{\mathfrak p},
+\qquad s\longmapsto(s/1)_{\mathfrak p}
+$$
+is injective, as in
+Lemma \ref{algebra-lemma-reduced-ring-sub-product-fields}.
+
+For any original field extension $K/k$, tensoring
+this map with $K$ preserves injectivity. The
+second map in the source proof is
+$$
+\Theta:\left(\prod_{\mathfrak p}S_{\mathfrak p}\right)\otimes_kK
+\longrightarrow\prod_{\mathfrak p}(S_{\mathfrak p}\otimes_kK),
+\qquad (a_{\mathfrak p})_{\mathfrak p}\otimes\lambda
+\longmapsto(a_{\mathfrak p}\otimes\lambda)_{\mathfrak p}.
+$$
+To prove its injectivity, write any original
+tensor as a finite sum
+$w=\sum_{j=1}^r a_j\otimes\lambda_j$ with
+$k$-linearly independent $\lambda_j\in K$.
+Such an expression is obtained by expanding
+the finitely many original scalar coefficients
+in a basis of their span, retaining the
+resulting sums in each $a_j$.
+Extend these $\lambda_j$ to a basis of $K$.
+If $\Theta(w)=0$, then for every original
+$\mathfrak p$ the finite basis expansion
+$\sum_j(a_j)_{\mathfrak p}\otimes\lambda_j=0$
+forces $(a_j)_{\mathfrak p}=0$ for each $j$.
+Thus every original $a_j$ is zero and $w=0$.
+The map is an algebra map since it is
+coordinatewise on elementary products.
+
+Each factor $S_{\mathfrak p}\otimes_kK$ is
+reduced by its assumed geometric reducedness.
+The product is reduced, so the two original
+injections imply that $S\otimes_kK$ is reduced.
+The tensor flip identifies this with the
+ordering in the definition, and proves the
+lemma for every $K$. If $S=0$ the index set
+is empty and all the displayed rings are
+zero, which is reduced.
+
+The converse also holds: if $S$ is geometrically
+reduced, taking $K=k$ shows that $S$ is reduced,
+and Lemma \ref{editorial-source-lemma-subalgebra-separable} shows
+that each of its original localizations is
+geometrically reduced. Thus the original
+conditions are an equivalence.
+
+The same proof applies more generally whenever
+there is a specified injective $k$-algebra map
+$S\hookrightarrow\prod_{i\in I}B_i$ and each
+$B_i$ is geometrically reduced. The tensor
+map into the product of the base changes
+is injective by the identical finite-basis
+argument, so $S$ is geometrically reduced.
+In particular, an arbitrary product of
+geometrically reduced $k$-algebras is
+geometrically reduced. Conversely if such
+a product is geometrically reduced, fix
+an original index $i$. Decomposing it as
+the two factors $B_i\times\prod_{j\ne i}B_j$
+and tensoring uses the finite-product
+isomorphism. The first factor $B_i\otimes_kK$
+is reduced for every $K$, because a nilpotent
+there would give a nilpotent with zero
+second coordinate in the reduced product.
+Hence each $B_i$ is geometrically reduced.
+The empty product is the zero algebra and
+satisfies the assertion as well.
+
+Injectivity of $\Theta$ must not be strengthened
+to surjectivity without further hypotheses.
+For example take every $B_i=k$, indexed by
+$i\geq1$, and $K=k(t)$. The sequence
+$(t^i)_{i\geq1}\in\prod_iK$ is outside the
+image of $(\prod_i k)\otimes_kK$.
+Indeed a finite tensor expression uses a
+single finite list $\lambda_1,\ldots,\lambda_r$
+of elements of $K$, so every coordinate
+of its image belongs to their fixed finite
+$k$-linear span. The powers $t^i$ are
+$k$-linearly independent, since a nonzero
+polynomial in the transcendental $t$ cannot
+vanish. They cannot all lie in that span.
+The original proof and its extensions use
+only the established injection.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-separable-algebraic-diagonal}
+Let $k'/k$ be a separable algebraic extension.
+Then there exists a multiplicative subset $S \subset k' \otimes_k k'$
+such that the multiplication map $k' \otimes_k k' \to k'$
+is identified with $k' \otimes_k k' \to S^{-1}(k' \otimes_k k')$.
+\end{lemma}
+
+\begin{proof}
+First let the original $k'/k$ be finite
+separable, and choose its original primitive
+element $\alpha$ using Fields,
+Lemma \ref{fields-lemma-primitive-element}.
+Retain its monic separable minimal polynomial
+$P(x)\in k[x]$, of degree $n\geq1$.
+The original tensor map, with both sums
+included, is
+$$
+\psi:k'[x]/(P)\longrightarrow k'\otimes_kk',
+\qquad
+\left[\sum_i\alpha_i x^i\right]
+\longmapsto\sum_i\alpha_i\otimes\alpha^i.
+$$
+The relation $P(1\otimes\alpha)=0$ makes this
+well defined. Both rings are free over the
+first $k'$ with bases corresponding to
+$1,x,\ldots,x^{n-1}$ and
+$1\otimes1,1\otimes\alpha,\ldots,1\otimes\alpha^{n-1}$.
+The latter basis is obtained by tensoring
+the original $k$-basis of the second $k'$.
+Thus $\psi$ is an isomorphism. Its inverse
+sends $a\otimes b$, with the unique original
+expansion $b=\sum_{i=0}^{n-1}c_i\alpha^i$,
+$c_i\in k$, to $[\sum_{i=0}^{n-1}ac_i x^i]$.
+This also verifies its balancing and its
+product law through the same polynomial $P$.
+Under this map multiplication
+$\mu:k'\otimes_kk'\to k'$ corresponds to
+evaluation at $x=\alpha$.
+
+Retain the factorization $P(x)=(x-\alpha)Q(x)$
+in the original $k'[x]$. Differentiating gives
+$P'(\alpha)=Q(\alpha)\ne0$ by separability.
+For $B=k'[x]/(P)$ and the multiplicative set
+$S'$ generated by the class of $Q$, the
+evaluation map extends to
+$$
+B_Q\longrightarrow k',\qquad
+\frac{[H(x)]}{[Q(x)]^d}\longmapsto
+\frac{H(\alpha)}{Q(\alpha)^d}.
+$$
+Its inverse sends $a\in k'$ to $a/1$.
+Indeed $(x-\alpha)Q=0$ in $B$; once the
+original $Q$ is a unit, $x=\alpha$.
+Consequently every displayed fraction is
+the image of its stated scalar value,
+and both composites are identities. The
+fraction map is independent of lifts and
+zero-divisor witnesses by the localization
+universal property. Transporting this exact
+set $S'$ under $\psi$ gives the required
+original multiplicative set $S$.
+
+There is also an explicit original direct
+factor. Put $q=Q(\alpha)\in k'\setminus\{0\}$
+and retain the polynomial $H$ defined by
+$Q(x)-q=(x-\alpha)H(x)$. In $B$, set
+$e=[Q(x)]/q$, where the scalar denominator
+is the original invertible $q$.
+Then the full identities are
+$$
+e^2-e=\frac{Q(x)(Q(x)-q)}{q^2}
+=\frac{P(x)H(x)}{q^2}=0,
+\qquad (x-\alpha)e=\frac{P(x)}q=0,
+\qquad e(\alpha)=1.
+$$
+Thus $e$ is an idempotent and
+$\ker(B\to k')=(x-\alpha)B=(1-e)B$.
+For the equality of ideals, one inclusion
+uses $1-e=-(x-\alpha)H/q$; the other uses
+$(x-\alpha)=(x-\alpha)(1-e)$.
+The map $eB\to k'$ is evaluation, with
+inverse $a\mapsto ae$. Also $B_Q=B_e$,
+because $Q=qe$ with $q$ already a unit.
+These formulas retain the original $Q$
+and its full scalar factor. If $n=1$,
+then $Q=1$, $H=0$, $e=1$, and the kernel
+is zero, so the same formulas apply.
+
+Now retain an arbitrary separable algebraic
+extension $k'/k$. Its finite intermediate
+fields $k_i$ form a directed family: a
+compositum of two finite subextensions
+inside $k'$ is again finite and separable.
+Every finite set of original coefficients
+of $k'$ lies in some $k_i$. The injections
+$$
+k_i\otimes_kk_i\longrightarrow k'\otimes_kk'
+$$
+are injective by tensoring the two original
+field inclusions over the field $k$.
+Their images have union $k'\otimes_kk'$,
+since every tensor is a finite sum of
+elementary tensors. For each $i$, use the
+actual multiplicative set $S_i$ and
+idempotent $e_i$ constructed above for
+$k_i/k$, and let $S$ be the multiplicative
+closure of their images $\bigcup_iS_i$.
+The original multiplication map $\mu$
+sends every element of $S$ to a nonzero
+element of $k'$, because this holds for
+each original generator $Q_i$ and their
+finite products. It therefore extends to
+$S^{-1}(k'\otimes_kk')\to k'$.
+
+If an original $z\in\ker\mu$ is represented
+at a stage $k_i\otimes_kk_i$, its multiplication
+there is zero: its image in the containing
+field $k'$ is zero and $k_i\hookrightarrow k'$
+is injective. The finite-stage proof makes
+$z$ zero on inverting that stage's $Q_i$;
+indeed $Q_i$ annihilates its diagonal kernel.
+It is therefore zero in the full original
+localization. Multiplication is surjective
+already before localization, since
+$\mu(a\otimes1)=a$ for every $a\in k'$.
+The localized map is consequently bijective:
+a fraction mapping to zero has numerator
+in $\ker\mu$, which is killed as just proved.
+Its inverse is explicitly
+$a\mapsto(a\otimes1)/1$.
+For a general original fraction $z/s$,
+the difference from the image of
+$\mu(z)/\mu(s)$ has numerator
+$(\mu(s)\otimes1)z-(\mu(z)\otimes1)s$,
+whose multiplication is zero; its denominator
+is the original product $(\mu(s)\otimes1)s$.
+This verifies the second composite and
+keeps all scalar and localization factors.
+
+\medskip\noindent
+The diagonal kernel also gives a sharp finite
+generation consequence. For this original
+separable algebraic extension, the ideal
+$I=\ker(k'\otimes_kk'\to k')$ is finitely
+generated if and only if $k'/k$ is finite.
+The finite case follows from the explicit
+idempotent generator $1-e$ above.
+For the converse, suppose
+$I=(z_1,\ldots,z_m)$, and choose a finite
+original subfield $k_i$ containing every
+coefficient of all these tensors.
+Every $z_j$ is in the finite diagonal
+kernel, so $e_i z_j=0$ by its proved
+idempotent formula. Therefore $e_iI=0$.
+Since $\mu(e_i)=1$, also $1-e_i\in I$,
+and the exact equality is
+$I=(1-e_i)(k'\otimes_kk')$.
+
+The quotient by this particular ideal is
+canonically $k'\otimes_{k_i}k'$. In detail,
+$\ker(k_i\otimes_kk_i\to k_i)$ is generated
+by $a\otimes1-1\otimes a$, $a\in k_i$:
+modulo these relations the two original
+copies of every $a$ coincide, and multiplication
+and $a\mapsto a\otimes1$ are inverse maps.
+Extending these relations to $k'\otimes_kk'$
+imposes precisely the balancing over $k_i$.
+The map sends the original $a\otimes_k b$
+to $a\otimes_{k_i}b$, and its inverse is
+the same elementary formula into the
+quotient; the just-stated relations prove
+well-definedness and both composites.
+Since the extended finite kernel is exactly
+$(1-e_i)$, the full kernel assumption would
+make multiplication
+$k'\otimes_{k_i}k'\to k'$ an isomorphism.
+If $k'\ne k_i$, choose an original
+$b\in k'\setminus k_i$ and extend the
+$k_i$-independent list $1,b$ to a basis
+of $k'$. In the induced basis of the
+second tensor factor, the element
+$1\otimes_{k_i}b-b\otimes_{k_i}1$ is nonzero,
+but its multiplication is zero. This
+contradicts that isomorphism. Hence
+$k'=k_i$ and the original extension is
+finite. The argument includes an empty
+generating list for the zero ideal.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-geometrically-reduced-over-separable-algebraic}
+Let $k'/k$ be a separable algebraic field extension.
+Let $A$ be an algebra over $k'$. Then $A$ is geometrically
+reduced over $k$ if and only if it is geometrically reduced over $k'$.
+\end{lemma}
+
+\begin{proof}
+First assume that the original $A$ is geometrically
+reduced over $k'$, and let $K/k$ be any original
+field extension. The ring $K\otimes_kk'$ is
+reduced by
+Lemma \ref{editorial-source-lemma-separable-extension-preserves-reducedness},
+applied to the separable field extension $k'/k$
+and the reduced $k$-algebra $K$, followed by
+the tensor flip. Treat it as a $k'$-algebra
+through its original second factor. Then
+Lemma \ref{editorial-source-lemma-geometrically-reduced-any-reduced-base-change}
+over $k'$ shows that
+$(K\otimes_kk')\otimes_{k'}A$ is reduced.
+The exact comparison is
+$$
+(K\otimes_kk')\otimes_{k'}A\longrightarrow K\otimes_kA,
+\qquad (\lambda\otimes b)\otimes a\longmapsto\lambda\otimes ba,
+$$
+with inverse $\lambda\otimes a\mapsto
+(\lambda\otimes1)\otimes a$.
+Balancing over the original $k'$ moves $b$
+into $a$, and balancing over $k$ is the
+original tensor relation. These formulas
+verify both composites and multiplication.
+Hence $K\otimes_kA$ is reduced for every
+$K/k$, proving this direction.
+
+Conversely assume that the original $A$ is
+geometrically reduced over $k$, and let $K/k'$
+be an arbitrary original field extension.
+Retain the rings
+$$
+H=k'\otimes_kk',\qquad B=K\otimes_kA.
+$$
+The original $H$-algebra structure on $B$
+is the map
+$$
+\chi:H\longrightarrow B,\qquad
+b\otimes c\longmapsto b\otimes c,
+$$
+where $b$ enters through $k'\to K$ and
+$c$ through $k'\to A$. Give $k'$ the
+$H$-algebra structure of multiplication
+$\mu(b\otimes c)=bc$.
+The source's exact comparison, now including
+its original actions and punctuation, is
+$$
+B\otimes_Hk'\longrightarrow K\otimes_{k'}A,
+\qquad (\lambda\otimes a)\otimes c
+\longmapsto c\lambda\otimes a.
+$$
+It is balanced over $H$: multiplying the
+first tensor by $b\otimes d$ gives
+$cb\lambda\otimes da= cbd\lambda\otimes a$
+over $k'$, equal to multiplying the last
+scalar by $bd$. Its inverse sends
+$\lambda\otimes_{k'}a$ to
+$(\lambda\otimes_ka)\otimes1$.
+For its $k'$-balancing, the difference
+$c\lambda\otimes a-\lambda\otimes ca$
+is the action of $c\otimes1-1\otimes c$
+on $\lambda\otimes a$, and that element
+of $H$ is killed by $\mu$. The inverse
+is therefore well defined. Both composites
+are identities, since the scalar $c$ can
+be moved from the last factor by the
+original element $c\otimes1\in H$.
+
+Lemma \ref{editorial-source-lemma-separable-algebraic-diagonal}
+gives an actual multiplicative set $U\subseteq H$
+and the original identification $k'\simeq U^{-1}H$
+through $\mu$. Thus the preceding tensor
+ring is the localization $\chi(U)^{-1}B$.
+The full comparison sends
+$$
+b\otimes\frac hu\longmapsto
+\frac{b\chi(h)}{\chi(u)},
+$$
+with inverse $b/\chi(u)\mapsto b\otimes1/u$.
+Balancing and the same original inverse
+denominators prove both maps and composites.
+Since $K$ is a field extension of $k$,
+the hypothesis makes $B=K\otimes_kA$
+reduced. Its localization is reduced by
+the zero-witness proof already given.
+Therefore the original $K\otimes_{k'}A$
+is reduced for every $K/k'$, completing
+the converse without identifying a general
+quotient of a reduced ring with a reduced ring.
+
+\medskip\noindent
+The forward implication has a wider scope:
+it holds if the original $k'/k$ is any
+separable or separably generated extension,
+with no algebraicity assumption. The first
+paragraph uses only that
+$K\otimes_kk'$ is reduced for every $K/k$,
+and the preceding separable-extension lemma
+proves exactly this in either case. Its
+two displayed original tensor maps remain
+unchanged. The reverse implication does
+not hold for arbitrary separably generated
+extensions, as the following example shows.
+
+Let $k$ be a field of characteristic $p>0$,
+take $k'=k(t)$ and $A=k(u)$ with the
+original embedding $k'\to A$ given by
+$t\mapsto u^p$, where $u$ is transcendental
+over $k$. The field $k'/k$ is separably
+generated using its basis $t$, and $A$
+is geometrically reduced over $k$.
+Indeed for any field $L/k$,
+$$
+L\otimes_kk(u)\simeq
+(k[u]\setminus\{0\})^{-1}L[u]
+$$
+through $\lambda\otimes f(u)/g(u)\mapsto
+\lambda f(u)/g(u)$, with inverse obtained
+by expanding each numerator in its
+original powers of $u$. The specified
+nonzero denominators stay nonzero over
+$L$, so this is a domain.
+
+The polynomial $T^p-t$ is irreducible
+over the original $k(t)$. There is no
+$p$-th root of $t$ in $k(t)$: for nonzero
+polynomials $f,g\in k[t]$, the equation
+$f(t)^p=tg(t)^p$ would imply
+$p\operatorname{ord}_t(f)=1+p\operatorname{ord}_t(g)$,
+which is impossible. These orders are the
+actual smallest powers of $t$ with nonzero
+coefficients; the product law follows by
+multiplying the corresponding first
+nonzero coefficients. No common factor
+of the original $f,g$ is removed.
+Fields, Lemma \ref{fields-lemma-take-pth-root}
+therefore gives irreducibility and the
+original degree $[k(u):k(u^p)]=p$.
+For the receiving field $K=A$ over $k'$
+the original tensor map gives
+$$
+A\otimes_{k'}A\simeq A[T]/(T^p-u^p),
+\qquad \sum_{i=0}^{p-1}a_i\otimes u^i
+\longleftrightarrow\left[\sum_{i=0}^{p-1}a_iT^i\right].
+$$
+More precisely the first $A$ supplies
+the coefficients and $1\otimes u$
+corresponds to $T$; the original basis
+$1,u,\ldots,u^{p-1}$ of the second
+factor proves the isomorphism and its
+inverse on all tensors. The element
+$$
+z=1\otimes u-u\otimes1
+$$
+is nonzero: its polynomial representative
+$T-u$ has degree $1<p$ and nonzero leading
+coefficient, so it is not a multiple of
+the original monic $T^p-u^p$.
+But its full binomial power is
+$$
+(T-u)^p=\sum_{j=0}^p
+\binom pj T^j(-u)^{p-j}=T^p-u^p=0
+$$
+in this quotient, since each middle
+integer coefficient is divisible by $p$.
+Thus $A$ is not geometrically reduced
+over the original $k'$, despite being
+geometrically reduced over $k$ and
+despite $k'/k$ being separably generated.
+This locates the role of algebraicity
+in the converse diagonal-localization proof.
+
+Separability cannot simply be dropped
+from the original algebraic assertion
+either. Take $k=\mathbf F_p(t)$,
+$k'=\mathbf F_p(u)$ with the same
+$t\mapsto u^p$, and $A=k'$.
+The identity algebra $A$ is geometrically
+reduced over $k'$, because every field
+base change is that field. Its tensor
+with the receiving field $k'$ over $k$
+is the same nonreduced ring
+$k'[T]/(T^p-u^p)$ with the same original
+nonzero nilpotent. Hence it is not
+geometrically reduced over $k$.
+\end{proof}
+
+
+
+
+

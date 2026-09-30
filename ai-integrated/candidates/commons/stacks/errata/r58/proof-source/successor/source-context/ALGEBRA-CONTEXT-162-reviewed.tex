@@ -1,0 +1,81 @@
+\begin{lemma}
+\label{lemma-intersection-powers-ideal-module}
+Let $R$ be a Noetherian ring. Let $I \subset R$ be an ideal.
+Let $M$ be a finite $R$-module. Let $N = \bigcap_n I^n M$.
+\begin{enumerate}
+\item For every prime $\mathfrak p$ containing $I$, there
+exists $f \in R$, $f \not \in \mathfrak p$ such that $N_f = 0$.
+\item If $I$ is contained in the Jacobson radical
+of $R$, then $N = 0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+In fact there is one element $f\in1+I$ such that $fN=0$.
+We prove this without a local hypothesis. The module $N$ is finite
+by Lemma \ref{lemma-Noetherian-basic}. Applying
+Lemma \ref{lemma-Artin-Rees} to $N\subset M$ at $n=c+1$
+gives $N=IN$, since $I^nM\cap N=N$ for every $n\geq0$.
+Choose generators $x_1,\ldots,x_t$ of $N$. Because $N=IN$,
+there are actual coefficients $a_{ij}\in I$ with
+$x_i=\sum_{j=1}^t a_{ij}x_j$ for $1\leq i\leq t$.
+Put $A=(a_{ij})$ and $B=(\delta_{ij}-a_{ij})$.
+The adjugate identity $\operatorname{adj}(B)B=\det(B)\,1_t$
+applied to the column $(x_1,\ldots,x_t)^{\mathrm t}$ shows
+that $f=\det(B)$ annihilates every $x_i$, hence annihilates $N$.
+Retaining every coefficient and sign, this element is
+$$
+f=\sum_{\sigma\in\mathfrak S_t}\operatorname{sgn}(\sigma)
+       \prod_{i=1}^t(\delta_{i,\sigma(i)}-a_{i,\sigma(i)}).
+$$
+Modulo $I$ the matrix $B$ is the identity matrix, so $f-1\in I$.
+Equivalently $f=1-a$ for the specific element $a=1-f\in I$;
+the determinant expression above records all contributions to $a$.
+For an empty generating list, $N=0$ and the determinant of the
+empty matrix is $f=1$, which has all the same properties.
+
+For every prime $\mathfrak p$ containing $I$, the equality
+$f\equiv1\pmod I$ implies $f\notin\mathfrak p$.
+Since $fN=0$, inverting $f$ gives $N_f=0$. This proves (1)
+with the same $f$ for all such primes. If $I$ is contained in the
+Jacobson radical, $f=1-a$ is a unit: otherwise the proper ideal
+$(f)$ would lie in a maximal ideal $\mathfrak m$, while
+$a\in I\subset\mathfrak m$, contradicting $f+a=1$.
+Thus $fN=0$ implies $N=0$, proving (2). If $R$ is the zero
+ring then $M=N=0$ and both assertions hold directly.
+
+The argument gives two exact descriptions of the same original
+intersection. Let $W=1+I=\{1+b:b\in I\}$, a multiplicative
+set because $(1+b)(1+d)=1+(b+d+bd)$ and $b+d+bd\in I$.
+Then
+$$
+N=\{x\in M:(1-a)x=0\text{ for some }a\in I\}
+=\ker\bigl(M\longrightarrow W^{-1}M\bigr).
+$$
+The inclusion from $N$ to the first set follows from the single
+annihilator just constructed. Conversely, if $(1-a)x=0$,
+then $x=ax$, and induction gives $x=a^nx\in I^nM$ for
+every $n\geq0$. The localization kernel is exactly the set of
+$x$ killed by some $w\in W$; writing $w=1-a$ gives the
+second equality. This reasoning includes $I=R$, when $0\in W$,
+$W^{-1}M=0$ and $N=M$, as well as $I=0$, when $W=\{1\}$
+and $N=0$.
+
+Moreover, $N$ is the largest submodule $L\subset M$ satisfying
+$IL=L$. Indeed this equality implies $I^nL=L\subset I^nM$
+for every $n$, so $L\subset N$, while $IN=N$ was proved above.
+The quotient $M/N$ is $I$-adically separated:
+$$
+\bigcap_{n\geq0} I^n(M/N)=0.
+$$
+To prove this using the original quotient map $q:M\to M/N$,
+note that $I^n(M/N)=q(I^nM)$ and $N\subset I^nM$.
+Thus $q^{-1}(I^n(M/N))=I^nM+N=I^nM$.
+A class belonging to every such image has any representative in
+$\bigcap_n I^nM=N$ and is therefore zero. Finally, for every
+$R$-linear map $h:M\to Q$ into an $I$-adically separated
+module $Q$, one has $h(N)\subset\bigcap_n I^nQ=0$.
+The original map $h$ therefore factors uniquely through $q$,
+by $x+N\mapsto h(x)$. This proves the universal property of
+this separated quotient with no finite-generation hypothesis on $Q$.
+\end{proof}

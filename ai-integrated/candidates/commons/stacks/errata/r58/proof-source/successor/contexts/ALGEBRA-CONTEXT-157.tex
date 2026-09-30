@@ -1,0 +1,1866 @@
+\subsubsection{Valuation rings}
+\label{editorial-source-section-valuation-rings}
+
+\noindent
+Here are some definitions.
+
+\begin{definition}
+\label{editorial-source-definition-valuation-ring}
+Valuation rings.
+\begin{enumerate}
+\item Let $K$ be a field. Let $A$, $B$ be local rings contained
+in $K$. We say that $B$ {\it dominates} $A$ if $A \subset B$
+and $\mathfrak m_A = A \cap \mathfrak m_B$.
+\item Let $A$ be a ring. We say $A$ is a {\it valuation ring}
+if $A$ is a local domain and if $A$ is maximal
+for the relation of domination among local rings contained in
+the fraction field of $A$.
+\item Let $A$ be a valuation ring with fraction field $K$.
+If $R \subset K$ is a subring of $K$, then we say $A$
+is {\it centered} on $R$ if $R \subset A$.
+\end{enumerate}
+\end{definition}
+
+\noindent
+With this definition a field is a valuation ring.
+
+\begin{lemma}
+\label{editorial-source-lemma-dominate}
+Let $K$ be a field. Let $A \subset K$ be a local subring.
+Then there exists a valuation ring with fraction field $K$
+dominating $A$.
+\end{lemma}
+
+\begin{proof}
+Consider the set of local subrings
+$B\subseteq K$ dominating the
+original $A$, ordered by domination.
+It is nonempty since it contains
+$A$. The relation is transitive:
+if $B$ dominates $A$ and $C$
+dominates $B$, then
+$A\cap\mathfrak m_C=A\cap\mathfrak m_B=\mathfrak m_A$.
+Antisymmetry follows from the
+inclusions of the actual subrings.
+
+For a nonempty chain $(B_i)$,
+put $B=\bigcup_i B_i$ and
+$\mathfrak n=\bigcup_i\mathfrak m_{B_i}$.
+The maximal ideals are compatible
+under contraction and inclusion.
+A common chain member containing
+any finite list of elements proves
+that $B$ is a ring and
+$\mathfrak n$ is an ideal.
+It is proper because no member
+contains $1$. If $b\in B\setminus\mathfrak n$,
+it is a unit in any member
+containing it, hence in $B$.
+If $b\in\mathfrak n$, an inverse
+in $B$ would put both elements
+in a common later member and
+contradict properness of its
+maximal ideal. Thus $B$ is
+local with maximal ideal
+$\mathfrak n$, and
+$B_i\cap\mathfrak n=\mathfrak m_{B_i}$
+for every $i$. It dominates
+all members and the original
+$A$. The empty chain has
+upper bound $A$. Zorn's lemma
+therefore gives a maximal
+member $V$.
+
+We prove that its actual
+fraction field $F=\operatorname{Frac}(V)$
+equals $K$. Otherwise choose
+$t\in K\setminus F$.
+If $t$ is transcendental over
+$F$, the evaluation map embeds
+the original polynomial ring
+$V[T]$ in $K$, with $T\mapsto t$.
+The ideal $(\mathfrak m_V,t)$
+of $V[t]$ is maximal, since
+its quotient is $V/\mathfrak m_V$.
+Its localization embeds in
+$K$ by the original fraction
+map and dominates $V$:
+the maximal ideal contracts
+to $\mathfrak m_V$. It contains
+$t\notin V$, contradicting
+maximality of $V$.
+
+If $t$ is algebraic over
+$F$, retain its monic equation
+$$
+t^d+c_1t^{d-1}+\cdots+c_d=0,
+\qquad c_i\in F.
+$$
+Choose a nonzero $a\in V$
+that is a product of denominators
+for all original $c_i$, and
+write $b_i=ac_i\in V$.
+The original element $u=at$
+satisfies the full equation
+$$
+u^d+b_1u^{d-1}+a b_2u^{d-2}
++\cdots+a^{d-1}b_d=0.
+$$
+This is exactly $a^d$ times
+the displayed original equation,
+using $a^{i-1}b_i=a^ic_i$;
+every coefficient is retained.
+Hence $V[u]$ is finite integral
+over $V$, generated as a module
+by $1,u,\ldots,u^{d-1}$.
+By Lemma
+\ref{editorial-source-lemma-integral-overring-surjective},
+there is a prime $\mathfrak q$
+of $V[u]$ contracting to
+$\mathfrak m_V$. The original
+fraction map embeds $V[u]_{\mathfrak q}$
+in $K$, with maximal-ideal
+contraction $\mathfrak m_V$.
+It dominates $V$ and contains
+$u\notin V$, since $u\in V$
+would imply $t=u/a\in F$.
+This is again a contradiction.
+Thus $F=K$.
+
+Every local subring of $K$
+dominating $V$ also dominates
+$A$. Maximality in the chosen
+set therefore makes $V$ maximal
+for domination in its own
+fraction field $K$, exactly
+the definition of a valuation
+ring. This proves the lemma.
+
+In particular, for any original
+subring $R\subseteq K$ and
+prime $\mathfrak p\subset R$,
+apply the result to the
+actual local subring $R_{\mathfrak p}$
+of $K$. The resulting $V$
+has fraction field $K$ and
+$$
+\mathfrak m_V\cap R
+=(\mathfrak m_V\cap R_{\mathfrak p})\cap R
+=\mathfrak pR_{\mathfrak p}\cap R
+=\mathfrak p.
+$$
+Thus the center can be
+prescribed as any given
+prime of the original subring.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-ring-normal}
+Let $A$ be a valuation ring.
+Then $A$ is a normal domain.
+\end{lemma}
+
+\begin{proof}
+Let $K=\operatorname{Frac}(A)$, retaining
+the original fraction embedding. Suppose
+$x\in K$ is integral over $A$.
+The original $A'=A[x]\subseteq K$
+is finite integral over $A$: a
+monic equation of degree $d$ for
+$x$ expresses all its powers in
+the span of $1,x,\ldots,x^{d-1}$.
+Lemma \ref{editorial-source-lemma-integral-overring-surjective}
+gives a prime $\mathfrak m'$ of
+$A'$ contracting to $\mathfrak m_A$.
+The actual fraction map
+$A'_{\mathfrak m'}\to K$, $a/s\mapsto a/s$,
+is injective because $A'$ is a
+domain and $s\notin\mathfrak m'$
+is nonzero. The maximal ideal
+of this localization contracts to
+$\mathfrak m'$ in $A'$ and then
+to $\mathfrak m_A$ in $A$.
+Thus it dominates the original
+$A$. The valuation-ring maximality
+in this same $K$ gives
+$A=A'_{\mathfrak m'}$, so $x\in A$.
+Every element of the fraction field
+integral over $A$ therefore belongs
+to $A$, proving normality.
+In particular any integral overring
+$A\subseteq D\subseteq K$ equals
+$A$, by applying this proof to
+each of its original elements.
+\end{proof}
+
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-ring-x-or-x-inverse}
+Let $A$ be a valuation ring with maximal ideal $\mathfrak m$ and
+fraction field $K$.
+Let $x \in K^*$. Then either $x \in A$ or $x^{-1} \in A$ or both.
+\end{lemma}
+
+\begin{proof}
+It suffices to treat the case
+$x\notin A$; then $x\neq0$,
+since $0\in A$. Retain the
+original subring $A'=A[x]\subseteq K$.
+If a prime $\mathfrak q$ of
+$A'$ contracted to $\mathfrak m$,
+the original fraction map would
+embed $A'_{\mathfrak q}$ in $K$
+as a local ring dominating
+$A$. Maximality of the valuation
+ring would give $A=A'_{\mathfrak q}$,
+contrary to $x\notin A$.
+There is therefore no such
+prime. Every prime containing
+$\mathfrak m A'$ would contract
+to the maximal ideal $\mathfrak m$,
+so $\mathfrak m A'$ is the
+unit ideal. A finite expression
+for its unit, expanded in
+the original generator $x$,
+gives
+$$
+1=\sum_{i=0}^d t_i x^i,\qquad t_i\in\mathfrak m.
+$$
+Here $d\geq1$, since $d=0$
+would imply $1=t_0\in\mathfrak m$.
+With $y=x^{-1}$, multiplication
+by the full $x^{-d}$ gives
+$$
+(1-t_0)y^d-\sum_{i=1}^d t_i y^{d-i}=0.
+$$
+The index starts at $1$:
+the original $t_0$ contribution
+is already in $1-t_0$.
+That coefficient is a unit
+of the local $A$, so the
+monic polynomial
+$$
+Q(T)=T^d-\sum_{i=1}^d(1-t_0)^{-1}t_iT^{d-i}
+$$
+annihilates $y$. The complete
+original polynomial is
+$(1-t_0)Q(T)$; its unit
+factor and all coefficients
+are kept in the comparison.
+Thus $y$ is integral over
+$A$ and belongs to $A$ by
+Lemma \ref{editorial-source-lemma-valuation-ring-normal}.
+This proves the assertion.
+
+The inverse is in fact in
+$\mathfrak m$: if $y$ were
+a unit of $A$, then
+$x=y^{-1}$ would belong to
+$A$, contrary to the case
+under consideration. Conversely,
+the inverse of a nonzero
+element of $\mathfrak m$
+cannot belong to $A$, since
+their product would put $1$
+in $\mathfrak m$. Therefore
+$$
+K\setminus A=\{a^{-1}:0\neq a\in\mathfrak m\},
+$$
+and a nonzero $x$ and its
+inverse both belong to $A$
+exactly when $x\in A^*$.
+The zero element belongs to
+$A$ independently and is
+never assigned an inverse.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+Let $A \subset K$ be a subring of a field $K$ such that for all
+$x \in K^*$ either $x \in A$ or $x^{-1} \in A$ or both.
+Then $A$ is a valuation ring with fraction field $K$.
+\end{lemma}
+
+\begin{proof}
+The original $A$ is a nonzero
+domain, as a unital subring
+of the field $K$. The given
+alternative proves that its
+fraction field is all of $K$:
+for nonzero $x\in K$, either
+$x=x/1$ with $x\in A$ or
+$x=1/x^{-1}$ with $x^{-1}\in A$.
+These expressions are the
+inverse of the canonical
+injection $\operatorname{Frac}(A)\to K$.
+The zero element is $0/1$.
+
+If $A=K$, it is a local
+ring with zero maximal ideal.
+Otherwise it is not a field,
+since a subfield equals its
+own fraction field. Choose
+a maximal ideal $\mathfrak m$
+of $A$. If another maximal
+ideal $\mathfrak m'$ were
+distinct, their incomparability
+would give
+$$
+x\in\mathfrak m\setminus\mathfrak m',\qquad
+y\in\mathfrak m'\setminus\mathfrak m.
+$$
+Both original elements are
+nonzero. If $x/y\in A$,
+then $x=y(x/y)\in\mathfrak m'$,
+a contradiction. If $y/x\in A$,
+then $y=x(y/x)\in\mathfrak m$,
+also a contradiction. The
+given alternative excludes
+two maximal ideals. Thus
+$A$ is local, including
+the field case.
+
+Let the original local subring
+$A'\subseteq K$ dominate $A$.
+If $x\in A'\setminus A$,
+then $x\neq0$ and the
+hypothesis gives $x^{-1}\in A$.
+It is not a unit of $A$,
+since otherwise $x\in A$.
+Hence $x^{-1}\in\mathfrak m_A$
+and domination puts it in
+$\mathfrak m_{A'}$. Multiplying
+by the original $x\in A'$
+would put $1$ in that ideal.
+This contradiction gives
+$A'=A$, proving the valuation
+ring assertion in the exact
+fraction field $K$.
+
+This criterion also proves
+that all ideals of a valuation
+ring are linearly ordered
+by inclusion. For nonzero
+$a,b\in A$, applying the
+alternative to $a/b$ gives
+either $a=bc$ or $b=ac$
+with $c\in A$. The zero
+cases are immediate divisibility
+equalities. Thus principal
+ideals are comparable. If
+ideals $I,J$ satisfy
+$I\not\subseteq J$, choose
+$a\in I\setminus J$.
+For every $b\in J$, the
+alternative $a=bc$ is
+impossible because it puts
+$a$ in $J$. The other
+alternative gives $b\in(a)\subseteq I$;
+this includes $b=0$.
+Consequently $J\subseteq I$.
+In particular all original
+prime ideals are in one
+inclusion chain. Conversely,
+comparability of the original
+principal ideals in a nonzero
+domain gives the fraction
+alternative in its own
+fraction field, and the proof
+above makes it a valuation ring.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-colimit-valuation-rings}
+\begin{slogan}
+Valuation rings are stable under filtered direct limits
+\end{slogan}
+Let $I$ be a directed set. Let $(A_i, \varphi_{ij})$
+be a system of valuation rings over $I$.
+Then $A = \colim A_i$ is a valuation ring.
+\end{lemma}
+
+\begin{proof}
+The directed set is nonempty,
+and all transition maps are
+the original unital ring maps;
+they need not be injective
+or local. The colimit $A$
+is nonzero: an equality
+$1=0$ in it would hold
+at a later stage, impossible
+in a valuation domain $A_j$.
+For $a,b\in A$ with $ab=0$,
+choose representatives $a_i,b_i$
+at one stage. At a later
+stage their product is zero.
+That stage is a domain,
+so one of the two images
+is zero and the corresponding
+original $a$ or $b$ is zero.
+Thus $A$ is a domain.
+
+For arbitrary $a,b\in A$,
+choose such representatives.
+If either representative is
+zero, one divides the other.
+Otherwise Lemma
+\ref{editorial-source-lemma-valuation-ring-x-or-x-inverse}
+in $\operatorname{Frac}(A_i)$
+gives either $a_i=b_i c_i$
+or $b_i=a_i c_i$ with
+$c_i\in A_i$. The same
+original equality holds in
+$A$ under the structure map.
+For a fraction $a/b$ with
+$b\neq0$, this proves that
+$a/b\in A$ or, if $a\neq0$,
+its inverse belongs to $A$.
+Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+now proves the assertion.
+
+There is an exact fraction-field
+description even for the original
+noninjective system. Put
+$I_i=\ker(A_i\to A)$ and
+$B_i=A_i/I_i$. Since $B_i$
+injects in the domain $A$,
+$I_i$ is prime and $B_i$
+is a nonzero domain. The
+divisibility equalities in
+$A_i$ descend to $B_i$,
+so the same criterion makes
+$B_i$ a valuation ring.
+The induced maps $B_i\to B_j$
+are injective: their kernels
+are zero because an element
+vanishing in $B_j$ has zero
+image in $A$, hence was
+already in $I_i$.
+These are the actual image
+subrings of $A$, with
+$A=\bigcup_i B_i$.
+
+The field maps
+$\operatorname{Frac}(B_i)\to\operatorname{Frac}(B_j)$
+send each original $a_i/b_i$
+to the ratio of its images;
+denominators remain nonzero
+by injectivity. They give
+the isomorphism
+$$
+\mathop{\rm colim}_i\operatorname{Frac}(B_i)
+\longrightarrow\operatorname{Frac}(A),
+\qquad[i,a_i/b_i]\longmapsto a_i/b_i.
+$$
+Every fraction on the right
+has both coefficients in
+one common $B_i$, proving
+surjectivity. Equality of two
+fractions is the equality
+of their cross products;
+it holds in a common stage
+because those stages inject
+in $A$. This proves injectivity
+and gives the inverse by
+choosing a stage for the
+two original coefficients.
+No fraction-field map is
+asserted for an original
+transition map before its
+kernel has been accounted for.
+
+For a representative $a_i$,
+its image in $A$ is a unit
+exactly when its image is
+a unit at some later stage.
+One direction preserves the
+original inverse equation.
+For the other, an inverse
+in $A$ has a representative
+at a common stage, and
+the equation giving product
+$1$ holds at a later stage.
+Hence the exact maximal-ideal
+criterion is that every
+later image of $a_i$ belong
+to the corresponding maximal
+ideal. A union of the
+original maximal ideals need
+not work: for the two-stage
+system $V\to\operatorname{Frac}(V)$
+with a nonfield valuation
+ring $V$, each nonzero
+element of $\mathfrak m_V$
+becomes a unit at the
+second stage. The colimit
+is the field, with zero
+maximal ideal, as the exact
+criterion predicts.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-ring-cap-field}
+Let $L/K$ be an extension of fields. If $B \subset L$
+is a valuation ring, then $A = K \cap B$ is a valuation ring.
+\end{lemma}
+
+\begin{proof}
+Retain the original fields $K\subseteq L$
+and the original $B\subseteq L$.
+Put $F=\operatorname{Frac}(B)\subseteq L$
+and $E=K\cap F$. The ring in
+the statement is exactly
+$A=K\cap B=E\cap B$; these
+are equal subrings of the
+original $L$. For every
+nonzero $x\in E$, the
+valuation alternative in $B$
+gives $x\in B$ or $x^{-1}\in B$.
+Both $x,x^{-1}$ lie in $E$,
+so the alternative holds in
+$A$. Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+makes $A$ a valuation ring
+whose exact fraction field
+is $E=K\cap F$.
+The canonical fraction map
+$\operatorname{Frac}(A)\to E$
+sends $a/b$ to the same
+fraction in $L$. Its inverse
+sends a nonzero $x$ to
+$x/1$ if $x\in A$, or
+to $1/x^{-1}$ otherwise;
+the two possible expressions
+agree when both apply.
+This proves the fraction-field
+identification without replacing
+either original ambient field.
+
+An original nonzero $a\in A$
+is a unit of $A$ precisely
+when it is a unit of $B$.
+Indeed, if $a^{-1}\in B$,
+then $a^{-1}\in K$ as well,
+so it belongs to $A$.
+The converse follows from
+the inclusion. Hence
+$$
+\mathfrak m_A=A\cap\mathfrak m_B.
+$$
+The resulting residue map
+$A/\mathfrak m_A\to B/\mathfrak m_B$
+sends $[a]$ to $[a]$ and
+is injective by this exact
+kernel calculation. In particular
+$B$ dominates the original
+intersection $A$.
+
+This also proves extension
+of any given valuation ring
+$A$ of a field $K$ to
+any prescribed extension $L/K$.
+Lemma \ref{editorial-source-lemma-dominate}
+provides a valuation ring
+$B\subseteq L$ of fraction
+field $L$ dominating $A$.
+Its intersection $A'=K\cap B$
+has fraction field $K$ by
+the proved formula and is
+local with maximal ideal
+$A'\cap\mathfrak m_B$.
+It contains $A$ and its
+maximal ideal contracts to
+$\mathfrak m_A$, so it
+dominates $A$. Maximality
+of the original valuation
+ring $A$ in $K$ forces
+$A'=A$. Thus the extension
+restricts to the original
+ring and residue embedding
+exactly, not merely to some
+valuation ring containing it.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-ring-cap-field-finite}
+Let $L/K$ be an algebraic extension of fields. If $B \subset L$
+is a valuation ring with fraction field $L$ and not a field, then
+$A = K \cap B$ is a valuation ring and not a field.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{editorial-source-lemma-valuation-ring-cap-field},
+the original $A=K\cap B$ is
+a valuation ring, and its
+fraction field is exactly $K$
+because $\operatorname{Frac}(B)=L$.
+If $A$ were a field, it
+would equal its fraction field,
+so $A=K\subseteq B$.
+Every $b\in B$ is algebraic
+over $K$, hence integral over
+this field by its monic
+minimal polynomial. Thus
+$K\subseteq B$ is integral.
+Lemma \ref{editorial-source-lemma-integral-no-inclusion}
+forbids a proper inclusion
+of primes in $B$ over
+the sole prime of $K$.
+But the local domain $B$
+has $(0)\subsetneq\mathfrak m_B$
+because it is not a field,
+a contradiction.
+
+Equivalently the contradiction
+has a direct inverse formula.
+For nonzero $b\in B$, its
+original monic minimal polynomial
+$$
+b^d+c_1b^{d-1}+\cdots+c_d=0
+$$
+has $c_d\neq0$ in $K$,
+and yields
+$$
+b^{-1}=-c_d^{-1}
+\left(b^{d-1}+\sum_{i=1}^{d-1}c_i b^{d-1-i}\right)\in B.
+$$
+For $d=1$ the parenthesis
+is $1$. Thus every nonzero
+$b$ would be a unit,
+again making $B$ a field.
+
+The algebraicity hypothesis
+cannot be dropped. For any
+field $k$, retain
+$K=k$, $L=k(t)$ and
+$B=k[t]_{(t)}$. Its fraction
+field is the original $L$.
+For a nonzero original
+fraction $P(t)/Q(t)$, write
+$P=t^rP_0$, $Q=t^sQ_0$
+with $P_0(0),Q_0(0)\neq0$,
+retaining both powers and
+both residual factors.
+If $r\geq s$, the fraction
+$t^{r-s}P_0/Q_0$ lies in
+$B$; if $r<s$, its inverse
+$t^{s-r}Q_0/P_0$ lies in
+$B$. The fraction criterion
+therefore makes $B$ a
+valuation ring. It is not
+a field: evaluation at $t=0$
+on this localization has
+proper kernel $(t)B$, which
+contains its nonzero $t$.
+Nevertheless $K\cap B=k$
+is a field. This identifies
+the exact failure without
+the original algebraicity
+assumption.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-make-valuation-rings}
+Let $A$ be a valuation ring. For any prime ideal $\mathfrak p \subset A$ the
+quotient $A/\mathfrak p$ is a valuation ring. The same is true for the
+localization $A_\mathfrak p$ and in fact any nonzero localization of $A$.
+\end{lemma}
+
+\begin{proof}
+For the original prime
+$\mathfrak p\subset A$, the
+quotient $A/\mathfrak p$ is
+a nonzero domain. Any two
+nonzero residue classes have
+original representatives $a,b$
+outside $\mathfrak p$.
+The valuation alternative in
+$\operatorname{Frac}(A)$ gives
+$a=bc$ or $b=ac$ for
+some original $c\in A$.
+The same equality in the
+quotient gives its fraction
+alternative, so Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+makes $A/\mathfrak p$ a
+valuation ring. Its maximal
+ideal is $\mathfrak m_A/\mathfrak p$:
+a class outside that ideal
+has an inverse inherited
+from $A$. Its fraction field
+is the original residue
+field $\kappa(\mathfrak p)$,
+through the inverse maps
+$\overline a/\overline b\mapsto[a/b]$
+and $[a/b]\mapsto\overline a/\overline b$
+between $\operatorname{Frac}(A/\mathfrak p)$
+and $A_{\mathfrak p}/\mathfrak pA_{\mathfrak p}$,
+where $b\notin\mathfrak p$.
+
+Let $W\subseteq A$ be an
+original multiplicative subset.
+If $0\in W$, Lemma
+\ref{algebra-lemma-localization-zero}
+gives $W^{-1}A=0$, which
+is not a domain and hence
+not a valuation ring.
+This is an allowed localization
+under Definition
+\ref{algebra-definition-multiplicative-subset}.
+If $0\notin W$, the
+fraction map embeds $W^{-1}A$
+in $K=\operatorname{Frac}(A)$:
+equality of fractions is
+exactly the original cross-product
+equality, since nonzero elements
+of $W$ do not annihilate
+anything in the domain.
+It contains $A$ and has
+fraction field $K$. The
+alternative $x\in A$ or
+$x^{-1}\in A$ for every
+nonzero $x\in K$ therefore
+holds in $W^{-1}A$, making
+it a valuation ring. This
+includes $A_{\mathfrak p}$,
+whose denominator set avoids zero.
+
+More generally every original
+overring $A\subseteq B\subseteq K$
+is exactly $A_{\mathfrak q}$
+for one prime $\mathfrak q$
+of $A$. The same fraction
+alternative first proves that
+$B$ is a valuation ring
+with fraction field $K$.
+Put $\mathfrak q=A\cap\mathfrak m_B$.
+The original fraction map
+$A_{\mathfrak q}\to B$ is
+defined because every denominator
+outside $\mathfrak q$ is
+a unit of $B$, and is
+injective inside $K$.
+For $b\in B$, if $b\in A$
+it is already in $A_{\mathfrak q}$.
+Otherwise $b\neq0$ and
+$b^{-1}\in A$ by the
+original valuation criterion.
+It is a unit of $B$,
+so $b^{-1}\notin\mathfrak q$
+and $b=1/b^{-1}\in A_{\mathfrak q}$.
+This proves equality of the
+original subrings. The inverse
+prime assignment is contraction
+of the maximal ideal, since
+$\mathfrak qA_{\mathfrak q}\cap A=\mathfrak q$.
+Thus primes and overrings
+correspond bijectively, reversing
+inclusion: larger primes invert
+fewer original elements.
+Conversely an inclusion of overrings
+preserves their units, so contraction
+of their maximal ideals reverses
+that inclusion as well.
+
+For the given $W$, this
+prime is explicitly
+$$
+\mathfrak q=\{a\in A:(a)\cap W=\emptyset\}.
+$$
+Indeed $a/1$ is a unit
+in $W^{-1}A$ precisely when
+$ab=w$ for some $b\in A$
+and $w\in W$. An inverse
+$b/w$ gives this exact
+equality by cancelling the
+nonzero localization witness
+in the domain, and the
+equality conversely gives
+the inverse. This proves
+the formula from the maximal
+ideal of the valuation ring.
+The prime is disjoint from
+$W$ and contains every prime
+disjoint from $W$: if
+$a$ is in such a prime,
+no multiple $ab$ can be
+in $W$. It is therefore
+the largest such prime,
+and the canonical fraction
+map identifies $W^{-1}A$
+with exactly $A_{\mathfrak q}$.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-stack-valuation-rings}
+Let $A'$ be a valuation ring with residue field $K$.
+Let $A$ be a valuation ring with fraction field $K$.
+Then
+$C = \{\lambda \in A' \mid \lambda \bmod \mathfrak m_{A'} \in A\}$
+is a valuation ring.
+\end{lemma}
+
+\begin{proof}
+Keep the original residue map
+$\pi:A'\to K$ and write
+$\mathfrak p=\mathfrak m_{A'}$.
+The original $C=\pi^{-1}(A)$
+is a subring of $A'$,
+and $\mathfrak p\subseteq C$.
+The map $C/\mathfrak p\to A$
+sending $[c]$ to $\pi(c)$
+is an isomorphism: surjectivity
+follows by lifting each $a\in A$
+through $\pi$, and its kernel
+is exactly $\mathfrak p$.
+The inverse sends $a$ to
+the class of any such lift;
+different lifts differ in
+$\mathfrak p$. In particular
+$\mathfrak p$ is a prime
+of the original $C$.
+
+There is a more precise
+comparison than just equality
+of fraction fields:
+$$
+C_{\mathfrak p}\longrightarrow A',\qquad c/t\longmapsto c t^{-1}
+$$
+is an isomorphism inside
+$F=\operatorname{Frac}(A')$.
+It is defined and injective
+because $t\in C\setminus\mathfrak p$
+is a nonzero unit of $A'$.
+For surjectivity, take the
+original $b\in A'$ and
+write its residue in
+$K=\operatorname{Frac}(A)$
+as $\pi(b)=a/d$ with
+$a,d\in A$ and $d\neq0$;
+for zero residue take $a=0,d=1$.
+Choose $t\in A'$ lifting
+this original $d$. Then
+$t\in C\setminus\mathfrak p$
+and $tb\in C$ because
+$\pi(tb)=a$. Thus the
+inverse sends $b$ to
+$(tb)/t$. Independence of
+the lift and denominator
+follows from the equality
+of cross products in the
+original field $F$. Both
+composites are identities.
+It follows that
+$\operatorname{Frac}(C)=F$,
+including the case $A'$ is
+a field and $\mathfrak p=0$.
+
+For nonzero $x\in F$, if
+$x\notin A'$, Lemma
+\ref{editorial-source-lemma-valuation-ring-x-or-x-inverse}
+gives $x^{-1}\in\mathfrak m_{A'}\subseteq C$.
+If $x\in\mathfrak m_{A'}$,
+then $x\in C$. In the
+remaining case $x$ is a
+unit of $A'$, so its
+nonzero residue satisfies
+$\pi(x)\in A$ or
+$\pi(x)^{-1}\in A$ by the
+valuation alternative in the
+original residue field $K$.
+Because $\pi(x^{-1})=\pi(x)^{-1}$,
+this says $x\in C$ or
+$x^{-1}\in C$. The criterion
+of Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+therefore proves the assertion.
+
+The maximal ideal and residue
+field are also exact:
+$$
+\mathfrak m_C=\pi^{-1}(\mathfrak m_A),\qquad
+C/\mathfrak m_C\simeq A/\mathfrak m_A.
+$$
+Indeed an element $c$ outside
+that inverse image has
+$\pi(c)\in A^*$, so it
+is a unit of $A'$ and
+$\pi(c^{-1})=\pi(c)^{-1}\in A$,
+whence $c^{-1}\in C$.
+An element inside cannot be
+a unit, by applying $\pi$
+to an inverse equation.
+The residue isomorphism is
+the map $[c]\mapsto[\pi(c)]$,
+with inverse given by a
+lift as above.
+
+Finally the original prime
+chain of $C$ is described
+by these two exact maps.
+Primes contained in $\mathfrak p$
+correspond to primes of
+$C_{\mathfrak p}=A'$ by
+extension and contraction.
+Primes containing $\mathfrak p$
+correspond to primes of
+$C/\mathfrak p=A$ by
+quotient and inverse image.
+All primes of the valuation
+ring $C$ are comparable,
+as proved in Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring},
+so these two portions cover
+its spectrum. They meet
+at the single original prime
+$\mathfrak p$, corresponding
+to $\mathfrak m_{A'}$ on
+the localization side and
+to $(0)$ on the quotient
+side. This proves the full
+prime-chain composition.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-find-valuation-rings}
+Let $A$ be a normal domain with fraction field $K$.
+\begin{enumerate}
+\item For every $x \in K$, $x \not \in A$ there exists a valuation ring
+$A \subset V \subset K$ with fraction field $K$ such that $x \not \in V$.
+\item If $A$ is local, we can moreover choose $V$ which dominates $A$.
+\end{enumerate}
+In other words, $A$ is the intersection of all valuation rings in $K$
+containing $A$ and if $A$ is local, then $A$ is the intersection of
+all valuation rings in $K$ dominating $A$.
+\end{lemma}
+
+\begin{proof}
+For the given normal domain,
+$x\in K\setminus A$ is
+not integral over $A$.
+We prove the construction
+using exactly this nonintegrality
+condition; it will also give
+the integral-closure statement
+for arbitrary domains below.
+Since $0\in A$, the original
+$x$ is nonzero. Put
+$B=A[x^{-1}]\subseteq K$.
+If $x\in B$, a finite
+expression
+$x=\sum_{i=0}^d a_i x^{-i}$
+would give the full monic
+equation
+$$
+x^{d+1}-\sum_{i=0}^d a_i x^{d-i}=0,
+$$
+contradicting nonintegrality.
+Thus $x^{-1}$ is not a
+unit of $B$, and
+$x^{-1}B$ is a proper
+ideal. Choose a prime
+$\mathfrak p$ containing it
+and apply Lemma
+\ref{editorial-source-lemma-dominate} to the
+original local subring
+$B_{\mathfrak p}\subseteq K$.
+It gives a valuation ring
+$V$ of fraction field $K$
+dominating $B_{\mathfrak p}$.
+The element $x^{-1}$ belongs
+to $\mathfrak m_V$, so
+$x\notin V$: otherwise
+their product would put
+$1$ in $\mathfrak m_V$.
+Since $A\subseteq B\subseteq V$,
+this proves (1).
+
+Suppose now the original
+$A$ is local. Retain
+$$
+J=x^{-1}B+\mathfrak m_A B.
+$$
+If $J=B$, finite expressions
+in the original $x^{-1}$,
+with zero padding to a
+common degree $d\geq0$,
+give
+$$
+1=\left(\sum_{i=0}^d a_i x^{-i}\right)x^{-1}
++\sum_{i=0}^d a'_i x^{-i},
+\qquad a_i\in A,\quad a'_i\in\mathfrak m_A.
+$$
+Multiplying by the full
+$x^{d+1}$ and keeping the
+two original coefficient lists
+gives
+$$
+(1-a'_0)x^{d+1}
+-\sum_{i=0}^d a_i x^{d-i}
+-\sum_{i=1}^d a'_i x^{d+1-i}=0.
+$$
+For $d=0$ the last sum
+is empty and the equation
+is $(1-a'_0)x-a_0=0$.
+In every case $u=1-a'_0$
+is a unit of $A$.
+The monic polynomial
+$$
+Q(T)=T^{d+1}
+-\sum_{i=0}^d u^{-1}a_i T^{d-i}
+-\sum_{i=1}^d u^{-1}a'_i T^{d+1-i}
+$$
+annihilates $x$, and the
+complete polynomial originally
+obtained is exactly $uQ(T)$.
+Thus $x$ would be integral,
+a contradiction. It follows
+that the original $J$ is
+proper. Choose a prime
+$\mathfrak p\supseteq J$ and
+then a valuation ring $V$
+of fraction field $K$
+dominating $B_{\mathfrak p}$,
+as in the first construction.
+
+The contraction $\mathfrak p\cap A$
+contains $\mathfrak m_A$ and
+is proper, so it equals
+$\mathfrak m_A$. Localization
+gives
+$\mathfrak m_{B_{\mathfrak p}}\cap A=\mathfrak m_A$,
+and domination gives
+$\mathfrak m_V\cap A=\mathfrak m_A$.
+Hence this original $V$
+dominates $A$ and still
+excludes $x$ because
+$x^{-1}\in\mathfrak m_V$.
+This proves (2). Each
+asserted intersection equals
+$A$: inclusion of $A$
+is built into all its
+members, and the construction
+excludes every original element
+of $K\setminus A$ from
+at least one member.
+
+More generally let $A$
+be any domain with original
+fraction field $K$, and
+let $\widetilde A$ be its
+integral closure in $K$.
+Every $x\in\widetilde A$
+belongs to every valuation
+ring $A\subseteq V\subseteq K$:
+its original monic equation
+over $A$ is the same
+monic equation over $V$,
+and $V$ is normal by
+Lemma \ref{editorial-source-lemma-valuation-ring-normal}.
+If $x\notin\widetilde A$,
+the construction above applies
+because $x$ is not integral
+over $A$, and gives a
+member excluding it. Therefore
+$$
+\widetilde A=\bigcap_{A\subseteq V\subseteq K\text{ valuation}}V.
+$$
+For local $A$, exactly the
+second construction gives
+the same equality with the
+intersection restricted to
+valuation rings dominating $A$.
+
+For a prescribed prime
+$\mathfrak p\subset A$, the
+valuation rings containing
+$A$ with center
+$\mathfrak m_V\cap A=\mathfrak p$
+are precisely those dominating
+the original $A_{\mathfrak p}$.
+Indeed every $a\in A\setminus\mathfrak p$
+is a unit of $V$, giving
+the actual inclusion of
+fractions $A_{\mathfrak p}\to V$,
+and its maximal ideal
+contracts to $\mathfrak pA_{\mathfrak p}$.
+The converse follows by
+contracting once more to
+$A$. Their intersection
+is thus exactly the
+integral closure of
+$A_{\mathfrak p}$ in $K$,
+by the proved local formula.
+\end{proof}
+
+\noindent
+A {\it totally ordered abelian group} is a pair $(\Gamma, \geq)$
+consisting of an abelian group $\Gamma$ endowed with a total
+ordering $\geq$ such that $\gamma \geq \gamma' \Rightarrow
+\gamma + \gamma'' \geq \gamma' + \gamma''$ for all
+$\gamma, \gamma', \gamma'' \in \Gamma$.
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-group}
+Let $A$ be a valuation ring with field of fractions $K$.
+Set $\Gamma = K^*/A^*$ (with group law written additively).
+For $\gamma, \gamma' \in \Gamma$
+define $\gamma \geq \gamma'$ if and only if
+$\gamma - \gamma'$ is in the image of $A - \{0\} \to \Gamma$.
+Then $(\Gamma, \geq)$ is a totally ordered abelian group.
+\end{lemma}
+
+\begin{proof}
+Retain the original quotient
+$\Gamma=K^*/A^*$ and write
+$v(x)=[x]$ additively, so
+$v(xy)=v(x)+v(y)$ by the
+quotient group law. For original
+$x,y\in K^*$, the proposed
+order is exactly
+$$
+v(x)\geq v(y)\quad\Longleftrightarrow\quad x/y\in A.
+$$
+Indeed $v(x/y)$ is in the
+image of $A\setminus\{0\}$
+precisely when $x/y$ differs
+from such an element by
+a unit of $A$. Multiplication
+by that unit and its inverse
+proves the equivalence.
+If the representatives are
+changed to $xu,yw$ with
+$u,w\in A^*$, the original
+ratio becomes $(x/y)(u/w)$.
+Its membership in $A$ is
+unchanged, so the order is
+well-defined on the quotient.
+
+Reflexivity follows from $x/x=1$.
+If $x/y,y/x\in A$, their
+product is $1$, so $x/y$
+is a unit and $v(x)=v(y)$;
+this is antisymmetry. If
+$x/y$ and $y/z$ belong
+to $A$, their exact product
+$x/z$ does too, proving
+transitivity. For every pair,
+the valuation alternative for
+$x/y$ gives $x/y\in A$
+or $y/x\in A$, proving
+totality. Finally multiplying
+both original representatives
+by the same $z\in K^*$
+does not change their ratio:
+$(xz)/(yz)=x/y$. This
+proves translation invariance
+of the order and the
+claimed ordered group structure.
+
+Every totally ordered abelian
+group is torsion-free. If
+$\gamma>0$, repeated strict
+translation invariance gives
+$n\gamma>0$ for every integer
+$n\geq1$; if $\gamma<0$,
+apply the same argument to
+$-\gamma$. Hence $n\gamma=0$
+with $n\geq1$ forces
+$\gamma=0$. In particular
+this holds for the original
+$\Gamma$.
+
+The order recovers the
+original ring and maximal
+ideal exactly:
+$$
+A=\{0\}\cup\{x\in K^*:v(x)\geq0\},\qquad
+\mathfrak m_A=\{0\}\cup\{x\in K^*:v(x)>0\}.
+$$
+The first equality is the
+ratio criterion with $y=1$.
+For $x\in A\setminus\{0\}$,
+the quotient definition says
+$v(x)=0$ exactly when
+$x\in A^*$, giving the
+second equality by localness.
+Also $v(a/b)=v(a)-v(b)$
+for all original nonzero
+$a,b\in K$. The value
+of $0$ is not introduced
+into this group. If $A=K$,
+the quotient is the zero
+group, with its unique order.
+Conversely, if this quotient
+is zero, every nonzero
+element of $K$ is a unit
+of $A$, so $A=K$.
+\end{proof}
+
+\begin{definition}
+\label{editorial-source-definition-value-group}
+Let $A$ be a valuation ring.
+\begin{enumerate}
+\item The totally ordered abelian group $(\Gamma, \geq)$ of
+Lemma \ref{editorial-source-lemma-valuation-group} is called the
+{\it value group} of the valuation ring $A$.
+\item The map $v : A - \{0\} \to \Gamma$ and also $v : K^* \to \Gamma$ is
+called the {\it valuation} associated to $A$.
+\item The valuation ring $A$ is called a {\it discrete valuation ring}
+if $\Gamma \cong \mathbf{Z}$.
+\end{enumerate}
+\end{definition}
+
+\noindent
+Suppose the original ordered group
+$\Gamma$ is isomorphic as a group
+to $\mathbf Z$, and choose an
+initial group isomorphism
+$\psi:\Gamma\to\mathbf Z$.
+Put $\gamma=\psi^{-1}(1)\neq0$.
+Let $\varepsilon=1$ if
+$\gamma>0$, and $\varepsilon=-1$
+if $\gamma<0$. Then
+$$
+\phi=\varepsilon\psi:\Gamma\longrightarrow\mathbf Z
+$$
+is an order isomorphism with
+the usual order on the
+receiving integers. Indeed
+$\varepsilon\gamma>0$, and
+every original element is
+$n\gamma$ for a unique
+$n\in\mathbf Z$. Repeated
+addition and translation
+invariance give
+$n\gamma\geq0$ precisely when
+$\varepsilon n\geq0$, which
+is precisely $\phi(n\gamma)\geq0$.
+The same applies to differences,
+proving both order implications.
+Any other group isomorphism
+is $\delta\psi$ for
+$\delta\in\{1,-1\}$, since
+the only generators of
+$\mathbf Z$ are $1,-1$.
+Requiring the inverse image
+of $1$ to be positive
+forces $\delta=\varepsilon$.
+This is the precise unique
+order-compatible isomorphism.
+The original $\Gamma$ and
+its value map $v$ are
+retained; their integer comparison
+is $\phi\circ v$, with
+$v=\phi^{-1}\circ(\phi\circ v)$.
+
+Write $\gamma_0=\phi^{-1}(1)>0$.
+Surjectivity of the original
+quotient $v:K^*\to\Gamma$
+gives an element $\pi\in K^*$
+with $v(\pi)=\gamma_0$.
+The positive-cone description
+puts $\pi$ in the maximal
+ideal of $A$. For every
+original nonzero $a\in A$,
+put $n=\phi(v(a))\geq0$.
+The exact original element
+$u=a/\pi^n$ has value
+$v(a)-n\gamma_0=0$, so
+$u\in A^*$ and
+$$
+a=u\pi^n.
+$$
+Both the unit $u$ and
+the original exponent are
+part of this equality;
+neither is discarded. For
+the chosen $\pi$, the
+integer $n$ is unique by
+applying $\phi v$, and
+then $u=a/\pi^n$ is
+unique as well. Another
+element $\pi'$ of the
+same least positive value
+has $\pi'/\pi\in A^*$,
+which is the exact comparison
+between such choices.
+
+Every nonzero ideal $I$
+has the form $(\pi^n)$
+for exactly one $n\geq0$.
+Choose the least integer
+among $\phi(v(a))$ for
+the original nonzero $a\in I$,
+and choose such an $a$.
+The full equality $a=u\pi^n$
+with $u$ a unit puts
+$\pi^n=u^{-1}a$ in $I$.
+For every nonzero $b\in I$,
+the inequality $v(b)\geq n\gamma_0$
+puts $b/\pi^n$ in $A$,
+and a zero member contributes
+the equality $0=\pi^n0$.
+Thus all of $I$ is
+contained in $(\pi^n)$,
+giving equality. Distinct
+$n$ give distinct ideals
+by their least original
+values. The zero ideal
+is retained as a separate
+case and is not assigned
+an infinite value in $\Gamma$.
+In particular the maximal
+ideal is $(\pi)$, every
+ideal is principal, and
+the only prime ideals are
+$(0)$ and $(\pi)$: for
+$n>1$, the product
+$\pi\pi^{n-1}$ lies in
+$(\pi^n)$ although neither
+factor does. This proves
+the ideal and prime descriptions
+from the original ordered
+quotient without suppressing
+any unit factors.
+
+\begin{lemma}
+\label{editorial-source-lemma-properties-valuation}
+Let $A$ be a valuation ring. The valuation $v : A -\{0\} \to \Gamma_{\geq 0}$
+has the following properties:
+\begin{enumerate}
+\item $v(a) = 0 \Leftrightarrow a \in A^*$,
+\item $v(ab) = v(a) + v(b)$,
+\item $v(a + b) \geq \min(v(a), v(b))$ provided $a + b \not = 0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The quotient map to the
+original $\Gamma=K^*/A^*$
+has kernel $A^*$, giving
+(1), and its group law
+gives (2). For (3), retain
+the original nonzero $a,b$
+and assume $a+b\neq0$.
+Interchanging their roles
+if necessary, suppose
+$v(a)\leq v(b)$. The
+order proved in Lemma
+\ref{editorial-source-lemma-valuation-group}
+then gives $b/a\in A$.
+The exact equality
+$$
+\frac{a+b}{a}=1+\frac ba
+$$
+puts the nonzero left-hand
+element in $A$, so
+$v(a+b)-v(a)\geq0$.
+This proves (3), retaining
+both summands and their
+original ratio.
+
+If $v(a)<v(b)$, that
+ratio $b/a$ belongs to
+$\mathfrak m_A$. Thus
+$1+b/a$ is a unit:
+if it were in the maximal
+ideal, subtracting $b/a$
+would put $1$ there.
+Consequently $a+b\neq0$
+and $v(a+b)=v(a)$.
+The reversed strict inequality
+gives the symmetric equality.
+This entire proof also
+applies to nonzero $a,b\in K$
+outside $A$: the comparison
+still puts the same ratio
+in $A$. The original value
+map on $K^*$ therefore
+satisfies the same inequality,
+with equality whenever the
+two original values differ.
+
+For a finite original list
+$a_1,\ldots,a_n\in K$, keep
+all its terms, including
+zeros. If at least one
+term is nonzero, choose
+$a_j$ of least value among
+the nonzero terms. Every
+ratio $a_i/a_j$ belongs
+to $A$, with a zero
+term giving the ratio $0$.
+Hence if the original sum
+$a=\sum_i a_i$ is nonzero,
+then $a/a_j=\sum_i a_i/a_j$
+is a nonzero element of
+$A$, proving $v(a)\geq v(a_j)$.
+If exactly one term has
+the least value, every
+other ratio is in
+$\mathfrak m_A$, including
+the zeros. The full sum
+of ratios is $1$ plus
+an element of that ideal,
+hence a unit. In that
+case the sum is nonzero
+and has exactly the least
+original value. For an
+all-zero or empty list,
+the sum is $0$ and no
+value in $\Gamma$ is
+assigned to it.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-characterize-valuation-ring}
+Let $A$ be a ring. The following are equivalent
+\begin{enumerate}
+\item $A$ is a valuation ring,
+\item $A$ is a local domain and every finitely generated
+ideal of $A$ is principal.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Suppose first that $A$ is
+a valuation ring. Retain
+the complete finite generator
+list $f_1,\ldots,f_n$.
+If the list is empty
+or all generators are zero,
+its ideal is $(0)$ and
+is principal. Otherwise choose
+an original nonzero $f_i$
+whose value is least among
+the nonzero generators, and
+put $h=f_i$. For each
+nonzero $f_j$, the comparison
+$v(f_j)\geq v(h)$ gives
+the original ratio $c_j=f_j/h\in A$.
+For $f_j=0$, set $c_j=0$.
+Then the exact equalities
+$f_j=hc_j$ for every $j$
+give $(f_1,\ldots,f_n)\subseteq(h)$,
+while $h$ itself is in
+the original list, giving
+the reverse inclusion.
+No value is taken at
+a zero generator.
+
+Conversely, assume the original
+$A$ is a local domain
+with every finitely generated
+ideal principal. An original
+fraction $f/g$ with $g\neq0$
+belongs to $A$ if $f=0$.
+For $f,g\neq0$, write
+$(f,g)=(h)$. Then $h\neq0$,
+and there are original
+$a,b,c,d\in A$ with
+$$
+f=ah,\qquad g=bh,\qquad h=cf+dg.
+$$
+Substitution gives
+$h=(ca+db)h$. The domain
+property and $h\neq0$ permit
+cancellation, giving $ca+db=1$.
+Both $a,b$ cannot belong
+to the maximal ideal,
+so at least one is a
+unit. If $a$ is a
+unit, the original fraction
+$g/f=b/a$ belongs to $A$;
+if $b$ is a unit,
+$f/g=a/b$ belongs to $A$.
+This proves the nonzero
+fraction alternative in the
+actual $\operatorname{Frac}(A)$.
+Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+therefore makes $A$ a
+valuation ring.
+
+The converse proof uses
+only two-generated ideals.
+Thus in (2) it suffices
+to require that every
+two-generated ideal be principal;
+the forward proof then
+recovers the assertion for
+every original finite list.
+The local hypothesis cannot
+be discarded: every ideal
+of $\mathbf Z$ is principal,
+since for a nonzero ideal
+its least positive element
+divides all its elements
+by division with remainder,
+and the zero ideal is
+$(0)$. But neither $2/3$
+nor $3/2$ is an integer,
+so the exact fraction
+criterion shows that $\mathbf Z$
+is not a valuation ring.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-valuation-ring}
+Let $(\Gamma, \geq)$ be a totally ordered abelian group.
+Let $K$ be a field. Let $v : K^* \to \Gamma$ be a homomorphism
+of abelian groups such that $v(a + b) \geq \min(v(a), v(b))$ for
+$a, b \in K$ with $a, b, a + b$ not zero. Then
+$$
+A =
+\{
+x \in K \mid x = 0 \text{ or } v(x) \geq 0
+\}
+$$
+is a valuation ring with value group $\Im(v) \subset \Gamma$,
+with maximal ideal
+$$
+\mathfrak m =
+\{
+x \in K \mid x = 0 \text{ or } v(x) > 0
+\}
+$$
+and with group of units
+$$
+A^* =
+\{
+x \in K^* \mid v(x) = 0
+\}.
+$$
+\end{lemma}
+
+\begin{proof}
+Keep the original ordered group
+$\Gamma$ and homomorphism
+$v:K^*\to\Gamma$, without
+assuming it is surjective.
+The homomorphism identities give
+$v(1)=0$ and $v(x^{-1})=-v(x)$.
+Also $2v(-1)=v(1)=0$.
+A totally ordered abelian group
+has no nonzero element killed
+by a positive integer, by
+the strict-order argument in
+Lemma \ref{editorial-source-lemma-valuation-group}.
+Hence $v(-1)=0$, and
+$v(-x)=v(x)$ for nonzero $x$.
+
+The original set $A$ contains
+$0,1$ and is closed under
+additive inverses. It is
+closed under multiplication:
+products involving zero are
+zero, and otherwise the
+sum of two nonnegative
+original values is nonnegative.
+For addition, a zero summand
+causes no problem. If both
+summands and their sum are
+nonzero, the given inequality
+puts the sum in $A$;
+if their sum is zero,
+it belongs to $A$ by
+definition. Thus $A$ is
+a unital subring of $K$.
+For every nonzero $x\in K$,
+totality gives $v(x)\geq0$
+or $v(x)<0$. In the
+second case $v(x^{-1})>0$,
+so $x^{-1}\in A$.
+The criterion of Lemma
+\ref{editorial-source-lemma-x-or-x-inverse-valuation-ring}
+therefore proves that $A$
+is a valuation ring whose
+fraction field is exactly $K$.
+
+A nonzero original $x$
+is a unit of $A$ exactly
+when both $v(x)$ and
+$-v(x)$ are nonnegative,
+which by antisymmetry is
+equivalent to $v(x)=0$.
+Thus its nonunits are
+precisely $0$ and the
+elements of positive value,
+giving the asserted maximal
+ideal. Directly, that set
+is a proper ideal: addition
+uses the minimum inequality
+unless the sum is zero,
+and multiplying a positive
+value by an element of
+$A$ adds a nonnegative
+value. It excludes $1$,
+and every element outside
+it has the inverse just
+described. This also proves
+maximality explicitly.
+
+Let $q:K^*\to\Delta=K^*/A^*$
+be the original associated
+value-group quotient. The map
+$$
+\overline v:\Delta\longrightarrow\operatorname{Im}(v),
+\qquad[x]\longmapsto v(x)
+$$
+is well-defined because
+$A^*=\ker(v)$, injective
+by the same kernel equality,
+and surjective by the
+definition of the image.
+Its inverse sends a value
+$\gamma=v(x)$ to $[x]$;
+different original choices
+$x,y$ have $v(x/y)=0$
+and differ by a unit of
+$A$, proving independence.
+Moreover
+$$
+[x]\geq[y]\quad\Longleftrightarrow\quad
+x/y\in A\quad\Longleftrightarrow\quad
+v(x)-v(y)\geq0.
+$$
+Thus it is an order
+isomorphism with exactly
+the asserted subgroup of
+the original $\Gamma$.
+If $i:\operatorname{Im}(v)\hookrightarrow\Gamma$
+is its original inclusion,
+then $i\overline vq=v$;
+the ambient codomain and
+the original value map
+have both been retained.
+
+Finally two such original
+maps $v:K^*\to\Gamma$ and
+$w:K^*\to\Lambda$ define
+the same valuation ring
+exactly when there is an
+order isomorphism
+$\phi:\operatorname{Im}(v)\to\operatorname{Im}(w)$
+with $\phi(v(x))=w(x)$
+for every original $x$.
+For a common ring, equality
+of two $v$-values means
+their ratio is a unit
+of that ring, and hence
+also has $w$-value zero.
+This proves the formula
+well-defined; the reverse
+argument gives its inverse.
+The same ratio criterion
+proves that it preserves
+and reflects order. Conversely
+such an isomorphism preserves
+the nonnegative cone, so
+the two original sets
+$\{0\}\cup v^{-1}(\Gamma_{\geq0})$
+and $\{0\}\cup w^{-1}(\Lambda_{\geq0})$
+are equal. Uniqueness follows
+because every element of
+the image is an original
+value $v(x)$. No isomorphism
+between unused parts of the
+ambient groups is asserted.
+\end{proof}
+
+\noindent
+Let $(\Gamma, \geq)$ be a totally ordered abelian group.
+An {\it ideal of $\Gamma$} is a subset $I \subset \Gamma$ such
+that all elements of $I$ are $\geq 0$ and $\gamma \in I$,
+$\gamma' \geq \gamma$ implies $\gamma' \in I$. We say that such
+an ideal is {\it prime} if $0 \not \in I$ and if
+$\gamma + \gamma' \in I, \gamma, \gamma' \geq 0
+\Rightarrow \gamma \in I \text{ or } \gamma' \in I$.
+
+\begin{lemma}
+\label{editorial-source-lemma-ideals-valuation-ring}
+Let $A$ be a valuation ring.
+Ideals in $A$ correspond $1 - 1$ with ideals of $\Gamma$.
+This bijection is inclusion preserving, and maps prime
+ideals to prime ideals.
+\end{lemma}
+
+\begin{proof}
+Retain $K=\operatorname{Frac}(A)$, the original ordered quotient
+$\Gamma=K^*/A^*$, and its quotient map $v:K^*\to\Gamma$.
+For an ideal $J\subset A$ and an ideal $U\subset\Gamma$, define
+$$
+V(J)=\{v(x):x\in J,\ x\neq0\},\qquad
+J(U)=\{0\}\cup\{x\in K^*:v(x)\in U\}.
+$$
+Every element of $V(J)$ is nonnegative. If $v(x)=\gamma\in V(J)$
+and $\delta\geq\gamma$, choose $y\in K^*$ with $v(y)=\delta$.
+Then $v(y/x)=\delta-\gamma\geq0$, so $y/x\in A$ and
+$y=(y/x)x\in J$. Thus $V(J)$ is upward closed.
+The same calculation shows that every representative of a value in
+$V(J)$ lies in $J$; when the values are equal, $y/x$ is an actual unit.
+
+Since $U\subset\Gamma_{\geq0}$, the set $J(U)$ lies in $A$.
+It contains zero. If $x\neq0$ belongs to it, then
+$v(-x)=v(x)\in U$. For nonzero $x,y\in J(U)$ with $x+y\neq0$,
+the valuation inequality gives
+$v(x+y)\geq\min\{v(x),v(y)\}\in U$, hence $x+y\in J(U)$.
+If a summand or the sum is zero the closure follows directly from
+the definition. For $a\in A$ and $x\in J(U)$, a zero factor gives
+$ax=0$; otherwise $v(ax)=v(a)+v(x)\geq v(x)$, so $ax\in J(U)$.
+This proves that $J(U)$ is an ideal.
+Surjectivity of $v$ and the representative calculation give
+$V(J(U))=U$ and $J(V(J))=J$. Both maps preserve inclusion.
+In particular $J(\varnothing)=(0)$ and
+$J(\Gamma_{\geq0})=A$; no value is assigned to the zero element.
+
+The ideal $J$ is proper exactly when $0\notin V(J)$, since an
+element of value zero is a unit. If $J$ is prime and
+$\gamma,\delta\geq0$ with $\gamma+\delta\in V(J)$, choose
+$x,y\in A\setminus\{0\}$ with these values. The representative
+calculation puts $xy$ in $J$, so $x\in J$ or $y\in J$.
+Consequently $\gamma\in V(J)$ or $\delta\in V(J)$.
+Conversely, suppose $U$ is prime and $xy\in J(U)$ for $x,y\in A$.
+If $xy=0$, the domain property gives a zero factor, which belongs
+to $J(U)$. Otherwise the defining condition on
+$v(x)+v(y)\in U$ puts one factor in $J(U)$.
+Thus the correspondence preserves and reflects primality, including
+the empty group ideal and the zero ring ideal.
+
+The correspondence also describes the ideal operations exactly.
+For every family $(J_\lambda)_{\lambda\in\Lambda}$, put
+$U_\lambda=V(J_\lambda)$. Then
+$$
+V\left(\bigcap_{\lambda\in\Lambda}J_\lambda\right)
+=\bigcap_{\lambda\in\Lambda}U_\lambda,
+\qquad
+V\left(\sum_{\lambda\in\Lambda}J_\lambda\right)
+=\bigcup_{\lambda\in\Lambda}U_\lambda.
+$$
+The first equality follows by membership of each nonzero element.
+For the second, a nonzero member of the sum is a finite sum of
+members of the original ideals. Discarding no term from that
+equality, list its nonzero terms. Their list is nonempty; its least
+value belongs to one $U_\lambda$. The finite-sum inequality and
+upward closure put the value of the sum in that same $U_\lambda$.
+The reverse inclusion follows from each $J_\lambda$ being contained
+in the sum. For an empty family the intersection is $A$ and its
+value set is $\Gamma_{\geq0}$, while the sum is $(0)$ and its
+value set is empty; the intersections on the right are taken
+inside $\Gamma_{\geq0}$.
+For two ideals with value sets $U,W$, one has
+$$
+V(J(U)J(W))=U+W
+=\{\gamma+\delta:\gamma\in U,\ \delta\in W\},
+$$
+and
+$$
+V(\sqrt{J(U)})
+=\{\gamma\in\Gamma_{\geq0}:n\gamma\in U
+\text{ for some integer }n\geq1\}.
+$$
+Indeed $U+W$ is upward closed: if
+$\eta\geq\gamma+\delta$, write
+$\eta=\gamma+(\delta+\eta-\gamma-\delta)$ and use
+$\delta+\eta-\gamma-\delta\geq\delta$.
+Every value in $U+W$ is the value of a product of representatives
+from the original ideals. A nonzero element of their product ideal
+is a finite sum of such products, and the least-value argument
+just used gives the reverse inclusion. If either ideal is zero,
+both sides are empty. Finally, for nonzero $x\in A$, the equality
+$v(x^n)=n v(x)$ proves the radical formula in both directions;
+the original zero element lies in the radical separately.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-valuation-ring-Noetherian-discrete}
+A valuation ring is Noetherian if and only if it is
+a discrete valuation ring or a field.
+\end{lemma}
+
+\begin{proof}
+Let $K=\operatorname{Frac}(A)$ and retain the original value map
+$v:K^*\to\Gamma=K^*/A^*$. If $A$ is a field, its two ideals
+are $(0)$ and $A$, so it is Noetherian.
+If $A$ is a discrete valuation ring, let $\gamma_0>0$ generate
+its original ordered group, and let
+$\phi:\Gamma\to\mathbf Z$ be the order isomorphism
+$\phi(n\gamma_0)=n$. Choose $\pi\in A$ with
+$v(\pi)=\gamma_0$. The nonzero ideals, and only the nonzero
+ideals, are
+$$
+I_n=\{0\}\cup\{x\in K^*:v(x)\geq n\gamma_0\}
+=(\pi^n),\qquad n\geq0.
+$$
+To verify this directly, the values of a nonzero ideal under
+$\phi$ form a nonempty upward closed subset of
+$\mathbf Z_{\geq0}$, with a least element $n$.
+For an original element $a$ of that value,
+$u=a/\pi^n$ has value zero, so $u\in A^*$ and
+$a=u\pi^n$. Every original nonzero $b$ of the ideal satisfies
+$b/\pi^n\in A$, while $0=\pi^n0$. These equalities prove
+that the ideal is $(\pi^n)$ and retain its original unit factor.
+The remaining ideal $(0)$ is generated by zero. Thus every ideal
+is finitely generated and $A$ is Noetherian. The map $v$ still
+takes values in $\Gamma$; the integer-valued comparison is
+$\phi\circ v$, with $v=\phi^{-1}\circ(\phi\circ v)$.
+
+Conversely, suppose $A$ is Noetherian and is not a field.
+Ascending chains of its ideals stabilize: their union is an ideal,
+and finitely many generators of that union all occur in a single
+member of the chain. By Lemma \ref{editorial-source-lemma-ideals-valuation-ring},
+the same holds for the upward closed subsets of
+$\Gamma_{\geq0}$. There is a positive element of $\Gamma$.
+If there were no least positive element, starting from one such
+element one could choose
+$\gamma_1>\gamma_2>\gamma_3>\cdots>0$.
+The corresponding ideals
+$\gamma_i+\Gamma_{\geq0}$ would form a strictly ascending
+chain: $\gamma_{i+1}$ belongs to its own set but not to the
+preceding one. This is impossible. Denote the least positive
+element by $\gamma_0$.
+
+For any original $\gamma>0$, suppose that
+$\gamma-n\gamma_0\geq0$ for every integer $n\geq0$.
+These elements strictly decrease, and their upward closed sets
+again give a strictly ascending chain of ideals, a contradiction.
+Consequently there is a least integer $N\geq1$ such that
+$\gamma-N\gamma_0<0$. Put
+$r=\gamma-(N-1)\gamma_0$. Then
+$0\leq r<\gamma_0$, so the least-positive property forces
+$r=0$. Thus $\gamma=(N-1)\gamma_0$.
+Zero is $0\gamma_0$, and applying the argument to $-\gamma$
+expresses every negative element as a negative multiple of
+$\gamma_0$. Distinct integer multiples are distinct, because
+a positive multiple of $\gamma_0$ is positive. Therefore
+$n\mapsto n\gamma_0$ is an order isomorphism
+$\mathbf Z\to\Gamma$, and $A$ is a discrete valuation ring.
+The argument uses the ascending chain condition twice; merely
+having a least positive group element is not the assertion used
+to conclude that all positive elements are its multiples.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+\begin{lemma}
+\label{lemma-invert-closed-quotient}
+Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
+Assume the image of the map $\Spec(S^{-1}R) \to \Spec(R)$
+is closed. Then $S^{-1}R \cong R/I$ for some ideal $I \subset R$.
+\end{lemma}
+
+\begin{proof}
+Let $I = \Ker(R \to S^{-1}R)$ so that $V(I)$ contains the image.
+Say the image is the closed subset $V(I') \subset \Spec(R)$ for
+some ideal $I' \subset R$. So $V(I') \subset V(I)$.
+For $f \in I'$ we see that $f/1 \in S^{-1}R$
+belongs to every prime ideal. Hence $f^n$ maps to zero in $S^{-1}R$
+for some $n \geq 1$ (Lemma \ref{lemma-Zariski-topology}).
+Hence $V(I') = V(I)$.
+Every $g\in S$ avoids all primes in the image, hence every prime
+containing $I$. Its class $\overline g$ in $R/I$ belongs to no maximal
+ideal and is therefore a unit. The quotient and localization properties
+give ring maps
+$$
+\alpha:R/I\longrightarrow S^{-1}R,\quad \overline r\longmapsto r/1,
+\qquad
+\beta:S^{-1}R\longrightarrow R/I,\quad r/s\longmapsto
+\overline r\,\overline s^{-1}.
+$$
+For every $\overline r$, $\beta\alpha(\overline r)=\overline r$.
+For every $r/s$, $\alpha\beta(r/s)=(r/1)(s/1)^{-1}=r/s$.
+Thus the maps are inverse, and their composite with $R\to R/I$
+is the original localization map. In particular the localization map
+is surjective. Conversely, if $R\to S^{-1}R$ is surjective, it is
+the quotient by its kernel and its spectrum has closed image by
+Lemma \ref{lemma-spec-closed}.
+\end{proof}

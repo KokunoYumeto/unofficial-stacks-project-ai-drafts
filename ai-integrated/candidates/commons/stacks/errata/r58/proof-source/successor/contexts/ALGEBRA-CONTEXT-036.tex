@@ -1,0 +1,94 @@
+\begin{lemma}
+\label{editorial-source-lemma-characteristic-polynomial-prime}
+Let $R \to A$ be a ring homomorphism.
+Assume $A \cong R^{\oplus n}$ as an $R$-module.
+Let $f \in A$. The multiplication map $m_f: A
+\to A$ is $R$-linear and hence
+has a characteristic polynomial
+$P(T) = T^n + r_{n-1}T^{n-1} + \ldots + r_0 \in R[T]$.
+For any prime
+$\mathfrak{p} \in \Spec(R)$, $f$ acts nilpotently on $A
+\otimes_R \kappa(\mathfrak{p})$ if and only if $\mathfrak p \in
+V(r_0, \ldots, r_{n-1})$.
+Moreover, the image of $\Spec(A_f)$ in $\Spec(R)$ is
+$\bigcup_{i=0}^{n-1}D(r_i)$. This formula commutes with every ring
+base change $R\to R'$, and $\Spec(A)\to\Spec(R)$ is open after every
+such base change.
+\end{lemma}
+
+\begin{proof}
+This follows quite easily once we prove that the characteristic
+polynomial $\bar P(T) \in \kappa(\mathfrak p)[T]$ of the
+multiplication map $m_{\bar f}: A \otimes_R \kappa(\mathfrak p) \to
+A \otimes_R \kappa(\mathfrak p)$ which multiplies elements of $A
+\otimes_R \kappa(\mathfrak p)$ by $\bar f$, the image of $f$ viewed in
+$A\otimes_R\kappa(\mathfrak p)$, is just the image of $P(T)$ in
+$\kappa(\mathfrak p)[T]$. Let $(a_{ij})$ be the matrix of the map
+$m_f$ with entries in $R$, using a basis $e_1, \ldots, e_n$
+of $A$ as an $R$-module.
+Then, $A \otimes_R \kappa(\mathfrak p) \cong (R \otimes_R
+\kappa(\mathfrak p))^{\oplus n} = \kappa(\mathfrak p)^n$, which is
+an $n$-dimensional vector space over $\kappa(\mathfrak p)$ with
+basis $e_1 \otimes 1, \ldots, e_n \otimes 1$. The image $\bar f = f
+\otimes 1$, and so the multiplication map $m_{\bar f}$ has matrix
+$(a_{ij} \otimes 1)$. Thus, the characteristic polynomial is
+precisely the image of $P(T)$.
+
+\medskip\noindent
+For a linear endomorphism $N$ of a finite dimensional vector space,
+nilpotence implies that the filtration
+$0=\ker(N^0)\subset\ker(N)\subset\cdots\subset\ker(N^a)$
+eventually reaches the whole space. A basis extending bases along this
+filtration gives a strictly triangular matrix, since
+$N(\ker(N^j))\subset\ker(N^{j-1})$; its characteristic polynomial
+is $T^n$. Conversely, if the characteristic polynomial is $T^n$,
+Cayley--Hamilton gives $N^n=0$ for $n>0$.
+For $n=0$ the space is zero, its only endomorphism is zero and its
+characteristic polynomial is $1=T^0$. Applying this to $m_{\bar f}$
+gives nilpotence exactly when all the images of
+$r_0,\ldots,r_{n-1}$ in $\kappa(\mathfrak p)$ vanish.
+The kernel of $R\to\kappa(\mathfrak p)$ is $\mathfrak p$, proving
+the first assertion, including $V()=\Spec(R)$ when $n=0$.
+
+\medskip\noindent
+Put $B=A\otimes_R\kappa(\mathfrak p)$. Multiplication by $\bar f$
+is nilpotent if and only if $\bar f$ is nilpotent: one implication
+follows by applying the power of the multiplication map to $1$, and
+the other follows by multiplication by $\bar f^a=0$.
+The localization $B_{\bar f}$ is zero if and only if
+$\bar f^a=0$ for some $a\geq0$, by the equality criterion for
+$1/1=0/1$. Also
+$A_f\otimes_R\kappa(\mathfrak p)\cong B_{\bar f}$:
+the map sends $(a/f^j)\otimes\lambda$ to
+$(a\otimes\lambda)/\bar f^j$, and its inverse is induced by
+$a\otimes\lambda\mapsto(a/1)\otimes\lambda$ and the inverse
+$(1/f)\otimes1$ of $\bar f$. These maps fix the generators and
+the inverse of $f$, so their composites are identities.
+Lemma \ref{editorial-source-lemma-in-image} now gives
+$$
+\mathfrak p\in\operatorname{Im}(\Spec(A_f)\to\Spec(R))
+\ \Longleftrightarrow\ B_{\bar f}\ne0
+\ \Longleftrightarrow\ \mathfrak p\in\bigcup_{i=0}^{n-1}D(r_i).
+$$
+For $n=0$, $A=0$ and the union and image are both empty.
+
+\medskip\noindent
+For an arbitrary ring map $R\to R'$, the images of the chosen basis
+give a basis of $A'=A\otimes_RR'$. Its multiplication matrix for
+$f'=f\otimes1$ is the image $(a'_{ij})$ of $(a_{ij})$. The determinant
+formula
+$$
+\det(TI-(a_{ij}))=
+\sum_{\sigma\in S_n}\operatorname{sgn}(\sigma)
+\prod_{i=1}^n(T\delta_{i,\sigma(i)}-a_{i,\sigma(i)})
+$$
+shows that every coefficient of its characteristic polynomial is the
+image of the corresponding original coefficient, with all signs and
+terms retained. Consequently the image of $\Spec(A'_{f'})$ is
+$\bigcup_{i=0}^{n-1}D(r'_i)$, the inverse image of
+$\bigcup_{i=0}^{n-1}D(r_i)$ in $\Spec(R')$.
+Finally, the same image formula applies to every element of $A'$,
+whether or not it comes from an element of $A$. Standard opens form
+a basis of $\Spec(A')$, and arbitrary unions of their open images
+are open. Hence $\Spec(A')\to\Spec(R')$ is open.
+\end{proof}

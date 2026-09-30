@@ -1,0 +1,105 @@
+# Quasi-finite henselization: verification of the received corrections
+
+Primary source: Stacks Project authors, original commit `a04446e57ec1fbc252a871afcec7752fb2807b14`, `algebra.tex:43573–43864`, SHA256 `FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3`. Additional original-source reading: `algebra.tex:30292–30339`, `42384–42447`, `42842–42878`, and `fields.tex:1703–1724` at that same commit. Their bytes are bound in the evidence receipt. The preceding henselization, henselian and ind-étale validation notes provide the already established inputs.
+
+This batch verifies two existing canonical corrections, accounting for four reports. It proposes no duplicate source operation and introduces no optional extension. All calculations below verify statements actually made in the original source. Additional paper mining and wider consequences remain deferred under the user's Algebra-first direction.
+
+## The original primes and finite local comparisons
+
+Retain the map \(R\to S\), the original primes \(\mathfrak q/\mathfrak p\), and the hypothesis that the map is quasi-finite at \(\mathfrak q\). Put \(H=R_{\mathfrak p}^h\) and
+\[
+ U=H\otimes_R S,\qquad
+ T=H\otimes_{R_{\mathfrak p}}S_{\mathfrak q}.
+\]
+The second ring is the localization of the first at all \(1\otimes s\), \(s\notin\mathfrak q\). The forward map sends \((h\otimes s)/(1\otimes v)\) to \(h\otimes(s/v)\); the reverse map has that same formula read backwards. The \(R_{\mathfrak p}\)-balancing is valid because the images in \(H\) of all \(r\notin\mathfrak p\) are already units. The maps preserve products and sums and fix every tensor and denominator generator, so they are inverse.
+
+The ideal \(\mathfrak qT\) is prime and maximal, since
+\[
+ T/\mathfrak qT
+ =H\otimes_{R_{\mathfrak p}}\kappa(\mathfrak q)
+ =(H/\mathfrak pH)\otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak q)
+ =\kappa(\mathfrak q).
+\]
+Here \(\mathfrak pH=\mathfrak m_H\), with the original specified identification \(H/\mathfrak m_H=\kappa(\mathfrak p)\). Its inverse image \(\mathfrak Q\) in \(U\) is the prime selected by these residue maps. Quasi-finiteness persists at \(\mathfrak Q\) by the four-rings lemma, whose exact proof retains the source fibre's finite factor and its complementary factor after base change. The finite-over-henselian theorem then makes \(U_{\mathfrak Q}\) a finite henselian local \(H\)-algebra. The preceding explicit localization identifies it with \(T_{\mathfrak qT}\). Its maximal ideal contracts to \(\mathfrak q\), and its residue field is exactly \(\kappa(\mathfrak q)\).
+
+The earlier ordinary henselization base-change theorem identifies \(S_{\mathfrak q}^h\) with the henselization of \(T_{\mathfrak qT}\). A henselian local ring is its own henselization: the unique local map from its henselization back to the ring has identity residue map; its two composites with the structure map are identities by uniqueness. Thus this is the original finite local algebra \(U_{\mathfrak Q}\), proving 43580–43614. For an ideal \(I\subset\mathfrak m_R\), the quotient map \(R\to R/I\) is finite, the displayed tensor is exactly \(R^h/IR^h\), and this quotient is already local. Its selected localization changes nothing. This proves the source's quotient compatibility, with no finite-generation restriction on \(I\).
+
+For the strict statement preserve its entire field diagram. Write \(k=\kappa(\mathfrak p)\), \(K=\kappa(\mathfrak q)\), \(\Omega=\kappa_2^{sep}\), and let \(L=\kappa_1^{sep}\) be precisely the elements of \(\Omega\) separable algebraic over \(k\). Quasi-finiteness implies that \(K/k\) is finite. The source's separable-first lemma, `fields.tex:1703–1724`, shows that \(L\) is a field and \(\Omega/L\) is purely inseparable. Indeed in characteristic \(p>0\), the irreducible polynomial of each algebraic \(x\) has the exact form \(Q(X^{p^e})\), with \(Q\) irreducible and separable, so \(x^{p^e}\) is separable over \(k\). In characteristic zero every algebraic extension is separable.
+
+The field \(L\) is separably closed. Let a separable polynomial over \(L\) be given. Its finitely many coefficients lie in a finite separable subextension \(E/k\) of \(L/k\). Square-freeness remains valid over \(E\): a common nonconstant factor with the derivative over \(E\) would remain such a factor over \(L\). Since \(\Omega\) is separably closed, all roots lie in \(\Omega\); each is separable over \(E\), hence over \(k\), and therefore lies in \(L\). Thus \(L/k\) is the claimed separable closure.
+
+Set \(M=LK\subset\Omega\), keeping the two original embedded fields. It is finite purely inseparable over \(L\). In positive characteristic choose one exponent \(p^e\) working for a finite set of generators of \(M/L\); then \(M^{p^e}\subset L\). To prove that \(M\) is separably closed, let \(x\) be separable algebraic over \(M\). A separable polynomial \(\sum a_iX^i\) for \(x\), after the Frobenius field isomorphism \(M\to M^{p^e}\), becomes the separable polynomial \(\sum a_i^{p^e}X^i\) for \(x^{p^e}\). Its coefficients lie in \(L\), and it stays separable after that field extension. Consequently \(x^{p^e}\) is separable algebraic over \(L\) and lies in \(L\). Hence \(x\) is purely inseparable over \(M\), as well as separable, so \(x\in M\). In characteristic zero \(M=L\). Thus \(M\) is separably closed in every case.
+
+Every element of \(\Omega\) is separable algebraic over \(K\), and hence over the intermediate field \(M\). The preceding conclusion forces \(\Omega=M\). This proves exactly the source's assertions that \(\Omega/L\) is finite purely inseparable and that multiplication
+\[
+ L\otimes_k K\longrightarrow\Omega,\qquad a\otimes b\longmapsto ab
+\]
+is surjective. For the latter, the image is a finite-dimensional domain over \(L\), hence a field, containing \(L\) and \(K\); it is therefore their compositum \(M=\Omega\).
+
+Now retain \(H^{sh}=R_{\mathfrak p}^{sh}\), \(U^{sh}=H^{sh}\otimes_R S\) and \(T^{sh}=H^{sh}\otimes_{R_{\mathfrak p}}S_{\mathfrak q}\). The prime in the statement is
+\[
+ \mathfrak q'=\ker\bigl(T^{sh}\longrightarrow L\otimes_k K
+                                     \longrightarrow\Omega\bigr).
+\]
+The map is surjective: both the residue quotient/localization maps to \(L\) and \(K\) are surjective, as is the final multiplication map just proved. Thus \(\kappa(\mathfrak q')=\Omega\). The prime to which the four-rings lemma applies in \(U^{sh}\) is its inverse image under the original canonical localization map \(U^{sh}\to T^{sh}\). Denote that inverse image by \(\mathfrak Q'\); the primes have different ambient rings and are related by contraction and extension through this localization.
+
+The canonical correction `MC-STK-ERR-0673` does exactly two things: names \(\mathfrak q'\) in the statement at 43650, and at 43683–43684 replaces the ambiguous reuse by the inverse image under the displayed canonical map. It preserves all original tensor factors. As above \((U^{sh})_{\mathfrak Q'}=(T^{sh})_{\mathfrak q'}\), through the inverse denominator maps already given. Quasi-finiteness and the finite-over-henselian theorem make this a finite henselian local \(H^{sh}\)-algebra with residue \(\Omega\), so it is strictly henselian. The earlier strict base-change theorem and uniqueness with this specified residue closure identify it with \(S_{\mathfrak q}^{sh}\). The induced residue extension is the original finite purely inseparable \(\Omega/L\). Applying this to the finite quotient \(R\to R/I\) gives the strict quotient formula in 43702–43712, with the original chosen residue closure retained.
+
+## The local tensor ring and both localization maps
+
+Keep the source's local maps \(A\to B\), \(A\to C\), the integral map \(A\to C\), and \(D=B\otimes_A C\). Write \(k_A,k_B,k_C\) for the original residue fields. Every maximal ideal of \(D\) contracts to \(\mathfrak m_B\), because \(D/B\) is integral and the contraction of a maximal ideal under an integral map is maximal. This last fact follows directly by passing to the quotient: an integral subring of a field over which that field is integral is itself a field, since a monic relation for the inverse of a nonzero element expresses that inverse in the subring.
+
+The ring \(C/\mathfrak m_A C\) is integral over \(k_A\); all its primes are maximal by the same fact. It is local, so its only prime is \(\mathfrak m_C/\mathfrak m_A C\), a nil ideal \(N\). Under the exact field-base-change map
+\[
+ k_B\otimes_{k_A}(C/\mathfrak m_A C)\longrightarrow k_B\otimes_{k_A}k_C
+\]
+the kernel is the ideal generated by \(k_B\otimes N\), because tensoring over the field \(k_A\) is exact. This ideal is nil: each of its elements is a finite sum of multiples of finitely many nilpotent elements, and if their exponents are \(n_1,\ldots,n_r\), the sum ideal has exponent at most \(1+\sum(n_i-1)\). Thus this quotient does not change the spectrum.
+
+If either original residue extension is purely inseparable, the spectrum of \(k_B\otimes_{k_A}k_C\) is one point. To verify the exact statement, suppose first that \(k_C/k_A\) is purely inseparable and use its unique embedding into an algebraic closure of \(k_B\). Multiplication maps the tensor ring to the compositum field \(k_Bk_C\). The image is a field: each of its elements has a suitable \(p\)-power in \(k_B\), and the inverse of a nonzero element \(z\) is \(z^{p^e-1}/z^{p^e}\). For an element \(\sum b_i\otimes c_i\) of the kernel choose a common exponent with all \(c_i^{p^e}\in k_A\). Its \(p^e\)-power is the scalar \(\sum b_i^{p^e}c_i^{p^e}=0\), so the kernel is nil. In characteristic zero the purely inseparable extension is the identity. If \(k_B/k_A\) is purely inseparable, interchange the two factors in this argument; the flip sends \(b\otimes c\) to \(c\otimes b\) and its square is the identity. The quotient field is nonzero, so the tensor ring has precisely that one prime. It follows that \(D\) has exactly one maximal ideal. Its contractions to \(B\) and \(C\) are the original maximal ideals, by the residue maps to this compositum. This proves all assertions in 43714–43739.
+
+In case (1) of 43741–43842 keep \(D=B\otimes_A C\), the given map \(D\to\kappa\), and the exact chosen strict henselizations with residue fields \(\kappa_A,\kappa_B,\kappa_C,\kappa_D\) inside \(\kappa\). Put
+\[
+ W=B\otimes_A C^{sh},\quad V=B\otimes_A A^{sh},\quad
+ X=B^{sh}\otimes_{A^{sh}}C^{sh},\quad Y=D^{sh}.
+\]
+The previous strict finite-local result gives the original descriptions \(B^{sh}=V_{\mathfrak q}\), \(Y=W_{\mathfrak r}\). If \(M\subset W\) is the multiplicative set consisting of images of \(V\setminus\mathfrak q\), then the exact map
+\[
+ V_{\mathfrak q}\otimes_{A^{sh}}C^{sh}\longrightarrow M^{-1}W,
+ \quad (v/u)\otimes c\longmapsto (\overline v(1\otimes c))/\overline u
+\]
+is an isomorphism. The inverse sends each original tensor \(b\otimes c\in W\) to \((b\otimes1)/1\otimes c\), and sends the inverse of \(\overline u\) to the corresponding inverse in \(V_{\mathfrak q}\). Both composites fix tensors and the complete multiplicative set of denominators. Residue compatibility gives \((V\to W)^{-1}(\mathfrak r)=\mathfrak q\), so \(M\) avoids \(\mathfrak r\) and the comparison \(c:X\to Y\) is exactly the induced localization map.
+
+The original maps \(A^{sh}\to B^{sh}\) and \(A^{sh}\to C^{sh}\) are local; the first is finite with purely inseparable residue extension. The just-proved tensor lemma makes \(X\) local. Both \(X\) and \(Y\) are finite over \(C^{sh}\), by the quasi-finite strict-henselization theorem and its base change, so \(Y\) is also finite over \(X\): any finite list of \(C^{sh}\)-module generators still generates as an \(X\)-module. In particular \(Y\) is integral over \(X\), and the contraction of its maximal ideal is the unique maximal ideal of \(X\). For each \(w\notin\mathfrak r\), its image in \(Y\) is outside the maximal ideal, hence its image in \(X\) is outside the maximal ideal of \(X\) and is a unit. Thus the explicit inverse to \(c\) is
+\[
+ W_{\mathfrak r}\longrightarrow X,\qquad w/v\longmapsto w_X(v_X)^{-1}.
+\]
+Localization's defining relation proves well-definedness; the composites fix every original tensor and every denominator. This supplies the omitted detail: locality alone for two unrelated localizations would not prove the claim, but the original finite comparison and the contracted maximal ideal do.
+
+## The original filtered systems and the remaining cases
+
+In case (2), preserve the system \(B=\mathop{\rm colim}_i B_i\), all transition maps, \(D_i=B_i\otimes_A C\), and the primes and residue embeddings induced by the fixed map to \(\kappa\). All induced maps on the selected residue fields are embeddings. If \(K_i=\kappa(\mathfrak p_{B_i})\) and \(K=\kappa(\mathfrak p_B)\), their images in \(\kappa\) satisfy \(K=\bigcup_i K_i\). Every fraction of an element of \(B/\mathfrak p_B\) has its numerator and nonzero denominator at one stage, and conversely every stage fraction defines that fraction in \(K\); this proves both inclusions.
+
+Let \(L_i\subset\kappa\) be the separable algebraic closure of \(K_i\) in the given separably closed field \(\kappa\). It is separably closed by the finite-coefficient argument above. The inclusions \(K_i\subset K_j\) give \(L_i\subset L_j\): an element separable algebraic over \(K_i\) remains so over \(K_j\), since its minimal polynomial over the latter divides a separable polynomial over the former. Their union equals precisely the separable closure of \(K\) inside \(\kappa\). One inclusion follows by the same separable-polynomial argument. For the other, the finite coefficients of a separable polynomial for a given element over \(K\) lie in one \(K_i\); that polynomial is already square-free over \(K_i\), since a common factor with its derivative would survive over \(K\). The element therefore belongs to \(L_i\). In particular this union is separably closed, with exactly the residue identification required by the source.
+
+The functorial transition maps \(B_i^{sh}\to B_j^{sh}\) are local and induce these exact embeddings. Their colimit is local: an element outside the colimit maximal ideal is already a unit at a stage, and an element of the colimit maximal ideal has zero residue at its representing stage. Its residue field is \(\bigcup L_i\). It is henselian by the finite-coefficient simple-root proof in the preceding note: coefficients, a residue root and its nonzero derivative are realized at one stage, whose root lifts to the original colimit. Hence it is strictly henselian. The previously verified varying-base ind-étale lemma shows that this colimit is ind-étale over the original \(B=\mathop{\rm colim}B_i\). Uniqueness with the just-proved residue identification gives inverse local comparison maps
+\(\mathop{\rm colim}B_i^{sh}\leftrightarrows B^{sh}\); their composites are identities by uniqueness. The same proof applies to the entire original system \(D_i\), giving \(\mathop{\rm colim}D_i^{sh}=D^{sh}\).
+
+The isomorphisms of case (1) commute with every transition, because all are the original tensor maps induced by the uniquely determined residue-compatible ring maps. Thus their colimit is an isomorphism. The final tensor/colimit comparison sends \([b_i\otimes c]\) to \([b_i]\otimes c\), with inverse \([b_i]\otimes c\mapsto[b_i\otimes c]\). Balancing, addition and equality of representatives hold at common later stages, so both maps are defined and inverse. This verifies the entire displayed formula at 43829–43830. The already composed `MC-STK-ERR-0674` correctly changes “filtered colimit commute” to “filtered colimits commute” at 43832. All three received reports describe this single operation.
+
+For case (3) retain the comparison to the original rings instead of suppressing it. The maps to the given field select \(\mathfrak p_A,\mathfrak p_B,\mathfrak p_C,\mathfrak p_D\). The tensor
+\(B_{\mathfrak p_B}\otimes_{A_{\mathfrak p_A}}C_{\mathfrak p_C}\)
+is the localization of \(D\) inverting the images of \(B\setminus\mathfrak p_B\) and \(C\setminus\mathfrak p_C\); all images of \(A\setminus\mathfrak p_A\) are thereby inverted. The exact comparison is
+\[
+ (b/u)\otimes(c/v)\longmapsto (b\otimes c)/((u\otimes1)(1\otimes v)).
+\]
+The inverse sends \(b\otimes c\) to \((b/1)\otimes(c/1)\) and each of the two types of inverted generators to its corresponding inverse. The defining tensor and localization relations prove the inverse identities. All these denominators avoid \(\mathfrak p_D\); localization further at its extension is therefore exactly \(D_{\mathfrak p_D}\). The strict henselizations on both sides use that identical local ring and the identical residue closure in \(\kappa\), so their comparison maps are the identity under the unique specified isomorphism. This reduces case (3) to case (2) while retaining the original object and all maps.
+
+For case (4), the integral \(A\)-algebra \(B\) is the directed union of its subalgebras generated by finite lists of its actual elements. Each such list is integral; retaining a monic equation for each generator proves finiteness by the spanning monomials whose exponent on that generator is smaller than its monic degree. Thus each subalgebra is finite over \(A\), hence quasi-finite. Their inclusions and union are the original \(B\); case (2) applies directly.
+
+## Dispositions and scope
+
+`OCC-12382` is covered exactly once by the two existing operations in `MC-STK-ERR-0673`. Its kernel prime belongs to the localized tensor product and its inverse image belongs to the unlocalized tensor product; the explicit maps and contractions above verify both existing replacements.
+
+`OCC-00976`, `OCC-12288` and `OCC-12383` all refer to the single plural correction already present in `MC-STK-ERR-0674`. The full filtered-system comparison above verifies that this grammatical edit describes the source's actual calculation.
+
+These two canonical units are retained unchanged and now have semantic review. No newly proposed source operation, extension group, broad synthesis, formal certification, TeX build or publication is part of this batch. The full arguments remain separate source-linked editorial validation.

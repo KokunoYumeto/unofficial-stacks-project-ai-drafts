@@ -1,0 +1,168 @@
+\subsection{Factorization with the original units, primes and ideal maps}\label{factorization-with-the-original-units-primes-and-ideal-maps}
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:29347--29778, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All 30 reports are read. The current interval equals the authority plus MC-STK-ERR-0630 through 0642, comprising fourteen operations. There is no added environment.
+
+These full arguments and three consequence groups are editorial material, not replacement translations. The two new unit-factor operations below complete a residual case in the already composed MC-STK-ERR-0633 while preserving its valid zero-case correction. Reported omissions of routine steps and the source's expressly omitted uniqueness proof are completed here without automatically replacing the source proofs. No novelty claim is made.
+
+\subsubsection{Prime elements, associates and the rejected factorization reports}\label{prime-elements-associates-and-the-rejected-factorization-reports}
+
+At 29363 the existing MC-STK-ERR-0630 excludes zero from prime elements. This is mathematically necessary: \((0)\) is prime in every domain, but including zero in the generating primes would make the multiplicative set in Nagata's criterion contain zero and would invalidate the later fraction-field identification. A prime element is also a nonunit, since its principal ideal is proper. A nonzero prime element \(p\) is irreducible: if \(p=ab\), primality implies, say, \(a=pc\); cancellation gives \(1=cb\), so \(b\) is a unit.
+
+For equality \((x)=(y)\), retain \(x=fy,y=gx\) with \(f,g\in R\). If \(x=0\), also \(y=0\), and the unit \(1\) witnesses association. Otherwise \(x=fgx\) gives \(fg=1\). These are precisely the valid current corrections MC-STK-ERR-0631 and 0632. The converse retains both maps \(x=uy\) and \(y=u^{-1}x\).
+
+The proposed deletions in OCC-00571 and OCC-12334 are rejected as nondefects. They use only reducibility of \(x\), but the source at 29396 assumes the stronger fact that \(x\) has no finite factorization into irreducibles. Starting from this same \(x\), split a factor which has no irreducible factorization into two nonzero nonunits. At least one new factor again has no irreducible factorization, since otherwise concatenating the two finite factorizations would factor the selected factor. Repeat until the actual equality \[
+ x=a b c d
+\] has four nonzero nonunit factors. Put \(y=ab,z=cd\). A product of two nonunits in a commutative ring cannot be a unit: an inverse to their product gives an inverse to each factor. Neither \(y\) nor \(z\) is irreducible, since each has the displayed factorization into two nonunits. Thus the source's stronger assertion is true.
+
+At least one of these \(y,z\) still lacks an irreducible factorization. Choose that factor as \(x_2\), and retain the other as \(q_1\), so \(x_1=q_1x_2\), with \(q_1\) a nonunit. Repeating gives \(x_i=q_i x_{i+1}\) with nonzero \(x_i\) and nonunit \(q_i\). If \((x_i)=(x_{i+1})\), the associates result would force \(q_i\) to be a unit, by cancellation. Hence the principal ideals form the strict ascending chain in the source, contradicting ACC. This verifies the original argument without weakening its assertion.
+
+\subsubsection{The UFD criterion with every unit factor retained}\label{the-ufd-criterion-with-every-unit-factor-retained}
+
+At 29435 retain the valid current disposal of \(a=0\) or \(b=0\) in \(ab=cx\), where \(x\) is irreducible. Then \(a,b,c\ne0\). An arbitrary unit is not the empty product \(1\). The current phrase ``allowing the empty product for a unit,'' followed by unit-free equations for \(a,b,c\), therefore needs the explicit scalar factors \[
+ a=u_a a_1\cdots a_n,\quad
+ b=u_b b_1\cdots b_m,\quad
+ c=u_c c_1\cdots c_r,\qquad u_a,u_b,u_c\in R^\times,
+\] and the actual comparison \[
+ u_a u_b a_1\cdots a_n b_1\cdots b_m
+       =u_c c_1\cdots c_r x.
+\] The two minimal new operations modify precisely these two displayed source lines; neither overlaps MC-STK-ERR-0633. Empty products now apply only to the lists of irreducibles, while the original units remain in the equations.
+
+Uniqueness for these equations follows from the source UFD definition. A product of nonunits cannot be a unit, so if either irreducible list is empty, both must be. Otherwise multiply the first irreducible on each side by its displayed unit. This maps that factor to an associate and has the explicit inverse multiplication by the inverse unit; the other factors and both original unit multipliers stay recorded. The resulting lists are factorizations of the same original nonunit and the UFD axiom matches their associates. Applied to the displayed equation, \(x\) is associate to one of \(a_1,\ldots,a_n,b_1,\ldots,b_m\). Hence it divides \(a\) or \(b\). The restored full range is already MC-STK-ERR-0642.
+
+Conversely assume every irreducible is prime. Prove uniqueness also with an arbitrary recorded unit multiplier \(u\): \[
+ a_1\cdots a_m=u b_1\cdots b_n.
+\] If one list is empty, the other must be empty. If both are nonempty, primality of \(a_1\) and invertibility of \(u\) imply \(a_1\mid b_j\) for some \(j\). Permute that original list to put this factor first and write \(b_1=a_1v\). Irreducibility of \(b_1\) makes \(v\) a unit, and cancellation gives \[
+ a_2\cdots a_m=(uv)b_2\cdots b_n.
+\] The induction retains the full unit product \(uv\) and the original endpoints. If either remaining list is empty, the other is empty. Otherwise apply induction on \(m+n\). The final association for the first factor retains \(v\), and the permutation extends that of the remaining indices. This verifies MC-STK-ERR-0634, including its endpoint repair and one-factor cases, without discarding its unit.
+
+For the height-one criterion at 29458--29482, a height-one prime in a UFD contains a nonzero element \(x\), hence an irreducible factor \(p\). The prime \((p)\) is nonzero and lies in that height-one prime, so they coincide. This implication does not require Noetherianity. Conversely the stated Noetherian hypothesis gives ACC and finite irreducible factorizations. A prime minimal over the nonzero principal ideal of an irreducible has height one by the principal ideal theorem and the domain hypothesis. If it is generated by \(y\), write \(x=yz\); irreducibility makes \(z\) a unit, so the original \((x)\) itself is prime.
+
+\subsubsection{Nagata cancellation with repeated factors}\label{nagata-cancellation-with-repeated-factors}
+
+At 29484--29540 retain the source's citation to Nagata-UFD, Lemma 2, and its actual multiplicative set \(S\), generated by nonzero prime elements. Hence \(0\notin S\), and the localization embeds in the original fraction field.
+
+For \(\alpha=a/s,\beta=b/s'\) with \(x=\alpha\beta\), injectivity of that embedding gives the exact equality \[
+ p_1\cdots p_r x=ab,\qquad ss'=p_1\cdots p_r.
+\] Cancel these particular prime factors successively, including repetitions. At step \(i\), the surviving equation is \(p_i\cdots p_r x=a_{i-1}b_{i-1}\). Primality of \(p_i\) makes it divide one of the two current factors; divide that factor by this \(p_i\), leave the other unchanged, and cancel the same nonzero \(p_i\) from both sides. After \(r\) steps, \[
+ x=a_r b_r,\quad a=s''a_r,\quad b=s'''b_r,\quad s''s'''=ss',
+\] where \(s''\) and \(s'''\) are the products of the selected occurrences, not products of distinct primes. Thus \(\alpha=(s''/s)a_r\) and \(\beta=(s'''/s')b_r\); both displayed scalar fractions are units of \(S^{-1}A\). Irreducibility of the original \(x\) makes one of \(a_r,b_r\) a unit, proving the first assertion when the image of \(x\) is not already a unit.
+
+If \(x\) is prime, the quotient \((S^{-1}A)/(x)\cong S^{-1}(A/(x))\) is a domain or zero, proving that its image is prime or a unit. The quotient map sends \(a/s\) to \(\overline a/\overline s\); its kernel consists precisely of fractions with an \(S\)-multiple of the numerator in \((x)\), which is the localized ideal.
+
+For the reverse unit case \(yx=p_1\cdots p_r\), if any current \(p_i\) divides \(x\), irreducibility gives an association, so \(x\) is prime. Otherwise that occurrence divides the current \(y\); replace \(y\) by the quotient and cancel \(p_i\). If all occurrences are cancelled this way, the surviving equality is \(y_r x=1\), contradicting that \(x\) is a nonunit. This includes \(r=0\) directly. In the reverse prime-image case, \(ab\in(x)\) implies \(sa=xy\) or \(sb=xy\) for original \(s\in S,y\in A\). In the first case run the same process on \(p_1\cdots p_r a=xy\). A prime dividing \(x\) again proves \(x\) prime. Otherwise divide the successive current \(y\)'s and cancel every occurrence; the last equality is \(a=xy_r\), so \(a\in(x)\). The second case gives \(b\in(x)\). If \(a\) or \(b\) is zero the conclusion is immediate.
+
+This supplies exactly the omitted multiplicity tracking in OCC-12348. The theorem is true; the full successive equalities are separate clarification rather than a wholesale replacement of its proof. The final equivalence follows because a UFD localizes to a UFD by its finite prime factorizations, with inverted primes becoming units and all others remaining prime; in the other direction atomicity of \(A\) and the two proved assertions make every original irreducible prime.
+
+\subsubsection{ACC, polynomial rings and the full normality calculation}\label{acc-polynomial-rings-and-the-full-normality-calculation}
+
+For UFD ACC, MC-STK-ERR-0635 handles an all-zero chain or its initial zero segment. If the first nonzero generator is a unit, all following ideals are already \(R\). Otherwise retain \[
+ a_1=u\prod_{j=1}^r p_j^{e_j},\qquad u\in R^\times.
+\] Every later generator divides \(a_1\), so is a unit times \(\prod_jp_j^{c_j}\), with \(0\le c_j\le e_j\). Equality of exponent vectors is equality of the principal ideals, and there are only finitely many vectors. This proves stabilization while preserving the possible original unit even when it is absent from the source's displayed notation.
+
+For polynomial ACC, MC-STK-ERR-0636 similarly disposes of zero polynomials before degrees are taken. In the nonzero tail write the actual equality \(f_i=h_i f_{i+1}\). Degrees are nonincreasing and eventually constant, so then \(h_i\in R\). The leading coefficients satisfy \(a_i=h_i a_{i+1}\). ACC in \(R\) makes \((a_i)=(a_{i+1})\) eventually; cancellation in the domain makes \(h_i\) a unit. Hence the polynomial ideals stabilize. Repetition proves the result for finitely many variables. For arbitrarily many variables, every divisor of the fixed first nonzero polynomial uses only its finite set of variables: the degree in any other variable is zero, and degrees in that variable add in a domain. Thus the entire tail and the quotient factors lie in a fixed finite-variable ring, to which the proved argument applies.
+
+MC-STK-ERR-0637 correctly restricts both factorization assertions to nonzero nonunits. For a UFD \(R\), \(S\) generated by its nonzero primes gives \(S^{-1}R=K=\operatorname{Frac}(R)\): if \(b=u\prod p_i^{e_i}\ne0\), then \(1/b=u^{-1}/\prod p_i^{e_i}\) is the required fraction with its original unit. Every such prime remains prime in \(R[X]\), since the quotient is \((R/(p))[X]\), a domain. More generally, a prime of a finite-variable polynomial ring remains prime after adjoining any additional variables: its quotient is the polynomial ring in those additional variables over the original quotient domain. Thus factorizations obtained in a finite-variable subring remain prime factorizations in the full polynomial ring. The coefficientwise isomorphism \(S^{-1}R[X]\to K[X]\) sends \(g/s\) to its actual coefficient fractions. To invert it, take the product of finitely many coefficient denominators; equality is verified by multiplying both numerators by their common denominator. Over a field, division by the nonzero leading coefficient yields the Euclidean division algorithm, hence the polynomial PID and UFD property. Nagata's criterion and polynomial ACC prove the source result, including arbitrary variable sets by the finite-support argument.
+
+For normality, MC-STK-ERR-0638 separates \(x=0\). Retain the original nonzero fraction and equation \[
+ x=u p_1^{e_1}\cdots p_r^{e_r},\quad
+ x^d-\sum_{i=1}^d a_i x^{d-i}=0,
+\] where every original exponent is an integer, \(u\) is a unit and the \(p_j\)'s are pairwise nonassociate irreducibles. If \(r=0\), \(x=u\in R\). If \(e_1<0\), choose an integer \(N\ge\max(\{0\}\cup\{-d e_j:2\le j\le r\})\). Multiplying the equation exactly as in the source gives \[
+ u^d\prod_{j=2}^r p_j^{de_j+N}
+ =\sum_{i=1}^d a_i u^{d-i}p_1^{-i e_1}
+                  \prod_{j=2}^r p_j^{(d-i)e_j+N}.
+\] All exponents on the right are nonnegative, and the exponent of \(p_1\) is positive for every summand. The left has no \(p_1\) factor and its coefficient \(u^d\) is a unit. Primality of \(p_1\) gives a contradiction. Thus every \(e_j\ge0\), proving \(x\in R\) with all constants and summands retained.
+
+\subsubsection{Explicit dual maps for a product of ideals}\label{explicit-dual-maps-for-a-product-of-ideals}
+
+At 29660--29683 let \(I,J\subset A\) and \(IJ=fA\) with the original nonzerodivisor \(f\). Choose the original finite expression \(f=\sum_{i=1}^n x_i y_i\), \(x_i\in I,y_i\in J\). For each \(z\in I\), there is a unique \(\lambda_i(z)\in A\) with \[
+ f\lambda_i(z)=y_i z.
+\] Uniqueness uses precisely that \(f\) is a nonzerodivisor; it also proves \(A\)-linearity. Cancelling \(f\) from \(f\sum_i x_i\lambda_i(z)=\sum_i x_i y_i z=fz\) gives \(\sum_i x_i\lambda_i(z)=z\). This is an explicit finite dual frame, proving finite generation and projectivity of \(I\); exchanging \(I,J\) proves the same for \(J\).
+
+To prove rank one and retain the source local choices, write \(x_i y_i=a_i f\); then \(\sum a_i=1\). On \(A_{a_i}\), keep the original \(x_i\) and set \(y'_i=y_i/a_i\). Now \(x_i y'_i=f\); both factors are nonzerodivisors there. For \(z\in I_{a_i}\), write \(z y'_i=b f=b x_i y'_i\); cancellation gives \(z=b x_i\). Hence \(I_{a_i}=x_i A_{a_i}\), freely of rank one, with inverse map \(z\mapsto b\). The symmetric map identifies \(J_{a_i}=y'_i A_{a_i}\). The units \(a_i\) have not been suppressed.
+
+There are stronger canonical identifications. Inside \(A_f\) define \(J/f=\{y/f:y\in J\}\). Then \[
+ J/f\xrightarrow{\;\cong\;}\operatorname{Hom}_A(I,A),
+ \qquad y/f\longmapsto(z\mapsto yz/f).
+\] For \(\phi:I\to A\) the inverse is \(\sum_i\phi(x_i)y_i/f\). Indeed its product with \(z\) is \(\sum_i\phi(x_i)\lambda_i(z)=\phi(z)\). If \(tI=0\) with \(t\in J/f\), then \(tf=0\) since \(f=\sum x_i y_i\); invertibility of \(f\) in \(A_f\) gives \(t=0\), proving injectivity. The actual multiplication map \[
+ I\otimes_A J\xrightarrow{\;\cong\;}fA
+\] has inverse \(af\mapsto a\sum_i x_i\otimes y_i\). Its composite on \(z\otimes w\) is \(\sum_i x_i\otimes y_i zw/f=\sum_i x_i\lambda_i(z)\otimes w=z\otimes w\), and its composite on \(af\) is \(af\).
+
+This extends to an arbitrary invertible ideal \(L=IJ\), without a chosen global generator: on a finite basic-open cover trivializing \(L\), its ideal generator is a nonzerodivisor, because the map from the local ring to this free rank-one ideal is injective. The preceding construction makes \(I,J\) finite locally free of rank one on that cover. Finiteness over the whole ring follows by taking numerators for the finitely many local generators on the finite cover; the quotient by their span vanishes on the cover and hence is zero. The multiplication isomorphism is local and therefore global, and it induces the canonical identification \[
+ I^\vee\cong J\otimes_A L^\vee.
+\] All maps are contractions of the same multiplication pairing, so agree on overlaps. Conversely if \(I,J\) are invertible ideals, locally they have nonzerodivisor generators \(x,y\), their product has generator \(xy\), and the same multiplication maps show \(IJ\) invertible. This proves the slogan with its actual module morphisms over arbitrary commutative rings, including rings with zero divisors.
+
+\subsubsection{Dedekind domains and the full uniqueness proof}\label{dedekind-domains-and-the-full-uniqueness-proof}
+
+At 29637--29658, the unit ideal has the empty prime-ideal product \(R\). This conventional empty-product case is made explicit here for OCC-12349. In a PID, a nonzero ideal \(aR\) has \(a=u p_1\cdots p_r\) and \[
+ aR=(p_1)\cdots(p_r);
+\] the unit acts by the bijection \(R\to R\), \(b\mapsto ub\), whose inverse is multiplication by \(u^{-1}\). Each \((p_i)\) is a prime ideal. For a unit \(a\) the ideal is \(R\) and the prime list is empty. This states the precise prime-ideal map requested by OCC-12341; the source's contextual word ``primes'' does not assert a different object. OCC-00574 supplies the missing colon introducing the equivalences.
+
+Assume the original prime-ideal factorization definition, without presupposing Noetherianity. MC-STK-ERR-0639 treats \((0)\) separately as already finitely generated. For a nonzero prime \(\mathfrak p\), uniqueness implies \(\mathfrak p\ne\mathfrak p^2\), since otherwise a product of one nonzero prime equals a product of two. Choose the original \(x\in\mathfrak p\setminus\mathfrak p^2\). For any \(y\in\mathfrak p\), factor the nonzero proper ideal \((x,y)\). At least one factor lies in \(\mathfrak p\), because the product does; two such factors would force \(x\in\mathfrak p^2\). Therefore exactly one factor \(\mathfrak p_1\) lies in \(\mathfrak p\), and \((x,y)R_{\mathfrak p}=\mathfrak p_1R_{\mathfrak p}\) is prime, all other factors becoming the unit ideal.
+
+Apply this with \(y^2\). Since the resulting localized ideal is prime and contains \(y^2\), it contains \(y\), giving the source equality \(y=ax+by^2\). The coefficient \(by\) lies in \(\mathfrak pR_{\mathfrak p}\), so \(1-by\) is a unit; its inverse gives \(y=(1-by)^{-1}ax\). This is the omitted unit step in OCC-12343, completed without changing the theorem. Hence \(\mathfrak pR_{\mathfrak p}=(x)\).
+
+Factoring \((x)\) again yields a factor \(\mathfrak p_1\subset\mathfrak p\) with equal localizations. Contracting these prime ideals from \(R_{\mathfrak p}\) gives \(\mathfrak p_1=\mathfrak p\), because the inverted set is disjoint from both primes. The product-of-ideals lemma makes \(\mathfrak p\) finitely generated. Thus every prime ideal, including zero, is finitely generated, and the source Cohen criterion makes \(R\) Noetherian. Each \(R_{\mathfrak p}\) for nonzero \(\mathfrak p\) now has a principal nonzero maximal ideal, so is a DVR by the already verified characterization. In particular MC-STK-ERR-0640 correctly states the required conclusion at every nonzero maximal ideal.
+
+The equivalence with a Noetherian normal domain of dimension at most one preserves the field case: if \(R\) is a field there are no nonzero maximal ideals and the only nonzero ideal is \(R\). Otherwise the stated DVR localizations imply normality by maximal-local normality, and preclude a chain of length greater than one by localizing such a chain at a containing maximal ideal. Conversely a nonzero maximal localization of a normal Noetherian domain of dimension at most one has dimension exactly one and is a DVR.
+
+For existence of factorization under these conditions, MC-STK-ERR-0641 starts with a nonzero proper ideal \(I\); \(R\) itself is the empty product. Choose an original maximal ideal \(\mathfrak p\supset I\), and retain \[
+ J=(I:\mathfrak p)=\{z\in R:z\mathfrak p\subset I\}.
+\] Formation of this colon commutes with localization because \(\mathfrak p\) is finitely generated: if a localized element sends each of its finitely many generators into the localized \(I\), take the product of the finitely many membership denominators to obtain a single witness in the original colon. At a different maximal ideal, \(\mathfrak p\) becomes the unit ideal and \(J_{\mathfrak m}=I_{\mathfrak m}\). At \(\mathfrak p\), write \(I_{\mathfrak p}=(\pi^n)\), \(n\ge1\), in the original DVR. Then \[
+ J_{\mathfrak p}=(\pi^{n-1}),\qquad
+ (J\mathfrak p)_{\mathfrak p}=I_{\mathfrak p}.
+\] Thus \(J\mathfrak p=I\) after testing at every maximal ideal, and \(J\supsetneq I\) because the inclusion is strict at \(\mathfrak p\). The latter is exactly the induction step requested by OCC-12346. Noetherian induction on larger ideals now terminates and gives a product of nonzero prime ideals.
+
+For the uniqueness expressly omitted in the source, every nonzero prime is maximal: its localization is a DVR, so a strict chain of two nonzero primes would contradict the dimension bound. Localize two products for the same \(I\) at each original maximal ideal \(\mathfrak m\). All factors except \(\mathfrak m\) become units, and the two products become \((\pi^{a_{\mathfrak m}})\) and \((\pi^{b_{\mathfrak m}})\). Equality forces \(a_{\mathfrak m}=b_{\mathfrak m}\) by cancellation and the fact that \(\pi\) is not a unit. Thus the original multisets of prime factors are equal. This supplies OCC-12347 as a separate editorial proof, not an automatic replacement of the author's explicit omission.
+
+Finally at 29753--29771 the original integral closure \(B\) in finite \(L/K\) has fraction field \(L\). For each \(z\in L\), retain a monic equation \(z^n+\sum_{i=1}^n c_i z^{n-i}=0\), with \(c_i\in K\). Choose \(0\ne d\in A\) with every \(dc_i\in A\). The exact equation \[
+ (dz)^n+\sum_{i=1}^n(d^i c_i)(dz)^{n-i}=0
+\] has every coefficient in \(A\), so \(dz\in B\) and \(z=(dz)/d\in\operatorname{Frac}(B)\). If an element of \(L\) is integral over \(B\), transitivity of integrality makes it integral over \(A\), hence already in \(B\). Thus \(B\) is normal. Together with Krull--Akizuki and integral dimension equality this proves the source Dedekind conclusion. Lying over and the previous finite residue-fibre theorem give the remaining assertions. This supplies the implicit facts in OCC-12350 without assuming that \(B\) is finite over \(A\); the strict example in the preceding review shows why that stronger assertion would be false.
+
+\subsubsection{Exact localization exponents and the atomicity boundary}\label{exact-localization-exponents-and-the-atomicity-boundary}
+
+Here is a separate consequence for the original UFD \(R\), its fraction field \(K\), and any multiplicative set \(S\subset R\) with \(0\notin S\). Choose one representative from each association class of nonzero prime elements and denote the set by \(\mathcal P\). For \(z\in K^\times\), retain its exact factorization \[
+ z=u\prod_{p\in\mathcal P}p^{v_p(z)},\qquad u\in R^\times,
+\] with integer exponents of finite support. Let \(\mathcal P_0=\{p:(p)\cap S=\varnothing\}\). Then, as actual subsets of the same \(K\), \[
+ S^{-1}R=\{0\}\cup
+ \{z\in K^\times:v_p(z)\ge0\text{ for every }p\in\mathcal P_0\}.
+\] One inclusion follows by applying each prime exponent to the original numerator and denominator. For the other, for every negative exponent at an inverted prime \(p\), choose an actual \(s_p\in S\cap(p)\) and use \(s=\prod_{v_p(z)<0}s_p^{-v_p(z)}\in S\). All exponents of \(sz\) are now nonnegative, so \(sz\in R\), and the fraction \(z=(sz)/s\) is the required inverse construction. This retains every original unit and each chosen denominator witness.
+
+An element is a unit in \(S^{-1}R\) precisely when all surviving exponents are zero, by applying the same criterion to it and its inverse. The nonunit irreducible classes there correspond exactly to \(\mathcal P_0\): the other primes become units, while a surviving prime remains prime because the localized quotient domain is nonzero. Consequently restriction of exponent coordinates realizes the exact sequence \[
+ 0\longrightarrow\bigoplus_{p\notin\mathcal P_0}\mathbf Z
+ \longrightarrow K^\times/R^\times
+ \longrightarrow K^\times/(S^{-1}R)^\times
+ \longrightarrow0,
+\] where the middle and last groups identify with the direct sums over all primes and over surviving primes respectively. The first map is the actual product of the indicated prime powers modulo \(R^\times\); surjectivity and its kernel follow from the explicit exponent criterion.
+
+Atomicity in the converse of Nagata's criterion cannot be dropped. Fix a field \(k\) and the actual subring \[
+ A=k[[t]]+u\,k((t))[[u]]
+ \subset K=k((t))((u)).
+\] For a nonzero Laurent series, let its value be the ordered pair consisting of its \(u\)-order and the \(t\)-order of its leading coefficient, ordered lexicographically. The value of a product is the sum, since the first nonzero coefficients multiply. A nonzero sum has value at least the minimum of the two values: different \(u\)-orders retain the lower leading term; at equal \(u\)-order the sum of the leading coefficients has \(t\)-order at least their minimum, or vanishes and raises the \(u\)-order. The displayed \(A\) is exactly the nonnegative part: positive \(u\)-order allows any integer \(t\)-order, and zero \(u\)-order requires nonnegative \(t\)-order of its constant coefficient. It is a valuation domain with fraction field \(K\), since one of a nonzero series and its inverse has nonnegative value.
+
+Its maximal ideal is exactly \(tA\): division by the original \(t\) takes every positive value to a nonnegative value, and multiplication by \(t\) makes it positive. Thus \(t\) is a nonzero prime element. The actual localization is \[
+ A[1/t]=k((t))[[u]],
+\] a DVR: a series on the right can have its constant coefficient placed in \(k[[t]]\) by multiplication by one power of \(t\); all higher coefficients already satisfy the displayed definition of \(A\). Yet \(u\) is divisible by \(t^n\) in \(A\) for every \(n\). Every irreducible of \(A\) has value \((0,1)\): a positive value larger than this factors as \(t\) times another nonunit, and an element of value \((0,1)\) is associate to \(t\). A finite product of these has \(u\)-order zero and cannot equal the original \(u\), whose \(u\)-order is one. Thus \(A\) is not atomic, while its localization at the multiplicative set generated by the prime \(t\) is a UFD. This verifies the exact boundary of the source's hypothesis.
+
+\subsubsection{Fractional ideal coordinates and the semilocal consequence}\label{fractional-ideal-coordinates-and-the-semilocal-consequence}
+
+For the original Dedekind domain \(R\) and its fraction field \(K\), a nonzero fractional ideal means a finite \(R\)-submodule \(I\subset K\) with \(cI\subset R\) for some nonzero \(c\in R\). At every nonzero maximal ideal \(\mathfrak p\), its actual localization is \(I_{\mathfrak p}=\pi_{\mathfrak p}^{\,v_{\mathfrak p}(I)}R_{\mathfrak p}\). Only finitely many exponents are nonzero: factor the integral ideal \(cI\) and the principal ideal \(cR\); the difference of their finite exponent lists gives the specified integers.
+
+Every nonzero prime ideal has the actual fractional inverse \(\mathfrak p^{-1}=(R:_K\mathfrak p)\). Indeed choose \(0\ne f\in\mathfrak p\) and factor \((f)=\mathfrak p J\). The dual-map calculation gives \(\mathfrak p^{-1}=J/f\): one inclusion follows from multiplying by \(\mathfrak p\), and conversely for \(z\mathfrak p\subset R\), writing \(f=\sum x_i y_i\) gives \(z=\sum(zx_i)y_i/f\in J/f\). In particular \(\mathfrak p\mathfrak p^{-1}=R\).
+
+Thus the map from nonzero fractional ideals to \(\bigoplus_{\mathfrak p\ne0}\mathbf Z\) sending \(I\) to its original local exponent list is bijective, with inverse \[
+ (n_{\mathfrak p})\longmapsto\prod_{\mathfrak p}\mathfrak p^{\,n_{\mathfrak p}}.
+\] For equality, clear denominators in two candidate fractional ideals and test the resulting finite modules at every maximal ideal. At the zero prime both become \(K\); if there are no nonzero maximal ideals, \(R\) is a field and the only such fractional ideal is \(R=K\). The operations are exactly \[
+ v_{\mathfrak p}(IJ)=v_{\mathfrak p}(I)+v_{\mathfrak p}(J),\quad
+ v_{\mathfrak p}(I+J)=\min(v_{\mathfrak p}(I),v_{\mathfrak p}(J)),\quad
+ v_{\mathfrak p}(I\cap J)=\max(v_{\mathfrak p}(I),v_{\mathfrak p}(J)).
+\] They follow by localizing the original module operations and comparing the actual powers of the uniformizer. The full fractional colon has exponent difference; for the integral colon \((I:_R J)\) of nonzero integral ideals the exponent is \(\max(v_{\mathfrak p}(I)-v_{\mathfrak p}(J),0)\). Finite generation of \(J\) supplies the common denominator for colon-localization, as proved above. These formulas preserve the original intersection, sum and product maps.
+
+If \(R\) is semilocal, every ideal is principal. For a nonzero ideal \(I\) and each of the finitely many maximal ideals \(\mathfrak m_i\), choose \(z_i\in I\) generating \(I_{\mathfrak m_i}\); a numerator of a localized generator supplies such an element. CRT gives \(a_i\in R\) with \(a_i\equiv1\pmod{\mathfrak m_i}\) and \(a_i\equiv0\pmod{\mathfrak m_j}\) for \(j\ne i\). Set the actual element \(z=\sum_i a_i z_i\). At \(\mathfrak m_i\), its first term has precisely the exponent of \(I\), and all other terms have strictly larger exponent. Therefore \(zR_{\mathfrak m_i}=I_{\mathfrak m_i}\). Equality at all maximal ideals gives \(zR=I\). The zero ideal is generated by zero, and in the field case every nonzero ideal is generated by \(1\). Hence the original semilocal Dedekind domain is a PID, with a constructive generator for each ideal.
+
+\subsubsection{Reading and propagation}\label{reading-and-propagation}
+
+The indexed ``Nagata factoriality'' query produced two research routing records, an original-TeX factorization-monoid paper and a PDF-primary algebraic-geometry volume; both remain unread and unadopted. The local-unpublished layer returned no hits. There is no PDF fallback or novelty claim.
+
+The retained prime-element correction is propagated through Nagata's multiplicative set and the fraction-field construction. The residual unit issue in MC-STK-ERR-0633 is repaired by two disjoint additional source operations; its existing zero-case contribution is preserved. The two proposed weakenings of the ACC proof are rejected by the exact four-factor derivation. The omitted Dedekind arguments remain editorial proofs. The preceding Krull--Akizuki review supplies the already verified normality/fraction-field and nonfinite-normalization comparisons; no stronger finiteness is inferred.
+
+Three consequence groups concern arbitrary UFD localizations and the atomicity counterexample, canonical ideal duality and multiplication over rings with zero divisors, and exact fractional ideal coordinates with the semilocal PID construction. Wider synthesis remains after core completion. Next source: Orders of vanishing, 29779. Source lookahead through 30080 was read but is unadjudicated.

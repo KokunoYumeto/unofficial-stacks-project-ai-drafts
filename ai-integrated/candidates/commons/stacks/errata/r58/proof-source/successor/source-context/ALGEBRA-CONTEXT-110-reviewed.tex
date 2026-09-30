@@ -1,0 +1,84 @@
+\begin{lemma}
+\label{lemma-constructible-stable-specialization-closed}
+Let $R$ be a ring. Let $E \subset \Spec(R)$ be a constructible subset.
+\begin{enumerate}
+\item If $E$ is stable under specialization, then $E$ is closed.
+\item If $E$ is stable under generalization, then $E$ is open.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+First proof. By Lemma \ref{lemma-constructible}, retain
+a finite expression
+$$
+E=\bigcup_{i=1}^a\left(D(f_i)\cap
+V(g_{i1},\ldots,g_{ib_i})\right).
+$$
+For $J_i=(g_{i1},\ldots,g_{ib_i})$, the original
+quotient and localization maps give
+$\Spec((R/J_i)_{f_i})$ the image $D(f_i)\cap V(J_i)$.
+Contraction is the map; the inverse on this subset
+sends $\mathfrak p$ to $(\mathfrak p/J_i)_{f_i}$.
+The finite product $A=\prod_i(R/J_i)_{f_i}$ therefore
+has spectrum image $E$ under the diagonal original
+map $R\to A$, as in Lemma \ref{lemma-constructible-is-image}.
+Indeed the coordinate idempotents sum to $1$ and
+have pairwise zero products, so every prime selects
+exactly one factor; this identifies its contraction
+with that factor's contraction. The empty product
+is the zero ring and gives the empty set.
+If $E$ is stable under specialization, the preceding
+image lemma proves it closed.
+
+The complement $E^c$ is constructible by
+Topology, Lemma \ref{topology-lemma-constructible}.
+If $E$ is stable under generalization, $E^c$ is
+stable under specialization: a specialization from
+a point outside $E$ cannot enter $E$, since the
+reverse generalization would then enter $E$ too.
+Applying the first assertion to $E^c$ proves it
+closed, hence $E$ open.
+Each original basic term $D(f_i)\cap V(J_i)$ is
+quasi-compact, being the image of the spectrum of
+$(R/J_i)_{f_i}$. Therefore every constructible subset
+of $\Spec(R)$ is quasi-compact by this finite union.
+The complement is constructible as well. Thus in (1)
+the closed set has quasi-compact complement, and in
+(2) the open set is quasi-compact.
+
+\medskip\noindent
+Second proof, including its stronger scope. By
+Lemma \ref{lemma-spec-spectral}, $X=\Spec(R)$ is
+spectral. Its constructible topology has the
+quasi-compact opens and their complements as a
+subbasis; these sets are therefore both open and
+closed in that topology. The topology is
+quasi-compact Hausdorff by Topology, Lemma
+\ref{topology-lemma-constructible-hausdorff-quasi-compact}.
+Let $C\subseteq X$ be closed in the constructible
+topology, which is weaker as a hypothesis than
+being constructible, and let $x\in\overline C$
+for the original topology. For every quasi-compact
+open neighbourhood $U$ of $x$, the set $U\cap C$
+is nonempty and is closed in the constructible
+topology. Finite intersections of these $U$ are
+again quasi-compact open neighbourhoods, so this
+family has the finite intersection property.
+Compactness gives $y\in C$ lying in every such $U$.
+Since these sets form a neighbourhood basis of $x$,
+$x$ is a specialization of $y$. Thus
+$$
+\overline C=\{x:\text{some }y\in C\text{ specializes to }x\}.
+$$
+If $C$ is stable under specialization it is closed
+in the original topology. By taking complements,
+any subset open in the constructible topology
+and stable under generalization is open in the
+original topology. This gives the full stronger
+form of Topology, Lemma
+\ref{topology-lemma-constructible-stable-specialization-closed},
+as well as both original assertions. The stronger
+scope does not assert that these sets or their
+complements are constructible or quasi-compact in
+all the cases just stated.
+\end{proof}

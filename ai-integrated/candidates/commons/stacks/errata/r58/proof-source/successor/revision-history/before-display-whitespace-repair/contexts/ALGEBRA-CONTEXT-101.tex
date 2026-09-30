@@ -1,0 +1,252 @@
+\begin{lemma}
+\label{editorial-source-lemma-support-base-change}
+Let $R \to R'$ be a ring map and let $M$ be a finite $R$-module.
+Then $\text{Supp}(M \otimes_R R')$ is the inverse image of
+$\text{Supp}(M)$.
+\end{lemma}
+
+\begin{proof}
+Write the original map as $\varphi:R\to R'$ and the induced
+spectrum map as $f:\Spec(R')\to\Spec(R)$.
+Fix an original prime $\mathfrak p'\subset R'$ and its
+contraction $\mathfrak p=\varphi^{-1}(\mathfrak p')$.
+The local map is
+$$
+R_{\mathfrak p}\longrightarrow R'_{\mathfrak p'},
+\qquad r/t\longmapsto\varphi(r)/\varphi(t).
+$$
+All denominators are valid, because $t\notin\mathfrak p$
+implies $\varphi(t)\notin\mathfrak p'$. Its inverse image
+of $\mathfrak p'R'_{\mathfrak p'}$ is
+$\mathfrak pR_{\mathfrak p}$: a fraction in the former
+ideal has numerator in $\mathfrak p'$, and contraction
+of that numerator is the stated condition in $R$.
+
+For any original module $M$, not yet assumed finite, the
+exact localization-tensor comparison is
+$$
+(M\otimes_RR')_{\mathfrak p'}
+\longrightarrow M_{\mathfrak p}\otimes_{R_{\mathfrak p}}R'_{\mathfrak p'},
+\qquad \frac{m\otimes s}{u}\longmapsto\frac m1\otimes\frac su.
+$$
+Its inverse is
+$$
+\frac mr\otimes\frac su
+\longmapsto\frac{m\otimes s}{\varphi(r)u},
+\qquad r\notin\mathfrak p,\quad u\notin\mathfrak p'.
+$$
+The forward map is induced by the balanced map to the
+right-hand module and then by its invertible action of
+every $u\notin\mathfrak p'$. For the inverse, if
+$v(r'm-rm')=0$ with $v\notin\mathfrak p$, multiplying
+the corresponding numerator difference by
+$\varphi(v)\notin\mathfrak p'$ gives zero. This checks
+the equivalence relation in $M_{\mathfrak p}$. If
+$w(u's-us')=0$ with $w\notin\mathfrak p'$, the same
+$w$ kills the tensor numerator difference, checking the
+other localization relation. Additivity uses common
+denominators and tensor additivity. For $a/t\in R_{\mathfrak p}$,
+the two balanced expressions map respectively to
+$$
+\frac{am\otimes s}{\varphi(t)\varphi(r)u}
+=\frac{m\otimes\varphi(a)s}{\varphi(r)\varphi(t)u}.
+$$
+This proves balancing with every original factor. Composing
+in one direction gives the original fraction immediately;
+in the other, $m/1\otimes s/(\varphi(r)u)=m/r\otimes s/u$.
+Thus the maps are inverse. In particular, for every $M$
+and every $R\to R'$,
+$$
+\operatorname{Supp}_{R'}(M\otimes_RR')
+\subseteq f^{-1}\operatorname{Supp}_R(M).
+$$
+
+The original residue-field map is the injective map
+$$
+\iota:\kappa(\mathfrak p)\longrightarrow\kappa(\mathfrak p'),
+\qquad
+\frac{r+\mathfrak p}{t+\mathfrak p}
+\longmapsto
+\frac{\varphi(r)+\mathfrak p'}{\varphi(t)+\mathfrak p'}.
+$$
+It exists and is injective because $R/\mathfrak p\to
+R'/\mathfrak p'$ is injective and every displayed
+nonzero denominator stays nonzero. There are exact maps
+\[
+
+\begin{split}
+(M\otimes_RR')\otimes_{R'}\kappa(\mathfrak p')
+&\longrightarrow M\otimes_R\kappa(\mathfrak p'),\\
+(m\otimes s)\otimes\lambda
+&\longmapsto m\otimes\overline s\lambda,
+\end{split}
+
+\]
+with inverse $m\otimes\lambda\mapsto(m\otimes1)\otimes\lambda$,
+and
+\[
+
+\begin{split}
+(M\otimes_R\kappa(\mathfrak p))
+\otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak p')
+&\longrightarrow M\otimes_R\kappa(\mathfrak p'),\\
+(m\otimes\alpha)\otimes\beta
+&\longmapsto m\otimes\iota(\alpha)\beta,
+\end{split}
+
+\]
+with inverse $m\otimes\beta\mapsto(m\otimes1)\otimes\beta$.
+The tensor balancing relations show independence and give
+both composites on the displayed generators. Extension
+along the field inclusion detects a nonzero vector space:
+if $B$ is a basis, the map from the direct sum of copies
+of $\kappa(\mathfrak p')$ indexed by $B$, sending its
+$b$-coordinate $\lambda$ to $b\otimes\lambda$, is an
+isomorphism, with inverse given by the finite basis
+expansion of each vector. Thus it is zero exactly when
+$B$ is empty.
+
+For completeness, for any local ring $(A,\mathfrak m)$
+and module $N$, the map
+$N\otimes_A A/\mathfrak m\to N/\mathfrak mN$,
+$n\otimes\overline a\mapsto an+\mathfrak mN$, has inverse
+$n+\mathfrak mN\mapsto n\otimes1$; balancing and the
+relations $\mathfrak mN=0$ in both targets prove the claim.
+Applying this after the localization comparisons gives the
+original fibre quotient
+$$
+M\otimes_R\kappa(\mathfrak p)
+\simeq M_{\mathfrak p}/\mathfrak pM_{\mathfrak p},
+$$
+and the corresponding quotient for $M\otimes_RR'$ at
+$\mathfrak p'$. Explicitly,
+$m\otimes(a/t+\mathfrak pR_{\mathfrak p})$ maps to
+$am/t+\mathfrak pM_{\mathfrak p}$, with inverse
+$m/t+\mathfrak pM_{\mathfrak p}\mapsto
+m\otimes(1/t+\mathfrak pR_{\mathfrak p})$.
+
+Now restore the original finiteness hypothesis. The module
+$M_{\mathfrak p}$ is finite over the local ring, so
+Nakayama's Lemma \ref{algebra-lemma-NAK} says that it is nonzero
+exactly when this fibre quotient is nonzero. If
+$\mathfrak p\in\operatorname{Supp}_R(M)$, the field
+extension and the displayed fibre maps show that the
+original quotient
+$$
+(M\otimes_RR')_{\mathfrak p'}/
+\mathfrak p'(M\otimes_RR')_{\mathfrak p'}
+$$
+is nonzero. Therefore its module is nonzero. Together
+with the already proved reverse inclusion, this proves
+the stated lemma, keeping both original primes and all maps.
+
+\medskip\noindent
+There are two further exact forms. First, for an arbitrary
+$M$ put
+$$
+F_R(M)=\{\mathfrak p\in\Spec(R):
+M\otimes_R\kappa(\mathfrak p)\ne0\}.
+$$
+The field-extension argument above did not use finiteness
+or flatness. Hence for every ring map it proves
+$$
+F_{R'}(M\otimes_RR')=f^{-1}F_R(M).
+$$
+The localization comparison always gives
+$F_R(M)\subseteq\operatorname{Supp}_R(M)$.
+Consequently localization support commutes with every
+base change if and only if
+$$
+F_R(M)=\operatorname{Supp}_R(M).
+$$
+For sufficiency, a prime in the inverse image of support
+is in the inverse image of $F_R(M)$, hence in the new
+fibre set and therefore in the new support. The general
+reverse inclusion was proved above. For necessity, apply
+the asserted support equality to the particular original
+map $R\to\kappa(\mathfrak p)$. The field's unique prime
+contracts to $\mathfrak p$, and its module is nonzero
+exactly when $M\otimes_R\kappa(\mathfrak p)\ne0$.
+This proves both directions of the criterion.
+
+This criterion strictly extends finite generation. An
+arbitrary direct sum of finite modules satisfies it.
+Localization commutes with direct sums by the maps
+$(m_i)_i/s\mapsto(m_i/s)_i$ and their inverse obtained
+from the finite sum of the localized inclusions.
+For coordinates $m_i/s_i$ indexed by a finite set $E$,
+the inverse has denominator $\prod_{i\in E}s_i$ and
+$i$-th numerator $m_i\prod_{j\in E,\,j\ne i}s_j$.
+Tensor products commute with these direct sums by
+$(m_i)_i\otimes c\mapsto(m_i\otimes c)_i$, with inverse
+given by the sum of the tensor products of the original
+inclusions. Balancing verifies these maps, and both
+composites are identities on elements of finite support.
+A direct sum is nonzero exactly when one summand is;
+Nakayama for each finite summand therefore proves the
+criterion for the sum. For a nonzero ring, a free module
+on an infinite set is not finite: any finite collection
+of vectors involves only finitely many basis coordinates,
+so cannot generate a basis vector outside their union.
+It supplies the strictness example.
+
+\medskip\noindent
+Second, if the original map $R\to R'$ is flat, support
+commutes with this base change for every $M$. The local
+map $R_{\mathfrak p}\to R'_{\mathfrak p'}$ is flat:
+tensor with $R'$ preserves injections, and subsequent
+localization at $\mathfrak p'$ preserves them. For any
+$R_{\mathfrak p}$-module $N$, the comparison
+$N\otimes_RR'_{\mathfrak p'}\simeq
+N\otimes_{R_{\mathfrak p}}R'_{\mathfrak p'}$
+sends each original elementary tensor to itself.
+Its inverse is balanced over $R_{\mathfrak p}$ since
+every $t\notin\mathfrak p$ acts invertibly in both factors;
+thus the comparison follows with no injectivity assumption
+on the ring map.
+
+A flat local ring map $(A,\mathfrak m)\to(B,\mathfrak n)$
+detects nonzero arbitrary modules. Choose $x\ne0$ in such
+a module $N$ and put $J=\operatorname{Ann}_A(x)$.
+The map $A/J\hookrightarrow N$, $a+J\mapsto ax$, is
+injective. Flatness gives $B/JB\hookrightarrow N\otimes_AB$.
+Here $J\subseteq\mathfrak m$ and
+$JB\subseteq\mathfrak mB\subseteq\mathfrak n$, so
+$B/JB\ne0$. This proves faithful flatness of the local
+map, and applies to the original localization map above.
+Its tensor comparison proves
+$$
+M_{\mathfrak p}\ne0
+\quad\Longleftrightarrow\quad
+(M\otimes_RR')_{\mathfrak p'}\ne0
+$$
+for every $M$, proving the asserted flat-base-change extension.
+
+Flatness of the module alone does not imply the universal
+support criterion. Retain the example
+$R=\mathbf Z$, $M=\mathbf Q$, $R'=\mathbf F_p$ for a
+prime integer $p$, with the quotient map. The module
+$\mathbf Q$ is flat by its exact localization comparison,
+proved in Example \ref{editorial-source-example-flat-infinite-intersections}.
+At every prime of $\mathbf Z$, its localization is still
+$\mathbf Q$: the map sending an original fraction $q/s$
+to the same rational number is inverse to $q\mapsto q/1$.
+Thus its localization support is all of $\Spec(\mathbf Z)$.
+But
+$$
+q\otimes\overline a=(q/p)\otimes p\overline a=0
+$$
+in $\mathbf Q\otimes_{\mathbf Z}\mathbf F_p$, so the
+new support is empty, whereas the inverse image of the
+old support is the nonempty spectrum of $\mathbf F_p$.
+The fibre set is exactly $\{(0)\}$: all nonzero prime
+fibres vanish as just proved, while multiplication gives
+$\mathbf Q\otimes_{\mathbf Z}\mathbf Q\simeq\mathbf Q$,
+with inverse $q\mapsto q\otimes1$. For a fraction $a/b$,
+$q\otimes a/b=(qa/b)\otimes1$ because $b$ is invertible
+on both sides of the tensor, proving the inverse formula.
+Moreover the annihilator of $\mathbf Q$ is detected by
+its element $1$. Thus finite annihilator detection does
+not imply the universal support criterion. Empty spectra
+and zero modules satisfy all the stated identities as well.
+\end{proof}

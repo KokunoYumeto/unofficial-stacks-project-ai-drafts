@@ -1,0 +1,33 @@
+\begin{lemma}
+\label{lemma-image-stable-specialization-closed}
+Let $R \to S$ be a ring map. Let $T \subset \Spec(R)$
+be the image of $\Spec(S)$. If $T$ is stable under specialization,
+then $T$ is closed.
+\end{lemma}
+
+\begin{proof}
+We give two proofs.
+
+\medskip\noindent
+First proof. Let $\mathfrak p \subset R$ be a prime ideal such that
+the corresponding point of $\Spec(R)$ is in the closure
+of $T$. This means that for every $f \in R$, $f \not \in \mathfrak p$
+we have $D(f) \cap T \not = \emptyset$. Note that $D(f) \cap T$
+is the image of $\Spec(S_f)$ in $\Spec(R)$. Hence
+we conclude that $S_f \not = 0$. In other words, $1 \not = 0$ in
+the ring $S_f$. Since $S_{\mathfrak p}$ is the directed colimit
+of the rings $S_f$ we conclude that $1 \not = 0$ in
+$S_{\mathfrak p}$. In other words, $S_{\mathfrak p} \not = 0$ and
+considering the image of $\Spec(S_{\mathfrak p})
+\to \Spec(S) \to \Spec(R)$ we see there exists
+a $\mathfrak p' \in T$ with $\mathfrak p' \subset \mathfrak p$.
+As we assumed $T$ closed under specialization we conclude $\mathfrak p$
+is a point of $T$ as desired.
+
+\medskip\noindent
+Second proof. Let $I = \Ker(R \to S)$. We may replace $R$ by $R/I$.
+In this case the ring map $R \to S$ is injective.
+By Lemma \ref{lemma-injective-minimal-primes-in-image}
+all the minimal primes of $R$ are contained in the image $T$. Hence
+if $T$ is stable under specialization then it contains all primes.
+\end{proof}

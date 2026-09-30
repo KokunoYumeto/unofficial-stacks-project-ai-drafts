@@ -1,0 +1,28 @@
+\begin{lemma}
+\label{lemma-charpoly-module-ideal}
+Let $R$ be a ring. Let $I \subset R$ be an ideal.
+Let $M$ be a finite $R$-module.
+Let $\varphi : M \to M$ be an endomorphism such
+that $\varphi(M) \subset IM$.
+Then there exists a monic polynomial
+$P = t^n + a_1 t^{n - 1} + \ldots + a_n \in R[T]$
+such that $a_j \in I^j$ and $P(\varphi) = 0$ as an endomorphism of $M$.
+\end{lemma}
+
+\begin{proof}
+Choose a surjective $R$-module map $R^{\oplus n} \to M$, given by
+$(a_1, \ldots, a_n) \mapsto \sum a_ix_i$ for some generators $x_i \in M$.
+Choose $(a_{i1}, \ldots, a_{in}) \in I^{\oplus n}$ such that
+$\varphi(x_i) = \sum a_{ij} x_j$. In other words the diagram
+$$
+\xymatrix{
+R^{\oplus n} \ar[d]_A \ar[r] & M \ar[d]^\varphi \\
+I^{\oplus n} \ar[r] & M
+}
+$$
+is commutative where $A = (a_{ij})$. By
+Lemma \ref{lemma-charpoly}
+the polynomial
+$P(t) = \det(t\text{id}_{n \times n} - A)$
+has all the desired properties.
+\end{proof}

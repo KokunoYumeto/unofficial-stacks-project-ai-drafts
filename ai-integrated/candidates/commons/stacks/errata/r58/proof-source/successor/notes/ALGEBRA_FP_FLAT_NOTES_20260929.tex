@@ -1,0 +1,121 @@
+\subsection{Algebra: finite-presentation models for flatness}\label{algebra-proof-072-algebra-finite-presentation-models-for-flatness}
+
+Source: Stacks Project authors, \texttt{algebra.tex} 47319--47520, original authority \texttt{a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14}, SHA-256 \texttt{FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3}. The \href{https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex\#L47319}{original source} remains identifiable. Seven physical reports retain four existing units 0739--0742. Two minimal unreported copyedits supply ``by'' in the inverse-image declaration and ``is'' in the next lemma's hypothesis. All complete proof details remain editorial.
+
+Dependencies read in their original TeX: 9163--9181, 9707--9737, 32426--32481, 32592--32628, 32722--32762 and 33406--33506. The completed colimit-category, Noetherian-approximation, more-flatness and open-flatness notes retain the earlier full arguments, including their source corrections. Four indexed routing hits were returned: three are unread, and the Bhatt--Scholze Witt-vector Grassmannian source has only its previously recorded reading of lines 251--284. No additional contents were read in this query. No new mathematical extension or novelty is claimed here.
+
+\subsubsection{Original presentations and their localized maps}\label{algebra-proof-072-original-presentations-and-their-localized-maps}
+
+Retain the given finite-presentation ring map \(R\to S\), the finitely presented \(S\)-module \(M\), and its assumed flatness over \(R\). Fix the original presentations \[
+ S=R[X_1,\ldots,X_n]/(g_1,\ldots,g_m),\qquad
+ S^{\oplus a}\xrightarrow{H}S^{\oplus b}\longrightarrow M\longrightarrow0.
+\] Each original polynomial coefficient and each entry of the full matrix \(H\) is retained. Choose polynomial representatives of the entries. The finite-type subrings \(R_\lambda\subset R\) containing their coefficients form a directed system; put \[
+ S_\lambda=R_\lambda[X_1,\ldots,X_n]/(g_{1,\lambda},\ldots,g_{m,\lambda}),
+ \qquad M_\lambda=\operatorname{coker}H_\lambda.
+\] Every transition is the original coefficient map, fixing the variables and matrix positions. Right exactness gives the precise comparisons \[
+ R_\mu\otimes_{R_\lambda}S_\lambda\cong S_\mu,
+ \qquad S_\mu\otimes_{S_\lambda}M_\lambda\cong M_\mu.
+\] The first sends \(r\otimes f(X)\) to \(rf_\mu(X)\). Its inverse sends a polynomial coefficient \(r\in R_\mu\) to \(r\otimes1\) and each original variable to \(1\otimes X_i\); the relations map to exactly the retained relations. The second sends \(s\otimes[v]\) to \([s v_\mu]\); its inverse sends each standard target generator to \(1\otimes[e_j]\). All matrix relations are preserved by right exactness. The same formulas identify the colimits with the original \(S,M\). An element or a defining equality involves finitely many coefficients, hence occurs at a finite stage. The base rings are Noetherian because they are finite type over \(\mathbf Z\); so are the \(S_\lambda\), and each finite \(M_\lambda\) is finitely presented. Empty variable, relation and matrix lists are allowed.
+
+Take an original prime \(\mathfrak q\subset S\), its contraction \(\mathfrak p\subset R\), and the contractions \(\mathfrak q_\lambda,\mathfrak p_\lambda\). Every denominator outside a contracted prime stays outside the later contraction. Thus \[
+ (R_\lambda)_{\mathfrak p_\lambda}\longrightarrow
+ (S_\lambda)_{\mathfrak q_\lambda}
+\] and their transition maps are local. Localization commutes with these colimits: each target fraction lifts with its original denominator, and a zero fraction has an annihilating denominator and equality that appear together at a later stage. Base change of \((S_\lambda)_{\mathfrak q_\lambda}\) first inverts the old denominator set; further localization at the contraction of \(\mathfrak q\) gives \((S_\mu)_{\mathfrak q_\mu}\). The map on fractions is \((s/u)\otimes(r/v)\mapsto sr/(uv)\), with the structural images understood; its further prime localization has the inverse induced by the two original factor maps. The module comparison follows by applying the same localizations to its actual presentation matrix. These are exactly the six conditions of 32426--32453, including localization rather than an unjustified unrestricted tensor isomorphism.
+
+The complete earlier eventual-flatness proof now applies to \(M_{\mathfrak q}\), which is \(R_{\mathfrak p}\)-flat. Explicitly, at a local stage \(\lambda\) take the finite module \[
+ T_\lambda=\operatorname{Tor}^{(R_\lambda)_{\mathfrak p_\lambda}}_1
+ \big((M_\lambda)_{\mathfrak q_\lambda},\kappa(\mathfrak p_\lambda)\big)
+ =\ker\big(\mathfrak p_\lambda(R_\lambda)_{\mathfrak p_\lambda}
+       \otimes (M_\lambda)_{\mathfrak q_\lambda}
+       \longrightarrow(M_\lambda)_{\mathfrak q_\lambda}\big).
+\] It has finitely many original generators since the local stage rings are Noetherian and the module is finite. Their images in the tensors with the extended ideal vanish in the original flat limit module. The filtered-colimit equality witnesses therefore kill them all at one later stage. The change-of-base local flatness criterion already proved in the more-flatness note, with precisely these original ideals and localized modules, gives flatness at that stage. Later stages are localizations of its base changes, so remain flat. Thus each original \(\mathfrak q\) supplies a stage \(\lambda_{\mathfrak q}\) after which \((M_\lambda)_{\mathfrak q_\lambda}\) is \(R_\lambda\)-flat. A module over \((R_\lambda)_{\mathfrak p_\lambda}\) is flat over that ring exactly when it is flat over \(R_\lambda\): restriction uses localization flatness; the reverse follows by tensoring injections of localized modules, whose tensor products identify with the original ones.
+
+\subsubsection{The entire flat locus and its direction under base change}\label{algebra-proof-072-the-entire-flat-locus-and-its-direction-under-base-change}
+
+Set, exactly as retained correction 0740 states, \[
+ U_\lambda=\{\mathfrak r\in\operatorname{Spec}(S_\lambda):
+                    (M_\lambda)_{\mathfrak r}\text{ is flat over }R_\lambda\}.
+\] This entire set is open by the source's openness theorem. The completed open-flatness note supplies its proof with the \(n=0\) and \(n=1\) resolution cases and the correct fibre global-dimension bound. Thus those earlier corrections are received here; we do not reuse the source's erroneous unrestricted syzygy formula.
+
+For \(\mu\ge\lambda\), the inverse image of \(U_\lambda\) in \(\operatorname{Spec}(S_\mu)\) lies in \(U_\mu\). To prove this, let \(\mathfrak r_\mu\) contract to \(\mathfrak r_\lambda\in U_\lambda\). First base change the flat \(R_\lambda\)-module \((M_\lambda)_{\mathfrak r_\lambda}\) to \(R_\mu\). This is \(R_\mu\)-flat. Then localize its acting algebra at the prime induced by \(\mathfrak r_\mu\). The original presentation comparisons identify the result with \((M_\mu)_{\mathfrak r_\mu}\). Localization in that acting algebra preserves base-module flatness: it is a filtered colimit of copies of a flat base module with multiplication transition maps, and tensoring an injection commutes with that colimit. This proves the inclusion without assuming the transition \(R_\lambda\to R_\mu\) flat.
+
+Let \(V_\lambda\subset\operatorname{Spec}(S)\) be the inverse image of \(U_\lambda\), with its original map. The inclusion just proved gives \(V_\lambda\subset V_\mu\). Eventual local flatness covers every original prime by some \(V_\lambda\). Quasi-compactness gives a finite subcover; choose a common upper index of those finitely many stages, not an unspecified maximum of the whole directed set. Monotonicity makes its \(V_{\lambda_0}\) the entire spectrum. If \(S=0\), the spectrum and this cover are empty; choose any stage of the nonempty directed set, and the equality is still valid.
+
+An arbitrary open subset on which the module happens to be flat would not establish this cover or inclusion. For instance \(R=S=k\), \(M=k\) is flat at its sole prime, but the empty open subset also satisfies the old one-way property and misses that prime. Thus the retained change to the entire flat locus is mathematically necessary. The additional ``by'' in 47397 only makes the original inverse-image declaration grammatical; it does not change \(V_\lambda\).
+
+\subsubsection{Every coefficient of the finite unit relation}\label{algebra-proof-072-every-coefficient-of-the-finite-unit-relation}
+
+Write the complement of \(U_{\lambda_0}\) as \(V(I)\), for its original ideal \(I\subset S_{\lambda_0}\). Pulling back gives \(V(IS)=\varnothing\), so \(IS=S\): a proper ideal in a nonzero unital ring lies in a maximal ideal, while the zero ring already has the unit ideal as its only ideal. Consequently there are original elements \[
+ f_1,\ldots,f_r\in I,\quad s_1,\ldots,s_r\in S,
+ \qquad\sum_{i=1}^r f_i s_i=1.
+\] The retained correction 0741 changes the inconsistent terminal index \(n\) to \(r\). Keep all \(f_i\), all \(s_i\), their products and coefficients. Lift the finitely many \(s_i\) to one later stage \(\mu\). At that stage the error \(1-\sum_i f_i s_{i,\mu}\) has image zero in the colimit. Enlarge once more to \(\nu\) where that same error is zero. Lifting the coefficients alone would not prove this equality; both finite steps are needed.
+
+At this \(\nu\), \(IS_\nu=S_\nu\). The inverse image of \(U_{\lambda_0}=D(I)\) is therefore all of \(\operatorname{Spec}(S_\nu)\). The base-change inclusion puts it in \(U_\nu\), proving \(U_\nu=\operatorname{Spec}(S_\nu)\). This is the precise meaning of increasing the original stage; the later flat locus need not have the same defining ideal as the earlier one.
+
+Flatness at all primes of the acting algebra implies that \(M_\nu\) is \(R_\nu\)-flat. Indeed, for any injection \(N_1\to N_2\) of \(R_\nu\)-modules, the kernel of its tensor map with \(M_\nu\) is an \(S_\nu\)-module. Its localizations at all primes are zero by the pointwise flatness. A nonzero module element has proper annihilator contained in a maximal ideal, and stays nonzero at a prime containing that annihilator; thus a module with all prime localizations zero is zero. The tensor map is injective. This proves part (1) with \(R_0=R_\nu,S_0=S_\nu,M_0=M_\nu\) and the original presentation comparisons. If the unit relation is empty because \(S=0\), the error is \(1\); a later stage kills it, and the same argument gives the zero stage algebra and module, which is flat.
+
+\subsubsection{Arbitrary base systems and the two eventual inverse maps}\label{algebra-proof-072-arbitrary-base-systems-and-the-two-eventual-inverse-maps}
+
+For part (2), let the original \(R\) be a directed colimit of the given \(R_\lambda\). The finite-type \(\mathbf Z\)-algebra \(R_0\) from part (1) is finitely presented, since the kernel of its polynomial presentation is a finitely generated ideal in a Noetherian polynomial ring. Lift the finite images of its generators to a common stage, then annihilate the finite defining relations at a later one. This gives a map \(R_0\to R_\lambda\) whose composite to \(R\) is the original one.
+
+Define exactly \[
+ S_\lambda=R_\lambda\otimes_{R_0}S_0,
+ \qquad M_\lambda=S_\lambda\otimes_{S_0}M_0.
+\] The algebra and module are finitely presented because their original finite relations and matrix base change to the indicated rings. The map \[
+ (R_\lambda\otimes_{R_0}S_0)\otimes_{S_0}M_0
+    \xrightarrow{\sim}R_\lambda\otimes_{R_0}M_0,
+ \quad(r\otimes s)\otimes m\longleftrightarrow r\otimes sm
+\] has inverse \(r\otimes m\mapsto(r\otimes1)\otimes m\). Thus \(M_\lambda\) is \(R_\lambda\)-flat, by base change of \(M_0\). The same associativity maps after tensoring with \(R\) recover exactly \(S,M\), proving part (2).
+
+For part (3), retain the original prescribed system \((R_\lambda,S_\lambda,M_\lambda)\). First descend \(R_0\to R\) as above to a stage \(\lambda_0\). The finite presentation of \(S_0\) over \(R_0\) lifts its map to \(S=\operatorname{colim}S_\lambda\): lift its finite generator images and then all defining relation errors. Thus one obtains \(S_0\to S_{\lambda_1}\) over \(R_0\). For later indices the original map is \[
+ \Psi_\lambda:R_\lambda\otimes_{R_0}S_0\longrightarrow S_\lambda,
+ \qquad r\otimes s\longmapsto r\,s_\lambda.
+\] Its colimit is the given presentation isomorphism. Both sides are base changes of finitely presented \(R_{\lambda_1}\)-algebras. Use their actual finite presentations to descend the inverse of \(\Psi_R\): lift each generator image, annihilate its finite relations, and then annihilate on each of the two finite generator lists the errors in both inverse composites. At a common later stage these maps are inverse algebra maps. This is the full finite-presentation argument behind the cited categorical lemma; it does not infer injectivity from a disappearing arbitrary kernel.
+
+The finite \(S_0\)-module \(M_0\) is finitely presented since \(S_0\) is Noetherian. The same presentation argument lifts the map \(M_0\to M\) to an \(S_0\)-module map \(M_0\to M_{\lambda_2}\): lift the original generator images and kill each finite relation error. It induces \[
+ \Theta_\lambda:S_\lambda\otimes_{S_0}M_0\longrightarrow M_\lambda,
+ \qquad s\otimes m\longmapsto s\,m_\lambda.
+\] Both sides, for \(\lambda\ge\lambda_2\), are base changes of finitely presented modules over \(S_{\lambda_2}\), and their limit map is the given isomorphism. Descend its inverse using the original presentation matrix; then kill the errors of both composites on the two finite generator lists. Thus \(\Theta_\lambda\) is an isomorphism for all sufficiently large indices. Combine this with the already established \(\Psi_\lambda\): the source of \(\Theta_\lambda\) is identified with \(R_\lambda\otimes_{R_0}M_0\), which is flat. This proves eventual flatness in the given system, including noninjective transitions.
+
+\subsubsection{Faithful flatness, spectral images and a finite relation algebra}\label{algebra-proof-072-faithful-flatness-spectral-images-and-a-finite-relation-algebra}
+
+Retain \(R\to A\to B\), with \(A\to B\) faithfully flat of finite presentation. The short added copula in 47472 makes this assumption grammatical and changes no property. Start with \(R=\mathbf Z\). Apply the preceding construction to \(A\to B\) and its rank-one \(B\)-module \(B\), using the presentation with one generator and no module relations. Every stage module is then its original stage algebra. The finite unit relation argument makes that stage algebra flat; an arbitrary finite module model alone would not suffice. This gives a finite-type \(\mathbf Z\)-algebra \(A_0\), a flat finitely presented \(A_0\)-algebra \(B_0\), and the actual isomorphism \[
+ A\otimes_{A_0}B_0\xrightarrow{\sim}B.
+\] The image \(W\) of \(\operatorname{Spec}(B_0)\to\operatorname{Spec}(A_0)\) is open by 9707--9737. That theorem applies exactly: finite presentation gives constructibility, flat going down makes the image stable under generalization, and this yields openness. Its standard-open argument retains the actual localizations. Write the complement as \(V(I_0)\).
+
+Here is the required equality of images after any base change \(A_0\to D\). For a prime \(\mathfrak p\subset D\), let \(\mathfrak p_0\) be its contraction. The induced map \(\kappa(\mathfrak p_0)\to\kappa(\mathfrak p)\) is a field extension. The original fibre comparison is \[
+ (D\otimes_{A_0}B_0)\otimes_D\kappa(\mathfrak p)
+ \cong B_0\otimes_{A_0}\kappa(\mathfrak p)
+ \cong (B_0\otimes_{A_0}\kappa(\mathfrak p_0))
+            \otimes_{\kappa(\mathfrak p_0)}\kappa(\mathfrak p).
+\] The first map sends \((d\otimes b)\otimes c\) to \(b\otimes dc\); the second sends \((b\otimes a)\otimes c\) to \(b\otimes ac\); their inverses insert the unit in the intermediate coefficient factor. Tensoring with a nonzero field extension reflects the zero vector space, by a field basis. Thus this fibre is nonzero exactly when \(B_0\otimes_{A_0}\kappa(\mathfrak p_0)\) is nonzero. A nonzero unital ring has a prime, so these conditions say precisely that \(\mathfrak p\) is in the base-changed image and that \(\mathfrak p_0\in W\). This proves the asserted equality of images, including zero fibres.
+
+For \(D=A\), faithful flatness says the image is the whole spectrum. Therefore \(I_0A=A\). Keep a finite original relation \[
+ \sum_{i=1}^r f_i r_i=1,\qquad f_i\in I_0,\quad r_i\in A.
+\] The source's instruction to enlarge the model is made exact by the finite-presentation algebra \[
+ A_1=A_0[T_1,\ldots,T_r]/\left(\sum_{i=1}^r f_iT_i-1\right),
+ \qquad B_1=A_1\otimes_{A_0}B_0.
+\] Send \(T_i\) to the actual \(r_i\) to define \(A_1\to A\); the relation verifies this map. No injection of \(A_0\) or \(A_1\) into \(A\) is assumed. The ring \(A_1\) is finite type and finitely presented over \(\mathbf Z\), and \(A_1\to B_1\) is flat of finite presentation by base change. In \(A_1\) the original extended ideal is the unit ideal, so the just-proved image equality makes \(\operatorname{Spec}(B_1)\to\operatorname{Spec}(A_1)\) surjective. The original flat/surjective-spectrum criterion then gives faithful flatness.
+
+The receiving comparison is \[
+ A\otimes_{A_1}(A_1\otimes_{A_0}B_0)
+   \xrightarrow{\sim} A\otimes_{A_0}B_0\xrightarrow{\sim}B,
+ \quad a\otimes(a_1\otimes b)\longmapsto aa_1\otimes b,
+\] with inverse \(a\otimes b\mapsto a\otimes(1\otimes b)\). This proves exactly the original descent diagram after renaming \(A_1,B_1\) as the final model. If the finite relation is empty and \(A=0\), its relation algebra imposes \(-1=0\), giving the zero model; the resulting map and comparisons have the same required properties. Alternatively the nonempty relation with zero coefficient gives the identical conclusion. No nonzero-ring exclusion is introduced.
+
+Finally retain arbitrary original \(R\). Let \(A_0'\to B_0'\) be the model over \(\mathbf Z\), with its maps to the original \(A,B\), and put exactly \[
+ A_0=A_0'\otimes_{\mathbf Z}R,\qquad
+ B_0=B_0'\otimes_{\mathbf Z}R.
+\] The map \(A_0\to A\) sends \(a_0'\otimes r\) to the product of their original images. The map for \(B_0\) is defined the same way. Commutativity of \(R\to A\to B\) makes the original diagram commute. The isomorphism \[
+ A_0\otimes_{A_0'}B_0'\cong B_0'\otimes_{\mathbf Z}R,
+ \quad(a_0'\otimes r)\otimes b_0'\longmapsto a_0'b_0'\otimes r
+\] has inverse \(b_0'\otimes r\mapsto(1\otimes r)\otimes b_0'\). Therefore \(A_0\to B_0\) is the actual base change of the faithfully flat finitely presented map, hence has those same properties. Also \(R\to A_0\) is finitely presented by the finite original \(\mathbf Z\)-presentation. Finally \[
+ A\otimes_{A_0}B_0\xrightarrow{\sim}A\otimes_{A_0'}B_0',
+ \quad a\otimes(b_0'\otimes r)\longmapsto ar\otimes b_0'
+\] has inverse \(a\otimes b_0'\mapsto a\otimes(b_0'\otimes1)\). The balanced relations over \(A_0'\) and \(R\) verify both maps and composites. Composing with the original model isomorphism recovers \(B\), proving the requested general diagram.
+
+\subsubsection{Dispositions and propagation}\label{algebra-proof-072-dispositions-and-propagation}
+
+OCC-01033 and OCC-12450 retain 0739, the plural ``ring maps''. OCC-12451 retains 0740, which names the entire flat locus and supplies its copula. The adjacent unreported inverse-image declaration receives ``by'' at 47397. OCC-01034 and OCC-12452 retain 0741, the common terminal index \(r\). The unreported hypothesis at 47472 receives ``is''. OCC-01035 and OCC-12453 retain 0742, ``replaced by''. Thus seven reports retain four existing operations and add two source copyedits; expanded arguments are not substitutions into either translation branch.
+
+This receives the original finite-presentation systems and matrices, eventual-flatness Tor argument, corrected openness theorem and its arbitrary-base-change inclusion, and the finite-stage inverse constructions from the earlier notes. No new conceptual-extension group is needed. Continue at 47521, with six remaining report payloads already read and their proof text still to be reviewed.

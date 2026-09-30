@@ -1,0 +1,39 @@
+\begin{lemma}
+\label{lemma-separably-closed-irreducible}
+Let $k$ be a separably closed field.
+Let $R$, $S$ be $k$-algebras. If $R$, $S$ have a unique
+minimal prime, so does $R \otimes_k S$.
+\end{lemma}
+
+\begin{proof}
+Let $k \subset \overline{k}$ be a perfect closure, see
+Definition \ref{definition-perfection}.
+By assumption $\overline{k}$ is algebraically closed.
+The ring maps $R \to R \otimes_k \overline{k}$ and
+$S \to S \otimes_k \overline{k}$ and
+$R \otimes_k S \to (R \otimes_k S) \otimes_k \overline{k}
+= (R \otimes_k \overline{k}) \otimes_{\overline{k}} (S \otimes_k \overline{k})$
+satisfy the assumptions of Lemma \ref{lemma-p-ring-map}.
+Hence we may assume $k$ is algebraically closed.
+
+\medskip\noindent
+We may replace $R$ and $S$ by their reductions.
+Hence we may assume that $R$ and $S$ are domains.
+By Lemma \ref{lemma-perfect-reduced} we see that $R \otimes_k S$ is
+reduced. Hence its spectrum is reducible if and only if it contains a nonzero
+zerodivisor. By Lemma \ref{lemma-limit-argument} we reduce to the case where
+$R$ and $S$ are domains of finite type over $k$ algebraically closed.
+
+\medskip\noindent
+Note that the ring map $R \to R \otimes_k S$ is of finite
+presentation and flat. Moreover, for every maximal ideal
+$\mathfrak m$ of $R$ we have
+$(R \otimes_k S) \otimes_R R/\mathfrak m \cong S$ because
+$k \cong R/\mathfrak m$ by the Hilbert Nullstellensatz Theorem
+\ref{theorem-nullstellensatz}. Moreover, the set of
+maximal ideals is dense in the spectrum of $R$ since
+$\Spec(R)$ is Jacobson, see Lemma \ref{lemma-finite-type-field-Jacobson}.
+Hence we see that Lemma \ref{lemma-flat-fibres-irreducible} applies
+to the ring map $R \to R \otimes_k S$ and we conclude that
+the spectrum of $R \otimes_k S$ is irreducible as desired.
+\end{proof}

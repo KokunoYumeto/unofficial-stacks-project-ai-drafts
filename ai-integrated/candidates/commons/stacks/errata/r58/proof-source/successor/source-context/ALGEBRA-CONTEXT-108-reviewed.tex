@@ -1,0 +1,96 @@
+\begin{lemma}
+\label{lemma-image-stable-specialization-closed}
+Let $R \to S$ be a ring map. Let $T \subset \Spec(R)$
+be the image of $\Spec(S)$. If $T$ is stable under specialization,
+then $T$ is closed. More precisely, for every ring map
+$\varphi:R\to S$, without a specialization hypothesis,
+$$
+\overline T=V(\ker\varphi)
+=\{\mathfrak p:\text{there is }\mathfrak p'\in T
+\text{ with }\mathfrak p'\subseteq\mathfrak p\}.
+$$
+\end{lemma}
+
+\begin{proof}
+We retain both original proofs and all original rings.
+Write the map as $\varphi:R\to S$ and put $I=\ker\varphi$.
+
+\medskip\noindent
+First proof. Let $\mathfrak p$ be a point of $\overline T$.
+Every $f\notin\mathfrak p$ gives $D(f)\cap T\ne\varnothing$.
+The prime localization correspondence identifies this
+intersection with the image of $\Spec(S_{\varphi(f)})$,
+so $S_{\varphi(f)}\ne0$.
+The directed localization comparison with $S_{\mathfrak p}$
+can be written without suppressing the original coefficient map.
+Index finite subsets $E\subseteq R\setminus\mathfrak p$
+by inclusion and put $f_E=\prod_{f\in E}f$.
+For $E\subseteq F$, the transition is
+$$
+S_{\varphi(f_E)}\longrightarrow S_{\varphi(f_F)},\qquad
+\frac{s}{\varphi(f_E)^n}\longmapsto
+\frac{s\varphi(f_{F\setminus E})^n}{\varphi(f_F)^n}.
+$$
+The colimit map to $S_{\mathfrak p}=(R\setminus\mathfrak p)^{-1}S$
+sends a fraction to the same fraction. It is surjective
+because $s/\varphi(t)$ comes from $E=\{t\}$.
+If an original numerator $s$ maps to zero, some
+$u\notin\mathfrak p$ has $\varphi(u)s=0$; the numerator
+then vanishes at the stage $E\cup\{u\}$ where
+$\varphi(u)$ is a unit. Thus the map is also injective.
+Every stage is nonzero, including $E=\varnothing$,
+because $f_E\notin\mathfrak p$; their common unit
+cannot die in the colimit, since that would make it
+zero at a nonzero later stage. Hence $S_{\mathfrak p}\ne0$.
+
+Choose a prime of this nonzero ring and contract it
+to a prime $\mathfrak q\subset S$. All
+$\varphi(t)$, $t\notin\mathfrak p$, are units in
+$S_{\mathfrak p}$, so
+$\mathfrak p'=\varphi^{-1}(\mathfrak q)\subseteq\mathfrak p$.
+This is a point of the original image $T$.
+Thus every point of $\overline T$ is a specialization
+of a point of $T$. The reverse containment follows
+because $\overline T$ is closed and contains $T$.
+
+The same localization argument identifies the closed set
+exactly. Every prime in $T$ contains $I$, so
+$\overline T\subseteq V(I)$. Conversely, for
+$I\subseteq\mathfrak p$, the ring $S_{\mathfrak p}$
+cannot be zero: the equality $1/1=0$ would give
+$t\notin\mathfrak p$ with $\varphi(t)1=0$,
+contradicting $t\in I\subseteq\mathfrak p$.
+Its prime again contracts to a point of $T$ contained
+in $\mathfrak p$. This proves both displayed equalities.
+If $T$ is stable under specialization, they imply
+$T=V(I)$ and hence the asserted closedness.
+
+\medskip\noindent
+Second proof. Retain the original quotient map
+$q:R\to R/I$ and the induced injective map
+$\overline\varphi:R/I\to S$, $r+I\mapsto\varphi(r)$.
+The spectrum map for $q$ is the homeomorphism onto
+$V(I)$ given by contraction, with inverse
+$\mathfrak p\mapsto\mathfrak p/I$.
+For each $\mathfrak p\in V(I)$ choose a minimal prime
+$\overline{\mathfrak p}_0\subseteq\mathfrak p/I$
+of $R/I$. Existence follows from Zorn's lemma: the
+intersection of a chain of primes contained in
+$\mathfrak p/I$ is prime and is a lower bound.
+Indeed if $ab$ belongs to that intersection and $a$
+is absent from one chain member, primality forces
+$b$ into that member and all smaller members, and
+then into all larger members as well.
+Lemma \ref{lemma-injective-minimal-primes-in-image}
+gives a prime $\mathfrak q\subset S$ whose contraction
+along $\overline\varphi$ is $\overline{\mathfrak p}_0$.
+Along the original map its contraction is
+$$
+\varphi^{-1}(\mathfrak q)
+=q^{-1}(\overline{\mathfrak p}_0)\subseteq\mathfrak p.
+$$
+Thus every point of $V(I)$ is again a specialization
+of an original image point; no original ring has been
+replaced in the comparison. If $S=0$, then $I=R$,
+and all three sets in the statement are empty.
+\end{proof}

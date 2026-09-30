@@ -1,0 +1,20 @@
+\begin{lemma}
+\label{lemma-finite-dimensional-algebra}
+Suppose $R$ is a finite dimensional algebra over a field.
+Then $R$ is Artinian.
+\end{lemma}
+
+\begin{proof}
+Let $k$ be the given field and let $d=\dim_k R<\infty$.
+Every ideal is a $k$-vector subspace of the original $R$,
+because scalar multiplication is multiplication by the image
+of an element of $k$ in $R$. In any strict descending chain
+of ideals, the dimensions strictly decrease among the integers
+$0,\ldots,d$. Thus there are at most $d$ strict changes and
+every descending chain stabilizes, proving that $R$ is Artinian.
+The same argument bounds every strict increasing chain.
+In particular, directly from the definition of length,
+$\operatorname{length}_R(R)\leq d$.
+If $R=0$, then $d=0$, its only ideal is zero, and these
+assertions include its length-zero chain.
+\end{proof}

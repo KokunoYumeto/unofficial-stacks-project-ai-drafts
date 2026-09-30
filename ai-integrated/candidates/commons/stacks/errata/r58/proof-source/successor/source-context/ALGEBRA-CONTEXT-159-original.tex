@@ -1,0 +1,33 @@
+\begin{lemma}[Artin-Rees]
+\label{lemma-Artin-Rees}
+Suppose that $R$ is Noetherian, $I \subset R$ an ideal.
+Let $N \subset M$ be finite $R$-modules.
+There exists a constant $c > 0$ such that
+$I^n M \cap N  =  I^{n-c}(I^cM \cap N)$ for all $n \geq c$.
+\end{lemma}
+
+\begin{proof}
+Consider the ring $S = R \oplus I \oplus I^2 \oplus \ldots
+= \bigoplus_{n \geq 0} I^n$. Convention: $I^0 = R$.
+Multiplication maps $I^n \times I^m$
+into $I^{n + m}$ by multiplication in $R$.
+Note that if $I = (f_1, \ldots, f_t)$
+then $S$ is a quotient of the Noetherian ring $R[X_1, \ldots, X_t]$.
+The map just sends the monomial $X_1^{e_1}\ldots X_t^{e_t}$
+to $f_1^{e_1}\ldots f_t^{e_t}$. Thus $S$ is Noetherian.
+Similarly, consider the module $M \oplus IM \oplus I^2M \oplus \ldots
+= \bigoplus_{n \geq 0} I^nM$. This is a finitely generated $S$-module.
+Namely, if $x_1, \ldots, x_r$ generate $M$ over $R$, then they also generate
+$\bigoplus_{n \geq 0} I^nM$ over $S$. Next, consider the
+submodule $\bigoplus_{n \geq 0} I^nM \cap N$.
+This is an $S$-submodule, as is easily verified. By
+Lemma \ref{lemma-Noetherian-basic} it is finitely generated as
+an $S$-module,
+say by $\xi_j \in \bigoplus_{n \geq 0} I^nM \cap N$, $j = 1, \ldots, s$.
+We may assume by decomposing each $\xi_j$ into its homogeneous
+pieces that each $\xi_j \in I^{d_j}M \cap N$ for some $d_j$.
+Set $c = \max\{d_j\}$. Then for all $n \geq c$ every element
+in $I^nM \cap N$ is of the form $\sum h_j \xi_j$ with
+$h_j \in I^{n - d_j}$. The lemma now follows from this and the trivial
+observation that $I^{n-d_j}(I^{d_j}M \cap N) \subset I^{n-c}(I^cM \cap N)$.
+\end{proof}

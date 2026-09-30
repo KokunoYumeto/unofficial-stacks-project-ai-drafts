@@ -1,0 +1,66 @@
+\begin{theorem}
+\label{theorem-uncountable-nullstellensatz}
+Let $k$ be a field. Let $S$ be a $k$-algebra generated over $k$
+by the elements $\{x_i\}_{i \in I}$. Assume the cardinality of $I$
+is smaller than the cardinality of $k$. Then
+\begin{enumerate}
+\item for all maximal ideals $\mathfrak m \subset S$ the field
+extension $\kappa(\mathfrak m)/k$
+is algebraic, and
+\item $S$ is a Jacobson ring.
+\end{enumerate}
+If $I$ is finite, both conclusions hold for every field $k$, without
+the cardinality restriction on the finite generating set.
+\end{theorem}
+
+\begin{proof}
+For finite $I$, both assertions follow from the Hilbert
+Nullstellensatz (Theorem \ref{theorem-nullstellensatz}) over every
+field, regardless of the size of that finite set. Now assume $I$
+is infinite and put $\kappa=\#I<\#k$.
+Let $P=k[\{X_i\}_{i\in I}]$ be the polynomial ring mapping onto
+the original algebra $S$ by $X_i\mapsto x_i$. Every monomial has
+finite support and is specified by a finite list of pairs
+$(i,e)$ with $i\in I$, $e\in\mathbf Z_{\geq0}$.
+For each finite length $r$, the set of such lists has cardinality
+at most $\kappa$, since $\kappa$ is infinite; the union over all
+$r\geq0$ still has cardinality $\kappa$.
+Distinct variables supply $\kappa$ distinct monomials, so the
+monomial basis of $P$ has cardinality exactly $\kappa$.
+The images of these monomials span $S$ and every quotient $S/\mathfrak m$.
+In particular, for a maximal ideal $\mathfrak m\subset S$, its
+residue field is exactly $S/\mathfrak m$ and has $k$-dimension
+at most $\kappa$. These are maps from the same original polynomial
+ring and algebra, without replacing $S$ by $P$.
+
+\medskip\noindent
+To arrive at a contradiction pick $T \in \kappa(\mathfrak m)$ transcendental
+over $k$. Note that the $k$-linear map
+$T : \kappa(\mathfrak m) \to \kappa(\mathfrak m)$
+given by multiplication by $T$ has the property that $P(T)$ is invertible
+for all monic polynomials $P(t) \in k[t]$.
+Also, $\kappa(\mathfrak m)$ has dimension at most the cardinality of $I$
+over $k$ since it is a quotient of the vector space
+$k[\{x_i\}_{i \in I}]$ over $k$ (whose dimension is $\# I$ as we saw above).
+This is impossible by Lemma \ref{lemma-dimension}.
+
+\medskip\noindent
+To show that $S$ is Jacobson we argue as follows. If not then
+there exists a prime $\mathfrak q \subset S$ and an element $f \in S$,
+$f \not \in \mathfrak q$ such that $\mathfrak q$ is not maximal
+and $(S/\mathfrak q)_f$ is a field, see
+Lemma \ref{lemma-characterize-jacobson}.
+The field $L=(S/\mathfrak q)_f$ is generated over $k$ by the
+images of the original $x_i$ and the inverse of the image of $f$.
+Thus it has a generating set of cardinality at most
+$\kappa+1=\kappa<\#k$. Apply the first assertion already proved
+to the maximal ideal $(0)$ of the field $L$: the extension $L/k$
+is algebraic. The canonical inclusion
+$S/\mathfrak q\subset L\subset\operatorname{Frac}(S/\mathfrak q)$
+identifies $L$ with the entire fraction field, since a field containing
+$S/\mathfrak q$ contains the inverse of every nonzero element of
+that domain. Hence $L=\kappa(\mathfrak q)$ canonically.
+The prime $\mathfrak q$ lies over the maximal ideal $(0)$ of $k$,
+so Lemma \ref{lemma-finite-residue-extension-closed} makes
+$\mathfrak q$ maximal in $S$, a contradiction.
+\end{proof}

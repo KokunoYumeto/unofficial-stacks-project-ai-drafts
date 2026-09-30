@@ -1,0 +1,40 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-overring-surjective}
+Suppose that $R \to S$ is an integral
+ring extension with $R \subset S$.
+Then $\varphi : \Spec(S) \to \Spec(R)$
+is surjective. More generally, for an arbitrary integral ring map
+$\varphi:R\to S$ its spectrum image is $V(\ker\varphi)$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathfrak p \subset R$ be a prime ideal.
+We have to show $\mathfrak pS_{\mathfrak p} \not = S_{\mathfrak p}$, see
+Lemma \ref{editorial-source-lemma-in-image}.
+The localization $R_{\mathfrak p} \to S_{\mathfrak p}$ is injective
+(as localization is exact) and integral by
+Lemma \ref{editorial-source-lemma-integral-closure-localize} or
+\ref{editorial-source-lemma-base-change-integral}.
+Keep these localizations and put $\mathfrak m=\mathfrak pR_{\mathfrak p}$.
+Suppose, for contradiction, that
+$1=\sum_i f_is_i$ in $S_{\mathfrak p}$ with
+$f_i\in\mathfrak m$ and $s_i\in S_{\mathfrak p}$, using the
+original localized coefficient map. Lemma
+\ref{editorial-source-lemma-characterize-integral} gives an
+$R_{\mathfrak p}$-subalgebra $S'\subset S_{\mathfrak p}$
+containing all these $s_i$ and finite over $R_{\mathfrak p}$.
+The same equation for $1$ holds in $S'$. Multiplying it by every
+element of $S'$ proves $S'=\mathfrak mS'$. Nakayama's
+Lemma \ref{algebra-lemma-NAK} gives $S'=0$, which contradicts the injection
+of the nonzero local ring $R_{\mathfrak p}$ into $S'$.
+Thus the original fibre has a prime and the desired preimage exists.
+
+For arbitrary $\varphi$, the induced map
+$R/\ker\varphi\to S$, $r+\ker\varphi\mapsto\varphi(r)$,
+is injective and integral: reduce each coefficient of a monic
+equation modulo the kernel. The injective case just proved makes
+its spectrum map surjective. Composing with the original quotient
+map identifies its image in $\operatorname{Spec}(R)$ with
+$V(\ker\varphi)$, because primes of the quotient are exactly
+the primes of $R$ containing that kernel.
+\end{proof}

@@ -1,0 +1,68 @@
+\begin{lemma}[Tensor products commute with colimits]
+\label{lemma-tensor-products-commute-with-limits}
+Let $(M_i, \mu_{ij})$ be a system over the preordered set $I$.
+Let $N$ be an $R$-module. Then
+$$
+\colim (M_i \otimes N) \cong (\colim M_i)\otimes N.
+$$
+Moreover, the isomorphism is induced by the homomorphisms
+$\mu_i \otimes 1: M_i \otimes N \to M \otimes N$
+where $M = \colim_i M_i$ with natural maps $\mu_i : M_i \to M$.
+More generally, for any small index category $\mathcal{I}$ and any
+diagram $i\mapsto M_i$ of $R$-modules, the same canonical map
+$$
+\colim_{i\in\mathcal{I}}(M_i\otimes_R N)
+\longrightarrow
+\left(\colim_{i\in\mathcal{I}}M_i\right)\otimes_R N,
+\qquad [m_i\otimes n]\longmapsto\mu_i(m_i)\otimes n,
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+First proof. The functor $M' \mapsto M' \otimes_R N$ is left adjoint
+to the functor $N' \mapsto \Hom_R(N, N')$ by
+Lemma \ref{lemma-hom-from-tensor-product}. Thus $M' \mapsto M' \otimes_R N$
+commutes with all colimits, see
+Categories, Lemma \ref{categories-lemma-adjoint-exact}.
+
+\medskip\noindent
+Second direct proof. Let $P = \colim (M_i \otimes N)$ with coprojections
+$\lambda_i : M_i \otimes N \to P$. Let $M = \colim M_i$ with coprojections
+$\mu_i : M_i \to M$. Then for all $i\leq j$, the following diagram commutes:
+$$
+\xymatrix{
+M_i \otimes N \ar[r]_{\mu_i \otimes 1} \ar[d]_{\mu_{ij} \otimes 1} &
+M \otimes N \ar[d]^{\text{id}} \\
+M_j \otimes N \ar[r]^{\mu_j \otimes 1} &
+M \otimes N
+}
+$$
+By Lemma \ref{lemma-homomorphism-limit} these maps induce a unique homomorphism
+$\psi : P \to M \otimes N$ such that
+$\mu_i \otimes 1 = \psi \circ \lambda_i$.
+
+\medskip\noindent
+To construct the inverse map, for each $i\in I$, there is the canonical
+$R$-bilinear mapping $g_i : M_i \times N \to
+M_i \otimes N$. This induces a unique mapping
+$\widehat{\phi} : M \times N \to P$
+such that $\widehat{\phi} \circ (\mu_i \times 1) = \lambda_i \circ g_i$.
+It is $R$-bilinear. Thus it induces an
+$R$-linear mapping $\phi : M \otimes N \to P$.
+From the commutative diagram below:
+$$
+\xymatrix{
+M_i \times N \ar[r]^{g_i} \ar[d]^{\mu_i \times \text{id}} &
+M_i \otimes N\ar[r]_{\text{id}} \ar[d]_{\lambda_i} &
+M_i \otimes N \ar[d]_{\mu_i \otimes \text{id}} \ar[rd]^{\lambda_i} \\
+M \times N \ar[r]^{\widehat{\phi}} &
+P \ar[r]^{\psi} & M \otimes N \ar[r]^{\phi} & P
+}
+$$
+we see that $\psi\circ\widehat{\phi} = g$, the canonical $R$-bilinear mapping
+$g : M \times N \to M \otimes N$. So
+$\psi\circ\phi$ is identity on $M \otimes N$. From the right-hand square and
+triangle, $\phi\circ\psi$ is also
+identity on $P$.
+\end{proof}

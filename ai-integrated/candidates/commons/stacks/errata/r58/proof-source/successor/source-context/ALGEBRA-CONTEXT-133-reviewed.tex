@@ -1,0 +1,84 @@
+\begin{lemma}
+\label{lemma-radicial-integral}
+Let $\varphi : R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item $\varphi$ is integral,
+\item $\varphi$ induces an injective map of spectra,
+\item $\varphi$ induces purely inseparable residue field extensions.
+\end{enumerate}
+Then $\varphi$ induces a homeomorphism from $\Spec(S)$ onto a closed
+subset of $\Spec(R)$ and for any ring map
+$R \to R'$ properties (1), (2), (3) are true for $R' \to R' \otimes_R S$.
+\end{lemma}
+
+\begin{proof}
+Put $I=\ker\varphi$. The original integral
+injection $R/I\to S$ gives image $V(I)$
+on spectra by lying over. More generally,
+for every ideal $J\subseteq S$, the
+map $R/\varphi^{-1}(J)\to S/J$ is an
+integral injection, since its monic
+equations are the images of the
+original ones. Its spectrum is
+surjective, so the image of $V(J)$
+is exactly $V(\varphi^{-1}(J))$.
+Thus the original spectrum map is
+closed. Its assumed injectivity
+makes it a homeomorphism onto
+the closed subset $V(I)$: closed
+subsets of the domain have closed
+images in this subspace, which
+proves continuity of the inverse.
+
+For any original $R\to R'$, write
+$S'=R'\otimes_R S$. Each original
+monic equation for $s\in S$ maps
+to the same monic equation for
+$1\otimes s$ with coefficients
+mapped into $R'$. Those elements
+generate $S'$ over $R'$, so
+integrality is preserved, including
+infinite generating families by
+the finite-support subring argument.
+Lemma \ref{lemma-radicial} supplies
+injectivity on spectra and pure
+inseparability of residue fields
+for this exact base-changed map.
+The preceding closed-image proof
+therefore applies to it as well.
+
+There is also an exact radical
+comparison for its kernel $I'$:
+$$
+\sqrt{I'}=\sqrt{IR'}.
+$$
+Indeed the original image is
+$V(I)$, and the explicit fibre
+construction in Lemma
+\ref{lemma-radicial} identifies the
+new image with its inverse image
+in $\Spec(R')$, namely $V(IR')$.
+Integrality also identifies the
+new image with $V(I')$. Equality
+of these closed sets gives the
+stated equality of radicals.
+The same formula in fact holds
+for every integral ring map:
+for a prime of $R'$ containing
+$IR'$, its contraction contains
+$I$, so lying over supplies a
+prime of $S$ above that contraction;
+the nonzero tensor of the two
+original residue fields supplies
+a prime after base change. This
+proves equality of the images
+without requiring uniqueness.
+Equality of the kernels themselves
+need not hold: the explicit cusp
+base change in Lemma
+\ref{lemma-2-3-ring-map} has $I=0$
+and $I'=(b)\neq0$ in $k[b]/(b^2)$,
+while both radicals are $(b)$.
+All comparisons concern the
+original extended ideal $IR'$.
+\end{proof}

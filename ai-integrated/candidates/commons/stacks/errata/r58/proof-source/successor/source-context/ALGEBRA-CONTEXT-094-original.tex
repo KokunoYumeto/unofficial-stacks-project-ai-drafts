@@ -1,0 +1,65 @@
+\begin{lemma}
+\label{lemma-polynomials-divide}
+Let $K$ be a field. Let $n, m \in \mathbf{N}$ and
+$a_0, \ldots, a_{n - 1}, b_0, \ldots, b_{m - 1} \in K$.
+If the polynomial $x^n + a_{n - 1}x^{n - 1} + \ldots + a_0$
+divides the polynomial $x^m + b_{m - 1} x^{m - 1} + \ldots + b_0$
+in $K[x]$ then
+\begin{enumerate}
+\item $a_0, \ldots, a_{n - 1}$ are integral over any subring
+$R_0$ of $K$ containing the elements $b_0, \ldots, b_{m - 1}$, and
+\item each $a_i$ lies in $\sqrt{(b_0, \ldots, b_{m-1})R}$
+for any subring $R \subset K$ containing the elements
+$a_0, \ldots, a_{n - 1}, b_0, \ldots, b_{m - 1}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $L/K$ be a field extension such that we can write
+$x^m + b_{m - 1} x^{m - 1} + \ldots + b_0 =
+\prod_{i = 1}^m (x - \beta_i)$ with $\beta_i \in L$.
+See Fields, Section \ref{fields-section-splitting-fieds}.
+Each $\beta_i$ is integral over $R_0$.
+Since each $a_i$ is a homogeneous polynomial in $\beta_1, \ldots, \beta_m$
+we deduce the same for the $a_i$
+(use Lemma \ref{lemma-integral-closure-is-ring}). This proves (1).
+
+\medskip\noindent
+Let $R$ be as in (2). Choose $c_0, \ldots, c_{m - n - 1} \in K$ such that
+$$
+\begin{matrix}
+x^m + b_{m - 1} x^{m - 1} + \ldots + b_0 =  \\
+(x^n + a_{n - 1}x^{n - 1} + \ldots + a_0)
+(x^{m - n} + c_{m - n - 1}x^{m - n - 1}+ \ldots + c_0).
+\end{matrix}
+$$
+This equation implies
+\begin{align*}
+c_{m - n - 1} & = b_{m - 1} - a_{n - 1}, \\
+c_{m - n - 2} & = b_{m - 2} - a_{n - 2} - a_{n - 1}c_{m - n - 1}, \\
+\ldots
+\end{align*}
+Thus $c_j \in R$ for all $j$. Dividing out the radical
+$\sqrt{(b_0, \ldots, b_{m - 1})}$ we get a reduced ring $\overline{R}$.
+We have to show that the images $\overline{a}_i \in \overline{R}$
+are zero. And in
+$\overline{R}[x]$ we have the relation
+$$
+\begin{matrix}
+x^m = x^m + \overline{b}_{m - 1} x^{m - 1} + \ldots + \overline{b}_0 = \\
+(x^n + \overline{a}_{n - 1}x^{n - 1} + \ldots + \overline{a}_0)
+(x^{m - n} + \overline{c}_{m - n - 1}x^{m - n - 1}+ \ldots + \overline{c}_0).
+\end{matrix}
+$$
+It is easy to see that this implies $\overline{a}_i = 0$ for all $i$. Indeed
+by Lemma \ref{lemma-minimal-prime-reduced-ring} the localization of
+$\overline{R}$ at a minimal prime $\mathfrak{p}$ is a field and
+$\overline{R}_{\mathfrak p}[x]$ a UFD. Thus
+$f = x^n + \sum \overline{a}_i x^i$
+is associated to $x^n$ and since $f$ is monic $f = x^n$
+in $\overline{R}_{\mathfrak p}[x]$.
+Then there exists an $s \in \overline{R}$, $s \not\in \mathfrak p$
+such that $s(f - x^n) = 0$.  Therefore all $\overline{a}_i$ lie
+in $\mathfrak p$ and we conclude by
+Lemma \ref{lemma-reduced-ring-sub-product-fields}.
+\end{proof}

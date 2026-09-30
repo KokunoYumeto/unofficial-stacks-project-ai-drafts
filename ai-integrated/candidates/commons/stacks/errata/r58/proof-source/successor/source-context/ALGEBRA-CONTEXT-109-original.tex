@@ -1,0 +1,29 @@
+\begin{lemma}
+\label{lemma-going-up-closed}
+Let $R \to S$ be a ring map. The following are equivalent:
+\begin{enumerate}
+\item Going up holds for $R \to S$, and
+\item the map $\Spec(S) \to \Spec(R)$ is closed.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+It is a general fact that specializations lift along a
+closed map of topological spaces, see
+Topology, Lemma \ref{topology-lemma-closed-open-map-specialization}.
+Hence the second condition implies the first.
+
+\medskip\noindent
+Assume that going up holds for $R \to S$.
+Let $V(I) \subset \Spec(S)$ be a closed set.
+We want to show that the image of $V(I)$ in $\Spec(R)$ is closed.
+The ring map $S \to S/I$ obviously satisfies going up.
+Hence $R \to S \to S/I$ satisfies going up,
+by Lemma \ref{lemma-going-up-down-composition}.
+Replacing $S$ by $S/I$ it suffices to show the image $T$
+of $\Spec(S)$ in $\Spec(R)$ is closed.
+By Topology, Lemmas \ref{topology-lemma-open-closed-specialization}
+and \ref{topology-lemma-lift-specializations-images} this
+image is stable under specialization. Thus the result follows
+from Lemma \ref{lemma-image-stable-specialization-closed}.
+\end{proof}

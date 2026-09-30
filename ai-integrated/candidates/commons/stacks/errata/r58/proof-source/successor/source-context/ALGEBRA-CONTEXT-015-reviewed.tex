@@ -1,0 +1,45 @@
+\begin{lemma}
+\label{lemma-in-image}
+Let $\varphi : R \to S$ be a ring map. Let $\mathfrak p$
+be a prime of $R$. The following are equivalent
+\begin{enumerate}
+\item $\mathfrak p$ is in the image of
+$\Spec(S) \to \Spec(R)$,
+\item $S \otimes_R \kappa(\mathfrak p) \not = 0$,
+\item $S_{\mathfrak p}/\mathfrak p S_{\mathfrak p} \not = 0$,
+\item $(S/\mathfrak pS)_{\mathfrak p} \not = 0$, and
+\item $\mathfrak p = \varphi^{-1}(\mathfrak pS)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We have already seen the equivalence of the first two
+in Remark \ref{remark-fundamental-diagram}.
+Put $T=R\setminus\mathfrak p$ and $Q=S/\mathfrak pS$, with
+$T$ acting on $Q$ through $\varphi$.
+The identifications in that remark identify the three rings in
+(2), (3), and (4) with $T^{-1}Q$. In particular the first map is
+$$
+S\otimes_R\kappa(\mathfrak p)\longrightarrow T^{-1}Q,\qquad
+s\otimes\overline{a/u}\longmapsto
+\frac{\varphi(a)s+\mathfrak pS}{u},
+$$
+where $a\in R$, $u\in T$, and the bar denotes the class in
+$R_{\mathfrak p}/\mathfrak pR_{\mathfrak p}$.
+The formula is $R$-balanced, respects multiplication, kills
+$\mathfrak pR_{\mathfrak p}$, and inverts every member of $T$.
+Its inverse sends $(s+\mathfrak pS)/u$ to
+$s\otimes\overline{1/u}$: the relations defining the quotient
+and localization hold because $\mathfrak p$ acts as zero and
+each $u\in T$ as a unit in the second tensor factor.
+Both composites are the identity on the displayed generators.
+The corresponding quotient-localization map is
+$s/\varphi(u)+\mathfrak pS_{\mathfrak p}\mapsto
+(s+\mathfrak pS)/u$, with the reverse formula as inverse.
+Finally, $T^{-1}Q$ is the zero ring if and only if there is
+$u\in T$ with $\varphi(u)\in\mathfrak pS$, by the equality
+criterion for $1/1=0/1$ in a localization.
+The ideal $\varphi^{-1}(\mathfrak pS)$ always contains
+$\mathfrak p$. Hence it misses $T$ if and only if it equals
+$\mathfrak p$. This proves the equivalence with (5).
+\end{proof}

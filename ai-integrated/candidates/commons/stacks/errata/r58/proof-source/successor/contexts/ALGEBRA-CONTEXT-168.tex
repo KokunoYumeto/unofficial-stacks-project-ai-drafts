@@ -1,0 +1,35 @@
+\begin{lemma}
+\label{editorial-source-lemma-artinian-radical-nilpotent}
+Let $R$ be Artinian. The Jacobson radical of $R$ is a nilpotent ideal.
+\end{lemma}
+
+\begin{proof}
+Let $I$ be the original Jacobson radical. By the descending
+chain condition applied to $I\supset I^2\supset\cdots$,
+choose $n\geq1$ such that $I^n=I^{n+1}$.
+Put $J=\operatorname{Ann}_R(I^n)=\{x\in R:xI^n=0\}$.
+If $J=R$, then $1\in J$ gives $I^n=0$, as desired.
+Otherwise the nonempty collection of ideals strictly containing
+$J$ has a minimal member $J'$: absence of a minimal member
+would let one choose an infinite strict descending chain in that
+collection, contradicting the hypothesis.
+The original quotient $J'/J$ is nonzero and has no nonzero
+proper submodule. Indeed the inverse image of such a submodule
+under $J'\to J'/J$ would be an ideal strictly between $J$ and
+$J'$. Hence $J'/J$ is simple.
+By Lemma \ref{editorial-source-lemma-characterize-length-1}, it is isomorphic
+to $R/\mathfrak m$ for some maximal ideal $\mathfrak m$.
+It follows that $\mathfrak mJ'\subset J$.
+
+Since $I\subset\mathfrak m$, for every $a\in I$ and $y\in J'$
+we have $ay\in J$. For every $b\in I^n$ this gives
+$b(ay)=0$. An element of $I^{n+1}=II^n$ is a finite sum
+$\sum_{j=1}^t a_jb_j$ with $a_j\in I$ and $b_j\in I^n$;
+its product with $y$ is the full sum
+$\sum_{j=1}^t b_j(a_jy)=0$.
+Thus $I^{n+1}J'=0$. The chosen equality $I^{n+1}=I^n$
+then gives $I^nJ'=0$, so every $y\in J'$ lies in
+$\operatorname{Ann}_R(I^n)=J$. This contradicts $J'\supsetneq J$.
+Therefore $J=R$ and $I^n=0$. No finite generation of $I^n$
+or Noetherian property has been assumed in this proof.
+\end{proof}

@@ -1,0 +1,126 @@
+\begin{lemma}
+\label{editorial-source-lemma-geometrically-connected}
+Let $k$ be a field.
+Let $R$ be a $k$-algebra.
+The following are equivalent
+\begin{enumerate}
+\item for every field extension $k'/k$ the
+spectrum of $R \otimes_k k'$ is connected, and
+\item for every finite separable field extension $k'/k$ the
+spectrum of $R \otimes_k k'$ is connected.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Condition (1) implies (2).
+Assume (2); its identity field
+extension says that $\Spec(R)$
+is connected and in particular
+nonempty, so $R\neq0$.
+Every scalar extension considered
+below is nonzero by extension
+of a vector-space basis.
+For these nonzero rings, Lemma
+\ref{algebra-lemma-characterize-spec-connected}
+identifies connectedness with
+absence of nontrivial idempotents.
+The nonzero condition cannot be
+omitted from that criterion:
+the zero ring has no nontrivial
+idempotents but has empty,
+nonconnected spectrum under
+Topology, Definition
+\ref{topology-definition-connected-components}.
+
+Let $k_s/k$ be the original
+separable algebraic closure.
+Every finite list of its
+elements lies in a finite
+separable subextension $E/k$.
+The original coefficient maps
+give the injective directed union
+$$
+R\otimes_k k_s=\bigcup_E R\otimes_k E.
+$$
+An idempotent in this union
+lies in one such tensor, and
+its equation is already true
+there by injectivity. By (2)
+it equals $0$ or $1$ there,
+hence in the union. This
+proves connectedness over $k_s$.
+
+For any original field $L/k$,
+choose a prime $\mathfrak a$
+of the nonzero ring $L\otimes_k k_s$
+and put
+$$
+F=\operatorname{Frac}((L\otimes_k k_s)/\mathfrak a).
+$$
+Its original field embeddings
+$a\mapsto[a\otimes1]$ and
+$b\mapsto[1\otimes b]$ are
+injective and agree on $k$.
+The scalar comparison maps
+$$
+(R\otimes_k k_s)\otimes_{k_s}F\longrightarrow R\otimes_k F,
+\qquad(r\otimes a)\otimes b\longmapsto r\otimes ab,
+$$
+and $r\otimes b\mapsto(r\otimes1)\otimes b$
+are inverse by balancing.
+The source has connected
+spectrum by Lemma
+\ref{editorial-source-lemma-separably-closed-connected},
+since both $R\otimes_k k_s$
+and the field $F$ do.
+The injection
+$R\otimes_k L\to(R\otimes_k L)\otimes_L F\simeq R\otimes_k F$
+reflects nontrivial idempotents,
+again by a vector-space basis
+and the displayed scalar maps.
+Thus $R\otimes_k L$ is nonzero
+and has no nontrivial idempotents.
+It is connected, proving (1).
+
+The same argument proves that
+connectedness after just the
+separable closure is an equivalent
+test. One may instead use the
+algebraic closure $\overline k$:
+the extension $\overline k/k_s$
+is purely inseparable, or the
+identity in characteristic zero.
+The original injection
+$R\otimes_k k_s\to R\otimes_k\overline k$
+is a homeomorphism on spectra
+by Lemma \ref{editorial-source-lemma-p-ring-map}
+and the same scalar comparison,
+so it preserves and reflects
+connectedness. Also finite Galois
+extensions suffice in (2): every
+finite separable $E/k$ embeds
+in a finite Galois $N/k$, and
+the injection $R\otimes_k E\to R\otimes_k N$
+reflects nontrivial idempotents
+and nonzeroness.
+
+Finally, for every original $L/k$,
+geometric connectedness of $R/k$
+is equivalent to geometric
+connectedness of $(R\otimes_k L)/L$.
+The forward direction uses
+the displayed scalar comparison
+for any $F/L$. For the reverse
+direction and any $E/k$, construct
+a common receiving field for
+$E$ and $L$ by the same
+prime-quotient construction.
+Geometric connectedness over
+$L$ gives connectedness of
+$R\otimes_k F$, and its
+injected subalgebra $R\otimes_k E$
+is nonzero and has no nontrivial
+idempotents. This proves the
+reverse implication with the
+original scalar actions.
+\end{proof}

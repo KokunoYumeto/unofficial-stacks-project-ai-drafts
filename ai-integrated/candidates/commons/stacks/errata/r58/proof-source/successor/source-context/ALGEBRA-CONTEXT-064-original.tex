@@ -1,0 +1,38 @@
+\begin{proposition}
+\label{proposition-Jacobson-permanence}
+Let $R$ be a Jacobson ring. Let $R \to S$ be a
+ring map of finite type. Then
+\begin{enumerate}
+\item The ring $S$ is Jacobson.
+\item The map $\Spec(S) \to \Spec(R)$ transforms
+closed points to closed points.
+\item For $\mathfrak m' \subset S$ maximal lying over $\mathfrak m \subset R$
+the field extension $\kappa(\mathfrak m')/\kappa(\mathfrak m)$
+is finite.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Let $\mathfrak m' \subset S$ be a maximal ideal and
+$R \cap \mathfrak m' = \mathfrak m$.
+Then $R/\mathfrak m \to S/\mathfrak m'$ satisfies
+the conditions of Lemma \ref{lemma-silly-jacobson}
+by Lemma \ref{lemma-Jacobson-mod-ideal}.
+Hence $R/\mathfrak m$ is a field and
+$\mathfrak m$ a maximal ideal and the induced
+residue field extension is finite. This proves (2) and (3).  
+
+\medskip\noindent
+If $S$ is not Jacobson, then by Lemma \ref{lemma-characterize-jacobson} there
+exists a non-maximal prime ideal $\mathfrak q$ of $S$ and an
+$g \in S$, $g \not\in \mathfrak q$ such that $(S/\mathfrak q)_g$ is a field.
+To arrive at a contradiction we show that $\mathfrak q$ is a maximal ideal.
+Let $\mathfrak p = \mathfrak q \cap R$. Then
+$R/\mathfrak p \to (S/\mathfrak q)_g$ satisfies the conditions of
+Lemma \ref{lemma-silly-jacobson} by
+Lemma \ref{lemma-Jacobson-mod-ideal}.
+Hence $R/\mathfrak p$ is a field and the field extension
+$\kappa(\mathfrak p) \to (S/\mathfrak q)_g = \kappa(\mathfrak q)$ is
+finite, thus algebraic. Then $\mathfrak q$ is a maximal ideal of $S$ by
+Lemma \ref{lemma-finite-residue-extension-closed}. Contradiction.
+\end{proof}

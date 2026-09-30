@@ -1,0 +1,57 @@
+\begin{lemma}
+\label{editorial-source-lemma-going-up-closed}
+Let $R \to S$ be a ring map. The following are equivalent:
+\begin{enumerate}
+\item Going up holds for $R \to S$, and
+\item the map $\Spec(S) \to \Spec(R)$ is closed.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write the original map as $\varphi:R\to S$ and its
+spectrum map as $f$. Suppose first that $f$ is closed.
+Given $\mathfrak p\subseteq\mathfrak p'$ and a prime
+$\mathfrak q$ of $S$ with $\varphi^{-1}(\mathfrak q)=\mathfrak p$,
+the closed set $V(\mathfrak q)$ contains $\mathfrak q$.
+Its image is closed and contains $\mathfrak p$, so it
+contains $\mathfrak p'$. Thus there exists
+$\mathfrak q'\in V(\mathfrak q)$ with
+$\varphi^{-1}(\mathfrak q')=\mathfrak p'$.
+This says $\mathfrak q\subseteq\mathfrak q'$ and proves
+going up. These are the exact prime maps in
+Topology, Lemma \ref{topology-lemma-closed-open-map-specialization}.
+
+Conversely suppose going up holds. For an original
+ideal $I\subseteq S$, the image of $V(I)$ is stable
+under specialization. Given a prime $\mathfrak q$
+containing $I$ and a specialization of its contraction,
+going up supplies a containing prime $\mathfrak q'$;
+it still contains the original $I$ and maps to that
+specialization. The quotient map $S\to S/I$ identifies
+$\Spec(S/I)$ with $V(I)$ by
+$\overline{\mathfrak q}\mapsto\{s:s+I\in\overline{\mathfrak q}\}$,
+with inverse $\mathfrak q\mapsto\mathfrak q/I$.
+The composite $R\to S/I$ has kernel $\varphi^{-1}(I)$.
+Applying Lemma \ref{editorial-source-lemma-image-stable-specialization-closed}
+to this composite proves not only that the image is
+closed but also the exact formula
+$$
+f(V(I))=V(\varphi^{-1}(I)).
+$$
+This proves closedness for every original closed set.
+The quotient map itself satisfies going up: a larger
+prime of $S$ above one containing $I$ also contains
+$I$, so its quotient supplies the lift. Together
+with Lemma \ref{editorial-source-lemma-going-up-down-composition}, this
+also verifies the composite-map argument in the original proof.
+
+More generally, for any ring map and any ideal $I$
+the same quotient comparison proves
+$$
+\overline{f(V(I))}=V(\varphi^{-1}(I)).
+$$
+Consequently going up is equivalent to the unclosed
+image equality for every $I$. Necessity was proved
+above; sufficiency implies every closed-set image is
+closed, so the first paragraph supplies the prime lift.
+\end{proof}

@@ -1,0 +1,35 @@
+\begin{lemma}
+\label{lemma-tensor-localization}
+Let $M$ be an $R$-module. Then the $S^{-1}R$-modules $S^{-1}M$
+and $S^{-1}R \otimes_R M$ are canonically isomorphic, and the
+canonical isomorphism $f : S^{-1}R \otimes_R M \to S^{-1}M$
+is given by
+$$
+f((a/s) \otimes m) = am/s, \forall a \in R, m \in M, s \in S
+$$
+\end{lemma}
+
+\begin{proof}
+Obviously, the map
+$f' : S^{-1}R \times M \to S^{-1}M$ given by $f'(a/s, m) = am/s$ is
+bilinear, and thus by the
+universal property, this map induces a unique $S^{-1}R$-module homomorphism
+$f : S^{-1}R \otimes_R M \to S^{-1}M$ as in the statement of the lemma.
+Actually every element in $S^{-1}M$ is of the form $m/s$, $m\in M, s\in S$ and
+every element in
+$S^{-1}R \otimes_R M$ is of the form $1/s \otimes m$. To see the latter fact,
+write an element in
+$S^{-1}R \otimes_R M$ as
+$$
+\sum_k \frac{a_k}{s_k} \otimes m_k =
+\sum_k \frac{a_k t_k}{s} \otimes m_k =
+\frac{1}{s} \otimes \sum_k {a_k t_k}m_k = \frac{1}{s} \otimes m
+$$
+Where $m = \sum_k {a_k t_k}m_k$. Then it is obvious that $f$ is surjective,
+and if $f(\frac{1}{s} \otimes m) = m/s = 0$ then there exists $t \in S$ with
+$tm = 0$ in $M$. Then we have
+$$
+\frac{1}{s} \otimes m = \frac{1}{st} \otimes tm = \frac{1}{st} \otimes 0 = 0
+$$
+Therefore $f$ is injective.
+\end{proof}

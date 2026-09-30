@@ -1,0 +1,34 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-over-field}
+Let $k$ be a field. Let $S$ be a $k$-algebra over $k$.
+\begin{enumerate}
+\item If $S$ is a domain and finite dimensional over $k$,
+then $S$ is a field.
+\item If $S$ is integral over $k$ and a domain,
+then $S$ is a field.
+\item If $S$ is integral over $k$ then every prime of
+$S$ is a maximal ideal (see
+Lemma \ref{algebra-lemma-ring-with-only-minimal-primes}
+for more consequences).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For (3), a quotient $S/\mathfrak q$ by any prime is an integral
+$k$-algebra and a domain. Its coefficient map from $k$ is injective,
+since the quotient is nonzero and $k$ is a field. Assertion (2)
+makes this quotient a field, hence $\mathfrak q$ is maximal.
+Let $S$ be integral over $k$ and assume $S$ is a domain.
+Take a nonzero $s\in S$. By Lemma
+\ref{editorial-source-lemma-characterize-integral} we may find a
+finite dimensional $k$-subalgebra $k \subset S' \subset S$
+containing $s$. This subalgebra is a domain since it is a subring
+of $S$. Once (1) is proved, $S'$ is a field and the inverse of
+the original nonzero $s$ belongs to $S'\subset S$, proving (2).
+For (1), assume that the original $S$ is finite dimensional over
+$k$ and is a domain. Pick a nonzero $s\in S$. The $k$-linear
+map $S\to S$, $a\mapsto sa$, is injective because $S$ is a
+domain and $s\ne0$. Equality of the finite source and target
+dimensions makes it surjective. A preimage $s_1$ of $1$ satisfies
+$ss_1=1$. Thus every nonzero element is invertible and $S$ is a field.
+\end{proof}

@@ -1,0 +1,188 @@
+# Formal smoothness: original lifts, exact splittings and nilpotent criteria
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:37795–38339, SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All source statements and original presentations remain identifiable. Complete arguments and extensions in this file are separate editorial material. The next source starts at 38340; only its opening through 38350 has been read. The bounded corpus query “formally smooth lifting” returned four routing records, three with PDF-only content and one with a TeX closure. They remain unread and are not mathematical evidence. No PDF fallback, exhaustive survey or novelty claim is made.
+
+## Square-zero lifts and the original conormal criterion
+
+Let \(R\to S\) be the original map. Formal smoothness requires a compatible lift \(S\to A\) of each \(R\)-algebra map \(S\to A/K\) whenever \(K^2=0\). For base change \(S'=R'\otimes_RS\), first obtain the compatible \(R\)-algebra lift \(\psi:S\to A\). With the specified map \(\eta:R'\to A\), the induced map is
+\[
+R'\otimes_RS\longrightarrow A,\qquad r'\otimes s\longmapsto\eta(r')\psi(s).
+\]
+The two maps agree on \(R\), so this map is well-defined; its reduction is the given map on \(S'\). For composition \(R\to S\to T\), first lift the restricted map \(S\to A/K\) over \(R\), then regard \(A\) as an \(S\)-algebra by that lift and lift \(T\to A/K\) over \(S\). The composite lift respects the original \(R\)-structure. For a polynomial algebra, including an arbitrary set of variables, choose the actual image lift of each variable and use its universal property.
+
+Let \(P\to S=P/J\) be the original polynomial presentation. Formal smoothness gives an \(R\)-algebra section \(\sigma:S\to P/J^2\) by applying the definition to the square-zero ideal \(J/J^2\). Conversely, for a given lifting problem choose \(\psi:P\to A\) lifting \(P\to S\to A/K\). Then \(\psi(J)\subset K\) and \(\psi(J^2)=0\). The required lift is exactly
+\[
+S\xrightarrow{\sigma}P/J^2\xrightarrow{\overline\psi}A.
+\]
+The same proof works for any formally smooth \(P/R\), since it was only the existence of \(\psi\) that used polynomiality.
+
+Put \(E=J/J^2\) and \(F=\Omega_{P/R}\otimes_PS\). The section criterion is equivalent to split exactness of
+\[
+0\longrightarrow E\xrightarrow{d}F\xrightarrow{p}\Omega_{S/R}\longrightarrow0.
+\]
+In the forward direction, reducing \(P\) modulo \(J^2\) does not change its differential module after tensoring with \(S\): every differential of a product in \(J^2\) becomes zero. A section of \(P/J^2\to S\) splits the square-zero conormal sequence, by the exact construction already verified in groups 903–904. Concretely, if \(D=P/J^2\) and \(\sigma:S\to D\) is the section, then \(a\mapsto a-\sigma(\bar a)\) is an \(R\)-derivation \(D\to J/J^2\): expanding the product leaves \(\sigma(\bar a)(b-\sigma(\bar b))+\sigma(\bar b)(a-\sigma(\bar a))\), since the product of two kernel elements is zero. Its induced map on \(F\) is a left inverse to \(d\).
+
+For the reverse direction choose the source splitting \(u:\Omega_{S/R}\to F\). For each \(\lambda\in S\), choose \(x_\lambda\in P\) and \(f_\lambda\in J\) with
+\[
+df_\lambda=dx_\lambda-u(d\lambda)\quad\hbox{in }F.
+\]
+Injectivity of \(d:E\to F\) means \(h\in J\) with \(dh=0\) in \(F\) belongs to \(J^2\). It follows that the class
+\[
+s(\lambda)=x_\lambda-f_\lambda\bmod J^2
+\]
+is independent of both choices: the difference from another choice belongs to \(J\) and has differential zero. Its additive defect
+\[
+x_\lambda+x_\mu-x_{\lambda+\mu}-f_\lambda-f_\mu+f_{\lambda+\mu}
+\]
+also belongs to \(J\) and has differential zero. For multiplication, use the exact Leibniz relation
+\[
+\lambda\,d\mu+\mu\,d\lambda-d(\lambda\mu)=0.
+\]
+The actual polynomial-ring element to test is
+\[
+H=x_\lambda x_\mu-x_{\lambda\mu}
+-x_\mu f_\lambda-x_\lambda f_\mu+f_{\lambda\mu}\in J.
+\]
+Its differential in \(F\) is
+\[
+\mu(dx_\lambda-df_\lambda)+\lambda(dx_\mu-df_\mu)
+-dx_{\lambda\mu}+df_{\lambda\mu}=0.
+\]
+Terms with coefficients \(f_\lambda,f_\mu\) vanish in \(F\). Thus \(H\in J^2\). Adding the retained term \(f_\lambda f_\mu\in J^2\) proves \(s(\lambda)s(\mu)=s(\lambda\mu)\). This corrects the original ideal-membership formula, which uses \(\lambda,\mu\in S\) as though they were elements of \(P\): use their actual chosen lifts \(x_\lambda,x_\mu\) in that formula. For \(r\in R\), let \(\lambda\) be its image in \(S\). Then \(r-x_\lambda+f_\lambda\in J\) and its differential is zero, so \(s(\lambda)=r\bmod J^2\). This also proves preservation of \(1\) and the specified \(R\)-structure, even when \(R\to S\) is not injective.
+
+The three original tensor-base errors at 37945, 38020 and 38138 retain MC-STK-ERR-0449, with tensor product over \(P\). The Leibniz product differential retains MC-STK-ERR-0450. Tensoring over \(R\) generally gives a different object: for \(R=k\), \(P=k[x]\), \(S=k=P/(x)\), the module \(\Omega_{P/R}\otimes_RS\) is \(k[x]\,dx\), whereas \(\Omega_{P/R}\otimes_PS=k\,dx\). The unscripted tensors in the other conormal formulas have the evident base \(P\) from their context and are retained as optional clarification. The source explicitly defines \(H_1(L_{S/R})\) at 35152–35176, so the repeated complaint about that notation is a nondefect.
+
+## Projective differentials and the direction of the splittings
+
+The section and split-conormal criteria imply that formal smoothness is equivalent to \(H_1(\mathrm{NL}_{S/R})=0\) and projectivity of \(\Omega_{S/R}\), with no finite generation assumed. Use the canonical polynomial presentation: its \(F\) is free on the original variables, and a split cokernel is projective. Conversely projectivity of the cokernel and vanishing of the kernel make its conormal sequence split, giving the section just constructed.
+
+For a formally smooth \(P/R\) and a surjection \(P\to S\), a chosen splitting of the polynomial presentation complex of \(P\) gives a homotopy retraction onto \(\Omega_{P/R}\) in degree zero. Tensoring these actual homotopy maps over \(P\) with \(S\) retains their identities; no flatness of \(S/P\) is needed. Thus \(H_1(\mathrm{NL}_{P/R}\otimes_PS)=0\). The original Jacobi–Zariski sequence then identifies the obstruction to injectivity of \(J/J^2\to\Omega_{P/R}\otimes_PS\) with \(H_1(L_{S/R})\). Its middle term is projective because \(\Omega_{P/R}\) is projective over \(P\). A split conormal sequence therefore gives projectivity of \(\Omega_{S/R}\) and the required vanishing. This verifies all directions of the source proposition without discarding the original tensor base.
+
+For \(A\to B\to C\) with \(B\to C\) formally smooth, the Jacobi–Zariski sequence and \(H_1(L_{C/B})=0\) give the initial injection in
+\[
+0\longrightarrow\Omega_{B/A}\otimes_BC\longrightarrow
+\Omega_{C/A}\longrightarrow\Omega_{C/B}\longrightarrow0.
+\]
+Projectivity of its last term gives the splitting. If instead \(A\to C\) is formally smooth and \(B\to C\) is onto with kernel \(J\), lift the identity of \(C\) to an \(A\)-algebra section \(C\to B/J^2\). The square-zero conormal construction above gives the source's split sequence even though \(B/A\) is not assumed formally smooth.
+
+Now take the source hypotheses \(A\to C\) surjective, \(A\to B\) formally smooth, \(I=\ker(A\to C)\), \(J=\ker(B\to C)\). The lifting diagram supplies
+\[
+\sigma:B\longrightarrow A/I^2
+\]
+both lifting the given map \(B\to C=A/I\) and commuting with the map from \(A\). The first condition is necessary to ensure \(\sigma(J)\subset I/I^2\); it is made explicit in the minimal source correction. Its restriction gives a map \(r:J/J^2\to I/I^2\), since \(\sigma(J^2)=0\). If \(\alpha:I/I^2\to J/J^2\) is induced by \(A\to B\), then
+\[
+r\alpha=1_{I/I^2}.
+\]
+This is a left inverse, not a two-sided inverse. Indeed \(A=C=k\), \(B=k[x]\), with \(x\mapsto0\), gives \(I/I^2=0\), \(J/J^2\cong k\), and nonzero cokernel \(\Omega_{B/A}\otimes_BC\cong k\). The original split short exact sequence is correct; the “inverse” wording in its proof must retain its direction.
+
+The two later uses of “section” in the square-zero base-lifting proof at 38142 and 38163 have the same direction: the map from the differential module to the conormal module is a left inverse to the differential. With \(d:E\to F\) and a lifted map \(r_0:F\to E\), put
+\[
+\Delta=1_E-r_0d.
+\]
+In the source setting \(\Delta(E)\subset IE\) and \(I^2=0\), so \(\Delta^2=0\). The correction can be chosen explicitly as \(\delta=\Delta r_0\). Then
+\[
+(r_0+\delta)d=(1_E+\Delta)(1_E-\Delta)=1_E.
+\]
+This supplies the exact corrected map asserted by the source, and proves its direction without an unspecified calculation.
+
+## Nilpotent base ideals and the exact conormal obstruction
+
+Here is a separate extension of the source square-zero theorem, using the original base-change obstruction of group 995. Let \(R\to S=P/J\), where \(P\) is any polynomial \(R\)-algebra, with any set of variables. Let \(I\subset R\) satisfy \(I^N=0\) for some integer \(N\ge1\). Write
+\[
+\bar R=R/I,\quad \bar P=P/IP,\quad \bar S=S/IS,\quad
+\bar J=(J+IP)/IP,\quad E=J/J^2,\quad F=\Omega_{P/R}\otimes_PS.
+\]
+The original conormal comparison is the surjection
+\[
+E/IE=J/(IJ+J^2)\longrightarrow
+\bar J/\bar J^2=J/(J^2+(J\cap IP)).
+\]
+Its exact kernel is
+\[
+\mathcal O_I(P,S)=\frac{J^2+(J\cap IP)}{J^2+IJ}.
+\]
+The long exact Tor sequence of \(0\to J\to P\to S\to0\), using \(R\)-flatness of the actual polynomial ring \(P\), identifies
+\[
+\operatorname{Tor}_1^R(S,R/I)\cong (J\cap IP)/IJ.
+\]
+The map from this module to \(E/IE\) sends the original class of \(j\) to its class modulo \(IJ+J^2\); its image is exactly \(\mathcal O_I(P,S)\). Thus the obstruction is an image of Tor, not automatically the whole Tor group.
+
+**Claim.** The original map \(R\to S\) is formally smooth if and only if \(\bar R\to\bar S\) is formally smooth and \(\mathcal O_I(P,S)=0\).
+
+If \(R\to S\) is formally smooth, base change gives formal smoothness of \(\bar S/\bar R\). The map \(d:E\to F\) has a left inverse, so \(E/IE\to F/IF\) is still split injective. It factors through the displayed surjection to \(\bar J/\bar J^2\), which is therefore also injective. Hence \(\mathcal O_I=0\).
+
+Conversely, assume these two conditions. The conormal comparison is now an isomorphism. The split conormal criterion over \(\bar R\) gives a left inverse
+\[
+\bar r:F/IF\longrightarrow E/IE
+\]
+to the reduced differential. Since \(F\) is the free \(S\)-module on the original polynomial variables, lift the image of each basis vector to obtain an \(S\)-linear map \(r_0:F\to E\). Define \(\Delta=1_E-r_0d\). Reduction modulo \(I\) is zero, so \(\Delta(E)\subset IE\). \(S\)-linearity then gives \(\Delta^q(E)\subset I^qE\) for every \(q\), by induction. In particular \(\Delta^N=0\). The finite formula
+\[
+r=(1_E+\Delta+\Delta^2+\cdots+\Delta^{N-1})r_0
+\]
+satisfies
+\[
+rd=(1_E+\Delta+\cdots+\Delta^{N-1})(1_E-\Delta)=1_E-\Delta^N=1_E.
+\]
+Thus the original conormal sequence splits, and the proved criterion gives formal smoothness of \(R\to S\). This argument needs no Noetherianity, no finite presentation and no finite rank for \(F\). It retains every term of the finite inverse and the original ideal power \(I^N\). Because the conclusion is intrinsic, vanishing of the obstruction under the stated reduced formal-smoothness hypothesis does not depend on the chosen polynomial presentation.
+
+In particular, \(\operatorname{Tor}_1^R(S,R/I)=0\) is a sufficient replacement for the source's global flatness assumption, for every nilpotent \(I\), not only \(I^2=0\). The exact necessary condition is the vanishing of its displayed image. The example below proves this distinction can be strict.
+
+## All lifts, finite relation errors and the finite-presentation boundary
+
+Fix an \(R\)-algebra map \(\varphi:S\to A/K\) with \(K^2=0\), and suppose it has one lift \(\psi:S\to A\). The \(S\)-action on \(K\) is induced by \(\varphi\): a choice of representative in \(A\) does not matter because two representatives differ by an element annihilating \(K\). For two lifts \(\psi,\psi'\), set \(D=\psi'-\psi\). Additivity and vanishing on \(R\) hold, and
+\[
+D(st)=\varphi(s)D(t)+\varphi(t)D(s)
+\]
+because the omitted product \(D(s)D(t)\) is exactly zero in \(K^2\). Conversely, for each such derivation \(D:S\to K\), the map \(\psi+D\) is multiplicative by this same equation, preserves \(R\), and preserves \(1\) since \(D(1)=D(1)+D(1)\) implies \(D(1)=0\). Consequently the lift set is a torsor under
+\[
+\operatorname{Der}_R(S,K)=\operatorname{Hom}_S(\Omega_{S/R},K):
+\]
+the action is addition, it is free, and every other lift differs by exactly one such map.
+
+If \(K^N=0\), every formally smooth \(S/R\) has a lift through \(A/K\to A\). Inductively lift from \(A/K^j\) to \(A/K^{j+1}\), for \(j=1,\ldots,N-1\); the kernel \(K^j/K^{j+1}\) is square zero since \(2j\ge j+1\). Each fibre of this successive lifting problem is the torsor just described, with coefficient module \(K^j/K^{j+1}\). Its \(S\)-action factors through the original \(\varphi\), since \(K\cdot K^j\subset K^{j+1}\). For \(N=1\) the original map is already the required lift. No finite presentation is needed for this nilpotent-ideal statement.
+
+For the source's stronger locally nilpotent-ideal theorem, keep a finite presentation
+\[
+S=R[x_1,\ldots,x_n]/(f_1,\ldots,f_m)
+\]
+of the smooth algebra and choose any original coordinate lifts \(a_i\in A\) of the given \(\varphi(x_i)\). Let
+\[
+e_j=f_j(a_1,\ldots,a_n)\in K,\qquad Q=(e_1,\ldots,e_m)\subset A.
+\]
+If each \(e_j^{b_j}=0\), then
+\[
+Q^{\,1+\sum_{j=1}^m(b_j-1)}=0.
+\]
+Indeed a monomial of that total degree in the \(m\) generators has some exponent at least \(b_j\); otherwise its total degree is at most \(\sum_j(b_j-1)\). Thus every product generator of this ideal power vanishes. If \(m=0\), take \(Q=0\) and exponent \(1\).
+
+Evaluation at the actual \(a_i\) gives an \(R\)-algebra map \(S\to A/Q\), since every original relation vanishes there. Smoothness implies formal smoothness, and the finite nilpotent lifting just proved gives a lift \(S\to A\) whose coordinate corrections lie in \(Q\). Because \(Q\subset K\), it lifts the original \(\varphi\). This proves the source theorem with an explicit finite ideal and exponent while retaining all original equations and coordinates. It also proves the sharper assertion for an arbitrary ideal \(K\) whenever these particular relation errors are nilpotent. It is a supplementary argument; the author's Noetherian-approximation proof remains identifiable.
+
+The finite-presentation distinction is real. Let \(k\) be a field and, for \(n\ge1\), put
+\[
+R_n=k[t_n]/(t_n^{2^n}),\qquad
+R_n\longrightarrow R_{n+1},\quad t_n\longmapsto t_{n+1}^{\,2}.
+\]
+These maps are injective: the basis \(1,t_n,\ldots,t_n^{2^n-1}\) maps to distinct monomials \(1,t_{n+1}^{2},\ldots,t_{n+1}^{2^{n+1}-2}\) in the next basis. Let \(R=\varinjlim R_n\) using these maps and \(J=(t_1,t_2,\ldots)\subset R\). Every element of \(J\) belongs to \((t_N)\subset R_N\) for some sufficiently large \(N\), and is therefore nilpotent. Every finite set of such elements generates a nilpotent ideal by the preceding finite-exponent argument. But \(J\) is not nilpotent: given \(q\ge1\), choose \(2^n>q\); the element \(t_n^q\ne0\) survives every injective transition and lies in \(J^q\). Also \(J=J^2\), because \(t_n=t_{n+1}^2\), and \(J\ne0\).
+
+The ring \(R\) is local with maximal ideal \(J\). Its quotient is \(k\), and every element with nonzero constant term is \(a(1+u)\), where \(a\in k^\times\), \(u\in J\) is nilpotent; the finite geometric sum in \(-u\) gives its inverse. Let \(S=R/J=k\). This quotient is formally smooth, with unique lifts in all square-zero problems: for any compatible \(R\to A\) and \(S\to A/K\), the image of \(J\) lies in \(K\), but \(J=J^2\) forces that image into \(K^2=0\). The original map \(R\to A\) therefore factors uniquely through \(S\).
+
+Nevertheless the diagram with target \(A=R\), ideal \(K=J\), bottom map \(R\to R\) the identity, and top map \(S\to R/J\) the identity has no compatible lift. Such a lift would make the identity map of \(R\) factor through its quotient by the nonzero \(J\). Here \(K\) is locally nilpotent, so formal smoothness alone does not imply the source's stronger lifting conclusion. Moreover \(S\) is a finite type \(R\)-algebra but is not finitely presented: if the quotient kernel \(J\) were finitely generated, \(J^2=J\) and Nakayama in the local ring \(R\) would give \(J=0\), a contradiction.
+
+This same example proves the exact obstruction criterion is sharper than Tor vanishing and flatness. Set \(I=(t_1)\subset R\), so \(I^2=0\). In the polynomial presentation with zero variables \(P=R\to S\), one has \(E=J/J^2=0\), hence \(\mathcal O_I(P,S)=0\). But
+\[
+\operatorname{Tor}_1^R(S,R/I)\cong I/IJ\ne0.
+\]
+The class of \(t_1\) is nonzero: if \(t_1\in IJ\), it can be written \(t_1=t_1v\) for one \(v\in J\); then \(1-v\) is a unit and forces \(t_1=0\), contrary to injectivity of the direct system. In particular \(S\) is not \(R\)-flat, since flatness would force this Tor group to vanish. The reduced map \(R/I\to S\) remains formally smooth by the already proved base-change property. Thus the necessary image obstruction vanishes although both proposed stronger requirements fail.
+
+## Finite witnesses, descent and report accounting
+
+For the source Noetherian approximation, retain every \(f_j\), every chosen section lift \(h_i\), and the actual polynomial identities
+\[
+x_i-h_i=\sum_j b_{ij}f_j,\qquad
+f_j(h_1,\ldots,h_n)=\sum_{j_1,j_2}a^{(j)}_{j_1j_2}f_{j_1}f_{j_2}.
+\]
+The witnesses on the right of the second identity are chosen for each original \(j\); the superscript here records that dependence in the editorial argument. Adjoin all coefficients of this finite list of polynomials to \(\mathbf Z\) inside \(R\). The first identities make the resulting \(\sigma_0\) a right inverse; the second identities make it an algebra map on the original quotient. Hence the resulting algebra is finitely presented and formally smooth, therefore smooth. For a filtered colimit \(A=\varinjlim A_i\), this finite type \(\mathbf Z\)-subring is finitely presented over the Noetherian ring \(\mathbf Z\); its map to \(A\) factors through one \(A_i\), and base change of its smooth algebra gives the required \(B_i\).
+
+For faithfully flat \(R\to R'\), the original kernel \(J\), its square and its conormal sequence base change exactly, by flatness. Faithful flatness detects the initial injection. The differential module becomes projective after this base change, so the previously proved descent theorem for arbitrary projective modules applies, not merely its finite version. The descended conormal sequence splits and the formal-smoothness criterion applies without adding finite-presentation assumptions.
+
+Sixteen reports receive twelve decision groups: five minimal grammar operations, four optional preferences, one nondefect rejection and two already-composed units. Four reports share the three tensor-base operations of MC-STK-ERR-0449; two share the single Leibniz operation of MC-STK-ERR-0450. Two additional groups propose two actual coefficient lifts in the polynomial-ring membership formula and four repairs specifying the commuting lift and left-inverse directions. Two consequence groups record the nilpotent conormal-obstruction criterion and the lifting torsors, finite-error bound and exact finite-presentation counterexample. Both have zero source operations. The prior More on Algebra findings at 1385 and 8502/8504 remain separately pending. Broader synthesis and any short paper remain after completion of the core correction work.

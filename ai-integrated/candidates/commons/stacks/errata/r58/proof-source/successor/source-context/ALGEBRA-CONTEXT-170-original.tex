@@ -1,0 +1,34 @@
+\begin{lemma}
+\label{lemma-artinian-finite-length}
+A ring $R$ is Artinian if and only if it has finite length
+as a module over itself. Any such ring $R$ is both Artinian and
+Noetherian, any prime ideal of $R$ is a maximal ideal, and $R$ is equal
+to the (finite) product of its localizations at its maximal ideals.
+\end{lemma}
+
+\begin{proof}
+If $R$ has finite length over itself then it satisfies both
+the ascending chain condition and the descending chain
+condition for ideals. Hence it is both Noetherian and Artinian.
+Any Artinian ring is equal to product of its localizations
+at maximal ideals by Lemmas \ref{lemma-artinian-finite-nr-max},
+\ref{lemma-artinian-radical-nilpotent}, and \ref{lemma-product-local}.
+
+\medskip\noindent
+Suppose that $R$ is Artinian. We will show $R$ has finite
+length over itself. It suffices to exhibit a chain of
+submodules whose successive quotients have finite length.
+By what we said above
+we may assume that $R$ is local, with maximal ideal $\mathfrak m$.
+By Lemma \ref{lemma-artinian-radical-nilpotent} we have
+$\mathfrak m^n =0$ for some $n$.
+Consider the sequence
+$0 = \mathfrak m^n \subset \mathfrak m^{n-1} \subset
+\ldots \subset \mathfrak m \subset R$. By Lemma
+\ref{lemma-dimension-is-length} the length of each subquotient
+$\mathfrak m^j/\mathfrak m^{j + 1}$ is the dimension of this
+as a vector space over $\kappa(\mathfrak m)$. This has to be
+finite since otherwise we would have an infinite descending
+chain of sub vector spaces which would correspond to an
+infinite descending chain of ideals in $R$.
+\end{proof}

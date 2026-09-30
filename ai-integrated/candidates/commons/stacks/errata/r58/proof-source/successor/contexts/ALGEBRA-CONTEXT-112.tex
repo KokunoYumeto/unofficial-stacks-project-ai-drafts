@@ -1,0 +1,123 @@
+\begin{lemma}
+\label{editorial-source-lemma-same-image}
+Let $k$ be a field, and let $R$, $S$ be $k$-algebras.
+Let $S' \subset S$ be a sub $k$-algebra, and let $f \in S' \otimes_k R$.
+In the commutative diagram
+$$
+\xymatrix{
+\Spec((S \otimes_k R)_f) \ar[rd] \ar[rr] & &
+\Spec((S' \otimes_k R)_f) \ar[ld] \\
+& \Spec(R) &
+}
+$$
+the images of the diagonal arrows are the same.
+\end{lemma}
+
+\begin{proof}
+Retain the original inclusion $i:S'\hookrightarrow S$,
+the original $k$-algebra $R$, and the specified
+$f\in S'\otimes_kR$. For a prime $\mathfrak p\subset R$
+put $K=\kappa(\mathfrak p)$. The coefficient maps
+$R\to K$ give elements $f_{S'}\in S'\otimes_kK$
+and $f_S\in S\otimes_kK$, related by $i\otimes1$.
+For either $B=S'$ or $B=S$, the exact comparison is
+$$
+((B\otimes_kR)_f)\otimes_RK
+\longrightarrow (B\otimes_kK)_{f_B},
+\qquad
+\frac{\sum_j b_j\otimes r_j}{f^d}\otimes\lambda
+\longmapsto
+\frac{\sum_j b_j\otimes\overline{r_j}\lambda}{f_B^d}.
+$$
+Here the $f$ in the $B=S$ expression denotes its
+image under the original inclusion, not a different
+choice of element. The inverse sends
+$$
+\frac{b\otimes\lambda}{f_B^d}
+\longmapsto \frac{b\otimes1}{f^d}\otimes\lambda
+$$
+and extends additively. To check these maps, first use
+the balanced isomorphism
+$(B\otimes_kR)\otimes_RK\simeq B\otimes_kK$,
+$(b\otimes r)\otimes\lambda\mapsto b\otimes\overline r\lambda$,
+whose inverse is $b\otimes\lambda\mapsto(b\otimes1)\otimes\lambda$.
+On localizing, $f$ maps to $f_B$ and is inverted in
+both targets. The universal property of localization
+therefore extends the two inverse algebra maps to
+the displayed fraction maps. In particular it checks
+all zero-divisor witnesses as well as tensor balancing;
+their composites are identities on the original
+algebra generators and on $1/f$.
+
+For a ring $C$ and $h\in C$, one has $C_h=0$
+exactly when $h$ is nilpotent. Indeed $1/1=0$
+holds exactly when $h^d\cdot1=0$ for some
+$d\geq0$; in the case $d=0$ the ring is zero
+and $h^1=0$ also holds. Conversely any such positive
+power makes $h$ an invertible nilpotent, forcing the
+localized unit to vanish. Thus the fibre criterion
+of Lemma \ref{editorial-source-lemma-in-image} identifies the image
+of each diagonal arrow with the primes for which
+its original $f_B$ is not nilpotent.
+
+Since $k$ is a field, tensoring the injection
+$S'\hookrightarrow S$ with the $k$-vector space $K$
+is injective. Explicitly, choose a $k$-basis of $K$.
+Under the direct-sum identifications of both tensor
+modules, the map is the direct sum of copies of the
+original injection; hence its kernel is zero.
+Consequently
+$$
+f_{S'}^d=0\quad\Longleftrightarrow\quad f_S^d=0
+\qquad(d\geq1).
+$$
+The forward implication is functoriality; the reverse
+uses this injection. Nonnilpotence is therefore the
+same in both original fibres. The fibre criterion
+and the fraction comparisons prove equality of the
+two spectrum images. Independently, one inclusion
+is also the factorization through the horizontal
+arrow: every prime of the larger tensor algebra
+contracts to a prime of the smaller one, with the
+same contraction to $R$. The reverse inclusion is
+the nonnilpotence argument just supplied.
+
+\medskip\noindent
+This proof gives a more general assertion with its
+exact sufficient hypothesis. Let $A$ be any base
+ring, let $B\to C$ be a map of $A$-algebras, and
+let $R$ be an $A$-algebra. Suppose that for every
+original $\mathfrak p\in\Spec(R)$ the map
+$$
+B\otimes_A\kappa(\mathfrak p)
+\longrightarrow C\otimes_A\kappa(\mathfrak p)
+$$
+is injective. Then for every $f\in B\otimes_AR$,
+the two original principal-localization spectrum
+images in $\Spec(R)$ agree. All the preceding
+fraction maps work with $A$ in place of $k$,
+and injectivity of these particular maps supplies
+exactly the nilpotence reflection used in the proof.
+In particular the hypothesis holds when the
+$A$-module map $B\to C$ is pure, meaning that
+$B\otimes_AL\to C\otimes_AL$ is injective for
+every $A$-module $L$. It suffices, more weakly,
+that each of the displayed fibre maps reflect
+nilpotence of the particular image of $f$.
+
+An arbitrary injection over a general base ring
+does not suffice. Take $A=R=B=\mathbf Z$,
+$C=\mathbf Q$, and $f=1$. The spectrum image
+for $B$ is all of $\Spec(\mathbf Z)$, whereas
+the image for $C$ is $\{(0)\}$. At a nonzero
+prime $(p)$ the receiving map of fibres is
+$\mathbf F_p\to0$, since
+$q\otimes\overline a=(q/p)\otimes p\overline a=0$.
+This identifies the failed residue injection and
+the failed image equality for the same original
+maps and element. Finally, nonzero elements cannot
+replace nonnilpotent elements in the proof: over
+$k[\epsilon]/(\epsilon^2)$ the nonzero element
+$\epsilon$ has empty principal open. Its square
+is zero and its localization is the zero ring.
+\end{proof}

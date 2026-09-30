@@ -1,0 +1,1772 @@
+\subsubsection{Flat modules and flat ring maps}
+\label{editorial-source-section-flat}
+
+\noindent
+One often used result is that if $M = \colim_{i\in \mathcal{I}} M_i$
+is a colimit of $R$-modules and if $N$ is an $R$-module then
+$$
+M \otimes N
+=
+\colim_{i\in \mathcal{I}} M_i \otimes_R N,
+$$
+see Lemma \ref{editorial-source-lemma-tensor-products-commute-with-limits}.
+This property is usually expressed by saying
+that {\it $\otimes$ commutes with colimits}.
+Another often used result is that if $0 \to N_1 \to N_2 \to N_3 \to 0$
+is an exact sequence and if $M$ is any $R$-module, then
+$$
+M \otimes_R N_1
+\to
+M \otimes_R N_2
+\to
+M \otimes_R N_3
+\to
+0
+$$
+is still exact, see Lemma \ref{algebra-lemma-tensor-product-exact}.
+Both of these properties tell us that the functor
+$N \mapsto M \otimes_R N$ {\it is right exact}.
+See Categories, Section \ref{categories-section-exact-functor}
+and Homology, Section \ref{homology-section-functors}.
+An $R$-module $M$ is flat if $N \mapsto N \otimes_R M$ is also left exact,
+i.e., if it is exact. Here is the precise definition.
+
+\begin{definition}
+\label{editorial-source-definition-flat}
+Let $R$ be a ring.
+\begin{enumerate}
+\item An $R$-module $M$ is called {\it flat} if whenever
+$N_1 \to N_2 \to N_3$ is an exact sequence of $R$-modules
+the sequence $M \otimes_R N_1 \to M \otimes_R N_2 \to M \otimes_R N_3$
+is exact as well.
+\item An $R$-module $M$ is called {\it faithfully flat} if the
+complex of $R$-modules
+$N_1 \to N_2 \to N_3$ is exact if and only if
+the sequence $M \otimes_R N_1 \to M \otimes_R N_2 \to M \otimes_R N_3$
+is exact.
+\item A ring map $R \to S$ is called {\it flat} if
+$S$ is flat as an $R$-module.
+\item A ring map $R \to S$ is called {\it faithfully flat} if
+$S$ is faithfully flat as an $R$-module.
+\end{enumerate}
+\end{definition}
+
+\noindent
+Here is an example of how you can use the flatness condition.
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-intersect-ideals}
+Let $R$ be a ring. Let $I, J \subset R$ be ideals. Let $M$ be a flat
+$R$-module. Then $IM\cap JM=(I\cap J)M$.
+More generally, if $A_1,\ldots,A_r$ are submodules of an
+$R$-module $N$, their tensors with $M$ identify with
+submodules of $N\otimes_R M$, and
+$$
+\left(\bigcap_{i=1}^r A_i\right)\otimes_R M
+\ \cong\ \bigcap_{i=1}^r(A_i\otimes_R M)
+$$
+under these original inclusions, for every finite $r\geq1$.
+\end{lemma}
+
+\begin{proof}
+In the original ideal case use the exact sequence
+$$
+0\longrightarrow I\cap J\longrightarrow R
+\longrightarrow R/I\oplus R/J,
+$$
+whose last map is $r\mapsto(r+I,r+J)$. Tensoring with $M$
+preserves exactness. The maps
+$$
+R\otimes_R M\longrightarrow M,\quad r\otimes m\longmapsto rm,
+\qquad
+(R/I)\otimes_R M\longrightarrow M/IM,\quad
+(r+I)\otimes m\longmapsto rm+IM
+$$
+are isomorphisms with inverses $m\mapsto1\otimes m$ and
+$m+IM\mapsto(1+I)\otimes m$ respectively. The latter is
+well-defined since each $a m$ with $a\in I$ maps to
+$(a+I)\otimes m=0$; their composites fix the original tensor
+generators and residue classes. The same formula applies to
+$J$. Tensor product respects the indicated finite direct sum
+by the component projections and inclusions. Thus the exact
+sequence becomes
+$$
+0\longrightarrow (I\cap J)\otimes_R M\longrightarrow M
+\longrightarrow M/IM\oplus M/JM.
+$$
+The middle kernel is $IM\cap JM$. The first map sends
+$a\otimes m$ to $am$, so its image is exactly $(I\cap J)M$.
+This proves the original equality.
+
+For the general statement, tensoring $0\to A_i\to N$ with
+$M$ proves that each original map $A_i\otimes_R M\to N\otimes_R M$
+is injective. For two submodules $A,B\subseteq N$, use
+$$
+0\longrightarrow A\cap B\longrightarrow N
+\longrightarrow (N/A)\oplus(N/B),\qquad
+n\longmapsto(n+A,n+B).
+$$
+After tensoring, exactness identifies
+$(A\cap B)\otimes_R M$ with the kernel of the two quotient
+maps. Right exactness for $A\to N\to N/A\to0$ identifies
+the kernel of the first quotient map with the image of
+$A\otimes_R M$; the sequence for $B$ identifies the other
+kernel. The kernel of the pair is their intersection, proving
+the displayed isomorphism for two submodules. Its map is
+induced by their original inclusions, so induction, intersecting
+the first $r-1$ submodules with $A_r$, proves the finite case.
+For $r=1$ it is the identity under the given inclusion.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-colimit-flat}
+Let $R$ be a ring. Let $\{M_i, \varphi_{ii'}\}$ be a directed system of
+flat $R$-modules. Then $\colim_i M_i$ is a flat $R$-module.
+\end{lemma}
+
+\begin{proof}
+Write $M=\colim_i M_i$ with its original structure maps
+$\lambda_i:M_i\to M$. For each module $N$, the natural
+isomorphism
+$$
+\colim_i(N\otimes_R M_i)\longrightarrow N\otimes_R M,
+\qquad [n\otimes m_i]\longmapsto n\otimes\lambda_i(m_i)
+$$
+is Lemma \ref{editorial-source-lemma-tensor-products-commute-with-limits};
+it commutes with every map of $N$ because both composites
+send the displayed generator to the tensor of its original
+image. Given an exact complex $N_1\to N_2\to N_3$, flatness
+of each $M_i$ makes its tensor complex exact at every stage.
+Lemma \ref{algebra-lemma-directed-colimit-exact} gives exactness of
+their directed colimit, and the displayed natural isomorphisms
+identify it with the tensor complex for $M$. This proves
+flatness without assuming that any transition map is injective.
+\end{proof}
+
+\begin{example}
+\label{editorial-source-example-flat-infinite-intersections}
+The finite-intersection assertion above cannot be extended to
+arbitrary families of ideals for all flat modules. Take
+$R=\mathbf Z$, $M=\mathbf Q$ and $I_n=2^n\mathbf Z$ for
+$n\geq1$. The module $\mathbf Q$ is flat by
+Lemma \ref{editorial-source-lemma-colimit-flat}: it is the colimit of copies
+of $\mathbf Z$ indexed by $n\geq1$, with transition from
+$n$ to $n+1$ multiplication by $n+1$ and structure map
+$a\mapsto a/n!$. These maps are compatible. Every rational
+$a/b$, $b\ne0$, has such a representation since $|b|$ divides
+$n!$ for $n\geq|b|$. Equality $a/n!=a'/m!$ is equivalent
+after a common stage $k\geq n,m$ to
+$a(k!/n!)=a'(k!/m!)$, which is exactly the colimit relation.
+Each copy of $\mathbf Z$ is flat because its tensor functor
+is the identity via $a\otimes n\mapsto an$ and inverse
+$n\mapsto1\otimes n$.
+
+An integer divisible by every $2^n$ must be zero: for a
+nonzero integer $a$, choose $n$ with $2^n>|a|$; it cannot
+be a nonzero multiple of $2^n$. Thus $\bigcap_{n\geq1}I_n=0$.
+On the other hand $I_nM=\mathbf Q$, since every original
+$q\in\mathbf Q$ equals $2^n(q/2^n)$. Therefore
+$$
+\left(\bigcap_{n\geq1}I_n\right)M=0
+\quad\hbox{whereas}\quad
+\bigcap_{n\geq1}(I_nM)=\mathbf Q.
+$$
+\end{example}
+
+\begin{lemma}
+\label{editorial-source-lemma-composition-flat}
+A composition of (faithfully) flat ring maps is
+(faithfully) flat.
+If $R \to R'$ is (faithfully) flat, and $M'$ is a
+(faithfully) flat $R'$-module, then $M'$ is a
+(faithfully) flat $R$-module.
+\end{lemma}
+
+\begin{proof}
+For every original $R$-module $N$ there are mutually inverse
+maps
+$$
+\begin{aligned}
+\theta_N:M'\otimes_{R'}(R'\otimes_R N)&\longrightarrow M'\otimes_R N,
+&m'\otimes(r'\otimes n)&\longmapsto r'm'\otimes n,\\
+\eta_N:M'\otimes_R N&\longrightarrow M'\otimes_{R'}(R'\otimes_R N),
+&m'\otimes n&\longmapsto m'\otimes(1\otimes n).
+\end{aligned}
+$$
+The first respects $R'$-balancing because multiplication by
+an $R'$-scalar can move between $m'$ and $r'$. It respects
+$R$-balancing in the inner tensor by the restricted $R$-action
+on $M'$. For the inverse, the equality
+$(rm')\otimes(1\otimes n)=m'\otimes(\varphi(r)\otimes n)
+=m'\otimes(1\otimes rn)$ proves $R$-balancing.
+The composite $\theta_N\eta_N$ fixes $m'\otimes n$, and
+$\eta_N\theta_N$ sends a generator to
+$r'm'\otimes(1\otimes n)=m'\otimes(r'\otimes n)$.
+Both maps commute with each homomorphism of $N$ on those
+generators, so they are natural. Here $\varphi:R\to R'$
+is the original ring map.
+
+If $R'$ is flat over $R$ and $M'$ flat over $R'$, apply
+their tensor functors successively to an exact complex
+$N_1\to N_2\to N_3$. Both steps preserve exactness, and
+$\theta_{N_i}$ identifies the resulting complex with
+$M'\otimes_R N_1\to M'\otimes_R N_2\to M'\otimes_R N_3$.
+This proves flatness over $R$. If both hypotheses are faithful,
+an arbitrary original complex is exact if and only if the
+first tensor complex is exact, and this in turn holds if
+and only if the second tensor complex is exact. The same
+natural maps prove faithful flatness over $R$. Taking $M'$
+to be the target ring of a second ring map gives the first
+assertion, for flat and faithfully flat maps alike.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat}
+Let $M$ be an $R$-module. The following are equivalent:
+\begin{enumerate}
+\item
+\label{editorial-source-item-flat}
+$M$ is flat over $R$.
+\item
+\label{editorial-source-item-injective}
+for every injection of $R$-modules $N \subset N'$
+the map $N \otimes_R M \to N'\otimes_R M$ is injective.
+\item
+\label{editorial-source-item-f-ideal}
+for every ideal $I \subset R$ the map
+$I \otimes_R M \to R \otimes_R M = M$ is injective.
+\item
+\label{editorial-source-item-ffg-ideal}
+for every finitely generated ideal $I \subset R$
+the map $I \otimes_R M \to R \otimes_R M = M$ is injective.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The successive implications
+$(\ref{editorial-source-item-flat})\Rightarrow(\ref{editorial-source-item-injective})
+\Rightarrow(\ref{editorial-source-item-f-ideal})\Rightarrow(\ref{editorial-source-item-ffg-ideal})$
+follow directly: apply flatness to $0\to N\to N'$, then
+specialize to inclusions $I\subseteq R$, and then to finitely
+generated ideals. We prove
+$(\ref{editorial-source-item-ffg-ideal})\Rightarrow(\ref{editorial-source-item-flat})$.
+Suppose that $N_1 \to N_2 \to N_3$ is exact.
+Let $K = \Ker(N_2 \to N_3)$ and $Q = \Im(N_2 \to N_3)$.
+Then we get maps
+$$
+N_1 \otimes_R M \to
+K \otimes_R M \to
+N_2 \otimes_R M \to
+Q \otimes_R M \to
+N_3 \otimes_R M
+$$
+Observe that the first and third arrows are surjective. Thus if we show
+that the second and fourth arrows are injective, then we are
+done\footnote{Here is the argument in more detail:
+Assume that we know that the second and fourth arrows are
+injective. Lemma \ref{algebra-lemma-tensor-product-exact} (applied
+to the exact sequence $K \to N_2 \to Q \to 0$) yields that
+the sequence $K \otimes_R M \to N_2 \otimes_R M \to
+Q \otimes_R M \to 0$ is exact. Hence,
+$\Ker \left(N_2 \otimes_R M \to Q \otimes_R M\right)
+= \Im \left(K \otimes_R M \to N_2 \otimes_R M\right)$.
+Since
+$\Im \left(K \otimes_R M \to N_2 \otimes_R M\right)
+= \Im \left(N_1 \otimes_R M \to N_2 \otimes_R M\right)$
+(due to the surjectivity of $N_1 \otimes_R M \to
+K \otimes_R M$) and
+$\Ker \left(N_2 \otimes_R M \to Q \otimes_R M\right)
+= \Ker \left(N_2 \otimes_R M \to N_3 \otimes_R M\right)$
+(due to the injectivity of $Q \otimes_R M \to
+N_3 \otimes_R M$), this becomes
+$\Ker \left(N_2 \otimes_R M \to N_3 \otimes_R M\right)
+= \Im \left(N_1 \otimes_R M \to N_2 \otimes_R M\right)$,
+which shows that the functor $- \otimes_R M$ is exact,
+whence $M$ is flat.}.
+Hence it suffices to show that $- \otimes_R M$ transforms
+injective $R$-module maps into injective $R$-module maps.
+
+\medskip\noindent
+Assume $K \to N$ is an injective $R$-module map and
+let $x \in \Ker(K \otimes_R M \to N \otimes_R M)$.
+We have to show that $x$ is zero.
+The $R$-module $K$ is the union of its finite
+$R$-submodules; hence, $K \otimes_R M$ is
+the colimit of $R$-modules of the form
+$K_i \otimes_R M$ where $K_i$ runs over all finite
+$R$-submodules of $K$
+(because tensor product commutes with colimits).
+Thus, for some $i$ our $x$ comes from an element
+$x_i \in K_i \otimes_R M$. Thus we may assume that $K$
+is a finite $R$-module. Assume this. We regard the
+injection $K \to N$ as an inclusion, so that
+$K \subset N$.
+
+\medskip\noindent
+The $R$-module $N$ is the union of its finite
+$R$-submodules that contain $K$. Hence, $N \otimes_R M$
+is the colimit of $R$-modules of the form
+$N_i \otimes_R M$ where $N_i$ runs over all finite
+$R$-submodules of $N$ that contain $K$
+(again since tensor product commutes with colimits).
+Notice that this is a colimit over a directed system
+(since the sum of two finite submodules of $N$ is
+again finite).
+Hence, (by Lemma \ref{algebra-lemma-zero-directed-limit})
+the element $x \in K \otimes_R M$ maps to
+zero in at least one of these $R$-modules
+$N_i \otimes_R M$ (since $x$ maps to zero
+in $N \otimes_R M$).
+Thus we may assume $N$ is a finite $R$-module.
+
+\medskip\noindent
+Assume $N$ is a finite $R$-module. Choose a surjection
+$R^{\oplus n}\to N$, put $L$ equal to its kernel, and let
+$L'$ be the inverse image of the original $K\subseteq N$.
+Then $L\subseteq L'\subseteq R^{\oplus n}$,
+$N=R^{\oplus n}/L$ and $K=L'/L$, under the quotient maps
+just specified. For any submodule $G\subseteq R^{\oplus n}$,
+the map $G\otimes_R M\to M^{\oplus n}$ sends
+$(g_1,\ldots,g_n)\otimes m$ to $(g_1m,\ldots,g_nm)$.
+Suppose these maps are injective for $G=L,L'$, and denote
+them by $\beta$ and $\beta'$ respectively. Tensoring the
+original inclusion gives the map in the direction
+$$
+\alpha:L\otimes_R M\longrightarrow L'\otimes_R M,
+\qquad \ell\otimes m\longmapsto\ell\otimes m,
+\qquad \beta'\alpha=\beta.
+$$
+It is injective since $\beta$ is injective. Right exactness
+identifies the original $K\otimes_R M$ with
+$(L'\otimes_R M)/\alpha(L\otimes_R M)$ and $N\otimes_R M$
+with $M^{\oplus n}/\beta(L\otimes_R M)$.
+The induced quotient map is injective: if
+$v\in L'\otimes_R M$ has $\beta'(v)=\beta(u)$ for some
+$u\in L\otimes_R M$, then
+$\beta'(v-\alpha(u))=0$, hence $v=\alpha(u)$ by injectivity
+of $\beta'$. This proves the required injection using the
+original inclusions, without a reverse map from $L'$ to $L$.
+
+\medskip\noindent
+Thus it suffices to show that $L \otimes_R M \to M^{\oplus n}$
+is injective when $L \subset R^{\oplus n}$ is an $R$-submodule.
+We do this by induction on $n$. If $n=0$, both $L$ and
+$M^{\oplus n}$ are zero, so the assertion holds. The base
+case $n=1$ is proved below.
+For the induction step assume $n > 1$ and set
+$L'=L\cap(R\oplus0^{\oplus n-1})$. It is isomorphic to
+the ideal $\{a\in R:(a,0,\ldots,0)\in L\}$ by the first
+coordinate map, with inverse $a\mapsto(a,0,\ldots,0)$.
+The last $n-1$ coordinate projection on $L$ has kernel $L'$,
+so it induces the injection
+$L''=L/L'\to R^{\oplus n-1}$ sending the class of
+$(a_1,\ldots,a_n)$ to $(a_2,\ldots,a_n)$.
+It is well-defined since elements of $L'$ have all these
+coordinates zero, and injective by the kernel equality.
+We obtain a diagram
+$$
+\xymatrix{
+&
+L' \otimes_R M \ar[r] \ar[d] &
+L \otimes_R M \ar[r] \ar[d] &
+L'' \otimes_R M \ar[r] \ar[d] &
+0 \\
+0 \ar[r] &
+M \ar[r] &
+M^{\oplus n} \ar[r] &
+M^{\oplus n - 1} \ar[r] & 0
+}
+$$
+The left vertical map is induced by the first coordinate,
+the right by the last $n-1$ coordinates, and the lower maps
+are the corresponding inclusion and projection. The upper
+row is right exact, the lower row is exact, and the squares
+commute on every tensor generator. The left and right
+vertical maps are injective by the base case and induction.
+If $v\in L\otimes_R M$ maps to zero in $M^{\oplus n}$,
+its image in $L''\otimes_R M$ maps to zero on the right and
+is therefore zero. Lift $v$ to $u\in L'\otimes_R M$ using
+upper-row exactness. Its image in $M$ maps to zero in
+$M^{\oplus n}$ and hence is zero, since the lower left map
+is injective. Left vertical injectivity now gives $u=0$ and
+then $v=0$, proving the middle injectivity.
+
+\medskip\noindent
+The base case of the induction above is when $L \subset R$ is an ideal.
+In other words, we have to show that $I \otimes_R M \to M$ is injective
+for any ideal $I$ of $R$. We know this is true when $I$ is finitely
+generated. However, $I = \bigcup I_\alpha$ is the union of the
+finitely generated ideals $I_\alpha$ contained in it. In other words,
+$I=\colim_\alpha I_\alpha$, over the directed set of finitely
+generated subideals; the sum of two such subideals contains
+both. Tensor-colimit compatibility gives
+$I\otimes_R M=\colim_\alpha(I_\alpha\otimes_R M)$.
+If an element of this colimit maps to zero in $M$, choose
+a representative $v_\alpha\in I_\alpha\otimes_R M$.
+Its image in $M$ is already zero. The assumed injectivity
+at that stage gives $v_\alpha=0$, so the original colimit
+element is zero. This proves the base case for every ideal,
+and completes the stated criterion.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-colimit-rings-flat}
+Let $\{R_i, \varphi_{ii'}\}$ be a system of rings over the directed set $I$.
+Let $R = \colim_i R_i$.
+\begin{enumerate}
+\item If $M$ is an $R$-module such that $M$ is flat as an $R_i$-module
+for all $i$, then $M$ is flat as an $R$-module.
+\item For $i \in I$ let $M_i$ be a flat $R_i$-module and
+for $i' \geq i$ let $f_{ii'} : M_i \to M_{i'}$ be a $\varphi_{ii'}$-linear
+map such that $f_{i' i''} \circ f_{i i'} = f_{i i''}$. Then
+$M = \colim_{i \in I} M_i$ is a flat $R$-module.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $\lambda_i:R_i\to R$ for the original ring maps and
+$\mu_i:M_i\to M$ for the module structure maps. Part (1)
+is the instance of part (2) with every $M_i=M$, acted on
+through $\lambda_i$, and all underlying transition maps the
+identity. They are semilinear because
+$\lambda_{i'}\varphi_{ii'}=\lambda_i$.
+
+We first specify the colimit constructions in part (2).
+Only a nonempty directed indexing set is needed; none of
+the arguments uses antisymmetry of its order. For a system
+of abelian groups $B_i$ with transition maps $b_{ij}$,
+the colimit is the direct sum of the $B_i$ modulo the
+subgroup generated by the original relations
+$\iota_i(x)-\iota_j(b_{ij}(x))$ for $i\leq j$.
+Every element has a representative at a single stage:
+move its finitely many summands to a common upper stage
+and add their images there. Two representatives $x_i,x_j$
+are equal in the colimit exactly when their images agree
+at some common upper stage. To prove the nontrivial
+direction, express their difference as a finite sum of
+the generating relations and move every stage occurring
+in that finite expression to one upper stage; compatibility
+kills each relation there. The converse follows from the
+defining transition relations. In particular a stage
+element represents zero exactly when its image is zero
+at a later stage. This description permits noninjective
+transition maps throughout.
+
+For $r=\lambda_i(r_i)$ and $m=\mu_j(m_j)$ choose $k\geq i,j$
+and define the original scalar action by
+$$
+rm=\mu_k\bigl(\varphi_{ik}(r_i)f_{jk}(m_j)\bigr).
+$$
+Changing either representative or the chosen upper stage
+does not change this element: move the relevant equalities
+to one further stage and use semilinearity and compatibility.
+The distributive laws and associativity of the action follow
+by moving all finitely many entries of each identity to one
+stage and applying its module axiom. The unit acts as the
+identity because $[f_{ik}(m_i)]=[m_i]$.
+
+Here is the varying-base tensor comparison needed below.
+Let $A_i$ be $R_i$-modules with compatible semilinear maps
+$h_{ij}:A_i\to A_j$, and put $A=\colim_i A_i$ with the
+same scalar construction and structure maps $\alpha_i$.
+There are transition maps
+$$
+\tau_{ij}:A_i\otimes_{R_i}M_i\longrightarrow A_j\otimes_{R_j}M_j,
+\qquad a_i\otimes m_i\longmapsto h_{ij}(a_i)\otimes f_{ij}(m_i).
+$$
+They are well-defined: the two images of the balancing
+relation $r_ia_i\otimes m_i=a_i\otimes r_im_i$ agree by
+$$
+\varphi_{ij}(r_i)h_{ij}(a_i)\otimes f_{ij}(m_i)
+=h_{ij}(a_i)\otimes\varphi_{ij}(r_i)f_{ij}(m_i).
+$$
+Let $T=\colim_i(A_i\otimes_{R_i}M_i)$ with maps $\theta_i$.
+The first comparison is
+$$
+F:T\longrightarrow A\otimes_R M,\qquad
+\theta_i\left(\sum_{\ell=1}^q a_{i,\ell}\otimes m_{i,\ell}\right)
+\longmapsto\sum_{\ell=1}^q
+\alpha_i(a_{i,\ell})\otimes\mu_i(m_{i,\ell}).
+$$
+Each stage formula respects balancing and every transition
+relation, so it defines a map of abelian groups. The scalar
+formula above makes it $R$-linear by moving a scalar and
+the tensor representative to one common stage.
+For the inverse, define an additive balanced pairing on
+representatives by
+$$
+B\bigl(\alpha_i(a_i),\mu_j(m_j)\bigr)
+=\theta_k\bigl(h_{ik}(a_i)\otimes f_{jk}(m_j)\bigr),
+\qquad k\geq i,j.
+$$
+Its value is independent of representatives and $k$:
+move any two eventual equalities of representatives and
+both choices of $k$ to one further stage, where the tensors
+are identical. Additivity is checked at a common stage for
+the two summands. For $r=\lambda_\ell(r_\ell)$, move
+$r,a,m$ to one stage $k$. Then
+$$
+B(ra,m)=\theta_k\bigl(\varphi_{\ell k}(r_\ell)a_k\otimes m_k\bigr)
+=\theta_k\bigl(a_k\otimes\varphi_{\ell k}(r_\ell)m_k\bigr)
+=B(a,rm).
+$$
+Thus $B$ induces an $R$-linear map $G:A\otimes_R M\to T$.
+On a pure tensor $FG$ gives
+$\alpha_k(h_{ik}(a_i))\otimes\mu_k(f_{jk}(m_j))
+=\alpha_i(a_i)\otimes\mu_j(m_j)$.
+On a stage tensor $GF$ gives its image at a common later
+stage, which is the same class $\theta_i(a_i\otimes m_i)$.
+Finite sums of these generators prove both composites are
+the identity. Hence the exact comparison, with both maps
+specified, is
+$$
+\colim_i(A_i\otimes_{R_i}M_i)
+\ \cong\ (\colim_i A_i)\otimes_R(\colim_i M_i).
+$$
+
+For completeness, stagewise injections induce an injection
+on these directed colimits. Indeed, for a compatible family
+of injections $u_i:X_i\to Y_i$, if $[x_i]$ maps to zero,
+then at a later stage $j$ compatibility gives $u_j(x_j)=0$.
+Stagewise injectivity gives $x_j=0$, hence $[x_i]=0$.
+This uses no injectivity of the transition maps.
+
+Now retain the original finitely generated ideal
+$\mathfrak a=(a_1,\ldots,a_n)\subseteq R$. Choose one stage
+$i$ containing representatives $a_{\ell,i}$ of all its
+generators, and put
+$$
+\mathfrak a'=(a_{1,i},\ldots,a_{n,i})\subseteq R_i,
+\qquad
+\mathfrak a_j=\mathfrak a'R_j
+=(\varphi_{ij}(a_{1,i}),\ldots,\varphi_{ij}(a_{n,i}))
+\quad(j\geq i).
+$$
+The tail $j\geq i$ is cofinal: every original representative,
+and every eventual equality, can be moved to a stage above
+both its original stage and $i$. It has the same ring and
+module colimits. The map
+$$
+\delta:\colim_{j\geq i}\mathfrak a_j\longrightarrow\mathfrak a,
+\qquad [x_j]\longmapsto\lambda_j(x_j)
+$$
+is surjective. For $x=\sum_{\ell=1}^n r_\ell a_\ell$,
+choose a stage $j\geq i$ representing all $r_\ell$ and use
+$x_j=\sum_{\ell=1}^n r_{\ell,j}\varphi_{ij}(a_{\ell,i})$.
+It is injective: if $\lambda_j(x_j)=0$ in $R$, some
+$k\geq j$ has $\varphi_{jk}(x_j)=0$ in $R_k$; because
+$\mathfrak a_k$ is an actual ideal in that ring, the image
+is zero in $\mathfrak a_k$ itself. This proves that the
+inverse formula $x\mapsto[x_j]$ is independent of its
+expression and representatives; equal expressions differ
+by an element eventually zero in the original ring system.
+Both maps respect the scalar action and fix the represented
+elements in their composites.
+
+Apply the proved tensor comparison to $A_j=\mathfrak a_j$.
+It identifies
+$$
+\colim_{j\geq i}(\mathfrak a_j\otimes_{R_j}M_j)
+\ \cong\ \mathfrak a\otimes_R M.
+$$
+For every $j$, flatness of $M_j$ makes
+$\mathfrak a_j\otimes_{R_j}M_j\to M_j$ injective. Its
+formula is $x_j\otimes m_j\mapsto x_jm_j$, and compatibility
+of these maps is exactly semilinearity of $f_{jk}$.
+Their colimit is injective by the element argument above.
+Under the displayed comparison it is the original map
+$\mathfrak a\otimes_R M\to M$, $a\otimes m\mapsto am$.
+Lemma \ref{editorial-source-lemma-flat} now proves flatness of $M$.
+The zero ideal, including a presentation with no generators,
+has zero tensor product and requires no exception.
+
+The comparison also proves the full injection criterion
+directly. For an injection $N'\to N$ of $R$-modules, regard
+both as constant underlying systems with restricted
+$R_i$-actions and identity transition maps. Each
+$N'\otimes_{R_i}M_i\to N\otimes_{R_i}M_i$ is injective.
+Their colimit comparison is exactly
+$N'\otimes_R M\to N\otimes_R M$, hence it is injective.
+This gives a second proof with all original modules retained.
+
+The explicitly displayed composition law for $f_{ij}$ also
+suffices if identities on the diagonal were not stipulated.
+Indeed $e_i=f_{ii}$ is an idempotent $R_i$-linear map and
+$$
+M_i=\operatorname{Im}(e_i)\oplus\operatorname{Ker}(e_i),
+\qquad m_i=e_i(m_i)+(m_i-e_i(m_i)).
+$$
+The intersection of the two summands is zero since $e_i$
+is the identity on its image. Each summand of a flat module
+is flat: its tensor map on any injection is a direct summand
+of the injective tensor map for $M_i$. Compatibility gives
+$f_{ij}=e_jf_{ij}=f_{ij}e_i$, so the restrictions to
+$\operatorname{Im}(e_i)$ form a genuine directed system.
+The colimit by all the original relations is isomorphic to
+the colimit of these images. The maps send $[m_i]$ to
+$[e_i(m_i)]$ and an image representative to $[m_i]$ in the
+original colimit; they respect transitions by the displayed
+identities and are inverse because $[e_i(m_i)]=[m_i]$ is
+one of the original relations. Thus no extra identity
+hypothesis is needed for the flatness conclusion.
+
+\medskip\noindent
+We record exactly what is additionally needed for faithful
+flatness. For a maximal ideal $\mathfrak m\subset R$ set
+$\mathfrak m_i=\lambda_i^{-1}(\mathfrak m)$. Each is a
+proper prime, though it need not be maximal in $R_i$, and
+$\varphi_{ij}^{-1}(\mathfrak m_j)=\mathfrak m_i$.
+Consequently the induced maps $R_i/\mathfrak m_i\to R_j/\mathfrak m_j$
+are injective. The comparison
+$$
+\colim_i(R_i/\mathfrak m_i)\longrightarrow R/\mathfrak m,
+\qquad [r_i+\mathfrak m_i]\longmapsto\lambda_i(r_i)+\mathfrak m
+$$
+is surjective by representatives and injective because an
+element mapping to zero already has $r_i\in\mathfrak m_i$.
+Its inverse sends any representative $\lambda_i(r_i)+\mathfrak m$
+to $[r_i+\mathfrak m_i]$; the same zero test proves independence
+of the choice. Applying the varying-base tensor comparison
+gives
+$$
+M/\mathfrak mM\ \cong\
+\colim_i(M_i/\mathfrak m_iM_i).
+$$
+Here the stage quotient-tensor isomorphism sends
+$(r_i+\mathfrak m_i)\otimes u_i$ to
+$r_iu_i+\mathfrak m_iM_i$ and has inverse
+$u_i+\mathfrak m_iM_i\mapsto(1+\mathfrak m_i)\otimes u_i$.
+The same formulas identify the receiving quotient over $R$.
+Balancing makes both maps well-defined, and both composites
+fix the indicated generators. Thus the original transition
+on the right is
+$u_i+\mathfrak m_iM_i\mapsto f_{ij}(u_i)+\mathfrak m_jM_j$,
+and the receiving map is
+$u_i+\mathfrak m_iM_i\mapsto\mu_i(u_i)+\mathfrak mM$.
+The eventual-zero rule now proves
+$$
+\mu_i(u_i)+\mathfrak mM=0
+\quad\Longleftrightarrow\quad
+f_{ij}(u_i)\in\mathfrak m_jM_j\text{ for some }j\geq i.
+$$
+
+A flat module is faithfully flat exactly when all these
+maximal-ideal quotients are nonzero. Here is the full
+argument, using the definition by exactness reflection.
+Faithful flatness detects nonzero modules by applying that
+definition to $0\to N\to0$, and in particular detects
+$N=R/\mathfrak m$. Conversely suppose all the quotients
+are nonzero. Given $0\ne n\in N$, let
+$J=\operatorname{Ann}_R(n)$, choose a maximal ideal
+$\mathfrak m\supseteq J$, and retain the injection
+$R/J\to N$, $r+J\mapsto rn$. The module $M/JM$ surjects
+onto the nonzero $M/\mathfrak mM$, so it is nonzero.
+Flatness makes $(R/J)\otimes_R M=M/JM\to N\otimes_R M$
+injective, proving $N\otimes_R M\ne0$ for every nonzero $N$.
+
+To deduce exactness reflection, take an original complex
+$N_1\xrightarrow{d_1}N_2\xrightarrow{d_2}N_3$ and write
+$J=\operatorname{Im}(d_1)\subseteq K=\operatorname{Ker}(d_2)$.
+Flatness embeds $J\otimes_R M$ and $K\otimes_R M$ in
+$N_2\otimes_R M$. The exact sequences defining image and
+kernel identify them with the tensor image and tensor
+kernel, respectively: the map $N_1\to J$ is surjective,
+and $0\to K\to N_2\to N_3$ stays exact. Right exactness
+for $J\to K\to K/J\to0$ then identifies
+$$
+(K/J)\otimes_R M\ \cong\
+\operatorname{Ker}(d_2\otimes\mathrm{id}_M)ig/
+\operatorname{Im}(d_1\otimes\mathrm{id}_M).
+$$
+These are the maps induced by the original inclusions and
+quotient $K\to K/J$, so the identification respects those
+original submodules. If the tensor complex is exact, this
+quotient is zero. Nonzero-module detection gives $K/J=0$,
+hence the original complex is exact. This proves the criterion.
+
+Combining it with the exact quotient comparison proves:
+$M$ is faithfully flat over $R$ if and only if, for every
+maximal $\mathfrak m\subset R$, there are an index $i$ and
+$u_i\in M_i$ such that
+$$
+f_{ij}(u_i)\notin\mathfrak m_jM_j
+\quad\hbox{for every }j\geq i.
+$$
+This quantifier keeps the same original element at every
+later stage. It cannot be replaced by merely having a
+nonzero quotient at each stage.
+
+For example take constant $R_i=k$ and $M_i=k$ over a
+nonzero field, indexed by $i\in\mathbf Z_{\geq0}$, with
+identity ring maps and $f_{ij}=0$ for $i<j$, $f_{ii}$ the
+identity. Each stage module is faithfully flat, but every
+element dies at the next stage, so $R=k$ and $M=0$.
+Even injective module transitions do not suffice. Take
+$R_i=M_i=\mathbf Z$ with identity ring maps and
+$f_{ij}(a)=2^{j-i}a$. The map $[a\text{ at }i]\mapsto a/2^i$
+identifies $M$ with $\mathbf Z[1/2]$: it is surjective by
+the description of its elements, and equality of two
+fractions is exactly equality after multiplication to a
+common power-of-two denominator. Every stage is faithfully
+flat and every transition injective, but $M/2M=0$ since
+$a/2^i=2(a/2^{i+1})$, so $M$ is not faithfully flat.
+
+A useful sufficient condition follows with the actual
+residue maps retained. Suppose every $M_i$ is faithfully
+flat and, for each maximal $\mathfrak m\subset R$, there
+is a tail $i\geq i_0$ on which all maps
+$M_i/\mathfrak m_iM_i\to M_j/\mathfrak m_jM_j$ are injective.
+Faithful flatness at $i_0$ makes its quotient nonzero because
+$R_{i_0}/\mathfrak m_{i_0}\ne0$. A nonzero element there
+remains nonzero at every later stage, which is precisely
+the necessary and sufficient condition just proved.
+
+One condition on the original transitions that guarantees
+this is purity of the scalar-extended maps
+$$
+g_{ij}:R_j\otimes_{R_i}M_i\longrightarrow M_j,
+\qquad r_j\otimes u_i\longmapsto r_jf_{ij}(u_i).
+$$
+Here purity means that tensoring this map with every
+$R_j$-module gives an injection. The formula is balanced
+by semilinearity, so $g_{ij}$ is an $R_j$-linear map.
+The contraction equality gives an injection of
+$R_i$-modules $R_i/\mathfrak m_i\to R_j/\mathfrak m_j$.
+Flatness of $M_i$ and then purity give injections
+$$
+(R_i/\mathfrak m_i)\otimes_{R_i}M_i
+\longrightarrow (R_j/\mathfrak m_j)\otimes_{R_i}M_i
+\longrightarrow (R_j/\mathfrak m_j)\otimes_{R_j}M_j.
+$$
+For the second map the associativity comparison sends
+$(s_j+\mathfrak m_j)\otimes(r_j\otimes u_i)$ to
+$(s_jr_j+\mathfrak m_j)\otimes u_i$ and has inverse
+$(s_j+\mathfrak m_j)\otimes u_i\mapsto
+(s_j+\mathfrak m_j)\otimes(1\otimes u_i)$; balancing and
+these formulas verify both composites. Under the quotient
+identifications, the composite injection is exactly
+$u_i+\mathfrak m_iM_i\mapsto f_{ij}(u_i)+\mathfrak m_jM_j$.
+Thus faithful flatness of the stages together with these
+pure transition maps suffices.
+
+If $R=0$, its unital action forces $M=0$. The only unital
+module over that ring is zero, so its tensor functor
+preserves and reflects exactness; it is faithfully flat in
+the stated sense. The maximal-ideal criterion gives the
+same result because there are no maximal ideals.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-base-change}
+Suppose that $M$ is (faithfully) flat over $R$, and that $R \to R'$
+is a ring map. Then $M \otimes_R R'$ is (faithfully) flat over $R'$.
+\end{lemma}
+
+\begin{proof}
+For every original $R'$-module $N$, define
+$$
+\begin{aligned}
+\theta_N:N\otimes_{R'}(R'\otimes_R M)&\longrightarrow N\otimes_R M,
+&n\otimes(r'\otimes m)&\longmapsto r'n\otimes m,\\
+\eta_N:N\otimes_R M&\longrightarrow N\otimes_{R'}(R'\otimes_R M),
+&n\otimes m&\longmapsto n\otimes(1\otimes m).
+\end{aligned}
+$$
+The first formula respects the outer $R'$-balancing and the
+inner $R$-balancing by the original $R'$-action on $N$.
+The inverse respects $R$-balancing because
+$(rn)\otimes(1\otimes m)=n\otimes(\varphi(r)\otimes m)
+=n\otimes(1\otimes rm)$. Both composites fix the tensor
+generators, using $r'n\otimes(1\otimes m)=n\otimes(r'\otimes m)$.
+The formulas also commute with every $R'$-linear map of $N$.
+The flip $M\otimes_R R'\to R'\otimes_R M$, $m\otimes r'\mapsto r'\otimes m$,
+identifies the module in the statement with this one and is
+its own inverse after reversing the factors. Exactness of a
+complex of $R'$-modules is equivalent to exactness of its
+underlying $R$-module complex, since kernels and images are
+the same subsets. Apply flatness, or preservation and
+reflection of exactness, for the original $M$ over $R$ and
+then use the displayed natural maps. This proves both claims.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flatness-descends}
+Let $R \to R'$ be a faithfully flat ring map.
+Let $M$ be a module over $R$, and set $M' = R' \otimes_R M$.
+Then $M$ is flat over $R$ if and only if $M'$ is flat over $R'$.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{editorial-source-lemma-flat-base-change} we see that if $M$ is flat
+then $M'$ is flat. For the converse, suppose that $M'$ is flat.
+Let $N_1 \to N_2 \to N_3$ be an exact sequence of $R$-modules.
+We want to show that $N_1 \otimes_R M \to N_2 \otimes_R M \to N_3 \otimes_R M$
+is exact. We know that
+$N_1 \otimes_R R' \to N_2 \otimes_R R' \to N_3 \otimes_R R'$ is
+exact, because $R \to R'$ is flat. Flatness of $M'$ implies that
+$N_1 \otimes_R R' \otimes_{R'} M'
+\to N_2 \otimes_R R' \otimes_{R'} M'
+\to N_3 \otimes_R R' \otimes_{R'} M'$ is exact.
+The exact natural comparison for every original $N$ is
+$$
+\begin{split}
+(N\otimes_R R')\otimes_{R'}(R'\otimes_R M)
+&\longrightarrow (N\otimes_R M)\otimes_R R',\\
+(n\otimes a)\otimes(b\otimes m)&\longmapsto(n\otimes m)\otimes ab.
+\end{split}
+$$
+Its inverse sends $(n\otimes m)\otimes c$ to
+$(n\otimes c)\otimes(1\otimes m)$. All $R$-balancing
+relations follow from the original coefficient map $R\to R'$;
+the $R'$-balancing relation moves a scalar between $a$ and
+$b$ and preserves their product $ab$. These observations
+make both maps well-defined. One composite fixes
+$(n\otimes m)\otimes c$. The other gives
+$(n\otimes ab)\otimes(1\otimes m)
+=(n\otimes a)\otimes(b\otimes m)$ by $R'$-balancing.
+Their formulas commute with every map of $N$. Thus the
+exact complex above is the tensor with $R'$ of the original
+complex $N_1\otimes_R M\to N_2\otimes_R M\to N_3\otimes_R M$.
+Faithful flatness of $R'$ over $R$ reflects exactness, so
+this original complex is exact, as required.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flatness-descends-more-general}
+Let $R$ be a ring. Let $S \to S'$ be a flat map of $R$-algebras.
+Let $M$ be a module over $S$, and set $M' = S' \otimes_S M$.
+\begin{enumerate}
+\item If $M$ is flat over $R$, then $M'$ is flat over $R$.
+\item If $S \to S'$ is faithfully flat, then $M$ is flat
+over $R$ if and only if $M'$ is flat over $R$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $f:N\to N'$ be an injection of $R$-modules and put
+$K=\Ker(f\otimes\mathrm{id}_M)$. The map
+$f\otimes\mathrm{id}_M:N\otimes_R M\to N'\otimes_R M$
+is $S$-linear, with the $S$-action on its $M$ factor, so
+$K$ is an $S$-module. Tensoring its defining exact sequence
+with the flat $S$-module $S'$ identifies $K\otimes_S S'$
+with the kernel after that tensor operation. For every $N$
+the precise comparison is
+$$
+\begin{split}
+(N\otimes_R M)\otimes_S S'&\longrightarrow
+N\otimes_R(S'\otimes_S M),\\
+(n\otimes m)\otimes s'&\longmapsto n\otimes(s'\otimes m),
+\end{split}
+$$
+with inverse $n\otimes(s'\otimes m)\mapsto(n\otimes m)\otimes s'$.
+The $S$-balancing relations agree on the two sides by moving
+the original $S$-scalar between $m$ and $s'$; the $R$-balancing
+relations agree through $R\to S\to S'$. The composites fix
+the generators, and the formulas commute with $f$. Consequently
+the kernel identification is exactly
+$$
+K\otimes_S S'\ \cong\
+\Ker(N\otimes_R M'\longrightarrow N'\otimes_R M').
+$$
+If $M$ is flat over $R$, then $K=0$, so the right kernel
+vanishes for every injection $f$ and Lemma \ref{editorial-source-lemma-flat}
+gives flatness of $M'$ over $R$. Conversely, if $M'$ is
+flat, then $K\otimes_S S'=0$. When $S'$ is faithfully flat
+over $S$, apply reflection of exactness to the complex
+$0\to K\to0$: its tensor complex is exact, hence $K=0$.
+The same criterion now gives flatness of $M$ over $R$.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-permanence}
+Let $R \to S$ be a ring map. Let $M$ be an $S$-module.
+If $M$ is flat as an $R$-module and faithfully flat as an $S$-module,
+then $R\to S$ is flat.
+More generally, whenever $M$ is faithfully flat over $S$,
+the map $R\to S$ is flat (respectively faithfully flat)
+if and only if $M$ is flat (respectively faithfully flat)
+as an $R$-module.
+\end{lemma}
+
+\begin{proof}
+For every original $R$-module $N$, the comparison
+$$
+(N\otimes_R S)\otimes_S M\longrightarrow N\otimes_R M,
+\qquad (n\otimes s)\otimes m\longmapsto n\otimes sm
+$$
+has inverse $n\otimes m\mapsto(n\otimes1)\otimes m$.
+Balancing over $S$ preserves the product $sm$, and balancing
+over $R$ is compatible with the restricted action on $M$.
+Both composites fix the generators; for one of them use
+$(n\otimes1)\otimes sm=(n\otimes s)\otimes m$.
+These maps are natural in $N$.
+
+If $M$ is flat over $R$, an exact complex
+$N_1\to N_2\to N_3$ stays exact after tensoring with $M$.
+The comparison identifies this with the result of first
+tensoring with $S$ and then with $M$ over $S$. Faithful
+flatness over $S$ reflects exactness, so the first tensor
+complex is exact. This proves the original conclusion that
+$R\to S$ is flat. The converse under the same faithful
+$S$-module hypothesis follows from
+Lemma \ref{editorial-source-lemma-composition-flat}.
+
+If $M$ is faithfully flat over $R$, take any original complex
+$N_1\to N_2\to N_3$ whose tensor with $S$ is exact. Tensoring
+that complex with the flat $S$-module $M$ and using the
+comparison shows its tensor with $M$ over $R$ is exact.
+Faithful flatness over $R$ reflects this to exactness of the
+original complex. Together with flatness just proved, this
+makes $R\to S$ faithfully flat. Conversely, if $R\to S$
+is faithfully flat, composition with the faithfully flat
+$S$-module $M$ gives faithful flatness over $R$, again by
+Lemma \ref{editorial-source-lemma-composition-flat}.
+\end{proof}
+
+\noindent
+Let $R$ be a ring.
+Let $M$ be an $R$-module.
+Let $\sum_{i=1}^n f_ix_i=0$ be a finite relation in $M$,
+with $f_i\in R$, $x_i\in M$, and $n\geq0$.
+We say the relation $\sum f_i x_i$
+is {\it trivial} if there exist an integer $m \geq 0$,
+elements $y_j \in M$, $j = 1, \ldots, m$, and elements $a_{ij} \in R$,
+$i = 1, \ldots, n$, $j = 1, \ldots, m$ such that
+$$
+x_i = \sum\nolimits_j a_{ij} y_j, \forall i,
+\quad\text{and}\quad
+0 = \sum\nolimits_i f_ia_{ij}, \forall j.
+$$
+
+\begin{lemma}[Equational criterion of flatness]
+\label{editorial-source-lemma-flat-eq}
+A module $M$ over $R$ is flat if and only if
+every relation in $M$ is trivial.
+\end{lemma}
+
+\begin{proof}
+Assume $M$ is flat and let $\sum f_i x_i = 0$ be a relation in $M$.
+Let $I = (f_1, \ldots, f_n)$, and let
+$K = \Ker(R^n \to I, (a_1, \ldots, a_n) \mapsto \sum_i a_i f_i)$.
+So we have the short exact sequence
+$0 \to K \to R^n \to I \to 0$. Then $\sum f_i \otimes x_i$
+is an element of $I \otimes_R M$ which maps
+to zero in $R \otimes_R M = M$. By flatness
+$\sum f_i \otimes x_i$ is zero in $I \otimes_R M$.
+Thus there exists an element of $K \otimes_R M$ mapping
+to $\sum e_i \otimes x_i \in R^n \otimes_R M$ where $e_i$
+is the $i$th basis element of $R^n$.
+Write this element as a finite sum
+$\sum_{j=1}^m k_j\otimes y_j$, and write each original
+$k_j\in K\subseteq R^n$ as $\sum_{i=1}^n a_{ij}e_i$.
+Membership in $K$ gives $\sum_{i=1}^n f_i a_{ij}=0$
+for every $j$. Under the coordinate isomorphism
+$R^n\otimes_R M\to M^n$, $e_i\otimes y$ maps to the
+vector having $y$ in coordinate $i$ and zero elsewhere;
+its inverse sends $(x_1,\ldots,x_n)$ to
+$\sum_i e_i\otimes x_i$. Comparing all coordinates of
+the original lifted tensor gives
+$x_i=\sum_{j=1}^m a_{ij}y_j$ for every $i$, exactly the
+two defining conditions. The sum may be empty; when $n=0$
+there are no coordinates and the empty relation is handled
+with $m=0$.
+
+\medskip\noindent
+Assume every relation is trivial, let $I$
+be a finitely generated ideal, and let $x = \sum f_i \otimes x_i$
+be an element of $I \otimes_R M$ mapping to zero in $R \otimes_R M = M$.
+This just means exactly that $\sum f_i x_i$ is a relation in
+$M$. And the fact that it is trivial implies easily that
+$x$ is zero, because
+$$
+x
+=
+\sum f_i \otimes x_i
+=
+\sum f_i \otimes \left(\sum a_{ij}y_j\right)
+=
+\sum \left(\sum f_i a_{ij}\right) \otimes y_j
+=
+0
+$$
+The sums are finite, so the middle equality follows by
+additivity and the original balancing relation
+$f_i\otimes a_{ij}y_j=(f_i a_{ij})\otimes y_j$ in
+$I\otimes_R M$. Thus the map $I\otimes_R M\to M$ is
+injective for every finitely generated ideal $I$, and
+Lemma \ref{editorial-source-lemma-flat} proves that $M$ is flat.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-finite-simultaneous-relations}
+An $R$-module $M$ is flat if and only if it has the following
+property. For every matrix $(f_{\ell i})\in\operatorname{Mat}_{r\times n}(R)$
+and elements $x_1,\ldots,x_n\in M$ satisfying
+$\sum_{i=1}^n f_{\ell i}x_i=0$ for every $1\leq\ell\leq r$,
+there are an integer $m\geq0$, elements $y_1,\ldots,y_m\in M$
+and coefficients $a_{ij}\in R$ such that
+$$
+x_i=\sum_{j=1}^m a_{ij}y_j\quad(1\leq i\leq n),\qquad
+\sum_{i=1}^n f_{\ell i}a_{ij}=0
+\quad(1\leq\ell\leq r,\ 1\leq j\leq m).
+$$
+Here $r,n$ may be zero; all matrices and sums are finite.
+\end{lemma}
+
+\begin{proof}
+Keep the original matrix and let
+$\psi:R^n\to R^r$ send the $i$th basis vector to the
+column $(f_{1i},\ldots,f_{ri})$. Put $K=\Ker\psi$.
+Flatness makes
+$K\otimes_R M\to R^n\otimes_R M\to R^r\otimes_R M$
+exact. The coordinate tensor isomorphisms in the preceding
+proof identify its last map with the original matrix
+acting on $M^n$. Thus the given vector is the image of
+a finite sum $\sum_{j=1}^m k_j\otimes y_j$.
+Write $k_j=\sum_i a_{ij}e_i$. All $r$ original equations
+for $k_j\in K$ are precisely the second displayed family,
+and coordinate equality gives the first family. No finite
+generation assumption on $K$ is used. Conversely, the case
+$r=1$ gives the equational criterion
+of Lemma \ref{editorial-source-lemma-flat-eq}, hence flatness. When $r=0$
+one may take $m=n$, $a_{ij}=\delta_{ij}$ and $y_j=x_j$;
+when $n=0$ take $m=0$. These choices verify the boundary
+cases with the original empty matrices retained.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-tor-zero}
+Suppose that $R$ is a ring, that $0\to M''\to M'\to M\to0$
+is a short exact sequence, and that $N$ is an $R$-module. If $M$ is flat
+then $N \otimes_R M'' \to N \otimes_R M'$ is injective, i.e., the
+sequence
+$$
+0 \to N \otimes_R M'' \to N \otimes_R M' \to N \otimes_R M \to 0
+$$
+is a short exact sequence.
+\end{lemma}
+
+\begin{proof}
+Retain a surjection $q:F=R^{(I)}\to N$ with kernel
+$K$ and inclusion $j:K\to F$. Write $u:M''\to M'$ and
+$v:M'\to M$ for the original maps. The coordinate
+isomorphism $L\otimes_R F\to L^{(I)}$ for any $L$ sends
+$\ell\otimes\sum_i r_ie_i$ to $(r_i\ell)_i$ and has
+inverse $(\ell_i)_i\mapsto\sum_i\ell_i\otimes e_i$;
+all supports are finite. The rows and columns of the
+following diagram are induced by $u,v,j,q$:
+$$
+\begin{matrix}
+ & & 0 & & 0 & & 0 & & \\
+ & & \uparrow & & \uparrow & & \uparrow & & \\
+ & & M''\otimes_R N & \to & M' \otimes_R N & \to & M \otimes_R N & \to & 0 \\
+ & & \uparrow & & \uparrow & & \uparrow & & \\
+0 & \to & (M'')^{(I)} & \to & (M')^{(I)} & \to & M^{(I)} & \to & 0 \\
+ & & \uparrow & & \uparrow & & \uparrow & & \\
+ & & M''\otimes_R K & \to & M' \otimes_R K & \to & M \otimes_R K & \to & 0 \\
+ & & & & & & \uparrow & & \\
+ & & & & & & 0 & &
+\end{matrix}
+$$
+Each column ending in zero is right exact by tensoring
+$K\to F\to N\to0$. The bottom and top rows are right
+exact by tensoring $M''\to M'\to M\to0$. The middle row
+is short exact coordinate by coordinate, including
+surjectivity since a finitely supported tuple has finitely
+many lifts. The bottom right vertical map is injective
+because $M$ is flat and $K\to F$ is injective.
+Every square commutes on its tensor generators.
+
+Here is the full chase proving the remaining injection.
+Let $x\in M''\otimes_R N$ map to zero in $M'\otimes_R N$.
+Lift it to $a\in(M'')^{(I)}$. The image $u^{(I)}(a)$
+has zero image in $M'\otimes_R N$, so it is the image
+of some $b\in M'\otimes_R K$. The image of $b$ in
+$M\otimes_R K$ maps to zero in $M^{(I)}$, because
+$v^{(I)}u^{(I)}(a)=0$. Bottom right injectivity forces
+that image to be zero. Bottom-row exactness supplies
+$c\in M''\otimes_R K$ mapping to $b$.
+Its image $d\in(M'')^{(I)}$ satisfies
+$u^{(I)}(d)=u^{(I)}(a)$ by commutativity. Middle-row
+injectivity gives $d=a$. As $d$ comes from
+$M''\otimes_R K$, its image in $M''\otimes_R N$ is zero,
+so $x=0$. This proves the asserted injection.
+Finally the flips $L\otimes_R N\to N\otimes_R L$,
+$\ell\otimes n\mapsto n\otimes\ell$, are mutual inverses
+and commute with $u,v$, so the diagram conclusion is
+exactly the sequence in the statement.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-quotient-cyclic-tensor-criterion}
+In the original short exact sequence
+$0\to M''\xrightarrow{u}M'\xrightarrow{v}M\to0$,
+assume $M'$ is flat. The following are equivalent:
+\begin{enumerate}
+\item $M$ is flat.
+\item For every $R$-module $N$, the map
+$N\otimes_R M''\to N\otimes_R M'$ is injective.
+\item For every finitely generated ideal $I\subseteq R$,
+the map $M''/IM''\to M'/IM'$ induced by $u$ is injective.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The first implication is Lemma \ref{editorial-source-lemma-flat-tor-zero}.
+The second follows by taking $N=R/I$ and using the
+quotient-tensor maps $(r+I)\otimes m\mapsto rm+IM$
+and $m+IM\mapsto(1+I)\otimes m$, on each original module.
+
+Assume the third condition and retain any finite original
+relation $\sum_{i=1}^n f_ix_i=0$ in $M$.
+Choose lifts $\widetilde x_i\in M'$ with
+$v(\widetilde x_i)=x_i$, and set $I=(f_1,\ldots,f_n)$.
+The element $\sum_i f_i\widetilde x_i$ has zero image
+under $v$, so it equals $u(w)$ for a unique $w\in M''$.
+Its class in $M'/IM'$ is zero. Injectivity of the specified
+quotient map gives $w\in IM''$.
+Write $w=\sum_{\ell=1}^q c_\ell z_\ell$ with
+$c_\ell\in I$, $z_\ell\in M''$, and express each original
+$c_\ell=\sum_{i=1}^n f_i d_{i\ell}$.
+Putting $w_i=\sum_{\ell=1}^q d_{i\ell}z_\ell$ gives the
+exact equality $w=\sum_i f_iw_i$.
+The corrected lifts
+$\widehat x_i=\widetilde x_i-u(w_i)$ therefore satisfy
+$$
+\sum_i f_i\widehat x_i
+=u(w)-u\left(\sum_i f_iw_i\right)=0,
+\qquad v(\widehat x_i)=x_i.
+$$
+By flatness of the original $M'$ and
+Lemma \ref{editorial-source-lemma-flat-eq}, there are $y_j\in M'$ and
+$a_{ij}\in R$ with
+$\widehat x_i=\sum_j a_{ij}y_j$ and
+$\sum_i f_i a_{ij}=0$ for every $j$.
+Applying $v$ gives $x_i=\sum_j a_{ij}v(y_j)$ with the
+same coefficients and the same vanishing equations.
+Thus every original relation in $M$ is trivial and
+$M$ is flat by that criterion. The empty relation
+requires no lifts and is already trivial.
+\end{proof}
+
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-ses}
+Suppose that $0 \to M' \to M \to M'' \to 0$ is
+a short exact sequence of $R$-modules.
+If $M'$ and $M''$ are flat so is $M$.
+If $M$ and $M''$ are flat so is $M'$.
+\end{lemma}
+
+\begin{proof}
+We will use the criterion that a module $N$ is flat if for
+every ideal $I \subset R$ the map $N \otimes_R I \to N$ is injective,
+see Lemma \ref{editorial-source-lemma-flat}.
+Consider an ideal $I \subset R$.
+Consider the diagram
+$$
+\begin{matrix}
+0 & \to & M' & \to & M & \to & M'' & \to & 0 \\
+& & \uparrow & & \uparrow & & \uparrow & & \\
+& & M'\otimes_R I & \to & M \otimes_R I & \to & M''\otimes_R I & \to & 0
+\end{matrix}
+$$
+The vertical maps are $m\otimes a\mapsto am$ for the
+original ideal $I$, so both squares commute on generators.
+The upper row is the given short exact sequence and the
+lower row is right exact. For the first assertion suppose
+$M'$ and $M''$ are flat, and let $x\in M\otimes_R I$
+map to zero in $M$. Its image in $M''\otimes_R I$ maps
+to zero in $M''$ and hence is zero by flatness of $M''$.
+Lower-row exactness lifts $x$ to $y\in M'\otimes_R I$.
+The image of $y$ in $M'$ maps to zero in $M$, so it is
+zero by upper-row injectivity. Flatness of $M'$ now gives
+$y=0$, hence $x=0$. Lemma \ref{editorial-source-lemma-flat} proves that
+$M$ is flat.
+
+For the second assertion suppose $M$ and $M''$ are flat.
+Lemma \ref{editorial-source-lemma-flat-tor-zero}, applied with quotient
+$M''$ and tensor module $I$, makes the lower left map
+injective. If $y\in M'\otimes_R I$ maps to zero in $M'$,
+its image $x\in M\otimes_R I$ maps to zero in $M$.
+Flatness of $M$ gives $x=0$, and lower left injectivity
+gives $y=0$. The same ideal criterion proves flatness
+of the original $M'$.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-easy-ff}
+Let $R$ be a ring.
+Let $M$ be an $R$-module.
+The following are equivalent:
+\begin{enumerate}
+\item $M$ is faithfully flat, and
+\item $M$ is flat and for all $R$-module homomorphisms $\alpha : N \to N'$
+we have $\alpha = 0$ if and only if $\alpha \otimes \text{id}_M = 0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Faithful flatness includes flatness. It also implies that
+$L\otimes_R M=0$ forces $L=0$, by reflecting exactness
+of $0\to L\to0$. For an original map $\alpha:N\to N'$,
+retain $K=\Ker\alpha$. Flatness makes
+$0\to K\otimes_R M\to N\otimes_R M\to N'\otimes_R M$
+exact. If $\alpha\otimes\mathrm{id}_M=0$, the first
+injection is also surjective. Right exactness of tensoring
+$K\to N\to N/K\to0$ then gives $(N/K)\otimes_R M=0$.
+The vanishing reflection just proved gives $N/K=0$, so
+$K=N$ and $\alpha=0$. Conversely a zero map tensors
+to a zero map by its formula on generators. This proves
+the first implication with the original kernel retained.
+
+Assume the second condition. Flatness already preserves
+exactness. To prove reflection, take an original complex
+$N_1\xrightarrow{d_1}N_2\xrightarrow{d_2}N_3$ whose
+tensor complex is exact, and put $J=\operatorname{Im}d_1$.
+For each $x\in\Ker d_2$, keep the original map
+$\alpha:R\to N_2/J$, $r\mapsto rx+J$.
+For every $m\in M$, the element $x\otimes m$ belongs to
+$\Ker(d_2\otimes\mathrm{id}_M)$, hence to the image of
+$d_1\otimes\mathrm{id}_M$. The quotient map $N_2\to N_2/J$
+tensored with $M$ kills that image, so
+$(x+J)\otimes m=0$. Therefore on every tensor generator
+$$
+(\alpha\otimes\mathrm{id}_M)(r\otimes m)
+=(rx+J)\otimes m=(x+J)\otimes rm=0.
+$$
+The assumed reflection of zero morphisms gives $\alpha=0$,
+and evaluation at $1$ gives $x\in J$. Thus
+$\Ker d_2\subseteq\operatorname{Im}d_1$; the reverse
+inclusion holds because the original sequence is a complex.
+It is exact, proving faithful flatness.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-ff}
+\begin{slogan}
+A flat module is faithfully flat if and only if it has nonzero fibers.
+\end{slogan}
+Let $M$ be a flat $R$-module.
+The following are equivalent:
+\begin{enumerate}
+\item $M$ is faithfully flat,
+\item for every nonzero $R$-module $N$, the tensor product $M \otimes_R N$
+is nonzero,
+\item for all $\mathfrak p \in \Spec(R)$
+the tensor product $M \otimes_R \kappa(\mathfrak p)$ is nonzero, and
+\item for all maximal ideals $\mathfrak m$ of $R$
+the tensor product $M \otimes_R \kappa(\mathfrak m) = M/{\mathfrak m}M$
+is nonzero.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Assume $M$ faithfully flat and $N \not = 0$. By Lemma \ref{editorial-source-lemma-easy-ff}
+the nonzero map $1 : N \to N$ induces a nonzero map
+$M \otimes_R N \to M \otimes_R N$, so $M \otimes_R N \not = 0$.
+Thus (1) implies (2). The implications (2) $\Rightarrow$ (3) $\Rightarrow$ (4)
+are immediate.
+
+\medskip\noindent
+Assume (4), and retain a complex
+$N_1\xrightarrow{d_1}N_2\xrightarrow{d_2}N_3$ whose
+tensor complex is exact. Write
+$K=\Ker d_2$, $J=\operatorname{Im}d_1\subseteq K$,
+and keep its original cohomology $H=K/J$.
+Flatness embeds $J\otimes_R M$ and $K\otimes_R M$ in
+$N_2\otimes_R M$. Tensoring the surjection $N_1\to J$
+identifies the first image with
+$\operatorname{Im}(d_1\otimes\mathrm{id}_M)$; tensoring
+$0\to K\to N_2\to N_3$ identifies the second image with
+$\operatorname{Ker}(d_2\otimes\mathrm{id}_M)$.
+The tensor complex is exact, so these submodules coincide.
+Right exactness applied to $J\to K\to H\to0$ gives
+$H\otimes_R M=0$ with these exact original maps.
+
+Take any $x\in H$ and set $I=\{f\in R:fx=0\}$.
+The map $R/I\to H$, $f+I\mapsto fx$, is well-defined
+and injective by the definition of $I$.
+Flatness makes $(R/I)\otimes_R M\to H\otimes_R M=0$
+injective. The quotient-tensor isomorphism
+$(f+I)\otimes m\mapsto fm+IM$ with inverse
+$m+IM\mapsto(1+I)\otimes m$ therefore gives $M/IM=0$.
+If $I$ were proper, choose a maximal ideal
+$\mathfrak m\supseteq I$. The quotient map
+$M/IM\to M/\mathfrak mM$, $m+IM\mapsto m+\mathfrak mM$,
+is well-defined and surjective. Its source is zero, forcing
+$M/\mathfrak mM=0$, contrary to (4). Thus $I=R$,
+$x=1x=0$, and $H=0$. This proves exactness reflection.
+For the zero ring all modules are zero and all prime and
+maximal-ideal conditions are vacuous, so the same equivalence
+also covers that case.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-ff-rings}
+Let $R \to S$ be a flat ring map.
+The following are equivalent:
+\begin{enumerate}
+\item $R \to S$ is faithfully flat,
+\item the induced map on $\Spec$ is surjective, and
+\item any closed point $x \in \Spec(R)$ is
+in the image of the map $\Spec(S) \to \Spec(R)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For the original prime $\mathfrak p\subset R$, the fibre
+ring $S\otimes_R\kappa(\mathfrak p)$ is nonzero exactly
+when there is a prime of $S$ contracting to $\mathfrak p$,
+by Remark \ref{algebra-remark-fundamental-diagram} and
+Lemma \ref{editorial-source-lemma-in-image}. The prime correspondence is
+through the quotient by $\mathfrak p$ followed by inversion
+of the original $R\setminus\mathfrak p$; its primes
+contract to primes of $S$ with precisely that contraction.
+Thus condition (3) of Lemma \ref{editorial-source-lemma-ff} says exactly
+that every prime is in the spectrum image. Its condition
+(4) says exactly that every maximal ideal is in the image,
+and maximal ideals are the closed points of $\Spec(R)$.
+Since $S$ is flat over $R$, that lemma proves all three
+equivalences asserted here.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-local-flat-ff}
+A flat local ring homomorphism of local rings is faithfully flat.
+\end{lemma}
+
+\begin{proof}
+Write $\varphi:(R,\mathfrak m)\to(S,\mathfrak n)$ for
+the original local homomorphism. Its defining local
+condition is $\varphi^{-1}(\mathfrak n)=\mathfrak m$.
+Thus the unique closed point of $\Spec(R)$ is the image
+of the prime $\mathfrak n$ of $S$. Flatness and
+Lemma \ref{editorial-source-lemma-ff-rings} give faithful flatness.
+\end{proof}
+
+\noindent
+Flatness meshes well with localization.
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-localization}
+Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
+\begin{enumerate}
+\item The localization $S^{-1}R$ is a flat $R$-algebra.
+\item If $M$ is an $S^{-1}R$-module, then $M$ is a flat $R$-module
+if and only if $M$ is a flat $S^{-1}R$-module.
+\item Suppose $M$ is an $R$-module. Then
+$M$ is a flat $R$-module if and only if $M_{\mathfrak p}$ is a flat
+$R_{\mathfrak p}$-module for all primes $\mathfrak p$ of $R$.
+\item Suppose $M$ is an $R$-module. Then $M$ is a flat $R$-module if
+and only if $M_{\mathfrak m}$ is a flat
+$R_{\mathfrak m}$-module for all maximal ideals $\mathfrak m$ of $R$.
+\item Suppose $R \to A$ is a ring map, $M$ is an $A$-module,
+and $g_1, \ldots, g_m \in A$ are elements generating the unit
+ideal of $A$. Then $M$ is flat over $R$ if and only if each localization
+$M_{g_i}$ is flat over $R$.
+\item Suppose $R \to A$ is a ring map, and $M$ is an $A$-module.
+Then $M$ is a flat $R$-module if and only if the localization
+$M_{\mathfrak q}$ is a flat $R_{\mathfrak p}$-module
+(with $\mathfrak p$ the prime of $R$ lying under $\mathfrak q$)
+for all primes $\mathfrak q$ of $A$.
+\item Suppose $R \to A$ is a ring map, and $M$ is an $A$-module.
+Then $M$ is a flat $R$-module if and only if the localization
+$M_{\mathfrak m}$ is a flat $R_{\mathfrak p}$-module
+(with $\mathfrak p$ the inverse image of $\mathfrak m$ under $R\to A$)
+for all maximal ideals $\mathfrak m$ of $A$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Retain every original coefficient map; in (5)--(7) write it
+as $\varphi:R\to A$. All contractions below are inverse
+images under this map, which need not be injective.
+
+We first recall the exact fraction facts used in the proof.
+For a ring $B$, a multiplicative set $W\subseteq B$ and a
+$B$-module $L$, the equality $\ell/w=\ell'/w'$ means
+that $v(w'\ell-w\ell')=0$ for some original $v\in W$.
+Thus $\ell/w=0$ means that some $v\in W$ kills $\ell$.
+If $L'\to L$ is injective, this equality for an element
+of $L'$ holds in $L'$ whenever it holds in $L$, so
+localization preserves injections. For a map $u:L\to N$,
+an element $\ell/w$ in the localized kernel has
+$v u(\ell)=0$ for some $v\in W$. Then $v\ell\in\Ker u$
+and $\ell/w=(v\ell)/(vw)$, proving that localization
+preserves kernels. Its image consists exactly of fractions
+$u(\ell)/w$, and a surjection remains surjective by lifting
+the numerator. These facts prove exactness with the
+original fraction witnesses retained.
+
+For later zero detection, if $0\ne\ell\in L$ its
+annihilator is a proper ideal of $B$ and is contained in
+a maximal ideal $\mathfrak m$. Then $\ell/1\ne0$ in
+$L_{\mathfrak m}$, since an element outside $\mathfrak m$
+killing $\ell$ would belong to that annihilator. Hence
+$L=0$ if all its maximal localizations vanish, as in
+Lemma \ref{algebra-lemma-characterize-zero-local}.
+
+For an original $R$-module $N$, the $A$-action on
+$N\otimes_R M$ is $a(n\otimes m)=n\otimes am$.
+For every multiplicative $W\subseteq A$, there are
+mutually inverse maps
+$$
+\begin{split}
+W^{-1}(N\otimes_R M)&\longrightarrow N\otimes_R W^{-1}M,\\
+\frac{\sum_{\ell=1}^d n_\ell\otimes m_\ell}{w}
+&\longmapsto\sum_{\ell=1}^d n_\ell\otimes\frac{m_\ell}{w},
+\end{split}
+$$
+and $n\otimes(m/w)\mapsto(n\otimes m)/w$.
+For the forward map start with $n\otimes m\mapsto
+n\otimes(m/1)$, which is $A$-linear and $R$-balanced;
+every element of $W$ acts invertibly on its target, so
+it extends to the localization with the stated formula.
+For the inverse, if $v(w'm-wm')=0$, then
+$v(w'(n\otimes m)-w(n\otimes m'))=0$ by the original
+$A$-action. This proves independence of the fraction.
+The $R$-balancing relation is
+$rn\otimes m=n\otimes\varphi(r)m$, and is preserved by
+the formula. Additivity follows by common denominators.
+Both composites fix the displayed generators and their
+finite sums. The maps are natural in $N$ and $M$, since
+they apply their homomorphisms only to the numerators.
+Consequently, if $M$ is flat over $R$, then $W^{-1}M$
+is flat over $R$: localize the injection obtained by
+tensoring any injection of $R$-modules with $M$ and use
+these natural isomorphisms.
+
+For a prime $\mathfrak q\subset A$, put
+$\mathfrak p=\varphi^{-1}(\mathfrak q)$. The map and action are
+$$
+R_{\mathfrak p}\longrightarrow A_{\mathfrak q},\quad
+\frac rs\longmapsto\frac{\varphi(r)}{\varphi(s)},
+\qquad
+\frac rs\cdot\frac ma=\frac{\varphi(r)m}{\varphi(s)a}.
+$$
+All denominators are valid because $s\notin\mathfrak p$
+is equivalent to $\varphi(s)\notin\mathfrak q$.
+The exact two-sided comparison for every original $N$ is
+$$
+(N\otimes_R M)_{\mathfrak q}
+\ \cong\ N_{\mathfrak p}\otimes_{R_{\mathfrak p}}M_{\mathfrak q},
+\qquad
+\frac{n\otimes m}{a}\longmapsto\frac n1\otimes\frac ma,
+$$
+with inverse
+$$
+\frac ns\otimes\frac ma\longmapsto
+\frac{n\otimes m}{\varphi(s)a}.
+$$
+If $n/s=n'/s'$, choose $u\notin\mathfrak p$ with
+$u(s'n-sn')=0$. The two proposed inverse images have
+common denominator $\varphi(s)\varphi(s')a$ and numerator
+$(s'n-sn')\otimes m$. Multiplication by
+$\varphi(u)\notin\mathfrak q$ kills it, by $R$-balancing.
+If $m/a=m'/a'$, choose $b\notin\mathfrak q$ with
+$b(a'm-am')=0$. Using common denominator $\varphi(s)aa'$
+gives numerator $n\otimes(a'm-am')$, killed by $b$.
+For $r/t\in R_{\mathfrak p}$ the two balancing images are
+$$
+\frac{rn\otimes m}{\varphi(t)\varphi(s)a}
+=\frac{n\otimes\varphi(r)m}{\varphi(s)\varphi(t)a},
+$$
+so the inverse is well-defined and additive.
+The forward map is the localization of
+$n\otimes m\mapsto(n/1)\otimes(m/1)$; elements outside
+$\mathfrak q$ act invertibly on its target.
+One composite fixes $(n\otimes m)/a$, while the other
+sends $(n/s)\otimes(m/a)$ to
+$(n/1)\otimes(m/(\varphi(s)a))$, which equals the
+original tensor by balancing with $1/s$.
+The formulas prove naturality for the original maps.
+
+We also retain the exact ideal descent used in the source.
+For any ideal $I\subseteq R_{\mathfrak p}$, put
+$J=\{r\in R:r/1\in I\}$. Then $J_{\mathfrak p}=I$:
+if $j\in J$, its fraction $j/s=(1/s)(j/1)$ is in $I$;
+if $a/s\in I$, then $a/1=(s/1)(a/s)\in I$, so $a\in J$.
+The localized map $J_{\mathfrak p}\to R_{\mathfrak p}$ is
+injective by localization of $J\hookrightarrow R$.
+For specified finite generators $a_\ell/s_\ell$ of $I$,
+the smaller specified ideal $J_0=(a_1,\ldots,a_n)$ also
+has $(J_0)_{\mathfrak p}=I$, because each $s_\ell/1$ is
+a unit and both identities above apply to that generator.
+This does not assert finite generation of the contraction $J$.
+
+We now prove (1). Keep the original multiplicative set
+$S\subseteq R$ and put $B=S^{-1}R$.
+For every $N$ the maps
+$$
+N\otimes_R B\longrightarrow S^{-1}N,\quad
+n\otimes(r/s)\longmapsto rn/s,
+\qquad
+n/s\longmapsto n\otimes(1/s)
+$$
+are inverse. To check the inverse on fraction equality,
+if $u(s'n-sn')=0$ then its difference of images is
+$$
+(s'n-sn')\otimes\frac1{ss'}
+=u(s'n-sn')\otimes\frac1{uss'}=0.
+$$
+The forward map respects equal fractions for the same
+reason and respects the original $R$-balancing relation.
+The two composites fix the generators, since
+$rn\otimes(1/s)=n\otimes(r/s)$.
+Localization preserves injections, so these natural maps
+and Lemma \ref{editorial-source-lemma-flat} prove that $B$ is flat over $R$.
+
+For (2), if $M$ is flat over $B$, then (1) and
+Lemma \ref{editorial-source-lemma-composition-flat} imply flatness over $R$.
+The receiving tensor comparison can also be written as
+$$
+(S^{-1}N)\otimes_B M\longrightarrow N\otimes_R M,
+\qquad (n/s)\otimes m\longmapsto n\otimes(1/s)m,
+$$
+with inverse $n\otimes m\mapsto(n/1)\otimes m$.
+For example if $u(s'n-sn')=0$, the difference between
+the first images is
+$(s'n-sn')\otimes(1/(ss'))m
+=u(s'n-sn')\otimes(1/(uss'))m=0$.
+Balancing by $r/t\in B$ agrees on both sides after
+moving $r$ and the inverse action of $t$ to the $M$ factor.
+Both composites are identities by these same relations.
+
+Conversely let $M$ be a $B$-module flat over $R$.
+For any $B$-module $P$, the quotient map
+$P\otimes_R M\to P\otimes_B M$ has inverse
+$p\otimes_B m\mapsto p\otimes_R m$.
+To verify the additional balancing needed for this inverse,
+for each original $s\in S$ use
+$$
+(1/s)p\otimes_R m
+=(1/s)p\otimes_R s((1/s)m)
+=p\otimes_R(1/s)m.
+$$
+Together with $R$-balancing this gives balancing by every
+$r/s\in B$. The composites fix all generators.
+An injection of $B$-modules is an injection of underlying
+$R$-modules, so these natural maps and flatness over $R$
+give the injection criterion over $B$. This proves (2).
+
+Next prove (6) and (7), retaining the original ideal maps.
+Suppose $M_{\mathfrak m}$ is flat over $R_{\mathfrak p}$
+for each maximal $\mathfrak m\subset A$, where
+$\mathfrak p=\varphi^{-1}(\mathfrak m)$.
+For an ideal $I\subseteq R$, consider the original
+$A$-linear map
+$$
+\eta:I\otimes_R M\longrightarrow M,
+\qquad a\otimes m\longmapsto\varphi(a)m,
+\qquad K=\Ker\eta.
+$$
+At $\mathfrak m$ the comparison already proved gives
+$$
+(I\otimes_R M)_{\mathfrak m}
+\cong I_{\mathfrak p}\otimes_{R_{\mathfrak p}}M_{\mathfrak m}.
+$$
+It identifies $\eta_{\mathfrak m}$ with the multiplication
+map $(a/s)\otimes(m/t)\mapsto\varphi(a)m/(\varphi(s)t)$,
+so that map is injective by the asserted local flatness
+and the inclusion $I_{\mathfrak p}\hookrightarrow R_{\mathfrak p}$.
+Exactness of localization gives $K_{\mathfrak m}=0$.
+Zero detection at all maximal ideals of $A$ gives $K=0$,
+and Lemma \ref{editorial-source-lemma-flat} proves flatness over $R$.
+
+Conversely suppose $M$ is flat over $R$ and retain any
+prime $\mathfrak q\subset A$ with
+$\mathfrak p=\varphi^{-1}(\mathfrak q)$.
+For an ideal $I\subseteq R_{\mathfrak p}$ take its original
+contraction $J\subseteq R$ above, so $J_{\mathfrak p}=I$.
+Flatness makes $J\otimes_R M\to M$ injective. Localizing
+at $\mathfrak q$ preserves its injectivity, and the exact
+comparison identifies it with
+$I\otimes_{R_{\mathfrak p}}M_{\mathfrak q}\to M_{\mathfrak q}$.
+The ideal criterion proves flatness over $R_{\mathfrak p}$.
+This proves necessity at every prime and sufficiency at
+all maximal ideals. Since the former condition includes
+the latter, (6) and (7) both follow. A maximal ideal of
+$A$ may contract to a nonmaximal prime of $R$; no step
+replaces the original contracted prime by a maximal one.
+
+Taking $A=R$ and $\varphi=\mathrm{id}_R$ in (6) and (7)
+gives (3) and (4), respectively, with the same module $M$
+and the same prime and maximal localizations.
+
+For (5) we prove the stronger arbitrary-family statement:
+if $(g_\lambda)_{\lambda\in\Lambda}$ is any family in $A$
+such that for every maximal $\mathfrak m$ with
+$M_{\mathfrak m}\ne0$ some $g_\lambda\notin\mathfrak m$,
+then $M$ is flat over $R$ if and only if every
+$M_{g_\lambda}$ is flat over $R$.
+
+First, for each original $g\in A$, multiplication by $g$
+gives a directed system of the original $R$-module $M$,
+indexed by $n\in\mathbf Z_{\geq0}$. Its colimit is
+$$
+\colim(M\xrightarrow{g}M\xrightarrow{g}\cdots)
+\longrightarrow M_g,\qquad [m\text{ at }n]\longmapsto m/g^n.
+$$
+Compatibility is $gm/g^{n+1}=m/g^n$.
+Every fraction occurs. A fraction $m/g^n$ is zero exactly
+when some $g^k m=0$, which is exactly eventual vanishing
+of its original representative. This proves injectivity
+as well as surjectivity; the inverse sends a fraction to
+that class, independently of its representative by the
+same equality test. Lemma \ref{editorial-source-lemma-colimit-flat} then
+proves that $M_g$ is flat whenever $M$ is flat.
+
+For the converse retain any injection of $R$-modules
+$N'\hookrightarrow N$ and its original $A$-module kernel
+$K=\Ker(N'\otimes_R M\to N\otimes_R M)$.
+If every $M_{g_\lambda}$ is flat over $R$, localization
+and the first tensor comparison identify the localized
+map with
+$N'\otimes_R M_{g_\lambda}\to N\otimes_R M_{g_\lambda}$,
+which is injective. Thus $K_{g_\lambda}=0$ for each $\lambda$.
+At a maximal ideal $\mathfrak m$ with $M_{\mathfrak m}=0$,
+the same comparison gives
+$(N'\otimes_R M)_{\mathfrak m}=N'\otimes_R M_{\mathfrak m}=0$,
+so $K_{\mathfrak m}=0$. At any other maximal ideal choose
+$g_\lambda\notin\mathfrak m$ by the hypothesis.
+For every $k\in K$, the equality $K_{g_\lambda}=0$ gives
+$g_\lambda^e k=0$ for some $e\geq0$, which may depend
+on $k$. This power is outside $\mathfrak m$, so $k/1=0$
+in $K_{\mathfrak m}$. Thus $K_{\mathfrak m}=0$ at every
+maximal ideal, and zero detection gives $K=0$.
+The injection criterion proves flatness over $R$.
+
+The stated finite unit-ideal hypothesis implies this cover:
+if every $g_i$ belonged to a maximal ideal, so would their
+generated ideal, contrary to $(g_1,\ldots,g_m)=A$.
+This proves (5), including both directions.
+
+The stronger covering hypothesis can equivalently be
+stated on all primes $\mathfrak q$ with $M_{\mathfrak q}\ne0$.
+Indeed choose $x\in M$ with $x/1\ne0$ at such a prime.
+Then $\operatorname{Ann}_A(x)\subseteq\mathfrak q$ by
+the exact fraction-zero test. At every maximal
+$\mathfrak m\supseteq\mathfrak q$, the same inclusion
+shows $x/1\ne0$ in $M_{\mathfrak m}$. A cover element
+outside $\mathfrak m$ is also outside $\mathfrak q$.
+The reverse implication specializes the prime condition
+to maximal ideals. No finite generation of $M$ or of the
+family is required.
+
+This really weakens the unit-ideal requirement. For a
+nonzero ring $R$, take $A=R\times R$ with the diagonal
+map from $R$, and an $R$-module $M$ viewed as an $A$-module
+through the first projection. The element $g=(1,0)$ acts
+as the identity on $M$, so $M_g=M$ by the maps
+$m/g^n\mapsto m$ and $m\mapsto m/1$.
+The element $1-g=(0,1)$ acts as zero. If a prime contains
+$g$, it cannot contain $1-g$, which becomes an invertible
+annihilator of the localized module; hence that localization
+is zero. Thus $D(g)$ covers every nonzero stalk of $M$,
+although $gA=R\times0$ is a proper ideal of $A$.
+
+Finally all assertions include zero cases. If $0$ lies
+in a multiplicative set, its localized ring and modules
+are zero by the fraction rule; a unital module over that
+ring is zero. In particular $g=0$ or a nilpotent $g$ gives
+$M_g=0$ and an empty principal open. If $A=0$, then $M=0$
+and its prime and maximal conditions are empty. If the
+cover family is empty, its hypothesis says all maximal
+stalks of $M$ are zero, so $M=0$ by zero detection and the
+equivalence is valid. The zero module is flat by the
+definition in every case.
+\end{proof}
+
+\begin{lemma}
+\label{editorial-source-lemma-flat-going-down}
+Let $R \to S$ be flat. Let $\mathfrak p \subset \mathfrak p'$
+be primes of $R$. Let $\mathfrak q' \subset S$ be a prime of $S$
+mapping to $\mathfrak p'$. Then there exists a prime
+$\mathfrak q \subset \mathfrak q'$ mapping to $\mathfrak p$.
+\end{lemma}
+
+\begin{proof}
+Let $\varphi:R\to S$ be the original map and retain the
+stated primes. The localization map
+$$
+\varphi':R_{\mathfrak p'}\longrightarrow S_{\mathfrak q'},
+\qquad r/t\longmapsto\varphi(r)/\varphi(t)
+$$
+is defined because $t\notin\mathfrak p'$ implies
+$\varphi(t)\notin\mathfrak q'$. Its maximal-ideal
+contraction is $\mathfrak p'R_{\mathfrak p'}$, so it is
+local, and Lemma \ref{editorial-source-lemma-flat-localization} makes it
+flat. It is faithfully flat by Lemma \ref{editorial-source-lemma-local-flat-ff}.
+The ideal $\mathfrak pR_{\mathfrak p'}$ is prime and has
+contraction $\mathfrak p$ in $R$ by prime localization.
+Lemma \ref{editorial-source-lemma-ff-rings} supplies a prime
+$\widetilde{\mathfrak q}\subset S_{\mathfrak q'}$ whose
+contraction under $\varphi'$ is that ideal. Define
+$$
+\mathfrak q=\{s\in S:s/1\in\widetilde{\mathfrak q}\}.
+$$
+It is prime as an inverse image of a prime. An element of
+$S\setminus\mathfrak q'$ becomes a unit in $S_{\mathfrak q'}$
+and cannot belong to this inverse image, so
+$\mathfrak q\subseteq\mathfrak q'$. Finally
+$$
+r\in\varphi^{-1}(\mathfrak q)
+\Longleftrightarrow
+r/1\in\mathfrak pR_{\mathfrak p'}
+\Longleftrightarrow r\in\mathfrak p.
+$$
+This proves the exact required contraction, without
+assuming the original flat map is injective.
+\end{proof}
+
+\noindent
+The property of $R \to S$ described in the lemma is called the
+``going down property''. See Definition \ref{algebra-definition-going-up-down}.
+
+\begin{lemma}
+\label{editorial-source-lemma-colimit-faithfully-flat}
+Let $R$ be a ring. Let $\{S_i, \varphi_{ii'}\}$ be a directed system of
+faithfully flat $R$-algebras. Then $S = \colim_i S_i$ is a faithfully flat
+$R$-algebra.
+\end{lemma}
+
+\begin{proof}
+The underlying $R$-module colimit is flat by
+Lemma \ref{editorial-source-lemma-colimit-flat}. For every maximal ideal
+$\mathfrak m\subset R$, faithful flatness at each stage
+makes $S_i/\mathfrak mS_i$ nonzero, by Lemma \ref{editorial-source-lemma-ff}.
+The canonical ring comparison is
+$$
+\colim_i(S_i/\mathfrak mS_i)\longrightarrow S/\mathfrak mS,
+\qquad [s_i+\mathfrak mS_i]\longmapsto[s_i]+\mathfrak mS.
+$$
+It is surjective by representatives. If $[s_i]\in\mathfrak mS$,
+write its original expression as a finite sum
+$[s_i]=\sum_{\ell=1}^q a_\ell[t_{j_\ell}]$ with
+$a_\ell\in\mathfrak m$. Move all terms to a common stage
+and then to a further stage where this equality holds.
+There the image of $s_i$ belongs to the actual ideal
+$\mathfrak mS_k$, so its quotient class is eventually zero.
+This proves injectivity and gives the inverse by choosing
+any original representative; equality of two choices is
+handled by the same kernel argument.
+
+If this colimit were the zero ring, the class of $1$ at
+one stage would become zero at some later stage. Every
+transition is a unital $R$-algebra map, so the image is
+the original $1$ of that later quotient, contradicting
+its nonzero ring structure. Hence $S/\mathfrak mS\ne0$
+for every maximal ideal, and Lemma \ref{editorial-source-lemma-ff} gives
+faithful flatness. This is the specific reason algebra
+colimits preserve faithful flatness although arbitrary
+module colimits need not: the same element $1$ survives
+in every receiving residue quotient. For $R=0$ all
+unital $R$-algebras and their modules are zero, and the
+faithfully-flat conclusion holds by the definition.
+\end{proof}
+
+
+
+
+

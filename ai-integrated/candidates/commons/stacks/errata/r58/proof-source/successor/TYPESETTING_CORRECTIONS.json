@@ -1,0 +1,467 @@
+{
+  "schema": "stacks-algebra-typesetting-corrections/v1",
+  "created_at_utc": "2026-09-29T20:58:41.478243+00:00",
+  "previous_manifest_sha256": "DD44FB5DC8A417386CB5C4E47F82CA531219DA55F7FEA2438CCAA3EDA07A978E",
+  "failed_probe": "../ALGEBRA_COMPANION_BUILD_20260929/probe-04/PROBE_RECEIPT.json",
+  "distinct_defects": 2,
+  "changed_live_representations": 3,
+  "corrections": [
+    {
+      "file": "contextual-arguments.tex",
+      "input_sha256": "3CA62F27373C0929EAC29BDEB846A787A722E184416DCE93310CF839AC9BA74B",
+      "output_sha256": "725B780CA9BC76297F076603DF3EAFCD914E76487C7BF62CFAE0E6CF6E278F57",
+      "byte_offset": 395786,
+      "input_line": 8895,
+      "original_bytes_hex": "0869672f",
+      "corrected_tex": "\\big/",
+      "source_locator": "ALGEBRA-RECON-225-OP1",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    },
+    {
+      "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+      "input_sha256": "38331117A50EA42174E57661869257A0A0C5ED19B740734E7FEC49A303A5321E",
+      "output_sha256": "D251CCF041D8210743C726C1226BFFD700B09417D67FD19095E1F8BF1D36AD65",
+      "byte_offset": 27721,
+      "input_line": 678,
+      "original_bytes_hex": "0869672f",
+      "corrected_tex": "\\big/",
+      "source_locator": "ALGEBRA-RECON-225-OP1",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    },
+    {
+      "file": "notes/ALGEBRA_HENSELIZATION_NOTES_20260929.tex",
+      "input_sha256": "CB2EDD66AF7BE5EDF9FC698D6D4E17CF92826DE28082316B1E4BAC541CCE3453",
+      "output_sha256": "8B9120B52B4D2A2450F757FB8E46B7415F4AA7732920E6D7511C88A9FEA234FF",
+      "byte_offset": 22071,
+      "input_line": 98,
+      "original_bytes_hex": "0869676c28",
+      "corrected_tex": "\\bigl(",
+      "source_locator": "The finite etale tower and the original tensor formula, authority lines 43540--43558",
+      "reason": "A backspace byte consumed the backslash-b of a TeX delimiter-size command.",
+      "mathematical_effect": "Restores delimiter sizing; all quotient, tensor and colimit operands are unchanged."
+    }
+  ],
+  "original_review_and_markdown_preserved": true,
+  "original_reviewed_source_context_preserved": true,
+  "note": "Original bytes remain in revision history and authoring evidence. These are declared editorial transcription repairs, not new source errata.",
+  "compiled_control_character_scan_passed": true,
+  "tab_and_bare_carriage_return_scan_passed": true,
+  "mathematics_reassessed": false,
+  "source_chapter_changed": false,
+  "build_verified": false,
+  "display_wrapper_repairs": {
+    "failure_receipt": "../ALGEBRA_COMPANION_BUILD_20260929/probe-05/PROBE_RECEIPT.json",
+    "reason": "The amsmath split environment needs an amsmath display wrapper.",
+    "distinct_displays": 9,
+    "changed_representations": 18,
+    "records": [
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 15312,
+        "display_contents_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 12605,
+        "display_contents_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 11768,
+        "display_contents_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 10365,
+        "display_contents_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 10355,
+        "display_contents_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 10064,
+        "display_contents_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 9631,
+        "display_contents_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 9071,
+        "display_contents_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "input_line": 9028,
+        "display_contents_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "input_line": 1414,
+        "display_contents_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "input_line": 854,
+        "display_contents_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "input_line": 811,
+        "display_contents_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-099.tex",
+        "input_line": 34,
+        "display_contents_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "input_line": 85,
+        "display_contents_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "input_line": 75,
+        "display_contents_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-113.tex",
+        "input_line": 99,
+        "display_contents_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-118.tex",
+        "input_line": 171,
+        "display_contents_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-126.tex",
+        "input_line": 239,
+        "display_contents_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_delimiters": "double dollar",
+        "corrected_delimiters": "amsmath unnumbered display",
+        "mathematical_contents_exactly_preserved": true
+      }
+    ],
+    "all_mathematical_contents_preserved_byte_exactly": true
+  },
+  "display_wrapper_whitespace_repair": {
+    "failed_probe": "../ALGEBRA_COMPANION_BUILD_20260929/probe-08/PROBE_RECEIPT.json",
+    "cause": "The wrapper repair had added a newline before and after an already newline-delimited display body, creating math paragraph breaks.",
+    "correction": "Remove only the two wrapper-added newlines; retain each original display body byte-exactly.",
+    "records": [
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contextual-arguments.tex",
+        "original_display_body_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "original_display_body_sha256": "2EB67D80E9D15D5CC12D5F8D3C598D12E4DC49ACCF2E56A4702C401307D9B7C1",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "original_display_body_sha256": "D22CDCB19BC783D6676CCFB67E9190247E8F5B6D3B5F5562A9148320A4BB0C41",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-097.tex",
+        "original_display_body_sha256": "C9B2CBB47B24662002B3F9FEC67790E7B79291B9F8DC7C9CBA7360DC4ADF92BB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-099.tex",
+        "original_display_body_sha256": "F2A845AF3FBF18C2520BDA591FAFB1442BBBF769739F9204AF840B3CE0F03E42",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "original_display_body_sha256": "A136678849005789E078A4C8F9B615EBB884A49C0F09912C8AAC72CC1E76660E",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-101.tex",
+        "original_display_body_sha256": "69104CBD66277325965A58A3B4E2A5BCCCC3328CE70EC34C4BEB580530BB5CAB",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-113.tex",
+        "original_display_body_sha256": "D6068289CBFBA5A94862BCAFBFEA855BFA11E9B3DEC627A3FA16D5810F283CC5",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-118.tex",
+        "original_display_body_sha256": "1CAA065B00879F61BEA72FE084538823B1AE488EEC983A4101A53ACE5E7244DA",
+        "original_math_body_exactly_restored": true
+      },
+      {
+        "file": "contexts/ALGEBRA-CONTEXT-126.tex",
+        "original_display_body_sha256": "2CAAA27804F20C82A56512CDA629127220372CD5F66F7DE93B8634354E5CB1C5",
+        "original_math_body_exactly_restored": true
+      }
+    ],
+    "distinct_displays": 9,
+    "mathematical_content_changed": false
+  },
+  "ams_symbol_support": {
+    "id": "RENDER-TEX-005",
+    "failed_build": "../ALGEBRA_PORTABLE_BUILD_20260929/attempt-04/BUILD_RECEIPT.json",
+    "failed_stage": "a-algebra-tex-1",
+    "source_operation": "MC-STK-ERR-1990-OP1",
+    "failure": "The preamble loads amsfonts but does not define the reviewed subsetneq command.",
+    "correction": "Load amssymb directly after the chapter preamble input. The companion master loads it likewise.",
+    "standard_definition": "\\DeclareMathSymbol{\\subsetneq}{\\mathrel}{AMSb}{\"28}",
+    "mathematical_operands_changed": false,
+    "original_source_operations_unchanged": true,
+    "public_cumulative_and_fixes_only_dependency_required": true,
+    "dependency_integration_status": "registered_in_candidate_source_operation_and_replayed_not_admitted",
+    "required_before_admission": "Bind and replay the supporting preamble change in the cumulative composition and reusable fixes-only export; a package-only repair is insufficient.",
+    "supporting_unit": "MC-STK-ERR-2465",
+    "supporting_operation": "MC-STK-ERR-2465-OP1",
+    "source": "algebra.tex",
+    "source_start_line": 1,
+    "common_repository_preamble_change": false,
+    "reusable_chapter_patch_carries_dependency": true
+  },
+  "support_operator_declaration": {
+    "id": "RENDER-TEX-006",
+    "source_operation": "MC-STK-ERR-2214-OP2",
+    "failure": "The reviewed flatness passage uses the undeclared support operator Supp.",
+    "correction": "\\providecommand{\\Supp}{\\operatorname{Supp}}",
+    "mathematical_operands_changed": false,
+    "original_689_body_operations_unchanged": true,
+    "supporting_unit": "MC-STK-ERR-2465",
+    "failed_capture_sha256": "9CA7740852ECE04D13818468A62B5BD96CC1FD5601EBAB2CD0B6A2969C50D236",
+    "error_excerpt": "build-error-Supp.log",
+    "new_body_command_inventory": [
+      "\\Supp",
+      "\\cdots",
+      "\\ne",
+      "\\operatorname",
+      "\\subsetneq",
+      "\\supsetneq",
+      "\\textit",
+      "\\varnothing"
+    ],
+    "inventory_scope": "All commands introduced by the 689 body operations but absent from the authority chapter. This static set comparison is not a successful TeX build.",
+    "definitions": "operatorname comes from loaded amsmath; subsetneq, supsetneq and varnothing come from amssymb; ne, cdots and textit are standard loaded LaTeX commands. Supp is declared through operatorname without changing its argument or subscript."
+  },
+  "literal_markdown_repair": {
+    "id": "RENDER-TEX-007",
+    "recorded_at_utc": "2026-09-29T23:23:20.075830+00:00",
+    "original_source_sha256": "D870DDC69060B200A884A20FCFC69F6ED295A1DFBE27B2E2E34C74DBE7B59A7E",
+    "previous_tex_sha256": "AD86DAABBA6A2707EAC71163B6014587FC45862BEFAAD69E142723452D5CD20C",
+    "repaired_tex_sha256": "A8A7F2810ED37D1E992E80A4F5BBF79CFFBD7B1F71CFD9335D21ADA29ABB64C1",
+    "original_source_preserved": true,
+    "source_chapter_changed": false,
+    "source_routing_changed": false,
+    "reader": "markdown+tex_math_single_backslash+tex_math_double_backslash+raw_tex-smart-superscript-subscript",
+    "derived_input": "conversion-input/ALGEBRA_INDETALE_NOTES_20260929.md",
+    "literal_underscore_inserted_escapes": 258,
+    "inserted_escape_inverse_exact": true,
+    "source_typo_inverse_exact": true,
+    "literal_prime_sequences_retained": true,
+    "literal_caret_exponents_retained": true,
+    "raw_source_math_displays": 15,
+    "unchanged_typeset_math_displays": 14,
+    "declared_display_repair": {
+      "original_control_byte": 13,
+      "occurrences": 2,
+      "original_bytes_hex": "7b0d6d2066696e6974657d",
+      "replacement_bytes_hex": "7b5c726d2066696e6974657d",
+      "reason": "The finite-subset colimit index has a damaged roman-font command; the preceding paragraph explicitly defines F to be finite. No indexing set, factor, map, or hypothesis changes."
+    },
+    "exact_labels_preserved": 8,
+    "all_73_note_parser_spans_audited": true,
+    "audit_file": "MARKDOWN_PARSE_AUDIT.json",
+    "remaining_emphasis": "Only intentional source emphasis and titles in the other notes; their TeX is unchanged.",
+    "double_prime_audit": "All 73 notes parsed with smart punctuation disabled: the only double-ASCII-prime prose tokens are the two repaired in this note.",
+    "build_verified": false,
+    "visual_acceptance": false
+  },
+  "readable_layout_repair": {
+    "id": "RENDER-TEX-008",
+    "created_at_utc": "2026-09-29T23:29:21.796005+00:00",
+    "cause": "Unbreakable metadata, long run-in headings, narrow route-list bodies and figures emitted at unrestricted natural dimensions.",
+    "total_tokens_wrapped": 209,
+    "metadata_inverse": "Remove only the inserted allowbreak empty-group commands to recover each exact previous TeX file.",
+    "display_math_changed": false,
+    "inline_math_changed": false,
+    "labels_changed": false,
+    "link_destinations_changed": false,
+    "source_routing_records_changed": false,
+    "original_markdown_changed": false,
+    "master_before_sha256": "EE76EF441C6D5C1DE173DE99255CB09CA80F1155F48F403766424F93461A35AB",
+    "master_after_sha256": "0C7612C2AFE2F3D79249C0C4E8A7F017E8B44778F6F426564CC468B15E34374C",
+    "bounded_figures": 2,
+    "figure_bytes_changed": false,
+    "route_lists": 155,
+    "heading_contents_and_numbering_preserved": true,
+    "linebreak_emergency_stretch": "3em",
+    "diagnostic_suppression": false,
+    "observed_visual_defects": {
+      "pdf": "ALGEBRA_PORTABLE_BUILD_20260929/attempt-11/a/algebra-editorial.pdf",
+      "pdf_sha256": "871B04A67E3344B2BEB8CB6DC05D798CABAC2D15B575FF0760242530F5D4D149",
+      "pages_actually_viewed": [
+        293,
+        654,
+        656
+      ],
+      "observations": "Pages 293 and 656 visibly clip long source hashes and filenames at the right page edge. Page 654 retains a long displayed identity protruding into the margin; its terms remain visible. Two separate image overflows are confirmed by TeX diagnostics at 724.08 and 651.81 points. Fresh rendered review is required after repair.",
+      "complete_document_review": false,
+      "accepted": false
+    },
+    "complete_build": false,
+    "fresh_visual_acceptance": false,
+    "full_receipt": "READABLE_LAYOUT_REPAIR.json"
+  },
+  "route_layout_compatibility": {
+    "id": "RENDER-TEX-009",
+    "recorded_at_utc": "2026-09-29T23:33:20.766682+00:00",
+    "failed_build": "../ALGEBRA_PORTABLE_BUILD_20260929/attempt-12/BUILD_RECEIPT.json",
+    "error": "Argument of enit@postlabel@i has an extra closing brace at the first source-index item.",
+    "correction": "Replace the package-dependent description clone with a grouped paragraph environment and explicit route-label command.",
+    "route_occurrences": 1262,
+    "unique_route_ids": 1246,
+    "source_groups": 155,
+    "exact_routing_inverse": true,
+    "exact_master_inverse": true,
+    "identifiers_labels_links_and_mathematics_unchanged": true,
+    "enumitem_dependency_removed": true,
+    "master_before_sha256": "0C7612C2AFE2F3D79249C0C4E8A7F017E8B44778F6F426564CC468B15E34374C",
+    "master_after_sha256": "8BC80A1656B388648388F26EFEAFC65AB2261C912DF5F7824AC4541BB6163F9B",
+    "routing_before_sha256": "BCD801DEBC7585F81D0E998D5499B727A9FE9EA3BE09B96B90B44F3399E9E027",
+    "routing_after_sha256": "4061F16BA172BAAE3B78981699191F02104AB02D0C1BAB215A5BB258435C3F7A",
+    "build_verified": false
+  },
+  "reading_width_repair": {
+    "id": "RENDER-TEX-010",
+    "recorded_at_utc": "2026-09-29T23:52:32.943752+00:00",
+    "preceding_build": "../ALGEBRA_PORTABLE_BUILD_20260929/attempt-14/BUILD_RECEIPT.json",
+    "actual_visual_evidence": "../ALGEBRA_COMPANION_LAYOUT_REVIEW_20260930/VISUAL_REVIEW_PARTIAL.json",
+    "decision": "The five-inch text block left one-and-three-quarter-inch side margins. A six-and-a-half-inch block gives one-inch margins on the same letter page, provides space for the original full displays and enlarges both retained diagrams. Identifier wrapping is reversible. Natural paragraph spacing places remaining vertical space at the bottom of the page.",
+    "previous_text_width_points": 360,
+    "new_text_width": "6.5in",
+    "side_margins": "1in",
+    "paper_size_unchanged": true,
+    "mathematical_formulas_byte_identical": true,
+    "inline_math_byte_identical": true,
+    "source_chapter_unchanged": true,
+    "source_routing_records_unchanged": true,
+    "labels_and_link_destinations_unchanged": true,
+    "original_markdown_unchanged": true,
+    "wrapped_identifiers": 408,
+    "exact_identifier_inverse": "Remove only AlgebraIdentifierBreak empty-group commands.",
+    "master_before_sha256": "8BC80A1656B388648388F26EFEAFC65AB2261C912DF5F7824AC4541BB6163F9B",
+    "master_after_sha256": "CB0581780C486378FF42A378F054F909A25F86CD2A0B9BBD685CC0163E40D19F",
+    "exact_master_inverse": true,
+    "figure_bytes_unchanged": true,
+    "figure_aspect_ratios_unchanged": true,
+    "diagnostic_thresholds_unchanged": true,
+    "diagnostics_suppressed": false,
+    "workflow_adjustment": "The previous local plan proposed breaking mathematical displays. The wider standard text block is tried first while preserving every display byte. If measured overflow remains, repair that exact displayed layout next.",
+    "complete_build": false,
+    "visual_acceptance": false,
+    "full_receipt": "READING_WIDTH_REPAIR.json"
+  }
+}

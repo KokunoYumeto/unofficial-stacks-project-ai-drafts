@@ -1,0 +1,153 @@
+\subsection{Catenary and regular local rings: exact source arguments and further consequences}\label{catenary-and-regular-local-rings-exact-source-arguments-and-further-consequences}
+
+Primary source: the Stacks Project, algebra.tex at authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. Complete new review: 25456--25861. Lookahead 25862--25930 is read but unadjudicated; it ends at the start of the local epimorphism proof.
+
+Dependencies read again: algebra.tex 13964--13982, the statement 14521--14536, and 14614--14626. The earlier exact Hilbert argument and its zero-variable cases in ALGEBRA\_GRADED\_PROJ\_HILBERT\_NOTES\_20260927.md, ``Hilbert bound notation'', are reread. The previous CM notes supply their fully proved parameter, quotient and depth results, with their actual zero-module conventions retained.
+
+Original topology.tex at the same authority commit has SHA256 C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872. Reading: 1534--1544 and 3839--3984. Its old proof reverses the specialization and dimension-function differences at 3880 and 3887--3888; the already composed MC-STK-ERR-0041 supplies the correct direction and both signs. That dependency is retained, not allocated again. The algebra dimension-function statement itself has the correct sign.
+
+The two new corpus hits are unread routing records. No external theorem or novelty claim is taken from them. Complete arguments below are separate editorial evidence, with only minimal proposed operations in the review. Neither the cumulative chapter nor any translation is rewritten.
+
+The current chapter already contains a FAC reference and history environment at lemma-regular-quotient-regular, referring to Chapter III, §5, no. 75, proof of Theorem 3, pages 269--270. The complete current block has been read. It records the existing connection between the kernel generators, codimension and successive colon equalities. Both environments are retained exactly. They are the only difference in this interval from the authority, and are not new correction operations or a fresh reading of FAC.
+
+\subsubsection{Prime intervals, localization and the omitted universal argument}\label{prime-intervals-localization-and-the-omitted-universal-argument}
+
+For a ring \(R\), the map \(\mathfrak p\mapsto V(\mathfrak p)\) is a bijection from prime ideals to irreducible closed subsets, reversing inclusion. Its inverse is the ideal of functions vanishing on the closed subset, which is prime for a nonempty irreducible closed set. Reversing a strict prime chain preserves its number of inclusions. This proves precisely the equality of the ring and topological catenarity definitions, including the empty spectrum of the zero ring.
+
+For a multiplicative subset \(S\), extension and contraction identify primes of \(S^{-1}R\) with primes of \(R\) disjoint from \(S\). If \(\mathfrak p\subset\mathfrak q\) are both disjoint from \(S\), every intermediate prime is disjoint too. Thus the entire closed order interval is identified, not merely its endpoints. All strict inclusions, saturation conditions, chain lengths and their bounds are preserved. Similarly primes of \(R/I\) correspond to primes of \(R\) containing \(I\), and if the lower endpoint contains \(I\), so does every intermediate prime. This proves both ordinary localization and quotient permanence.
+
+For the universal localization statement let \(C\) be a finite type \(S^{-1}R\)-algebra and choose its actual finite algebra generators \(c_j\). Let \(B\) be the image of \(R[T_1,\ldots,T_n]\to C\), \(T_j\mapsto c_j\). It is a finite type \(R\)-algebra. The map \[
+ S^{-1}B\longrightarrow C,\qquad b/s\longmapsto b\,s^{-1}
+\] is onto by the generating assumption and is injective: \(B\subset C\) and every \(s\in S\) is a unit of \(C\). Hence it is an isomorphism. If \(R\) is Noetherian universally catenary, \(B\) is catenary, and the interval comparison gives catenarity of \(C\). The localization is Noetherian as required by the definition. Compositions of finite type maps are finite type, and the same argument after localizing proves the source essentially-finite-type result. A finite type algebra is a quotient of a finite-variable polynomial algebra, which justifies the polynomial test without assuming infinitely many variables.
+
+For local checking of ordinary catenarity choose a maximal ideal containing the upper endpoint of any original interval and use its exact localization bijection above. For universal checking take a finite type \(R\)-algebra \(B\), a prime \(\mathfrak q\) of \(B\), its contraction \(\mathfrak p\), and a maximal ideal \(\mathfrak m\supset\mathfrak p\). The actual ring \(R_{\mathfrak p}\) is a localization of \(R_{\mathfrak m}\), while \(B_{\mathfrak q}\) is a localization of the finite type \(R_{\mathfrak p}\)-algebra \((R\setminus\mathfrak p)^{-1}B\). Universal catenarity at \(\mathfrak m\) therefore makes \(B_{\mathfrak q}\) catenary, and ordinary local checking gives catenarity of \(B\). The received correction at 25559 is the single word ``primes'' to ``prime''.
+
+For the omitted universal assertion at 25589--25604, let \(B\) be any finite type \(R\)-algebra and let \(\mathfrak a\subset\mathfrak b\) be primes of \(B\). Choose a minimal prime \(\mathfrak p\) of \(R\) contained in \(\mathfrak a\cap R\). The entire interval \([\mathfrak a,\mathfrak b]\) contains \(\mathfrak pB\), so quotienting identifies it with its interval in \(B/\mathfrak pB\). This is a finite type algebra over \(R/\mathfrak p\), hence catenary by the assumed universal property. The interval bounds and lengths follow. This proves the omitted direction; the converse follows by quotient permanence. It does not assume a minimal prime of \(B\) contracts to a minimal prime of \(R\), which is false in general.
+
+\subsubsection{Arbitrary closed covers and nil-ideal invariance}\label{arbitrary-closed-covers-and-nil-ideal-invariance}
+
+Let \(\{I_\lambda\}\) be any family of ideals of a ring \(R\) such that \(\operatorname{Spec}R=\bigcup_\lambda V(I_\lambda)\). Then \[
+ R\text{ is catenary}\quad\Longleftrightarrow\quad
+ R/I_\lambda\text{ is catenary for every }\lambda.
+\] Necessity is quotient permanence. For sufficiency, in any interval \(\mathfrak p\subset\mathfrak q\), choose \(\lambda\) with \(I_\lambda\subset
+\mathfrak p\). Every intermediate prime contains this same ideal. Extension of quotient classes and contraction thus identify the whole interval with one in \(R/I_\lambda\), preserving all lengths and saturation. No finite cover and no Noetherian hypothesis are used.
+
+If \(R\) is Noetherian, the same equivalence holds for universal catenarity. For a finite type algebra \(B\) and an interval with lower endpoint \(\mathfrak a\), apply the cover to \(\mathfrak a\cap R\). Then \(I_\lambda B\subset\mathfrak a\), and the interval is one in the finite type \(R/I_\lambda\)-algebra \(B/I_\lambda B\). Its catenarity proves the claim. Necessity again follows by quotient permanence.
+
+Every prime of any ring contains a minimal prime. Indeed the intersection of a chain of primes contained in a given prime is prime: if \(ab\) lies in all the chain members but neither \(a\) nor \(b\) lies in their intersection, choose members missing each one; the smaller of those two comparable primes misses both, a contradiction. The reversed-inclusion form of Zorn's lemma supplies a minimal member. Thus the source ordinary minimal-prime criterion holds for arbitrary rings, without Noetherianity. The universal criterion retains Noetherianity because it is part of the source definition.
+
+If \(I\) is a nil ideal, every prime contains \(I\), so the one-member cover proves catenarity invariance under \(R\to R/I\). For Noetherian \(R\) it also proves universal catenarity invariance. Alternatively, in a finite type algebra \(B\), every element of \(IB\) is a finite sum of multiples of nilpotent elements. If their exponents are \(e_1,\ldots,e_t\), every term of a power of total degree \(1+\sum_j(e_j-1)\) contains a vanishing factor. Hence \(IB\) is nil and the spectra of \(B\) and \(B/IB\) have the same prime intervals. No ring or nilpotent contribution is identified with zero in the actual algebra; this is a proved comparison of their spectra.
+
+\subsubsection{The local dimension function without Noetherianity}\label{the-local-dimension-function-without-noetherianity}
+
+Let \(A\ne0\) be any local ring with maximal ideal \(\mathfrak m\). Then \(A\) is catenary if and only if \[
+ \delta(\mathfrak p)=\dim(A/\mathfrak p)
+\] is a finite integer for every prime and is a dimension function in the source sense: it strictly decreases under proper specialization and decreases by exactly one under immediate specialization.
+
+Suppose \(A\) is catenary. For a fixed \(\mathfrak p\), its interval to \(\mathfrak m\) has bounded finite chain length. Any finite chain in \(\operatorname{Spec}(A/\mathfrak p)\) extends at both ends to that interval. Thus its dimension is finite and is the common length of maximal \(\mathfrak p\)-to-\(\mathfrak m\) chains. Such chains exist: successive strict refinements must terminate because of the integer bound. For \(\mathfrak p\subset\mathfrak q\), concatenate a maximal interval chain from \(\mathfrak p\) to \(\mathfrak q\) with one from \(\mathfrak q\) to \(\mathfrak m\). The concatenation is saturated and has the common total length \(\delta(\mathfrak p)\). Hence \[
+ \ell[\mathfrak p,\mathfrak q]
+ =\delta(\mathfrak p)-\delta(\mathfrak q).
+\] This gives both dimension-function conditions.
+
+Conversely, along any strict interval chain each integer decrease is at least one, so the length is bounded by the displayed difference. A maximal chain is finite and saturated; each step is immediate and decreases \(\delta\) by one. Its length is exactly that difference. This proves catenarity and the precise interval formula without Noetherianity. The values may be unbounded over different primes; no finite global dimension assumption has been inserted.
+
+This direct argument proves the original Noetherian local result with its correct signs. In the source's topological proof, an open neighborhood of the closed point in a local spectrum is the whole spectrum: any basic open containing the maximal ideal is defined by a unit. Thus the cited local dimension-function construction really supplies a global function there. The corrected MC-STK-ERR-0041 sign is \(\delta(\text{generic})-\delta(\text{special})\), consistent with the algebra formula above. The original algebra statement needs no operation.
+
+\subsubsection{Universal catenarity of module supports and covering families}\label{universal-catenarity-of-module-supports-and-covering-families}
+
+The source full-support CM theorem is proved by its original two comparisons. For a finite-variable polynomial extension, the previous CM-module theorem preserves Cohen--Macaulayness. Its support is the entire polynomial spectrum: the polynomial map is flat and the finite-generator annihilator kernel comparison in the previous notes gives the extended annihilator; an original full-support module has nil annihilator, so every polynomial prime contains that extension. Localizing at any prime gives a nonzero CM module with full local support. The original maximal-chain theorem then fixes the lengths of prime intervals. All polynomial algebras are catenary; finite type quotients give universal catenarity. Taking \(M=R\) recovers the ring case.
+
+More generally, let \(R\) be Noetherian and \(M\) a finite CM module. Retain the original \(R\) and \(M\), and set \(A=R/\operatorname{ann}_R M\). At corresponding primes the exact quotient and localization maps of group 590 identify the same nonzero module and all regular-sequence multiplication maps. It is CM over \(A\), with full support. Hence \(A\) is universally catenary by the current source theorem. If \(M=0\), then \(A=0\), and the claim holds directly: its spectrum and those of its unital algebras are empty. For nonzero local \(M\), this strengthens group 590's support-catenarity conclusion to universal catenarity of its actual support ring; its original dimension and interval formulas stay unchanged.
+
+If a family of finite CM \(R\)-modules has supports covering \(\operatorname{Spec}R\), each quotient by its annihilator is universally catenary. The proved arbitrary closed-cover criterion therefore makes \(R\) universally catenary. No direct sum is assumed to be CM: the argument uses the actual individual quotient rings and their interval maps. The source's single full-support module is the one-member case.
+
+\subsubsection{Regular graded rings, domains and parameter quotients}\label{regular-graded-rings-domains-and-parameter-quotients}
+
+At 25690--25712, if \(d=0\), the regular maximal ideal is generated by the empty family and is zero. Thus \(R=\kappa\), its associated graded ring is \(\kappa\) in degree zero, and the claimed comparison is the identity. No degree-\(-1\) polynomial or negative binomial lower index is used. This boundary is editorial evidence, as in the earlier group 384.
+
+For \(d>0\), retain the original \(x_1,\ldots,x_d\) and the graded map \[
+ \theta:\kappa[X_1,\ldots,X_d]\longrightarrow
+ \bigoplus_{n\ge0}\mathfrak m^n/\mathfrak m^{n+1},\quad
+ X_j\longmapsto x_j+\mathfrak m^2.
+\] It is surjective: products of the actual generators span each ideal power, and coefficients reduce to their residue classes in that graded piece. The dimension theorem and the earlier Hilbert calculation give its target the original eventual degree \(d-1\). A nonzero homogeneous kernel element of degree \(e\) would force the upper bound \[
+ \dim_\kappa(\operatorname{gr}_{\mathfrak m}R)_n
+ \le {n-1+d\choose d-1}-{n-e-1+d\choose d-1}
+\] for all sufficiently large \(n\). For \(d\ge2\) the highest coefficients cancel, giving degree at most \(d-2\); for \(d=1\) the expression is zero. Both contradict the original degree. Thus the actual \(\theta\) is injective.
+
+For the domain proof take \(f,g\ne0\). Krull intersection makes their actual orders finite: each lies in exactly the initial segment of the powers through some maximal \(a,b\). Their nonzero initial forms have nonzero product in the polynomial graded domain. Hence \[
+ fg\in\mathfrak m^{a+b}\setminus\mathfrak m^{a+b+1},
+\] contradicting \(fg=0\). If either factor is zero the domain implication is already satisfied; the received correction explicitly excludes that case before choosing orders.
+
+For 25731--25747 the \(d=0\) field case has the empty regular sequence and needs no \(x_1\). For \(d>0\), \(x_1\notin\mathfrak m^2\) and in particular \(x_1\ne0\); the domain result makes it regular. The quotient has dimension at least \(d-1\) by the one-equation lemma and its maximal ideal has at most \(d-1\) generators. The earlier dimension bound gives equality and regularity. Induction with the actual images of \(x_2,\ldots,x_d\) proves every asserted quotient dimension and the full regular sequence. This supplies omitted boundary steps as editorial evidence.
+
+For a regular quotient \(R/I\), \(I\subset\mathfrak m\) and both rings share \(\kappa\). There is the actual exact sequence of \(\kappa\)-vector spaces \[
+ 0\longrightarrow (I+\mathfrak m^2)/\mathfrak m^2
+ \longrightarrow \mathfrak m/\mathfrak m^2
+ \longrightarrow (\mathfrak m/I)/(\mathfrak m/I)^2\longrightarrow0 .
+\] Thus the source's third dimension must also have the \(\kappa\) subscript. Choose the first \(c\) basis lifts in the original \(I\) and complete them to the original minimal generator set of \(\mathfrak m\). The map \(R/(x_1,\ldots,x_c)\to R/I\) is onto between regular local rings of the same dimension. If its kernel contained \(0\ne y\), the source domain result makes \(y\) regular, and the proper quotient by \(y\) has dimension one smaller. Factoring the map through that quotient contradicts the equal dimension of its target. Therefore its kernel is zero and the ideal equality holds, including \(c=0\) and \(c=d\). The notation declaration at 25760 receives the missing ``by''.
+
+\subsubsection{Free lifting, maximal CM modules and regular lifting}\label{free-lifting-maximal-cm-modules-and-regular-lifting}
+
+In 25779--25797 choose the original finite basis of \(M/xM\) and lifts \(m_i\). The quotient of \(M\) by their span is finite and equal to its multiple by \(x\in\mathfrak m\), so Nakayama makes the lift map \(F=R^r\to M\) onto. Let \(K\) be its actual kernel. For \((a_i)\in K\), reduction modulo \(x\) gives \(a_i=xb_i\). The relation becomes \(x\sum b_im_i=0\). Regularity of \(x\) on \(M\) gives \((b_i)\in K\). Hence \(K=xK\). Over the original Noetherian ring \(K\) is finite, and Nakayama gives \(K=0\). If \(r=0\), the same Nakayama argument gives \(M=0\), a free module of rank zero. The article before \(R/xR\)-basis is corrected.
+
+For the maximal-CM theorem over regular local \(R\), first handle \(d=0\): \(R\) is a field and every finite module is free. Otherwise the original regular local ring is a domain. A nonzero maximal-CM module has dimension \(d\), and its minimal support primes all have quotient dimension \(d\). In the local domain only the zero prime can have that dimension: a strictly larger prime shortens chains by at least one. Hence the module has full support. The chosen parameter \(x\) consequently cuts that support by one dimension, and the previous nonzero-module CM proposition makes \(x\) regular on \(M\). Its quotient is a nonzero maximal-CM module over the regular local ring \(R/xR\). Induction makes the quotient free, and the proved original lifting lemma makes \(M\) free. This verifies the source's implicit full-support and field-base cases without rewriting its proof.
+
+For 25815--25831, let \(x\in\mathfrak m\) be regular on \(R\), and suppose \(R/xR\) regular of dimension \(d-1\). The one-equation equality gives \(\dim R=d\). Lift its \(d-1\) minimal maximal-ideal generators and adjoin the actual \(x\). Their images generate \(\mathfrak m/xR\), so they and \(x\) generate \(\mathfrak m\). The dimension lower bound prevents fewer than \(d\) generators. This is exactly regularity of \(R\); induction through the original successive quotients proves the sequence version.
+
+\subsubsection{Directed colimits with noninjective transition maps}\label{directed-colimits-with-noninjective-transition-maps}
+
+Let the source maps be \(\varphi_{ii'}:R_i\to R_{i'}\), all local. The direct limit \(R\) is nonzero: equality \(1=0\) would hold at a finite stage, contradicting a nonzero local ring. The subset of elements represented by maximal-ideal elements is an ideal \(\mathfrak m\). An element represented outside \(\mathfrak m_i\) is a unit already at that stage. An element represented inside it cannot become a unit: an inverse relation would occur at a later stage, where the original element still lies in the maximal ideal. Thus \(R\) is local and its maximal ideal is the colimit of the original maximal ideals. The plural wording is corrected.
+
+The induction parameter is the finite vector-space dimension \[
+ d=\dim_{R/\mathfrak m}(\mathfrak m/\mathfrak m^2),
+\] not an ungrouped quotient of a dimension symbol. Noetherianity of the given limit makes \(\mathfrak m\) finite. If \(d=0\), Nakayama gives \(\mathfrak m=0\), so \(R\) is a field.
+
+If \(d>0\), choose the actual \(x\in\mathfrak m\setminus\mathfrak m^2\) and a representing \(x_i\in\mathfrak m_i\). For every \(i'\ge i\), its image \(x_{i'}=\varphi_{ii'}(x_i)\) is outside \(\mathfrak m_{i'}^2\): membership there would imply \(x\in\mathfrak m^2\). It is therefore part of a minimal generator set by the residue tangent-space basis and Nakayama. The source parameter theorem makes \(R_{i'}/x_{i'}R_{i'}\) regular local. The induced transition maps remain local. Their limit is the actual quotient \(R/xR\), with map \[
+ a_{i'}+x_{i'}R_{i'}\longmapsto a+xR.
+\] Surjectivity follows from representatives. If a representative maps to zero, write \(a=xb\) in the limit, choose a common later stage for \(a,x,b\), and then a later stage where this equality holds. This proves injectivity.
+
+Its tangent space is \[
+ (\mathfrak m/xR)/(\mathfrak m/xR)^2
+ \simeq\mathfrak m/(\mathfrak m^2+xR),
+\] whose dimension is exactly \(d-1\), since the class of \(x\) is nonzero in \(\mathfrak m/\mathfrak m^2\). Thus induction applies to this Noetherian quotient limit.
+
+A directed colimit of the nonzero domains \(R_i\) here is a domain even when the transition maps are not injective. If a product is zero in the limit, represent its factors at a common stage and then pass to a stage where their product is zero. One factor is zero at that domain stage, hence zero in the limit. Together with \(1\ne0\) this proves the claim. The direct source citation is lemma-regular-domain, as the reports state. Now \(x\ne0\), so it is regular on \(R\), and the previous lifting lemma concludes the source colimit theorem.
+
+\subsubsection{Two weakenings of Noetherianity in free lifting}\label{two-weakenings-of-noetherianity-in-free-lifting}
+
+The free-lifting result remains true for a local ring \(R\), \(x\in\mathfrak m\), and \(M\) finite, with \(x\) injective on \(M\) and \(M/xM\) free, if either:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  \(M\) is finitely presented, or
+\item
+  the original \(x\)-adic filtration of \(R\) is separated: \(\bigcap_{n\ge0}x^nR=0\).
+\end{enumerate}
+
+The same chosen quotient basis is finite: tensor it with the nonzero residue field and use finite generation of \(M/xM\) to bound its cardinality. The preceding proof gives the surjection \(F=R^r\to M\) and \(K=xK\) verbatim.
+
+For (a), the kernel of a finite free surjection onto a finitely presented module is finite. Explicitly, take a finite presentation \(G\to H\to M\) with \(H\) finite free and finitely generated kernel \(L\). Lift the maps from \(F\) to \(M\) through \(H\), and from \(H\) to \(M\) through \(F\), obtaining \(u:F\to H\), \(v:H\to F\) compatible with the two surjections. For \(k\in K\), \[
+ k=(1-vu)k+v(uk).
+\] Here \(uk\in L\), and \((1-vu)F\subset K\), \(vL\subset K\). Consequently \(K=(1-vu)F+vL\), a sum of two finite submodules. Nakayama now gives \(K=0\).
+
+For (b), \(K=xK\) implies \(K\subset x^nF\) for every \(n\). In the original finite coordinates \(\bigcap_n x^nF=(\bigcap_n x^nR)^r=0\), so again \(K=0\). No finite generation of \(K\) is assumed in this second proof. Neither alternative requires \(x\) to be a nonzerodivisor on \(R\); the needed injectivity is on the original \(M\). Both include \(M=0\).
+
+\subsubsection{The valuation determined by the original maximal-ideal powers}\label{the-valuation-determined-by-the-original-maximal-ideal-powers}
+
+Let \(R\) be regular local of dimension \(d>0\), with the original parameters \(x_1,\ldots,x_d\), residue field \(\kappa\), and fraction field \(K\). For \(0\ne f\in R\) put \[
+ v(f)=\max\{n:f\in\mathfrak m^n\}.
+\] The graded-domain argument proves the exact equality \(v(fg)=v(f)+v(g)\). Also \(v(f+g)\ge\min(v(f),v(g))\) when the sum is nonzero, with equality if the two orders differ; the lowest nonzero graded term then cannot cancel. Extend by \[
+ v(a/b)=v(a)-v(b)\quad(a,b\ne0),\qquad v(0)=+\infty.
+\] If \(a/b=c/e\), the exact equality \(ae=bc\) and additivity on \(R\) prove that the definition is independent of representatives. Multiplication and the sum inequality follow after a common denominator, retaining every factor in that comparison. Since \(v(x_d)=1\), its image is all \(\mathbb Z\).
+
+The ring \(V=\{z\in K:v(z)\ge0\}\) is a valuation ring: for any nonzero \(z\), either it or its inverse has nonnegative value. Its units have value zero, and its maximal ideal consists of positive-valued elements, exactly \(x_dV\). Every nonzero ideal of \(V\) has a least value \(n\ge0\); if \(z\) in that ideal has value \(n\), every other element divided by \(z\) lies in \(V\), so the ideal is \(zV=x_d^nV\). Thus \(V\) is a discrete valuation ring with the actual uniformizer \(x_d\). Its maximal ideal contracts to \(\mathfrak m\), and \(R\subset V\).
+
+The residue field is explicitly \[
+ V/x_dV\simeq
+ \kappa(X_1/X_d,\ldots,X_{d-1}/X_d).
+\] For \(a/b\) of value zero, send its residue to \(\theta^{-1}(\operatorname{in}a)/\theta^{-1}(\operatorname{in}b)\); the two homogeneous polynomials have the same degree. Positive-valued elements map to zero. Equality of fractions is respected by the exact initial-form product identities. For addition, use \(ae+bc\) as numerator: if its lowest terms cancel, both the proposed residue sum and the new residue are zero; otherwise the initial numerator is their actual sum. This proves a ring map on \(V\), with kernel exactly the positive-valued ideal.
+
+Every ratio of homogeneous polynomials of the same degree is a rational function in \(X_j/X_d\), by dividing each full polynomial by the same power of \(X_d\). Conversely any rational function in those ratios is a ratio of same-degree homogeneous polynomials after multiplying numerator and denominator by the required powers of \(X_d\). The graded isomorphism \(\theta\) supplies actual representatives of every homogeneous polynomial in the corresponding \(\mathfrak m^n/\mathfrak m^{n+1}\). Their fraction has value zero. This proves surjectivity and the residue-field isomorphism, with all original initial forms and parameter comparisons retained.
+
+For \(d=1\), \(V=R\): every nonzero \(f\) is \(x_1^{v(f)}u\) with \(u\in R^\times\), because \(\mathfrak m=(x_1)\); any fraction of nonnegative value lies in \(R\). For \(d>1\), \(x_1/x_d\in V\setminus R\). An equality \(x_1=x_dr\) in \(R\) would put \(x_1\) in \(\mathfrak m^2\) if \(r\in\mathfrak m\), or would make the two independent tangent-space classes proportional if \(r\) were a unit. Both are impossible. For \(d=0\), the original ring is a field and its order valuation is trivial; no discrete rank-one valuation is asserted. This is a proved standard consequence of the source graded comparison, not a novelty claim or a replacement of the original local ring.

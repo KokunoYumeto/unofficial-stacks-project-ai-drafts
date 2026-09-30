@@ -1,0 +1,138 @@
+\begin{lemma}
+\label{lemma-p-ring-map}
+Let $\varphi : R \to S$ be a ring map. Let $p$ be a prime number. Assume
+\begin{enumerate}
+\item[(a)] $S$ is generated as an $R$-algebra by elements $x$ such
+that there exists an $n > 0$ with $x^{p^n} \in \varphi(R)$ and
+$p^nx \in \varphi(R)$, and
+\item[(b)] $\Ker(\varphi)$ is locally nilpotent,
+\end{enumerate}
+Then $\varphi$ induces a homeomorphism of spectra and induces
+residue field extensions satisfying the equivalent conditions
+of Lemma \ref{lemma-p-ring-map-field}. For any ring map $R \to R'$
+the ring map $R' \to R' \otimes_R S$ also satisfies (a) and (b).
+\end{lemma}
+
+\begin{proof}
+Retain the actual image $A=\varphi(R)\subseteq S$.
+Let $T$ consist of the original $x\in S$ for
+which some positive $n$ satisfies
+$x^{p^n}\in A$ and $p^n x\in A$.
+Every element of $A$ lies in $T$, by taking
+$n=1$. If $x\in T$, then $-x\in T$ with
+the same $n$, since both required expressions
+change only by the respective integer signs.
+For $r\in R$,
+$$
+(\varphi(r)x)^{p^n}=\varphi(r)^{p^n}x^{p^n}\in A,
+\qquad
+p^n\varphi(r)x=\varphi(r)(p^n x)\in A.
+$$
+Thus this verification never assumes that
+the original $\varphi$ is injective.
+If $x,y\in T$ have the original witnesses
+$n,m$, then
+$$
+(xy)^{p^{n+m}}
+=(x^{p^n})^{p^m}(y^{p^m})^{p^n}\in A,
+\qquad
+p^{n+m}xy=(p^n x)(p^m y)\in A.
+$$
+For addition, apply the actual evaluation
+homomorphism $\mathbf Z[X,Y]\to S$,
+$X\mapsto x$, $Y\mapsto y$, to Lemma
+\ref{lemma-help-with-powers}. Its four
+original generators map to
+$x^{p^n},p^n x,y^{p^m},p^m y\in A$.
+The displayed full coefficient formulas
+in that lemma give both required expressions
+for $x+y$ in $A$, with its specified
+integer exponent. Therefore $T$ is an
+$R$-subalgebra of $S$. Hypothesis (a)
+places every generating element in $T$,
+so $T=S$.
+
+In particular every original element
+of $S$ has a positive power in $A$.
+Together with the nil-kernel hypothesis,
+Lemma \ref{lemma-powers} proves that
+the original map on spectra is a
+homeomorphism. Let $\mathfrak q$ lie
+over $\mathfrak p$. The field
+$\kappa(\mathfrak q)$ is generated over
+$\kappa(\mathfrak p)$ by the residues
+of the original algebra generators:
+the images generate $S/\mathfrak q$
+as an $R/\mathfrak p$-algebra, and
+fractions give its residue field.
+Each such residue still satisfies
+both original power and integer-multiple
+conditions. Lemma \ref{lemma-p-ring-map-field}
+therefore proves precisely the asserted
+residue-field classification.
+
+For any original $R\to R'$, the
+algebra $S'=R'\otimes_R S$ has the
+generators $1\otimes x$. If the
+original preimages of $x^{p^n}$ and
+$p^n x$ are $a,b\in R$, then
+$$
+(1\otimes x)^{p^n}=f(a)\otimes1,
+\qquad p^n(1\otimes x)=f(b)\otimes1.
+$$
+Thus (a) is preserved with exactly
+the same $n$ for each generator.
+Surjectivity on spectra is preserved
+as well: for $\mathfrak p'\subset R'$
+contracting to $\mathfrak p$, choose
+$\mathfrak q\subset S$ above
+$\mathfrak p$ and use the nonzero
+field tensor
+$\kappa(\mathfrak p')\otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak q)$.
+The map $r'\otimes s\mapsto
+\overline r'\otimes\overline s$
+and any prime of that tensor have
+inverse image in $S'$ contracting
+to exactly $\mathfrak p'$, since
+a field injects into every nonzero
+unital algebra over it. This is
+the same explicit fibre construction
+as in Lemma \ref{lemma-2-3-ring-map}.
+Every element of the new kernel
+therefore lies in every prime of
+$R'$ and is nilpotent, proving (b).
+The theorem applies to this actual
+base-changed map, giving a
+homeomorphism and the stated
+residue-field extensions after
+every base change.
+
+The integer-multiple hypothesis
+also gives an exact global conclusion
+after inverting the original prime
+integer $p$. The map
+$$
+R[1/p]\longrightarrow S[1/p]
+$$
+is surjective: each original
+generator with $p^n x=\varphi(b)$
+is the image of the actual fraction
+$b/p^n$. Its kernel is exactly
+$I[1/p]$, for $I=\ker\varphi$.
+Indeed if $r/p^j$ maps to zero,
+there is an integer $h\geq0$
+with $p^h\varphi(r)=0$, and then
+$p^h r\in I$ and
+$r/p^j=(p^h r)/p^{j+h}$.
+The reverse containment is immediate.
+Thus
+$S[1/p]\simeq R[1/p]/I[1/p]$
+through this original fraction map,
+and the kernel remains locally
+nilpotent. In particular the
+localized map is an isomorphism
+if the original $\varphi$ is
+injective. This statement also
+covers the case that inverting
+$p$ makes both rings zero.
+\end{proof}

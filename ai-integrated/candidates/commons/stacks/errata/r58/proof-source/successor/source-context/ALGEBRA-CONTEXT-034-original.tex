@@ -1,0 +1,19 @@
+\begin{lemma}
+\label{lemma-constructible}
+Let $R$ be a ring. A subset of $\Spec(R)$ is constructible if and only
+if it can be written as a finite union of subsets of the form
+$D(f) \cap V(g_1, \ldots, g_m)$ for $f, g_1, \ldots, g_m \in R$.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-qc-open} the subset $D(f)$ and the complement of
+$V(g_1, \ldots, g_m)$ are retro-compact open. Hence
+$D(f) \cap V(g_1, \ldots, g_m)$ is a constructible subset and so is
+any finite union of such. Conversely, let $T \subset \Spec(R)$ be
+constructible. By Topology, Definition \ref{topology-definition-constructible},
+we may assume that $T = U \cap V^c$, where $U, V \subset \Spec(R)$
+are retrocompact open. By Lemma \ref{lemma-qc-open} we may write
+$U = \bigcup_{i = 1, \ldots, n} D(f_i)$ and
+$V = \bigcup_{j = 1, \ldots, m} D(g_j)$. Then
+$T = \bigcup_{i = 1, \ldots, n} \big(D(f_i) \cap V(g_1, \ldots, g_m)\big)$.
+\end{proof}

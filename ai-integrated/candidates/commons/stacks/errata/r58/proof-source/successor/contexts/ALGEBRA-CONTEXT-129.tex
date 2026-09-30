@@ -1,0 +1,181 @@
+\begin{lemma}
+\label{editorial-source-lemma-help-with-powers}
+Let $p$ be a prime number. Let $n, m > 0$ be two integers. There exists
+an integer $a$ such that
+$(x + y)^{p^a}, p^a(x + y) \in \mathbf{Z}[x^{p^n}, p^nx, y^{p^m}, p^my]$.
+\end{lemma}
+
+\begin{proof}
+Retain the original subring
+$$
+A=\mathbf Z[x^{p^n},p^n x,y^{p^m},p^m y]
+\subseteq\mathbf Z[x,y].
+$$
+We calculate exactly which integer
+coefficients can occur at each original
+monomial $x^i y^j$. Write uniquely
+$$
+i=q p^n+r,\quad 0\leq r<p^n,
+\qquad j=q' p^m+r',\quad 0\leq r'<p^m.
+$$
+In any product of the four displayed
+generators contributing to this
+monomial, the exponent on $p^n x$
+is at least $r$, and the exponent
+on $p^m y$ is at least $r'$.
+Thus its coefficient is divisible
+by $p^{nr+mr'}$. Conversely the
+product
+$$
+(x^{p^n})^q(p^n x)^r
+(y^{p^m})^{q'}(p^m y)^{r'}
+=p^{nr+mr'}x^i y^j
+$$
+belongs to $A$. Since distinct formal
+monomials are independent over
+$\mathbf Z$, a polynomial belongs
+to $A$ exactly when each of its
+coefficients is divisible by this
+corresponding integer. This proves
+necessity as well as sufficiency
+of the source divisibility test.
+
+For a nonnegative integer $a$,
+$p^a(x+y)$ belongs to $A$ exactly
+when $a\geq b=\max(n,m)$: the
+coefficient tests for $x$ and $y$
+are respectively divisibility by
+$p^n$ and $p^m$. In that case its
+full expression in the generators is
+$$
+p^a(x+y)=p^{a-n}(p^n x)+p^{a-m}(p^m y).
+$$
+Now keep $a\geq b$ and $N=p^a$.
+For $0<i<N$, the original binomial
+coefficient has the exact valuation
+$$
+v_p\binom Ni=a-v_p(i).
+$$
+Indeed
+$\binom Ni=(N/i)\binom{N-1}{i-1}$,
+and the second factor is not divisible
+by $p$. To verify the latter assertion,
+reduce the full polynomial identity
+$(1+T)^N=1+T^N$ modulo $p$ and divide
+by $1+T$ in $\mathbf F_p[T]$.
+It gives
+$$
+(1+T)^{N-1}=\sum_{h=0}^{N-1}(-T)^h
+\quad\hbox{in }\mathbf F_p[T].
+$$
+Multiplication by $1+T$ verifies this
+identity: the last sign is positive
+for odd $p$, and signs coincide for
+$p=2$. Every coefficient is nonzero,
+giving the valuation assertion with
+the original integer coefficient
+still retained.
+
+The two endpoint terms $i=0,N$
+already belong to $A$. For an
+intermediate $i$, put $t=i\bmod p^b$
+with $0\leq t<p^b$. If $t=0$, both
+remainders $r,r'$ are zero. If $t>0$,
+then $v_p(i)=v_p(t)$ and
+$$
+r=t\bmod p^n,\qquad
+r'=(-t)\bmod p^m,
+$$
+where both residues are chosen in
+their original nonnegative ranges.
+Every $1\leq t<p^b$ occurs among
+$1\leq i<N$. Consequently the least
+possible $a$ for both assertions
+is exactly
+$$
+\max\left(b,
+\max_{1\leq t<p^b}
+\left(v_p(t)+n(t\bmod p^n)+m((-t)\bmod p^m)\right)\right).
+$$
+This is an exact test on the
+original integer coefficients,
+not merely a sufficient estimate.
+
+It has the following explicit value:
+$$
+a_{min}=
+\begin{cases}
+n p^n+n-1,&n=m,\\
+b(p^b-1)+c,&n\neq m,\quad
+b=\max(n,m),\ c=\min(n,m).
+\end{cases}
+$$
+For $n=m$, each nonzero residue $t$
+has $r+r'=p^n$, and its valuation
+is at most $n-1$, with equality at
+$t=p^{n-1}$. This gives the first
+value, which is at least $b$.
+For $n<m$, write $t=q p^n+r$.
+If $r>0$, its full weight is
+$$
+m p^m-m q p^n-(m-n)r+v_p(r).
+$$
+For every positive $r$ one has
+$v_p(r)\leq r-1$: if $v=v_p(r)$,
+then $r\geq p^v\geq v+1$, the
+last inequality following by
+induction on $v$. Since $m-n\geq1$,
+this gives
+$v_p(r)\leq(m-n)(r-1)$.
+The weight is therefore at most
+$m p^m-(m-n)$, and equality is
+attained at the original $t=1$.
+If $r=0$ and $t>0$, its weight is
+$m(p^m-t)+v_p(t)$, at most
+$m p^m-(m-1)t-1$. Since $t\geq1$,
+this is at most $m p^m-m$, and
+hence at most $m p^m-(m-n)$.
+Thus the maximum is exactly
+$m(p^m-1)+n$. For $m<n$, the
+automorphism of $\mathbf Z[x,y]$
+exchanging the original $x$ and
+$y$ takes $A$ to the corresponding
+subring with $n,m$ exchanged, and
+fixes both $(x+y)^{p^a}$ and
+$p^a(x+y)$. Applying this actual
+inverse-to-itself map proves the
+other unequal case. These values
+are all at least $b$.
+
+For every $a\geq a_{min}$, the full
+desired expression is therefore
+$$
+(x+y)^{p^a}=
+\sum_{\substack{i,j\geq0\\i+j=p^a}}
+\frac{\binom{p^a}{i,j}}{p^{nr+mr'}}
+(x^{p^n})^q(p^n x)^r
+(y^{p^m})^{q'}(p^m y)^{r'}.
+$$
+Each displayed quotient is an
+integer by the proved divisibility;
+no power of $p$ is inverted in the
+ring. All original binomial
+coefficients and all four generator
+factors are retained. If $b\leq a<a_{min}$,
+the maximizing residue just described
+gives an actual monomial whose
+coefficient fails the necessary
+divisibility. If $a<b$, the linear
+expression already fails. This
+proves minimality.
+
+In particular the source choice
+$a_0=n p^n+m p^m+n+m$ works.
+For $n=m$, its difference from
+$a_{min}$ is $n p^n+n+1$.
+For $n\neq m$, with the same
+$b,c$, the difference is $c p^c+2b$.
+Both are positive. Thus the original
+sufficient choice is preserved and
+verified, alongside the sharp bound.
+\end{proof}

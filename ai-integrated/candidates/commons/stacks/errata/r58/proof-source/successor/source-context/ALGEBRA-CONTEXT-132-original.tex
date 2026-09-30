@@ -1,0 +1,55 @@
+\begin{lemma}
+\label{lemma-radicial}
+Let $\varphi : R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item $\varphi$ induces an injective map of spectra,
+\item $\varphi$ induces purely inseparable residue field extensions.
+\end{enumerate}
+Then for any ring map $R \to R'$ properties (1) and (2) are true for
+$R' \to R' \otimes_R S$.
+\end{lemma}
+
+\begin{proof}
+Set $S' = R' \otimes_R S$ so that we have a commutative diagram
+of continuous maps of spectra of rings
+$$
+\xymatrix{
+\Spec(S') \ar[r] \ar[d] & \Spec(S) \ar[d] \\
+\Spec(R') \ar[r] & \Spec(R)
+}
+$$
+Let $\mathfrak p' \subset R'$ be a prime ideal lying over
+$\mathfrak p \subset R$. If there is no prime ideal of $S$
+lying over $\mathfrak p$, then there is no prime ideal of
+$S'$ lying over $\mathfrak p'$. Otherwise, by
+Remark \ref{remark-fundamental-diagram} there is a unique
+prime ideal $\mathfrak r$ of $F = S \otimes_R \kappa(\mathfrak p)$
+whose residue field is purely inseparable over $\kappa(\mathfrak p)$.
+Consider the ring maps
+$$
+\kappa(\mathfrak p) \to F \to \kappa(\mathfrak r)
+$$
+By Lemma \ref{lemma-minimal-prime-reduced-ring} the ideal
+$\mathfrak r \subset F$ is locally nilpotent, hence
+we may apply Lemma \ref{lemma-surjective-locally-nilpotent-kernel}
+to the ring map $F \to \kappa(\mathfrak r)$.
+We may apply Lemma \ref{lemma-p-ring-map}
+to the ring map $\kappa(\mathfrak p) \to \kappa(\mathfrak r)$.
+Hence the composition and the second arrow in the maps
+$$
+\kappa(\mathfrak p') \to
+\kappa(\mathfrak p') \otimes_{\kappa(\mathfrak p)} F \to
+\kappa(\mathfrak p') \otimes_{\kappa(\mathfrak p)} \kappa(\mathfrak r)
+$$
+induces bijections on spectra and purely inseparable residue
+field extensions. This implies the same thing for the first
+map. Since
+$$
+\kappa(\mathfrak p') \otimes_{\kappa(\mathfrak p)} F =
+\kappa(\mathfrak p') \otimes_{\kappa(\mathfrak p)}
+\kappa(\mathfrak p) \otimes_R S =
+\kappa(\mathfrak p') \otimes_R S =
+\kappa(\mathfrak p') \otimes_{R'} R' \otimes_R S
+$$
+we conclude by the discussion in Remark \ref{remark-fundamental-diagram}.
+\end{proof}

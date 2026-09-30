@@ -1,0 +1,157 @@
+\subsection{Quasi-finite fibres with their original idempotents, maps and denominators}\label{algebra-proof-031-quasi-finite-fibres-with-their-original-idempotents-maps-and-denominators}
+
+Authority: Stacks Project authors, commit a04446e57ec1fbc252a871afcec7752fb2807b14, algebra.tex:30093--30453, SHA-256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. All thirteen reports are read. The whole current interval equals the authority plus MC-STK-ERR-0646, 0647 and 0648, comprising four operations, with no added environment.
+
+The complete arguments and consequences below are separate editorial material. The proposed source operations are four small language or punctuation changes. The fronted-object sentence in OCC-00581 is intelligible and grammatically possible; its proposed reordering is optional and is not imposed. Current and diplomatic translations retain the original statements, arguments and sequence. No novelty claim is made.
+
+\subsubsection{Isolated points and the exact fibre maps}\label{algebra-proof-031-isolated-points-and-the-exact-fibre-maps}
+
+At 30105--30193, let \(S\) be the original finite-type \(k\)-algebra and \(\mathfrak q\) its original prime. Because \(S\) is Jacobson, its closed points meet every nonempty open subset. If \(\{\mathfrak q\}\) is open, it therefore contains a closed point, which must be \(\mathfrak q\). The singleton is consequently both open and closed. The source product decomposition gives an idempotent \(e\in S\) and the actual map \[
+ S\xrightarrow{\cong}eS\times(1-e)S,\qquad s\longmapsto(es,(1-e)s),
+\] whose inverse is addition. Here \(D(e)=\{\mathfrak q\}\). The ring \(eS\) has one prime, is Noetherian of dimension zero and hence Artinian local, and its localization at that prime is itself. Thus the canonical localization identifies \(eS\) with the original \(S_{\mathfrak q}\). This finite-type zero-dimensional \(k\)-algebra is finite over \(k\), by the stated Noether normalization result.
+
+Conversely, if \(S_{\mathfrak q}\) is finite over \(k\), it is Artinian local. In the original sequence \[
+ 0\to K_0\to S\to S_{\mathfrak q}\to Q_0\to0
+\] the kernel is finite because \(S\) is Noetherian, and the cokernel is finite over \(S\) because it is a quotient of a finite-dimensional \(k\)-space. Both localizations at \(\mathfrak q\) vanish. For each member of fixed finite generating lists choose a multiplier outside \(\mathfrak q\) killing it; the product \(g\) of these actual multipliers kills both modules. The localized sequence identifies \(S_g\) with \(S_{\mathfrak q}\), since \(g\) is already a unit in the latter. Hence \(D(g)=\{\mathfrak q\}\). Conversely any such principal open isolates \(\mathfrak q\).
+
+If the dimension at the point is zero, choose a principal open neighbourhood of dimension zero. Its Noetherian ring is Artinian, so its spectrum is finite and discrete, and the point is isolated. Isolation itself gives a zero-dimensional open neighbourhood. To compare conditions (5) and (6), finite residue-field extension makes \(\mathfrak q\) a closed point, while every closed point of a finite-type algebra over a field has finite residue extension. At a closed point, the source's previously proved equality of point dimension and local-ring dimension gives the remaining equivalence. All six conditions and both final assertions follow. The dimension at a point must not be replaced by the dimension of its local ring alone: in \(k[T]\), the prime \((0)\) has local ring \(k(T)\) of dimension zero but is not isolated, and its residue extension over \(k\) is not finite.
+
+For the original finite-type map \(R\to S\), retain \[
+ A=S\otimes_R\kappa(\mathfrak p)
+   =(R\setminus\mathfrak p)^{-1}S/
+            \mathfrak p(R\setminus\mathfrak p)^{-1}S.
+\] The primes of this ring correspond exactly to primes of \(S\) contracting to \(\mathfrak p\). At the original corresponding prime \(\overline{\mathfrak q}\), the canonical isomorphism is \[
+ A_{\overline{\mathfrak q}}\xrightarrow{\cong}
+ S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}.
+\] It sends the image of \(s/r\), \(r\in R\setminus\mathfrak p\), to the same fraction, and then inverts the images of the original elements of \(S\setminus\mathfrak q\). Its inverse sends the class of \(s/u\) to \((s\otimes1)/(u\otimes1)\). The two maps agree on the original generators and all their specified inverses, so are mutually inverse.
+
+Every element of \(A\) has the form \(\overline s/r\) with \(s\in S\) and \(r\in R\setminus\mathfrak p\). Since \(r\) is a unit in this fibre, its principal open is the principal open of the original numerator \(s\). Thus the isolating element in the fibre lifts to precisely the element \(g\in S\) used in condition (3); no new localization of the base is hidden. This proves all six fibre conditions. The two proposed edits at 30205 and 30206 supply ``by'' and a colon, respectively.
+
+For all points of the fibre at once, a discrete spectrum is quasi-compact and hence finite. Conversely, a finite-type \(k\)-algebra with finitely many primes is Artinian: its Jacobson property writes each prime as an intersection of finitely many maximal ideals, and the product of those ideals lies in that prime. Primality forces one maximal ideal to be contained in it, so the prime is maximal. The ring is zero-dimensional Noetherian, hence Artinian, and finite over \(k\) by Noether normalization. A finite \(k\)-algebra has finite discrete spectrum. The zero algebra gives the empty fibre and satisfies all three conditions. This proves the source's fibrewise and global quasi-finiteness equivalences.
+
+Localizing at the original \(f\notin\mathfrak p\) and \(g\notin\mathfrak q\) restricts the original fibre to its principal open \(D(\overline g)\). A singleton is open in this open neighbourhood exactly when it is open in the whole fibre. This proves the stated localization criterion with the actual point and fibre maps.
+
+\subsubsection{The original four-ring, composition and base-change proofs}\label{algebra-proof-031-the-original-four-ring-composition-and-base-change-proofs}
+
+Retain the source's commutative square and all four prime contractions. The maps induce field embeddings \(\kappa(\mathfrak p)\to\kappa(\mathfrak p')\) and \(\kappa(\mathfrak q)\to\kappa(\mathfrak q')\): an element outside the contracted prime stays outside the receiving prime, so the residue maps extend to the indicated fields.
+
+Put \[
+ A=S\otimes_R\kappa(\mathfrak p),\quad
+ k=\kappa(\mathfrak p),\quad k'=\kappa(\mathfrak p'),\quad
+ B=S'\otimes_{R'}k'.
+\] The exact tensor map \[
+ A\otimes_k k'=S\otimes_R k'\longrightarrow B
+\] is obtained from the given comparison \(S\otimes_RR'\to S'\) by tensoring over \(R'\) with \(k'\). In the original lemma it is surjective, because tensoring preserves surjections. Quasi-finiteness at \(\mathfrak q\) gives the original idempotent \(e\) with \(eA=A_{\overline{\mathfrak q}}\) finite over \(k\). Its image \(e'\in B\) yields the exact product \(B=e'B\times(1-e')B\), and the restricted tensor map \[
+ (eA)\otimes_k k'\longrightarrow e'B
+\] is still surjective: multiply a preimage by \(e\). Thus \(e'B\) is finite over \(k'\). The image of \(e\) in \(\kappa(\mathfrak q)\) is \(1\), hence its image in \(\kappa(\mathfrak q')\) is also \(1\). The receiving point lies in the first factor, whose finite discrete spectrum isolates it. This proves the original conclusion. The proposed operation at 30304 supplies ``is''; MC-STK-ERR-0646 already supplies the required article at 30334.
+
+For composition \(A\to B\to C\), retain the original witnesses \(b\notin\mathfrak q\) and \(c\notin\mathfrak r\). If \(c'\in C\) is the actual image of \(b\), then \(c'\notin\mathfrak r\), so \(cc'\notin\mathfrak r\). Any prime in \(D(cc')\) over \(\mathfrak p\) contracts to a prime in \(D(b)\) over \(\mathfrak p\), which must be \(\mathfrak q\); it then lies in \(D(c)\) over \(\mathfrak q\), so is \(\mathfrak r\). This proves isolation for the composite. Finite-type generators for both maps give finite-type generators for the composite. The deletion of ``then'' at 30353 changes only the causal sentence.
+
+For base change, the original fibre at \(\mathfrak p'\) is exactly \[
+ (S\otimes_R\kappa(\mathfrak p))
+       \otimes_{\kappa(\mathfrak p)}\kappa(\mathfrak p').
+\] The source lemma-dimension-at-a-point-preserved-field-extension, reread at authority 28306--28356, proves equality of dimension at the original point and its lifted point. It retains the polynomial presentation and compares the two flat local maps with the same fibre ring; their local-dimension increments cancel in the two height differences. Combined with the proved isolated-point criterion, this gives the stated equality of quasi-finite loci. This is a comparison of point dimensions, not an assertion that all local-ring dimensions or nilpotent multiplicities are unchanged.
+
+For the surjectivity assertion, choose \(\mathfrak p'\) over the contraction of a given \(\mathfrak q\). The ring \[
+ \kappa(\mathfrak q)\otimes_{\kappa(\mathfrak p)}
+       \kappa(\mathfrak p')
+\] is nonzero: tensoring a nonzero vector space with a field extension is faithful, as is seen by extending a nonzero vector to a basis. Choose a prime of this ring and contract along the actual map \(S'=R'\otimes_RS\) into it. The resulting \(\mathfrak q'\) contracts to \(\mathfrak q\) and \(\mathfrak p'\), since each of the two field maps into the prime quotient is injective. Thus all needed points lift, without a flatness assumption on \(R\to R'\). This proves descent under surjectivity on spectra. Finite-type stability follows by tensoring an original finite generating list. MC-STK-ERR-0647 already makes the noun phrase grammatical; the longer proposed rewording is not a further necessary operation.
+
+For permanence under an intermediate ring \(A\to B\to C\), any original \(A\)-algebra generating list for \(C\) also generates it as a \(B\)-algebra. The set of primes over \(\mathfrak q\) is a subset of the set over \(\mathfrak p\). The same original isolating \(c\notin\mathfrak r\) therefore works. This proves the source statement without requiring \(A\to B\) to be of finite type.
+
+\subsubsection{Generic finiteness with actual coefficient lifts and nilpotence powers}\label{algebra-proof-031-generic-finiteness-with-actual-coefficient-lifts-and-nilpotence-powers}
+
+Retain the arbitrary original ring \(R\), the finite-type \(R\)-algebra \(S\), its generators \(x_1,\ldots,x_n\), and its minimal prime \(\mathfrak p\). No Noetherian assumption on \(R\) is introduced. The assumed finite fibre has finite dimension over \(\kappa(\mathfrak p)\), by the preceding result.
+
+The ring \(R_{\mathfrak p}\) has exactly one prime, so its maximal ideal \(\mathfrak pR_{\mathfrak p}\) is its nilradical. Every element of this ideal is nilpotent, without a claim of a common exponent for the entire ideal. The same is true of its extension to \(S_{\mathfrak p}\). Explicitly, for a fixed element \[
+ z=\sum_{j=1}^m r_js_j,\qquad
+ r_j\in\mathfrak pR_{\mathfrak p},\quad s_j\in S_{\mathfrak p},
+\] choose actual exponents \(n_j\ge1\) with \(r_j^{n_j}=0\). In the full multinomial expansion of \(z^N\), with \(N=1+\sum_j(n_j-1)\), every term contains some \(r_j^{n_j}\) and is zero. This proves local nilpotence with every original summand retained.
+
+If the fibre is zero, then \(1\in\mathfrak pS_{\mathfrak p}\). The preceding argument makes \(1\) nilpotent, so \(S_{\mathfrak p}=0\). Some original \(g\notin\mathfrak p\) kills \(1\) in \(S\); therefore \(S_g=0\), which is finite over \(R_g\). Suppose now the fibre is nonzero. For each generator choose a monic polynomial over \(\kappa(\mathfrak p)\), of positive degree \(d_i\), annihilating its fibre image. Lift each coefficient through \(R_{\mathfrak p}\to\kappa(\mathfrak p)\), retaining a monic \(P_i\in R_{\mathfrak p}[T]\) of that degree. Its actual value \(P_i(x_i)\) lies in \(\mathfrak pS_{\mathfrak p}\). The preceding finite-sum argument gives an exponent \(e_i\ge1\) for each such value, so \(P_i(x_i)^{e_i}=0\). MC-STK-ERR-0648 already restores the index \(i\) in both source occurrences; neither the family nor its exponents can be replaced by an unindexed polynomial.
+
+Let \(g_1\notin\mathfrak p\) be the product of denominators in these finitely many original coefficients. Choose actual monic lifts \(\widetilde P_i\in R_{g_1}[T]\) mapping to \(P_i\). The map \(R_{g_1}\to R_{\mathfrak p}\) need not be injective; these are specified lifts, not an unproved identification of the two rings. The elements \(\widetilde P_i(x_i)^{e_i}\in S_{g_1}\) vanish after the further localization at \(R\setminus\mathfrak p\). For each of these finitely many elements, choose a multiplier \(h_i\in R\setminus\mathfrak p\) killing it already in \(S_{g_1}\). Put \[
+ g_2=\prod_i h_i,\qquad g=g_1g_2.
+\] Now the actual monic equations \[
+ Q_i(x_i)=0\text{ in }S_g,\qquad
+ Q_i(T)=\widetilde P_i(T)^{e_i}\in R_g[T],\qquad
+ \deg Q_i=e_id_i
+\] hold. Repeated substitution of these individual monic equations expresses every original monomial in the \(x_i\)'s as an \(R_g\)-linear combination of \[
+ \prod_{i=1}^n x_i^{a_i},
+ \qquad 0\le a_i<e_id_i.
+\] Each substitution replaces the highest power by its actual lower-degree terms and coefficients; the total exponent decreases until it is in the indicated ranges. Thus the map from the free module on these monomials onto \(S_g\) is surjective, and \(S_g\) is generated by at most \(\prod_i(e_id_i)\) elements over \(R_g\). No linear independence or flatness of these generators is asserted. If \(n=0\), the original algebra is already a quotient of \(R\), and the empty monomial \(1\) supplies its one generator.
+
+Every fibre over \(D(g)\) is consequently a finite-dimensional algebra of dimension at most this same bound. Its number of points and its local multiplicities are accounted for by its Artinian decomposition; the dimension bound is not merely a bound on its set of points.
+
+\subsubsection{The canonical finite-dimensional factor and field extension}\label{algebra-proof-031-the-canonical-finite-dimensional-factor-and-field-extension}
+
+Here is a separate consequence for any finite-type algebra \(A\) over a field \(k\). Let \(I\) be the set of its isolated points. Every such point is both an open singleton and a closed irreducible component. There are only finitely many, since \(A\) is Noetherian. Their clopen singleton idempotents \(e_{\mathfrak q}\) are pairwise orthogonal: the idempotent product has empty principal open, hence is nilpotent and therefore zero. Thus \[
+ e=\sum_{\mathfrak q\in I}e_{\mathfrak q}
+\] is an actual idempotent, and localization gives the canonical isomorphism \[
+ eA\xrightarrow{\cong}\prod_{\mathfrak q\in I}A_{\mathfrak q}.
+\] For each component the inverse is the inclusion of its idempotent factor, and their sum gives the inverse for the product. The complementary factor \((1-e)A\) has no isolated points: its spectrum is clopen in \(\operatorname{Spec}(A)\), so an isolated point there would already belong to \(I\).
+
+This idempotent is uniquely determined by its open support. If idempotents \(e,f\) have the same principal open, then \(e(1-f)\) and \(f(1-e)\) are idempotents with empty support. Each is nilpotent and hence zero; therefore \(e=ef=f\). Any finite-dimensional direct factor of \(A\) has finite discrete clopen spectrum, whose points lie in \(I\). Its idempotent \(h\) consequently satisfies \(h=he\), and its factor is a direct factor of \(eA\). Thus \(eA\) is the unique largest finite-dimensional direct factor in this precise sense. For no isolated points it is the zero factor; for a finite algebra it is all of \(A\).
+
+For any field extension \(K/k\), the source point-dimension comparison proves that a point of \(\operatorname{Spec}(K\otimes_k A)\) is isolated exactly when its contracted point of \(\operatorname{Spec}(A)\) is isolated. Thus its isolated locus is \(D(1\otimes e)\), and uniqueness proves that its canonical finite-dimensional factor is exactly \[
+ K\otimes_k eA.
+\] In particular its vector-space dimension remains \(d=\dim_k(eA)\). If its Artinian local factors are \(B_j\), a composition series for each local factor gives \[
+ d=\sum_j\ell_{B_j}(B_j)[\kappa(B_j):K].
+\] Every simple factor is its residue field, so this identity retains all nilpotent multiplicities and all residue degrees. It also gives a bound of \(d\) on the number of isolated points after any field extension, when \(d>0\); for \(d=0\) the number is zero.
+
+\subsubsection{A finite four-ring comparison and its full multiplicity bound}\label{algebra-proof-031-a-finite-four-ring-comparison-and-its-full-multiplicity-bound}
+
+In the original four-ring lemma, the surjectivity assumption on \[
+ \pi:S\otimes_RR'\longrightarrow S'
+\] can be replaced by finiteness of this ring map. Keep every ring, prime and contraction as in the source, and suppose \(S'\) is generated by \(m\) specified elements as a module over the original tensor ring. It is of finite type over \(R'\): a finite generating list for \(S\) over \(R\), together with these module generators, generates \(S'\) as an \(R'\)-algebra.
+
+With the original notation \(A,k,k',B,e,e'\) from the source proof above, tensoring the module surjection gives \[
+ (A\otimes_k k')^{\oplus m}\twoheadrightarrow B.
+\] Multiplication by the same idempotent restricts it to \[
+ ((eA)\otimes_k k')^{\oplus m}\twoheadrightarrow e'B.
+\] Since \(d=\dim_k(eA)\) is finite, this proves \(\dim_{k'}(e'B)\le md\). The receiving point still lies in this factor because the residue-field map still sends \(e'\) to \(1\); therefore it is isolated. This proves the strengthened four-ring conclusion on the original objects without surjectivity or flatness. If \(\pi\) is surjective, one module generator, the unit, gives \(m=1\).
+
+Writing the full Artinian decomposition \(e'B=\prod_j B_j\) gives the exact bound \[
+ \sum_j\ell_{B_j}(B_j)[\kappa(B_j):k']
+       =\dim_{k'}(e'B)\le m\,\dim_k(eA).
+\] For a pure base change, \(e'B=(eA)\otimes_k k'\), so the dimension is exactly \(d\); a surjective quotient can decrease it. A quotient can also create new isolated points outside this retained component: the map \(k[T]\to k\), \(T\mapsto0\), has an isolated point in its target lying over the nonisolated point \((T)\). Thus the preservation argument does not assert reflection for arbitrary quotients.
+
+The nilpotent multiplicities in the formula are essential even for field extension. Let \[
+ k=\mathbf F_p(s),\qquad K=\mathbf F_p(t),
+ \qquad s\longmapsto t^p.
+\] The elements \(1,t,\ldots,t^{p-1}\) form a \(k\)-basis of \(K\). For independence, clear the coefficient denominators in a proposed relation: the exponents in the resulting polynomial in \(t\) lie in distinct residue classes modulo \(p\), so all coefficients vanish. For spanning, any polynomial is a sum in those residue classes, and the inverse of a nonzero polynomial \(F(t)\) equals \(F(t)^{p-1}/F(t)^p\), with the denominator in \(k^\times\). Therefore the original finite \(k\)-algebra \[
+ A=k[u]/(u^p-s)
+\] is isomorphic to \(K\) by \(u\mapsto t\), and has dimension \(p\). After the stated field extension, \[
+ K\otimes_k A
+ =K[u]/(u^p-t^p)
+ \cong K[\epsilon]/(\epsilon^p),\qquad u\longmapsto t+\epsilon.
+\] The inverse sends \(\epsilon\) to \(u-t\); the equality \((u-t)^p=u^p-t^p\) holds because every intermediate binomial coefficient is zero in characteristic \(p\). The original local length and residue degree are \(1,p\), while after extension they are \(p,1\). Their product remains \(p\), even though the base-changed ring has nonzero nilpotents. No reduced quotient or separable substitute has been used.
+
+\subsubsection{The finite locus and the boundary of the minimal-prime assumption}\label{algebra-proof-031-the-finite-locus-and-the-boundary-of-the-minimal-prime-assumption}
+
+For a finite-type map \(R\to S\), let \[
+ U=\{\mathfrak p\in\operatorname{Spec}(R):
+                     S_{\mathfrak p}\text{ is finite over }R_{\mathfrak p}\}.
+\] This set is open without a Noetherian assumption. At a point of \(U\), each of a fixed finite list of original algebra generators is integral over \(R_{\mathfrak p}\). Choose the corresponding monic equations, lift their finitely many coefficients to one \(R_{g_1}\), and kill their finitely many relation defects by a product \(g_2\notin\mathfrak p\), exactly as in the preceding original construction. The resulting monic relations make \(S_{g_1g_2}\) finite, so \(D(g_1g_2)\subset U\). Conversely, such a finite localization remains finite on further localization, proving precisely the asserted neighbourhood property.
+
+If every minimal-prime fibre has finitely many points, the source theorem, with its original nilpotence and denominator arguments, places every minimal prime in \(U\). Every prime contains a minimal prime, so the union of their closures is the whole spectrum; hence \(U\) is dense. This is an open finite locus; no single common denominator across infinitely many minimal primes is assumed.
+
+The minimal-prime qualification cannot be dropped merely because a fibre is finite and nonempty. Take the actual finitely presented map \[
+ R=\mathbf Q[t]\longrightarrow
+ S=R\times R[1/t],\qquad r\longmapsto(r,r).
+\] An explicit presentation is \[
+ S\cong R[e,z]/(e^2-e,\ ez-z,\ tz-e),
+ \qquad e\longmapsto(0,1),\quad z\longmapsto(0,t^{-1}).
+\] The idempotent decomposition of the presented ring has its first factor \(e=0,z=0\), namely \(R\), and its second factor \(e=1,tz=1\), namely \(R[1/t]\); these give the inverse isomorphism. If \(t\notin\mathfrak p\), the fibre is \(\kappa(\mathfrak p)\times\kappa(\mathfrak p)\). At \(\mathfrak p=(t)\), it is \(\mathbf Q\times0\cong\mathbf Q\). Thus this map is quasi-finite everywhere, and the latter fibre is finite and nonempty.
+
+For every \(g\notin(t)\), the ring \(R_g/(t)\) is still \(\mathbf Q\), so \(t\) is not a unit in \(R_g\). If \(S_g\) were finite over \(R_g\), its quotient \(R_g[1/t]\) would be finite, and \(1/t\) would satisfy a monic equation \[
+ t^{-n}+a_{n-1}t^{-(n-1)}+\cdots+a_0=0,\qquad a_i\in R_g.
+\] Multiplication by the original \(t^n\) gives \(1+a_{n-1}t+\cdots+a_0t^n=0\), contradicting the nonzero quotient \(R_g/(t)\). Hence no base neighbourhood of \((t)\) makes this map finite. In contrast, at the minimal prime \((0)\), the actual choice \(g=t\) gives \(S_t=R_t\times R_t\), finite free of rank two. This identifies exactly the boundary of the source's generic-finiteness conclusion while leaving its hypotheses intact.
+
+\subsubsection{Reading and propagation}\label{algebra-proof-031-reading-and-propagation}
+
+The indexed query ``quasi-finite isolated'' produced two PDF-primary research routing records and no local-work hits. Both records remain unread and unadopted; there is no PDF fallback or novelty claim. The original Stacks section is fully read. The already reviewed point-dimension comparison was reread at authority 28306--28356; its proof is used with its exact point-dimension convention and hypotheses.
+
+The three retained canonical units are semantically verified against their actual current text. One proposed prose reordering remains optional. Four proposed operations supply ``by,'' a colon, ``is,'' and remove the redundant ``then.'' Full source arguments and three consequence groups remain editorial. The canonical finite factor, its field-extension identity and all local multiplicities propagate into the finite four-ring bound; the original nilpotence powers and coefficient lifts give the generator bound and finite-locus result. The nonempty-fibre example prevents extending generic finiteness beyond its proved hypothesis. Broader synthesis remains after core completion.
+
+Next source is Zariski's Main Theorem at 30454. Lookahead through 30550 is read but unadjudicated.

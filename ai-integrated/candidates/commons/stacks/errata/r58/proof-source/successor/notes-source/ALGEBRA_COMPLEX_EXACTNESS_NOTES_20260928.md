@@ -1,0 +1,407 @@
+# Complex exactness: source review and conceptual errata
+
+Primary source: the Stacks Project, algebra.tex at authority commit a04446e57ec1fbc252a871afcec7752fb2807b14, SHA256 FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3. Read and adjudicated: 24576–24951. The depth lemma at 17904–17937 is reread as a dependency. The chapter explicitly permits the zero ring. Lookahead 24952–25120 is read but unadjudicated.
+
+The source cites Buchsbaum–Eisenbud, WhatExact, and Peskine–Szpiro, Lemma 1.8. Those original references are retained. Their papers have not been independently read in this batch. The actual corpus query is saved separately; its sole hit supplies PDF paths, no accessible original TeX in that routing record, and is not read. This is a bounded source review, not a novelty survey.
+
+These complete arguments are editorial evidence. They do not replace translated source passages. Minimal proposed corrections preserve identifiable original readings. No chapter or translation has been mutated. The wider synthesis remains after core completion.
+
+## The original pivot and its exact splitting maps
+
+At 24607–24654 write the original map as
+\[
+ \varphi_i(e_j)=\sum_k a_{jk}f_k.
+\]
+Choose the actual invertible coefficient \(u=a_{pq}\); no coefficient or pivot factor is suppressed. Put
+\[
+ E_p=e_p,\quad E_j=e_j-a_{jq}u^{-1}e_p\ (j\ne p),
+ \qquad F_q=\sum_k a_{pk}f_k,\quad F_k=f_k\ (k\ne q).
+\]
+These are bases, with inverse comparisons
+\[
+ e_p=E_p,\quad e_j=E_j+a_{jq}u^{-1}E_p,\qquad
+ f_q=u^{-1}\left(F_q-\sum_{k\ne q}a_{pk}F_k\right),\quad f_k=F_k.
+\]
+Direct substitution, retaining every term, gives
+\[
+ \varphi_i(E_p)=F_q,\qquad
+ \varphi_i(E_j)=\sum_{k\ne q}
+ (a_{jk}-a_{jq}u^{-1}a_{pk})F_k\quad(j\ne p).
+\]
+For an incoming vector with original coordinates \(c_j\), the complex identity says
+\(\sum_j a_{jq}c_j=0\). Its \(E_p\)-coordinate is therefore
+\(c_p+\sum_{j\ne p}a_{jq}u^{-1}c_j=0\).
+The outgoing map kills \(F_q=\varphi_i(e_p)\). Consequently the spans of
+\(E_p,F_q\) form precisely the identity disk and their complementary spans,
+with all other original terms, form a subcomplex. The inclusion and projection
+maps in these bases are inverse direct-sum comparisons.
+
+For completeness the disk projections in original coordinates are
+\[
+ Q_i\!\left(\sum_j c_je_j\right)
+   =u^{-1}\!\sum_j a_{jq}c_j\,e_p,\qquad
+ Q_{i-1}\!\left(\sum_k b_kf_k\right)
+   =u^{-1}b_q\sum_k a_{pk}f_k .
+\]
+The degree-one map \(h_{i-1}(\sum b_kf_k)=u^{-1}b_qe_p\), with all other
+components zero, satisfies \(dh+hd=Q\); the two displayed formulas give the
+only nonzero components. Thus the complementary projection is also an
+explicit chain deformation retraction. The incoming and outgoing complex
+identities prove compatibility at the neighboring degrees.
+
+In the source's already chosen coordinates \(p=q=1,u=1,a_{1k}=0\) for \(k>1\),
+these are exactly its \(e'_j\) and \(f_k\). The span at 24649 is an
+\(R\)-submodule, and the literal original unprimed \(e_j\) must be replaced
+there by \(e'_j\). For example over \(\mathbb Z\), take the map
+\((c_1,c_2)\mapsto c_1+c_2\) and incoming generator \(e_2-e_1\).
+The image lies in the span of \(e'_2=e_2-e_1\), not the span of the original
+\(e_2\). Reading the source as silently relabelling the changed basis gives
+the intended argument; the proposed notation repair makes that intent explicit.
+
+Over a nonzero local ring a coefficient outside the maximal ideal is a unit.
+Each splitting reduces the sum of free ranks by two, so finitely many
+splittings leave a complex whose differentials have entries in that ideal.
+Identity disks have zero homology. Degree-zero singleton summands retain
+exactly the original unrestricted degree-zero homology.
+
+## Depth-zero splitting and the notation corrections
+
+At 24677–24713 the hypothesis supplies \(0\ne x\in R\) with
+\(\mathfrak m x=0\). If there are no positive-degree terms, the complex is a
+sum of degree-zero singletons; this includes the empty, zero complex.
+Otherwise choose the largest \(i>0\) with \(n_i>0\). Exactness makes
+\(\varphi_i\) injective. If all its entries belonged to \(\mathfrak m\),
+then \(xe_1\ne0\) would lie in its kernel. Hence a unit entry exists.
+Split its identity disk by the preceding exact maps and repeat. The sum of
+positive-degree free ranks strictly decreases. This proves the original
+statement, including the case in which the displayed highest degrees have
+rank zero.
+
+For an Artinian nonzero local ring, its maximal ideal is nilpotent.
+If \(\mathfrak m=0\), take \(x=1\). Otherwise take a nonzero element of the
+last nonzero power of \(\mathfrak m\). It is annihilated by \(\mathfrak m\).
+The source's Artinian corollary therefore follows. The article at 24704 is
+corrected to “an”; both notation declarations at 24693 and 24777 receive
+“by”. These are grammatical changes, not altered assumptions.
+
+## Determinantal ranks and the zero-ring boundary
+
+For a nonzero ring the zeroth exterior power of every free-module map is
+the identity of \(R\), so the set in Definition 24721–24732 is nonempty.
+For positive degrees the exterior matrices are the actual minors. The rank
+is therefore the largest size of a nonzero minor, with rank zero precisely
+for the zero map and the zero-size minor equal to \(1\).
+
+The zero ring is explicitly permitted by the chapter. Over it all exterior
+powers, including the zeroth, are zero modules, and every exterior map is
+zero. The displayed maximum is then a maximum of the empty set and is
+undefined. Merely declaring rank zero there would not repair the numerical
+statement of 24738–24763: the displayed identity disk with \(n_1=n_0=1\)
+would have rank zero, whereas its required alternating rank is one.
+Moreover all free modules of all displayed ranks are the same zero module.
+We therefore propose the explicit nonzero-ring hypothesis in the definition
+and in that numerical lemma. Over the zero ring all complexes in the
+situation are zero and exact; no numerical rank identity based on arbitrary
+chosen free presentations is asserted. All subsequent local-ring uses are
+already over nonzero rings and retain their hypotheses.
+
+Here is the numerical proof over a nonzero ring. Let \(t_i\) be the number
+of identity disks on degrees \(i,i-1\), put \(t_{e+1}=0\), and let \(s\) be
+the number of degree-zero singleton summands. Then
+\[
+ n_i=t_i+t_{i+1}\ (1\le i\le e),\qquad n_0=s+t_1.
+\]
+The matrix of \(\varphi_i\) contains an identity block of size \(t_i\) and
+is zero elsewhere. Its exterior rank is exactly \(t_i\), since the
+corresponding minor is \(1\ne0\) and all larger minors vanish. Induction gives
+\[
+ t_i=n_i-n_{i+1}+\cdots+(-1)^{e-i}n_e .
+\]
+The maximal-minor ideal is \(R\), also when \(t_i=0\). The stray hyphen in
+“\(r_{i+1}\)-basis elements” is a grammatical error.
+
+For later use let \(A\) have rank \(r\). Adding a zero row or column leaves
+its nonzero minors and maximal-minor ideal unchanged. Adding an identity
+disk changes the relevant matrix to \({\rm diag}(A,1)\). Its minors of size
+\(r+1\) consist of minors of \(A\) of size \(r\), with the pivot row and
+column, and minors of \(A\) of size \(r+1\), which are zero. Thus its rank
+is exactly \(r+1\) and its maximal-minor ideal is the original \(I(A)\).
+Minors of larger size vanish for the same reason. Changes of bases preserve
+these ideals: the minors of a product are sums of products of minors by the
+exterior-power multiplication formula, giving one inclusion; applying the
+inverse change of basis gives the reverse inclusion. Permutation signs and
+unit factors remain in the actual matrix comparisons; only equality of the
+generated ideals is used.
+
+## Reduction by a nonzerodivisor and the acyclicity proof
+
+For 24765–24790, multiplication by the original \(x\) is injective on each
+finite free \(F_j\). Hence the displayed short exact sequence of complexes
+is exact degree by degree. The connecting map is explicit: lift a cycle
+\(\bar z\in F_i/xF_i\) to \(z\), write \(dz=xw\), and send it to \([w]\).
+Injectivity of \(x\) on \(F_{i-2}\) gives \(dw=0\). A different lift changes
+\(w\) by a boundary, and a lifted boundary changes it by a boundary as well.
+This gives the long exact homology sequence with the source's signs.
+For \(i\ge2\) both neighboring positive homology modules of \(F\) vanish,
+so the asserted quotient homology vanishes. In degree one the more precise
+statement is
+\[
+ H_1(F/xF)\ \simeq\ \ker(x:H_0(F)\longrightarrow H_0(F)).
+\]
+This identifies why exactness in degree one is not part of the source's
+conclusion. These maps also show that neither locality nor \(x\in\mathfrak m\)
+is needed for this auxiliary lemma, although the following proposition uses
+exactly those original hypotheses.
+
+For the acyclicity lemma put \(d_j:M_j\to M_{j-1}\),
+\(B_j=\operatorname{im}d_{j+1}\), \(Z_j=\ker d_j\), and \(B_e=0\).
+Let \(i>0\) be the largest degree of nonzero homology. For \(j>i\),
+exactness gives \(Z_j=B_j\), and there are actual short exact sequences
+\[
+ 0\longrightarrow B_j\longrightarrow M_j\longrightarrow B_{j-1}
+ \longrightarrow0 .
+\]
+Starting at \(j=e\), where \(B_{e-1}\simeq M_e\), the source depth lemma
+proves \(\operatorname{depth}B_i\ge i+1\). If \(i=e\), this bound means
+\(B_i=0\); if \(i=e-1\), it is the initial isomorphism. There is no need for
+nonexistent intermediate terms in either boundary case.
+
+To handle zero modules without applying a nonzero-module statement to them,
+interpret these lower bounds as the vanishing of the corresponding
+\(\operatorname{Ext}^q_R(R/\mathfrak m,-)\). Zero modules have all these
+groups zero. When a short exact sequence contains a zero term, its other
+two terms are isomorphic and the required bounds follow directly.
+For nonzero terms use the three inequalities in 17904–17937.
+
+The source's sequence \(0\to Z_i\to M_i\to M_{i-1}\) is exact where a
+condition is displayed but need not be surjective at its last term. Its
+actual image factor gives
+\[
+ 0\longrightarrow Z_i\longrightarrow M_i\longrightarrow B_{i-1}
+ \longrightarrow0,\qquad B_{i-1}\subset M_{i-1}.
+\]
+Since \(\operatorname{depth}M_i\ge i\ge1\), an \(M_i\)-regular element acts
+injectively on its submodule \(Z_i\). Thus \(Z_i\), if nonzero, has depth at
+least one. Finally
+\[
+ 0\longrightarrow B_i\longrightarrow Z_i\longrightarrow H_i
+ \longrightarrow0
+\]
+and the depth inequality give depth \(H_i\ge1\).
+Changing “short exact sequences” to “exact sequences” repairs the source's
+description of its original displayed list. The explicit image factor
+needed for the depth argument is supplied here without replacing that list
+with a reconstructed translated proof. “Cohomology” is corrected to
+“homology” under the source's lowering-degree convention.
+
+## The exactness criterion with all rank-zero cases retained
+
+At 24833–24924 let \(F_j=R^{n_j}\). Identity-disk removal preserves exactness.
+The determinantal calculation above shows that it also preserves condition
+(2), with precisely the corresponding increase or decrease of \(r_j\) and
+no change of the maximal-minor ideal. The other alternating ranks are
+unchanged. Repeated removal reaches the source's minimal matrices.
+
+Discard only zero terms at the left. If no positive-degree term remains,
+every remaining positive map has rank zero, \(I=R\), and both conditions
+hold. Otherwise keep the actual top nonzero degree \(e\ge1\), with
+\(n_e>0\). This is the missing boundary convention in the proof; it changes
+no module or nonzero differential.
+
+Assume first exactness. At an associated prime \(\mathfrak q\), the localized
+ring has a nonzero socle, so the depth-zero lemma gives a sum of trivial
+complexes. Thus every localized rank is the required alternating \(r_i\)
+and every localized maximal-minor ideal is the entire localized ring.
+The standard injection
+\(R\to\bigoplus_{\mathfrak q\in\operatorname{Ass}R}R_{\mathfrak q}\)
+then makes every minor of size greater than \(r_i\) zero. At least one
+minor of size \(r_i\) survives some localization; for \(r_i=0\) it is the
+zeroth exterior identity. Hence the global rank is exactly \(r_i\).
+This verifies the use of the original determinantal ideals under localization.
+
+For clarity the injection can be proved directly. If \(a\ne0\), the finite
+nonzero module \(Ra\) has an associated prime \(\mathfrak q\), so it contains
+\(0\ne ba\) with annihilator \(\mathfrak q\). This is an associated prime of
+\(R\) as well. If \(a_{\mathfrak q}=0\), some \(s\notin\mathfrak q\) kills
+\(a\), and hence kills \(ba\), a contradiction. The union of these finitely
+many associated primes is the set of zero divisors: an annihilator of a
+nonzero element lies in an associated prime of its cyclic submodule, while
+an associated-prime annihilator exhibits a killed nonzero element. Thus the
+source's prime-avoidance choice of \(x\) is a nonzerodivisor.
+
+In fact every positive differential in this exact minimal complex has
+positive rank. If \(\varphi_j=0\), exactness gives
+\(F_j=\operatorname{im}\varphi_{j+1}\subset\mathfrak mF_j\), so Nakayama
+gives \(F_j=0\). Repeating this argument upward would give \(F_e=0\),
+contrary to the retained top nonzero term. Thus every \(I(\varphi_i)\) is
+proper. This fact is special to the exact minimal complex; it does not
+justify the source's converse assertion before exactness has been proved.
+
+Each \(I(\varphi_i)\) avoids every associated prime, so their finite product
+does also; prime avoidance produces the original
+\[
+ x\in I(\varphi_e)\cdots I(\varphi_1)
+       \setminus\bigcup_{\mathfrak q\in\operatorname{Ass}R}\mathfrak q .
+\]
+The minimal top matrix has positive rank \(r_e=n_e\), so its ideal lies in
+\(\mathfrak m\); therefore \(x\in\mathfrak m\). Every factor contains \(x\).
+For \(i\ge2\), reduce modulo this exact \(x\) and delete only the degree-zero
+term. The preceding quotient-complex lemma gives the required positive
+exactness of this shorter complex. The inductive rank formula, with all
+degrees lowered by one, is still
+\(n_i-n_{i+1}+\cdots+(-1)^{e-i}n_e=r_i\).
+Consequently its maximal-minor ideal is exactly \(I(\varphi_i)/xR\),
+not a differently sized determinantal ideal.
+
+Induction supplies a regular sequence of length \(i-1\) in every proper
+one of those quotient ideals. Lifting it inside \(I(\varphi_i)\) and
+prepending the original \(x\) gives a regular sequence of length \(i\).
+For \(i=1\), \(x\) itself suffices whenever the ideal is proper.
+All these ideals are proper by the preceding exactness argument, so the
+source's phrase “all the ideals” at 24890 is justified once the zero top
+terms have been removed. No additional correction to that sentence is
+needed. Before cancellation, any unit ideal already satisfies (2)(b);
+disk removal retains that alternative through its unchanged ideal.
+
+Conversely assume (2) for the minimal complex, with \(e,n_e\) as above.
+The positive rank \(r_e=n_e>0\) implies
+\(I(\varphi_e)\subset\mathfrak m\). Condition (2)(b) therefore gives
+\(\operatorname{depth}R\ge e\). It is not valid to infer this containment for
+every \(i\): a rank-zero map has \(I(\varphi_i)=R\), even when all its
+entries lie in \(\mathfrak m\).
+
+Proceed by induction on the dimension of the nonzero Noetherian local ring.
+It is finite because its finitely generated maximal ideal bounds dimension
+by the height theorem. If the dimension is zero, no proper ideal contains
+a regular element; the conditions force every \(r_i=0\), so backward
+recursion forces every positive \(n_i=0\). This is the already treated
+zero-tail case. At any prime \(\mathfrak p\), each \(I(\varphi_i)\) contains
+a nonzerodivisor (take \(1\) if it is the unit ideal); that element cannot
+vanish upon localization. Larger minors were already zero and at least
+one maximal minor survives, so ranks are unchanged. A regular sequence
+inside a proper localized ideal remains regular: injectivity localizes,
+and the final quotient is nonzero because all its entries belong to the
+local maximal ideal. If the localized ideal is the unit ideal, its other
+alternative holds. Thus (2) localizes exactly.
+
+At a nonmaximal prime, the dimension of \(R_{\mathfrak p}\) is smaller:
+each chain there extends strictly by \(\mathfrak m\). The inductive
+conclusion gives positive exactness. Every positive homology module of
+the original finite complex is therefore finite with support contained in
+\(\{\mathfrak m\}\). A nonzero such module has finite length and a nonzero
+socle, hence depth zero. On the other hand every nonzero \(F_j\) has
+depth at least \(e\ge j\), by the regular sequence just obtained, and the
+acyclicity lemma says that the highest nonzero positive homology would
+have depth at least one. This contradiction proves exactness.
+
+For Remark 24926–24940 the maximal-minor ideals are invariant under all
+the preceding disk cancellations. In the minimal complex, \(I(\varphi_j)=R\)
+if and only if \(\varphi_j=0\). If \(\varphi_j=0\), exactness at \(F_j\)
+says that \(\varphi_{j+1}:F_{j+1}\to F_j\) is onto. Its entries lie in
+\(\mathfrak m\), so \(F_j=\mathfrak m F_j\), and Nakayama gives \(F_j=0\).
+The same argument then gives \(F_{j+1}=0,F_{j+2}=0,\ldots\).
+Thus the indices with unit ideal form a terminal interval, including the
+possibility of the empty interval with threshold \(e+1\).
+This is a separate direct justification of the original remark, not a
+replacement of its argument by longer regular sequences.
+
+## Splitting characterized beyond Noetherian depth zero
+
+Let \(R\ne0\) be local with maximal ideal \(\mathfrak m\). The following
+are equivalent.
+
+(a) Every finitely generated proper ideal of \(R\) has a nonzero annihilator.
+
+(b) Every finite complex of finite free \(R\)-modules which is exact in
+positive degrees is a direct sum of identity disks and degree-zero
+singletons.
+
+Assume (a). At the highest nonzero positive degree, the differential is
+injective. If all its coefficients lie in \(\mathfrak m\), let \(J\) be the
+ideal generated by the coefficients in its first column. This ideal is
+finitely generated and proper. A nonzero \(x\in\operatorname{ann}J\)
+makes \(xe_1\ne0\) lie in the kernel, a contradiction. There is therefore
+a unit coefficient. Apply the explicit splitting maps and induct on the
+sum of positive free ranks. This proves (b), without Noetherianity and
+without assuming a single element annihilates the entire maximal ideal.
+
+Conversely let \(J=(a_1,\ldots,a_t)\) be proper with zero annihilator.
+Then \(t>0\), and the actual map
+\[
+ R\longrightarrow R^t,\qquad r\longmapsto(a_1r,\ldots,a_tr)
+\]
+is injective. By (b), its positive-degree term lies entirely in identity
+disks, so this injection has a left inverse. Any \(R\)-linear map
+\(R^t\to R\) is given by coefficients \(b_1,\ldots,b_t\); being a left
+inverse requires \(\sum b_ja_j=1\), contradicting properness. Hence (a).
+The zero ideal itself has annihilator \(R\ne0\), covering the empty
+generating family. In particular (a) implies that every module admitting
+a finite resolution by finite free modules is free: it is the degree-zero
+homology in (b). The converse follows by splitting such a cokernel and the
+same left-inverse argument.
+
+A nonzero socle implies (a), so this propagates the source's depth-zero
+lemma beyond the Noetherian hypothesis. The condition can hold even with
+zero socle. Here is a fully specified example. For a field \(k\), let
+\[
+ R=k[\mathbb Q_{\ge0}]/(t^1).
+\]
+Its elements have unique finite sums of monomials \(t^q\) with \(0\le q<1\);
+products with exponent at least one are zero. The positive-exponent ideal
+\(\mathfrak m\) is the unique maximal ideal: every element of it is
+nilpotent, while an element \(c+v\), \(c\ne0\), has inverse
+\(c^{-1}\sum_{j=0}^{N-1}(-c^{-1}v)^j\) when \(v^N=0\).
+A nonzero finitely generated proper ideal has generators with only positive
+exponents. Let \(\delta>0\) be the least exponent occurring among them.
+Then \(0<\delta<1\), and the nonzero element \(t^{1-\delta}\) annihilates
+every generator. Thus (a) holds. For any nonzero \(w\in R\), choose rational
+\(0<q<1-\max(\operatorname{supp}w)\). The product \(t^qw\ne0\), since
+every exponent remains below one and the distinct shifted exponents
+remain distinct. Thus \(\operatorname{ann}\mathfrak m=0\).
+Finally \(\mathfrak m\) is not finitely generated: if its generators had
+least exponent \(\delta>0\), their ideal could not contain \(t^{\delta/2}\).
+This is a non-Noetherian example, with all monomial support data retained.
+
+This consequence receives the source unit-entry lemma and propagates it
+to the source depth-zero and Artinian splitting statements. It is separate
+editorial mathematics; no novelty is claimed and no hypothesis is silently
+removed from those source statements.
+
+## A stronger depth conclusion for the highest nonzero homology
+
+Under exactly the source acyclicity hypotheses, let \(i>0\) be the highest
+index with \(H_i\ne0\). Then the argument actually gives
+\[
+ \operatorname{depth}H_i\ \ge\ \min\{i,2\}.
+\]
+The preceding tail argument already proves
+\(\operatorname{depth}B_i\ge i+1\).
+If \(i=1\), the source proof supplies the desired bound one. If \(i\ge2\),
+the hypothesis on \(M_{i-1}\) gives it depth at least one. Its submodule
+\(B_{i-1}\), when nonzero, also has depth at least one, because any regular
+element on the ambient module remains injective on the submodule. The
+actual image-factor short exact sequence gives
+\[
+ \operatorname{depth}Z_i\ge
+ \min\{\operatorname{depth}M_i,\operatorname{depth}B_{i-1}+1\}\ge2.
+\]
+If \(B_{i-1}=0\), then \(Z_i=M_i\), giving the same inequality directly.
+Applying the quotient depth inequality to
+\(0\to B_i\to Z_i\to H_i\to0\) now gives depth \(H_i\ge2\); if \(B_i=0\),
+it follows from \(H_i=Z_i\). These cases cover every zero term without
+inventing a nonzero module for the depth lemma.
+
+Consequently, if all positive homology modules have depth zero when
+nonzero, the complex is exact in positive degrees, as used in the source
+criterion. More generally, if every \(H_j\), \(j\ge2\), has depth at most
+one when nonzero, all those \(H_j\) vanish: a highest nonzero one would
+contradict the stronger bound. If also \(H_1\) has depth zero when nonzero,
+then it vanishes by the original degree-one bound. Finiteness of the
+complex supplies the highest index in each assertion.
+
+The corrected image-factor argument is the precise additional input to
+this strengthening. The source exactness criterion only needs the
+original bound one and remains unchanged by this editorial consequence.
+Check later occurrences before treating the strengthening as absent from
+the whole corpus; it is not a novelty claim.
+

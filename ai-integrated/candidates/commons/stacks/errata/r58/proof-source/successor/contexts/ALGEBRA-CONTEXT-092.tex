@@ -1,0 +1,32 @@
+\begin{lemma}
+\label{editorial-source-lemma-integral-over-ideal-is-submodule}
+Let $\varphi : R \to S$ be a ring map.
+Let $I \subset R$ be an ideal.
+The set of elements of $S$ which are integral
+over $I$ forms an $R$-submodule of $S$.
+Furthermore, if $s \in S$ is integral over
+$R$, and $s'$ is integral over $I$, then
+$ss'$ is integral over $I$.
+\end{lemma}
+
+\begin{proof}
+Use $A$ and its map to $S[t]$ from
+Lemma \ref{editorial-source-lemma-characterize-integral-ideal}. The elements of
+$S[t]$ integral over $A$ form a subring by
+Lemma \ref{editorial-source-lemma-integral-closure-is-ring}. If $u,v\in S$
+are integral over $I$, the elements $ut$ and $vt$ belong to
+that subring, so do $(u+v)t=ut+vt$ and $(-u)t=-ut$.
+The same characterization gives closure under addition and negatives;
+$0$ is integral over $I$ by the monic equation $x=0$.
+
+If $s\in S$ is integral over $R$, its original monic equation
+over $R$ is also a monic equation for the constant polynomial
+$s\in S[t]$ over $A$, since the degree-zero part of $A$ is
+$R$. For $s'$ integral over $I$, the element $s't$ is integral
+over $A$. Their product $s(s't)=(ss')t$ is therefore integral
+over $A$, and the characterization gives $ss'$ integral over
+$I$, which proves the second assertion. Finally every
+$\varphi(r)$ for $r\in R$ is integral over $R$ by the equation
+$x-r$, so this product assertion supplies multiplication by
+every original $R$-scalar and proves the submodule assertion.
+\end{proof}

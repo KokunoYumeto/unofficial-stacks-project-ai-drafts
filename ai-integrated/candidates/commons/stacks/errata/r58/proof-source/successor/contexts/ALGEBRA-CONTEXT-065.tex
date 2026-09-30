@@ -1,0 +1,78 @@
+\begin{lemma}
+\label{editorial-source-lemma-image-finite-type-map-Jacobson-rings}
+Let $R \to S$ be a finite type ring map of Jacobson rings.
+Denote $X = \Spec(R)$ and $Y = \Spec(S)$.
+Write $f : Y \to X$ for the induced
+map of spectra. Let $E \subset Y = \Spec(S)$ be a
+constructible set. Denote with a subscript ${}_0$ the set
+of closed points of a topological space.
+\begin{enumerate}
+\item We have $f(E)_0 = f(E_0) = X_0 \cap f(E)$.
+\item A point $\xi \in X$ is in $f(E)$ if and only if
+$\overline{\{\xi\}} \cap f(E_0)$ is dense in $\overline{\{\xi\}}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We have a commutative diagram of continuous maps
+$$
+\xymatrix{
+E \ar[r] \ar[d] & Y \ar[d] \\
+f(E) \ar[r] & X
+}
+$$
+Suppose $x \in f(E)$ is closed in $f(E)$. Then $f^{-1}(\{x\})\cap E$
+is nonempty and closed in $E$. Applying
+Topology, Lemma \ref{topology-lemma-jacobson-inherited}
+to both inclusions
+$$
+f^{-1}(\{x\}) \cap E \subset E \subset Y
+$$
+we find there exists a point $y \in f^{-1}(\{x\}) \cap E$ which is
+closed in $Y$. In other words, there exists $y \in Y_0$ and $y \in E_0$
+mapping to $x$. Hence $x \in f(E_0)$.
+This proves that $f(E)_0 \subset f(E_0)$.
+Proposition \ref{editorial-source-proposition-Jacobson-permanence} implies that
+$f(E_0) \subset X_0 \cap f(E)$. The inclusion
+$X_0 \cap f(E) \subset f(E)_0$ is trivial. This proves the
+first assertion.
+
+\medskip\noindent
+Suppose that $\xi \in f(E)$. According to
+Lemma \ref{editorial-source-lemma-characterize-image-finite-type}
+the set $f(E) \cap \overline{\{\xi\}}$ contains a dense
+open subset of $\overline{\{\xi\}}$. Since $X$ is Jacobson
+we conclude that $f(E) \cap \overline{\{\xi\}}$ contains a
+dense set of closed points, see Topology,
+Lemma \ref{topology-lemma-jacobson-inherited}.
+We conclude by part (1) of the lemma.
+
+\medskip\noindent
+Conversely, suppose $\overline{\{\xi\}}\cap f(E_0)$ is dense
+in $\overline{\{\xi\}}$. By Lemma \ref{editorial-source-lemma-constructible-is-image}
+choose a finitely presented map $S\to S'$ whose spectrum map
+$g:Y'=\Spec(S')\to Y$ has image exactly $E$.
+The ring $S'$ is Jacobson by Proposition \ref{editorial-source-proposition-Jacobson-permanence}.
+Part (1) of the present lemma, already proved and applied to $S\to S'$,
+gives $g(Y'_0)=E_0$. Put $h=f\circ g$, so
+$h(Y'_0)=f(E_0)$ and $h(Y')=f(E)$, retaining the original $S$ and $E$.
+If $\xi$ corresponds to $\mathfrak p\subset R$, use the exact diagram
+$$
+\xymatrix{
+S'\ar[r] & S'/\mathfrak pS'\\
+R\ar[r]\ar[u] & R/\mathfrak p\ar[u]
+}
+$$
+Every point of $Y'_0$ whose image lies in $V(\mathfrak p)$ corresponds
+to a prime of $S'$ containing $\mathfrak pS'$, hence to a point of
+$\Spec(S'/\mathfrak pS')$. The spectrum image of
+$R/\mathfrak p\to S'/\mathfrak pS'$ therefore contains the given
+dense subset $h(Y'_0)\cap V(\mathfrak p)$ of
+$V(\mathfrak p)=\Spec(R/\mathfrak p)$.
+By Lemma \ref{algebra-lemma-domain-image-dense-set-points-generic-point},
+there is a prime $\overline{\mathfrak q}'$ of $S'/\mathfrak pS'$
+contracting to $(0)$ in $R/\mathfrak p$. Its inverse image
+$\mathfrak q'\subset S'$ contracts to $\mathfrak p$ in $R$.
+The point $g(\mathfrak q')$ belongs to $E$ and its image under the
+original $f$ is $\xi$. Consequently $\xi\in f(E)$, as required.
+\end{proof}

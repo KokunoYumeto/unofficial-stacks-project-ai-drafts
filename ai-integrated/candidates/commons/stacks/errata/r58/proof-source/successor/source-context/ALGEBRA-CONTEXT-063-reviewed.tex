@@ -1,0 +1,37 @@
+\begin{example}
+\label{example-countable-trick-does-not-work}
+The trick in the proof of
+Theorem \ref{theorem-uncountable-nullstellensatz}
+really does not work if $k$ is a countable field and $I$ is countable too.
+Let $k$ be a countable field. Let $x$ be a variable,
+and let $k(x)$ be the field of rational functions in $x$.
+Consider the polynomial algebra $R = k[x, \{x_f\}_{f \in k[x]-\{0\}}]$.
+Let $I = (\{fx_f - 1\}_{f\in k[x] - \{0\}})$. Note that
+Evaluation defines a map
+$$
+R\longrightarrow k(x),\qquad x\longmapsto x,\qquad
+x_f\longmapsto f^{-1}\quad(0\ne f\in k[x]),
+$$
+which kills every original relation $fx_f-1$ and factors through
+$R/I$. Conversely the map $k[x]\to R/I$ sends every nonzero
+$f$ to a unit, with inverse the class of $x_f$. The localization
+property therefore gives
+$$
+k(x)\longrightarrow R/I,\qquad p/q\longmapsto
+\overline p\,\overline{x}_q\quad(q\ne0).
+$$
+These maps are inverse. On $k(x)$ their composite fixes all fractions;
+on $R/I$ it fixes $\overline x$ and every $\overline{x}_f$, since
+each is the unique inverse of $\overline f$. Thus $R/I\cong k(x)$
+as $k$-algebras, so $I$ itself is maximal and any maximal ideal
+containing $I$ is equal to $I$. This extension is transcendental.
+
+The same presentation and inverse maps work over every field $k$.
+For countable $k$, the polynomial set $k[x]$ is countably infinite,
+so the original algebra has a countable generating family.
+For infinite $k$, that family has cardinality exactly $\#k$, since
+$\#k[x]=\max(\#k,\aleph_0)=\#k$ and the nonzero constants already
+give $\#k$ distinct indices. Thus equality at the cardinal threshold
+can fail to force algebraic residue extensions over every infinite
+field, with the same explicit quotient.
+\end{example}

@@ -1,0 +1,120 @@
+\subsection{Ring epimorphisms: source review and separate editorial arguments}\label{algebra-proof-021-ring-epimorphisms-source-review-and-separate-editorial-arguments}
+
+Authority: Stacks Project authors, git a044\allowbreak{}46e5\allowbreak{}7ec1\allowbreak{}fbc2\allowbreak{}52a8\allowbreak{}71af\allowbreak{}cec7\allowbreak{}752f\allowbreak{}b280\allowbreak{}7b14, algebra.\AlgebraIdentifierBreak{}tex:\AlgebraIdentifierBreak{}25862--\AlgebraIdentifierBreak{}26191. SHA-256 FA8B\allowbreak{}B92E\allowbreak{}58A4\allowbreak{}F78A\allowbreak{}2BD0\allowbreak{}1B3B\allowbreak{}6A4A\allowbreak{}87DE\allowbreak{}0A0D\allowbreak{}279F\allowbreak{}5DD9\allowbreak{}0641\allowbreak{}B574\allowbreak{}DD5F\allowbreak{}BFFF\allowbreak{}A4F3. Read the entire section and all twelve received reports. Source dependencies 20236--20269 were reread. The current complete epimorphism section equals the authority; no canonical correction or later editorial environment occurs within it.
+
+This is separate, source-linked editorial material. The original author's statements, proof omissions, order of exposition and mathematical objects remain identifiable. The nine proposed text operations correct wording or bindings; the full arguments, typed matrix correction and further consequences below do not replace the translated section. Both current and diplomatic translations remain translations. Broader synthesis follows the core work. No novelty claim is made.
+
+\subsubsection{Tensor characterization and permanence}\label{algebra-proof-021-tensor-characterization-and-permanence}
+
+At 25869--25882 write the original map as \(\varphi:R\to S\), and retain \[
+j_1(s)=s\otimes1,\quad j_2(s)=1\otimes s,\quad
+\mu(s\otimes t)=st .
+\] These are ring maps and \(\mu j_1=\mu j_2=1_S\). If \(\varphi\) is an epimorphism, the two maps \(j_i\) coincide because their composites with \(\varphi\) coincide. Conversely, if \(j_1=j_2\), any ring maps \(a,b:S\to A\) with \(a\varphi=b\varphi\) define \(F:S\otimes_RS\to A\) by \(F(s\otimes t)=a(s)b(t)\); the balancing relation is exactly equality of those composites. Hence \(a=Fj_1=Fj_2=b\). If \(j_1=j_2\), then \(j_1\mu(s\otimes t)=(s\otimes1)(t\otimes1)=(s\otimes1)(1\otimes t)=s\otimes t\). Thus \(j_1\) and \(\mu\) are inverse. If either \(j_i\) is an isomorphism, its left inverse \(\mu\) is its inverse; \(\mu j_{3-i}=1\) forces equality of the two \(j_i\). If \(\mu\) is an isomorphism, both \(j_i\) equal its inverse. This proves all four source conditions, including zero rings.
+
+For composition (25884--25891), cancel the first epimorphism and then the second in the two composite equalities. For 25903--25911, two maps out of \(C\) agreeing on \(B\) agree on \(A\), hence coincide if \(A\to C\) is epic. In particular the map from the actual image \(\varphi(R)\) to \(S\) is epic whenever \(\varphi\) is; this does not identify \(R\) itself with its image.
+
+For base change (25893--25901), set \(S'=R'\otimes_RS\). The actual isomorphism \[
+S'\otimes_{R'}S'\longrightarrow R'\otimes_R(S\otimes_RS),
+\quad (r'\otimes s)\otimes(t'\otimes u)\longmapsto r't'\otimes(s\otimes u)
+\] has inverse \(r'\otimes(s\otimes u)\mapsto(r'\otimes s)\otimes(1\otimes u)\). Both formulas respect the balancing relations, and their composites are the identity on elementary tensors. Under this map multiplication becomes \(1_{R'}\otimes\mu\), so remains an isomorphism. A localization \(R\to U^{-1}R\) is epic directly: two maps agreeing on \(R\) must send \(r/u\) to the same \(a(r)a(u)^{-1}\). This also covers the zero localization, for which any existing maps out of it have zero target.
+
+Report OCC-00517 removes the misplaced comma at 25914; this has no mathematical effect.
+
+\subsubsection{Local comparison and finite or field targets}\label{algebra-proof-021-local-comparison-and-finite-or-field-targets}
+
+At 25920--25941 the forward local implication is the preceding base change. Conversely \(a,b:S\to A\) with equal composites on \(R\) give \(A\) its common \(R\)-algebra structure. They induce maps \(S_{\mathfrak p}\to A_{\mathfrak p}\). Equality of these maps for every prime forces \(a(s)-b(s)=0\): if an \(R\)-module element \(x\ne0\), its annihilator is a proper ideal and is contained in a maximal ideal \(\mathfrak m\); the relation \(x/1=0\) at \(\mathfrak m\) would give \(u x=0\) for some \(u\notin\mathfrak m\), contradicting that containment. Thus the localization comparison is injective. For \(R=0\), all unital \(R\)-algebras are zero, and the assertion holds as well. OCC-00518 makes the equality of composites explicit instead of saying that two maps equalize a single map.
+
+For the finite epimorphism result (25943--25974), use the actual \(R\)-module \(C=\operatorname{coker}(\varphi)\), which is what \(S/R\) denotes after passing to the image. Tensoring \(R\to S\to C\to0\) with \(S\) gives \(C\otimes_RS=0\) because its first map is \(j_2\), an isomorphism. The surjection \(S\to C\) then gives \(C\otimes_RC=0\). If the finite module \(C\) were nonzero it would have a maximal proper submodule: a chain of proper submodules cannot cover a finite generating set unless one member is already the whole module. Zorn's lemma applies. Its simple quotient is \(R/\mathfrak m\) for a maximal ideal \(\mathfrak m\) (take a nonzero element of the simple quotient and its annihilator). Tensoring the two quotient surjections gives a surjection \(C\otimes_RC\to(R/\mathfrak m)\otimes_R(R/\mathfrak m)=R/\mathfrak m\ne0\), a contradiction. Conversely a surjective map is epic and its target is cyclic as an \(R\)-module.
+
+At 25976--25985 faithful flatness reflects the isomorphism obtained by tensoring \(\varphi\) with \(S\). More explicitly, flatness identifies the base changes of its kernel and cokernel with the corresponding kernel and cokernel after tensoring; both vanish, and faithfulness detects their vanishing.
+
+At 25987--25998 a nonzero \(k\)-algebra \(S\) is faithfully flat over the field \(k\): it is a vector space with a nonempty basis, and tensoring any vector space with it is a direct sum of copies of that vector space. The preceding result gives the actual structural isomorphism \(k\to S\). For the alternate argument, if \(s\notin k1\), choose a \(k\)-linear functional \(\lambda:S\to k\) with \(\lambda(1)=0,\lambda(s)=1\), by extending \(\{1,s\}\) to a basis. The map \(1\otimes\lambda\) kills \(j_1(S)\) but takes \(1\otimes s\) to \(1\ne0\), so \(j_1\) is not surjective. This proves the stated dimension bound, with \(S=0\) treated separately. OCC-12192 says ``three'' occurrences of \(R\), but the clause actually contains four: three at 25996 and one at 25997. Both reports receive the correction of all four bindings to \(S\). Multiplication itself is always surjective; the relevant map here is \(j_1\) or \(j_2\), not multiplication.
+
+At 26000--26020 retain each original fibre \[
+T=S\otimes_R\kappa(\mathfrak p)
+=(R\setminus\mathfrak p)^{-1}S/
+ \mathfrak p(R\setminus\mathfrak p)^{-1}S .
+\] The base changed field map is epic, so \(T=0\) or its structural map from \(\kappa(\mathfrak p)\) is an isomorphism. Primes \(\mathfrak q\) of \(S\) contracting to \(\mathfrak p\) correspond exactly to primes of \(T\), by first localizing and then quotienting. The zero case has none; the field case has one. For that prime the localization of \(T\) at zero is \(T\), and the usual localization and quotient maps identify it with \(S_{\mathfrak q}/\mathfrak qS_{\mathfrak q}=\kappa(\mathfrak q)\). This identifies the actual induced field map, not just the abstract isomorphism types.
+
+\subsubsection{Finite relations and the original matrix construction}\label{algebra-proof-021-finite-relations-and-the-original-matrix-construction}
+
+At 26022--26058 let \(K=\ker(\bigoplus_JR\to N)\). Right exactness gives the displayed \(K\otimes_RM\to\bigoplus_JM\to N\otimes_RM\to0\). A preimage of the tuple \((m_j)\) is a finite sum \(\sum_{\ell=1}^t k_\ell\otimes u_\ell\). Express each \(u_\ell\) as a finite linear combination of the original \(x_i\). Collecting its coefficients gives \(\sum_i\widetilde k_i\otimes x_i\) with only finitely many nonzero \(\widetilde k_i\in K\). Each such vector has finite support in \(J\). Writing \(\widetilde k_i=(a_{ij})_j\) gives a matrix with finite total support, the required column equalities \(m_j=\sum_i a_{ij}x_i\), and row relations \(\sum_j a_{ij}y_j=0\). Conversely these equations give \(\sum_jm_j\otimes y_j=\sum_i x_i\otimes\sum_j a_{ij}y_j=0\). The three reports at 26057 delete the superfluous conjunction, without replacing this source argument.
+
+For 26060--26097 retain every coefficient through \(\varphi\). Suppose \(g=\sum_{ij}\varphi(x_{ij})y_i z_j\) and choose \(u_j,v_i\in R\) such that \(\sum_i\varphi(x_{ij})y_i=\varphi(u_j)\) and \(\sum_j\varphi(x_{ij})z_j=\varphi(v_i)\). Then \[
+g\otimes1
+=\sum_j\varphi(u_j)z_j\otimes1
+=\sum_j z_j\otimes\varphi(u_j)
+=\sum_{ij}z_j\otimes\varphi(x_{ij})y_i
+=\sum_i\varphi(v_i)\otimes y_i
+=1\otimes g .
+\] Balancing and commutativity justify each displayed equality.
+
+Conversely apply the proved relation lemma to the source generators \(s_0=1,s_1=g\); the indices 0 and 1 may designate equal elements. Choose a finite set \(K_0\) of indices containing 0, 1 and every row or column index of the finite support of \(a_{ij}\). Put \(H=K_0\setminus\{0\}\), retaining all original generators and coefficients. The original column and row equations give \[
+h:=\sum_{i,j\in H}\varphi(a_{ij})s_i s_j
+=-g+\varphi(a_{00}),\qquad
+\sum_{j\in H}\varphi(a_{ij})s_j=-\varphi(a_{i0})\ (i\in H).
+\] Indeed the sum over all \(i,j\in K_0\) is zero by the row relations; the row with \(i=0\) is zero as well, whereas the remaining \(j=0\) contribution is \(g-\varphi(a_{00})\). For the column sums over \(H\), the \(j=1\) column is \(-1-\varphi(a_{01})\); every other \(j\in H\) gives \(-\varphi(a_{0j})\). All these sums lie in \(\varphi(R)\), precisely as the source statement requires. This proves the received correction at 26092; no injection of \(R\) is assumed.
+
+For an entirely explicit representation of \(g\), use \[
+X=\operatorname{diag}(a_{00},-(a_{ij})_{i,j\in H}),\quad
+Y=(1,(s_i)_{i\in H}),\quad Z=(1,(s_j)_{j\in H})^{\mathsf T}.
+\] Then \(Y\varphi(X)Z=\varphi(a_{00})-h=g\); every entry of \(Y\varphi(X)\) and \(\varphi(X)Z\) belongs to \(\varphi(R)\) by the displayed row and column equations. This completes the omitted step without changing any source hypothesis.
+
+The source subalgebra hint also holds with exact matrices. Scalars use \(n=1\), \(X=(r)\), \(Y=Z=(1)\). The empty \(n=0\) representation gives zero. Sums use block diagonal \(X\)'s and concatenated \(Y,Z\); additive inverses negate \(X\). Products of representations use row index \((i,k)\), column index \((j,l)\), coefficients \(x_{ij}x'_{kl}\), row entries \(y_i y'_k\), and column entries \(z_j z'_l\). Their sum is the product of the two original sums; each row or column contraction is the product of the corresponding two original contractions in \(\varphi(R)\). This proves closure. OCC-01405 changes the singular subject's verb to ``forms''.
+
+\subsubsection{Typed triples and the cardinality argument}\label{algebra-proof-021-typed-triples-and-the-cardinality-argument}
+
+The two reports at 26112--26113 correctly change the vector names \(y,z\) to the declared matrices \(Y,Z\). There is a further source type issue in 26116--26122: for a general, possibly noninjective \(R\to S\), the products are matrices over \(\varphi(R)\) inside \(S\), not literally over \(R\). The original printed formulas are retained and linked to this conceptual erratum.
+
+Here is their precise interpretation without replacing \(R\) by a quotient. An associated triple consists of \[
+P\in\operatorname{Mat}(n\times n,R),\
+U\in\operatorname{Mat}(1\times n,R),\
+V\in\operatorname{Mat}(n\times1,R)
+\] and witnesses \(Y,Z\) over \(S\) such that \[
+g=Y\varphi(P)Z,\qquad
+Y\varphi(P)=\varphi(U),\qquad
+\varphi(P)Z=\varphi(V).
+\] The preceding construction supplies \(P\); choose entrywise lifts \(U,V\) of its contractions. These lifts need not be unique, and no uniqueness is used. For two elements with the same triple and witnesses \(Y,Z\) and \(Y',Z'\), the source's comparison becomes \[
+g=Y\varphi(P)Z=\varphi(U)Z
+=Y'\varphi(P)Z=Y'\varphi(V)
+=Y'\varphi(P)Z'=g'.
+\] Thus every triple has at most one associated element. When \(R\) is infinite, the set of all finite triples has cardinality at most \(|R|\): for fixed \(n\) it has \(|R|^{n^2+2n}\), and a countable union has cardinality \(|R|\), using the same choice-based infinite cardinal arithmetic cited by the source to Kunen. Well-order the triples and select the least associated triple for each \(g\); the displayed uniqueness gives an injection. For an epimorphism every \(g\in S\) has a representation, proving the infinite case. This also bounds the epicenter for any map from an infinite \(R\); no finite-epicenter bound is inferred from this counting step.
+
+For finite \(R\ne0\), let \(J\) be its Jacobson radical. There are finitely many maximal ideals \(\mathfrak m_1,\ldots,\mathfrak m_t\), pairwise comaximal, and the Chinese remainder map gives \(R/J\cong\prod_iR/\mathfrak m_i\). Finiteness makes \(J^n\) stabilize, say \(J^n=J J^n\). This finite module is zero by the elementary determinant form of Nakayama: for finite generators \(v\), write \(v=A v\) with entries of \(A\) in \(J\); multiplying by the adjugate gives \(\det(1-A)v=0\), and \(\det(1-A)\in1+J\) is a unit, since it belongs to no maximal ideal. Hence \(J^n=0\). The nilpotent result proved below makes every epimorphism \(R\to S\) surjective, whence \(|S|\leq|R|\). If \(R=0\), the unital target \(S\) is also zero. This supplies the omitted finite case without inserting a new proof into the translation.
+
+\subsubsection{Modules and the restriction functor}\label{algebra-proof-021-modules-and-the-restriction-functor}
+
+At 26158--26188 an \(S\)-linear map is automatically \(R\)-linear, so full faithfulness is exactly equality of the Hom sets. Suppose \(\varphi\) is epic and let \(f:N_1\to N_2\) be \(R\)-linear. For any \(x\in N_1\), the map \[
+F_x:S\otimes_RS\to N_2,\quad s\otimes t\mapsto s f(tx)
+\] is well-defined: for \(r\in R\), \(s\varphi(r)f(tx)=s f(\varphi(r)tx)\) by \(R\)-linearity. The equality \(s\otimes t=st\otimes1=1\otimes st\) then gives \(s f(tx)=st f(x)=f(stx)\), in particular \(f(sx)=s f(x)\). Conversely take the left and right \(S\)-actions on the original \(T=S\otimes_RS\). Their restrictions to \(R\) coincide, so the identity on \(T\) is \(R\)-linear between these modules. If every such map is \(S\)-linear, applying its linearity to \(1\otimes1\) gives \(s\otimes1=1\otimes s\), and hence the epimorphism criterion. All formulas include zero modules.
+
+\subsubsection{Maximal local tests and pure descent}\label{algebra-proof-021-maximal-local-tests-and-pure-descent}
+
+These are separate corollaries of the original tensor argument, not replacements for the source's primewise criterion or faithfully flat theorem.
+
+For every ring map \(R\to S\), set \(D=\operatorname{coker}(j_1:S\to S\otimes_RS)\). The map \(j_1\) is split injective with retraction \(\mu\). Therefore the original map is epic exactly when \(D=0\). Right exactness and the explicit tensor comparison above identify \(D\otimes_RB\) with the analogous cokernel for every base change \(R\to B\). Consequently it is enough to test epimorphisms at all maximal ideals of \(R\), by the annihilator localization argument already proved; the converse follows from base change. No Noetherianity or finite generation is used.
+
+Suppose now \(R\to B\) is pure, meaning the original unit \(M\to M\otimes_RB\), \(m\mapsto m\otimes1\), is injective for every \(R\)-module \(M\). If \(B\to B\otimes_RS\) is epic, \(D\otimes_RB=0\); purity on this exact \(D\) yields \(D=0\). Thus epimorphisms descend along pure base changes; ascent holds for every base change.
+
+A pure epimorphism \(\varphi:R\to S\) is itself an isomorphism. Purity on \(R\) makes \(\varphi\) injective. Put \(C=\operatorname{coker}\varphi\). As before, epicity gives \(C\otimes_RS=0\); purity on \(C\) gives \(C=0\). Hence \(\varphi\) is surjective as well. This strengthens the source faithfully flat result because 20254--20269 proves every faithfully flat map pure. It receives the original unit-map reflection argument of ALGEBRA-\AlgebraIdentifierBreak{}RECON-\AlgebraIdentifierBreak{}501, in ALGEBRA\_\allowbreak{}OPEN\_\allowbreak{}LOCI\_\allowbreak{}PURE\_\allowbreak{}DESCENT\_\allowbreak{}NOTES\_\allowbreak{}20260927.\allowbreak{}md, section ``Descent along the original universally injective ring map'', SHA-256 07F5\allowbreak{}EE25\allowbreak{}5879\allowbreak{}5621\allowbreak{}8DB7\allowbreak{}F89C\allowbreak{}E8F8\allowbreak{}2C9B\allowbreak{}054F\allowbreak{}75E0\allowbreak{}C79C\allowbreak{}1E50\allowbreak{}ADA2\allowbreak{}4FAC\allowbreak{}25C8\allowbreak{}C7A5. That earlier argument and the exact source dependency were reread; they do not require flatness to reflect zero modules. No effectiveness assertion about descent of arbitrary objects is made.
+
+\subsubsection{Surjectivity over nilpotent extensions of finite products of fields}\label{algebra-proof-021-surjectivity-over-nilpotent-extensions-of-finite-products-of-fields}
+
+Let \(I\subset R\) be an ideal with \(I^N=0\) for some positive integer \(N\), and suppose \(R/I\) is a finite product of fields (the empty product, the zero ring, is allowed). Then every ring epimorphism \(\varphi:R\to S\) is surjective, without Noetherianity or finiteness assumptions on either module \(I\) or \(S\).
+
+First prove the assertion for \(A=\prod_{i=1}^t k_i\). Let \(e_i\) be its original orthogonal idempotents. Any \(A\)-algebra \(B\) decomposes by the actual maps \[
+B\to\prod_i e_iB,\quad b\mapsto(e_i b)_i,\qquad
+(b_i)_i\mapsto\sum_i b_i .
+\] Their composites are identities by \(e_i e_j=0\) for \(i\ne j\) and \(\sum_i e_i=1\). The ring \(e_iB\) is the base change \(k_i\otimes_AB\); if \(A\to B\) is epic, so is \(k_i\to e_iB\). The field result makes each component zero or makes its structural map an isomorphism. Each component map is therefore surjective, as is the finite product map \(A\to B\). For \(t=0\), the unital target is zero.
+
+For the given \(R,I,S\), the base change \(R/I\to S/IS\) is epic, so it is surjective by the preceding paragraph. Thus \(S=\varphi(R)+IS\) as an \(R\)-module. With \(C=S/\varphi(R)\), the image of \(IS\) in \(C\) is exactly \(IC\), hence \(C=IC\). Iterating this equality \(N\) times gives \(C=I^NC=0\), without applying Nakayama to an infinite module. This proves surjectivity and completes the source's finite-ring case above.
+
+The hypothesis extends beyond Artinian rings. Fix a field \(k\) and the vector space \(V=\bigoplus_{n\ge1} k e_n\). On the original abelian group \(R=k\oplus V\), define \[
+(a,v)(b,w)=(ab,aw+bv),\qquad 1_R=(1,0).
+\] Associativity follows by expanding either triple product to \((abc,ab u+ac w+bc v)\); commutativity and the unit follow from the displayed formula. The ideal \(I=0\oplus V\) has \(I^2=0\) and \(R/I=k\). Every epimorphism out of this \(R\) is consequently surjective. Yet its ideals \(0\oplus\operatorname{span}\{e_n:n\ge m\}\) form a strictly descending infinite chain, so \(R\) is not Artinian. The original source Artinian observation is retained; this example verifies that the separate nilpotent criterion genuinely has additional scope.
+
+\subsubsection{Reading limits and provenance}\label{algebra-proof-021-reading-limits-and-provenance}
+
+The inherited immutable literature routes preserve earlier reading. A bounded query for ``ring epimorphisms epicenter Mazet'' gave no hits in either corpus layer. A broader ``epimorphisms'' query gave two original-TeX routing hits, Mesablishvili's Morita theory for quantales and Schäppi's Graded-Tannakian categories of motives. Neither was content-read; neither supports a claim here. These limited results do not establish an exhaustive search or novelty. The mathematical arguments used are the original Stacks TeX, the reread earlier pure-descent proof and the explicit derivations above. The source citations Autour, Mazet and Kunen remain intact; reading their citations is not claimed as reading those works.
+
+The next unadjudicated section starts at 26192, Pure ideals. Earlier lookahead through 26260 stops inside its proof and is not adjudicated. The source chapter, translations, retained additions and unrelated files are unchanged. No TeX compilation or publication was performed.

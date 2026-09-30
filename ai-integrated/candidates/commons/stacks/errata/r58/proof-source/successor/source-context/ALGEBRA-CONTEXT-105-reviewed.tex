@@ -1,0 +1,90 @@
+\begin{lemma}
+\label{lemma-open-going-down}
+Let $R \to S$ be a ring map. If the induced map
+$\varphi : \Spec(S) \to \Spec(R)$ is open, then
+$R \to S$ satisfies going down.
+\end{lemma}
+
+\begin{proof}
+Retain $\mathfrak p\subseteq\mathfrak p'$ and the original
+$\mathfrak q'$ lying over $\mathfrak p'$.
+For $g\notin\mathfrak q'$, the open set $D(g)$ contains
+$\mathfrak q'$, so its image is an open neighbourhood of
+$\mathfrak p'$. This image contains a standard open
+$D(f)$ with $f\notin\mathfrak p'$. Then
+$f\notin\mathfrak p$, so it also contains $\mathfrak p$.
+The fibre criterion in Lemma \ref{lemma-in-image} gives
+$S_g\otimes_R\kappa(\mathfrak p)\ne0$ for every such $g$.
+
+Here is the precise directed localization argument. Index
+finite subsets $E\subseteq S\setminus\mathfrak q'$ by
+inclusion and set $g_E=\prod_{g\in E}g$, with $g_\varnothing=1$.
+For $E\subseteq F$ the map is
+$$
+S_{g_E}\longrightarrow S_{g_F},\qquad
+\frac{s}{g_E^n}\longmapsto
+\frac{s\,g_{F\setminus E}^{\,n}}{g_F^n}.
+$$
+It is the original localization map, since all factors
+in the product $g_F$ become units. The map from their
+colimit to $S_{\mathfrak q'}$ sends each fraction to the
+same original fraction. It is surjective: $s/t$ comes
+from $E=\{t\}$. If $s/g_E^n$ maps to zero, there is
+$u\notin\mathfrak q'$ with $us=0$. At the stage
+$F=E\cup\{u\}$, $u$ is a unit, so the image of $s$
+and then that fraction is zero. This proves injectivity
+and the representative formula for the inverse. It is
+the comparison of Lemma \ref{lemma-localization-colimit}.
+
+Tensor-colimit compatibility gives the unital ring
+comparison
+$$
+S_{\mathfrak q'}\otimes_R\kappa(\mathfrak p)
+\cong\colim_E(S_{g_E}\otimes_R\kappa(\mathfrak p)),
+$$
+sending a stage tensor $s/g_E^n\otimes c$ to the tensor
+of the same fraction and $c$; the inverse follows by
+representing the finitely many fractions at a common
+stage, as in Lemma \ref{lemma-tensor-products-commute-with-limits}.
+Every stage ring is nonzero by the previous paragraph,
+because $g_E\notin\mathfrak q'$. Their colimit is nonzero:
+if its unit were zero, it would become zero at a later
+stage, but every transition is unital and that later
+ring is nonzero.
+
+Choose a prime of this nonzero fibre ring and pull it
+back along $S\to S_{\mathfrak q'}\to
+S_{\mathfrak q'}\otimes_R\kappa(\mathfrak p)$ to a prime
+$\mathfrak q$ of $S$. Every element outside
+$\mathfrak q'$ maps to a unit, so
+$\mathfrak q\subseteq\mathfrak q'$.
+The contraction to the field $\kappa(\mathfrak p)$ is
+its zero prime, and the original map $R\to\kappa(\mathfrak p)$
+has kernel $\mathfrak p$. Thus the contraction of
+$\mathfrak q$ to $R$ is exactly $\mathfrak p$.
+
+In fact this argument proves the exact weaker criterion:
+$R\to S$ satisfies going down if and only if the image
+of every principal open $D(g)\subseteq\Spec(S)$ is stable
+under generalization. For sufficiency that stability
+supplies $\mathfrak p$ in each image containing
+$\mathfrak p'$, and the remaining argument just given
+applies without openness. Conversely, if going down
+holds and $\mathfrak q'\in D(g)$ lies over
+$\mathfrak p'$, every $\mathfrak p\subseteq\mathfrak p'$
+has a lift $\mathfrak q\subseteq\mathfrak q'$.
+Since $g\notin\mathfrak q'$, also $g\notin\mathfrak q$,
+so the lift still belongs to the original $D(g)$.
+This proves necessity and both directions of the criterion.
+
+Openness is stronger than this criterion. The flat map
+$\mathbf Z\to\mathbf Q$ satisfies going down by
+Lemma \ref{lemma-flat-going-down}, but the image of its
+whole spectrum is $\{(0)\}$, which is not open in
+$\Spec(\mathbf Z)$. Indeed any open neighbourhood of
+$(0)$ contains $D(n)$ for some nonzero integer $n$.
+A prime divisor $p$ of $|n|+1>1$ does not divide $n$,
+so $(p)\in D(n)$ and $(p)\ne(0)$. This proves the
+failure of openness. Flatness of $\mathbf Q$ was proved
+in Example \ref{example-flat-infinite-intersections}.
+\end{proof}

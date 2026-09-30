@@ -1,0 +1,547 @@
+# Noether normalization, field extensions and the graded vertex
+
+Authority: `algebra.tex` 27920–28447 at commit
+`a04446e57ec1fbc252a871afcec7752fb2807b14`, SHA-256
+`FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3`.
+The complete current interval equals this authority byte for byte. There
+are no prior canonical operations or added environments in the interval.
+
+These complete arguments and further consequences are separate editorial
+evidence. They preserve the original polynomials, automorphisms, units,
+prime labels and torsion. Neither translation branch is replaced by these
+expanded proofs. Proved consequences carry no novelty claim.
+
+## Finite supports and explicit positive weights
+
+Source 27927–27960. Let \(N\subset\mathbb Z_{\geq0}^n\) be the original
+finite nonempty support, \(n\geq1\), and retain
+\(A_i=\max_{\nu\in N}\nu_i-\min_{\nu\in N}\nu_i\).
+The required inequalities are indexed by \(i=2,\ldots,n\);
+there is no \(e_0\). This resolves OCC-12271 and OCC-00545.
+
+An explicit choice is
+\[
+ e_n=1,\qquad
+ e_i=1+\sum_{j=i+1}^n A_je_j
+     =\prod_{j=i+1}^n(A_j+1)\quad(1\leq i<n).
+\]
+The second equality follows downwards from
+\(\sum_{j=i+1}^n A_j\prod_{\ell=j+1}^n(A_\ell+1)
+=\prod_{\ell=i+1}^n(A_\ell+1)-1\), a telescoping sum.
+Every weight is a positive integer. If \(\nu,\nu'\) first differ in
+coordinate \(i\), then
+\[
+ |e_i(\nu_i-\nu_i')|\geq e_i
+ >\sum_{j>i}A_je_j
+ \geq\left|\sum_{j>i}e_j(\nu_j-\nu_j')\right|.
+\]
+The first differing coordinate therefore determines the sign of the
+weighted difference, which cannot vanish. This proves injectivity on
+the entire original support, retaining its actual coordinate ranges.
+For \(n=1\), \(e_1=1\) gives the assertion directly, with no tail
+inequality. The optional phrase "with \(a_\nu\in R\) not zero" is
+mathematically and grammatically intelligible; OCC-00546 does not warrant
+a required source edit.
+
+For any finite family of nonconstant polynomials in these same variables,
+choose the weights using the union of their finite supports. This one
+choice separates the support of every member simultaneously.
+
+## The original substitutions, full coefficients and one relation
+
+Source 27962–28022. Write the original polynomial
+\(g=\sum_{\nu\in N}a_\nu x^\nu\), with all listed \(a_\nu\ne0\).
+Keep the automorphism
+\[
+ \sigma(x_i)=x_i+x_n^{e_i}\ (i<n),\qquad \sigma(x_n)=x_n.
+\]
+Its inverse sends \(x_i\) to \(x_i-x_n^{e_i}\) for \(i<n\) and fixes \(x_n\);
+the two composites fix each generator. The full expansion of its
+\(\nu\)-summand is
+\[
+ a_\nu\sum_{\substack{0\leq b_i\leq\nu_i\\i<n}}
+ \left(\prod_{i<n}\binom{\nu_i}{b_i}x_i^{b_i}\right)
+ x_n^{\,\nu_n+\sum_{i<n}e_i(\nu_i-b_i)}.
+\]
+The term with every \(b_i=0\) is \(a_\nu x_n^{e\cdot\nu}\).
+Every other term has strictly smaller \(x_n\)-degree, since all weights
+are positive. The unique support vector \(\nu^*\) maximizing \(e\cdot\nu\)
+therefore gives
+\[
+ \sigma(g)=a_{\nu^*}x_n^{d}
+              +\sum_{j=0}^{d-1}c_j(x_1,\ldots,x_{n-1})x_n^j,
+ \qquad d=e\cdot\nu^*>0 .
+\]
+This is valid over arbitrary coefficient rings, including rings with
+nilpotents, because the leading coefficient is the single original
+nonzero coefficient \(a_{\nu^*}\); no cancellation or division has been
+used. All other binomial summands remain in the displayed expansion.
+
+For a ring map \(R\to R'\), the same integer substitution and its inverse
+commute with coefficient base change. Some original coefficients may
+vanish. If the image polynomial is nonconstant, its surviving support
+is a subset of \(N\), so the same weights still separate it and its new
+leading coefficient is the image of one specified surviving original
+coefficient. If all nonconstant terms vanish, the image is constant or
+zero, and no positive-degree conclusion is asserted. This also proves
+the simultaneous assertion for the finite family above under any base
+change, with its precise surviving-support boundary.
+
+Over the original field \(k\), choose nonzero \(f\in I\) with \(I\) proper.
+Then \(f\) is nonconstant, since a nonzero constant is a unit.
+Put \(y_i=x_i-x_n^{e_i}\) for \(i<n\). These actual polynomials have
+integer coefficients, and
+\(k[y_1,\ldots,y_{n-1},x_n]=k[x_1,\ldots,x_n]\), with inverse expressions
+\(x_i=y_i+x_n^{e_i}\). In the quotient by \(f\), retain the complete equation
+\[
+ a x_n^d+\sum_{j<d}c_j(y_1,\ldots,y_{n-1})x_n^j=0,\qquad a\in k^\times.
+\]
+It gives the explicit recurrence
+\(x_n^d=-a^{-1}\sum_{j<d}c_j(y)x_n^j\).
+Induction on the exponent reduces every power to the span of
+\(1,x_n,\ldots,x_n^{d-1}\). Hence the quotient by \((f)\), and then its
+quotient \(S\), is finite over the actual image of \(k[y_1,\ldots,y_{n-1}]\).
+The inverse unit \(a^{-1}\) has not been dropped from the calculation.
+For \(n=1\) there are no \(y_i\), and this is the same univariate proof.
+For \(n=0\) a field has no nonzero proper ideal, so the premise does not
+occur. OCC-00547 is the subject–verb correction "there exist integers".
+
+## The full induction and a neighborhood of the original point
+
+Source 28024–28071. For \(n=0\), the proper-ideal quotient is \(k\);
+take \(r=0\). For \(I=0\), take the original variables and \(r=n\).
+Otherwise use the preceding \(n-1\) integer polynomials and let \(S'\)
+be their actual image subalgebra of \(S\). This is nonzero and is generated
+by \(n-1\) elements. Apply the induction hypothesis to a polynomial
+presentation of that image. Its generators \(z_j\) are integer polynomials
+in the \(y_i\); substituting their actual integer-polynomial expressions
+in the original \(x_i\) retains integer coefficients. The composition
+\(k[z_1,\ldots,z_r]\to S'\to S\) is injective and finite. To check the latter
+directly, products of a finite generating family for \(S'\) over \(k[z]\)
+and a finite generating family for \(S\) over \(S'\) generate \(S\)
+over \(k[z]\).
+
+The dimension statement follows from injective integral dimension
+equality and \(\dim k[z_1,\ldots,z_r]=r\). The integer-polynomial choice
+follows from the explicit construction, not from that dimension lemma.
+Thus OCC-12272 and OCC-00548 replace the misleading "last assertion"
+by the assertion that \(r\) is the dimension of \(S\).
+
+For a point \(x\leftrightarrow\mathfrak q\) of the original affine
+finite-type algebra, the integer \(\dim_xX\) is the minimum dimension of
+its open neighborhoods. Basic opens form a basis: if a neighborhood
+attains the minimum, some \(D(g)\) with \(g\notin\mathfrak q\) lies inside
+it, and its dimension is squeezed between that minimum and the chosen
+neighborhood dimension. Thus \(\dim S_g=\dim_xX\).
+The localization remains finite type, with presentation
+\(S_g=S[t]/(gt-1)\), retaining \(g\) and its inverse.
+The preceding induction applies to this actual ring. The zero ring has
+no such point, so no point case is missing.
+
+## The refined map, every unit and a finite free strengthening
+
+Source 28073–28123. Retain the original prime
+\(\mathfrak q\subset A=k[x_1,\ldots,x_n]\) and
+\(r=\operatorname{trdeg}_k\kappa(\mathfrak q)\).
+If \(\mathfrak q=0\), then \(r=n\); take the identity map.
+Conversely a nonzero polynomial relation among the images of the \(n\)
+generators makes their field transcendence degree at most \(n-1\):
+a maximal algebraically independent subfamily has fewer than \(n\)
+elements, and every omitted generator is algebraic over its field.
+Thus \(r=n\) forces \(\mathfrak q=0\).
+For a nonzero prime choose the original \(0\ne f\in\mathfrak q\).
+
+Apply the actual \(\sigma\) above and put \(h=\sigma(f)\),
+\(\mathfrak q^\sigma=\sigma(\mathfrak q)\). Retain
+\(h=a x_n^d+\sum_{j<d}c_j(x_1,\ldots,x_{n-1})x_n^j\), \(a\in k^\times\).
+The coefficient ring is \(k[x_1,\ldots,x_{n-1}]\), as corrected in
+OCC-00550 and OCC-12273. The source's monic wording requires multiplication
+by \(a^{-1}\), in addition to the automorphism. Rather than silently
+replacing \(f\), track both choices: its monic version is
+\(h_0=a^{-1}h\in\mathfrak q^\sigma\), while the following proof works with
+the unscaled \(h\) and keeps \(a\) in every relation.
+Changing the last source generator by \(Y_n\mapsto aY_n\) identifies the
+two finite maps, and \((Y_{r+1},\ldots,Y_n)\) is unchanged by this unit.
+
+Define \(B=k[Y_1,\ldots,Y_n]\to A\) by \(Y_i\mapsto x_i\) for \(i<n\)
+and \(Y_n\mapsto h\).
+There is the exact presentation
+\[
+ A\simeq B[T]\big/
+ \left(T^d+\sum_{j<d}a^{-1}c_j(Y_1,\ldots,Y_{n-1})T^j-a^{-1}Y_n\right),
+\]
+sending \(T\mapsto x_n\). Its inverse sends \(x_i\) to \(Y_i\), \(i<n\),
+and \(x_n\) to \(T\); the defining equation identifies the image of \(h\)
+with \(Y_n\), so both composites fix all generators.
+Monic division proves that \(A\) is free over \(B\) on
+\(1,T,\ldots,T^{d-1}\). The coefficient map is injective because a free
+module basis containing \(1\) makes its coefficient zero whenever that
+coefficient times \(1\) is zero.
+
+The contraction \(Q=(B\to A)^{-1}(\mathfrak q^\sigma)\) contains \(Y_n\),
+so \(Q=\mathfrak pB+(Y_n)\) with
+\(\mathfrak p\subset k[Y_1,\ldots,Y_{n-1}]\) prime.
+The finite injection \(B/Q\to A/\mathfrak q^\sigma\) gives a finite
+extension of fraction fields, hence
+\(\operatorname{trdeg}_k\kappa(\mathfrak p)=r\).
+Inductively choose the refined finite map on \(n-1\) variables carrying
+\(\mathfrak p\) back to \((Z_{r+1},\ldots,Z_{n-1})\).
+Extend it polynomially by \(Z_n\mapsto Y_n\).
+The preimage of \(Q\) is now
+\((Z_{r+1},\ldots,Z_n)\): modulo \(Z_n,Y_n\) this is exactly the induction
+statement, and the last generator lies in the contracted ideal.
+Composing with \(B\to A\) and then \(\sigma^{-1}:A\to A\) carries this
+ideal to the original \(\mathfrak q\), not to a substituted prime.
+
+This proves a stronger assertion: the refined finite map may be chosen
+injective and finite free of positive rank. The inductive map has a finite
+free basis by the stronger induction; polynomial extension preserves that
+basis. If it is \(b_1,\ldots,b_D\), the composite before \(\sigma^{-1}\)
+has basis \(b_jT^\ell\), \(1\leq j\leq D,\ 0\leq\ell<d\).
+Transport that exact basis by \(\sigma^{-1}\) for the original target.
+This proves finite freeness and injectivity at every step, including rank
+one at \(n=0\) or \(\mathfrak q=0\).
+
+Write the final original images as \(a_i=\varphi(Z_i)\).
+Then \(a_{r+1},\ldots,a_n\) is a regular sequence in \(A\):
+the coordinate sequence in the polynomial source is regular, and freeness
+preserves each injection and each quotient. Its final quotient is nonzero
+since the original \(\mathfrak q\) contains the sequence.
+Moreover \(A/(a_{r+1},\ldots,a_n)\) is finite free of the same rank over
+\(k[Z_1,\ldots,Z_r]\).
+The prime \(\mathfrak q/(a_{r+1},\ldots,a_n)\) is minimal in this quotient:
+its contraction is zero, any smaller prime also contracts to zero, and
+incomparability for the integral extension prohibits strict inclusion.
+Thus the original prime is a minimal prime of this explicitly constructed
+regular-sequence quotient. No assertion that \(\mathfrak q\) itself is
+generated by that sequence has been substituted.
+
+## Generic comparison over a domain without losing torsion
+
+Source 28125–28161. Let the original injection \(R\to S\) be finite type
+with \(R\) a domain, \(K=\operatorname{Frac}R\), and fixed generators \(x_i\).
+The algebra \(S_K\) is nonzero, since \(R\to S\) is injective.
+The field construction supplies \(y_1,\ldots,y_d\) which are integer
+polynomials in those \(x_i\), so they are actual elements of \(S\).
+Any polynomial relation over \(R\) among these elements maps to a relation
+over \(K\); injectivity of the polynomial map over \(K\) and \(R\to K\)
+show all its original coefficients vanish. Thus \(R[y]\to S\) is injective.
+The source's change of dummy index from \(i\) to \(j\) refers to the same
+already specified finite family; OCC-00551 is an optional stylistic change.
+
+Choose the source monic polynomials
+\(P_i(T)=T^{m_i}+\sum_{j<m_i}c_{ij}(y)T^j\in K[y][T]\)
+with \(P_i(x_i)=0\) in \(S_K\), necessarily \(m_i\geq1\).
+Choose nonzero \(g\in R\) clearing all coefficients \(c_{ij}\).
+The element \(gP_i(x_i)\) is then defined in \(S\) and maps to zero in
+\(S_K\); localization gives nonzero \(t_i\in R\) with
+\(t_i gP_i(x_i)=0\) in \(S\).
+Put \(f=g\prod_i t_i\), nonzero because \(R\) is a domain.
+Then every \(fP_i\) has coefficients in \(R[y]\), and
+\(fP_i(x_i)=0\) in \(S\).
+
+Retain \(x_i'=fx_i\) and the exact polynomial
+\[
+ Q_i(T)=f^{m_i}P_i(T/f)
+       =T^{m_i}+\sum_{j<m_i} f^{m_i-j}c_{ij}(y)T^j .
+\]
+Every coefficient is in \(R[y]\), since \(m_i-j\geq1\) and \(fc_{ij}\)
+already is. Evaluation in \(S\) gives
+\(Q_i(x_i')=f^{m_i-1}(fP_i(x_i))=0\).
+These formulas retain every factor, including those killing localization
+torsion. For \(S'=R[y,x_1',\ldots,x_n']\subset S\), repeated use of the
+monic equations shows that the products
+\(\prod_i(x_i')^{b_i}\), \(0\leq b_i<m_i\), generate \(S'\) as an
+\(R[y]\)-module. They are not claimed linearly independent.
+
+The localized inclusion \(S'_f\to S_f\) is injective: if \(s'/f^a\)
+maps to zero, some \(f^b s'=0\) in \(S\), and the same equation holds in
+the actual subring \(S'\). It is onto because each original generator
+\(x_i=x_i'/f\) lies in its image. This gives both directions of the
+claimed identification, with every original denominator retained.
+
+Injectivity \(R\to S\) does not make \(S\to S_K\) injective.
+For example \(R=k[t]\), \(S=R[z]/(tz)\) has injective coefficient map
+(split by \(z\mapsto0\)), but \(z\ne0\) in \(S\) and \(z=0\) in \(S_K\).
+Here the generic relation \(P(T)=T\) must be multiplied by \(t\);
+with \(f=t\), \(x'=tz=0\), \(S'=R\), and \(S'_t=S_t\).
+This verifies exactly why the source's annihilator step cannot be omitted.
+
+## Dimension, transcendence degree and the zero-length chains
+
+Source 28177–28287. For a finite-type domain \(S\), take the source finite
+injection \(k[y_1,\ldots,y_d]\to S\), \(d=\dim S\).
+Tensor with the fraction field \(k(y)\). The resulting finite-dimensional
+domain over \(k(y)\) is a field, since multiplication by a nonzero element
+is an injective endomorphism of a finite-dimensional vector space.
+It contains \(S\) and the inverses of every nonzero element of \(S\),
+so it is its fraction field \(K\). This proves the required field extension
+is finite and gives \(\operatorname{trdeg}_kK=d\).
+The earlier exact prime-interval calculation gives the same dimension at
+every maximal ideal. The k-algebra wording at 28180 is corrected minimally.
+
+If \(\mathfrak q\subsetneq\mathfrak q'\), work in the finite-type domain
+\(S/\mathfrak q\). A maximal chain in its proper prime quotient
+\(S/\mathfrak q'\) extends at its bottom by
+\(0\subsetneq\mathfrak q'/\mathfrak q\).
+Thus the dimension strictly decreases, and the just-proved equality with
+residue-field transcendence degree gives the source specialization inequality.
+Finiteness of these dimensions is essential to the strict integer comparison.
+
+For a general finite-type \(S\), retain
+\(\mathfrak p\), the minimal primes \(\mathfrak q_j\subset\mathfrak p\),
+and \(r=\operatorname{trdeg}_k\kappa(\mathfrak p)=\dim S/\mathfrak p\).
+For every \(j\), the earlier polynomial-presentation chain formula gives
+\[
+ \dim(S/\mathfrak q_j)
+   =\dim (S/\mathfrak q_j)_{\mathfrak p/\mathfrak q_j}+r.
+\]
+Taking the maximum over these actual components yields
+\[
+ \dim_x\operatorname{Spec}S
+       =\dim S_{\mathfrak p}+\operatorname{trdeg}_k\kappa(\mathfrak p).
+\]
+This is precisely the source's concatenated-chain argument.
+If \(r=0\), the upper chain consists of \(\mathfrak p\) alone.
+If its lower interval has length \(s(j)=0\), then
+\(\mathfrak q_j=\mathfrak p\), and no \(\mathfrak p'_0\) is introduced.
+These are separate proof clarifications of the displayed chains.
+
+For a surjection of finite-type \(k\)-algebras \(S'\to S\), the corresponding
+residue fields \(\kappa(\mathfrak p')\to\kappa(\mathfrak p)\) are isomorphic:
+localization and quotient give the same fraction field of
+\(S'/\mathfrak p'=S/\mathfrak p\).
+Subtract the two preceding formulas to get the exact stated difference
+of point dimensions and prime heights.
+The two other occurrences of k algebra(s), at 28224 and 28272, receive
+only the missing noun hyphens.
+
+## Field extension and the common original fibre ring
+
+Source 28289–28387. If \(S=0\), then \(K\otimes_k S=0\) and both dimensions
+are \(-\infty\); this case needs no polynomial ring on \(d=-\infty\)
+variables. For \(S\ne0\), tensor the finite injection furnished above
+with \(K\). Flatness of the field extension preserves injectivity and
+finite generation, giving the original finite injection
+\(K[y_1,\ldots,y_d]\to K\otimes_kS\), and integral dimension equality
+proves the asserted global equality.
+
+For the pointwise assertion, keep the source presentation
+\(A=k[x_1,\ldots,x_n]\to S=A/I\), \(B=K[x_1,\ldots,x_n]\),
+and \(S_K=B/IB\). Retain the original primes
+\(\mathfrak q'\subset A\), \(\mathfrak q_K'\subset B\) and their
+quotient primes \(\mathfrak q,\mathfrak q_K\).
+Both vertical localized maps are flat. Their common local fibre is exactly
+\[
+ B_{\mathfrak q_K'}/\mathfrak q'B_{\mathfrak q_K'}
+ \ \simeq\
+ (S_K)_{\mathfrak q_K}/\mathfrak q(S_K)_{\mathfrak q_K}.
+\]
+The map sends \([b/u]\) to \([\bar b/\bar u]\); its inverse lifts quotient
+representatives. It is well defined and bijective because
+\(I\subset\mathfrak q'\), so quotienting by \(IB\) before
+\(\mathfrak q'B\) has the same final kernel. All denominators avoid the
+specified primes.
+
+Writing the fibre dimension as \(h\), the local base-plus-fibre equality
+gives
+\[
+ \operatorname{ht}(\mathfrak q_K')
+     =\operatorname{ht}(\mathfrak q')+h,\qquad
+ \operatorname{ht}(\mathfrak q_K)
+     =\operatorname{ht}(\mathfrak q)+h.
+\]
+The source's quotient codimension formula subtracts these two equalities.
+The point dimension of either ambient affine \(n\)-space is \(n\),
+including at nonclosed points, by its single component and the earlier
+point-dimension result. Hence
+\(\dim_xX=\dim_{x_K}X_K\). This proves the source cancellation through
+the exact same fibre ring, not merely through equally named dimensions.
+The duplicated "Denote" reports receive "Denote by" at 28343.
+
+Combining the local dimension equality and the pointwise formula gives
+\[
+ h=\dim(S_K)_{\mathfrak q_K}-\dim S_{\mathfrak q}
+   =\operatorname{trdeg}_k\kappa(\mathfrak q)
+      -\operatorname{trdeg}_K\kappa(\mathfrak q_K).
+\]
+The missing finite verb at 28377 is corrected as reported twice.
+A prime minimal over \(\mathfrak qS_K\) exists because \(S_K\) is
+Noetherian and that ideal is proper. Properness follows from faithful
+flatness of the field base change. Such a prime contracts to
+\(\mathfrak q\): going down supplies a smaller prime over \(\mathfrak q\),
+and it still contains \(\mathfrak qS_K\), so minimality forces equality.
+The localized fibre then has only its minimal maximal prime and dimension
+zero. This proves the final source existence assertion with the required
+contraction checked.
+
+## Exact maximum fibre dimension and both height-jump extremes
+
+Let \(F/k\) be the original finitely generated residue field
+\(F=\kappa(\mathfrak q)\), put \(r=\operatorname{trdeg}_kF<\infty\),
+and let \(K/k\) be arbitrary, of transcendence degree \(s\), possibly
+infinite. Then the actual tensor ring, including its possible nilpotents,
+satisfies
+\[
+ \dim(K\otimes_kF)=\min(r,s).
+\]
+Here is a direct proof. Choose an actual transcendence basis
+\(t_1,\ldots,t_r\) in \(F\). The extension \(F/k(t_1,\ldots,t_r)\)
+is finite: \(F\) is finitely generated as a field, and the remaining
+generators are algebraic. If \(D\) is its degree, tensoring its vector
+space basis gives a finite free, hence integral and injective, comparison
+\[
+ A=(k[t_1,\ldots,t_r]\setminus\{0\})^{-1}K[t_1,\ldots,t_r]
+      \ \longrightarrow\ K\otimes_kF .
+\]
+It is obtained from
+\((K\otimes_k k(t))\otimes_{k(t)}F\simeq K\otimes_kF\);
+\((a\otimes b)\otimes c\mapsto a\otimes bc\) and
+\(a\otimes c\mapsto(a\otimes1)\otimes c\) are inverse.
+No reducedness or separability assumption is introduced. Integral
+dimension equality reduces only this dimension calculation to \(A\);
+the original tensor ring remains present.
+
+Every prime \(P\subset K[t_1,\ldots,t_r]\) surviving in \(A\) contracts
+to zero in \(k[t_1,\ldots,t_r]\), so its residue field \(L\) contains
+\(k(t_1,\ldots,t_r)\). The earlier affine-domain dimension formula gives
+\(\operatorname{ht}P=r-\operatorname{trdeg}_K L\).
+This is at most \(r\). If \(s<\infty\), the actual field tower gives
+\(\operatorname{trdeg}_k L=s+\operatorname{trdeg}_K L\geq r\), so
+\(\operatorname{ht}P\leq s\).
+The entire interval below \(P\) survives the localization, giving the
+upper bound \(\dim A\leq\min(r,s)\).
+
+For the lower bound put \(m=\min(r,s)\) and choose algebraically independent
+\(u_1,\ldots,u_m\in K\) over \(k\).
+In \(K[t_1,\ldots,t_r]\), take
+\(P=(t_1-u_1,\ldots,t_m-u_m)\).
+Its quotient is \(K[t_{m+1},\ldots,t_r]\).
+Evaluation of \(k[t_1,\ldots,t_r]\) into this quotient is injective:
+expand in the last \(r-m\) variables and use algebraic independence of
+the \(u_i\) on each coefficient. Thus \(P\) is disjoint from the
+localization set. Its height is \(m\), either by the exact dimension
+formula for this polynomial quotient or by its successive coordinate
+prime chain and its \(m\)-generator local maximal ideal bound.
+All those lower primes survive. This proves the lower bound, and hence
+the displayed equality. For \(r=0\) or \(m=0\), the argument uses empty
+transcendence bases and the zero prime directly.
+
+Consequently every source height jump \(h\) obeys
+\(0\leq h\leq\min(r,s)\), and both extremes occur among primes over
+the fixed \(\mathfrak q\).
+For zero, use a minimal prime of the nonzero Noetherian tensor ring.
+For the maximum, a finite-dimensional spectrum attains its integer
+dimension: a finite strict chain of maximal possible length has a last
+prime whose local dimension equals that length. The prime correspondence
+between \(\operatorname{Spec}(K\otimes_kF)\) and primes of \(S_K\)
+contracting to \(\mathfrak q\) preserves their local fibre rings.
+Thus both choices really lie over the original \(\mathfrak q\).
+For an algebraic extension \(K/k\), \(s=0\), so every height jump is zero.
+
+As an exact example retaining distinct base and point dimensions, take
+\(S=k[x]\), \(\mathfrak q=0\), \(K=k(u)\).
+Both primes \(0\) and \((x-u)\) of \(K[x]\) contract to zero in \(k[x]\);
+their local heights are respectively zero and one, while the topological
+dimension at both points remains one. This realizes both extremes
+without suggesting that point dimension and local height are identical.
+
+## The graded vertex, its Hilbert function and its full completion
+
+Source 28402–28434. Keep the original finitely generated standard graded
+\(k\)-algebra \(S\), \(S_0=k\), and \(\mathfrak m=S_+\).
+Its quotient is \(k\), so \(\mathfrak m\) is maximal.
+Every minimal prime is homogeneous by the source homogeneous-prime lemma.
+A proper homogeneous ideal contains no nonzero degree-zero scalar,
+so every such minimal prime lies in \(\mathfrak m\).
+All components therefore pass through the vertex. The earlier point
+dimension formula gives
+\(\dim S=\dim_{\mathfrak m}\operatorname{Spec}S=\dim S_{\mathfrak m}\).
+
+Standard generation gives the exact ideals
+\[
+ \mathfrak m^d=\bigoplus_{j\geq d}S_j.
+\]
+Every product of \(d\) positive-degree elements has degree at least \(d\).
+Conversely each degree-\(j\) monomial in the degree-one generators,
+\(j\geq d\), factors as a product of \(d\) positive-degree monomials;
+linear combinations give the reverse inclusion.
+Thus the degree-\(d\) projection identifies
+\(\mathfrak m^d/\mathfrak m^{d+1}\) with \(S_d\), including \(d=0\).
+
+Put \(R=S_{\mathfrak m}\), \(\mathfrak n=\mathfrak mR\).
+For \(u\notin\mathfrak m\), write its original homogeneous decomposition
+\(u=c+v\), \(c\in k^\times\), \(v\in\mathfrak m\).
+On \(\mathfrak m^d/\mathfrak m^{d+1}\), multiplication by \(u\) is
+multiplication by \(c\), with inverse \(c^{-1}\).
+This proves that localization gives an isomorphism onto
+\(\mathfrak n^d/\mathfrak n^{d+1}\), with every denominator accounted for.
+The source local Hilbert function is exactly
+\(\operatorname{length}_R(\mathfrak n^d/\mathfrak n^{d+1})\), as read
+at 13994–14015; it is not the cumulative length.
+Since these quotients are vector spaces over \(k\), that length is
+\(\dim_k S_d\). This proves the claimed equality of functions.
+
+If the eventual polynomial \(P\) is nonzero, its leading coefficient
+is positive (its values are eventual nonnegative dimensions), and summing
+from zero through \(n\) increases its degree by one. The source local
+dimension theorem applied to that cumulative polynomial therefore gives
+\(\dim R=\deg P+1\).
+If \(P=0\), all sufficiently high \(S_d\) vanish, so \(S\) is finite
+dimensional, \(\mathfrak m\) is nilpotent and \(R\) is nonzero Artinian
+of dimension zero. This gives \(\deg(0)+1=-1+1=0\) exactly.
+No subtraction of infinities or negative binomial indices is used.
+The definitions and the prior group 384's zero-degree check agree.
+
+In fact the preceding degree maps are multiplicative and prove the
+complete graded algebra identification
+\[
+ S\longrightarrow\operatorname{gr}_{\mathfrak n}R,\qquad
+ a\in S_d\longmapsto a/1\bmod\mathfrak n^{d+1}.
+\]
+Every degree map is bijective by the explicit localization inverse above,
+and multiplication preserves degrees, so this is an isomorphism of
+graded \(k\)-algebras.
+
+For every \(r\geq1\), the full localized quotient map
+\(S/\mathfrak m^r\to R/\mathfrak n^r\) is also an isomorphism.
+Indeed the inverse of \(u=c+v\) modulo \(\mathfrak m^r\) is the exact
+finite expression
+\[
+ c^{-1}\sum_{j=0}^{r-1}(-c^{-1}v)^j.
+\]
+Multiplication by \(c+v=c(1+c^{-1}v)\) gives
+\(1-(-c^{-1}v)^r\), which equals one in that quotient.
+This supplies an inverse for every localized denominator without assuming
+one in the original ring. The quotient is the direct sum of its original
+degrees \(0,\ldots,r-1\). Passing to compatible quotient systems therefore
+gives inverse maps
+\[
+ \widehat{R}\ \simeq\ \prod_{d\geq0}S_d .
+\]
+On the right multiplication is the actual convolution
+\((a b)_d=\sum_{i=0}^d a_i b_{d-i}\); this sum is finite in each degree.
+A sequence of coefficients maps to its finite truncations, and a compatible
+system maps to its uniquely stabilized coefficients in each degree.
+These operations are inverse, preserve addition and convolution, and
+identify the respective adic topologies. All homogeneous nilpotents and
+their products are retained. This is a proved comparison with the original
+completion, not a replacement of the graded ring or its Hilbert function.
+
+## Corpus and continuation boundaries
+
+The two bounded corpus queries return eight routing matches across both
+layers and five distinct canonical IDs. They include physics records,
+local programme notes and a PDF-primary algebra volume. None is read or
+adopted as a theorem for this batch; no PDF fallback is used.
+The existing primary Stacks source and earlier source-bound proofs supply
+the exact calculations above. No new claim of human-literature novelty
+or exhaustive topic coverage is made.
+The previous original Heinrich and other bounded reading records are
+retained unchanged in the topic route.
+
+All seventeen reports through 28447 receive dispositions. Required edits
+are minimal; the two stylistic reports remain unapplied.
+Continue at 28448, Generic flatness. Lookahead through 28460 has been read
+but remains unadjudicated.
+

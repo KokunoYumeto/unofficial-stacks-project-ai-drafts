@@ -1,0 +1,23 @@
+\begin{lemma}
+\label{lemma-base-change-integral}
+\begin{slogan}
+Integrality and finiteness are preserved under base change.
+\end{slogan}
+Let $R \to S$ and $R \to R'$ be ring maps.
+Set $S' = R' \otimes_R S$.
+\begin{enumerate}
+\item If $R \to S$ is integral so is $R' \to S'$.
+\item If $R \to S$ is finite so is $R' \to S'$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We prove (1).
+Let $s_i \in S$ be generators for $S$ over $R$.
+Each of these satisfies a monic polynomial equation $P_i$
+over $R$. Hence the elements $1 \otimes s_i \in S'$ generate
+$S'$ over $R'$ and satisfy the corresponding polynomial
+$P_i'$ over $R'$. Since these elements generate $S'$ over $R'$
+we see that $S'$ is integral over $R'$.
+Proof of (2) omitted.
+\end{proof}

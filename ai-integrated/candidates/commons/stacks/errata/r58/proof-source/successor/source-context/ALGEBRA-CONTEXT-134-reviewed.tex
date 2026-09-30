@@ -1,0 +1,39 @@
+\begin{lemma}
+\label{lemma-radicial-integral-bijective}
+Let $\varphi : R \to S$ be a ring map. Assume
+\begin{enumerate}
+\item $\varphi$ is integral,
+\item $\varphi$ induces a bijective map of spectra,
+\item $\varphi$ induces purely inseparable residue field extensions.
+\end{enumerate}
+Then $\varphi$ induces a homeomorphism on spectra and for any ring map
+$R \to R'$ properties (1), (2), (3) are true for $R' \to R' \otimes_R S$.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-radicial-integral}, the
+original integral injective map on spectra
+is a homeomorphism onto its image.
+Its assumed bijectivity makes that image
+the entire $\Spec(R)$. For any original
+$R\to R'$, the same lemma preserves
+integrality, injectivity on spectra,
+and purely inseparable residue fields.
+Surjectivity on spectra is preserved
+by the original nonzero residue-field
+tensor construction of Lemma
+\ref{lemma-surjective-spec-radical-ideal}.
+Thus the receiving map is bijective
+on spectra and still integral, hence
+a homeomorphism by the closed-image
+argument, with exactly the asserted
+residue fields. Equivalently, for
+an integral map already satisfying
+the injectivity and residue-field
+hypotheses, full universal surjectivity
+is the condition $\ker\varphi$
+locally nilpotent: its image is
+the exact $V(\ker\varphi)$, and
+the same holds after every base
+change by the radical formula.
+\end{proof}

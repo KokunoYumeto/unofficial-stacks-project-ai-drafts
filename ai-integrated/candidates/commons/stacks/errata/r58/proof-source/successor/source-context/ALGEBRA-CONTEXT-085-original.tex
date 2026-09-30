@@ -1,0 +1,20 @@
+\begin{lemma}
+\label{lemma-finite-finite-fibres}
+Suppose $R \to S$ is finite.
+Then the fibres of $\Spec(S) \to \Spec(R)$ are finite.
+\end{lemma}
+
+\begin{proof}
+By the discussion in
+Remark \ref{remark-fundamental-diagram}
+the fibres are the spectra of the rings $S \otimes_R \kappa(\mathfrak p)$.
+As $R \to S$ is finite, these fibre rings are finite over
+$\kappa(\mathfrak p)$ hence Noetherian by
+Lemma \ref{lemma-Noetherian-permanence}.
+By
+Lemma \ref{lemma-integral-no-inclusion}
+every prime of $S \otimes_R \kappa(\mathfrak p)$ is a minimal
+prime. Hence by
+Lemma \ref{lemma-Noetherian-irreducible-components}
+there are at most finitely many.
+\end{proof}
