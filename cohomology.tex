@@ -14929,9 +14929,19 @@ $b^{i + 1}[1] \circ b^i : \mathcal{I}^i/\mathcal{I}^{i + 1} \to
 (\mathcal{I}^{i + 2}/\mathcal{I}^{i + 3})[2]$
 is zero in $D(\mathcal{O}_X)$ by using the criterion in
 Derived Categories, Lemma \ref{derived-lemma-cup-ext-1-zero}
-using that the module $\mathcal{I}^i/\mathcal{I}^{i + 3}$
-is an extension of $\mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}$
-by $\mathcal{I}^i/\mathcal{I}^{i + 1}$.
+using the exact sequence
+$$
+0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
+\to \mathcal{I}^i/\mathcal{I}^{i + 3}
+\to \mathcal{I}^i/\mathcal{I}^{i + 2} \to 0.
+$$
+Its pullback along
+$\mathcal{I}^{i + 1}/\mathcal{I}^{i + 2}
+\to \mathcal{I}^i/\mathcal{I}^{i + 2}$
+is the extension
+$0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
+\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}
+\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 2} \to 0$.
 
 \begin{lemma}
 \label{lemma-eta-second-property}
