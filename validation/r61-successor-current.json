@@ -1,6 +1,6 @@
 {
   "schema": "stacks-r61-successor-current/v1",
-  "status": "PREPARED_FOR_PUBLIC_VALIDATION",
+  "status": "READY_FOR_PUBLICATION",
   "previous_public": "95a51593aceb247ac7a183111678c3a0f8b8f4b5",
   "lease_commit": "fcdbc34c39cd4762fa9288752d7ef071129f2b12",
   "candidate_commit": "4185e4882af6f1b432244bf4462dc47b1bb0278b",
@@ -46,5 +46,25 @@
       "tests.test_changes_from_upstream",
       "tests.test_legacy_context_replay"
     ]
+  },
+  "local_validation": {
+    "status": "R61_BOUNDED_SUCCESSOR_PASS",
+    "candidate_files": 529,
+    "units": 64,
+    "operations": 89,
+    "overlays": 64,
+    "stable_ids": 2347,
+    "historical_correction_ids": 2305,
+    "effective_export_units": 2301,
+    "chapter_patches": 38,
+    "changed_paths": 571,
+    "previous_public": "95a51593aceb247ac7a183111678c3a0f8b8f4b5",
+    "prior_artifact_tree_preserved_outside_enumerated_scope": true,
+    "publication_readback_claimed": false,
+    "historical_validation": "Published R60 checkpoint retained; unchanged historical mathematical review and builds are not rerun or claimed as new work.",
+    "validated_public_snapshot": "c1653a198025360138f922127834d979ff29e609",
+    "log_sha256": "9E42E5E1399F612F13363412943C70D8039374F85AF90B50FF04A52A5CF14DBB",
+    "anonymous_readback": false,
+    "remote_ci": false
   }
 }
