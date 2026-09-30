@@ -2270,3 +2270,17 @@ Independent authority replay confirmed exact preimages, mathematical or grammati
 -Then the spectral sequence is bounded,
 +Then the spectral sequence starting with its $E_1$ page is bounded,
 ````
+
+### MC-STK-ERR-2561
+
+`more-algebra.tex` — more-algebra.tex:22722; clarification.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L22722) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$\tau_{\leq -2}K_2 = 0$
++$\tau_{\leq -2}K_3 = 0$
+````

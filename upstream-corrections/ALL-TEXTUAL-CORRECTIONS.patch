@@ -10106,7 +10106,7 @@ index 2fe364ab4acfd9b7aee4e3804ebb161a51e7af99..6a4905e4ab8c42587abdadb20a0f925e
  $hom(X, Y) \otimes X \to Y$ and $hom(Y, Z) \otimes Y \to Z$.
  \end{remark}
 diff --git a/cohomology.tex b/cohomology.tex
-index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..f55cd9bb8e566dfd2c4ff26e775ff6e24c953d80 100644
+index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..4684bf3c6921e37a12e8358b176acd8c3413b430 100644
 --- a/cohomology.tex
 +++ b/cohomology.tex
 @@ -2579,7 +2579,7 @@
@@ -10145,6 +10145,29 @@ index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..f55cd9bb8e566dfd2c4ff26e775ff6e2
  R\SheafHom(R\SheafHom(K_3, L), M)
  $$
  See Section \ref{section-flat} and
+@@ -14421,9 +14421,19 @@
+ (\mathcal{I}^{i + 2}/\mathcal{I}^{i + 3})[2]$
+ is zero in $D(\mathcal{O}_X)$ by using the criterion in
+ Derived Categories, Lemma \ref{derived-lemma-cup-ext-1-zero}
+-using that the module $\mathcal{I}^i/\mathcal{I}^{i + 3}$
+-is an extension of $\mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}$
+-by $\mathcal{I}^i/\mathcal{I}^{i + 1}$.
++using the exact sequence
++$$
++0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^i/\mathcal{I}^{i + 3}
++\to \mathcal{I}^i/\mathcal{I}^{i + 2} \to 0.
++$$
++Its pullback along
++$\mathcal{I}^{i + 1}/\mathcal{I}^{i + 2}
++\to \mathcal{I}^i/\mathcal{I}^{i + 2}$
++is the extension
++$0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 2} \to 0$.
+ 
+ \begin{lemma}
+ \label{lemma-eta-second-property}
 diff --git a/crystalline.tex b/crystalline.tex
 index 00b38e9d95efa54bea9f9191d6e79bf2ab9d6f15..c1b26c00e952b1655898b53e9547f23c0b89b468 100644
 --- a/crystalline.tex
@@ -10207,10 +10230,88 @@ index 14889f7419eb760a8047b5d689ca9ea780eeab43..49494306e759e14c43357db4ccbf47ac
  \end{proof}
  
 diff --git a/derived.tex b/derived.tex
-index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f17ce2e3b4 100644
+index f5e0e434239906951879544a74315b8d249a8013..ab9037628da49f3851f6069de0be1ff8f1317ea9 100644
 --- a/derived.tex
 +++ b/derived.tex
-@@ -1337,7 +1337,7 @@
+@@ -734,7 +734,7 @@
+ \begin{enumerate}
+ \item $f$ has a kernel,
+ \item $f$ has a cokernel,
+-\item $f$ is the isomorphic to a composition
++\item $f$ is isomorphic to a composition
+ $K \oplus Z \to Z \to Z \oplus Q$ of a projection and coprojection
+ for some objects $K, Z, Q$ of $\mathcal{D}$.
+ \end{enumerate}
+@@ -890,12 +890,12 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Let $F : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
++Let $(F, \xi) : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
+ pre-triangulated categories. Since
+ $(0, 0, 0, 1_0, 1_0, 0)$ is a distinguished triangle of $\mathcal{D}$
+ the triangle
+ $$
+-(F(0), F(0), F(0), 1_{F(0)}, 1_{F(0)}, F(0))
++(F(0), F(0), F(0), 1_{F(0)}, 1_{F(0)}, \xi_0 \circ F(0))
+ $$
+ is distinguished in $\mathcal{D}'$.
+ This implies that $1_{F(0)} \circ 1_{F(0)}$ is zero, see
+@@ -914,10 +914,10 @@
+ 
+ \begin{lemma}
+ \label{lemma-exact-equivalence}
+-Let $F : \mathcal{D} \to \mathcal{D}'$ be a fully faithful exact functor
++Let $(F, \xi) : \mathcal{D} \to \mathcal{D}'$ be a fully faithful exact functor
+ of pre-triangulated categories. Then a triangle $(X, Y, Z, f, g, h)$
+ of $\mathcal{D}$ is distinguished if and only if
+-$(F(X), F(Y), F(Z), F(f), F(g), F(h))$ is distinguished in $\mathcal{D}'$.
++$(F(X), F(Y), F(Z), F(f), F(g), \xi_X \circ F(h))$ is distinguished in $\mathcal{D}'$.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -1008,7 +1008,7 @@
+ \delta = \delta_{A \to B \to C} : G(C) \to G(A)[1]
+ $$
+ is a morphism in $\mathcal{D}$ such that
+-$(G(A), G(B), G(C), a, b, \delta)$ is
++$(G(A), G(B), G(C), G(a), G(b), \delta)$ is
+ a distinguished triangle, see
+ Definition \ref{definition-delta-functor}.
+ Then $H^n(\delta) : H^n(G(C)) \to H^n(G(A)[1]) = H^{n + 1}(G(A))$
+@@ -1046,8 +1046,9 @@
+ }
+ $$
+ where all the squares are commutative, except for the lower right square
+-which is anticommutative. Moreover, each of the rows and columns are
+-distinguished triangles. Finally, the morphisms on the bottom row
++which is anticommutative. Moreover, each of the first three rows and columns is a
++distinguished triangle. The bottom row and right column become distinguished
++triangles after negating their last arrows. Finally, the morphisms on the bottom row
+ (resp.\ right column) are obtained from the morphisms of the top row
+ (resp.\ left column) by applying $[1]$.
+ \end{proposition}
+@@ -1065,8 +1066,8 @@
+ \end{enumerate}
+ as in TR4. Denote $c : Y'' \to Z[1]$ the composition
+ $Y'' \to Y[1] \to Z[1]$ and denote $c' : Z' \to X''[1]$ the composition
+-$Z' \to X'[1] \to X''[1]$. The conclusion of our application TR4
+-are that
++$Z' \to X'[1] \to X''[1]$. The conclusion of our application of TR4
++is that
+ \begin{enumerate}
+ \item $(Z, A, Y'', a, b, c)$, $(X'', A, Z', a', b', c')$
+ are distinguished triangles,
+@@ -1077,7 +1078,7 @@
+ are morphisms of triangles.
+ \end{enumerate}
+ First using that
+-$(X, X', X'') \to (X, Y', A)$ and $(X, Y', A) \to (Y, Y', Y'')$.
++$(X, X', X'') \to (X, Y', A)$ and $(X, Y', A) \to (Y, Y', Y'')$
+ are morphisms of triangles we see the first of the diagrams
+ $$
+ \vcenter{
+@@ -1337,7 +1338,7 @@
  $a = f - g$. Choose a distinguished triangle $(Z, X, Q, t, u, v)$ using
  TR1 and TR2. Since $a \circ t = 0$ we see by
  Lemma \ref{lemma-representable-homological}
@@ -10219,7 +10320,17 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Finally, using TR1 again we can choose a triangle
  $(Q, Y, W, i, j, k)$. Here is a picture
  $$
-@@ -1420,7 +1420,7 @@
+@@ -1362,7 +1363,8 @@
+ system compatible with the triangulated structure.
+ Then there exists a unique structure of a pre-triangulated category on
+ $S^{-1}\mathcal{D}$ such that $[1] \circ Q = Q \circ [1]$ and
+-the localization functor $Q : \mathcal{D} \to S^{-1}\mathcal{D}$ is exact.
++the localization functor $Q : \mathcal{D} \to S^{-1}\mathcal{D}$ is exact
++with the identity translation comparison.
+ Moreover, if $\mathcal{D}$ is a triangulated category, so is
+ $S^{-1}\mathcal{D}$.
+ \end{proposition}
+@@ -1420,7 +1422,7 @@
  X \ar[r] \ar[d]^k &
  Y \ar[r] \ar[d]^l &
  Z \ar[r] \ar[d]^m &
@@ -10228,7 +10339,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  X'' \ar[r] &
  Y'' \ar[r] &
  Z'' \ar[r] &
-@@ -1442,7 +1442,7 @@
+@@ -1442,7 +1444,7 @@
  $$
  
  \medskip\noindent
@@ -10237,7 +10348,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  a triangulated category, then we still have to prove TR4 in order to show
  that $S^{-1}\mathcal{D}$ is triangulated as well. To do this we reduce by
  Lemma \ref{lemma-easier-axiom-four}
-@@ -1518,7 +1518,7 @@
+@@ -1518,7 +1520,7 @@
  Categories, Lemma \ref{categories-lemma-what-gets-inverted}.
  Thus $S'$ is the collection of arrows which are turned into isomorphisms
  by the composition $\mathcal{D}' \to \mathcal{D} \to S^{-1}\mathcal{D}$.
@@ -10246,7 +10357,34 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  triangulated structure by Lemma \ref{lemma-triangle-functor-localize}.
  By Lemma \ref{lemma-universal-property-localization} we obtain the
  exact functor $(S')^{-1}\mathcal{D}' \to S^{-1}\mathcal{D}$ of pre-triangulated
-@@ -2058,7 +2058,7 @@
+@@ -1784,7 +1786,7 @@
+ 
+ \begin{lemma}
+ \label{lemma-triangle-functor-kernel}
+-Let $F : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
++Let $(F, \xi) : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
+ pre-triangulated categories. Let $\mathcal{D}''$ be the full subcategory
+ of $\mathcal{D}$ with objects
+ $$
+@@ -1800,7 +1802,7 @@
+ It is clear that $\mathcal{D}''$ is preserved under $[1]$ and $[-1]$.
+ If $(X, Y, Z, f, g, h)$ is a distinguished triangle of $\mathcal{D}$
+ and $F(X) = F(Y) = 0$, then also $F(Z) = 0$ as
+-$(F(X), F(Y), F(Z), F(f), F(g), F(h))$ is distinguished.
++$(F(X), F(Y), F(Z), F(f), F(g), \xi_X \circ F(h))$ is distinguished.
+ Hence we may apply
+ Lemma \ref{lemma-triangulated-subcategory}
+ to see that $\mathcal{D}''$ is a pre-triangulated subcategory (respectively
+@@ -1973,7 +1975,7 @@
+ 
+ \medskip\noindent
+ Proof of MS5. Follows as distinguished triangles and $\mathcal{D}'$
+-are stable under translations
++are stable under translations.
+ 
+ \medskip\noindent
+ Proof of MS6. Suppose given a commutative diagram
+@@ -2058,7 +2060,7 @@
  to objects of $\mathcal{D}'$. Looking at the distinguished triangle
  $(Q_1, Q_{12}, Q_2)$ we conclude that $Q_2$ is also isomorphic to
  an object of $\mathcal{D}'$. Looking at the distinguished triangle
@@ -10255,7 +10393,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  follows that $h, f \in S$, but we don't need this.)
  \end{proof}
  
-@@ -2201,7 +2201,7 @@
+@@ -2201,7 +2203,7 @@
  Lemma \ref{lemma-kernel-quotient}.
  
  \medskip\noindent
@@ -10264,7 +10402,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  with the triangulation on $\mathcal{D}$. Then
  $\mathcal{B}(S) = \Ker(Q : \mathcal{D} \to S^{-1}\mathcal{D})$.
  Hence (using
-@@ -2358,10 +2358,10 @@
+@@ -2358,10 +2360,10 @@
  }
  $$
  commutes and the right vertical arrow is the morphism constructed above.
@@ -10279,7 +10417,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  is a bijection and using the Yoneda lemma once more we conclude that
  $X \to G(C)$ is an isomorphism. Hence we conclude that
-@@ -2421,7 +2421,7 @@
+@@ -2421,7 +2423,7 @@
  \label{definition-complexes-notation}
  Let $\mathcal{A}$ be an additive category.
  \begin{enumerate}
@@ -10288,16 +10426,19 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  be the {\it category of (cochain) complexes}.
  \item A complex $K^\bullet$ is said to be
  {\it bounded below} if $K^n = 0$ for all $n \ll 0$.
-@@ -2530,7 +2530,7 @@
+@@ -2530,9 +2532,9 @@
  \right) :
  L_1^n \oplus K_1^{n + 1} \to L_2^n \oplus K_2^{n + 1}
  $$
 -A matrix computation show that $c$ is a morphism of complexes.
 +A matrix computation shows that $c$ is a morphism of complexes.
  It is trivial that $c \circ i_1 = i_2 \circ b$, and it is
- trivial also to check that $p_2 \circ c = a \circ p_1$.
+-trivial also to check that $p_2 \circ c = a \circ p_1$.
++trivial also to check that $p_2 \circ c = a[1] \circ p_1$.
  \end{proof}
-@@ -2852,7 +2852,7 @@
+ 
+ \noindent
+@@ -2852,7 +2854,7 @@
  \label{lemma-triangle-independent-splittings}
  Let $\mathcal{A}$ be an additive category. Let
  $0 \to A^\bullet \to B^\bullet \to C^\bullet \to 0$
@@ -10306,7 +10447,25 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Definition \ref{definition-split-ses}.
  Let $(\pi')^n$, $(s')^n$ be a second collection of splittings.
  Denote $\delta' : C^\bullet \longrightarrow A^\bullet[1]$ the
-@@ -3126,8 +3126,8 @@
+@@ -2931,10 +2933,13 @@
+ \begin{proof}
+ By Lemma \ref{lemma-make-commute-map} we can replace $b$ and $b'$ by homotopic
+ maps such that the right square of the left diagram commutes and the
+-left square of the right diagram commutes. In other words, we have
+-$\Im(b^n) \subset \Im(A_2^n \to B_2^n)$ and
+-$\Ker((b')^n) \supset \Im(A_2^n \to B_2^n)$.
+-Then $b' \circ b = 0$ as a map of complexes.
++left square of the right diagram commutes. Writing $\alpha_2 : A_2^\bullet \to B_2^\bullet$ and
++$\beta_2 : B_2^\bullet \to C_2^\bullet$ for the maps in the middle
++split sequence, we have $\beta_2 \circ b = 0$ and
++$b' \circ \alpha_2 = 0$. Choose its degreewise retractions
++$\pi_2^n : B_2^n \to A_2^n$. The splitting identities give
++$b^n = \alpha_2^n \circ \pi_2^n \circ b^n$, so
++$(b')^n \circ b^n = 0$ in every degree.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -3126,8 +3131,8 @@
  and $\pi : \tilde L^\bullet \to L^\bullet$ be as in
  Lemma \ref{lemma-make-injective}. By
  Lemmas \ref{lemma-functorial-cone} and \ref{lemma-third-isomorphism}
@@ -10317,7 +10476,45 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  are isomorphic. Note that we can compose isomorphisms of
  triangles. Thus we may replace $L^\bullet$ by
  $\tilde L^\bullet$ and $f$ by $\tilde f$. In other words
-@@ -3419,7 +3419,7 @@
+@@ -3289,8 +3294,8 @@
+ The rows of this diagram are termwise split exact sequences, and
+ hence determine distinguished triangles by
+ definition. Moreover downward arrows in the diagram above
+-are compatible with the chosen splittings and hence
+-define morphisms of triangles
++define morphisms of triangles in $K(\mathcal{A})$
++(the boundary squares commute up to homotopy)
+ $$
+ (A^\bullet \to B^\bullet \to Q_1^\bullet \to A^\bullet[1])
+ \longrightarrow
+@@ -3303,7 +3308,7 @@
+ (B^\bullet \to C^\bullet \to Q_3^\bullet \to B^\bullet[1]).
+ $$
+ Note that the splittings $Q_3^n \to C^n$
+-of the bottom split sequence in the diagram provides a splitting
++of the bottom split sequence in the diagram provide a splitting
+ for the split sequence
+ $0 \to Q_1^\bullet \to Q_2^\bullet \to Q_3^\bullet \to 0$
+ upon composing with $C^n \to Q_2^n$. It follows easily from this
+@@ -3347,7 +3352,7 @@
+ $(C^\bullet[-1], A^\bullet, B^\bullet, \delta[-1], \alpha, \beta)$
+ is isomorphic to
+ $(C^\bullet[-1], A^\bullet, C(\delta[-1])^\bullet, \delta[-1], i, p)$.
+-Precomposing the previous isomorphism of triangles with $-1$ on $Y$
++Precomposing the previous isomorphism of triangles with $-1$ on $X$
+ it follows that $(X, Y, Z, f, g, h)$ is isomorphic to
+ $(C^\bullet[-1], A^\bullet, C(\delta[-1])^\bullet, \delta[-1], i, -p)$.
+ Hence it is distinguished by
+@@ -3393,7 +3398,7 @@
+ shows that the categories
+ $K^{+}(\mathcal{A})$, $K^{-}(\mathcal{A})$, and $K^b(\mathcal{A})$
+ are triangulated categories. Namely, the cone of a morphism between
+-bounded (above, below) is bounded (above, below).
++bounded (above, below) complexes is bounded (above, below).
+ But we prove below that these are triangulated subcategories
+ of $K(\mathcal{A})$ which gives another proof.
+ \end{remark}
+@@ -3419,7 +3424,7 @@
  triangle of $K(\mathcal{A})$ with $C(f)^\bullet \in K^{+}(\mathcal{A})$,
  $K^{-}(\mathcal{A})$, or $K^b(\mathcal{A})$ as is clear from the construction
  of the cone. Thus the lemma is proved. (Alternatively,
@@ -10326,7 +10523,19 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  of complexes in $K^{+}(\mathcal{A})$, $K^{-}(\mathcal{A})$, or
  $K^b(\mathcal{A})$, see
  Lemma \ref{lemma-make-injective}
-@@ -3648,7 +3648,7 @@
+@@ -3569,9 +3574,9 @@
+ \end{enumerate}
+ This follows from Remark \ref{remark-homotopy-double} since
+ the functors
++$\text{Comp}(\mathcal{B}) \to \text{DoubleComp}(\mathcal{C})$,
++$Y^\bullet \mapsto X^\bullet \otimes Y^\bullet$ and
+ $\text{Comp}(\mathcal{A}) \to \text{DoubleComp}(\mathcal{C})$,
+-$Y^\bullet \mapsto X^\bullet \otimes Y^\bullet$ and
+-$\text{Comp}(\mathcal{B}) \to \text{DoubleComp}(\mathcal{C})$,
+ $X^\bullet \mapsto X^\bullet \otimes Y^\bullet$
+ are immediately seen to be compatible with homotopies
+ and termwise split short exact sequences and hence induce
+@@ -3648,7 +3653,7 @@
  \end{equation}
  see (\ref{equation-long-exact-cohomology-sequence}). Moreover, there is
  a compatibility with the long exact sequence of cohomology associated to
@@ -10335,7 +10544,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  example, if $(A^\bullet, B^\bullet, C^\bullet, \alpha, \beta, \delta)$
  is the distinguished triangle associated to a termwise split exact
  sequence of complexes (see
-@@ -3699,7 +3699,7 @@
+@@ -3699,7 +3704,7 @@
  K(\mathcal{A})/\text{Ac}(\mathcal{A}) =
  \text{Qis}(\mathcal{A})^{-1} K(\mathcal{A}).
  $$
@@ -10344,7 +10553,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  whose composition with the quotient functor gives back the functor
  $H^0$ defined above. Using
  Lemma \ref{lemma-homological-functor-bounded}
-@@ -3965,7 +3965,7 @@
+@@ -3965,7 +3970,7 @@
  \label{lemma-derived-canonical-delta-functor}
  Let $\mathcal{A}$ be an abelian category. The functor
  $\text{Comp}(\mathcal{A}) \to D(\mathcal{A})$
@@ -10353,7 +10562,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  with
  $$
  \delta_{A^\bullet \to B^\bullet \to C^\bullet} = - p \circ q^{-1}
-@@ -4053,13 +4053,13 @@
+@@ -4053,13 +4058,13 @@
  0
  }
  $$
@@ -10369,7 +10578,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $0 \to A^\bullet \to B^\bullet \to C^\bullet \to 0$
  to a triangle isomorphic to the distinguished triangle
  $$
-@@ -4358,7 +4358,7 @@
+@@ -4358,7 +4363,7 @@
  provided we can show that a filtered quasi-isomorphism is turned
  into a quasi-isomorphism by each of the functors
  $\text{gr}^p, \text{gr}, (\text{forget }F)$. This is true by definition
@@ -10378,7 +10587,16 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  bit of work. Let $f : K^\bullet \to L^\bullet$ be a filtered
  quasi-isomorphism in $K(\text{Fil}^f(\mathcal{A}))$.
  Choose a distinguished triangle $(K^\bullet, L^\bullet, M^\bullet, f, g, h)$
-@@ -4724,7 +4724,7 @@
+@@ -4376,7 +4381,7 @@
+ Let $\mathcal{A}$ be an abelian category.
+ The {\it bounded filtered derived category} $DF^b(\mathcal{A})$ is
+ the full subcategory of $DF(\mathcal{A})$ with objects those $X$
+-such that $\text{gr}(X) \in D^b(\mathcal{A})$.
++such that $\text{gr}(X) \in D^b(\text{Gr}(\mathcal{A}))$.
+ Similarly for the bounded below filtered derived category
+ $DF^{+}(\mathcal{A})$ and the bounded above filtered derived category
+ $DF^{-}(\mathcal{A})$.
+@@ -4724,7 +4729,7 @@
  $$
  It may not be true that the left square commutes, but the outer and
  right squares commute.
@@ -10387,7 +10605,19 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  is essentially constant means that there exists a $s'' : Y \to Y''$
  in $S$ and a morphism $h : Y' \to Y''$ such that $s'' = h \circ s'$ and
  such that $F(h)$ equal to $F(Y') \to B \to F(Y') \to F(Y'')$. Hence
-@@ -4839,10 +4839,10 @@
+@@ -4789,9 +4794,9 @@
+ is an exact sequence. Thus the $5$ lemma
+ (Homology, Lemma \ref{homology-lemma-five-lemma}) tells us the map
+ $$
++\Mor_{\mathcal{D}'}(W, C)
++\longrightarrow
+ \colim_\mathcal{I} \Mor_{\mathcal{D}'}(W, F(Z''))
+-\longrightarrow
+-\Mor_{\mathcal{D}'}(W, C)
+ $$
+ is bijective. We conclude that $F(Z'')$ is essentially constant
+ over $\mathcal{I}$ with value $C$ by part (4) of
+@@ -4839,10 +4844,10 @@
  \ref{categories-remark-left-localization-morphisms-colimit}).
  By Categories, Lemma \ref{categories-lemma-essentially-constant-over-product}
  $X/S \times Y/S$ is filtered and
@@ -10400,7 +10630,69 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  is essentially constant. Below we will show that the displayed functor
  is cofinal, hence by
  Categories, Lemma \ref{categories-lemma-cofinal-essentially-constant},
-@@ -5257,7 +5257,7 @@
+@@ -4888,7 +4893,7 @@
+ $c \circ s'_1 = d \circ s'_2$.
+ 
+ \medskip\noindent
+-The proof of the corresponding statements for $LF$ are dual.
++The proof of the corresponding statements for $LF$ is dual.
+ \end{proof}
+ 
+ \begin{proposition}
+@@ -4930,7 +4935,7 @@
+ We get (3) from Lemma \ref{lemma-derived-inverts}.
+ Part (4) follows from Lemma \ref{lemma-derived-inverts}.
+ Part (5) follows from the definitions and part (3).
+-The fully faithfulness in (6) follows from (3) and
++The full faithfulness in (6) follows from (3) and
+ the definitions. The fact that
+ $S_\mathcal{E}^{-1}\mathcal{E} \to S^{-1}\mathcal{D}$
+ is exact follows from the fact that a triangle in
+@@ -4962,9 +4967,9 @@
+ \label{definition-everywhere-defined}
+ In
+ Situation \ref{situation-derived-functor}.
+-We say $F$ is {\it right derivable}, or that $RF$ {\it everywhere defined}
++We say $F$ is {\it right derivable}, or that $RF$ is {\it everywhere defined}
+ if $RF$ is defined at every object of $\mathcal{D}$.
+-We say $F$ is {\it left derivable}, or that $LF$ {\it everywhere defined}
++We say $F$ is {\it left derivable}, or that $LF$ is {\it everywhere defined}
+ if $LF$ is defined at every object of $\mathcal{D}$.
+ \end{definition}
+ 
+@@ -4979,8 +4984,8 @@
+ see
+ Proposition \ref{proposition-derived-functor}.
+ In most interesting situations it is not the case that $RF \circ Q$ is
+-equal to $F$. In fact, it might happen that the canonical map
+-$F(X) \to RF(X)$ is never an isomorphism. In practice this does not happen,
++equal to $F$. The canonical map
++$F(X) \to RF(X)$ need not be an isomorphism for a given $X$. In practice this does not happen,
+ because in practice we only know how to prove $F$ is right derivable by
+ showing that $RF$ can be computed by evaluating $F$ at judiciously chosen
+ objects of the triangulated category $\mathcal{D}$. This warrants
+@@ -5053,16 +5058,16 @@
+ \ref{categories-lemma-characterize-essentially-constant-ind}
+ we know that for any object $W$ in $\mathcal{D}'$ the map
+ $$
+-\Hom_{\mathcal{D}'}(F(X \oplus Y), W)
++\Hom_{\mathcal{D}'}(W, F(X \oplus Y))
+ \longrightarrow
+-\colim_{s : X \to X', s' : Y \to Y'} \Hom_{\mathcal{D}'}(F(X' \oplus Y'), W)
++\colim_{s : X \to X', s' : Y \to Y'} \Hom_{\mathcal{D}'}(W, F(X' \oplus Y'))
+ $$
+ is bijective. Since this arrow is clearly compatible with direct sum
+ decompositions on both sides, we conclude that the map
+ $$
+-\Hom_{\mathcal{D}'}(F(X), W)
++\Hom_{\mathcal{D}'}(W, F(X))
+ \longrightarrow
+-\colim_{s : X \to X'} \Hom_{\mathcal{D}'}(F(X'), W)
++\colim_{s : X \to X'} \Hom_{\mathcal{D}'}(W, F(X'))
+ $$
+ is bijective (minor detail omitted). Thus by 
+ Categories, Lemma \ref{categories-lemma-characterize-essentially-constant-ind}
+@@ -5257,7 +5262,7 @@
  Consider a quasi-isomorphism $s : X \to X'$ in $K(\mathcal{A})$.
  By
  Lemma \ref{lemma-complex-cohomology-bounded}
@@ -10409,7 +10701,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Hence we see that $X/\text{Qis}^+(\mathcal{A})$ is cofinal
  in $X/\text{Qis}(\mathcal{A})$. Thus it is clear that (1) holds.
  Part (2) follows directly from part (1).
-@@ -5451,12 +5451,12 @@
+@@ -5451,12 +5456,12 @@
  $0 \to \Im(d^{-1}) \to I^0 \to I^0/\Im(d^{-1}) \to 0$
  implies that $I^0/\Im(d^{-1})$ is an element of $\mathcal{I}$.
  The exact sequence $0 \to A \to I^0/\Im(d^{-1}) \to \Im(d^0) \to 0$
@@ -10424,7 +10716,16 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{proof}
  
  \begin{lemma}
-@@ -5577,7 +5577,7 @@
+@@ -5512,7 +5517,7 @@
+ Let $s : K^\bullet \to L^\bullet$ be any quasi-isomorphism.
+ Then it is also true that $K^\bullet \to \tau_{\geq a}L^\bullet$
+ is a quasi-isomorphism by our assumption on $K^\bullet$.
+-Hence in the category $K^\bullet/\text{Qis}^{+}(\mathcal{A})$ the
++Hence in the category $K^\bullet/\text{Qis}(\mathcal{A})$ the
+ quasi-isomorphisms $s : K^\bullet \to L^\bullet$ with $L^n = 0$
+ for $n < a$ are cofinal. From Categories, Lemma
+ \ref{categories-lemma-cofinal-essentially-constant}
+@@ -5577,7 +5582,7 @@
  
  \begin{proof}
  Let $A$ be an object of $\mathcal{A}$. By Lemma \ref{lemma-negative-vanishing}
@@ -10433,7 +10734,53 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  
  \medskip\noindent
  Let $0 \to A \to B \to C \to 0$ be a short exact sequence of $\mathcal{A}$.
-@@ -5919,7 +5919,7 @@
+@@ -5823,7 +5828,7 @@
+ $$
+ see (\ref{equation-everywhere}). Moreover, any bounded below complex
+ $A^\bullet$ whose terms are acyclic for $RF$ computes $RF$.
+-\item If every object of $\mathcal{A}$ is quotient of
++\item If every object of $\mathcal{A}$ is a quotient of
+ an object acyclic for $LF$, then $LF$ is defined on all of
+ $K^{-}(\mathcal{A})$ and we obtain an exact functor
+ $$
+@@ -5853,28 +5858,14 @@
+ $F(I^\bullet)$ is acyclic.
+ 
+ \medskip\noindent
+-Say $I^n = 0$ for $n < n_0$. Setting $J^n = \Im(d^n)$ we break
+-$I^\bullet$ into short exact sequences
+-$0 \to J^n \to I^{n + 1} \to J^{n + 1} \to 0$
+-for $n \geq n_0$. These sequences induce distinguished triangles
+-$(J^n, I^{n + 1}, J^{n + 1})$ in $D^+(\mathcal{A})$ by
+-Lemma \ref{lemma-derived-canonical-delta-functor}.
+-For each $k \in \mathbf{Z}$ denote $H_k$ the assertion:
+-For all $n \leq k$ the object $J^n$ is in $\mathcal{I}$.
+-Then $H_k$ holds trivially for $k < n_0$. If $H_n$ holds,
+-then Lemma \ref{lemma-2-out-of-3-computes} shows that
+-$J^{n + 1}$ is in $\mathcal{I}$ and we have $H_{n + 1}$.
+-By Proposition \ref{proposition-derived-functor} we have a
+-distinguished triangle $(RF(J^n), RF(I^{n + 1}), RF(J^{n + 1}))$.
+-Since $J^n, I^{n + 1}, J^{n + 1}$ are in $\mathcal{I}$
+-the long exact cohomology sequence
+-(\ref{equation-long-exact-cohomology-sequence-D})
+-associated to this distinguished triangle collapses
+-to an exact sequence
+-$$
+-0 \to F(J^n) \to F(I^{n + 1}) \to F(J^{n + 1}) \to 0
+-$$
+-This in turn proves that $F(I^\bullet)$ is exact.
++Since $I^\bullet$ is acyclic, it is isomorphic to zero in
++$D^+(\mathcal{A})$. The right derived functor is defined at zero,
++with value zero, and hence at $I^\bullet$, with value zero, by
++Lemma \ref{lemma-derived-inverts}.
++The complex $I^\bullet$ is bounded below and all its terms are
++right $F$-acyclic. Thus Lemma \ref{lemma-leray-acyclicity} shows that
++$F(I^\bullet) \to RF(I^\bullet)$ is an isomorphism.
++Consequently $F(I^\bullet)$ is acyclic.
+ 
+ \medskip\noindent
+ The proof in the case of $LF$ is dual.
+@@ -5919,7 +5910,7 @@
  Let $\mathcal{B} \subset \mathcal{A}$ be a weak Serre subcategory, see
  Homology, Definition \ref{homology-definition-serre-subcategory} and
  Lemma \ref{homology-lemma-characterize-weak-serre-subcategory}.
@@ -10442,7 +10789,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $D(\mathcal{A})$ whose objects are
  $$
  \Ob(D_\mathcal{B}(\mathcal{A}))
-@@ -5945,7 +5945,7 @@
+@@ -5945,7 +5936,7 @@
  It is clear that $D_\mathcal{B}(\mathcal{A})$ is an additive subcategory
  preserved under the translation functors.
  If $X \oplus Y$ is in $D_\mathcal{B}(\mathcal{A})$, then
@@ -10451,16 +10798,40 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  of $\mathcal{B}$ as $H^n(X \oplus Y) = H^n(X) \oplus H^n(Y)$.
  Hence both $X$ and $Y$ are in $D_\mathcal{B}(\mathcal{A})$. By
  Lemma \ref{lemma-triangulated-subcategory}
-@@ -6125,7 +6125,7 @@
+@@ -6060,8 +6051,8 @@
+ Z^{-1} &
+ Z^0 \\
+ \ldots &
+-X^{-2} \ar[u]_{t_{-2}} \ar[ru]_{g_{-2}} &
+-X^{-1} \ar[u]_{t_{-1}} \ar[ru]_{g_{-1}} &
++X^{-2} \ar[u]_{t^{-2}} \ar[ru]_{g^{-2}} &
++X^{-1} \ar[u]_{t^{-1}} \ar[ru]_{g^{-1}} &
+ X^0 \ar[u]_{t^0} \\
+ \ldots &
+ (X')^{-2} \ar@{..>}[u] \ar@{..>}[r] &
+@@ -6116,6 +6107,12 @@
+ The functor $D(v) : D(\mathcal{A}) \to D(\mathcal{A}/\mathcal{B})$
+ is essentially surjective by
+ Lemma \ref{lemma-derived-of-quotient}.
++Apply $u$ termwise to complexes. If $s$ is a quasi-isomorphism,
++then the cohomology of the cone of $u(s)$ lies in $\mathcal{B}$,
++because $vu$ is naturally isomorphic to the identity.
++Thus this construction sends quasi-isomorphisms to isomorphisms
++after passing to $D(\mathcal{A})/D_\mathcal{B}(\mathcal{A})$,
++and induces a functor from $D(\mathcal{A}/\mathcal{B})$ to this quotient.
+ For an object $X$ of $D(\mathcal{A})$ the adjunction mapping
+ $c_X : uvX \to X$ maps to an isomorphism in $D(\mathcal{A}/\mathcal{B})$
+ because $vuv \cong v$ by the assumption that $vu \cong \text{id}$.
+@@ -6125,7 +6122,7 @@
  Hence $c_X$ is an element of the multiplicative system used to define
  the quotient category $D(\mathcal{A})/D_\mathcal{B}(\mathcal{A})$.
  Thus $uvX \cong X$ in $D(\mathcal{A})/D_\mathcal{B}(\mathcal{A})$.
 -For $X, Y \in \Ob(\mathcal{A}))$ the map
-+For $X, Y \in \Ob(\mathcal{A})$ the map
++For $X, Y \in \Ob(D(\mathcal{A}))$ the map
  $$
  \Hom_{D(\mathcal{A})/D_\mathcal{B}(\mathcal{A})}(X, Y)
  \longrightarrow
-@@ -6194,7 +6194,7 @@
+@@ -6194,7 +6191,7 @@
  The resulting map $s' : V^\bullet \to Y^\bullet$
  is a quasi-isomorphism as well and $s' \circ f$ is homotopic
  to zero as is clear from the fact that $h^i$ factors through $Y^{i - 1}$.
@@ -10469,7 +10840,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  exact same manner.
  \end{proof}
  
-@@ -6294,7 +6294,7 @@
+@@ -6294,7 +6291,7 @@
  \begin{proof}
  Proof of (1). First choose an injection $A \to I^0$ of $A$ into an
  injective object of $\mathcal{A}$. Next, choose an injection
@@ -10478,7 +10849,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Denote $d^0$ the induced map $I^0 \to I^1$.
  Next, choose an injection $I^1/\Im(d^0) \to I^2$ into
  an injective object of $\mathcal{A}$. Denote $d^1$ the induced
-@@ -6323,19 +6323,19 @@
+@@ -6323,19 +6320,19 @@
  such that $\alpha^n = d^{n - 1} \circ h^n + h^{n + 1} \circ d^n$.
  Note that
  \begin{align*}
@@ -10503,7 +10874,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  as a map into $I^n$ defined on the subobject $\Im(K^n \to K^{n + 1})$
  of $K^{n + 1}$. By injectivity of the object $I^n$ we can extend this to
  a map $h^{n + 1} : K^{n + 1} \to I^n$. With this choice the reader
-@@ -6409,7 +6409,7 @@
+@@ -6409,7 +6406,7 @@
  
  \medskip\noindent
  We first show that (2) implies (1). Namely, let
@@ -10512,7 +10883,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Lemma \ref{lemma-make-injective}. Since $\tilde \alpha$ is injective
  by (2) there exists a morphism $\tilde \beta : \tilde L^\bullet \to I^\bullet$
  such that $\gamma = \tilde \beta \circ \tilde \alpha$. Set
-@@ -6499,7 +6499,7 @@
+@@ -6499,7 +6496,7 @@
  We also give a direct argument here.
  
  \medskip\noindent
@@ -10521,7 +10892,17 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Lemma \ref{lemma-make-injective}. If we can show that $\beta_1 \circ\pi$
  is homotopic to $\beta_2 \circ \pi$, then we deduce that
  $\beta_1 \sim \beta_2$ because $\pi \circ s$ is the identity.
-@@ -6529,7 +6529,7 @@
+@@ -6521,15 +6518,15 @@
+ $$
+ \beta_1^n|_{K^n} - \beta_2^n|_{K^n}
+ =
+-d \circ (h_1^n - h_2^n) + (h_1^{n + 1} - h_2^{n + 1}) \circ d
++d \circ (h_2^n - h_1^n) + (h_2^{n + 1} - h_1^{n + 1}) \circ d
+ $$
+ Consider the map $h^n : K^n \oplus M^n \to I^{n - 1}$ which
+-equals $h_1^n - h_2^n$ on the first summand and zero on the second.
++equals $h_2^n - h_1^n$ on the first summand and zero on the second.
+ Then we see that
  $$
  \beta_1^n - \beta_2^n
  -
@@ -10530,7 +10911,16 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  is a morphism of complexes $L^\bullet \to I^\bullet$
  which is identically zero on the subcomplex $K^\bullet$.
-@@ -6596,8 +6596,7 @@
+@@ -6540,7 +6537,7 @@
+ \begin{lemma}
+ \label{lemma-morphisms-into-injective-complex}
+ Let $\mathcal{A}$ be an abelian category.
+-Let $I^\bullet$ be bounded below complex consisting of injective
++Let $I^\bullet$ be a bounded below complex consisting of injective
+ objects. Let $L^\bullet \in K(\mathcal{A})$. Then
+ $$
+ \Mor_{K(\mathcal{A})}(L^\bullet, I^\bullet)
+@@ -6596,8 +6593,7 @@
  we may assume $I_1^\bullet = I^\bullet$,
  \item if $A^n = B^n = C^n = 0$ for $n < 0$, then we may
  assume $I_j^n = 0$ for $n < 0$,
@@ -10540,7 +10930,16 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{enumerate}
  \end{lemma}
  
-@@ -6841,8 +6840,8 @@
+@@ -6821,7 +6817,7 @@
+ \begin{lemma}
+ \label{lemma-morphisms-from-projective-complex}
+ Let $\mathcal{A}$ be an abelian category.
+-Let $P^\bullet$ be bounded above complex consisting of projective
++Let $P^\bullet$ be a bounded above complex consisting of projective
+ objects. Let $L^\bullet \in K(\mathcal{A})$. Then
+ $$
+ \Mor_{K(\mathcal{A})}(P^\bullet, L^\bullet)
+@@ -6841,8 +6837,8 @@
  Assume $\mathcal{A}$ has enough projectives.
  For any short exact sequence
  $0 \to A^\bullet \to B^\bullet \to C^\bullet \to 0$
@@ -10551,7 +10950,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  \xymatrix{
  0 \ar[r] &
-@@ -6959,7 +6958,7 @@
+@@ -6959,7 +6955,7 @@
  \end{lemma}
  
  \begin{proof}
@@ -10560,7 +10959,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Definition \ref{definition-derived-functor}.
  To prove (1) let $\alpha : I^\bullet \to K^\bullet$ be a quasi-isomorphism
  into a complex. By
-@@ -7110,7 +7109,7 @@
+@@ -7110,7 +7106,7 @@
  and a morphism of complexes $\epsilon : K^\bullet \to I^{\bullet, 0}$
  with the following properties:
  \begin{enumerate}
@@ -10569,7 +10968,18 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  and all $q$.
  \item We have $I^{p, q} = 0$ if $q < 0$.
  \item The complex $I^{p, \bullet}$ is an injective resolution of $K^p$.
-@@ -7275,7 +7274,7 @@
+@@ -7245,8 +7241,8 @@
+ It follows that the same is true after applying $F$. Hence
+ ${}''E_1^{p, q} = F(H^q(I^{\bullet, p})) = F(H^q_I(I^{\bullet, p}))$.
+ The differentials on this are $(-1)^q$ times $F$ applied to
+-the differential of the complex $H^p_I(I^{\bullet, \bullet})$
+-which is an injective resolution of $H^p(K^\bullet)$. Hence the
++the differential of the complex $H^q_I(I^{\bullet, \bullet})$
++which is an injective resolution of $H^q(K^\bullet)$. Hence the
+ description of the $E_2$ terms.
+ \end{proof}
+ 
+@@ -7275,7 +7271,7 @@
  
  \noindent
  Sometimes we can compute the right derived functor of a composition.
@@ -10578,7 +10988,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Let $F : \mathcal{A} \to \mathcal{B}$ and $G : \mathcal{B} \to \mathcal{C}$
  be left exact functors. Assume that the right derived functors
  $RF : D^{+}(\mathcal{A}) \to D^{+}(\mathcal{B})$,
-@@ -7300,9 +7299,9 @@
+@@ -7300,15 +7296,15 @@
  of $\mathcal{A}$, and
  \item the canonical map
  $$
@@ -10591,7 +11001,14 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{enumerate}
  \end{lemma}
  
-@@ -7317,7 +7316,7 @@
+ \begin{proof}
+ If (2) holds, then (1) follows by evaluating the isomorphism
+-$t$ on $RF(I) = F(I)$. Conversely, assume (1) holds.
++$t$ at $I[0]$, using $RF(I[0]) = F(I)[0]$. Conversely, assume (1) holds.
+ Let $A^\bullet$ be a bounded below complex of $\mathcal{A}$.
+ Choose an injective resolution $A^\bullet \to I^\bullet$.
+ The map $t$ is given (see proof of
+@@ -7317,7 +7313,7 @@
  $$
  R(G \circ F)(A^\bullet) =
  (G \circ F)(I^\bullet) =
@@ -10600,7 +11017,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  RG(F(I^\bullet)) =
  RG(RF(A^\bullet))
  $$
-@@ -7327,8 +7326,8 @@
+@@ -7327,8 +7323,8 @@
  
  \begin{lemma}[Grothendieck spectral sequence]
  \label{lemma-grothendieck-spectral-sequence}
@@ -10611,7 +11028,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Let $X$ be an object of $D^{+}(\mathcal{A})$.
  There exists a spectral sequence $(E_r, d_r)_{r \geq 0}$
  consisting of bigraded objects $E_r$ of $\mathcal{C}$ with
-@@ -7393,7 +7392,7 @@
+@@ -7393,7 +7389,7 @@
  It is clear that the functor is exact.
  It is essentially surjective by
  Lemma \ref{lemma-injective-resolutions-exist}.
@@ -10620,7 +11037,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Lemma \ref{lemma-morphisms-into-injective-complex}.
  \end{proof}
  
-@@ -7567,13 +7566,13 @@
+@@ -7567,13 +7563,13 @@
  such as the category of abelian groups. In this case we have to be slightly
  more careful in constructing our resolution functor since we cannot use
  the axiom of choice with a quantifier ranging over a class. But note that
@@ -10637,7 +11054,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  to deal with this in the next section.
  \end{remark}
  
-@@ -7673,7 +7672,7 @@
+@@ -7673,7 +7669,7 @@
  \alpha : K^\bullet \longrightarrow \text{Tot}(I^{\bullet, \bullet})
  $$
  is a quasi-isomorphism. To prove we get a functor $inj$ it
@@ -10646,7 +11063,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  is functorial. This verification is omitted.
  
  \medskip\noindent
-@@ -7704,10 +7703,10 @@
+@@ -7704,10 +7700,10 @@
  \ar[rr]^-{\alpha}
  \ar[d]_{i_K} & &
  L^\bullet \ar[d]^{i_L} \\
@@ -10659,7 +11076,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  }
  $$
  of morphisms of complexes.
-@@ -7756,7 +7755,7 @@
+@@ -7756,7 +7752,7 @@
  $\mathcal{O}$-modules on a site endowed with a presheaf of rings.
  \item The category $\textit{Mod}(\mathcal{O})$ of sheaves of
  $\mathcal{O}$-modules on a ringed site.
@@ -10668,7 +11085,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{enumerate}
  \end{remark}
  
-@@ -7777,9 +7776,9 @@
+@@ -7777,9 +7773,9 @@
  
  \begin{lemma}
  \label{lemma-right-derived-functor}
@@ -10680,7 +11097,16 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Definition \ref{definition-localization-functor}.
  The right derived functor $RF$ of $F$ fits into the following
  $2$-commutative diagram
-@@ -7943,9 +7942,9 @@
+@@ -7903,7 +7899,7 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-The pushout $f' : I \to I \amalg_A B$ of $f$ by $u$ is a strict
++The pushout $f' : I \to I \amalg_A B$ of $u$ by $f$ is a strict
+ monomorphism, see
+ Homology, Lemma \ref{homology-lemma-pushout-filtered}.
+ Hence the result follows formally from
+@@ -7943,9 +7939,9 @@
  Lemma \ref{lemma-strict-monomorphism-into-filtered-injective}.
  Next, choose a strict monomorphism
  $u_1 : \Coker(u_0) \to I^1$ into a filtered injective object of
@@ -10692,7 +11118,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  map $I^1 \to I^2$. And so on. This works because each
  of the sequences
  $$
-@@ -7975,7 +7974,7 @@
+@@ -7975,7 +7971,7 @@
  \end{lemma}
  
  \begin{proof}
@@ -10701,7 +11127,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  quasi-isomorphisms we conclude that $a : A \to I^0$, $b : B \to J^0$
  and all the morphisms $d_I^n$, $d_J^n$ are strict, see
  Homology, Lemma \ref{homology-lemma-filtered-acyclic}.
-@@ -8041,7 +8040,7 @@
+@@ -8041,7 +8037,7 @@
  As $A[0] \to I^\bullet$ and $C[0] \to J^\bullet$ are filtered
  quasi-isomorphisms we conclude that $a : A \to I^0$, $c : C \to J^0$
  and all the morphisms $d_I^n$, $d_J^n$ are strict, see
@@ -10710,7 +11136,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  We are going to step by step construct the south-east and the south
  arrows in the following commutative diagram
  $$
-@@ -8089,7 +8088,7 @@
+@@ -8089,7 +8085,7 @@
  \right)
  $$
  Finally, the map $B[0] \to M^\bullet$ is given by
@@ -10719,7 +11145,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{proof}
  
  \begin{lemma}
-@@ -8173,7 +8172,7 @@
+@@ -8173,7 +8169,7 @@
  $$
  d_2^{a, b} : I^{a, b} = I_a^b \to I_a^{b + 1} = I^{a, b + 1}
  $$
@@ -10728,7 +11154,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  the total complex associated to this double complex, see
  Homology, Definition \ref{homology-definition-associated-simple-complex}.
  Observe that the maps $K^n[0] \to I_n^\bullet$ come from maps
-@@ -8285,8 +8284,8 @@
+@@ -8285,8 +8281,8 @@
  At this point
  Lemma \ref{lemma-filtered-acyclic-is-zero}
  guarantees that the outer two groups are zero and hence
@@ -10739,7 +11165,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  
  \medskip\noindent
  Proof of (2).
-@@ -8361,7 +8360,7 @@
+@@ -8361,7 +8357,7 @@
  and having enough injectives, see
  Sets, Lemma \ref{sets-lemma-abelian-injectives}.
  Thus we may use the lemma above for $\mathcal{A}'$.
@@ -10748,7 +11174,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  then we will never run into trouble using the lemma.
  \end{remark}
  
-@@ -8444,7 +8443,7 @@
+@@ -8444,7 +8440,7 @@
  \end{equation}
  Since $RT : D^{+}(\mathcal{A}) \to D^{+}(\mathcal{B})$ is computed
  by injective resolutions as well, see
@@ -10757,7 +11183,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  the commutation of $T$ with $\text{gr}$, and the commutative diagrams of
  Lemma \ref{lemma-filtered-localization-functor}
  imply that
-@@ -8527,8 +8526,8 @@
+@@ -8527,8 +8523,8 @@
  each $T(I^n)$ has a finite filtration. Thus we may apply
  Homology, Lemma \ref{homology-lemma-biregular-ss-converges}
  to conclude that the spectral sequence is bounded, converges to
@@ -10768,7 +11194,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  
  \medskip\noindent
  Suppose that $K^\bullet \to L^\bullet$ is a morphism of
-@@ -8570,7 +8569,7 @@
+@@ -8570,7 +8566,7 @@
  First spectral sequence. Consider the ``stupid'' filtration on $K^\bullet$
  obtained by setting $F^p(K^\bullet) = \sigma_{\geq p}(K^\bullet)$, see
  Homology, Section \ref{homology-section-truncations}.
@@ -10777,7 +11203,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $d(F^p(K^\bullet)) \subset F^{p + 1}(K^\bullet)$, compare
  Homology, Lemma \ref{homology-lemma-spectral-sequence-filtered-complex-d1}.
  Note that $\text{gr}^p(K^\bullet) = K^p[-p]$ with this filtration.
-@@ -8600,7 +8599,7 @@
+@@ -8600,7 +8596,7 @@
  = R^{2p + q}T(H^{-p}(K^\bullet)) = {}''E_2^{i, j}
  $$
  with $i = 2p + q$ and $j = -p$. (This looks unnatural, but note that we
@@ -10786,7 +11212,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  using increasing filtrations, with the end result that this then looks
  natural, but the other one doesn't.) We leave it to the reader to see
  that the differentials match up.
-@@ -8736,7 +8735,7 @@
+@@ -8736,7 +8732,7 @@
  in $D(\mathcal{A})$ can be represented as $fs^{-1}$ where
  $s : L^\bullet \to X^\bullet$ is a quasi-isomorphism,
  $f : L^\bullet \to Y^\bullet[n]$ a morphism, and
@@ -10795,7 +11221,84 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Thus $f = 0$ if $n < b - a$ because always either $L^i$ or $Y^{i + n}$ is
  zero. If $n = b - a$, then $f$ corresponds exactly to a morphism
  $H^a(X) \to H^b(Y)$. Part (2) is a special case of (1).
-@@ -9383,9 +9382,9 @@
+@@ -8823,6 +8819,7 @@
+ \longrightarrow
+ A[i]
+ $$
++Here $f^{-i} = \text{id}_A$ and all other components of $f$ are zero.
+ We call $\delta(E) = fs^{-1}$ the {\it class} of the Yoneda extension.
+ It turns out that this class characterizes the equivalence class
+ of the Yoneda extension.
+@@ -8910,24 +8907,27 @@
+ $\eta[i] : Y[i] \to Z[i + j]$. If $A, B, C$ are objects of
+ $\mathcal{A}$ and $i, j \geq 1$, then this composition law
+ $$
+-\Ext^j_\mathcal{A}(B, C) \times \Ext^i_\mathcal{A}(A, B)
++\Ext^i_\mathcal{A}(B, A) \times \Ext^j_\mathcal{A}(C, B)
+ \longrightarrow
+-\Ext^{i + j}_\mathcal{A}(A, C)
+-$$
+-can be described in terms of Yoneda extensions as follows: the
+-composition of
+-$$
+-0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to B \to 0
++\Ext^{i + j}_\mathcal{A}(C, A)
++$$
++can be described in terms of Yoneda extensions as follows. Let
++$$
++E : 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to B \to 0
+ $$
+ and
+ $$
+-0 \to B \to Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
+-$$
+-is the Yoneda extension
+-$$
+-0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to 
++E' : 0 \to B \to Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
++$$
++be given. With the projection convention for $\delta$ above, their
++composition $\delta(E)[j] \circ \delta(E')$ equals
++$(-1)^{ij}\delta(S)$, where
++$$
++S : 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to
+ Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
+ $$
++is the spliced extension; its joining arrow is the composition
++$Z_0 \to B \to Z'_{j - 1}$.
+ 
+ \begin{lemma}
+ \label{lemma-cup-ext-1-zero}
+@@ -8987,14 +8987,16 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-For $i > p$ write any class $\xi$ as $\delta(E)$
++If $p = 0$, then $\Hom_\mathcal{A}(A, A) = 0$ for every object $A$.
++Thus $\text{id}_A = 0$, every object is zero, and the conclusion follows.
++Assume $p \geq 1$. For $i > p$ write any class $\xi$ as $\delta(E)$
+ where $E$ is a Yoneda extension
+ $$
+ E : 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to B \to 0
+ $$
+ This is possible by Lemma \ref{lemma-yoneda-extension}.
+-Set $C = \Ker(Z_{p - 1} \to Z_{p - 2}) = \Im(Z_p \to Z_{p - 1})$.
+-Then $\delta(E)$ is the composition of $\delta(E')$ and $\delta(E'')$
++Set $C = \Im(Z_p \to Z_{p - 1})$.
++Then $\delta(E) = (-1)^{p(i - p)}\delta(E'')[p] \circ \delta(E')$,
+ where
+ $$
+ E' : 0 \to C \to Z_{p - 1} \to \ldots \to Z_0 \to B \to 0
+@@ -9064,7 +9066,7 @@
+ \label{definition-K-zero}
+ Let $\mathcal{D}$ be a triangulated category. We denote $K_0(\mathcal{D})$ the
+ {\it zeroth $K$-group of $\mathcal{D}$}. It is the abelian group constructed
+-as follows. Take the free abelian group on the objects on $\mathcal{D}$
++as follows. Take the free abelian group on the objects of $\mathcal{D}$
+ and for every distinguished triangle $X \to Y \to Z$
+ impose the relation $[Y] - [X] - [Z] = 0$.
+ \end{definition}
+@@ -9383,9 +9385,9 @@
  computes $LF$. To see this, by Lemma \ref{lemma-find-existence-computes},
  it suffices to prove the following claim. Suppose that
  $$
@@ -10807,7 +11310,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  is a quasi-isomorphism of complexes, such that each
  $P_n^\bullet$, $Q_n^\bullet$ is a bounded above complex whose terms are
-@@ -9437,7 +9436,7 @@
+@@ -9437,7 +9439,7 @@
  H^i(\colim F(P_n^\bullet)) = \colim H^i(F(P_n^\bullet))
  $$
  and similarly for $Q^\bullet$ we conclude that
@@ -10816,7 +11319,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  and the claim follows.
  \end{proof}
  
-@@ -9553,13 +9552,13 @@
+@@ -9553,13 +9555,13 @@
  The first equality holds by
  Categories, Lemma \ref{categories-lemma-characterize-essentially-constant-ind}.
  The second equality holds by the definition of morphisms in
@@ -10832,7 +11335,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \ref{categories-remark-left-localization-morphisms-colimit}.
  The sixth equality holds by
  Categories, Lemma \ref{categories-lemma-characterize-essentially-constant-pro}.
-@@ -9706,7 +9705,7 @@
+@@ -9706,20 +9708,25 @@
  \end{lemma}
  
  \begin{proof}
@@ -10840,8 +11343,43 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
 +Let $K^\bullet$ be a complex. Observe that the complex
  $$
  C :
- \prod\nolimits_b \Hom(K^{-b}, I^{b - 1}) \to
-@@ -9867,7 +9866,7 @@
+-\prod\nolimits_b \Hom(K^{-b}, I^{b - 1}) \to
+-\prod\nolimits_b \Hom(K^{-b}, I^b) \to
+-\prod\nolimits_b \Hom(K^{-b}, I^{b + 1})
++\prod\nolimits_b \Hom(K^b, I^{b - 1}) \to
++\prod\nolimits_b \Hom(K^b, I^b) \to
++\prod\nolimits_b \Hom(K^b, I^{b + 1})
+ $$
+ has cohomology $\Hom_{K(\mathcal{A})}(K^\bullet, I^\bullet)$
+-in the middle. Similarly, the complex
++in the middle. Here these are the degrees $-1,0,1$ of the full Hom complex,
++with $C^r = \prod_b \Hom(K^b, I^{b + r})$ and
++$(d_C^r f)^b = d_I^{b + r}f^b - (-1)^r f^{b + 1}d_K^b$.
++Its degree $r$ cohomology is
++$\Hom_{K(\mathcal{A})}(K^\bullet, I^\bullet[r])$.
++Similarly, the complex
+ $$
+ C_t :
+-\prod\nolimits_b \Hom(K^{-b}, I_t^{b - 1}) \to
+-\prod\nolimits_b \Hom(K^{-b}, I_t^b) \to
+-\prod\nolimits_b \Hom(K^{-b}, I_t^{b + 1})
++\prod\nolimits_b \Hom(K^b, I_t^{b - 1}) \to
++\prod\nolimits_b \Hom(K^b, I_t^b) \to
++\prod\nolimits_b \Hom(K^b, I_t^{b + 1})
+ $$
+ computes $\Hom_{K(\mathcal{A})}(K^\bullet, I_t^\bullet)$.
+ Next, observe that we have
+@@ -9729,7 +9736,8 @@
+ as complexes of abelian groups by our choice of $I$.
+ Taking products is an exact functor on the
+ category of abelian groups. Hence if $K^\bullet$ is acyclic, then
+-$\Hom_{K(\mathcal{A})}(K^\bullet, I_t^\bullet) = 0$, hence
++$\Hom_{K(\mathcal{A})}(K^\bullet, I_t^\bullet[r]) = 0$
++for every integer $r$, hence
+ $C_t$ is acyclic, hence $C$ is acyclic, hence we get
+ $\Hom_{K(\mathcal{A})}(K^\bullet, I^\bullet) = 0$.
+ Thus we find that $I^\bullet$ is K-injective.
+@@ -9867,7 +9875,7 @@
  
  \begin{proof}
  Let $I^\bullet$ be a K-injective complex of $\mathcal{A}$.
@@ -10850,7 +11388,41 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  As $v$ is exact we see that $v(M^\bullet)$ is an acyclic complex.
  By adjointness we get
  $$
-@@ -9990,7 +9989,7 @@
+@@ -9906,16 +9914,17 @@
+ \end{lemma}
+ 
+ \begin{proof}
++Choose an integer $a$ such that $d(K^n) < \infty$ for all $n < a$.
+ By Lemma \ref{lemma-subcategory-right-resolution} we can find a
+-quasi-isomorphism $\sigma_{\geq 0}K^\bullet \to M^\bullet$ with
+-$M^n = 0$ for $n < 0$ and $d(M^n) = 0$ for $n \geq 0$. Then $K^\bullet$
++quasi-isomorphism $\sigma_{\geq a}K^\bullet \to M^\bullet$ with
++$M^n = 0$ for $n < a$ and $d(M^n) = 0$ for $n \geq a$. Then $K^\bullet$
+ is quasi-isomorphic to the complex
+ $$
+-\ldots \to K^{-2} \to K^{-1} \to M^0 \to M^1 \to \ldots
+-$$
+-Hence we may assume that $d(K^n) = 0$ for $n \gg 0$. Note that
+-the condition $n + d(K^n) \to -\infty$ as $n \to -\infty$ is not
+-violated by this replacement.
++\ldots \to K^{a - 2} \to K^{a - 1} \to M^a \to M^{a + 1} \to \ldots
++$$
++Hence we may assume that every $d(K^n)$ is finite and that
++$d(K^n) = 0$ for $n \gg 0$. Note that the condition
++$n + d(K^n) \to -\infty$ as $n \to -\infty$ is not violated by this replacement.
+ 
+ \medskip\noindent
+ We are going to improve $K^\bullet$ by an (infinite) sequence of
+@@ -9965,7 +9974,7 @@
+ It is clear that $\xi((K')^\bullet) \leq \xi(K^\bullet)$ for an
+ elementary transformation as above. An elementary transformation
+ changes the complex in degrees $\leq \xi(K^\bullet) + 1$. Hence if we can
+-find finite sequence of elementary transformations which
++find a finite sequence of elementary transformations which
+ decrease $\xi(K^\bullet)$, then we win. However, note that if we
+ do an elementary transformation starting with the smallest element
+ $n \in I$, then we either decrease the size of $I$, or we increase
+@@ -9990,7 +9999,7 @@
  consisting of right acyclic objects for $F$,
  \item for $E \in D(\mathcal{A})$
  \begin{enumerate}
@@ -10859,7 +11431,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  for $i \leq a$,
  \item $H^i(RF(E)) \to H^i(RF(\tau_{\geq b - n + 1}E))$ is an isomorphism
  for $i \geq b$,
-@@ -10014,7 +10013,7 @@
+@@ -10014,7 +10023,7 @@
  \medskip\noindent
  We are going to use Lemma \ref{lemma-replace-resolution} with the function
  $d : \Ob(\mathcal{A}) \to \{0, 1, 2, \ldots \}$ given by
@@ -10868,7 +11440,28 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  The first assumption of Lemma \ref{lemma-replace-resolution}
  is our assumption (1). The second assumption of
  Lemma \ref{lemma-replace-resolution} follows from the fact
-@@ -10116,7 +10115,7 @@
+@@ -10045,7 +10054,7 @@
+ Lemma \ref{lemma-two-ss-complex-functor}
+ and the assumed vanishing of cohomology (2) we conclude
+ that $H^j(RF(Q^\bullet))$ is zero except possibly for
+-$j \in \{i - n - 2, \ldots, i - 1\}$. Hence we see that
++$j \in \{i - n - 2, \ldots, i - 2\}$. Hence we see that
+ $RF(\sigma_{\geq i - n - 1}L^\bullet) \to RF(\sigma_{\geq i - n - 1}M^\bullet)$
+ induces an isomorphism of cohomology objects in degrees $\geq i$.
+ By Proposition \ref{proposition-enough-acyclics} we know that
+@@ -10061,8 +10070,9 @@
+ \medskip\noindent
+ For part (4)(b) let $E$ be represented by the complex $L^\bullet$
+ of objects right acyclic for $F$. By part (2) $RF(E)$ is represented
+-by the complex $F(L^\bullet)$ and $RF(\sigma_{\geq c}L^\bullet)$
+-is represented by $\sigma_{\geq c}F(L^\bullet)$. Consider the
++by the complex $F(L^\bullet)$ and, for every integer $c$,
++$RF(\sigma_{\geq c}L^\bullet)$ is represented by
++$\sigma_{\geq c}F(L^\bullet)$. Consider the
+ distinguished triangle
+ $$
+ H^{b - n}(L^\bullet)[n - b] \to
+@@ -10116,7 +10126,7 @@
  consisting of left acyclic objects for $F$,
  \item for $E \in D(\mathcal{A})$
  \begin{enumerate}
@@ -10877,7 +11470,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  for $i \leq a$,
  \item $H^i(LF(E)) \to H^i(LF(\tau_{\geq b}E))$ is an isomorphism
  for $i \geq b$,
-@@ -10205,7 +10204,7 @@
+@@ -10205,7 +10215,7 @@
  colimit of the second system with notation as in
  Remark \ref{remark-uniqueness-derived-colimit}.
  Then there exists a morphism $a : K \to L$
@@ -10886,7 +11479,51 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  This follows from TR3 applied to the defining distinguished
  triangles.
  \end{remark}
-@@ -10325,7 +10324,7 @@
+@@ -10260,8 +10270,8 @@
+ \ \ldots,\ f_{n_{i + 1} - 2} \circ \ldots \circ f_{n_i}}
+ K_{n_i} \oplus K_{n_i + 1} \oplus \ldots \oplus K_{n_{i + 1} - 1}
+ $$
+-If $n_{i - 1} < j \leq n_i$, then we let $c_j = c|_{K_j}$
+-be the map
++For each $j$, let $i$ be the least index such that $j \leq n_i$.
++We let $c_j = c|_{K_j}$ be the map (the identity when $j = n_i$)
+ $$
+ K_j \xrightarrow{f_{n_i - 1} \circ \ldots \circ f_j} K_{n_i}
+ $$
+@@ -10275,23 +10285,25 @@
+ \psi : \text{hocolim} K_n \to \text{hocolim} K_{n_i}
+ $$
+ Since $c \circ a$ and $d \circ b$ are the identity maps we see that
+-$\varphi \circ \psi$ is an isomorphism by
++$\psi \circ \varphi$ is an isomorphism by
+ Lemma \ref{lemma-third-isomorphism-triangle}.
+ The other way around we get the morphisms $a \circ c$ and $b \circ d$.
+ Consider the morphism
+ $h = (h_j) : \bigoplus K_n \to \bigoplus K_n$ given by
+-the rule: for $n_{i - 1} < j < n_i$ we set
++the rule: let $i$ be the least index such that $j \leq n_i$.
++Set $h_j = 0$ if $j = n_i$. For $j < n_i$ we set
+ $$
+ h_j : K_j
+ \xrightarrow{1,\ f_j,\ f_{j + 1} \circ f_j,
+-\ \ldots,\ f_{n_i - 1} \circ \ldots \circ f_j}
+-K_j \oplus \ldots \oplus K_{n_i}
+-$$
++\ \ldots,\ f_{n_i - 2} \circ \ldots \circ f_j}
++K_j \oplus \ldots \oplus K_{n_i - 1}
++$$
++where for $j = n_i - 1$ this map has just the identity component.
+ Then the reader verifies that $(1 - f) \circ h = \text{id} - a \circ c$
+ and $h \circ (1 - f) = \text{id} - b \circ d$. This means that
+-$\text{id} - \psi \circ \varphi$ has square zero by
++$\text{id} - \varphi \circ \psi$ has square zero by
+ Lemma \ref{lemma-third-map-square-zero} (small argument omitted).
+-In other words, $\psi \circ \varphi$ differs from the identity
++In other words, $\varphi \circ \psi$ differs from the identity
+ by a nilpotent endomorphism, hence is an isomorphism. Thus
+ $\varphi$ and $\psi$ are isomorphisms as desired.
+ \end{proof}
+@@ -10325,7 +10337,7 @@
  \begin{lemma}
  \label{lemma-compute-colimit}
  Let $\mathcal{A}$ be an abelian category. Assume colimits over $\mathbf{N}$
@@ -10895,7 +11532,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  Moreover, if $(A_n, f_n)$ is a system over $\mathbf{N}$, then there is
  a short exact sequence
  $$
-@@ -10538,7 +10537,7 @@
+@@ -10538,7 +10550,7 @@
  a''((k_n)) =
  (a_n(k_{m(n)} + f(k_{m(n) + 1}) + \ldots + f(k_{m(n + 1) - 1})))
  $$
@@ -10904,7 +11541,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  the inverse system $(K_n)$. Then the solid diagram
  $$
  \xymatrix{
-@@ -10558,7 +10557,7 @@
+@@ -10558,7 +10570,7 @@
  \label{remark-map-into-derived-limit-truncations}
  Let $\mathcal{A}$ be an abelian category. Let $K^\bullet$ be a
  complex of $\mathcal{A}$. Then $\tau_{\geq -n}K^\bullet$ is an
@@ -10913,7 +11550,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  an inverse system in $D(\mathcal{A})$. Let us assume that
  $R\lim \tau_{\geq -n}K^\bullet$ exists. Then the canonical maps
  $c_n : K^\bullet \to \tau_{\geq -n}K^\bullet$ are compatible with the
-@@ -10678,7 +10677,7 @@
+@@ -10678,7 +10690,7 @@
  $$
  By Lemma \ref{lemma-products} we have
  $$
@@ -10922,16 +11559,24 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  It follows in a straightforward manner from the long exact cohomology
  sequence of the displayed distinguished triangle
-@@ -10795,7 +10794,7 @@
+@@ -10795,10 +10807,12 @@
  Let $F : \mathcal{T} \to \mathcal{T}'$ be an exact functor of triangulated
  categories. Given a full subcategory $\mathcal{A}$ of $\mathcal{T}$ we denote
  $F(\mathcal{A})$ the full subcategory of $\mathcal{T}'$ whose objects
 -consists of all objects $F(A)$ with $A \in \Ob(\mathcal{A})$. We have
+-$$
+-F(\mathcal{A}[a, b]) = F(\mathcal{A})[a, b]
+-$$
 +consist of all objects $F(A)$ with $A \in \Ob(\mathcal{A})$. We have
++$$
++\operatorname{Iso}(F(\mathcal{A}[a, b])) =
++\operatorname{Iso}(F(\mathcal{A})[a, b]),
++$$
++where $\operatorname{Iso}$ denotes isomorphism closure. Moreover,
  $$
- F(\mathcal{A}[a, b]) = F(\mathcal{A})[a, b]
+ F(smd(\mathcal{A})) \subset smd(F(\mathcal{A})),
  $$
-@@ -10869,11 +10868,11 @@
+@@ -10869,11 +10883,11 @@
  \begin{proof}
  We will use Lemma \ref{lemma-cone-n} without further mention.
  We will prove (2) which trivially implies (1). We use induction
@@ -10945,7 +11590,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  and we conclude by induction on $b - a$. We omit the proof of (3) and (4).
  \end{proof}
-@@ -10887,7 +10886,7 @@
+@@ -10887,7 +10901,7 @@
  be a subset such that $H^i(E) = 0$ for $E \in \mathcal{E}$
  and $i \not \in [a, b]$.
  Then for $X \in smd(add(\mathcal{E}[-m, m])^{\star n})$
@@ -10954,7 +11599,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{lemma}
  
  \begin{proof}
-@@ -10910,7 +10909,7 @@
+@@ -10910,7 +10924,7 @@
  
  \medskip\noindent
  Let $\mathcal{D}$ be a triangulated category. Let $E$ be an object
@@ -10963,7 +11608,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  of $\mathcal{D}$ consisting of objects in $\mathcal{D}$ isomorphic to
  direct summands of finite direct sums
  $$
-@@ -10963,7 +10962,7 @@
+@@ -10963,7 +10977,7 @@
  The left equality in the displayed formula follows from
  Lemmas \ref{lemma-associativity-star} and \ref{lemma-smd-star}
  and induction. The middle equality is a matter of notation.
@@ -10972,7 +11617,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  and since $E[-\infty, \infty] = \bigcup_{m \geq 1} E[-m, m]$
  we see from Remark \ref{remark-operations-unions} and
  Lemma \ref{lemma-smd-star} that we get the equality on the right.
-@@ -11000,7 +10999,7 @@
+@@ -11000,7 +11014,7 @@
  strictly full, saturated, triangulated subcategory of $\mathcal{D}$
  containing $E$. Then
  $\mathcal{D}'[-\infty, \infty] \subset \mathcal{D}'$,
@@ -10981,8 +11626,31 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $smd(\mathcal{D}') \subset \mathcal{D}'$, and
  $\mathcal{D}' \star \mathcal{D}' \subset \mathcal{D}'$.
  In other words, all the operations we used to construct
-@@ -11255,8 +11254,8 @@
- the compositions into $Y_{n - 1}$ are equal. Let $C \to X_{n - 1}$
+@@ -11206,15 +11220,15 @@
+ $E_i[m] \to C \to \text{hocolim} X_n$ is zero. This means that our
+ morphism $E_i[m] \to C$ comes from a morphism $E_i[m] \to X[-1]$.
+ The construction of $X_1$ then shows that such morphism lifts to
+-$\text{hocolim} X_n$ and we conclude that our morphism $E_i[m] \to C$
++$(\text{hocolim} X_n)[-1]$ and we conclude that our morphism $E_i[m] \to C$
+ is zero. The assumption that $\bigoplus E_i$ generates $\mathcal{D}$
+ implies that $C$ is zero and the proof is done.
+ \end{proof}
+ 
+ \begin{lemma}
+ \label{lemma-factor-through}
+-With assumptions and notation as in Lemma \ref{lemma-write-as-colimit}.
+-If $C$ is a compact object and $C \to X_n$ is a morphism, then
++With assumptions and notation as in Lemma \ref{lemma-write-as-colimit},
++if $C$ is a compact object and $C \to X_n$ is a morphism, then
+ there is a factorization $C \to E \to X_n$ where
+ $E$ is an object of $\langle E_{i_1} \oplus \ldots \oplus E_{i_t} \rangle$
+ for some $i_1, \ldots, i_t \in I$.
+@@ -11252,11 +11266,11 @@
+ of triangles $(E', C', C) \to (E', E'', E)$ and
+ $(E', E'', E) \to (Y_{n - 1}, X_{n - 1}, X_n)$. The composition
+ $C \to E \to X_n$ may not equal the given morphism $C \to X_n$, but
+-the compositions into $Y_{n - 1}$ are equal. Let $C \to X_{n - 1}$
++the compositions into $Y_{n - 1}[1]$ are equal. Let $C \to X_{n - 1}$
  be a morphism that lifts the difference. By induction assumption we
  can factor this through a morphism $E''' \to X_{n - 1}$ with
 -$E''$ an object of $\langle \bigoplus_{i \in I'''} E_i \rangle$
@@ -10992,7 +11660,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  a solution on considering $E \oplus E''' \to X_n$ because
  $E \oplus E'''$ is an object of
  $\langle \bigoplus_{i \in I' \cup I'' \cup I'''} E_i \rangle$.
-@@ -11306,7 +11305,7 @@
+@@ -11306,7 +11320,7 @@
  some $n$ (Lemma \ref{lemma-commutes-with-countable-sums}).
  Thus $X$ is a direct summand of $X_n$.
  By Lemma \ref{lemma-factor-through} we see that $X$ is an
@@ -11001,7 +11669,148 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{proof}
  
  
-@@ -11622,7 +11621,7 @@
+@@ -11383,7 +11397,7 @@
+ H(X)
+ $$
+ Thus there exists an element $a \in H(X)$ mapping to $(a_n)$
+-in $\prod H(X_n)$. Hence a natural transformation
++in $\prod H(X_n)$. Hence there is a natural transformation
+ $\Hom_\mathcal{D}(- , X) \to H$ such that
+ $$
+ \Hom_\mathcal{D}(-, X_1) \to
+@@ -11533,7 +11547,7 @@
+ H(X)
+ $$
+ Thus there exists an element $a \in H(X)$ mapping to $(a_n)$
+-in $\prod H(X_n)$. Hence a natural transformation
++in $\prod H(X_n)$. Hence there is a natural transformation
+ $\Hom_\mathcal{D}(- , X) \to H$ such that
+ $$
+ \Hom_\mathcal{D}(-, X_1) \to
+@@ -11544,28 +11558,105 @@
+ commutes. We claim that $\Hom_\mathcal{D}(-, X) \to H(-)$ is an isomorphism.
+ 
+ \medskip\noindent
+-Let $E \in \mathcal{E}$. Let us show that
+-$$
+-\Hom_\mathcal{D}(E, \bigoplus X_n) \to  \Hom_\mathcal{D}(E, \bigoplus X_n)
+-$$
+-is injective. Namely, let $\alpha : E \to \bigoplus X_n$. Then
+-by assumption (2) we obtain a factorization
+-$\alpha = (\bigoplus \beta_n) \circ \gamma$.
+-Since $E_n \to X_n \to X_{n + 1}$ is zero by construction, we see that
+-the composition $\bigoplus E_n \to \bigoplus X_n \to \bigoplus X_n$
+-is equal to $\bigoplus \beta_n$. Hence also the composition
+-$E \to \bigoplus X_n \to \bigoplus X_n$ is equal to $\alpha$.
+-This proves the stated injectivity and hence also
+-$$
+-\Hom_\mathcal{D}(E, \bigoplus X_n[1]) \to \Hom_\mathcal{D}(E, \bigoplus X_n[1])
+-$$
+-is injective. It follows that we have an exact sequence
++Let us prove that the telescope map is injective on maps from
++each $E \in \mathcal{E}$. Let $\mathcal{P}$ be the full subcategory
++of direct sums of objects of $\mathcal{E}$ and write
++$hY = \Hom_\mathcal{D}(-, Y)|_\mathcal{P}$.
++Let $\mathcal{A}$ be the category of additive functors
++$\mathcal{P}^{opp} \to \textit{Ab}$ taking direct sums to products.
++Kernels and cokernels in this category are computed pointwise:
++both commute with products of abelian groups.
++Thus $\mathcal{A}$ is abelian. Natural transformations form sets,
++since they are determined by their components at the set $\mathcal{E}$.
++
++\medskip\noindent
++We first show that $h$ preserves countable direct sums with values
++in $\mathcal{A}$. For every object $Y$ choose the evaluation map
++$P_Y = \bigoplus_{(E, f : E \to Y)} E \to Y$, complete it to a
++distinguished triangle $C_Y \to P_Y \to Y \to C_Y[1]$, and choose
++an evaluation map $Q_Y \to C_Y$ with $Q_Y \in \mathcal{P}$.
++We obtain an exact presentation
++$$
++hQ_Y \to hP_Y \to hY \to 0.
++$$
++For any countable family $Y_n$, assumption (2) shows that
++$\bigoplus P_{Y_n} \to \bigoplus Y_n$ is surjective on maps from
++every $E \in \mathcal{E}$: factor such a map through $\bigoplus E_n$
++and lift each $E_n \to Y_n$ to $P_{Y_n}$.
++The same holds for $\bigoplus Q_{Y_n} \to \bigoplus C_{Y_n}$.
++It holds for maps from every object of $\mathcal{P}$ by taking products.
++The direct sum of the distinguished triangles therefore gives
++an exact presentation
++$$
++h(\bigoplus Q_{Y_n}) \to h(\bigoplus P_{Y_n}) \to
++h(\bigoplus Y_n) \to 0.
++$$
++For $F \in \mathcal{A}$, Yoneda's lemma and the product property give
++$$
++\Hom_\mathcal{A}(h(\bigoplus Y_n), F)
++= \Ker\left(\prod F(P_{Y_n}) \to \prod F(Q_{Y_n})\right)
++= \prod \Hom_\mathcal{A}(hY_n, F).
++$$
++These identifications are induced by the inclusions of the summands.
++Thus $h(\bigoplus Y_n)$ is their direct sum in $\mathcal{A}$.
++This does not assert that these direct sums are computed pointwise.
++
++\medskip\noindent
++Put $T = H|_\mathcal{P}$ and $M_n = hX_n$, and denote the
++transformations induced by $a_n$ by $\theta_n : M_n \to T$.
++Each $\theta_n$ is surjective, first on $\mathcal{E}$ by construction
++of $X_1$, and then on $\mathcal{P}$ by taking products.
++Write $u_n : X_n \to X_{n + 1}$ and $v_n = h(u_n)$.
++The construction gives
++$v_n(\Ker(\theta_n)) = 0$ and $\theta_{n + 1}v_n = \theta_n$.
++Hence $v_1$ factors as $\sigma_2\theta_1$ for a morphism
++$\sigma_2 : T \to M_2$ with $\theta_2\sigma_2 = 1$.
++Inductively put $\sigma_{n + 1} = v_n\sigma_n$ for $n \geq 2$.
++Then $\theta_n\sigma_n = 1$, and with $L_n = \Ker(\theta_n)$
++the isomorphisms
++$$
++T \oplus L_n \longrightarrow M_n,\qquad (x, z) \longmapsto \sigma_nx + z
++$$
++identify $v_n$, for $n \geq 2$, with $(x, z) \mapsto (x, 0)$.
++
++\medskip\noindent
++Let $V = \bigoplus_{n \geq 2} M_n$ in $\mathcal{A}$.
++Its idempotent induced by the $\sigma_n\theta_n$ splits it as
++$$
++V = C \oplus L,\qquad
++C = \bigoplus_{n \geq 2} T,\quad L = \bigoplus_{n \geq 2} L_n.
++$$
++These last two direct sums exist as the images of that idempotent
++and its complement; their universal properties follow from the
++component splittings. The tail telescope map $t_V$ is
++$(1 - s_C) \oplus 1_L$, where $s_C j_n = j_{n + 1}$ for the
++inclusions $j_n : T \to C$. The morphism $\ell_C : C \to C$ defined by
++$$
++\ell_C j_n = -\sum_{j = 2}^{n - 1} j_j
++$$
++(the empty sum is zero) satisfies $\ell_C(1 - s_C) = 1_C$.
++Thus $\ell_V = \ell_C \oplus 1_L$ is a left inverse of $t_V$.
++For the entire sequence, use the canonical isomorphism
++$h(\bigoplus X_n) \cong M_1 \oplus V$ and write $b : M_1 \to V$
++for $v_1$ followed by the inclusion of $M_2$.
++The entire telescope map is
++$$
++(x, y) \longmapsto (x, t_V y - bx),
++$$
++and it has the left inverse
++$$
++(x, y) \longmapsto (x, \ell_V(y + bx)).
++$$
++Evaluating at $E \in \mathcal{E}$ proves the required injectivity.
++Evaluating at $E[-1]$ proves injectivity on
++$\Hom_\mathcal{D}(E, \bigoplus X_n[1])$ as well.
++The distinguished triangle defining $X$ now gives the exact sequence
+ $$
+ \Hom_\mathcal{D}(E, \bigoplus X_n) \to
+ \Hom_\mathcal{D}(E, \bigoplus X_n) \to
+ \Hom_\mathcal{D}(E, X) \to 0
+ $$
+-for all $E \in \mathcal{E}$.
++for every $E \in \mathcal{E}$.
+ 
+ \medskip\noindent
+ Let $E \in \mathcal{E}$ and let $f : E \to X$ be a morphism.
+@@ -11622,7 +11713,7 @@
  Let $Y$ be an object of $\mathcal{D}$ and set $H(-) = \Hom_\mathcal{D}(-, Y)$.
  Then $H$ is a cohomological functor which transforms direct sums into products.
  By the construction in the first part of the proof we obtain a morphism
@@ -11010,7 +11819,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $\Hom_\mathcal{D}(E, X) \to \Hom_\mathcal{D}(E, Y)$ is bijective for all
  $E \in \mathcal{E}$. Then assumption (1) tells us that $X \to Y$ is an
  isomorphism! On the other hand, by construction $X_1, X_2, \ldots$
-@@ -11741,7 +11740,7 @@
+@@ -11741,7 +11832,7 @@
  under all shifts. Then both the right orthogonal $\mathcal{A}^\perp$ and
  the left orthogonal ${}^\perp\mathcal{A}$ of $\mathcal{A}$
  are strictly full, saturated\footnote{Definition \ref{definition-saturated}.},
@@ -11019,7 +11828,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  \end{lemma}
  
  \begin{proof}
-@@ -11887,7 +11886,7 @@
+@@ -11887,7 +11978,7 @@
  details omitted. Assume $\mathcal{A}$ is strictly full. If we show that
  $\mathcal{A} = {}^\perp(\mathcal{A}^\perp)$, then
  $\mathcal{A}$ will be saturated by Lemma \ref{lemma-orthogonal-triangulated}.
@@ -11028,7 +11837,64 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  is clear it suffices to prove the other inclusion.
  Let $X$ be an object of ${}^\perp(\mathcal{A}^\perp)$.
  Choose a distinguished triangle $A \to X \to B \to A[1]$
-@@ -12275,7 +12274,7 @@
+@@ -11953,7 +12044,8 @@
+ \label{proposition-summarize-admissible}
+ Let $\mathcal{D}$ be a triangulated category. Let
+ $\mathcal{A} \subset \mathcal{D}$ and $\mathcal{B} \subset \mathcal{D}$
+-be subcategories. The following are equivalent
++be strictly full subcategories invariant under all shifts.
++The following are equivalent
+ \begin{enumerate}
+ \item $\mathcal{A}$ is right admissible and $\mathcal{B} = \mathcal{A}^\perp$,
+ \item $\mathcal{B}$ is left admissible and $\mathcal{A} = {}^\perp\mathcal{B}$,
+@@ -11973,9 +12065,23 @@
+ \end{proposition}
+ 
+ \begin{proof}
+-The equivalence between (1), (2), and (3) follows in a straightforward manner
+-from Lemmas \ref{lemma-right-adjoint} and \ref{lemma-left-adjoint} (small
+-detail omitted). Denote $v : \mathcal{D} \to \mathcal{A}$ the right
++Assume (3). Then $\mathcal{B} \subset \mathcal{A}^\perp$ and
++$\mathcal{A} \subset {}^\perp\mathcal{B}$.
++If $X \in \mathcal{A}^\perp$, its triangle in (3) has zero first map,
++so $B \cong X \oplus A[1]$.
++Since $\Hom(A[1], B) = 0$, we obtain $A = 0$ and
++$X \cong B \in \mathcal{B}$. Strict fullness gives
++$\mathcal{A}^\perp = \mathcal{B}$.
++Similarly, if $X \in {}^\perp\mathcal{B}$, the second map of its
++triangle is zero, so $A \cong X \oplus B[-1]$.
++Since $\Hom(A, B[-1]) = 0$, we obtain $B = 0$ and
++$X \cong A \in \mathcal{A}$.
++Thus $\mathcal{A} = {}^\perp\mathcal{B}$.
++The orthogonal subcategories are saturated and triangulated as shown above.
++Lemmas \ref{lemma-right-adjoint} and \ref{lemma-left-adjoint}
++now give (1) and (2).
++Conversely, each of (1) and (2) gives (3) by its adjoint criterion.
++Denote $v : \mathcal{D} \to \mathcal{A}$ the right
+ adjoint of the inclusion functor $i : \mathcal{A} \to \mathcal{D}$.
+ It is immediate that $\Ker(v) = \mathcal{A}^\perp = \mathcal{B}$.
+ Thus $v$ factors over a functor
+@@ -12157,7 +12263,7 @@
+ $$
+ to get the Postnikov system for $n = 2$.
+ For $n > 2$ we cannot argue similarly, as we do not
+-know whether the composition $X_n \to X_{n - 1} \to Y_{n - 1}$
++know whether the composition $X_n \to X_{n - 1} \to Y_{n - 2}$
+ is zero in $\mathcal{D}$.
+ \end{proof}
+ 
+@@ -12250,7 +12356,9 @@
+ \item $\Hom(X_{j - i}[-i + 1], X'_j) = 0$ and
+ $\Hom(X_j, X'_{j - i}[-i]) = 0$ for $j \geq i > 0$,
+ \end{enumerate}
+-then there exists at most one morphism between these Postnikov systems.
++then any two morphisms between these Postnikov systems induce the same
++morphism $Y_n \to Y'_n$. In case (3), the morphism of Postnikov
++systems itself is unique.
+ \end{lemma}
+ 
+ \begin{proof}
+@@ -12275,7 +12383,7 @@
  guarantees that the third vertical arrow is unique. And so on.
  
  \medskip\noindent
@@ -11037,7 +11903,20 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  the same as the composition $Y_n[n] \to X_n[n] \to X'_n[n]$ and hence
  is unique. Then using the distinguished triangle
  $Y'_{n - 1}[n - 1] \to Y'_n[n] \to X'_n[n]$ we see that it suffices
-@@ -12548,7 +12547,7 @@
+@@ -12448,7 +12556,11 @@
+ C \oplus C'_n \to (A \oplus A'_n)[1]
+ $$
+ maps the summand $C$ into the summand $A[1]$ for all $n$ by a map
+-$\delta : C \to A[1]$ which is independent of $n$. Choose a distinguished
++$\delta : C \to A[1]$ which is independent of $n$.
++The components $C'_n \to A[1]$ vanish for all sufficiently large $n$:
++fix an index and use a later zero transition in $(C'_n)$.
++After increasing the starting index once more, the projections onto
++$C$ and $A[1]$ commute with the connecting maps. Choose a distinguished
+ triangle
+ $$
+ A \to B \to C \xrightarrow{\delta} A[1]
+@@ -12548,7 +12660,7 @@
  
  \begin{lemma}
  \label{lemma-pro-isomorphism-bis}
@@ -11046,7 +11925,7 @@ index f5e0e434239906951879544a74315b8d249a8013..169f569755615217c6eced094127e6f1
  $$
  A_n \to B_n
  $$
-@@ -12557,7 +12556,7 @@
+@@ -12557,7 +12669,7 @@
  \item there exist integers $a \leq b$ such that $H^i(A_n) = 0$
  and $H^i(B_n) = 0$ for $i \not \in [a, b]$, and
  \item the inverse system of maps $H^i(A_n) \to H^i(B_n)$ of $\mathcal{A}$
@@ -11382,6 +12261,39 @@ index 62e280bfed2f350176745b8f71a36a8de0c0bf62..405e9d46b4ec7f20747db0b527af0b78
  The isomorphisms $\varphi_{ii'}$ give isomorphisms
  $$
  \varphi_{ii'} :
+diff --git a/equiv.tex b/equiv.tex
+index 9a7ccb0a4dca8e0c748691d5de77e6e615fa37b2..dfe8ff7ce34a6b1b3cd56e0deaa639c19e32be69 100644
+--- a/equiv.tex
++++ b/equiv.tex
+@@ -1833,9 +1833,11 @@
+ $$
+ The equality follows from the discussion in
+ Example \ref{example-diagonal-fourier-mukai}.
+-Since $K$ is perfect, there exist $a \leq b$ such that
+-$H^i(X, K)$ is nonzero only for $i \in [a, b]$. Since $X$ is proper,
+-each $H^i(X, K)$ is finite dimensional. We conclude that
++Since $K \otimes_{\mathcal{O}_X}^\mathbf{L} \mathcal{E}$ is perfect,
++there exist $a \leq b$ such that its cohomology
++$H^i(X, K \otimes_{\mathcal{O}_X}^\mathbf{L} \mathcal{E})$ is nonzero
++only for $i \in [a, b]$. Since $X$ is proper, each of these groups
++is finite dimensional. We conclude that
+ the right hand side is contained in
+ $smd(add(\mathcal{G}[-m + a, m + b])^{\star n})$ which is
+ itself contained in $\langle \mathcal{G} \rangle_n$ by one of the
+@@ -1859,8 +1861,11 @@
+ $$
+ \mathcal{F} \in smd(add(\mathcal{G}[-m' + a, m' + b])^{\star n})
+ $$
+-for any $a \leq b$ such that $H^i(X, \mathcal{F})$ is nonzero only
+-for $i \in [a, b]$. Thus we can take $a = 0$ and $b = \dim(X)$.
++for any $a \leq b$ such that
++$H^i(X, \mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{E})$
++is nonzero only for $i \in [a, b]$, where $\mathcal{E}$ is the
++finite locally free module chosen in the preceding proof.
++Thus we can take $a = 0$ and $b = \dim(X)$.
+ Taking $m = \max(m', m' + b)$ finishes the proof.
+ \end{proof}
+ 
 diff --git a/examples.tex b/examples.tex
 index f881e1966cf425e680ff3fc81666751a282ace21..823f3eee3e7673526f7d19cdb1e7776f1f717db2 100644
 --- a/examples.tex
@@ -13913,7 +14825,7 @@ index a2a37c72e7495f518bf3f87783963219e56cd4f5..c2fa948ffae4be7cf3bc6108732afd3f
  (g \circ f)^{-1}\mathcal{O}_Z \to f^{-1}\mathcal{O}_Y \to \mathcal{O}_X
  $$
 diff --git a/more-algebra.tex b/more-algebra.tex
-index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..00629e42e796b898cf4e5877374270daaec4feea 100644
+index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..b16cd17988cd86a38d8daf5220237b5e0c20a453 100644
 --- a/more-algebra.tex
 +++ b/more-algebra.tex
 @@ -1382,7 +1382,7 @@
@@ -14350,7 +15262,7 @@ index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..00629e42e796b898cf4e5877374270da
  \begin{proof}
  Apply Derived Categories, Lemma \ref{derived-lemma-trick-vanishing-composition}
 -to see that $\varphi \circ \psi$ factors through $\tau_{\leq -2}K_2 = 0$.
-+to see that $\psi \circ \varphi$ factors through $\tau_{\leq -2}K_2 = 0$.
++to see that $\psi \circ \varphi$ factors through $\tau_{\leq -2}K_3 = 0$.
  \end{proof}
  
  \begin{lemma}
@@ -15280,10 +16192,98 @@ index 61e68ef2abd475f6fa098ab741ce128622dadae0..02bc05962624909e6c1944076922799e
  is closed in $\Spec(A_h/(f')) = \Spec((A/f)_h) = D(h) \cap V(f)$
  by our choice of $h \in I$ and the ideal $I$. Hence we can apply
 diff --git a/perfect.tex b/perfect.tex
-index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12fc8e8d5c 100644
+index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..d847368f4e1ec37b78d05da0d0c1fc4beaf38aec 100644
 --- a/perfect.tex
 +++ b/perfect.tex
-@@ -9223,7 +9223,7 @@
+@@ -526,14 +526,27 @@
+ As the statement is invariant under shifts it suffices to show that
+ $H^0(f_*(\mathcal{F}^\bullet)) \to R^0f_*\mathcal{F}^\bullet$
+ is an isomorphism. The statement is local on $S$ hence we
+-may assume $S$ affine. By
+-Lemma \ref{lemma-quasi-coherence-direct-image}
+-we have $R^0f_*\mathcal{F}^\bullet = R^0f_*\tau_{\geq -n}\mathcal{F}^\bullet$
+-for all sufficiently large $n$. Thus we may assume $\mathcal{F}^\bullet$
+-bounded below. As each $\mathcal{F}^n$ is right $f_*$-acyclic by
+-assumption we see that $f_*\mathcal{F}^\bullet \to Rf_*\mathcal{F}^\bullet$
+-is a quasi-isomorphism by Leray's acyclicity lemma (Derived Categories, Lemma
+-\ref{derived-lemma-leray-acyclicity}).
++may assume $S$ affine. Choose $N$ as in
++Lemma \ref{lemma-quasi-coherence-direct-image} and an integer
++$n \geq \max\{1, N\}$. The termwise split short exact sequence
++$$
++0 \to \sigma_{\geq -n}\mathcal{F}^\bullet \to
++\mathcal{F}^\bullet \to \sigma_{\leq -n-1}\mathcal{F}^\bullet \to 0
++$$
++gives a distinguished triangle. The last complex has quasi-coherent
++cohomology, vanishing in degrees greater than $-n-1$. The bound $N$
++therefore gives vanishing of
++$H^j(Rf_*\sigma_{\leq -n-1}\mathcal{F}^\bullet)$ for $j \geq N-n-1$,
++in particular for $j=-1,0$. It follows that
++$H^0(Rf_*\sigma_{\geq -n}\mathcal{F}^\bullet) \to
++H^0(Rf_*\mathcal{F}^\bullet)$ is an isomorphism.
++Also $H^0(f_*\sigma_{\geq -n}\mathcal{F}^\bullet) =
++H^0(f_*\mathcal{F}^\bullet)$ since $n \geq 1$.
++The complex $\sigma_{\geq -n}\mathcal{F}^\bullet$ is bounded below
++and consists of the original right $f_*$-acyclic terms, so it computes
++$Rf_*$ by Leray's acyclicity lemma (Derived Categories, Lemma
++\ref{derived-lemma-leray-acyclicity}). Naturality of the canonical map
++now proves the desired isomorphism in degree zero.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -4321,9 +4334,9 @@
+ We observe that $D_{\QCoh, T}(\mathcal{O}_X)$ is a triangulated
+ category with direct sums by the remark preceding the lemma.
+ By Proposition \ref{proposition-compact-is-perfect}
+-the perfect objects define compact objects of $D(\mathcal{O}_X)$
++the perfect objects define compact objects of $D_\QCoh(\mathcal{O}_X)$
+ hence a fortiori of any subcategory preserved under taking direct
+-sums. For the converse we will use there exists a generator
++sums. For the converse we will use that there exists a generator
+ $E \in D_{\QCoh, T}(\mathcal{O}_X)$ which is a perfect complex
+ of $\mathcal{O}_X$-modules, see
+ Lemma \ref{lemma-generator-with-support}.
+@@ -4382,7 +4395,7 @@
+ It is clear that $K$ is supported on $T$ as formation of $R\SheafHom$
+ commutes with restriction to opens.
+ The map $\alpha$ defines an element of
+-$H^0(K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
++$H^0(X, K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
+ Then it suffices to prove the result for the map
+ $\alpha : \mathcal{O}_X[0] \to K$.
+ 
+@@ -4393,15 +4406,16 @@
+ K = \text{hocolim} K_n
+ $$
+ as in Derived Categories, Lemma \ref{derived-lemma-write-as-colimit}
+-using the generator $E$. Since the functor $\mathcal{D} \to D(\mathcal{O}_X)$
++using the generator $E$. Since the functor $\mathcal{D} \to D_\QCoh(\mathcal{O}_X)$
+ commutes with direct sums, we see that $K = \text{hocolim} K_n$
+-holds in $D(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
+-object of $D(\mathcal{O}_X)$ we find an $n$ and a morphism
++holds in $D_\QCoh(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
++object of $D_\QCoh(\mathcal{O}_X)$ we find an $n$ and a morphism
+ $\alpha_n : \mathcal{O}_X \to K_n$ which gives rise to $\alpha$, see
+ Derived Categories, Lemma \ref{derived-lemma-commutes-with-countable-sums}.
+-By Derived Categories, Lemma \ref{derived-lemma-factor-through}
++By the finite-stage argument in the proof of Derived Categories, Lemma \ref{derived-lemma-factor-through}
+ applied to the morphism $\mathcal{O}_X[0] \to K_n$ in the ambient
+-category $D(\mathcal{O}_X)$ we see that $\alpha_n$ factors as
++category $D_\QCoh(\mathcal{O}_X)$, which does not require $E$ to generate
++the ambient category, we see that $\alpha_n$ factors as
+ $\mathcal{O}_X[0] \to Q \to K_n$ where $Q$ is an object
+ of $\langle E \rangle$. We conclude that $Q$ is a perfect complex
+ supported on $T$.
+@@ -4845,7 +4859,7 @@
+ lemma holds for $U$, $V$, and $U \cap V$, then the lemma holds for $X$.
+ 
+ \medskip\noindent
+-The adjoint exists if and only if for every object $K$ of
++The adjoint exists if and only if for every object $E$ of
+ $D(\mathcal{O}_X)$ we can find a distinguished triangle
+ $$
+ E' \to E \to K \to E'[1]
+@@ -9223,7 +9237,7 @@
  
  \noindent
  If $X$ is a quasi-compact and quasi-separated scheme, then it suffices to check
@@ -15292,7 +16292,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  quasi-coherent) is the quotient of a finite locally free
  $\mathcal{O}_X$-module, see Properties, Lemma
  \ref{properties-lemma-finite-directed-colimit-surjective-maps}.
-@@ -9274,16 +9274,16 @@
+@@ -9274,16 +9288,16 @@
  $$
  f^*\mathcal{E}_{i, j}
  \otimes_{\mathcal{O}_X}
@@ -15312,7 +16312,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \end{proof}
  
  \begin{lemma}
-@@ -9368,7 +9368,7 @@
+@@ -9368,7 +9382,7 @@
  \medskip\noindent
  The first observation is that $U_j \cap U_{j'}$ is quasi-compact
  as the complement of the zero scheme of the quasi-coherent finite type ideal
@@ -15321,7 +16321,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Properties, Lemma \ref{properties-lemma-quasi-coherent-finite-type-ideals}.
  Hence $X$ is quasi-compact and quasi-separated, see
  Schemes, Lemma \ref{schemes-lemma-characterize-quasi-separated}.
-@@ -9400,7 +9400,7 @@
+@@ -9400,7 +9414,7 @@
  $k = 1, \ldots, e_j$ which generate the restriction of $\mathcal{F}$ to $U_j$.
  By Cohomology of Schemes, Lemma \ref{coherent-lemma-homs-over-open}
  we can extend $s_{jk}$ to a map
@@ -15330,7 +16330,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Then we can consider the compositions
  $$
  \mathcal{E}_j^{\otimes n_{jk}} \to \mathcal{I}_j^{n_{jk}} \to \mathcal{F}
-@@ -9445,7 +9445,7 @@
+@@ -9445,7 +9459,7 @@
  Let $X = \lim X_i$ be a limit of a direct system of quasi-compact
  and quasi-separated schemes with affine transition morphisms.
  Then $X$ has the resolution property if and only if $X_i$ has
@@ -15339,7 +16339,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \end{lemma}
  
  \begin{proof}
-@@ -9787,7 +9787,7 @@
+@@ -9787,7 +9801,7 @@
  $$
  K^b(\mathcal{A}) \longrightarrow D_{perf}(\mathcal{O}_X)
  $$
@@ -15348,7 +16348,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  equivalence $S^{-1}K^b(\mathcal{A}) \to D_{perf}(\mathcal{O}_X)$
  of triangulated categories
  where $S$ is the saturated multiplicative system of quasi-isomorphisms
-@@ -9866,7 +9866,7 @@
+@@ -9866,7 +9880,7 @@
  Let $X$ be a Noetherian scheme. Then
  $$
  K_0(\textit{Coh}(\mathcal{O}_X)) =
@@ -15357,7 +16357,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  K_0(D^b_{\textit{Coh}}(\mathcal{O}_X))
  $$
  \end{lemma}
-@@ -9900,7 +9900,7 @@
+@@ -9900,7 +9914,7 @@
  $$
  \item If $X$ is locally Noetherian, then we denote $K'_0(X)$ the
  {\it Grothendieck group of coherent sheaves on $X$}. It is the
@@ -15366,7 +16366,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  of coherent $\mathcal{O}_X$-modules. In a formula
  $$
  K'_0(X) = K_0(\textit{Coh}(\mathcal{O}_X))
-@@ -10059,7 +10059,7 @@
+@@ -10059,7 +10073,7 @@
  \begin{matrix}
  0 \to \mathcal{E}^a \to \mathcal{E}^{a + 1} \to \mathcal{F}^{a + 1} \to 0,\\
  0 \to \mathcal{F}^{a + 1} \to \mathcal{E}^{a + 2} \to
@@ -15375,7 +16375,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \ldots \\
  0 \to \mathcal{F}^{b - 3} \to \mathcal{E}^{b - 2} \to
  \mathcal{F}^{b - 2} \to 0, \\
-@@ -10070,7 +10070,7 @@
+@@ -10070,7 +10084,7 @@
  $\mathcal{F}^{b - 2}, \ldots, \mathcal{F}^{a + 1}$
  are finite locally free $\mathcal{O}_X$-modules, and
  $$
@@ -15384,7 +16384,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \sum (-1)^n([\mathcal{F}^{n - 1}] + [\mathcal{F}^n]) = 0
  $$
  Thus our construction gives zero on acyclic complexes.
-@@ -10095,7 +10095,7 @@
+@@ -10095,7 +10109,7 @@
  Derived Categories, Section \ref{derived-section-canonical-delta-functor}).
  Hence
  $$
@@ -15393,7 +16393,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  c(\mathcal{E}^\bullet) - c(\mathcal{G}^\bullet)
  $$
  as desired. The same argument using $b$ shows that
-@@ -10117,7 +10117,7 @@
+@@ -10117,7 +10131,7 @@
  $K_0(\textit{Vect}(X)) \to K_0(X) \to K_0(\textit{Vect}(X))$
  is the identity. On the other hand, let $\mathcal{E}^\bullet$
  be a bounded complex of finite locally free $\mathcal{O}_X$-modules.
@@ -15402,7 +16402,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  of ``stupid truncations''
  (see Homology, Section \ref{homology-section-truncations})
  $$
-@@ -10202,7 +10202,7 @@
+@@ -10202,7 +10216,7 @@
  \ref{coherent-proposition-proper-pushforward-coherent}), because locally
  only a finite number are nonzero, and because
  a short exact sequence of coherent sheaves on $X$ produces a long
@@ -15411,7 +16411,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  case most often used in practice), then we can rewrite the above as
  $$
  f_*[\mathcal{F}] = \sum (-1)^i[R^if_*\mathcal{F}] = [Rf_*\mathcal{F}]
-@@ -10339,7 +10339,7 @@
+@@ -10339,7 +10353,7 @@
  is compatible with pullbacks. More precisely, given a morphism
  $f : X \to Y$ of schemes and a perfect object $K$ of $D(\mathcal{O}_Y)$
  of tor-amplitude in $[-1, 0]$ then $Lf^*K$ is a
@@ -15420,7 +16420,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  of tor-amplitude in $[-1, 0]$ and we have a canonical identification
  $$
  f^*\det(K) \longrightarrow \det(Lf^*K)
-@@ -10384,7 +10384,7 @@
+@@ -10384,7 +10398,7 @@
  $\tau_{\geq a}N = 0$. Observe that
  $$
  \Hom_{D(\mathcal{O}_X)}(K[-n], Rj_*(E|_U)) =
@@ -15429,7 +16429,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  $$
  for all $n$ as $K|_U = 0$. Thus (2) is equivalent to
  $\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \geq a$. 
-@@ -10420,7 +10420,7 @@
+@@ -10420,7 +10434,7 @@
  is an isomorphism, and
  \item $\Hom_{D(\mathcal{O}_X)}(K[-n], E) = 0$ for all $n \leq a$.
  \end{enumerate}
@@ -15438,7 +16438,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \end{lemma}
  
  \begin{proof}
-@@ -10429,10 +10429,10 @@
+@@ -10429,10 +10443,10 @@
  Observe that
  $$
  \Hom_{D(\mathcal{O}_X)}(K[-n], Rj_*(E|_U)) =
@@ -15451,7 +16451,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Observe that there are distinguished triangles
  $$
  K^\bullet(f_1^{e_1}, \ldots, f_i^{e'_i}, \ldots, f_r^{e_r}) \to
-@@ -10441,13 +10441,13 @@
+@@ -10441,13 +10455,13 @@
  $$
  of Koszul complexes, see
  More on Algebra, Lemma \ref{more-algebra-lemma-koszul-mult}. Hence
@@ -15469,7 +16469,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  $A$-modules $R\Gamma(X, N)$, see Lemma \ref{lemma-affine-compare-bounded}.
  Thus we find that our lemma is true.
  \end{proof}
-@@ -10531,7 +10531,7 @@
+@@ -10531,7 +10545,7 @@
  \medskip\noindent
  Parts (2), (3), (4) are equivalent by the discussion in
  Cohomology, Section \ref{cohomology-section-global-RHom}.
@@ -15478,7 +16478,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  by definition. The equivalent conditions (2), (3), (4) are
  equivalent to the equivalent conditions (5), (6) by
  Cohomology, Lemma \ref{cohomology-lemma-dual-perfect-complex}
-@@ -10549,7 +10549,7 @@
+@@ -10549,7 +10563,7 @@
  triangles, is inherited by direct summands, and is preserved by shifts.
  Hence by Derived Categories, Remark \ref{derived-remark-check-on-generator}
  we see that (4) implies $T$ holds on all of $D_{perf}(\mathcal{O}_X)$.
@@ -15487,7 +16487,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  (7)(b) and (7)(c) we also use that $P \mapsto P^\vee$ is a self
  equivalence of $D_{perf}(\mathcal{O}_X)$. Small detail omitted.
  
-@@ -10649,7 +10649,7 @@
+@@ -10649,7 +10663,7 @@
  \medskip\noindent
  Parts (2), (3), (4) are equivalent by the discussion in
  Cohomology, Section \ref{cohomology-section-global-RHom}.
@@ -15496,7 +16496,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  by definition. The equivalent conditions (2), (3), (4) are
  equivalent to the equivalent conditions (5), (6) by
  Cohomology, Lemma \ref{cohomology-lemma-dual-perfect-complex}
-@@ -10667,7 +10667,7 @@
+@@ -10667,7 +10681,7 @@
  triangles, is inherited by direct summands, and is preserved by shifts.
  Hence by Derived Categories, Remark \ref{derived-remark-check-on-generator}
  we see that (4) implies $T$ holds on all of $D_{perf}(\mathcal{O}_X)$.
@@ -15505,7 +16505,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  (7)(b) and (7)(c) we also use that $P \mapsto P^\vee$ is a self
  equivalence of $D_{perf}(\mathcal{O}_X)$. Small detail omitted.
  
-@@ -10769,7 +10769,7 @@
+@@ -10769,7 +10783,7 @@
  $X_{affine, Zar}$ endowed with the chaotic topology, i.e., such that sheaves
  agree with presheaves. In particular, the structure sheaf $\mathcal{O}$
  becomes a sheaf on $X_{affine}$ as well.
@@ -15514,7 +16514,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  $$
  \epsilon :
  (X_{affine, Zar}, \mathcal{O})
-@@ -10789,7 +10789,7 @@
+@@ -10789,7 +10803,7 @@
  \item $D_\QCoh(\mathcal{O}_X)$,
  \item $D_\QCoh(X_{Zar}, \mathcal{O})$,
  \item $D_\QCoh(X_{affine, Zar}, \mathcal{O})$,
@@ -15523,7 +16523,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \item $\mathit{QC}(X_{affine}, \mathcal{O})$.
  \end{enumerate}
  \end{lemma}
-@@ -10819,7 +10819,7 @@
+@@ -10819,7 +10833,7 @@
  Since the notion of quasi-coherent modules is intrinsic
  (Modules on Sites, Lemma \ref{sites-modules-lemma-special-locally-free})
  we see that this equivalence preserves the subcategories
@@ -15532,7 +16532,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  between the triangulated categories in (2) and (3).
  
  \medskip\noindent
-@@ -10856,7 +10856,7 @@
+@@ -10856,7 +10870,7 @@
  we have seen above that these,
  via the equivalence $\textit{Mod}(X_{affine, Zar}, \mathcal{O}) =
  \textit{Mod}(X, \mathcal{O}_X)$, correspond to the quasi-coherent modules
@@ -20000,7 +21000,7 @@ index 1dc733640ae7bcecac0ecd553d6f4e68ccfe975c..5b503c04d90520e8cbdc4ffbee5b6e6c
  shows that $Z = (U \times_X Z)/(R \times_X Z)$. Thus the morphisms
  $U \times_X Z \to U^\nu$ and $R \times_X Z \to R^\nu$ define a
 diff --git a/spaces-perfect.tex b/spaces-perfect.tex
-index 3b7c9aaac53434d6632208b615f5430cb4f2e734..94d563360e2e5ef7f9e6bf265c238c5bd90964c7 100644
+index 3b7c9aaac53434d6632208b615f5430cb4f2e734..d30d656321dd4e97a6a549993f2e1404f7124ef5 100644
 --- a/spaces-perfect.tex
 +++ b/spaces-perfect.tex
 @@ -489,7 +489,7 @@
@@ -20166,6 +21166,15 @@ index 3b7c9aaac53434d6632208b615f5430cb4f2e734..94d563360e2e5ef7f9e6bf265c238c5b
  Let $K \in D(\mathcal{O}_V)$ be the perfect object corresponding to the
  Koszul complex on $g_1, \ldots, g_s$ over $B$. Note that since $K$ is
  supported on $f^{-1}(Z \cap T) \subset V$ closed, the pushforward
+@@ -4456,7 +4456,7 @@
+ then the lemma holds for $X$.
+ 
+ \medskip\noindent
+-The adjoint exists if and only if for every object $K$ of
++The adjoint exists if and only if for every object $E$ of
+ $D(\mathcal{O}_X)$ we can find a distinguished triangle
+ $$
+ E' \to E \to K \to E'[1]
 diff --git a/stacks-limits.tex b/stacks-limits.tex
 index 21e0ac4558e5e62844de5edc72329c73e00eb712..06f8be6db2162b9cea88c11281ac3b775cf491f5 100644
 --- a/stacks-limits.tex

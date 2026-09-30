@@ -1,6 +1,6 @@
 # Corrections only: review or reuse without adopting this fork
 
-**2,238 effective textual correction units across 37 chapters.**
+**2,301 effective textual correction units across 38 chapters.**
 Download one chapter patch or the combined patch. You do not need to clone this
 repository, import its history, or take any of its added theorems.
 
@@ -36,11 +36,12 @@ editing or interactive staging in your own checkout.
 | `artin.tex` | 131 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/artin.patch) | [entries](reviews/artin.md) |
 | `brauer.tex` | 12 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/brauer.patch) | [entries](reviews/brauer.md) |
 | `categories.tex` | 91 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/categories.patch) | [entries](reviews/categories.md) |
-| `cohomology.tex` | 4 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/cohomology.patch) | [entries](reviews/cohomology.md) |
+| `cohomology.tex` | 5 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/cohomology.patch) | [entries](reviews/cohomology.md) |
 | `crystalline.tex` | 1 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/crystalline.patch) | [entries](reviews/crystalline.md) |
 | `derham.tex` | 5 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/derham.patch) | [entries](reviews/derham.md) |
-| `derived.tex` | 92 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/derived.patch) | [entries](reviews/derived.md) |
+| `derived.tex` | 146 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/derived.patch) | [entries](reviews/derived.md) |
 | `descent.tex` | 35 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/descent.patch) | [entries](reviews/descent.md) |
+| `equiv.tex` | 1 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/equiv.patch) | [entries](reviews/equiv.md) |
 | `examples.tex` | 1 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/examples.patch) | [entries](reviews/examples.md) |
 | `fields.tex` | 55 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/fields.patch) | [entries](reviews/fields.md) |
 | `groupoids.tex` | 48 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/groupoids.patch) | [entries](reviews/groupoids.md) |
@@ -48,9 +49,9 @@ editing or interactive staging in your own checkout.
 | `injectives.tex` | 40 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/injectives.patch) | [entries](reviews/injectives.md) |
 | `introduction.tex` | 1 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/introduction.patch) | [entries](reviews/introduction.md) |
 | `modules.tex` | 14 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/modules.patch) | [entries](reviews/modules.md) |
-| `more-algebra.tex` | 119 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/more-algebra.patch) | [entries](reviews/more-algebra.md) |
+| `more-algebra.tex` | 120 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/more-algebra.patch) | [entries](reviews/more-algebra.md) |
 | `more-groupoids.tex` | 22 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/more-groupoids.patch) | [entries](reviews/more-groupoids.md) |
-| `perfect.tex` | 24 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/perfect.patch) | [entries](reviews/perfect.md) |
+| `perfect.tex` | 29 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/perfect.patch) | [entries](reviews/perfect.md) |
 | `schemes.tex` | 16 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/schemes.patch) | [entries](reviews/schemes.md) |
 | `sets.tex` | 6 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sets.patch) | [entries](reviews/sets.md) |
 | `sheaves.tex` | 83 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/sheaves.patch) | [entries](reviews/sheaves.md) |
@@ -63,7 +64,7 @@ editing or interactive staging in your own checkout.
 | `spaces-duality.tex` | 38 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-duality.patch) | [entries](reviews/spaces-duality.md) |
 | `spaces-limits.tex` | 2 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-limits.patch) | [entries](reviews/spaces-limits.md) |
 | `spaces-morphisms.tex` | 7 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-morphisms.patch) | [entries](reviews/spaces-morphisms.md) |
-| `spaces-perfect.tex` | 19 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-perfect.patch) | [entries](reviews/spaces-perfect.md) |
+| `spaces-perfect.tex` | 20 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/spaces-perfect.patch) | [entries](reviews/spaces-perfect.md) |
 | `stacks-limits.tex` | 11 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/stacks-limits.patch) | [entries](reviews/stacks-limits.md) |
 | `stacks.tex` | 76 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/stacks.patch) | [entries](reviews/stacks.md) |
 | `topologies.tex` | 19 | [patch](https://raw.githubusercontent.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/main/upstream-corrections/chapters/topologies.patch) | [entries](reviews/topologies.md) |
@@ -72,9 +73,9 @@ editing or interactive staging in your own checkout.
 
 ## What is and is not included
 
-The 2,241 historical IDs in R1–R60 remain accounted for:
-2,238 effective textual units are exported; one earlier correction was
-superseded by its explicitly recorded replacement, and one fork-specific tag
+The 2,305 historical IDs in R1–R61 remain accounted for:
+2,301 effective textual units are exported; 2 earlier corrections are
+superseded by their explicitly recorded replacements, and one fork-specific tag
 allocation is excluded. Explicitly classified editorial proof completions remain
 available in the full comparison and their candidate packages, but are excluded
 from this corrections-only download. No unofficial permanent tags are proposed for upstream.

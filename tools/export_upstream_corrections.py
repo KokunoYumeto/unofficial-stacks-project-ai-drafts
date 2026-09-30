@@ -265,8 +265,8 @@ def generate():
         rows.append(f"| `{path}` | {row['units']} | [patch]({RAW}{row['file']}) | [entries](reviews/{path[:-4]}.md) |")
     rows += ["", "## What is and is not included", "",
         f"The {model.unit_count:,} historical IDs in R1–R{model.overlay_count} remain accounted for:",
-        f"{included_count:,} effective textual units are exported; one earlier correction was",
-        "superseded by its explicitly recorded replacement, and one fork-specific tag",
+        f"{included_count:,} effective textual units are exported; {sum(x['status'] == 'superseded' for x in dispositions)} earlier corrections are",
+        "superseded by their explicitly recorded replacements, and one fork-specific tag",
         "allocation is excluded. Explicitly classified editorial proof completions remain",
         "available in the full comparison and their candidate packages, but are excluded",
         "from this corrections-only download. No unofficial permanent tags are proposed for upstream.",

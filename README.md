@@ -63,8 +63,8 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 2,241 historical correction IDs are accounted for; 2,238 effective textual
-  units are exported. One superseded correction, one fork tag allocation and
+  The 2,305 historical correction IDs are accounted for; 2,301 effective textual
+  units are exported. Two superseded corrections, one fork tag allocation and
   one explicitly labelled editorial proof completion are excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
   original location, smallest replacement, and a short reason. The readable
@@ -208,7 +208,20 @@ that editorial completion. The [reviewed publication history](validation/r60-rev
 retains each R60 transition without incorporating the newer Illusie drafts
 awaiting their separate review. This remains a source-and-patch update.
 
-R52/R53/R54/R55/R56/R57/R58/R59/R60 review, correction preparation, builds and visual checks, and current
+R61 records **64 units and 89 edits** in Derived Categories and five dependent
+chapters. It reconciles all 176 received Derived reports and six separate
+receiving reports. The corrections retain exact functor and triangle maps,
+cohomological indices, boundedness hypotheses and the complete comparison
+arguments. The separate editorial ledger contains 33 proved underclaims and a
+refinement of UNDER-007, with their propagation and complete proofs.
+[Read all six corrected chapters and the 159-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r61/README.md).
+All 89 edits enter the fixes-only patches; the earlier 0839 parenthesis correction
+is preserved inside its explicitly recorded 2533 successor. The
+[reviewed history](validation/r61-reviewed-publication-history.json) preserves
+separate candidate, admission and composition transitions. Incoming Illusie
+work remains queued for its own review.
+
+R52/R53/R54/R55/R56/R57/R58/R59/R60/R61 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

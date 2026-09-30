@@ -328,3 +328,17 @@ The chosen functions and Koszul complex both end at s; the same sequence's zero 
 -$f^{-1}(Z \cap T) = V(g_1, \ldots, g_r)$.
 +$f^{-1}(Z \cap T) = V(g_1, \ldots, g_s)$.
 ````
+
+### MC-STK-ERR-2569
+
+`spaces-perfect.tex` — spaces-perfect.tex:4459; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L4459) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-The adjoint exists if and only if for every object $K$ of
++The adjoint exists if and only if for every object $E$ of
+````

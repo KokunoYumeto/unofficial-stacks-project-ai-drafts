@@ -1,5 +1,5 @@
 diff --git a/cohomology.tex b/cohomology.tex
-index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..f55cd9bb8e566dfd2c4ff26e775ff6e24c953d80 100644
+index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..4684bf3c6921e37a12e8358b176acd8c3413b430 100644
 --- a/cohomology.tex
 +++ b/cohomology.tex
 @@ -2579,7 +2579,7 @@
@@ -38,3 +38,26 @@ index 0e2c7cd4265156c4e925e81a4d215ab59f73bbe3..f55cd9bb8e566dfd2c4ff26e775ff6e2
  R\SheafHom(R\SheafHom(K_3, L), M)
  $$
  See Section \ref{section-flat} and
+@@ -14421,9 +14421,19 @@
+ (\mathcal{I}^{i + 2}/\mathcal{I}^{i + 3})[2]$
+ is zero in $D(\mathcal{O}_X)$ by using the criterion in
+ Derived Categories, Lemma \ref{derived-lemma-cup-ext-1-zero}
+-using that the module $\mathcal{I}^i/\mathcal{I}^{i + 3}$
+-is an extension of $\mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}$
+-by $\mathcal{I}^i/\mathcal{I}^{i + 1}$.
++using the exact sequence
++$$
++0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^i/\mathcal{I}^{i + 3}
++\to \mathcal{I}^i/\mathcal{I}^{i + 2} \to 0.
++$$
++Its pullback along
++$\mathcal{I}^{i + 1}/\mathcal{I}^{i + 2}
++\to \mathcal{I}^i/\mathcal{I}^{i + 2}$
++is the extension
++$0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 2} \to 0$.
+ 
+ \begin{lemma}
+ \label{lemma-eta-second-property}

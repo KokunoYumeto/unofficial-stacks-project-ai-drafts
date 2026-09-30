@@ -1,8 +1,96 @@
 diff --git a/perfect.tex b/perfect.tex
-index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12fc8e8d5c 100644
+index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..d847368f4e1ec37b78d05da0d0c1fc4beaf38aec 100644
 --- a/perfect.tex
 +++ b/perfect.tex
-@@ -9223,7 +9223,7 @@
+@@ -526,14 +526,27 @@
+ As the statement is invariant under shifts it suffices to show that
+ $H^0(f_*(\mathcal{F}^\bullet)) \to R^0f_*\mathcal{F}^\bullet$
+ is an isomorphism. The statement is local on $S$ hence we
+-may assume $S$ affine. By
+-Lemma \ref{lemma-quasi-coherence-direct-image}
+-we have $R^0f_*\mathcal{F}^\bullet = R^0f_*\tau_{\geq -n}\mathcal{F}^\bullet$
+-for all sufficiently large $n$. Thus we may assume $\mathcal{F}^\bullet$
+-bounded below. As each $\mathcal{F}^n$ is right $f_*$-acyclic by
+-assumption we see that $f_*\mathcal{F}^\bullet \to Rf_*\mathcal{F}^\bullet$
+-is a quasi-isomorphism by Leray's acyclicity lemma (Derived Categories, Lemma
+-\ref{derived-lemma-leray-acyclicity}).
++may assume $S$ affine. Choose $N$ as in
++Lemma \ref{lemma-quasi-coherence-direct-image} and an integer
++$n \geq \max\{1, N\}$. The termwise split short exact sequence
++$$
++0 \to \sigma_{\geq -n}\mathcal{F}^\bullet \to
++\mathcal{F}^\bullet \to \sigma_{\leq -n-1}\mathcal{F}^\bullet \to 0
++$$
++gives a distinguished triangle. The last complex has quasi-coherent
++cohomology, vanishing in degrees greater than $-n-1$. The bound $N$
++therefore gives vanishing of
++$H^j(Rf_*\sigma_{\leq -n-1}\mathcal{F}^\bullet)$ for $j \geq N-n-1$,
++in particular for $j=-1,0$. It follows that
++$H^0(Rf_*\sigma_{\geq -n}\mathcal{F}^\bullet) \to
++H^0(Rf_*\mathcal{F}^\bullet)$ is an isomorphism.
++Also $H^0(f_*\sigma_{\geq -n}\mathcal{F}^\bullet) =
++H^0(f_*\mathcal{F}^\bullet)$ since $n \geq 1$.
++The complex $\sigma_{\geq -n}\mathcal{F}^\bullet$ is bounded below
++and consists of the original right $f_*$-acyclic terms, so it computes
++$Rf_*$ by Leray's acyclicity lemma (Derived Categories, Lemma
++\ref{derived-lemma-leray-acyclicity}). Naturality of the canonical map
++now proves the desired isomorphism in degree zero.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -4321,9 +4334,9 @@
+ We observe that $D_{\QCoh, T}(\mathcal{O}_X)$ is a triangulated
+ category with direct sums by the remark preceding the lemma.
+ By Proposition \ref{proposition-compact-is-perfect}
+-the perfect objects define compact objects of $D(\mathcal{O}_X)$
++the perfect objects define compact objects of $D_\QCoh(\mathcal{O}_X)$
+ hence a fortiori of any subcategory preserved under taking direct
+-sums. For the converse we will use there exists a generator
++sums. For the converse we will use that there exists a generator
+ $E \in D_{\QCoh, T}(\mathcal{O}_X)$ which is a perfect complex
+ of $\mathcal{O}_X$-modules, see
+ Lemma \ref{lemma-generator-with-support}.
+@@ -4382,7 +4395,7 @@
+ It is clear that $K$ is supported on $T$ as formation of $R\SheafHom$
+ commutes with restriction to opens.
+ The map $\alpha$ defines an element of
+-$H^0(K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
++$H^0(X, K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
+ Then it suffices to prove the result for the map
+ $\alpha : \mathcal{O}_X[0] \to K$.
+ 
+@@ -4393,15 +4406,16 @@
+ K = \text{hocolim} K_n
+ $$
+ as in Derived Categories, Lemma \ref{derived-lemma-write-as-colimit}
+-using the generator $E$. Since the functor $\mathcal{D} \to D(\mathcal{O}_X)$
++using the generator $E$. Since the functor $\mathcal{D} \to D_\QCoh(\mathcal{O}_X)$
+ commutes with direct sums, we see that $K = \text{hocolim} K_n$
+-holds in $D(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
+-object of $D(\mathcal{O}_X)$ we find an $n$ and a morphism
++holds in $D_\QCoh(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
++object of $D_\QCoh(\mathcal{O}_X)$ we find an $n$ and a morphism
+ $\alpha_n : \mathcal{O}_X \to K_n$ which gives rise to $\alpha$, see
+ Derived Categories, Lemma \ref{derived-lemma-commutes-with-countable-sums}.
+-By Derived Categories, Lemma \ref{derived-lemma-factor-through}
++By the finite-stage argument in the proof of Derived Categories, Lemma \ref{derived-lemma-factor-through}
+ applied to the morphism $\mathcal{O}_X[0] \to K_n$ in the ambient
+-category $D(\mathcal{O}_X)$ we see that $\alpha_n$ factors as
++category $D_\QCoh(\mathcal{O}_X)$, which does not require $E$ to generate
++the ambient category, we see that $\alpha_n$ factors as
+ $\mathcal{O}_X[0] \to Q \to K_n$ where $Q$ is an object
+ of $\langle E \rangle$. We conclude that $Q$ is a perfect complex
+ supported on $T$.
+@@ -4845,7 +4859,7 @@
+ lemma holds for $U$, $V$, and $U \cap V$, then the lemma holds for $X$.
+ 
+ \medskip\noindent
+-The adjoint exists if and only if for every object $K$ of
++The adjoint exists if and only if for every object $E$ of
+ $D(\mathcal{O}_X)$ we can find a distinguished triangle
+ $$
+ E' \to E \to K \to E'[1]
+@@ -9223,7 +9237,7 @@
  
  \noindent
  If $X$ is a quasi-compact and quasi-separated scheme, then it suffices to check
@@ -11,7 +99,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  quasi-coherent) is the quotient of a finite locally free
  $\mathcal{O}_X$-module, see Properties, Lemma
  \ref{properties-lemma-finite-directed-colimit-surjective-maps}.
-@@ -9274,16 +9274,16 @@
+@@ -9274,16 +9288,16 @@
  $$
  f^*\mathcal{E}_{i, j}
  \otimes_{\mathcal{O}_X}
@@ -31,7 +119,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \end{proof}
  
  \begin{lemma}
-@@ -9368,7 +9368,7 @@
+@@ -9368,7 +9382,7 @@
  \medskip\noindent
  The first observation is that $U_j \cap U_{j'}$ is quasi-compact
  as the complement of the zero scheme of the quasi-coherent finite type ideal
@@ -40,7 +128,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Properties, Lemma \ref{properties-lemma-quasi-coherent-finite-type-ideals}.
  Hence $X$ is quasi-compact and quasi-separated, see
  Schemes, Lemma \ref{schemes-lemma-characterize-quasi-separated}.
-@@ -9400,7 +9400,7 @@
+@@ -9400,7 +9414,7 @@
  $k = 1, \ldots, e_j$ which generate the restriction of $\mathcal{F}$ to $U_j$.
  By Cohomology of Schemes, Lemma \ref{coherent-lemma-homs-over-open}
  we can extend $s_{jk}$ to a map
@@ -49,7 +137,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Then we can consider the compositions
  $$
  \mathcal{E}_j^{\otimes n_{jk}} \to \mathcal{I}_j^{n_{jk}} \to \mathcal{F}
-@@ -9445,7 +9445,7 @@
+@@ -9445,7 +9459,7 @@
  Let $X = \lim X_i$ be a limit of a direct system of quasi-compact
  and quasi-separated schemes with affine transition morphisms.
  Then $X$ has the resolution property if and only if $X_i$ has
@@ -58,7 +146,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \end{lemma}
  
  \begin{proof}
-@@ -9787,7 +9787,7 @@
+@@ -9787,7 +9801,7 @@
  $$
  K^b(\mathcal{A}) \longrightarrow D_{perf}(\mathcal{O}_X)
  $$
@@ -67,7 +155,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  equivalence $S^{-1}K^b(\mathcal{A}) \to D_{perf}(\mathcal{O}_X)$
  of triangulated categories
  where $S$ is the saturated multiplicative system of quasi-isomorphisms
-@@ -9866,7 +9866,7 @@
+@@ -9866,7 +9880,7 @@
  Let $X$ be a Noetherian scheme. Then
  $$
  K_0(\textit{Coh}(\mathcal{O}_X)) =
@@ -76,7 +164,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  K_0(D^b_{\textit{Coh}}(\mathcal{O}_X))
  $$
  \end{lemma}
-@@ -9900,7 +9900,7 @@
+@@ -9900,7 +9914,7 @@
  $$
  \item If $X$ is locally Noetherian, then we denote $K'_0(X)$ the
  {\it Grothendieck group of coherent sheaves on $X$}. It is the
@@ -85,7 +173,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  of coherent $\mathcal{O}_X$-modules. In a formula
  $$
  K'_0(X) = K_0(\textit{Coh}(\mathcal{O}_X))
-@@ -10059,7 +10059,7 @@
+@@ -10059,7 +10073,7 @@
  \begin{matrix}
  0 \to \mathcal{E}^a \to \mathcal{E}^{a + 1} \to \mathcal{F}^{a + 1} \to 0,\\
  0 \to \mathcal{F}^{a + 1} \to \mathcal{E}^{a + 2} \to
@@ -94,7 +182,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \ldots \\
  0 \to \mathcal{F}^{b - 3} \to \mathcal{E}^{b - 2} \to
  \mathcal{F}^{b - 2} \to 0, \\
-@@ -10070,7 +10070,7 @@
+@@ -10070,7 +10084,7 @@
  $\mathcal{F}^{b - 2}, \ldots, \mathcal{F}^{a + 1}$
  are finite locally free $\mathcal{O}_X$-modules, and
  $$
@@ -103,7 +191,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \sum (-1)^n([\mathcal{F}^{n - 1}] + [\mathcal{F}^n]) = 0
  $$
  Thus our construction gives zero on acyclic complexes.
-@@ -10095,7 +10095,7 @@
+@@ -10095,7 +10109,7 @@
  Derived Categories, Section \ref{derived-section-canonical-delta-functor}).
  Hence
  $$
@@ -112,7 +200,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  c(\mathcal{E}^\bullet) - c(\mathcal{G}^\bullet)
  $$
  as desired. The same argument using $b$ shows that
-@@ -10117,7 +10117,7 @@
+@@ -10117,7 +10131,7 @@
  $K_0(\textit{Vect}(X)) \to K_0(X) \to K_0(\textit{Vect}(X))$
  is the identity. On the other hand, let $\mathcal{E}^\bullet$
  be a bounded complex of finite locally free $\mathcal{O}_X$-modules.
@@ -121,7 +209,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  of ``stupid truncations''
  (see Homology, Section \ref{homology-section-truncations})
  $$
-@@ -10202,7 +10202,7 @@
+@@ -10202,7 +10216,7 @@
  \ref{coherent-proposition-proper-pushforward-coherent}), because locally
  only a finite number are nonzero, and because
  a short exact sequence of coherent sheaves on $X$ produces a long
@@ -130,7 +218,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  case most often used in practice), then we can rewrite the above as
  $$
  f_*[\mathcal{F}] = \sum (-1)^i[R^if_*\mathcal{F}] = [Rf_*\mathcal{F}]
-@@ -10339,7 +10339,7 @@
+@@ -10339,7 +10353,7 @@
  is compatible with pullbacks. More precisely, given a morphism
  $f : X \to Y$ of schemes and a perfect object $K$ of $D(\mathcal{O}_Y)$
  of tor-amplitude in $[-1, 0]$ then $Lf^*K$ is a
@@ -139,7 +227,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  of tor-amplitude in $[-1, 0]$ and we have a canonical identification
  $$
  f^*\det(K) \longrightarrow \det(Lf^*K)
-@@ -10384,7 +10384,7 @@
+@@ -10384,7 +10398,7 @@
  $\tau_{\geq a}N = 0$. Observe that
  $$
  \Hom_{D(\mathcal{O}_X)}(K[-n], Rj_*(E|_U)) =
@@ -148,7 +236,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  $$
  for all $n$ as $K|_U = 0$. Thus (2) is equivalent to
  $\Hom_{D(\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \geq a$. 
-@@ -10420,7 +10420,7 @@
+@@ -10420,7 +10434,7 @@
  is an isomorphism, and
  \item $\Hom_{D(\mathcal{O}_X)}(K[-n], E) = 0$ for all $n \leq a$.
  \end{enumerate}
@@ -157,7 +245,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \end{lemma}
  
  \begin{proof}
-@@ -10429,10 +10429,10 @@
+@@ -10429,10 +10443,10 @@
  Observe that
  $$
  \Hom_{D(\mathcal{O}_X)}(K[-n], Rj_*(E|_U)) =
@@ -170,7 +258,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  Observe that there are distinguished triangles
  $$
  K^\bullet(f_1^{e_1}, \ldots, f_i^{e'_i}, \ldots, f_r^{e_r}) \to
-@@ -10441,13 +10441,13 @@
+@@ -10441,13 +10455,13 @@
  $$
  of Koszul complexes, see
  More on Algebra, Lemma \ref{more-algebra-lemma-koszul-mult}. Hence
@@ -188,7 +276,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  $A$-modules $R\Gamma(X, N)$, see Lemma \ref{lemma-affine-compare-bounded}.
  Thus we find that our lemma is true.
  \end{proof}
-@@ -10531,7 +10531,7 @@
+@@ -10531,7 +10545,7 @@
  \medskip\noindent
  Parts (2), (3), (4) are equivalent by the discussion in
  Cohomology, Section \ref{cohomology-section-global-RHom}.
@@ -197,7 +285,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  by definition. The equivalent conditions (2), (3), (4) are
  equivalent to the equivalent conditions (5), (6) by
  Cohomology, Lemma \ref{cohomology-lemma-dual-perfect-complex}
-@@ -10549,7 +10549,7 @@
+@@ -10549,7 +10563,7 @@
  triangles, is inherited by direct summands, and is preserved by shifts.
  Hence by Derived Categories, Remark \ref{derived-remark-check-on-generator}
  we see that (4) implies $T$ holds on all of $D_{perf}(\mathcal{O}_X)$.
@@ -206,7 +294,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  (7)(b) and (7)(c) we also use that $P \mapsto P^\vee$ is a self
  equivalence of $D_{perf}(\mathcal{O}_X)$. Small detail omitted.
  
-@@ -10649,7 +10649,7 @@
+@@ -10649,7 +10663,7 @@
  \medskip\noindent
  Parts (2), (3), (4) are equivalent by the discussion in
  Cohomology, Section \ref{cohomology-section-global-RHom}.
@@ -215,7 +303,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  by definition. The equivalent conditions (2), (3), (4) are
  equivalent to the equivalent conditions (5), (6) by
  Cohomology, Lemma \ref{cohomology-lemma-dual-perfect-complex}
-@@ -10667,7 +10667,7 @@
+@@ -10667,7 +10681,7 @@
  triangles, is inherited by direct summands, and is preserved by shifts.
  Hence by Derived Categories, Remark \ref{derived-remark-check-on-generator}
  we see that (4) implies $T$ holds on all of $D_{perf}(\mathcal{O}_X)$.
@@ -224,7 +312,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  (7)(b) and (7)(c) we also use that $P \mapsto P^\vee$ is a self
  equivalence of $D_{perf}(\mathcal{O}_X)$. Small detail omitted.
  
-@@ -10769,7 +10769,7 @@
+@@ -10769,7 +10783,7 @@
  $X_{affine, Zar}$ endowed with the chaotic topology, i.e., such that sheaves
  agree with presheaves. In particular, the structure sheaf $\mathcal{O}$
  becomes a sheaf on $X_{affine}$ as well.
@@ -233,7 +321,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  $$
  \epsilon :
  (X_{affine, Zar}, \mathcal{O})
-@@ -10789,7 +10789,7 @@
+@@ -10789,7 +10803,7 @@
  \item $D_\QCoh(\mathcal{O}_X)$,
  \item $D_\QCoh(X_{Zar}, \mathcal{O})$,
  \item $D_\QCoh(X_{affine, Zar}, \mathcal{O})$,
@@ -242,7 +330,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  \item $\mathit{QC}(X_{affine}, \mathcal{O})$.
  \end{enumerate}
  \end{lemma}
-@@ -10819,7 +10819,7 @@
+@@ -10819,7 +10833,7 @@
  Since the notion of quasi-coherent modules is intrinsic
  (Modules on Sites, Lemma \ref{sites-modules-lemma-special-locally-free})
  we see that this equivalence preserves the subcategories
@@ -251,7 +339,7 @@ index 8522660c9e7aab3ef20ffe9dbe1d89491f7b9d73..5e281a83ee21c46274386f83ba1f0b12
  between the triangulated categories in (2) and (3).
  
  \medskip\noindent
-@@ -10856,7 +10856,7 @@
+@@ -10856,7 +10870,7 @@
  we have seen above that these,
  via the equivalence $\textit{Mod}(X_{affine, Zar}, \mathcal{O}) =
  \textit{Mod}(X, \mathcal{O}_X)$, correspond to the quasi-coherent modules

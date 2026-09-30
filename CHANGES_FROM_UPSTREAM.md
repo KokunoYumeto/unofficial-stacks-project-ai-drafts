@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **60**
-- Stable correction IDs: **2,241**
-- Displayed exact change hunks: **2,728**
-- Manifest/source-map exact operations: **2,660**
+- Admitted errata batches: **61**
+- Stable correction IDs: **2,305**
+- Displayed exact change hunks: **2,817**
+- Manifest/source-map exact operations: **2,749**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **38**
-- Registry SHA-256: `B97509913738F8E182423AB38FC27F56CCB73F64C797C486C92343853F371F2B`
+- Affected source paths: **39**
+- Registry SHA-256: `8207EB7B7E6F5C091F684A69BBAEDEE580EB8532FEBD9AD1F5B8F6602D9CB599`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -65045,5 +65045,2208 @@ Pinned-official lines `10074-10076`; bytes `364575:364789`.
 ````
 
 Original SHA-256 `F7BEF187EF043A056D6432400845D53B695C806A14319266F73BFE747A7C20A4`; replacement SHA-256 `DBD7BB0CC530C2985CBB6B64D1263EAAA479B17E2E151765DE77D7B92C804350`.
+
+</details>
+
+## stacks-errata-a04446e-r61
+
+64 stable IDs · 89 displayed change hunks · admitted 2026-09-30T17:55:13.480575+00:00.
+
+<details id="mc-stk-err-2506">
+<summary><code>MC-STK-ERR-2506 — derived.tex:derived.tex:737 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2506`; producer ID: `DERIVED-RECON-001`
+- Bound source locator: `derived.tex:derived.tex:737`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L737) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2506-OP1`
+
+Pinned-official lines `737-737`; bytes `23883:23900`.
+
+````diff
+- is the isomorphic
++ is isomorphic
+````
+
+Original SHA-256 `207373AB10A6036D6141B399758BA4AEC8E6989DF587980EF4DA9AF59E58BD79`; replacement SHA-256 `0CFA26E4EBB1E43117491D27D260ED6A677EEA5F11077FC49835A4EE1339C081`.
+
+</details>
+
+<details id="mc-stk-err-2507">
+<summary><code>MC-STK-ERR-2507 — derived.tex:derived.tex:893 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2507`; producer ID: `DERIVED-NEW-001`
+- Bound source locator: `derived.tex:derived.tex:893`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L893-L898) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2507-OP1`
+
+Pinned-official lines `893-894`; bytes `29784:29880`.
+
+````diff
+- Let $F : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
+- pre-triangulated categories. Since
++ Let $(F, \xi) : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
++ pre-triangulated categories. Since
+````
+
+Original SHA-256 `26F3C4B6B54D871DC8364AC2A6C18196BE2149810F4058864BA5D02B7D8C3E17`; replacement SHA-256 `3EF2BCF80B89D6716B723814A4E57808FC5C306491B85DF50DA2215FAC20D1CC`.
+
+### Change 2: `MC-STK-ERR-2507-OP2`
+
+Pinned-official lines `898-898`; bytes `29967:30011`.
+
+````diff
+- (F(0), F(0), F(0), 1_{F(0)}, 1_{F(0)}, F(0))
++ (F(0), F(0), F(0), 1_{F(0)}, 1_{F(0)}, \xi_0 \circ F(0))
+````
+
+Original SHA-256 `43C43C01685B2D9DAA5BD44C4EFD234CB9011648A9093B9ACFC6A16EBFE8E195`; replacement SHA-256 `AE3AC7CA58B04E44F323D217ED08B9B3D3DD36078B6757943F86E6815B4C717C`.
+
+</details>
+
+<details id="mc-stk-err-2508">
+<summary><code>MC-STK-ERR-2508 — derived.tex:derived.tex:917 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2508`; producer ID: `DERIVED-NEW-002`
+- Bound source locator: `derived.tex:derived.tex:917`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L917-L920) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2508-OP1`
+
+Pinned-official lines `917-917`; bytes `30809:30881`.
+
+````diff
+- Let $F : \mathcal{D} \to \mathcal{D}'$ be a fully faithful exact functor
++ Let $(F, \xi) : \mathcal{D} \to \mathcal{D}'$ be a fully faithful exact functor
+````
+
+Original SHA-256 `235B3BA34D130D8116450717857C6DF1AF12BA332CA94641CA9BDB3D24751E99`; replacement SHA-256 `B09716A43D308E5CBFB0805DEF2C65D3156D5FAA1882BBB497EAB45547EE742B`.
+
+### Change 2: `MC-STK-ERR-2508-OP2`
+
+Pinned-official lines `920-920`; bytes `31000:31074`.
+
+````diff
+- $(F(X), F(Y), F(Z), F(f), F(g), F(h))$ is distinguished in $\mathcal{D}'$.
++ $(F(X), F(Y), F(Z), F(f), F(g), \xi_X \circ F(h))$ is distinguished in $\mathcal{D}'$.
+````
+
+Original SHA-256 `CFD22D24EC252A1C84C709A8D51841C90DD94E3217BE9E8F74D9FCF27A9E8BCD`; replacement SHA-256 `3282288615D3395FF43A1548B581488E8DCE665709D19C329135997C15980D17`.
+
+</details>
+
+<details id="mc-stk-err-2509">
+<summary><code>MC-STK-ERR-2509 — derived.tex:derived.tex:1011 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2509`; producer ID: `DERIVED-NEW-003`
+- Bound source locator: `derived.tex:derived.tex:1011`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1011) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2509-OP1`
+
+Pinned-official lines `1011-1011`; bytes `34079:34116`.
+
+````diff
+- $(G(A), G(B), G(C), a, b, \delta)$ is
++ $(G(A), G(B), G(C), G(a), G(b), \delta)$ is
+````
+
+Original SHA-256 `1659576F3FFF18558864CC9783516AA74B3ABF0EFB92EC2FA3AD6AFE2620A52D`; replacement SHA-256 `4470376509F9C358DDA9D030B9E05E935A63A156A636F3D39D19A1F3E403F201`.
+
+</details>
+
+<details id="mc-stk-err-2510">
+<summary><code>MC-STK-ERR-2510 — derived.tex:derived.tex:1049 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2510`; producer ID: `DERIVED-NEW-004`
+- Bound source locator: `derived.tex:derived.tex:1049`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1049-L1050) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2510-OP1`
+
+Pinned-official lines `1049-1050`; bytes `35256:35332`.
+
+````diff
+- Moreover, each of the rows and columns are
+- distinguished triangles. Finally,
++ Moreover, each of the first three rows and columns is a
++ distinguished triangle. The bottom row and right column become distinguished
++ triangles after negating their last arrows. Finally,
+````
+
+Original SHA-256 `8C7BE028677D3C1D67C866BFB265ED58FCDCB922C1075C86300095535F73A7F1`; replacement SHA-256 `0B431F1262721D84694F39A0476CE2756C7958242E48733A89561E6F5C10235E`.
+
+</details>
+
+<details id="mc-stk-err-2511">
+<summary><code>MC-STK-ERR-2511 — derived.tex:derived.tex:1068 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2511`; producer ID: `DERIVED-RECON-002`
+- Bound source locator: `derived.tex:derived.tex:1068`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1068-L1069) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2511-OP1`
+
+Pinned-official lines `1068-1069`; bytes `36134:36180`.
+
+````diff
+- The conclusion of our application TR4
+- are that
++ The conclusion of our application of TR4
++ is that
+````
+
+Original SHA-256 `9E6E576BC53480ACDE3B9B2723825C06F4BFD08AFD4BF1271CA0BDCB3FFC1787`; replacement SHA-256 `20340165D3BE667F28F552E1D572A500700F33A280F0E8ECAF6C2D72EA0EDDDD`.
+
+</details>
+
+<details id="mc-stk-err-2512">
+<summary><code>MC-STK-ERR-2512 — derived.tex:derived.tex:1080 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2512`; producer ID: `DERIVED-RECON-003`
+- Bound source locator: `derived.tex:derived.tex:1080`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1080-L1081) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2512-OP1`
+
+Pinned-official lines `1080-1081`; bytes `36472:36550`.
+
+````diff
+- $(X, X', X'') \to (X, Y', A)$ and $(X, Y', A) \to (Y, Y', Y'')$.
+- are morphisms
++ $(X, X', X'') \to (X, Y', A)$ and $(X, Y', A) \to (Y, Y', Y'')$
++ are morphisms
+````
+
+Original SHA-256 `0D71251216226BD2B2F42DECE91F06F6F0D8C87E1B6BE3E8BCBF27BDD80852D2`; replacement SHA-256 `845FBE2822F85366104A772F509156C2518E317CABF520D498E37144FA64BA5F`.
+
+</details>
+
+<details id="mc-stk-err-2513">
+<summary><code>MC-STK-ERR-2513 — derived.tex:derived.tex:1365 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2513`; producer ID: `DERIVED-NEW-005`
+- Bound source locator: `derived.tex:derived.tex:1365`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1365) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2513-OP1`
+
+Pinned-official lines `1365-1365`; bytes `46596:46670`.
+
+````diff
+- the localization functor $Q : \mathcal{D} \to S^{-1}\mathcal{D}$ is exact.
++ the localization functor $Q : \mathcal{D} \to S^{-1}\mathcal{D}$ is exact
++ with the identity translation comparison.
+````
+
+Original SHA-256 `8BDC2C3F816C0363BB748F8D8AA52D61F5DB56A8251986B5771A99A2B0DF27F7`; replacement SHA-256 `D57A56AEAD989890599E7E000278D963A6816F76C4FEA9E73CCD980011D1261A`.
+
+</details>
+
+<details id="mc-stk-err-2514">
+<summary><code>MC-STK-ERR-2514 — derived.tex:derived.tex:1787 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2514`; producer ID: `DERIVED-NEW-006`
+- Bound source locator: `derived.tex:derived.tex:1787`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1787-L1803) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2514-OP1`
+
+Pinned-official lines `1787-1788`; bytes `64435:64569`.
+
+````diff
+- Let $F : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
+- pre-triangulated categories. Let $\mathcal{D}''$ be the full subcategory
++ Let $(F, \xi) : \mathcal{D} \to \mathcal{D}'$ be an exact functor of
++ pre-triangulated categories. Let $\mathcal{D}''$ be the full subcategory
+````
+
+Original SHA-256 `652893A32874D33A71D8135EAD53CC03DC288888C8404C029836C4EB1D8AAAA1`; replacement SHA-256 `946E39BCBECC914457143D7C1B4D370A35C7DBF04A3B7B2855E414F9B456F6D6`.
+
+### Change 2: `MC-STK-ERR-2514-OP2`
+
+Pinned-official lines `1803-1803`; bytes `65075:65131`.
+
+````diff
+- $(F(X), F(Y), F(Z), F(f), F(g), F(h))$ is distinguished.
++ $(F(X), F(Y), F(Z), F(f), F(g), \xi_X \circ F(h))$ is distinguished.
+````
+
+Original SHA-256 `C78D63B3E0C4F1D1FF502A6BC3E9CE59E9F4FEC4A88B69383E57433F2C041F37`; replacement SHA-256 `6A06A9D898098CD3F713CFAAFC3A9A78CC46C6E3C1955F84952914286CE6B612`.
+
+</details>
+
+<details id="mc-stk-err-2515">
+<summary><code>MC-STK-ERR-2515 — derived.tex:derived.tex:1976 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2515`; producer ID: `DERIVED-RECON-007`
+- Bound source locator: `derived.tex:derived.tex:1976`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L1976) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2515-OP1`
+
+Pinned-official lines `1976-1976`; bytes `71757:71787`.
+
+````diff
+- are stable under translations
++ are stable under translations.
+````
+
+Original SHA-256 `59CD80B237133C2053D997ACD47ABAA480383C452B451AAD71853EBE6BB551EF`; replacement SHA-256 `95502664ECF3510D0752842194F4A2BAFED2A36B08901B7A36542E3FB658A8AC`.
+
+</details>
+
+<details id="mc-stk-err-2516">
+<summary><code>MC-STK-ERR-2516 — derived.tex:derived.tex:2535 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2516`; producer ID: `DERIVED-NEW-007`
+- Bound source locator: `derived.tex:derived.tex:2535`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L2535) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2516-OP1`
+
+Pinned-official lines `2535-2535`; bytes `91013:91038`.
+
+````diff
+- p_2 \circ c = a \circ p_1
++ p_2 \circ c = a[1] \circ p_1
+````
+
+Original SHA-256 `09930274E852B577A2613B0E8BDFE8B2375505FB99AD1A290839030F327E938D`; replacement SHA-256 `AA075FDCEEB40CDB4325B41ED40D3E6159BAC7BC6C2D1C5990CBFBD1BFB1387D`.
+
+</details>
+
+<details id="mc-stk-err-2517">
+<summary><code>MC-STK-ERR-2517 — derived.tex:derived.tex:2934 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2517`; producer ID: `DERIVED-NEW-008`
+- Bound source locator: `derived.tex:derived.tex:2934`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L2934-L2937) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2517-OP1`
+
+Pinned-official lines `2934-2937`; bytes `102121:102278`.
+
+````diff
+- In other words, we have
+- $\Im(b^n) \subset \Im(A_2^n \to B_2^n)$ and
+- $\Ker((b')^n) \supset \Im(A_2^n \to B_2^n)$.
+- Then $b' \circ b = 0$ as a map of complexes.
++ Writing $\alpha_2 : A_2^\bullet \to B_2^\bullet$ and
++ $\beta_2 : B_2^\bullet \to C_2^\bullet$ for the maps in the middle
++ split sequence, we have $\beta_2 \circ b = 0$ and
++ $b' \circ \alpha_2 = 0$. Choose its degreewise retractions
++ $\pi_2^n : B_2^n \to A_2^n$. The splitting identities give
++ $b^n = \alpha_2^n \circ \pi_2^n \circ b^n$, so
++ $(b')^n \circ b^n = 0$ in every degree.
+````
+
+Original SHA-256 `B30846BCB76CAD968307A1E6924B423F47591946D25EF8CB317A7BFB65961E69`; replacement SHA-256 `90B1705B0A4B10DDC2E22D110747C8131D2D35C3A2D60887AC6D2776885C5E9B`.
+
+</details>
+
+<details id="mc-stk-err-2518">
+<summary><code>MC-STK-ERR-2518 — derived.tex:derived.tex:3292 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2518`; producer ID: `DERIVED-NEW-010`
+- Bound source locator: `derived.tex:derived.tex:3292`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L3292-L3293) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2518-OP1`
+
+Pinned-official lines `3292-3293`; bytes `113729:113810`.
+
+````diff
+- are compatible with the chosen splittings and hence
+- define morphisms of triangles
++ define morphisms of triangles in $K(\mathcal{A})$
++ (the boundary squares commute up to homotopy)
+````
+
+Original SHA-256 `B4D33439DE19F07C6D0F8EB0DDDB2A81739230ED5FB616BEA5295C287632E1C5`; replacement SHA-256 `16B2A36B3F2C4843DB1D818F8E13F85355A43DC52C0D2DBC740BA55B2CD8BC1F`.
+
+</details>
+
+<details id="mc-stk-err-2519">
+<summary><code>MC-STK-ERR-2519 — derived.tex:derived.tex:3306 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2519`; producer ID: `DERIVED-NEW-011`
+- Bound source locator: `derived.tex:derived.tex:3306`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L3306) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2519-OP1`
+
+Pinned-official lines `3306-3306`; bytes `114137:114201`.
+
+````diff
+- of the bottom split sequence in the diagram provides a splitting
++ of the bottom split sequence in the diagram provide a splitting
+````
+
+Original SHA-256 `CD032865138EE8AFD3DA44686ADBEA6E72BA1E33B19F42B19B6B05A2B8892010`; replacement SHA-256 `56D9EC17F8AEB9A6606C8392F6DF9996703FE93D06DA3866E54C41FC66988A3B`.
+
+</details>
+
+<details id="mc-stk-err-2520">
+<summary><code>MC-STK-ERR-2520 — derived.tex:derived.tex:3350 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2520`; producer ID: `DERIVED-NEW-009`
+- Bound source locator: `derived.tex:derived.tex:3350`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L3350) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2520-OP1`
+
+Pinned-official lines `3350-3350`; bytes `116146:116213`.
+
+````diff
+- Precomposing the previous isomorphism of triangles with $-1$ on $Y$
++ Precomposing the previous isomorphism of triangles with $-1$ on $X$
+````
+
+Original SHA-256 `E78B4410502EB181EF8C2CE3087610C0E6F6D98D0424A450418D982789050EA4`; replacement SHA-256 `2071722B15A7CC8EB88C51E3B4EA4222CB8F8C0C7D16CAC91683BB216472B3CB`.
+
+</details>
+
+<details id="mc-stk-err-2521">
+<summary><code>MC-STK-ERR-2521 — derived.tex:derived.tex:3396 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2521`; producer ID: `DERIVED-NEW-012`
+- Bound source locator: `derived.tex:derived.tex:3396`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L3396) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2521-OP1`
+
+Pinned-official lines `3396-3396`; bytes `118396:118445`.
+
+````diff
+- bounded (above, below) is bounded (above, below).
++ bounded (above, below) complexes is bounded (above, below).
+````
+
+Original SHA-256 `634C5B716C60BEEB6078D563A578B24CC128B6632D9626DAC463E9573CF948A4`; replacement SHA-256 `80FB632701271AA56CD7931E6EA3BB68A4FDF57F3CE9463B2B58772DB4524B7C`.
+
+</details>
+
+<details id="mc-stk-err-2522">
+<summary><code>MC-STK-ERR-2522 — derived.tex:derived.tex:3572 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2522`; producer ID: `DERIVED-NEW-013`
+- Bound source locator: `derived.tex:derived.tex:3572`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L3572-L3575) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2522-OP1`
+
+Pinned-official lines `3572-3573`; bytes `125317:125431`.
+
+````diff
+- $\text{Comp}(\mathcal{A}) \to \text{DoubleComp}(\mathcal{C})$,
+- $Y^\bullet \mapsto X^\bullet \otimes Y^\bullet$ and
++ $\text{Comp}(\mathcal{B}) \to \text{DoubleComp}(\mathcal{C})$,
++ $Y^\bullet \mapsto X^\bullet \otimes Y^\bullet$ and
+````
+
+Original SHA-256 `86B6FB6AE4DAF8C3E52296BAB7031C5EEF73FFD484357B42DDEEE2D0413D2735`; replacement SHA-256 `0820AA1F55FA5205A78CC914730283BA0351ABBDE3F6EB3B56C8149FA178F6D4`.
+
+### Change 2: `MC-STK-ERR-2522-OP2`
+
+Pinned-official lines `3574-3575`; bytes `125432:125542`.
+
+````diff
+- $\text{Comp}(\mathcal{B}) \to \text{DoubleComp}(\mathcal{C})$,
+- $X^\bullet \mapsto X^\bullet \otimes Y^\bullet$
++ $\text{Comp}(\mathcal{A}) \to \text{DoubleComp}(\mathcal{C})$,
++ $X^\bullet \mapsto X^\bullet \otimes Y^\bullet$
+````
+
+Original SHA-256 `44B6092479F657EB6B70DCDCEA8BBC121E081B686A80A38DE937CAD3B03186CC`; replacement SHA-256 `B6545B30B9DCFD9FCCAD096F23FDAC7433BB8A0C22E0BB5808E604D03D269BD4`.
+
+</details>
+
+<details id="mc-stk-err-2523">
+<summary><code>MC-STK-ERR-2523 — derived.tex:derived.tex:4379 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2523`; producer ID: `DERIVED-NEW-015`
+- Bound source locator: `derived.tex:derived.tex:4379`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L4379) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2523-OP1`
+
+Pinned-official lines `4379-4379`; bytes `153997:154043`.
+
+````diff
+- such that $\text{gr}(X) \in D^b(\mathcal{A})$.
++ such that $\text{gr}(X) \in D^b(\text{Gr}(\mathcal{A}))$.
+````
+
+Original SHA-256 `A685D1E593F96E442BB347EC432E46082A14028F5AB57A7474D367057AC65006`; replacement SHA-256 `4E770A212F570A987C1A72185E8835635C9F38BB61394BC5DC330295EADC4111`.
+
+</details>
+
+<details id="mc-stk-err-2524">
+<summary><code>MC-STK-ERR-2524 — derived.tex:derived.tex:4792 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2524`; producer ID: `DERIVED-NEW-016`
+- Bound source locator: `derived.tex:derived.tex:4792`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L4792-L4794) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2524-OP1`
+
+Pinned-official lines `4792-4794`; bytes `167915:168006`.
+
+````diff
+- \colim_\mathcal{I} \Mor_{\mathcal{D}'}(W, F(Z''))
+- \longrightarrow
+- \Mor_{\mathcal{D}'}(W, C)
++ \Mor_{\mathcal{D}'}(W, C)
++ \longrightarrow
++ \colim_\mathcal{I} \Mor_{\mathcal{D}'}(W, F(Z''))
+````
+
+Original SHA-256 `1FB56E70CAF5552B3DC708A94EAD05C96E1B0D7AD03090370C1EBD78B9156AD6`; replacement SHA-256 `7D8791CBDCF0DE77C3E3D12B0CD367901D87AEDF673E5AA0029E98986FBE049C`.
+
+</details>
+
+<details id="mc-stk-err-2525">
+<summary><code>MC-STK-ERR-2525 — derived.tex:derived.tex:4891 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2525`; producer ID: `DERIVED-RECON-025`
+- Bound source locator: `derived.tex:derived.tex:4891`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L4891) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2525-OP1`
+
+Pinned-official lines `4891-4891`; bytes `172310:172370`.
+
+````diff
+- The proof of the corresponding statements for $LF$ are dual.
++ The proof of the corresponding statements for $LF$ is dual.
+````
+
+Original SHA-256 `1B5422EEC45E517353DB4E28357EFA4CA75E1FE5DE10D8F34FE3783335D8BBD4`; replacement SHA-256 `8C1FB6A87246659D944713BDDE1489F806CB536DF0030869FFB465B0E85BF528`.
+
+</details>
+
+<details id="mc-stk-err-2526">
+<summary><code>MC-STK-ERR-2526 — derived.tex:derived.tex:4933 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2526`; producer ID: `DERIVED-NEW-019`
+- Bound source locator: `derived.tex:derived.tex:4933`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L4933-L4967) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2526-OP1`
+
+Pinned-official lines `4933-4933`; bytes `174137:174187`.
+
+````diff
+- The fully faithfulness in (6) follows from (3) and
++ The full faithfulness in (6) follows from (3) and
+````
+
+Original SHA-256 `08E660089655BFB461375D95A2936DB3A2047E2E4645A0A52025C4498A211DA2`; replacement SHA-256 `FA5145C589160D1A87F81AF31C0F34A0A6356343E4F2D54726CA51A8763187DF`.
+
+### Change 2: `MC-STK-ERR-2526-OP2`
+
+Pinned-official lines `4965-4965`; bytes `175316:175390`.
+
+````diff
+- We say $F$ is {\it right derivable}, or that $RF$ {\it everywhere defined}
++ We say $F$ is {\it right derivable}, or that $RF$ is {\it everywhere defined}
+````
+
+Original SHA-256 `06A1A2DD8D10FDDB750DFE6A5E47345707017C5A4D6CFD2C6FC1C88458907CAE`; replacement SHA-256 `B932E995422C58742C9F0D5C35AEEC1AE73937D9A241EDCF5AB30AE1F9A8C319`.
+
+### Change 3: `MC-STK-ERR-2526-OP3`
+
+Pinned-official lines `4967-4967`; bytes `175444:175517`.
+
+````diff
+- We say $F$ is {\it left derivable}, or that $LF$ {\it everywhere defined}
++ We say $F$ is {\it left derivable}, or that $LF$ is {\it everywhere defined}
+````
+
+Original SHA-256 `9EC7937C543D66AB0E6AEF234DCAA65B48AAC7B70EB477D4D84B446B32D93CEB`; replacement SHA-256 `F3093896B52F8EBFEA4813969528B70E09670E2C6EF942146297D8F98348633F`.
+
+</details>
+
+<details id="mc-stk-err-2527">
+<summary><code>MC-STK-ERR-2527 — derived.tex:derived.tex:4982 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2527`; producer ID: `DERIVED-NEW-018`
+- Bound source locator: `derived.tex:derived.tex:4982`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L4982-L4983) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2527-OP1`
+
+Pinned-official lines `4982-4983`; bytes `175983:176072`.
+
+````diff
+- In fact, it might happen that the canonical map
+- $F(X) \to RF(X)$ is never an isomorphism.
++ The canonical map
++ $F(X) \to RF(X)$ need not be an isomorphism for a given $X$.
+````
+
+Original SHA-256 `55C9BF4E24BB29504C292D75E34BA58F9EE1BA5B16AA1584708E229611236856`; replacement SHA-256 `4E2731E89F6D1FB4AB54DCF5F446709467C2EFA4CCE15EF083EC8AA1174BF610`.
+
+</details>
+
+<details id="mc-stk-err-2528">
+<summary><code>MC-STK-ERR-2528 — derived.tex:derived.tex:5056 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2528`; producer ID: `DERIVED-NEW-017`
+- Bound source locator: `derived.tex:derived.tex:5056`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L5056-L5065) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2528-OP1`
+
+Pinned-official lines `5056-5058`; bytes `178562:178692`.
+
+````diff
+- \Hom_{\mathcal{D}'}(F(X \oplus Y), W)
+- \longrightarrow
+- \colim_{s : X \to X', s' : Y \to Y'} \Hom_{\mathcal{D}'}(F(X' \oplus Y'), W)
++ \Hom_{\mathcal{D}'}(W, F(X \oplus Y))
++ \longrightarrow
++ \colim_{s : X \to X', s' : Y \to Y'} \Hom_{\mathcal{D}'}(W, F(X' \oplus Y'))
+````
+
+Original SHA-256 `AA4857A9DFE2CF9A17566CD7EF0A7A0CA6C28F3B75A46D85997705D0DDAB6E69`; replacement SHA-256 `3E86E6B10140C0F2E05775AC605D196EA91018CA1DB4AD208BF3CCF20E860A5A`.
+
+### Change 2: `MC-STK-ERR-2528-OP2`
+
+Pinned-official lines `5063-5065`; bytes `178823:178919`.
+
+````diff
+- \Hom_{\mathcal{D}'}(F(X), W)
+- \longrightarrow
+- \colim_{s : X \to X'} \Hom_{\mathcal{D}'}(F(X'), W)
++ \Hom_{\mathcal{D}'}(W, F(X))
++ \longrightarrow
++ \colim_{s : X \to X'} \Hom_{\mathcal{D}'}(W, F(X'))
+````
+
+Original SHA-256 `C4818A89DE7688CA00A74C71E9C53D24DC93D19D4BB2A1EA62703E650426006A`; replacement SHA-256 `B9A798577830B491AD3EECA3A3AF52D819BC346984141D95FD10EF99FB587089`.
+
+</details>
+
+<details id="mc-stk-err-2529">
+<summary><code>MC-STK-ERR-2529 — derived.tex:derived.tex:5515 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2529`; producer ID: `DERIVED-NEW-020`
+- Bound source locator: `derived.tex:derived.tex:5515`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L5515) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2529-OP1`
+
+Pinned-official lines `5515-5515`; bytes `195259:195324`.
+
+````diff
+- Hence in the category $K^\bullet/\text{Qis}^{+}(\mathcal{A})$ the
++ Hence in the category $K^\bullet/\text{Qis}(\mathcal{A})$ the
+````
+
+Original SHA-256 `7F66FC8EC5D95C3AE700F3092B69335D8D319B278BD68AC2777FA66F6804899F`; replacement SHA-256 `12E82A4C26D42AD64C3A407918580C4726E78084121450F3C457D567DB0F5D81`.
+
+</details>
+
+<details id="mc-stk-err-2530">
+<summary><code>MC-STK-ERR-2530 — derived.tex:derived.tex:5826 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2530`; producer ID: `DERIVED-RECON-030`
+- Bound source locator: `derived.tex:derived.tex:5826`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L5826) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2530-OP1`
+
+Pinned-official lines `5826-5826`; bytes `207240:207293`.
+
+````diff
+- \item If every object of $\mathcal{A}$ is quotient of
++ \item If every object of $\mathcal{A}$ is a quotient of
+````
+
+Original SHA-256 `9D652315F35AA54A103DB5A4B6D7D89685345D77C90CC9F24D0DFF23A9815115`; replacement SHA-256 `2C059E9CC3EA429B0A4ACB497FBCCE9DEC9A0732F1ACF2F853E6247FDC80717E`.
+
+</details>
+
+<details id="mc-stk-err-2531">
+<summary><code>MC-STK-ERR-2531 — derived.tex:derived.tex:5856 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2531`; producer ID: `DERIVED-NEW-021`
+- Bound source locator: `derived.tex:derived.tex:5856`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L5856-L5877) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2531-OP1`
+
+Pinned-official lines `5856-5877`; bytes `208585:209632`.
+
+````diff
+- Say $I^n = 0$ for $n < n_0$. Setting $J^n = \Im(d^n)$ we break
+- $I^\bullet$ into short exact sequences
+- $0 \to J^n \to I^{n + 1} \to J^{n + 1} \to 0$
+- for $n \geq n_0$. These sequences induce distinguished triangles
+- $(J^n, I^{n + 1}, J^{n + 1})$ in $D^+(\mathcal{A})$ by
+- Lemma \ref{lemma-derived-canonical-delta-functor}.
+- For each $k \in \mathbf{Z}$ denote $H_k$ the assertion:
+- For all $n \leq k$ the object $J^n$ is in $\mathcal{I}$.
+- Then $H_k$ holds trivially for $k < n_0$. If $H_n$ holds,
+- then Lemma \ref{lemma-2-out-of-3-computes} shows that
+- $J^{n + 1}$ is in $\mathcal{I}$ and we have $H_{n + 1}$.
+- By Proposition \ref{proposition-derived-functor} we have a
+- distinguished triangle $(RF(J^n), RF(I^{n + 1}), RF(J^{n + 1}))$.
+- Since $J^n, I^{n + 1}, J^{n + 1}$ are in $\mathcal{I}$
+- the long exact cohomology sequence
+- (\ref{equation-long-exact-cohomology-sequence-D})
+- associated to this distinguished triangle collapses
+- to an exact sequence
+- $$
+- 0 \to F(J^n) \to F(I^{n + 1}) \to F(J^{n + 1}) \to 0
+- $$
+- This in turn proves that $F(I^\bullet)$ is exact.
++ Since $I^\bullet$ is acyclic, it is isomorphic to zero in
++ $D^+(\mathcal{A})$. The right derived functor is defined at zero,
++ with value zero, and hence at $I^\bullet$, with value zero, by
++ Lemma \ref{lemma-derived-inverts}.
++ The complex $I^\bullet$ is bounded below and all its terms are
++ right $F$-acyclic. Thus Lemma \ref{lemma-leray-acyclicity} shows that
++ $F(I^\bullet) \to RF(I^\bullet)$ is an isomorphism.
++ Consequently $F(I^\bullet)$ is acyclic.
+````
+
+Original SHA-256 `4415B922F1905C7E0F6396CD64ADB337293FE2028AD8358586F02F80892ED81A`; replacement SHA-256 `93195FD2B79624D1003416BF163D8ED47304923B21B8001F44651EB74185912D`.
+
+</details>
+
+<details id="mc-stk-err-2532">
+<summary><code>MC-STK-ERR-2532 — derived.tex:derived.tex:6063 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2532`; producer ID: `DERIVED-RECON-033`
+- Bound source locator: `derived.tex:derived.tex:6063`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L6063-L6064) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2532-OP1`
+
+Pinned-official lines `6063-6063`; bytes `216694:216700`.
+
+````diff
+- t_{-2}
++ t^{-2}
+````
+
+Original SHA-256 `A11709C1B88545ACEA4356BCDFB1EEDE285D0D8C508DA7B2E8B880B775D6F515`; replacement SHA-256 `27781E5178486F10D7A1BBB477EC66881D7662356C0FEA36E87AE4A94750ED8A`.
+
+### Change 2: `MC-STK-ERR-2532-OP2`
+
+Pinned-official lines `6063-6063`; bytes `216711:216717`.
+
+````diff
+- g_{-2}
++ g^{-2}
+````
+
+Original SHA-256 `F1984CA73B1467862D91BDDF29C4F55E14B638DE4440FA48453438F100FD01DB`; replacement SHA-256 `4730C18D7D657BAE0B5D084DEE19397CEB4BB6B02727A714B55F6A4EC3AE6CAE`.
+
+### Change 3: `MC-STK-ERR-2532-OP3`
+
+Pinned-official lines `6064-6064`; bytes `216736:216742`.
+
+````diff
+- t_{-1}
++ t^{-1}
+````
+
+Original SHA-256 `B78EC30E5EC04E8107089C30BFCC122BF4EB5DD892FBD9FCBC1AD80B7C12652D`; replacement SHA-256 `5D42311231194D5CB603FB6070EEA0C4559E38A11FD05B450496ACD09474B64C`.
+
+### Change 4: `MC-STK-ERR-2532-OP4`
+
+Pinned-official lines `6064-6064`; bytes `216753:216759`.
+
+````diff
+- g_{-1}
++ g^{-1}
+````
+
+Original SHA-256 `D6BFA0C19C3B38E79A61B2759BA79FD16B5477F745301C7A43940863B48F511A`; replacement SHA-256 `AA45A7AD376E6EF90A542AD68E51EB02AE78A4BFBA80D413FA35A23B5359A250`.
+
+</details>
+
+<details id="mc-stk-err-2533">
+<summary><code>MC-STK-ERR-2533 — derived.tex:derived.tex:6118 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2533`; producer ID: `DERIVED-NEW-023`
+- Bound source locator: `derived.tex:derived.tex:6118`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L6118-L6128) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2533-OP1`
+
+Pinned-official lines `6118-6119`; bytes `218708:218760`.
+
+````diff
+- Lemma \ref{lemma-derived-of-quotient}.
+- For an object
++ Lemma \ref{lemma-derived-of-quotient}.
++ Apply $u$ termwise to complexes. If $s$ is a quasi-isomorphism,
++ then the cohomology of the cone of $u(s)$ lies in $\mathcal{B}$,
++ because $vu$ is naturally isomorphic to the identity.
++ Thus this construction sends quasi-isomorphisms to isomorphisms
++ after passing to $D(\mathcal{A})/D_\mathcal{B}(\mathcal{A})$,
++ and induces a functor from $D(\mathcal{A}/\mathcal{B})$ to this quotient.
++ For an object
+````
+
+Original SHA-256 `56D46EBC77C10E20F756973531FC7CDC87ABBEDA8E2C7F37A90FAC26A62A0C72`; replacement SHA-256 `55F13699033C0915BCDAC00ECE3DEB62EAA202FE3DD9EA867938E1DE8963997F`.
+
+### Change 2: `MC-STK-ERR-2533-OP2`
+
+Pinned-official lines `6128-6128`; bytes `219334:219362`.
+
+````diff
+- $X, Y \in \Ob(\mathcal{A}))$
++ $X, Y \in \Ob(D(\mathcal{A}))$
+````
+
+Original SHA-256 `BAAF4D5D4097F004764C8E7E864863410AB0011C8D81ECD3B3905391504B864B`; replacement SHA-256 `E723E8F97D24D2ADEEEDCDDEAAF678E725B87B1A6B9EB8F4C7350FECA047CA67`.
+
+</details>
+
+<details id="mc-stk-err-2534">
+<summary><code>MC-STK-ERR-2534 — derived.tex:derived.tex:6524 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2534`; producer ID: `DERIVED-NEW-024`
+- Bound source locator: `derived.tex:derived.tex:6524`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L6524-L6527) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2534-OP1`
+
+Pinned-official lines `6524-6524`; bytes `234248:234309`.
+
+````diff
+- d \circ (h_1^n - h_2^n) + (h_1^{n + 1} - h_2^{n + 1}) \circ d
++ d \circ (h_2^n - h_1^n) + (h_2^{n + 1} - h_1^{n + 1}) \circ d
+````
+
+Original SHA-256 `919ED8E8BD0A43ABD2AE08536193E1D8554B6D8E7F272B54A1E8961BF5FF7A35`; replacement SHA-256 `CF4AEEA2B4A8616A9EDBC873B4D5BCA1337738B126CBD2BBE3500AC06A2881A0`.
+
+### Change 2: `MC-STK-ERR-2534-OP2`
+
+Pinned-official lines `6527-6527`; bytes `234373:234416`.
+
+````diff
+- equals $h_1^n - h_2^n$ on the first summand
++ equals $h_2^n - h_1^n$ on the first summand
+````
+
+Original SHA-256 `EBC4D8AB0979902C4B2EAE128824A8F2588357A1ACE0718267BE035B5C7FF228`; replacement SHA-256 `2BAFA18807D0CE5E8CD6EF0B33912793A45BA398841BAF9C382AEC6CA68A15C6`.
+
+</details>
+
+<details id="mc-stk-err-2535">
+<summary><code>MC-STK-ERR-2535 — derived.tex:derived.tex:6543 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2535`; producer ID: `DERIVED-NEW-025`
+- Bound source locator: `derived.tex:derived.tex:6543`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L6543-L6824) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2535-OP1`
+
+Pinned-official lines `6543-6543`; bytes `234886:234950`.
+
+````diff
+- Let $I^\bullet$ be bounded below complex consisting of injective
++ Let $I^\bullet$ be a bounded below complex consisting of injective
+````
+
+Original SHA-256 `53A0F8E7270B74901EBC2D24E2E14AA97055AB3D35FB82DCD7E55DC378AA3960`; replacement SHA-256 `3A054361AE1CE7034EC6166316916FFEF847256474F9D9214CBA2411CFEF0EDC`.
+
+### Change 2: `MC-STK-ERR-2535-OP2`
+
+Pinned-official lines `6824-6824`; bytes `243466:243531`.
+
+````diff
+- Let $P^\bullet$ be bounded above complex consisting of projective
++ Let $P^\bullet$ be a bounded above complex consisting of projective
+````
+
+Original SHA-256 `29FC0CB35137DA9AEA7A2411AF75B1BB510D25C93D21A1CA854DED6D01CB022E`; replacement SHA-256 `CD9972C99F111711D4FD596A1D2D7B4D274389146020CF5DE59C5F05C4653B78`.
+
+</details>
+
+<details id="mc-stk-err-2536">
+<summary><code>MC-STK-ERR-2536 — derived.tex:derived.tex:7248 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2536`; producer ID: `DERIVED-RECON-044`
+- Bound source locator: `derived.tex:derived.tex:7248`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L7248-L7249) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2536-OP1`
+
+Pinned-official lines `7248-7248`; bytes `258136:258197`.
+
+````diff
+- the differential of the complex $H^p_I(I^{\bullet, \bullet})$
++ the differential of the complex $H^q_I(I^{\bullet, \bullet})$
+````
+
+Original SHA-256 `940C21AD30858D1DE3EB8209CB52BEF0A5FBEBCE5DA2700EFC313CFA46C85D4C`; replacement SHA-256 `B5F6E1648165EB29B918128BE0897AE112F9E2E1C8F34E4F85237EBCDD125CA7`.
+
+### Change 2: `MC-STK-ERR-2536-OP2`
+
+Pinned-official lines `7249-7249`; bytes `258198:258261`.
+
+````diff
+- which is an injective resolution of $H^p(K^\bullet)$. Hence the
++ which is an injective resolution of $H^q(K^\bullet)$. Hence the
+````
+
+Original SHA-256 `B9CD02D6C2C563F85B2626F0B77F5FAEA2D6DEDB775A2B8DC66AEB9ED00D5901`; replacement SHA-256 `A63DBC47D455525F178CFD8B793EEEC36C7448DE287500BE71A03FF99B2A0F54`.
+
+</details>
+
+<details id="mc-stk-err-2537">
+<summary><code>MC-STK-ERR-2537 — derived.tex:derived.tex:7311 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2537`; producer ID: `DERIVED-NEW-026`
+- Bound source locator: `derived.tex:derived.tex:7311`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L7311) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2537-OP1`
+
+Pinned-official lines `7311-7311`; bytes `260396:260448`.
+
+````diff
+- $t$ on $RF(I) = F(I)$. Conversely, assume (1) holds.
++ $t$ at $I[0]$, using $RF(I[0]) = F(I)[0]$. Conversely, assume (1) holds.
+````
+
+Original SHA-256 `B70EFC7113574EEFA6730D9875B33693989A432D8CB872F8298E8D0EE18C7DE4`; replacement SHA-256 `7F0BD7418C065B009D36B2E5BD31773BFC945943D082EC4D646BD1FF63D9592E`.
+
+</details>
+
+<details id="mc-stk-err-2538">
+<summary><code>MC-STK-ERR-2538 — derived.tex:derived.tex:7906 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2538`; producer ID: `DERIVED-NEW-027`
+- Bound source locator: `derived.tex:derived.tex:7906`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L7906) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2538-OP1`
+
+Pinned-official lines `7906-7906`; bytes `281619:281682`.
+
+````diff
+- The pushout $f' : I \to I \amalg_A B$ of $f$ by $u$ is a strict
++ The pushout $f' : I \to I \amalg_A B$ of $u$ by $f$ is a strict
+````
+
+Original SHA-256 `A84A8E4095E1F2367D930B65B5C2511A4EA9A8E16158B19583329F31CFBE23FA`; replacement SHA-256 `1D2848A8BD0926B7209ED159263A682F78611C2D58C2FBE046EDFE3CE959FA00`.
+
+</details>
+
+<details id="mc-stk-err-2539">
+<summary><code>MC-STK-ERR-2539 — derived.tex:derived.tex:8826 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2539`; producer ID: `DERIVED-NEW-029`
+- Bound source locator: `derived.tex:derived.tex:8826`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L8826-L8997) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2539-OP1`
+
+Pinned-official lines `8826-8826`; bytes `314554:314625`.
+
+````diff
+- We call $\delta(E) = fs^{-1}$ the {\it class} of the Yoneda extension.
++ Here $f^{-i} = \text{id}_A$ and all other components of $f$ are zero.
++ We call $\delta(E) = fs^{-1}$ the {\it class} of the Yoneda extension.
+````
+
+Original SHA-256 `F0F216070898F091268CD3C36E233D00B900CCE2BBB631E9E24A85ED6B73B940`; replacement SHA-256 `F9720243C4D32AA71B56C054B08A3EF6063049CB535274A90EFDEB56E1AAB99A`.
+
+### Change 2: `MC-STK-ERR-2539-OP2`
+
+Pinned-official lines `8917-8930`; bytes `317949:318328`.
+
+````diff
+- can be described in terms of Yoneda extensions as follows: the
+- composition of
+- $$
+- 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to B \to 0
+- $$
+- and
+- $$
+- 0 \to B \to Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
+- $$
+- is the Yoneda extension
+- $$
+- 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to
+- Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
+- $$
++ can be described in terms of Yoneda extensions as follows. Let
++ $$
++ E : 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to B \to 0
++ $$
++ and
++ $$
++ E' : 0 \to B \to Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
++ $$
++ be given. With the projection convention for $\delta$ above, their
++ composition $\delta(E)[j] \circ \delta(E')$ equals
++ $(-1)^{ij}\delta(S)$, where
++ $$
++ S : 0 \to A \to Z_{i - 1} \to Z_{i - 2} \to \ldots \to Z_0 \to
++ Z'_{j - 1} \to Z'_{j - 2} \to \ldots \to Z'_0 \to C \to 0
++ $$
++ is the spliced extension; its joining arrow is the composition
++ $Z_0 \to B \to Z'_{j - 1}$.
+````
+
+Original SHA-256 `6379E37966443A84EDCD132CC412C39701F532FA246489AFD6442AA761C42B81`; replacement SHA-256 `2F7ABF90CA13E4C5EDCE18A8FACCAAE5975FE84F0FFB69A685848DC2CC249745`.
+
+### Change 3: `MC-STK-ERR-2539-OP3`
+
+Pinned-official lines `8997-8997`; bytes `320038:320108`.
+
+````diff
+- Then $\delta(E)$ is the composition of $\delta(E')$ and $\delta(E'')$
++ Then $\delta(E) = (-1)^{p(i - p)}\delta(E'')[p] \circ \delta(E')$,
+````
+
+Original SHA-256 `965A3B832578C031119D626C83DDC8D21D873E4F5CF1582A600CA612BD22FE83`; replacement SHA-256 `DD04ABD9078F923606F77CDEA2984616BFEF1ABE2E1D3BED82DF64B8C51FE0D8`.
+
+</details>
+
+<details id="mc-stk-err-2540">
+<summary><code>MC-STK-ERR-2540 — derived.tex:derived.tex:8913 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2540`; producer ID: `DERIVED-NEW-028`
+- Bound source locator: `derived.tex:derived.tex:8913`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L8913-L8915) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2540-OP1`
+
+Pinned-official lines `8913-8915`; bytes `317842:317946`.
+
+````diff
+- \Ext^j_\mathcal{A}(B, C) \times \Ext^i_\mathcal{A}(A, B)
+- \longrightarrow
+- \Ext^{i + j}_\mathcal{A}(A, C)
++ \Ext^i_\mathcal{A}(B, A) \times \Ext^j_\mathcal{A}(C, B)
++ \longrightarrow
++ \Ext^{i + j}_\mathcal{A}(C, A)
+````
+
+Original SHA-256 `21F727D9B9A3699555704A96AC35AC4966A5AFF8F91C51753DD25ACABB059F7D`; replacement SHA-256 `739F9212CC86E6DC4460987FA7F37AAFFCF7ACA697FEF77AA3D458FB494DD409`.
+
+</details>
+
+<details id="mc-stk-err-2541">
+<summary><code>MC-STK-ERR-2541 — derived.tex:derived.tex:8990 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2541`; producer ID: `DERIVED-NEW-030`
+- Bound source locator: `derived.tex:derived.tex:8990`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L8990-L8996) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2541-OP1`
+
+Pinned-official lines `8990-8990`; bytes `319758:319807`.
+
+````diff
+- For $i > p$ write any class $\xi$ as $\delta(E)$
++ If $p = 0$, then $\Hom_\mathcal{A}(A, A) = 0$ for every object $A$.
++ Thus $\text{id}_A = 0$, every object is zero, and the conclusion follows.
++ Assume $p \geq 1$. For $i > p$ write any class $\xi$ as $\delta(E)$
+````
+
+Original SHA-256 `6934BF235F2A3A1F12F148A51B4765A0510BE04EA8005858250AB47547F71AF2`; replacement SHA-256 `4996CB4DC9BD7F675351237714D0B5F1941154EFF4EB7C58A93E29C751534EA1`.
+
+### Change 2: `MC-STK-ERR-2541-OP2`
+
+Pinned-official lines `8996-8996`; bytes `319972:320038`.
+
+````diff
+- Set $C = \Ker(Z_{p - 1} \to Z_{p - 2}) = \Im(Z_p \to Z_{p - 1})$.
++ Set $C = \Im(Z_p \to Z_{p - 1})$.
+````
+
+Original SHA-256 `818A95254AE589F3E2BF77449FA1544C1E0C9B332BDC5BB44C699329ED085CE3`; replacement SHA-256 `C9694FBC88501062A65EF569FB6CF098DFEB28D90C26397F657E31F9A38A9B51`.
+
+</details>
+
+<details id="mc-stk-err-2542">
+<summary><code>MC-STK-ERR-2542 — derived.tex:derived.tex:9067 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2542`; producer ID: `DERIVED-RECON-069`
+- Bound source locator: `derived.tex:derived.tex:9067`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L9067) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2542-OP1`
+
+Pinned-official lines `9067-9067`; bytes `322297:322369`.
+
+````diff
+- as follows. Take the free abelian group on the objects on $\mathcal{D}$
++ as follows. Take the free abelian group on the objects of $\mathcal{D}$
+````
+
+Original SHA-256 `FAACA4789B75E8657CE6F8DF6A4667A999CE20E1637A032BA56AFFC5ADD78C32`; replacement SHA-256 `3A72BE0BDE7A3B9305BE2CBB9EB7AD6A67656DD8C37B424482D5172EC554CC7C`.
+
+</details>
+
+<details id="mc-stk-err-2543">
+<summary><code>MC-STK-ERR-2543 — derived.tex:derived.tex:9712 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2543`; producer ID: `DERIVED-NEW-032`
+- Bound source locator: `derived.tex:derived.tex:9712`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L9712-L9732) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2543-OP1`
+
+Pinned-official lines `9712-9714`; bytes `345076:345201`.
+
+````diff
+- \prod\nolimits_b \Hom(K^{-b}, I^{b - 1}) \to
+- \prod\nolimits_b \Hom(K^{-b}, I^b) \to
+- \prod\nolimits_b \Hom(K^{-b}, I^{b + 1})
++ \prod\nolimits_b \Hom(K^b, I^{b - 1}) \to
++ \prod\nolimits_b \Hom(K^b, I^b) \to
++ \prod\nolimits_b \Hom(K^b, I^{b + 1})
+````
+
+Original SHA-256 `79397131B9F9B063CBC9FA679C5C9AE2B27A8D3C196593A68AA721F78F018705`; replacement SHA-256 `BA2651E21DF71CF5D7A3285928F91F28A72672FFEF063E9DEB4CA3978C1B6BE2`.
+
+### Change 2: `MC-STK-ERR-2543-OP2`
+
+Pinned-official lines `9717-9717`; bytes `345265:345303`.
+
+````diff
+- in the middle. Similarly, the complex
++ in the middle. Here these are the degrees $-1,0,1$ of the full Hom complex,
++ with $C^r = \prod_b \Hom(K^b, I^{b + r})$ and
++ $(d_C^r f)^b = d_I^{b + r}f^b - (-1)^r f^{b + 1}d_K^b$.
++ Its degree $r$ cohomology is
++ $\Hom_{K(\mathcal{A})}(K^\bullet, I^\bullet[r])$.
++ Similarly, the complex
+````
+
+Original SHA-256 `30D232E25BD43CA54C8C05845758C66AE2F1443273DF149D8B04AD72E29595E6`; replacement SHA-256 `9B31D3CB47526BDDE5BE9CEC44E6EDEE7B38D9B12569F0102D39864ABA3DE085`.
+
+### Change 3: `MC-STK-ERR-2543-OP3`
+
+Pinned-official lines `9720-9722`; bytes `345312:345443`.
+
+````diff
+- \prod\nolimits_b \Hom(K^{-b}, I_t^{b - 1}) \to
+- \prod\nolimits_b \Hom(K^{-b}, I_t^b) \to
+- \prod\nolimits_b \Hom(K^{-b}, I_t^{b + 1})
++ \prod\nolimits_b \Hom(K^b, I_t^{b - 1}) \to
++ \prod\nolimits_b \Hom(K^b, I_t^b) \to
++ \prod\nolimits_b \Hom(K^b, I_t^{b + 1})
+````
+
+Original SHA-256 `CDDE659C85D6DB69F8054F837D1B89382FAE4DE265135EC91CC63B762428B548`; replacement SHA-256 `800ABD49333A012A7868F83DB2D8DD122FDF78EED1C2424A0D524FEE3C58AF7E`.
+
+### Change 4: `MC-STK-ERR-2543-OP4`
+
+Pinned-official lines `9732-9732`; bytes `345732:345791`.
+
+````diff
+- $\Hom_{K(\mathcal{A})}(K^\bullet, I_t^\bullet) = 0$, hence
++ $\Hom_{K(\mathcal{A})}(K^\bullet, I_t^\bullet[r]) = 0$
++ for every integer $r$, hence
+````
+
+Original SHA-256 `C1D1919DD57D3A421B48E4738AC860C3D005FE9B456A4769A30A7668D322E5CA`; replacement SHA-256 `6986DE7BA01D186A02ED4E6B779E17267A1AD5DCC13C703B25CCE4D337171FC3`.
+
+</details>
+
+<details id="mc-stk-err-2544">
+<summary><code>MC-STK-ERR-2544 — derived.tex:derived.tex:9909 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2544`; producer ID: `DERIVED-NEW-033`
+- Bound source locator: `derived.tex:derived.tex:9909`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L9909-L9918) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2544-OP1`
+
+Pinned-official lines `9909-9918`; bytes `351481:351936`.
+
+````diff
+- By Lemma \ref{lemma-subcategory-right-resolution} we can find a
+- quasi-isomorphism $\sigma_{\geq 0}K^\bullet \to M^\bullet$ with
+- $M^n = 0$ for $n < 0$ and $d(M^n) = 0$ for $n \geq 0$. Then $K^\bullet$
+- is quasi-isomorphic to the complex
+- $$
+- \ldots \to K^{-2} \to K^{-1} \to M^0 \to M^1 \to \ldots
+- $$
+- Hence we may assume that $d(K^n) = 0$ for $n \gg 0$. Note that
+- the condition $n + d(K^n) \to -\infty$ as $n \to -\infty$ is not
+- violated by this replacement.
++ Choose an integer $a$ such that $d(K^n) < \infty$ for all $n < a$.
++ By Lemma \ref{lemma-subcategory-right-resolution} we can find a
++ quasi-isomorphism $\sigma_{\geq a}K^\bullet \to M^\bullet$ with
++ $M^n = 0$ for $n < a$ and $d(M^n) = 0$ for $n \geq a$. Then $K^\bullet$
++ is quasi-isomorphic to the complex
++ $$
++ \ldots \to K^{a - 2} \to K^{a - 1} \to M^a \to M^{a + 1} \to \ldots
++ $$
++ Hence we may assume that every $d(K^n)$ is finite and that
++ $d(K^n) = 0$ for $n \gg 0$. Note that the condition
++ $n + d(K^n) \to -\infty$ as $n \to -\infty$ is not violated by this replacement.
+````
+
+Original SHA-256 `E514DBD14131B32BEEEED0CC258029C085E73D7020264D00E04308E38B1291AD`; replacement SHA-256 `C6D41581C310B6F8FC1E28418FF7EBAB3DC162BC196B2D77E87985E4B330EE9A`.
+
+</details>
+
+<details id="mc-stk-err-2545">
+<summary><code>MC-STK-ERR-2545 — derived.tex:derived.tex:9968 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2545`; producer ID: `DERIVED-RECON-074`
+- Bound source locator: `derived.tex:derived.tex:9968`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L9968) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2545-OP1`
+
+Pinned-official lines `9968-9968`; bytes `353500:353557`.
+
+````diff
+- find finite sequence of elementary transformations which
++ find a finite sequence of elementary transformations which
+````
+
+Original SHA-256 `BB55FAF91B1B28394297FE9CB12F7D1447C2EB301E6BC1DB7B1F75D0945675A4`; replacement SHA-256 `9D9710E33347A22B05D4CE51322CB880DBF2796F5233FC56D8E1560747759E65`.
+
+</details>
+
+<details id="mc-stk-err-2546">
+<summary><code>MC-STK-ERR-2546 — derived.tex:derived.tex:10048 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2546`; producer ID: `DERIVED-NEW-034`
+- Bound source locator: `derived.tex:derived.tex:10048`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L10048) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2546-OP1`
+
+Pinned-official lines `10048-10048`; bytes `356957:357013`.
+
+````diff
+- $j \in \{i - n - 2, \ldots, i - 1\}$. Hence we see that
++ $j \in \{i - n - 2, \ldots, i - 2\}$. Hence we see that
+````
+
+Original SHA-256 `D035CD0F2B7A61B0FE1F68148F80E8E2F8FB95F90F2144D8EC6EED43222F299C`; replacement SHA-256 `98862353C55EF122DAF7EE3A9FCF10FB434185328CC8421B7760328076183A79`.
+
+</details>
+
+<details id="mc-stk-err-2547">
+<summary><code>MC-STK-ERR-2547 — derived.tex:derived.tex:10064 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2547`; producer ID: `DERIVED-RECON-077`
+- Bound source locator: `derived.tex:derived.tex:10064`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L10064-L10065) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2547-OP1`
+
+Pinned-official lines `10064-10065`; bytes `357709:357836`.
+
+````diff
+- by the complex $F(L^\bullet)$ and $RF(\sigma_{\geq c}L^\bullet)$
+- is represented by $\sigma_{\geq c}F(L^\bullet)$. Consider the
++ by the complex $F(L^\bullet)$ and, for every integer $c$,
++ $RF(\sigma_{\geq c}L^\bullet)$ is represented by
++ $\sigma_{\geq c}F(L^\bullet)$. Consider the
+````
+
+Original SHA-256 `9C14093A0E601CD378C5A6D741EFFCD00030C2513E87682B1F5127256C3139E1`; replacement SHA-256 `C6A6C559152FBAC0559E09F1E0FD1ECD7A8588D023339BBBE3336BDE215B2C89`.
+
+</details>
+
+<details id="mc-stk-err-2548">
+<summary><code>MC-STK-ERR-2548 — derived.tex:derived.tex:10263 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2548`; producer ID: `DERIVED-NEW-036`
+- Bound source locator: `derived.tex:derived.tex:10263`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L10263-L10289) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2548-OP1`
+
+Pinned-official lines `10263-10264`; bytes `364533:364602`.
+
+````diff
+- If $n_{i - 1} < j \leq n_i$, then we let $c_j = c|_{K_j}$
+- be the map
++ For each $j$, let $i$ be the least index such that $j \leq n_i$.
++ We let $c_j = c|_{K_j}$ be the map (the identity when $j = n_i$)
+````
+
+Original SHA-256 `070D216125FBE4D8DE863FC07AD23E7E52B0E870290DEF598221B5DB2A382936`; replacement SHA-256 `875FE63195DF74947B0D03C2FF92E2D35F4AF7C48A307A30BF14A2D831F170F3`.
+
+### Change 2: `MC-STK-ERR-2548-OP2`
+
+Pinned-official lines `10283-10289`; bytes `365337:365520`.
+
+````diff
+- the rule: for $n_{i - 1} < j < n_i$ we set
+- $$
+- h_j : K_j
+- \xrightarrow{1,\ f_j,\ f_{j + 1} \circ f_j,
+- \ \ldots,\ f_{n_i - 1} \circ \ldots \circ f_j}
+- K_j \oplus \ldots \oplus K_{n_i}
+- $$
++ the rule: let $i$ be the least index such that $j \leq n_i$.
++ Set $h_j = 0$ if $j = n_i$. For $j < n_i$ we set
++ $$
++ h_j : K_j
++ \xrightarrow{1,\ f_j,\ f_{j + 1} \circ f_j,
++ \ \ldots,\ f_{n_i - 2} \circ \ldots \circ f_j}
++ K_j \oplus \ldots \oplus K_{n_i - 1}
++ $$
++ where for $j = n_i - 1$ this map has just the identity component.
+````
+
+Original SHA-256 `E240F2542C0BAAC176DB209AA851CD39449D3B285F3A7CD7F87CDA3A7BE5F73B`; replacement SHA-256 `6AAB4972D921C68E368836F5544352ECF0DA6C2A68A0DC95C94CD2B7B8280134`.
+
+</details>
+
+<details id="mc-stk-err-2549">
+<summary><code>MC-STK-ERR-2549 — derived.tex:derived.tex:10278 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2549`; producer ID: `DERIVED-NEW-035`
+- Bound source locator: `derived.tex:derived.tex:10278`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L10278-L10294) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2549-OP1`
+
+Pinned-official lines `10278-10278`; bytes `365101:365143`.
+
+````diff
+- $\varphi \circ \psi$ is an isomorphism by
++ $\psi \circ \varphi$ is an isomorphism by
+````
+
+Original SHA-256 `E1709D2080C8F8B2D3EC310D2BD7A0D3EC05A0CA7FC216CC38CE379866A96D36`; replacement SHA-256 `3327A6A7DBCDD2D2C3F73C4FE9E0A7758D647851B6D23035D0361CFCF02352AC`.
+
+### Change 2: `MC-STK-ERR-2549-OP2`
+
+Pinned-official lines `10292-10294`; bytes `365655:365836`.
+
+````diff
+- $\text{id} - \psi \circ \varphi$ has square zero by
+- Lemma \ref{lemma-third-map-square-zero} (small argument omitted).
+- In other words, $\psi \circ \varphi$ differs from the identity
++ $\text{id} - \varphi \circ \psi$ has square zero by
++ Lemma \ref{lemma-third-map-square-zero} (small argument omitted).
++ In other words, $\varphi \circ \psi$ differs from the identity
+````
+
+Original SHA-256 `5A22A721E1AA7E65ED7BFE8AFA64CB10AFC700E3EEC2FB2B911D57527C542EA5`; replacement SHA-256 `B14F8950FE2A69A35E8511F35855BA85344C791AE7E90575145A14FE4C8D7AC1`.
+
+</details>
+
+<details id="mc-stk-err-2550">
+<summary><code>MC-STK-ERR-2550 — derived.tex:derived.tex:10800 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2550`; producer ID: `DERIVED-NEW-037`
+- Bound source locator: `derived.tex:derived.tex:10800`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L10800-L10801) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2550-OP1`
+
+Pinned-official lines `10800-10801`; bytes `385060:385107`.
+
+````diff
+- F(\mathcal{A}[a, b]) = F(\mathcal{A})[a, b]
+- $$
++ \operatorname{Iso}(F(\mathcal{A}[a, b])) =
++ \operatorname{Iso}(F(\mathcal{A})[a, b]),
++ $$
++ where $\operatorname{Iso}$ denotes isomorphism closure. Moreover,
+````
+
+Original SHA-256 `F530F1222513917B7A2DE994B76C4BAA65FC83773F0A0F4ED38E1F0CEC3EFC4C`; replacement SHA-256 `5925BEAFE2A644A85110743F687CB96DD227101A61E36769C2C8C0643A2C57DF`.
+
+</details>
+
+<details id="mc-stk-err-2551">
+<summary><code>MC-STK-ERR-2551 — derived.tex:derived.tex:11209 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2551`; producer ID: `DERIVED-NEW-039`
+- Bound source locator: `derived.tex:derived.tex:11209`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11209) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2551-OP1`
+
+Pinned-official lines `11209-11209`; bytes `399949:400019`.
+
+````diff
+- $\text{hocolim} X_n$ and we conclude that our morphism $E_i[m] \to C$
++ $(\text{hocolim} X_n)[-1]$ and we conclude that our morphism $E_i[m] \to C$
+````
+
+Original SHA-256 `EB45A42CDC71E29E07FA364EED27BD321FD1E24FA1714A4964269428CBE9AA27`; replacement SHA-256 `3C0E74661BC2E99512A8D26AD3EB2227833DFA2E65DD4EF3206771E14A4058CA`.
+
+</details>
+
+<details id="mc-stk-err-2552">
+<summary><code>MC-STK-ERR-2552 — derived.tex:derived.tex:11216 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2552`; producer ID: `DERIVED-RECON-091`
+- Bound source locator: `derived.tex:derived.tex:11216`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11216-L11217) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2552-OP1`
+
+Pinned-official lines `11216-11217`; bytes `400192:400327`.
+
+````diff
+- With assumptions and notation as in Lemma \ref{lemma-write-as-colimit}.
+- If $C$ is a compact object and $C \to X_n$ is a morphism, then
++ With assumptions and notation as in Lemma \ref{lemma-write-as-colimit},
++ if $C$ is a compact object and $C \to X_n$ is a morphism, then
+````
+
+Original SHA-256 `266EBBCD514421839DF2F21213F5953DC50DE34C493B92742AC493AA74D63818`; replacement SHA-256 `7A752C800EDEF88D73F64EA733BDA58C52D8016CF6BB5E29623686F0243B4584`.
+
+</details>
+
+<details id="mc-stk-err-2553">
+<summary><code>MC-STK-ERR-2553 — derived.tex:derived.tex:11255 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2553`; producer ID: `DERIVED-NEW-040`
+- Bound source locator: `derived.tex:derived.tex:11255`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11255) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2553-OP1`
+
+Pinned-official lines `11255-11255`; bytes `401666:401733`.
+
+````diff
+- the compositions into $Y_{n - 1}$ are equal. Let $C \to X_{n - 1}$
++ the compositions into $Y_{n - 1}[1]$ are equal. Let $C \to X_{n - 1}$
+````
+
+Original SHA-256 `C3281786077D58E7DB518CDDC85A0A56AE4B7313CBD2D3D43B3483AA97B24147`; replacement SHA-256 `3A78F2D2C7B56FE355D8F905081D0116ACF6C1388E8AC95938774EBEA1D72A3F`.
+
+</details>
+
+<details id="mc-stk-err-2554">
+<summary><code>MC-STK-ERR-2554 — derived.tex:derived.tex:11386 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2554`; producer ID: `DERIVED-RECON-095`
+- Bound source locator: `derived.tex:derived.tex:11386`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11386) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2554-OP1`
+
+Pinned-official lines `11386-11386`; bytes `406070:406120`.
+
+````diff
+- in $\prod H(X_n)$. Hence a natural transformation
++ in $\prod H(X_n)$. Hence there is a natural transformation
+````
+
+Original SHA-256 `9903DB4636BAB684B36F4192E99ACED38643BB73AE934B31CB5B6F708986EA7D`; replacement SHA-256 `D8110A17C82A75F56A528898DB6CDDAD4E6F2E1EFAE930DF7B62E2FFAD647C31`.
+
+</details>
+
+<details id="mc-stk-err-2555">
+<summary><code>MC-STK-ERR-2555 — derived.tex:derived.tex:11536 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2555`; producer ID: `DERIVED-RECON-096`
+- Bound source locator: `derived.tex:derived.tex:11536`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11536) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2555-OP1`
+
+Pinned-official lines `11536-11536`; bytes `411562:411612`.
+
+````diff
+- in $\prod H(X_n)$. Hence a natural transformation
++ in $\prod H(X_n)$. Hence there is a natural transformation
+````
+
+Original SHA-256 `9903DB4636BAB684B36F4192E99ACED38643BB73AE934B31CB5B6F708986EA7D`; replacement SHA-256 `D8110A17C82A75F56A528898DB6CDDAD4E6F2E1EFAE930DF7B62E2FFAD647C31`.
+
+</details>
+
+<details id="mc-stk-err-2556">
+<summary><code>MC-STK-ERR-2556 — derived.tex:derived.tex:11547 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2556`; producer ID: `DERIVED-NEW-041`
+- Bound source locator: `derived.tex:derived.tex:11547`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11547-L11568) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2556-OP1`
+
+Pinned-official lines `11547-11568`; bytes `411883:412753`.
+
+````diff
+- Let $E \in \mathcal{E}$. Let us show that
+- $$
+- \Hom_\mathcal{D}(E, \bigoplus X_n) \to  \Hom_\mathcal{D}(E, \bigoplus X_n)
+- $$
+- is injective. Namely, let $\alpha : E \to \bigoplus X_n$. Then
+- by assumption (2) we obtain a factorization
+- $\alpha = (\bigoplus \beta_n) \circ \gamma$.
+- Since $E_n \to X_n \to X_{n + 1}$ is zero by construction, we see that
+- the composition $\bigoplus E_n \to \bigoplus X_n \to \bigoplus X_n$
+- is equal to $\bigoplus \beta_n$. Hence also the composition
+- $E \to \bigoplus X_n \to \bigoplus X_n$ is equal to $\alpha$.
+- This proves the stated injectivity and hence also
+- $$
+- \Hom_\mathcal{D}(E, \bigoplus X_n[1]) \to \Hom_\mathcal{D}(E, \bigoplus X_n[1])
+- $$
+- is injective. It follows that we have an exact sequence
+- $$
+- \Hom_\mathcal{D}(E, \bigoplus X_n) \to
+- \Hom_\mathcal{D}(E, \bigoplus X_n) \to
+- \Hom_\mathcal{D}(E, X) \to 0
+- $$
+- for all $E \in \mathcal{E}$.
++ Let us prove that the telescope map is injective on maps from
++ each $E \in \mathcal{E}$. Let $\mathcal{P}$ be the full subcategory
++ of direct sums of objects of $\mathcal{E}$ and write
++ $hY = \Hom_\mathcal{D}(-, Y)|_\mathcal{P}$.
++ Let $\mathcal{A}$ be the category of additive functors
++ $\mathcal{P}^{opp} \to \textit{Ab}$ taking direct sums to products.
++ Kernels and cokernels in this category are computed pointwise:
++ both commute with products of abelian groups.
++ Thus $\mathcal{A}$ is abelian. Natural transformations form sets,
++ since they are determined by their components at the set $\mathcal{E}$.
++
++ \medskip\noindent
++ We first show that $h$ preserves countable direct sums with values
++ in $\mathcal{A}$. For every object $Y$ choose the evaluation map
++ $P_Y = \bigoplus_{(E, f : E \to Y)} E \to Y$, complete it to a
++ distinguished triangle $C_Y \to P_Y \to Y \to C_Y[1]$, and choose
++ an evaluation map $Q_Y \to C_Y$ with $Q_Y \in \mathcal{P}$.
++ We obtain an exact presentation
++ $$
++ hQ_Y \to hP_Y \to hY \to 0.
++ $$
++ For any countable family $Y_n$, assumption (2) shows that
++ $\bigoplus P_{Y_n} \to \bigoplus Y_n$ is surjective on maps from
++ every $E \in \mathcal{E}$: factor such a map through $\bigoplus E_n$
++ and lift each $E_n \to Y_n$ to $P_{Y_n}$.
++ The same holds for $\bigoplus Q_{Y_n} \to \bigoplus C_{Y_n}$.
++ It holds for maps from every object of $\mathcal{P}$ by taking products.
++ The direct sum of the distinguished triangles therefore gives
++ an exact presentation
++ $$
++ h(\bigoplus Q_{Y_n}) \to h(\bigoplus P_{Y_n}) \to
++ h(\bigoplus Y_n) \to 0.
++ $$
++ For $F \in \mathcal{A}$, Yoneda's lemma and the product property give
++ $$
++ \Hom_\mathcal{A}(h(\bigoplus Y_n), F)
++ = \Ker\left(\prod F(P_{Y_n}) \to \prod F(Q_{Y_n})\right)
++ = \prod \Hom_\mathcal{A}(hY_n, F).
++ $$
++ These identifications are induced by the inclusions of the summands.
++ Thus $h(\bigoplus Y_n)$ is their direct sum in $\mathcal{A}$.
++ This does not assert that these direct sums are computed pointwise.
++
++ \medskip\noindent
++ Put $T = H|_\mathcal{P}$ and $M_n = hX_n$, and denote the
++ transformations induced by $a_n$ by $\theta_n : M_n \to T$.
++ Each $\theta_n$ is surjective, first on $\mathcal{E}$ by construction
++ of $X_1$, and then on $\mathcal{P}$ by taking products.
++ Write $u_n : X_n \to X_{n + 1}$ and $v_n = h(u_n)$.
++ The construction gives
++ $v_n(\Ker(\theta_n)) = 0$ and $\theta_{n + 1}v_n = \theta_n$.
++ Hence $v_1$ factors as $\sigma_2\theta_1$ for a morphism
++ $\sigma_2 : T \to M_2$ with $\theta_2\sigma_2 = 1$.
++ Inductively put $\sigma_{n + 1} = v_n\sigma_n$ for $n \geq 2$.
++ Then $\theta_n\sigma_n = 1$, and with $L_n = \Ker(\theta_n)$
++ the isomorphisms
++ $$
++ T \oplus L_n \longrightarrow M_n,\qquad (x, z) \longmapsto \sigma_nx + z
++ $$
++ identify $v_n$, for $n \geq 2$, with $(x, z) \mapsto (x, 0)$.
++
++ \medskip\noindent
++ Let $V = \bigoplus_{n \geq 2} M_n$ in $\mathcal{A}$.
++ Its idempotent induced by the $\sigma_n\theta_n$ splits it as
++ $$
++ V = C \oplus L,\qquad
++ C = \bigoplus_{n \geq 2} T,\quad L = \bigoplus_{n \geq 2} L_n.
++ $$
++ These last two direct sums exist as the images of that idempotent
++ and its complement; their universal properties follow from the
++ component splittings. The tail telescope map $t_V$ is
++ $(1 - s_C) \oplus 1_L$, where $s_C j_n = j_{n + 1}$ for the
++ inclusions $j_n : T \to C$. The morphism $\ell_C : C \to C$ defined by
++ $$
++ \ell_C j_n = -\sum_{j = 2}^{n - 1} j_j
++ $$
++ (the empty sum is zero) satisfies $\ell_C(1 - s_C) = 1_C$.
++ Thus $\ell_V = \ell_C \oplus 1_L$ is a left inverse of $t_V$.
++ For the entire sequence, use the canonical isomorphism
++ $h(\bigoplus X_n) \cong M_1 \oplus V$ and write $b : M_1 \to V$
++ for $v_1$ followed by the inclusion of $M_2$.
++ The entire telescope map is
++ $$
++ (x, y) \longmapsto (x, t_V y - bx),
++ $$
++ and it has the left inverse
++ $$
++ (x, y) \longmapsto (x, \ell_V(y + bx)).
++ $$
++ Evaluating at $E \in \mathcal{E}$ proves the required injectivity.
++ Evaluating at $E[-1]$ proves injectivity on
++ $\Hom_\mathcal{D}(E, \bigoplus X_n[1])$ as well.
++ The distinguished triangle defining $X$ now gives the exact sequence
++ $$
++ \Hom_\mathcal{D}(E, \bigoplus X_n) \to
++ \Hom_\mathcal{D}(E, \bigoplus X_n) \to
++ \Hom_\mathcal{D}(E, X) \to 0
++ $$
++ for every $E \in \mathcal{E}$.
+````
+
+Original SHA-256 `31B9A2B649F83219FBF13A4DBB8F54ED9C5B49425E0EAD54E7D22165C7701BA6`; replacement SHA-256 `05BA617435F3464566F849C7507222D4F2FD586246805AA1687001EAB0867A41`.
+
+</details>
+
+<details id="mc-stk-err-2557">
+<summary><code>MC-STK-ERR-2557 — derived.tex:derived.tex:11956 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2557`; producer ID: `DERIVED-NEW-042`
+- Bound source locator: `derived.tex:derived.tex:11956`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L11956-L11978) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2557-OP1`
+
+Pinned-official lines `11956-11956`; bytes `427146:427193`.
+
+````diff
+- be subcategories. The following are equivalent
++ be strictly full subcategories invariant under all shifts.
++ The following are equivalent
+````
+
+Original SHA-256 `C9A7EA5933F070CC49D9D4C6C2047FEE2DF559439035F2ECF428BE2549E7CC73`; replacement SHA-256 `570F519D3B7F4BC3F4372BF79E5F46DE8721D332018805CD95FEBD1C2817B548`.
+
+### Change 2: `MC-STK-ERR-2557-OP2`
+
+Pinned-official lines `11976-11978`; bytes `428087:428307`.
+
+````diff
+- The equivalence between (1), (2), and (3) follows in a straightforward manner
+- from Lemmas \ref{lemma-right-adjoint} and \ref{lemma-left-adjoint} (small
+- detail omitted). Denote $v : \mathcal{D} \to \mathcal{A}$ the right
++ Assume (3). Then $\mathcal{B} \subset \mathcal{A}^\perp$ and
++ $\mathcal{A} \subset {}^\perp\mathcal{B}$.
++ If $X \in \mathcal{A}^\perp$, its triangle in (3) has zero first map,
++ so $B \cong X \oplus A[1]$.
++ Since $\Hom(A[1], B) = 0$, we obtain $A = 0$ and
++ $X \cong B \in \mathcal{B}$. Strict fullness gives
++ $\mathcal{A}^\perp = \mathcal{B}$.
++ Similarly, if $X \in {}^\perp\mathcal{B}$, the second map of its
++ triangle is zero, so $A \cong X \oplus B[-1]$.
++ Since $\Hom(A, B[-1]) = 0$, we obtain $B = 0$ and
++ $X \cong A \in \mathcal{A}$.
++ Thus $\mathcal{A} = {}^\perp\mathcal{B}$.
++ The orthogonal subcategories are saturated and triangulated as shown above.
++ Lemmas \ref{lemma-right-adjoint} and \ref{lemma-left-adjoint}
++ now give (1) and (2).
++ Conversely, each of (1) and (2) gives (3) by its adjoint criterion.
++ Denote $v : \mathcal{D} \to \mathcal{A}$ the right
+````
+
+Original SHA-256 `C1A13A7E9C72CD1739B90ADF0F1A9CAA5F1A303A27CE129BEBE1A2C1837A3533`; replacement SHA-256 `AA0DD6F7A10E1F388AE1555D8C9EB381E743A72435A904489EABD2B96908963A`.
+
+</details>
+
+<details id="mc-stk-err-2558">
+<summary><code>MC-STK-ERR-2558 — derived.tex:derived.tex:12160 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2558`; producer ID: `DERIVED-RECON-100`
+- Bound source locator: `derived.tex:derived.tex:12160`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L12160) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2558-OP1`
+
+Pinned-official lines `12160-12160`; bytes `434511:434574`.
+
+````diff
+- know whether the composition $X_n \to X_{n - 1} \to Y_{n - 1}$
++ know whether the composition $X_n \to X_{n - 1} \to Y_{n - 2}$
+````
+
+Original SHA-256 `F637BA3984DECE2D3FF4846D07657430C9FA4EAAE92135304C235CF5B2894541`; replacement SHA-256 `68EEAFE930BCFC5631DBAC32396F12D654BA9E31A7B3DC41DCA1FF2CABD13C4D`.
+
+</details>
+
+<details id="mc-stk-err-2559">
+<summary><code>MC-STK-ERR-2559 — derived.tex:derived.tex:12253 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2559`; producer ID: `DERIVED-NEW-043`
+- Bound source locator: `derived.tex:derived.tex:12253`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L12253) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2559-OP1`
+
+Pinned-official lines `12253-12253`; bytes `437580:437652`.
+
+````diff
+- then there exists at most one morphism between these Postnikov systems.
++ then any two morphisms between these Postnikov systems induce the same
++ morphism $Y_n \to Y'_n$. In case (3), the morphism of Postnikov
++ systems itself is unique.
+````
+
+Original SHA-256 `4FD01928681C40CE894771FE7861E86707860A0150A953D5A3F26B23F9950D08`; replacement SHA-256 `7AE8C6A7AC16AE457E1F78CA2EF15B5BB8A428DBC22E8513C12B87B14653BC12`.
+
+</details>
+
+<details id="mc-stk-err-2560">
+<summary><code>MC-STK-ERR-2560 — derived.tex:derived.tex:12451 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2560`; producer ID: `DERIVED-NEW-044`
+- Bound source locator: `derived.tex:derived.tex:12451`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex#L12451) · [Integrated source](derived.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2560-OP1`
+
+Pinned-official lines `12451-12451`; bytes `444469:444543`.
+
+````diff
+- $\delta : C \to A[1]$ which is independent of $n$. Choose a distinguished
++ $\delta : C \to A[1]$ which is independent of $n$.
++ The components $C'_n \to A[1]$ vanish for all sufficiently large $n$:
++ fix an index and use a later zero transition in $(C'_n)$.
++ After increasing the starting index once more, the projections onto
++ $C$ and $A[1]$ commute with the connecting maps. Choose a distinguished
+````
+
+Original SHA-256 `9D2A44692788FA2D81B5EB505CB24D1A5EB81A17CACC63EDADCE272644BBBB62`; replacement SHA-256 `D0BD8C7587CA36676C95A6206426C0EA5D0AF42CCB8B5534806BB0C202143D4B`.
+
+</details>
+
+<details id="mc-stk-err-2561">
+<summary><code>MC-STK-ERR-2561 — more-algebra.tex:more-algebra.tex:22722 — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2561`; producer ID: `DERIVED-NEW-014`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:22722`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L22722) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2561-OP1`
+
+Pinned-official lines `22722-22722`; bytes `856363:856386`.
+
+````diff
+- $\tau_{\leq -2}K_2 = 0$
++ $\tau_{\leq -2}K_3 = 0$
+````
+
+Original SHA-256 `F9E3281020D2F613E733224C9722F25059BC0C53AD8646B63413DA432DC7E237`; replacement SHA-256 `3F92242E68420558C369189FB02D5B984EE64AE6A52C19769D5D559F9A0A9E42`.
+
+</details>
+
+<details id="mc-stk-err-2562">
+<summary><code>MC-STK-ERR-2562 — perfect.tex:perfect.tex:529 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2562`; producer ID: `DERIVED-NEW-022`
+- Bound source locator: `perfect.tex:perfect.tex:529`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L529-L536) · [Integrated source](perfect.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2562-OP1`
+
+Pinned-official lines `529-536`; bytes `18092:18573`.
+
+````diff
+- may assume $S$ affine. By
+- Lemma \ref{lemma-quasi-coherence-direct-image}
+- we have $R^0f_*\mathcal{F}^\bullet = R^0f_*\tau_{\geq -n}\mathcal{F}^\bullet$
+- for all sufficiently large $n$. Thus we may assume $\mathcal{F}^\bullet$
+- bounded below. As each $\mathcal{F}^n$ is right $f_*$-acyclic by
+- assumption we see that $f_*\mathcal{F}^\bullet \to Rf_*\mathcal{F}^\bullet$
+- is a quasi-isomorphism by Leray's acyclicity lemma (Derived Categories, Lemma
+- \ref{derived-lemma-leray-acyclicity}).
++ may assume $S$ affine. Choose $N$ as in
++ Lemma \ref{lemma-quasi-coherence-direct-image} and an integer
++ $n \geq \max\{1, N\}$. The termwise split short exact sequence
++ $$
++ 0 \to \sigma_{\geq -n}\mathcal{F}^\bullet \to
++ \mathcal{F}^\bullet \to \sigma_{\leq -n-1}\mathcal{F}^\bullet \to 0
++ $$
++ gives a distinguished triangle. The last complex has quasi-coherent
++ cohomology, vanishing in degrees greater than $-n-1$. The bound $N$
++ therefore gives vanishing of
++ $H^j(Rf_*\sigma_{\leq -n-1}\mathcal{F}^\bullet)$ for $j \geq N-n-1$,
++ in particular for $j=-1,0$. It follows that
++ $H^0(Rf_*\sigma_{\geq -n}\mathcal{F}^\bullet) \to
++ H^0(Rf_*\mathcal{F}^\bullet)$ is an isomorphism.
++ Also $H^0(f_*\sigma_{\geq -n}\mathcal{F}^\bullet) =
++ H^0(f_*\mathcal{F}^\bullet)$ since $n \geq 1$.
++ The complex $\sigma_{\geq -n}\mathcal{F}^\bullet$ is bounded below
++ and consists of the original right $f_*$-acyclic terms, so it computes
++ $Rf_*$ by Leray's acyclicity lemma (Derived Categories, Lemma
++ \ref{derived-lemma-leray-acyclicity}). Naturality of the canonical map
++ now proves the desired isomorphism in degree zero.
+````
+
+Original SHA-256 `50170592441196CA1E043CE1F3DA181B86DCCCA9149584D52F188B6CC7922AA3`; replacement SHA-256 `3BAA3A002A5FBB45F21DA084A36E81486A4F34ABBF6AD579590834957DAA2A69`.
+
+</details>
+
+<details id="mc-stk-err-2563">
+<summary><code>MC-STK-ERR-2563 — perfect.tex:perfect.tex:4324 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2563`; producer ID: `DERIVED-PERFECT-RECEIVER-001`
+- Bound source locator: `perfect.tex:perfect.tex:4324`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4324-L4404) · [Integrated source](perfect.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2563-OP1`
+
+Pinned-official lines `4324-4324`; bytes `164747:164812`.
+
+````diff
+- the perfect objects define compact objects of $D(\mathcal{O}_X)$
++ the perfect objects define compact objects of $D_\QCoh(\mathcal{O}_X)$
+````
+
+Original SHA-256 `CBD81DE6B524A9FCA3CE3A236BD2501851145AB212DC33BBA9E9274EE4CD2F87`; replacement SHA-256 `FA07596A4008BC7B2ACE69A42AB47550B27A513252299BDF555A3D32D101FB4E`.
+
+### Change 2: `MC-STK-ERR-2563-OP2`
+
+Pinned-official lines `4396-4404`; bytes `167855:168457`.
+
+````diff
+- using the generator $E$. Since the functor $\mathcal{D} \to D(\mathcal{O}_X)$
+- commutes with direct sums, we see that $K = \text{hocolim} K_n$
+- holds in $D(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
+- object of $D(\mathcal{O}_X)$ we find an $n$ and a morphism
+- $\alpha_n : \mathcal{O}_X \to K_n$ which gives rise to $\alpha$, see
+- Derived Categories, Lemma \ref{derived-lemma-commutes-with-countable-sums}.
+- By Derived Categories, Lemma \ref{derived-lemma-factor-through}
+- applied to the morphism $\mathcal{O}_X[0] \to K_n$ in the ambient
+- category $D(\mathcal{O}_X)$ we see that $\alpha_n$ factors as
++ using the generator $E$. Since the functor $\mathcal{D} \to D_\QCoh(\mathcal{O}_X)$
++ commutes with direct sums, we see that $K = \text{hocolim} K_n$
++ holds in $D_\QCoh(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
++ object of $D_\QCoh(\mathcal{O}_X)$ we find an $n$ and a morphism
++ $\alpha_n : \mathcal{O}_X \to K_n$ which gives rise to $\alpha$, see
++ Derived Categories, Lemma \ref{derived-lemma-commutes-with-countable-sums}.
++ By the finite-stage argument in the proof of Derived Categories, Lemma \ref{derived-lemma-factor-through}
++ applied to the morphism $\mathcal{O}_X[0] \to K_n$ in the ambient
++ category $D_\QCoh(\mathcal{O}_X)$, which does not require $E$ to generate
++ the ambient category, we see that $\alpha_n$ factors as
+````
+
+Original SHA-256 `6791875BC8D77D77B60E9A883195A187B62EA957CEF6D961BA24133B271C53E1`; replacement SHA-256 `38ADBF922F39CAE9633F708524DA3EE0AB372379E10143B27E22029D6A2EC7BF`.
+
+</details>
+
+<details id="mc-stk-err-2564">
+<summary><code>MC-STK-ERR-2564 — perfect.tex:perfect.tex:4326 — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2564`; producer ID: `DERIVED-PERFECT-RECEIVER-002`
+- Bound source locator: `perfect.tex:perfect.tex:4326`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4326) · [Integrated source](perfect.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2564-OP1`
+
+Pinned-official lines `4326-4326`; bytes `164878:164938`.
+
+````diff
+- sums. For the converse we will use there exists a generator
++ sums. For the converse we will use that there exists a generator
+````
+
+Original SHA-256 `21484D064CCD63515BA153D4BE2205191A0314B390E1884695B2C07D04DC804F`; replacement SHA-256 `9D6ED79227D7D2DFBEA28CD97F852194809281FFD5137B4198B1EFD2654E3DE6`.
+
+</details>
+
+<details id="mc-stk-err-2565">
+<summary><code>MC-STK-ERR-2565 — perfect.tex:perfect.tex:4385 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2565`; producer ID: `DERIVED-PERFECT-RECEIVER-003`
+- Bound source locator: `perfect.tex:perfect.tex:4385`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4385) · [Integrated source](perfect.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2565-OP1`
+
+Pinned-official lines `4385-4385`; bytes `167497:167554`.
+
+````diff
+- $H^0(K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
++ $H^0(X, K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
+````
+
+Original SHA-256 `D29F64278A26A9ABBE73C9C60FC8533E7E909AFF1198968978B04B6DB477E2E8`; replacement SHA-256 `241095BB782F4DE72546051DDF5C062FEA1BBCEADD0FA9BE7946B877EAD9F888`.
+
+</details>
+
+<details id="mc-stk-err-2566">
+<summary><code>MC-STK-ERR-2566 — perfect.tex:perfect.tex:4848 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2566`; producer ID: `DERIVED-PERFECT-RECEIVER-004`
+- Bound source locator: `perfect.tex:perfect.tex:4848`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4848) · [Integrated source](perfect.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2566-OP1`
+
+Pinned-official lines `4848-4848`; bytes `183891:183949`.
+
+````diff
+- The adjoint exists if and only if for every object $K$ of
++ The adjoint exists if and only if for every object $E$ of
+````
+
+Original SHA-256 `C6293CC8FA579869F92C3BF5E4FE0C8394DBD81D67824B98D5E8570E77D0D572`; replacement SHA-256 `6436B2FB726D458C6F3C1FCCBAE6695D588AE3E5D494EE8974BE338CBD08F5D6`.
+
+</details>
+
+<details id="mc-stk-err-2567">
+<summary><code>MC-STK-ERR-2567 — cohomology.tex:cohomology.tex:14424 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2567`; producer ID: `DERIVED-NEW-031`
+- Bound source locator: `cohomology.tex:cohomology.tex:14424`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/cohomology.tex#L14424-L14426) · [Integrated source](cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2567-OP1`
+
+Pinned-official lines `14424-14426`; bytes `515596:515755`.
+
+````diff
+- using that the module $\mathcal{I}^i/\mathcal{I}^{i + 3}$
+- is an extension of $\mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}$
+- by $\mathcal{I}^i/\mathcal{I}^{i + 1}$.
++ using the exact sequence
++ $$
++ 0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++ \to \mathcal{I}^i/\mathcal{I}^{i + 3}
++ \to \mathcal{I}^i/\mathcal{I}^{i + 2} \to 0.
++ $$
++ Its pullback along
++ $\mathcal{I}^{i + 1}/\mathcal{I}^{i + 2}
++ \to \mathcal{I}^i/\mathcal{I}^{i + 2}$
++ is the extension
++ $0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++ \to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}
++ \to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 2} \to 0$.
+````
+
+Original SHA-256 `AD41FB2EBD2D13C7826FB49DE26C33849F87933F795EEDB1B3417F2F8A67A0C7`; replacement SHA-256 `7F81EA402E96465C0D9A68980081147C9D77257638EE5758252CC1AA8BFE98A5`.
+
+</details>
+
+<details id="mc-stk-err-2568">
+<summary><code>MC-STK-ERR-2568 — equiv.tex:equiv.tex:1836 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2568`; producer ID: `DERIVED-NEW-038`
+- Bound source locator: `equiv.tex:equiv.tex:1836`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/equiv.tex#L1836-L1863) · [Integrated source](equiv.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2568-OP1`
+
+Pinned-official lines `1836-1838`; bytes `69684:69865`.
+
+````diff
+- Since $K$ is perfect, there exist $a \leq b$ such that
+- $H^i(X, K)$ is nonzero only for $i \in [a, b]$. Since $X$ is proper,
+- each $H^i(X, K)$ is finite dimensional. We conclude that
++ Since $K \otimes_{\mathcal{O}_X}^\mathbf{L} \mathcal{E}$ is perfect,
++ there exist $a \leq b$ such that its cohomology
++ $H^i(X, K \otimes_{\mathcal{O}_X}^\mathbf{L} \mathcal{E})$ is nonzero
++ only for $i \in [a, b]$. Since $X$ is proper, each of these groups
++ is finite dimensional. We conclude that
+````
+
+Original SHA-256 `1FD6D3BA10C7053762942FE8AD8902935542250BCF1D3363E3E77B77F17ABC1D`; replacement SHA-256 `13EBA53A7AB39058707D1424093A3FAD8D178797B9AB0F3503DBF4117005034E`.
+
+### Change 2: `MC-STK-ERR-2568-OP2`
+
+Pinned-official lines `1862-1863`; bytes `70766:70897`.
+
+````diff
+- for any $a \leq b$ such that $H^i(X, \mathcal{F})$ is nonzero only
+- for $i \in [a, b]$. Thus we can take $a = 0$ and $b = \dim(X)$.
++ for any $a \leq b$ such that
++ $H^i(X, \mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{E})$
++ is nonzero only for $i \in [a, b]$, where $\mathcal{E}$ is the
++ finite locally free module chosen in the preceding proof.
++ Thus we can take $a = 0$ and $b = \dim(X)$.
+````
+
+Original SHA-256 `B91BAD22B51C4BD79113F991C58333C8F4CF740F152BEBC243A41425CCD9FA5E`; replacement SHA-256 `6B320DA306C5D49D4D8AD9E79369B5D54C99BCA5F82BD32EDE5673C9A3DD5F7B`.
+
+</details>
+
+<details id="mc-stk-err-2569">
+<summary><code>MC-STK-ERR-2569 — spaces-perfect.tex:spaces-perfect.tex:4459 — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r61`
+- Stable ID: `MC-STK-ERR-2569`; producer ID: `DERIVED-SPACES-PERFECT-RECEIVER-001`
+- Bound source locator: `spaces-perfect.tex:spaces-perfect.tex:4459`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-perfect.tex#L4459) · [Integrated source](spaces-perfect.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r61/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r61/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2569-OP1`
+
+Pinned-official lines `4459-4459`; bytes `168988:169046`.
+
+````diff
+- The adjoint exists if and only if for every object $K$ of
++ The adjoint exists if and only if for every object $E$ of
+````
+
+Original SHA-256 `C6293CC8FA579869F92C3BF5E4FE0C8394DBD81D67824B98D5E8570E77D0D572`; replacement SHA-256 `6436B2FB726D458C6F3C1FCCBAE6695D588AE3E5D494EE8974BE338CBD08F5D6`.
 
 </details>

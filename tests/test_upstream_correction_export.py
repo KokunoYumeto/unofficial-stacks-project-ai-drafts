@@ -38,6 +38,14 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(removed, {"old"})
         self.assertEqual(set(owners), {"old", "new"})
 
+    def test_supersession_in_multi_operation_unit_preserves_other_edits(self):
+        earlier = unit("earlier", source="derived.tex", start=4, end=8)
+        later = unit("unrelated", 2, source="derived.tex", start=12, end=15)
+        later.operations.append(SimpleNamespace(operation_id="replacement", start_byte=4, end_byte_exclusive=8))
+        owners, removed = e.active_operations([earlier, later], {"replacement":"earlier"})
+        self.assertEqual(removed, {"earlier"})
+        self.assertEqual({name for name in owners if name not in removed}, {"unrelated", "replacement"})
+
     def test_unknown_predecessor_fails(self):
         with self.assertRaisesRegex(ValueError, "unknown"):
             e.active_operations([unit("new", 2)], {"new": "absent"})

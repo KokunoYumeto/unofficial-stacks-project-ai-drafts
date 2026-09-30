@@ -481,3 +481,121 @@ Adverse evidence / qualification: Accepted as an editorial or notational source 
 +Thus the result follows from the discussion in
  Schemes, Section
 ````
+
+### MC-STK-ERR-2562
+
+`perfect.tex` — perfect.tex:529; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L529-L536) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1,8 +1,21 @@
+-may assume $S$ affine. By
+-Lemma \ref{lemma-quasi-coherence-direct-image}
+-we have $R^0f_*\mathcal{F}^\bullet = R^0f_*\tau_{\geq -n}\mathcal{F}^\bullet$
+-for all sufficiently large $n$. Thus we may assume $\mathcal{F}^\bullet$
+-bounded below. As each $\mathcal{F}^n$ is right $f_*$-acyclic by
+-assumption we see that $f_*\mathcal{F}^\bullet \to Rf_*\mathcal{F}^\bullet$
+-is a quasi-isomorphism by Leray's acyclicity lemma (Derived Categories, Lemma
+-\ref{derived-lemma-leray-acyclicity}).
++may assume $S$ affine. Choose $N$ as in
++Lemma \ref{lemma-quasi-coherence-direct-image} and an integer
++$n \geq \max\{1, N\}$. The termwise split short exact sequence
++$$
++0 \to \sigma_{\geq -n}\mathcal{F}^\bullet \to
++\mathcal{F}^\bullet \to \sigma_{\leq -n-1}\mathcal{F}^\bullet \to 0
++$$
++gives a distinguished triangle. The last complex has quasi-coherent
++cohomology, vanishing in degrees greater than $-n-1$. The bound $N$
++therefore gives vanishing of
++$H^j(Rf_*\sigma_{\leq -n-1}\mathcal{F}^\bullet)$ for $j \geq N-n-1$,
++in particular for $j=-1,0$. It follows that
++$H^0(Rf_*\sigma_{\geq -n}\mathcal{F}^\bullet) \to
++H^0(Rf_*\mathcal{F}^\bullet)$ is an isomorphism.
++Also $H^0(f_*\sigma_{\geq -n}\mathcal{F}^\bullet) =
++H^0(f_*\mathcal{F}^\bullet)$ since $n \geq 1$.
++The complex $\sigma_{\geq -n}\mathcal{F}^\bullet$ is bounded below
++and consists of the original right $f_*$-acyclic terms, so it computes
++$Rf_*$ by Leray's acyclicity lemma (Derived Categories, Lemma
++\ref{derived-lemma-leray-acyclicity}). Naturality of the canonical map
++now proves the desired isomorphism in degree zero.
+````
+
+### MC-STK-ERR-2563
+
+`perfect.tex` — perfect.tex:4324; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4324-L4404) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-the perfect objects define compact objects of $D(\mathcal{O}_X)$
++the perfect objects define compact objects of $D_\QCoh(\mathcal{O}_X)$
+````
+
+````diff
+--- original
++++ replacement
+@@ -1,9 +1,10 @@
+-using the generator $E$. Since the functor $\mathcal{D} \to D(\mathcal{O}_X)$
++using the generator $E$. Since the functor $\mathcal{D} \to D_\QCoh(\mathcal{O}_X)$
+ commutes with direct sums, we see that $K = \text{hocolim} K_n$
+-holds in $D(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
+-object of $D(\mathcal{O}_X)$ we find an $n$ and a morphism
++holds in $D_\QCoh(\mathcal{O}_X)$. Since $\mathcal{O}_X$ is a compact
++object of $D_\QCoh(\mathcal{O}_X)$ we find an $n$ and a morphism
+ $\alpha_n : \mathcal{O}_X \to K_n$ which gives rise to $\alpha$, see
+ Derived Categories, Lemma \ref{derived-lemma-commutes-with-countable-sums}.
+-By Derived Categories, Lemma \ref{derived-lemma-factor-through}
++By the finite-stage argument in the proof of Derived Categories, Lemma \ref{derived-lemma-factor-through}
+ applied to the morphism $\mathcal{O}_X[0] \to K_n$ in the ambient
+-category $D(\mathcal{O}_X)$ we see that $\alpha_n$ factors as
++category $D_\QCoh(\mathcal{O}_X)$, which does not require $E$ to generate
++the ambient category, we see that $\alpha_n$ factors as
+````
+
+### MC-STK-ERR-2564
+
+`perfect.tex` — perfect.tex:4326; copyedit.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4326) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-sums. For the converse we will use there exists a generator
++sums. For the converse we will use that there exists a generator
+````
+
+### MC-STK-ERR-2565
+
+`perfect.tex` — perfect.tex:4385; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4385) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$H^0(K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
++$H^0(X, K) = \Hom_{D(\mathcal{O}_X)}(\mathcal{O}_X[0], K)$.
+````
+
+### MC-STK-ERR-2566
+
+`perfect.tex` — perfect.tex:4848; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/perfect.tex#L4848) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-The adjoint exists if and only if for every object $K$ of
++The adjoint exists if and only if for every object $E$ of
+````

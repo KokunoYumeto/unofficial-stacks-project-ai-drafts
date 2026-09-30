@@ -21,8 +21,8 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R60 and three Verdier insertions**: 63
-admitted overlays with 2,283 stable units (2,241 correction IDs and 42 Verdier
+The cumulative source includes **R1–R61 and three Verdier insertions**: 64
+admitted overlays with 2,347 stable units (2,305 correction IDs and 42 Verdier
 units). Admission and source composition are separate checks. The
 [R59 successor receipt](../validation/r59-successor-current.json) binds five
 findings and thirteen edits in Examples, More on Algebra and Brauer Groups. The
@@ -95,8 +95,17 @@ completion and exports the other 34 units / 42 edits. The
 [R60 successor receipt](../validation/r60-successor-current.json) and
 [reviewed history](../validation/r60-reviewed-publication-history.json) bind the
 separate transitions; incoming Illusie drafts remain queued outside this release.
-R49–R60 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58/R59/R60 review, source
+R61 records 64 units and 89 edits in Derived Categories and five dependent
+chapters, with all 176 Derived reports and six receiving reports reconciled.
+The [six corrected chapters, complete 159-page editorial supplement and editable sources](candidates/commons/stacks/errata/r61/README.md)
+retain the exact maps, signs, hypotheses and calculations. Thirty-three editorial
+underclaims and the UNDER-007 refinement remain separately identified. All 89
+edits enter the fixes-only export; the 2533 successor preserves and extends 0839.
+The [R61 successor receipt](../validation/r61-successor-current.json) and
+[reviewed history](../validation/r61-reviewed-publication-history.json) retain
+separate admission and composition, with incoming Illusie drafts still queued.
+R49–R61 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58/R59/R60/R61 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

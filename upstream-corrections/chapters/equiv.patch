@@ -1,0 +1,33 @@
+diff --git a/equiv.tex b/equiv.tex
+index 9a7ccb0a4dca8e0c748691d5de77e6e615fa37b2..dfe8ff7ce34a6b1b3cd56e0deaa639c19e32be69 100644
+--- a/equiv.tex
++++ b/equiv.tex
+@@ -1833,9 +1833,11 @@
+ $$
+ The equality follows from the discussion in
+ Example \ref{example-diagonal-fourier-mukai}.
+-Since $K$ is perfect, there exist $a \leq b$ such that
+-$H^i(X, K)$ is nonzero only for $i \in [a, b]$. Since $X$ is proper,
+-each $H^i(X, K)$ is finite dimensional. We conclude that
++Since $K \otimes_{\mathcal{O}_X}^\mathbf{L} \mathcal{E}$ is perfect,
++there exist $a \leq b$ such that its cohomology
++$H^i(X, K \otimes_{\mathcal{O}_X}^\mathbf{L} \mathcal{E})$ is nonzero
++only for $i \in [a, b]$. Since $X$ is proper, each of these groups
++is finite dimensional. We conclude that
+ the right hand side is contained in
+ $smd(add(\mathcal{G}[-m + a, m + b])^{\star n})$ which is
+ itself contained in $\langle \mathcal{G} \rangle_n$ by one of the
+@@ -1859,8 +1861,11 @@
+ $$
+ \mathcal{F} \in smd(add(\mathcal{G}[-m' + a, m' + b])^{\star n})
+ $$
+-for any $a \leq b$ such that $H^i(X, \mathcal{F})$ is nonzero only
+-for $i \in [a, b]$. Thus we can take $a = 0$ and $b = \dim(X)$.
++for any $a \leq b$ such that
++$H^i(X, \mathcal{F} \otimes_{\mathcal{O}_X} \mathcal{E})$
++is nonzero only for $i \in [a, b]$, where $\mathcal{E}$ is the
++finite locally free module chosen in the preceding proof.
++Thus we can take $a = 0$ and $b = \dim(X)$.
+ Taking $m = \max(m', m' + b)$ finishes the proof.
+ \end{proof}
+ 

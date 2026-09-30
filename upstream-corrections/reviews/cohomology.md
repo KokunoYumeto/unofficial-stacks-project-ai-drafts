@@ -81,3 +81,31 @@ Adverse evidence / qualification: The frozen source remains authority provenance
 -(\mathcal{H}')^\bullet \to \mathcal{H}^\bullet
 +\mathcal{H}^\bullet \to (\mathcal{H}')^\bullet
 ````
+
+### MC-STK-ERR-2567
+
+`cohomology.tex` — cohomology.tex:14424; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/cohomology.tex#L14424-L14426) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r61/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1,3 +1,13 @@
+-using that the module $\mathcal{I}^i/\mathcal{I}^{i + 3}$
+-is an extension of $\mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}$
+-by $\mathcal{I}^i/\mathcal{I}^{i + 1}$.
++using the exact sequence
++$$
++0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^i/\mathcal{I}^{i + 3}
++\to \mathcal{I}^i/\mathcal{I}^{i + 2} \to 0.
++$$
++Its pullback along
++$\mathcal{I}^{i + 1}/\mathcal{I}^{i + 2}
++\to \mathcal{I}^i/\mathcal{I}^{i + 2}$
++is the extension
++$0 \to \mathcal{I}^{i + 2}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 3}
++\to \mathcal{I}^{i + 1}/\mathcal{I}^{i + 2} \to 0$.
+````
