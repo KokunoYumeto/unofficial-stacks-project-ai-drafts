@@ -351,7 +351,7 @@ is not abelian.
 
 \noindent
 We finish this section by some lemmas on splitting images of
-idempotent endormorphisms. Recall that an endomorphism $f$
+idempotent endomorphisms. Recall that an endomorphism $f$
 is idempotent if $f \circ f = f$.
 
 \begin{remark}
@@ -3245,7 +3245,7 @@ Let $\mathcal{A}$ be an abelian category.
 \begin{enumerate}
 \item A morphism of cochain complexes $f : A^\bullet \to B^\bullet$
 of $\mathcal{A}$ is called a {\it quasi-isomorphism} if the induced
-maps $H^i(f) : H^i(A^\bullet) \to H^i(B^\bullet)$
+map $H^i(f) : H^i(A^\bullet) \to H^i(B^\bullet)$
 is an isomorphism for all $i \in \mathbf{Z}$.
 \item A cochain complex $A^\bullet$ is called
 {\it acyclic} if all of its cohomology objects
@@ -3298,9 +3298,9 @@ H^{i + 1}(C^\bullet) \ar[lld] \\
 }
 $$
 The construction produces long exact cohomology sequences
-which are functorial in the short exact
-sequence and compatible with shifts as in
-Definition \ref{definition-cohomology-shift}.
+which are functorial in the short exact sequence. Under the identifications
+of Definition \ref{definition-cohomology-shift},
+shifting by $k$ multiplies the boundary maps by $(-1)^k$.
 \end{lemma}
 
 \begin{proof}
@@ -3327,8 +3327,11 @@ This works as the kernel of the right vertical map is equal to
 $H^i(C^\bullet)$ and the cokernel of the left vertical map is
 $H^{i + 1}(A^\bullet)$. The exactness of the long sequence is
 the exactness in part (2) of Lemma \ref{lemma-snake}.
-The functoriality is Lemma \ref{lemma-snake-natural}. Compatibility
-with shifts is immediate from the definitions.
+The functoriality is Lemma \ref{lemma-snake-natural}. For a shift by $k$,
+the three vertical maps in the displayed diagram are multiplied by $(-1)^k$.
+The construction in Lemma \ref{lemma-snake} therefore multiplies the
+boundary map by $(-1)^k$, while the kernel and cokernel identifications
+are those of Definition \ref{definition-cohomology-shift}.
 \end{proof}
 
 
@@ -3657,7 +3660,7 @@ Let $\alpha : A^\bullet \to B^\bullet$,
 $\beta : B^\bullet \to C^\bullet$ be the given
 morphisms of complexes.
 Suppose $(s')^n : C^n \to B^n$ and $(\pi')^n : B^n \to A^n$
-is a second choice of splittings.
+are a second choice of splittings.
 Write $(s')^n = s^n + \alpha^n \circ h^n$ and
 $(\pi')^n = \pi^n + g^n \circ \beta^n$ for some unique
 morphisms $h^n : C^n \to A^n$ and $g^n : C^n \to A^n$. Then
@@ -4551,7 +4554,7 @@ as differential) and because $\pi^{p + 1, q} \circ s^{p + 1, q} = 0$
 as $s$ and $\pi$ correspond to a direct sum decomposition of $B$
 in every bidegree. On the other hand, for $\delta$ we have
 $$
-\delta^q =  \pi^q \circ d_2 \circ s^q :
+\delta^q =  \pi^{q + 1} \circ d_2 \circ s^q :
 C^{\bullet, q} \to A^{\bullet, q + 1}
 $$
 whose restriction to the summand $C^{p, q}$ is equal to
@@ -4724,7 +4727,7 @@ as differential) and because $\pi^{p, q + 1} \circ s^{p, q + 1} = 0$
 as $s$ and $\pi$ correspond to a direct sum decomposition of $B$
 in every bidegree. On the other hand, for $\delta$ we have
 $$
-\delta^p =  \pi^p \circ d_1 \circ s^p :
+\delta^p =  \pi^{p + 1} \circ d_1 \circ s^p :
 C^{p, \bullet} \to A^{p + 1, \bullet}
 $$
 whose restriction to the summand $C^{p, q}$ is equal to
@@ -4759,7 +4762,7 @@ $$
 A \supset \ldots \supset F^nA \supset F^{n + 1}A \supset \ldots \supset 0
 $$
 \item A {\it filtered object of $\mathcal{A}$} is
-pair $(A, F)$ consisting of an object $A$ of $\mathcal{A}$
+a pair $(A, F)$ consisting of an object $A$ of $\mathcal{A}$
 and a decreasing filtration $F$ on $A$.
 \item A {\it morphism $(A, F) \to (B, F)$ of filtered objects}
 is given by a morphism $\varphi : A \to B$ of $\mathcal{A}$
@@ -4830,7 +4833,7 @@ all $i \in \mathbf{Z}$.
 \end{definition}
 
 \noindent
-This also equivalent to requiring that $f^{-1}(F^iB) = F^iA + \Ker(f)$
+This is also equivalent to requiring that $f^{-1}(F^iB) = F^iA + \Ker(f)$
 for all $i \in \mathbf{Z}$. We characterize strict morphisms
 as follows.
 
@@ -4912,7 +4915,7 @@ be strict morphisms of filtered objects.
 \end{lemma}
 
 \begin{proof}
-Let $B$ a vector space over a field $k$ with basis $e_1, e_2$, with the
+Let $B$ be a vector space over a field $k$ with basis $e_1, e_2$, with the
 filtration $F^nB = B$ for $n < 0$, with $F^0B = ke_1$, and $F^nB = 0$ for
 $n > 0$. Now take $A = k(e_1 + e_2)$ and $C = B/ke_2$ with filtrations
 induced by $B$, i.e., such that $A \to B$ and $B \to C$ are strict
@@ -4929,7 +4932,7 @@ g(f(F^pA)) & = g(f(A) \cap F^pB) \\
 & = (g \circ f)(A) \cap (g(B) \cap F^pC) \\
 & = (g \circ f)(A) \cap F^pC.
 \end{align*}
-The first equality as $f$ is strict, the second because $g$ is injective,
+The first equality holds as $f$ is strict, the second because $g$ is injective,
 the third because $g$ is strict, and the fourth because
 $(g \circ f)(A) \subset g(B)$.
 
@@ -4941,7 +4944,7 @@ Assume $f$ is surjective. Then
 & = F^iA + \Ker(f) + \Ker(g \circ f) \\
 & = F^iA + \Ker(g \circ f)
 \end{align*}
-The first equality because $g$ is strict, the second because $f$ is
+The first equality holds because $g$ is strict, the second because $f$ is
 surjective, the third because $f$ is strict, and the last because
 $\Ker(f) \subset \Ker(g \circ f)$.
 \end{proof}
@@ -5141,7 +5144,7 @@ filtered objects. In other words, we have to show that
 $f(F^pA) = F^pB$ for all $p$.
 As the filtrations are finite we may prove this by descending induction
 on $p$. Suppose that $f(F^{p + 1}A) = F^{p + 1}B$.
-Then commutative diagram
+Then the commutative diagram
 $$
 \xymatrix{
 0 \ar[r] &
@@ -5961,7 +5964,7 @@ about unions and intersections of graded subobjects). Thus
 $$
 E_\infty^p =
 \frac{\bigcap_r (F^pK \cap d^{-1}(F^{p + r}K) + F^{p + 1}K)}
-{\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)}.
+{\bigcup_r (F^pK \cap d(F^{p - r + 1}K) + F^{p + 1}K)},
 $$
 where the top and bottom exist. We have
 \begin{equation}
@@ -6062,7 +6065,7 @@ To describe the spectral sequence associated to such an object
 we assume, for the moment, that $\mathcal{A}$ is an abelian category
 which has countable direct sums and in which countable direct sums are exact
 (this is not automatic, see Remark \ref{remark-direct-sums-not-exact}).
-Let us denote $d$ the differential of $K$. Forgetting the grading
+Let us denote by $d$ the differential of $K$. Forgetting the grading
 we can think of $\bigoplus K^n$ as a filtered differential object of
 $\mathcal{A}$. Hence according to Section \ref{section-filtered-differential}
 we obtain a spectral sequence $(E_r, d_r)_{r \geq 0}$. In this section
@@ -6313,7 +6316,7 @@ E_\infty^{p, q} =
 \frac{\bigcap_r (F^pK^{p + q} \cap d^{-1}(F^{p + r}K^{p + q + 1})
 + F^{p + 1}K^{p + q})}
 {\bigcup_r (F^pK^{p + q} \cap d(F^{p - r + 1}K^{p + q - 1})
-+ F^{p + 1}K^{p + q})}.
++ F^{p + 1}K^{p + q})},
 $$
 where the top and the bottom exist. With $n = p + q$ we have
 \begin{equation}
@@ -6511,7 +6514,7 @@ $E_r^{p, q}$.
 \end{lemma}
 
 \begin{proof}
-Denote $E_r^{even}$ and $E_r^{odd}$ the even and odd part of $E_r$
+Denote by $E_r^{even}$ and $E_r^{odd}$ the even and odd part of $E_r$
 defined as the direct sum of the $(p, q)$ components with $p + q$ even
 and odd. The differential $d_r$ defines maps
 $\varphi : E_r^{even} \to E_r^{odd}$ and $\psi : E_r^{odd} \to E_r^{even}$
@@ -6559,7 +6562,8 @@ for $p \leq p_1(n)$.
 \end{enumerate}
 Then
 \begin{enumerate}
-\item the spectral sequence associated to $(K^\bullet, F)$ is bounded,
+\item the spectral sequence $(E_r, d_r)_{r \geq 1}$ associated to
+$(K^\bullet, F)$ is bounded,
 \item the filtration on each $H^n(K^\bullet)$ is finite,
 \item the spectral sequence associated to $(K^\bullet, F)$ converges
 to $H^*(K^\bullet)$.
@@ -6573,7 +6577,7 @@ $$
 0 \to F^{p + 1}K^\bullet \to F^pK^\bullet \to \text{gr}^pK^\bullet \to 0
 $$
 we find that $E_1^{p, n - p} = 0$ for $p \geq \max(p_0(n), p_0(n + 1))$ and
-$p < \min(p_1(n), p_1(n + 1))$. Hence the spectral sequence is bounded
+for $p < \min(p_1(n), p_1(n + 1))$. Hence the spectral sequence starting with its $E_1$ page is bounded
 (Definition \ref{definition-bounded-ss}). This proves (1).
 
 \medskip\noindent
@@ -6586,14 +6590,14 @@ Next we prove that the spectral sequence weakly converges to
 $H^*(K^\bullet)$ using
 Lemma \ref{lemma-filtered-complex-ss-converges}.
 Let us show that we have equality in (\ref{equation-on-top-bigraded}).
-Namely, for $p + r > p_0(n + 1)$ the map
+Namely, for $r \geq 1$ and $p + r > p_0(n + 1)$ the map
 $$
 d : F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) \to F^{p + r}K^{n + 1}
 $$
 ends up in the image of $d : F^{p + r}K^n \to F^{p + r}K^{n + 1}$
 because the complex $F^{p + r}K^\bullet$ is exact in degree $n + 1$.
 We conclude that $F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) =
-d(F^{p + r}K^n) + \Ker(d) \cap F^pK^n$. Hence for such $r$ we have
+F^{p + r}K^n + \Ker(d) \cap F^pK^n$. Hence for such $r$ we have
 $$
 \Ker(d) \cap F^pK^{n} + F^{p + 1}K^{n} =
 F^pK^{n} \cap d^{-1}(F^{p + r}K^{n + 1}) + F^{p + 1}K^{n}
@@ -6653,12 +6657,12 @@ that (2) and (3) are true.
 
 \noindent
 Let $K^{\bullet, \bullet}$ be a double complex, see
-Section \ref{section-double-complexes}. It is customary to denote
+Section \ref{section-double-complexes}. It is customary to denote by
 $H^p_I(K^{\bullet, \bullet})$
 the complex with terms $\Ker(d_1^{p, q})/\Im(d_1^{p - 1, q})$
 (varying $q$) and differential induced by $d_2$.
 Then $H^q_{II}(H^p_I(K^{\bullet, \bullet}))$ denotes its cohomology in
-degree $q$. It is also customary to denote $H^q_{II}(K^{\bullet, \bullet})$
+degree $q$. It is also customary to denote by $H^q_{II}(K^{\bullet, \bullet})$
 the complex with terms $\Ker(d_2^{p, q})/\Im(d_2^{p, q - 1})$
 (varying $p$) and differential induced by $d_1$.
 Then $H^p_I(H^q_{II}(K^{\bullet, \bullet}))$ denotes its cohomology in
@@ -6685,8 +6689,8 @@ It is immediately verified that $(\text{Tot}(K^{\bullet, \bullet}), F_I)$ and
 $(\text{Tot}(K^{\bullet, \bullet}), F_{II})$ are filtered complexes.
 By Section \ref{section-filtered-complex}
 we obtain two spectral sequences. It is customary to
-denote $({}'E_r, {}'d_r)_{r \geq 0}$ the spectral sequence associated
-to the filtration $F_I$ and to denote $({}''E_r, {}''d_r)_{r \geq 0}$
+denote by $({}'E_r, {}'d_r)_{r \geq 0}$ the spectral sequence associated
+to the filtration $F_I$ and to denote by $({}''E_r, {}''d_r)_{r \geq 0}$
 the spectral sequence associated to the filtration $F_{II}$.
 Here is a description of these spectral sequences.
 
@@ -6717,7 +6721,7 @@ Omitted.
 \noindent
 These spectral sequences define two filtrations on
 $H^n(\text{Tot}(K^{\bullet, \bullet}))$.
-We will denote these $F_I$ and $F_{II}$.
+We will denote these by $F_I$ and $F_{II}$.
 
 \begin{definition}
 \label{definition-ss-double-complex-converge}
@@ -6871,7 +6875,7 @@ $h^n : A^{n, \bullet} \to A^{n - 1, \bullet}$
 such that $a \circ b - \text{id} = d_1 \circ h + h \circ d_1$
 which exist by assumption. Here $d_1 : A^{n, \bullet} \to A^{n + 1, \bullet}$
 are the differentials of the complex of complexes. We will also
-denote $d_2$ the differentials of the complexes $A^{n, \bullet}$
+denote by $d_2$ the differentials of the complexes $A^{n, \bullet}$
 for all $n$. Let $h^{n, m} : A^{n, m} \to A^{n - 1, m}$ be the components of
 $h^n$. Then we can consider
 $$
@@ -6935,7 +6939,8 @@ induced by $M^\bullet \to A_0^\bullet$ is a quasi-isomorphism.
 \end{lemma}
 
 \begin{proof}
-If there exists a $t \in \mathbf{Z}$ such that $A_0^q = 0$ for $q < t$, then
+If there exists a $t \in \mathbf{Z}$ such that $A_i^q = 0$
+for all $i \geq 0$ and $q < t$, then
 this follows immediately from
 Lemma \ref{lemma-double-complex-gives-resolution}
 (with $p$ and $q$ swapped as in the final statement of that lemma).
@@ -6947,7 +6952,7 @@ $$
 \sigma_{\geq t}A_1^\bullet \to
 \sigma_{\geq t}A_2^\bullet \to \ldots
 $$
-of stupid truncations. Denote $A(t)^{\bullet, \bullet}$ the corresponding
+of stupid truncations. Denote by $A(t)^{\bullet, \bullet}$ the corresponding
 double complex. Every element $\xi$ of $H^n(\text{Tot}(A^{\bullet, \bullet}))$
 is the image of an element of $H^n(\text{Tot}(A(t)^{\bullet, \bullet}))$
 for some $t$ (look at explicit representatives of cohomology classes).
@@ -7059,7 +7064,7 @@ Hence we see that $x_0 = m_0 + d_{A_0^\bullet}^{-1}(y)$ for some
 $m_0 \in M^0$ and $y \in A_0^{-1}$.
 Then $d_{M^\bullet}(m_0) = 0$ because $\text{d}_{A_0^\bullet}(x_0) = 0$
 as $\text{d}_{T^\bullet}(x) = 0$.
-Thus, replacing $\xi$ by something in the image of
+Thus, subtracting from $\xi$ an element in the image of
 $H^0(M^\bullet) \to H^0(T^\bullet)$ we may assume that $x_0$
 is in $\Im(d^{-1}_{A_0^\bullet})$.
 
@@ -7149,7 +7154,7 @@ Since $M^0 = 0$ we find that $x_0 = f_1^0(y_0)$ for some $y_0 \in A_1^0$.
 Then $x_1 + d^0_{A_1^\bullet}(y_0) = f_2^1(y_1)$ for some
 $y_1 \in A_2^1$, because it is mapped to zero by $f_1^1$
 as $x$ is a cocycle. Continuing, using induction, we find
-$y = (y_i) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
+$y = (0, y_0, y_1, \ldots) \in T^{-1}$ with $d_{T^\bullet}(y) = x$ as desired.
 \end{proof}
 
 
@@ -7495,7 +7500,7 @@ By the Yoneda lemma (Categories, Lemma \ref{categories-lemma-yoneda})
 the object $Q$ of $\mathcal{A}$ corresponding to $P$ is defined up to
 unique isomorphism by the formula
 $\Hom_\mathcal{A}(Q, A) = \Hom_\mathcal{B}(P, u(A))$. Let us write
-$Q = v(P)$. Denote $i_P : P \to u(v(P))$ the map corresponding to
+$Q = v(P)$. Denote by $i_P : P \to u(v(P))$ the map corresponding to
 $\text{id}_{v(P)}$ in $\Hom_\mathcal{A}(v(P), v(P))$. Functoriality
 in (2) implies that the bijection is given by
 $$
@@ -7604,7 +7609,7 @@ as stated in the lemma. To see that $M$ is essentially constant
 we can replace $\mathcal{I}$ by $\mathcal{I}'$, see
 Categories, Lemma \ref{categories-lemma-cofinal-essentially-constant}.
 Pick any $i \in \Ob(\mathcal{I})$
-and denote $X \to M_i$ the inverse of the isomorphism $X_i \to X$
+and denote by $X \to M_i$ the inverse of the isomorphism $X_i \to X$
 followed by the inclusion map $X_i \to M_i$. If $j$ is
 a second object, then choose $j \to k$ such that $Z_j \to M_k$ is
 zero. Since $\mathcal{I}$ is filtered we may also assume there is
@@ -7878,7 +7883,7 @@ if and only if the same is true for the images $\Im(B_{n_j} \to B_{n_i})$.
 The equivalence follows from this (small detail omitted).
 
 \medskip\noindent
-If $C \not = 0$, denote $B'_i \subset B_i$ the inverse image
+If $C \not = 0$, denote by $B'_i \subset B_i$ the inverse image
 of $C$ by the map $B_i \to C \oplus Z_i$. Then by the previous
 paragraph we see that $(B'_i)$ has ML if and only if $(B_i)$
 has ML. Thus we may replace $(B_i)$ by $(B'_i)$.
@@ -7901,10 +7906,10 @@ Let
 $$
 (A^{-2}_i \to A^{-1}_i \to A^0_i \to A^1_i)
 $$
-be an inverse system of complexes of abelian groups and denote
-$A^{-2} \to A^{-1} \to A^0 \to A^1$ its limit. Denote
+be an inverse system of complexes of abelian groups and denote by
+$A^{-2} \to A^{-1} \to A^0 \to A^1$ its limit. Denote by
 $(H_i^{-1})$, $(H_i^0)$ the inverse systems of cohomologies, and
-denote $H^{-1}$, $H^0$ the cohomologies of $A^{-2} \to A^{-1} \to A^0 \to A^1$.
+denote by $H^{-1}$, $H^0$ the cohomologies of $A^{-2} \to A^{-1} \to A^0 \to A^1$.
 If $(A^{-2}_i)$ and $(A^{-1}_i)$ are ML and
 $(H^{-1}_i)$ is essentially constant, then
 $H^0 = \lim H_i^0$.
