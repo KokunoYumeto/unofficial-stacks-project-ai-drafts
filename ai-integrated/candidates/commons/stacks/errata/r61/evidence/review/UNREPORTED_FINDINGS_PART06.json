@@ -1,0 +1,112 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-015",
+      "source": "derived.tex",
+      "source_lines": [
+        4379,
+        4379
+      ],
+      "original_problem": "gr has target D(Gr(A)); the bounded definition instead says D^b(A).",
+      "correction": "Use D^b(Gr(A)), with a common cochain bound across graded components.",
+      "status": "proved_target_category_correction",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 1
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-015-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-016",
+      "source": "derived.tex",
+      "source_lines": [
+        4792,
+        4794
+      ],
+      "original_problem": "The displayed arrow is inverse to the map constructed by gamma and cited characterization (4).",
+      "correction": "Display Hom(W,C) to the colimit, the direction actually constructed; its inverse exists afterward.",
+      "status": "proved_direction_clarification",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 4
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-016-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-017",
+      "source": "derived.tex",
+      "source_lines": [
+        5056,
+        5065
+      ],
+      "original_problem": "Four Hom expressions are contravariant in the forward filtered index and do not define the stated diagram.",
+      "correction": "Swap the Hom arguments in both displayed comparisons, preserving all objects and forward denominator categories.",
+      "status": "proved_Hom_variance_correction",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 7
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-017-OP1",
+        "DERIVED-NEW-017-OP2"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-018",
+      "source": "derived.tex",
+      "source_lines": [
+        4982,
+        4983
+      ],
+      "original_problem": "The claim that the canonical map may never be an isomorphism is contradicted by X=0.",
+      "correction": "Say it need not be an isomorphism for a given X; the note proves the zero-object case and an everywhere-defined counterexample to universal invertibility.",
+      "status": "proved_overclaim_correction",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 6
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-018-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-019",
+      "source": "derived.tex",
+      "source_lines": [
+        4933,
+        4967
+      ],
+      "original_problem": "The prose uses fully faithfulness and omits is in both everywhere-defined phrases.",
+      "correction": "Three grammar repairs, with mathematical statements unchanged.",
+      "status": "proved_copyedits",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 6
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-019-OP1",
+        "DERIVED-NEW-019-OP2",
+        "DERIVED-NEW-019-OP3"
+      ]
+    }
+  ]
+}

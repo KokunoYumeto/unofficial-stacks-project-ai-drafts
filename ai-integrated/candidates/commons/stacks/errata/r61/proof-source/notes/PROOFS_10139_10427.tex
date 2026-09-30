@@ -1,0 +1,185 @@
+\section{\texorpdfstring{Derived colimits:\allowbreak{} telescope maps and comparison defects}{Derived  telescope maps and comparison defects}}\label{proofs-10139-10427-derived-colimits-telescope-maps-and-comparison-defects}
+
+Private source-order review of original derived.tex 10139–\allowbreak{}10427. Authority:\allowbreak{} Stacks a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. Receiving public edition:\allowbreak{} 95a51593\allowbreak{}aceb247a\allowbreak{}c7a18311\allowbreak{}1678c3a0\allowbreak{}f8b8f4b5. The operation and source-reading records bind the actual files. The strengthened comparison statement below is editorial material,\allowbreak{} not a replacement for the source\textquotesingle s compactness hypothesis. No novelty is claimed.
+
+Human source:\allowbreak{} \href{https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex\#L10139}{The Stacks Project,\allowbreak{} original Derived Categories TeX}. The Hom exact sequence also occurs in \href{https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex}{More on Algebra,\allowbreak{} original TeX},\allowbreak{} Lemma named lemma-map-from-hocolim. The source labels,\allowbreak{} rather than current line offsets,\allowbreak{} identify that receiving result.
+
+\subsection{1. The defining triangle and actual comparison maps}\label{proofs-10139-10427-the-defining-triangle-and-actual-comparison-maps}
+
+For a sequence K\_\allowbreak{}1\allowbreak{}→K\_\allowbreak{}2\allowbreak{}→… with maps f\_\allowbreak{}n put S\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}n K\_\allowbreak{}n and let ι\_\allowbreak{}n:\allowbreak{}K\_\allowbreak{}n\allowbreak{}→S be its coprojections. Define u:\allowbreak{}S\allowbreak{}→S by the exact formulas
+
+u ι\_\allowbreak{}n\allowbreak{}=ι\_\allowbreak{}n-ι\_\allowbreak{}\{n\allowbreak{}+1\}f\_\allowbreak{}n.
+
+Each column has two components,\allowbreak{} so the universal property of the coproduct defines u even if the individual K\_\allowbreak{}n are not compact. A homotopy colimit is a choice of distinguished triangle
+
+S --u-\allowbreak{}-> S --v-\allowbreak{}-> C --w-\allowbreak{}-> S[1]\allowbreak{}. (1.1)\allowbreak{}
+
+Its structural maps are i\_\allowbreak{}n\allowbreak{}=vι\_\allowbreak{}n,\allowbreak{} and v u\allowbreak{}=0 gives i\_\allowbreak{}\{n\allowbreak{}+1\}f\_\allowbreak{}n\allowbreak{}=i\_\allowbreak{}n. TR1 gives existence as soon as S exists. Two choices with this same u admit a map of triangles whose first two maps are identities,\allowbreak{} by TR3. Applying representable Hom gives maps of long exact sequences; the five-lemma argument shows that the third map induces bijections on every representable Hom,\allowbreak{} so is an isomorphism. This is uniqueness up to a possibly nonunique isomorphism compatible with both v and w,\allowbreak{} as stated in the source.
+
+For a morphism of sequences a\_\allowbreak{}n:\allowbreak{}K\_\allowbreak{}n\allowbreak{}→L\_\allowbreak{}n satisfying a\_\allowbreak{}\{n\allowbreak{}+1\}f\_\allowbreak{}n\allowbreak{}=g\_\allowbreak{}n a\_\allowbreak{}n,\allowbreak{} let A\allowbreak{}=\allowbreak{}⊕a\_\allowbreak{}n:\allowbreak{}S\_\allowbreak{}K\allowbreak{}→S\_\allowbreak{}L. The two maps in the square are both A,\allowbreak{} and the column equation gives A u\_\allowbreak{}K\allowbreak{}=u\_\allowbreak{}L A. TR3 supplies a map a:\allowbreak{}C\_\allowbreak{}K\allowbreak{}→C\_\allowbreak{}L with
+
+a v\_\allowbreak{}K\allowbreak{}=v\_\allowbreak{}L A,\allowbreak{} w\_\allowbreak{}L a\allowbreak{}=A[1]\allowbreak{}w\_\allowbreak{}K.
+
+After precomposition with ι\_\allowbreak{}n this says a i\_\allowbreak{}n\allowbreak{}=j\_\allowbreak{}n a\_\allowbreak{}n. The source\textquotesingle s printed a i\_\allowbreak{}n\allowbreak{}=j\_\allowbreak{}n has different domains on its two sides. Existing unit MC-STK-ERR-0881 supplies precisely the missing a\_\allowbreak{}n; no new operation is needed for that reported defect.
+
+For completeness,\allowbreak{} differences of two such completions ε:\allowbreak{}C\_\allowbreak{}K\allowbreak{}→C\_\allowbreak{}L satisfy ε v\_\allowbreak{}K\allowbreak{}=0 and w\_\allowbreak{}L ε\allowbreak{}=0. Exactness of Hom applied to (1.1)\allowbreak{} gives ε\allowbreak{}=t w\_\allowbreak{}K for some t:\allowbreak{}S\_\allowbreak{}K[1]\allowbreak{}\allowbreak{}→C\_\allowbreak{}L. If η:\allowbreak{}C\_\allowbreak{}L\allowbreak{}→C\_\allowbreak{}M is another such difference,\allowbreak{} write η\allowbreak{}=s w\_\allowbreak{}L. Then ηε\allowbreak{}=s w\_\allowbreak{}L ε\allowbreak{}=0. Thus these differences form the square-zero ideal already proved as DERIVED-UNDER-001. This is a receiving application of that result,\allowbreak{} not a new underclaim. It does not assert a canonical choice of a.
+
+\subsection{2. Maps out of a telescope and their ambiguity}\label{proofs-10139-10427-maps-out-of-a-telescope-and-their-ambiguity}
+
+Apply Hom(-,\allowbreak{}L)\allowbreak{} to (1.1)\allowbreak{}. The relevant exact segment is
+
+Hom(S[1]\allowbreak{},\allowbreak{}L)\allowbreak{} --u[1]\allowbreak{}\textasciicircum{}*-\allowbreak{}-> Hom(S[1]\allowbreak{},\allowbreak{}L)\allowbreak{} --w\textasciicircum{}*-\allowbreak{}-> Hom(C,\allowbreak{}L)\allowbreak{} --v\textasciicircum{}*-\allowbreak{}-> Hom(S,\allowbreak{}L)\allowbreak{} --u\textasciicircum{}*-\allowbreak{}-> Hom(S,\allowbreak{}L)\allowbreak{}.
+
+The coproduct property gives Hom(S,\allowbreak{}L)\allowbreak{}\allowbreak{}=∏\_\allowbreak{}n Hom(K\_\allowbreak{}n,\allowbreak{}L)\allowbreak{}. Under this exact identification,\allowbreak{}
+
+u\textasciicircum{}*((x\_\allowbreak{}n)\allowbreak{})\allowbreak{}\allowbreak{}=(x\_\allowbreak{}n-x\_\allowbreak{}\{n\allowbreak{}+1\}f\_\allowbreak{}n)\allowbreak{}.
+
+The same formula on shifted objects identifies u[1]\allowbreak{}\textasciicircum{}* with the difference map for the tower Hom(K\_\allowbreak{}n,\allowbreak{}L[-1]\allowbreak{})\allowbreak{},\allowbreak{} using the exact shift adjunction Hom(K\_\allowbreak{}n[1]\allowbreak{},\allowbreak{}L)\allowbreak{}\allowbreak{}=Hom(K\_\allowbreak{}n,\allowbreak{}L[-1]\allowbreak{})\allowbreak{}. If Δ denotes that product difference map,\allowbreak{} the exact segment becomes
+
+0\allowbreak{}→coker Δ\_\allowbreak{}\{Hom(K\_\allowbreak{}n,\allowbreak{}L[-1]\allowbreak{})\allowbreak{}\}\allowbreak{}→Hom(C,\allowbreak{}L)\allowbreak{}\allowbreak{}→lim Hom(K\_\allowbreak{}n,\allowbreak{}L)\allowbreak{}\allowbreak{}→0. (2.1)\allowbreak{}
+
+The left injection sends a family z\_\allowbreak{}n:\allowbreak{}K\_\allowbreak{}n[1]\allowbreak{}\allowbreak{}→L to z w,\allowbreak{} where z:\allowbreak{}S[1]\allowbreak{}\allowbreak{}→L has those components. A change by an element of im Δ does not change z w because u[1]\allowbreak{}w\allowbreak{}=0. The right map sends b:\allowbreak{}C\allowbreak{}→L to (b i\_\allowbreak{}n)\allowbreak{}. Thus every compatible family lifts,\allowbreak{} and its lifts form a torsor under the displayed cokernel; no functorial choice of a lift follows. The source\textquotesingle s R\^{}1 lim notation denotes this cokernel for abelian-group towers. This proves the exact maps in the displayed source sequence and the receiving More on Algebra lemma without a new count.
+
+\subsection{\texorpdfstring{3. Passing to a subsequence:\allowbreak{} all four maps}{3. Passing to a  all four maps}}\label{proofs-10139-10427-passing-to-a-subsequence-all-four-maps}
+
+Let n\_\allowbreak{}1<n\_\allowbreak{}2<… be the given subsequence. Write
+
+t\_\allowbreak{}\{q,\allowbreak{}p\}\allowbreak{}=f\_\allowbreak{}\{q-1\}⋯f\_\allowbreak{}p:\allowbreak{}K\_\allowbreak{}p\allowbreak{}→K\_\allowbreak{}q for q>p,\allowbreak{} t\_\allowbreak{}\{p,\allowbreak{}p\}\allowbreak{}=id,\allowbreak{} T\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}i K\_\allowbreak{}\{n\_\allowbreak{}i\},\allowbreak{} g\_\allowbreak{}i\allowbreak{}=t\_\allowbreak{}\{n\_\allowbreak{}\{i\allowbreak{}+1\},\allowbreak{}n\_\allowbreak{}i\},\allowbreak{} u\_\allowbreak{}T κ\_\allowbreak{}i\allowbreak{}=κ\_\allowbreak{}i-κ\_\allowbreak{}\{i\allowbreak{}+1\}g\_\allowbreak{}i,\allowbreak{}
+
+where κ\_\allowbreak{}i:\allowbreak{}K\_\allowbreak{}\{n\_\allowbreak{}i\}\allowbreak{}→T. Retain S,\allowbreak{}u from Section 1. The two telescope triangles and forward comparison have this form:\allowbreak{}
+
+\[
+\begin{array}{ccccccc}
+T&\xrightarrow{u_T}&T&\xrightarrow{v_T}&C_T&\xrightarrow{w_T}&T[1]\\
+\scriptstyle b\downarrow&&\scriptstyle a\downarrow&&\scriptstyle φ\downarrow&&\scriptstyle b[1]\downarrow\\
+S&\xrightarrow{u}&S&\xrightarrow{v}&C&\xrightarrow{w}&S[1].
+\end{array}
+\]
+
+The reverse comparison has first map d,\allowbreak{} second map c and third map ψ. Define all components,\allowbreak{} including the initial segment before n\_\allowbreak{}1,\allowbreak{} by
+
+a κ\_\allowbreak{}i\allowbreak{}=ι\_\allowbreak{}\{n\_\allowbreak{}i\},\allowbreak{} b κ\_\allowbreak{}i\allowbreak{}=Σ\_\allowbreak{}\{n\_\allowbreak{}i≤q<n\_\allowbreak{}\{i\allowbreak{}+1\}\}ι\_\allowbreak{}q t\_\allowbreak{}\{q,\allowbreak{}n\_\allowbreak{}i\},\allowbreak{} c ι\_\allowbreak{}j\allowbreak{}=κ\_\allowbreak{}i t\_\allowbreak{}\{n\_\allowbreak{}i,\allowbreak{}j\},\allowbreak{} where i is the least index with j≤n\_\allowbreak{}i,\allowbreak{} d ι\_\allowbreak{}j\allowbreak{}=κ\_\allowbreak{}i if j\allowbreak{}=n\_\allowbreak{}i,\allowbreak{} and zero otherwise. (3.1)\allowbreak{}
+
+Each expression defines a map from a coproduct by finitely many components on each source summand. The least index in c exists since the strictly increasing natural-number subsequence is unbounded. At j\allowbreak{}=n\_\allowbreak{}i the transition composite in c is the identity.
+
+Telescoping each finite sum proves
+
+u b κ\_\allowbreak{}i\allowbreak{}=ι\_\allowbreak{}\{n\_\allowbreak{}i\}-ι\_\allowbreak{}\{n\_\allowbreak{}\{i\allowbreak{}+1\}\}t\_\allowbreak{}\{n\_\allowbreak{}\{i\allowbreak{}+1\},\allowbreak{}n\_\allowbreak{}i\} \allowbreak{}=a u\_\allowbreak{}T κ\_\allowbreak{}i.
+
+For the reverse square,\allowbreak{} if j is not a selected index,\allowbreak{} j and j\allowbreak{}+1 have the same least selected upper endpoint and c u ι\_\allowbreak{}j\allowbreak{}=0\allowbreak{}=u\_\allowbreak{}T dι\_\allowbreak{}j. If j\allowbreak{}=n\_\allowbreak{}i,\allowbreak{} then c u ι\_\allowbreak{}j\allowbreak{}=κ\_\allowbreak{}i-κ\_\allowbreak{}\{i\allowbreak{}+1\}g\_\allowbreak{}i\allowbreak{}=u\_\allowbreak{}T dι\_\allowbreak{}j. Hence u b\allowbreak{}=a u\_\allowbreak{}T and c u\allowbreak{}=u\_\allowbreak{}T d,\allowbreak{} exactly the two required squares. TR3 gives φ and ψ with all triangle compatibilities.
+
+The identities c a\allowbreak{}=id\_\allowbreak{}T and d b\allowbreak{}=id\_\allowbreak{}T hold on every κ\_\allowbreak{}i:\allowbreak{} the finite interval [n\_\allowbreak{}i,\allowbreak{}n\_\allowbreak{}\{i\allowbreak{}+1\})\allowbreak{} contains exactly one selected index,\allowbreak{} namely n\_\allowbreak{}i. These are the first two maps of the composite of triangles from the T triangle to itself. Consequently ψφ is an isomorphism. The printed φψ at original 10278 reverses these domains.
+
+For the other composite,\allowbreak{} define h:\allowbreak{}S\allowbreak{}→S on each summand as follows. Let i be the least index with j≤n\_\allowbreak{}i. Set
+
+h ι\_\allowbreak{}j\allowbreak{}=Σ\_\allowbreak{}\{j≤q<n\_\allowbreak{}i\}ι\_\allowbreak{}q t\_\allowbreak{}\{q,\allowbreak{}j\}. (3.2)\allowbreak{}
+
+The sum is empty,\allowbreak{} hence zero,\allowbreak{} when j\allowbreak{}=n\_\allowbreak{}i. This includes every positive j before n\_\allowbreak{}1. The last summand is K\_\allowbreak{}\{n\_\allowbreak{}i-1\},\allowbreak{} with transition f\_\allowbreak{}\{n\_\allowbreak{}i-2\}⋯f\_\allowbreak{}j; there is no K\_\allowbreak{}\{n\_\allowbreak{}i\} summand.
+
+The first exact identity is obtained by telescoping:\allowbreak{}
+
+u h ι\_\allowbreak{}j\allowbreak{}=ι\_\allowbreak{}j-ι\_\allowbreak{}\{n\_\allowbreak{}i\}t\_\allowbreak{}\{n\_\allowbreak{}i,\allowbreak{}j\}\allowbreak{}=(id\_\allowbreak{}S-a c)\allowbreak{}ι\_\allowbreak{}j.
+
+For the second,\allowbreak{} when j<n\_\allowbreak{}i the difference of (3.2)\allowbreak{} at j and j\allowbreak{}+1 leaves exactly ι\_\allowbreak{}j,\allowbreak{} so h u ι\_\allowbreak{}j\allowbreak{}=ι\_\allowbreak{}j\allowbreak{}=(id\_\allowbreak{}S-b d)\allowbreak{}ι\_\allowbreak{}j. When j\allowbreak{}=n\_\allowbreak{}i,\allowbreak{} the first sum is zero and the second has upper endpoint n\_\allowbreak{}\{i\allowbreak{}+1\}; therefore
+
+h u ι\_\allowbreak{}\{n\_\allowbreak{}i\} \allowbreak{}=-Σ\_\allowbreak{}\{n\_\allowbreak{}i<q<n\_\allowbreak{}\{i\allowbreak{}+1\}\}ι\_\allowbreak{}q t\_\allowbreak{}\{q,\allowbreak{}n\_\allowbreak{}i\} \allowbreak{}=ι\_\allowbreak{}\{n\_\allowbreak{}i\}-bκ\_\allowbreak{}i \allowbreak{}=(id\_\allowbreak{}S-b d)\allowbreak{}ι\_\allowbreak{}\{n\_\allowbreak{}i\}.
+
+Thus the two source homotopy equations hold exactly:\allowbreak{}
+
+u h\allowbreak{}=id\_\allowbreak{}S-a c,\allowbreak{} h u\allowbreak{}=id\_\allowbreak{}S-b d. (3.3)\allowbreak{}
+
+The printed h\_\allowbreak{}j includes its upper endpoint. This is a real defect. For example,\allowbreak{} work in D(Ab)\allowbreak{},\allowbreak{} let every K\_\allowbreak{}j\allowbreak{}=Z[0]\allowbreak{} and every f\_\allowbreak{}j\allowbreak{}=id,\allowbreak{} and choose n\_\allowbreak{}i\allowbreak{}=2i. At j\allowbreak{}=3 the printed h has column ι\_\allowbreak{}3\allowbreak{}+ι\_\allowbreak{}4. Its image under u is ι\_\allowbreak{}3-ι\_\allowbreak{}5,\allowbreak{} whereas (id\_\allowbreak{}S-a c)\allowbreak{}ι\_\allowbreak{}3\allowbreak{}=ι\_\allowbreak{}3-ι\_\allowbreak{}4. These maps of degree-zero free abelian groups are different. The corrected formula gives hι\_\allowbreak{}3\allowbreak{}=ι\_\allowbreak{}3 and satisfies (3.3)\allowbreak{}.
+
+Now θ\allowbreak{}=φψ is the endomorphism on C. Its triangle\textquotesingle s first two components are b d and a c. Let e\allowbreak{}=id\_\allowbreak{}C-θ. Then
+
+e v\allowbreak{}=v(id\_\allowbreak{}S-a c)\allowbreak{}\allowbreak{}=v u h\allowbreak{}=0,\allowbreak{} w e\allowbreak{}=(id\_\allowbreak{}S-b d)\allowbreak{}[1]\allowbreak{}w\allowbreak{}=h[1]\allowbreak{}u[1]\allowbreak{}w\allowbreak{}=0.
+
+Exactness gives e\allowbreak{}=t w for some t:\allowbreak{}S[1]\allowbreak{}\allowbreak{}→C; hence e²\allowbreak{}=t w e\allowbreak{}=0. It follows that θ\allowbreak{}=id\_\allowbreak{}C-e is invertible,\allowbreak{} with inverse id\_\allowbreak{}C\allowbreak{}+e. This supplies the source\textquotesingle s omitted small argument and shows why the printed ψφ in original 10292 and 10294 must instead be φψ. DERIVED-NEW-035 records these three reversed composite expressions. DERIVED-NEW-036 records the wrong homotopy endpoint,\allowbreak{} with its zero case and initial-segment indexing made explicit in the corrected formula.
+
+Finally both ψφ and φψ are invertible. The two candidates (ψφ)\allowbreak{}\textasciicircum{}(-1)\allowbreak{}ψ and ψ(φψ)\allowbreak{}\textasciicircum{}(-1)\allowbreak{} for an inverse to φ coincide:\allowbreak{} multiply (ψφ)\allowbreak{}ψ\allowbreak{}=ψ(φψ)\allowbreak{} on the left and right by the respective inverses. They are respectively a left and a right inverse,\allowbreak{} so φ is an isomorphism. Its component equation φ v\_\allowbreak{}T\allowbreak{}=v a gives φ v\_\allowbreak{}T κ\_\allowbreak{}i\allowbreak{}=vι\_\allowbreak{}\{n\_\allowbreak{}i\},\allowbreak{} which is precisely the source\textquotesingle s required diagram. No compactness,\allowbreak{} enhancement,\allowbreak{} infinite sum in an individual column,\allowbreak{} or uniqueness of a TR3 completion was assumed.
+
+\subsection{\texorpdfstring{4. Direct sums in the derived category,\allowbreak{} including uniqueness}{4. Direct sums in the derived  including uniqueness}}\label{proofs-10139-10427-direct-sums-in-the-derived-category-including-uniqueness}
+
+Assume A has exact countable direct sums. For complexes K\_\allowbreak{}i let S be their termwise direct sum. Exactness gives H\textasciicircum{}r(S)\allowbreak{}\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}i H\textasciicircum{}r(K\_\allowbreak{}i)\allowbreak{}:\allowbreak{} apply direct sums to the short exact sequences defining cycles,\allowbreak{} boundaries and cohomology. In particular a direct sum of quasi-isomorphisms is a quasi-isomorphism.
+
+For maps α\_\allowbreak{}i:\allowbreak{}K\_\allowbreak{}i\allowbreak{}→L in D(A)\allowbreak{},\allowbreak{} choose roofs K\_\allowbreak{}i←s\_\allowbreak{}i M\_\allowbreak{}i\allowbreak{}→f\_\allowbreak{}i L with s\_\allowbreak{}i a quasi-isomorphism. Their coproduct s:\allowbreak{}\allowbreak{}⊕M\_\allowbreak{}i\allowbreak{}→S is a quasi-isomorphism,\allowbreak{} and the maps f\_\allowbreak{}i define f:\allowbreak{}\allowbreak{}⊕M\_\allowbreak{}i\allowbreak{}→L. The roof f s\textasciicircum{}(-1)\allowbreak{} restricts to every α\_\allowbreak{}i,\allowbreak{} which proves existence of the required coproduct map.
+
+Here is the uniqueness omitted in the source. Suppose γ:\allowbreak{}S\allowbreak{}→L restricts to zero on every K\_\allowbreak{}i. Represent it by f s\textasciicircum{}(-1)\allowbreak{} with s:\allowbreak{}M\allowbreak{}→S a quasi-isomorphism. For each coprojection K\_\allowbreak{}i\allowbreak{}→S,\allowbreak{} the fraction calculus supplies a quasi-isomorphism t\_\allowbreak{}i:\allowbreak{}N\_\allowbreak{}i\allowbreak{}→K\_\allowbreak{}i and u\_\allowbreak{}i:\allowbreak{}N\_\allowbreak{}i\allowbreak{}→M with s u\_\allowbreak{}i\allowbreak{}=ι\_\allowbreak{}i t\_\allowbreak{}i in K(A)\allowbreak{}. The zero restriction implies f u\_\allowbreak{}i\allowbreak{}=0 in D(A)\allowbreak{}. The zero criterion for localization supplies a further quasi-isomorphism q\_\allowbreak{}i:\allowbreak{}N'\_\allowbreak{}i\allowbreak{}→N\_\allowbreak{}i with f u\_\allowbreak{}i q\_\allowbreak{}i\allowbreak{}=0 in K(A)\allowbreak{}. Replace t\_\allowbreak{}i,\allowbreak{}u\_\allowbreak{}i by their composites with q\_\allowbreak{}i.
+
+Let U:\allowbreak{}\allowbreak{}⊕N'\_\allowbreak{}i\allowbreak{}→M have components u\_\allowbreak{}i and let T\allowbreak{}=\allowbreak{}⊕t\_\allowbreak{}i:\allowbreak{}\allowbreak{}⊕N'\_\allowbreak{}i\allowbreak{}→S. The component homotopies combine to give s U\allowbreak{}=T in K(A)\allowbreak{},\allowbreak{} because maps and homotopies out of a termwise coproduct are specified by maps and homotopies on its summands. T and s are quasi-isomorphisms,\allowbreak{} so U is one. Likewise the component nullhomotopies combine to f U\allowbreak{}=0 in K(A)\allowbreak{}. Consequently γ\allowbreak{}=f U(s U)\allowbreak{}\textasciicircum{}(-1)\allowbreak{}\allowbreak{}=0 in D(A)\allowbreak{}. This proves the full coproduct property without presuming that derived Hom out of a coproduct is a product.
+
+The same argument applies to any indexing set for which the corresponding direct sums exist and are exact; the countable source statement remains the one under review. This routine index-set observation is not counted as another editorial result.
+
+\subsection{5. Exact sequential colimits and the telescope sequence}\label{proofs-10139-10427-exact-sequential-colimits-and-the-telescope-sequence}
+
+Assume sequential colimits exist and are exact in A. The colimit of the finite partial sums gives a countable coproduct:\allowbreak{} maps from the colimit to an object are precisely compatible maps from the finite sums,\allowbreak{} equivalently a family of maps from their summands. Finite sums are exact,\allowbreak{} and taking the assumed exact sequential colimit proves countable sums are exact. The existing correction 0885 changes only the source\textquotesingle s plural verb.
+
+For a sequence A\_\allowbreak{}1\allowbreak{}→A\_\allowbreak{}2\allowbreak{}→… set B\_\allowbreak{}n\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}\{1≤j≤n\}A\_\allowbreak{}j and B'\_\allowbreak{}n\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}\{1≤j<n\}A\_\allowbreak{}j. Define β\_\allowbreak{}n:\allowbreak{}B'\_\allowbreak{}n\allowbreak{}→B\_\allowbreak{}n by columns ι\_\allowbreak{}j-ι\_\allowbreak{}\{j\allowbreak{}+1\}f\_\allowbreak{}j and q\_\allowbreak{}n:\allowbreak{}B\_\allowbreak{}n\allowbreak{}→A\_\allowbreak{}n by columns t\_\allowbreak{}\{n,\allowbreak{}j\}. Then q\_\allowbreak{}n β\_\allowbreak{}n\allowbreak{}=0,\allowbreak{} and q\_\allowbreak{}n is split epic using the last summand. The sequence 0\allowbreak{}→B'\_\allowbreak{}n\allowbreak{}→B\_\allowbreak{}n\allowbreak{}→A\_\allowbreak{}n\allowbreak{}→0 is exact. For a completely explicit verification,\allowbreak{} β\_\allowbreak{}n is injective by successive coordinates:\allowbreak{} its first coordinate is x\_\allowbreak{}1 and its j-th coordinate is x\_\allowbreak{}j-f\_\allowbreak{}\{j-1\}x\_\allowbreak{}\{j-1\}. An element y of ker q\_\allowbreak{}n has unique preimage with x\_\allowbreak{}1\allowbreak{}=y\_\allowbreak{}1 and x\_\allowbreak{}j\allowbreak{}=y\_\allowbreak{}j\allowbreak{}+f\_\allowbreak{}\{j-1\}x\_\allowbreak{}\{j-1\} for 1\textless j\textless n. The last-coordinate equation is precisely q\_\allowbreak{}n(y)\allowbreak{}\allowbreak{}=0. These calculations are matrix identities of finite biproduct maps,\allowbreak{} so hold in any abelian category,\allowbreak{} without an element interpretation.
+
+The transition maps B'\_\allowbreak{}n\allowbreak{}→B'\_\allowbreak{}\{n\allowbreak{}+1\} and B\_\allowbreak{}n\allowbreak{}→B\_\allowbreak{}\{n\allowbreak{}+1\} are inclusions; the right transition is f\_\allowbreak{}n. The column equations show these form a morphism of short exact sequences. Their colimit is therefore
+
+0\allowbreak{}→\allowbreak{}⊕\_\allowbreak{}n A\_\allowbreak{}n --(1-f)\allowbreak{}-\allowbreak{}-> \allowbreak{}⊕\_\allowbreak{}n A\_\allowbreak{}n\allowbreak{}→colim\_\allowbreak{}n A\_\allowbreak{}n\allowbreak{}→0. (5.1)\allowbreak{}
+
+For a sequence of complexes,\allowbreak{} apply (5.1)\allowbreak{} in every degree. The differentials commute with every map,\allowbreak{} so this is a short exact sequence of complexes. Its distinguished triangle in D(A)\allowbreak{},\allowbreak{} together with Section 4,\allowbreak{} identifies the actual termwise colimit and its canonical stage maps as a homotopy colimit. The source\textquotesingle s exact sequential-colimit assumption is retained.
+
+\subsection{6. Homological functors and compact-source maps}\label{proofs-10139-10427-homological-functors-and-compact-source-maps}
+
+Let H:\allowbreak{}D\allowbreak{}→A be homological,\allowbreak{} commute with countable coproducts,\allowbreak{} and let A have exact sequential colimits. Apply H to (1.1)\allowbreak{}. Shift is an equivalence,\allowbreak{} hence preserves the existing coproduct S. The exact segment is
+
+\allowbreak{}⊕H(K\_\allowbreak{}n)\allowbreak{} --(1-H(f)\allowbreak{})\allowbreak{}-\allowbreak{}-> \allowbreak{}⊕H(K\_\allowbreak{}n)\allowbreak{}\allowbreak{}→H(C)\allowbreak{}\allowbreak{}→ \allowbreak{}⊕H(K\_\allowbreak{}n[1]\allowbreak{})\allowbreak{} --(1-H(f[1]\allowbreak{})\allowbreak{})\allowbreak{}-\allowbreak{}-> \allowbreak{}⊕H(K\_\allowbreak{}n[1]\allowbreak{})\allowbreak{}.
+
+The last map is monic by (5.1)\allowbreak{}; its first map\textquotesingle s cokernel is colim H(K\_\allowbreak{}n)\allowbreak{}. Thus the induced map colim H(K\_\allowbreak{}n)\allowbreak{}\allowbreak{}→H(C)\allowbreak{} is an isomorphism. Its components are H(i\_\allowbreak{}n)\allowbreak{},\allowbreak{} so the asserted identification is the actual canonical one.
+
+Take A\allowbreak{}=Ab and H\allowbreak{}=Hom\_\allowbreak{}D(P,\allowbreak{}-)\allowbreak{}. It is homological by the triangle axioms. If Hom\_\allowbreak{}D(P,\allowbreak{}-)\allowbreak{} commutes with countable sums,\allowbreak{} the preceding argument proves the source comparison
+
+λ:\allowbreak{}colim\_\allowbreak{}n Hom\_\allowbreak{}D(P,\allowbreak{}K\_\allowbreak{}n)\allowbreak{}\allowbreak{}→Hom\_\allowbreak{}D(P,\allowbreak{}C)\allowbreak{}
+
+is bijective. It follows explicitly that every map P\allowbreak{}→C factors through some i\_\allowbreak{}n and that two stage maps giving the same map to C become equal at a later common stage. Both assertions are the element description of a sequential colimit of abelian groups. No countability assertion about the individual Hom groups is needed.
+
+\subsection{7. The exact comparison defect without compactness}\label{proofs-10139-10427-the-exact-comparison-defect-without-compactness}
+
+DERIVED-UNDER-024 gives a criterion for this one sequence and object P. Do not assume P compact or that Hom(P,\allowbreak{}-)\allowbreak{} preserves any infinite sum. Retain the actual triangle (1.1)\allowbreak{}. For r\allowbreak{}=0,\allowbreak{}1 define abelian groups
+
+A\_\allowbreak{}r\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}n Hom\_\allowbreak{}D(P,\allowbreak{}K\_\allowbreak{}n[r]\allowbreak{})\allowbreak{},\allowbreak{} B\_\allowbreak{}r\allowbreak{}=Hom\_\allowbreak{}D(P,\allowbreak{}S[r]\allowbreak{})\allowbreak{},\allowbreak{} Q\_\allowbreak{}r\allowbreak{}=B\_\allowbreak{}r/\allowbreak{}A\_\allowbreak{}r.
+
+The canonical map A\_\allowbreak{}r\allowbreak{}→B\_\allowbreak{}r is injective:\allowbreak{} if a finite sum of stage maps gives zero in B\_\allowbreak{}r,\allowbreak{} compose with each coordinate projection S[r]\allowbreak{}\allowbreak{}→K\_\allowbreak{}n[r]\allowbreak{} to show that every component is zero. Let d\_\allowbreak{}r:\allowbreak{}B\_\allowbreak{}r\allowbreak{}→B\_\allowbreak{}r be postcomposition by u[r]\allowbreak{}. Its restriction δ\_\allowbreak{}r to A\_\allowbreak{}r has the original finite-support columns 1-(f\_\allowbreak{}n[r]\allowbreak{})\allowbreak{}\_\allowbreak{}*; it is injective,\allowbreak{} by successive components. It induces an endomorphism e\_\allowbreak{}r:\allowbreak{}Q\_\allowbreak{}r\allowbreak{}→Q\_\allowbreak{}r. These definitions retain all the actual maps,\allowbreak{} not only their kernels.
+
+The triangle yields a short exact sequence
+
+0\allowbreak{}→coker d\_\allowbreak{}0 --v\_\allowbreak{}*-\allowbreak{}-> Hom\_\allowbreak{}D(P,\allowbreak{}C)\allowbreak{} --w\_\allowbreak{}*-\allowbreak{}-> ker d\_\allowbreak{}1\allowbreak{}→0. (7.1)\allowbreak{}
+
+The square of exact sequences 0\allowbreak{}→A\_\allowbreak{}0\allowbreak{}→B\_\allowbreak{}0\allowbreak{}→Q\_\allowbreak{}0\allowbreak{}→0 with vertical maps δ\_\allowbreak{}0,\allowbreak{}d\_\allowbreak{}0,\allowbreak{}e\_\allowbreak{}0 has kernel-cokernel exact sequence
+
+0\allowbreak{}→ker d\_\allowbreak{}0\allowbreak{}→ker e\_\allowbreak{}0 --∂-\allowbreak{}-> coker δ\_\allowbreak{}0 \allowbreak{}→coker d\_\allowbreak{}0\allowbreak{}→coker e\_\allowbreak{}0\allowbreak{}→0. (7.2)\allowbreak{}
+
+Here ∂ has an exact representative description. If q\allowbreak{}∈Q\_\allowbreak{}0 is killed by e\_\allowbreak{}0,\allowbreak{} choose b\allowbreak{}∈B\_\allowbreak{}0 lifting q. Then d\_\allowbreak{}0(b)\allowbreak{} lies in A\_\allowbreak{}0,\allowbreak{} and ∂q is its class in coker δ\_\allowbreak{}0. Changing b by an element of A\_\allowbreak{}0 changes this representative by im δ\_\allowbreak{}0. This proves well-definedness,\allowbreak{} and the kernel and image assertions follow by lifting and subtracting representatives in the two rows.
+
+Since coker δ\_\allowbreak{}0\allowbreak{}=colim Hom\_\allowbreak{}D(P,\allowbreak{}K\_\allowbreak{}n)\allowbreak{},\allowbreak{} its composite into (7.1)\allowbreak{} is exactly λ,\allowbreak{} not a different comparison. Equations (7.1)\allowbreak{}–\allowbreak{}(7.2)\allowbreak{} give
+
+ker λ ≅ coker(ker d\_\allowbreak{}0\allowbreak{}→ker e\_\allowbreak{}0)\allowbreak{},\allowbreak{} (7.3)\allowbreak{} 0\allowbreak{}→coker e\_\allowbreak{}0\allowbreak{}→coker λ\allowbreak{}→ker d\_\allowbreak{}1\allowbreak{}→0. (7.4)\allowbreak{}
+
+In (7.3)\allowbreak{},\allowbreak{} the isomorphism is induced by ∂; in (7.4)\allowbreak{},\allowbreak{} the first injection comes from the quotient of coker d\_\allowbreak{}0 by im(coker δ\_\allowbreak{}0)\allowbreak{},\allowbreak{} and the last map is induced by w\_\allowbreak{}*. Thus λ is bijective exactly when
+
+ker d\_\allowbreak{}0\allowbreak{}→ker e\_\allowbreak{}0 is surjective,\allowbreak{} coker e\_\allowbreak{}0\allowbreak{}=0,\allowbreak{} ker d\_\allowbreak{}1\allowbreak{}=0. (7.5)\allowbreak{}
+
+In particular it suffices that e\_\allowbreak{}0 is invertible and d\_\allowbreak{}1 is injective. It also suffices that just the two comparison maps A\_\allowbreak{}r\allowbreak{}→B\_\allowbreak{}r for r\allowbreak{}=0,\allowbreak{}1 are surjective:\allowbreak{} then Q\_\allowbreak{}0\allowbreak{}=Q\_\allowbreak{}1\allowbreak{}=0 and d\_\allowbreak{}1\allowbreak{}=δ\_\allowbreak{}1 is injective. This is weaker than requiring preservation of every countable sum. The source\textquotesingle s compactness assumption implies these conditions,\allowbreak{} and its theorem remains unchanged.
+
+The distinction is substantive even for familiar categories. For a constant sequence K\_\allowbreak{}n\allowbreak{}=X and f\_\allowbreak{}n\allowbreak{}=id,\allowbreak{} define ε:\allowbreak{}S\allowbreak{}→X by ε ι\_\allowbreak{}n\allowbreak{}=id and σ:\allowbreak{}S\allowbreak{}→S by
+
+σ ι\_\allowbreak{}n\allowbreak{}=-Σ\_\allowbreak{}\{1≤j<n\}ι\_\allowbreak{}j.
+
+Finite telescoping gives σ u\allowbreak{}=id\_\allowbreak{}S and u σ\allowbreak{}=id\_\allowbreak{}S-ι\_\allowbreak{}1 ε,\allowbreak{} while εu\allowbreak{}=0 and ει\_\allowbreak{}1\allowbreak{}=id\_\allowbreak{}X. The maps (σ,\allowbreak{}ε)\allowbreak{}:\allowbreak{}S\allowbreak{}→S\allowbreak{}⊕X and (u,\allowbreak{}ι\_\allowbreak{}1)\allowbreak{}:\allowbreak{}S\allowbreak{}⊕X\allowbreak{}→S are inverse:\allowbreak{} the two displayed identities give their products,\allowbreak{} with σι\_\allowbreak{}1\allowbreak{}=0 and εu\allowbreak{}=0 supplying the off-diagonal zeros. Therefore u is identified with the split inclusion S\allowbreak{}→S\allowbreak{}⊕X,\allowbreak{} whose distinguished cone triangle has third object X. The comparison from (1.1)\allowbreak{} gives C≅X with every i\_\allowbreak{}n\allowbreak{}=id\_\allowbreak{}X. Hence λ is bijective for every P.
+
+This example also directly satisfies the weaker criterion:\allowbreak{} σ preserves the finite-support subgroup A\_\allowbreak{}r,\allowbreak{} and on Q\_\allowbreak{}r its products with e\_\allowbreak{}r are identities because ι\_\allowbreak{}1 ε factors through one summand. Thus e\_\allowbreak{}0 is invertible; d\_\allowbreak{}1 is split monic with left inverse induced by σ[1]\allowbreak{}. For a concrete noncompact P take \allowbreak{}⊕\_\allowbreak{}m Z[0]\allowbreak{} in D(Ab)\allowbreak{}. The identity map P\allowbreak{}→\allowbreak{}⊕\_\allowbreak{}m Z[0]\allowbreak{} has infinitely many nonzero target coordinates and therefore is not in \allowbreak{}⊕\_\allowbreak{}m Hom(P,\allowbreak{}Z[0]\allowbreak{})\allowbreak{}. Nevertheless the constant-sequence comparison above holds for it. This proves an actual application beyond the global compactness hypothesis,\allowbreak{} without claiming a new result in the literature.
+
+\subsection{\texorpdfstring{8. Propagation,\allowbreak{} report reconciliation,\allowbreak{} and continuation}{8.  report  and continuation}}\label{proofs-10139-10427-propagation-report-reconciliation-and-continuation}
+
+More on Algebra current 23899–\allowbreak{}23917 states the Hom sequence proved with its actual maps in Section 2. Its current 21011–\allowbreak{}21054 specializes Section 6 to D(R)\allowbreak{} and an actual termwise colimit,\allowbreak{} justified by Section 5. Sections 6–\allowbreak{}7 retain that statement and give a separate exact description of its possible failure if one removes its compactness assumption. The earlier square-zero ideal DERIVED-UNDER-001 is propagated to the telescope completions and corrected subsequence proof in Sections 1–\allowbreak{}3.
+
+Perfect Complexes current 4393–\allowbreak{}4401 uses only the factorization of a compact-source map through a stage. Section 6 proves this precise invocation; the later generator and factor-through claims have not been adjudicated here. Differential Graded Algebra current 7124–\allowbreak{}7127 uses cohomology commuting with the homotopy colimit,\allowbreak{} as in Section 6; the remainder of its countability equivalence is outside this check.
+
+Duality current 798–\allowbreak{}801 invokes countable coproducts for the family M\_\allowbreak{}n[n]\allowbreak{}. In each complex degree there is only one nonzero term,\allowbreak{} so its termwise sum and product coincide. Section 4 proves the coproduct side. The product lemma belongs to the next review section. The printed period in Ext\textasciicircum{}n\_\allowbreak{}A(B. M\_\allowbreak{}n)\allowbreak{} at current 805 is routed to that chapter\textquotesingle s report comparison; it is not counted here.
+
+Two physical French reports,\allowbreak{} DERIVED-070 and DERIVED-074,\allowbreak{} are semantically reconciled with existing units 0881 and 0885. Groups DERIVED-RECON-079 and 080 bring the totals to 137/\allowbreak{}176 reports,\allowbreak{} 80 groups,\allowbreak{} 126 already corrected reports,\allowbreak{} ten missing copyedit/\allowbreak{}notation reports and one missing mathematical-index report. There are 73 prior Derived units and 90 operations reconciled. NEW-035 and NEW-036 bring the unreported finding count to 36; their four operations bring the cumulative operation count to 69. UNDER-024 brings the editorial consequence count to 24.
+
+Review is complete through original 10427. Sequential reading has reached 10630,\allowbreak{} including read-ahead into Derived limits; this is not a claim of semantic acceptance there. Continue semantic review at 10435,\allowbreak{} with unread source starting 10631. The producer handoffs remain queued and no new sessions,\allowbreak{} live source composition,\allowbreak{} build,\allowbreak{} Lean run,\allowbreak{} cleanup,\allowbreak{} publication or producer mathematical acceptance occurred in this pass.

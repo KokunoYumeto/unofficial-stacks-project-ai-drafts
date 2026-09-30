@@ -1,0 +1,158 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-015",
+      "source_lines": [
+        8368,
+        8481
+      ],
+      "kind": "image_filtration_extension_and_its_actual_right_derived_functor",
+      "original_statement": "Left exact T acts on finite filtrations by T(F^p A); arbitrary additive T is extended on split filtered injectives to define RT.",
+      "proved_statement": "Every additive T acts on all finite filtered objects with F^p T_im(A)=im(T(F^p A)->T(A)). This is additive, preserves finite filtration intervals, and its right derived functor is the source RT=T_ext j, with the actual comparison induced by the resolution map.",
+      "hypotheses": "A,B abelian and T additive; enough injectives in A for the bounded-below derived statement. No preservation of monomorphisms is assumed.",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          2,
+          3,
+          4
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:8368-8556",
+        "DERIVED-UNDER-011"
+      ]
+    },
+    {
+      "claim_id": "DERIVED-UNDER-016",
+      "source_lines": [
+        8483,
+        8556
+      ],
+      "kind": "explicit_local_and_uniform_spectral_sequence_stabilization",
+      "original_statement": "Finite term filtrations imply boundedness, convergence, and finite cohomology filtrations.",
+      "proved_statement": "For C^m supported in filtration interval [a_m,b_m], E_r^{p,m-p} has stabilized once r>=max(1,b_(m+1)-p+1,p-a_(m-1)+1). A full degree m stabilizes by max(1,b_(m+1)-a_m+1,b_m-a_(m-1)+1), with at most b_m-a_m+1 graded pieces. A common interval [a,b] gives page b-a+1 even without a bound on complex degrees.",
+      "hypotheses": "An abelian category and finite decreasing exhaustive separated filtration on each actual term. Adjacent-degree bounds are retained. Derived receiving bounds use the PART11 bounded-below resolution construction.",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          5,
+          9
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "homology.tex:6451-6495",
+        "derived.tex:8483-8556",
+        "cohomology.tex:7307-7339",
+        "DERIVED-UNDER-013"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "sets.tex:1135-1157"
+      ],
+      "to": "derived.tex:8352-8366",
+      "status": "small_full_subcategory_and_ambient_injective_equivalence_constructed",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          1
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-011",
+        "DERIVED-UNDER-015"
+      ],
+      "to": "derived.tex:8368-8556",
+      "status": "canonical_split_extension_and_actual_image_filtration_right_derivation_proved",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-013"
+      ],
+      "to": "DERIVED-UNDER-016",
+      "status": "input_term_windows_propagated_to_explicit_derived_page_bounds",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-016"
+      ],
+      "to": "cohomology.tex:7307-7339",
+      "status": "actual_global_sections_filtration_and_graded_abutment_identified",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "PROOFS_7096_7578.md:section 3"
+      ],
+      "to": "derived.tex:8558-8617",
+      "status": "source_order_review_closes_full_Cartan_Eilenberg_page_comparison",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-068"
+      ],
+      "to": "derived.tex:8712-8772",
+      "status": "corrected_term_inequality_proves_vanishing_lowest_Ext_identification_and_initial_zero_terms",
+      "proof": {
+        "file": "PROOFS_8352_8772.md",
+        "bytes": 23411,
+        "sha256": "9C19B90DE0A0F4F32133F186291DB4DB189F080B4A75FED1AA28A5B5A06C0695",
+        "sections": [
+          7,
+          8
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial consequences without source-body replacement or novelty claim. Yoneda comparison and composition remain next; source-reading observations are not accepted corrections."
+}

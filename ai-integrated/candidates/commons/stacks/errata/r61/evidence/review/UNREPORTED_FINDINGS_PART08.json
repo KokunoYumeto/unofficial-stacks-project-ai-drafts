@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-023",
+      "source": "derived.tex",
+      "source_lines": [
+        6118,
+        6134
+      ],
+      "original_problem": "The proof quantifies its Hom comparison only over A rather than D(A), and leaves the descent of the non-exact termwise left adjoint implicit.",
+      "correction": "Quantify over D(A) and specify that the termwise functor inverts quasi-isomorphisms after the Verdier quotient. Its exact inverse and counit maps are proved in the editorial note.",
+      "status": "proved_domain_repair_and_descent_clarification",
+      "proof": {
+        "file": "PROOFS_5910_6199.md",
+        "bytes": 23233,
+        "sha256": "272661F0166BCCE4BDB3684623351E8713742BF34537931BFAFCB0678BEFF923",
+        "section": 3
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-023-OP1",
+        "DERIVED-NEW-023-OP2"
+      ],
+      "preserved_prior_correction": "MC-STK-ERR-0839-OP1",
+      "limits": "The theorem is valid. No assertion that its left adjoint is exact is added."
+    }
+  ]
+}

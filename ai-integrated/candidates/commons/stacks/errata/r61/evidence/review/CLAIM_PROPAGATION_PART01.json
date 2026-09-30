@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-001",
+      "kind": "underclaim_square_zero_ideal_and_completion_torsor",
+      "source_lines": [
+        483,
+        613
+      ],
+      "original_statement": "Zero-endpoint endomorphisms of one distinguished triangle have pairwise zero product; five Hom-vanishing conditions guarantee uniqueness.",
+      "proved_statement": "For any two distinguished triangles, middle components with zero endpoints form the explicit intersection of two factorization-image subgroups. These groups form a square-zero ideal across all distinguished triangles. Completion sets are torsors for these groups, with the stated exact inverse formula.",
+      "hypotheses": "Pre-triangulated category; original shift comparisons retained; no TR4 needed.",
+      "proof": {
+        "file": "PROOFS_0001_1140.md",
+        "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+        "section": 4
+      },
+      "status": "proved_editorial_consequence",
+      "affected_labels": [
+        "lemma-third-map-square-zero",
+        "lemma-third-map-idempotent",
+        "lemma-cone-triangle-unique-isomorphism",
+        "lemma-uniqueness-third-arrow"
+      ],
+      "completed_propagation": "Opening idempotent polynomial and exact uniqueness criterion proved.",
+      "unresolved_propagation": "Check later derived idempotent-completion and orthogonality uses and the receiving perfect/equiv passages during ordered review.",
+      "body_replacement": false,
+      "novelty": "not_claimed"
+    },
+    {
+      "claim_id": "DERIVED-UNDER-002",
+      "kind": "underclaim_local_powers_and_karoubian_hypothesis",
+      "source_lines": [
+        729,
+        822
+      ],
+      "receiving_current_insertion_lines": [
+        824,
+        880
+      ],
+      "original_statement": "Countable products or coproducts make a pre-triangulated category Karoubian; the existing Verdier functorial-cone lemma uses that sufficient hypothesis.",
+      "proved_statement": "A countable power of a single object suffices to split its idempotents. Powers for every object suffice globally; dually for copowers. The functorial-cone decomposition only requires the category to be Karoubian, with the exact kernel constructed from the source section.",
+      "input_claim_ids": [
+        "HOMOLOGY-UNDER-001"
+      ],
+      "proof": {
+        "file": "PROOFS_0001_1140.md",
+        "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+        "section": 5
+      },
+      "status": "proved_editorial_consequence",
+      "completed_propagation": "Exact Phi/Psi coordinates, complementary kernels and Verdier receiving kernel maps proved; insertion preserved.",
+      "unresolved_propagation": "Any additional use later in this chapter or other chapters is checked separately, not inferred from this local strengthening.",
+      "body_replacement": false,
+      "novelty": "not_claimed"
+    }
+  ],
+  "overclaim": {
+    "finding_id": "DERIVED-NEW-004",
+    "proof": {
+      "file": "PROOFS_0001_1140.md",
+      "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+      "section": 3
+    },
+    "receiving_uses_checked": [
+      "derived:1979-1995",
+      "derived:11774-11810",
+      "current/cotangent:2831-2866",
+      "current/cotangent:4591-4631",
+      "current/derham:2979-3008",
+      "current/more-algebra:30690-30709"
+    ],
+    "conclusion": "All six uses need only the first three rows and columns. No dependent source change required for this correction.",
+    "limits": "This is a propagation check of the sign repair, not a whole-proof audit of every receiving lemma."
+  },
+  "joint_synthesis": "Deferred until the core correction and received-theorem queue is complete."
+}

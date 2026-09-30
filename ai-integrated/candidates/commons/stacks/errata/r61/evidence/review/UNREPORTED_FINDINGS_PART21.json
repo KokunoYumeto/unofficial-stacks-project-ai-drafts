@@ -1,0 +1,84 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-042",
+      "source": "derived.tex",
+      "source_lines": [
+        11954,
+        11978
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "missing_subcategory_hypotheses_for_admissible_decomposition",
+      "original": "A and B are arbitrary subcategories; degree-zero orthogonality and a decomposition triangle for every object are asserted equivalent to an admissible pair.",
+      "adverse_evidence": "In D^b(k), D^{<=0}(k) and D^{>=1}(k) satisfy the displayed decomposition using the actual truncation subcomplex and quotient. They are not invariant under both shifts and are not triangulated. Fullness also cannot be inferred from an objectwise condition using ambient Hom.",
+      "correction": "Require strictly full subcategories invariant under all shifts, then prove that (3) gives B=A-perp and A=left-perp-B. Their saturated triangulated structures follow, so the adjoint criteria apply.",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          1,
+          3,
+          4,
+          6
+        ]
+      },
+      "operations": [
+        "DERIVED-NEW-042-OP1",
+        "DERIVED-NEW-042-OP2"
+      ],
+      "limits": "Cone closure is proved, not added as an unnecessary premise. The quotient and adjoint conclusions survive under the corrected exact hypotheses."
+    }
+  ],
+  "reported_receiver_corrections_not_counted_as_unreported": {
+    "dispositions": {
+      "file": "ADJOINT_RECEIVER_DISPOSITIONS_PART21.json",
+      "bytes": 4236,
+      "sha256": "DB48E7543C30C4D1E0FD9151ED4DA3405D5988D2736861C9BC7496DB6FF54DC9"
+    },
+    "physical_reports": 3,
+    "groups": 2,
+    "operations": 2
+  },
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        11694,
+        11694
+      ],
+      "issue": "The equality of Hom groups could be read as an arbitrary abstract isomorphism.",
+      "disposition": "the_proof_specifies_the_induced_map_and_that_is_the_meaning_used",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "section": 1
+      }
+    },
+    {
+      "source_lines": [
+        11748,
+        11749
+      ],
+      "issue": "The orthogonal proof mentions direct sums.",
+      "disposition": "finite_biproducts_suffice_for_the_triangulated_assertion_no_unqualified_arbitrary_coproduct_claim_inferred",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "section": 1
+      }
+    }
+  ],
+  "reading_observations_not_yet_adjudicated": [
+    {
+      "source": "derived.tex",
+      "authority_lines": [
+        12008,
+        12150
+      ],
+      "status": "read_ahead_only_next_semantic_review",
+      "issue": "Postnikov systems, the complex example, and the start of the low-length existence proof."
+    }
+  ]
+}

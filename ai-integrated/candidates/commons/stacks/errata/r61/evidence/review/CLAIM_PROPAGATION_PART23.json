@@ -1,0 +1,95 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-033",
+      "source_lines": [
+        12489,
+        12590
+      ],
+      "original_statement": "A uniformly cohomologically bounded inverse system is essentially constant if its cohomology systems are; the corresponding bounded cohomological criterion detects pro-isomorphisms.",
+      "proved_statement": "For objects with cohomology supported in the same r original degrees, any composite of r cohomologically zero maps is zero. This gives an explicit r-stage pro-zero construction; cones for input range [a,b] need at most b-a+2 such stages.",
+      "hypotheses": "A finite common set of original cohomological degrees in D(A); the actual truncation maps and actual inverse-system transitions.",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "sections": [
+          3,
+          4,
+          5
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed_formal_truncation_consequence",
+      "limits": "The infinite-range counterexample has eventually zero cohomology in every degree and no zero transition. No unrestricted conservativity claim is made."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-044"
+      ],
+      "to": "derived.tex original 12442-12487",
+      "status": "full_block_calculation_additional_tail_TR3_and_actual_limit_comparison_proved",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "sections": [
+          2
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-033"
+      ],
+      "to": "derived.tex original 12489-12590",
+      "status": "finite_degree_annihilation_and_exact_cone_range_propagated_to_both_criteria",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "sections": [
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-044"
+      ],
+      "to": "duality.tex current 8218-8224 and 8348-8362",
+      "status": "same_categorical_theorem_survives_tail_change_and_rotation",
+      "limits": "Earlier geometric and sheaf-theoretic dependencies remain unadjudicated here.",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-033"
+      ],
+      "to": "more-algebra.tex current 27859-27874, 29704-29724, 30333-30389",
+      "status": "bounded_Koszul_receiving_objects_and_pro_isomorphism_transport_checked_degree_bound_applies",
+      "limits": "This does not certify earlier Artin-Rees inputs or assert boundedness of the original unbounded tensor presentation.",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "sections": [
+          7
+        ]
+      }
+    }
+  ],
+  "limits": "The degree bound remains editorial; later synthesis does not displace the correction queue."
+}

@@ -1,0 +1,61 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-044",
+      "source": "derived.tex",
+      "source_lines": [
+        12442,
+        12461
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "missing_tail_before_TR3_projection_comparison",
+      "original": "After splitting the two outer essentially constant systems, the proof invokes TR3 for a projection triangle map at the first index.",
+      "adverse_evidence": "In D^b(k), the first triangle k->0->k[1]->k[1] with identity boundary has no comparison to k->k->0 inducing identity on k; all subsequent identity triangles do.",
+      "correction": "Compute both off-diagonal blocks. Constant-to-pro-zero vanishes at every index; pro-zero-to-constant vanishes only on a further tail. Take that tail before applying TR3.",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "sections": [
+          1,
+          2
+        ]
+      },
+      "operations": [
+        "DERIVED-NEW-044-OP1"
+      ],
+      "limits": "The statement and all hypotheses survive. The error is in the unconditional first-index projection claim, not in essential constancy of the middle system."
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        12407,
+        12409
+      ],
+      "issue": "A retraction is used to construct a complement without global idempotent completeness.",
+      "disposition": "the_actual_split_triangle_proves_the_needed_complement_and_kernel",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "section": 1
+      }
+    },
+    {
+      "source_lines": [
+        12569,
+        12573
+      ],
+      "issue": "TR3 supplies adjacent cone maps, and cone cohomology extends one degree below the input interval.",
+      "disposition": "natural_number_index_gives_coherent_composite_transitions_and_exact_cone_range_is_a_minus_1_to_b",
+      "proof": {
+        "file": "PROOFS_12380_12604.md",
+        "bytes": 20926,
+        "sha256": "30AD4D154059285CA73A7580564BD0C1A356FA2DCBD401BE35E5F00775487E3D",
+        "section": 4
+      }
+    }
+  ],
+  "reading_observations_not_yet_adjudicated": []
+}

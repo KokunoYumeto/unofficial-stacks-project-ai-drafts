@@ -1,0 +1,93 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-033",
+      "source": "derived.tex",
+      "source_lines": [
+        9909,
+        9918
+      ],
+      "original_issue": "The dimension function allows infinity at finitely many negative indices; resolving only the nonnegative tail does not make the later maximum finite.",
+      "correction": "Choose a cutoff a below every remaining infinite dimension, resolve the tail from a, and retain every original degree in the resulting splice.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          4,
+          5
+        ]
+      },
+      "status": "proved_private_correction_proposal",
+      "counterexample": "Abelian groups, d=0 on divisible groups and infinity otherwise, K=Z in degree -1.",
+      "operations": [
+        "DERIVED-NEW-033-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-034",
+      "source": "derived.tex",
+      "source_lines": [
+        10042,
+        10050
+      ],
+      "original_issue": "The printed cone support ending at i-1 is true but insufficient to imply an isomorphism on H^i.",
+      "correction": "The exact spectral-sequence support ends at i-2, making both adjacent cone cohomology objects zero.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "section": 6
+      },
+      "status": "proved_private_correction_proposal",
+      "classification": "insufficient_estimate_in_proof_not_false_stated_bound",
+      "operations": [
+        "DERIVED-NEW-034-OP1"
+      ]
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        9815,
+        9857
+      ],
+      "issue": "K-injectivity of a limit might be confused with a quasi-isomorphism from the original complex.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          2,
+          3
+        ]
+      },
+      "disposition": "source_keeps_the_two_conclusions_distinct_limit_K_injectivity_proved"
+    },
+    {
+      "source_lines": [
+        10109,
+        10131
+      ],
+      "issue": "The positive superscript in the left-derived vanishing needs its dual indexing interpretation.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "section": 7
+      },
+      "disposition": "exact_opposite_category_duality_uses_degree_minus_n_no_new_defect_counted"
+    }
+  ],
+  "reading_observations_not_yet_counted": [
+    {
+      "source": "cohomology.tex",
+      "current_lines": [
+        14213,
+        14213
+      ],
+      "issue": "Displayed identification of ordinary Hom with R Gamma requires the receiving chapter type check.",
+      "status": "routed_to_receiving_chapter_report_join_not_yet_adjudicated"
+    }
+  ]
+}

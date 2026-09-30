@@ -1,0 +1,110 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-006",
+      "source_lines": [
+        4801,
+        4892
+      ],
+      "kind": "specified_idempotent_controls_derived_summands",
+      "original_statement": "The source assumes D-prime Karoubian to infer existence of RF(X) and RF(Y) from RF(X direct-sum Y).",
+      "proved_statement": "If V=RF(X direct-sum Y), RF(X) exists exactly when e=RF(i_X p_X) on V splits. The Y criterion uses 1-e. In the triangulated target either splitting produces the complementary splitting by the explicit triangle construction, so either criterion gives both values. The same assertions hold for LF.",
+      "hypotheses": "The original exact F, saturated compatible S, triangulated target, and an existing value on the specified direct sum. No global Karoubian assumption is required for the criterion.",
+      "input_claim_ids": [
+        "HOMOLOGY-UNDER-010"
+      ],
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "sections": [
+          3,
+          5,
+          6,
+          7
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:4801-4892",
+        "derived.tex:4916-4917",
+        "derived.tex:5039-5071"
+      ],
+      "propagation": "Product cofinality proved; local splitting criterion proved in both variances; domain summand closure characterized; computing-object receiver proved with actual F(X),F(Y) splittings."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "HOMOLOGY-UNDER-010"
+      ],
+      "to": "DERIVED-UNDER-006",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 5
+      },
+      "status": "receiving_cofinality_and_witness_application_completed"
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-006"
+      ],
+      "to": "derived.tex:4916-4917",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 6
+      },
+      "status": "exact_local_criterion_for_existing_summands_proved"
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-006"
+      ],
+      "to": "DERIVED-NEW-017",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 7
+      },
+      "status": "computing_object_receiving_proof_and_variance_repair_completed"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-015"
+      ],
+      "to": "derived.tex:4385-4496",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "section": 2
+      },
+      "status": "graded_bounded_models_and_all_three_localization_equivalences_proved"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-016"
+      ],
+      "to": "derived.tex:4894-4945,5016-5037",
+      "proof": {
+        "file": "PROOFS_4166_5089.md",
+        "bytes": 28435,
+        "sha256": "23BA5E707C43AF3C03C78F049D2BFE75D5A1764AC5A1E95264891A0685AFFDFF",
+        "sections": [
+          4,
+          6,
+          7
+        ]
+      },
+      "status": "same_two_out_of_three_conclusion_preserved_in_receivers"
+    }
+  ],
+  "limits": "Later general-functor results retain their source-order review positions. No whole-chapter acceptance or novelty claim. Broader synthesis follows the core queue."
+}

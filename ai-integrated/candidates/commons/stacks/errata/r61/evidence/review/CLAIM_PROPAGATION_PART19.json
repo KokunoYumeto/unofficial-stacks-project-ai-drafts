@@ -1,0 +1,159 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-029",
+      "source_lines": [
+        11214,
+        11310
+      ],
+      "original_statement": "Every map from a compact object into X_n factors through the thick closure of a finite family of the given generators.",
+      "proved_statement": "The factorization can be chosen in level n of that finite family. The finite-stage proof needs a tower formed by coproducts of shifts of compact objects, without an ambient-generation assumption. With generation restored, every compact object is a retract of such a level-n object, giving the finite-family union formula for D_c.",
+      "hypotheses": "A triangulated category with coproducts, a family of compact objects, the actual specified finite stages and attaching triangles, and a compact domain. Weak generation is used only for the telescope reconstruction and resulting whole-D_c formula.",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "No minimality claim for n. No claim that the finite family classically generates the ambient category. The original maps are retained exactly."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-039"
+      ],
+      "to": "derived.tex original 11200-11211",
+      "status": "inverse_shift_lift_and_zero_boundary_composite_proved",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          2
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-040",
+        "DERIVED-RECON-092",
+        "DERIVED-RECON-093"
+      ],
+      "to": "derived.tex original 11241-11262",
+      "status": "compact_induction_domain_boundary_target_and_exact_difference_correction_proved",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-029"
+      ],
+      "to": "derived.tex original 11277-11310",
+      "status": "actual_retract_and_finite_family_level_formula_proved",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-029",
+        "DERIVED-PERFECT-RECEIVER-001"
+      ],
+      "to": "perfect.tex original/current 4320-4339 and 4396-4417",
+      "status": "full_faithful_coproduct_preserving_inclusions_and_ambient_DQCoh_factorization_proved",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-PERFECT-RECEIVER-003"
+      ],
+      "to": "perfect.tex original/current 4384-4387",
+      "status": "internal_Hom_object_retained_and_global_class_identified_by_K_injective_sections",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-039",
+        "derived.tex original 11168-11212"
+      ],
+      "to": "duality.tex current 867-885",
+      "status": "localizing_closure_via_actual_cellular_tower_verified",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 11328-11450"
+      ],
+      "to": "perfect.tex current 4904-4915 and injectives.tex current 2765-2773",
+      "status": "categorical_Brown_hypotheses_verified_with_actual_source_categories",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          5,
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-PERFECT-RECEIVER-001"
+      ],
+      "to": "perfect.tex original 4500-4505",
+      "status": "related_report_P05_EN_CH36_0053_retained_for_own_chapter_proof_context_review",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          7
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial finite-stage strengthening is separate from source corrections. Related later Perfect and Brown-bis contexts remain explicitly pending."
+}

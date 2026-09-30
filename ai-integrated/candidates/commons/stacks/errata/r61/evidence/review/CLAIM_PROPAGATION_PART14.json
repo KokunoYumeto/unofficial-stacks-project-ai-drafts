@@ -1,0 +1,166 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-019",
+      "source_lines": [
+        9214,
+        9472
+      ],
+      "original_statement": "Compatible split resolution stages are bounded above, or dually bounded below.",
+      "proved_statement": "Stages can be chosen with P_n^r=0 for r>n, and dually I_n^r=0 for r<-n. A surjective cone resolution gives P_(n+1)=P_n direct-sum Q with differential [[dP,-v],[0,dQ]], augmentation (a,u), and an exact identity of its cone with C(q), so compatibility and surjectivity hold on chain maps without an extra disk.",
+      "hypotheses": "An abelian category and a zero-containing finite-sum-closed class surjecting onto every object; the exact opposite hypotheses for the inverse system.",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          1,
+          2,
+          4
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "No functorial choice of all resolutions or general inverse-limit comparison is asserted."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-020",
+      "source_lines": [
+        9332,
+        9442
+      ],
+      "original_statement": "The existence criterion assumes right exactness and preservation of all sequential colimits by F.",
+      "proved_statement": "It suffices that F is additive, preserves countable coproducts, and takes bounded above acyclic complexes of P objects to acyclic complexes; both abelian categories still have exact sequential colimits. The same strict systems compute LF on the entire unbounded derived category, with comparisons proved compatible at every stage.",
+      "hypotheses": "The stated P covering and finite-sum hypotheses, exact sequential colimits in A and B, and the specified additive F assumptions.",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          1,
+          2,
+          3
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "example": "For abelian groups F(M)=M[ell] with P free, LF=0 although F is not right exact.",
+      "limits": "No assertion H^0 LF(M)=F(M) without right exactness, and no removal of exact sequential colimits."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-UNDER-019"
+      ],
+      "to": "derived.tex:9392-9393",
+      "status": "strict_stage_factorizations_through_canonical_truncations_proved",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-019",
+        "DERIVED-UNDER-020",
+        "DERIVED-RECON-070"
+      ],
+      "to": "derived.tex:9375-9442",
+      "status": "typed_alpha_and_choice_independent_compatible_comparisons_prove_actual_F_alpha_is_qis",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-019"
+      ],
+      "to": "more-algebra.tex current 14989-15023 and cohomology.tex current 6465-6495",
+      "status": "exact_resolution_diagrams_and_colimit_maps_verified_for_these_invocations",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-019"
+      ],
+      "to": "cohomology.tex current 10284-10310",
+      "status": "inverse_system_maps_only_verified_later_limit_argument_pending",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          4,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-020"
+      ],
+      "to": "sites-cohomology.tex current 9337-9350",
+      "status": "left_adjoint_preservation_hypotheses_satisfy_weaker_criterion_later_acyclicity_check_not_read",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-071"
+      ],
+      "to": "derived.tex:9516-9606",
+      "status": "correct_localized_categories_actual_adjunction_maps_naturality_and_triangle_identities_proved",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-032"
+      ],
+      "to": "injectives.tex current 2038-2042",
+      "status": "corrected_Hom_complex_proves_same_derived_product_and_projections",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          7,
+          8
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial consequences do not replace the original stronger hypotheses. Receiving checks have only the specified scope."
+}

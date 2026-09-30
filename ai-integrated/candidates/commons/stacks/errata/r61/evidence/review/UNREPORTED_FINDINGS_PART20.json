@@ -1,0 +1,59 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-041",
+      "source": "derived.tex",
+      "source_lines": [
+        11547,
+        11568
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "arbitrary_factor_incorrectly_assumed_in_killed_kernel",
+      "original": "For an arbitrary countable factorization, u_n beta_n is claimed zero by construction; this is used to assert that the telescope map acts as the identity.",
+      "adverse_evidence": "D(k), E all shifts of k, H=Hom(-,k), and the X_1 summand indexed by id_k give theta_2(u_1 beta_1)=id_k. Thus u_1 beta_1 is nonzero and t alpha is not alpha.",
+      "correction": "Prove the restricted Yoneda countable-coproduct comparison by evaluation presentations. Split the restricted tower from its second stage into its common quotient and killed kernels, construct the finite-prefix left inverse, and retain the initial stage by an explicit target automorphism.",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "operations": [
+        "DERIVED-NEW-041-OP1"
+      ],
+      "limits": "The source theorem and its hypotheses remain valid. The retraction is a natural transformation on the restricted category, not a claimed splitting of the telescope morphism in D."
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        11522,
+        11522
+      ],
+      "issue": "The original P02-E0094 report also claimed ordinary colim at this line.",
+      "disposition": "already_hocolim_in_authority_and_explicitly_withdrawn_by_original_resolution",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "section": 6
+      }
+    }
+  ],
+  "reading_observations_not_yet_adjudicated": [
+    {
+      "source": "derived.tex",
+      "authority_lines": [
+        11665,
+        11740
+      ],
+      "status": "read_ahead_only_next_semantic_review",
+      "issue": "Admissible-subcategory definitions and initial orthogonality criteria."
+    }
+  ]
+}

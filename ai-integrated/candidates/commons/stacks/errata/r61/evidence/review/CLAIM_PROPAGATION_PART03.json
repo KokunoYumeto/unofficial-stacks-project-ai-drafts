@@ -1,0 +1,126 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-003",
+      "kind": "exact_adjoints_need_no_TR4",
+      "source_lines": [
+        2288,
+        2401
+      ],
+      "original_statement": "An adjoint of an exact functor between triangulated categories is exact; a fully faithful exact functor with an exact right adjoint of zero kernel is an equivalence.",
+      "proved_statement": "Both results hold between pre-triangulated categories. The right adjoint acquires the explicitly constructed exact shift comparison, and unit and counit satisfy the proved compatibility equations. Separate exactness of the right adjoint is unnecessary in the equivalence test.",
+      "hypotheses": "Original additive categories, TR1-TR3, exact F, adjunction F left adjoint to G; full faithfulness and zero kernel only for the equivalence assertion.",
+      "proof": {
+        "file": "PROOFS_1844_2401.md",
+        "bytes": 17432,
+        "sha256": "1A5B1D0B47A4F879A0693EB6E9E304D09A5B85E7F6E4422D7BE5B7377851124D",
+        "sections": [
+          3,
+          4
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "completed_propagation": [
+        "equiv.tex:880-890",
+        "injectives.tex:2804-2825",
+        "derived.tex:2372-2401"
+      ],
+      "unresolved_propagation": [
+        "dga.tex:6571,6606",
+        "perfect.tex:4523,4796",
+        "sdga.tex:5328,6426",
+        "spaces-perfect.tex:4237",
+        "spaces-pushouts.tex:2047",
+        "stacks-sheaves.tex:4856"
+      ],
+      "body_replacement": false,
+      "novelty": "not_claimed"
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-UNDER-001"
+      ],
+      "to": "derived.tex:2902-2984",
+      "meaning": "The same square-zero mechanism controls split-complex diagrams and cone comparisons. An independent chain-level proof avoids relying on the later homotopy triangulation.",
+      "proof": {
+        "file": "PROOFS_2419_2994.md",
+        "bytes": 9777,
+        "sha256": "1855F038C5C5973D54E7013B6BBEB800FB1BD6A8DCBBD2C72A89FD5EAC731FA2",
+        "section": 4
+      },
+      "status": "proved_without_circular_dependency"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-005"
+      ],
+      "to": "current-derived.tex:2287-2487",
+      "meaning": "Nested quotient maps and inverse functors use the canonical identity translation comparison; all retained insertion arguments were checked without replacing their source.",
+      "proof": {
+        "file": "PROOFS_1844_2401.md",
+        "bytes": 17432,
+        "sha256": "1A5B1D0B47A4F879A0693EB6E9E304D09A5B85E7F6E4422D7BE5B7377851124D",
+        "section": 2
+      },
+      "status": "checked_no_change"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-004"
+      ],
+      "to": "derived.tex:1979-1995",
+      "meaning": "The MS6 proof uses only the first three rows and columns of the 3x3 diagram.",
+      "proof": {
+        "file": "PROOFS_1844_2401.md",
+        "bytes": 17432,
+        "sha256": "1A5B1D0B47A4F879A0693EB6E9E304D09A5B85E7F6E4422D7BE5B7377851124D",
+        "section": 1
+      },
+      "status": "checked_no_change"
+    }
+  ],
+  "adverse_evidence": [
+    {
+      "source_lines": [
+        1881,
+        1886
+      ],
+      "verdict": "The boundedness implication is valid for each n; no quantifier defect.",
+      "proof": {
+        "file": "PROOFS_1844_2401.md",
+        "bytes": 17432,
+        "sha256": "1A5B1D0B47A4F879A0693EB6E9E304D09A5B85E7F6E4422D7BE5B7377851124D",
+        "section": 1
+      }
+    },
+    {
+      "source_lines": [
+        2493,
+        2493
+      ],
+      "verdict": "The positive projection defines a triangle here; distinguishedness is not asserted. No sign change.",
+      "proof": {
+        "file": "PROOFS_2419_2994.md",
+        "bytes": 9777,
+        "sha256": "1855F038C5C5973D54E7013B6BBEB800FB1BD6A8DCBBD2C72A89FD5EAC731FA2",
+        "section": 1
+      }
+    },
+    {
+      "source_lines": [
+        2876,
+        2900
+      ],
+      "verdict": "The dual-number example proves that both squares cannot generally be strictified simultaneously within one middle-map homotopy class.",
+      "proof": {
+        "file": "PROOFS_2419_2994.md",
+        "bytes": 9777,
+        "sha256": "1855F038C5C5973D54E7013B6BBEB800FB1BD6A8DCBBD2C72A89FD5EAC731FA2",
+        "section": 3
+      }
+    }
+  ],
+  "later_synthesis": "Deferred until the core queue is complete."
+}

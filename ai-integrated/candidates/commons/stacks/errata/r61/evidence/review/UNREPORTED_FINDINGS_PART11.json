@@ -1,0 +1,41 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-027",
+      "source": "derived.tex",
+      "source_lines": [
+        7906,
+        7910
+      ],
+      "original_problem": "The arrow I->I amalg_A B is called the pushout of f:A->I along u:A->B, reversing the roles. That pushout of f would have domain B and need not be monic.",
+      "correction": "Describe the displayed strict monomorphism as the pushout of u by f; retain the original quotient and extension argument.",
+      "status": "proved_wrong_pushout_roles_with_counterexample_and_complete_repair",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "section": 3
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-027-OP1"
+      ],
+      "counterexample": "Single-step filtered Q-vector spaces A=B=Q, u=1, I=0, f=0: I->P is monic, whereas the pushout B->P of f is Q->0.",
+      "limits": "The extension theorem and its displayed arrow remain valid."
+    }
+  ],
+  "receiving_observations_queued_for_chapter_reconciliation": [
+    {
+      "source": "sites-cohomology.tex",
+      "current_line": 183,
+      "observation": "The displayed prose contains the token i followed by the literal letters the in the ordinal phrase.",
+      "status": "observed_not_counted_or_composed_pending_original_report_join",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "section": 9
+      }
+    }
+  ]
+}

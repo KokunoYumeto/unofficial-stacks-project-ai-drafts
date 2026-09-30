@@ -1,0 +1,50 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-005",
+      "source_lines": [
+        1363,
+        1365
+      ],
+      "original_problem": "The uniqueness statement leaves the exact functor translation comparison unspecified; a sign-twisted triangulation gives a counterexample.",
+      "correction": "Require the localization functor to have the identity translation comparison, as in its construction.",
+      "status": "proved_comparison_qualification",
+      "proof": {
+        "file": "PROOFS_1149_1843.md",
+        "sha256": "340AF21C212F4666D715ADD30192633A326E36A85DE2915633080142048EDE0A",
+        "section": 3
+      },
+      "input_findings": [
+        "DERIVED-NEW-002",
+        "DERIVED-NEW-004"
+      ],
+      "operation_ids": [
+        "DERIVED-NEW-005-OP1"
+      ],
+      "received_report_count": 0
+    },
+    {
+      "finding_id": "DERIVED-NEW-006",
+      "source_lines": [
+        1787,
+        1803
+      ],
+      "original_problem": "The image triangle in the exact-functor kernel proof omits its translation comparison.",
+      "correction": "Name (F,xi) and use xi_X composed with F(h). The kernel statement is unchanged.",
+      "status": "explicit_map_repair",
+      "proof": {
+        "file": "PROOFS_1149_1843.md",
+        "sha256": "340AF21C212F4666D715ADD30192633A326E36A85DE2915633080142048EDE0A",
+        "section": 5
+      },
+      "input_findings": [
+        "DERIVED-NEW-002"
+      ],
+      "operation_ids": [
+        "DERIVED-NEW-006-OP1",
+        "DERIVED-NEW-006-OP2"
+      ],
+      "received_report_count": 0
+    }
+  ]
+}

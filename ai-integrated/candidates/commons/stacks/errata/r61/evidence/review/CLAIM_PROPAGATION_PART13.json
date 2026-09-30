@@ -1,0 +1,148 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-017",
+      "source_lines": [
+        8932,
+        8979
+      ],
+      "original_statement": "The product vanishes exactly when a compatible extension diagram exists.",
+      "proved_statement": "The fiber of Ext^1(Zprime,A) to Ext^1(B,A) over the first extension class is empty exactly when the product is nonzero; otherwise it is a torsor under Ext^1(C,A)/im(Hom(B,A) to Ext^1(C,A)).",
+      "hypotheses": "An abelian category and the two specified short exact sequences. No enough-injective or enough-projective assumption.",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          2,
+          4,
+          5
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "Classifies middle-row extension classes admitting a compatibility isomorphism; it does not fix the isomorphism as part of the classification."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-018",
+      "source_lines": [
+        9010,
+        9050
+      ],
+      "original_statement": "All Ext^p(H^r K,H^s K) vanish for p>=2 and r>s.",
+      "proved_statement": "Only Ext^(r-s+1)(H^r K,H^s K)=0 for r>s is needed for splitting. The actual truncation boundary is the precise stage obstruction. Identity-on-cohomology splittings form a torsor under 1+N, where N is the nilpotent ideal with entries Ext^(r-s)(H^r K,H^s K), r>s; when these entries vanish the splitting is unique.",
+      "hypotheses": "K has bounded cohomology in an abelian category, with the displayed degree-specific vanishing for existence.",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 7
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:9010-9050",
+        "more-algebra.tex current 21522-21531 and 28714-28725"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-028",
+        "DERIVED-NEW-029"
+      ],
+      "to": "derived.tex:8913-8930",
+      "status": "actual_roof_and_shift_sign_proved_with_nonzero_counterexample",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-029"
+      ],
+      "to": "derived.tex:8932-8979",
+      "status": "zero_product_criterion_preserved_and_signed_boundary_proved",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-029",
+        "DERIVED-NEW-030"
+      ],
+      "to": "derived.tex:8981-9008",
+      "status": "sign_and_endpoint_corrections_propagated_without_changing_theorem",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-029",
+        "DERIVED-UNDER-017"
+      ],
+      "to": "DERIVED-NEW-031",
+      "status": "exact_ideal_quotient_pullback_diagram_proves_Bockstein_zero_product",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-029"
+      ],
+      "to": "adequate.tex:1216-1232 current",
+      "status": "bounded_zero_class_invocation_unaffected_by_sign",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-018"
+      ],
+      "to": "more-algebra.tex:21522-21531 and 28714-28725 current",
+      "status": "projective_or_free_cohomology_meets_both_existence_and_uniqueness_vanishing",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "sections": [
+          7
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial strengthenings are not body replacements or novelty claims. Receiving checks have only the displayed scope."
+}

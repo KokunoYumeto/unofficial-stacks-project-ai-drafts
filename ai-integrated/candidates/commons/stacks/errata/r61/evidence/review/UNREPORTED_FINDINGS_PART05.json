@@ -1,0 +1,48 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-013",
+      "source": "derived.tex",
+      "source_lines": [
+        3572,
+        3575
+      ],
+      "original_problem": "The proof interchanges the variable categories of its two fixed-factor tensor functors.",
+      "correction": "Use Comp(B) when varying Y and Comp(A) when varying X. The theorem statements already have correct domains.",
+      "proof": {
+        "file": "PROOFS_3487_4161.md",
+        "bytes": 22872,
+        "sha256": "369D914371F4AB4B5A0B0343F254FC040BD071F04E967B05C346AD116AFC94E7",
+        "section": 2
+      },
+      "status": "proved_domain_correction",
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-013-OP1",
+        "DERIVED-NEW-013-OP2"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-014",
+      "source": "more-algebra.tex",
+      "source_lines": [
+        22722,
+        22722
+      ],
+      "original_problem": "The cited vanishing-composition argument targets a truncation of K_3, while this proof names K_2.",
+      "correction": "Name K_3 as the actual receiving truncation. Both truncations vanish, so the theorem is not refuted.",
+      "proof": {
+        "file": "PROOFS_3487_4161.md",
+        "bytes": 22872,
+        "sha256": "369D914371F4AB4B5A0B0343F254FC040BD071F04E967B05C346AD116AFC94E7",
+        "section": 6
+      },
+      "status": "proved_receiving_proof_clarification",
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-014-OP1"
+      ],
+      "preserved_prior_unit": "MC-STK-ERR-0959"
+    }
+  ]
+}

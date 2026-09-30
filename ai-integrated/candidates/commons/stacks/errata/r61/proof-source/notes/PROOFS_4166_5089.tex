@@ -1,0 +1,236 @@
+\section{Filtered derived objects and the domain of a derived functor}\label{proofs-4166-5089-filtered-derived-objects-and-the-domain-of-a-derived-functor}
+
+This review concerns original \texttt{derived.\allowbreak{}tex} lines 4166–\allowbreak{}5089 at commit \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}. The immutable original and current chapter snapshots in this intake remain the comparison objects. The current chapter still has the mathematical defects identified below. All constructions retain the source\textquotesingle s decreasing filtrations,\allowbreak{} cochain differentials,\allowbreak{} fraction direction,\allowbreak{} and shift comparisons. Supplemental arguments and strengthenings are editorial; they do not replace the source\textquotesingle s exposition. No novelty is claimed.
+
+\subsection{1. Finite filtrations in each degree and the target of gr}\label{proofs-4166-5089-finite-filtrations-in-each-degree-and-the-target-of-gr}
+
+In an abelian category A,\allowbreak{} an object of Fil\textasciicircum{}f(A)\allowbreak{} is an object M with a decreasing filtration F\^{}p M,\allowbreak{} equal to M for sufficiently small p and to zero for sufficiently large p. Its p-th graded object is F\^{}p M/\allowbreak{}F\textasciicircum{}\{p\allowbreak{}+1\} M. Gr(A)\allowbreak{} is the category of families indexed by p,\allowbreak{} with morphisms and abelian operations computed componentwise. In particular,\allowbreak{} the notation gr(M)\allowbreak{} does not require a countable coproduct in A.
+
+Each gr\textasciicircum{}p,\allowbreak{} gr,\allowbreak{} and the forgetful functor is additive. An additive functor preserves the actual biproducts used in shifts and cones. For a map u of cochain complexes,\allowbreak{} its cone in degree n is K\textasciicircum{}\{n\allowbreak{}+1\} direct-sum L\^{}n with differential (-d\_\allowbreak{}K,\allowbreak{}0;u,\allowbreak{}d\_\allowbreak{}L)\allowbreak{}. Applying the functor gives precisely the cone matrix for its image. The shift comparison is the componentwise identity. Thus all three functors induce exact functors on homotopy categories. The composition of gr with H\^{}0 is homological because cohomology of a cone gives the usual long exact sequence in Gr(A)\allowbreak{}. The same argument applies to gr\^{}p and to forgetting F.
+
+Consequently the complexes with H\^{}n(gr K)\allowbreak{}\allowbreak{}=0 for every n form the strictly full saturated triangulated kernel described by the previously proved homological-kernel construction. A morphism is a filtered quasi-isomorphism exactly when its cone belongs to that kernel:\allowbreak{} apply the long exact graded cohomology sequence in every degree. This proves the source\textquotesingle s statements about FAc,\allowbreak{} FQis,\allowbreak{} the quotient,\allowbreak{} and the factorization of H\^{}0 gr. Kernels,\allowbreak{} cycles,\allowbreak{} and cohomology here are taken in Gr(A)\allowbreak{},\allowbreak{} which is abelian; no abelian structure on Fil\textasciicircum{}f(A)\allowbreak{} is being presumed.
+
+For completeness,\allowbreak{} the finite-filtration exactness argument used to forget F is local in cochain degree. For three finite filtered objects A0 \allowbreak{}-> A1 \allowbreak{}-> A2,\allowbreak{} exactness of every graded sequence implies exactness of the underlying sequence and of the sequences of filtration steps and filtration quotients. To prove this,\allowbreak{} choose a common finite filtration interval for these three objects. Remove its highest nonzero step. The highest-step complex is the corresponding graded complex,\allowbreak{} and the quotient has a shorter filtration. Induction applies to the quotient; the termwise short exact sequence from highest steps to the original complex to the quotient then gives exactness at the middle. That last assertion follows directly by lifting a middle cycle to the left term of the quotient,\allowbreak{} subtracting its lifted boundary,\allowbreak{} and lifting the resulting highest-step cycle. In an arbitrary abelian category these lifts are obtained after epimorphic pullbacks; images descend along these epimorphisms. The complete test-object argument is in \texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}HOMOLOGY\_\allowbreak{}INTAKE\_\allowbreak{}20260930/\allowbreak{}PROOFS\_\allowbreak{}4681\_\allowbreak{}5648.\allowbreak{}md},\allowbreak{} lines 265–\allowbreak{}281. Applying the same induction to the induced step filtrations and quotient filtrations gives their exactness as well.
+
+Write f:\allowbreak{}A0 \allowbreak{}-> A1 and g:\allowbreak{}A1 \allowbreak{}-> A2. Step exactness yields
+
+\[
+ f(F^p A_0)=\ker(g)\cap F^p A_1=f(A_0)\cap F^p A_1.
+\]
+
+Quotient exactness yields
+
+\[
+ g^{-1}(F^p A_2)=F^p A_1+\ker(g),
+\]
+
+which implies g(F\^{}p A1)\allowbreak{}\allowbreak{}=g(A1)\allowbreak{} intersect F\^{}p A2. Thus both maps are strict. These are the two strictness conclusions actually needed later; exactness of the underlying sequence alone would not suffice.
+
+Apply this three-term result to K\^{}\{n-1\} \allowbreak{}-> K\^{}n \allowbreak{}-> K\textasciicircum{}\{n\allowbreak{}+1\} for each n when gr K is acyclic. It proves H\textasciicircum{}n(K)\allowbreak{}\allowbreak{}=0. The common filtration interval may depend on n:\allowbreak{} the source\textquotesingle s degreewise finiteness suffices. Applying this result to a filtered cone proves that forgetting F sends FQis to quasi-isomorphisms. Therefore localization gives exactly
+
+\[
+ \operatorname{gr}^p,\operatorname{forget}F:DF(A)\longrightarrow D(A),
+ \qquad \operatorname{gr}:DF(A)\longrightarrow D(\operatorname{Gr}(A)).
+\]
+
+DERIVED-RECON-022 reconciles French DERIVED-021 with the existing MC-STK-ERR-0832 deletion of the stray words at original 4361. Its mathematical argument is valid for the reason just proved.
+
+DERIVED-NEW-015:\allowbreak{} original 4379,\allowbreak{} still current 4732,\allowbreak{} puts gr(X)\allowbreak{} in D\textasciicircum{}b(A)\allowbreak{},\allowbreak{} although the immediately preceding functor has target D(Gr(A)\allowbreak{})\allowbreak{}. The correctly typed condition is gr(X)\allowbreak{} in D\textasciicircum{}b(Gr(A)\allowbreak{})\allowbreak{}. This is boundedness in the cochain degree,\allowbreak{} uniformly across graded components; it is not a separate,\allowbreak{} component-dependent bound for each p. The analogous plus/\allowbreak{}minus conditions have the same graded target. The following bounded-model proof uses precisely this condition.
+
+\subsection{2. Bounded filtered models and full faithfulness}\label{proofs-4166-5089-bounded-filtered-models-and-full-faithfulness}
+
+Suppose H\^{}n(gr K)\allowbreak{}\allowbreak{}=0 for n\textless a. The three-term result applied with middle term K\^{}\{a-1\} shows that d\^{}\{a-1\} is strict. Put I\allowbreak{}=im(d\textasciicircum{}\{a-1\})\allowbreak{},\allowbreak{} with the induced filtration from K\^{}a. Strictness identifies the quotient filtration on its coimage with this filtration,\allowbreak{} so
+
+\[
+ \operatorname{gr}(I)=\operatorname{im}(\operatorname{gr}(d^{a-1})),
+ \quad
+ \operatorname{gr}(K^a/I)=
+ \operatorname{gr}(K^a)/\operatorname{im}(\operatorname{gr}(d^{a-1})).
+\]
+
+The second identity follows by the exact graded sequence of an induced subobject and its filtered quotient. Define L\textasciicircum{}n\allowbreak{}=0 for n<a,\allowbreak{} L\textasciicircum{}a\allowbreak{}=K\textasciicircum{}a/\allowbreak{}I,\allowbreak{} and L\textasciicircum{}n\allowbreak{}=K\textasciicircum{}n for n>a,\allowbreak{} with the induced differential at a and the original differentials thereafter. All terms have finite filtrations. The original quotient map K \allowbreak{}-> L is a filtered chain map. Its image under gr is the canonical lower truncation map of gr K; the vanishing assumption makes that map a quasi-isomorphism.
+
+For the other direction suppose H\^{}n(gr K)\allowbreak{}\allowbreak{}=0 for n\textgreater b. The three-term argument with middle term K\textasciicircum{}\{b\allowbreak{}+1\} makes d\^{}b strict. Give J\allowbreak{}=ker(d\textasciicircum{}b)\allowbreak{} the induced filtration in K\^{}b. Strictness gives gr J\allowbreak{}=ker(gr d\textasciicircum{}b)\allowbreak{}. Set M\textasciicircum{}b\allowbreak{}=J,\allowbreak{} M\textasciicircum{}n\allowbreak{}=K\textasciicircum{}n for n<b,\allowbreak{} and M\textasciicircum{}n\allowbreak{}=0 for n\textgreater b. Its differential into J is the factorization of d\^{}\{b-1\}; the inclusion M \allowbreak{}-> K becomes the upper truncation quasi-isomorphism under gr.
+
+If graded cohomology is bounded,\allowbreak{} choose a\textless b enclosing its support; enlarging the chosen interval ensures this strict inequality without changing K. The two constructions act at different degrees. Thus N\allowbreak{}=tau\_\allowbreak{}\{>\allowbreak{}=a\}tau\_\allowbreak{}\{<\allowbreak{}=b\}K\allowbreak{}=tau\_\allowbreak{}\{<\allowbreak{}=b\}tau\_\allowbreak{}\{>\allowbreak{}=a\}K,\allowbreak{} with the quotient term K\textasciicircum{}a/\allowbreak{}im(d\textasciicircum{}\{a-1\})\allowbreak{},\allowbreak{} the kernel term ker(d\textasciicircum{}b)\allowbreak{},\allowbreak{} the original intermediate terms,\allowbreak{} and induced differentials. The quotient and inclusion maps give the source\textquotesingle s actual commutative square
+
+\[
+ \begin{array}{ccc}
+ K&\longrightarrow&L=\tau_{\ge a}K\\
+ \uparrow&&\uparrow\\
+ M=\tau_{\le b}K&\longrightarrow&N.
+ \end{array}
+\]
+
+All four maps are filtered quasi-isomorphisms by the two truncation arguments. This supplies the source\textquotesingle s omitted verification of part (3)\allowbreak{}. In particular N has only finitely many nonzero terms,\allowbreak{} so their finitely many filtration bounds give a common finite filtration interval for N. This is a consequence about the representative just constructed,\allowbreak{} not a claim that the original K has a uniform filtration bound.
+
+The bounded localization assertions follow with the original fraction directions. For bounded-below K,\allowbreak{}L,\allowbreak{} represent a morphism in DF(A)\allowbreak{} as s\^{}\{-1\}f with f:\allowbreak{}K \allowbreak{}-> L\textquotesingle{} and s:\allowbreak{}L \allowbreak{}-> L\textquotesingle{} a filtered quasi-isomorphism. Then gr L\textquotesingle{} has cohomology bounded below. Postcompose both maps with the filtered quasi-isomorphism L\textquotesingle{} \allowbreak{}-> L\textquotesingle\textquotesingle{} just constructed,\allowbreak{} with L\textquotesingle\textquotesingle{} bounded below. This represents the same morphism in the bounded-below localization,\allowbreak{} proving fullness. If a bounded-below fraction becomes zero,\allowbreak{} the fraction equality criterion gives a denominator L\textquotesingle{} \allowbreak{}-> T annihilating f in the homotopy category. Postcompose with T \allowbreak{}-> T\textquotesingle{} for T\textquotesingle{} bounded below. The composite still annihilates f and is a denominator in the bounded-below category,\allowbreak{} proving faithfulness.
+
+For bounded-above objects use right fractions K \textless- K\textquotesingle{} \allowbreak{}-> L and precompose with a bounded-above filtered quasi-isomorphism K\textquotesingle\textquotesingle{} \allowbreak{}-> K\textquotesingle. For a zero fraction precompose its annihilating denominator once more with such a bounded-above replacement. These prove fullness and faithfulness with all arrows reversed. Finally work inside the bounded-above category and apply the bounded-below construction; lower truncation preserves an existing upper bound. The same two fraction arguments give the bounded equivalence. Essential surjectivity is supplied by the explicit models. In all three categories the acyclic kernel is closed under shifts,\allowbreak{} cones,\allowbreak{} and existing direct summands by graded cohomology,\allowbreak{} proving the stated saturation and the identification of the multiplicative systems.
+
+\subsection{\texorpdfstring{3. Derived functor maps,\allowbreak{} denominators,\allowbreak{} and shifts}{3. Derived functor   and shifts}}\label{proofs-4166-5089-derived-functor-maps-denominators-and-shifts}
+
+Keep the source\textquotesingle s exact functor F:\allowbreak{}D \allowbreak{}-> D\textquotesingle{} and saturated multiplicative system S. For X in D and W in D',\allowbreak{} define the abelian group
+
+\[
+ T_X(W)=\mathop{\operatorname{colim}}_{s:X\to X'\ \in X/S}
+             \operatorname{Hom}_{D'}(W,F(X')).                 \tag{3.1}
+\]
+
+This is a colimit of abelian groups,\allowbreak{} not a presumed colimit in D\textquotesingle. The latter need not exist. An essentially constant system with value A has T\_\allowbreak{}X naturally isomorphic to Hom(-,\allowbreak{}A)\allowbreak{}. Conversely if T\_\allowbreak{}X is represented by A,\allowbreak{} the class corresponding to 1\_\allowbreak{}A has a representative alpha:\allowbreak{}A \allowbreak{}-> F(X')\allowbreak{} at some index. For every W its induced map Hom(W,\allowbreak{}A)\allowbreak{} \allowbreak{}-> T\_\allowbreak{}X(W)\allowbreak{} is the representing isomorphism,\allowbreak{} by naturality. This is exactly characterization (4)\allowbreak{} in Categories,\allowbreak{} lemma-characterize-essentially-constant-ind,\allowbreak{} so the system is essentially constant with value A. This also describes why ordinary existence of a colimit in D\textquotesingle{} is a weaker condition.
+
+For f:\allowbreak{}X \allowbreak{}-> Y and an index s:\allowbreak{}X \allowbreak{}-> X',\allowbreak{} MS2 gives t:\allowbreak{}Y \allowbreak{}-> Y\textquotesingle{} in S and f':\allowbreak{}X' \allowbreak{}-> Y\textquotesingle{} with f's\allowbreak{}=tf. Map a class [a:\allowbreak{}W \allowbreak{}-> F(X')\allowbreak{}]\allowbreak{} to [F(f')\allowbreak{}a]\allowbreak{} in T\_\allowbreak{}Y(W)\allowbreak{}. For two such squares,\allowbreak{} first take a common refinement of their Y-indices. Their two maps out of X\textquotesingle{} then agree after precomposition with s. MS3 supplies a further denominator equalizing them. This proves independence. Applying the same argument to a transition X\textquotesingle{} \allowbreak{}-> X\textquotesingle\textquotesingle{} proves compatibility with the colimit. Composing squares proves T(gf)\allowbreak{}\allowbreak{}=T(g)\allowbreak{}T(f)\allowbreak{},\allowbreak{} and the identity square proves T(1)\allowbreak{}\allowbreak{}=1. For f\allowbreak{}+g take common denominator squares for f and g; the sum of the refined maps is a square for f\allowbreak{}+g. Additivity of F gives T(f\allowbreak{}+g)\allowbreak{}\allowbreak{}=T(f)\allowbreak{}\allowbreak{}+T(g)\allowbreak{}.
+
+When T\_\allowbreak{}X and T\_\allowbreak{}Y are represented,\allowbreak{} Yoneda gives the unique RF(f)\allowbreak{} with the source\textquotesingle s commuting squares. Equivalently,\allowbreak{} whenever the two colimits in D\textquotesingle{} exist,\allowbreak{} the same refined-square construction on their cocones proves the first source lemma. No triangle argument is needed for that weaker assertion.
+
+If s:\allowbreak{}X \allowbreak{}-> Y belongs to S,\allowbreak{} composition gives j:\allowbreak{}Y/\allowbreak{}S \allowbreak{}-> X/\allowbreak{}S. The category Y/\allowbreak{}S identifies with the category of objects under s in X/\allowbreak{}S:\allowbreak{} a factorization t\allowbreak{}=u s with t,\allowbreak{}s in S has u in S by saturation. For a filtered category I and an object i,\allowbreak{} the forgetful functor i/\allowbreak{}I \allowbreak{}-> I is cofinal. Indeed any k and i have a common successor. For two successors with maps from k,\allowbreak{} filteredness first gives a common target and then equalizes both pairs of arrows from i and k. This proves nonemptiness and connectedness of the required comma category. It follows that j is cofinal,\allowbreak{} so (3.1)\allowbreak{} is unchanged. Its isomorphism agrees with T(s)\allowbreak{} by the defining squares. Hence representability at X and at Y is equivalent and RF(s)\allowbreak{} is the induced isomorphism.
+
+Shift by n gives an equivalence X/\allowbreak{}S \allowbreak{}-> X[n]\allowbreak{}/\allowbreak{}S because S is closed under both shifts and their inverses. The original comparison for F,\allowbreak{} iterated with its inverse when n<0,\allowbreak{} identifies F(X')\allowbreak{}[n]\allowbreak{} with F(X'[n]\allowbreak{})\allowbreak{}. Applying this to every index and every transition gives the canonical comparison RF(X)\allowbreak{}[n]\allowbreak{} \allowbreak{}-> RF(X[n]\allowbreak{})\allowbreak{}. Its coherence and naturality follow on each cocone map from those of F,\allowbreak{} so they hold after the colimit.
+
+For LF use instead the functor
+
+\[
+ U_X(W)=\mathop{\operatorname{colim}}_{(S/X)^{\mathrm{op}}}
+                         \operatorname{Hom}_{D'}(F(X'),W).
+\]
+
+Its representability is Hom(LF(X)\allowbreak{},\allowbreak{}-)\allowbreak{}. Reverse the MS2 squares and the MS3 equalizations above. Composition with a denominator now identifies the relevant category over an object in the cofiltered category S/\allowbreak{}X; passing to the opposite category gives the same filtered cofinality proof. Yoneda reverses the represented natural transformation,\allowbreak{} producing LF(f)\allowbreak{}:\allowbreak{}LF(X)\allowbreak{} \allowbreak{}-> LF(Y)\allowbreak{}. Shift comparisons are induced by the same iterated comparisons of F. These observations prove both dual source assertions with their actual variances.
+
+\subsection{\texorpdfstring{4. Two out of three,\allowbreak{} including the Hom comparison direction}{4. Two out of  including the Hom comparison direction}}\label{proofs-4166-5089-two-out-of-three-including-the-hom-comparison-direction}
+
+The category I of denominator maps out of a fixed distinguished triangle is filtered and its three component functors are cofinal. The complete source-bound proof is \texttt{PROOFS\_\allowbreak{}1149\_\allowbreak{}1843.\allowbreak{}md},\allowbreak{} section 4,\allowbreak{} lines 268–\allowbreak{}318:\allowbreak{} MS2 and MS6 extend a chosen component denominator; MS3 kills the three square defects in succession without destroying earlier equalities. The same operation equalizes parallel triples and proves connectedness of each component comma category. Thus cofinality here has been proved,\allowbreak{} not inferred merely from surjectivity on objects.
+
+Let X \allowbreak{}-> Y \allowbreak{}-> Z \allowbreak{}-> X[1]\allowbreak{} be distinguished,\allowbreak{} with RF(X)\allowbreak{}\allowbreak{}=A and RF(Y)\allowbreak{}\allowbreak{}=B. Choose a triangle A \allowbreak{}-> B \allowbreak{}-> C \allowbreak{}-> A[1]\allowbreak{} on RF(f)\allowbreak{}. Choose an essential-constancy witness alpha:\allowbreak{}A \allowbreak{}-> F(X')\allowbreak{}. MS2 gives a square to f':\allowbreak{}X' \allowbreak{}-> Y\textquotesingle{} with both structure arrows in S. Refine Y\textquotesingle{} to an index admitting a witness beta:\allowbreak{}B \allowbreak{}-> F(Y')\allowbreak{}. Write the cocone maps a:\allowbreak{}F(X')\allowbreak{} \allowbreak{}-> A and b:\allowbreak{}F(Y')\allowbreak{} \allowbreak{}-> B. They satisfy a alpha\allowbreak{}=1,\allowbreak{} b beta\allowbreak{}=1,\allowbreak{} and b F(f')\allowbreak{}\allowbreak{}=RF(f)\allowbreak{} a. Therefore the square defect
+
+\[
+ \delta=F(f')\alpha-\beta RF(f):A\longrightarrow F(Y')
+ \quad\text{satisfies}\quad b\delta=0.
+\]
+
+Essential constancy gives a transition v:\allowbreak{}Y' \allowbreak{}-> Y\textquotesingle\textquotesingle{} for which F(v)\allowbreak{}\allowbreak{}=F(v)\allowbreak{} beta b. To obtain the same transition on both appearances of Y',\allowbreak{} use the witness factorization and then filteredness to equalize the two parallel index arrows. Consequently F(v)\allowbreak{}delta\allowbreak{}=0. Replace Y\textquotesingle{} by Y\textquotesingle\textquotesingle{} and beta by F(v)\allowbreak{}beta. The first square now commutes. This is the precise step requiring the indexing arrows Y \allowbreak{}-> Y',\allowbreak{} as corrected by MC-STK-ERR-0841 and reconciled in DERIVED-RECON-023.
+
+MS6 completes the source square to a denominator triangle map,\allowbreak{} and TR3 completes (alpha,\allowbreak{}beta)\allowbreak{} to (alpha,\allowbreak{}beta,\allowbreak{}gamma)\allowbreak{} with gamma:\allowbreak{}C \allowbreak{}-> F(Z')\allowbreak{}. Here and below the last arrow of an image triangle is xi\_\allowbreak{}X\textasciicircum{}\{-1\}F(h)\allowbreak{},\allowbreak{} where xi\_\allowbreak{}X:\allowbreak{}F(X)\allowbreak{}[1]\allowbreak{} \allowbreak{}-> F(X[1]\allowbreak{})\allowbreak{} is the exact-functor comparison. This convention makes each last square well typed.
+
+Over the filtered category I of subsequent triangle refinements,\allowbreak{} Hom(W,\allowbreak{}-)\allowbreak{} gives a morphism between the exact five-term sequences
+
+
+\par\begin{landscape}
+\noindent\textbf{Exact comparison diagram.}\par
+Editorial counting correction: each row has five terms; all five comparison maps are shown.\par
+\begingroup\setlength{\arraycolsep}{2pt}
+\[
+\begin{array}{ccccccccc}
+\operatorname{Hom}(W,A)&\to&\operatorname{Hom}(W,B)&\to&
+\operatorname{Hom}(W,C)&\to&\operatorname{Hom}(W,A[1])&\to&\operatorname{Hom}(W,B[1])\\
+\downarrow&&\downarrow&&\downarrow&&\downarrow&&\downarrow\\
+\operatorname{colim}_I\operatorname{Hom}(W,F(X''))&\to&
+\operatorname{colim}_I\operatorname{Hom}(W,F(Y''))&\to&
+\operatorname{colim}_I\operatorname{Hom}(W,F(Z''))&\to&
+\operatorname{colim}_I\operatorname{Hom}(W,F(X'')[1])&\to&
+\operatorname{colim}_I\operatorname{Hom}(W,F(Y'')[1]).
+\end{array}
+\]
+\endgroup\end{landscape}
+
+
+The bottom sequence is exact:\allowbreak{} an element whose next image is zero has zero image at a later index; exactness there gives a preimage,\allowbreak{} which defines a preimage in the filtered colimit. The four outside vertical arrows are bijective by essential constancy,\allowbreak{} component cofinality,\allowbreak{} and the shift comparison. The five lemma makes the middle arrow bijective. Explicitly that arrow is
+
+\[
+ \operatorname{Hom}_{D'}(W,C)\longrightarrow
+ \operatorname{colim}_{I}\operatorname{Hom}_{D'}(W,F(Z'')),
+ \qquad u\longmapsto[\gamma u].                            \tag{4.1}
+\]
+
+Characterization (4)\allowbreak{} of essential constancy now applies exactly to gamma. It makes C a value of RF(Z')\allowbreak{},\allowbreak{} hence of RF(Z)\allowbreak{}. The compatible maps identify the derived triangle with A \allowbreak{}-> B \allowbreak{}-> C \allowbreak{}-> A[1]\allowbreak{}. Rotating the initial triangle,\allowbreak{} including its original minus sign,\allowbreak{} reduces either other pair of defined objects to this case. For LF reverse the triangle-indexing arrows,\allowbreak{} pass to the opposite filtered category,\allowbreak{} and apply Hom(-,\allowbreak{}W)\allowbreak{}; the same five-term argument proves the dual assertion.
+
+DERIVED-NEW-016 is a direction clarification at original 4792–\allowbreak{}4794. The displayed map there points from the colimit to Hom(W,\allowbreak{}C)\allowbreak{},\allowbreak{} whereas the diagram and the cited characterization (4)\allowbreak{} construct (4.1)\allowbreak{}. Its inverse does exist after the five-lemma argument. The correction displays the constructed map in its actual direction; it does not claim that the theorem or the existence of the inverse was false.
+
+\subsection{5. Direct-sum cofinality and DERIVED-UNDER-006}\label{proofs-4166-5089-direct-sum-cofinality-and-derived-under-006}
+
+Put Z\allowbreak{}=X direct-sum Y. The functor J:\allowbreak{}X/\allowbreak{}S times Y/\allowbreak{}S \allowbreak{}-> Z/\allowbreak{}S sends (s,\allowbreak{}t)\allowbreak{} to s direct-sum t. It is defined because Q is additive and S is precisely the arrows Q inverts. The two product projections are cofinal:\allowbreak{} fix an object in the omitted nonempty filtered factor,\allowbreak{} take componentwise common successors,\allowbreak{} and equalize parallel component maps. These operations also prove that the product category is filtered.
+
+Here is the separate proof that J is cofinal. Given u:\allowbreak{}Z \allowbreak{}-> V in S,\allowbreak{} apply MS2 to u and each original projection p\_\allowbreak{}X:\allowbreak{}Z \allowbreak{}-> X and p\_\allowbreak{}Y:\allowbreak{}Z \allowbreak{}-> Y. Obtain s:\allowbreak{}X \allowbreak{}-> X',\allowbreak{} t:\allowbreak{}Y \allowbreak{}-> Y\textquotesingle{} in S and a:\allowbreak{}V \allowbreak{}-> X',\allowbreak{} b:\allowbreak{}V \allowbreak{}-> Y\textquotesingle{} with a u\allowbreak{}=s p\_\allowbreak{}X and b u\allowbreak{}=t p\_\allowbreak{}Y. The column (a,\allowbreak{}b)\allowbreak{}:\allowbreak{}V \allowbreak{}-> X\textquotesingle{} direct-sum Y\textquotesingle{} is a morphism from u to J(s,\allowbreak{}t)\allowbreak{}. This proves nonemptiness of each comma category.
+
+For two such comma objects,\allowbreak{} choose common successors in X/\allowbreak{}S and Y/\allowbreak{}S. Call the maps to the X successor A:\allowbreak{}X'\_\allowbreak{}1 \allowbreak{}-> X'',\allowbreak{} B:\allowbreak{}X'\_\allowbreak{}2 \allowbreak{}-> X'',\allowbreak{} and to the Y successor C:\allowbreak{}Y'\_\allowbreak{}1 \allowbreak{}-> Y'',\allowbreak{} D:\allowbreak{}Y'\_\allowbreak{}2 \allowbreak{}-> Y\textquotesingle\textquotesingle. For their maps a\_\allowbreak{}i:\allowbreak{}V \allowbreak{}-> X'\_\allowbreak{}i and b\_\allowbreak{}i:\allowbreak{}V \allowbreak{}-> Y'\_\allowbreak{}i,\allowbreak{} one has (A a\_\allowbreak{}1)\allowbreak{}u\allowbreak{}=(B a\_\allowbreak{}2)\allowbreak{}u and (C b\_\allowbreak{}1)\allowbreak{}u\allowbreak{}=(D b\_\allowbreak{}2)\allowbreak{}u. MS3 gives a denominator out of X\textquotesingle\textquotesingle{} equalizing the first pair and one out of Y\textquotesingle\textquotesingle{} equalizing the second. Postcomposing the successors gives a common comma object and actual morphisms to it from both original objects. This proves connectedness,\allowbreak{} including the equalities on V rather than only after Q.
+
+Thus,\allowbreak{} naturally in W and with the original inclusion and projection maps,\allowbreak{} (3.1)\allowbreak{} gives
+
+\[
+ T_Z(W)=T_X(W)\oplus T_Y(W).                              \tag{5.1}
+\]
+
+To see the colimit step explicitly,\allowbreak{} any pair of representatives reaches a common product index; two pairs agree precisely when their two component equalities hold after a common refinement. This proves the bijection with the finite biproduct of the two colimits. If both summands are represented,\allowbreak{} their biproduct represents T\_\allowbreak{}Z,\allowbreak{} proving part (1)\allowbreak{} of lemma-direct-sum-defined and its specified decomposition. The zero and inclusion/\allowbreak{}projection maps agree with these component maps by the functor construction in section 3.
+
+Now assume RF(Z)\allowbreak{}\allowbreak{}=V exists,\allowbreak{} without assuming D\textquotesingle{} Karoubian. Let
+
+\[
+ e=RF(i_Xp_X):V\longrightarrow V.
+\]
+
+This is defined since it is an endomorphism of Z,\allowbreak{} even before RF(X)\allowbreak{} is known to exist. Functoriality gives e\textasciicircum{}2\allowbreak{}=e. Under (5.1)\allowbreak{},\allowbreak{} Hom(-,\allowbreak{}e)\allowbreak{} is exactly the projection onto T\_\allowbreak{}X. If e\allowbreak{}=j r with r:\allowbreak{}V \allowbreak{}-> A,\allowbreak{} j:\allowbreak{}A \allowbreak{}-> V,\allowbreak{} and rj\allowbreak{}=1\_\allowbreak{}A,\allowbreak{} then Hom(-,\allowbreak{}A)\allowbreak{},\allowbreak{} included by j and projected by r,\allowbreak{} represents T\_\allowbreak{}X. Conversely a representing object for T\_\allowbreak{}X and the inclusion and projection in (5.1)\allowbreak{} give j and r by Yoneda and satisfy those same identities. Therefore
+
+\[
+ RF(X)\text{ exists}\quad\Longleftrightarrow\quad e\text{ splits}.
+                                                               \tag{5.2}
+\]
+
+The corresponding statement for Y uses 1-e. This is the receiving application of HOMOLOGY-UNDER-010 and its individual-witness addendum. That earlier proof also gives an explicit essential-constancy witness:\allowbreak{} if c\_\allowbreak{}i:\allowbreak{}H\_\allowbreak{}i \allowbreak{}-> V and t:\allowbreak{}V \allowbreak{}-> H\_\allowbreak{}i witness the sum diagram,\allowbreak{} then p\_\allowbreak{}i t j:\allowbreak{}A \allowbreak{}-> F(X\_\allowbreak{}i)\allowbreak{} witnesses its X summand; the cocone is r c\_\allowbreak{}i i\_\allowbreak{}i. The identities are
+
+\[
+ r c_i i_i p_i t j=r e c_i t j=rj=1_A,
+ \qquad F(\beta)=F(\alpha)p_i t j(r c_k i_k)
+\]
+
+for the eventual pair of index maps alpha and beta supplied by the sum witness. They follow by restricting that witness\textquotesingle s equality to the summand and using c\_\allowbreak{}k i\_\allowbreak{}k\allowbreak{}=e c\_\allowbreak{}k i\_\allowbreak{}k\allowbreak{}=j r c\_\allowbreak{}k i\_\allowbreak{}k.
+
+In the present triangulated target,\allowbreak{} splitting e also splits 1-e. This requires an argument; it is not automatic in an arbitrary additive category. Complete j:\allowbreak{}A \allowbreak{}-> V to a triangle A \allowbreak{}-> V \allowbreak{}-> C \allowbreak{}-> A[1]\allowbreak{},\allowbreak{} writing its second map q and last map h. Since j[1]\allowbreak{}h\allowbreak{}=0 and rj\allowbreak{}=1,\allowbreak{} one has h\allowbreak{}=r[1]\allowbreak{}j[1]\allowbreak{}h\allowbreak{}=0. Exactness of Hom(C,\allowbreak{}-)\allowbreak{} gives k\_\allowbreak{}0:\allowbreak{}C \allowbreak{}-> V with qk\_\allowbreak{}0\allowbreak{}=1. Set k\allowbreak{}=k\_\allowbreak{}0-jr k\_\allowbreak{}0,\allowbreak{} so qk\allowbreak{}=1 and rk\allowbreak{}=0. The map d\allowbreak{}=1\_\allowbreak{}V-jr-kq has qd\allowbreak{}=0,\allowbreak{} hence factors as jv by exactness of Hom(V,\allowbreak{}-)\allowbreak{}. But rd\allowbreak{}=0,\allowbreak{} so v\allowbreak{}=rjv\allowbreak{}=rd\allowbreak{}=0. Thus
+
+\[
+ kq=1_V-e,\qquad qk=1_C,\qquad
+ (j,k)(r,q)=1_V,\qquad (r,q)(j,k)=1_{A\oplus C}.          \tag{5.3}
+\]
+
+Consequently either condition in (5.2)\allowbreak{},\allowbreak{} or its Y analogue,\allowbreak{} guarantees both values and their biproduct decomposition. The original Karoubian hypothesis ensures every needed e splits,\allowbreak{} but only this specified idempotent is necessary for this pair. This precise criterion is DERIVED-UNDER-006; it is kept editorial. Applying the construction in D\textquotesingle\^{}op gives the same criterion for LF,\allowbreak{} with e\allowbreak{}=LF(i\_\allowbreak{}Xp\_\allowbreak{}X)\allowbreak{} on LF(Z)\allowbreak{} and the representing functors Hom(A,\allowbreak{}-)\allowbreak{}.
+
+DERIVED-RECON-024 reconciles P02-E0030 and French DERIVED-031/\allowbreak{}032 with both existing corrections MC-STK-ERR-0842/\allowbreak{}0843:\allowbreak{} the two restrictions are of F,\allowbreak{} the only functor supplied in the situation. DERIVED-RECON-025 accepts P02-E0031\textquotesingle s missing agreement correction at original 4891,\allowbreak{} changing ``The proof ... are dual'' to ``is dual''.
+
+\subsection{\texorpdfstring{6. The full domain,\allowbreak{} its localization,\allowbreak{} and the zero-object overclaim}{6. The full  its  and the zero-object overclaim}}\label{proofs-4166-5089-the-full-domain-its-localization-and-the-zero-object-overclaim}
+
+Let E be the full subcategory where RF exists. The zero object is in E:\allowbreak{} the object id\_\allowbreak{}0 of 0/\allowbreak{}S is terminal,\allowbreak{} and its image is F(0)\allowbreak{}\allowbreak{}=0. The essential-constancy witness is 0 \allowbreak{}-> F(0)\allowbreak{}; every index has its unique map to this terminal object,\allowbreak{} giving the required eventual equality. The dual initial object of S/\allowbreak{}0 proves the LF assertion as well. Inverting isomorphisms,\allowbreak{} shifts,\allowbreak{} and section 4 prove E is strictly full and triangulated. Sections 3–\allowbreak{}4 give the exact functor RF on it.
+
+If an arrow of S has either endpoint in E,\allowbreak{} section 3 puts the other endpoint in E. This property proves all the multiplicative-system axioms for S\_\allowbreak{}E inside E:\allowbreak{} an MS2 construction starting with objects in E has its new endpoint in E because the new comparison arrow is in S; the same applies to an MS3 equalizing denominator. Identities,\allowbreak{} composition and saturation restrict directly. Shifts preserve E; in MS6 the third vertex belongs to E by its triangle,\allowbreak{} and the third denominator has both endpoints there. Hence S\_\allowbreak{}E is compatible.
+
+For X,\allowbreak{}Y in E a fraction X \allowbreak{}-> T \textless- Y in the larger localization already has T in E,\allowbreak{} since the arrow out of Y is a denominator. The same is true of every later denominator used to compare two such fractions. Thus both the morphisms and their equality relation are exactly those in S\_\allowbreak{}E\textasciicircum{}\{-1\}E. This proves full faithfulness,\allowbreak{} not just faithfulness on original morphisms. Localized distinguished triangles are images of triangles up to isomorphism,\allowbreak{} so this embedding is exact. RF inverts S\_\allowbreak{}E and therefore factors with its specified shift comparison as the stated exact functor on S\_\allowbreak{}E\textasciicircum{}\{-1\}E.
+
+If D\textquotesingle{} is Karoubian,\allowbreak{} every e of section 5 splits,\allowbreak{} so E is closed under existing summands of its objects. More precisely,\allowbreak{} the same conclusion holds whenever just the idempotents RF(i\_\allowbreak{}Xp\_\allowbreak{}X)\allowbreak{} arising from decompositions of objects in E split. Conversely closure under these summands forces these idempotents to split by (5.2)\allowbreak{}. This propagates DERIVED-UNDER-006 to part (8)\allowbreak{} of proposition-derived-functor without replacing that proposition\textquotesingle s original sufficient hypothesis.
+
+DERIVED-NEW-018 concerns original 4982–\allowbreak{}4983. The statement that the canonical map might ``never'' be an isomorphism is literally false:\allowbreak{} F(0)\allowbreak{} \allowbreak{}-> RF(0)\allowbreak{} is always the isomorphism 0 \allowbreak{}-> 0 just proved. Its intended warning is retained by saying the map need not be an isomorphism for a given X. For an explicit example even when RF is everywhere defined,\allowbreak{} take D\allowbreak{}=D'\allowbreak{}=K\textasciicircum{}b(Ab)\allowbreak{},\allowbreak{} F the identity,\allowbreak{} and S all morphisms. MS1–\allowbreak{}MS3 hold (postcompose or precompose with a zero object where necessary)\allowbreak{},\allowbreak{} shift compatibility is automatic,\allowbreak{} and MS6 is TR3 since every completed third map lies in S. The localization is the zero category:\allowbreak{} inverting the zero endomorphism makes each identity zero. Thus S is saturated. For each X,\allowbreak{} X/\allowbreak{}S has terminal object X \allowbreak{}-> 0. Its diagram is essentially constant with value 0,\allowbreak{} using the zero witness and the maps to that terminal index. Hence RF is the zero functor. At X\allowbreak{}=Z[0]\allowbreak{},\allowbreak{} F(X)\allowbreak{} \allowbreak{}-> RF(X)\allowbreak{} is not an isomorphism:\allowbreak{} a homotopy from 1\_\allowbreak{}\{Z[0]\allowbreak{}\} to zero would have to be zero in every degree and cannot equal its nonzero degree-zero identity. At X\allowbreak{}=0 it is an isomorphism. This verifies both the correction and the retained warning with the source\textquotesingle s exact assumptions.
+
+DERIVED-NEW-019 groups three unreported grammar corrections:\allowbreak{} ``fully faithfulness'' becomes ``full faithfulness'' at 4933,\allowbreak{} and the two quoted phrases at 4965/\allowbreak{}4967 gain ``is'' before ``everywhere defined''. These change none of the domains,\allowbreak{} quantifiers or hypotheses.
+
+\subsection{7. Computing objects and the receiving variance correction}\label{proofs-4166-5089-computing-objects-and-the-receiving-variance-correction}
+
+The canonical cocone map eta\_\allowbreak{}X:\allowbreak{}F(X)\allowbreak{} \allowbreak{}-> RF(X)\allowbreak{} is natural in X by section 3 with the identity denominator. It commutes with the shift comparisons because those comparisons are induced at every index. Therefore eta\_\allowbreak{}X is invertible exactly when eta\_\allowbreak{}\{X[n]\allowbreak{}\} is. In a distinguished triangle of defined objects,\allowbreak{} eta gives a morphism of triangles; if two components are invertible,\allowbreak{} the Hom long exact sequences and the five lemma make the third invertible. Rotation gives any pair of components. The LF argument uses the natural cone map LF(X)\allowbreak{} \allowbreak{}-> F(X)\allowbreak{} and the same triangle and shift comparisons.
+
+Suppose Z\allowbreak{}=X direct-sum Y computes RF. Through eta\_\allowbreak{}Z,\allowbreak{} the value RF(Z)\allowbreak{} is F(X)\allowbreak{} direct-sum F(Y)\allowbreak{},\allowbreak{} and the idempotent e of section 5 is exactly F(i\_\allowbreak{}Xp\_\allowbreak{}X)\allowbreak{}. Its splitting is explicitly F(i\_\allowbreak{}X)\allowbreak{},\allowbreak{} F(p\_\allowbreak{}X)\allowbreak{}. Hence RF(X)\allowbreak{} and RF(Y)\allowbreak{} exist. Moreover (5.1)\allowbreak{} identifies
+
+\[
+ \operatorname{Hom}(W,F(X\oplus Y))\longrightarrow T_Z(W)
+\]
+
+with the direct sum of the two canonical maps Hom(W,\allowbreak{}F(X)\allowbreak{})\allowbreak{} \allowbreak{}-> T\_\allowbreak{}X(W)\allowbreak{} and Hom(W,\allowbreak{}F(Y)\allowbreak{})\allowbreak{} \allowbreak{}-> T\_\allowbreak{}Y(W)\allowbreak{}. A block diagonal map of two abelian groups is bijective only if both component maps are bijective:\allowbreak{} injectivity follows by putting zero in the other component,\allowbreak{} and surjectivity by lifting an element with other component zero and then projecting. Thus eta\_\allowbreak{}X and eta\_\allowbreak{}Y are isomorphisms by the representability criterion,\allowbreak{} with precisely these canonical maps. This proves lemma-direct-sum-computes without a Karoubian assumption and completes the propagation of HOMOLOGY-UNDER-010 through its cofinality step and this receiving lemma.
+
+DERIVED-NEW-017:\allowbreak{} original 5056,\allowbreak{} 5058,\allowbreak{} 5063,\allowbreak{} 5065 instead have Hom(F(-)\allowbreak{},\allowbreak{}W)\allowbreak{} under a colimit indexed by the forward filtered category. For a transition v:\allowbreak{}X' \allowbreak{}-> X'',\allowbreak{} this Hom expression supplies
+
+\[
+ \operatorname{Hom}(F(X''),W)\longrightarrow
+ \operatorname{Hom}(F(X'),W),
+\]
+
+which is in the wrong direction for the displayed diagram. The cited ind-object characterization requires Hom(W,\allowbreak{}F(-)\allowbreak{})\allowbreak{}. Reversing the arguments in all four occurrences gives the two exact comparison maps just proved and restores the forward transition by postcomposition with F(v)\allowbreak{}. It leaves W,\allowbreak{} every denominator,\allowbreak{} both index categories,\allowbreak{} and the right-derived conclusion unchanged. Replacing the colimit by a limit would not be this proof:\allowbreak{} it would impose a different variance and would not give characterization (4)\allowbreak{}.
+
+For LF one genuinely uses Hom(F(-)\allowbreak{},\allowbreak{}W)\allowbreak{},\allowbreak{} but now the index is the opposite of S/\allowbreak{}X,\allowbreak{} as in section 3; the reversed denominators provide the needed forward Hom transitions. This proves the dual result without conflating its indexing category with X/\allowbreak{}S.
+
+Finally lemma-existence-computes follows from the already proved denominator invariance:\allowbreak{} any specified denominator connecting X to a computing object puts X in the domain. This proves the right and left statements at original 5073–\allowbreak{}5089. The next criterion,\allowbreak{} lemma-find-existence-computes,\allowbreak{} is reserved for the next source-ordered review,\allowbreak{} despite its opening having been read through original 5120.
+
+All seven received physical reports in this interval have been read and accounted for. The eight later French records DERIVED-022 through DERIVED-029 have original loci from 5260 through 6197 and remain in their later source positions; their numbering is not source order. The wider mathematical synthesis and literature novelty assessment remain follow-on work after the correction and received-theorem queue.

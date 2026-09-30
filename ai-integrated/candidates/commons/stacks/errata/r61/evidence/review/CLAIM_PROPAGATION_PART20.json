@@ -1,0 +1,129 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-030",
+      "source_lines": [
+        11473,
+        11630
+      ],
+      "original_statement": "The telescope map is injective on Hom(E,-), and the telescope represents H under the two generator hypotheses.",
+      "proved_statement": "On the full category P of coproducts of E, the telescope sequence is split exact as a sequence of coproduct-to-product additive functors, with explicit finite-prefix retraction and cokernel H|P. The same tower represents H on P without detection. Countable preservation of E-epimorphisms suffices and is equivalent to the restricted Yoneda countable-coproduct comparison; detection gives full representability.",
+      "hypotheses": "The original cohomological functor taking coproducts to products; a shift-stable set E; the actual universal kernel-killing tower; countable stability of E-epimorphisms. Source hypothesis (2) implies that stability. Detection is used only for the conclusion on all D.",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed_known_Krause_perfect_generator_mechanism",
+      "human_source_id": "arxiv:math/0511047v3",
+      "limits": "No compactness assumption, no pointwise-coproduct identification, and no claim that the restricted retraction is represented in D."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-041"
+      ],
+      "to": "derived.tex original 11571-11599",
+      "status": "required_lift_and_original_delta_n_factorization_proved",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-041"
+      ],
+      "to": "derived.tex original 11602-11630",
+      "status": "localizing_closure_and_representable_comparison_cone_proved",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-041"
+      ],
+      "to": "derived.tex original 11633-11655",
+      "status": "right_adjoint_functor_unit_counit_and_exactness_dependency_verified",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-041",
+        "DERIVED-UNDER-030"
+      ],
+      "to": "sites-cohomology.tex current 11458-11486",
+      "status": "same_Brown_hypotheses_and_small_generator_receiving_maps_retained_no_new_source_edit",
+      "limits": "The receiving cardinal-enlargement dependency remains subject to its own chapter review; this is a bounded Brown dependency check.",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-041"
+      ],
+      "to": "injectives.tex current 2743-2779",
+      "status": "general_Brown_literature_pointer_retained_actual_compact_Brown_use_unaffected",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-030"
+      ],
+      "to": "editorial_relative_Brown_statement",
+      "status": "split_restricted_sequence_and_weaker_countable_perfectness_proved_with_human_provenance",
+      "proof": {
+        "file": "PROOFS_11460_11655.md",
+        "bytes": 24842,
+        "sha256": "015774900712FE6131684415BECA60E352169F37CCC6B2B45432C5AD7B25AE71",
+        "sections": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    }
+  ],
+  "limits": "Broader synthesis remains after the core queue. Original Brown hypotheses stay in the source body; stronger and weaker formulations are editorial."
+}

@@ -1,0 +1,112 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-032",
+      "source_lines": [
+        12148,
+        12370
+      ],
+      "original_statement": "Exact Hom supplies certain Postnikov lifts and comparison maps under sufficient vanishing assumptions.",
+      "proved_statement": "The actual stage obstruction is t*d. When it vanishes, lifts form the exact quotient torsor (5.3). The actual next-comparison obstruction is t_prime*f-phi*t, and its completions form the kernel torsor (5.5).",
+      "hypotheses": "The original triangulated category, specified actual partial system and differential, or specified systems and partial comparison; no global choice-independent obstruction is asserted.",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          2,
+          3,
+          5
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed_formal_consequence_of_exact_Hom",
+      "limits": "All maps and inverse-rotation signs are retained. Examples calculate actual nonzero obstructions; no missing extension is assumed."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-043"
+      ],
+      "to": "derived.tex original 12242-12317",
+      "status": "terminal_uniqueness_proved_and_full_uniqueness_retained_exactly_under_condition_3",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-032",
+        "DERIVED-RECON-100"
+      ],
+      "to": "derived.tex original 12122-12162",
+      "status": "all_small_cases_and_actual_nonexistence_examples_proved",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-032"
+      ],
+      "to": "derived.tex original 12164-12240 and 12319-12370",
+      "status": "partial_choices_extend_under_the_exact_independent_hypotheses_including_infinite_induction",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-043"
+      ],
+      "to": "equiv.tex 1990-2033 and 3008-3178",
+      "status": "uses_existence_and_isomorphism_not_unique_maps_categorical_argument_survives",
+      "limits": "Earlier geometric and Kunneth inputs remain in their own chapter review.",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-032",
+        "derived.tex example-key-postnikov"
+      ],
+      "to": "spaces-simplicial.tex 2784-2826, 2957-3120, 3230-3273",
+      "status": "categorical_vanishing_and_compatible_stage_construction_checked_receiver_notation_issues_routed",
+      "limits": "This is not approval of the whole receiving proof or module statement.",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          7
+        ]
+      }
+    }
+  ],
+  "limits": "The torsor statements remain editorial. Broader synthesis follows the core queue."
+}

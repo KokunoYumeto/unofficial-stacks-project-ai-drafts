@@ -1,0 +1,219 @@
+\section{\texorpdfstring{Computing classes,\allowbreak{} finite acyclic prefixes,\allowbreak{} and a repaired existence proof}{Computing  finite acyclic  and a repaired existence proof}}\label{proofs-5091-5900-computing-classes-finite-acyclic-prefixes-and-a-repaired-existence-proof}
+
+Authority:\allowbreak{} \texttt{derived.\allowbreak{}tex} at \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14},\allowbreak{} original lines 5091–\allowbreak{}5900. The private original/\allowbreak{}current snapshots fix the comparison. The receiving proof in \texttt{perfect.\allowbreak{}tex} is compared at the same authority and the public R60 source. Corrections are distinguished below from the editorial refinement DERIVED-UNDER-007. No novelty is claimed.
+
+\subsection{1. Cofinal computing classes and the composition comparison}\label{proofs-5091-5900-cofinal-computing-classes-and-the-composition-comparison}
+
+For the source\textquotesingle s class I,\allowbreak{} let C\_\allowbreak{}X be the full subcategory of X/\allowbreak{}S whose targets lie in I. Every object s:\allowbreak{}X \allowbreak{}-> Y has an arrow to an object of C\_\allowbreak{}X:\allowbreak{} choose the asserted denominator t:\allowbreak{}Y \allowbreak{}-> I\_\allowbreak{}Y and compose ts. Two objects of C\_\allowbreak{}X have a common successor in X/\allowbreak{}S; refine its target once more into I. Parallel arrows can first be equalized in X/\allowbreak{}S and then refined into I. Thus C\_\allowbreak{}X is filtered. The same procedure applied to two objects under a fixed s proves that the corresponding comma category is nonempty and connected. This proves cofinality,\allowbreak{} including the connectedness condition.
+
+Every transition u between its targets is in S,\allowbreak{} since Q(u)\allowbreak{} is the quotient of two invertible structure maps and S is saturated. Therefore F(u)\allowbreak{} is an isomorphism by the source\textquotesingle s second hypothesis. Choose one index i. For any j choose a common successor k with arrows a:\allowbreak{}i \allowbreak{}-> k,\allowbreak{} b:\allowbreak{}j \allowbreak{}-> k,\allowbreak{} and set c\_\allowbreak{}j\allowbreak{}=F(a)\allowbreak{}\textasciicircum{}\{-1\}F(b)\allowbreak{}:\allowbreak{}F(X\_\allowbreak{}j)\allowbreak{} \allowbreak{}-> F(X\_\allowbreak{}i)\allowbreak{}. Further common refinements and equalization show this is independent of both choices. These maps form a cocone; c\_\allowbreak{}i\allowbreak{}=1. Their defining equalities give the essential-constancy witness at index i. Thus the source\textquotesingle s word ``constant'' means canonically isomorphic to a constant diagram,\allowbreak{} rather than literal equality of its objects and arrows. When X belongs to I,\allowbreak{} choose i\allowbreak{}=id\_\allowbreak{}X. The cocone identifies the canonical map F(X)\allowbreak{} \allowbreak{}-> RF(X)\allowbreak{} with the identity. This proves the computing assertion as well as existence. In the opposite category,\allowbreak{} the identical common-predecessor and equalization construction proves the left-derived criterion for P.
+
+For composition retain the original Q\_\allowbreak{}A,\allowbreak{} Q\_\allowbreak{}B and F'\allowbreak{}=Q\_\allowbreak{}B F. Let c\_\allowbreak{}\{s\}:\allowbreak{}F'(X\_\allowbreak{}s)\allowbreak{} \allowbreak{}-> RF'(Q\_\allowbreak{}A X)\allowbreak{} be the right-derived cocone,\allowbreak{} and write eta\textasciicircum{}G\_\allowbreak{}Y:\allowbreak{}G(Y)\allowbreak{} \allowbreak{}-> RG(Q\_\allowbreak{}B Y)\allowbreak{}. The maps
+
+\[
+ G(F(X_s))\xrightarrow{\eta^G_{F(X_s)}}RG(F'(X_s))
+        \xrightarrow{RG(c_s)}RG(RF'(Q_A X))                 \tag{1.1}
+\]
+
+form a cocone,\allowbreak{} by naturality of eta\^{}G. The universal property of R(GF)\allowbreak{}(Q\_\allowbreak{}A X)\allowbreak{} therefore gives the source\textquotesingle s comparison t\_\allowbreak{}X. The only interchange of RG and a colimit is justified by essential constancy:\allowbreak{} applying any functor to a witness,\allowbreak{} its section identity and its eventual factorization identity gives another such witness. Hence the image diagram has value RG(RF'(Q\_\allowbreak{}A X)\allowbreak{})\allowbreak{}; no preservation of arbitrary filtered colimits is being assumed.
+
+For f:\allowbreak{}X \allowbreak{}-> Y choose its denominator squares as in the preceding review. Naturality of eta\^{}G and the cocone identities for RF\textquotesingle{} make the composites of (1.1)\allowbreak{} on these squares equal. Equality on every colimit structure map proves naturality of t. Denominators are sent to isomorphisms by all involved derived functors,\allowbreak{} so the equality also holds for every localized fraction. The iterated original shift comparisons commute on each map (1.1)\allowbreak{},\allowbreak{} and thus on t. This supplies the omitted transformation check without identifying Q\_\allowbreak{}A with F or suppressing Q\_\allowbreak{}B.
+
+For the left version,\allowbreak{} use the projections LF'(Q\_\allowbreak{}A X)\allowbreak{} \allowbreak{}-> F'(X\_\allowbreak{}s)\allowbreak{},\allowbreak{} apply LG,\allowbreak{} and follow by the canonical maps LG(Q\_\allowbreak{}B F(X\_\allowbreak{}s)\allowbreak{})\allowbreak{} \allowbreak{}-> G(F(X\_\allowbreak{}s)\allowbreak{})\allowbreak{}. They form a cone,\allowbreak{} inducing LG(LF'(Q\_\allowbreak{}A X)\allowbreak{})\allowbreak{} \allowbreak{}-> L(GF)\allowbreak{}(Q\_\allowbreak{}A X)\allowbreak{}. Applying a functor to the pro-object witness justifies the analogous limit interchange. The reversed denominator squares prove naturality and compatibility with the same shift comparisons.
+
+\subsection{2. Bounded and unbounded definitions at the same object}\label{proofs-5091-5900-bounded-and-unbounded-definitions-at-the-same-object}
+
+For X in K\textasciicircum{}\allowbreak{}+(A)\allowbreak{},\allowbreak{} the category X/\allowbreak{}Qis\textasciicircum{}\allowbreak{}+(A)\allowbreak{} is a full subcategory of X/\allowbreak{}Qis(A)\allowbreak{}. Every index X \allowbreak{}-> X\textquotesingle{} can be followed by the lower truncation quasi-isomorphism X\textquotesingle{} \allowbreak{}-> X'',\allowbreak{} for X\textquotesingle\textquotesingle{} bounded below. Common successors and equalizations in the larger filtered category followed by this construction prove cofinality,\allowbreak{} including connected comma categories. Thus the two indexing diagrams agree after cofinal restriction.
+
+There is also a target-category issue to verify. The bounded diagram takes values in the fully faithfully embedded D\textasciicircum{}\allowbreak{}+(B)\allowbreak{}. If it is essentially constant there,\allowbreak{} its witness remains a witness in D(B)\allowbreak{}. Conversely,\allowbreak{} if its value V exists as an essentially constant object in D(B)\allowbreak{},\allowbreak{} the witness makes V a retract of F(X'')\allowbreak{} for one bounded-below complex X\textquotesingle\textquotesingle. Cohomology in every degree below that complex\textquotesingle s lower bound is then a retract of zero,\allowbreak{} hence zero. Consequently V belongs to D\textasciicircum{}\allowbreak{}+(B)\allowbreak{}. Fullness puts its cocone and witness maps in that category as well. This proves both implications of lemma-irrelevant,\allowbreak{} not just cofinality of the source categories. The identity-denominator maps are preserved,\allowbreak{} so the assertion about computing objects follows. Reversing arrows,\allowbreak{} using upper truncations and D\textasciicircum{}-(B)\allowbreak{},\allowbreak{} proves both left-derived assertions.
+
+DERIVED-RECON-026 reconciles French DERIVED-022 with MC-STK-ERR-0833\textquotesingle s existing indefinite article at original 5260. The underlying replacement argument is the one just proved.
+
+\subsection{3. Resolutions by a prescribed class and the acyclic-class criterion}\label{proofs-5091-5900-resolutions-by-a-prescribed-class-and-the-acyclic-class-criterion}
+
+For the source\textquotesingle s left-resolution construction,\allowbreak{} retain its induction data in degrees j>\allowbreak{}=n. Write Z\_\allowbreak{}P\textasciicircum{}n\allowbreak{}=ker(d\_\allowbreak{}P\textasciicircum{}n)\allowbreak{},\allowbreak{} Z\_\allowbreak{}K\textasciicircum{}n\allowbreak{}=ker(d\_\allowbreak{}K\textasciicircum{}n)\allowbreak{}. The induction hypothesis includes an epimorphism Z\_\allowbreak{}P\textasciicircum{}n \allowbreak{}-> Z\_\allowbreak{}K\textasciicircum{}n. The actual object used at the next step is
+
+\[
+ E=K^{n-1}\mathbin{\times}_{K^n}Z_P^n
+  =K^{n-1}\mathbin{\times}_{Z_K^n}Z_P^n,                 \tag{3.1}
+\]
+
+because d\_\allowbreak{}K\textasciicircum{}\{n-1\} lands in Z\_\allowbreak{}K\textasciicircum{}n. Its projection to K\^{}\{n-1\} is epic by stability of epimorphisms under pullback in an abelian category. Choose the given class epimorphism P\^{}\{n-1\} \allowbreak{}-> E. Its two projections give alpha\^{}\{n-1\} and d\_\allowbreak{}P\textasciicircum{}\{n-1\}. They make the square commute,\allowbreak{} alpha\^{}\{n-1\} epic,\allowbreak{} and d\_\allowbreak{}P\textasciicircum{}n d\_\allowbreak{}P\textasciicircum{}\{n-1\}\allowbreak{}=0.
+
+The image of E \allowbreak{}-> Z\_\allowbreak{}P\textasciicircum{}n is the inverse image of im(d\_\allowbreak{}K\textasciicircum{}\{n-1\})\allowbreak{} under Z\_\allowbreak{}P\textasciicircum{}n \allowbreak{}-> Z\_\allowbreak{}K\textasciicircum{}n. Indeed (3.1)\allowbreak{} is the pullback of d\_\allowbreak{}K\textasciicircum{}\{n-1\}; factor that map as an epimorphism followed by its image inclusion and pull back. The image is therefore exactly the kernel of the epimorphism Z\_\allowbreak{}P\textasciicircum{}n \allowbreak{}-> H\textasciicircum{}n(K)\allowbreak{}. Since P\^{}\{n-1\} \allowbreak{}-> E is epic,\allowbreak{} quotienting by im(d\_\allowbreak{}P\textasciicircum{}\{n-1\})\allowbreak{} makes H\textasciicircum{}n(P)\allowbreak{} \allowbreak{}-> H\textasciicircum{}n(K)\allowbreak{} an isomorphism. The kernel of E \allowbreak{}-> Z\_\allowbreak{}P\textasciicircum{}n is Z\_\allowbreak{}K\textasciicircum{}\{n-1\}. Pulling the epimorphism P\^{}\{n-1\} \allowbreak{}-> E back along this kernel shows that Z\_\allowbreak{}P\textasciicircum{}\{n-1\} \allowbreak{}-> Z\_\allowbreak{}K\textasciicircum{}\{n-1\} is epic. Higher cohomology is unchanged. These are all clauses of IH\_\allowbreak{}\{n-1\}. The initial zero terms at n\allowbreak{}=a\allowbreak{}+1 satisfy the induction hypotheses because K vanishes above a. Successive descending choices yield the entire requested complex; each degree and differential is fixed at a finite stage. Applying this construction to tau\_\allowbreak{}\{<\allowbreak{}=a\}K proves part (2)\allowbreak{},\allowbreak{} with the stated quasi-isomorphism into the original K.
+
+The right-resolution construction is its exact dual. More explicitly,\allowbreak{} replace the pullback by the pushout
+
+\[
+ K^{n+1}\mathbin{\amalg}_{K^n}\operatorname{coker}(d_I^{n-1})
+ =K^{n+1}\mathbin{\amalg}_{\operatorname{coker}(d_K^{n-1})}
+                         \operatorname{coker}(d_I^{n-1}),       \tag{3.2}
+\]
+
+and embed (3.2)\allowbreak{} into a chosen class object I\textasciicircum{}\{n\allowbreak{}+1\}. The inductive monomorphism of cokernels makes K\textasciicircum{}\{n\allowbreak{}+1\} \allowbreak{}-> (3.2)\allowbreak{} monic by stability of monomorphisms under pushout. The maps from K\textasciicircum{}\{n\allowbreak{}+1\} and I\^{}n give the next component and differential. The dual kernel/\allowbreak{}image argument above proves the cohomology and cokernel induction conditions. Start with zero terms below a and proceed upward. For cohomology bounded below first use K \allowbreak{}-> tau\_\allowbreak{}\{>\allowbreak{}=a\}K. These constructions require neither projectivity/\allowbreak{}injectivity nor closure of the class under sums.
+
+Now impose the hypotheses of lemma-subcategory-right-acyclics. The class I is nonempty by its embedding property. The sequence 0 \allowbreak{}-> P \allowbreak{}-> P \allowbreak{}-> 0 \allowbreak{}-> 0 for P in I shows 0 is in I. The same cokernel condition with P\allowbreak{}=0 shows closure under isomorphism. Class resolutions form a cofinal full subcategory of denominators:\allowbreak{} resolve the target of each denominator,\allowbreak{} then refine common successors and equalizations as in section 1.
+
+Let A in I and A[0]\allowbreak{} \allowbreak{}-> I\^{}bullet be a quasi-isomorphism with I\^{}n in I and I bounded below. Choose n0\textless0 with I\textasciicircum{}n\allowbreak{}=0 below n0. Put B\textasciicircum{}n\allowbreak{}=im(d\textasciicircum{}\{n-1\})\allowbreak{} and Z\textasciicircum{}n\allowbreak{}=ker(d\textasciicircum{}n)\allowbreak{}. Below degree zero,\allowbreak{} B\textasciicircum{}n\allowbreak{}=Z\textasciicircum{}n. Starting with B\textasciicircum{}\{n0\}\allowbreak{}=0,\allowbreak{} the sequences 0 \allowbreak{}-> B\^{}n \allowbreak{}-> I\^{}n \allowbreak{}-> B\textasciicircum{}\{n\allowbreak{}+1\} \allowbreak{}-> 0 for n0<\allowbreak{}=n<0 and the class hypothesis show that all these B's,\allowbreak{} including B\textasciicircum{}0,\allowbreak{} belong to I,\allowbreak{} and that their F-images are exact sequences. Next 0 \allowbreak{}-> B\^{}0 \allowbreak{}-> I\^{}0 \allowbreak{}-> I\textasciicircum{}0/\allowbreak{}B\textasciicircum{}0 \allowbreak{}-> 0 puts I\textasciicircum{}0/\allowbreak{}B\textasciicircum{}0 in I. The quasi-isomorphism identifies A with Z\textasciicircum{}0/\allowbreak{}B\textasciicircum{}0,\allowbreak{} giving 0 \allowbreak{}-> A \allowbreak{}-> I\textasciicircum{}0/\allowbreak{}B\textasciicircum{}0 \allowbreak{}-> B\^{}1 \allowbreak{}-> 0. Thus B\^{}1 is in I and its F-sequence is exact. Continue with 0 \allowbreak{}-> B\^{}n \allowbreak{}-> I\^{}n \allowbreak{}-> B\textasciicircum{}\{n\allowbreak{}+1\} \allowbreak{}-> 0 for n>\allowbreak{}=1.
+
+Splicing these exact F-sequences shows that H\textasciicircum{}n(F(I)\allowbreak{})\allowbreak{}\allowbreak{}=0 for n!\allowbreak{}=0 and that the actual map F(A)\allowbreak{} \allowbreak{}-> H\textasciicircum{}0(F(I)\allowbreak{})\allowbreak{} is an isomorphism. At degree zero this follows by composing F(I\textasciicircum{}0)\allowbreak{} \allowbreak{}-> F(I\textasciicircum{}0/\allowbreak{}B\textasciicircum{}0)\allowbreak{} with the kernel identification F(A)\allowbreak{}\allowbreak{}=ker(F(I\textasciicircum{}0/\allowbreak{}B\textasciicircum{}0)\allowbreak{} \allowbreak{}-> F(B\textasciicircum{}1)\allowbreak{})\allowbreak{}; it is the map induced by the original A \allowbreak{}-> I\^{}0. Hence F(A)\allowbreak{}[0]\allowbreak{} \allowbreak{}-> F(I)\allowbreak{} is a quasi-isomorphism. The resulting constant cocone proves A computes RF. Reversing all sequences and using the quotient class P proves lemma-subcategory-left-acyclics with its stated hypotheses.
+
+DERIVED-RECON-027 reconciles P02-E0034 and French DERIVED-023 with the existing MC-STK-ERR-0834 singular ``element''. DERIVED-RECON-028 reconciles P02-E0033 and French DERIVED-024 with MC-STK-ERR-0835:\allowbreak{} the proved property is quasi-isomorphism. A termwise isomorphism is not asserted. For example take F the identity on Ab,\allowbreak{} class I all objects,\allowbreak{} and I\textasciicircum{}bullet\allowbreak{}=Z[0]\allowbreak{} direct-sum (Z \allowbreak{}-> Z)\allowbreak{} in degrees 1 and 2 with identity differential. The natural Z[0]\allowbreak{} \allowbreak{}-> I is a quasi-isomorphism and satisfies every hypothesis,\allowbreak{} but is not an isomorphism of complexes.
+
+\subsection{\texorpdfstring{4. Lower bounds,\allowbreak{} higher derived functors,\allowbreak{} and their connecting maps}{4. Lower  higher derived  and their connecting maps}}\label{proofs-5091-5900-lower-bounds-higher-derived-functors-and-their-connecting-maps}
+
+For arbitrary K with H\textasciicircum{}i(K)\allowbreak{}\allowbreak{}=0 when i<a,\allowbreak{} every denominator K \allowbreak{}-> L can be followed by L \allowbreak{}-> tau\_\allowbreak{}\{>\allowbreak{}=a\}L,\allowbreak{} a quasi-isomorphism. The full subcategory of targets zero below a is cofinal by the same successor and equalization argument. If RF(K)\allowbreak{} exists,\allowbreak{} its essential-constancy witness factors its identity through some F(L)\allowbreak{} with L\textasciicircum{}i\allowbreak{}=0 below a. Applying H\^{}i gives a factorization through zero for i<a,\allowbreak{} so those cohomology objects of RF(K)\allowbreak{} are zero.
+
+DERIVED-NEW-020:\allowbreak{} the category at original 5515 is written K/\allowbreak{}Qis\textasciicircum{}\allowbreak{}+(A)\allowbreak{},\allowbreak{} although this lemma allows an arbitrary complex K whose cohomology,\allowbreak{} rather than its terms,\allowbreak{} is bounded below. Such a K need not be an object of K\textasciicircum{}\allowbreak{}+(A)\allowbreak{}. The proof just given works directly in K/\allowbreak{}Qis(A)\allowbreak{}; replacing Qis\textasciicircum{}\allowbreak{}+ by Qis at this single occurrence makes the original proof well typed without replacing K. If K already belongs to K\textasciicircum{}\allowbreak{}+(A)\allowbreak{},\allowbreak{} section 2 gives the compatible bounded version.
+
+For part (2)\allowbreak{} apply RF to the original truncation triangle
+
+\[
+ \tau_{\le a}K\longrightarrow K\longrightarrow\tau_{\ge a+1}K
+                      \longrightarrow(\tau_{\le a}K)[1].       \tag{4.1}
+\]
+
+Existence on the first two vertices gives existence on the third by the previously proved two-out-of-three result. The third image has H\textasciicircum{}i\allowbreak{}=0 for i<a\allowbreak{}+1. The exact sequence with terms H\^{}\{i-1\} of that image,\allowbreak{} H\^{}i of the first two images,\allowbreak{} and H\^{}i of the third proves the stated canonical isomorphism for i<\allowbreak{}=a. No upper-bound conclusion is inferred.
+
+When RF exists on D\textasciicircum{}\allowbreak{}+(A)\allowbreak{},\allowbreak{} define R\^{}iF on A by first placing A in degree zero. The lower-bound result gives R\textasciicircum{}iF\allowbreak{}=0 for i\textless0. For 0 \allowbreak{}-> A \allowbreak{}-> B \allowbreak{}-> C \allowbreak{}-> 0 the canonical connecting triangle and RF give the exact sequence
+
+\[
+ 0\to R^0F(A)\to R^0F(B)\to R^0F(C)\to R^1F(A)\to\cdots.
+\]
+
+Thus R\^{}0F is left exact. If F \allowbreak{}-> R\^{}0F is an isomorphism,\allowbreak{} F is left exact. Conversely,\allowbreak{} for a left exact F,\allowbreak{} restrict denominators A[0]\allowbreak{} \allowbreak{}-> K to complexes zero below zero. Then 0 \allowbreak{}-> A \allowbreak{}-> K\^{}0 \allowbreak{}-> K\^{}1 is exact,\allowbreak{} so F(A)\allowbreak{}\allowbreak{}=ker(F(K\textasciicircum{}0)\allowbreak{} \allowbreak{}-> F(K\textasciicircum{}1)\allowbreak{})\allowbreak{}\allowbreak{}=H\textasciicircum{}0(F(K)\allowbreak{})\allowbreak{}. Applying H\^{}0 to the essential-constancy witness shows this cocone has value R\textasciicircum{}0F(A)\allowbreak{}. Its maps are exactly the canonical comparison,\allowbreak{} proving F\allowbreak{}=R\textasciicircum{}0F naturally. DERIVED-RECON-029 reconciles P02-E0032 and French DERIVED-025 with MC-STK-ERR-0836\textquotesingle s missing outer parenthesis at 5580.
+
+A computes RF exactly when F(A)\allowbreak{}[0]\allowbreak{} \allowbreak{}-> RF(A[0]\allowbreak{})\allowbreak{} induces isomorphisms in all degrees:\allowbreak{} the cone of the comparison is zero exactly when all its cohomology is zero. The negative degrees already vanish. This proves lemma-F-acyclic,\allowbreak{} including the R\^{}0 condition for a general additive F and its removal only when F is left exact.
+
+For the three assertions of lemma-F-acyclic-ses,\allowbreak{} keep the source\textquotesingle s left exactness assumption. If A and C are acyclic,\allowbreak{} the adjacent terms R\textasciicircum{}iF(A)\allowbreak{},\allowbreak{}R\textasciicircum{}iF(C)\allowbreak{} vanish for i\textgreater0 and force R\textasciicircum{}iF(B)\allowbreak{}\allowbreak{}=0. If A and B are acyclic,\allowbreak{} the segment R\textasciicircum{}iF(B)\allowbreak{} \allowbreak{}-> R\textasciicircum{}iF(C)\allowbreak{} \allowbreak{}-> R\textasciicircum{}\{i\allowbreak{}+1\}F(A)\allowbreak{} does the same for C. If B and C are acyclic,\allowbreak{} higher degrees force R\textasciicircum{}iF(A)\allowbreak{}\allowbreak{}=0 for i>\allowbreak{}=2; the additional surjectivity F(B)\allowbreak{} \allowbreak{}-> F(C)\allowbreak{} forces R\textasciicircum{}1F(A)\allowbreak{}\allowbreak{}=0 as well. In all cases R\textasciicircum{}1F(A)\allowbreak{}\allowbreak{}=0 makes 0 \allowbreak{}-> F(A)\allowbreak{} \allowbreak{}-> F(B)\allowbreak{} \allowbreak{}-> F(C)\allowbreak{} \allowbreak{}-> 0 exact. These arguments do not drop left exactness,\allowbreak{} which will matter in section 6.
+
+For completeness the connecting maps of the higher delta-functor are H\^{}i of RF(c)\allowbreak{},\allowbreak{} followed by the inverse shift comparison and the identification H\textasciicircum{}i(RF(A)\allowbreak{}[1]\allowbreak{})\allowbreak{}\allowbreak{}=H\textasciicircum{}\{i\allowbreak{}+1\}(RF(A)\allowbreak{})\allowbreak{},\allowbreak{} where c:\allowbreak{}C[0]\allowbreak{} \allowbreak{}-> A[1]\allowbreak{} is the original canonical connecting morphism. Naturality of c and of the exact-functor comparison gives naturality of these maps. The triangle long exact sequence gives all delta-functor axioms. If every A embeds in an F-acyclic I,\allowbreak{} the induced R\textasciicircum{}iF(A)\allowbreak{} \allowbreak{}-> R\textasciicircum{}iF(I)\allowbreak{} is zero for i\textgreater0. The source\textquotesingle s effacement theorem therefore applies. Its full cokernel construction,\allowbreak{} independence of the embedding,\allowbreak{} naturality,\allowbreak{} connecting-map compatibility,\allowbreak{} and uniqueness are already proved in \texttt{.\allowbreak{}.\allowbreak{}/\allowbreak{}HOMOLOGY\_\allowbreak{}INTAKE\_\allowbreak{}20260930/\allowbreak{}PROOFS\_\allowbreak{}1901\_\allowbreak{}2765.\allowbreak{}md},\allowbreak{} lines 310–\allowbreak{}367. Applied with these R\^{}iF and their just-specified connecting maps,\allowbreak{} it proves universality. No new assumption that F itself is left exact is needed for this universality of the R\^{}iF system.
+
+\subsection{5. Leray\textquotesingle s lemma and DERIVED-UNDER-007}\label{proofs-5091-5900-lerays-lemma-and-derived-under-007}
+
+A bounded complex of right F-acyclic objects computes RF. For a one-term complex this is the definition and shift invariance. For support [a,\allowbreak{}b]\allowbreak{},\allowbreak{} the source\textquotesingle s termwise split sequence
+
+\[
+0\to\sigma_{\ge a+1}A^\bullet\to A^\bullet
+                      \to\sigma_{\le a}A^\bullet\to0          \tag{5.1}
+\]
+
+gives a distinguished triangle already in the homotopy category. F preserves its termwise splittings,\allowbreak{} so this is a triangle to which the earlier computing-object two-out-of-three lemma applies. Induction proves both existence of RF and its canonical comparison isomorphism.
+
+For a bounded-below A\^{}bullet with RF(A)\allowbreak{} defined,\allowbreak{} fix q and put P\allowbreak{}=sigma\_\allowbreak{}\{<\allowbreak{}=q\}A,\allowbreak{} T\allowbreak{}=sigma\_\allowbreak{}\{>\allowbreak{}=q\allowbreak{}+1\}A. There is a termwise split sequence 0 \allowbreak{}-> T \allowbreak{}-> A \allowbreak{}-> P \allowbreak{}-> 0 with its actual inclusion,\allowbreak{} projection,\allowbreak{} and connecting map. Suppose only that A\^{}n is right F-acyclic for n<\allowbreak{}=q. Then P is bounded and computes RF by the preceding argument. RF(T)\allowbreak{} exists by two-out-of-three. The complexes T and F(T)\allowbreak{} are zero below q\allowbreak{}+1,\allowbreak{} so section 4 gives H\textasciicircum{}j(RF(T)\allowbreak{})\allowbreak{}\allowbreak{}=0 for j<\allowbreak{}=q; the same vanishing holds for H\textasciicircum{}j(F(T)\allowbreak{})\allowbreak{} by its terms. The comparison of the two triangle cohomology sequences now proves
+
+\[
+ H^j(F(A))\xrightarrow{\sim}H^j(RF(A))\quad(j<q),
+ \qquad H^q(F(A))\lhook\joinrel\longrightarrow H^q(RF(A)). \tag{5.2}
+\]
+
+There is an exact description of the possible cokernel in degree q. Let beta:\allowbreak{}H\textasciicircum{}q(F(P)\allowbreak{})\allowbreak{} \allowbreak{}-> H\textasciicircum{}q(RF(P)\allowbreak{})\allowbreak{} be the known isomorphism,\allowbreak{} delta\_\allowbreak{}F:\allowbreak{}H\textasciicircum{}q(F(P)\allowbreak{})\allowbreak{} \allowbreak{}-> H\textasciicircum{}\{q\allowbreak{}+1\}(F(T)\allowbreak{})\allowbreak{} the connecting map,\allowbreak{} and gamma\allowbreak{}=H\textasciicircum{}\{q\allowbreak{}+1\}(eta\_\allowbreak{}T)\allowbreak{}:\allowbreak{}H\textasciicircum{}\{q\allowbreak{}+1\}(F(T)\allowbreak{})\allowbreak{} \allowbreak{}-> H\textasciicircum{}\{q\allowbreak{}+1\}(RF(T)\allowbreak{})\allowbreak{}. The other connecting map satisfies delta\_\allowbreak{}R beta\allowbreak{}=gamma delta\_\allowbreak{}F,\allowbreak{} with the signs fixed by the same original split sequence. Set
+
+\[
+ O_q=\operatorname{im}(\delta_F)\cap\ker(\gamma)
+                  \ \subset H^{q+1}(F(T)).                    \tag{5.3}
+\]
+
+Using beta to identify the middle terms,\allowbreak{} H\textasciicircum{}q(F(A)\allowbreak{})\allowbreak{} is ker(delta\_\allowbreak{}F)\allowbreak{} and H\textasciicircum{}q(RF(A)\allowbreak{})\allowbreak{} is ker(gamma delta\_\allowbreak{}F)\allowbreak{}. The map from the latter to O\_\allowbreak{}q is the restriction of delta\_\allowbreak{}F,\allowbreak{} and its kernel is the former. Its image is the intersection in (5.3)\allowbreak{}:\allowbreak{} pulling the epimorphism H\textasciicircum{}q(F(P)\allowbreak{})\allowbreak{} \allowbreak{}-> im(delta\_\allowbreak{}F)\allowbreak{} back along that intersection proves this image assertion in an arbitrary abelian category. Consequently
+
+\[
+0\to H^q(F(A))\xrightarrow{H^q(\eta_A)}H^q(RF(A))
+                                      \longrightarrow O_q\to0.\tag{5.4}
+\]
+
+If F is left exact,\allowbreak{} gamma is an isomorphism and O\_\allowbreak{}q\allowbreak{}=0. To prove this without assuming RF exists on any additional object,\allowbreak{} let T be zero below c\allowbreak{}=q\allowbreak{}+1 and use the cofinal denominators T \allowbreak{}-> L with L zero below c. For each such L,\allowbreak{} left exactness gives H\textasciicircum{}c(F(L)\allowbreak{})\allowbreak{}\allowbreak{}=F(H\textasciicircum{}c(L)\allowbreak{})\allowbreak{},\allowbreak{} and the quasi-isomorphism identifies this with F(H\textasciicircum{}c(T)\allowbreak{})\allowbreak{}. Applying H\^{}c to the essential-constancy witness shows H\textasciicircum{}c(RF(T)\allowbreak{})\allowbreak{} has that value. The same kernel computation gives H\textasciicircum{}c(F(T)\allowbreak{})\allowbreak{}\allowbreak{}=F(H\textasciicircum{}c(T)\allowbreak{})\allowbreak{},\allowbreak{} and the induced map is precisely gamma. Thus (5.2)\allowbreak{} extends to an isomorphism for all j<\allowbreak{}=q when F is left exact. This is an actual comparison proof,\allowbreak{} not a presumption that F commutes with all cohomology.
+
+The finite-prefix statement,\allowbreak{} (5.3)\allowbreak{}–\allowbreak{}(5.4)\allowbreak{},\allowbreak{} and this left-exact refinement are DERIVED-UNDER-007. Their hypotheses preserve the original bounded below A and the given existence of RF(A)\allowbreak{},\allowbreak{} while requiring acyclicity only through the specified degree q. Taking q\allowbreak{}=i\allowbreak{}+1 for every i when all terms are acyclic proves the source\textquotesingle s full Leray lemma exactly. The construction does not erase the differential out of degree q:\allowbreak{} H\textasciicircum{}q(F(A)\allowbreak{})\allowbreak{} still uses F(A\textasciicircum{}\{q\allowbreak{}+1\})\allowbreak{},\allowbreak{} even when that term is not assumed acyclic.
+
+\subsection{\texorpdfstring{6. DERIVED-NEW-021:\allowbreak{} the enough-acyclics proof and its counterexample}{6.  the enough-acyclics proof and its counterexample}}\label{proofs-5091-5900-derived-new-021-the-enough-acyclics-proof-and-its-counterexample}
+
+The proposition\textquotesingle s statement is valid for an arbitrary additive F. The induction at original 5856–\allowbreak{}5877 is not valid at that generality:\allowbreak{} its short exact sequences of image objects are triangles in D(A)\allowbreak{},\allowbreak{} whereas the earlier computing lemma applies to the exact functor K(A)\allowbreak{} \allowbreak{}-> D(B)\allowbreak{} and triangles in K(A)\allowbreak{}. A nonsplit short exact sequence need not give such a triangle there. Applying F to that sequence cannot be justified before the desired exactness has been proved.
+
+Here is an explicit counterexample to the claimed acyclicity of all images,\allowbreak{} including the proposition\textquotesingle s enough-acyclics hypothesis. Fix a prime p. For an abelian group M let D(M)\allowbreak{} be its largest divisible subgroup and set
+
+\[
+ F(M)=M[p]/D(M)[p].                                      \tag{6.1}
+\]
+
+The sum of all divisible subgroups is divisible:\allowbreak{} any element is a finite sum,\allowbreak{} and its division by any positive integer is obtained by dividing each summand. Thus this sum defines D(M)\allowbreak{}. Every group homomorphism maps divisible subgroups into divisible subgroups,\allowbreak{} so it induces the displayed quotient map. These induced maps preserve composition,\allowbreak{} identities and addition,\allowbreak{} making (6.1)\allowbreak{} an additive functor. In particular D(M direct-sum N)\allowbreak{}\allowbreak{}=D(M)\allowbreak{} direct-sum D(N)\allowbreak{},\allowbreak{} by projection and by inclusion,\allowbreak{} and (6.1)\allowbreak{} preserves that biproduct with its maps.
+
+Every group A embeds in a divisible group,\allowbreak{} without using injective resolutions:\allowbreak{} choose a free abelian group P surjecting onto A with kernel N. The inclusion P \allowbreak{}-> Q tensor\_\allowbreak{}Z P is injective because P is a sum of copies of Z. It induces an injection
+
+\[
+ A=P/N\longrightarrow (\mathbf Q\otimes_{\mathbf Z}P)/N.
+\]
+
+The target is divisible,\allowbreak{} since a quotient of a divisible group is divisible. Section 3 therefore resolves every bounded-below complex by a bounded-below complex of divisible groups. F vanishes on every divisible group,\allowbreak{} so it sends all these complexes and every transition between them to zero. Section 1,\allowbreak{} applied to this class of complexes,\allowbreak{} proves RF is everywhere defined on D\textasciicircum{}\allowbreak{}+(Ab)\allowbreak{} and is the zero functor. Thus M is right F-acyclic exactly when F(M)\allowbreak{}\allowbreak{}=0. Divisible groups and Z are acyclic,\allowbreak{} whereas F(Z/\allowbreak{}p)\allowbreak{}\allowbreak{}=Z/\allowbreak{}p is nonzero,\allowbreak{} so Z/\allowbreak{}p is not.
+
+Consider the original cochain complex,\allowbreak{} in degrees 0 through 3,\allowbreak{}
+
+\[
+ I^\bullet:
+ \mathbf Z\xrightarrow{\,p\,}\mathbf Z
+ \xrightarrow{m\mapsto m/p+\mathbf Z}\mathbf Q/\mathbf Z
+ \xrightarrow{\,p\,}\mathbf Q/\mathbf Z.                   \tag{6.2}
+\]
+
+Its first map is injective. The kernel of the middle map is pZ,\allowbreak{} equal to the preceding image. Its image is (p\textasciicircum{}\{-1\}Z)\allowbreak{}/\allowbreak{}Z,\allowbreak{} precisely the kernel of multiplication by p on Q/\allowbreak{}Z. The final map is surjective because Q/\allowbreak{}Z is divisible. Hence (6.2)\allowbreak{} is acyclic. Every term is right F-acyclic,\allowbreak{} and the category has enough such objects,\allowbreak{} as just proved. Nevertheless the source\textquotesingle s J\textasciicircum{}1\allowbreak{}=im(d\textasciicircum{}1)\allowbreak{} is isomorphic to Z/\allowbreak{}p and is not right F-acyclic. Thus the stated image induction fails under its own hypotheses. F(I\textasciicircum{}bullet)\allowbreak{} is still zero and hence acyclic; the counterexample refutes the proof\textquotesingle s intermediate claim,\allowbreak{} not the proposition\textquotesingle s conclusion.
+
+The correct proof is shorter and preserves the claimed generality. An acyclic bounded-below complex I\^{}bullet is isomorphic to zero in D\textasciicircum{}\allowbreak{}+(A)\allowbreak{}. RF is defined at zero with value zero:\allowbreak{} the denominator category has the terminal zero index and F(0)\allowbreak{}\allowbreak{}=0. Denominator invariance therefore makes RF(I\textasciicircum{}bullet)\allowbreak{} defined with value zero. Because all its terms are right F-acyclic,\allowbreak{} the already proved Leray lemma gives the actual isomorphism
+
+\[
+ F(I^\bullet)\xrightarrow{\sim}RF(I^\bullet)=0.             \tag{6.3}
+\]
+
+This is not circular. Leray\textquotesingle s lemma requires existence only at the one complex in question,\allowbreak{} supplied here by its quasi-isomorphism to zero; it does not use the enough-acyclics proposition.
+
+For a quasi-isomorphism between two bounded-below complexes of acyclic objects,\allowbreak{} its cone is bounded below and acyclic. Its terms are finite biproducts of acyclic objects:\allowbreak{} those are acyclic by the earlier direct-sum computing result applied to the degree-zero complexes. Additivity identifies F of this cone with the cone of the image map,\allowbreak{} including the original minus sign on the shifted first component. Equation (6.3)\allowbreak{} makes that image map a quasi-isomorphism. The source\textquotesingle s class resolutions and section 1 now prove existence everywhere and computation by every such complex. Reversing arrows and using the upper-bounded version of Leray gives the left-derived assertion. This is the proposed replacement of the faulty paragraph.
+
+DERIVED-RECON-030 accepts the still-missing P02-E0035 article at 5826–\allowbreak{}5827,\allowbreak{} changing ``is quotient'' to ``is a quotient''.
+
+\subsection{\texorpdfstring{7. Receiving proofs,\allowbreak{} including DERIVED-NEW-022 in Perfect Complexes}{7. Receiving  including DERIVED-NEW-022 in Perfect Complexes}}\label{proofs-5091-5900-receiving-proofs-including-derived-new-022-in-perfect-complexes}
+
+The repaired proposition retains its entire statement. Two external direct uses were checked for the implication that receives it.
+
+In More Algebra,\allowbreak{} lemma-compute-Rlim,\allowbreak{} current 23649–\allowbreak{}23665,\allowbreak{} every inverse system A embeds in the displayed ML system B\_\allowbreak{}n\allowbreak{}=A\_\allowbreak{}n direct-sum A\_\allowbreak{}\{n-1\} direct-sum ... direct-sum A\_\allowbreak{}1 via (1,\allowbreak{}f\_\allowbreak{}n,\allowbreak{}f\_\allowbreak{}\{n-1\}f\_\allowbreak{}n,\allowbreak{}...,\allowbreak{}f\_\allowbreak{}2...f\_\allowbreak{}n)\allowbreak{}. Its first projection splits the injection at each n,\allowbreak{} and B\textquotesingle s transition projections are surjective,\allowbreak{} so B is ML. The earlier reviewed Mittag–\allowbreak{}Leffler theorem supplies exactness of lim on the specified short exact sequences with ML kernel; quotients of ML systems are ML. Thus the right-acyclic-class criterion supplies the acyclic objects used in the bounded Rlim existence step. The repaired proposition proves exactly that step. The subsequent unbounded Rlim calculations are not certified by this bounded receiving check.
+
+In Etale Cohomology,\allowbreak{} current 8872–\allowbreak{}8889,\allowbreak{} each discrete G-module is a quotient of a sum of Z[G/\allowbreak{}U]\allowbreak{}:\allowbreak{} a vector has open stabilizer U,\allowbreak{} and the basis coset gU maps to its translate by g. The underlying groups of these modules are free,\allowbreak{} hence flat over Z. In a short exact sequence with the last two terms flat,\allowbreak{} its first term is flat and tensoring with R stays exact; the Tor\_\allowbreak{}1 contribution from the last flat term is zero. These are precisely the left-acyclic-class hypotheses for H(M)\allowbreak{}\allowbreak{}=M tensor\_\allowbreak{}Z R. The dual repaired proposition therefore supplies the bounded-above LH and its computation stated there. The later adjunction and Ext comparison remain outside this receiving check.
+
+The internal references at original 7003,\allowbreak{} 10007 and 10051 retain the same needed conclusion:\allowbreak{} enough known acyclic objects give the bounded derived functor,\allowbreak{} and bounded complexes of them compute it. Their separate injective,\allowbreak{} unbounded,\allowbreak{} and spectral-sequence arguments remain in their source-order review positions. Nothing in (6.3)\allowbreak{} requires adding left exactness to those uses.
+
+For DERIVED-UNDER-007,\allowbreak{} the Cohomology remark at current 2195–\allowbreak{}2220 uses K\allowbreak{}=f\_\allowbreak{}*I\textasciicircum{}bullet and the left exact functor Gamma(Y,\allowbreak{}-)\allowbreak{}. It assumes all K\^{}n are Gamma-acyclic. For computing through degree q>\allowbreak{}=0 the proved refinement needs that acyclicity only for n<\allowbreak{}=q,\allowbreak{} while retaining the actual formula
+
+\[
+ H^q(\Gamma(Y,K^\bullet))=
+ \ker(\Gamma(Y,K^q)\to\Gamma(Y,K^{q+1}))\big/
+ \operatorname{im}(\Gamma(Y,K^{q-1})\to\Gamma(Y,K^q)).     \tag{7.1}
+\]
+
+The identity Gamma(Y,\allowbreak{}f\_\allowbreak{}*I\textasciicircum{}n)\allowbreak{}\allowbreak{}=Gamma(X,\allowbreak{}I\textasciicircum{}n)\allowbreak{} respects every displayed differential. Thus this application makes a degree-bounded comparison; it neither deletes I\textasciicircum{}\{q\allowbreak{}+1\} nor claims a new full derived-composition theorem. The original all-degree assertion is retained.
+
+DERIVED-NEW-022 is a receiving proof repair in \texttt{perfect.\allowbreak{}tex},\allowbreak{} original and current 529–\allowbreak{}536. The argument passes to the canonical lower truncation tau\_\allowbreak{}\{>\allowbreak{}=-n\}F\textasciicircum{}bullet and then uses the acyclicity of its terms. Its bottom term is F\textasciicircum{}\{-n\}/\allowbreak{}im(d\textasciicircum{}\{-n-1\})\allowbreak{},\allowbreak{} whose acyclicity is not established by the assertion about the original terms. The following argument supplies the needed comparison while keeping all those original terms. The theorem\textquotesingle s conclusion and hypotheses stay unchanged; no geometric counterexample to that theorem is asserted.
+
+Work over the source\textquotesingle s affine S. Keep its exact bound N from lemma-quasi-coherence-direct-image:\allowbreak{} for E with quasi-coherent cohomology and H\textasciicircum{}j(E)\allowbreak{}\allowbreak{}=0 for j>0,\allowbreak{} one has H\textasciicircum{}j(Rf\_\allowbreak{}*E)\allowbreak{}\allowbreak{}=0 for j>\allowbreak{}=N. Choose an integer n>\allowbreak{}=max(1,\allowbreak{}N)\allowbreak{}. Put
+
+\[
+ B^\bullet=\sigma_{\ge -n}\mathcal F^\bullet,
+ \qquad C^\bullet=\sigma_{\le -n-1}\mathcal F^\bullet.
+\]
+
+The termwise split sequence 0 \allowbreak{}-> B \allowbreak{}-> F \allowbreak{}-> C \allowbreak{}-> 0 gives its actual distinguished triangle. Every cohomology sheaf of C is quasi-coherent,\allowbreak{} and it vanishes in degrees greater than -n-1. Apply the stated bound to C[-n-1]\allowbreak{}. Since H\textasciicircum{}j(C[-n-1]\allowbreak{})\allowbreak{}\allowbreak{}=H\textasciicircum{}\{j-n-1\}(C)\allowbreak{},\allowbreak{} this shift has cohomology zero above zero. Exactness and its specified shift comparison give
+
+\[
+ H^j(Rf_*C)=0\quad\text{for }j\ge N-n-1.                 \tag{7.2}
+\]
+
+The choice n>\allowbreak{}=N makes both H\textasciicircum{}\{-1\}(Rf\_\allowbreak{}*C)\allowbreak{} and H\textasciicircum{}0(Rf\_\allowbreak{}*C)\allowbreak{} zero. Thus H\textasciicircum{}0(Rf\_\allowbreak{}*B)\allowbreak{} \allowbreak{}-> H\textasciicircum{}0(Rf\_\allowbreak{}*F)\allowbreak{} is an isomorphism. The bound n>\allowbreak{}=1 also gives H\textasciicircum{}0(f\_\allowbreak{}*B)\allowbreak{}\allowbreak{}=H\textasciicircum{}0(f\_\allowbreak{}*F)\allowbreak{},\allowbreak{} with exactly the same terms in degrees -1,\allowbreak{}0,\allowbreak{}1 and the same two differentials. B is bounded below and consists of the original right f\_\allowbreak{}*-acyclic terms. Leray\textquotesingle s lemma therefore identifies f\_\allowbreak{}*B with Rf\_\allowbreak{}*B. Naturality with respect to B \allowbreak{}-> F now proves the desired H\^{}0 comparison for the original F. Applying this argument after every shift proves the full theorem.
+
+The exact relation to the source\textquotesingle s original truncation is retained:\allowbreak{} if J\allowbreak{}=im(d\textasciicircum{}\{-n-1\})\allowbreak{},\allowbreak{} there is a short exact sequence of complexes
+
+\[
+ 0\to J[n]\to\sigma_{\ge -n}\mathcal F^\bullet
+               \to\tau_{\ge -n}\mathcal F^\bullet\to0.       \tag{7.3}
+\]
+
+In degree -n it is the actual kernel/\allowbreak{}image/\allowbreak{}quotient sequence; all other degrees are identities or zero. The sheaf J is quasi-coherent. The same bound gives H\textasciicircum{}j(Rf\_\allowbreak{}*J[n]\allowbreak{})\allowbreak{}\allowbreak{}=R\textasciicircum{}\{j\allowbreak{}+n\}f\_\allowbreak{}*J\allowbreak{}=0 for j\allowbreak{}+n>\allowbreak{}=N,\allowbreak{} so (7.3)\allowbreak{} makes the two derived truncations agree on H\^{}0 for the chosen n. Their bottom objects are not identified,\allowbreak{} and acyclicity of that quotient was not presumed. Equations (7.2)\allowbreak{}–\allowbreak{}(7.3)\allowbreak{} give the precise bridge and preserve the stated constant N and both truncations.
+
+Finally,\allowbreak{} for the source\textquotesingle s exact-functor lemma at 5883–\allowbreak{}5900,\allowbreak{} exactness of F identifies F of kernels,\allowbreak{} images and cokernels with those of the image maps. Hence H\textasciicircum{}n(F(K)\allowbreak{})\allowbreak{}\allowbreak{}=F(H\textasciicircum{}n(K)\allowbreak{})\allowbreak{},\allowbreak{} naturally with the original differentials. It sends every quasi-isomorphism to a quasi-isomorphism. In the denominator diagram all transitions become isomorphisms in D(B)\allowbreak{},\allowbreak{} and the identity denominator has value F(K)\allowbreak{}. Section 1\textquotesingle s witness proves RF(K)\allowbreak{}\allowbreak{}=F(K)\allowbreak{},\allowbreak{} including for unbounded K. The bounded versions and R\textasciicircum{}iF\allowbreak{}=0 for i!\allowbreak{}=0 follow immediately by evaluating a degree-zero object. The reversed argument also proves the LF version.
+
+These are bounded source and receiving reviews. Root-chapter search hits for other Leray and lower-vanishing uses are routing evidence,\allowbreak{} not claims to have read or accepted those entire proofs. The complete new operations and explicit reference changes are bound in the part07 record. The synthesis across all findings remains later work.

@@ -1,0 +1,114 @@
+\section{\texorpdfstring{Quotients,\allowbreak{} the retained Verdier insertion,\allowbreak{} and exact adjoints}{ the retained Verdier  and exact adjoints}}\label{proofs-1844-2401-quotients-the-retained-verdier-insertion-and-exact-adjoints}
+
+Authority:\allowbreak{} the Stacks Project authors\textquotesingle{} \texttt{derived.\allowbreak{}tex},\allowbreak{} commit \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14}; exact source and current comparison are bound in \texttt{INPUT\_\allowbreak{}BINDING.\allowbreak{}json}. Original line numbers are used except where current lines are explicitly indicated. This note preserves the source statements and records editorial arguments and generalizations separately. No novelty is claimed.
+
+\subsection{1. Boundedness and the multiplicative system of a subcategory}\label{proofs-1844-2401-boundedness-and-the-multiplicative-system-of-a-subcategory}
+
+For the bounded-below subcategory at 1845–\allowbreak{}1887,\allowbreak{} choose integers \(a,b\) with \(H^n(X)=0\) for \(n<a\),\allowbreak{} \(H^n(Y)=0\) for \(n<b\). In a distinguished triangle \(X\to Y\to Z\to X[1]\),\allowbreak{} the exact segment \(H^n(Y)\to H^n(Z)\to H^{n+1}(X)\) gives \(H^n(Z)=0\) for \(n<\min(b,a-1)\). The shift moves the bound by its integer exponent,\allowbreak{} so the class is stable under both shifts. Finite direct sums and direct summands retain a bound by the explicit biproduct identity \(H^n(X\oplus Y)\cong H^n(X)\oplus H^n(Y)\). For upper bounds,\allowbreak{} if the two groups vanish respectively for \(n>a\) and \(n>b\),\allowbreak{} then \(H^n(Z)=0\) for \(n>\max(b,a-1)\). Combining these two calculations handles bounded objects. The implication displayed at 1881–\allowbreak{}1886 is valid for every fixed \(n\); it does not assert that bounded-below objects vanish in every degree. No correction of that quantifier is needed.
+
+Let \(\mathcal B\) be the given full triangulated subcategory and let \(S(\mathcal B)\) consist of arrows whose triangle cone is isomorphic to an object of \(\mathcal B\). Cones with the same first arrow are isomorphic by TR3 and representable exactness,\allowbreak{} so the membership test is independent of a chosen cone. The octahedron for \(X\xrightarrow fY\xrightarrow gZ\) supplies the original triangle \(Q_1\to Q_2\to Q_3\to Q_1[1]\); if \(Q_1,Q_3\) are isomorphic to objects of \(\mathcal B\),\allowbreak{} then so is \(Q_2\). This proves closure under composition. For LMS3,\allowbreak{} retain \(a:X\to Y\),\allowbreak{} \(t:Z\to X\),\allowbreak{} \(at=0\),\allowbreak{} the triangle \((Z,X,Q,t,g,h)\),\allowbreak{} and \(i:Q\to Y\) with \(ig=a\). In \((Q,Y,W,i,s,k)\),\allowbreak{} rotation makes the cone of \(s\) equal to \(Q[1]\),\allowbreak{} up to the chosen shift comparison. Thus \(s\in S\) and \(sa=sig=0\). Reversing the arrows proves RMS3.
+
+MS5 uses the correctly signed shift of a triangle. Its cone is still the shifted original cone,\allowbreak{} so membership in \(\mathcal B\),\allowbreak{} up to isomorphism,\allowbreak{} is preserved in both directions. \textbf{OCC-02891 /\allowbreak{} P02-E1428} correctly requests the missing period at 1976; the mathematical sentence and its objects remain unchanged.
+
+MS6 follows from the corrected 3×3 proposition:\allowbreak{} the first two column cones lie in \(\mathcal B\),\allowbreak{} the third row puts the third column cone there,\allowbreak{} and that third column gives the required denominator. Only the first three rows and columns are used. MS2 then follows by the explicit rotated construction in \texttt{PROOFS\_\allowbreak{}1149\_\allowbreak{}1843.\allowbreak{}md},\allowbreak{} §1.
+
+For the saturation equivalence retain the original four objects and maps \(W\xrightarrow hX\xrightarrow gY\xrightarrow fZ\). Assume \(fg,gh\in S\). The five chosen cones are \(Q_1,Q_2,Q_3,Q_{12},Q_{23}\),\allowbreak{} with \(Q_{12},Q_{23}\) in \(\mathcal B\) up to isomorphism. The octahedral triangles have boundary maps \[
+s:Q_2\longrightarrow X[1]\longrightarrow Q_1[1],\qquad
+t:Q_3\longrightarrow Y[1]\longrightarrow Q_2[1].
+\] Their cones are \(Q_{12}[1]\),\allowbreak{} \(Q_{23}[1]\),\allowbreak{} so \(s,t\in S\). Their shifted composite is the full original map \[
+s[1]t:Q_3\longrightarrow Y[1]\longrightarrow Q_2[1]
+\longrightarrow X[2]\longrightarrow Q_1[2].
+\] It is zero because the middle two arrows are consecutive in the shifted triangle for \(g\). It is also in \(S\),\allowbreak{} by the composition and shift properties just proved. A cone of this zero arrow is \(Q_1[2]\oplus Q_3[1]\):\allowbreak{} take the direct sum of the two identity triangles and rotate with their signs. This cone belongs to \(\mathcal B\) up to isomorphism. Saturation of \(\mathcal B\) puts both summands,\allowbreak{} and hence \(Q_1,Q_3\),\allowbreak{} in it up to isomorphism. The triangle \(Q_1\to Q_{12}\to Q_2\to Q_1[1]\) then puts \(Q_2\) there. Thus \(g\in S\); the same cone test also gives \(h,f\in S\). \textbf{OCC-01495 /\allowbreak{} P02-E0023} therefore agrees with the already implemented \textbf{MC-STK-ERR-0816}:\allowbreak{} remove the extra ``is'' from ``It is also follows”,\allowbreak{} without weakening the parenthetical claim.
+
+Conversely,\allowbreak{} if \(S\) is saturated and \(X\oplus Y\) belongs to \(\mathcal B\) up to isomorphism,\allowbreak{} use the three composable arrows \(Y[-1]\to0\to X\to X\oplus Y\). The two adjacent composites have cones isomorphic to \(X\oplus Y\),\allowbreak{} using the displayed split triangle and its inverse rotation. MS4 makes \(0\to X\) a denominator. Its cone is \(X\),\allowbreak{} which therefore belongs to \(\mathcal B\) up to isomorphism. Interchange the two summands for \(Y\). This proves the other implication without assuming strict fullness of the original subcategory.
+
+\subsection{2. Quotient kernel and the retained Verdier quotient results}\label{proofs-1844-2401-quotient-kernel-and-the-retained-verdier-quotient-results}
+
+The canonical quotient functor uses its identity translation comparison,\allowbreak{} as made explicit in DERIVED-NEW-005. If an exact functor annihilates \(\mathcal B\),\allowbreak{} its image of the cone triangle of a denominator has zero cone,\allowbreak{} so it inverts that denominator. For a homological functor whose entire shifted kernel contains \(\mathcal B\),\allowbreak{} the relevant long exact sequence gives the same conclusion. The ordinary fraction factorization is consequently defined,\allowbreak{} and its exact or homological structure descends as in \texttt{PROOFS\_\allowbreak{}1149\_\allowbreak{}1843.\allowbreak{}md},\allowbreak{} §3. No additional triangulation or choice of boundary comparison is hidden in this use.
+
+The kernel of \(Q:\mathcal D\to\mathcal D/\mathcal B\) consists exactly of those \(Z\) for which \(Z\oplus Z'\) is isomorphic to an object of \(\mathcal B\) for some \(Z'\). Indeed,\allowbreak{} the localization kernel lemma supplies a denominator triangle with cone \(Z\oplus Z'\),\allowbreak{} giving the forward implication. Conversely the whole biproduct maps to zero and its inclusion and projection show that \(1_{Q(Z)}=0\). Every strictly full saturated triangulated subcategory containing \(\mathcal B\) contains all such summands. The kernel itself has those three properties,\allowbreak{} proving the minimality.
+
+The operation \(S\mapsto\mathcal B(S)\mapsto S(\mathcal B(S))\) returns exactly the arrows inverted by the localization,\allowbreak{} by its image cone triangle and the zero-cone criterion. This is the saturation of \(S\). The opposite composite returns the strictly full saturated closure of \(\mathcal B\),\allowbreak{} by the preceding paragraph. The older \textbf{MC-STK-ERR-0817} correctly inserts ``a'' at 2204 in the description of this argument; it has no additional physical report in this range.
+
+The existing Verdier insertion at \textbf{current lines 2287–\allowbreak{}2487} was read in full. It is retained unchanged. Here is its source-level comparison and its exact receiving maps,\allowbreak{} rather than a new claim to have reread Verdier\textquotesingle s historical source.
+
+For \(\mathcal B\subset\mathcal A\subset\mathcal D\),\allowbreak{} the cone criterion gives \[
+S_{\mathcal A}(\mathcal B)=S_{\mathcal D}(\mathcal B)
+\cap\operatorname{Arrows}(\mathcal A).
+\] For the reverse inclusion,\allowbreak{} replace the cone by an isomorphic object of \(\mathcal B\); the endpoints and all arrows then belong to \(\mathcal A\) by fullness,\allowbreak{} so its triangle belongs to the subcategory. If \(s:X'\to X\) is a denominator with \(X\in\mathcal A\),\allowbreak{} its cone belongs to \(\mathcal B\) up to isomorphism. Rotate to a triangle beginning with \(X\to B\); a completion of that map inside \(\mathcal A\) shows that \(X'[1]\),\allowbreak{} hence \(X'\),\allowbreak{} is isomorphic to an object of \(\mathcal A\). Precomposing \(s\) with that isomorphism gives an isomorphic denominator whose source belongs to \(\mathcal A\).
+
+The full denominator subcategory is therefore an equivalence of index categories:\allowbreak{} every object has such an isomorphism to an object in it,\allowbreak{} and fullness supplies all arrows between those objects. In particular it is cofinal in the direction used for the right-fraction Hom colimit. Replacing every roof by this isomorphic roof gives the fully faithful map \(\mathcal A/\mathcal B\to\mathcal D/\mathcal B\). The object map is the original inclusion because a fraction localization does not identify its objects. Its full image is triangulated:\allowbreak{} shifts are inherited,\allowbreak{} and the cone of an arrow in that image can be computed in \(\mathcal A/\mathcal B\) and mapped across the exact inclusion.
+
+Let \(q_B,q_A\) denote the two quotient functors from \(\mathcal D\),\allowbreak{} and \(q_{A/B}\) the quotient of \(\mathcal D/\mathcal B\) by the displayed image. The composite \(q_{A/B}q_B\) kills \(\mathcal A\),\allowbreak{} so it induces \[
+U:\mathcal D/\mathcal A\longrightarrow
+(\mathcal D/\mathcal B)/(\mathcal A/\mathcal B),\qquad
+Uq_A=q_{A/B}q_B.
+\] Conversely \(q_A\) kills \(\mathcal B\),\allowbreak{} descends across \(q_B\),\allowbreak{} and its descended functor kills \(\mathcal A/\mathcal B\). This gives \(V\) in the reverse direction with \(Vq_{A/B}q_B=q_A\). The two composites agree with identity on the original category. Uniqueness of factorization on arrows and their inverted denominators gives \(VU=1\) and \(UV=1\) in these fixed fraction models. With arbitrary equivalent models these equalities give the corresponding natural isomorphisms. Their shift comparisons are inherited identity comparisons throughout. This proves the claimed exact equivalence.
+
+For the insertion\textquotesingle s subcategory correspondence,\allowbreak{} put \(\mathcal K=\ker Q\). The inverse image of the strictly full closure of \(\mathcal C\) is closed under shifts,\allowbreak{} cones and isomorphisms because \(Q\) is exact. The cone criterion gives its stated inverse-image denominator system. If \(\mathcal A\) is strictly full,\allowbreak{} triangulated,\allowbreak{} and contains \(\mathcal K\),\allowbreak{} and \(Q(X)\cong Q(Y)\) for \(Y\in\mathcal A\),\allowbreak{} represent that isomorphism by \(Y\xleftarrow sZ\xrightarrow fX\). Both \(Q(s)\) and \(Q(f)\) are invertible. Their cones therefore belong to \(\mathcal K\),\allowbreak{} even when the original denominator system was not saturated. The first cone triangle puts \(Z\) in \(\mathcal A\),\allowbreak{} and the second puts \(X\) there. This proves \(Q^{-1}(\overline{Q(\mathcal A)})=\mathcal A\). The reverse composite is equality because \(Q\) has the same objects as the source. Finally every object of the quotient is \(Q(X)\),\allowbreak{} and additivity identifies \(Q(X\oplus Y)\) with \(Q(X)\oplus Q(Y)\). Applying the just-proved inverse-image identity to a direct sum proves saturation in either direction. Passing to strictly full closures proves the insertion\textquotesingle s final assertion for non-strictly-full subcategories. This preserves the exact scope of that assertion; no assumption of splitting every idempotent is added.
+
+\subsection{\texorpdfstring{3. Exact right adjoints,\allowbreak{} with the shift comparison and five-lemma step}{3. Exact right  with the shift comparison and five-lemma step}}\label{proofs-1844-2401-exact-right-adjoints-with-the-shift-comparison-and-five-lemma-step}
+
+Let \((F,\xi):\mathcal D\to\mathcal E\) be exact and let \(G:\mathcal E\to\mathcal D\) be a right adjoint. Write \(\eta_X:X\to GF(X)\),\allowbreak{} \(\epsilon_A:FG(A)\to A\) for its unit and counit. Define \(\lambda_A:G(A)[1]\to G(A[1])\) to be adjoint to \[
+F(G(A)[1])\xrightarrow{\xi_{G(A)}}F(G(A))[1]
+\xrightarrow{\epsilon_A[1]}A[1].
+\] For \(u:A\to B\),\allowbreak{} the adjoints of \(G(u[1])\lambda_A\) and \(\lambda_B G(u)[1]\) agree because \[
+u[1]\epsilon_A[1]\xi_{G(A)}
+=\epsilon_B[1]F(G(u))[1]\xi_{G(A)}
+=\epsilon_B[1]\xi_{G(B)}F(G(u)[1]).
+\] Thus \(\lambda\) is natural.
+
+Composition with \(\lambda_A\) on \(\operatorname{Hom}_{\mathcal D}(X[1],-)\) is the composite of the four bijections \[
+\begin{split}
+\operatorname{Hom}_{\mathcal D}(X[1],G(A)[1])
+&\cong\operatorname{Hom}_{\mathcal D}(X,G(A))\\
+&\cong\operatorname{Hom}_{\mathcal E}(F(X),A)\\
+&\cong\operatorname{Hom}_{\mathcal E}(F(X[1]),A[1])\\
+&\cong\operatorname{Hom}_{\mathcal D}(X[1],G(A[1])).
+\end{split}
+\] The third sends \(h\) to \(h[1]\xi_X\). To verify that these bijections are composition with the defined map,\allowbreak{} write an input as \(g[1]\); its adjoint after composition is \[
+\epsilon_A[1]\xi_{G(A)}F(g[1])
+=\epsilon_A[1]F(g)[1]\xi_X
+=(\epsilon_AF(g))[1]\xi_X,
+\] which is the same image. Every test object is isomorphic to some \(X[1]\); consequently \(\lambda_A\) is an isomorphism. Put \(\gamma_A=\lambda_A^{-1}:G(A[1])\to G(A)[1]\).
+
+The adjunction bijection on each Hom group is additive:\allowbreak{} it sends \(v:W\to G(A)\) to \(\epsilon_AF(v)\),\allowbreak{} and \(F\) is additive. Naturality of these group isomorphisms and bilinearity of composition show \(G(a+b)=G(a)+G(b)\). The same argument gives \(G(0)=0\). Thus the underlying right adjoint has the needed additivity.
+
+For a distinguished triangle \((A,B,C,a,b,c)\) of \(\mathcal E\),\allowbreak{} complete \(G(a)\) to \((G(A),G(B),X,G(a),v,w)\) in \(\mathcal D\). Applying \(F\) gives boundary \(\xi_{G(A)}F(w)\). TR3 with the counit supplies \(t:F(X)\to C\) satisfying \[
+tF(v)=b\epsilon_B,\qquad ct=\epsilon_A[1]\xi_{G(A)}F(w).
+\] Let \(j=G(t)\eta_X:X\to G(C)\). Naturality of \(\eta\) and the triangle identity give \[
+jv=G(tF(v))\eta_{G(B)}
+=G(b)G(\epsilon_B)\eta_{G(B)}=G(b).
+\] The second displayed equation says,\allowbreak{} by adjunction,\allowbreak{} \(G(c)j=\lambda_Aw\),\allowbreak{} or \(\gamma_AG(c)j=w\). Hence \((1,1,j)\) is a morphism from the chosen distinguished triangle to the triangle with image objects and boundary \(\gamma_AG(c)\).
+
+Here is the exactness needed for the source\textquotesingle s five-lemma step,\allowbreak{} without assuming the conclusion. Apply \(\operatorname{Hom}_{\mathcal D}(W,-)\) to the five consecutive terms \[
+G(A),\ G(B),\ G(C),\ G(A)[1],\ G(B)[1].
+\] Adjunction on the first three terms,\allowbreak{} followed by \(\lambda_A\) and \(\lambda_B\) on the last two,\allowbreak{} identifies this sequence with 
+\begingroup\small
+\[
+\operatorname{Hom}_{\mathcal E}(F(W),A)\to
+\operatorname{Hom}_{\mathcal E}(F(W),B)\to
+\operatorname{Hom}_{\mathcal E}(F(W),C)\to
+\operatorname{Hom}_{\mathcal E}(F(W),A[1])\to
+\operatorname{Hom}_{\mathcal E}(F(W),B[1]).
+\]
+\endgroup
+ The sequence is exact by representable exactness in \(\mathcal E\). The boundary identification uses \(\lambda_A\gamma_A=1\); the following arrow uses naturality of \(\lambda\). The other row,\allowbreak{} with \(X\) replacing \(G(C)\),\allowbreak{} is exact because its triangle was chosen distinguished. The four surrounding vertical maps are identities on the original \(G(A),G(B)\) and their shifts. The five lemma therefore makes \(\operatorname{Hom}_{\mathcal D}(W,j)\) bijective for every \(W\),\allowbreak{} and Yoneda makes \(j\) an isomorphism. The image triangle is distinguished,\allowbreak{} proving that \((G,\gamma)\) is exact.
+
+This proves the mathematical context of \textbf{OCC-01496 /\allowbreak{} P02-E0024}. All four erroneous category occurrences at 2361–\allowbreak{}2364 are in \(\mathcal D\),\allowbreak{} not \(\mathcal D'\) (called \(\mathcal E\) above)\allowbreak{}. The already implemented \textbf{MC-STK-ERR-0818},\allowbreak{} \textbf{0819},\allowbreak{} and \textbf{0820} correct respectively the functor,\allowbreak{} the test object,\allowbreak{} and the two Hom groups. The extra exactness argument here is an editorial completion of the omitted details,\allowbreak{} not another source error or a replacement attributed to the authors.
+
+\subsection{\texorpdfstring{4. DERIVED-UNDER-003:\allowbreak{} pre-triangulated adjunctions and the equivalence test}{4.  pre-triangulated adjunctions and the equivalence test}}\label{proofs-1844-2401-derived-under-003-pre-triangulated-adjunctions-and-the-equivalence-test}
+
+The preceding proof uses TR1,\allowbreak{} TR2,\allowbreak{} TR3 and representable exactness; it never uses TR4. Thus it proves the adjoint-exactness result already for \textbf{pre-triangulated} categories. The unit and counit moreover respect the exact structures just constructed. The counit equation is \[
+\epsilon_{A[1]}=\epsilon_A[1]\xi_{G(A)}F(\gamma_A),
+\] obtained by writing the defining adjunction equation for \(\lambda_A\) and composing with \(F(\gamma_A)\). For the unit the equation is \[
+\eta_X[1]=\gamma_{F(X)}G(\xi_X)\eta_{X[1]}.
+\] Indeed,\allowbreak{} after composing with \(\lambda_{F(X)}\),\allowbreak{} the two sides have the same adjoint:\allowbreak{} naturality of \(\xi\) and \(\epsilon_{F(X)}F(\eta_X)=1\) make both adjoints equal to \(\xi_X\). Faithfulness of the adjunction bijection proves equality. These are the two explicit compatibility squares of exact functors.
+
+For the next lemma at 2372–\allowbreak{}2401 it consequently suffices to assume that \(F\) is fully faithful and exact between pre-triangulated categories,\allowbreak{} that \(G\) is its right adjoint,\allowbreak{} and that \(\ker G=0\). One need not separately assume \(G\) exact or either TR4 axiom. Full faithfulness makes \(\eta_X\) an isomorphism:\allowbreak{} composition with it on each test Hom group is the fully faithful map induced by \(F\),\allowbreak{} followed by the adjunction bijection. For every \(A\),\allowbreak{} the triangle identity \[
+G(\epsilon_A)\eta_{G(A)}=1_{G(A)}
+\] then shows that \(G(\epsilon_A)\) is the inverse of the specified isomorphism \(\eta_{G(A)}\). Complete \(\epsilon_A:FG(A)\to A\) to a distinguished triangle with cone \(Y\). Exactness of \((G,\gamma)\) implies \(G(Y)=0\),\allowbreak{} since its first arrow is an isomorphism. The zero-kernel assumption gives \(Y=0\); hence \(\epsilon_A\) is an isomorphism. The unit and counit,\allowbreak{} with the two proved comparison equations,\allowbreak{} exhibit an exact equivalence.
+
+This also proves that the source\textquotesingle s identification of \(GFG(A)\) with \(G(A)\) hides a definite inverse pair,\allowbreak{} rather than merely an object isomorphism from which invertibility of an arbitrary endomorphism would not follow. Its intended arrow is precisely \(G(\epsilon_A)\).
+
+The original theorem statements remain unchanged. The direct uses in \texttt{equiv.\allowbreak{}tex:\allowbreak{}880–\allowbreak{}890} and \texttt{injectives.\allowbreak{}tex:\allowbreak{}2804–\allowbreak{}2825} retain their existing triangulated hypotheses and are covered by the proved stronger result. The former also invokes the left-adjoint version,\allowbreak{} obtained by reversing the adjunction and both categories,\allowbreak{} with the corresponding inverse shift comparisons. The other equivalence-test citations located in DGA,\allowbreak{} sheaf DGA,\allowbreak{} Perfect Complexes,\allowbreak{} algebraic-space chapters and Stacks Sheaves are routing records pending their separate receiving checks; this note does not pretend to have read those proofs.

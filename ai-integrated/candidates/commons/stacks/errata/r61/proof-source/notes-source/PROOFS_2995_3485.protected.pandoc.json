@@ -1,0 +1,11126 @@
+{
+  "pandoc-api-version": [
+    1,
+    23,
+    1,
+    1
+  ],
+  "meta": {},
+  "blocks": [
+    {
+      "t": "Header",
+      "c": [
+        1,
+        [
+          "split-sequences-and-the-homotopy-triangulation",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "Split"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "sequences"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "and"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "the"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "homotopy"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "triangulation"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Source:"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Stacks"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Project"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "authors'"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Code",
+          "c": [
+            [
+              "",
+              [],
+              []
+            ],
+            "derived.tex"
+          ]
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "authority"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "commit"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bound"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Code",
+          "c": [
+            [
+              "",
+              [],
+              []
+            ],
+            "INPUT_BINDING.json"
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "line"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "numbers"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "used."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arguments"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "below"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "verify"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source's"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "objects"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "without"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "changing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "definition"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "distinguished"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangles."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "New"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "observations"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "editorial;"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "no"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "novelty"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "claimed."
+        }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        2,
+        [
+          "the-signed-cone-comparison-and-its-two-homotopies",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "1."
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "The"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "signed"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "cone"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "comparison"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "and"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "its"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "two"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "homotopies"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Retain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "termwise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sequence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000000END,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "sections"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000001END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "retractions"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000002END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundary"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000003END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Besides"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "splitting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identities,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "satisfies"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000004END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "second"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equality"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "insert"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000005END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "after"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000006END,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "use"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000007END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equality"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "follows"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inserting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "analogous"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identity"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "before"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000008END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "using"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000009END."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Write"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000010END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000011END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000012END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "displayed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identities"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000013END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "give"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000014END,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000015END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "More"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicitly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "latter"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "component"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000016END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "second"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "component"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000017END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Also"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000018END."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proposed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000019END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "products"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "add"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000020END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "This"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "stated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equivalence."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "last"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangle"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "also"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "direct"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy:"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "let"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000021END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Then"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000022END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Thus"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000023END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equals"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000024END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "category."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "other"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "squares"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commute"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "since"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000025END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "This"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "precise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "(1)."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "(2),"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split-injection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "replacement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "preserves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000026END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "projection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000027END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equivalence."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "construction"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chosen"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commuting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "gives"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "an"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "positive-projection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangles."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Negating"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "both"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "last"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "arrows"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "preserves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "same"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangle"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "so"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "it"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "applies"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "signed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangles"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "used"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "(1)."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Taking"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degreewise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complements"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "split"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "injection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "supplies"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "required"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "quotient"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complex."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "three"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "chain-map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equations"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "defining"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "quotient"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "follow"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "projecting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "since"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "injected"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "subobject"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "subcomplex."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "OCC-02893"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "/"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "P02-E1430"
+            }
+          ]
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "French"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "DERIVED-013"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": ","
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "DERIVED-014"
+            }
+          ]
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "correctly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identify"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "missing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arrows"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "displayed"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "tuples."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "existing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "MC-STK-ERR-0824"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": ","
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "0825"
+            }
+          ]
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "insert"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000028END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000029END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "positive"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "last"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arrows"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "those"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "tuples"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "legitimate;"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "they"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "can"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "be"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "negated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "both"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sides"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "just"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "proved."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "They"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "another"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sign"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "error."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "finite"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "composable"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sequence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "induction"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3141–3173"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "applies"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "same"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split-injection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "replacement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000030END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "projection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commutes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "composite"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "it"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "same"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicitly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "contracted"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equivalence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proved"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "earlier."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Finite"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sums"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "one"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "shift"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "each"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "finite"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "stage"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "preserve"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "three"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "stated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundedness"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "classes."
+        }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        2,
+        [
+          "derived-new-009-the-object-carrying-the-rotation-sign",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "2."
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "DERIVED-NEW-009:"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "the"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "object"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "carrying"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "the"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "rotation"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "sign"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "decomposition"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rotation"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "lemma"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identifies"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000031END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000032END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000033END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000034END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "lower"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "diagonal"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000035END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "upper"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "right"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exactly"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000036END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Thus"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source's"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000037END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000038END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000039END."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "backward-rotated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangle"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000040END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "whereas"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "distinguished"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangle"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "wanted"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proof"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000041END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "precise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000042END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000043END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "three"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "squares"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000044END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "If"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000045END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000046END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000047END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "resulting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000048END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000049END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Consequently"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "instruction"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "3350"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "must"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "say"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "R61MATHEMATICALPAYLOAD000050END"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "on"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "R61MATHEMATICALPAYLOAD000051END"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": ","
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000052END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Changing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "only"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000053END-component"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "would"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "make"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "second"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "require"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000054END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "which"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "false,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "example"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "nonzero"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "direct"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "summand"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inclusion"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complexes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "free"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "abelian"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "groups"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "concentrated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "degree"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "zero."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "theorem"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "remains"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "valid"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "corrected"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "component."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "forward"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rotation"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "compares"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000055END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000056END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Here"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000057END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "last"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundary"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "termwise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sequence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exactly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000058END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degree"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000059END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "matrix."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "This"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "both"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "directions"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "TR2"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "convention"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000060END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "distinguished"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangle."
+        }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        2,
+        [
+          "derived-new-010-the-second-octahedral-square-needs-a-homotopy",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "3."
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "DERIVED-NEW-010:"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "the"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "second"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "octahedral"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "square"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "needs"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "a"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "homotopy"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "definition"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "2582–2587"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "requires"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "an"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "actual"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "direct-summand"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "inclusion,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "merely"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "existence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "an"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arbitrary"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "left"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inverse."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Therefore"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degreewise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complements"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "used"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3273–3274"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "do"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exist."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "any"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "other"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "left"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inverse"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "such"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "an"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inclusion"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "kernel"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "graph"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "known"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complement:"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "coordinates"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "left"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "inverse"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "form"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000061END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "kernel"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inclusion"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000062END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "projection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "gives"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "universal"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "factorization"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "every"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "killed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000063END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "No"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "assumption"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "whole"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "additive"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "category"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Karoubian"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "needed."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Retain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000064END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chosen"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "retractions."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "In"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "actual"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degreewise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "decompositions"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "write"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000065END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "All"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "entries"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000066END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "retained"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000067END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "zero"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "lower"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "entries"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "follow"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inclusions"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "being"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "maps."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "three"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "off-diagonal"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identities"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000068END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "are,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "without"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "discarding"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "any"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "term,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000069END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000070END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000071END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "quotient"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differentials"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "displayed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "diagonal"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "block"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000072END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "upper"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangular"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "submatrix."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "three"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "connecting"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000073END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "These"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identities"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "prove"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "each"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "into"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "specified"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "shifted"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "target."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Put"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000074END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000075END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "These"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "downward"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "triple"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000076END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commutes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "every"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "already"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "complexes,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "including"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000077END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "second"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "downward"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triple"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000078END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "squares"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commute"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complexes,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "but"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "last"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "difference"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000079END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "It"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "need"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "vanish."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exact"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000080END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Indeed,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000081END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "This"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "required"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "morphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangles"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000082END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "It"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "also"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identifies"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "defect"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source's"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "claim"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3291–3293"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "both"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "downward"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triples"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "compatible"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chosen"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "splittings:"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000083END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "whereas"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000084END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "an"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicit"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "nonzero"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundary"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "defect"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "take"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000085END,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000086END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000087END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "all"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "other"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "components"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "zero,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000088END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Then"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000089END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000090END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "displayed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundary"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "difference"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000091END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degree"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "zero."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "It"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "null-homotopic"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "precisely"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "displayed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000092END."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "remaining"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR4"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangle"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "termwise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sequence"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000093END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "connecting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000094END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000095END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Thus"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "every"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "part"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR4"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "holds"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000096END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sentence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "repaired"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "saying"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundary"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "squares"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commute"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "up"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy;"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "theorem"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "subsequent"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "application"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "require"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "no"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "alteration."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "grammatical"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "subject"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3305–3306"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "“splittings”,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "so"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "“provides”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "becomes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "“provide”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "("
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "DERIVED-NEW-011"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": ")."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "remark"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3395–3396"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "omits"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "noun"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "“complexes”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "after"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "“bounded"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "(above,"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "below)”;"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "restoring"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "noun"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "DERIVED-NEW-012"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Neither"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "copyedit"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "changes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "mathematical"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "condition."
+        }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        2,
+        [
+          "completing-the-triangulation-and-its-immediate-receiving-uses",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "4."
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "Completing"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "the"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "triangulation"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "and"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "its"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "immediate"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "receiving"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "uses"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "TR1"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "supplied"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identity"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sequence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "signed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "§1."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR2"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "§2."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR3"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "choose"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "representatives"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "given"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "morphisms"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "matrix"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Code",
+          "c": [
+            [
+              "",
+              [],
+              []
+            ],
+            "PROOFS_2419_2994.md"
+          ]
+        },
+        {
+          "t": "Str",
+          "c": ","
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "§1"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000097END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "so"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "also"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000098END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "It"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "therefore"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "required"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "morphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "distinguished"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "signed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangles."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "This"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "direct"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "receiving"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "check"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "DERIVED-NEW-007"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Only"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "after"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR1–TR3"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "have"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "been"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "established"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "does"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "use"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "earlier"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "easier-TR4"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "lemma."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "finite-sequence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "replacement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "above"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "produces"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "strictly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commuting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "diagram"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "composable"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equivalences"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "objects."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Section"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "supplies"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "three"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "distinguished"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangles"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "octahedral"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "replacement."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Transport"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "through"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "those"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "object"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphisms"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "gives"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR4"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "No"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "use"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "triangulated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "structure"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "was"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "made"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "before"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "it"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "had"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "been"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "constructed."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bounded"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "subcategories"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "let"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000099END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000100END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000101END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000102END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degree"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000103END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "vanishes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000104END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "With"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "upper"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bounds"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000105END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "it"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "vanishes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000106END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "These"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exact"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bounds"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "shift"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "functors"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "prove"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "closure"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "under"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "required"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "completions."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Fullness"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Hom"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "definition."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "alternative"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proof"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "uses"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "same"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split-injection"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "replacement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "degreewise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "quotient,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "so"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "it"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "same"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundedness"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "property."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "OCC-01498"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "/"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "P02-E0026"
+            }
+          ]
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "French"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "DERIVED-015"
+            }
+          ]
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "match"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Str",
+              "c": "MC-STK-ERR-0826"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": ","
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "changing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "“an"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "termwise”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "“a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "termwise”."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "An"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "additive"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "functor"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000107END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "preserves"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "every"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "splitting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "equation,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "including"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "full"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identity"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000108END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "It"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "commutes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cochain"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "shift"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "these"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exact"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chosen"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complexes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "because"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000109END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Thus"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "translation"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identity,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000110END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "connecting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "image"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "split"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sequence."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "This"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proves"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "exactness"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "all"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "four"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "homotopy"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "categories."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "missing-comparison"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "findings"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "earlier"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "chapter"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "require"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "no"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "edit"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "here:"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "comparison"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "this"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "construction"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicitly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identity"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "same"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complexes."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Finally,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "improvement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "lemma"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "keep"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "given"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "boundary"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000111END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "cone"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000112END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "maps"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000113END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000114END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Two"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "backward"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rotations"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "give"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "exactly"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000115END."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "backward"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rotation"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arrow"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000116END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "second"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "has"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arrow"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000117END;"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "signs"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "are"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "therefore"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "correct."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "To"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "apply"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "TR3"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identities"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "on"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000118END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rotate"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "both"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "triangles"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "twice"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "so"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000119END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "arrow,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "complete"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000120END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rotate"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "back."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "third-component"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "isomorphism"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "criterion"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "makes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "resulting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "middle"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "invertible."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Degreewise"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000121END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "With"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "first"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "negative"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inclusion"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "second"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "projection,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "retraction"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "negative"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "projection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000122END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "section"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "positive"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inclusion"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000123END."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "All"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "splitting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "identities"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "hold."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "differential's"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "upper"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "right"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000124END;"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "composing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "negative"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "retraction"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "gives"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "connecting"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000125END,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "required."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "No"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "further"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sign"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "repair"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "needed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "at"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3475–3484."
+        }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        2,
+        [
+          "report-accounting-repair",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "5."
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "Report-accounting"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "repair"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "earlier"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "review"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "files"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bound"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "CJK"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "reports"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "existing"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "French-origin"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "correction"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "operations,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "but"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "did"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "yet"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "record"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "fifteen"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "physical"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "French"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "reports"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "through"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "3422"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "as"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "separately"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "adjudicated"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "occurrences."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "full"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "original"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "observations,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "adverse"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "evidence"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "proposals"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "have"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "now"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "been"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "read,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inferred"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "overlapping"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "loci."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "DERIVED-001"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "through"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "DERIVED-015"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "correspond"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "respectively"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "MC-STK-ERR-0812"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "through"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "MC-STK-ERR-0826,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proofs"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "earlier"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "notes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "this"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "note."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "DERIVED-001's"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explanation"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "that"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000126END"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "undefined"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "incorrect:"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "it"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "defined"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "but"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "wrong"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "map"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "stated"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "composite."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Its"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proposed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "replacement"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "by"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "R61MATHEMATICALPAYLOAD000127END"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "correct."
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "rest"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "those"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "fifteen"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "proposed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "changes"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "agree"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bound"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "operations."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "A"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "supplemental"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "disposition"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "record"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "joins"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "these"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "physical"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "reports"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "their"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "semantic"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "groups"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "preserves"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "earlier"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "checkpoint"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "files."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Future"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "source-order"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "selection"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "uses"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "common"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "routing"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "records"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "both"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "report"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "schemas,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "avoiding"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "CJK-only"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "field"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "selection."
+        }
+      ]
+    }
+  ]
+}

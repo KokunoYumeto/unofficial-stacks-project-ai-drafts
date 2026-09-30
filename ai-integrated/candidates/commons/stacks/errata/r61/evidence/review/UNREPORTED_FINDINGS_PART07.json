@@ -1,0 +1,67 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-020",
+      "source": "derived.tex",
+      "source_lines": [
+        5515,
+        5517
+      ],
+      "original_problem": "The proof indexes arbitrary K through a category whose source objects must be termwise bounded below.",
+      "correction": "Use the full K/Qis(A); its indicated bounded-target subcategory is cofinal.",
+      "status": "proved_category_correction",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 4
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-020-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-021",
+      "source": "derived.tex",
+      "source_lines": [
+        5856,
+        5877
+      ],
+      "original_problem": "The image induction applies the computing lemma to nonsplit short exact sequences and falsely concludes all images are acyclic for arbitrary additive F.",
+      "correction": "Use the acyclic complex zero-object value and the already proved Leray lemma. The full counterexample has F(M)=M[p]/D(M)[p] and the exact four-term complex Z to Z to Q/Z to Q/Z.",
+      "status": "proved_false_intermediate_claim_and_complete_repair",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 6
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-021-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-022",
+      "source": "perfect.tex",
+      "source_lines": [
+        529,
+        536
+      ],
+      "original_problem": "Canonical lower truncation changes the bottom term, whose acyclicity was not established in the proof.",
+      "correction": "Use the original-term truncation with n>=max(1,N), prove the exact tail bound, and retain the comparison to canonical truncation through the image sheaf J[n].",
+      "status": "proved_receiving_proof_repair",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 7
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-022-OP1"
+      ]
+    }
+  ]
+}

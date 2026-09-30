@@ -1,0 +1,183 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-013",
+      "source_lines": [
+        7622,
+        7688,
+        8095,
+        8194
+      ],
+      "kind": "explicit_filtration_and_degree_bounds_with_fixed_window_functoriality",
+      "original_statement": "Bounded-below filtered complexes admit strict monomorphic filtered injective resolutions with each output filtration finite.",
+      "proved_statement": "If K^p has filtration interval [a_p,b_p] and is zero below N, the output in degree m has interval [min_{N<=p<=m}a_p,max_{N<=p<=m}b_p] and remains zero below N. With functorial injective embeddings and a fixed interval [a,b], the construction is functorial and retains both bounds. Its chain-level additivity defect has a filtered homotopy relative to K.",
+      "hypotheses": "Enough injectives for the chosen varying-window construction; functorial injective embeddings for fixed-window functoriality. All filtrations finite; bounded below term complex. A variable objectwise choice of interval is not asserted to define a functor.",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          1,
+          3,
+          5,
+          6,
+          7
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:7622-7688,8095-8194",
+        "cohomology.tex:7310-7339",
+        "PROOFS_7096_7578.md:section 3"
+      ]
+    },
+    {
+      "claim_id": "DERIVED-UNDER-014",
+      "source_lines": [
+        8014,
+        8093
+      ],
+      "kind": "filtered_complex_horseshoe_with_both_prescribed_outer_resolutions",
+      "original_statement": "A strict short exact sequence of filtered objects has a compatible termwise split sequence of injective resolutions retaining both given outer resolutions.",
+      "proved_statement": "The construction works for degreewise strict short exact sequences of bounded-below filtered complexes, retaining both prescribed filtered injective resolutions even when their augmentation maps are not monomorphic. The actual middle map has off-diagonal homotopy h and preserves common outer bounds.",
+      "hypotheses": "Degreewise strict exact source sequence, given filtered quasi-isomorphisms to bounded-below filtered injective complexes. No additional global enough-injectives hypothesis once these exist.",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          3,
+          4,
+          6,
+          8
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:8014-8093",
+        "DERIVED-UNDER-010"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-027"
+      ],
+      "to": "derived.tex:7895-8194",
+      "status": "actual_pushout_extension_map_and_filtered_resolution_dependents_proved",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-010"
+      ],
+      "to": "DERIVED-UNDER-014",
+      "status": "all_matrices_and_homotopy_signs_proved_in_filtered_exact_category",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-013"
+      ],
+      "to": "cohomology.tex:7310-7339",
+      "status": "explicit_finite_filtration_intervals_retained_after_global_sections",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex:7622-7811"
+      ],
+      "to": "cohomology.tex:104-145",
+      "status": "strict_functorial_resolution_descends_to_additive_homotopy_functor_and_exact_derived_lift",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          1,
+          2,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex:7622-7811"
+      ],
+      "to": "sites-cohomology.tex:145-182",
+      "status": "same_exact_derived_lift_proved_for_actual_ringed_site_module_category",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          1,
+          2,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-062",
+        "derived.tex:8095-8350"
+      ],
+      "to": "PROOFS_7096_7578.md:section 3",
+      "status": "forward_filtered_comparison_dependency_now_reviewed_in_source_order",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          5,
+          6,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex:8407"
+      ],
+      "to": "DERIVED-UNDER-011",
+      "status": "later_source_explicitly_announces_additive_treatment_no_novelty_claim",
+      "proof": {
+        "file": "PROOFS_7589_8350.md",
+        "bytes": 29880,
+        "sha256": "7E7CFA469CADA1552DCBE7CC1A4F82EC9DEA2D96DD54288AC362CB73033D03B2",
+        "sections": [
+          9
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial consequences only; no source-body strengthening or novelty claim. No claim of global functoriality for separately chosen variable filtration windows. Synthesis remains later."
+}

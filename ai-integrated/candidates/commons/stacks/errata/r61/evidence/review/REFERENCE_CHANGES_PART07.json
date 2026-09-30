@@ -1,0 +1,26 @@
+{
+  "changes": [
+    {
+      "operation_id": "DERIVED-NEW-021-OP1",
+      "source": "derived.tex",
+      "old_references": [
+        "\\ref{lemma-derived-canonical-delta-functor}",
+        "\\ref{lemma-2-out-of-3-computes}",
+        "\\ref{proposition-derived-functor}",
+        "\\ref{equation-long-exact-cohomology-sequence-D}"
+      ],
+      "replacement_references": [
+        "\\ref{lemma-derived-inverts}",
+        "\\ref{lemma-leray-acyclicity}"
+      ],
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 6
+      }
+    }
+  ],
+  "reason": "Replace the false image induction with the preceding denominator-invariance and Leray lemmas. Exact old and new dependencies are retained; the earlier unchanged-reference invariant is refined for this mathematical repair.",
+  "acyclic_dependency_argument": "The acyclic complex is in the derived domain because it is isomorphic to zero. Leray only needs this individual existence and therefore proves its F-image acyclic without using enough-acyclics."
+}

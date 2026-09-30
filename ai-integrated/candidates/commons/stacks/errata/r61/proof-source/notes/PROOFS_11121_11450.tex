@@ -1,0 +1,257 @@
+\section{Compact objects and Brown representability}\label{proofs-11121-11450-compact-objects-and-brown-representability}
+
+Private source review,\allowbreak{} 2026-09-30. Authority is the frozen Stacks Project commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14, derived.tex 11121–\allowbreak{}11450. The inherited five chapter preimages are unchanged. This note reconciles the received reports,\allowbreak{} proves the exact maps behind two omitted shifts,\allowbreak{} and checks the geometric receiver in perfect.tex. The finite-stage strengthening in Section 3 is editorial material. Its applications below are explicit; no novelty is claimed.
+
+\subsection{1. Closure of compact objects}\label{proofs-11121-11450-closure-of-compact-objects}
+
+For an object P and a family (M\_\allowbreak{}j)\allowbreak{},\allowbreak{} denote the canonical map by
+
+\[
+ \theta_{P,(M_j)}:\bigoplus_j\operatorname{Hom}(P,M_j)
+       \longrightarrow\operatorname{Hom}(P,\bigoplus_jM_j).
+\]
+
+Its restriction to the j-th summand composes with the actual coproduct inclusion. Compactness is bijectivity of this map for every family. Shifts preserve coproducts because they are equivalences; the shift isomorphisms identify theta for P[r]\allowbreak{} and (M\_\allowbreak{}j)\allowbreak{} with theta for P and (M\_\allowbreak{}j[-r]\allowbreak{})\allowbreak{}. Thus shifts preserve compactness. Isomorphisms do also,\allowbreak{} by precomposition.
+
+For a distinguished triangle X\allowbreak{}->Y\allowbreak{}->Z\allowbreak{}->X[1]\allowbreak{},\allowbreak{} apply Hom(-,\allowbreak{}M\_\allowbreak{}j)\allowbreak{} and take the direct sum of its exact sequences of abelian groups. Compare with Hom(-,\allowbreak{}direct sum M\_\allowbreak{}j)\allowbreak{}. The five adjacent terms
+
+\[
+ \operatorname{Hom}(Y[1],-)\longrightarrow
+ \operatorname{Hom}(X[1],-)\longrightarrow
+ \operatorname{Hom}(Z,-)\longrightarrow
+ \operatorname{Hom}(Y,-)\longrightarrow
+ \operatorname{Hom}(X,-)
+\]
+
+are exact with the triangle\textquotesingle s given connecting signs. If X and Y are compact,\allowbreak{} the four comparison maps surrounding the Z term are isomorphisms. The five lemma makes the Z comparison an isomorphism. Rotations handle every other pair of compact terms. Finite sums preserve compactness,\allowbreak{} since Hom out of a finite biproduct is a finite product and finite products of abelian groups commute with direct sums.
+
+If P is a retract of a compact Q,\allowbreak{} choose i:\allowbreak{}P\allowbreak{}->Q and r:\allowbreak{}Q\allowbreak{}->P with ri\allowbreak{}=id\_\allowbreak{}P. Precomposition with r and i makes the comparison map for P a retract,\allowbreak{} in the category of homomorphisms,\allowbreak{} of that for Q. Its inverse is the corresponding composite of the inverse for Q with these inclusion and retraction maps; the equations ri\allowbreak{}=id\_\allowbreak{}P prove both inverse identities. Thus P is compact.
+
+The previously proved original lemma-projectors-have-images-triangulated,\allowbreak{} 805–\allowbreak{}822,\allowbreak{} makes the ambient pre-triangulated category Karoubian when it has countable coproducts:\allowbreak{} split monomorphisms have cokernels by their split triangles,\allowbreak{} and the countable-coproduct idempotent splitting criterion applies. Its actual summands are compact by the preceding retract calculation. This proves every assertion at 11146–\allowbreak{}11165,\allowbreak{} including the pre-triangulated version,\allowbreak{} without using TR4 in the compactness comparison.
+
+\subsection{2. The cellular tower and the missing inverse shift --- DERIVED-NEW-039}\label{proofs-11121-11450-the-cellular-tower-and-the-missing-inverse-shift-derived-new-039}
+
+Let (E\_\allowbreak{}i)\allowbreak{} be the source\textquotesingle s compact family and assume their coproduct is a weak generator. For a fixed X put
+
+\[
+ X_1=\bigoplus_{(i,m,\varphi:E_i[m]\to X)}E_i[m],
+ \qquad p_1|_{(i,m,\varphi)}=\varphi.
+\]
+
+This is a set-indexed coproduct:\allowbreak{} I and Z are sets and each Hom collection is a set. Given p\_\allowbreak{}n:\allowbreak{}X\_\allowbreak{}n\allowbreak{}->X let Y\_\allowbreak{}n be the coproduct indexed by maps phi:\allowbreak{}E\_\allowbreak{}i[m]\allowbreak{}\allowbreak{}->X\_\allowbreak{}n with p\_\allowbreak{}n phi\allowbreak{}=0. Its component map is v\_\allowbreak{}n:\allowbreak{}Y\_\allowbreak{}n\allowbreak{}->X\_\allowbreak{}n. Complete it to the actual triangle
+
+\[
+ Y_n\xrightarrow{v_n}X_n\xrightarrow{u_n}X_{n+1}
+          \xrightarrow{d_n}Y_n[1].
+\]
+
+The equality p\_\allowbreak{}n v\_\allowbreak{}n\allowbreak{}=0 follows on every coproduct component. Exactness of Hom(-,\allowbreak{}X)\allowbreak{} supplies p\_\allowbreak{}\{n\allowbreak{}+1\} with p\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}n\allowbreak{}=p\_\allowbreak{}n. There is no uniqueness requirement on this choice.
+
+Put S\allowbreak{}=direct sum\_\allowbreak{}n X\_\allowbreak{}n and t i\_\allowbreak{}n\allowbreak{}=i\_\allowbreak{}n-i\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}n,\allowbreak{} with i\_\allowbreak{}n the coproduct inclusions. Choose the telescope triangle
+
+\[
+ S\xrightarrow t S\xrightarrow q H\xrightarrow w S[1].
+\]
+
+The component maps p\_\allowbreak{}n define p:\allowbreak{}S\allowbreak{}->X with pt\allowbreak{}=0,\allowbreak{} so exactness gives f:\allowbreak{}H\allowbreak{}->X satisfying fq\allowbreak{}=p. Set q\_\allowbreak{}n\allowbreak{}=q i\_\allowbreak{}n. Complete f to C --a-\allowbreak{}-> H --f-\allowbreak{}-> X --b-\allowbreak{}-> C[1]\allowbreak{}. For any P\allowbreak{}=E\_\allowbreak{}i[m]\allowbreak{},\allowbreak{} compactness and the previously proved telescope comparison give
+
+\[
+ \operatorname{Hom}(P,H)=
+ \mathop{\rm colim}_n\operatorname{Hom}(P,X_n).
+\]
+
+If z:\allowbreak{}P\allowbreak{}->C,\allowbreak{} write az\allowbreak{}=q\_\allowbreak{}n h for some h:\allowbreak{}P\allowbreak{}->X\_\allowbreak{}n. Since faz\allowbreak{}=0 and fq\_\allowbreak{}n\allowbreak{}=p\_\allowbreak{}n,\allowbreak{} we have p\_\allowbreak{}n h\allowbreak{}=0. The summand labelled h in Y\_\allowbreak{}n shows u\_\allowbreak{}n h\allowbreak{}=0. Therefore az\allowbreak{}=q\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}n h\allowbreak{}=0. The inverse-rotated triangle is
+
+\[
+ X[-1]\xrightarrow{-b[-1]}C\xrightarrow a H\xrightarrow f X.
+\]
+
+Exactness supplies y:\allowbreak{}P\allowbreak{}->X[-1]\allowbreak{} with z\allowbreak{}=(-b[-1]\allowbreak{})\allowbreak{}y. Shift y to y[1]\allowbreak{}:\allowbreak{}P[1]\allowbreak{}\allowbreak{}->X. Since P[1]\allowbreak{} is a shift of E\_\allowbreak{}i,\allowbreak{} it labels a summand of X\_\allowbreak{}1. Write e:\allowbreak{}P[1]\allowbreak{}\allowbreak{}->X\_\allowbreak{}1 for its inclusion. Then p\_\allowbreak{}1 e\allowbreak{}=y[1]\allowbreak{}. The shifted map
+
+\[
+ P\xrightarrow{e[-1]}X_1[-1]\xrightarrow{q_1[-1]}H[-1]
+\]
+
+composed with f[-1]\allowbreak{} is y,\allowbreak{} using the specified shift identifications. Since (-b[-1]\allowbreak{})\allowbreak{}f[-1]\allowbreak{}\allowbreak{}=0,\allowbreak{} z\allowbreak{}=0. Hence Hom(E\_\allowbreak{}i[m]\allowbreak{},\allowbreak{}C)\allowbreak{}\allowbreak{}=0 for every i,\allowbreak{}m. The coproduct universal property gives Hom(direct sum\_\allowbreak{}i E\_\allowbreak{}i,\allowbreak{}C[-m]\allowbreak{})\allowbreak{}\allowbreak{}=0 for every m,\allowbreak{} so generation forces C to be zero and f to be an isomorphism.
+
+The map just constructed lands in H[-1]\allowbreak{},\allowbreak{} not H. The wording at 11209 omits [-1]\allowbreak{} from the displayed homotopy colimit. The corrected object is (hocolim X\_\allowbreak{}n)\allowbreak{}[-1]\allowbreak{}. This is a type correction to the proof,\allowbreak{} not a change in the conclusion or a choice of an unspecified map H\allowbreak{}->X[-1]\allowbreak{}. All choices of lifts p\_\allowbreak{}\{n\allowbreak{}+1\} and f satisfy the argument.
+
+\subsection{3. Exact finite-stage factorization and its level --- DERIVED-UNDER-029}\label{proofs-11121-11450-exact-finite-stage-factorization-and-its-level-derived-under-029}
+
+Here a stronger hypothesis accounting is useful. Let (E\_\allowbreak{}i)\allowbreak{} be any family of compact objects in a triangulated category with coproducts. A weak-generation assumption is not needed in this section. Suppose X\_\allowbreak{}1 is a coproduct of shifts of this family and there are triangles
+
+\[
+ Y_{n-1}\xrightarrow u X_{n-1}\xrightarrow v X_n
+        \xrightarrow d Y_{n-1}[1]
+\]
+
+with each Y\_\allowbreak{}\{n-1\} a coproduct of such shifts. For any compact C and map h:\allowbreak{}C\allowbreak{}->X\_\allowbreak{}n there exist a finite J subset I,\allowbreak{} an object Q in \textless direct sum\_\allowbreak{}\{j in J\} E\_\allowbreak{}j>\_\allowbreak{}n and actual maps
+
+\[
+ C\xrightarrow s Q\xrightarrow r X_n,\qquad rs=h.
+\]
+
+The subscript n is a proved extension-cost bound,\allowbreak{} not a claim of minimality. It strengthens the source\textquotesingle s unbounded membership in \textless direct sum E\_\allowbreak{}j>. Generation is used in Section 2 to obtain the isomorphism from the telescope,\allowbreak{} but not for this finite-stage factorization.
+
+For n\allowbreak{}=1 compactness factors h through a finite subcoproduct Q. Its objects are shifts of a finite family,\allowbreak{} so Q is in level one. Suppose the statement holds for n-1. Compactness factors dh through a finite subcoproduct of Y\_\allowbreak{}\{n-1\}[1]\allowbreak{}. Write it as
+
+\[
+ C\xrightarrow\delta E'[1]\xrightarrow{j[1]}Y_{n-1}[1],
+ \qquad j[1]\delta=dh,
+\]
+
+where E\textquotesingle{} is a finite direct sum of shifts of the E\_\allowbreak{}i with indices I\textquotesingle. Complete delta to a triangle E\textquotesingle{} --a-\allowbreak{}-> C\textquotesingle{} --b-\allowbreak{}-> C --delta-\allowbreak{}-> E'[1]\allowbreak{}. TR3 applied to the rotated triangles gives a map t:\allowbreak{}C'\allowbreak{}->X\_\allowbreak{}\{n-1\} such that (j,\allowbreak{}t,\allowbreak{}h)\allowbreak{} is a morphism to the preceding displayed triangle:\allowbreak{} ta\allowbreak{}=uj,\allowbreak{} v t\allowbreak{}=h b,\allowbreak{} and j[1]\allowbreak{}delta\allowbreak{}=d h. In particular C\textquotesingle{} is compact by Section 1.
+
+Induction factors t as C\textquotesingle{} --alpha-\allowbreak{}-> E\textquotesingle\textquotesingle{} --beta-\allowbreak{}-> X\_\allowbreak{}\{n-1\} with E\textquotesingle\textquotesingle{} in level n-1 for a finite family I\textquotesingle\textquotesingle. Complete alpha a to
+
+\[
+ E'\xrightarrow{\alpha a}E''\xrightarrow l E
+                     \xrightarrow e E'[1].
+\]
+
+TR3 gives p:\allowbreak{}C\allowbreak{}->E and q:\allowbreak{}E\allowbreak{}->X\_\allowbreak{}n making (id,\allowbreak{}alpha,\allowbreak{}p)\allowbreak{} and (j,\allowbreak{}beta,\allowbreak{}q)\allowbreak{} morphisms of triangles. Thus e p\allowbreak{}=delta and d q\allowbreak{}=j[1]\allowbreak{}e. It follows exactly that
+
+\[
+ d(h-qp)=dh-j[1]ep=dh-j[1]\delta=0.
+\]
+
+The common target in this comparison is Y\_\allowbreak{}\{n-1\}[1]\allowbreak{}. The source at 11255 prints Y\_\allowbreak{}\{n-1\},\allowbreak{} missing [1]\allowbreak{}. This is DERIVED-NEW-040. Exactness of Hom(C,\allowbreak{}-)\allowbreak{} now provides z:\allowbreak{}C\allowbreak{}->X\_\allowbreak{}\{n-1\} with vz\allowbreak{}=h-qp. Inductively factor z as C --gamma-\allowbreak{}-> E\textquotesingle\textquotesingle\textquotesingle{} --eta-\allowbreak{}-> X\_\allowbreak{}\{n-1\},\allowbreak{} using a finite family I\textquotesingle\textquotesingle\textquotesingle{} and level n-1. The complete factorization is
+
+\[
+ C\xrightarrow{\binom p\gamma}E\oplus E'''
+       \xrightarrow{(q,\ v\eta)}X_n,
+ \qquad (q,\ v\eta)\binom p\gamma=qp+v\eta\gamma=h.
+\]
+
+It preserves the original h,\allowbreak{} not merely its image under d. The objects E\textquotesingle\textquotesingle{} and E\textquotesingle\textquotesingle\textquotesingle{} are different induction outputs. This verifies the already applied MC-STK-ERR-0895 replacement of E\textquotesingle\textquotesingle{} by E\textquotesingle\textquotesingle\textquotesingle{} at 11258 and MC-STK-ERR-0896 replacement of I\textquotesingle{} by I\textquotesingle\textquotesingle\textquotesingle{} at 11259. In particular I\textquotesingle\textquotesingle\textquotesingle{} is a finite index set,\allowbreak{} not an ``injective object'' as the P02-E0089 explanation calls it.
+
+To prove the cost bound,\allowbreak{} put J\allowbreak{}=I' union I\textquotesingle\textquotesingle{} union I\textquotesingle\textquotesingle\textquotesingle{} and G\_\allowbreak{}J\allowbreak{}=direct sum\_\allowbreak{}\{j in J\}E\_\allowbreak{}j. Enlarging a finite family preserves membership in each level:\allowbreak{} the smaller direct sum is a specified summand of G\_\allowbreak{}J,\allowbreak{} so replace its leaf witnesses by those summands. We have E\textquotesingle{} in level one,\allowbreak{} E'',\allowbreak{}E''' in level n-1. Rotation of the E triangle gives E''\allowbreak{}->E\allowbreak{}->E'[1]\allowbreak{},\allowbreak{} hence E is in level n by the level-addition formula proved in the preceding checkpoint. Levels are increasing and closed under finite sums,\allowbreak{} so E\allowbreak{}+E''' is in level n as required. If J is empty,\allowbreak{} all these objects are zero and the empty finite sum is the generator 0. Every membership also has a finite shift window by the finite witness argument of PROOFS\_\allowbreak{}10691\_\allowbreak{}11108.md,\allowbreak{} Section 5.
+
+\subsection{4. Compact generators and the family conclusion}\label{proofs-11121-11450-compact-generators-and-the-family-conclusion}
+
+If compact E classically generates D\_\allowbreak{}c and D is compactly generated by a family (F\_\allowbreak{}i)\allowbreak{},\allowbreak{} then Hom(E,\allowbreak{}K[r]\allowbreak{})\allowbreak{}\allowbreak{}=0 for all r implies Hom(F\_\allowbreak{}i,\allowbreak{}K[r]\allowbreak{})\allowbreak{}\allowbreak{}=0 for all i,\allowbreak{}r. Indeed F\_\allowbreak{}i belongs to <E>,\allowbreak{} and the right-orthogonal calculation already proved at original 11033–\allowbreak{}11050 applies to every shift of K. Generation by direct sum F\_\allowbreak{}i forces K\allowbreak{}=0. This proves (1)\allowbreak{} implies (2)\allowbreak{}.
+
+Conversely a compact weak generator E gives the source\textquotesingle s one-element compact generating set. For compact X use the tower of Section 2 and its isomorphism f:\allowbreak{}H\allowbreak{}->X. Compactness factors f\textasciicircum{}\{-1\}:\allowbreak{}X\allowbreak{}->H through a stage:\allowbreak{} f\textasciicircum{}\{-1\}\allowbreak{}=q\_\allowbreak{}n z. Put r\allowbreak{}=f q\_\allowbreak{}n. Then rz\allowbreak{}=id\_\allowbreak{}X. Apply Section 3 to z to factor it through a finite object Q in <E>\_\allowbreak{}n. Thus X is an actual retract of Q and hence is in <E>\_\allowbreak{}n,\allowbreak{} which is closed under summands. The complement exists in the Karoubian ambient category; its compactness also follows from Section 1. The reverse inclusion \textless E\textgreater{} subset D\_\allowbreak{}c follows from compact closure. Therefore D\_\allowbreak{}c\allowbreak{}=<E>,\allowbreak{} proving the proposition.
+
+Exactly the same argument for a family yields
+
+\[
+ D_c=\bigcup_{\substack{J\subset I\ {\rm finite}\\ n\geq1}}
+          \left\langle\bigoplus_{j\in J}E_j\right\rangle_n .
+\]
+
+The actual retract uses f,\allowbreak{}q\_\allowbreak{}n,\allowbreak{}z and the Section 3 factorization. This is recorded with UNDER-029 as its family consequence,\allowbreak{} not as an independent novelty claim. MC-STK-ERR-0897 correctly changes ``the lemma is proven'' at 11309 to ``the proposition is proven''. Its earlier registry description gives an inaccurate label; the actual source label is proposition-generator-versus-classical-generator.
+
+\subsection{5. Brown\textquotesingle s representing object and its exact transformation}\label{proofs-11121-11450-browns-representing-object-and-its-exact-transformation}
+
+Now let H:\allowbreak{}D\textasciicircum{}op\allowbreak{}->Ab be cohomological and take arbitrary coproducts to products,\allowbreak{} with D compactly generated. Enlarge the set of compact generators by all integer shifts,\allowbreak{} retaining the actual objects and their shift isomorphisms; use that indexed set below. For each pair (i,\allowbreak{}a)\allowbreak{} with a in H(E\_\allowbreak{}i)\allowbreak{},\allowbreak{} take a copy of E\_\allowbreak{}i:\allowbreak{}
+
+\[
+ X_1=\bigoplus_{(i,a)}E_i,\qquad
+ a_1\in H(X_1)\cong\prod_{(i,a)}H(E_i),\quad
+ a_1=(a)_{(i,a)}.
+\]
+
+The product comparison is the one induced by all inclusions. The associated Yoneda transformation is explicitly theta\_\allowbreak{}\{1,\allowbreak{}W\}(f)\allowbreak{}\allowbreak{}=H(f)\allowbreak{}(a\_\allowbreak{}1)\allowbreak{} for f:\allowbreak{}W\allowbreak{}->X\_\allowbreak{}1.
+
+Suppose (X\_\allowbreak{}n,\allowbreak{}a\_\allowbreak{}n)\allowbreak{} has been chosen. For all pairs (i,\allowbreak{}k)\allowbreak{} with k:\allowbreak{}E\_\allowbreak{}i\allowbreak{}->X\_\allowbreak{}n and H(k)\allowbreak{}a\_\allowbreak{}n\allowbreak{}=0,\allowbreak{} let K\_\allowbreak{}\{n\allowbreak{}+1\} be their coproduct and g\_\allowbreak{}n:\allowbreak{}K\_\allowbreak{}\{n\allowbreak{}+1\}\allowbreak{}->X\_\allowbreak{}n their component map. The product comparison gives H(g\_\allowbreak{}n)\allowbreak{}a\_\allowbreak{}n\allowbreak{}=0 because each coordinate is zero. Complete g\_\allowbreak{}n to
+
+\[
+ K_{n+1}\xrightarrow{g_n}X_n\xrightarrow{u_n}X_{n+1}
+                       \longrightarrow K_{n+1}[1].
+\]
+
+Cohomological exactness gives a\_\allowbreak{}\{n\allowbreak{}+1\} with H(u\_\allowbreak{}n)\allowbreak{}a\_\allowbreak{}\{n\allowbreak{}+1\}\allowbreak{}=a\_\allowbreak{}n. This justifies the source\textquotesingle s use of the kernel functor without assuming that this kernel is cohomological. Its needed product property follows because kernels commute with products,\allowbreak{} or directly from the coordinate calculation just given.
+
+Form S\allowbreak{}=direct sum X\_\allowbreak{}n and the telescope triangle S --t-\allowbreak{}-> S --q-\allowbreak{}-> X --w-\allowbreak{}-> S[1]\allowbreak{},\allowbreak{} with t i\_\allowbreak{}n\allowbreak{}=i\_\allowbreak{}n-i\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}n. Under H(S)\allowbreak{}\allowbreak{}=product H(X\_\allowbreak{}n)\allowbreak{},\allowbreak{} H(t)\allowbreak{} is the homomorphism
+
+\[
+ (b_n)_n\longmapsto
+           (b_n-H(u_n)b_{n+1})_n .
+\]
+
+The tuple (a\_\allowbreak{}n)\allowbreak{} is in its kernel. Exactness supplies a in H(X)\allowbreak{} with H(q)\allowbreak{}a\allowbreak{}=(a\_\allowbreak{}n)\allowbreak{}. Put theta\_\allowbreak{}W(f)\allowbreak{}\allowbreak{}=H(f)\allowbreak{}a for f:\allowbreak{}W\allowbreak{}->X. Naturality follows from H(fg)\allowbreak{}\allowbreak{}=H(g)\allowbreak{}H(f)\allowbreak{},\allowbreak{} and theta\_\allowbreak{}W(q\_\allowbreak{}n f)\allowbreak{}\allowbreak{}=H(f)\allowbreak{}a\_\allowbreak{}n. This is the exact transformation asserted at 11385–\allowbreak{}11387. The requested copyedit inserts the finite verb in ``Hence there is a natural transformation''.
+
+For each shifted generator E\_\allowbreak{}i,\allowbreak{} compactness identifies Hom(E\_\allowbreak{}i,\allowbreak{}X)\allowbreak{} with colim Hom(E\_\allowbreak{}i,\allowbreak{}X\_\allowbreak{}n)\allowbreak{}. The transformation is surjective there because the pair (i,\allowbreak{}b)\allowbreak{} for every b in H(E\_\allowbreak{}i)\allowbreak{} occurs in X\_\allowbreak{}1. If the image of a class represented by f:\allowbreak{}E\_\allowbreak{}i\allowbreak{}->X\_\allowbreak{}n is zero,\allowbreak{} H(f)\allowbreak{}a\_\allowbreak{}n\allowbreak{}=0. It is a summand label of K\_\allowbreak{}\{n\allowbreak{}+1\},\allowbreak{} so u\_\allowbreak{}n f\allowbreak{}=0. Its colimit class is zero. Hence theta is also injective on every shifted generator.
+
+For completeness,\allowbreak{} let D\textquotesingle{} consist of Y for which theta\_\allowbreak{}\{Y[r]\allowbreak{}\} is an isomorphism for every integer r. Isomorphism invariance and shift closure are immediate from this definition. Two objects of a distinguished triangle in D\textquotesingle{} force the third into D\textquotesingle{} by the five adjacent terms of the contravariant exact sequences and the five lemma. A summand is handled by the same explicit retraction of comparison maps as in Section 1. Both Hom(-,\allowbreak{}X)\allowbreak{} and H send coproducts to products; a product of the isomorphisms theta\_\allowbreak{}\{Y\_\allowbreak{}j[r]\allowbreak{}\} is an isomorphism. Thus D\textquotesingle{} is closed under coproducts. In particular the telescope triangle of any sequence of its objects has all three terms in D\textquotesingle.
+
+Every generator is in D',\allowbreak{} hence all X\_\allowbreak{}1,\allowbreak{}Y\_\allowbreak{}n and X\_\allowbreak{}n in the cellular presentation of every object are in D',\allowbreak{} by induction. Section 2 gives every such object as that telescope. Hence D'\allowbreak{}=D and theta is an isomorphism on every object,\allowbreak{} as required. No assertion that the original generators classically generate all of D is made.
+
+Different choices of representing data give canonically isomorphic representing pairs:\allowbreak{} if theta:\allowbreak{}Hom(-,\allowbreak{}X)\allowbreak{}\allowbreak{}->H and theta':\allowbreak{}Hom(-,\allowbreak{}X')\allowbreak{}\allowbreak{}->H are the isomorphisms,\allowbreak{} Yoneda turns (theta')\allowbreak{}\textasciicircum{}\{-1\}theta into a unique u:\allowbreak{}X\allowbreak{}->X'. Its inverse comes from theta\textasciicircum{}\{-1\}theta',\allowbreak{} so both composites are identities. This accounts for the nonunique choices made in the construction.
+
+\subsection{6. The exact right adjoint}\label{proofs-11121-11450-the-exact-right-adjoint}
+
+For an exact coproduct-preserving F:\allowbreak{}D\allowbreak{}->D',\allowbreak{} fix Y in D\textquotesingle{} and apply Section 5 to H\_\allowbreak{}Y(W)\allowbreak{}\allowbreak{}=Hom\_\allowbreak{}\{D'\}(F(W)\allowbreak{},\allowbreak{}Y)\allowbreak{}. Exactness of F and the contravariant representable Hom sequence make this cohomological. The coproduct universal property and preservation by F make H\_\allowbreak{}Y(direct sum W\_\allowbreak{}j)\allowbreak{}\allowbreak{}=product H\_\allowbreak{}Y(W\_\allowbreak{}j)\allowbreak{}.
+
+Choose a representing object G(Y)\allowbreak{} and the natural bijections
+
+\[
+ \phi_{W,Y}:\operatorname{Hom}_D(W,G(Y))
+        \xrightarrow{\sim}\operatorname{Hom}_{D'}(F(W),Y).
+\]
+
+For a:\allowbreak{}Y\allowbreak{}->Y',\allowbreak{} postcomposition by a and these bijections give a natural transformation Hom(-,\allowbreak{}G(Y)\allowbreak{})\allowbreak{}\allowbreak{}->Hom(-,\allowbreak{}G(Y')\allowbreak{})\allowbreak{}. Yoneda defines G(a)\allowbreak{}. The identities and composites are preserved because their natural transformations are,\allowbreak{} proving that G is a functor and that phi is natural in both variables. This proves the actual adjunction,\allowbreak{} rather than objectwise representability alone.
+
+The shift comparison and preservation of triangles are proved in PROOFS\_\allowbreak{}1844\_\allowbreak{}2401.md,\allowbreak{} Section 3,\allowbreak{} with the original 2290–\allowbreak{}2370 definition and its corrected Hom domains. Explicitly the inverse of G(Y)\allowbreak{}[1]\allowbreak{}\allowbreak{}->G(Y[1]\allowbreak{})\allowbreak{} is G\textquotesingle s exact-functor comparison; the forward map is adjoint to
+
+\[
+ F(G(Y)[1])\xrightarrow{\xi_{G(Y)}}F(G(Y))[1]
+                         \xrightarrow{\epsilon_Y[1]}Y[1].
+\]
+
+Its naturality and bijectivity are the Yoneda calculation in that proof. Applying F to a cone of G(A)\allowbreak{}\allowbreak{}->G(B)\allowbreak{} and using the counit gives the comparison cone\allowbreak{}->G(C)\allowbreak{}; testing with Hom\_\allowbreak{}D(W,\allowbreak{}-)\allowbreak{},\allowbreak{} using adjunction and the two exact sequences,\allowbreak{} makes that comparison an isomorphism. The domain is D,\allowbreak{} not D',\allowbreak{} as reconciled there. Thus the already verified exact-adjoint theorem applies without any new operation.
+
+\subsection{7. Geometric receiving category and three received reports}\label{proofs-11121-11450-geometric-receiving-category-and-three-received-reports}
+
+The citation in perfect.tex 4323–\allowbreak{}4326 must be read in its actual category. Proposition compact-is-perfect at 4246–\allowbreak{}4251 concerns D\_\allowbreak{}QCoh(O\_\allowbreak{}X)\allowbreak{},\allowbreak{} for quasi-compact quasi-separated X. Its proof at 4253–\allowbreak{}4265 uses
+
+\[
+ \operatorname{Hom}_{D(O_X)}(P,M)
+    =H^0R\Gamma(X,P^\vee\otimes^{\mathbf L}M)
+\]
+
+and the preservation of coproducts by RΓ on D\_\allowbreak{}QCoh. The underlying morphisms may be computed in D(O\_\allowbreak{}X)\allowbreak{} because the inclusion is fully faithful. The compactness quantifier,\allowbreak{} however,\allowbreak{} ranges over families in D\_\allowbreak{}QCoh. It does not thereby range over arbitrary objects of D(O\_\allowbreak{}X)\allowbreak{}.
+
+The exact sufficient comparison is the inclusion
+
+\[
+ D_{\mathrm{QCoh},T}(O_X)
+    \xrightarrow{\ j\ }D_{\mathrm{QCoh}}(O_X)
+    \xrightarrow{\ k\ }D(O_X).
+\]
+
+Both are full triangulated inclusions and preserve the indicated coproducts. For a perfect supported P and a family M\_\allowbreak{}l in the supported category,\allowbreak{} its compactness comparison there is,\allowbreak{} under full faithfulness,\allowbreak{} precisely its comparison for the same family in D\_\allowbreak{}QCoh. Thus it is an isomorphism. This proves the forward implication of compact-is-perfect-with-support in the needed category; Section 4 supplies the categorical part of its converse with the supported perfect generator.
+
+This validates P05-EN-CH36-0050 /\allowbreak{} OCC-05095:\allowbreak{} replace the ambient D(O\_\allowbreak{}X)\allowbreak{} in line 4324 by D\_\allowbreak{}QCoh(O\_\allowbreak{}X)\allowbreak{}. It is an incorrectly widened cited conclusion; no universal assertion that O\_\allowbreak{}X fails compactness in D(O\_\allowbreak{}X)\allowbreak{} is needed or claimed here. P05-EN-CH36-0051 /\allowbreak{} OCC-05096 is the distinct missing ``that'' at 4326. Their ranges overlap,\allowbreak{} but their semantic dispositions and operations remain separate.
+
+For P05-EN-CH36-0052 /\allowbreak{} OCC-05097,\allowbreak{} the object K\allowbreak{}=RSheafHom(P,\allowbreak{}E)\allowbreak{} at 4379–\allowbreak{}4385 is a sheaf complex. The source writes H\textasciicircum{}0(K)\allowbreak{}\allowbreak{}=Hom\_\allowbreak{}\{D(O\_\allowbreak{}X)\allowbreak{}\}(O\_\allowbreak{}X[0]\allowbreak{},\allowbreak{}K)\allowbreak{}. The former is a sheaf; the latter is an abelian group. The precise equality is
+
+\[
+ H^0(X,K):=H^0R\Gamma(X,K)
+      =\operatorname{Hom}_{D(O_X)}(O_X[0],K).
+\]
+
+To see the map,\allowbreak{} represent K by a K-injective sheaf complex J. Morphisms O\_\allowbreak{}X[0]\allowbreak{}\allowbreak{}->J in the homotopy category are degree-zero cycles of Γ(X,\allowbreak{}J)\allowbreak{} modulo boundaries,\allowbreak{} hence H\textasciicircum{}0Γ(X,\allowbreak{}J)\allowbreak{}. That is the defining computation of H\textasciicircum{}0RΓ(X,\allowbreak{}K)\allowbreak{}. The derived tensor-Hom adjunction sends the original alpha:\allowbreak{}P\allowbreak{}->E to O\_\allowbreak{}X\allowbreak{}->RSheafHom(P,\allowbreak{}E)\allowbreak{},\allowbreak{} so it defines exactly this global class. The correction supplies the missing argument X in H\textasciicircum{}0(X,\allowbreak{}K)\allowbreak{}; it does not replace the original internal Hom object.
+
+The ambient-category repair propagates to 4396–\allowbreak{}4404. Use A\allowbreak{}=D\_\allowbreak{}QCoh(O\_\allowbreak{}X)\allowbreak{} as ambient category and D\allowbreak{}=D\_\allowbreak{}\{QCoh,\allowbreak{}T\}(O\_\allowbreak{}X)\allowbreak{} for the supported tower. The inclusion D\allowbreak{}->A is exact and preserves coproducts,\allowbreak{} so the actual telescope K\allowbreak{}=hocolim K\_\allowbreak{}n holds in A as well as after applying k. The perfect object O\_\allowbreak{}X is compact in A by the cited proposition,\allowbreak{} and alpha factors through K\_\allowbreak{}n there.
+
+Now apply the finite-stage construction of Section 3 in A:\allowbreak{} the tower is made from the perfect supported generator E,\allowbreak{} which is compact in A,\allowbreak{} while its compact domain O\_\allowbreak{}X need not be supported on T. Crucially,\allowbreak{} that finite-stage proof does not require E to generate the ambient A. We obtain O\_\allowbreak{}X\allowbreak{}->Q\allowbreak{}->K\_\allowbreak{}n with Q in <E>\_\allowbreak{}n,\allowbreak{} hence Q perfect and supported on T. Complete O\_\allowbreak{}X\allowbreak{}->Q to I\allowbreak{}->O\_\allowbreak{}X\allowbreak{}->Q\allowbreak{}->I[1]\allowbreak{}. Then I is perfect; restricting to U\allowbreak{}=X\textbackslash{}T makes I\allowbreak{}->O\_\allowbreak{}X an isomorphism since Q|\_\allowbreak{}U\allowbreak{}=0. The composite I\allowbreak{}->O\_\allowbreak{}X\allowbreak{}->K is zero by that triangle. Under the tensor-Hom adjunction,\allowbreak{} this is precisely the required vanishing of I tensor\^{}L P\allowbreak{}->E. Thus the receiving conclusion and its original objects are preserved.
+
+The preview implements three reported repairs (4324,\allowbreak{} 4326,\allowbreak{} 4385)\allowbreak{} and one propagated block repair (4396–\allowbreak{}4404)\allowbreak{},\allowbreak{} under DERIVED-PERFECT-RECEIVER-001/\allowbreak{}002/\allowbreak{}003. These are not added to the count of previously unreported Derived findings. Exact original report records are frozen in PERFECT\_\allowbreak{}RECEIVER\_\allowbreak{}ORIGINAL\_\allowbreak{}REPORTS\_\allowbreak{}PART19.json.
+
+The related reported use at perfect.tex 4500–\allowbreak{}4505,\allowbreak{} P05-EN-CH36-0053,\allowbreak{} was encountered in the recovered report record but its full DGA argument is not read or adjudicated in this pass. It remains explicitly routed to the later Perfect chapter review. This bounded propagation does not certify every occurrence of ambient compactness in that chapter.
+
+\subsection{\texorpdfstring{8. Other receivers,\allowbreak{} copyedits and review limits}{8. Other  copyedits and review limits}}\label{proofs-11121-11450-other-receivers-copyedits-and-review-limits}
+
+At perfect.tex 4904–\allowbreak{}4915 the Brown argument has source D\_\allowbreak{}QCoh(O\_\allowbreak{}X)\allowbreak{} and target D(O\_\allowbreak{}X)\allowbreak{}. Compact generation is needed only in the source. Its cited perfect generator and compactness in D\_\allowbreak{}QCoh therefore give the correct hypothesis for Section 6; the target need not be compactly generated. This pass checks that categorical use,\allowbreak{} not a fresh proof of the cited geometric existence theorem.
+
+At duality.tex 867–\allowbreak{}885 the class under consideration is closed under coproducts,\allowbreak{} shifts and triangles,\allowbreak{} contains the supported perfect generator E,\allowbreak{} and hence contains the first stage Q\_\allowbreak{}1 and every attaching coproduct in Section 2. Induction and the actual telescope triangle then put every supported Q in that class. The omitted [-1]\allowbreak{} in the Derived proof creates no extra hypothesis in this receiving argument.
+
+At injectives.tex 2765–\allowbreak{}2773 the source is D(Mod\_\allowbreak{}R)\allowbreak{}. The free module R in degree zero is compact because Hom(R,\allowbreak{}M)\allowbreak{}\allowbreak{}=H\textasciicircum{}0(M)\allowbreak{},\allowbreak{} and module coproducts are exact and computed termwise in the derived category. Its shifts detect every nonzero cohomology module,\allowbreak{} hence it generates. The exact functor F in that source is left adjoint and sends coproducts to coproducts,\allowbreak{} so H composed with F satisfies Section 5 and is representable. The remainder of that Grothendieck-category argument is outside this bounded check.
+
+P02-E0087 joins the introductory fragment ``With assumptions and notation as in Lemma ...'' to the following if/\allowbreak{}then sentence. The if/\allowbreak{}then sentence itself is complete; the producer calls the wrong part a fragment. The proposed comma and lowercase ``if'' fix the actual introductory fragment. This is a copyedit,\allowbreak{} not a mathematical repair. P02-E0092 adds ``there is'' to the existence sentence in Brown\textquotesingle s proof. Its later repeated wording at 11536 is a different report,\allowbreak{} pending with the next section.
+
+The two omitted shifts remain separate from all these reported corrections. The public comparisons at \href{https://stacks.math.columbia.edu/tag/09SN}{09SN} and \href{https://stacks.math.columbia.edu/tag/09SP}{09SP} were inspected only as secondary comparisons; the frozen original TeX is the authority. No PDF was downloaded or used as authority.
+
+Semantic review ends at 11450. Brown representability,\allowbreak{} bis,\allowbreak{} starting 11460,\allowbreak{} has been read only through 11560 and is next. In particular its argument about maps out of the weaker generating family has not been certified by the compact argument above. Source reports beyond 11450 remain pending.

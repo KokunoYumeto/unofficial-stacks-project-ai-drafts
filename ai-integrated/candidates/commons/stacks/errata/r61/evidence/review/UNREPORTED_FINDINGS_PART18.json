@@ -1,0 +1,109 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-037",
+      "source": "derived.tex",
+      "source_lines": [
+        10800,
+        10801
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "literal_full_subcategory_equality",
+      "original": "Literal equality of F(A[a,b]) and F(A)[a,b] for arbitrary exact F.",
+      "correction": "Equality of their isomorphism closures, using the given shift comparison of the exact functor.",
+      "adverse_evidence": "The constant exact functor to a contractible two-term complex Q has images Q and Q[-1], distinct objects of D(Ab). All subsequent receiving C_n categories are strictly full.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "section": 2
+      },
+      "operations": [
+        "DERIVED-NEW-037-OP1"
+      ],
+      "scope": "A literal object-set precision correction; no failure of the subsequent generator applications is claimed."
+    },
+    {
+      "finding_id": "DERIVED-NEW-038",
+      "source": "equiv.tex",
+      "source_ranges": [
+        [
+          1836,
+          1838
+        ],
+        [
+          1862,
+          1863
+        ]
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "missing_tensor_factor_in_cohomology_bound",
+      "original": "The proof bounds H^i(X,K), then uses the bound for RΓ(X,K tensor^L E); the next proof repeats H^i(X,F) in its arbitrary-window assertion.",
+      "correction": "Use H^i(X,K tensor^L E) and H^i(X,F tensor E), keeping the fixed finite locally free E and the original final dimension bound.",
+      "adverse_evidence": "On P^1, K=O(-1) is acyclic in global cohomology whereas K tensor (O+O(-1)) has H^1=k. The same E and G satisfy the diagonal construction. A positive shift window for acyclic F=O(-1) disproves the printed arbitrary-window assertion.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          8,
+          9
+        ]
+      },
+      "operations": [
+        "DERIVED-NEW-038-OP1",
+        "DERIVED-NEW-038-OP2"
+      ],
+      "routing_check": {
+        "file": "EQUIV_REPORT_ROUTING_PART18.json",
+        "bytes": 659,
+        "sha256": "784A9F93F231FC461529AA7D0477A7FAED9B3579EBCC0B38356B7266059786EC"
+      },
+      "scope": "Two propagated proof loci, one finding. The final strong-generator and coherent-sheaf boundedness statements remain valid."
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        10763,
+        10784
+      ],
+      "issue": "Finite-sum closure does not assert closure under arbitrary coproducts.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "section": 1
+      },
+      "disposition": "source_binary_sum_proof_and_finite_add_definition_retained"
+    },
+    {
+      "source_lines": [
+        10878,
+        10878
+      ],
+      "issue": "The omitted termwise argument uses stupid quotient truncation, not the canonical cohomology triangle.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "section": 3
+      },
+      "disposition": "complete_termwise_proof_supplied_editorially_no_new_defect"
+    },
+    {
+      "source_lines": [
+        11094,
+        11108
+      ],
+      "issue": "Isomorphism invariance of the property is not an explicit hypothesis.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "section": 5
+      },
+      "disposition": "derived_from_the_given_triangle_property_and_T_of_zero"
+    }
+  ]
+}

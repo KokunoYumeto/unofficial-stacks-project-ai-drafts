@@ -1,0 +1,78 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-043",
+      "source": "derived.tex",
+      "source_lines": [
+        12242,
+        12317
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "whole_postnikov_system_uniqueness_overclaimed",
+      "original": "Any one of three conditions implies at most one morphism of Postnikov systems.",
+      "adverse_evidence": "An explicit length-three pair in D^b(k) has both terminal objects zero, so conditions (1) and (2) hold, but admits two maps over the zero complex map with different nonzero intermediate h.",
+      "correction": "All three conditions imply terminal-map uniqueness; condition (3) additionally implies uniqueness of the whole map of systems.",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "sections": [
+          1,
+          4,
+          5
+        ]
+      },
+      "operations": [
+        "DERIVED-NEW-043-OP1"
+      ],
+      "limits": "This is a uniqueness correction, not a new existence statement."
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        12069,
+        12092
+      ],
+      "issue": "Literal unsigned projections and literal tower inclusions cannot be mixed without tracking rotation signs.",
+      "disposition": "complete_signed_construction_preserves_original_objects_and_differentials",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "section": 1
+      }
+    },
+    {
+      "source_lines": [
+        12319,
+        12370
+      ],
+      "issue": "The second vanishing condition might be misread as implying existence.",
+      "disposition": "two_source_implications_remain_separate_quiver_counterexample_proves_why",
+      "proof": {
+        "file": "PROOFS_12008_12370.md",
+        "bytes": 25872,
+        "sha256": "759E0C543B80067D857662D4105EF9BECE5B807E513D702951C3429C35FBA384",
+        "section": 3
+      }
+    }
+  ],
+  "reading_observations_not_yet_adjudicated": [
+    {
+      "source": "derived.tex",
+      "authority_lines": [
+        12380,
+        12430
+      ],
+      "status": "read_ahead_only_next_semantic_review",
+      "issue": "Essentially constant systems."
+    },
+    {
+      "source": "spaces-simplicial.tex",
+      "status": "pending_own_chapter_reconciliation",
+      "routing_file": "POSTNIKOV_RECEIVER_FOLLOWUP_PART22.json",
+      "issue": "Shift and index discrepancies in the receiving Postnikov tower, with exact corrected comparison proved in section 7."
+    }
+  ]
+}

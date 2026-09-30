@@ -1,0 +1,88 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-035",
+      "source": "derived.tex",
+      "source_lines": [
+        10277,
+        10295
+      ],
+      "original_issue": "The identity maps c a and d b act on the subsequence telescope, but the proof assigns their isomorphism to phi psi. The later nilpotence argument for the full telescope is assigned to psi phi.",
+      "correction": "Use psi phi for the subsequence triangle and phi psi for the full triangle in all three expressions.",
+      "proof": {
+        "file": "PROOFS_10139_10427.md",
+        "bytes": 19208,
+        "sha256": "64232DDDE5300956C056880DBDA2E3E777477C2FAA7EAE9545261657A23C50C5",
+        "section": 3
+      },
+      "status": "proved_private_correction_proposal",
+      "operations": [
+        "DERIVED-NEW-035-OP1",
+        "DERIVED-NEW-035-OP2"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-036",
+      "source": "derived.tex",
+      "source_lines": [
+        10263,
+        10291
+      ],
+      "original_issue": "The proposed homotopy includes K_(n_i) and its transition composite, so the asserted two telescope equations fail.",
+      "correction": "End the sum at K_(n_i-1), set h to zero at selected indices, and use the least selected upper endpoint to include the initial segment in h and c.",
+      "proof": {
+        "file": "PROOFS_10139_10427.md",
+        "bytes": 19208,
+        "sha256": "64232DDDE5300956C056880DBDA2E3E777477C2FAA7EAE9545261657A23C50C5",
+        "section": 3
+      },
+      "status": "proved_private_correction_proposal",
+      "counterexample": "K_j=Z[0], f_j=id and n_i=2i: the printed homotopy at j=3 gives u h=iota_3-iota_5 instead of iota_3-iota_4.",
+      "operations": [
+        "DERIVED-NEW-036-OP1",
+        "DERIVED-NEW-036-OP2"
+      ]
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        10310,
+        10322
+      ],
+      "issue": "The omitted uniqueness for the coproduct map cannot be justified by assuming the very derived coproduct property under proof.",
+      "proof": {
+        "file": "PROOFS_10139_10427.md",
+        "bytes": 19208,
+        "sha256": "64232DDDE5300956C056880DBDA2E3E777477C2FAA7EAE9545261657A23C50C5",
+        "section": 4
+      },
+      "disposition": "full_fraction_refinement_and_coproduct_of_nullhomotopies_proof_supplied_no_new_source_defect_count"
+    },
+    {
+      "source_lines": [
+        10290,
+        10295
+      ],
+      "issue": "The maps on the first two terms are homotopic to identities rather than identities.",
+      "proof": {
+        "file": "PROOFS_10139_10427.md",
+        "bytes": 19208,
+        "sha256": "64232DDDE5300956C056880DBDA2E3E777477C2FAA7EAE9545261657A23C50C5",
+        "section": 3
+      },
+      "disposition": "both_endpoint_composites_of_the_third_map_difference_are_zero_so_square_zero_follows_exactly"
+    }
+  ],
+  "reading_observations_not_yet_counted": [
+    {
+      "source": "duality.tex",
+      "current_lines": [
+        805,
+        805
+      ],
+      "issue": "The displayed Ext argument separator is a period in B. M_n.",
+      "status": "routed_to_receiving_chapter_report_join_not_yet_adjudicated"
+    }
+  ]
+}

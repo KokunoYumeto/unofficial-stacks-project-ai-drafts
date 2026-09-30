@@ -1,0 +1,188 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-011",
+      "source_lines": [
+        7176,
+        7356
+      ],
+      "kind": "additive_functors_and_explicit_finite_spectral_sequence_bounds",
+      "original_statement": "Two Cartan-Eilenberg spectral sequences and the derived-composition criterion are stated for left exact functors.",
+      "proved_statement": "Given a Cartan-Eilenberg resolution, both spectral sequences work for additive F. With enough injectives, the composition criterion and Grothendieck sequence work for additive F,G using the full right-acyclic comparison. For lower term bound n, total degree m>=n stabilizes by page m-n+2 with at most m-n+1 graded pieces.",
+      "hypotheses": "Actual bounded-below resolutions; commuting double-complex squares and total sign d_1+(-1)^p d_2; for composition A and B have enough injectives and each F(I) has canonical G(F(I))[0]->RG(F(I)[0]) invertible.",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          2,
+          3,
+          4,
+          8
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:7176-7356",
+        "cohomology.tex:2140-2193,2261-2283,7342-7391",
+        "sites-cohomology.tex:2304-2344"
+      ]
+    },
+    {
+      "claim_id": "DERIVED-UNDER-012",
+      "source_lines": [
+        7126,
+        7174
+      ],
+      "kind": "prescribed_boundary_and_cohomology_resolutions",
+      "original_statement": "A bounded-below complex has a Cartan-Eilenberg resolution when the abelian category has enough injectives.",
+      "proved_statement": "The boundary resolutions for p>=n+1 and cohomology resolutions for p>=n may be prescribed simultaneously. The actual horizontal differential is the quotient-to-boundary, inclusion-to-cycle, inclusion-to-term composite. The boundary resolution at n must be zero when earlier columns are zero.",
+      "hypotheses": "K^p=0 for p<n; the prescribed injective resolutions vanish in vertical degrees below zero. No additional global enough-injectives hypothesis once these are supplied.",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "section": 1
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:7126-7174",
+        "DERIVED-UNDER-010"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-UNDER-010"
+      ],
+      "to": "DERIVED-UNDER-012",
+      "status": "both_outer_resolutions_retained_twice_per_column_with_boundary_restriction",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          1
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-044"
+      ],
+      "to": "derived.tex:7176-7251",
+      "status": "both_q_indices_corrected_and_vertical_degree_and_sign_retained",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          2
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-011",
+        "DERIVED-RECON-044"
+      ],
+      "to": "derived.tex current:8835-8969",
+      "status": "exact_filtered_comparison_and_decalage_page_shift_proved_for_this_dependency",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-026"
+      ],
+      "to": "derived.tex:7330-7356",
+      "status": "Grothendieck_abutment_identified_using_actual_component_t_X",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          4
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-007",
+        "DERIVED-UNDER-011"
+      ],
+      "to": "derived.tex:7292-7356",
+      "status": "finite_prefix_comparison_and_exact_boundary_defect_propagated_to_t_X",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-026",
+        "DERIVED-UNDER-007",
+        "DERIVED-UNDER-011"
+      ],
+      "to": "cohomology.tex:2140-2193,2261-2283",
+      "status": "scalar_restriction_comparison_and_finite_prefix_bounds_checked",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-026",
+        "DERIVED-UNDER-007",
+        "DERIVED-UNDER-011"
+      ],
+      "to": "sites-cohomology.tex:2304-2344",
+      "status": "actual_topos_composition_and_finite_prefix_bounds_checked",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-044"
+      ],
+      "to": "cohomology.tex:7342-7391",
+      "status": "both_filtrations_and_differentials_related_by_explicit_page_shift",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          3,
+          8
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial consequences only; no source-body strengthening or novelty claim. Other search hits are routes, not reviewed proofs. Global synthesis remains later."
+}

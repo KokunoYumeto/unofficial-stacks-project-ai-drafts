@@ -1,0 +1,236 @@
+\section{\texorpdfstring{Derived Categories:\allowbreak{} Postnikov systems,\allowbreak{} original lines 12008–\allowbreak{}12370}{Derived  Postnikov  original lines }}\label{proofs-12008-12370-derived-categories-postnikov-systems-original-lines-1200812370}
+
+This is a private mathematical review and editorial proof supplement. Its source is the Stacks Project at commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14, original derived.tex,\allowbreak{} SHA-256 EFDA4CB3\allowbreak{}61DD4090\allowbreak{}9D199116\allowbreak{}1EAE716E\allowbreak{}58B6CF9E\allowbreak{}79380971\allowbreak{}502E1DA1\allowbreak{}2396D402. The current preimage is the separately frozen R60 chapter. The original source statement remains identifiable. No new theorem is attributed to the original author,\allowbreak{} and no novelty is claimed. Section 4 proves DERIVED-NEW-043; Section 5 proves DERIVED-UNDER-032. Section 6 adjudicates the three physical reports in this part.
+
+\subsection{\texorpdfstring{1. Original objects,\allowbreak{} triangle maps,\allowbreak{} and the complex example}{1. Original  triangle  and the complex example}}\label{proofs-12008-12370-original-objects-triangle-maps-and-the-complex-example}
+
+Write the given differential as \(d_j:X_j\to X_{j-1}\). A system has an isomorphism \(p_0:Y_0\to X_0\) and distinguished triangles \[
+Y_j\xrightarrow{p_j}X_j\xrightarrow{t_j}Y_{j-1}
+ \xrightarrow{\delta_j}Y_j[1],\qquad p_{j-1}t_j=d_j. \tag{1.1}
+\] A map over \(f_j:X_j\to X'_j\) is a family \(\phi_j:Y_j\to Y'_j\) with \[
+p'_j\phi_j=f_jp_j,\qquad
+\phi_{j-1}t_j=t'_jf_j,\qquad
+\phi_j[1]\delta_j=\delta'_j\phi_{j-1}, \tag{1.2}
+\] and \(p'_0\phi_0=f_0p_0\). The third equation,\allowbreak{} including its shift,\allowbreak{} is essential.
+
+Retain the original cochain convention \(M[s]^q=M^{q+s}\),\allowbreak{} \(d_{M[s]}=(-1)^s d_M\),\allowbreak{} and the source rotation convention \((a,b,c)\mapsto(b,c,-a[1])\). Put \(C_j^{-i}=A_i\) for \(0\leq i\leq j\),\allowbreak{} zero otherwise,\allowbreak{} with the original \(d_i:A_i\to A_{i-1}\). Thus the original objects are \(X_j=A_j\) and \(Y_j=C_j[-j]\),\allowbreak{} with differential \((-1)^j d_i\); none of these differentials is discarded.
+
+Let \(\iota_j:C_{j-1}\to C_j\) be the literal inclusion and \(q_j:C_j\to A_j[j]\) the literal projection. The degreewise split exact sequence \[
+0\longrightarrow C_{j-1}\xrightarrow{\iota_j}C_j
+ \xrightarrow{q_j}A_j[j]\longrightarrow0
+\] has connecting map \(e_j:A_j[j]\to C_{j-1}[1]\) whose only nonzero component is \(d_j\) in degree \(-j\). Indeed,\allowbreak{} the source definition of this connecting map is \(\pi^{q+1}d^q s^q\) (original derived.tex 2819–\allowbreak{}2848; Homology\textquotesingle s termwise-split cochain construction)\allowbreak{}. After shifting by \(-j\),\allowbreak{} the connecting map is \((-1)^j e_j[-j]\). Rotating once gives the distinguished triangle with arrows \[
+Y_j\xrightarrow{q_j[-j]}A_j
+ \xrightarrow{(-1)^j d_j}Y_{j-1}
+ \xrightarrow{-\iota_j[-j+1]}Y_j[1]. \tag{1.3}
+\] Here a displayed map \(d_j:A_j\to Y_{j-1}\) has degree-zero component \(d_j\) and all other components zero. It is a chain map because \(d_{j-1}d_j=0\).
+
+For explicit coherent choices with literal inclusion maps in the tower,\allowbreak{} set \[
+c_j=(-1)^{j(j-1)/2},\qquad
+p_j=c_j q_j[-j],\qquad t_j=c_{j-1}d_j,\qquad
+\delta_j=\iota_j[-j+1].
+\] Take \(p_0=1\). Since \(c_j=(-1)^{j+1}c_{j-1}\),\allowbreak{} conjugating (1.3)\allowbreak{} by the three isomorphisms \(1,c_j,-1\) gives exactly these three arrows. Thus each triangle is distinguished. Also \(p_{j-1}t_j=c_{j-1}^2d_j=d_j\),\allowbreak{} and \(\delta_j[j-1]=\iota_j\). This proves the example with all its original objects and differentials. The phrase ``evident canonical maps'' needs a sign convention; the displayed construction supplies one. An alternative retaining every literal projection \(p_j\) has \(t_j=d_j\) and \(\delta_j=(-1)^{j+1}\iota_j[-j+1]\). These two conventions must not be mixed. This is recorded as an explicit clarification,\allowbreak{} not an additional false theorem.
+
+For any system,\allowbreak{} put \(Z_j=Y_j[j]\),\allowbreak{} \(u_j=\delta_j[j-1]\). Shifting (1.1)\allowbreak{},\allowbreak{} rotating twice and conjugating by the object signs gives the distinguished triangle \[
+Z_{j-1}\xrightarrow{u_j}Z_j\xrightarrow{p_j[j]}X_j[j]
+ \xrightarrow{(-1)^{j-1}t_j[j]}Z_{j-1}[1]. \tag{1.4}
+\] For example,\allowbreak{} before conjugation the three arrows are \((-1)^{j-1}\delta_j[j-1],-p_j[j],-t_j[j]\). Conjugation on its three objects by \((-1)^{j-1},1,-1\) gives (1.4)\allowbreak{}. This retains the signs in every use of the tower below.
+
+Under the source\textquotesingle s exactness and existence assumption for colimits over \(\mathbf N\),\allowbreak{} the colimit of the literal complexes \(C_j\) is the original complex with \(A_i\) in degree \(-i\). The sequential-colimit/\allowbreak{}homotopy-colimit comparison proved in PROOFS\_\allowbreak{}10139\_\allowbreak{}10427.md applies to the actual inclusion maps \(\iota_j\). It therefore identifies \(\operatorname{hocolim}Y_j[j]\) with that complex. No assertion that \(\operatorname{hocolim}Y_j\) has the same value is made.
+
+If every \(d_j=0\),\allowbreak{} the split construction is \(Y_j=\bigoplus_{i=0}^jX_i[i-j]\). The map \(p_j\) is the projection to \(X_j\),\allowbreak{} \(t_j=0\),\allowbreak{} and \(\delta_j\) is the inclusion of the other summands into \(Y_j[1]\),\allowbreak{} with the sign of that summand chosen to make the triangle distinguished. Then \(Y_j[j]=\bigoplus_{i=0}^jX_i[i]\). This proves precisely the assertion ``we can take'' in original 12117–\allowbreak{}12118; it does not say every system for the zero complex splits in this way.
+
+\subsection{\texorpdfstring{2. Small lengths,\allowbreak{} with actual failure examples}{2. Small  with actual failure examples}}\label{proofs-12008-12370-small-lengths-with-actual-failure-examples}
+
+For length zero choose \(Y_0=X_0\). For two choices the forced comparison is \((p'_0)^{-1}f_0p_0\). For length one put \(t_1=p_0^{-1}d_1\),\allowbreak{} complete it to a triangle and rotate backwards. TR3,\allowbreak{} applied to the commuting square on \(X_1,Y_0\),\allowbreak{} supplies a comparison; rotation gives (1.2)\allowbreak{}.
+
+Nonuniqueness already occurs at length one. In \(D^b(k)\),\allowbreak{} let \(K=k[0]\),\allowbreak{} \(V=K\oplus K\),\allowbreak{} \(X_0=Y_0=K[1]\),\allowbreak{} \(X_1=K\),\allowbreak{} \(d_1=0\),\allowbreak{} \(Y_1=V\). Use \[
+V\xrightarrow{\operatorname{pr}_1}K\xrightarrow{0}K[1]
+ \xrightarrow{\operatorname{inc}_2[1]}V[1]. \tag{2.1}
+\] This is distinguished:\allowbreak{} rotate the split triangle \(K\xrightarrow{\operatorname{inc}_2}V\xrightarrow{\operatorname{pr}_1}K\to K[1]\),\allowbreak{} and then change the sign of its third object. If \(h(x,y)=(0,x)\),\allowbreak{} then \(\operatorname{pr}_1h=0\) and \(h[1]\operatorname{inc}_2[1]=0\). Thus both \((\phi_0,\phi_1)=(0,0)\) and \((0,h)\) are maps over the zero map of the underlying complex. The map \(h\) is nonzero in the derived category because it is nonzero on degree-zero cohomology.
+
+For length two,\allowbreak{} given the first triangle,\allowbreak{} exactness of \[
+\operatorname{Hom}(X_2,Y_1)\longrightarrow
+\operatorname{Hom}(X_2,X_1)\longrightarrow
+\operatorname{Hom}(X_2,Y_0)
+\] lifts \(d_2\) to \(t_2\),\allowbreak{} since \(p_0t_1d_2=d_1d_2=0\) and \(p_0\) is invertible. Complete \(t_2\) to a triangle. This proves existence for all such complexes.
+
+Comparisons need not exist at length two. In \(D^b(k)\),\allowbreak{} use the common complex \(K\to0\to K[1]\),\allowbreak{} with zero arrows,\allowbreak{} and \(Y_0=K[1]\),\allowbreak{} \(Y_1=K\),\allowbreak{} with first triangle \(K\to0\to K[1]\xrightarrow{1}K[1]\). This triangle is distinguished by a sign change in a rotation of an identity triangle. For one system choose \(t_2=0:K\to K\),\allowbreak{} with fiber object \(Y_2=K\oplus K[-1]\). For the other choose \(t'_2=1_K\),\allowbreak{} with \(Y'_2=0\). Any comparison over the identity of the complex would have \(\phi_0=1\),\allowbreak{} and its compatibility with the first connecting map forces \(\phi_1=1\). The stage-two equation would then read \(1\circ0=1\circ1\),\allowbreak{} a contradiction.
+
+There is an actual nonexistence example at length three,\allowbreak{} not merely a failure of the displayed construction. In \(D^b(\mathbf{Ab})\),\allowbreak{} use the nonsplit exact sequence \[
+0\to A=\mathbf Z\xrightarrow{2}B=\mathbf Z
+ \xrightarrow{q}C=\mathbf Z/2\to0
+\] with connecting map \(\epsilon:C\to A[1]\). Consider \[
+X_3=A\xrightarrow{2}X_2=B\xrightarrow{q}X_1=C
+ \xrightarrow{\epsilon}X_0=A[1]. \tag{2.2}
+\] Consecutive composites vanish because these are consecutive arrows of a distinguished triangle. Normalize \(p_0\) only by the explicit isomorphism \(Y_0\to X_0\),\allowbreak{} so no underlying object or map is replaced without comparison. Every first-stage triangle for \(\epsilon\) is isomorphic,\allowbreak{} identically on \(C,A[1]\),\allowbreak{} to \[
+B\xrightarrow{q}C\xrightarrow{\epsilon}A[1]
+ \xrightarrow{-2[1]}B[1].
+\] This follows from TR3 and the two-isomorphisms property,\allowbreak{} applied after rotation. Transport along that isomorphism identifies any second-stage lift with an endomorphism \(a:B\to B\) satisfying \(qa=q\). Since \(\operatorname{End}_{D^b(\mathbf{Ab})}(\mathbf Z)=\mathbf Z\),\allowbreak{} this is multiplication by an odd integer. The third-stage obstruction is \(a\circ2\),\allowbreak{} which is nonzero. Exactness of Hom applied to the second-stage triangle says a third-stage lift would force it to be zero. Thus no choices give a system. For \(n>3\) prepend zero objects to (2.2)\allowbreak{}; a system would restrict to the impossible length-three system.
+
+In the printed proof at original 12160 the relevant composite is consequently \(X_n\to X_{n-1}\to Y_{n-2}\). The last arrow is \(t_{n-1}\),\allowbreak{} not an arrow to \(Y_{n-1}\). This confirms P02-E0097,\allowbreak{} while correcting the report\textquotesingle s imprecise description of which triangle is being used.
+
+\subsection{3. The two vanishing hypotheses and their exact scope}\label{proofs-12008-12370-the-two-vanishing-hypotheses-and-their-exact-scope}
+
+Write the map-extension condition as \[
+(P)\qquad \operatorname{Hom}(X_i[i-j-1],X'_j)=0
+ \quad(i>j+1).
+\] For any target system it implies \(\operatorname{Hom}(X_i[i-j-1],Y'_j)=0\). Induct on \(j\). The case zero uses \(p'_0\). For \(j>0\),\allowbreak{} the inverse rotation of its triangle gives the exact segment with outer groups \[
+\operatorname{Hom}(X_i[i-j-1],Y'_{j-1}[-1])
+ =\operatorname{Hom}(X_i[i-j],Y'_{j-1}),\quad
+\operatorname{Hom}(X_i[i-j-1],X'_j).
+\] The first vanishes by induction (the required inequality \(i>j\) follows)\allowbreak{},\allowbreak{} and the second by \(P\). Hence the middle group vanishes.
+
+Given comparisons through \(n-1\),\allowbreak{} define \(\alpha=t'_nf_n-\phi_{n-1}t_n:X_n\to Y'_{n-1}\). The chain-map and earlier-square equations give \[
+p'_{n-1}\alpha=d'_nf_n-f_{n-1}d_n=0.
+\] Therefore \(\alpha=-\delta'_{n-1}[-1]z\) for some \(z:X_n\to Y'_{n-2}[-1]\). Its domain group is \(\operatorname{Hom}(X_n[1],Y'_{n-2})=0\) by the preceding conclusion. Thus \(\alpha=0\),\allowbreak{} and TR3 extends the comparison. The cases zero and one are Section 2. Notice that this argument extends any already chosen partial comparison:\allowbreak{} induction gives a compatible infinite comparison too,\allowbreak{} rather than a disconnected family of finite comparisons.
+
+For existence,\allowbreak{} the source assumes the different condition \[
+(P')\qquad \operatorname{Hom}(X_i[i-j-2],X_j)=0
+ \quad(i>j+2).
+\] Induction on \(j\),\allowbreak{} using the same exact sequence and shifted source,\allowbreak{} gives \(\operatorname{Hom}(X_i[i-j-2],Y_j)=0\) for \(i>j+2\). For \(n>2\),\allowbreak{} the obstruction \(o=t_{n-1}d_n:X_n\to Y_{n-2}\) satisfies \(p_{n-2}o=d_{n-1}d_n=0\). It factors through \(Y_{n-3}[-1]\),\allowbreak{} but \(\operatorname{Hom}(X_n,Y_{n-3}[-1])
+ =\operatorname{Hom}(X_n[1],Y_{n-3})=0\) by the just proved conclusion. Thus \(o=0\),\allowbreak{} and the exact sequence lifts \(d_n\). Lengths zero through two are already proved. This induction also extends every partial system and hence constructs an infinite system stage by stage when \(P'\) holds for every index.
+
+When \(P\) holds for a complex compared with itself,\allowbreak{} any two systems have a comparison over the identity. Its degree-zero map is an isomorphism. At every subsequent stage two of the three component maps are isomorphisms; exact Hom and the five lemma show the third is an isomorphism. Their inverses satisfy the inverse commuting squares. Thus the systems are isomorphic. No uniqueness of this isomorphism has been asserted.
+
+The last statement must not be read as saying \(P\) alone implies existence. Here is a counterexample to that reading. In the abelian category of representations of the quiver \(1\to2\) over \(k\),\allowbreak{} let \[
+A=(0\to k),\quad B=(k\xrightarrow{1}k),\quad C=(k\to0).
+\] Let \(f:A\to B\) be inclusion at vertex two and \(g:B\to C\) projection at vertex one. They give a nonsplit exact sequence. Indeed,\allowbreak{} a section \(C\to B\) would be identity at vertex one and zero at vertex two,\allowbreak{} contrary to the arrow-commuting equation. Let \(\epsilon:C\to A[1]\) be its connecting map,\allowbreak{} and use \(A\to B\to C\to A[1]\) as in (2.2)\allowbreak{}. Every map \(B\to A\) is zero:\allowbreak{} its first component is zero,\allowbreak{} and commutativity forces its second component to be zero. Thus 
+\begingroup\fontsize{9.5}{11.5}\selectfont
+\[
+\operatorname{Hom}(X_2[1],X_0)=\operatorname{Hom}(B,A)=0,\quad
+\operatorname{Hom}(X_3[2],X_0)=\operatorname{Ext}^{-1}(A,A)=0,\quad
+\operatorname{Hom}(X_3[1],X_1)=\operatorname{Ext}^{-1}(A,C)=0.
+\]
+\endgroup
+ These are all the groups in \(P\); negative Ext between degree-zero objects is zero by the standard derived t-structure. After comparison of the first triangle,\allowbreak{} a second-stage lift \(a:B\to B\) satisfies \(ga=g\). Exact Hom gives \(a-1=fv\) for \(v:B\to A\),\allowbreak{} so \(a=1\). The next obstruction is \(af=f\ne0\). No system exists. In contrast,\allowbreak{} the group in \(P'\) at \((i,j)=(3,0)\) is \(\operatorname{Hom}(A[1],A[1])=k\),\allowbreak{} so the actual existence hypothesis fails. The source\textquotesingle s two separate assertions survive exactly as written.
+
+\subsection{\texorpdfstring{4. DERIVED-NEW-043:\allowbreak{} terminal uniqueness versus uniqueness of all stages}{4.  terminal uniqueness versus uniqueness of all stages}}\label{proofs-12008-12370-derived-new-043-terminal-uniqueness-versus-uniqueness-of-all-stages}
+
+The source lemma at original 12242–\allowbreak{}12317 says any of its three conditions gives at most one map of systems. Conditions (1)\allowbreak{} and (2)\allowbreak{} give only uniqueness of the terminal map. Condition (3)\allowbreak{} does give uniqueness of the entire map of systems.
+
+For (1)\allowbreak{},\allowbreak{} let \(T=Z'_n\). By (1.4)\allowbreak{},\allowbreak{} the zero group \(\operatorname{Hom}(X_j[j],T)\) makes \(\operatorname{Hom}(Z_j,T)\to\operatorname{Hom}(Z_{j-1},T)\) injective for every \(1\leq j\leq n\). The restriction of a terminal comparison to \(Z_0=Y_0\) is the fixed composite \[
+Y_0\xrightarrow{p_0}X_0\xrightarrow{f_0}X'_0
+ \xrightarrow{(p'_0)^{-1}}Y'_0\longrightarrow Z'_n.
+\] Successive injectivity determines its terminal map. It determines the composites of intermediate maps with \(Z'_j\to Z'_n\),\allowbreak{} not the intermediate maps themselves.
+
+For (2)\allowbreak{},\allowbreak{} set \(S=Z_n\). Its hypotheses are \(\operatorname{Hom}(S,X'_j[j])=0\) for \(0\leq j<n\). Starting with \(Z'_0\cong X'_0\),\allowbreak{} induction on the target tower and exact Hom show \(\operatorname{Hom}(S,Z'_{n-1})=0\). The last target triangle makes \[
+\operatorname{Hom}(S,Z'_n)\longrightarrow\operatorname{Hom}(S,X'_n[n])
+\] injective. Its value on a terminal comparison is \(f_n[n]p_n[n]\),\allowbreak{} which is fixed. This again proves terminal uniqueness.
+
+For (3)\allowbreak{},\allowbreak{} induct on length. Assume the maps below stage \(n\) have been proved unique. Inverse rotation gives triangles with objects \((Y_{n-1}[-1],Y_n,X_n)\) and their primed counterparts,\allowbreak{} with first arrow \(-\delta_n[-1]\). Part (5)\allowbreak{} of the source uniqueness-of-third-arrow lemma gives uniqueness of the middle map if \[
+\operatorname{Hom}(Y_{n-1},X'_n)=0,\qquad
+\operatorname{Hom}(X_n,Y'_{n-1}[-1])=0. \tag{4.1}
+\] For completeness,\allowbreak{} that part follows as follows. If two middle maps differ by \(b\),\allowbreak{} then the two outside commuting squares imply \(bf=0\) and \(g'b=0\) for triangles \(X\xrightarrow fY\xrightarrow gZ\to X[1]\),\allowbreak{} \(X'\xrightarrow {f'}Y'\xrightarrow {g'}Z'\to X'[1]\). Exactness gives \(b=eg\). Then \(g'eg=0\) implies \(g'e=vh\),\allowbreak{} where \(h:Z\to X[1]\) and \(v:X[1]\to Z'\). If \(\operatorname{Hom}(X[1],Z')=0\),\allowbreak{} then \(g'e=0\),\allowbreak{} so \(e=f'w\) with \(w:Z\to X'\). If also \(\operatorname{Hom}(Z,X')=0\),\allowbreak{} then \(e=0\),\allowbreak{} and \(b=0\). These two groups become exactly (4.1)\allowbreak{}. The source and target filtrations express their outer objects by successive triangle layers \(X_{n-i}[-i+1]\),\allowbreak{} respectively \(X'_{n-i}[-i]\),\allowbreak{} for \(1\leq i\leq n\). Exact Hom and induction from \(Y_0\cong X_0\) imply (4.1)\allowbreak{} from the two groups in source condition (3)\allowbreak{}. This proves uniqueness at stage \(n\) and hence of the whole map. It does not prove existence without the separate extension argument.
+
+Here is a counterexample to whole-system uniqueness satisfying BOTH (1)\allowbreak{} and (2)\allowbreak{}. Use \(K,V,h\) and the common first stage (2.1)\allowbreak{}. Set the higher stages as follows; all underlying maps \(f_j\) in the comparison are zero.
+
+{ % Captionless table using the bundled longtable counter support.
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Stage
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source \(X_j\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source \(Y_j\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Target \(X'_j\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Target \(Y'_j\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & \(K[1]\) & \(K[1]\) & \(K[1]\) & \(K[1]\) \\
+1 & \(K\) & \(V\) & \(K\) & \(V\) \\
+2 & \(0\) & \(V[-1]\) & \(V\) & \(0\) \\
+3 & \(V[-1]\) & \(0\) & \(0\) & \(0\) \\
+\end{longtable}
+}
+
+At source stage two choose \[
+V[-1]\xrightarrow0 0\xrightarrow0 V\xrightarrow{1}V;
+\] at target stage two choose \[
+0\longrightarrow V\xrightarrow{1}V\longrightarrow0.
+\] At source stage three choose \(0\to V[-1]\xrightarrow{1}V[-1]\to0\); at target stage three take the zero triangle. All are distinguished by rotations and sign changes of identity triangles. The underlying source complex has all arrows zero. The target complex has \(d'_2=\operatorname{pr}_1:V\to K\),\allowbreak{} with other arrows zero,\allowbreak{} so it too is a complex.
+
+One comparison is identically zero. Another is \[
+\phi_0=0,\qquad \phi_1=h,\qquad \phi_2=0,\qquad\phi_3=0.
+\] Stage one satisfies (1.2)\allowbreak{} by the two explicit equations for \(h\). At stage two the equation involving \(t_2\) has source \(X_2=0\),\allowbreak{} and the connecting-map equation has target connecting map zero and \(\phi_2=0\); both vanish. The projection equation also vanishes. Stage three has zero target objects and maps. Thus all required squares commute. Since \(h\ne0\),\allowbreak{} the two system maps differ. However \(Y_3=Y'_3=0\),\allowbreak{} so every group in both conditions (1)\allowbreak{} and (2)\allowbreak{} vanishes. This disproves the original conclusion under exactly its printed hypotheses.
+
+The minimal conclusion replacement is:\allowbreak{} any two maps of systems induce the same map \(Y_n\to Y'_n\); in case (3)\allowbreak{},\allowbreak{} the map of systems itself is unique. This retains every valid part of the source and introduces no new existence assertion.
+
+\subsection{\texorpdfstring{5. DERIVED-UNDER-032:\allowbreak{} exact obstruction and groups of choices}{5.  exact obstruction and groups of choices}}\label{proofs-12008-12370-derived-under-032-exact-obstruction-and-groups-of-choices}
+
+This consequence retains the actual chosen partial system; it does not replace a nonzero obstruction by an assumption. Fix the triangle \[
+Y_{n-1}\xrightarrow{p}X_{n-1}\xrightarrow{t}Y_{n-2}
+ \xrightarrow{\delta}Y_{n-1}[1].
+\] For the given \(d_n\),\allowbreak{} the complete extension obstruction is the concrete element \[
+o=t d_n\in\operatorname{Hom}(X_n,Y_{n-2}). \tag{5.1}
+\] The relevant exact sequence is 
+\begingroup\fontsize{9.5}{11.5}\selectfont
+\[
+\operatorname{Hom}(X_n,X_{n-1}[-1])
+ \xrightarrow{t[-1]_*}\operatorname{Hom}(X_n,Y_{n-2}[-1])
+ \xrightarrow{(-\delta[-1])_*}\operatorname{Hom}(X_n,Y_{n-1})
+ \xrightarrow{p_*}\operatorname{Hom}(X_n,X_{n-1})
+ \xrightarrow{t_*}\operatorname{Hom}(X_n,Y_{n-2}). \tag{5.2}
+\]
+\endgroup
+ Exactness proves that a lift exists exactly when the computed element (5.1)\allowbreak{} is zero. In Sections 2 and 3 this element was actually computed or annihilated using the stated hypotheses,\allowbreak{} including an example where every possible preceding choice gives nonzero obstruction.
+
+When a lift \(a\) exists,\allowbreak{} the additive group \[
+Q_n=
+\operatorname{Hom}(X_n,Y_{n-2}[-1])/
+ t[-1]_*\operatorname{Hom}(X_n,X_{n-1}[-1]) \tag{5.3}
+\] acts on all lifts by \([z]\cdot a=a-\delta[-1]z\). Exactness at the second group proves this is independent of the representative and free. Exactness at the third group proves transitivity,\allowbreak{} since the difference of any two lifts lies in \(\ker p_*\). Thus (5.3)\allowbreak{} is the exact group of lift choices; the inverse-rotation minus sign is retained. Completion of a fixed lift to a triangle exists by TR1 and gives fiber objects isomorphic over the two fixed adjacent objects by TR3. Such a triangle isomorphism need not be unique,\allowbreak{} as Section 4 shows.
+
+For fixed source and target systems and a fixed comparison through stage \(n-1\),\allowbreak{} the complete next-map obstruction is the actual element \[
+\alpha=t'_nf_n-\phi_{n-1}t_n\in\operatorname{Hom}(X_n,Y'_{n-1}). \tag{5.4}
+\] A completion requires \(\alpha=0\) by its middle square,\allowbreak{} and TR3 proves sufficiency. The calculation in Section 3 places it in the image of \((-\delta'_{n-1}[-1])_*\operatorname{Hom}(X_n,Y'_{n-2}[-1])\); this records its more precise location even when that group does not vanish. If one completion \(\phi_n\) exists,\allowbreak{} all completions form a torsor under \[
+\ker\!\left[
+\operatorname{Hom}(Y_n,Y'_n)\longrightarrow
+\operatorname{Hom}(Y_{n-1}[-1],Y'_n)\oplus\operatorname{Hom}(Y_n,X'_n)
+\right],\qquad
+h\longmapsto\big(h(-\delta_n[-1]),p'_nh\big). \tag{5.5}
+\] Indeed,\allowbreak{} subtract the three equations (1.2)\allowbreak{}. The middle equation involves no \(\phi_n\),\allowbreak{} while the other two are precisely the two displayed zero conditions after shifting the last equation back. Conversely any such \(h\) added to \(\phi_n\) preserves all three squares. Addition is free and transitive. Formula (5.5)\allowbreak{} exactly describes the intermediate ambiguity missed by the printed conclusion.
+
+These are proved exact descriptions,\allowbreak{} not prospective existence theorems with the missing mathematics assumed. The obstruction depends on the specified partial system or partial comparison. No choice-independent global obstruction class is asserted. The results are formal consequences of the source exact Hom sequences and carry no novelty claim.
+
+\subsection{6. Physical reports and prior correction identity}\label{proofs-12008-12370-physical-reports-and-prior-correction-identity}
+
+P02-E0097,\allowbreak{} original producer line 101,\allowbreak{} spans original 12148–\allowbreak{}12160. Its exact minimal replacement \(Y_{n-1}\mapsto Y_{n-2}\) at the final target is correct by (1.1)\allowbreak{},\allowbreak{} (2.2)\allowbreak{},\allowbreak{} and (5.1)\allowbreak{}. The explanation is restated in Section 2 because the report\textquotesingle s wording about the triangle itself is imprecise. This is one missing mathematical-index report,\allowbreak{} semantic group DERIVED-RECON-100,\allowbreak{} and one new operation.
+
+P02-E0098,\allowbreak{} producer line 102,\allowbreak{} and French DERIVED-090,\allowbreak{} producer line 967,\allowbreak{} are two physical reports of one already corrected defect,\allowbreak{} semantic group DERIVED-RECON-101. In original 12278 the first composition must end at \(X'_n[n]\),\allowbreak{} since its penultimate object is \(Y'_n[n]\) and its final map is \(p'_n[n]\). The next line is \(f_n[n]p_n[n]\),\allowbreak{} with the same codomain. This is exactly prior MC-STK-ERR-0901,\allowbreak{} which the recorder replays against authority and current bytes. The operation is not repeated. Its correctness does not establish the stronger uniqueness claim:\allowbreak{} Section 4 independently tests and corrects that claim.
+
+The part therefore completes three additional physical Derived reports,\allowbreak{} bringing the chapter to 172/\allowbreak{}176 in 101 groups. The remaining four reports lie in the final section after this one.
+
+\subsection{7. Receiving proofs and retained pending chapter work}\label{proofs-12008-12370-receiving-proofs-and-retained-pending-chapter-work}
+
+A complete literal-reference search of the root chapter TeX files finds no use of the uniqueness-of-maps lemma outside its definition. This is a bounded repository-reference statement,\allowbreak{} not a claim about all mathematics or all external uses. Existing candidate/\allowbreak{}archive copies are not separate live receiving chapters.
+
+The references in equiv.tex use the complex example or the separate existence/\allowbreak{}isomorphism lemma,\allowbreak{} not the false whole-system uniqueness conclusion.
+
+At equiv.tex 1990–\allowbreak{}2033,\allowbreak{} the two exact functors send a chosen complex Postnikov system to systems over naturally isomorphic complexes. Under the displayed negative-Ext vanishing,\allowbreak{} \(P\) holds because \(i-j-1>0\); equivalently the relevant Ext degree is negative. Section 3 supplies an isomorphism,\allowbreak{} hence the terminal objects are isomorphic after the exact functors\textquotesingle{} shift comparison. This proves the precise use in the siblings argument without claiming a unique isomorphism or a natural isomorphism of the two functors on all objects.
+
+At 3008–\allowbreak{}3113,\allowbreak{} the original resolution objects \(M_n\) admit the signed construction of Section 1. The printed Künneth and full-faithfulness computations give the displayed negative Ext vanishing on the new terms. Both \(P'\) and \(P\) follow from that vanishing. Stagewise existence constructs the infinite system. At 3116–\allowbreak{}3178,\allowbreak{} the two exact functors yield systems over the stated common complex; the same negative Ext hypothesis gives extensions of each already selected partial comparison. Thus a compatible infinite family of isomorphisms exists. This checks the categorical use and its signs; it does not independently adjudicate the entire Fourier–\allowbreak{}Mukai proof or its earlier geometric input.
+
+At spaces-simplicial.tex 2957–\allowbreak{}3120,\allowbreak{} the source\textquotesingle s finite-sum adjunction calculation reduces \(P'\) to the assumed positive-source-shift vanishing on \(K_i\),\allowbreak{} and its comparison calculation similarly gives \(P\) at each \(K_m\). Section 3 justifies extending a chosen partial system and a chosen partial comparison,\allowbreak{} including their infinite compatibility. The exact functors in 2784–\allowbreak{}2826 and 3230–\allowbreak{}3273 transport the maps of Section 1 along their specified shift isomorphisms.
+
+The receiver contains additional local issues which must not be hidden by saying this chapter is approved:\allowbreak{} 3016 calls \(g_m^{-1}Y_n[n]\) itself a Postnikov system,\allowbreak{} although its stages are \(g_m^{-1}Y_n\); 3049 and 3068 omit the \([n]\) on the target tower in the homotopy colimit; and 3095–\allowbreak{}3110 interchange the indices of the explicitly defined \(Y'_{m,n}\) and \(\gamma_{m,n}\). The correct comparison supplied by the present proof is exactly \[
+\operatorname{hocolim}_n g_m^{-1}Y_n[n]
+ \xrightarrow{\operatorname{hocolim}_n\gamma_{m,n}[n]}
+\operatorname{hocolim}_n Y'_{m,n}[n]\ \cong\ K_m. \tag{7.1}
+\] Here ``hocolim of the comparison'' means a TR3 completion of the square on the two telescope sums; it is an isomorphism by the two-isomorphisms property. No canonical choice is asserted. The stage-zero labels in the later diagram are \(Y'_{m,0},Y'_{n,0}\),\allowbreak{} and its comparisons are \(\gamma_{m,0},\gamma_{n,0}\). The formula \(Y'_{m,n}=B_{m,\leq n}[-n]\otimes^{\mathbf L}K_m\) makes these indices and shifts explicit. These receiver observations are durably routed for its own complete report reconciliation; they are not silently counted as completed Derived reports or as an approved receiving chapter. Also original receiver reports P10-E0193/\allowbreak{}E0194 concern the module statement and a reference; their exact original evidence remains to be read in that chapter\textquotesingle s queue.
+
+In particular,\allowbreak{} the corrected uniqueness result does not invalidate these uses of existence and isomorphism. The receiver-specific notation issues remain visible rather than being conflated with DERIVED-NEW-043.
+
+\subsection{8. Scope and continuation}\label{proofs-12008-12370-scope-and-continuation}
+
+Semantic review of this source chapter is complete through original 12370. Original 12380–\allowbreak{}12430 has been read ahead only. Continue with Essentially constant systems at 12380,\allowbreak{} next unread line 12431. The exact obstruction descriptions remain editorial additions. Later synthesis and novelty review stay after the core correction and received-theorem queues. Pursuing Stacks and Illusie already have readers; the hub must not duplicate those assignments.

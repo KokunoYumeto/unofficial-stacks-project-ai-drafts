@@ -1,0 +1,132 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-007",
+      "source_lines": [
+        5716,
+        5807
+      ],
+      "kind": "finite_acyclic_prefix_and_exact_boundary_defect",
+      "original_statement": "A bounded-below complex of right F-acyclic objects computes RF when RF is defined there.",
+      "proved_statement": "If only terms through q are right F-acyclic, the canonical comparison is an isomorphism below q and monic in degree q. Its cokernel is im(delta_F) intersect ker(H^(q+1)(eta_T)) for the original-term tail T=sigma_(>=q+1)A. If F is left exact this defect is zero, so the comparison is also an isomorphism in degree q.",
+      "hypotheses": "Original bounded-below complex A, the given defined RF(A), and acyclicity of the stated finite prefix. The last assertion additionally assumes left exactness. The differential into A^(q+1) is retained.",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "sections": [
+          4,
+          5,
+          7
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:5716-5807",
+        "derived.tex:5810-5881",
+        "cohomology.tex:2195-2220",
+        "perfect.tex:513-537"
+      ],
+      "propagation": "The full Leray statement follows degree by degree. Its acyclic special case repairs enough-acyclics; the finite-prefix refinement is applied to the actual global-sections complex with its outgoing differential retained. Perfect receives a separate exact truncation repair."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-020"
+      ],
+      "to": "derived.tex:5526-5616",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 4
+      },
+      "status": "cofinality_and_higher_functor_receiving_comparisons_proved"
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-007"
+      ],
+      "to": "DERIVED-NEW-021",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "sections": [
+          5,
+          6
+        ]
+      },
+      "status": "full_Leray_specialization_proves_repaired_statement_without_circularity"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-021"
+      ],
+      "to": "more-algebra.tex:23649-23665",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 7
+      },
+      "status": "bounded_Rlim_existence_implication_preserved"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-021"
+      ],
+      "to": "etale-cohomology.tex:8872-8889",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 7
+      },
+      "status": "bounded_above_tensor_derivation_implication_preserved"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-021"
+      ],
+      "to": "derived.tex:7003,10007,10051",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 7
+      },
+      "status": "receiving_statement_preserved_surrounding_arguments_remain_queued"
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-007"
+      ],
+      "to": "cohomology.tex:2195-2220",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 7
+      },
+      "status": "finite_prefix_calculation_proved_with_degree_q_plus_one_term_retained"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-022"
+      ],
+      "to": "perfect.tex:513-537",
+      "proof": {
+        "file": "PROOFS_5091_5900.md",
+        "bytes": 28303,
+        "sha256": "CB9C6BCBE2EFD67CB3D752341CE00FF1F64213A97B8885A76486D201A35BC9BB",
+        "section": 7
+      },
+      "status": "actual_truncation_maps_and_both_bounds_proved_original_conclusion_preserved"
+    }
+  ],
+  "limits": "No claim that arbitrary additive-functor acyclic objects are closed under the image operation. No geometric counterexample to the Perfect theorem. Later independent source proofs remain queued; no novelty or joint synthesis claim."
+}

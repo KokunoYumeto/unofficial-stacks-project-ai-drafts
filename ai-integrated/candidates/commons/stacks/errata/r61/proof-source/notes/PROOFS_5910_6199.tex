@@ -1,0 +1,259 @@
+\section{\texorpdfstring{Serre subcategories,\allowbreak{} quotient complexes,\allowbreak{} and simultaneous replacements}{Serre  quotient  and simultaneous replacements}}\label{proofs-5910-6199-serre-subcategories-quotient-complexes-and-simultaneous-replacements}
+
+This is an editorial review of original \texttt{derived.\allowbreak{}tex} lines 5910–\allowbreak{}6199 at authority commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14. The current chapter retains the previously admitted corrections and Verdier additions. The original statements and constructions remain identifiable. No novelty is asserted. All complexes have the original cochain grading and shifts.
+
+\subsection{1. Weak Serre subcategories and the exact comparison}\label{proofs-5910-6199-weak-serre-subcategories-and-the-exact-comparison}
+
+Let B be the given weak Serre subcategory of the abelian category A. For a complex X,\allowbreak{} write H\textasciicircum{}n(X)\allowbreak{} for its cohomology in A. By the definition and characterization in current Homology 2091–\allowbreak{}2176,\allowbreak{} B is strictly full,\allowbreak{} closed under kernels and cokernels of its internal morphisms and under extensions,\allowbreak{} and its inclusion into A is exact. Finite biproducts belong to B because they are extensions.
+
+The class D\_\allowbreak{}B(A)\allowbreak{} of complexes with all H\^{}n in B is therefore additive and preserved by every integer shift. If X direct-sum Y belongs to it,\allowbreak{} put M\allowbreak{}=H\textasciicircum{}n(X)\allowbreak{} direct-sum H\textasciicircum{}n(Y)\allowbreak{}. The two endomorphisms
+
+\[
+ e_X=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad
+ e_Y=\begin{pmatrix}0&0\\0&1\end{pmatrix}:M\longrightarrow M
+\]
+
+are morphisms between objects of B. Their kernels are respectively H\textasciicircum{}n(Y)\allowbreak{} and H\textasciicircum{}n(X)\allowbreak{},\allowbreak{} which therefore belong to B. This proves the actual summand assertion underlying the corrected phrase at original 5948; it does not assume that B is closed under arbitrary A-subobjects.
+
+For a distinguished triangle X \allowbreak{}-> Y \allowbreak{}-> Z \allowbreak{}-> X[1]\allowbreak{},\allowbreak{} the exact five-term segment is
+
+\[
+ H^n(X)\longrightarrow H^n(Y)\longrightarrow H^n(Z)
+       \longrightarrow H^{n+1}(X)\longrightarrow H^{n+1}(Y).
+\]
+
+If X,\allowbreak{}Y lie in D\_\allowbreak{}B(A)\allowbreak{},\allowbreak{} the defining five-term condition puts H\textasciicircum{}n(Z)\allowbreak{} in B. Rotation gives every other two-out-of-three case. Cohomological upper or lower bounds are preserved under finite sums,\allowbreak{} summands,\allowbreak{} shifts and triangles,\allowbreak{} proving all stated bounded versions as well.
+
+Exactness of B \allowbreak{}-> A gives the equality of the corresponding kernels,\allowbreak{} images,\allowbreak{} quotients and hence cohomology for any B-complex. Applying the inclusion to the original cone matrix preserves its entries and signs. It sends quasi-isomorphisms to quasi-isomorphisms and descends to the exact comparison D(B)\allowbreak{} \allowbreak{}-> D\_\allowbreak{}B(A)\allowbreak{},\allowbreak{} with the same assertion for \allowbreak{}+,\allowbreak{} -,\allowbreak{} b. No full faithfulness is inferred at this stage.
+
+DERIVED-RECON-031 reconciles P02-E0036 and French DERIVED-026 with MC-STK-ERR-0837:\allowbreak{} the missing verb is already supplied. DERIVED-RECON-032 reconciles P02-E0037 and French DERIVED-027 with MC-STK-ERR-0838:\allowbreak{} the duplicated words are already removed,\allowbreak{} and the endomorphisms above justify the resulting mathematical sentence.
+
+For a Serre subcategory B,\allowbreak{} let v:\allowbreak{}A \allowbreak{}-> C\allowbreak{}=A/\allowbreak{}B be the exact quotient. Since v(H\textasciicircum{}n(X)\allowbreak{})\allowbreak{}\allowbreak{}=H\textasciicircum{}n(vX)\allowbreak{} and ker(v)\allowbreak{}\allowbreak{}=B,\allowbreak{} the kernel of D(v)\allowbreak{} is exactly D\_\allowbreak{}B(A)\allowbreak{}. This proves the stated factorization through the Verdier quotient,\allowbreak{} rather than identifying its source with its target in advance.
+
+\subsection{2. Lifting a complex from the abelian quotient}\label{proofs-5910-6199-lifting-a-complex-from-the-abelian-quotient}
+
+Let the given C-complex have objects X\^{}i of A and differentials d\^{}i in C. Let S be the morphisms of A with kernel and cokernel in B. The roof calculus and its pushout/\allowbreak{}pullback stability are the ones in current Homology 2235–\allowbreak{}2289. We retain each step of the source\textquotesingle s two-sided construction,\allowbreak{} including the finite sums and intersections.
+
+For i>\allowbreak{}=0,\allowbreak{} write d\textasciicircum{}i\allowbreak{}=v(f\textasciicircum{}i)\allowbreak{}v(s\textasciicircum{}i)\allowbreak{}\textasciicircum{}\{-1\},\allowbreak{} with s\textasciicircum{}i:\allowbreak{}Y\textasciicircum{}i \allowbreak{}-> X\^{}i in S and f\textasciicircum{}i:\allowbreak{}Y\textasciicircum{}i \allowbreak{}-> X\textasciicircum{}\{i\allowbreak{}+1\}. Starting with j\textasciicircum{}0\allowbreak{}=1 on X\textasciicircum{}0,\allowbreak{} form recursively
+
+\[
+ (X')^{i+1}
+   =\operatorname{Coker}\big((j^is^i,-f^i):
+             Y^i\longrightarrow (X')^i\oplus X^{i+1}\big).
+                                                        \tag{2.1}
+\]
+
+Let a\textasciicircum{}i:\allowbreak{}(X')\allowbreak{}\textasciicircum{}i \allowbreak{}-> (X')\allowbreak{}\textasciicircum{}\{i\allowbreak{}+1\} and j\textasciicircum{}\{i\allowbreak{}+1\}:\allowbreak{}X\textasciicircum{}\{i\allowbreak{}+1\} \allowbreak{}-> (X')\allowbreak{}\textasciicircum{}\{i\allowbreak{}+1\} be the two pushout maps. The minus sign in (2.1)\allowbreak{} gives the exact identity a\^{}i j\^{}i s\textasciicircum{}i\allowbreak{}=j\textasciicircum{}\{i\allowbreak{}+1\} f\^{}i. Since j\^{}i s\^{}i is in S,\allowbreak{} its pushout j\textasciicircum{}\{i\allowbreak{}+1\} is in S. Induction proves this at every finite nonnegative degree. Applying v yields
+
+\[
+ v(a^i)v(j^i)=v(j^{i+1})d^i.
+\]
+
+Take (X')\allowbreak{}\textasciicircum{}n\allowbreak{}=X\textasciicircum{}n and j\textasciicircum{}n\allowbreak{}=1 for n<\allowbreak{}=0,\allowbreak{} and transport the negative differentials in C. This gives an isomorphism of C-complexes and represents every nonnegative differential by an actual A-map. No infinite pushout or limit has been used.
+
+For the resulting negative differentials,\allowbreak{} write d\textasciicircum{}i\allowbreak{}=v(t\textasciicircum{}\{i\allowbreak{}+1\})\allowbreak{}\textasciicircum{}\{-1\}v(g\textasciicircum{}i)\allowbreak{},\allowbreak{} with t\textasciicircum{}\{i\allowbreak{}+1\}:\allowbreak{}X\textasciicircum{}\{i\allowbreak{}+1\} \allowbreak{}-> Z\textasciicircum{}\{i\allowbreak{}+1\} in S and g\textasciicircum{}i:\allowbreak{}X\textasciicircum{}i \allowbreak{}-> Z\textasciicircum{}\{i\allowbreak{}+1\}. Starting at j\textasciicircum{}0\allowbreak{}=1,\allowbreak{} form,\allowbreak{} by descending induction,\allowbreak{}
+
+\[
+ (X')^i=X^i\mathbin{\times}_{Z^{i+1}}(X')^{i+1},\quad
+ j^i:(X')^i\longrightarrow X^i,\quad
+ a^i:(X')^i\longrightarrow (X')^{i+1},                    \tag{2.2}
+\]
+
+where the second map to Z\textasciicircum{}\{i\allowbreak{}+1\} is t\textasciicircum{}\{i\allowbreak{}+1\}j\textasciicircum{}\{i\allowbreak{}+1\}. The pullback identity is g\^{}i j\textasciicircum{}i\allowbreak{}=t\textasciicircum{}\{i\allowbreak{}+1\}j\textasciicircum{}\{i\allowbreak{}+1\}a\textasciicircum{}i. Pullback stability of S makes j\^{}i an S-map,\allowbreak{} and after v the identity becomes d\^{}i v(j\textasciicircum{}i)\allowbreak{}\allowbreak{}=v(j\textasciicircum{}\{i\allowbreak{}+1\})\allowbreak{}v(a\textasciicircum{}i)\allowbreak{}. Keep the already constructed terms and maps in degrees >\allowbreak{}=0. We now have A-maps in every degree,\allowbreak{} whose successive composites vanish after v. These maps need not yet form an A-complex; that is precisely what the next two steps achieve.
+
+DERIVED-RECON-033 /\allowbreak{} P02-E0040 corrects the four diagram labels in original 6063–\allowbreak{}6064 to t\textasciicircum{}\{-2\},\allowbreak{}g\textasciicircum{}\{-2\},\allowbreak{}t\textasciicircum{}\{-1\},\allowbreak{}g\textasciicircum{}\{-1\}. Their domains and codomains in (2.2)\allowbreak{} are respectively X\^{}\{-2\} \allowbreak{}-> Z\textasciicircum{}\{-2\},\allowbreak{} X\^{}\{-2\} \allowbreak{}-> Z\textasciicircum{}\{-1\},\allowbreak{} X\^{}\{-1\} \allowbreak{}-> Z\textasciicircum{}\{-1\},\allowbreak{} X\^{}\{-1\} \allowbreak{}-> Z\^{}0. The existing subscript labels do not match the declared cochain components. All four remain uncorrected in the current chapter and receive separate exact replacements.
+
+To check the final source formulas,\allowbreak{} write a\_\allowbreak{}\{j,\allowbreak{}i\}\allowbreak{}=d\textasciicircum{}\{j-1\}...d\textasciicircum{}i for j\textgreater i and a\_\allowbreak{}\{i,\allowbreak{}i\}\allowbreak{}=1,\allowbreak{} using the A-maps just constructed. Put I\_\allowbreak{}k\allowbreak{}=Im(d\textasciicircum{}\{k-1\}d\textasciicircum{}\{k-2\})\allowbreak{} inside X\^{}k. Exactness of v implies v(I\_\allowbreak{}k)\allowbreak{}\allowbreak{}=0,\allowbreak{} so I\_\allowbreak{}k belongs to B. For n\textgreater0 retain the entire source expression
+
+\[
+ N^n=\sum_{0<k\le n}\operatorname{Im}
+                  (I_k\longrightarrow X^n),\qquad
+ \widetilde X^n=X^n/N^n,                                \tag{2.3}
+\]
+
+where the indicated map is the restriction of a\_\allowbreak{}\{n,\allowbreak{}k\}. Set N\textasciicircum{}n\allowbreak{}=0 for n<\allowbreak{}=0. Each N\^{}n belongs to B,\allowbreak{} since the sum is finite and B is Serre. Moreover d\textasciicircum{}n(N\textasciicircum{}n)\allowbreak{} is contained in N\textasciicircum{}\{n\allowbreak{}+1\},\allowbreak{} so all differentials descend. For n>\allowbreak{}=0 the image of d\^{}n d\^{}\{n-1\} is contained in I\_\allowbreak{}\{n\allowbreak{}+1\},\allowbreak{} one of the retained summands in N\textasciicircum{}\{n\allowbreak{}+1\}. Thus these composites are zero on the quotient. Each X\^{}n \allowbreak{}-> tilde X\^{}n becomes an isomorphism under v. This proves the first source replacement with its exact range and without dropping the k\allowbreak{}=1 contribution from X\^{}\{-1\}.
+
+For the remaining step use the new objects tilde X and their induced maps; denote their path composites by tilde a. Set Q\textasciicircum{}n\allowbreak{}=tilde X\^{}n for n>\allowbreak{}=0,\allowbreak{} and for n\textless0 keep the full finite intersection
+
+\[
+ Q^n=\bigcap_{n\le k<0}
+       (\widetilde a_{k,n})^{-1}
+       \ker(\widetilde d^{k+1}\widetilde d^k).             \tag{2.4}
+\]
+
+Equivalently,\allowbreak{} Q\^{}n is the kernel of the map to the finite biproduct of the images of tilde a\_\allowbreak{}\{k\allowbreak{}+2,\allowbreak{}n\},\allowbreak{} n<\allowbreak{}=k<0. Each such image belongs to B,\allowbreak{} since v kills the consecutive two-map factor. Consequently tilde X\textasciicircum{}n/\allowbreak{}Q\textasciicircum{}n lies in B and Q\^{}n \allowbreak{}-> tilde X\^{}n becomes an isomorphism under v. If x denotes a generalized section of Q\textasciicircum{}n,\allowbreak{} every condition at degree n\allowbreak{}+1 follows by composing the corresponding condition for x with tilde d\^{}n; categorically,\allowbreak{} the image of tilde d\textasciicircum{}n|\_\allowbreak{}\{Q\textasciicircum{}n\} lies in each of the kernels defining Q\textasciicircum{}\{n\allowbreak{}+1\}. Thus Q is preserved by the differential. For n\textless0 its k\allowbreak{}=n condition says exactly that the two-map composite starting at Q\^{}n is zero. The composites starting in nonnegative degree already vanished by (2.3)\allowbreak{}. Hence Q is an A-complex. The maps in (2.1)\allowbreak{}–\allowbreak{}(2.4)\allowbreak{},\allowbreak{} after v,\allowbreak{} give actual chain isomorphisms connecting vQ to the original C-complex. This proves essential surjectivity with no omitted boundary degree.
+
+\subsection{3. The left adjoint descends after the quotient}\label{proofs-5910-6199-the-left-adjoint-descends-after-the-quotient}
+
+Keep the source hypothesis:\allowbreak{} u:\allowbreak{}C \allowbreak{}-> A is left adjoint to the exact quotient v:\allowbreak{}A \allowbreak{}-> C and vu is naturally isomorphic to Id\_\allowbreak{}C. Let eta:\allowbreak{}Id\_\allowbreak{}C \allowbreak{}-> vu and epsilon:\allowbreak{}uv \allowbreak{}-> Id\_\allowbreak{}A be the actual unit and counit. The latter natural isomorphism need not initially have been specified as eta,\allowbreak{} so we first justify that eta itself is invertible.
+
+Write T\allowbreak{}=vu,\allowbreak{} mu\allowbreak{}=v epsilon u,\allowbreak{} and choose the given natural isomorphism alpha:\allowbreak{}T \allowbreak{}-> Id. Define natural endomorphisms of Id\_\allowbreak{}C by
+
+\[
+ e=\alpha\eta,\qquad
+ m=\alpha\mu\,T(\alpha^{-1})\alpha^{-1}.                 \tag{3.1}
+\]
+
+Naturality of eta and the monad unit identity mu eta\_\allowbreak{}T\allowbreak{}=1 give
+
+\[
+ me=\alpha\mu T(\alpha^{-1})\eta
+    =\alpha\mu\eta_T\alpha^{-1}=1.
+\]
+
+Natural endomorphisms of the identity commute:\allowbreak{} naturality of e at the morphism m\_\allowbreak{}X gives e\_\allowbreak{}X m\_\allowbreak{}X\allowbreak{}=m\_\allowbreak{}X e\_\allowbreak{}X for every X. Thus em\allowbreak{}=1 as well. It follows that eta\allowbreak{}=alpha\textasciicircum{}\{-1\}e is invertible. The adjunction triangle identity now gives the specific formula
+
+\[
+ v(\epsilon_X)=\eta_{vX}^{-1}.                            \tag{3.2}
+\]
+
+The left adjoint u is additive. One direct verification is that its left-adjoint property preserves zero objects and finite coproducts; in an abelian category these are biproducts,\allowbreak{} and the zero maps,\allowbreak{} projections and diagonals are characterized by their biproduct equations. Hence u preserves addition as defined by diagonal,\allowbreak{} biproduct and codiagonal. It therefore acts termwise on complexes and homotopies and preserves the cone matrix,\allowbreak{} with its minus sign.
+
+It is not necessary,\allowbreak{} and is generally false,\allowbreak{} that u send every C-quasi-isomorphism to an A-quasi-isomorphism. Let
+
+\[
+ T_A=D(A)/D_B(A),\qquad q:D(A)\longrightarrow T_A.
+\]
+
+If s is a quasi-isomorphism of C-complexes,\allowbreak{} then v u C(s)\allowbreak{} is isomorphic to C(s)\allowbreak{} via eta\^{}\{-1\}. Thus H\^{}n(u C(s)\allowbreak{})\allowbreak{} lies in B for every n. It follows that q(u C(s)\allowbreak{})\allowbreak{}\allowbreak{}=0 and q(u s)\allowbreak{} is invertible. The universal property of localization therefore gives an exact functor
+
+\[
+ G:D(C)\longrightarrow T_A,\qquad G(Y)=q(uY),              \tag{3.3}
+\]
+
+where uY means the termwise construction before localization. The localization proof is what makes (3.3)\allowbreak{} independent of a chosen complex representative. Naturality of eta and epsilon on chain maps extends to inverted arrows by multiplying their naturality identities by inverses. We obtain natural isomorphisms
+
+\[
+ F G\xrightarrow{\eta^{-1}}\operatorname{Id}_{D(C)},\qquad
+ G F\xrightarrow{q(\epsilon)}\operatorname{Id}_{T_A},      \tag{3.4}
+\]
+
+where F:\allowbreak{}T\_\allowbreak{}A \allowbreak{}-> D(C)\allowbreak{} is induced by v. The second is invertible because its cone has cohomology in B by (3.2)\allowbreak{}. For arbitrary X,\allowbreak{}Y in D(A)\allowbreak{},\allowbreak{} the inverse on Hom of F is the explicit map
+
+\[
+ a:vX\longrightarrow vY
+ \quad\longmapsto\quad
+ q(\epsilon_Y)\,G(a)\,q(\epsilon_X)^{-1}.                 \tag{3.5}
+\]
+
+Applying F to (3.5)\allowbreak{},\allowbreak{} formula (3.2)\allowbreak{} and naturality of eta give a. Conversely,\allowbreak{} naturality of q(epsilon)\allowbreak{} shows that (3.5)\allowbreak{} takes F(b)\allowbreak{} back to b for every b:\allowbreak{}qX \allowbreak{}-> qY,\allowbreak{} including roofs. This proves full faithfulness and essential surjectivity of F with the original maps.
+
+For each of \allowbreak{}+,\allowbreak{}-,\allowbreak{}b perform the same construction on complexes whose terms satisfy the indicated bound. Additivity of u preserves their zero terms. An acyclic cone still maps to a complex with B-cohomology,\allowbreak{} so (3.3)\allowbreak{} descends to D\textasciicircum{}*(C)\allowbreak{} \allowbreak{}-> D\textasciicircum{}*(A)\allowbreak{}/\allowbreak{}D\_\allowbreak{}B\textasciicircum{}*(A)\allowbreak{}. All identities (3.2)\allowbreak{}–\allowbreak{}(3.5)\allowbreak{} remain within these bounded categories. One never assumes that u preserves cohomological bounds on an arbitrary representative.
+
+DERIVED-RECON-034 confirms MC-STK-ERR-0839\textquotesingle s parenthesis repair for P02-E0038 and French DERIVED-028. That repair is valid but insufficient to express the scope of (3.5)\allowbreak{}:\allowbreak{} original 6128 and current 6481 quantify only X,\allowbreak{}Y in A. \textbf{DERIVED-NEW-023} changes that domain to D(A)\allowbreak{} and adds the termwise descent explanation after original 6118. This is a proof-domain repair and clarification,\allowbreak{} not a counterexample to the quotient theorem or an assertion that u is exact. The old punctuation correction remains preserved in the new expression.
+
+For a concrete check that the distinction is necessary,\allowbreak{} fix a prime p. Let A be the abelian category of left modules over
+
+\[
+ R=\begin{pmatrix}\mathbf Z&0\\\mathbf F_p&\mathbf F_p\end{pmatrix}.
+\]
+
+Equivalently its objects are triples (M,\allowbreak{}N,\allowbreak{}phi)\allowbreak{},\allowbreak{} where M is an abelian group,\allowbreak{} N an F\_\allowbreak{}p-vector space and phi:\allowbreak{}M/\allowbreak{}pM \allowbreak{}-> N is F\_\allowbreak{}p-linear. A morphism is a pair (f,\allowbreak{}g)\allowbreak{} satisfying g phi\allowbreak{}=phi' bar f. Kernels and cokernels are computed on the two components with the induced structure map,\allowbreak{} as also follows by applying the two complementary idempotents of R. The functor v(M,\allowbreak{}N,\allowbreak{}phi)\allowbreak{}\allowbreak{}=M is exact. Its left adjoint is u(M)\allowbreak{}\allowbreak{}=(M,\allowbreak{}M/\allowbreak{}pM,\allowbreak{}1)\allowbreak{}:\allowbreak{} a morphism u(M)\allowbreak{} \allowbreak{}-> (M',\allowbreak{}N',\allowbreak{}phi')\allowbreak{} is uniquely determined by f:\allowbreak{}M \allowbreak{}-> M',\allowbreak{} its second component being phi\textquotesingle{} bar f. Thus vu\allowbreak{}=Id,\allowbreak{} and the counit has components (1,\allowbreak{}phi)\allowbreak{}.
+
+The Serre kernel B consists of triples (0,\allowbreak{}N,\allowbreak{}0)\allowbreak{}. Every counit has kernel and cokernel in B; in the localization it identifies every object with u(vX)\allowbreak{}. The same pair-of-components adjunction proves that the induced A/\allowbreak{}B \allowbreak{}-> Ab is an equivalence,\allowbreak{} so this is a concrete instance of the source setup. The injection p:\allowbreak{}Z \allowbreak{}-> Z is sent by u to (p,\allowbreak{}0)\allowbreak{},\allowbreak{} which has the nonzero kernel (0,\allowbreak{}F\_\allowbreak{}p,\allowbreak{}0)\allowbreak{}. More explicitly,\allowbreak{} the acyclic complex Z --p-\allowbreak{}-> Z \allowbreak{}-> Z/\allowbreak{}p in degrees 0,\allowbreak{}1,\allowbreak{}2 is sent to a complex whose first component is that exact complex and whose second is F\_\allowbreak{}p --0-\allowbreak{}-> F\_\allowbreak{}p --1-\allowbreak{}-> F\_\allowbreak{}p. Its degree-zero cohomology is (0,\allowbreak{}F\_\allowbreak{}p,\allowbreak{}0)\allowbreak{},\allowbreak{} and all other cohomology is zero. It is not acyclic in A; its cohomology lies in B and vanishes in the required quotient,\allowbreak{} exactly as (3.3)\allowbreak{} asserts. No contribution has been removed.
+
+\subsection{4. Subcomplex replacements and all derived morphisms}\label{proofs-5910-6199-subcomplex-replacements-and-all-derived-morphisms}
+
+Now assume precisely the hypothesis of original 6143–\allowbreak{}6150:\allowbreak{} B is Serre in A,\allowbreak{} and every epimorphism X \allowbreak{}-> Y with Y in B admits a B-subobject X\textquotesingle{} of X which still maps onto Y. Let X\^{}bullet be bounded above with H\textasciicircum{}i(X)\allowbreak{} in B,\allowbreak{} and retain arbitrary prescribed B-subobjects B\^{}i of X\^{}i.
+
+Choose C\^{}i inside ker(d\textasciicircum{}i)\allowbreak{} in B surjecting onto H\textasciicircum{}i(X)\allowbreak{}. Such a choice is possible by applying the hypothesis to ker(d\textasciicircum{}i)\allowbreak{} \allowbreak{}-> H\textasciicircum{}i(X)\allowbreak{}. Keep the original formula
+
+\[
+ D^i=C^i+d^{i-1}(B^{i-1})+B^i.                           \tag{4.1}
+\]
+
+Every summand,\allowbreak{} and their finite sum,\allowbreak{} lies in B. The image d\textasciicircum{}i(D\textasciicircum{}i)\allowbreak{} equals d\textasciicircum{}i(B\textasciicircum{}i)\allowbreak{},\allowbreak{} which is contained in D\textasciicircum{}\{i\allowbreak{}+1\}; hence D is a subcomplex. The chosen C\^{}i show that H\textasciicircum{}i(D)\allowbreak{} \allowbreak{}-> H\textasciicircum{}i(X)\allowbreak{} is epic.
+
+Above the upper term bound set E\textasciicircum{}i\allowbreak{}=0. Descending inductively,\allowbreak{} put
+
+\[
+ V^{i+1}=(D^{i+1}+E^{i+1})\cap\operatorname{Im}(d^i).
+\]
+
+This object lies in B,\allowbreak{} because it is a subobject of a B-object. Apply the hypothesis to the epimorphism (d\textasciicircum{}i)\allowbreak{}\textasciicircum{}\{-1\}(V\textasciicircum{}\{i\allowbreak{}+1\})\allowbreak{} \allowbreak{}-> V\textasciicircum{}\{i\allowbreak{}+1\} to obtain E\^{}i inside that preimage,\allowbreak{} with E\^{}i in B and d\textasciicircum{}i(E\textasciicircum{}i)\allowbreak{}\allowbreak{}=V\textasciicircum{}\{i\allowbreak{}+1\}. Set Y\textasciicircum{}i\allowbreak{}=D\textasciicircum{}i\allowbreak{}+E\textasciicircum{}i. The formulas give an actual subcomplex Y of X,\allowbreak{} containing each prescribed B\textasciicircum{}i,\allowbreak{} with terms in B. Its cohomology remains surjective onto that of X. For injectivity,\allowbreak{} the exact subobject identity is
+
+\[
+ \ker(d^i|_{Y^i})\cap\operatorname{Im}(d^{i-1}_X)
+   =Y^i\cap\operatorname{Im}(d^{i-1}_X)
+   =d^{i-1}(E^{i-1})=\operatorname{Im}(d^{i-1}_Y).        \tag{4.2}
+\]
+
+The first equality uses d\^{}i d\textasciicircum{}\{i-1\}\allowbreak{}=0,\allowbreak{} the second is the inductive choice,\allowbreak{} and the last follows from E\^{}\{i-1\} contained in Y\^{}\{i-1\} together with the reverse containment for every Y-boundary. Thus Y \allowbreak{}-> X is a quasi-isomorphism. This verifies the entire subcomplex claim without replacing images by unspecified elements.
+
+For faithfulness first take a chain map f:\allowbreak{}U \allowbreak{}-> V between bounded above B-complexes whose derived image in A is zero. The fraction calculus supplies a quasi-isomorphism s:\allowbreak{}V \allowbreak{}-> X into a bounded above A-complex and a homotopy h\textasciicircum{}i:\allowbreak{}U\textasciicircum{}i \allowbreak{}-> X\^{}\{i-1\} satisfying
+
+\[
+ (sf)^i=d_X^{i-1}h^i+h^{i+1}d_U^i.                      \tag{4.3}
+\]
+
+Take the prescribed subobjects B\textasciicircum{}i\allowbreak{}=Im(h\textasciicircum{}\{i\allowbreak{}+1\})\allowbreak{}\allowbreak{}+Im(s\textasciicircum{}i)\allowbreak{}. They belong to B. The construction gives a quasi-isomorphism Y \allowbreak{}-> X through which s and h factor. Write s':\allowbreak{}V \allowbreak{}-> Y for the resulting chain map. Since both s and Y \allowbreak{}-> X are quasi-isomorphisms,\allowbreak{} so is s\textquotesingle. Equation (4.3)\allowbreak{} holds in Y,\allowbreak{} by monicity of Y \allowbreak{}-> X,\allowbreak{} and makes s\textquotesingle f null-homotopic there. Hence f is zero in D\textasciicircum{}-(B)\allowbreak{}. For an arbitrary derived arrow represented by f t\textasciicircum{}\{-1\},\allowbreak{} vanishing after inclusion implies that f vanishes after inclusion,\allowbreak{} because t is already a quasi-isomorphism. The preceding argument applies,\allowbreak{} proving faithfulness for every derived arrow.
+
+For fullness,\allowbreak{} represent any A-derived arrow U \allowbreak{}-> V by a right roof
+
+\[
+ U\xrightarrow{f}X\xleftarrow{s}V,\qquad s\text{ a quasi-isomorphism}.
+                                                               \tag{4.4}
+\]
+
+Take B\textasciicircum{}i\allowbreak{}=Im(f\textasciicircum{}i)\allowbreak{}\allowbreak{}+Im(s\textasciicircum{}i)\allowbreak{}. A replacement Y \allowbreak{}-> X containing these images factors the roof into B-complexes. The factor s':\allowbreak{}V \allowbreak{}-> Y is a quasi-isomorphism,\allowbreak{} and (s')\allowbreak{}\textasciicircum{}\{-1\}f' in D\textasciicircum{}-(B)\allowbreak{} maps to the original arrow. This is the exact fullness argument abbreviated in the source. Essential surjectivity follows from the construction with B\textasciicircum{}i\allowbreak{}=0.
+
+DERIVED-RECON-035 verifies French DERIVED-029 and MC-STK-ERR-0840:\allowbreak{} after faithfulness,\allowbreak{} the remaining assertion is indeed Fullness. P02-E0039 also reports original 7396–\allowbreak{}7397. Only its 6197–\allowbreak{}6198 component is reconciled here. The physical report remains partly open until its second context is reviewed; it is not counted among the completely resolved reports at this checkpoint.
+
+\subsection{\texorpdfstring{5. DERIVED-UNDER-008:\allowbreak{} simultaneous factorization and consequences}{5.  simultaneous factorization and consequences}}\label{proofs-5910-6199-derived-under-008-simultaneous-factorization-and-consequences}
+
+Keep all hypotheses of section 4. For a fixed bounded above X with B-cohomology,\allowbreak{} let P\_\allowbreak{}X be its B-term subcomplexes Y for which Y \allowbreak{}-> X is a quasi-isomorphism,\allowbreak{} ordered by inclusion. It is nonempty by section 4. Given Y\_\allowbreak{}1,\allowbreak{}...,\allowbreak{}Y\_\allowbreak{}r,\allowbreak{} apply that construction with B\textasciicircum{}i\allowbreak{}=sum\_\allowbreak{}j Y\_\allowbreak{}j\textasciicircum{}i. It yields Y containing every Y\_\allowbreak{}j. Thus P\_\allowbreak{}X is filtered; as an inclusion poset it has no distinct parallel arrows requiring equalization. Each inclusion Y \allowbreak{}-> Y\textquotesingle{} in P\_\allowbreak{}X is itself a quasi-isomorphism by two-out-of-three.
+
+More strongly,\allowbreak{} any finite family of chain maps from bounded above B-complexes into X factors simultaneously through one Y in P\_\allowbreak{}X. Any specified finite family of homotopies between those maps is retained there as well. In degree i prescribe the sum of all map images from degree i and all homotopy images from degree i\allowbreak{}+1. Each is a quotient of a B-object,\allowbreak{} so this is a B-subobject of X\^{}i. The construction and the monicity argument in (4.3)\allowbreak{} prove the claim with all equations unchanged.
+
+In particular,\allowbreak{} for a fixed bounded above B-complex U,\allowbreak{} the canonical maps induce the exact Hom formula
+
+\[
+ \mathop{\rm colim}_{Y\in P_X}
+       \operatorname{Hom}_{K^-(B)}(U,Y)
+       \xrightarrow{\ \sim\ }
+       \operatorname{Hom}_{K^-(A)}(U,X).                  \tag{5.1}
+\]
+
+Here the colimit is realized by the group on the right:\allowbreak{} every chain map factors by the image construction,\allowbreak{} and if two factorizations give the same homotopy class in X,\allowbreak{} include both target subcomplexes and the images of one witnessing homotopy in a common replacement. They then agree in its homotopy category. This proves precisely the equality relation in the filtered colimit. Sums are compatible by passing to a common replacement and adding the factor maps,\allowbreak{} so (5.1)\allowbreak{} is an isomorphism of abelian groups,\allowbreak{} not only a bijection. The same argument proves its universal property for compatible families of homomorphisms. Thus no preservation of a previously unconstructed colimit in A is assumed.
+
+The following diagram records the actual simultaneous replacement; the diagonal inclusions and all maps shown are chain maps,\allowbreak{} and the maps from Y\_\allowbreak{}1,\allowbreak{}Y\_\allowbreak{}2,\allowbreak{}Y to X are quasi-isomorphisms.
+
+\[
+ \begin{array}{ccccc}
+ Y_1&\lhook\joinrel\longrightarrow&Y&\longleftarrow\joinrel\rhook&Y_2\\[-2pt]
+ &&\big\downarrow&&\\[-2pt]
+ &&X&&
+ \end{array}
+\]
+
+Both paths to X are the given subcomplex inclusions. The homotopy operators,\allowbreak{} when prescribed,\allowbreak{} factor term by term through this same Y with their original degree -1.
+
+The equivalence of section 4 restricts to
+
+\[
+ D^b(B)\xrightarrow{\sim}D^b_B(A).                      \tag{5.2}
+\]
+
+Indeed,\allowbreak{} if the A-cohomology of a resulting Y vanishes below a,\allowbreak{} exactness of B \allowbreak{}-> A gives the same vanishing in B. Replace Y,\allowbreak{} within B,\allowbreak{} by its canonical truncation tau\_\allowbreak{}\{>\allowbreak{}=a\}Y. Its degree-a term is coker(d\textasciicircum{}\{a-1\}\_\allowbreak{}Y)\allowbreak{},\allowbreak{} an object of B,\allowbreak{} its higher terms are the original Y\textasciicircum{}i,\allowbreak{} and the map Y \allowbreak{}-> tau\_\allowbreak{}\{>\allowbreak{}=a\}Y is a quasi-isomorphism. The upper term bound is retained. Full faithfulness follows by restricting the already proved D\^{}- equivalence and the bounded embeddings. This proves (5.2)\allowbreak{} without asserting that this canonical truncation is a subcomplex of X.
+
+For M,\allowbreak{}N in B,\allowbreak{} the comparison therefore identifies,\allowbreak{} for every n,\allowbreak{}
+
+\[
+ \operatorname{Hom}_{D^b(B)}(M[0],N[n])
+   \xrightarrow{\sim}
+ \operatorname{Hom}_{D^b(A)}(M[0],N[n]).                 \tag{5.3}
+\]
+
+These are the derived-category Ext groups. Compatibility with composition and shift follows from the original exact inclusion; in particular their products are preserved. We do not use an unproved additional identification with a different Ext presentation.
+
+These are editorial consequences of the source construction. The bounded restriction is also used in the existing Perfect proposition below; it is not advertised as a result missing from the corpus. The source body is not rewritten to incorporate (5.1)\allowbreak{}–\allowbreak{}(5.3)\allowbreak{}.
+
+\subsection{6. Checked receiving implications}\label{proofs-5910-6199-checked-receiving-implications}
+
+In current Adequate Modules 2013–\allowbreak{}2031,\allowbreak{} u is the associated adequate module functor,\allowbreak{} v is restriction to the small Zariski site,\allowbreak{} and the unit is an isomorphism. Crucially,\allowbreak{} the source explicitly says u is not left exact in general. The adjunction and unit are described at 1737–\allowbreak{}1765; parasitic objects form the Serre kernel,\allowbreak{} as in 2040–\allowbreak{}2114. Applying (3.2)\allowbreak{} to the actual adjunction shows that the cone of the termwise counit has parasitic cohomology. Equations (3.3)\allowbreak{}–\allowbreak{}(3.5)\allowbreak{} therefore give the inverse and both natural isomorphisms for the equivalence asserted at 2164–\allowbreak{}2179,\allowbreak{} including its bounded versions. The clarification preserves this receiving theorem and does not add the false requirement that its u be exact. Only this dependency implication is reviewed here,\allowbreak{} not every earlier adequate-module lemma.
+
+For current Perfect Complexes 2564–\allowbreak{}2592 set A\allowbreak{}=QCoh(O\_\allowbreak{}X)\allowbreak{},\allowbreak{} B\allowbreak{}=Coh(O\_\allowbreak{}X)\allowbreak{},\allowbreak{} with X Noetherian. The kernels,\allowbreak{} quotients and extensions required for the Serre property are those in current Coherent Sheaves 2448–\allowbreak{}2488:\allowbreak{} on a Noetherian affine,\allowbreak{} submodules and quotients of finite modules are finite,\allowbreak{} and extensions of finite modules are finite. The local exact module-to-quasi-coherent-sheaf correspondence gives the stated sheaf operations.
+
+For an epimorphism G \allowbreak{}-> F from a quasi-coherent sheaf to a coherent one,\allowbreak{} Properties 3009–\allowbreak{}3033 writes G as a directed union of its finite-type quasi-coherent submodules. These are coherent on a Noetherian scheme. Their images form a directed union equal to F. Choose a finite affine cover of X. On each affine,\allowbreak{} finitely many generators of F are contained in one of the image submodules; by directedness and the finiteness of the cover,\allowbreak{} one coherent submodule of G has image all of F. This verifies the epimorphism hypothesis used in section 4 with the receiving objects unchanged.
+
+Consequently the concrete coherent subcomplex construction in (4.1)\allowbreak{}–\allowbreak{}(4.2)\allowbreak{},\allowbreak{} and its simultaneous map/\allowbreak{}homotopy refinement (5.1)\allowbreak{},\allowbreak{} apply to bounded above quasi-coherent complexes with coherent cohomology. The bounded restriction (5.2)\allowbreak{} and groups (5.3)\allowbreak{} follow for Coh inside QCoh. Current Perfect 2595–\allowbreak{}2631 already uses the bounded restriction in its larger comparison with all O\_\allowbreak{}X-modules. That further comparison invokes its separate proposition-Noetherian; we do not claim a new review of that proposition from this bounded dependency check. No Perfect source change follows from UNDER-008.

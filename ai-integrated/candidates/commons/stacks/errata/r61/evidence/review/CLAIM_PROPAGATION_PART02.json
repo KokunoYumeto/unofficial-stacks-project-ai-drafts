@@ -1,0 +1,52 @@
+{
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-002",
+        "DERIVED-NEW-004"
+      ],
+      "to": "DERIVED-NEW-005",
+      "meaning": "The exposed translation comparison and explicit sign counterexample identify and repair the scope of uniqueness.",
+      "proof": {
+        "file": "PROOFS_1149_1843.md",
+        "sha256": "340AF21C212F4666D715ADD30192633A326E36A85DE2915633080142048EDE0A",
+        "section": 3
+      },
+      "status": "proved"
+    },
+    {
+      "from": [
+        "DERIVED-NEW-002"
+      ],
+      "to": "DERIVED-NEW-006",
+      "meaning": "The same omitted map occurs in the receiving kernel proof; exact boundary restored without changing the theorem.",
+      "proof": {
+        "file": "PROOFS_1149_1843.md",
+        "sha256": "340AF21C212F4666D715ADD30192633A326E36A85DE2915633080142048EDE0A",
+        "section": 5
+      },
+      "status": "proved"
+    }
+  ],
+  "external_localization_uses_checked": [
+    "adequate.tex:2202-2227",
+    "dga.tex:2568-2590",
+    "perfect.tex:9810-9840",
+    "sdga.tex:4187-4212"
+  ],
+  "external_effect": "All use the canonical localization with its identity comparison; no receiving source edit required.",
+  "internal_localization_uses": "Current interval proved; later uses remain subject to source-ordered review.",
+  "not_a_finding": {
+    "source_lines": [
+      1574,
+      1577
+    ],
+    "reason": "The inverse rotation gives the required unshifted summand, with the exact complementary object Z-prime[-1].",
+    "proof": {
+      "file": "PROOFS_1149_1843.md",
+      "sha256": "340AF21C212F4666D715ADD30192633A326E36A85DE2915633080142048EDE0A",
+      "section": 4
+    }
+  },
+  "later_synthesis": "Still deferred until the core queue is complete."
+}

@@ -1,0 +1,190 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-009",
+      "source_lines": [
+        6307,
+        6568
+      ],
+      "kind": "cohomology_window_and_relative_lifting",
+      "original_statement": "A quasi-isomorphism induces an isomorphism on homotopy classes into a bounded-below injective complex; monomorphic quasi-isomorphisms allow strict lifts, unique up to homotopy.",
+      "proved_statement": "For I^n=0 below a with injective terms, cohomology isomorphisms only in degrees n>=a suffice for the Hom comparison. A termwise monomorphism satisfying this range permits strict lifts, and two strict lifts have a homotopy vanishing on the original subcomplex. The explicit degree-reversing dual gives the projective version with n<=b and homotopies killed by the quotient map.",
+      "hypotheses": "The actual target I, its lower term bound a and injective terms; the displayed cohomology range for the actual map. Strict statements additionally use its degreewise monomorphisms. Dual bounds and epimorphisms are explicitly proved.",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          2,
+          3,
+          4,
+          8
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:6307-6568",
+        "derived.tex:6748-6836",
+        "cohomology.tex:2440-2464,3368-3413",
+        "sites-cohomology.tex:2439-2484"
+      ]
+    },
+    {
+      "claim_id": "DERIVED-UNDER-010",
+      "source_lines": [
+        6570,
+        6663
+      ],
+      "kind": "both_prescribed_outer_resolutions",
+      "original_statement": "A short exact sequence of bounded-below complexes has a compatible sequence of injective resolutions in which the first resolution may be prescribed.",
+      "proved_statement": "Both outer injective resolutions may be prescribed, without requiring the given right-hand resolution map to be monic. A homotopy gives the upper-right entry h in the actual middle map [[1,h],[0,f_3]]. The explicitly computed projective dual retains both prescribed outer projective resolutions. Existing common term bounds are preserved.",
+      "hypotheses": "The source short exact sequence and the two actually given bounded outer resolutions. No extra enough-injectives/projectives hypothesis is needed once those resolutions are supplied.",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          6,
+          8
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:6570-6663",
+        "derived.tex:6838-6869",
+        "cohomology.tex:3150-3204"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "MC-STK-ERR-0847"
+      ],
+      "to": "DERIVED-NEW-024",
+      "status": "parenthesis_fix_preserved_and_independent_sign_error_repaired",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-024",
+        "DERIVED-UNDER-009"
+      ],
+      "to": "cohomology.tex:2440-2464,3368-3413",
+      "status": "actual_comparison_and_base_change_homotopies_proved_with_original_maps",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-024",
+        "DERIVED-UNDER-009"
+      ],
+      "to": "sites-cohomology.tex:2439-2484",
+      "status": "same_flat_base_change_dependency_proved_for_ringed_topoi",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-024"
+      ],
+      "to": "descent.tex:3933-3956",
+      "status": "strict_comparison_map_and_global_section_homotopy_preserved",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-010"
+      ],
+      "to": "cohomology.tex:3150-3204",
+      "status": "both_outer_resolutions_retained_in_Cech_boundary_comparison",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-010"
+      ],
+      "to": "derived.tex:6838-6869",
+      "status": "explicit_projective_matrices_and_both_fixed_outer_resolutions_proved",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-021"
+      ],
+      "to": "derived.tex:6979-7089",
+      "status": "surrounding_right_derived_existence_argument_now_reviewed_non_circularly",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex:6871-6926"
+      ],
+      "to": "more-algebra.tex:16590-16626",
+      "status": "projective_lift_and_both_endpoint_cohomology_estimates_checked",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "sections": [
+          5,
+          8
+        ]
+      }
+    }
+  ],
+  "limits": "No source-body strengthening or novelty claim. The old placeholder is deleted, not filled with a new theorem. Receiving checks cover only the recorded implications."
+}

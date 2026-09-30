@@ -1,0 +1,263 @@
+\section{\texorpdfstring{Derived Categories:\allowbreak{} full subcategories and generators}{Derived  full subcategories and generators}}\label{proofs-10691-11108-derived-categories-full-subcategories-and-generators}
+
+Private correction review,\allowbreak{} 2026-09-30. Authority:\allowbreak{} The Stacks Project,\allowbreak{} commit a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14, derived.tex 10691–\allowbreak{}11108,\allowbreak{} with its exact-functor definition at 190–\allowbreak{}203. The receiver equiv.tex is frozen separately in authority-equiv-part18.tex and current-equiv-part18.tex. Those two files are identical. Source identities,\allowbreak{} original reports,\allowbreak{} exact replacements and actual reading coverage are bound by PART18\_\allowbreak{}CHECKPOINT.json and its associated ledgers.
+
+The original objects,\allowbreak{} shifts,\allowbreak{} extension triangles and tensor factors are retained below. Sections 6 and 7 are editorial consequences,\allowbreak{} not replacement source statements or novelty claims. The corrections in Sections 2 and 8 are distinct from the seven earlier corrections reconciled here.
+
+\subsection{\texorpdfstring{1. The operations,\allowbreak{} their exact witnesses and finite closure}{1. The  their exact witnesses and finite closure}}\label{proofs-10691-11108-the-operations-their-exact-witnesses-and-finite-closure}
+
+Write T for the given triangulated category. A full subcategory A is an actual subset of Ob(T)\allowbreak{},\allowbreak{} as specified at original 10695–\allowbreak{}10696. Thus A[a,\allowbreak{}b]\allowbreak{} contains precisely the objects A[-i]\allowbreak{} for A in A and integer a <\allowbreak{}= i <\allowbreak{}= b; it is not implicitly closed under arbitrary isomorphism. In contrast,\allowbreak{} smd(A)\allowbreak{} and add(A)\allowbreak{} include objects isomorphic to actual direct summands and finite direct sums,\allowbreak{} respectively. The empty finite sum is allowed. A star B consists of the middle objects of distinguished triangles A \allowbreak{}-> X \allowbreak{}-> B \allowbreak{}-> A[1]\allowbreak{}.
+
+For associativity,\allowbreak{} start with triangles
+
+\[
+ A\xrightarrow f X\xrightarrow p B\xrightarrow h A[1],
+ \qquad X\xrightarrow g Y\xrightarrow q C\xrightarrow k X[1].
+\]
+
+Complete gf to A \allowbreak{}-> Y \allowbreak{}-> Z \allowbreak{}-> A[1]\allowbreak{}. TR4 gives a distinguished triangle B \allowbreak{}-> Z \allowbreak{}-> C \allowbreak{}-> B[1]\allowbreak{},\allowbreak{} whose last map is p[1]\allowbreak{}k,\allowbreak{} and maps of triangles having first two components (id\_\allowbreak{}A,\allowbreak{}g)\allowbreak{} and (f,\allowbreak{}id\_\allowbreak{}Y)\allowbreak{}. Therefore Y belongs to A star (B star C)\allowbreak{}.
+
+Conversely take triangles
+
+\[
+ A\xrightarrow f Y\xrightarrow g Z\xrightarrow h A[1],
+ \qquad B\xrightarrow u Z\xrightarrow v C\xrightarrow w B[1].
+\]
+
+Apply TR4 to Y --g-\allowbreak{}-> Z --v-\allowbreak{}-> C,\allowbreak{} using the rotated triangles (Y,\allowbreak{}Z,\allowbreak{}A[1]\allowbreak{},\allowbreak{}g,\allowbreak{}h,\allowbreak{}-f[1]\allowbreak{})\allowbreak{} and (Z,\allowbreak{}C,\allowbreak{}B[1]\allowbreak{},\allowbreak{}v,\allowbreak{}w,\allowbreak{}-u[1]\allowbreak{})\allowbreak{}. Choose a triangle (Y,\allowbreak{}C,\allowbreak{}W,\allowbreak{}vg,\allowbreak{}p,\allowbreak{}d)\allowbreak{}. Its cone triangle is
+
+\[
+ A[1]\xrightarrow\alpha W\xrightarrow\beta B[1]
+       \xrightarrow{-(hu)[1]} A[2].
+\]
+
+Put X\allowbreak{}=W[-1]\allowbreak{}. Inverse rotation gives X --(-d[-1]\allowbreak{})\allowbreak{}-\allowbreak{}-> Y --vg-\allowbreak{}-> C --p-\allowbreak{}-> X[1]\allowbreak{}. Inverse shift of the cone triangle,\allowbreak{} with its triangle boundary sign,\allowbreak{} gives A --alpha[-1]\allowbreak{}-\allowbreak{}-> X --beta[-1]\allowbreak{}-\allowbreak{}-> B --hu-\allowbreak{}-> A[1]\allowbreak{}. Here maps are transported along the chosen inverse-shift identifications; no literal equality of composed shift functors is assumed. This proves the other inclusion with the original A,\allowbreak{} B,\allowbreak{} C and Y. It supplies the direction left implicit at 10733–\allowbreak{}10735.
+
+Next let A1 \allowbreak{}-> X \allowbreak{}-> B1 \allowbreak{}-> A1[1]\allowbreak{},\allowbreak{} with maps f,\allowbreak{}g,\allowbreak{}h,\allowbreak{} be distinguished. Choose the actual complement witnesses for membership in smd(A)\allowbreak{} and smd(B)\allowbreak{}:\allowbreak{} isomorphisms A1\allowbreak{}+ A2 \allowbreak{}-> A0 in A and B1\allowbreak{}+ B2 \allowbreak{}-> B0 in B. The sum of this triangle with A2 --id-\allowbreak{}-> A2 \allowbreak{}-> 0 and 0 \allowbreak{}-> B2 --id-\allowbreak{}-> B2 gives,\allowbreak{} after permuting the middle summands,\allowbreak{} the distinguished triangle
+
+\[
+ A_1\oplus A_2
+ \xrightarrow{(a_1,a_2)\mapsto(a_2,f a_1,0)}
+ A_2\oplus X\oplus B_2
+ \xrightarrow{(a_2,x,b_2)\mapsto(gx,b_2)}
+ B_1\oplus B_2
+ \xrightarrow{(b_1,b_2)\mapsto(hb_1,0)}
+ (A_1\oplus A_2)[1].
+\]
+
+Transport its endpoints to A0,\allowbreak{}B0. Its middle object has X as a specified summand,\allowbreak{} proving smd(A)\allowbreak{} star smd(B)\allowbreak{} subset smd(A star B)\allowbreak{}. Actual complement witnesses compose:\allowbreak{} if Y\allowbreak{}=X\allowbreak{}+X' and Z\allowbreak{}=Y\allowbreak{}+Y',\allowbreak{} then Z\allowbreak{}=X\allowbreak{}+(X'\allowbreak{}+Y')\allowbreak{}. Hence smd(smd(A)\allowbreak{})\allowbreak{}\allowbreak{}=smd(A)\allowbreak{}. The reverse inclusion in the asserted equality after another smd follows from A subset smd(A)\allowbreak{} and B subset smd(B)\allowbreak{}. No assumption that every idempotent in T splits has entered this proof.
+
+Finite sums of distinguished triangles are distinguished. Combining the finite lists of summands proves add(A)\allowbreak{} star add(B)\allowbreak{} is closed under finite sums; combining complement witnesses proves the same for smd(add(A)\allowbreak{})\allowbreak{}. The assertions about direct sums at 10763 and 10783 are used in this finite sense,\allowbreak{} as in their displayed binary-sum proof. They do not establish closure under infinite coproducts. For example,\allowbreak{} every object in smd(add(\{Z\})\allowbreak{})\allowbreak{} in D(Ab)\allowbreak{} has finitely generated H\textasciicircum{}0,\allowbreak{} whereas the countable direct sum of Z does not.
+
+Set C\_\allowbreak{}n(A)\allowbreak{}\allowbreak{}=smd(add(A)\allowbreak{}\textasciicircum{}\{star n\})\allowbreak{},\allowbreak{} n>\allowbreak{}=1. The preceding arguments prove that C\_\allowbreak{}n(A)\allowbreak{} is strictly full,\allowbreak{} closed under finite sums and actual summands. Associativity and the smd equality give
+
+\[
+ C_{n+m}(A)=smd(C_n(A)\star C_m(A)).
+\]
+
+Since 0 is an empty finite sum,\allowbreak{} adding a zero factor through X --id-\allowbreak{}-> X \allowbreak{}-> 0 proves C\_\allowbreak{}n(A)\allowbreak{} subset C\_\allowbreak{}\{n\allowbreak{}+1\}(A)\allowbreak{}. All these operations are monotone in A.
+
+For an increasing sequence A\_\allowbreak{}j,\allowbreak{} every operation in 10823–\allowbreak{}10841 commutes with union:\allowbreak{} a shift or summand has one witness in some A\_\allowbreak{}j; a finite sum has finitely many such witnesses; a fixed n-fold extension has finitely many leaves in its extension tree. Their indices have a common upper bound. The same triangles,\allowbreak{} maps,\allowbreak{} complements and sums then witness membership using that A\_\allowbreak{}j. The reverse inclusions follow from monotonicity. This is an actual finite-witness proof and makes no assertion for infinite sums.
+
+\subsection{2. Exact functors and literal object sets --- DERIVED-NEW-037}\label{proofs-10691-11108-exact-functors-and-literal-object-sets-derived-new-037}
+
+The source definition equips an exact functor F with natural isomorphisms xi\_\allowbreak{}X:\allowbreak{}F(X[1]\allowbreak{})\allowbreak{}\allowbreak{}->F(X)\allowbreak{}[1]\allowbreak{}. Iterating xi,\allowbreak{} its inverse and the chosen inverse-shift identifications gives,\allowbreak{} for every integer i,\allowbreak{}
+
+\[
+ \xi_X^{(-i)}:F(X[-i])\xrightarrow{\sim}F(X)[-i].
+\]
+
+Consequently F(A[a,\allowbreak{}b]\allowbreak{})\allowbreak{} and F(A)\allowbreak{}[a,\allowbreak{}b]\allowbreak{} have the same isomorphism closure. This is sufficient for every subsequent occurrence inside add,\allowbreak{} smd or C\_\allowbreak{}n. It does not give the literal object-set equality printed at 10800.
+
+Here is a counterexample in the source\textquotesingle s actual category conventions. Let Q be the complex Z --id-\allowbreak{}-> Z in degrees 0 and 1 in D(Ab)\allowbreak{}. Its contracting homotopy has h\textasciicircum{}1\allowbreak{}=id\_\allowbreak{}Z and all other components zero,\allowbreak{} so id\_\allowbreak{}Q\allowbreak{}=0 in D(Ab)\allowbreak{}. Define F on every object to be Q and on every morphism to be the unique morphism Q\allowbreak{}->Q,\allowbreak{} which is simultaneously zero and id\_\allowbreak{}Q. This respects identities and composition and is additive. The unique map Q\allowbreak{}->Q[1]\allowbreak{} is an isomorphism,\allowbreak{} since both are zero objects in D(Ab)\allowbreak{}; it defines xi. Every image triangle is isomorphic to the zero triangle,\allowbreak{} so F is exact.
+
+Take A to have the single object the zero complex,\allowbreak{} and a\allowbreak{}=b\allowbreak{}=1. F(A[1,\allowbreak{}1]\allowbreak{})\allowbreak{} has the sole object Q. F(A)\allowbreak{}[1,\allowbreak{}1]\allowbreak{} has the sole object Q[-1]\allowbreak{}. These are different complexes,\allowbreak{} with different nonzero terms,\allowbreak{} and thus different objects of D(Ab)\allowbreak{},\allowbreak{} although isomorphic there. The literal assertion is false. The repair states equality of isomorphism closures without changing either F or A.
+
+The other four inclusions need no repair. An additive functor sends an actual decomposition X\allowbreak{}+Y \allowbreak{}-> A0 to a decomposition F(X)\allowbreak{}\allowbreak{}+F(Y)\allowbreak{} \allowbreak{}-> F(A0)\allowbreak{},\allowbreak{} and sends a finite sum to its canonically isomorphic finite sum of images. For an extension it sends the distinguished triangle to
+
+\[
+ F(A)\xrightarrow{F(f)}F(X)\xrightarrow{F(g)}F(B)
+       \xrightarrow{\xi_A F(h)}F(A)[1].
+\]
+
+Thus its actual middle object belongs to F(A)\allowbreak{} star F(B)\allowbreak{}. Induction gives the n-fold version. At n\allowbreak{}=1 this is the identity inclusion,\allowbreak{} not an appeal to isomorphism closure of A.
+
+MC-STK-ERR-0888 changes ``objects consists'' to ``objects consist''. It corrects the plural verb and is separate from the formula issue. The public source comparison is \href{https://stacks.math.columbia.edu/tag/0FX5}{the operations remark} and \href{https://stacks.math.columbia.edu/tag/05QK}{the exact-functor definition}. The frozen original TeX,\allowbreak{} not that mutable comparison,\allowbreak{} is the authority.
+
+\subsection{3. Cohomology layers and actual complex terms}\label{proofs-10691-11108-cohomology-layers-and-actual-complex-terms}
+
+Let A be an abelian category and let E be the given set of objects of A,\allowbreak{} embedded in D(A)\allowbreak{} in degree zero. Suppose H\textasciicircum{}i(K)\allowbreak{}\allowbreak{}=0 outside [a,\allowbreak{}b]\allowbreak{}. If a\allowbreak{}=b,\allowbreak{} the canonical truncation maps identify K with H\textasciicircum{}a(K)\allowbreak{}[-a]\allowbreak{}. They induce the identity on its sole cohomology object and are quasi-isomorphisms. This proves the repair in MC-STK-ERR-0889:\allowbreak{} the index is a,\allowbreak{} not an unbound i.
+
+For b\textgreater a the canonical truncation triangle is
+
+\[
+ \tau_{\leq b-1}K\longrightarrow K\longrightarrow H^b(K)[-b]
+                 \longrightarrow(\tau_{\leq b-1}K)[1].
+\]
+
+More precisely,\allowbreak{} its middle term is first tau\_\allowbreak{}\{\textbackslash{}leq b\}K,\allowbreak{} whose canonical map to K is a quasi-isomorphism under the stated upper bound,\allowbreak{} and the displayed triangle is its transport. Its third term is cohomology,\allowbreak{} not the last term of an arbitrary representative. For example,\allowbreak{} for the contractible complex M --id-\allowbreak{}-> M in degrees b-1,\allowbreak{}b,\allowbreak{} both K and its canonical lower truncation are zero in D(A)\allowbreak{},\allowbreak{} but K\textasciicircum{}b[-b]\allowbreak{}\allowbreak{}=M[-b]\allowbreak{} is nonzero when M is nonzero. It cannot be the third term of that triangle. This verifies MC-STK-ERR-0890.
+
+If each H\textasciicircum{}i(K)\allowbreak{} belongs to smd(add(E)\allowbreak{})\allowbreak{},\allowbreak{} then H\textasciicircum{}i(K)\allowbreak{}[-i]\allowbreak{} belongs to C\_\allowbreak{}1(E[a,\allowbreak{}b]\allowbreak{})\allowbreak{},\allowbreak{} by shifting its actual finite-sum and complement witnesses. Induction on b-a,\allowbreak{} using Section 1,\allowbreak{} gives K in C\_\allowbreak{}\{b-a\allowbreak{}+1\}(E[a,\allowbreak{}b]\allowbreak{})\allowbreak{}. Membership H\textasciicircum{}i(K)\allowbreak{} in E is the special case used in part (1)\allowbreak{}. Zero intermediate layers cause no problem because 0 belongs to C\_\allowbreak{}1 regardless of whether E contains zero.
+
+The omitted termwise proof uses a different triangle. If K\^{}bullet has actual terms zero outside [a,\allowbreak{}b]\allowbreak{},\allowbreak{} its top term is a subcomplex,\allowbreak{} and the degreewise split exact sequence of complexes is
+
+\[
+ 0\longrightarrow K^b[-b]\longrightarrow K^\bullet
+   \longrightarrow \sigma_{\leq b-1}K^\bullet\longrightarrow0.
+\]
+
+Here sigma is the stupid quotient truncation,\allowbreak{} with last term K\^{}\{b-1\} and outgoing differential zero; it is not canonical cohomological truncation. The connecting map of this sequence retains d\textasciicircum{}\{b-1\}:\allowbreak{}K\textasciicircum{}\{b-1\}\allowbreak{}->K\textasciicircum{}b with the shift sign of its triangle. Removing top terms successively proves parts (3)\allowbreak{} and (4)\allowbreak{},\allowbreak{} in descending term order,\allowbreak{} using K\textasciicircum{}i[-i]\allowbreak{} in C\_\allowbreak{}1(E[a,\allowbreak{}b]\allowbreak{})\allowbreak{}. The entire differential information remains in the extension maps. No direct-sum splitting of K into its terms or its cohomology is asserted.
+
+\subsection{4. Degree support is independent of extension length}\label{proofs-10691-11108-degree-support-is-independent-of-extension-length}
+
+For the homological functor in the source let H\textasciicircum{}q(X)\allowbreak{}\allowbreak{}=H(X[q]\allowbreak{})\allowbreak{}. Shift comparisons give H\textasciicircum{}q(E[-j]\allowbreak{})\allowbreak{}\allowbreak{}=H\textasciicircum{}\{q-j\}(E)\allowbreak{},\allowbreak{} through the specified natural identifications. Thus if E has support in [a,\allowbreak{}b]\allowbreak{},\allowbreak{} E[-j]\allowbreak{} has support in [a\allowbreak{}+j,\allowbreak{}b\allowbreak{}+j]\allowbreak{}. For -m<\allowbreak{}=j<\allowbreak{}=m the union of these intervals is contained in [a-m,\allowbreak{}b\allowbreak{}+m]\allowbreak{}.
+
+Additivity preserves vanishing under finite sums and summands. In a distinguished triangle A\allowbreak{}->X\allowbreak{}->B\allowbreak{}->A[1]\allowbreak{},\allowbreak{} the exact sequence H\textasciicircum{}q(A)\allowbreak{}\allowbreak{}->H\textasciicircum{}q(X)\allowbreak{}\allowbreak{}->H\textasciicircum{}q(B)\allowbreak{} proves H\textasciicircum{}q(X)\allowbreak{}\allowbreak{}=0 whenever its two neighbors vanish. Induction proves that every X in C\_\allowbreak{}n(E[-m,\allowbreak{}m]\allowbreak{})\allowbreak{} has support in [a-m,\allowbreak{}b\allowbreak{}+m]\allowbreak{},\allowbreak{} for every n>\allowbreak{}=1. This verifies MC-STK-ERR-0891 without an unstated boundedness assumption on a chosen representative.
+
+The former interval [-m\allowbreak{}+na,\allowbreak{}m\allowbreak{}+nb]\allowbreak{} is false:\allowbreak{} in D(k)\allowbreak{},\allowbreak{} take the singleton E\allowbreak{}=\{k[-2]\allowbreak{}\},\allowbreak{} a\allowbreak{}=b\allowbreak{}=2,\allowbreak{} m\allowbreak{}=1 and n\allowbreak{}=2. The split triangle E --id-\allowbreak{}-> E \allowbreak{}-> 0 and 0 in add(E[-1,\allowbreak{}1]\allowbreak{})\allowbreak{} put E in C\_\allowbreak{}2(E[-1,\allowbreak{}1]\allowbreak{})\allowbreak{}. Its H\^{}2 is k,\allowbreak{} outside the formerly claimed interval [3,\allowbreak{}5]\allowbreak{}. The argument also proves the more precise support statement:\allowbreak{} for any set S of degrees supporting all E and any set J of permitted shift indices,\allowbreak{} all finite extensions,\allowbreak{} sums and summands of E[-j]\allowbreak{} have support contained in \{s\allowbreak{}+j:\allowbreak{}s in S,\allowbreak{}j in J\}. Extension length does not multiply or fill gaps in that set.
+
+\subsection{\texorpdfstring{5. Generator levels,\allowbreak{} minimality and detection}{5. Generator  minimality and detection}}\label{proofs-10691-11108-generator-levels-minimality-and-detection}
+
+Let A\allowbreak{}=E[-infinity,\allowbreak{}infinity]\allowbreak{}. The source definition gives <E>\_\allowbreak{}1\allowbreak{}=smd(add(A)\allowbreak{})\allowbreak{}. Induction with Section 1 gives
+
+\[
+ \langle E\rangle_n=C_n(A)
+ =smd(\langle E\rangle_1^{\star n})
+ =\bigcup_{m\geq1}C_n(E[-m,m]).
+\]
+
+The last equality follows from the finite-witness union argument. In particular every individual membership has a finite shift window,\allowbreak{} even though no common window for all members is claimed. We also have <E>\_\allowbreak{}\{n\allowbreak{}+n'\}\allowbreak{}=smd(<E>\_\allowbreak{}n star <E>\_\allowbreak{}\{n'\})\allowbreak{}. MC-STK-ERR-0892 supplies the missing ``by'' in ``Denote by''. MC-STK-ERR-0893 removes the unmatched bracket in the formula for <E>\_\allowbreak{}1; the balanced formula above is the source\textquotesingle s definition.
+
+The increasing union \textless E\textgreater{} of these levels is closed under finite sums and summands. A shift of a finite witness is again a finite witness with all its indices shifted,\allowbreak{} so it is closed under both shifts. If X is in level r and Y in level s,\allowbreak{} a cone triangle X\allowbreak{}->Y\allowbreak{}->Z\allowbreak{}->X[1]\allowbreak{} puts Z in level s\allowbreak{}+r. Thus this strictly full subcategory is triangulated and saturated.
+
+If D\textquotesingle{} is another strictly full saturated triangulated subcategory containing E,\allowbreak{} it is stable under shifts,\allowbreak{} finite sums,\allowbreak{} actual summands and extensions. Each witness for every level therefore lies in D\textquotesingle. This proves minimality. The correct closure assertion is add(D')\allowbreak{} subset D',\allowbreak{} as in MC-STK-ERR-0894. The former add(D)\allowbreak{} subset D\textquotesingle{} is false:\allowbreak{} take D\allowbreak{}=D(k)\allowbreak{},\allowbreak{} E\allowbreak{}=0,\allowbreak{} and D\textquotesingle{} the strictly full subcategory of zero objects. It contains E but not k. The P02-E0085 explanation concerning a functor landing in D\textquotesingle{} does not describe this proof; the replacement is justified instead by this exact closure argument.
+
+For the right orthogonal,\allowbreak{} assume Hom(E,\allowbreak{}K[i]\allowbreak{})\allowbreak{}\allowbreak{}=0 for every i. Shifting the source and target shows Hom(E[j]\allowbreak{},\allowbreak{}K)\allowbreak{}\allowbreak{}=0 for every j. Finite sums and summands preserve this vanishing. For A\allowbreak{}->X\allowbreak{}->B in an extension witness,\allowbreak{} exactness of Hom(B,\allowbreak{}K)\allowbreak{}\allowbreak{}->Hom(X,\allowbreak{}K)\allowbreak{}\allowbreak{}->Hom(A,\allowbreak{}K)\allowbreak{} proves the same vanishing for X. Induction over the levels proves Hom(X,\allowbreak{}K)\allowbreak{}\allowbreak{}=0 for all X in \textless E\textgreater. Conversely choose X\allowbreak{}=E[-i]\allowbreak{}. If E is classical,\allowbreak{} <E>\allowbreak{}=D,\allowbreak{} so this vanishing includes id\_\allowbreak{}K\allowbreak{}=0. The unique zero maps between K and a zero object are then inverse,\allowbreak{} proving K is zero. Hence classical generators are weak generators.
+
+The source already proves the change-of-generator level bound:\allowbreak{} if E\textquotesingle{} is in <E>\_\allowbreak{}r,\allowbreak{} every shift,\allowbreak{} finite sum and summand of E\textquotesingle{} is in <E>\_\allowbreak{}r,\allowbreak{} so <E'>\_\allowbreak{}1 subset <E>\_\allowbreak{}r and <E'>\_\allowbreak{}n subset <E>\_\allowbreak{}\{rn\}. Thus a classical generator is strong whenever D has a strong generator. This is not counted as a new editorial consequence.
+
+Finally consider the object property T in 11094–\allowbreak{}11108. From T(E)\allowbreak{} and the triangle E --id-\allowbreak{}-> E \allowbreak{}-> 0 one obtains T(0)\allowbreak{}. If X is isomorphic to Y,\allowbreak{} the triangle X\allowbreak{}->Y\allowbreak{}->0 shows T(X)\allowbreak{} implies T(Y)\allowbreak{}. Thus isomorphism invariance follows from the actual assumptions; it need not be added. The triangle X\allowbreak{}->0\allowbreak{}->X[1]\allowbreak{} and its inverse rotation give shift closure. The stated sum,\allowbreak{} triangle and summand assumptions now show that the objects satisfying T form a strictly full saturated triangulated subcategory containing E,\allowbreak{} so minimality proves the remark.
+
+\subsection{6. Sparse and weighted generation --- DERIVED-UNDER-027}\label{proofs-10691-11108-sparse-and-weighted-generation-derived-under-027}
+
+Keep the actual K and its canonical truncation maps. Let p1\textless...\textless pt be its nonzero cohomology degrees,\allowbreak{} a finite nonempty list. Suppose E is a full subcategory of D(A)\allowbreak{} and,\allowbreak{} for each pj,\allowbreak{}
+
+\[
+ H^{p_j}(K)\in C_{r_j}(E),\qquad r_j\geq1.
+\]
+
+Write a\allowbreak{}=p1 and b\allowbreak{}=pt. Then
+
+\[
+ K\in C_{r_1+\cdots+r_t}(E[a,b]).
+\]
+
+Indeed,\allowbreak{} shifting each witness gives H\textasciicircum{}\{pj\}(K)\allowbreak{}[-pj]\allowbreak{} in C\_\allowbreak{}\{rj\}(E[a,\allowbreak{}b]\allowbreak{})\allowbreak{}. Between two consecutive nonzero cohomology degrees,\allowbreak{} the canonical truncation maps are quasi-isomorphisms,\allowbreak{} since they induce identity on every retained cohomology object and zero-to-zero elsewhere. Compose these actual maps across each gap. The remaining tower has distinguished triangles
+
+\[
+ \tau_{\leq p_{j-1}}K\longrightarrow\tau_{\leq p_j}K
+ \longrightarrow H^{p_j}(K)[-p_j]
+ \longrightarrow(\tau_{\leq p_{j-1}}K)[1]
+\]
+
+for j>\allowbreak{}=2,\allowbreak{} after transport along those quasi-isomorphisms. Its first stage is H\textasciicircum{}\{p1\}(K)\allowbreak{}[-p1]\allowbreak{},\allowbreak{} and its last stage is canonically isomorphic to K. Apply the level-addition identity at every displayed triangle. This proves the stated sum of costs. When all cohomology is zero,\allowbreak{} K is isomorphic to zero and belongs to C\_\allowbreak{}1(E[a,\allowbreak{}b]\allowbreak{})\allowbreak{} for any chosen nonempty interval; no level zero is introduced into the source notation.
+
+There is an equally exact termwise statement. For a given bounded complex with nonzero terms in degrees q1<...<qu,\allowbreak{} assume K\^{}\{qj\} in C\_\allowbreak{}\{sj\}(E)\allowbreak{}. Peel off its actual top term using the degreewise split sequence in Section 3,\allowbreak{} then repeat with the quotient. The resulting extension order is qu,\allowbreak{}...,\allowbreak{}q1,\allowbreak{} and its cost is s1\allowbreak{}+...\allowbreak{}+su in the shift window [q1,\allowbreak{}qu]\allowbreak{}. All intervening differentials are the original differentials in those triangles.
+
+For the source hypothesis rj\allowbreak{}=1,\allowbreak{} this reduces the displayed width b-a\allowbreak{}+1 to the number of nonzero layers. Weighted costs allow different finite constructions for different layers. Neither bound is asserted to be minimal,\allowbreak{} and no splitting of the actual extension data is used. This consequence belongs in editorial material.
+
+\subsection{7. Change of generator with the full shift window --- DERIVED-UNDER-028}\label{proofs-10691-11108-change-of-generator-with-the-full-shift-window-derived-under-028}
+
+Let G,\allowbreak{}E be objects of T,\allowbreak{} let a<\allowbreak{}=b and c<\allowbreak{}=d be finite integers,\allowbreak{} and let r,\allowbreak{}n>\allowbreak{}=1. For the original witnesses satisfying
+
+\[
+ E\in C_r(G[c,d]),\qquad X\in C_n(E[a,b]),
+\]
+
+one has
+
+\[
+ X\in C_{rn}(G[a+c,b+d]).
+\]
+
+To prove this,\allowbreak{} fix i in [a,\allowbreak{}b]\allowbreak{}. Shift every triangle,\allowbreak{} finite sum,\allowbreak{} complement and isomorphism in the witness for E by [-i]\allowbreak{}. Its leaves become G[-j]\allowbreak{}[-i]\allowbreak{},\allowbreak{} j in [c,\allowbreak{}d]\allowbreak{}. The specified composition isomorphisms identify these with G[-(i\allowbreak{}+j)\allowbreak{}]\allowbreak{}. Therefore E[-i]\allowbreak{} belongs to C\_\allowbreak{}r(G[c\allowbreak{}+i,\allowbreak{}d\allowbreak{}+i]\allowbreak{})\allowbreak{},\allowbreak{} which is contained in C\_\allowbreak{}r(G[a\allowbreak{}+c,\allowbreak{}b\allowbreak{}+d]\allowbreak{})\allowbreak{}. This receiving category is strictly full,\allowbreak{} closed under finite sums and actual summands,\allowbreak{} so the same statement holds for every object of smd(add(E[a,\allowbreak{}b]\allowbreak{})\allowbreak{})\allowbreak{}.
+
+For each of the n extension factors witnessing X,\allowbreak{} substitute that membership. Apply Section 1 successively to the same extension triangles and the final summand:\allowbreak{} their costs add to rn. Their common window remains [a\allowbreak{}+c,\allowbreak{}b\allowbreak{}+d]\allowbreak{}. It is not multiplied by n or r. Forgetting the finite windows gives the source\textquotesingle s already established unbounded rn rule; retaining the exact windows is the refinement recorded here. It does not change the source definitions.
+
+\subsection{8. The tensor factor in the geometric receiver --- DERIVED-NEW-038}\label{proofs-10691-11108-the-tensor-factor-in-the-geometric-receiver-derived-new-038}
+
+In equiv.tex 1784–\allowbreak{}1842,\allowbreak{} X is proper and smooth over the field k,\allowbreak{} E and G are the fixed finite locally free sheaves chosen from the diagonal construction,\allowbreak{} and
+
+\[
+ \mathcal O_\Delta\in C_n((E\boxtimes G)[-m,m]).
+\]
+
+For a perfect K,\allowbreak{} the exact functor
+
+\[
+ \Phi_K(M)=R{\rm pr}_{2,*}(L{\rm pr}_1^*K
+                   \otimes_{\mathcal O_{X\times X}}^{\mathbf L}M)
+\]
+
+sends O\_\allowbreak{}Delta to K and E boxtimes G to
+
+\[
+ V_K\otimes_k G,\qquad
+ V_K=R\Gamma(X,K\otimes_{\mathcal O_X}^{\mathbf L}E).
+\]
+
+The first identification is restriction to the diagonal followed by its inverse projection. For the second,\allowbreak{} flat base change from Spec(k)\allowbreak{} identifies Rpr\_\allowbreak{}\{2,\allowbreak{}*\}Lpr\_\allowbreak{}1\textasciicircum{}*(K tensor\^{}L E)\allowbreak{} with RΓ(X,\allowbreak{}K tensor\^{}L E)\allowbreak{} tensor\_\allowbreak{}k O\_\allowbreak{}X,\allowbreak{} and the projection formula tensors it with G. All schemes here are quasi-compact and separated,\allowbreak{} and all complexes have quasi-coherent cohomology; over the field k the base change is flat. The projection formula used is perfect.tex,\allowbreak{} lemma-cohomology-base-change,\allowbreak{} current 5051–\allowbreak{}5094. These are isomorphisms applied inside the strictly full C\_\allowbreak{}n,\allowbreak{} so the repair in Section 2 preserves the entire argument.
+
+The complex K tensor\^{}L E is perfect:\allowbreak{} on each open with a bounded finite locally free representative for K,\allowbreak{} tensor it with the finite locally free E. Properness gives finitely many such opens,\allowbreak{} hence a bounded coherent cohomology complex globally. Applying perfect.tex,\allowbreak{} lemma-direct-image-coherent,\allowbreak{} current 2634–\allowbreak{}2660,\allowbreak{} to X\allowbreak{}->Spec(k)\allowbreak{} proves V\_\allowbreak{}K has finite-dimensional cohomology in a finite interval [a,\allowbreak{}b]\allowbreak{}. Its hypotheses hold:\allowbreak{} Spec(k)\allowbreak{} is Noetherian,\allowbreak{} X is of finite type,\allowbreak{} and every support is closed in proper X,\allowbreak{} hence proper. The bounds must therefore refer to H\textasciicircum{}i(X,\allowbreak{}K tensor\^{}L E)\allowbreak{},\allowbreak{} not H\textasciicircum{}i(X,\allowbreak{}K)\allowbreak{}.
+
+Here is the precise use of the field. For any complex V of k-vector spaces write Z\textasciicircum{}q\allowbreak{}=ker d\^{}q and B\textasciicircum{}q\allowbreak{}=im d\^{}\{q-1\}. Choose vector-space complements Z\textasciicircum{}q\allowbreak{}=B\textasciicircum{}q\allowbreak{}+T\textasciicircum{}q and V\textasciicircum{}q\allowbreak{}=Z\textasciicircum{}q\allowbreak{}+S\textasciicircum{}q. The map d\^{}q restricts to an isomorphism S\textasciicircum{}q\allowbreak{}->B\textasciicircum{}\{q\allowbreak{}+1\}; T\^{}q maps isomorphically to H\textasciicircum{}q(V)\allowbreak{}. Thus V is the direct sum of its zero-differential T\textasciicircum{}q[-q]\allowbreak{} pieces and the two-term disks S\^{}q --d\textasciicircum{}q-\allowbreak{}-> B\textasciicircum{}\{q\allowbreak{}+1\}. Every degree has just the stated finite number of types of pieces,\allowbreak{} so this decomposition is well-defined even when V itself is unbounded. On each disk the inverse of d\^{}q is a contraction. The projection onto the T pieces and their inclusions give an explicit homotopy equivalence,\allowbreak{} with the contractions accounting for every discarded disk.
+
+Apply this to V\_\allowbreak{}K. Its nonzero T pieces are finite-dimensional and confined to [a,\allowbreak{}b]\allowbreak{},\allowbreak{} so V\_\allowbreak{}K tensor\_\allowbreak{}k G is isomorphic to the finite sum of H\textasciicircum{}q(V\_\allowbreak{}K)\allowbreak{} tensor\_\allowbreak{}k G[-q]\allowbreak{},\allowbreak{} a member of add(G[a,\allowbreak{}b]\allowbreak{})\allowbreak{}. Tensoring preserves the displayed contraction. The same shift calculation as Section 7 gives
+
+\[
+ C_n((V_K\otimes_k G)[-m,m])
+       \subset C_n(G[a-m,b+m]).
+\]
+
+This proves the corrected inference at 1836–\allowbreak{}1840 with its original n,\allowbreak{}m,\allowbreak{}K,\allowbreak{}E,\allowbreak{}G,\allowbreak{} and completes the strong-generator argument.
+
+For the next lemma,\allowbreak{} replace K by a coherent sheaf F. Smooth X is regular of finite dimension,\allowbreak{} so F is perfect locally; moreover F tensor\^{}L E\allowbreak{}=F tensor E because E is locally free. This is a coherent sheaf in degree zero. The bounds a\allowbreak{}=0,\allowbreak{}b\allowbreak{}=dim(X)\allowbreak{} apply to its cohomology,\allowbreak{} by the Noetherian dimension vanishing theorem (cohomology.tex,\allowbreak{} proposition-vanishing-Noetherian,\allowbreak{} current statement 4083–\allowbreak{}4086)\allowbreak{}. Thus the source\textquotesingle s m\allowbreak{}=max(m',\allowbreak{}m'\allowbreak{}+dim(X)\allowbreak{})\allowbreak{} still works. The corrected arbitrary-window assertion at 1862 must name H\textasciicircum{}i(X,\allowbreak{}F tensor E)\allowbreak{},\allowbreak{} with E the fixed sheaf from the preceding proof. Neither lemma\textquotesingle s final conclusion or dimension constant needs weakening.
+
+The missing tensor factor is demonstrably substantive. On X\allowbreak{}=P\textasciicircum{}1\_\allowbreak{}k use homogeneous coordinates [X0:\allowbreak{}X1]\allowbreak{},\allowbreak{} t\allowbreak{}=X1/\allowbreak{}X0 on U0,\allowbreak{} and s\allowbreak{}=X0/\allowbreak{}X1\allowbreak{}=t\textasciicircum{}\{-1\} on U1. The frames X0\^{}e and X1\^{}e of O(e)\allowbreak{} obey X1\textasciicircum{}e\allowbreak{}=t\textasciicircum{}e X0\^{}e. The two-affine-cover Cech complex is
+
+\[
+ k[t]\oplus k[t^{-1}]
+ \xrightarrow{(f,g)\mapsto t^e g-f}
+ k[t,t^{-1}].
+\]
+
+All opens and their intersection are affine,\allowbreak{} so quasi-coherent affine acyclicity identifies its kernel and cokernel with H\^{}0 and H\textasciicircum{}1,\allowbreak{} with higher groups zero. For e\allowbreak{}=-1 the two sets of exponents are >\allowbreak{}=0 and <\allowbreak{}=-1. They are disjoint and their union is Z,\allowbreak{} so both kernel and cokernel vanish. For e\allowbreak{}=-2 their union omits exactly -1; the kernel is zero and the cokernel is k times t\^{}\{-1\}. Therefore
+
+\[
+ H^*(X,O(-1))=0,\qquad H^1(X,O(-2))=k.
+\]
+
+Take K\allowbreak{}=O(-1)\allowbreak{} and E\allowbreak{}=G\allowbreak{}=O\allowbreak{}+O(-1)\allowbreak{}. These E,\allowbreak{}G meet the actual diagonal condition:\allowbreak{} the determinant X0Y1-X1Y0 defines the diagonal and gives the exact resolution
+
+\[
+ 0\to O(-1,-1)\xrightarrow{X_0Y_1-X_1Y_0}
+ O\to O_\Delta\to0.
+\]
+
+On the coordinate charts the diagonal equation is the coordinate difference,\allowbreak{} or its invertible-coordinate counterpart,\allowbreak{} a non-zero-divisor; its quotient is precisely the diagonal chart. This proves injectivity,\allowbreak{} identifies the quotient and establishes the sequence globally. Both vector bundles are summands of E boxtimes G. The associated triangle O \allowbreak{}-> O\_\allowbreak{}Delta \allowbreak{}-> O(-1,\allowbreak{}-1)\allowbreak{}[1]\allowbreak{} puts O\_\allowbreak{}Delta in C\_\allowbreak{}2((E boxtimes G)\allowbreak{}[-1,\allowbreak{}1]\allowbreak{})\allowbreak{}.
+
+Nevertheless K tensor E\allowbreak{}=O(-1)\allowbreak{}\allowbreak{}+O(-2)\allowbreak{} has nonzero H\textasciicircum{}1,\allowbreak{} while K has zero global cohomology in every degree. For example [0,\allowbreak{}0]\allowbreak{} bounds H\textasciicircum{}*(X,\allowbreak{}K)\allowbreak{} but does not bound V\_\allowbreak{}K. The stated inference from that range is therefore invalid.
+
+The unqualified ``for any a<\allowbreak{}=b” claim in the next proof also fails. For any fixed m',\allowbreak{} choose F\allowbreak{}=O(-1)\allowbreak{} and a\allowbreak{}=b\allowbreak{}=m'\allowbreak{}+1. Its global cohomology is zero and satisfies that printed condition. Yet G is a sheaf in degree zero and the alleged generating window becomes [1,\allowbreak{}2m'\allowbreak{}+1]\allowbreak{}. Section 4 shows that every object of C\_\allowbreak{}n(G[1,\allowbreak{}2m'\allowbreak{}+1]\allowbreak{})\allowbreak{} has zero cohomology sheaf in degree zero. F has nonzero degree-zero cohomology sheaf O(-1)\allowbreak{},\allowbreak{} a contradiction. Using F tensor E in the premise excludes this false range and proves the intended assertion.
+
+These two loci are recorded as one propagated missing-factor finding,\allowbreak{} with two exact operations. The 101 equiv.tex report routing records have no unlocated record and none overlaps 1836–\allowbreak{}1838 or 1862–\allowbreak{}1863. This bounded inventory check is not a claim to have reviewed the remaining Equivalences reports.
+
+\subsection{\texorpdfstring{9. Propagation,\allowbreak{} scope and remaining work}{9.  scope and remaining work}}\label{proofs-10691-11108-propagation-scope-and-remaining-work}
+
+The downstream boundedness lemma equiv.tex 1871–\allowbreak{}1888 remains valid. Choose the uniform m,\allowbreak{}n,\allowbreak{}G from the repaired diagonal lemma. For its homological functor choose the finite [a,\allowbreak{}b]\allowbreak{} supporting H\textasciicircum{}*(G)\allowbreak{},\allowbreak{} as allowed by that lemma\textquotesingle s assumptions. Section 4 gives the uniform range [a-m,\allowbreak{}b\allowbreak{}+m]\allowbreak{} for every coherent F. Enlarge it to [-M,\allowbreak{}M]\allowbreak{} with M\allowbreak{}=max(1,\allowbreak{}m-a,\allowbreak{}m\allowbreak{}+b)\allowbreak{}. This explicit M does not depend on the extension count n. For a cohomological functor apply the same reasoning with its reversed exact Hom sequence and its corresponding shift indices; a symmetric interval is unchanged by reversing signs.
+
+The call to the classical-to-strong-generator lemma in more-algebra.tex 21561–\allowbreak{}21578 is preserved:\allowbreak{} if the cited earlier ring-specific lemmas give a classical generator R and any strong generator,\allowbreak{} Section 5 supplies the precise finite rn comparison. Only this categorical implication is checked here; this pass does not certify the unreviewed ring-specific premises.
+
+All eleven physical reports in this span concern seven previously corrected units 0888–\allowbreak{}0894. P02-E0086 reports the unbound base-case index,\allowbreak{} although its range also touches the different truncation repair; its disposition is joined to 0889 by its actual text. P02-E0085 has the correct replacement but the inaccurate functor rationale discussed in Section 5. Neither range overlap nor an earlier admission is substituted for these semantic checks.
+
+New source operations are limited to the shift-isomorphism qualification and the two missing-tensor-factor replacements. The sparse costs and bounded-window generator transfer remain separate editorial results with complete derivations above. This pass completes semantic review through 11108 and leaves Compact objects,\allowbreak{} starting 11121,\allowbreak{} next. Reading through 11170 is only read-ahead. No whole-chapter Equivalences or More on Algebra review,\allowbreak{} live-source composition,\allowbreak{} build or publication is claimed.

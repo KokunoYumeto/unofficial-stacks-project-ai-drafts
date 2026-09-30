@@ -1,0 +1,100 @@
+\section{\texorpdfstring{Cones,\allowbreak{} strictification,\allowbreak{} and the chain-level square-zero calculation}{  and the chain-level square-zero calculation}}\label{proofs-2419-2994-cones-strictification-and-the-chain-level-square-zero-calculation}
+
+Authority and line conventions are those of \texttt{INPUT\_\allowbreak{}BINDING.\allowbreak{}json} and the earlier Derived review notes. Original source reading now reaches line 2994. This note retains all original components,\allowbreak{} degree indices,\allowbreak{} signs and splittings. Additional proofs are editorial; no novelty or newly verified historical-source reading is claimed.
+
+\subsection{1. Cone maps and the missing shift}\label{proofs-2419-2994-cone-maps-and-the-missing-shift}
+
+At 2424 \textbf{MC-STK-ERR-0821} changes ``We set ... be'' to ``We let ... be''. It is correct,\allowbreak{} with no new report in this interval. The categories remain those of cochain complexes and their homotopy classes.
+
+For \(f:K^\bullet\to L^\bullet\),\allowbreak{} retain \[
+C(f)^n=L^n\oplus K^{n+1},\qquad
+D^n=\begin{pmatrix}d_L^n&f^{n+1}\\0&-d_K^{n+1}\end{pmatrix}.
+\] The upper-right entry of \(D^{n+1}D^n\) is \(d_L^{n+1}f^{n+1}-f^{n+2}d_K^{n+1}=0\),\allowbreak{} while the diagonal entries vanish because the two original differentials square to zero. The inclusion \(i^n(l)=(l,0)\) is a chain map. The projection \(p^n(l,k)=k\) is a chain map to \(K[1]\),\allowbreak{} whose differential in degree \(n\) is \(-d_K^{n+1}\).
+
+In the source\textquotesingle s homotopy-commutative square keep \(a:K_1\to K_2\),\allowbreak{} \(b:L_1\to L_2\),\allowbreak{} and \(h^n:K_1^n\to L_2^{n-1}\),\allowbreak{} with \[
+b^nf_1^n-f_2^na^n=d_{L_2}^{n-1}h^n+h^{n+1}d_{K_1}^n.
+\] The source matrix is \[
+c^n=\begin{pmatrix}b^n&h^{n+1}\\0&a^{n+1}\end{pmatrix}.
+\] Its chain-map equation compares \[
+D_2^nc^n=
+\begin{pmatrix}
+d_{L_2}^nb^n&d_{L_2}^nh^{n+1}+f_2^{n+1}a^{n+1}\\
+0&-d_{K_2}^{n+1}a^{n+1}
+\end{pmatrix}
+\] with \[
+c^{n+1}D_1^n=
+\begin{pmatrix}
+b^{n+1}d_{L_1}^n&b^{n+1}f_1^{n+1}-h^{n+2}d_{K_1}^{n+1}\\
+0&-a^{n+2}d_{K_1}^{n+1}
+\end{pmatrix}.
+\] The diagonal equations are the chain-map equations for \(a,b\); the upper-right equation is the displayed homotopy identity in degree \(n+1\). This proves the surrounding claim of \textbf{OCC-01497 /\allowbreak{} P02-E0025}. Its ``show'' to ``shows'' copyedit is already present as \textbf{MC-STK-ERR-0822}.
+
+The two further equations are \[
+c^ni_1^n=i_2^nb^n,\qquad p_2^nc^n=a^{n+1}p_1^n.
+\] Thus the third-square identity is \(p_2c=a[1]p_1\),\allowbreak{} not the unshifted expression at original 2535. This is \textbf{DERIVED-NEW-007}. The codomain of \(p_1\) is \(K_1[1]\),\allowbreak{} so the right factor must be followed by \(a[1]:K_1[1]\to K_2[1]\). The operation inserts that shift and leaves the source\textquotesingle s chosen homotopy and matrix untouched.
+
+At 2493 the source calls the sextuple with \textbf{positive} \(p\) a triangle; it does not yet call it distinguished. That statement is correct by the definition of a triangle. The later distinguished cone triangle uses \(-p\). No correction of the positive \(p\) at 2493 is justified,\allowbreak{} and none is proposed.
+
+For the receiving factorization lemma,\allowbreak{} if \(gf=d_Mh+hd_K\),\allowbreak{} the first map is explicitly \[
+u^n=(g^n,h^{n+1}):L^n\oplus K^{n+1}\to M^n.
+\] Its chain equation is the same upper-right identity above,\allowbreak{} and \(ui=g\) as chain maps. For the other map retain \[
+C(g)[-1]^n=M^{n-1}\oplus L^n,\qquad
+d_{C(g)[-1]}^n=
+\begin{pmatrix}-d_M^{n-1}&-g^n\\0&d_L^n\end{pmatrix},\qquad
+v^n=\begin{pmatrix}-h^n\\f^n\end{pmatrix}.
+\] Then the first component of \(d_{C(g)[-1]}^nv^n\) is \(d_M^{n-1}h^n-g^nf^n=-h^{n+1}d_K^n\); the second is \(d_L^nf^n=f^{n+1}d_K^n\). Thus \(v\) is a chain map and \(p[-1]v=f\). Both factorizations hold in the category of complexes,\allowbreak{} with the dependence on the chosen homotopy retained.
+
+\subsection{2. Strictification with exactly one split side}\label{proofs-2419-2994-strictification-with-exactly-one-split-side}
+
+For the square at 2590–\allowbreak{}2615 let \(bf-ga=d_Dh+hd_A\),\allowbreak{} with \(h^n:A^n\to D^{n-1}\). If \(\pi^nf^n=1_{A^n}\),\allowbreak{} put \(H^n=h^n\pi^n:B^n\to D^{n-1}\) and \[
+(b')^n=b^n-d_D^{n-1}H^n-H^{n+1}d_B^n.
+\] This is a chain map homotopic to \(b\). Since \(f\) is a chain map,\allowbreak{} \[
+(b')^nf^n=b^nf^n-d_D^{n-1}h^n
+-h^{n+1}\pi^{n+1}f^{n+1}d_A^n=g^na^n.
+\] No assertion that \(\pi\) is a chain map is used. If instead \(g^ns^n=1_{D^n}\),\allowbreak{} put \(J^n=s^{n-1}h^n:A^n\to C^{n-1}\) and \[
+(a')^n=a^n+d_C^{n-1}J^n+J^{n+1}d_A^n.
+\] It is homotopic to \(a\),\allowbreak{} and the chain-map equation for \(g\) gives \(g^n(a')^n=g^na^n+d_D^{n-1}h^n+h^{n+1}d_A^n=b^nf^n\). These are the two exact corrections asserted by the source.
+
+The source\textquotesingle s replacement of \(\alpha:K\to L\) by a split injection has degree \(n\) object \(L^n\oplus K^n\oplus K^{n+1}\),\allowbreak{} differential \[
+\begin{pmatrix}d_L^n&0&0\\0&d_K^n&1_{K^{n+1}}\\
+0&0&-d_K^{n+1}\end{pmatrix},
+\] and maps \(\widetilde\alpha^n=(\alpha^n,1,0)^t\),\allowbreak{} \(\pi^n=(1,0,0)\),\allowbreak{} \(s^n=(1,0,0)^t\). Their displayed compositions are the original \(\alpha\) and identity. The homotopy \(H^n(l,k,k^+)=(0,0,k)\) gives \[
+dH(l,k,k^+)=(0,k,-d_K^nk),\qquad
+Hd(l,k,k^+)=(0,0,d_K^nk+k^+),
+\] so \(dH+Hd=(0,k,k^+)=1-s\pi\),\allowbreak{} with no missing sign.
+
+For the split-surjection replacement retain \(K^n\oplus L^{n-1}\oplus L^n\) and differential \[
+\begin{pmatrix}d_K^n&0&0\\0&-d_L^{n-1}&1_{L^n}\\
+0&0&d_L^n\end{pmatrix}.
+\] The source maps are \(\widetilde\alpha^n=(\alpha^n,0,1)\),\allowbreak{} \(i^n=(1,0,0)^t\),\allowbreak{} \(s^n=(1,0,0)\). Here \(H^n(k,l^-,l)=(0,0,l^-)\),\allowbreak{} and the two homotopy terms are \((0,l^-,d_L^{n-1}l^-)\) and \((0,0,-d_L^{n-1}l^-+l)\). Their sum is \(1-is\). Each construction adds only these specified shifts and finite direct sums,\allowbreak{} so it preserves all three boundedness classes in the statements.
+
+\subsection{3. Changing splittings and the obstruction to changing both squares}\label{proofs-2419-2994-changing-splittings-and-the-obstruction-to-changing-both-squares}
+
+For the original split sequence with maps \(\alpha,\beta\),\allowbreak{} keep \(\pi\alpha=1\),\allowbreak{} \(\beta s=1\),\allowbreak{} \(\pi s=0\),\allowbreak{} \(\beta\alpha=0\),\allowbreak{} and \(\alpha\pi+s\beta=1\) degree by degree. The boundary is \(\delta^n=\pi^{n+1}d_B^ns^n\). If \(s'^n=s^n+\alpha^nh^n\),\allowbreak{} then \(\pi'^n=\pi^n-h^n\beta^n\). Expanding all four terms gives \[
+\begin{split}
+(\delta')^n={}&\pi^{n+1}d_B^ns^n
++\pi^{n+1}d_B^n\alpha^nh^n
+-h^{n+1}\beta^{n+1}d_B^ns^n\\
+&-h^{n+1}\beta^{n+1}d_B^n\alpha^nh^n\\
+={}&\delta^n+d_A^nh^n-h^{n+1}d_C^n.
+\end{split}
+\] The fourth term is zero because \(\beta^{n+1}d_B^n\alpha^n=\beta^{n+1}\alpha^{n+1}d_A^n=0\). The family \(-h^n:C^n\to A[1]^{n-1}\) is therefore a homotopy from \(\delta\) to \(\delta'\),\allowbreak{} since the target differential is \(-d_A^n\). This agrees with the earlier Homology result and proves the identity triple is an isomorphism of triangles in the homotopy category. \textbf{OCC-02892 /\allowbreak{} P02-E1429} matches \textbf{MC-STK-ERR-0823}:\allowbreak{} there is one sequence and two choices of splitting,\allowbreak{} so the corrected singular ``a termwise split exact sequence'' is appropriate.
+
+The limitation at 2876–\allowbreak{}2900 is also real. In the cited original example,\allowbreak{} let \(R=k[\epsilon]/(\epsilon^2)\). Keep \(A^1=R\),\allowbreak{} \(C^0=R\),\allowbreak{} and \(B=(R\xrightarrow\epsilon R)\) in degrees zero and one,\allowbreak{} with the source\textquotesingle s termwise identity inclusion and projection. The endpoint maps are \(1+\epsilon\) on \(A\) and \(1\) on \(C\),\allowbreak{} while the middle map is \(1_B\). To make both squares commute as chain maps,\allowbreak{} a replacement middle map would have to be \(1\) in degree zero and \(1+\epsilon\) in degree one. It is a chain map,\allowbreak{} because \(\epsilon^2=0\),\allowbreak{} but it is not homotopic to \(1_B\):\allowbreak{} a homotopy is multiplication by a single \(r\in R\) from \(B^1\) to \(B^0\),\allowbreak{} and its two components \(Hd\) and \(dH\) are both multiplication by \(r\epsilon\). They cannot equal zero in degree zero and \(\epsilon\ne0\) in degree one. Thus the two strictifications cannot in general be imposed on one middle map in the same homotopy class. This verifies the receiving example directly,\allowbreak{} without relying only on its trace assertion or extending the one-square lemma too far.
+
+\subsection{4. DERIVED-NEW-008 and the square-zero consequence without kernels}\label{proofs-2419-2994-derived-new-008-and-the-square-zero-consequence-without-kernels}
+
+The category at 2902–\allowbreak{}2938 is only additive. The image and kernel notation at 2935–\allowbreak{}2936 need not denote existing objects for arbitrary maps \(b^n,(b')^n\). The proof needs only the given split sequence,\allowbreak{} and can state its factorization directly. This is a clarification of the existing argument,\allowbreak{} not a counterexample to the lemma.
+
+First replace \(b\) by a homotopic chain map with \(\beta_2b=0\),\allowbreak{} using the termwise split surjection \(\beta_2\). Independently replace \(b'\) by a homotopic chain map with \(b'\alpha_2=0\),\allowbreak{} using the termwise split injection \(\alpha_2\). Write \(\pi_2,s_2\) for the supplied degreewise splitting maps. For each degree the exact biproduct identity gives \[
+b^n=(\alpha_2^n\pi_2^n+s_2^n\beta_2^n)b^n
+=\alpha_2^n\pi_2^nb^n.
+\] Consequently \[
+(b')^nb^n=(b')^n\alpha_2^n\pi_2^nb^n=0.
+\] This proves zero composition for the strictified chain maps. Composition of chain maps preserves homotopies,\allowbreak{} so their original homotopy classes also have zero product. Neither an image of \(b^n\) nor a kernel of \((b')^n\) is required. The proposed source operation uses exactly these equalities and the original split sequence.
+
+For the cone comparison at 2940–\allowbreak{}2984,\allowbreak{} an endomorphism \((1,1,c)\) of the cone triangle gives two commuting squares,\allowbreak{} up to homotopy,\allowbreak{} on the termwise split sequence \(L\to C(f)\to K[1]\). Apply the proved chain-level square-zero assertion to \(c-1\) twice:\allowbreak{} \((c-1)^2=0\). Thus \[
+c(2-c)=(2-c)c=2c-c^2=1.
+\] For a general \((a,b,c)\) with \(a,b\) homotopy equivalences,\allowbreak{} choose representatives of their inverses and construct a cone map \(c'\) using the homotopy-commutative inverse square. Both \(cc'\) and \(c'c\) are then invertible by the preceding calculation. Thus \(c' (cc')^{-1}\) is a right inverse of \(c\),\allowbreak{} and \((c'c)^{-1}c'\) is a left inverse; the two coincide. This proves the cone comparison claim in the source.
+
+This is also a receiving instance of \textbf{DERIVED-UNDER-001},\allowbreak{} the square-zero ideal for triangle maps. The present proof was made directly on complexes so that it is independent of the triangulated structure on the homotopy category,\allowbreak{} which the chapter constructs later using these lemmas. Using the abstract triangulated result here as the foundation would have introduced a circular proof; no such replacement is made.

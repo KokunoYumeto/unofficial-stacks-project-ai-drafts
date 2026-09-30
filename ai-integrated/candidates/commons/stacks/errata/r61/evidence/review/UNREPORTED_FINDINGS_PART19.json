@@ -1,0 +1,115 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-039",
+      "source": "derived.tex",
+      "source_lines": [
+        11208,
+        11209
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "missing_inverse_shift_in_lift_target",
+      "original": "The lift of E_i[m] to X[-1] is said to lift to hocolim X_n.",
+      "correction": "The actual lift is E_i[m] to X_1[-1] to (hocolim X_n)[-1].",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "section": 2
+      },
+      "operations": [
+        "DERIVED-NEW-039-OP1"
+      ],
+      "limits": "A map-target correction in the proof; the cellular approximation theorem is valid."
+    },
+    {
+      "finding_id": "DERIVED-NEW-040",
+      "source": "derived.tex",
+      "source_lines": [
+        11254,
+        11255
+      ],
+      "status": "confirmed_pending_admission",
+      "class": "missing_shift_in_difference_target",
+      "original": "The two maps to X_n are said to have equal composites into Y_(n-1).",
+      "correction": "Their composites into Y_(n-1)[1] agree. The exact Hom sequence then lifts their difference to X_(n-1).",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "section": 3
+      },
+      "operations": [
+        "DERIVED-NEW-040-OP1"
+      ],
+      "limits": "The final corrected factorization equals the given map, by the explicit sum with the third induction object."
+    }
+  ],
+  "reported_receiver_corrections_not_counted_as_unreported": {
+    "dispositions": {
+      "file": "PERFECT_RECEIVER_DISPOSITIONS_PART19.json",
+      "bytes": 4330,
+      "sha256": "E5656933E5D7C0D08152DE053375FB664A4D0EA66588525C1B0C5FA37B2E0F20"
+    },
+    "groups": [
+      "DERIVED-PERFECT-RECEIVER-001",
+      "DERIVED-PERFECT-RECEIVER-002",
+      "DERIVED-PERFECT-RECEIVER-003"
+    ],
+    "operations": 4
+  },
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        11355,
+        11360
+      ],
+      "issue": "The kernel of the two cohomological functors need not be cohomological.",
+      "disposition": "the_construction_needs_only_its_product_comparison_proved_by_coordinates",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "section": 5
+      }
+    },
+    {
+      "source_lines": [
+        11241,
+        11241
+      ],
+      "issue": "The induction applies to C prime, not just the original C.",
+      "disposition": "C_prime_is_compact_by_the_displayed_triangle_and_compactness_of_E_prime",
+      "proof": {
+        "file": "PROOFS_11121_11450.md",
+        "bytes": 22332,
+        "sha256": "3A51EC0F27748823918430EEFECC562143C316A113AFCF79B17EEEA493EED0E8",
+        "sections": [
+          1,
+          3
+        ]
+      }
+    }
+  ],
+  "reading_observations_not_yet_adjudicated": [
+    {
+      "source": "perfect.tex",
+      "authority_lines": [
+        4500,
+        4505
+      ],
+      "producer_id": "P05-EN-CH36-0053",
+      "status": "original_report_seen_DGA_proof_context_not_read_or_adjudicated",
+      "issue": "The producer reports a related ambient-category use in the DGA equivalence proof."
+    },
+    {
+      "source": "derived.tex",
+      "authority_lines": [
+        11547,
+        11560
+      ],
+      "status": "read_ahead_only_next_semantic_review",
+      "issue": "The countable-sum injectivity argument uses the weaker generating-family hypothesis and must be checked independently of the compact case."
+    }
+  ]
+}

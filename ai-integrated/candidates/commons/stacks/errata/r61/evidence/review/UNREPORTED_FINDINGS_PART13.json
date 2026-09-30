@@ -1,0 +1,119 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-028",
+      "source": "derived.tex",
+      "source_lines": [
+        8913,
+        8915
+      ],
+      "original_issue": "Ext endpoint variance does not match the displayed extensions",
+      "correction": "Ext^i(B,A) times Ext^j(C,B) maps to Ext^(i+j)(C,A).",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 3
+      },
+      "status": "proved_private_correction_proposal",
+      "operations": [
+        "DERIVED-NEW-028-OP1"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-029",
+      "source": "derived.tex",
+      "source_lines": [
+        8820,
+        9007
+      ],
+      "original_issue": "Unsigned splicing omits the shift sign under the natural projection convention",
+      "correction": "With f^(-i)=id_A, composition is (-1)^(ij) times the splice class; retain this factor in the higher-vanishing proof.",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 3
+      },
+      "status": "proved_private_correction_proposal",
+      "operations": [
+        "DERIVED-NEW-029-OP1",
+        "DERIVED-NEW-029-OP2",
+        "DERIVED-NEW-029-OP3"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-030",
+      "source": "derived.tex",
+      "source_lines": [
+        8990,
+        8996
+      ],
+      "original_issue": "The proof uses undefined Yoneda degrees and endpoints for p=0 or p=1",
+      "correction": "Prove p=0 from id_A=0; for p>=1 use C=im(Z_p to Z_(p-1)).",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 6
+      },
+      "status": "proved_private_correction_proposal",
+      "operations": [
+        "DERIVED-NEW-030-OP1",
+        "DERIVED-NEW-030-OP2"
+      ]
+    },
+    {
+      "finding_id": "DERIVED-NEW-031",
+      "source": "cohomology.tex",
+      "source_lines": [
+        14424,
+        14426
+      ],
+      "original_issue": "The ideal quotient is described as an extension in reversed order",
+      "correction": "Display the actual middle row with kernel I^(i+2)/I^(i+3), middle I^i/I^(i+3), quotient I^i/I^(i+2), and its pullback.",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 5
+      },
+      "status": "proved_private_correction_proposal",
+      "operations": [
+        "DERIVED-NEW-031-OP1"
+      ]
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        8864,
+        8883
+      ],
+      "issue": "Equality in the homotopy category needs adjustment before the extension pushout.",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 1
+      },
+      "disposition": "omitted_details_supplied_without_counting_a_false_claim"
+    },
+    {
+      "source_lines": [
+        8886,
+        8897
+      ],
+      "issue": "A set bijection alone does not prove the asserted group identification.",
+      "proof": {
+        "file": "PROOFS_8774_9196.md",
+        "bytes": 23554,
+        "sha256": "5A5F788AF8D766E96EE44B82B27CB5BE2E9801331977297F5ABBBFB71CEA2CD6",
+        "section": 2
+      },
+      "disposition": "Baer_sum_compatibility_proved_as_editorial_detail"
+    }
+  ],
+  "convention_limit": "NEW-029 retains the natural identity projection. A degree-dependent rescaling would be a different convention, not a silent identification.",
+  "closed_reading_ahead_observation": "PART12 endpoint-variance observation is now NEW-028."
+}

@@ -1,0 +1,390 @@
+{
+  "original_container": {
+    "path": "private-source-locator/RECOVERED_OCCURRENCE_INDEX.jsonl",
+    "bytes": 29361994,
+    "sha256": "3EDD73E60CBDFA228A6C564A377D8D76308227D4D4E62DC65911D1E5DF7C22DD"
+  },
+  "inventory": {
+    "path": "private-source-locator/CORRECTION_OCCURRENCE_TRIAGE_20260922.jsonl",
+    "bytes": 12056268,
+    "sha256": "CED820133BA55EE051A60532925F90A312D7FC1B3F3C9C522F1EE7B653C12EB6"
+  },
+  "records": [
+    {
+      "container_line": 5101,
+      "container_line_sha256": "2B1B2FA134D090EC3521FBF62A69FD6BD21BCBF1B7F6B66BDE467C9542968824",
+      "record": {
+        "record_key": "p05:L319",
+        "producer": "p05",
+        "candidate_id": "P05-EN-CH36-0056",
+        "ledger_line": 319,
+        "byte_start": 285052,
+        "byte_end_exclusive": 286159,
+        "json_utf8_sha256": "7372125B331DAB45641440E163681AE4AB58A19E0EAF68ED5EEA83C1A564D5CB",
+        "category": "source-defect",
+        "lifecycle": "active_producer_candidate",
+        "source_record": {
+          "utc": "2026-08-24T15:49:46.765Z",
+          "source_path": "perfect.tex",
+          "source_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+          "id": "P05-EN-CH36-0056",
+          "locus": {
+            "lines": [
+              4848,
+              4856
+            ],
+            "label": "lemma-better-coherator",
+            "context": "right-adjoint criterion in the first proof"
+          },
+          "defect": "The criterion begins 'for every object K' but then displays E' -> E -> K and requires K to be right-orthogonal; E is unbound. The arbitrary input object should be E, while K is the orthogonal cone.",
+          "evidence": [
+            {
+              "source_locus": "perfect.tex:4848-4856",
+              "observation": "K is simultaneously introduced as the arbitrary object and used as the third vertex satisfying Hom(M,K)=0; E appears without introduction."
+            },
+            {
+              "source_locus": "perfect.tex:4857-4868",
+              "observation": "The proof immediately applies the construction to an arbitrary E and its Mayer-Vietoris triangle."
+            }
+          ],
+          "smallest_proposed_correction": "Replace 'for every object K' by 'for every object E'.",
+          "confidence": "high",
+          "translation_impact": "The Japanese target preserves the frozen variable assignment in the criterion; the correction remains sidecar-only."
+        },
+        "admission": {
+          "status": "no_matching_admission_identified",
+          "stable_ids": [],
+          "operation_ids": [],
+          "crosswalk_indices": []
+        },
+        "implementation": "not_checked_in_cumulative_source",
+        "publication": "not_checked",
+        "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+      },
+      "original_wrapper": {
+        "occurrence_id": "27F720FD19A7CE19A6633A8C338D9D91673C9AE68AB39DD63109AD0F0654C096",
+        "kind": "producer_ledger_occurrence",
+        "evidence_artifact": "cjk/ledgers_p05_p08.json",
+        "evidence_sha256": "01E949D8847B9FB4E124213183C66F3F2B16AC6264D428DBFBEB28BC049F5F35",
+        "evidence_locator": "/records/318",
+        "reconciliation_owner": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+        "admission_owner_if_new_stacks_erratum": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+        "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation.",
+        "implementation_claim_boundary": "Evidence only; does not by itself establish validity, admission, implementation or publication",
+        "record": {
+          "record_key": "p05:L319",
+          "producer": "p05",
+          "candidate_id": "P05-EN-CH36-0056",
+          "ledger_line": 319,
+          "byte_start": 285052,
+          "byte_end_exclusive": 286159,
+          "json_utf8_sha256": "7372125B331DAB45641440E163681AE4AB58A19E0EAF68ED5EEA83C1A564D5CB",
+          "category": "source-defect",
+          "lifecycle": "active_producer_candidate",
+          "source_record": {
+            "utc": "2026-08-24T15:49:46.765Z",
+            "source_path": "perfect.tex",
+            "source_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+            "id": "P05-EN-CH36-0056",
+            "locus": {
+              "lines": [
+                4848,
+                4856
+              ],
+              "label": "lemma-better-coherator",
+              "context": "right-adjoint criterion in the first proof"
+            },
+            "defect": "The criterion begins 'for every object K' but then displays E' -> E -> K and requires K to be right-orthogonal; E is unbound. The arbitrary input object should be E, while K is the orthogonal cone.",
+            "evidence": [
+              {
+                "source_locus": "perfect.tex:4848-4856",
+                "observation": "K is simultaneously introduced as the arbitrary object and used as the third vertex satisfying Hom(M,K)=0; E appears without introduction."
+              },
+              {
+                "source_locus": "perfect.tex:4857-4868",
+                "observation": "The proof immediately applies the construction to an arbitrary E and its Mayer-Vietoris triangle."
+              }
+            ],
+            "smallest_proposed_correction": "Replace 'for every object K' by 'for every object E'.",
+            "confidence": "high",
+            "translation_impact": "The Japanese target preserves the frozen variable assignment in the criterion; the correction remains sidecar-only."
+          },
+          "admission": {
+            "status": "no_matching_admission_identified",
+            "stable_ids": [],
+            "operation_ids": [],
+            "crosswalk_indices": []
+          },
+          "implementation": "not_checked_in_cumulative_source",
+          "publication": "not_checked",
+          "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+        }
+      }
+    },
+    {
+      "container_line": 8625,
+      "container_line_sha256": "CD86F6CC23F6D40B77402391C1C96F637885A5B150D6B3F292ADF59754EADCBE",
+      "record": {
+        "record_key": "p09:L448",
+        "producer": "p09",
+        "ledger_line": 448,
+        "ledger_sha256": "B6DA732CC4FE9BA2B41470A0DE0BC20E5157AFF17CDDD588701F5DE33C75A57B",
+        "record_sha256_utf8_without_line_ending": "5D4306C4841A45D84C336C7378000BCA6455316FDF7F4BF5BF5951081ADCADE5",
+        "candidate_id": "P09-ERR-0448",
+        "parse_status": "strict_json_ok",
+        "finding_kind": "source_defect_candidate",
+        "disposition": "candidate_unadjudicated",
+        "producer_record": {
+          "source_path": "private-source-locator/spaces-perfect.tex",
+          "source_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+          "timestamp_utc": "2026-08-23T20:17:48Z",
+          "id": "P09-ERR-0448",
+          "confidence": "high",
+          "locus": {
+            "lines": "4459-4467",
+            "context": "first proof of lemma-better-coherator"
+          },
+          "defect": "The right-adjoint criterion says 'for every object K' and then asks for a triangle E' -> E -> K -> E'[1]. In the cited criterion, the arbitrary object is the middle object being decomposed; here that object is E, while K is the orthogonal cone.",
+          "evidence": "derived.tex:11832-11845 states that for every X there is A -> X -> B -> A[1] with A in the subcategory and B in its right orthogonal. The present proof later applies the construction to the terms built from E.",
+          "smallest_proposed_correction": "Change 'for every object K' to 'for every object E' (leaving K as the third vertex).",
+          "translation_impact": "The Chinese target preserves the frozen K/E variable assignment and triangle exactly, with only non-rendering pointer P09-ERR-0448."
+        },
+        "registry_reconciliation": {
+          "status": "source_file_absent_from_examined_manifest_records",
+          "stable_ids": [],
+          "evidence_refs": [],
+          "implementation_certainty": "not_examined_current_cumulative_source",
+          "public_verification": "not_examined"
+        },
+        "next_action": "Independently check frozen source and candidate mathematics, then reconcile/reroute through sole registrar without allocating duplicate IDs."
+      },
+      "original_wrapper": {
+        "occurrence_id": "AFE33B9289E97E8BB82070D315BBC88B2D1DB9B84D72AE9F7FF5AFE18A459381",
+        "kind": "producer_ledger_occurrence",
+        "evidence_artifact": "cjk/ledgers_p09_p12.json",
+        "evidence_sha256": "0990B62ECB9E47EDCA407F69F8754D2EDCC8B033406B3845F1DED790579FC95A",
+        "evidence_locator": "/records/447",
+        "reconciliation_owner": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+        "admission_owner_if_new_stacks_erratum": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+        "next_action": "Independently check frozen source and candidate mathematics, then reconcile/reroute through sole registrar without allocating duplicate IDs.",
+        "implementation_claim_boundary": "Evidence only; does not by itself establish validity, admission, implementation or publication",
+        "record": {
+          "record_key": "p09:L448",
+          "producer": "p09",
+          "ledger_line": 448,
+          "ledger_sha256": "B6DA732CC4FE9BA2B41470A0DE0BC20E5157AFF17CDDD588701F5DE33C75A57B",
+          "record_sha256_utf8_without_line_ending": "5D4306C4841A45D84C336C7378000BCA6455316FDF7F4BF5BF5951081ADCADE5",
+          "candidate_id": "P09-ERR-0448",
+          "parse_status": "strict_json_ok",
+          "finding_kind": "source_defect_candidate",
+          "disposition": "candidate_unadjudicated",
+          "producer_record": {
+            "source_path": "private-source-locator/spaces-perfect.tex",
+            "source_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+            "timestamp_utc": "2026-08-23T20:17:48Z",
+            "id": "P09-ERR-0448",
+            "confidence": "high",
+            "locus": {
+              "lines": "4459-4467",
+              "context": "first proof of lemma-better-coherator"
+            },
+            "defect": "The right-adjoint criterion says 'for every object K' and then asks for a triangle E' -> E -> K -> E'[1]. In the cited criterion, the arbitrary object is the middle object being decomposed; here that object is E, while K is the orthogonal cone.",
+            "evidence": "derived.tex:11832-11845 states that for every X there is A -> X -> B -> A[1] with A in the subcategory and B in its right orthogonal. The present proof later applies the construction to the terms built from E.",
+            "smallest_proposed_correction": "Change 'for every object K' to 'for every object E' (leaving K as the third vertex).",
+            "translation_impact": "The Chinese target preserves the frozen K/E variable assignment and triangle exactly, with only non-rendering pointer P09-ERR-0448."
+          },
+          "registry_reconciliation": {
+            "status": "source_file_absent_from_examined_manifest_records",
+            "stable_ids": [],
+            "evidence_refs": [],
+            "implementation_certainty": "not_examined_current_cumulative_source",
+            "public_verification": "not_examined"
+          },
+          "next_action": "Independently check frozen source and candidate mathematics, then reconcile/reroute through sole registrar without allocating duplicate IDs."
+        }
+      }
+    },
+    {
+      "container_line": 9187,
+      "container_line_sha256": "D36DD562CDAB71807BE8B76F2F4CB1992B64EBAA638A5842B86796B0F51C4FE0",
+      "record": {
+        "record_key": "p09:L1010",
+        "producer": "p09",
+        "ledger_line": 1010,
+        "ledger_sha256": "B6DA732CC4FE9BA2B41470A0DE0BC20E5157AFF17CDDD588701F5DE33C75A57B",
+        "record_sha256_utf8_without_line_ending": "3C918802B935F59C1CE0AD9AC2933F5EB6F9BAD41E55FAD84CB58AF7812DF9C3",
+        "candidate_id": "P09-ERR-1013",
+        "parse_status": "strict_json_ok",
+        "finding_kind": "source_defect_candidate",
+        "disposition": "candidate_unadjudicated",
+        "producer_record": {
+          "timestamp_utc": "2026-08-28T20:26:28Z",
+          "source_path": "private-source-locator/spaces-perfect.tex",
+          "source_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+          "id": "P09-ERR-1013",
+          "locus": {
+            "lines": [
+              4459,
+              4466
+            ],
+            "context": "first proof of lemma-better-coherator"
+          },
+          "defect": "The universal quantifier introduces K, but the approximation triangle is E' -> E -> K and E is otherwise unbound; the right-adjoint criterion requires the middle object E to be the arbitrary object.",
+          "evidence": "Lines 4461--4466 use E as the object being approximated and K as the right-orthogonal cone.",
+          "smallest_proposed_correction": "Replace 'for every object K' by 'for every object E'.",
+          "confidence": "high",
+          "translation_impact": "Japanese preserves the frozen variable assignment and carries non-rendering pointer P09-ERR-1013."
+        },
+        "registry_reconciliation": {
+          "status": "source_file_absent_from_examined_manifest_records",
+          "stable_ids": [],
+          "evidence_refs": [],
+          "implementation_certainty": "not_examined_current_cumulative_source",
+          "public_verification": "not_examined"
+        },
+        "next_action": "Independently check frozen source and candidate mathematics, then reconcile/reroute through sole registrar without allocating duplicate IDs."
+      },
+      "original_wrapper": {
+        "occurrence_id": "7350E2A168292897551EAE08525841A6723A32E503723FDB2B7B8CB309A0E792",
+        "kind": "producer_ledger_occurrence",
+        "evidence_artifact": "cjk/ledgers_p09_p12.json",
+        "evidence_sha256": "0990B62ECB9E47EDCA407F69F8754D2EDCC8B033406B3845F1DED790579FC95A",
+        "evidence_locator": "/records/1009",
+        "reconciliation_owner": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+        "admission_owner_if_new_stacks_erratum": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+        "next_action": "Independently check frozen source and candidate mathematics, then reconcile/reroute through sole registrar without allocating duplicate IDs.",
+        "implementation_claim_boundary": "Evidence only; does not by itself establish validity, admission, implementation or publication",
+        "record": {
+          "record_key": "p09:L1010",
+          "producer": "p09",
+          "ledger_line": 1010,
+          "ledger_sha256": "B6DA732CC4FE9BA2B41470A0DE0BC20E5157AFF17CDDD588701F5DE33C75A57B",
+          "record_sha256_utf8_without_line_ending": "3C918802B935F59C1CE0AD9AC2933F5EB6F9BAD41E55FAD84CB58AF7812DF9C3",
+          "candidate_id": "P09-ERR-1013",
+          "parse_status": "strict_json_ok",
+          "finding_kind": "source_defect_candidate",
+          "disposition": "candidate_unadjudicated",
+          "producer_record": {
+            "timestamp_utc": "2026-08-28T20:26:28Z",
+            "source_path": "private-source-locator/spaces-perfect.tex",
+            "source_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+            "id": "P09-ERR-1013",
+            "locus": {
+              "lines": [
+                4459,
+                4466
+              ],
+              "context": "first proof of lemma-better-coherator"
+            },
+            "defect": "The universal quantifier introduces K, but the approximation triangle is E' -> E -> K and E is otherwise unbound; the right-adjoint criterion requires the middle object E to be the arbitrary object.",
+            "evidence": "Lines 4461--4466 use E as the object being approximated and K as the right-orthogonal cone.",
+            "smallest_proposed_correction": "Replace 'for every object K' by 'for every object E'.",
+            "confidence": "high",
+            "translation_impact": "Japanese preserves the frozen variable assignment and carries non-rendering pointer P09-ERR-1013."
+          },
+          "registry_reconciliation": {
+            "status": "source_file_absent_from_examined_manifest_records",
+            "stable_ids": [],
+            "evidence_refs": [],
+            "implementation_certainty": "not_examined_current_cumulative_source",
+            "public_verification": "not_examined"
+          },
+          "next_action": "Independently check frozen source and candidate mathematics, then reconcile/reroute through sole registrar without allocating duplicate IDs."
+        }
+      }
+    }
+  ],
+  "routes": [
+    {
+      "authority_check": "exact_hash_match",
+      "composed_or_publicly_verified_by_this_join": false,
+      "current_registry_candidate_links": [],
+      "effective_field_correction_evidence": null,
+      "historical": {
+        "admission": "no_matching_admission_identified",
+        "category": "source-defect",
+        "lifecycle": "active_producer_candidate"
+      },
+      "historical_ids_absent_from_R48": [],
+      "historically_claimed_ids": [],
+      "inventory_line": 5101,
+      "inventory_row_sha256": "F8CF6CABE9145AB452D7CC199605364F423A5A25AA5E89C6B58E132CBB7A69D6",
+      "occurrence_id": "OCC-05101",
+      "producer": "p05",
+      "producer_id": "P05-EN-CH36-0056",
+      "producer_ledger_line": 319,
+      "ranges": [
+        [
+          4848,
+          4856
+        ]
+      ],
+      "ranges_in_bounds": true,
+      "recorded_authority_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+      "report_fingerprint": "657D993002ED1E638F9243F86A1660ABC4DBFB3960DCE86D5CCA1FCE5F34DF82",
+      "semantic_disposition": "pending_evidence_review",
+      "source": "perfect.tex"
+    },
+    {
+      "authority_check": "exact_hash_match",
+      "composed_or_publicly_verified_by_this_join": false,
+      "current_registry_candidate_links": [],
+      "effective_field_correction_evidence": null,
+      "historical": {
+        "disposition": "candidate_unadjudicated",
+        "finding_kind": "source_defect_candidate",
+        "registry_reconciliation": "source_file_absent_from_examined_manifest_records"
+      },
+      "historical_ids_absent_from_R48": [],
+      "historically_claimed_ids": [],
+      "inventory_line": 8627,
+      "inventory_row_sha256": "67FB2BC86C431BCE05F1554522CE8F6CBE11D9B20752A4D72C8FFA83DF3BA9BB",
+      "occurrence_id": "OCC-08627",
+      "producer": "p09",
+      "producer_id": "P09-ERR-0448",
+      "producer_ledger_line": 448,
+      "ranges": [
+        [
+          4459,
+          4467
+        ]
+      ],
+      "ranges_in_bounds": true,
+      "recorded_authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "report_fingerprint": "4F14501EA3D9C33345C7D599E29EE79C84DD1E6799A785B681A899EC770FA489",
+      "semantic_disposition": "pending_evidence_review",
+      "source": "spaces-perfect.tex"
+    },
+    {
+      "authority_check": "exact_hash_match",
+      "composed_or_publicly_verified_by_this_join": false,
+      "current_registry_candidate_links": [],
+      "effective_field_correction_evidence": null,
+      "historical": {
+        "disposition": "candidate_unadjudicated",
+        "finding_kind": "source_defect_candidate",
+        "registry_reconciliation": "source_file_absent_from_examined_manifest_records"
+      },
+      "historical_ids_absent_from_R48": [],
+      "historically_claimed_ids": [],
+      "inventory_line": 9189,
+      "inventory_row_sha256": "98E9ADF568F84E96611C73DDA611EA4114E3EF304A74D43E974BCD57EA3EFF00",
+      "occurrence_id": "OCC-09189",
+      "producer": "p09",
+      "producer_id": "P09-ERR-1013",
+      "producer_ledger_line": 1010,
+      "ranges": [
+        [
+          4459,
+          4466
+        ]
+      ],
+      "ranges_in_bounds": true,
+      "recorded_authority_sha256": "5791551E4C8BAE909A05C066AD60FE7FF95ED07B6D4A6537CB29527D8280DF34",
+      "report_fingerprint": "FB319C64AE4E78AB38C99CFB8EBD1D54D872F549BEC3D5BB5503C651200C82B4",
+      "semantic_disposition": "pending_evidence_review",
+      "source": "spaces-perfect.tex"
+    }
+  ],
+  "recovery_note": "Initial top-level candidate-id selection returned no records and stopped before writing. Corrected selection uses the original record wrapper."
+}

@@ -1,0 +1,97 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-008",
+      "source_lines": [
+        6143,
+        6199
+      ],
+      "kind": "filtered_simultaneous_subcomplex_replacement",
+      "original_statement": "Under the Serre epimorphism-lifting hypothesis, D^-(B) maps equivalently to D^-_B(A).",
+      "proved_statement": "The quasi-isomorphic B-term subcomplexes of a fixed bounded-above X with B-cohomology form a filtered poset. Finite families of chain maps and chosen homotopies from B-complexes factor through one such subcomplex; the exact Hom_K colimit formula follows. The comparison restricts to D^b and preserves all derived-category Ext groups and their products.",
+      "hypotheses": "Exactly the original Serre epimorphism-lifting hypothesis, bounded-above X with B-cohomology, and bounded-above B-complexes as sources of the retained maps and homotopies.",
+      "proof": {
+        "file": "PROOFS_5910_6199.md",
+        "bytes": 23233,
+        "sha256": "272661F0166BCCE4BDB3684623351E8713742BF34537931BFAFCB0678BEFF923",
+        "sections": [
+          4,
+          5,
+          6
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "existing_overlap": "The bounded restriction already appears in the receiving Perfect proposition; no claim that it was absent from the corpus.",
+      "affected": [
+        "derived.tex:6143-6199",
+        "perfect.tex:2564-2631"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "MC-STK-ERR-0839"
+      ],
+      "to": "DERIVED-NEW-023",
+      "status": "punctuation_repair_preserved_and_proof_domain_completed",
+      "proof": {
+        "file": "PROOFS_5910_6199.md",
+        "bytes": 23233,
+        "sha256": "272661F0166BCCE4BDB3684623351E8713742BF34537931BFAFCB0678BEFF923",
+        "section": 3
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-023"
+      ],
+      "to": "adequate.tex:2164-2179",
+      "status": "actual_quotient_inverse_and_bounded_variants_proved_without_exactness_of_u",
+      "proof": {
+        "file": "PROOFS_5910_6199.md",
+        "bytes": 23233,
+        "sha256": "272661F0166BCCE4BDB3684623351E8713742BF34537931BFAFCB0678BEFF923",
+        "sections": [
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-008"
+      ],
+      "to": "derived.tex:6185-6199",
+      "status": "fullness_and_faithfulness_proved_for_all_roofs_and_their_homotopies",
+      "proof": {
+        "file": "PROOFS_5910_6199.md",
+        "bytes": 23233,
+        "sha256": "272661F0166BCCE4BDB3684623351E8713742BF34537931BFAFCB0678BEFF923",
+        "sections": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-008"
+      ],
+      "to": "perfect.tex:2564-2631",
+      "status": "coherent_replacement_and_bounded_QCoh_comparison_proved_all_sheaf_comparison_dependency_not_reaudited",
+      "proof": {
+        "file": "PROOFS_5910_6199.md",
+        "bytes": 23233,
+        "sha256": "272661F0166BCCE4BDB3684623351E8713742BF34537931BFAFCB0678BEFF923",
+        "sections": [
+          5,
+          6
+        ]
+      }
+    }
+  ],
+  "limits": "No new proof of proposition-Noetherian in Perfect is claimed. No synthesis or novelty claim; no source-body strengthening."
+}

@@ -1,0 +1,262 @@
+\section{\texorpdfstring{Brown representability,\allowbreak{} bis:\allowbreak{} complete correction and receiving arguments}{Brown   complete correction and receiving arguments}}\label{proofs-11460-11655-brown-representability-bis-complete-correction-and-receiving-arguments}
+
+Authority:\allowbreak{} derived.tex at a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14, lines 11460–\allowbreak{}11655. The frozen authority and current public preimage are bound in INPUT\_\allowbreak{}BINDING.json and CURRENT\_\allowbreak{}PUBLIC\_\allowbreak{}BINDING.json. This note supports PART20; it does not certify subsequent source sections.
+
+Human source:\allowbreak{} Henning Krause,\allowbreak{} *Derived categories,\allowbreak{} resolutions,\allowbreak{} and Brown representability*,\allowbreak{} arXiv:\allowbreak{}math/\allowbreak{}0511047v3,\allowbreak{} author source dated 17 September 2006,\allowbreak{} §4,\allowbreak{} especially §4.5,\allowbreak{} source lines 1165–\allowbreak{}1318. The original compressed source and decompressed TeX are retained under literature/\allowbreak{}KRAUSE\_\allowbreak{}MATH\_\allowbreak{}0511047V3. The source-reading ledger records actual coverage. Krause identifies the proof as following his *A Brown representability theorem via coherent functors*,\allowbreak{} Topology 41 (2002)\allowbreak{},\allowbreak{} 853–\allowbreak{}861,\allowbreak{} the existing Stacks bibliography entry Krause. The 2002 article\textquotesingle s TeX has not been acquired; no PDF substitutes for it. The proof below supplies the restricted-functor construction explicitly and does not assume an unproved coproduct comparison.
+
+\subsection{\texorpdfstring{1. The original tower,\allowbreak{} its shifts,\allowbreak{} and the invalid assertion}{1. The original  its  and the invalid assertion}}\label{proofs-11460-11655-the-original-tower-its-shifts-and-the-invalid-assertion}
+
+Let D be the source triangulated category with arbitrary coproducts. Let E be its given set of objects. Replacing E by all its integral shifts preserves both assumptions. Detection is preserved because the old set is included. To verify the factorization assumption for A[i]\allowbreak{} with A in the old set,\allowbreak{} shift a map A[i]\allowbreak{}\allowbreak{}→\allowbreak{}⊕Y\_\allowbreak{}n by −i,\allowbreak{} apply the old assumption to Y\_\allowbreak{}n[−i]\allowbreak{},\allowbreak{} and shift the resulting entire diagram by i. Its intermediate objects are E\_\allowbreak{}n[i]\allowbreak{} in the enlarged set. The shift equivalences preserve coproducts by their universal property.
+
+Keep exactly the source functor H:\allowbreak{}D\textasciicircum{}op\allowbreak{}→Ab and elements a\_\allowbreak{}n. Put
+
+\[
+ X_1=\bigoplus_{(E,a),\,E\in\mathcal E,\ a\in H(E)}E,\qquad
+ a_1=(a)_{(E,a)}\in H(X_1).
+\]
+
+At stage n define θ\_\allowbreak{}n(f)\allowbreak{}\allowbreak{}=H(f)\allowbreak{}(a\_\allowbreak{}n)\allowbreak{}. Form the source coproduct K\_\allowbreak{}\{n\allowbreak{}+1\} of all pairs (E,\allowbreak{}k)\allowbreak{} with k:\allowbreak{}E\allowbreak{}→X\_\allowbreak{}n and θ\_\allowbreak{}n(k)\allowbreak{}\allowbreak{}=0,\allowbreak{} its evaluation e\_\allowbreak{}n:\allowbreak{}K\_\allowbreak{}\{n\allowbreak{}+1\}\allowbreak{}→X\_\allowbreak{}n,\allowbreak{} and a distinguished triangle
+
+\[
+ K_{n+1}\xrightarrow{e_n}X_n\xrightarrow{u_n}X_{n+1}
+ \longrightarrow K_{n+1}[1].
+\]
+
+Every coordinate of H(e\_\allowbreak{}n)\allowbreak{}(a\_\allowbreak{}n)\allowbreak{} is zero. The comparison from H on the coproduct to the product is an isomorphism,\allowbreak{} so H(e\_\allowbreak{}n)\allowbreak{}(a\_\allowbreak{}n)\allowbreak{}\allowbreak{}=0. The exact H sequence provides a\_\allowbreak{}\{n\allowbreak{}+1\} with H(u\_\allowbreak{}n)\allowbreak{}(a\_\allowbreak{}\{n\allowbreak{}+1\})\allowbreak{}\allowbreak{}=a\_\allowbreak{}n. In particular,\allowbreak{} θ\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}\{n*\}\allowbreak{}=θ\_\allowbreak{}n.
+
+For every E in the generating set,\allowbreak{} θ\_\allowbreak{}n:\allowbreak{}Hom(E,\allowbreak{}X\_\allowbreak{}n)\allowbreak{}\allowbreak{}→H(E)\allowbreak{} is surjective:\allowbreak{} start with the summand of X\_\allowbreak{}1 indexed by (E,\allowbreak{}a)\allowbreak{},\allowbreak{} then compose with the transition maps. Also u\_\allowbreak{}\{n*\} kills ker θ\_\allowbreak{}n,\allowbreak{} because each such map is an evaluation summand of e\_\allowbreak{}n. Conversely u\_\allowbreak{}n k\allowbreak{}=0 implies θ\_\allowbreak{}n(k)\allowbreak{}\allowbreak{}=0 by compatibility. Thus
+
+\[
+ \ker(u_{n*})=\ker(\theta_n).
+\]
+
+The source at 11554 claims u\_\allowbreak{}nβ\_\allowbreak{}n\allowbreak{}=0 for the arbitrary factors supplied by assumption (2)\allowbreak{}. This is false:\allowbreak{} those factors need not belong to ker θ\_\allowbreak{}n. The surrounding assertion tα\allowbreak{}=α for every α is false as well.
+
+Here is a counterexample to those two assertions within the hypotheses,\allowbreak{} without claiming the theorem itself false. Take D\allowbreak{}=D(k)\allowbreak{} for a field k,\allowbreak{} E\allowbreak{}=\{k[j]\allowbreak{}:\allowbreak{}j\allowbreak{}∈Z\},\allowbreak{} and H\allowbreak{}=Hom\_\allowbreak{}D(−,\allowbreak{}k)\allowbreak{}. The family detects nonzero cohomology,\allowbreak{} and each k[j]\allowbreak{} is compact,\allowbreak{} since Hom\_\allowbreak{}D(k[j]\allowbreak{},\allowbreak{}Y)\allowbreak{}\allowbreak{}=H\textasciicircum{}\{−j\}(Y)\allowbreak{}. Consequently assumption (2)\allowbreak{} holds:\allowbreak{} a map from k[j]\allowbreak{} into a coproduct has finite support; take every intermediate object to be k[j]\allowbreak{},\allowbreak{} take β\_\allowbreak{}n to be its component,\allowbreak{} and let γ have the identity in its finitely many supported positions. Set β\_\allowbreak{}1:\allowbreak{}k\allowbreak{}→X\_\allowbreak{}1 equal to the summand indexed by id\_\allowbreak{}k\allowbreak{}∈H(k)\allowbreak{}. Then θ\_\allowbreak{}1(β\_\allowbreak{}1)\allowbreak{}\allowbreak{}=id\_\allowbreak{}k,\allowbreak{} and θ\_\allowbreak{}2(u\_\allowbreak{}1β\_\allowbreak{}1)\allowbreak{}\allowbreak{}=id\_\allowbreak{}k,\allowbreak{} so u\_\allowbreak{}1β\_\allowbreak{}1≠0. Take β\_\allowbreak{}n\allowbreak{}=0 for n\textgreater1 and let γ be the first-summand inclusion. For S\allowbreak{}=\allowbreak{}⊕X\_\allowbreak{}n,\allowbreak{} write ι\_\allowbreak{}n:\allowbreak{}X\_\allowbreak{}n\allowbreak{}→S and sι\_\allowbreak{}n\allowbreak{}=ι\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}n. Then α\allowbreak{}=ι\_\allowbreak{}1β\_\allowbreak{}1 satisfies
+
+\[
+ (1-s)\alpha-\alpha=-\iota_2u_1\beta_1\ne0,
+\]
+
+as composition with the second projection shows.
+
+DERIVED-NEW-041 is therefore a proof gap with explicit adverse evidence. Sections 2–\allowbreak{}4 repair it without altering either source hypothesis or replacing the specified tower.
+
+\subsection{2. The exact restricted-functor category and its countable coproducts}\label{proofs-11460-11655-the-exact-restricted-functor-category-and-its-countable-coproducts}
+
+Let P be the full subcategory of objects isomorphic to coproducts of objects in E. For Y\allowbreak{}∈D define hY\allowbreak{}=Hom\_\allowbreak{}D(−,\allowbreak{}Y)\allowbreak{}|\_\allowbreak{}P. Let A be the category of additive functors P\textasciicircum{}op\allowbreak{}→Ab that take all coproducts in P to products,\allowbreak{} with natural transformations. These are genuine products of abelian groups; coproducts in A will not be identified with pointwise sums.
+
+A is locally small. A natural transformation is determined by its components at the set E:\allowbreak{} for any decomposition P\allowbreak{}=\allowbreak{}⊕E\_\allowbreak{}i,\allowbreak{} naturality for the inclusions identifies its component at P with the product of its components at E\_\allowbreak{}i. Hence the class of natural transformations injects into the set ∏\_\allowbreak{}\{E\allowbreak{}∈E\}Hom\_\allowbreak{}Ab(F(E)\allowbreak{},\allowbreak{}G(E)\allowbreak{})\allowbreak{}.
+
+Kernels and cokernels of a natural transformation in A,\allowbreak{} calculated pointwise,\allowbreak{} still take coproducts to products. For kernels this follows coordinate by coordinate. For cokernels the needed identity is
+
+\[
+ \operatorname{coker}\left(\prod_i F(P_i)\to\prod_i G(P_i)\right)
+   \cong\prod_i\operatorname{coker}(F(P_i)\to G(P_i)).
+\]
+
+Indeed the product of the quotient maps is onto by choosing a representative in every coordinate,\allowbreak{} and its kernel consists exactly of coordinatewise images,\allowbreak{} which are the image of the product map. The same coordinate argument identifies images and coimages. Thus A is abelian,\allowbreak{} its exact sequences are pointwise exact,\allowbreak{} and evaluation at any P\allowbreak{}∈P is exact. In particular,\allowbreak{} idempotents split in A,\allowbreak{} with image and kernel calculated pointwise.
+
+For each Y choose
+
+\[
+ P_Y=\bigoplus_{(E,f),\,f:E\to Y}E,\qquad p_Y:P_Y\to Y
+\]
+
+by evaluation. Hom(P,\allowbreak{}p\_\allowbreak{}Y)\allowbreak{} is onto for every P\allowbreak{}∈P:\allowbreak{} lift each component from E and combine them by the coproduct universal property. Complete p\_\allowbreak{}Y to a triangle C\_\allowbreak{}Y\allowbreak{}→P\_\allowbreak{}Y\allowbreak{}→Y\allowbreak{}→C\_\allowbreak{}Y[1]\allowbreak{},\allowbreak{} choose an evaluation map q\_\allowbreak{}Y:\allowbreak{}Q\_\allowbreak{}Y\allowbreak{}→C\_\allowbreak{}Y with Q\_\allowbreak{}Y\allowbreak{}∈P in the same way,\allowbreak{} and compose it with C\_\allowbreak{}Y\allowbreak{}→P\_\allowbreak{}Y. The Hom exact sequence gives the pointwise exact presentation
+
+\[
+ hQ_Y\longrightarrow hP_Y\longrightarrow hY\longrightarrow0. \tag{2.1}
+\]
+
+All three functors are in A. For P\_\allowbreak{}0\allowbreak{}∈P,\allowbreak{} hP\_\allowbreak{}0 is representable on P,\allowbreak{} so Yoneda identifies Nat(hP\_\allowbreak{}0,\allowbreak{}F)\allowbreak{} with F(P\_\allowbreak{}0)\allowbreak{}.
+
+We now prove the precise coproduct comparison used in the repair:\allowbreak{}
+
+\[
+ h\left(\bigoplus_{n\ge1}Y_n\right)
+       \ \cong\ \coprod_{n\ge1}^{A}hY_n. \tag{2.2}
+\]
+
+First,\allowbreak{} assumption (2)\allowbreak{} implies that any countable family of maps p\_\allowbreak{}n:\allowbreak{}P\_\allowbreak{}n\allowbreak{}→Y\_\allowbreak{}n which is onto on Hom(E,\allowbreak{}−)\allowbreak{} for every E\allowbreak{}∈E has a coproduct with the same property. For α:\allowbreak{}E\allowbreak{}→\allowbreak{}⊕Y\_\allowbreak{}n write α\allowbreak{}=(\allowbreak{}⊕β\_\allowbreak{}n)\allowbreak{}γ as in the assumption. Lift β\_\allowbreak{}n:\allowbreak{}E\_\allowbreak{}n\allowbreak{}→Y\_\allowbreak{}n through p\_\allowbreak{}n,\allowbreak{} say to \(\widetilde\beta_n:E_n\to P_n\). Then (\allowbreak{}⊕\(\widetilde\beta_n\))\allowbreak{}γ is a lift of α. For a domain P\allowbreak{}∈P do this on each coproduct component.
+
+Apply this to the evaluation maps p\_\allowbreak{}\{Y\_\allowbreak{}n\} and also to q\_\allowbreak{}\{Y\_\allowbreak{}n\}. Coproducts of distinguished triangles are distinguished in D. Here is the needed argument without imposing an additional exactness axiom on coproducts. For triangles A\_\allowbreak{}i\allowbreak{}→B\_\allowbreak{}i\allowbreak{}→C\_\allowbreak{}i\allowbreak{}→A\_\allowbreak{}i[1]\allowbreak{},\allowbreak{} choose a distinguished triangle on \allowbreak{}⊕A\_\allowbreak{}i\allowbreak{}→\allowbreak{}⊕B\_\allowbreak{}i with third object Z. The triangle morphism axiom applied to the inclusions A\_\allowbreak{}i\allowbreak{}→\allowbreak{}⊕A\_\allowbreak{}i and B\_\allowbreak{}i\allowbreak{}→\allowbreak{}⊕B\_\allowbreak{}i gives maps C\_\allowbreak{}i\allowbreak{}→Z. They combine to c:\allowbreak{}\allowbreak{}⊕C\_\allowbreak{}i\allowbreak{}→Z,\allowbreak{} and all three squares commute on the actual inclusions. Applying Hom(−,\allowbreak{}W)\allowbreak{},\allowbreak{} the candidate coproduct triangle has an exact sequence because it is the product of the exact sequences for the individual triangles and products of abelian groups are exact. The comparison with the distinguished triangle on \allowbreak{}⊕A\_\allowbreak{}i\allowbreak{}→\allowbreak{}⊕B\_\allowbreak{}i has identities on the adjacent A and B terms. The five-lemma argument proves Hom(c,\allowbreak{}W)\allowbreak{} is an isomorphism for every W. Yoneda implies c is an isomorphism,\allowbreak{} proving the assertion. Thus the coproduct of the triangles C\_\allowbreak{}\{Y\_\allowbreak{}n\}\allowbreak{}→P\_\allowbreak{}\{Y\_\allowbreak{}n\}\allowbreak{}→Y\_\allowbreak{}n\allowbreak{}→C\_\allowbreak{}\{Y\_\allowbreak{}n\}[1]\allowbreak{},\allowbreak{} together with these two surjectivities,\allowbreak{} gives the exact presentation
+
+\[
+ h(\bigoplus Q_{Y_n})\longrightarrow
+ h(\bigoplus P_{Y_n})\longrightarrow
+ h(\bigoplus Y_n)\longrightarrow0. \tag{2.3}
+\]
+
+For an arbitrary F\allowbreak{}∈A,\allowbreak{} applying Nat(−,\allowbreak{}F)\allowbreak{} to the cokernel presentation (2.3)\allowbreak{},\allowbreak{} then Yoneda and the product property of F,\allowbreak{} gives
+
+\[
+\begin{aligned}
+ \operatorname{Nat}(h(\bigoplus Y_n),F)
+  &=\ker\left(F(\bigoplus P_{Y_n})\to F(\bigoplus Q_{Y_n})\right)\\
+  &=\ker\left(\prod_n F(P_{Y_n})\to\prod_n F(Q_{Y_n})\right)\\
+  &=\prod_n\ker\left(F(P_{Y_n})\to F(Q_{Y_n})\right)\\
+  &=\prod_n\operatorname{Nat}(hY_n,F).
+\end{aligned}
+\]
+
+The maps are restriction along the actual inclusions Y\_\allowbreak{}n\allowbreak{}→\allowbreak{}⊕Y\_\allowbreak{}n,\allowbreak{} since both presentation diagrams commute with the inclusions of P\_\allowbreak{}\{Y\_\allowbreak{}n\} and Q\_\allowbreak{}\{Y\_\allowbreak{}n\}. This proves the coproduct universal property,\allowbreak{} including its canonical structure maps. It is not a compactness assertion:\allowbreak{} evaluation at E need not preserve these coproducts.
+
+The same proof works under the weaker condition that countable coproducts preserve all maps which are onto on Hom(E,\allowbreak{}−)\allowbreak{} for every E\allowbreak{}∈E. Conversely,\allowbreak{} (2.2)\allowbreak{} implies this condition. If all h(f\_\allowbreak{}n)\allowbreak{} are epimorphisms in A,\allowbreak{} their coproduct is an epimorphism:\allowbreak{} two maps agreeing after it agree after every epimorphism h(f\_\allowbreak{}n)\allowbreak{},\allowbreak{} hence on all summands. By (2.2)\allowbreak{} this is h(\allowbreak{}⊕f\_\allowbreak{}n)\allowbreak{},\allowbreak{} and its evaluation at E is onto because epimorphisms in A are pointwise onto. This proves the exact equivalence between that weaker condition and (2.2)\allowbreak{}.
+
+\subsection{3. The split telescope sequence with all maps specified}\label{proofs-11460-11655-the-split-telescope-sequence-with-all-maps-specified}
+
+Set T\allowbreak{}=H|\_\allowbreak{}P and M\_\allowbreak{}n\allowbreak{}=hX\_\allowbreak{}n. All θ\_\allowbreak{}n:\allowbreak{}M\_\allowbreak{}n\allowbreak{}→T are epimorphisms in A. To see this directly at P\allowbreak{}=\allowbreak{}⊕E\_\allowbreak{}i,\allowbreak{} use Hom(P,\allowbreak{}X\_\allowbreak{}n)\allowbreak{}\allowbreak{}=∏Hom(E\_\allowbreak{}i,\allowbreak{}X\_\allowbreak{}n)\allowbreak{},\allowbreak{} H(P)\allowbreak{}\allowbreak{}=∏H(E\_\allowbreak{}i)\allowbreak{},\allowbreak{} and the surjectivity established in §1. The transition v\_\allowbreak{}n\allowbreak{}=h(u\_\allowbreak{}n)\allowbreak{} kills ker θ\_\allowbreak{}n pointwise at E\_\allowbreak{}i,\allowbreak{} and therefore at P. Since θ\_\allowbreak{}1 is a pointwise epimorphism,\allowbreak{} v\_\allowbreak{}1 factors uniquely as
+
+\[
+ M_1\xrightarrow{\theta_1}T\xrightarrow{\sigma_2}M_2.
+\]
+
+Compatibility and surjectivity of θ\_\allowbreak{}1 give θ\_\allowbreak{}2σ\_\allowbreak{}2\allowbreak{}=id\_\allowbreak{}T. For n≥2 set σ\_\allowbreak{}\{n\allowbreak{}+1\}\allowbreak{}=v\_\allowbreak{}nσ\_\allowbreak{}n. Induction gives
+
+\[
+ \theta_n\sigma_n=1_T,\qquad v_n\sigma_n=\sigma_{n+1}.
+\]
+
+Write L\_\allowbreak{}n\allowbreak{}=ker θ\_\allowbreak{}n for n≥2. The isomorphism T\allowbreak{}⊕L\_\allowbreak{}n\allowbreak{}→M\_\allowbreak{}n sends (x,\allowbreak{}z)\allowbreak{} to σ\_\allowbreak{}nx\allowbreak{}+z; its inverse sends m to (θ\_\allowbreak{}nm,\allowbreak{}m−σ\_\allowbreak{}nθ\_\allowbreak{}nm)\allowbreak{}. Since v\_\allowbreak{}n kills L\_\allowbreak{}n,\allowbreak{} in these actual coordinates the transition is
+
+\[
+ T\oplus L_n\longrightarrow T\oplus L_{n+1},
+       \qquad (x,z)\longmapsto(x,0). \tag{3.1}
+\]
+
+Let V\allowbreak{}=\allowbreak{}⊕\textasciicircum{}A\_\allowbreak{}\{n≥2\}M\_\allowbreak{}n,\allowbreak{} which exists by (2.2)\allowbreak{}. The idempotent on V induced on its n-th summand by σ\_\allowbreak{}nθ\_\allowbreak{}n has image C and complementary image L. The coproduct universal property and the component retractions show
+
+\[
+ C=\coprod_{n\ge2}^{A}T,\quad
+ L=\coprod_{n\ge2}^{A}L_n,\quad V=C\oplus L.
+\]
+
+For example,\allowbreak{} maps from C to any F correspond exactly to families of maps M\_\allowbreak{}n\allowbreak{}→F that vanish on L\_\allowbreak{}n,\allowbreak{} hence to families of maps T\allowbreak{}→F. This also proves that the displayed coproducts exist; their existence is not assumed from pointwise sums.
+
+On C let j\_\allowbreak{}n:\allowbreak{}T\allowbreak{}→C denote its n-th coproduct inclusion,\allowbreak{} let s\_\allowbreak{}Cj\_\allowbreak{}n\allowbreak{}=j\_\allowbreak{}\{n\allowbreak{}+1\},\allowbreak{} and let ε:\allowbreak{}C\allowbreak{}→T be the fold,\allowbreak{} εj\_\allowbreak{}n\allowbreak{}=id\_\allowbreak{}T. Define \[
+ \ell_Cj_n=-\sum_{j=2}^{n-1}j_j,\qquad
+ \ell_Cj_2=0.
+\] Each sum is finite,\allowbreak{} so the coproduct universal property defines an actual morphism ℓ\_\allowbreak{}C:\allowbreak{}C\allowbreak{}→C. Direct calculation on each inclusion gives
+
+\[
+ \ell_C(1-s_C)j_n=j_n,\qquad
+ (1-s_C)\ell_Cj_n=j_n-j_2,\qquad \varepsilon j_2=1_T.
+\]
+
+Consequently \[
+ \ell_C(1-s_C)=1_C,\quad
+ (1-s_C)\ell_C=1_C-j_2\varepsilon,\quad
+ \varepsilon(1-s_C)=0.
+\] These identities prove the split exact sequence 0\allowbreak{}→C\allowbreak{}→\textasciicircum{}\{1−s\_\allowbreak{}C\}C\allowbreak{}→\textasciicircum{}εT\allowbreak{}→0. In (3.1)\allowbreak{} the transition is zero on L,\allowbreak{} so the tail telescope map t\_\allowbreak{}V:\allowbreak{}V\allowbreak{}→V is (1−s\_\allowbreak{}C)\allowbreak{}\allowbreak{}⊕id\_\allowbreak{}L. Its left inverse is ℓ\_\allowbreak{}V\allowbreak{}=ℓ\_\allowbreak{}C\allowbreak{}⊕id\_\allowbreak{}L,\allowbreak{} and its cokernel is T with map induced by the θ\_\allowbreak{}n.
+
+Retain the initial object M\_\allowbreak{}1,\allowbreak{} which need not split as T\allowbreak{}⊕ker θ\_\allowbreak{}1. Put b\allowbreak{}=j\_\allowbreak{}2\textasciicircum{}Vv\_\allowbreak{}1:\allowbreak{}M\_\allowbreak{}1\allowbreak{}→V. Relative to M\allowbreak{}=M\_\allowbreak{}1\allowbreak{}⊕V\allowbreak{}=hS,\allowbreak{} where S\allowbreak{}=\allowbreak{}⊕\_\allowbreak{}\{n≥1\}X\_\allowbreak{}n,\allowbreak{} the actual telescope map t\allowbreak{}=h(1−s)\allowbreak{} is
+
+\[
+ t(x,y)=(x,t_Vy-bx).
+\]
+
+The target automorphism A\_\allowbreak{}0(x,\allowbreak{}y)\allowbreak{}\allowbreak{}=(x,\allowbreak{}y\allowbreak{}+bx)\allowbreak{},\allowbreak{} whose inverse is (x,\allowbreak{}y)\allowbreak{}\allowbreak{}↦(x,\allowbreak{}y−bx)\allowbreak{},\allowbreak{} satisfies \[
+ A_0t(x,y)=(x,t_Vy).
+\] Thus \[
+ \ell(x,y)=(x,\ell_V(y+bx))
+\] is a left inverse of t. Its cokernel is T. In fact the cokernel map Θ:\allowbreak{}M\allowbreak{}→T is induced by the original θ\_\allowbreak{}n; in these coordinates Θ(x,\allowbreak{}y)\allowbreak{}\allowbreak{}=θ\_\allowbreak{}1x\allowbreak{}+Θ\_\allowbreak{}Vy,\allowbreak{} because Θ\_\allowbreak{}Vb\allowbreak{}=θ\_\allowbreak{}2v\_\allowbreak{}1\allowbreak{}=θ\_\allowbreak{}1. A section is x\allowbreak{}↦(0,\allowbreak{}j\_\allowbreak{}2\textasciicircum{}Vσ\_\allowbreak{}2x)\allowbreak{}. We have proved the split exact sequence in A
+
+\[
+ 0\longrightarrow hS\xrightarrow{h(1-s)}hS
+          \xrightarrow{\Theta}H|_P\longrightarrow0. \tag{3.2}
+\]
+
+Evaluating its left inverse at E proves exactly the source injectivity Hom(E,\allowbreak{}S)\allowbreak{}\allowbreak{}→\textasciicircum{}\{(1−s)\allowbreak{}\_\allowbreak{}*\}Hom(E,\allowbreak{}S)\allowbreak{}. It does not imply that 1−s:\allowbreak{}S\allowbreak{}→S has a left inverse in D:\allowbreak{} the natural transformation ℓ is only defined on the restriction to P. Since E[−1]\allowbreak{} is also in the enlarged set,\allowbreak{} the natural shift comparison gives injectivity on Hom(E,\allowbreak{}S[1]\allowbreak{})\allowbreak{} as well.
+
+\subsection{\texorpdfstring{4. The homotopy-colimit map,\allowbreak{} bijectivity,\allowbreak{} and full representability}{4. The homotopy-colimit   and full representability}}\label{proofs-11460-11655-the-homotopy-colimit-map-bijectivity-and-full-representability}
+
+Choose exactly the source telescope triangle
+
+\[
+ S\xrightarrow{t_D=1-s}S\xrightarrow{q}X\xrightarrow{w}S[1].
+\]
+
+Let a\_\allowbreak{}S\allowbreak{}∈H(S)\allowbreak{} correspond to (a\_\allowbreak{}n)\allowbreak{}. On its n-th coordinate,\allowbreak{} H(t\_\allowbreak{}D)\allowbreak{}(a\_\allowbreak{}S)\allowbreak{} is a\_\allowbreak{}n−H(u\_\allowbreak{}n)\allowbreak{}(a\_\allowbreak{}\{n\allowbreak{}+1\})\allowbreak{}\allowbreak{}=0. Thus the H exact sequence gives a\allowbreak{}∈H(X)\allowbreak{} with H(q)\allowbreak{}(a)\allowbreak{}\allowbreak{}=a\_\allowbreak{}S. Let θ:\allowbreak{}h\_\allowbreak{}X\allowbreak{}→H be the Yoneda transformation f\allowbreak{}↦H(f)\allowbreak{}(a)\allowbreak{}. Its composite with every q\_\allowbreak{}n\allowbreak{}=qι\_\allowbreak{}n is θ\_\allowbreak{}n.
+
+The injectivity proved in §3,\allowbreak{} also for the shifted S,\allowbreak{} and the Hom sequence of the telescope triangle give
+
+\[
+ \operatorname{Hom}(E,S)\xrightarrow{t_{D*}}
+ \operatorname{Hom}(E,S)\xrightarrow{q_*}
+ \operatorname{Hom}(E,X)\longrightarrow0. \tag{4.1}
+\]
+
+Comparison with (3.2)\allowbreak{} identifies θ\_\allowbreak{}E:\allowbreak{}Hom(E,\allowbreak{}X)\allowbreak{}\allowbreak{}→H(E)\allowbreak{} as an isomorphism. This argument also proves the stronger natural statement hX≅H|\_\allowbreak{}P,\allowbreak{} with the isomorphism induced by the actual element a.
+
+For completeness,\allowbreak{} the original next paragraph,\allowbreak{} 11571–\allowbreak{}11599,\allowbreak{} now works with its original maps. Lift f:\allowbreak{}E\allowbreak{}→X to α:\allowbreak{}E\allowbreak{}→S using (4.1)\allowbreak{},\allowbreak{} and factor α\allowbreak{}=(\allowbreak{}⊕β\_\allowbreak{}n)\allowbreak{}γ by assumption (2)\allowbreak{}. Choose δ\_\allowbreak{}n:\allowbreak{}E\_\allowbreak{}n\allowbreak{}→X\_\allowbreak{}1 with θ\_\allowbreak{}1(δ\_\allowbreak{}n)\allowbreak{}\allowbreak{}=θ\_\allowbreak{}n(β\_\allowbreak{}n)\allowbreak{},\allowbreak{} and let u\_\allowbreak{}\{n,\allowbreak{}1\}:\allowbreak{}X\_\allowbreak{}1\allowbreak{}→X\_\allowbreak{}n be the transition composite (the identity when n\allowbreak{}=1)\allowbreak{}. Then β\_\allowbreak{}n−u\_\allowbreak{}\{n,\allowbreak{}1\}δ\_\allowbreak{}n is in ker θ\_\allowbreak{}n,\allowbreak{} so u\_\allowbreak{}nβ\_\allowbreak{}n\allowbreak{}=u\_\allowbreak{}nu\_\allowbreak{}\{n,\allowbreak{}1\}δ\_\allowbreak{}n. Since q\_\allowbreak{}\{n\allowbreak{}+1\}u\_\allowbreak{}n\allowbreak{}=q\_\allowbreak{}n,\allowbreak{}
+
+\[
+ q_n\beta_n=q_1\delta_n.
+\]
+
+Maps out of \allowbreak{}⊕E\_\allowbreak{}n are determined by their components. Therefore qα\allowbreak{}=q\_\allowbreak{}1dγ,\allowbreak{} where d:\allowbreak{}\allowbreak{}⊕E\_\allowbreak{}n\allowbreak{}→X\_\allowbreak{}1 has components δ\_\allowbreak{}n. This proves Hom(E,\allowbreak{}X\_\allowbreak{}1)\allowbreak{}\allowbreak{}→Hom(E,\allowbreak{}X)\allowbreak{} is onto. If θ\_\allowbreak{}1(g)\allowbreak{}\allowbreak{}=0 then u\_\allowbreak{}1g\allowbreak{}=0,\allowbreak{} so q\_\allowbreak{}1g\allowbreak{}=0. Since θ\_\allowbreak{}1 is onto,\allowbreak{} θ\_\allowbreak{}E is onto; if θ\_\allowbreak{}E(f)\allowbreak{}\allowbreak{}=0,\allowbreak{} choose f\allowbreak{}=q\_\allowbreak{}1g,\allowbreak{} obtain θ\_\allowbreak{}1(g)\allowbreak{}\allowbreak{}=0 and f\allowbreak{}=0. These are the exact surjectivity and injectivity claims in the source paragraph.
+
+Define D\textquotesingle{} exactly as in the source:\allowbreak{} Y\allowbreak{}∈D' if θ\_\allowbreak{}\{Y[j]\allowbreak{}\} is an isomorphism for every j\allowbreak{}∈Z. This class is strictly full and shift stable. For a distinguished triangle,\allowbreak{} the two Hom/\allowbreak{}H long exact sequences form a commutative diagram; if θ is an isomorphism at the two other objects in all shifts,\allowbreak{} the five-lemma argument on five successive terms gives it at the third. For a retraction Y\allowbreak{}→Z\allowbreak{}→Y,\allowbreak{} the naturality squares make θ\_\allowbreak{}Y a retract of θ\_\allowbreak{}Z,\allowbreak{} and the inverse is obtained by composing the inclusion,\allowbreak{} θ\_\allowbreak{}Z\textasciicircum{}\{-1\},\allowbreak{} and projection. Thus D\textquotesingle{} is saturated. On a coproduct of objects in D',\allowbreak{} the map θ is the product of their isomorphisms,\allowbreak{} since both functors take coproducts to products. Hence D\textquotesingle{} is closed under coproducts,\allowbreak{} and the telescope triangle makes it closed under these homotopy colimits. The preceding calculation puts E in D\textquotesingle.
+
+For arbitrary Y\allowbreak{}∈D,\allowbreak{} repeat the already established construction for H\_\allowbreak{}Y\allowbreak{}=Hom\_\allowbreak{}D(−,\allowbreak{}Y)\allowbreak{},\allowbreak{} naming the resulting tower X\_\allowbreak{}n\textasciicircum{}Y and telescope X\^{}Y. The construction uses sums of E and their cones,\allowbreak{} so all X\_\allowbreak{}n\textasciicircum{}Y and X\^{}Y belong to the original D\textquotesingle. Yoneda identifies the constructed element with a map f\_\allowbreak{}Y:\allowbreak{}X\textasciicircum{}Y\allowbreak{}→Y,\allowbreak{} and the preceding argument proves Hom(E,\allowbreak{}f\_\allowbreak{}Y)\allowbreak{} is bijective for every E\allowbreak{}∈E. Complete f\_\allowbreak{}Y to a triangle X\textasciicircum{}Y\allowbreak{}→Y\allowbreak{}→C\allowbreak{}→X\textasciicircum{}Y[1]\allowbreak{}. Since E is shift stable,\allowbreak{} the maps on both adjacent Hom terms are isomorphisms,\allowbreak{} so Hom(E,\allowbreak{}C)\allowbreak{}\allowbreak{}=0 for every E. Assumption (1)\allowbreak{} implies C\allowbreak{}=0. Hence f\_\allowbreak{}Y is an isomorphism and Y\allowbreak{}∈D'. Thus D'\allowbreak{}=D,\allowbreak{} and θ:\allowbreak{}h\_\allowbreak{}X\allowbreak{}→H is the required natural isomorphism.
+
+This also records exactly where detection is used:\allowbreak{} only the final cone argument. Sections 1–\allowbreak{}3 and the restricted conclusion hX≅H|\_\allowbreak{}P do not require detection.
+
+\subsection{\texorpdfstring{5. Underclaim,\allowbreak{} weaker hypothesis,\allowbreak{} and the exact right adjoint}{5.  weaker  and the exact right adjoint}}\label{proofs-11460-11655-underclaim-weaker-hypothesis-and-the-exact-right-adjoint}
+
+DERIVED-UNDER-030 records the split sequence (3.2)\allowbreak{},\allowbreak{} its explicit retraction,\allowbreak{} and the natural restricted representation hX≅H|\_\allowbreak{}P. It is a proved editorial strengthening of the source\textquotesingle s stated injectivity. Its hypotheses are the shift-stable set,\allowbreak{} the specified kernel-killing tower for the cohomological coproduct-to-product functor,\allowbreak{} and countable preservation of E-epimorphisms proved in §2. Detection is not needed for that restricted conclusion.
+
+Under the weaker countable preservation condition itself,\allowbreak{} sections 2–\allowbreak{}4 up to hX≅H|\_\allowbreak{}P remain unchanged. The alternative source factorization paragraph is no longer necessary:\allowbreak{} (3.2)\allowbreak{} and the telescope exact sequence already prove θ\_\allowbreak{}E is an isomorphism. With detection,\allowbreak{} the final cone argument proves full Brown representability under that weaker condition. This is the known perfect-generator mechanism of Krause,\allowbreak{} not a novelty claim. The source\textquotesingle s original assumption (2)\allowbreak{} and its original formulation remain in the corrected source body.
+
+For the proposition at 11633–\allowbreak{}11655 let F:\allowbreak{}D\allowbreak{}→D\_\allowbreak{}1 be exact and preserve coproducts. For Y\allowbreak{}∈D\_\allowbreak{}1 define H\_\allowbreak{}Y(W)\allowbreak{}\allowbreak{}=Hom\_\allowbreak{}\{D\_\allowbreak{}1\}(F(W)\allowbreak{},\allowbreak{}Y)\allowbreak{}. Applying Hom(−,\allowbreak{}Y)\allowbreak{} to the distinguished triangle F sends a triangle to proves cohomological exactness,\allowbreak{} including the specified shift isomorphism of F. The coproduct universal property and preservation by F give H\_\allowbreak{}Y(\allowbreak{}⊕W\_\allowbreak{}i)\allowbreak{}\allowbreak{}=∏H\_\allowbreak{}Y(W\_\allowbreak{}i)\allowbreak{}. The repaired theorem supplies GY and an isomorphism η\_\allowbreak{}\{W,\allowbreak{}Y\}:\allowbreak{}Hom\_\allowbreak{}D(W,\allowbreak{}GY)\allowbreak{}\allowbreak{}→Hom\_\allowbreak{}\{D\_\allowbreak{}1\}(F(W)\allowbreak{},\allowbreak{}Y)\allowbreak{}.
+
+For a:\allowbreak{}Y\allowbreak{}→Y',\allowbreak{} define G(a)\allowbreak{}:\allowbreak{}GY\allowbreak{}→GY' as the unique map corresponding by Yoneda to the natural transformation η\_\allowbreak{}\{−,\allowbreak{}Y'\}\textasciicircum{}\{-1\}∘(a∘−)\allowbreak{}∘η\_\allowbreak{}\{−,\allowbreak{}Y\}. The uniqueness proves identity and composition laws. Thus η is natural in both variables and is an adjunction. The unit at W is η\_\allowbreak{}\{W,\allowbreak{}FW\}\textasciicircum{}\{−1\}(id\_\allowbreak{}\{FW\})\allowbreak{}; the counit at Y is η\_\allowbreak{}\{GY,\allowbreak{}Y\}(id\_\allowbreak{}\{GY\})\allowbreak{}. Naturality and the two corresponding identity maps give the two triangle identities.
+
+Exactness is the already proved exact-adjoint lemma,\allowbreak{} with full shift comparison and morphism-of-triangles argument retained in PROOFS\_\allowbreak{}1844\_\allowbreak{}2401.md §3. Concretely its shift isomorphism is the Yoneda representative of Hom\_\allowbreak{}D(W,\allowbreak{}G(Y[1]\allowbreak{})\allowbreak{})\allowbreak{}≅Hom\_\allowbreak{}\{D\_\allowbreak{}1\}(F(W)\allowbreak{},\allowbreak{}Y[1]\allowbreak{})\allowbreak{} ≅Hom\_\allowbreak{}\{D\_\allowbreak{}1\}(F(W[−1]\allowbreak{})\allowbreak{},\allowbreak{}Y)\allowbreak{}≅Hom\_\allowbreak{}D(W,\allowbreak{}GY[1]\allowbreak{})\allowbreak{}. For a triangle in D\_\allowbreak{}1,\allowbreak{} choose a cone of its first image map in D,\allowbreak{} construct the comparison to the third image using the adjunction,\allowbreak{} and apply Hom\_\allowbreak{}D(W,\allowbreak{}−)\allowbreak{}. The five-term exact comparison proves that cone comparison is an isomorphism for every W. This is exactly the source lemma\textquotesingle s argument already checked,\allowbreak{} with no additional compactness assumption introduced here.
+
+\subsection{6. Existing reports and exactly-once scope accounting}\label{proofs-11460-11655-existing-reports-and-exactly-once-scope-accounting}
+
+P02-E0093 /\allowbreak{} OCC-01561 reports the missing finite verb at 11536. ``Hence there is a natural transformation'' repairs this sentence. The identical earlier phrase was separately corrected in PART19; the operation here is located by the authority/\allowbreak{}current line alignment,\allowbreak{} not by choosing the first matching text.
+
+P02-E0094 /\allowbreak{} OCC-01562 originally mentioned both 11522 and 11624–\allowbreak{}11625. The authority at 11522 already says hocolim. Its own scope resolution P02-ER0003 /\allowbreak{} OCC-02894,\allowbreak{} original producer ledger line 1430,\allowbreak{} explicitly withdraws the first locus. That resolution has no numeric routing range and is metadata,\allowbreak{} not another defect. Preserve its original empty range,\allowbreak{} record the effective linked locus,\allowbreak{} and count its physical report exactly once with metadata-only disposition.
+
+At 11625 the authority says ordinary colim,\allowbreak{} while the construction is the telescope defined at 11522–\allowbreak{}11527. The current source already contains the exact admitted operation MC-STK-ERR-0898-OP1 replacing this by hocolim. DERIVED-087 /\allowbreak{} OCC-12612 reports the same defect. The two defect reports and the metadata resolution share one reconciliation group,\allowbreak{} with the metadata\textquotesingle s individual disposition explicit. They add no new correction operation at 11625 and no operation at 11522.
+
+Four physical reports are completed in PART20:\allowbreak{} one missing copyedit,\allowbreak{} two already-corrected defect reports,\allowbreak{} and one metadata resolution. There are two new semantic reconciliation groups,\allowbreak{} not three new mathematical defects. The unreported Brown proof gap is separately identified as DERIVED-NEW-041.
+
+\subsection{7. Downstream scope and receiving maps}\label{proofs-11460-11655-downstream-scope-and-receiving-maps}
+
+A bounded search of root TeX chapter files for the Brown-bis section,\allowbreak{} lemma and proposition labels found the internal proposition,\allowbreak{} sites-cohomology.tex 11481/\allowbreak{}11484,\allowbreak{} and the literature pointer in injectives.tex 2755. The search does not certify files outside that scope or invisible semantic dependencies.
+
+The Injectives passage at 2743–\allowbreak{}2779 directs the reader to this more general theorem. Its actual displayed argument at 2765–\allowbreak{}2773 uses compact Brown on D(Mod\_\allowbreak{}R)\allowbreak{},\allowbreak{} as already checked in PART19. The repair does not change that argument or its hypotheses.
+
+The receiving proposition in sites-cohomology.tex 11458–\allowbreak{}11486 is about the full category QC(O)\allowbreak{} defined at 11098–\allowbreak{}11111 by the actual base-change morphisms
+
+\[
+ R\Gamma(V,K)\otimes_{\mathcal O(V)}^{\mathbf L}\mathcal O(U)
+       \longrightarrow R\Gamma(U,K).
+\]
+
+The cited lemma at 11113–\allowbreak{}11134 supplies its triangulated structure and coproducts. On this chaotic site,\allowbreak{} evaluation is exact,\allowbreak{} so the first factor is computed by the original complex of sections. Evaluation,\allowbreak{} derived tensor product and their comparison are exact and commute with coproducts. The objects on which the comparison is an isomorphism are therefore closed under cones,\allowbreak{} shifts,\allowbreak{} retracts and coproducts,\allowbreak{} by the same exact-sequence and retraction arguments used in §4. This proves the categorical closure required by Brown.
+
+The source cardinal lemma at 11296–\allowbreak{}11456 supplies the two original Brown hypotheses. To spell out the receiving set,\allowbreak{} take representatives of QC(O)\allowbreak{} objects with a complex of cardinality at most κ. This is a set:\allowbreak{} the disjoint union of all degree/\allowbreak{}object components has size at most κ,\allowbreak{} so representatives of its underlying sets and all module,\allowbreak{} restriction and differential structure maps range over sets. Replacing each small object in the cardinal lemma by its chosen representative transports every map by an isomorphism. Its two conclusions become exactly Brown (1)\allowbreak{} and (2)\allowbreak{}. Shifts preserve the cardinality,\allowbreak{} since they reindex the same degree/\allowbreak{}object disjoint union. No compactness of these small objects is asserted or needed.
+
+The countable factorization in that lemma is compatible with the actual maps:\allowbreak{} a chain map from a κ-small complex into \allowbreak{}⊕K\_\allowbreak{}n has images in the selected small Cartesian subcomplexes E\_\allowbreak{}n⊂K\_\allowbreak{}n. Each section already has finite support in the original coproduct; passing to these subcomplexes keeps the support and yields the chain map to \allowbreak{}⊕E\_\allowbreak{}n. Its composition with the inclusions is the original map. This observation uses the cited cardinal enlargement lemma; the complete independent review of that chapter and of its More on Algebra enlargement dependency remains in their own source queues. Reading this receiving argument does not mark those chapters reviewed.
+
+Therefore the repaired Brown theorem applies with exactly the receiver\textquotesingle s existing hypotheses. Its part (2)\allowbreak{} retains representability,\allowbreak{} part (3)\allowbreak{} retains the exact right adjoint,\allowbreak{} and part (4)\allowbreak{} uses the actual full inclusion QC(O)\allowbreak{}\allowbreak{}→D(O)\allowbreak{},\allowbreak{} which is exact and preserves coproducts by the closure argument. No receiving source emendation is required for DERIVED-NEW-041. These propagation conclusions concern this Brown dependency,\allowbreak{} not blanket approval of the whole receiving chapter.
+
+\subsection{8. Rejected shortcuts and retained scope}\label{proofs-11460-11655-rejected-shortcuts-and-retained-scope}
+
+Coordinate projections of a map E\allowbreak{}→\allowbreak{}⊕X\_\allowbreak{}n may all vanish without the map vanishing when E is not compact. The attempted argument from projections alone therefore does not prove the required injectivity. Nor does the factorization hypothesis put each arbitrary β\_\allowbreak{}n into ker θ\_\allowbreak{}n. Neither shortcut is used in §§2–\allowbreak{}4.
+
+For reference,\allowbreak{} the direct finite-sum calculation from an arbitrary factorization does prove a cokernel statement. Choose δ\_\allowbreak{}n as in §4,\allowbreak{} put B\allowbreak{}=\allowbreak{}⊕E\_\allowbreak{}n and β|\_\allowbreak{}\{E\_\allowbreak{}n\}\allowbreak{}=ι\_\allowbreak{}nβ\_\allowbreak{}n,\allowbreak{} \(\widetilde\beta|_{E_n}=\iota_nu_{n,1}\delta_n\),\allowbreak{} and k\allowbreak{}=β−\(\widetilde\beta\). Then sk\allowbreak{}=0 and t\_\allowbreak{}Dk\allowbreak{}=k. Define
+
+\[
+ g|_{E_n}=\sum_{j=1}^{n-1}\iota_ju_{j,1}\delta_n,\qquad
+ d|_{E_n}=\delta_n.
+\]
+
+Every defining sum is finite,\allowbreak{} and direct telescoping gives t\_\allowbreak{}Dg\allowbreak{}=ι\_\allowbreak{}1d−\(\widetilde\beta\),\allowbreak{} whence β\allowbreak{}=ι\_\allowbreak{}1d\allowbreak{}+t\_\allowbreak{}D(k−g)\allowbreak{}. After composition with γ,\allowbreak{} every α:\allowbreak{}E\allowbreak{}→S therefore has the form ι\_\allowbreak{}1z\allowbreak{}+t\_\allowbreak{}Dη. This calculation alone neither proves that t\_\allowbreak{}D is injective on Hom(E,\allowbreak{}S)\allowbreak{} nor that every E\allowbreak{}→X lifts to S. The restricted-functor argument supplies exactly these missing facts.
+
+The theorem,\allowbreak{} tower,\allowbreak{} original generating hypotheses,\allowbreak{} all transition maps and the receiving formulations are retained. The stronger split statement and weaker perfectness formulation are editorial consequences with human-source attribution; neither is a claimed new discovery or an undisclosed replacement of the source theorem.

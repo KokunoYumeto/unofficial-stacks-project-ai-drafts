@@ -1,0 +1,51 @@
+\section{A further degree in the left-exact finite-prefix comparison}\label{proofs-5091-5900-addendum-01-a-further-degree-in-the-left-exact-finite-prefix-comparison}
+
+This strengthens the left-exact clause of DERIVED-UNDER-007 in section 5 of \texttt{PROOFS\_\allowbreak{}5091\_\allowbreak{}5900.\allowbreak{}md}. The earlier statement and its exact defect sequence remain valid. No source-body replacement or new claim ID is introduced,\allowbreak{} and no novelty is asserted.
+
+Let F:\allowbreak{}A \allowbreak{}-> B be additive and left exact,\allowbreak{} let A\^{}bullet be bounded below,\allowbreak{} and suppose RF(A\textasciicircum{}bullet)\allowbreak{} is defined. If A\^{}n is right F-acyclic for n<\allowbreak{}=m,\allowbreak{} then its canonical comparison satisfies
+
+\[
+ H^j(F(A^\bullet))\xrightarrow{\sim}H^j(RF(A^\bullet))
+       \quad(j\le m+1),
+ \qquad
+ H^{m+2}(F(A^\bullet))\lhook\joinrel\longrightarrow
+                                  H^{m+2}(RF(A^\bullet)).       \tag{1}
+\]
+
+Thus for an isomorphism through degree q,\allowbreak{} acyclicity through degree q-1 suffices. This retains every term and differential of A,\allowbreak{} including the term A\textasciicircum{}\{q\allowbreak{}+1\} used to calculate H\^{}q of F(A)\allowbreak{}. No existence of RF on all complexes or on any additional cohomology object is assumed.
+
+First consider a complex T zero below an integer a,\allowbreak{} with RF(T)\allowbreak{} defined. For a quasi-isomorphism s:\allowbreak{}T \allowbreak{}-> L with L also zero below a,\allowbreak{} the original cone C(s)\allowbreak{} has components T\textasciicircum{}\{n\allowbreak{}+1\} direct-sum L\^{}n and differential (-d\_\allowbreak{}T,\allowbreak{}0;s,\allowbreak{}d\_\allowbreak{}L)\allowbreak{}. It is zero below a-1 and acyclic,\allowbreak{} so
+
+\[
+ 0\longrightarrow C(s)^{a-1}\longrightarrow C(s)^a
+                         \longrightarrow C(s)^{a+1}
+\]
+
+is exact. Left exactness preserves this exact sequence,\allowbreak{} including its kernel in the middle. Hence H\textasciicircum{}\{a-1\}(F(C(s)\allowbreak{})\allowbreak{})\allowbreak{}\allowbreak{}=H\textasciicircum{}a(F(C(s)\allowbreak{})\allowbreak{})\allowbreak{}\allowbreak{}=0. Additivity identifies F(C(s)\allowbreak{})\allowbreak{} with C(F(s)\allowbreak{})\allowbreak{},\allowbreak{} preserving that entire matrix and its minus sign. The cone long exact sequence consequently makes H\textasciicircum{}a(F(s)\allowbreak{})\allowbreak{} an isomorphism and H\textasciicircum{}\{a\allowbreak{}+1\}(F(s)\allowbreak{})\allowbreak{} a monomorphism.
+
+Targets L zero below a form a cofinal subcategory of T/\allowbreak{}Qis(A)\allowbreak{},\allowbreak{} as proved in section 4 of the main note. It includes the identity of T. Applying H\^{}a to the essential-constancy diagram,\allowbreak{} every transition is an isomorphism by the preceding calculation. Its canonical map from H\textasciicircum{}a(F(T)\allowbreak{})\allowbreak{} to the value H\textasciicircum{}a(RF(T)\allowbreak{})\allowbreak{} is therefore an isomorphism.
+
+For the next degree,\allowbreak{} apply H\textasciicircum{}\{a\allowbreak{}+1\} to the original essential-constancy witness. Write c:\allowbreak{}H\textasciicircum{}\{a\allowbreak{}+1\}(F(T)\allowbreak{})\allowbreak{} \allowbreak{}-> H\textasciicircum{}\{a\allowbreak{}+1\}(RF(T)\allowbreak{})\allowbreak{} for the canonical map. The eventual factorization property at the identity index gives some denominator s:\allowbreak{}T \allowbreak{}-> L and a map v from H\textasciicircum{}\{a\allowbreak{}+1\}(RF(T)\allowbreak{})\allowbreak{} to H\textasciicircum{}\{a\allowbreak{}+1\}(F(L)\allowbreak{})\allowbreak{} such that
+
+\[
+ H^{a+1}(F(s))=v c.
+\]
+
+The left side is monic by the cone calculation; hence c is monic. This proof uses the witness itself and does not assume that an arbitrary colimit of monomorphisms exists or stays monic in B. We have proved the exact lowest-degree comparison
+
+\[
+ H^a(F(T))\simeq H^a(RF(T)),\qquad
+ H^{a+1}(F(T))\lhook\joinrel\longrightarrow H^{a+1}(RF(T)). \tag{2}
+\]
+
+Now put P\allowbreak{}=sigma\_\allowbreak{}\{<\allowbreak{}=m\}A and T\allowbreak{}=sigma\_\allowbreak{}\{>\allowbreak{}=m\allowbreak{}+1\}A,\allowbreak{} keeping the termwise split sequence 0 \allowbreak{}-> T \allowbreak{}-> A \allowbreak{}-> P \allowbreak{}-> 0. P is bounded and consists of acyclic objects,\allowbreak{} so it computes RF. Two-out-of-three therefore defines RF(T)\allowbreak{}. All cohomology of F(P)\allowbreak{} and RF(P)\allowbreak{} above m is zero. At degree m\allowbreak{}+1 the comparison of the two triangle sequences is a map between the cokernels of
+
+\[
+ H^m(F(P))\longrightarrow H^{m+1}(F(T)),
+ \qquad
+ H^m(RF(P))\longrightarrow H^{m+1}(RF(T)).
+\]
+
+Both vertical maps are isomorphisms:\allowbreak{} the first by computation on P,\allowbreak{} the second by (2)\allowbreak{} with a\allowbreak{}=m\allowbreak{}+1. Their cokernels,\allowbreak{} respectively H\textasciicircum{}\{m\allowbreak{}+1\}(F(A)\allowbreak{})\allowbreak{} and H\textasciicircum{}\{m\allowbreak{}+1\}(RF(A)\allowbreak{})\allowbreak{},\allowbreak{} are therefore canonically isomorphic. The lower degrees are isomorphic by the main note\textquotesingle s argument. At degree m\allowbreak{}+2 the same triangle sequences identify H\textasciicircum{}\{m\allowbreak{}+2\}(F(A)\allowbreak{})\allowbreak{} with H\textasciicircum{}\{m\allowbreak{}+2\}(F(T)\allowbreak{})\allowbreak{} and H\textasciicircum{}\{m\allowbreak{}+2\}(RF(A)\allowbreak{})\allowbreak{} with H\textasciicircum{}\{m\allowbreak{}+2\}(RF(T)\allowbreak{})\allowbreak{},\allowbreak{} because both adjacent cohomology objects of P vanish. Under those identifications the comparison is the monomorphism in (2)\allowbreak{}. This proves (1)\allowbreak{} with the actual canonical maps.
+
+For the receiving global-sections calculation in the main note,\allowbreak{} degree q therefore only requires Gamma(Y,\allowbreak{}-)\allowbreak{}-acyclicity of K\^{}n for n<\allowbreak{}=q-1. Its displayed formula (7.1)\allowbreak{},\allowbreak{} including K\textasciicircum{}\{q\allowbreak{}+1\} and both differentials,\allowbreak{} is unchanged. For the repaired H\^{}0 step in Perfect Complexes,\allowbreak{} the bounded-below original-term truncation only needs acyclicity in its negative degrees to obtain that H\^{}0 comparison; the original theorem supplies acyclicity of all terms,\allowbreak{} so its statement and the recorded source repair remain unchanged.

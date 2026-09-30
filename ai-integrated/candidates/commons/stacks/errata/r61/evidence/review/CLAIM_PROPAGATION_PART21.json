@@ -1,0 +1,127 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-031",
+      "source_lines": [
+        11938,
+        11950
+      ],
+      "original_statement": "Two admissible decomposition triangles for an object are isomorphic by a triangle map inducing the identity on the middle object.",
+      "proved_statement": "Every map of middle objects has unique maps on its two admissible projections, giving a unique triangle morphism and functorial decomposition. For maps between two objects, equation (5.1) gives the exact obstruction on a pair of projection maps and the exact quotient group acting freely and transitively on its lifts.",
+      "hypotheses": "An admissible pair A,B=A-perp in the original triangulated category, and the actual selected distinguished triangles A_X->X->B_X->A_X[1] and A_Y->Y->B_Y->A_Y[1].",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          3,
+          5,
+          6
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed_formal_consequence_of_the_original_exact_Hom_sequences",
+      "limits": "No direct-product decomposition is asserted. The connecting maps, both rotation minus signs, and the exact lift-ambiguity quotient are retained."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-042"
+      ],
+      "to": "derived.tex original 11976-12003",
+      "status": "converse_and_quotient_equivalences_proved_under_exact_repaired_hypotheses",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-031"
+      ],
+      "to": "derived.tex original 11867-11881 and 11938-11950",
+      "status": "unique_functorial_projection_maps_and_triangle_comparison_proved",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-042",
+        "DERIVED-UNDER-031"
+      ],
+      "to": "stacks-perfect.tex current 861-934",
+      "status": "receiver_is_strictly_full_and_shift_invariant_quotient_claim_retained_unique_triangle_strengthening_editorial",
+      "limits": "Earlier stack and topos comparison dependencies remain in their own source review.",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 11831-11898"
+      ],
+      "to": "equiv.tex current 2821-2864",
+      "status": "essential_image_fullness_shift_cone_closure_and_actual_adjoint_maps_checked",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 11760-11898",
+        "DERIVED-PERFECT-RECEIVER-004"
+      ],
+      "to": "perfect.tex original/current 4848-4901",
+      "status": "correct_middle_object_quantifier_and_Mayer_Vietoris_adjoint_receiver_proved",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 11760-11898",
+        "DERIVED-SPACES-PERFECT-RECEIVER-001"
+      ],
+      "to": "spaces-perfect.tex original/current 4459-4512",
+      "status": "same_quantifier_defect_and_distinguished_square_adjoint_receiver_proved_two_reports_one_operation",
+      "proof": {
+        "file": "PROOFS_11665_12003.md",
+        "bytes": 23381,
+        "sha256": "BD8C39183ADA7CBE5FC5715EA6D05F7C814DAA3066A983EBCFAE4CB28FBAEB6E",
+        "sections": [
+          7
+        ]
+      }
+    }
+  ],
+  "limits": "The functoriality and exact Hom sequence remain editorial. Broader consequence synthesis remains after the core queue."
+}

@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-001",
+      "source_lines": [
+        893,
+        898
+      ],
+      "original_problem": "The zero-object image triangle omits the translation comparison.",
+      "correction": "Name (F,xi) and retain xi_0 after F of the zero boundary.",
+      "status": "explicit_map_repair",
+      "proof": {
+        "file": "PROOFS_0001_1140.md",
+        "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+        "section": 2
+      },
+      "operation_ids": [
+        "DERIVED-NEW-001-OP1",
+        "DERIVED-NEW-001-OP2"
+      ],
+      "received_report_count": 0,
+      "live_source_changed": false
+    },
+    {
+      "finding_id": "DERIVED-NEW-002",
+      "source_lines": [
+        917,
+        935
+      ],
+      "original_problem": "The reflection lemma writes F(h), whose target is F(X[1]), as its boundary.",
+      "correction": "Use xi_X composed with F(h); the reflection theorem is unchanged.",
+      "status": "explicit_map_repair",
+      "proof": {
+        "file": "PROOFS_0001_1140.md",
+        "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+        "section": 2
+      },
+      "operation_ids": [
+        "DERIVED-NEW-002-OP1",
+        "DERIVED-NEW-002-OP2"
+      ],
+      "received_report_count": 0,
+      "live_source_changed": false
+    },
+    {
+      "finding_id": "DERIVED-NEW-003",
+      "source_lines": [
+        1005,
+        1015
+      ],
+      "original_problem": "The delta-functor image tuple uses the source arrows a and b.",
+      "correction": "Use the actual arrows G(a) and G(b) between the displayed image objects.",
+      "status": "explicit_map_repair",
+      "proof": {
+        "file": "PROOFS_0001_1140.md",
+        "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+        "section": 2
+      },
+      "operation_ids": [
+        "DERIVED-NEW-003-OP1"
+      ],
+      "received_report_count": 0,
+      "live_source_changed": false
+    },
+    {
+      "finding_id": "DERIVED-NEW-004",
+      "source_lines": [
+        1030,
+        1140
+      ],
+      "original_problem": "All four rows and columns are called distinguished although the fourth are unsigned shifts.",
+      "correction": "The first three are distinguished as drawn; negate the last arrow to obtain a distinguished fourth row or column.",
+      "status": "proved_overclaim_correction",
+      "proof": {
+        "file": "PROOFS_0001_1140.md",
+        "sha256": "D0F1857FD1888E2E1CD52B88A889CF1706F06D33CE30F190508438469A2C82EA",
+        "section": 3
+      },
+      "operation_ids": [
+        "DERIVED-NEW-004-OP1"
+      ],
+      "received_report_count": 0,
+      "live_source_changed": false
+    }
+  ]
+}

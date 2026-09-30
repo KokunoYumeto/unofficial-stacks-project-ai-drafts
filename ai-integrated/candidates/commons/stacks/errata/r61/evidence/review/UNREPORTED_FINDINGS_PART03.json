@@ -1,0 +1,44 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-007",
+      "source_lines": [
+        2535,
+        2535
+      ],
+      "original_problem": "The cone projection has codomain K_1[1], but the composite uses the unshifted map a.",
+      "correction": "Insert a[1] and retain the original cone matrix and homotopy.",
+      "status": "proved_map_typing_correction",
+      "proof": {
+        "file": "PROOFS_2419_2994.md",
+        "bytes": 9777,
+        "sha256": "1855F038C5C5973D54E7013B6BBEB800FB1BD6A8DCBBD2C72A89FD5EAC731FA2",
+        "section": 1
+      },
+      "operation_ids": [
+        "DERIVED-NEW-007-OP1"
+      ],
+      "received_report_count": 0
+    },
+    {
+      "finding_id": "DERIVED-NEW-008",
+      "source_lines": [
+        2934,
+        2937
+      ],
+      "original_problem": "Image and kernel notation for arbitrary morphisms need not name existing objects in the stated additive category.",
+      "correction": "State the original split-sequence factorization b=alpha*pi*b and its zero composite explicitly.",
+      "status": "proved_argument_clarification_theorem_unchanged",
+      "proof": {
+        "file": "PROOFS_2419_2994.md",
+        "bytes": 9777,
+        "sha256": "1855F038C5C5973D54E7013B6BBEB800FB1BD6A8DCBBD2C72A89FD5EAC731FA2",
+        "section": 4
+      },
+      "operation_ids": [
+        "DERIVED-NEW-008-OP1"
+      ],
+      "received_report_count": 0
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "schema": "stacks-r61-isolated-index-patch-replay/v1",
+  "status": "PASS_BOTH_PATCH_CONTEXTS_AND_WHOLE_TREE_INVERSES",
+  "candidate": "stacks-errata-a04446e-r61",
+  "units": 64,
+  "operations": 89,
+  "contexts": [
+    {
+      "scope": "authority",
+      "baseline_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "initial_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "proposed_tree": "90dc2adf9ad3ded474a6bd7903973543062368a2",
+      "reverse_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "exact_whole_tree_restoration": true,
+      "sources": [
+        "cohomology.tex",
+        "derived.tex",
+        "equiv.tex",
+        "more-algebra.tex",
+        "perfect.tex",
+        "spaces-perfect.tex"
+      ],
+      "patch": {
+        "file": "replay/authority-source.patch",
+        "bytes": 45337,
+        "sha256": "F9E18CC6E8F6242276E87A7F94FEF7236343B79A960542958BA2C0F1E85D6F8E"
+      },
+      "commands": [
+        {
+          "arguments": [
+            "read-tree",
+            "a04446e57ec1fbc252a871afcec7752fb2807b14"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "write-tree"
+          ],
+          "exit_code": 0,
+          "stdout": "3feeb703b931a6e7259782c10e7d1575adc83e5e\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "rev-parse",
+            "a04446e57ec1fbc252a871afcec7752fb2807b14^{tree}"
+          ],
+          "exit_code": 0,
+          "stdout": "3feeb703b931a6e7259782c10e7d1575adc83e5e\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--check",
+            "--whitespace=error",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--whitespace=error",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "diff",
+            "--cached",
+            "--name-only",
+            "a04446e57ec1fbc252a871afcec7752fb2807b14"
+          ],
+          "exit_code": 0,
+          "stdout": "cohomology.tex\nderived.tex\nequiv.tex\nmore-algebra.tex\nperfect.tex\nspaces-perfect.tex\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":derived.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":more-algebra.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":perfect.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":cohomology.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":equiv.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":spaces-perfect.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "write-tree"
+          ],
+          "exit_code": 0,
+          "stdout": "90dc2adf9ad3ded474a6bd7903973543062368a2\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--reverse",
+            "--check",
+            "--whitespace=warn",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "<stdin>:459: trailing whitespace.\n0 \\to A \\to Z_{i - 1} \\to Z_{i - 2} \\to \\ldots \\to Z_0 \\to \nwarning: 1 line adds whitespace errors.\n"
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--reverse",
+            "--whitespace=warn",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "<stdin>:459: trailing whitespace.\n0 \\to A \\to Z_{i - 1} \\to Z_{i - 2} \\to \\ldots \\to Z_0 \\to \nwarning: 1 line adds whitespace errors.\n"
+        },
+        {
+          "arguments": [
+            "write-tree"
+          ],
+          "exit_code": 0,
+          "stdout": "3feeb703b931a6e7259782c10e7d1575adc83e5e\n",
+          "stderr": ""
+        }
+      ],
+      "reverse_whitespace": "One unchanged original source trailing space is restored and its warning retained; forward patches pass whitespace=error.",
+      "index_retained_for_audit": true,
+      "live_index_or_worktree_modified": false
+    },
+    {
+      "scope": "cumulative",
+      "baseline_commit": "95a51593aceb247ac7a183111678c3a0f8b8f4b5",
+      "initial_tree": "d5e2012d83a08ddb368d17956e592eb1c3e171ee",
+      "proposed_tree": "662f052da1f28e2379594df7cb38613140c57c29",
+      "reverse_tree": "d5e2012d83a08ddb368d17956e592eb1c3e171ee",
+      "exact_whole_tree_restoration": true,
+      "sources": [
+        "cohomology.tex",
+        "derived.tex",
+        "equiv.tex",
+        "more-algebra.tex",
+        "perfect.tex",
+        "spaces-perfect.tex"
+      ],
+      "patch": {
+        "file": "replay/cumulative-source.patch",
+        "bytes": 45344,
+        "sha256": "647BEE74329B52DA6E9D64EA24E4DD545FF81AFFB14561DBAF77717A37682049"
+      },
+      "commands": [
+        {
+          "arguments": [
+            "read-tree",
+            "95a51593aceb247ac7a183111678c3a0f8b8f4b5"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "write-tree"
+          ],
+          "exit_code": 0,
+          "stdout": "d5e2012d83a08ddb368d17956e592eb1c3e171ee\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "rev-parse",
+            "95a51593aceb247ac7a183111678c3a0f8b8f4b5^{tree}"
+          ],
+          "exit_code": 0,
+          "stdout": "d5e2012d83a08ddb368d17956e592eb1c3e171ee\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--check",
+            "--whitespace=error",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--whitespace=error",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "diff",
+            "--cached",
+            "--name-only",
+            "95a51593aceb247ac7a183111678c3a0f8b8f4b5"
+          ],
+          "exit_code": 0,
+          "stdout": "cohomology.tex\nderived.tex\nequiv.tex\nmore-algebra.tex\nperfect.tex\nspaces-perfect.tex\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":derived.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":more-algebra.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":perfect.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":cohomology.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":equiv.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "show",
+            ":spaces-perfect.tex"
+          ],
+          "exit_code": 0,
+          "stdout": "Exact blob identity checked against the retained candidate postimage; contents omitted from this command receipt.",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "write-tree"
+          ],
+          "exit_code": 0,
+          "stdout": "662f052da1f28e2379594df7cb38613140c57c29\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--reverse",
+            "--check",
+            "--whitespace=warn",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "<stdin>:459: trailing whitespace.\n0 \\to A \\to Z_{i - 1} \\to Z_{i - 2} \\to \\ldots \\to Z_0 \\to \nwarning: 1 line adds whitespace errors.\n"
+        },
+        {
+          "arguments": [
+            "apply",
+            "--cached",
+            "--reverse",
+            "--whitespace=warn",
+            "-"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "<stdin>:459: trailing whitespace.\n0 \\to A \\to Z_{i - 1} \\to Z_{i - 2} \\to \\ldots \\to Z_0 \\to \nwarning: 1 line adds whitespace errors.\n"
+        },
+        {
+          "arguments": [
+            "write-tree"
+          ],
+          "exit_code": 0,
+          "stdout": "d5e2012d83a08ddb368d17956e592eb1c3e171ee\n",
+          "stderr": ""
+        }
+      ],
+      "reverse_whitespace": "One unchanged original source trailing space is restored and its warning retained; forward patches pass whitespace=error.",
+      "index_retained_for_audit": true,
+      "live_index_or_worktree_modified": false
+    }
+  ],
+  "admission": false,
+  "source_composed": false,
+  "publication": false
+}

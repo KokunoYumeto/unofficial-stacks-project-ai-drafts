@@ -1,0 +1,179 @@
+\section{\texorpdfstring{Derived Categories:\allowbreak{} opening definitions and elementary results}{Derived  opening definitions and elementary results}}\label{proofs-0001-1140-derived-categories-opening-definitions-and-elementary-results}
+
+Authority:\allowbreak{} the Stacks Project authors,\allowbreak{} \href{https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/derived.tex}{Derived Categories,\allowbreak{} frozen source},\allowbreak{} commit \texttt{a04446e5\allowbreak{}7ec1fbc2\allowbreak{}52a871af\allowbreak{}cec7752f\allowbreak{}b2807b14},\allowbreak{} SHA-256 \texttt{EFDA4CB3\allowbreak{}61DD4090\allowbreak{}9D199116\allowbreak{}1EAE716E\allowbreak{}58B6CF9E\allowbreak{}79380971\allowbreak{}502E1DA1\allowbreak{}2396D402}. Line numbers in this note refer to that original source unless explicitly identified as cumulative-source lines. The compared cumulative source is bound separately in \texttt{INPUT\_\allowbreak{}BINDING.\allowbreak{}json} and \texttt{CURRENT\_\allowbreak{}PUBLIC\_\allowbreak{}BINDING.\allowbreak{}json}. These arguments are editorial review,\allowbreak{} not prose attributed to the source authors and not claims of mathematical novelty. No live chapter is edited by this note. Generalizations remain separate from the source text.
+
+\subsection{1. Conventions and the first three reports}\label{proofs-0001-1140-conventions-and-the-first-three-reports}
+
+Write a triangle as \(T=(X,Y,Z,f,g,h)\),\allowbreak{} with \(f:X\to Y\),\allowbreak{} \(g:Y\to Z\),\allowbreak{} \(h:Z\to X[1]\). A morphism \((a,b,c):T\to T'\) satisfies \[
+bf=f'a,\qquad cg=g'b,\qquad a[1]h=h'c.
+\] Keep the source rotation \[
+R(T)=(Y,Z,X[1],g,h,-f[1]).
+\] The chosen comparison isomorphisms for repeated translations are those of original lines 82–\allowbreak{}88; no strict equality of unrelated presentations is being imposed. Every iterated-shift expression below uses these comparisons. For complexes the source shift is strict.
+
+Applying TR3 from \((X,X,0,1,0,0)\) to \(T\) gives \(gf=0\). Rotation gives \(hg=0\) and \(f[1]h=0\). If \(a:W\to Y\) satisfies \(ga=0\),\allowbreak{} rotate the diagram from \((W,W,0,1,0,0)\) to \(T\) and apply TR3 to the two supplied arrows \(a,0\). Full faithfulness of the shift supplies \(b:W\to X\) with \(fb=a\). This proves exactness of the representable sequence at \(\operatorname{Hom}(W,Y)\). Rotation proves exactness at its other terms. The dual construction proves the contravariant representable sequence. These are the exactness statements used in the proofs below.
+
+Original lines 699–\allowbreak{}727 give the splitting criterion. In detail,\allowbreak{} if \(h=0\),\allowbreak{} exactness of \(\operatorname{Hom}(Z,Y)\to\operatorname{Hom}(Z,Z)
+\to\operatorname{Hom}(Z,X[1])\) supplies \(s:Z\to Y\) with \(gs=1\). Conversely \(gs=1\) implies \(h=hgs=0\). The sequence \[
+0\longrightarrow\operatorname{Hom}(W,X)
+\xrightarrow{f_*}\operatorname{Hom}(W,Y)
+\xrightarrow{g_*}\operatorname{Hom}(W,Z)\longrightarrow0
+\] is split by \(s_*\); its left injectivity follows from the preceding zero map induced by \(h[-1]\). Thus \((f,s):X\oplus Z\to Y\) induces a bijection on every representable functor and is an isomorphism.
+
+For the kernel criterion at 729–\allowbreak{}759,\allowbreak{} a monomorphism \(f\) forces \(h[-1]=0\) because \(fh[-1]=0\). It therefore splits by the previous paragraph. If \(k:K\to X\) is a kernel of an arbitrary \(f\),\allowbreak{} the monomorphism \(k\) splits,\allowbreak{} giving \(X\cong K\oplus X'\). The restriction \(f':X'\to Y\) is monic:\allowbreak{} if \(f't=0\),\allowbreak{} its composite with the inclusion into \(X\) factors through \(k\); projection to \(X'\) gives \(t=0\). Hence \(Y\cong X'\oplus Y'\). This is precisely the original projection–\allowbreak{}coprojection decomposition,\allowbreak{} with every object retained. The cokernel argument follows in the opposite category. This proves the mathematical context of \textbf{OCC-01491 /\allowbreak{} P02-E0019}:\allowbreak{} deleting the extra article in ``is the isomorphic'' changes only grammar.
+
+\textbf{OCC-02889 /\allowbreak{} P02-E1426} correctly supplies ``of'' after ``application'' and changes ``are'' to ``is'' at 1068–\allowbreak{}1069. The two applications of TR4 and all their arrows are verified in §3 below. The singular ``conclusion'' may introduce the enumerated assertions; no mathematical amendment is required by this report.
+
+\textbf{OCC-02890 /\allowbreak{} P02-E1427} correctly removes the period between the two displayed triangle morphisms and ``are morphisms of triangles'' at 1080–\allowbreak{}1081. The two morphisms are the compound subject of this one sentence. The proposed operation removes that period without changing either map.
+
+The resolution-only record \textbf{OCC-02894 /\allowbreak{} P02-ER0003} has no numeric range. Its exact text routes it to P02-E0094 at 11522 and 11624–\allowbreak{}11625. It is retained for adjudication with that later report,\allowbreak{} not counted as a new defect or silently discarded.
+
+\subsection{2. Explicit functor maps}\label{proofs-0001-1140-explicit-functor-maps}
+
+At 190–\allowbreak{}200 an exact functor is \((F,\xi)\),\allowbreak{} where \(\xi_X:F(X[1])\xrightarrow{\sim}F(X)[1]\). Thus the fourth arrow of its image triangle is \(\xi_XF(h)\),\allowbreak{} with codomain \(F(X)[1]\); \(F(h)\) alone has codomain \(F(X[1])\).
+
+\textbf{DERIVED-NEW-001.} In the additivity proof,\allowbreak{} 893–\allowbreak{}898,\allowbreak{} retain this comparison for the triangle on the zero object:\allowbreak{} \[
+(F(0),F(0),F(0),1_{F(0)},1_{F(0)},\xi_0F(0)).
+\] Here the last \(0\) denotes the original zero morphism \(0\to0[1]\). Name \(\xi\) in the proof. The first two arrows still imply \(1_{F(0)}=1_{F(0)}1_{F(0)}=0\). An object whose identity is zero is a zero object:\allowbreak{} every map into or out of it equals its composition with the zero identity. Consequently \(F\) preserves every zero map,\allowbreak{} since such a map factors through \(0\).
+
+For the biproduct \(X\oplus Y\),\allowbreak{} the image of the distinguished split triangle has the two maps \(F(i_X),F(p_Y)\). The map \(F(i_Y)\) is a right inverse of \(F(p_Y)\),\allowbreak{} so the splitting criterion proves that \((F(i_X),F(i_Y)):F(X)\oplus F(Y)\to F(X\oplus Y)\) is an isomorphism. The images of the projections give its inverse,\allowbreak{} because \(F(p_X)F(i_X)=1\),\allowbreak{} \(F(p_Y)F(i_Y)=1\),\allowbreak{} and both cross composites are zero. Hence the biproduct identities and their diagonal and codiagonal maps are preserved. For \(a,b:U\to V\),\allowbreak{} the formula \(a+b=\nabla_V(a\oplus b)\Delta_U\),\allowbreak{} with these same biproduct maps,\allowbreak{} proves \(F(a+b)=F(a)+F(b)\). No additivity was assumed while proving that \(F(0)\) is zero.
+
+\textbf{DERIVED-NEW-002.} At 917–\allowbreak{}920,\allowbreak{} name \((F,\xi)\) and put \(\xi_XF(h)\) in the displayed image triangle. Here is the fully typed reflection argument. Choose a distinguished completion \((X,Y,Z',f,g',h')\). Its image and the assumed image of \(T\) have the same first map. TR3 and representable exactness give an isomorphism \((1,1,c')\) between them. Fullness supplies \(c:Z\to Z'\) with \(F(c)=c'\),\allowbreak{} and also supplies a preimage of \((c')^{-1}\). Faithfulness proves that the two preimages are inverse. The second triangle square gives \(F(cg)=F(g')\),\allowbreak{} hence \(cg=g'\). The third gives \[
+\xi_XF(h)=\xi_XF(h')F(c).
+\] Cancelling \(\xi_X\) and then using faithfulness gives \(h=h'c\). Thus \((1,1,c)\) is the required isomorphism of original triangles. The mathematical theorem is unchanged; its comparison map is made explicit. The source may intend an implicit identification,\allowbreak{} but its definition allows arbitrary translation isomorphisms rather than strict commutation.
+
+\textbf{DERIVED-NEW-003.} At 1011 the triangle attached to the short exact sequence \(0\to A\xrightarrow{a}B\xrightarrow{b}C\to0\) is \[
+(G(A),G(B),G(C),G(a),G(b),\delta),
+\] as the earlier definition at 298–\allowbreak{}331 explicitly requires. The arrows \(a,b\) themselves belong to the abelian source category. Replace them by their images in this tuple. Applying \(H\) after translations gives the exact sequence in the source proof,\allowbreak{} with connecting map \(H^n(\delta):H^nG(C)\to H^{n+1}G(A)\),\allowbreak{} using the fixed shift comparisons. Its preceding term \(H^{-1}G(C)\) vanishes by the stated hypothesis,\allowbreak{} so the displayed initial zero is justified. Naturality of \(\delta\) gives naturality of every connecting map.
+
+For completeness,\allowbreak{} \(G\) is additive even though the definition calls it a functor without assuming additivity. Apply it to the zero short exact sequence:\allowbreak{} the resulting triangle has its first two maps equal to \(1_{G(0)}\),\allowbreak{} so \(G(0)=0\) by the previous zero-object argument. Apply it next to a split short exact sequence \(0\to A\to A\oplus B\to B\to0\). Its projection still has the right inverse supplied by \(G\),\allowbreak{} so the same biproduct argument proves that \(G\) is additive. Consequently every \(H^nG\) is additive,\allowbreak{} as required in the receiving abelian-category definition of a delta-functor.
+
+These three findings are explicit-map repairs. They do not assert that the intended additivity,\allowbreak{} reflection,\allowbreak{} or delta-functor results fail.
+
+\subsection{\texorpdfstring{3. The 3×3 proposition:\allowbreak{} all nine squares and the outer signs}{3. The 3×3  all nine squares and the outer signs}}\label{proofs-0001-1140-the-33-proposition-all-nine-squares-and-the-outer-signs}
+
+\textbf{DERIVED-NEW-004} concerns 1048–\allowbreak{}1052. The first three rows and first three columns are distinguished as drawn. The fourth row and fourth column are the unsigned shifts of the first row and column; each becomes distinguished after negating its last arrow. They need not be distinguished with all three unsigned shifted arrows.
+
+We verify the construction at 1055–\allowbreak{}1140 without suppressing its maps. Let the given square have arrows \[
+f:X\to Y,\quad u:X\to X',\quad v:Y\to Y',\quad
+f':X'\to Y',\qquad vf=f'u=w.
+\] Choose the five original distinguished triangles \[
+\begin{split}
+&(X,Y,Z,f,g,h),\qquad(X',Y',Z',f',g',h'),\\
+&(X,X',X'',u,p,q),\qquad(Y,Y',Y'',v,r,s),\\
+&(X,Y',A,w,t,e).
+\end{split}
+\] For the factorization \(w=vf\),\allowbreak{} TR4 supplies \(a:Z\to A\) and \(b:A\to Y''\) with distinguished triangle \((Z,A,Y'',a,b,c)\),\allowbreak{} where \(c=g[1]s\). Its two morphisms of triangles give the exact identities \[
+ag=tv,\quad ea=h,\quad bt=r,\quad sb=f[1]e.
+\] For \(w=f'u\),\allowbreak{} TR4 supplies \(a':X''\to A\) and \(b':A\to Z'\) with distinguished triangle \((X'',A,Z',a',b',c')\),\allowbreak{} where \(c'=p[1]h'\). This time the identities are \[
+a'p=tf',\quad ea'=q,\quad b't=g',\quad h'b'=u[1]e.
+\] Set \(k=ba':X''\to Y''\),\allowbreak{} \(z=b'a:Z\to Z'\),\allowbreak{} and choose a distinguished triangle \((X'',Y'',Z'',k,m,n)\). Apply TR4 to \(X''\xrightarrow{a'}A\xrightarrow bY''\),\allowbreak{} using the rotation \((A,Y'',Z[1],b,c,-a[1])\) for the third input triangle. It gives \(\alpha:Z'\to Z''\),\allowbreak{} \(\beta:Z''\to Z[1]\),\allowbreak{} and \[
+\alpha b'=mb,\quad n\alpha=c'=p[1]h',\quad
+\beta m=c=g[1]s,\quad -a[1]\beta=a'[1]n.
+\] The fourth triangle is \((Z',Z'',Z[1],\alpha,\beta,-(b'a)[1])\). Its inverse rotation is exactly \((Z,Z',Z'',z,\alpha,\beta)\),\allowbreak{} distinguished by TR2. Thus the full diagram,\allowbreak{} including the names of every arrow,\allowbreak{} is \[
+\begin{array}{ccccccc}
+X&\xrightarrow f&Y&\xrightarrow g&Z&\xrightarrow h&X[1]\\
+{\scriptstyle u}\downarrow&&{\scriptstyle v}\downarrow&&
+ {\scriptstyle z}\downarrow&&{\scriptstyle u[1]}\downarrow\\
+X'&\xrightarrow{f'}&Y'&\xrightarrow{g'}&Z'&\xrightarrow{h'}&X'[1]\\
+{\scriptstyle p}\downarrow&&{\scriptstyle r}\downarrow&&
+ {\scriptstyle\alpha}\downarrow&&{\scriptstyle p[1]}\downarrow\\
+X''&\xrightarrow k&Y''&\xrightarrow m&Z''&\xrightarrow n&X''[1]\\
+{\scriptstyle q}\downarrow&&{\scriptstyle s}\downarrow&&
+ {\scriptstyle\beta}\downarrow&&{\scriptstyle q[1]}\downarrow\\
+X[1]&\xrightarrow{f[1]}&Y[1]&\xrightarrow{g[1]}&Z[1]&
+ \xrightarrow{h[1]}&X[2].
+\end{array}
+\] In row order the nine square relations are \[
+\begin{array}{lll}
+vf=f'u,& zg=g'v,&u[1]h=h'z,\\
+kp=rf',&\alpha g'=mr,&p[1]h'=n\alpha,\\
+f[1]q=sk,&g[1]s=\beta m,&q[1]n=-h[1]\beta.
+\end{array}
+\] Indeed,\allowbreak{} the second and third follow by composing the two first-octahedron identities with \(b'\). The fourth is \(ba'p=btf'=rf'\). The fifth is \(\alpha g'=\alpha b't=mbt=mr\). The sixth and eighth are displayed third-octahedron identities. The seventh is \(sba'=f[1]ea'=f[1]q\). For the last retain the actual minus sign:\allowbreak{} \[
+q[1]n=e[1]a'[1]n=-e[1]a[1]\beta=-h[1]\beta.
+\] This proves commutativity of eight squares and anticommutativity of the lower right square. It also proves the six required distinguished-triangle assertions without assuming anything about the unsigned fourth ones.
+
+Three rotations of \(T\) give \((X[1],Y[1],Z[1],-f[1],-g[1],-h[1])\). The three isomorphisms \((1,-1,1)\) turn this into \((X[1],Y[1],Z[1],f[1],g[1],-h[1])\). This proves the precise statement about the fourth row; apply the same construction to the first column for the fourth column. It is a change of sign on the displayed last arrow,\allowbreak{} not an unrecorded change of shift convention.
+
+\subsubsection{Counterexample to the unsigned fourth-row assertion}\label{proofs-0001-1140-counterexample-to-the-unsigned-fourth-row-assertion}
+
+Use the source\textquotesingle s homotopy category of complexes of abelian groups. Its cone convention is original 2470–\allowbreak{}2490,\allowbreak{} and its distinguished cone triangle is \((K,L,C(f),f,i,-p)\),\allowbreak{} explicitly stated and proved at 2995–\allowbreak{}3026 and 3319–\allowbreak{}3386. In particular the final sign is \textbf{minus} the cone projection; we retain it.
+
+Let \(X=Y=\mathbb Z[0]\) and let \(f=3:X\to Y\). Its cone has \(C^{-1}=\mathbb Z\),\allowbreak{} \(C^0=\mathbb Z\),\allowbreak{} differential \(d_C^{-1}=3\),\allowbreak{} and all other terms and differentials zero. Let \(i:Y\to C\) be identity in degree zero and zero in all other degrees,\allowbreak{} and \(p:C\to X[1]\) be identity in degree minus one and zero elsewhere. Then \[
+T=(X,Y,C,3,i,-p)
+\] is distinguished. Its correctly signed shift is \((X[1],Y[1],C[1],3[1],i[1],p[1])\). Suppose the unsigned shift \((X[1],Y[1],C[1],3[1],i[1],-p[1])\) were also distinguished. TR3 applied to identity maps on its first two objects would supply \(c:C[1]\to C[1]\) satisfying,\allowbreak{} in the homotopy category,\allowbreak{} \[
+ci[1]=i[1],\qquad p[1]c=-p[1].
+\]
+
+The shifted cone has terms \(\mathbb Z\) in degrees \(-2,-1\) and differential \(-3\). A chain endomorphism has integer components \(a,b\) with \(-3a=-3b\),\allowbreak{} hence \(a=b=m\). Its only possibly nonzero homotopy component is \(H^{-1}:\mathbb Z\to\mathbb Z\),\allowbreak{} an integer \(t\). Both components of \(dH+Hd\) equal \(-3t\). Thus endomorphism homotopy classes are integers modulo 3.
+
+A chain map \(Y[1]\to C[1]\) has its sole component in degree \(-1\); homotopies change it by \(-3t\). Therefore the first displayed equality requires \(m\equiv1\pmod3\). A chain map \(C[1]\to X[2]\) has its sole component in degree \(-2\); homotopies again change it by \(-3t\). The second displayed equality requires \(m\equiv-1\pmod3\). These requirements contradict one another. Hence the unsigned shifted triangle is not distinguished.
+
+This also defeats an existential reading in which the 3×3 construction may choose a different completion of \(f\):\allowbreak{} every such completion is isomorphic to \(T\) with identity maps on \(X,Y\). Shifting this isomorphism is an isomorphism of the unsigned shifted sextuples. If any of them were distinguished,\allowbreak{} TR1 would make the unsigned shift of \(T\) distinguished,\allowbreak{} contrary to the calculation. For example,\allowbreak{} take as the initial square the identity comparison of \(3:X\to Y\) with itself.
+
+\subsubsection{Receiving uses of the corrected proposition}\label{proofs-0001-1140-receiving-uses-of-the-corrected-proposition}
+
+The targeted search of top-level current chapter TeX found six uses. Each needs the first three rows and columns,\allowbreak{} which remain proved above. This checks propagation of the sign clarification,\allowbreak{} not every independent claim of those chapters.
+
+* Original Derived Categories 1979–\allowbreak{}1995:\allowbreak{} the two first column cones \(X'',Y''\) lie in the chosen full triangulated subcategory; the third row puts \(Z''\) there. The third column then identifies the required denominator. No unsigned fourth triangle is used. * Original Derived Categories 11774–\allowbreak{}11810:\allowbreak{} the first two row cones \(Q_1,Q_2\) lie in the right orthogonal; the third column puts \(Q_3\) there,\allowbreak{} while the first column puts \(A_3\) in the original subcategory. Rotations for the other cases use TR2 with its sign. The fourth row is a display of the shifted maps only. * Current \texttt{cotangent.\allowbreak{}tex} 2831–\allowbreak{}2866 and 4591–\allowbreak{}4631:\allowbreak{} orient the upward diagrams with their bottom row first. The initial square has \(X=0\),\allowbreak{} \(Y=L_{B/R}\otimes_B^{\mathbf L}(A\otimes_RB)\),\allowbreak{} \(X'=L_{A/R}\otimes_A^{\mathbf L}(A\otimes_RB)\),\allowbreak{} \(Y'=L_{A\otimes_RB/R}\) in the ring case. The two first columns and rows are the stated fundamental triangles. The third column and third row supply the two triangles ending in \(E\). For spaces replace these exact entries by \(0,Lq^*L_{Y/B},Lp^*L_{X/B},
+L_{X\times_BY/B}\). These are the displayed original objects; neither use requires the fourth row or column to be unsigned distinguished. * Current \texttt{more-\allowbreak{}algebra.\allowbreak{}tex} 30690–\allowbreak{}30709:\allowbreak{} use the square \(F\to M\) with vertical multiplication by the given ring element \(f\). Its row cone is \(M_f\),\allowbreak{} and multiplication on \(M_f\) is invertible,\allowbreak{} so the third column cone is zero. The third row therefore identifies the cones of \(f:F\to F\) and \(f:M\to M\). The fourth-triangle claim plays no role. * Current \texttt{derham.\allowbreak{}tex} 2979–\allowbreak{}3008:\allowbreak{} its displayed two-row comparison is extended by column cones. The argument identifies the middle and right column cones using the preceding comparison result,\allowbreak{} so the third row makes the left column cone zero. Again this only uses the first three triangles in each direction. The separate cohomological comparison result is not re-proved or newly certified by this bounded sign check.
+
+No receiving source edit is required by this sign correction.
+
+\subsection{\texorpdfstring{4. DERIVED-UNDER-001:\allowbreak{} the exact ambiguity of a triangle completion}{4.  the exact ambiguity of a triangle completion}}\label{proofs-0001-1140-derived-under-001-the-exact-ambiguity-of-a-triangle-completion}
+
+The original square-zero assertion at 483–\allowbreak{}511 concerns endomorphisms of one triangle. Its same proof works for composable morphisms between different distinguished triangles. The precise statement is as follows.
+
+For distinguished triangles \(T,T'\),\allowbreak{} define the abelian subgroup \[
+I(T,T')=\{k:Y\to Y'\mid kf=0,\ g'k=0\}.
+\] By covariant and contravariant representable exactness,\allowbreak{} \[
+I(T,T')=
+\operatorname{im}\bigl(f'\circ-:\operatorname{Hom}(Y,X')
+\to\operatorname{Hom}(Y,Y')\bigr)
+\ \cap\
+\operatorname{im}\bigl(-\circ g:\operatorname{Hom}(Z,Y')
+\to\operatorname{Hom}(Y,Y')\bigr).
+\] This is an equality of subgroups of the displayed original Hom group. Indeed,\allowbreak{} \(g'k=0\) is exactly the first-image condition and \(kf=0\) is exactly the second. No choice of factorization is claimed unique.
+
+If \(k\in I(T,T')\) and \(l\in I(T',T'')\),\allowbreak{} choose \(k=f'\alpha\) and \(l=\beta g'\). Then \[
+lk=\beta g'f'\alpha=0.
+\] These subgroups form an ideal in the additive category of distinguished triangles:\allowbreak{} a map in the ideal is exactly a triple \((0,k,0)\),\allowbreak{} and composing it on either side with any triangle morphism still has first and third components zero. Its square is zero by the displayed calculation. This proves the categorical strengthening with no octahedral axiom.
+
+Given \(a:X\to X'\),\allowbreak{} \(c:Z\to Z'\) satisfying \(a[1]h=h'c\),\allowbreak{} twice rotate the two triangles and use TR3 on \(c:Z\to Z'\) and \(a[1]:X[1]\to X'[1]\). The resulting third map is \(b[1]\) for a unique \(b:Y\to Y'\),\allowbreak{} since the shift is fully faithful. The equations with \(-f[1]\) and \(-g[1]\) give \(bf=f'a\) and \(g'b=cg\). Thus completions exist. The difference of two completions belongs to \(I(T,T')\),\allowbreak{} and adding any element of that subgroup preserves all three triangle equations. The set of completions is therefore a torsor for this explicitly defined group. In particular,\allowbreak{} the exact uniqueness condition is \(I(T,T')=0\); the five vanishing conditions in 558–\allowbreak{}613 are sufficient conditions for that equality,\allowbreak{} not necessary ones.
+
+If \(b_0\) is an isomorphism completion and \(b=b_0+k\) is another,\allowbreak{} the element \(t=b_0^{-1}k\) is in \(I(T,T)\),\allowbreak{} so \(t^2=0\). Consequently the exact inverse is \[
+b^{-1}=(1_Y-b_0^{-1}k)b_0^{-1}.
+\] Both products with \(b=b_0(1_Y+t)\) equal the appropriate identity. This describes the nonuniqueness of isomorphism completions without claiming functorial choices of cones.
+
+For the original idempotent lift,\allowbreak{} let \(b'\) complete idempotents \(a,c\). The defect \(d=(b')^2-b'\) lies in \(I(T,T)\),\allowbreak{} hence \(d^2=0\),\allowbreak{} and it commutes with \(b'\) because it is a polynomial in \(b'\). Retain the original formula \[
+b=b'-(2b'-1)d=3(b')^2-2(b')^3.
+\] The correction term remains in the ideal,\allowbreak{} so \((a,b,c)\) is a triangle endomorphism. Expanding the polynomial gives exactly \[
+b^2-b=(4(b')^2-4b'-3)d^2=0.
+\] Thus the broader ideal description recovers the original formula and all of its integer coefficients rather than replacing it with an abstract existence assertion. Later uses at the categorical idempotent-completion and uniqueness loci remain to be checked in source order; none is pre-certified by its matching label.
+
+\subsection{\texorpdfstring{5. DERIVED-UNDER-002:\allowbreak{} propagate the countable-power refinement}{5.  propagate the countable-power refinement}}\label{proofs-0001-1140-derived-under-002-propagate-the-countable-power-refinement}
+
+The previously published \href{https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/95a51593aceb247ac7a183111678c3a0f8b8f4b5/ai-integrated/candidates/commons/stacks/errata/r60/evidence/review/PROOFS_0001_1900.md}{Homology editorial argument,\allowbreak{} §1} proves HOMOLOGY-UNDER-001. Its receiving lemma here is original 805–\allowbreak{}822. In a pre-triangulated category every epimorphism has a zero cokernel and hence has a kernel by the kernel–\allowbreak{}cokernel equivalence proved in §1. In particular this applies to each split epimorphism used in the countable-product construction.
+
+For a fixed object \(X\) whose countable power \(P=\prod_{n\ge1}X\) exists,\allowbreak{} and a fixed idempotent \(e:X\to X\),\allowbreak{} keep the actual coordinate maps \(p_n:P\to X\) and put \[
+p_n\Phi=e p_n+(1_X-e)p_{n+1},\quad
+p_1\Psi=p_1,\quad
+p_n\Psi=(1_X-e)p_{n-1}+e p_n\quad(n\ge2).
+\] For the first coordinate,\allowbreak{} \(p_1\Phi\Psi=e p_1+(1-e)((1-e)p_1+e p_2)=p_1\). For \(n\ge2\),\allowbreak{} \[
+p_n\Phi\Psi=e((1-e)p_{n-1}+e p_n)
+ +(1-e)((1-e)p_n+e p_{n+1})=p_n.
+\] Therefore \(\Phi\Psi=1_P\),\allowbreak{} and \(\Phi\) has a kernel \(k:K\to P\) by the preceding pre-triangulated argument. Set \(i=p_1k\). Multiplying \(p_n\Phi k=0\) by \(e\) and \(1-e\) gives \(e p_nk=0\) and \((1-e)p_{n+1}k=0\). Thus \(p_nk=0\) for \(n\ge2\),\allowbreak{} while \(ei=0\). If \(t:W\to X\) has \(et=0\),\allowbreak{} the product map \(v:W\to P\) with coordinates \((t,0,0,\ldots)\) satisfies \(\Phi v=0\). Its unique factorization through \(k\) gives a unique factorization of \(t\) through \(i\),\allowbreak{} since the remaining coordinates of \(k\) are zero. Hence \(i\) is a kernel of \(e\). Apply the same construction to \(1-e\) to obtain \(j:J\to X\).
+
+Because \(e(1-e)=0\),\allowbreak{} there is \(r:X\to K\) with \(ir=1-e\). Similarly there is \(s:X\to J\) with \(js=e\). Monicity gives \(ri=1_K\),\allowbreak{} \(sj=1_J\),\allowbreak{} \(rj=0\),\allowbreak{} \(si=0\),\allowbreak{} and \(ir+js=1_X\). These are inverse biproduct maps \((i,j):K\oplus J\to X\),\allowbreak{} \((r,s):X\to K\oplus J\),\allowbreak{} with the original \(e\) acting as zero on \(K\) and identity on \(J\).
+
+Thus a countable power of this individual object suffices to split every one of its idempotents. Countable powers for all objects suffice for the category to be Karoubian; products of differing objects are unnecessary. The corresponding result for a countable coproduct follows by applying the proved construction to the opposite category,\allowbreak{} which exchanges all the displayed domains,\allowbreak{} codomains,\allowbreak{} products and kernels.
+
+This also supplies an exact consequence for the already included Verdier lemma \texttt{lemma-\allowbreak{}functorial-\allowbreak{}triangles-\allowbreak{}decomposable} (current lines 824–\allowbreak{}880)\allowbreak{}. Its countable-products-or-coproducts assumption may be replaced by the assumption that the category is Karoubian. Here is the complete argument,\allowbreak{} including the naturality needed by its Yoneda step.
+
+Let \(T\) be its section of the first-arrow functor,\allowbreak{} and retain \(T(f)=(X,Y,Z_f,f,g_f,h_f)\),\allowbreak{} \(d_f=-h_f[-1]:Z_f[-1]\to X\). The subfunctor \(\mathcal K_f(W)=\{v:W\to X\mid fv=0\}\) is the image of the natural surjection \(q_f:\operatorname{Hom}(-,Z_f[-1])\to\mathcal K_f\),\allowbreak{} \(q_f(t)=d_ft\),\allowbreak{} by representable exactness. Write \(T(W\to0)=(W,0,Z_W,0,0,h_W)\); exactness or two rotations gives that \(h_W:Z_W\to W[1]\) is an isomorphism. For \(v\in\mathcal K_f(W)\),\allowbreak{} the square \((v,0)\) yields a triangle map with third arrow \(c_v:Z_W\to Z_f\). Put \(s_W(v)=-c_v[-1]h_W[-1]^{-1}\). Then \(q_fs_W(v)=v\).
+
+If \(u:W'\to W\),\allowbreak{} functoriality of \(T\) gives an arrow \(c_u:Z_{W'}\to Z_W\) with \(c_{vu}=c_vc_u\) and \(h_Wc_u=u[1]h_{W'}\). Shifting that equality and cancelling the two isomorphisms gives \(c_u[-1]h_{W'}[-1]^{-1}=h_W[-1]^{-1}u\),\allowbreak{} so \(s_{W'}(vu)=s_W(v)u\). Hence \(s\) is natural,\allowbreak{} even without assuming the chosen section \(T\) additive.
+
+The natural endomorphism \(sq_f\) of the representable functor is induced by a morphism \(e_f:Z_f[-1]\to Z_f[-1]\) by Yoneda,\allowbreak{} and \((sq_f)^2=sq_f\) gives \(e_f^2=e_f\). Choose a splitting \(e_f=ip\),\allowbreak{} \(pi=1_K\),\allowbreak{} by the Karoubian assumption. Since \(q_fe_f=q_f\),\allowbreak{} the map \(d_fi:K\to X\) is a kernel of \(f\):\allowbreak{} for \(v\in\mathcal K_f(W)\),\allowbreak{} its factor is \(p s_W(v)\),\allowbreak{} and \(d_fip s_W(v)=q_fe_fs_W(v)=v\). If \(d_fit=v\),\allowbreak{} naturality and \(sq_f=e_f\) imply \(it=e_f it=s_W(v)\),\allowbreak{} hence \(t=p s_W(v)\). The kernel criterion of §1 now gives the full projection–\allowbreak{}coprojection decomposition of \(f\).
+
+The earlier Verdier insertion remains byte-for-byte intact. These weaker hypotheses and exact maps are separate editorial consequences,\allowbreak{} with HOMOLOGY-UNDER-001 recorded as the input result. They do not claim a new reading or wholesale acceptance of the other queued Verdier candidates.

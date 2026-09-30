@@ -1,0 +1,78 @@
+{
+  "schema": "source-reading-use-ledger/v1",
+  "at_utc": "2026-09-30T15:24:52.187113+00:00",
+  "routing_before_acquisition": {
+    "authority_source_id": "stacks:a04446e57ec1fbc252a871afcec7752fb2807b14:my.bib:Krause",
+    "bibliography_lines": [
+      4278,
+      4288
+    ],
+    "literature_index_search": "Bounded file-name searches in the mathematical and Papors workspace indexes did not locate this paper; the existing Stacks bibliography and original theorem citation routed the primary-author lookup. Those searches are not source reading."
+  },
+  "sources": {
+    "arxiv:math/0511047v3": {
+      "authors": [
+        "Henning Krause"
+      ],
+      "title": "Derived categories, resolutions, and Brown representability",
+      "source_date": "2006-09-17",
+      "archive_url": "https://arxiv.org/src/math/0511047v3",
+      "metadata_url": "https://arxiv.org/abs/math/0511047v3",
+      "files": [
+        {
+          "file": "literature/KRAUSE_MATH_0511047V3/math-0511047v3.source",
+          "bytes": 30364,
+          "sha256": "C30BCD2CF6BF8A9E4F34DAE92C5E57C7DF64B01AD85ECEE6CC5D18E1C7FCB62F"
+        },
+        {
+          "file": "literature/KRAUSE_MATH_0511047V3/source/derived.tex",
+          "bytes": 106811,
+          "sha256": "E82A15B047C23332BEE89A11DA4736CB3B4F0868906EE887DA066F896A5AABCF"
+        },
+        {
+          "file": "literature/KRAUSE_MATH_0511047V3/DOWNLOAD_RECEIPT.json",
+          "bytes": 545,
+          "sha256": "37C5FF27DB9C23BAAE988353BCFA2722452A21899C1114E628428C15AE80CE58"
+        }
+      ],
+      "actual_tex_reading": [
+        [
+          1,
+          95
+        ],
+        [
+          984,
+          1355
+        ],
+        [
+          2355,
+          2376
+        ]
+      ],
+      "whole_paper_read": false,
+      "included_tex_files": "The gzip expands to one standalone author TeX file. No tar members or included source files were acquired.",
+      "proof_locators": [
+        "section 4.1, lines 995-1045",
+        "section 4.5, lines 1165-1318",
+        "source bibliography Kr, lines 2366-2368"
+      ],
+      "receiving_calculation": "DERIVED-NEW-041, original derived.tex 11547-11568: restricted-functor coproduct comparison and split telescope; DERIVED-UNDER-030 editorial relative version.",
+      "use": "The source gives the coherent-functor route. The local proof reconstructs the coproduct comparison directly using universal evaluation presentations and supplies an explicit retraction, without assuming its intermediate categorical claims."
+    },
+    "doi:10.1016/S0040-9383(01)00010-6": {
+      "authors": [
+        "Henning Krause"
+      ],
+      "title": "A Brown representability theorem via coherent functors",
+      "journal": "Topology 41 (2002), 853-861",
+      "original_tex_status": "not_acquired_in_bounded_lookup",
+      "actual_reading_coverage": [],
+      "related_primary_tex_used": "arxiv:math/0511047v3",
+      "no_pdf_substitution": true
+    }
+  },
+  "web_comparison": {
+    "url": "https://stacks.math.columbia.edu/tag/0GYF",
+    "scope": "The returned displayed proof retained the incorrect kernel-killing assertion. Frozen local TeX remains authority; this is not a reconciliation with an entire newer upstream tree."
+  }
+}

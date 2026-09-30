@@ -1,0 +1,97 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-004",
+      "source_lines": [
+        3487,
+        3591
+      ],
+      "kind": "exact_totalization_on_existing_diagonal_sums",
+      "original_statement": "Totalization and fixed-factor tensor totalization are exact when the target additive category has countable direct sums.",
+      "proved_statement": "For either outer-complex convention, double complexes whose diagonal coproducts exist form a full triangulated subcategory, and Tot on it is exact with the original comparison. Fixed-factor tensor functors are exact on their corresponding domains; same-side bounded factors require only finite biproducts.",
+      "hypotheses": "Additive categories, original commuting double-complex differentials, the specified diagonal coproducts, and bilinearity for tensor products. No strict-fullness or automatic existence from homotopy equivalence is asserted.",
+      "input_claim_ids": [
+        "HOMOLOGY-UNDER-009"
+      ],
+      "proof": {
+        "file": "PROOFS_3487_4161.md",
+        "bytes": 22872,
+        "sha256": "369D914371F4AB4B5A0B0343F254FC040BD071F04E967B05C346AD116AFC94E7",
+        "sections": [
+          1,
+          2
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "derived.tex:3487-3591",
+        "more-algebra.tex:14762-14781",
+        "cohomology.tex:6253-6281",
+        "sites-cohomology.tex:2968-2996"
+      ],
+      "propagation": "Exact component comparisons checked; existing tensor source conclusions unchanged."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-005",
+      "source_lines": [
+        4111,
+        4161
+      ],
+      "kind": "derived_morphisms_and_explicit_nilpotence_bound",
+      "original_statement": "A sequence of chain maps with the listed staggered cohomology vanishings factors through a lower truncation; dual assertion included.",
+      "proved_statement": "The factorization holds for arbitrary derived morphisms with any integer initial cutoff b and target cutoff b-n. If final cohomology vanishes below a and n>b-a, the composite is zero. The ideal of cohomologically zero endomorphisms of an object of amplitude [a,b] has power b-a+1 equal to zero, with the complete finite inverse for 1-u.",
+      "hypotheses": "Abelian category; source upper bound, the exact staggered vanishing maps, and final lower bound only for zero composition. No intermediate boundedness or homological-dimension hypothesis.",
+      "proof": {
+        "file": "PROOFS_3487_4161.md",
+        "bytes": 22872,
+        "sha256": "369D914371F4AB4B5A0B0343F254FC040BD071F04E967B05C346AD116AFC94E7",
+        "sections": [
+          5,
+          6
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "affected": [
+        "more-algebra.tex:23390-23402",
+        "cotangent.tex:2250-2288",
+        "local-cohomology.tex:3464-3484",
+        "local-cohomology.tex:4375-4393",
+        "local-cohomology.tex:4685-4701"
+      ],
+      "propagation": "All five direct uses checked for this implication. More Algebra target repaired; existing constants retained, and c(t+1) supplies the local annihilation step."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-007"
+      ],
+      "to": "derived.tex:3981-4006",
+      "proof": {
+        "file": "PROOFS_3487_4161.md",
+        "bytes": 22872,
+        "sha256": "369D914371F4AB4B5A0B0343F254FC040BD071F04E967B05C346AD116AFC94E7",
+        "section": 4
+      },
+      "status": "proved_exact_delta_naturality"
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-005"
+      ],
+      "to": "DERIVED-NEW-014",
+      "proof": {
+        "file": "PROOFS_3487_4161.md",
+        "bytes": 22872,
+        "sha256": "369D914371F4AB4B5A0B0343F254FC040BD071F04E967B05C346AD116AFC94E7",
+        "section": 6
+      },
+      "status": "proved_receiving_index_repair"
+    }
+  ],
+  "limits": "Receiving checks do not certify every surrounding theorem. K-injective existence is used with its cited source; its entire transfinite proof was not reread here. Broader synthesis remains deferred."
+}

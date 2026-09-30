@@ -1,0 +1,85 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-032",
+      "source": "derived.tex",
+      "source_lines": [
+        9712,
+        9732
+      ],
+      "original_issue": "The displayed Hom complexes use K^(-b) with I^(b+r), which does not compute chain maps; the subsequent full acyclicity uses all shifts.",
+      "correction": "Use K^b in all six factors, supply the full Hom differential, and state the vanishing for every shifted target.",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "section": 7
+      },
+      "status": "proved_private_correction_proposal",
+      "operations": [
+        "DERIVED-NEW-032-OP1",
+        "DERIVED-NEW-032-OP2",
+        "DERIVED-NEW-032-OP3",
+        "DERIVED-NEW-032-OP4"
+      ]
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        9288,
+        9290
+      ],
+      "issue": "The map of triangles initially commutes only up to homotopy.",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "section": 2
+      },
+      "disposition": "source_split_inclusion_allows_explicit_homotopy_extension"
+    },
+    {
+      "source_lines": [
+        9392,
+        9393
+      ],
+      "issue": "Stage maps to canonical upper truncations need actual term bounds.",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "sections": [
+          1,
+          2
+        ]
+      },
+      "disposition": "available_bounded_resolution_choices_supply_strict_factorizations"
+    },
+    {
+      "source_lines": [
+        9730,
+        9734
+      ],
+      "issue": "The proof uses exact products.",
+      "proof": {
+        "file": "PROOFS_9206_9744.md",
+        "bytes": 24736,
+        "sha256": "CA189E7AD075EE9775FBB6AEEF460692723F731F9B196DA2FD61BF2853A553E7",
+        "section": 7
+      },
+      "disposition": "products_are_in_abelian_groups_no_exactness_of_products_in_A_assumed"
+    }
+  ],
+  "reading_observations_not_yet_counted": [
+    {
+      "source": "cohomology.tex",
+      "current_lines": [
+        10287,
+        10289
+      ],
+      "issue": "The prose lacks to before produce a diagram.",
+      "status": "routed_to_receiving_chapter_report_join_not_yet_counted"
+    }
+  ]
+}

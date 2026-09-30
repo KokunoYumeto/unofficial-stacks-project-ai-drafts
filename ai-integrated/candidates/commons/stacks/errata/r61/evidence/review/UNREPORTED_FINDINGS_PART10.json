@@ -1,0 +1,46 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-026",
+      "source": "derived.tex",
+      "source_lines": [
+        7310,
+        7311
+      ],
+      "original_problem": "The proof evaluates t, a transformation on D+(A), on RF(I)=F(I), an object of D+(B).",
+      "correction": "Evaluate at I[0] and identify RF(I[0]) with F(I)[0]; this gives the actual acyclicity comparison.",
+      "status": "proved_type_error_with_complete_repair",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "section": 4
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-026-OP1"
+      ],
+      "limits": "The equivalence theorem remains valid; its evaluation instruction is corrected."
+    }
+  ],
+  "adverse_interpretations_not_counted_as_defects": [
+    {
+      "source_lines": [
+        7407,
+        7464
+      ],
+      "issue": "Unique resolution functor means the defined pair (j,i), with augmentation-compatible isomorphisms.",
+      "counterexample_to_unstructured_reading": "Identity on complexes of Q-vector spaces has distinct natural automorphisms 1 and -1.",
+      "disposition": "Definition and explicit later comparison already supply compatibility; no extra correction.",
+      "proof": {
+        "file": "PROOFS_7096_7578.md",
+        "bytes": 31770,
+        "sha256": "297E33040D00B8B59F2FD55BC97CC793E205BD624532275E8DD3AAEB10BCA081",
+        "sections": [
+          6,
+          7
+        ]
+      }
+    }
+  ]
+}

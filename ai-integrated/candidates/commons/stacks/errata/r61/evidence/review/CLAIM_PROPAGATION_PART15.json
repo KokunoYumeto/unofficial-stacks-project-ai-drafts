@@ -1,0 +1,193 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-021",
+      "source_lines": [
+        9815,
+        9857
+      ],
+      "original_statement": "An existing termwise inverse limit of K-injectives with degreewise split-surjective transitions is K-injective.",
+      "proved_statement": "For arbitrary transitions and each acyclic M, Hom_K(M,lim I_n) is naturally the kernel of C^1(Z_n^-1) to C^1(D_n^-1), where D_n is the full Hom complex, Z its cycles and C^1 the cokernel of the explicit product difference map. Mittag-Leffler in degree -2 of D_n suffices for K-injectivity.",
+      "hypotheses": "An abelian category, a countable tower of K-injectives, and existence of its termwise limit; the sufficient criterion is imposed for every acyclic M.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          2,
+          3
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "example": "The nonsurjective tower I_0 direct-sum J with transitions diag(id,0) has limit I_0 and satisfies the criterion.",
+      "limits": "No arbitrary inverse-limit exactness and no unproved claim that a compatible map from K to this limit is a quasi-isomorphism."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-022",
+      "source_lines": [
+        9891,
+        9974
+      ],
+      "original_statement": "The replacement process eventually stabilizes in every degree.",
+      "proved_statement": "After the corrected initial splice, at most N_m=sum of d_j over positive d_j with j+d_j at least m elementary replacements affect any degree at least m. The actual eventual terms, differentials and finite composite maps give the quasi-isomorphic acyclic replacement without an infinite-colimit assumption.",
+      "hypotheses": "The source dimension axioms and far-left limit, with the finite dimensions d_j taken after the initial splice.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          4,
+          5
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "The bound is for tail-affecting elementary replacements after the initial splice, not a global finite bound on the infinite algorithm."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-023",
+      "source_lines": [
+        9977,
+        10132
+      ],
+      "original_statement": "Finite cohomological dimension gives the listed canonical truncation isomorphisms and support intervals.",
+      "proved_statement": "For n at least 1, H^i RF(E) is determined by the canonical window [i-n+1,i] with its extension data; the dual LF window is [i,i+n-1]. The adjacent upper and lower truncation maps have the stated monomorphism and epimorphism endpoints.",
+      "hypotheses": "Exactly the source enough-acyclics and R^n F=0 hypotheses, or their right-exact left-derived dual; n=0 is the zero-functor case.",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          6,
+          7
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "A truncation window retains its extension data; a list of individual cohomology objects does not determine the answer."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-UNDER-021"
+      ],
+      "to": "cohomology.tex current 10300-10317",
+      "status": "K_injectivity_invocation_verified_resolution_comparison_remains_separate",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          2,
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-073"
+      ],
+      "to": "perfect.tex current 1643-1649",
+      "status": "exact_left_adjoint_preservation_of_K_injectives_verified_on_maps_and_homotopies",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 9746-9801"
+      ],
+      "to": "injectives.tex current 2078-2082",
+      "status": "enough_K_injectives_derived_functor_computation_invocation_verified",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          1,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-033",
+        "DERIVED-UNDER-022"
+      ],
+      "to": "derived.tex original 10017-10021",
+      "status": "finite_dimension_replacement_application_and_actual_quasi_isomorphism_preserved",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-034"
+      ],
+      "to": "derived.tex original 10049-10056",
+      "status": "both_adjacent_cone_cohomology_objects_vanish_so_actual_F_map_is_quasi_isomorphism",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-034"
+      ],
+      "to": "more-algebra.tex current 23649-23678 and cohomology.tex current 14218-14228",
+      "status": "bounded_invocations_of_unbounded_derived_functor_and_acyclic_computation_verified",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-075",
+        "DERIVED-RECON-077",
+        "DERIVED-RECON-078",
+        "DERIVED-UNDER-023"
+      ],
+      "to": "derived.tex original 9993-10008 and 10119-10125",
+      "status": "canonical_comparison_maps_endpoints_support_and_exact_duality_proved",
+      "proof": {
+        "file": "PROOFS_9746_10132.md",
+        "bytes": 21765,
+        "sha256": "D615A865B731EB846574CDFFD5F990AA217D1B726E601B83F3CCD2C4D7B1D5A3",
+        "sections": [
+          7
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial consequences remain separate from the source body. Receiving checks have only the specified scope."
+}

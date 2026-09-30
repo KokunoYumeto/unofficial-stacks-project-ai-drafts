@@ -1,0 +1,183 @@
+{
+  "original_container": {
+    "path": "private-source-locator/RECOVERED_OCCURRENCE_INDEX.jsonl",
+    "bytes": 29361994,
+    "sha256": "3EDD73E60CBDFA228A6C564A377D8D76308227D4D4E62DC65911D1E5DF7C22DD"
+  },
+  "records": [
+    {
+      "occurrence_id": "EA4FB862F50351275DEFB4AF2075C94EFCDE633DC554A915A4D095160C128270",
+      "kind": "producer_ledger_occurrence",
+      "evidence_artifact": "cjk/ledgers_p05_p08.json",
+      "evidence_sha256": "01E949D8847B9FB4E124213183C66F3F2B16AC6264D428DBFBEB28BC049F5F35",
+      "evidence_locator": "/records/312",
+      "reconciliation_owner": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+      "admission_owner_if_new_stacks_erratum": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation.",
+      "implementation_claim_boundary": "Evidence only; does not by itself establish validity, admission, implementation or publication",
+      "record": {
+        "record_key": "p05:L313",
+        "producer": "p05",
+        "candidate_id": "P05-EN-CH36-0050",
+        "ledger_line": 313,
+        "byte_start": 279162,
+        "byte_end_exclusive": 280343,
+        "json_utf8_sha256": "F54EDB4AD5E39D98E322F2672322741C658D6E006AC1181947B98B8B7964CED3",
+        "category": "source-defect",
+        "lifecycle": "active_producer_candidate",
+        "source_record": {
+          "utc": "2026-08-24T15:24:19.5740258Z",
+          "source_path": "perfect.tex",
+          "source_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+          "id": "P05-EN-CH36-0050",
+          "locus": {
+            "lines": [
+              4320,
+              4330
+            ],
+            "label": "lemma-compact-is-perfect-with-support",
+            "context": "first direction of compactness with support"
+          },
+          "defect": "Citing Proposition compact-is-perfect, the proof says perfect objects are compact objects of D(O_X). That proposition proves compactness in D_QCoh(O_X), which is the ambient category relevant here; the stronger full D(O_X) claim is neither the cited statement nor generally justified by this step.",
+          "evidence": [
+            {
+              "source_locus": "perfect.tex:4246-4251",
+              "observation": "The cited proposition is explicitly about objects of D_QCoh(O_X)."
+            },
+            {
+              "source_locus": "perfect.tex:4323-4326",
+              "observation": "The proof needs only compactness in D_QCoh(O_X), then in its direct-sum-closed supported subcategory."
+            }
+          ],
+          "smallest_proposed_correction": "Replace 'compact objects of D(O_X)' with 'compact objects of D_QCoh(O_X)'.",
+          "confidence": "high",
+          "translation_impact": "The Japanese target preserves the frozen D(O_X) category at this locus and records the category correction only here."
+        },
+        "admission": {
+          "status": "no_matching_admission_identified",
+          "stable_ids": [],
+          "operation_ids": [],
+          "crosswalk_indices": []
+        },
+        "implementation": "not_checked_in_cumulative_source",
+        "publication": "not_checked",
+        "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+      }
+    },
+    {
+      "occurrence_id": "693A2B6264281FD36821472B3819E7EC3736D693AC47DAA531C6B2AF0EC7C0F4",
+      "kind": "producer_ledger_occurrence",
+      "evidence_artifact": "cjk/ledgers_p05_p08.json",
+      "evidence_sha256": "01E949D8847B9FB4E124213183C66F3F2B16AC6264D428DBFBEB28BC049F5F35",
+      "evidence_locator": "/records/313",
+      "reconciliation_owner": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+      "admission_owner_if_new_stacks_erratum": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation.",
+      "implementation_claim_boundary": "Evidence only; does not by itself establish validity, admission, implementation or publication",
+      "record": {
+        "record_key": "p05:L314",
+        "producer": "p05",
+        "candidate_id": "P05-EN-CH36-0051",
+        "ledger_line": 314,
+        "byte_start": 280343,
+        "byte_end_exclusive": 281120,
+        "json_utf8_sha256": "10A779DCA3636E0B37F9D88E4A660716B45E418E313139F501EBF994BB4FD2C4",
+        "category": "source-defect",
+        "lifecycle": "active_producer_candidate",
+        "source_record": {
+          "utc": "2026-08-24T15:24:19.5740258Z",
+          "source_path": "perfect.tex",
+          "source_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+          "id": "P05-EN-CH36-0051",
+          "locus": {
+            "lines": [
+              4323,
+              4329
+            ],
+            "label": "lemma-compact-is-perfect-with-support",
+            "context": "existence of a perfect generator"
+          },
+          "defect": "The clause 'For the converse we will use there exists a generator' is missing 'that'.",
+          "evidence": [
+            {
+              "source_locus": "perfect.tex:4326-4329",
+              "observation": "The proof invokes the existence statement from lemma-generator-with-support."
+            }
+          ],
+          "smallest_proposed_correction": "Write 'For the converse we will use that there exists a generator'.",
+          "confidence": "high",
+          "translation_impact": "Japanese states the existence relation grammatically; the English omission is sidecar-only."
+        },
+        "admission": {
+          "status": "no_matching_admission_identified",
+          "stable_ids": [],
+          "operation_ids": [],
+          "crosswalk_indices": []
+        },
+        "implementation": "not_checked_in_cumulative_source",
+        "publication": "not_checked",
+        "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+      }
+    },
+    {
+      "occurrence_id": "3ED4852742F450457C66F37C656A526C8CBC1FB3CC9549CA0FAAAF28F9969D09",
+      "kind": "producer_ledger_occurrence",
+      "evidence_artifact": "cjk/ledgers_p05_p08.json",
+      "evidence_sha256": "01E949D8847B9FB4E124213183C66F3F2B16AC6264D428DBFBEB28BC049F5F35",
+      "evidence_locator": "/records/314",
+      "reconciliation_owner": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+      "admission_owner_if_new_stacks_erratum": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+      "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation.",
+      "implementation_claim_boundary": "Evidence only; does not by itself establish validity, admission, implementation or publication",
+      "record": {
+        "record_key": "p05:L315",
+        "producer": "p05",
+        "candidate_id": "P05-EN-CH36-0052",
+        "ledger_line": 315,
+        "byte_start": 281120,
+        "byte_end_exclusive": 282098,
+        "json_utf8_sha256": "86D218307E618F0B4442784F566D191D7DFBDD5140F55F232ABC211EC3ACED3F",
+        "category": "source-defect",
+        "lifecycle": "active_producer_candidate",
+        "source_record": {
+          "utc": "2026-08-24T15:24:19.5740258Z",
+          "source_path": "perfect.tex",
+          "source_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+          "id": "P05-EN-CH36-0052",
+          "locus": {
+            "lines": [
+              4378,
+              4387
+            ],
+            "label": "lemma-map-from-pseudo-coherent-to-complex-with-support",
+            "context": "class defined by the internal Hom complex"
+          },
+          "defect": "The equality H^0(K) = Hom_{D(O_X)}(O_X[0],K) omits global sections: the right side is hypercohomology H^0(X,K), not the cohomology sheaf H^0(K).",
+          "evidence": [
+            {
+              "source_locus": "perfect.tex:4379-4384",
+              "observation": "K is the internal derived Hom sheaf complex RSheafHom(P,E)."
+            },
+            {
+              "source_locus": "perfect.tex:4384-4387",
+              "observation": "The map alpha is a global morphism and therefore defines a global hypercohomology class."
+            }
+          ],
+          "smallest_proposed_correction": "Replace H^0(K) by H^0(X,K).",
+          "confidence": "high",
+          "translation_impact": "The Japanese target preserves the frozen H^0(K) expression; the missing global-sections argument remains sidecar-only."
+        },
+        "admission": {
+          "status": "no_matching_admission_identified",
+          "stable_ids": [],
+          "operation_ids": [],
+          "crosswalk_indices": []
+        },
+        "implementation": "not_checked_in_cumulative_source",
+        "publication": "not_checked",
+        "next_action": "Parent: independently validate pinned source and deduplicate by occurrence; route valid nonduplicative fix through sole registrar, then verify cumulative implementation."
+      }
+    }
+  ],
+  "scope": "Exact recovered original producer records for bounded receiving review; historical workflow text is data, not current authorization."
+}

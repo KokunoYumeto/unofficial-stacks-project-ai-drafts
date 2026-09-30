@@ -1,0 +1,191 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-025",
+      "source_lines": [
+        10557,
+        10660
+      ],
+      "original_statement": "Whether a comparison K to its truncation homotopy limit is an isomorphism is independent of the lift; the split injective tower is a resolution exactly when that comparison is an isomorphism.",
+      "proved_statement": "For A_p=H^p(P), delta_p=H^p(Delta), and the stable projection q_p:ker delta_p to H^p(K), the recovery defect E_p has exact sequence 0 to coker delta_(p-1) to E_p to ker q_p to 0. Every chosen comparison gives the explicit decomposition H^p(C)=H^p(K) direct-sum E_p. It is an isomorphism exactly when both stated defect terms vanish in every degree.",
+      "hypotheses": "An abelian category and existence in D(A) of the product of the actual canonical truncation tower and its homotopy limit; no exactness of products or enough-injectives assumption.",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          4,
+          5,
+          6
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "The defect and projection maps are independent of the comparison lift, but the direct-sum identification uses that chosen lift. No general vanishing is assumed."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-026",
+      "source_lines": [
+        10662,
+        10686
+      ],
+      "original_statement": "Under enough injectives and exact countable products, the proof establishes truncation recovery and then a K-injective resolution.",
+      "proved_statement": "Exact countable products alone give truncation recovery. More generally the actual cohomology of a tower homotopy limit has the kernel-cokernel exact sequence of its cohomology difference maps; eventual cohomology isomorphisms in each degree give convergence, with a degree-dependent stabilization index. All transition factors and the splitting of the difference map are explicit.",
+      "hypotheses": "Exact countable products in the abelian category. Enough injectives are retained when concluding the source K-injective resolution construction.",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          1,
+          6,
+          7
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "No removal of the source enough-injectives hypothesis from its K-injective existence conclusion; no substitution of product exactness for exactness of all inverse limits."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-RECON-081"
+      ],
+      "to": "more-algebra.tex current 23752-23824 and 23848-23896",
+      "status": "pro_map_finite_sums_homotopies_composition_and_derived_limit_invariance_proved",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-082",
+        "DERIVED-UNDER-025"
+      ],
+      "to": "derived.tex original 10638-10659",
+      "status": "actual_gamma_represents_one_lift_and_exact_choice_independent_recovery_defect_proved",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-019",
+        "DERIVED-UNDER-021"
+      ],
+      "to": "derived.tex original 10588-10660",
+      "status": "strict_stage_maps_split_difference_sequence_K_injectivity_and_limit_comparison_proved_without_exact_products",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          5
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-083",
+        "DERIVED-UNDER-026"
+      ],
+      "to": "derived.tex original 10670-10685",
+      "status": "correct_n_indexed_tail_actual_stable_projection_and_split_epic_difference_map_proved",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-025",
+        "DERIVED-UNDER-026"
+      ],
+      "to": "more-algebra.tex current 14522-14533",
+      "status": "module_exact_products_and_enough_injectives_supply_the_two_distinct_requirements",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          1,
+          5,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 10588-10660",
+        "DERIVED-UNDER-025"
+      ],
+      "to": "cohomology.tex current 10338-10341; sites-cohomology.tex current 5604-5607; perfect.tex current 138-143",
+      "status": "recovery_resolution_equivalence_verified_geometric_hypotheses_remain_required_and_not_adjudicated_here",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          4,
+          5,
+          6,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 10474-10500"
+      ],
+      "to": "duality.tex current 798-801",
+      "status": "product_side_of_PART16_receiving_check_closed_by_exact_products_of_modules_and_actual_termwise_representation",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          1,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 10502-10507"
+      ],
+      "to": "editorial dual statements only",
+      "status": "three_omitted_duals_proved_with_exact_hypotheses_not_counted_as_defects",
+      "proof": {
+        "file": "PROOFS_10435_10686.md",
+        "bytes": 22109,
+        "sha256": "148C197342D49506199AAF58215EE6229BBED69FD478D9AFB01EC7CACAB11155",
+        "sections": [
+          8
+        ]
+      }
+    }
+  ],
+  "limits": "New consequences remain separate editorial material. No new source defect was counted in this pass. Receiver checks have the stated scope."
+}

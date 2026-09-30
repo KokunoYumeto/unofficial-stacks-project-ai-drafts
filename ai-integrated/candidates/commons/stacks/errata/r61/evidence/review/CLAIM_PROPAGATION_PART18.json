@@ -1,0 +1,167 @@
+{
+  "claims": [
+    {
+      "claim_id": "DERIVED-UNDER-027",
+      "source_lines": [
+        10846,
+        10879
+      ],
+      "original_statement": "Cohomology or terms in smd(add(E)) and the interval [a,b] give generation cost b-a+1.",
+      "proved_statement": "For finite nonzero cohomology degrees p_j and memberships H^(p_j)(K) in C_(r_j)(E), K belongs to C_(sum r_j)(E[p_1,p_t]). The actual bounded-term counterpart has the sum of its term costs and descending term order. With costs one, only the nonzero layers contribute.",
+      "hypotheses": "The given K in D(A) has finite cohomology support; positive finite costs for each nonzero layer. The term version uses the specified bounded complex and all its actual differentials.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          1,
+          3,
+          6
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "These are proved upper bounds, not asserted minimal costs. The zero object is handled at level one. No splitting of extension data is asserted."
+    },
+    {
+      "claim_id": "DERIVED-UNDER-028",
+      "source_lines": [
+        10948,
+        10972,
+        11068,
+        11092
+      ],
+      "original_statement": "The source proves the unbounded change-of-generator cost rn.",
+      "proved_statement": "E in C_r(G[c,d]) and X in C_n(E[a,b]) imply X in C_(rn)(G[a+c,b+d]), retaining the given finite windows and all extension and summand witnesses.",
+      "hypotheses": "A triangulated category, finite integer intervals a<=b and c<=d, and positive integers r,n.",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          1,
+          2,
+          5,
+          7
+        ]
+      },
+      "status": "proved_editorial_consequence",
+      "body_replacement": false,
+      "novelty": "not_claimed",
+      "limits": "The unbounded rn rule was already proved by the source and is not counted again. Extension count multiplies the cost, not the shift window."
+    }
+  ],
+  "edges": [
+    {
+      "from": [
+        "DERIVED-NEW-037"
+      ],
+      "to": "equiv.tex original/current 1798-1832",
+      "status": "specified_shift_isomorphisms_suffice_inside_strictly_full_receiving_C_n",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          2,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-085",
+        "DERIVED-RECON-086"
+      ],
+      "to": "derived.tex original 10846-10879",
+      "status": "canonical_cohomology_triangle_and_separate_actual_term_triangle_verified",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          3
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-RECON-087"
+      ],
+      "to": "equiv.tex original/current 1871-1888",
+      "status": "uniform_bound_M_equals_max_of_1_m_minus_a_m_plus_b_independent_of_extension_count",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-NEW-038"
+      ],
+      "to": "equiv.tex original/current 1836-1842 and 1855-1865",
+      "status": "missing_tensor_factor_repaired_at_both_loci_with_Cech_counterexample_and_full_receiving_argument",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-027"
+      ],
+      "to": "derived.tex original 10846-10879 editorial supplement",
+      "status": "weighted_sparse_layer_proof_retains_canonical_tower_and_actual_term_differentials",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          6
+        ]
+      }
+    },
+    {
+      "from": [
+        "DERIVED-UNDER-028"
+      ],
+      "to": "derived.tex original 11068-11092 editorial supplement",
+      "status": "bounded_window_refinement_proved_unbounded_rn_not_recounted",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          7
+        ]
+      }
+    },
+    {
+      "from": [
+        "derived.tex original 11068-11092"
+      ],
+      "to": "more-algebra.tex current 21561-21578",
+      "status": "categorical_classical_to_strong_implication_verified_ring_specific_premises_outside_scope",
+      "proof": {
+        "file": "PROOFS_10691_11108.md",
+        "bytes": 25974,
+        "sha256": "223EE737BF695771E1E58CA12ED3D725C583451931BB1D455905248392D8B880",
+        "sections": [
+          5,
+          9
+        ]
+      }
+    }
+  ],
+  "limits": "Editorial strengthenings remain separate. Receiver review is bounded to the stated arguments; no whole-chapter Equivalences or More on Algebra review."
+}

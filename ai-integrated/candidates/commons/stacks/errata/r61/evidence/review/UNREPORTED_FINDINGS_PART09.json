@@ -1,0 +1,51 @@
+{
+  "findings": [
+    {
+      "finding_id": "DERIVED-NEW-024",
+      "source": "derived.tex",
+      "source_lines": [
+        6524,
+        6527
+      ],
+      "original_problem": "Subtracting gamma-beta_i=d h_i+h_i d gives beta_1-beta_2=d(h_2-h_1)+(h_2-h_1)d, but the proof uses the opposite difference twice.",
+      "correction": "Use h_2-h_1 in both the displayed difference and its extension to the direct sum. The original parenthesis correction remains in place.",
+      "status": "proved_sign_error_with_counterexample_and_complete_repair",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "section": 3
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-024-OP1",
+        "DERIVED-NEW-024-OP2"
+      ],
+      "counterexample": "K=L=I=(Q --1--> Q), alpha=1, gamma=0, beta_1=1, beta_2=0, h_1^1=-1, h_2=0; the old residual is 2 times the identity.",
+      "preserved_prior_correction": "MC-STK-ERR-0847-OP1",
+      "limits": "The uniqueness theorem is valid; only its intermediate sign is corrected."
+    },
+    {
+      "finding_id": "DERIVED-NEW-025",
+      "source": "derived.tex",
+      "source_lines": [
+        6543,
+        6824
+      ],
+      "original_problem": "The injective and projective Hom-comparison introductions each omit an indefinite article.",
+      "correction": "Insert a before bounded in both sentences, preserving their opposite bounds.",
+      "status": "verified_copyedit",
+      "proof": {
+        "file": "PROOFS_6209_7089.md",
+        "bytes": 30079,
+        "sha256": "B84C5F04E1414933F826B1561F8AFAC86164C36BB13D3E68475E6FC328570857",
+        "section": 3
+      },
+      "received_report_count": 0,
+      "operation_ids": [
+        "DERIVED-NEW-025-OP1",
+        "DERIVED-NEW-025-OP2"
+      ]
+    }
+  ]
+}
