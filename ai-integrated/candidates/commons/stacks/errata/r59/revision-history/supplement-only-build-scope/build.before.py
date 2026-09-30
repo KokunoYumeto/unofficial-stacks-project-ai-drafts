@@ -43,8 +43,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path)
     parser.add_argument('--validate-only', action='store_true')
-    parser.add_argument('--supplement-only', action='store_true',
-        help='Build both fresh copies of the revised supplement; do not rebuild unchanged chapters.')
     args = parser.parse_args()
     manifest_raw = (HERE / 'PACKAGE_MANIFEST.json').read_bytes()
     manifest = json.loads(manifest_raw)
@@ -71,7 +69,6 @@ def main():
     (out / 'PACKAGE_MANIFEST.json').write_bytes(manifest_raw)
     receipt = dict(schema='stacks-r59-portable-build/v1', created_at_utc=datetime.now(timezone.utc).isoformat(),
         package_manifest_sha256=sha(manifest_raw), source_date_epoch=EPOCH,
-        scope='supplement-only' if args.supplement_only else 'chapters-and-supplement',
         builds=[], captures=[], rendered_acceptance=False, admission=False, publication=False)
     slot = TexSlot(1000)
 
@@ -123,7 +120,7 @@ def main():
 
     try:
         with slot:
-            for group in (('a', 'b') if args.supplement_only else ('prior', 'a', 'b')):
+            for group in ('prior', 'a', 'b'):
                 folder = out / group
                 folder.mkdir()
                 for row in manifest['files']:
@@ -141,11 +138,10 @@ def main():
             # Check the converted supplement before the longer chapter runs.
             build('a', 'correction-proofs', 'xelatex')
             build('b', 'correction-proofs', 'xelatex')
-            if not args.supplement_only:
-                for group in ('prior', 'a', 'b'):
-                    for stem in CHAPTERS:
-                        build(group, stem, 'pdflatex')
-            for stem in (('correction-proofs',) if args.supplement_only else (*CHAPTERS, 'correction-proofs')):
+            for group in ('prior', 'a', 'b'):
+                for stem in CHAPTERS:
+                    build(group, stem, 'pdflatex')
+            for stem in (*CHAPTERS, 'correction-proofs'):
                 a, = [x for x in receipt['builds'] if x['group'] == 'a' and x['document'] == stem]
                 b, = [x for x in receipt['builds'] if x['group'] == 'b' and x['document'] == stem]
                 assert a['identities'] == b['identities'] and a['diagnostics'] == b['diagnostics'], 'Fresh successor builds differ: ' + stem

@@ -1,0 +1,136 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "receipt_identity": {
+        "bytes": 44109,
+        "sha256": "784629483187C8F2956F7BBE101292F7962D420886CEF7AE93A1D44794BC1FD9"
+      },
+      "status": "PASS_FIXED_POINT_REPRODUCTION_VISUAL_PENDING",
+      "error": null,
+      "builds": [
+        {
+          "document": "correction-proofs",
+          "group": "a",
+          "pages": 13,
+          "pdf_sha256": "4E4BCE54DA57BD50FF3E39502FFE1E4733D64612451C4C969E2D6F9F6C7A9373"
+        },
+        {
+          "document": "correction-proofs",
+          "group": "b",
+          "pages": 13,
+          "pdf_sha256": "4E4BCE54DA57BD50FF3E39502FFE1E4733D64612451C4C969E2D6F9F6C7A9373"
+        },
+        {
+          "document": "examples",
+          "group": "prior",
+          "pages": 82,
+          "pdf_sha256": "A4AD901BE1E25CFA6D83BC7E3A617C3AFA32A8894FAFFD3EF4592D17F7575A76"
+        },
+        {
+          "document": "more-algebra",
+          "group": "prior",
+          "pages": 409,
+          "pdf_sha256": "CC2B975E0396A017C19876F665A458C93A0622EA004993CCD454744D324D98B5"
+        },
+        {
+          "document": "brauer",
+          "group": "prior",
+          "pages": 10,
+          "pdf_sha256": "9573142C041B6AEDC821A0453CAD5825651216477FA6642FC8E68051302EAB56"
+        },
+        {
+          "document": "examples",
+          "group": "a",
+          "pages": 82,
+          "pdf_sha256": "913AC7205EC0ECCC3E95285D16E9BD91263B4433103800205D6A8F17334848BE"
+        },
+        {
+          "document": "more-algebra",
+          "group": "a",
+          "pages": 409,
+          "pdf_sha256": "136FD2220EEB87C9A0B93B7DA5B7E9383CE482E3296417AA0E20BE4EBDC1AF28"
+        },
+        {
+          "document": "brauer",
+          "group": "a",
+          "pages": 10,
+          "pdf_sha256": "5C6C3B1EE8C5450B10D9F5FB9B2D7421EC350635C8D1590DB6C6C389BBB3EA0B"
+        },
+        {
+          "document": "examples",
+          "group": "b",
+          "pages": 82,
+          "pdf_sha256": "913AC7205EC0ECCC3E95285D16E9BD91263B4433103800205D6A8F17334848BE"
+        },
+        {
+          "document": "more-algebra",
+          "group": "b",
+          "pages": 409,
+          "pdf_sha256": "136FD2220EEB87C9A0B93B7DA5B7E9383CE482E3296417AA0E20BE4EBDC1AF28"
+        },
+        {
+          "document": "brauer",
+          "group": "b",
+          "pages": 10,
+          "pdf_sha256": "5C6C3B1EE8C5450B10D9F5FB9B2D7421EC350635C8D1590DB6C6C389BBB3EA0B"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "receipt_identity": {
+        "bytes": 891,
+        "sha256": "908F2C4DE9512961915D5E75ECFD3C905A4DA93352D5A7A23AD65EF922E37914"
+      },
+      "status": "BUILD_ERROR",
+      "error": "Engine failed: a-correction-proofs-tex-1",
+      "builds": []
+    },
+    {
+      "attempt": 3,
+      "receipt_identity": {
+        "bytes": 572,
+        "sha256": "B6D93118EF9C4BF1F74C7EEBF7A59325BD5A4339CC24157C4B2C7ECDA757827A"
+      },
+      "status": "NO_ENGINE_SLOT_UNAVAILABLE",
+      "error": "TeX slot not acquired: 0x102; no engine launched",
+      "builds": []
+    },
+    {
+      "attempt": 4,
+      "receipt_identity": {
+        "bytes": 572,
+        "sha256": "E86968C3D3CB547890193D19324273091DF707A4C84B1CDEB267FB6A4078E102"
+      },
+      "status": "NO_ENGINE_SLOT_UNAVAILABLE",
+      "error": "TeX slot not acquired: 0x102; no engine launched",
+      "builds": []
+    },
+    {
+      "attempt": 5,
+      "receipt_identity": {
+        "bytes": 4093,
+        "sha256": "55DB6FB5757739F44D92C7CE7584D4512F6DE72584336BC9ADA051BFA983FD2D"
+      },
+      "status": "PASS_FIXED_POINT_REPRODUCTION_VISUAL_PENDING",
+      "error": null,
+      "builds": [
+        {
+          "document": "correction-proofs",
+          "group": "a",
+          "pages": 13,
+          "pdf_sha256": "FBD435C56F7E4E8583CB293FC1BE61AB7B9100AD21696BA2BFD99DA6148DCA1F"
+        },
+        {
+          "document": "correction-proofs",
+          "group": "b",
+          "pages": 13,
+          "pdf_sha256": "FBD435C56F7E4E8583CB293FC1BE61AB7B9100AD21696BA2BFD99DA6148DCA1F"
+        }
+      ]
+    }
+  ],
+  "failed_presentation_retained": true,
+  "explanation": "Attempt 1 is authoritative for the unchanged chapters. Its supplement was superseded after layout review. Attempt 2 exposed a TeX row-break parsing defect. Attempts 3 and 4 started no engine because the shared mutex was occupied. Attempt 5 was reviewed in full and revised only for inline notation. Attempt 6 is the released supplement."
+}

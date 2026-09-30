@@ -1,0 +1,37 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r59",
+  "passed": true,
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [],
+  "reviewer": "OpenAI Codex - GPT-6 Astra, Ultra effort",
+  "independence_scope": "Primary AI source review, executable forward/inverse replay and two fresh deterministic builds. No independent human or second AI review is claimed.",
+  "checks": [
+    {
+      "name": "Five findings and thirteen operations replay exactly against both original and cumulative sources; inverse removal restores each prior source.",
+      "passed": true,
+      "receipt": "replay/source-replay.json"
+    },
+    {
+      "name": "All 501 chapter pages compared; all seven changed pages and thirteen operations visually inspected.",
+      "passed": true,
+      "receipt": "visual/chapters/ACTUAL_REVIEW.json"
+    },
+    {
+      "name": "All thirteen supplement pages inspected through exact raster correspondence and direct review of the five revised pages.",
+      "passed": true,
+      "receipt": "visual/supplement/ACTUAL_REVIEW.json"
+    },
+    {
+      "name": "Three chapters and supplement reproduce; no new chapter diagnostics and no supplement overflow or unresolved reference.",
+      "passed": true,
+      "receipt": "builds/supplement.json"
+    },
+    {
+      "name": "Exact editable source archive reopened and compared member by member.",
+      "passed": true,
+      "receipt": "replay/source-package.json"
+    }
+  ],
+  "generated_at_utc": "2026-09-30T04:49:55.133108+00:00"
+}

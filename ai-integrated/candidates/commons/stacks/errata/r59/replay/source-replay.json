@@ -1,0 +1,104 @@
+{
+  "status": "PASS_EXACT_SOURCE_AND_INVERSE_REPLAY",
+  "units": 5,
+  "operations": 13,
+  "sources": [
+    {
+      "source": "examples.tex",
+      "contexts": [
+        {
+          "context": "official-authority",
+          "preimage": {
+            "bytes": 268601,
+            "sha256": "30EAF58E0953F17E3A659E73AA37AC8C146BC4136FC68850CB0341E23EF398B4"
+          },
+          "postimage": {
+            "bytes": 268603,
+            "sha256": "D2483A06A9040D73312A564FCE2286039C837EF54DFBE65628CEF70A0BE877C1"
+          },
+          "operations": 1,
+          "inverse_exact": true
+        },
+        {
+          "context": "cumulative",
+          "preimage": {
+            "bytes": 277677,
+            "sha256": "67A1C8C75378391E6282040F4CDBD873A5F9B00E3261B49588116A6A7305C5F5"
+          },
+          "postimage": {
+            "bytes": 277679,
+            "sha256": "7F31F5D505E5C4D0E1C2F71AE118CF304F65CD325B8FAA0A52501779014E2620"
+          },
+          "operations": 1,
+          "inverse_exact": true
+        }
+      ]
+    },
+    {
+      "source": "more-algebra.tex",
+      "contexts": [
+        {
+          "context": "official-authority",
+          "preimage": {
+            "bytes": 1492039,
+            "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+          },
+          "postimage": {
+            "bytes": 1492043,
+            "sha256": "2524CC9B511ADE12163DA0BFCEA25003723F00680EBF643067A16F20B78C8B01"
+          },
+          "operations": 3,
+          "inverse_exact": true
+        },
+        {
+          "context": "cumulative",
+          "preimage": {
+            "bytes": 1518081,
+            "sha256": "0490028F82EFFCF08C0D790D0C8145EEB8D55DB66BFB8CF7BA29CCD27FC3FABE"
+          },
+          "postimage": {
+            "bytes": 1518085,
+            "sha256": "3785C52A72AA218E39E338910940C7C4AF374F557550825BAC2594678F9216BB"
+          },
+          "operations": 3,
+          "inverse_exact": true
+        }
+      ]
+    },
+    {
+      "source": "brauer.tex",
+      "contexts": [
+        {
+          "context": "official-authority",
+          "preimage": {
+            "bytes": 28201,
+            "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+          },
+          "postimage": {
+            "bytes": 28251,
+            "sha256": "90554891579679A6BCF86789B9F4421C0F265C87A3C4FEB6F3F758D320686918"
+          },
+          "operations": 9,
+          "inverse_exact": true
+        },
+        {
+          "context": "cumulative",
+          "preimage": {
+            "bytes": 28314,
+            "sha256": "E728BCCBF6AAA7FC428D3B8074BEA248D2B5F2492F5B49834A14B02AAC389436"
+          },
+          "postimage": {
+            "bytes": 28364,
+            "sha256": "AA36E7CBF431794983CDEF31B71A861E6D3871E54889D1818C08E941540B28B6"
+          },
+          "operations": 9,
+          "inverse_exact": true
+        }
+      ]
+    }
+  ],
+  "retained_batch_files": 66,
+  "labels_references_citations_environments_unchanged": true,
+  "complete_proof_locators_verified": true,
+  "independence_scope": "Executable byte replay from retained original and cumulative preimages; no second mathematical reviewer is claimed."
+}

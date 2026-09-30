@@ -242,7 +242,7 @@ This checks \texttt{MC-STK-ERR-0745} against source lines 259--278. Let R be the
 (r e_{ij})(s e_{uv}) = \delta _{ju} (rs)e_{iv}.
 \end{gathered}\]
 
-Let J be a two-sided ideal of \(R_n\).~The additive sum \(J=\bigoplus _{1\leq i,j\leq n} e_{ii} J e_{jj}\) is direct because its summands have disjoint matrix positions. Put \(I=\{r\in R : r e_{11}\in J\}\). Addition, additive inverses, and multiplication on either side by \(s e_{11}\) prove that I is a two-sided ideal of R. For every pair i,j, the two identities
+Let J be a two-sided ideal of R\_n.~The additive sum \(J=\bigoplus _{1\leq i,j\leq n} e_{ii} J e_{jj}\) is direct because its summands have disjoint matrix positions. Put \(I=\{r\in R : r e_{11}\in J\}\). Addition, additive inverses, and multiplication on either side by \(s e_{11}\) prove that I is a two-sided ideal of R. For every pair i,j, the two identities
 
 \[\begin{gathered}
 e_{i1} (r e_{11})e_{1j} = r e_{ij},\\e_{1i} (r e_{ij})e_{j1} = r e_{11}
@@ -250,13 +250,13 @@ e_{i1} (r e_{11})e_{1j} = r e_{ij},\\e_{1i} (r e_{ij})e_{j1} = r e_{11}
 
 prove \(e_{ii} J e_{jj}=\{r e_{ij}:r\in I\}\). The inverse maps between this corner and I take r to \(r e_{ij}\) and extract its \((i,j)\) coefficient. They do not identify different corners as subsets of the matrix ring. Summing the corners proves \(J=I R_{n}\). The retained source correction expresses precisely this common coefficient ideal; its unexpanded direct-sum notation has the unique available pair of indices and is not another defect.
 
-For completeness, the source's equivalence of right-module categories is given by actual inverse maps. Regard \(X^{\oplus n}\) as rows over a right R-module X, with \((xU)_{j}=\sum _{i} x_{i} u_{ij}\). Conversely take \(Y e_{11}\) for a right \(R_n\)-module Y, with its R-action through \(r\mapsto r e_{11}\). Define
+For completeness, the source's equivalence of right-module categories is given by actual inverse maps. Regard \(X^{\oplus n}\) as rows over a right R-module X, with \((xU)_{j}=\sum _{i} x_{i} u_{ij}\). Conversely take \(Y e_{11}\) for a right R\_n-module Y, with its R-action through \(r\mapsto r e_{11}\). Define
 
 \[\begin{gathered}
 \alpha _{Y} : (Y e_{11})^{\oplus n} \to Y,\qquad (y_{i})_{i} \mapsto \sum _{i} y_{i} e_{1i},\\\beta _{Y} : Y \to (Y e_{11})^{\oplus n},\qquad y \mapsto (y e_{i1})_{i}.
 \end{gathered}\]
 
-The entries of \(\beta\) lie in \(Y e_{11}\) since \(e_{i1} e_{11}=e_{i1}\). The relations \(e_{1j} e_{i1}=\delta _{ji} e_{11}\) and \(\sum _{i} e_{i1} e_{1i}=\sum _{i} e_{ii}=1\) give \(\beta _{Y} \alpha _{Y}=\operatorname{id}\) and \(\alpha _{Y} \beta _{Y}=\operatorname{id}\). Matrix multiplication verifies that these are right \(R_n\)-module maps. The analogous identification \((X^{\oplus n})e_{11}\to X\) extracts the first entry and its inverse inserts zeros. All these maps commute with module homomorphisms, so they give the stated equivalence, including for modules which are not finitely generated.
+The entries of β lie in \(Y e_{11}\) since \(e_{i1} e_{11}=e_{i1}\). The relations \(e_{1j} e_{i1}=\delta _{ji} e_{11}\) and \(\sum _{i} e_{i1} e_{1i}=\sum _{i} e_{ii}=1\) give \(\beta _{Y} \alpha _{Y}=\operatorname{id}\) and \(\alpha _{Y} \beta _{Y}=\operatorname{id}\). Matrix multiplication verifies that these are right R\_n-module maps. The analogous identification \((X^{\oplus n})e_{11}\to X\) extracts the first entry and its inverse inserts zeros. All these maps commute with module homomorphisms, so they give the stated equivalence, including for modules which are not finitely generated.
 
 Commutation with every \(e_{ii}\) forces a central matrix to be diagonal; commutation with every \(e_{ij}\) makes its diagonal entries equal. Commutation with \(r e_{11}\) for every r then forces that common entry into \(Z(R)\). Conversely each such scalar matrix is central. This proves the exact center map \(Z(R)\to Z(R_{n}), r\mapsto r\cdot 1_{n}\), with inverse taking entry \((1,1)\).
 
@@ -276,21 +276,21 @@ Downstream: the construction of a simple submodule of a finite simple A in Wedde
 
 \subsection{4. The exact endomorphism rings of the original right matrix module}\label{the-exact-endomorphism-rings-of-the-original-right-matrix-module}
 
-Retain the source's \(A=\operatorname{Mat}(n\times n,K)\) and its right module \(M=K^{\oplus n}\), with row action. For each \(a\in K\) let \(L_{a}(v_{1},\ldots ,v_{n})=(av_{1},\ldots ,av_{n})\). Associativity shows \(L_{a}(vU)=L_{a}(v)U\), so \(L_a\) is A-linear. Moreover
+Retain the source's \(A=\operatorname{Mat}(n\times n,K)\) and its right module \(M=K^{\oplus n}\), with row action. For each a∈K let \(L_{a}(v_{1},\ldots ,v_{n})=(av_{1},\ldots ,av_{n})\). Associativity shows \(L_{a}(vU)=L_{a}(v)U\), so L\_a is A-linear. Moreover
 
 \[\begin{gathered}
 L_{a} \circ L_{b} = L_{ab}.
 \end{gathered}\]
 
-Every A-linear f is of this form. If \(\varepsilon_i\) is the i-th unit row, then \(\varepsilon _{i} e_{ii}=\varepsilon _{i}\) implies \(f(\varepsilon_i)\) has only its i-th entry, say \(a_i\). The equation \(\varepsilon _{i} e_{ij}=\varepsilon _{j}\) gives \(a_{i}=a_{j}\) for every pair. Write their common value a. Using the matrix with r in diagonal position \((i,i)\) gives \(f(r \varepsilon _{i})=ar \varepsilon _{i}\). Additivity now gives \(f=L_a\) on every row. Evaluation on \(\varepsilon_1\) supplies the inverse to \(a\mapsto L_{a}\). Thus the exact ring isomorphism is
+Every A-linear f is of this form. If ε\_i is the i-th unit row, then \(\varepsilon _{i} e_{ii}=\varepsilon _{i}\) implies f(ε\_i) has only its i-th entry, say a\_i. The equation \(\varepsilon _{i} e_{ij}=\varepsilon _{j}\) gives \(a_{i}=a_{j}\) for every pair. Write their common value a. Using the matrix with r in diagonal position \((i,i)\) gives \(f(r \varepsilon _{i})=ar \varepsilon _{i}\). Additivity now gives f=L\_a on every row. Evaluation on ε\_1 supplies the inverse to \(a\mapsto L_{a}\). Thus the exact ring isomorphism is
 
 \[\begin{gathered}
 K \to \operatorname{End}_{A}^{\mathrm{comp}}(M),\qquad a \mapsto L_{a},
 \end{gathered}\]
 
-and its target is K, not \(K^{\mathrm{op}}\), under the source's left action convention. The formula is compatible with the central k-actions on both sides.
+and its target is K, not K\^{}op, under the source's left action convention. The formula is compatible with the central k-actions on both sides.
 
-Now let M be a left K-vector space with ordered basis \(\varepsilon_1,\ldots,\varepsilon_n\), retaining coefficients on the left. A left K-linear map is determined by \(t(\varepsilon _{i})=\sum _{j} u_{ij} \varepsilon _{j}\) and sends the coefficient row v to vU. Let \(t_U\) denote this map. Direct multiplication gives
+Now let M be a left K-vector space with ordered basis ε\_1,\ldots,ε\_n, retaining coefficients on the left. A left K-linear map is determined by \(t(\varepsilon _{i})=\sum _{j} u_{ij} \varepsilon _{j}\) and sends the coefficient row v to vU. Let t\_U denote this map. Direct multiplication gives
 
 \[\begin{gathered}
 t_{U} \circ t_{V} = t_{VU},\qquad t_{U} \star t_{V} = t_{UV}.
@@ -306,7 +306,7 @@ The order discrepancy is substantive even without finding a division algebra abs
 I = \operatorname{diag}(i,-i),\qquad J = \begin{pmatrix}0&1\\-1&0\end{pmatrix},\qquad Q = IJ.
 \end{gathered}\]
 
-Their real span with the identity is an associative real algebra because it is closed under multiplication, with \(I^{2}=J^{2}=-1\) and \(JI=-IJ\). The four matrices are linearly independent over R. For \(h=a+bI+cJ+dQ\), multiplication by \(\overline{h}=a-bI-cJ-dQ\) in either order gives \((a^{2}+b^{2}+c^{2}+d^{2})\cdot 1\). Every nonzero h is therefore invertible. In this skew field, \(L_{I}\circ L_{J}=L_{Q}\), while multiplication of I and J in the opposite ring gives \(JI=-Q\), which would map to \(-L_{Q}\). These are unequal because \(2Q\ne 0\). Thus the source's unmodified left action cannot identify its composition ring with \(K^{\mathrm{op}}\) by the claimed coefficient assignment.
+Their real span with the identity is an associative real algebra because it is closed under multiplication, with \(I^{2}=J^{2}=-1\) and \(JI=-IJ\). The four matrices are linearly independent over R. For \(h=a+bI+cJ+dQ\), multiplication by \(\overline{h}=a-bI-cJ-dQ\) in either order gives \((a^{2}+b^{2}+c^{2}+d^{2})\cdot 1\). Every nonzero h is therefore invertible. In this skew field, \(L_{I}\circ L_{J}=L_{Q}\), while multiplication of I and J in the opposite ring gives \(JI=-Q\), which would map to \(-L_{Q}\). These are unequal because \(2Q\ne 0\). Thus the source's unmodified left action cannot identify its composition ring with K\^{}op by the claimed coefficient assignment.
 
 \subsection{5. Bicommutants, including the missed generality for the module}\label{bicommutants-including-the-missed-generality-for-the-module}
 
@@ -320,7 +320,7 @@ The right action of A identifies A with \(\operatorname{End}_{B}^{\mathrm{right}
 
 The inverse equivalences in Section 2, with R=K, identify N with \((N e_{11})^{\oplus n}\). Choose a basis of the right K-vector space \(N e_{11}\). Writing its index set as T gives an A-module isomorphism \(N\cong \bigoplus _{t\in T} M_{t}\), where each \(M_{t}=M\), and every element has finite support. The set T is nonempty because N is nonzero. This is an explicit direct sum of the original simple right matrix modules, with no finiteness restriction on T.
 
-Put \(B=\operatorname{End}_{A}^{\mathrm{comp}}(N)\). Suppose F is an additive map commuting with all of B. For each t, the projection onto \(M_t\) belongs to B, so F preserves each \(M_t\). The A-linear map which transfers the row in \(M_t\) to \(M_u\) and annihilates the other summands also belongs to B. Commutation with these maps shows that the restrictions of F are one and the same additive map \(f:M\to M\), under the displayed identifications. For every \(a\in K\), the map which applies \(L_a\) to a single summand and is zero on all others belongs to B. Therefore \(f(av)=a f(v)\): f is left K-linear. Section 4 now gives a unique matrix \(U\in \operatorname{Mat}(n\times n,K)\) with \(f(v)=vU\). On an arbitrary finite-support element \((v_{t})\), additivity and the projections give \(F((v_{t}))=(v_{t} U)\). Thus F is exactly the original right action \(R_U\) on N. Conversely every \(R_U\) commutes with every A-linear map by the definition of A-linearity. The action is faithful: if \(R_U\) is zero, apply it to each unit row in any one nonempty summand to read off all entries of U. The multiplication calculation in Section 1 proves
+Put \(B=\operatorname{End}_{A}^{\mathrm{comp}}(N)\). Suppose F is an additive map commuting with all of B. For each t, the projection onto M\_t belongs to B, so F preserves each M\_t. The A-linear map which transfers the row in M\_t to M\_u and annihilates the other summands also belongs to B. Commutation with these maps shows that the restrictions of F are one and the same additive map \(f:M\to M\), under the displayed identifications. For every a∈K, the map which applies L\_a to a single summand and is zero on all others belongs to B. Therefore \(f(av)=a f(v)\): f is left K-linear. Section 4 now gives a unique matrix \(U\in \operatorname{Mat}(n\times n,K)\) with \(f(v)=vU\). On an arbitrary finite-support element \((v_{t})\), additivity and the projections give \(F((v_{t}))=(v_{t} U)\). Thus F is exactly the original right action R\_U on N. Conversely every R\_U commutes with every A-linear map by the definition of A-linearity. The action is faithful: if R\_U is zero, apply it to each unit row in any one nonempty summand to read off all entries of U. The multiplication calculation in Section 1 proves
 
 \[\begin{gathered}
 A \cong \operatorname{End}_{B}^{\mathrm{right}}(N),\qquad A^{\mathrm{op}} \cong \operatorname{End}_{B}^{\mathrm{comp}}(N).
@@ -334,17 +334,17 @@ The dimensions in assertion (5) remain exactly \([A:k]=n^{2}[K:k]\), \([L:k]=[K:
 
 This checks the mathematical qualification in \texttt{MC-STK-ERR-0748} and the explicit multiplication map in \texttt{MC-STK-ERR-0749}.
 
-In the source Skolem--Noether proof retain the right A-module M and \(L=\operatorname{End}_{A}^{\mathrm{comp}}(M)\), acting on its left. For embeddings \(f,g:B\to A\), the two right actions of \(H=B\otimes _{k} L^{\mathrm{op}}\) are
+In the source Skolem--Noether proof retain the right A-module M and \(L=\operatorname{End}_{A}^{\mathrm{comp}}(M)\), acting on its left. For embeddings f,g:B→A, the two right actions of \(H=B\otimes _{k} L^{\mathrm{op}}\) are
 
 \[\begin{gathered}
 m\cdot _{1}(b\otimes l^{\mathrm{op}})=l m f(b),\qquad m\cdot _{2}(b\otimes l^{\mathrm{op}})=l m g(b).
 \end{gathered}\]
 
-For example, applying \((b_{1}\otimes l_{1}^{\mathrm{op}})\) and then \((b_{2}\otimes l_{2}^{\mathrm{op}})\) gives \(l_{2} l_{1} m f(b_{1})f(b_{2})\), exactly the action of their product in H. Their k-dimensions are equal. The source's finite simple classification therefore supplies an H-module isomorphism \(\varphi\) from the first action to the second. Its L-linearity identifies it with \(R_{x}\) for \(x\in A\) by the bicommutant result. Its inverse is \(R_{y}\) for \(y\in A\), so faithfulness gives \(xy=yx=1\). Intertwining the B-actions gives \(f(b)x=xg(b)\), hence \(f(b)=xg(b)x^{-1}\). The opposite on L is essential and stays in this proof.
+For example, applying \((b_{1}\otimes l_{1}^{\mathrm{op}})\) and then \((b_{2}\otimes l_{2}^{\mathrm{op}})\) gives \(l_{2} l_{1} m f(b_{1})f(b_{2})\), exactly the action of their product in H. Their k-dimensions are equal. The source's finite simple classification therefore supplies an H-module isomorphism φ from the first action to the second. Its L-linearity identifies it with \(R_{x}\) for x∈A by the bicommutant result. Its inverse is \(R_{y}\) for y∈A, so faithfulness gives \(xy=yx=1\). Intertwining the B-actions gives \(f(b)x=xg(b)\), hence \(f(b)=xg(b)x^{-1}\). The opposite on L is essential and stays in this proof.
 
 Taking B=A, f a k-algebra automorphism, and g the identity proves the corrected inner-automorphism assertion. Without ``k-algebra'', take k=C, A=C, and complex conjugation. It is a unital ring automorphism which is not the identity. Every inner automorphism of the commutative field C is the identity, so the unqualified ring assertion would be false.
 
-For the centralizer theorem retain the source's \(H=B\otimes _{k} L^{\mathrm{op}}\) acting on the right of M and \(C=\operatorname{Cent}_{A}(B)\). The assignment \(c\mapsto R_{c}\) takes C into \(\operatorname{End}_{H}^{\mathrm{comp}}(M)\). It is bijective: an H-linear map commutes with L, so the A-bicommutant identifies it with some \(R_a\); commutation with the B-action says \(ba=ab\) for every b, by faithfulness of M. Thus \(a\in C\). But composition is reversed: \(R_{c}\circ R_{d}=R_{dc}\). The exact identification in source line 546 is therefore
+For the centralizer theorem retain the source's \(H=B\otimes _{k} L^{\mathrm{op}}\) acting on the right of M and \(C=\operatorname{Cent}_{A}(B)\). The assignment \(c\mapsto R_{c}\) takes C into \(\operatorname{End}_{H}^{\mathrm{comp}}(M)\). It is bijective: an H-linear map commutes with L, so the A-bicommutant identifies it with some R\_a; commutation with the B-action says \(ba=ab\) for every b, by faithfulness of M. Thus a∈C. But composition is reversed: \(R_{c}\circ R_{d}=R_{dc}\). The exact identification in source line 546 is therefore
 
 \[\begin{gathered}
 C^{\mathrm{op}} \cong \operatorname{End}_{H}^{\mathrm{comp}}(M).
@@ -353,7 +353,7 @@ C^{\mathrm{op}} \cong \operatorname{End}_{H}^{\mathrm{comp}}(M).
 If \(H=\operatorname{Mat}(m\times m,K)\) and M is a direct sum of n copies of its right simple module \(K^{\oplus m}\), Section 5 gives \(\operatorname{End}_{H}^{\mathrm{comp}}(M)\cong \operatorname{Mat}(n\times n,K)\). Taking opposites and the entrywise transpose gives \(C\cong \operatorname{Mat}(n\times n,K^{\mathrm{op}})\). \textbf{The opposite in source line 553 is correct and must be retained.} It differs from the incorrect occurrences in the right simple module's left-acting endomorphism ring. All original dimension formulas at lines 556--558 remain unchanged:
 
 \[\begin{gathered}
-\operatorname{dim}_{k}(M)=nm[K:k],\qquad [B:k][L:k]=m^{2}[K:k],\\{}[C:k]=n^{2}[K:k],\qquad [A:k][L:k]=\operatorname{dim}_{k}(M)^{2}.
+\operatorname{dim}_{k}(M)=nm[K:k],\qquad [B:k][L:k]=m^{2}[K:k],\\[C:k]=n^{2}[K:k],\qquad [A:k][L:k]=\operatorname{dim}_{k}(M)^{2}.
 \end{gathered}\]
 
 Since \([L:k]>0\), substitution and cancellation of that nonzero integer give \([A:k]=[B:k][C:k]\). The source double-centralizer conclusion follows from \(B\subset \operatorname{Cent}_{A}(C)\) and applying this formula to C; equality of the finite k-dimensions makes the inclusion surjective.
@@ -364,13 +364,13 @@ When B is central, \(Z(C)=C\cap \operatorname{Cent}_{A}(C)=C\cap B=Z(B)=k\). The
 \mu :B\otimes _{k} C\to A,\qquad \mu (b\otimes c)=bc.
 \end{gathered}\]
 
-It is well defined by k-balance. It is multiplicative since C commutes with B: \((bc)(b'c')=bb'cc'\). It takes the identity to the nonzero identity of A. Its domain is simple by the source tensor-simplicity lemma, so its kernel is zero. Its domain and codomain have the same finite dimension by the formula just proved, so \(\mu\) is an isomorphism. This supplies the exact map rather than treating distinct presentations as unrelated. The source's equality was usable as a customary canonical identification; the existing edit is recorded as a clarification making that map explicit, not as a new counterexample to the theorem.
+It is well defined by k-balance. It is multiplicative since C commutes with B: \((bc)(b'c')=bb'cc'\). It takes the identity to the nonzero identity of A. Its domain is simple by the source tensor-simplicity lemma, so its kernel is zero. Its domain and codomain have the same finite dimension by the formula just proved, so μ is an isomorphism. This supplies the exact map rather than treating distinct presentations as unrelated. The source's equality was usable as a customary canonical identification; the existing edit is recorded as a clarification making that map explicit, not as a new counterexample to the theorem.
 
 \subsection{7. The corrected separability negation and its receiving argument}\label{the-corrected-separability-negation-and-its-receiving-argument}
 
-Both producer reports at source line 733 refer to existing \texttt{MC-STK-ERR-0017}. The sought element at lines 724--726 belongs to \(K\setminus k\) and is separable over k. Its negation is that no element of \(K\setminus k\) is separable, not that K has no separable element at all. Every \(a\in k\) has minimal polynomial \(T-a\), whose derivative is 1, so the latter statement is always false. Existing \texttt{MC-STK-ERR-0016} independently repairs the spelling of ``splitting field'' at line 711. These are two shared mathematical loci, each reported twice; they are not four distinct corrections.
+Both producer reports at source line 733 refer to existing \texttt{MC-STK-ERR-0017}. The sought element at lines 724--726 belongs to \(K\setminus k\) and is separable over k. Its negation is that no element of \(K\setminus k\) is separable, not that K has no separable element at all. Every a∈k has minimal polynomial \(T-a\), whose derivative is 1, so the latter statement is always false. Existing \texttt{MC-STK-ERR-0016} independently repairs the spelling of ``splitting field'' at line 711. These are two shared mathematical loci, each reported twice; they are not four distinct corrections.
 
-The corrected negation really does give the next assertion in the proof. In characteristic \(p>0\), let f be the monic irreducible polynomial of \(x\in K\). Repeatedly remove powers of p from every exponent until \(f(T)=g(T^{p^r})\) with \(g'\ne 0\). The polynomial g is irreducible, since a factorization of g would give one of f.~Therefore it is separable, and \(y=x^{p^r}\) is separable over k. The corrected assumption forces \(y\in k\). Since g is the monic irreducible polynomial of y, \(g(U)=U-y\); thus \(f(T)=T^{p^r}-y\). Its degree \(p^r\) is at most \([K:k]\). Choose a p-power q at least \([K:k]\). Each such \(p^r\) divides q, hence \(x^q\in k\) for every x.
+The corrected negation really does give the next assertion in the proof. In characteristic p\textgreater0, let f be the monic irreducible polynomial of x∈K. Repeatedly remove powers of p from every exponent until \(f(T)=g(T^{p^r})\) with \(g'\ne 0\). The polynomial g is irreducible, since a factorization of g would give one of f.~Therefore it is separable, and \(y=x^{p^r}\) is separable over k. The corrected assumption forces y∈k. Since g is the monic irreducible polynomial of y, \(g(U)=U-y\); thus \(f(T)=T^{p^r}-y\). Its degree \(p^r\) is at most \([K:k]\). Choose a p-power q at least \([K:k]\). Each such \(p^r\) divides q, hence \(x^q\in k\) for every x.
 
 With the original basis \(a_{1}=1,a_{2},\ldots ,a_{n}\), write every ordered product \(a_{i_{1}}\ldots a_{i_{q}}=\sum _{j} c^j_{i_{1},\ldots ,i_{q}}a_{j}\), keeping all q factors. Then the coordinate polynomials in the source are exactly
 
@@ -378,7 +378,7 @@ With the original basis \(a_{1}=1,a_{2},\ldots ,a_{n}\), write every ordered pro
 f_{j}(X_{1},\ldots ,X_{n})=\sum _{1\leq i_{1},\ldots ,i_{q}\leq n} c^j_{i_{1},\ldots ,i_{q}} X_{i_{1}}\ldots X_{i_{q}}.
 \end{gathered}\]
 
-For \(j\geq 2\) they vanish on all \(k^n\).~Over the infinite field k this implies they are the zero polynomials: induct on the number of variables, using that a nonzero one-variable polynomial has at most its degree many roots and applying that assertion to each coefficient. Their vanishing therefore persists over the algebraic closure. The resulting matrix algebra has size at least 2, since \(K\ne k\) and \([K:k]=d^{2}\). Its element \(e_{11}\) has \(e_{11}^q=e_{11}\), and is not central because \(e_{11} e_{12}=e_{12}\) whereas \(e_{12} e_{11}=0\). This is the required contradiction.
+For j≥2 they vanish on all k\^{}n.~Over the infinite field k this implies they are the zero polynomials: induct on the number of variables, using that a nonzero one-variable polynomial has at most its degree many roots and applying that assertion to each coefficient. Their vanishing therefore persists over the algebraic closure. The resulting matrix algebra has size at least 2, since \(K\ne k\) and \([K:k]=d^{2}\). Its element e\_11 has \(e_{11}^q=e_{11}\), and is not central because \(e_{11} e_{12}=e_{12}\) whereas \(e_{12} e_{11}=0\). This is the required contradiction.
 
 The existing punctuation edits at lines 561 and 728 and article insertion at line 771 preserve all mathematical assertions. No change to those already-admitted operations is required by this review.
 
