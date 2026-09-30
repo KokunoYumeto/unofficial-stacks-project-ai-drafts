@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **57**
-- Stable correction IDs: **1,641**
-- Displayed exact change hunks: **1,982**
-- Manifest/source-map exact operations: **1,914**
+- Admitted errata batches: **58**
+- Stable correction IDs: **2,201**
+- Displayed exact change hunks: **2,672**
+- Manifest/source-map exact operations: **2,604**
 - Hash-bound reconstructed legacy hunks: **68**
 - Affected source paths: **36**
-- Registry SHA-256: `AF59863A2CC4374C648C64E9DFD6BFDC524B6AEB82D9430687C56F21C13D1449`
+- Registry SHA-256: `5C765C8A84FA011F06685A8F5B01980FB815DFEE100CD0C9325412D576EF9672`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -47644,5 +47644,16181 @@ Pinned-official lines `3411-3411`; bytes `129765:129839`.
 ````
 
 Original SHA-256 `E1DF4FD3FEBD62B5AC49303AC270A10EB5E2EC46BFB86E34F6625A31AFFBE5F8`; replacement SHA-256 `465AF3083AF58B01055F0D8B0678A70247F48D1C0743B0A161A12267E35A4016`.
+
+</details>
+
+## stacks-errata-a04446e-r58
+
+560 stable IDs · 690 displayed change hunks · admitted 2026-09-30T03:28:02.670984+00:00.
+
+<details id="mc-stk-err-1906">
+<summary><code>MC-STK-ERR-1906 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1906`; producer ID: `ALGEBRA-RECON-001`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L139) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The two ideals I and J require the plural noun ideals. The prime-product assertion, its ring and every hypothesis remain unchanged.
+- Adverse evidence: This is a spelling/grammar correction; the prime-product statement is already correct. No new result is inferred from this edit.
+
+### Change 1: `MC-STK-ERR-1906-OP1`
+
+Pinned-official lines `139-139`; bytes `4213:4223`.
+
+````diff
+- are ideal,
++ are ideals,
+````
+
+Original SHA-256 `70479E8E5869DC9E4128EDE717FDE20AF3E3CE4D29A35D1C96BB5C22040A2A42`; replacement SHA-256 `195834C3FB1AFE1285439DBCE1D06B449648D08B1667C64D39C4F66E6A93A878`.
+
+</details>
+
+<details id="mc-stk-err-1907">
+<summary><code>MC-STK-ERR-1907 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1907`; producer ID: `ALGEBRA-RECON-004`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1021-L1022) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing given-construction and the conventional module compound, with a comma before the main clause. Both reports identify the same grammatical omission.
+- Adverse evidence: Keep the arbitrary index set J, including the empty case, and all three direct sums. The two proposed connecting words express the same data; given is selected once.
+
+### Change 1: `MC-STK-ERR-1907-OP1`
+
+Pinned-official lines `1021-1021`; bytes `34790:34821`.
+
+````diff
+- In other words, exact sequences
++ In other words, given exact sequences
+````
+
+Original SHA-256 `48FA8F3A10C6054EE367DF3371F7CEAE4D8BF8E968A9C1117927495B0FD9E1F9`; replacement SHA-256 `5AD3153CCC762405C861E7F8FDA3ACDC82A71CA75E2C2155B125BC9C63501B92`.
+
+### Change 2: `MC-STK-ERR-1907-OP2`
+
+Pinned-official lines `1022-1022`; bytes `34844:34879`.
+
+````diff
+- of $R$ modules we have to show that
++ of $R$-modules, we have to show that
+````
+
+Original SHA-256 `D2C18E12EDA09387746F87D6C7EF83DCFDC4F1816BDD422E5DE35487074A0236`; replacement SHA-256 `786E1FF33F63059AE379268B2192F649D893B7A98E1B4CA45C19A311D5C03A93`.
+
+</details>
+
+<details id="mc-stk-err-1908">
+<summary><code>MC-STK-ERR-1908 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1908`; producer ID: `ALGEBRA-RECON-014`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1341) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The paragraph fixes A and localization at S in A; bind the exactness proposition to that same ring.
+- Adverse evidence: This restores the existing base ring rather than imposing a new ring hypothesis. All maps and the exactness proof retain their original coordinates.
+
+### Change 1: `MC-STK-ERR-1908-OP1`
+
+Pinned-official lines `1341-1341`; bytes `45623:45643`.
+
+````diff
+- of $R$-modules. Then
++ of $A$-modules. Then
+````
+
+Original SHA-256 `7E8CDC3EAA049EE254A2EAF3E9764E62E34EE3C060F7ADC64BE188459F9CE551`; replacement SHA-256 `4C8A9917E357444303BE97F2D8A00BC0617664D754D4857D4EC17C1E8994FB3B`.
+
+</details>
+
+<details id="mc-stk-err-1909">
+<summary><code>MC-STK-ERR-1909 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1909`; producer ID: `ALGEBRA-RECON-015`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1431) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The submodule N prime lies in the localization of an A-module and is closed under S inverse A scalars, which justify multiplication by 1/s.
+- Adverse evidence: The existing proof has not introduced R in this scope. Preserve A, S, M, N and N prime rather than renaming the whole paragraph.
+
+### Change 1: `MC-STK-ERR-1909-OP1`
+
+Pinned-official lines `1431-1431`; bytes `48765:48787`.
+
+````diff
+- an $S^{-1}R$-submodule
++ an $S^{-1}A$-submodule
+````
+
+Original SHA-256 `37958D040CA264B80F31471DDF1096F1D3CE19E2465B19CA34F20208194A9604`; replacement SHA-256 `E485FCAE8563AE31BCA79D3D863550D49A95BD3966B987696E5EFCDED78A0631`.
+
+</details>
+
+<details id="mc-stk-err-1910">
+<summary><code>MC-STK-ERR-1910 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1910`; producer ID: `ALGEBRA-RECON-016`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1371) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The result being proved is in a lemma environment with its existing stable label.
+- Adverse evidence: No statement, label or proof is changed, and the distinct following reference already fixed by MC-STK-ERR-0424 remains intact.
+
+### Change 1: `MC-STK-ERR-1910-OP1`
+
+Pinned-official lines `1371-1371`; bytes `46577:46604`.
+
+````diff
+- The corollary then follows.
++ The lemma then follows.
+````
+
+Original SHA-256 `24933DB858EBF787EA5C99D8E10BF197CB60B6B344F2FF449F349CB4D87B9E48`; replacement SHA-256 `9E17DA87CD115CEDEF6C2FD947E5656302B7D5D29ADE9141794A02185FA5DF4D`.
+
+</details>
+
+<details id="mc-stk-err-1911">
+<summary><code>MC-STK-ERR-1911 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1911`; producer ID: `ALGEBRA-RECON-018`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1308-L1310) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The earlier universal-property lemma already proves the property declared unavailable here. Correct that stale assertion while retaining the explicit maps f and g. Their construction, denominator independence and both inverse identities now follow from the stated universal property with exact source and target modules.
+- Adverse evidence: Do not remove the coordinate formulas or substitute a ring-localization statement. The independently changed substring does not overlap the prior article/math-mode repair or the prior independent-of repair.
+
+### Change 1: `MC-STK-ERR-1911-OP1`
+
+Pinned-official lines `1308-1310`; bytes `44331:44486`.
+
+````diff
+- we have not proved any
+- universal property for $S^{-1}M$. Hence we cannot reason
+- as in the preceding proof; we have to construct the isomorphism explicitly.
++ the universal property of
++ Lemma \ref{lemma-universal-property-localization-module} is available.
++ We give an explicit construction of the isomorphism.
+````
+
+Original SHA-256 `43C655C759994481C6D28C88452C11396E69887FFD782E7D6895D359E9D4AA26`; replacement SHA-256 `648075078D0032A3B1865E279BFE6FD573C62762DDE66ACD1173E4CE795BA8E4`.
+
+</details>
+
+<details id="mc-stk-err-1912">
+<summary><code>MC-STK-ERR-1912 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1912`; producer ID: `ALGEBRA-RECON-019`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1602) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the article an before the spoken symbol i prime.
+- Adverse evidence: The common upper index, finite generating set and filtered-colimit argument are unchanged.
+
+### Change 1: `MC-STK-ERR-1912-OP1`
+
+Pinned-official lines `1602-1602`; bytes `53421:53431`.
+
+````diff
+- find a $i'
++ find an $i'
+````
+
+Original SHA-256 `8C0039A29833D17D120E82C9D20AF1F21B13D6AEE4243293C2BB60A9BBEC3BB1`; replacement SHA-256 `FE8295D0DE97A842A23C2771B8485F3345368305E7A9E0DA42A8C8BD4C687BCA`.
+
+</details>
+
+<details id="mc-stk-err-1913">
+<summary><code>MC-STK-ERR-1913 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1913`; producer ID: `ALGEBRA-RECON-022`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1759-L1761) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the naming construction and split the two independent clauses.
+- Adverse evidence: The natural map pi, elementary tensors and their generating property remain unchanged; the adjacent arbitrary-codomain clarification is a separate group.
+
+### Change 1: `MC-STK-ERR-1913-OP1`
+
+Pinned-official lines `1759-1759`; bytes `58527:58543`.
+
+````diff
+- Denote the image
++ Denote the image by
+````
+
+Original SHA-256 `2B5846D0B2F53C20759D88CD49F76A2EC52E276ACB862D63AD7EED58D604A438`; replacement SHA-256 `F52A23CA887AA99469F7C61CA1AF13473032DE240882F68C1B150CE5924F32F3`.
+
+### Change 2: `MC-STK-ERR-1913-OP2`
+
+Pinned-official lines `1761-1761`; bytes `58567:58599`.
+
+````diff
+- y$, then these elements generate
++ y$. Then these elements generate
+````
+
+Original SHA-256 `1E517131FDE42BC26F4AEC2E73F51A2FB0908E1B90F20C162F3FD5F21758C87E`; replacement SHA-256 `435FB0C0F2E1E851E0E49501ECF3E18565BE9951FE5B5E3205D5B96379E416C4`.
+
+</details>
+
+<details id="mc-stk-err-1914">
+<summary><code>MC-STK-ERR-1914 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1914`; producer ID: `ALGEBRA-RECON-029`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L2114) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Introduce the definition of m with a complete sentence after the display.
+- Adverse evidence: Every summand, numerator, denominator and the following injectivity argument is preserved.
+
+### Change 1: `MC-STK-ERR-1914-OP1`
+
+Pinned-official lines `2114-2114`; bytes `71183:71193`.
+
+````diff
+- Where $m =
++ Here $m =
+````
+
+Original SHA-256 `5319B0E4E7CE71C19A880E0636578E40611239210C8BB0353C5A89BF6C4E1442`; replacement SHA-256 `7BD20176C44F584181890DA15DBB9E16DFC107A2DC9924211F3DD949E5591CA4`.
+
+</details>
+
+<details id="mc-stk-err-1915">
+<summary><code>MC-STK-ERR-1915 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1915`; producer ID: `ALGEBRA-RECON-030`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L2388-L2389) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the tensor-algebra symbol actually defined in this section on both sides of the localization identity, and use the adverb in the adjacent sentence.
+- Adverse evidence: The localized algebra and the base-changed tensor algebra are unchanged. This is notation/wording consistency, not evidence of a false localization theorem.
+
+### Change 1: `MC-STK-ERR-1915-OP1`
+
+Pinned-official lines `2388-2388`; bytes `78670:78705`.
+
+````diff
+- S^{-1}T_R(M) = T_{S^{-1}R}(S^{-1}M)
++ S^{-1}\text{T}_R(M) = \text{T}_{S^{-1}R}(S^{-1}M)
+````
+
+Original SHA-256 `0BB29BC56D216577BA11A9B8D0E0782CFD24C3E076E37591788D8E0DACE9C9E2`; replacement SHA-256 `9476976C6A7EB4F39A9F7D55D353B6369A225DB5269486432527F3833DEA9D1D`.
+
+### Change 2: `MC-STK-ERR-1915-OP2`
+
+Pinned-official lines `2389-2389`; bytes `78731:78775`.
+
+````diff
+- Similar for symmetric and exterior algebras.
++ Similarly for symmetric and exterior algebras.
+````
+
+Original SHA-256 `C53654BB651A8389C36931AD4C6012F0F480DFE003B481958E27DDEFC08037D6`; replacement SHA-256 `2BE7BB3E425E60AAF6248878F9269EDF562CD2239640318E015FEEB39FA9EC68`.
+
+</details>
+
+<details id="mc-stk-err-1916">
+<summary><code>MC-STK-ERR-1916 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1916`; producer ID: `ALGEBRA-RECON-037`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L2768) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The indicated invertible row and column operations change bases of the two free modules over the current ring. This follows, and is distinct from, the preceding localization R→R_a.
+- Adverse evidence: Keep the actual scalar extension R→R_a, the unit pivot, both ranks and the ensuing induction. Only the name of the basis operation changes.
+
+### Change 1: `MC-STK-ERR-1916-OP1`
+
+Pinned-official lines `2768-2768`; bytes `92488:92512`.
+
+````diff
+- do a base change on both
++ make a change of basis in both
+````
+
+Original SHA-256 `A1E6F1F843E2A778994F284F38489C4D16D247298A38260980F9EAF65FB4DF83`; replacement SHA-256 `0CC9495DCDED2A7AD5D3F9A34A60415D7C41DAE821E7557D7DE82343B7095842`.
+
+</details>
+
+<details id="mc-stk-err-1917">
+<summary><code>MC-STK-ERR-1917 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1917`; producer ID: `ALGEBRA-RECON-062`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L4179) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Part (2) gives a finite generating set of M of some cardinality m, independent of the fixed number n of covering opens. Use m for the free-module rank and retain every covering index 1 through n.
+- Adverse evidence: For a field R, the one-element cover f_1=1 and module M=R^2 satisfy the hypotheses with n=1, but no R-linear map R to R^2 is surjective: its image has dimension at most one. The finite-presentation conclusion is valid; the asserted intermediate rank was unjustified.
+
+### Change 1: `MC-STK-ERR-1917-OP1`
+
+Pinned-official lines `4179-4179`; bytes `145230:145289`.
+
+````diff
+- 0 \rightarrow K \rightarrow R^n \rightarrow M \rightarrow 0
++ 0 \rightarrow K \rightarrow R^m \rightarrow M \rightarrow 0
+````
+
+Original SHA-256 `C57C34AFB509D94C5BFFA1B0297B87EB015EE5AB983170A1BD502BA45A9C77B8`; replacement SHA-256 `B96760DF817E9291F82EF4795B1DE6AFCE0912940521467A3186547664DBF6A2`.
+
+</details>
+
+<details id="mc-stk-err-1918">
+<summary><code>MC-STK-ERR-1918 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1918`; producer ID: `ALGEBRA-RECON-098`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5391) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The ambient space is Spec(R) in every other condition and throughout the proof.
+- Adverse evidence: No X is introduced in the lemma; the identity for a finitely generated ideal is unchanged.
+
+### Change 1: `MC-STK-ERR-1918-OP1`
+
+Pinned-official lines `5391-5391`; bytes `192646:192668`.
+
+````diff
+- $X \setminus V(I) = U$
++ $\Spec(R) \setminus V(I) = U$
+````
+
+Original SHA-256 `87149E13D6578403DEBDC6B23EB18990F81EE9BC7B4C027CE17139A6DE8CFBA3`; replacement SHA-256 `6C5FA437E68C587F51E58BE965C60F85D3F1861804585EB1F658890C36BB7EFB`.
+
+</details>
+
+<details id="mc-stk-err-1919">
+<summary><code>MC-STK-ERR-1919 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1919`; producer ID: `ALGEBRA-RECON-099`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5426) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The preceding finite and the next inverse-image assertion require a union.
+- Adverse evidence: This is a noun substitution; the mathematical finite-union argument is already correct.
+
+### Change 1: `MC-STK-ERR-1919-OP1`
+
+Pinned-official lines `5426-5426`; bytes `194110:194133`.
+
+````diff
+- open of standard opens.
++ union of standard opens.
+````
+
+Original SHA-256 `7DC554976FEF52CEAC1A3B0E044B4C78DA471C7D6F5EF03F87D1ADDD6EDC1B5D`; replacement SHA-256 `677F67B34661A1C15AF44054B6AFF4EBFE10DDB97516D9DDFB4CEEEC468D6E53`.
+
+</details>
+
+<details id="mc-stk-err-1920">
+<summary><code>MC-STK-ERR-1920 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1920`; producer ID: `ALGEBRA-RECON-102`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5574) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The image f tensor 1 belongs to the fibre algebra, which is the domain and codomain of its multiplication map.
+- Adverse evidence: For A=R[x]/(x^2) the image of x in a nonzero fibre is not a scalar; the later formula f tensor 1 confirms the intended target.
+
+### Change 1: `MC-STK-ERR-1920-OP1`
+
+Pinned-official lines `5574-5574`; bytes `199640:199693`.
+
+````diff
+- $\kappa(\mathfrak p)$, is just the image of $P(T)$ in
++ $A\otimes_R\kappa(\mathfrak p)$, is just the image of $P(T)$ in
+````
+
+Original SHA-256 `3BE0600C0913930120B785B6FF70B44455DA7F36822D567864F7AE6FF30387B8`; replacement SHA-256 `909B884EDAFB375D2CAEB33C54C8F2939BDC0A8C5F59D29E1B324563A75805B5`.
+
+</details>
+
+<details id="mc-stk-err-1921">
+<summary><code>MC-STK-ERR-1921 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1921`; producer ID: `ALGEBRA-RECON-104`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5601) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Elements is plural.
+- Adverse evidence: No mathematical quantifier or index changes.
+
+### Change 1: `MC-STK-ERR-1921-OP1`
+
+Pinned-official lines `5601-5601`; bytes `200935:200956`.
+
+````diff
+- There exists elements
++ There exist elements
+````
+
+Original SHA-256 `58AF12ECDFB4451D1218DEB21067E876C2AAC00DFA910AE6B0D3D9D466D39148`; replacement SHA-256 `B2AFFB63A716958D13B5538221014540C2EB7EC2483036D3018CD30035588C84`.
+
+</details>
+
+<details id="mc-stk-err-1922">
+<summary><code>MC-STK-ERR-1922 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1922`; producer ID: `ALGEBRA-RECON-106`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5659) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The constructible-set decomposition is precisely lemma-constructible; the missing subject is also restored.
+- Adverse evidence: The quasi-compact-open lemma supports that decomposition indirectly, but does not state the invoked result. Three physical reports concern two edits to one sentence.
+
+### Change 1: `MC-STK-ERR-1922-OP1`
+
+Pinned-official lines `5659-5659`; bytes `203282:203340`.
+
+````diff
+- the case $S = R[x]$. By Lemma \ref{lemma-qc-open} suffices
++ the case $S = R[x]$. By Lemma \ref{lemma-constructible} it suffices
+````
+
+Original SHA-256 `9578345AFE7778A0110CF3732BD12D6510EBA66054E04E394EE2D40D5B5509F8`; replacement SHA-256 `9CE2591F69BBE7F62C8B8D77718F4624E0F675D9D8C5245B741C428A756BC494`.
+
+</details>
+
+<details id="mc-stk-err-1923">
+<summary><code>MC-STK-ERR-1923 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1923`; producer ID: `ALGEBRA-RECON-110`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5773) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The verb construction requires for to name the displayed map.
+- Adverse evidence: Both alternatives in the reports express the same induced map; for makes the smallest change.
+
+### Change 1: `MC-STK-ERR-1923-OP1`
+
+Pinned-official lines `5773-5773`; bytes `207580:207611`.
+
+````diff
+- Write $f : Y \to X$ the induced
++ Write $f : Y \to X$ for the induced
+````
+
+Original SHA-256 `331E807F8031DC407222C5797E870988952AE2D7DB3D4A6A2A6C64332220DF83`; replacement SHA-256 `D872AF1B3C6E75A8F718535F599CDA603FBCB5BE75E3D306AD91E79CBB0DB873`.
+
+</details>
+
+<details id="mc-stk-err-1924">
+<summary><code>MC-STK-ERR-1924 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1924`; producer ID: `ALGEBRA-RECON-113`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L5898) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The vanishing locus and density argument take place in the prime spectrum.
+- Adverse evidence: R denotes the ring here; replacing the ambient space does not change the element f or the map.
+
+### Change 1: `MC-STK-ERR-1924-OP1`
+
+Pinned-official lines `5898-5898`; bytes `212189:212222`.
+
+````diff
+- is a proper closed subset of $R$.
++ is a proper closed subset of $\Spec(R)$.
+````
+
+Original SHA-256 `1A2A4B54A31DFD7B26C725B65441D498C2A9CA3B54A4286D1AF4E5AF6CFFCBAC`; replacement SHA-256 `EF2F0AAF2946E86F545F9B8AE74F1963160E0470AD4B9A5942A64BD68D103FAB`.
+
+</details>
+
+<details id="mc-stk-err-1925">
+<summary><code>MC-STK-ERR-1925 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1925`; producer ID: `ALGEBRA-RECON-118`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L6038) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Formal power-series exponents here range over nonnegative integers.
+- Adverse evidence: Negative integer d is outside the displayed power-series definition; subsequent indices already begin at zero.
+
+### Change 1: `MC-STK-ERR-1925-OP1`
+
+Pinned-official lines `6038-6038`; bytes `217294:217310`.
+
+````diff
+- For each integer
++ For each nonnegative integer
+````
+
+Original SHA-256 `45C4E6FB565FCEB62D9DF38CBE795442B0882660DF56E4B750A16C6CC619A028`; replacement SHA-256 `5A0FAC951373C6AFC50BE50AF3E96EB538B6A8FB41CAE8E6E9880330B1B6709A`.
+
+</details>
+
+<details id="mc-stk-err-1926">
+<summary><code>MC-STK-ERR-1926 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1926`; producer ID: `ALGEBRA-RECON-120`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L6083) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the article in the singular noun phrase.
+- Adverse evidence: The principal-ideal argument is unchanged.
+
+### Change 1: `MC-STK-ERR-1926-OP1`
+
+Pinned-official lines `6083-6083`; bytes `218917:218948`.
+
+````diff
+- $\mathbf{Z}$ is Noetherian ring
++ $\mathbf{Z}$ is a Noetherian ring
+````
+
+Original SHA-256 `E43324358454DC776C568A4999BFD59C5DA550262A411A1B591137C0FA627336`; replacement SHA-256 `5C77F95736DC0B251E260D85FDEF43FA05D6CF946DD10BE99B9254A992143CA4`.
+
+</details>
+
+<details id="mc-stk-err-1927">
+<summary><code>MC-STK-ERR-1927 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1927`; producer ID: `ALGEBRA-RECON-129`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L6408) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the article before the vowel sound in nth.
+- Adverse evidence: No mathematical content changes.
+
+### Change 1: `MC-STK-ERR-1927-OP1`
+
+Pinned-official lines `6408-6408`; bytes `230379:230395`.
+
+````diff
+- is a $n$th power
++ is an $n$th power
+````
+
+Original SHA-256 `18D2EE2D71C8EF2221B7EAB6D9A542FE13919A13CE9E0C8811DDE4B7C0405183`; replacement SHA-256 `A238BB1064AF2737D455D5616D29FD2333436DA64AEC450A691CC652355B5202`.
+
+</details>
+
+<details id="mc-stk-err-1928">
+<summary><code>MC-STK-ERR-1928 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1928`; producer ID: `ALGEBRA-RECON-145`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7035-L7036) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Uses grammatical assumptions for the already introduced ring and field.
+- Adverse evidence: The inclusion and finite-type hypothesis are preserved exactly.
+
+### Change 1: `MC-STK-ERR-1928-OP1`
+
+Pinned-official lines `7035-7036`; bytes `253046:253177`.
+
+````diff
+- Let $R$ be a Jacobson ring. Let $K$ be a field. Let $R \subset K$ and
+- $K$ is of finite type over $R$. Then $R$ is a field and $K/R$
++ Let $R$ be a Jacobson ring and let $K$ be a field. Assume
++ $R\subset K$ and that $K$ is of finite type over $R$. Then $R$ is a field and $K/R$
+````
+
+Original SHA-256 `EB3246770BABE0FF211068F22DD7E0DB2C374247C579F40BEA070ED4CC3FC3FB`; replacement SHA-256 `C86B04C4460F701B9E644586E57D25B802D4A06745B76F03EC24B420E268011D`.
+
+</details>
+
+<details id="mc-stk-err-1929">
+<summary><code>MC-STK-ERR-1929 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1929`; producer ID: `ALGEBRA-RECON-147`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7103) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the preposition introducing the spectrum map.
+- Adverse evidence: The source and target of f are unchanged.
+
+### Change 1: `MC-STK-ERR-1929-OP1`
+
+Pinned-official lines `7103-7103`; bytes `255582:255613`.
+
+````diff
+- Write $f : Y \to X$ the induced
++ Write $f : Y \to X$ for the induced
+````
+
+Original SHA-256 `331E807F8031DC407222C5797E870988952AE2D7DB3D4A6A2A6C64332220DF83`; replacement SHA-256 `D872AF1B3C6E75A8F718535F599CDA603FBCB5BE75E3D306AD91E79CBB0DB873`.
+
+</details>
+
+<details id="mc-stk-err-1930">
+<summary><code>MC-STK-ERR-1930 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1930`; producer ID: `ALGEBRA-RECON-149`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7179) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the noun and consistent singular agreement.
+- Adverse evidence: No hypothesis on image constructibility changes.
+
+### Change 1: `MC-STK-ERR-1930-OP1`
+
+Pinned-official lines `7179-7179`; bytes `258436:258479`.
+
+````diff
+- images of a constructible is constructible.
++ the image of a constructible set is constructible.
+````
+
+Original SHA-256 `9CCFFF817E53873BB1343FC660395ECD00B56096FFE95EF94D6F14513C251484`; replacement SHA-256 `9A1DEB295D68C8272E8AC379CF048FE55B9C09F579CD3CB411B846BBDB0E381E`.
+
+</details>
+
+<details id="mc-stk-err-1931">
+<summary><code>MC-STK-ERR-1931 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1931`; producer ID: `ALGEBRA-RECON-150`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7181) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the notation-introduction preposition.
+- Adverse evidence: The set and notation are unchanged.
+
+### Change 1: `MC-STK-ERR-1931-OP1`
+
+Pinned-official lines `7181-7181`; bytes `258527:258552`.
+
+````diff
+- Denote $\text{Constr}(X)$
++ Denote by $\text{Constr}(X)$
+````
+
+Original SHA-256 `F70517D2BB58C5EB0288B165241E4974154DC32EA0C46D0438FEE51B1D717953`; replacement SHA-256 `1BDC5361B73159699B14D0AC9A2297844A16C9B9C6FF4D49735311FE257AD6A3`.
+
+</details>
+
+<details id="mc-stk-err-1932">
+<summary><code>MC-STK-ERR-1932 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1932`; producer ID: `ALGEBRA-RECON-151`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7184) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the preposition in the second notation paragraph.
+- Adverse evidence: This is a distinct physical occurrence of the same grammar issue.
+
+### Change 1: `MC-STK-ERR-1932-OP1`
+
+Pinned-official lines `7184-7184`; bytes `258655:258686`.
+
+````diff
+- Write $f : Y \to X$ the induced
++ Write $f : Y \to X$ for the induced
+````
+
+Original SHA-256 `331E807F8031DC407222C5797E870988952AE2D7DB3D4A6A2A6C64332220DF83`; replacement SHA-256 `D872AF1B3C6E75A8F718535F599CDA603FBCB5BE75E3D306AD91E79CBB0DB873`.
+
+</details>
+
+<details id="mc-stk-err-1933">
+<summary><code>MC-STK-ERR-1933 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1933`; producer ID: `ALGEBRA-RECON-152`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7191) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the reversed source and target, fixes the introductory fragment, and proves the diagram for Jacobson R with a finitely presented map using the exact hypotheses of the topology lemma.
+- Adverse evidence: Noetherianity originally supplies finite presentation from finite type. It is not simply dropped while keeping only finite type; the required finite-presentation hypothesis is stated explicitly in the generalization.
+
+### Change 1: `MC-STK-ERR-1933-OP1`
+
+Pinned-official lines `7191-7191`; bytes `258842:258877`.
+
+````diff
+- With notation as above. Assume that
++ With notation as above, assume that
+````
+
+Original SHA-256 `05899EB47198AB47689C8EA822CC85E5BB620CFC49082E957EB377B88FA817CC`; replacement SHA-256 `C34565E7CD8589431B3D7B2B8C19F785964A8D8F8DF324B26F83B7089E90BEFC`.
+
+</details>
+
+<details id="mc-stk-err-1934">
+<summary><code>MC-STK-ERR-1934 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1934`; producer ID: `ALGEBRA-RECON-153`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7250) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Primality is the exact hypothesis needed for the product inference.
+- Adverse evidence: The original arbitrary-ideal assertion is false: (xy) contains xy but neither x nor y. All three reports concern this one defect.
+
+### Change 1: `MC-STK-ERR-1934-OP1`
+
+Pinned-official lines `7250-7250`; bytes `260570:260590`.
+
+````diff
+- any ideal containing
++ any prime ideal containing
+````
+
+Original SHA-256 `5DBD97281779BADCD01896B38777086230487F617E22BC527E580EBBFB679C82`; replacement SHA-256 `2C9292762719ECA2C3E489604B6A1887B24A43AE20840CA27C415858DB07688E`.
+
+</details>
+
+<details id="mc-stk-err-1935">
+<summary><code>MC-STK-ERR-1935 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1935`; producer ID: `ALGEBRA-RECON-154`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7259) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Removes the unmatched parenthesis from the polynomial ring.
+- Adverse evidence: Every variable and bracket defining the original ring is retained.
+
+### Change 1: `MC-STK-ERR-1935-OP1`
+
+Pinned-official lines `7259-7259`; bytes `260967:261035`.
+
+````diff
+- $k[x_{11}, x_{12}, x_{21}, x_{22}, y_{11}, y_{12}, y_{21}, y_{22}])$
++ $k[x_{11}, x_{12}, x_{21}, x_{22}, y_{11}, y_{12}, y_{21}, y_{22}]$
+````
+
+Original SHA-256 `8C5CB00B5652584A6183D90B4BA1B4C013BFC5EB4D7F6E1F29BBABC3F4727A5E`; replacement SHA-256 `77A9E15BCEE63137A9C2FAAB1FD2F3C0F249A3C4E293B4DCA70CA468FF59B08D`.
+
+</details>
+
+<details id="mc-stk-err-1936">
+<summary><code>MC-STK-ERR-1936 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1936`; producer ID: `ALGEBRA-RECON-155`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7294) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restores the article to its grammatical position.
+- Adverse evidence: The separate field and orbit qualifications below address mathematical scope.
+
+### Change 1: `MC-STK-ERR-1936-OP1`
+
+Pinned-official lines `7294-7294`; bytes `261949:261990`.
+
+````diff
+- the image of irreducible an algebraic set
++ the image of an irreducible algebraic set
+````
+
+Original SHA-256 `F1A4A2A861CE20C4A23908FCBAB5479C638C860B2765C4F52EAD28F06282F8AD`; replacement SHA-256 `97926F41F079BEE8C0D1C0E0C080EB9031E577F45A330FA9621CFCCE7CA50134`.
+
+</details>
+
+<details id="mc-stk-err-1937">
+<summary><code>MC-STK-ERR-1937 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1937`; producer ID: `ALGEBRA-RECON-158`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7371) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Removes the duplicated determiner without changing the rank invariant.
+- Adverse evidence: Both reports concern the same grammatical defect.
+
+### Change 1: `MC-STK-ERR-1937-OP1`
+
+Pinned-official lines `7371-7371`; bytes `264735:264761`.
+
+````diff
+- classified by the its rank
++ classified by its rank
+````
+
+Original SHA-256 `8E48054E48D79989AE163CAEAF229B617C04D92A40370C75657817D78CE7F082`; replacement SHA-256 `48FE569A1C9E77E64E503EE7610C80C00809E4826A86CC08451DF53DD9C27414`.
+
+</details>
+
+<details id="mc-stk-err-1938">
+<summary><code>MC-STK-ERR-1938 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1938`; producer ID: `ALGEBRA-RECON-160`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7382) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specifies the original base field whose characteristic is used.
+- Adverse evidence: The printed three-by-three trace example remains unchanged.
+
+### Change 1: `MC-STK-ERR-1938-OP1`
+
+Pinned-official lines `7382-7382`; bytes `265468:265492`.
+
+````diff
+- For instance, $char = 3$
++ For instance, if $k$ has characteristic $3$,
+````
+
+Original SHA-256 `360C36C77C7C392090EC21E7A689D8AEF9BEB62D5070D38AD2168391E6C5B6DF`; replacement SHA-256 `26A4366AEC9A9739285699236CCB8EE9978520E65D1230A0612BD6700CEA8997`.
+
+</details>
+
+<details id="mc-stk-err-1939">
+<summary><code>MC-STK-ERR-1939 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1939`; producer ID: `ALGEBRA-RECON-177`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7799) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Adds the missing verb and repairs the sentence boundary.
+- Adverse evidence: These are grammatical defects; the nonzero-element requirement is adjudicated separately.
+
+### Change 1: `MC-STK-ERR-1939-OP1`
+
+Pinned-official lines `7799-7799`; bytes `278003:278056`.
+
+````diff
+- Let $S$ integral over $k$ and assume $S$ is a domain,
++ Let $S$ be integral over $k$ and assume $S$ is a domain.
+````
+
+Original SHA-256 `5B2E2AA893AB87ECB22AAE9959BD04297CD4C9FBCEB2F08BE09DF57B6D68254D`; replacement SHA-256 `761BEC5E61A179E4A057C8A441533A5B3337F9F9204A6DA8431DD8A4B9610E18`.
+
+</details>
+
+<details id="mc-stk-err-1940">
+<summary><code>MC-STK-ERR-1940 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1940`; producer ID: `ALGEBRA-RECON-178`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L7800) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Requires the nonzero element at both choices and proves the injection needed for the finite-dimensional argument, as well as the domain-quotient implication.
+- Adverse evidence: Multiplication by zero is not surjective in a domain. The finite subalgebra is a domain because its inclusion in S is injective.
+
+### Change 1: `MC-STK-ERR-1940-OP1`
+
+Pinned-official lines `7800-7800`; bytes `278057:278072`.
+
+````diff
+- Take $s \in S$.
++ Take a nonzero $s\in S$.
+````
+
+Original SHA-256 `9DF03D9C73D471F35A99B6C4D331BA6416E58999E372BF95F1B243EFFEC69E5A`; replacement SHA-256 `B6FF93BD3C611914E718C82AF89E6ECBD0207B369F48A95FC4B96FC7186121BE`.
+
+</details>
+
+<details id="mc-stk-err-1941">
+<summary><code>MC-STK-ERR-1941 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1941`; producer ID: `ALGEBRA-RECON-188`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L8032) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the indefinite article before the variable name.
+- Adverse evidence: The original spanning list through g to the power d is retained; it need not be a minimal list.
+
+### Change 1: `MC-STK-ERR-1941-OP1`
+
+Pinned-official lines `8032-8032`; bytes `285855:285878`.
+
+````diff
+- there exists an $d > 0$
++ there exists a $d > 0$
+````
+
+Original SHA-256 `D7AADFA3C9A8D9C6E0610B1D4F5FA8AA1F759082F896B39E366FAE894AE75594`; replacement SHA-256 `A6BD68DE5AD568B20502C034F5296AAB1CBCD92B6C5E93FE296FA449F8BE28C1`.
+
+</details>
+
+<details id="mc-stk-err-1942">
+<summary><code>MC-STK-ERR-1942 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1942`; producer ID: `ALGEBRA-RECON-192`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L8103) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Makes the verb agree with the singular subject the set.
+- Adverse evidence: Both received reports refer to this same agreement error.
+
+### Change 1: `MC-STK-ERR-1942-OP1`
+
+Pinned-official lines `8103-8103`; bytes `288425:288448`.
+
+````diff
+- elements form a subring
++ elements forms a subring
+````
+
+Original SHA-256 `109A7A3559A3185CA268FDA3FEDC17B94DE8370279F94BD641B0471D7ADF47AF`; replacement SHA-256 `D792A98ACF117B29C7FE52F6B3F530EA4860A099E8630968AA25CB1FE70BCC1F`.
+
+</details>
+
+<details id="mc-stk-err-1943">
+<summary><code>MC-STK-ERR-1943 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1943`; producer ID: `ALGEBRA-RECON-203`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L8297) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repairs the verb construction while keeping the original coordinate idempotent.
+- Adverse evidence: No coordinate, index or factor of the product is changed.
+
+### Change 1: `MC-STK-ERR-1943-OP1`
+
+Pinned-official lines `8297-8297`; bytes `296142:296209`.
+
+````diff
+- Denote $e_i = (0, \ldots, 0, 1, 0, \ldots, 0)$ the $i$th idempotent
++ Let $e_i = (0, \ldots, 0, 1, 0, \ldots, 0)$ be the $i$th idempotent
+````
+
+Original SHA-256 `17DCB087A9C637A7CBB143AF1E9E22FAAD1A7F2604421AB91039DF844D673716`; replacement SHA-256 `83848B4A524669CDF0D8E4C63A76604B8E790AB66E8943362260175FFC77AA43`.
+
+</details>
+
+<details id="mc-stk-err-1944">
+<summary><code>MC-STK-ERR-1944 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1944`; producer ID: `ALGEBRA-RECON-208`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L8403) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The singular subject is set, and the spoken letter R begins with a vowel sound.
+- Adverse evidence: Both physical reports concern the same sentence; one mentions only agreement and the other also supplies the article correction.
+
+### Change 1: `MC-STK-ERR-1944-OP1`
+
+Pinned-official lines `8403-8403`; bytes `299773:299810`.
+
+````diff
+- over $I$ form a $R$-submodule of $S$.
++ over $I$ forms an $R$-submodule of $S$.
+````
+
+Original SHA-256 `AE37B12C37C45DD9AEE8AF0237F72D1381F241AD404CA22B49D63B2CCBE93F26`; replacement SHA-256 `89EB4D52086ADE84FC14A8428ED92398B0DBDB346A17752BD2E0288138826C70`.
+
+</details>
+
+<details id="mc-stk-err-1945">
+<summary><code>MC-STK-ERR-1945 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1945`; producer ID: `ALGEBRA-RECON-231`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9038-L9039) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supplies parallel verbs in the statement as a grammatical copyedit.
+- Adverse evidence: The compressed original wording already determines the intended mathematical hypotheses; this edit is not a change to those hypotheses.
+
+### Change 1: `MC-STK-ERR-1945-OP1`
+
+Pinned-official lines `9038-9039`; bytes `322436:322556`.
+
+````diff
+- Suppose that $R$ is a ring, $0 \to M'' \to M' \to M \to 0$
+- a short exact sequence, and $N$ an $R$-module. If $M$ is flat
++ Suppose that $R$ is a ring, that $0\to M''\to M'\to M\to0$
++ is a short exact sequence, and that $N$ is an $R$-module. If $M$ is flat
+````
+
+Original SHA-256 `736DC036261F3FA03255D9AD7DBC7D00C87CFD06E695146875469BB109988BB5`; replacement SHA-256 `92E99D70ADCC8218E3E01428E71A8B5B5852E2AD67AFEE5F6ACD55FCE82CD227`.
+
+</details>
+
+<details id="mc-stk-err-1946">
+<summary><code>MC-STK-ERR-1946 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1946`; producer ID: `ALGEBRA-RECON-234`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9100) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Adds the list-introducing colon consistently with the adjacent equivalence lemmas.
+- Adverse evidence: This is an editorial punctuation change only; the original mathematical list is unambiguous.
+
+### Change 1: `MC-STK-ERR-1946-OP1`
+
+Pinned-official lines `9100-9100`; bytes `324436:324464`.
+
+````diff
+- The following are equivalent
++ The following are equivalent:
+````
+
+Original SHA-256 `4C10BE4F07A022CB58A037742837D7D3F50BF096D4D39B088654548C1D3A949A`; replacement SHA-256 `650D35B4C60E295DDFAE3E1BAECAFA500E983FEEC6C6FA33714819103765FB64`.
+
+</details>
+
+<details id="mc-stk-err-1947">
+<summary><code>MC-STK-ERR-1947 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1947`; producer ID: `ALGEBRA-RECON-236`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9132) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Replaces the adverb then by the definite article required by the tensor-product noun phrase.
+- Adverse evidence: The two physical reports refer to the same word; this is a single copyedit.
+
+### Change 1: `MC-STK-ERR-1947-OP1`
+
+Pinned-official lines `9132-9132`; bytes `325610:325629`.
+
+````diff
+- then tensor product
++ the tensor product
+````
+
+Original SHA-256 `E0917FD7CDE95DF55E64AD70605E9B680F2E91EC168DAA055151515787267DB8`; replacement SHA-256 `9E23DF5C1D620066587CE3C5EF8E213689351C93EF5EB2FF2BD44CB9893E6243`.
+
+</details>
+
+<details id="mc-stk-err-1948">
+<summary><code>MC-STK-ERR-1948 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1948`; producer ID: `ALGEBRA-RECON-249`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9520-L9522) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Uses the grammatical let construction for the same two original points.
+- Adverse evidence: Both reports concern the same sentence; their prime and point assignments are retained.
+
+### Change 1: `MC-STK-ERR-1948-OP1`
+
+Pinned-official lines `9520-9522`; bytes `339117:339256`.
+
+````diff
+- topology. Denote $x \in X$ the point corresponding
+- to $\mathfrak p$ and $x' \in X$ the point corresponding
+- to $\mathfrak p'$. Then we have:
++ topology. Let $x\in X$ be the point corresponding
++ to $\mathfrak p$ and $x'\in X$ the point corresponding
++ to $\mathfrak p'$. Then we have:
+````
+
+Original SHA-256 `4F751AD23F4C1FCFBA110F1E437A7AA68F8BF2C36C46E8D54276D5752C9F6950`; replacement SHA-256 `939DEAAAF0B43B82FA5C867607A827E874474533DED1E2A9A3983627C53ECA4E`.
+
+</details>
+
+<details id="mc-stk-err-1949">
+<summary><code>MC-STK-ERR-1949 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1949`; producer ID: `ALGEBRA-RECON-250`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9535-L9541) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Removes the extraneous article before the same named map in both definition items.
+- Adverse evidence: This is one physical report covering two parallel copyedits, not two independent mathematical corrections.
+
+### Change 1: `MC-STK-ERR-1949-OP1`
+
+Pinned-official lines `9535-9535`; bytes `339626:339664`.
+
+````diff
+- We say a $\varphi : R \to S$ satisfies
++ We say $\varphi : R \to S$ satisfies
+````
+
+Original SHA-256 `E4D6F58D30CA5A144700F0C4D0FDE6A35A4D16F4195289FEAA6B66BD7E9CCA2B`; replacement SHA-256 `DE33521A5FCBCC5F0E5D9D055EDDA065406EA3D88D9D6DECD756841E9E8BE79D`.
+
+### Change 2: `MC-STK-ERR-1949-OP2`
+
+Pinned-official lines `9541-9541`; bytes `339944:339982`.
+
+````diff
+- We say a $\varphi : R \to S$ satisfies
++ We say $\varphi : R \to S$ satisfies
+````
+
+Original SHA-256 `E4D6F58D30CA5A144700F0C4D0FDE6A35A4D16F4195289FEAA6B66BD7E9CCA2B`; replacement SHA-256 `DE33521A5FCBCC5F0E5D9D055EDDA065406EA3D88D9D6DECD756841E9E8BE79D`.
+
+</details>
+
+<details id="mc-stk-err-1950">
+<summary><code>MC-STK-ERR-1950 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1950`; producer ID: `ALGEBRA-RECON-251`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9551) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Uses the past participle required after have.
+- Adverse evidence: The two reports have exactly the same source word and correction.
+
+### Change 1: `MC-STK-ERR-1950-OP1`
+
+Pinned-official lines `9551-9551`; bytes `340308:340319`.
+
+````diff
+- we have see
++ we have seen
+````
+
+Original SHA-256 `80E69EC156E1CBB50853C451DB1585752D8EB2D10764070FE8047F5FAD9CD614`; replacement SHA-256 `BA3BAE2E575275BA88DDBFF2DD4C514DDEB1B79003B3A97EB437A0E237A70666`.
+
+</details>
+
+<details id="mc-stk-err-1951">
+<summary><code>MC-STK-ERR-1951 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1951`; producer ID: `ALGEBRA-RECON-252`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L9558) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Adds terminal punctuation to the list item.
+- Adverse evidence: This is punctuation only; the referenced going-down theorem is unchanged.
+
+### Change 1: `MC-STK-ERR-1951-OP1`
+
+Pinned-official lines `9558-9558`; bytes `340630:340663`.
+
+````diff
+- Lemma \ref{lemma-flat-going-down}
++ Lemma \ref{lemma-flat-going-down}.
+````
+
+Original SHA-256 `64DD3D410173F1C2F38D1D2FD4BA695A5334A6D98D632F0A0497C713252F2EBE`; replacement SHA-256 `94C52FA4D442CEA3787454B88CA890478CA3B653C4C5DB0DD8ABAE5210646297`.
+
+</details>
+
+<details id="mc-stk-err-1952">
+<summary><code>MC-STK-ERR-1952 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1952`; producer ID: `ALGEBRA-RECON-280`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L10431) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Makes the root-field test defined for the arbitrary base field in the statement, supplies characteristic zero explicitly, and proves all original field injections, finite coefficient capture, two-sided scalar comparisons and localization maps.
+- Adverse evidence: The source defines k^(1/p) only in positive characteristic. Restricting the entire theorem to positive characteristic would unnecessarily weaken its valid scope. Testing all finite height-one purely inseparable extensions suffices, but no claim that only extensions of degree p suffice is made.
+
+### Change 1: `MC-STK-ERR-1952-OP1`
+
+Pinned-official lines `10431-10431`; bytes `372865:372904`.
+
+````diff
+- \item $k^{1/p} \otimes_k S$ is reduced,
++ \item if $\operatorname{char}(k)=p>0$, then
++ $k^{1/p}\otimes_k S$ is reduced; if
++ $\operatorname{char}(k)=0$, then $S$ is reduced,
+````
+
+Original SHA-256 `2EB0514159571B7CE3BFCAB4A666578308792E7212D2EBBC85CA53BBE111FEE3`; replacement SHA-256 `371F06B6BAC5E60A54B112D09556C7F7944667715AFCA61BB1EC44B451C67E78`.
+
+</details>
+
+<details id="mc-stk-err-1953">
+<summary><code>MC-STK-ERR-1953 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1953`; producer ID: `ALGEBRA-RECON-310`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L11489-L11577) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Resolves both reported occurrences with the same established separably closed terminology used by the irreducibility and field tests.
+- Adverse evidence: The original conclusions do not require the stronger algebraically closed hypothesis. Both physical loci of this one report are included exactly once.
+
+### Change 1: `MC-STK-ERR-1953-OP1`
+
+Pinned-official lines `11489-11489`; bytes `413110:413140`.
+
+````diff
+- separably algebraically closed
++ separably closed
+````
+
+Original SHA-256 `43D79853A6D3BBA7DD01FB2F58DDA15144ED90635AB705C3C540DAC2087B5042`; replacement SHA-256 `50CBF053C19A2DA49841B058A867DC5C162D8BA8F0F25855FDC67783868C1064`.
+
+### Change 2: `MC-STK-ERR-1953-OP2`
+
+Pinned-official lines `11577-11577`; bytes `416689:416719`.
+
+````diff
+- separably algebraically closed
++ separably closed
+````
+
+Original SHA-256 `43D79853A6D3BBA7DD01FB2F58DDA15144ED90635AB705C3C540DAC2087B5042`; replacement SHA-256 `50CBF053C19A2DA49841B058A867DC5C162D8BA8F0F25855FDC67783868C1064`.
+
+</details>
+
+<details id="mc-stk-err-1954">
+<summary><code>MC-STK-ERR-1954 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1954`; producer ID: `ALGEBRA-RECON-316`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L11666) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Removes the extraneous preposition in the geometric integrality definition, reported twice.
+- Adverse evidence: The tensor itself is the ring. Its nonzero-domain requirement is retained.
+
+### Change 1: `MC-STK-ERR-1954-OP1`
+
+Pinned-official lines `11666-11666`; bytes `419672:419691`.
+
+````diff
+- of $S \otimes_k k'$
++ $S \otimes_k k'$
+````
+
+Original SHA-256 `9A19F6B55DEBE7B4F6063B8BF702470100DCC7B028C88984F46EB4CE797FA7BC`; replacement SHA-256 `35DD1F9C8C98450E68B7DB18060E43F92B770DC7F50BFC6F60706880467F0050`.
+
+</details>
+
+<details id="mc-stk-err-1955">
+<summary><code>MC-STK-ERR-1955 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1955`; producer ID: `ALGEBRA-RECON-317`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L11671) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the directional preposition in the reformulation sentence, reported twice.
+- Adverse evidence: This is a wording correction; the separate equivalence proof supplies its mathematical content.
+
+### Change 1: `MC-STK-ERR-1955-OP1`
+
+Pinned-official lines `11671-11671`; bytes `419802:419815`.
+
+````diff
+- in a question
++ into a question
+````
+
+Original SHA-256 `308336307A6121B87009ABDEA9DD488A67E2F0AC7AC3B542A4B835B3E40BB33D`; replacement SHA-256 `5D7CCD4F75D0356F5C0A04E4E858C5A78526A2231BF34DFF3AF7CEF3BABAF3BD`.
+
+</details>
+
+<details id="mc-stk-err-1956">
+<summary><code>MC-STK-ERR-1956 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1956`; producer ID: `ALGEBRA-RECON-323`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L11804) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the second summation to indices 1 through d and makes nonzero inversion explicit. Supplies the missing prime-localization contradiction, unit leading coefficient and complete original-to-monic polynomial comparison.
+- Adverse evidence: The i=0 coefficient is already retained in 1-t_0 and must not be counted again. The original scalar factor is retained; zero is not assigned an inverse.
+
+### Change 1: `MC-STK-ERR-1956-OP1`
+
+Pinned-official lines `11804-11804`; bytes `424331:424345`.
+
+````diff
+- Let $x \in K$.
++ Let $x \in K^*$.
+````
+
+Original SHA-256 `5228B1C64A01AD0943A79F815C2581A1A961FE5CCA582B5CD8AEF2A85DA22294`; replacement SHA-256 `2A77BB2D32E6274325FCCD6028A7D179BFD0141641061BF04DF594C082CC82B3`.
+
+</details>
+
+<details id="mc-stk-err-1957">
+<summary><code>MC-STK-ERR-1957 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1957`; producer ID: `ALGEBRA-RECON-328`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L11894) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the genuine zero-localization boundary and proves the quotient, residue-field and localization assertions with the original maps. The source multiplicative-subset definition allows zero.
+- Adverse evidence: Localization at a set containing zero gives the zero ring, which is not a domain and therefore not a valuation ring. This was checked directly against source definitions 1042-1047 and lemma-localization-zero, unlike a conjectural convention objection.
+
+### Change 1: `MC-STK-ERR-1957-OP1`
+
+Pinned-official lines `11894-11894`; bytes `427922:427946`.
+
+````diff
+- any localization of $A$.
++ any nonzero localization of $A$.
+````
+
+Original SHA-256 `D19C329E4D7F3A1E8B891D17191CD8FE5E9EBF2405510046374A8613815283C3`; replacement SHA-256 `74B855483B40CDAF07B37EA06B9D180C4AA8F55FB8B97BB207D5B3DFADDB8E3F`.
+
+</details>
+
+<details id="mc-stk-err-1958">
+<summary><code>MC-STK-ERR-1958 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1958`; producer ID: `ALGEBRA-RECON-331`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L11963) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the article before the consonant sound in totally.
+- Adverse evidence: Only the article is changed; the original ordered-group definition and order direction are retained.
+
+### Change 1: `MC-STK-ERR-1958-OP1`
+
+Pinned-official lines `11963-11963`; bytes `430668:430672`.
+
+````diff
+- An {
++ A {
+````
+
+Original SHA-256 `CD3D5B2D1A8A46D8F59E8FA08088737A9F5E9BA80D5D0A1BD804854CAE628A2D`; replacement SHA-256 `C7C1D07EA252E226AA56DF884F0D36DB44BEFAF6D4DF25C2391884E679BAA247`.
+
+</details>
+
+<details id="mc-stk-err-1959">
+<summary><code>MC-STK-ERR-1959 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1959`; producer ID: `ALGEBRA-RECON-340`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L12188) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Gives the ideal hypothesis its own complete sentence.
+- Adverse evidence: The same ring and ideal hypotheses are retained; this is a grammatical correction.
+
+### Change 1: `MC-STK-ERR-1959-OP1`
+
+Pinned-official lines `12188-12188`; bytes `437709:437764`.
+
+````diff
+- Suppose that $R$ is Noetherian, $I \subset R$ an ideal.
++ Suppose that $R$ is Noetherian. Let $I \subset R$ be an ideal.
+````
+
+Original SHA-256 `2ADEF4524F70CF8409F3BA204BCB7EAF27C50D841B89B668B3141D7A7A186FB2`; replacement SHA-256 `0F1A10533F4BB5A0742169CB8A5CE41835056673277F5F059A8F4DC840B502D7`.
+
+</details>
+
+<details id="mc-stk-err-1960">
+<summary><code>MC-STK-ERR-1960 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1960`; producer ID: `ALGEBRA-RECON-355`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L12539) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Names the newly chosen maximal ideal m instead of rebinding the existing annihilator I.
+- Adverse evidence: The existing element, annihilator, quotient isomorphism and simplicity argument are retained.
+
+### Change 1: `MC-STK-ERR-1960-OP1`
+
+Pinned-official lines `12539-12539`; bytes `449411:449473`.
+
+````diff
+- Let $I \subset \mathfrak m$ be a maximal ideal containing $I$.
++ Let $\mathfrak m$ be a maximal ideal containing $I$.
+````
+
+Original SHA-256 `D84B669842CC4D6E2661CF41205CBD06E49DCD6257F04786B4EF99206CCB64B4`; replacement SHA-256 `68C8B1A8A21BF7BA24103DF553658948B5C3DA4064C94B1848E9CCEE5E6DD8BB`.
+
+</details>
+
+<details id="mc-stk-err-1961">
+<summary><code>MC-STK-ERR-1961 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1961`; producer ID: `ALGEBRA-RECON-364`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L12798-L12817) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repairs the two wording defects and completes the original Artinian-to-finite-length argument with actual quotient maps and strict inverse-image chains.
+- Adverse evidence: The reduction to local factors is justified by the explicit original product map and surjective component maps; no finite-dimensional layer is assumed without proving it.
+
+### Change 1: `MC-STK-ERR-1961-OP1`
+
+Pinned-official lines `12798-12798`; bytes `457850:457866`.
+
+````diff
+- equal to product
++ equal to the product
+````
+
+Original SHA-256 `CD95E3CEBB38A23468E443A72908C2691E4A64BE4439F4B22A80110B72AE5C51`; replacement SHA-256 `62A60F8F35CAF0D2AF54F94D45996309A867DDBBD235051BDF8A68E578431EFF`.
+
+### Change 2: `MC-STK-ERR-1961-OP2`
+
+Pinned-official lines `12799-12799`; bytes `457888:457905`.
+
+````diff
+- at maximal ideals
++ at its maximal ideals
+````
+
+Original SHA-256 `8B84F9267878972BB7D912189A65682EC1322A4C2F00D36BC287B343ACBF1D10`; replacement SHA-256 `391015EF9F24160CF8D4F610D187404F609F6CE2DD6A739CF29ACC4C6463224C`.
+
+### Change 3: `MC-STK-ERR-1961-OP3`
+
+Pinned-official lines `12817-12817`; bytes `458767:458784`.
+
+````diff
+- sub vector spaces
++ vector subspaces
+````
+
+Original SHA-256 `FE4D90DE02F2A615F853E9CCDDB9E48AB52810975DC060E6FEBFDB6978D6A282`; replacement SHA-256 `EA16F47F27E75ED1511F5F15784EC97D8C136291A265C672EDFE08900E096373`.
+
+</details>
+
+<details id="mc-stk-err-1962">
+<summary><code>MC-STK-ERR-1962 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1962`; producer ID: `ALGEBRA-RECON-368`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L12951) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The evaluation of the entire polynomial ring in A requires all variable images to lie in A. The complementary case selects a least value among the nonzero images; zero images cause no valuation-domain exception.
+- Adverse evidence: One variable image in A is insufficient. The editorial note proves the original chart comparison and both cases, including n=0, without changing the lemma or replacing its proof.
+
+### Change 1: `MC-STK-ERR-1962-OP1`
+
+Pinned-official lines `12951-12951`; bytes `463726:463774`.
+
+````diff
+- If the image $\lambda_i \in \kappa(\mathfrak q)$
++ If every image $\lambda_i \in \kappa(\mathfrak q)$
+````
+
+Original SHA-256 `10E81C3015C43C3C7EB7D01423D176E8EF01B7BD1CBB4F9CC2ED5D3158C61235`; replacement SHA-256 `96A0EC2B970B0C5E8E39573D22A0B7595BC09B355DA7BBE71A725C16A4F619CB`.
+
+</details>
+
+<details id="mc-stk-err-1963">
+<summary><code>MC-STK-ERR-1963 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1963`; producer ID: `ALGEBRA-RECON-369`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13017) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Ordinary finite free powers have nonnegative integer ranks. Every finite module has such a quotient presentation, including the zero module at rank zero.
+- Adverse evidence: This is not a restriction to positive ranks and does not exclude the zero module. Negative module ranks are not defined in the displayed construction.
+
+### Change 1: `MC-STK-ERR-1963-OP1`
+
+Pinned-official lines `13017-13017`; bytes `465823:465835`.
+
+````diff
+- all integers
++ all nonnegative integers
+````
+
+Original SHA-256 `D359071B66A6FA9C10A0436552928BA2207D8ACC91066E414F0FFCF7B092E70C`; replacement SHA-256 `34F60DF42ED843B1A48EDFBB470203160AB53C8850E4EEE856A8A60187B7007B`.
+
+</details>
+
+<details id="mc-stk-err-1964">
+<summary><code>MC-STK-ERR-1964 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1964`; producer ID: `ALGEBRA-RECON-371`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13080-L13087) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The defining exact-sequence relation subtracts the ideal class from the ring class. State the nonzero choice of torsion invariant factors needed for the source identification of each ideal with R.
+- Adverse evidence: A zero factor has quotient R and contributes [R], so the ideal-isomorphism justification would fail without the stated choice. Nonzero units and the empty list are allowed. The editorial note retains all zero-factor contributions before explaining the permitted choice.
+
+### Change 1: `MC-STK-ERR-1964-OP1`
+
+Pinned-official lines `13080-13080`; bytes `468241:468304`.
+
+````diff
+- $M = R^{\oplus r} \oplus R/(d_1) \oplus \ldots \oplus R/(d_k)$.
++ $M = R^{\oplus r} \oplus R/(d_1) \oplus \ldots \oplus R/(d_k)$ with $d_i \ne 0$ for every $i$.
+````
+
+Original SHA-256 `97F1A69D22B1EF05583C8886D67FCC14B23B89D3490FC75480E5D09E314A58DD`; replacement SHA-256 `DF801838544B66849499D6DBD136E3119C7ADE3FB75876C612B23DFB71F1197F`.
+
+### Change 2: `MC-STK-ERR-1964-OP2`
+
+Pinned-official lines `13087-13087`; bytes `468517:468546`.
+
+````diff
+- $[R/(d_i)] = [(d_i)]-[R] = 0$
++ $[R/(d_i)] = [R]-[(d_i)] = 0$
+````
+
+Original SHA-256 `F9B8A74A4C0BB6C976EBF3C65D7F95F7472813AAC1E260B1B117F4FBFBF9031C`; replacement SHA-256 `D1E3FF18CAD9CDCA7AB4778E5A47D598E2F806BA0CE8001A3C77CE63484ED4C5`.
+
+</details>
+
+<details id="mc-stk-err-1965">
+<summary><code>MC-STK-ERR-1965 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1965`; producer ID: `ALGEBRA-RECON-372`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13227) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Removes the comma separating two coordinated objects.
+- Adverse evidence: No mathematical convention or graded-module definition changes.
+
+### Change 1: `MC-STK-ERR-1965-OP1`
+
+Pinned-official lines `13227-13227`; bytes `473013:473036`.
+
+````diff
+- definitions, and lemmas
++ definitions and lemmas
+````
+
+Original SHA-256 `04AE01513758095750065A8D69F33E5C663C3CD233A120FB484778927B46EAD2`; replacement SHA-256 `102C91658B61E6D22427A5BADAB841AC41B5F49289A76974A375845313346ECE`.
+
+</details>
+
+<details id="mc-stk-err-1966">
+<summary><code>MC-STK-ERR-1966 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1966`; producer ID: `ALGEBRA-RECON-373`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13247) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Names the scalar action that gives the asserted graded S-module. The degree n+e formula is proved in the separate editorial note using the original twist convention.
+- Adverse evidence: Multiplication can mean scalar multiplication, so this is a terminology clarification rather than a demonstrated false assertion of an internal algebra structure.
+
+### Change 1: `MC-STK-ERR-1966-OP1`
+
+Pinned-official lines `13247-13247`; bytes `473849:473867`.
+
+````diff
+- the multiplication
++ the $S$-action
+````
+
+Original SHA-256 `5D2A2238F5BF647FA0336714E55CBDAEAB5C2726AD43DAE57B4347CD853353CF`; replacement SHA-256 `F8CD480130F130BACF442FE28DD5E453C85D59F1D7B6ED1C38C821A95453C3DE`.
+
+</details>
+
+<details id="mc-stk-err-1967">
+<summary><code>MC-STK-ERR-1967 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1967`; producer ID: `ALGEBRA-RECON-375`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13338) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Names the base being integrally closed and its original ambient Laurent ring in the conventional order.
+- Adverse evidence: The surrounding argument identifies the intended set correctly. This is a terminology clarification, not a change to the ring C or a claim that the mathematical proof is false.
+
+### Change 1: `MC-STK-ERR-1967-OP1`
+
+Pinned-official lines `13338-13338`; bytes `477498:477535`.
+
+````diff
+- of $S[t, t^{-1}]$ over $R[t, t^{-1}]$
++ of $R[t, t^{-1}]$ in $S[t, t^{-1}]$
+````
+
+Original SHA-256 `7B362773239BE1448721E401C7B367695B8CED244F73E607309376B9FA774F58`; replacement SHA-256 `F8681EC73C5ED120D8F6E427EC03424948A2FD3BF9971B52A6F7AD8648382BC6`.
+
+</details>
+
+<details id="mc-stk-err-1968">
+<summary><code>MC-STK-ERR-1968 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1968`; producer ID: `ALGEBRA-RECON-376`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13377) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The homogeneous-product criterion for primality requires a proper ideal. A highest-component argument proves the corrected criterion for the original grading and for the receiving integer grading.
+- Adverse evidence: The unit ideal satisfies the printed product implication and is not prime. This is an actual missing qualification, not a stronger replacement for the source theorem.
+
+### Change 1: `MC-STK-ERR-1968-OP1`
+
+Pinned-official lines `13377-13377`; bytes `478803:478822`.
+
+````diff
+- a homogeneous ideal
++ a proper homogeneous ideal
+````
+
+Original SHA-256 `B1426C79EEB079264316E9DD9A2839F57F9DF927892622F94D48F7F2EE8CB9FA`; replacement SHA-256 `62FEDA47B5C3AE5AB06BFDD5CC7BFA90E401BAFFE9C2D77E65DFA889A097E14E`.
+
+</details>
+
+<details id="mc-stk-err-1969">
+<summary><code>MC-STK-ERR-1969 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1969`; producer ID: `ALGEBRA-RECON-377`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13407) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Corrects the compound noun without changing the explicitly stated scalar ring S_(f).
+- Adverse evidence: The degree-zero part need not be an S_f-submodule; this copyedit does not assert otherwise.
+
+### Change 1: `MC-STK-ERR-1969-OP1`
+
+Pinned-official lines `13407-13407`; bytes `479834:479844`.
+
+````diff
+- sub module
++ submodule
+````
+
+Original SHA-256 `5D5CA2492E4AD8DE8785FBD061A229B9EC12FC9EA3BF0DDCCA1343775D959D3A`; replacement SHA-256 `D8566C566C6F671A5CC7779DC2CAD0DDBDB68F37DC1E2E6157599EC585F4BF89`.
+
+</details>
+
+<details id="mc-stk-err-1970">
+<summary><code>MC-STK-ERR-1970 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1970`; producer ID: `ALGEBRA-RECON-378`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13662-L13663) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The homogeneous core is generated by elements already in p, so it is contained in p. This direction proves the needed product inclusion and also proves properness. Adds the missing verb.
+- Adverse evidence: The following minimal-prime proof already uses q contained in p. The reversed printed containment is not used to alter that receiving proof; the exact argument is recorded in the editorial note.
+
+### Change 1: `MC-STK-ERR-1970-OP1`
+
+Pinned-official lines `13662-13662`; bytes `490100:490120`.
+
+````diff
+- either $f$ or $g$ in
++ either $f$ or $g$ is in
+````
+
+Original SHA-256 `AA93C430D58FD94F1787E3C4DEC13EB3EC59997730BBB402739AD3AA95089CC0`; replacement SHA-256 `3F2FE779359E8643C5D9512ACBB74FBB0A529328E6DF300D04CB25FFCF2A33DD`.
+
+### Change 2: `MC-STK-ERR-1970-OP2`
+
+Pinned-official lines `13663-13663`; bytes `490170:490203`.
+
+````diff
+- $\mathfrak p \subset \mathfrak q$
++ $\mathfrak q \subset \mathfrak p$
+````
+
+Original SHA-256 `96149F74E4B7871FDB9842532F43B3215A281588AF0BDEF951B7C4BEF4CCAE1E`; replacement SHA-256 `E4FFED2C87A0A2F16A0902534F2AA0C34D887C2643BF6848F4E22472509BDE55`.
+
+</details>
+
+<details id="mc-stk-err-1971">
+<summary><code>MC-STK-ERR-1971 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1971`; producer ID: `ALGEBRA-RECON-379`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13682) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supplies the missing main verb in the second assertion proof.
+- Adverse evidence: Passing to S/I preserves the graded quotient and prime correspondence. The mathematical argument remains unchanged.
+
+### Change 1: `MC-STK-ERR-1971-OP1`
+
+Pinned-official lines `13682-13682`; bytes `490856:490874`.
+
+````diff
+- The second because
++ The second follows because
+````
+
+Original SHA-256 `016E15EEB81C3720F1E8C611B5DC70B05F12013E16083B2568BF3F7E5AF4FD43`; replacement SHA-256 `F0CD90DF9B2390ADFBC09BC31CF59B542441829A286A517CF6C99FE77620613F`.
+
+</details>
+
+<details id="mc-stk-err-1972">
+<summary><code>MC-STK-ERR-1972 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1972`; producer ID: `ALGEBRA-RECON-380`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13726) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The module generators may have negative degrees, so reducing their exponents modulo deg(f) can leave a negative denominator exponent. State its meaning using a nonnegative power in the numerator of the actual localization.
+- Adverse evidence: For M=k[t](1), f=t and its generator x of degree minus one, the listed residue exponents force e=-1 although the degree-zero localization is nonzero and generated by tx. The theorem is correct; a reading that silently forbids this list entry would not prove it.
+
+### Change 1: `MC-STK-ERR-1972-OP1`
+
+Pinned-official lines `13726-13726`; bytes `492587:492603`.
+
+````diff
+- $e_i < \deg(f)$.
++ $e_i < \deg(f)$; a fraction with $e < 0$ denotes its numerator multiplied by $f^{-e}$.
+````
+
+Original SHA-256 `54A1ED5150C3547FA61799479C4A4F77F95F76EB6AA7FA0FF44DD364F2F8DFEE`; replacement SHA-256 `B6BBD05DB12A1DD56A366C199506F1D643C567B92570FC33713721A185504ABB`.
+
+</details>
+
+<details id="mc-stk-err-1973">
+<summary><code>MC-STK-ERR-1973 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1973`; producer ID: `ALGEBRA-RECON-381`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13745-L13761) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Positive-degree homogeneous relations preserve the original R as S_0 while their localization still gives exactly R prime. Polynomial lifts make the module relation matrix defined. Specified degrees cover zero entries, and r>=1 makes each column maximum defined, including M=0. Two grammar fixes are included.
+- Adverse evidence: The original minimal-degree construction fails for R=Z and R prime=Z/(2): it gives S_0=Z/(2). A quotient class k_ij is not itself a polynomial to which the printed homogenization applies. The full corrected ring and module comparisons are proved separately with every t-power retained; the lemma statement is not weakened.
+
+### Change 1: `MC-STK-ERR-1973-OP1`
+
+Pinned-official lines `13745-13747`; bytes `493184:493357`.
+
+````diff
+- For an element $g \in R[x_1, \ldots, x_n]$ denote
+- $\tilde g \in R[X_0, \ldots, X_n]$ the element homogeneous of minimal
+- degree such that $g = \tilde g(1, x_1, \ldots, x_n)$.
++ For an element $g \in R[x_1, \ldots, x_n]$ choose a homogeneous
++ polynomial $\tilde g \in R[X_0, \ldots, X_n]$ of a specified positive
++ degree such that $g = \tilde g(1, x_1, \ldots, x_n)$.
+````
+
+Original SHA-256 `30F1DA2E5FAE0CAAFC7529493311E00E8377BC55C8EE9FB4797F78600928E282`; replacement SHA-256 `6B80DDCFEB4D7441563E7CD36A8A1E6F05F52DCE17B0068FD94920854224AEB1`.
+
+### Change 2: `MC-STK-ERR-1973-OP2`
+
+Pinned-official lines `13748-13748`; bytes `493387:493410`.
+
+````diff
+- \ldots, X_n]$ generated
++ \ldots, X_n]$ be generated
+````
+
+Original SHA-256 `B43893CC262B39D2BFDCC65A6A0CB483B8006E28C940BAF2CF0B89232FA97DD6`; replacement SHA-256 `54CF5FECCA69233B5BA3057DF4B140B7D1D22A78084FEE7330CB932463AECC6E`.
+
+### Change 3: `MC-STK-ERR-1973-OP3`
+
+Pinned-official lines `13750-13750`; bytes `493493:493513`.
+
+````diff
+- denote $f$ the image
++ denote by $f$ the image
+````
+
+Original SHA-256 `DFF955112C547B90F9E444A0A3CC4DEFD2D94DA88201E0ABB2B7A2F851CCBB76`; replacement SHA-256 `B4D6C44FD1FEE17A8788038593809B5B939DBBB8BCA0638EE1C3CA8BC21D666B`.
+
+### Change 4: `MC-STK-ERR-1973-OP4`
+
+Pinned-official lines `13756-13756`; bytes `493676:493700`.
+
+````diff
+- we choose a presentation
++ we choose a presentation with $r \geq 1$
+````
+
+Original SHA-256 `4AEF277D70B1805AB032DC104A16BF515E8ACB3E04F5E6EA42107566365D1311`; replacement SHA-256 `2E08AC7F1902B42A2C34FB6A4DD940003D2B0FA234D10245E25513D9CE5A47DF`.
+
+### Change 5: `MC-STK-ERR-1973-OP5`
+
+Pinned-official lines `13760-13761`; bytes `493757:493906`.
+
+````diff
+- with $k_j = (k_{1j}, \ldots, k_{rj})$. Let $d_{ij} = \deg(\tilde k_{ij})$.
+- Set $d_j = \max\{d_{ij}\}$. Set $K_{ij} = X_0^{d_j - d_{ij}}\tilde k_{ij}$
++ with $k_j = (k_{1j}, \ldots, k_{rj})$. Choose polynomial lifts $h_{ij}$
++ of the $k_{ij}$ and assign positive degrees $d_{ij}$ to their
++ homogenizations $\tilde h_{ij}$, including zero entries.
++ Set $d_j = \max\{d_{ij}\}$. Set $K_{ij} = X_0^{d_j - d_{ij}}\tilde h_{ij}$
+````
+
+Original SHA-256 `DAB395DB87994D3804C50461D62947DEA1DC50AA19C410348B11AFAFE15D7D36`; replacement SHA-256 `99A8E43F48B59791C9CEF0025B17E72B4B5CF813052A3B9BB9703CA89B791D45`.
+
+</details>
+
+<details id="mc-stk-err-1974">
+<summary><code>MC-STK-ERR-1974 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1974`; producer ID: `ALGEBRA-RECON-382`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13815-L13824) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repairs the polynomial-variable separator and the nearby adverb in the numerical-polynomial definition.
+- Adverse evidence: The list of indeterminates, arbitrary abelian coefficient group and binomial basis are unchanged.
+
+### Change 1: `MC-STK-ERR-1974-OP1`
+
+Pinned-official lines `13815-13815`; bytes `495882:495897`.
+
+````diff
+- X_1, \ldots X_n
++ X_1, \ldots, X_n
+````
+
+Original SHA-256 `DCBDBE547189305B7D3D67D9D875D8B1E842370ACA20D339B173563ED8E30D74`; replacement SHA-256 `90D6ECB64DE7B246D52410BAA32FA15B7A7C9A45DCFF7C9E16157A8E37592356`.
+
+### Change 2: `MC-STK-ERR-1974-OP2`
+
+Pinned-official lines `13824-13824`; bytes `496178:496194`.
+
+````diff
+- sufficient large
++ sufficiently large
+````
+
+Original SHA-256 `239B78E2B1411EEB91377CB93A764443EF63C15E43103D058D96B4C601D300F7`; replacement SHA-256 `5B9949D9C83F8A8CCA5FA5AE6C93DB7F185372571E908696FD9F88A8FFC262D3`.
+
+</details>
+
+<details id="mc-stk-err-1975">
+<summary><code>MC-STK-ERR-1975 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1975`; producer ID: `ALGEBRA-RECON-383`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13918-L13919) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specifies the submodule, quotient and least positive exponents used in the existing inner induction. Their finite generation, inherited grading and exact degree sequences are proved in the editorial note.
+- Adverse evidence: The original existence statement has a valid witness; it is not a false theorem. The later largest torsion submodule is justified by stabilization of the kernel chain under the original Noetherian hypothesis, not by assuming uniform nilpotence without it.
+
+### Change 1: `MC-STK-ERR-1975-OP1`
+
+Pinned-official lines `13918-13919`; bytes `499271:499378`.
+
+````diff
+- $0 \to M' \to M \to M'' \to 0$ such that the integers
+- $r', r''$ are strictly smaller than $r$. Thus we know
++ $0 \to M' \to M \to M'' \to 0$ with $M' = xM$ and $M'' = M/xM$.
++ Their least positive nilpotence exponents satisfy
++ $r' \leq r - 1 < r$ and $r'' = 1 < r$. Thus we know
+````
+
+Original SHA-256 `2337C71EEE26FA07BAA3D58EE5B72A0F881309C3913838107DD74D538286C391`; replacement SHA-256 `564EB55A9F0A5406D2B7116DE1991FBB637810E53A02C74B6E500C692FE02DDE`.
+
+</details>
+
+<details id="mc-stk-err-1976">
+<summary><code>MC-STK-ERR-1976 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1976`; producer ID: `ALGEBRA-RECON-384`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L13977) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Uses the existing TeX command for sufficiently large degrees in the Hilbert-function estimate.
+- Adverse evidence: The exact dimension difference and asymptotic condition are retained. Zero quotients and the zero-variable boundary are handled in the separate editorial explanation.
+
+### Change 1: `MC-STK-ERR-1976-OP1`
+
+Pinned-official lines `13977-13977`; bytes `501404:501412`.
+
+````diff
+- $n >> e$
++ $n \gg e$
+````
+
+Original SHA-256 `C18B8EB5A51366891846028890E37A81E53D473BF61B21CF3FCB2D2FB110E7EA`; replacement SHA-256 `20063FB43AA6F5ACBC039EDDD2E2D27E1C65071B49C4E899AB67D155D1A544F5`.
+
+</details>
+
+<details id="mc-stk-err-1977">
+<summary><code>MC-STK-ERR-1977 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1977`; producer ID: `ALGEBRA-RECON-385`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14031) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Uses the established phrase for the finite-length assertion.
+- Adverse evidence: This is a copyedit; the original mathematical assertion is valid. The ideal-power and residue-layer argument retains the original exponents.
+
+### Change 1: `MC-STK-ERR-1977-OP1`
+
+Pinned-official lines `14031-14031`; bytes `502966:502985`.
+
+````diff
+- has a finite length
++ has finite length
+````
+
+Original SHA-256 `DCD296DD3BD800CC982978F5C4082BA61CFA3ACC6E68A0B72C9F6EB9A4683AC6`; replacement SHA-256 `563469CD2D3CE9B07251763C2D24FF6130AB4E8E6838F09E9576326FE90510CE`.
+
+</details>
+
+<details id="mc-stk-err-1978">
+<summary><code>MC-STK-ERR-1978 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1978`; producer ID: `ALGEBRA-RECON-386`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14047) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports identify the same singular/plural mismatch before the two constants. One operation resolves both.
+- Adverse evidence: The two inequalities and n>=c_2 bound are correct. The separate editorial argument also shows the explicit choice c_1=c_2=length_R(M/M prime); that strengthening is not substituted into the source theorem.
+
+### Change 1: `MC-STK-ERR-1978-OP1`
+
+Pinned-official lines `14047-14047`; bytes `503414:503428`.
+
+````diff
+- there exists a
++ there exist
+````
+
+Original SHA-256 `88643B42DF692F9AFBC366ECCD75D54C6D362CEF3C089396826C79CDB18F3F6C`; replacement SHA-256 `CD8E49F0424F6331D3437C5E541CBD45FEE016253468CA8CF1D92175F1E252C5`.
+
+</details>
+
+<details id="mc-stk-err-1979">
+<summary><code>MC-STK-ERR-1979 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1979`; producer ID: `ALGEBRA-RECON-387`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14127) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The intermediate formula uses chi_{I,N}(-1) at its stated endpoint. Define that boundary value by the original quotient Q/I^0Q=0; a direct exact graded sequence proves the original phi formula even at n=c.
+- Adverse evidence: The statement is correct at n=c and must not be weakened to n>c. No previously defined nonnegative argument or original ideal power is changed.
+
+### Change 1: `MC-STK-ERR-1979-OP1`
+
+Pinned-official lines `14127-14127`; bytes `505431:505454`.
+
+````diff
+- for $n \geq c$. We have
++ for $n \geq c$, with the convention $\chi_{I,Q}(-1)=0$ for any finite $R$-module $Q$. We have
+````
+
+Original SHA-256 `0620FAF1FB47CF2F0C5C9B17845609A9C16B8FBCE20EE6299011546B4E8B3CC9`; replacement SHA-256 `31ACAEB09A265AE005D59C0523505B336858F77371DF5331E8DAA4C079D246C1`.
+
+</details>
+
+<details id="mc-stk-err-1980">
+<summary><code>MC-STK-ERR-1980 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1980`; producer ID: `ALGEBRA-RECON-388`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14218) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supplies the missing article in the comparison of the two already specified eventual polynomials.
+- Adverse evidence: Their equal positive degree and leading coefficient follow from the finite-colength inequalities. The preceding sentence already identifies the two polynomials; no additional mathematical defect is asserted.
+
+### Change 1: `MC-STK-ERR-1980-OP1`
+
+Pinned-official lines `14218-14218`; bytes `508745:508762`.
+
+````diff
+- degree $<$ degree
++ degree $<$ the degree
+````
+
+Original SHA-256 `9F8BB806CF124097F72549A09269B94F7AA8315829727B08725A4C87A3D220D9`; replacement SHA-256 `26664F0C2E0AEE3E59342F9336DA47A26DD85764CC154D3E278653A45E04FA0C`.
+
+</details>
+
+<details id="mc-stk-err-1981">
+<summary><code>MC-STK-ERR-1981 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1981`; producer ID: `ALGEBRA-RECON-389`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14341) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Allows the phrase following the display to finish its sentence.
+- Adverse evidence: Strict prime inclusions and their chain length are unchanged.
+
+### Change 1: `MC-STK-ERR-1981-OP1`
+
+Pinned-official lines `14341-14341`; bytes `511921:511941`.
+
+````diff
+- \mathfrak p_{i + 1}.
++ \mathfrak p_{i + 1}
+````
+
+Original SHA-256 `380BF52F34AAE676182D37AE634523247F091FAA0646787F88D6AF71DB802057`; replacement SHA-256 `337A24F58CC5BA2B68838185540EDB3ACEEF848FCEF32A18C5CB960D34D3B78B`.
+
+</details>
+
+<details id="mc-stk-err-1982">
+<summary><code>MC-STK-ERR-1982 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1982`; producer ID: `ALGEBRA-RECON-390`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14376) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Irreducible components correspond to minimal primes, with minimality taken among prime ideals.
+- Adverse evidence: Minimality among all ideals would be a different assertion. The original prime-to-closed-subset order reversal proves the intended statement.
+
+### Change 1: `MC-STK-ERR-1982-OP1`
+
+Pinned-official lines `14376-14376`; bytes `512986:513001`.
+
+````diff
+- a minimal ideal
++ a minimal prime ideal
+````
+
+Original SHA-256 `9A972A62069A6E3ADE87B0BDBA72FD868FA7D9FF9459846EC987DDA5E6427F09`; replacement SHA-256 `5C89B31B766AD1F08A2EFE05F11512BEDD6FE0CA5FFC06E0ACBDCD4CF48C4AB5`.
+
+</details>
+
+<details id="mc-stk-err-1983">
+<summary><code>MC-STK-ERR-1983 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1983`; producer ID: `ALGEBRA-RECON-392`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14366-L14419) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The original and current Topology definitions assign dimension minus infinity to the empty spectrum. The zero ring is Artinian and Noetherian, so both the converse and item (2) need the at-most-zero formulation to cover their stated arbitrary-ring scope.
+- Adverse evidence: Do not change the source dimension convention or silently exclude the zero ring. On nonzero rings the new inequality is exactly dimension zero. All ten equivalent conditions hold for the zero ring, including empty finite products. The local and prime-localized receiving rings are nonzero and retain their equality-with-zero statements.
+
+### Change 1: `MC-STK-ERR-1983-OP1`
+
+Pinned-official lines `14366-14366`; bytes `512563:512577`.
+
+````diff
+- dimension zero
++ dimension at most zero
+````
+
+Original SHA-256 `47EEDF4B3BB128DBB2EAB7171F2A307107EB4EA4D36007A97EFBBCBDF0E96EFA`; replacement SHA-256 `A31CE37801DB4BD1B0744443A224F7306F5A9BA065A559BF467A55B7B4FA4083`.
+
+### Change 2: `MC-STK-ERR-1983-OP2`
+
+Pinned-official lines `14419-14419`; bytes `514727:514740`.
+
+````diff
+- $\dim(R) = 0$
++ $\dim(R) \leq 0$
+````
+
+Original SHA-256 `7DB5DD13E95B8663BE167EF305103F7EEEBC7365ED03318DA0CD66ECADBC1E8D`; replacement SHA-256 `BE20944D8A4B90DB773773F43AF5812DB7672AF1BCC20E39B69B57601DC1D7DB`.
+
+</details>
+
+<details id="mc-stk-err-1984">
+<summary><code>MC-STK-ERR-1984 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1984`; producer ID: `ALGEBRA-RECON-393`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14487) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports identify the same misplaced adverb; one operation repairs the order.
+- Adverse evidence: The ideal-of-definition equivalence is unchanged and no duplicate operation is allocated.
+
+### Change 1: `MC-STK-ERR-1984-OP1`
+
+Pinned-official lines `14487-14487`; bytes `516865:516878`.
+
+````diff
+- from directly
++ directly from
+````
+
+Original SHA-256 `B3C7D1CE7DF06421C1A58D19791ECFE8D41BCA58F7AE1D4D530CC6B65233CE50`; replacement SHA-256 `A98E07B5FA276E0996BCA8F0149EDDE6B47F64BDE5AF8D97184774F7C6CF571B`.
+
+</details>
+
+<details id="mc-stk-err-1985">
+<summary><code>MC-STK-ERR-1985 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1985`; producer ID: `ALGEBRA-RECON-394`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14509-L14582) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Labels multiplication by the original x in the reported sequence and propagates the same clarification to its repeated use in the general dimension proof. Its exact kernel, image and cokernel are proved in the editorial note.
+- Adverse evidence: The original sequence has the required map and is mathematically valid. It is not the identity map. The quotient action preserves the original module lengths, so the subsequent signed Hilbert-polynomial difference is unchanged.
+
+### Change 1: `MC-STK-ERR-1985-OP1`
+
+Pinned-official lines `14509-14509`; bytes `517769:517800`.
+
+````diff
+- R/\mathfrak p \to R/\mathfrak p
++ R/\mathfrak p \xrightarrow{x} R/\mathfrak p
+````
+
+Original SHA-256 `A484660AD89B7F57827BEADDF92CF3C29B2D3E297973B9CD723341F076D0ADED`; replacement SHA-256 `9A44D0226B8383B8E5776E1215B029DD38A3DEB522404AF9606804584428DF2C`.
+
+### Change 2: `MC-STK-ERR-1985-OP2`
+
+Pinned-official lines `14582-14582`; bytes `520672:520703`.
+
+````diff
+- R/\mathfrak p \to R/\mathfrak p
++ R/\mathfrak p \xrightarrow{x} R/\mathfrak p
+````
+
+Original SHA-256 `A484660AD89B7F57827BEADDF92CF3C29B2D3E297973B9CD723341F076D0ADED`; replacement SHA-256 `9A44D0226B8383B8E5776E1215B029DD38A3DEB522404AF9606804584428DF2C`.
+
+</details>
+
+<details id="mc-stk-err-1986">
+<summary><code>MC-STK-ERR-1986 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1986`; producer ID: `ALGEBRA-RECON-396`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14602) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The generators of the original maximal ideal are ring elements, not necessarily polynomial variables.
+- Adverse evidence: The residue-vector-space dimension and Nakayama comparison remain exactly as stated.
+
+### Change 1: `MC-STK-ERR-1986-OP1`
+
+Pinned-official lines `14602-14602`; bytes `521587:521596`.
+
+````diff
+- variables
++ elements
+````
+
+Original SHA-256 `7AF0B3E47C35820FABEF69CC542392BD2D0F6E37C349851728F0C683013563CE`; replacement SHA-256 `B0B17893A51343979E2090DEEE730538430CFF2A88498E3885EB0BA179C58B6B`.
+
+</details>
+
+<details id="mc-stk-err-1987">
+<summary><code>MC-STK-ERR-1987 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1987`; producer ID: `ALGEBRA-RECON-398`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14769) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The one-dimensional example is Z_p, the p-adic integers. Q_p is a field of dimension zero. The original surrounding dimension assertion is retained.
+- Adverse evidence: The complete valuation and ideal argument for Z_p is in the separate editorial note; the source reading is kept in the review so this mathematical object correction is visible.
+
+### Change 1: `MC-STK-ERR-1987-OP1`
+
+Pinned-official lines `14769-14769`; bytes `527920:527927`.
+
+````diff
+- numbers
++ integers
+````
+
+Original SHA-256 `F3C7807D475073BA009BF4801B2D934E9F0126CB96DD19A27DBFFCAE23A7F5A3`; replacement SHA-256 `F1DD6683235E1AA7D979DAA077ABD17E105BA076EF135C7A747A88C681A25A46`.
+
+</details>
+
+<details id="mc-stk-err-1988">
+<summary><code>MC-STK-ERR-1988 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1988`; producer ID: `ALGEBRA-RECON-399`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14803) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The two reports identify one source reminder. Preserve its words as a labelled unnumbered note rather than an eighth mathematical condition. The proof still establishes exactly the seven original conditions.
+- Adverse evidence: The user requires translations to retain the original work. Inventing an eighth theorem or silently removing the source reminder is unnecessary; this visible treatment resolves its status without changing the mathematical list.
+
+### Change 1: `MC-STK-ERR-1988-OP1`
+
+Pinned-official lines `14803-14803`; bytes `529267:529287`.
+
+````diff
+- \item add more here.
++ \item[] \textit{Source editorial reminder: add more here.}
+````
+
+Original SHA-256 `5F5C49E3E7B09A35F1628A9F0CEB39AB81F802F2E386469F0099D7972A6EDC1C`; replacement SHA-256 `15B8C81222F267DD2511FCA6748533F291142964307103DF01725C2462EF38E2`.
+
+</details>
+
+<details id="mc-stk-err-1989">
+<summary><code>MC-STK-ERR-1989 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1989`; producer ID: `ALGEBRA-RECON-400`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14866) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The locally closed point is a prime of Spec(R); its quotient must be the original domain R/p.
+- Adverse evidence: The cited topological result supplies a point of the spectrum, so primality is intended. This is a missing noun qualification, not a new assumption on the theorem.
+
+### Change 1: `MC-STK-ERR-1989-OP1`
+
+Pinned-official lines `14866-14866`; bytes `531958:531977`.
+
+````diff
+- a non-maximal ideal
++ a non-maximal prime ideal
+````
+
+Original SHA-256 `1886C14FC1D599610139346543596B9D5B3B18C8EA923A4EB2378195F1697E9A`; replacement SHA-256 `B209ECAACF569A2A14F3EB9371DA51486BABB372EBB5E74FB576F73A28B6C036`.
+
+</details>
+
+<details id="mc-stk-err-1990">
+<summary><code>MC-STK-ERR-1990 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1990`; producer ID: `ALGEBRA-RECON-401`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14871-L14879) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The claimed localized dimension one requires q strictly above p. Both quantified occurrences are corrected. The exact local domain has a nonzero maximal ideal and an open generic singleton, proving dimension exactly one.
+- Adverse evidence: At q=p the original localization is Frac(R/p), of dimension zero. Every maximal ideal above the nonmaximal p is still covered by the strict condition, so the global dimension and Jacobson conclusions are unchanged.
+
+### Change 1: `MC-STK-ERR-1990-OP1`
+
+Pinned-official lines `14871-14871`; bytes `532224:532257`.
+
+````diff
+- $\mathfrak p \subset \mathfrak q$
++ $\mathfrak p \subsetneq \mathfrak q$
+````
+
+Original SHA-256 `96149F74E4B7871FDB9842532F43B3215A281588AF0BDEF951B7C4BEF4CCAE1E`; replacement SHA-256 `93294361094654C318DC6AAB929B63F5059B374ECAC675E9BA0AD0644DE98738`.
+
+### Change 2: `MC-STK-ERR-1990-OP2`
+
+Pinned-official lines `14879-14879`; bytes `532737:532770`.
+
+````diff
+- $\mathfrak q \supset \mathfrak p$
++ $\mathfrak q \supsetneq \mathfrak p$
+````
+
+Original SHA-256 `693860D77054809AAB82120A265D0867C84DAAE21AC7DC80B228313297282F71`; replacement SHA-256 `468658602EDB4A1D4CFF4EAC8E0848E9A79F0A78E04775704EC1CD15A58E8973`.
+
+</details>
+
+<details id="mc-stk-err-1991">
+<summary><code>MC-STK-ERR-1991 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1991`; producer ID: `ALGEBRA-RECON-402`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14955) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports identify the same compound-noun copyedit.
+- Adverse evidence: The maximal counterexample argument and its Oka-family input are unchanged.
+
+### Change 1: `MC-STK-ERR-1991-OP1`
+
+Pinned-official lines `14955-14955`; bytes `535102:535117`.
+
+````diff
+- counter example
++ counterexample
+````
+
+Original SHA-256 `B6CEDD78B95040D619E5E8151B8AC10AA2CF8911C3F387F861B53AC12F49BA5B`; replacement SHA-256 `D254415D1FEB143DFC093804E9259DC9B33167F5D9A781CF3DDE61962EF3961E`.
+
+</details>
+
+<details id="mc-stk-err-1992">
+<summary><code>MC-STK-ERR-1992 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1992`; producer ID: `ALGEBRA-RECON-403`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L14962-L15018) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports cover the same two missing verbs. The two operations repair each source opening once.
+- Adverse evidence: The original filtration primes, support and local multiplicity formula are retained; no extra residue-degree factor is inserted.
+
+### Change 1: `MC-STK-ERR-1992-OP1`
+
+Pinned-official lines `14962-14962`; bytes `535350:535371`.
+
+````diff
+- $\mathfrak p_i$ as in
++ $\mathfrak p_i$ be as in
+````
+
+Original SHA-256 `F200CB116D5E545A5872D4A6CF85B979572E43E52824440B49B076D1DD28ECC5`; replacement SHA-256 `61E0C753D7142366308EBF3B821407BC1BD48E7BA26E658876F56215356378A1`.
+
+### Change 2: `MC-STK-ERR-1992-OP2`
+
+Pinned-official lines `15018-15018`; bytes `537210:537231`.
+
+````diff
+- $\mathfrak p_i$ as in
++ $\mathfrak p_i$ be as in
+````
+
+Original SHA-256 `F200CB116D5E545A5872D4A6CF85B979572E43E52824440B49B076D1DD28ECC5`; replacement SHA-256 `61E0C753D7142366308EBF3B821407BC1BD48E7BA26E658876F56215356378A1`.
+
+</details>
+
+<details id="mc-stk-err-1993">
+<summary><code>MC-STK-ERR-1993 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1993`; producer ID: `ALGEBRA-RECON-405`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15146) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Two reports identify the same misspelled mathematical term.
+- Adverse evidence: The original annihilator dichotomy for the submodule and quotient is valid over the stated arbitrary ring.
+
+### Change 1: `MC-STK-ERR-1993-OP1`
+
+Pinned-official lines `15146-15146`; bytes `541574:541583`.
+
+````diff
+- annilator
++ annihilator
+````
+
+Original SHA-256 `0A42126A1DA5AA2086ED67246410BEF35B998F89EF491C3E21FDE6BD42002AAB`; replacement SHA-256 `7C9F70F01291992EA73CB61695A60EE75A853CF4DF63E08EA9803DAFD72A312F`.
+
+</details>
+
+<details id="mc-stk-err-1994">
+<summary><code>MC-STK-ERR-1994 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1994`; producer ID: `ALGEBRA-RECON-407`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15446) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The object being quantified is a prime ideal, as required for disjointness from S and the localization comparison. One operation resolves the two reports.
+- Adverse evidence: The original two-stage localization isomorphism is proved with the fraction (m/s)/(r/t) mapping to tm/(sr). The Noetherian condition still supplies the finitely generated prime needed by the associated-prime converse.
+
+### Change 1: `MC-STK-ERR-1994-OP1`
+
+Pinned-official lines `15446-15446`; bytes `552641:552665`.
+
+````diff
+- for $\mathfrak p \in R$,
++ for $\mathfrak p \in \Spec(R)$ with
+````
+
+Original SHA-256 `511AC4B8473BF8C4537BC54834EB8BE34CEC72C5FFC21B6293650AFFD3EFEC8B`; replacement SHA-256 `A72946FCFA61ECDEC3545C5088C54BE124772F2FD941DB36950AE07DC113D661`.
+
+</details>
+
+<details id="mc-stk-err-1995">
+<summary><code>MC-STK-ERR-1995 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1995`; producer ID: `ALGEBRA-RECON-409`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15519) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports concern the same original placement reminder. Preserve it at its original position and label its source-editorial status visibly.
+- Adverse evidence: The reports supply no determined destination and do not justify relocating either adjoining lemma. The user requires a translation to preserve the original work; neither silent deletion nor source reorganization is needed.
+
+### Change 1: `MC-STK-ERR-1995-OP1`
+
+Pinned-official lines `15519-15519`; bytes `554907:554956`.
+
+````diff
+- This lemma should probably be put somewhere else.
++ \textit{Source editorial note: This lemma should probably be put somewhere else.}
+````
+
+Original SHA-256 `F4239869F7E341C6356DAEB5ABAFDF5FCBC03FF96BBE9D58B25D44A2E8D2B46B`; replacement SHA-256 `76493CFD9CACC3808C46F0B1AEA98E70F3FA33DEA7C2DD13FE3F24C7CB6C989A`.
+
+</details>
+
+<details id="mc-stk-err-1996">
+<summary><code>MC-STK-ERR-1996 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1996`; producer ID: `ALGEBRA-RECON-411`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15579) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: One missing article resolves the two reports.
+- Adverse evidence: The flat ring map, original prime-extension hypothesis and symbolic-power formula are unchanged.
+
+### Change 1: `MC-STK-ERR-1996-OP1`
+
+Pinned-official lines `15579-15579`; bytes `556999:557015`.
+
+````diff
+- be flat ring map
++ be a flat ring map
+````
+
+Original SHA-256 `4D98C4C54B492F5EA6A0AC3364C5EA678787C66E4BF3A9664343FDD2B3E67ABF`; replacement SHA-256 `6873C27CABB21A8DB89B80A49936B4B58772DB387C665EB4DBE566FCB6DF29B9`.
+
+</details>
+
+<details id="mc-stk-err-1997">
+<summary><code>MC-STK-ERR-1997 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1997`; producer ID: `ALGEBRA-RECON-412`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15611) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The domain filtration quotients give injective multiplication, which proves injectivity of the further localization and equality of the two original kernels.
+- Adverse evidence: For R=k, S=k[t], p=q=0, n=1 and f=t, multiplication on k[t] is injective but misses 1. The full arbitrary-dimensional vector-space filtration proof needs no additional Noetherian hypothesis.
+
+### Change 1: `MC-STK-ERR-1997-OP1`
+
+Pinned-official lines `15611-15611`; bytes `558345:558360`.
+
+````diff
+- acts invertibly
++ acts injectively
+````
+
+Original SHA-256 `6A1BEE8949421A89AE1F94C3071EAE4478E2DF2A136AF54D3DF6B8338F77257A`; replacement SHA-256 `01A33086D121E517A5E072D7C37A9A3C5ECB9EB34FBCC9E6E34C7F99B184AA99`.
+
+</details>
+
+<details id="mc-stk-err-1998">
+<summary><code>MC-STK-ERR-1998 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1998`; producer ID: `ALGEBRA-RECON-413`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15628) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the specified base ring R in the fibre-ring subscript once for both reports.
+- Adverse evidence: The adjacent spectrum map and all receiving expressions already use the same tensor product over R.
+
+### Change 1: `MC-STK-ERR-1998-OP1`
+
+Pinned-official lines `15628-15628`; bytes `558894:558910`.
+
+````diff
+- S \otimes \kappa
++ S \otimes_R \kappa
+````
+
+Original SHA-256 `3F154BF67245D17E7101E83F2EE9D383AABD3CE436196A1D61E664AEA4AD945D`; replacement SHA-256 `42500AB0D197099135AAD7EDFB0A24CA47206087AFA17EB09EE0CBA075B77929`.
+
+</details>
+
+<details id="mc-stk-err-1999">
+<summary><code>MC-STK-ERR-1999 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-1999`; producer ID: `ALGEBRA-RECON-414`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15645) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: List all six already-defined sets in the lemma opening.
+- Adverse evidence: The missing set occurs in the existing conclusions and proof; no additional set or assertion is introduced.
+
+### Change 1: `MC-STK-ERR-1999-OP1`
+
+Pinned-official lines `15645-15645`; bytes `559669:559683`.
+
+````diff
+- $A_{fin}$, $B$
++ $A_{fin}$, $A'_{fin}$, $B$
+````
+
+Original SHA-256 `EDCA4F6A23728726E98C9B4E9FBDFCA7DE785D360AB7C4C9F1E003F68E246DDC`; replacement SHA-256 `D13C1C277260B2B9B2239B68E367585787697F49B11E8D90416CFF32215B63FB`.
+
+</details>
+
+<details id="mc-stk-err-2000">
+<summary><code>MC-STK-ERR-2000 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2000`; producer ID: `ALGEBRA-RECON-415`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15675) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports identify one subject-verb correction.
+- Adverse evidence: The quotient and localized-spectrum identifications remain those of the original proof.
+
+### Change 1: `MC-STK-ERR-2000-OP1`
+
+Pinned-official lines `15675-15675`; bytes `560878:560893`.
+
+````diff
+- This prove that
++ This proves that
+````
+
+Original SHA-256 `05BDE48A2CA7C74CD88871C8B5EE398BFC4470A0BF154C8A7241017EC425E89C`; replacement SHA-256 `0ABF846DF14B5CD9D8689F44D75C5C86ECB3C9161EF9321DEDB30C29AE8A26BD`.
+
+</details>
+
+<details id="mc-stk-err-2001">
+<summary><code>MC-STK-ERR-2001 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2001`; producer ID: `ALGEBRA-RECON-416`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15713) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore N in the denominator submodule of the original quotient.
+- Adverse evidence: The preceding flatness assertion and following associated-prime comparison already concern N/p-prime N, so no mathematical hypothesis changes.
+
+### Change 1: `MC-STK-ERR-2001-OP1`
+
+Pinned-official lines `15713-15713`; bytes `562855:562871`.
+
+````diff
+- $N/\mathfrak p'$
++ $N/\mathfrak p'N$
+````
+
+Original SHA-256 `88264E7A0EB33AFEE099FDA7951869F3B27F76691ACE63B0608B3E570B932DAE`; replacement SHA-256 `0091CE4570C7F2411C3592D27C1A1D8EA9ECDBB553F784E31CD2AC531AA84774`.
+
+</details>
+
+<details id="mc-stk-err-2002">
+<summary><code>MC-STK-ERR-2002 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2002`; producer ID: `ALGEBRA-RECON-417`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15777-L15883) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Resolve the two reports with one article insertion at each of their two shared loci.
+- Adverse evidence: Both original flatness assumptions remain intact.
+
+### Change 1: `MC-STK-ERR-2002-OP1`
+
+Pinned-official lines `15777-15777`; bytes `565214:565232`.
+
+````diff
+- flat as $R$-module
++ flat as an $R$-module
+````
+
+Original SHA-256 `660AE220C87DFF698E32D93652CF5F8B04EA1FC519513BEC3F9A8B218DD99798`; replacement SHA-256 `C47420E7C10356A57A4132CB7693620FAC9AF1BEB3C10122079224A8E83956FE`.
+
+### Change 2: `MC-STK-ERR-2002-OP2`
+
+Pinned-official lines `15883-15883`; bytes `569183:569201`.
+
+````diff
+- flat as $R$-module
++ flat as an $R$-module
+````
+
+Original SHA-256 `660AE220C87DFF698E32D93652CF5F8B04EA1FC519513BEC3F9A8B218DD99798`; replacement SHA-256 `C47420E7C10356A57A4132CB7693620FAC9AF1BEB3C10122079224A8E83956FE`.
+
+</details>
+
+<details id="mc-stk-err-2003">
+<summary><code>MC-STK-ERR-2003 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2003`; producer ID: `ALGEBRA-RECON-418`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15827) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The prime qS_q belongs to the associated set over S_q, as the earlier correctly typed statement already says.
+- Adverse evidence: Exact local tensor maps and the nonzero associated witness give the same contradiction over the original local coefficient ring. Do not conflate an extended ideal with an ideal of S.
+
+### Change 1: `MC-STK-ERR-2003-OP1`
+
+Pinned-official lines `15827-15827`; bytes `567331:567343`.
+
+````diff
+- \text{Ass}_S
++ \text{Ass}_{S_{\mathfrak q}}
+````
+
+Original SHA-256 `D38FE21CFFA2C9CEB2E413321539D0C41658EB538C73A26CC02CE7DF6C6D6C2A`; replacement SHA-256 `7DA4B276ED83BA4A6E5DBDC40E241F64C3877767FA7C627F4331A324BE99A818`.
+
+</details>
+
+<details id="mc-stk-err-2004">
+<summary><code>MC-STK-ERR-2004 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2004`; producer ID: `ALGEBRA-RECON-419`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15815) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: End the displayed tensor/localization identity with a period.
+- Adverse evidence: Only terminal punctuation is added; both original comparison maps are verified in the editorial note.
+
+### Change 1: `MC-STK-ERR-2004-OP1`
+
+Pinned-official lines `15815-15815`; bytes `566815:566830`.
+
+````diff
+- N_{\mathfrak q}
++ N_{\mathfrak q}.
+````
+
+Original SHA-256 `92F6FC0457C299BD5E1106F3F691DBC228B85CA79DD23B65A9382DDE15B632DE`; replacement SHA-256 `F6C7331F087CE09DBCA2A1DAA04752F88C0DBB09D88E2C34127AFD77D40273A7`.
+
+</details>
+
+<details id="mc-stk-err-2005">
+<summary><code>MC-STK-ERR-2005 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2005`; producer ID: `ALGEBRA-RECON-420`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15914-L15916) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Give the explanatory sentence a finite verb and matching coordinated wording.
+- Adverse evidence: The original quotient-ring and localization references remain unchanged.
+
+### Change 1: `MC-STK-ERR-2005-OP1`
+
+Pinned-official lines `15914-15914`; bytes `570077:570098`.
+
+````diff
+- The first equality by
++ The first equality follows from
+````
+
+Original SHA-256 `8B2C5E86E32A7865DE6279FBF44547CD28287BE9B3BBF0C712C9EF2B1E8688A3`; replacement SHA-256 `611AE331DEACAF9693D1E4224327693F5A58FFBAC1E8410F350C3D8A65916ED0`.
+
+### Change 2: `MC-STK-ERR-2005-OP2`
+
+Pinned-official lines `15916-15916`; bytes `570135:570152`.
+
+````diff
+- and the second by
++ and the second from
+````
+
+Original SHA-256 `587AC0D2F92E8542E0C4DFC3442B14F86DFFE53DCF6B249B022F7C73DC532EFC`; replacement SHA-256 `7DC7F224B16BC9FB120DD95AB48597A3FFF840385B3ECC7427799B72D366975A`.
+
+</details>
+
+<details id="mc-stk-err-2006">
+<summary><code>MC-STK-ERR-2006 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2006`; producer ID: `ALGEBRA-RECON-421`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15930) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The introduction names the class of rings in the plural.
+- Adverse evidence: This changes no definition or finiteness condition.
+
+### Change 1: `MC-STK-ERR-2006-OP1`
+
+Pinned-official lines `15930-15930`; bytes `570360:570383`.
+
+````diff
+- non-Noetherian ring and
++ non-Noetherian rings and
+````
+
+Original SHA-256 `446593DF22C294825209BF411FF185B9724CDC10BFCC6128B1F5B4A47FC70FE4`; replacement SHA-256 `851170DCC7002F575F8F3C3E7FBC0880F99BCB2F2C9B33B07929CDC74DFC282F`.
+
+</details>
+
+<details id="mc-stk-err-2007">
+<summary><code>MC-STK-ERR-2007 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2007`; producer ID: `ALGEBRA-RECON-422`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L15996) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair the sentence fragment while preserving the reduced-ring contradiction.
+- Adverse evidence: The witness has proper annihilator and is therefore nonzero; the source nilpotence argument is valid.
+
+### Change 1: `MC-STK-ERR-2007-OP1`
+
+Pinned-official lines `15996-15996`; bytes `572956:572988`.
+
+````diff
+- Hence $x = 0$. Which contradicts
++ Hence $x = 0$. This contradicts
+````
+
+Original SHA-256 `445AB8238A3F9772E975CCCEAEDBE641F4EE21396AC0C639A8F6B4986DFECCDB`; replacement SHA-256 `8223A9FE104973B70644C5B93D00DED02721D804E20BC21DC394A78BA9A22407`.
+
+</details>
+
+<details id="mc-stk-err-2008">
+<summary><code>MC-STK-ERR-2008 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2008`; producer ID: `ALGEBRA-RECON-423`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16042) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the annihilator definition from its appositive description.
+- Adverse evidence: The exact annihilator and its embedding into M are unchanged.
+
+### Change 1: `MC-STK-ERR-2008-OP1`
+
+Pinned-official lines `16042-16042`; bytes `574705:574725`.
+
+````diff
+- 0\}$ the annihilator
++ 0\}$, the annihilator
+````
+
+Original SHA-256 `9402A2D959DBB53994A3117DE567468AFEC4D74664D0748205EAAF41F6FF55F0`; replacement SHA-256 `0981BE0AD80A859F60ED3A39B845A54F3A4935090BDE873ACA127D294FDAFFEA`.
+
+</details>
+
+<details id="mc-stk-err-2009">
+<summary><code>MC-STK-ERR-2009 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2009`; producer ID: `ALGEBRA-RECON-424`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16045) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the doubled finite-predicate construction.
+- Adverse evidence: The proper ideal still gives a nonzero quotient with a minimal prime, exactly as needed.
+
+### Change 1: `MC-STK-ERR-2009-OP1`
+
+Pinned-official lines `16045-16045`; bytes `574850:574870`.
+
+````diff
+- $I \not = R$ we have
++ $I \not = R$,
+````
+
+Original SHA-256 `5064F1C7749F3ED13EFACB4BE92834840DD4E23472FDE14F66D86160CB1172F5`; replacement SHA-256 `36095EEF36971652CB6BF92A55522E227111526C846F094C39DCDA6F569996E5`.
+
+</details>
+
+<details id="mc-stk-err-2010">
+<summary><code>MC-STK-ERR-2010 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2010`; producer ID: `ALGEBRA-RECON-425`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16128) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the infinitive marker.
+- Adverse evidence: The descending sum of positive annihilating exponents proves the finite-generator argument. Preserve the source hypothesis on this particular prime, without adding ring Noetherianity.
+
+### Change 1: `MC-STK-ERR-2010-OP1`
+
+Pinned-official lines `16128-16128`; bytes `577679:577695`.
+
+````diff
+- enough the prove
++ enough to prove
+````
+
+Original SHA-256 `868359CFEBED303F2D528EF6E42BAC53EE513FD777B3A11FC8A1C336AFEDA48A`; replacement SHA-256 `0D972929B281D8146DF8D31D756ED6CCE1373F6F293BFD5CA7F13BF20282DF0C`.
+
+</details>
+
+<details id="mc-stk-err-2011">
+<summary><code>MC-STK-ERR-2011 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2011`; producer ID: `ALGEBRA-RECON-426`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16191-L16214) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: One report identifies the same naming construction at two loci; fix each exactly once.
+- Adverse evidence: The contraction map on spectra and all associated-prime inclusions remain the source maps.
+
+### Change 1: `MC-STK-ERR-2011-OP1`
+
+Pinned-official lines `16191-16191`; bytes `580284:580293`.
+
+````diff
+- Denote $f
++ Denote by $f
+````
+
+Original SHA-256 `ECD85C4547ADBCB8460604A79A2927B66FA57AF62E45DEB11CF06816E78C26B8`; replacement SHA-256 `28902F9CC6018AA5D8E9342F54A3EC84B4F3B33EAEB2D11DADE039A5F6C955AE`.
+
+### Change 2: `MC-STK-ERR-2011-OP2`
+
+Pinned-official lines `16214-16214`; bytes `580988:580997`.
+
+````diff
+- Denote $f
++ Denote by $f
+````
+
+Original SHA-256 `ECD85C4547ADBCB8460604A79A2927B66FA57AF62E45DEB11CF06816E78C26B8`; replacement SHA-256 `28902F9CC6018AA5D8E9342F54A3EC84B4F3B33EAEB2D11DADE039A5F6C955AE`.
+
+</details>
+
+<details id="mc-stk-err-2012">
+<summary><code>MC-STK-ERR-2012 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2012`; producer ID: `ALGEBRA-RECON-427`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16240) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The nonvanishing witness ym is a module element and belongs to M_q.
+- Adverse evidence: The exact source witness remains nonzero because its annihilator stays proper at q and y is a unit there. It vanishes at the other maximal localizations for the reason given in the source.
+
+### Change 1: `MC-STK-ERR-2012-OP1`
+
+Pinned-official lines `16240-16240`; bytes `582128:582145`.
+
+````diff
+- $S_{\mathfrak q}$
++ $M_{\mathfrak q}$
+````
+
+Original SHA-256 `F4877F90FA1330E058DEE12A80D4872E775C9E872568AD8CFE3FB56D57263C40`; replacement SHA-256 `724781E4FA5F61158E1FE301A6B08329D06769E97BBC52FFC8ACC5EDEB300EFB`.
+
+</details>
+
+<details id="mc-stk-err-2013">
+<summary><code>MC-STK-ERR-2013 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2013`; producer ID: `ALGEBRA-RECON-428`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16291) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the prime-as-ring-element quantifier at the later weak-association occurrence.
+- Adverse evidence: This is the repeated wording recorded as pending in ALGEBRA-RECON-407. The source weak-localization lemma is now fully read, and the same two-stage fraction maps justify the correction without Noetherian assumptions.
+
+### Change 1: `MC-STK-ERR-2013-OP1`
+
+Pinned-official lines `16291-16291`; bytes `583973:583997`.
+
+````diff
+- for $\mathfrak p \in R$,
++ for $\mathfrak p \in \Spec(R)$ with
+````
+
+Original SHA-256 `511AC4B8473BF8C4537BC54834EB8BE34CEC72C5FFC21B6293650AFFD3EFEC8B`; replacement SHA-256 `A72946FCFA61ECDEC3545C5088C54BE124772F2FD941DB36950AE07DC113D661`.
+
+</details>
+
+<details id="mc-stk-err-2014">
+<summary><code>MC-STK-ERR-2014 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2014`; producer ID: `ALGEBRA-RECON-429`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16421) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The purely transcendental stage has r variables; n was the earlier finite-extension degree.
+- Adverse evidence: Retain the exact polynomial ring, its nonzero coefficient-field denominators, and the resulting domain used in the proof.
+
+### Change 1: `MC-STK-ERR-2014-OP1`
+
+Pinned-official lines `16421-16421`; bytes `589128:589132`.
+
+````diff
+- x_n]
++ x_r]
+````
+
+Original SHA-256 `8910465C9949B3E638B5456C82D452F78F8F672CB2C3E8664D91BBD0F679AE5F`; replacement SHA-256 `D3E6C07BD0ADBE799FDC7CA75FC01BD7EBECC2E469F4ABC53AD15C0BA7DA2C9E`.
+
+</details>
+
+<details id="mc-stk-err-2015">
+<summary><code>MC-STK-ERR-2015 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2015`; producer ID: `ALGEBRA-RECON-430`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16410-L16417) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the requested comma and state explicitly that the input used to prove injection is nonzero.
+- Adverse evidence: The displayed nonzero residue and Nakayama contradiction fail for z=0. Choosing a nonzero input is sufficient for injection and leaves the field-extension theorem unchanged; the original coefficients and minimal finite submodule are retained.
+
+### Change 1: `MC-STK-ERR-2015-OP1`
+
+Pinned-official lines `16410-16410`; bytes `588491:588505`.
+
+````diff
+- be an element.
++ be a nonzero element.
+````
+
+Original SHA-256 `8DAD7F6F6E47F4AC642DD25CD0C070DC779E9189EB80ABC16F36AF38DEAF135D`; replacement SHA-256 `990B8B0EE9B475FE93205C31E2A73862A4F017A0259CF268AD5048F8523343F6`.
+
+### Change 2: `MC-STK-ERR-2015-OP2`
+
+Pinned-official lines `16417-16417`; bytes `588913:588934`.
+
+````diff
+- Lemma \ref{lemma-NAK}
++ Lemma \ref{lemma-NAK},
+````
+
+Original SHA-256 `39949DBEABC475C96552529B476CE2DE64AB1A563074C90B2AECDA9581ED129D`; replacement SHA-256 `0C9063E4E8151EF0B6ECD7E2F1084B1D19799C547F95374E20C60542F514738B`.
+
+</details>
+
+<details id="mc-stk-err-2016">
+<summary><code>MC-STK-ERR-2016 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2016`; producer ID: `ALGEBRA-RECON-431`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16419) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Add terminal punctuation before the next sentence.
+- Adverse evidence: The residue-module tensor product and its base field are unchanged.
+
+### Change 1: `MC-STK-ERR-2016-OP1`
+
+Pinned-official lines `16419-16419`; bytes `589016:589028`.
+
+````diff
+- \otimes_k K$
++ \otimes_k K$.
+````
+
+Original SHA-256 `3E859FC697AC784FF503A6EFB89D7AC7BDCB572394139229A1CF7672A67167AC`; replacement SHA-256 `69A66D2995380C928FDA420B34F395A513F98DE5D04C8B9E5266EE6F052D2C37`.
+
+</details>
+
+<details id="mc-stk-err-2017">
+<summary><code>MC-STK-ERR-2017 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2017`; producer ID: `ALGEBRA-RECON-432`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16430) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Membership in the annihilator ideal applies to the ring element gf^n; its action on z is zero.
+- Adverse evidence: The exact equivalence gf^n in J iff gf^nz=0 preserves every multiplier and exponent. The previously proved injection justifies removing g from the vanishing equation.
+
+### Change 1: `MC-STK-ERR-2017-OP1`
+
+Pinned-official lines `16430-16430`; bytes `589503:589518`.
+
+````diff
+- $g f^n z \in J$
++ $g f^n \in J$
+````
+
+Original SHA-256 `74B5761041912522B4B393CB46B28BE98561A219DF63A2F42A825D9242F9DA9A`; replacement SHA-256 `B39D578FAB48C87BA713066A47A3374FFDC7DCE8E5C18A42CC6DB3AB272DC823`.
+
+</details>
+
+<details id="mc-stk-err-2018">
+<summary><code>MC-STK-ERR-2018 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2018`; producer ID: `ALGEBRA-RECON-434`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16508) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The vanishing statement concerns the newly quantified K', as required by the following element argument.
+- Adverse evidence: The source separately proves and uses vanishing for K. Both submodules retain their original definitions.
+
+### Change 1: `MC-STK-ERR-2018-OP1`
+
+Pinned-official lines `16508-16508`; bytes `591813:591830`.
+
+````diff
+- K_{\mathfrak q_j}
++ K'_{\mathfrak q_j}
+````
+
+Original SHA-256 `F280CC06BBC9740E98B831B9C8DCECB32221A8BC57DE544BF785203624ABE4C4`; replacement SHA-256 `88E4EA81ED54729CA003FC2A02ECE983FF5BC23B9FFA90D5FF9DABB292FFFC5D`.
+
+</details>
+
+<details id="mc-stk-err-2019">
+<summary><code>MC-STK-ERR-2019 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2019`; producer ID: `ALGEBRA-RECON-437`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16643) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The source definition reserves unqualified regularity for the ring module R; the permutation conclusion must retain M.
+- Adverse evidence: The local ring k[t,epsilon]/(t epsilon,epsilon^2) localized at (t,epsilon), with M=R/(epsilon), gives an M-regular element t that is a ring zerodivisor. The existing proof works on M.
+
+### Change 1: `MC-STK-ERR-2019-OP1`
+
+Pinned-official lines `16643-16643`; bytes `596341:596353`.
+
+````diff
+- is a regular
++ is an $M$-regular
+````
+
+Original SHA-256 `C8C1579DEFA806F930E1223336FF9C115B1E299928D96E851F89CE52DFC59F41`; replacement SHA-256 `B026CEDDBF5F282B988DEC21A20E5762332FF23D1498A3867181A2EEFBFFE50B`.
+
+</details>
+
+<details id="mc-stk-err-2020">
+<summary><code>MC-STK-ERR-2020 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2020`; producer ID: `ALGEBRA-RECON-438`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16671) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The adjacent-transposition argument takes the quotient by the generated submodule, restoring its omitted final M.
+- Adverse evidence: Keep the same order, ideal generators, local Noetherian hypotheses, and nonzero final quotient.
+
+### Change 1: `MC-STK-ERR-2020-OP1`
+
+Pinned-official lines `16671-16671`; bytes `597434:597460`.
+
+````diff
+- $M/(x_1, \ldots, x_{i-2})$
++ $M/(x_1, \ldots, x_{i-2})M$
+````
+
+Original SHA-256 `8FFDD6C06F9F9C588EB55921CA9DDAADF713F33EE8A8C3FAA2388728C24EA1A5`; replacement SHA-256 `BC8F1FE01AEA93A9E7DD1A0A9E4067C08C661003B44362DBCE0AB8EEB28EC7AB`.
+
+</details>
+
+<details id="mc-stk-err-2021">
+<summary><code>MC-STK-ERR-2021 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2021`; producer ID: `ALGEBRA-RECON-440`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16836) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The next multiplier must use the next variable x_(i+1). Its shift leaves each coefficient ideal I_E unchanged.
+- Adverse evidence: All supports of E, including zero exponents, give precisely all ordered subsequence conditions. This justification stays in the note; only the wrong index is replaced.
+
+### Change 1: `MC-STK-ERR-2021-OP1`
+
+Pinned-official lines `16836-16836`; bytes `603998:604010`.
+
+````diff
+- f_{i + 1}x_i
++ f_{i + 1}x_{i + 1}
+````
+
+Original SHA-256 `9FD225E629CC362FE3D1494E0A98507EB60F065BDEE59F29C12438E1093D1DF4`; replacement SHA-256 `08BD5700427E64425298F7F2D6F540BE5FE29F7B483E614504EFE4A87413BA47`.
+
+</details>
+
+<details id="mc-stk-err-2022">
+<summary><code>MC-STK-ERR-2022 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2022`; producer ID: `ALGEBRA-RECON-441`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16942) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the inner induction base l=0 before the displayed rewrite uses l-1 and l-2.
+- Adverse evidence: The induction on c already proves the base without any inverse power. All terms in the original step remain; the l=1 empty sum and no-primed-variable boundary are accounted for.
+
+### Change 1: `MC-STK-ERR-2022-OP1`
+
+Pinned-official lines `16942-16942`; bytes `607093:607135`.
+
+````diff
+- Namely, set $J' = (f_1, \ldots, f_{c-1})$.
++ Set $J' = (f_1, \ldots, f_{c-1})$.
++ For $l = 0$, the induction hypothesis on $c$ gives
++ $a_{I',0} \in J' \subset J$, which proves the assertion.
++ Assume now $l \geq 1$; the sum from $0$ to $l-2$ below is empty when $l=1$.
+````
+
+Original SHA-256 `A2157BCA20A29088F072F3907D0B6867A2CC05941B3F1F8B04B448A997B57BBC`; replacement SHA-256 `5C6B44BC86FE22DEA4173C9E081C83CDB944A3F3745EA4F24423713EEECDA8FA`.
+
+</details>
+
+<details id="mc-stk-err-2023">
+<summary><code>MC-STK-ERR-2023 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2023`; producer ID: `ALGEBRA-RECON-442`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L16975) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Module coefficients belong to the generated submodule JM, not to the ring ideal J.
+- Adverse evidence: The same original induction works with M/JM. No ring-module identification is assumed.
+
+### Change 1: `MC-STK-ERR-2023-OP1`
+
+Pinned-official lines `16975-16975`; bytes `608305:608334`.
+
+````diff
+- coefficients $m_I$ are in $J$
++ coefficients $m_I$ are in $JM$
+````
+
+Original SHA-256 `32B430FC19402D692CE1C18F0C9224DEC1D2601266410B0A58F568D36D705B5A`; replacement SHA-256 `F030CA290225F8EEC21F3324490F16F14DAF0C5DAE77AD6A04FAC96D2C46BD20`.
+
+</details>
+
+<details id="mc-stk-err-2024">
+<summary><code>MC-STK-ERR-2024 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2024`; producer ID: `ALGEBRA-RECON-443`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17046-L17053) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Handle degree zero by its actual quotient and restrict both formulas containing J^(n-1) to positive n.
+- Adverse evidence: The exact intersection identity for n>=1 follows from injectivity of the monomial shift on the original polynomial module. It does not require separatedness; it makes no assertion involving J^-1.
+
+### Change 1: `MC-STK-ERR-2024-OP1`
+
+Pinned-official lines `17046-17046`; bytes `611044:611102`.
+
+````diff
+- Thus, in order to prove the lemma it suffices to show that
++ For $n=0$, the displayed quotient is $M/JM$, as required.
++ For $n \geq 1$, it suffices to show that
+````
+
+Original SHA-256 `64A7E5119C28B41960911ECCA7F91740C835F7D80E3C7FB12547A550339071DB`; replacement SHA-256 `0640AC5E7255ECE03CBBE626885F0B76A8AD9E5DDC5D5426A10F944910DB3FEF`.
+
+### Change 2: `MC-STK-ERR-2024-OP2`
+
+Pinned-official lines `17053-17053`; bytes `611370:611387`.
+
+````diff
+- Actually, we have
++ Actually, for $n \geq 1$, we have
+````
+
+Original SHA-256 `7544876CAA960F644E1CDAD1003F365787B1360B18CBC80E6CD46E73D5758EBE`; replacement SHA-256 `F24B568859B69B3A5E4FFDFDEA01EA8115C1652527CAF79225BDE9521D2049BF`.
+
+</details>
+
+<details id="mc-stk-err-2025">
+<summary><code>MC-STK-ERR-2025 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2025`; producer ID: `ALGEBRA-RECON-444`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17055-L17056) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the module quotient and name the original tensor product as a polynomial module.
+- Adverse evidence: For a general R-module M this is not an algebra. The notation M/JM[X] in the preceding line is consistent polynomial-module shorthand and is retained.
+
+### Change 1: `MC-STK-ERR-2025-OP1`
+
+Pinned-official lines `17055-17056`; bytes `611527:611569`.
+
+````diff
+- polynomial algebra
+- $M/J[X_1, \ldots, X_c]$
++ polynomial module
++ $(M/JM) \otimes_{R/J} (R/J)[X_1, \ldots, X_c]$
+````
+
+Original SHA-256 `5036D49CEA85CF6EF43DDD3698D723A7B3B0CF5F644689FEEAE8123FC212F530`; replacement SHA-256 `EF5B433F319A81B38A9A93DC30F28A206A6B543986908539ABE732FA7E1A8CFE`.
+
+</details>
+
+<details id="mc-stk-err-2026">
+<summary><code>MC-STK-ERR-2026 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2026`; producer ID: `ALGEBRA-RECON-445`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17127) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Define the image ideal used by the displayed graded comparison.
+- Adverse evidence: The original quotients by the intersections of all ideal powers are retained. Exact representative maps prove the comparison in every degree, including the unit ideal and zero module.
+
+### Change 1: `MC-STK-ERR-2026-OP1`
+
+Pinned-official lines `17127-17127`; bytes `614463:614483`.
+
+````diff
+- This is true because
++ Set $\overline{J}=J\overline{R}
++ = (\overline{f}_1, \ldots, \overline{f}_r)$.
++ This is true because
+````
+
+Original SHA-256 `C9320F6FD38E3E3843918591710515B132B9CF1439AEED5B8392B7177B42938F`; replacement SHA-256 `6679A08BF3CDE70BEB3D31379E17C3F616F3D52192A1C6D647201CC311FBB4E7`.
+
+</details>
+
+<details id="mc-stk-err-2027">
+<summary><code>MC-STK-ERR-2027 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2027`; producer ID: `ALGEBRA-RECON-446`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17199-L17206) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the declared image b consistently on the S-side of the base-change proof.
+- Adverse evidence: The assertion about the tensor kernel itself is valid: b^n sum(s_i tensor x_i)=sum(s_i x_i) tensor a^n=0. This is notation clarification, not a new false-torsion claim.
+
+### Change 1: `MC-STK-ERR-2027-OP1`
+
+Pinned-official lines `17199-17199`; bytes `616575:616604`.
+
+````diff
+- annihilates $a$-power torsion
++ annihilates $b$-power torsion
+````
+
+Original SHA-256 `DDB98540BDF1CE5217A4242B7888EB9DA98859B77FEE7AC41B42288D3AD8595A`; replacement SHA-256 `287C24BF908D0EA8B30E7BAB57EB26596A2E164418E2D2544E5440C4EE9F8EAD`.
+
+### Change 2: `MC-STK-ERR-2027-OP2`
+
+Pinned-official lines `17206-17206`; bytes `617070:617090`.
+
+````diff
+- annihilated by $a^n$
++ annihilated by $b^n$
+````
+
+Original SHA-256 `B55E686A2D53FAB6725DAC9F5045B447557D9607C3522FA7E945E7C592FDC661`; replacement SHA-256 `B41222B1149639F6BCA3ECBCEFE9CBBFB8DF8464494840BF567CA6E468DBC35F`.
+
+</details>
+
+<details id="mc-stk-err-2028">
+<summary><code>MC-STK-ERR-2028 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2028`; producer ID: `ALGEBRA-RECON-447`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17221) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The last factor uses the declared polynomial variable t_n.
+- Adverse evidence: The original degree, all monomial components and the Rees presentation are preserved.
+
+### Change 1: `MC-STK-ERR-2028-OP1`
+
+Pinned-official lines `17221-17221`; bytes `617780:617789`.
+
+````diff
+- x_n^{e_n}
++ t_n^{e_n}
+````
+
+Original SHA-256 `342F3A679ABAB2C3838D1ABF296C5B023C361F29F402E408755F1C63477215F2`; replacement SHA-256 `128C03936EDF5B4A366FFBBC4964C1A6FACB98132694213AB2493EA2B7EF7D22`.
+
+</details>
+
+<details id="mc-stk-err-2029">
+<summary><code>MC-STK-ERR-2029 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2029`; producer ID: `ALGEBRA-RECON-448`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17267) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The base-change target is the ring R introduced in the statement and proof.
+- Adverse evidence: The tensor map and power-torsion quotient retain their original rings and denominators.
+
+### Change 1: `MC-STK-ERR-2029-OP1`
+
+Pinned-official lines `17267-17267`; bytes `619665:619674`.
+
+````diff
+- $P \to A$
++ $P \to R$
+````
+
+Original SHA-256 `D5D6E948E877E04EC739DF1CD415EEAD10815A11AC0FEC2211179C01DF6FE9FC`; replacement SHA-256 `48EE3D82DF7948B8680FFAF6DE1108182EDCCF31583BA82C488F09CA59D54502`.
+
+</details>
+
+<details id="mc-stk-err-2030">
+<summary><code>MC-STK-ERR-2030 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2030`; producer ID: `ALGEBRA-RECON-449`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17359-L17372) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The original indexing conditions exclude every object when R is a field. Admit the identity chart so the full original class of local domains remains covered, and explicitly index charts inside the specified A.
+- Adverse evidence: The zero-denominator chart is zero and fails the fibre condition. The identity chart has nonzero closed fibre and is itself an affine blowup. The source valuation-ring hypothesis is retained.
+
+### Change 1: `MC-STK-ERR-2030-OP1`
+
+Pinned-official lines `17359-17359`; bytes `622959:623001`.
+
+````diff
+- affine blowups $R \to R[\frac{I}{a}]$ with
++ affine blowups $R \to R[\frac{I}{a}]$ contained in $A$, with
+````
+
+Original SHA-256 `7DA1DA6DD698358F4CA70E602A7D899405A4099F50A53C9351AEA17BEA36E0B3`; replacement SHA-256 `350D32FF534AECA2AD47B521DB2860280539F5B1A1DE64E32C85770443C17C56`.
+
+### Change 2: `MC-STK-ERR-2030-OP2`
+
+Pinned-official lines `17362-17362`; bytes `623045:623081`.
+
+````diff
+- \item $a \in I \subset \mathfrak m$,
++ \item $a \in I \subset \mathfrak m$, or $(I,a)=(R,1)$,
+````
+
+Original SHA-256 `455F0812161A1D6B200E6048725EE72C786E5573BEA231576A8D7B7DACACD80A`; replacement SHA-256 `C7F00A5720311286416015C007F9DCACCF2DF7C6ADE9C32C89923A613360E0AF`.
+
+### Change 3: `MC-STK-ERR-2030-OP3`
+
+Pinned-official lines `17370-17370`; bytes `623239:623307`.
+
+````diff
+- Any blowup algebra $R[\frac{I}{a}]$ is a domain contained in $K$ see
++ If $R$ is a field, then $A=R$ and the identity chart $(I,a)=(R,1)$
++ gives the result. Assume henceforth that $\mathfrak m\ne0$.
++ Condition (3) forces $a\ne0$. Each chart $R[\frac{I}{a}]$
++ in the diagram is a domain contained in $K$, see
+````
+
+Original SHA-256 `FEAB17234024CC926945B04067C621C6AAB62A3D3E62F57DBE245287841808CB`; replacement SHA-256 `4A66DDD31670BF6AA3CA42202D1998201CEB19471F3118F54830FF5446155746`.
+
+### Change 4: `MC-STK-ERR-2030-OP4`
+
+Pinned-official lines `17372-17372`; bytes `623379:623452`.
+
+````diff
+- directed union of the ones where $a \in I$ have properties (1), (2), (3).
++ directed union of those contained in $A$ and having properties (1), (2), (3).
+````
+
+Original SHA-256 `B56A872BCC4E889D14B602F7F6E04107D08F2FC79E9046C1019422A827886F4E`; replacement SHA-256 `7530BC78A6F49536A24AF8EEEFAB1CA0C8BCBAFD12EFA61BB74F8CB0A82F3856`.
+
+</details>
+
+<details id="mc-stk-err-2031">
+<summary><code>MC-STK-ERR-2031 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2031`; producer ID: `ALGEBRA-RECON-450`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17386-L17390) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: A scaled common denominator puts every generator in the original maximal ideal; contraction from the dominating A proves the nonzero fibre.
+- Adverse evidence: The separate field case is handled by the identity chart. Because f_i=t(de_i), membership in the maximal ideal already follows inside R; no extra valuation assumption is hidden in that calculation.
+
+### Change 1: `MC-STK-ERR-2031-OP1`
+
+Pinned-official lines `17386-17387`; bytes `623956:624047`.
+
+````diff
+- Choose a nonzero $a \in R$ such that we can write $e_i = f_i/a$ for
+- all $i = 1, \ldots, n$.
++ Choose $0\ne d\in R$ such that $de_i\in R$ for all $i$.
++ Choose $0\ne t\in\mathfrak m$ and put $a=td$ and $f_i=ae_i$.
++ Then $a\ne0$, $a,f_i\in\mathfrak m$, and $e_i=f_i/a$.
+````
+
+Original SHA-256 `F7C13803259EFF90FC1AD66A4861FABDE31684FAA7D00144E6CDBB9F4C572F08`; replacement SHA-256 `98F3CC1B096B40D24A573F588C5BD1C741E0F5A44134C7E78C0C2AD5B38027E2`.
+
+### Change 2: `MC-STK-ERR-2031-OP2`
+
+Pinned-official lines `17390-17390`; bytes `624222:624281`.
+
+````diff
+- $e_i$. The lemma follows immediately from this observation.
++ $e_i$. The maximal ideal of $A$ contracts to a prime of this chart
++ over $\mathfrak m$, so its fibre at $\mathfrak m$ is nonzero.
++ Thus the constructed chart has all three required properties, proving the lemma.
+````
+
+Original SHA-256 `2CA54BDD004297835E4FA7BB99D8455FA60505894055581A001D34C99E124711`; replacement SHA-256 `57C1EEFA90EE813130B55A8681666953FD4CEED35D2E490864BE6ECBBD3E2A93`.
+
+</details>
+
+<details id="mc-stk-err-2032">
+<summary><code>MC-STK-ERR-2032 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2032`; producer ID: `ALGEBRA-RECON-452`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17430) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the first syzygy before the printed recursion refers to its preceding free module.
+- Adverse evidence: The first kernel is finite by Noetherianity. All original modules and subsequent differentials stay intact; no negative free-module index is assigned to M.
+
+### Change 1: `MC-STK-ERR-2032-OP1`
+
+Pinned-official lines `17430-17430`; bytes `625061:625113`.
+
+````diff
+- As a first step choose a surjection $R^{n_0} \to M$.
++ As a first step choose a surjection $R^{n_0} \to M$,
++ and then a surjection $R^{n_1}\to\Ker(R^{n_0}\to M)$.
++ For the subsequent steps take $e\geq1$.
+````
+
+Original SHA-256 `2CC7738CF8E5B2C39AC8BE2FAB4B2292D46C53860D46D1B78F55C0ED77999E1C`; replacement SHA-256 `7FFF8E579D7EAA9CC3CAAA3253B3D76E4886E77E3F237861B3A4213D6B17C032`.
+
+</details>
+
+<details id="mc-stk-err-2033">
+<summary><code>MC-STK-ERR-2033 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2033`; producer ID: `ALGEBRA-RECON-458`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17646) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The distributive subject each takes a singular verb.
+- Adverse evidence: The short exact sequence of Hom complexes, differential and connecting maps are unchanged.
+
+### Change 1: `MC-STK-ERR-2033-OP1`
+
+Pinned-official lines `17646-17646`; bytes `632244:632270`.
+
+````diff
+- each of the $F_i$ are free
++ each of the $F_i$ is free
+````
+
+Original SHA-256 `E522312F1DBA9FD894F27DF0E2B0A267F9938BDA5B20A1A8C71F99F4B71643A9`; replacement SHA-256 `E4806657D59BFF06817FBDC9A58F0986C845CCFF8B3A0ED832CB57A5E947B8C7`.
+
+</details>
+
+<details id="mc-stk-err-2034">
+<summary><code>MC-STK-ERR-2034 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2034`; producer ID: `ALGEBRA-RECON-459`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17698) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the article before the singular sequence.
+- Adverse evidence: The split free-module sequence and the resulting sequence of kernels are unchanged.
+
+### Change 1: `MC-STK-ERR-2034-OP1`
+
+Pinned-official lines `17698-17698`; bytes `633667:633690`.
+
+````diff
+- is short exact sequence
++ is a short exact sequence
+````
+
+Original SHA-256 `95DB6524F62D63105A04450C2B189067338F85F138E37D2F847D083F5613BB52`; replacement SHA-256 `228A6CC1A498571732628949B23F6B06584284D517EA88D2E19A2738FA970FC3`.
+
+</details>
+
+<details id="mc-stk-err-2035">
+<summary><code>MC-STK-ERR-2035 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2035`; producer ID: `ALGEBRA-RECON-461`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L17976) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The module N/xN is the quotient by the entire sum ideal p+(x).
+- Adverse evidence: The explicit generator map proves this quotient and its inverse; all support and associated-prime calculations retain the original objects.
+
+### Change 1: `MC-STK-ERR-2035-OP1`
+
+Pinned-official lines `17976-17976`; bytes `643643:643662`.
+
+````diff
+- R/\mathfrak p + (x)
++ R/(\mathfrak p + (x))
+````
+
+Original SHA-256 `F480529D3DB89325630648883D5EC955858F1EA76B6F7918CF5F210A173ED429`; replacement SHA-256 `6CA3C4AA3966E8D2052F62F8B8FDAF23D2E4D8800AD6C5FB7EAA36519B4C8215`.
+
+</details>
+
+<details id="mc-stk-err-2036">
+<summary><code>MC-STK-ERR-2036 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2036`; producer ID: `ALGEBRA-RECON-462`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18008) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The dimension calculation uses the same whole quotient ideal as the preceding inheritance lemma.
+- Adverse evidence: The original x is a nonzerodivisor and is not in p. The minimal-prime choice, power x^n and exact depth drop are preserved.
+
+### Change 1: `MC-STK-ERR-2036-OP1`
+
+Pinned-official lines `18008-18008`; bytes `644993:645018`.
+
+````diff
+- \dim(R/\mathfrak p + (x))
++ \dim(R/(\mathfrak p + (x)))
+````
+
+Original SHA-256 `FB83F0D3E23C191F94CFB95A27987E6B49E1D0ADD291538558C80868E35E573E`; replacement SHA-256 `8E984C0BE253956EF5A82772512F73C8BDE84B4B3B46075AD9C2F6E0F93F6185`.
+
+</details>
+
+<details id="mc-stk-err-2037">
+<summary><code>MC-STK-ERR-2037 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2037`; producer ID: `ALGEBRA-RECON-464`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18060-L18081) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Handle the zero module and empty maximal spectrum before finite induction, and restrict the asserted depth drop to the nonzero localizations.
+- Adverse evidence: The theorem remains valid. A nonzero finite module has a nonzero maximal localization with finite depth; zero localizations can still occur and retain infinite depth. All original rings, f and localizations are preserved.
+
+### Change 1: `MC-STK-ERR-2037-OP1`
+
+Pinned-official lines `18060-18060`; bytes `647184:647193`.
+
+````diff
+- By Lemmas
++ Use the convention $\min\varnothing=\infty$. If $N=0$, the equality
++ is immediate, including when $S=0$. Assume $N\ne0$; some maximal
++ localization of $N$ is nonzero and has finite depth, so the minimum
++ used below is finite. By Lemmas
+````
+
+Original SHA-256 `9F7370E38F776C0E22643DDDF1C141CE95A96E02AC53A56CB3234728C892CA5E`; replacement SHA-256 `515CE2B08FF29B62D34A9C86AE50EAE4AFE3B594A2BB5F6CD14E3B22010C114B`.
+
+### Change 2: `MC-STK-ERR-2037-OP2`
+
+Pinned-official lines `18080-18081`; bytes `648377:648487`.
+
+````diff
+- all the depths drop exactly by $1$ when passing from $N$ to
+- $N/fN$ and the induction hypothesis does the rest.
++ the depth over $R$ and the depths of the nonzero maximal localizations
++ drop exactly by $1$ when passing from $N$ to $N/fN$.
++ The nonzero localizations remain nonzero by Nakayama's lemma;
++ zero localizations stay zero with infinite depth. Thus the finite
++ minimum drops by $1$, and the induction hypothesis finishes the proof.
+````
+
+Original SHA-256 `BD7CBAB85F9D5C22DA43FDA3D6F7DA0AC38DD960F12359BBF8B678136158BB8D`; replacement SHA-256 `FA9D6179A35C0D4CC16E7C311398EAC799E7AA2C1EAB125527B6E94525993128`.
+
+</details>
+
+<details id="mc-stk-err-2038">
+<summary><code>MC-STK-ERR-2038 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2038`; producer ID: `ALGEBRA-RECON-465`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18103-L18111) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the declared Ext operator consistently in the two displayed maps.
+- Adverse evidence: The functors are already mathematically correct; this changes operator typography only.
+
+### Change 1: `MC-STK-ERR-2038-OP1`
+
+Pinned-official lines `18103-18103`; bytes `649078:649088`.
+
+````diff
+- \text{Ext}
++ \Ext
+````
+
+Original SHA-256 `CC8FE86B15D4BE271E455233722FAA09D0E5ED9F65EE53B1B0EB63DD259785A3`; replacement SHA-256 `FAB9E8E64156068CBB20E1B72F7FF685E61043D8FCCACAF690416C66D99F2F99`.
+
+### Change 2: `MC-STK-ERR-2038-OP2`
+
+Pinned-official lines `18111-18111`; bytes `649312:649322`.
+
+````diff
+- \text{Ext}
++ \Ext
+````
+
+Original SHA-256 `CC8FE86B15D4BE271E455233722FAA09D0E5ED9F65EE53B1B0EB63DD259785A3`; replacement SHA-256 `FAB9E8E64156068CBB20E1B72F7FF685E61043D8FCCACAF690416C66D99F2F99`.
+
+</details>
+
+<details id="mc-stk-err-2039">
+<summary><code>MC-STK-ERR-2039 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2039`; producer ID: `ALGEBRA-RECON-466`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18125) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The Hom complexes increase cohomological degree, so their isomorphism acts on cohomology.
+- Adverse evidence: The explicit adjunction and inverse commute with the original differentials; no variance or resolution change is needed.
+
+### Change 1: `MC-STK-ERR-2039-OP1`
+
+Pinned-official lines `18125-18125`; bytes `649683:649698`.
+
+````diff
+- homology groups
++ cohomology groups
+````
+
+Original SHA-256 `07EDD61CD957EC35A8CE8BF10A20704EDB698EA3EA92216ED19E25492E43AD9B`; replacement SHA-256 `B1829923B10CC2A743242B4D3886558E617D47DFA560892F013B7F2A4D8A143C`.
+
+</details>
+
+<details id="mc-stk-err-2040">
+<summary><code>MC-STK-ERR-2040 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2040`; producer ID: `ALGEBRA-RECON-467`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18156) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the article before injection.
+- Adverse evidence: The kernel is zero by the original Jacobson-radical intersection theorem; the proof and its hypothesis are unchanged.
+
+### Change 1: `MC-STK-ERR-2040-OP1`
+
+Pinned-official lines `18156-18156`; bytes `650530:650542`.
+
+````diff
+- is injection
++ is an injection
+````
+
+Original SHA-256 `E71709F5DDB976EC8551620A54C8072B5EE4570D46174D9D8EBCA70B05B7E86A`; replacement SHA-256 `882EF669540C9BF0FB623C912186A7B1DDD726CF107EA733E2B233AF3F91242D`.
+
+</details>
+
+<details id="mc-stk-err-2041">
+<summary><code>MC-STK-ERR-2041 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2041`; producer ID: `ALGEBRA-RECON-470`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18447-L18449) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The reported reversed index must be corrected together with the inconsistent minus sign and omitted endpoint generators, so the generators describe the original displayed denominator.
+- Adverse evidence: The printed positive cycle equations require matching signs. An identity square over the integers shows the opposite-sign pair is not a cycle. A one-row example shows that omitting endpoint boundaries already gives the wrong degree-zero quotient. Preserve the original commuting square and positive boundary formula.
+
+### Change 1: `MC-STK-ERR-2041-OP1`
+
+Pinned-official lines `18447-18449`; bytes `658980:659190`.
+
+````diff
+- Naturally, we divide out by ``trivial'' zig-zags, namely the submodule
+- generated by elements of the form $(0, \ldots, 0, -\delta(a_{t + 1, t-i}),
+- d(a_{t + 1, t-i}), 0, \ldots, 0)$. Note that there are canonical
++ Naturally, we divide out by the ``trivial'' zig-zags in the displayed
++ denominator. They are generated by tuples supported at the left endpoint
++ with value $d(a_{i+1,0})$, tuples supported at the right endpoint
++ with value $\delta(a_{0,i+1})$, and the adjacent pairs
++ $(0,\ldots,0,\delta(a_{t+1,i-t}),d(a_{t+1,i-t}),0,\ldots,0)$
++ for $0\leq t<i$. For $i=0$ only the endpoint generators occur.
++ Note that there are canonical
+````
+
+Original SHA-256 `0ADE34AF9161D4EF11D130AD19E539788EE29CFC4A3E8E46278F07B0C68F1488`; replacement SHA-256 `71AE6D90FEABA057E2C90362BA13062FE0445E3EAC3F33F2F03B23F40BB4B6F0`.
+
+</details>
+
+<details id="mc-stk-err-2042">
+<summary><code>MC-STK-ERR-2042 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2042`; producer ID: `ALGEBRA-RECON-471`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18466) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The representative belongs to the kernel of a degree-lowering differential.
+- Adverse evidence: Both endpoint maps land in the original homology groups; all cycles and degrees stay unchanged.
+
+### Change 1: `MC-STK-ERR-2042-OP1`
+
+Pinned-official lines `18466-18466`; bytes `659615:659624`.
+
+````diff
+- a cocycle
++ a cycle
+````
+
+Original SHA-256 `574FE3B148D817ECB2D365616F1BF8F3F8F3079EFA4C3474349621BF798E4CF6`; replacement SHA-256 `0892CFBF91D91F8821954C53D6F412E316886166FCD4340E2193CE9A14CA48DF`.
+
+</details>
+
+<details id="mc-stk-err-2043">
+<summary><code>MC-STK-ERR-2043 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2043`; producer ID: `ALGEBRA-RECON-472`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18476) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the parenthetical calculation before its period.
+- Adverse evidence: The commutation and square-zero calculation itself is correct.
+
+### Change 1: `MC-STK-ERR-2043-OP1`
+
+Pinned-official lines `18476-18476`; bytes `660066:660084`.
+
+````diff
+- = 0$. By exactness
++ = 0$). By exactness
+````
+
+Original SHA-256 `5C23F07278EEA4C2285BD8CE40D9A302605BDA1A58D685647989F30D139DCE29`; replacement SHA-256 `893E75613627C06D6C84FB870F6B40451EFE5F26A7AA3D496A2A83314431B259`.
+
+</details>
+
+<details id="mc-stk-err-2044">
+<summary><code>MC-STK-ERR-2044 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2044`; producer ID: `ALGEBRA-RECON-473`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18488-L18491) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the right-edge cokernels in the two actual consecutive degrees, rather than the transposed top-edge terms.
+- Adverse evidence: The original a_(0,i) lands in the corrected target, and delta is induced from A_(0,i+1). The full boundary-clearing proof includes the endpoints and degree zero.
+
+### Change 1: `MC-STK-ERR-2044-OP1`
+
+Pinned-official lines `18488-18488`; bytes `660542:660571`.
+
+````diff
+- \Coker(A_{i, 1} \to A_{i, 0})
++ \Coker(A_{1, i} \to A_{0, i})
+````
+
+Original SHA-256 `1EB0B69CAA1EA686FBC4D124C781AE9A8562CF62D99FF707AB12DBE8E53066E4`; replacement SHA-256 `E7CCFE3DFCA65D4F0FDC74AB5801D8ED7E779581F42CAA087D2FC8E1DE2088B8`.
+
+### Change 2: `MC-STK-ERR-2044-OP2`
+
+Pinned-official lines `18490-18490`; bytes `660608:660645`.
+
+````diff
+- \Coker(A_{i + 1, 1} \to A_{i + 1, 0})
++ \Coker(A_{1, i + 1} \to A_{0, i + 1})
+````
+
+Original SHA-256 `4BCE92206DE3DC05E7BB4F1F79877701447877D8BF749970AFC4A873A1E41234`; replacement SHA-256 `C0447BE6BBB42BEB1E82E4B4FB220EDE360EABBD6348C232DD32CEBB3752D5D1`.
+
+### Change 3: `MC-STK-ERR-2044-OP3`
+
+Pinned-official lines `18491-18491`; bytes `660650:660679`.
+
+````diff
+- \Coker(A_{i, 1} \to A_{i, 0})
++ \Coker(A_{1, i} \to A_{0, i})
+````
+
+Original SHA-256 `1EB0B69CAA1EA686FBC4D124C781AE9A8562CF62D99FF707AB12DBE8E53066E4`; replacement SHA-256 `E7CCFE3DFCA65D4F0FDC74AB5801D8ED7E779581F42CAA087D2FC8E1DE2088B8`.
+
+</details>
+
+<details id="mc-stk-err-2045">
+<summary><code>MC-STK-ERR-2045 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2045`; producer ID: `ALGEBRA-RECON-474`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18549-L18551) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the specified tensor base R explicit in both codomains.
+- Adverse evidence: The base ring is already determined by the surrounding definition; no change of mathematical tensor product is claimed.
+
+### Change 1: `MC-STK-ERR-2045-OP1`
+
+Pinned-official lines `18549-18549`; bytes `662728:662747`.
+
+````diff
+- F_{i-1} \otimes G_j
++ F_{i-1} \otimes_R G_j
+````
+
+Original SHA-256 `EE2E299DA6B512681ECD044975CE21F751C32B4E1A12DE3CAA8B1FF7162FEFBE`; replacement SHA-256 `04B1018A97A38F0E539726ABA0AE354F7FD4624C248CCA20E9C3766169438713`.
+
+### Change 2: `MC-STK-ERR-2045-OP2`
+
+Pinned-official lines `18551-18551`; bytes `662841:662860`.
+
+````diff
+- F_i \otimes G_{j-1}
++ F_i \otimes_R G_{j-1}
+````
+
+Original SHA-256 `7F913274DCFA11DEE90AFC23F1BE268BC90AED23BC38E66C80B970216FAAED4E`; replacement SHA-256 `8650EF2B342EC6FA412C63FE5FF288576738476125958C0FAD0BDD5524939835`.
+
+</details>
+
+<details id="mc-stk-err-2046">
+<summary><code>MC-STK-ERR-2046 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2046`; producer ID: `ALGEBRA-RECON-475`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18626-L18631) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Include dimensions zero and one, qualify the initial nonidentity assertion, and state the characteristic condition for the two distinct eigenspace multiplicities.
+- Adverse evidence: The full basis decomposition proves the swap is the identity in dimensions zero and one. In characteristic two every off-diagonal pair is a size-two Jordan block; distinct plus/minus eigenvalue multiplicities require characteristic different from two.
+
+### Change 1: `MC-STK-ERR-2046-OP1`
+
+Pinned-official lines `18626-18628`; bytes `665973:666058`.
+
+````diff
+- this map is not the
+- identity, because even when $i = 0$ this map is not the
+- identity!
++ this map need not be the
++ identity, even when $i = 0$.
+````
+
+Original SHA-256 `1F5EFE3B84E0FF67FE24BF25C7E7A3F67F530556BB408C7AFAEA52B151515637`; replacement SHA-256 `11D3B7C43AF40AAC0A88748260C8CF2D628500B8598F01F7B4C1B41D330215E0`.
+
+### Change 2: `MC-STK-ERR-2046-OP2`
+
+Pinned-official lines `18628-18629`; bytes `666059:666147`.
+
+````diff
+- For example, if $V$ is a vector space of dimension
+- $n$ over a field, then the switch map
++ For example, let $V$ be a vector space of dimension
++ $n$ over a field. If its characteristic is not $2$, the switch map
+````
+
+Original SHA-256 `45B9E6DB4ED32C5CD939597A7F03E42DDB62A686FADE370264D683D8C1815986`; replacement SHA-256 `F9EE192DE47154DAD49CFC7BDB872B303DD91D4D92F1F595E8713E624C48FF27`.
+
+### Change 3: `MC-STK-ERR-2046-OP3`
+
+Pinned-official lines `18631-18631`; bytes `666251:666303`.
+
+````diff
+- In characteristic $2$ it is not even diagonalizable.
++ In characteristic $2$ it is not diagonalizable when $n\geq2$.
+````
+
+Original SHA-256 `9C61DFA05574829C9C07EF607778215B662EA4D37C979D41F3AD6D32AA05F04C`; replacement SHA-256 `7F6B3A68CF1397242A00D934293A6F2D3C07A462EE12D4756BA4BBC51921D5C5`.
+
+</details>
+
+<details id="mc-stk-err-2047">
+<summary><code>MC-STK-ERR-2047 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2047`; producer ID: `ALGEBRA-RECON-477`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18764) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing verb in the conclusion.
+- Adverse evidence: Tensor products and exact filtered colimits give precisely the stated homology identity.
+
+### Change 1: `MC-STK-ERR-2047-OP1`
+
+Pinned-official lines `18764-18764`; bytes `670070:670094`.
+
+````diff
+- Thus the result by Lemma
++ Thus the result follows by Lemma
+````
+
+Original SHA-256 `981C77C44194D2E6996194CB4743118310C8A28CBE6938A81986080D870DA38C`; replacement SHA-256 `9C73EB518566E6C2ABA83A571B99CD90DBB4F1640B30D28607C6E5F4B2B3C7D8`.
+
+</details>
+
+<details id="mc-stk-err-2048">
+<summary><code>MC-STK-ERR-2048 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2048`; producer ID: `ALGEBRA-RECON-478`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18824) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the missing leading arrow in the alternating free resolution.
+- Adverse evidence: The exact kernel/image equalities for the original two projectors verify every degree; no map is replaced.
+
+### Change 1: `MC-STK-ERR-2048-OP1`
+
+Pinned-official lines `18824-18824`; bytes `671831:671839`.
+
+````diff
+- \ldots F
++ \ldots \to F
+````
+
+Original SHA-256 `ED37D7026C36F6484293F33CAE85C257ABE8D3AE628BF9217190A3ABD05BDE28`; replacement SHA-256 `EA60383460ECD24C3A326C70105DBB60501DE0DFCAB7288019B6381F5A14F769`.
+
+</details>
+
+<details id="mc-stk-err-2049">
+<summary><code>MC-STK-ERR-2049 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2049`; producer ID: `ALGEBRA-RECON-479`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18826-L18827) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the two distinct projectors in the same order as a and b.
+- Adverse evidence: The augmentation is projection to P; its kernel is the image of b, with a and b alternating as printed.
+
+### Change 1: `MC-STK-ERR-2049-OP1`
+
+Pinned-official lines `18826-18827`; bytes `671940:671971`.
+
+````diff
+- the projector onto
+- $P$ and $Q$.
++ the projectors onto
++ $P$ and $Q$, respectively.
+````
+
+Original SHA-256 `9FB02FA103AD1A1007F6455DE67975425D2FA59D7468F0FDB1E6C9A99ABF560A`; replacement SHA-256 `5446E86481D0DA7A95C4FA8F751C8067AD8DDB3E7CC9E2268A53B2778AC6CE85`.
+
+</details>
+
+<details id="mc-stk-err-2050">
+<summary><code>MC-STK-ERR-2050 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2050`; producer ID: `ALGEBRA-RECON-481`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18976) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the verb before surjective.
+- Adverse evidence: The actual fibre-product map q is onto: lift the difference of its two representatives through IF and retain their classes modulo J. The complete construction is separate editorial evidence.
+
+### Change 1: `MC-STK-ERR-2050-OP1`
+
+Pinned-official lines `18976-18976`; bytes `677974:677992`.
+
+````diff
+- and $q$ surjective
++ and $q$ is surjective
+````
+
+Original SHA-256 `A153D0EE0D1511B3096A0CCA2F9146B49C44F089290F99E8B0F89D0063E64BEF`; replacement SHA-256 `269A3C67D57F976CC96C4469B30D2EE82514778E9A992DE51FECDF459CDD1D3A`.
+
+</details>
+
+<details id="mc-stk-err-2051">
+<summary><code>MC-STK-ERR-2051 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2051`; producer ID: `ALGEBRA-RECON-482`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L18985) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The difference of two module elements lies in JP, rather than in the ring ideal J.
+- Adverse evidence: Write that difference as a finite sum of J coefficients times P elements; IJ=0 then proves the required annihilation. With t=a-id, t(P) lies in IP and t(IP)=0, so t^2=0. The exact inverse 2id-a and section h(2id-a) prove the source conclusion without replacing its omitted details.
+
+### Change 1: `MC-STK-ERR-2051-OP1`
+
+Pinned-official lines `18985-18985`; bytes `678601:678617`.
+
+````diff
+- $j_\alpha \in J$
++ $j_\alpha \in JP$
+````
+
+Original SHA-256 `F629A54BB50A5F0C3F19EFF97F59D863C8CF6DD4E36F29C0835D28B42A6CEDF9`; replacement SHA-256 `9982D6C2975E9E55DA11DED577EEEA4030B89ACF4A32198F909F0B689F94F88D`.
+
+</details>
+
+<details id="mc-stk-err-2052">
+<summary><code>MC-STK-ERR-2052 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2052`; producer ID: `ALGEBRA-RECON-483`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19024) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the literal horizontal-tab byte from the source expression.
+- Adverse evidence: TeX treats the tab as whitespace. This is source hygiene only; the rank claim and its nonzero-ring hypothesis are already correct.
+
+### Change 1: `MC-STK-ERR-2052-OP1`
+
+Pinned-official lines `19024-19024`; bytes `679850:679860`.
+
+````diff
+- $	R_{f_i}$
++ $R_{f_i}$
+````
+
+Original SHA-256 `4E5465D319934330A9AE2878EDA11F27FEFDB81C47F50CBF399FD42109CC5D1A`; replacement SHA-256 `B14F221F9E2A7AF6D27F8E1BFBD19AF5C11060CF5F6FB252A7305B4A0BE058DB`.
+
+</details>
+
+<details id="mc-stk-err-2053">
+<summary><code>MC-STK-ERR-2053 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2053`; producer ID: `ALGEBRA-RECON-484`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19083-L19084) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Represent the actual localized element by its numerator and denominator, state its avoidance of the selected prime, and identify the resulting original-ring open.
+- Adverse evidence: The mutual universal localization maps prove (R_g)_(h/g^a) is R_(gh) with every original fraction retained. The source conclusion is valid once its original-ring denominator and neighbourhood are specified.
+
+### Change 1: `MC-STK-ERR-2053-OP1`
+
+Pinned-official lines `19083-19084`; bytes `682085:682215`.
+
+````diff
+- Hence by Nakayama's lemma again there exists a $g' \in R_g$ such that
+- $\Ker(\varphi)_{g'} = 0$. In other words, $M_{gg'}$ is free.
++ Hence by Nakayama's lemma again there exists
++ $g'=h/g^a\in R_g\setminus\mathfrak pR_g$, with $a\geq0$ and
++ $h\in R\setminus\mathfrak p$, such that $\Ker(\varphi)_{g'}=0$.
++ Thus $(M_g)_{g'}\cong M_{gh}$ is free on the neighbourhood $D(gh)$.
+````
+
+Original SHA-256 `39EA6440398B4D14D9F09E2B98F8B57F8532C2B545EB0320DD1E1C0E5EE8F199`; replacement SHA-256 `99FB320271EC273BD9C5F839D820945C2CCEA6026B3442FC5A3A7F725055D356`.
+
+</details>
+
+<details id="mc-stk-err-2054">
+<summary><code>MC-STK-ERR-2054 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2054`; producer ID: `ALGEBRA-RECON-485`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19114-L19117) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural for the modules in the exact sequence and the singular verb for its one covering.
+- Adverse evidence: The adjacent agreement issue was detected in the same paragraph. Neither edit changes the finite-presentation hypothesis, Hom maps or localization cover.
+
+### Change 1: `MC-STK-ERR-2054-OP1`
+
+Pinned-official lines `19114-19114`; bytes `683140:683151`.
+
+````diff
+- $R$-module.
++ $R$-modules.
+````
+
+Original SHA-256 `92173124067B84069C8B9CAEF2DA0425AEF596C092216B779C707DFB919EB521`; replacement SHA-256 `3D3BC61B0764368053200C2B445AF9882EB3B07AA31C869F4003EDE0D4FDD1E6`.
+
+### Change 2: `MC-STK-ERR-2054-OP2`
+
+Pinned-official lines `19117-19117`; bytes `683277:683299`.
+
+````diff
+- there exist a covering
++ there exists a covering
+````
+
+Original SHA-256 `D6FFCFFDF5378CA0A2F99E27419FB8297D7AA7FFC312ECE45FE400352CD0EEBF`; replacement SHA-256 `163FC2CB7A3C3AEB918CE9E597CE9D92C7B3B244A1D85BA90C50703F39A89A01`.
+
+</details>
+
+<details id="mc-stk-err-2055">
+<summary><code>MC-STK-ERR-2055 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2055`; producer ID: `ALGEBRA-RECON-486`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19164) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the subject of the concluding clause.
+- Adverse evidence: The map is a surjection between free modules of the same finite rank. Its determinant is a unit, giving the original inverse; rank zero is included.
+
+### Change 1: `MC-STK-ERR-2055-OP1`
+
+Pinned-official lines `19164-19164`; bytes `685291:685315`.
+
+````diff
+- whence is an isomorphism
++ whence it is an isomorphism
+````
+
+Original SHA-256 `4EAA986E9004693D34D9A5E10DE43A22D6CA414971529F06FE65704E92E4010E`; replacement SHA-256 `C4631B3A17B67163AB5E41B9B3A89027F478C3620D310E34946810D8211D231C`.
+
+</details>
+
+<details id="mc-stk-err-2056">
+<summary><code>MC-STK-ERR-2056 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2056`; producer ID: `ALGEBRA-RECON-487`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19213-L19214) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the compound noun across the original line break.
+- Adverse evidence: The mathematical counterexample is correct. Smooth cutoffs identify the original localization with the cyclic quotient, and connectedness rules out a nontrivial idempotent kernel. The full verification stays in editorial evidence.
+
+### Change 1: `MC-STK-ERR-2056-OP1`
+
+Pinned-official lines `19213-19214`; bytes `687357:687372`.
+
+````diff
+- counter
+- example
++ counterexample
+````
+
+Original SHA-256 `75ADA67173EA3B586D4A2D0E9C08DC55C3F2189C3B023C963AE68EE02F6600A7`; replacement SHA-256 `D254415D1FEB143DFC093804E9259DC9B33167F5D9A781CF3DDE61962EF3961E`.
+
+</details>
+
+<details id="mc-stk-err-2057">
+<summary><code>MC-STK-ERR-2057 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2057`; producer ID: `ALGEBRA-RECON-488`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19281) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the maximal ideal of R already specified in the source module quotient.
+- Adverse evidence: The residue-field tensor map and original lifted basis verify the local descent. No different maximal ideal or residue field is substituted.
+
+### Change 1: `MC-STK-ERR-2057-OP1`
+
+Pinned-official lines `19281-19281`; bytes `690114:690133`.
+
+````diff
+- \kappa(\mathfrak m)
++ \kappa(\mathfrak m_R)
+````
+
+Original SHA-256 `D515C7768F6F9C6E3C0E47F8B4A983D4856E397A1863EB84D4EAE2E5BFD9E286`; replacement SHA-256 `BCA98449551F78D9F6AC28044FC8E9C0E1F9D5508EE8535DEA9E073F61BFB43F`.
+
+</details>
+
+<details id="mc-stk-err-2058">
+<summary><code>MC-STK-ERR-2058 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2058`; producer ID: `ALGEBRA-RECON-489`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19300) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural for the enumerated maximal ideals.
+- Adverse evidence: Chinese remainder lifts one basis at every maximal ideal. The local determinant argument then proves the original constant-rank result; the source hint remains a hint.
+
+### Change 1: `MC-STK-ERR-2058-OP1`
+
+Pinned-official lines `19300-19300`; bytes `690812:690829`.
+
+````diff
+- all maximal ideal
++ all maximal ideals
+````
+
+Original SHA-256 `000EFF00F4B9BA2A3A5433061FE4D0A80FC457646D68FDE7A8F224188B1BBF79`; replacement SHA-256 `8DEE53C7E3CDE059A7AD4A08BEEE316B1B39F38242541109B06C40B1A22B87D9`.
+
+</details>
+
+<details id="mc-stk-err-2059">
+<summary><code>MC-STK-ERR-2059 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2059`; producer ID: `ALGEBRA-RECON-490`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19351) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing article.
+- Adverse evidence: An explicit finite dual basis gives the inverse of the original tensor-Hom map; that supplementary calculation is not substituted for the author proof.
+
+### Change 1: `MC-STK-ERR-2059-OP1`
+
+Pinned-official lines `19351-19351`; bytes `693004:693020`.
+
+````diff
+- Let $R$ be ring.
++ Let $R$ be a ring.
+````
+
+Original SHA-256 `37211D050BDB222ECA9823BADE7D7C14018C912014E5056A6490787BF34BD517`; replacement SHA-256 `A510991FD604F5777CC85471B2AA39FBF7B64D6AAB11011D4635FA2A421327DE`.
+
+</details>
+
+<details id="mc-stk-err-2060">
+<summary><code>MC-STK-ERR-2060 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2060`; producer ID: `ALGEBRA-RECON-493`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19424-L19427) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Clear the original preimage denominators and the localized equalities before defining the map into M_f.
+- Adverse evidence: A chosen element of M_p need not belong to the later M_f. The two explicit multipliers put m_i in M and prove the actual equality in N while keeping every chosen denominator outside p.
+
+### Change 1: `MC-STK-ERR-2060-OP1`
+
+Pinned-official lines `19424-19427`; bytes `695449:695699`.
+
+````diff
+- For each $i \in \{1, \ldots, n\}$ choose an element
+- $m_i \in M_{\mathfrak p}$ such that $\varphi(m_i) = f_i e_i$
+- for some $f_i \in R$, $f_i \not \in \mathfrak p$. This is possible
+- as $\varphi_{\mathfrak p}$ is an isomorphism. Set $f = f_1 \ldots f_n$
++ For each $i \in \{1,\ldots,n\}$ choose a preimage
++ $n_i/s_i\in M_{\mathfrak p}$ of $e_i/1$, with $n_i\in M$ and
++ $s_i\notin\mathfrak p$. Choose $t_i\notin\mathfrak p$ such that
++ $t_i(\varphi(n_i)-s_ie_i)=0$ in $N$.
++ Put $m_i=t_in_i\in M$ and $f_i=t_is_i\notin\mathfrak p$;
++ then $\varphi(m_i)=f_ie_i$ in $N$. Set $f=f_1\cdots f_n$
+````
+
+Original SHA-256 `68B10C68D1777F3ADFEE492DB077732224C8D86C323B8E7FE010E972E170FF52`; replacement SHA-256 `E36D053C1761161F489DE4B9B44890D184EC2D1F0B080CBBB71AD0DC46588C0B`.
+
+</details>
+
+<details id="mc-stk-err-2061">
+<summary><code>MC-STK-ERR-2061 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2061`; producer ID: `ALGEBRA-RECON-494`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L19433) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the actual codomain M_f of psi for the relation images.
+- Adverse evidence: Vanishing after further localization to M_p supplies g_j outside p which kills this same element in M_f. The product then gives the original factorization through N_(fg).
+
+### Change 1: `MC-STK-ERR-2061-OP1`
+
+Pinned-official lines `19433-19433`; bytes `695970:695987`.
+
+````diff
+- an element of $M$
++ an element of $M_f$
+````
+
+Original SHA-256 `4C8C278AE5D2F297B2632E33B3F489E24EA722F508425ECC28766EF8E1A0FB77`; replacement SHA-256 `E0F7D718416F8D8C530699A472338A8E87A516EF8F28C3D87FD2DAB1A1895DBE`.
+
+</details>
+
+<details id="mc-stk-err-2062">
+<summary><code>MC-STK-ERR-2062 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2062`; producer ID: `ALGEBRA-RECON-496`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L20029) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Exclude the zero torsion module from the example that promises all three modules are nonflat.
+- Adverse evidence: Zero is torsion and flat. Every nonzero torsion abelian group has a nonzero element annihilated by a nonzero integer, witnessing failure of flatness. The nonsplit and combined examples are otherwise correct, with their original sequence and maps preserved.
+
+### Change 1: `MC-STK-ERR-2062-OP1`
+
+Pinned-official lines `20029-20029`; bytes `720428:720446`.
+
+````diff
+- any torsion module
++ any nonzero torsion module
+````
+
+Original SHA-256 `13A1B3E02DA349437477109AE2115E31A492ECFA28AB0E1C236D524693217CC1`; replacement SHA-256 `5EF1136B95A2F5207B2EAC100E473F056A1B0A5BA0CFB03BB40D6455490BD256`.
+
+</details>
+
+<details id="mc-stk-err-2063">
+<summary><code>MC-STK-ERR-2063 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2063`; producer ID: `ALGEBRA-RECON-498`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L20316-L20317) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the authoring instruction from the enumerated mathematical statement and finish its actual last item with a period.
+- Adverse evidence: The deleted fourth item contains no mathematical claim or proved additional descent property. Retain its original occurrence in editorial documentation for any translation; do not replace it silently by the separately proved extension.
+
+### Change 1: `MC-STK-ERR-2063-OP1`
+
+Pinned-official lines `20316-20317`; bytes `731139:731186`.
+
+````diff
+- $M$ is flat, and
+- \item add more here as needed.
++ $M$ is flat.
+````
+
+Original SHA-256 `28B4BF1EB0B4924BD756A4075C7AA34141B93A0865A91085E5860F39A8D9CC36`; replacement SHA-256 `6384C6FC9E7AA5CD11A38FF486776C0C7774888EAF73DD653166E37607485517`.
+
+</details>
+
+<details id="mc-stk-err-2064">
+<summary><code>MC-STK-ERR-2064 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2064`; producer ID: `ALGEBRA-RECON-499`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L20323-L20324) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the coefficients depend on the generator j while using the one common finite list of original M entries.
+- Adverse evidence: Collecting the finitely many tensor presentations and inserting zero coefficients proves the required common list. The source argument then uses precisely these x_i and its map R^n to M.
+
+### Change 1: `MC-STK-ERR-2064-OP1`
+
+Pinned-official lines `20323-20324`; bytes `731338:731407`.
+
+````diff
+- Write $y_j = \sum x_i \otimes f_i$ for some
+- $x_1, \ldots, x_n \in M$.
++ Write $y_j=\sum_{i=1}^n x_i\otimes f_{ij}$ using one
++ common finite list $x_1,\ldots,x_n\in M$ and coefficients $f_{ij}\in S$.
+````
+
+Original SHA-256 `48F5BC6C743B635F0E7F5B033BC4A6AD534D9974C68194C8A7E0829B3BF87C1D`; replacement SHA-256 `FD8F2E497AB1861F4087DB966D67ACCF5C1EEEF0153914ACF922472AAC473780`.
+
+</details>
+
+<details id="mc-stk-err-2065">
+<summary><code>MC-STK-ERR-2065 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2065`; producer ID: `ALGEBRA-RECON-502`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L20418) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Choose a section only when the successor quotient belongs to the original indexed family.
+- Adverse evidence: If S has a last member alpha, M_(alpha+1) is undefined. The definition and direct-sum statement already quantify over alpha+1 in S. The explicit sections and transfinite inverse prove the original lemma with this index repair.
+
+### Change 1: `MC-STK-ERR-2065-OP1`
+
+Pinned-official lines `20418-20418`; bytes `735024:735047`.
+
+````diff
+- for each $\alpha \in S$
++ for each $\alpha+1\in S$
+````
+
+Original SHA-256 `57097B9910C6E312DA960E16A10B424D07692B073DD868A5E6F0F6D42AAA3297`; replacement SHA-256 `AF0BE0AC25CC39E0D78F60C623436BE79B16D9C9FBD9D31FE77D9FCFFE4BE23C`.
+
+</details>
+
+<details id="mc-stk-err-2066">
+<summary><code>MC-STK-ERR-2066 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2066`; producer ID: `ALGEBRA-RECON-503`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L20464-L20466) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Include the terminal stage M_I=M in the original partial-sum construction.
+- Adverse evidence: For a successor ordinal I the printed union omits the last coordinate summand. S=I+1 also gives the required zero stage when I is empty. Limit continuity, the coordinate retraction and the countably generated successor quotient verify every defining property.
+
+### Change 1: `MC-STK-ERR-2066-OP1`
+
+Pinned-official lines `20464-20466`; bytes `737081:737237`.
+
+````diff
+- Well-order $I$ so that we can think of it as an ordinal.  Then setting $M_i =
+- \bigoplus_{j < i} N_j$ gives a Kaplansky d\'evissage $(M_i)_{i \in I}$ of
+- $M$.
++ Well-order $I$ so that we can think of it as an ordinal. Set $S=I+1$ and
++ $M_\alpha=\bigoplus_{j<\alpha}N_j$ for $\alpha\in S$.
++ Then $(M_\alpha)_{\alpha\in S}$ is a Kaplansky d\'evissage of $M$.
+````
+
+Original SHA-256 `A05B9516F1E2260FA24919E5792B21B01D37C747C39CEED93FB80E454EF38209`; replacement SHA-256 `B996977E6984AC51446ACFDB66139F1C1BBFC65A8CFEA66FFE74A32514D47DBE`.
+
+</details>
+
+<details id="mc-stk-err-2067">
+<summary><code>MC-STK-ERR-2067 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2067`; producer ID: `ALGEBRA-RECON-505`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21031) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Enlarge the lifted factorization stage until the two actual maps from M_i agree, before asserting commutativity.
+- Adverse evidence: Equality after M_j to the colimit does not imply equality in M_j. Each difference on a finite generating set dies at a later stage; one common upper bound kills all of them. The original diagram, domination argument and statement then hold.
+
+### Change 1: `MC-STK-ERR-2067-OP1`
+
+Pinned-official lines `21031-21031`; bytes `760106:760171`.
+
+````diff
+- for some $h': Q \to M_j$.  In total we have a commutative diagram
++ for some $h': Q \to M_j$. Since $M_i$ is finitely generated,
++ after increasing $j$ and composing $h'$ with the transition map we have
++ $f_{ij}=h'\circ g$. Thus we have a commutative diagram
+````
+
+Original SHA-256 `0B007FD9B910C7DD853828D4CB9B84CCB93D01969F51D83B7C1A751CFCDEE41D`; replacement SHA-256 `362ABD1EAC8D471BFDB1D1DEC9B95A25FFCAB9B97B2A449503C1633A37176D5D`.
+
+</details>
+
+<details id="mc-stk-err-2068">
+<summary><code>MC-STK-ERR-2068 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2068`; producer ID: `ALGEBRA-RECON-506`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21101-L21102) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Cover arbitrary k>=i by a common upper bound with j; a directed set need not linearly order these indices.
+- Adverse evidence: The source proves the factor for indices above j, then only treats indices below j. For an incomparable k, ell>=j,k and the actual composite a f_(k,ell) prove the same factorization without changing the theorem or its quantifier.
+
+### Change 1: `MC-STK-ERR-2068-OP1`
+
+Pinned-official lines `21101-21102`; bytes `762955:763054`.
+
+````diff
+- such that $f_{ij} = h \circ f_{ik}$.  If $j \geq k$ then we can take
+- $h = f_{kj}$. Hence (3) holds.
++ such that $f_{ij} = h \circ f_{ik}$. For any $k\geq i$, choose
++ $\ell\geq j,k$ and $a:M_\ell\to M_j$ with $f_{ij}=a\circ f_{i\ell}$.
++ Then $h=a\circ f_{k\ell}$ satisfies $f_{ij}=h\circ f_{ik}$.
++ Hence (3) holds.
+````
+
+Original SHA-256 `8B6771F2F541FA4AE3CA73EF864FADF6DFB8294989C8251D818B08B24EDB40F4`; replacement SHA-256 `CC09E6198A44EF9223F6E75CFF8F79CBA8FF09896A97BA5672E029891D3D8752`.
+
+</details>
+
+<details id="mc-stk-err-2069">
+<summary><code>MC-STK-ERR-2069 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2069`; producer ID: `ALGEBRA-RECON-508`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21173) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the adverb in the comparative phrase.
+- Adverse evidence: The kernel argument is valid: the surjection after tensoring detects equality of its two receiving kernels. This report warrants the one-word copyedit only.
+
+### Change 1: `MC-STK-ERR-2069-OP1`
+
+Pinned-official lines `21173-21173`; bytes `765771:765786`.
+
+````diff
+- is clear weaker
++ is clearly weaker
+````
+
+Original SHA-256 `E5C455BD5BF4E5FC6653536CEEEF30162775C60FC2C3B078463EB235CC7BB8F7`; replacement SHA-256 `0C4735EEC6C2A5CC05FD4D9F3D7C7D31885D280A4AA6139EE91CA67771D4E4FF`.
+
+</details>
+
+<details id="mc-stk-err-2070">
+<summary><code>MC-STK-ERR-2070 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2070`; producer ID: `ALGEBRA-RECON-509`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21353) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the R-valued coordinate of a_i in R^M while preserving the declared projection p_x:M^M to M.
+- Adverse evidence: The displayed application p_x(a_i) is outside the declared domain. The actual canonical tensor map gives coefficient (a_i)_x, so the finite list x_i generates the original module. The subsequent finite-presentation diagram chase uses right exactness and remains valid.
+
+### Change 1: `MC-STK-ERR-2070-OP1`
+
+Pinned-official lines `21353-21353`; bytes `773537:773545`.
+
+````diff
+- p_x(a_i)
++ (a_i)_x
+````
+
+Original SHA-256 `25E3F17EE9373F778EA135F07954FE95C8F5FD5B7D3812F31C3630C0D23A42D1`; replacement SHA-256 `0399115C6581E8D2BCE1701351D19778FF5550588344DEF4F2929ABC111C4F68`.
+
+</details>
+
+<details id="mc-stk-err-2071">
+<summary><code>MC-STK-ERR-2071 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2071`; producer ID: `ALGEBRA-RECON-513`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21866) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the biconditional wording.
+- Adverse evidence: For a finite module the tensor/product map is onto, and ML makes it injective. The finite-presentation criterion gives precisely the claimed equivalence.
+
+### Change 1: `MC-STK-ERR-2071-OP1`
+
+Pinned-official lines `21866-21866`; bytes `793848:793858`.
+
+````diff
+- only it is
++ only if it is
+````
+
+Original SHA-256 `E176313B96E8DEDB837EC9ACB0A970C89AB46A4A79B6B258E24DD8B9883B6BF5`; replacement SHA-256 `482DD1E85F2440BFC74800894885E3D54F71861B22316E88FD21AA4B22470611`.
+
+</details>
+
+<details id="mc-stk-err-2072">
+<summary><code>MC-STK-ERR-2072 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2072`; producer ID: `ALGEBRA-RECON-514`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21878) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the missing preposition.
+- Adverse evidence: The following criterion, product lemma and coefficient isomorphism justify the stated power-series consequence with the original Noetherian hypothesis.
+
+### Change 1: `MC-STK-ERR-2072-OP1`
+
+Pinned-official lines `21878-21878`; bytes `794389:794422`.
+
+````diff
+- a consequence the following lemma
++ a consequence of the following lemma
+````
+
+Original SHA-256 `71B859671DA7EA944CBEAEC2ADE29F73CFC6E8E5971805CEDCA65565174FEDB2`; replacement SHA-256 `D08FFEC410E373332D78094E3DAB1AABC0047BAA778DF867DBD66BC39AF58856`.
+
+</details>
+
+<details id="mc-stk-err-2073">
+<summary><code>MC-STK-ERR-2073 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2073`; producer ID: `ALGEBRA-RECON-516`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L21979) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the apposition naming the coordinate span F-prime inside F.
+- Adverse evidence: Over the source Noetherian ring this coordinate span is finite presented, so its tensor inclusion is exactly the product inclusion and it is the smallest submodule.
+
+### Change 1: `MC-STK-ERR-2073-OP1`
+
+Pinned-official lines `21979-21979`; bytes `797929:797957`.
+
+````diff
+- the submodule of $F'$ of $F$
++ the submodule $F'$ of $F$
+````
+
+Original SHA-256 `CE53AA00A26D2662F650B7E3FE808501596F122F0FA3CBFDFD615CB1AADC2FDB`; replacement SHA-256 `27BC7E85D43015B19B7FDB2AA343A709B1A8921D8CADB38003B3C3C509AAF6FC`.
+
+</details>
+
+<details id="mc-stk-err-2074">
+<summary><code>MC-STK-ERR-2074 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2074`; producer ID: `ALGEBRA-RECON-517`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22014) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the missing preposition in the annihilator statement.
+- Adverse evidence: The full coordinate formula is b(l)=max_m max(min(2^m,l)-2^(m-1),0), with m>=1 as in the displayed sequence. At l=2^r it is exactly 2^(r-1); the source mathematical claim is correct.
+
+### Change 1: `MC-STK-ERR-2074-OP1`
+
+Pinned-official lines `22014-22014`; bytes `799373:799388`.
+
+````diff
+- is generated $x
++ is generated by $x
+````
+
+Original SHA-256 `34ED01284C36BC70C1A677CAAB889E272A0DE41074C7B6DA1EE9AC6AD2237463`; replacement SHA-256 `53CFE9D682E6DD387E2CFD551EB8B5117E7993B5362342DE7516B005C0BE4EF7`.
+
+</details>
+
+<details id="mc-stk-err-2075">
+<summary><code>MC-STK-ERR-2075 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2075`; producer ID: `ALGEBRA-RECON-518`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22024) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the intended much-greater-than relation in the source asymptotic range.
+- Adverse evidence: Artin-Rees on the actual cyclic submodule gives the eventual annihilator exponent a or l-a. The powers-of-two exponent cannot equal either for all sufficiently large powers; the proof does not depend on any stronger asymptotic assertion.
+
+### Change 1: `MC-STK-ERR-2075-OP1`
+
+Pinned-official lines `22024-22024`; bytes `799968:799982`.
+
+````diff
+- $l = 2^m >> 0$
++ $l = 2^m \gg 0$
+````
+
+Original SHA-256 `886CEBE0792AA139EAFEB8DACFD1825C7B0285AD572F3B893A70E47870645425`; replacement SHA-256 `A4C0BE97954BA92A0239EC9771AB9C0B8FAA73D5CD41896BDE2609AE9944CCDD`.
+
+</details>
+
+<details id="mc-stk-err-2076">
+<summary><code>MC-STK-ERR-2076 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2076`; producer ID: `ALGEBRA-RECON-521`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22107-L22108) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the increasing cofinal sequence with the correct order and allow repetitions, as required also for finite directed sets.
+- Adverse evidence: Changing only the order symbol leaves the false assertion that a finite directed set has a subset isomorphic to the natural numbers. The original upper-bound construction yields a sequence, possibly repeated. Explicit colimit maps verify its use with the original direct system.
+
+### Change 1: `MC-STK-ERR-2076-OP1`
+
+Pinned-official lines `22107-22108`; bytes `803723:803824`.
+
+````diff
+- to see that a countable directed set has a cofinal
+- subset isomorphic to $(\mathbf{N}, \geq)$. Suppose
++ to obtain an increasing cofinal sequence indexed by
++ $(\mathbf{N},\leq)$, allowing repetitions. Suppose
+````
+
+Original SHA-256 `F2F4C537C30C7E16289ED35FF03065C75BD3605E3F78370F02827C36DCABFC4D`; replacement SHA-256 `21619F03DBD04F02A23CD3C8B044A608069B23B6B45F4AAB2C1E730AECC0FEBB`.
+
+</details>
+
+<details id="mc-stk-err-2077">
+<summary><code>MC-STK-ERR-2077 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2077`; producer ID: `ALGEBRA-RECON-522`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22274) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the article in the singular map phrase.
+- Adverse evidence: The mathematical implication retains the original countable-direct-sum hypothesis, flatness and ML descent along the actual pure injection.
+
+### Change 1: `MC-STK-ERR-2077-OP1`
+
+Pinned-official lines `22274-22274`; bytes `810080:810108`.
+
+````diff
+- be universally injective map
++ be a universally injective map
+````
+
+Original SHA-256 `C30FA196ACF80575A67DF53195C2ACA78CB9C8A82136A45556FE21E281B4A50E`; replacement SHA-256 `3A3DBA59E84CB62356628E80220C6B71E58F30C54803E5ECB9DDEFF149530EB2`.
+
+</details>
+
+<details id="mc-stk-err-2078">
+<summary><code>MC-STK-ERR-2078 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2078`; producer ID: `ALGEBRA-RECON-524`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22358) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the infinitival phrase defining the original pushout.
+- Adverse evidence: The original cokernel presentation and each tensor-test map verify the source proof. The human attribution is retained. Pure reflection gives a second proof of the earlier group 511 result, kept separately from the source hypothesis.
+
+### Change 1: `MC-STK-ERR-2078-OP1`
+
+Pinned-official lines `22358-22358`; bytes `812922:812942`.
+
+````diff
+- Take $N$ the pushout
++ Take $N$ to be the pushout
+````
+
+Original SHA-256 `936BA482DCCAE967678AD77532F83ABD73986D3AB0A825F8D8A81C591D11DA48`; replacement SHA-256 `F65CC3EAFAB2EE1C35E0CB41BBF80CBEF3AA222ABE5D33E70C4B47B0211A04ED`.
+
+</details>
+
+<details id="mc-stk-err-2079">
+<summary><code>MC-STK-ERR-2079 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2079`; producer ID: `ALGEBRA-RECON-525`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22375) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the sentence after the display with lowercase is.
+- Adverse evidence: Tensoring the original cokernel gives exactly the displayed pushout. No mathematical statement or map is changed.
+
+### Change 1: `MC-STK-ERR-2079-OP1`
+
+Pinned-official lines `22375-22375`; bytes `813323:813344`.
+
+````diff
+- Is a pushout diagram.
++ is a pushout diagram.
+````
+
+Original SHA-256 `0769A2603F05B2CD9B4D67924FD643E7CD325BDB3572CACC453A8BBA942B96A5`; replacement SHA-256 `9F89371D0F0B78D8C49C2B1ADAA3D55A2FE694FF1D5B1EE26907A5149C9249C2`.
+
+</details>
+
+<details id="mc-stk-err-2080">
+<summary><code>MC-STK-ERR-2080 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2080`; producer ID: `ALGEBRA-RECON-526`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22433) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert to in the construction of the original countable submodule.
+- Adverse evidence: The finite tensor entries of the countable generating family give P and only require containment in its tensor image. The subsequent adapted-submodule proof likewise uses actual images, without assuming tensor injections.
+
+### Change 1: `MC-STK-ERR-2080-OP1`
+
+Pinned-official lines `22433-22433`; bytes `815701:815717`.
+
+````diff
+- Then take $P$ be
++ Then take $P$ to be
+````
+
+Original SHA-256 `2B58B4FD1C8C820AB0141B74FFEBBFD89CC34AB88677E775C7E4288253BFFD64`; replacement SHA-256 `507A950CEABBC8C259254924F88D86D7D506F6A8B450D455942D5E2A24B83B1C`.
+
+</details>
+
+<details id="mc-stk-err-2081">
+<summary><code>MC-STK-ERR-2081 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2081`; producer ID: `ALGEBRA-RECON-532`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22758) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Declare the module used by the quotients and maps.
+- Adverse evidence: For positive r, the original cofinal ideals and telescoping representatives justify the finite sum of principal-adic lifts. For r=0 the printed cofinality bound I^(rn) fails, but I=0 and the assertion is the canonical identity. That boundary is proved separately rather than replacing the translation proof.
+
+### Change 1: `MC-STK-ERR-2081-OP1`
+
+Pinned-official lines `22758-22758`; bytes `828357:828379`.
+
+````diff
+- generated ideal. If $M
++ generated ideal. Let $M$ be an $A$-module.
++ If $M
+````
+
+Original SHA-256 `06D088D12599B690940EA70988568EB0502385949C0E2527696AEC7A9648DD86`; replacement SHA-256 `006370465E72DEB669A9380F776207916688995036A15A38672067540C4EF058`.
+
+</details>
+
+<details id="mc-stk-err-2082">
+<summary><code>MC-STK-ERR-2082 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2082`; producer ID: `ALGEBRA-RECON-533`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22777) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Declare the module whose two adic filtrations are used.
+- Adverse evidence: The original J-adic limit x is retained. Writing u_n=x_n-x and summing the exact differences gives u_n=f^n v_n, with every sign, index and initial limit preserved.
+
+### Change 1: `MC-STK-ERR-2082-OP1`
+
+Pinned-official lines `22777-22777`; bytes `829060:829070`.
+
+````diff
+- be ideals.
++ be ideals.
++ Let $M$ be an $A$-module.
+````
+
+Original SHA-256 `E46B73306EA4EF37BC15C77FC67419F39C2CB728E7DC9AAED817448C4FC4E556`; replacement SHA-256 `44535E72ADA1884587E11E70A91E8D25598E9F1913F14B6718DEE0EAEB3B4DA1`.
+
+</details>
+
+<details id="mc-stk-err-2083">
+<summary><code>MC-STK-ERR-2083 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2083`; producer ID: `ALGEBRA-RECON-534`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22873) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the article required by the spoken initial letter R.
+- Adverse evidence: The finite span of the lifted residue generators is separated and complete; its completion surjects onto that of M, and separatedness identifies the actual elements. The zero-generator case is retained.
+
+### Change 1: `MC-STK-ERR-2083-OP1`
+
+Pinned-official lines `22873-22873`; bytes `832457:832474`.
+
+````diff
+- as a $R/I$-module
++ as an $R/I$-module
+````
+
+Original SHA-256 `10804ABE34796EAB38557106C95AF3718081529B89F68C2A938F57B2D625DFAF`; replacement SHA-256 `08073584069292E9063BC2D83267925CD32FB451EC10F449EEF463A398568F6A`.
+
+</details>
+
+<details id="mc-stk-err-2084">
+<summary><code>MC-STK-ERR-2084 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2084`; producer ID: `ALGEBRA-RECON-535`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22873) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the missing preposition in the naming construction.
+- Adverse evidence: The original submodule M-prime and its inclusion in M remain unchanged.
+
+### Change 1: `MC-STK-ERR-2084-OP1`
+
+Pinned-official lines `22873-22873`; bytes `832476:832486`.
+
+````diff
+- Denote $M'
++ Denote by $M'
+````
+
+Original SHA-256 `B95A1645FAFA6E6EE06D5FB4D2E7FF86858EEB62C68C8533CA78AEE20BDE324A`; replacement SHA-256 `7F5C5F59395A3F7A6827F7E8186C2DAB08C876C37EFA66B2CFD0C5628A32002B`.
+
+</details>
+
+<details id="mc-stk-err-2085">
+<summary><code>MC-STK-ERR-2085 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2085`; producer ID: `ALGEBRA-RECON-536`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22903) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert by when introducing the completion notation.
+- Adverse evidence: Artin-Rees gives the exact shifted filtrations. The tensor comparison follows from the completed presentation, surjectivity for its finite kernel and the finite-free isomorphism, without assuming completion is flat before proving it.
+
+### Change 1: `MC-STK-ERR-2085-OP1`
+
+Pinned-official lines `22903-22903`; bytes `833328:833346`.
+
+````diff
+- Denote ${}^\wedge$
++ Denote by ${}^\wedge$
+````
+
+Original SHA-256 `A6622DA612A20A52AED70F565C79DE1E25DC854F00C6A590919E6B63A5CBFA8C`; replacement SHA-256 `C42DC1FDF182ACE5A2CCF23BA044E5AC1CC0B63C872801F05237103D548BB0A8`.
+
+</details>
+
+<details id="mc-stk-err-2086">
+<summary><code>MC-STK-ERR-2086 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2086`; producer ID: `ALGEBRA-RECON-537`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22958) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair the repeated naming construction.
+- Adverse evidence: The injection for every ideal follows from the preceding finite-module result because every ideal is finite in the original Noetherian ring. The ideal criterion then supplies flatness.
+
+### Change 1: `MC-STK-ERR-2086-OP1`
+
+Pinned-official lines `22958-22958`; bytes `835129:835147`.
+
+````diff
+- Denote ${}^\wedge$
++ Denote by ${}^\wedge$
+````
+
+Original SHA-256 `A6622DA612A20A52AED70F565C79DE1E25DC854F00C6A590919E6B63A5CBFA8C`; replacement SHA-256 `C42DC1FDF182ACE5A2CCF23BA044E5AC1CC0B63C872801F05237103D548BB0A8`.
+
+</details>
+
+<details id="mc-stk-err-2087">
+<summary><code>MC-STK-ERR-2087 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2087`; producer ID: `ALGEBRA-RECON-538`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L22978) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Propagate the same missing-preposition copyedit to the immediately following completion lemma.
+- Adverse evidence: This is an independently found repetition of the naming omission. Its mathematical statement remains the original sufficient Jacobson-radical condition.
+
+### Change 1: `MC-STK-ERR-2087-OP1`
+
+Pinned-official lines `22978-22978`; bytes `835869:835886`.
+
+````diff
+- Denote $R^\wedge$
++ Denote by $R^\wedge$
+````
+
+Original SHA-256 `B98BA695D15B46718AD722B9A84C8813E8DF2B09C138EBB343C40E9642A99064`; replacement SHA-256 `DF988EFBA0C4A673E9C07F79342FB3F83814A84406D0D7A5501BAA026BC32DC3`.
+
+</details>
+
+<details id="mc-stk-err-2088">
+<summary><code>MC-STK-ERR-2088 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2088`; producer ID: `ALGEBRA-RECON-541`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23050) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restrict the homogeneous sum to generators of degree at most n.
+- Adverse evidence: Only those generators contribute in degree n; negative ideal powers were not defined. Higher-degree generators receive zero coefficients in the following approximation argument. The exact coefficient bounds and convergent series prove the same source theorem, including the empty homogeneous-generator case.
+
+### Change 1: `MC-STK-ERR-2088-OP1`
+
+Pinned-official lines `23050-23050`; bytes `838500:838519`.
+
+````diff
+- \sum \overline{g}_j
++ \sum_{j:\,d_j \leq n} \overline{g}_j
+````
+
+Original SHA-256 `71F424479933BDEB84331607D9003065A44D8A064609E8AD9DCD146D2E0B700D`; replacement SHA-256 `E4A998E9AD9FF1B3F17D451947727B55F8B6492E8BDE0963CCA3FB0894842037`.
+
+</details>
+
+<details id="mc-stk-err-2089">
+<summary><code>MC-STK-ERR-2089 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2089`; producer ID: `ALGEBRA-RECON-542`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23118) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the subject of the sentence about the original Artinian quotient.
+- Adverse evidence: The finite-dimensional quotient is local Artinian, its maximal ideal is nilpotent, and the two original filtrations are canonically cofinal. No mathematical hypothesis is changed by this copyedit.
+
+### Change 1: `MC-STK-ERR-2089-OP1`
+
+Pinned-official lines `23118-23118`; bytes `840953:840972`.
+
+````diff
+- Hence has dimension
++ Hence it has dimension
+````
+
+Original SHA-256 `820736A09957328E3ABC9637E81440551B6F5317ABAC21F8B171DF6698C4FA5A`; replacement SHA-256 `8CF12EC3AE87DCE489271EF142B297436EB73068CDD0F03389BC7DA46B3E1D22`.
+
+</details>
+
+<details id="mc-stk-err-2090">
+<summary><code>MC-STK-ERR-2090 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2090`; producer ID: `ALGEBRA-RECON-543`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23228) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the missing complementizer in the Nakayama parenthesis.
+- Adverse evidence: The original complete ring has I in its Jacobson radical. The finite cokernel of A to B vanishes modulo I and hence vanishes; faithful flatness then identifies the actual completion map.
+
+### Change 1: `MC-STK-ERR-2090-OP1`
+
+Pinned-official lines `23228-23228`; bytes `845407:845419`.
+
+````diff
+- using $I$ is
++ using that $I$ is
+````
+
+Original SHA-256 `9558F383F5DFD131E5D668B03A8058506B085FFD9150555F3141057C8A092222`; replacement SHA-256 `A548249C7D3DC414B13D9DA58B65D84D49BE21148C14B80AA7D0197AC8E6DBC0`.
+
+</details>
+
+<details id="mc-stk-err-2091">
+<summary><code>MC-STK-ERR-2091 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2091`; producer ID: `ALGEBRA-RECON-544`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23224) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Cite the finite-module tensor-completion comparison that directly identifies B/IB with the completion of A/I.
+- Adverse evidence: The canonical comparison for the finite module A/I gives (A/I) tensor B = lim A/(I+J^n). Flatness alone does not state this identification. The later use of the flatness lemma for A to B is retained.
+
+### Change 1: `MC-STK-ERR-2091-OP1`
+
+Pinned-official lines `23224-23224`; bytes `845095:845122`.
+
+````diff
+- \ref{lemma-completion-flat}
++ \ref{lemma-completion-tensor}
+````
+
+Original SHA-256 `0E0507335A3DEBB0D44F2F854C3F5971D0F0B022712C5BA782C7D590F62E926A`; replacement SHA-256 `B179A6C17BA95DA1EFEB247501FE6DA0C4220DE3BD5965ED8AC6674403F6844E`.
+
+</details>
+
+<details id="mc-stk-err-2092">
+<summary><code>MC-STK-ERR-2092 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2092`; producer ID: `ALGEBRA-RECON-545`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23308-L23329) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the strictly positive stabilized index b(d), repair the premature equality, and use the same index in the generation check.
+- Adverse evidence: A transition is an isomorphism in degree d only for n>d-min(d_i). The positive maximum handles all degrees and never invokes N_0. When N_1=0, nilpotent iteration forces every N_n=0, avoiding the undefined minimum of an empty generator family. Exact degreewise maps prove both generation and the quotient kernel; the zero case is an independently checked boundary.
+
+### Change 1: `MC-STK-ERR-2092-OP1`
+
+Pinned-official lines `23308-23308`; bytes `848044:848077`.
+
+````diff
+- Pick $r$ and homogeneous elements
++ If $N_1=0$, all $N_n$ vanish and we take $N=0$.
++ Otherwise pick $r>0$ and homogeneous elements
+````
+
+Original SHA-256 `A25922C21DB5FE49C089B87E62920B5F75A33F62E03E6AF0D631F5D0D1B3FC3B`; replacement SHA-256 `2BFBCD682B778DEA80B53FCF6019C7613EC79DE6DF0526AE01306681EB15A1DA`.
+
+### Change 2: `MC-STK-ERR-2092-OP2`
+
+Pinned-official lines `23317-23317`; bytes `848597:848659`.
+
+````diff
+- in those degrees). Thus the inverse system of degree $d$ parts
++ in those degrees). Put $b(d)=\max\{1,1+d-\min(d_i)\}$.
++ The inverse system of degree $d$ parts
+````
+
+Original SHA-256 `09B467876CC4F17500FDE51B377584415D944AA9CD66D1E57744BA12C695B7E7`; replacement SHA-256 `F7EBEC81DE6BCDF967C1572CC4210ADBFD0323A1C22F7CACC35E21FFA85398A6`.
+
+### Change 3: `MC-STK-ERR-2092-OP3`
+
+Pinned-official lines `23319-23322`; bytes `848663:848787`.
+
+````diff
+- \ldots
+- = N_{2 + d - \min(d_i), d}
+- = N_{1 + d - \min(d_i), d}
+- = N_{d - \min(d_i), d} \to N_{-1 + d - \min(d_i), d} \to \ldots
++ \ldots
++ = N_{b(d)+2, d}
++ = N_{b(d)+1, d}
++ = N_{b(d), d}
+````
+
+Original SHA-256 `6DF221BCFDDD736816B582583A95CA7246B1F9AE36B0F05AE5776DDFFB8B5D8E`; replacement SHA-256 `02233ABB6ADE144447D833CEE88AFD3CE5C9A34B0D86607805B36A51E484BDBB`.
+
+### Change 4: `MC-STK-ERR-2092-OP4`
+
+Pinned-official lines `23328-23329`; bytes `849057:849179`.
+
+````diff
+- because we can check this in $N_{d - \min(d_i), d}$ where it holds
+- as $x_{d - \min(d_i), i}$ generate $N_{d - \min(d_i)}$.
++ because we can check this in $N_{b(d), d}$ where it holds
++ as $x_{b(d), i}$ generate $N_{b(d)}$.
+````
+
+Original SHA-256 `27117DCB6BAEF08C83DDAF52EF10CD68809EBE7C079C57983E001B50833E888B`; replacement SHA-256 `D7CF9B51A4C926CB412FB9A2C4C5D5CC45337C3BFCC769817756EB642D63FCCC`.
+
+</details>
+
+<details id="mc-stk-err-2093">
+<summary><code>MC-STK-ERR-2093 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2093`; producer ID: `ALGEBRA-RECON-546`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23373) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the generator shifts in the module-degree injectivity bound.
+- Adverse evidence: The quotient kernel I^n M-prime has no components below min(d_i)+n. With n=d-min(d_i)+1 this includes the actual degree d. The source coefficient bound alone omitted the shifts. The finite homogeneous witness and tensor comparison prove this without treating A-prime as a graded ring.
+
+### Change 1: `MC-STK-ERR-2093-OP1`
+
+Pinned-official lines `23373-23373`; bytes `850898:850918`.
+
+````diff
+- degrees $\leq n - 1$
++ degrees $<\min(d_i)+n$ (in particular, in degree $d$)
+````
+
+Original SHA-256 `CBC5E8B02A6C89AA046C8C52608377223F4213830EDABCEFD6AEF0CA7FD5A2BA`; replacement SHA-256 `EDA73FB14B4FC2E5F460CEC9FF2E5FB34E6BE2963D4C49C68E80704238D60533`.
+
+</details>
+
+<details id="mc-stk-err-2094">
+<summary><code>MC-STK-ERR-2094 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2094`; producer ID: `ALGEBRA-RECON-550`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23427-L23494) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert by at all three reported maximal-ideal declarations.
+- Adverse evidence: The actual quotient maps prove injection, a flat cokernel and universal tensor injection. The auxiliary ring S is Noetherian; the source does not require R Noetherian for this first lemma. The two receiving corollaries use exactly that argument.
+
+### Change 1: `MC-STK-ERR-2094-OP1`
+
+Pinned-official lines `23427-23427`; bytes `852517:852537`.
+
+````diff
+- Denote $\mathfrak m$
++ Denote by $\mathfrak m$
+````
+
+Original SHA-256 `6FB85E9C70C30EA88811D0D40FC458EAF37011017D4BB6C9A310CC229513D39C`; replacement SHA-256 `30EA6AA54EF773AA44AB40608B0BA60BB4C3F4C753DA159603381CD0B80BCBDD`.
+
+### Change 2: `MC-STK-ERR-2094-OP2`
+
+Pinned-official lines `23482-23482`; bytes `855076:855096`.
+
+````diff
+- Denote $\mathfrak m$
++ Denote by $\mathfrak m$
+````
+
+Original SHA-256 `6FB85E9C70C30EA88811D0D40FC458EAF37011017D4BB6C9A310CC229513D39C`; replacement SHA-256 `30EA6AA54EF773AA44AB40608B0BA60BB4C3F4C753DA159603381CD0B80BCBDD`.
+
+### Change 3: `MC-STK-ERR-2094-OP3`
+
+Pinned-official lines `23494-23494`; bytes `855491:855511`.
+
+````diff
+- Denote $\mathfrak m$
++ Denote by $\mathfrak m$
+````
+
+Original SHA-256 `6FB85E9C70C30EA88811D0D40FC458EAF37011017D4BB6C9A310CC229513D39C`; replacement SHA-256 `30EA6AA54EF773AA44AB40608B0BA60BB4C3F4C753DA159603381CD0B80BCBDD`.
+
+</details>
+
+<details id="mc-stk-err-2095">
+<summary><code>MC-STK-ERR-2095 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2095`; producer ID: `ALGEBRA-RECON-551`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23569) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Describe the finite-length proof by its actual induction direction.
+- Adverse evidence: Length zero is the zero module, length one is the residue field, and the exact Tor segment proves a longer module from two shorter ones. This is ordinary induction on length.
+
+### Change 1: `MC-STK-ERR-2095-OP1`
+
+Pinned-official lines `23569-23569`; bytes `858310:858333`.
+
+````diff
+- By descending induction
++ By induction
+````
+
+Original SHA-256 `259090675B207FEA7828CD3E75B7DD4E97885D6B490DC6BF90D0543D58921CD6`; replacement SHA-256 `981E49BF5DD46DF0546ED301ACE3E957C5CA1437E503254F0CAB477F3FEBB1E4`.
+
+</details>
+
+<details id="mc-stk-err-2096">
+<summary><code>MC-STK-ERR-2096 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2096`; producer ID: `ALGEBRA-RECON-552`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23597-L23598) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Quantify the arbitrary ideal J in the finite-colength assertion.
+- Adverse evidence: The source applies the preparation lemma to R/J. Its later two ideals both have finite colength, and the explicit signed diagram chase supplies the actual lift needed by Artin-Rees.
+
+### Change 1: `MC-STK-ERR-2096-OP1`
+
+Pinned-official lines `23597-23598`; bytes `859519:859566`.
+
+````diff
+- is injective for all ideals
+- of finite colength.
++ is injective for every ideal $J$
++ of finite colength.
+````
+
+Original SHA-256 `7205B2C77656F3F7A8C76F6F1D57DC2CB845C9DF117DD42B1682F81B829A416F`; replacement SHA-256 `E677654A1754BA2EB8D441CF7735FCE6BD435443A2BDBD74F240725AFD5FD29F`.
+
+</details>
+
+<details id="mc-stk-err-2097">
+<summary><code>MC-STK-ERR-2097 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2097`; producer ID: `ALGEBRA-RECON-553`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23601-L23633) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the intended much-greater-than TeX relation in both sufficiently-large-index statements.
+- Adverse evidence: The original proof has one uniform Artin-Rees constant c and takes all sufficiently large n. The notation correction does not change that quantifier, the shift n-c or the original module.
+
+### Change 1: `MC-STK-ERR-2097-OP1`
+
+Pinned-official lines `23601-23601`; bytes `859593:859601`.
+
+````diff
+- $n >> 0$
++ $n \gg 0$
+````
+
+Original SHA-256 `DD17E4A270B5146F032F6A489632E4EDB1503B5B13810E930AE722B16538FD88`; replacement SHA-256 `14FE53A973F90738CACBBF0206C8180F7E1B8E12C1AA0CC21358811683012D7D`.
+
+### Change 2: `MC-STK-ERR-2097-OP2`
+
+Pinned-official lines `23633-23633`; bytes `860551:860559`.
+
+````diff
+- $n >> 0$
++ $n \gg 0$
+````
+
+Original SHA-256 `DD17E4A270B5146F032F6A489632E4EDB1503B5B13810E930AE722B16538FD88`; replacement SHA-256 `14FE53A973F90738CACBBF0206C8180F7E1B8E12C1AA0CC21358811683012D7D`.
+
+</details>
+
+<details id="mc-stk-err-2098">
+<summary><code>MC-STK-ERR-2098 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2098`; producer ID: `ALGEBRA-RECON-554`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23666-L23687) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Choose a sufficiently large free index set and propagate it to all six sums in the argument.
+- Adverse evidence: The unrelated ideal I cannot determine a surjective presentation of an arbitrary R/I-module; I=0 over a field already fails for a rank-two module. The report says two occurrences, but there are six, and all must use the same chosen Lambda. The ideal I and the already corrected tensor base remain unchanged.
+
+### Change 1: `MC-STK-ERR-2098-OP1`
+
+Pinned-official lines `23666-23666`; bytes `861790:861819`.
+
+````diff
+- Choose a short exact sequence
++ Choose a set $\Lambda$ and a short exact sequence
+````
+
+Original SHA-256 `495C3796AD15700E482ACF4540AA17E6BEA1E04D921AF1ED390BCD192AC22B8A`; replacement SHA-256 `E8BEE7D66C7549F2BF373B894B9D3D4AFC2224DE9FA17DA3BD5AF83634A1F6F7`.
+
+### Change 2: `MC-STK-ERR-2098-OP2`
+
+Pinned-official lines `23668-23668`; bytes `861855:861862`.
+
+````diff
+- i \in I
++ \lambda \in \Lambda
+````
+
+Original SHA-256 `006636C39B123D81D920D427A9E0B276A596A9C5673183569C627523BFCB1E0B`; replacement SHA-256 `0076B5E4DCFEEF2ED0C09DF7C6BF26A51CD18295EB284D2929376DCF8950ED67`.
+
+### Change 3: `MC-STK-ERR-2098-OP3`
+
+Pinned-official lines `23674-23674`; bytes `862052:862059`.
+
+````diff
+- i \in I
++ \lambda \in \Lambda
+````
+
+Original SHA-256 `006636C39B123D81D920D427A9E0B276A596A9C5673183569C627523BFCB1E0B`; replacement SHA-256 `0076B5E4DCFEEF2ED0C09DF7C6BF26A51CD18295EB284D2929376DCF8950ED67`.
+
+### Change 4: `MC-STK-ERR-2098-OP4`
+
+Pinned-official lines `23676-23676`; bytes `862132:862139`.
+
+````diff
+- i \in I
++ \lambda \in \Lambda
+````
+
+Original SHA-256 `006636C39B123D81D920D427A9E0B276A596A9C5673183569C627523BFCB1E0B`; replacement SHA-256 `0076B5E4DCFEEF2ED0C09DF7C6BF26A51CD18295EB284D2929376DCF8950ED67`.
+
+### Change 5: `MC-STK-ERR-2098-OP5`
+
+Pinned-official lines `23680-23680`; bytes `862273:862280`.
+
+````diff
+- i \in I
++ \lambda \in \Lambda
+````
+
+Original SHA-256 `006636C39B123D81D920D427A9E0B276A596A9C5673183569C627523BFCB1E0B`; replacement SHA-256 `0076B5E4DCFEEF2ED0C09DF7C6BF26A51CD18295EB284D2929376DCF8950ED67`.
+
+### Change 6: `MC-STK-ERR-2098-OP6`
+
+Pinned-official lines `23681-23681`; bytes `862324:862331`.
+
+````diff
+- i \in I
++ \lambda \in \Lambda
+````
+
+Original SHA-256 `006636C39B123D81D920D427A9E0B276A596A9C5673183569C627523BFCB1E0B`; replacement SHA-256 `0076B5E4DCFEEF2ED0C09DF7C6BF26A51CD18295EB284D2929376DCF8950ED67`.
+
+### Change 7: `MC-STK-ERR-2098-OP7`
+
+Pinned-official lines `23687-23687`; bytes `862515:862522`.
+
+````diff
+- i \in I
++ \lambda \in \Lambda
+````
+
+Original SHA-256 `006636C39B123D81D920D427A9E0B276A596A9C5673183569C627523BFCB1E0B`; replacement SHA-256 `0076B5E4DCFEEF2ED0C09DF7C6BF26A51CD18295EB284D2929376DCF8950ED67`.
+
+</details>
+
+<details id="mc-stk-err-2099">
+<summary><code>MC-STK-ERR-2099 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2099`; producer ID: `ALGEBRA-RECON-557`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L23932) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert the missing preposition in the ideal and module declaration.
+- Adverse evidence: The original localization, quotient and tensor maps are retained. The two actual Tor comparison surjections compose to the source map before localization, so its zero-image hypothesis forces the localized obstruction to vanish.
+
+### Change 1: `MC-STK-ERR-2099-OP1`
+
+Pinned-official lines `23932-23932`; bytes `871089:871099`.
+
+````diff
+- Denote $I'
++ Denote by $I'
+````
+
+Original SHA-256 `38DF0EB971A28CB69B83B2AD7747D862BCC1A561BB9CAA5197F0DEE6B26B8D9C`; replacement SHA-256 `9F43F7D53F6D51F497EC4C6A23C0D93FD7CAF10FD3A7DD7CFCD763E7DFC62E2E`.
+
+</details>
+
+<details id="mc-stk-err-2100">
+<summary><code>MC-STK-ERR-2100 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2100`; producer ID: `ALGEBRA-RECON-558`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24082-L24155) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the finite verb in both explanations of the localized Tor vanishing.
+- Adverse evidence: The original scalar maps factor through K/K[f_j] and multiply by f_j. Injectivity on Tor and exact localization force vanishing. The full descending range 1 through j+1 is retained, and the omitted faithful-flatness argument is proved separately by its actual residue fibres.
+
+### Change 1: `MC-STK-ERR-2100-OP1`
+
+Pinned-official lines `24082-24082`; bytes `876646:876675`.
+
+````diff
+- The vanishing by the flatness
++ The last vanishing follows from the flatness
+````
+
+Original SHA-256 `8100E431DFA036CA27C1ABBAAFFA1E569C039EE0FEB8606D42197E13E05D5564`; replacement SHA-256 `BD97F022E7272E1C5F17ED232D0994BEADBE84E879A8B0FB1E7751FB5166304E`.
+
+### Change 2: `MC-STK-ERR-2100-OP2`
+
+Pinned-official lines `24155-24155`; bytes `879174:879203`.
+
+````diff
+- The vanishing by the flatness
++ The last vanishing follows from the flatness
+````
+
+Original SHA-256 `8100E431DFA036CA27C1ABBAAFFA1E569C039EE0FEB8606D42197E13E05D5564`; replacement SHA-256 `BD97F022E7272E1C5F17ED232D0994BEADBE84E879A8B0FB1E7751FB5166304E`.
+
+</details>
+
+<details id="mc-stk-err-2101">
+<summary><code>MC-STK-ERR-2101 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2101`; producer ID: `ALGEBRA-RECON-563`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24471) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural noun in the general statement about injective ring maps.
+- Adverse evidence: The following theorem concerns arbitrary injective maps with Artinian source. This grammatical correction changes no mathematical hypothesis.
+
+### Change 1: `MC-STK-ERR-2101-OP1`
+
+Pinned-official lines `24471-24471`; bytes `889583:889611`.
+
+````diff
+- along injective homomorphism
++ along injective homomorphisms
+````
+
+Original SHA-256 `AF8E3B115E2991F802AC661907C1BE179DB73157790DAA877965C465C9F845BF`; replacement SHA-256 `56006EB10581E0CF4300BA41C6539DA469CE81EC608CD4C139CA733D1E5FBF34`.
+
+</details>
+
+<details id="mc-stk-err-2102">
+<summary><code>MC-STK-ERR-2102 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2102`; producer ID: `ALGEBRA-RECON-569`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24649) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair the ring-module terminology and make the changed basis explicit.
+- Adverse evidence: The incoming image is in the span of the primed vectors. The original-coordinate pivot calculation gives exact inverse basis maps and a chain retraction. The map (1,1) over Z with incoming e_2-e_1 disproves the literal unprimed span; interpreting a silent basis relabelling recovers the intended source proof.
+
+### Change 1: `MC-STK-ERR-2102-OP1`
+
+Pinned-official lines `24649-24649`; bytes `895025:895050`.
+
+````diff
+- subspace spanned by $e_j$
++ submodule spanned by $e'_j$
+````
+
+Original SHA-256 `2FC3CAB176B94A33E09629CC6DE1EBD5074222747AC3BBD079B76CD6AD25AFC0`; replacement SHA-256 `7E881AE2FE80F47DE237D62222FA933E1C5D9D96552ED9468F3A52900AF958EC`.
+
+</details>
+
+<details id="mc-stk-err-2103">
+<summary><code>MC-STK-ERR-2103 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2103`; producer ID: `ALGEBRA-RECON-570`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24693-L24777) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Add the missing preposition in both notation declarations.
+- Adverse evidence: The actual socle proof and the quotient-complex homology maps retain their original objects and work without these grammatical omissions.
+
+### Change 1: `MC-STK-ERR-2103-OP1`
+
+Pinned-official lines `24693-24693`; bytes `896569:896581`.
+
+````diff
+- denote $f_1$
++ denote by $f_1$
+````
+
+Original SHA-256 `063C30D851B7187BF3DADD96AA7147E9569D6A20DD26C904D861B482AAC6847B`; replacement SHA-256 `80CFE4AA6BFD136C029E8EC357F5914575EA1814CB218C0AEC36B9F32B050BD9`.
+
+### Change 2: `MC-STK-ERR-2103-OP2`
+
+Pinned-official lines `24777-24777`; bytes `899666:899684`.
+
+````diff
+- Denote $F_\bullet$
++ Denote by $F_\bullet$
+````
+
+Original SHA-256 `B29EEA6797BA4CED24A1F36A3491B8EADEEE1E7AE378E3C34AD6E3B4108256E6`; replacement SHA-256 `F9818DB9D3D11A1E0DDA548975AEE08326DE669F39704F0212D23D8D2D4716A8`.
+
+</details>
+
+<details id="mc-stk-err-2104">
+<summary><code>MC-STK-ERR-2104 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2104`; producer ID: `ALGEBRA-RECON-571`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24704) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports describe the same incorrect article.
+- Adverse evidence: The Artinian reduction is proved using the last nonzero power of the maximal ideal, with the field and empty-complex cases retained.
+
+### Change 1: `MC-STK-ERR-2104-OP1`
+
+Pinned-official lines `24704-24704`; bytes `897013:897023`.
+
+````diff
+- a Artinian
++ an Artinian
+````
+
+Original SHA-256 `ADF72C455AA06507771382C6E195B3F8DCDD0FEF14F02B7A968C969B454FE013`; replacement SHA-256 `02AFAC9FCC395CBB3DEEB4036CEA0EADDFF3920BB78E732B25ED01F739B841E5`.
+
+</details>
+
+<details id="mc-stk-err-2105">
+<summary><code>MC-STK-ERR-2105 — algebra.tex: — source_hypothesis_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2105`; producer ID: `ALGEBRA-RECON-572`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24723-L24740) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Record the independently found nonzero-ring boundary of the exterior rank definition and numerical trivial-complex lemma.
+- Adverse evidence: The chapter permits the zero ring. There the maximum of exterior degrees with nonzero map is undefined, and a rank-zero convention still contradicts the displayed rank-one identity disk. The zero complex is exact but its arbitrarily chosen free presentation cannot support the numerical rank formula. All later local uses already have nonzero rings.
+
+### Change 1: `MC-STK-ERR-2105-OP1`
+
+Pinned-official lines `24723-24723`; bytes `897642:897660`.
+
+````diff
+- Let $R$ be a ring.
++ Let $R$ be a nonzero ring.
+````
+
+Original SHA-256 `A510991FD604F5777CC85471B2AA39FBF7B64D6AAB11011D4635FA2A421327DE`; replacement SHA-256 `1A15F22CD05EC8AE583BD72C76FB2078392AA24AAB57000C5A28FD59C2E24FE6`.
+
+### Change 2: `MC-STK-ERR-2105-OP2`
+
+Pinned-official lines `24740-24740`; bytes `898228:898288`.
+
+````diff
+- In Situation \ref{situation-complex}, suppose the complex is
++ In Situation \ref{situation-complex}, suppose $R \ne 0$ and the complex is
+````
+
+Original SHA-256 `F6485741B34F5E010DB140C1E73E35C564E53E8466F925ED020067A29E00634B`; replacement SHA-256 `2E2C1338A7938EB6AA954C916E83DCA68BF5F79B82A0FD1AD7DBBD302083E8A8`.
+
+</details>
+
+<details id="mc-stk-err-2106">
+<summary><code>MC-STK-ERR-2106 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2106`; producer ID: `ALGEBRA-RECON-573`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24760) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the hyphen joining a cardinality to the following noun.
+- Adverse evidence: The actual disk counts t_i satisfy n_i=t_i+t_(i+1), giving the original alternating formula and all zero-rank unit ideals.
+
+### Change 1: `MC-STK-ERR-2106-OP1`
+
+Pinned-official lines `24760-24760`; bytes `899055:899072`.
+
+````diff
+- $r_{i + 1}$-basis
++ $r_{i + 1}$ basis
+````
+
+Original SHA-256 `9DBBAC1060DCB41A4832C309C258A96BC1918B4008D11C2973570A8A738B62E0`; replacement SHA-256 `7D7FD114F994002131A3EF7756F8DFB7B46922C92DD15F9CFCF7DB3B2645BEDF`.
+
+</details>
+
+<details id="mc-stk-err-2107">
+<summary><code>MC-STK-ERR-2107 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2107`; producer ID: `ALGEBRA-RECON-574`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24809) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports correct the same lowering-degree terminology.
+- Adverse evidence: The quotient is H_i for differentials M_i to M_(i-1), consistent with the immediately preceding long exact homology sequence.
+
+### Change 1: `MC-STK-ERR-2107-OP1`
+
+Pinned-official lines `24809-24809`; bytes `900642:900658`.
+
+````diff
+- cohomology group
++ homology group
+````
+
+Original SHA-256 `8AAA44EEFCC173AC797AF81FF842EDA7BEFD1E28E9342A2534673A664CB2AC82`; replacement SHA-256 `64451985A2EAA66FD10817A694BE67071F2973EFE5BF3EBC484C4A11DAD594CD`.
+
+</details>
+
+<details id="mc-stk-err-2108">
+<summary><code>MC-STK-ERR-2108 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2108`; producer ID: `ALGEBRA-RECON-575`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24810) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: The displayed list includes a left-exact sequence without a surjective final map, so remove the erroneous description short.
+- Adverse evidence: The separate note supplies its actual image factor B_(i-1) and proves the required depth bound, including i=e and i=e-1. No surjectivity onto M_(i-1) is assumed and no full translated proof is replaced.
+
+### Change 1: `MC-STK-ERR-2108-OP1`
+
+Pinned-official lines `24810-24810`; bytes `900702:900723`.
+
+````diff
+- short exact sequences
++ exact sequences
+````
+
+Original SHA-256 `61C904D78F11481FA714ABAB2E0F8A5F6BB6B3BE8D8EF27EDB4E2734BBA75295`; replacement SHA-256 `4FF15B85118B3C5C9266DC666FC10C82EB07A933887786478976B61048BF4FF5`.
+
+</details>
+
+<details id="mc-stk-err-2109">
+<summary><code>MC-STK-ERR-2109 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2109`; producer ID: `ALGEBRA-RECON-576`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24861-L24920) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the highest nonzero degree to infer the depth bound; retain rank-zero maps and their unit ideals.
+- Adverse evidence: A zero matrix has I=R by the source convention, so maximal-ideal entries alone do not make every maximal-minor ideal proper. After discarding only zero top terms, the top rank is n_e>0. Its positive-size minors lie in the maximal ideal and suffice for the exactness argument.
+
+### Change 1: `MC-STK-ERR-2109-OP1`
+
+Pinned-official lines `24861-24861`; bytes `902789:902824`.
+
+````diff
+- We may also assume that $e \geq 1$.
++ Discard zero terms at the left. If no positive-degree term remains,
++ the assertion holds. Otherwise we may assume that
++ $e \geq 1$ and $n_e > 0$.
+````
+
+Original SHA-256 `3945CC22809C74BD3F4B4C5BB319BF8E298A3E4BEF04F48D4D5D85578E550293`; replacement SHA-256 `7C0B76A8BB4AFCAB788B941CDB462F20E8BB0B40461BA17DBDB58CB2DBEF2577`.
+
+### Change 2: `MC-STK-ERR-2109-OP2`
+
+Pinned-official lines `24918-24920`; bytes `905997:906161`.
+
+````diff
+- As $I(\varphi_i) \subset \mathfrak m$ for all $i$ because
+- of what was said in the first paragraph of the proof, we
+- see that (2)(b) implies $\text{depth}(R) \geq e$.
++ Since $r_e = n_e > 0$ and the matrix entries lie in
++ $\mathfrak m$, we have $I(\varphi_e) \subset \mathfrak m$.
++ Thus (2)(b) implies $\text{depth}(R) \geq e$.
+````
+
+Original SHA-256 `5B140AC53E713DFEA3870D9B43DE78B53F4A298E5A550D9D795D1C507AA67CAD`; replacement SHA-256 `7FCFEA49F7D7E15CB30438C291FD4C9E91EA72C142FE4A84793617013772505E`.
+
+</details>
+
+<details id="mc-stk-err-2110">
+<summary><code>MC-STK-ERR-2110 — algebra.tex: — conceptual_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2110`; producer ID: `ALGEBRA-RECON-580`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24964-L25248) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the missing zero-module convention explicit and propagate its finite-parameter boundaries.
+- Adverse evidence: The source defines depth zero as positive infinity and the empty support dimension as negative infinity. Its literal CM equality excludes zero, contradicting localization at every prime: R=k[t]_(t), M=R/(t), p=0 is explicit. The zero exception repairs the intended later convention. The regular-sequence proposition must still exclude zero, the maximal-CM depth comparison is among nonzero modules, and a zero polynomial localization must be handled before choosing parameters.
+
+### Change 1: `MC-STK-ERR-2110-OP1`
+
+Pinned-official lines `24964-24964`; bytes `907471:907515`.
+
+````diff
+- if $\dim(\text{Supp}(M)) = \text{depth}(M)$.
++ if $M=0$ or if $\dim(\text{Supp}(M)) = \text{depth}(M)$.
+````
+
+Original SHA-256 `DDDACCCD4EE266719FE76E7B5C80FC236CF55A45921BF0A27AE1D00DFEBD1C53`; replacement SHA-256 `D2E43F835B9267DD26452B0264DB2A0E5B3EA456D9A37ECB572671796E80A105`.
+
+### Change 2: `MC-STK-ERR-2110-OP2`
+
+Pinned-official lines `25054-25054`; bytes `911409:911443`.
+
+````diff
+- Let $M$ be a Cohen-Macaulay module
++ Let $M$ be a nonzero Cohen-Macaulay module
+````
+
+Original SHA-256 `1806DDD227FD88FCB9F79468B17364DBFE336A04E5A684C10C57235B5343D064`; replacement SHA-256 `25BBA4CEF1A7630252E2CEAAD37C6E50DC97B2107BBEE9DF0A8BD6E5E6185D3D`.
+
+### Change 3: `MC-STK-ERR-2110-OP3`
+
+Pinned-official lines `25143-25143`; bytes `914766:914794`.
+
+````diff
+- ring is a finite module with
++ ring is a nonzero finite module with
+````
+
+Original SHA-256 `B1992C9BA38C394591D1DB37B74EA69DDDB30B1B87358EB2EF421D0090888E1D`; replacement SHA-256 `6DFCD8FDAB14E8E9A5A7F7F5C05BCB319869A0256431FA7AD40C44F4B993ED53`.
+
+### Change 4: `MC-STK-ERR-2110-OP4`
+
+Pinned-official lines `25248-25248`; bytes `919149:919212`.
+
+````diff
+- be a maximal ideal, and let $\mathfrak p = R \cap \mathfrak m$.
++ be a maximal ideal, and let $\mathfrak p = R \cap \mathfrak m$.
++ If $M_{\mathfrak p}=0$, then $M[x]_{\mathfrak m}=0$ and we are done.
++ Hence assume $M_{\mathfrak p}\ne0$.
+````
+
+Original SHA-256 `C550DE7930738F6AAD4F725547E8B2C4495D103DB44FD90FF9E8B3D19716F8BA`; replacement SHA-256 `B96CF9ED31613FDFD8655E4FB473C3616591AF1FC164EAC983E7FB260BD6D084`.
+
+</details>
+
+<details id="mc-stk-err-2111">
+<summary><code>MC-STK-ERR-2111 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2111`; producer ID: `ALGEBRA-RECON-581`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L24986-L24997) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Exclude the vacuous zero-dimensional goodness case and retain the possible zero kernel.
+- Adverse evidence: For M=k and g=0 the d=0 goodness conditions are empty while multiplication is not injective. The given regular sequence already excludes M=0, so the missing hypothesis is d>0. In the d=1 proof the kernel may be zero and then has empty support; containment is the actual proved statement.
+
+### Change 1: `MC-STK-ERR-2111-OP1`
+
+Pinned-official lines `24986-24986`; bytes `908325:908390`.
+
+````diff
+- Notation and assumptions as above. If $g$ is good with respect to
++ Notation and assumptions as above. Assume $d>0$. If $g$ is good with respect to
+````
+
+Original SHA-256 `BB8F0F3BF52EF4945083CF231B93C7FE2EF993B7002F9A03894D163BA028CF7F`; replacement SHA-256 `5F2C987F321BF9AE046805D545FE9EE197DF03414153A034B630B17B484E12C3`.
+
+### Change 2: `MC-STK-ERR-2111-OP2`
+
+Pinned-official lines `24993-24995`; bytes `908573:908692`.
+
+````diff
+- We prove the lemma by induction on $d$.
+- If $d = 0$, then $M$ is finite and there is no case
+- to which the lemma applies.
++ We prove the lemma by induction on $d \geq 1$.
+````
+
+Original SHA-256 `8D11F75A72E04C5A34769AFAFB61658CCA3171A49D58517A8870A09556C436A3`; replacement SHA-256 `AC0558C24B20E5E66448DE775402E32A1BB32C57E5AD00AF80A3EE6598B44968`.
+
+### Change 3: `MC-STK-ERR-2111-OP3`
+
+Pinned-official lines `24997-24997`; bytes `908759:908803`.
+
+````diff
+- The kernel $K$ has support $\{\mathfrak m\}$
++ The kernel $K$ has support contained in $\{\mathfrak m\}$
+````
+
+Original SHA-256 `39C9ED0F63154D6A9C7D20F189C653057A17B41BF482D7C09F666069B44F37A5`; replacement SHA-256 `1450D0A09AA5C3975F72BB6DE898BCD0FE3FC89E927685D4BF530DC8CFC69A7E`.
+
+</details>
+
+<details id="mc-stk-err-2112">
+<summary><code>MC-STK-ERR-2112 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2112`; producer ID: `ALGEBRA-RECON-582`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25027-L25249) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct both articles in the single received report.
+- Adverse evidence: Both complete source units are read; the polynomial parameter sequence is chosen only after its nonzero localized-module case has been established.
+
+### Change 1: `MC-STK-ERR-2112-OP1`
+
+Pinned-official lines `25027-25027`; bytes `909968:909988`.
+
+````diff
+- Choose a $M$-regular
++ Choose an $M$-regular
+````
+
+Original SHA-256 `4ADDDCB0570DE079328179384E4367481F1FB554D6A9B54D603C55AF8E93A004`; replacement SHA-256 `D4199542D1EFF395C2202B5579A706332257EB272F1A153B0732144F9916CF46`.
+
+### Change 2: `MC-STK-ERR-2112-OP2`
+
+Pinned-official lines `25249-25249`; bytes `919236:919264`.
+
+````diff
+- be a $M_\mathfrak p$-regular
++ be an $M_\mathfrak p$-regular
+````
+
+Original SHA-256 `25123083B14CA471E59D533561D376FFB94A6BFD3360F6D6C8ECE8156417B02E`; replacement SHA-256 `1849E02BD4DC4798D892869F318203ABC156F8547CD867ECD24C4DDD6837F9B7`.
+
+</details>
+
+<details id="mc-stk-err-2113">
+<summary><code>MC-STK-ERR-2113 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2113`; producer ID: `ALGEBRA-RECON-583`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25068) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports require the actual module factor in the successive quotient.
+- Adverse evidence: The dimension-drop induction acts on M_i=M/(g_1,...,g_i)M and the exact quotient maps, whose nonzero targets follow from Nakayama.
+
+### Change 1: `MC-STK-ERR-2113-OP1`
+
+Pinned-official lines `25068-25068`; bytes `912119:912141`.
+
+````diff
+- $M/(g_1, \ldots, g_i)$
++ $M/(g_1, \ldots, g_i)M$
+````
+
+Original SHA-256 `8D081C81797E0E6EBF6C9D3DF24E6576FE834B3895AEC51584F5DC3F0F19F4F8`; replacement SHA-256 `13B6D0A6E2E663F9571B49ED33A55302300FCD620BAC4228697E15675B498E57`.
+
+</details>
+
+<details id="mc-stk-err-2114">
+<summary><code>MC-STK-ERR-2114 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2114`; producer ID: `ALGEBRA-RECON-584`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25209) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair the missing verb while naming the actual nonzero localization needed in the depth comparison.
+- Adverse evidence: A nonzero M can have zero localization. With the explicit CM zero exception that case is immediate; otherwise p is in the support and the original finite depth and dimension inequalities apply. This also implies M is nonzero.
+
+### Change 1: `MC-STK-ERR-2114-OP1`
+
+Pinned-official lines `25209-25209`; bytes `917435:917452`.
+
+````diff
+- and $M$ not zero.
++ and $M_{\mathfrak p}$ is nonzero.
+````
+
+Original SHA-256 `7BEC41107D7DB4C2437E16FDFB8E201C636DAC6DC52CE1FF8C322AF855E59D8B`; replacement SHA-256 `F184C9F4DC4DA001A78C01E3EFFA514A4F9C6B99DE1E9B979C5C11C8E32BC275`.
+
+</details>
+
+<details id="mc-stk-err-2115">
+<summary><code>MC-STK-ERR-2115 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2115`; producer ID: `ALGEBRA-RECON-585`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25313) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the article before the spoken initial R.
+- Adverse evidence: The regular sequence, zero-dimensional quotient and their equivalence to the local-ring CM definition are preserved.
+
+### Change 1: `MC-STK-ERR-2115-OP1`
+
+Pinned-official lines `25313-25313`; bytes `921225:921241`.
+
+````diff
+- of a $R$-regular
++ of an $R$-regular
+````
+
+Original SHA-256 `CE9DF0C9E8B3C3C7A503B803372F490BB754AE8F963B07900E0D4F6CD706EAE1`; replacement SHA-256 `5534FC8E6CC040E3BADBDF90BA9DDFE11AAB0ED952CFF46AB3B2045940BAA5DF`.
+
+</details>
+
+<details id="mc-stk-err-2116">
+<summary><code>MC-STK-ERR-2116 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2116`; producer ID: `ALGEBRA-RECON-586`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25346) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports supply the omitted article and head noun.
+- Adverse evidence: The original predecessor theorem already has precisely this Noetherian local ring hypothesis.
+
+### Change 1: `MC-STK-ERR-2116-OP1`
+
+Pinned-official lines `25346-25346`; bytes `922184:922212`.
+
+````diff
+- Let $R$ be Noetherian local.
++ Let $R$ be a Noetherian local ring.
+````
+
+Original SHA-256 `2AA033DDF12B701ECDCBABE56CEAB2859BCBBC05B647A929460A03D8D4A1FAC8`; replacement SHA-256 `6CD5E05CB7DAF8B5B9C63B79918489B78931A2B8FA9E323B66BB905E550CBCF7`.
+
+</details>
+
+<details id="mc-stk-err-2117">
+<summary><code>MC-STK-ERR-2117 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2117`; producer ID: `ALGEBRA-RECON-587`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25348) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports correct the missing primality requirement.
+- Adverse evidence: The zero-dimensional CM ring k[epsilon]/epsilon^2 has the maximal arbitrary-ideal chain 0 < (epsilon) < R of length two. The source predecessor and Krull dimension concern prime chains.
+
+### Change 1: `MC-STK-ERR-2117-OP1`
+
+Pinned-official lines `25348-25348`; bytes `922261:922288`.
+
+````diff
+- Any maximal chain of ideals
++ Any maximal chain of prime ideals
+````
+
+Original SHA-256 `1FEF865ED105A0B17CD56E0B8112ADFBF33813BAC19FD01B1194732A3B964A78`; replacement SHA-256 `30F466A361627C8C00017C88D1C48F8D04F1E5275BA206BA09B693582D1F5604`.
+
+</details>
+
+<details id="mc-stk-err-2118">
+<summary><code>MC-STK-ERR-2118 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2118`; producer ID: `ALGEBRA-RECON-588`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25391) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the finite-variable boundary of the cited polynomial-module theorem.
+- Adverse evidence: The chapter permits infinitely many variables but defines CM rings to be Noetherian. Over a field, the polynomial ring in infinitely many variables has the strictly increasing chain (x_1)<(x_1,x_2)<... and is not Noetherian. The source proof applies only to the finite-variable result.
+
+### Change 1: `MC-STK-ERR-2118-OP1`
+
+Pinned-official lines `25391-25391`; bytes `923412:923443`.
+
+````diff
+- Any polynomial algebra over $R$
++ Any polynomial algebra in finitely many variables over $R$
+````
+
+Original SHA-256 `788ABD41A5D8932712CD645A5B682B10C3A8D2A21390C019A5455EC66BDA3A77`; replacement SHA-256 `4D5153BD23015092EA3EB922AF77E19D0D66BDF8F75EEC6E6FF1A66BF0A77B20`.
+
+</details>
+
+<details id="mc-stk-err-2119">
+<summary><code>MC-STK-ERR-2119 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2119`; producer ID: `ALGEBRA-RECON-589`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25413-L25414) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Handle the empty free segment when e=d and exclude infinite depth before using the integer indices.
+- Adverse evidence: A nonzero finite M has finite e<=d. The e=d case is the identity complex, not an undefined F_(-1). For e<d the actual free covers may include a redundant R summand, ensuring every kernel is nonzero and the final K satisfies the source strict maximal-CM equality. Complete proof gives exact depth min(d,e+j) at each nonzero syzygy.
+
+### Change 1: `MC-STK-ERR-2119-OP1`
+
+Pinned-official lines `25413-25413`; bytes `924074:924118`.
+
+````diff
+- Let $M$ be a finite $R$-module of depth $e$.
++ Let $M$ be a nonzero finite $R$-module of depth $e$.
+````
+
+Original SHA-256 `DB3A012A792C8E778F3E6D7EB1AFED919A6556AC79FC87BEC272D5E1E1C5EE39`; replacement SHA-256 `EACF4C2272CE91B692EAFAE036EB1441DFC7833EBB5C07C7EB7B8963D4FA8544`.
+
+### Change 2: `MC-STK-ERR-2119-OP2`
+
+Pinned-official lines `25414-25414`; bytes `924119:924148`.
+
+````diff
+- There exists an exact complex
++ If $e=d$, take $K=M$ and the identity map $K\to M$, with no free terms.
++ If $e<d$, there exists an exact complex
+````
+
+Original SHA-256 `84468DF3DE82D0F5AE908BBB20FCB1F19E7329B79FF40C6BC45D32E5DA166317`; replacement SHA-256 `32309167449A9507E8363494686E1B824175A913FB6C0064C8DD5C2A2C2A5CE5`.
+
+</details>
+
+<details id="mc-stk-err-2120">
+<summary><code>MC-STK-ERR-2120 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2120`; producer ID: `ALGEBRA-RECON-593`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25559) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports correct the same attributive noun.
+- Adverse evidence: The original localization bijection identifies every intermediate prime and preserves saturation and exact lengths.
+
+### Change 1: `MC-STK-ERR-2120-OP1`
+
+Pinned-official lines `25559-25559`; bytes `929086:929099`.
+
+````diff
+- primes ideals
++ prime ideals
+````
+
+Original SHA-256 `AFEAE9F3649410480419866817C18F8835F009D8F4A3754001CF62DAC9FC5C84`; replacement SHA-256 `D78ED8EB09784B1D87799659AC24772E3B0AA24C693422479C05B59531C4746F`.
+
+</details>
+
+<details id="mc-stk-err-2121">
+<summary><code>MC-STK-ERR-2121 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2121`; producer ID: `ALGEBRA-RECON-597`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25722) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Choose finite maximal-ideal orders only for nonzero factors.
+- Adverse evidence: The zero element lies in every power and has no finite maximal order. For both nonzero factors Krull intersection supplies the exact finite orders, whose initial forms have nonzero product.
+
+### Change 1: `MC-STK-ERR-2121-OP1`
+
+Pinned-official lines `25722-25722`; bytes `934707:934743`.
+
+````diff
+- Let $f, g \in R$ such that $fg = 0$.
++ Suppose, for a contradiction, that $f, g \in R$ are nonzero and $fg = 0$.
+````
+
+Original SHA-256 `D055FEBB09A430D0E813702DF45ED0FD35FD452BBCFEFE0DDE06AA5D442170FC`; replacement SHA-256 `C8BB4E222AE6596A9FA3F74AA56A1D58444FE102C3B2503E3B7C22E543C92DCF`.
+
+</details>
+
+<details id="mc-stk-err-2122">
+<summary><code>MC-STK-ERR-2122 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2122`; producer ID: `ALGEBRA-RECON-598`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25760) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the omitted preposition in the notation declaration.
+- Adverse evidence: The quotient maximal ideal and residue field remain exactly the original ones.
+
+### Change 1: `MC-STK-ERR-2122-OP1`
+
+Pinned-official lines `25760-25760`; bytes `936101:936131`.
+
+````diff
+- Denote $\overline{\mathfrak m}
++ Denote by $\overline{\mathfrak m}
+````
+
+Original SHA-256 `A0275CD7EF348FFA481A203B7A34ECA4EE3809F548E8C0CF206D313A025E8A2F`; replacement SHA-256 `89EE61509E83A923EC4FD06C80C58F6D9BA73920E1760174CD1FA7EAAFFC6170`.
+
+</details>
+
+<details id="mc-stk-err-2123">
+<summary><code>MC-STK-ERR-2123 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2123`; producer ID: `ALGEBRA-RECON-599`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25765) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports restore the residue-field binding in the third vector-space dimension.
+- Adverse evidence: The actual tangent-space short exact sequence has all three terms over the same kappa. Its basis lifts and regular quotient kernel argument are proved with c=0 and c=d included.
+
+### Change 1: `MC-STK-ERR-2123-OP1`
+
+Pinned-official lines `25765-25765`; bytes `936306:936335`.
+
+````diff
+- - \dim(\overline{\mathfrak m}
++ - \dim_\kappa(\overline{\mathfrak m}
+````
+
+Original SHA-256 `F08FA7CA041A335A75FABDF62D0A035B339C3B0316A6AF82EE701BC77E5563AC`; replacement SHA-256 `019505F3C8D34FB574C1610EF222C32CA5537F55855730672905CF6CE46178D8`.
+
+</details>
+
+<details id="mc-stk-err-2124">
+<summary><code>MC-STK-ERR-2124 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2124`; producer ID: `ALGEBRA-RECON-600`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25791) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the article before the spoken initial R.
+- Adverse evidence: The original coefficient relation gives K=xK using regularity on M, including the rank-zero case.
+
+### Change 1: `MC-STK-ERR-2124-OP1`
+
+Pinned-official lines `25791-25791`; bytes `937327:937341`.
+
+````diff
+- a $R/xR$-basis
++ an $R/xR$-basis
+````
+
+Original SHA-256 `0A9C30D53DE32D452A129EFAB039597CD9088FAF5766A32300675CD8D96F2A5C`; replacement SHA-256 `1932D07B732E48BC4E6BAF9780F78EEFED0C13AF7F65B5422B400A69546A7DA1`.
+
+</details>
+
+<details id="mc-stk-err-2125">
+<summary><code>MC-STK-ERR-2125 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2125`; producer ID: `ALGEBRA-RECON-601`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25842) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural for the directed family of maximal ideals.
+- Adverse evidence: The exact unit/nonunit argument proves the original maximal ideal is their colimit, with no injectivity hypothesis on transition maps.
+
+### Change 1: `MC-STK-ERR-2125-OP1`
+
+Pinned-official lines `25842-25842`; bytes `939185:939205`.
+
+````diff
+- of the maximal ideal
++ of the maximal ideals
+````
+
+Original SHA-256 `2DE70401D7F5C72750D89AE2A548A5657E4F428569BCB4F82918F1F22FDE35D2`; replacement SHA-256 `0595D70BA8750207794646881A09A10A233AAEF06468D00FB5465CCAEA1B1B97`.
+
+</details>
+
+<details id="mc-stk-err-2126">
+<summary><code>MC-STK-ERR-2126 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2126`; producer ID: `ALGEBRA-RECON-602`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25843) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Bind the induction parameter to the grouped tangent space and its actual residue field.
+- Adverse evidence: The limit is Noetherian, so this dimension is finite. The quotient by x outside m squared has tangent dimension exactly d-1 via the original quotient map.
+
+### Change 1: `MC-STK-ERR-2126-OP1`
+
+Pinned-official lines `25843-25843`; bytes `939270:939306`.
+
+````diff
+- $d = \dim \mathfrak m/\mathfrak m^2$
++ $d = \dim_{R/\mathfrak m}(\mathfrak m/\mathfrak m^2)$
+````
+
+Original SHA-256 `A379D4DADC58A9A1160F888FF3330FE2AB0BE5D90CAD7859A6B2437114F11D4A`; replacement SHA-256 `0CBDB4E38E1EC3CC3CA6BBAEB2B8D322B5928F3BAC755698D34E34EE454CD81C`.
+
+</details>
+
+<details id="mc-stk-err-2127">
+<summary><code>MC-STK-ERR-2127 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2127`; producer ID: `ALGEBRA-RECON-603`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25853) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Both reports point to the direct domain theorem used in the argument.
+- Adverse evidence: The graded theorem is its ingredient, but the immediately following domain lemma states the result. A directed colimit of these domains is a domain by actual finite-stage zero detection, even for noninjective transition maps.
+
+### Change 1: `MC-STK-ERR-2127-OP1`
+
+Pinned-official lines `25853-25853`; bytes `939800:939826`.
+
+````diff
+- \ref{lemma-regular-graded}
++ \ref{lemma-regular-domain}
+````
+
+Original SHA-256 `DB688F40E5588797B0717B9B6F2660EFB6ED99739261EEE1E44195B70076E602`; replacement SHA-256 `065E4367B7AC008A5BA70F911EA439861448441A165CBD81AB0AA2262E0643FC`.
+
+</details>
+
+<details id="mc-stk-err-2128">
+<summary><code>MC-STK-ERR-2128 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2128`; producer ID: `ALGEBRA-RECON-606`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25914) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the comma separating the phrase from its that-clause.
+- Adverse evidence: Composition, base change and passage through the actual image are proved by the original maps; no source hypothesis changes.
+
+### Change 1: `MC-STK-ERR-2128-OP1`
+
+Pinned-official lines `25914-25914`; bytes `941300:941319`.
+
+````diff
+- in particular, that
++ in particular that
+````
+
+Original SHA-256 `F0848ADF8CDF41A0AF760559439055EDE8E893C58FC4616183CA20C4CB444869`; replacement SHA-256 `74E61AE801C66ED4F03A0E32DCE8AB73E7FD41224C368CE1335E9F181E814F67`.
+
+</details>
+
+<details id="mc-stk-err-2129">
+<summary><code>MC-STK-ERR-2129 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2129`; producer ID: `ALGEBRA-RECON-607`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25936) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the equality of composites required by epicity explicitly.
+- Adverse evidence: The common R-algebra structure on A defines both localizations. The actual annihilator argument proves the comparison into the product of localizations injective.
+
+### Change 1: `MC-STK-ERR-2129-OP1`
+
+Pinned-official lines `25936-25936`; bytes `942153:942205`.
+
+````diff
+- from $S$ to a ring $A$ equalizing the map $R \to S$.
++ from $S$ to a ring $A$ whose composites with $R \to S$ are equal.
+````
+
+Original SHA-256 `12E989305171851019E7BB4C25E85A4AB3FA190CEF3A81FA62207EC9E14558B5`; replacement SHA-256 `DBD044B1D90FCAF9069CA4D0166254B59C9E1301A2F227E1F633E696068C6E73`.
+
+</details>
+
+<details id="mc-stk-err-2130">
+<summary><code>MC-STK-ERR-2130 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2130`; producer ID: `ALGEBRA-RECON-608`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L25996-L25997) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct all four undefined R occurrences in the alternate field argument to the original S.
+- Adverse evidence: OCC-12192 undercounts the occurrences as three. The direct proof concerns a tensor-factor inclusion, not multiplication, which is always surjective. A linear functional separating 1 and s proves the intended assertion.
+
+### Change 1: `MC-STK-ERR-2130-OP1`
+
+Pinned-official lines `25996-25996`; bytes `944315:944336`.
+
+````diff
+- $R \to R \otimes_k R$
++ $S \to S \otimes_k S$
+````
+
+Original SHA-256 `77DCAC0B79001BE7D2469067CE1F17ABD7A48B218FCDCC024DAB0D7CC22ADA07`; replacement SHA-256 `FFB17FF0C3A7E8F499C0CB0503B7EB5D4F009FBE0E8858F7B7B7948D95DBD82F`.
+
+### Change 2: `MC-STK-ERR-2130-OP2`
+
+Pinned-official lines `25997-25997`; bytes `944365:944383`.
+
+````diff
+- $\dim_k(R) \leq 1$
++ $\dim_k(S) \leq 1$
+````
+
+Original SHA-256 `F8CE01109E17A3A8E6E4A2FD7AAA03F979FC4FDCE9F20BAEC56A6A2AD9850558`; replacement SHA-256 `2304EBFABBF9470278C46A80DB3F6B15D736B5CA67A3188E6864778F6780E331`.
+
+</details>
+
+<details id="mc-stk-err-2131">
+<summary><code>MC-STK-ERR-2131 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2131`; producer ID: `ALGEBRA-RECON-609`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26057) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the superfluous conjunction after the participial clause.
+- Adverse evidence: Right exactness and finite expansions in the original generators produce finite total matrix support; all row and column equations are retained.
+
+### Change 1: `MC-STK-ERR-2131-OP1`
+
+Pinned-official lines `26057-26057`; bytes `946474:946489`.
+
+````diff
+- $ and we obtain
++ $, we obtain
+````
+
+Original SHA-256 `9661D30C4B77E0D9494E18CFF2EBF3E75F75A55538593F9506EC67BDA50B9E61`; replacement SHA-256 `0CEABCB0E09407514BEE4EA18DAF6AC9EA9500F72BF3B43DA4AA0EEC58D2402D`.
+
+</details>
+
+<details id="mc-stk-err-2132">
+<summary><code>MC-STK-ERR-2132 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2132`; producer ID: `ALGEBRA-RECON-610`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26092) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the image of the possibly noninjective ring map as required by the source statement.
+- Adverse evidence: The omitted rows and the exceptional j=1 column are checked exactly. An explicit signed block matrix represents g, including coincident generators and n=0.
+
+### Change 1: `MC-STK-ERR-2132-OP1`
+
+Pinned-official lines `26092-26092`; bytes `947758:947767`.
+
+````diff
+- s_i \in R
++ s_i \in \varphi(R)
+````
+
+Original SHA-256 `C0AF0408D4EF958E711E9C95391329C1E016586301AD6C3EAB5AF83EAEFBB495`; replacement SHA-256 `6E2A8108FF8F0F886830D44F494AC0B9E0302F44BE1D8BBDF211D50C84BB6C71`.
+
+</details>
+
+<details id="mc-stk-err-2133">
+<summary><code>MC-STK-ERR-2133 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2133`; producer ID: `ALGEBRA-RECON-611`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26096) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the singular verb for the set of elements.
+- Adverse evidence: Block sums, negation, scalar representations and indexed tensor products prove the stated subalgebra property.
+
+### Change 1: `MC-STK-ERR-2133-OP1`
+
+Pinned-official lines `26096-26096`; bytes `947949:947977`.
+
+````diff
+- expression as in (2) form an
++ expression as in (2) forms an
+````
+
+Original SHA-256 `676FE190A63D0CF7A25CBB54EAEF3BDFFCD4E431EBB4D0A50BED05FED7659042`; replacement SHA-256 `E9873DB2E8B06AF3593330C0166206DE597739A874FD9A7D6FA84D4BCFA22AA7`.
+
+</details>
+
+<details id="mc-stk-err-2134">
+<summary><code>MC-STK-ERR-2134 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2134`; producer ID: `ALGEBRA-RECON-612`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26112-L26113) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Bind the declared uppercase matrices Y and Z in their defining sentence.
+- Adverse evidence: The following products use exactly those matrices. A separate conceptual erratum records the additional image-versus-source type issue and its effect on the triple argument.
+
+### Change 1: `MC-STK-ERR-2134-OP1`
+
+Pinned-official lines `26112-26112`; bytes `948603:948613`.
+
+````diff
+- let $y$ be
++ let $Y$ be
+````
+
+Original SHA-256 `0A2AA513881E507886FB934ACBC568C968E30F68B3083A3142EAB024C8B77360`; replacement SHA-256 `ECB321CD5F3668ABCC474C659E7275B17618AF712E38B96B82FB786089267228`.
+
+### Change 2: `MC-STK-ERR-2134-OP2`
+
+Pinned-official lines `26113-26113`; bytes `948661:948671`.
+
+````diff
+- let $z$ be
++ let $Z$ be
+````
+
+Original SHA-256 `1FA26C10171008A664EF02DBC04B95219587C85A755FA70EA6B6DBAAFB562272`; replacement SHA-256 `230A07C73B603639F9D84BE88BF1DFCEDE75CB97517C8538D03033AADBD4A1EC`.
+
+</details>
+
+<details id="mc-stk-err-2135">
+<summary><code>MC-STK-ERR-2135 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2135`; producer ID: `ALGEBRA-RECON-616`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26232) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the parentheses for the actual quotient cokernel.
+- Adverse evidence: The original map J/JI to R/I has kernel (J intersection I)/JI and cokernel R/(I+J); all eleven equivalences are checked with the original localization maps.
+
+### Change 1: `MC-STK-ERR-2135-OP1`
+
+Pinned-official lines `26232-26232`; bytes `953227:953234`.
+
+````diff
+- R/I + J
++ R/(I + J)
+````
+
+Original SHA-256 `3A554E5831AA28B413D468AA9A72A8B40E562F3478E3F9880B2ED17C6F96A49F`; replacement SHA-256 `E039D127CEFB6B69A9D1F34BF996FF042512613A9F0FA9D503259D042FFBC829`.
+
+</details>
+
+<details id="mc-stk-err-2136">
+<summary><code>MC-STK-ERR-2136 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2136`; producer ID: `ALGEBRA-RECON-617`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26259) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Replace the repeated implication verb by its grammatical consequence.
+- Adverse evidence: When I lies in the prime, 1-y is outside it; x(1-y)=0 therefore kills the original x in the localization.
+
+### Change 1: `MC-STK-ERR-2136-OP1`
+
+Pinned-official lines `26259-26259`; bytes `954408:954435`.
+
+````diff
+- for some $y \in I$, implies
++ for some $y \in I$, and hence
+````
+
+Original SHA-256 `7048CE83975A582AAE7AF4B66950C3DFB2A1513F03E5EAA594F54A522D909282`; replacement SHA-256 `092A337F4D2F32E4529FFF032A1AC4761F6A5221468354A8BD3C5B5A375E5AAC`.
+
+</details>
+
+<details id="mc-stk-err-2137">
+<summary><code>MC-STK-ERR-2137 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2137`; producer ID: `ALGEBRA-RECON-618`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26419) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Cite the existence-and-uniqueness correspondence actually needed for an arbitrary closed generalization-stable set.
+- Adverse evidence: The earlier uniqueness lemma cannot supply the pure ideal. The next lemma supplies it by the explicit x=xy construction. The full converse rank-stratum proof is checked separately.
+
+### Change 1: `MC-STK-ERR-2137-OP1`
+
+Pinned-official lines `26419-26419`; bytes `960225:960270`.
+
+````diff
+- \ref{lemma-pure-ideal-determined-by-zero-set}
++ \ref{lemma-pure-open-closed-specializations}
+````
+
+Original SHA-256 `0622F0535F892492A69187E249C9457DFEA75EA1E69516FC14703BD1B8B93C2B`; replacement SHA-256 `975E0321ACCEC75E9E5319AF0B4DA8DF4C8E48FE9A7394BBE40B03063E095066`.
+
+</details>
+
+<details id="mc-stk-err-2138">
+<summary><code>MC-STK-ERR-2138 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2138`; producer ID: `ALGEBRA-RECON-619`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26429) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Terminate the localization equality before the next sentence.
+- Adverse evidence: The actual base-changed free module remains nonzero under a generalization, giving the stated support implication.
+
+### Change 1: `MC-STK-ERR-2138-OP1`
+
+Pinned-official lines `26429-26429`; bytes `960673:960689`.
+
+````diff
+- R_{\mathfrak p}$
++ R_{\mathfrak p}$.
+````
+
+Original SHA-256 `79EE8D896C0C265187EA26840C0D3E6D1A2FABD08F9692360914BA77953D3D82`; replacement SHA-256 `4E6ACE8A48614419C97F60A0A02614D038CA337859480019823930EBF575192D`.
+
+</details>
+
+<details id="mc-stk-err-2139">
+<summary><code>MC-STK-ERR-2139 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2139`; producer ID: `ALGEBRA-RECON-622`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26738-L26740) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specify the missing augmentation and degree-minus-one syzygy binding without changing the source split-tail argument.
+- Adverse evidence: For n=0 the first projective object is M itself. Only nonnegative e defines P_e as a differential kernel; the separate P_-1=M convention avoids an undefined d_-1.
+
+### Change 1: `MC-STK-ERR-2139-OP1`
+
+Pinned-official lines `26738-26738`; bytes `970950:970979`.
+
+````diff
+- $d_e : F_e \to F_{e - 1}$. By
++ the augmentation by $d_0 : F_0 \to M$ and the differentials by
++ $d_e : F_e \to F_{e - 1}$ for $e \geq 1$. Put $P_{-1}=M$
++ and $P_e = \Ker(d_e)$ for $e \geq 0$. By
+````
+
+Original SHA-256 `968ECDDBAD21E758988FF40E3BA5D11131CA990CCBA148CB680158D86EBF92EF`; replacement SHA-256 `A87BDE87B57DF691D4CB4A0CDB962D2202984AB338FFC4EFB7D8DF9A7D95C7FC`.
+
+### Change 2: `MC-STK-ERR-2139-OP2`
+
+Pinned-official lines `26740-26740`; bytes `971021:971084`.
+
+````diff
+- we see that $P_e = \Ker(d_e)$ is projective for $e \geq n - 1$.
++ we see that $P_e$ is projective for $e \geq n - 1$.
+````
+
+Original SHA-256 `75470620CA84AA4DAB2357ABFE3A03E4DFA061DEFBD24E5BBEA233DFFD674934`; replacement SHA-256 `2A845D22CB33AC88B8438618C91C36BEF282EC8970962E1F1373552FACEAA9D9`.
+
+</details>
+
+<details id="mc-stk-err-2140">
+<summary><code>MC-STK-ERR-2140 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2140`; producer ID: `ALGEBRA-RECON-628`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26924) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Require finite depth before forming the integer-indexed resolution.
+- Adverse evidence: The original convention gives depth(0)=positive infinity, so F_(d-e) is undefined for M=0. Nonzero finite modules have integer depth; the zero module separately has its zero resolution and does not affect the global bound.
+
+### Change 1: `MC-STK-ERR-2140-OP1`
+
+Pinned-official lines `26924-26924`; bytes `977939:977962`.
+
+````diff
+- Every finite $R$-module
++ Every nonzero finite $R$-module
+````
+
+Original SHA-256 `3DBBEA0B8701D98490131E2ABCD9DA2914093FA2FE5A91700A84FBBD26D5E26D`; replacement SHA-256 `A29D7EDF1E1C601F81BB16EB608BB47138EE28B3E1AB3BDEE8A1F137D5553519`.
+
+</details>
+
+<details id="mc-stk-err-2141">
+<summary><code>MC-STK-ERR-2141 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2141`; producer ID: `ALGEBRA-RECON-629`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L26947) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the required preposition in the citation sentence.
+- Adverse evidence: The cited localization lemma proves the stated bound using the actual localized projective resolution.
+
+### Change 1: `MC-STK-ERR-2141-OP1`
+
+Pinned-official lines `26947-26947`; bytes `978646:978659`.
+
+````diff
+- We saw, Lemma
++ We saw in Lemma
+````
+
+Original SHA-256 `C538D02BEFF88FFCE9991F5942489C54CE3577CEB83AF60AB2A86E480A72A3A8`; replacement SHA-256 `45ED768F3237587E3FAD68AA1B2922F0A7F9CF31DBB856CF3DD1ED56B125DE74`.
+
+</details>
+
+<details id="mc-stk-err-2142">
+<summary><code>MC-STK-ERR-2142 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2142`; producer ID: `ALGEBRA-RECON-633`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27165) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Exclude the zero ring from equality of global and Krull dimensions with an attained prime.
+- Adverse evidence: The zero ring has global dimension zero but empty spectrum of dimension negative infinity, and it has no prime or maximal ideal attaining a bound. The fixed-n equivalence for nonzero rings follows from exact local dimensions and the attained finite supremum.
+
+### Change 1: `MC-STK-ERR-2142-OP1`
+
+Pinned-official lines `27165-27165`; bytes `987007:987036`.
+
+````diff
+- Let $R$ be a Noetherian ring.
++ Let $R$ be a nonzero Noetherian ring.
+````
+
+Original SHA-256 `6150F46FF8F8D2E14CDB122FBDB587D7D8ED99253B1AFE0BBB02E9BB97D603C6`; replacement SHA-256 `B06BB4C04368A94BF16ED12A8F657885F8BE2A33D55A0EF44767FD5E3B47D565`.
+
+</details>
+
+<details id="mc-stk-err-2143">
+<summary><code>MC-STK-ERR-2143 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2143`; producer ID: `ALGEBRA-RECON-635`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27206) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Cite the preceding theorem proving the stated exact global dimension.
+- Adverse evidence: The equality is true. The new reference proves equality, whereas the old reference states an upper bound. There is no need to weaken the assertion.
+
+### Change 1: `MC-STK-ERR-2143-OP1`
+
+Pinned-official lines `27206-27206`; bytes `988503:988542`.
+
+````diff
+- \ref{proposition-regular-finite-gl-dim}
++ \ref{proposition-finite-gl-dim-regular}
+````
+
+Original SHA-256 `8E28405D7B82764B1EEEC6FD6890BDEDD73457C2CACB545D060F5E8817FA5E49`; replacement SHA-256 `C15DAF17C6FFB84044ED5DB4EA9AD8BAF959A5C6B2A645E7DBEFA30D040804C0`.
+
+</details>
+
+<details id="mc-stk-err-2144">
+<summary><code>MC-STK-ERR-2144 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2144`; producer ID: `ALGEBRA-RECON-642`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27338-L27339) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the original if-clause to its conclusion.
+- Adverse evidence: Going up lifts any larger contracted prime above the original maximal ideal; maximality forces equality. The two reports concern the same punctuation defect.
+
+### Change 1: `MC-STK-ERR-2144-OP1`
+
+Pinned-official lines `27338-27338`; bytes `993183:993202`.
+
+````diff
+- is a maximal ideal.
++ is a maximal ideal,
+````
+
+Original SHA-256 `381D172187F6AE20EE37AA57189DE0FEE05C38138B09317C898A058F3DAD6A5E`; replacement SHA-256 `A57DD7CE137AFA3CF4238A7ECDAA1900A354C367525C705BB90A9240D396D69F`.
+
+### Change 2: `MC-STK-ERR-2144-OP2`
+
+Pinned-official lines `27339-27339`; bytes `993203:993225`.
+
+````diff
+- Then the inverse image
++ then the inverse image
+````
+
+Original SHA-256 `5CA151F5B401AA95549456DC6E8185B5153E5EC29E79B04BA897472E30B9EDF8`; replacement SHA-256 `B8AB3134CEFBA0CC21A20F9FC44C876EFA1DC6DD2021930DC72D8327E1A1EBBB`.
+
+</details>
+
+<details id="mc-stk-err-2145">
+<summary><code>MC-STK-ERR-2145 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2145`; producer ID: `ALGEBRA-RECON-644`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27491) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing copula.
+- Adverse evidence: The finite-flat map is faithfully flat and injective, so integral dimension equality applies. The other case follows from depth and the assumed dimension bound.
+
+### Change 1: `MC-STK-ERR-2145-OP1`
+
+Pinned-official lines `27491-27491`; bytes `997864:997890`.
+
+````diff
+- Assume $R$ Cohen-Macaulay.
++ Assume $R$ is Cohen-Macaulay.
+````
+
+Original SHA-256 `89DC056E702F269CA474EFD930D1C62DB8233C57D8E7BABB5A3E48225D1A4750`; replacement SHA-256 `0A3DD567E071E336E4FD1E244BA28484DD993EB0D8E7393571D4F6451249F9A4`.
+
+</details>
+
+<details id="mc-stk-err-2146">
+<summary><code>MC-STK-ERR-2146 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2146`; producer ID: `ALGEBRA-RECON-645`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27572) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the prime declaration.
+- Adverse evidence: The prime is the original preimage of q under R[x] to S; the exact localized quotient comparison is proved.
+
+### Change 1: `MC-STK-ERR-2146-OP1`
+
+Pinned-official lines `27572-27572`; bytes `1000643:1000662`.
+
+````diff
+- Denote $\mathfrak q
++ Denote by $\mathfrak q
+````
+
+Original SHA-256 `3D6F9FB8E3B3329330092C7261AB74D9D3E427BC60C9C5A89CF3F28BFB797D05`; replacement SHA-256 `E41D0B61DB68ECF2B349734D3F029C386AE9DF6C56DDC79F47B3C015F4E51A9D`.
+
+</details>
+
+<details id="mc-stk-err-2147">
+<summary><code>MC-STK-ERR-2147 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2147`; producer ID: `ALGEBRA-RECON-648`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27635) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the generic-point hypothesis in the auxiliary topological assertion.
+- Adverse evidence: An infinite cofinite space is Noetherian and every point is closed, but it is infinite and has no generic point for its irreducible whole space. The original fibre is a spectrum and therefore sober; finite irreducible components then give the claimed finite set.
+
+### Change 1: `MC-STK-ERR-2147-OP1`
+
+Pinned-official lines `27635-27635`; bytes `1003180:1003210`.
+
+````diff
+- A Noetherian topological space
++ A sober Noetherian topological space
+````
+
+Original SHA-256 `A0127EAB1AC10EF42A6ED8A3C9E25B77B3EC867B09961D7CD07A1884C6A5CB05`; replacement SHA-256 `EC6024CA920F6358F28C65C5292ED0AFBC28C9D560CCF4DBC0F3B60A8FC9BB8E`.
+
+</details>
+
+<details id="mc-stk-err-2148">
+<summary><code>MC-STK-ERR-2148 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2148`; producer ID: `ALGEBRA-RECON-654`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27672) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing preposition in the declaration of the original residue classes.
+- Adverse evidence: The residue field and images are those of the original quotient map; only wording changes.
+
+### Change 1: `MC-STK-ERR-2148-OP1`
+
+Pinned-official lines `27672-27672`; bytes `1004294:1004310`.
+
+````diff
+- Denote $\alpha_i
++ Denote by $\alpha_i
+````
+
+Original SHA-256 `34095EBD858ACFAE15068DFA4D928FB6B1E9CC5898611FEAF2F3227C4955451D`; replacement SHA-256 `75CA7F13661809FCD1B409919E8DEF2FFBF18B9280DF3458C19F7BF828A7C000`.
+
+</details>
+
+<details id="mc-stk-err-2149">
+<summary><code>MC-STK-ERR-2149 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2149`; producer ID: `ALGEBRA-RECON-655`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27673) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the defining verb for the equality specifying the intermediate fields.
+- Adverse evidence: The original finite field tower and kappa_0=k remain unchanged.
+
+### Change 1: `MC-STK-ERR-2149-OP1`
+
+Pinned-official lines `27673-27673`; bytes `1004343:1004359`.
+
+````diff
+- Denote $\kappa_i
++ Set $\kappa_i
+````
+
+Original SHA-256 `CF0DBD71C37112A1F32217C41C6DFFE1E84DCA6D8B2CFDD26366F09357CE5B96`; replacement SHA-256 `46D6C274355DCCCD2C3903876D36A1EB0C769738CFC46D9BF4092524C1EC5357`.
+
+</details>
+
+<details id="mc-stk-err-2150">
+<summary><code>MC-STK-ERR-2150 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2150`; producer ID: `ALGEBRA-RECON-657`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27872) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the k-algebra noun used elsewhere in this section.
+- Adverse evidence: The supplied proposal changes k algebra to k-algebra; it does not require hyphenating finite type. The mathematical hypothesis is unchanged.
+
+### Change 1: `MC-STK-ERR-2150-OP1`
+
+Pinned-official lines `27872-27872`; bytes `1012049:1012072`.
+
+````diff
+- finite type $k$ algebra
++ finite type $k$-algebra
+````
+
+Original SHA-256 `59BD90EB852451960ABAF433B3500EF51C1DE613B4EB110387FCA387C3A5F1C3`; replacement SHA-256 `858576C8CD47E847674B4A6A98D0E1DDF1A83E12FCAACBA0680CE3D970F6916A`.
+
+</details>
+
+<details id="mc-stk-err-2151">
+<summary><code>MC-STK-ERR-2151 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2151`; producer ID: `ALGEBRA-RECON-658`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27888) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the irreducible components the plural subject of all have dimension.
+- Adverse evidence: The local CM chain theorem makes every component through the closed point have the local dimension; the original sentence mistakenly makes a dimension have dimension.
+
+### Change 1: `MC-STK-ERR-2151-OP1`
+
+Pinned-official lines `27888-27888`; bytes `1012769:1012808`.
+
+````diff
+- Hence, the dimension of the irreducible
++ Hence, the irreducible
+````
+
+Original SHA-256 `3F06FA84BE748BEB7A204BDD3B246A9D92DCB5FF1926E295FA3205ED8EF3C9E8`; replacement SHA-256 `EFEBBDB085991C85B60A487293354BC0BB596A06CE6E6FC6708834CB6B2B34A8`.
+
+</details>
+
+<details id="mc-stk-err-2152">
+<summary><code>MC-STK-ERR-2152 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2152`; producer ID: `ALGEBRA-RECON-662`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L27944) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restrict the weight inequalities to the actual defined indices.
+- Adverse evidence: The first required inequality is for e_1 against the tail beginning at A_2e_2. There is no e_0; the n=1 case is direct.
+
+### Change 1: `MC-STK-ERR-2152-OP1`
+
+Pinned-official lines `27944-27944`; bytes `1014232:1014255`.
+
+````diff
+- If for each $i$ we have
++ If for $i = 2, \ldots, n$ we have
+````
+
+Original SHA-256 `01532F8694DA57829422F1DBD6CAFD7D768F9A8BFEBC170B4C216FE667A1F8AB`; replacement SHA-256 `4631F175BB65F1D12493CCFA843B53C26E685003286A7E15CC6AF3F9ABF14EA4`.
+
+</details>
+
+<details id="mc-stk-err-2153">
+<summary><code>MC-STK-ERR-2153 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2153`; producer ID: `ALGEBRA-RECON-664`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28017) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Match the verb to the plural integers.
+- Adverse evidence: The same original integer weights and inverse substitutions are retained.
+
+### Change 1: `MC-STK-ERR-2153-OP1`
+
+Pinned-official lines `28017-28017`; bytes `1016920:1016941`.
+
+````diff
+- there exists integers
++ there exist integers
+````
+
+Original SHA-256 `59F1DCD165B05E3EAC0F89AE158D27BE6C1259165BB4B9642A1BC7661AEF2C67`; replacement SHA-256 `4FE76199D98B09066CE0712D099CFDB7A934733E358182FA11838E0892C4EC4A`.
+
+</details>
+
+<details id="mc-stk-err-2154">
+<summary><code>MC-STK-ERR-2154 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2154`; producer ID: `ALGEBRA-RECON-665`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28052) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the dimension assertion actually proved by the cited lemma.
+- Adverse evidence: Integer-coefficient generators come from the original substitutions and induction. Integral dimension equality proves r=dim(S), not that last generator assertion.
+
+### Change 1: `MC-STK-ERR-2154-OP1`
+
+Pinned-official lines `28052-28052`; bytes `1018330:1018367`.
+
+````diff
+- The last assertion follows from Lemma
++ The assertion that $r = \dim(S)$ follows from Lemma
+````
+
+Original SHA-256 `02A0DD285C594CFB1A071CB6556662AA696126904CAA6F33610D3050393A2D58`; replacement SHA-256 `2344FB190649EB63CD9B9CCF02CA724B3B3E46D7C5AAF8A88F2EEA0AADB14DC8`.
+
+</details>
+
+<details id="mc-stk-err-2155">
+<summary><code>MC-STK-ERR-2155 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2155`; producer ID: `ALGEBRA-RECON-666`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28059-L28272) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the k-algebra noun in all four reported declarations.
+- Adverse evidence: The same ring hypotheses, original points and exact quotient residue fields remain unchanged.
+
+### Change 1: `MC-STK-ERR-2155-OP1`
+
+Pinned-official lines `28059-28059`; bytes `1018509:1018532`.
+
+````diff
+- finite type $k$ algebra
++ finite type $k$-algebra
+````
+
+Original SHA-256 `59BD90EB852451960ABAF433B3500EF51C1DE613B4EB110387FCA387C3A5F1C3`; replacement SHA-256 `858576C8CD47E847674B4A6A98D0E1DDF1A83E12FCAACBA0680CE3D970F6916A`.
+
+### Change 2: `MC-STK-ERR-2155-OP2`
+
+Pinned-official lines `28180-28180`; bytes `1023336:1023359`.
+
+````diff
+- finite type $k$ algebra
++ finite type $k$-algebra
+````
+
+Original SHA-256 `59BD90EB852451960ABAF433B3500EF51C1DE613B4EB110387FCA387C3A5F1C3`; replacement SHA-256 `858576C8CD47E847674B4A6A98D0E1DDF1A83E12FCAACBA0680CE3D970F6916A`.
+
+### Change 3: `MC-STK-ERR-2155-OP3`
+
+Pinned-official lines `28224-28224`; bytes `1024816:1024839`.
+
+````diff
+- finite type $k$ algebra
++ finite type $k$-algebra
+````
+
+Original SHA-256 `59BD90EB852451960ABAF433B3500EF51C1DE613B4EB110387FCA387C3A5F1C3`; replacement SHA-256 `858576C8CD47E847674B4A6A98D0E1DDF1A83E12FCAACBA0680CE3D970F6916A`.
+
+### Change 4: `MC-STK-ERR-2155-OP4`
+
+Pinned-official lines `28272-28272`; bytes `1026557:1026581`.
+
+````diff
+- finite type $k$ algebras
++ finite type $k$-algebras
+````
+
+Original SHA-256 `864D20544B244AD1CB541489703F8522CEAFCA4DC3EAFBCB11C0CE68EB380614`; replacement SHA-256 `0A868F2FD57CC521430CAAEA1D2A953BA1BC1C910287646CAF2864E27E7D6DDC`.
+
+</details>
+
+<details id="mc-stk-err-2156">
+<summary><code>MC-STK-ERR-2156 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2156`; producer ID: `ALGEBRA-RECON-667`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28094) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Give the actual coefficient ring for the polynomial in x_n.
+- Adverse evidence: The source monic convention additionally uses the nonzero original leading coefficient a. The editorial proof tracks h, h/a, the source scaling by a, and sigma inverse explicitly; it does not silently discard the unit or rename the target prime.
+
+### Change 1: `MC-STK-ERR-2156-OP1`
+
+Pinned-official lines `28094-28094`; bytes `1019859:1019880`.
+
+````diff
+- $k[x_1, \ldots, x_n]$
++ $k[x_1, \ldots, x_{n-1}]$
+````
+
+Original SHA-256 `DB3604119A7CDA58A5804EE36A81163F2B4119C6F8EB4F756193A492F7A81ACB`; replacement SHA-256 `0AAAA5BB490C46967DAB1D2271323EC8AC006525DFA221C3B966213A0061CF26`.
+
+</details>
+
+<details id="mc-stk-err-2157">
+<summary><code>MC-STK-ERR-2157 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2157`; producer ID: `ALGEBRA-RECON-669`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28343) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing preposition in the two-point declaration.
+- Adverse evidence: Both reports concern the same line; the corresponding prime labels and common fibre comparison remain unchanged.
+
+### Change 1: `MC-STK-ERR-2157-OP1`
+
+Pinned-official lines `28343-28343`; bytes `1028952:1028962`.
+
+````diff
+- Denote $x'
++ Denote by $x'
+````
+
+Original SHA-256 `1DA051E27711237ADDFEBFF0D18A2ADDBD51A282A3F31618E64E4C1F954E3393`; replacement SHA-256 `6A97072C011F11FE21DC43C88849AC970867E5FD3A6417F23F7966D6BADB3D43`.
+
+</details>
+
+<details id="mc-stk-err-2158">
+<summary><code>MC-STK-ERR-2158 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2158`; producer ID: `ALGEBRA-RECON-670`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28377) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the finite verb in the dimension-equality sentence.
+- Adverse evidence: The exact common fibre is proved before using the equality. Minimal primes over q S_K contract to q by going down, so the zero-height-jump choice is justified.
+
+### Change 1: `MC-STK-ERR-2158-OP1`
+
+Pinned-official lines `28377-28377`; bytes `1030316:1030333`.
+
+````diff
+- equality by Lemma
++ equality follows from Lemma
+````
+
+Original SHA-256 `6DF32D3F2BF6F7B3CE0F4A3D0B28912AC5ABCC4BA5E1060D685A645F26600FAA`; replacement SHA-256 `DF261E9B1D10E17EC73177953F451086EF1CC37CEEA9412E1E5DE01BF4AF799F`.
+
+</details>
+
+<details id="mc-stk-err-2159">
+<summary><code>MC-STK-ERR-2159 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2159`; producer ID: `ALGEBRA-RECON-677`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28522) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the subordinate since clause from its conclusion.
+- Adverse evidence: The minimal comma repairs the clause boundary while preserving the original extension-of-free-modules argument.
+
+### Change 1: `MC-STK-ERR-2159-OP1`
+
+Pinned-official lines `28522-28522`; bytes `1035302:1035318`.
+
+````diff
+- also we conclude
++ also, we conclude
+````
+
+Original SHA-256 `3B52601C7C688172CF0D54C41BEDB97CAC9351822F95618BFF95E5EE0F87DE02`; replacement SHA-256 `44F6B78B2A70BF8486DA73E60F8D4363A7DA12C32D919DF81484D59F79876D81`.
+
+</details>
+
+<details id="mc-stk-err-2160">
+<summary><code>MC-STK-ERR-2160 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2160`; producer ID: `ALGEBRA-RECON-678`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28545) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the missing preposition in the image declaration.
+- Adverse evidence: The original quotient and coefficient-model construction remain unchanged.
+
+### Change 1: `MC-STK-ERR-2160-OP1`
+
+Pinned-official lines `28545-28545`; bytes `1035921:1035942`.
+
+````diff
+- denote $\overline{g}$
++ denote by $\overline{g}$
+````
+
+Original SHA-256 `34E02AC1D596B7CC8F2FA157825B152308459929BCA8F797C0A9FE5D0BECE233`; replacement SHA-256 `D7136ADCA194AFC6E93EF34CEFC3D8DA950DDF8DE853DD922E02978D7F80911F`.
+
+</details>
+
+<details id="mc-stk-err-2161">
+<summary><code>MC-STK-ERR-2161 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2161`; producer ID: `ALGEBRA-RECON-679`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28593) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair both declarations on the same line.
+- Adverse evidence: K and all three tensor objects keep their original definitions; no kernel or torsion is discarded.
+
+### Change 1: `MC-STK-ERR-2161-OP1`
+
+Pinned-official lines `28593-28593`; bytes `1037645:1037689`.
+
+````diff
+- Denote $K$ the fraction field of $R$. Denote
++ Denote by $K$ the fraction field of $R$. Set
+````
+
+Original SHA-256 `3A57675FB5D59ADB1DE50A42822AEB26CD774462D8412688C28261D5D5ED8DF4`; replacement SHA-256 `634D95D30C42A83B4C7944E0887F0AED71ABD3AB5F6F6EB005F6CEBCAE9B1496`.
+
+</details>
+
+<details id="mc-stk-err-2162">
+<summary><code>MC-STK-ERR-2162 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2162`; producer ID: `ALGEBRA-RECON-680`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28771) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the quotient by an ideal of the actual algebra S.
+- Adverse evidence: J_i is defined as an ideal of S in the preceding sentence; R/J_i is generally undefined. All three reports identify this one operation.
+
+### Change 1: `MC-STK-ERR-2162-OP1`
+
+Pinned-official lines `28771-28771`; bytes `1044401:1044408`.
+
+````diff
+- $R/J_i$
++ $S/J_i$
+````
+
+Original SHA-256 `F87823D7619A64038EFD06E791281C153C5DF7FC0961E1BD13E9B8563BBA8495`; replacement SHA-256 `CFDAD92928FC36E8443359F75AC0AC72BEA21C171DFCB5076E3A55337395594E`.
+
+</details>
+
+<details id="mc-stk-err-2163">
+<summary><code>MC-STK-ERR-2163 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2163`; producer ID: `ALGEBRA-RECON-681`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28868-L28869) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair the clause order of the final dense-open inference.
+- Adverse evidence: The original equality of good loci and finite intersection argument remain unchanged.
+
+### Change 1: `MC-STK-ERR-2163-OP1`
+
+Pinned-official lines `28868-28869`; bytes `1048316:1048418`.
+
+````diff
+- Hence as we've just finished proving the right two opens are dense also
+- the open on the left is dense.
++ Hence, as we have just proved that the two opens on the right are dense,
++ the open on the left is dense as well.
+````
+
+Original SHA-256 `510BE4D3B5D71754D386BCCC25D2B0D637539E40006BDE9F22EEC1165483414E`; replacement SHA-256 `4D4CD50145009B6DEA246299A72E265BD35153C9A404ECE6D27B192C636E8EFC`.
+
+</details>
+
+<details id="mc-stk-err-2164">
+<summary><code>MC-STK-ERR-2164 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2164`; producer ID: `ALGEBRA-RECON-682`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28494) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the source project convention for the empty generic spectrum.
+- Adverse evidence: This unreported source inconsistency follows from the explicit definition at topology.tex:1391-1419, particularly 1410, and its restatement at algebra.tex:43890-43895. The empty-fibre induction base is still valid; only its dimension label changes.
+
+### Change 1: `MC-STK-ERR-2164-OP1`
+
+Pinned-official lines `28494-28494`; bytes `1034163:1034171`.
+
+````diff
+- $d = -1$
++ $d = -\infty$
+````
+
+Original SHA-256 `21DB3C675559C01B6E3C4EDEC5D20DB25F0F1ACC4F961919EEC1C45260066E96`; replacement SHA-256 `54FEE9249D1B8FF20C472425C9550B7DA9C39CBA759D53FBAD3EFEA129B29E7A`.
+
+</details>
+
+<details id="mc-stk-err-2165">
+<summary><code>MC-STK-ERR-2165 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2165`; producer ID: `ALGEBRA-RECON-687`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L28906) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the original valuation declaration.
+- Adverse evidence: The valuation and its ordered group are unchanged.
+
+### Change 1: `MC-STK-ERR-2165-OP1`
+
+Pinned-official lines `28906-28906`; bytes `1049379:1049389`.
+
+````diff
+- Denote $v$
++ Denote by $v$
+````
+
+Original SHA-256 `60DDAD1F04871650F0B376AF7DC430652290D2DD82D0643F0631705DBB56F7D6`; replacement SHA-256 `5CEC701E3CF89F052021858CD65AA93EA194E8B5643C97DBE9969D60DF6B02BC`.
+
+</details>
+
+<details id="mc-stk-err-2166">
+<summary><code>MC-STK-ERR-2166 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2166`; producer ID: `ALGEBRA-RECON-690`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29075) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Apply the local lemma to its actual local ring while preserving the original semilocal theorem.
+- Adverse evidence: The separate proof clears the original monic-equation denominators and uses CRT to extend the finite local overring without changing other maximal localizations. The optional blowup is checked by its actual charts and the proper finite-fibre theorem.
+
+### Change 1: `MC-STK-ERR-2166-OP1`
+
+Pinned-official lines `29075-29075`; bytes `1056229:1056247`.
+
+````diff
+- $(R, \mathfrak m)$
++ $(R_{\mathfrak m}, \mathfrak mR_{\mathfrak m})$
+````
+
+Original SHA-256 `DF97C29D9F37A09EE7FEE55E79998ACAEEE3CB9E9246ED922D15CD1C52F02247`; replacement SHA-256 `C66E4C1FCBED2E5AAF200099BFBEE1BEA25DD817BF7821224C65AC1F7ED3D4DF`.
+
+</details>
+
+<details id="mc-stk-err-2167">
+<summary><code>MC-STK-ERR-2167 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2167`; producer ID: `ALGEBRA-RECON-693`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29135) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Parenthesize the original coefficient residue field.
+- Adverse evidence: The preceding phrase for all n>=0 already provides the direct-sum degree range; no second operation is needed. The exact graded map is proved.
+
+### Change 1: `MC-STK-ERR-2167-OP1`
+
+Pinned-official lines `29135-29135`; bytes `1059083:1059101`.
+
+````diff
+- $A/\mathfrak m[T]$
++ $(A/\mathfrak m)[T]$
+````
+
+Original SHA-256 `98BCD842214EBAC071F77C18E5D537D5DB26BBDCC57845327B57D3178C9D5083`; replacement SHA-256 `74B017C7C7E8AF24DDCD4224D91B1D751A1BFB265B35F080E650912CB8B0EBA4`.
+
+</details>
+
+<details id="mc-stk-err-2168">
+<summary><code>MC-STK-ERR-2168 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2168`; producer ID: `ALGEBRA-RECON-707`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29436-L29439) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the residual unit case by retaining the three original unit factors in both equalities.
+- Adverse evidence: These operations are disjoint from MC-STK-ERR-0633 and preserve its valid zero-case contribution. The note proves precisely how the source uniqueness axiom applies to the original equations with their displayed units.
+
+### Change 1: `MC-STK-ERR-2168-OP1`
+
+Pinned-official lines `29436-29436`; bytes `1070319:1070388`.
+
+````diff
+- $a = a_1 \ldots a_n$, $b = b_1 \ldots b_m$, and $c = c_1 \ldots c_r$.
++ $a = u_a a_1 \ldots a_n$, $b = u_b b_1 \ldots b_m$, and
++ $c = u_c c_1 \ldots c_r$, with units $u_a, u_b, u_c \in R^*$.
+````
+
+Original SHA-256 `954E27072C96702B4FB4A4BE6657C63A2E70420621B7BDA5F1AB27FF5CED669C`; replacement SHA-256 `47361BA5C054AC30A8E2A3E5157030E9159913109C055AF3F33AFB9AFEAE2839`.
+
+### Change 2: `MC-STK-ERR-2168-OP2`
+
+Pinned-official lines `29439-29439`; bytes `1070427:1070475`.
+
+````diff
+- a_1 \ldots a_n b_1 \ldots b_m = c_1 \ldots c_r x
++ u_a u_b a_1 \ldots a_n b_1 \ldots b_m = u_c c_1 \ldots c_r x
+````
+
+Original SHA-256 `834B79F8EDAC42CB4E258BA8ACA9D71EA1A94011E683032269F7687B3AC91BC0`; replacement SHA-256 `EA669AE9B91DD661FD0D89C0825002507FEFD7CA74FAFDF27CD8A49F9AE591D7`.
+
+</details>
+
+<details id="mc-stk-err-2169">
+<summary><code>MC-STK-ERR-2169 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2169`; producer ID: `ALGEBRA-RECON-717`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29687) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the colon introducing the original equivalences.
+- Adverse evidence: The three conditions and all hypotheses are unchanged.
+
+### Change 1: `MC-STK-ERR-2169-OP1`
+
+Pinned-official lines `29687-29687`; bytes `1080352:1080380`.
+
+````diff
+- The following are equivalent
++ The following are equivalent:
+````
+
+Original SHA-256 `4C10BE4F07A022CB58A037742837D7D3F50BF096D4D39B088654548C1D3A949A`; replacement SHA-256 `650D35B4C60E295DDFAE3E1BAECAFA500E983FEEC6C6FA33714819103765FB64`.
+
+</details>
+
+<details id="mc-stk-err-2170">
+<summary><code>MC-STK-ERR-2170 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2170`; producer ID: `ALGEBRA-RECON-728`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29798) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing complementizer in the original parenthetical instruction.
+- Adverse evidence: The actual multiplication-by-b injection and quotient maps prove additivity. The separate citation-hypothesis issue is recorded in ALGEBRA-RECON-734.
+
+### Change 1: `MC-STK-ERR-2170-OP1`
+
+Pinned-official lines `29798-29798`; bytes `1084936:1084958`.
+
+````diff
+- Use length is additive
++ Use that length is additive
+````
+
+Original SHA-256 `D0E913E7C15FFDC0CF1BB68FF11416057F138603565DE5DA9E546583533FC686`; replacement SHA-256 `85238A5C1A55135DE56EF3335664DEEADDE2943B35D1AAA40486BCA49708F03B`.
+
+</details>
+
+<details id="mc-stk-err-2171">
+<summary><code>MC-STK-ERR-2171 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2171`; producer ID: `ALGEBRA-RECON-730`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29891) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the sentence-ending period before Hence.
+- Adverse evidence: The original common denominator kills the finite quotient. This is punctuation only, not a change of the local finiteness argument.
+
+### Change 1: `MC-STK-ERR-2171-OP1`
+
+Pinned-official lines `29891-29891`; bytes `1088158:1088170`.
+
+````diff
+- for some $n$
++ for some $n$.
+````
+
+Original SHA-256 `AF40CB15DC532DA2CF6A21C709569C03B41C8FE679F625BB9CE24BABD21F6970`; replacement SHA-256 `935CB0E7DF69CFEEC297FF4795E0CC654C8E0B24F5ED28DBACADDDCAEF69027D`.
+
+</details>
+
+<details id="mc-stk-err-2172">
+<summary><code>MC-STK-ERR-2172 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2172`; producer ID: `ALGEBRA-RECON-731`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L29928) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the period after the original exact sequence.
+- Adverse evidence: The actual inclusion and quotient maps give the asserted short exact sequence, and all terms have finite length.
+
+### Change 1: `MC-STK-ERR-2172-OP1`
+
+Pinned-official lines `29928-29928`; bytes `1089609:1089646`.
+
+````diff
+- 0 \to M'/M \to M''/M \to M''/M' \to 0
++ 0 \to M'/M \to M''/M \to M''/M' \to 0.
+````
+
+Original SHA-256 `45E3DC16C29C29A7320F337146F25B49FC4BEBFDDEB443FB02591E6946DAEAA2`; replacement SHA-256 `726051383170BF75C27D5B005C5DF1839919773F7467A50E193CBEE9841CFBBC`.
+
+</details>
+
+<details id="mc-stk-err-2173">
+<summary><code>MC-STK-ERR-2173 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2173`; producer ID: `ALGEBRA-RECON-739`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L30205) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the original point designation.
+- Adverse evidence: The fibre point and the canonical localized quotient map are unchanged.
+
+### Change 1: `MC-STK-ERR-2173-OP1`
+
+Pinned-official lines `30205-30205`; bytes `1098834:1098840`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2174">
+<summary><code>MC-STK-ERR-2174 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2174`; producer ID: `ALGEBRA-RECON-740`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L30206) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the colon introducing the equivalent fibre conditions.
+- Adverse evidence: All six conditions are proved on the original fibre, including the actual lift of an isolating fibre element to its numerator in S.
+
+### Change 1: `MC-STK-ERR-2174-OP1`
+
+Pinned-official lines `30206-30206`; bytes `1098914:1098942`.
+
+````diff
+- The following are equivalent
++ The following are equivalent:
+````
+
+Original SHA-256 `4C10BE4F07A022CB58A037742837D7D3F50BF096D4D39B088654548C1D3A949A`; replacement SHA-256 `650D35B4C60E295DDFAE3E1BAECAFA500E983FEEC6C6FA33714819103765FB64`.
+
+</details>
+
+<details id="mc-stk-err-2175">
+<summary><code>MC-STK-ERR-2175 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2175`; producer ID: `ALGEBRA-RECON-741`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L30304) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the finite verb in the original assumption.
+- Adverse evidence: The source surjective comparison map remains unchanged. Its stronger finite-map version is proved separately in ALGEBRA-RECON-747.
+
+### Change 1: `MC-STK-ERR-2175-OP1`
+
+Pinned-official lines `30304-30304`; bytes `1102464:1102495`.
+
+````diff
+- Assume $R \to S$ of finite type
++ Assume $R \to S$ is of finite type
+````
+
+Original SHA-256 `93AEA6E36FB7A6AE8D1216EDBF607A6CEAD17BD95EE839CBEF8542D7C6CAC23A`; replacement SHA-256 `9F59D58CDADD24FC6FA762ECCAF75502C37EBD462E19C0B7B2ED0BC2432006D0`.
+
+</details>
+
+<details id="mc-stk-err-2176">
+<summary><code>MC-STK-ERR-2176 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2176`; producer ID: `ALGEBRA-RECON-743`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L30353) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the redundant then following the causal clause.
+- Adverse evidence: The original witnesses b and c and the image c prime are retained; their product excludes every other point of the composite fibre.
+
+### Change 1: `MC-STK-ERR-2176-OP1`
+
+Pinned-official lines `30353-30353`; bytes `1104659:1104675`.
+
+````diff
+- then there exist
++ there exist
+````
+
+Original SHA-256 `DD6B10D2E5484C1210395CD3CDA6F59F31AF0A02B7918A09334C9AC3B4E95A19`; replacement SHA-256 `CD8E49F0424F6331D3437C5E541CBD45FEE016253468CA8CF1D92175F1E252C5`.
+
+</details>
+
+<details id="mc-stk-err-2177">
+<summary><code>MC-STK-ERR-2177 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2177`; producer ID: `ALGEBRA-RECON-756`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L30770) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the period terminating the original displayed assertion.
+- Adverse evidence: Every coefficient and exponent in the original relation is unchanged.
+
+### Change 1: `MC-STK-ERR-2177-OP1`
+
+Pinned-official lines `30770-30770`; bytes `1120811:1120870`.
+
+````diff
+- b'_{m - 1}x^{m - 1} + b_{m - 2}x^{m - 2} + \ldots + b_0 = 0
++ b'_{m - 1}x^{m - 1} + b_{m - 2}x^{m - 2} + \ldots + b_0 = 0.
+````
+
+Original SHA-256 `E82D386BCB0EE04CF098FEFFAD968B045C3D3067B6E976838194C0D24C74F0B4`; replacement SHA-256 `18FBDE03E618758E75AA34952B73B027C6AB6E3F02F797FB1AC969B6C33C241B`.
+
+</details>
+
+<details id="mc-stk-err-2178">
+<summary><code>MC-STK-ERR-2178 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2178`; producer ID: `ALGEBRA-RECON-758`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L30791-L30857) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the reported compound noun and propagate the same correction to the second occurrence in the same induction.
+- Adverse evidence: The two exact occurrences have the same construction. The differently arranged sub R-algebra phrase at 30894 is not changed. Both proposed intervals are disjoint from the canonical example and localization corrections.
+
+### Change 1: `MC-STK-ERR-2178-OP1`
+
+Pinned-official lines `30791-30791`; bytes `1121601:1121616`.
+
+````diff
+- $R$-sub algebra
++ $R$-subalgebra
+````
+
+Original SHA-256 `3F50958F8FCCD1CE39C94D9720E2519241607769B473E57BA0EF8890A2CE5170`; replacement SHA-256 `E625CE399695893CF76E2347C7D18129B89338B762310BE62AA7AD40EC65057A`.
+
+### Change 2: `MC-STK-ERR-2178-OP2`
+
+Pinned-official lines `30857-30857`; bytes `1124705:1124720`.
+
+````diff
+- $R$-sub algebra
++ $R$-subalgebra
+````
+
+Original SHA-256 `3F50958F8FCCD1CE39C94D9720E2519241607769B473E57BA0EF8890A2CE5170`; replacement SHA-256 `E625CE399695893CF76E2347C7D18129B89338B762310BE62AA7AD40EC65057A`.
+
+</details>
+
+<details id="mc-stk-err-2179">
+<summary><code>MC-STK-ERR-2179 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2179`; producer ID: `ALGEBRA-RECON-766`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31080) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Terminate the displayed product-decomposition sentence.
+- Adverse evidence: Both factor maps and their inverse addition map remain unchanged. The selected factor is proved to equal the completion through the original idempotent.
+
+### Change 1: `MC-STK-ERR-2179-OP1`
+
+Pinned-official lines `31080-31080`; bytes `1133485:1133530`.
+
+````diff
+- R_\mathfrak p^\wedge \otimes_R S = A \times B
++ R_\mathfrak p^\wedge \otimes_R S = A \times B.
+````
+
+Original SHA-256 `DC9EEFC5043778EE6B30C27187F6D1B59ADBB19DF49563AF81CBD154449956CA`; replacement SHA-256 `3151B1A9F5289C4F759E964D03273C1243821015C91CFD47FDFFAF26B8B45E52`.
+
+</details>
+
+<details id="mc-stk-err-2180">
+<summary><code>MC-STK-ERR-2180 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2180`; producer ID: `ALGEBRA-RECON-767`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31097) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the preposition under for the image through the displayed map.
+- Adverse evidence: The original natural projection is checked on all pure tensors using an actual equality g^(m+n)y=g^m c in S, retaining the localization-kernel exponent.
+
+### Change 1: `MC-STK-ERR-2180-OP1`
+
+Pinned-official lines `31097-31097`; bytes `1134449:1134488`.
+
+````diff
+- is the image of $y'$ by the composition
++ is the image of $y'$ under the composition
+````
+
+Original SHA-256 `2E944CCAC6DC1A9DDFC7A897510F12731ECFEEB7CA82A717CDD563398665FC22`; replacement SHA-256 `AE8264D140E2D9BA56C53063570F95FF456E0F40BA3B5F78FC5765C0EFC57F67`.
+
+</details>
+
+<details id="mc-stk-err-2181">
+<summary><code>MC-STK-ERR-2181 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2181`; producer ID: `ALGEBRA-RECON-774`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31226) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the terminal period in the original refined-chart statement.
+- Adverse evidence: OCC-01428 quotes an unrelated phrase, but its stated locus does have this omission. Its quote is not adopted as source text. The exact contraction is proved through the coefficient injection and all original denominators.
+
+### Change 1: `MC-STK-ERR-2181-OP1`
+
+Pinned-official lines `31226-31226`; bytes `1138163:1138222`.
+
+````diff
+- (\mathfrak p, x_{r + 1}, \ldots, x_n)R_f[x_1, \ldots, x_n]$
++ (\mathfrak p, x_{r + 1}, \ldots, x_n)R_f[x_1, \ldots, x_n]$.
+````
+
+Original SHA-256 `36D7B0D93CD29F89F77E90609D130749815CC76212536B43973B260B2CF11D9C`; replacement SHA-256 `882573BC7B200F5E00D38F92C8EFCEB1B1AD162B5423F3FC1DDC26BA67F9F077`.
+
+</details>
+
+<details id="mc-stk-err-2182">
+<summary><code>MC-STK-ERR-2182 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2182`; producer ID: `ALGEBRA-RECON-777`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31337) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the actual spectrum-map declaration.
+- Adverse evidence: The report quote refers to a composition, which is not the source wording at this locus. The actual sentence still lacks by; the original base-change map on spectra is retained.
+
+### Change 1: `MC-STK-ERR-2182-OP1`
+
+Pinned-official lines `31337-31337`; bytes `1142459:1142474`.
+
+````diff
+- and denote $f :
++ and denote by $f :
+````
+
+Original SHA-256 `F144D0B131A8EC94C342B09231492D8DAD1DF192F8A5663FA9615EE8EDAD8EE7`; replacement SHA-256 `482AE6418658525290C3FF12686F923F6DEDD469316042A867D3FACE108A9195`.
+
+</details>
+
+<details id="mc-stk-err-2183">
+<summary><code>MC-STK-ERR-2183 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2183`; producer ID: `ALGEBRA-RECON-779`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31386) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the period after the original dimension equality.
+- Adverse evidence: The next sentence begins In fact. Neither the nonempty-fibre assumption nor either original fibre ring changes.
+
+### Change 1: `MC-STK-ERR-2183-OP1`
+
+Pinned-official lines `31386-31386`; bytes `1144173:1144214`.
+
+````diff
+- \dim(S \otimes_R k) = \dim(S \otimes_R K)
++ \dim(S \otimes_R k) = \dim(S \otimes_R K).
+````
+
+Original SHA-256 `8101E83FEE29528712657F8C8F23203526AF30AEE4E986D3C94A61FA9889CCBA`; replacement SHA-256 `FA6846EFE5AB94878E0FC73A3B552DAD9C45780D1C7A27028AF26FAB22D4747F`.
+
+</details>
+
+<details id="mc-stk-err-2184">
+<summary><code>MC-STK-ERR-2184 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2184`; producer ID: `ALGEBRA-RECON-786`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31577) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the terminal period after the original cross-reference.
+- Adverse evidence: The module-lifting argument remains unchanged, including the full relation A_Rprime=s A_prime and the distinction between surjectivity before and after localization.
+
+### Change 1: `MC-STK-ERR-2184-OP1`
+
+Pinned-official lines `31577-31577`; bytes `1150686:1150741`.
+
+````diff
+- Lemma \ref{lemma-construct-fp-module-from-localization}
++ Lemma \ref{lemma-construct-fp-module-from-localization}.
+````
+
+Original SHA-256 `7C4BAF4A5D163ECACC2900F00B614D6D223EBABB390C877F582A74E183BD8497`; replacement SHA-256 `7851288C826061DA9FEF1D987C15E4C2DB80A521F32190D2F64007FBBA93419B`.
+
+</details>
+
+<details id="mc-stk-err-2185">
+<summary><code>MC-STK-ERR-2185 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2185`; producer ID: `ALGEBRA-RECON-796`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31764) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the plural count noun in the introductory sentence.
+- Adverse evidence: The change leaves the stated role of the preliminary lemmas unchanged.
+
+### Change 1: `MC-STK-ERR-2185-OP1`
+
+Pinned-official lines `31764-31764`; bytes `1158642:1158660`.
+
+````diff
+- prove result using
++ prove results using
+````
+
+Original SHA-256 `ABB86B707E8C9B62C15CD0BFBE171E6949B7A932112F5101F512B7698ADECE03`; replacement SHA-256 `795E263B830580796382B4E9E99FB76204E63A5F8E26E4FF211F0DE9255740A6`.
+
+</details>
+
+<details id="mc-stk-err-2186">
+<summary><code>MC-STK-ERR-2186 — algebra.tex: — source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2186`; producer ID: `ALGEBRA-RECON-797`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31782) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Give the initial object its actual target A.
+- Adverse evidence: The objects are finitely presented R-algebras equipped with a map to A. The structural map R to A supplies the required object for arbitrary A.
+
+### Change 1: `MC-STK-ERR-2186-OP1`
+
+Pinned-official lines `31782-31782`; bytes `1159358:1159380`.
+
+````diff
+- $R \to R$ is an object
++ $R \to A$ is an object
+````
+
+Original SHA-256 `15127BE44DE84EF06EDE5E046DCE2FB066A9E33B9DC36C98D8DE3E506C158826`; replacement SHA-256 `6DD4B9CD9949440AA615EF2648D02E12A260927A0FF0893BA570393DD16BE104`.
+
+</details>
+
+<details id="mc-stk-err-2187">
+<summary><code>MC-STK-ERR-2187 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2187`; producer ID: `ALGEBRA-RECON-799`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31816) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing verb in the preorder declaration.
+- Adverse evidence: The indexing order and transition directions remain the original ones.
+
+### Change 1: `MC-STK-ERR-2187-OP1`
+
+Pinned-official lines `31816-31816`; bytes `1161072:1161089`.
+
+````diff
+- a preordered set.
++ be a preordered set.
+````
+
+Original SHA-256 `B4B03AC963B23C704CE4762CA94EB70821C4F3460682CD1D684F06C0DE80F257`; replacement SHA-256 `810276AD0843E82926234A991440863EFFD911FA4BAA91D98A791B11F44E05C3`.
+
+</details>
+
+<details id="mc-stk-err-2188">
+<summary><code>MC-STK-ERR-2188 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2188`; producer ID: `ALGEBRA-RECON-801`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31865) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing preposition.
+- Adverse evidence: The actual finite generator and relation pairs remain unchanged. The fixed-generator subsystem has its own proved colimit and is not claimed cofinal among all finite generator subsets.
+
+### Change 1: `MC-STK-ERR-2188-OP1`
+
+Pinned-official lines `31865-31865`; bytes `1163268:1163281`.
+
+````diff
+- equal the set
++ equal to the set
+````
+
+Original SHA-256 `5D64B9C694D3DFE8EDCEFC18724EEC36CD3FDBAF027F54A3022A07B7866CB4BB`; replacement SHA-256 `0509022FD776A9752B617034196B9DE8B7B8D597C240794FBF52ED719B2A0AF7`.
+
+</details>
+
+<details id="mc-stk-err-2189">
+<summary><code>MC-STK-ERR-2189 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2189`; producer ID: `ALGEBRA-RECON-802`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31948) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing article.
+- Adverse evidence: The class of finitely presented algebras is retained.
+
+### Change 1: `MC-STK-ERR-2189-OP1`
+
+Pinned-official lines `31948-31948`; bytes `1166410:1166423`.
+
+````diff
+- of given type
++ of a given type
+````
+
+Original SHA-256 `F9F35C64C58682F2FF5773C534597EC6909E01CF7450EFB87343E65084EBB970`; replacement SHA-256 `6AEC730D3E908314A8DD459F6A2659494314CA89FE361521EC8CE4D201DA9BA6`.
+
+</details>
+
+<details id="mc-stk-err-2190">
+<summary><code>MC-STK-ERR-2190 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2190`; producer ID: `ALGEBRA-RECON-803`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31958) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the source standard spelling of R-algebra.
+- Adverse evidence: This changes no map or factorization.
+
+### Change 1: `MC-STK-ERR-2190-OP1`
+
+Pinned-official lines `31958-31958`; bytes `1166791:1166806`.
+
+````diff
+- $R$ algebra map
++ $R$-algebra map
+````
+
+Original SHA-256 `E084841D2D11B3D5B634CA485F1E9E54D279774D5DD4BDDA5C1FCB7FA91ED3B8`; replacement SHA-256 `1E80035D32ACC80E3E64FC92100283AD138F11EE841EA1859A2305F068FA6D2D`.
+
+</details>
+
+<details id="mc-stk-err-2191">
+<summary><code>MC-STK-ERR-2191 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2191`; producer ID: `ALGEBRA-RECON-804`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L31985) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the variance and plural in the categorical introduction.
+- Adverse evidence: The following source lemmas descend objects and arrows with eventual equality. The explicit stage-object category and its equivalence are proved separately; an inverse limit is not the stated construction.
+
+### Change 1: `MC-STK-ERR-2191-OP1`
+
+Pinned-official lines `31985-31985`; bytes `1167910:1167935`.
+
+````diff
+- the limit of the category
++ the colimit of the categories
+````
+
+Original SHA-256 `04AEAB19C56F399348E565F4AF0CADB0128D93E1D30BE4569A3AE7B79170EC7D`; replacement SHA-256 `3C4E760548EEDE8F311744C44849FD2E395E803E0669D9A7B4552426D33FD86C`.
+
+</details>
+
+<details id="mc-stk-err-2192">
+<summary><code>MC-STK-ERR-2192 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2192`; producer ID: `ALGEBRA-RECON-816`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32124) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the map used in the fourth item explicit in that item.
+- Adverse evidence: The earlier items introduce their own maps. This local declaration supplies the domain, codomain and algebra structure already required by the following tensor formula; it adds no stronger hypothesis.
+
+### Change 1: `MC-STK-ERR-2192-OP1`
+
+Pinned-official lines `32124-32124`; bytes `1174259:1174275`.
+
+````diff
+- $A$-algebra, and
++ $A$-algebra, and $u : B \to C$ is an $A$-algebra map such that
+````
+
+Original SHA-256 `D414903E3648037E34F49AA72B8A3CD9E25600AA7D62961D50C3517F7DE63CDF`; replacement SHA-256 `38CCB9FC8DD05E0C1E932A535AAE647D80EEE0F74765971AAD9180D9F55A3DB4`.
+
+</details>
+
+<details id="mc-stk-err-2193">
+<summary><code>MC-STK-ERR-2193 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2193`; producer ID: `ALGEBRA-RECON-820`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32235-L32294) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in both original ring-map declarations.
+- Adverse evidence: The original restrictions of phi, subrings and prime localizations are retained. Complete local and nonlocal proofs remain editorial.
+
+### Change 1: `MC-STK-ERR-2193-OP1`
+
+Pinned-official lines `32235-32235`; bytes `1178893:1178901`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+### Change 2: `MC-STK-ERR-2193-OP2`
+
+Pinned-official lines `32294-32294`; bytes `1180678:1180686`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+</details>
+
+<details id="mc-stk-err-2194">
+<summary><code>MC-STK-ERR-2194 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2194`; producer ID: `ALGEBRA-RECON-821`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32350) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural for the system of local homomorphisms.
+- Adverse evidence: Each indexed map retains the original source and target local rings.
+
+### Change 1: `MC-STK-ERR-2194-OP1`
+
+Pinned-official lines `32350-32350`; bytes `1182747:1182767`.
+
+````diff
+- local homomorphism $
++ local homomorphisms $
+````
+
+Original SHA-256 `7807BD01860F82443FB371140AEAEBDC19423335EB5ED61AECDD8097E2D15102`; replacement SHA-256 `6DE4288125BE1E7ADA97E59ABE6EE3A69B9FE1A0C810B81AD809078744F3591F`.
+
+</details>
+
+<details id="mc-stk-err-2195">
+<summary><code>MC-STK-ERR-2195 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2195`; producer ID: `ALGEBRA-RECON-822`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32377) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the compatible local transition maps explicit in the base-system choice.
+- Adverse evidence: The two-stage system Z_(2) to Q has local rings but yields a nonlocal stage map in the construction for the identity Q to Q. The source existence theorem is valid using the preceding local subring system; the proof of locality of its structural maps is supplied editorially.
+
+### Change 1: `MC-STK-ERR-2195-OP1`
+
+Pinned-official lines `32377-32377`; bytes `1183787:1183842`.
+
+````diff
+- local and essentially of finite type over $\mathbf{Z}$.
++ local and essentially of finite type over $\mathbf{Z}$,
++ and with local transition maps.
+````
+
+Original SHA-256 `F32A355D1EF9C0C7F1FD13300A99B0D62FD464722848CBA9A80A45CE81EDA61B`; replacement SHA-256 `2D701177A419862284B3D9BE68F9B2331080D3437B905C9E9B8EB572AAC14864`.
+
+</details>
+
+<details id="mc-stk-err-2196">
+<summary><code>MC-STK-ERR-2196 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2196`; producer ID: `ALGEBRA-RECON-823`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32380) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the declaration of the transported original polynomials.
+- Adverse evidence: All original coefficients and their actual representatives and transition maps are retained.
+
+### Change 1: `MC-STK-ERR-2196-OP1`
+
+Pinned-official lines `32380-32380`; bytes `1184011:1184017`.
+
+````diff
+- denote
++ denote by
+````
+
+Original SHA-256 `1CF38705E1B507A44C047B0EBAB43CCD53D09E92610AE9D6279FFD4989B85793`; replacement SHA-256 `564EE2515EB1A619D7EDFD280B7804BC58C6A00C00F276E4F312BB47B9814F01`.
+
+</details>
+
+<details id="mc-stk-err-2197">
+<summary><code>MC-STK-ERR-2197 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2197`; producer ID: `ALGEBRA-RECON-824`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32388) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the inverse-image prime declaration.
+- Adverse evidence: This is the actual contraction of the original prime; no injectivity of the polynomial quotient map is assumed.
+
+### Change 1: `MC-STK-ERR-2197-OP1`
+
+Pinned-official lines `32388-32388`; bytes `1184263:1184300`.
+
+````diff
+- Set $\mathfrak q_\lambda$ the inverse
++ Set $\mathfrak q_\lambda$ to be the inverse
+````
+
+Original SHA-256 `F11684E6D258D9B294AACB2BA5C4A879C1C5350BCB87398F34A6F16D97C9A13A`; replacement SHA-256 `8C338723CE6691D32DC39DD95B02CD94FE6DD20DFE25066A3AC72C765A7C5B95`.
+
+</details>
+
+<details id="mc-stk-err-2198">
+<summary><code>MC-STK-ERR-2198 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2198`; producer ID: `ALGEBRA-RECON-825`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32416-L32418) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the intended universal negative with matching singular grammar.
+- Adverse evidence: The original element y_(n+1)^2 is proved nonzero before quotienting. The full calculation proves failure for every later transition, not only the adjacent ones; no author counterexample is replaced.
+
+### Change 1: `MC-STK-ERR-2198-OP1`
+
+Pinned-official lines `32416-32416`; bytes `1185363:1185375`.
+
+````diff
+- All the maps
++ None of the maps
+````
+
+Original SHA-256 `F593438BD37ABEF09335CF5AFEA8491DBCE0CA0E37868D8BA7F4587DCE8AF307`; replacement SHA-256 `F381F881272CC62B78CF9DB13635163AB5612529727F38A7080C90AD73F1185A`.
+
+### Change 2: `MC-STK-ERR-2198-OP2`
+
+Pinned-official lines `32418-32418`; bytes `1185420:1185475`.
+
+````diff
+- are not localizations (i.e., isomorphisms in this case)
++ is a localization (i.e., an isomorphism in this case)
+````
+
+Original SHA-256 `92DACEB1C9AA9E4E33B757C8A6FF1ACC21E80F5F14E27D4D227C9564EA94041C`; replacement SHA-256 `3B676F38534D037D4FC353D34ED92E0AF7CC99A7E2E9B0BE6F6C2981783E72F0`.
+
+</details>
+
+<details id="mc-stk-err-2199">
+<summary><code>MC-STK-ERR-2199 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2199`; producer ID: `ALGEBRA-RECON-830`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32662) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing verb in the Cohen-Macaulay hypothesis.
+- Adverse evidence: The original dimension identity and regularity hypotheses remain unchanged.
+
+### Change 1: `MC-STK-ERR-2199-OP1`
+
+Pinned-official lines `32662-32662`; bytes `1193247:1193265`.
+
+````diff
+- $S$ Cohen-Macaulay
++ $S$ is Cohen-Macaulay
+````
+
+Original SHA-256 `29FD5C196BAAA46CC326C7AF5290728F111A69CB7381C8F9A968C916523114CA`; replacement SHA-256 `CED436A21696D745EB25774F97094A76FBD6EB6681C491F0CF71DB78B50050CA`.
+
+</details>
+
+<details id="mc-stk-err-2200">
+<summary><code>MC-STK-ERR-2200 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2200`; producer ID: `ALGEBRA-RECON-831`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32674) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply punctuation before the coordinated reasons for the display.
+- Adverse evidence: The strict dimension inequality and every original quotient are preserved.
+
+### Change 1: `MC-STK-ERR-2200-OP1`
+
+Pinned-official lines `32674-32674`; bytes `1193711:1193734`.
+
+````diff
+- \dim(S/\mathfrak m_R S)
++ \dim(S/\mathfrak m_R S),
+````
+
+Original SHA-256 `9D0B2896A88EFBBF05F51528E935795CF892F40471E9B23D809D194C91B155E1`; replacement SHA-256 `820DCB0BD7EE2AC20A39511D666DB6949225153ACEC924567A0A9347EF33B215`.
+
+</details>
+
+<details id="mc-stk-err-2201">
+<summary><code>MC-STK-ERR-2201 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2201`; producer ID: `ALGEBRA-RECON-832`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32772-L32888) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the three reported maximal-ideal declarations and the identical unreported stage declaration.
+- Adverse evidence: The additional occurrence at 32794 is independently present in the source. No ideals or residue fields are changed.
+
+### Change 1: `MC-STK-ERR-2201-OP1`
+
+Pinned-official lines `32772-32772`; bytes `1197629:1197637`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+### Change 2: `MC-STK-ERR-2201-OP2`
+
+Pinned-official lines `32794-32794`; bytes `1198546:1198554`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+### Change 3: `MC-STK-ERR-2201-OP3`
+
+Pinned-official lines `32871-32871`; bytes `1201494:1201502`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+### Change 4: `MC-STK-ERR-2201-OP4`
+
+Pinned-official lines `32888-32888`; bytes `1202035:1202043`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+</details>
+
+<details id="mc-stk-err-2202">
+<summary><code>MC-STK-ERR-2202 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2202`; producer ID: `ALGEBRA-RECON-834`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32813) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use a weak upper bound in the directed preorder.
+- Adverse evidence: A one-element index set satisfies the hypotheses and has no strictly larger index. The proof only needs a common upper bound.
+
+### Change 1: `MC-STK-ERR-2202-OP1`
+
+Pinned-official lines `32813-32813`; bytes `1199409:1199427`.
+
+````diff
+- \lambda' > \lambda
++ \lambda' \geq \lambda
+````
+
+Original SHA-256 `1068B5BAF0C6EAA498F8076CE9DB5CB8B23744940245B37D74DD991DDE660F8F`; replacement SHA-256 `185DF817CCEE77EEF5865E39618A22108FB44AE8E083F965CF4E3653CAEF33F5`.
+
+</details>
+
+<details id="mc-stk-err-2203">
+<summary><code>MC-STK-ERR-2203 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2203`; producer ID: `ALGEBRA-RECON-835`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32841-L32845) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Choose an actual numerator in the earlier scalar-extended module and retain its tensor base.
+- Adverse evidence: The earlier module need not inject into its localization. The denominator maps to a unit in the target, which puts the chosen numerator in the earlier kernel. The complete generator argument is editorial.
+
+### Change 1: `MC-STK-ERR-2203-OP1`
+
+Pinned-official lines `32841-32841`; bytes `1200212:1200243`.
+
+````diff
+- Then for some $w \in W$ we have
++ Write $x = y/w$ for some $w \in W$ and
+````
+
+Original SHA-256 `0193280459B0978F87B60D15CFF25A4865E62930E3D16A711DC1ABA61E044990`; replacement SHA-256 `DB6885CC938B8E8B3D59DB48FD2475144BCE5CEA69BC6D678307332E3893E522`.
+
+### Change 2: `MC-STK-ERR-2203-OP2`
+
+Pinned-official lines `32842-32842`; bytes `1200244:1200308`.
+
+````diff
+- $wx \in M_\lambda/\mathfrak m_\lambda M_\lambda \otimes \kappa$.
++ $y \in M_\lambda/\mathfrak m_\lambda M_\lambda \otimes_{\kappa_\lambda} \kappa$.
+````
+
+Original SHA-256 `3CBD411EA73B3E3D2386C12A6BC0714612E304F64E57F2B9BCAD373CBD41CAF9`; replacement SHA-256 `9B1AB4B906134D5DF46C5C65AD3D896CF3A3B9745ECD0F95FA4513192FBEA491`.
+
+### Change 3: `MC-STK-ERR-2203-OP3`
+
+Pinned-official lines `32843-32843`; bytes `1200309:1200366`.
+
+````diff
+- Hence $wx \in \Ker(\Psi_\lambda)$. Hence $wx$ is a linear
++ Hence $y \in \Ker(\Psi_\lambda)$. Hence $y$ is a linear
+````
+
+Original SHA-256 `378B4387E878C33A340096DDA4D6E732ABFBC154B31F9365B735F1D9AB1D1EBA`; replacement SHA-256 `DBE7E2AE18F69F1F280C053A306B8BD78627458CCF1DCACE20936DAD16946AF0`.
+
+### Change 4: `MC-STK-ERR-2203-OP4`
+
+Pinned-official lines `32845-32845`; bytes `1200436:1200450`.
+
+````diff
+- Hence $wx = 0$
++ Hence the image of $y$ is zero
+````
+
+Original SHA-256 `D45CC57140CCE817F719F2530CB5E23157D1EF9F9FA0A74B60C9EC9589FFED81`; replacement SHA-256 `C88359FE29FDD98CAB5DB262E9B4928B847BC9AFD6EB807CA44E0A85F505938A`.
+
+</details>
+
+<details id="mc-stk-err-2204">
+<summary><code>MC-STK-ERR-2204 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2204`; producer ID: `ALGEBRA-RECON-837`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32925-L33011) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the original ideal declarations.
+- Adverse evidence: The ideals remain the original inverse-image and maximal ideals with their original base rings.
+
+### Change 1: `MC-STK-ERR-2204-OP1`
+
+Pinned-official lines `32925-32925`; bytes `1203314:1203322`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+### Change 2: `MC-STK-ERR-2204-OP2`
+
+Pinned-official lines `33011-33011`; bytes `1207191:1207199`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+</details>
+
+<details id="mc-stk-err-2205">
+<summary><code>MC-STK-ERR-2205 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2205`; producer ID: `ALGEBRA-RECON-838`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32927) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the actual quotient base in the quotient approximation system.
+- Adverse evidence: The limit is the map R/I to S/IS. Keeping the unquotiented stage base would apply the approximation lemma to different data.
+
+### Change 1: `MC-STK-ERR-2205-OP1`
+
+Pinned-official lines `32927-32927`; bytes `1203425:1203470`.
+
+````diff
+- $R_\lambda \to S_\lambda/I_\lambda S_\lambda$
++ $R_\lambda/I_\lambda \to S_\lambda/I_\lambda S_\lambda$
+````
+
+Original SHA-256 `9EFD2E9CB670388C6BDFC9DA26865083330EE479F8173F9B58672803E5A7A1D0`; replacement SHA-256 `9B8F68E46A933305ACEC9886D69B87845EE3DC53BABE1AE03507D3808A4851F0`.
+
+</details>
+
+<details id="mc-stk-err-2206">
+<summary><code>MC-STK-ERR-2206 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2206`; producer ID: `ALGEBRA-RECON-839`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32933) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the quotient base over which eventual flatness is proved.
+- Adverse evidence: Flatness over R_lambda itself is not asserted and does not follow for this quotient module.
+
+### Change 1: `MC-STK-ERR-2206-OP1`
+
+Pinned-official lines `32933-32933`; bytes `1203753:1203768`.
+
+````diff
+- is flat for all
++ is flat over $R_\lambda/I_\lambda$ for all
+````
+
+Original SHA-256 `5DEAC74D83CAD187E255A172944E88234B03209C6A9C1ABB61E2663982143E5A`; replacement SHA-256 `C9FC564CCFB4EC22F050B3D21D26BF622F78386CA915384704CE624E19EC60EB`.
+
+</details>
+
+<details id="mc-stk-err-2207">
+<summary><code>MC-STK-ERR-2207 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2207`; producer ID: `ALGEBRA-RECON-841`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L32975) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Keep the actual localization in the quotient-module flatness comparison.
+- Adverse evidence: The original systems only give localizations of the raw base changes. Localization preserves flatness and commutes with the required Tor complex; the full proof retains the original multiplicative set.
+
+### Change 1: `MC-STK-ERR-2207-OP1`
+
+Pinned-official lines `32975-32975`; bytes `1205695:1205710`.
+
+````diff
+- as it is a base
++ as it is a localization of a base
+````
+
+Original SHA-256 `71F1A88B985E60EF99EBE69B993EF2CC773D7648CF9BF588029A9CCACC41E07E`; replacement SHA-256 `9E1885793A5F566DEE91FD034C7DB26A0122953106665DC58D4FBA924BBFFF63`.
+
+</details>
+
+<details id="mc-stk-err-2208">
+<summary><code>MC-STK-ERR-2208 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2208`; producer ID: `ALGEBRA-RECON-842`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33040) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore both original relation families in the presentation over R_lambda.
+- Adverse evidence: The g-relations were imposed over S_lambda, which already had the f-relations. They cannot be dropped on returning to a polynomial algebra over R_lambda.
+
+### Change 1: `MC-STK-ERR-2208-OP1`
+
+Pinned-official lines `33040-33040`; bytes `1208103:1208143`.
+
+````diff
+- (g_{1, \lambda}, \ldots, g_{v, \lambda})
++ (f_{1, \lambda}, \ldots, f_{u, \lambda},
++ g_{1, \lambda}, \ldots, g_{v, \lambda})
+````
+
+Original SHA-256 `508F6CE41F2282B122917E2D228A081A0066EA68FB25A40813ABEB73BA3FE412`; replacement SHA-256 `F4DDE6C08EF9A9925D77AFF10AAF0DA25E893601727C5952EF7D24EA550B2CBE`.
+
+</details>
+
+<details id="mc-stk-err-2209">
+<summary><code>MC-STK-ERR-2209 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2209`; producer ID: `ALGEBRA-RECON-843`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33049) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Place the descended original matrix over the primed ring.
+- Adverse evidence: The original matrix is over S_prime and the following cokernel uses free S_prime_lambda modules. Its entries need not come from S_lambda.
+
+### Change 1: `MC-STK-ERR-2209-OP1`
+
+Pinned-official lines `33049-33049`; bytes `1208463:1208476`.
+
+````diff
+- S_{\lambda_3}
++ S'_{\lambda_3}
+````
+
+Original SHA-256 `69F4757247CB44ABA285C0A77DA594CFDBC8928F06E67AB957A108640673E15E`; replacement SHA-256 `70F6D4D30DF93F28A633E185961B9FBC82C6F90FA9A89A20D6494A53E1C2C85E`.
+
+</details>
+
+<details id="mc-stk-err-2210">
+<summary><code>MC-STK-ERR-2210 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2210`; producer ID: `ALGEBRA-RECON-844`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33108-L33110) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore localization in both endpoint comparisons.
+- Adverse evidence: The reported first equality and the adjacent module equality both fail in the explicit Q to Q(t) example. The original matrices and tensor bases remain unchanged.
+
+### Change 1: `MC-STK-ERR-2210-OP1`
+
+Pinned-official lines `33108-33110`; bytes `1210667:1210859`.
+
+````diff
+- Pick such a $\lambda$. Then $S = S_\lambda \otimes_{R_\lambda} R$
+- is flat over $R$, and $M = M_\lambda \otimes_{S_\lambda} S$
+- is flat over $S$ (since the base change of a flat module is flat).
++ Pick such a $\lambda$. Then $S$ is a localization of
++ $S_\lambda \otimes_{R_\lambda} R$, hence is flat over $R$.
++ Also $M$ is a localization of $M_\lambda \otimes_{S_\lambda} S$,
++ hence is flat over $S$ (base change and localization preserve flatness).
+````
+
+Original SHA-256 `2B0C0B2942BDF64E09AE75E36ABEFF07C0C01981305854500E4BAFF439BC556D`; replacement SHA-256 `0E6E76E834F4C8F3CB21F4D156A15869F0D86984B994085A98F2309E50E6CBF5`.
+
+</details>
+
+<details id="mc-stk-err-2211">
+<summary><code>MC-STK-ERR-2211 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2211`; producer ID: `ALGEBRA-RECON-845`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33136) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Begin with the finite-type hypothesis actually given.
+- Adverse evidence: Finite presentation is the conclusion being established by finite generation of the original kernel J.
+
+### Change 1: `MC-STK-ERR-2211-OP1`
+
+Pinned-official lines `33136-33136`; bytes `1211772:1211806`.
+
+````diff
+- essentially of finite presentation
++ essentially of finite type
+````
+
+Original SHA-256 `661BF14BD64080947970C85CBDB5F047055BBD1CEC20B419DB72C7B2553321CD`; replacement SHA-256 `95A2F83B98076E46BEB4C52100EDBD41F1ABB7911778AB4507307DFA2744A564`.
+
+</details>
+
+<details id="mc-stk-err-2212">
+<summary><code>MC-STK-ERR-2212 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2212`; producer ID: `ALGEBRA-RECON-846`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33138) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use Let with the existing be declaration.
+- Adverse evidence: The inverse-image prime and original quotient presentation remain unchanged.
+
+### Change 1: `MC-STK-ERR-2212-OP1`
+
+Pinned-official lines `33138-33138`; bytes `1211935:1211941`.
+
+````diff
+- Denote
++ Let
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `E947A3D4F4A1B23611F8AA204B2BB149785CFB02F5CCC687D1EB10B059E0D5AA`.
+
+</details>
+
+<details id="mc-stk-err-2213">
+<summary><code>MC-STK-ERR-2213 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2213`; producer ID: `ALGEBRA-RECON-848`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33158) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the two distinct ideals appearing in the quotient map.
+- Adverse evidence: The exact common-algebra argument uses B/J_prime and B/J_doubleprime as finitely presented B-modules, not an assumed finite presentation of S.
+
+### Change 1: `MC-STK-ERR-2213-OP1`
+
+Pinned-official lines `33158-33158`; bytes `1212817:1212842`.
+
+````diff
+- $J' \subset J' \subset J$
++ $J' \subset J'' \subset J$
+````
+
+Original SHA-256 `82D2335BF827CC9DF49D5BCF53F921F85F55749C0B9A3EDC9DAE86763F4DE352`; replacement SHA-256 `110929E465A9D7818A78191908E15D069533C26B79777B471BEA0038FFC56802`.
+
+</details>
+
+<details id="mc-stk-err-2214">
+<summary><code>MC-STK-ERR-2214 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2214`; producer ID: `ALGEBRA-RECON-850`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33198-L33210) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Choose a support prime and justify flatness at every stalk, including zero stalks.
+- Adverse evidence: A nonzero fibre module need not be supported at every prime of its fibre ring, as k times k with module k times zero shows. The original nil ideal lies in every contracted prime. The weaker support hypothesis is proved only in the separate extension.
+
+### Change 1: `MC-STK-ERR-2214-OP1`
+
+Pinned-official lines `33198-33200`; bytes `1214211:1214372`.
+
+````diff
+- $S' \otimes_S \kappa(\mathfrak q)$ is nonzero and hence
+- there exists a prime $\mathfrak q' \subset S'$ lying over
+- $\mathfrak q$ (Lemma \ref{lemma-in-image}). Let
++ choose a prime in the support of this finite fibre module.
++ Its inverse image $\mathfrak q' \subset S'$ lies over
++ $\mathfrak q$ and $M_{\mathfrak q'} \ne 0$
++ (see also Lemma \ref{lemma-in-image}). Let
+````
+
+Original SHA-256 `D0D92487E7ECAEF5E3B0BFE1E28DDE8848C4A623916B8C451542B27FD2D4492E`; replacement SHA-256 `2374FCCF75B41A5CC99F8325E76395A5D70F6FA8258FAA20E9C09EF21241E547`.
+
+### Change 2: `MC-STK-ERR-2214-OP2`
+
+Pinned-official lines `33209-33210`; bytes `1214840:1214968`.
+
+````diff
+- Since $\mathfrak q'$ was an arbitrary prime of $S'$ we also
+- see that $M$ is flat over $S$ (Lemma \ref{lemma-flat-localization}).
++ For every $\mathfrak q' \in \Supp_{S'}(M)$ the same local argument applies;
++ at primes outside this support, $M_{\mathfrak q'} = 0$ is flat.
++ Thus $M$ is flat over $S$ (Lemma \ref{lemma-flat-localization}).
+````
+
+Original SHA-256 `F45E0E9FFA819753B5D5EC71FD0050096C94E916BFEA4B2EF495EDBDEE458021`; replacement SHA-256 `72F1625C798D76AD134E1289454B917A4D437871C5D59FB86AFD5A8D43884440`.
+
+</details>
+
+<details id="mc-stk-err-2215">
+<summary><code>MC-STK-ERR-2215 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2215`; producer ID: `ALGEBRA-RECON-854`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33242) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural verb for the listed elements.
+- Adverse evidence: The original ordered sequence and its local regularity claim are retained.
+
+### Change 1: `MC-STK-ERR-2215-OP1`
+
+Pinned-official lines `33242-33242`; bytes `1215588:1215603`.
+
+````diff
+- forms a regular
++ form a regular
+````
+
+Original SHA-256 `5E7A281BB3953B7B6E04DD52AA3D1A965C6E2CB86729B81EF55FB2B5B034C864`; replacement SHA-256 `8F4A0D8131667EB349AC2FF3AE7B3EDDABB3225A1CFECE924E120AB4FB09D5DC`.
+
+</details>
+
+<details id="mc-stk-err-2216">
+<summary><code>MC-STK-ERR-2216 — algebra.tex: — source_hypothesis_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2216`; producer ID: `ALGEBRA-RECON-856`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33241) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Add the missing nonempty-zero-locus hypothesis to the dimension equality.
+- Adverse evidence: For S=k[x], d=i=1 and f_1=1 the displayed upper bound holds but equality fails. Local regularity on the empty locus is merely vacuous. The later use is at a fibre containing an actual zero-locus point.
+
+### Change 1: `MC-STK-ERR-2216-OP1`
+
+Pinned-official lines `33241-33241`; bytes `1215506:1215544`.
+
+````diff
+- $\dim V(f_1, \ldots, f_i) \leq d - i$.
++ $V(f_1, \ldots, f_i) \ne \varnothing$ and
++ $\dim V(f_1, \ldots, f_i) \leq d - i$.
+````
+
+Original SHA-256 `6C92E268E4560AF63E07543C7BCC53300A765AD44E4711FBB520ADA1FF98DBAA`; replacement SHA-256 `6FAC15BB25CF0300AA4789E6C85F78CF8A65E93D50A2A73B2EC3229C48AD717F`.
+
+</details>
+
+<details id="mc-stk-err-2217">
+<summary><code>MC-STK-ERR-2217 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2217`; producer ID: `ALGEBRA-RECON-857`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33333) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the original coordinated ring-map hypotheses.
+- Adverse evidence: No equidimensionality hypothesis is silently added; the original lemma is proved in its full scope separately.
+
+### Change 1: `MC-STK-ERR-2217-OP1`
+
+Pinned-official lines `33333-33333`; bytes `1218996:1219016`.
+
+````diff
+- is finite type, flat
++ is of finite type and flat
+````
+
+Original SHA-256 `6D0AFAF2C8B6DD03066E26CDB99CC24F8F6A99342E3AF92BEEFD64831D3B6A9B`; replacement SHA-256 `E43C8A5B606D602AE2B2A165593C0ABEC91507C8DC7708DC3A21CAF23B0B40C7`.
+
+</details>
+
+<details id="mc-stk-err-2218">
+<summary><code>MC-STK-ERR-2218 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2218`; producer ID: `ALGEBRA-RECON-858`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33398) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Perform the promised localization before using the chosen fractions as global equations.
+- Adverse evidence: Choose their actual denominators outside q and invert the finite product. The elements remain in the original minor ideal and their fibre images remain the specified ordered regular sequence.
+
+### Change 1: `MC-STK-ERR-2218-OP1`
+
+Pinned-official lines `33398-33398`; bytes `1221592:1221664`.
+
+````diff
+- form a regular sequence in $S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}$.
++ form a regular sequence in $S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}$.
++ After further localizing away from $\mathfrak q$, take these same
++ fraction representatives as elements of $I_i \subset S$.
+````
+
+Original SHA-256 `4C44DE393C2A472CCF5572C8A7ABA58DC6C42EC3E7206C86490C7D925004478B`; replacement SHA-256 `7AC5FE4719E7A7504E36E2C0A9BA888D52F9094ECC0D33DAD83912B6BD173D40`.
+
+</details>
+
+<details id="mc-stk-err-2219">
+<summary><code>MC-STK-ERR-2219 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2219`; producer ID: `ALGEBRA-RECON-860`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33465) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the singular attributive noun.
+- Adverse evidence: The original polynomial-fibre global dimension statement remains valid before localization.
+
+### Change 1: `MC-STK-ERR-2219-OP1`
+
+Pinned-official lines `33465-33465`; bytes `1224230:1224242`.
+
+````diff
+- fibres rings
++ fibre rings
+````
+
+Original SHA-256 `A62250CE06F5B2DA7C33CAEDF3D391193E0895817DE81E5B27A4249484C50C09`; replacement SHA-256 `E340066B21FFA1FCA115EF11CFF57CE1D7E6D1896B3AD28CAC9B0D04BF641C58`.
+
+</details>
+
+<details id="mc-stk-err-2220">
+<summary><code>MC-STK-ERR-2220 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2220`; producer ID: `ALGEBRA-RECON-861`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33487) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the bound on the localized polynomial-fibre global dimension.
+- Adverse evidence: At a generic point of a polynomial line the local fibre is a field, of global dimension zero. The nth syzygy argument needs only the upper bound.
+
+### Change 1: `MC-STK-ERR-2220-OP1`
+
+Pinned-official lines `33487-33487`; bytes `1224995:1225001`.
+
+````diff
+- is $n$
++ is at most $n$
+````
+
+Original SHA-256 `3825CD6CE882260A1426463BD6BB0D468A517AD1C388E2A868EC200B027CCFF3`; replacement SHA-256 `C38EC017172F356E83BF7BB67EE4A01F2025F4DA7C75C2A412265E6F2C91AC41`.
+
+</details>
+
+<details id="mc-stk-err-2221">
+<summary><code>MC-STK-ERR-2221 — algebra.tex: — mathematical_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2221`; producer ID: `ALGEBRA-RECON-862`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33469-L33471) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Handle the zero-variable presentation and define the first syzygy at n=1.
+- Adverse evidence: The printed formula has undefined negative-index resolution terms in these cases. The repair keeps the original nth-syzygy formula for every n>=2. Zero syzygies are free of rank zero and do not require the nonzero-module citation.
+
+### Change 1: `MC-STK-ERR-2221-OP1`
+
+Pinned-official lines `33469-33469`; bytes `1224323:1224380`.
+
+````diff
+- Choose a resolution $F_\bullet$ of $M$ over $S$ with each
++ If $n = 0$, then $S = R$ and the finite flat module $M_{\mathfrak q}$
++ is free, including rank zero. Its basis spreads after a localization,
++ proving the claim. Hence assume $n \geq 1$.
++ Choose a resolution $F_\bullet$ of $M$ over $S$ with each
+````
+
+Original SHA-256 `F2B3CC2B355D3BE82C88A2A606CE53DCB5F13C1448783231E5AF49396B9AF23C`; replacement SHA-256 `6B725599C39575B7DD5D60FA4CC34A4696DA80840230623E1D395914AE711FDD`.
+
+### Change 2: `MC-STK-ERR-2221-OP2`
+
+Pinned-official lines `33471-33471`; bytes `1224449:1224497`.
+
+````diff
+- Let $K_n = \Ker(F_{n-1} \to F_{n-2})$. Note that
++ Let $K_1 = \Ker(F_0 \to M)$ and, for $n \geq 2$,
++ let $K_n = \Ker(F_{n-1} \to F_{n-2})$. Note that
+````
+
+Original SHA-256 `A977BB716EF0E4DDF69B8F17D66A87F165D6DE730AA758D0897BE7A65FE7C9AA`; replacement SHA-256 `93F22FE15ADEEABE3F80A5699FF5900C03B206A19F3687E70E84AB0A7F1F9E17`.
+
+</details>
+
+<details id="mc-stk-err-2222">
+<summary><code>MC-STK-ERR-2222 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2222`; producer ID: `ALGEBRA-RECON-867`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33531-L33534) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply both predicate verbs in the paired locus descriptions.
+- Adverse evidence: All original local rings, polynomial variables and relative dimensions are retained.
+
+### Change 1: `MC-STK-ERR-2222-OP1`
+
+Pinned-official lines `33531-33531`; bytes `1226239:1226257`.
+
+````diff
+- \text{ flat over }
++ \text{ is flat over }
+````
+
+Original SHA-256 `4DAE5F88320C77E9C6CCE214B220B8E59CE9B41E9391C25A8D8F9286EAF36858`; replacement SHA-256 `461A9935C2AA4CE20A6FB01ADFFE1AC22FA82A762894C80231837B8D7D11B5D3`.
+
+### Change 2: `MC-STK-ERR-2222-OP2`
+
+Pinned-official lines `33534-33534`; bytes `1226317:1226332`.
+
+````diff
+- \text{ CM and }
++ \text{ is CM and }
+````
+
+Original SHA-256 `49683067823D7226D2680458197EDEE3DFE6EBEAE1A1B16CA856D6C5917FD52E`; replacement SHA-256 `AA5F914680F381A91B422E6769B495502D09D7EE6E735BEE2F35489E9768FB60`.
+
+</details>
+
+<details id="mc-stk-err-2223">
+<summary><code>MC-STK-ERR-2223 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2223`; producer ID: `ALGEBRA-RECON-868`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33540) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use Set for the displayed equality defining the contraction.
+- Adverse evidence: This is the original inverse-image prime, not a changed ring or coordinate.
+
+### Change 1: `MC-STK-ERR-2223-OP1`
+
+Pinned-official lines `33540-33540`; bytes `1226497:1226503`.
+
+````diff
+- Denote
++ Set
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `B6F6F3AD07B3C05FA0BBBBF2E3D257FF1E3E31A83EFBE2C9369CD008594F94E0`.
+
+</details>
+
+<details id="mc-stk-err-2224">
+<summary><code>MC-STK-ERR-2224 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2224`; producer ID: `ALGEBRA-RECON-869`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33575) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the spectrum as the topological ambient space.
+- Adverse evidence: The point set is the set of prime ideals and the proof already uses principal opens of its spectrum.
+
+### Change 1: `MC-STK-ERR-2224-OP1`
+
+Pinned-official lines `33575-33575`; bytes `1228010:1228021`.
+
+````diff
+- open in $S$
++ open in $\Spec(S)$
+````
+
+Original SHA-256 `00C5BE69F96C5ADC326E6D0739E6967E7ED64D3C2A9FF91724715EFCCAB51333`; replacement SHA-256 `79F6DE519AD35F3A7846B5E0677550EC10210A913456245E7EAF1F2E0FF7DA70`.
+
+</details>
+
+<details id="mc-stk-err-2225">
+<summary><code>MC-STK-ERR-2225 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2225`; producer ID: `ALGEBRA-RECON-870`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33610) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the algebra compound spelling used in the chapter.
+- Adverse evidence: An additional finite-type hyphen is not needed; mathematical hypotheses are unchanged.
+
+### Change 1: `MC-STK-ERR-2225-OP1`
+
+Pinned-official lines `33610-33610`; bytes `1229458:1229469`.
+
+````diff
+- $k$ algebra
++ $k$-algebra
+````
+
+Original SHA-256 `4515C1AB5A31C8ECA6E03EEB931DBFF2F3D669B7DB68CE7BFAC615F8DADE0275`; replacement SHA-256 `EB04094373A516254D70A5F26ADF810493CDC7CACDB93DABB8391AEC317EDFD8`.
+
+</details>
+
+<details id="mc-stk-err-2226">
+<summary><code>MC-STK-ERR-2226 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2226`; producer ID: `ALGEBRA-RECON-871`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33645) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the fixed relative dimension in the stated local goal.
+- Adverse evidence: The existing final argument proves both conditions through the original d-variable quasi-finite chart. This is a clarification of what the proof establishes, not an added theorem hypothesis.
+
+### Change 1: `MC-STK-ERR-2226-OP1`
+
+Pinned-official lines `33645-33645`; bytes `1230467:1230517`.
+
+````diff
+- all fibre rings of $R \to S_g$ are Cohen-Macaulay.
++ all fibre rings of $R \to S_g$ are Cohen-Macaulay and
++ $\dim_{\mathfrak r}(S_g/R) = d$ for every prime $\mathfrak r \subset S_g$.
+````
+
+Original SHA-256 `CABAE53774E721B02E141B23C411877744C386B436CDEA920330E27F8F6D1C7D`; replacement SHA-256 `F4E28C2396D3E1AA88C19C3740E0095300E05C731E0A850FF0FE758A7BEDF0BD`.
+
+</details>
+
+<details id="mc-stk-err-2227">
+<summary><code>MC-STK-ERR-2227 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2227`; producer ID: `ALGEBRA-RECON-872`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33663) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the intervening condition with a comma.
+- Adverse evidence: The same original localization element and map are retained.
+
+### Change 1: `MC-STK-ERR-2227-OP1`
+
+Pinned-official lines `33663-33663`; bytes `1231338:1231375`.
+
+````diff
+- $g \not \in \mathfrak q$ the ring map
++ $g \not \in \mathfrak q$, the ring map
+````
+
+Original SHA-256 `911C3D235613DB2D6AA8D5052FEF192AD23922ECA80D03A57658EE010F037A86`; replacement SHA-256 `65302667B77E40EB101EEE54F21F1C0D863FEEA1E03229C90CBFB7CFCBDD7950`.
+
+</details>
+
+<details id="mc-stk-err-2228">
+<summary><code>MC-STK-ERR-2228 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2228`; producer ID: `ALGEBRA-RECON-873`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33742-L33766) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the spectrum-map and stratum declarations.
+- Adverse evidence: The actual base-change map and dimension indexing remain unchanged.
+
+### Change 1: `MC-STK-ERR-2228-OP1`
+
+Pinned-official lines `33742-33742`; bytes `1234361:1234369`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+### Change 2: `MC-STK-ERR-2228-OP2`
+
+Pinned-official lines `33766-33766`; bytes `1235213:1235221`.
+
+````diff
+- denote $
++ denote by $
+````
+
+Original SHA-256 `F14132C7E6980E9A4A7520E685BF4C8B2A38E08A17DAF358DEDEB0AAA53D7683`; replacement SHA-256 `D55B610788EB37735E91AD1F4F6D48C6868F50140DEAE7BC3D6830D72505F549`.
+
+</details>
+
+<details id="mc-stk-err-2229">
+<summary><code>MC-STK-ERR-2229 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2229`; producer ID: `ALGEBRA-RECON-875`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33758-L33759) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the three original ring-map predicates parallel.
+- Adverse evidence: No condition or order is changed.
+
+### Change 1: `MC-STK-ERR-2229-OP1`
+
+Pinned-official lines `33758-33759`; bytes `1234901:1234955`.
+
+````diff
+- which is (a) flat,
+- (b) of finite presentation, (c) has
++ which (a) is flat,
++ (b) is of finite presentation, and (c) has
+````
+
+Original SHA-256 `4736AA78069CFE23397EE1FA255527528D1388241301A4ADA42C3215EABF4836`; replacement SHA-256 `3762A3E18FC7B5BF6D683801F38321CEA0B1791B9BAC6DD71BF3A7283ED314AE`.
+
+</details>
+
+<details id="mc-stk-err-2230">
+<summary><code>MC-STK-ERR-2230 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2230`; producer ID: `ALGEBRA-RECON-876`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33762) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the empty-fibre convention explicit for the component factors.
+- Adverse evidence: For R=k times k and S=k[x] times k, the two dimension factors each have an empty fibre over the other base component. The intended finite dimension applies to nonempty fibres; zero factors are retained.
+
+### Change 1: `MC-STK-ERR-2230-OP1`
+
+Pinned-official lines `33762-33762`; bytes `1235116:1235146`.
+
+````diff
+- has all fibres equidimensional
++ has all nonempty fibres equidimensional
+````
+
+Original SHA-256 `25F36A3D1E86455FE43D75D137350B20E5F106C7861A1131AC897B960B449723`; replacement SHA-256 `031B00046EE77D8391616E9A49846E6AC74C222D69C4A7EA60E70082AE0C64EA`.
+
+</details>
+
+<details id="mc-stk-err-2231">
+<summary><code>MC-STK-ERR-2231 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2231`; producer ID: `ALGEBRA-RECON-881`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L33967) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the sentence into its defining where clause.
+- Adverse evidence: The original directed colimit and all varying-ring actions are retained.
+
+### Change 1: `MC-STK-ERR-2231-OP1`
+
+Pinned-official lines `33967-33967`; bytes `1240224:1240250`.
+
+````diff
+- \colim_i \Omega_{S_i/R_i}.
++ \colim_i \Omega_{S_i/R_i},
+````
+
+Original SHA-256 `B5AF99BC2CE75D9FF13A9171EB6A918F23A030022845DE06413343FF951EBA6D`; replacement SHA-256 `E3040FC8D7F79A83965AC968250C66737CED42B78C3AEDEBADB3570994AB3C50`.
+
+</details>
+
+<details id="mc-stk-err-2232">
+<summary><code>MC-STK-ERR-2232 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2232`; producer ID: `ALGEBRA-RECON-883`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34001) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the source of the lifted relation generators.
+- Adverse evidence: The upper-left relation module receives its vertical arrow from the lower-left relation module.
+
+### Change 1: `MC-STK-ERR-2232-OP1`
+
+Pinned-official lines `34001-34001`; bytes `1241528:1241546`.
+
+````diff
+- lower right corner
++ lower left corner
+````
+
+Original SHA-256 `C1886E3B4BD34A53B3DBC965C49B5795BF202BC38B3076124DADAE23A4465505`; replacement SHA-256 `D40646661BE789BFAD75D34DB6439AB3466D08DA389BCE3B04BA35B06CE0D35D`.
+
+</details>
+
+<details id="mc-stk-err-2233">
+<summary><code>MC-STK-ERR-2233 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2233`; producer ID: `ALGEBRA-RECON-885`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34014) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the ill-typed application of the map to a coefficient already in its target ring.
+- Adverse evidence: The coefficient s_l_prime lies in S_prime. The equality retains phi(s) on the left and the original indexed base generators.
+
+### Change 1: `MC-STK-ERR-2233-OP1`
+
+Pinned-official lines `34014-34014`; bytes `1242277:1242290`.
+
+````diff
+- \varphi(s_l')
++ s_l'
+````
+
+Original SHA-256 `7AF5D39BEFB2987F70E5D4CD21AEFF6E507BA88B3924D39261422E28F1E82093`; replacement SHA-256 `B7B27B25FE271F6A78407694D4AC0A571BD09373EC46774FE432EC8A61217097`.
+
+</details>
+
+<details id="mc-stk-err-2234">
+<summary><code>MC-STK-ERR-2234 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2234`; producer ID: `ALGEBRA-RECON-886`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34025) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing definite article.
+- Adverse evidence: The original fibre product and all diagram maps are unchanged.
+
+### Change 1: `MC-STK-ERR-2234-OP1`
+
+Pinned-official lines `34025-34025`; bytes `1242690:1242704`.
+
+````diff
+- have following
++ have the following
+````
+
+Original SHA-256 `81ABC35634B6CB9BEF30D7D99FB82D4D5B1FC57C8E0F5CB7C97827AB6172B22D`; replacement SHA-256 `A053670F969C996AF51459E19CF1A1D072848D7242BCF62A99A7D01425ED9212`.
+
+</details>
+
+<details id="mc-stk-err-2235">
+<summary><code>MC-STK-ERR-2235 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2235`; producer ID: `ALGEBRA-RECON-887`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34037) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the actual generators of the differential submodule.
+- Adverse evidence: The derivation vanishing condition kills differentials of the ring images, not the ring elements themselves.
+
+### Change 1: `MC-STK-ERR-2235-OP1`
+
+Pinned-official lines `34037-34037`; bytes `1243177:1243198`.
+
+````diff
+- by the image of $R''$
++ by the differentials of elements in the image of $R''$
+````
+
+Original SHA-256 `5D4E87D046CC09E10C3E9FBC780F4BA7BA0DB2DE20F4C83D42F4F89100633031`; replacement SHA-256 `6B82F7576E25043F7D3B7B79E4E4D92682635F81F9AD523484F3FF1062FE7975`.
+
+</details>
+
+<details id="mc-stk-err-2236">
+<summary><code>MC-STK-ERR-2236 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2236`; producer ID: `ALGEBRA-RECON-888`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34096) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the indefinite article.
+- Adverse evidence: The next source formula already extends the universal derivation. Its complete inverse proof retains the denominator squares and works with zero divisors.
+
+### Change 1: `MC-STK-ERR-2236-OP1`
+
+Pinned-official lines `34096-34096`; bytes `1245454:1245470`.
+
+````diff
+- a $A$-derivation
++ an $A$-derivation
+````
+
+Original SHA-256 `204B8984F6E398212A1127A1CB3A7967E8D31C640EE42372B7753CA89FAD31B8`; replacement SHA-256 `5B18E9089EEF6E24E8D42993B2C2B859871F3B8FFEB72F8E0019234A2496B306`.
+
+</details>
+
+<details id="mc-stk-err-2237">
+<summary><code>MC-STK-ERR-2237 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2237`; producer ID: `ALGEBRA-RECON-889`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34093) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the introductory clause.
+- Adverse evidence: No change to the localization or canonical map.
+
+### Change 1: `MC-STK-ERR-2237-OP1`
+
+Pinned-official lines `34093-34093`; bytes `1245299:1245315`.
+
+````diff
+- To show (2) note
++ To show (2), note
+````
+
+Original SHA-256 `16AAE23329795271053E03971B61A5B0CB2D4CED94C4D76251A60AC99D10906E`; replacement SHA-256 `6F9757C8C274E7678DC3F2DCBCC4C317C409AFAC58CC040F1C07C46DA83CA61D`.
+
+</details>
+
+<details id="mc-stk-err-2238">
+<summary><code>MC-STK-ERR-2238 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2238`; producer ID: `ALGEBRA-RECON-890`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34115) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the exact-sequence sentence.
+- Adverse evidence: No left injectivity is introduced.
+
+### Change 1: `MC-STK-ERR-2238-OP1`
+
+Pinned-official lines `34115-34115`; bytes `1245971:1245972`.
+
+````diff
+- 0
++ 0.
+````
+
+Original SHA-256 `5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9`; replacement SHA-256 `892F6E09C02C35B5381A165395599F21770C19B4F05D2ED71CCD2A45AF414B1C`.
+
+</details>
+
+<details id="mc-stk-err-2239">
+<summary><code>MC-STK-ERR-2239 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2239`; producer ID: `ALGEBRA-RECON-891`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34123) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the notation declaration.
+- Adverse evidence: The original class in I/I squared is retained.
+
+### Change 1: `MC-STK-ERR-2239-OP1`
+
+Pinned-official lines `34123-34123`; bytes `1246158:1246166`.
+
+````diff
+- denote $
++ denote by $
+````
+
+Original SHA-256 `F14132C7E6980E9A4A7520E685BF4C8B2A38E08A17DAF358DEDEB0AAA53D7683`; replacement SHA-256 `D55B610788EB37735E91AD1F4F6D48C6868F50140DEAE7BC3D6830D72505F549`.
+
+</details>
+
+<details id="mc-stk-err-2240">
+<summary><code>MC-STK-ERR-2240 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2240`; producer ID: `ALGEBRA-RECON-892`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34130) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct agreement with the singular subject.
+- Adverse evidence: Linearity follows from the retained product rule modulo I.
+
+### Change 1: `MC-STK-ERR-2240-OP1`
+
+Pinned-official lines `34130-34130`; bytes `1246553:1246569`.
+
+````diff
+- computation show
++ computation shows
+````
+
+Original SHA-256 `27B859F69F9EFC440741E95294E3029ED7BF6963E363DB68914D7AEF55E1822E`; replacement SHA-256 `42369171A13C421C90D94C26BD264B8DDE7E7026CEB424850BA67861AA10E79B`.
+
+</details>
+
+<details id="mc-stk-err-2241">
+<summary><code>MC-STK-ERR-2241 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2241`; producer ID: `ALGEBRA-RECON-894`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34184) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed definition.
+- Adverse evidence: The full section-dependent derivation and inverse identities are proved in the editorial note.
+
+### Change 1: `MC-STK-ERR-2241-OP1`
+
+Pinned-official lines `34184-34184`; bytes `1248444:1248478`.
+
+````diff
+- x \longmapsto x - \beta(\alpha(x))
++ x \longmapsto x - \beta(\alpha(x)).
+````
+
+Original SHA-256 `C596FD7BD2269B6A2B9DEB7038B3B5109F7E4A8A816A853FA691B54F9600AB79`; replacement SHA-256 `B9905560B927A1680CAF40EE7AC97D1708D4BBDE7C4180D4E90FFFEF34003B48`.
+
+</details>
+
+<details id="mc-stk-err-2242">
+<summary><code>MC-STK-ERR-2242 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2242`; producer ID: `ALGEBRA-RECON-895`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34270) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed comparison sentence.
+- Adverse evidence: Both tensor factor actions are retained and proved explicitly in the note.
+
+### Change 1: `MC-STK-ERR-2242-OP1`
+
+Pinned-official lines `34270-34270`; bytes `1251848:1251860`.
+
+````diff
+- \Omega_{S/R}
++ \Omega_{S/R}.
+````
+
+Original SHA-256 `3F6665A1ECA4947ED827F59FF0090280D958EB4ACB9D1404B7214AB258BCC861`; replacement SHA-256 `C99B2DDF237092016249A97016ABB400CCFDBCD0551109F9158EB7E4559119B0`.
+
+</details>
+
+<details id="mc-stk-err-2243">
+<summary><code>MC-STK-ERR-2243 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2243`; producer ID: `ALGEBRA-RECON-896`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34278) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the established notation for the universal differential.
+- Adverse evidence: All three presentation relations, including additivity, are checked editorially.
+
+### Change 1: `MC-STK-ERR-2243-OP1`
+
+Pinned-official lines `34278-34278`; bytes `1252156:1252163`.
+
+````diff
+- - d(ab)
++ - \text{d}(ab)
+````
+
+Original SHA-256 `2EA794E9994BCA79440677FEC3D029CB5B6949F99815C807B42A9EA2BA6E5976`; replacement SHA-256 `EEFF7009CD81261E95E214B01722AF2D5D3A80DF6F122D23896339037E736152`.
+
+</details>
+
+<details id="mc-stk-err-2244">
+<summary><code>MC-STK-ERR-2244 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2244`; producer ID: `ALGEBRA-RECON-899`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34360) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the exact-sequence sentence.
+- Adverse evidence: The conormal term need only be finitely generated; no additional finite presentation or injectivity is assumed.
+
+### Change 1: `MC-STK-ERR-2244-OP1`
+
+Pinned-official lines `34360-34360`; bytes `1254857:1254858`.
+
+````diff
+- 0
++ 0.
+````
+
+Original SHA-256 `5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9`; replacement SHA-256 `892F6E09C02C35B5381A165395599F21770C19B4F05D2ED71CCD2A45AF414B1C`.
+
+</details>
+
+<details id="mc-stk-err-2245">
+<summary><code>MC-STK-ERR-2245 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2245`; producer ID: `ALGEBRA-RECON-900`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34371) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing article.
+- Adverse evidence: The finite-type conclusion is proved without assuming a finitely generated relation ideal.
+
+### Change 1: `MC-STK-ERR-2245-OP1`
+
+Pinned-official lines `34371-34371`; bytes `1255194:1255215`.
+
+````diff
+- is finitely generated
++ is a finitely generated
+````
+
+Original SHA-256 `EA31A2AF54C0F93502AB66CD16069B492D4476C9E4A807ACA62E86A5ADC803DD`; replacement SHA-256 `DA5BCE20A7174BAC04EDEEF23E89A02888E5FF5A3A2EF0F394EF9FE1115D0C46`.
+
+</details>
+
+<details id="mc-stk-err-2246">
+<summary><code>MC-STK-ERR-2246 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2246`; producer ID: `ALGEBRA-RECON-901`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34046) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the independently noticed singular existential agreement.
+- Adverse evidence: The original element in the fibre product remains unchanged.
+
+### Change 1: `MC-STK-ERR-2246-OP1`
+
+Pinned-official lines `34046-34046`; bytes `1243629:1243643`.
+
+````diff
+- there exist an
++ there exists an
+````
+
+Original SHA-256 `3F0CA5C690EF959040E40A5AA136C3FB1AB4C3C78611AC2852FA3B3516480B3F`; replacement SHA-256 `101B77979F09F020CE3FE60E1CC48FD75815DB11288F4E6BE79EDFE8F517F829`.
+
+</details>
+
+<details id="mc-stk-err-2247">
+<summary><code>MC-STK-ERR-2247 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2247`; producer ID: `ALGEBRA-RECON-906`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34391-L34392) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Declare the map and its target with their correct mathematical types.
+- Adverse evidence: The universal derivation and module remain exactly those constructed in the preceding source section.
+
+### Change 1: `MC-STK-ERR-2247-OP1`
+
+Pinned-official lines `34391-34392`; bytes `1255483:1255583`.
+
+````diff
+- Denote $\text{d} : B \to \Omega_{B/A}$
+- the module of differentials with its universal $A$-derivation
++ Denote by $\text{d} : B \to \Omega_{B/A}$
++ the universal $A$-derivation into the module of differentials
+````
+
+Original SHA-256 `E2BDF54D1E3D71C4DAFBAAEEDCF3CF75BB39965EF1F1E314ABEB32EF1BC4D222`; replacement SHA-256 `0FD2FC7303630A7C71B515BF02C685444803F3EF810BCB0A6439AE278DB6316A`.
+
+</details>
+
+<details id="mc-stk-err-2248">
+<summary><code>MC-STK-ERR-2248 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2248`; producer ID: `ALGEBRA-RECON-907`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34414) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the defining-equation sentence.
+- Adverse evidence: All factors and their order are retained.
+
+### Change 1: `MC-STK-ERR-2248-OP1`
+
+Pinned-official lines `34414-34414`; bytes `1256385:1256448`.
+
+````diff
+- \text{d}b_0 \wedge \text{d}b_1 \wedge \ldots \wedge \text{d}b_p
++ \text{d}b_0 \wedge \text{d}b_1 \wedge \ldots \wedge \text{d}b_p.
+````
+
+Original SHA-256 `3D2CFF0F3B7F746A2057CFCEB387D4071771B514B3E1BA23939FE81F1861DF8B`; replacement SHA-256 `72B297B1A1614918B4D556548DB30FB2DB1025F4C44582A7C7B64CFC6D14BCBB`.
+
+</details>
+
+<details id="mc-stk-err-2249">
+<summary><code>MC-STK-ERR-2249 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2249`; producer ID: `ALGEBRA-RECON-909`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34498) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the displayed equality into its reformulation clause.
+- Adverse evidence: The original product-rule terms and their signs are retained.
+
+### Change 1: `MC-STK-ERR-2249-OP1`
+
+Pinned-official lines `34498-34498`; bytes `1259711:1259763`.
+
+````diff
+- - b \text{d}b' \wedge \text{d}(fc) \wedge \text{d}c'
++ - b \text{d}b' \wedge \text{d}(fc) \wedge \text{d}c',
+````
+
+Original SHA-256 `80A39E307F80394343A383F6B43510DFE2EFCCB1EDC687B1DDDF7F8999066B6C`; replacement SHA-256 `E3137C180892C69D85634E7101CDFA6A308533B152B85EA55C52CC9E4242BA10`.
+
+</details>
+
+<details id="mc-stk-err-2250">
+<summary><code>MC-STK-ERR-2250 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2250`; producer ID: `ALGEBRA-RECON-910`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34535) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the absolute-complex declaration into its where clause.
+- Adverse evidence: The relative base remains the integers.
+
+### Change 1: `MC-STK-ERR-2250-OP1`
+
+Pinned-official lines `34535-34535`; bytes `1261285:1261291`.
+
+````diff
+- \ldots
++ \ldots,
+````
+
+Original SHA-256 `F0DC60CD5B6E9148265817C49F269CA0D7DA58360E8495D4F09063963556CB81`; replacement SHA-256 `1AB9F109527A9482E9CD9F4D4322CDE7287C930F39FCC745F46B84624DCC6A0C`.
+
+</details>
+
+<details id="mc-stk-err-2251">
+<summary><code>MC-STK-ERR-2251 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2251`; producer ID: `ALGEBRA-RECON-911`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34545) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the diagram sentence.
+- Adverse evidence: All four original ring maps are unchanged.
+
+### Change 1: `MC-STK-ERR-2251-OP1`
+
+Pinned-official lines `34545-34545`; bytes `1261483:1261484`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+</details>
+
+<details id="mc-stk-err-2252">
+<summary><code>MC-STK-ERR-2252 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2252`; producer ID: `ALGEBRA-RECON-912`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34549) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed functorial-map sentence.
+- Adverse evidence: The map remains induced by the original commutative square.
+
+### Change 1: `MC-STK-ERR-2252-OP1`
+
+Pinned-official lines `34549-34549`; bytes `1261535:1261594`.
+
+````diff
+- \Omega^\bullet_{B/A} \longrightarrow \Omega^\bullet_{B'/A'}
++ \Omega^\bullet_{B/A} \longrightarrow \Omega^\bullet_{B'/A'}.
+````
+
+Original SHA-256 `E4CECB075B7F8F1377651E7B7A6C29EEC195D226F7717102305A0B6285B77567`; replacement SHA-256 `5DC740BE9CD6F443A706F83C5737BFC24913CE9D7B0CDD4E404C8CA48C08C53B`.
+
+</details>
+
+<details id="mc-stk-err-2253">
+<summary><code>MC-STK-ERR-2253 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2253`; producer ID: `ALGEBRA-RECON-913`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34577) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the declaration of the projected derivative.
+- Adverse evidence: The original surjective module map is unchanged.
+
+### Change 1: `MC-STK-ERR-2253-OP1`
+
+Pinned-official lines `34577-34577`; bytes `1262658:1262666`.
+
+````diff
+- Denote $
++ Denote by $
+````
+
+Original SHA-256 `51768E7AAA76160FC8A44348A4A4A7AAC09B9E0F8CCE0BCA54AE0B32C0E5A85B`; replacement SHA-256 `6CF3FF1CD014AE80E93B4963E0C9AE0C56BD274163966ABE717DC1EBA59B291F`.
+
+</details>
+
+<details id="mc-stk-err-2254">
+<summary><code>MC-STK-ERR-2254 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2254`; producer ID: `ALGEBRA-RECON-914`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34591) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the lemma statement.
+- Adverse evidence: The quotient generator formula is unchanged.
+
+### Change 1: `MC-STK-ERR-2254-OP1`
+
+Pinned-official lines `34591-34591`; bytes `1263250:1263313`.
+
+````diff
+- \text{d}f_0 \wedge \text{d}f_1 \wedge \ldots \wedge \text{d}f_p
++ \text{d}f_0 \wedge \text{d}f_1 \wedge \ldots \wedge \text{d}f_p.
+````
+
+Original SHA-256 `FEBD8AFAF41B7433186C4810B6AB463DCE8803FF18BBDA81F49B1792AC99A67A`; replacement SHA-256 `00B458EAB09905EEAEA8BF43015CCA56ED2DC0AB28AE73C609BDEF4EA12C17D8`.
+
+</details>
+
+<details id="mc-stk-err-2255">
+<summary><code>MC-STK-ERR-2255 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2255`; producer ID: `ALGEBRA-RECON-915`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34607-L34609) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the completed diagram sentence from its explanation.
+- Adverse evidence: No diagram object or differential is changed.
+
+### Change 1: `MC-STK-ERR-2255-OP1`
+
+Pinned-official lines `34607-34607`; bytes `1263677:1263678`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+### Change 2: `MC-STK-ERR-2255-OP2`
+
+Pinned-official lines `34609-34609`; bytes `1263682:1263697`.
+
+````diff
+- the description
++ The description
+````
+
+Original SHA-256 `734B09BC156CB750969EEF90A79C1A253B8EEF447FE193867B1C28D64BC7B1DB`; replacement SHA-256 `31997B86B6730CC9CDD58CF427E3F6D77BD3175AF264581D7309FF183DBE66C6`.
+
+</details>
+
+<details id="mc-stk-err-2256">
+<summary><code>MC-STK-ERR-2256 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2256`; producer ID: `ALGEBRA-RECON-916`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34613) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the compound spelling.
+- Adverse evidence: The degree-zero vertical map remains the identity of B.
+
+### Change 1: `MC-STK-ERR-2256-OP1`
+
+Pinned-official lines `34613-34613`; bytes `1263896:1263905`.
+
+````diff
+- left most
++ leftmost
+````
+
+Original SHA-256 `90E2713A1D15B380686C6C2409D73EA8E5577CCFB5FFA952ADCE7D0594AB78F7`; replacement SHA-256 `D48514F39EF2E26E2F6D4F85690C13B0F5DCE8E58970895F933E368CDFBEECC8`.
+
+</details>
+
+<details id="mc-stk-err-2257">
+<summary><code>MC-STK-ERR-2257 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2257`; producer ID: `ALGEBRA-RECON-917`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34633) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the display into the following which clause.
+- Adverse evidence: The minus sign and both wedge factors are retained.
+
+### Change 1: `MC-STK-ERR-2257-OP1`
+
+Pinned-official lines `34633-34633`; bytes `1264814:1264854`.
+
+````diff
+- \omega_1 \wedge \text{d}_{B/A}(\omega_2)
++ \omega_1 \wedge \text{d}_{B/A}(\omega_2),
+````
+
+Original SHA-256 `8098084A2E823555D01194BCA1AF6CB9B2C58D31B7FDCB51A0B9A0775F0DCEE8`; replacement SHA-256 `C31A81FA0648B14072C60FE228370F2D72728E9F42F6E011B132D5351D1989AE`.
+
+</details>
+
+<details id="mc-stk-err-2258">
+<summary><code>MC-STK-ERR-2258 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2258`; producer ID: `ALGEBRA-RECON-923`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34680) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the filtered inclusion-chain sentence.
+- Adverse evidence: The source filtered order convention is retained.
+
+### Change 1: `MC-STK-ERR-2258-OP1`
+
+Pinned-official lines `34680-34680`; bytes `1266077:1266091`.
+
+````diff
+- \subset \ldots
++ \subset \ldots.
+````
+
+Original SHA-256 `F6B2EE29E45ECD80A776BE089BC5F4BB71D785994146B3BA1A5D56915A57EBED`; replacement SHA-256 `4B8BF900EB9CEA72963979062EEF92A2D27C2E18DA200B171CAF82B3576EC45F`.
+
+</details>
+
+<details id="mc-stk-err-2259">
+<summary><code>MC-STK-ERR-2259 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2259`; producer ID: `ALGEBRA-RECON-924`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34716) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the order of the universal factorization.
+- Adverse evidence: The universal map has domain M and target P, while alpha has domain P and target N; only alpha after the universal map has the declared type.
+
+### Change 1: `MC-STK-ERR-2259-OP1`
+
+Pinned-official lines `34716-34716`; bytes `1267238:1267259`.
+
+````diff
+- D_{univ} \circ \alpha
++ \alpha \circ D_{univ}
+````
+
+Original SHA-256 `E6CED01C611C64591FF2E377A90FE05EF7DAFC7A6F3DFCE30D926336B844A916`; replacement SHA-256 `49B8A35C67D9E96EA2DF1F83022913E0F1C21039B6DAD5222F55EE17D372FF56`.
+
+</details>
+
+<details id="mc-stk-err-2260">
+<summary><code>MC-STK-ERR-2260 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2260`; producer ID: `ALGEBRA-RECON-925`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34721) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the unfinished citation placeholder without fabricating a reference.
+- Adverse evidence: The complete explicit construction immediately following proves representability. Its source argument is preserved; no unspecified category-theory theorem is presented as a newly read citation.
+
+### Change 1: `MC-STK-ERR-2260-OP1`
+
+Pinned-official lines `34721-34721`; bytes `1267430:1267461`.
+
+````diff
+-  (insert future reference here)
++
+````
+
+Original SHA-256 `F1E118665BDE6F8315778752B518D2AEB4629F709D0D8C5902D838557A4902F2`; replacement SHA-256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`.
+
+</details>
+
+<details id="mc-stk-err-2261">
+<summary><code>MC-STK-ERR-2261 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2261`; producer ID: `ALGEBRA-RECON-926`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34744) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the full alternating-relation sentence.
+- Adverse evidence: Every source term and sign is retained, and the full subset expansion is proved editorially.
+
+### Change 1: `MC-STK-ERR-2261-OP1`
+
+Pinned-official lines `34744-34744`; bytes `1268284:1268313`.
+
+````diff
+- +(-1)^{k + 1}[g_0\ldots g_km]
++ +(-1)^{k + 1}[g_0\ldots g_km].
+````
+
+Original SHA-256 `00882E52109C26407BA505E42BA47F2C0AEE1E8C9EE56A24323679C055D32223`; replacement SHA-256 `E343CB82A5D6B9E405E8D5BE0C8D2E23EF6E1D67FED8A9BAD9E443150BDF397E`.
+
+</details>
+
+<details id="mc-stk-err-2262">
+<summary><code>MC-STK-ERR-2262 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2262`; producer ID: `ALGEBRA-RECON-927`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34770) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the principal-parts tower sentence.
+- Adverse evidence: The original quotient maps remain surjective.
+
+### Change 1: `MC-STK-ERR-2262-OP1`
+
+Pinned-official lines `34770-34770`; bytes `1269180:1269183`.
+
+````diff
+- = M
++ = M.
+````
+
+Original SHA-256 `C2863F1124E17EF9D625422F19F4B17DF31974D0C829674CDFF78E340F4830F2`; replacement SHA-256 `20208793FADB53E746DCE2D79ED27EE830EFF2F7F578D1BD5FA7EB78E7AFD0E1`.
+
+</details>
+
+<details id="mc-stk-err-2263">
+<summary><code>MC-STK-ERR-2263 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2263`; producer ID: `ALGEBRA-RECON-928`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34814) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed symbol-map definition.
+- Adverse evidence: The actual bilinear derivation construction is verified in the note.
+
+### Change 1: `MC-STK-ERR-2263-OP1`
+
+Pinned-official lines `34814-34814`; bytes `1270668:1270709`.
+
+````diff
+- \sigma_D : \Omega_{S/R} \otimes_S M \to N
++ \sigma_D : \Omega_{S/R} \otimes_S M \to N.
+````
+
+Original SHA-256 `0007AE674F6BD21233EF4ECD2EF2535DD6F977E59455DC852470C039C1DDAA0E`; replacement SHA-256 `0CD10CCCB1926C8D58FC7142C7981AF7955CA34A471A034EFB99BFFD590C5200`.
+
+</details>
+
+<details id="mc-stk-err-2264">
+<summary><code>MC-STK-ERR-2264 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2264`; producer ID: `ALGEBRA-RECON-929`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34819) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition completing corresponds.
+- Adverse evidence: The source phrase begins on the preceding line; the representing-object arrow has the original correct direction.
+
+### Change 1: `MC-STK-ERR-2264-OP1`
+
+Pinned-official lines `34819-34819`; bytes `1270881:1270886`.
+
+````diff
+- a map
++ to a map
+````
+
+Original SHA-256 `23E1765CD96692FCBAAFC1B70970E2DD0F25F9454193BE4AB4F10AB8248ADBE4`; replacement SHA-256 `0C1F44BF806A664B0028BA3FFAE2C9BE90115D4446CED5501A0A0D27240CE8DF`.
+
+</details>
+
+<details id="mc-stk-err-2265">
+<summary><code>MC-STK-ERR-2265 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2265`; producer ID: `ALGEBRA-RECON-930`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34879) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the given-data list after the ring diagram.
+- Adverse evidence: No ring or module map is changed.
+
+### Change 1: `MC-STK-ERR-2265-OP1`
+
+Pinned-official lines `34879-34879`; bytes `1272547:1272548`.
+
+````diff
+- }
++ },
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `E52A1813C46049513E6BEB0B5C9E2ACAF4B3B4120089E4B3CB2DF44544D5DF11`.
+
+</details>
+
+<details id="mc-stk-err-2266">
+<summary><code>MC-STK-ERR-2266 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2266`; producer ID: `ALGEBRA-RECON-931`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34893) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the tower-diagram sentence.
+- Adverse evidence: The original functorial maps are retained.
+
+### Change 1: `MC-STK-ERR-2266-OP1`
+
+Pinned-official lines `34893-34893`; bytes `1272863:1272864`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+</details>
+
+<details id="mc-stk-err-2267">
+<summary><code>MC-STK-ERR-2267 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2267`; producer ID: `ALGEBRA-RECON-932`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34898) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the independent clauses joined by but.
+- Adverse evidence: Both the source presentation and universal-property explanations remain.
+
+### Change 1: `MC-STK-ERR-2267-OP1`
+
+Pinned-official lines `34898-34898`; bytes `1273117:1273122`.
+
+````diff
+- } but
++ }, but
+````
+
+Original SHA-256 `04CE8B206D922726E7624EBD0DB3DE1CE6F33096F116FB36635687C6C6250562`; replacement SHA-256 `55761E867D6D2D84B62D270C1D1229FF27B0FB9DA71989598F6CB8E5FA85CF9D`.
+
+</details>
+
+<details id="mc-stk-err-2268">
+<summary><code>MC-STK-ERR-2268 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2268`; producer ID: `ALGEBRA-RECON-933`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34938-L34939) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the missing verb and singular operator in the diagonal identification.
+- Adverse evidence: Both reports describe the same sentence and exact defect; one shared operation resolves them. The actual universal map remains m to the class of 1 tensor m.
+
+### Change 1: `MC-STK-ERR-2268-OP1`
+
+Pinned-official lines `34938-34939`; bytes `1274908:1274982`.
+
+````diff
+- and such that the universal differential operators of order $k$
+- to the map
++ and such that the universal differential operator of order $k$
++ corresponds to the map
+````
+
+Original SHA-256 `68987BF7467391D5B96025E74041F7CFCF0342D81A4A7E50D5C4C30A8A6C8B59`; replacement SHA-256 `547AAFF43C7C5CE6A8FADDFBD0A7EC5926F0F04925F386BA8ABD0E9155EF7EF9`.
+
+</details>
+
+<details id="mc-stk-err-2269">
+<summary><code>MC-STK-ERR-2269 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2269`; producer ID: `ALGEBRA-RECON-934`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34943) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the specified tensor base and close the map declaration.
+- Adverse evidence: The two distinct local reports are resolved by one exact replacement of their shared line.
+
+### Change 1: `MC-STK-ERR-2269-OP1`
+
+Pinned-official lines `34943-34943`; bytes `1275060:1275125`.
+
+````diff
+- Consider the map $T : M \to S \otimes M$, $m \mapsto 1 \otimes m$
++ Consider the map $T : M \to S \otimes_R M$, $m \mapsto 1 \otimes m$.
+````
+
+Original SHA-256 `F64D4C6F3E993BA1A61174BD71D111C08029D0A79DB5CD0499BD2E88E1ABD57C`; replacement SHA-256 `9AE660C59DC3B7FF734B8F10D70D25EDD3E46AB9DE5F99262F32FA9B55478F5F`.
+
+</details>
+
+<details id="mc-stk-err-2270">
+<summary><code>MC-STK-ERR-2270 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2270`; producer ID: `ALGEBRA-RECON-935`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L34984) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed double-commutator identity.
+- Adverse evidence: All four operator compositions and their signs remain unchanged.
+
+### Change 1: `MC-STK-ERR-2270-OP1`
+
+Pinned-official lines `34984-34984`; bytes `1276800:1276857`.
+
+````diff
+- b' \circ \text{d} \circ b + b' \circ b \circ \text{d} = 0
++ b' \circ \text{d} \circ b + b' \circ b \circ \text{d} = 0.
+````
+
+Original SHA-256 `60972FF870DC5D8B0FD71CA5773CBB5BD8896CEF771DF8AD8052AEB53231D768`; replacement SHA-256 `D8236210CC259A4FEAA15AB51262E91415CA585D6859C2ADCE9DCA48D70091DE`.
+
+</details>
+
+<details id="mc-stk-err-2271">
+<summary><code>MC-STK-ERR-2271 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2271`; producer ID: `ALGEBRA-RECON-936`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35002) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the nonnegative lower-order boundary needed by the generator criterion.
+- Adverse evidence: The source has no order-minus-one definition. The separate order-zero generator test is proved editorially, preserving the original filtered convention.
+
+### Change 1: `MC-STK-ERR-2271-OP1`
+
+Pinned-official lines `35002-35002`; bytes `1277525:1277533`.
+
+````diff
+- Let $D :
++ Let $k \geq 1$. Let $D :
+````
+
+Original SHA-256 `3161E37D1F2ADB7E6EBFEF0B7D28B1532DF5F69DBE107C36F51AC8A383DEF797`; replacement SHA-256 `009716B2B26C7D317C7A8742B507AD3CA749CFAF3B410C7B61B6CA1853AF9545`.
+
+</details>
+
+<details id="mc-stk-err-2272">
+<summary><code>MC-STK-ERR-2272 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2272`; producer ID: `ALGEBRA-RECON-937`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35019) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the product-commutator sentence.
+- Adverse evidence: The full two-term identity is retained.
+
+### Change 1: `MC-STK-ERR-2272-OP1`
+
+Pinned-official lines `35019-35019`; bytes `1278092:1278160`.
+
+````diff
+- (D \circ g - g \circ D) \circ g' + g \circ (D \circ g' - g' \circ D)
++ (D \circ g - g \circ D) \circ g' + g \circ (D \circ g' - g' \circ D).
+````
+
+Original SHA-256 `85DF0CC3090679433637318A8CCB3C5CF9B8BA39829E3C5F5A9F2393ED4059B1`; replacement SHA-256 `64163F8C590774D28CF02D97FA65024A4EA9D4B78DC31C769771F3A987B0A96C`.
+
+</details>
+
+<details id="mc-stk-err-2273">
+<summary><code>MC-STK-ERR-2273 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2273`; producer ID: `ALGEBRA-RECON-938`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35039) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the inference after the inline identity.
+- Adverse evidence: The original operator order and multiplication sides are retained.
+
+### Change 1: `MC-STK-ERR-2273-OP1`
+
+Pinned-official lines `35039-35039`; bytes `1278987:1279017`.
+
+````diff
+- L_{b'} \circ b + b' \circ L_b$
++ L_{b'} \circ b + b' \circ L_b$,
+````
+
+Original SHA-256 `D897217E32BD3E81A3D9CEAC00AE1CF0527E0FA91078E9C96D255889DFCEB28A`; replacement SHA-256 `3FD4C6B7DD78A1EA11E71308F1288A74FAD703BC8B2706631E21FB9D7467E54A`.
+
+</details>
+
+<details id="mc-stk-err-2274">
+<summary><code>MC-STK-ERR-2274 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2274`; producer ID: `ALGEBRA-RECON-939`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35045) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the defining localization formula.
+- Adverse evidence: Both occurrences of the actual fraction m/g remain.
+
+### Change 1: `MC-STK-ERR-2274-OP1`
+
+Pinned-official lines `35045-35045`; bytes `1279219:1279250`.
+
+````diff
+- E(m/g) = (1/g)(D(m) - E_g(m/g))
++ E(m/g) = (1/g)(D(m) - E_g(m/g)).
+````
+
+Original SHA-256 `2CE668FA0B083648D3A6AFDA6D79287711202B98AB1E64ADAA1A55E0C93440FD`; replacement SHA-256 `F8E18D3639BEC0915D5B392A30AE2BA5367B48DFD23D3C88213C618322D98B6B`.
+
+</details>
+
+<details id="mc-stk-err-2275">
+<summary><code>MC-STK-ERR-2275 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2275`; producer ID: `ALGEBRA-RECON-940`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35055) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the display into its which clause.
+- Adverse evidence: The proof below verifies full fraction equality, including torsion factors.
+
+### Change 1: `MC-STK-ERR-2275-OP1`
+
+Pinned-official lines `35055-35055`; bytes `1279510:1279539`.
+
+````diff
+- (1/g'g)(g'D(m) - g' E_g(m/g))
++ (1/g'g)(g'D(m) - g' E_g(m/g)),
+````
+
+Original SHA-256 `9AA8EE637D893BB8987E9D78E4ABC780DDB4BE1837644B89FFC6B18EA7EFD263`; replacement SHA-256 `F37A13BFEEB228E063B76C592226ABDBD938D13FECD7EAA8587B0BF78E5ECE5C`.
+
+</details>
+
+<details id="mc-stk-err-2276">
+<summary><code>MC-STK-ERR-2276 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2276`; producer ID: `ALGEBRA-RECON-941`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35057-L35058) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the actual base ring in both linearity assertions.
+- Adverse evidence: The lemma starts with A to B, so R is undefined here; the construction is A-linear.
+
+### Change 1: `MC-STK-ERR-2276-OP1`
+
+Pinned-official lines `35057-35057`; bytes `1279606:1279616`.
+
+````diff
+- $R$-linear
++ $A$-linear
+````
+
+Original SHA-256 `D43699339335BA53A07932CF0AD6C1D9AD04A4357A7499CDB8BEB8091C22E6C4`; replacement SHA-256 `035CAC4B1631EEFAD35EA44CDEE5425F6F2AE9272257B467893A254729B45D07`.
+
+### Change 2: `MC-STK-ERR-2276-OP2`
+
+Pinned-official lines `35058-35058`; bytes `1279638:1279648`.
+
+````diff
+- $R$-linear
++ $A$-linear
+````
+
+Original SHA-256 `D43699339335BA53A07932CF0AD6C1D9AD04A4357A7499CDB8BEB8091C22E6C4`; replacement SHA-256 `035CAC4B1631EEFAD35EA44CDEE5425F6F2AE9272257B467893A254729B45D07`.
+
+</details>
+
+<details id="mc-stk-err-2277">
+<summary><code>MC-STK-ERR-2277 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2277`; producer ID: `ALGEBRA-RECON-942`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35072) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the first commutator display into its which clause.
+- Adverse evidence: The exact lower-order operator is retained.
+
+### Change 1: `MC-STK-ERR-2277-OP1`
+
+Pinned-official lines `35072-35072`; bytes `1280197:1280205`.
+
+````diff
+- E_b(m/g)
++ E_b(m/g),
+````
+
+Original SHA-256 `0E3D110BC4BCB22371C1826059BEECD6D15BF5721133243AECF9462FABEAA6AA`; replacement SHA-256 `BF808DCDCBD22C60896B52DC9D58E8391F00BCE12DF7A6F160832D2BAE2FED2B`.
+
+</details>
+
+<details id="mc-stk-err-2278">
+<summary><code>MC-STK-ERR-2278 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2278`; producer ID: `ALGEBRA-RECON-943`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35081) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the inverse-scalar commutator display into its which clause.
+- Adverse evidence: The minus sign and both denominator factors remain explicit.
+
+### Change 1: `MC-STK-ERR-2278-OP1`
+
+Pinned-official lines `35081-35081`; bytes `1280395:1280415`.
+
+````diff
+- -(1/g')E_{g'}(m/g'g)
++ -(1/g')E_{g'}(m/g'g),
+````
+
+Original SHA-256 `F550C9C27E66774E3B3E9F2F7DED4A07FD182A5E85321E06E08BAAC3A8EDC9F5`; replacement SHA-256 `DB21A20AEE88037EA15EC572157CA0F5A684F406E8AF6FCF7A378DB21237DFD0`.
+
+</details>
+
+<details id="mc-stk-err-2279">
+<summary><code>MC-STK-ERR-2279 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2279`; producer ID: `ALGEBRA-RECON-944`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35100) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the actual order-zero case before invoking the lower-order generator criterion.
+- Adverse evidence: The complete tensor calculation works for every B-module N and uses no flatness.
+
+### Change 1: `MC-STK-ERR-2279-OP1`
+
+Pinned-official lines `35100-35100`; bytes `1281048:1281108`.
+
+````diff
+- It is clear that $D' = D \otimes \text{id}_N$ is $B$-linear.
++ It is clear that $D' = D \otimes \text{id}_N$ is $B$-linear.
++ If $k = 0$, then $D'$ is $A \otimes_R B$-linear because $D$ is $A$-linear.
++ For $k \geq 1$, we argue as follows.
+````
+
+Original SHA-256 `621351232B5017AF102CC9077CC8E281688E4205AFB1B66BA701DBEF313882E7`; replacement SHA-256 `0BB75601AAA8FD7F0CFCCA3D94754D20AE910609D0F44B8CFB6D5B8A17106487`.
+
+</details>
+
+<details id="mc-stk-err-2280">
+<summary><code>MC-STK-ERR-2280 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2280`; producer ID: `ALGEBRA-RECON-950`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35120) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the designation preposition.
+- Adverse evidence: The canonical polynomial algebra is unchanged.
+
+### Change 1: `MC-STK-ERR-2280-OP1`
+
+Pinned-official lines `35120-35120`; bytes `1281485:1281498`.
+
+````diff
+- Denote $R[S]$
++ Denote by $R[S]$
+````
+
+Original SHA-256 `2A09C0AA256E2E76C0476A4EB06A8F89A75EE9419EAE66411EE39F758FF2B234`; replacement SHA-256 `813668DBFD01F277122754D1AA895FD55E3914FC04806682D17BA7CF115B7FA8`.
+
+</details>
+
+<details id="mc-stk-err-2281">
+<summary><code>MC-STK-ERR-2281 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2281`; producer ID: `ALGEBRA-RECON-951`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35124) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural verb with the listed variables.
+- Adverse evidence: The original unordered finite sequences include the empty sequence.
+
+### Change 1: `MC-STK-ERR-2281-OP1`
+
+Pinned-official lines `35124-35124`; bytes `1281733:1281739`.
+
+````diff
+- ranges
++ range
+````
+
+Original SHA-256 `47DA8304AE5945372119768B390E2019D0098E86DFF5EAE86709CB7717BD3FD2`; replacement SHA-256 `2269C0BE009B610CFDBB8CFE9253AD37CF95062FB3F5A7560268FF259EA9F087`.
+
+</details>
+
+<details id="mc-stk-err-2282">
+<summary><code>MC-STK-ERR-2282 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2282`; producer ID: `ALGEBRA-RECON-952`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35151) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the designation preposition.
+- Adverse evidence: The original degree-one homology notation is retained.
+
+### Change 1: `MC-STK-ERR-2282-OP1`
+
+Pinned-official lines `35151-35151`; bytes `1282864:1282878`.
+
+````diff
+- We will denote
++ We will denote by
+````
+
+Original SHA-256 `50902BE590789DADA76D72503443B47B9BBA056139F37B07F30B7199FFBC1605`; replacement SHA-256 `A707C144B2C31D46532EEE887F9BDBB1CB8643D47EA66B8B98EA506A8CD012CE`.
+
+</details>
+
+<details id="mc-stk-err-2283">
+<summary><code>MC-STK-ERR-2283 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2283`; producer ID: `ALGEBRA-RECON-953`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35163) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the augmentation sentence.
+- Adverse evidence: The separate category qualification is recorded independently.
+
+### Change 1: `MC-STK-ERR-2283-OP1`
+
+Pinned-official lines `35163-35163`; bytes `1283375:1283402`.
+
+````diff
+- P_\bullet \longrightarrow S
++ P_\bullet \longrightarrow S.
+````
+
+Original SHA-256 `1616284DA2F72236161BFE3E85B42F1590D2FCC4615EEE15D1B080D44C617ABD`; replacement SHA-256 `5CED97837A96FAEDCE501D74EBED057E7DDC19B1FB4A19B6DE5A4CA418AF5F66`.
+
+</details>
+
+<details id="mc-stk-err-2284">
+<summary><code>MC-STK-ERR-2284 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2284`; producer ID: `ALGEBRA-RECON-954`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35168) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the simplicial-module definition sentence.
+- Adverse evidence: The original unnormalized associated chain complex is retained.
+
+### Change 1: `MC-STK-ERR-2284-OP1`
+
+Pinned-official lines `35168-35168`; bytes `1283525:1283567`.
+
+````diff
+- \Omega_{P_\bullet/R} \otimes_{P_\bullet} S
++ \Omega_{P_\bullet/R} \otimes_{P_\bullet} S.
+````
+
+Original SHA-256 `1E6612BA5DDF5E0023546AAA7989C9E1B29B0E93176943A4415594FD0FA34F13`; replacement SHA-256 `A101570138EBCDF514B2482B57A3561F755990AE5C86F307E75A9ECEE2FB8E40`.
+
+</details>
+
+<details id="mc-stk-err-2285">
+<summary><code>MC-STK-ERR-2285 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2285`; producer ID: `ALGEBRA-RECON-956`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35196-L35197) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make both already specified tensor bases explicit.
+- Adverse evidence: The preceding defining display already fixes P; this is a notation clarification, not a change of module.
+
+### Change 1: `MC-STK-ERR-2285-OP1`
+
+Pinned-official lines `35196-35196`; bytes `1284873:1284882`.
+
+````diff
+- \otimes S
++ \otimes_P S
+````
+
+Original SHA-256 `430401BC7BBEFE6998C1FE24EACD32A0ED8D8357217D40619EC5DB8B3622F21E`; replacement SHA-256 `B2AD68305F1F46DB221043CCFD7F4D1846B414C79A62751C6CB70F3A92D60E31`.
+
+### Change 2: `MC-STK-ERR-2285-OP2`
+
+Pinned-official lines `35197-35197`; bytes `1284995:1285004`.
+
+````diff
+- \otimes S
++ \otimes_P S
+````
+
+Original SHA-256 `430401BC7BBEFE6998C1FE24EACD32A0ED8D8357217D40619EC5DB8B3622F21E`; replacement SHA-256 `B2AD68305F1F46DB221043CCFD7F4D1846B414C79A62751C6CB70F3A92D60E31`.
+
+</details>
+
+<details id="mc-stk-err-2286">
+<summary><code>MC-STK-ERR-2286 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2286`; producer ID: `ALGEBRA-RECON-957`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35203) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the omitted subject.
+- Adverse evidence: The finite-variable presentation is unchanged.
+
+### Change 1: `MC-STK-ERR-2286-OP1`
+
+Pinned-official lines `35203-35203`; bytes `1285357:1285366`.
+
+````diff
+- then will
++ then we will
+````
+
+Original SHA-256 `8B91241D4E0F00D4907F172E659C284B2A8A31A5635ABC88CF41700490BF85FA`; replacement SHA-256 `C3EC876E5326BE819410D761B868DA017177DDE1813EB998D404D747253575E8`.
+
+</details>
+
+<details id="mc-stk-err-2287">
+<summary><code>MC-STK-ERR-2287 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2287`; producer ID: `ALGEBRA-RECON-958`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35231) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specify the bases of the functorial differential modules.
+- Adverse evidence: Each target scalar action is through the original square.
+
+### Change 1: `MC-STK-ERR-2287-OP1`
+
+Pinned-official lines `35231-35231`; bytes `1286236:1286290`.
+
+````diff
+- $\Omega_{P/R} \otimes S \to \Omega_{P'/R'} \otimes S'$
++ $\Omega_{P/R} \otimes_P S \to \Omega_{P'/R'} \otimes_{P'} S'$
+````
+
+Original SHA-256 `6422DE822E2BDF09E82381E21BFF006793C5B35E91799C95150190AEB656771F`; replacement SHA-256 `A9EF649B504B0932D070E7488D8CEC99FB689AA00E9A4FAF58830659D8CD8E08`.
+
+</details>
+
+<details id="mc-stk-err-2288">
+<summary><code>MC-STK-ERR-2288 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2288`; producer ID: `ALGEBRA-RECON-959`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35257) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the introductory clause after its diagram.
+- Adverse evidence: The composition square is unchanged.
+
+### Change 1: `MC-STK-ERR-2288-OP1`
+
+Pinned-official lines `35257-35257`; bytes `1287205:1287206`.
+
+````diff
+- }
++ },
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `E52A1813C46049513E6BEB0B5C9E2ACAF4B3B4120089E4B3CB2DF44544D5DF11`.
+
+</details>
+
+<details id="mc-stk-err-2289">
+<summary><code>MC-STK-ERR-2289 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2289`; producer ID: `ALGEBRA-RECON-960`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35305) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the missing introductory verb.
+- Adverse evidence: Both original presentation lifts are retained.
+
+### Change 1: `MC-STK-ERR-2289-OP1`
+
+Pinned-official lines `35305-35305`; bytes `1289150:1289170`.
+
+````diff
+- $\varphi'$ morphisms
++ $\varphi'$ be morphisms
+````
+
+Original SHA-256 `E763C930738B161382A45295ABD7AE64AF440EF56A0477E249D820956BB985B5`; replacement SHA-256 `10D69B5D6D576A78734269F72A0EBDAEC6999FB5D1645399DF216A04799413DF`.
+
+</details>
+
+<details id="mc-stk-err-2290">
+<summary><code>MC-STK-ERR-2290 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2290`; producer ID: `ALGEBRA-RECON-961`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35322) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Attach the homotopy identities to the map h.
+- Adverse evidence: The identities and both of their signs remain exactly those in the source.
+
+### Change 1: `MC-STK-ERR-2290-OP1`
+
+Pinned-official lines `35322-35322`; bytes `1289572:1289642`.
+
+````diff
+- where the vertical maps are induced by $\varphi$, $\varphi'$ such that
++ where the vertical maps are induced by $\varphi$ and $\varphi'$, and $h$ must satisfy
+````
+
+Original SHA-256 `3F52D0160F4AAB2467C6169A92BB4FF7DC2BEF1E6BAE2B2B768EA1A040DAA23B`; replacement SHA-256 `BD4C17EAD9D04B1239665EC9321008E9E8C098FA428CA6E5C153B144FCEAC5F5`.
+
+</details>
+
+<details id="mc-stk-err-2291">
+<summary><code>MC-STK-ERR-2291 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2291`; producer ID: `ALGEBRA-RECON-962`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35339) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the article matching the pronounced ring letter.
+- Adverse evidence: The derivation is proved for the common action modulo the square ideal.
+
+### Change 1: `MC-STK-ERR-2291-OP1`
+
+Pinned-official lines `35339-35339`; bytes `1290300:1290316`.
+
+````diff
+- a $R$-derivation
++ an $R$-derivation
+````
+
+Original SHA-256 `FD099E75AE2F5570A907318EA2DB1369DECFE0A049F8471C2FE8CB9BEFB0A232`; replacement SHA-256 `BA940DB39BCC51DDC0C93B8DAF43E1FAF48A6F69880527F0525B53539A898925`.
+
+</details>
+
+<details id="mc-stk-err-2292">
+<summary><code>MC-STK-ERR-2292 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2292`; producer ID: `ALGEBRA-RECON-965`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35384) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Include the part that actually supplies the homotopies.
+- Adverse evidence: Part (3) alone only identifies the composite maps.
+
+### Change 1: `MC-STK-ERR-2292-OP1`
+
+Pinned-official lines `35384-35384`; bytes `1292155:1292166`.
+
+````diff
+- maps by (3)
++ maps by (2) and (3)
+````
+
+Original SHA-256 `1E41FF0BB0F4589436365FFDF43139D95E00164BF4860AEC65D8A872142677F8`; replacement SHA-256 `B5B3834C71A2E7DD828B9400AE9E29DB4EA470AFF26D5D777A82B64D34677380`.
+
+</details>
+
+<details id="mc-stk-err-2293">
+<summary><code>MC-STK-ERR-2293 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2293`; producer ID: `ALGEBRA-RECON-967`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35430) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Continue the diagram sentence before its exact-row clause.
+- Adverse evidence: The bottom row deliberately has no leading zero.
+
+### Change 1: `MC-STK-ERR-2293-OP1`
+
+Pinned-official lines `35430-35430`; bytes `1293736:1293737`.
+
+````diff
+- }
++ },
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `E52A1813C46049513E6BEB0B5C9E2ACAF4B3B4120089E4B3CB2DF44544D5DF11`.
+
+</details>
+
+<details id="mc-stk-err-2294">
+<summary><code>MC-STK-ERR-2294 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2294`; producer ID: `ALGEBRA-RECON-969`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35498) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the square sentence.
+- Adverse evidence: The following explicit nullhomotopy is verified with its actual B-action.
+
+### Change 1: `MC-STK-ERR-2294-OP1`
+
+Pinned-official lines `35498-35498`; bytes `1296057:1296058`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+</details>
+
+<details id="mc-stk-err-2295">
+<summary><code>MC-STK-ERR-2295 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2295`; producer ID: `ALGEBRA-RECON-972`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35591) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the introductory verb be.
+- Adverse evidence: The multiplicative subset and original base ring are unchanged.
+
+### Change 1: `MC-STK-ERR-2295-OP1`
+
+Pinned-official lines `35591-35591`; bytes `1298969:1298985`.
+
+````diff
+- $S \subset A$ is
++ $S \subset A$ be
+````
+
+Original SHA-256 `871ED9040B0EE7551666F71B0025524FF85467453407E84661E7192E01F01B6B`; replacement SHA-256 `B5BD6E6AF3DB1D4482748CC57F86A5C91D29E4BAD6D773D9E3AB376C41A82257`.
+
+</details>
+
+<details id="mc-stk-err-2296">
+<summary><code>MC-STK-ERR-2296 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2296`; producer ID: `ALGEBRA-RECON-974`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35625) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the last item before the new sentence.
+- Adverse evidence: The actual disk differential is multiplication by g, not a silently substituted identity.
+
+### Change 1: `MC-STK-ERR-2296-OP1`
+
+Pinned-official lines `35625-35625`; bytes `1300224:1300282`.
+
+````diff
+- \NL(\alpha) \otimes_B B_g \oplus (B_g \xrightarrow{g} B_g)
++ \NL(\alpha) \otimes_B B_g \oplus (B_g \xrightarrow{g} B_g).
+````
+
+Original SHA-256 `9EC04159B65FF79F8751094F537DB261377B5A3EA29D645DABAA0C490BC42040`; replacement SHA-256 `9E2A6CA792C75F0BB04C882F495110B73A3F6025065AC62B21CBC9505A0011AC`.
+
+</details>
+
+<details id="mc-stk-err-2297">
+<summary><code>MC-STK-ERR-2297 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2297`; producer ID: `ALGEBRA-RECON-975`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35637-L35653) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specify all six reported tensor bases.
+- Adverse evidence: The original polynomial differential modules determine these bases; the maps are unchanged.
+
+### Change 1: `MC-STK-ERR-2297-OP1`
+
+Pinned-official lines `35637-35637`; bytes `1300598:1300609`.
+
+````diff
+- \otimes B_g
++ \otimes_P B_g
+````
+
+Original SHA-256 `1C0CA32B59A98B455ADD766CBBA3322E0B2AB44879FF99B0DC8301EA03FFD5BB`; replacement SHA-256 `A619EDC1426CCBAD9616F40F86EBED3C12A47A91154F4804C7DC872B3AC7E5E9`.
+
+### Change 2: `MC-STK-ERR-2297-OP2`
+
+Pinned-official lines `35638-35638`; bytes `1300635:1300646`.
+
+````diff
+- \otimes B_g
++ \otimes_{P[x]} B_g
+````
+
+Original SHA-256 `1C0CA32B59A98B455ADD766CBBA3322E0B2AB44879FF99B0DC8301EA03FFD5BB`; replacement SHA-256 `0074632F14A2471310C3DA38FA5AC2F394C3007F6CCCA4CAF2D447168877B19E`.
+
+### Change 3: `MC-STK-ERR-2297-OP3`
+
+Pinned-official lines `35639-35639`; bytes `1300672:1300683`.
+
+````diff
+- \otimes B_g
++ \otimes_{B[x]} B_g
+````
+
+Original SHA-256 `1C0CA32B59A98B455ADD766CBBA3322E0B2AB44879FF99B0DC8301EA03FFD5BB`; replacement SHA-256 `5623A1BE01C64AA0028E144AC8A922277C56D8A352BCC1366681C24E073DE6BF`.
+
+### Change 4: `MC-STK-ERR-2297-OP4`
+
+Pinned-official lines `35649-35649`; bytes `1300881:1300892`.
+
+````diff
+- \otimes B_g
++ \otimes_{B[x]} B_g
+````
+
+Original SHA-256 `1C0CA32B59A98B455ADD766CBBA3322E0B2AB44879FF99B0DC8301EA03FFD5BB`; replacement SHA-256 `5623A1BE01C64AA0028E144AC8A922277C56D8A352BCC1366681C24E073DE6BF`.
+
+### Change 5: `MC-STK-ERR-2297-OP5`
+
+Pinned-official lines `35651-35651`; bytes `1300991:1301002`.
+
+````diff
+- \otimes B_g
++ \otimes_{P[x]} B_g
+````
+
+Original SHA-256 `1C0CA32B59A98B455ADD766CBBA3322E0B2AB44879FF99B0DC8301EA03FFD5BB`; replacement SHA-256 `0074632F14A2471310C3DA38FA5AC2F394C3007F6CCCA4CAF2D447168877B19E`.
+
+### Change 6: `MC-STK-ERR-2297-OP6`
+
+Pinned-official lines `35653-35653`; bytes `1301133:1301144`.
+
+````diff
+- \otimes B_g
++ \otimes_{B[x]} B_g
+````
+
+Original SHA-256 `1C0CA32B59A98B455ADD766CBBA3322E0B2AB44879FF99B0DC8301EA03FFD5BB`; replacement SHA-256 `5623A1BE01C64AA0028E144AC8A922277C56D8A352BCC1366681C24E073DE6BF`.
+
+</details>
+
+<details id="mc-stk-err-2298">
+<summary><code>MC-STK-ERR-2298 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2298`; producer ID: `ALGEBRA-RECON-976`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35661) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the predicate verb.
+- Adverse evidence: The square-zero retraction proves the asserted injectivity for every fraction.
+
+### Change 1: `MC-STK-ERR-2298-OP1`
+
+Pinned-official lines `35661-35661`; bytes `1301505:1301521`.
+
+````diff
+- J/J^2$ injective
++ J/J^2$ is injective
+````
+
+Original SHA-256 `76CC88FAE723F119899067A93C630F0B33DD93AF9FBCE0927F63980070E86211`; replacement SHA-256 `7D161F80F610E324B71ABD70B8A58B5CC3E2EC4B57FC34A4D09A0737A0DC98A2`.
+
+</details>
+
+<details id="mc-stk-err-2299">
+<summary><code>MC-STK-ERR-2299 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2299`; producer ID: `ALGEBRA-RECON-980`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35683) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the explicit splitting display.
+- Adverse evidence: Both the differential term and its complete denominator are retained.
+
+### Change 1: `MC-STK-ERR-2299-OP1`
+
+Pinned-official lines `35683-35683`; bytes `1302351:1302384`.
+
+````diff
+- B_g (g^{-2}\text{d}f + \text{d}x)
++ B_g (g^{-2}\text{d}f + \text{d}x).
+````
+
+Original SHA-256 `02070F4A7468CBAE1FFFC4A46627CD2783185C33D5956170C4E744C66A84E863`; replacement SHA-256 `20AB9CC43F13CE5419F11A04D78B6A1C0AE48613D90937663EDFD31825989D38`.
+
+</details>
+
+<details id="mc-stk-err-2300">
+<summary><code>MC-STK-ERR-2300 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2300`; producer ID: `ALGEBRA-RECON-981`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35704) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Match both verb and complement to each.
+- Adverse evidence: Changing only are to is would leave a singular subject with an inappropriate plural complement.
+
+### Change 1: `MC-STK-ERR-2300-OP1`
+
+Pinned-official lines `35704-35704`; bytes `1303026:1303049`.
+
+````diff
+- are quasi-isomorphisms.
++ is a quasi-isomorphism.
+````
+
+Original SHA-256 `0A6E95E4458554E3DBE16C1C89D5605A5C6A1622CA0A68F8C2E4B0883E54C4F2`; replacement SHA-256 `452DB798DBE42A236B42BB322B0B1356ED93724C5B2244EFEE1715F6A9A4D904`.
+
+</details>
+
+<details id="mc-stk-err-2301">
+<summary><code>MC-STK-ERR-2301 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2301`; producer ID: `ALGEBRA-RECON-982`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35711) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the comma splitting the coordinated complexes.
+- Adverse evidence: The additional hyphenation preference is not integrated; the complexes and assumptions are retained.
+
+### Change 1: `MC-STK-ERR-2301-OP1`
+
+Pinned-official lines `35711-35711`; bytes `1303182:1303200`.
+
+````diff
+- $A_1 \to A_0$, and
++ $A_1 \to A_0$ and
+````
+
+Original SHA-256 `24B59ED245CC432A699BDC35C9E243929251CF8AFECDB581B2B3BE1C552E00C8`; replacement SHA-256 `083E91AD382D029283A52C6509C0FA2EFDF9583849D667D427FD54E90CC345DC`.
+
+</details>
+
+<details id="mc-stk-err-2302">
+<summary><code>MC-STK-ERR-2302 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2302`; producer ID: `ALGEBRA-RECON-983`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35754) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the matrix-product sentence.
+- Adverse evidence: The independent ill-typed entry and missing reverse product receive separate records.
+
+### Change 1: `MC-STK-ERR-2302-OP1`
+
+Pinned-official lines `35754-35754`; bytes `1304191:1304198`.
+
+````diff
+- \right)
++ \right).
+````
+
+Original SHA-256 `06AA489BFAC80FBD5B3A0659691D7A1D77DF61937C5BB82B638E08CD87879F20`; replacement SHA-256 `AF5741160D6EB09C3053DC3452255117162ECE8E83908C1ECD2B251916D1BF80`.
+
+</details>
+
+<details id="mc-stk-err-2303">
+<summary><code>MC-STK-ERR-2303 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2303`; producer ID: `ALGEBRA-RECON-984`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35756-L35757) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the reverse-product justification for invertibility of both factors.
+- Adverse evidence: An invertible product alone is insufficient for arbitrary modules, as the explicit shift example shows. Both products and exact inverses are proved separately with all source signs.
+
+### Change 1: `MC-STK-ERR-2303-OP1`
+
+Pinned-official lines `35756-35757`; bytes `1304202:1304291`.
+
+````diff
+- This shows that both matrices on the right hand side
+- are invertible and proves the lemma.
++ The product in the reverse order is also upper triangular with identity
++ diagonal entries. Thus both products are invertible, so both factors
++ are invertible and the lemma follows.
+````
+
+Original SHA-256 `4C8FD365159DE758A05E993B1C0876965B6F9CC8BF47D61B3F317C0CB6CD22D8`; replacement SHA-256 `F2E048FA8AC89A07584FD6941F13CE94F857B9CB2B983EEAAE29856FA03AAE0C`.
+
+</details>
+
+<details id="mc-stk-err-2304">
+<summary><code>MC-STK-ERR-2304 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2304`; producer ID: `ALGEBRA-RECON-985`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35763) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the comma splitting the two presentations.
+- Adverse evidence: Both presentations have the same source base and target algebra.
+
+### Change 1: `MC-STK-ERR-2304-OP1`
+
+Pinned-official lines `35763-35763`; bytes `1304445:1304456`.
+
+````diff
+- \to S$, and
++ \to S$ and
+````
+
+Original SHA-256 `DA0A838A31C7A07DB380A740D5D2D68E36233BFE041DCEEFCA179DE249191D3A`; replacement SHA-256 `C11E85459204F8228E6F60C9E22A20BE5976D91507C1AB98A944E24BF653CFF8`.
+
+</details>
+
+<details id="mc-stk-err-2305">
+<summary><code>MC-STK-ERR-2305 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2305`; producer ID: `ALGEBRA-RECON-986`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35768) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the supplementary ideal definitions.
+- Adverse evidence: The conormal stable isomorphism follows from the corrected two-term argument.
+
+### Change 1: `MC-STK-ERR-2305-OP1`
+
+Pinned-official lines `35768-35768`; bytes `1304565:1304585`.
+
+````diff
+- as $S$-modules where
++ as $S$-modules, where
+````
+
+Original SHA-256 `103F91412C97EFD7584F1FC1EFB140AB84974485FC0642CD8B0CB154E8656BAA`; replacement SHA-256 `C0C4D756A0D66DEC352F35A5037DBF15C58C7550A54C7D3963CB1825C070D3F1`.
+
+</details>
+
+<details id="mc-stk-err-2306">
+<summary><code>MC-STK-ERR-2306 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2306`; producer ID: `ALGEBRA-RECON-987`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35779) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the comma splitting the presentation pair.
+- Adverse evidence: The second target remains the localized algebra, as in the source.
+
+### Change 1: `MC-STK-ERR-2306-OP1`
+
+Pinned-official lines `35779-35779`; bytes `1304898:1304909`.
+
+````diff
+- \to S$, and
++ \to S$ and
+````
+
+Original SHA-256 `DA0A838A31C7A07DB380A740D5D2D68E36233BFE041DCEEFCA179DE249191D3A`; replacement SHA-256 `C11E85459204F8228E6F60C9E22A20BE5976D91507C1AB98A944E24BF653CFF8`.
+
+</details>
+
+<details id="mc-stk-err-2307">
+<summary><code>MC-STK-ERR-2307 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2307`; producer ID: `ALGEBRA-RECON-988`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35784) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the supplementary ideal definitions.
+- Adverse evidence: The original localized conormal modules and both ranks remain.
+
+### Change 1: `MC-STK-ERR-2307-OP1`
+
+Pinned-official lines `35784-35784`; bytes `1305028:1305050`.
+
+````diff
+- as $S_g$-modules where
++ as $S_g$-modules, where
+````
+
+Original SHA-256 `29664C160F3B0F209D9D9C3CB885D18456C68B22A1B2E0173E303A419AE70445`; replacement SHA-256 `1726C040FF25D8A659A39DE98A1013D35D44264A9008E7535B284DE924F91CFA`.
+
+</details>
+
+<details id="mc-stk-err-2308">
+<summary><code>MC-STK-ERR-2308 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2308`; producer ID: `ALGEBRA-RECON-989`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35161) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specify the category in which the standard resolution is a homotopy equivalence.
+- Adverse evidence: Simplicial 6944 explicitly states underlying simplicial sets. For Z to F_p no reverse Z-algebra map into Z[F_p] exists.
+
+### Change 1: `MC-STK-ERR-2308-OP1`
+
+Pinned-official lines `35161-35161`; bytes `1283313:1283371`.
+
+````diff
+- which comes equipped with a canonical homotopy equivalence
++ which comes equipped with a canonical homotopy equivalence on underlying simplicial sets
+````
+
+Original SHA-256 `66D49AABA784CF1226B804AA283CF74E01E5A2AD953D96085B480E9DA87FCD65`; replacement SHA-256 `90632F33D00C4E2457F7403BB54E6B80CDD8F0DFF2A8EDE4110509AA0B3C51EA`.
+
+</details>
+
+<details id="mc-stk-err-2309">
+<summary><code>MC-STK-ERR-2309 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2309`; producer ID: `ALGEBRA-RECON-990`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35586) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the actual conclusion of the cited surjection lemma.
+- Adverse evidence: For a nonzero identity algebra the canonical degree-zero term is nonzero. It is the zero-variable comparison that is literally zero.
+
+### Change 1: `MC-STK-ERR-2309-OP1`
+
+Pinned-official lines `35586-35586`; bytes `1298855:1298863`.
+
+````diff
+- zero (by
++ homotopy equivalent to zero (by
+````
+
+Original SHA-256 `433B55B1A71D60B6CE473CE5F512BFCAD97AE0B676AEA036052F86C4DE1DE77B`; replacement SHA-256 `100E7830DF27F8A1E0D122D0665C9C6C74F63F97C010FAA4C7C9DC76E941193E`.
+
+</details>
+
+<details id="mc-stk-err-2310">
+<summary><code>MC-STK-ERR-2310 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2310`; producer ID: `ALGEBRA-RECON-991`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35738) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the ill-typed order of the upper-right matrix composition.
+- Adverse evidence: The original product has upper-right entry minus psi_1 after h_prime plus h after psi_0. This correction is independent of the reported missing reverse product.
+
+### Change 1: `MC-STK-ERR-2310-OP1`
+
+Pinned-official lines `35738-35738`; bytes `1303969:1303985`.
+
+````diff
+- -h' \circ \psi_1
++ -\psi_1 \circ h'
+````
+
+Original SHA-256 `A9D880361AD382C76D45083513AF22F0B51F48D62DD094C0712D2822C7FAA4B0`; replacement SHA-256 `0FEC451B52D20B958F0CA6D770500B123CB3AA50CFA94270E587E34EAF6214F9`.
+
+</details>
+
+<details id="mc-stk-err-2311">
+<summary><code>MC-STK-ERR-2311 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2311`; producer ID: `ALGEBRA-RECON-992`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L35796) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Apply the two-term stable-isomorphism lemma to the established homotopy equivalence.
+- Adverse evidence: The localized presentation complex need not be a polynomial presentation over R; the earlier conormal statement alone would require unjustified free-summand cancellation.
+
+### Change 1: `MC-STK-ERR-2311-OP1`
+
+Pinned-official lines `35796-35796`; bytes `1305567:1305594`.
+
+````diff
+- \ref{lemma-conormal-module}
++ \ref{lemma-sum-two-terms}
+````
+
+Original SHA-256 `B50D99FEC1645518B59480C5D66D6391C1729F11CA6B77E6ED5017FCBBA13723`; replacement SHA-256 `8DDC1B93ED29E9A8C53695463615210B1F3D80139401058AE83585BB54D712CD`.
+
+</details>
+
+<details id="mc-stk-err-2312">
+<summary><code>MC-STK-ERR-2312 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2312`; producer ID: `ALGEBRA-RECON-1003`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36051) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the finite verb in the transition.
+- Adverse evidence: The four equivalent original assertions and their supporting Cohen-Macaulay criterion are unchanged.
+
+### Change 1: `MC-STK-ERR-2312-OP1`
+
+Pinned-official lines `36051-36051`; bytes `1315740:1315762`.
+
+````diff
+- Hence the equivalences
++ Hence we have the equivalences
+````
+
+Original SHA-256 `D240115BDFD6EB56492DBF432EB84F92DF0DC7E8281FD27B9C78F87E3678CBD0`; replacement SHA-256 `A84A5E7F1C934C17278AB2123F2557826163060AE3B60614F8EC616719430662`.
+
+</details>
+
+<details id="mc-stk-err-2313">
+<summary><code>MC-STK-ERR-2313 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2313`; producer ID: `ALGEBRA-RECON-1004`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36068) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed-map sentence.
+- Adverse evidence: The original composite is injective on J modulo mJ by the regular-quotient parameter lemma.
+
+### Change 1: `MC-STK-ERR-2313-OP1`
+
+Pinned-official lines `36068-36068`; bytes `1316438:1316508`.
+
+````diff
+- J/ \mathfrak m J \to  I / \mathfrak m I \to \mathfrak m /\mathfrak m^2
++ J/ \mathfrak m J \to  I / \mathfrak m I \to \mathfrak m /\mathfrak m^2.
+````
+
+Original SHA-256 `ED67DC38EB84BE3565AA498899511EA52E2C9DD5733D8878A63B50987EB221F3`; replacement SHA-256 `27E3AE5368228BAD3AF1A385230F023894EDDBA609DF5949DC5C35CFE532A220`.
+
+</details>
+
+<details id="mc-stk-err-2314">
+<summary><code>MC-STK-ERR-2314 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2314`; producer ID: `ALGEBRA-RECON-1005`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36173) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the singular one-condition quantification explicit.
+- Adverse evidence: All five conditions remain equivalent, so this does not alter the mathematical criterion.
+
+### Change 1: `MC-STK-ERR-2314-OP1`
+
+Pinned-official lines `36173-36173`; bytes `1321155:1321229`.
+
+````diff
+- any of the equivalent conditions (1) -- (5) of Lemma \ref{lemma-lci} hold.
++ any one of the equivalent conditions (1) -- (5) of Lemma \ref{lemma-lci} holds.
+````
+
+Original SHA-256 `5B6D25193051434C136553F3F48954D08F9CCC4A1973A03A3502237FBCDB1756`; replacement SHA-256 `072DA872F588A0B2156E8580321A4A54CAF34C3B7707C00EE23F481DC135346A`.
+
+</details>
+
+<details id="mc-stk-err-2315">
+<summary><code>MC-STK-ERR-2315 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2315`; producer ID: `ALGEBRA-RECON-1007`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36282) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the designation preposition.
+- Adverse evidence: The three primes and their original ambient rings remain unchanged.
+
+### Change 1: `MC-STK-ERR-2315-OP1`
+
+Pinned-official lines `36282-36282`; bytes `1325105:1325111`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2316">
+<summary><code>MC-STK-ERR-2316 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2316`; producer ID: `ALGEBRA-RECON-1008`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36291) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the first local-ring diagram sentence.
+- Adverse evidence: Both vertical flat maps and the quotient arrows are preserved.
+
+### Change 1: `MC-STK-ERR-2316-OP1`
+
+Pinned-official lines `36291-36291`; bytes `1325502:1325503`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+</details>
+
+<details id="mc-stk-err-2317">
+<summary><code>MC-STK-ERR-2317 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2317`; producer ID: `ALGEBRA-RECON-1009`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36309) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the residue-field designation preposition.
+- Adverse evidence: The original kappa and its finite extension of k remain explicit.
+
+### Change 1: `MC-STK-ERR-2317-OP1`
+
+Pinned-official lines `36309-36309`; bytes `1326364:1326370`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2318">
+<summary><code>MC-STK-ERR-2318 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2318`; producer ID: `ALGEBRA-RECON-1011`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36337) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the second local-ring diagram sentence.
+- Adverse evidence: The zero-dimensional closed fibre and exact local dimensions are checked separately.
+
+### Change 1: `MC-STK-ERR-2318-OP1`
+
+Pinned-official lines `36337-36337`; bytes `1327865:1327866`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+</details>
+
+<details id="mc-stk-err-2319">
+<summary><code>MC-STK-ERR-2319 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2319`; producer ID: `ALGEBRA-RECON-1020`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36466-L36467) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Mark the prime quantification within the original sentence.
+- Adverse evidence: The exact fibre comparison and field-extension criterion remain unchanged.
+
+### Change 1: `MC-STK-ERR-2319-OP1`
+
+Pinned-official lines `36466-36466`; bytes `1332850:1332874`.
+
+````diff
+- Thus it suffices to show
++ Thus it suffices to show,
+````
+
+Original SHA-256 `06D6A10148110935805B21C3E5CE4365846A58922814CD775D97C2CB483B42D6`; replacement SHA-256 `470BBA11A33770F4AF4E55D7A6ECAC23290177B58A8139318E1A220C333F36F7`.
+
+### Change 2: `MC-STK-ERR-2319-OP2`
+
+Pinned-official lines `36467-36467`; bytes `1332875:1332948`.
+
+````diff
+- given primes $\mathfrak p' \subset R'$ lying over $\mathfrak p \subset R$
++ for primes $\mathfrak p' \subset R'$ lying over $\mathfrak p \subset R$,
+````
+
+Original SHA-256 `E009515A57B087913F9672D87C50F1202878BE996ABB837ED2E0BA0ADF192581`; replacement SHA-256 `E2A79957EA75B89168345FD03739B72994B31982C22515586010ECEAE7AF9296`.
+
+</details>
+
+<details id="mc-stk-err-2320">
+<summary><code>MC-STK-ERR-2320 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2320`; producer ID: `ALGEBRA-RECON-1021`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36492) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the separator in the original finite list.
+- Adverse evidence: The finite principal cover and unit-ideal hypothesis are unchanged.
+
+### Change 1: `MC-STK-ERR-2320-OP1`
+
+Pinned-official lines `36492-36492`; bytes `1333754:1333769`.
+
+````diff
+- g_1, \ldots g_m
++ g_1, \ldots, g_m
+````
+
+Original SHA-256 `EB078FA765C64F34588F0A1310FC52BD68D1FA896AF6F569A39F8481212569E3`; replacement SHA-256 `5B570F7ADC084B702C59BB374BBFCD276C172F4A9C2E2F29F71BFE6A7D78BD9A`.
+
+</details>
+
+<details id="mc-stk-err-2321">
+<summary><code>MC-STK-ERR-2321 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2321`; producer ID: `ALGEBRA-RECON-1023`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36580) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the stray preposition before the displayed map.
+- Adverse evidence: The specified domain, field extension and monic factorization equations are retained.
+
+### Change 1: `MC-STK-ERR-2321-OP1`
+
+Pinned-official lines `36580-36580`; bytes `1337007:1337027`.
+
+````diff
+- A $k$-algebra map of
++ A $k$-algebra map
+````
+
+Original SHA-256 `6BCEFF2E9C97F7FAA6E294C22381BE135C7336A195655C7A929FE008B9CC255F`; replacement SHA-256 `08A6AB8015BE828F61DE8FDF0D1E4F449F5675148E5718A4D8FBD4C36D80F9BE`.
+
+</details>
+
+<details id="mc-stk-err-2322">
+<summary><code>MC-STK-ERR-2322 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2322`; producer ID: `ALGEBRA-RECON-1027`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36651-L36652) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the if-clause to its consequence.
+- Adverse evidence: The original base localization and every polynomial coefficient remain unchanged.
+
+### Change 1: `MC-STK-ERR-2322-OP1`
+
+Pinned-official lines `36651-36651`; bytes `1339854:1339873`.
+
+````diff
+- for some $f \in R$.
++ for some $f \in R$,
+````
+
+Original SHA-256 `2E804A621476C9BA1A5AEC4A02D356F1E38FA6634B1B3FD80B342FF4C6685827`; replacement SHA-256 `D85B32AA09CD9942C3E5632DC6B53E1C2835CEFA055FC791EF86CAA1E607DD5B`.
+
+### Change 2: `MC-STK-ERR-2322-OP2`
+
+Pinned-official lines `36652-36652`; bytes `1339874:1339887`.
+
+````diff
+- Then the ring
++ then the ring
+````
+
+Original SHA-256 `ECC344ED8B7EF123E87DA765BF09CCA8071852756DDEA92C1C590CF24E6C4E8C`; replacement SHA-256 `95ED41A18E6F77C6D9CF41D66054D5879DAEDFCE436D2BF712C62490DE84292F`.
+
+</details>
+
+<details id="mc-stk-err-2323">
+<summary><code>MC-STK-ERR-2323 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2323`; producer ID: `ALGEBRA-RECON-1028`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36731) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the singular verb for the chosen subalgebra.
+- Adverse evidence: The approximation keeps all original equations and descends a finite unit-ideal certificate.
+
+### Change 1: `MC-STK-ERR-2323-OP1`
+
+Pinned-official lines `36731-36731`; bytes `1343201:1343226`.
+
+````diff
+- There exist a finite type
++ There exists a finite type
+````
+
+Original SHA-256 `16640DA553899A4C8409F107C9C93CC8E81F93B01EA1ADD0C3EF0362CA4FB5F3`; replacement SHA-256 `D01940E9F842EC11E6AD264649A12567B42143E0CAC275E6A67C1F580F24F723`.
+
+</details>
+
+<details id="mc-stk-err-2324">
+<summary><code>MC-STK-ERR-2324 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2324`; producer ID: `ALGEBRA-RECON-1029`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36744) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the designation preposition.
+- Adverse evidence: The original prime lies above all three indicated contractions. No rewrite of the contraction diagram is needed.
+
+### Change 1: `MC-STK-ERR-2324-OP1`
+
+Pinned-official lines `36744-36744`; bytes `1343702:1343712`.
+
+````diff
+- and denote
++ and denote by
+````
+
+Original SHA-256 `46B10B9FA0601DEE48CE525376E2AF0F698F72C61DEFB791BECFAF4C470AFC0D`; replacement SHA-256 `F11F6AA22624D36316F7F1EAFC25B0C117EC9F96D5CC379F89C57D73728E7070`.
+
+</details>
+
+<details id="mc-stk-err-2325">
+<summary><code>MC-STK-ERR-2325 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2325`; producer ID: `ALGEBRA-RECON-1031`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36805-L36806) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the designation and the plural count of the three primes.
+- Adverse evidence: Each prime remains in its original ring, with the original contraction map.
+
+### Change 1: `MC-STK-ERR-2325-OP1`
+
+Pinned-official lines `36805-36805`; bytes `1346803:1346809`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+### Change 2: `MC-STK-ERR-2325-OP2`
+
+Pinned-official lines `36806-36806`; bytes `1346879:1346891`.
+
+````diff
+- the prime of
++ the primes of
+````
+
+Original SHA-256 `695E7FBE3878538CA3876C8875BFC5AF9177A48836696B02155F91A1BB7EC69A`; replacement SHA-256 `A16F006AC003DB1D4F84E9E5A293D69FF07407790A60DBC7C75A4DE05DE838BD`.
+
+</details>
+
+<details id="mc-stk-err-2326">
+<summary><code>MC-STK-ERR-2326 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2326`; producer ID: `ALGEBRA-RECON-1032`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36834) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the conormal-module designation preposition.
+- Adverse evidence: The original generators and the localization argument proving their basis property remain unchanged.
+
+### Change 1: `MC-STK-ERR-2326-OP1`
+
+Pinned-official lines `36834-36834`; bytes `1347797:1347807`.
+
+````diff
+- Denote $N$
++ Denote by $N$
+````
+
+Original SHA-256 `1C0939535CDDAC21C2886B4CEC071089BBBBA818D41CD7B71AE14E9A673115B6`; replacement SHA-256 `070E17360A9D4299FB47E35EEFA5DF477EA4E3AD11B9425AC63B44DB27FB20C7`.
+
+</details>
+
+<details id="mc-stk-err-2327">
+<summary><code>MC-STK-ERR-2327 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2327`; producer ID: `ALGEBRA-RECON-1035`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36905) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the localization condition from the main clause.
+- Adverse evidence: The selected element still avoids the same original prime.
+
+### Change 1: `MC-STK-ERR-2327-OP1`
+
+Pinned-official lines `36905-36905`; bytes `1350496:1350525`.
+
+````diff
+- $g\not\in \mathfrak q$ we may
++ $g\not\in \mathfrak q$, we may
+````
+
+Original SHA-256 `94099C2868EA8AF4EA1C581CB4C017BD072A6B862AA0D75E5ED4BBDCE73FC2F3`; replacement SHA-256 `0A4A845FB119E7281ECEF92545C3C7F1897677DA27664320B31977D253032265`.
+
+</details>
+
+<details id="mc-stk-err-2328">
+<summary><code>MC-STK-ERR-2328 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2328`; producer ID: `ALGEBRA-RECON-1036`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L36927) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the sentence containing the exact sequence.
+- Adverse evidence: The finite kernel and flat quotient justify the displayed fibre injection.
+
+### Change 1: `MC-STK-ERR-2328-OP1`
+
+Pinned-official lines `36927-36927`; bytes `1351775:1351801`.
+
+````diff
+- 0 \to J \to S' \to S \to 0
++ 0 \to J \to S' \to S \to 0.
+````
+
+Original SHA-256 `C5C295B5F8D0755720AFF1F578E6EAE81E960C9E79CCE1499810615BBAEA998F`; replacement SHA-256 `62494BB1EEB99C15A4E691219E3D94464049AC79F0420193173B237E0C633C3A`.
+
+</details>
+
+<details id="mc-stk-err-2329">
+<summary><code>MC-STK-ERR-2329 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2329`; producer ID: `ALGEBRA-RECON-1040`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37025) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural verb for the chosen localization elements.
+- Adverse evidence: Their bars and original ambient quotient algebra are preserved.
+
+### Change 1: `MC-STK-ERR-2329-OP1`
+
+Pinned-official lines `37025-37025`; bytes `1355985:1356006`.
+
+````diff
+- there exists elements
++ there exist elements
+````
+
+Original SHA-256 `34630A6E644827EB1989A31AB1DF1B21227D116C6CD5FF1240A65A3437BE94AE`; replacement SHA-256 `10EAAA9174A9E2DC6430FFB8A1C9200EF782CCA974D0CFD7EB0DAF408EAC9DC2`.
+
+</details>
+
+<details id="mc-stk-err-2330">
+<summary><code>MC-STK-ERR-2330 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2330`; producer ID: `ALGEBRA-RECON-1044`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37069) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the formula from its reference clause.
+- Adverse evidence: The original partial derivatives and differential module are unchanged.
+
+### Change 1: `MC-STK-ERR-2330-OP1`
+
+Pinned-official lines `37069-37069`; bytes `1357545:1357589`.
+
+````diff
+- \frac{\partial f}{\partial y} \text{d}y$ see
++ \frac{\partial f}{\partial y} \text{d}y$, see
+````
+
+Original SHA-256 `C27DBD048F5ED3C79F69AD0AE48B631A9BBE7835862285FC161F466C923FDAA1`; replacement SHA-256 `B00CBFE52E62E0AB9BF5252DD06186B67DD942BCBFB5ED999E43DA6F41520BB6`.
+
+</details>
+
+<details id="mc-stk-err-2331">
+<summary><code>MC-STK-ERR-2331 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2331`; producer ID: `ALGEBRA-RECON-1045`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37124) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the comparison of the complex with its degree-zero homology accurately.
+- Adverse evidence: The source definition gives a quasi-isomorphism, not equality of its chain modules. A chosen splitting gives the stronger homotopy comparison in the separate note.
+
+### Change 1: `MC-STK-ERR-2331-OP1`
+
+Pinned-official lines `37124-37124`; bytes `1359944:1359978`.
+
+````diff
+- complex of $S/R$ is $\Omega_{S/R}$
++ complex of $S/R$ is quasi-isomorphic to $\Omega_{S/R}$
+````
+
+Original SHA-256 `1B50F06C85AD626C9173352934EF457A335FCA220FD92A2BFD84F79890E5A935`; replacement SHA-256 `1F1CBCF17F197AC8689C8829D56C2004AEBAAF78A637DBA5E279489279B3E021`.
+
+</details>
+
+<details id="mc-stk-err-2332">
+<summary><code>MC-STK-ERR-2332 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2332`; producer ID: `ALGEBRA-RECON-1047`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37229) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the cited criterion from its consequence.
+- Adverse evidence: The original coordinate classes, regular sequence and neighbourhood remain unchanged.
+
+### Change 1: `MC-STK-ERR-2332-OP1`
+
+Pinned-official lines `37229-37229`; bytes `1364104:1364125`.
+
+````diff
+- Lemma \ref{lemma-lci}
++ Lemma \ref{lemma-lci},
+````
+
+Original SHA-256 `B82D6E098EAE8E53BDF2B9D71407D8C245A72E72BFFE831AE351128FD81A6CA9`; replacement SHA-256 `314AC20411EF11ADA9F5293074FDFFC48E54357FFE2C3C4B933F677089873B3A`.
+
+</details>
+
+<details id="mc-stk-err-2333">
+<summary><code>MC-STK-ERR-2333 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2333`; producer ID: `ALGEBRA-RECON-1048`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37238) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Separate the given polynomial data from the main clause.
+- Adverse evidence: All inequalities, equations and determinant entries are preserved.
+
+### Change 1: `MC-STK-ERR-2333-OP1`
+
+Pinned-official lines `37238-37238`; bytes `1364479:1364506`.
+
+````diff
+- R[x_1, \ldots, x_n]$ we say
++ R[x_1, \ldots, x_n]$, we say
+````
+
+Original SHA-256 `9688595D833ABA000577BF67D767368DBFCE1EEF8DF91C6EB127138CB34E0717`; replacement SHA-256 `27CE0BEFDE057FE2F10F23D55659A62244E7E115BCC3D7D8D63B3345EE8BD887`.
+
+</details>
+
+<details id="mc-stk-err-2334">
+<summary><code>MC-STK-ERR-2334 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2334`; producer ID: `ALGEBRA-RECON-1049`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37297) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the sentence containing the displayed complex.
+- Adverse evidence: The original differential and free target remain unchanged.
+
+### Change 1: `MC-STK-ERR-2334-OP1`
+
+Pinned-official lines `37297-37297`; bytes `1366313:1366355`.
+
+````diff
+- \bigoplus\nolimits_{i = 1}^n S \text{d}x_i
++ \bigoplus\nolimits_{i = 1}^n S \text{d}x_i.
+````
+
+Original SHA-256 `258BD96F31DB7F05DE914AEECFC9B3D80A83E959A2B1C4AE997E3B3D9AFAD1AF`; replacement SHA-256 `75F91518AD5597BBA6E89C2A7D984C0B497649957DD4588240CB287C412EF84D`.
+
+</details>
+
+<details id="mc-stk-err-2335">
+<summary><code>MC-STK-ERR-2335 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2335`; producer ID: `ALGEBRA-RECON-1050`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37317) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use a direct designation for the displayed base-changed algebra.
+- Adverse evidence: Every coefficient is still transformed by the original ring map.
+
+### Change 1: `MC-STK-ERR-2335-OP1`
+
+Pinned-official lines `37317-37317`; bytes `1367221:1367227`.
+
+````diff
+- Denote
++ Set
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `B6F6F3AD07B3C05FA0BBBBF2E3D257FF1E3E31A83EFBE2C9369CD008594F94E0`.
+
+</details>
+
+<details id="mc-stk-err-2336">
+<summary><code>MC-STK-ERR-2336 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2336`; producer ID: `ALGEBRA-RECON-1054`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37562) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specify the actual target of the split surjection.
+- Adverse evidence: Projectivity of the image splits E onto its image, making the kernel a finite direct summand. A polynomial algebra gives E=0 and F nonzero, disproving a right inverse onto all of F.
+
+### Change 1: `MC-STK-ERR-2336-OP1`
+
+Pinned-official lines `37562-37562`; bytes `1375466:1375523`.
+
+````diff
+- is a direct summand and this map has a right inverse too.
++ is a direct summand, so the surjection onto this image has a right inverse.
+````
+
+Original SHA-256 `A4E60909E10C09840EC2A19C16EAC3B40981AAF76E90E7947087CA3916C67EAF`; replacement SHA-256 `9078ADC80C592AA2C1DCF4770A650D9EC731DE2720C9EA625961AA684393BCC3`.
+
+</details>
+
+<details id="mc-stk-err-2337">
+<summary><code>MC-STK-ERR-2337 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2337`; producer ID: `ALGEBRA-RECON-1056`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37637) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Keep the predicate attached to the displayed polynomial.
+- Adverse evidence: The full chosen determinant and the original prime condition are unchanged.
+
+### Change 1: `MC-STK-ERR-2337-OP1`
+
+Pinned-official lines `37637-37637`; bytes `1378497:1378506`.
+
+````diff
+- i \in I}.
++ i \in I}
+````
+
+Original SHA-256 `1DD1424AEDA2FDFA6EA3BB88F56361DD6090A5648A2426783C19F9358328D544`; replacement SHA-256 `B10CB8DBCB8CAC473E73CBDF5330A265431505F5F836D933B0BC76609BFD9451`.
+
+</details>
+
+<details id="mc-stk-err-2338">
+<summary><code>MC-STK-ERR-2338 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2338`; producer ID: `ALGEBRA-RECON-1059`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37691) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the given prime when applying the local syntomic criterion.
+- Adverse evidence: The cited criterion supplies exactly an element outside that prime; the replacement must preserve the point under study.
+
+### Change 1: `MC-STK-ERR-2338-OP1`
+
+Pinned-official lines `37691-37691`; bytes `1380447:1380468`.
+
+````diff
+- a $g \in S$ such that
++ a $g \in S$, $g \not \in \mathfrak q$, such that
+````
+
+Original SHA-256 `DEE9F3D6FCA67AE2660711B39123F2AD6CAD6636DB4D4A65F01BA9C140C25B85`; replacement SHA-256 `1267683CF39BD2B2D8AD6676DFC8D02DE74E037A4F9F2357BC7F78DAD07F9B13`.
+
+</details>
+
+<details id="mc-stk-err-2339">
+<summary><code>MC-STK-ERR-2339 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2339`; producer ID: `ALGEBRA-RECON-1060`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37716) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the designation of the original base change.
+- Adverse evidence: Its flatness hypothesis and exact tensor factors are retained.
+
+### Change 1: `MC-STK-ERR-2339-OP1`
+
+Pinned-official lines `37716-37716`; bytes `1381544:1381589`.
+
+````diff
+- Denote $S' = R' \otimes_R S$ the base change.
++ Let $S' = R' \otimes_R S$ be the base change.
+````
+
+Original SHA-256 `029690ED8F9F5B0AB33062D4E045622FD41F4C0004D97B9D32CF18D9BE607587`; replacement SHA-256 `56E13D4DAE6D121621144F5A5AFF83B161E35DA8C03DD2004A58B9CFA4D444AB`.
+
+</details>
+
+<details id="mc-stk-err-2340">
+<summary><code>MC-STK-ERR-2340 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2340`; producer ID: `ALGEBRA-RECON-1061`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37719) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing verb.
+- Adverse evidence: The smooth locus and the original target spectrum are unchanged.
+
+### Change 1: `MC-STK-ERR-2340-OP1`
+
+Pinned-official lines `37719-37719`; bytes `1381681:1381699`.
+
+````diff
+- \Spec(S')$ the set
++ \Spec(S')$ be the set
+````
+
+Original SHA-256 `7471234D922AD6C3731C8B06FB2C9BA94765EA8069877FD8A6B59D93FC8CD2AA`; replacement SHA-256 `44A823FD1051396003882CD81DE953315BE1C51AC3E59C816B3145E11A1A5B8B`.
+
+</details>
+
+<details id="mc-stk-err-2341">
+<summary><code>MC-STK-ERR-2341 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2341`; producer ID: `ALGEBRA-RECON-1063`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37764) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural verb for the localization elements.
+- Adverse evidence: The original barred elements and lifting charts are retained.
+
+### Change 1: `MC-STK-ERR-2341-OP1`
+
+Pinned-official lines `37764-37764`; bytes `1383353:1383374`.
+
+````diff
+- there exists elements
++ there exist elements
+````
+
+Original SHA-256 `34630A6E644827EB1989A31AB1DF1B21227D116C6CD5FF1240A65A3437BE94AE`; replacement SHA-256 `10EAAA9174A9E2DC6430FFB8A1C9200EF782CCA974D0CFD7EB0DAF408EAC9DC2`.
+
+</details>
+
+<details id="mc-stk-err-2342">
+<summary><code>MC-STK-ERR-2342 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2342`; producer ID: `ALGEBRA-RECON-1065`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37327-L37331) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restrict the dimension argument to the nonempty fibres required by the source definition.
+- Adverse evidence: Z[z]/(2z-1) is standard smooth with n=c=1 but its fibre over (2) is zero. The theorem is valid; the two unqualified dimension claims in its proof omit the empty-fibre exception.
+
+### Change 1: `MC-STK-ERR-2342-OP1`
+
+Pinned-official lines `37327-37327`; bytes `1367741:1367788`.
+
+````diff
+- $S \otimes_R \kappa(\mathfrak p)$ has dimension
++ every nonzero fibre $S \otimes_R \kappa(\mathfrak p)$ has dimension
+````
+
+Original SHA-256 `A2DE5955A02A674E22CD466E13F0CC0E8A9D47A05BB1FE2CE9F39C43AD8D0237`; replacement SHA-256 `6BDD4E0B83C37A8B9FE41A317A894B762459434DA3B7354B4DC60B095DF71AE6`.
+
+### Change 2: `MC-STK-ERR-2342-OP2`
+
+Pinned-official lines `37331-37331`; bytes `1367940:1367970`.
+
+````diff
+- over a field $k$ has dimension
++ over a field $k$, if nonzero, has dimension
+````
+
+Original SHA-256 `B116163ECE78437FC55E4B9F3ABD5C33BDED49929F2B33E9D0A85FBDA44B3772`; replacement SHA-256 `292DC9F89C336012AD9FF65CE7C2203C5DF7819C2ECC270CB8F18210F717FEB9`.
+
+</details>
+
+<details id="mc-stk-err-2343">
+<summary><code>MC-STK-ERR-2343 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2343`; producer ID: `ALGEBRA-RECON-1066`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37396-L37410) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Differentiate the actual chosen polynomial lifts with respect to the x variables.
+- Adverse evidence: The g_j have coefficients in the quotient S, where x-derivatives need not be defined. Their g prime lifts lie in the displayed polynomial ring. The y-derivatives of g_j are already well-defined and are retained. The corrected block determinant equals the original product of units.
+
+### Change 1: `MC-STK-ERR-2343-OP1`
+
+Pinned-official lines `37396-37396`; bytes `1369752:1369764`.
+
+````diff
+- \partial g_1
++ \partial g'_1
+````
+
+Original SHA-256 `F075FC8FF030B99FC61E8E08BB176645C848E08784E26B5EB4D961E9804F6BAC`; replacement SHA-256 `69ED50D0ECA512FB91AA3DFC530513C8EB073C485F21EAC9D0EDDB13C3D3C806`.
+
+### Change 2: `MC-STK-ERR-2343-OP2`
+
+Pinned-official lines `37398-37398`; bytes `1369789:1369801`.
+
+````diff
+- \partial g_d
++ \partial g'_d
+````
+
+Original SHA-256 `59CC436F97554FE11C281574A54492B26FFC6CB32A527D7895DB8C2D314B2B2E`; replacement SHA-256 `C1EB4F84F7BA22E9FAA9918F9990C6561F65B2BC0557525EBF6DE405DA83318E`.
+
+### Change 3: `MC-STK-ERR-2343-OP3`
+
+Pinned-official lines `37408-37408`; bytes `1369939:1369951`.
+
+````diff
+- \partial g_1
++ \partial g'_1
+````
+
+Original SHA-256 `F075FC8FF030B99FC61E8E08BB176645C848E08784E26B5EB4D961E9804F6BAC`; replacement SHA-256 `69ED50D0ECA512FB91AA3DFC530513C8EB073C485F21EAC9D0EDDB13C3D3C806`.
+
+### Change 4: `MC-STK-ERR-2343-OP4`
+
+Pinned-official lines `37410-37410`; bytes `1369976:1369988`.
+
+````diff
+- \partial g_d
++ \partial g'_d
+````
+
+Original SHA-256 `59CC436F97554FE11C281574A54492B26FFC6CB32A527D7895DB8C2D314B2B2E`; replacement SHA-256 `C1EB4F84F7BA22E9FAA9918F9990C6561F65B2BC0557525EBF6DE405DA83318E`.
+
+</details>
+
+<details id="mc-stk-err-2344">
+<summary><code>MC-STK-ERR-2344 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2344`; producer ID: `ALGEBRA-RECON-1070`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37858) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the redundant final preposition.
+- Adverse evidence: The relative clause already contains to which; every chosen variable lift and the original diagram are retained.
+
+### Change 1: `MC-STK-ERR-2344-OP1`
+
+Pinned-official lines `37858-37858`; bytes `1386215:1386227`.
+
+````diff
+- map to under
++ map under
+````
+
+Original SHA-256 `84A0E0F2B95C5E631AC99D112636B18A46314D0BD9C77DF952C06BDDF1624060`; replacement SHA-256 `462E948362CE8A9D2F555CBC4DBC46417F2465277E7FAF0B1F640BD37FFB0B5E`.
+
+</details>
+
+<details id="mc-stk-err-2345">
+<summary><code>MC-STK-ERR-2345 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2345`; producer ID: `ALGEBRA-RECON-1071`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37865) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the kernel designation preposition.
+- Adverse evidence: The original polynomial presentation and the right inverse to its quotient remain unchanged.
+
+### Change 1: `MC-STK-ERR-2345-OP1`
+
+Pinned-official lines `37865-37865`; bytes `1386436:1386442`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2346">
+<summary><code>MC-STK-ERR-2346 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2346`; producer ID: `ALGEBRA-RECON-1072`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37914) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the repeated kernel designation preposition.
+- Adverse evidence: The original split conormal criterion and all tensor factors remain unchanged.
+
+### Change 1: `MC-STK-ERR-2346-OP1`
+
+Pinned-official lines `37914-37914`; bytes `1387900:1387906`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2347">
+<summary><code>MC-STK-ERR-2347 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2347`; producer ID: `ALGEBRA-RECON-1078`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38082) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use Let for the two displayed kernel definitions.
+- Adverse evidence: Both kernels, their ambient rings and the original split exact sequence are retained.
+
+### Change 1: `MC-STK-ERR-2347-OP1`
+
+Pinned-official lines `38082-38082`; bytes `1394383:1394389`.
+
+````diff
+- Denote
++ Let
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `E947A3D4F4A1B23611F8AA204B2BB149785CFB02F5CCC687D1EB10B059E0D5AA`.
+
+</details>
+
+<details id="mc-stk-err-2348">
+<summary><code>MC-STK-ERR-2348 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2348`; producer ID: `ALGEBRA-RECON-1081`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38316) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the finite-subring designation preposition.
+- Adverse evidence: The original Noetherian approximation and every selected image and coordinate remain unchanged.
+
+### Change 1: `MC-STK-ERR-2348-OP1`
+
+Pinned-official lines `38316-38316`; bytes `1403114:1403120`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2349">
+<summary><code>MC-STK-ERR-2349 — algebra.tex: — conceptual_source_correction_recorded</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2349`; producer ID: `ALGEBRA-RECON-1082`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L37973) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the actual chosen polynomial lifts as coefficients in the ideal-membership assertion.
+- Adverse evidence: The classes lambda and mu act on J/J^2, but are not themselves specified elements of P. The assertion that a polynomial expression lies in J^2 must use x_mu and x_lambda. The full derivation preserves the additional f_lambda f_mu term and the original R-structure; the theorem itself remains valid.
+
+### Change 1: `MC-STK-ERR-2349-OP1`
+
+Pinned-official lines `37973-37973`; bytes `1390133:1390146`.
+
+````diff
+- \mu f_\lambda
++ x_\mu f_\lambda
+````
+
+Original SHA-256 `A8BCD022A1E465BAB231DE996985F47A4EF243D5D6EEE2B024ACE1F92CEE86BA`; replacement SHA-256 `5B70109763D1D883251BD41C63F266D4AF0D49681D2FEF0AD4B48C33AE345B4E`.
+
+### Change 2: `MC-STK-ERR-2349-OP2`
+
+Pinned-official lines `37973-37973`; bytes `1390149:1390162`.
+
+````diff
+- \lambda f_\mu
++ x_\lambda f_\mu
+````
+
+Original SHA-256 `576F38829A31EE94F5E903D47BCBA0D9E00BAD108ED03385D8E599D65EF4FD07`; replacement SHA-256 `412543547A5EABB4EB6B2A35B12211CF0260A5AB381FEDC92B4CDDC0A7EDBCA3`.
+
+</details>
+
+<details id="mc-stk-err-2350">
+<summary><code>MC-STK-ERR-2350 — algebra.tex: — conceptual_source_correction_recorded</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2350`; producer ID: `ALGEBRA-RECON-1083`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38094-L38163) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Specify the commuting lift and the exact left-inverse directions.
+- Adverse evidence: Compatibility with A alone does not specify the reduction B to C needed to map J into I/I^2. Formal smoothness supplies both conditions. The split conormal map is a retraction, not a two-sided inverse: A=C=k and B=k[x] gives 0 to k. In the later square-zero proof the exact correction delta=Delta r_0 gives (r_0+delta)d=1.
+
+### Change 1: `MC-STK-ERR-2350-OP1`
+
+Pinned-official lines `38094-38094`; bytes `1394656:1394696`.
+
+````diff
+- $\sigma : B \to A/I^2$ whose composition
++ $\sigma : B \to A/I^2$, lifting $B \to C$, whose composition
+````
+
+Original SHA-256 `89E5054E4C1CA6C670F95E7035A7A5914A16DEB239709390C3F4B3A751EDDDF0`; replacement SHA-256 `CBA23FB52A9656B423082C31E50ECB9147A2B8B2D99BACE2C33D9BF8721D5D64`.
+
+### Change 2: `MC-STK-ERR-2350-OP2`
+
+Pinned-official lines `38096-38096`; bytes `1394803:1394824`.
+
+````diff
+- is inverse to the map
++ is a left inverse to the map
+````
+
+Original SHA-256 `B2EB3B5F8397333CEC2FEBDB868FEF241B33E4ADD7CDFC07ED1E5A9CC4512DC5`; replacement SHA-256 `23BFEA4D3C495408A48CD0D8A3F32B0A518A0F68BBF009A0E47AE4E906338B67`.
+
+### Change 3: `MC-STK-ERR-2350-OP3`
+
+Pinned-official lines `38142-38142`; bytes `1396377:1396392`.
+
+````diff
+- is a section to
++ is a left inverse to
+````
+
+Original SHA-256 `C3867BAB73AC71E14A1A863FA7ECB3F54AE7FAC5E2135877657B5551E2A6D5EF`; replacement SHA-256 `20736841317F14B3768B4D62A332AF9EC44126D788496D705337367E7866AA14`.
+
+### Change 4: `MC-STK-ERR-2350-OP4`
+
+Pinned-official lines `38163-38163`; bytes `1397299:1397314`.
+
+````diff
+- is a section of
++ is a left inverse to
+````
+
+Original SHA-256 `63FEBC975CEE665F64C0058DCAA25E3100F4EAC0408DEEC49B6A5CB462DE7A9B`; replacement SHA-256 `20736841317F14B3768B4D62A332AF9EC44126D788496D705337367E7866AA14`.
+
+</details>
+
+<details id="mc-stk-err-2351">
+<summary><code>MC-STK-ERR-2351 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2351`; producer ID: `ALGEBRA-RECON-1086`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38348) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the redundant then from the Given construction.
+- Adverse evidence: The original exact sequence is valid and even split; that strengthening stays in separate editorial material.
+
+### Change 1: `MC-STK-ERR-2351-OP1`
+
+Pinned-official lines `38348-38348`; bytes `1404109:1404134`.
+
+````diff
+- smooth, then the sequence
++ smooth, the sequence
+````
+
+Original SHA-256 `59013382423E0878F958404C7DCD44253792E29F279B13E4128E72F65F581DCD`; replacement SHA-256 `45FE2D2C56D0DEC62F7E6C99E4927A0962605C58065A0BBA05A1E93061B0549F`.
+
+</details>
+
+<details id="mc-stk-err-2352">
+<summary><code>MC-STK-ERR-2352 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2352`; producer ID: `ALGEBRA-RECON-1088`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38389) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use Let for the two kernel definitions.
+- Adverse evidence: The original split conormal maps are the ones verified in group 1083.
+
+### Change 1: `MC-STK-ERR-2352-OP1`
+
+Pinned-official lines `38389-38389`; bytes `1405335:1405341`.
+
+````diff
+- Denote
++ Let
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `E947A3D4F4A1B23611F8AA204B2BB149785CFB02F5CCC687D1EB10B059E0D5AA`.
+
+</details>
+
+<details id="mc-stk-err-2353">
+<summary><code>MC-STK-ERR-2353 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2353`; producer ID: `ALGEBRA-RECON-1089`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38410) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the algebra as a power series ring.
+- Adverse evidence: The source statement identifies an algebra, not a single series. The retraction and conormal freeness hypotheses remain in the formal statement.
+
+### Change 1: `MC-STK-ERR-2353-OP1`
+
+Pinned-official lines `38410-38410`; bytes `1405902:1405921`.
+
+````diff
+- a power series over
++ a power series ring over
+````
+
+Original SHA-256 `EF292EE1DEAA511E5DE99738DC13DF071D52AA10D4527022A1315BA094ADEED7`; replacement SHA-256 `8DBD242DAED0FCD8384AE2B7DFC56B79150D40E2084AC88BDA04C502CD66D796`.
+
+</details>
+
+<details id="mc-stk-err-2354">
+<summary><code>MC-STK-ERR-2354 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2354`; producer ID: `ALGEBRA-RECON-1091`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38436) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use Let for the specified power-series algebra and augmentation ideal.
+- Adverse evidence: All chosen f_i and the actual map x_i to f_i remain unchanged.
+
+### Change 1: `MC-STK-ERR-2354-OP1`
+
+Pinned-official lines `38436-38436`; bytes `1406869:1406875`.
+
+````diff
+- Denote
++ Let
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `E947A3D4F4A1B23611F8AA204B2BB149785CFB02F5CCC687D1EB10B059E0D5AA`.
+
+</details>
+
+<details id="mc-stk-err-2355">
+<summary><code>MC-STK-ERR-2355 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2355`; producer ID: `ALGEBRA-RECON-1092`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38439) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the designation preposition for the inverse.
+- Adverse evidence: The source inverse at order two and the later inverse induction are retained.
+
+### Change 1: `MC-STK-ERR-2355-OP1`
+
+Pinned-official lines `38439-38439`; bytes `1407097:1407103`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2356">
+<summary><code>MC-STK-ERR-2356 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2356`; producer ID: `ALGEBRA-RECON-1094`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38554-L38556) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair the three consecutive designation constructions.
+- Adverse evidence: The original intermediate quotient and both maximal ideals retain their exact roles.
+
+### Change 1: `MC-STK-ERR-2356-OP1`
+
+Pinned-official lines `38554-38554`; bytes `1411170:1411179`.
+
+````diff
+- Denote $J
++ Let $J
+````
+
+Original SHA-256 `2B1A25F54A205F5B1DDE017F0754E2988575BB218637F97BE15B24E9709197A8`; replacement SHA-256 `D54DAD110BFBC130EAF383FE11DFF7B29A25BD4A58EFEC639276982245D1A8A1`.
+
+### Change 2: `MC-STK-ERR-2356-OP2`
+
+Pinned-official lines `38555-38555`; bytes `1411221:1411231`.
+
+````diff
+- Denote $S'
++ Let $S'
+````
+
+Original SHA-256 `B671AC5B72E6B442C6553B2554FD6B58E308A2195DF5A05152BBE89EF36F91EC`; replacement SHA-256 `A87D3ED7EE4C2E5D4435ADB4A422C0FA0B1F0A166864AA96A9EDAD973DECF5CC`.
+
+### Change 3: `MC-STK-ERR-2356-OP3`
+
+Pinned-official lines `38556-38556`; bytes `1411294:1411351`.
+
+````diff
+- Denote $\mathfrak m' = \mathfrak m''S'$ the corresponding
++ Let $\mathfrak m' = \mathfrak m''S'$ be the corresponding
+````
+
+Original SHA-256 `CF2F20417E8457D9D28DF4239249CF829D27EFA8B3FB21203B980228800180AA`; replacement SHA-256 `2123DCA1C9D3E66AD67B96BEADE9BE1A566E332C761091AE82B334ED0206969B`.
+
+</details>
+
+<details id="mc-stk-err-2357">
+<summary><code>MC-STK-ERR-2357 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2357`; producer ID: `ALGEBRA-RECON-1097`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38753-L38754) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing ideal noun and both designation constructions.
+- Adverse evidence: The original local ring, maximal ideal and residue field remain unchanged.
+
+### Change 1: `MC-STK-ERR-2357-OP1`
+
+Pinned-official lines `38753-38753`; bytes `1418894:1418903`.
+
+````diff
+- Denote $R
++ Let $R
+````
+
+Original SHA-256 `470E75FC61EA86955EBE9B53449049686B96DE923205CA2F78D68BA6E0567143`; replacement SHA-256 `FF103832DEC258ADB4155821F102DF1027620A94801C60A996745AFAAAF9FF44`.
+
+### Change 2: `MC-STK-ERR-2357-OP2`
+
+Pinned-official lines `38753-38753`; bytes `1418934:1418945`.
+
+````diff
+- its maximal
++ its maximal ideal
+````
+
+Original SHA-256 `7C0FAFC366248573F84A19624861B98BC4CC011D8F38CEF17CC6741BC432F03E`; replacement SHA-256 `ECB67FEA6D845A67638EFB80D9B4E30D3D6008856FF0A4124C22ACF41BDCEBC8`.
+
+### Change 3: `MC-STK-ERR-2357-OP3`
+
+Pinned-official lines `38754-38754`; bytes `1418967:1418993`.
+
+````diff
+- its residue field $\kappa$
++ its residue field by $\kappa$
+````
+
+Original SHA-256 `DA21C1805D378E1B846A55AF7A6E2541634BCCF10D88EE0ADA5C96BE27BB3CB1`; replacement SHA-256 `0E2F2126C4CE305C789C08B31F1735A2C0588719E1F7A912BFD345A3FC5DCA97`.
+
+</details>
+
+<details id="mc-stk-err-2358">
+<summary><code>MC-STK-ERR-2358 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2358`; producer ID: `ALGEBRA-RECON-1098`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38755) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the plural for the two coordinated lemma references.
+- Adverse evidence: Both cited exact differential comparisons are retained.
+
+### Change 1: `MC-STK-ERR-2358-OP1`
+
+Pinned-official lines `38755-38755`; bytes `1418995:1419003`.
+
+````diff
+- By Lemma
++ By Lemmas
+````
+
+Original SHA-256 `9F0BE9922BC2994AAFDAE162FD140C3B3ED28D3A8ADF70C1EBE1156D97A5E360`; replacement SHA-256 `9F7370E38F776C0E22643DDDF1C141CE95A96E02AC53A56CB3234728C892CA5E`.
+
+</details>
+
+<details id="mc-stk-err-2359">
+<summary><code>MC-STK-ERR-2359 — algebra.tex: — conceptual_source_correction_recorded</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2359`; producer ID: `ALGEBRA-RECON-1102`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38785-L38801) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Make the intended free summand and nonzero-ring hypotheses explicit and include the n=1 nilpotence case.
+- Adverse evidence: A cyclic direct summand need not be free on df: S=R=Q,f=0,C=0 satisfies the literal decomposition but not the conclusion. The zero ring also contradicts the nonnilpotence conclusion. The proof needs the coefficient derivation theta(f)=1, exactly supplied by the clarified hypothesis; the later regularity proof already supplies it by a unit basis coordinate.
+
+### Change 1: `MC-STK-ERR-2359-OP1`
+
+Pinned-official lines `38785-38785`; bytes `1419905:1419932`.
+
+````diff
+- a $\mathbf{Q}$-algebra map.
++ a $\mathbf{Q}$-algebra map with $S \not= 0$.
+````
+
+Original SHA-256 `DC76F632B81CC0F46FED89016F0BDB493FACC484F4424AD94B00185E9BC0BCE2`; replacement SHA-256 `D15116158D4C4B9D834BA59503290D56133A3AFA3D704E90EBCFA2BB8AB557CB`.
+
+### Change 2: `MC-STK-ERR-2359-OP2`
+
+Pinned-official lines `38786-38786`; bytes `1419933:1419959`.
+
+````diff
+- Let $f \in S$ be such that
++ Let $f \in S$ be such that $S \to S\text{d}f$, $a \mapsto a\text{d}f$, is an isomorphism and
+````
+
+Original SHA-256 `BEAA9FDBC59325034638F4A469C933B4A61699B5E14587A387C4C279007A543E`; replacement SHA-256 `963AD98E0E931B1B552EC9664045144A45237458BE843BF0AC4B5A01309A6B78`.
+
+### Change 3: `MC-STK-ERR-2359-OP3`
+
+Pinned-official lines `38801-38801`; bytes `1420430:1420450`.
+
+````diff
+- with $n > 1$ minimal
++ with $n \geq 1$ minimal
+````
+
+Original SHA-256 `BE8ED95A45FC5298D5882AB8E809E69AC15789C9C2FFA4875731FFD4EF85E419`; replacement SHA-256 `064354CF67503C22841B6C27BE4615EC78C863A69B5BA7FF40C9FC9753D7DD4E`.
+
+</details>
+
+<details id="mc-stk-err-2360">
+<summary><code>MC-STK-ERR-2360 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2360`; producer ID: `ALGEBRA-RECON-1107`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L38953) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing verb in the finite type hypothesis.
+- Adverse evidence: The source assumes a Noetherian base. The separate extension weakens that assumption while retaining finite presentation; it does not replace the original statement.
+
+### Change 1: `MC-STK-ERR-2360-OP1`
+
+Pinned-official lines `38953-38953`; bytes `1425979:1426004`.
+
+````diff
+- $R \to S$ of finite type.
++ $R \to S$ is of finite type.
+````
+
+Original SHA-256 `C06664F490F88DEADD364A640D65D03C725EF68516E0DAFA66BDDAB7D77138D0`; replacement SHA-256 `CE3401C94C754D546075EA05B9458A28C40AF1F8F80588E79F3FF25FFBFA82B1`.
+
+</details>
+
+<details id="mc-stk-err-2361">
+<summary><code>MC-STK-ERR-2361 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2361`; producer ID: `ALGEBRA-RECON-1110`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39007) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use Let for the defined first-order thickening.
+- Adverse evidence: The original quotient by I squared and its localization remain unchanged.
+
+### Change 1: `MC-STK-ERR-2361-OP1`
+
+Pinned-official lines `39007-39007`; bytes `1428087:1428093`.
+
+````diff
+- Denote
++ Let
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `E947A3D4F4A1B23611F8AA204B2BB149785CFB02F5CCC687D1EB10B059E0D5AA`.
+
+</details>
+
+<details id="mc-stk-err-2362">
+<summary><code>MC-STK-ERR-2362 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2362`; producer ID: `ALGEBRA-RECON-1113`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39116-L39118) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the displayed equality sentence and capitalize the next sentence.
+- Adverse evidence: The subsequent tensor operation uses the same original B_N and both original exponents. No mathematical object is changed.
+
+### Change 1: `MC-STK-ERR-2362-OP1`
+
+Pinned-official lines `39116-39116`; bytes `1432023:1432051`.
+
+````diff
+- \Omega_{S'_{\mathfrak q'}/R}
++ \Omega_{S'_{\mathfrak q'}/R}.
+````
+
+Original SHA-256 `FAAA57E42F4F3E216A90429C6683D470F787CCEE3794EF4F99694A6FE330B279`; replacement SHA-256 `8BD3F038BBB197B5E36C7F5E64D5E2A0F07400E17DB7D170B3C6B0FFE7E645F3`.
+
+### Change 2: `MC-STK-ERR-2362-OP2`
+
+Pinned-official lines `39118-39118`; bytes `1432055:1432076`.
+
+````diff
+- we can further tensor
++ We can further tensor
+````
+
+Original SHA-256 `C69B896787D4AACF8DE098EC6CBA1C307AF4915F215C718469002A3DFA9FE55F`; replacement SHA-256 `75006E291CC7EFEDDD07820A425F1215FC8D52B13E11FB4F12FC45A763F3F09B`.
+
+</details>
+
+<details id="mc-stk-err-2363">
+<summary><code>MC-STK-ERR-2363 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2363`; producer ID: `ALGEBRA-RECON-1114`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39187) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing maximal-ideal predicate verb.
+- Adverse evidence: The proposed enumeration colon is an optional preference and is not integrated. Algebraic closedness and the maximal-ideal hypothesis remain unchanged.
+
+### Change 1: `MC-STK-ERR-2363-OP1`
+
+Pinned-official lines `39187-39187`; bytes `1434903:1434942`.
+
+````diff
+- $\mathfrak m \subset S$ a maximal ideal
++ $\mathfrak m \subset S$ is a maximal ideal
+````
+
+Original SHA-256 `6E9F2C1E8E649FDF9981DDE04C94A717F241505E6B100956F1283B92D6310063`; replacement SHA-256 `D9AD44A09048BB7766DDDE8756DC3CAF0DAE76C0B050082A3550F6226B42BDF4`.
+
+</details>
+
+<details id="mc-stk-err-2364">
+<summary><code>MC-STK-ERR-2364 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2364`; producer ID: `ALGEBRA-RECON-1116`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39197-L39214) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing predicate in all three prime-ideal clauses.
+- Adverse evidence: The proposed enumeration colon is optional. Each original field, residue separability and characteristic-zero condition remains in its own overview item.
+
+### Change 1: `MC-STK-ERR-2364-OP1`
+
+Pinned-official lines `39197-39197`; bytes `1435321:1435358`.
+
+````diff
+- $\mathfrak q \subset S$ a prime ideal
++ $\mathfrak q \subset S$ is a prime ideal
+````
+
+Original SHA-256 `42B675554C0F6A943A679388D594C0217A85F0E54B0969A0F6BA21927CE69BC2`; replacement SHA-256 `648DD7A7ABF12AD299FDCFF082402E654B89F65F0EF64DBBEB521B402B0EC906`.
+
+### Change 2: `MC-STK-ERR-2364-OP2`
+
+Pinned-official lines `39208-39208`; bytes `1435831:1435868`.
+
+````diff
+- $\mathfrak q \subset S$ a prime ideal
++ $\mathfrak q \subset S$ is a prime ideal
+````
+
+Original SHA-256 `42B675554C0F6A943A679388D594C0217A85F0E54B0969A0F6BA21927CE69BC2`; replacement SHA-256 `648DD7A7ABF12AD299FDCFF082402E654B89F65F0EF64DBBEB521B402B0EC906`.
+
+### Change 3: `MC-STK-ERR-2364-OP3`
+
+Pinned-official lines `39214-39214`; bytes `1436130:1436167`.
+
+````diff
+- $\mathfrak q \subset S$ a prime ideal
++ $\mathfrak q \subset S$ is a prime ideal
+````
+
+Original SHA-256 `42B675554C0F6A943A679388D594C0217A85F0E54B0969A0F6BA21927CE69BC2`; replacement SHA-256 `648DD7A7ABF12AD299FDCFF082402E654B89F65F0EF64DBBEB521B402B0EC906`.
+
+</details>
+
+<details id="mc-stk-err-2365">
+<summary><code>MC-STK-ERR-2365 — algebra.tex: — conceptual_source_correction_recorded</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2365`; producer ID: `ALGEBRA-RECON-1117`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39183) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore finite presentation to the flat-base-change statement, as in its cited theorem.
+- Adverse evidence: The overview invites consultation of precise statements, explaining the likely abbreviation, but the unqualified assertion is false. For R=product_i k, I=direct_sum_i k and S=R/I, the map is flat, finite type and formally smooth, with field local target rings, yet its smooth locus is empty. Flat base change to R_p for a prime containing I gives the smooth identity of a field. Every proposed principal neighbourhood has an explicitly non-finitely-generated quotient kernel.
+
+### Change 1: `MC-STK-ERR-2365-OP1`
+
+Pinned-official lines `39183-39183`; bytes `1434709:1434723`.
+
+````diff
+- points where a
++ points where a finitely presented
+````
+
+Original SHA-256 `D627CDF6436EA7314F1FE5D66E944AF06CF657E6F90706861571B36B7922C3E7`; replacement SHA-256 `924B59C17EEDB325CF477215FB2A1F915DB807FC46E87E20E85A7E3199FE8CF2`.
+
+</details>
+
+<details id="mc-stk-err-2366">
+<summary><code>MC-STK-ERR-2366 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2366`; producer ID: `ALGEBRA-RECON-1126`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39735) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing preposition in the kernel notation.
+- Adverse evidence: The coefficient map need not be surjective as a ring map. Its kernel nevertheless has exactly the original residue field because its image contains R/p inside its fraction field. No surjectivity claim or change of point is introduced.
+
+### Change 1: `MC-STK-ERR-2366-OP1`
+
+Pinned-official lines `39735-39735`; bytes `1456428:1456434`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2367">
+<summary><code>MC-STK-ERR-2367 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2367`; producer ID: `ALGEBRA-RECON-1131`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39864) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the descended target algebra in the base-change equality.
+- Adverse evidence: The first tensor factor remains the original base R; the resulting algebra is S. The source approximation argument is preserved even though a separate direct proof is available.
+
+### Change 1: `MC-STK-ERR-2367-OP1`
+
+Pinned-official lines `39864-39864`; bytes `1461471:1461496`.
+
+````diff
+- $R = R \otimes_{R_0} S_0$
++ $S = R \otimes_{R_0} S_0$
+````
+
+Original SHA-256 `4E545FB343814277DE94A835ED792E6153D6C317C2F9DB227D5A1A584E042063`; replacement SHA-256 `D7FE844CA07ACAB2A2A0E4123EEEE1EC657E17DD705220B13AE196A63C96D50E`.
+
+</details>
+
+<details id="mc-stk-err-2368">
+<summary><code>MC-STK-ERR-2368 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2368`; producer ID: `ALGEBRA-RECON-1132`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39864) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the contracted-prime definition.
+- Adverse evidence: The prime is the contraction along the base-change map, not a new prime chosen independently.
+
+### Change 1: `MC-STK-ERR-2368-OP1`
+
+Pinned-official lines `39864-39864`; bytes `1461498:1461504`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2369">
+<summary><code>MC-STK-ERR-2369 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2369`; producer ID: `ALGEBRA-RECON-1133`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39876) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the two required localization conditions without repeating such that.
+- Adverse evidence: Testing membership through a stated ring map is conventional notation for its image; that part of the reports is not an additional mathematical defect. The original map and both localizations remain explicit in the note.
+
+### Change 1: `MC-STK-ERR-2369-OP1`
+
+Pinned-official lines `39876-39876`; bytes `1462035:1462048`.
+
+````diff
+- such that $S'
++ and $S'
+````
+
+Original SHA-256 `00CA51D2432C741CDDE14D2571A12A131DB8CB2296CD8182D7F6520FFC559DFA`; replacement SHA-256 `CCAAEBFC1E97E886550754AA13319303E30C1196C079D9483CE745F0C5D0D11F`.
+
+</details>
+
+<details id="mc-stk-err-2370">
+<summary><code>MC-STK-ERR-2370 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2370`; producer ID: `ALGEBRA-RECON-1134`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39891) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Punctuate the displayed decomposition before its citation.
+- Adverse evidence: The display still has exactly the original n local Artinian factors; the chosen field factor is not replaced by all factors.
+
+### Change 1: `MC-STK-ERR-2370-OP1`
+
+Pinned-official lines `39891-39891`; bytes `1462694:1462722`.
+
+````diff
+- \prod\nolimits_{i = 1}^n A_i
++ \prod\nolimits_{i = 1}^n A_i,
+````
+
+Original SHA-256 `392E151410946CCEC1C055076298E9D4671C1DF06B79F5AFCB062E8C0B3B50C3`; replacement SHA-256 `3B31B0877AB45BDBA689A80F887B564D905E65D3232B0903D7A5D32216E2D74A`.
+
+</details>
+
+<details id="mc-stk-err-2371">
+<summary><code>MC-STK-ERR-2371 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2371`; producer ID: `ALGEBRA-RECON-1135`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39931) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the contracted-prime definition.
+- Adverse evidence: The unique-prime and finite-cokernel arguments use the same contraction.
+
+### Change 1: `MC-STK-ERR-2371-OP1`
+
+Pinned-official lines `39931-39931`; bytes `1464220:1464226`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2372">
+<summary><code>MC-STK-ERR-2372 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2372`; producer ID: `ALGEBRA-RECON-1137`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39968) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the predicate verb in the enumerated condition.
+- Adverse evidence: The original proof uses Noetherianity here. A separate direct finite-cokernel argument proves the step without it; that proof is not substituted into the translation.
+
+### Change 1: `MC-STK-ERR-2372-OP1`
+
+Pinned-official lines `39968-39968`; bytes `1465976:1465995`.
+
+````diff
+- $S$ finite over $R$
++ $S$ is finite over $R$
+````
+
+Original SHA-256 `7441715512D6B7C7D4A1B73E1B49ECFA8852D739837762CFD27A6FC96DD09721`; replacement SHA-256 `B1CBCA5FBC23296228C5A49F23F79B7901ECE5572BE2A8CD7AB946847FFB2FAB`.
+
+</details>
+
+<details id="mc-stk-err-2373">
+<summary><code>MC-STK-ERR-2373 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2373`; producer ID: `ALGEBRA-RECON-1138`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39991) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Define the first exponent used by the following uniform indexed formula.
+- Adverse evidence: The first factor is a field and its original irreducible polynomial occurs with exponent one. This explicit index convention changes no factor or multiplicity.
+
+### Change 1: `MC-STK-ERR-2373-OP1`
+
+Pinned-official lines `39991-39991`; bytes `1467117:1467148`.
+
+````diff
+- $e_2, \ldots, e_n \geq 1$. Here
++ $e_2, \ldots, e_n \geq 1$, with $e_1 = 1$. Here
+````
+
+Original SHA-256 `D5B49415CC3AE66E4693FB098765224F576A49E7188CEDAC32CA5CCDD292BC47`; replacement SHA-256 `1524373F7DB8678CD5CC9FCB4134A0A92D5202016EA27D51D2D0664EBE8914F3`.
+
+</details>
+
+<details id="mc-stk-err-2374">
+<summary><code>MC-STK-ERR-2374 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2374`; producer ID: `ALGEBRA-RECON-1139`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40000) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the reduction notation.
+- Adverse evidence: The original monic polynomial m and its reduction remain unchanged.
+
+### Change 1: `MC-STK-ERR-2374-OP1`
+
+Pinned-official lines `40000-40000`; bytes `1467587:1467593`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2375">
+<summary><code>MC-STK-ERR-2375 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2375`; producer ID: `ALGEBRA-RECON-1141`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40117) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the root-reduction notation.
+- Adverse evidence: All actual roots and their reduction into the chosen residue field are retained.
+
+### Change 1: `MC-STK-ERR-2375-OP1`
+
+Pinned-official lines `40117-40117`; bytes `1472533:1472539`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2376">
+<summary><code>MC-STK-ERR-2376 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2376`; producer ID: `ALGEBRA-RECON-1142`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40167) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the base-prime notation.
+- Adverse evidence: This is the contraction of the specified prime in the tensor-product cover.
+
+### Change 1: `MC-STK-ERR-2376-OP1`
+
+Pinned-official lines `40167-40167`; bytes `1474670:1474676`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2377">
+<summary><code>MC-STK-ERR-2377 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2377`; producer ID: `ALGEBRA-RECON-1143`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40171) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply to be in the definition of the contracted prime.
+- Adverse evidence: The source already specifies the ring map into the tensor product. Its contraction proves the nonmembership used in the next step.
+
+### Change 1: `MC-STK-ERR-2377-OP1`
+
+Pinned-official lines `40171-40171`; bytes `1474884:1474893`.
+
+````diff
+- the image
++ to be the image
+````
+
+Original SHA-256 `97E9D7A16021E6D07FBE28CCE398F5847FC00C574991FBFF65D95FD5E032D389`; replacement SHA-256 `55E31A9E7831EFEDFF58245237A6C6C89B750B2BF328317F974A57C0FF3255BB`.
+
+</details>
+
+<details id="mc-stk-err-2378">
+<summary><code>MC-STK-ERR-2378 — algebra.tex: — conceptual_source_correction_recorded</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2378`; producer ID: `ALGEBRA-RECON-1145`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L39978-L40018) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the actual nonzero scalar introduced when lifting the monic fibre-ideal generator.
+- Adverse evidence: After rescaling the generator its leading coefficient is lambda, not automatically one. The missing factor occurs in three later polynomial equalities. R=Z,p=(3),I=(x-1),h=2(x-1),m=x-1,l=2 gives actual f=x^2-1 but the printed formula gives x^2-x. Keeping lambda preserves the simple-root argument and the theorem.
+
+### Change 1: `MC-STK-ERR-2378-OP1`
+
+Pinned-official lines `39978-39978`; bytes `1466508:1466539`.
+
+````diff
+- \lambda \in \kappa(\mathfrak p)
++ \lambda \in \kappa(\mathfrak p)^*
+````
+
+Original SHA-256 `111C5557C03FAED4DECB355A25EF68727C08DBA5B429F3BB2B9D10CB3A21E92B`; replacement SHA-256 `F162A8920B1A8EFA84590549835F26A40899F8DC6F963F1D03E6876E797B026D`.
+
+### Change 2: `MC-STK-ERR-2378-OP2`
+
+Pinned-official lines `39987-39987`; bytes `1466920:1466949`.
+
+````diff
+- \overline{h} = \overline{h}_1
++ \overline{h} = \lambda \overline{h}_1
+````
+
+Original SHA-256 `799AFD4C3CBF1BD026B5F829D567266DD40339C5120A7727D9A065586994D313`; replacement SHA-256 `E8A7C57622518AD0A1FD7CECB5A1853FE29732EB0B6587E42B45F69D60D55C44`.
+
+### Change 3: `MC-STK-ERR-2378-OP3`
+
+Pinned-official lines `40013-40013`; bytes `1468107:1468142`.
+
+````diff
+- \overline{h}_1 \overline{h}_2^{e_2}
++ \lambda \overline{h}_1 \overline{h}_2^{e_2}
+````
+
+Original SHA-256 `5CB7EF3F69FBBBD20A6E2F8D6189F3CBDCC8739647598C727F25DDE86B81A1CE`; replacement SHA-256 `8BA1FE1ED96D9F7253E238E139F50B554328422D06304B6B9DFA0496398AF8D1`.
+
+### Change 4: `MC-STK-ERR-2378-OP4`
+
+Pinned-official lines `40018-40018`; bytes `1468263:1468298`.
+
+````diff
+- \overline{h}_1(\overline{h}_2^{e_2}
++ \overline{h}_1(\lambda \overline{h}_2^{e_2}
+````
+
+Original SHA-256 `C88872B130211989B92DA87D1C9702F9F1D0C11D1801B505F9FD35F8268704F7`; replacement SHA-256 `30763EC9F44EC74C1A45ADDBEE0954F9C9740B5DDB8AD671F994951219CF43A1`.
+
+</details>
+
+<details id="mc-stk-err-2379">
+<summary><code>MC-STK-ERR-2379 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2379`; producer ID: `ALGEBRA-RECON-1149`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40210) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the predicate verb in the unit hypothesis.
+- Adverse evidence: The unit is in the original fibre algebra, including the allowed zero fibre, and is not asserted to be a unit globally before base localization.
+
+### Change 1: `MC-STK-ERR-2379-OP1`
+
+Pinned-official lines `40210-40210`; bytes `1475942:1475956`.
+
+````diff
+- $g$ invertible
++ $g$ is invertible
+````
+
+Original SHA-256 `A9C7C64978F10C0FC94EED92369482975207474BF6D70C1087A2EEAEF6350606`; replacement SHA-256 `028A859D044397A06A8AFE24296E1D92B444647ECB0C6B1E5F24E0C3F59A883B`.
+
+</details>
+
+<details id="mc-stk-err-2380">
+<summary><code>MC-STK-ERR-2380 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2380`; producer ID: `ALGEBRA-RECON-1150`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40212) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the incorrect indefinite article before f.
+- Adverse evidence: The nonmembership in the original base prime remains explicit.
+
+### Change 1: `MC-STK-ERR-2380-OP1`
+
+Pinned-official lines `40212-40212`; bytes `1476017:1476034`.
+
+````diff
+- there exists a $f
++ there exists $f
+````
+
+Original SHA-256 `97398B0294DDED665B13684960146E6F033862E7B4DDED0C26D49E928EB703F9`; replacement SHA-256 `FCD3856F0F7995737448D3CCE6B470E55DC316DBF3E8BC210878EBD2B95C14B8`.
+
+</details>
+
+<details id="mc-stk-err-2381">
+<summary><code>MC-STK-ERR-2381 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2381`; producer ID: `ALGEBRA-RECON-1151`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40219-L40220) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Repair punctuation around the specific closed-image citation.
+- Adverse evidence: The complementizer that is optional and is not inserted as a supposed requirement. Closedness follows from the actual integral map.
+
+### Change 1: `MC-STK-ERR-2381-OP1`
+
+Pinned-official lines `40219-40220`; bytes `1476262:1476363`.
+
+````diff
+- By Section \ref{section-going-up}
+- especially, Lemma \ref{lemma-going-up-closed} we see $T$ is closed.
++ By Section \ref{section-going-up},
++ especially Lemma \ref{lemma-going-up-closed}, we see $T$ is closed.
+````
+
+Original SHA-256 `84736FDC7E2F0C4E6E7978EBB14E9181624C77A59A1E80D55B4B4D05DFC56F04`; replacement SHA-256 `9CF1985A2E71DD7724DB1E48C5A3F2805892FE12F9D879130E9ED0E4F63BD6ED`.
+
+</details>
+
+<details id="mc-stk-err-2382">
+<summary><code>MC-STK-ERR-2382 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2382`; producer ID: `ALGEBRA-RECON-1152`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40232-L40424) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the finite-type predicate in the two reported hypotheses and the identical unreported middle hypothesis.
+- Adverse evidence: All three lemmas retain finite type rather than finite presentation. The mathematical proofs use finite type, integral localization and the Noetherian field fibre, not a Noetherian base.
+
+### Change 1: `MC-STK-ERR-2382-OP1`
+
+Pinned-official lines `40232-40232`; bytes `1476787:1476815`.
+
+````diff
+- Assume $R \to S$ finite type
++ Assume $R \to S$ is finite type
+````
+
+Original SHA-256 `243C8F32540C4CC1A99D7745BEAD5A5BA10D715B309296BE325F6611643A37F0`; replacement SHA-256 `43C42E514BDC74D847CA0240FC69B1F21AC09FD1CCD1C5073AA925B9ACDED728`.
+
+### Change 2: `MC-STK-ERR-2382-OP2`
+
+Pinned-official lines `40365-40365`; bytes `1481852:1481880`.
+
+````diff
+- Assume $R \to S$ finite type
++ Assume $R \to S$ is finite type
+````
+
+Original SHA-256 `243C8F32540C4CC1A99D7745BEAD5A5BA10D715B309296BE325F6611643A37F0`; replacement SHA-256 `43C42E514BDC74D847CA0240FC69B1F21AC09FD1CCD1C5073AA925B9ACDED728`.
+
+### Change 3: `MC-STK-ERR-2382-OP3`
+
+Pinned-official lines `40424-40424`; bytes `1484014:1484042`.
+
+````diff
+- Assume $R \to S$ finite type
++ Assume $R \to S$ is finite type
+````
+
+Original SHA-256 `243C8F32540C4CC1A99D7745BEAD5A5BA10D715B309296BE325F6611643A37F0`; replacement SHA-256 `43C42E514BDC74D847CA0240FC69B1F21AC09FD1CCD1C5073AA925B9ACDED728`.
+
+</details>
+
+<details id="mc-stk-err-2383">
+<summary><code>MC-STK-ERR-2383 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2383`; producer ID: `ALGEBRA-RECON-1154`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40272) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the bar identifying the closed point of the fibre spectrum.
+- Adverse evidence: The integral-over-field argument proves closedness of the fibre point. The corresponding prime of the integral algebra need not be closed; Z at its generic point gives the exact distinction.
+
+### Change 1: `MC-STK-ERR-2383-OP1`
+
+Pinned-official lines `40272-40272`; bytes `1478441:1478455`.
+
+````diff
+- $\mathfrak q'$
++ $\overline{\mathfrak q}'$
+````
+
+Original SHA-256 `05F131160136B30F14F27CB66EAA51ED0D8DDAF7AFFA6F28C1070443DAA0C009`; replacement SHA-256 `7CA93B092C5A6B73804A4DF1DFC9C33616D04B98DC31415318F6EBBE76AA6111`.
+
+</details>
+
+<details id="mc-stk-err-2384">
+<summary><code>MC-STK-ERR-2384 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2384`; producer ID: `ALGEBRA-RECON-1155`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40259) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the fibre-prime notation.
+- Adverse evidence: The prime remains the one corresponding to the original contraction.
+
+### Change 1: `MC-STK-ERR-2384-OP1`
+
+Pinned-official lines `40259-40259`; bytes `1477783:1477789`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2385">
+<summary><code>MC-STK-ERR-2385 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2385`; producer ID: `ALGEBRA-RECON-1156`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40295) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the reduced-polynomial notation.
+- Adverse evidence: The original monic annihilating polynomial is retained, including its optional multiplication by x before factorization.
+
+### Change 1: `MC-STK-ERR-2385-OP1`
+
+Pinned-official lines `40295-40295`; bytes `1479388:1479394`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2386">
+<summary><code>MC-STK-ERR-2386 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2386`; producer ID: `ALGEBRA-RECON-1160`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40381-L40442) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing predicate at both remainder conclusions, accounting once for the shared report.
+- Adverse evidence: The conclusion is restricted to primes above the specified base prime. It does not assert that the remainder is zero or that it has no quasi-finite points elsewhere.
+
+### Change 1: `MC-STK-ERR-2386-OP1`
+
+Pinned-official lines `40381-40381`; bytes `1482367:1482394`.
+
+````diff
+- $R' \to B$ not quasi-finite
++ $R' \to B$ is not quasi-finite
+````
+
+Original SHA-256 `D87C7DA5324852A934D777542D53D0984BA28AC9994273BF757C7F1DCD1B0407`; replacement SHA-256 `DC1215EF250422A3F55C490465AF255236EB2DAA96B4389F73631A35545E3635`.
+
+### Change 2: `MC-STK-ERR-2386-OP2`
+
+Pinned-official lines `40442-40442`; bytes `1484572:1484599`.
+
+````diff
+- $R' \to B$ not quasi-finite
++ $R' \to B$ is not quasi-finite
+````
+
+Original SHA-256 `D87C7DA5324852A934D777542D53D0984BA28AC9994273BF757C7F1DCD1B0407`; replacement SHA-256 `DC1215EF250422A3F55C490465AF255236EB2DAA96B4389F73631A35545E3635`.
+
+</details>
+
+<details id="mc-stk-err-2387">
+<summary><code>MC-STK-ERR-2387 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2387`; producer ID: `ALGEBRA-RECON-1161`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40386) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the fibre-ring notation.
+- Adverse evidence: The fibre field is the original residue field, preserved by the subsequent pointed etale steps.
+
+### Change 1: `MC-STK-ERR-2387-OP1`
+
+Pinned-official lines `40386-40386`; bytes `1482478:1482484`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2388">
+<summary><code>MC-STK-ERR-2388 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2388`; producer ID: `ALGEBRA-RECON-1162`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40409) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Punctuate the completed displayed decomposition.
+- Adverse evidence: The already extracted finite factor is base changed separately and retained in the next display.
+
+### Change 1: `MC-STK-ERR-2388-OP1`
+
+Pinned-official lines `40409-40409`; bytes `1483568:1483605`.
+
+````diff
+- A_2 \times \ldots \times A_n \times B
++ A_2 \times \ldots \times A_n \times B.
+````
+
+Original SHA-256 `FBF0C3BBB9F473EF5BE8E1A056796C23B61081EDB8920142FE28B98515C72BBE`; replacement SHA-256 `7F0827E88E9F2517D650C02780E99902C233EA326F42CB0E1F9B7A01342BB2FE`.
+
+</details>
+
+<details id="mc-stk-err-2389">
+<summary><code>MC-STK-ERR-2389 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2389`; producer ID: `ALGEBRA-RECON-1165`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40455) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the finite-count typographical error once for both reports.
+- Adverse evidence: The count is of isolated closed points in the fixed finite type field fibre, not all primes of the source.
+
+### Change 1: `MC-STK-ERR-2389-OP1`
+
+Pinned-official lines `40455-40455`; bytes `1485046:1485065`.
+
+````diff
+- finitely may primes
++ finitely many primes
+````
+
+Original SHA-256 `B3ABF1430773FCC3A15BA51CBD6FEA7B160C53553062E8CA57DF2CAE25B26D28`; replacement SHA-256 `81323116C5466E4C6D913210B6C1CA83E618FE6955357031A3B2632833A01D69`.
+
+</details>
+
+<details id="mc-stk-err-2390">
+<summary><code>MC-STK-ERR-2390 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2390`; producer ID: `ALGEBRA-RECON-1166`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40457) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the actual base prime below the selected source primes.
+- Adverse evidence: The fibre was fixed at mathfrak p. Replacing it by the entire base ring is not the asserted prime-contraction relation.
+
+### Change 1: `MC-STK-ERR-2390-OP1`
+
+Pinned-official lines `40457-40457`; bytes `1485128:1485140`.
+
+````diff
+- $R$ at which
++ $\mathfrak p$ at which
+````
+
+Original SHA-256 `A0A12521807A2337F46B8F1F698BFF29DDDCB9BB22E0B23128F447027C5B376A`; replacement SHA-256 `E1153A519C975E95B2EDA3BB210B04B4FD20993F434C68EC4A45E6C8A2CF5F30`.
+
+</details>
+
+<details id="mc-stk-err-2391">
+<summary><code>MC-STK-ERR-2391 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2391`; producer ID: `ALGEBRA-RECON-1167`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40452) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the preposition in the fibre-ring notation.
+- Adverse evidence: The subsequent separable and purely inseparable degrees are computed over this same residue field.
+
+### Change 1: `MC-STK-ERR-2391-OP1`
+
+Pinned-official lines `40452-40452`; bytes `1484870:1484876`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2392">
+<summary><code>MC-STK-ERR-2392 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2392`; producer ID: `ALGEBRA-RECON-1170`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40514) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the indefinite article before t once for both reports.
+- Adverse evidence: Retain t in the original maximal ideal and all powers n greater than or equal to one.
+
+### Change 1: `MC-STK-ERR-2392-OP1`
+
+Pinned-official lines `40514-40514`; bytes `1487416:1487434`.
+
+````diff
+- there exists an $t
++ there exists a $t
+````
+
+Original SHA-256 `9FF1BDF9CE81E5068741A78EE5C4F0593072BF596676F72D5D3CA6372F390F69`; replacement SHA-256 `96EA691563C7FFA0C2009122C0CA9922116C80889DE48CA03ED68149F53A7CD3`.
+
+</details>
+
+<details id="mc-stk-err-2393">
+<summary><code>MC-STK-ERR-2393 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2393`; producer ID: `ALGEBRA-RECON-1171`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40515) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the spelling once for both reports.
+- Adverse evidence: The canonical quotient maps, rather than unspecified isomorphisms, are asserted and proved.
+
+### Change 1: `MC-STK-ERR-2393-OP1`
+
+Pinned-official lines `40515-40515`; bytes `1487490:1487500`.
+
+````diff
+- isomorphsm
++ isomorphism
+````
+
+Original SHA-256 `9F0FAF9BD432D062BA9AB6CE8951B144C9BEDC4207119D31C6059DF413512F68`; replacement SHA-256 `F957527849F4676C366D5C78CEF6CE9DB35D404F5F4BC7149C2D117CB931B675`.
+
+</details>
+
+<details id="mc-stk-err-2394">
+<summary><code>MC-STK-ERR-2394 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2394`; producer ID: `ALGEBRA-RECON-1172`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40536) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the conjunction joining the derivative predicate and its consequence.
+- Adverse evidence: The derivative being a unit implies nonmembership in the exact prime. The source degree-one boundary is explained editorially without replacing its proof.
+
+### Change 1: `MC-STK-ERR-2394-OP1`
+
+Pinned-official lines `40536-40536`; bytes `1488412:1488449`.
+
+````diff
+- in $T$ in particular is not contained
++ in $T$ and in particular is not contained
+````
+
+Original SHA-256 `E782633B16EE69C5AF7417F9EC9E729A1F97AD5D083B09BD8B0B8A84FB3553BC`; replacement SHA-256 `2D87B5A8D454247E20397883264B2B27E4DDD53000487D3DDD9A0D2601BAABE9`.
+
+</details>
+
+<details id="mc-stk-err-2395">
+<summary><code>MC-STK-ERR-2395 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2395`; producer ID: `ALGEBRA-RECON-1173`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40564) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the period which cuts the sentence before its of-the-ring-map complement.
+- Adverse evidence: The map still ends in the actual local ring; no claim that all denominators invert on one principal neighbourhood is introduced.
+
+### Change 1: `MC-STK-ERR-2395-OP1`
+
+Pinned-official lines `40564-40564`; bytes `1489841:1489871`.
+
+````diff
+- R \to S \to S'_{\mathfrak m'}.
++ R \to S \to S'_{\mathfrak m'}
+````
+
+Original SHA-256 `ACB2731F649F4DF9726E31589305DB5C59A967A6E5871AF565AB8DB9D7EF938C`; replacement SHA-256 `3D602900D6084C72722C8E2E7F0200701DAAE488BC03A7B2C75035320DA1E0B2`.
+
+</details>
+
+<details id="mc-stk-err-2396">
+<summary><code>MC-STK-ERR-2396 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2396`; producer ID: `ALGEBRA-RECON-1175`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40684-L40686) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore both actual endpoints in the differentiated product over all p roots, counting the two reports once.
+- Adverse evidence: Keep the omitted i-factor, p times alpha_i to power p-1, and every root index. The resulting product is a unit, including p=2. The stronger d less than or equal to p boundary is separate editorial material.
+
+### Change 1: `MC-STK-ERR-2396-OP1`
+
+Pinned-official lines `40684-40684`; bytes `1494342:1494363`.
+
+````diff
+- (\alpha_i - \alpha_1)
++ (\alpha_i - \alpha_0)
+````
+
+Original SHA-256 `C42B2D32E95C703EAC021AC5C9D98BF7BF40FB511BDE36678A4D7961F5206A5E`; replacement SHA-256 `210020F97CEA252F020904B8D651FDC7E538477D68192EFFEEFB25FE5FEB684B`.
+
+### Change 2: `MC-STK-ERR-2396-OP2`
+
+Pinned-official lines `40686-40686`; bytes `1494410:1494431`.
+
+````diff
+- (\alpha_i - \alpha_1)
++ (\alpha_i - \alpha_{p - 1})
+````
+
+Original SHA-256 `C42B2D32E95C703EAC021AC5C9D98BF7BF40FB511BDE36678A4D7961F5206A5E`; replacement SHA-256 `04F5C5F40B33CDA427A61B2E2D99A0C8CC778D4BE585564A13A66E8FAD80FD50`.
+
+</details>
+
+<details id="mc-stk-err-2397">
+<summary><code>MC-STK-ERR-2397 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2397`; producer ID: `ALGEBRA-RECON-1178`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40760) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use plural agreement for the two coordinated operations.
+- Adverse evidence: The finite-coefficient and eventual-zero proof establishes the claimed comparison even with noninjective filtered transition maps.
+
+### Change 1: `MC-STK-ERR-2397-OP1`
+
+Pinned-official lines `40760-40760`; bytes `1497274:1497305`.
+
+````diff
+- commutes with filtered colimits
++ commute with filtered colimits
+````
+
+Original SHA-256 `2C93828CA76AEAB938F977AF039A9F1354066385FCFFDC2B1BAE2E17CA4BF112`; replacement SHA-256 `755ED21B04E56F44AB657A27810DD3D397F6E61918A671ECA38A0375B5BD0732`.
+
+</details>
+
+<details id="mc-stk-err-2398">
+<summary><code>MC-STK-ERR-2398 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2398`; producer ID: `ALGEBRA-RECON-1183`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40898) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the lemma sentence.
+- Adverse evidence: The source directed-colimit claim is valid; stronger small-diagram closure is separate.
+
+### Change 1: `MC-STK-ERR-2398-OP1`
+
+Pinned-official lines `40898-40898`; bytes `1501658:1501689`.
+
+````diff
+- is formally unramified over $R$
++ is formally unramified over $R$.
+````
+
+Original SHA-256 `380B7BB6196B8DB68694BA430EA961C680BD65F93AF725D4BE5F18BE1E469F3D`; replacement SHA-256 `5C5C73D41BCBA667CD890A80F5DAF30816A33E3DB1212F6C2AA35D91BDDA0D6C`.
+
+</details>
+
+<details id="mc-stk-err-2399">
+<summary><code>MC-STK-ERR-2399 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2399`; producer ID: `ALGEBRA-RECON-1185`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40950) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the decomposition sentence.
+- Adverse evidence: The chosen splitting is retained; the conormal kernel is independent up to the unique universal comparison.
+
+### Change 1: `MC-STK-ERR-2399-OP1`
+
+Pinned-official lines `40950-40950`; bytes `1503561:1503602`.
+
+````diff
+- J/J^2 = K \oplus \Omega_{P/R} \otimes_P S
++ J/J^2 = K \oplus \Omega_{P/R} \otimes_P S.
+````
+
+Original SHA-256 `9DCCEA91BF3DDAF159253892C86BD9F638FDE3C37ACB7A32BFDA226863E21E9D`; replacement SHA-256 `B743E28082710E3366CFA38BEE174E2FC5B6B1A7C306DE6A5A68DAE419F29F86`.
+
+</details>
+
+<details id="mc-stk-err-2400">
+<summary><code>MC-STK-ERR-2400 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2400`; producer ID: `ALGEBRA-RECON-1186`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40990) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the sum defining the universal differential once for both reports.
+- Adverse evidence: Every polynomial uses finitely many variables; keep all terms and the source tensor with one. The Taylor correction uses the same complete sum.
+
+### Change 1: `MC-STK-ERR-2400-OP1`
+
+Pinned-official lines `40990-40990`; bytes `1505132:1505173`.
+
+````diff
+- g \mapsto \frac{\partial g}{\partial x_i}
++ g \mapsto \sum_i \frac{\partial g}{\partial x_i}
+````
+
+Original SHA-256 `2D48F76A528C54ECDE1198AA7AFBBB4CC1E0DF5E2ECE9F70505D46B584BC6456`; replacement SHA-256 `22E43DD2908BBFFE46CF83364A33C489297355164B78779163670CA9D7A074A4`.
+
+</details>
+
+<details id="mc-stk-err-2401">
+<summary><code>MC-STK-ERR-2401 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2401`; producer ID: `ALGEBRA-RECON-1187`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L40987) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the Taylor identity sentence.
+- Adverse evidence: The omitted higher terms vanish by the actual square-zero target ideal, not a finiteness assumption.
+
+### Change 1: `MC-STK-ERR-2401-OP1`
+
+Pinned-official lines `40987-40987`; bytes `1504971:1505045`.
+
+````diff
+- \beta(g) + \sum\nolimits_i \delta_i \beta(\frac{\partial g}{\partial x_i})
++ \beta(g) + \sum\nolimits_i \delta_i \beta(\frac{\partial g}{\partial x_i}).
+````
+
+Original SHA-256 `14CC905BD56EC626A784D8E222D558975C3A82BA7BB5F0E71534439252DB7130`; replacement SHA-256 `251AE5170FC47F88193D7FFDCA26329DFD67013AF3C3902C93DEFBE2DCA0A87A`.
+
+</details>
+
+<details id="mc-stk-err-2402">
+<summary><code>MC-STK-ERR-2402 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2402`; producer ID: `ALGEBRA-RECON-1190`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41120) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the actual square-zero kernel of B prime to B at both occurrences in this line.
+- Adverse evidence: J prime/J squared is not an ideal of B prime. The correct kernel is J/J prime and its square is zero. The nilpotent quotient argument works for arbitrarily many generators.
+
+### Change 1: `MC-STK-ERR-2402-OP1`
+
+Pinned-official lines `41120-41120`; bytes `1510452:1510521`.
+
+````diff
+- $J'/J^2$ by construction. Since $J'/J^2$ is a nilpotent ideal, we see
++ $J/J'$ by construction. Since $J/J'$ is a nilpotent ideal, we see
+````
+
+Original SHA-256 `20A992422A4A3D4967812E4988633F6E8E4EF09D4027CC5AB84E4CC96000F876`; replacement SHA-256 `3EB9A2166D66846B9EADDA0A9D7F4A153EDC48CE750B134F7A10DDD5D04E1A0B`.
+
+</details>
+
+<details id="mc-stk-err-2403">
+<summary><code>MC-STK-ERR-2403 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2403`; producer ID: `ALGEBRA-RECON-1191`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41142) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the tensored exact-sequence sentence.
+- Adverse evidence: Right exactness is sufficient here; no left exactness of tensoring is asserted.
+
+### Change 1: `MC-STK-ERR-2403-OP1`
+
+Pinned-official lines `41142-41142`; bytes `1511205:1511239`.
+
+````diff
+- \Omega_{B'/R} \otimes_{B'} B \to 0
++ \Omega_{B'/R} \otimes_{B'} B \to 0.
+````
+
+Original SHA-256 `29D5DC1D9FC7FF2A3A0239EFE37A3B639A8EA1CB7A3A018E49E3D6D1B69289CD`; replacement SHA-256 `C94DF6954A6FB7A74BFA40A630FE5E9269F1FE46B20BACFBCDED9F632657E767`.
+
+</details>
+
+<details id="mc-stk-err-2404">
+<summary><code>MC-STK-ERR-2404 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2404`; producer ID: `ALGEBRA-RECON-1192`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41148) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the reference to the preceding direct-sum decomposition.
+- Adverse evidence: The adjacent mathematical graph correction is recorded independently in1202, rather than attributed to this wording report.
+
+### Change 1: `MC-STK-ERR-2404-OP1`
+
+Pinned-official lines `41148-41148`; bytes `1511479:1511486`.
+
+````diff
+- $ given
++ $ given above,
+````
+
+Original SHA-256 `2E4301AADC449FDD02C34E3DBF9F1DA0A8DA7F0B4F18550B9E409248AD800A89`; replacement SHA-256 `5B19C2939F53505C3526A3510D8C7730FF88EE4E31FA0EE96739F874D1FA3C51`.
+
+</details>
+
+<details id="mc-stk-err-2405">
+<summary><code>MC-STK-ERR-2405 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2405`; producer ID: `ALGEBRA-RECON-1193`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41229) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the formal-etale colimit sentence.
+- Adverse evidence: Compatibility of the unique lifts is proved for each transition map.
+
+### Change 1: `MC-STK-ERR-2405-OP1`
+
+Pinned-official lines `41229-41229`; bytes `1513663:1513691`.
+
+````diff
+- is formally \'etale over $R$
++ is formally \'etale over $R$.
+````
+
+Original SHA-256 `9B5AD68351D5E92B2073306D97DC2E75E1380465640ED01D7ACD339B21CB25AB`; replacement SHA-256 `E4F5FF84527DFC345B4739BCE88C6E2D9E730C50FBF61DFA8A133E4801C55680`.
+
+</details>
+
+<details id="mc-stk-err-2406">
+<summary><code>MC-STK-ERR-2406 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2406`; producer ID: `ALGEBRA-RECON-1195`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41282) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the sentence after the three lifting diagrams.
+- Adverse evidence: The two inverse quotient maps are proved using nilpotent uniqueness, with each original ideal power retained.
+
+### Change 1: `MC-STK-ERR-2406-OP1`
+
+Pinned-official lines `41282-41282`; bytes `1515352:1515353`.
+
+````diff
+- }
++ }.
+````
+
+Original SHA-256 `D10B36AA74A59BCF4A88185837F658AFAF3646EFF2BB16C3928D0E9335E945D2`; replacement SHA-256 `A07651E925719C3D0891BAF3DFAC14A3603AAD05149E0183D3447E3DA30976DB`.
+
+</details>
+
+<details id="mc-stk-err-2407">
+<summary><code>MC-STK-ERR-2407 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2407`; producer ID: `ALGEBRA-RECON-1196`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41294) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the undefined base in the diagonal ideal.
+- Adverse evidence: All original maps are relative to R; both tensor actions and the diagonal multiplication remain unchanged.
+
+### Change 1: `MC-STK-ERR-2407-OP1`
+
+Pinned-official lines `41294-41294`; bytes `1515759:1515777`.
+
+````diff
+- S' \otimes_{R'} S'
++ S' \otimes_R S'
+````
+
+Original SHA-256 `4FF2B6DB807ACD199C72C79B3D3A349084C1E8A664CF545FCB1DDCEB0A4A7AE2`; replacement SHA-256 `F981F0AC0146355E76EE3F36CBD6A4634631BC8EC22F1A7875AA9A0852B765A2`.
+
+</details>
+
+<details id="mc-stk-err-2408">
+<summary><code>MC-STK-ERR-2408 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2408`; producer ID: `ALGEBRA-RECON-1197`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41323) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use extension of the original S-module along S to S prime.
+- Adverse evidence: Tensoring over R would change the module and already contradict the k=0 case. The proof keeps the right S action on diagonal principal parts.
+
+### Change 1: `MC-STK-ERR-2408-OP1`
+
+Pinned-official lines `41323-41323`; bytes `1516935:1516954`.
+
+````diff
+- M' = S' \otimes_R M
++ M' = S' \otimes_S M
+````
+
+Original SHA-256 `B1663FA06ED43DF0701159D6D1C8DFCF61B6CF80570C99E8137751324CBAB998`; replacement SHA-256 `042B992AF93C534D5760F28EE298DBEB1A1D2C90851DB81EBC0EBB13DA0EC7EC`.
+
+</details>
+
+<details id="mc-stk-err-2409">
+<summary><code>MC-STK-ERR-2409 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2409`; producer ID: `ALGEBRA-RECON-1198`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41325) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the principal-parts comparison sentence.
+- Adverse evidence: The canonical isomorphism has both tensor actions specified in the editorial proof.
+
+### Change 1: `MC-STK-ERR-2409-OP1`
+
+Pinned-official lines `41325-41325`; bytes `1516973:1517015`.
+
+````diff
+- S' \otimes_S P^k_{S/R}(M) = P^k_{S'/R}(M')
++ S' \otimes_S P^k_{S/R}(M) = P^k_{S'/R}(M').
+````
+
+Original SHA-256 `64722C735184E9BBD981059879FEE93068F8522E060795905A08DC502B190006`; replacement SHA-256 `9B44914007C402D8D5F9180AE2AFE905452D0738703378C4CB60026B49C7FE14`.
+
+</details>
+
+<details id="mc-stk-err-2410">
+<summary><code>MC-STK-ERR-2410 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2410`; producer ID: `ALGEBRA-RECON-1199`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41349) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the actual common base in the last principal-parts term.
+- Adverse evidence: R prime has not been introduced; this correction agrees with the statement and diagonal algebra.
+
+### Change 1: `MC-STK-ERR-2410-OP1`
+
+Pinned-official lines `41349-41349`; bytes `1517733:1517748`.
+
+````diff
+- P^k_{S'/R'}(M')
++ P^k_{S'/R}(M')
+````
+
+Original SHA-256 `2F7213D599364EEAF68BC7F067A24BFAB9B8F6664BF961749302DF0F6F257DD5`; replacement SHA-256 `329F0130237F883D1A43582425220CF29DCF37A123F3357A17C221059235DDBE`.
+
+</details>
+
+<details id="mc-stk-err-2411">
+<summary><code>MC-STK-ERR-2411 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2411`; producer ID: `ALGEBRA-RECON-1201`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41356-L41357) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct all three scalar-extension bases in the operator construction once for both reports.
+- Adverse evidence: The original gamma is S-linear, and its extended map has the same S-base tensor in domain and codomain. Retain the corrected factorization D=gamma composed with D_univ from924.
+
+### Change 1: `MC-STK-ERR-2411-OP1`
+
+Pinned-official lines `41356-41356`; bytes `1518042:1518056`.
+
+````diff
+- S' \otimes_R N
++ S' \otimes_S N
+````
+
+Original SHA-256 `BB1D1DD3D98E06CC611C6988968AA89446D4CD0D47364D9203CB9FB012D2D16E`; replacement SHA-256 `B3CFA541A726B94673B295AF47DA2A11F0C97C26A0F8ECBEAF2D5D178E82EF8A`.
+
+### Change 2: `MC-STK-ERR-2411-OP2`
+
+Pinned-official lines `41357-41357`; bytes `1518107:1518132`.
+
+````diff
+- S' \otimes_R P^k_{S/R}(M)
++ S' \otimes_S P^k_{S/R}(M)
+````
+
+Original SHA-256 `D63353B85C0B81C00545204B332B4D84358E572D70E2C536C99E240FD322CCB2`; replacement SHA-256 `19C3D4679F4F9F2B871D05D86766D3A38B346830021B732E26E4AE816B35F61C`.
+
+### Change 3: `MC-STK-ERR-2411-OP3`
+
+Pinned-official lines `41357-41357`; bytes `1518137:1518151`.
+
+````diff
+- S' \otimes_R N
++ S' \otimes_S N
+````
+
+Original SHA-256 `BB1D1DD3D98E06CC611C6988968AA89446D4CD0D47364D9203CB9FB012D2D16E`; replacement SHA-256 `B3CFA541A726B94673B295AF47DA2A11F0C97C26A0F8ECBEAF2D5D178E82EF8A`.
+
+</details>
+
+<details id="mc-stk-err-2412">
+<summary><code>MC-STK-ERR-2412 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2412`; producer ID: `ALGEBRA-RECON-1202`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41149-L41150) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the source identification of a graph with the second direct summand.
+- Adverse evidence: For f_i=sum a_i,nu x^nu, df_i=(sum d(a_i,nu) tensor z^nu,dx_i). The image is the graph of these full base-differential terms; projection is an isomorphism. The exact inverse quotient map (e,v) maps to e-eta(v) proves the stated theorem. The example A=k[t],f=x-t has df=dx-dt and refutes the printed intermediate claim.
+
+### Change 1: `MC-STK-ERR-2412-OP1`
+
+Pinned-official lines `41149-41150`; bytes `1511487:1511605`.
+
+````diff
+- we see that the submodule $(f_i)/(J')^2 \otimes_{B'} B$ maps
+- isomorphically onto the summand $\bigoplus B\text{d}x_i$.
++ we see that the image of the first arrow projects
++ isomorphically onto the summand $\bigoplus B\text{d}x_i$.
+````
+
+Original SHA-256 `D53F433C31AA5A0669CC20EE56D9D992675DB633384EE3BA2585647B4A99D682`; replacement SHA-256 `35B11CA008917611DA67F1BD32C381D68A0059AC96FF86F09E72E9D6522A0E0D`.
+
+</details>
+
+<details id="mc-stk-err-2413">
+<summary><code>MC-STK-ERR-2413 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2413`; producer ID: `ALGEBRA-RECON-1203`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41369) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the central scalar base of the differential-operator algebra.
+- Adverse evidence: For S=Q[x],M=S, the derivative and multiplication by x have commutator the identity, so natural S scalars are not central. Every differential operator is R-linear; the resulting possibly noncommutative R-algebra acts by the proven extension functor.
+
+### Change 1: `MC-STK-ERR-2413-OP1`
+
+Pinned-official lines `41369-41369`; bytes `1518755:1518775`.
+
+````diff
+- over the $S$-algebra
++ over the (possibly noncommutative) $R$-algebra
+````
+
+Original SHA-256 `58AD99CE10FBBF8B726A0919E1A5625700D92F2FF343CB72CFED6BA39F767AC4`; replacement SHA-256 `3B9175142A59BD12E0DE4F2681B0D4A834133694C2D6E7B11DF06CC23EABEE9D`.
+
+</details>
+
+<details id="mc-stk-err-2414">
+<summary><code>MC-STK-ERR-2414 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2414`; producer ID: `ALGEBRA-RECON-1207`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41382) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the indefinite article once for both reports.
+- Adverse evidence: The source comparison with EGA terminology remains unchanged.
+
+### Change 1: `MC-STK-ERR-2414-OP1`
+
+Pinned-official lines `41382-41382`; bytes `1518978:1518993`.
+
+````diff
+- an G-unramified
++ a G-unramified
+````
+
+Original SHA-256 `A0D05F0A04B0E130B788791215717C6982F0F2A549AA62685E830C9C7984D257`; replacement SHA-256 `130559027A06A605D0F571EE1001756DFEF606647EADB459307706C3936FEA5D`.
+
+</details>
+
+<details id="mc-stk-err-2415">
+<summary><code>MC-STK-ERR-2415 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2415`; producer ID: `ALGEBRA-RECON-1208`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41448) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the full finite-presentation alternative.
+- Adverse evidence: The G-unramified branch requires the same finite-presentation hypothesis as the preceding parallel tests; no global finiteness assumption is weakened.
+
+### Change 1: `MC-STK-ERR-2415-OP1`
+
+Pinned-official lines `41448-41448`; bytes `1521748:1521784`.
+
+````diff
+- of finite type (resp.\ presentation)
++ of finite type (resp.\ finite presentation)
+````
+
+Original SHA-256 `E934D7D303D01E53C81C69C1BC9D65A86675E30774187F14295C9039EDB06120`; replacement SHA-256 `F26DC4560A672273964E65B054807D629E6D694343B3E605DF5F9E4703033BBD`.
+
+</details>
+
+<details id="mc-stk-err-2416">
+<summary><code>MC-STK-ERR-2416 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2416`; producer ID: `ALGEBRA-RECON-1209`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41477) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Cite the actual permanence lemma for composition.
+- Adverse evidence: The replaced reference concerns scalar base change; the exact composition lemma proves both finite-type and finite-presentation transitivity.
+
+### Change 1: `MC-STK-ERR-2416-OP1`
+
+Pinned-official lines `41477-41477`; bytes `1523138:1523166`.
+
+````diff
+- lemma-base-change-finiteness
++ lemma-compose-finite-type
+````
+
+Original SHA-256 `0EE03BB215A286ECFEF6A5386EB9E5D0B307C6D22A6170F82118BB84F2DB9643`; replacement SHA-256 `077C993D27B74274717D2192C5794F6AE9FCDC79E1E92EF920EDC3EF668BFD7B`.
+
+</details>
+
+<details id="mc-stk-err-2417">
+<summary><code>MC-STK-ERR-2417 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2417`; producer ID: `ALGEBRA-RECON-1210`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41519-L41520) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the principal-neighbourhood definition and the proved finite-cover gluing assertion.
+- Adverse evidence: Items (6) and (7) already assume global finite type or presentation, absent here. The definition gives local neighbourhoods, quasi-compactness gives a finite cover, and (10) supplies global finiteness and differential vanishing.
+
+### Change 1: `MC-STK-ERR-2417-OP1`
+
+Pinned-official lines `41519-41520`; bytes `1524624:1524713`.
+
+````diff
+- Ad (11). Follows from (6) and (7) and the fact that the spectrum of $S$
+- is quasi-compact.
++ Ad (11). Follows from (10), the definition of being unramified
++ (resp.\ G-unramified) at a prime, and quasi-compactness of $\Spec(S)$.
+````
+
+Original SHA-256 `220BA31AD9F9E77B96A9D551B3FF5D362654E12BE78D660E00EB2E42580A5946`; replacement SHA-256 `B911A000E4A141CCE7AA9D9D5397D111D9B69D33713566D17DCF6E7A2AECBF1B`.
+
+</details>
+
+<details id="mc-stk-err-2418">
+<summary><code>MC-STK-ERR-2418 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2418`; producer ID: `ALGEBRA-RECON-1211`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41574) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the original equality to its maximal-ideal predicate.
+- Adverse evidence: Retain both original ideals and the actual local ring. The fibre is the original finite separable residue field.
+
+### Change 1: `MC-STK-ERR-2418-OP1`
+
+Pinned-official lines `41574-41574`; bytes `1526524:1526596`.
+
+````diff
+- \item we have $\mathfrak p S_{\mathfrak q} = \mathfrak qS_{\mathfrak q}$
++ \item we have $\mathfrak p S_{\mathfrak q} = \mathfrak qS_{\mathfrak q}$, which
+````
+
+Original SHA-256 `3E09ED242AF8BEA8E50011274806A991716439F0194A1F942144B798B4175AC2`; replacement SHA-256 `342201AF8E86AF77B806E50C86A1082DE83366CD38095F6E2357AA741DB41430`.
+
+</details>
+
+<details id="mc-stk-err-2419">
+<summary><code>MC-STK-ERR-2419 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2419`; producer ID: `ALGEBRA-RECON-1212`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41663) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use plural agreement for the two cited results.
+- Adverse evidence: The equivalence retains finite presentation; flat unramified alone is not substituted.
+
+### Change 1: `MC-STK-ERR-2419-OP1`
+
+Pinned-official lines `41663-41663`; bytes `1530016:1530042`.
+
+````diff
+- shows that (3) implies (1)
++ show that (3) implies (1)
+````
+
+Original SHA-256 `FED38F55C5559A6F6E8E12CADEABDB1393E60DF4ACAF9A7CA6AD76F53C69BB46`; replacement SHA-256 `1C58DCE1EF5FF9CC3BC3A8ACE43D13AD8CB1895BC0879B7C1D205C1929B94C1A`.
+
+</details>
+
+<details id="mc-stk-err-2420">
+<summary><code>MC-STK-ERR-2420 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2420`; producer ID: `ALGEBRA-RECON-1213`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41703) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the modal spelling once for both reports.
+- Adverse evidence: The dimension formula is checked at the actual contracted maximal ideal, with base dimension n and zero-dimensional fibre.
+
+### Change 1: `MC-STK-ERR-2420-OP1`
+
+Pinned-official lines `41703-41703`; bytes `1531864:1531875`.
+
+````diff
+- we my apply
++ we may apply
+````
+
+Original SHA-256 `E22BB9754AC32B67659DB0F39B63AFF1715A2DC1C309A361B58A71A5C3B730EE`; replacement SHA-256 `819BB82CC335D8EBE9CCDC9341D8545683D4A677E3C5D432BA18AD7D813DD0F0`.
+
+</details>
+
+<details id="mc-stk-err-2421">
+<summary><code>MC-STK-ERR-2421 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2421`; producer ID: `ALGEBRA-RECON-1215`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41759-L41760) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the repeated clause and make the stated map explicit once for both reports.
+- Adverse evidence: Testing prime membership via the given map is conventional and is not independently a mathematical defect. The source needs the image outside the prime, which the replacement states explicitly.
+
+### Change 1: `MC-STK-ERR-2421-OP1`
+
+Pinned-official lines `41759-41760`; bytes `1533874:1533942`.
+
+````diff
+- an element $g' \in S'$ such that
+- $g' \not \in \mathfrak q$ such that
++ an element $g' \in S'$ whose image in $S$
++ does not belong to $\mathfrak q$, such that
+````
+
+Original SHA-256 `B7D66EFE9C61914A003520BC91E65B8C1623F4CCB5F9D2C7F5555069721051CD`; replacement SHA-256 `820E86B34A81F64B2C010392A0F86026F17904086C53556931BAB2463A91B574`.
+
+</details>
+
+<details id="mc-stk-err-2422">
+<summary><code>MC-STK-ERR-2422 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2422`; producer ID: `ALGEBRA-RECON-1216`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41853) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the copula in the list of reduced assumptions.
+- Adverse evidence: The Noetherian finite-module argument and the original finiteness claim are unchanged.
+
+### Change 1: `MC-STK-ERR-2422-OP1`
+
+Pinned-official lines `41853-41853`; bytes `1537876:1537895`.
+
+````diff
+- $S$ finite over $R$
++ $S$ is finite over $R$
+````
+
+Original SHA-256 `7441715512D6B7C7D4A1B73E1B49ECFA8852D739837762CFD27A6FC96DD09721`; replacement SHA-256 `B1CBCA5FBC23296228C5A49F23F79B7901ECE5572BE2A8CD7AB946847FFB2FAB`.
+
+</details>
+
+<details id="mc-stk-err-2423">
+<summary><code>MC-STK-ERR-2423 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2423`; producer ID: `ALGEBRA-RECON-1217`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41862) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Place the monic generator in the actual polynomial PID.
+- Adverse evidence: The fibre ideal is proper and nonzero at the specified point; its monic generator is not a nonzero constant in the coefficient field.
+
+### Change 1: `MC-STK-ERR-2423-OP1`
+
+Pinned-official lines `41862-41862`; bytes `1538296:1538332`.
+
+````diff
+- \overline{h} \in \kappa(\mathfrak p)
++ \overline{h} \in \kappa(\mathfrak p)[x]
+````
+
+Original SHA-256 `7E09D7E3A73847D354FAB5F4BC386FCB8D52CCB4BA247D86062CA5C4227495C6`; replacement SHA-256 `905E0A4525C3D9DE85D1652C84508717EE3CAC567D7D889AFB28FFC4FAAB8703`.
+
+</details>
+
+<details id="mc-stk-err-2424">
+<summary><code>MC-STK-ERR-2424 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2424`; producer ID: `ALGEBRA-RECON-1218`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41863) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State explicitly the unit condition required for rescaling a generator.
+- Adverse evidence: A zero scalar does not preserve the generator. The denominator construction produces an actual nonzero scalar; the source conclusion needs no stronger hypothesis.
+
+### Change 1: `MC-STK-ERR-2424-OP1`
+
+Pinned-official lines `41863-41863`; bytes `1538408:1538439`.
+
+````diff
+- \lambda \in \kappa(\mathfrak p)
++ \lambda \in \kappa(\mathfrak p)^*
+````
+
+Original SHA-256 `111C5557C03FAED4DECB355A25EF68727C08DBA5B429F3BB2B9D10CB3A21E92B`; replacement SHA-256 `F162A8920B1A8EFA84590549835F26A40899F8DC6F963F1D03E6876E797B026D`.
+
+</details>
+
+<details id="mc-stk-err-2425">
+<summary><code>MC-STK-ERR-2425 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2425`; producer ID: `ALGEBRA-RECON-1219`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41872-L41903) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the same nonzero scalar in all three polynomial identities.
+- Adverse evidence: After rescaling the original monic fibre generator, the leading scalar is lambda. For h=2(x-1),m=x-1,l=2 over Z with residue F_3, the actual f=x^2-1 differs from the printed scalar-free x^2-x. Preserve all chosen polynomials and both derivative summands.
+
+### Change 1: `MC-STK-ERR-2425-OP1`
+
+Pinned-official lines `41872-41872`; bytes `1538810:1538839`.
+
+````diff
+- \overline{h} = \overline{h}_1
++ \overline{h} = \lambda \overline{h}_1
+````
+
+Original SHA-256 `799AFD4C3CBF1BD026B5F829D567266DD40339C5120A7727D9A065586994D313`; replacement SHA-256 `E8A7C57622518AD0A1FD7CECB5A1853FE29732EB0B6587E42B45F69D60D55C44`.
+
+### Change 2: `MC-STK-ERR-2425-OP2`
+
+Pinned-official lines `41898-41898`; bytes `1539997:1540032`.
+
+````diff
+- \overline{h}_1 \overline{h}_2^{e_2}
++ \lambda \overline{h}_1 \overline{h}_2^{e_2}
+````
+
+Original SHA-256 `5CB7EF3F69FBBBD20A6E2F8D6189F3CBDCC8739647598C727F25DDE86B81A1CE`; replacement SHA-256 `8BA1FE1ED96D9F7253E238E139F50B554328422D06304B6B9DFA0496398AF8D1`.
+
+### Change 3: `MC-STK-ERR-2425-OP3`
+
+Pinned-official lines `41903-41903`; bytes `1540153:1540188`.
+
+````diff
+- \overline{h}_1(\overline{h}_2^{e_2}
++ \overline{h}_1(\lambda \overline{h}_2^{e_2}
+````
+
+Original SHA-256 `C88872B130211989B92DA87D1C9702F9F1D0C11D1801B505F9FD35F8268704F7`; replacement SHA-256 `30763EC9F44EC74C1A45ADDBEE0954F9C9740B5DDB8AD671F994951219CF43A1`.
+
+</details>
+
+<details id="mc-stk-err-2426">
+<summary><code>MC-STK-ERR-2426 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2426`; producer ID: `ALGEBRA-RECON-1220`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41864) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Require the lift to lie in the actual kernel ideal I.
+- Adverse evidence: The later assertion f=m^l+h in I uses this membership. Express the monic fibre generator as a finite combination of images of members of I and clear every coefficient denominator by their finite product; the resulting h belongs to I and retains its nonzero scalar.
+
+### Change 1: `MC-STK-ERR-2426-OP1`
+
+Pinned-official lines `41864-41864`; bytes `1538497:1538507`.
+
+````diff
+- h \in R[x]
++ h \in I
+````
+
+Original SHA-256 `853C24C46B97DF88FF34FD2633D947E4A61119B234251A77CB1863D77B99A979`; replacement SHA-256 `0D70EFCE787F0BECF7EA0541E80EB3305FA93678DD968D6C84A681FB7F15D74E`.
+
+</details>
+
+<details id="mc-stk-err-2427">
+<summary><code>MC-STK-ERR-2427 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2427`; producer ID: `ALGEBRA-RECON-1221`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L41876) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Define the distinguished exponent in the uniform factor-algebra formula.
+- Adverse evidence: The separable field factor has multiplicity one. Naming e_1=1 preserves all other exponents and does not change the fibre decomposition.
+
+### Change 1: `MC-STK-ERR-2427-OP1`
+
+Pinned-official lines `41876-41876`; bytes `1539007:1539070`.
+
+````diff
+- $e_2, \ldots, e_n \geq 1$. Here the numbering is chosen so that
++ $e_2, \ldots, e_n \geq 1$; set $e_1 = 1$. Here the numbering is chosen so that
+````
+
+Original SHA-256 `18EDD3971CFC4967D74272552E71E79E61CFC33874144917244D1D17F7001008`; replacement SHA-256 `B3C6CAE50A8A5222B2D66D28030D49ACE95AD7CF9A703AD6FE194D7891ADBDD7`.
+
+</details>
+
+<details id="mc-stk-err-2428">
+<summary><code>MC-STK-ERR-2428 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2428`; producer ID: `ALGEBRA-RECON-1223`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42232) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Correct the direction of ideal contraction along the retraction.
+- Adverse evidence: The map tau has domain Rprime and codomain R, so the inverse image of m is mprime. The exact tensor/retraction inverse maps retain the given residue point.
+
+### Change 1: `MC-STK-ERR-2428-OP1`
+
+Pinned-official lines `42232-42232`; bytes `1553750:1553787`.
+
+````diff
+- \mathfrak m = \tau^{-1}(\mathfrak m')
++ \mathfrak m' = \tau^{-1}(\mathfrak m)
+````
+
+Original SHA-256 `DB0322BAF47BADE6215F1FF6E86E467D614F41A2EF91F1EA9D9B6C6E8C67159F`; replacement SHA-256 `34AA882AB4F41A579A5AE9C3ECEDA7E281698BCFE55FC1683CDCD94346ADF2EE`.
+
+</details>
+
+<details id="mc-stk-err-2429">
+<summary><code>MC-STK-ERR-2429 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2429`; producer ID: `ALGEBRA-RECON-1224`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42255) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restore the final distinct factor of the base-changed finite product.
+- Adverse evidence: The preceding product and following A_1 through A_n require the nth factor. No factor or complementary algebra is omitted.
+
+### Change 1: `MC-STK-ERR-2429-OP1`
+
+Pinned-official lines `42255-42255`; bytes `1554802:1554829`.
+
+````diff
+- (A'_1 \otimes_{R', \tau} R)
++ (A'_n \otimes_{R', \tau} R)
+````
+
+Original SHA-256 `B0C2F611118C3AE2F2FFA8723029962D0A002944E882FC5A7E62A61F323D5FE4`; replacement SHA-256 `FD4E785C7AADAFE020E6B9C58C6666943B68969B5AFFD7B71C552AA9369D78E3`.
+
+</details>
+
+<details id="mc-stk-err-2430">
+<summary><code>MC-STK-ERR-2430 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2430`; producer ID: `ALGEBRA-RECON-1225`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42311) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the residue polynomial whose simple root defines the point.
+- Adverse evidence: The referent is recoverable from the construction, so this is a clarification rather than a false theorem.
+
+### Change 1: `MC-STK-ERR-2430-OP1`
+
+Pinned-official lines `42311-42311`; bytes `1557624:1557641`.
+
+````diff
+- be a simple root.
++ be a simple root of $\overline{f}$.
+````
+
+Original SHA-256 `B7CB8535579A81C7526DB141B0FD1A4537D82741F33BC25B693815D555E6A127`; replacement SHA-256 `536A0FD9503AC6C814F9E7A2A2CE5A28132A5577C71DD2EC25B16A2D36822815`.
+
+</details>
+
+<details id="mc-stk-err-2431">
+<summary><code>MC-STK-ERR-2431 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2431`; producer ID: `ALGEBRA-RECON-1226`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42144-L42350) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Handle both allowed zero residue factors and qualify the impossible zero-polynomial degree requirement.
+- Adverse evidence: In k[epsilon]/epsilon^2, f=epsilon has factorization of its residue 0 times1; requiring degree(g)=degree(0) cannot give f. Coprimality makes the other zero-case factor a nonzero constant, and the displayed unit lifts solve both cases exactly. Nonzero factors retain the full leading-scalar comparison.
+
+### Change 1: `MC-STK-ERR-2431-OP1`
+
+Pinned-official lines `42144-42144`; bytes `1549498:1549533`.
+
+````diff
+- moreover $\deg_T(g) = \deg_T(g_0)$,
++ moreover $\deg_T(g) = \deg_T(g_0)$ if $g_0 \ne 0$,
+````
+
+Original SHA-256 `E50E5C96DECBF16B2EDDBE1A0047B4C8AF857503C90E8098F8E9085056CA3C40`; replacement SHA-256 `7DE9F53BBEF0EEFC87EF134E482A368498E07D2E936907D4B72F2023A3243770`.
+
+### Change 2: `MC-STK-ERR-2431-OP2`
+
+Pinned-official lines `42350-42350`; bytes `1559514:1559577`.
+
+````diff
+- $\gcd(g_0, h_0) = 1$. We may and do assume that $g_0$ is monic.
++ $\gcd(g_0, h_0) = 1$. If $g_0 = 0$, then $h_0$ is a nonzero
++ constant; lift it to a unit $h \in R$ and set $g = h^{-1}f$.
++ If $h_0 = 0$, lift the nonzero constant $g_0$ to a unit $g \in R$
++ and set $h = g^{-1}f$. Thus we may assume that both residue factors
++ are nonzero. We may and do assume that $g_0$ is monic.
+````
+
+Original SHA-256 `27F1409CBD772E81F3F9A995639D8A2288FC15D1E39B9EBC989DF631E1133EA5`; replacement SHA-256 `5AAC8A3FC589604BF8686218CE7F8A7A461BECC448E3513E305D499F950227C7`.
+
+</details>
+
+<details id="mc-stk-err-2432">
+<summary><code>MC-STK-ERR-2432 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2432`; producer ID: `ALGEBRA-RECON-1229`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42498) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Replace the undefined part reference with the finite-algebra decomposition lemma.
+- Adverse evidence: There is no numbered part(1) in this equivalence lemma; lemma-mop-up supplies the exact finite factors and the empty-closed-fibre remainder.
+
+### Change 1: `MC-STK-ERR-2432-OP1`
+
+Pinned-official lines `42498-42498`; bytes `1565891:1565902`.
+
+````diff
+- By part (1)
++ By Lemma \ref{lemma-mop-up}
+````
+
+Original SHA-256 `A7CC558F662199425E02E8E2C485E17FB5A943781B48BDBCC0B998681CC105B9`; replacement SHA-256 `C2E933C23245EEC980968387963E491CEF26EFF506A22492E93C38730CBF9256`.
+
+</details>
+
+<details id="mc-stk-err-2433">
+<summary><code>MC-STK-ERR-2433 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2433`; producer ID: `ALGEBRA-RECON-1233`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42741) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Quantify the positive multiplicity in the lifted factorization.
+- Adverse evidence: For the corrected polynomial P(T^2), e is the exact multiplicity of T-1 in its residue polynomial, including characteristic two. Its positivity follows from P(1)x=0 for nonzero x.
+
+### Change 1: `MC-STK-ERR-2433-OP1`
+
+Pinned-official lines `42741-42741`; bytes `1574520:1574553`.
+
+````diff
+- for some $Q_1, Q_2 \in R[T]$ with
++ for some $Q_1, Q_2 \in R[T]$ and integer $e \geq 1$ with
+````
+
+Original SHA-256 `2AB4C48EB5904394421031116B02EFBAC44A1C3AFF21045A90B2F747D75E57FB`; replacement SHA-256 `6566E1968B2023C8522F20D18A81647594BE9987E319F7B3F58CD96387549147`.
+
+</details>
+
+<details id="mc-stk-err-2434">
+<summary><code>MC-STK-ERR-2434 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2434`; producer ID: `ALGEBRA-RECON-1234`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42730-L42739) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Keep the original endomorphisms and restore the missing square in all four uses.
+- Adverse evidence: Here a=pi alpha i=(pi i)^2 and i a^j pi=alpha^(2j+1), so P(a)=0 gives alpha P(alpha^2)=0. With pi=id and i=diag(1,-1), a=id and P=(T-1)^2 give alpha^2P(alpha)=diag(0,4), although x=(1,0) is fixed. The corrected factorization, Bezout idempotent, both images and explicit surjection E i prove the theorem without changing its maps.
+
+### Change 1: `MC-STK-ERR-2434-OP1`
+
+Pinned-official lines `42730-42730`; bytes `1574053:1574062`.
+
+````diff
+- P(\alpha)
++ P(\alpha^2)
+````
+
+Original SHA-256 `17DD4841ED7B68CE5B9824453CE51309361EA9E9CD77CE54FE0A9298A9E84984`; replacement SHA-256 `84EA6DC837B163C09DB5C88EB1D97F46CE935307D185F0C3F456CFE925697766`.
+
+### Change 2: `MC-STK-ERR-2434-OP2`
+
+Pinned-official lines `42731-42731`; bytes `1574113:1574124`.
+
+````diff
+- R[T]/(T^2P)
++ R[T]/(T^2P(T^2))
+````
+
+Original SHA-256 `6E71D7C88CD5A2A9E5AAADEFF7BD363ED993B3FBDF2E91FF6777A536691876EA`; replacement SHA-256 `DDFE0726A975E1080EAA2247E79F94B0C0ACB03C84B2AB2A692BB1AA84F07EED`.
+
+### Change 3: `MC-STK-ERR-2434-OP3`
+
+Pinned-official lines `42733-42733`; bytes `1574200:1574209`.
+
+````diff
+- P(\alpha)
++ P(\alpha^2)
+````
+
+Original SHA-256 `17DD4841ED7B68CE5B9824453CE51309361EA9E9CD77CE54FE0A9298A9E84984`; replacement SHA-256 `84EA6DC837B163C09DB5C88EB1D97F46CE935307D185F0C3F456CFE925697766`.
+
+### Change 4: `MC-STK-ERR-2434-OP4`
+
+Pinned-official lines `42739-42739`; bytes `1574496:1574516`.
+
+````diff
+- T^2P = (T^2 Q_1) Q_2
++ T^2P(T^2) = (T^2 Q_1) Q_2
+````
+
+Original SHA-256 `4B8F17B1498223C7147C348901A524D06937C4F92AE24B0294EC419C852B3BAA`; replacement SHA-256 `A558D75C87FA3939F21BA4EDDB05A8CF1F15D610C6035AB3FF03B5ECCFCA7C5C`.
+
+</details>
+
+<details id="mc-stk-err-2435">
+<summary><code>MC-STK-ERR-2435 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2435`; producer ID: `ALGEBRA-RECON-1237`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42773) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the duplicated predicate once for both reports.
+- Adverse evidence: The base-change conclusion is valid; the exact tensor and filtered-colimit maps are inverse.
+
+### Change 1: `MC-STK-ERR-2435-OP1`
+
+Pinned-official lines `42773-42773`; bytes `1575866:1575876`.
+
+````diff
+- then so is
++ then
+````
+
+Original SHA-256 `8C6B36AAE344993B5AA05FF1C2F6248AE24A49682CDE75FF432A493D27D91C26`; replacement SHA-256 `21AF6F1260F927F5B9B3FF5CA4A5D19493A1A47A5977240D8DCA31BC47A63527`.
+
+</details>
+
+<details id="mc-stk-err-2436">
+<summary><code>MC-STK-ERR-2436 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2436`; producer ID: `ALGEBRA-RECON-1238`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42807) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Complete the causal sentence without changing the descended algebra.
+- Adverse evidence: The original finite-presentation descent, tensor product and composite etale map prove the conclusion.
+
+### Change 1: `MC-STK-ERR-2436-OP1`
+
+Pinned-official lines `42807-42807`; bytes `1577153:1577208`.
+
+````diff
+- As $A \to C' = B_{i'} \otimes_{B_i} C'_j$ is \'etale as
++ The map $A \to C' = B_{i'} \otimes_{B_i} C'_j$ is \'etale since
+````
+
+Original SHA-256 `7B81F1C7D0A5EFFD1CD9A97387F9D4A88FD196048E9B86220992859B8CE6FABF`; replacement SHA-256 `CC9B4470C44742EEFE93E659ABF4A147EF2F5008F4069767447C60F6B898DB87`.
+
+</details>
+
+<details id="mc-stk-err-2437">
+<summary><code>MC-STK-ERR-2437 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2437`; producer ID: `ALGEBRA-RECON-1241`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L42892) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: State the induced residue-field map with its exact domain.
+- Adverse evidence: Reduction first has domain A/q; its uniquely induced fraction-field map has domain kappa(q). The explicit fraction formula proves the intended meaning, so this is a clarification rather than a false lifting assertion.
+
+### Change 1: `MC-STK-ERR-2437-OP1`
+
+Pinned-official lines `42892-42892`; bytes `1580570:1580598`.
+
+````diff
+- $f \bmod \mathfrak q = \tau$
++ $f$ induces $\tau$ on residue fields
+````
+
+Original SHA-256 `4D9352F4D13949BA3864ACE91DB78AADFF56B5339109EDBDB7659B7978476A35`; replacement SHA-256 `26D673D984F89C739D4A3393C2765C16C574938529646031D4E08536824F96D5`.
+
+</details>
+
+<details id="mc-stk-err-2438">
+<summary><code>MC-STK-ERR-2438 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2438`; producer ID: `ALGEBRA-RECON-1246`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43139) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Close the final definition item with a period.
+- Adverse evidence: The original item is a complete sentence with no terminal punctuation; no mathematical condition changes.
+
+### Change 1: `MC-STK-ERR-2438-OP1`
+
+Pinned-official lines `43139-43139`; bytes `1590385:1590423`.
+
+````diff
+- Lemma \ref{lemma-strict-henselization}
++ Lemma \ref{lemma-strict-henselization}.
+````
+
+Original SHA-256 `D8F78A7CA08A14EDA3B77129B3477AD6B425C40D9B953E766D058CC877E9EAF0`; replacement SHA-256 `6D4E37723CFC6A4F03C8517289D240D83CDB27D11A001054F6B8A2768E615849`.
+
+</details>
+
+<details id="mc-stk-err-2439">
+<summary><code>MC-STK-ERR-2439 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2439`; producer ID: `ALGEBRA-RECON-1247`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43284) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the defined prime of S prime in the fibre residue map.
+- Adverse evidence: The selected factor of F prime corresponds to q prime. The source defines no p prime. The original tensor coequalizer extends precisely this selected residue map.
+
+### Change 1: `MC-STK-ERR-2439-OP1`
+
+Pinned-official lines `43284-43284`; bytes `1595801:1595813`.
+
+````diff
+- \mathfrak p'
++ \mathfrak q'
+````
+
+Original SHA-256 `01366C6E0C283629F1F3025B3A75248C7F8588197178CEDD79D3F7BCF40E9BB3`; replacement SHA-256 `A45932D4B64CD1B734ED9C9E91CAA5570DBFD036E2BDDC3AB237110098A403E0`.
+
+</details>
+
+<details id="mc-stk-err-2440">
+<summary><code>MC-STK-ERR-2440 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2440`; producer ID: `ALGEBRA-RECON-1248`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43360) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Take the inverse image of the maximal ideal in the actual strict-henselization target.
+- Adverse evidence: The displayed map has codomain S strict h. The ordinary-henselization maximal ideal is in a different ring. Unique henselian lifting with the specified residue embedding proves the corrected condition.
+
+### Change 1: `MC-STK-ERR-2440-OP1`
+
+Pinned-official lines `43360-43360`; bytes `1598999:1599016`.
+
+````diff
+- \mathfrak m_{S^h}
++ \mathfrak m_{S^{sh}}
+````
+
+Original SHA-256 `433203F0013B2B3EEEFAE205F4FD6314E254D25BF5A0FC4CD756F764ED300050`; replacement SHA-256 `6EBC0A4A8A56A2644E71F49C0FC333DF02F1C0B24889DFA8001805BE8F110C50`.
+
+</details>
+
+<details id="mc-stk-err-2441">
+<summary><code>MC-STK-ERR-2441 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2441`; producer ID: `ALGEBRA-RECON-1249`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43381-L43383) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the given-diagram clause to its main existence clause.
+- Adverse evidence: The original source has a capitalized main clause after the unclosed given clause; the map and all residue conditions stay identical.
+
+### Change 1: `MC-STK-ERR-2441-OP1`
+
+Pinned-official lines `43381-43383`; bytes `1599680:1599697`.
+
+````diff
+- }
+- $$
+- There exists
++ },
++ $$
++ there exists
+````
+
+Original SHA-256 `1D38EC5CD3A4A63F7EF8B2C4FA2834C09697F775509A7B497705331738251DC6`; replacement SHA-256 `B4F1CACA512C7A78EB8C237B0E3A295557CFC59C0E3286D57EE79F53E0653A5D`.
+
+</details>
+
+<details id="mc-stk-err-2442">
+<summary><code>MC-STK-ERR-2442 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2442`; producer ID: `ALGEBRA-RECON-1250`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43422) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Name the category using all three pieces of its original object data.
+- Adverse evidence: The residue embedding is part of each object and every morphism preserves it. The exact filteredness proof retains those embeddings.
+
+### Change 1: `MC-STK-ERR-2442-OP1`
+
+Pinned-official lines `43422-43422`; bytes `1600896:1600913`.
+
+````diff
+- category of pairs
++ category of triples
+````
+
+Original SHA-256 `38B57516478EC6695CEC93D0D1A07B9CFE855D92EF4F1985015D6D9D87EA88D4`; replacement SHA-256 `E95D500109CE27F21636F767E617332941B9E5014BB5608DED01E6F9960C5463`.
+
+</details>
+
+<details id="mc-stk-err-2443">
+<summary><code>MC-STK-ERR-2443 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2443`; producer ID: `ALGEBRA-RECON-1251`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43441) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the stray article and close the introductory phrase.
+- Adverse evidence: The combined map remains x tensor y to phi(x) phi-prime(y), with the exact compositum residue field.
+
+### Change 1: `MC-STK-ERR-2443-OP1`
+
+Pinned-official lines `43441-43441`; bytes `1601820:1601851`.
+
+````diff
+- Combining the maps the above we
++ Combining the maps above, we
+````
+
+Original SHA-256 `90BD9B069FEBB7818ADE107BF6B1F8989742BEC9AD1E9733F165BB0F014A199F`; replacement SHA-256 `B5C6D708749525A36F15BDD1F08159CC854C1D7A9AE8D0B02B841F682C107743`.
+
+</details>
+
+<details id="mc-stk-err-2444">
+<summary><code>MC-STK-ERR-2444 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2444`; producer ID: `ALGEBRA-RECON-1252`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43461) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the stated name for arrows preserving the residue embeddings.
+- Adverse evidence: Such arrows also are arrows of underlying pairs; this is a terminology correction, not a false-arrow claim. Triple compatibility is retained in the original tensor coequalizer proof.
+
+### Change 1: `MC-STK-ERR-2444-OP1`
+
+Pinned-official lines `43461-43461`; bytes `1602626:1602644`.
+
+````diff
+- morphisms of pairs
++ morphisms of triples
+````
+
+Original SHA-256 `BF0DCA28DD586EF9EC7AEB82650D9AE9A1A6A409CF608BE682D435706B68FE37`; replacement SHA-256 `0EC43A229EC556F9BBD98F0607B4E90E8AF24384860F1B327A7A54828A5FBE80`.
+
+</details>
+
+<details id="mc-stk-err-2445">
+<summary><code>MC-STK-ERR-2445 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2445`; producer ID: `ALGEBRA-RECON-1253`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L43522-L43524) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Join the given-diagram clause to the strict-henselization identification.
+- Adverse evidence: There is no post-display period in the actual source, contrary to the report. The accepted operation fixes the actual clause joining and capitalization; the chosen residue map still specifies the base-change prime.
+
+### Change 1: `MC-STK-ERR-2445-OP1`
+
+Pinned-official lines `43522-43524`; bytes `1605257:1605280`.
+
+````diff
+- }
+- $$
+- The local ring map
++ },
++ $$
++ the local ring map
+````
+
+Original SHA-256 `8CE457491E17078E485F0BFDE3172EC7CAAB35B8A46A46F166D888CB54850BA8`; replacement SHA-256 `4674F090912D9B4FBF6BDCF17052E7E6ED8DE349E16AC5B60F98740F8738943F`.
+
+</details>
+
+<details id="mc-stk-err-2446">
+<summary><code>MC-STK-ERR-2446 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2446`; producer ID: `ALGEBRA-RECON-1256`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L44037) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the existing full case-(4) hypothesis check and qualify the preceding support equality to include the zero quotient.
+- Adverse evidence: The permitted choice x=0 gives the original Rprime=R[0]=R, whose quotient has empty support. The existing x-in-R branch appears after the unqualified support equality. Inclusion in the singleton is exactly what is proved and suffices for annihilation by a power; all nontrivial-case hypotheses and the original total quotient ring remain intact.
+
+### Change 1: `MC-STK-ERR-2446-OP1`
+
+Pinned-official lines `44037-44037`; bytes `1624555:1624585`.
+
+````diff
+- Hence the support of $R'/R$ is
++ Hence the support of $R'/R$ is contained in
+````
+
+Original SHA-256 `59E57C18CC0D4E1DCBF91A5D2EEA844C8C42FE08D3E8CE6A993DC8095D485211`; replacement SHA-256 `2931B63244F58D662225425D450DE5CCF07842DDC2D172291923690F741CB3A1`.
+
+</details>
+
+<details id="mc-stk-err-2447">
+<summary><code>MC-STK-ERR-2447 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2447`; producer ID: `ALGEBRA-RECON-1257`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L44065) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Add the missing period to the first complete enumerated assertion.
+- Adverse evidence: The item ends before the next item without punctuation. Its zero-module and unit cases remain valid and vacuous.
+
+### Change 1: `MC-STK-ERR-2447-OP1`
+
+Pinned-official lines `44065-44065`; bytes `1625536:1625546`.
+
+````diff
+- height $1$
++ height $1$.
+````
+
+Original SHA-256 `F9CD9B4AF7846CDB0164773D347B1FA2C4485A19ECFAC44F6973DACF50F3BE1B`; replacement SHA-256 `3199D7519145DF9E36DEAE750124558FA92A32255C3E9B9BA92C38B3FF5CBD49`.
+
+</details>
+
+<details id="mc-stk-err-2448">
+<summary><code>MC-STK-ERR-2448 — algebra.tex: — clarification</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2448`; producer ID: `ALGEBRA-RECON-1260`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L44257) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Introduce the field extension used by every subsequent assertion of the lemma.
+- Adverse evidence: The original first sentence quantifies only k; neither the statement nor its proof introduces K elsewhere. The inserted datum preserves both properties and every original map.
+
+### Change 1: `MC-STK-ERR-2448-OP1`
+
+Pinned-official lines `44257-44257`; bytes `1632474:1632519`.
+
+````diff
+- Let $k$ be a field of characteristic $p > 0$.
++ Let $k$ be a field of characteristic $p > 0$.
++ Let $K/k$ be a field extension.
+````
+
+Original SHA-256 `87104359441B6E581A314E6586A56E310BEA453D2D3632AEC8FD345B380887AF`; replacement SHA-256 `6693A4E20E7C422DF9AA115B41A07D92FE7C996AD565DF6F9C1C496CA3F2C898`.
+
+</details>
+
+<details id="mc-stk-err-2449">
+<summary><code>MC-STK-ERR-2449 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2449`; producer ID: `ALGEBRA-RECON-1266`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L44439) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Use the standard compound for intermediate field extensions over k.
+- Adverse evidence: The same directed system of finite generated fields is retained. Its H_1 vanishing follows from the exact cotangent colimit, not a general assertion that filtered formally smooth colimits remain formally smooth.
+
+### Change 1: `MC-STK-ERR-2449-OP1`
+
+Pinned-official lines `44439-44439`; bytes `1639236:1639273`.
+
+````diff
+- finitely generated sub $k$-extensions
++ finitely generated $k$-subextensions
+````
+
+Original SHA-256 `9B890812A6004E41B00E0204D381A60F5D34230DC8E1AD3E6DDBE9F517B0AECF`; replacement SHA-256 `26CA2912242D0EBE9C5E31F571613BB98C2D7BAA84A906FB7A40EBE0D09FDB4B`.
+
+</details>
+
+<details id="mc-stk-err-2450">
+<summary><code>MC-STK-ERR-2450 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2450`; producer ID: `ALGEBRA-RECON-1292`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L45175) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Qualify any localization by nonzero, respecting the domain-only definitions of N-1 and N-2.
+- Adverse evidence: The source multiplicative-subset definition allows zero and its fraction equivalence then gives the zero ring. A field localized at {0,1} is zero, which is not a domain and has no fraction field. The ordinary intended domain-localization reading is valid; the minimal qualification makes it explicit. All later uses in this interval invert nonzero elements or prime complements.
+
+### Change 1: `MC-STK-ERR-2450-OP1`
+
+Pinned-official lines `45175-45175`; bytes `1667529:1667552`.
+
+````diff
+- any localization of $R$
++ any nonzero localization of $R$
+````
+
+Original SHA-256 `495190CDA5EA8FFF777F5C3FB74C484FAB3D8CF426FC15F36D7B82F696B86C72`; replacement SHA-256 `9AFFF89AD266F511E373D699075D370BDDDA32F80FFCD7C95A7C136C81F079C4`.
+
+</details>
+
+<details id="mc-stk-err-2451">
+<summary><code>MC-STK-ERR-2451 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2451`; producer ID: `ALGEBRA-RECON-1302`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L45742) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the corrected domain quotient charts in part (2), and propagate nonzero to the domain charts in part (1).
+- Adverse evidence: N-1 and N-2 are defined only for domains. Images phi(f_i)=0 produce zero charts, and the original unit-ideal identity remains valid after exactly those indices are removed. The zero ring itself remains Nagata and universally Japanese, so no exclusion is added to those definitions.
+
+### Change 1: `MC-STK-ERR-2451-OP1`
+
+Pinned-official lines `45742-45742`; bytes `1689330:1689390`.
+
+````diff
+- Hence if each $S_{f_i} = S_{\varphi(f_i)}$ is N-1 then so is
++ Hence if each nonzero $S_{f_i} = S_{\varphi(f_i)}$ is N-1 then so is
+````
+
+Original SHA-256 `757887818E02988E7E9555EA08EE4D7D2C2784B9024D2CB74EEBC3826FFDDA23`; replacement SHA-256 `A045EA5AA87E0C864731F1338AC90643C4C572402FD914049B0C5E231F289B28`.
+
+</details>
+
+<details id="mc-stk-err-2452">
+<summary><code>MC-STK-ERR-2452 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2452`; producer ID: `ALGEBRA-RECON-1303`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L45872) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the construction naming the original integral closure.
+- Adverse evidence: The exact total-quotient inclusions and faithful-flat finite-generation descent identify this Rprime throughout; the edit only repairs its designation.
+
+### Change 1: `MC-STK-ERR-2452-OP1`
+
+Pinned-official lines `45872-45872`; bytes `1694789:1694821`.
+
+````diff
+- Denote $R'$ the integral closure
++ Denote by $R'$ the integral closure
+````
+
+Original SHA-256 `866A303E817628D70F3F22988312BC01A12BFD9E2560725CF9A5D384145DA444`; replacement SHA-256 `8179F66E62B0971244C425FC5657DBC527C506265C4ED9FA9453ED5A2846ED53`.
+
+</details>
+
+<details id="mc-stk-err-2453">
+<summary><code>MC-STK-ERR-2453 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2453`; producer ID: `ALGEBRA-RECON-1305`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46020) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Add the colon introducing the three equivalent conditions.
+- Adverse evidence: The equivalence is proved with finite local domains and the original finite field extension, including the maximal-prime case.
+
+### Change 1: `MC-STK-ERR-2453-OP1`
+
+Pinned-official lines `46020-46020`; bytes `1700832:1700846`.
+
+````diff
+- are equivalent
++ are equivalent:
+````
+
+Original SHA-256 `E8F950C92FF522A58BC13B1ED055BE8B0D5A0BE347A4FF2C19BAC6349039D44F`; replacement SHA-256 `969DDB898B4070210CE7CC25D6178DF19CD50BE10877E1A8E788486C72168BBA`.
+
+</details>
+
+<details id="mc-stk-err-2454">
+<summary><code>MC-STK-ERR-2454 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2454`; producer ID: `ALGEBRA-RECON-1306`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46026) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Remove the redundant then from the for construction.
+- Adverse evidence: The source already introduces the quantified finite local homomorphism; its conclusion is unchanged.
+
+### Change 1: `MC-STK-ERR-2454-OP1`
+
+Pinned-official lines `46026-46026`; bytes `1701107:1701134`.
+
+````diff
+- with $S$ a domain, then $S$
++ with $S$ a domain, $S$
+````
+
+Original SHA-256 `2DA861AE8126D2657C1835EEB8AD2BA2D614A0F9387FCF60C066541C3E5B64A2`; replacement SHA-256 `C9A336234040064CF0ED90F7101600A4FC02F0D7BACDE96FFBDEFA889D7A0D3A`.
+
+</details>
+
+<details id="mc-stk-err-2455">
+<summary><code>MC-STK-ERR-2455 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2455`; producer ID: `ALGEBRA-RECON-1309`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46052) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Parenthesize the coefficient quotient before adjoining the chosen generators.
+- Adverse evidence: The actual domain is the subalgebra of L generated over R/p; no quotient of the polynomial ideal p[x_i] is intended.
+
+### Change 1: `MC-STK-ERR-2455-OP1`
+
+Pinned-official lines `46052-46052`; bytes `1702365:1702400`.
+
+````diff
+- S = R/\mathfrak p[x_1, \ldots, x_n]
++ S = (R/\mathfrak p)[x_1, \ldots, x_n]
+````
+
+Original SHA-256 `7B09D2501A05747913161C24A9861B289688D280610C0F9AB320E3DAC78D936B`; replacement SHA-256 `A290D2CD4DD47BD1E3FE640AFDB1ED90EDCEAB7E562B52C7D7F3C0BC61B37F6F`.
+
+</details>
+
+<details id="mc-stk-err-2456">
+<summary><code>MC-STK-ERR-2456 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2456`; producer ID: `ALGEBRA-RECON-1310`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46054) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Parenthesize the residue-field coefficient ring in the truncated polynomial algebra.
+- Adverse evidence: The displayed quotient maps onto the actual special fibre, with every exponent d_i and the zero-variable case retained.
+
+### Change 1: `MC-STK-ERR-2456-OP1`
+
+Pinned-official lines `46054-46054`; bytes `1702492:1702523`.
+
+````diff
+- R/\mathfrak m[T_1, \ldots, T_n]
++ (R/\mathfrak m)[T_1, \ldots, T_n]
+````
+
+Original SHA-256 `1E34F8CB54125052F08FF212FFFD66161CCAAF1FF7D229522689A90CD0CA67A2`; replacement SHA-256 `194C5E8B065B5ECD2AD752EE0EEDE41A983B852753156D69C299834830819E59`.
+
+</details>
+
+<details id="mc-stk-err-2457">
+<summary><code>MC-STK-ERR-2457 — algebra.tex: — mathematical</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2457`; producer ID: `ALGEBRA-RECON-1311`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46101) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Restrict the transcendental branch to positive transcendence degree, leaving the identity field extension in the finite branch.
+- Adverse evidence: The source Fields definition permits no variables, so K/K is purely transcendental. The monogenic injection Z into Z[1/2] has that fraction extension but evaluation of Z[X] has kernel containing 2X-1. The polynomial N-2 theorem applies exactly when the chosen generator is transcendental, while the subsequent finite case covers the degree-zero extension.
+
+### Change 1: `MC-STK-ERR-2457-OP1`
+
+Pinned-official lines `46101-46101`; bytes `1704265:1704303`.
+
+````diff
+- is purely transcendental. In this case
++ is purely transcendental of positive transcendence degree. In this case
+````
+
+Original SHA-256 `C424AA997A84999034E66CC92B1FC3A2F8088AD8A11CBF38A4A719BEB9B38EF1`; replacement SHA-256 `7EF1AA18AC8FDC5925A9BD2826865C5C38CDADE83FA35D738E096F16669E5BB4`.
+
+</details>
+
+<details id="mc-stk-err-2458">
+<summary><code>MC-STK-ERR-2458 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2458`; producer ID: `ALGEBRA-RECON-1316`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46160) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Retain the precise maximal ideals over the fixed m, and repair the singular verb splits.
+- Adverse evidence: The finite localization D of S-prime is semilocal, with exactly those maximal local rings. Its nonzero generic normal open is supplied by the original denominator a_0, so local N-1 implies N-1 for D and descends to the original S_m. The stronger original antecedent would suffice, but the following proof establishes the required restricted family.
+
+### Change 1: `MC-STK-ERR-2458-OP1`
+
+Pinned-official lines `46160-46160`; bytes `1707172:1707213`.
+
+````diff
+- the polynomial $f$ above split completely
++ the polynomial $f$ above splits completely
+````
+
+Original SHA-256 `634B7F730239AD4AFB5F55ED824E36790912C9F25E0365AB2E07C382B911F570`; replacement SHA-256 `8D35F8CB82F6874846A5BD56524252291618C025BD8993E8AF252C785BB791E6`.
+
+</details>
+
+<details id="mc-stk-err-2459">
+<summary><code>MC-STK-ERR-2459 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2459`; producer ID: `ALGEBRA-RECON-1320`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46321) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert by in the original designation of n, explicitly refining the unchanged sentence inside the prior zero-module operation.
+- Adverse evidence: The prior operation adds the necessary infinite-depth cases but retains Denote n without by. Its complete immutable preimage and postimage are hash-bound; the new operation changes only that unique retained phrase and must inverse-replay to the full prior paragraph.
+
+### Change 1: `MC-STK-ERR-2459-OP1`
+
+Pinned-official lines `46321-46321`; bytes `1713861:1713892`.
+
+````diff
+- Denote $n$ the right hand side.
++ Denote by $n$ the right hand side.
+````
+
+Original SHA-256 `710250F934048DE1CF445EACE6597892877498E00E1ED0D661635B8B75BB9F7C`; replacement SHA-256 `D39833E2816C9DFEA6E93A24F9050BDF730EEAC4CC6F02894BCAE45FAEC289F0`.
+
+</details>
+
+<details id="mc-stk-err-2460">
+<summary><code>MC-STK-ERR-2460 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2460`; producer ID: `ALGEBRA-RECON-1322`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L46389) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the colon introducing the equivalent Cohen–Macaulay conditions.
+- Adverse evidence: Depth and dimension addition give an exact sum of two nonnegative deficiencies, so the two original conditions are equivalent without a changed hypothesis.
+
+### Change 1: `MC-STK-ERR-2460-OP1`
+
+Pinned-official lines `46389-46389`; bytes `1716466:1716499`.
+
+````diff
+- Then the following are equivalent
++ Then the following are equivalent:
+````
+
+Original SHA-256 `C5B407268835BD8328A36FF251D1BDF50D840B7F8A0932D87FCF398C3C36910F`; replacement SHA-256 `02B3511029D39DAC214D57E5B19ABB6C7EE917202689121A0D6565BE8E507EC1`.
+
+</details>
+
+<details id="mc-stk-err-2461">
+<summary><code>MC-STK-ERR-2461 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2461`; producer ID: `ALGEBRA-RECON-1334`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L47000) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Insert by in the original designation of the two contracted primes.
+- Adverse evidence: The original respective pair and singular prime are meaningful. Preserve them and prove the actual two factor-localization maps and the further localization at the original tensor prime.
+
+### Change 1: `MC-STK-ERR-2461-OP1`
+
+Pinned-official lines `47000-47000`; bytes `1737860:1737866`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2462">
+<summary><code>MC-STK-ERR-2462 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2462`; producer ID: `ALGEBRA-RECON-1342`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L47397) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply by in the adjacent original inverse-image declaration.
+- Adverse evidence: The inverse-image map, its source and target are unchanged. The directed-cover argument uses the actual V_lambda and does not assume an arbitrary directed set has a largest element.
+
+### Change 1: `MC-STK-ERR-2462-OP1`
+
+Pinned-official lines `47397-47397`; bytes `1752775:1752781`.
+
+````diff
+- Denote
++ Denote by
+````
+
+Original SHA-256 `1A099FC2099D19FBE1B23F09E9B131200B62846F3091885DD689DAD5B8B52921`; replacement SHA-256 `C2BA9F20EBE3DD04C07D494461B088C6F772541A1DD1E1DA02B8F4F33FE18984`.
+
+</details>
+
+<details id="mc-stk-err-2463">
+<summary><code>MC-STK-ERR-2463 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2463`; producer ID: `ALGEBRA-RECON-1344`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L47472) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply the missing copula in the faithful-flatness hypothesis.
+- Adverse evidence: Retain faithful flatness and finite presentation exactly. The complete proof uses the stage algebra as the rank-one module model, not an unrelated finite module whose flatness would not prove ring flatness.
+
+### Change 1: `MC-STK-ERR-2463-OP1`
+
+Pinned-official lines `47472-47472`; bytes `1755949:1755976`.
+
+````diff
+- Assume $A \to B$ faithfully
++ Assume $A \to B$ is faithfully
+````
+
+Original SHA-256 `B75E117B07421DC7C3CD90AA01DE863502094E7726BB70BEFC09346654BD8173`; replacement SHA-256 `55DFECB8CF8056E0BCA23302ACB224DF50471ED92218BCED72B274BA953E9914`.
+
+</details>
+
+<details id="mc-stk-err-2464">
+<summary><code>MC-STK-ERR-2464 — algebra.tex: — copyedit</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2464`; producer ID: `ALGEBRA-RECON-1346`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L47524-L47708) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Supply be in all seven original declarations of the algebra map.
+- Adverse evidence: Retain every directed-system and finiteness hypothesis. Prove finite and surjective descent with original coefficients and later equality witnesses, differential descent, finitely generated kernel removal, both conormal inverse identities, the smooth splitting, and the exact complete-intersection model and finite syntomic cover.
+
+### Change 1: `MC-STK-ERR-2464-OP1`
+
+Pinned-official lines `47524-47524`; bytes `1757674:1757705`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+### Change 2: `MC-STK-ERR-2464-OP2`
+
+Pinned-official lines `47549-47549`; bytes `1758580:1758611`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+### Change 3: `MC-STK-ERR-2464-OP3`
+
+Pinned-official lines `47573-47573`; bytes `1759432:1759463`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+### Change 4: `MC-STK-ERR-2464-OP4`
+
+Pinned-official lines `47601-47601`; bytes `1760527:1760558`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+### Change 5: `MC-STK-ERR-2464-OP5`
+
+Pinned-official lines `47628-47628`; bytes `1761457:1761488`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+### Change 6: `MC-STK-ERR-2464-OP6`
+
+Pinned-official lines `47668-47668`; bytes `1762954:1762985`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+### Change 7: `MC-STK-ERR-2464-OP7`
+
+Pinned-official lines `47708-47708`; bytes `1764481:1764512`.
+
+````diff
+- $\varphi_0 : B_0 \to C_0$ a map
++ $\varphi_0 : B_0 \to C_0$ be a map
+````
+
+Original SHA-256 `1449C3052631002012011E910A022D3432286BABD9126EDA7C0859CF1DCA4199`; replacement SHA-256 `49553E65541465B80F3A2ACC20CADB7FFCA07CF75C7CE9631572B2CE7D1A832D`.
+
+</details>
+
+<details id="mc-stk-err-2465">
+<summary><code>MC-STK-ERR-2465 — algebra.tex: — rendering_support</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r58`
+- Stable ID: `MC-STK-ERR-2465`; producer ID: `ALGEBRA-RENDER-001`
+- Bound source locator: `algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex#L1) · [Integrated source](algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r58/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r58/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r58/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r58/replay/independent-review.json)
+- Rationale: Load the exact AMS relation symbols and define the support operator used by the reviewed strict-inclusion and flatness corrections. The reusable chapter patch carries both dependencies.
+- Adverse evidence: This is a dependency introduced by the corrected edition, not another mathematical defect in the upstream chapter. The failed successor build stops at subsetneq, while the prior chapter builds. No formula, hypothesis, proof, or symbol slot is replaced.
+
+### Change 1: `MC-STK-ERR-2465-OP1`
+
+Pinned-official lines `1-1`; bytes `0:16`.
+
+````diff
+- \input{preamble}
++ \input{preamble}
++ % AMS symbols required by the reviewed strict-inclusion correction.
++ \usepackage{amssymb}
++ \providecommand{\Supp}{\operatorname{Supp}}
+````
+
+Original SHA-256 `CF2821D0C8AFAA304CE85765E37D9CE4BE32F49B617F64ACFE1346CBFE15CD26`; replacement SHA-256 `040F1D3344FFF50DF2ADD5485F31EEFCC62B493C9E37F5A27EF7F58E1C63B36E`.
 
 </details>
