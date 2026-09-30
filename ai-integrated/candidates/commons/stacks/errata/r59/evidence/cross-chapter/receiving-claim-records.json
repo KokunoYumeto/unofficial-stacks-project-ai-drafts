@@ -1,0 +1,235 @@
+[
+  {
+    "id": "ALGEBRA-RECON-997",
+    "finding_kinds": [
+      "cross_chapter_wrong_conormal_tensor_base",
+      "source_correction"
+    ],
+    "source": "algebra.tex",
+    "authority_lines": [
+      35404,
+      35409
+    ],
+    "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "report_ids": [],
+    "prior_canonical_ids": [],
+    "source_review_disposition": "conceptual_source_correction_recorded",
+    "rationale": "Route the independently checked tensor-base error in the cited More on Algebra dependency.",
+    "adverse_evidence": "The quotient IT/IK is the tensor conormal module over B, not A. The identity lci map k[x]/(x^2) to itself gives dimensions four and two for the erroneous and correct expressions. This does not adjudicate the full dependency chapter.",
+    "original_statements_and_complete_replacement_arguments": [],
+    "proved_further_consequences": [],
+    "separate_editorial_evidence": [
+      {
+        "file": "ALGEBRA_NAIVE_COTANGENT_NOTES_20260928.md",
+        "sha256": "5BB0FB5E41C1307765BE86BBE065E52A0033DE3888875D05115225081A61BA4F",
+        "section": "Propagation and bounded follow-up",
+        "destination": "separate_source_linked_editorial_note"
+      }
+    ],
+    "current_editorial_locus": null,
+    "external_source_locus": null,
+    "source_scope": "upstream_authority",
+    "prior_composed_evidence": null,
+    "reusable_source_fixes_already_composed": [],
+    "propagation": {
+      "status": "checked_within_current_source_interval",
+      "checked_authority_lines": [
+        35116,
+        35804
+      ],
+      "remaining": "Continue at local complete intersections, 35805. More on Algebra 8502 and 8504 require separately routed tensor-base corrections; broader synthesis follows core completion.",
+      "receives_from": [
+        "ALGEBRA-RECON-994"
+      ],
+      "completed_effect": "The exact conormal quotient computation determines the required tensor base and yields the explicit dependency counterexample."
+    },
+    "translation_treatment": {
+      "full_argument_destination": "source_linked_conceptual_erratum_or_editorial_supplement",
+      "replace_original_translation_with_full_argument": false,
+      "minimal_source_text_corrections": [],
+      "source_correction_presentation": "Retain the original complexes, presentations, tensor actions, hypotheses, source statements and exposition. Full arguments, strengthened statements and the dependency correction remain identified editorial material."
+    },
+    "core_integration_state": "see_source_review_disposition",
+    "affected_source": {
+      "file": "more-algebra.tex",
+      "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "lines": [
+        8502,
+        8504
+      ],
+      "required_correction": "Replace the two tensor_A C expressions by tensor_B C.",
+      "status": "proved_and_recorded_pending_separate_chapter_integration"
+    },
+    "affected_source_locator": "ALGEBRA_INTAKE_REVIEW_20260925.json#/groups/996/affected_source",
+    "current_edition_placement": {
+      "placement_locator": "ALGEBRA_EDITORIAL_PLACEMENT_20260929.json#/records/996",
+      "placement_basis": "existing_explicit_placement",
+      "body_operation_ids": [],
+      "editorial_proposal_ids": [],
+      "public_source_note_required": true,
+      "source_note_materialized": false,
+      "historical_review_and_full_arguments_preserved": true,
+      "status": "placement_prepared_not_yet_admitted"
+    }
+  },
+  {
+    "id": "ALGEBRA-RECON-1069",
+    "finding_kinds": [
+      "other_chapter_source_index_correction_pending",
+      "source_correction"
+    ],
+    "source": "algebra.tex",
+    "authority_lines": [
+      37628,
+      37670
+    ],
+    "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "report_ids": [],
+    "prior_canonical_ids": [],
+    "source_review_disposition": "conceptual_source_correction_recorded",
+    "rationale": "Record the source-index error encountered in the bounded Fitting-ideal dependency as a separate pending chapter item.",
+    "adverse_evidence": "The stabilization proof begins with n-k kernel vectors and appends n prime coordinate vectors; their indices are n-k+j prime, not n+j prime. The corrected comparison is proved in the editorial note. No operation on the current Algebra chapter represents this other-chapter correction.",
+    "original_statements_and_complete_replacement_arguments": [],
+    "proved_further_consequences": [],
+    "separate_editorial_evidence": [
+      {
+        "file": "ALGEBRA_SMOOTH_NOTES_20260928.md",
+        "sha256": "8CCB047E3940BF8C25D04C2D1B1CA5C908797BC40A8D801BE67ECB802AD1884D",
+        "section": "Intrinsic Jacobian defect and its full Fitting ideals",
+        "destination": "separate_source_linked_editorial_note"
+      }
+    ],
+    "current_editorial_locus": null,
+    "external_source_locus": null,
+    "source_scope": "upstream_authority",
+    "prior_composed_evidence": null,
+    "reusable_source_fixes_already_composed": [],
+    "propagation": {
+      "status": "checked_within_current_source_interval",
+      "checked_authority_lines": [
+        37055,
+        37794
+      ],
+      "remaining": "Continue at formally smooth maps, 37795; opening through 37805 is unadjudicated. Pending More on Algebra findings at 1385 and 8502/8504 are separate chapter items; combined synthesis follows core completion.",
+      "receives_from": [
+        "ALGEBRA-RECON-1068"
+      ],
+      "completed_effect": "Correct the kernel-vector indices in the supporting Fitting argument while preserving a separate pending source operation for More on Algebra."
+    },
+    "translation_treatment": {
+      "full_argument_destination": "source_linked_conceptual_erratum_or_editorial_supplement",
+      "replace_original_translation_with_full_argument": false,
+      "minimal_source_text_corrections": [],
+      "source_correction_presentation": "Preserve the original presentations, full Jacobian matrices, source hypotheses and exposition. The original H_1(L) notation is explicitly defined and must not be silently replaced. Keep new proofs and consequences in source-linked editorial material."
+    },
+    "core_integration_state": "see_source_review_disposition",
+    "affected_source": {
+      "file": "more-algebra.tex",
+      "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+      "authority_lines": [
+        1378,
+        1397
+      ],
+      "pending_operation": {
+        "line": 1385,
+        "old_text": "z'_{n + j'}",
+        "replacement_text": "z'_{n - k + j'}"
+      },
+      "status": "pending_separate_chapter_adjudication_no_mutation"
+    },
+    "affected_source_locator": "ALGEBRA_INTAKE_REVIEW_20260925.json#/groups/1068/affected_source",
+    "current_edition_placement": {
+      "placement_locator": "ALGEBRA_EDITORIAL_PLACEMENT_20260929.json#/records/1068",
+      "placement_basis": "existing_explicit_placement",
+      "body_operation_ids": [],
+      "editorial_proposal_ids": [],
+      "public_source_note_required": true,
+      "source_note_materialized": false,
+      "historical_review_and_full_arguments_preserved": true,
+      "status": "placement_prepared_not_yet_admitted"
+    }
+  },
+  {
+    "id": "ALGEBRA-RECON-1333",
+    "finding_kinds": [
+      "source_coefficient_factor_missing_in_dependency",
+      "source_correction"
+    ],
+    "source": "authority/examples.tex",
+    "authority_lines": [
+      1481,
+      1481
+    ],
+    "authority_sha256": "30EAF58E0953F17E3A659E73AA37AC8C146BC4136FC68850CB0341E23EF398B4",
+    "report_ids": [],
+    "prior_canonical_ids": [],
+    "source_review_disposition": "dependency_source_correction_recorded",
+    "rationale": "Record the missing x inverse factor on the coefficient in the cited Examples recurrence and prove the receiving construction with its full formula.",
+    "adverse_evidence": "The original relation x z_(j+1)+a_j=z_j gives z_(j+1)=x^(-1)(z_j-a_j). The printed expression x^(-1)z_j-a_j differs by a_j(x^(-1)-1), nonzero for at least one original coefficient because z is transcendental. The current Examples source still has this error. Its correction preserves the ring, the Laurent-polynomial localization and the counterexample.",
+    "original_statements_and_complete_replacement_arguments": [],
+    "proved_further_consequences": [],
+    "separate_editorial_evidence": [
+      {
+        "file": "ALGEBRA_DESCENT_NOTES_20260929.md",
+        "sha256": "DCDDDFC9EBA3E3F456DF4D621F6148C62BF7D67B5589AD9E50E24AFF9A98EE05",
+        "section": "The original series construction and its missing coefficient factor",
+        "destination": "separate_source_linked_editorial_note"
+      }
+    ],
+    "current_editorial_locus": null,
+    "external_source_locus": {
+      "canonical_source_id": "STACKS-EXAMPLES-a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "authors": [
+        "The Stacks Project authors"
+      ],
+      "title": "Examples, A non catenary Noetherian local ring",
+      "file": "authority/examples.tex",
+      "sha256": "30EAF58E0953F17E3A659E73AA37AC8C146BC4136FC68850CB0341E23EF398B4",
+      "lines": [
+        1481,
+        1481
+      ],
+      "label": "section-non-catenary-Noetherian-local",
+      "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "public_source": "https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/examples.tex#L1481",
+      "scope": "Original author TeX, retained bytewise from the Git authority. Source correction in a receiving dependency; no Algebra operation or silent rewrite."
+    },
+    "source_scope": "external_author_source",
+    "prior_composed_evidence": null,
+    "reusable_source_fixes_already_composed": [],
+    "propagation": {
+      "status": "checked_within_current_source_interval",
+      "checked_authority_lines": [
+        46633,
+        46877
+      ],
+      "remaining": "Continue at 46878, Geometrically normal algebras. Reuse the proved source dependencies. Examples recurrence correction awaits its own chapter integration; further paper mining remains after Algebra."
+    },
+    "translation_treatment": {
+      "full_argument_destination": "source_linked_conceptual_erratum_or_editorial_supplement",
+      "replace_original_translation_with_full_argument": false,
+      "minimal_source_text_corrections": [],
+      "source_correction_presentation": "Retain six prior units and six operations. The exact finite etale construction, locality comparison, and Examples recurrence correction remain source-linked editorial material; no source text changed."
+    },
+    "core_integration_state": "see_source_review_disposition",
+    "related_stacks_authority_context": {
+      "source": "algebra.tex",
+      "lines": [
+        46851,
+        46859
+      ],
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    "current_edition_placement": {
+      "placement_locator": "ALGEBRA_EDITORIAL_PLACEMENT_20260929.json#/records/1332",
+      "placement_basis": "existing_explicit_placement",
+      "body_operation_ids": [],
+      "editorial_proposal_ids": [],
+      "public_source_note_required": true,
+      "source_note_materialized": false,
+      "historical_review_and_full_arguments_preserved": true,
+      "status": "placement_prepared_not_yet_admitted"
+    }
+  }
+]

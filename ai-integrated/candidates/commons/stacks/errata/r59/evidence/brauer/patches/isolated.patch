@@ -1,0 +1,73 @@
+diff --git a/brauer.tex b/brauer.tex
+index c3dafd1e8493a1aadb73cc4c4733d4900929d45b..efcb34849f86f88ec6f0e911d0c9153755d5b548 100644
+--- a/brauer.tex
++++ b/brauer.tex
+@@ -120,7 +120,7 @@
+ \label{lemma-simple-module}
+ Let $A$ be a $k$-algebra. If $A$ is finite, then
+ \begin{enumerate}
+-\item $A$ has a simple module,
++\item if $A \not = 0$, then $A$ has a simple module,
+ \item any nonzero module contains a simple submodule,
+ \item a simple module over $A$ has finite dimension over $k$, and
+ \item if $M$ is a simple $A$-module, then $\text{End}_A(M)$ is a
+@@ -129,8 +129,8 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Of course (1) follows from (2) since $A$ is a nonzero $A$-module.
+-For (2), any submodule of minimal (finite) dimension as a $k$-vector
++When $A \not = 0$, assertion (1) follows from (2) applied to the $A$-module $A$.
++For (2), any nonzero submodule of minimal (finite) dimension as a $k$-vector
+ space will be simple. There exists a finite dimensional one
+ because a cyclic submodule is one. If $M$ is simple, then
+ $mA \subset M$ is a sub-module, hence we see (3). Any nonzero element
+@@ -155,7 +155,7 @@
+ we see that $A = \text{End}_K(M)$. Since $K$ is a skew field and
+ $M$ is finitely generated (since $\dim_k(M) < \infty$) we see that
+ $M$ is finite free as a left $K$-module. It follows immediately that
+-$A \cong \text{Mat}(n \times n, K^{op})$.
++$A \cong \text{Mat}(n \times n, K)$.
+ \end{proof}
+ 
+ 
+@@ -287,7 +287,7 @@
+ have the same dimension over $k$.
+ \item If $A = \text{Mat}(n \times n, K)$ with $K$ a finite skew field
+ extension of $k$, then $M = K^{\oplus n}$ is a simple $A$-module and
+-$\text{End}_A(M) = K^{op}$.
++$\text{End}_A(M) = K$.
+ \item If $M$ is a simple $A$-module, then $L = \text{End}_A(M)$
+ is a skew field finite over $k$ acting on the left on $M$, we have
+ $A = \text{End}_L(M)$, and the centers of $A$ and $L$ agree.
+@@ -308,7 +308,7 @@
+ because every module over $K$ is free. Part (4) holds
+ because the equivalence transforms the $K$-module $K$
+ to $M = K^{\oplus n}$. Using $M = K^{\oplus n}$ in (5)
+-we see that $L = K^{op}$. The statement about the center of $L = K^{op}$
++we see that $L = K$. The statement about the center of $L = K$
+ follows from
+ Lemma \ref{lemma-matrix-algebras}.
+ The statement about $\text{End}_L(M)$ follows from the explicit form
+@@ -408,9 +408,9 @@
+ the third assertion. To see this it suffices to show that if
+ $A = \text{Mat}(n \times n, K) \cong \text{Mat}(m \times m, K') = B$
+ then $K \cong K'$. To see this note that for a simple module $M$ of $A$
+-we have $\text{End}_A(M) = K^{op}$, see
++we have $\text{End}_A(M) = K$, see
+ Lemma \ref{lemma-simple-module-unique}.
+-Hence $A \cong B$ implies $K^{op} \cong (K')^{op}$ and we win.
++Hence $A \cong B$ implies $K \cong K'$ and we win.
+ \end{proof}
+ 
+ \noindent
+@@ -543,7 +543,8 @@
+ Then $L$ is a skew field with center $k$ which acts on the left on $M$
+ and $A = \text{End}_L(M)$.
+ Then $M$ is a right $B \otimes_k L^{op}$-module and
+-$C = \text{End}_{B \otimes_k L^{op}}(M)$.
++right multiplication identifies $C^{op}$ with
++$\text{End}_{B \otimes_k L^{op}}(M)$.
+ Since the algebra $B \otimes_k L^{op}$ is simple by
+ Lemma \ref{lemma-tensor-simple} we see that $C$ is simple (by
+ Lemma \ref{lemma-simple-module-unique} again).

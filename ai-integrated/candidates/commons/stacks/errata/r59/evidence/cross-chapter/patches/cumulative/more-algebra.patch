@@ -1,0 +1,25 @@
+diff --git a/more-algebra.tex b/more-algebra.tex
+index 9db253ad6bf37ba398eccc7cf81a9ff76eaf38f2..d54a2fee084cbf06e65ccf6bf6b41267547899d4 100644
+--- a/more-algebra.tex
++++ b/more-algebra.tex
+@@ -1382,7 +1382,7 @@
+ are the same. Namely, if $z_1, \ldots, z_{n - k} \in K$ as above,
+ let $z'_j = (z_{1j}, \ldots, z_{nj}, 0, \ldots, 0) \in K'$ for
+ $j = 1, \ldots, n - k$ and
+-$z'_{n + j'} = (0, \ldots, 0, 1, 0, \ldots, 0) \in K'$. Then we see that
++$z'_{n - k + j'} = (0, \ldots, 0, 1, 0, \ldots, 0) \in K'$. Then we see that
+ the ideal of $(n - k) \times (n - k)$ minors of $(z_{ij})$ agrees
+ with the ideal of $(n + n' - k) \times (n + n' - k)$ minors of
+ $(z'_{ij})$. This gives one of the inclusions.
+@@ -9109,9 +9109,9 @@
+ Lemma \ref{lemma-conormal-sequence-H1-regular-ideal}.
+ This means that the kernel of $K/K^2 \to J/J^2$ is
+ isomorphic to $IA[x_s, y_j]/IK$. Since
+-$I/I^2 \otimes_A C = IA[x_s, y_j]/IK$ by right exactness
++$I/I^2 \otimes_B C = IA[x_s, y_j]/IK$ by right exactness
+ of tensor product, this provides us with the desired injectivity of
+-$I/I^2 \otimes_A C \to K/K^2$.
++$I/I^2 \otimes_B C \to K/K^2$.
+ \end{proof}
+ 
+ \begin{lemma}

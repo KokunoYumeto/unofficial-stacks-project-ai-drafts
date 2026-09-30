@@ -1,0 +1,132 @@
+\begin{lemma}
+\label{lemma-syntomic-lci}
+Let $R \to S$ be a ring map. The following are equivalent
+\begin{enumerate}
+\item $R \to S$ is syntomic
+(Algebra, Definition \ref{algebra-definition-lci}), and
+\item $R \to S$ is flat and a local complete intersection.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Assume (1). Then $R \to S$ is flat by definition.
+By Algebra, Lemma \ref{algebra-lemma-syntomic} and
+Lemma \ref{lemma-lci-local} we see that it suffices to
+show a relative global complete intersection is
+a local complete intersection homomorphism which is
+Lemma \ref{lemma-relative-global-complete-intersection-koszul}.
+
+\medskip\noindent
+Assume (2). A local complete intersection is of finite presentation
+because a Koszul-regular ideal is finitely generated.
+Let $R \to k$ be a map to a field. It suffices to show that
+$S' = S \otimes_R k$ is a local complete intersection over $k$, see
+Algebra, Definition \ref{algebra-definition-lci-field}.
+Choose a prime $\mathfrak q' \subset S'$.
+Write $S = R[x_1, \ldots, x_n]/I$.
+Then $S' = k[x_1, \ldots, x_n]/I'$ where
+$I' \subset k[x_1, \ldots, x_n]$ is the image of $I$.
+Let $\mathfrak p' \subset k[x_1, \ldots, x_n]$,
+$\mathfrak q \subset S$,
+and $\mathfrak p \subset R[x_1, \ldots, x_n]$
+be the corresponding primes.
+By Definition \ref{definition-regular-ideal}
+exists an $g \in R[x_1, \ldots, x_n]$, $g \not \in \mathfrak p$
+and $f_1, \ldots, f_r \in R[x_1, \ldots, x_n]_g$ which form
+a Koszul-regular sequence generating $I_g$.
+Since $S$ and hence $S_g$ is flat over $R$
+we see that the images $f'_1, \ldots, f'_r$ in
+$k[x_1, \ldots, x_n]_g$ form a $H_1$-regular sequence
+generating $I'_g$, see
+Lemma \ref{lemma-relative-regular-immersion-algebra}.
+Thus $f'_1, \ldots, f'_r$ map to a regular sequence in
+$k[x_1, \ldots, x_n]_{\mathfrak p'}$ generating
+$I'_{\mathfrak p'}$ by Lemma \ref{lemma-noetherian-finite-all-equivalent}.
+Applying Algebra, Lemma \ref{algebra-lemma-lci}
+we conclude $S'_{gg'}$ for some $g' \in S$, $g' \not \in \mathfrak q'$
+is a global complete intersection over $k$ as desired.
+\end{proof}
+
+\noindent
+For a local complete intersection $R \to S$ we have $H_n(L_{S/R}) = 0$ for
+$n \geq 2$. Since we haven't (yet) defined the full cotangent complex
+we can't state and prove this, but we can deduce one of the consequences.
+
+\begin{lemma}
+\label{lemma-transitive-lci-at-end}
+Let $A \to B \to C$ be ring maps. Assume $B \to C$ is a local complete
+intersection homomorphism. Choose a presentation
+$\alpha : A[x_s, s \in S] \to B$ with kernel $I$. Choose a presentation
+$\beta : B[y_1, \ldots, y_m] \to C$ with kernel $J$. Let
+$\gamma : A[x_s, y_t] \to C$ be the induced presentation of $C$ with kernel
+$K$. Then we get a canonical commutative diagram
+$$
+\xymatrix{
+0 \ar[r] &
+\Omega_{A[x_s]/A} \otimes C \ar[r] &
+\Omega_{A[x_s, y_t]/A} \otimes C \ar[r] &
+\Omega_{B[y_t]/B} \otimes C \ar[r] &
+0 \\
+0 \ar[r] &
+I/I^2 \otimes C \ar[r] \ar[u] &
+K/K^2 \ar[r] \ar[u] &
+J/J^2 \ar[r] \ar[u] &
+0
+}
+$$
+with exact rows. In particular, the six term exact sequence of
+Algebra, Lemma \ref{algebra-lemma-exact-sequence-NL}
+can be completed with a zero on the left, i.e., the sequence
+$$
+0 \to H_1(\NL_{B/A} \otimes_B C) \to
+H_1(L_{C/A}) \to
+H_1(L_{C/B}) \to
+\Omega_{B/A} \otimes_B C \to
+\Omega_{C/A} \to
+\Omega_{C/B} \to 0
+$$
+is exact.
+\end{lemma}
+
+\begin{proof}
+The only thing to prove is the injectivity of the map
+$I/I^2 \otimes C \to K/K^2$.
+By assumption the ideal $J$ is Koszul-regular.
+Hence we have $IA[x_s, y_j] \cap K^2 = IK$ by
+Lemma \ref{lemma-conormal-sequence-H1-regular-ideal}.
+This means that the kernel of $K/K^2 \to J/J^2$ is
+isomorphic to $IA[x_s, y_j]/IK$. Since
+$I/I^2 \otimes_A C = IA[x_s, y_j]/IK$ by right exactness
+of tensor product, this provides us with the desired injectivity of
+$I/I^2 \otimes_A C \to K/K^2$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-transitive-colimit-lci-at-end}
+Let $A \to B \to C$ be ring maps.
+If $B \to C$ is a filtered colimit of local complete intersection
+homomorphisms then the conclusion of
+Lemma \ref{lemma-transitive-lci-at-end}
+remains valid.
+\end{lemma}
+
+\begin{proof}
+Follows from
+Lemma \ref{lemma-transitive-lci-at-end}
+and
+Algebra, Lemma \ref{algebra-lemma-colimits-NL}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-henselization-NL}
+Let $A \to B$ be a local homomorphism of local rings.
+Let $A^h \to B^h$, resp.\ $A^{sh} \to B^{sh}$ be the induced
+map on henselizations, resp.\ strict henselizations
+(Algebra, Lemma \ref{algebra-lemma-henselian-functorial},
+resp.\ Lemma \ref{algebra-lemma-strictly-henselian-functorial}).
+Then $\NL_{B/A} \otimes_B B^h \to \NL_{B^h/A^h}$ and
+$\NL_{B/A} \otimes_B B^{sh} \to \NL_{B^{sh}/A^{sh}}$
+induce isomorphisms on cohomology groups.
+\end{lemma}
+
+\begin{proof}

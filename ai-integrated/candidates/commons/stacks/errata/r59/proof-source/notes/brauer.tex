@@ -1,0 +1,176 @@
+\subsection{Brauer Groups: source review and propagation of the received corrections}\label{brauer-groups-source-review-and-propagation-of-the-received-corrections}
+
+Source: The Stacks Project authors, \texttt{brauer.tex}, authority commit \texttt{a04446e57ec1fbc252a871afcec7752fb2807b14}, SHA-256 \texttt{B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682}. The retained original TeX has 817 lines; all were read for this review. The twelve received reports and ten existing source operations are retained separately. This note supplies editorial arguments and propagation findings. It does not silently replace the source or claim a new research theorem.
+
+\subsubsection{1. The module and multiplication conventions}\label{the-module-and-multiplication-conventions}
+
+The source defines modules to be unital \textbf{right} modules at lines 33--37. In its Rieffel proof, lines 100--106, the endomorphisms of a right module act on the left, whereas endomorphisms of the resulting left module are made to act on the right. Its footnote explicitly reverses multiplication in the latter ring. We retain both conventions and distinguish their maps.
+
+Write \texttt{End\^{}comp} for endomorphisms multiplied by composition, \texttt{f\ g\ =\ f\ ∘\ g}. Write \texttt{End\^{}right} for the same functions with multiplication \texttt{f\ ⋆\ g\ =\ g\ ∘\ f}. The identity on functions is an isomorphism \texttt{End\^{}right\ ≅\ (End\^{}comp)\^{}op}, not an isomorphism to \texttt{End\^{}comp} in general. Thus the source's first commutant is \texttt{End\_A\^{}comp(M)}, acting on the left, and its bicommutant is \texttt{End\_L\^{}right(M)}, acting on the right.
+
+For the right action of any ring A, define \texttt{R\_a(m)=ma}. Then
+
+\begin{verbatim}
+(R_a ∘ R_b)(m) = (mb)a = m(ba) = R_{ba}(m),
+(R_a ⋆ R_b)(m) = (ma)b = m(ab) = R_{ab}(m).
+\end{verbatim}
+
+Consequently the original action is a homomorphism into \texttt{End\^{}right} and an antihomomorphism into \texttt{End\^{}comp}. No opposite algebra can be removed or introduced without checking this multiplication.
+
+\subsubsection{2. Matrix corners and the two inverse module maps}\label{matrix-corners-and-the-two-inverse-module-maps}
+
+This checks \texttt{MC-STK-ERR-0745} against source lines 259--278. Let R be the original possibly noncommutative ring, let \texttt{n≥1}, and put \texttt{R\_n=Mat(n×n,R)}. Denote the matrix units by \texttt{e\_ij}; for \texttt{r∈R}, \texttt{r\ e\_ij} denotes the matrix with r in position \texttt{(i,j)} and zero elsewhere. The multiplication formula, with the factors in their original order, is
+
+\begin{verbatim}
+(r e_ij)(s e_uv) = δ_ju (rs)e_iv.
+\end{verbatim}
+
+Let J be a two-sided ideal of R\_n.~The additive sum \texttt{J=⊕\_\{1≤i,j≤n\}\ e\_ii\ J\ e\_jj} is direct because its summands have disjoint matrix positions. Put \texttt{I=\{r∈R\ :\ r\ e\_11∈J\}}. Addition, additive inverses, and multiplication on either side by \texttt{s\ e\_11} prove that I is a two-sided ideal of R. For every pair i,j, the two identities
+
+\begin{verbatim}
+e_i1 (r e_11)e_1j = r e_ij,
+e_1i (r e_ij)e_j1 = r e_11
+\end{verbatim}
+
+prove \texttt{e\_ii\ J\ e\_jj=\{r\ e\_ij:r∈I\}}. The inverse maps between this corner and I take r to \texttt{r\ e\_ij} and extract its \texttt{(i,j)} coefficient. They do not identify different corners as subsets of the matrix ring. Summing the corners proves \texttt{J=I\ R\_n}. The retained source correction expresses precisely this common coefficient ideal; its unexpanded direct-sum notation has the unique available pair of indices and is not another defect.
+
+For completeness, the source's equivalence of right-module categories is given by actual inverse maps. Regard \texttt{X\^{}⊕n} as rows over a right R-module X, with \texttt{(xU)\_j=Σ\_i\ x\_i\ u\_ij}. Conversely take \texttt{Y\ e\_11} for a right R\_n-module Y, with its R-action through \texttt{r↦r\ e\_11}. Define
+
+\begin{verbatim}
+α_Y : (Y e_11)^⊕n → Y,       (y_i)_i ↦ Σ_i y_i e_1i,
+β_Y : Y → (Y e_11)^⊕n,       y ↦ (y e_i1)_i.
+\end{verbatim}
+
+The entries of β lie in \texttt{Y\ e\_11} since \texttt{e\_i1\ e\_11=e\_i1}. The relations \texttt{e\_1j\ e\_i1=δ\_ji\ e\_11} and \texttt{Σ\_i\ e\_i1\ e\_1i=Σ\_i\ e\_ii=1} give \texttt{β\_Y\ α\_Y=id} and \texttt{α\_Y\ β\_Y=id}. Matrix multiplication verifies that these are right R\_n-module maps. The analogous identification \texttt{(X\^{}⊕n)e\_11→X} extracts the first entry and its inverse inserts zeros. All these maps commute with module homomorphisms, so they give the stated equivalence, including for modules which are not finitely generated.
+
+Commutation with every \texttt{e\_ii} forces a central matrix to be diagonal; commutation with every \texttt{e\_ij} makes its diagonal entries equal. Commutation with \texttt{r\ e\_11} for every r then forces that common entry into \texttt{Z(R)}. Conversely each such scalar matrix is central. This proves the exact center map \texttt{Z(R)→Z(R\_n),\ r↦r·1\_n}, with inverse taking entry \texttt{(1,1)}.
+
+\subsubsection{3. The zero-algebra correction does not yet reach every dependent statement}\label{the-zero-algebra-correction-does-not-yet-reach-every-dependent-statement}
+
+The ten existing corrections include \texttt{MC-STK-ERR-0746}, requiring a simple algebra to be nonzero at source lines 63--64. This is necessary: the zero algebra satisfies the printed two-sided-ideal condition, but cannot be a positive-size matrix algebra over a skew field, whose identity is nonzero.
+
+However, the separate lemma at lines 119--138 assumes only that A is finite, not that A is simple. Its assertion (1), that A has a simple module, is still false for A=0 after the definition of ``simple algebra'' is repaired. For a unital module over the zero algebra, every m satisfies \texttt{m=m·1=m·0=0}. Therefore all such modules are zero and none is simple.
+
+The precise correction restricts \textbf{assertion (1)} to \texttt{A≠0}; assertions (2)--(4) remain valid for every finite algebra, including zero. Their full argument is as follows. In any nonzero right A-module N, choose \texttt{m≠0}. Then \texttt{m=m1} belongs to the cyclic submodule mA, which is a nonzero quotient of the finite-dimensional k-vector space A. Among nonzero submodules of mA choose one of least positive k-dimension, called M. Any nonzero proper submodule of M would have smaller positive dimension, so M is simple. This proves (2). Applying (2) to the module A proves (1) when A is nonzero. Conversely existence of a simple unital A-module implies A is nonzero by the preceding zero-algebra calculation.
+
+If M is simple, any \texttt{m≠0} generates it, since \texttt{0≠mA⊂M}. Hence M is a quotient of A and has finite k-dimension, proving (3). Finally a nonzero A-endomorphism f of M has kernel zero and image M, since its kernel and image are submodules. It is bijective, and its inverse is A-linear: if \texttt{f(x)=m}, then \texttt{f(xa)=ma}, so \texttt{f\^{}\{-1\}(ma)=f\^{}\{-1\}(m)a}. The identity of M is nonzero. Thus \texttt{End\_A\^{}comp(M)} is a skew field, proving (4). This last argument requires no finiteness assumption at all; the general Schur assertion is a proved underclaim recorded editorially.
+
+The word ``nonzero'' is also needed before ``submodule of minimal (finite) dimension'' in the proof at line 133: among all submodules, zero has the smallest dimension. This is a bounded repair of the stated minimization.
+
+Downstream: the construction of a simple submodule of a finite simple A in Wedderburn's proof is now valid because the corrected definition already gives \texttt{A≠0}. No new hypothesis is needed in that theorem or in its later uses. The unrelated zero-module exception in assertion (6) at lines 295--296 is correctly excluded by existing \texttt{MC-STK-ERR-0747}.
+
+\subsubsection{4. The exact endomorphism rings of the original right matrix module}\label{the-exact-endomorphism-rings-of-the-original-right-matrix-module}
+
+Retain the source's \texttt{A=Mat(n×n,K)} and its right module \texttt{M=K\^{}⊕n}, with row action. For each a∈K let \texttt{L\_a(v\_1,…,v\_n)=(av\_1,…,av\_n)}. Associativity shows \texttt{L\_a(vU)=L\_a(v)U}, so L\_a is A-linear. Moreover
+
+\begin{verbatim}
+L_a ∘ L_b = L_{ab}.
+\end{verbatim}
+
+Every A-linear f is of this form. If ε\_i is the i-th unit row, then \texttt{ε\_i\ e\_ii=ε\_i} implies f(ε\_i) has only its i-th entry, say a\_i. The equation \texttt{ε\_i\ e\_ij=ε\_j} gives \texttt{a\_i=a\_j} for every pair. Write their common value a. Using the matrix with r in diagonal position \texttt{(i,i)} gives \texttt{f(r\ ε\_i)=ar\ ε\_i}. Additivity now gives f=L\_a on every row. Evaluation on ε\_1 supplies the inverse to \texttt{a↦L\_a}. Thus the exact ring isomorphism is
+
+\begin{verbatim}
+K → End_A^comp(M),             a ↦ L_a,
+\end{verbatim}
+
+and its target is K, not K\^{}op, under the source's left action convention. The formula is compatible with the central k-actions on both sides.
+
+Now let M be a left K-vector space with ordered basis ε\_1,\ldots,ε\_n, retaining coefficients on the left. A left K-linear map is determined by \texttt{t(ε\_i)=Σ\_j\ u\_ij\ ε\_j} and sends the coefficient row v to vU. Let t\_U denote this map. Direct multiplication gives
+
+\begin{verbatim}
+t_U ∘ t_V = t_{VU},            t_U ⋆ t_V = t_{UV}.
+\end{verbatim}
+
+Consequently \texttt{End\_K\^{}right(M)≅Mat(n×n,K)} by \texttt{t\_U↦U}, whereas \texttt{End\_K\^{}comp(M)≅Mat(n×n,K\^{}op)} by \texttt{t\_U↦(u\_ji\^{}op)\_\{i,j\}}. The latter transpose retains every entry and reverses multiplication inside K; it is not a change in the original action.
+
+This proves that the final line 158 of the source's Wedderburn proof, which uses its explicitly defined right-acting bicommutant, should have \texttt{Mat(n×n,K)}, with the original \texttt{K=End\_A\^{}comp(M)}. Likewise the expressions \texttt{End\_A(M)=K\^{}op} at lines 290 and 411 and \texttt{L=K\^{}op} at line 311 are inconsistent with that same convention. The correct identifications there use K. The uniqueness proof at line 413 then directly gives \texttt{K≅K\textquotesingle{}}. The theorem that a finite simple algebra is some matrix algebra over a skew field remains true; the error is in the explicitly named division algebra and its action, not in the existential classification.
+
+The order discrepancy is substantive even without finding a division algebra abstractly nonisomorphic to its opposite. As an explicit witness, inside \texttt{Mat(2×2,C)} put
+
+\begin{verbatim}
+I = diag(i,-i),     J = [[0,1],[-1,0]],     Q = IJ.
+\end{verbatim}
+
+Their real span with the identity is an associative real algebra because it is closed under multiplication, with \texttt{I²=J²=-1} and \texttt{JI=-IJ}. The four matrices are linearly independent over R. For \texttt{h=a+bI+cJ+dQ}, multiplication by \texttt{h̄=a-bI-cJ-dQ} in either order gives \texttt{(a²+b²+c²+d²)·1}. Every nonzero h is therefore invertible. In this skew field, \texttt{L\_I∘L\_J=L\_Q}, while multiplication of I and J in the opposite ring gives \texttt{JI=-Q}, which would map to \texttt{-L\_Q}. These are unequal because \texttt{2Q≠0}. Thus the source's unmodified left action cannot identify its composition ring with K\^{}op by the claimed coefficient assignment.
+
+\subsubsection{5. Bicommutants, including the missed generality for the module}\label{bicommutants-including-the-missed-generality-for-the-module}
+
+For the finite case in source lines 280--317 write \texttt{A=Mat(n×n,K)}, \texttt{M=K\^{}⊕n}, and \texttt{N=M\^{}⊕r}, where r is the actual number of simple summands. For \texttt{r≥1}, an A-linear endomorphism of N is a matrix \texttt{(b\_ij)∈Mat(r×r,K)} acting by \texttt{(v\_j)\_j↦(Σ\_j\ b\_ij\ v\_j)\_i}. The calculation in Section 4 proves both that every endomorphism has these entries and that composition is ordinary matrix multiplication. Hence
+
+\begin{verbatim}
+B=End_A^comp(N) ≅ Mat(r×r,K)=Mat(r×r,L),   L=End_A^comp(M)≅K.
+\end{verbatim}
+
+The right action of A identifies A with \texttt{End\_B\^{}right(N)}. Here is a proof which also establishes the exact stronger statement for \textbf{every nonzero right A-module N}, without requiring N finite.
+
+The inverse equivalences in Section 2, with R=K, identify N with \texttt{(N\ e\_11)\^{}⊕n}. Choose a basis of the right K-vector space \texttt{N\ e\_11}. Writing its index set as T gives an A-module isomorphism \texttt{N≅⊕\_\{t∈T\}\ M\_t}, where each \texttt{M\_t=M}, and every element has finite support. The set T is nonempty because N is nonzero. This is an explicit direct sum of the original simple right matrix modules, with no finiteness restriction on T.
+
+Put \texttt{B=End\_A\^{}comp(N)}. Suppose F is an additive map commuting with all of B. For each t, the projection onto M\_t belongs to B, so F preserves each M\_t. The A-linear map which transfers the row in M\_t to M\_u and annihilates the other summands also belongs to B. Commutation with these maps shows that the restrictions of F are one and the same additive map \texttt{f:M→M}, under the displayed identifications. For every a∈K, the map which applies L\_a to a single summand and is zero on all others belongs to B. Therefore \texttt{f(av)=a\ f(v)}: f is left K-linear. Section 4 now gives a unique matrix \texttt{U∈Mat(n×n,K)} with \texttt{f(v)=vU}. On an arbitrary finite-support element \texttt{(v\_t)}, additivity and the projections give \texttt{F((v\_t))=(v\_t\ U)}. Thus F is exactly the original right action R\_U on N. Conversely every R\_U commutes with every A-linear map by the definition of A-linearity. The action is faithful: if R\_U is zero, apply it to each unit row in any one nonempty summand to read off all entries of U. The multiplication calculation in Section 1 proves
+
+\begin{verbatim}
+A ≅ End_B^right(N),     A^op ≅ End_B^comp(N).
+\end{verbatim}
+
+For N=0 the target is the zero ring, so neither can recover nonzero A. This proves both the necessity of the existing nonzero correction and the editorial underclaim: finiteness of N is unnecessary for the bicommutant conclusion. It is still needed for the accompanying description of B as a finite-size matrix algebra. No change to that finite-matrix assertion is inferred from the stronger bicommutant conclusion.
+
+The dimensions in assertion (5) remain exactly \texttt{{[}A:k{]}=n²{[}K:k{]}}, \texttt{{[}L:k{]}={[}K:k{]}}, \texttt{dim\_k(M)=n{[}K:k{]}}, and hence \texttt{{[}A:k{]}{[}L:k{]}=dim\_k(M)²}. The centers of A and L identify with Z(K) by the explicit scalar-matrix map of Section 2.
+
+\subsubsection{6. Propagation through Skolem--Noether and the centralizer argument}\label{propagation-through-skolemnoether-and-the-centralizer-argument}
+
+This checks the mathematical qualification in \texttt{MC-STK-ERR-0748} and the explicit multiplication map in \texttt{MC-STK-ERR-0749}.
+
+In the source Skolem--Noether proof retain the right A-module M and \texttt{L=End\_A\^{}comp(M)}, acting on its left. For embeddings f,g:B→A, the two right actions of \texttt{H=B⊗\_k\ L\^{}op} are
+
+\begin{verbatim}
+m·_1(b⊗l^op)=l m f(b),         m·_2(b⊗l^op)=l m g(b).
+\end{verbatim}
+
+For example, applying \texttt{(b\_1⊗l\_1\^{}op)} and then \texttt{(b\_2⊗l\_2\^{}op)} gives \texttt{l\_2\ l\_1\ m\ f(b\_1)f(b\_2)}, exactly the action of their product in H. Their k-dimensions are equal. The source's finite simple classification therefore supplies an H-module isomorphism φ from the first action to the second. Its L-linearity identifies it with \texttt{R\_x} for x∈A by the bicommutant result. Its inverse is \texttt{R\_y} for y∈A, so faithfulness gives \texttt{xy=yx=1}. Intertwining the B-actions gives \texttt{f(b)x=xg(b)}, hence \texttt{f(b)=xg(b)x\^{}\{-1\}}. The opposite on L is essential and stays in this proof.
+
+Taking B=A, f a k-algebra automorphism, and g the identity proves the corrected inner-automorphism assertion. Without ``k-algebra'', take k=C, A=C, and complex conjugation. It is a unital ring automorphism which is not the identity. Every inner automorphism of the commutative field C is the identity, so the unqualified ring assertion would be false.
+
+For the centralizer theorem retain the source's \texttt{H=B⊗\_k\ L\^{}op} acting on the right of M and \texttt{C=Cent\_A(B)}. The assignment \texttt{c↦R\_c} takes C into \texttt{End\_H\^{}comp(M)}. It is bijective: an H-linear map commutes with L, so the A-bicommutant identifies it with some R\_a; commutation with the B-action says \texttt{ba=ab} for every b, by faithfulness of M. Thus a∈C. But composition is reversed: \texttt{R\_c∘R\_d=R\_\{dc\}}. The exact identification in source line 546 is therefore
+
+\begin{verbatim}
+C^op ≅ End_H^comp(M).
+\end{verbatim}
+
+If \texttt{H=Mat(m×m,K)} and M is a direct sum of n copies of its right simple module \texttt{K\^{}⊕m}, Section 5 gives \texttt{End\_H\^{}comp(M)≅Mat(n×n,K)}. Taking opposites and the entrywise transpose gives \texttt{C≅Mat(n×n,K\^{}op)}. \textbf{The opposite in source line 553 is correct and must be retained.} It differs from the incorrect occurrences in the right simple module's left-acting endomorphism ring. All original dimension formulas at lines 556--558 remain unchanged:
+
+\begin{verbatim}
+dim_k(M)=nm[K:k],      [B:k][L:k]=m²[K:k],
+[C:k]=n²[K:k],         [A:k][L:k]=dim_k(M)².
+\end{verbatim}
+
+Since \texttt{{[}L:k{]}\textgreater{}0}, substitution and cancellation of that nonzero integer give \texttt{{[}A:k{]}={[}B:k{]}{[}C:k{]}}. The source double-centralizer conclusion follows from \texttt{B⊂Cent\_A(C)} and applying this formula to C; equality of the finite k-dimensions makes the inclusion surjective.
+
+When B is central, \texttt{Z(C)=C∩Cent\_A(C)=C∩B=Z(B)=k}. The map in the existing corrected tensor statement is
+
+\begin{verbatim}
+μ:B⊗_k C→A,                  μ(b⊗c)=bc.
+\end{verbatim}
+
+It is well defined by k-balance. It is multiplicative since C commutes with B: \texttt{(bc)(b\textquotesingle{}c\textquotesingle{})=bb\textquotesingle{}cc\textquotesingle{}}. It takes the identity to the nonzero identity of A. Its domain is simple by the source tensor-simplicity lemma, so its kernel is zero. Its domain and codomain have the same finite dimension by the formula just proved, so μ is an isomorphism. This supplies the exact map rather than treating distinct presentations as unrelated. The source's equality was usable as a customary canonical identification; the existing edit is recorded as a clarification making that map explicit, not as a new counterexample to the theorem.
+
+\subsubsection{7. The corrected separability negation and its receiving argument}\label{the-corrected-separability-negation-and-its-receiving-argument}
+
+Both producer reports at source line 733 refer to existing \texttt{MC-STK-ERR-0017}. The sought element at lines 724--726 belongs to \texttt{K\textbackslash{}k} and is separable over k. Its negation is that no element of \texttt{K\textbackslash{}k} is separable, not that K has no separable element at all. Every a∈k has minimal polynomial \texttt{T-a}, whose derivative is 1, so the latter statement is always false. Existing \texttt{MC-STK-ERR-0016} independently repairs the spelling of ``splitting field'' at line 711. These are two shared mathematical loci, each reported twice; they are not four distinct corrections.
+
+The corrected negation really does give the next assertion in the proof. In characteristic p\textgreater0, let f be the monic irreducible polynomial of x∈K. Repeatedly remove powers of p from every exponent until \texttt{f(T)=g(T\^{}\{p\^{}r\})} with \texttt{g\textquotesingle{}≠0}. The polynomial g is irreducible, since a factorization of g would give one of f.~Therefore it is separable, and \texttt{y=x\^{}\{p\^{}r\}} is separable over k. The corrected assumption forces y∈k. Since g is the monic irreducible polynomial of y, \texttt{g(U)=U-y}; thus \texttt{f(T)=T\^{}\{p\^{}r\}-y}. Its degree \texttt{p\^{}r} is at most \texttt{{[}K:k{]}}. Choose a p-power q at least \texttt{{[}K:k{]}}. Each such \texttt{p\^{}r} divides q, hence \texttt{x\^{}q∈k} for every x.
+
+With the original basis \texttt{a\_1=1,a\_2,…,a\_n}, write every ordered product \texttt{a\_\{i\_1\}…a\_\{i\_q\}=Σ\_j\ c\^{}j\_\{i\_1,…,i\_q\}a\_j}, keeping all q factors. Then the coordinate polynomials in the source are exactly
+
+\begin{verbatim}
+f_j(X_1,…,X_n)=Σ_{1≤i_1,…,i_q≤n}
+                  c^j_{i_1,…,i_q} X_{i_1}…X_{i_q}.
+\end{verbatim}
+
+For j≥2 they vanish on all k\^{}n.~Over the infinite field k this implies they are the zero polynomials: induct on the number of variables, using that a nonzero one-variable polynomial has at most its degree many roots and applying that assertion to each coefficient. Their vanishing therefore persists over the algebraic closure. The resulting matrix algebra has size at least 2, since \texttt{K≠k} and \texttt{{[}K:k{]}=d²}. Its element e\_11 has \texttt{e\_11\^{}q=e\_11}, and is not central because \texttt{e\_11\ e\_12=e\_12} whereas \texttt{e\_12\ e\_11=0}. This is the required contradiction.
+
+The existing punctuation edits at lines 561 and 728 and article insertion at line 771 preserve all mathematical assertions. No change to those already-admitted operations is required by this review.
+
+\subsubsection{8. Scope and remaining integration}\label{scope-and-remaining-integration}
+
+The ten existing corrections replay exactly to the current complete \texttt{brauer.tex}; all twelve received reports have been compared with their actual source operations. The separate zero-algebra lemma and the endomorphism-order propagation above are new findings from this review. Their bounded edits and this complete editorial argument require their own prepared source record and later admission. Neither reading the chapter nor proving these comparisons is a publication receipt.
+
+The stronger Schur and nonzero-module bicommutant conclusions are proved editorial underclaims. They do not authorize replacing the source's finite-module exposition. The later joint synthesis and novelty review remain after the core correction work. No claim about the separately received open Brauer problem or its proposed solution is made here.

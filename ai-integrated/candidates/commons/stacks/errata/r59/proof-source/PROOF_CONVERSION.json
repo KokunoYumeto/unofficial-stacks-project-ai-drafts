@@ -1,0 +1,1712 @@
+{
+  "schema": "stacks-r59-proof-conversion/v1",
+  "pandoc_version": "pandoc 3.9.0.2",
+  "documents": [
+    {
+      "source": "notes-source/cross-chapter.md",
+      "source_identity": {
+        "bytes": 20639,
+        "sha256": "74CFC62F4CAAADD3166D70102A1529AA71ABD9A66C589B898C9794F43DB3CD64"
+      },
+      "tex": "notes/cross-chapter.tex",
+      "tex_identity": {
+        "bytes": 21137,
+        "sha256": "F1B027EC10627861C7FFB5C6E96F6BEB3B957EB98C5DD0FB4D0CD82FB86D64F0"
+      },
+      "tex_math_payloads": 241,
+      "code_payloads": 0,
+      "parsed_payloads": [
+        {
+          "kind": "Math",
+          "text": "R"
+        },
+        {
+          "kind": "Math",
+          "text": "M"
+        },
+        {
+          "kind": "Math",
+          "text": "\\pi:R^{\\oplus n}\\to M"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "0\\leq k\\leq n"
+        },
+        {
+          "kind": "Math",
+          "text": "q=n-k"
+        },
+        {
+          "kind": "Math",
+          "text": "z_1,\\ldots,z_{n-k}\\in K"
+        },
+        {
+          "kind": "Math",
+          "text": "\n Z=(z_{ij})_{1\\leq i\\leq n,\\ 1\\leq j\\leq n-k}.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "n'"
+        },
+        {
+          "kind": "Math",
+          "text": "\n \\pi':R^{\\oplus n}\\oplus R^{\\oplus n'}\\longrightarrow M,\n \\qquad (a,b)\\longmapsto\\pi(a),\n \\qquad K'=K\\oplus R^{\\oplus n'}.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "n+n'-k"
+        },
+        {
+          "kind": "Math",
+          "text": "\n z'_j=(z_j,0)\\quad(1\\leq j\\leq n-k),\\qquad\n z'_{n-k+j'}=(0,e_{j'})\\quad(1\\leq j'\\leq n'),\n\\tag{F1}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "e_{j'}"
+        },
+        {
+          "kind": "Math",
+          "text": "j'"
+        },
+        {
+          "kind": "Math",
+          "text": "R^{\\oplus n'}"
+        },
+        {
+          "kind": "Math",
+          "text": "\n Z'=\n \\begin{pmatrix}\n  Z&0_{n\\times n'}\\\\\n  0_{n'\\times(n-k)}&1_{n'}\n \\end{pmatrix}.\n\\tag{F2}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "n+j'"
+        },
+        {
+          "kind": "Math",
+          "text": "n-k+1,\\ldots,n"
+        },
+        {
+          "kind": "Math",
+          "text": "k>0"
+        },
+        {
+          "kind": "Math",
+          "text": "n=2,k=1,n'=1"
+        },
+        {
+          "kind": "Math",
+          "text": "(n+n'-k)"
+        },
+        {
+          "kind": "Math",
+          "text": "n-k"
+        },
+        {
+          "kind": "Math",
+          "text": "(n-k)"
+        },
+        {
+          "kind": "Math",
+          "text": "Z"
+        },
+        {
+          "kind": "Math",
+          "text": "1_{n'}"
+        },
+        {
+          "kind": "Math",
+          "text": "Z"
+        },
+        {
+          "kind": "Math",
+          "text": "n'=0"
+        },
+        {
+          "kind": "Math",
+          "text": "k=n"
+        },
+        {
+          "kind": "Math",
+          "text": "n+n'-k"
+        },
+        {
+          "kind": "Math",
+          "text": "K'"
+        },
+        {
+          "kind": "Math",
+          "text": "W"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "P"
+        },
+        {
+          "kind": "Math",
+          "text": "Q"
+        },
+        {
+          "kind": "Math",
+          "text": "\n W=\\begin{pmatrix}P\\\\Q\\end{pmatrix},\n \\qquad P\\in\\operatorname{Mat}_{n\\times(n+n'-k)}(R),\n \\quad Q\\in\\operatorname{Mat}_{n'\\times(n+n'-k)}(R).\n"
+        },
+        {
+          "kind": "Math",
+          "text": "(n+n'-k)"
+        },
+        {
+          "kind": "Math",
+          "text": "s"
+        },
+        {
+          "kind": "Math",
+          "text": "s"
+        },
+        {
+          "kind": "Math",
+          "text": "s"
+        },
+        {
+          "kind": "Math",
+          "text": "(n+n'-k-s)"
+        },
+        {
+          "kind": "Math",
+          "text": "P"
+        },
+        {
+          "kind": "Math",
+          "text": "s\\leq n'"
+        },
+        {
+          "kind": "Math",
+          "text": "n-k"
+        },
+        {
+          "kind": "Math",
+          "text": "n-k"
+        },
+        {
+          "kind": "Math",
+          "text": "(n-k)"
+        },
+        {
+          "kind": "Math",
+          "text": "P"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "(n-k)"
+        },
+        {
+          "kind": "Math",
+          "text": "k=n"
+        },
+        {
+          "kind": "Math",
+          "text": "\\rho:R^{\\oplus m}\\to M"
+        },
+        {
+          "kind": "Math",
+          "text": "\n U:R^{\\oplus m}\\to R^{\\oplus n},\\quad \\pi U=\\rho,\\qquad\n V:R^{\\oplus n}\\to R^{\\oplus m},\\quad \\rho V=\\pi.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "R^{\\oplus n}\\oplus R^{\\oplus m}"
+        },
+        {
+          "kind": "Math",
+          "text": "\n T_\\pi(a,b)=(a+Ub,b),\\quad T_\\pi^{-1}(a,b)=(a-Ub,b),\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n T_\\rho(a,b)=(a,b+Va),\\quad T_\\rho^{-1}(a,b)=(a,b-Va)\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n (\\pi,0)T_\\pi=(\\pi,\\rho)=(0,\\rho)T_\\rho.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "T_\\rho T_\\pi^{-1}"
+        },
+        {
+          "kind": "Math",
+          "text": "\\ker(\\pi)\\oplus R^{\\oplus m}"
+        },
+        {
+          "kind": "Math",
+          "text": "R^{\\oplus n}\\oplus\\ker(\\rho)"
+        },
+        {
+          "kind": "Math",
+          "text": "M"
+        },
+        {
+          "kind": "Math",
+          "text": "k>n"
+        },
+        {
+          "kind": "Math",
+          "text": "k"
+        },
+        {
+          "kind": "Math",
+          "text": "n"
+        },
+        {
+          "kind": "Math",
+          "text": "0<n+n'-k\\leq n'"
+        },
+        {
+          "kind": "Math",
+          "text": "n+n'-k\\leq0"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "\n A\\longrightarrow B\\longrightarrow C,\\qquad\n P=A[x_s\\mid s\\in S]\\twoheadrightarrow B=P/I,\\qquad\n B[y_1,\\ldots,y_m]\\twoheadrightarrow C.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "T=P[y_1,\\ldots,y_m]"
+        },
+        {
+          "kind": "Math",
+          "text": "K=\\ker(T\\to C)"
+        },
+        {
+          "kind": "Math",
+          "text": "J=\\ker(B[y_1,\\ldots,y_m]\\to C)=K/IT"
+        },
+        {
+          "kind": "Math",
+          "text": "IK"
+        },
+        {
+          "kind": "Math",
+          "text": "(IT)K"
+        },
+        {
+          "kind": "Math",
+          "text": "T"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "I/I^2"
+        },
+        {
+          "kind": "Math",
+          "text": "P\\to P/I"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "\n \\Phi:(I/I^2)\\otimes_B C\\xrightarrow{\\ \\sim\\ }IT/IK,\n \\qquad (i\\bmod I^2)\\otimes(t\\bmod K)\\longmapsto it\\bmod IK\n\\tag{C1}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "i"
+        },
+        {
+          "kind": "Math",
+          "text": "I^2"
+        },
+        {
+          "kind": "Math",
+          "text": "t"
+        },
+        {
+          "kind": "Math",
+          "text": "I^2T\\subset IK"
+        },
+        {
+          "kind": "Math",
+          "text": "IT\\subset K"
+        },
+        {
+          "kind": "Math",
+          "text": "t"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "i"
+        },
+        {
+          "kind": "Math",
+          "text": "IK"
+        },
+        {
+          "kind": "Math",
+          "text": "p\\in P"
+        },
+        {
+          "kind": "Math",
+          "text": "b\\in B"
+        },
+        {
+          "kind": "Math",
+          "text": "(ip\\bmod I^2)\\otimes\\bar t"
+        },
+        {
+          "kind": "Math",
+          "text": "(i\\bmod I^2)\\otimes\\overline{pt}"
+        },
+        {
+          "kind": "Math",
+          "text": "b"
+        },
+        {
+          "kind": "Math",
+          "text": "I^2T"
+        },
+        {
+          "kind": "Math",
+          "text": "q\\in IT"
+        },
+        {
+          "kind": "Math",
+          "text": "\n q=\\sum_{\\nu\\in\\mathbf N^m}i_\\nu y^\\nu,\\qquad i_\\nu\\in I,\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n \\Psi(q\\bmod IK)=\n \\sum_{\\nu\\in\\mathbf N^m}(i_\\nu\\bmod I^2)\\otimes\\overline{y^\\nu}.\n\\tag{C2}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "p\\in P"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "y_t"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "q=i\\,h"
+        },
+        {
+          "kind": "Math",
+          "text": "i\\in I,h\\in T"
+        },
+        {
+          "kind": "Math",
+          "text": "(i\\bmod I^2)\\otimes\\bar h"
+        },
+        {
+          "kind": "Math",
+          "text": "IK"
+        },
+        {
+          "kind": "Math",
+          "text": "i\\,h\\,k"
+        },
+        {
+          "kind": "Math",
+          "text": "k\\in K"
+        },
+        {
+          "kind": "Math",
+          "text": "(i\\bmod I^2)\\otimes\\overline{hk}=0"
+        },
+        {
+          "kind": "Math",
+          "text": "q"
+        },
+        {
+          "kind": "Math",
+          "text": "IK"
+        },
+        {
+          "kind": "Math",
+          "text": "t"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "B\\to C"
+        },
+        {
+          "kind": "Math",
+          "text": "\n IT\\cap K^2=IK.\n\\tag{C3}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "J"
+        },
+        {
+          "kind": "Math",
+          "text": "D"
+        },
+        {
+          "kind": "Math",
+          "text": "L"
+        },
+        {
+          "kind": "Math",
+          "text": "g_1,\\ldots,g_r\\in D"
+        },
+        {
+          "kind": "Math",
+          "text": "D/L"
+        },
+        {
+          "kind": "Math",
+          "text": "h=\\sum_i g_i a_i\\in L"
+        },
+        {
+          "kind": "Math",
+          "text": "\\sum_i\\bar a_i e_i"
+        },
+        {
+          "kind": "Math",
+          "text": "\n d_2(e_i\\wedge e_j)=\\bar g_i e_j-\\bar g_j e_i\\quad(i<j),\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\\bar c_{ij}\\in D/L"
+        },
+        {
+          "kind": "Math",
+          "text": "\\sum_{i<j}\\bar c_{ij}(\\bar g_i e_j-\\bar g_j e_i)"
+        },
+        {
+          "kind": "Math",
+          "text": "c_{ij}\\in D"
+        },
+        {
+          "kind": "Math",
+          "text": "\n \\ell_i=a_i+\\sum_{j>i}c_{ij}g_j-\\sum_{h<i}c_{hi}g_h\\in L.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n \\sum_i g_i a_i\n =\\sum_i g_i\\ell_i+\n   \\sum_{i<j}(-c_{ij}g_i g_j+c_{ij}g_j g_i)\n =\\sum_i g_i\\ell_i.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "L\\cap(g_1,\\ldots,g_r)=L(g_1,\\ldots,g_r)"
+        },
+        {
+          "kind": "Math",
+          "text": "Q=L+(g_1,\\ldots,g_r)"
+        },
+        {
+          "kind": "Math",
+          "text": "L\\cap Q^2"
+        },
+        {
+          "kind": "Math",
+          "text": "\n h=\\sum_{i,j}b_{ij}g_i g_j+\\sum_i\\ell'_i g_i+\\ell',\n \\quad b_{ij}\\in D,\\quad\\ell'_i\\in L,\\quad\\ell'\\in L^2.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "L\\cap(g_1,\\ldots,g_r)"
+        },
+        {
+          "kind": "Math",
+          "text": "L(g_1,\\ldots,g_r)"
+        },
+        {
+          "kind": "Math",
+          "text": "LQ"
+        },
+        {
+          "kind": "Math",
+          "text": "L\\cap Q^2=LQ"
+        },
+        {
+          "kind": "Math",
+          "text": "D=T_g"
+        },
+        {
+          "kind": "Math",
+          "text": "L=(IT)_g"
+        },
+        {
+          "kind": "Math",
+          "text": "Q=K_g"
+        },
+        {
+          "kind": "Math",
+          "text": "T"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "g"
+        },
+        {
+          "kind": "Math",
+          "text": "J"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "IT"
+        },
+        {
+          "kind": "Math",
+          "text": "(IT\\cap K^2)/IK"
+        },
+        {
+          "kind": "Math",
+          "text": "I"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "\n (I/I^2)\\otimes_B C\\longrightarrow K/K^2,\\qquad\n \\bar i\\otimes\\bar t\\longmapsto it\\bmod K^2\n"
+        },
+        {
+          "kind": "Math",
+          "text": "K/K^2\\to J/J^2"
+        },
+        {
+          "kind": "Math",
+          "text": "(IT+K^2)/K^2"
+        },
+        {
+          "kind": "Math",
+          "text": "IT/(IT\\cap K^2)"
+        },
+        {
+          "kind": "Math",
+          "text": "\n 0\\longrightarrow (I/I^2)\\otimes_B C\n \\longrightarrow K/K^2\\longrightarrow J/J^2\\longrightarrow0.\n\\tag{C4}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "dx_s"
+        },
+        {
+          "kind": "Math",
+          "text": "dy_t"
+        },
+        {
+          "kind": "Math",
+          "text": "\n 0\\longrightarrow\n \\bigoplus_{s\\in S}C\\,dx_s\n \\longrightarrow\n \\left(\\bigoplus_{s\\in S}C\\,dx_s\\right)\\oplus\n \\left(\\bigoplus_{t=1}^{m}C\\,dy_t\\right)\n \\longrightarrow\n \\bigoplus_{t=1}^{m}C\\,dy_t\n \\longrightarrow0.\n\\tag{C5}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "i\\in I,t\\in T"
+        },
+        {
+          "kind": "Math",
+          "text": "d(it)=t\\,di+i\\,dt"
+        },
+        {
+          "kind": "Math",
+          "text": "t\\,di"
+        },
+        {
+          "kind": "Math",
+          "text": "i"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "I"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "J"
+        },
+        {
+          "kind": "Math",
+          "text": "K"
+        },
+        {
+          "kind": "Math",
+          "text": "T/A"
+        },
+        {
+          "kind": "Math",
+          "text": "dx_s"
+        },
+        {
+          "kind": "Math",
+          "text": "dy_t"
+        },
+        {
+          "kind": "Math",
+          "text": "\\Omega_{B/A}\\otimes_B C"
+        },
+        {
+          "kind": "Math",
+          "text": "IT"
+        },
+        {
+          "kind": "Math",
+          "text": "J^2"
+        },
+        {
+          "kind": "Math",
+          "text": "K^2"
+        },
+        {
+          "kind": "Math",
+          "text": "C"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "\n A=k,\\quad P=k[x],\\quad I=K=(x^2),\\quad\n B=C=k[x]/(x^2),\n"
+        },
+        {
+          "kind": "Math",
+          "text": "B\\to C"
+        },
+        {
+          "kind": "Math",
+          "text": "y"
+        },
+        {
+          "kind": "Math",
+          "text": "J=0"
+        },
+        {
+          "kind": "Math",
+          "text": "\n IT/IK=(x^2)/(x^4)=I/I^2,\n"
+        },
+        {
+          "kind": "Math",
+          "text": "k"
+        },
+        {
+          "kind": "Math",
+          "text": "u=x^2\\bmod x^4,\\ v=x^3\\bmod x^4"
+        },
+        {
+          "kind": "Math",
+          "text": "(I/I^2)\\otimes_k C"
+        },
+        {
+          "kind": "Math",
+          "text": "\n u\\otimes1,\\quad u\\otimes\\bar x,\\quad v\\otimes1,\\quad\n v\\otimes\\bar x.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "I/I^2"
+        },
+        {
+          "kind": "Math",
+          "text": "u,v,v,0"
+        },
+        {
+          "kind": "Math",
+          "text": "\n u\\otimes\\bar x-v\\otimes1,\\qquad v\\otimes\\bar x.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "a,b,c,d"
+        },
+        {
+          "kind": "Math",
+          "text": "a\\,u+(b+c)v"
+        },
+        {
+          "kind": "Math",
+          "text": "a=0,c=-b"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "A"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "B"
+        },
+        {
+          "kind": "Math",
+          "text": "K/K^2"
+        },
+        {
+          "kind": "Math",
+          "text": "x^{-1}"
+        },
+        {
+          "kind": "Math",
+          "text": "k"
+        },
+        {
+          "kind": "Math",
+          "text": "x"
+        },
+        {
+          "kind": "Math",
+          "text": "\n z=\\sum_{i=1}^{\\infty}a_i x^i\\in k[[x]],\\qquad\n z_j=x^{-j}\\left(z-\\sum_{i=1}^{j-1}a_i x^i\\right)\n     =\\sum_{i=j}^{\\infty}a_i x^{i-j}\\quad(j\\geq1).\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n xz_{j+1}\n =\\sum_{i=j+1}^{\\infty}a_i x^{i-j}\n =z_j-a_j,\\qquad\n z_{j+1}=x^{-1}(z_j-a_j).\n\\tag{S1}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "x^{-1}z_j-a_j"
+        },
+        {
+          "kind": "Math",
+          "text": "a_j(x^{-1}-1)"
+        },
+        {
+          "kind": "Math",
+          "text": "k(x)"
+        },
+        {
+          "kind": "Math",
+          "text": "k((x))"
+        },
+        {
+          "kind": "Math",
+          "text": "x"
+        },
+        {
+          "kind": "Math",
+          "text": "R=k[x,z_1,z_2,\\ldots]\\subset k[[x]]"
+        },
+        {
+          "kind": "Math",
+          "text": "k((x))"
+        },
+        {
+          "kind": "Math",
+          "text": "\n R[1/x]=k[x,x^{-1},z].\n\\tag{S2}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "z=xz_1\\in R"
+        },
+        {
+          "kind": "Math",
+          "text": "x"
+        },
+        {
+          "kind": "Math",
+          "text": "z_j"
+        },
+        {
+          "kind": "Math",
+          "text": "k((x))"
+        },
+        {
+          "kind": "Math",
+          "text": "z_j"
+        },
+        {
+          "kind": "Math",
+          "text": "k(x)"
+        },
+        {
+          "kind": "Math",
+          "text": "z_j"
+        },
+        {
+          "kind": "Math",
+          "text": "z=x^jz_j+\\sum_{i<j}a_i x^i"
+        },
+        {
+          "kind": "Math",
+          "text": "z"
+        },
+        {
+          "kind": "Math",
+          "text": "R_j=k[x,z_j]"
+        },
+        {
+          "kind": "Math",
+          "text": "\n R_j\\longrightarrow R_{j+1},\\qquad\n x\\longmapsto x,\\quad z_j\\longmapsto xz_{j+1}+a_j\n"
+        },
+        {
+          "kind": "Math",
+          "text": "k[[x]]"
+        },
+        {
+          "kind": "Math",
+          "text": "R"
+        },
+        {
+          "kind": "Math",
+          "text": "x-1"
+        },
+        {
+          "kind": "Math",
+          "text": "\n k[z_j]\\longrightarrow k[z_{j+1}],\\qquad\n z_j\\longmapsto z_{j+1}+a_j.\n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n R/(x-1)\\xrightarrow{\\sim}k[z],\\qquad\n x\\longmapsto1,\\quad\n z_j\\longmapsto z-\\sum_{i=1}^{j-1}a_i.\n\\tag{S3}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "R_j"
+        },
+        {
+          "kind": "Math",
+          "text": "R"
+        },
+        {
+          "kind": "Math",
+          "text": "z"
+        },
+        {
+          "kind": "Math",
+          "text": "xz_1"
+        },
+        {
+          "kind": "Math",
+          "text": "(x-1)"
+        },
+        {
+          "kind": "Math",
+          "text": "\n \\mathfrak n=(x-1,z_1,z_2+a_1,z_3+a_1+a_2,\\ldots)\n"
+        },
+        {
+          "kind": "Math",
+          "text": "(x-1,z)"
+        },
+        {
+          "kind": "Math",
+          "text": "k"
+        },
+        {
+          "kind": "Math",
+          "text": "x\\notin\\mathfrak n"
+        },
+        {
+          "kind": "Math",
+          "text": "\n k[x,x^{-1},z]_{(x-1,z)}\n \\xrightarrow{\\sim} R_{\\mathfrak n}.\n\\tag{S4}\n"
+        },
+        {
+          "kind": "Math",
+          "text": "x,x^{-1},z"
+        },
+        {
+          "kind": "Math",
+          "text": "z_j"
+        },
+        {
+          "kind": "Math",
+          "text": "\n x^{-j}\\left(z-\\sum_{i=1}^{j-1}a_i x^i\\right).\n"
+        },
+        {
+          "kind": "Math",
+          "text": "k((x))"
+        },
+        {
+          "kind": "Math",
+          "text": "R\\setminus\\mathfrak n"
+        },
+        {
+          "kind": "Math",
+          "text": "x=1,z=0"
+        },
+        {
+          "kind": "Math",
+          "text": "(x-1,z)"
+        }
+      ],
+      "all_tex_math_payloads_exact": true,
+      "complete_pandoc_ast_retained": true
+    },
+    {
+      "source": "notes-source/brauer.md",
+      "source_identity": {
+        "bytes": 19446,
+        "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+      },
+      "tex": "notes/brauer.tex",
+      "tex_identity": {
+        "bytes": 22284,
+        "sha256": "3BFA897699B61C385F87B0CE64AA201A0D7444CAF8838DBF9E4280BCEEE03E4E"
+      },
+      "tex_math_payloads": 0,
+      "code_payloads": 175,
+      "parsed_payloads": [
+        {
+          "kind": "Code",
+          "text": "brauer.tex"
+        },
+        {
+          "kind": "Code",
+          "text": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+        },
+        {
+          "kind": "Code",
+          "text": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+        },
+        {
+          "kind": "Code",
+          "text": "End^comp"
+        },
+        {
+          "kind": "Code",
+          "text": "f g = f ∘ g"
+        },
+        {
+          "kind": "Code",
+          "text": "End^right"
+        },
+        {
+          "kind": "Code",
+          "text": "f ⋆ g = g ∘ f"
+        },
+        {
+          "kind": "Code",
+          "text": "End^right ≅ (End^comp)^op"
+        },
+        {
+          "kind": "Code",
+          "text": "End^comp"
+        },
+        {
+          "kind": "Code",
+          "text": "End_A^comp(M)"
+        },
+        {
+          "kind": "Code",
+          "text": "End_L^right(M)"
+        },
+        {
+          "kind": "Code",
+          "text": "R_a(m)=ma"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "(R_a ∘ R_b)(m) = (mb)a = m(ba) = R_{ba}(m),\n(R_a ⋆ R_b)(m) = (ma)b = m(ab) = R_{ab}(m)."
+        },
+        {
+          "kind": "Code",
+          "text": "End^right"
+        },
+        {
+          "kind": "Code",
+          "text": "End^comp"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0745"
+        },
+        {
+          "kind": "Code",
+          "text": "n≥1"
+        },
+        {
+          "kind": "Code",
+          "text": "R_n=Mat(n×n,R)"
+        },
+        {
+          "kind": "Code",
+          "text": "e_ij"
+        },
+        {
+          "kind": "Code",
+          "text": "r∈R"
+        },
+        {
+          "kind": "Code",
+          "text": "r e_ij"
+        },
+        {
+          "kind": "Code",
+          "text": "(i,j)"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "(r e_ij)(s e_uv) = δ_ju (rs)e_iv."
+        },
+        {
+          "kind": "Code",
+          "text": "J=⊕_{1≤i,j≤n} e_ii J e_jj"
+        },
+        {
+          "kind": "Code",
+          "text": "I={r∈R : r e_11∈J}"
+        },
+        {
+          "kind": "Code",
+          "text": "s e_11"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "e_i1 (r e_11)e_1j = r e_ij,\ne_1i (r e_ij)e_j1 = r e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "e_ii J e_jj={r e_ij:r∈I}"
+        },
+        {
+          "kind": "Code",
+          "text": "r e_ij"
+        },
+        {
+          "kind": "Code",
+          "text": "(i,j)"
+        },
+        {
+          "kind": "Code",
+          "text": "J=I R_n"
+        },
+        {
+          "kind": "Code",
+          "text": "X^⊕n"
+        },
+        {
+          "kind": "Code",
+          "text": "(xU)_j=Σ_i x_i u_ij"
+        },
+        {
+          "kind": "Code",
+          "text": "Y e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "r↦r e_11"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "α_Y : (Y e_11)^⊕n → Y,       (y_i)_i ↦ Σ_i y_i e_1i,\nβ_Y : Y → (Y e_11)^⊕n,       y ↦ (y e_i1)_i."
+        },
+        {
+          "kind": "Code",
+          "text": "Y e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "e_i1 e_11=e_i1"
+        },
+        {
+          "kind": "Code",
+          "text": "e_1j e_i1=δ_ji e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "Σ_i e_i1 e_1i=Σ_i e_ii=1"
+        },
+        {
+          "kind": "Code",
+          "text": "β_Y α_Y=id"
+        },
+        {
+          "kind": "Code",
+          "text": "α_Y β_Y=id"
+        },
+        {
+          "kind": "Code",
+          "text": "(X^⊕n)e_11→X"
+        },
+        {
+          "kind": "Code",
+          "text": "e_ii"
+        },
+        {
+          "kind": "Code",
+          "text": "e_ij"
+        },
+        {
+          "kind": "Code",
+          "text": "r e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "Z(R)"
+        },
+        {
+          "kind": "Code",
+          "text": "Z(R)→Z(R_n), r↦r·1_n"
+        },
+        {
+          "kind": "Code",
+          "text": "(1,1)"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0746"
+        },
+        {
+          "kind": "Code",
+          "text": "m=m·1=m·0=0"
+        },
+        {
+          "kind": "Code",
+          "text": "A≠0"
+        },
+        {
+          "kind": "Code",
+          "text": "m≠0"
+        },
+        {
+          "kind": "Code",
+          "text": "m=m1"
+        },
+        {
+          "kind": "Code",
+          "text": "m≠0"
+        },
+        {
+          "kind": "Code",
+          "text": "0≠mA⊂M"
+        },
+        {
+          "kind": "Code",
+          "text": "f(x)=m"
+        },
+        {
+          "kind": "Code",
+          "text": "f(xa)=ma"
+        },
+        {
+          "kind": "Code",
+          "text": "f^{-1}(ma)=f^{-1}(m)a"
+        },
+        {
+          "kind": "Code",
+          "text": "End_A^comp(M)"
+        },
+        {
+          "kind": "Code",
+          "text": "A≠0"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0747"
+        },
+        {
+          "kind": "Code",
+          "text": "A=Mat(n×n,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "M=K^⊕n"
+        },
+        {
+          "kind": "Code",
+          "text": "L_a(v_1,…,v_n)=(av_1,…,av_n)"
+        },
+        {
+          "kind": "Code",
+          "text": "L_a(vU)=L_a(v)U"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "L_a ∘ L_b = L_{ab}."
+        },
+        {
+          "kind": "Code",
+          "text": "ε_i e_ii=ε_i"
+        },
+        {
+          "kind": "Code",
+          "text": "ε_i e_ij=ε_j"
+        },
+        {
+          "kind": "Code",
+          "text": "a_i=a_j"
+        },
+        {
+          "kind": "Code",
+          "text": "(i,i)"
+        },
+        {
+          "kind": "Code",
+          "text": "f(r ε_i)=ar ε_i"
+        },
+        {
+          "kind": "Code",
+          "text": "a↦L_a"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "K → End_A^comp(M),             a ↦ L_a,"
+        },
+        {
+          "kind": "Code",
+          "text": "t(ε_i)=Σ_j u_ij ε_j"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "t_U ∘ t_V = t_{VU},            t_U ⋆ t_V = t_{UV}."
+        },
+        {
+          "kind": "Code",
+          "text": "End_K^right(M)≅Mat(n×n,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "t_U↦U"
+        },
+        {
+          "kind": "Code",
+          "text": "End_K^comp(M)≅Mat(n×n,K^op)"
+        },
+        {
+          "kind": "Code",
+          "text": "t_U↦(u_ji^op)_{i,j}"
+        },
+        {
+          "kind": "Code",
+          "text": "Mat(n×n,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "K=End_A^comp(M)"
+        },
+        {
+          "kind": "Code",
+          "text": "End_A(M)=K^op"
+        },
+        {
+          "kind": "Code",
+          "text": "L=K^op"
+        },
+        {
+          "kind": "Code",
+          "text": "K≅K'"
+        },
+        {
+          "kind": "Code",
+          "text": "Mat(2×2,C)"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "I = diag(i,-i),     J = [[0,1],[-1,0]],     Q = IJ."
+        },
+        {
+          "kind": "Code",
+          "text": "I²=J²=-1"
+        },
+        {
+          "kind": "Code",
+          "text": "JI=-IJ"
+        },
+        {
+          "kind": "Code",
+          "text": "h=a+bI+cJ+dQ"
+        },
+        {
+          "kind": "Code",
+          "text": "h̄=a-bI-cJ-dQ"
+        },
+        {
+          "kind": "Code",
+          "text": "(a²+b²+c²+d²)·1"
+        },
+        {
+          "kind": "Code",
+          "text": "L_I∘L_J=L_Q"
+        },
+        {
+          "kind": "Code",
+          "text": "JI=-Q"
+        },
+        {
+          "kind": "Code",
+          "text": "-L_Q"
+        },
+        {
+          "kind": "Code",
+          "text": "2Q≠0"
+        },
+        {
+          "kind": "Code",
+          "text": "A=Mat(n×n,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "M=K^⊕n"
+        },
+        {
+          "kind": "Code",
+          "text": "N=M^⊕r"
+        },
+        {
+          "kind": "Code",
+          "text": "r≥1"
+        },
+        {
+          "kind": "Code",
+          "text": "(b_ij)∈Mat(r×r,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "(v_j)_j↦(Σ_j b_ij v_j)_i"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "B=End_A^comp(N) ≅ Mat(r×r,K)=Mat(r×r,L),   L=End_A^comp(M)≅K."
+        },
+        {
+          "kind": "Code",
+          "text": "End_B^right(N)"
+        },
+        {
+          "kind": "Code",
+          "text": "(N e_11)^⊕n"
+        },
+        {
+          "kind": "Code",
+          "text": "N e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "N≅⊕_{t∈T} M_t"
+        },
+        {
+          "kind": "Code",
+          "text": "M_t=M"
+        },
+        {
+          "kind": "Code",
+          "text": "B=End_A^comp(N)"
+        },
+        {
+          "kind": "Code",
+          "text": "f:M→M"
+        },
+        {
+          "kind": "Code",
+          "text": "f(av)=a f(v)"
+        },
+        {
+          "kind": "Code",
+          "text": "U∈Mat(n×n,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "f(v)=vU"
+        },
+        {
+          "kind": "Code",
+          "text": "(v_t)"
+        },
+        {
+          "kind": "Code",
+          "text": "F((v_t))=(v_t U)"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "A ≅ End_B^right(N),     A^op ≅ End_B^comp(N)."
+        },
+        {
+          "kind": "Code",
+          "text": "[A:k]=n²[K:k]"
+        },
+        {
+          "kind": "Code",
+          "text": "[L:k]=[K:k]"
+        },
+        {
+          "kind": "Code",
+          "text": "dim_k(M)=n[K:k]"
+        },
+        {
+          "kind": "Code",
+          "text": "[A:k][L:k]=dim_k(M)²"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0748"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0749"
+        },
+        {
+          "kind": "Code",
+          "text": "L=End_A^comp(M)"
+        },
+        {
+          "kind": "Code",
+          "text": "H=B⊗_k L^op"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "m·_1(b⊗l^op)=l m f(b),         m·_2(b⊗l^op)=l m g(b)."
+        },
+        {
+          "kind": "Code",
+          "text": "(b_1⊗l_1^op)"
+        },
+        {
+          "kind": "Code",
+          "text": "(b_2⊗l_2^op)"
+        },
+        {
+          "kind": "Code",
+          "text": "l_2 l_1 m f(b_1)f(b_2)"
+        },
+        {
+          "kind": "Code",
+          "text": "R_x"
+        },
+        {
+          "kind": "Code",
+          "text": "R_y"
+        },
+        {
+          "kind": "Code",
+          "text": "xy=yx=1"
+        },
+        {
+          "kind": "Code",
+          "text": "f(b)x=xg(b)"
+        },
+        {
+          "kind": "Code",
+          "text": "f(b)=xg(b)x^{-1}"
+        },
+        {
+          "kind": "Code",
+          "text": "H=B⊗_k L^op"
+        },
+        {
+          "kind": "Code",
+          "text": "C=Cent_A(B)"
+        },
+        {
+          "kind": "Code",
+          "text": "c↦R_c"
+        },
+        {
+          "kind": "Code",
+          "text": "End_H^comp(M)"
+        },
+        {
+          "kind": "Code",
+          "text": "ba=ab"
+        },
+        {
+          "kind": "Code",
+          "text": "R_c∘R_d=R_{dc}"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "C^op ≅ End_H^comp(M)."
+        },
+        {
+          "kind": "Code",
+          "text": "H=Mat(m×m,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "K^⊕m"
+        },
+        {
+          "kind": "Code",
+          "text": "End_H^comp(M)≅Mat(n×n,K)"
+        },
+        {
+          "kind": "Code",
+          "text": "C≅Mat(n×n,K^op)"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "dim_k(M)=nm[K:k],      [B:k][L:k]=m²[K:k],\n[C:k]=n²[K:k],         [A:k][L:k]=dim_k(M)²."
+        },
+        {
+          "kind": "Code",
+          "text": "[L:k]>0"
+        },
+        {
+          "kind": "Code",
+          "text": "[A:k]=[B:k][C:k]"
+        },
+        {
+          "kind": "Code",
+          "text": "B⊂Cent_A(C)"
+        },
+        {
+          "kind": "Code",
+          "text": "Z(C)=C∩Cent_A(C)=C∩B=Z(B)=k"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "μ:B⊗_k C→A,                  μ(b⊗c)=bc."
+        },
+        {
+          "kind": "Code",
+          "text": "(bc)(b'c')=bb'cc'"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0017"
+        },
+        {
+          "kind": "Code",
+          "text": "K\\k"
+        },
+        {
+          "kind": "Code",
+          "text": "K\\k"
+        },
+        {
+          "kind": "Code",
+          "text": "T-a"
+        },
+        {
+          "kind": "Code",
+          "text": "MC-STK-ERR-0016"
+        },
+        {
+          "kind": "Code",
+          "text": "f(T)=g(T^{p^r})"
+        },
+        {
+          "kind": "Code",
+          "text": "g'≠0"
+        },
+        {
+          "kind": "Code",
+          "text": "y=x^{p^r}"
+        },
+        {
+          "kind": "Code",
+          "text": "g(U)=U-y"
+        },
+        {
+          "kind": "Code",
+          "text": "f(T)=T^{p^r}-y"
+        },
+        {
+          "kind": "Code",
+          "text": "p^r"
+        },
+        {
+          "kind": "Code",
+          "text": "[K:k]"
+        },
+        {
+          "kind": "Code",
+          "text": "[K:k]"
+        },
+        {
+          "kind": "Code",
+          "text": "p^r"
+        },
+        {
+          "kind": "Code",
+          "text": "x^q∈k"
+        },
+        {
+          "kind": "Code",
+          "text": "a_1=1,a_2,…,a_n"
+        },
+        {
+          "kind": "Code",
+          "text": "a_{i_1}…a_{i_q}=Σ_j c^j_{i_1,…,i_q}a_j"
+        },
+        {
+          "kind": "CodeBlock",
+          "text": "f_j(X_1,…,X_n)=Σ_{1≤i_1,…,i_q≤n}\n                  c^j_{i_1,…,i_q} X_{i_1}…X_{i_q}."
+        },
+        {
+          "kind": "Code",
+          "text": "K≠k"
+        },
+        {
+          "kind": "Code",
+          "text": "[K:k]=d²"
+        },
+        {
+          "kind": "Code",
+          "text": "e_11^q=e_11"
+        },
+        {
+          "kind": "Code",
+          "text": "e_11 e_12=e_12"
+        },
+        {
+          "kind": "Code",
+          "text": "e_12 e_11=0"
+        },
+        {
+          "kind": "Code",
+          "text": "brauer.tex"
+        }
+      ],
+      "all_tex_math_payloads_exact": true,
+      "complete_pandoc_ast_retained": true
+    }
+  ],
+  "original_proof_notes_unchanged": true,
+  "mathematical_rewrite": false,
+  "assembled_identity": {
+    "bytes": 44923,
+    "sha256": "B4C9E7D35ED7EE2ECAC83666D23E6E8A8550731441E9B2A7CDA960085D5D6455"
+  }
+}

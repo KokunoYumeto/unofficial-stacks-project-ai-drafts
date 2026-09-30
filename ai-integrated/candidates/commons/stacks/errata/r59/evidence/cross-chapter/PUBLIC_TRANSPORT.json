@@ -1,0 +1,61 @@
+{
+  "schema": "stacks-cross-chapter-public-evidence-transport/v1",
+  "input_batch_sha256": "2B2E02928EF475D07FF8D057923A5073B45254C312C68B9EA8230E6ECCB8BA5A",
+  "input_identities": [
+    {
+      "file": "receiving-review-records.json",
+      "original_private_input": {
+        "bytes": 8251,
+        "sha256": "740E219A403DC6FDB5EA1FF2F3B366AD0B59CB24F7F76C4A5BB5122F879B4FFB"
+      },
+      "public_artifact": {
+        "bytes": 8113,
+        "sha256": "64DAA5006F839E55B1E07A7F0D3BE8D0F2297E3D6E80728E418C8217D67E2171"
+      },
+      "every_other_parsed_value_unchanged": true,
+      "exact_inverse_using_preserved_original": true
+    },
+    {
+      "file": "receiving-claim-records.json",
+      "original_private_input": {
+        "bytes": 11685,
+        "sha256": "08D82343A552CBA02B866D3C423FBCE9D2A5DB6B57BA6E46E175C6B31C347A03"
+      },
+      "public_artifact": {
+        "bytes": 11409,
+        "sha256": "F162D969ADB3787B73C17DE24FBF896D6420DE3DCED8A52801E9858BB8919290"
+      },
+      "every_other_parsed_value_unchanged": true,
+      "exact_inverse_using_preserved_original": true
+    }
+  ],
+  "metadata_derivations": [
+    {
+      "document": "receiving-review-records.json",
+      "json_pointer": "/2/external_source_locus/file",
+      "original_value_sha256": "7068BA7EB404D5CE8A1DC9CDA890B8F4842E7A32A9202724C6C892898E54F6C4",
+      "public_value": "authority/examples.tex",
+      "kind": "machine_local_source_path_only"
+    },
+    {
+      "document": "receiving-claim-records.json",
+      "json_pointer": "/2/source",
+      "original_value_sha256": "7068BA7EB404D5CE8A1DC9CDA890B8F4842E7A32A9202724C6C892898E54F6C4",
+      "public_value": "authority/examples.tex",
+      "kind": "machine_local_source_path_only"
+    },
+    {
+      "document": "receiving-claim-records.json",
+      "json_pointer": "/2/external_source_locus/file",
+      "original_value_sha256": "7068BA7EB404D5CE8A1DC9CDA890B8F4842E7A32A9202724C6C892898E54F6C4",
+      "public_value": "authority/examples.tex",
+      "kind": "machine_local_source_path_only"
+    }
+  ],
+  "originals_retained": true,
+  "mathematical_fields_changed": false,
+  "all_other_files_byte_identical": true,
+  "inverse_checked": true,
+  "hash_reference_interpretation": "Historical hashes identify the original private input versions. This record binds public copies and lists every machine-local path substitution. The complete proof, formulas, source operations and decisions remain unchanged.",
+  "historical_state_interpretation": "The receiving review and claim records retain their earlier pending statuses. CLAIM_PROPAGATION.json records the subsequent completed proof and patch preparation. Neither receipt claims admission or publication."
+}

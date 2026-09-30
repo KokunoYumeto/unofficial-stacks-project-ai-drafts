@@ -1,0 +1,146 @@
+{
+  "findings": [
+    {
+      "id": "BRAUER-PROP-001",
+      "kind": "overclaim_and_dependency_correction",
+      "source_lines": [
+        119,
+        138
+      ],
+      "original": "The finite-algebra lemma asserts existence of a simple module without excluding the zero algebra.",
+      "correction": "Restrict assertion (1) to nonzero A and select a nonzero minimal-dimensional submodule in the proof. Preserve the full generality of (2)-(4).",
+      "receives_from": [
+        "MC-STK-ERR-0746"
+      ],
+      "proof_locators": [
+        {
+          "file": "PROOFS.md",
+          "start_line": 83,
+          "end_line": 125,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        }
+      ],
+      "affected": [
+        "lemma-simple-module",
+        "theorem-wedderburn"
+      ],
+      "status": "proved_bounded_correction_prepared_not_admitted",
+      "operation_ids": [
+        "BRAUER-PROP-001-OP1",
+        "BRAUER-PROP-001-OP2",
+        "BRAUER-PROP-001-OP3"
+      ]
+    },
+    {
+      "id": "BRAUER-PROP-002",
+      "kind": "endomorphism_multiplication_correction",
+      "source_lines": [
+        100,
+        106,
+        158,
+        290,
+        311,
+        411,
+        413,
+        546,
+        553
+      ],
+      "original": "Several identifications insert K opposite into the left-acting composition ring of a right module; the centralizer-to-endomorphism map also needs its opposite.",
+      "correction": "Use K in the right-simple-module composition rings, retain Mat(n,K) for the explicitly right-acting bicommutant, and identify C opposite with the left-acting H-endomorphism ring. Preserve the correct K opposite in the centralizer matrix presentation at 553.",
+      "receives_from": [
+        "MC-STK-ERR-0745",
+        "MC-STK-ERR-0747",
+        "MC-STK-ERR-0748",
+        "MC-STK-ERR-0749"
+      ],
+      "proof_locators": [
+        {
+          "file": "PROOFS.md",
+          "start_line": 11,
+          "end_line": 34,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        },
+        {
+          "file": "PROOFS.md",
+          "start_line": 35,
+          "end_line": 82,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        },
+        {
+          "file": "PROOFS.md",
+          "start_line": 126,
+          "end_line": 183,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        },
+        {
+          "file": "PROOFS.md",
+          "start_line": 184,
+          "end_line": 237,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        },
+        {
+          "file": "PROOFS.md",
+          "start_line": 238,
+          "end_line": 304,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        }
+      ],
+      "affected": [
+        "theorem-wedderburn",
+        "lemma-simple-module-unique",
+        "lemma-similar",
+        "theorem-skolem-noether",
+        "theorem-centralizer",
+        "lemma-when-tensor-is-equal"
+      ],
+      "status": "proved_exact_maps_and_bounded_propagation_prepared_not_admitted",
+      "operation_ids": [
+        "BRAUER-PROP-002-OP1",
+        "BRAUER-PROP-002-OP2",
+        "BRAUER-PROP-002-OP3",
+        "BRAUER-PROP-002-OP4",
+        "BRAUER-PROP-002-OP5",
+        "BRAUER-PROP-002-OP6"
+      ]
+    },
+    {
+      "id": "BRAUER-UNDERCLAIM-001",
+      "kind": "proved_underclaim",
+      "original": "Schur assertion within a finite-algebra lemma.",
+      "strengthening": "For any unital ring and any nonzero simple right module, the composition ring of its endomorphisms is a skew field.",
+      "proof_locators": [
+        {
+          "file": "PROOFS.md",
+          "start_line": 83,
+          "end_line": 125,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        }
+      ],
+      "status": "proved_editorial_only",
+      "body_replacement": false,
+      "novelty_claim": false,
+      "operation_ids": []
+    },
+    {
+      "id": "BRAUER-UNDERCLAIM-002",
+      "kind": "proved_underclaim",
+      "original": "Bicommutant conclusion is stated for a nonzero finite module over a finite simple algebra.",
+      "strengthening": "For every nonzero right module N over the original finite simple A, A maps isomorphically to the right-acting bicommutant of N. Equivalently A opposite maps isomorphically to the composition bicommutant.",
+      "retained_limit": "The companion assertion that End_A(N) is a finite-size matrix algebra is not extended to infinite N.",
+      "proof_locators": [
+        {
+          "file": "PROOFS.md",
+          "start_line": 184,
+          "end_line": 237,
+          "sha256": "FBCBB9C71433EEB259789A9F19F16E1E74D3A128893047D17EB1CCC0095FAB83"
+        }
+      ],
+      "status": "proved_editorial_only",
+      "body_replacement": false,
+      "novelty_claim": false,
+      "operation_ids": []
+    }
+  ],
+  "broader_synthesis": "After core work; no novelty claim or new-paper claim.",
+  "historical_accepted_operations_preserved": true
+}
