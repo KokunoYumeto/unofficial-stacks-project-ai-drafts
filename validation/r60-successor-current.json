@@ -1,6 +1,6 @@
 {
   "schema": "stacks-r60-successor-current/v1",
-  "status": "READY_FOR_VALIDATION",
+  "status": "READY_FOR_PUBLICATION",
   "previous_public": "b4b30d521cfbe300860903ff788059627da6a434",
   "lease_commit": "f3af398e9066dd8b70f4d827907aa2efb767ce6c",
   "candidate_commit": "1c8b9843e8841132deb09758f3a8adce06438fcc",
@@ -41,5 +41,16 @@
       "tests.test_changes_from_upstream",
       "tests.test_legacy_context_replay"
     ]
+  },
+  "local_validation": {
+    "status": "R60_BOUNDED_SUCCESSOR_PASS",
+    "validated_public_snapshot": "0bbfd110f1721a7161158d23611a676fac29c334",
+    "candidate_files": 452,
+    "changed_paths": 488,
+    "registry_manifest_closures": 63,
+    "lease_events": 133,
+    "stable_ids": 2283,
+    "anonymous_readback": false,
+    "remote_ci": false
   }
 }
