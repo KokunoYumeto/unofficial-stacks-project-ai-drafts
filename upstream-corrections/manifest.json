@@ -1,11 +1,11 @@
 {
   "schema": "stacks-upstream-corrections-only/v1",
   "official_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
-  "registry_sha256": "3FAF4B5C6DBC4AF790F55C93319B3804695005C0621F795E5E923C5E10D203C0",
-  "admitted_rounds": 58,
-  "historical_registry_ids": 2201,
-  "included_effective_textual_units": 2199,
-  "included_operations": 2670,
+  "registry_sha256": "33C6883E17704C365133DF92D5234D90A35AC00093E8907953795A7BB783F6F0",
+  "admitted_rounds": 59,
+  "historical_registry_ids": 2206,
+  "included_effective_textual_units": 2204,
+  "included_operations": 2683,
   "chapters": [
     {
       "source": "algebra.tex",
@@ -957,8 +957,8 @@
     {
       "source": "brauer.tex",
       "file": "chapters/brauer.patch",
-      "units": 10,
-      "operations": 10,
+      "units": 12,
+      "operations": 19,
       "unit_ids": [
         "MC-STK-ERR-0016",
         "MC-STK-ERR-0017",
@@ -969,14 +969,16 @@
         "MC-STK-ERR-0749",
         "MC-STK-ERR-0750",
         "MC-STK-ERR-0751",
-        "MC-STK-ERR-0752"
+        "MC-STK-ERR-0752",
+        "MC-STK-ERR-2469",
+        "MC-STK-ERR-2470"
       ],
-      "bytes": 4115,
-      "sha256": "599E550EFADA8E59E23335D336C30E2E7E7718852584E4FEFCED2C56601BD236",
+      "bytes": 7058,
+      "sha256": "9CF0D9250A7A8E5D646B762518CA1DD66CB33272AB43F7C40DE9F1DE50F6D594",
       "preimage_bytes": 28201,
       "preimage_sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682",
-      "postimage_bytes": 28314,
-      "postimage_sha256": "E728BCCBF6AAA7FC428D3B8074BEA248D2B5F2492F5B49834A14B02AAC389436"
+      "postimage_bytes": 28364,
+      "postimage_sha256": "AA36E7CBF431794983CDEF31B71A861E6D3871E54889D1818C08E941540B28B6"
     },
     {
       "source": "categories.tex",
@@ -1291,6 +1293,21 @@
       "postimage_sha256": "C6F418ED29867DBDDB1C14F98D9417EE3732D15F51FD22324589BC61AC13DBF1"
     },
     {
+      "source": "examples.tex",
+      "file": "chapters/examples.patch",
+      "units": 1,
+      "operations": 1,
+      "unit_ids": [
+        "MC-STK-ERR-2466"
+      ],
+      "bytes": 581,
+      "sha256": "BD0936892A5B8C0F117C22349E4AB0CDABC5AB3977B76EEB2A52A33ABA854572",
+      "preimage_bytes": 268601,
+      "preimage_sha256": "30EAF58E0953F17E3A659E73AA37AC8C146BC4136FC68850CB0341E23EF398B4",
+      "postimage_bytes": 268603,
+      "postimage_sha256": "D2483A06A9040D73312A564FCE2286039C837EF54DFBE65628CEF70A0BE877C1"
+    },
+    {
       "source": "fields.tex",
       "file": "chapters/fields.patch",
       "units": 55,
@@ -1595,8 +1612,8 @@
     {
       "source": "more-algebra.tex",
       "file": "chapters/more-algebra.patch",
-      "units": 116,
-      "operations": 137,
+      "units": 118,
+      "operations": 140,
       "unit_ids": [
         "MC-STK-ERR-0915",
         "MC-STK-ERR-0916",
@@ -1713,14 +1730,16 @@
         "MC-STK-ERR-1355",
         "MC-STK-ERR-1356",
         "MC-STK-ERR-1357",
-        "MC-STK-ERR-1358"
+        "MC-STK-ERR-1358",
+        "MC-STK-ERR-2467",
+        "MC-STK-ERR-2468"
       ],
-      "bytes": 48158,
-      "sha256": "CEDDD9EC3D680BF48B06F0FA072BA174B42403378303077EB44D215968A9F942",
+      "bytes": 49118,
+      "sha256": "3532E20C872B6F36E06BED3F598209B8BE0789CC46A991974994792690FAAB68",
       "preimage_bytes": 1492039,
       "preimage_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
-      "postimage_bytes": 1492149,
-      "postimage_sha256": "8A74C9CA1F7049CE14D1D68BF67ED0C3B6A8B9E442D6EECC4C6D26B1A279016F"
+      "postimage_bytes": 1492153,
+      "postimage_sha256": "DB5D0D0AF48400961FCC75C255C33FC3766195F9CEEEE7758F7F77FE05865F2A"
     },
     {
       "source": "more-groupoids.tex",
@@ -20773,12 +20792,60 @@
       "operation_ids": [
         "MC-STK-ERR-2465-OP1"
       ]
+    },
+    {
+      "id": "MC-STK-ERR-2466",
+      "status": "included",
+      "chapter": "examples.tex",
+      "operation_ids": [
+        "MC-STK-ERR-2466-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-2467",
+      "status": "included",
+      "chapter": "more-algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-2467-OP1"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-2468",
+      "status": "included",
+      "chapter": "more-algebra.tex",
+      "operation_ids": [
+        "MC-STK-ERR-2468-OP1",
+        "MC-STK-ERR-2468-OP2"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-2469",
+      "status": "included",
+      "chapter": "brauer.tex",
+      "operation_ids": [
+        "MC-STK-ERR-2469-OP1",
+        "MC-STK-ERR-2469-OP2",
+        "MC-STK-ERR-2469-OP3"
+      ]
+    },
+    {
+      "id": "MC-STK-ERR-2470",
+      "status": "included",
+      "chapter": "brauer.tex",
+      "operation_ids": [
+        "MC-STK-ERR-2470-OP1",
+        "MC-STK-ERR-2470-OP2",
+        "MC-STK-ERR-2470-OP3",
+        "MC-STK-ERR-2470-OP4",
+        "MC-STK-ERR-2470-OP5",
+        "MC-STK-ERR-2470-OP6"
+      ]
     }
   ],
   "combined": {
     "file": "ALL-TEXTUAL-CORRECTIONS.patch",
-    "bytes": 969531,
-    "sha256": "62AC9BC79667DA2E98F65E6E9A77E36648F5DD04AF11CFF092B26F542E88672F"
+    "bytes": 974015,
+    "sha256": "2133FF4C605065CB77A6AABBC1ABC69B47E83843E062234C6329AD80289F6A07"
   },
   "replay": {
     "independent_chapter_patches": "PASS",
@@ -21188,6 +21255,11 @@
       "sha256": "2EBA6504F6D830366BA08D6A256DA8C45C3C6CF636FE2634B3DF0C8C916E222F"
     },
     {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json",
+      "bytes": 47397,
+      "sha256": "EBE2FF7D9BBF10F43B692B4A1E336E015CC21F7EA47A10FDC45AB4653DDD737E"
+    },
+    {
       "path": "ai-integrated/candidates/commons/stacks/errata/r6/candidate.manifest.json",
       "bytes": 10166,
       "sha256": "0573E0230065780BE1AA7E73114735428C290A45E1E1CD14401E7358764DE050"
@@ -21224,8 +21296,8 @@
     },
     {
       "path": "ai-integrated/registry/overlays.json",
-      "bytes": 113059,
-      "sha256": "3FAF4B5C6DBC4AF790F55C93319B3804695005C0621F795E5E923C5E10D203C0"
+      "bytes": 113880,
+      "sha256": "33C6883E17704C365133DF92D5234D90A35AC00093E8907953795A7BB783F6F0"
     },
     {
       "path": "candidates/commons/stacks/errata/r10/authority/source/algebra.tex",
@@ -23191,6 +23263,61 @@
       "path": "candidates/commons/stacks/errata/r58/stable-units.json",
       "bytes": 753591,
       "sha256": "E06B44D61B70FDFC5C02D555234BDE74D2D043193C96B9CD4F7DE429256100EC"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/authority/brauer.tex",
+      "bytes": 28201,
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/authority/examples.tex",
+      "bytes": 268601,
+      "sha256": "30EAF58E0953F17E3A659E73AA37AC8C146BC4136FC68850CB0341E23EF398B4"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/authority/more-algebra.tex",
+      "bytes": 1492039,
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/decisions.jsonl",
+      "bytes": 4547,
+      "sha256": "C850FF6923F28DFE080B0BE40880489D4026D5F9E398907B012E3EF063DA12D6"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/operation-spec.json",
+      "bytes": 16508,
+      "sha256": "8D1E103DC2A53D7843A684319D30A252368B99256B88D09B268797496F5109A8"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/payload/brauer.tex",
+      "bytes": 28251,
+      "sha256": "90554891579679A6BCF86789B9F4421C0F265C87A3C4FEB6F3F758D320686918"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/payload/examples.tex",
+      "bytes": 268603,
+      "sha256": "D2483A06A9040D73312A564FCE2286039C837EF54DFBE65628CEF70A0BE877C1"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/payload/more-algebra.tex",
+      "bytes": 1492043,
+      "sha256": "2524CC9B511ADE12163DA0BFCEA25003723F00680EBF643067A16F20B78C8B01"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/replay/independent-review.json",
+      "bytes": 1528,
+      "sha256": "5E748734F29520A111E624F11633405C05877F0564AACE9CC185CE6A5E412F3C"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/source-map.jsonl",
+      "bytes": 17948,
+      "sha256": "2EFAA1788851623133C79CCFF61BB10B24F8D5AC58748D65B49EFC88C86EA7AA"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r59/stable-units.json",
+      "bytes": 6695,
+      "sha256": "09D460AD1EB442C7AD3078DBD921E7409CBD86F224582D0C825036B9FBDF0EB1"
     },
     {
       "path": "candidates/commons/stacks/errata/r6/authority/source/algebra.tex",

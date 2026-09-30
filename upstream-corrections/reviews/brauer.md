@@ -196,3 +196,88 @@ Adverse evidence / qualification: The frozen source and admitted overlay evidenc
 -$A$ is finite central simple $k$-algebra,
 +$A$ is a finite central simple $k$-algebra,
 ````
+
+### MC-STK-ERR-2469
+
+`brauer.tex` — 123, 132, 133; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/brauer.tex#L123-L133) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-\item $A$ has a simple module,
++\item if $A \not = 0$, then $A$ has a simple module,
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Of course (1) follows from (2) since $A$ is a nonzero $A$-module.
++When $A \not = 0$, assertion (1) follows from (2) applied to the $A$-module $A$.
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-For (2), any submodule of minimal (finite) dimension
++For (2), any nonzero submodule of minimal (finite) dimension
+````
+
+### MC-STK-ERR-2470
+
+`brauer.tex` — 158, 290, 311, 411, 413, 546; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/brauer.tex#L158-L546) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$A \cong \text{Mat}(n \times n, K^{op})$.
++$A \cong \text{Mat}(n \times n, K)$.
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$\text{End}_A(M) = K^{op}$.
++$\text{End}_A(M) = K$.
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-we see that $L = K^{op}$. The statement about the center of $L = K^{op}$
++we see that $L = K$. The statement about the center of $L = K$
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-we have $\text{End}_A(M) = K^{op}$, see
++we have $\text{End}_A(M) = K$, see
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-Hence $A \cong B$ implies $K^{op} \cong (K')^{op}$ and we win.
++Hence $A \cong B$ implies $K \cong K'$ and we win.
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1,2 @@
+-$C = \text{End}_{B \otimes_k L^{op}}(M)$.
++right multiplication identifies $C^{op}$ with
++$\text{End}_{B \otimes_k L^{op}}(M)$.
+````

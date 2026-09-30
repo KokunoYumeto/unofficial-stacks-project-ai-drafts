@@ -63,7 +63,7 @@ human-maintained Stacks corpus.
 - **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
   one combined patch or separate chapter patches, with exact changes and review
   evidence. These do not import our theorem additions or repository history.
-  The 2,201 historical correction IDs are accounted for; 2,199 effective textual
+  The 2,206 historical correction IDs are accounted for; 2,204 effective textual
   units are exported, with one superseded correction and one fork tag allocation
   explicitly excluded. No clone of this fork is needed.
 - **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
@@ -186,7 +186,16 @@ Both PDFs reproduce byte for byte in fresh builds, and all page layouts and
 mapped correction regions were inspected. This chapter publication does not
 replace the older whole-project PDF release.
 
-R52/R53/R54/R55/R56/R57/R58 review, correction preparation, builds and visual checks, and current
+R59 adds **five source corrections in thirteen edits** across Examples, More
+on Algebra and Brauer Groups. These repair a series coefficient factor, a
+Fitting-ideal index, conormal tensor subscripts, a zero-algebra exception and
+the propagation of opposite-ring conventions. The complete arguments and
+stronger Schur and bicommutant consequences remain editorial material.
+[Read the three corrected chapters and thirteen-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r59/README.md).
+All thirteen edits are included in the chapter and combined fixes-only patches.
+The separately received open Brauer problem remains unresolved.
+
+R52/R53/R54/R55/R56/R57/R58/R59 review, correction preparation, builds and visual checks, and current
 correction-export tooling and packaging were produced by OpenAI Codex —
 GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
 mathematical or human review of every historical correction; historical evidence

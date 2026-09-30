@@ -9,20 +9,21 @@ Review one chapter at a time; there is no need to open a megabyte-sized diff.
 
 - [algebra.tex](reviews/algebra.md) — 788 correction units.
 - [artin.tex](reviews/artin.md) — 131 correction units.
-- [brauer.tex](reviews/brauer.md) — 10 correction units.
+- [brauer.tex](reviews/brauer.md) — 12 correction units.
 - [categories.tex](reviews/categories.md) — 91 correction units.
 - [cohomology.tex](reviews/cohomology.md) — 4 correction units.
 - [crystalline.tex](reviews/crystalline.md) — 1 correction units.
 - [derham.tex](reviews/derham.md) — 5 correction units.
 - [derived.tex](reviews/derived.md) — 92 correction units.
 - [descent.tex](reviews/descent.md) — 35 correction units.
+- [examples.tex](reviews/examples.md) — 1 correction units.
 - [fields.tex](reviews/fields.md) — 55 correction units.
 - [groupoids.tex](reviews/groupoids.md) — 48 correction units.
 - [homology.tex](reviews/homology.md) — 60 correction units.
 - [injectives.tex](reviews/injectives.md) — 40 correction units.
 - [introduction.tex](reviews/introduction.md) — 1 correction units.
 - [modules.tex](reviews/modules.md) — 14 correction units.
-- [more-algebra.tex](reviews/more-algebra.md) — 116 correction units.
+- [more-algebra.tex](reviews/more-algebra.md) — 118 correction units.
 - [more-groupoids.tex](reviews/more-groupoids.md) — 22 correction units.
 - [perfect.tex](reviews/perfect.md) — 24 correction units.
 - [schemes.tex](reviews/schemes.md) — 16 correction units.

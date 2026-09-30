@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **58**
-- Stable correction IDs: **2,201**
-- Displayed exact change hunks: **2,672**
-- Manifest/source-map exact operations: **2,604**
+- Admitted errata batches: **59**
+- Stable correction IDs: **2,206**
+- Displayed exact change hunks: **2,685**
+- Manifest/source-map exact operations: **2,617**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **36**
-- Registry SHA-256: `3FAF4B5C6DBC4AF790F55C93319B3804695005C0621F795E5E923C5E10D203C0`
+- Affected source paths: **37**
+- Registry SHA-256: `33C6883E17704C365133DF92D5234D90A35AC00093E8907953795A7BB783F6F0`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · [Open the admitted registry](ai-integrated/registry/overlays.json)
 
@@ -63820,5 +63820,218 @@ Pinned-official lines `1-1`; bytes `0:16`.
 ````
 
 Original SHA-256 `CF2821D0C8AFAA304CE85765E37D9CE4BE32F49B617F64ACFE1346CBFE15CD26`; replacement SHA-256 `040F1D3344FFF50DF2ADD5485F31EEFCC62B493C9E37F5A27EF7F58E1C63B36E`.
+
+</details>
+
+## stacks-errata-a04446e-r59
+
+5 stable IDs · 13 displayed change hunks · admitted 2026-09-30T04:52:59.408745+00:00.
+
+<details id="mc-stk-err-2466">
+<summary><code>MC-STK-ERR-2466 — examples.tex: — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r59`
+- Stable ID: `MC-STK-ERR-2466`; producer ID: `CC-SERIES-FACTOR`
+- Bound source locator: `examples.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/examples.tex#L1481) · [Integrated source](examples.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r59/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r59/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2466-OP1`
+
+Pinned-official lines `1481-1481`; bytes `55066:55137`.
+
+````diff
+- and since $z_{j + 1} = x^{-1}z_j - a_j = \ldots = f_j(x, x^{-1}, z)$).
++ and since $z_{j + 1} = x^{-1}(z_j - a_j) = \ldots = f_j(x, x^{-1}, z)$).
+````
+
+Original SHA-256 `99AB55633D9283131FA8BA2937396C1EF8B842B5FD4A49420A3241230A692342`; replacement SHA-256 `D93F9583352A1BFEE8BCAF7CC4630015E61B25EBB8D64B36E037C6DB46ACA6AD`.
+
+</details>
+
+<details id="mc-stk-err-2467">
+<summary><code>MC-STK-ERR-2467 — more-algebra.tex: — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r59`
+- Stable ID: `MC-STK-ERR-2467`; producer ID: `CC-FITTING-INDEX`
+- Bound source locator: `more-algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L1385) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r59/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r59/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2467-OP1`
+
+Pinned-official lines `1385-1385`; bytes `50350:50423`.
+
+````diff
+- $z'_{n + j'} = (0, \ldots, 0, 1, 0, \ldots, 0) \in K'$. Then we see that
++ $z'_{n - k + j'} = (0, \ldots, 0, 1, 0, \ldots, 0) \in K'$. Then we see that
+````
+
+Original SHA-256 `14EDA808DFF78FA264DCC7B11D4B00384EFA7BFADF59F305EDED462A8C163883`; replacement SHA-256 `9928D12A1C80AF0E8A3E8F5FA4AE54A10ED742D8DA0210562630092230A5A4E9`.
+
+</details>
+
+<details id="mc-stk-err-2468">
+<summary><code>MC-STK-ERR-2468 — more-algebra.tex: — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r59`
+- Stable ID: `MC-STK-ERR-2468`; producer ID: `CC-CONORMAL-BASE`
+- Bound source locator: `more-algebra.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L8502-L8504) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r59/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r59/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2468-OP1`
+
+Pinned-official lines `8502-8502`; bytes `320138:320195`.
+
+````diff
+- $I/I^2 \otimes_A C = IA[x_s, y_j]/IK$ by right exactness
++ $I/I^2 \otimes_B C = IA[x_s, y_j]/IK$ by right exactness
+````
+
+Original SHA-256 `16E51D8BE360CB691169A1CADE37BBAE6EFDBA4EE071B677757E915E2F8BD30D`; replacement SHA-256 `F2E0B288508401FD656F568556A0CD0B3CEDC213DF1CABE2EA8AB91A57CA08B2`.
+
+### Change 2: `MC-STK-ERR-2468-OP2`
+
+Pinned-official lines `8504-8504`; bytes `320263:320294`.
+
+````diff
+- $I/I^2 \otimes_A C \to K/K^2$.
++ $I/I^2 \otimes_B C \to K/K^2$.
+````
+
+Original SHA-256 `D8839F745AB1437D9EC02FC215E82FD27BD6F638C0E5DB98741DE69E532E42E6`; replacement SHA-256 `281E57C02AB7ACA03243BCA6911874FE48DE6F7529BA6C42569983820E2929B0`.
+
+</details>
+
+<details id="mc-stk-err-2469">
+<summary><code>MC-STK-ERR-2469 — brauer.tex: — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r59`
+- Stable ID: `MC-STK-ERR-2469`; producer ID: `BRAUER-PROP-001`
+- Bound source locator: `brauer.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/brauer.tex#L123-L133) · [Integrated source](brauer.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r59/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r59/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2469-OP1`
+
+Pinned-official lines `123-123`; bytes `3959:3989`.
+
+````diff
+- \item $A$ has a simple module,
++ \item if $A \not = 0$, then $A$ has a simple module,
+````
+
+Original SHA-256 `4139F571361D94A0E07D3DB1A5F349FFD24D4C39787209E143EDCD5C9B8A57C2`; replacement SHA-256 `3884DECDBCC85D5AAFAF7707003B3AF98CA3E17F66802F7D4EDF237A8469287A`.
+
+### Change 2: `MC-STK-ERR-2469-OP2`
+
+Pinned-official lines `132-132`; bytes `4230:4295`.
+
+````diff
+- Of course (1) follows from (2) since $A$ is a nonzero $A$-module.
++ When $A \not = 0$, assertion (1) follows from (2) applied to the $A$-module $A$.
+````
+
+Original SHA-256 `9C69BA0D020BD74554CF960328ABE5E2451156DB736BE4F5B7DE791BD7832A40`; replacement SHA-256 `0FCD3FE4E7E1B3F1C166E5D8D3936533DFD6B6083D6928091333B96C30B6755E`.
+
+### Change 3: `MC-STK-ERR-2469-OP3`
+
+Pinned-official lines `133-133`; bytes `4296:4348`.
+
+````diff
+- For (2), any submodule of minimal (finite) dimension
++ For (2), any nonzero submodule of minimal (finite) dimension
+````
+
+Original SHA-256 `F265691DCD9E45A61D097CD0F2BBA9139ACC2E816A91706936E5C77CBDA042B8`; replacement SHA-256 `312C90372B867C0743DFB29D69C6F411021902E1C19B7A2D747E31139465BF92`.
+
+</details>
+
+<details id="mc-stk-err-2470">
+<summary><code>MC-STK-ERR-2470 — brauer.tex: — mathematical_source_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r59`
+- Stable ID: `MC-STK-ERR-2470`; producer ID: `BRAUER-PROP-002`
+- Bound source locator: `brauer.tex:`
+- Registry admission: `admitted`.
+- Historical candidate status: `prepared_candidate_not_admitted`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/brauer.tex#L158-L546) · [Integrated source](brauer.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r59/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r59/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json)
+
+### Change 1: `MC-STK-ERR-2470-OP1`
+
+Pinned-official lines `158-158`; bytes `5298:5339`.
+
+````diff
+- $A \cong \text{Mat}(n \times n, K^{op})$.
++ $A \cong \text{Mat}(n \times n, K)$.
+````
+
+Original SHA-256 `F163E536ACEB6C595B1981C39BB07CB1A06B204AA2412F844FE50ACCA9B5E479`; replacement SHA-256 `F11CBAB47760A51D9799861A810D03ABC1DE8EADE296F31F97C2B37DE1306446`.
+
+### Change 2: `MC-STK-ERR-2470-OP2`
+
+Pinned-official lines `290-290`; bytes `9995:10022`.
+
+````diff
+- $\text{End}_A(M) = K^{op}$.
++ $\text{End}_A(M) = K$.
+````
+
+Original SHA-256 `3E003AB1A56B4A76750F22D6DADCD8259314DBFCC83C26D24D5DDE799B45FAB8`; replacement SHA-256 `D6E47795C98D47175A5B83464FA692AAAB1C6B57C85877DB34955F145AAA4D53`.
+
+### Change 3: `MC-STK-ERR-2470-OP3`
+
+Pinned-official lines `311-311`; bytes `10890:10962`.
+
+````diff
+- we see that $L = K^{op}$. The statement about the center of $L = K^{op}$
++ we see that $L = K$. The statement about the center of $L = K$
+````
+
+Original SHA-256 `6D8ADB51D3EE742ED75D88930DF0C2CDEDEF68EB4677635ED9DAF36F5EDB1698`; replacement SHA-256 `9ACB68124B0DDDAFC6258C47AE26079D21CAF17091A58A3EDB809A7D672D19E8`.
+
+### Change 4: `MC-STK-ERR-2470-OP4`
+
+Pinned-official lines `411-411`; bytes `14113:14152`.
+
+````diff
+- we have $\text{End}_A(M) = K^{op}$, see
++ we have $\text{End}_A(M) = K$, see
+````
+
+Original SHA-256 `6E536D73B7F1CA63E9D7F0E639D3FF4A3B551211EB07268C1AA8281A6994439E`; replacement SHA-256 `D7BBA1C024C156A0021D44BD46DF67CA0B6EFE60D7C5043D0A5B7014A8385DA7`.
+
+### Change 5: `MC-STK-ERR-2470-OP5`
+
+Pinned-official lines `413-413`; bytes `14193:14255`.
+
+````diff
+- Hence $A \cong B$ implies $K^{op} \cong (K')^{op}$ and we win.
++ Hence $A \cong B$ implies $K \cong K'$ and we win.
+````
+
+Original SHA-256 `E6C58FBAB9D425983B3E4380F46CE25FA1FE908FA8DE9A28F7E0821B96CCAC3E`; replacement SHA-256 `109594D420BEAB481455A440568E4B13DB75C59547DE02D8EC7C4A3499B7BA36`.
+
+### Change 6: `MC-STK-ERR-2470-OP6`
+
+Pinned-official lines `546-546`; bytes `18825:18866`.
+
+````diff
+- $C = \text{End}_{B \otimes_k L^{op}}(M)$.
++ right multiplication identifies $C^{op}$ with
++ $\text{End}_{B \otimes_k L^{op}}(M)$.
+````
+
+Original SHA-256 `7D29B7573234B729B9BD8956E41DEAD8EE31141BA695408EB94BF60516990F20`; replacement SHA-256 `2956AF6176E924792A0326058DC4F0B5AB4FB717602ABCEBC9FE498F5BC57F24`.
 
 </details>

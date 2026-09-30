@@ -21,9 +21,11 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-The cumulative source includes **R1–R58 and three Verdier insertions**: 61
-admitted overlays with 2,243 stable units (2,201 correction IDs and 42 Verdier
+The cumulative source includes **R1–R59 and three Verdier insertions**: 62
+admitted overlays with 2,248 stable units (2,206 correction IDs and 42 Verdier
 units). Admission and source composition are separate checks. The
+[R59 successor receipt](../validation/r59-successor-current.json) binds five
+findings and thirteen edits in Examples, More on Algebra and Brauer Groups. The
 [R58 successor receipt](../validation/r58-successor-current.json) binds its
 690 exact source operations, identified companion notices and validation. The
 [concurrent integration record](../validation/r58-concurrent-integration-2026-09-30.json)
@@ -76,8 +78,15 @@ dependency. Its separate companion supplies 173 contextual treatments and 73
 complete proof notes. [Both PDFs, review records and complete editable sources](candidates/commons/stacks/errata/r58/README.md)
 are available. Source-linked notices identify the editorial material; the
 correction-only patches exclude those notices and supplementary arguments.
-R49–R58 are source updates; the complete-reader PDFs and Zenodo editions
-retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58 review, source
+R59 adds a series recurrence factor, a Fitting-ideal vector index, two conormal
+tensor subscripts, a zero-algebra qualification and corrected multiplication
+conventions throughout the affected Brauer arguments. [Three chapter PDFs,
+the complete editorial supplement and editable sources](candidates/commons/stacks/errata/r59/README.md)
+retain the original passages and complete derivations. The stronger Schur and
+bicommutant statements are editorial consequences. No resolution of the
+separately received open Brauer problem is claimed.
+R49–R59 are source updates; the complete-reader PDFs and Zenodo editions
+retain their existing contents. Final R50/R51/R52/R53/R54/R55/R56/R57/R58/R59 review, source
 composition and packaging: OpenAI Codex - GPT-6 Astra, Ultra effort; no human
 review is implied.
 

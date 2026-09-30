@@ -2220,3 +2220,39 @@ Independent authority replay confirmed exact preimages, mathematical or grammati
 -surjectve
 +surjective
 ````
+
+### MC-STK-ERR-2467
+
+`more-algebra.tex` — 1385; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L1385) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$z'_{n + j'} = (0, \ldots, 0, 1, 0, \ldots, 0) \in K'$. Then we see that
++$z'_{n - k + j'} = (0, \ldots, 0, 1, 0, \ldots, 0) \in K'$. Then we see that
+````
+
+### MC-STK-ERR-2468
+
+`more-algebra.tex` — 8502, 8504; mathematical source correction.
+
+[Original passage](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L8502-L8504) · [Review evidence](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/replay/independent-review.json) · [Manifest](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/ai-integrated/candidates/commons/stacks/errata/r59/candidate.manifest.json)
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$I/I^2 \otimes_A C = IA[x_s, y_j]/IK$ by right exactness
++$I/I^2 \otimes_B C = IA[x_s, y_j]/IK$ by right exactness
+````
+
+````diff
+--- original
++++ replacement
+@@ -1 +1 @@
+-$I/I^2 \otimes_A C \to K/K^2$.
++$I/I^2 \otimes_B C \to K/K^2$.
+````
