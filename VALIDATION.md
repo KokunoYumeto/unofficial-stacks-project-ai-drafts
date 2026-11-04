@@ -257,10 +257,8 @@ binds that historical public errata preservation checkpoint at content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
-Its six current assets total 184,010,318 bytes on each host. Anonymous readback
-covered all six GitHub assets and all nine Zenodo files. The Zenodo version DOI is
-[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) under
-concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+Its six current assets total 184,010,318 bytes. Anonymous readback
+covered all six GitHub assets.
 Archive replay passed, and the current preservation package binds 28 PDFs,
 2,730 pages, and 29,277,302 PDF bytes.
 
@@ -269,9 +267,7 @@ binds the preceding published tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 to commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, successful GitHub Actions run
-`33212304694` attempt 1, and [Zenodo version DOI
-`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under concept
-DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+`33212304694` attempt 1.
 Anonymous downloads from both hosts matched all six filenames and 174,673,433
 bytes per host by byte count and SHA-256: 12 exact downloads and zero
 mismatches. The 154,766,484-byte source archive contains 2,312 entries.
@@ -281,9 +277,7 @@ binds the preceding published tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 to commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, successful GitHub Actions run
-`33198300432` attempt 2, and [Zenodo version DOI
-`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under concept
-DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+`33198300432` attempt 2.
 Anonymous downloads from both hosts matched all six filenames and 174,411,900
 bytes per host by byte count and SHA-256: 12 exact downloads and zero
 mismatches. The 154,505,160-byte source archive contains 2,245 entries. The
@@ -297,9 +291,8 @@ EGA I through §6.6.3 and advanced its cursor to §6.6.4. Its exact checkpoint i
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
 (SHA-256 `58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E`),
 bound to content commit `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`, GitHub tag
-[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30),
-and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421)
-under the existing concept DOI. It is semantic-only and changes no root TeX or
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30).
+It is semantic-only and changes no root TeX or
 PDF; R33 is the latest errata release.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)

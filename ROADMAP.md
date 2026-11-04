@@ -41,8 +41,6 @@ independent mathematical reconstruction, notation normalization, cumulative
 composition, deterministic build/reference checks, visual review and public
 readback. These remain AI-written mathematical drafts, not proof-assistant
 certificates. A recorded unresolved gap does not satisfy a completion gate.
-GitHub records incremental validated work; Zenodo preserves substantial coherent
-milestones rather than every theorem or routine errata round.
 
 ## Tohoku source-integration gap
 
@@ -126,11 +124,8 @@ R33 is a preserved historical public errata checkpoint at content head
 `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
-Its six current assets total 184,010,318 bytes on each host. All six GitHub
-assets and all nine Zenodo files passed anonymous byte/hash readback. The
-Zenodo version DOI is
-[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) under
-concept DOI `10.5281/zenodo.22135180`. The current package preserves 28 PDFs,
+Its six current assets total 184,010,318 bytes. All six GitHub
+assets passed anonymous byte/hash readback. The current package preserves 28 PDFs,
 2,730 pages, and 29,277,302 PDF bytes. The
 [R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
 binds the transaction and readback.
@@ -138,9 +133,7 @@ binds the transaction and readback.
 R28 remains published as the preceding historical release at tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
-`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and as Zenodo version DOI
-[`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under
-concept DOI `10.5281/zenodo.22135180`. Exact-head workflow run `33212304694`,
+`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`. Exact-head workflow run `33212304694`,
 attempt 1, passed. The six-asset package is byte-identical on both hosts:
 174,673,433 bytes per host, 12 successful anonymous downloads, and zero
 mismatches. The commit-bound source archive is 154,766,484 bytes and contains
@@ -151,9 +144,7 @@ binds the transaction and readback.
 R27 remains published as an earlier historical tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
-`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and as Zenodo version DOI
-[`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under
-concept DOI `10.5281/zenodo.22135180`. Exact-head workflow run `33198300432`,
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`. Exact-head workflow run `33198300432`,
 attempt 2, passed. The six-asset package is byte-identical on both hosts:
 174,411,900 bytes per host, 12 successful anonymous downloads, and zero
 mismatches. The commit-bound source archive is 154,505,160 bytes and contains
@@ -194,8 +185,7 @@ The rejected R26 producer `SMOOTHING-010` and R23 producer
 
 The current semantic cursor is **EGA I §6.6.4**. EGA I §6.6.3 is the latest
 source-bound semantic checkpoint, public at GitHub tag
-[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
-and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421),
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30),
 with the exact checkpoint in
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json).
 It changes no root TeX or PDF and does not create a new errata round. Earlier

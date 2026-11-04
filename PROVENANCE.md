@@ -220,9 +220,7 @@ R33 is the current public errata preservation checkpoint at content head
 `2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
 [`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
 Its source, 28 PDFs, and validation evidence are preserved as six current
-assets on GitHub and Zenodo version DOI
-[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175), under
-concept DOI `10.5281/zenodo.22135180`, as recorded by the
+assets on GitHub, as recorded by the
 [R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json).
 Anonymous readback matched the six current assets across both hosts and the
 three inherited EGA semantic ZIPs with zero mismatches; the current PDF
@@ -233,9 +231,7 @@ R28 remains publicly preserved as the preceding historical tag
 at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`. Exact-head workflow run
 `33212304694`, attempt 1, completed successfully. The source, 25 PDFs, and
-validation evidence are preserved as six byte-identical assets on GitHub and
-Zenodo version DOI [`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671),
-under concept DOI `10.5281/zenodo.22135180`, as recorded by the
+validation evidence are preserved as six byte-identical assets on GitHub, as recorded by the
 [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json).
 Anonymous readback matched 174,673,433 bytes on each host across all 12
 downloads with zero mismatches. The 154,766,484-byte deterministic source
@@ -246,9 +242,7 @@ R27 remains publicly preserved as the preceding historical tag
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`. Exact-head workflow run
 `33198300432`, attempt 2, completed successfully. The source, 25 PDFs, and
-validation evidence are preserved as six byte-identical assets on GitHub and
-Zenodo version DOI [`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250),
-under concept DOI `10.5281/zenodo.22135180`, as recorded by the
+validation evidence are preserved as six byte-identical assets on GitHub, as recorded by the
 [R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json).
 Anonymous readback matched 174,411,900 bytes on each host across all 12
 downloads with zero mismatches. The 154,505,160-byte deterministic source
@@ -258,9 +252,7 @@ publicly preserved as the preceding immutable historical version.
 The current public EGA semantic checkpoint extends the source-bound review
 through EGA I §6.6.3 and sets §6.6.4 as the next cursor. It is bound to content
 commit `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb` by the semantic release line
-[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
-and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421)
-under the existing concept DOI `10.5281/zenodo.22135180`. The exact checkpoint
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30). The exact checkpoint
 is recorded by
 [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json),
 which reports 256 agent rows, 328 decision rows, 1,242 operational statement

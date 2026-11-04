@@ -1,52 +1,12 @@
-# Unofficial Stacks Project AI Drafts
+# The AI-integrated Stacks project: AI-written additions and corrections for the Stacks Project
 
-[![Repository validation](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/workflows/validate.yml/badge.svg)](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/actions/workflows/validate.yml)
-
-## Why this project exists
-
-This repository is a collection of unofficial, AI-written drafts for possible
-later human use. It is not a campaign for the Stacks Project to accept AI
-contributions, and it is not a claim that these drafts are ready to become
-part of the canonical Stacks Project.
-
-The practical idea is modest: editable LaTeX editions of important
-French-school sources make it possible to compare those works with the Stacks
-Project, identify material that may still be useful, and prepare draft
-statements and proofs in Stacks-style LaTeX. The drafts are left here so that
-Stacks contributors—or other mathematicians—can inspect, correct, reuse, or
-mine them if and when someone with the relevant expertise has time to do so.
-
-The inputs include editable LaTeX editions of major French-school works:
-
-- **Serre, FAC — *Faisceaux algébriques cohérents*:** [French diplomatic TeX](https://zenodo.org/records/22074486/files/01b_FAC_French_Diplomatic_Body.tex?download=1) · [complete French/English source package](https://zenodo.org/records/22074486/files/19_FAC_Project_English_and_French_TeX_Source_Layers.zip?download=1).
-- **Grothendieck, Tôhoku — *Sur quelques points d’algèbre homologique*:** [LaTeX source package](https://zenodo.org/records/22087339/files/src-p119-221.zip?download=1).
-- **Serre, GAGA — *Géométrie algébrique et géométrie analytique*:** [French diplomatic TeX](https://zenodo.org/records/22087259/files/16_GAGA_French_diplomatic_body.tex?download=1) · [compilation driver](https://zenodo.org/records/22087259/files/15_GAGA_French_shared_driver_for_diplomatic_and_corrected.tex?download=1).
-- **Grothendieck, FGA — *Fondements de la géométrie algébrique*:** [French LaTeX source and provenance package](https://github.com/KokunoYumeto/fga-fr/blob/main/releases/2026-08-30-r1/fga-fr-canon-errata-0001-0017-source-provenance.zip).
-- **Grothendieck–Dieudonné, EGA — *Éléments de géométrie algébrique*:** [French LaTeX tree](https://github.com/KokunoYumeto/ega-fr/tree/main/source) · [English discovery edition](https://github.com/KokunoYumeto/ega-en/tree/main/source).
-- **Verdier, *Des catégories dérivées des catégories abéliennes*:** [editable source package](https://zenodo.org/records/21968574/files/source.zip?download=1).
-
-These are independently maintained transcriptions or editions, not original
-author-produced LaTeX. The integration records pin the particular source
-versions used; the linked editions may continue to develop.
-
-We understand why a human-maintained project may choose not to rely on
-AI-generated material. Maintaining mathematics requires people who can
-understand, explain, repair, and extend the proofs; producing a plausible
-draft does not transfer that expertise to its future maintainers. Until a
-qualified reader has checked an addition and is prepared to understand and
-maintain it, it should be treated as an external draft—not as part of the
-human-maintained Stacks corpus.
-
-> [!IMPORTANT]
-> This is an unofficial, independently maintained draft derivative of the
-> [Stacks Project](https://stacks.math.columbia.edu/), not a competing canonical
-> edition. All additions and integration work beyond the pinned upstream
-> source are written by cooperating AI agents; the original Stacks text is
-> the work of its authors. The Stacks Project and its maintainers have not
-> reviewed, approved, or endorsed this project. “Draft formalization” here
-> means mathematical statements and written proofs in LaTeX—not
-> proof-assistant-checked mathematics. Automated checks and AI review do not
-> certify mathematical correctness.
+An edition of the [Stacks Project](https://stacks.math.columbia.edu/), the open-source textbook and reference work on
+algebraic stacks and the algebraic geometry needed to define them, with AI-written drafts added to it: statements and
+proofs taken from classical French-school sources (Serre's FAC and GAGA, Grothendieck's FGA, EGA and Tôhoku paper,
+Verdier's thesis on derived categories, Illusie's *Complexe cotangent et déformations*), about 2,300 proposed
+corrections to the Stacks text, and comparisons of each source with Stacks. It is a fork of the official
+[Stacks Project repository](https://github.com/stacks/stacks-project), pinned at upstream commit
+[`a04446e`](https://github.com/stacks/stacks-project/tree/a04446e57ec1fbc252a871afcec7752fb2807b14).
 
 [Read the draft PDFs](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest) ·
 [Browse the source](chapters.tex) ·
@@ -58,202 +18,26 @@ human-maintained Stacks corpus.
 [Sources and history](PROVENANCE.md) ·
 [Validation](VALIDATION.md)
 
-## Two separate lists: possible fixes and possible new additions
+## How it was made
 
-- **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
-  one combined patch or separate chapter patches, with exact changes and review
-  evidence. These do not import our theorem additions or repository history.
-  The 2,305 historical correction IDs are accounted for; 2,301 effective textual
-  units are exported. Two superseded corrections, one fork tag allocation and
-  one explicitly labelled editorial proof completion are excluded. No clone of this fork is needed.
-- **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
-  original location, smallest replacement, and a short reason. The readable
-  selection also has [standalone patches](possible-fixes/README.md), checked
-  against the pinned official source; none requires adopting our additions.
-- **[Possible new additions](POSSIBLE_ADDITIONS.md):** source work, named
-  theorem or construction, proof location, and actual integration status.
-  These may be inspected independently, or ignored entirely when reviewing fixes.
+The Stacks text is the work of the Stacks project authors. Everything added beyond the pinned upstream source is
+written by AI, by OpenAI Codex models. The corrections were found by GPT-5.6 Sol (Ultra) while translating the Stacks
+Project into Chinese, Japanese, Korean and French, and integrated and built on by GPT-6 Astra (Ultra). The additions
+were written mostly by GPT-6 Astra (Ultra); some were written by GPT-5.6 Sol (Ultra) and checked by Astra. Editable LaTeX editions
+of the French-school sources make it possible to compare those works with Stacks, find material that may still be
+useful and write it up as statements and proofs in Stacks-style LaTeX. Results that Stacks already covers are mapped
+rather than rewritten. "Draft formalization" here means mathematical statements and written proofs in LaTeX, not
+proof-assistant-checked mathematics.
 
-The [proposed-corrections log](PROPOSED_CORRECTIONS.md) gives the original
-passage, the smallest proposed replacement, and a short argument that a reader
-can check. It distinguishes mathematical errors from typos, pending proposals
-from changes already in this draft, and duplicate or withdrawn suggestions.
-These are **AI-reviewed proposals, not expert-approved or officially adopted
-Stacks errata**. The readable log is being expanded; its stated coverage is
-not a claim to cover every finding from the translations or historical work.
-The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
-alongside it. Neither list treats an added theorem as an upstream correction.
+## Status
 
-The original 13-item readable selection is not the total correction collection.
-All thirteen are now integrated in this draft: two limit-preservation fixes
-in R50 and the remaining eleven in R51. They are also in the larger export;
-do not apply the same fix twice. Upstream adoption is not claimed.
-Both sets target the pinned official revision. The official master ref was
-[checked on 30 September 2026](validation/upstream-ref-check-2026-09-30.json)
-and still matched that revision; later upstream compatibility requires a new check.
-
-The source and fixes-only downloads include R49: five de Rham corrections
-(seven edits), including balanced parentheses in the Hodge-filtration cup-product
-diagram and four small prose repairs. The latest full-reader release predates
-these edits; this is a source-and-patch update, not a new Zenodo edition.
-R50 adds two corrections in **Limits of Algebraic Spaces**: using the fibre
-point fixed in the proof, and citing finite limits rather than only finite
-products for a fibre-product comparison. The [33 chapter patch sets](upstream-corrections/README.md)
-include both, with no added theorems. The bounded chapter proof and complete
-editable source are linked in [its candidate record](ai-integrated/candidates/commons/stacks/errata/r50/README.md).
-
-R51 adds **29 corrections** in Sets, Schemes, Homology and Algebra. These include
-the reversed maps and compositions in the Ext resolution-independence proof,
-the differential index in a chain map, both split-sequence endpoint modules,
-the ordinal bound on a prescribed family of coverings, and the denominator
-defining the coordinate ring of GL(2). Smaller sheaf-domain, diagram and English
-repairs are individually explained in [the correction review](ai-integrated/candidates/commons/stacks/errata/r51/REVIEW.md).
-[Chapter proofs and complete editable sources](ai-integrated/candidates/commons/stacks/errata/r51/README.md)
-accompany the batch; the fixes-only downloads contain no theorem additions.
-This remains a source-and-patch update, not a new Zenodo edition.
-
-R52 adds **83 proposed changes in Categories**: 51 copyedits, 11 clarifications
-and 21 source corrections, not 83 new mathematical errors. Examples include the
-endpoint in the definition of an initial functor, the cone-component indices in
-the finite-limit proof, a common-refinement index for pro-objects, the coherence
-maps for a 2-fibre product, and an inverse missing from a comparison of fibred
-categories. [Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r52/REVIEW.md)
-and [proofs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r52/README.md)
-are available. The intake record also preserves rejected suggestions and
-duplicates. These changes are included in the Categories patch and combined
-fixes-only download; no theorem additions are required.
-
-R53 adds **54 proposed changes in Topology and Introduction**: 44 copyedits,
-five clarifications, four notation clarifications and one source correction.
-They explicitly restrict the map in the connected-image proof, restore a
-missing inclusion in a dimension chain, and clarify the scope of set operations.
-[Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r53/REVIEW.md)
-and [reviewed chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r53/README.md)
-are available. The combined fixes-only download now covers 34 chapters.
-The older complete-reader PDFs are unchanged by this source-and-patch update.
-
-R54 adds **12 proposed Sheaves on Spaces changes**: eleven copyedits and
-one clarification. The fibre-product argument now identifies the invertible
-projection and constructs the required factorization using its inverse.
-The wording repairs include missing naming prepositions and a stale claim
-that a definition was left to the reader. [Each change and its reason](ai-integrated/candidates/commons/stacks/errata/r54/REVIEW.md)
-and [chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r54/README.md)
-are available. The Sheaves patch and combined fixes-only download include
-all sixteen edits and retain the earlier corrections.
-
-R55 adds **29 proposed Sites and Sheaves changes**: 22 copyedits, five
-source corrections and two clarifications. The corrections restore the
-cohomology-set terminology, a sheafification sign, a presheaf target,
-a transition-map index and the covering-sieve references used in two proofs.
-The clarifications specify composition grouping and an element-to-stalk
-assignment. [Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r55/REVIEW.md)
-and [chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r55/README.md)
-are available. The Sites patch and combined fixes-only download contain
-all 35 edits and retain the 107 earlier Sites corrections.
-
-R56 adds **76 proposed Stacks corrections and clarifications**: 34 copyedits,
-35 source corrections and seven clarifications. The substack criterion now
-requires the necessary isomorphism in the correct fibre. The localization
-criterion now detects cartesian arrows after an allowed refinement, with
-a complete proof and counterexample to the previous converse. The edits
-also restore missing comparison maps, composition factors and base labels.
-[Exact changes and complete mathematical evidence](ai-integrated/candidates/commons/stacks/errata/r56/REVIEW.md)
-and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidates/commons/stacks/errata/r56/README.md)
-accompany all 86 edits. They are included in the Stacks chapter patch and
-combined corrections-only download.
-
-R57 adds **47 proposed Fields corrections and clarifications**: 21 copyedits,
-21 source corrections and five clarifications, across 56 exact edits.
-They repair field and quotient domains, polynomial arguments, characteristic-zero
-cases and a dropped Kummer sign. A complete proof of the normal algebraic
-decomposition replaces an omitted argument; the transcendence-basis extension
-property already proved in the source is now stated explicitly.
-[Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r57/REVIEW.md)
-and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidates/commons/stacks/errata/r57/README.md)
-are available. The accompanying proof check also derives linear disjointness
-without normality, preservation of both degrees and the canonical topological
-Galois-group comparison; these consequences carry no novelty claim.
-All eight earlier Fields fixes remain in the chapter and combined patches.
-
-R58 adds **689 bounded Algebra edits in 559 review groups**, plus one local
-rendering dependency. The 560 units preserve the source exposition and link
-to a separate companion containing 173 contextual treatments and 73 complete
-proof notes. Conceptual errata, supplementary proofs and stronger consequences
-are identified as editorial material. The fixes-only patches exclude companion
-notices and supplementary arguments.
-[Read the 484-page corrected chapter and 667-page companion, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r58/README.md).
-Both PDFs reproduce byte for byte in fresh builds, and all page layouts and
-mapped correction regions were inspected. This chapter publication does not
-replace the older whole-project PDF release.
-
-R59 adds **five source corrections in thirteen edits** across Examples, More
-on Algebra and Brauer Groups. These repair a series coefficient factor, a
-Fitting-ideal index, conormal tensor subscripts, a zero-algebra exception and
-the propagation of opposite-ring conventions. The complete arguments and
-stronger Schur and bicommutant consequences remain editorial material.
-[Read the three corrected chapters and thirteen-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r59/README.md).
-All thirteen edits are included in the chapter and combined fixes-only patches.
-The separately received open Brauer problem remains unresolved.
-
-R60 records **35 units and 43 edits** in Homology and three dependent chapters.
-The review reconciles all 136 received Homology reports, with earlier fixes,
-copyedits, source corrections and seven unintegrated optional proposals kept
-separate. Corrections include boundary signs and projections, spectral-sequence
-page bounds, the Weil grading shift and a totalization primitive. Eleven
-stronger editorial consequences retain their complete proofs and propagation
-records. The longer Kunneth proof completion is explicitly labelled editorial.
-[Read the four corrected chapters and 55-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r60/README.md).
-The fixes-only download includes the other 34 units and 42 edits; it excludes
-that editorial completion. The [reviewed publication history](validation/r60-reviewed-publication-history.json)
-retains each R60 transition without incorporating the newer Illusie drafts
-awaiting their separate review. This remains a source-and-patch update.
-
-R61 records **64 units and 89 edits** in Derived Categories and five dependent
-chapters. It reconciles all 176 received Derived reports and six separate
-receiving reports. The corrections retain exact functor and triangle maps,
-cohomological indices, boundedness hypotheses and the complete comparison
-arguments. The separate editorial ledger contains 33 proved underclaims and a
-refinement of UNDER-007, with their propagation and complete proofs.
-[Read all six corrected chapters and the 159-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r61/README.md).
-All 89 edits enter the fixes-only patches; the earlier 0839 parenthesis correction
-is preserved inside its explicitly recorded 2533 successor. The
-[reviewed history](validation/r61-reviewed-publication-history.json) preserves
-separate candidate, admission and composition transitions. Incoming Illusie
-work remains queued for its own review.
-
-R52/R53/R54/R55/R56/R57/R58/R59/R60/R61 review, correction preparation, builds and visual checks, and current
-correction-export tooling and packaging were produced by OpenAI Codex —
-GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
-mathematical or human review of every historical correction; historical evidence
-retains its original provenance.
-
-[Two Pursuing Stacks modules](pursuing-stacks/README.md) are separately
-readable: categories of elements and a conditional localization criterion;
-then the sieve-cutoff contraction, sufficient asphericity criterion, and
-abstract homotopy intervals. They contain fifteen statements with proofs
-across two six-page readers, each with complete direct LaTeX and a reproducible
-source ZIP. This is not a
-claim that the whole historical work, or even the received 68-page draft, has
-been integrated; it is not yet part of the older cumulative PDFs.
-
-## Reading Stacks in other languages
-
-Separately maintained AI-produced translations offer another route into the
-Stacks Project for readers across research communities:
-
-- [Chinese](https://github.com/KokunoYumeto/stacks-zh-hans-cn) · [translation-choice log](https://github.com/KokunoYumeto/stacks-zh-hans-cn/blob/9b1fec35dbf684e7c388eafb31c70a82986d23f2/review/translation-choices/README.md).
-- [Japanese](https://github.com/KokunoYumeto/stacks-ja-jp) · [translation-choice log](https://github.com/KokunoYumeto/stacks-ja-jp/blob/72d82226a88909698e7902614e9c2d1f428c9714/review/translation-choices/README.md).
-- [Korean](https://github.com/KokunoYumeto/stacks-ko-kr) · [translation-choice log](https://github.com/KokunoYumeto/stacks-ko-kr/blob/d0d0958de85104bb97c08895c4bd78ee14bbee04/review/translation-choices/README.md).
-
-These translations have not received comprehensive expert human review.
-Corrections to terminology, meaning, and exposition from knowledgeable readers
-are warmly welcome. The linked logs distinguish consulted evidence from
-provisional choices and historical records; their present scope is selected
-Chapter 11 choices, not every choice throughout Stacks.
-
-These are separate translation editions, not translated versions of every
-addition in this AI-draft repository. Translation choices, proposed corrections
-to the English source, and new mathematical exposition have separate records.
+These are drafts. They have been checked by AI review and automated validation, not by Stacks maintainers or other
+human experts, and errors may remain; the Stacks Project and its maintainers have not reviewed, approved or endorsed
+this work. Until a qualified reader has checked an addition and is prepared to understand and maintain it, it stays a
+draft outside the human-maintained Stacks Project. FAC, GAGA and FGA are integrated; EGA is integrated in part (the
+reviewed comparison reaches EGA I §7.4.7); one proposition of Verdier and the opening of Illusie I are integrated; the
+Tôhoku paper has a comparison dossier and draft proofs but is not integrated as a whole. The drafts are kept so that Stacks contributors and other mathematicians can inspect,
+correct, reuse or mine them.
 
 ## What is actually in the draft?
 
@@ -568,23 +352,210 @@ adds search and chapter filters. The original
 [official Stacks snapshot](https://github.com/stacks/stacks-project/tree/a04446e57ec1fbc252a871afcec7752fb2807b14)
 remains directly accessible.
 
-## Read, inspect, and reproduce
+## Proposed corrections and possible additions
 
-Start with a theorem above, inspect its proof and dependencies, then compare it
-with the historical source and the upstream Stacks text. There is no expectation
-that a reader accept a result because an AI or an automated check produced it.
+- **[Corrections-only downloads from the integrated batches](upstream-corrections/README.md):**
+  one combined patch or separate chapter patches, with exact changes and review
+  evidence. These do not import our theorem additions or repository history.
+  The 2,305 historical correction IDs are accounted for; 2,301 effective textual
+  units are exported. Two superseded corrections, one fork tag allocation and
+  one explicitly labelled editorial proof completion are excluded. No clone of this fork is needed.
+- **[Possible fixes to existing Stacks text](PROPOSED_CORRECTIONS.md):**
+  original location, smallest replacement, and a short reason. The readable
+  selection also has [standalone patches](possible-fixes/README.md), checked
+  against the pinned official source; none requires adopting our additions.
+- **[Possible new additions](POSSIBLE_ADDITIONS.md):** source work, named
+  theorem or construction, proof location, and actual integration status.
+  These may be inspected independently, or ignored entirely when reviewing fixes.
 
-- [Latest readable PDF/source package](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest)
-  · [Zenodo preservation lineage](https://doi.org/10.5281/zenodo.22135180).
-- GitHub is the incremental working record. Zenodo is reserved for substantial,
-  coherent milestones—such as a large integrated source tranche or a major
-  cumulative errata release—not individual theorems or routine weekly updates.
-- [Public EGA I §6.6.4 source checkpoint](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json)
-  · [§6.6.6–6.6.8 comparison and validation](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json).
-- [Build and validation instructions](VALIDATION.md)
-  · [exact current build evidence](validation/README.md).
-- [Complete project status](STATUS.md) · [roadmap](ROADMAP.md)
-  · [source provenance and preserved histories](PROVENANCE.md).
+The [proposed-corrections log](PROPOSED_CORRECTIONS.md) gives the original
+passage, the smallest proposed replacement, and a short argument that a reader
+can check. It distinguishes mathematical errors from typos, pending proposals
+from changes already in this draft, and duplicate or withdrawn suggestions.
+These are **AI-reviewed proposals, not expert-approved or officially adopted
+Stacks errata**. The readable log is being expanded; its stated coverage is
+not a claim to cover every finding from the translations or historical work.
+The [complete recorded comparison](CHANGES_FROM_UPSTREAM.md) remains available
+alongside it. Neither list treats an added theorem as an upstream correction.
+
+The original 13-item readable selection is not the total correction collection.
+All thirteen are now integrated in this draft: two limit-preservation fixes
+in R50 and the remaining eleven in R51. They are also in the larger export;
+do not apply the same fix twice. Upstream adoption is not claimed.
+Both sets target the pinned official revision. The official master ref was
+[checked on 30 September 2026](validation/upstream-ref-check-2026-09-30.json)
+and still matched that revision; later upstream compatibility requires a new check.
+
+The source and fixes-only downloads include R49: five de Rham corrections
+(seven edits), including balanced parentheses in the Hodge-filtration cup-product
+diagram and four small prose repairs. The latest full-reader release predates
+these edits; this is a source-and-patch update.
+R50 adds two corrections in **Limits of Algebraic Spaces**: using the fibre
+point fixed in the proof, and citing finite limits rather than only finite
+products for a fibre-product comparison. The [33 chapter patch sets](upstream-corrections/README.md)
+include both, with no added theorems. The bounded chapter proof and complete
+editable source are linked in [its candidate record](ai-integrated/candidates/commons/stacks/errata/r50/README.md).
+
+R51 adds **29 corrections** in Sets, Schemes, Homology and Algebra. These include
+the reversed maps and compositions in the Ext resolution-independence proof,
+the differential index in a chain map, both split-sequence endpoint modules,
+the ordinal bound on a prescribed family of coverings, and the denominator
+defining the coordinate ring of GL(2). Smaller sheaf-domain, diagram and English
+repairs are individually explained in [the correction review](ai-integrated/candidates/commons/stacks/errata/r51/REVIEW.md).
+[Chapter proofs and complete editable sources](ai-integrated/candidates/commons/stacks/errata/r51/README.md)
+accompany the batch; the fixes-only downloads contain no theorem additions.
+This remains a source-and-patch update.
+
+R52 adds **83 proposed changes in Categories**: 51 copyedits, 11 clarifications
+and 21 source corrections, not 83 new mathematical errors. Examples include the
+endpoint in the definition of an initial functor, the cone-component indices in
+the finite-limit proof, a common-refinement index for pro-objects, the coherence
+maps for a 2-fibre product, and an inverse missing from a comparison of fibred
+categories. [Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r52/REVIEW.md)
+and [proofs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r52/README.md)
+are available. The intake record also preserves rejected suggestions and
+duplicates. These changes are included in the Categories patch and combined
+fixes-only download; no theorem additions are required.
+
+R53 adds **54 proposed changes in Topology and Introduction**: 44 copyedits,
+five clarifications, four notation clarifications and one source correction.
+They explicitly restrict the map in the connected-image proof, restore a
+missing inclusion in a dimension chain, and clarify the scope of set operations.
+[Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r53/REVIEW.md)
+and [reviewed chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r53/README.md)
+are available. The combined fixes-only download now covers 34 chapters.
+The older complete-reader PDFs are unchanged by this source-and-patch update.
+
+R54 adds **12 proposed Sheaves on Spaces changes**: eleven copyedits and
+one clarification. The fibre-product argument now identifies the invertible
+projection and constructs the required factorization using its inverse.
+The wording repairs include missing naming prepositions and a stale claim
+that a definition was left to the reader. [Each change and its reason](ai-integrated/candidates/commons/stacks/errata/r54/REVIEW.md)
+and [chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r54/README.md)
+are available. The Sheaves patch and combined fixes-only download include
+all sixteen edits and retain the earlier corrections.
+
+R55 adds **29 proposed Sites and Sheaves changes**: 22 copyedits, five
+source corrections and two clarifications. The corrections restore the
+cohomology-set terminology, a sheafification sign, a presheaf target,
+a transition-map index and the covering-sieve references used in two proofs.
+The clarifications specify composition grouping and an element-to-stalk
+assignment. [Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r55/REVIEW.md)
+and [chapter PDFs with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r55/README.md)
+are available. The Sites patch and combined fixes-only download contain
+all 35 edits and retain the 107 earlier Sites corrections.
+
+R56 adds **76 proposed Stacks corrections and clarifications**: 34 copyedits,
+35 source corrections and seven clarifications. The substack criterion now
+requires the necessary isomorphism in the correct fibre. The localization
+criterion now detects cartesian arrows after an allowed refinement, with
+a complete proof and counterexample to the previous converse. The edits
+also restore missing comparison maps, composition factors and base labels.
+[Exact changes and complete mathematical evidence](ai-integrated/candidates/commons/stacks/errata/r56/REVIEW.md)
+and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidates/commons/stacks/errata/r56/README.md)
+accompany all 86 edits. They are included in the Stacks chapter patch and
+combined corrections-only download.
+
+R57 adds **47 proposed Fields corrections and clarifications**: 21 copyedits,
+21 source corrections and five clarifications, across 56 exact edits.
+They repair field and quotient domains, polynomial arguments, characteristic-zero
+cases and a dropped Kummer sign. A complete proof of the normal algebraic
+decomposition replaces an omitted argument; the transcendence-basis extension
+property already proved in the source is now stated explicitly.
+[Exact changes and reasons](ai-integrated/candidates/commons/stacks/errata/r57/REVIEW.md)
+and [chapter PDFs, direct LaTeX and reproducible sources](ai-integrated/candidates/commons/stacks/errata/r57/README.md)
+are available. The accompanying proof check also derives linear disjointness
+without normality, preservation of both degrees and the canonical topological
+Galois-group comparison; these consequences carry no novelty claim.
+All eight earlier Fields fixes remain in the chapter and combined patches.
+
+R58 adds **689 bounded Algebra edits in 559 review groups**, plus one local
+rendering dependency. The 560 units preserve the source exposition and link
+to a separate companion containing 173 contextual treatments and 73 complete
+proof notes. Conceptual errata, supplementary proofs and stronger consequences
+are identified as editorial material. The fixes-only patches exclude companion
+notices and supplementary arguments.
+[Read the 484-page corrected chapter and 667-page companion, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r58/README.md).
+Both PDFs reproduce byte for byte in fresh builds, and all page layouts and
+mapped correction regions were inspected. This chapter publication does not
+replace the older whole-project PDF release.
+
+R59 adds **five source corrections in thirteen edits** across Examples, More
+on Algebra and Brauer Groups. These repair a series coefficient factor, a
+Fitting-ideal index, conormal tensor subscripts, a zero-algebra exception and
+the propagation of opposite-ring conventions. The complete arguments and
+stronger Schur and bicommutant consequences remain editorial material.
+[Read the three corrected chapters and thirteen-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r59/README.md).
+All thirteen edits are included in the chapter and combined fixes-only patches.
+The separately received open Brauer problem remains unresolved.
+
+R60 records **35 units and 43 edits** in Homology and three dependent chapters.
+The review reconciles all 136 received Homology reports, with earlier fixes,
+copyedits, source corrections and seven unintegrated optional proposals kept
+separate. Corrections include boundary signs and projections, spectral-sequence
+page bounds, the Weil grading shift and a totalization primitive. Eleven
+stronger editorial consequences retain their complete proofs and propagation
+records. The longer Kunneth proof completion is explicitly labelled editorial.
+[Read the four corrected chapters and 55-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r60/README.md).
+The fixes-only download includes the other 34 units and 42 edits; it excludes
+that editorial completion. The [reviewed publication history](validation/r60-reviewed-publication-history.json)
+retains each R60 transition without incorporating the newer Illusie drafts
+awaiting their separate review. This remains a source-and-patch update.
+
+R61 records **64 units and 89 edits** in Derived Categories and five dependent
+chapters. It reconciles all 176 received Derived reports and six separate
+receiving reports. The corrections retain exact functor and triangle maps,
+cohomological indices, boundedness hypotheses and the complete comparison
+arguments. The separate editorial ledger contains 33 proved underclaims and a
+refinement of UNDER-007, with their propagation and complete proofs.
+[Read all six corrected chapters and the 159-page proof supplement, with complete editable sources](ai-integrated/candidates/commons/stacks/errata/r61/README.md).
+All 89 edits enter the fixes-only patches; the earlier 0839 parenthesis correction
+is preserved inside its explicitly recorded 2533 successor. The
+[reviewed history](validation/r61-reviewed-publication-history.json) preserves
+separate candidate, admission and composition transitions. Incoming Illusie
+work remains queued for its own review.
+
+R52/R53/R54/R55/R56/R57/R58/R59/R60/R61 review, correction preparation, builds and visual checks, and current
+correction-export tooling and packaging were produced by OpenAI Codex —
+GPT-6 Astra, Ultra effort. This attribution concerns the export work, not a new
+mathematical or human review of every historical correction; historical evidence
+retains its original provenance.
+
+[Two Pursuing Stacks modules](pursuing-stacks/README.md) are separately
+readable: categories of elements and a conditional localization criterion;
+then the sieve-cutoff contraction, sufficient asphericity criterion, and
+abstract homotopy intervals. They contain fifteen statements with proofs
+across two six-page readers, each with complete direct LaTeX and a reproducible
+source ZIP. This is not a
+claim that the whole historical work, or even the received 68-page draft, has
+been integrated; it is not yet part of the older cumulative PDFs.
+
+## Reading Stacks in other languages
+
+Separately maintained AI-produced translations offer another route into the
+Stacks Project for readers across research communities:
+
+- [Chinese](https://github.com/KokunoYumeto/stacks-zh-hans-cn) · [translation-choice log](https://github.com/KokunoYumeto/stacks-zh-hans-cn/blob/9b1fec35dbf684e7c388eafb31c70a82986d23f2/review/translation-choices/README.md).
+- [Japanese](https://github.com/KokunoYumeto/stacks-ja-jp) · [translation-choice log](https://github.com/KokunoYumeto/stacks-ja-jp/blob/72d82226a88909698e7902614e9c2d1f428c9714/review/translation-choices/README.md).
+- [Korean](https://github.com/KokunoYumeto/stacks-ko-kr) · [translation-choice log](https://github.com/KokunoYumeto/stacks-ko-kr/blob/d0d0958de85104bb97c08895c4bd78ee14bbee04/review/translation-choices/README.md).
+
+These translations have not received comprehensive expert human review.
+Corrections to terminology, meaning, and exposition from knowledgeable readers
+are warmly welcome. The linked logs distinguish consulted evidence from
+provisional choices and historical records; their present scope is selected
+Chapter 11 choices, not every choice throughout Stacks.
+
+These are separate translation editions, not translated versions of every
+addition in this AI-draft repository. Translation choices, proposed corrections
+to the English source, and new mathematical exposition have separate records.
+
+## Build and check
+
+Start with a theorem above, inspect its proof and dependencies, then compare it with the historical source and the
+upstream Stacks text. [Build and validation instructions](VALIDATION.md) and the
+[exact current build evidence](validation/README.md) describe the checks; the EGA checkpoints have their own records
+([EGA I §6.6.4](validation/ega-i-6.6.4-source-checkpoint-2026-08-31.json),
+[§6.6.6–6.6.8](validation/ega-i-6.6.6-6.6.8-integration-validation-2026-09-07.json)).
 
 The inherited build entry point remains:
 
@@ -598,10 +569,27 @@ The repository integrity check is:
 python tools/validate_unified_repository.py --pre-publication
 ~~~
 
-## Attribution and licensing
+## Sources and credits
 
-The pinned Stacks source and this modified source are distributed under the
-GNU Free Documentation License 1.2; see [COPYING](COPYING).
-Registry metadata and schemas have the separate, narrow rights statement in
-[ai-integrated/RIGHTS.md](ai-integrated/RIGHTS.md). Source-edition links above
-do not imply common licensing or endorsement by the original authors.
+- The [Stacks Project](https://stacks.math.columbia.edu/) by the Stacks project authors (see [CONTRIBUTORS](CONTRIBUTORS)),
+  pinned at upstream commit `a04446e57ec1fbc252a871afcec7752fb2807b14`
+  ([official snapshot](https://github.com/stacks/stacks-project/tree/a04446e57ec1fbc252a871afcec7752fb2807b14)).
+- The editable LaTeX editions of the French-school sources used for the additions:
+  - Jean-Pierre Serre, FAC, *Faisceaux algébriques cohérents* (1955): French diplomatic TeX and French/English source
+    layers.
+  - Alexander Grothendieck, Tôhoku, *Sur quelques points d'algèbre homologique* (1957): LaTeX source package.
+  - Jean-Pierre Serre, GAGA, *Géométrie algébrique et géométrie analytique* (1956): French diplomatic TeX.
+  - Alexander Grothendieck, FGA, *Fondements de la géométrie algébrique*: [French LaTeX source and provenance package](https://github.com/KokunoYumeto/fga-fr/blob/main/releases/2026-08-30-r1/fga-fr-canon-errata-0001-0017-source-provenance.zip).
+  - Alexander Grothendieck and Jean Dieudonné, EGA, *Éléments de géométrie algébrique*: [French LaTeX tree](https://github.com/KokunoYumeto/ega-fr/tree/main/source) and [English edition](https://github.com/KokunoYumeto/ega-en/tree/main/tex).
+  - Jean-Louis Verdier, *Des catégories dérivées des catégories abéliennes* (Astérisque 239): editable source package.
+  - Luc Illusie, *Complexe cotangent et déformations I*.
+
+  These are independently made transcriptions or editions, not author-produced LaTeX; the integration records
+  identify the exact source versions used.
+
+## Rights
+
+The pinned Stacks source and this modified source are distributed under the GNU Free Documentation License 1.2; see
+[COPYING](COPYING). Registry metadata and schemas have the separate, narrow rights statement in
+[ai-integrated/RIGHTS.md](ai-integrated/RIGHTS.md). The source editions keep their own terms, and linking them implies
+no common licensing or endorsement by their original authors.
